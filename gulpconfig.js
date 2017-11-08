@@ -21,11 +21,17 @@ module.exports = {
       path.resolve(DIST_DIR, 'index.html')
     ]
   },
+  startPublicServerTask: {
+    rootDir: DIST_DIR,
+    watchForChange: [
+      path.resolve(DIST_DIR, 'index.html')
+    ]
+  },
   watchDevTask: {
     src: path.resolve(__dirname, 'src/index.html'),
     tasksToExecute: ['build-dev']
   },
-  watchComponentSassTask: {
+  watchComponentsSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
     tasksToExecute: ['build-components-sass']
   }
