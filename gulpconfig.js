@@ -7,8 +7,12 @@ module.exports = {
     src: path.resolve(__dirname, 'src/index.html'),
     dist: DIST_DIR
   },
-  buildSassTask: {
+  buildComponentsSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
+    dist: DIST_DIR
+  },
+  buildComponentsTemplateTask: {
+    src: path.resolve(__dirname, 'src/components/**/*.html'),
     dist: DIST_DIR
   },
   startDevServerTask: {
@@ -21,8 +25,8 @@ module.exports = {
     src: path.resolve(__dirname, 'src/index.html'),
     tasksToExecute: ['build-dev']
   },
-  watchSassTask: {
+  watchComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    tasksToExecute: ['build-sass']
+    tasksToExecute: ['build-components-sass']
   }
 }
