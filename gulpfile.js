@@ -2,10 +2,16 @@ const gulp = require('gulp')
 
 const buildDevTask = require('./tasks/build-dev')
 const buildSassTask = require('./tasks/build-sass')
-const serveDevTask = require('./tasks/serve-dev')
+const startDevServerTask = require('./tasks/start-dev-server')
+const watchDevTask = require('./tasks/watch-dev')
 const watchSassTask = require('./tasks/watch-sass')
 
+gulp.task('start-dev-server', ['build', 'watch'], startDevServerTask)
+
+gulp.task('build', ['build-dev', 'build-sass'])
 gulp.task('build-dev', buildDevTask)
 gulp.task('build-sass', buildSassTask)
-gulp.task('serve-dev', ['build-dev', 'build-sass', 'watch-sass'], serveDevTask)
+
+gulp.task('watch', ['watch-dev','watch-sass'])
+gulp.task('watch-dev', watchDevTask)
 gulp.task('watch-sass', watchSassTask)

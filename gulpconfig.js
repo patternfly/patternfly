@@ -11,8 +11,15 @@ module.exports = {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
     dist: DIST_DIR
   },
-  serveDevTask: {
-    rootDir: DIST_DIR
+  startDevServerTask: {
+    rootDir: DIST_DIR,
+    watchForChange: [
+      path.resolve(DIST_DIR, 'index.html')
+    ]
+  },
+  watchDevTask: {
+    src: path.resolve(__dirname, 'src/index.html'),
+    tasksToExecute: ['build-dev']
   },
   watchSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
