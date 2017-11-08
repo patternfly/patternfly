@@ -1,0 +1,11 @@
+{
+  "name": "pf-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cliff Pyles <cliff@cliffpyles.com>",
+  "license": "MIT"
+}
