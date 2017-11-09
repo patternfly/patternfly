@@ -20,16 +20,28 @@
   </style>
 </head>
 <body>
-  <div id="devWorkspace" class="demo">
-
+  <div id="devWorkspace">
+    <div id="componentDemo" class="demo"></div>
   </div>
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script>
-    let app = new Vue({
-      el: '#devWorkspace',
-      data: {}
-    })
+    let componentDemoEl = document.getElementById('componentDemo')
+    fetch('/Alert/component.html')
+      .then((response) => {
+        return response.text()
+      })
+      .then((body) => {
+        let frag = document.createRange().createContextualFragment(body)
+        for (let i = 0; i < frag.children.length; i++) {
+          let component = document
+            .createRange()
+            .createContextualFragment(frag.children[i].innerHTML)
+          console.log(component)
+          componentDemoEl.appendChild(component)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   </script>
 </body>
 </html>

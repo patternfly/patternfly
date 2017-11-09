@@ -18,7 +18,10 @@ module.exports = {
     dist: DIST_DIR
   },
   startDevServerTask: {
-    rootDir: WORKSPACE_DIR,
+    rootDir: [
+      WORKSPACE_DIR,
+      DIST_DIR
+    ],
     filesToWatch: [
       `${WORKSPACE_DIR}/**/*.html`,
       `${DIST_DIR}/**/*.html`,
