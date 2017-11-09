@@ -5,7 +5,7 @@ const config = require('../gulpconfig')
 module.exports = function () {
   browserSync.init({
     open: false,
-    server: config.startDevServerTask.rootDir
+    server: config.startDevServerTask.rootDir,
+    files: config.startDevServerTask.filesToWatch
   })
-  gulp.watch(config.startDevServerTask.watchForChange).on('change', browserSync.reload)
 }

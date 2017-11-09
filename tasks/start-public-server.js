@@ -6,7 +6,7 @@ module.exports = function () {
   browserSync.init({
     open: false,
     server: config.startPublicServerTask.rootDir,
+    files: config.startPublicServerTask.filesToWatch,
     tunnel: true
   })
-  gulp.watch(config.startPublicServerTask.watchForChange).on('change', browserSync.reload)
 }
