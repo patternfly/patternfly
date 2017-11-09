@@ -1,13 +1,13 @@
-const browserSync = require('browser-sync')
 const gulp = require('gulp')
+const gap = require('gulp-append-prepend')
 const sass = require('gulp-sass')
 const config = require('../gulpconfig')
 
 module.exports = function () {
   return gulp.src(config.buildComponentSassTask.src)
+    .pipe(gap.prependText(config.buildComponentSassTask.autoImports))
     .pipe(
-      sass().on('error', sass.logError)
+      sass(config.buildComponentSassTask.sassOptions).on('error', sass.logError)
     )
     .pipe(gulp.dest(config.buildComponentSassTask.dist))
-    .pipe(browserSync.stream())
 }

@@ -11,7 +11,32 @@ module.exports = {
   },
   buildComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    dist: DIST_DIR
+    dist: DIST_DIR,
+    autoImports: [
+      '@import "bootstrap/scss/functions";',
+      '@import "bootstrap/scss/variables";',
+      '@import "bootstrap/scss/mixins";'
+    ],
+    sassOptions: {
+      includePaths: [
+        path.resolve(__dirname, 'node_modules/')
+      ]
+    }
+  },
+  buildPatternflySassTask: {
+    src: path.resolve(__dirname, 'src/components/**/*.scss'),
+    dist: DIST_DIR,
+    autoImports: [
+      '@import "bootstrap/scss/functions";',
+      '@import "bootstrap/scss/variables";',
+      '@import "bootstrap/scss/mixins";'
+    ],
+    filename: 'patternfly.css',
+    sassOptions: {
+      includePaths: [
+        path.resolve(__dirname, 'node_modules/')
+      ]
+    }
   },
   buildComponentTemplateTask: {
     src: path.resolve(__dirname, 'src/components/**/*.html'),
@@ -38,6 +63,6 @@ module.exports = {
   },
   watchComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    tasksToExecute: ['build-component-sass']
+    tasksToExecute: ['build-component-sass', 'build-patternfly-sass']
   }
 }
