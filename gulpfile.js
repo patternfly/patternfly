@@ -11,7 +11,7 @@ const watchComponentSassTask = require('./tasks/watch-component-sass')
 gulp.task('start-dev-server', ['build', 'watch'], startDevServerTask)
 gulp.task('start-public-server', ['build', 'watch'], startPublicServerTask)
 
-gulp.task('build', ['build-component'])
+gulp.task('build', ['build-component', 'build-patternfly-sass'])
 gulp.task('build-component', [
   'build-component-sass',
   'build-component-template',
