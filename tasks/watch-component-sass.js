@@ -3,5 +3,5 @@ const gulp = require('gulp')
 const config = require('../gulpconfig')
 
 module.exports = function () {
-  gulp.watch(config.watchComponentsSassTask.src, [config.watchComponentsSassTask.tasksToExecute])
+  gulp.watch(config.watchComponentSassTask.src, [config.watchComponentSassTask.tasksToExecute])
 }

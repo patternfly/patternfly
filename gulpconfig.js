@@ -4,11 +4,16 @@ const DIST_DIR = path.resolve(__dirname, 'dist')
 const WORKSPACE_DIR = path.resolve(__dirname, './.pf/workspace')
 
 module.exports = {
-  buildComponentsSassTask: {
+  buildComponentTreeTask: {
+    src: path.resolve(__dirname, 'src/components/**/*'),
+    dist: DIST_DIR,
+    treeName: 'components.json'
+  },
+  buildComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
     dist: DIST_DIR
   },
-  buildComponentsTemplateTask: {
+  buildComponentTemplateTask: {
     src: path.resolve(__dirname, 'src/components/**/*.html'),
     dist: DIST_DIR
   },
@@ -28,8 +33,8 @@ module.exports = {
       `${DIST_DIR}/**/*.css`
     ]
   },
-  watchComponentsSassTask: {
+  watchComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    tasksToExecute: ['build-components-sass']
+    tasksToExecute: ['build-component-sass']
   }
 }
