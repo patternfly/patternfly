@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+/* Using IDs to avoid conflicts with the system consuming design-system-workspace*/
+#design-system-workspace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+  background-color: #fafafa;
+}
+#design-system-workspace__demo {
+  padding: 1rem;
+  border: 1px solid #dadada;
+  background-color: #fff;
+  overflow: auto;
+  resize: both;
+}

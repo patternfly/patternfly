@@ -11,7 +11,7 @@ module.exports = {
   },
   buildComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    dist: DIST_DIR,
+    dist: path.resolve(DIST_DIR, 'components'),
     autoImports: [
       '@import "bootstrap/scss/functions";',
       '@import "bootstrap/scss/variables";',
@@ -21,26 +21,13 @@ module.exports = {
       includePaths: [
         path.resolve(__dirname, 'node_modules/')
       ]
-    }
-  },
-  buildPatternflySassTask: {
-    src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    dist: DIST_DIR,
-    autoImports: [
-      '@import "bootstrap/scss/functions";',
-      '@import "bootstrap/scss/variables";',
-      '@import "bootstrap/scss/mixins";'
-    ],
-    filename: 'patternfly.css',
-    sassOptions: {
-      includePaths: [
-        path.resolve(__dirname, 'node_modules/')
-      ]
-    }
+    },
+    libraryFilename: 'patternfly.css',
+    libraryDist: DIST_DIR
   },
   buildComponentTemplateTask: {
     src: path.resolve(__dirname, 'src/components/**/*.html'),
-    dist: DIST_DIR
+    dist: path.resolve(DIST_DIR, 'components')
   },
   startDevServerTask: {
     rootDir: [
@@ -51,7 +38,11 @@ module.exports = {
       `${WORKSPACE_DIR}/**/*.html`,
       `${DIST_DIR}/**/*.html`,
       `${DIST_DIR}/**/*.css`
-    ]
+    ],
+    workspace: {
+      publicDirectory: path.resolve(__dirname, 'dist'),
+      port: 3000
+    }
   },
   startPublicServerTask: {
     rootDir: WORKSPACE_DIR,
@@ -63,6 +54,6 @@ module.exports = {
   },
   watchComponentSassTask: {
     src: path.resolve(__dirname, 'src/components/**/*.scss'),
-    tasksToExecute: ['build-component-sass', 'build-patternfly-sass']
+    tasksToExecute: ['build-component-sass']
   }
 }

@@ -12,6 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-append-prepend": "^1.0.4",
     "gulp-beautify": "^2.0.1",
