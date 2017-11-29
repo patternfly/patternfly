@@ -5,7 +5,6 @@ Assessment
   |- Communicate Information About The Problem We Are Trying To Solve
 Design
   |- Create The Initial Static Design
-  |- Create An Interactive Design
 Develop
   |- Write Code For The Component
 Release
@@ -14,9 +13,9 @@ Release
   |- Distribute The Code For Consumers
 ```
 
-##Assessment
+## Assessment
 
-####Get Information About The Problem We Are Trying To Solve
+#### Get Information About The Problem We Are Trying To Solve
 
 Tasks:
 
@@ -31,9 +30,9 @@ Concerns:
 - unusable information
 - breaking modularization rules
 
-##Design
+## Design
 
-####Create The Initial Static Design
+#### Create The Initial Static Design
 
 Tasks:
 
@@ -46,22 +45,9 @@ Concerns:
 - inconsistent implementations
 - breaking modularization rules
 
-####Create An Interactive Design
+## Develop
 
-Tasks:
-
-- create an interactive representation of a proposed solution
-- communicate the interactive representation
-
-Concerns:
-
-- scenarios and states that are unaccounted for
-- inconsistent implementations
-- breaking modularization rules
-
-##Develop
-
-####Write The Code Intended For Consumption
+#### Write The Code
 
 Tasks:
 
@@ -78,10 +64,10 @@ Concerns:
 - uncommunicated changes
 - delays of integration into project
 
-##Release
+## Release
 
-####Run Automated Tests
+#### Run Automated Tests
 
-####Prepare And Optimize The Code For Production
+#### Prepare And Optimize The Code For Production
 
-####Distribute The Code For Consumers
+#### Distribute The Code For Consumers
