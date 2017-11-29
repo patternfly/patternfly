@@ -22,11 +22,10 @@ Design
   |- create the initial static design
 Develop
   |- write code for the component
-  |- verify the
+  |- verify the code works
 Release
-  |- run automated tests
-  |- prepare and optimize the code for production
-  |- distribute the code for consumers
+  |- run pre release actions
+  |- distribute the product
 ```
 
 ## Assessment
