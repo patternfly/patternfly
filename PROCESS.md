@@ -1,16 +1,32 @@
-# Iteration
+# Process
+
+This is an outline of the shared steps for building solutions for the web. It
+states the essential phases that all development projects have a variant of. Projects may combine and loop some of the phases, but they will still exist in some
+capacity.
+
+This is not meant to outline a way of building our library.
+
+This is not a recommendation for a process we should adopt.
+
+The document is meant to be used as a starting point to help everyone
+contribute meaningful feedback when we are ready to begin building the system. It
+is also meant to help everyone pinpoint how different phases of the process affect
+them, and how they affect the others.
+
+
 ```
 Assessment
-  |- Get Information About The Problem We Are Trying To Solve
-  |- Communicate Information About The Problem We Are Trying To Solve
+  |- get information about the problem we are trying to solve
+  |- communicate information about the problem we are trying to solve
 Design
-  |- Create The Initial Static Design
+  |- create the initial static design
 Develop
-  |- Write Code For The Component
+  |- write code for the component
+  |- verify the
 Release
-  |- Run Automated Tests
-  |- Prepare And Optimize The Code For Production
-  |- Distribute The Code For Consumers
+  |- run automated tests
+  |- prepare and optimize the code for production
+  |- distribute the code for consumers
 ```
 
 ## Assessment
@@ -30,6 +46,10 @@ Concerns:
 - unusable information
 - breaking modularization rules
 
+Deliverables:
+
+- TBA
+
 ## Design
 
 #### Create The Initial Static Design
@@ -44,6 +64,10 @@ Concerns:
 
 - inconsistent implementations
 - breaking modularization rules
+
+Deliverables:
+
+- TBA
 
 ## Develop
 
@@ -64,10 +88,8 @@ Concerns:
 - uncommunicated changes
 - delays of integration into project
 
+Deliverables:
+
+- TBA
+
 ## Release
-
-#### Run Automated Tests
-
-#### Prepare And Optimize The Code For Production
-
-#### Distribute The Code For Consumers
