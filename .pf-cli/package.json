@@ -1,0 +1,22 @@
+{
+  "name": "pf-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "pf": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cliff Pyles <cliff@cliffpyles.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "gulp-rename": "^1.2.2",
+    "inflection": "^1.12.0",
+    "yeoman-environment": "^2.0.5",
+    "yeoman-generator": "^2.0.1"
+  }
+}
