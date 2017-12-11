@@ -3,9 +3,23 @@
 const program = require('commander')
 const package = require('../package.json')
 const pf = require('../')
+const listResources = require('../tasks/list-resources')
 
 program
   .version(package.version)
+
+program
+  .command('overview')
+  .description('Lists the different resource types in the design system')
+  .action(function () {
+    listResources()
+  })
+program
+  .command('add:element <name>')
+  .description('Adds a new element to the design system')
+  .action(function (name) {
+    pf.run(`resource element ${name}`)
+  })
 
 program
   .command('add:component <name>')
@@ -22,10 +36,10 @@ program
   })
 
 program
-  .command('add:pattern <name>')
-  .description('Adds a new pattern to the design system')
+  .command('add:example <name>')
+  .description('Adds a new example to the design system')
   .action(function (name) {
-    pf.run(`resource pattern ${name}`)
+    pf.run(`resource extension ${name}`)
   })
 
 program
@@ -35,12 +49,7 @@ program
     pf.run(`resource extension ${name}`)
   })
 
-program
-  .command('add:concept <name>')
-  .description('Adds a new concept to the design system')
-  .action(function (name) {
-    pf.run(`resource concept ${name}`)
-  })
+
 
 
 program.parse(process.argv)
