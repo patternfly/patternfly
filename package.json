@@ -4,6 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "build": "gulp build",
+    "dev": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "sh ./.npm-scripts/post-install.sh"
   },
