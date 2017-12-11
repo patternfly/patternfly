@@ -1,25 +1,47 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
 }
-/* Using IDs to avoid conflicts with the system consuming design-system-workspace*/
 .design-system-workspace {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   overflow: auto;
   background-color: #fafafa;
 }
+.design-system-workspace__navigation {
+  padding: 2rem;
+}
+.design-system-workspace__navigation__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.design-system-workspace__navigation__item {}
+.design-system-workspace__navigation_link {}
+.design-system-workspace__navigation_link.is-type {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #888;
+}
+.design-system-workspace__navigation_link.is-resource {
+  padding: 1em 0.5em;
+}
 .design-system-workspace__demo {
-  padding: 1rem;
-  border: 1px solid #dadada;
-  background-color: #fff;
-  overflow: auto;
-  resize: both;
+  flex: 1 1 100%;
+
+  padding: 2rem;
 }
 .design-system-workspace__demo__toolbar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-.design-system-workspace__demo__content {}
+.design-system-workspace__demo__content {
+  padding: 1rem;
+  border: 1px solid #dadada;
+  background-color: #fff;
+  overflow: auto;
+  resize: both;
+}

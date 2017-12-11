@@ -11,6 +11,15 @@
 </head>
 <body>
 <div class="design-system-workspace">
+  <nav class="design-system-workspace__navigation">
+    <ul class="design-system-workspace__navigation__items">
+      <% workspace.navigation.forEach(function (navItem) { %>
+        <li class="design-system-workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="design-system-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        </li>
+      <% })%>
+    </ul>
+  </nav>
   <div class="design-system-workspace__demo">
     <div class="design-system-workspace__demo__toolbar">
       <h2><%= resourceName %></h2>

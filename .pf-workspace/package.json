@@ -20,6 +20,7 @@
     "browser-sync": "^2.18.13",
     "browser-sync-ejs": "^0.2.2",
     "ejs": "^2.5.7",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "fs-extra": "^4.0.3"
   }
 }

@@ -2,6 +2,7 @@ const browserSync = require("browser-sync")
 const ejs = require('ejs')
 const express = require('express')
 const path = require('path')
+const helpers = require('./helpers')
 
 module.exports = class {
   constructor (options) {
@@ -9,6 +10,9 @@ module.exports = class {
     this.app = express()
     this.app.set('view engine', 'ejs')
     this.bs = browserSync.create()
+    this.workspace = {
+      navigation: helpers.getNavigation(options.publicDirectory)
+    }
   }
 
   registerRoute () {
@@ -21,7 +25,8 @@ module.exports = class {
         {
           page,
           resourceType: req.params.resource,
-          resourceName: req.params.name
+          resourceName: req.params.name,
+          workspace: this.workspace
         },
         {},
         function (err, output) {
@@ -33,8 +38,6 @@ module.exports = class {
   }
 
   startWebServer () {
-
-
     this.app.listen(this.options.port, () => {
       this.bs.init({
         proxy: `http://localhost:${this.options.port}`,
