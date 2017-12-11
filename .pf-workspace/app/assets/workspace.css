@@ -19,7 +19,9 @@ body {
   list-style-type: none;
 }
 .design-system-workspace__navigation__item {}
-.design-system-workspace__navigation_link {}
+.design-system-workspace__navigation_link {
+  white-space: nowrap;
+}
 .design-system-workspace__navigation_link.is-type {
   font-weight: 600;
   font-size: 1.25rem;

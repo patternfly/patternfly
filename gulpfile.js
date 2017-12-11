@@ -7,7 +7,7 @@ const path = require('path')
 const DesignSystemWorkspace = require('pf-workspace')
 
 const config = {
-  buildComponents: {
+  buildStyles: {
     src: [
       './src/**/*.scss'
     ],
@@ -34,10 +34,10 @@ gulp.task('serve', ['build', 'watch'], function () {
   workspace.start()
 })
 
-gulp.task('build', ['build-components', 'build-docs', 'copy-files'])
+gulp.task('build', ['build-styles', 'build-docs', 'copy-files'])
 
-gulp.task('build-components', function () {
-  return gulp.src(config.buildComponents.src)
+gulp.task('build-styles', function () {
+  return gulp.src(config.buildStyles.src)
     .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
@@ -46,9 +46,9 @@ gulp.task('build-components', function () {
         path.resolve(__dirname, './node_modules')
       ]
     }).on('error', sass.logError))
-    .pipe(gulp.dest(config.buildComponents.dist))
-    .pipe(concat(config.buildComponents.filename))
-    .pipe(gulp.dest(config.buildComponents.dist))
+    .pipe(gulp.dest(config.buildStyles.dist))
+    .pipe(concat(config.buildStyles.filename))
+    .pipe(gulp.dest(config.buildStyles.dist))
     .pipe(workspace.bs.reload({ stream: true }))
 })
 
@@ -58,7 +58,7 @@ gulp.task('copy-files', function () {
 })
 
 gulp.task('build-docs', function () {
-  return gulp.src(config.buildComponents.src)
+  return gulp.src(config.buildStyles.src)
     .pipe(sassdoc())
     .pipe(workspace.bs.reload({ stream: true }))
 })
@@ -66,7 +66,7 @@ gulp.task('build-docs', function () {
 gulp.task('watch', ['watch:components', 'watch:static-files'])
 
 gulp.task('watch:components', function () {
-  gulp.watch(config.watch.sassFiles, ['build-components', 'build-docs'])
+  gulp.watch(config.watch.sassFiles, ['build-styles', 'build-docs'])
 })
 
 gulp.task('watch:static-files', function () {
