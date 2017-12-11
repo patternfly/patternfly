@@ -6,6 +6,7 @@ const rename = require('gulp-rename')
 module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts)
+    this.resourceType
   }
   writing() {
     let resourceType = inflection.pluralize(this.args[0])
@@ -60,7 +61,10 @@ module.exports = class extends Generator {
           packageName: resourceFilename
         },
         sass: {
-          bemEntity: resourceFilename
+          resourceType,
+          bemEntity: resourceFilename,
+          gitUserName: process.env.GIT_USER_NAME || '',
+          gitUserEmail: process.env.GIT_USER_EMAIL || ''
         },
         test: {
           description: resourceTitle

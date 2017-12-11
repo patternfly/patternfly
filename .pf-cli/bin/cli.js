@@ -14,6 +14,7 @@ program
   .action(function () {
     listResources()
   })
+
 program
   .command('add:element <name>')
   .description('Adds a new element to the design system')
@@ -48,8 +49,5 @@ program
   .action(function (name) {
     pf.run(`resource extension ${name}`)
   })
-
-
-
 
 program.parse(process.argv)
