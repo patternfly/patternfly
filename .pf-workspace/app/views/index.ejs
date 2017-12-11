@@ -10,9 +10,15 @@
   <link rel="stylesheet" href="/dist/components.css">
 </head>
 <body>
-<div id="design-system-workspace">
-  <div id="design-system-workspace__demo">
-    <%- include(page, {}) %>
+<div class="design-system-workspace">
+  <div class="design-system-workspace__demo">
+    <div class="design-system-workspace__demo__toolbar">
+      <h2><%= resourceName %></h2>
+      <a href="<%= `/docs/#${resourceType}-css-.${resourceName}`%>">documentation</a>
+    </div>
+    <div class="design-system-workspace__demo__content">
+      <%- include(page, {}) %>
+    </div>
   </div>
 </div>
 </body>

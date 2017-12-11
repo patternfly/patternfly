@@ -18,7 +18,11 @@ module.exports = class {
 
       ejs.renderFile(
         workspaceView,
-        { page },
+        {
+          page,
+          resourceType: req.params.resource,
+          resourceName: req.params.name
+        },
         {},
         function (err, output) {
           res.set('Content-Type', 'text/html')
@@ -43,6 +47,10 @@ module.exports = class {
           {
             route: '/dist',
             dir: this.options.publicDirectory
+          },
+          {
+            route: '/docs',
+            dir: this.options.sassDocDirectory
           }
         ]
       })

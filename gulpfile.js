@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const concat = require('gulp-concat')
 const inject = require('gulp-inject-string')
 const sass = require('gulp-sass')
+const sassdoc = require('sassdoc')
 const path = require('path')
 const DesignSystemWorkspace = require('pf-workspace')
 
@@ -23,6 +24,7 @@ const config = {
   },
   workspace: {
     publicDirectory: path.resolve(__dirname, 'dist'),
+    sassDocDirectory: path.resolve(__dirname, 'sassdoc'),
     port: 3000
   }
 }
@@ -32,7 +34,7 @@ gulp.task('serve', ['build', 'watch'], function () {
   workspace.start()
 })
 
-gulp.task('build', ['build-components', 'copy-files'])
+gulp.task('build', ['build-components', 'build-docs', 'copy-files'])
 
 gulp.task('build-components', function () {
   return gulp.src(config.buildComponents.src)
@@ -55,10 +57,16 @@ gulp.task('copy-files', function () {
     .pipe(gulp.dest(config.copyFiles.dist))
 })
 
+gulp.task('build-docs', function () {
+  return gulp.src(config.buildComponents.src)
+    .pipe(sassdoc())
+    .pipe(workspace.bs.reload({ stream: true }))
+})
+
 gulp.task('watch', ['watch:components', 'watch:static-files'])
 
 gulp.task('watch:components', function () {
-  gulp.watch(config.watch.sassFiles, ['build-components'])
+  gulp.watch(config.watch.sassFiles, ['build-components', 'build-docs'])
 })
 
 gulp.task('watch:static-files', function () {
