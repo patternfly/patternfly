@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "bin": {
+    "pf": "./bin/cli.js"
+  },
   "scripts": {
     "build": "gulp build",
     "dev": "node ./.workspace",
@@ -13,18 +16,23 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "commander": "^2.12.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-inject-string": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
+    "inflection": "^1.12.0",
     "sassdoc": "^2.5.0",
     "vinyl-named": "^1.1.0",
     "webpack": "^3.8.1",
-    "webpack-stream": "^4.0.0"
+    "webpack-stream": "^4.0.0",
+    "yeoman-environment": "^2.0.5",
+    "yeoman-generator": "^2.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2"
