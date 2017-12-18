@@ -25,8 +25,6 @@ const config = {
   }
 }
 
-
-
 gulp.task('build', ['build-styles', 'build-docs', 'copy-files'])
 
 gulp.task('build-styles', function () {

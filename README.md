@@ -7,7 +7,7 @@
 - clone the project
 - run `npm install` from the project root
 - run `npm run dev`
-- open your browser to `http://localhost:3001/components/pf-alert/pf-alert`
+- open your browser to `http://localhost:4200`
 
 ### CLI Commands
 

@@ -17,16 +17,20 @@
         <li class="pf-workspace__navigation__item">
           <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>
-      <% })%>
+      <% }) %>
     </ul>
   </nav>
   <div class="pf-workspace__demo">
+    <% if (resourceName) { %>
     <div class="pf-workspace__demo__toolbar">
       <h2><%= resourceName %></h2>
-      <a href="<%= `/docs/#${resourceType}-css-.${resourceName}`%>">documentation</a>
+      <a href="<%= `/docs/#${resourceType}-css-.${resourceName}` %>">documentation</a>
     </div>
+    <% } %>
     <div class="pf-workspace__demo__content">
-      <%- include(page, {}) %>
+      <% if (page) { %>
+        <%- include(page, {}) %>
+      <% } %>
     </div>
   </div>
 </div>
