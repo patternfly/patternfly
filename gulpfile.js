@@ -22,11 +22,6 @@ const config = {
   watch: {
     sassFiles: './src/**/*.scss',
     staticFiles: './src/**/*.{css,html,htm,json,js}'
-  },
-  workspace: {
-    publicDirectory: path.resolve(__dirname, 'dist'),
-    sassDocDirectory: path.resolve(__dirname, 'sassdoc'),
-    port: 3000
   }
 }
 
@@ -56,9 +51,7 @@ gulp.task('copy-files', function () {
 
 gulp.task('build-docs', function () {
   return gulp.src(config.buildStyles.src)
-    .pipe(sassdoc({
-      theme: 'patternfly'
-    }))
+    .pipe(sassdoc())
 })
 
 gulp.task('watch', ['watch:components', 'watch:static-files'])
