@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PatternFly Workspace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="/css/workspace.css">
+  <link rel="stylesheet" href="/components.css">
+</head>
+<body>
+<div class="pf-workspace">
+  <nav class="pf-workspace__navigation">
+    <ul class="pf-workspace__navigation__items">
+      <% workspace.navigation.forEach(function (navItem) { %>
+        <li class="pf-workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        </li>
+      <% })%>
+    </ul>
+  </nav>
+  <div class="pf-workspace__demo">
+    <div class="pf-workspace__demo__toolbar">
+      <h2><%= resourceName %></h2>
+      <a href="<%= `/docs/#${resourceType}-css-.${resourceName}`%>">documentation</a>
+    </div>
+    <div class="pf-workspace__demo__content">
+      <%- include(page, {}) %>
+    </div>
+  </div>
+</div>
+</body>
+</html>

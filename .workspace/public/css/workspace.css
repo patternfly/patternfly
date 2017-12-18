@@ -4,43 +4,43 @@
 body {
   margin: 0;
 }
-.design-system-workspace {
+.pf-workspace {
   display: flex;
   height: 100vh;
   overflow: auto;
   background-color: #fafafa;
 }
-.design-system-workspace__navigation {
+.pf-workspace__navigation {
   padding: 2rem;
 }
-.design-system-workspace__navigation__items {
+.pf-workspace__navigation__items {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.design-system-workspace__navigation__item {}
-.design-system-workspace__navigation_link {
+.pf-workspace__navigation__item {}
+.pf-workspace__navigation_link {
   white-space: nowrap;
 }
-.design-system-workspace__navigation_link.is-type {
+.pf-workspace__navigation_link.is-type {
   font-weight: 600;
   font-size: 1.25rem;
   color: #888;
 }
-.design-system-workspace__navigation_link.is-resource {
+.pf-workspace__navigation_link.is-resource {
   padding: 1em 0.5em;
 }
-.design-system-workspace__demo {
+.pf-workspace__demo {
   flex: 1 1 100%;
 
   padding: 2rem;
 }
-.design-system-workspace__demo__toolbar {
+.pf-workspace__demo__toolbar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-.design-system-workspace__demo__content {
+.pf-workspace__demo__content {
   padding: 1rem;
   border: 1px solid #dadada;
   background-color: #fff;

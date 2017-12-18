@@ -5,17 +5,21 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
-    "dev": "gulp serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "sh ./.npm-scripts/post-install.sh"
+    "dev": "node ./.workspace",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Cliff Pyles <cliff@cliffpyles.com>",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-inject-string": "^1.1.0",
+    "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
     "sassdoc": "^2.5.0",
     "vinyl-named": "^1.1.0",

@@ -1,10 +1,11 @@
 const gulp = require('gulp')
 const concat = require('gulp-concat')
 const inject = require('gulp-inject-string')
+const replace = require('gulp-replace')
 const sass = require('gulp-sass')
 const sassdoc = require('sassdoc')
 const path = require('path')
-const DesignSystemWorkspace = require('pf-workspace')
+const bs = require('browser-sync').create()
 
 const config = {
   buildStyles: {
@@ -28,11 +29,8 @@ const config = {
     port: 3000
   }
 }
-const workspace = new DesignSystemWorkspace(config.workspace)
 
-gulp.task('serve', ['build', 'watch'], function () {
-  workspace.start()
-})
+
 
 gulp.task('build', ['build-styles', 'build-docs', 'copy-files'])
 
@@ -49,7 +47,6 @@ gulp.task('build-styles', function () {
     .pipe(gulp.dest(config.buildStyles.dist))
     .pipe(concat(config.buildStyles.filename))
     .pipe(gulp.dest(config.buildStyles.dist))
-    .pipe(workspace.bs.reload({ stream: true }))
 })
 
 gulp.task('copy-files', function () {
@@ -59,8 +56,9 @@ gulp.task('copy-files', function () {
 
 gulp.task('build-docs', function () {
   return gulp.src(config.buildStyles.src)
-    .pipe(sassdoc())
-    .pipe(workspace.bs.reload({ stream: true }))
+    .pipe(sassdoc({
+      theme: 'patternfly'
+    }))
 })
 
 gulp.task('watch', ['watch:components', 'watch:static-files'])
