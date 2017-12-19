@@ -1,4 +1,4 @@
-# Pf-Pagination
+# Pfpagination
 
 ## Overview
 

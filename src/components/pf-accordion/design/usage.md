@@ -1,4 +1,4 @@
-# Pf-Accordion
+# Pfaccordion
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Pf-Slider
+# Pfslider
 
 ## Overview
 
