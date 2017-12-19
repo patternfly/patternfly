@@ -4,7 +4,10 @@ const baseDirectory = path.resolve(__dirname, '../dist')
 
 function getNavigation (baseDirectory) {
   let resourceTypes = fs.readdirSync(baseDirectory).filter(resource => {
-    return fs.statSync(path.join(baseDirectory, resource)).isDirectory()
+    const isDirectory = fs.statSync(path.join(baseDirectory, resource)).isDirectory()
+    const isNotUtility = (resource !== 'utilities')
+
+    return isDirectory && isNotUtility
   })
   let navigation = resourceTypes.reduce((accum, resourceType) => {
     let resourcesTypePath = path.join(baseDirectory, resourceType)

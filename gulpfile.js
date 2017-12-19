@@ -10,10 +10,10 @@ const bs = require('browser-sync').create()
 const config = {
   buildStyles: {
     src: [
-      './src/**/*.scss'
+      './src/{components,layouts,patterns}/**/*.scss'
     ],
     dist: './dist',
-    filename: 'components.css'
+    filename: 'patternfly.css'
   },
   copyFiles: {
     src: './src/**/*.{css,json,js,html,htm,scss}',
@@ -29,11 +29,13 @@ gulp.task('build', ['build-styles', 'build-docs', 'copy-files'])
 
 gulp.task('build-styles', function () {
   return gulp.src(config.buildStyles.src)
+    .pipe(inject.prepend(`@import 'utilities/_all';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
     .pipe(sass({
       includePaths: [
+        path.resolve(__dirname, './src'),
         path.resolve(__dirname, './node_modules')
       ]
     }).on('error', sass.logError))
