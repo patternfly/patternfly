@@ -19,7 +19,7 @@ function getNavigation (baseDirectory) {
       accum.push({
         type: 'resource',
         name: resource,
-        path: `/${resourceType}/${resource}/${resource}`
+        path: `/${resourceType}/${resource}`
       })
     })
 

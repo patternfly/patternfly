@@ -52,7 +52,7 @@ gulp.task('build-docs', function () {
     .pipe(sassdoc())
 })
 
-gulp.task('watch', ['watch:components', 'watch:static-files'])
+gulp.task('watch', ['build', 'watch:components', 'watch:static-files'])
 
 gulp.task('watch:components', function () {
   gulp.watch(config.watch.sassFiles, ['build-styles', 'build-docs'])

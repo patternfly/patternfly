@@ -14,13 +14,6 @@ program
   })
 
 program
-  .command('add:element <name>')
-  .description('Adds a new element to the design system')
-  .action(function (name) {
-    pf.run(`resource element ${name}`)
-  })
-
-program
   .command('add:component <name>')
   .description('Adds a new component to the design system')
   .action(function (name) {
@@ -38,14 +31,14 @@ program
   .command('add:example <name>')
   .description('Adds a new example to the design system')
   .action(function (name) {
-    pf.run(`resource extension ${name}`)
+    pf.run(`resource example ${name}`)
   })
 
 program
-  .command('add:extension <name>')
-  .description('Adds a new extension to the design system')
+  .command('add:pattern <name>')
+  .description('Adds a new pattern to the design system')
   .action(function (name) {
-    pf.run(`resource extension ${name}`)
+    pf.run(`resource pattern ${name}`)
   })
 
 program.parse(process.argv)

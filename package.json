@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "gulp build",
+    "watch": "gulp watch",
     "dev": "node ./.workspace",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
