@@ -25,7 +25,7 @@ pf add:component PfTooltips
 
 # from Bulma
 pf add:component PfBox
-pf add:component PfButton
+# pf add:component PfButton
 pf add:component PfContent
 pf add:component PfDelete
 pf add:component PfIcon
@@ -37,7 +37,7 @@ pf add:component PfTag
 pf add:component PfTitle
 pf add:component PfBreadcrumb
 pf add:component PfCard
-pf add:component PfDropdown
+# pf add:component PfDropdown
 pf add:component PfMenu
 pf add:component PfMessage
 pf add:component PfModal
@@ -55,8 +55,8 @@ pf add:component PfFile
 
 # from Carbon
 pf add:component PfAccordion
-pf add:component PfBreadcrumb
-pf add:component PfButton
+# pf add:component PfBreadcrumb
+# pf add:component PfButton
 pf add:component PfCheckbox
 pf add:component PfCodeSnippet
 pf add:component PfContentSwitcher
@@ -68,7 +68,7 @@ pf add:component PfScatterPlot
 pf add:component PfDatePicker
 pf add:component PfDropdown
 pf add:component PfFileUploader
-pf add:component PfForm
+# pf add:component PfForm
 pf add:component PfLink
 pf add:component PfList
 pf add:component PfLoading
@@ -88,7 +88,7 @@ pf add:component PfTag
 pf add:component PfTextInput
 pf add:component PfTile
 pf add:component PfToggle
-pf add:component PfTooltip
+# pf add:component PfTooltip
 
 # from Atlassian
 pf add:component PfAnalytics
@@ -96,7 +96,7 @@ pf add:component PfAvatar
 pf add:component PfBadge
 pf add:component PfBanner
 pf add:component PfBlanket
-pf add:component PfBreadcrumbs
+# pf add:component PfBreadcrumbs
 pf add:component PfButton
 pf add:component PfButton Group
 pf add:component PfCalendar

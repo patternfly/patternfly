@@ -135,9 +135,6 @@ gulp.task('clean', function () {
   return del(['dist/**/*'])
 })
 
-gulp.task('dev', ['concat:components', 'concat:layouts', 'concat:patterns'], function () {
+gulp.task('dev', ['build'], function () {
   workspace.startServer()
-  gulp.watch(config.componentStyles.src, ['build:component-styles'])
-  gulp.watch(config.layoutStyles.src, ['build:layout-styles'])
-  gulp.watch(config.patternStyles.src, ['build:pattern-styles'])
 })

@@ -20,16 +20,19 @@ function getNavigation (baseDirectory) {
       path: `/${resourceType}`
     })
     resources.forEach((resource) => {
-      accum.push({
-        type: 'resource',
-        name: resource,
-        path: `/${resourceType}/${resource}`
-      })
+      let isNotLibrary = (resource !== `${resourceType}.css`)
+
+      if (isNotLibrary) {
+        accum.push({
+          type: 'resource',
+          name: resource,
+          path: `/${resourceType}/${resource}`
+        })
+      }
     })
 
     return accum
   }, [])
-
 
   return navigation
 }

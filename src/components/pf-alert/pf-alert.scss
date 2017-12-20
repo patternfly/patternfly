@@ -1,22 +1,13 @@
 // pf-alert
 //
-// A component for displaying a message
+// A description of pf-alert
 //
-// .is-info - An informational alert
-// .is-warning - A warning alert
+// :psuedo-class - An example psuedo-class description
+// .is-modifier - An example modifier description
 //
 // markup: pf-alert.html
 //
-// Styleguide 2.1.3
+// Styleguide components - pf-alert
 .pf-alert {
-  background-color: #eaeaea;
-  border: 1px solid #dadada;
-  &.is-info {
-    background-color: #eaeaea;
-    border: 1px solid #dadada;
-  }
-  &.is-warning {
-    background-color: #eaeaea;
-    border: 1px solid #dadada;
-  }
+
 }

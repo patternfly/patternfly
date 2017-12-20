@@ -3,6 +3,7 @@
 dist/
 node_modules/
 sassdoc/
+docs/
 
 .codetoolsrc.js
 .blueprints

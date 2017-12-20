@@ -4,21 +4,23 @@
   "description": "",
   "main": "gulpfile.js",
   "bin": {
-    "pf": "./bin/cli.js"
+    "pf": "./.pf/cli.js"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "npm run build-library && npm run build-docs",
+    "build-library": "gulp build",
+    "build-docs": "kss --source ./src --destination ./docs",
     "dev": "gulp dev",
     "sass-lint": "sass-lint -c ./.sass-lint.yml 'src/**/*.scss' -v -q",
     "stylelint": "stylelint './src/**/*.scss'",
     "stylelint-fix": "stylelint './src/**/*.scss' --fix",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Cliff Pyles <cliff@cliffpyles.com>",
   "license": "MIT",
   "devDependencies": {
+    "backstopjs": "^3.0.36",
     "browser-sync": "^2.18.13",
     "commander": "^2.12.2",
     "del": "^3.0.0",
@@ -40,7 +42,6 @@
     "kss": "^3.0.0-beta.18",
     "run-sequence": "^2.2.0",
     "sass-lint": "^1.12.1",
-    "sc5-styleguide": "^2.0.4",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-scss": "^2.2.0",

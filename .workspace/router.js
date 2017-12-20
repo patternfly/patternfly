@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs-extra')
 const ejs = require('ejs')
 const express = require('express')
 const router = express()
@@ -6,9 +7,11 @@ const router = express()
 const workspaceView = path.resolve(__dirname, 'public/index.ejs')
 const resourceTypes = ['components', 'elements', 'layouts', 'patterns']
 
-router.use(express.static(path.resolve(__dirname, '../dist')))
+router.use('/docs', express.static(path.resolve(__dirname, '../docs')))
+router.use('/dist', express.static(path.resolve(__dirname, '../dist')))
 
 resourceTypes.forEach((resourceType) => {
+
   router.get(`/${resourceType}/:name`, function (req, res) {
     let page = path.resolve(
       __dirname,
