@@ -58,16 +58,38 @@ const config = {
   }
 }
 
+gulp.task('fresh-build', function (callback) {
+  runSequence('clean', 'build', callback)
+})
+
 gulp.task('build', function (callback) {
   runSequence(
-    'clean',
-    ['build:component-styles', 'build:layout-styles', 'build:pattern-styles', 'build:html'],
-    ['concat:component-styles', 'concat:layout-styles', 'concat:pattern-styles'],
+    ['build:component-library', 'build:layout-library', 'build:pattern-library', 'build:html'],
     'concat:library-styles',
     callback
   )
 })
-
+gulp.task('build:component-library', function (callback) {
+  runSequence(
+    'build:component-styles',
+    'concat:component-styles',
+    callback
+  )
+})
+gulp.task('build:layout-library', function (callback) {
+  runSequence(
+    'build:layout-styles',
+    'concat:layout-styles',
+    callback
+  )
+})
+gulp.task('build:pattern-library', function (callback) {
+  runSequence(
+    'build:pattern-styles',
+    'concat:pattern-styles',
+    callback
+  )
+})
 gulp.task('build:component-styles', function () {
   return gulp.src(config.componentStyles.src)
     .pipe(changed(config.componentStyles.dist))
@@ -117,24 +139,30 @@ gulp.task('concat:component-styles', function () {
   return gulp.src(`${config.componentStyles.dist}/**/*.css`)
     .pipe(concat(config.componentStyles.filename))
     .pipe(gulp.dest(config.componentStyles.dist))
+    .pipe(workspace.stream())
 })
 
 gulp.task('concat:layout-styles', function () {
   return gulp.src(`${config.layoutStyles.dist}/**/*.css`)
     .pipe(concat(config.layoutStyles.filename))
     .pipe(gulp.dest(config.layoutStyles.dist))
+    .pipe(workspace.stream())
 })
 
 gulp.task('concat:pattern-styles', function () {
   return gulp.src(`${config.patternStyles.dist}/**/*.css`)
     .pipe(concat(config.patternStyles.filename))
     .pipe(gulp.dest(config.patternStyles.dist))
+    .pipe(workspace.stream())
 })
 
 gulp.task('clean', function () {
   return del(['dist/**/*'])
 })
 
-gulp.task('dev', ['build'], function () {
+gulp.task('serve', function () {
   workspace.startServer()
+  gulp.watch(config.componentStyles.src, ['build:component-library'])
+  gulp.watch(config.layoutStyles.src, ['build:layout-library'])
+  gulp.watch(config.patternStyles.src, ['build:pattern-library'])
 })

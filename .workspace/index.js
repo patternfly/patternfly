@@ -11,8 +11,9 @@ bs.startServer = function () {
       ]
     },
     files: [
-      path.resolve(__dirname, '../dist'),
-      path.resolve(__dirname, '../docs')
+      path.resolve(__dirname, '../dist/components/components.css'),
+      path.resolve(__dirname, '../dist/layouts/layouts.css'),
+      path.resolve(__dirname, '../dist/patterns/patterns.css')
     ],
     middleware: [navigation, router],
     port: 4200,
