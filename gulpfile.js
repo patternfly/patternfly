@@ -1,65 +1,143 @@
 const gulp = require('gulp')
+const changed = require('gulp-changed')
 const concat = require('gulp-concat')
+const del = require('del')
 const inject = require('gulp-inject-string')
 const replace = require('gulp-replace')
 const sass = require('gulp-sass')
-const sassdoc = require('sassdoc')
 const path = require('path')
-const bs = require('browser-sync').create()
+const runSequence = require('run-sequence')
+const workspace = require('./.workspace')
 
 const config = {
-  buildStyles: {
+  componentStyles: {
+    src: './src/components/**/*.scss',
+    dist: './dist/components',
+    filename: 'components.css'
+  },
+  layoutStyles: {
+    src: './src/layouts/**/*.scss',
+    dist: './dist/layouts',
+    filename: 'layouts.css'
+  },
+  patternStyles: {
+    src: './src/patterns/**/*.scss',
+    dist: './dist/patterns',
+    filename: 'patterns.css'
+  },
+  libraryStyles: {
     src: [
-      './src/{components,layouts,patterns}/**/*.scss'
+      './dist/components/components.css',
+      './dist/layouts/layouts.css',
+      './dist/patterns/patterns.css'
     ],
     dist: './dist',
     filename: 'patternfly.css'
   },
-  copyFiles: {
-    src: './src/**/*.{css,json,js,html,htm,scss}',
+  html: {
+    src: './src/**/*.{html,htm}',
     dist: './dist'
   },
-  watch: {
-    sassFiles: './src/**/*.scss',
-    staticFiles: './src/**/*.{css,html,htm,json,js}'
+  docs: {
+    src: './src/**/*.scss',
+    outputPath: 'docs',
+    generate: {
+      title: 'PatternFly Development Documenation',
+      server: false,
+      rootPath: 'docs',
+      overviewPath: 'README.md',
+      sideNav: true
+    }
+  },
+  sass: {
+    outputStyle: 'compressed',
+    includePaths: [
+      path.resolve(__dirname, './src'),
+      path.resolve(__dirname, './node_modules')
+    ]
   }
 }
 
-gulp.task('build', ['build-styles', 'build-docs', 'copy-files'])
+gulp.task('build', function (callback) {
+  runSequence(
+    'clean',
+    ['build:component-styles', 'build:layout-styles', 'build:pattern-styles', 'build:html'],
+    ['concat:component-styles', 'concat:layout-styles', 'concat:pattern-styles'],
+    'concat:library-styles',
+    callback
+  )
+})
 
-gulp.task('build-styles', function () {
-  return gulp.src(config.buildStyles.src)
+gulp.task('build:component-styles', function () {
+  return gulp.src(config.componentStyles.src)
+    .pipe(changed(config.componentStyles.dist))
     .pipe(inject.prepend(`@import 'utilities/_all';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
     .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
-    .pipe(sass({
-      includePaths: [
-        path.resolve(__dirname, './src'),
-        path.resolve(__dirname, './node_modules')
-      ]
-    }).on('error', sass.logError))
-    .pipe(gulp.dest(config.buildStyles.dist))
-    .pipe(concat(config.buildStyles.filename))
-    .pipe(gulp.dest(config.buildStyles.dist))
+    .pipe(sass(config.sass).on('error', sass.logError))
+    .pipe(gulp.dest(config.componentStyles.dist))
 })
 
-gulp.task('copy-files', function () {
-  return gulp.src(config.copyFiles.src)
-    .pipe(gulp.dest(config.copyFiles.dist))
+gulp.task('build:layout-styles', function () {
+  return gulp.src(config.layoutStyles.src)
+    .pipe(changed(config.layoutStyles.dist))
+    .pipe(inject.prepend(`@import 'utilities/_all';`))
+    .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
+    .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
+    .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
+    .pipe(sass(config.sass).on('error', sass.logError))
+    .pipe(gulp.dest(config.layoutStyles.dist))
 })
 
-gulp.task('build-docs', function () {
-  return gulp.src(config.buildStyles.src)
-    .pipe(sassdoc())
+gulp.task('build:pattern-styles', function () {
+  return gulp.src(config.patternStyles.src)
+    .pipe(changed(config.patternStyles.dist))
+    .pipe(inject.prepend(`@import 'utilities/_all';`))
+    .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
+    .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
+    .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
+    .pipe(sass(config.sass).on('error', sass.logError))
+    .pipe(gulp.dest(config.patternStyles.dist))
 })
 
-gulp.task('watch', ['build', 'watch:components', 'watch:static-files'])
-
-gulp.task('watch:components', function () {
-  gulp.watch(config.watch.sassFiles, ['build-styles', 'build-docs'])
+gulp.task('build:html', function () {
+  return gulp.src(config.html.src)
+    .pipe(changed(config.html.dist))
+    .pipe(gulp.dest(config.html.dist))
 })
 
-gulp.task('watch:static-files', function () {
-  gulp.watch(config.watch.staticFiles, ['copy-files'])
+gulp.task('concat:library-styles', function () {
+  return gulp.src(config.libraryStyles.src)
+    .pipe(concat(config.libraryStyles.filename))
+    .pipe(gulp.dest(config.libraryStyles.dist))
+})
+
+gulp.task('concat:component-styles', function () {
+  return gulp.src(`${config.componentStyles.dist}/**/*.css`)
+    .pipe(concat(config.componentStyles.filename))
+    .pipe(gulp.dest(config.componentStyles.dist))
+})
+
+gulp.task('concat:layout-styles', function () {
+  return gulp.src(`${config.layoutStyles.dist}/**/*.css`)
+    .pipe(concat(config.layoutStyles.filename))
+    .pipe(gulp.dest(config.layoutStyles.dist))
+})
+
+gulp.task('concat:pattern-styles', function () {
+  return gulp.src(`${config.patternStyles.dist}/**/*.css`)
+    .pipe(concat(config.patternStyles.filename))
+    .pipe(gulp.dest(config.patternStyles.dist))
+})
+
+gulp.task('clean', function () {
+  return del(['dist/**/*'])
+})
+
+gulp.task('dev', ['concat:components', 'concat:layouts', 'concat:patterns'], function () {
+  workspace.startServer()
+  gulp.watch(config.componentStyles.src, ['build:component-styles'])
+  gulp.watch(config.layoutStyles.src, ['build:layout-styles'])
+  gulp.watch(config.patternStyles.src, ['build:pattern-styles'])
 })

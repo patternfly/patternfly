@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs-extra')
-const baseDirectory = path.resolve(__dirname, '../dist')
+
+const baseDirectory = path.resolve(__dirname, '../../dist')
 
 function getNavigation (baseDirectory) {
   let resourceTypes = fs.readdirSync(baseDirectory).filter(resource => {
@@ -33,4 +34,8 @@ function getNavigation (baseDirectory) {
   return navigation
 }
 
-module.exports = getNavigation(baseDirectory)
+module.exports = function (req, res, next) {
+  req.navigation = getNavigation(baseDirectory)
+
+  next()
+}
