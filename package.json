@@ -7,12 +7,10 @@
     "pf": "./.pf/cli.js"
   },
   "scripts": {
-    "build": "npm run build-library && npm run build-docs",
-    "build-library": "gulp build",
+    "build": "gulp fresh-build && npm run build-docs",
     "build-docs": "kss --source ./src --destination ./docs",
-    "dev": "npm run build && npm run serve",
+    "dev": "npm run build && gulp serve",
     "sass-lint": "sass-lint -c ./.sass-lint.yml 'src/**/*.scss' -v -q",
-    "serve": "gulp serve",
     "stylelint": "stylelint './src/**/*.scss'",
     "stylelint-fix": "stylelint './src/**/*.scss' --fix",
     "test": "echo \"Error: no test specified\" && exit 1"

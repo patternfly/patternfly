@@ -9,35 +9,8 @@ const path = require('path')
 const runSequence = require('run-sequence')
 const workspace = require('./.workspace')
 
+const resourceTypes = ['components', 'layouts', 'patterns']
 const config = {
-  componentStyles: {
-    src: './src/components/**/*.scss',
-    dist: './dist/components',
-    filename: 'components.css'
-  },
-  layoutStyles: {
-    src: './src/layouts/**/*.scss',
-    dist: './dist/layouts',
-    filename: 'layouts.css'
-  },
-  patternStyles: {
-    src: './src/patterns/**/*.scss',
-    dist: './dist/patterns',
-    filename: 'patterns.css'
-  },
-  libraryStyles: {
-    src: [
-      './dist/components/components.css',
-      './dist/layouts/layouts.css',
-      './dist/patterns/patterns.css'
-    ],
-    dist: './dist',
-    filename: 'patternfly.css'
-  },
-  html: {
-    src: './src/**/*.{html,htm}',
-    dist: './dist'
-  },
   docs: {
     src: './src/**/*.scss',
     outputPath: 'docs',
@@ -58,111 +31,68 @@ const config = {
   }
 }
 
+resourceTypes.forEach(resourceType => {
+  config[resourceType] = {
+    src: `./src/${resourceType}/**/*.scss`,
+    dist: `./dist/${resourceType}`,
+    filename: `${resourceType}.css`
+  }
+})
+
+
+/**
+ * Global tasks
+ */
 gulp.task('fresh-build', function (callback) {
   runSequence('clean', 'build', callback)
 })
 
 gulp.task('build', function (callback) {
   runSequence(
-    ['build:component-library', 'build:layout-library', 'build:pattern-library', 'build:html'],
-    'concat:library-styles',
+    resourceTypes.map(resourceType => `build:${resourceType}`),
     callback
   )
-})
-gulp.task('build:component-library', function (callback) {
-  runSequence(
-    'build:component-styles',
-    'concat:component-styles',
-    callback
-  )
-})
-gulp.task('build:layout-library', function (callback) {
-  runSequence(
-    'build:layout-styles',
-    'concat:layout-styles',
-    callback
-  )
-})
-gulp.task('build:pattern-library', function (callback) {
-  runSequence(
-    'build:pattern-styles',
-    'concat:pattern-styles',
-    callback
-  )
-})
-gulp.task('build:component-styles', function () {
-  return gulp.src(config.componentStyles.src)
-    .pipe(changed(config.componentStyles.dist))
-    .pipe(inject.prepend(`@import 'utilities/_all';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
-    .pipe(sass(config.sass).on('error', sass.logError))
-    .pipe(gulp.dest(config.componentStyles.dist))
-})
-
-gulp.task('build:layout-styles', function () {
-  return gulp.src(config.layoutStyles.src)
-    .pipe(changed(config.layoutStyles.dist))
-    .pipe(inject.prepend(`@import 'utilities/_all';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
-    .pipe(sass(config.sass).on('error', sass.logError))
-    .pipe(gulp.dest(config.layoutStyles.dist))
-})
-
-gulp.task('build:pattern-styles', function () {
-  return gulp.src(config.patternStyles.src)
-    .pipe(changed(config.patternStyles.dist))
-    .pipe(inject.prepend(`@import 'utilities/_all';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_mixins';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_variables';`))
-    .pipe(inject.prepend(`@import 'bootstrap/scss/_functions';`))
-    .pipe(sass(config.sass).on('error', sass.logError))
-    .pipe(gulp.dest(config.patternStyles.dist))
-})
-
-gulp.task('build:html', function () {
-  return gulp.src(config.html.src)
-    .pipe(changed(config.html.dist))
-    .pipe(gulp.dest(config.html.dist))
-})
-
-gulp.task('concat:library-styles', function () {
-  return gulp.src(config.libraryStyles.src)
-    .pipe(concat(config.libraryStyles.filename))
-    .pipe(gulp.dest(config.libraryStyles.dist))
-})
-
-gulp.task('concat:component-styles', function () {
-  return gulp.src(`${config.componentStyles.dist}/**/*.css`)
-    .pipe(concat(config.componentStyles.filename))
-    .pipe(gulp.dest(config.componentStyles.dist))
-    .pipe(workspace.stream())
-})
-
-gulp.task('concat:layout-styles', function () {
-  return gulp.src(`${config.layoutStyles.dist}/**/*.css`)
-    .pipe(concat(config.layoutStyles.filename))
-    .pipe(gulp.dest(config.layoutStyles.dist))
-    .pipe(workspace.stream())
-})
-
-gulp.task('concat:pattern-styles', function () {
-  return gulp.src(`${config.patternStyles.dist}/**/*.css`)
-    .pipe(concat(config.patternStyles.filename))
-    .pipe(gulp.dest(config.patternStyles.dist))
-    .pipe(workspace.stream())
 })
 
 gulp.task('clean', function () {
-  return del(['dist/**/*'])
+  return del(['dist'])
 })
 
 gulp.task('serve', function () {
   workspace.startServer()
-  gulp.watch(config.componentStyles.src, ['build:component-library'])
-  gulp.watch(config.layoutStyles.src, ['build:layout-library'])
-  gulp.watch(config.patternStyles.src, ['build:pattern-library'])
+  resourceTypes.forEach((resourceType) => {
+    gulp.watch(config[resourceType].src, [`build:${resourceType}`])
+  })
+})
+
+
+/**
+ * Resource specific tasks
+ */
+resourceTypes.forEach((resourceType) => {
+  gulp.task(`build:${resourceType}`, function (callback) {
+   runSequence(
+     `build:${resourceType}:modules`,
+     `build:${resourceType}:library`,
+     callback
+   )
+  })
+
+  gulp.task(`build:${resourceType}:modules`, function () {
+   return gulp.src(config[resourceType].src)
+     .pipe(changed(config[resourceType].dist))
+     .pipe(inject.prepend(`@import 'utilities/_all';`))
+     .pipe(sass(config.sass).on(`error`, sass.logError))
+     .pipe(gulp.dest(config[resourceType].dist))
+     .pipe(workspace.stream())
+  })
+
+  gulp.task(`build:${resourceType}:library`, function () {
+   return gulp.src(config[resourceType].src)
+     .pipe(inject.prepend(`@import 'utilities/_all';`))
+     .pipe(sass(config.sass).on(`error`, sass.logError))
+     .pipe(concat(config[resourceType].filename))
+     .pipe(gulp.dest(config[resourceType].dist))
+     .pipe(workspace.stream())
+  })
 })

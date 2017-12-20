@@ -1,10 +1,16 @@
-@charset "utf-8";
-
 // All imports must not have any rendered output.
 // Files that are imported here will be available to all resources.
+
+// These imports reference files this folder
 @import "./initial-variables";
 @import "./functions";
 @import "./derived-variables";
 @import "./animations";
 @import "./mixins";
 @import "./controls";
+
+
+// These imports reference files in the node_module folder
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";

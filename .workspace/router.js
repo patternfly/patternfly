@@ -17,13 +17,15 @@ resourceTypes.forEach((resourceType) => {
       __dirname,
       `../src/${resourceType}/${req.params.name}/${req.params.name}.html`
     )
-
+    let resourceName = req.params.name
     ejs.renderFile(
       workspaceView,
       {
         page,
         resourceType,
-        resourceName: req.params.name,
+        resourceName,
+        styles: `/dist/${resourceType}/${resourceName}/${resourceName}.css`,
+        documentation: `/docs/section-${resourceType}.html#kssref-${resourceType}-${resourceName}`,
         workspace: {
           navigation: req.navigation
         }
