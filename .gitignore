@@ -1,9 +1,10 @@
-.DS_Store
-
 dist/
 node_modules/
 sassdoc/
 docs/
+test/scenario_tests/
+test/results/
 
+.DS_Store
 .codetoolsrc.js
 .blueprints

@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfmenu',
+  label: 'pf-menu (default)',
   url: 'http://localhost:4200/components/pf-menu'
 }]

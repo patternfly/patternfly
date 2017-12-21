@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pftile',
+  label: 'pf-tile (default)',
   url: 'http://localhost:4200/components/pf-tile'
 }]

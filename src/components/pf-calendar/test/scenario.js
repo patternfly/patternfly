@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfcalendar',
+  label: 'pf-calendar (default)',
   url: 'http://localhost:4200/components/pf-calendar'
 }]

@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pffield',
+  label: 'pf-field (default)',
   url: 'http://localhost:4200/components/pf-field'
 }]

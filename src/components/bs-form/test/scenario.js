@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Bsforms',
+  label: 'bs-form (default)',
   url: 'http://localhost:4200/components/bs-form'
 }]

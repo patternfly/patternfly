@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pflevel',
+  label: 'pf-level (default)',
   url: 'http://localhost:4200/layouts/pf-level'
 }]

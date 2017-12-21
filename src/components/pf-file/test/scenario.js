@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pffile',
+  label: 'pf-file (default)',
   url: 'http://localhost:4200/components/pf-file'
 }]

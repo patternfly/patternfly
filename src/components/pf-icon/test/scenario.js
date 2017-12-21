@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pficon',
+  label: 'pf-icon (default)',
   url: 'http://localhost:4200/components/pf-icon'
 }]

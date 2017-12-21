@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pflist',
+  label: 'pf-list (default)',
   url: 'http://localhost:4200/components/pf-list'
 }]

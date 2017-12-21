@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfscatterplot',
+  label: 'pf-scatter-plot (default)',
   url: 'http://localhost:4200/components/pf-scatter-plot'
 }]

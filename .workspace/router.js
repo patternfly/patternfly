@@ -9,6 +9,7 @@ const resourceTypes = ['components', 'elements', 'layouts', 'patterns']
 
 router.use('/docs', express.static(path.resolve(__dirname, '../docs')))
 router.use('/dist', express.static(path.resolve(__dirname, '../dist')))
+router.use('/regressions', express.static(path.resolve(__dirname, '../test/results')))
 
 resourceTypes.forEach((resourceType) => {
 

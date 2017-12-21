@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Bsnavs',
+  label: 'bs-nav (default)',
   url: 'http://localhost:4200/components/bs-nav'
 }]

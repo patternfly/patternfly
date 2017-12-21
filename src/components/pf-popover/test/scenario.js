@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfpopovers',
+  label: 'pf-popover (default)',
   url: 'http://localhost:4200/components/pf-popover'
 }]

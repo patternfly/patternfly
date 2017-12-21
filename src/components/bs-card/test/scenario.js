@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Bscard',
+  label: 'bs-card (default)',
   url: 'http://localhost:4200/components/bs-card'
 }]

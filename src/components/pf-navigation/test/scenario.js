@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfnavigation',
+  label: 'pf-navigation (default)',
   url: 'http://localhost:4200/components/pf-navigation'
 }]

@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfgauge',
+  label: 'pf-gauge (default)',
   url: 'http://localhost:4200/components/pf-gauge'
 }]

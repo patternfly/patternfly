@@ -52,7 +52,7 @@ module.exports = class extends Generator {
           gitUserEmail: process.env.GIT_USER_EMAIL || ''
         },
         scenario: {
-          label: resourceTitle,
+          label: `${resourceFilename} (default)`,
           url: `http://localhost:4200/${resourceType}/${resourceFilename}`
         }
       }

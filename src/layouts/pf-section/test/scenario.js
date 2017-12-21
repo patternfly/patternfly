@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfsection',
+  label: 'pf-section (default)',
   url: 'http://localhost:4200/layouts/pf-section'
 }]

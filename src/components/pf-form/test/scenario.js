@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfforms',
+  label: 'pf-form (default)',
   url: 'http://localhost:4200/components/pf-form'
 }]

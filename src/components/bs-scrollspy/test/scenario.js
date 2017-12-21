@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Bsscrollspy',
+  label: 'bs-scrollspy (default)',
   url: 'http://localhost:4200/components/bs-scrollspy'
 }]

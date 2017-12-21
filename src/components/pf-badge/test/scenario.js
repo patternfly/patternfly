@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfbadge',
+  label: 'pf-badge (default)',
   url: 'http://localhost:4200/components/pf-badge'
 }]

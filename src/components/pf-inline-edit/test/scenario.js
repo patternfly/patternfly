@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfinlineedit',
+  label: 'pf-inline-edit (default)',
   url: 'http://localhost:4200/components/pf-inline-edit'
 }]

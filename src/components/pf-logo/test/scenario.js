@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pflogo',
+  label: 'pf-logo (default)',
   url: 'http://localhost:4200/components/pf-logo'
 }]

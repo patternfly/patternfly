@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfbanner',
+  label: 'pf-banner (default)',
   url: 'http://localhost:4200/components/pf-banner'
 }]

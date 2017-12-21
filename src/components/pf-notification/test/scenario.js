@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfnotification',
+  label: 'pf-notification (default)',
   url: 'http://localhost:4200/components/pf-notification'
 }]

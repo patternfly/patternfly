@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfcontainer',
+  label: 'pf-container (default)',
   url: 'http://localhost:4200/layouts/pf-container'
 }]

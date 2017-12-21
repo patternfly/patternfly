@@ -1,4 +1,4 @@
 module.exports = [{
-  label: 'Pfcontentswitcher',
+  label: 'pf-content-switcher (default)',
   url: 'http://localhost:4200/components/pf-content-switcher'
 }]
