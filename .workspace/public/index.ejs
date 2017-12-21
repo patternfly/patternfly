@@ -29,13 +29,27 @@
       <a href="<%= documentation %>">documentation</a>
     </div>
     <% } %>
-    <div class="pf-workspace__demo__content">
-      <% if (page) { %>
-        <link rel="stylesheet" href="<%= styles %>">
+    <% if (page) { %>
+      <link rel="stylesheet" href="<%= styles %>">
+      <div class="pf-workspace__demo__examples">
         <%- include(page, {}) %>
-      <% } %>
-    </div>
+      </div>
+    <% } %>
   </div>
 </div>
+<script>
+  // let templates = document.querySelectorAll('template')
+  // let examples = document.querySelector('.pf-workspace__demo__examples')
+  // let examplesContent = document.createDocumentFragment()
+  //
+  // templates.forEach((template) => {
+  //   let example = document.createElement('li')
+  //   let templateContent = document.importNode(template.content, true)
+  //
+  //   example.appendChild(templateContent)
+  //   examplesContent.appendChild(example)
+  // })
+  // examples.appendChild(examplesContent)
+</script>
 </body>
 </html>

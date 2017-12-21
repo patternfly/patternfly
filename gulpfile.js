@@ -50,8 +50,17 @@ gulp.task('fresh-build', function (callback) {
 gulp.task('build', function (callback) {
   runSequence(
     resourceTypes.map(resourceType => `build:${resourceType}`),
+    'build-patternfly',
     callback
   )
+})
+
+gulp.task('build-patternfly', function (callback) {
+  return gulp.src(
+    resourceTypes.map(resourceType => `./dist/${resourceType}/${resourceType}.css`)
+  )
+  .pipe(concat('patternfly.css'))
+  .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('clean', function () {
@@ -63,6 +72,7 @@ gulp.task('serve', function () {
   resourceTypes.forEach((resourceType) => {
     gulp.watch(config[resourceType].src, [`build:${resourceType}`])
   })
+  gulp.watch('./src/**/*.html').on('change', workspace.reload)
 })
 
 

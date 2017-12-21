@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "gulp fresh-build && npm run build-docs",
-    "build-docs": "kss --source ./src --destination ./docs",
+    "build-docs": "kss --source ./src --destination ./docs --title 'PatternFly Docs' --css '/dist/patternfly.css'",
     "dev": "npm run build && gulp serve",
     "sass-lint": "sass-lint -c ./.sass-lint.yml 'src/**/*.scss' -v -q",
     "stylelint": "stylelint './src/**/*.scss'",
