@@ -33,27 +33,17 @@ module.exports = class extends Generator {
       this.templatePath(resourceDirTemplate),
       this.destinationPath(resourceDestination),
       {
-        design: {
-          usage: {
-            mainHeading: resourceTitle
-          }
-        },
-        html: {
-          bemEntity: resourceFilename
-        },
-        npm: {
-          packageName: resourceFilename
-        },
-        sass: {
-          resourceType,
-          resourceTitle,
-          bemEntity: resourceFilename,
-          gitUserName: process.env.GIT_USER_NAME || '',
-          gitUserEmail: process.env.GIT_USER_EMAIL || ''
-        },
-        scenario: {
-          label: `${resourceFilename} (default)`,
-          url: `http://localhost:4200/${resourceType}/${resourceFilename}`
+        resource: {
+          entity: resourceFilename,
+          filename: resourceFilename,
+          title: resourceTitle,
+          type: resourceType,
+          author: {
+            name: process.env.GIT_USER_NAME || '',
+            email: process.env.GIT_USER_EMAIL || ''
+          },
+          sandboxUrl: `/${resourceType}/${resourceFilename}`,
+          documentationUrl: `/${resourceType}/${resourceFilename}`
         }
       }
     )

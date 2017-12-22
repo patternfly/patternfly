@@ -1,4 +1,4 @@
 module.exports = [{
   label: 'pf-tab (default)',
-  url: 'http://localhost:4200/components/pf-tab'
+  url: '/components/pf-tab'
 }]

@@ -4,6 +4,7 @@ sassdoc/
 docs/
 test/scenario_tests/
 test/results/
+.sass-cache/
 
 .DS_Store
 .codetoolsrc.js

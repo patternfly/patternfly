@@ -1,0 +1,29 @@
+
+/// Mixin to size elements.
+/// @param {Number} $width           - Width
+/// @param {Number} $height [$width] - Height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+/// Responsive manager.
+/// @requires {variable} breakpoints
+/// @param {String} $breakpoint - Breakpoint
+/// @throws No value found for `$breakpoint`. Please make sure it is defined in `$breakpoints` map.
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "No value found for `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

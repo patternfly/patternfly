@@ -1,13 +1,11 @@
-// <%= sass.bemEntity %>
-//
-// A description of <%= sass.bemEntity %>
-//
-// :psuedo-class - An example psuedo-class description
-// .is-modifier - An example modifier description
-//
-// markup: <%= sass.bemEntity %>.html
-//
-// Styleguide <%= sass.resourceType %> - <%= sass.bemEntity %>
-.<%= sass.bemEntity %> {
+/// <%= resource.entity %>
+/// A description of <%= resource.entity %>
+/// @group <%= resource.type %>
+/// @author <%= resource.author.name %> <<%= resource.author.email %>>
+/// @modifier .is-modifier - An example modifier description
+/// @modifier .is-modifier - An example modifier description
+/// @template src/<%= resource.type %>/<%= resource.entity %>/<%= resource.entity %>.html
+
+.<%= resource.entity %> {
 
 }

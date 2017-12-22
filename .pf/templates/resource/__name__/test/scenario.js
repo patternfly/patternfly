@@ -1,4 +1,4 @@
 module.exports = [{
-  label: '<%= scenario.label %>',
-  url: '<%= scenario.url %>'
+  label: '<%= resource.entity %> (default)',
+  url: '<%= resource.sandboxUrl %>'
 }]

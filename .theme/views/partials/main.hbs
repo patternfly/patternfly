@@ -1,0 +1,21 @@
+<main class="documentation-content">
+  {{#each data }}
+      <h1>{{groups.[@key]}}</h1>
+      {{#each this}}
+        {{#if this}}
+          <section>
+            <h2>{{@key}}</h2>
+            {{#each this}}
+              <div id="module-{{@index}}" class="module">
+                <h3>{{context.name}}</h3> {{template}}
+                {{#each modifier}}
+                  <p>{{modifier}}</p>
+                {{/each}}
+              </div>
+
+            {{/each}}
+          </section>
+        {{/if}}
+      {{/each}}
+  {{/each}}
+</main>

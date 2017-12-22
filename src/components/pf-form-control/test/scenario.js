@@ -1,4 +1,4 @@
 module.exports = [{
   label: 'pf-form-control (default)',
-  url: 'http://localhost:4200/components/pf-form-control'
+  url: '/components/pf-form-control'
 }]

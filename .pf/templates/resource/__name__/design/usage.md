@@ -1,4 +1,4 @@
-# <%= design.usage.mainHeading %>
+# <%= resource.title %>
 
 ## Overview
 

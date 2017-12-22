@@ -5,6 +5,7 @@ const del = require('del')
 const inject = require('gulp-inject-string')
 const replace = require('gulp-replace')
 const sass = require('gulp-sass')
+const sassdoc = require('sassdoc')
 const path = require('path')
 const runSequence = require('run-sequence')
 const workspace = require('./.workspace')
@@ -12,15 +13,13 @@ const workspace = require('./.workspace')
 const resourceTypes = ['components', 'layouts', 'patterns']
 const config = {
   docs: {
-    src: './src/**/*.scss',
-    outputPath: 'docs',
-    generate: {
-      title: 'PatternFly Development Documenation',
-      server: false,
-      rootPath: 'docs',
-      overviewPath: 'README.md',
-      sideNav: true
-    }
+    dest: 'docs',
+    theme: 'patternfly',
+    styles: [
+      '/dist/components/components.css',
+      '/dist/layouts/layouts.css',
+      '/dist/patterns/patterns.css'
+    ]
   },
   sass: {
     outputStyle: 'compressed',
@@ -55,6 +54,11 @@ gulp.task('build', function (callback) {
   )
 })
 
+gulp.task('build-docs', function (callback) {
+  return gulp.src('src/**/*.scss')
+    .pipe(sassdoc(config.docs))
+})
+
 gulp.task('build-patternfly', function (callback) {
   return gulp.src(
     resourceTypes.map(resourceType => `./dist/${resourceType}/${resourceType}.css`)
@@ -67,12 +71,13 @@ gulp.task('clean', function () {
   return del(['dist'])
 })
 
-gulp.task('serve', function () {
+gulp.task('serve', ['build', 'build-docs'], function () {
   workspace.startServer()
   resourceTypes.forEach((resourceType) => {
     gulp.watch(config[resourceType].src, [`build:${resourceType}`])
   })
   gulp.watch('./src/**/*.html').on('change', workspace.reload)
+  gulp.watch('./.theme/**/*', ['build-docs']).on('change', workspace.reload)
 })
 
 

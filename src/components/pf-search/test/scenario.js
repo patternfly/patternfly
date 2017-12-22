@@ -1,4 +1,4 @@
 module.exports = [{
   label: 'pf-search (default)',
-  url: 'http://localhost:4200/components/pf-search'
+  url: '/components/pf-search'
 }]

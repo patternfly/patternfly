@@ -1,0 +1,31 @@
+
+/// Map of breakpoints for responsive design.
+/// @type Map
+$breakpoints: (
+  "small":  (max-width: 800px),
+  "medium": (min-width: 801px),
+) !global;
+
+/// Main font stack for text
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Arial', sans-serif !default;
+
+/// Main font stack for code
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Pink
+/// @type Color
+$pink: #dd5a6f !default;
+
+/// Purple
+/// @type Color
+$purple: #5c4863 !default;
+
+/// Yellow
+/// @type Color
+$yellow: #ffc93c !default;
+
+/// Black
+/// @type Color
+$black: #333 !default;

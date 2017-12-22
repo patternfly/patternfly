@@ -1,19 +1,17 @@
-// pf-alert
-//
-// Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
-//
-// .is-primary - An alert using the primary styles
-// .is-secondary - An alert using the secondary styles
-// .is-success - An alert using the success styles
-// .is-danger - An alert using the danger styles
-// .is-warning - An alert using the warning styles
-// .is-info - An alert using the info styles
-// .is-light - An alert using the light styles
-// .is-dark - An alert using the dark styles
-//
-// markup: pf-alert.html
-//
-// styleguide: components - pf-alert
+/// pf-alert
+/// A description of the pf-alert
+/// @group components
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @modifier .is-primary Applies the primary color scheme to the alert
+/// @modifier .is-secondary Applies the secondary color scheme to the alert
+/// @modifier .is-success Applies the success color scheme to the alert
+/// @modifier .is-danger Applies the danger color scheme to the alert
+/// @modifier .is-warning Applies the warning color scheme to the alert
+/// @modifier .is-info Applies the info color scheme to the alert
+/// @modifier .is-light Applies the light color scheme to the alert
+/// @modifier .is-dark Applies the dark color scheme to the alert
+/// @template src/components/pf-alert/pf-alert.html
+
 .pf-alert {
   $pf-alert--BackgroundColor: #5a5a5a !default;
   $pf-alert--Color: #fff !default;
