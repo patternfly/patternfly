@@ -2,12 +2,10 @@
 // All variables should have a valid css value,
 // and use !default so they can be overwritten
 
-$bs-alert--BackgroundColor: red !default;
-
 // Sizing Variables
 $xxs-unit: 2px !default;
-$xs-unit: 0.25rem !default;
-$s-unit: 0.5rem !default;
+$xs-unit: .25rem !default;
+$s-unit: .5rem !default;
 $m-unit: 1rem !default;
 $l-unit: 1.5rem !default;
 $xl-unit: 1.75rem !default;

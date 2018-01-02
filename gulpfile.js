@@ -6,6 +6,7 @@ const inject = require('gulp-inject-string')
 const replace = require('gulp-replace')
 const sass = require('gulp-sass')
 const sassdoc = require('sassdoc')
+const stylelint = require('gulp-stylelint')
 const path = require('path')
 const runSequence = require('run-sequence')
 const workspace = require('./.workspace')
@@ -38,6 +39,20 @@ resourceTypes.forEach(resourceType => {
   }
 })
 
+gulp.task('lint-styles', function lintCssTask() {
+  return gulp
+    .src('src/**/*.scss')
+    .pipe(
+      stylelint({
+        fix: true,
+        reporters: [
+          {formatter: 'string', console: true}
+        ]
+      })
+    )
+    .pipe(gulp.dest('src'))
+})
+
 
 /**
  * Global tasks
@@ -59,7 +74,7 @@ gulp.task('build-docs', function (callback) {
     .pipe(sassdoc(config.docs))
 })
 
-gulp.task('build-patternfly', function (callback) {
+gulp.task('build-patternfly', ['lint-styles'], function (callback) {
   return gulp.src(
     resourceTypes.map(resourceType => `./dist/${resourceType}/${resourceType}.css`)
   )
@@ -85,7 +100,7 @@ gulp.task('serve', ['build', 'build-docs'], function () {
  * Resource specific tasks
  */
 resourceTypes.forEach((resourceType) => {
-  gulp.task(`build:${resourceType}`, function (callback) {
+  gulp.task(`build:${resourceType}`, ['lint-styles'], function (callback) {
    runSequence(
      `build:${resourceType}:modules`,
      `build:${resourceType}:library`,

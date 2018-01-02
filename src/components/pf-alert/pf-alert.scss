@@ -1,97 +1,11 @@
 /// pf-alert
-/// A description of the pf-alert
+/// A description of pf-alert
 /// @group components
 /// @author Cliff Pyles <cpyles@redhat.com>
-/// @modifier .is-primary Applies the primary color scheme to the alert
-/// @modifier .is-secondary Applies the secondary color scheme to the alert
-/// @modifier .is-success Applies the success color scheme to the alert
-/// @modifier .is-danger Applies the danger color scheme to the alert
-/// @modifier .is-warning Applies the warning color scheme to the alert
-/// @modifier .is-info Applies the info color scheme to the alert
-/// @modifier .is-light Applies the light color scheme to the alert
-/// @modifier .is-dark Applies the dark color scheme to the alert
-/// @template src/components/pf-alert/pf-alert.html
+/// @modifier .is-modifier - An example modifier description
+/// @modifier .is-modifier - An example modifier description
+/// @template components/pf-alert/pf-alert.html
 
 .pf-alert {
-  $pf-alert--BackgroundColor: #5a5a5a !default;
-  $pf-alert--Color: #fff !default;
-  $pf-alert--BorderColor: #595959 !default;
 
-  $pf-alert-is-primary--BackgroundColor: #cce5ff !default;
-  $pf-alert-is-primary--Color: #004085 !default;
-  $pf-alert-is-primary--BorderColor: #b8daff !default;
-
-  $pf-alert-is-secondary--BackgroundColor: #e7e8ea !default;
-  $pf-alert-is-secondary--Color: #464a4e !default;
-  $pf-alert-is-secondary--BorderColor: #dddfe2 !default;
-
-  $pf-alert-is-success--BackgroundColor: #d4edda !default;
-  $pf-alert-is-success--Color: #155724 !default;
-  $pf-alert-is-success--BorderColor: #c3e6cb !default;
-
-  $pf-alert-is-danger--BackgroundColor: #f8d7da !default;
-  $pf-alert-is-danger--Color: #721c24 !default;
-  $pf-alert-is-danger--BorderColor: #f5c6cb !default;
-
-  $pf-alert-is-warning--BackgroundColor: #fff3cd !default;
-  $pf-alert-is-warning--Color: #856404 !default;
-  $pf-alert-is-warning--BorderColor: #ffeeba !default;
-
-  $pf-alert-is-info--BackgroundColor: #d1ecf1 !default;
-  $pf-alert-is-info--Color: #0c5460 !default;
-  $pf-alert-is-info--BorderColor: #bee5eb !default;
-
-  $pf-alert-is-light--BackgroundColor: #fefefe !default;
-  $pf-alert-is-light--Color: #818182 !default;
-  $pf-alert-is-light--BorderColor: #fdfdfe !default;
-
-  $pf-alert-is-dark--BackgroundColor: #d6d8d9 !default;
-  $pf-alert-is-dark--Color: #1b1e21 !default;
-  $pf-alert-is-dark--BorderColor: #c6c8ca !default;
-
-  padding: $s-unit;
-  border: 1px solid $pf-alert--BorderColor;
-  background-color: $pf-alert--BackgroundColor;
-  color: $pf-alert--Color;
-
-  &.is-primary {
-    border: 1px solid $pf-alert-is-primary--BorderColor;
-    background-color: $pf-alert-is-primary--BackgroundColor;
-    color: $pf-alert-is-primary--Color;
-  }
-  &.is-secondary {
-    border: 1px solid $pf-alert-is-secondary--BorderColor;
-    background-color: $pf-alert-is-secondary--BackgroundColor;
-    color: $pf-alert-is-secondary--Color;
-  }
-  &.is-success {
-    border: 1px solid $pf-alert-is-success--BorderColor;
-    background-color: $pf-alert-is-success--BackgroundColor;
-    color: $pf-alert-is-success--Color;
-  }
-  &.is-danger {
-    border: 1px solid $pf-alert-is-danger--BorderColor;
-    background-color: $pf-alert-is-danger--BackgroundColor;
-    color: $pf-alert-is-danger--Color;
-  }
-  &.is-warning {
-    border: 1px solid $pf-alert-is-warning--BorderColor;
-    background-color: $pf-alert-is-warning--BackgroundColor;
-    color: $pf-alert-is-warning--Color;
-  }
-  &.is-info {
-    border: 1px solid $pf-alert-is-info--BorderColor;
-    background-color: $pf-alert-is-info--BackgroundColor;
-    color: $pf-alert-is-info--Color;
-  }
-  &.is-light {
-    border: 1px solid $pf-alert-is-light--BorderColor;
-    background-color: $pf-alert-is-light--BackgroundColor;
-    color: $pf-alert-is-light--Color;
-  }
-  &.is-dark {
-    border: 1px solid $pf-alert-is-dark--BorderColor;
-    background-color: $pf-alert-is-dark--BackgroundColor;
-    color: $pf-alert-is-dark--Color;
-  }
 }
