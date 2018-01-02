@@ -26,7 +26,7 @@ resourceTypes.forEach((resourceType) => {
         resourceType,
         resourceName,
         styles: `/dist/${resourceType}/${resourceName}/${resourceName}.css`,
-        documentation: `/docs/section-${resourceType}.html#kssref-${resourceType}-${resourceName}`,
+        documentation: `/docs`,
         workspace: {
           navigation: req.navigation
         }

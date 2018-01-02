@@ -40,7 +40,14 @@ body {
   align-items: baseline;
   justify-content: space-between;
 }
-.pf-workspace__demo__content {
+.pf-workspace__demo__example {
+  padding-left: 2rem;
+  margin-top: 2rem;
+  border-left: 5px solid #dadada;
+}
+.pf-workspace__demo__example__title {}
+.pf-workspace__demo__example__description {}
+.pf-workspace__demo__example__content {
   padding: 1rem;
   border: 1px solid #dadada;
   background-color: #fff;

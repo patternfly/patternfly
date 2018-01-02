@@ -38,18 +38,38 @@
   </div>
 </div>
 <script>
-  // let templates = document.querySelectorAll('template')
-  // let examples = document.querySelector('.pf-workspace__demo__examples')
-  // let examplesContent = document.createDocumentFragment()
-  //
-  // templates.forEach((template) => {
-  //   let example = document.createElement('li')
-  //   let templateContent = document.importNode(template.content, true)
-  //
-  //   example.appendChild(templateContent)
-  //   examplesContent.appendChild(example)
-  // })
-  // examples.appendChild(examplesContent)
+  let templates = document.querySelectorAll('template')
+  if (templates.length) {
+    let examples = document.querySelector('.pf-workspace__demo__examples')
+    let examplesContent = document.createDocumentFragment()
+    templates.forEach((template) => {
+      let exampleEl = document.createElement('div')
+      let templateContent = document.importNode(template.content, true)
+      let templateTitleEl = document.createElement('h2')
+      let templateDescriptionEl = document.createElement('p')
+      let templateContentEl = document.createElement('div')
+
+      exampleEl.setAttribute('class', 'pf-workspace__demo__example')
+      templateContentEl.setAttribute('class', 'pf-workspace__demo__example__content')
+      templateTitleEl.setAttribute('class', 'pf-workspace__demo__example_title')
+      templateDescriptionEl.setAttribute('class', 'pf-workspace__demo__example_description')
+      templateContentEl.appendChild(templateContent)
+
+      if (template.dataset.title) {
+        templateTitleEl.innerText = template.dataset.title
+        exampleEl.appendChild(templateTitleEl)
+      }
+
+      if (template.dataset.description) {
+        templateDescriptionEl.innerText = template.dataset.description
+        exampleEl.appendChild(templateDescriptionEl)
+      }
+
+      exampleEl.appendChild(templateContentEl)
+      examplesContent.appendChild(exampleEl)
+    })
+    examples.appendChild(examplesContent)
+  }
 </script>
 </body>
 </html>
