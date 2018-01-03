@@ -110,17 +110,20 @@
   }
 }
 
-/// The split layout contains multiple children that are positioned to: flow horizontally, align vertically by the tops, have no space between each child, and fill all of the space in the layout horizontally.
+/// The split layout positions the children horizontally
 /// @group mixins
 /// @moduleType layout
 /// @author Cliff Pyles <cpyles@redhat.com>
+/// @modifier is-equal distributes the children evenly
+/// @modifier is-even distributes the children evenly (alias of is-equal)
 @mixin split {
-  display: flex;
-  justify-content: stretch;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-flow: column;
 
-  & > *:nth-child(2),
-  & > &__item:nth-child(2) {
-    flex: 1;
+  &.is-equal,
+  &.is-even {
+    grid-template-columns: 1fr;
   }
 }
 

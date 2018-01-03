@@ -1,0 +1,9 @@
+/// Splits the children
+/// @group layouts
+/// @moduleType layouts
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @modifier .is-equal Forces the children to be equal widths
+/// @template src/layouts/pf-l-split/pf-l-split.html
+.pf-l-split {
+  @include split;
+}
