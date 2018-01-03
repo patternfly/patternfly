@@ -1,7 +1,7 @@
 /// The container is used to horizontally center the children, and will often have a minimum and/or maximum width.
 /// @group mixins
 /// @author Cliff Pyles <cpyles@redhat.com>
-/// @parameter length $width 1280px - the width of the container
+/// @parameter {Length} $width [1280px] the width of the container
 @mixin container($width: 1280px) {
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@
 /// A tile board is meant to display items in a grid like fashion.
 /// @group mixins
 /// @author Cliff Pyles <cpyles@redhat.com>
-/// @parameter number $columns 5 - number of columns the tile-board has
+/// @parameter {Number} $columns [5] the number of columns in the tile-board (default - 5)
 @mixin tile-board($columns: 5) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
