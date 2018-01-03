@@ -1,1 +1,151 @@
-// mixins
+/// The container is used to horizontally center the children, and will often have a minimum and/or maximum width.
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @parameter length $width 1280px - the width of the container
+@mixin container($width: 1280px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > *,
+  > &__item {
+    width: $width;
+    max-width: 100%;
+  }
+}
+
+/// The level layout positions the immediate children in one direction (on the same axis), and centers them in the opposing direction (on the other axis).
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @todo add support for vertical level
+/// @todo add switch to vertical for smaller viewports
+@mixin level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/// The mask pushes some of the child items outside of the viewport.
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @modifier is-vertical - Positions the masked items vertically
+/// @modifier is-active - Indicates which child items are visible
+@mixin mask {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  &.is-vertical {
+    flex-direction: column;
+  }
+
+  > *,
+  > &__item {
+    position: absolute;
+    top: 100%;
+    order: 1;
+    flex-shrink: 0;
+  }
+
+  > .is-active {
+    position: static;
+    top: auto;
+    flex-grow: 1;
+    order: 0;
+  }
+}
+
+/// An overlay is used to break content out of the default flow of content.
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @modifier is-top-half - places the content on the top half of the viewport
+/// @modifier is-bottom-half - places the content on the bottom half of the viewport
+/// @modifier is-left-half - places the content on the left half of the viewport
+/// @modifier is-right-half - places the content on the right half of the viewport
+@mixin overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &.is-top-half {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+
+  &.is-bottom-half {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+
+  &.is-left-half {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+
+  &.is-right-half {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+}
+
+/// The split layout contains multiple children that are positioned to: flow horizontally, align vertically by the tops, have no space between each child, and fill all of the space in the layout horizontally.
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+@mixin split {
+  display: flex;
+  justify-content: stretch;
+
+  > *:nth-child(2),
+  > &__item:nth-child(2) {
+    flex: 1;
+  }
+}
+
+/// A stack is used to layer child items on top of each other, so that only one is visible at any given time.
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @modifier is-active - indicates that a child item should be visible
+@mixin stack {
+  display: grid;
+  grid-template: 100% / 100%;
+
+  > *,
+  > &__item {
+    display: none;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  > .is-active {
+    display: block;
+  }
+}
+
+/// A tile board is meant to display items in a grid like fashion.
+/// @group mixins
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @parameter number $columns 5 - number of columns the tile-board has
+@mixin tile-board($columns: 5) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+}
