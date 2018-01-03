@@ -1,0 +1,8 @@
+/// Positions the immediate children in one direction (on the same axis), and centers them in the opposing direction (on the other axis).
+/// @group layouts
+/// @moduleType layout
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @template src/layouts/pf-l-level/pf-l-level.html
+.pf-l-level {
+  @include level;
+}

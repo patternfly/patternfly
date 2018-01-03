@@ -1,4 +1,4 @@
-/// The container is used to horizontally center the children, and will often have a minimum and/or maximum width.
+/// The container layout is used to horizontally center the children
 /// @group mixins
 /// @moduleType layout
 /// @author Cliff Pyles <cpyles@redhat.com>
@@ -31,7 +31,7 @@
   }
 }
 
-/// The mask pushes some of the child items outside of the viewport.
+/// The mask layout pushes some of the child items outside of the viewport.
 /// @group mixins
 /// @moduleType layout
 /// @author Cliff Pyles <cpyles@redhat.com>
@@ -62,7 +62,7 @@
   }
 }
 
-/// An overlay is used to break content out of the default flow of content.
+/// The overlay layout is used to break content out of the default flow of content.
 /// @group mixins
 /// @moduleType layout
 /// @author Cliff Pyles <cpyles@redhat.com>
@@ -124,7 +124,7 @@
   }
 }
 
-/// A stack is used to layer child items on top of each other, so that only one is visible at any given time.
+/// The stack layout is used to layer child items on top of each other, so that only one is visible at any given time.
 /// @group mixins
 /// @moduleType layout
 /// @author Cliff Pyles <cpyles@redhat.com>
@@ -145,7 +145,7 @@
   }
 }
 
-/// A tile board is meant to display items in a grid like fashion.
+/// The tile board layout is meant to display items in a grid like fashion.
 /// @group mixins
 /// @moduleType layout
 /// @author Cliff Pyles <cpyles@redhat.com>
