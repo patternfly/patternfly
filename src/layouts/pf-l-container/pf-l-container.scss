@@ -1,0 +1,10 @@
+/// pf-l-container
+/// Used to horizontally center the child elements on the page
+/// @group layouts
+/// @moduleType layout
+/// @author Cliff Pyles <cpyles@redhat.com>
+/// @template src/layouts/pf-l-container/pf-l-container.html
+
+.pf-l-container {
+  @include container;
+}
