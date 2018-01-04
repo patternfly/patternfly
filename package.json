@@ -46,7 +46,7 @@
     "sass-lint": "^1.12.1",
     "sassdoc": "^2.5.0",
     "sassdoc-extras": "^2.4.1",
-    "sassdoc-theme-patternfly": "^1.1.0",
+    "sassdoc-theme-patternfly": "^1.1.1",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-config-standard": "^18.0.0",

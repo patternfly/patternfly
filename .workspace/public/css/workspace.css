@@ -32,13 +32,23 @@ body {
 }
 .pf-workspace__demo {
   flex: 1 1 100%;
-
   padding: 2rem;
 }
 .pf-workspace__demo__toolbar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+.pf-workspace__demo__toolbar span {
+  margin: 0 0.25em;
+}
+.pf-workspace__demo__toolbar__left {
+  display: flex;
+  align-items: baseline;
+}
+.pf-workspace__demo__toolbar__right {
+  display: flex;
+  align-items: baseline;
 }
 .pf-workspace__demo__example {
   padding-left: 2rem;

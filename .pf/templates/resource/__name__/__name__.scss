@@ -1,9 +1,9 @@
 /// A description of <%= resource.entity %>
 /// @group <%= resource.type %>
-/// @moduleType <%= resource.type %>
+/// @moduleType <%= resource.moduleType %>
 /// @author <%= resource.author.name %> <<%= resource.author.email %>>
 /// @modifier .is-modifier - An example modifier description
-/// @modifier .is-modifier - An example modifier description
+/// @modifier .is-another-modifier - Another example modifier description
 /// @template src/<%= resource.type %>/<%= resource.entity %>/<%= resource.entity %>.html
 .<%= resource.entity %> {
 

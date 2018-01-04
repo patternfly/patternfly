@@ -25,8 +25,13 @@
   <div class="pf-workspace__demo">
     <% if (resourceName) { %>
     <div class="pf-workspace__demo__toolbar">
-      <h2><%= resourceName %></h2>
-      <a href="<%= documentation %>">documentation</a>
+      <div class="pf-workspace__demo__toolbar__left">
+        <h2><%= resourceName %></h2>
+        <span>
+          <a href="<%= documentation %>">documentation</a>
+        </span>
+      </div>
+      <div class="pf-workspace__demo__toolbar__right"></div>
     </div>
     <% } %>
     <% if (page) { %>

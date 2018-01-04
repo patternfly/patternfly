@@ -10,6 +10,7 @@ module.exports = class extends Generator {
   }
   writing() {
     let resourceType = inflection.pluralize(this.args[0])
+    let moduleType = inflection.singularize(this.args[0])
     let resourceFilename = inflection.transform(
       this.args[1],
       ['tableize','dasherize','singularize']
@@ -38,6 +39,7 @@ module.exports = class extends Generator {
           filename: resourceFilename,
           title: resourceTitle,
           type: resourceType,
+          moduleType: moduleType,
           author: {
             name: process.env.GIT_USER_NAME || '',
             email: process.env.GIT_USER_EMAIL || ''

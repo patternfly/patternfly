@@ -26,7 +26,7 @@ resourceTypes.forEach((resourceType) => {
         resourceType,
         resourceName,
         styles: `/dist/${resourceType}/${resourceName}/${resourceName}.css`,
-        documentation: `/docs`,
+        documentation: `/docs/#${resourceName}`,
         workspace: {
           navigation: req.navigation
         }
