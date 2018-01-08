@@ -2,9 +2,11 @@
 // Files that are imported here will be available to all resources.
 
 // These imports reference files this folder
-@import "./initial-variables";
+
 @import "./functions";
-@import "./derived-variables";
+@import "./colors";
+@import "./variables";
+@import "./bs-variables"; // Overwrites Bootstrap variables
 @import "./animations";
 @import "./mixins";
 @import "./controls";
@@ -14,3 +16,9 @@
 @import "bootstrap/scss/_functions";
 @import "bootstrap/scss/_variables";
 @import "bootstrap/scss/_mixins";
+
+
+// PF Variables
+
+// BS overwrites
+// pf components

@@ -1,0 +1,102 @@
+// This file is for initial variable values.
+// All variables should have a valid css value,
+// and use !default so they can be overwritten
+
+
+// `$pf-global-concept-state-size-propierty`
+
+
+// Patternfly uses the default root size of the browser, it assumes a 16px base
+// since most browser root size is 16. This variables is just to make the
+// transformation from px to rem.
+$pf-global-font-size-root:  16 !default; //for fonts
+$pf-global-space-size-root: 16 !default; // for spaces
+
+
+// PatternFly box shadows
+//
+// Use shadows to show depth: -sm is for btns, -md is for cards, -lg is for toast or modals, -inset is for inputs
+
+$pf-global-box-shadow-sm: 0  pf-prem(2)  pf-prem(3) pf-prem(-2) rgba($pf-color-black-1000, .25) !default;
+$pf-global-box-shadow-md: 0  pf-prem(2)  pf-prem(2) rgba($pf-color-black-1000, .2) !default;
+$pf-global-box-shadow-lg: 0  pf-prem(3)  pf-prem(5) rgba($pf-color-black-1000, .3) !default;
+$pf-global-box-shadow-inset: inset 0  pf-prem(1)  pf-prem(2) rgba($pf-color-black-1000, .1) !default;
+$pf-global-box-shadow-left: -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, .3) !default;
+
+
+// Patternfly Gradient
+
+$pf-global-gradient-color-start: $pf-color-black-100 !default;
+$pf-global-gradient-color-end: $pf-color-black-200 !default;
+$pf-global-gradient-percent-start: 0% !default;
+$pf-global-gradient-percent-end: 100% !default;
+
+
+// Patternfly font path
+
+// Defines path to /font foldeer
+$fa-font-path: "../fonts" !default;
+$pf-font-path: "../fonts" !default;
+// $pf-icon-font-name-fa:  "FontAwesome" !default;
+$pf-icon-font-name:  "PatternFlyIcons-webfont" !default;
+$pf-icon-prefix:  pf-icon !default;
+
+
+// Patternfly Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$pf-enable-font-overpass-cdn:         false !default;
+
+
+// Patternfly Spacers
+//
+// Use these spacers to define all margins and paddings
+
+$pf-global-spacer-xxxs:   pf-prem(2px) !default;
+$pf-global-spacer-xxs:    pf-prem(4px) !default;
+$pf-global-spacer-xs:     pf-prem(8px) !default;
+$pf-global-spacer-sm:     pf-prem(12px) !default;
+$pf-global-spacer-md:     pf-prem(16px) !default;
+$pf-global-spacer-lg:     pf-prem(20px) !default;
+$pf-global-spacer-xl:     pf-prem(24px) !default;
+$pf-global-spacer-xxl:    pf-prem(28px) !default;
+$pf-global-spacer-xxxl:   pf-prem(32px) !default;
+
+
+// Patternfly Components
+//
+// Define common padding and border radius sizes and more.
+// Colors for hover state, for example hover over a table row or dropmenu item
+
+$pf-global-hover-color:                   $pf-color-blue-50 !default;
+$pf-global-hover-background-color:        $pf-color-blue-50 !default;
+
+$pf-global-active-color:                  $pf-color-blue-50 !default;
+$pf-global-active-background-color:       $pf-color-blue-50 !default;
+
+$pf-global-disabled-color:                $pf-color-blue-50 !default;
+$pf-global-disabled-background-color:     $pf-color-blue-50 !default;
+
+
+// Border
+$pf-global-border-width:         1px !default;
+$pf-global-border-color:         $pf-color-blue-300 !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+// stylelint-disable value-keyword-case
+$pf-global-font-family-sans-serif: “Overpass”, overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$pf-global-font-family-monospace:  “overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+
+$pf-global-font-size-base:             pf-font-prem(14px) !default;
+
+$pf-global-main-title-font-size:       pf-font-prem(21px) !default;
+$pf-global-secondary-title-font-size:  pf-font-prem(21px) !default;
+$pf-global-sub-title-font-size:        pf-font-prem(21px) !default;
+$pf-global-body-font-size:             pf-font-prem(21px) !default;
+$pf-global-caption-font-size:          pf-font-prem(21px) !default;

@@ -1,0 +1,72 @@
+//
+// Bootstrap Overwrite
+//
+// Bootstrap overwrites from patternfly Variables
+
+// Colors
+
+$white:    $pf-color-white !default;
+$gray-100: $pf-color-black-100 !default;
+$gray-200: $pf-color-black-200 !default;
+$gray-300: $pf-color-black-300 !default;
+$gray-400: $pf-color-black-400 !default;
+$gray-500: $pf-color-black-500 !default;
+$gray-600: $pf-color-black-600 !default;
+$gray-700: $pf-color-black-700 !default;
+$gray-800: $pf-color-black-800 !default;
+$gray-900: $pf-color-black-900 !default;
+$black:    $pf-color-black-1000 !default;
+
+$blue:    $pf-color-blue-400 !default;
+$purple:  $pf-color-purple-400 !default;
+$red:     $pf-color-red-100 !default;
+$orange:  $pf-color-orange-400 !default;
+$yellow:  $pf-color-gold-400 !default;
+$green:   $pf-color-green-400 !default;
+$cyan:    $pf-color-cyan-400 !default;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:                      false !default;
+$enable-shadows:                      true !default;
+$enable-gradients:                    true !default;
+$enable-transitions:                  true !default;
+$enable-hover-media-query:            true !default;
+$enable-grid-classes:                 true !default;
+$enable-print-styles:                 true !default;
+
+
+// Spacing
+//
+
+$spacer: $pf-spacer-md !default;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg:       $white !default;
+$body-color:    $gray-900 !default;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$border-width:                $pf-border-width !default;
+
+// $component-active-color:      $pf-active-color !default;
+// $component-active-bg:         theme-color("primary") !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: $pf-font-family-sans-serif !default;
+
+$font-family-monospace:  $pf-font-family-monospace !default;
+
+$font-size-base: $pf-font-size-base !default;

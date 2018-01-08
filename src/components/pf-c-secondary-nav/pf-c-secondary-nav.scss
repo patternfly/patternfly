@@ -1,0 +1,99 @@
+/// A description of pf-c-secondary-nav
+/// @group components
+/// @moduleType component
+/// @author  <>
+/// @modifier .is-modifier - An example modifier description
+/// @modifier .is-another-modifier - Another example modifier description
+/// @template src/components/pf-c-secondary-nav/pf-c-secondary-nav.html
+
+
+$pf-c-secondary-nav--BorderColor:                $pf-global-border-color !default;
+$pf-c-secondary-nav--BorderWidth:                $pf-global-border-width !default;
+
+$pf-c-secondary-nav__item--MarginLeft:           $pf-global-spacer-md !default;
+$pf-c-secondary-nav__item--MarginRight:          $pf-globalspacer-md !default;
+
+$pf-c-secondary-nav__link--Color:                $pf-color-black-600 !default;
+$pf-c-secondary-nav__link--PaddingTop:           $pf-global-spacer-sm !default;
+$pf-c-secondary-nav__link--PaddingBottom:        $pf-global-spacer-sm !default;
+
+$pf-c-secondary-nav__link--active--Color:        $pf-global-active-color !default;
+$pf-c-secondary-nav__link--active--BorderColor:  $pf-global-active-color !default;
+
+$pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
+
+
+.pf-c-secondary-nav {
+  @include list-unstyled;
+  display: flex;
+  // The background creates a border under the menu
+  background-image:
+    linear-gradient(
+      to top,
+      $pf-c-secondary-nav--BorderColor $pf-c-secondary-nav--BorderWidth,
+      transparent $pf-c-secondary-nav--BorderWidth
+    );
+
+  // Selects every direct child of pf-c-secondary-nav, for example .pf-c-secondary-nav__item
+  > * {
+    display: flex;
+    margin-right: $pf-c-secondary-nav__item--MarginRight;
+    margin-left: $pf-c-secondary-nav__item--MarginLeft;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding-top: $pf-c-secondary-nav__link--PaddingTop;
+    padding-bottom: $pf-c-secondary-nav__link--PaddingBottom;
+    color: $pf-c-secondary-nav__link--Color;
+
+    @include hover-focus-active {
+      color: inherit;
+      text-decoration: inherit;
+      // The background creates a thicker border under the link
+      background-image:
+        linear-gradient(
+          to top,
+          $pf-c-secondary-nav--BorderColor ($pf-c-secondary-nav--BorderWidth *
+          2),
+          transparent ($pf-c-secondary-nav--BorderWidth * 2)
+        );
+    }
+
+    // Active State
+    &.pf-is-active {
+      @include hover-focus-active {
+        // The background creates a thicker blue border under the active link
+        background-image:
+          linear-gradient(
+            to top,
+            $pf-c-secondary-nav__link--active--Color ($pf-c-secondary-nav--BorderWidth * 2),
+            transparent ($pf-c-secondary-nav--BorderWidth * 2)
+          );
+      }
+      color: $pf-c-secondary-nav__link--active--Color;
+      // The background creates a thicker blue border under the active link
+      background-image:
+        linear-gradient(
+          to top,
+          $pf-c-secondary-nav__link--active--BorderColor ($pf-c-secondary-nav--BorderWidth *
+          2),
+          transparent ($pf-c-secondary-nav--BorderWidth * 2)
+        );
+    }
+
+    // Disabled State
+    &.pf-is-disabled {
+      @include hover-focus-active {
+        // The background removes the border when hover on disabled state
+        background-image: none;
+      }
+      color: $pf-c-secondary-nav__link--disabled--Color;
+      cursor: not-allowed;
+    }
+  }
+}
