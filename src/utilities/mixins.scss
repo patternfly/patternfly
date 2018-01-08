@@ -1,159 +1,98 @@
-/// The container layout is used to horizontally center the children
+/// Base for all of the layout mixins.
 /// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @parameter {Length} $maximum-width [1280px] the maximum width of the container
-@mixin container($maximum-width: 1280px) {
+/// @moduleType mixin
+@mixin Layout {
+  box-sizing: border-box;
   display: grid;
+  // padding: 0;
+  margin: 0;
+
+  > *,
+  > *::before,
+  > *::after {
+    box-sizing: border-box;
+    // padding: 0;
+    margin: 0;
+  }
+}
+
+/// Positions the children out of the flow of it's current context.
+/// @group mixins
+/// @moduleType mixin
+@mixin BreakAwayLayout {
+  @include Layout;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/// Centers a single child horizontally and vertically.
+/// @group mixins
+/// @moduleType mixin
+@mixin BullseyeLayout {
+  @include Layout;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > *:not(:first-child) {
+    display: none;
+  }
+}
+
+/// Positions the children horizontally, and controls the width of the children.
+/// @group mixins
+/// @moduleType mixin
+/// @parameter {Length} $maximum-width [1280px] the maximum width of the container
+@mixin ContainerLayout($maximum-width: 1280px) {
+  @include Layout;
   grid-template: auto / 100%;
   justify-items: center;
-  & > *,
-  & > &__item {
+
+  & > * {
     max-width: $maximum-width;
   }
 }
 
-/// The level layout positions the immediate children in one direction (on the same axis), and centers them in the opposing direction (on the other axis).
+/// Positions children on the same axis, and centers those children on the axis.
 /// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @todo add support for vertical level
-/// @todo add switch to vertical for smaller viewports
-@mixin level {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  & > &__items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-/// The mask layout pushes some of the child items outside of the viewport.
-/// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @modifier is-vertical - Positions the masked items vertically
-/// @modifier is-active - Indicates which child items are visible
-@mixin mask {
-  position: relative;
-  display: flex;
-  max-width: 100%;
-  overflow: hidden;
-  &.is-vertical {
-    flex-direction: column;
-  }
-
-  & > *,
-  & > &__item {
-    position: absolute;
-    top: 100%;
-    order: 1;
-    flex-shrink: 0;
-  }
-
-  & > .is-active {
-    position: static;
-    top: auto;
-    flex-grow: 1;
-    order: 0;
-  }
-}
-
-/// The overlay layout is used to break content out of the default flow of content.
-/// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @modifier is-top-half - places the content on the top half of the viewport
-/// @modifier is-bottom-half - places the content on the bottom half of the viewport
-/// @modifier is-left-half - places the content on the left half of the viewport
-/// @modifier is-right-half - places the content on the right half of the viewport
-@mixin overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  &.is-top-half {
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-  }
-
-  &.is-bottom-half {
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-  }
-
-  &.is-left-half {
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-  }
-
-  &.is-right-half {
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-  }
-}
-
-/// The split layout positions the children horizontally
-/// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @modifier is-equal distributes the children evenly
-/// @modifier is-even distributes the children evenly (alias of is-equal)
-@mixin split {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+/// @moduleType mixin
+@mixin LevelLayout {
+  @include Layout;
+  grid-template: 1fr / auto;
   grid-auto-flow: column;
-
-  &.is-equal,
-  &.is-even {
-    grid-template-columns: 1fr;
-  }
+  grid-auto-columns: auto;
+  align-items: center;
 }
 
-/// The stack layout is used to layer child items on top of each other, so that only one is visible at any given time.
+/// Layers the children over one another.
 /// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @modifier is-active - indicates that a child item should be visible
-@mixin stack {
-  display: grid;
-  grid-template: 100% / 100%;
-
-  & > *,
-  & > &__item {
-    display: none;
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  & > .is-active {
-    display: block;
-  }
+/// @moduleType mixin
+@mixin PileLayout {
+  @include Layout;
 }
 
-/// The tile board layout is meant to display items in a grid like fashion.
+/// Positions the children on the same axis.
 /// @group mixins
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
+/// @moduleType mixin
+@mixin SplitLayout {
+  @include Layout;
+  grid-template: 1fr / auto;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+}
+
+/// Positions children one after the other vertically.
+/// @group mixins
+/// @moduleType mixin
+@mixin StackLayout {
+  @include Layout;
+}
+
+/// Positions children on the same row, but allows them to be place on the next row if space doesn't permit. The children have controlled dimensions.
+/// @group mixins
+/// @moduleType mixin
 /// @parameter {Number} $columns [5] the number of columns in the tile-board (default - 5)
-@mixin tile-board($columns: 5) {
-  display: grid;
+@mixin TileBoardLayout($columns: 5) {
+  @include Layout;
   grid-template-columns: repeat($columns, 1fr);
 }

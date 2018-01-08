@@ -1,9 +1,0 @@
-/// Horizontally centers the child elements
-/// @group layouts
-/// @moduleType layout
-/// @author Cliff Pyles <cpyles@redhat.com>
-/// @template src/layouts/pf-l-container/pf-l-container.html
-/// @see container
-.pf-l-container {
-  @include container;
-}
