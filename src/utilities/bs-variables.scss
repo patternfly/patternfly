@@ -33,40 +33,77 @@ $cyan:    $pf-color-cyan-400 !default;
 $enable-rounded:                      false !default;
 $enable-shadows:                      true !default;
 $enable-gradients:                    true !default;
-$enable-transitions:                  true !default;
 $enable-hover-media-query:            true !default;
-$enable-grid-classes:                 true !default;
-$enable-print-styles:                 true !default;
 
 
 // Spacing
 //
 
-$spacer: $pf-spacer-md !default;
+$spacer: $pf-global-spacer-md !default;
 
 
 // Body
+
+// Links
+
+// Paragraphs
 //
-// Settings for the `<body>` element.
-$body-bg:       $white !default;
-$body-color:    $gray-900 !default;
+// Style p element.
+
+$paragraph-margin-bottom:   $pf-global-spacer-md !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: $pf-global-breakpoint-xs,
+  sm: $pf-global-breakpoint-sm,
+  md: $pf-global-breakpoint-md,
+  lg: $pf-global-breakpoint-lg,
+  xl: $pf-global-breakpoint-xl
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width:           $pf-global-spacer-xxxl !default;
 
 
 // Components
 //
 // Define common padding and border radius sizes and more.
-$border-width:                $pf-border-width !default;
 
-// $component-active-color:      $pf-active-color !default;
-// $component-active-bg:         theme-color("primary") !default;
+$border-width:                $pf-global-border-width !default;
+
+$component-active-color:      $pf-global-active-color !default;
+$component-active-bg:         $pf-global-active-background-color !default;
 
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: $pf-font-family-sans-serif !default;
+$font-family-sans-serif: $pf-global-font-family-sans-serif !default;
 
-$font-family-monospace:  $pf-font-family-monospace !default;
+$font-family-monospace:  $pf-global-font-family-monospace !default;
 
-$font-size-base: $pf-font-size-base !default;
+$font-size-base:   $pf-global-font-size-base !default;
+
+$font-weight-light:           $pf-global-font-weight-light !default;
+$font-weight-normal:          $pf-global-font-weight-normal !default;
+$font-weight-bold:            $pf-global-font-weight-bold !default;
+
+$line-height-base:            $pf-global-line-height-base !default;
+
+$line-height-base:            $pf-global-line-height-base !default;
+
+$h1-font-size:                $pf-global-hero-title-font-size !default;
+$h2-font-size:                $pf-global-main-title-font-size !default;
+$h3-font-size:                $pf-global-secondary-title-font-size !default;
+$h4-font-size:                $pf-global-sub-title-font-size !default;
+$h5-font-size:                $pf-global-body-font-size !default;
+$h6-font-size:                $pf-global-caption-font-size !default;
