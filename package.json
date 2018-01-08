@@ -11,12 +11,14 @@
     "dev": "npm run build && gulp serve",
     "test": "node test/test.js",
     "create-test-references": "node test/create-references.js",
-    "approve-conflicts": "node test/approve-conflicts.js"
+    "approve-conflicts": "node test/approve-conflicts.js",
+    "build-bs-workspace": "node npm-scripts/build-bootstrap-workspace.js"
   },
   "keywords": [],
   "author": "Cliff Pyles <cliff@cliffpyles.com>",
   "license": "MIT",
   "devDependencies": {
+    "axios": "^0.17.1",
     "backstopjs": "^3.0.36",
     "browser-sync": "^2.18.13",
     "commander": "^2.12.2",
@@ -41,7 +43,9 @@
     "gulp-stylelint": "^6.0.0",
     "handlebars": "^4.0.11",
     "inflection": "^1.12.0",
+    "jsdom": "^11.5.1",
     "onchange": "^3.3.0",
+    "parse5": "^3.0.3",
     "run-sequence": "^2.2.0",
     "sass-lint": "^1.12.1",
     "sassdoc": "^2.5.0",

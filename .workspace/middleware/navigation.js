@@ -1,44 +1,44 @@
 const path = require('path')
 const fs = require('fs-extra')
 
-const baseDirectory = path.resolve(__dirname, '../../dist')
+const componentDirectory = path.resolve(__dirname, '../../src/components')
+const patternDirectory = path.resolve(__dirname, '../../src/patterns')
+const bootstrapDirectory = path.resolve(__dirname, '../../bs-content/components')
 
-function getNavigation (baseDirectory) {
-  let resourceTypes = fs.readdirSync(baseDirectory).filter(resource => {
-    const isDirectory = fs.statSync(path.join(baseDirectory, resource)).isDirectory()
-    const isNotUtility = (resource !== 'utilities')
-
-    return isDirectory && isNotUtility
-  })
-  let navigation = resourceTypes.reduce((accum, resourceType) => {
-    let resourcesTypePath = path.join(baseDirectory, resourceType)
-    let resources = fs.readdirSync(resourcesTypePath)
-
+function getNavigation (settings) {
+  let componentNavigation = fs.readdirSync(settings.baseDir).reduce((accum, component) => {
+    let componentName = path.basename(component, '.html')
     accum.push({
-      type: 'type',
-      name: resourceType,
-      path: `/${resourceType}`
+      type: settings.type,
+      name: componentName,
+      path: `${settings.baseUrl}/${componentName}`
     })
-    resources.forEach((resource) => {
-      let isNotLibrary = (resource !== `${resourceType}.css`)
-
-      if (isNotLibrary) {
-        accum.push({
-          type: 'resource',
-          name: resource,
-          path: `/${resourceType}/${resource}`
-        })
-      }
-    })
-
     return accum
   }, [])
-
-  return navigation
+  return componentNavigation
 }
 
 module.exports = function (req, res, next) {
-  req.navigation = getNavigation(baseDirectory)
+  fs.ensureDirSync(componentDirectory)
+  fs.ensureDirSync(patternDirectory)
+  fs.ensureDirSync(bootstrapDirectory)
+  req.navigation = {
+    components: getNavigation({
+      baseUrl: '/components',
+      type: 'component',
+      baseDir: componentDirectory
+    }),
+    patterns: getNavigation({
+      baseUrl: '/patterns',
+      type: 'pattern',
+      baseDir: patternDirectory
+    }),
+    bootstrap: getNavigation({
+      baseUrl: '/bootstrap',
+      type: 'bootstrap',
+      baseDir: bootstrapDirectory
+    })
+  }
 
   next()
 }

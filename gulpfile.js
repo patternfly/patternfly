@@ -82,15 +82,24 @@ gulp.task('build-patternfly', ['lint-styles'], function (callback) {
   .pipe(gulp.dest('./dist'))
 })
 
+gulp.task(`build-bootstrap`, function () {
+  return gulp.src('./node_modules/bootstrap/scss/bootstrap.scss')
+    .pipe(inject.prepend(`@import '../../../src/utilities/_all';`))
+    .pipe(sass(config.sass).on(`error`, sass.logError))
+    .pipe(gulp.dest('./dist'))
+    .pipe(workspace.stream())
+})
+
 gulp.task('clean', function () {
   return del(['dist'])
 })
 
-gulp.task('serve', ['build', 'build-docs'], function () {
+gulp.task('serve', ['build', 'build-bootstrap', 'build-docs'], function () {
   workspace.startServer()
   resourceTypes.forEach((resourceType) => {
     gulp.watch(config[resourceType].src, [`build:${resourceType}`])
   })
+  gulp.watch('./src/utilities/**/*.scss', ['build', 'build-bootstrap'])
   gulp.watch('./src/**/*.html').on('change', workspace.reload)
   gulp.watch('./.theme/**/*', ['build-docs']).on('change', workspace.reload)
 })

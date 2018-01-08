@@ -5,17 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PatternFly Workspace</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap-reboot.css">
   <link rel="stylesheet" href="/css/workspace.css">
+  <link rel="stylesheet" href="/dist/bootstrap.css">
   <link rel="stylesheet" href="/dist/components/components.css">
-  <link rel="stylesheet" href="/dist/layouts/layouts.css">
   <link rel="stylesheet" href="/dist/patterns/patterns.css">
 </head>
 <body>
 <div class="pf-workspace">
   <nav class="pf-workspace__navigation">
+    <h3 class="pf-workspace__navigation_heading">Components</h3>
     <ul class="pf-workspace__navigation__items">
-      <% workspace.navigation.forEach(function (navItem) { %>
+      <% workspace.navigation.components.forEach(function (navItem) { %>
+        <li class="pf-workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        </li>
+      <% }) %>
+    </ul>
+    <h3 class="pf-workspace__navigation_heading">Patterns</h3>
+    <ul class="pf-workspace__navigation__items">
+      <% workspace.navigation.patterns.forEach(function (navItem) { %>
+        <li class="pf-workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        </li>
+      <% }) %>
+    </ul>
+    <h3 class="pf-workspace__navigation_heading">Bootstrap</h3>
+    <ul class="pf-workspace__navigation__items">
+      <% workspace.navigation.bootstrap.forEach(function (navItem) { %>
         <li class="pf-workspace__navigation__item">
           <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>
@@ -35,7 +51,6 @@
     </div>
     <% } %>
     <% if (page) { %>
-      <link rel="stylesheet" href="<%= styles %>">
       <div class="pf-workspace__demo__examples">
         <%- include(page, {}) %>
       </div>
