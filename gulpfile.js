@@ -71,7 +71,7 @@ gulp.task('build', function (callback) {
 
 gulp.task('build-docs', function (callback) {
   return gulp.src('src/**/*.scss')
-    .pipe(sassdoc(config.docs))
+    .pipe(sassdoc(config.docs).on(`error`, sass.logError))
 })
 
 gulp.task('build-patternfly', ['lint-styles'], function (callback) {
