@@ -1,13 +1,4 @@
-/// A description of pf-c-secondary-nav
-/// @group components
-/// @moduleType component
-/// @author  <>
-/// @modifier .is-modifier - An example modifier description
-/// @modifier .is-another-modifier - Another example modifier description
-/// @template src/components/pf-c-secondary-nav/pf-c-secondary-nav.html
-
 // pf-c-block__element--modifier--state--PropiertyCamel
-
 $pf-c-secondary-nav--BorderColor:                $pf-global-border-color !default;
 $pf-c-secondary-nav--BorderWidth:                $pf-global-border-width !default;
 
@@ -23,7 +14,13 @@ $pf-c-secondary-nav__link--active--BorderColor:  $pf-global-active-color !defaul
 
 $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 
-
+/// A description of pf-c-secondary-nav
+/// @group components
+/// @moduleType component
+/// @author  <>
+/// @modifier .is-modifier - An example modifier description
+/// @modifier .is-another-modifier - Another example modifier description
+/// @template src/components/pf-c-secondary-nav/pf-c-secondary-nav.html
 .pf-c-secondary-nav {
   @include list-unstyled;
   display: flex;
