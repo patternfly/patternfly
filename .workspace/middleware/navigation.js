@@ -3,7 +3,8 @@ const fs = require('fs-extra')
 
 const componentDirectory = path.resolve(__dirname, '../../src/components')
 const patternDirectory = path.resolve(__dirname, '../../src/patterns')
-const bootstrapDirectory = path.resolve(__dirname, '../../bs-content/components')
+const bootstrapComponentDirectory = path.resolve(__dirname, '../../bs-content/components')
+const bootstrapContentDirectory = path.resolve(__dirname, '../../bs-content/content')
 
 function getNavigation (settings) {
   let componentNavigation = fs.readdirSync(settings.baseDir).reduce((accum, component) => {
@@ -21,7 +22,8 @@ function getNavigation (settings) {
 module.exports = function (req, res, next) {
   fs.ensureDirSync(componentDirectory)
   fs.ensureDirSync(patternDirectory)
-  fs.ensureDirSync(bootstrapDirectory)
+  fs.ensureDirSync(bootstrapComponentDirectory)
+  fs.ensureDirSync(bootstrapContentDirectory)
   req.navigation = {
     components: getNavigation({
       baseUrl: '/components',
@@ -33,10 +35,15 @@ module.exports = function (req, res, next) {
       type: 'pattern',
       baseDir: patternDirectory
     }),
-    bootstrap: getNavigation({
-      baseUrl: '/bootstrap',
-      type: 'bootstrap',
-      baseDir: bootstrapDirectory
+    bootstrapComponents: getNavigation({
+      baseUrl: '/bootstrap/components',
+      type: 'bootstrap-component',
+      baseDir: bootstrapComponentDirectory
+    }),
+    bootstrapContent: getNavigation({
+      baseUrl: '/bootstrap/content',
+      type: 'bootstrap-content',
+      baseDir: bootstrapContentDirectory
     })
   }
 

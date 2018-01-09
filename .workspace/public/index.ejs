@@ -29,9 +29,17 @@
         </li>
       <% }) %>
     </ul>
-    <h3 class="pf-workspace__navigation_heading">Bootstrap</h3>
+    <h3 class="pf-workspace__navigation_heading">Bootstrap Content</h3>
     <ul class="pf-workspace__navigation__items">
-      <% workspace.navigation.bootstrap.forEach(function (navItem) { %>
+      <% workspace.navigation.bootstrapContent.forEach(function (navItem) { %>
+        <li class="pf-workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        </li>
+      <% }) %>
+    </ul>
+    <h3 class="pf-workspace__navigation_heading">Bootstrap Components</h3>
+    <ul class="pf-workspace__navigation__items">
+      <% workspace.navigation.bootstrapComponents.forEach(function (navItem) { %>
         <li class="pf-workspace__navigation__item">
           <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>

@@ -11,12 +11,14 @@ router.use('/docs', express.static(path.resolve(__dirname, '../docs')))
 router.use('/dist', express.static(path.resolve(__dirname, '../dist')))
 router.use('/regressions', express.static(path.resolve(__dirname, '../test/results')))
 
-router.get(`/bootstrap/:name`, function (req, res) {
+router.get(`/bootstrap/:section/:name`, function (req, res) {
+  let resourceName = req.params.name
+  let resourceSection = req.params.section
   let page = path.resolve(
     __dirname,
-    `../bs-content/components/${req.params.name}.html`
+    `../bs-content/${resourceSection}/${resourceName}.html`
   )
-  let resourceName = req.params.name
+
   ejs.renderFile(
     workspaceView,
     {
@@ -24,7 +26,7 @@ router.get(`/bootstrap/:name`, function (req, res) {
       resourceType: 'Bootstrap Component',
       resourceName,
       styles: false,
-      documentation: `https://getbootstrap.com/docs/4.0/components/${resourceName}`,
+      documentation: `https://getbootstrap.com/docs/4.0/${resourceSection}/${resourceName}`,
       workspace: {
         navigation: req.navigation
       }
