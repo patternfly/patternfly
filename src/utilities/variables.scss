@@ -35,7 +35,7 @@ $pf-global-gradient-percent-end: 100% !default;
 // Patternfly font path
 
 // Defines path to /font foldeer
-$pf-global-font-path: "/public/assets/fonts" !default;
+$pf-global-font-path: "/assets/fonts" !default;
 // $pf-icon-font-name-fa:  "FontAwesome" !default;
 // $pf-icon-font-name:  "PatternFlyIcons-webfont" !default;
 // $pf-icon-prefix:  pf-icon !default;
@@ -85,8 +85,8 @@ $pf-global-hover-background-color:        $pf-color-red-300 !default;
 $pf-global-active-color:                  $pf-color-red-100 !default;
 $pf-global-active-background-color:       $pf-color-red-300 !default;
 
-$pf-global-disabled-color:                $pf-color-red-100 !default;
-$pf-global-disabled-background-color:     $pf-color-red-300 !default;
+$pf-global-disabled-color:                $pf-color-black-500 !default;
+$pf-global-disabled-background-color:     $pf-color-black-300 !default;
 
 
 // Border
@@ -98,9 +98,9 @@ $pf-global-border-color:         $pf-color-blue-300 !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 // stylelint-disable value-keyword-case
-$pf-global-font-family-sans-serif: “Overpass”, overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global-font-family-sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$pf-global-font-family-monospace:  “overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$pf-global-font-family-monospace:  “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 $pf-global-font-size-base:             pf-font-prem(16px) !default;

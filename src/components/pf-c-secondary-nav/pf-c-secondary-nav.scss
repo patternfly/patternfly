@@ -24,7 +24,9 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 /// @template src/components/pf-c-secondary-nav/pf-c-secondary-nav.html
 .pf-c-secondary-nav {
   @include list-unstyled;
-  display: flex;
+  // display: flex;
+  @include SplitLayout;
+  // justify-content: flex-start;
   // The background creates a border under the menu
   background-image:
     linear-gradient(
@@ -35,7 +37,7 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 
   // Selects every direct child of pf-c-secondary-nav, for example .pf-c-secondary-nav__item
   > * {
-    display: flex;
+    // display: flex;
     margin-right: $pf-c-secondary-nav__item--MarginRight;
     margin-left: $pf-c-secondary-nav__item--MarginLeft;
     &:last-child {

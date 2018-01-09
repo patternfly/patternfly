@@ -64,6 +64,7 @@ body {
   background-color: #fff;
   overflow: auto;
   resize: both;
+  position: relative;
 }
 .pf-workspace .demo-box {
   padding: 1rem;
