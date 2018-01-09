@@ -30,7 +30,7 @@ $cyan:    $pf-color-cyan-400 !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-rounded:                      false !default;
+$enable-rounded:                      true !default;
 $enable-shadows:                      true !default;
 $enable-gradients:                    true !default;
 $enable-hover-media-query:            true !default;

@@ -35,18 +35,17 @@ $pf-global-gradient-percent-end: 100% !default;
 // Patternfly font path
 
 // Defines path to /font foldeer
-$fa-font-path: "../fonts" !default;
-$pf-font-path: "../fonts" !default;
+$pf-global-font-path: "/public/assets/fonts" !default;
 // $pf-icon-font-name-fa:  "FontAwesome" !default;
-$pf-icon-font-name:  "PatternFlyIcons-webfont" !default;
-$pf-icon-prefix:  pf-icon !default;
+// $pf-icon-font-name:  "PatternFlyIcons-webfont" !default;
+// $pf-icon-prefix:  pf-icon !default;
 
 
 // Patternfly Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$pf-enable-font-overpass-cdn:         false !default;
+$pf-global-enable-font-overpass-cdn:         false !default;
 
 
 // Spacers
