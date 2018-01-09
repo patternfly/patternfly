@@ -7,7 +7,8 @@ bs.startServer = function () {
   this.init({
     server: {
       baseDir: [
-        path.resolve(__dirname, 'public')
+        path.resolve(__dirname, 'public'),
+        path.resolve(__dirname, '../public')
       ]
     },
     middleware: [navigation, router],
