@@ -75,23 +75,38 @@ $pf-global-breakpoint-xl: 1200px !default;
 // something like https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss
 
 
+// TODO: Create a theme map for all colors
+
+// Links
+//
+
+$pf-global-link-color: $pf-color-blue-400;
+
 // Components
 //
-// Define global variables for states
+
+$pf-global-component-color:               $pf-color-red-100 !default;
+$pf-global-component-background-color:    $pf-color-red-100 !default;
+$pf-global-component-border-color:        $pf-color-black-400 !default;
+$pf-global-component-border-width:        1px !default;
+
+$pf-global-component-inverse-color:               $pf-color-red-100 !default;
+$pf-global-component-inverse-background-color:    $pf-color-red-100 !default;
+$pf-global-component-inverse-border-color:        $pf-color-black-300 !default;
+
+// States
 
 $pf-global-hover-color:                   $pf-color-red-100 !default;
 $pf-global-hover-background-color:        $pf-color-red-300 !default;
+$pf-global-hover-border-color:            $pf-color-red-300 !default;
 
 $pf-global-active-color:                  $pf-color-blue-400 !default;
 $pf-global-active-background-color:       $pf-color-blue-100 !default;
+$pf-global-active-border-color:           $pf-color-blue-100 !default;
 
 $pf-global-disabled-color:                $pf-color-black-500 !default;
 $pf-global-disabled-background-color:     $pf-color-black-300 !default;
-
-
-// Border
-$pf-global-border-width:         1px !default;
-$pf-global-border-color:         $pf-color-black-300 !default;
+$pf-global-disabled-border-color:         $pf-color-black-300 !default;
 
 
 // Fonts

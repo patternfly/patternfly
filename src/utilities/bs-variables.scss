@@ -44,7 +44,10 @@ $spacer: $pf-global-spacer-md !default;
 
 // Body
 
+
 // Links
+
+$link-color:                $pf-global-link-color !default;
 
 // Paragraphs
 //
@@ -77,7 +80,7 @@ $grid-gutter-width:           $pf-global-spacer-xxxl !default;
 //
 // Define common padding and border radius sizes and more.
 
-$border-width:                $pf-global-border-width !default;
+$border-width:                $pf-global-component-border-width !default;
 
 $border-radius:               0 !default;
 $border-radius-lg:            0 !default;

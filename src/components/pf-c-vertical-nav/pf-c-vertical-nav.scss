@@ -1,9 +1,129 @@
-/// A description of pf-c-vertical-nav
-/// @group components
-/// @moduleType component
-/// @modifier .is-modifier - An example modifier description
-/// @modifier .is-another-modifier - Another example modifier description
-/// @template src/components/pf-c-vertical-nav/pf-c-vertical-nav.html
-.pf-c-vertical-nav {
-
-}
+// // pf-c-block__element--modifier--state--PropiertyCamel
+// $pf-c-vertical-nav-BackgroundColor:              $pf-color-black-800 !default;
+// $pf-c-secondary-nav--BorderWidth:                $pf-global-border-width !default;
+//
+// $pf-c-secondary-nav__item--MarginLeft:           $pf-global-spacer-md !default;
+// $pf-c-secondary-nav__item--MarginRight:          $pf-global-spacer-md !default;
+//
+// $pf-c-secondary-nav__link--Color:                $pf-color-black-600 !default;
+// $pf-c-secondary-nav__link--PaddingTop:           $pf-global-spacer-sm !default;
+// $pf-c-secondary-nav__link--PaddingBottom:        $pf-global-spacer-sm !default;
+//
+// $pf-c-secondary-nav__link--active--Color:        $pf-global-active-color !default;
+// $pf-c-secondary-nav__link--active--BorderColor:  $pf-global-active-color !default;
+//
+// $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
+//
+// /// A description of pf-c-vertical-nav
+// /// @group components
+// /// @moduleType component
+// /// @modifier .is-modifier - An example modifier description
+// /// @modifier .is-another-modifier - Another example modifier description
+// /// @template src/components/pf-c-vertical-nav/pf-c-vertical-nav.html
+// /// @todo Accecibility for vertical nav
+//
+// //
+// // PatternFly Vertical Tabs
+// // --------------------------------------------------
+//
+// .pf-l-demo-layout {
+//   @include media-breakpoint-up(sm) {
+//     width: 30%;
+//   }
+// }
+//
+// .pf-c-vertical-nav {
+//   background-color: $pf-c-vertical-nav-BackgroundColor // $pf-color-black-800;
+//
+//   @include media-breakpoint-up(sm) {
+//     position: relative;
+//   }
+//
+//   &__content {
+//     // reset list
+//     padding-left: 0;
+//     list-style: none;
+//   }
+//
+//   &__item {
+//     background: #000;
+//   }
+//
+//   &__link {
+//     display: block;
+//     padding: $pf-vertical-nav-link-padding-y $pf-vertical-nav-link-padding-x;
+//     color: $pf-vertical-nav-link-color;
+//     border-bottom: $pf-vertical-nav-link-border;
+//
+//     &.pf-is-active {
+//       background-color: $pf-vertical-nav-link-active-bg-color;
+//       background-image: $pf-vertical-nav-link-active-bg-img;
+//     }
+//
+//     &.pf-is-disabled {}
+//
+//     @include hover-focus {
+//       background-color: $pf-vertical-nav-link-hover-bg-color;
+//     }
+//   }
+//
+// }
+//
+// // Sub menu
+//
+// .pf-vertical-sub-nav {
+//   // padding-left: 1em;
+//   @include media-breakpoint-up(sm) {
+//     position: absolute;
+//     top: 0;
+//     right: -$pf-vertical-sub-nav-width;
+//     width: $pf-vertical-sub-nav-width;
+//     padding: $pf-vertical-sub-nav-padding;
+//   }
+//
+//   &--first {
+//     background-color: $pf-vertical-sub-nav-first-bg-color;
+//   }
+//
+//   &--second {
+//     background-color: $pf-color-black-600;
+//   }
+//
+//   &--thrid {
+//     background-color: $pf-color-black-500;
+//   }
+// }
+//
+// .pf-vertical-sub-nav__title {
+//   display: none;
+//   @include media-breakpoint-up(sm) {
+//     display: block;
+//   }
+// }
+//
+// .pf-vertical-sub-nav__content {
+//   @include list-unstyled;
+// }
+//
+// .pf-vertical-sub-nav__item {}
+//
+// .pf-vertical-sub-nav__link {
+//   display: block;
+//   padding: $pf-vertical-sub-nav-link-padding-y $pf-vertical-sub-nav-link-padding-x;
+//   color: $pf-vertical-sub-nav-link-hover-color;
+//
+//   @include hover-focus {
+//     background-color: $pf-vertical-sub-nav-link-hover-bg-color;
+//   }
+//
+//   @include media-breakpoint-up(sm) {
+//     margin-right: -$pf-vertical-sub-nav-padding; // To compensate for the padding on the __content wrapper
+//     &.pf-is-active {
+//       background-color: $pf-color-black-600;
+//
+//       .pf-vertical-sub-nav--second & {
+//         background-color: $pf-color-black-700;
+//       }
+//     }
+//   }
+// }
