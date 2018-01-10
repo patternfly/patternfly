@@ -14,15 +14,16 @@ body {
   padding: 2rem;
 }
 .pf-workspace__navigation__items {
-  margin: 0;
+  margin: 0 0 2rem 0;
   padding: 0;
   list-style-type: none;
 }
 .pf-workspace__navigation_heading {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: .9rem;
   color: #888;
-  margin: 0.5em 0;
+  margin: 0;
+  text-transform: uppercase;
 }
 .pf-workspace__navigation__item {
   padding: 0.25em 0;

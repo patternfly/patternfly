@@ -82,8 +82,8 @@ $pf-global-breakpoint-xl: 1200px !default;
 $pf-global-hover-color:                   $pf-color-red-100 !default;
 $pf-global-hover-background-color:        $pf-color-red-300 !default;
 
-$pf-global-active-color:                  $pf-color-red-100 !default;
-$pf-global-active-background-color:       $pf-color-red-300 !default;
+$pf-global-active-color:                  $pf-color-blue-400 !default;
+$pf-global-active-background-color:       $pf-color-blue-100 !default;
 
 $pf-global-disabled-color:                $pf-color-black-500 !default;
 $pf-global-disabled-background-color:     $pf-color-black-300 !default;
@@ -91,7 +91,7 @@ $pf-global-disabled-background-color:     $pf-color-black-300 !default;
 
 // Border
 $pf-global-border-width:         1px !default;
-$pf-global-border-color:         $pf-color-blue-300 !default;
+$pf-global-border-color:         $pf-color-black-300 !default;
 
 
 // Fonts
