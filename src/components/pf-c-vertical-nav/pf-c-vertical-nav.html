@@ -1,0 +1,77 @@
+<!--
+Each template tag represents an individual state that the component can
+be in. If you would like to show multiple states in the workarea, you should
+have multiple template tags. To communicate information about the state that
+the templat represents, use the data-title and data-description attributes.
+These attributes will be rendered in the workspace.
+-->
+<template data-title="pf-c-vertical-nav" data-description="">
+  
+  <nav class="pf-c-vertical-nav" role="navigation">
+
+    <ul class="pf-c-vertical-nav__content" role="menu" >
+
+      <li class="pf-c-vertical-nav__item">
+        <a href="#" class="pf-c-vertical-nav__link">Item One</a>
+      </li>
+
+      <li class="pf-c-vertical-nav__item">
+        <a href="#" class="pf-c-vertical-nav__link">Item Two</a>
+      </li>
+
+      <li class="pf-c-vertical-nav__item">
+        <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-is-active" aria-selected="true">Item Three</a>
+
+        <section class="pf-vertical-sub-nav pf-vertical-sub-nav--first">
+          <h2 class="pf-vertical-sub-nav__title">submenu</h2>
+          <ul class="pf-vertical-sub-nav__content">
+            <li class="pf-vertical-sub-nav__item">
+              <a href="#" class="pf-vertical-sub-nav__link">SubItem One</a>
+            </li>
+            <li class="pf-vertical-sub-nav__item">
+              <a href="#" role="menuitem" class="pf-vertical-sub-nav__link pf-is-active" aria-selected="true">SubItem Two</a>
+
+              <section class="pf-vertical-sub-nav pf-vertical-sub-nav--second">
+                <h2 class="pf-vertical-sub-nav__title">submenu</h2>
+                <ul class="pf-vertical-sub-nav__content">
+                  <li class="pf-vertical-sub-nav__item">
+                    <a href="#" class="pf-vertical-sub-nav__link">SubItem One</a>
+                  </li>
+                  <li class="pf-vertical-sub-nav__item">
+                    <a href="#" role="menuitem" class="pf-vertical-sub-nav__link">SubItem Two</a>
+                  </li>
+                  <li class="pf-vertical-sub-nav__item">
+                    <a href="#" role="menuitem" class="pf-vertical-sub-nav__link">SubItem Three</a>
+                  </li>
+                  <li class="pf-vertical-sub-nav__item">
+                    <a href="#" role="menuitem" class="pf-vertical-sub-nav__link pf-is-active" aria-selected="true">SubItem Three</a>
+                  </li>
+                  <li class="pf-vertical-sub-nav__item">
+                    <a href="#" role="menuitem" class="pf-vertical-sub-nav__link  pf-is-disabled" aria-disabled="true">SubItem Disabled</a>
+                  </li>
+                </ul>
+              </section>
+
+            </li>
+            <li class="pf-vertical-sub-nav__item">
+              <a href="#" role="menuitem" class="pf-vertical-sub-nav__link">SubItem Three</a>
+            </li>
+            <li class="pf-vertical-sub-nav__item">
+              <a href="#" role="menuitem" class="pf-vertical-sub-nav__link  pf-is-disabled" aria-disabled="true">SubItem Disabled</a>
+            </li>
+          </ul>
+        </section>
+
+      </li>
+
+      <li class="pf-c-vertical-nav__item">
+        <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-is-disabled" aria-disabled="true">Item Disabled</a>
+      </li>
+
+      <li class="pf-c-vertical-nav__item">
+        <a href="#" role="menuitem" class="pf-c-vertical-nav__link">Item Five</a>
+      </li>
+
+    </ul>
+  </nav>
+</template>

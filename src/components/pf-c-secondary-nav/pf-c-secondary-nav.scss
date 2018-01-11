@@ -1,11 +1,11 @@
 // pf-c-block__element--modifier--state--PropiertyCamel
-$pf-c-secondary-nav--BorderColor:                $pf-global-border-color !default;
-$pf-c-secondary-nav--BorderWidth:                $pf-global-border-width !default;
+$pf-c-secondary-nav--BorderColor:                $pf-global-component-border-color !default;
+$pf-c-secondary-nav--BorderWidth:                $pf-global-component-border-width !default;
 
 $pf-c-secondary-nav__item--MarginLeft:           $pf-global-spacer-md !default;
 $pf-c-secondary-nav__item--MarginRight:          $pf-global-spacer-md !default;
 
-$pf-c-secondary-nav__link--Color:                $pf-color-black-600 !default;
+$pf-c-secondary-nav__link--Color:                $pf-global-component-color !default;
 $pf-c-secondary-nav__link--PaddingTop:           $pf-global-spacer-sm !default;
 $pf-c-secondary-nav__link--PaddingBottom:        $pf-global-spacer-sm !default;
 
@@ -23,8 +23,11 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 /// @modifier .is-another-modifier - Another example modifier description
 /// @template src/components/pf-c-secondary-nav/pf-c-secondary-nav.html
 .pf-c-secondary-nav {
-  @include list-unstyled;
   display: flex;
+  // reset list
+  padding-left: 0;
+  list-style: none;
+  // @include SplitLayout;
   // The background creates a border under the menu
   background-image:
     linear-gradient(
