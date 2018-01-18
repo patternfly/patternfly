@@ -46,15 +46,36 @@ $pf-c-button--LineHeight:          $pf-global-line-height-sm !default;
     font-size: $pf-c-button--large--FontSize;
   }
 
-  //
-  // Alternate buttons
-  //
-
-  @each $color, $value in $theme-colors {
-    &.pf-is-#{$color} {
-      @include pf-button-variant($value, $value);
-    }
+  //TODO: Create variables for these colors
+  &.pf-is-primary {
+    @include pf-button-variant($background: $pf-color-blue-300, $color: $pf-color-white , $border: $pf-color-blue-300, $hover-background: $pf-color-blue-400);
   }
+
+  &.pf-is-secondary {
+    @include pf-button-variant($background: transparent, $color: $pf-color-blue-300 , $border: $pf-color-blue-300, $hover-background: $pf-color-blue-300);
+  }
+
+  &.pf-is-secondary-alt {
+    @include pf-button-variant($background: transparent, $color: $pf-color-white , $border: $pf-color-white, $hover-background: $pf-color-black-800);
+  }
+
+  &.pf-is-tertiary {
+    @include pf-button-variant($background: transparent, $color: $pf-color-black-800 , $border: $pf-color-black-800, $hover-background: $pf-color-black-800);
+  }
+
+  &.pf-is-destructive {
+    @include pf-button-variant($background: $pf-color-red-100, $color: $pf-color-white , $border: $pf-color-red-100, $hover-background: $pf-color-red-200);
+  }
+
+
+  // Alternate buttons
+
+  //
+  // @each $color, $value in $theme-colors {
+  //   &.pf-is-#{$color} {
+  //     @include pf-button-variant($value, $value);
+  //   }
+  // }
 
   &.pf-is-block {
     display: block;

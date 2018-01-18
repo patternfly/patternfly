@@ -108,21 +108,21 @@ $pf-global-link-color: $pf-color-blue-400;
 //
 
 $pf-global-component-color:               $pf-color-black-900 !default;
-$pf-global-component-light-color:         $pf-color-black-600 !default;
+$pf-global-component-off-color:         $pf-color-black-400 !default;
 
-$pf-global-component-background-color:    $pf-color-black-100 !default;
-$pf-global-component-light-background-color:    $pf-color-black-100 !default;
+$pf-global-component-background-color:    $pf-color-white !default;
+$pf-global-component-alt-background-color:    $pf-color-black-200 !default;
 
 $pf-global-component-border-color:        $pf-color-black-400 !default;
 $pf-global-component-border-width:        1px !default;
 
-$pf-global-component-inverse-color:               $pf-color-red-100 !default;
-$pf-global-component-inverse-light-color:         $pf-color-red-100 !default;
+$pf-global-component-inverse-color:               $pf-color-white !default;
+$pf-global-component-inverse-off-color:         $pf-color-black-200 !default;
 
-$pf-global-component-inverse-background-color:    $pf-color-red-100 !default;
-$pf-global-component--inverse-light-background-color:    $pf-color-black-100 !default;
+$pf-global-component-inverse-background-color:    $pf-color-black-900 !default;
+$pf-global-component-inverse-alt-background-color:    $pf-color-black-800 !default;
 
-$pf-global-component-inverse-border-color:        $pf-color-black-300 !default;
+$pf-global-component-inverse-border-color:        $pf-color-black-400 !default;
 
 // States
 
