@@ -6,6 +6,35 @@
 // `$pf-global-concept-state-size-propierty`
 
 
+//
+// Color system
+//
+
+// stylelint-disable
+
+$pf-glogal-primary-color:       $pf-color-blue-400 !default;
+$pf-glogal-secondary-color:     $pf-color-black-600 !default;
+$pf-glogal-success-color:       $pf-color-green-400 !default;
+$pf-glogal-info-color:          $pf-color-cyan-400 !default;
+$pf-glogal-warning-color:       $pf-color-gold-400 !default;
+$pf-glogal-danger-color:        $pf-color-red-100 !default;
+$pf-glogal-light-color:         $pf-color-black-100 !default;
+$pf-glogal-dark-color:          $pf-color-black-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $pf-glogal-primary-color,
+  "secondary":  $pf-glogal-secondary-color,
+  "success":    $pf-glogal-success-color,
+  "info":       $pf-glogal-info-color,
+  "warning":    $pf-glogal-warning-color,
+  "danger":     $pf-glogal-danger-color,
+  "light":      $pf-glogal-light-color,
+  "dark":       $pf-glogal-dark-color
+), $theme-colors);
+// stylelint-enable
+
+
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
 // transformation from px to rem.
@@ -22,14 +51,6 @@ $pf-global-box-shadow-md: 0  pf-prem(2)  pf-prem(2) rgba($pf-color-black-1000, .
 $pf-global-box-shadow-lg: 0  pf-prem(3)  pf-prem(5) rgba($pf-color-black-1000, .3) !default;
 $pf-global-box-shadow-inset: inset 0  pf-prem(1)  pf-prem(2) rgba($pf-color-black-1000, .1) !default;
 $pf-global-box-shadow-left: -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, .3) !default;
-
-
-// Patternfly Gradient
-
-$pf-global-gradient-color-start: $pf-color-black-100 !default;
-$pf-global-gradient-color-end: $pf-color-black-200 !default;
-$pf-global-gradient-percent-start: 0% !default;
-$pf-global-gradient-percent-end: 100% !default;
 
 
 // Patternfly font path
@@ -82,16 +103,25 @@ $pf-global-breakpoint-xl: 1200px !default;
 
 $pf-global-link-color: $pf-color-blue-400;
 
+
 // Components
 //
 
-$pf-global-component-color:               $pf-color-red-100 !default;
-$pf-global-component-background-color:    $pf-color-red-100 !default;
+$pf-global-component-color:               $pf-color-black-900 !default;
+$pf-global-component-light-color:         $pf-color-black-600 !default;
+
+$pf-global-component-background-color:    $pf-color-black-100 !default;
+$pf-global-component-light-background-color:    $pf-color-black-100 !default;
+
 $pf-global-component-border-color:        $pf-color-black-400 !default;
 $pf-global-component-border-width:        1px !default;
 
 $pf-global-component-inverse-color:               $pf-color-red-100 !default;
+$pf-global-component-inverse-light-color:         $pf-color-red-100 !default;
+
 $pf-global-component-inverse-background-color:    $pf-color-red-100 !default;
+$pf-global-component--inverse-light-background-color:    $pf-color-black-100 !default;
+
 $pf-global-component-inverse-border-color:        $pf-color-black-300 !default;
 
 // States
@@ -104,9 +134,9 @@ $pf-global-active-color:                  $pf-color-blue-400 !default;
 $pf-global-active-background-color:       $pf-color-blue-100 !default;
 $pf-global-active-border-color:           $pf-color-blue-100 !default;
 
-$pf-global-disabled-color:                $pf-color-black-500 !default;
-$pf-global-disabled-background-color:     $pf-color-black-300 !default;
-$pf-global-disabled-border-color:         $pf-color-black-300 !default;
+$pf-global-disabled-color:                $pf-color-black-400 !default;
+$pf-global-disabled-background-color:     $pf-color-black-200 !default;
+$pf-global-disabled-border-color:         $pf-color-black-200 !default;
 
 
 // Fonts
@@ -125,11 +155,22 @@ $pf-global-main-title-font-size:       pf-font-prem(32px) !default;
 $pf-global-secondary-title-font-size:  pf-font-prem(24px) !default;
 $pf-global-sub-title-font-size:        pf-font-prem(19px) !default;
 $pf-global-body-font-size:             pf-font-prem(16px) !default;
-$pf-global-caption-font-size:          pf-font-prem(14px) !default;
+$pf-global-caption-font-size:          pf-font-prem(12px) !default;
 
 $pf-global-font-weight-light:          300 !default;
 $pf-global-font-weight-normal:         500 !default;
 $pf-global-font-weight-semi-bold:      600 !default;
 $pf-global-font-weight-bold:           700 !default;
 
-$pf-global-line-height-base:           1.5 !default;
+$pf-global-line-height-sm:           1.2 !default;
+$pf-global-line-height-base:         1.5 !default;
+$pf-global-line-height-lg:           1.8 !default;
+
+
+// filters
+// overlay
+// animations
+
+// ============== global variables ==================
+
+// patternfly components    |     Boostrap components

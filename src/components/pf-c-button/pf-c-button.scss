@@ -1,0 +1,63 @@
+// pf-c-block__element--modifier--state--PropiertyCamel
+$pf-c-button--PaddingInline:       $pf-global-spacer-xs !default;
+$pf-c-button--PaddingBlock:        $pf-global-spacer-xxl !default;
+$pf-c-button--FontSize:            $pf-global-body-font-size !default;
+
+$pf-c-button--small--FontSize:     $pf-global-caption-font-size !default;
+
+$pf-c-button--large--FontSize:     $pf-global-sub-title-font-size !default;
+
+$pf-c-button--FontWeight:          $pf-global-font-weight-semi-bold !default;
+$pf-c-button--LineHeight:          $pf-global-line-height-sm !default;
+
+/// A description of pf-c-butto
+/// @group components
+/// @moduleType component
+/// @modifier .pf-is-large - An example modifier description
+/// @modifier .pf-is-small - An example modifier description
+/// @modifier .pf-is-primary - An example modifier description
+/// @modifier .pf-is-secondary - An example modifier description
+/// @modifier .pf-is-success - An example modifier description
+/// @modifier .pf-is-info - An example modifier description
+/// @modifier .pf-is-warning - An example modifier description
+/// @modifier .pf-is-danger - An example modifier description
+/// @modifier .pf-is-light - An example modifier description
+/// @modifier .pf-is-dark - An example modifier description
+/// @modifier .pf-is-focus - An example modifier description
+/// @modifier .pf-is-disabled - An example modifier description
+/// @template src/components/pf-c-button/pf-c-button.html
+
+.pf-c-button {
+  display: inline-block;
+  padding: $pf-c-button--PaddingInline $pf-c-button--PaddingBlock;
+  font-size: $pf-c-button--FontSize;
+  font-weight: $pf-c-button--FontWeight;
+  line-height: $pf-c-button--LineHeight;
+  text-align: center;
+  white-space: nowrap;
+  border: $pf-global-component-border-width solid $pf-global-component-border-color;
+  border-radius: 30rem;
+
+  &.pf-is-small {
+    font-size: $pf-c-button--small--FontSize;
+  }
+
+  &.pf-is-large {
+    font-size: $pf-c-button--large--FontSize;
+  }
+
+  //
+  // Alternate buttons
+  //
+
+  @each $color, $value in $theme-colors {
+    &.pf-is-#{$color} {
+      @include pf-button-variant($value, $value);
+    }
+  }
+
+  &.pf-is-block {
+    display: block;
+    width: 100%;
+  }
+}

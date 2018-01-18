@@ -1,3 +1,11 @@
+/// Resets list.
+/// @group mixins
+/// @moduleType mixin
+@mixin list-reset {
+  padding-left: 0;
+  list-style: none;
+}
+
 /// Base for all of the layout mixins.
 /// @group mixins
 /// @moduleType mixin
@@ -95,4 +103,36 @@
 @mixin TileBoardLayout($columns: 5) {
   @include Layout;
   grid-template-columns: repeat($columns, 1fr);
+}
+
+
+/// Button variants
+/// @group mixins
+/// @moduleType mixin
+
+@mixin pf-button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  color: color-yiq($background);
+  background-color: $background;
+  border-color: $border;
+
+  &:hover {
+    color: color-yiq($hover-background);
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.pf-is-focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba($border, .5);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.pf-is-disabled,
+  &:disabled {
+    color: color-yiq($background);
+    background-color: $background;
+    border-color: $border;
+    opacity: .5;
+  }
 }

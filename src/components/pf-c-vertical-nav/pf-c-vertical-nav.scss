@@ -1,19 +1,19 @@
 // // pf-c-block__element--modifier--state--PropiertyCamel
-// $pf-c-vertical-nav-BackgroundColor:              $pf-color-black-800 !default;
-// $pf-c-secondary-nav--BorderWidth:                $pf-global-border-width !default;
-//
-// $pf-c-secondary-nav__item--MarginLeft:           $pf-global-spacer-md !default;
-// $pf-c-secondary-nav__item--MarginRight:          $pf-global-spacer-md !default;
-//
-// $pf-c-secondary-nav__link--Color:                $pf-color-black-600 !default;
-// $pf-c-secondary-nav__link--PaddingTop:           $pf-global-spacer-sm !default;
-// $pf-c-secondary-nav__link--PaddingBottom:        $pf-global-spacer-sm !default;
-//
-// $pf-c-secondary-nav__link--active--Color:        $pf-global-active-color !default;
-// $pf-c-secondary-nav__link--active--BorderColor:  $pf-global-active-color !default;
-//
-// $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
-//
+
+$pf-c-vertical-nav__link--PaddingTop:        $pf-global-spacer-sm !default;
+$pf-c-vertical-nav__link--PaddingBottom:     $pf-global-spacer-sm !default;
+$pf-c-vertical-nav__link--MarginTop:         $pf-global-spacer-xxl !default;
+$pf-c-vertical-nav__link--MarginBottom:      $pf-global-spacer-xxl !default;
+$pf-c-vertical-nav__link--Color:             $pf-global-component-light-color !default;
+
+$pf-c-vertical-nav__link--active--Color:     $pf-global-component-color !default;
+$pf-c-vertical-nav__link--disabled--Color:   $pf-global-disabled-color !default;
+
+$pf-c-vertical-nav__link-icon--PaddingRight: $pf-global-spacer-xl !default;
+
+$pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default;
+
+
 // /// A description of pf-c-vertical-nav
 // /// @group components
 // /// @moduleType component
@@ -22,55 +22,68 @@
 // /// @template src/components/pf-c-vertical-nav/pf-c-vertical-nav.html
 // /// @todo Accecibility for vertical nav
 //
-// //
-// // PatternFly Vertical Tabs
-// // --------------------------------------------------
+
+
+.pf-c-vertical-nav {
+
+  &__content {
+    // reset list
+    @include list-reset;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    // height: 4ex;
+    padding-top: $pf-c-vertical-nav__link--PaddingTop;
+    padding-bottom: $pf-c-vertical-nav__link--PaddingBottom;
+    margin-top: $pf-c-vertical-nav__link--MarginTop;
+    margin-bottom: $pf-c-vertical-nav__link--MarginBottom;
+    color: $pf-c-vertical-nav__link--Color;
+
+    &:hover {
+      color: $pf-c-vertical-nav__link--hover--Color;
+      text-decoration: none;
+    }
+
+    &-text {
+    }
+
+    &-icon {
+      // placeholderfor an icon
+      flex: 0 0 20px; //delete when we have icons
+      height: 20px; //delete when we have icons
+      margin-right: $pf-c-vertical-nav__link-icon--PaddingRight;
+      background: $pf-color-black-400; //delete when we have icons
+    }
+
+    &.pf-is-active {
+      position: relative;
+      color: $pf-c-vertical-nav__link--active--Color;
+
+      // Since we are still unsure about the active state I am going to leave it hardcoded
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: calc(20px + #{$pf-c-vertical-nav__link-icon--PaddingRight});
+        width: 32px;
+        height: 4px;
+        content: "";
+        background-color: $pf-global-link-color;
+      }
+    }
+
+    &.pf-is-disabled {
+      color: $pf-c-vertical-nav__link--disabled--Color;
+    }
+  }
+}
+
+// Sub menu
 //
-// .pf-l-demo-layout {
-//   @include media-breakpoint-up(sm) {
-//     width: 30%;
-//   }
-// }
-//
-// .pf-c-vertical-nav {
-//   background-color: $pf-c-vertical-nav-BackgroundColor // $pf-color-black-800;
-//
-//   @include media-breakpoint-up(sm) {
-//     position: relative;
-//   }
-//
-//   &__content {
-//     // reset list
-//     padding-left: 0;
-//     list-style: none;
-//   }
-//
-//   &__item {
-//     background: #000;
-//   }
-//
-//   &__link {
-//     display: block;
-//     padding: $pf-vertical-nav-link-padding-y $pf-vertical-nav-link-padding-x;
-//     color: $pf-vertical-nav-link-color;
-//     border-bottom: $pf-vertical-nav-link-border;
-//
-//     &.pf-is-active {
-//       background-color: $pf-vertical-nav-link-active-bg-color;
-//       background-image: $pf-vertical-nav-link-active-bg-img;
-//     }
-//
-//     &.pf-is-disabled {}
-//
-//     @include hover-focus {
-//       background-color: $pf-vertical-nav-link-hover-bg-color;
-//     }
-//   }
-//
-// }
-//
-// // Sub menu
-//
+.pf-vertical-sub-nav {
+  display: none; // we don't know how the submenu looks like yet
+}
 // .pf-vertical-sub-nav {
 //   // padding-left: 1em;
 //   @include media-breakpoint-up(sm) {

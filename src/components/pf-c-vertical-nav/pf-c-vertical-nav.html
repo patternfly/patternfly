@@ -5,22 +5,32 @@ have multiple template tags. To communicate information about the state that
 the templat represents, use the data-title and data-description attributes.
 These attributes will be rendered in the workspace.
 -->
+
 <template data-title="pf-c-vertical-nav" data-description="">
-  
+
   <nav class="pf-c-vertical-nav" role="navigation">
 
     <ul class="pf-c-vertical-nav__content" role="menu" >
 
       <li class="pf-c-vertical-nav__item">
-        <a href="#" class="pf-c-vertical-nav__link">Item One</a>
+        <a href="#" class="pf-c-vertical-nav__link">
+          <span class="pf-c-vertical-nav__link-icon"></span>
+          <span class="pf-c-vertical-nav__link-text">Item One</span>
+        </a>
       </li>
 
       <li class="pf-c-vertical-nav__item">
-        <a href="#" class="pf-c-vertical-nav__link">Item Two</a>
+        <a href="#" class="pf-c-vertical-nav__link pf-is-active"  aria-selected="true">
+          <span class="pf-c-vertical-nav__link-icon"></span>
+          <span class="pf-c-vertical-nav__link-text">Item Active</span>
+        </a>
       </li>
 
       <li class="pf-c-vertical-nav__item">
-        <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-is-active" aria-selected="true">Item Three</a>
+        <a href="#" role="menuitem" class="pf-c-vertical-nav__link">
+          <span class="pf-c-vertical-nav__link-icon"></span>
+          <span class="pf-c-vertical-nav__link-text">Item Three</span>
+        </a>
 
         <section class="pf-vertical-sub-nav pf-vertical-sub-nav--first">
           <h2 class="pf-vertical-sub-nav__title">submenu</h2>
@@ -65,11 +75,17 @@ These attributes will be rendered in the workspace.
       </li>
 
       <li class="pf-c-vertical-nav__item">
-        <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-is-disabled" aria-disabled="true">Item Disabled</a>
+        <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-is-disabled" aria-disabled="true">
+          <span class="pf-c-vertical-nav__link-icon"></span>
+          <span class="pf-c-vertical-nav__link-text">Item Disabled</span>
+        </a>
       </li>
 
       <li class="pf-c-vertical-nav__item">
-        <a href="#" role="menuitem" class="pf-c-vertical-nav__link">Item Five</a>
+        <a href="#" role="menuitem" class="pf-c-vertical-nav__link">
+          <span class="pf-c-vertical-nav__link-icon"></span>
+          <span class="pf-c-vertical-nav__link-text">Item Five</span>
+        </a>
       </li>
 
     </ul>
