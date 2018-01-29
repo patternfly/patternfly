@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PatternFly Workspace</title>
   <link rel="stylesheet" href="/css/workspace.css">
-  <% if (page.includes('bs-content')) { %>
+  <% if (page && page.includes('bs-content')) { %>
     <link rel="stylesheet" href="/dist/bootstrap.css" />
   <% } else { %>
     <link rel="stylesheet" href="/dist/components/components.css">
