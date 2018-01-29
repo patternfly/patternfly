@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const bulkSass = require('gulp-sass-bulk-import')
 const changed = require('gulp-changed')
 const concat = require('gulp-concat')
 const del = require('del')
@@ -11,7 +12,6 @@ const path = require('path')
 const runSequence = require('run-sequence')
 const workspace = require('./.workspace')
 
-const resourceTypes = ['components', 'layouts', 'patterns']
 const config = {
   docs: {
     dest: 'docs',
@@ -28,23 +28,21 @@ const config = {
       path.resolve(__dirname, './src'),
       path.resolve(__dirname, './node_modules')
     ]
+  },
+  patternfly: {
+    src: './src/**/*.scss',
+    main: './src/patternfly.scss',
+    dest: './dist'
   }
 }
 
-resourceTypes.forEach(resourceType => {
-  config[resourceType] = {
-    src: `./src/${resourceType}/**/*.scss`,
-    dist: `./dist/${resourceType}`,
-    filename: `${resourceType}.css`
-  }
-})
-
 gulp.task('lint-styles', function lintCssTask() {
   return gulp
-    .src('src/**/*.scss')
+    .src(config.patternfly.src)
     .pipe(
       stylelint({
         fix: true,
+        failAfterError: false,
         reporters: [
           {formatter: 'string', console: true}
         ]
@@ -61,25 +59,19 @@ gulp.task('fresh-build', function (callback) {
   runSequence('clean', 'build', callback)
 })
 
-gulp.task('build', function (callback) {
-  runSequence(
-    resourceTypes.map(resourceType => `build:${resourceType}`),
-    'build-patternfly',
-    callback
-  )
-})
+gulp.task('build', ['build-patternfly', 'build-bootstrap', 'build-docs'])
 
-gulp.task('build-docs', function (callback) {
-  return gulp.src('src/**/*.scss')
+gulp.task('build-docs', function () {
+  return gulp.src(config.patternfly.src)
     .pipe(sassdoc(config.docs).on(`error`, sass.logError))
 })
 
-gulp.task('build-patternfly', ['lint-styles'], function (callback) {
-  return gulp.src(
-    resourceTypes.map(resourceType => `./dist/${resourceType}/${resourceType}.css`)
-  )
-  .pipe(concat('patternfly.css'))
-  .pipe(gulp.dest('./dist'))
+gulp.task('build-patternfly', ['lint-styles'], function () {
+  return gulp.src(config.patternfly.main)
+    .pipe(bulkSass())
+    .pipe(sass(config.sass).on(`error`, sass.logError))
+    .pipe(gulp.dest(config.patternfly.dest))
+    .pipe(workspace.stream())
 })
 
 gulp.task(`build-bootstrap`, function () {
@@ -94,46 +86,9 @@ gulp.task('clean', function () {
   return del(['dist'])
 })
 
-gulp.task('serve', ['build', 'build-bootstrap', 'build-docs'], function () {
+gulp.task('serve', ['build-patternfly', 'build-bootstrap', 'build-docs'], function () {
   workspace.startServer()
-  resourceTypes.forEach((resourceType) => {
-    gulp.watch(config[resourceType].src, [`build:${resourceType}`])
-  })
-  gulp.watch('./src/utilities/**/*.scss', ['build', 'build-bootstrap'])
+
+  gulp.watch(config.patternfly.src, ['build'])
   gulp.watch('./src/**/*.html').on('change', workspace.reload)
-  gulp.watch('./.theme/**/*', ['build-docs']).on('change', workspace.reload)
-})
-
-
-/**
- * Resource specific tasks
- */
-resourceTypes.forEach((resourceType) => {
-  gulp.task(`build:${resourceType}`, ['lint-styles'], function (callback) {
-   runSequence(
-     `build:${resourceType}:modules`,
-     `build:${resourceType}:library`,
-     callback
-   )
-  })
-
-  gulp.task(`build:${resourceType}:modules`, function () {
-   return gulp.src(config[resourceType].src)
-     .pipe(changed(config[resourceType].dist))
-     .pipe(inject.prepend(`@import 'base';`))
-     .pipe(inject.prepend(`@import 'utilities/_all';`))
-     .pipe(sass(config.sass).on(`error`, sass.logError))
-     .pipe(gulp.dest(config[resourceType].dist))
-     .pipe(workspace.stream())
-  })
-
-  gulp.task(`build:${resourceType}:library`, function () {
-   return gulp.src(config[resourceType].src)
-     .pipe(inject.prepend(`@import 'base';`))
-     .pipe(inject.prepend(`@import 'utilities/_all';`))
-     .pipe(sass(config.sass).on(`error`, sass.logError))
-     .pipe(concat(config[resourceType].filename))
-     .pipe(gulp.dest(config[resourceType].dist))
-     .pipe(workspace.stream())
-  })
 })

@@ -53,30 +53,30 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
     padding-bottom: $pf-c-secondary-nav__link--PaddingBottom;
     color: $pf-c-secondary-nav__link--Color;
 
-    @include hover-focus-active {
-      color: inherit;
-      text-decoration: inherit;
-      // The background creates a thicker border under the link
-      background-image:
-        linear-gradient(
-          to top,
-          $pf-c-secondary-nav--BorderColor ($pf-c-secondary-nav--BorderWidth *
-          2),
-          transparent ($pf-c-secondary-nav--BorderWidth * 2)
-        );
-    }
+    // @include hover-focus-active {
+    //   color: inherit;
+    //   text-decoration: inherit;
+    //   // The background creates a thicker border under the link
+    //   background-image:
+    //     linear-gradient(
+    //       to top,
+    //       $pf-c-secondary-nav--BorderColor ($pf-c-secondary-nav--BorderWidth *
+    //       2),
+    //       transparent ($pf-c-secondary-nav--BorderWidth * 2)
+    //     );
+    // }
 
     // Active State
     &.pf-is-active {
-      @include hover-focus-active {
-        // The background creates a thicker blue border under the active link
-        background-image:
-          linear-gradient(
-            to top,
-            $pf-c-secondary-nav__link--active--Color ($pf-c-secondary-nav--BorderWidth * 2),
-            transparent ($pf-c-secondary-nav--BorderWidth * 2)
-          );
-      }
+      // @include hover-focus-active {
+      //   // The background creates a thicker blue border under the active link
+      //   background-image:
+      //     linear-gradient(
+      //       to top,
+      //       $pf-c-secondary-nav__link--active--Color ($pf-c-secondary-nav--BorderWidth * 2),
+      //       transparent ($pf-c-secondary-nav--BorderWidth * 2)
+      //     );
+      // }
       color: $pf-c-secondary-nav__link--active--Color;
       // The background creates a thicker blue border under the active link
       background-image:
@@ -90,10 +90,10 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 
     // Disabled State
     &.pf-is-disabled {
-      @include hover-focus-active {
-        // The background removes the border when hover on disabled state
-        background-image: none;
-      }
+      // @include hover-focus-active {
+      //   // The background removes the border when hover on disabled state
+      //   background-image: none;
+      // }
       color: $pf-c-secondary-nav__link--disabled--Color;
       cursor: not-allowed;
     }
