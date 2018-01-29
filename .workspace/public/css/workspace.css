@@ -1,65 +1,69 @@
-*, *:before, *:after {
+*[class*="workspace__"],
+*[class*="workspace__"]::before,
+*[class*="workspace__"]::after,
+.workspace {
   box-sizing: border-box;
-}
-body {
+  padding: 0;
   margin: 0;
+  font-family: Overpass, Arial, sans-serif;
 }
-.pf-workspace {
+
+.workspace {
   display: flex;
   height: 100vh;
   overflow: auto;
   background-color: #fafafa;
 }
-.pf-workspace__navigation {
+.workspace__navigation {
   padding: 2rem;
 }
-.pf-workspace__navigation__items {
+.workspace__navigation__items {
   margin: 0 0 2rem 0;
   padding: 0;
   list-style-type: none;
 }
-.pf-workspace__navigation_heading {
+.workspace__navigation_heading {
   font-weight: 600;
   font-size: .9rem;
   color: #888;
   margin: 0;
   text-transform: uppercase;
 }
-.pf-workspace__navigation__item {
+.workspace__navigation__item {
   padding: 0.25em 0;
 }
-.pf-workspace__navigation_link {
+.workspace__navigation_link {
   white-space: nowrap;
 }
 
-.pf-workspace__demo {
+.workspace__demo {
   flex: 1 1 100%;
   padding: 2rem;
 }
-.pf-workspace__demo__toolbar {
+.workspace__demo__toolbar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-.pf-workspace__demo__toolbar span {
+.workspace__demo__toolbar span {
   margin: 0 0.25em;
 }
-.pf-workspace__demo__toolbar__left {
+.workspace__demo__toolbar__left {
   display: flex;
   align-items: baseline;
 }
-.pf-workspace__demo__toolbar__right {
+.workspace__demo__toolbar__right {
   display: flex;
   align-items: baseline;
 }
-.pf-workspace__demo__example {
+.workspace__demo__example {
   padding-left: 2rem;
   margin-top: 2rem;
   border-left: 5px solid #dadada;
 }
-.pf-workspace__demo__example__title {}
-.pf-workspace__demo__example__description {}
-.pf-workspace__demo__example__content {
+.workspace__demo__example__title {}
+.workspace__demo__example__description {}
+.workspace__demo__example__content {
   padding: 1rem;
   border: 1px solid #dadada;
   background-color: #fff;
@@ -67,22 +71,22 @@ body {
   resize: both;
   position: relative;
 }
-.pf-workspace .demo-box {
+.workspace .demo-box {
   padding: 1rem;
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.25);
   border: 1rem solid rgba(0, 0, 0, 0.5);
 }
-.pf-workspace .demo-box:before {
+.workspace .demo-box:before {
   content: 'Demo Content';
   display: block;
 }
-.pf-workspace .demo-box:nth-child(2) {
+.workspace .demo-box:nth-child(2) {
   padding-bottom: 5rem;
 }
-.pf-workspace .demo-box:nth-child(4) {
+.workspace .demo-box:nth-child(4) {
   padding-bottom: 5rem;
 }
-.pf-workspace .pf-c-layout.pf-is-break-away {
+.workspace .pf-c-layout.pf-is-break-away {
   display: none;
 }

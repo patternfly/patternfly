@@ -120,6 +120,7 @@ resourceTypes.forEach((resourceType) => {
   gulp.task(`build:${resourceType}:modules`, function () {
    return gulp.src(config[resourceType].src)
      .pipe(changed(config[resourceType].dist))
+     .pipe(inject.prepend(`@import 'base';`))
      .pipe(inject.prepend(`@import 'utilities/_all';`))
      .pipe(sass(config.sass).on(`error`, sass.logError))
      .pipe(gulp.dest(config[resourceType].dist))
@@ -128,6 +129,7 @@ resourceTypes.forEach((resourceType) => {
 
   gulp.task(`build:${resourceType}:library`, function () {
    return gulp.src(config[resourceType].src)
+     .pipe(inject.prepend(`@import 'base';`))
      .pipe(inject.prepend(`@import 'utilities/_all';`))
      .pipe(sass(config.sass).on(`error`, sass.logError))
      .pipe(concat(config[resourceType].filename))

@@ -5,62 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PatternFly Workspace</title>
-  <link rel="stylesheet" href="/css/example.css">
   <link rel="stylesheet" href="/css/workspace.css">
-  <link rel="stylesheet" href="/dist/bootstrap.css">
-  <link rel="stylesheet" href="/dist/components/components.css">
-  <link rel="stylesheet" href="/dist/patterns/patterns.css">
+  <% if (page.includes('bs-content')) { %>
+    <link rel="stylesheet" href="/dist/bootstrap.css" />
+  <% } else { %>
+    <link rel="stylesheet" href="/dist/components/components.css">
+    <link rel="stylesheet" href="/dist/patterns/patterns.css">
+  <% } %>
+
 </head>
 <body>
-<div class="pf-workspace">
-  <nav class="pf-workspace__navigation">
-    <h3 class="pf-workspace__navigation_heading">Components</h3>
-    <ul class="pf-workspace__navigation__items">
+<div class="workspace">
+  <nav class="workspace__navigation">
+    <h3 class="workspace__navigation_heading">Components</h3>
+    <ul class="workspace__navigation__items">
       <% workspace.navigation.components.forEach(function (navItem) { %>
-        <li class="pf-workspace__navigation__item">
-          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        <li class="workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>
       <% }) %>
     </ul>
-    <h3 class="pf-workspace__navigation_heading">Patterns</h3>
-    <ul class="pf-workspace__navigation__items">
+    <h3 class="workspace__navigation_heading">Patterns</h3>
+    <ul class="workspace__navigation__items">
       <% workspace.navigation.patterns.forEach(function (navItem) { %>
-        <li class="pf-workspace__navigation__item">
-          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        <li class="workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>
       <% }) %>
     </ul>
-    <h3 class="pf-workspace__navigation_heading">Bootstrap Content</h3>
-    <ul class="pf-workspace__navigation__items">
+    <h3 class="workspace__navigation_heading">Bootstrap Content</h3>
+    <ul class="workspace__navigation__items">
       <% workspace.navigation.bootstrapContent.forEach(function (navItem) { %>
-        <li class="pf-workspace__navigation__item">
-          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        <li class="workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>
       <% }) %>
     </ul>
-    <h3 class="pf-workspace__navigation_heading">Bootstrap Components</h3>
-    <ul class="pf-workspace__navigation__items">
+    <h3 class="workspace__navigation_heading">Bootstrap Components</h3>
+    <ul class="workspace__navigation__items">
       <% workspace.navigation.bootstrapComponents.forEach(function (navItem) { %>
-        <li class="pf-workspace__navigation__item">
-          <a href="<%= navItem.path %>" class="pf-workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
+        <li class="workspace__navigation__item">
+          <a href="<%= navItem.path %>" class="workspace__navigation_link is-<%= navItem.type %>"><%= navItem.name %></a>
         </li>
       <% }) %>
     </ul>
   </nav>
-  <div class="pf-workspace__demo">
+  <div class="workspace__demo">
     <% if (resourceName) { %>
-    <div class="pf-workspace__demo__toolbar">
-      <div class="pf-workspace__demo__toolbar__left">
+    <div class="workspace__demo__toolbar">
+      <div class="workspace__demo__toolbar__left">
         <h2><%= resourceName %></h2>
         <span>
           <a href="<%= documentation %>">documentation</a>
         </span>
       </div>
-      <div class="pf-workspace__demo__toolbar__right"></div>
+      <div class="workspace__demo__toolbar__right"></div>
     </div>
     <% } %>
     <% if (page) { %>
-      <div class="pf-workspace__demo__examples">
+      <div class="workspace__demo__examples">
         <%- include(page, {}) %>
       </div>
     <% } %>
@@ -69,7 +72,7 @@
 <script>
   let templates = document.querySelectorAll('template')
   if (templates.length) {
-    let examples = document.querySelector('.pf-workspace__demo__examples')
+    let examples = document.querySelector('.workspace__demo__examples')
     let examplesContent = document.createDocumentFragment()
     templates.forEach((template) => {
       let exampleEl = document.createElement('div')
@@ -78,10 +81,10 @@
       let templateDescriptionEl = document.createElement('p')
       let templateContentEl = document.createElement('div')
 
-      exampleEl.setAttribute('class', 'pf-workspace__demo__example')
-      templateContentEl.setAttribute('class', 'pf-workspace__demo__example__content')
-      templateTitleEl.setAttribute('class', 'pf-workspace__demo__example_title')
-      templateDescriptionEl.setAttribute('class', 'pf-workspace__demo__example_description')
+      exampleEl.setAttribute('class', 'workspace__demo__example')
+      templateContentEl.setAttribute('class', 'workspace__demo__example__content')
+      templateTitleEl.setAttribute('class', 'workspace__demo__example_title')
+      templateDescriptionEl.setAttribute('class', 'workspace__demo__example_description')
       templateContentEl.appendChild(templateContent)
 
       if (template.dataset.title) {
