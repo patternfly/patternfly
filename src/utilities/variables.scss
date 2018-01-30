@@ -101,7 +101,10 @@ $pf-global-breakpoint-xl: 1200px !default;
 // Links
 //
 
-$pf-global-link-color: $pf-color-blue-400;
+$pf-global-link-color:             $pf-global-primary-color !default;
+$pf-global-link-decoration:        none !default;
+$pf-global-link-hover-color:       darken($pf-global-primary-color, 15%) !default;
+$pf-global-link-hover-decoration:  underline !default;
 
 
 // Components
