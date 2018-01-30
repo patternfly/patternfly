@@ -40,6 +40,7 @@ $pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default
     margin-top: $pf-c-vertical-nav__link--MarginTop;
     margin-bottom: $pf-c-vertical-nav__link--MarginBottom;
     color: $pf-c-vertical-nav__link--Color;
+    text-decoration: none;
 
     &:hover {
       color: $pf-c-vertical-nav__link--hover--Color;

@@ -7,5 +7,8 @@
   font-family: $pf-global-font-family-sans-serif;
   font-size: $pf-global-body-font-size;
   font-weight: $pf-global-font-weight-normal;
+  line-height: $pf-global-line-height-base;
+  color: $pf-global-component-color;
+  background-color: transparent;
   text-rendering: optimizeLegibility;
 }

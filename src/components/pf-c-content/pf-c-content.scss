@@ -1,0 +1,190 @@
+// PF content is based on Bulma's content element.
+
+/// A description of pf-c-content
+/// @group components
+/// @moduleType component
+/// @modifier .is-modifier - An example modifier description
+/// @modifier .is-another-modifier - Another example modifier description
+/// @template src/components/pf-c-content/pf-c-content.html
+
+
+.pf-c-content {
+  a {
+    color: $pf-global-link-color;
+    text-decoration: $pf-global-link-decoration;
+
+    &:hover {
+      color: $pf-global-link-hover-color;
+      text-decoration: $pf-global-link-hover-decoration;
+    }
+  }
+
+  li + li {
+    margin-top: $pf-global-spacer-xxs;
+  }
+
+  p,
+  dl,
+  ol,
+  ul,
+  blockquote,
+  pre,
+  table {
+    &:not(:last-child){
+      margin-bottom: $pf-global-spacer-md;
+    }
+  }
+
+  dl,
+  ol,
+  ul {
+    padding-left: $pf-global-spacer-md;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: $pf-global-font-weight-normal;
+    line-height: $pf-global-line-height-base;
+  }
+
+  h1 {
+    margin-bottom: $pf-global-spacer-xs;
+    font-size: $pf-global-hero-title-font-size;
+    &:not(:first-child) {
+      margin-top: $pf-global-spacer-lg;
+    }
+  }
+
+  h2 {
+    margin-bottom: $pf-global-spacer-xs;
+    font-size: $pf-global-main-title-font-size;
+    &:not(:first-child) {
+      margin-top: $pf-global-spacer-xl;
+    }
+  }
+
+  h3 {
+    margin-bottom: $pf-global-spacer-xs;
+    font-size: $pf-global-secondary-title-font-size;
+    &:not(:first-child) {
+      margin-top: $pf-global-spacer-lg;
+    }
+  }
+
+  h4 {
+    margin-bottom: $pf-global-spacer-md;
+    font-size: $pf-global-sub-title-font-size;
+  }
+
+  h5 {
+    margin-bottom: $pf-global-spacer-md;
+    font-size: $pf-global-body-font-size;
+  }
+
+  h6 {
+    margin-bottom: $pf-global-spacer-md;
+    font-size: $pf-global-caption-font-size;
+  }
+
+  blockquote {
+    padding: $pf-global-spacer-md;
+    border-left: 5px solid $pf-global-component-off-color;
+  }
+
+  ol {
+    margin-top: $pf-global-spacer-md;
+    margin-left: $pf-global-spacer-md;
+  }
+
+  ul {
+    margin: 0;
+    margin-top: $pf-global-spacer-md;
+    margin-left: $pf-global-spacer-sm;
+    ul {
+      margin-top: $pf-global-spacer-xs;
+    }
+  }
+
+  dd {
+    margin-left: $pf-global-spacer-xl;
+  }
+
+  // figure {
+  //   margin-right: 2em;
+  //   margin-left: 2em;
+  //   text-align: center;
+  //   &:not(:first-child){
+  //     margin-top: 2em;
+  //   }
+  //   &:not(:last-child) {
+  //     margin-bottom: 2em;
+  //   }
+  //   img {
+  //     display: inline-block;
+  //   }
+  //   figcaption{
+  //     font-style: italic;
+  //   }
+  // }
+
+  // pre {
+  //   padding: $pf-c-content--pre--Padding;
+  //   overflow-x: auto;
+  //   word-wrap: normal;
+  //   white-space: pre;
+  // }
+  //
+  // sup,
+  // sub {
+  //   font-size: 75%;
+  // }
+
+  // table {
+  //   width: 100%;
+  //   td,
+  //   th {
+  //     padding: $pf-c-content-table-cell-padding;
+  //     vertical-align: top;
+  //     border: $content-table-cell-border;
+  //     border-width: $content-table-cell-border-width;
+  //   }
+  //   th {
+  //     color: $content-table-cell-heading-color;
+  //     text-align: left;
+  //   }
+  //   tr {
+  //     &:hover {
+  //       background-color: $content-table-row-hover-background-color;
+  //     }
+  //   }
+  //   thead {
+  //     td,
+  //     th {
+  //       color: $content-table-head-cell-color;
+  //       border-width: $content-table-head-cell-border-width;
+  //     }
+  //   }
+  //   tfoot {
+  //     td,
+  //     th {
+  //       color: $content-table-foot-cell-color;
+  //       border-width: $content-table-foot-cell-border-width;
+  //     }
+  //   }
+  //   tbody {
+  //     tr {
+  //       &:last-child {
+  //         td,
+  //         th {
+  //           border-bottom-width: 0;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
