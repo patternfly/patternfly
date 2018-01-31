@@ -3,20 +3,6 @@
 // --------------------------------------------------
 
 // Transform px to rems
-
-/*
-prem
-// __$pxval:__ pixel value to return as em/
-// __$base:__ defaults to 18px, but optional context can be passed in
-
-```inline
-.class-name {
-    font-size: pem(36); // Returns 2em (or 36px)
-    padding: pem(18, 36) // pass in current font-size context to return 18px/1em padding
-}
-```
-*/
-
 @function pf-strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -27,4 +13,20 @@ prem
 
 @function pf-font-prem($pxval, $base: $pf-global-font-size-root) {
   @return pf-strip-unit($pxval) / $base * 1rem;
+}
+
+
+// Color contrast
+@function pf-color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $pf-global-yiq-contrasted-threshold) {
+    @return $pf-global-yiq-text-dark;
+  } @else {
+    @return $pf-global-yiq-text-light;
+  }
 }

@@ -116,8 +116,10 @@
   background-color: $background;
   border-color: $border;
 
-  &:hover {
-    color: color-yiq($hover-background);
+  &:hover,
+  &:focus,
+  &.pf-is-focus {
+    color: pf-color-yiq($hover-background);
     background-color: $hover-background;
     border-color: $hover-border;
   }
@@ -131,7 +133,7 @@
   // Disabled comes first so active can properly restyle
   &.pf-is-disabled,
   &:disabled {
-    color: color-yiq($background);
+    color: pf-color-yiq($background);
     background-color: $background;
     border-color: $border;
     opacity: .5;

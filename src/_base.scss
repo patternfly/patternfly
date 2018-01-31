@@ -1,6 +1,8 @@
 [class^="pf-"],
 [class^="pf-"]::before,
 [class^="pf-"]::after {
+  // warning: `all: unset` this will shield the components but it'll also prevent reboot to premiate.
+  // all: unset;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -11,4 +13,11 @@
   color: $pf-global-component-color;
   background-color: transparent;
   text-rendering: optimizeLegibility;
+}
+
+// Since PF3 sets root font size to 10px, we need to unset it.
+// This doesn't affect PF3.
+// https://github.com/twbs/bootstrap/blob/v3.4.0-dev/less/scaffolding.less#L23
+html {
+  font-size: unset;
 }

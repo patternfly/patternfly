@@ -34,6 +34,12 @@ $theme-colors: map-merge((
 ), $theme-colors);
 // stylelint-enable
 
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$pf-global-yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$pf-global-yiq-text-dark: $pf-color-black-900 !default;
+$pf-global-yiq-text-light: $pf-color-white !default;
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
@@ -66,7 +72,8 @@ $pf-global-font-path: "/assets/fonts" !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$pf-global-enable-font-overpass-cdn:         false !default;
+$pf-global-enable-font-overpass-cdn:     false !default;
+$pf-global-load-pf-3:                    true !default;
 
 
 // Spacers
@@ -177,3 +184,10 @@ $pf-global-line-height-lg:           1.8 !default;
 // ============== global variables ==================
 
 // patternfly components    |     Boostrap components
+
+
+@if $pf-global-load-pf-3 {
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
+
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
+}
