@@ -1,8 +1,7 @@
 [class^="pf-"],
 [class^="pf-"]::before,
 [class^="pf-"]::after {
-  // warning: `all: unset` this will shield the components but it'll also prevent reboot to premiate.
-  // all: unset;
+  // all: unset; // warning: `all: unset` this will shield the components but it'll also prevent reboot to premiate.
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -10,7 +9,7 @@
   font-size: $pf-global-body-font-size;
   font-weight: $pf-global-font-weight-normal;
   line-height: $pf-global-line-height-base;
-  color: $pf-global-component-color;
+  // color: $pf-global-component-color; // Since we know that the base is PF3 and PF3 has the same color, we can leave this unset.
   background-color: transparent;
   text-rendering: optimizeLegibility;
 }
