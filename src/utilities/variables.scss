@@ -34,6 +34,9 @@ $theme-colors: map-merge((
 ), $theme-colors);
 // stylelint-enable
 
+// Set a specific jump point for requesting color jumps
+$pf-global-theme-color-interval:      8% !default;
+
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $pf-global-yiq-contrasted-threshold: 150 !default;
 

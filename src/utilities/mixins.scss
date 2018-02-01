@@ -139,3 +139,13 @@
     opacity: .5;
   }
 }
+
+@mixin pf-alert-variant($background, $border, $color) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  .pf-c-alert__link {
+    color: darken($color, 10%);
+  }
+}
