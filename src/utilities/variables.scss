@@ -76,7 +76,7 @@ $pf-global-font-path: "/assets/fonts" !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $pf-global-enable-font-overpass-cdn:     false !default;
-$pf-global-load-pf-3:                    true !default;
+$pf-global-load-pf-3:                    false !default;
 
 
 // Spacers
@@ -186,7 +186,7 @@ $pf-global-line-height-lg:           1.8 !default;
 
 // ============== global variables ==================
 
-// patternfly components    |     Boostrap components
+// patternfly components    |     Boostrap skin
 
 
 @if $pf-global-load-pf-3 {

@@ -1,11 +1,11 @@
-*[class*="workspace__"],
-*[class*="workspace__"]::before,
-*[class*="workspace__"]::after,
+[class^="workspace__"],
+[class^="workspace__"]::before,
+[class^="workspace__"]::after,
 .workspace {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /*font-family: Overpass, Arial, sans-serif;*/
+  font-family: sans-serif;
 }
 
 .workspace {
