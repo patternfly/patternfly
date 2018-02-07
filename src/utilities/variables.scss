@@ -4,7 +4,34 @@
 
 
 // `$pf-global-concept-state-size-propierty`
+// Patternfly uses the default root size of the browser, it assumes a 16px base
+// since most browser root size is 16. This variables is just to make the
+// transformation from px to rem.
+$pf-global-font-size-root:  16 !default; //for fonts
+$pf-global-space-size-root: 16 !default; // for spaces
 
+
+:root {
+  --pf-global-primary-color: $pf-color-blue-300;
+  --pf-global-primary-dark-color: $pf-color-blue-400;
+  --pf-global-danger-color: $pf-color-red-100;
+  --pf-global-danger-dark-color: $pf-color-red-200;
+
+  // text color
+  --pf-global-component-color: $pf-color-black-900;
+  --pf-global-component-off-color: $pf-color-black-400;
+  --pf-global-component-inverse-color: $pf-color-white;
+  --pf-global-component-inverse-off-color: $pf-color-black-200;
+
+  // Font size
+  --pf-global-font-size-root: 16;
+  --pf-global-hero-title-font-size: calc(#{16rem / var(----pf-global-font-size-root)});
+  --pf-global-main-title-font-size: calc(#{32rem / var(----pf-global-font-size-root)});
+  --pf-global-secondary-title-font-size: calc(#{24rem / var(----pf-global-font-size-root)});
+  --pf-global-sub-title-font-size: calc(#{19rem / var(----pf-global-font-size-root)});
+  --pf-global-body-font-size: calc(#{16rem / var(----pf-global-font-size-root)});
+  --pf-global-caption-font-size: calc(#{14rem / var(----pf-global-font-size-root)});
+}
 
 //
 // Color system
@@ -12,7 +39,7 @@
 
 // stylelint-disable
 
-$pf-global-primary-color:       $pf-color-blue-400 !default;
+$pf-global-primary-color:       $pf-color-blue-300 !default;
 $pf-global-secondary-color:     $pf-color-black-600 !default;
 $pf-global-success-color:       $pf-color-green-400 !default;
 $pf-global-info-color:          $pf-color-cyan-400 !default;
@@ -35,17 +62,6 @@ $theme-colors: map-merge((
 // stylelint-enable
 
 
-:root {
-  --pf-global-primary-color: $pf-color-blue-400;
-  --pf-global-secondary-color: $pf-color-black-600;
-  --pf-global-success-color: $pf-color-green-400;
-  --pf-global-info-color: $pf-color-cyan-400;
-  --pf-global-warning-color: $pf-color-gold-400;
-  --pf-global-danger-color: $pf-color-red-100;
-  --pf-global-light-color: $pf-color-black-100;
-  --pf-global-dark-color: $pf-color-black-800;
-}
-
 // Set a specific jump point for requesting color jumps
 $pf-global-theme-color-interval:      8% !default;
 
@@ -55,12 +71,6 @@ $pf-global-yiq-contrasted-threshold: 150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $pf-global-yiq-text-dark: $pf-color-black-900 !default;
 $pf-global-yiq-text-light: $pf-color-white !default;
-
-// Patternfly uses the default root size of the browser, it assumes a 16px base
-// since most browser root size is 16. This variables is just to make the
-// transformation from px to rem.
-$pf-global-font-size-root:  16 !default; //for fonts
-$pf-global-space-size-root: 16 !default; // for spaces
 
 
 // PatternFly box shadows
@@ -153,6 +163,7 @@ $pf-global-component-inverse-alt-background-color:    $pf-color-black-800 !defau
 
 $pf-global-component-inverse-border-color:        $pf-color-black-400 !default;
 
+
 // States
 
 $pf-global-hover-color:                   $pf-color-red-100 !default;
@@ -206,6 +217,7 @@ $pf-global-line-height-lg:           1.8 !default;
 
 
 @if $pf-global-load-pf-3 {
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
 }
