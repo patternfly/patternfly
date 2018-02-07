@@ -34,6 +34,18 @@ $theme-colors: map-merge((
 ), $theme-colors);
 // stylelint-enable
 
+
+:root {
+  --pf-global-primary-color: $pf-color-blue-400;
+  --pf-global-secondary-color: $pf-color-black-600;
+  --pf-global-success-color: $pf-color-green-400;
+  --pf-global-info-color: $pf-color-cyan-400;
+  --pf-global-warning-color: $pf-color-gold-400;
+  --pf-global-danger-color: $pf-color-red-100;
+  --pf-global-light-color: $pf-color-black-100;
+  --pf-global-dark-color: $pf-color-black-800;
+}
+
 // Set a specific jump point for requesting color jumps
 $pf-global-theme-color-interval:      8% !default;
 
@@ -50,6 +62,10 @@ $pf-global-yiq-text-light: $pf-color-white !default;
 $pf-global-font-size-root:  16 !default; //for fonts
 $pf-global-space-size-root: 16 !default; // for spaces
 
+
+// PatternFly box shadows
+
+$pf-global-background-color: $pf-color-black-100 !default;
 
 // PatternFly box shadows
 //
@@ -77,7 +93,7 @@ $pf-global-font-path: "/assets/fonts" !default;
 
 $pf-global-enable-font-overpass-cdn:     false !default;
 $pf-global-load-pf-3:                    false !default;
-
+$pf-global-reset:                        true !default;
 
 // Spacers
 //

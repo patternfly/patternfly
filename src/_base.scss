@@ -1,3 +1,4 @@
+// CSS shild against PF 3
 [class^="pf-"],
 [class^="pf-"]::before,
 [class^="pf-"]::after {
@@ -8,7 +9,6 @@
   font-size: $pf-global-body-font-size;
   font-weight: $pf-global-font-weight-normal;
   line-height: $pf-global-line-height-base;
-  // color: $pf-global-component-color; // Since we know that the base is PF3 and PF3 has the same color, we can leave this unset.
   background-color: transparent;
   text-rendering: optimizeLegibility;
 }
@@ -19,3 +19,119 @@
 html {
   font-size: unset;
 }
+
+@if $pf-global-reset {
+  // Reset
+  // Based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
+  // stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
+
+  html,
+  body,
+  p,
+  ol,
+  ul,
+  li,
+  dl,
+  dt,
+  dd,
+  blockquote,
+  figure,
+  fieldset,
+  legend,
+  textarea,
+  pre,
+  iframe,
+  hr,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: $pf-global-font-weight-normal;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+  }
+
+  img,
+  embed,
+  iframe,
+  object,
+  audio,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    border: 0;
+  }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    padding: 0;
+    text-align: left;
+  }
+
+  // Patternfly base styles
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: sans-serif;
+    line-height: 1.15;
+  }
+
+
+  body {
+    font-family: $pf-global-font-family-sans-serif;
+    font-size: $pf-global-font-size-base;
+    font-weight: $pf-global-font-weight-normal;
+    line-height: $pf-global-line-height-base;
+    color: $pf-global-component-color;
+    text-align: left;
+    background-color: $pf-global-background-color;
+  }
+
+  // Links styles
+
+  a {
+    color: $pf-global-link-color;
+    text-decoration: $pf-global-link-decoration;
+
+    &:hover {
+      color: $pf-global-link-hover-color;
+      text-decoration: $pf-global-link-hover-decoration;
+    }
+  }
+
+} // ends if
