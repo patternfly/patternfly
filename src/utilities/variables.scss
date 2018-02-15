@@ -4,34 +4,13 @@
 
 
 // `$pf-global-concept-state-size-propierty`
+
+
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
 // transformation from px to rem.
 $pf-global-font-size-root:  16 !default; //for fonts
 $pf-global-space-size-root: 16 !default; // for spaces
-
-
-:root {
-  --pf-global-primary-color: $pf-color-blue-300;
-  --pf-global-primary-dark-color: $pf-color-blue-400;
-  --pf-global-danger-color: $pf-color-red-100;
-  --pf-global-danger-dark-color: $pf-color-red-200;
-
-  // text color
-  --pf-global-component-color: $pf-color-black-900;
-  --pf-global-component-off-color: $pf-color-black-400;
-  --pf-global-component-inverse-color: $pf-color-white;
-  --pf-global-component-inverse-off-color: $pf-color-black-200;
-
-  // Font size
-  --pf-global-font-size-root: 16;
-  --pf-global-hero-title-font-size: calc(#{16rem / var(----pf-global-font-size-root)});
-  --pf-global-main-title-font-size: calc(#{32rem / var(----pf-global-font-size-root)});
-  --pf-global-secondary-title-font-size: calc(#{24rem / var(----pf-global-font-size-root)});
-  --pf-global-sub-title-font-size: calc(#{19rem / var(----pf-global-font-size-root)});
-  --pf-global-body-font-size: calc(#{16rem / var(----pf-global-font-size-root)});
-  --pf-global-caption-font-size: calc(#{14rem / var(----pf-global-font-size-root)});
-}
 
 //
 // Color system
@@ -153,7 +132,7 @@ $pf-global-component-background-color:    $pf-color-white !default;
 $pf-global-component-alt-background-color:    $pf-color-black-200 !default;
 
 $pf-global-component-border-color:        $pf-color-black-400 !default;
-$pf-global-component-border-width:        1px !default;
+$pf-global-border-width:        1px !default;
 
 $pf-global-component-inverse-color:               $pf-color-white !default;
 $pf-global-component-inverse-off-color:         $pf-color-black-200 !default;
@@ -211,7 +190,7 @@ $pf-global-line-height-lg:           1.8 !default;
 // overlay
 // animations
 
-// ============== global variables ==================
+// ============ global variables ================
 
 // patternfly components    |     Boostrap skin
 
@@ -221,3 +200,52 @@ $pf-global-line-height-lg:           1.8 !default;
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
 }
+
+// stylelint-disable
+:root {
+  // Borders
+  --pf-global-border-width: $pf-global-border-width;
+
+  // spacers
+  --pf-global-spacer-xxxs:   $pf-global-spacer-xxxs;
+  --pf-global-spacer-xxs:    $pf-global-spacer-xxs;
+  --pf-global-spacer-xs:     $pf-global-spacer-xs;
+  --pf-global-spacer-sm:     $pf-global-spacer-sm;
+  --pf-global-spacer-md:     $pf-global-spacer-md;
+  --pf-global-spacer-lg:     $pf-global-spacer-lg;
+  --pf-global-spacer-xl:     $pf-global-spacer-xl;
+  --pf-global-spacer-xxl:    $pf-global-spacer-xxl;
+  --pf-global-spacer-xxxl:   $pf-global-spacer-xxxl;
+
+  // theme colors
+  --pf-global-primary-color:       $pf-color-blue-300;
+  --pf-global-primary-dark-color:  $pf-color-blue-400;
+  --pf-global-danger-color:        $pf-color-red-100;
+  --pf-global-danger-dark-color:   $pf-color-red-200;
+
+  // text color
+  --pf-global-component-color: $pf-color-black-900;
+  --pf-global-component-off-color: $pf-color-black-400;
+  --pf-global-component-inverse-color: $pf-color-white;
+  --pf-global-component-inverse-off-color: $pf-color-black-200;
+
+  // Font size
+  --pf-global-hero-title-font-size: $pf-global-hero-title-font-size;
+  --pf-global-main-title-font-size: $pf-global-main-title-font-size;
+  --pf-global-secondary-title-font-size: $pf-global-secondary-title-font-size;
+  --pf-global-sub-title-font-size: $pf-global-sub-title-font-size;
+  --pf-global-body-font-size: $pf-global-body-font-size;
+  --pf-global-caption-font-size: $pf-global-caption-font-size;
+
+  // line height
+  --pf-global-line-height-sm:    $pf-global-line-height-sm;
+  --pf-global-line-height-base:  $pf-global-line-height-sm;
+  --pf-global-line-height-lg:    $pf-global-line-height-sm;
+
+  // Font weight
+  --pf-global-font-weight-light:     $pf-global-font-weight-light;
+  --pf-global-font-weight-normal:    $pf-global-font-weight-normal;
+  --pf-global-font-weight-semi-bold: $pf-global-font-weight-semi-bold;
+  --pf-global-font-weight-bold:      $pf-global-font-weight-bold;
+}
+// stylelint-enable
