@@ -1,0 +1,14 @@
+.Section {
+  &:not(:last-child) {
+    margin-bottom: .5rem;
+  }
+  &_heading {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+  }
+  &_description {
+    margin-bottom: .5em;
+    font-size: 1rem;
+  }
+  &_body {}
+}

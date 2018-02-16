@@ -1,0 +1,24 @@
+.Navigation {
+  &.is-horizontal > &__items {
+    display: flex;
+  }
+  &__items {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  &__item {
+    text-transform: capitalize;
+  }
+  &__item.is-category {}
+  &__item.is-category:not(:first-child) {
+    margin-top: .5rem;
+  }
+  &_link {
+    display: block;
+    padding: .5rem;
+  }
+  &_link.is-category {
+    font-weight: 600;
+  }
+}

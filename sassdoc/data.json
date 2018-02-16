@@ -1,0 +1,429 @@
+[
+  {
+    "description": "Resets list.\n",
+    "commentRange": {
+      "start": 1,
+      "end": 3
+    },
+    "context": {
+      "type": "mixin",
+      "name": "list-reset",
+      "code": "\n  padding-left: 0;\n  list-style: none;\n",
+      "line": {
+        "start": 4,
+        "end": 7
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Base for all of the layout mixins.\n",
+    "commentRange": {
+      "start": 9,
+      "end": 11
+    },
+    "context": {
+      "type": "mixin",
+      "name": "Layout",
+      "code": "\n  box-sizing: border-box;\n  display: grid;\n  // padding: 0;\n  margin: 0;\n\n  > *,\n  > *::before,\n  > *::after {\n    box-sizing: border-box;\n    // padding: 0;\n    margin: 0;\n  }\n",
+      "line": {
+        "start": 12,
+        "end": 25
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    },
+    "usedBy": [
+      {
+        "description": "Positions the children out of the flow of it's current context.\n",
+        "context": {
+          "type": "mixin",
+          "name": "BreakAwayLayout",
+          "code": "\n  @include Layout;\n  position: fixed;\n  top: 0;\n  left: 0;\n",
+          "line": {
+            "start": 30,
+            "end": 35
+          }
+        }
+      },
+      {
+        "description": "Centers a single child horizontally and vertically.\n",
+        "context": {
+          "type": "mixin",
+          "name": "BullseyeLayout",
+          "code": "\n  @include Layout;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  & > *:not(:first-child) {\n    display: none;\n  }\n",
+          "line": {
+            "start": 40,
+            "end": 48
+          }
+        }
+      },
+      {
+        "description": "Positions the children horizontally, and controls the width of the children.\n",
+        "context": {
+          "type": "mixin",
+          "name": "ContainerLayout",
+          "code": "\n  @include Layout;\n  grid-template: auto / 100%;\n  justify-items: center;\n\n  & > * {\n    max-width: $maximum-width;\n  }\n",
+          "line": {
+            "start": 54,
+            "end": 62
+          }
+        }
+      },
+      {
+        "description": "Positions children on the same axis, and centers those children on the axis.\n",
+        "context": {
+          "type": "mixin",
+          "name": "LevelLayout",
+          "code": "\n  @include Layout;\n  grid-template: 1fr / auto;\n  grid-auto-flow: column;\n  grid-auto-columns: auto;\n  align-items: center;\n",
+          "line": {
+            "start": 67,
+            "end": 73
+          }
+        }
+      },
+      {
+        "description": "Layers the children over one another.\n",
+        "context": {
+          "type": "mixin",
+          "name": "PileLayout",
+          "code": "\n  @include Layout;\n",
+          "line": {
+            "start": 78,
+            "end": 80
+          }
+        }
+      },
+      {
+        "description": "Positions the children on the same axis.\n",
+        "context": {
+          "type": "mixin",
+          "name": "SplitLayout",
+          "code": "\n  @include Layout;\n  grid-template: 1fr / auto;\n  grid-auto-flow: column;\n  grid-auto-columns: auto;\n",
+          "line": {
+            "start": 85,
+            "end": 90
+          }
+        }
+      },
+      {
+        "description": "Positions children one after the other vertically.\n",
+        "context": {
+          "type": "mixin",
+          "name": "StackLayout",
+          "code": "\n  @include Layout;\n",
+          "line": {
+            "start": 95,
+            "end": 97
+          }
+        }
+      },
+      {
+        "description": "Positions children on the same row, but allows them to be place on the next row if space doesn't permit. The children have controlled dimensions.\n",
+        "context": {
+          "type": "mixin",
+          "name": "TileBoardLayout",
+          "code": "\n  @include Layout;\n  grid-template-columns: repeat($columns, 1fr);\n",
+          "line": {
+            "start": 103,
+            "end": 106
+          }
+        }
+      }
+    ]
+  },
+  {
+    "description": "Positions the children out of the flow of it's current context.\n",
+    "commentRange": {
+      "start": 27,
+      "end": 29
+    },
+    "context": {
+      "type": "mixin",
+      "name": "BreakAwayLayout",
+      "code": "\n  @include Layout;\n  position: fixed;\n  top: 0;\n  left: 0;\n",
+      "line": {
+        "start": 30,
+        "end": 35
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Centers a single child horizontally and vertically.\n",
+    "commentRange": {
+      "start": 37,
+      "end": 39
+    },
+    "context": {
+      "type": "mixin",
+      "name": "BullseyeLayout",
+      "code": "\n  @include Layout;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  & > *:not(:first-child) {\n    display: none;\n  }\n",
+      "line": {
+        "start": 40,
+        "end": 48
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Positions the children horizontally, and controls the width of the children.\n",
+    "commentRange": {
+      "start": 50,
+      "end": 53
+    },
+    "context": {
+      "type": "mixin",
+      "name": "ContainerLayout",
+      "code": "\n  @include Layout;\n  grid-template: auto / 100%;\n  justify-items: center;\n\n  & > * {\n    max-width: $maximum-width;\n  }\n",
+      "line": {
+        "start": 54,
+        "end": 62
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "parameter": [
+      {
+        "type": "Length",
+        "name": "maximum-width",
+        "default": "1280px",
+        "description": "the maximum width of the container"
+      }
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Positions children on the same axis, and centers those children on the axis.\n",
+    "commentRange": {
+      "start": 64,
+      "end": 66
+    },
+    "context": {
+      "type": "mixin",
+      "name": "LevelLayout",
+      "code": "\n  @include Layout;\n  grid-template: 1fr / auto;\n  grid-auto-flow: column;\n  grid-auto-columns: auto;\n  align-items: center;\n",
+      "line": {
+        "start": 67,
+        "end": 73
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Layers the children over one another.\n",
+    "commentRange": {
+      "start": 75,
+      "end": 77
+    },
+    "context": {
+      "type": "mixin",
+      "name": "PileLayout",
+      "code": "\n  @include Layout;\n",
+      "line": {
+        "start": 78,
+        "end": 80
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Positions the children on the same axis.\n",
+    "commentRange": {
+      "start": 82,
+      "end": 84
+    },
+    "context": {
+      "type": "mixin",
+      "name": "SplitLayout",
+      "code": "\n  @include Layout;\n  grid-template: 1fr / auto;\n  grid-auto-flow: column;\n  grid-auto-columns: auto;\n",
+      "line": {
+        "start": 85,
+        "end": 90
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Positions children one after the other vertically.\n",
+    "commentRange": {
+      "start": 92,
+      "end": 94
+    },
+    "context": {
+      "type": "mixin",
+      "name": "StackLayout",
+      "code": "\n  @include Layout;\n",
+      "line": {
+        "start": 95,
+        "end": 97
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Positions children on the same row, but allows them to be place on the next row if space doesn't permit. The children have controlled dimensions.\n",
+    "commentRange": {
+      "start": 99,
+      "end": 102
+    },
+    "context": {
+      "type": "mixin",
+      "name": "TileBoardLayout",
+      "code": "\n  @include Layout;\n  grid-template-columns: repeat($columns, 1fr);\n",
+      "line": {
+        "start": 103,
+        "end": 106
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "parameter": [
+      {
+        "type": "Number",
+        "name": "columns",
+        "default": "5",
+        "description": "the number of columns in the tile-board (default - 5)"
+      }
+    ],
+    "access": "public",
+    "require": [
+      {
+        "type": "mixin",
+        "name": "Layout"
+      }
+    ],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  },
+  {
+    "description": "Button variants\n",
+    "commentRange": {
+      "start": 109,
+      "end": 111
+    },
+    "context": {
+      "type": "mixin",
+      "name": "pf-button-variant",
+      "code": "\n  color: $color;\n  background-color: $background;\n  border-color: $border;\n\n  &:hover,\n  &:focus,\n  &.pf-is-focus {\n    color: pf-color-yiq($hover-background);\n    background-color: $hover-background;\n    border-color: $hover-border;\n  }\n\n  &:focus,\n  &.pf-is-focus {\n    outline: 0;\n    box-shadow: 0 0 0 .2rem rgba($border, .5);\n  }\n\n  // Disabled comes first so active can properly restyle\n  &.pf-is-disabled,\n  &:disabled {\n    color: pf-color-yiq($background);\n    background-color: $background;\n    border-color: $border;\n    opacity: .5;\n  }\n",
+      "line": {
+        "start": 113,
+        "end": 141
+      }
+    },
+    "group": [
+      "mixins"
+    ],
+    "access": "public",
+    "require": [],
+    "file": {
+      "path": "mixins.scss",
+      "name": "mixins.scss"
+    }
+  }
+]

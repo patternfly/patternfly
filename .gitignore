@@ -1,12 +1,16 @@
 dist/
 node_modules/
-sassdoc/
 docs/
 test/scenario_tests/
 test/results/
 .sass-cache/
+.cache/
+public/
+static/admin/*.bundle.*
+local/
 
 .DS_Store
 .codetoolsrc.js
 .blueprints
 npm-debug.log
+yarn-error.log

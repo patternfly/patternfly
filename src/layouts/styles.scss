@@ -1,0 +1,102 @@
+/* stylelint-disable */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  &__main {
+    display: flex;
+    flex: 1;
+  }
+  &__sidebar {
+    flex: 0 1 auto;
+    min-width: 12rem;
+    padding: 1rem;
+    border-right: 1px solid #f1f1f1;
+  }
+  &__content {
+    flex: 1;
+    padding: 1rem;
+  }
+  &__footer {
+    padding: 1rem;
+  }
+}
+
+.example {
+  margin: 1rem 0;
+}
+
+.category-template {
+  &_heading {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  &__result {
+    padding: 1rem 0;
+  }
+  &__result:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+  }
+  &__result_heading { margin-bottom: .5rem; }
+  &__result_description { margin-bottom: .5rem; }
+  &__result_read-more {}
+}
+
+.documentation-template {
+  // display: flex;
+  &_heading {
+    margin-bottom: .5em;
+    font-size: 1.5rem;
+  }
+  &_description { margin-bottom: .5rem; }
+  &__header {}
+  &__body { padding: 1rem 0; }
+  &__example {}
+  &__example + &__example { margin-top: .5rem; }
+  &__example__header {}
+  &__example__body {
+    padding: 1rem;
+    border: 1px solid #f1f1f1;
+    background-color: #ffffff;
+  }
+}
+
+.gatsby-highlight {
+  padding: 1em;
+  margin: .5rem 0;
+  overflow: auto;
+  background-color: transparent;
+  border-radius: .3em;
+}
+
+.gatsby-highlight pre[class^="language-"] {
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  background-color: transparent;
+
+  border-left: 0;
+  // box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+  box-shadow: none;
+  &::before,
+  &::after {
+    display: none;
+  }
+  code {
+    background-color: transparent;
+    // border-left: 10px solid #358ccb;
+    // -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+    // box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+    border-left: 0;
+    box-shadow: none;
+  }
+}
+/* stylelint-enable */
