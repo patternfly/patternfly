@@ -122,26 +122,31 @@ $pf-global-link-hover-color:       darken($pf-global-primary-color, 15%) !defaul
 $pf-global-link-hover-decoration:  underline !default;
 
 
-// Components
+// Borders
 //
 
-$pf-global-component-color:               $pf-color-black-900 !default;
-$pf-global-component-off-color:         $pf-color-black-400 !default;
+$pf-global-border-width:        1px !default;
+$pf-global-dark-border-color:   $pf-color-black-400 !default;
+$pf-global-light-border-color:  $pf-color-black-400 !default;
 
-$pf-global-component-background-color:    $pf-color-white !default;
-$pf-global-component-alt-background-color:    $pf-color-black-200 !default;
+// Background
+//
 
-$pf-global-component-border-color:        $pf-color-black-400 !default;
-$pf-global-border-width:                  1px !default;
+$pf-global-light-background-color:      $pf-color-white !default;
+$pf-global-light-off-background-color:  $pf-color-black-200 !default;
 
-$pf-global-component-inverse-color:               $pf-color-white !default;
-$pf-global-component-inverse-off-color:         $pf-color-black-200 !default;
+$pf-global-dark-background-color:       $pf-color-black-900 !default;
+$pf-global-dark-off-background-color:   $pf-color-black-800 !default;
 
-$pf-global-component-inverse-background-color:    $pf-color-black-900 !default;
-$pf-global-component-inverse-alt-background-color:    $pf-color-black-800 !default;
 
-$pf-global-component-inverse-border-color:        $pf-color-black-400 !default;
+// Copy color
+//
 
+$pf-global-dark-color:               $pf-color-black-900 !default;
+$pf-global-dark-off-color:         $pf-color-black-400 !default;
+
+$pf-global-light-color:               $pf-color-white !default;
+$pf-global-light-off-color:         $pf-color-black-200 !default;
 
 // States
 
@@ -224,10 +229,11 @@ $pf-global-line-height-lg:           1.8 !default;
   --pf-global-danger-dark-color:   $pf-color-red-200;
 
   // text color
-  --pf-global-component-color: $pf-color-black-900;
-  --pf-global-component-off-color: $pf-color-black-400;
-  --pf-global-component-inverse-color: $pf-color-white;
-  --pf-global-component-inverse-off-color: $pf-color-black-200;
+  --pf-global-dark-color:             $pf-global-dark-color;
+  --pf-global-dark-off-color:         $pf-global-dark-off-color;
+  --pf-global-light-color:        $pf-global-light-color;
+  --pf-global-light-off-color:    $pf-global-light-off-color;
+
 
   // Font size
   --pf-global-hero-title-font-size: $pf-global-hero-title-font-size;
