@@ -1,6 +1,6 @@
 ---
 title: Pf-C-Card
-description: false
+description: ''
 ---
 <div class="pf-c-card">
   <div class="pf-c-card__header">

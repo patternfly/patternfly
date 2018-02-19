@@ -1,6 +1,6 @@
 ---
 title: Pf-C-Content
-description: false
+description: ''
 ---
 
 <div class="pf-c-content">

@@ -1,6 +1,6 @@
 ---
 title: Pf-C-Secondary-Nav
-description: false
+description: ''
 ---
 <ul class="pf-c-secondary-nav" role="tablist">
   <li class="pf-c-secondary-nav__item">

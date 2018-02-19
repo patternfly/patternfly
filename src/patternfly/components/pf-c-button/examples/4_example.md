@@ -1,6 +1,6 @@
 ---
 title: Button States
-description: false
+description: ''
 ---
 
 <button type="button" class="pf-c-button is-primary is-focus">Focus Button</button>

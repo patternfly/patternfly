@@ -13,19 +13,42 @@ import 'prismjs/themes/prism-solarizedlight.css'
 export default ({ children, data }) => {
   let allPages = data.allSitePage.edges.reduce((accum, edge) => {
     let pageType = edge.node.context.type || 'page'
-    if (edge.node.context) {
-      accum[pageType].push({
+
+    if (pageType === 'category') {
+      accum['component'].push({
         path: edge.node.path,
         text: edge.node.context.title,
         className: `is-${edge.node.context.type}`
       })
+    } else {
+      if (edge.node.context) {
+        accum[pageType].push({
+          path: edge.node.path,
+          text: edge.node.context.title,
+          className: `is-${edge.node.context.type}`
+        })
+      }
     }
-
     return accum
   }, {
     page: [],
     component: []
   })
+  // let allPages = data.allSitePage.edges.reduce((accum, edge) => {
+  //   let pageType = edge.node.context.type || 'page'
+  //   if (edge.node.context) {
+  //     accum[pageType].push({
+  //       path: edge.node.path,
+  //       text: edge.node.context.title,
+  //       className: `is-${edge.node.context.type}`
+  //     })
+  //   }
+  //
+  //   return accum
+  // }, {
+  //   page: [],
+  //   component: []
+  // })
   return (
     <div className="layout">
       <Helmet>

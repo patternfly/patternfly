@@ -1,6 +1,6 @@
 ---
 title: Button Sizes
-description: false
+description: ''
 ---
 
 <button type="button" class="pf-c-button is-primary is-large">Large Button</button>

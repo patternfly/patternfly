@@ -1,6 +1,6 @@
 ---
 title: Kebab
-description: false
+description: ''
 ---
 <div class="pf-c-kebab">
   <button class="pf-c-kebab_toggle">Toggle</button>

@@ -125,6 +125,17 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     result.data.allMarkdownRemark.edges.forEach((edge) => {
       if (edge.node.fields.path) {
         createPage({
+          path: `/${edge.node.fields.category}`,
+          component: path.resolve(`src/templates/category.js`),
+          context: {
+            path: `/${edge.node.fields.category}`,
+            category: edge.node.fields.category,
+            title: edge.node.fields.category,
+            name: edge.node.fields.category,
+            type: 'category'
+          }
+        })
+        createPage({
           path: edge.node.fields.path,
           component: path.resolve(`src/templates/${edge.node.fields.template}.js`),
           context: {

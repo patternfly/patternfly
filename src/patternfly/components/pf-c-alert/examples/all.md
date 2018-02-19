@@ -1,6 +1,6 @@
 ---
 title: Alert
-description: false
+description: ''
 ---
 <div class="pf-c-alert pf-is-primary" role="alert">
   This is a primary alert

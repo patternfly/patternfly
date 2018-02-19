@@ -4,35 +4,44 @@ import Helmet from 'react-helmet'
 import { HTMLContent } from '@siteComponents/Content'
 
 export default ({ data, pathContext }) => {
-  let content = data.allMarkdownRemark.edges.map((edge) => {
-    let { html, frontmatter, fields } = edge.node
-    let title = ''
-    let description = ''
+  let content
+  if (data) {
+    content = data.allMarkdownRemark.edges.map((edge) => {
+      let { html, frontmatter, fields } = edge.node
+      let title = ''
+      let description = ''
 
-    if (frontmatter.title) {
-      title = (
-        <h3 className="documentation-template__example_title">{frontmatter.title}</h3>
-      )
-    }
+      if (frontmatter.title) {
+        title = (
+          <h3 className="documentation-template__example_title">{frontmatter.title}</h3>
+        )
+      }
 
-    if (frontmatter.description) {
-      description = (
-        <p className="documentation-template__example_description">{frontmatter.description}</p>
-      )
-    }
+      if (frontmatter.description) {
+        description = (
+          <p className="documentation-template__example_description">{frontmatter.description}</p>
+        )
+      }
 
-    return (
-      <div key={fields.name} className="documentation-template__example">
-        <header className="documentation-template__example__header">
-          {title}
-          {description}
-        </header>
-        <div className="documentation-template__example__body">
-          <HTMLContent content={edge.node.html} />
+      return (
+        <div key={fields.name} className="documentation-template__example">
+          <header className="documentation-template__example__header">
+            {title}
+            {description}
+          </header>
+          <div className="documentation-template__example__body">
+            <HTMLContent content={edge.node.html} />
+          </div>
         </div>
-      </div>
-    )
-  })
+      )
+    })
+  } else {
+    content = () => {
+      return (
+        <p>No data found</p>
+      )
+    }
+  }
 
   return (
     <section className="documentation-template">

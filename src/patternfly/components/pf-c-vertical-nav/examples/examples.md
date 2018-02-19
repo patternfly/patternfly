@@ -1,6 +1,6 @@
 ---
 title: Pf-C-Vertical-Nav
-description: false
+description: ''
 ---
 <nav class="pf-c-vertical-nav" role="navigation">
 

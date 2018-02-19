@@ -1,6 +1,6 @@
 ---
 title: Button Colors
-description: false
+description: ''
 ---
 
 <button type="button" class="pf-c-button is-primary">Primary Button</button>
