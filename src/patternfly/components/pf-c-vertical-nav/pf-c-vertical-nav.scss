@@ -1,18 +1,4 @@
-// // pf-c-block__element--modifier--state--PropiertyCamel
-
-$pf-c-vertical-nav__link--PaddingTop:        $pf-global-spacer-sm !default;
-$pf-c-vertical-nav__link--PaddingBottom:     $pf-global-spacer-sm !default;
-$pf-c-vertical-nav__link--MarginTop:         $pf-global-spacer-xxl !default;
-$pf-c-vertical-nav__link--MarginBottom:      $pf-global-spacer-xxl !default;
-$pf-c-vertical-nav__link--Color:             $pf-global-component-off-color !default;
-
-$pf-c-vertical-nav__link--active--Color:     $pf-global-component-color !default;
-$pf-c-vertical-nav__link--disabled--Color:   $pf-global-disabled-color !default;
-
-$pf-c-vertical-nav__link-icon--PaddingRight: $pf-global-spacer-xl !default;
-
-$pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default;
-
+// pf-c-block__element--modifier--state--PropiertyCamel
 
 // /// A description of pf-c-vertical-nav
 // /// @group components
@@ -23,27 +9,41 @@ $pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default
 // /// @todo Accecibility for vertical nav
 //
 
+// stylelint-disable
+:root {
+  --pf-c-vertical-nav__link--PaddingTop:        var(--pf-global-spacer-sm);
+  --pf-c-vertical-nav__link--PaddingBottom:     var(--pf-global-spacer-sm);
+  --pf-c-vertical-nav__link--MarginTop:         var(--pf-global-spacer-xxl);
+  --pf-c-vertical-nav__link--MarginBottom:      var(--pf-global-spacer-xxl);
+  --pf-c-vertical-nav__link--Color:             var(--pf-global-dark-off-color);
+  --pf-c-vertical-nav__link--active--Color:     var(--pf-global-dark-color);
+  --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global-disabled-color);
+  --pf-c-vertical-nav__link--hover--Color:      var(--pf-global-component-color);
+  --pf-c-vertical-nav__link-icon--PaddingRight: var(--pf-global-spacer-xl);
+}
+
+// stylelint-enable
 
 .pf-c-vertical-nav {
 
   &__content {
     // reset list
-    @include list-reset;
+    padding-left: 0;
+    list-style: none;
   }
 
   &__link {
     display: flex;
     align-items: center;
-    // height: 4ex;
-    padding-top: $pf-c-vertical-nav__link--PaddingTop;
-    padding-bottom: $pf-c-vertical-nav__link--PaddingBottom;
-    margin-top: $pf-c-vertical-nav__link--MarginTop;
-    margin-bottom: $pf-c-vertical-nav__link--MarginBottom;
-    color: $pf-c-vertical-nav__link--Color;
+    padding-top: $pf-global-spacer-sm;
+    padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom, .8rem);
+    margin-top: var(--pf-c-vertical-nav__link--MarginTop, 2rem);
+    margin-bottom: var(--pf-c-vertical-nav__link--MarginBottom, 2rem);
+    color: var(--pf-c-vertical-nav__link--Color, #555);
     text-decoration: none;
 
     &:hover {
-      color: $pf-c-vertical-nav__link--hover--Color;
+      color: var(--pf-c-vertical-nav__link--hover--Color, #000);
       text-decoration: none;
     }
 
@@ -54,19 +54,18 @@ $pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default
       // placeholderfor an icon
       flex: 0 0 20px; //delete when we have icons
       height: 20px; //delete when we have icons
-      margin-right: $pf-c-vertical-nav__link-icon--PaddingRight;
+      margin-right: var(--pf-c-vertical-nav__link-icon--PaddingRight, 1.5rem);
       background: $pf-color-black-400; //delete when we have icons
     }
 
     &.pf-is-active {
       position: relative;
-      color: $pf-c-vertical-nav__link--active--Color;
 
       // Since we are still unsure about the active state I am going to leave it hardcoded
       &::before {
         position: absolute;
         bottom: 0;
-        left: calc(20px + #{$pf-c-vertical-nav__link-icon--PaddingRight});
+        left: calc(20px + var(--pf-c-vertical-nav__link-icon--PaddingRight));
         width: 32px;
         height: 4px;
         content: "";
@@ -74,10 +73,15 @@ $pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default
       }
     }
 
-    &.pf-is-disabled {
-      color: $pf-c-vertical-nav__link--disabled--Color;
-    }
   }
+}
+
+.pf-is-active {
+  --pf-c-vertical-nav__link--Color: var(--pf-c-vertical-nav__link--active--Color, #39a5dc);
+}
+
+.pf-is-disabled {
+  --pf-c-vertical-nav__link--Color: var(--pf-c-vertical-nav__link--disabled--Color, #ccc);
 }
 
 // Sub menu
@@ -85,7 +89,7 @@ $pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default
 .pf-vertical-sub-nav {
   display: none; // we don't know how the submenu looks like yet
 }
-// .pf-vertical-sub-nav {
+// .pf-vertical-sub-nav {`
 //   // padding-left: 1em;
 //   @include media-breakpoint-up(sm) {
 //     position: absolute;
@@ -121,7 +125,7 @@ $pf-c-vertical-nav__link--hover--Color:      $pf-global-component-color !default
 //
 // .pf-vertical-sub-nav__item {}
 //
-// .pf-vertical-sub-nav__link {
+// .pf-vertical-sub-nav__`link {
 //   display: block;
 //   padding: $pf-vertical-sub-nav-link-padding-y $pf-vertical-sub-nav-link-padding-x;
 //   color: $pf-vertical-sub-nav-link-hover-color;
