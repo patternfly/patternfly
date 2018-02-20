@@ -50,7 +50,7 @@
   "license": "MIT",
   "main": "n/a",
   "bin": {
-    "ds": "./cli/ds.js"
+    "pf": "./cli/pf.js"
   },
   "scripts": {
     "start": "npm run develop",

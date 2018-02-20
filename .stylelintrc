@@ -3,6 +3,9 @@
   "plugins": [
     "stylelint-order"
   ],
+  ignoreFiles: [
+    "./blueprints/**/*.scss"
+  ],
   "rules": {
     "at-rule-empty-line-before": [null,
       "except": ["first-nested"]
