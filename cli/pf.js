@@ -27,6 +27,11 @@ program
     let sourceType = type
     let source = path.join(`${BLUEPRINTS_DIR}/${type}/files`)
     let destination = PROJECT_DIR
+    let prefix = `pf-${type.charAt(0)}-`
+
+    name = name.replace(/^pf-(c|p)-/g,'')
+
+    let bemEntity = inflection.transform(name, ['underscore','titleize', 'dasherize']).toLowerCase()
 
     let blueprintData = {
       blueprintDir,
@@ -45,11 +50,10 @@ program
       namePascalized: inflection.camelize(name),
       nameTableized: inflection.tableize(name),
       nameCapitalized: inflection.capitalize(name),
-      bemName: inflection.transform(name, ['underscore','titleize', 'dasherize']).toLowerCase(),
-      moduleName: inflection.transform(name, ['underscore','camelize']),
+      bemName: `${prefix}${bemEntity}`,
+      moduleName: inflection.titleize(name).replace(/-/g,''),
       args: blueprintArgs
     }
-
 
     scaffold({
       source,

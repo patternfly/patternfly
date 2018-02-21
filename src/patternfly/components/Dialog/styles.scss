@@ -1,0 +1,84 @@
+@import "../../patternfly";
+
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$pf-c-dialog--Padding: $unit-s !default;
+$pf-c-dialog__header--Padding: $unit-s !default;
+$pf-c-dialog__body--Padding: $unit-s !default;
+$pf-c-dialog__footer--Padding: $unit-s !default;
+
+$pf-c-dialog--Border: 1px solid #000 !default;
+$pf-c-dialog--BackgroundColor: #fff !default;
+$pf-c-dialog--Color: #000 !default;
+$pf-c-dialog__header--Border: 1px solid #000 !default;
+$pf-c-dialog__header--BackgroundColor: #fff !default;
+$pf-c-dialog__header--Color: #000 !default;
+$pf-c-dialog__body--Border: 1px solid #000 !default;
+$pf-c-dialog__body--BackgroundColor: #fff !default;
+$pf-c-dialog__body--Color: #000 !default;
+$pf-c-dialog__footer--Border: 1px solid #000 !default;
+$pf-c-dialog__footer--BackgroundColor: #fff !default;
+$pf-c-dialog__footer--Color: #000 !default;
+
+.pf-c-dialog {
+  display: block;
+  padding: $pf-c-dialog--Padding;
+  margin: 0;
+  color: $pf-c-dialog--Color;
+  background-color: $pf-c-dialog--BackgroundColor;
+  border: $pf-c-dialog--Border;
+
+  // module sections
+  &__header {
+    padding: $pf-c-dialog__header--Padding;
+    color: $pf-c-dialog__header--Color;
+    background-color: $pf-c-dialog__header--BackgroundColor;
+    border: $pf-c-dialog__header--Border;
+  }
+  &__body {
+    padding: $pf-c-dialog__body--Padding;
+    color: $pf-c-dialog__body--Color;
+    background-color: $pf-c-dialog__body--BackgroundColor;
+    border: $pf-c-dialog__body--Border;
+  }
+  &__footer {
+    padding: $pf-c-dialog__footer--Padding;
+    color: $pf-c-dialog__footer--Color;
+    background-color: $pf-c-dialog__footer--BackgroundColor;
+    border: $pf-c-dialog__footer--Border;
+  }
+  &__items {}
+  &__item {}
+
+  // module layouts
+  &.is-stack {
+    display: flex;
+    flex-direction: column;
+  }
+  &.is-stack > &__body {
+    flex: 1;
+  }
+  &.is-split {
+    display: flex;
+  }
+  &.is-split > &__primary {
+    flex: 1;
+  }
+  &.is-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.is-grid {
+    display: grid;
+    grid-template-columns: 22.75% 22.75% 22.75% 22.75%;
+    grid-column-gap: 3%;
+    grid-row-gap: 1rem;
+  }
+}

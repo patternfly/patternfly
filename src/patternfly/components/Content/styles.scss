@@ -1,0 +1,84 @@
+@import "../../patternfly";
+
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$pf-c-content--Padding: $unit-s !default;
+$pf-c-content__header--Padding: $unit-s !default;
+$pf-c-content__body--Padding: $unit-s !default;
+$pf-c-content__footer--Padding: $unit-s !default;
+
+$pf-c-content--Border: 1px solid #000 !default;
+$pf-c-content--BackgroundColor: #fff !default;
+$pf-c-content--Color: #000 !default;
+$pf-c-content__header--Border: 1px solid #000 !default;
+$pf-c-content__header--BackgroundColor: #fff !default;
+$pf-c-content__header--Color: #000 !default;
+$pf-c-content__body--Border: 1px solid #000 !default;
+$pf-c-content__body--BackgroundColor: #fff !default;
+$pf-c-content__body--Color: #000 !default;
+$pf-c-content__footer--Border: 1px solid #000 !default;
+$pf-c-content__footer--BackgroundColor: #fff !default;
+$pf-c-content__footer--Color: #000 !default;
+
+.pf-c-content {
+  display: block;
+  padding: $pf-c-content--Padding;
+  margin: 0;
+  color: $pf-c-content--Color;
+  background-color: $pf-c-content--BackgroundColor;
+  border: $pf-c-content--Border;
+
+  // module sections
+  &__header {
+    padding: $pf-c-content__header--Padding;
+    color: $pf-c-content__header--Color;
+    background-color: $pf-c-content__header--BackgroundColor;
+    border: $pf-c-content__header--Border;
+  }
+  &__body {
+    padding: $pf-c-content__body--Padding;
+    color: $pf-c-content__body--Color;
+    background-color: $pf-c-content__body--BackgroundColor;
+    border: $pf-c-content__body--Border;
+  }
+  &__footer {
+    padding: $pf-c-content__footer--Padding;
+    color: $pf-c-content__footer--Color;
+    background-color: $pf-c-content__footer--BackgroundColor;
+    border: $pf-c-content__footer--Border;
+  }
+  &__items {}
+  &__item {}
+
+  // module layouts
+  &.is-stack {
+    display: flex;
+    flex-direction: column;
+  }
+  &.is-stack > &__body {
+    flex: 1;
+  }
+  &.is-split {
+    display: flex;
+  }
+  &.is-split > &__primary {
+    flex: 1;
+  }
+  &.is-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.is-grid {
+    display: grid;
+    grid-template-columns: 22.75% 22.75% 22.75% 22.75%;
+    grid-column-gap: 3%;
+    grid-row-gap: 1rem;
+  }
+}
