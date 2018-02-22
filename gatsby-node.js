@@ -83,6 +83,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
     let isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX)
     let isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX)
     let isDemoPage = page.path.match(DEMO_PAGE_REGEX)
+
     page.context.type = 'page'
     page.context.category = 'page'
     page.context.slug = ''

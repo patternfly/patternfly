@@ -11,9 +11,18 @@ import '../patternfly/patternfly.scss'
 export default ({ children, data }) => {
   let allPages = data.allSitePage.edges.reduce((accum, edge) => {
     let type = edge.node.context.type || 'page'
+
     if (!accum[type]) {
       accum[type] = []
     }
+
+    if (edge.node.context.name == null ) {
+      let bestGuessName = edge.node.path.match(/\/([A-Za-z0-9_-]+)$/g)[0].substring(1)
+      if(bestGuessName !== 'docs') {
+        edge.node.context.name = bestGuessName
+      }
+    }
+
     accum[type].push({
       path: edge.node.path,
       text: edge.node.context.name,
@@ -21,6 +30,7 @@ export default ({ children, data }) => {
     })
     return accum
   }, {})
+
   return (
     <div className="layout">
       <Helmet>
