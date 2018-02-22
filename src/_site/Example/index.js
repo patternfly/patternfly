@@ -15,9 +15,11 @@ export default ({heading, description, children}) => {
       <h3 className="Example_heading">{heading}</h3>
       <p className="Example_description">{description}</p>
       <div className="Example__body">
+        <h4 className="Example__body_heading">Preview</h4>
         <div className="Example__preview">
           {children}
         </div>
+        <h4 className="Example__body_heading">Code</h4>
         <div className="Example__snippet">
           <pre className="Example__snippet_pre">
             <PrismCode className="language-html">
@@ -25,7 +27,6 @@ export default ({heading, description, children}) => {
             </PrismCode>
           </pre>
         </div>
-
       </div>
     </div>
   )
