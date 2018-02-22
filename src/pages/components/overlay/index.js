@@ -7,7 +7,7 @@ export default () => {
     <div>
       <Example heading="Example">
         <Overlay>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos illo aliquid, illum, atque omnis dolorum veritatis, soluta dolor architecto cumque numquam sit dignissimos eum. Assumenda sed soluta obcaecati nesciunt laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Overlay>
       </Example>
     </div>

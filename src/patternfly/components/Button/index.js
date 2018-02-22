@@ -3,8 +3,8 @@ import styles from './styles.scss'
 
 export default ({children, className = ''}) => {
   return (
-    <div className={`pf-c-button ${className}`}>
+    <button className={`pf-c-button ${className}`}>
       {children}
-    </div>
+    </button>
   )
 }

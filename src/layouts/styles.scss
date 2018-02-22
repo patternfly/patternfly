@@ -49,7 +49,6 @@
 }
 
 .documentation-template {
-  // display: flex;
   &_heading {
     margin-bottom: .5em;
     font-size: 1.5rem;
@@ -64,39 +63,6 @@
     padding: 1rem;
     background-color: #fff;
     border: 1px solid #f1f1f1;
-  }
-}
-
-.gatsby-highlight {
-  padding: 1em;
-  margin: .5rem 0;
-  overflow: auto;
-  background-color: transparent;
-  border-radius: .3em;
-}
-
-.gatsby-highlight pre[class^="language-"] {
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  background-color: transparent;
-
-  border-left: 0;
-  // box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-  box-shadow: none;
-  &::before,
-  &::after {
-    display: none;
-  }
-  code {
-    background-color: transparent;
-    // border-left: 10px solid #358ccb;
-    // -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-    // box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-    border-left: 0;
-    box-shadow: none;
   }
 }
 /* stylelint-enable */

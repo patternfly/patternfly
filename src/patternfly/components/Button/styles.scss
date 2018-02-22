@@ -1,84 +1,145 @@
 @import "../../patternfly";
 
-$unit-xxs: 2px !default;
-$unit-xs: 4px !default;
-$unit-s: 8px !default;
-$unit-m: 16px !default;
-$unit-l: 32px !default;
-$unit-xl: 64px !default;
-$unit-xxl: 128px !default;
+// stylelint-disable
+:root {
+  --pf-c-button--PaddingTop:     var(--pf-global-spacer-xs);
+  --pf-c-button--PaddingRight:   var(--pf-global-spacer-xxl);
+  --pf-c-button--PaddingBottom:  var(--pf-global-spacer-xs);
+  --pf-c-button--PaddingLeft:    var(--pf-global-spacer-xxl);
+  --pf-c-button--LineHeight:     var(--pf-global-line-height-sm);
+  --pf-c-button--FontWeight:     var(--pf-global-font-weight-semi-bold);
+  --pf-c-button--BorderWidth:    var(--pf-global-border-width);
+  --pf-c-button--BorderColor:    var(--pf-global-border-color);
 
-$pf-c-button--Padding: $unit-s !default;
-$pf-c-button__header--Padding: $unit-s !default;
-$pf-c-button__body--Padding: $unit-s !default;
-$pf-c-button__footer--Padding: $unit-s !default;
+  // Primary btn
+  --pf-c-button--primary--BackgroundColor:         var(--pf-global-primary-color);
+  --pf-c-button--primary--BorderColor:             var(--pf-global-primary-color);
+  --pf-c-button--primary--Color:                   var(--pf-global-component-alt-color);
+  --pf-c-button--primary--hover--BackgroundColor:  var(--pf-global-primary-dark-color);
+  --pf-c-button--primary--hover--BorderColor:      var(--pf-global-primary-dark-color);
+  --pf-c-button--primary--hover--Color:            var(--pf-global-component-alt-color);
 
-$pf-c-button--Border: 1px solid #000 !default;
-$pf-c-button--BackgroundColor: #fff !default;
-$pf-c-button--Color: #000 !default;
-$pf-c-button__header--Border: 1px solid #000 !default;
-$pf-c-button__header--BackgroundColor: #fff !default;
-$pf-c-button__header--Color: #000 !default;
-$pf-c-button__body--Border: 1px solid #000 !default;
-$pf-c-button__body--BackgroundColor: #fff !default;
-$pf-c-button__body--Color: #000 !default;
-$pf-c-button__footer--Border: 1px solid #000 !default;
-$pf-c-button__footer--BackgroundColor: #fff !default;
-$pf-c-button__footer--Color: #000 !default;
+  // Secondary btn
+  --pf-c-button--secondary--BackgroundColor:        transparent;
+  --pf-c-button--secondary--BorderColor:            var(--pf-global-primary-color);
+  --pf-c-button--secondary--Color:                  var(--pf-global-primary-color);
+  --pf-c-button--secondary--hover--BackgroundColor: var(--pf-global-primary-color);
+  --pf-c-button--secondary--hover--BorderColor:     var(--pf-global-primary-color);
+  --pf-c-button--secondary--hover--Color:           var(--pf-global-component-alt-color);
+
+  // Secondary Inverse btn
+  --pf-c-button--secondary-alt--BackgroundColor:        transparent;
+  --pf-c-button--secondary-alt--BorderColor:            var(--pf-global-component-alt-color);
+  --pf-c-button--secondary-alt--Color:                  var(--pf-global-component-alt-color);
+  --pf-c-button--secondary-alt--hover--BackgroundColor: var(--pf-global-primary-color);
+  --pf-c-button--secondary-alt--hover--BorderColor:     var(--pf-global-primary-color);
+  --pf-c-button--secondary-alt--hover--Color:           var(--pf-global-component-alt-color);
+
+  // Tertiary btn
+  --pf-c-button--tertiary--BackgroundColor:        transparent;
+  --pf-c-button--tertiary--BorderColor:            var(--pf-global-component-color);
+  --pf-c-button--tertiary--Color:                  var(--pf-global-component-color);
+  --pf-c-button--tertiary--hover--BackgroundColor: var(--pf-global-component-color);
+  --pf-c-button--tertiary--hover--BorderColor:     var(--pf-global-component-color);
+  --pf-c-button--tertiary--hover--Color:           var(--pf-global-component-alt-color);
+
+  // Destructive btn
+  --pf-c-button--destructive--BackgroundColor:        var(--pf-global-danger-color);
+  --pf-c-button--destructive--BorderColor:            var(--pf-global-danger-color);
+  --pf-c-button--destructive--Color:                  var(--pf-global-component-alt-color);
+  --pf-c-button--destructive--hover--BackgroundColor: var(--pf-global-danger-dark-color);
+  --pf-c-button--destructive--hover--BorderColor:     var(--pf-global-danger-dark-color);
+  --pf-c-button--destructive--hover--Color:           var(--pf-global-component-alt-color);
+
+  //Sizes
+  --pf-c-button--small--FontSize: var(--pf-global-caption-font-size);
+  --pf-c-button--large--FontSize: var(--pf-global-sub-title-font-size);
+}
+// stylelint-enable
 
 .pf-c-button {
-  display: block;
-  padding: $pf-c-button--Padding;
-  margin: 0;
-  color: $pf-c-button--Color;
-  background-color: $pf-c-button--BackgroundColor;
-  border: $pf-c-button--Border;
+  display: inline-block;
+  padding: var(--pf-c-button--PaddingTop, .5rem) var(--pf-c-button--PaddingRight, 2rem) var(--pf-c-button--PaddingBottom, .5rem) var(--pf-c-button--PaddingLeft, 2rem);
+  font-size: var(--pf-c-button--FontSize, 1rem);
+  font-weight: var(--pf-c-button--FontWeight, 600);
+  line-height: var(--pf-c-button--LineHeight, 1.2);
+  color: var(--pf-c-button--Color, #555);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--pf-c-button--BackgroundColor, #ccc);
+  border: var(--pf-c-button--BorderWidth, 1px) solid var(--pf-c-button--BorderColor, #ccc);
+  border-radius: 30rem;
 
-  // module sections
-  &__header {
-    padding: $pf-c-button__header--Padding;
-    color: $pf-c-button__header--Color;
-    background-color: $pf-c-button__header--BackgroundColor;
-    border: $pf-c-button__header--Border;
+  &:hover,
+  &:focus,
+  &.had-focus {
+    --pf-c-button--Color: var(--pf-c-button--hover--Color, #fff);
+    --pf-c-button--BackgroundColor: var(--pf-c-button--hover--BackgroundColor, #555);
+    --pf-c-button--BorderColor: var(--pf-c-button--hover--BorderColor, #555);
   }
-  &__body {
-    padding: $pf-c-button__body--Padding;
-    color: $pf-c-button__body--Color;
-    background-color: $pf-c-button__body--BackgroundColor;
-    border: $pf-c-button__body--Border;
-  }
-  &__footer {
-    padding: $pf-c-button__footer--Padding;
-    color: $pf-c-button__footer--Color;
-    background-color: $pf-c-button__footer--BackgroundColor;
-    border: $pf-c-button__footer--Border;
-  }
-  &__items {}
-  &__item {}
 
-  // module layouts
-  &.is-stack {
-    display: flex;
-    flex-direction: column;
+  &:disabled,
+  &.pf-is-disabled {
+    pointer-events: none;
+    opacity: .5;
   }
-  &.is-stack > &__body {
-    flex: 1;
+
+  .pf-is-small {
+    --pf-c-button--FontSize: var(--pf-c-button--small--FontSize, .9rem);
   }
-  &.is-split {
-    display: flex;
+
+  .pf-is-large {
+    --pf-c-button--FontSize: var(--pf-c-button--large--FontSize, 1.2rem);
   }
-  &.is-split > &__primary {
-    flex: 1;
+
+  .pf-is-block {
+    display: block;
+    width: 100%;
   }
-  &.is-level {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  .pf-is-primary {
+    --pf-c-button--Color: var(--pf-c-button--primary--Color, #fff);
+    --pf-c-button--BackgroundColor: var(--pf-c-button--primary--BackgroundColor, #39a5dc);
+    --pf-c-button--BorderColor: var(--pf-c-button--primary--BorderColor, #39a5dc);
+    --pf-c-button--hover--Color: var(--pf-c-button--primary--hover--Color, #fff);
+    --pf-c-button--hover--BackgroundColor: var(--pf-c-button--primary--hover--BackgroundColor, #0088ce);
+    --pf-c-button--hover--BorderColor: var(--pf-c-button--primary--hover--BorderColor, #0088ce);
   }
-  &.is-grid {
-    display: grid;
-    grid-template-columns: 22.75% 22.75% 22.75% 22.75%;
-    grid-column-gap: 3%;
-    grid-row-gap: 1rem;
+
+  .pf-is-secondary {
+    --pf-c-button--Color: var(--pf-c-button--secondary--Color, #39a5dc);
+    --pf-c-button--BackgroundColor: var(--pf-c-button--secondary--BackgroundColor, transparent);
+    --pf-c-button--BorderColor: var(--pf-c-button--secondary--BorderColor, #39a5dc);
+    --pf-c-button--hover--Color: var(--pf-c-button--secondary--hover--Color, #fff);
+    --pf-c-button--hover--BackgroundColor: var(--pf-c-button--secondary--hover--BackgroundColor, #39a5dc);
+    --pf-c-button--hover--BorderColor: var(--pf-c-button--secondary--hover--BorderColor, #39a5dc);
   }
+
+  .pf-is-secondary-alt {
+    --pf-c-button--Color: var(--pf-c-button--secondary-alt--Color, #fff);
+    --pf-c-button--BackgroundColor: var(--pf-c-button--secondary-alt--BackgroundColor, transparent);
+    --pf-c-button--BorderColor: var(--pf-c-button--secondary-alt--BorderColor, #fff);
+    --pf-c-button--hover--Color: var(--pf-c-button--secondary-alt--hover--Color, #fff);
+    --pf-c-button--hover--BackgroundColor: var(--pf-c-button--secondary-alt--hover--BackgroundColor, #39a5dc);
+    --pf-c-button--hover--BorderColor: var(--pf-c-button--secondary-alt--hover--BorderColor, #39a5dc);
+  }
+
+  .pf-is-tertiary {
+    --pf-c-button--Color: var(--pf-c-button--tertiary--Color, #292e34);
+    --pf-c-button--BackgroundColor: var(--pf-c-button--tertiary--BackgroundColor, transparent);
+    --pf-c-button--BorderColor: var(--pf-c-button--tertiary--BorderColor, #292e34);
+    --pf-c-button--hover--Color: var(--pf-c-button--tertiary--hover--Color, #fff);
+    --pf-c-button--hover--BackgroundColor: var(--pf-c-button--tertiary--hover--BackgroundColor, #292e34);
+    --pf-c-button--hover--BorderColor: var(--pf-c-button--tertiary--hover--BorderColor, #292e34);
+  }
+
+  .pf-is-destructive {
+    --pf-c-button--Color: var(--pf-c-button--destructive--Color, #fff);
+    --pf-c-button--BackgroundColor: var(--pf-c-button--destructive--BackgroundColor, #c00);
+    --pf-c-button--BorderColor: var(--pf-c-button--destructive--BorderColor, #c00);
+    --pf-c-button--hover--Color: var(--pf-c-button--destructive--hover--Color, #fff);
+    --pf-c-button--hover--BackgroundColor: var(--pf-c-button--destructive--hover--BackgroundColor, #a30000);
+    --pf-c-button--hover--BorderColor: var(--pf-c-button--destructive--hover--BorderColor, #a30000);
+  }
+
 }
