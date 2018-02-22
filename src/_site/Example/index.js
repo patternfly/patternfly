@@ -7,7 +7,10 @@ import 'prismjs/themes/prism-coy.css'
 import './styles.scss'
 
 export default ({heading, description, children}) => {
-  const output = ReactDOMServer.renderToStaticMarkup(children)
+  const output = ReactDOMServer
+    .renderToStaticMarkup(children)
+    .replace(/ "/g, '"')
+
   const indentedOutput = pretty(output, { ocd: true })
 
   return (
