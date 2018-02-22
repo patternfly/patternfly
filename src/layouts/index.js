@@ -8,8 +8,6 @@ import Navigation from '@siteComponents/Navigation'
 import './styles.scss'
 import '../patternfly/patternfly.scss'
 
-// import 'prismjs/themes/prism-solarizedlight.css'
-
 export default ({ children, data }) => {
   let allPages = data.allSitePage.edges.reduce((accum, edge) => {
     let type = edge.node.context.type || 'page'
