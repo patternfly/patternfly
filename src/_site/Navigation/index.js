@@ -19,7 +19,7 @@ const Navigation = ({ links, isHorizontal = false }) => {
   } else {
     navigationItems = (
       <li className="Navigation__item">
-        No navigation items founds
+        No items founds
       </li>
     )
   }

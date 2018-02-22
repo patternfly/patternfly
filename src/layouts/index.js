@@ -42,6 +42,9 @@ export default ({ children, data }) => {
 
           <h3 className="layout__sidebar_header">Patterns</h3>
           <Navigation links={allPages.pattern} />
+
+          <h3 className="layout__sidebar_header">Demos</h3>
+          <Navigation links={allPages.demo} />
         </div>
         <div className="layout__content">
           {children()}
