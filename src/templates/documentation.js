@@ -3,8 +3,8 @@ import React from 'react'
 export default ({data}) => {
   let { fields, html } = data.markdownRemark
   return (
-    <div className="page-template">
-      <div className="page-template__content" dangerouslySetInnerHTML={{ __html: html }} />
+    <div className="documentation-template">
+      <div className="documentation-template__content" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
 }
