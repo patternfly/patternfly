@@ -48,7 +48,8 @@
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.3.0",
-    "stylelint-webpack-plugin": "^0.10.2"
+    "stylelint-webpack-plugin": "^0.10.2",
+    "webpack-notifier": "^1.5.1"
   },
   "keywords": [],
   "license": "MIT",

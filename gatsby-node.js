@@ -1,6 +1,7 @@
 const path = require('path')
 const inflection = require('inflection')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const WebpackNotifierPlugin = require('webpack-notifier')
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
@@ -137,8 +138,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       new StyleLintPlugin({
         configFile: './.stylelintrc',
         fix: false,
-        failOnError: false
-      })
+        failOnError: false,
+        emitErrors: true
+      }),
+      new WebpackNotifierPlugin({title: 'PF-Next'})
     ]
   })
   return config
