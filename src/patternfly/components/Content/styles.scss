@@ -1,84 +1,182 @@
 @import "../../patternfly-utilities";
 
-$unit-xxs: 2px !default;
-$unit-xs: 4px !default;
-$unit-s: 8px !default;
-$unit-m: 16px !default;
-$unit-l: 32px !default;
-$unit-xl: 64px !default;
-$unit-xxl: 128px !default;
-
-$pf-c-content--Padding: $unit-s !default;
-$pf-c-content__header--Padding: $unit-s !default;
-$pf-c-content__body--Padding: $unit-s !default;
-$pf-c-content__footer--Padding: $unit-s !default;
-
-$pf-c-content--Border: 1px solid #000 !default;
-$pf-c-content--BackgroundColor: #fff !default;
-$pf-c-content--Color: #000 !default;
-$pf-c-content__header--Border: 1px solid #000 !default;
-$pf-c-content__header--BackgroundColor: #fff !default;
-$pf-c-content__header--Color: #000 !default;
-$pf-c-content__body--Border: 1px solid #000 !default;
-$pf-c-content__body--BackgroundColor: #fff !default;
-$pf-c-content__body--Color: #000 !default;
-$pf-c-content__footer--Border: 1px solid #000 !default;
-$pf-c-content__footer--BackgroundColor: #fff !default;
-$pf-c-content__footer--Color: #000 !default;
-
 .pf-c-content {
-  display: block;
-  padding: $pf-c-content--Padding;
-  margin: 0;
-  color: $pf-c-content--Color;
-  background-color: $pf-c-content--BackgroundColor;
-  border: $pf-c-content--Border;
+  a {
+    color: $pf-global-link-color;
+    text-decoration: $pf-global-link-decoration;
 
-  // module sections
-  &__header {
-    padding: $pf-c-content__header--Padding;
-    color: $pf-c-content__header--Color;
-    background-color: $pf-c-content__header--BackgroundColor;
-    border: $pf-c-content__header--Border;
+    &:hover {
+      color: $pf-global-link-hover-color;
+      text-decoration: $pf-global-link-hover-decoration;
+    }
   }
-  &__body {
-    padding: $pf-c-content__body--Padding;
-    color: $pf-c-content__body--Color;
-    background-color: $pf-c-content__body--BackgroundColor;
-    border: $pf-c-content__body--Border;
-  }
-  &__footer {
-    padding: $pf-c-content__footer--Padding;
-    color: $pf-c-content__footer--Color;
-    background-color: $pf-c-content__footer--BackgroundColor;
-    border: $pf-c-content__footer--Border;
-  }
-  &__items {}
-  &__item {}
 
-  // module layouts
-  &.is-stack {
-    display: flex;
-    flex-direction: column;
+  li + li {
+    margin-top: $pf-global-spacer-xxs;
   }
-  &.is-stack > &__body {
-    flex: 1;
+
+  p,
+  dl,
+  ol,
+  ul,
+  blockquote,
+  pre,
+  table {
+    &:not(:last-child){
+      margin-bottom: $pf-global-spacer-md;
+    }
   }
-  &.is-split {
-    display: flex;
+
+  dl,
+  ol,
+  ul {
+    padding-left: $pf-global-spacer-md;
   }
-  &.is-split > &__primary {
-    flex: 1;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: $pf-global-font-weight-normal;
+    line-height: $pf-global-line-height-base;
   }
-  &.is-level {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  h1 {
+    margin-bottom: $pf-global-spacer-xs;
+    font-size: $pf-global-hero-title-font-size;
+    &:not(:first-child) {
+      margin-top: $pf-global-spacer-lg;
+    }
   }
-  &.is-grid {
-    display: grid;
-    grid-template-columns: 22.75% 22.75% 22.75% 22.75%;
-    grid-column-gap: 3%;
-    grid-row-gap: 1rem;
+
+  h2 {
+    margin-bottom: $pf-global-spacer-xs;
+    font-size: $pf-global-main-title-font-size;
+    &:not(:first-child) {
+      margin-top: $pf-global-spacer-xl;
+    }
   }
+
+  h3 {
+    margin-bottom: $pf-global-spacer-xs;
+    font-size: $pf-global-secondary-title-font-size;
+    &:not(:first-child) {
+      margin-top: $pf-global-spacer-lg;
+    }
+  }
+
+  h4 {
+    margin-bottom: $pf-global-spacer-md;
+    font-size: $pf-global-sub-title-font-size;
+  }
+
+  h5 {
+    margin-bottom: $pf-global-spacer-md;
+    font-size: $pf-global-body-font-size;
+  }
+
+  h6 {
+    margin-bottom: $pf-global-spacer-md;
+    font-size: $pf-global-caption-font-size;
+  }
+
+  blockquote {
+    padding: $pf-global-spacer-md;
+    border-left: 5px solid $pf-global-dark-off-color;
+  }
+
+  ol {
+    margin-top: $pf-global-spacer-md;
+    margin-left: $pf-global-spacer-md;
+  }
+
+  ul {
+    margin: 0;
+    margin-top: $pf-global-spacer-md;
+    margin-left: $pf-global-spacer-sm;
+    ul {
+      margin-top: $pf-global-spacer-xs;
+    }
+  }
+
+  dd {
+    margin-left: $pf-global-spacer-xl;
+  }
+
+  // figure {
+  //   margin-right: 2em;
+  //   margin-left: 2em;
+  //   text-align: center;
+  //   &:not(:first-child){
+  //     margin-top: 2em;
+  //   }
+  //   &:not(:last-child) {
+  //     margin-bottom: 2em;
+  //   }
+  //   img {
+  //     display: inline-block;
+  //   }
+  //   figcaption{
+  //     font-style: italic;
+  //   }
+  // }
+
+  // pre {
+  //   padding: $pf-c-content--pre--Padding;
+  //   overflow-x: auto;
+  //   word-wrap: normal;
+  //   white-space: pre;
+  // }
+  //
+  // sup,
+  // sub {
+  //   font-size: 75%;
+  // }
+
+  // table {
+  //   width: 100%;
+  //   td,
+  //   th {
+  //     padding: $pf-c-content-table-cell-padding;
+  //     vertical-align: top;
+  //     border: $content-table-cell-border;
+  //     border-width: $content-table-cell-border-width;
+  //   }
+  //   th {
+  //     color: $content-table-cell-heading-color;
+  //     text-align: left;
+  //   }
+  //   tr {
+  //     &:hover {
+  //       background-color: $content-table-row-hover-background-color;
+  //     }
+  //   }
+  //   thead {
+  //     td,
+  //     th {
+  //       color: $content-table-head-cell-color;
+  //       border-width: $content-table-head-cell-border-width;
+  //     }
+  //   }
+  //   tfoot {
+  //     td,
+  //     th {
+  //       color: $content-table-foot-cell-color;
+  //       border-width: $content-table-foot-cell-border-width;
+  //     }
+  //   }
+  //   tbody {
+  //     tr {
+  //       &:last-child {
+  //         td,
+  //         th {
+  //           border-bottom-width: 0;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
