@@ -45,13 +45,6 @@ const plugins = [
     },
   },
   {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      path: `${PROJECT_ROOT}/sassdoc`,
-      name: 'sassdocs',
-    },
-  },
-  {
     resolve: 'gatsby-transformer-remark',
     options: {
       plugins: [
