@@ -141,7 +141,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
         failOnError: false,
         emitErrors: true
       }),
-      new WebpackNotifierPlugin({title: 'PF-Next'})
+      new WebpackNotifierPlugin({
+        title: 'PF-Next',
+        skipFirstNotification: true
+      })
     ]
   })
   return config

@@ -18,6 +18,8 @@ export default ({ children, data }) => {
 
     if (edge.node.context.name == null ) {
       let bestGuessName = edge.node.path.match(/\/([A-Za-z0-9_-]+)$/g)[0].substring(1)
+      bestGuessName = bestGuessName.replace(/-/g, ' ')
+
       if(bestGuessName !== 'docs') {
         edge.node.context.name = bestGuessName
       }
