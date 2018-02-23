@@ -1,5 +1,8 @@
 import React from 'react'
-import styles from './styles.scss'
+import docs from './docs.md'
+import './styles.scss'
+
+export const Docs = docs
 
 export default ({children, className = ''}) => {
   return (

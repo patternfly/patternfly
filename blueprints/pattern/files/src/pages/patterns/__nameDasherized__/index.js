@@ -1,15 +1,16 @@
 import React from 'react'
+import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import {{moduleName}} from '@patterns/{{moduleName}}'
+import {{moduleName}}, {Docs} from '@patterns/{{moduleName}}'
 
 export default () => {
   return (
-    <div>
-      <Example heading="Example">
+    <Documentation docs={Docs}>
+      <Example heading="{{moduleName}} Example">
         <{{moduleName}}>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </{{moduleName}}>
       </Example>
-    </div>
+    </Documentation>
   )
 }

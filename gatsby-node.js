@@ -125,6 +125,11 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 }
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
+  config.loader('markdown-loader', function(current) {
+    current.test = /\.md$/
+    current.loader = 'html-loader!markdown-loader'
+    return current
+  })
   config.merge({
     resolve: {
       alias: {

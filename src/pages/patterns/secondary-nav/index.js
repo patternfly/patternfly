@@ -1,15 +1,16 @@
 import React from 'react'
+import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import SecondaryNav from '@patterns/SecondaryNav'
+import SecondaryNav, {Docs} from '@patterns/SecondaryNav'
 
 export default () => {
   return (
-    <div>
+    <Documentation docs={Docs}>
       <Example heading="Example">
         <SecondaryNav>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </SecondaryNav>
       </Example>
-    </div>
+    </Documentation>
   )
 }

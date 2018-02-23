@@ -1,10 +1,11 @@
 import React from 'react'
+import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import Alert from '@components/Alert'
+import Alert, { Docs } from '@components/Alert'
 
 export default () => {
   return (
-    <div>
+    <Documentation docs={Docs}>
       <Example heading="Default Alert">
         <Alert>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -59,6 +60,6 @@ export default () => {
         </Alert>
       </Example>
 
-    </div>
+    </Documentation>
   )
 }

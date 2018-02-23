@@ -1,10 +1,11 @@
 import React from 'react'
+import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import Content from '@components/Content'
+import Content, { Docs } from '@components/Content'
 
 export default () => {
   return (
-    <div>
+    <Documentation docs={Docs}>
       <Example heading="Example">
         <Content>
           <h1>Hello World</h1>
@@ -57,6 +58,6 @@ export default () => {
           <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
         </Content>
       </Example>
-    </div>
+    </Documentation>
   )
 }
