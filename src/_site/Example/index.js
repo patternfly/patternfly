@@ -3,6 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import Prism from 'prismjs'
 import PrismCode from 'react-prism'
 import pretty from 'pretty'
+import CodepenButton from '@siteComponents/CodepenButton'
 import 'prismjs/themes/prism-coy.css'
 import './styles.scss'
 
@@ -15,9 +16,14 @@ export default ({heading, description, children}) => {
 
   return (
     <div className="Example">
-      <h3 className="Example_heading">{heading}</h3>
-      <p className="Example_description">{description}</p>
+      <div className="Example__header">
+        <h3 className="Example_heading">{heading}</h3>
+        <div className="Example__toolbar">
+          <CodepenButton html={indentedOutput} />
+        </div>
+      </div>
       <div className="Example__body">
+        <p className="Example_body_description">{description}</p>
         <h4 className="Example__body_heading">Preview</h4>
         <div className="Example__preview">
           {children}

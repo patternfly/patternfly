@@ -2,16 +2,21 @@
   &:not(:last-child) {
     margin-bottom: .5rem;
   }
+  &__header {
+    display: flex;
+    align-items: center;
+  }
   &_heading {
     margin-bottom: .5rem;
     font-size: 1.5rem;
   }
-  &_description {
+  &__toolbar {
+    padding: 0 .5rem;
+  }
+  &__body {}
+  &_body_description {
     margin-bottom: .5em;
     font-size: 1rem;
-  }
-  &__body {
-
   }
   &__snippet {
     padding: 1em;
