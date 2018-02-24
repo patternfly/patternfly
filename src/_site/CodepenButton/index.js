@@ -10,7 +10,9 @@ export default ({
   css = '',
   js = '',
   css_external = 'https://pf-next.com/styles.css',
-  js_external = ''
+  js_external = '',
+  height = 40,
+  width = 40
 }) => {
   let data = JSON.stringify({
     title,
@@ -26,7 +28,7 @@ export default ({
   return (
     <form action='https://codepen.io/pen/define' method='POST' target='_blank'>
       <input type='hidden' name='data' value={data} />
-      <input type="image" src={editIcon} alt="Edit on CodePen" width="40" height="40" />
+      <input type="image" src={editIcon} alt="Edit on CodePen" width={width} height={height} />
     </form>
   )
 }
