@@ -1,6 +1,8 @@
 .Example {
+  padding: 2rem 0;
+
   &:not(:last-child) {
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
   }
   &__header {
     display: flex;
@@ -8,46 +10,59 @@
   }
   &_heading {
     margin-bottom: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
   &__toolbar {
-    padding: 0 .5rem;
+    padding: 0 1rem;
   }
-  &__body {}
-  &_body_description {
-    margin-bottom: .5em;
-    font-size: 1rem;
+  &__section {
   }
-  &__snippet {
-    padding: 1em;
-    margin: .5rem 0;
-    overflow: auto;
-    background-color: transparent;
-    border-radius: .3em;
+  &__section + &__section {
+    margin-top: 2rem;
   }
-
-  &__snippet_pre {
-    float: left; /* 1 */
-    min-width: 100%; /* 2 */
+  &__section_heading {
+    padding: .5rem;
+    font-weight: 700;
+    text-align: right;
+  }
+  &__section__body {
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+  }
+  &__section__body.has-no-padding {
     padding: 0;
+  }
+  &__pre[class*="language-"],
+  &__pre[class*="language-"] > code {
+    font-size: 95%;
+    line-height: 1.75;
+  }
+  &__pre[class*="language-"] {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 1rem 0;
     margin: 0;
     overflow: initial;
     background-color: transparent;
-
     border-left: 0;
-    // box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
     box-shadow: none;
     &::before,
     &::after {
       display: none;
     }
-    code {
-      background-color: transparent;
-      // border-left: 10px solid #358ccb;
-      // -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-      // box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-      border-left: 0;
-      box-shadow: none;
-    }
+  }
+  &__pre[class*="language-"] > code {
+    padding: 0 1rem;
+    background-color: #fff;
+    // background-image: linear-gradient(transparent 50%, #f6f6f6 50%);
+    background-image: none;
+    border-left: 0;
+    box-shadow: none;
+  }
+  &__pre[class*="language-"] .token {
   }
 }

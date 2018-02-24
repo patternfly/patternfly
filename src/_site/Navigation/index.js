@@ -19,16 +19,16 @@ const Navigation = ({ links, isHorizontal = false }) => {
   } else {
     navigationItems = (
       <li className="Navigation__item">
-        No items founds
+        <p className="Navigation_not-found-message">None found</p>
       </li>
     )
   }
   return (
-    <nav className={`Navigation ${isHorizontalModifier}`}>
+    <div className={`Navigation ${isHorizontalModifier}`}>
       <ul className="Navigation__items">
         {navigationItems}
       </ul>
-    </nav>
+    </div>
   )
 }
 

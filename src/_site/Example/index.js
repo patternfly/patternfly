@@ -4,8 +4,8 @@ import Prism from 'prismjs'
 import PrismCode from 'react-prism'
 import pretty from 'pretty'
 import CodepenButton from '@siteComponents/CodepenButton'
-import 'prismjs/themes/prism-coy.css'
 import './styles.scss'
+import 'prismjs/themes/prism-coy.css'
 
 export default ({heading, description, children}) => {
   const output = ReactDOMServer
@@ -22,15 +22,16 @@ export default ({heading, description, children}) => {
           <CodepenButton html={indentedOutput} />
         </div>
       </div>
-      <div className="Example__body">
-        <p className="Example_body_description">{description}</p>
-        <h4 className="Example__body_heading">Preview</h4>
-        <div className="Example__preview">
+      <div className="Example__section">
+        <h4 className="Example__section_heading">Preview</h4>
+        <div className="Example__section__body">
           {children}
         </div>
-        <h4 className="Example__body_heading">Code</h4>
-        <div className="Example__snippet">
-          <pre className="Example__snippet_pre">
+      </div>
+      <div className="Example__section">
+        <h4 className="Example__section_heading">Code</h4>
+        <div className="Example__section__body has-no-padding">
+          <pre className="Example__pre">
             <PrismCode className="language-html">
               {indentedOutput}
             </PrismCode>
