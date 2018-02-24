@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
   &__main {
     display: flex;
@@ -15,54 +15,23 @@
   }
   &__sidebar {
     flex: 0 1 auto;
-    min-width: 12rem;
-    padding: 1rem;
-    border-right: 1px solid #f1f1f1;
+    padding: 1rem 2rem;
+    border-right: 1px solid #eaeaea;
+  }
+  &__sidebar_heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  &__sidebar__item + &__sidebar__item {
+    margin-top: 1rem;
   }
   &__content {
     flex: 1;
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
   &__footer {
-    padding: 1rem;
-  }
-}
-
-.example {
-  margin: 1rem 0;
-}
-
-.category-template {
-  &_heading {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  &__result {
-    padding: 1rem 0;
-  }
-  &__result:not(:last-child) {
-    border-bottom: 1px solid #f1f1f1;
-  }
-  &__result_heading { margin-bottom: .5rem; }
-  &__result_description { margin-bottom: .5rem; }
-  &__result_read-more {}
-}
-
-.documentation-template {
-  &_heading {
-    margin-bottom: .5em;
-    font-size: 1.5rem;
-  }
-  &_description { margin-bottom: .5rem; }
-  &__header {}
-  &__body { padding: 1rem 0; }
-  &__example {}
-  &__example + &__example { margin-top: .5rem; }
-  &__example__header {}
-  &__example__body {
-    padding: 1rem;
-    background-color: #fff;
-    border: 1px solid #f1f1f1;
+    padding: 1rem 2rem;
   }
 }
 /* stylelint-enable */

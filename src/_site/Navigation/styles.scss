@@ -2,6 +2,9 @@
   &.is-horizontal > &__items {
     display: flex;
   }
+  &.is-horizontal &_link {
+    padding: .5rem;
+  }
   &__items {
     padding: 0;
     margin: 0;
@@ -10,15 +13,11 @@
   &__item {
     text-transform: capitalize;
   }
-  &__item.is-category {}
-  &__item.is-category:not(:first-child) {
-    margin-top: .5rem;
-  }
   &_link {
     display: block;
-    padding: .5rem;
+    padding: .5rem 0;
   }
-  &_link.is-category {
-    font-weight: 600;
+  &_not-found-message {
+    padding: .5rem 0;
   }
 }

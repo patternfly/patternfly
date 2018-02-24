@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Toolbar from '@siteComponents/Toolbar'
 import Navigation from '@siteComponents/Navigation'
 
-import './styles.scss'
 import '../patternfly/patternfly.scss'
+import './styles.scss'
 
 export default ({ children, data }) => {
   let allPages = data.allSitePage.edges.reduce((accum, edge) => {
@@ -47,14 +46,18 @@ export default ({ children, data }) => {
       </header>
       <main className="layout__main">
         <div className="layout__sidebar">
-          <h3 className="layout__sidebar_header">Components</h3>
-          <Navigation links={allPages.component} />
-
-          <h3 className="layout__sidebar_header">Patterns</h3>
-          <Navigation links={allPages.pattern} />
-
-          <h3 className="layout__sidebar_header">Demos</h3>
-          <Navigation links={allPages.demo} />
+          <div className="layout__sidebar__item">
+            <h3 className="layout__sidebar_heading">Components</h3>
+            <Navigation links={allPages.component} />
+          </div>
+          <div className="layout__sidebar__item">
+            <h3 className="layout__sidebar_heading">Patterns</h3>
+            <Navigation links={allPages.pattern} />
+          </div>
+          <div className="layout__sidebar__item">
+            <h3 className="layout__sidebar_heading">Demos</h3>
+            <Navigation links={allPages.demo} />
+          </div>
         </div>
         <div className="layout__content">
           {children()}
