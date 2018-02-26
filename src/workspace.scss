@@ -1,0 +1,129 @@
+/* stylelint-disable */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  &__main {
+    display: flex;
+    flex: 1;
+  }
+  &__sidebar {
+    flex: 0 1 auto;
+    padding: 1rem 2rem;
+    border-right: 1px solid #eaeaea;
+  }
+  &__sidebar_heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  &__sidebar__item + &__sidebar__item {
+    margin-top: 1rem;
+  }
+  &__content {
+    flex: 1;
+    padding: 1rem 2rem;
+  }
+  &__footer {
+    padding: 1rem 2rem;
+  }
+}
+
+.page-template {
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  h6 {
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  h1 {
+    margin-bottom: 0.5em;
+  }
+  h2, h3, h4, h5, h6 {
+    margin: 1em 0 .5em 0;
+  }
+  p {
+    margin: .5em 0;
+  }
+  code {
+    display: inline-block;
+    padding: .25em;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, .1);
+    margin: 0 0.25em;
+  }
+}
+
+.gatsby-highlight-code-line {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: block;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.gatsby-highlight {
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  padding: 1rem;
+  pre[class*="prism-language-"],
+  pre[class*="prism-language-"] > code {
+    box-sizing: border-box;
+    font-size: .95rem;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    line-height: 1.75;
+  }
+  pre[class*="prism-language-"] {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    float: left;
+    background-color: transparent;
+    border-left: 0;
+    box-shadow: none;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  pre[class*="prism-language-"] > code {
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    background-color: #fff;
+    background-image: none;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+/* stylelint-enable */
