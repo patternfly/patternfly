@@ -49,7 +49,12 @@ const plugins = [
     options: {
       plugins: [
         `gatsby-remark-autolink-headers`,
-        `gatsby-remark-prismjs`,
+        {
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: 'prism-language-'
+          }
+        },
       ],
     },
   },

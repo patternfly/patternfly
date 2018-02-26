@@ -4,8 +4,9 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Navigation from '@siteComponents/Navigation'
 
+import 'prismjs/themes/prism-coy.css'
 import '../patternfly/patternfly.scss'
-import './styles.scss'
+import '../workspace.scss'
 
 export default ({ children, data }) => {
   let allPages = data.allSitePage.edges.reduce((accum, edge) => {
@@ -36,7 +37,6 @@ export default ({ children, data }) => {
     <div className="layout">
       <Helmet>
         <title>PF Next</title>
-        <link href="//fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet" />
       </Helmet>
       <header className="layout__header">
         <h1>

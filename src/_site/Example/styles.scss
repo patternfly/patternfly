@@ -10,7 +10,7 @@
   }
   &_heading {
     margin-bottom: .5rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 700;
   }
   &__toolbar {
@@ -38,13 +38,14 @@
   }
   &__pre[class*="language-"],
   &__pre[class*="language-"] > code {
-    font-size: 95%;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: .95rem;
     line-height: 1.75;
   }
   &__pre[class*="language-"] {
     min-width: 100%;
     max-width: 100%;
-    padding: 1rem 0;
+    padding: 1rem;
     margin: 0;
     overflow: initial;
     background-color: transparent;
@@ -56,7 +57,7 @@
     }
   }
   &__pre[class*="language-"] > code {
-    padding: 0 1rem;
+    padding: 0;
     background-color: #fff;
     // background-image: linear-gradient(transparent 50%, #f6f6f6 50%);
     background-image: none;
