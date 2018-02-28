@@ -41,6 +41,7 @@
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     font-size: .95rem;
     line-height: 1.75;
+    white-space: pre-wrap;
   }
   &__pre[class*="language-"] {
     min-width: 100%;
