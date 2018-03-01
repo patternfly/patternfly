@@ -8,12 +8,14 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   const PAGES_BASE_DIR = path.resolve(__dirname, './src/pages')
   const PATTERNS_BASE_DIR = path.resolve(__dirname, './src/patternfly/patterns')
   const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/components')
+  const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts')
   const isMarkdown = (node.internal.type === 'MarkdownRemark')
 
   if (isMarkdown) {
     const isPage = (node.fileAbsolutePath.includes(PAGES_BASE_DIR))
     const isPattern = (node.fileAbsolutePath.includes(PATTERNS_BASE_DIR))
     const isComponent = (node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR))
+    const isLayout = (node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR))
 
     if (isPage) {
       let relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath)
@@ -35,6 +37,13 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       createNodeField({ node, name: 'path', value: pagePath })
       createNodeField({ node, name: 'type', value: 'documentation' })
       createNodeField({ node, name: 'contentType', value: 'pattern' })
+    }  else if (isLayout) {
+      let layoutName = path.basename(path.dirname(node.fileAbsolutePath))
+      let layoutSlug = inflection.dasherize(layoutName)
+      let pagePath = `/layouts/${layoutName}/docs`
+      createNodeField({ node, name: 'path', value: pagePath })
+      createNodeField({ node, name: 'type', value: 'documentation' })
+      createNodeField({ node, name: 'contentType', value: 'layout' })
     }
   }
 }
@@ -77,8 +86,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage, createNodeField } = boundActionCreators
-  const CATEGORY_PAGE_REGEX = /^\/(components|patterns)\/$/
-  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns)\/([A-Za-z0-9_-]+)/
+  const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts)\/$/
+  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts)\/([A-Za-z0-9_-]+)/
   const DEMO_PAGE_REGEX = /^\/(demos)\/([A-Za-z0-9_-]+)/
   return new Promise((resolve, reject) => {
     let isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX)
@@ -136,6 +145,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
         '@siteComponents': path.resolve(__dirname, './src/_site'),
         '@patterns': path.resolve(__dirname, './src/patternfly/patterns'),
         '@components': path.resolve(__dirname, './src/patternfly/components'),
+        '@layouts': path.resolve(__dirname, './src/patternfly/layouts'),
         '@project': path.resolve(__dirname, './src')
       }
     },
