@@ -3,14 +3,14 @@
 // and use !default so they can be overwritten
 
 
-// `$pf-global-concept-state-size-propierty`
+// `$pf-global--concept--state--size--PropiertyCamelCase`
 
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
 // transformation from px to rem.
-$pf-global-font-size-root:  16 !default; //for fonts
-$pf-global-space-size-root: 16 !default; // for spaces
+$pf-global--font-size-root:  16 !default; //for fonts
+$pf-global--space-size-root: 16 !default; // for spaces
 
 //
 // Color system
@@ -18,25 +18,26 @@ $pf-global-space-size-root: 16 !default; // for spaces
 
 // stylelint-disable
 
-$pf-global-primary-color:       $pf-color-blue-300 !default;
-$pf-global-secondary-color:     $pf-color-black-600 !default;
-$pf-global-success-color:       $pf-color-green-400 !default;
-$pf-global-info-color:          $pf-color-cyan-400 !default;
-$pf-global-warning-color:       $pf-color-gold-400 !default;
-$pf-global-danger-color:        $pf-color-red-100 !default;
-$pf-global-light-color:         $pf-color-black-100 !default;
-$pf-global-dark-color:          $pf-color-black-800 !default;
+$pf-global--primary-color:       $pf-color-blue-300 !default;
+$pf-global--secondary-color:     $pf-color-black-600 !default;
+$pf-global--success-color:       $pf-color-green-400 !default;
+$pf-global--info-color:          $pf-color-cyan-400 !default;
+$pf-global--warning-color:       $pf-color-gold-400 !default;
+$pf-global--danger-color:        $pf-color-red-100 !default;
+$pf-global--light--Color:        $pf-color-black-100 !default;
+$pf-global--dark--Color:         $pf-color-black-800 !default;
 
+// DELETE FROM HERE =======================================
 $theme-colors: () !default;
 $theme-colors: map-merge((
-  "primary":    $pf-global-primary-color,
-  "secondary":  $pf-global-secondary-color,
-  "success":    $pf-global-success-color,
-  "info":       $pf-global-info-color,
-  "warning":    $pf-global-warning-color,
-  "danger":     $pf-global-danger-color,
-  "light":      $pf-global-light-color,
-  "dark":       $pf-global-dark-color
+  "primary":    $pf-global--primary-color,
+  "secondary":  $pf-global--secondary-color,
+  "success":    $pf-global--success-color,
+  "info":       $pf-global--info-color,
+  "warning":    $pf-global--warning-color,
+  "danger":     $pf-global--danger-color,
+  "light":      $pf-global--light--Color,
+  "dark":       $pf-global--dark--Color
 ), $theme-colors);
 // stylelint-enable
 
@@ -50,27 +51,27 @@ $pf-global-yiq-contrasted-threshold: 150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $pf-global-yiq-text-dark: $pf-color-black-900 !default;
 $pf-global-yiq-text-light: $pf-color-white !default;
-
+// TO HERE ==========================
 
 // PatternFly box shadows
 
-$pf-global-background-color: $pf-color-black-100 !default;
+$pf-global--BackgroundColor: $pf-color-black-100 !default;
 
 // PatternFly box shadows
 //
 // Use shadows to show depth: -sm is for btns, -md is for cards, -lg is for toast or modals, -inset is for inputs
 
-$pf-global-box-shadow-sm: 0  pf-prem(2)  pf-prem(3) pf-prem(-2) rgba($pf-color-black-1000, .25) !default;
-$pf-global-box-shadow-md: 0  pf-prem(2)  pf-prem(2) rgba($pf-color-black-1000, .2) !default;
-$pf-global-box-shadow-lg: 0  pf-prem(3)  pf-prem(5) rgba($pf-color-black-1000, .3) !default;
-$pf-global-box-shadow-inset: inset 0  pf-prem(1)  pf-prem(2) rgba($pf-color-black-1000, .1) !default;
-$pf-global-box-shadow-left: -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, .3) !default;
+$pf-global--sm--BoxShadow:     0  pf-prem(2)  pf-prem(3) pf-prem(-2) rgba($pf-color-black-1000, .25) !default;
+$pf-global--md--BoxShadow:     0  pf-prem(2)  pf-prem(2) rgba($pf-color-black-1000, .2) !default;
+$pf-global--lg--BoxShadow:     0  pf-prem(3)  pf-prem(5) rgba($pf-color-black-1000, .3) !default;
+$pf-global--inset--BoxShadow:  inset 0  pf-prem(1)  pf-prem(2) rgba($pf-color-black-1000, .1) !default;
+$pf-global--left--BoxShadow:   -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, .3) !default;
 
 
 // Patternfly font path
 
 // Defines path to /font foldeer
-$pf-global-font-path: "/assets/fonts" !default;
+$pf-global--font-path: "/assets/fonts" !default;
 // $pf-icon-font-name-fa:  "FontAwesome" !default;
 // $pf-icon-font-name:  "PatternFlyIcons-webfont" !default;
 // $pf-icon-prefix:  pf-icon !default;
@@ -80,115 +81,110 @@ $pf-global-font-path: "/assets/fonts" !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$pf-global-enable-font-overpass-cdn:     false !default;
-$pf-global-load-pf-3:                    false !default;
-$pf-global-reset:                        true !default;
+$pf-global--enable-font-overpass-cdn:     false !default;
+$pf-global--load-pf-3:                    false !default;
+$pf-global--enable-reset:                 true !default;
 
 // Spacers
 //
 // Use these spacers to define all margins and paddings
 
-$pf-global-spacer-xxxs:   pf-size-prem(2px) !default;
-$pf-global-spacer-xxs:    pf-size-prem(4px) !default;
-$pf-global-spacer-xs:     pf-size-prem(8px) !default;
-$pf-global-spacer-sm:     pf-size-prem(12px) !default;
-$pf-global-spacer-md:     pf-size-prem(16px) !default;
-$pf-global-spacer-lg:     pf-size-prem(20px) !default;
-$pf-global-spacer-xl:     pf-size-prem(24px) !default;
-$pf-global-spacer-xxl:    pf-size-prem(28px) !default;
-$pf-global-spacer-xxxl:   pf-size-prem(32px) !default;
+$pf-global--spacer--xxxs:   pf-size-prem(2px) !default;
+$pf-global--spacer--xxs:    pf-size-prem(4px) !default;
+$pf-global--spacer--xs:     pf-size-prem(8px) !default;
+$pf-global--spacer--sm:     pf-size-prem(12px) !default;
+$pf-global--spacer--md:     pf-size-prem(16px) !default;
+$pf-global--spacer--lg:     pf-size-prem(20px) !default;
+$pf-global--spacer--xl:     pf-size-prem(24px) !default;
+$pf-global--spacer--xxl:    pf-size-prem(28px) !default;
+$pf-global--spacer--xxxl:   pf-size-prem(32px) !default;
 
 
 // Grid breakpoints
 //
-$pf-global-breakpoint-xs: 0 !default;
-$pf-global-breakpoint-sm: 576px !default;
-$pf-global-breakpoint-md: 768px !default;
-$pf-global-breakpoint-lg: 992px !default;
-$pf-global-breakpoint-xl: 1200px !default;
+$pf-global--breakpoint--xs: 0 !default;
+$pf-global--breakpoint--sm: 576px !default;
+$pf-global--breakpoint--md: 768px !default;
+$pf-global--breakpoint--lg: 992px !default;
+$pf-global--breakpoint--xl: 1200px !default;
 
-// TODO: Generate a map to create a mixin.
-// something like https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss
-
-
-// TODO: Create a theme map for all colors
 
 // Links
 //
 
-$pf-global-link-color:             $pf-global-primary-color !default;
-$pf-global-link-decoration:        none !default;
-$pf-global-link-hover-color:       darken($pf-global-primary-color, 15%) !default;
-$pf-global-link-hover-decoration:  underline !default;
+$pf-global--link--Color:                  $pf-global--primary-color !default;
+$pf-global--link--TextDecoration:         none !default;
+$pf-global--link--hover--Color:           darken($pf-global--primary-color, 15%) !default;
+$pf-global--link--hover--TextDecoration:  underline !default;
 
 
 // Borders
 //
 
-$pf-global-border-width:        1px !default;
-$pf-global-dark-border-color:   $pf-color-black-400 !default;
-$pf-global-light-border-color:  $pf-color-black-400 !default;
+$pf-global--BorderWidth:         1px !default;
+$pf-global--dark--BorderColor:   $pf-color-black-400 !default;
+$pf-global--light--BorderColor:  $pf-color-black-400 !default;
 
 // Background
 //
 
-$pf-global-light-background-color:      $pf-color-white !default;
-$pf-global-light-off-background-color:  $pf-color-black-200 !default;
+$pf-global--light--BackgroundColor:      $pf-color-white !default;
+$pf-global--light-off--BackgroundColor:  $pf-color-black-200 !default;
 
-$pf-global-dark-background-color:       $pf-color-black-900 !default;
-$pf-global-dark-off-background-color:   $pf-color-black-800 !default;
+$pf-global--dark--BackgroundColor:       $pf-color-black-900 !default;
+$pf-global--dark-off--BackgroundColor:   $pf-color-black-800 !default;
 
 
 // Copy color
 //
 
-$pf-global-dark-color:               $pf-color-black-900 !default;
-$pf-global-dark-off-color:         $pf-color-black-400 !default;
+$pf-global--dark--Color:       $pf-color-black-900 !default;
+$pf-global-dark-off-color:     $pf-color-black-400 !default;
 
-$pf-global-light-color:               $pf-color-white !default;
-$pf-global-light-off-color:         $pf-color-black-200 !default;
+$pf-global--light--Color:        $pf-color-white !default;
+$pf-global--light-off--Color:    $pf-color-black-200 !default;
 
 // States
 
-$pf-global-hover-color:                   $pf-color-red-100 !default;
-$pf-global-hover-background-color:        $pf-color-red-300 !default;
-$pf-global-hover-border-color:            $pf-color-red-300 !default;
+$pf-global--hover--Color:                  $pf-color-red-100 !default;
+$pf-global--hover--BackgroundColor:        $pf-color-red-300 !default;
+$pf-global--hover--BorderColor:            $pf-color-red-300 !default;
 
-$pf-global-active-color:                  $pf-color-blue-400 !default;
-$pf-global-active-background-color:       $pf-color-blue-100 !default;
-$pf-global-active-border-color:           $pf-color-blue-100 !default;
+$pf-global--active--Color:                 $pf-color-blue-400 !default;
+$pf-global--active--BackgroundColor:       $pf-color-blue-100 !default;
+$pf-global--active--BorderColor:           $pf-color-blue-100 !default;
 
-$pf-global-disabled-color:                $pf-color-black-400 !default;
-$pf-global-disabled-background-color:     $pf-color-black-200 !default;
-$pf-global-disabled-border-color:         $pf-color-black-200 !default;
+$pf-global--disabled--Color:               $pf-color-black-400 !default;
+$pf-global--disabled--BackgroundColor:     $pf-color-black-200 !default;
+$pf-global--disabled--BorderColor:         $pf-color-black-200 !default;
 
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 // stylelint-disable value-keyword-case
-$pf-global-font-family-sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global--sans-serif--FontFamily: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$pf-global-font-family-monospace:  “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$pf-global--monospace--FontFamily:  “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
-$pf-global-font-size-base:             pf-font-prem(16px) !default;
+$pf-global--base--FontSize:             pf-font-prem(16px) !default;
 
-$pf-global-hero-title-font-size:       pf-font-prem(48px) !default;
-$pf-global-main-title-font-size:       pf-font-prem(32px) !default;
-$pf-global-secondary-title-font-size:  pf-font-prem(24px) !default;
-$pf-global-sub-title-font-size:        pf-font-prem(19px) !default;
-$pf-global-body-font-size:             pf-font-prem(16px) !default;
-$pf-global-caption-font-size:          pf-font-prem(12px) !default;
+$pf-global--hero-title--FontSize:       pf-font-prem(48px) !default;
+$pf-global--main-title--FontSize:       pf-font-prem(32px) !default;
+$pf-global--secondary-title--FontSize:  pf-font-prem(24px) !default;
+$pf-global--sub-title--FontSize:        pf-font-prem(19px) !default;
+$pf-global--body--FontSize:             pf-font-prem(16px) !default;
+$pf-global--caption--FontSize:          pf-font-prem(12px) !default;
 
-$pf-global-font-weight-light:          300 !default;
-$pf-global-font-weight-normal:         500 !default;
-$pf-global-font-weight-semi-bold:      600 !default;
-$pf-global-font-weight-bold:           700 !default;
+$pf-global--light--FontWeight:          300 !default;
+$pf-global--normal--FontWeight:         500 !default;
+$pf-global--semi-bold--FontWeight:      600 !default;
+$pf-global--bold--FontWeight:           700 !default;
 
-$pf-global-line-height-sm:           1.2 !default;
-$pf-global-line-height-base:         1.5 !default;
-$pf-global-line-height-lg:           1.8 !default;
+$pf-global--sm--LineHeight:         1.2 !default;
+$pf-global--md--LineHeight:         1.5 !default;
+$pf-global--lg--LineHeight:         1.8 !default;
 
 
 // filters
@@ -200,7 +196,7 @@ $pf-global-line-height-lg:           1.8 !default;
 // patternfly components    |     Boostrap skin
 
 
-@if $pf-global-load-pf-3 {
+@if $pf-global--load-pf-3 {
   @import url("https://fonts.googleapis.com/css?family=Open+Sans");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
@@ -209,49 +205,49 @@ $pf-global-line-height-lg:           1.8 !default;
 // stylelint-disable
 :root {
   // Borders
-  --pf-global-border-width: $pf-global-border-width;
+  --pf-global--BorderWidth: $pf-global--BorderWidth;
 
   // spacers
-  --pf-global-spacer-xxxs:   $pf-global-spacer-xxxs;
-  --pf-global-spacer-xxs:    $pf-global-spacer-xxs;
-  --pf-global-spacer-xs:     $pf-global-spacer-xs;
-  --pf-global-spacer-sm:     $pf-global-spacer-sm;
-  --pf-global-spacer-md:     $pf-global-spacer-md;
-  --pf-global-spacer-lg:     $pf-global-spacer-lg;
-  --pf-global-spacer-xl:     $pf-global-spacer-xl;
-  --pf-global-spacer-xxl:    $pf-global-spacer-xxl;
-  --pf-global-spacer-xxxl:   $pf-global-spacer-xxxl;
+  --pf-global--spacer--xxxs:   $pf-global--spacer--xxxs;
+  --pf-global--spacer--xxs:    $pf-global--spacer--xxs;
+  --pf-global--spacer--xs:     $pf-global--spacer--xs;
+  --pf-global--spacer--sm:     $pf-global--spacer--sm;
+  --pf-global--spacer--md:     $pf-global--spacer--md;
+  --pf-global--spacer--lg:     $pf-global--spacer--lg;
+  --pf-global--spacer--xl:     $pf-global--spacer--xl;
+  --pf-global--spacer--xxl:    $pf-global--spacer--xxl;
+  --pf-global--spacer--xxxl:   $pf-global--spacer--xxxl;
 
   // theme colors
-  --pf-global-primary-color:       $pf-color-blue-300;
-  --pf-global-primary-dark-color:  $pf-color-blue-400;
-  --pf-global-danger-color:        $pf-color-red-100;
-  --pf-global-danger-dark-color:   $pf-color-red-200;
+  --pf-global--primary-color:       $pf-color-blue-300;
+  --pf-global-primary-dark-color:   $pf-color-blue-400;
+  --pf-global--danger-color:        $pf-color-red-100;
+  --pf-global-danger-dark-color:    $pf-color-red-200;
 
   // text color
-  --pf-global-dark-color:             $pf-global-dark-color;
-  --pf-global-dark-off-color:         $pf-global-dark-off-color;
-  --pf-global-light-color:        $pf-global-light-color;
-  --pf-global-light-off-color:    $pf-global-light-off-color;
+  --pf-global--dark--Color:         $pf-global--dark--Color;
+  --pf-global-dark-off-color:       $pf-global-dark-off-color;
+  --pf-global--light--Color:        $pf-global--light--Color;
+  --pf-global--light-off--Color:    $pf-global--light-off--Color;
 
 
   // Font size
-  --pf-global-hero-title-font-size: $pf-global-hero-title-font-size;
-  --pf-global-main-title-font-size: $pf-global-main-title-font-size;
-  --pf-global-secondary-title-font-size: $pf-global-secondary-title-font-size;
-  --pf-global-sub-title-font-size: $pf-global-sub-title-font-size;
-  --pf-global-body-font-size: $pf-global-body-font-size;
-  --pf-global-caption-font-size: $pf-global-caption-font-size;
+  --pf-global--hero-title--FontSize:       $pf-global--hero-title--FontSize;
+  --pf-global--main-title--FontSize:       $pf-global--main-title--FontSize;
+  --pf-global--secondary-title--FontSize:  $pf-global--secondary-title--FontSize;
+  --pf-global--sub-title--FontSize:        $pf-global--sub-title--FontSize;
+  --pf-global--body--FontSize:             $pf-global--body--FontSize;
+  --pf-global--caption--FontSize:          $pf-global--caption--FontSize;
 
   // line height
-  --pf-global-line-height-sm:    $pf-global-line-height-sm;
-  --pf-global-line-height-base:  $pf-global-line-height-sm;
-  --pf-global-line-height-lg:    $pf-global-line-height-sm;
+  --pf-global--sm--LineHeight:   $pf-global--sm--LineHeight;
+  --pf-global--md--LineHeight:   $pf-global--sm--LineHeight;
+  --pf-global--lg--LineHeight:   $pf-global--sm--LineHeight;
 
   // Font weight
-  --pf-global-font-weight-light:     $pf-global-font-weight-light;
-  --pf-global-font-weight-normal:    $pf-global-font-weight-normal;
-  --pf-global-font-weight-semi-bold: $pf-global-font-weight-semi-bold;
-  --pf-global-font-weight-bold:      $pf-global-font-weight-bold;
+  --pf-global--light--FontWeight:     $pf-global--light--FontWeight;
+  --pf-global--normal--FontWeight:    $pf-global--normal--FontWeight;
+  --pf-global--semi-bold--FontWeight: $pf-global--semi-bold--FontWeight;
+  --pf-global--bold--FontWeight:      $pf-global--bold--FontWeight;
 }
 // stylelint-enable

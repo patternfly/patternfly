@@ -11,15 +11,15 @@
 
 // stylelint-disable
 :root {
-  --pf-c-vertical-nav__link--PaddingTop:        var(--pf-global-spacer-sm);
-  --pf-c-vertical-nav__link--PaddingBottom:     var(--pf-global-spacer-sm);
-  --pf-c-vertical-nav__link--MarginTop:         var(--pf-global-spacer-xxl);
-  --pf-c-vertical-nav__link--MarginBottom:      var(--pf-global-spacer-xxl);
+  --pf-c-vertical-nav__link--PaddingTop:        var(--pf-global--spacer--sm);
+  --pf-c-vertical-nav__link--PaddingBottom:     var(--pf-global--spacer--sm);
+  --pf-c-vertical-nav__link--MarginTop:         var(--pf-global--spacer--xxl);
+  --pf-c-vertical-nav__link--MarginBottom:      var(--pf-global--spacer--xxl);
   --pf-c-vertical-nav__link--Color:             var(--pf-global-dark-off-color);
-  --pf-c-vertical-nav__link--active--Color:     var(--pf-global-dark-color);
-  --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global-disabled-color);
+  --pf-c-vertical-nav__link--active--Color:     var(--pf-global--dark--Color);
+  --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global--disabled--Color);
   --pf-c-vertical-nav__link--hover--Color:      var(--pf-global-component-color);
-  --pf-c-vertical-nav__link-icon--PaddingRight: var(--pf-global-spacer-xl);
+  --pf-c-vertical-nav__link-icon--PaddingRight: var(--pf-global--spacer--xl);
 }
 
 // stylelint-enable
@@ -35,7 +35,7 @@
   &__link {
     display: flex;
     align-items: center;
-    padding-top: $pf-global-spacer-sm;
+    padding-top: $pf-global--spacer--sm;
     padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom, .8rem);
     margin-top: var(--pf-c-vertical-nav__link--MarginTop, 2rem);
     margin-bottom: var(--pf-c-vertical-nav__link--MarginBottom, 2rem);
@@ -69,7 +69,7 @@
         width: 32px;
         height: 4px;
         content: "";
-        background-color: $pf-global-link-color;
+        background-color: $pf-global--link--Color;
       }
     }
 

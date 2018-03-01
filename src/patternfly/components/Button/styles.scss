@@ -2,18 +2,18 @@
 
 // stylelint-disable
 :root {
-  --pf-c-button--PaddingTop:     var(--pf-global-spacer-xs);
-  --pf-c-button--PaddingRight:   var(--pf-global-spacer-xxl);
-  --pf-c-button--PaddingBottom:  var(--pf-global-spacer-xs);
-  --pf-c-button--PaddingLeft:    var(--pf-global-spacer-xxl);
-  --pf-c-button--LineHeight:     var(--pf-global-line-height-sm);
-  --pf-c-button--FontWeight:     var(--pf-global-font-weight-semi-bold);
-  --pf-c-button--BorderWidth:    var(--pf-global-border-width);
+  --pf-c-button--PaddingTop:     var(--pf-global--spacer--xs);
+  --pf-c-button--PaddingRight:   var(--pf-global--spacer--xxl);
+  --pf-c-button--PaddingBottom:  var(--pf-global--spacer--xs);
+  --pf-c-button--PaddingLeft:    var(--pf-global--spacer--xxl);
+  --pf-c-button--LineHeight:     var(--pf-global--sm--LineHeight);
+  --pf-c-button--FontWeight:     var(--pf-global--semi-bold--FontWeight);
+  --pf-c-button--BorderWidth:    var(--pf-global--BorderWidth);
   --pf-c-button--BorderColor:    var(--pf-global-border-color);
 
   // Primary btn
-  --pf-c-button--primary--BackgroundColor:         var(--pf-global-primary-color);
-  --pf-c-button--primary--BorderColor:             var(--pf-global-primary-color);
+  --pf-c-button--primary--BackgroundColor:         var(--pf-global--primary-color);
+  --pf-c-button--primary--BorderColor:             var(--pf-global--primary-color);
   --pf-c-button--primary--Color:                   var(--pf-global-component-alt-color);
   --pf-c-button--primary--hover--BackgroundColor:  var(--pf-global-primary-dark-color);
   --pf-c-button--primary--hover--BorderColor:      var(--pf-global-primary-dark-color);
@@ -21,18 +21,18 @@
 
   // Secondary btn
   --pf-c-button--secondary--BackgroundColor:        transparent;
-  --pf-c-button--secondary--BorderColor:            var(--pf-global-primary-color);
-  --pf-c-button--secondary--Color:                  var(--pf-global-primary-color);
-  --pf-c-button--secondary--hover--BackgroundColor: var(--pf-global-primary-color);
-  --pf-c-button--secondary--hover--BorderColor:     var(--pf-global-primary-color);
+  --pf-c-button--secondary--BorderColor:            var(--pf-global--primary-color);
+  --pf-c-button--secondary--Color:                  var(--pf-global--primary-color);
+  --pf-c-button--secondary--hover--BackgroundColor: var(--pf-global--primary-color);
+  --pf-c-button--secondary--hover--BorderColor:     var(--pf-global--primary-color);
   --pf-c-button--secondary--hover--Color:           var(--pf-global-component-alt-color);
 
   // Secondary Inverse btn
   --pf-c-button--secondary-alt--BackgroundColor:        transparent;
   --pf-c-button--secondary-alt--BorderColor:            var(--pf-global-component-alt-color);
   --pf-c-button--secondary-alt--Color:                  var(--pf-global-component-alt-color);
-  --pf-c-button--secondary-alt--hover--BackgroundColor: var(--pf-global-primary-color);
-  --pf-c-button--secondary-alt--hover--BorderColor:     var(--pf-global-primary-color);
+  --pf-c-button--secondary-alt--hover--BackgroundColor: var(--pf-global--primary-color);
+  --pf-c-button--secondary-alt--hover--BorderColor:     var(--pf-global--primary-color);
   --pf-c-button--secondary-alt--hover--Color:           var(--pf-global-component-alt-color);
 
   // Tertiary btn
@@ -44,16 +44,16 @@
   --pf-c-button--tertiary--hover--Color:           var(--pf-global-component-alt-color);
 
   // Destructive btn
-  --pf-c-button--destructive--BackgroundColor:        var(--pf-global-danger-color);
-  --pf-c-button--destructive--BorderColor:            var(--pf-global-danger-color);
+  --pf-c-button--destructive--BackgroundColor:        var(--pf-global--danger-color);
+  --pf-c-button--destructive--BorderColor:            var(--pf-global--danger-color);
   --pf-c-button--destructive--Color:                  var(--pf-global-component-alt-color);
   --pf-c-button--destructive--hover--BackgroundColor: var(--pf-global-danger-dark-color);
   --pf-c-button--destructive--hover--BorderColor:     var(--pf-global-danger-dark-color);
   --pf-c-button--destructive--hover--Color:           var(--pf-global-component-alt-color);
 
   //Sizes
-  --pf-c-button--small--FontSize: var(--pf-global-caption-font-size);
-  --pf-c-button--large--FontSize: var(--pf-global-sub-title-font-size);
+  --pf-c-button--small--FontSize: var(--pf-global--caption--FontSize);
+  --pf-c-button--large--FontSize: var(--pf-global--sub-title--FontSize);
 }
 // stylelint-enable
 
