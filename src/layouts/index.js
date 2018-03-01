@@ -51,6 +51,10 @@ export default ({ children, data }) => {
             <Navigation links={allPages.component} />
           </div>
           <div className="layout__sidebar__item">
+            <h3 className="layout__sidebar_heading">Layouts</h3>
+            <Navigation links={allPages.layout} />
+          </div>
+          <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Patterns</h3>
             <Navigation links={allPages.pattern} />
           </div>
