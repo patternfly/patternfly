@@ -5,10 +5,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: $pf-global-font-family-sans-serif;
-  font-size: $pf-global-body-font-size;
-  font-weight: $pf-global-font-weight-normal;
-  line-height: $pf-global-line-height-base;
+  font-family: $pf-global--sans-serif--FontFamily;
+  font-size: $pf-global--body--FontSize;
+  font-weight: $pf-global--normal--FontWeight;
+  line-height: $pf-global--md--LineHeight;
   background-color: transparent;
   text-rendering: optimizeLegibility;
 }
@@ -20,7 +20,7 @@ html {
   font-size: unset;
 }
 
-@if $pf-global-reset {
+@if $pf-global--enable-reset {
   // Reset
   // Based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
   // stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
@@ -59,7 +59,7 @@ html {
   h5,
   h6 {
     font-size: 100%;
-    font-weight: $pf-global-font-weight-normal;
+    font-weight: $pf-global--normal--FontWeight;
   }
 
   ul {
@@ -113,24 +113,24 @@ html {
 
 
   body {
-    font-family: $pf-global-font-family-sans-serif;
-    font-size: $pf-global-font-size-base;
-    font-weight: $pf-global-font-weight-normal;
-    line-height: $pf-global-line-height-base;
-    color: $pf-global-dark-color;
+    font-family: $pf-global--sans-serif--FontFamily;
+    font-size: $pf-global--base--FontSize;
+    font-weight: $pf-global--normal--FontWeight;
+    line-height: $pf-global--md--LineHeight;
+    color: $pf-global--dark--Color;
     text-align: left;
-    background-color: $pf-global-background-color;
+    background-color: $pf-global--BackgroundColor;
   }
 
   // Links styles
 
   a {
-    color: $pf-global-link-color;
-    text-decoration: $pf-global-link-decoration;
+    color: $pf-global--link--Color;
+    text-decoration: $pf-global--link--TextDecoration;
 
     &:hover {
-      color: $pf-global-link-hover-color;
-      text-decoration: $pf-global-link-hover-decoration;
+      color: $pf-global--link--hover--Color;
+      text-decoration: $pf-global--link--hover--TextDecoration;
     }
   }
 
