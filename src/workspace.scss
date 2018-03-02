@@ -17,8 +17,9 @@
     flex: 1;
   }
   &__sidebar {
-    flex: 0 1 auto;
+    flex: 0 1 20%;
     padding: 1rem 2rem;
+    max-width: 20%;
     border-right: 1px solid #eaeaea;
   }
   &__sidebar_heading {
@@ -30,8 +31,9 @@
     margin-top: 1rem;
   }
   &__content {
-    flex: 1;
+    flex: 0 1 80%;
     padding: 1rem 2rem;
+    max-width: 80%;
   }
   &__footer {
     padding: 1rem 2rem;
