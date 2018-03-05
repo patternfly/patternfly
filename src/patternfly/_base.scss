@@ -114,12 +114,12 @@ html {
 
   body {
     font-family: $pf-global--sans-serif--FontFamily;
-    font-size: $pf-global--base--FontSize;
+    font-size: $pf-global--body--FontSize;
     font-weight: $pf-global--normal--FontWeight;
     line-height: $pf-global--md--LineHeight;
-    color: $pf-global--dark--Color;
+    color: $pf-global--dark-color;
     text-align: left;
-    background-color: $pf-global--BackgroundColor;
+    background-color: $pf-global--light--BackgroundColor;
   }
 
   // Links styles
