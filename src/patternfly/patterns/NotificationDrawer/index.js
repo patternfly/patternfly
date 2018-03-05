@@ -1,6 +1,6 @@
 import React from 'react'
-import Dialog from '@components/dialog'
-import Accordion from '@components/accordion'
+import Dialog from '@components/Dialog'
+import Accordion from '@components/Accordion'
 import docs from './docs.md'
 import './styles.scss'
 
