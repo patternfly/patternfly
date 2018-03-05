@@ -1,6 +1,6 @@
-import React from "react"
-import Link from "gatsby-link"
-import Script from "react-load-script"
+import React from 'react'
+import Link from 'gatsby-link'
+import Script from 'react-load-script'
 
 export default () => {
   return (

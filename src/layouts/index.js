@@ -37,6 +37,7 @@ export default ({ children, data }) => {
     <div className="layout">
       <Helmet>
         <title>PF Next</title>
+        <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
       </Helmet>
       <header className="layout__header">
         <h1>
