@@ -1,38 +1,42 @@
 @import "../../patternfly-utilities";
-
-$pf-c-alert--paddingInline:       $pf-global--spacer--sm !default;
-$pf-c-alert--paddingBlock:        $pf-global--spacer--lg !default;
-$pf-c-alert--marginBottom:        $pf-global--spacer--md !default;
-
-$pf-c-alert--borderWidth:         $pf-global--BorderWidth !default;
-
-$pf-c-alert__link--fontWeight:    $pf-global--bold--FontWeight !default;
-//TODO change these to global variables?
-$pf-c-alert--bgLevel:             -10 !default;
-$pf-c-alert--borderLevel:         -9 !default;
-$pf-c-alert--colorLevel:          6 !default;
-
+:root {
+  --pf-c-alert--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-alert--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-alert--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-alert--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-alert--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-alert--BorderWidth: var(--pf-global--BorderWidth);
+  --pf-c-alert__link--FontWeight: var(--pf-global--bold--FontWeight);
+  --pf-c-alert--is-primary--BackgroundColor: var(--pf-global--primary-color);
+  --pf-c-alert--is-primary--Color: var(--pf-global--light--Color);
+}
 //
 // Base styles
 //
 
 .pf-c-alert {
   position: relative;
-  padding: $pf-c-alert--paddingInline $pf-c-alert--paddingBlock;
-  border: $pf-c-alert--borderWidth solid transparent;
+  padding: var(--pf-c-alert--PaddingTop, .5rem) var(--pf-c-alert--PaddingRight, 2rem) var(--pf-c-alert--PaddingBottom, .5rem) var(--pf-c-alert--PaddingLeft, 2rem);
+  background-color: var(--pf-c-alert--BackgroundColor, transparent);
+  border: var(--pf-c-alert--BorderWidth) solid transparent;
   &__heading {
     // Specified to prevent conflicts of changing $headings-color
     color: inherit;
   }
   &__link {
-    font-weight: $pf-c-alert__link--fontWeight;
+    font-weight: var(--pf-c-alert__link--FontWeight);
   }
-  // Generate contextual modifier classes for colorizing the alert.
-  @each $color, $value in $theme-colors {
-    &.pf-is-#{$color} {
-      @include pf-alert-variant(theme-color-level($color, $pf-c-alert--bgLevel), theme-color-level($color, $pf-c-alert--borderLevel), theme-color-level($color, $pf-c-alert--colorLevel));
-    }
+  &.pf-is-primary {
+    color: var(--pf-c-alert--is-primary--Color);
+    background-color: var(--pf-c-alert--is-primary--BackgroundColor);
   }
+  &.is-secondary {}
+  &.is-success {}
+  &.is-danger {}
+  &.is-warning {}
+  &.is-info {}
+  &.is-light {}
+  &.is-dark {}
 }
 
 // Dismissible alerts
