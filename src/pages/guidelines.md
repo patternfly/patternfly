@@ -44,7 +44,7 @@ A pattern is prefixed with `-p` (after the patterfly prefix `pf-`), for example:
 
 ### Utilities
 
-Since PatternFly is made of isolated component they don't allow dependencies, therefore there are no helpers or utility classes.
+PatternFly is made up of isolated components that don't allow dependencies. Therefore, there are no helpers or utility classes.
 
 ### When to create a new component
 
@@ -58,14 +58,14 @@ PatternFly follows a two-layer theming system where **global variables** always 
 
 ### Global variables
 
-The main reason to have global variables is to maintain consistency, and they adhere to these rules:
+The main reason to have global variables is to maintain consistency. They adhere to the following rules:
 
 - They are prefixed with the word `global` and follow the formula `--pf-global--concept--modifier--state--PropertyCamelCase`.
-  - A `concept` is something like a `spacer` or `main-title`;
+  - a `concept` is something like a `spacer` or `main-title`;
   - a `state` is something like  `hover`, or `expanded`;
   - a `modifier` is something like  `sm`, or `lg`;
   - and a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-- They are concepts, never tied to an element or component. This is wrong: `--pf-global--h1--FontSize`, this is right: `--pf-global--main-title--FontSize`.
+- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--main-title--FontSize`.
 
 For example a global variable setup would look like:
 
@@ -88,7 +88,7 @@ For example a global variable setup would look like:
 
 ### Component variables
 
-The second layer is scoped to theme-able component properties and follow these rules:
+The second layer is scoped to themeable component properties and follow these rules:
 
 - They follow this formula `--pf-c-block__element--modifier--state--PropertyCamelCase`.
   - The `pf-c-block__element--modifier` is the selector name is something like `pf-c-alert__actions`;
@@ -122,13 +122,13 @@ For example:
 }
 ```
 
-This set up allows for consistency across components, it generates a common language between designers and developers, and it gives granular control to authors.
+This setup allows for consistency across components, it generates a common language between designers and developers, and it gives granular control to authors.
 
 ### Comment all magic values
 
 If a situation arises where a value needs entering into the style sheets that isn't already defined in the global variables this should serve as a red flag to you.
 
-In the case where a 'magic' value needs entering ensure a comment is added on the line above to explain its relevance.
+In the case where a 'magic' value needs entering, ensure a comment is added on the line above to explain its relevance.
 
 ## Harry Robert's Guidelines
 
@@ -231,7 +231,7 @@ As a general rule don't overcomplicate Sass, keep it easy to parse for a normal 
 
 #### Nesting
 
-As a general rule avoid Sass nesting to increase specificity, if absolutely necessary, don't exceed a three layer depth.
+As a general rule avoid Sass nesting to increase specificity. If absolutely necessary, don't exceed a three layer depth.
 
 Limit nesting to the following use cases:
 
@@ -241,7 +241,7 @@ Limit nesting to the following use cases:
 
 ##### 1. Modifiers and elements of a block
 
-Make use of [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to write BEM elements and modifiers, you should only have one block selector:
+Make use of [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to write BEM elements and modifiers. You should only have one block selector:
 
 ```sass
 // Good
