@@ -7,8 +7,22 @@
   --pf-c-alert--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-alert--BorderWidth: var(--pf-global--BorderWidth);
   --pf-c-alert__link--FontWeight: var(--pf-global--bold--FontWeight);
-  --pf-c-alert--is-primary--BackgroundColor: var(--pf-global--primary-color);
-  --pf-c-alert--is-primary--Color: var(--pf-global--light--Color);
+  //success alert
+  --pf-c-alert--is-success--BackgroundColor: var(--pf-global--success-color);
+  --pf-c-alert--is-success--Color: var(--pf-global--success-color--dark);
+  --pf-c-alert--is-success--BorderColor: var(--pf-global--success-color--dark);
+  //danger alert
+  --pf-c-alert--is-danger--BackgroundColor: var(--pf-global--danger-color);
+  --pf-c-alert--is-danger--Color: var(--pf-global--light-color);
+  --pf-c-alert--is-danger--BorderColor: var(--pf-global--danger-color--dark);
+  //warning alert
+  --pf-c-alert--is-warning--BackgroundColor: var(--pf-global--warning-color);
+  --pf-c-alert--is-warning--Color: var(--pf-global--warning-color--dark);
+  --pf-c-alert--is-warning--BorderColor: var(--pf-global--warning-color--dark);
+  //info alert
+  --pf-c-alert--is-info--BackgroundColor: var(--pf-global--info-color);
+  --pf-c-alert--is-info--Color: var(--pf-global--info-color--dark);
+  --pf-c-alert--is-info--BorderColor: var(--pf-global--info-color--dark);
 }
 //
 // Base styles
@@ -26,17 +40,26 @@
   &__link {
     font-weight: var(--pf-c-alert__link--FontWeight);
   }
-  &.pf-is-primary {
-    color: var(--pf-c-alert--is-primary--Color);
-    background-color: var(--pf-c-alert--is-primary--BackgroundColor);
+  &.pf-is-success {
+    color: var(--pf-c-alert--is-success--Color);
+    background-color: var(--pf-c-alert--is-success--BackgroundColor);
+    border-color: var(--pf-c-alert--is-success--BorderColor);
   }
-  &.is-secondary {}
-  &.is-success {}
-  &.is-danger {}
-  &.is-warning {}
-  &.is-info {}
-  &.is-light {}
-  &.is-dark {}
+  &.pf-is-danger {
+    color: var(--pf-c-alert--is-danger--Color);
+    background-color: var(--pf-c-alert--is-danger--BackgroundColor);
+    border-color: var(--pf-c-alert--is-danger--BorderColor);
+  }
+  &.pf-is-warning {
+    color: var(--pf-c-alert--is-warning--Color);
+    background-color: var(--pf-c-alert--is-warning--BackgroundColor);
+    border-color: var(--pf-c-alert--is-warning--BorderColor);
+  }
+  &.pf-is-info {
+    color: var(--pf-c-alert--is-info--Color);
+    background-color: var(--pf-c-alert--is-info--BackgroundColor);
+    border-color: var(--pf-c-alert--is-info--BorderColor);
+  }
 }
 
 // Dismissible alerts
@@ -51,11 +74,7 @@
 //     position: absolute;
 //     top: 0;
 //     right: 0;
-//     padding: $pf-c-alert--paddingInline $pf-c-alert--paddingBlock;
+//     padding: var(--pf-c-alert--PaddingTop, .5rem) var(--pf-c-alert--PaddingRight, 2rem) var(--pf-c-alert--PaddingBottom, .5rem) var(--pf-c-alert--PaddingLeft, 2rem);
 //     color: inherit;
 //   }
 // }
-
-
-// Alternate styles
-//

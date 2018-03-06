@@ -54,12 +54,16 @@ $pf-global--disabled--BorderColor:         $pf-color-black-200 !default;
 // Theme color
 $pf-global--primary-color:       $pf-color-blue-300 !default;
 $pf-global--secondary-color:     $pf-color-black-600 !default;
-$pf-global--success-color:       $pf-color-green-400 !default;
-$pf-global--info-color:          $pf-color-cyan-400 !default;
-$pf-global--warning-color:       $pf-color-orange-400 !default;
+$pf-global--success-color:       $pf-color-green-100 !default;
+$pf-global--success-color--dark: $pf-color-green-400 !default;
+$pf-global--info-color:          $pf-color-cyan-100 !default;
+$pf-global--info-color--dark:    $pf-color-cyan-400 !default;
+$pf-global--warning-color:       $pf-color-orange-100 !default;
+$pf-global--warning-color--dark: $pf-color-orange-400 !default;
 $pf-global--danger-color:        $pf-color-red-100 !default;
+$pf-global--danger-color--dark:  $pf-color-red-300 !default;
 $pf-global--light-color:         $pf-color-black-100 !default;
-$pf-global--dark-color:          $pf-color-black-800 !default;
+$pf-global--dark-color--dark:    $pf-color-black-800 !default;
 
 
 // Shadows
@@ -151,9 +155,9 @@ $pf-global--lg--LineHeight:         1.8 !default;
 
 
 :root {
-  
+
   // Colors
-  
+
   // Background color
   --pf-global--light--BackgroundColor:      $pf-global--light--BackgroundColor;
   --pf-global--light-off--BackgroundColor:  $pf-global--light-off--BackgroundColor;
@@ -200,10 +204,15 @@ $pf-global--lg--LineHeight:         1.8 !default;
   --pf-global--breakpoint--xl: $pf-global--breakpoint--xl;
 
   // theme colors
-  --pf-global--primary-color:       $pf-global--primary-color;
-  --pf-global--primary-dark-color:  $pf-color-blue-400;
-  --pf-global--danger-color:        $pf-color-red-100;
-  --pf-global-danger-dark-color:    $pf-color-red-200;
+  --pf-global--primary-color:        $pf-global--primary-color;
+  --pf-global--danger-color:         $pf-global--danger-color;
+  --pf-global--danger-color--dark:   $pf-global--danger-color--dark;
+  --pf-global--success-color:        $pf-global--success-color;
+  --pf-global--success-color--dark:  $pf-global--success-color--dark;
+  --pf-global--warning-color:        $pf-global--warning-color;
+  --pf-global--warning-color--dark:  $pf-global--warning-color--dark;
+  --pf-global--info-color:           $pf-global--info-color;
+  --pf-global--info-color--dark:     $pf-global--info-color--dark;
 
   // Links
   --pf-global--link--Color:                  $pf-global--link--Color;
@@ -235,29 +244,3 @@ $pf-global--lg--LineHeight:         1.8 !default;
   --pf-global--semi-bold--FontWeight: $pf-global--semi-bold--FontWeight;
   --pf-global--bold--FontWeight:      $pf-global--bold--FontWeight;
 }
-
-
-// when we do alerts DELETE FROM HERE =======================================
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary":    $pf-global--primary-color,
-  "secondary":  $pf-global--secondary-color,
-  "success":    $pf-global--success-color,
-  "info":       $pf-global--info-color,
-  "warning":    $pf-global--warning-color,
-  "danger":     $pf-global--danger-color,
-  "light":      $pf-global--light-color,
-  "dark":       $pf-global--dark-color
-), $theme-colors);
-
-
-// Set a specific jump point for requesting color jumps
-$pf-global-theme-color-interval:      8% !default;
-
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$pf-global-yiq-contrasted-threshold: 150 !default;
-
-// Customize the light and dark text colors for use in our YIQ color contrast function.
-$pf-global-yiq-text-dark: $pf-color-black-900 !default;
-$pf-global-yiq-text-light: $pf-color-white !default;
-// TO HERE ==========================
