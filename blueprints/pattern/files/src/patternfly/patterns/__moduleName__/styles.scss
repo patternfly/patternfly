@@ -1,84 +1,31 @@
 @import "../../patternfly-utilities";
 
-$unit-xxs: 2px !default;
-$unit-xs: 4px !default;
-$unit-s: 8px !default;
-$unit-m: 16px !default;
-$unit-l: 32px !default;
-$unit-xl: 64px !default;
-$unit-xxl: 128px !default;
+// Pattern variables follow this formula:
+// --{{bemName}}__element--modifier--state--PropertyCamelCase
 
-${{bemName}}--Padding: $unit-s !default;
-${{bemName}}__header--Padding: $unit-s !default;
-${{bemName}}__body--Padding: $unit-s !default;
-${{bemName}}__footer--Padding: $unit-s !default;
+// The value of pattern scoped variables is always defined by a global variable:
+:root {
+  // Example block variable
+  --{{bemName}}--Color: var(--pf-global--dark--Color);
 
-${{bemName}}--Border: 1px solid #000 !default;
-${{bemName}}--BackgroundColor: #fff !default;
-${{bemName}}--Color: #000 !default;
-${{bemName}}__header--Border: 1px solid #000 !default;
-${{bemName}}__header--BackgroundColor: #fff !default;
-${{bemName}}__header--Color: #000 !default;
-${{bemName}}__body--Border: 1px solid #000 !default;
-${{bemName}}__body--BackgroundColor: #fff !default;
-${{bemName}}__body--Color: #000 !default;
-${{bemName}}__footer--Border: 1px solid #000 !default;
-${{bemName}}__footer--BackgroundColor: #fff !default;
-${{bemName}}__footer--Color: #000 !default;
+  // Example element variable
+  --{{bemName}}_title--FontSize: var($pf-global--secondary-title--FontSize);
 
-.{{bemName}} {
-  display: block;
-  padding: ${{bemName}}--Padding;
-  margin: 0;
-  color: ${{bemName}}--Color;
-  background-color: ${{bemName}}--BackgroundColor;
-  border: ${{bemName}}--Border;
+  // Example modifier variable
+  --{{bemName}}--is-danger--BackgroundColor: var(--pf-global--danger-color);
+}
 
-  // module sections
-  &__header {
-    padding: ${{bemName}}__header--Padding;
-    color: ${{bemName}}__header--Color;
-    background-color: ${{bemName}}__header--BackgroundColor;
-    border: ${{bemName}}__header--Border;
-  }
-  &__body {
-    padding: ${{bemName}}__body--Padding;
-    color: ${{bemName}}__body--Color;
-    background-color: ${{bemName}}__body--BackgroundColor;
-    border: ${{bemName}}__body--Border;
-  }
-  &__footer {
-    padding: ${{bemName}}__footer--Padding;
-    color: ${{bemName}}__footer--Color;
-    background-color: ${{bemName}}__footer--BackgroundColor;
-    border: ${{bemName}}__footer--Border;
-  }
-  &__items {}
-  &__item {}
+.card {
+  color: var(--{{bemName}}--Color, #292e34);
 
-  // module layouts
-  &.is-stack {
-    display: flex;
-    flex-direction: column;
+  // Element
+  &_title {
+    font-size: var(--{{bemName}}_title--FontSize, 2rem);
   }
-  &.is-stack > &__body {
-    flex: 1;
-  }
-  &.is-split {
-    display: flex;
-  }
-  &.is-split > &__primary {
-    flex: 1;
-  }
-  &.is-level {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &.is-grid {
-    display: grid;
-    grid-template-columns: 22.75% 22.75% 22.75% 22.75%;
-    grid-column-gap: 3%;
-    grid-row-gap: 1rem;
+
+  // Modifier
+  &.is-danger {
+    background-color: var(--{{bemName}}--is-danger--BackgroundColor, #c00);
   }
 }
+
