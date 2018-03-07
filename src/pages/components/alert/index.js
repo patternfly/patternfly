@@ -9,25 +9,25 @@ export default () => {
 
       <Example heading="Success Alert">
         <Alert className="pf-is-success">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a class="pf-c-alert__link" href="#">Click here</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Alert>
       </Example>
 
       <Example heading="Danger Alert">
         <Alert className="pf-is-danger">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a class="pf-c-alert__link" href="#">Click here</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Alert>
       </Example>
 
       <Example heading="Warning Alert">
         <Alert className="pf-is-warning">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a class="pf-c-alert__link" href="#">Click here</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Alert>
       </Example>
 
       <Example heading="Info Alert">
         <Alert className="pf-is-info">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a class="pf-c-alert__link" href="#">Click here</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Alert>
       </Example>
 

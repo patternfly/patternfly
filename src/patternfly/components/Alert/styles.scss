@@ -32,33 +32,33 @@
   position: relative;
   padding: var(--pf-c-alert--PaddingTop, .5rem) var(--pf-c-alert--PaddingRight, 2rem) var(--pf-c-alert--PaddingBottom, .5rem) var(--pf-c-alert--PaddingLeft, 2rem);
   background-color: var(--pf-c-alert--BackgroundColor, transparent);
-  border: var(--pf-c-alert--BorderWidth) solid transparent;
+  border: var(--pf-c-alert--BorderWidth, 1px) solid transparent;
   &__heading {
     // Specified to prevent conflicts of changing $headings-color
     color: inherit;
   }
   &__link {
-    font-weight: var(--pf-c-alert__link--FontWeight);
+    font-weight: var(--pf-c-alert__link--FontWeight, bold);
   }
   &.pf-is-success {
-    color: var(--pf-c-alert--is-success--Color);
-    background-color: var(--pf-c-alert--is-success--BackgroundColor);
-    border-color: var(--pf-c-alert--is-success--BorderColor);
+    color: var(--pf-c-alert--is-success--Color, #3f9c35);
+    background-color: var(--pf-c-alert--is-success--BackgroundColor, #cfe7cd);
+    border-color: var(--pf-c-alert--is-success--BorderColor, #3f9c35);
   }
   &.pf-is-danger {
-    color: var(--pf-c-alert--is-danger--Color);
-    background-color: var(--pf-c-alert--is-danger--BackgroundColor);
-    border-color: var(--pf-c-alert--is-danger--BorderColor);
+    color: var(--pf-c-alert--is-danger--Color, #fff);
+    background-color: var(--pf-c-alert--is-danger--BackgroundColor, #c00);
+    border-color: var(--pf-c-alert--is-danger--BorderColor, #8b0000);
   }
   &.pf-is-warning {
-    color: var(--pf-c-alert--is-warning--Color);
-    background-color: var(--pf-c-alert--is-warning--BackgroundColor);
-    border-color: var(--pf-c-alert--is-warning--BorderColor);
+    color: var(--pf-c-alert--is-warning--Color, #ec7a08);
+    background-color: var(--pf-c-alert--is-warning--BackgroundColor, #fbdebf);
+    border-color: var(--pf-c-alert--is-warning--BorderColor, #ec7a08);
   }
   &.pf-is-info {
-    color: var(--pf-c-alert--is-info--Color);
-    background-color: var(--pf-c-alert--is-info--BackgroundColor);
-    border-color: var(--pf-c-alert--is-info--BorderColor);
+    color: var(--pf-c-alert--is-info--Color, #007a87);
+    background-color: var(--pf-c-alert--is-info--BackgroundColor, #bedee1);
+    border-color: var(--pf-c-alert--is-info--BorderColor, #007a87);
   }
 }
 
