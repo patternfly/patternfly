@@ -15,7 +15,7 @@
   --{{bemName}}--is-danger--BackgroundColor: var(--pf-global--danger-color);
 }
 
-.card {
+.{{bemName}} {
   color: var(--{{bemName}}--Color, #292e34);
 
   // Element
