@@ -81,6 +81,14 @@
     border: 1px solid rgba(0, 0, 0, .1);
     margin: 0 0.25em;
   }
+  ul, ol {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: .5rem;
+  }
+  ol {
+    list-style-type: decimal;
+  }
 }
 
 .gatsby-highlight-code-line {
