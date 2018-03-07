@@ -1,37 +1,64 @@
 @import "../../patternfly-utilities";
-
-$pf-c-alert--paddingInline:       $pf-global--spacer--sm !default;
-$pf-c-alert--paddingBlock:        $pf-global--spacer--lg !default;
-$pf-c-alert--marginBottom:        $pf-global--spacer--md !default;
-
-$pf-c-alert--borderWidth:         $pf-global--BorderWidth !default;
-
-$pf-c-alert__link--fontWeight:    $pf-global--bold--FontWeight !default;
-//TODO change these to global variables?
-$pf-c-alert--bgLevel:             -10 !default;
-$pf-c-alert--borderLevel:         -9 !default;
-$pf-c-alert--colorLevel:          6 !default;
-
+:root {
+  --pf-c-alert--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-alert--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-alert--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-alert--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-alert--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-alert--BorderWidth: var(--pf-global--BorderWidth);
+  --pf-c-alert__link--FontWeight: var(--pf-global--bold--FontWeight);
+  //success alert
+  --pf-c-alert--is-success--BackgroundColor: var(--pf-global--success-color);
+  --pf-c-alert--is-success--Color: var(--pf-global--success-color--dark);
+  --pf-c-alert--is-success--BorderColor: var(--pf-global--success-color--dark);
+  //danger alert
+  --pf-c-alert--is-danger--BackgroundColor: var(--pf-global--danger-color);
+  --pf-c-alert--is-danger--Color: var(--pf-global--light-color);
+  --pf-c-alert--is-danger--BorderColor: var(--pf-global--danger-color--dark);
+  //warning alert
+  --pf-c-alert--is-warning--BackgroundColor: var(--pf-global--warning-color);
+  --pf-c-alert--is-warning--Color: var(--pf-global--warning-color--dark);
+  --pf-c-alert--is-warning--BorderColor: var(--pf-global--warning-color--dark);
+  //info alert
+  --pf-c-alert--is-info--BackgroundColor: var(--pf-global--info-color);
+  --pf-c-alert--is-info--Color: var(--pf-global--info-color--dark);
+  --pf-c-alert--is-info--BorderColor: var(--pf-global--info-color--dark);
+}
 //
 // Base styles
 //
 
 .pf-c-alert {
   position: relative;
-  padding: $pf-c-alert--paddingInline $pf-c-alert--paddingBlock;
-  border: $pf-c-alert--borderWidth solid transparent;
+  padding: var(--pf-c-alert--PaddingTop, .5rem) var(--pf-c-alert--PaddingRight, 2rem) var(--pf-c-alert--PaddingBottom, .5rem) var(--pf-c-alert--PaddingLeft, 2rem);
+  background-color: var(--pf-c-alert--BackgroundColor, transparent);
+  border: var(--pf-c-alert--BorderWidth, 1px) solid transparent;
   &__heading {
     // Specified to prevent conflicts of changing $headings-color
     color: inherit;
   }
   &__link {
-    font-weight: $pf-c-alert__link--fontWeight;
+    font-weight: var(--pf-c-alert__link--FontWeight, bold);
   }
-  // Generate contextual modifier classes for colorizing the alert.
-  @each $color, $value in $theme-colors {
-    &.pf-is-#{$color} {
-      @include pf-alert-variant(theme-color-level($color, $pf-c-alert--bgLevel), theme-color-level($color, $pf-c-alert--borderLevel), theme-color-level($color, $pf-c-alert--colorLevel));
-    }
+  &.pf-is-success {
+    color: var(--pf-c-alert--is-success--Color, #3f9c35);
+    background-color: var(--pf-c-alert--is-success--BackgroundColor, #cfe7cd);
+    border-color: var(--pf-c-alert--is-success--BorderColor, #3f9c35);
+  }
+  &.pf-is-danger {
+    color: var(--pf-c-alert--is-danger--Color, #fff);
+    background-color: var(--pf-c-alert--is-danger--BackgroundColor, #c00);
+    border-color: var(--pf-c-alert--is-danger--BorderColor, #8b0000);
+  }
+  &.pf-is-warning {
+    color: var(--pf-c-alert--is-warning--Color, #ec7a08);
+    background-color: var(--pf-c-alert--is-warning--BackgroundColor, #fbdebf);
+    border-color: var(--pf-c-alert--is-warning--BorderColor, #ec7a08);
+  }
+  &.pf-is-info {
+    color: var(--pf-c-alert--is-info--Color, #007a87);
+    background-color: var(--pf-c-alert--is-info--BackgroundColor, #bedee1);
+    border-color: var(--pf-c-alert--is-info--BorderColor, #007a87);
   }
 }
 
@@ -47,11 +74,7 @@ $pf-c-alert--colorLevel:          6 !default;
 //     position: absolute;
 //     top: 0;
 //     right: 0;
-//     padding: $pf-c-alert--paddingInline $pf-c-alert--paddingBlock;
+//     padding: var(--pf-c-alert--PaddingTop, .5rem) var(--pf-c-alert--PaddingRight, 2rem) var(--pf-c-alert--PaddingBottom, .5rem) var(--pf-c-alert--PaddingLeft, 2rem);
 //     color: inherit;
 //   }
 // }
-
-
-// Alternate styles
-//

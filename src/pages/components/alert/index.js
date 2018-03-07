@@ -6,23 +6,6 @@ import Alert, { Docs } from '@components/Alert'
 export default () => {
   return (
     <Documentation docs={Docs}>
-      <Example heading="Default Alert">
-        <Alert>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </Alert>
-      </Example>
-
-      <Example heading="Primary Alert">
-        <Alert className="pf-is-primary">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </Alert>
-      </Example>
-
-      <Example heading="Secondary Alert">
-        <Alert className="pf-is-secondary">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </Alert>
-      </Example>
 
       <Example heading="Success Alert">
         <Alert className="pf-is-success">
@@ -44,18 +27,6 @@ export default () => {
 
       <Example heading="Info Alert">
         <Alert className="pf-is-info">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </Alert>
-      </Example>
-
-      <Example heading="Light Alert">
-        <Alert className="pf-is-light">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </Alert>
-      </Example>
-
-      <Example heading="Dark Alert">
-        <Alert className="pf-is-dark">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Alert>
       </Example>
