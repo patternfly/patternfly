@@ -13,7 +13,7 @@
   width: var(--pf-c-drawer--Width, 320px);
   max-width: var(--pf-c-drawer--MaxWidth, 100vw);
   height: var(--pf-c-drawer--Height, 100%);
-  max-height: var(--pf-c-drawer--MaxHeight, 50vh);
+  max-height: var(--pf-c-drawer--MaxHeight, 75vh);
   color: var(--pf-c-drawer--Color, #292e34);
   &_title {
     font-size: var(--pf-c-drawer_title--FontSize, 1rem);
@@ -29,10 +29,10 @@
     justify-content: space-between;
     padding: var(--pf-c-drawer__header--Padding, 1rem);
     background-color: var(--pf-c-drawer__header--BackgroundColor, #e0e0e0);
+    border-bottom: var(--pf-c-drawer__header--BorderBottom, 1px solid #d0d0d0);
   }
   &__body {
     flex: 1;
-    padding: var(--pf-c-drawer__body--Padding, 1rem);
     background-color: var(--pf-c-drawer__body--BackgroundColor, #efefef);
   }
 }

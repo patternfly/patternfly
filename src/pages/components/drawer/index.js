@@ -8,7 +8,6 @@ export default () => {
     <Documentation docs={Docs} className="is-drawer-documentation">
       <Example heading="Drawer">
         <Drawer title="Example Drawer Title">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Drawer>
       </Example>
     </Documentation>

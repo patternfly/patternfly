@@ -157,4 +157,13 @@
     position: absolute;
   }
 }
+.is-notification-drawer-documentation {
+  .is-preview {
+    position: relative;
+    height: 400px;
+  }
+  .pf-c-drawer {
+    position: absolute;
+  }
+}
 /* stylelint-enable */
