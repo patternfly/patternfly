@@ -1,0 +1,84 @@
+@import "../../patternfly-utilities";
+
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$pf-p-notification-drawer--Padding: $unit-s !default;
+$pf-p-notification-drawer__header--Padding: $unit-s !default;
+$pf-p-notification-drawer__body--Padding: $unit-s !default;
+$pf-p-notification-drawer__footer--Padding: $unit-s !default;
+
+$pf-p-notification-drawer--Border: 1px solid #000 !default;
+$pf-p-notification-drawer--BackgroundColor: #fff !default;
+$pf-p-notification-drawer--Color: #000 !default;
+$pf-p-notification-drawer__header--Border: 1px solid #000 !default;
+$pf-p-notification-drawer__header--BackgroundColor: #fff !default;
+$pf-p-notification-drawer__header--Color: #000 !default;
+$pf-p-notification-drawer__body--Border: 1px solid #000 !default;
+$pf-p-notification-drawer__body--BackgroundColor: #fff !default;
+$pf-p-notification-drawer__body--Color: #000 !default;
+$pf-p-notification-drawer__footer--Border: 1px solid #000 !default;
+$pf-p-notification-drawer__footer--BackgroundColor: #fff !default;
+$pf-p-notification-drawer__footer--Color: #000 !default;
+
+.pf-p-notification-drawer {
+  display: block;
+  padding: $pf-p-notification-drawer--Padding;
+  margin: 0;
+  color: $pf-p-notification-drawer--Color;
+  background-color: $pf-p-notification-drawer--BackgroundColor;
+  border: $pf-p-notification-drawer--Border;
+
+  // module sections
+  &__header {
+    padding: $pf-p-notification-drawer__header--Padding;
+    color: $pf-p-notification-drawer__header--Color;
+    background-color: $pf-p-notification-drawer__header--BackgroundColor;
+    border: $pf-p-notification-drawer__header--Border;
+  }
+  &__body {
+    padding: $pf-p-notification-drawer__body--Padding;
+    color: $pf-p-notification-drawer__body--Color;
+    background-color: $pf-p-notification-drawer__body--BackgroundColor;
+    border: $pf-p-notification-drawer__body--Border;
+  }
+  &__footer {
+    padding: $pf-p-notification-drawer__footer--Padding;
+    color: $pf-p-notification-drawer__footer--Color;
+    background-color: $pf-p-notification-drawer__footer--BackgroundColor;
+    border: $pf-p-notification-drawer__footer--Border;
+  }
+  &__items {}
+  &__item {}
+
+  // module layouts
+  &.is-stack {
+    display: flex;
+    flex-direction: column;
+  }
+  &.is-stack > &__body {
+    flex: 1;
+  }
+  &.is-split {
+    display: flex;
+  }
+  &.is-split > &__primary {
+    flex: 1;
+  }
+  &.is-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.is-grid {
+    display: grid;
+    grid-template-columns: 22.75% 22.75% 22.75% 22.75%;
+    grid-column-gap: 3%;
+    grid-row-gap: 1rem;
+  }
+}

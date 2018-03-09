@@ -1,0 +1,22 @@
+.pf-l-fixed-container {
+  position: fixed;
+
+  &.pf-is-right {
+    right: 0;
+  }
+  &.pf-is-left {
+    left: 0;
+  }
+  &.pf-is-top {
+    top: 0;
+  }
+  &.pf-is-bottom {
+    bottom: 0;
+  }
+  &.pf-is-full-height {
+    height: 100vh;
+  }
+  &.pf-is-full-width {
+    width: 100vw;
+  }
+}
