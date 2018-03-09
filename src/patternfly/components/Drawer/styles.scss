@@ -1,0 +1,38 @@
+@import "../../patternfly-utilities";
+
+:root {
+  // @TODO: Theme component variables once designs are complete
+}
+
+.pf-c-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: var(--pf-c-drawer--Width, 320px);
+  max-width: var(--pf-c-drawer--MaxWidth, 100vw);
+  height: var(--pf-c-drawer--Height, 100%);
+  max-height: var(--pf-c-drawer--MaxHeight, 50vh);
+  color: var(--pf-c-drawer--Color, #292e34);
+  &_title {
+    font-size: var(--pf-c-drawer_title--FontSize, 1rem);
+  }
+  &_close {
+    display: inline-block;
+    padding: var(--pf-c-drawer_close--Padding, 0);
+    border-width: var(--pf-c-drawer_close--BorderWidth, 0);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--pf-c-drawer__header--Padding, 1rem);
+    background-color: var(--pf-c-drawer__header--BackgroundColor, #e0e0e0);
+  }
+  &__body {
+    flex: 1;
+    padding: var(--pf-c-drawer__body--Padding, 1rem);
+    background-color: var(--pf-c-drawer__body--BackgroundColor, #efefef);
+  }
+}

@@ -25,13 +25,13 @@ export default ({heading, description, children}) => {
       </div>
       <div className="Example__section">
         <h4 className="Example__section_heading">Preview</h4>
-        <div className="Example__section__body">
+        <div className="Example__section__body is-preview">
           {children}
         </div>
       </div>
       <div className="Example__section">
         <h4 className="Example__section_heading">Code</h4>
-        <div className="Example__section__body has-no-padding">
+        <div className="Example__section__body has-no-padding is-code">
           <pre className="Example__pre">
             <PrismCode className="language-html">
               {indentedOutput}

@@ -147,4 +147,14 @@
     padding: 0.5rem;
   }
 }
+
+.is-drawer-documentation {
+  .is-preview {
+    position: relative;
+    height: 400px;
+  }
+  .pf-c-drawer {
+    position: absolute;
+  }
+}
 /* stylelint-enable */
