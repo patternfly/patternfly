@@ -41,7 +41,7 @@ export default () => {
 
 **step 2** - place `{children}` where you want display the dynamic content (*line 7*)
 
-```jsx{4, 7}
+```jsx{4,7}
 import React from 'react'
 import './styles.scss'
 
@@ -71,6 +71,33 @@ export default ({headerModifier}) => {
       </div>
       ...
     </div>
+  )
+}
+```
+
+## Use Components with Multiple Child Slots
+
+**step 1** - import the component and the child slots (*line 2-5*)
+
+**step 2** - use the child slots inside of the component tags (*line 9-16*)
+
+```jsx{2-5,9-16}
+import React from 'react'
+import ComponentName, {
+  ComponentNameHeader,
+  ComponentNameBody
+} from '@components/ComponentName'
+
+export default () => {
+  return (
+    <ComponentName>
+      <ComponentNameHeader>
+        <h3>Example Title</h3>
+      </ComponentNameHeader>
+      <ComponentNameBody>
+        <p>Example content</p>
+      </ComponentNameBody>
+    </ComponentName>
   )
 }
 ```
