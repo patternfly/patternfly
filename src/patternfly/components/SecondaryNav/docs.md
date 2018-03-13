@@ -1,17 +1,14 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
 ## Accessibility
-
-Write accessibility, aria tags, tab index and other notes to make this component accessible.
+This uses `role="tablist"` on the parent and `role="tab"` on the children. It also uses `aria-selected="true"` and `aria-disabled="true"` for their respective roles.
 
 ## Usage
 
 | Class | Usage |
 | -- | -- |
-| `.class-name-here` **Applied to:** `<tags-here>` |  **Outcome:** Outcome-here **Required:** Yes/No **Remarks:** Remarks-here |
-| Example: `.btn` **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
-| `.btn-secondary` **Applied to:** `.btn` | **Outcome:** Adds secondary color **Required:** Yes |
+| `.pf-c-secondary-nav` **Applied to:** `<ul>` |  **Outcome:** Applies default styling to parent **Required:** Yes |
+| `.pf-c-secondary-nav__item` **Applied to:** `<li>` |  **Outcome:** Applies default styling to direct child **Required:** Yes |
+| `.pf-c-secondary-nav__link` **Applied to:** `<a>` | **Outcome:** Applies default styling to direct link **Required:** Yes |
+| `.pf-is-active` **Applied to:** `<a>` | **Outcome:** Applies styling to active link **Required:** Yes |
+| `.pf-is-disabled` **Applied to:** `<a>` | **Outcome:** Applies styling to disabled link **Required:** Yes |
