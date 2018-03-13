@@ -78,5 +78,9 @@
     "commander": "^2.13.0",
     "minimist": "^1.2.0",
     "prettier": "^1.7.4"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
   }
 }

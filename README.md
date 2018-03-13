@@ -2,6 +2,8 @@
 
 ## Setup
 
+**PatternFly Next requires Node v8.0.0 or greater**
+
 - clone the project
 - run `npm install` from the project root
 - run `npm run cli:setup` (only needed if doing development)
