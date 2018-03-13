@@ -10,7 +10,6 @@ export const AccordionItem = ({children, className = '', title, subtitle = false
       <div className="pf-c-accordion__item__header">
         <i className="fas fa-chevron-down"></i>
         <h3 className="pf-c-accordion__item_title">{title}</h3>
-        <p className="pf-c-accordion__item_subtitle">{subtitle}</p>
       </div>
       <div className="pf-c-accordion__item__body">
         {children}
