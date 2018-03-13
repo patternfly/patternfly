@@ -1,7 +1,7 @@
 ## Overview
 
 ## Accessibility
-This uses `role="tablist"` on the parent and `role="tab"` on the children. It also uses `aria-selected="true"` and `aria-disabled="true"` for their respective roles.
+ This uses `aria-selected="true"` and `aria-disabled="true"` for their respective roles.
 
 ## Usage
 
