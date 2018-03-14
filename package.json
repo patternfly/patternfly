@@ -1,7 +1,7 @@
 {
   "name": "patternfly-next",
   "description": "Assets, source, tooling, and content for pf-next.com",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Cliff Pyles",
   "devDependencies": {
     "del": "^3.0.0",
