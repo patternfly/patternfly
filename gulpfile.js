@@ -7,7 +7,8 @@ const del = require('del')
 
 gulp.task('build', [
   'build-modules',
-  'build-library'
+  'build-library',
+  'copy-source'
 ])
 
 gulp.task('build-tmp', function () {
@@ -28,5 +29,10 @@ gulp.task('build-library', ['build-tmp'], function () {
 gulp.task('build-modules', function () {
   return gulp.src('./src/patternfly/{components,layouts,patterns}/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('copy-source', function () {
+  return gulp.src('./src/patternfly/**/*.scss')
     .pipe(gulp.dest('./dist'))
 })
