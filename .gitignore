@@ -8,6 +8,7 @@ test/results/
 public/
 static/admin/*.bundle.*
 local/
+tmp/
 
 .DS_Store
 .codetoolsrc.js
