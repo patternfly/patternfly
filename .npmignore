@@ -1,7 +1,0 @@
-*
-*/
-!/dist
-!/dist/*
-!/dist/**/*
-!.gitignore
-!.npmignore
