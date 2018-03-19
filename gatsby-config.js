@@ -4,7 +4,6 @@ const PROJECT_ROOT = path.resolve(__dirname)
 
 const plugins = [
   'gatsby-plugin-react-helmet',
-  `gatsby-plugin-styled-jsx`,
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
   'gatsby-transformer-json',
