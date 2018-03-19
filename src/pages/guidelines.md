@@ -6,10 +6,6 @@ Every line of code should appear to be written by a single person, no matter the
 
 This set of rules generate some constraints and conventions. If you run into instances where a convention isn’t obvious or a solution could be handled in a few different ways, contact the PatternFly community, have a conversation about how to handle it and update this guidelines when needed.
 
-## Table of content
-
-Place TOC here
-
 ## Separation of UI structure concerns
 
 PatternFly is made out of isolated and modular structures that fall into 3 categories:
@@ -52,7 +48,7 @@ As a general rule create extension to an element with BEM modifiers if it’s a 
 
 Repetition is better than the wrong abstraction.
 
-## Variarbles
+## Variables
 
 PatternFly follows a two-layer theming system where **global variables** always inform **component variables**. Each one of those layers follow a set of very specific rules.
 
