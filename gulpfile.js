@@ -32,7 +32,7 @@ gulp.task('build-modules', function () {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('copy-source', function () {
-  return gulp.src('./src/patternfly/**/*.scss')
+gulp.task('copy-source', ['build-tmp'], function () {
+  return gulp.src('./tmp/**/*.scss')
     .pipe(gulp.dest('./dist'))
 })
