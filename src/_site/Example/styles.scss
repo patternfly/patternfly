@@ -6,6 +6,7 @@
   }
   &__header {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
   }
   &_heading {
@@ -13,28 +14,91 @@
     font-size: 1.6rem;
     font-weight: 700;
   }
+  &_description {
+    width: 100%;
+  }
+  &__viewport-toggle {
+    font-size: 1.6rem;
+    background-color: transparent;
+    border-width: 0;
+    outline: 0;
+  }
+  &__viewport-toggle.is-xs-toggle { font-size: 1.1rem; }
+  &__viewport-toggle.is-sm-toggle { font-size: 1.3rem; }
+  &__viewport-toggle.is-md-toggle { font-size: 1.4rem; }
+  &__viewport-toggle.is-lg-toggle { font-size: 1.5rem; }
+  &__viewport-toggle.is-xl-toggle { font-size: 1.7rem; }
+  &.is-xs .is-xs-toggle { color: #39a5dc; }
+  &.is-sm .is-sm-toggle { color: #39a5dc; }
+  &.is-md .is-md-toggle { color: #39a5dc; }
+  &.is-lg .is-lg-toggle { color: #39a5dc; }
+  &.is-xl .is-xl-toggle { color: #39a5dc; }
   &__toolbar {
     padding: 0 1rem;
   }
-  &__section {
+  &__preview {
   }
-  &__section + &__section {
+  &__preview + &__preview {
     margin-top: 2rem;
   }
-  &__section_heading {
+  &__preview__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+  &__preview_heading {
     padding: .5rem;
     font-weight: 700;
     text-align: right;
   }
-  &__section__body {
+  &__preview__body {
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    transform: scale(1);
+  }
+  &.is-xs &__preview__body {
+    width: 480px;
+    transform: scale(1);
+  }
+  &.is-sm &__preview__body {
+    width: 576px;
+    transform: scale(1);
+  }
+  &.is-md &__preview__body {
+    width: 768px;
+    transform: scale(1);
+  }
+  &.is-lg &__preview__body {
+    width: 992px;
+    transform: scale(1);
+  }
+  &.is-xl &__preview__body {
+    width: 100%;
+    min-width: 1200px;
+    transform: scale(1);
+  }
+
+  &__code {
+    margin-top: 2rem;
+  }
+  &__code__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+  &__code_heading {
+    padding: .5rem;
+    font-weight: 700;
+    text-align: right;
+  }
+  &__code__body {
     width: 100%;
     padding: 1rem;
     overflow: hidden;
     background-color: #fff;
     border: 1px solid #eaeaea;
-  }
-  &__section__body.has-no-padding {
-    padding: 0;
   }
   &__pre[class*="language-"],
   &__pre[class*="language-"] > code {

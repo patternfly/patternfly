@@ -1,0 +1,124 @@
+@import "../../patternfly-utilities";
+
+$pf-global--breakpoint--xs: 0 !default;
+$pf-global--breakpoint--sm: 576px !default;
+$pf-global--breakpoint--md: 768px !default;
+$pf-global--breakpoint--lg: 992px !default;
+$pf-global--breakpoint--xl: 1200px !default;
+
+:root {
+  --pf-l-grid--has-gutters--GridGap: var(--pf-global--spacer--md);
+  --pf-l-grid--has-xs-gutters--GridGap: var(--pf-global--spacer--xs);
+  --pf-l-grid--has-sm-gutters--GridGap: var(--pf-global--spacer--sm);
+  --pf-l-grid--has-md-gutters--GridGap: var(--pf-global--spacer--md);
+  --pf-l-grid--has-lg-gutters--GridGap: var(--pf-global--spacer--lg);
+  --pf-l-grid--has-xl-gutters--GridGap: var(--pf-global--spacer--xl);
+}
+
+@mixin grid-media-query($point) {
+  @if ($point == "xs") {
+    @media screen and (max-width: $pf-global--breakpoint--sm) {
+      @content;
+    }
+  } @else if ($point == "sm") {
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      @content;
+    }
+  } @else if ($point == "md") {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      @content;
+    }
+  } @else if ($point == "lg") {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      @content;
+    }
+  } @else if ($point == "xl") {
+    @media screen and (min-width: $pf-global--breakpoint--xl) {
+      @content;
+    }
+  }
+}
+
+@mixin grid-item-modifiers($suffix: "") {
+  // generate column span modfiers
+  @for $col-num from 1 through 12 {
+    > .pf-is-#{$col-num}-col#{$suffix} {
+      grid-column-start: auto;
+      grid-column-end: span $col-num;
+    }
+  }
+
+  // generate column offset modfiers
+  @for $col-num from 1 through 12 {
+    > .pf-is-offset-#{$col-num}-col#{$suffix} {
+      grid-column-start: col-start $col-num;
+    }
+  }
+
+  // generate row span modfiers
+  @for $row-num from 1 through 12 {
+    > .pf-is-#{$row-num}-row#{$suffix} {
+      grid-row: span $row-num;
+    }
+  }
+}
+
+.pf-l-grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+
+  > &__item {
+    grid-column-start: auto;
+    grid-column-end: span 12;
+    background-color: rgba(0, 0, 0, .2);
+    border: 2px solid rgba(0, 0, 0, .3);
+  }
+
+  &.pf-has-gutters {
+    grid-gap: var(--pf-l-grid--has-gutters--GridGap, 1rem);
+  }
+
+  &.pf-has-xs-gutters {
+    grid-gap: var(--pf-l-grid--has-xs-gutters--GridGap, 1rem);
+  }
+
+  &.pf-has-sm-gutters {
+    grid-gap: var(--pf-l-grid--has-sm-gutters--GridGap, 1rem);
+  }
+
+  &.pf-has-md-gutters {
+    grid-gap: var(--pf-l-grid--has-md-gutters--GridGap, 1rem);
+  }
+
+  &.pf-has-lg-gutters {
+    grid-gap: var(--pf-l-grid--has-lg-gutters--GridGap, 1rem);
+  }
+
+  &.pf-has-xl-gutters {
+    grid-gap: var(--pf-l-grid--has-xl-gutters--GridGap, 1rem);
+  }
+
+  //generate default modifier classes
+  @include grid-item-modifiers;
+
+  //generate modifiers classes for xs devices
+  @include grid-media-query("xs") {
+    @include grid-item-modifiers("-on-xs");
+  }
+  //generate modifiers classes for sm devices
+  @include grid-media-query("sm") {
+    @include grid-item-modifiers("-on-sm");
+  }
+  //generate modifiers classes for md devices
+  @include grid-media-query("md") {
+    @include grid-item-modifiers("-on-md");
+  }
+  //generate modifiers classes for lg devices
+  @include grid-media-query("lg") {
+    @include grid-item-modifiers("-on-lg");
+  }
+  //generate modifiers classes for xl devices
+  @include grid-media-query("xl") {
+    @include grid-item-modifiers("-on-xl");
+  }
+}
