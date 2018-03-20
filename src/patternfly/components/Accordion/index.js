@@ -4,17 +4,23 @@ import './styles.scss'
 
 export const Docs = docs
 
-export default ({children, className = '', heading, subtitle = false, isExpanded = false}) => {
+export const AccordionItem = ({children, className = '', title, subtitle = false, isExpanded = false}) => {
   return (
-    <div className={`pf-c-accordion ${className}`}>
-      <div className="pf-c-accordion__header">
+    <div className={`pf-c-accordion__item ${className}`}>
+      <div className="pf-c-accordion__item__header">
         <i className="fas fa-chevron-down"></i>
-        <h3 className="pf-c-accordion_heading">{heading}</h3>
-        <p className="pf-c-accordion_subtitle">{subtitle}</p>
+        <h3 className="pf-c-accordion__item_title">{title}</h3>
       </div>
-      <div className="pf-c-accordion__body">
+      <div className="pf-c-accordion__item__body">
         {children}
       </div>
+    </div>
+  )
+}
+export default ({children, className = ''}) => {
+  return (
+    <div className={`pf-c-accordion`}>
+      {children}
     </div>
   )
 }

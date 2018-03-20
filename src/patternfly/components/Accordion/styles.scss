@@ -1,18 +1,25 @@
 @import "../../patternfly-utilities";
 
 .pf-c-accordion {
-  &__header {
+  &__item__header {
     display: flex;
     flex-flow: wrap;
+    align-items: center;
+    padding: var(--pf-c-accordion__item__header--PaddingLeft, .5em 1em);
+    background-color: var(--pf-c-accordion__item__header--BackgroundColor, #e0e0e0);
   }
-  &__body {
+  &__item__body {
     display: none;
+    padding: var(--pf-c-accordion__item__header--PaddingLeft, .5em 1em);
+    background-color: var(--pf-c-accordion__item__body--BackgroundColor, #fff);
   }
-  &.pf-is-expanded > &__body {
+  &__item.pf-is-expanded > &__item__body {
     display: block;
   }
-  &_heading {}
-  &_subtitle {
+  &__item_title {
+    padding-left: var(--pf-c-accordion__item_title--PaddingLeft, .5em);
+  }
+  &__item_subtitle {
     width: 100%;
   }
 }

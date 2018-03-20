@@ -1,0 +1,31 @@
+@import "../../patternfly-utilities";
+
+// Pattern variables follow this formula:
+// --pf-p-notification-drawer__element--modifier--state--PropertyCamelCase
+
+// The value of pattern scoped variables is always defined by a global variable:
+:root {
+  // Example block variable
+  --pf-p-notification-drawer--Color: var(--pf-global--dark--Color);
+
+  // Example element variable
+  --pf-p-notification-drawer_title--FontSize: var($pf-global--secondary-title--FontSize);
+
+  // Example modifier variable
+  --pf-p-notification-drawer--is-danger--BackgroundColor: var(--pf-global--danger-color);
+}
+
+.pf-p-notification-drawer {
+  color: var(--pf-p-notification-drawer--Color, #292e34);
+
+  // Element
+  &_title {
+    font-size: var(--pf-p-notification-drawer_title--FontSize, 2rem);
+  }
+
+  // Modifier
+  &.is-danger {
+    background-color: var(--pf-p-notification-drawer--is-danger--BackgroundColor, #c00);
+  }
+}
+

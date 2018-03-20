@@ -1,0 +1,28 @@
+@import "../../patternfly-utilities";
+
+:root {
+  --pf-c-media-object__left--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-media-object__right--MarginLeft: var(--pf-global--spacer--sm);
+}
+
+.pf-c-media-object {
+  display: flex;
+  align-items: flex-start;
+
+  &__left,
+  &__right {
+    flex: 0 0 auto;
+  }
+  &__left {
+    order: 1;
+    margin-right: var(--pf-c-media-object__left--MarginRight, .5em);
+  }
+  &__right {
+    order: 3;
+    margin-left: var(--pf-c-media-object__right--MarginLeft, .5em);
+  }
+  &__content {
+    flex: 1 1 auto;
+    order: 2;
+  }
+}
