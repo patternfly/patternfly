@@ -10,8 +10,8 @@ export default ({data}) => {
 }
 
 export const GetDocumentationContent = graphql`
-  query GetDocumentationContentByPath($path: String!) {
-    markdownRemark(fields: { path: { eq: $path } }) {
+  query GetDocumentationContentByPath($pagePath: String!) {
+    markdownRemark(fields: { path: { eq: $pagePath } }) {
       html
       fields {
         path

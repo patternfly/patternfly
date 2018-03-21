@@ -75,7 +75,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.fields.path,
         component: path.resolve(__dirname, `./src/templates/${node.fields.type}.js`),
         context: {
-          path: node.fields.path,
+          pagePath: node.fields.path,
           type: node.fields.type,
           contentType: node.fields.contentType
         }
