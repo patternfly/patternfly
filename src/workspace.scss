@@ -147,4 +147,14 @@
     padding: 0.5rem;
   }
 }
+
+.is-grid-layout-page {
+  .pf-l-grid {
+    border: 2px dashed #393f44;
+  }
+  .pf-l-grid > * {
+    border: 2px dashed #393f44;
+    padding: 0.5rem;
+  }
+}
 /* stylelint-enable */
