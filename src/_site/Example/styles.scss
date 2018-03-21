@@ -1,70 +1,21 @@
 .Example {
-  padding: 2rem 0;
-
-  &:not(:last-child) {
-    margin-bottom: 2rem;
+  padding: 1rem 0;
+  &:not(:last-of-type) {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-  &__header {
-    display: flex;
-    align-items: center;
-  }
-  &_heading {
+  &_title {
     margin-bottom: .5rem;
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 600;
   }
   &__toolbar {
     padding: 0 1rem;
   }
   &__section {
+    // max-width: 100%;
   }
-  &__section + &__section {
-    margin-top: 2rem;
-  }
-  &__section_heading {
-    padding: .5rem;
-    font-weight: 700;
-    text-align: right;
-  }
-  &__section__body {
-    width: 100%;
-    padding: 1rem;
-    overflow: hidden;
-    background-color: #fff;
-    border: 1px solid #eaeaea;
-  }
-  &__section__body.has-no-padding {
-    padding: 0;
-  }
-  &__pre[class*="language-"],
-  &__pre[class*="language-"] > code {
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    font-size: .95rem;
-    line-height: 1.75;
-    white-space: pre-wrap;
-  }
-  &__pre[class*="language-"] {
-    min-width: 100%;
-    max-width: 100%;
-    padding: 1rem;
-    margin: 0;
-    overflow: initial;
-    background-color: transparent;
-    border-left: 0;
-    box-shadow: none;
-    &::before,
-    &::after {
-      display: none;
-    }
-  }
-  &__pre[class*="language-"] > code {
-    padding: 0;
-    background-color: #fff;
-    // background-image: linear-gradient(transparent 50%, #f6f6f6 50%);
-    background-image: none;
-    border-left: 0;
-    box-shadow: none;
-  }
-  &__pre[class*="language-"] .token {
+  &__section:not(:last-of-type) {
+    margin-bottom: 1rem;
   }
 }

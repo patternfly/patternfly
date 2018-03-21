@@ -21,7 +21,7 @@ class OverlayPage extends React.Component {
   render() {
     return (
       <Documentation docs={Docs}>
-        <Example heading="Example">
+        <Example heading="Example" isViewport={true}>
           <Overlay
             className={this.state.overlayClassName}
             onClick={this.handleClick}>

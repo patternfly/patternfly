@@ -1,7 +1,7 @@
 import React from 'react'
 import editIcon from './edit.svg'
 import './styles.scss'
-// <input type='submit' value='Edit on CodePen' />
+
 export default ({
   title = 'PatternFly Next Pen',
   description = 'PatternFly Next Pen',
