@@ -140,11 +140,17 @@
   }
 }
 
-.is-split-page {
+.is-layout-page {
   .pf-l-split,
-  .pf-l-split > * {
+  .pf-l-split > *,
+  .pf-l-stack,
+  .pf-l-stack > * {
     border: 2px dashed #393f44;
     padding: 0.5rem;
+  }
+
+  .Preview__body {
+    height: 300px;
   }
 }
 /* stylelint-enable */

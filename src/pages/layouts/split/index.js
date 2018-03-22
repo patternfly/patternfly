@@ -5,8 +5,8 @@ import Split, {Docs} from '@layouts/Split'
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-split-page">
-      <Example heading="Split Example - Default)">
+    <Documentation docs={Docs} className="is-layout-page">
+      <Example heading="Split Example - Default">
         <Split>
           <div>
             Secondary content area.
