@@ -139,6 +139,11 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     current.loader = 'html-loader!markdown-loader'
     return current
   })
+  config.loader('html-loader', function(current) {
+    current.test = /\.html$/
+    current.loader = 'html-loader'
+    return current
+  })
   config.merge({
     resolve: {
       alias: {
