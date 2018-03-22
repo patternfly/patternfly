@@ -67,12 +67,25 @@ $pf-global--dark-color--dark:    $pf-color-black-800 !default;
 
 
 // Shadows
-$pf-global--sm--BoxShadow:     0  pf-prem(2)  pf-prem(3) pf-prem(-2) rgba($pf-color-black-1000, .25) !default;
-$pf-global--md--BoxShadow:     0  pf-prem(2)  pf-prem(2) rgba($pf-color-black-1000, .2) !default;
-$pf-global--lg--BoxShadow:     0  pf-prem(3)  pf-prem(5) rgba($pf-color-black-1000, .3) !default;
-$pf-global--inset--BoxShadow:  inset 0  pf-prem(1)  pf-prem(2) rgba($pf-color-black-1000, .1) !default;
-$pf-global--left--BoxShadow:   -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, .3) !default;
 
+$pf-global--sm--BoxShadow:  0  pf-prem(1)  pf-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
+$pf-global--md--BoxShadow:  0  pf-prem(2)  pf-prem(1) pf-prem(1) rgba($pf-color-black-1000, .12), 0  pf-prem(4)  pf-prem(11) pf-prem(6) rgba($pf-color-black-1000, .05) !default;
+$pf-global--lg--BoxShadow:  0  pf-prem(3)  pf-prem(7) pf-prem(3) rgba($pf-color-black-1000, .13), 0  pf-prem(11)  pf-prem(24) pf-prem(16) rgba($pf-color-black-1000, .12) !default;
+
+$pf-global--sm-right--BoxShadow:  pf-prem(4)  0  pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--sm-left--BoxShadow:   pf-prem(-4) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--sm-bottom--BoxShadow: 0 pf-prem(4) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--sm-top--BoxShadow:    0 pf-prem(-4) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--md-right--BoxShadow:  pf-prem(5) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--md-left--BoxShadow:   pf-prem(-5) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--md-bottom--BoxShadow: 0 pf-prem(5) pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--md-top--BoxShadow:    0 pf-prem(-5) pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--lg--right--BoxShadow: pf-prem(12) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--lg--left--BoxShadow:  pf-prem(-12) 0 pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--lg--bottom--BoxShadow: 0 pf-prem(12) pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--lg--top--BoxShadow:   0 pf-prem(-12) pf-prem(10) pf-prem(-4) rgba($pf-color-black-1000, .07) !default;
+
+$pf-global--inset--BoxShadow:     inset 0 0 pf-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
 
 // Fontpath
 $pf-global--font-path: "/assets/fonts" !default;
