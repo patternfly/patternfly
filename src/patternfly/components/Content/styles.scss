@@ -1,18 +1,148 @@
 @import "../../patternfly-utilities";
 
+// stylelint-disable
+:root {
+
+  // line height - DELETE - just here for review with designer
+  --pf-c-content--sm--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--md--LineHeight: var(--pf-global--md--LineHeight);
+  --pf-c-content--lg--LineHeight: var(--pf-global--lg--LineHeight);
+
+// are we being opinionated by specifying a single font-weight variable for all headers?
+  // Headings
+  --pf-c-content--heading--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // Hero title
+  // --pf-c-content--hero-title--MarginTop: var(--pf-global--spacer--xxxl);
+  // --pf-c-content--hero-title--MarginBottom: var(--pf-global--spacer--lg);
+  // update variables above when spacers are updated
+  // the following are spacers as defined in the issue
+  --pf-c-content--hero-title--MarginTop: 24px;
+  --pf-c-content--hero-title--MarginBottom: 16px;
+  --pf-c-content--hero-title--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--hero-title--FontSize: var(--pf-global--hero-title--FontSize);
+  --pf-c-content--hero-title--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // h1 - Main title
+  // --pf-c-content--main-title--MarginTop: var(--pf-global--spacer--xxl);
+  // --pf-c-content--main-title--MarginBottom: var(--pf-global--spacer--md);
+  // update variables above when spacers are updated
+  // the following are spacers as defined in the issue
+  --pf-c-content--main-title--MarginTop: 24px;
+  --pf-c-content--main-title--MarginBottom: 16px;
+  --pf-c-content--main-title--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--main-title--FontSize: var(--pf-global--main-title--FontSize);
+  --pf-c-content--main-title--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // h2 - Secondary title
+  // --pf-c-content--secondary-title--MarginTop: var(--pf-global--spacer--xl);
+  // --pf-c-content--secondary-title--MarginBottom: var(--pf-global--spacer--sm);
+  // update variables above when spacers are updated
+  // the following are spacers as defined in the issue
+  --pf-c-content--secondary-title--MarginTop: 24px;
+  --pf-c-content--secondary-title--MarginBottom: 16px;
+  --pf-c-content--secondary-title--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--secondary-title--FontSize: var(--pf-global--secondary-title--FontSize);
+  --pf-c-content--secondary-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
+
+  // h3 - Sub-title
+  // --pf-c-content--sub-title--MarginTop: var(--pf-global--spacer--lg);
+  // --pf-c-content--sub-title--MarginBottom: var(--pf-global--spacer--md);
+  // update variables above when spacers are updated, and delete variable below
+  // the following are spacers as defined in the issue
+  --pf-c-content--sub-title--MarginTop: 24px;
+  --pf-c-content--sub-title--MarginBottom: 16px;
+  --pf-c-content--sub-title--LineHeight: var(--pf-global--md--LineHeight);
+  --pf-c-content--sub-title--FontSize: var(--pf-global--sub-title--FontSize);
+  --pf-c-content--sub-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
+
+
+  // I'm not sure what to name these items, if we aren't trying to use elements in variable names
+  // I get why that rule is important for other components where the styles are associated with classes
+  // but this component is unique in that styles are associated with elements
+  // and it's extra confusing to try to remember what name is associated with what heading level
+
+  // h4
+
+  // h5
+
+  // h6
+
+  // should we define margin top for the following sizes?
+
+  // Body
+  // --pf-c-content--body--MarginBottom: var(--pf-global--spacer--md);
+  // update variables above when spacers are updated, and delete variable below
+  // the following are spacers as defined in the issue
+  --pf-c-content--body--MarginBottom: 16px;
+  --pf-c-content--body--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--body--FontSize: var(--pf-global--body--FontSize);
+  --pf-c-content--body--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // Small text
+  // --pf-c-content--small--MarginBottom: var(--pf-global--spacer--md);
+  // update variables above when spacers are updated
+  // the following are spacers as defined in the issue
+  --pf-c-content--small--MarginBottom: 16px;
+  --pf-c-content--small--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--small--FontSize: var(--pf-global--small--FontSize);
+  --pf-c-content--small--Color: var(--pf-global-dark-off-color);
+  // the value defined for the color above is currently $pf-color-black-400
+  // but visual design wants $pf-color-black-600, which is not a color currently defined as a text color variable
+
+
+  // This should be pulled from this Content component.
+  // It should only be used in specific use cases, which wouldn't be applicable here.
+  // Tiny text
+  // --pf-c-content--tiny--MarginBottom: var(--pf-global--spacer--md);
+  // update variables above when spacers are updated
+  // the following are spacers as defined in the issue
+  --pf-c-content--tiny--MarginBottom: 16px;
+  --pf-c-content--tiny--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--tiny--FontSize: var(--pf-global--tiny--FontSize);
+
+  // Links
+  --pf-c-content--link--Color: var(--pf-global--link--Color);
+  --pf-c-content--link--TextDecoration: var(--pf-global--link--TextDecoration);
+  --pf-c-content--link--hover--Color: var(--pf-global--link--hover--Color);
+  --pf-c-content--link--hover--TextDecoration: var(--pf-global--link--hover--TextDecoration);
+
+  // Blockquote
+  --pf-c-content--blockquote--Padding: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--BorderLeft: 5px solid var(--pf-global-dark-off-color);
+
+  // Lists
+  --pf-c-content--list--PaddingLeft: var(--pf-global--spacer--md);
+  // --pf-c-content--ordered-list--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-content--ordered-list--MarginTop: 16px;
+  --pf-c-content--ordered-list--MarginLeft: var(--pf-global--spacer--md);
+  // --pf-c-content--unordered-list--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-content--unordered-list--MarginTop: 16px;
+  --pf-c-content--unordered-list--MarginLeft: var(--pf-global--spacer--sm);
+  // --pf-c-content--unordered-list--nested--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-content--unordered-list--nested--MarginTop: 8px;
+  --pf-c-content--unordered-list--ListStyle: var(--pf-global-ListStyle);
+  // --pf-c-content--list-item--MarginTop: var(--pf-global--spacer--xxs);
+  --pf-c-content--list-item--MarginTop: 8px;
+  --pf-c-content--definition--MarginLeft: var(--pf-global--spacer--xl);
+
+}
+
+// stylelint-enable
+
 .pf-c-content {
   a {
-    color: $pf-global--link--Color;
-    text-decoration: $pf-global--link--TextDecoration;
+    color: var(--pf-c-content--link--Color);
+    text-decoration: var(--pf-c-content--link--TextDecoration);
 
     &:hover {
-      color: $pf-global--link--hover--Color;
-      text-decoration: $pf-global--link--hover--TextDecoration;
+      color: var(--pf-c-content--link--hover--Color);
+      text-decoration: var(--pf-c-content--link--hover--TextDecoration);
     }
   }
 
   li + li {
-    margin-top: $pf-global--spacer--xxs;
+    margin-top: var(--pf-c-content--list-item--MarginTop);
   }
 
   p,
@@ -20,17 +150,19 @@
   ol,
   ul,
   blockquote,
+  small,
   pre,
   table {
+    line-height: var(--pf-c-content--body--LineHeight);
     &:not(:last-child){
-      margin-bottom: $pf-global--spacer--md;
+      margin-bottom: var(--pf-c-content--body--MarginBottom);
     }
   }
 
   dl,
   ol,
   ul {
-    padding-left: $pf-global--spacer--md;
+    padding-left: var(--pf-c-content--list--PaddingLeft);
   }
 
   h1,
@@ -40,72 +172,107 @@
   h5,
   h6 {
     margin: 0;
-    font-weight: $pf-global--normal--FontWeight;
-    line-height: $pf-global--md--LineHeight;
+  }
+
+  .pf-is-hero {
+    margin-bottom: var(--pf-c-content--hero-title--MarginBottom);
+    font-size: var(--pf-c-content--hero-title--FontSize);
+    font-weight: var(--pf-c-content--hero-title--FontWeight);
+    line-height: var(--pf-c-content--hero-title--LineHeight);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--hero-title--MarginTop);
+    }
   }
 
   h1 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--hero-title--FontSize;
+    margin-bottom: var(--pf-c-content--main-title--MarginBottom);
+    font-size: var(--pf-c-content--main-title--FontSize);
+    font-weight: var(--pf-c-content--main-title--FontWeight);
+    line-height: var(--pf-c-content--main-title--LineHeight);
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--lg;
+      margin-top: var(--pf-c-content--main-title--MarginTop);
     }
   }
 
   h2 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--main-title--FontSize;
+    margin-bottom: var(--pf-c-content--secondary-title--MarginBottom);
+    font-size: var(--pf-c-content--secondary-title--FontSize);
+    font-weight: var(--pf-c-content--secondary-title--FontWeight);
+    line-height: var(--pf-c-content--secondary-title--LineHeight);
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--xl;
+      margin-top: var(--pf-c-content--secondary-title--MarginTop);
     }
   }
 
   h3 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--secondary-title--FontSize;
+    margin-bottom: var(--pf-c-content--sub-title--MarginBottom);
+    font-size: var(--pf-c-content--sub-title--FontSize);
+    font-weight: var(--pf-c-content--sub-title--FontWeight);
+    line-height: var(--pf-c-content--sub-title--LineHeight);
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--lg;
+      margin-top: var(--pf-c-content--sub-title--MarginTop);
     }
   }
 
+  // variables for h4, h5, h6 still need to be defined
   h4 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--sub-title--FontSize;
+    margin-bottom: var(--pf-c-content--body--MarginBottom);
+    font-size: var(--pf-c-content--body--FontSize);
+    font-weight: var(--pf-c-content--body--FontWeight);
+    line-height: var(--pf-c-content--body--LineHeight);
   }
 
   h5 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--body--FontSize;
+    margin-bottom: var(--pf-c-content--small--MarginBottom);
+    font-size: var(--pf-c-content--small--FontSize);
+    line-height: var(--pf-c-content--small--LineHeight);
   }
 
   h6 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--caption--FontSize;
+    margin-bottom: var(--pf-c-content--tiny--MarginBottom);
+    font-size: var(--pf-c-content--tiny--FontSize);
+    line-height: var(--pf-c-content--tiny--LineHeight);
+  }
+
+  small {
+    display: block;
+    margin-bottom: var(--pf-c-content--small--MarginBottom);
+    font-size: var(--pf-c-content--small--FontSize);
+    line-height: var(--pf-c-content--small--LineHeight);
+    color: var(--pf-c-content--small--Color);
   }
 
   blockquote {
-    padding: $pf-global--spacer--md;
-    border-left: 5px solid $pf-global-dark-off-color;
+    padding: var(--pf-c-content--blockquote--Padding);
+    border-left: var(--pf-c-content--blockquote--BorderLeft);
   }
 
   ol {
-    margin-top: $pf-global--spacer--md;
-    margin-left: $pf-global--spacer--md;
+    margin-top: var(--pf-c-content--ordered-list--MarginTop);
+    margin-left: var(--pf-c-content--ordered-list--MarginLeft);
   }
 
   ul {
     margin: 0;
-    margin-top: $pf-global--spacer--md;
-    margin-left: $pf-global--spacer--sm;
+    margin-top: var(--pf-c-content--unordered-list--MarginTop);
+    margin-left: var(--pf-c-content--unordered-list--MarginLeft);
+    list-style: var(--pf-c-content--unordered-list--ListStyle, disc outside);
     ul {
-      margin-top: $pf-global--spacer--xs;
+      margin-top: var(--pf-c-content--unordered-list--nested--MarginTop);
     }
   }
 
   dd {
-    margin-left: $pf-global--spacer--xl;
+    margin-left: var(--pf-c-content--definition--MarginLeft);
   }
 
+  // delete this, just for testing
+  .pf-LineHeight-is-sm {
+    line-height: var(--pf-c-content--sm--LineHeight);
+  }
+  .pf-LineHeight-is-md {
+    line-height: var(--pf-c-content--md--LineHeight);
+  }
   // figure {
   //   margin-right: 2em;
   //   margin-left: 2em;

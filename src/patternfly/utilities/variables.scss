@@ -131,12 +131,13 @@ $pf-global--monospace--FontFamily:  “Overpass-mono”, Overpass-mono, "SFMono-
 // stylelint-enable value-keyword-case
 
 // Font size
-$pf-global--hero-title--FontSize:       pf-font-prem(48px) !default;
-$pf-global--main-title--FontSize:       pf-font-prem(32px) !default;
-$pf-global--secondary-title--FontSize:  pf-font-prem(24px) !default;
+$pf-global--hero-title--FontSize:       pf-font-prem(36px) !default;
+$pf-global--main-title--FontSize:       pf-font-prem(28px) !default;
+$pf-global--secondary-title--FontSize:  pf-font-prem(23px) !default;
 $pf-global--sub-title--FontSize:        pf-font-prem(19px) !default;
 $pf-global--body--FontSize:             pf-font-prem(16px) !default;
-$pf-global--caption--FontSize:          pf-font-prem(12px) !default;
+$pf-global--small--FontSize:            pf-font-prem(14px) !default;
+$pf-global--tiny--FontSize:             pf-font-prem(12px) !default;
 
 // Font weight
 $pf-global--light--FontWeight:          300 !default;
@@ -145,9 +146,12 @@ $pf-global--semi-bold--FontWeight:      600 !default;
 $pf-global--bold--FontWeight:           700 !default;
 
 // Line height
-$pf-global--sm--LineHeight:         1.2 !default;
-$pf-global--md--LineHeight:         1.5 !default;
-$pf-global--lg--LineHeight:         1.8 !default;
+$pf-global--sm--LineHeight:         1.3 !default;
+$pf-global--md--LineHeight:         1.4 !default;
+$pf-global--lg--LineHeight:         1.5 !default;
+
+// List style
+$pf-global-ListStyle: disc outside !default;
 
 
 // filters
@@ -260,16 +264,21 @@ $pf-global--lg--LineHeight:         1.8 !default;
   --pf-global--secondary-title--FontSize:  $pf-global--secondary-title--FontSize;
   --pf-global--sub-title--FontSize:        $pf-global--sub-title--FontSize;
   --pf-global--body--FontSize:             $pf-global--body--FontSize;
-  --pf-global--caption--FontSize:          $pf-global--caption--FontSize;
-
-  // line height
-  --pf-global--sm--LineHeight:   $pf-global--sm--LineHeight;
-  --pf-global--md--LineHeight:   $pf-global--sm--LineHeight;
-  --pf-global--lg--LineHeight:   $pf-global--sm--LineHeight;
+  --pf-global--small--FontSize:            $pf-global--small--FontSize;
+  --pf-global--tiny--FontSize:             $pf-global--tiny--FontSize;
 
   // Font weight
   --pf-global--light--FontWeight:     $pf-global--light--FontWeight;
   --pf-global--normal--FontWeight:    $pf-global--normal--FontWeight;
   --pf-global--semi-bold--FontWeight: $pf-global--semi-bold--FontWeight;
   --pf-global--bold--FontWeight:      $pf-global--bold--FontWeight;
+
+  // line height
+  --pf-global--sm--LineHeight:   $pf-global--sm--LineHeight;
+  --pf-global--md--LineHeight:   $pf-global--md--LineHeight;
+  --pf-global--lg--LineHeight:   $pf-global--lg--LineHeight;
+
+  // List style
+  --pf-global-ListStyle: $pf-global-ListStyle;
+
 }
