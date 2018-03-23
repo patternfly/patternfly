@@ -10,7 +10,6 @@ export default () => {
         <Content>
           <h1 className="pf-is-hero">Hero Title</h1>
           <p>The header size above will never appear in a main content area. It will only be used in heros/landing pages.</p>
-          <h1 className="pf-is-hero">Hero Title</h1>
         </Content>
       </Example>
       <Example heading="Contents">
@@ -70,15 +69,17 @@ export default () => {
 
           <h6>Sixth level</h6>
           <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
-
-          // This is here for visual design review purposes only
-
-          <h1>Let's look at vertical rhythm and why it's so important</h1>
-          <h2>Let's look at vertical rhythm and why it's so important</h2>
-          <h3>Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h3>
-          <h4>Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h4>
-          <h5>Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h5>
-          <h6>Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h6>
+        </Content>
+      </Example>
+      <Example heading="This is here for visual design review purposes only and will be deleted">
+        <Content>
+          <h1 className="pf-is-hero">Hero Title Let's look at vertical rhythm and why it's so important</h1>
+          <h1>Main Title Let's look at vertical rhythm and why it's so important</h1>
+          <h2>Secondary Title Let's look at vertical rhythm and why it's so important</h2>
+          <h3>Sub-title Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h3>
+          <h4>Fourth level title, Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h4>
+          <h5>Fifth level title, Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h5>
+          <h6>Sixth level title, Let's look at vertical rhythm and why it's so important, Let's look at vertical rhythm and why it's so important</h6>
           <p className="pf-LineHeight-is-sm">This is small line-height. Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
           <p className="pf-LineHeight-is-md">This is the default line-height that would be used throughout other components, but it is not the default in the Content component. Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
           <p>This is large line-height. It is not the default line-height for other components, but it is used for anything in the body of the Contents component. Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
