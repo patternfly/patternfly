@@ -9,9 +9,15 @@ export default () => {
     <Documentation docs={Docs} className="is-layout-page">
       <Example heading="Split Example">
         <Split>
-          <SplitSecondary></SplitSecondary>
-          <SplitPrimary></SplitPrimary>
-          <SplitSecondary></SplitSecondary>
+          <SplitSecondary>
+            secondary content
+          </SplitSecondary>
+          <SplitPrimary>
+            primary content
+          </SplitPrimary>
+          <SplitSecondary>
+            secondary content
+          </SplitSecondary>
         </Split>
       </Example>
     </Documentation>
