@@ -67,12 +67,25 @@ $pf-global--dark-color--dark:    $pf-color-black-800 !default;
 
 
 // Shadows
-$pf-global--sm--BoxShadow:     0  pf-prem(2)  pf-prem(3) pf-prem(-2) rgba($pf-color-black-1000, .25) !default;
-$pf-global--md--BoxShadow:     0  pf-prem(2)  pf-prem(2) rgba($pf-color-black-1000, .2) !default;
-$pf-global--lg--BoxShadow:     0  pf-prem(3)  pf-prem(5) rgba($pf-color-black-1000, .3) !default;
-$pf-global--inset--BoxShadow:  inset 0  pf-prem(1)  pf-prem(2) rgba($pf-color-black-1000, .1) !default;
-$pf-global--left--BoxShadow:   -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, .3) !default;
 
+$pf-global--shadow--sm--BoxShadow:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
+$pf-global--shadow--md--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
+$pf-global--shadow--lg--BoxShadow:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
+
+$pf-global--shadow--sm-right--BoxShadow:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--shadow--sm-left--BoxShadow:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--shadow--sm-bottom--BoxShadow: 0 pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--shadow--sm-top--BoxShadow:    0 pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--shadow--md-right--BoxShadow:  pf-size-prem(5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--shadow--md-left--BoxShadow:   pf-size-prem(-5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--shadow--md-bottom--BoxShadow: 0 pf-size-prem(5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--shadow--md-top--BoxShadow:    0 pf-size-prem(-5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$pf-global--shadow--lg-right--BoxShadow: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--shadow--lg-left--BoxShadow:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--shadow--lg-bottom--BoxShadow: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--shadow--lg-top--BoxShadow:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+
+$pf-global--shadow--inset--BoxShadow:     inset 0 0 pf-size-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
 
 // Fontpath
 $pf-global--font-path: "/assets/fonts" !default;
@@ -182,6 +195,26 @@ $pf-global--lg--LineHeight:         1.8 !default;
   --pf-global--disabled--Color:                  $pf-global--disabled--Color;
   --pf-global--disabled--BackgroundColor:        $pf-global--disabled--BackgroundColor;
   --pf-global--disabled--BorderColor:            $pf-global--disabled--BorderColor;
+
+  // Shadows
+  --pf-global--shadow--sm--BoxShadow:            $pf-global--shadow--sm--BoxShadow;
+  --pf-global--shadow--md--BoxShadow:            $pf-global--shadow--md--BoxShadow;
+  --pf-global--shadow--lg--BoxShadow:            $pf-global--shadow--lg--BoxShadow;
+
+  --pf-global--shadow--sm-right--BoxShadow:      $pf-global--shadow--sm-right--BoxShadow;
+  --pf-global--shadow--sm-left--BoxShadow:       $pf-global--shadow--sm-left--BoxShadow;
+  --pf-global--shadow--sm-bottom--BoxShadow:     $pf-global--shadow--sm-bottom--BoxShadow;
+  --pf-global--shadow--sm-top--BoxShadow:        $pf-global--shadow--sm-top--BoxShadow;
+  --pf-global--shadow--md-right--BoxShadow:      $pf-global--shadow--md-right--BoxShadow;
+  --pf-global--shadow--md-left--BoxShadow:       $pf-global--shadow--md-left--BoxShadow;
+  --pf-global--shadow--md-bottom--BoxShadow:     $pf-global--shadow--md-bottom--BoxShadow;
+  --pf-global--shadow--md-top--BoxShadow:        $pf-global--shadow--md-top--BoxShadow;
+  --pf-global--shadow--lg-right--BoxShadow:      $pf-global--shadow--lg-right--BoxShadow;
+  --pf-global--shadow--lg-left--BoxShadow:       $pf-global--shadow--lg-left--BoxShadow;
+  --pf-global--shadow--lg-bottom--BoxShadow:     $pf-global--shadow--lg-bottom--BoxShadow;
+  --pf-global--shadow--lg-top--BoxShadow:        $pf-global--shadow--lg-top--BoxShadow;
+
+  --pf-global--shadow--inset--BoxShadow:         $pf-global--shadow--inset--BoxShadow;
 
   // spacers
   --pf-global--spacer--xxxs:   $pf-global--spacer--xxxs;

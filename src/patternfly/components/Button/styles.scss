@@ -81,12 +81,6 @@
     border-color: var(--pf-c-button--hover--BorderColor, #555);
   }
 
-  &:active,
-  &.pf-is-active{
-    box-shadow: inset 0  .4rem  .4rem rgba($pf-color-black-1000, .2);
-  }
-
-
   &:disabled,
   &.pf-is-disabled {
     pointer-events: none;
