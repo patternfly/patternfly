@@ -1,10 +1,10 @@
 @import "../../patternfly-utilities";
 :root {
-  --pf-c-alert--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-alert--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-alert--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-alert--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-alert--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-alert--PaddingTop: var(--pf-global--spacer--xxs);
+  --pf-c-alert--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-alert--PaddingBottom: var(--pf-global--spacer--xxs);
+  --pf-c-alert--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-alert--MarginBottom: var(--pf-global--spacer--xs);
   --pf-c-alert--BorderWidth: var(--pf-global--BorderWidth);
   --pf-c-alert__link--FontWeight: var(--pf-global--bold--FontWeight);
   //success alert

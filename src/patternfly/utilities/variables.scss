@@ -78,15 +78,13 @@ $pf-global--left--BoxShadow:   -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, 
 $pf-global--font-path: "/assets/fonts" !default;
 
 // Spacers
-$pf-global--spacer--xxxs:   pf-size-prem(2px) !default;
-$pf-global--spacer--xxs:    pf-size-prem(4px) !default;
-$pf-global--spacer--xs:     pf-size-prem(8px) !default;
-$pf-global--spacer--sm:     pf-size-prem(12px) !default;
-$pf-global--spacer--md:     pf-size-prem(16px) !default;
-$pf-global--spacer--lg:     pf-size-prem(20px) !default;
-$pf-global--spacer--xl:     pf-size-prem(24px) !default;
-$pf-global--spacer--xxl:    pf-size-prem(28px) !default;
-$pf-global--spacer--xxxl:   pf-size-prem(32px) !default;
+$pf-global--spacer--xxxs:   pf-size-prem(4px) !default;
+$pf-global--spacer--xxs:    pf-size-prem(8px) !default;
+$pf-global--spacer--xs:     pf-size-prem(16px) !default;
+$pf-global--spacer--sm:     pf-size-prem(24px) !default;
+$pf-global--spacer--md:     pf-size-prem(32px) !default;
+$pf-global--spacer--lg:     pf-size-prem(48px) !default;
+$pf-global--spacer--xl:     pf-size-prem(64px) !default;
 
 
 // Grid breakpoints
@@ -193,8 +191,6 @@ $pf-global--lg--LineHeight:         1.8 !default;
   --pf-global--spacer--md:     $pf-global--spacer--md;
   --pf-global--spacer--lg:     $pf-global--spacer--lg;
   --pf-global--spacer--xl:     $pf-global--spacer--xl;
-  --pf-global--spacer--xxl:    $pf-global--spacer--xxl;
-  --pf-global--spacer--xxxl:   $pf-global--spacer--xxxl;
 
   // Grid breakpoints
   --pf-global--breakpoint--xs: $pf-global--breakpoint--xs;

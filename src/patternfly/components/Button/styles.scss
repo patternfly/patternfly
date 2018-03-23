@@ -2,10 +2,10 @@
 
 // stylelint-disable
 :root {
-  --pf-c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-button--PaddingRight: var(--pf-global--spacer--xxl);
-  --pf-c-button--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-button--PaddingLeft: var(--pf-global--spacer--xxl);
+  --pf-c-button--PaddingTop: var(--pf-global--spacer--xxs);
+  --pf-c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-button--PaddingBottom: var(--pf-global--spacer--xxs);
+  --pf-c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-button--LineHeight: var(--pf-global--sm--LineHeight);
   --pf-c-button--FontWeight: var(--pf-global--semi-bold--FontWeight);
   --pf-c-button--BorderWidth: var(--pf-global--BorderWidth);
