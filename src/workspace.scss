@@ -141,6 +141,8 @@
 }
 
 .is-layout-page {
+  .pf-l-bullseye,
+  .pf-l-bullseye > *,
   .pf-l-split,
   .pf-l-split > *,
   .pf-l-stack,
@@ -153,6 +155,9 @@
   }
   .pf-l-stack__secondary::before {
     content: "secondary content";
+  }
+  .pf-l-bullseye__item::before {
+    content: "content";
   }
 
   .Preview__body {
