@@ -1,0 +1,15 @@
+.pf-l-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    width: 960px; //we will need to adjust this at some point.
+    max-width: 100%;
+  }
+  &.pf-is-full-width > &__item {
+    width: 100%;
+  }
+}
