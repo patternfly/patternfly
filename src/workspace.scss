@@ -148,6 +148,12 @@
     border: 2px dashed #393f44;
     padding: 0.5rem;
   }
+  .pf-l-stack__primary::before {
+    content: "primary content";
+  }
+  .pf-l-stack__secondary::before {
+    content: "secondary content";
+  }
 
   .Preview__body {
     height: 300px;
