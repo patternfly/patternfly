@@ -9,10 +9,13 @@ export default () => {
       <Example heading="Stack Example">
         <Stack>
           <StackSecondary>
+            secondary content
           </StackSecondary>
           <StackPrimary>
+            primary content
           </StackPrimary>
           <StackSecondary>
+            secondary content
           </StackSecondary>
         </Stack>
       </Example>
