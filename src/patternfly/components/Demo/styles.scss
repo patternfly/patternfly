@@ -1,0 +1,39 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-demo__element--modifier--state--PropertyCamelCase
+
+// stylelint-disable
+:root {
+  --pf-c-demo--BorderWidth: var(--pf-global--BorderWidth);
+  --pf-c-demo--BorderColor: var(--pf-global--dark--BorderColor);
+
+  --pf-c-demo__header--Padding: var(--pf-global--spacer--xs);
+  --pf-c-demo__body--Padding: var(--pf-global--spacer--xs);
+  --pf-c-demo__footer--Padding: var(--pf-global--spacer--xs);
+
+  --pf-c-demo--is-danger--BorderColor: var(--pf-global--danger-color);
+}
+// stylelint-enable
+
+.pf-c-demo {
+  border: var(--pf-c-demo--BorderWidth, 1px) solid var(--pf-c-demo--BorderColor, #bbb);
+
+  &__header {
+    padding: var(--pf-c-demo__header--Padding, 1rem);
+  }
+
+  &__body {
+    padding: var(--pf-c-demo__body--Padding, 1rem);
+  }
+
+  &__footer {
+    padding: var(--pf-c-demo__footer--Padding, 1rem);
+  }
+
+  // Modifier
+  &.pf-is-danger {
+    border-color: var(--pf-c-demo--is-danger--BorderColor, #c00);
+  }
+}
+
