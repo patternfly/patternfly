@@ -1,0 +1,20 @@
+.pf-l-level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  > &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.pf-is-vertical {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+  }
+  &.pf-is-vertical > &__group {
+    flex-direction: column;
+  }
+}
