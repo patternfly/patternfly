@@ -39,7 +39,7 @@
   --pf-c-content--secondary-title--MarginBottom: 16px;
   --pf-c-content--secondary-title--LineHeight: var(--pf-global--sm--LineHeight);
   --pf-c-content--secondary-title--FontSize: var(--pf-global--secondary-title--FontSize);
-  --pf-c-content--secondary-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
+  --pf-c-content--secondary-title--FontWeight: var(--pf-global--normal--FontWeight);
 
   // h3 - Sub-title
   // --pf-c-content--sub-title--MarginTop: var(--pf-global--spacer--lg);
@@ -50,7 +50,7 @@
   --pf-c-content--sub-title--MarginBottom: 16px;
   --pf-c-content--sub-title--LineHeight: var(--pf-global--md--LineHeight);
   --pf-c-content--sub-title--FontSize: var(--pf-global--sub-title--FontSize);
-  --pf-c-content--sub-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
+  --pf-c-content--sub-title--FontWeight: var(--pf-global--normal--FontWeight);
 
 
   // I'm not sure what to name these items, if we aren't trying to use elements in variable names
@@ -59,10 +59,25 @@
   // and it's extra confusing to try to remember what name is associated with what heading level
 
   // h4
+  --pf-c-content--fourth-level-title--MarginTop: 24px;
+  --pf-c-content--fourth-level-title--MarginBottom: 16px;
+  --pf-c-content--fourth-level-title--LineHeight: var(--pf-global--md--LineHeight);
+  --pf-c-content--fourth-level-title--FontSize: var(--pf-global--fourth-level-title--FontSize);
+  --pf-c-content--fourth-level-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
 
   // h5
+  --pf-c-content--fifth-level-title--MarginTop: 24px;
+  --pf-c-content--fifth-level-title--MarginBottom: 16px;
+  --pf-c-content--fifth-level-title--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--fifth-level-title--FontSize: var(--pf-global--body--FontSize);
+  --pf-c-content--fifth-level-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
 
   // h6
+  --pf-c-content--fifth-level-title--MarginTop: 16px;
+  --pf-c-content--fifth-level-title--MarginBottom: 16px;
+  --pf-c-content--fifth-level-title--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--fifth-level-title--FontSize: var(--pf-global--body--FontSize);
+  --pf-c-content--fifth-level-title--FontWeight: var(--pf-global--semi-bold--FontWeight);
 
   // should we define margin top for the following sizes?
 
@@ -288,7 +303,7 @@
   // }
 
   // pre {
-  //   padding: $pf-c-content--pre--Padding;
+  //   padding: var(--pf-c-content--pre--Padding);
   //   overflow-x: auto;
   //   word-wrap: normal;
   //   white-space: pre;
@@ -303,32 +318,32 @@
   //   width: 100%;
   //   td,
   //   th {
-  //     padding: $pf-c-content-table-cell-padding;
+  //     padding: var(--pf-c-content-table-cell-padding;)
   //     vertical-align: top;
-  //     border: $content-table-cell-border;
-  //     border-width: $content-table-cell-border-width;
+  //     border: var(--content-table-cell-border);
+  //     border-width: var(--content-table-cell-border-width);
   //   }
   //   th {
-  //     color: $content-table-cell-heading-color;
+  //     color: var(--content-table-cell-heading-color);
   //     text-align: left;
   //   }
   //   tr {
   //     &:hover {
-  //       background-color: $content-table-row-hover-background-color;
+  //       background-color: var(--content-table-row-hover-background-color);
   //     }
   //   }
   //   thead {
   //     td,
   //     th {
-  //       color: $content-table-head-cell-color;
-  //       border-width: $content-table-head-cell-border-width;
+  //       color: var(--content-table-head-cell-color);
+  //       border-width: var(--content-table-head-cell-border-width);
   //     }
   //   }
   //   tfoot {
   //     td,
   //     th {
-  //       color: $content-table-foot-cell-color;
-  //       border-width: $content-table-foot-cell-border-width;
+  //       color: var(--content-table-foot-cell-color);
+  //       border-width: var(--content-table-foot-cell-border-width);
   //     }
   //   }
   //   tbody {
