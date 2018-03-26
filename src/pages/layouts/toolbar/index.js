@@ -3,6 +3,8 @@ import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
 import Toolbar, {Docs} from '@layouts/Toolbar'
 import ToolbarGroup from "../../../patternfly/layouts/ToolbarGroup";
+import Button from '@components/Button'
+
 
 export default () => {
   return (
@@ -14,12 +16,11 @@ export default () => {
                 <span>Second child</span>
             </ToolbarGroup>
             <ToolbarGroup>
-                <span>First child</span>
-                <span>Second child</span>
+                <Button className="pf-is-primary">Button</Button>
+                <Button className="pf-is-tertiary">Button</Button>
             </ToolbarGroup>
             <ToolbarGroup>
-                <span>First child</span>
-                <span>Second child</span>
+                <Button className="pf-is-primary">k</Button>
             </ToolbarGroup>
         </Toolbar>
       </Example>
