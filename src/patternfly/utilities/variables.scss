@@ -72,8 +72,8 @@ $pf-global--shadow--sm--BoxShadow:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($
 $pf-global--shadow--md--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
 $pf-global--shadow--lg--BoxShadow:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
 
-$pf-global--shadow--sm-right--BoxShadow:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--shadow--sm-left--BoxShadow:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--shadow--sm-right--BoxShadow:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-red-300, .99) !default;
+$pf-global--shadow--sm-left--BoxShadow:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-red-300, .99) !default;
 $pf-global--shadow--sm-bottom--BoxShadow: 0 pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 $pf-global--shadow--sm-top--BoxShadow:    0 pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 $pf-global--shadow--md-right--BoxShadow:  pf-size-prem(5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
@@ -117,8 +117,9 @@ $pf-global--link--hover--TextDecoration:  underline !default;
 
 // Borders
 $pf-global--BorderWidth:         1px !default;
+$pf-global--md--BorderWidth:     3px !default;
 $pf-global--dark--BorderColor:   $pf-color-black-400 !default;
-$pf-global--light--BorderColor:  $pf-color-black-400 !default;
+$pf-global--light--BorderColor:  $pf-color-black-200 !default;
 
 
 // Fonts
@@ -251,6 +252,7 @@ $pf-global--lg--LineHeight:         1.8 !default;
 
   // Borders
   --pf-global--BorderWidth:         $pf-global--BorderWidth;
+  --pf-global--md--BorderWidth:     $pf-global--md--BorderWidth;
   --pf-global--dark--BorderColor:   $pf-global--dark--BorderColor;
   --pf-global--light--BorderColor:  $pf-global--light--BorderColor;
 

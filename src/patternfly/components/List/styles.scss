@@ -1,0 +1,64 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-list__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  //
+  --pf-c-list-item--BackgroundColor: var(--pf-global--light--BackgroundColor, #fff);
+  --pf-c-list-item--BoxShadow: var(--pf-global--shadow--md-bottom--BoxShadow, 0 2px 1px 0 #e2e2e2);
+  //
+  --pf-c-list-item__header--BorderTopWidth: var(--pf-global--BorderWidth, 1px);
+  --pf-c-list-item__header--BorderTopColor: var(--pf-global--light--BorderColor, #e2e2e2);
+  --pf-c-list-item__header--Padding: var(--pf-global--spacer--sm, 24px);
+  //
+  --pf-c-list-item__body--BorderTopWidth: var(--pf-global--BorderWidth, 1px);
+  --pf-c-list-item__body--BorderTopColor: var(--pf-global--light--BorderColor, #e2e2e2);
+  --pf-c-list-item__body--Padding: var(--pf-global--spacer--sm, 24px);
+  //
+  --pf-c-list-item--is-expanded--BorderLeftWidth: var(--pf-global--md--BorderWidth, 3px);
+  --pf-c-list-item--is-expanded--BorderLeftColor: var(--pf-global--active--Color, #2e30f7);
+  //
+  --pf-c-list-item--is-expanded--BoxShadow: var(--pf-global--shadow--md-bottom--BoxShadoww, 0 2px 1px 0 #e2e2e2);
+  //
+  --pf-l-split--Gutter: var(--pf-global--spacer--sm, 24px);
+}
+
+.pf-c-list-item {
+  background-color: var(--pf-c-list-item--BackgroundColor);
+  border-top: var(--pf-c-list-item__header--BorderTopWidth) solid var(--pf-c-list-item__header--BorderTopColor);
+  box-shadow: var(--pf-c-list-item--BoxShadow);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &__header {
+    padding: var(--pf-c-list-item__header--Padding);
+  }
+
+  &__body {
+    padding: var(--pf-c-list-item__body--Padding);
+    border-top: var(--pf-c-list-item__body--BorderTopWidth) solid var(--pf-c-list-item__body--BorderTopColor);
+  }
+
+  // Modifier
+  &.pf-is-expanded,
+  &.pf-is-expanded:first-child,
+  &.pf-is-expanded:last-child {
+    position: relative;
+    border-left: var(--pf-c-list-item--is-expanded--BorderLeftWidth) solid var(--pf-c-list-item--is-expanded--BorderLeftColor);
+    box-shadow: var(--pf-c-list-item--is-expanded--BoxShadow);
+  }
+
+  .pf-l-split__primary,
+  .pf-l-split__secondary {
+    margin-right: var(--pf-l-split--Gutter);
+  }
+
+  .pf-l-split__primary:last-child,
+  .pf-l-split__secondary:last-child {
+    margin-right: 0;
+  }
+}
