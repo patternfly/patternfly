@@ -1,0 +1,75 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-main-nav__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  --pf-c-main-nav__link--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-main-nav__link--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-main-nav__link--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-main-nav__link--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-main-nav__link--Color: var(--pf-global-dark-off-color);
+  --pf-c-main-nav__link--is-active--Color: var(--pf-global--dark-color);
+  --pf-c-main-nav__link--is-disabled--Color: var(--pf-global--disabled--Color);
+  --pf-c-main-nav__link--hover--Color: var(--pf-global--dark-color);
+  --pf-c-main-nav__link-icon--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-main-nav__link-icon--MarginRight: var(--pf-global--spacer--sm);
+}
+
+.pf-c-main-nav {
+
+  &__list {
+    // reset list
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-top: var(--pf-c-main-nav__link--PaddingTop, 1rem);
+    padding-bottom: var(--pf-c-main-nav__link--PaddingBottom, .8rem);
+    margin-top: var(--pf-c-main-nav__link--MarginTop, 2rem);
+    margin-bottom: var(--pf-c-main-nav__link--MarginBottom, 2rem);
+    color: var(--pf-c-main-nav__link--Color, #555);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--pf-c-main-nav__link--hover--Color, #000);
+      text-decoration: none;
+    }
+
+    &.pf-is-active {
+      position: relative;
+      color: var(--pf-c-main-nav__link--is-active--Color, #39a5dc);
+
+      // Since we are still unsure about the active state I am going to leave it hardcoded
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: calc(20px + var(--pf-c-main-nav__link-icon--MarginRight));
+        width: 32px;
+        height: 4px;
+        content: "";
+        background-color: $pf-global--link--Color;
+      }
+    }
+
+    &.pf-is-disabled {
+      color: var(--pf-c-main-nav__link--disabled--Color, #ccc);
+      // pointer-events: none; // Could use this instead of not-allowed
+      cursor: not-allowed;
+    }
+  }
+
+  &__link-icon {
+    // placeholderfor an icon
+    flex: 0 0 20px; //delete when we have icons
+    height: 20px; //delete when we have icons
+    margin-right: var(--pf-c-main-nav__link-icon--MarginRight, 1.5rem);
+    background: $pf-color-black-400; //delete when we have icons
+  }
+
+}
+

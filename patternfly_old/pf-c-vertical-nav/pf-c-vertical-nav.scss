@@ -1,32 +1,32 @@
-// pf-c-block__element--modifier--state--PropiertyCamel
+// pf-c-block__element--modifier--state--PropiertyCaps
 
-// /// A description of pf-c-vertical-nav
+// /// A description of pf-c-main-nav
 // /// @group components
 // /// @moduleType component
 // /// @modifier .is-modifier - An example modifier description
 // /// @modifier .is-another-modifier - Another example modifier description
-// /// @template src/components/pf-c-vertical-nav/pf-c-vertical-nav.html
-// /// @todo Accecibility for vertical nav
+// /// @template src/components/pf-c-main-nav/pf-c-main-nav.html
+// /// @todo Accecibility for main nav
 //
 
 // stylelint-disable
 :root {
-  --pf-c-vertical-nav__link--PaddingTop:        var(--pf-global--spacer--sm);
-  --pf-c-vertical-nav__link--PaddingBottom:     var(--pf-global--spacer--sm);
-  --pf-c-vertical-nav__link--MarginTop:         var(--pf-global--spacer--xxl);
-  --pf-c-vertical-nav__link--MarginBottom:      var(--pf-global--spacer--xxl);
-  --pf-c-vertical-nav__link--Color:             var(--pf-global-dark-off-color);
-  --pf-c-vertical-nav__link--active--Color:     var(--pf-global--dark-color);
-  --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global--disabled--Color);
-  --pf-c-vertical-nav__link--hover--Color:      var(--pf-global-component-color);
-  --pf-c-vertical-nav__link-icon--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-main-nav__link--PaddingTop:        var(--pf-global--spacer--sm);
+  --pf-c-main-nav__link--PaddingBottom:     var(--pf-global--spacer--sm);
+  --pf-c-main-nav__link--MarginTop:         var(--pf-global--spacer--xxl);
+  --pf-c-main-nav__link--MarginBottom:      var(--pf-global--spacer--xxl);
+  --pf-c-main-nav__link--Color:             var(--pf-global-dark-off-color);
+  --pf-c-main-nav__link--active--Color:     var(--pf-global--dark-color);
+  --pf-c-main-nav__link--disabled--Color:   var(--pf-global--disabled--Color);
+  --pf-c-main-nav__link--hover--Color:      var(--pf-global-component-color);
+  --pf-c-main-nav__link-icon--PaddingRight: var(--pf-global--spacer--xl);
 }
 
 // stylelint-enable
 
-.pf-c-vertical-nav {
+.pf-c-main-nav {
 
-  &__content {
+  &__list {
     // reset list
     padding-left: 0;
     list-style: none;
@@ -35,72 +35,61 @@
   &__link {
     display: flex;
     align-items: center;
-    padding-top: $pf-global--spacer--sm;
-    padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom, .8rem);
-    margin-top: var(--pf-c-vertical-nav__link--MarginTop, 2rem);
-    margin-bottom: var(--pf-c-vertical-nav__link--MarginBottom, 2rem);
-    color: var(--pf-c-vertical-nav__link--Color, #555);
+    padding-top: var(--pf-c-main-nav__link--PaddingTop, 1rem);
+    padding-bottom: var(--pf-c-main-nav__link--PaddingBottom, .8rem);
+    margin-top: var(--pf-c-main-nav__link--MarginTop, 2rem);
+    margin-bottom: var(--pf-c-main-nav__link--MarginBottom, 2rem);
+    color: var(--pf-c-main-nav__link--Color, #555);
     text-decoration: none;
 
     &:hover {
-      color: var(--pf-c-vertical-nav__link--hover--Color, #000);
+      color: var(--pf-c-main-nav__link--hover--Color, #000);
       text-decoration: none;
     }
 
-    &-text {
+    &__text {
     }
 
-    &-icon {
+    &__icon {
       // placeholderfor an icon
       flex: 0 0 20px; //delete when we have icons
       height: 20px; //delete when we have icons
-      margin-right: var(--pf-c-vertical-nav__link-icon--PaddingRight, 1.5rem);
+      margin-right: var(--pf-c-main-nav__link-icon--PaddingRight, 1.5rem);
       background: $pf-color-black-400; //delete when we have icons
-    }
-
-    &.pf-is-active {
-      position: relative;
-
-      // Since we are still unsure about the active state I am going to leave it hardcoded
-      &::before {
-        position: absolute;
-        bottom: 0;
-        left: calc(20px + var(--pf-c-vertical-nav__link-icon--PaddingRight));
-        width: 32px;
-        height: 4px;
-        content: "";
-        background-color: $pf-global--link--Color;
-      }
     }
 
   }
 }
 
 .pf-is-active {
-  --pf-c-vertical-nav__link--Color: var(--pf-c-vertical-nav__link--active--Color, #39a5dc);
+  color: var(--pf-c-main-nav__link--active--Color, #39a5dc);
 }
 
 .pf-is-disabled {
-  --pf-c-vertical-nav__link--Color: var(--pf-c-vertical-nav__link--disabled--Color, #ccc);
+  color: var(--pf-c-main-nav__link--disabled--Color, #ccc);
+  pointer-events: none;
 }
+
+
+////// --pf-c-main-nav__link-icon--PaddingRight
 
 // Sub menu
 //
-.pf-vertical-sub-nav {
+.pf-main-sub-nav {
   display: none; // we don't know how the submenu looks like yet
 }
-// .pf-vertical-sub-nav {`
+// .pf-main-sub-nav {`
 //   // padding-left: 1em;
 //   @include media-breakpoint-up(sm) {
 //     position: absolute;
 //     top: 0;
-//     right: -$pf-vertical-sub-nav-width;
-//     width: $pf-vertical-sub-nav-width;
-//     padding: $pf-vertical-sub-nav-padding;
+//     right: -$pf-main-sub-nav-width;
+//     width: $pf-main-sub-nav-width;
+//     padding: $pf-main-sub-nav-padding;
 //   }
 //
 //   &--first {
-//     background-color: $pf-vertical-sub-nav-first-bg-color;
+//     background-color: $pf-main-sub-nav-first-bg-color;
 //   }
 //
 //   &--second {
@@ -112,34 +101,34 @@
 //   }
 // }
 //
-// .pf-vertical-sub-nav__title {
+// .pf-main-sub-nav__title {
 //   display: none;
 //   @include media-breakpoint-up(sm) {
 //     display: block;
 //   }
 // }
 //
-// .pf-vertical-sub-nav__content {
+// .pf-main-sub-nav__content {
 //   @include list-unstyled;
 // }
 //
-// .pf-vertical-sub-nav__item {}
+// .pf-main-sub-nav__item {}
 //
-// .pf-vertical-sub-nav__`link {
+// .pf-main-sub-nav__`link {
 //   display: block;
-//   padding: $pf-vertical-sub-nav-link-padding-y $pf-vertical-sub-nav-link-padding-x;
-//   color: $pf-vertical-sub-nav-link-hover-color;
+//   padding: $pf-main-sub-nav-link-padding-y $pf-main-sub-nav-link-padding-x;
+//   color: $pf-main-sub-nav-link-hover-color;
 //
 //   @include hover-focus {
-//     background-color: $pf-vertical-sub-nav-link-hover-bg-color;
+//     background-color: $pf-main-sub-nav-link-hover-bg-color;
 //   }
 //
 //   @include media-breakpoint-up(sm) {
-//     margin-right: -$pf-vertical-sub-nav-padding; // To compensate for the padding on the __content wrapper
+//     margin-right: -$pf-main-sub-nav-padding; // To compensate for the padding on the __content wrapper
 //     &.pf-is-active {
 //       background-color: $pf-color-black-600;
 //
-//       .pf-vertical-sub-nav--second & {
+//       .pf-main-sub-nav--second & {
 //         background-color: $pf-color-black-700;
 //       }
 //     }
