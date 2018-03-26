@@ -34,6 +34,7 @@
     margin-bottom: var(--pf-c-main-nav__link--MarginBottom, 2rem);
     color: var(--pf-c-main-nav__link--Color, #555);
     text-decoration: none;
+    word-break: break-all;
 
     &:hover {
       color: var(--pf-c-main-nav__link--hover--Color, #000);
