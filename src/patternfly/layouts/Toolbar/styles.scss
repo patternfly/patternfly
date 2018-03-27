@@ -1,13 +1,22 @@
 // URL.com/guidelines#layout
 :root {
   --pf-l-toolbar__child--MarginRight: var(--pf-global--spacer--lg);
+  --pf-l-toolbar__group__child--MarginLeft: var(--pf-global--spacer--sm);
 }
 
 .pf-l-toolbar {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   > *:not(:last-child) {
     margin-right: var(--pf-l-toolbar__child--MarginRight, 48px);
   }
 }
 
+.pf-l-toolbar__group {
+  display: flex;
+
+  > *:not(:first-child) {
+    margin-left: var(--pf-l-toolbar-group__child--MarginLeft, 24px);
+  }
+}
