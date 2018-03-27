@@ -1,3 +1,0 @@
-<div>
-    <span>test</span>
-</div>

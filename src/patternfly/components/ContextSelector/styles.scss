@@ -18,7 +18,6 @@
   // Padding
   --pf-c-context-selector__toggle--PaddingTop: var(--pf-global--spacer--md, 32px);
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--md, 32px);
-  --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--xxs, 8px);
 
   // Colors
   --pf-c-context-selector__items--BorderColor: var(--pf-global--active--Color, #0088ce);
@@ -42,7 +41,6 @@
     width: 100%;
     padding-top: var(--pf-c-context-selector__toggle--PaddingTop);
     padding-bottom: var(--pf-c-context-selector__toggle--PaddingBottom);
-    padding-left: var(--pf-c-context-selector__toggle--PaddingLeft);
     color: var(--pf-c-context-selector--Color);
     background-color: transparent;
     border: none;
