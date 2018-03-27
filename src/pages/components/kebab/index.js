@@ -7,9 +7,12 @@ export default () => {
   return (
     <Documentation docs={Docs}>
       <Example heading="Kebab Example">
-        <Kebab>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <Kebab className="is-open-bottom-left">
+          <p>Lorem ipsum dolor sit amet.</p>
         </Kebab>
+          <Kebab kebabId={"secondDemo"}>
+              <p>Lorem ipsum dolor sit amet.</p>
+          </Kebab>
       </Example>
     </Documentation>
   )

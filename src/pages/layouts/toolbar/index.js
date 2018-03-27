@@ -3,6 +3,7 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import Toolbar, { ToolbarGroup, Docs } from '@layouts/Toolbar';
 import Button from '@components/Button';
+import Kebab from '@components/Kebab';
 
 export default () => {
   return (
@@ -18,7 +19,7 @@ export default () => {
             <Button className="pf-is-tertiary">Button</Button>
           </ToolbarGroup>
           <ToolbarGroup>
-            <Button className="pf-is-primary">k</Button>
+              <Kebab><div>Example text in a kebab menu</div></Kebab>
           </ToolbarGroup>
         </Toolbar>
       </Example>
