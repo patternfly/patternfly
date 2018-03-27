@@ -29,6 +29,8 @@
   --pf-c-context-selector_link--PaddingTop: var(--pf-global--spacer--xxs, 8px);
   --pf-c-context-selector_link--PaddingBottom: var(--pf-global--spacer--xxs, 8px);
   --pf-c-context-selector_link--Color: var(--pf-global--dark-color, #292e34);
+  --pf-c-context-selector_link--hover--BackgroundColor: var(--pf-global-dark-off-color, #bbb);
+  --pf-c-context-selector-link--is-active--Color: var(--pf-global--link--Color, #39a5dc);
 }
 
 .pf-c-context-selector {
@@ -44,17 +46,22 @@
     color: var(--pf-c-context-selector--Color);
     background-color: transparent;
     border: none;
+    outline: none;
   }
   &__items {
     position: absolute;
     top: 100%;
     z-index: 5;
+    display: none;
     width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
     background-color: var(--pf-c-context-selector__items--BackgroundColor);
     border-top: 4px solid var(--pf-c-context-selector__items--BorderColor);
+  }
+  &.pf-is-expanded > &__items {
+    display: block;
   }
   &_link {
     display: block;
@@ -63,10 +70,15 @@
     padding-bottom: var(--pf-c-context-selector_link--PaddingBottom);
     padding-left: var(--pf-c-context-selector_link--PaddingLeft);
     color: var(--pf-c-context-selector_link--Color);
+    cursor: pointer;
     &:hover {
       color: currentColor;
       text-decoration: none;
+      background-color: $pf-color-black-200;
+    }
+    &.pf-is-active,
+    &:active {
+      color: var(--pf-c-context-selector-link--is-active--Color);
     }
   }
 }
-
