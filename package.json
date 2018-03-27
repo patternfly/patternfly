@@ -1,7 +1,7 @@
 {
-  "name": "@patternfly/patternfly-next",
+  "name": "@patternfly/patternfly-next-workshop",
   "description": "Assets, source, tooling, and content for PatternFly Next",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "author": "Cliff Pyles",
   "dependencies": {},
   "keywords": [],
