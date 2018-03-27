@@ -1,16 +1,15 @@
 import React from 'react'
 import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import ToolbarGroup, {Docs} from '@layouts/ToolbarGroup'
+import Kebab, {Docs} from '@components/Kebab'
 
 export default () => {
   return (
     <Documentation docs={Docs}>
-      <Example heading="ToolbarGroup Example">
-        <ToolbarGroup>
-            <span>First child</span>
-            <span>Second child</span>
-        </ToolbarGroup>
+      <Example heading="Kebab Example">
+        <Kebab>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </Kebab>
       </Example>
     </Documentation>
   )

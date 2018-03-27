@@ -1,0 +1,57 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-kebab__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  // Example block variable
+  --pf-c-kebab--Color: var(--pf-global--dark--Color);
+
+  // Example modifier variable
+  --pf-c-kebab__menu--BorderWidth: var(--pf-global--BorderWidth);
+  --pf-c-kebab__menu--BorderColor: var(--pf-global--dark--BorderColor);
+  --pf-c-kebab__label--hover--Color: var(--pf-global--link--hover--Color);
+  --pf-c-kebab__label--Padding: var(--pf-global--spacer--xxs) var(--pf-global--spacer--xxs);
+}
+
+.pf-c-kebab {
+  position: relative;
+  color: var(--pf-c-kebab--Color, #292e34);
+}
+
+.pf-c-kebab__label {
+  padding: var(--pf-c-kebab__label--Padding);
+  cursor: pointer;
+  &:hover {
+    color: var(--pf-c-kebab__label--hover--Color, #0088ce);
+  }
+}
+
+.pf-c-kebab__checkbox {
+  display: none;
+  &:checked ~ .pf-c-kebab__menu {
+    display: block;
+  }
+}
+
+.pf-c-kebab__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  border: var(--pf-c-kebab__menu--BorderWidth, 1px) solid var(--pf-c-kebab__menu--BorderColor, #bbb);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #bbb;
+    border-left: 5px solid transparent;
+    transform: translate(100%, -100%);
+  }
+}
