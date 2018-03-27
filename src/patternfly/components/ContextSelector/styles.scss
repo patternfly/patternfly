@@ -1,0 +1,44 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-context-selector__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  // Example block variable
+  --pf-c-context-selector--Color: var(--pf-global--light-color, #fff);
+  --pf-c-context-selector__items--BackgroundColor: var(--pf-global--light-color, #fff);
+
+  // Example element variable
+  --pf-c-context-selector_title--FontSize: var(--pf-global--secondary-title--FontSize);
+
+  // Example modifier variable
+  --pf-c-context-selector--is-danger--BackgroundColor: var(--pf-global--danger-color);
+
+  // Padding
+  --pf-c-context-selector__toggle--Padding: var(--pf-global--spacer--md);
+}
+
+.pf-c-context-selector {
+  position: relative;
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--pf-c-context-selector__toggle--Padding);
+    color: var(--pf-c-context-selector--Color);
+    background-color: transparent;
+    border: none;
+  }
+  &__items {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: var(--pf-c-context-selector__items--BackgroundColor);
+  }
+}
+
