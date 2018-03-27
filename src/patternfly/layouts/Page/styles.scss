@@ -1,0 +1,32 @@
+// URL.com/guidelines#layout
+// A layout doesn't have variables
+
+.pf-l-page {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header header" "sidebar main";
+
+  &__header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-template-areas: "header-left header-right";
+    &-sidebar {
+      grid-area: header-left;
+    }
+    &-main {
+      grid-area: header-right;
+    }
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+  }
+
+  &__main {
+    grid-area: main;
+  }
+}
