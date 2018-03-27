@@ -13,6 +13,9 @@
   --pf-c-kebab__menu--BorderColor: var(--pf-global--dark--BorderColor);
   --pf-c-kebab__label--hover--Color: var(--pf-global--link--hover--Color);
   --pf-c-kebab__label--Padding: var(--pf-global--spacer--xxs) var(--pf-global--spacer--xxs);
+  --pf-c-kebab__menu--ArrowWidth: .5em;
+  --pf-c-kebab__menu--ArrowBorder: calc(var(--pf-c-kebab__menu--ArrowWidth) + calc(1.41421 * var(--pf-c-kebab__menu--BorderWidth)));
+  --pf-c-kebab__menu--BackgroundColor: var(--pf-global--light--BackgroundColor);
 }
 
 .pf-c-kebab {
@@ -37,9 +40,10 @@
 
 .pf-c-kebab__menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + var(--pf-c-kebab__menu--ArrowWidth));
   left: 0;
   display: none;
+  background-color: var(--pf-c-kebab__menu--BackgroundColor, #fff);
   border: var(--pf-c-kebab__menu--BorderWidth, 1px) solid var(--pf-c-kebab__menu--BorderColor, #bbb);
 
   &::before {
@@ -49,9 +53,22 @@
     width: 0;
     height: 0;
     content: "";
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #bbb;
-    border-left: 5px solid transparent;
-    transform: translate(100%, -100%);
+    border-right: var(--pf-c-kebab__menu--ArrowBorder) solid transparent;
+    border-bottom: var(--pf-c-kebab__menu--ArrowBorder) solid #bbb;
+    border-left: var(--pf-c-kebab__menu--ArrowBorder) solid transparent;
+    transform: translate(0, -100%);
   }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border-right: var(--pf-c-kebab__menu--ArrowWidth) solid transparent;
+    border-bottom: var(--pf-c-kebab__menu--ArrowWidth) solid #fff;
+    border-left: var(--pf-c-kebab__menu--ArrowWidth) solid transparent;
+    transform: translate((calc(1.41421 * var(--pf-c-kebab__menu--BorderWidth))), -100%);
+  }
+
 }
