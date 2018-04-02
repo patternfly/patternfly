@@ -1,18 +1,120 @@
 @import "../../patternfly-utilities";
 
+// stylelint-disable
+:root {
+
+  // line height - DELETE - just here for review with designer
+  --pf-c-content--sm--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--md--LineHeight: var(--pf-global--md--LineHeight);
+  --pf-c-content--lg--LineHeight: var(--pf-global--lg--LineHeight);
+
+  // Hero title
+  --pf-c-content--hero-title--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--hero-title--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--hero-title--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--hero-title--FontSize: var(--pf-global--hero-title--FontSize);
+  --pf-c-content--hero-title--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // h1 - Main title
+  --pf-c-content--h1--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--h1--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--h1--FontSize: var(--pf-global--main-title--FontSize);
+  --pf-c-content--h1--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // h2 - Secondary title
+  --pf-c-content--h2--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--h2--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--h2--LineHeight: var(--pf-global--sm--LineHeight);
+  --pf-c-content--h2--FontSize: var(--pf-global--secondary-title--FontSize);
+  --pf-c-content--h2--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // h3 - Sub-title
+  --pf-c-content--h3--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--h3--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--h3--LineHeight: var(--pf-global--md--LineHeight);
+  --pf-c-content--h3--FontSize: var(--pf-global--sub-title--FontSize);
+  --pf-c-content--h3--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // h4
+  --pf-c-content--h4--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--h4--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--h4--LineHeight: var(--pf-global--md--LineHeight);
+  --pf-c-content--h4--FontSize: var(--pf-global--fourth-level-title--FontSize);
+  --pf-c-content--h4--FontWeight: var(--pf-global--semi-bold--FontWeight);
+
+  // h5
+  --pf-c-content--h5--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--h5--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--h5--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--h5--FontSize: var(--pf-global--body--FontSize);
+  --pf-c-content--h5--FontWeight: var(--pf-global--semi-bold--FontWeight);
+
+  // h6
+  --pf-c-content--h6--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--h6--MarginBottom: var(--pf-global--spacer--xxxs);
+  --pf-c-content--h6--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--h6--FontSize: var(--pf-global--body--FontSize);
+  --pf-c-content--h6--FontWeight: var(--pf-global--semi-bold--FontWeight);
+
+
+  // Body
+  --pf-c-content--body--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--body--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--body--FontSize: var(--pf-global--body--FontSize);
+  --pf-c-content--body--FontWeight: var(--pf-global--normal--FontWeight);
+
+  // Small text
+  --pf-c-content--small--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--small--LineHeight: var(--pf-global--lg--LineHeight);
+  --pf-c-content--small--FontSize: var(--pf-global--small--FontSize);
+  --pf-c-content--small--Color: var(--pf-global-dark-off-color);
+  // the value defined for the color above is currently $pf-color-black-400
+  // but visual design wants $pf-color-black-600, which is not a color currently defined as a text color variable
+
+  // Links
+  --pf-c-content--link--Color: var(--pf-global--link--Color);
+  --pf-c-content--link--TextDecoration: var(--pf-global--link--TextDecoration);
+  --pf-c-content--link--hover--Color: var(--pf-global--link--hover--Color);
+  --pf-c-content--link--hover--TextDecoration: var(--pf-global--link--hover--TextDecoration);
+
+  // Blockquote
+  --pf-c-content--blockquote--Padding: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--FontWeight: var(--pf-global--light--FontWeight);
+  --pf-c-content--blockquote--Color: var(--pf-global-dark-off-color);
+  --pf-c-content--blockquote--BorderLeftColor: var(--pf-global--light--BorderColor);
+  --pf-c-content--blockquote--BorderLeftWidth: var(--pf-global--md--BorderWidth);
+
+  // Lists
+  --pf-c-content--list--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-content--ordered-list--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-content--ordered-list--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-content--unordered-list--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-content--unordered-list--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-content--unordered-list--nested--MarginTop: var(--pf-global--spacer--xxs);
+  --pf-c-content--unordered-list--nested--MarginLeft: var(--pf-global--spacer--xxs);
+  --pf-c-content--unordered-list--ListStyle: var(--pf-global-ListStyle);
+  --pf-c-content--list-item--MarginTop: var(--pf-global--spacer--xxs);
+  --pf-c-content--definition--MarginBottom: var(--pf-global--spacer--xxs);
+  --pf-c-content--definition--MarginLeft: var(--pf-global--spacer--sm);
+
+}
+
+// stylelint-enable
+
 .pf-c-content {
   a {
-    color: $pf-global--link--Color;
-    text-decoration: $pf-global--link--TextDecoration;
+    color: var(--pf-c-content--link--Color, #39a5dc);
+    text-decoration: var(--pf-c-content--link--TextDecoration, none);
 
     &:hover {
-      color: $pf-global--link--hover--Color;
-      text-decoration: $pf-global--link--hover--TextDecoration;
+      color: var(--pf-c-content--link--hover--Color, #1e7baa);
+      text-decoration: var(--pf-c-content--link--hover--TextDecoration, underline);
     }
   }
 
   li + li {
-    margin-top: $pf-global--spacer--xxs;
+    margin-top: var(--pf-c-content--list-item--MarginTop, .5rem);
   }
 
   p,
@@ -20,17 +122,18 @@
   ol,
   ul,
   blockquote,
+  small,
   pre,
   table {
+    line-height: var(--pf-c-content--body--LineHeight, 1.5);
     &:not(:last-child){
-      margin-bottom: $pf-global--spacer--md;
+      margin-bottom: var(--pf-c-content--body--MarginBottom, 1rem);
     }
   }
 
-  dl,
   ol,
   ul {
-    padding-left: $pf-global--spacer--md;
+    padding-left: var(--pf-c-content--list--PaddingLeft, 1.5rem);
   }
 
   h1,
@@ -40,72 +143,123 @@
   h5,
   h6 {
     margin: 0;
-    font-weight: $pf-global--normal--FontWeight;
-    line-height: $pf-global--md--LineHeight;
+  }
+
+  .pf-is-hero {
+    margin-bottom: var(--pf-c-content--hero-title--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--hero-title--FontSize, 2.25rem);
+    font-weight: var(--pf-c-content--hero-title--FontWeight, 400);
+    line-height: var(--pf-c-content--hero-title--LineHeight, 1.3);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--hero-title--MarginTop, 1.5rem);
+    }
   }
 
   h1 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--hero-title--FontSize;
+    margin-bottom: var(--pf-c-content--h1--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--h1--FontSize, 1.75rem);
+    font-weight: var(--pf-c-content--h1--FontWeight, 400);
+    line-height: var(--pf-c-content--h1--LineHeight, 1.3);
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--lg;
+      margin-top: var(--pf-c-content--h1--MarginTop, 1.5rem);
     }
   }
 
   h2 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--main-title--FontSize;
+    margin-bottom: var(--pf-c-content--h2--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--h2--FontSize, 1.5rem);
+    font-weight: var(--pf-c-content--h2--FontWeight, 400);
+    line-height: var(--pf-c-content--h2--LineHeight, 1.3);
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--xl;
+      margin-top: var(--pf-c-content--h2--MarginTop, 1.5rem);
     }
   }
 
   h3 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--secondary-title--FontSize;
+    margin-bottom: var(--pf-c-content--h3--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--h3--FontSize, 1.3125rem);
+    font-weight: var(--pf-c-content--h3--FontWeight, 400);
+    line-height: var(--pf-c-content--h3--LineHeight, 1.4);
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--lg;
+      margin-top: var(--pf-c-content--h3--MarginTop, 1.5rem);
     }
   }
 
   h4 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--sub-title--FontSize;
+    margin-bottom: var(--pf-c-content--h4--MarginBottom, 1rem),;
+    font-size: var(--pf-c-content--h4--FontSize, 1.125rem);
+    font-weight: var(--pf-c-content--h4--FontWeight, 400);
+    line-height: var(--pf-c-content--h4--LineHeight, 1.4);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--h4--MarginTop, 1.5rem);
+    }
   }
 
   h5 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--body--FontSize;
+    margin-bottom: var(--pf-c-content--h5--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--h5--FontSize, 1rem);
+    font-weight: var(--pf-c-content--h5--FontWeight, 400);
+    line-height: var(--pf-c-content--h5--LineHeight, 1.5);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--h5--MarginTop, 1.5rem);
+    }
   }
 
   h6 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--caption--FontSize;
+    margin-bottom: var(--pf-c-content--h6--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--h6--FontSize, 1rem);
+    font-weight: var(--pf-c-content--h6--FontWeight, 400);
+    line-height: var(--pf-c-content--h6--LineHeight, 1.5);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--h6--MarginTop, 1rem);
+    }
+  }
+
+  small {
+    display: block;
+    margin-bottom: var(--pf-c-content--small--MarginBottom, 1rem);
+    font-size: var(--pf-c-content--small--FontSize, .875rem);
+    line-height: var(--pf-c-content--small--LineHeight, 1.5);
+    color: var(--pf-c-content--small--Color, #72767b);
   }
 
   blockquote {
-    padding: $pf-global--spacer--md;
-    border-left: 5px solid $pf-global-dark-off-color;
+    padding: var(--pf-c-content--blockquote--Padding);
+    font-weight: var(--pf-c-content--blockquote--FontWeight, 300);
+    color: var(--pf-c-content--blockquote--Color, #72767b);
+    border-left: var(--pf-c-content--blockquote--BorderLeftWidth, 3px) solid var(--pf-c-content--blockquote--BorderLeftColor, #bbb);
   }
 
   ol {
-    margin-top: $pf-global--spacer--md;
-    margin-left: $pf-global--spacer--md;
+    margin-top: var(--pf-c-content--ordered-list--MarginTop, 1rem);
+    margin-left: var(--pf-c-content--ordered-list--MarginLeft, 1.5rem);
   }
 
   ul {
     margin: 0;
-    margin-top: $pf-global--spacer--md;
-    margin-left: $pf-global--spacer--sm;
+    margin-top: var(--pf-c-content--unordered-list--MarginTop, 1rem);
+    margin-left: var(--pf-c-content--unordered-list--MarginLeft, 1.5rem);
+    list-style: var(--pf-c-content--unordered-list--ListStyle, disc outside);
     ul {
-      margin-top: $pf-global--spacer--xs;
+      margin-top: var(--pf-c-content--unordered-list--nested--MarginTop, .5rem);
+      margin-left: var(--pf-c-content--unordered-list--nested--MarginLeft, .5rem);
     }
   }
 
   dd {
-    margin-left: $pf-global--spacer--xl;
+    margin-bottom: var(--pf-c-content--definition--MarginBottom, .5rem);
+    margin-left: var(--pf-c-content--definition--MarginLeft, 1.5rem);
+    // &:not(:last-child){
+    // }
   }
 
+  // delete this, just for testing
+  .pf-LineHeight-is-sm {
+    line-height: var(--pf-c-content--sm--LineHeight, 1.3);
+  }
+  .pf-LineHeight-is-md {
+    line-height: var(--pf-c-content--md--LineHeight, 1.4);
+  }
   // figure {
   //   margin-right: 2em;
   //   margin-left: 2em;
@@ -125,7 +279,7 @@
   // }
 
   // pre {
-  //   padding: $pf-c-content--pre--Padding;
+  //   padding: var(--pf-c-content--pre--Padding);
   //   overflow-x: auto;
   //   word-wrap: normal;
   //   white-space: pre;
@@ -140,32 +294,32 @@
   //   width: 100%;
   //   td,
   //   th {
-  //     padding: $pf-c-content-table-cell-padding;
+  //     padding: var(--pf-c-content-table-cell-padding;)
   //     vertical-align: top;
-  //     border: $content-table-cell-border;
-  //     border-width: $content-table-cell-border-width;
+  //     border: var(--content-table-cell-border);
+  //     border-width: var(--content-table-cell-border-width);
   //   }
   //   th {
-  //     color: $content-table-cell-heading-color;
+  //     color: var(--content-table-cell-heading-color);
   //     text-align: left;
   //   }
   //   tr {
   //     &:hover {
-  //       background-color: $content-table-row-hover-background-color;
+  //       background-color: var(--content-table-row-hover-background-color);
   //     }
   //   }
   //   thead {
   //     td,
   //     th {
-  //       color: $content-table-head-cell-color;
-  //       border-width: $content-table-head-cell-border-width;
+  //       color: var(--content-table-head-cell-color);
+  //       border-width: var(--content-table-head-cell-border-width);
   //     }
   //   }
   //   tfoot {
   //     td,
   //     th {
-  //       color: $content-table-foot-cell-color;
-  //       border-width: $content-table-foot-cell-border-width;
+  //       color: var(--content-table-foot-cell-color);
+  //       border-width: var(--content-table-foot-cell-border-width);
   //     }
   //   }
   //   tbody {
