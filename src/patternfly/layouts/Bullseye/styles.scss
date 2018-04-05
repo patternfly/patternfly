@@ -1,8 +1,9 @@
 .pf-l-bullseye {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }

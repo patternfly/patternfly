@@ -5,12 +5,11 @@
   padding: 0;
   margin: 0;
 
-  > :nth-child(2),
-  > .pf-l-split__primary {
-    flex: 1;
+  & > &__primary {
+    flex: 1 1 66.5%;
   }
-  > .pf-l-split__secondary,
-  > .pf-l-split__secondary:nth-child(2) {
-    flex: 0 1 auto;
+
+  & > &__secondary {
+    flex: 1 2 33.5%;
   }
 }

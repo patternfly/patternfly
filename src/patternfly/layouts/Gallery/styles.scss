@@ -4,4 +4,13 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   padding: 0;
   margin: 0;
+
+  //for IE11 support
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    display: flex;
+    flex-flow: row wrap;
+    &__item {
+      flex: 0 1 250px;
+    }
+  }
 }
