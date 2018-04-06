@@ -2,159 +2,164 @@
 // All variables should have a valid css value,
 // and use !default so they can be overwritten.
 
-// `$pf-global--concept--modifier--state--PropiertyCamelCase`
+// `$global--concept--PropiertyCamelCase--modifier--state`
 
 // Patternfly Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$pf-global--enable-font-overpass-cdn:     false !default;
-$pf-global--load-pf-3:                    false !default;
-$pf-global--enable-reset:                 true !default;
+$global--enable-font-overpass-cdn:     false !default;
+$global--load-pf-3:                    false !default;
+$global--enable-reset:                 true !default;
 
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
 // transformation from px to rem.
-$pf-global--font-size-root:  16 !default; //for fonts
-$pf-global--space-size-root: 16 !default; // for spaces
+$global--font-size-root:  16 !default; //for fonts
+$global--space-size-root: 16 !default; // for spaces
 
 
 // Colors
 
 // Background color
-$pf-global--light--BackgroundColor:      $pf-color-white !default;
-$pf-global--light-off--BackgroundColor:  $pf-color-black-200 !default;
+$global--BackgroundColor--light:      $pf-color-white !default;
+$global--BackgroundColor--light-alt:  $pf-color-black-200 !default;
 
-$pf-global--dark--BackgroundColor:       $pf-color-black-900 !default;
-$pf-global--dark-off--BackgroundColor:   $pf-color-black-800 !default;
+$global--BackgroundColor--dark:       $pf-color-black-900 !default;
+$global--BackgroundColor--dark-alt:   $pf-color-black-800 !default;
 
 
 // Text color
-$pf-global--dark-color:       $pf-color-black-900 !default;
-$pf-global-dark-off-color:    $pf-color-black-400 !default;
+$global--Color--dark:       $pf-color-black-900 !default;
+$global--Color--dark-alt:    $pf-color-black-600 !default;
 
-$pf-global--light-color:        $pf-color-white !default;
-$pf-global--light-off--Color:   $pf-color-black-200 !default;
+$global--Color--light:        $pf-color-white !default;
+$global--Color--light-alt:   $pf-color-black-200 !default;
 
 
 // States color
-$pf-global--hover--Color:                  $pf-color-red-100 !default;
-$pf-global--hover--BackgroundColor:        $pf-color-red-300 !default;
-$pf-global--hover--BorderColor:            $pf-color-red-300 !default;
+$global--Color--hover:                  $pf-color-red-100 !default;
+$global--BackgroundColor--hover:        $pf-color-red-300 !default;
+$global--BorderColor--hover:            $pf-color-red-300 !default;
 
-$pf-global--active--Color:                 $pf-color-blue-400 !default;
-$pf-global--active--BackgroundColor:       $pf-color-blue-100 !default;
-$pf-global--active--BorderColor:           $pf-color-blue-100 !default;
+$global--Color--active:                 $pf-color-blue-400 !default;
+$global--BackgroundColor--active:       $pf-color-blue-100 !default;
+$global--BorderColor--active:           $pf-color-blue-100 !default;
 
-$pf-global--disabled--Color:               $pf-color-black-400 !default;
-$pf-global--disabled--BackgroundColor:     $pf-color-black-200 !default;
-$pf-global--disabled--BorderColor:         $pf-color-black-200 !default;
+$global--Color--disabled:               $pf-color-black-400 !default;
+$global--BackgroundColor--disabled:     $pf-color-black-200 !default;
+$global--BorderColor--disabled:         $pf-color-black-200 !default;
 
 // Theme color
-$pf-global--primary-color:       $pf-color-blue-300 !default;
-$pf-global--secondary-color:     $pf-color-black-600 !default;
-$pf-global--success-color:       $pf-color-green-100 !default;
-$pf-global--success-color--dark: $pf-color-green-400 !default;
-$pf-global--info-color:          $pf-color-cyan-100 !default;
-$pf-global--info-color--dark:    $pf-color-cyan-400 !default;
-$pf-global--warning-color:       $pf-color-orange-100 !default;
-$pf-global--warning-color--dark: $pf-color-orange-400 !default;
-$pf-global--danger-color:        $pf-color-red-100 !default;
-$pf-global--danger-color--dark:  $pf-color-red-300 !default;
-$pf-global--light-color:         $pf-color-black-100 !default;
-$pf-global--dark-color--dark:    $pf-color-black-800 !default;
-
+$global--primary-color:       $pf-color-blue-300 !default;
+$global--secondary-color:     $pf-color-black-600 !default;
+$global--success-color:       $pf-color-green-100 !default;
+$global--success-color--dark: $pf-color-green-400 !default;
+$global--info-color:          $pf-color-cyan-100 !default;
+$global--info-color--dark:    $pf-color-cyan-400 !default;
+$global--warning-color:       $pf-color-orange-100 !default;
+$global--warning-color--dark: $pf-color-orange-400 !default;
+$global--danger-color:        $pf-color-red-100 !default;
+$global--danger-color--dark:  $pf-color-red-300 !default;
 
 // Shadows
 
-$pf-global--shadow--sm--BoxShadow:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
-$pf-global--shadow--md--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
-$pf-global--shadow--lg--BoxShadow:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
+$global--BoxShadow--sm:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
+$global--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
+$global--BoxShadow--md:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
 
-$pf-global--shadow--sm-right--BoxShadow:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--shadow--sm-left--BoxShadow:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--shadow--sm-bottom--BoxShadow: 0 pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--shadow--sm-top--BoxShadow:    0 pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--shadow--md-right--BoxShadow:  pf-size-prem(5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
-$pf-global--shadow--md-left--BoxShadow:   pf-size-prem(-5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
-$pf-global--shadow--md-bottom--BoxShadow: 0 pf-size-prem(5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
-$pf-global--shadow--md-top--BoxShadow:    0 pf-size-prem(-5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
-$pf-global--shadow--lg-right--BoxShadow: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--shadow--lg-left--BoxShadow:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--shadow--lg-bottom--BoxShadow: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--shadow--lg-top--BoxShadow:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$global--BoxShadow--sm-right:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$global--BoxShadow--sm-left:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$global--BoxShadow--sm-bottom: 0 pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$global--BoxShadow--sm-top:    0 pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 
-$pf-global--shadow--inset--BoxShadow:     inset 0 0 pf-size-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
+$global--BoxShadow-right:  pf-size-prem(5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$global--BoxShadow-left:   pf-size-prem(-5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$global--BoxShadow-bottom: 0 pf-size-prem(5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+$global--BoxShadow-top:    0 pf-size-prem(-5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
+
+$global--BoxShadow--md-right: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$global--BoxShadow--md-left:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$global--BoxShadow--md-bottom: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$global--BoxShadow--md-top:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+
+$global--BoxShadow--inset:     inset 0 0 pf-size-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
 
 // Fontpath
-$pf-global--font-path: "/assets/fonts" !default;
+$global--font-path: "/assets/fonts" !default;
 
 // Spacers
-$pf-global--spacer--xxxs:   pf-size-prem(4px) !default;
-$pf-global--spacer--xxs:    pf-size-prem(8px) !default;
-$pf-global--spacer--xs:     pf-size-prem(16px) !default;
-$pf-global--spacer--sm:     pf-size-prem(24px) !default;
-$pf-global--spacer--md:     pf-size-prem(32px) !default;
-$pf-global--spacer--lg:     pf-size-prem(48px) !default;
-$pf-global--spacer--xl:     pf-size-prem(64px) !default;
+$global--spacer--xs:    pf-size-prem(4px) !default;
+$global--spacer--sm:    pf-size-prem(8px) !default;
+$global--spacer:        pf-size-prem(16px) !default;
+$global--spacer--md:    pf-size-prem(24px) !default;
+$global--spacer--lg:    pf-size-prem(32px) !default;
+$global--spacer--xl:    pf-size-prem(48px) !default;
+$global--spacer--xxl:   pf-size-prem(64px) !default;
 
 
 // Grid breakpoints
-$pf-global--breakpoint--xs: 0 !default;
-$pf-global--breakpoint--sm: 576px !default;
-$pf-global--breakpoint--md: 768px !default;
-$pf-global--breakpoint--lg: 992px !default;
-$pf-global--breakpoint--xl: 1200px !default;
+$global--breakpoint--xs: 0 !default;
+$global--breakpoint--sm: 576px !default;
+$global--breakpoint--md: 768px !default;
+$global--breakpoint--lg: 992px !default;
+$global--breakpoint--xl: 1200px !default;
 
 
 // Links
-$pf-global--link--Color:                  $pf-global--primary-color !default;
-$pf-global--link--TextDecoration:         none !default;
-$pf-global--link--hover--Color:           darken($pf-global--primary-color, 15%) !default;
-$pf-global--link--hover--TextDecoration:  underline !default;
+$global--link--Color:                  $global--primary-color !default;
+$global--link--TextDecoration:         none !default;
+$global--link--Color--hover:           darken($global--primary-color, 15%) !default;
+$global--link--TextDecoration--hover:  underline !default;
 
 
 // Borders
-$pf-global--BorderWidth:         1px !default;
-$pf-global--dark--BorderColor:   $pf-color-black-400 !default;
-$pf-global--light--BorderColor:  $pf-color-black-400 !default;
+$global--BorderWidth:         1px !default;
+$global--BorderColor--dark:   $pf-color-black-400 !default;
+$global--BorderColor--light:  $pf-color-black-400 !default;
 
 
 // Fonts
 
 // Font family
 // stylelint-disable value-keyword-case
-$pf-global--sans-serif--FontFamily: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$global--FontFamily--sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$pf-global--monospace--FontFamily:  “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$global--FontFamily--monospace:  “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 // Font size
-$pf-global--hero-title--FontSize:       pf-font-prem(48px) !default;
-$pf-global--main-title--FontSize:       pf-font-prem(32px) !default;
-$pf-global--secondary-title--FontSize:  pf-font-prem(24px) !default;
-$pf-global--sub-title--FontSize:        pf-font-prem(19px) !default;
-$pf-global--body--FontSize:             pf-font-prem(16px) !default;
-$pf-global--caption--FontSize:          pf-font-prem(12px) !default;
+$global--FontSize--xxxl:     pf-font-prem(36px) !default;
+$global--FontSize--xxl:      pf-font-prem(28px) !default;
+$global--FontSize--xl:       pf-font-prem(24px) !default;
+$global--FontSize--lg:       pf-font-prem(21px) !default;
+$global--FontSize--md:       pf-font-prem(18px) !default;
+$global--FontSize:           pf-font-prem(16px) !default;
+$global--FontSize--sm:       pf-font-prem(14px) !default;
+$global--FontSize--xs:       pf-font-prem(14px) !default;
+
 
 // Font weight
-$pf-global--light--FontWeight:          300 !default;
-$pf-global--normal--FontWeight:         500 !default;
-$pf-global--semi-bold--FontWeight:      600 !default;
-$pf-global--bold--FontWeight:           700 !default;
+$global--FontWeight--light:          300 !default;
+$global--FontWeight--normal:         400 !default;
+$global--FontWeight--semi-bold:      600 !default;
+$global--FontWeight--bold:           700 !default;
 
 // Line height
-$pf-global--sm--LineHeight:         1.2 !default;
-$pf-global--md--LineHeight:         1.5 !default;
-$pf-global--lg--LineHeight:         1.8 !default;
+$global--LineHeight--sm:         1.3 !default;
+$global--LineHeight:             1.4 !default;
+$global--LineHeight--md:         1.8 !default;
+
+// List
+$global-ListStyle: disc outside !default;
 
 
 // filters
 // overlay
 // animations
 
-@if $pf-global--load-pf-3 {
+@if $global--load-pf-3 {
   @import url("https://fonts.googleapis.com/css?family=Open+Sans");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
@@ -164,112 +169,112 @@ $pf-global--lg--LineHeight:         1.8 !default;
 // Lets makes the linter happy with CSS variables:
 // stylelint-disable
 
-
 :root {
 
   // Colors
 
   // Background color
-  --pf-global--light--BackgroundColor:      $pf-global--light--BackgroundColor;
-  --pf-global--light-off--BackgroundColor:  $pf-global--light-off--BackgroundColor;
+  --global--BackgroundColor--light:      $global--BackgroundColor--light;
+  --global--BackgroundColor--light-alt:  $global--BackgroundColor--light-alt;
 
-  --pf-global--dark--BackgroundColor:       $pf-global--dark--BackgroundColor;
-  --pf-global--dark-off--BackgroundColor:   $pf-global--dark-off--BackgroundColor;
+  --global--BackgroundColor--dark:       $global--BackgroundColor--dark;
+  --global--BackgroundColor--dark:   $global--BackgroundColor--dark;
 
   // Text color
-  --pf-global--dark-color:         $pf-global--dark-color;
-  --pf-global-dark-off-color:      $pf-global-dark-off-color;
+  --global--Color--dark:         $global--Color--dark;
+  --global--Color--dark-alt:      $global--Color--dark-alt;
 
-  --pf-global--light-color:        $pf-global--light-color;
-  --pf-global--light-off--Color:   $pf-global--light-off--Color;
+  --global--Color--light:        $global--Color--light;
+  --global--Color--light-alt:   $global--Color--light-alt;
 
   // States color
-  --pf-global--hover--Color:                  $pf-global--hover--Color;
-  --pf-global--hover--BackgroundColor:        $pf-global--hover--BackgroundColor;
-  --pf-global--hover--BorderColor:            $pf-global--hover--BorderColor;
+  --global--Color--hover:                  $global--Color--hover;
+  --global--BackgroundColor--hover:        $global--BackgroundColor--hover;
+  --global--BorderColor--hover:            $global--BorderColor--hover;
 
-  --pf-global--active--Color:                  $pf-global--active--Color;
-  --pf-global--active--BackgroundColor:        $pf-global--active--BackgroundColor;
-  --pf-global--active--BorderColor:            $pf-global--active--BorderColor;
+  --global--Color--active:                  $global--Color--active;
+  --global--BackgroundColor--active:        $global--BackgroundColor--active;
+  --global--BorderColor--active:            $global--BorderColor--active;
 
-  --pf-global--disabled--Color:                  $pf-global--disabled--Color;
-  --pf-global--disabled--BackgroundColor:        $pf-global--disabled--BackgroundColor;
-  --pf-global--disabled--BorderColor:            $pf-global--disabled--BorderColor;
+  --global--Color--disabled:                  $global--Color--disabled;
+  --global--BackgroundColor--disabled:        $global--BackgroundColor--disabled;
+  --global--BorderColor--disabled:            $global--BorderColor--disabled;
 
   // Shadows
-  --pf-global--shadow--sm--BoxShadow:            $pf-global--shadow--sm--BoxShadow;
-  --pf-global--shadow--md--BoxShadow:            $pf-global--shadow--md--BoxShadow;
-  --pf-global--shadow--lg--BoxShadow:            $pf-global--shadow--lg--BoxShadow;
+  --global--BoxShadow--sm:            $global--BoxShadow--sm;
+  --global--BoxShadow:            $global--BoxShadow;
+  --global--BoxShadow--md:            $global--BoxShadow--md;
 
-  --pf-global--shadow--sm-right--BoxShadow:      $pf-global--shadow--sm-right--BoxShadow;
-  --pf-global--shadow--sm-left--BoxShadow:       $pf-global--shadow--sm-left--BoxShadow;
-  --pf-global--shadow--sm-bottom--BoxShadow:     $pf-global--shadow--sm-bottom--BoxShadow;
-  --pf-global--shadow--sm-top--BoxShadow:        $pf-global--shadow--sm-top--BoxShadow;
-  --pf-global--shadow--md-right--BoxShadow:      $pf-global--shadow--md-right--BoxShadow;
-  --pf-global--shadow--md-left--BoxShadow:       $pf-global--shadow--md-left--BoxShadow;
-  --pf-global--shadow--md-bottom--BoxShadow:     $pf-global--shadow--md-bottom--BoxShadow;
-  --pf-global--shadow--md-top--BoxShadow:        $pf-global--shadow--md-top--BoxShadow;
-  --pf-global--shadow--lg-right--BoxShadow:      $pf-global--shadow--lg-right--BoxShadow;
-  --pf-global--shadow--lg-left--BoxShadow:       $pf-global--shadow--lg-left--BoxShadow;
-  --pf-global--shadow--lg-bottom--BoxShadow:     $pf-global--shadow--lg-bottom--BoxShadow;
-  --pf-global--shadow--lg-top--BoxShadow:        $pf-global--shadow--lg-top--BoxShadow;
+  --global--BoxShadow--sm-right:      $global--BoxShadow--sm-right;
+  --global--BoxShadow--sm-left:       $global--BoxShadow--sm-left;
+  --global--BoxShadow--sm-bottom:     $global--BoxShadow--sm-bottom;
+  --global--BoxShadow--sm-top:        $global--BoxShadow--sm-top;
+  --global--BoxShadow-right:      $global--BoxShadow-right;
+  --global--BoxShadow-left:       $global--BoxShadow-left;
+  --global--BoxShadow-bottom:     $global--BoxShadow-bottom;
+  --global--BoxShadow-top:        $global--BoxShadow-top;
+  --global--BoxShadow--md-right:      $global--BoxShadow--md-right;
+  --global--BoxShadow--md-left:       $global--BoxShadow--md-left;
+  --global--BoxShadow--md-bottom:     $global--BoxShadow--md-bottom;
+  --global--BoxShadow--md-top:        $global--BoxShadow--md-top;
 
-  --pf-global--shadow--inset--BoxShadow:         $pf-global--shadow--inset--BoxShadow;
+  --global--BoxShadow--inset:         $global--BoxShadow--inset;
 
   // spacers
-  --pf-global--spacer--xxxs:   $pf-global--spacer--xxxs;
-  --pf-global--spacer--xxs:    $pf-global--spacer--xxs;
-  --pf-global--spacer--xs:     $pf-global--spacer--xs;
-  --pf-global--spacer--sm:     $pf-global--spacer--sm;
-  --pf-global--spacer--md:     $pf-global--spacer--md;
-  --pf-global--spacer--lg:     $pf-global--spacer--lg;
-  --pf-global--spacer--xl:     $pf-global--spacer--xl;
+  --global--spacer--xs:   $global--spacer--xs;
+  --global--spacer--sm:    $global--spacer--sm;
+  --global--spacer:     $global--spacer;
+  --global--spacer--md:     $global--spacer--md;
+  --global--spacer--lg:     $global--spacer--lg;
+  --global--spacer--xl:     $global--spacer--xl;
+  --global--spacer--xxl:     $global--spacer--xxl;
 
   // Grid breakpoints
-  --pf-global--breakpoint--xs: $pf-global--breakpoint--xs;
-  --pf-global--breakpoint--sm: $pf-global--breakpoint--sm;
-  --pf-global--breakpoint--md: $pf-global--breakpoint--md;
-  --pf-global--breakpoint--lg: $pf-global--breakpoint--lg;
-  --pf-global--breakpoint--xl: $pf-global--breakpoint--xl;
+  --global--breakpoint--xs: $global--breakpoint--xs;
+  --global--breakpoint--sm: $global--breakpoint--sm;
+  --global--breakpoint--md: $global--breakpoint--md;
+  --global--breakpoint--lg: $global--breakpoint--lg;
+  --global--breakpoint--xl: $global--breakpoint--xl;
 
   // theme colors
-  --pf-global--primary-color:        $pf-global--primary-color;
-  --pf-global--danger-color:         $pf-global--danger-color;
-  --pf-global--danger-color--dark:   $pf-global--danger-color--dark;
-  --pf-global--success-color:        $pf-global--success-color;
-  --pf-global--success-color--dark:  $pf-global--success-color--dark;
-  --pf-global--warning-color:        $pf-global--warning-color;
-  --pf-global--warning-color--dark:  $pf-global--warning-color--dark;
-  --pf-global--info-color:           $pf-global--info-color;
-  --pf-global--info-color--dark:     $pf-global--info-color--dark;
+  --global--primary-color:        $global--primary-color;
+  --global--danger-color:         $global--danger-color;
+  --global--danger-color--dark:   $global--danger-color--dark;
+  --global--success-color:        $global--success-color;
+  --global--success-color--dark:  $global--success-color--dark;
+  --global--warning-color:        $global--warning-color;
+  --global--warning-color--dark:  $global--warning-color--dark;
+  --global--info-color:           $global--info-color;
+  --global--info-color--dark:     $global--info-color--dark;
 
   // Links
-  --pf-global--link--Color:                  $pf-global--link--Color;
-  --pf-global--link--TextDecoration:         $pf-global--link--TextDecoration;
-  --pf-global--link--hover--Color:           $pf-global--link--hover--Color;
-  --pf-global--link--hover--TextDecoration:  $pf-global--link--hover--TextDecoration;
+  --global--link--Color:                  $global--link--Color;
+  --global--link--TextDecoration:         $global--link--TextDecoration;
+  --global--link--Color--hover:           $global--link--Color--hover;
+  --global--link--TextDecoration--hover:  $global--link--TextDecoration--hover;
 
   // Borders
-  --pf-global--BorderWidth:         $pf-global--BorderWidth;
-  --pf-global--dark--BorderColor:   $pf-global--dark--BorderColor;
-  --pf-global--light--BorderColor:  $pf-global--light--BorderColor;
+  --global--BorderWidth:         $global--BorderWidth;
+  --global--BorderColor--dark:   $global--BorderColor--dark;
+  --global--BorderColor--light:  $global--BorderColor--light;
+
 
   // Font size
-  --pf-global--hero-title--FontSize:       $pf-global--hero-title--FontSize;
-  --pf-global--main-title--FontSize:       $pf-global--main-title--FontSize;
-  --pf-global--secondary-title--FontSize:  $pf-global--secondary-title--FontSize;
-  --pf-global--sub-title--FontSize:        $pf-global--sub-title--FontSize;
-  --pf-global--body--FontSize:             $pf-global--body--FontSize;
-  --pf-global--caption--FontSize:          $pf-global--caption--FontSize;
+  --global--FontSize--xxxl:     $global--FontSize--xxxl;
+  --global--FontSize--xxl:      $global--FontSize--xxl;
+  --global--FontSize--xl:       $global--FontSize--xl;
+  --global--FontSize--lg:       $global--FontSize--lg;
+  --global--FontSize--md:       $global--FontSize;
+  --global--FontSize--sm:       $global--FontSize--sm;
 
   // line height
-  --pf-global--sm--LineHeight:   $pf-global--sm--LineHeight;
-  --pf-global--md--LineHeight:   $pf-global--sm--LineHeight;
-  --pf-global--lg--LineHeight:   $pf-global--sm--LineHeight;
+  --global--LineHeight--sm:   $global--LineHeight--sm;
+  --global--LineHeight:   $global--LineHeight--sm;
+  --global--LineHeight--md:   $global--LineHeight--sm;
 
   // Font weight
-  --pf-global--light--FontWeight:     $pf-global--light--FontWeight;
-  --pf-global--normal--FontWeight:    $pf-global--normal--FontWeight;
-  --pf-global--semi-bold--FontWeight: $pf-global--semi-bold--FontWeight;
-  --pf-global--bold--FontWeight:      $pf-global--bold--FontWeight;
+  --global--FontWeight--light:     $global--FontWeight--light;
+  --global--FontWeight--normal:    $global--FontWeight--normal;
+  --global--FontWeight--semi-bold: $global--FontWeight--semi-bold;
+  --global--FontWeight--bold:      $global--FontWeight--bold;
 }

@@ -61,24 +61,24 @@ The main reason to have global variables is to maintain consistency. They adhere
   - a `state` is something like  `hover`, or `expanded`;
   - a `modifier` is something like  `sm`, or `lg`;
   - and a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--main-title--FontSize`.
+- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--global--FontSize--xxl`.
 
 For example a global variable setup would look like:
 
 ```scss
 :root {
   /* --pf-global--concept--size */
-  --pf-global--spacer--sm: .5rem;
-  --pf-global--spacer--md: 1rem;
-  --pf-global--spacer--lg: 2rem;
+  --global--spacer--md: .5rem;
+  --global--spacer--lg: 1rem;
+  --global--spacer--xl: 2rem;
 
   /* --pf-global--concept--PropertyCamelCase */
-  --pf-global--main-title--FontSize: 2rem;
-  --pf-global--secondary-title--FontSize: 1.8rem;
-  --pf-global--body--FontSize: 1rem;
+  --global--FontSize--xxl: 2rem;
+  --global--FontSize--xl: 1.8rem;
+  --global--FontSize--md: 1rem;
 
   /* --pf-global--state--PropertyCamelCase */
-  --pf-global--hover--BackgroundColor: #ccc;
+  --global--BackgroundColor--hover: #ccc;
 }
 ```
 
@@ -97,9 +97,9 @@ For example:
 ```scss
 /* Component scoped variables are always defined by global variables */
 :root {
-  --pf-alert--Padding: var(--pf-global--spacer--md);
-  --pf-alert--hover--BackgroundColor: var(--pf-global--hover--BackgroundColor);
-  --pf-alert__title--FontSize: va(--pf-global--secondary-title--FontSize);
+  --pf-alert--Padding: var(--global--spacer--lg);
+  --pf-alert--hover--BackgroundColor: var(--global--BackgroundColor--hover);
+  --pf-alert__title--FontSize: va(--global--FontSize--xl);
 }
 
 /* --block--PropertyCamelCase */
