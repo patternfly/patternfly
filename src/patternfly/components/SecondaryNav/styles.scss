@@ -1,0 +1,67 @@
+@import "../../patternfly-utilities";
+// pf-c-block__element--modifier--state--PropertyCamel
+:root {
+  --pf-p-secondary-nav--BorderColor: var(--pf-global--light--BorderColor);
+  --pf-p-secondary-nav--BorderWidth: var(--pf-global--BorderWidth);
+  --pf-p-secondary-nav__item--MarginLeft: var(--pf-global--spacer--md);
+  --pf-p-secondary-nav__item--MarginRight: var(--pf-global--spacer--md);
+  --pf-p-secondary-nav__link--Color: var(--pf-global--dark-color);
+  --pf-p-secondary-nav__link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-p-secondary-nav__link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-p-secondary-nav__link--active--Color: var(--pf-global--active--Color);
+  --pf-p-secondary-nav__link--active--BorderColor: var(--pf-global--active--Color);
+  --pf-p-secondary-nav__link--disabled--Color: var(--pf-color-black-300);
+}
+.pf-c-secondary-nav {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  // @include SplitLayout;
+  background-image:
+    linear-gradient(
+      to top,
+      var(--pf-p-secondary-nav--BorderColor) var(--pf-p-secondary-nav--BorderWidth),
+      transparent var(--pf-p-secondary-nav--BorderWidth)
+    );
+
+  &__item {
+    display: flex;
+    margin-right: var(--pf-p-secondary-nav__item--MarginRight);
+    margin-left: var(--pf-p-secondary-nav__item--MarginLeft);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding-top: var(--pf-p-secondary-nav__link--PaddingTop);
+    padding-bottom: var(--pf-p-secondary-nav__link--PaddingBottom);
+    color: var(--pf-p-secondary-nav__link--Color);
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+    // Active State
+    &.pf-is-active {
+      color: var(--pf-p-secondary-nav__link--active--Color);
+      // The background creates a thicker blue border under the active link
+      background-image:
+        linear-gradient(
+          to top,
+          var(--pf-p-secondary-nav__link--active--BorderColor)
+          calc(
+            var(--pf-p-secondary-nav--BorderWidth) * 2
+          ),
+          transparent calc(
+            var(--pf-p-secondary-nav--BorderWidth) * 2
+          )
+        );
+    }
+    // Disabled State
+    &.pf-is-disabled {
+      color: var(--pf-p-secondary-nav__link--disabled--Color);
+      cursor: not-allowed;
+    }
+  }
+}
