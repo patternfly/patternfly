@@ -9,15 +9,15 @@
   --pf-c-button--LineHeight: var(--global--LineHeight--sm);
   --pf-c-button--FontWeight: var(--global--FontWeight--semi-bold);
   --pf-c-button--BorderWidth: var(--global--BorderWidth);
-  --pf-c-button--BorderColor: var(--pf-global-border-color);
+  --pf-c-button--BorderColor: var(--global--Color--dark);
 
   // Primary btn
   --pf-c-button--primary--BackgroundColor: var(--global--primary-color);
   --pf-c-button--primary--BorderColor: var(--global--primary-color);
-  --pf-c-button--primary--Color: var(--pf-global-component-alt-color);
-  --pf-c-button--primary--hover--BackgroundColor: var(--pf-global--primary-dark-color);
-  --pf-c-button--primary--hover--BorderColor: var(--pf-global--primary-dark-color);
-  --pf-c-button--primary--hover--Color: var(--pf-global-component-alt-color);
+  --pf-c-button--primary--Color: var(--global--Color--dark-alt);
+  --pf-c-button--primary--hover--BackgroundColor: var(--global--primary-color);
+  --pf-c-button--primary--hover--BorderColor: var(--global--primary-color);
+  --pf-c-button--primary--hover--Color: var(--global--Color--dark-alt);
 
   // Secondary btn
   --pf-c-button--secondary--BackgroundColor: transparent;
@@ -25,31 +25,31 @@
   --pf-c-button--secondary--Color: var(--global--primary-color);
   --pf-c-button--secondary--hover--BackgroundColor: var(--global--primary-color);
   --pf-c-button--secondary--hover--BorderColor: var(--global--primary-color);
-  --pf-c-button--secondary--hover--Color: var(--pf-global-component-alt-color);
+  --pf-c-button--secondary--hover--Color: var(--global--Color--dark-alt);
 
   // Secondary Inverse btn
   --pf-c-button--secondary-alt--BackgroundColor: transparent;
-  --pf-c-button--secondary-alt--BorderColor: var(--pf-global-component-alt-color);
-  --pf-c-button--secondary-alt--Color: var(--pf-global-component-alt-color);
+  --pf-c-button--secondary-alt--BorderColor: var(--global--Color--dark-alt);
+  --pf-c-button--secondary-alt--Color: var(--global--Color--dark-alt);
   --pf-c-button--secondary-alt--hover--BackgroundColor: var(--global--primary-color);
   --pf-c-button--secondary-alt--hover--BorderColor: var(--global--primary-color);
-  --pf-c-button--secondary-alt--hover--Color: var(--pf-global-component-alt-color);
+  --pf-c-button--secondary-alt--hover--Color: var(--global--Color--dark-alt);
 
   // Tertiary btn
   --pf-c-button--tertiary--BackgroundColor: transparent;
-  --pf-c-button--tertiary--BorderColor: var(--pf-global-component-color);
-  --pf-c-button--tertiary--Color: var(--pf-global-component-color);
-  --pf-c-button--tertiary--hover--BackgroundColor: var(--pf-global-component-color);
-  --pf-c-button--tertiary--hover--BorderColor: var(--pf-global-component-color);
-  --pf-c-button--tertiary--hover--Color: var(--pf-global-component-alt-color);
+  --pf-c-button--tertiary--BorderColor: var(--global--Color--dark);
+  --pf-c-button--tertiary--Color: var(--global--Color--dark);
+  --pf-c-button--tertiary--hover--BackgroundColor: var(--global--Color--dark);
+  --pf-c-button--tertiary--hover--BorderColor: var(--global--Color--dark);
+  --pf-c-button--tertiary--hover--Color: var(--global--Color--dark-alt);
 
   // danger btn
   --pf-c-button--danger--BackgroundColor: var(--global--danger-color);
   --pf-c-button--danger--BorderColor: var(--global--danger-color);
-  --pf-c-button--danger--Color: var(--pf-global-component-alt-color);
-  --pf-c-button--danger--hover--BackgroundColor: var(--pf-global-danger-dark-color);
-  --pf-c-button--danger--hover--BorderColor: var(--pf-global-danger-dark-color);
-  --pf-c-button--danger--hover--Color: var(--pf-global-component-alt-color);
+  --pf-c-button--danger--Color: var(--global--Color--dark-alt);
+  --pf-c-button--danger--hover--BackgroundColor: var(--global--danger-color);
+  --pf-c-button--danger--hover--BorderColor: var(--global--danger-color);
+  --pf-c-button--danger--hover--Color: var(--global--Color--dark-alt);
 
   //Sizes
   --pf-c-button--small--FontSize: var(--global--FontSize--sm);
