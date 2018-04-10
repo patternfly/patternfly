@@ -1,7 +1,21 @@
 const path = require('path')
+const fs = require('fs-extra')
 const inflection = require('inflection')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
+
+
+const COMPONENTS_PATH = path.resolve(__dirname, './src/patternfly/components')
+const LAYOUTS_PATH = path.resolve(__dirname, './src/patternfly/layouts')
+
+const COMPONENT_PATHS = fs.readdirSync(
+  COMPONENTS_PATH
+).map(name => path.resolve(COMPONENTS_PATH, `./${name}`))
+
+const LAYOUT_PATHS = fs.readdirSync(
+  LAYOUTS_PATH
+).map(name => path.resolve(LAYOUTS_PATH, `./${name}`))
+
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
@@ -144,6 +158,15 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     current.loader = 'html-loader'
     return current
   })
+  config.loader('handlebars-loader', function(current) {
+    current.test = /\.hbs$/
+    current.loader = 'handlebars-loader'
+    current.query = {
+      partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS),
+    }
+    return current
+  })
+
   config.merge({
     resolve: {
       alias: {

@@ -3,7 +3,9 @@
   "description": "Assets, source, tooling, and content for PatternFly Next",
   "version": "0.0.2",
   "author": "Cliff Pyles",
-  "dependencies": {},
+  "dependencies": {
+    "handlebars-loader": "^1.7.0"
+  },
   "keywords": [],
   "license": "MIT",
   "main": "n/a",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "commander": "^2.13.0",
     "del": "^3.0.0",
+    "fs-extra": "^5.0.0",
     "gatsby": "^1.9.63",
     "gatsby-cli": "^1.1.40",
     "gatsby-link": "^1.6.21",
@@ -52,6 +55,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
     "gulp-string-replace": "^1.0.0",
+    "handlebars-loader": "^1.7.0",
     "html-loader": "^0.5.5",
     "inflection": "^1.12.0",
     "lodash": "^4.17.5",
