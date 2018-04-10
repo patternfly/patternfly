@@ -2,17 +2,17 @@
 
 .pf-c-content {
   a {
-    color: $pf-global--link--Color;
-    text-decoration: $pf-global--link--TextDecoration;
+    color: $global--link--Color;
+    text-decoration: $global--link--TextDecoration;
 
     &:hover {
-      color: $pf-global--link--hover--Color;
-      text-decoration: $pf-global--link--hover--TextDecoration;
+      color: $global--link--Color--hover;
+      text-decoration: $global--link--TextDecoration--hover;
     }
   }
 
   li + li {
-    margin-top: $pf-global--spacer--xxs;
+    margin-top: $global--spacer--sm;
   }
 
   p,
@@ -23,14 +23,14 @@
   pre,
   table {
     &:not(:last-child){
-      margin-bottom: $pf-global--spacer--md;
+      margin-bottom: $global--spacer--lg;
     }
   }
 
   dl,
   ol,
   ul {
-    padding-left: $pf-global--spacer--md;
+    padding-left: $global--spacer--lg;
   }
 
   h1,
@@ -40,70 +40,70 @@
   h5,
   h6 {
     margin: 0;
-    font-weight: $pf-global--normal--FontWeight;
-    line-height: $pf-global--md--LineHeight;
+    font-weight: $global--FontWeight--normal;
+    line-height: $global--LineHeight;
   }
 
   h1 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--hero-title--FontSize;
+    margin-bottom: $global--spacer;
+    font-size: $global--FontSize--xxxl;
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--lg;
+      margin-top: $global--spacer--xl;
     }
   }
 
   h2 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--main-title--FontSize;
+    margin-bottom: $global--spacer;
+    font-size: $global--FontSize--xxl;
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--xl;
+      margin-top: $global--spacer--xxl;
     }
   }
 
   h3 {
-    margin-bottom: $pf-global--spacer--xs;
-    font-size: $pf-global--secondary-title--FontSize;
+    margin-bottom: $global--spacer;
+    font-size: $global--FontSize--xl;
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--lg;
+      margin-top: $global--spacer--xl;
     }
   }
 
   h4 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--sub-title--FontSize;
+    margin-bottom: $global--spacer--lg;
+    font-size: $global--FontSize--lg;
   }
 
   h5 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--body--FontSize;
+    margin-bottom: $global--spacer--lg;
+    font-size: $global--FontSize--md;
   }
 
   h6 {
-    margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--caption--FontSize;
+    margin-bottom: $global--spacer--lg;
+    font-size: $global--FontSize--sm;
   }
 
   blockquote {
-    padding: $pf-global--spacer--md;
-    border-left: 5px solid $pf-global-dark-off-color;
+    padding: $global--spacer--lg;
+    border-left: 5px solid $global--Color--dark-alt;
   }
 
   ol {
-    margin-top: $pf-global--spacer--md;
-    margin-left: $pf-global--spacer--md;
+    margin-top: $global--spacer--lg;
+    margin-left: $global--spacer--lg;
   }
 
   ul {
     margin: 0;
-    margin-top: $pf-global--spacer--md;
-    margin-left: $pf-global--spacer--sm;
+    margin-top: $global--spacer--lg;
+    margin-left: $global--spacer--md;
     ul {
-      margin-top: $pf-global--spacer--xs;
+      margin-top: $global--spacer;
     }
   }
 
   dd {
-    margin-left: $pf-global--spacer--xl;
+    margin-left: $global--spacer--xxl;
   }
 
   // figure {

@@ -1,28 +1,28 @@
 @import "../../patternfly-utilities";
 :root {
-  --pf-c-alert--PaddingTop: var(--pf-global--spacer--xxs);
-  --pf-c-alert--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-alert--PaddingBottom: var(--pf-global--spacer--xxs);
-  --pf-c-alert--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-alert--MarginBottom: var(--pf-global--spacer--xs);
-  --pf-c-alert--BorderWidth: var(--pf-global--BorderWidth);
-  --pf-c-alert__link--FontWeight: var(--pf-global--bold--FontWeight);
+  --pf-c-alert--PaddingTop: var(--global--spacer--sm);
+  --pf-c-alert--PaddingRight: var(--global--spacer--md);
+  --pf-c-alert--PaddingBottom: var(--global--spacer--sm);
+  --pf-c-alert--PaddingLeft: var(--global--spacer--md);
+  --pf-c-alert--MarginBottom: var(--global--spacer);
+  --pf-c-alert--BorderWidth: var(--global--BorderWidth);
+  --pf-c-alert__link--FontWeight: var(--global--FontWeight--bold);
   //success alert
-  --pf-c-alert--is-success--BackgroundColor: var(--pf-global--success-color);
-  --pf-c-alert--is-success--Color: var(--pf-global--success-color--dark);
-  --pf-c-alert--is-success--BorderColor: var(--pf-global--success-color--dark);
+  --pf-c-alert--is-success--BackgroundColor: var(--global--success-color);
+  --pf-c-alert--is-success--Color: var(--global--success-color--dark);
+  --pf-c-alert--is-success--BorderColor: var(--global--success-color--dark);
   //danger alert
-  --pf-c-alert--is-danger--BackgroundColor: var(--pf-global--danger-color);
-  --pf-c-alert--is-danger--Color: var(--pf-global--light-color);
-  --pf-c-alert--is-danger--BorderColor: var(--pf-global--danger-color--dark);
+  --pf-c-alert--is-danger--BackgroundColor: var(--global--danger-color);
+  --pf-c-alert--is-danger--Color: var(--global--Color--light);
+  --pf-c-alert--is-danger--BorderColor: var(--global--danger-color--dark);
   //warning alert
-  --pf-c-alert--is-warning--BackgroundColor: var(--pf-global--warning-color);
-  --pf-c-alert--is-warning--Color: var(--pf-global--warning-color--dark);
-  --pf-c-alert--is-warning--BorderColor: var(--pf-global--warning-color--dark);
+  --pf-c-alert--is-warning--BackgroundColor: var(--global--warning-color);
+  --pf-c-alert--is-warning--Color: var(--global--warning-color--dark);
+  --pf-c-alert--is-warning--BorderColor: var(--global--warning-color--dark);
   //info alert
-  --pf-c-alert--is-info--BackgroundColor: var(--pf-global--info-color);
-  --pf-c-alert--is-info--Color: var(--pf-global--info-color--dark);
-  --pf-c-alert--is-info--BorderColor: var(--pf-global--info-color--dark);
+  --pf-c-alert--is-info--BackgroundColor: var(--global--info-color);
+  --pf-c-alert--is-info--Color: var(--global--info-color--dark);
+  --pf-c-alert--is-info--BorderColor: var(--global--info-color--dark);
 }
 //
 // Base styles

@@ -5,10 +5,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: $pf-global--sans-serif--FontFamily;
-  font-size: $pf-global--body--FontSize;
-  font-weight: $pf-global--normal--FontWeight;
-  line-height: $pf-global--md--LineHeight;
+  font-family: $global--FontFamily--sans-serif;
+  font-size: $global--FontSize--md;
+  font-weight: $global--FontWeight--normal;
+  line-height: $global--LineHeight;
   background-color: transparent;
   text-rendering: optimizeLegibility;
 }
@@ -20,7 +20,7 @@ html {
   font-size: unset;
 }
 
-@if $pf-global--enable-reset {
+@if $global--enable-reset {
   // Reset
   // Based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
   // stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
@@ -59,7 +59,7 @@ html {
   h5,
   h6 {
     font-size: 100%;
-    font-weight: $pf-global--normal--FontWeight;
+    font-weight: $global--FontWeight--normal;
   }
 
   ul {
@@ -113,24 +113,24 @@ html {
 
 
   body {
-    font-family: $pf-global--sans-serif--FontFamily;
-    font-size: $pf-global--body--FontSize;
-    font-weight: $pf-global--normal--FontWeight;
-    line-height: $pf-global--md--LineHeight;
-    color: $pf-global--dark-color;
+    font-family: $global--FontFamily--sans-serif;
+    font-size: $global--FontSize--md;
+    font-weight: $global--FontWeight--normal;
+    line-height: $global--LineHeight;
+    color: $global--Color--dark;
     text-align: left;
-    background-color: $pf-global--light--BackgroundColor;
+    background-color: $global--BackgroundColor--light;
   }
 
   // Links styles
 
   a {
-    color: $pf-global--link--Color;
-    text-decoration: $pf-global--link--TextDecoration;
+    color: $global--link--Color;
+    text-decoration: $global--link--TextDecoration;
 
     &:hover {
-      color: $pf-global--link--hover--Color;
-      text-decoration: $pf-global--link--hover--TextDecoration;
+      color: $global--link--Color--hover;
+      text-decoration: $global--link--TextDecoration--hover;
     }
   }
 
