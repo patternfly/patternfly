@@ -57,5 +57,3 @@ Use the disabled state when a button is inactive and a user cannot interact with
 * Do not use long button labels that might risk wrapping
 
 See the [PatternFly Terminology and Wording Guidelines](http://www.patternfly.org/styles/terminology-and-wording/) for additional guidance.
-
-Related Components
