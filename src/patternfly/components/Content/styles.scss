@@ -1,18 +1,115 @@
 @import "../../patternfly-utilities";
 
+// stylelint-disable
+:root {
+
+  // Hero title
+  --pf-c-content--hero-title--MarginTop: var(--global--spacer--md);
+  --pf-c-content--hero-title--MarginBottom: var(--global--spacer);
+  --pf-c-content--hero-title--LineHeight: var(--global--LineHeight--sm);
+  --pf-c-content--hero-title--FontSize: var(--global--FontSize--xxxl);
+  --pf-c-content--hero-title--FontWeight: var(--global--FontWeight--normal);
+
+  // h1 - Main title
+  --pf-c-content--h1--MarginTop: var(--global--spacer--md);
+  --pf-c-content--h1--MarginBottom: var(--global--spacer);
+  --pf-c-content--h1--LineHeight: var(--global--LineHeight--sm);
+  --pf-c-content--h1--FontSize: var(--global--FontSize--xxl);
+  --pf-c-content--h1--FontWeight: var(--global--FontWeight--normal);
+
+  // h2 - Secondary title
+  --pf-c-content--h2--MarginTop: var(--global--spacer--md);
+  --pf-c-content--h2--MarginBottom: var(--global--spacer);
+  --pf-c-content--h2--LineHeight: var(--global--LineHeight--sm);
+  --pf-c-content--h2--FontSize: var(--global--FontSize--xl);
+  --pf-c-content--h2--FontWeight: var(--global--FontWeight--normal);
+
+  // h3 - Sub-title
+  --pf-c-content--h3--MarginTop: var(--global--spacer--md);
+  --pf-c-content--h3--MarginBottom: var(--global--spacer);
+  --pf-c-content--h3--LineHeight: var(--global--md--LineHeight);
+  --pf-c-content--h3--FontSize: var(--global--FontSize--lg);
+  --pf-c-content--h3--FontWeight: var(--global--FontWeight--normal);
+
+  // h4
+  --pf-c-content--h4--MarginTop: var(--global--spacer--md);
+  --pf-c-content--h4--MarginBottom: var(--global--spacer);
+  --pf-c-content--h4--LineHeight: var(--global--md--LineHeight);
+  --pf-c-content--h4--FontSize: var(--global--FontSize--md);
+  --pf-c-content--h4--FontWeight: var(--global--FontWeight--semi-bold);
+
+  // h5
+  --pf-c-content--h5--MarginTop: var(--global--spacer--md);
+  --pf-c-content--h5--MarginBottom: var(--global--spacer);
+  --pf-c-content--h5--LineHeight: var(--global--LineHeight--lg);
+  --pf-c-content--h5--FontSize: var(--global--FontSize);
+  --pf-c-content--h5--FontWeight: var(--global--FontWeight--semi-bold);
+
+  // h6
+  --pf-c-content--h6--MarginTop: var(--global--spacer--md);
+  --pf-c-content--h6--MarginBottom: var(--global--spacer--xs);
+  --pf-c-content--h6--LineHeight: var(--global--LineHeight--lg);
+  --pf-c-content--h6--FontSize: var(--global--FontSize);
+  --pf-c-content--h6--FontWeight: var(--global--FontWeight--semi-bold);
+
+
+  // Body
+  --pf-c-content--MarginBottom: var(--global--spacer);
+  --pf-c-content--LineHeight: var(--global--LineHeight--lg);
+  --pf-c-content--FontSize: var(--global--FontSize);
+  --pf-c-content--FontWeight: var(--global--FontWeight--normal);
+
+  // Small text
+  --pf-c-content--small--MarginBottom: var(--global--spacer);
+  --pf-c-content--small--LineHeight: var(--global--LineHeight--lg);
+  --pf-c-content--small--FontSize: var(--global--FontSize--sm);
+  --pf-c-content--small--Color: var(--global--Color--dark-alt);
+
+  // Links
+  --pf-c-content--a--Color: var(--global--link--Color);
+  --pf-c-content--a--TextDecoration: var(--global--link--TextDecoration);
+  --pf-c-content--a--hover--Color: var(--global--link--Color--hover);
+  --pf-c-content--a--hover--TextDecoration: var(--global--link--TextDecoration--hover);
+
+  // Blockquote
+  --pf-c-content--blockquote--Padding: var(--global--spacer);
+  --pf-c-content--blockquote--FontWeight: var(--global--FontWeight--light);
+  --pf-c-content--blockquote--Color: var(--global--Color--dark-alt);
+  --pf-c-content--blockquote--BorderLeftColor: var(--global--BorderColor--light);
+  --pf-c-content--blockquote--BorderLeftWidth: var(--global--BorderWidth--md);
+
+  // Lists
+  --pf-c-content--ul--PaddingLeft: var(--global--spacer--md);
+  --pf-c-content--ol--MarginTop: var(--global--spacer);
+  --pf-c-content--ol--MarginLeft: var(--global--spacer--md);
+  --pf-c-content--ul--MarginTop: var(--global--spacer);
+  --pf-c-content--ul--MarginLeft: var(--global--spacer--md);
+  --pf-c-content--ul--nested--MarginTop: var(--global--spacer--sm);
+  --pf-c-content--ul--nested--MarginLeft: var(--global--spacer--sm);
+  --pf-c-content--ul--ListStyle: var(--global-ListStyle);
+  --pf-c-content--li--MarginTop: var(--global--spacer--sm);
+  --pf-c-content--dd--MarginBottom: var(--global--spacer--sm);
+  --pf-c-content--dd--MarginLeft: var(--global--spacer--md);
+}
+
+// stylelint-enable
+
 .pf-c-content {
+  font-size: var(--pf-c-content--FontSize);
+  line-height: var(--pf-c-content--LineHeight);
+
   a {
-    color: $global--link--Color;
-    text-decoration: $global--link--TextDecoration;
+    color: var(--pf-c-content--a--Color);
+    text-decoration: var(--pf-c-content--a--TextDecoration);
 
     &:hover {
-      color: $global--link--Color--hover;
-      text-decoration: $global--link--TextDecoration--hover;
+      color: var(--pf-c-content--a--hover--Color);
+      text-decoration: var(--pf-c-content--a--hover--TextDecoration);
     }
   }
 
   li + li {
-    margin-top: $global--spacer--sm;
+    margin-top: var(--pf-c-content--li--MarginTop);
   }
 
   p,
@@ -20,17 +117,19 @@
   ol,
   ul,
   blockquote,
+  small,
   pre,
   table {
-    &:not(:last-child){
-      margin-bottom: $global--spacer--lg;
+    &:not(:last-child) {
+      // This variable name doesn't reflect the selector, it's an excpection to the variable system.
+      margin-bottom: var(--pf-c-content--MarginBottom);
     }
   }
 
-  dl,
   ol,
   ul {
-    padding-left: $global--spacer--lg;
+    // This variable name doesn't reflect the selector, it's an excpection to the variable system.
+    padding-left: var(--pf-c-content--ul--PaddingLeft);
   }
 
   h1,
@@ -40,143 +139,111 @@
   h5,
   h6 {
     margin: 0;
-    font-weight: $global--FontWeight--normal;
-    line-height: $global--LineHeight;
+  }
+
+  .pf-is-hero {
+    margin-bottom: var(--pf-c-content--hero-title--MarginBottom);
+    font-size: var(--pf-c-content--hero-title--FontSize);
+    font-weight: var(--pf-c-content--hero-title--FontWeight);
+    line-height: var(--pf-c-content--hero-title--LineHeight);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--hero-title--MarginTop);
+    }
   }
 
   h1 {
-    margin-bottom: $global--spacer;
-    font-size: $global--FontSize--xxxl;
+    margin-bottom: var(--pf-c-content--h1--MarginBottom);
+    font-size: var(--pf-c-content--h1--FontSize);
+    font-weight: var(--pf-c-content--h1--FontWeight);
+    line-height: var(--pf-c-content--h1--LineHeight);
     &:not(:first-child) {
-      margin-top: $global--spacer--xl;
+      margin-top: var(--pf-c-content--h1--MarginTop);
     }
   }
 
   h2 {
-    margin-bottom: $global--spacer;
-    font-size: $global--FontSize--xxl;
+    margin-bottom: var(--pf-c-content--h2--MarginBottom);
+    font-size: var(--pf-c-content--h2--FontSize);
+    font-weight: var(--pf-c-content--h2--FontWeight);
+    line-height: var(--pf-c-content--h2--LineHeight);
     &:not(:first-child) {
-      margin-top: $global--spacer--xxl;
+      margin-top: var(--pf-c-content--h2--MarginTop);
     }
   }
 
   h3 {
-    margin-bottom: $global--spacer;
-    font-size: $global--FontSize--xl;
+    margin-bottom: var(--pf-c-content--h3--MarginBottom);
+    font-size: var(--pf-c-content--h3--FontSize125rem);
+    font-weight: var(--pf-c-content--h3--FontWeight);
+    line-height: var(--pf-c-content--h3--LineHeight);
     &:not(:first-child) {
-      margin-top: $global--spacer--xl;
+      margin-top: var(--pf-c-content--h3--MarginTop);
     }
   }
 
   h4 {
-    margin-bottom: $global--spacer--lg;
-    font-size: $global--FontSize--lg;
+    margin-bottom: var(--pf-c-content--h4--MarginBottom),;
+    font-size: var(--pf-c-content--h4--FontSize);
+    font-weight: var(--pf-c-content--h4--FontWeight);
+    line-height: var(--pf-c-content--h4--LineHeight);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--h4--MarginTop);
+    }
   }
 
   h5 {
-    margin-bottom: $global--spacer--lg;
-    font-size: $global--FontSize--md;
+    margin-bottom: var(--pf-c-content--h5--MarginBottom);
+    font-size: var(--pf-c-content--h5--FontSize);
+    font-weight: var(--pf-c-content--h5--FontWeight);
+    line-height: var(--pf-c-content--h5--LineHeight);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--h5--MarginTop);
+    }
   }
 
   h6 {
-    margin-bottom: $global--spacer--lg;
-    font-size: $global--FontSize--sm;
+    margin-bottom: var(--pf-c-content--h6--MarginBottom);
+    font-size: var(--pf-c-content--h6--FontSize);
+    font-weight: var(--pf-c-content--h6--FontWeight);
+    line-height: var(--pf-c-content--h6--LineHeight);
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--h6--MarginTop);
+    }
+  }
+
+  small {
+    display: block;
+    margin-bottom: var(--pf-c-content--small--MarginBottom);
+    font-size: var(--pf-c-content--small--FontSize);
+    line-height: var(--pf-c-content--small--LineHeight);
+    color: var(--pf-c-content--small--Color);
   }
 
   blockquote {
-    padding: $global--spacer--lg;
-    border-left: 5px solid $global--Color--dark-alt;
+    padding: var(--pf-c-content--blockquote--Padding);
+    font-weight: var(--pf-c-content--blockquote--FontWeight);
+    color: var(--pf-c-content--blockquote--Color);
+    border-left: var(--pf-c-content--blockquote--BorderLeftWidth) solid var(--pf-c-content--blockquote--BorderLeftColor);
   }
 
   ol {
-    margin-top: $global--spacer--lg;
-    margin-left: $global--spacer--lg;
+    margin-top: var(--pf-c-content--ol--MarginTop);
+    margin-left: var(--pf-c-content--ol--MarginLeft);
   }
 
   ul {
     margin: 0;
-    margin-top: $global--spacer--lg;
-    margin-left: $global--spacer--md;
+    margin-top: var(--pf-c-content--ul--MarginTop);
+    margin-left: var(--pf-c-content--ul--MarginLeft);
+    list-style: var(--pf-c-content--ul--ListStyle);
     ul {
-      margin-top: $global--spacer;
+      margin-top: var(--pf-c-content--ul--nested--MarginTop);
+      margin-left: var(--pf-c-content--ul--nested--MarginLeft);
     }
   }
 
   dd {
-    margin-left: $global--spacer--xxl;
+    margin-bottom: var(--pf-c-content--dd--MarginBottom);
+    margin-left: var(--pf-c-content--dd--MarginLeft);
   }
-
-  // figure {
-  //   margin-right: 2em;
-  //   margin-left: 2em;
-  //   text-align: center;
-  //   &:not(:first-child){
-  //     margin-top: 2em;
-  //   }
-  //   &:not(:last-child) {
-  //     margin-bottom: 2em;
-  //   }
-  //   img {
-  //     display: inline-block;
-  //   }
-  //   figcaption{
-  //     font-style: italic;
-  //   }
-  // }
-
-  // pre {
-  //   padding: $pf-c-content--pre--Padding;
-  //   overflow-x: auto;
-  //   word-wrap: normal;
-  //   white-space: pre;
-  // }
-  //
-  // sup,
-  // sub {
-  //   font-size: 75%;
-  // }
-
-  // table {
-  //   width: 100%;
-  //   td,
-  //   th {
-  //     padding: $pf-c-content-table-cell-padding;
-  //     vertical-align: top;
-  //     border: $content-table-cell-border;
-  //     border-width: $content-table-cell-border-width;
-  //   }
-  //   th {
-  //     color: $content-table-cell-heading-color;
-  //     text-align: left;
-  //   }
-  //   tr {
-  //     &:hover {
-  //       background-color: $content-table-row-hover-background-color;
-  //     }
-  //   }
-  //   thead {
-  //     td,
-  //     th {
-  //       color: $content-table-head-cell-color;
-  //       border-width: $content-table-head-cell-border-width;
-  //     }
-  //   }
-  //   tfoot {
-  //     td,
-  //     th {
-  //       color: $content-table-foot-cell-color;
-  //       border-width: $content-table-foot-cell-border-width;
-  //     }
-  //   }
-  //   tbody {
-  //     tr {
-  //       &:last-child {
-  //         td,
-  //         th {
-  //           border-bottom-width: 0;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }

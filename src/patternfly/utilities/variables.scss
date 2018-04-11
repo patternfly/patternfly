@@ -25,6 +25,9 @@ $global--space-size-root: 16 !default; // for spaces
 // Background color
 $global--BackgroundColor--light:      $pf-color-white !default;
 $global--BackgroundColor--light-alt:  $pf-color-black-200 !default;
+// ADD one more light background
+$global--BackgroundColor--light-alt:  $pf-color-black-200 !default;
+
 
 $global--BackgroundColor--dark:       $pf-color-black-900 !default;
 $global--BackgroundColor--dark-alt:   $pf-color-black-800 !default;
@@ -116,6 +119,7 @@ $global--link--TextDecoration--hover:  underline !default;
 
 // Borders
 $global--BorderWidth:         1px !default;
+$global--BorderWidth--md:     3px !default;
 $global--BorderColor--dark:   $pf-color-black-400 !default;
 $global--BorderColor--light:  $pf-color-black-400 !default;
 
@@ -137,8 +141,7 @@ $global--FontSize--lg:       pf-font-prem(21px) !default;
 $global--FontSize--md:       pf-font-prem(18px) !default;
 $global--FontSize:           pf-font-prem(16px) !default;
 $global--FontSize--sm:       pf-font-prem(14px) !default;
-$global--FontSize--xs:       pf-font-prem(14px) !default;
-
+$global--FontSize--xs:       pf-font-prem(12px) !default;
 
 // Font weight
 $global--FontWeight--light:          300 !default;
@@ -255,6 +258,7 @@ $global-ListStyle: disc outside !default;
 
   // Borders
   --global--BorderWidth:         $global--BorderWidth;
+  --global--BorderWidth--md:     $global--BorderWidth--md;
   --global--BorderColor--dark:   $global--BorderColor--dark;
   --global--BorderColor--light:  $global--BorderColor--light;
 
