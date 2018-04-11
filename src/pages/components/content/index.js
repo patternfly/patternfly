@@ -6,12 +6,6 @@ import Content, { Docs } from '@components/Content'
 export default () => {
   return (
     <Documentation docs={Docs}>
-      <Example heading="Hero">
-        <Content>
-          <h1 className="pf-is-hero">Hero Title</h1>
-          <p>The header size above will never appear in a main content area. It will only be used in heros/landing pages.</p>
-        </Content>
-      </Example>
       <Example heading="Contents">
         <Content>
           <h1>Hello World</h1>

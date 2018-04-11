@@ -2,14 +2,6 @@
 
 // stylelint-disable
 :root {
-
-  // Hero title
-  --pf-c-content--hero-title--MarginTop: var(--global--spacer--md);
-  --pf-c-content--hero-title--MarginBottom: var(--global--spacer);
-  --pf-c-content--hero-title--LineHeight: var(--global--LineHeight--sm);
-  --pf-c-content--hero-title--FontSize: var(--global--FontSize--xxxl);
-  --pf-c-content--hero-title--FontWeight: var(--global--FontWeight--normal);
-
   // h1 - Main title
   --pf-c-content--h1--MarginTop: var(--global--spacer--md);
   --pf-c-content--h1--MarginBottom: var(--global--spacer);
@@ -139,16 +131,6 @@
   h5,
   h6 {
     margin: 0;
-  }
-
-  .pf-is-hero {
-    margin-bottom: var(--pf-c-content--hero-title--MarginBottom);
-    font-size: var(--pf-c-content--hero-title--FontSize);
-    font-weight: var(--pf-c-content--hero-title--FontWeight);
-    line-height: var(--pf-c-content--hero-title--LineHeight);
-    &:not(:first-child) {
-      margin-top: var(--pf-c-content--hero-title--MarginTop);
-    }
   }
 
   h1 {
