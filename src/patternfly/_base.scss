@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   font-family: $global--FontFamily--sans-serif;
-  font-size: $global--FontSize--md;
+  font-size: $global--FontSize;
   font-weight: $global--FontWeight--normal;
   line-height: $global--LineHeight;
   background-color: transparent;
@@ -114,7 +114,7 @@ html {
 
   body {
     font-family: $global--FontFamily--sans-serif;
-    font-size: $global--FontSize--md;
+    font-size: $global--FontSize;
     font-weight: $global--FontWeight--normal;
     line-height: $global--LineHeight;
     color: $global--Color--dark;
