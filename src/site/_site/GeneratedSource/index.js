@@ -8,8 +8,7 @@ import './styles.scss'
 import 'prismjs/themes/prism-coy.css'
 
 export default ({children}) => {
-  const output = children.replace(/ "/g, '"')
-  const indentedOutput = pretty(output, { ocd: true })
+  const indentedOutput = pretty(children, { ocd: true })
 
   return (
     <div className="GeneratedSource">
