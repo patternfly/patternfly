@@ -18,13 +18,14 @@
 .{{bemName}} {
   color: var(--{{bemName}}--Color, #292e34);
 
-// Element
-&_title {
-  font-size: var(--{{bemName}}_title--FontSize, 2rem);
+  // Element
+  &_title {
+    font-size: var(--{{bemName}}_title--FontSize, 2rem);
+  }
+
+  // Modifier
+  &.is-danger {
+    background-color: var(--{{bemName}}--is-danger--BackgroundColor, #c00);
+  }
 }
 
-// Modifier
-&.is-danger {
-  background-color: var(--{{bemName}}--is-danger--BackgroundColor, #c00);
-}
-}
