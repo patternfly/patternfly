@@ -13,6 +13,7 @@ export default () => {
   const buttonTypesTemplate = ButtonTypesTemplate()
   const buttonSizesTemplate = ButtonSizesTemplate()
   const buttonStatesTemplate = ButtonStatesTemplate()
+
   return (
     <Documentation docs={Docs}>
       <Example heading="Button Types">
