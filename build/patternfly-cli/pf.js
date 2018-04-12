@@ -5,7 +5,7 @@ const path = require('path')
 const program = require('commander')
 const scaffold = require('scaffold-helper')
 
-const PROJECT_DIR = path.resolve(__dirname, '../')
+const PROJECT_DIR = path.resolve(__dirname, '../../')
 const BLUEPRINTS_DIR = path.resolve(__dirname, '../blueprints')
 
 let blueprintArgs = Object.keys(arguments).reduce((accum, fieldName) => {

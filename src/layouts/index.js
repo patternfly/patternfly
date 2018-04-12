@@ -6,7 +6,7 @@ import Navigation from '@siteComponents/Navigation'
 
 import 'prismjs/themes/prism-coy.css'
 import '../patternfly/patternfly.scss'
-import '../workspace.scss'
+import '../site/workspace.scss'
 
 export default ({ children, data }) => {
   let allPages = data.allSitePage.edges.reduce((accum, edge) => {
