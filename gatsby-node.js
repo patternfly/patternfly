@@ -19,7 +19,7 @@ const LAYOUT_PATHS = fs.readdirSync(
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
-  const PAGES_BASE_DIR = path.resolve(__dirname, './src/pages')
+  const PAGES_BASE_DIR = path.resolve(__dirname, './src/site/pages')
   const PATTERNS_BASE_DIR = path.resolve(__dirname, './src/patternfly/patterns')
   const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/components')
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts')
@@ -30,7 +30,6 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     const isPattern = (node.fileAbsolutePath.includes(PATTERNS_BASE_DIR))
     const isComponent = (node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR))
     const isLayout = (node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR))
-
     if (isPage) {
       let relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath)
       let pagePath = `/${relativePath}`.replace(/\.md$/, '')
@@ -87,7 +86,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.path,
-        component: path.resolve(__dirname, `./src/templates/${node.fields.type}.js`),
+        component: path.resolve(__dirname, `./src/site/templates/${node.fields.type}.js`),
         context: {
           pagePath: node.fields.path,
           type: node.fields.type,
@@ -103,6 +102,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts)\/$/
   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts)\/([A-Za-z0-9_-]+)/
   const DEMO_PAGE_REGEX = /^\/(demos)\/([A-Za-z0-9_-]+)/
+  console.log('~~', page);
   return new Promise((resolve, reject) => {
     let isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX)
     let isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX)
@@ -113,6 +113,8 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
     page.context.slug = ''
     page.context.name = ''
     page.context.title = ''
+
+    console.log('~~', page.path);
 
     if (isCategoryPage) {
       page.context.type = 'category'
@@ -170,7 +172,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   config.merge({
     resolve: {
       alias: {
-        '@siteComponents': path.resolve(__dirname, './src/_site'),
+        '@siteComponents': path.resolve(__dirname, './src/site/_site'),
         '@patterns': path.resolve(__dirname, './src/patternfly/patterns'),
         '@components': path.resolve(__dirname, './src/patternfly/components'),
         '@layouts': path.resolve(__dirname, './src/patternfly/layouts'),
