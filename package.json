@@ -18,7 +18,7 @@
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
     "test": "node test/test.js",
-    "cli:setup": "cd patternfly-cli && npm install && cd ../ && npm link ./patternfly-cli",
+    "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "lint": "stylelint 'src/**/*.scss' --config ./.stylelintrc --fix",
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
     "backstop:init": "node test/create-references.js",

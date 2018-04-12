@@ -30,10 +30,6 @@ To setup the PatternFly Next development environment:
 
 - run `pf generate component <name>`
 
- or generate a component that uses HTML for the template
-
-- run `pf generate component-html <name>`
-
 *To view visit http://localhost:8000/components/<name>*
 
 ### Create a new pattern

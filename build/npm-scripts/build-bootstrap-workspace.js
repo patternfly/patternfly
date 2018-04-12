@@ -36,7 +36,7 @@ const contentPages = [
   'figures'
 ]
 const baseUrl = 'https://getbootstrap.com/docs/4.0/'
-const baseBuildDir = path.resolve(__dirname, '../bs-content')
+const baseBuildDir = path.resolve(__dirname, '../src/site/bs-content')
 
 
 componentPages.forEach((component) => {
