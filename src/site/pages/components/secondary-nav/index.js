@@ -1,15 +1,15 @@
 import React from 'react'
 import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import Box, { Docs } from '@components/Box'
+import SecondaryNav, {Docs} from '@components/SecondaryNav'
 
 export default () => {
   return (
     <Documentation docs={Docs}>
       <Example heading="Example">
-        <Box>
+        <SecondaryNav>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </Box>
+        </SecondaryNav>
       </Example>
     </Documentation>
   )

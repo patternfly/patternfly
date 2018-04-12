@@ -102,7 +102,6 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts)\/$/
   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts)\/([A-Za-z0-9_-]+)/
   const DEMO_PAGE_REGEX = /^\/(demos)\/([A-Za-z0-9_-]+)/
-  console.log('~~', page);
   return new Promise((resolve, reject) => {
     let isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX)
     let isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX)
@@ -113,8 +112,6 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
     page.context.slug = ''
     page.context.name = ''
     page.context.title = ''
-
-    console.log('~~', page.path);
 
     if (isCategoryPage) {
       page.context.type = 'category'
