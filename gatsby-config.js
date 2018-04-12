@@ -15,12 +15,18 @@ const plugins = [
       precision: 5
     },
   },
+  // {  add this when we move all component examples into the patternfly directory
+  //   resolve: `gatsby-plugin-page-creator`,
+  //   options: {
+  //     path: `${PROJECT_ROOT}/src/patternfly`,
+  //   }
+  // },
   {
-    resolve: 'gatsby-source-filesystem',
+    resolve: `gatsby-plugin-page-creator`,
     options: {
-      path: `${PROJECT_ROOT}/src/pages`,
-      name: 'pages',
-    },
+        path: `${PROJECT_ROOT}/src/site/pages`,
+        name: 'pages'
+    }
   },
   {
     resolve: 'gatsby-source-filesystem',
@@ -32,14 +38,14 @@ const plugins = [
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      path: `${PROJECT_ROOT}/src/_site`,
+      path: `${PROJECT_ROOT}/src/site/_site`,
       name: 'site-components',
     },
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      path: `${PROJECT_ROOT}/src/img`,
+      path: `${PROJECT_ROOT}/src/site/img`,
       name: 'images',
     },
   },
