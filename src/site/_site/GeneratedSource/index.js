@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOMServer from 'react-dom/server'
 import Prism from 'prismjs'
 import PrismCode from 'react-prism'
 import pretty from 'pretty'
@@ -9,10 +8,7 @@ import './styles.scss'
 import 'prismjs/themes/prism-coy.css'
 
 export default ({children}) => {
-  const output = ReactDOMServer
-    .renderToStaticMarkup(children)
-    .replace(/ "/g, '"')
-
+  const output = children.replace(/ "/g, '"')
   const indentedOutput = pretty(output, { ocd: true })
 
   return (

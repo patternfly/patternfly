@@ -18,6 +18,7 @@ export default class Preview extends React.Component {
   }
 
   render () {
+    const output = {__html: this.props.children}
     return (
       <div className={`Preview ${this.state.viewport}`}>
         <div className="Preview__header">
@@ -40,23 +41,10 @@ export default class Preview extends React.Component {
             </button>
           </div>
         </div>
-        <div className={`Preview__body ${this.props.isViewport ? 'is-viewport' : ''}`}>
-          {this.props.children}
-        </div>
+        <div
+          className={`Preview__body ${this.props.isViewport ? 'is-viewport' : ''}`}
+          dangerouslySetInnerHTML={output} />
       </div>
     )
   }
 }
-
-// export default ({children, isViewport = false}) => {
-//   return (
-//     <div className="Preview">
-//       <div className="Preview__header">
-//         <h4 className="Preview_title">Preview{isViewport ? ' (Represents Viewport)' : ''}</h4>
-//       </div>
-//       <div className={`Preview__body ${isViewport ? 'is-viewport' : ''}`}>
-//         {children}
-//       </div>
-//     </div>
-//   )
-// }
