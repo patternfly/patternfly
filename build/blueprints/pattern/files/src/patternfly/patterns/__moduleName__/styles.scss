@@ -1,9 +1,9 @@
 @import "../../patternfly-utilities";
 
-// Pattern variables follow this formula:
+// Component variables follow this formula:
 // --{{bemName}}__element--modifier--state--PropertyCamelCase
 
-// The value of pattern scoped variables is always defined by a global variable:
+// The value of component scoped variables is always defined by a global variable:
 :root {
   // Example block variable
   --{{bemName}}--Color: var(--pf-global--dark--Color);

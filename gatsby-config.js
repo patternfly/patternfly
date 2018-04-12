@@ -15,12 +15,12 @@ const plugins = [
       precision: 5
     },
   },
-  // {  add this when we move all component examples into the patternfly directory
-  //   resolve: `gatsby-plugin-page-creator`,
-  //   options: {
-  //     path: `${PROJECT_ROOT}/src/patternfly`,
-  //   }
-  // },
+  {
+    resolve: `gatsby-plugin-page-creator`,
+    options: {
+      path: `${PROJECT_ROOT}/src/patternfly`,
+    }
+  },
   {
     resolve: `gatsby-plugin-page-creator`,
     options: {
