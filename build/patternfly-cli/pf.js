@@ -32,6 +32,7 @@ program
     name = name.replace(/^pf-(c|p)-/g,'')
 
     let bemEntity = inflection.transform(name, ['underscore','titleize', 'dasherize']).toLowerCase()
+    let moduleName = inflection.titleize(name).replace(/-/g,'')
 
     let blueprintData = {
       blueprintDir,
@@ -51,7 +52,10 @@ program
       nameTableized: inflection.tableize(name),
       nameCapitalized: inflection.capitalize(name),
       bemName: `${prefix}${bemEntity}`,
-      moduleName: inflection.titleize(name).replace(/-/g,''),
+      moduleName: moduleName,
+      partialBlock: '{{> @partial-block}}',
+      moduleHbOpen: '{{#> ' + moduleName + '}}',
+      moduleHbClose: '{{/' + moduleName + '}}',
       args: blueprintArgs
     }
 
