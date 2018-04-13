@@ -1,16 +1,27 @@
 @import "../../patternfly-utilities";
 
 .pf-l-split {
+  $pf-l-split__item--Padding: 0 !default;
+  $pf-l-split__item--PaddingLeft--first-child: 0 !default;
+  $pf-l-split__item--PaddingRight--last-child: 0 !default;
   display: flex;
   padding: 0;
   margin: 0;
 
-  > :nth-child(2),
-  > .pf-l-split__primary {
-    flex: 1;
+  & > &__item.pf-is-primary {
+    flex: 1 1 66.5%;
   }
-  > .pf-l-split__secondary,
-  > .pf-l-split__secondary:nth-child(2) {
-    flex: 0 1 auto;
+
+  & > &__item.pf-is-secondary {
+    flex: 1 2 33.5%;
+  }
+  & > &__item {
+    padding: $pf-l-split__item--Padding;
+  }
+  & > &__item:first-child {
+    padding-left: $pf-l-split__item--PaddingLeft--first-child;
+  }
+  & > &__item:last-child {
+    padding-right: $pf-l-split__item--PaddingRight--last-child;
   }
 }

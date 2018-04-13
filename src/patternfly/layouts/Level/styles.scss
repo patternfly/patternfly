@@ -13,7 +13,6 @@
   &.pf-is-vertical {
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 100%;
   }
   &.pf-is-vertical > &__group {
     flex-direction: column;
