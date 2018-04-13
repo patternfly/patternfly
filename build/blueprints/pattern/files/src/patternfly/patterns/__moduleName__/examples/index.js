@@ -9,15 +9,16 @@ import '../styles.scss'
 export const Docs = docs
 
 export default () => {
-  const example1 = {__html: Example1()}
-  const example2 = {__html: Example2()}
+  const example1 = Example1()
+  const example2 = Example2()
+
   return (
     <Documentation docs={Docs}>
       <Example heading="{{moduleName}} Example 1">
-        <div dangerouslySetInnerHTML={example1}></div>
+        {example1}
       </Example>
       <Example heading="{{moduleName}} Example 2">
-        <div dangerouslySetInnerHTML={example2}></div>
+        {example2}
       </Example>
     </Documentation>
   )
