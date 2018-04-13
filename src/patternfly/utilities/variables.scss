@@ -55,16 +55,17 @@ $global--BackgroundColor--disabled:     $pf-color-black-200 !default;
 $global--BorderColor--disabled:         $pf-color-black-200 !default;
 
 // Theme color
-$global--primary-color:       $pf-color-blue-300 !default;
-$global--secondary-color:     $pf-color-black-600 !default;
-$global--success-color:       $pf-color-green-100 !default;
-$global--success-color--dark: $pf-color-green-400 !default;
-$global--info-color:          $pf-color-cyan-100 !default;
-$global--info-color--dark:    $pf-color-cyan-400 !default;
-$global--warning-color:       $pf-color-orange-100 !default;
-$global--warning-color--dark: $pf-color-orange-400 !default;
-$global--danger-color:        $pf-color-red-100 !default;
-$global--danger-color--dark:  $pf-color-red-300 !default;
+$global--primary-color:         $pf-color-blue-400 !default;
+$global--primary-color--dark:   $pf-color-blue-500 !default;
+$global--secondary-color:       $pf-color-black-600 !default;
+$global--success-color:         $pf-color-green-100 !default;
+$global--success-color--dark:   $pf-color-green-400 !default;
+$global--info-color:            $pf-color-cyan-100 !default;
+$global--info-color--dark:      $pf-color-cyan-400 !default;
+$global--warning-color:         $pf-color-orange-100 !default;
+$global--warning-color--dark:   $pf-color-orange-400 !default;
+$global--danger-color:          $pf-color-red-100 !default;
+$global--danger-color--dark:    $pf-color-red-300 !default;
 
 // Shadows
 
@@ -152,7 +153,7 @@ $global--FontWeight--bold:           700 !default;
 // Line height
 $global--LineHeight--sm:         1.3 !default;
 $global--LineHeight:             1.4 !default;
-$global--LineHeight--md:         1.8 !default;
+$global--LineHeight--md:         1.5 !default;
 
 // List
 $global-ListStyle: disc outside !default;
@@ -166,119 +167,4 @@ $global-ListStyle: disc outside !default;
   @import url("https://fonts.googleapis.com/css?family=Open+Sans");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
-}
-
-
-// Lets makes the linter happy with CSS variables:
-// stylelint-disable
-
-:root {
-
-  // Colors
-
-  // Background color
-  --global--BackgroundColor--light:      $global--BackgroundColor--light;
-  --global--BackgroundColor--light-alt:  $global--BackgroundColor--light-alt;
-
-  --global--BackgroundColor--dark:       $global--BackgroundColor--dark;
-  --global--BackgroundColor--dark:   $global--BackgroundColor--dark;
-
-  // Text color
-  --global--Color--dark:         $global--Color--dark;
-  --global--Color--dark-alt:      $global--Color--dark-alt;
-
-  --global--Color--light:        $global--Color--light;
-  --global--Color--light-alt:   $global--Color--light-alt;
-
-  // States color
-  --global--Color--hover:                  $global--Color--hover;
-  --global--BackgroundColor--hover:        $global--BackgroundColor--hover;
-  --global--BorderColor--hover:            $global--BorderColor--hover;
-
-  --global--Color--active:                  $global--Color--active;
-  --global--BackgroundColor--active:        $global--BackgroundColor--active;
-  --global--BorderColor--active:            $global--BorderColor--active;
-
-  --global--Color--disabled:                  $global--Color--disabled;
-  --global--BackgroundColor--disabled:        $global--BackgroundColor--disabled;
-  --global--BorderColor--disabled:            $global--BorderColor--disabled;
-
-  // Shadows
-  --global--BoxShadow--sm:            $global--BoxShadow--sm;
-  --global--BoxShadow:            $global--BoxShadow;
-  --global--BoxShadow--md:            $global--BoxShadow--md;
-
-  --global--BoxShadow--sm-right:      $global--BoxShadow--sm-right;
-  --global--BoxShadow--sm-left:       $global--BoxShadow--sm-left;
-  --global--BoxShadow--sm-bottom:     $global--BoxShadow--sm-bottom;
-  --global--BoxShadow--sm-top:        $global--BoxShadow--sm-top;
-  --global--BoxShadow-right:      $global--BoxShadow-right;
-  --global--BoxShadow-left:       $global--BoxShadow-left;
-  --global--BoxShadow-bottom:     $global--BoxShadow-bottom;
-  --global--BoxShadow-top:        $global--BoxShadow-top;
-  --global--BoxShadow--md-right:      $global--BoxShadow--md-right;
-  --global--BoxShadow--md-left:       $global--BoxShadow--md-left;
-  --global--BoxShadow--md-bottom:     $global--BoxShadow--md-bottom;
-  --global--BoxShadow--md-top:        $global--BoxShadow--md-top;
-
-  --global--BoxShadow--inset:         $global--BoxShadow--inset;
-
-  // spacers
-  --global--spacer--xs:   $global--spacer--xs;
-  --global--spacer--sm:    $global--spacer--sm;
-  --global--spacer:     $global--spacer;
-  --global--spacer--md:     $global--spacer--md;
-  --global--spacer--lg:     $global--spacer--lg;
-  --global--spacer--xl:     $global--spacer--xl;
-  --global--spacer--xxl:     $global--spacer--xxl;
-
-  // Grid breakpoints
-  --global--breakpoint--xs: $global--breakpoint--xs;
-  --global--breakpoint--sm: $global--breakpoint--sm;
-  --global--breakpoint--md: $global--breakpoint--md;
-  --global--breakpoint--lg: $global--breakpoint--lg;
-  --global--breakpoint--xl: $global--breakpoint--xl;
-
-  // theme colors
-  --global--primary-color:        $global--primary-color;
-  --global--danger-color:         $global--danger-color;
-  --global--danger-color--dark:   $global--danger-color--dark;
-  --global--success-color:        $global--success-color;
-  --global--success-color--dark:  $global--success-color--dark;
-  --global--warning-color:        $global--warning-color;
-  --global--warning-color--dark:  $global--warning-color--dark;
-  --global--info-color:           $global--info-color;
-  --global--info-color--dark:     $global--info-color--dark;
-
-  // Links
-  --global--link--Color:                  $global--link--Color;
-  --global--link--TextDecoration:         $global--link--TextDecoration;
-  --global--link--Color--hover:           $global--link--Color--hover;
-  --global--link--TextDecoration--hover:  $global--link--TextDecoration--hover;
-
-  // Borders
-  --global--BorderWidth:         $global--BorderWidth;
-  --global--BorderWidth--md:     $global--BorderWidth--md;
-  --global--BorderColor--dark:   $global--BorderColor--dark;
-  --global--BorderColor--light:  $global--BorderColor--light;
-
-
-  // Font size
-  --global--FontSize--xxxl:     $global--FontSize--xxxl;
-  --global--FontSize--xxl:      $global--FontSize--xxl;
-  --global--FontSize--xl:       $global--FontSize--xl;
-  --global--FontSize--lg:       $global--FontSize--lg;
-  --global--FontSize--md:       $global--FontSize;
-  --global--FontSize--sm:       $global--FontSize--sm;
-
-  // line height
-  --global--LineHeight--sm:   $global--LineHeight--sm;
-  --global--LineHeight:   $global--LineHeight--sm;
-  --global--LineHeight--md:   $global--LineHeight--sm;
-
-  // Font weight
-  --global--FontWeight--light:     $global--FontWeight--light;
-  --global--FontWeight--normal:    $global--FontWeight--normal;
-  --global--FontWeight--semi-bold: $global--FontWeight--semi-bold;
-  --global--FontWeight--bold:      $global--FontWeight--bold;
 }

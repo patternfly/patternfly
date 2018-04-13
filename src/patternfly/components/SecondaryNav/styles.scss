@@ -1,5 +1,5 @@
 @import "../../patternfly-utilities";
-// pf-p-block__element--modifier--state--PropiertyCamel
+
 $pf-p-secondary-nav--BorderColor:                $global--BorderColor--light !default;
 $pf-p-secondary-nav--BorderWidth:                $global--BorderWidth !default;
 
@@ -15,20 +15,11 @@ $pf-p-secondary-nav__link--active--BorderColor:  $global--Color--active !default
 
 $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 
-
-/// A description of pf-p-secondary-nav
-/// @group components
-/// @moduleType component
-/// @author  <>
-/// @modifier .is-modifier - An example modifier description
-/// @modifier .is-another-modifier - Another example modifier description
-/// @template src/components/pf-p-secondary-nav/pf-p-secondary-nav.html
 .pf-p-secondary-nav {
   display: flex;
   // reset list
   padding-left: 0;
   list-style: none;
-  // @include SplitLayout;
   // The background creates a border under the menu
   background-image:
     linear-gradient(
@@ -54,30 +45,8 @@ $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
     padding-bottom: $pf-p-secondary-nav__link--PaddingBottom;
     color: $pf-p-secondary-nav__link--Color;
 
-    // @include hover-focus-active {
-    //   color: inherit;
-    //   text-decoration: inherit;
-    //   // The background creates a thicker border under the link
-    //   background-image:
-    //     linear-gradient(
-    //       to top,
-    //       $pf-p-secondary-nav--BorderColor ($pf-p-secondary-nav--BorderWidth *
-    //       2),
-    //       transparent ($pf-p-secondary-nav--BorderWidth * 2)
-    //     );
-    // }
-
     // Active State
     &.pf-is-active {
-      // @include hover-focus-active {
-      //   // The background creates a thicker blue border under the active link
-      //   background-image:
-      //     linear-gradient(
-      //       to top,
-      //       $pf-p-secondary-nav__link--active--Color ($pf-p-secondary-nav--BorderWidth * 2),
-      //       transparent ($pf-p-secondary-nav--BorderWidth * 2)
-      //     );
-      // }
       color: $pf-p-secondary-nav__link--active--Color;
       // The background creates a thicker blue border under the active link
       background-image:
@@ -91,10 +60,6 @@ $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 
     // Disabled State
     &.pf-is-disabled {
-      // @include hover-focus-active {
-      //   // The background removes the border when hover on disabled state
-      //   background-image: none;
-      // }
       color: $pf-p-secondary-nav__link--disabled--Color;
       cursor: not-allowed;
     }
