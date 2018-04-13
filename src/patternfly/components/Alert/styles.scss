@@ -30,7 +30,7 @@ $pf-c-alert--is-info--BorderColor:      $global--info-color--dark !default;
 
 .pf-c-alert {
   position: relative;
-  padding: $pf-c-alert--PaddingTop, $pf-c-alert--PaddingRight, $pf-c-alert--PaddingBottom, $pf-c-alert--PaddingLeft;
+  padding: $pf-c-alert--PaddingTop $pf-c-alert--PaddingRight $pf-c-alert--PaddingBottom $pf-c-alert--PaddingLeft;
   border: $pf-c-alert--BorderWidth solid transparent;
 
   &__heading {
