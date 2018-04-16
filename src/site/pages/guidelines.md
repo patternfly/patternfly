@@ -56,29 +56,29 @@ PatternFly follows a two-layer theming system where **global variables** always 
 
 The main reason to have global variables is to maintain consistency. They adhere to the following rules:
 
-- They are prefixed with the word `global` and follow the formula `--pf-global--concept--modifier--state--PropertyCamelCase`.
+- They are prefixed with the word `global` and follow the formula `--pf-pf-global--concept--modifier--state--PropertyCamelCase`.
   - a `concept` is something like a `spacer` or `main-title`;
   - a `state` is something like  `hover`, or `expanded`;
   - a `modifier` is something like  `sm`, or `lg`;
   - and a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--global--FontSize--xxl`.
+- They are concepts, never tied to an element or component. This is incorrect: `--pf-pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--xxxl`.
 
 For example a global variable setup would look like:
 
 ```scss
 :root {
-  /* --pf-global--concept--size */
-  --global--spacer--md: .5rem;
-  --global--spacer--lg: 1rem;
-  --global--spacer--xl: 2rem;
+  /* --pf-pf-global--concept--size */
+  --pf-global--spacer--lg: .5rem;
+  --pf-global--spacer--xl: 1rem;
+  --pf-global--spacer--xxl: 2rem;
 
-  /* --pf-global--concept--PropertyCamelCase */
-  --global--FontSize--xxl: 2rem;
-  --global--FontSize--xl: 1.8rem;
-  --global--FontSize--md: 1rem;
+  /* --pf-pf-global--concept--PropertyCamelCase */
+  --pf-global--FontSize--xxxl: 2rem;
+  --pf-global--FontSize--xxl: 1.8rem;
+  --pf-global--FontSize--lg: 1rem;
 
-  /* --pf-global--state--PropertyCamelCase */
-  --global--BackgroundColor--hover: #ccc;
+  /* --pf-pf-global--state--PropertyCamelCase */
+  --pf-global--BackgroundColor--hover: #ccc;
 }
 ```
 
@@ -97,9 +97,9 @@ For example:
 ```scss
 /* Component scoped variables are always defined by global variables */
 :root {
-  --pf-alert--Padding: var(--global--spacer--lg);
-  --pf-alert--hover--BackgroundColor: var(--global--BackgroundColor--hover);
-  --pf-alert__title--FontSize: va(--global--FontSize--xl);
+  --pf-alert--Padding: var(--pf-global--spacer--xl);
+  --pf-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--hover);
+  --pf-alert__title--FontSize: va(--pf-global--FontSize--xxl);
 }
 
 /* --block--PropertyCamelCase */

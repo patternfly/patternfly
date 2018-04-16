@@ -1,16 +1,16 @@
 // pf-c-block__element--modifier--state--PropiertyCamel
-$pf-c-secondary-nav--BorderColor:                $global--BorderColor--light !default;
-$pf-c-secondary-nav--BorderWidth:                $global--BorderWidth !default;
+$pf-c-secondary-nav--BorderColor:                $pf-global--BorderColor--light !default;
+$pf-c-secondary-nav--BorderWidth:                $pf-global--BorderWidth--md !default;
 
-$pf-c-secondary-nav__item--MarginLeft:           $global--spacer--lg !default;
-$pf-c-secondary-nav__item--MarginRight:          $global--spacer--lg !default;
+$pf-c-secondary-nav__item--MarginLeft:           $pf-global--spacer--xl !default;
+$pf-c-secondary-nav__item--MarginRight:          $pf-global--spacer--xl !default;
 
-$pf-c-secondary-nav__link--Color:                $global--Color--dark !default;
-$pf-c-secondary-nav__link--PaddingTop:           $global--spacer--md !default;
-$pf-c-secondary-nav__link--PaddingBottom:        $global--spacer--md !default;
+$pf-c-secondary-nav__link--Color:                $pf-global--Color--dark !default;
+$pf-c-secondary-nav__link--PaddingTop:           $pf-global--spacer--lg !default;
+$pf-c-secondary-nav__link--PaddingBottom:        $pf-global--spacer--lg !default;
 
-$pf-c-secondary-nav__link--active--Color:        $global--Color--active !default;
-$pf-c-secondary-nav__link--active--BorderColor:  $global--Color--active !default;
+$pf-c-secondary-nav__link--active--Color:        $pf-global--Color--active !default;
+$pf-c-secondary-nav__link--active--BorderColor:  $pf-global--Color--active !default;
 
 $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 

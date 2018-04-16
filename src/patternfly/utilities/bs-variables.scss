@@ -39,7 +39,7 @@ $enable-hover-media-query:            true !default;
 // Spacing
 //
 
-$spacer: $global--spacer--lg !default;
+$spacer: $pf-global--spacer--xl !default;
 
 
 // Body
@@ -47,13 +47,13 @@ $spacer: $global--spacer--lg !default;
 
 // Links
 
-$link-color:                $global--link--Color !default;
+$link-color:                $pf-global--link--Color !default;
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom:   $global--spacer--lg !default;
+$paragraph-margin-bottom:   $pf-global--spacer--xl !default;
 
 
 // Grid breakpoints
@@ -62,67 +62,67 @@ $paragraph-margin-bottom:   $global--spacer--lg !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  xs: $global--breakpoint--xs,
-  sm: $global--breakpoint--sm,
-  md: $global--breakpoint--md,
-  lg: $global--breakpoint--lg,
-  xl: $global--breakpoint--xl
+  xs: $pf-global--breakpoint--xs,
+  sm: $pf-global--breakpoint--sm,
+  md: $pf-global--breakpoint--md,
+  lg: $pf-global--breakpoint--lg,
+  xl: $pf-global--breakpoint--xl
 ) !default;
 
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-gutter-width:           $global--spacer--lg !default;
+$grid-gutter-width:           $pf-global--spacer--xl !default;
 
 
 // Components
 //
 // Define common padding and border radius sizes and more.
 
-$border-width:                $global--BorderWidth !default;
+$border-width:                $pf-global--BorderWidth--md !default;
 
 $border-radius:               0 !default;
 $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
 
 
-$component-active-color:      $global--Color--active !default;
-$component-active-bg:         $global--BackgroundColor--active !default;
+$component-active-color:      $pf-global--Color--active !default;
+$component-active-bg:         $pf-global--BackgroundColor--active !default;
 
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: $global--FontFamily--sans-serif !default;
+$font-family-sans-serif: $pf-global--FontFamily--sans-serif !default;
 
-$font-family-monospace:  $global--FontFamily--monospace !default;
+$font-family-monospace:  $pf-global--FontFamily--monospace !default;
 
-$font-size-base:   $global--FontSize--md !default;
+$font-size-base:   $pf-global--FontSize--lg !default;
 
-$font-weight-light:           $global--FontWeight--light !default;
-$font-weight-normal:          $global--FontWeight--normal !default;
-$font-weight-bold:            $global--FontWeight--bold !default;
+$font-weight-light:           $pf-global--FontWeight--light !default;
+$font-weight-normal:          $pf-global--FontWeight--normal !default;
+$font-weight-bold:            $pf-global--FontWeight--bold !default;
 
-$line-height-base:            $global--LineHeight !default;
+$line-height-base:            $pf-global--LineHeight--md !default;
 
-$line-height-base:            $global--LineHeight !default;
+$line-height-base:            $pf-global--LineHeight--md !default;
 
-$h1-font-size:                $global--FontSize--xxxl !default;
-$h2-font-size:                $global--FontSize--xxl !default;
-$h3-font-size:                $global--FontSize--xl !default;
-$h4-font-size:                $global--FontSize--lg !default;
-$h5-font-size:                $global--FontSize--md !default;
-$h6-font-size:                $global--FontSize--sm !default;
+$h1-font-size:                $pf-global--FontSize--xxxxl !default;
+$h2-font-size:                $pf-global--FontSize--xxxl !default;
+$h3-font-size:                $pf-global--FontSize--xxl !default;
+$h4-font-size:                $pf-global--FontSize--xl !default;
+$h5-font-size:                $pf-global--FontSize--lg !default;
+$h6-font-size:                $pf-global--FontSize--sm !default;
 
 
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          $global--spacer--md !default;
-$table-cell-padding-sm:       $global--spacer--sm !default;
+$table-cell-padding:          $pf-global--spacer--lg !default;
+$table-cell-padding-sm:       $pf-global--spacer--sm !default;
 
 // $table-bg:                    transparent !default;
 // $table-accent-bg:             rgba($black, .05) !default;
@@ -146,20 +146,20 @@ $table-cell-padding-sm:       $global--spacer--sm !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         $global--spacer--sm !default;
-$input-btn-padding-x:         $global--spacer !default;
+$input-btn-padding-y:         $pf-global--spacer--sm !default;
+$input-btn-padding-x:         $pf-global--spacer--md !default;
 // $input-btn-line-height:       $line-height-base !default;
 
 // $input-btn-focus-width:       .2rem !default;
 // $input-btn-focus-color:       rgba(theme-color("primary"), .25) !default;
 // $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      $global--spacer--xs !default;
-$input-btn-padding-x-sm:      $global--spacer !default;
+$input-btn-padding-y-sm:      $pf-global--spacer--xs !default;
+$input-btn-padding-x-sm:      $pf-global--spacer--md !default;
 // $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      $global--spacer !default;
-$input-btn-padding-x-lg:      $global--spacer--lg !default;
+$input-btn-padding-y-lg:      $pf-global--spacer--md !default;
+$input-btn-padding-x-lg:      $pf-global--spacer--xl !default;
 // $input-btn-line-height-lg:    $line-height-lg !default;
 
 // $input-btn-border-width:      $border-width !default;
@@ -170,7 +170,7 @@ $input-btn-padding-x-lg:      $global--spacer--lg !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // $btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $global--spacer--xxl !default;
+$btn-padding-x:               $pf-global--spacer--xxxl !default;
 // $btn-line-height:             $input-btn-line-height !default;
 
 // $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
@@ -192,7 +192,7 @@ $btn-box-shadow:              none !default;
 
 // $btn-link-disabled-color:     $gray-600 !default;
 
-$btn-block-spacing-y:         $global--spacer !default;
+$btn-block-spacing-y:         $pf-global--spacer--md !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           10em !default;
@@ -217,7 +217,7 @@ $btn-border-radius-sm:        $btn-border-radius !default;
 // $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
 // $input-bg:                              $white !default;
-$input-disabled-bg:                    $global--BackgroundColor--disabled !default;
+$input-disabled-bg:                    $pf-global--BackgroundColor--disabled !default;
 
 // $input-color:                           $gray-700 !default;
 // $input-border-color:                    $gray-400 !default;
@@ -249,7 +249,7 @@ $input-disabled-bg:                    $global--BackgroundColor--disabled !defau
 
 // $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$form-text-margin-top:                  $global--spacer--sm !default;
+$form-text-margin-top:                  $pf-global--spacer--sm !default;
 
 // $form-check-input-gutter:               1.25rem !default;
 // $form-check-input-margin-y:             .3rem !default;
@@ -440,12 +440,12 @@ $nav-pills-border-radius:           10em !default;
 //
 // // Pagination
 //
-$pagination-padding-y:              $global--spacer !default;
-$pagination-padding-x:              $global--spacer--md !default;
-$pagination-padding-y-sm:           $global--spacer--sm !default;
-$pagination-padding-x-sm:           $global--spacer !default;
-$pagination-padding-y-lg:           $global--spacer--md !default;
-$pagination-padding-x-lg:           $global--spacer--xl !default;
+$pagination-padding-y:              $pf-global--spacer--md !default;
+$pagination-padding-x:              $pf-global--spacer--lg !default;
+$pagination-padding-y-sm:           $pf-global--spacer--sm !default;
+$pagination-padding-x-sm:           $pf-global--spacer--md !default;
+$pagination-padding-y-lg:           $pf-global--spacer--lg !default;
+$pagination-padding-x-lg:           $pf-global--spacer--xxl !default;
 // $pagination-line-height:            1.25 !default;
 //
 // $pagination-color:                  $link-color !default;

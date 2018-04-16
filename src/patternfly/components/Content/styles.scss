@@ -1,84 +1,84 @@
 @import "../../patternfly-utilities";
 
 // Body
-$pf-c-content--MarginBottom: $global--spacer !default;
-$pf-c-content--LineHeight: $global--LineHeight !default;
-$pf-c-content--FontSize: $global--FontSize !default;
-$pf-c-content--FontWeight: $global--FontWeight--normal !default;
+$pf-c-content--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--LineHeight: $pf-global--LineHeight--md !default;
+$pf-c-content--FontSize: $pf-global--FontSize--md !default;
+$pf-c-content--FontWeight: $pf-global--FontWeight--normal !default;
 
 // h1 - Main title
-$pf-c-content--h1--MarginTop: $global--spacer--md !default;
-$pf-c-content--h1--MarginBottom: $global--spacer !default;
-$pf-c-content--h1--LineHeight: $global--LineHeight--sm !default;
-$pf-c-content--h1--FontSize: $global--FontSize--xxl !default;
-$pf-c-content--h1--FontWeight: $global--FontWeight--normal !default;
+$pf-c-content--h1--MarginTop: $pf-global--spacer--lg !default;
+$pf-c-content--h1--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--h1--LineHeight: $pf-global--LineHeight--sm !default;
+$pf-c-content--h1--FontSize: $pf-global--FontSize--xxxl !default;
+$pf-c-content--h1--FontWeight: $pf-global--FontWeight--normal !default;
 
 // h2 - Secondary title
-$pf-c-content--h2--MarginTop: $global--spacer--md !default;
-$pf-c-content--h2--MarginBottom: $global--spacer !default;
-$pf-c-content--h2--LineHeight: $global--LineHeight--sm !default;
-$pf-c-content--h2--FontSize: $global--FontSize--xl !default;
-$pf-c-content--h2--FontWeight: $global--FontWeight--normal !default;
+$pf-c-content--h2--MarginTop: $pf-global--spacer--lg !default;
+$pf-c-content--h2--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--h2--LineHeight: $pf-global--LineHeight--sm !default;
+$pf-c-content--h2--FontSize: $pf-global--FontSize--xxl !default;
+$pf-c-content--h2--FontWeight: $pf-global--FontWeight--normal !default;
 
 // h3 - Sub-title
-$pf-c-content--h3--MarginTop: $global--spacer--md !default;
-$pf-c-content--h3--MarginBottom: $global--spacer !default;
-$pf-c-content--h3--LineHeight: $global--LineHeight !default;
-$pf-c-content--h3--FontSize: $global--FontSize--lg !default;
-$pf-c-content--h3--FontWeight: $global--FontWeight--normal !default;
+$pf-c-content--h3--MarginTop: $pf-global--spacer--lg !default;
+$pf-c-content--h3--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--h3--LineHeight: $pf-global--LineHeight--md !default;
+$pf-c-content--h3--FontSize: $pf-global--FontSize--xl !default;
+$pf-c-content--h3--FontWeight: $pf-global--FontWeight--normal !default;
 
 // h4
-$pf-c-content--h4--MarginTop: $global--spacer--md !default;
-$pf-c-content--h4--MarginBottom: $global--spacer !default;
-$pf-c-content--h4--LineHeight: $global--LineHeight !default;
-$pf-c-content--h4--FontSize: $global--FontSize--md !default;
-$pf-c-content--h4--FontWeight: $global--FontWeight--semi-bold !default;
+$pf-c-content--h4--MarginTop: $pf-global--spacer--lg !default;
+$pf-c-content--h4--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--h4--LineHeight: $pf-global--LineHeight--md !default;
+$pf-c-content--h4--FontSize: $pf-global--FontSize--lg !default;
+$pf-c-content--h4--FontWeight: $pf-global--FontWeight--semi-bold !default;
 
 // h5
-$pf-c-content--h5--MarginTop: $global--spacer--md !default;
-$pf-c-content--h5--MarginBottom: $global--spacer !default;
-$pf-c-content--h5--LineHeight: $global--LineHeight--md !default;
-$pf-c-content--h5--FontSize: $global--FontSize !default;
-$pf-c-content--h5--FontWeight: $global--FontWeight--semi-bold !default;
+$pf-c-content--h5--MarginTop: $pf-global--spacer--lg !default;
+$pf-c-content--h5--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--h5--LineHeight: $pf-global--LineHeight--lg !default;
+$pf-c-content--h5--FontSize: $pf-global--FontSize--md !default;
+$pf-c-content--h5--FontWeight: $pf-global--FontWeight--semi-bold !default;
 
 // h6
-$pf-c-content--h6--MarginTop: $global--spacer--md !default;
-$pf-c-content--h6--MarginBottom: $global--spacer--xs !default;
-$pf-c-content--h6--LineHeight: $global--LineHeight--md !default;
-$pf-c-content--h6--FontSize: $global--FontSize !default;
-$pf-c-content--h6--FontWeight: $global--FontWeight--semi-bold !default;
+$pf-c-content--h6--MarginTop: $pf-global--spacer--lg !default;
+$pf-c-content--h6--MarginBottom: $pf-global--spacer--xs !default;
+$pf-c-content--h6--LineHeight: $pf-global--LineHeight--lg !default;
+$pf-c-content--h6--FontSize: $pf-global--FontSize--md !default;
+$pf-c-content--h6--FontWeight: $pf-global--FontWeight--semi-bold !default;
 
 // Small text
-$pf-c-content--small--MarginBottom: $global--spacer !default;
-$pf-c-content--small--LineHeight: $global--LineHeight--md !default;
-$pf-c-content--small--FontSize: $global--FontSize--sm !default;
-$pf-c-content--small--Color: $global--Color--dark-alt !default;
+$pf-c-content--small--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-content--small--LineHeight: $pf-global--LineHeight--lg !default;
+$pf-c-content--small--FontSize: $pf-global--FontSize--sm !default;
+$pf-c-content--small--Color: $pf-global--Color--dark-alt !default;
 
 // Links
-$pf-c-content--a--Color: $global--link--Color !default;
-$pf-c-content--a--TextDecoration: $global--link--TextDecoration !default;
-$pf-c-content--a--hover--Color: $global--link--Color--hover !default;
-$pf-c-content--a--hover--TextDecoration: $global--link--TextDecoration--hover !default;
+$pf-c-content--a--Color: $pf-global--link--Color !default;
+$pf-c-content--a--TextDecoration: $pf-global--link--TextDecoration !default;
+$pf-c-content--a--hover--Color: $pf-global--link--Color--hover !default;
+$pf-c-content--a--hover--TextDecoration: $pf-global--link--TextDecoration--hover !default;
 
 // Blockquote
-$pf-c-content--blockquote--Padding: $global--spacer !default;
-$pf-c-content--blockquote--FontWeight: $global--FontWeight--light !default;
-$pf-c-content--blockquote--Color: $global--Color--dark-alt !default;
-$pf-c-content--blockquote--BorderLeftColor: $global--BorderColor--light !default;
-$pf-c-content--blockquote--BorderLeftWidth: $global--BorderWidth--md !default;
+$pf-c-content--blockquote--Padding: $pf-global--spacer--md !default;
+$pf-c-content--blockquote--FontWeight: $pf-global--FontWeight--light !default;
+$pf-c-content--blockquote--Color: $pf-global--Color--dark-alt !default;
+$pf-c-content--blockquote--BorderLeftColor: $pf-global--BorderColor--light !default;
+$pf-c-content--blockquote--BorderLeftWidth: $pf-global--BorderWidth--lg !default;
 
 // Lists
-$pf-c-content--ul--PaddingLeft: $global--spacer--md !default;
-$pf-c-content--ol--MarginTop: $global--spacer !default;
-$pf-c-content--ol--MarginLeft: $global--spacer--md !default;
-$pf-c-content--ul--MarginTop: $global--spacer !default;
-$pf-c-content--ul--MarginLeft: $global--spacer--md !default;
-$pf-c-content--ul--nested--MarginTop: $global--spacer--sm !default;
-$pf-c-content--ul--nested--MarginLeft: $global--spacer--sm !default;
+$pf-c-content--ul--PaddingLeft: $pf-global--spacer--lg !default;
+$pf-c-content--ol--MarginTop: $pf-global--spacer--md !default;
+$pf-c-content--ol--MarginLeft: $pf-global--spacer--lg !default;
+$pf-c-content--ul--MarginTop: $pf-global--spacer--md !default;
+$pf-c-content--ul--MarginLeft: $pf-global--spacer--lg !default;
+$pf-c-content--ul--nested--MarginTop: $pf-global--spacer--sm !default;
+$pf-c-content--ul--nested--MarginLeft: $pf-global--spacer--sm !default;
 $pf-c-content--ul--ListStyle: $global-ListStyle !default;
-$pf-c-content--li--MarginTop: $global--spacer--sm !default;
-$pf-c-content--dd--MarginBottom: $global--spacer--sm !default;
-$pf-c-content--dd--MarginLeft: $global--spacer--md !default;
+$pf-c-content--li--MarginTop: $pf-global--spacer--sm !default;
+$pf-c-content--dd--MarginBottom: $pf-global--spacer--sm !default;
+$pf-c-content--dd--MarginLeft: $pf-global--spacer--lg !default;
 
 
 .pf-c-content {

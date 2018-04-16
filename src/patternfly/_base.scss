@@ -5,10 +5,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: $global--FontFamily--sans-serif;
-  font-size: $global--FontSize;
-  font-weight: $global--FontWeight--normal;
-  line-height: $global--LineHeight;
+  font-family: $pf-global--FontFamily--sans-serif;
+  font-size: $pf-global--FontSize--md;
+  font-weight: $pf-global--FontWeight--normal;
+  line-height: $pf-global--LineHeight--md;
   background-color: transparent;
   text-rendering: optimizeLegibility;
 }
@@ -20,7 +20,7 @@ html {
   font-size: unset;
 }
 
-@if $global--enable-reset {
+@if $pf-global--enable-reset {
   // Reset
   // Based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
   // stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
@@ -59,7 +59,7 @@ html {
   h5,
   h6 {
     font-size: 100%;
-    font-weight: $global--FontWeight--normal;
+    font-weight: $pf-global--FontWeight--normal;
   }
 
   ul {
@@ -113,24 +113,24 @@ html {
 
 
   body {
-    font-family: $global--FontFamily--sans-serif;
-    font-size: $global--FontSize;
-    font-weight: $global--FontWeight--normal;
-    line-height: $global--LineHeight;
-    color: $global--Color--dark;
+    font-family: $pf-global--FontFamily--sans-serif;
+    font-size: $pf-global--FontSize--md;
+    font-weight: $pf-global--FontWeight--normal;
+    line-height: $pf-global--LineHeight--md;
+    color: $pf-global--Color--dark;
     text-align: left;
-    background-color: $global--BackgroundColor--light;
+    background-color: $pf-global--BackgroundColor--light;
   }
 
   // Links styles
 
   a {
-    color: $global--link--Color;
-    text-decoration: $global--link--TextDecoration;
+    color: $pf-global--link--Color;
+    text-decoration: $pf-global--link--TextDecoration;
 
     &:hover {
-      color: $global--link--Color--hover;
-      text-decoration: $global--link--TextDecoration--hover;
+      color: $pf-global--link--Color--hover;
+      text-decoration: $pf-global--link--TextDecoration--hover;
     }
   }
 
