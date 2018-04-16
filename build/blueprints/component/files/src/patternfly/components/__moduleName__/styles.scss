@@ -6,7 +6,7 @@
 // The value of component scoped variables is always defined by a global variable:
 :root {
   // Example block variable
-  --{{bemName}}--Color: var(--pf-pf-global--dark--Color);
+  --{{bemName}}--Color: var(--pf-global--dark--Color);
 
   // Example element variable
   --{{bemName}}_title--FontSize: var($pf-global--FontSize--xxl);

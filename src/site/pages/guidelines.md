@@ -56,28 +56,28 @@ PatternFly follows a two-layer theming system where **global variables** always 
 
 The main reason to have global variables is to maintain consistency. They adhere to the following rules:
 
-- They are prefixed with the word `global` and follow the formula `--pf-pf-global--concept--modifier--state--PropertyCamelCase`.
+- They are prefixed with the word `global` and follow the formula `--pf-global--concept--modifier--state--PropertyCamelCase`.
   - a `concept` is something like a `spacer` or `main-title`;
   - a `state` is something like  `hover`, or `expanded`;
   - a `modifier` is something like  `sm`, or `lg`;
   - and a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-- They are concepts, never tied to an element or component. This is incorrect: `--pf-pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--xxxl`.
+- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--xxxl`.
 
 For example a global variable setup would look like:
 
 ```scss
 :root {
-  /* --pf-pf-global--concept--size */
+  /* --pf-global--concept--size */
   --pf-global--spacer--lg: .5rem;
   --pf-global--spacer--xl: 1rem;
   --pf-global--spacer--xxl: 2rem;
 
-  /* --pf-pf-global--concept--PropertyCamelCase */
+  /* --pf-global--concept--PropertyCamelCase */
   --pf-global--FontSize--xxxl: 2rem;
   --pf-global--FontSize--xxl: 1.8rem;
   --pf-global--FontSize--lg: 1rem;
 
-  /* --pf-pf-global--state--PropertyCamelCase */
+  /* --pf-global--state--PropertyCamelCase */
   --pf-global--BackgroundColor--hover: #ccc;
 }
 ```
