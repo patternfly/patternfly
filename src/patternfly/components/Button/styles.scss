@@ -1,61 +1,61 @@
 @import "../../patternfly-utilities";
 
-$pf-c-button--PaddingTop: $global--spacer--sm !default;
-$pf-c-button--PaddingRight: $global--spacer--md !default;
-$pf-c-button--PaddingBottom: $global--spacer--sm !default;
-$pf-c-button--PaddingLeft: $global--spacer--md !default;
-$pf-c-button--LineHeight: $global--LineHeight--sm !default;
-$pf-c-button--FontWeight: $global--FontWeight--normal !default;
-$pf-c-button--BorderWidth: $global--BorderWidth !default;
-$pf-c-button--BorderColor: $global--Color--dark !default;
-$pf-c-button--FontSize: $global--FontSize !default;
+$pf-c-button--PaddingTop: $pf-global--spacer--xs !default;
+$pf-c-button--PaddingRight: $pf-global--spacer--lg !default;
+$pf-c-button--PaddingBottom: $pf-global--spacer--xs !default;
+$pf-c-button--PaddingLeft: $pf-global--spacer--lg !default;
+$pf-c-button--LineHeight: $pf-global--LineHeight--md !default;
+$pf-c-button--FontWeight: $pf-global--FontWeight--normal !default;
+$pf-c-button--BorderWidth: $pf-global--BorderWidth--md !default;
+$pf-c-button--BorderColor: $pf-global--Color--dark !default;
+$pf-c-button--FontSize: $pf-global--FontSize--md !default;
 
-$pf-c-button--hover--Color: $global--Color--light !default;
-$pf-c-button--hover--BackgroundColor: $global--Color--dark !default;
+$pf-c-button--hover--Color: $pf-global--Color--light !default;
+$pf-c-button--hover--BackgroundColor: $pf-global--Color--dark !default;
 
 // Primary btn
-$pf-c-button--is-primary--BackgroundColor: $global--primary-color !default;
-$pf-c-button--is-primary--BorderColor: $global--primary-color !default;
-$pf-c-button--is-primary--Color: $global--Color--light !default;
-$pf-c-button--is-primary--hover--BackgroundColor: $global--primary-color--dark !default;
-$pf-c-button--is-primary--hover--BorderColor: $global--primary-color--dark !default;
-$pf-c-button--is-primary--hover--Color: $global--Color--light !default;
+$pf-c-button--is-primary--BackgroundColor: $pf-global--primary-color !default;
+$pf-c-button--is-primary--BorderColor: $pf-global--primary-color !default;
+$pf-c-button--is-primary--Color: $pf-global--Color--light !default;
+$pf-c-button--is-primary--hover--BackgroundColor: $pf-global--primary-color--dark !default;
+$pf-c-button--is-primary--hover--BorderColor: $pf-global--primary-color--dark !default;
+$pf-c-button--is-primary--hover--Color: $pf-global--Color--light !default;
 
 // Secondary btn
 $pf-c-button--is-secondary--BackgroundColor: transparent !default;
-$pf-c-button--is-secondary--BorderColor: $global--primary-color !default;
-$pf-c-button--is-secondary--Color: $global--primary-color !default;
-$pf-c-button--is-secondary--hover--BackgroundColor: $global--primary-color !default;
-$pf-c-button--is-secondary--hover--BorderColor: $global--primary-color !default;
-$pf-c-button--is-secondary--hover--Color: $global--Color--light !default;
+$pf-c-button--is-secondary--BorderColor: $pf-global--primary-color !default;
+$pf-c-button--is-secondary--Color: $pf-global--primary-color !default;
+$pf-c-button--is-secondary--hover--BackgroundColor: $pf-global--primary-color !default;
+$pf-c-button--is-secondary--hover--BorderColor: $pf-global--primary-color !default;
+$pf-c-button--is-secondary--hover--Color: $pf-global--Color--light !default;
 
 // Secondary Inverse btn
 $pf-c-button--is-secondary-alt--BackgroundColor: transparent !default;
-$pf-c-button--is-secondary-alt--BorderColor: $global--Color--dark-alt !default;
-$pf-c-button--is-secondary-alt--Color: $global--Color--dark-alt !default;
-$pf-c-button--is-secondary-alt--hover--BackgroundColor: $global--primary-color !default;
-$pf-c-button--is-secondary-alt--hover--BorderColor: $global--primary-color !default;
-$pf-c-button--is-secondary-alt--hover--Color: $global--Color--light !default;
+$pf-c-button--is-secondary-alt--BorderColor: $pf-global--Color--dark-alt !default;
+$pf-c-button--is-secondary-alt--Color: $pf-global--Color--dark-alt !default;
+$pf-c-button--is-secondary-alt--hover--BackgroundColor: $pf-global--primary-color !default;
+$pf-c-button--is-secondary-alt--hover--BorderColor: $pf-global--primary-color !default;
+$pf-c-button--is-secondary-alt--hover--Color: $pf-global--Color--light !default;
 
 // Tertiary btn
 $pf-c-button--is-tertiary--BackgroundColor: transparent !default;
-$pf-c-button--is-tertiary--BorderColor: $global--Color--dark !default;
-$pf-c-button--is-tertiary--Color: $global--Color--dark !default;
-$pf-c-button--is-tertiary--hover--BackgroundColor: $global--Color--dark !default;
-$pf-c-button--is-tertiary--hover--BorderColor: $global--Color--dark !default;
-$pf-c-button--is-tertiary--hover--Color: $global--Color--light !default;
+$pf-c-button--is-tertiary--BorderColor: $pf-global--Color--dark !default;
+$pf-c-button--is-tertiary--Color: $pf-global--Color--dark !default;
+$pf-c-button--is-tertiary--hover--BackgroundColor: $pf-global--Color--dark !default;
+$pf-c-button--is-tertiary--hover--BorderColor: $pf-global--Color--dark !default;
+$pf-c-button--is-tertiary--hover--Color: $pf-global--Color--light !default;
 
 // danger btn
-$pf-c-button--is-danger--BackgroundColor: $global--danger-color !default;
-$pf-c-button--is-danger--BorderColor: $global--danger-color !default;
-$pf-c-button--is-danger--Color: $global--Color--light !default;
-$pf-c-button--is-danger--hover--BackgroundColor: $global--danger-color--dark !default;
-$pf-c-button--is-danger--hover--BorderColor: $global--danger-color--dark !default;
-$pf-c-button--is-danger--hover--Color: $global--Color--light !default;
+$pf-c-button--is-danger--BackgroundColor: $pf-global--danger-color !default;
+$pf-c-button--is-danger--BorderColor: $pf-global--danger-color !default;
+$pf-c-button--is-danger--Color: $pf-global--Color--light !default;
+$pf-c-button--is-danger--hover--BackgroundColor: $pf-global--danger-color--dark !default;
+$pf-c-button--is-danger--hover--BorderColor: $pf-global--danger-color--dark !default;
+$pf-c-button--is-danger--hover--Color: $pf-global--Color--light !default;
 
 //Sizes
-$pf-c-button--small--FontSize: $global--FontSize--sm !default;
-$pf-c-button--large--FontSize: $global--FontSize--lg !default;
+$pf-c-button--small--FontSize: $pf-global--FontSize--sm !default;
+$pf-c-button--large--FontSize: $pf-global--FontSize--xl !default;
 
 .pf-c-button {
   display: inline-block;

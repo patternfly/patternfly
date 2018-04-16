@@ -7,11 +7,11 @@
   @return $num / ($num * 0 + 1);
 }
 
-@function pf-size-prem($pxval, $base: $global--space-size-root) {
+@function pf-size-prem($pxval, $base: $pf-global--space-size-root) {
   @return pf-strip-unit($pxval) / $base * 1rem;
 }
 
-@function pf-font-prem($pxval, $base: $global--font-size-root) {
+@function pf-font-prem($pxval, $base: $pf-global--font-size-root) {
   @return pf-strip-unit($pxval) / $base * 1rem;
 }
 
