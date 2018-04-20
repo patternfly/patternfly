@@ -95,6 +95,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           __dirname,
           `./src/site/templates/${node.fields.type}.js`
         ),
+        layout: 'index',
         context: {
           pagePath: node.fields.path,
           type: node.fields.type,
@@ -143,6 +144,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
     page.context.slug = '';
     page.context.name = '';
     page.context.title = '';
+    page.layout = 'index';
 
     if (isCategoryPage) {
       page.context.type = 'category';

@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path');
 
-const PROJECT_ROOT = path.resolve(__dirname)
+const PROJECT_ROOT = path.resolve(__dirname);
 
 const plugins = [
   'gatsby-plugin-react-helmet',
@@ -13,41 +13,48 @@ const plugins = [
     options: {
       postCssPlugins: [],
       precision: 5
-    },
-  },
-  {
-    resolve: `gatsby-plugin-page-creator`,
-    options: {
-      path: `${PROJECT_ROOT}/src/patternfly`,
     }
   },
   {
     resolve: `gatsby-plugin-page-creator`,
     options: {
-        path: `${PROJECT_ROOT}/src/site/pages`,
-        name: 'pages'
+      path: `${PROJECT_ROOT}/src/patternfly`
+    }
+  },
+  {
+    resolve: `gatsby-plugin-page-creator`,
+    options: {
+      path: `${PROJECT_ROOT}/src/site/pages`,
+      name: 'pages'
     }
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
       path: `${PROJECT_ROOT}/src/patternfly`,
-      name: 'patternfly',
-    },
+      name: 'patternfly'
+    }
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      path: `${PROJECT_ROOT}/src/site/pages`,
+      name: 'pages'
+    }
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
       path: `${PROJECT_ROOT}/src/site/_site`,
-      name: 'site-components',
-    },
+      name: 'site-components'
+    }
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
       path: `${PROJECT_ROOT}/src/site/img`,
-      name: 'images',
-    },
+      name: 'images'
+    }
   },
   {
     resolve: 'gatsby-transformer-remark',
@@ -59,21 +66,21 @@ const plugins = [
           options: {
             classPrefix: 'prism-language-'
           }
-        },
-      ],
-    },
+        }
+      ]
+    }
   },
   {
     resolve: 'gatsby-remark-embed-snippet',
     options: {
-      directory: `${__dirname}/src/patternfly`,
-    },
+      directory: `${__dirname}/src/patternfly`
+    }
   }
-]
+];
 
 module.exports = {
   siteMetadata: {
-    title: 'PF Next',
+    title: 'PF Next'
   },
   plugins
-}
+};
