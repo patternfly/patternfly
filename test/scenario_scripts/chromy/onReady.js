@@ -1,3 +1,1 @@
-module.exports = function(engine, scenario, vp) {
-
-}
+module.exports = function onReady(engine, scenario, vp) {};

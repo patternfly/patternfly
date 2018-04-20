@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import Navigation from '@siteComponents/Navigation';
+import Prisim from 'prismjs'; // eslint-disable-line no-unused-vars
 
 import 'prismjs/themes/prism-coy.css';
 import '../../patternfly/patternfly.scss';
 import '../workspace.scss';
 
 export default ({ children, data }) => {
-  let allPages = data.allSitePage.edges.reduce((accum, edge) => {
-    let type = edge.node.context.type || 'page';
+  const allPages = data.allSitePage.edges.reduce((accum, edge) => {
+    const type = edge.node.context.type || 'page';
 
     if (!accum[type]) {
       accum[type] = [];
@@ -45,7 +45,7 @@ export default ({ children, data }) => {
         <h1>
           <Link to="/">PF Next</Link>
         </h1>
-        <Navigation links={allPages.page} isHorizontal={true} />
+        <Navigation links={allPages.page} isHorizontal />
       </header>
       <main className="layout__main">
         <div className="layout__sidebar">

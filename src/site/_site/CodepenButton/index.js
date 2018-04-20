@@ -1,6 +1,6 @@
-import React from 'react'
-import editIcon from './edit.svg'
-import './styles.scss'
+import React from 'react';
+import editIcon from './edit.svg';
+import './styles.scss';
 
 export default ({
   title = 'PatternFly Next Pen',
@@ -9,26 +9,34 @@ export default ({
   html = '',
   css = '',
   js = '',
-  css_external = 'https://pf-next.com/styles.css',
-  js_external = '',
+  cssExternal = 'https://pf-next.com/styles.css',
+  jsExternal = '',
   height = 40,
   width = 40
 }) => {
-  let data = JSON.stringify({
+  const data = JSON.stringify({
     title,
     description,
     tags,
     html,
     css,
     js,
-    css_external,
-    js_external
-  }).replace(/"/g, '&quot;').replace(/'/g, '&apos;')
+    css_external: cssExternal,
+    js_external: jsExternal
+  })
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
 
   return (
-    <form action='https://codepen.io/pen/define' method='POST' target='_blank'>
-      <input type='hidden' name='data' value={data} />
-      <input type="image" src={editIcon} alt="Edit on CodePen" width={width} height={height} />
+    <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+      <input type="hidden" name="data" value={data} />
+      <input
+        type="image"
+        src={editIcon}
+        alt="Edit on CodePen"
+        width={width}
+        height={height}
+      />
     </form>
-  )
-}
+  );
+};

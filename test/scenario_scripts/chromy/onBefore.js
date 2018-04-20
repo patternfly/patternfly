@@ -1,3 +1,1 @@
-module.exports = function(engine, scenario, vp) {
-
-}
+module.exports = function onBefore(engine, scenario, vp) {};

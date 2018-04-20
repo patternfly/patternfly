@@ -1,10 +1,4 @@
-import React from 'react'
-import './styles.scss'
+import React from 'react';
+import './styles.scss';
 
-export default () => {
-  return (
-    <div className="{{bemName}}">
-
-    </div>
-  )
-}
+export default () => <div className="{{bemName}}" />;
