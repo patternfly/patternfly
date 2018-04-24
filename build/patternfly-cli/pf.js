@@ -1,40 +1,42 @@
 #!/usr/bin/env node
-const arguments = require('minimist')(process.argv)
-const inflection = require('inflection')
-const path = require('path')
-const program = require('commander')
-const scaffold = require('scaffold-helper')
+/* eslint-disable no-console */
+const args = require('minimist')(process.argv);
+const inflection = require('inflection');
+const path = require('path');
+const program = require('commander');
+const scaffold = require('scaffold-helper');
 
-const PROJECT_DIR = path.resolve(__dirname, '../../')
-const BLUEPRINTS_DIR = path.resolve(__dirname, '../blueprints')
+const PROJECT_DIR = path.resolve(__dirname, '../../');
+const BLUEPRINTS_DIR = path.resolve(__dirname, '../blueprints');
 
-let blueprintArgs = Object.keys(arguments).reduce((accum, fieldName) => {
+const blueprintArgs = Object.keys(args).reduce((accum, fieldName) => {
   if (fieldName !== '_') {
-    accum[fieldName] = arguments[fieldName]
+    accum[fieldName] = args[fieldName];
   }
-  return accum
-}, {})
+  return accum;
+}, {});
 
-program
-  .version('1.0.0')
+program.version('1.0.0');
 
 program
   .command('generate <type> <name>')
   .alias('g')
   .description('Generates a blueprint and passes arguments')
-  .action(function(type, name, options){
-    let blueprintDir = path.join(`${BLUEPRINTS_DIR}/${type}`)
-    let sourceType = type
-    let source = path.join(`${BLUEPRINTS_DIR}/${type}/files`)
-    let destination = PROJECT_DIR
-    let prefix = `pf-${type.charAt(0)}-`
+  .action((type, name, options) => {
+    const blueprintDir = path.join(`${BLUEPRINTS_DIR}/${type}`);
+    const sourceType = type;
+    const source = path.join(`${BLUEPRINTS_DIR}/${type}/files`);
+    const destination = PROJECT_DIR;
+    const prefix = `pf-${type.charAt(0)}-`;
 
-    name = name.replace(/^pf-(c|p)-/g,'')
+    name = name.replace(/^pf-(c|p)-/g, '');
 
-    let bemEntity = inflection.transform(name, ['underscore','titleize', 'dasherize']).toLowerCase()
-    let moduleName = inflection.titleize(name).replace(/-/g,'')
+    const bemEntity = inflection
+      .transform(name, ['underscore', 'titleize', 'dasherize'])
+      .toLowerCase();
+    const moduleName = inflection.titleize(name).replace(/-/g, '');
 
-    let blueprintData = {
+    const blueprintData = {
       blueprintDir,
       source,
       destination,
@@ -52,27 +54,28 @@ program
       nameTableized: inflection.tableize(name),
       nameCapitalized: inflection.capitalize(name),
       bemName: `${prefix}${bemEntity}`,
-      moduleName: moduleName,
+      moduleName,
       partialBlock: '{{> @partial-block}}',
-      moduleHbOpen: '{{#> ' + moduleName + '}}',
-      moduleHbClose: '{{/' + moduleName + '}}',
+      moduleHbOpen: `{{#> ${moduleName}}}`,
+      moduleHbClose: `{{/${moduleName}}}`,
       args: blueprintArgs
-    }
+    };
 
-    scaffold({
-      source,
-      destination,
-      onlyFiles: false,
-      exclude: []
-    }, blueprintData)
+    scaffold(
+      {
+        source,
+        destination,
+        onlyFiles: false,
+        exclude: []
+      },
+      blueprintData
+    );
 
-    console.log(`Created ${type}: ${name}`)
-  })
+    console.log(`Created ${type}: ${name}`);
+  });
 
-program
-  .command('*')
-  .action(function(env){
-    console.log(`Unknown command`)
-  })
+program.command('*').action(env => {
+  console.log(`Unknown command`);
+});
 
-program.parse(arguments._)
+program.parse(args._);

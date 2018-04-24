@@ -21,7 +21,7 @@ exports.createPagesStatefully = async (
   doneCb
 ) => {
   const { createPage, deletePage } = boundActionCreators;
-  const program = store.getState().program;
+  const { program } = store.getState();
   const exts = program.extensions.map(e => `${e.slice(1)}`).join(`,`);
 
   if (!(pluginOptions && pluginOptions.path)) {

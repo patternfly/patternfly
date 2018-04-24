@@ -1,11 +1,7 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Script from 'react-load-script'
+import React from 'react';
 
-export default () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  )
-}
+export default () => (
+  <div>
+    <h1>Home</h1>
+  </div>
+);

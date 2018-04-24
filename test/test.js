@@ -1,10 +1,16 @@
-const backstop = require('backstopjs')
-const helpers = require('./lib/helpers')
+/* eslint-disable no-console */
+const backstop = require('backstopjs');
+const helpers = require('./lib/helpers');
 
-helpers.getConfig()
-  .then((config) => {
+helpers
+  .getConfig()
+  .then(config => {
     backstop('test', { config })
-      .then(() => { console.log('tests completed') })
-      .catch((err) => { return err })
+      .then(() => {
+        console.log('tests completed');
+      })
+      .catch(err => err);
   })
-  .catch((err) => { console.log(err) })
+  .catch(err => {
+    console.log(err);
+  });

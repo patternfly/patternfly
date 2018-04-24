@@ -1,23 +1,23 @@
-import React from 'react'
+import React from 'react';
 
 export default ({ data }) => {
-  let html = ''
-  let fields
+  let html = '';
 
   if (data && data.markdownRemark) {
-    html = data.markdownRemark.html
-    fields = data.markdownRemark.fields
+    ({ html } = data.markdownRemark);
   } else {
-    html = 'No content found'
+    html = 'No content found';
   }
 
   return (
     <div className="page-template">
-      <div className="page-template__content" dangerouslySetInnerHTML={{ __html: html }} />
+      <div
+        className="page-template__content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
-  )
-}
-
+  );
+};
 
 export const GetPageContent = graphql`
   query GetPageContentByPath($pagePath: String!) {
@@ -30,4 +30,4 @@ export const GetPageContent = graphql`
       }
     }
   }
-`
+`;
