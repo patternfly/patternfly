@@ -21,25 +21,20 @@ $pf-global--space-size-root: 16 !default; // for spaces
 
 
 // Colors
-
 // Background color
-$pf-global--BackgroundColor--light:      $pf-color-white !default;
-$pf-global--BackgroundColor--light-alt:  $pf-color-black-200 !default;
-// ADD one more light background
-$pf-global--BackgroundColor--light-alt:  $pf-color-black-200 !default;
+$pf-global--BackgroundColor--light-100:     $pf-color-white !default;
+$pf-global--BackgroundColor--light-200:     $pf-color-black-100 !default;
+$pf-global--BackgroundColor--light-300:     $pf-color-black-200 !default;
 
-
-$pf-global--BackgroundColor--dark:       $pf-color-black-900 !default;
-$pf-global--BackgroundColor--dark-alt:   $pf-color-black-800 !default;
-
+$pf-global--BackgroundColor--dark-100:      $pf-color-black-900 !default;
+$pf-global--BackgroundColor--dark-200:    $pf-color-black-800 !default;
 
 // Text color
-$pf-global--Color--dark:       $pf-color-black-900 !default;
-$pf-global--Color--dark-alt:    $pf-color-black-600 !default;
+$pf-global--Color--light-100:      $pf-color-white !default;
+$pf-global--Color--light-200:      $pf-color-black-200 !default;
 
-$pf-global--Color--light:        $pf-color-white !default;
-$pf-global--Color--light-alt:   $pf-color-black-200 !default;
-
+$pf-global--Color--dark-100:      $pf-color-black-900 !default;
+$pf-global--Color--dark-200:    $pf-color-black-600 !default;
 
 // States color
 $pf-global--Color--hover:                  $pf-color-red-100 !default;
