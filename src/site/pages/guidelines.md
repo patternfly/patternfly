@@ -56,37 +56,36 @@ PatternFly follows a two-layer theming system where **global variables** always 
 
 The main reason to have global variables is to maintain consistency. They adhere to the following rules:
 
-- They are prefixed with the word `global` and follow the formula `--pf-global--concept--modifier--state--PropertyCamelCase`.
+- They are prefixed with the word `global` and follow the formula `$pf-global--concept--PropertyCamelCase--modifier--state`.
   - a `concept` is something like a `spacer` or `main-title`;
-  - a `state` is something like  `hover`, or `expanded`;
+  - a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
   - a `modifier` is something like  `sm`, or `lg`;
-  - and a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--xxxl`.
+  - and a `state` is something like  `hover`, or `expanded`;
+- They are concepts, never tied to an element or component. This is incorrect: `$pf-global--h1--FontSize`, this is correct: `$pf-global--FontSize--xxxl`.
 
 For example a global variable setup would look like:
 
 ```scss
-:root {
-  /* --pf-global--concept--size */
-  --pf-global--spacer--lg: .5rem;
-  --pf-global--spacer--xl: 1rem;
-  --pf-global--spacer--xxl: 2rem;
 
-  /* --pf-global--concept--PropertyCamelCase */
-  --pf-global--FontSize--xxxl: 2rem;
-  --pf-global--FontSize--xxl: 1.8rem;
-  --pf-global--FontSize--lg: 1rem;
+  /* $pf-global--concept--size */
+  $pf-global--spacer--lg: .5rem;
+  $pf-global--spacer--xl: 1rem;
+  $pf-global--spacer--xxl: 2rem;
 
-  /* --pf-global--state--PropertyCamelCase */
-  --pf-global--BackgroundColor--hover: #ccc;
-}
+  /* $pf-global--concept--PropertyCamelCase */ 
+  $pf-global--FontSize--xxxl: 2rem;
+  $pf-global--FontSize--xxl: 1.8rem;
+  $pf-global--FontSize--lg: 1rem;
+
+  /* pf-global--PropertyCamelCase--state */
+  $pf-global--BackgroundColor--hover: #ccc;
 ```
 
 ### Component variables
 
 The second layer is scoped to themeable component properties and follow these rules:
 
-- They follow this formula `--pf-c-block__element--modifier--state--PropertyCamelCase`.
+- They follow this formula `$pf-c-block__element--modifier--state--PropertyCamelCase`.
   - The `pf-c-block__element--modifier` is the selector name is something like `pf-c-alert__actions`;
   - a `state` is something like `hover` or `active`;
 - The variable always has a default value.
@@ -96,25 +95,23 @@ For example:
 
 ```scss
 /* Component scoped variables are always defined by global variables */
-:root {
-  --pf-alert--Padding: var(--pf-global--spacer--xl);
-  --pf-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--hover);
-  --pf-alert__title--FontSize: va(--pf-global--FontSize--xxl);
-}
+  $pf-alert--Padding: $pf-global--spacer--xl;
+  $pf-alert--hover--BackgroundColor: $pf-global--BackgroundColor--hover;
+  $pf-alert__title--FontSize: $pf-global--FontSize--xxl;
 
 /* --block--PropertyCamelCase */
 .alert {
-  padding: var(--pf-alert--Padding, 1rem); /* Sets the fallback to 1rem. */
+  padding: $pf-alert--Padding;
 }
 
 /* --block--state--PropertyCamelCase */
 .alert:hover {
-  background-color: var(--pf-alert--hover--BackgroundColor, #ccc);
+  background-color: $pf-alert--hover--BackgroundColor;
 }
 
 /* --block__element--PropertyCamelCase */
 .alert__title {
-  font-size: var(--pf-alert__title--FontSize, 1.8rem);
+  font-size: $pf-alert__title--FontSize;
 }
 ```
 
@@ -273,23 +270,21 @@ Component-specific media queries should be nested inside the component block. Re
 Patternfly has 5 breakpoints:
 
 ```scss
-:root {
-  --pf-global-breakpoint-xs: 0;
-  --pf-global-breakpoint-sm: 576px;
-  --pf-global-breakpoint-md: 768px;
-  --pf-global-breakpoint-lg: 992px;
-  --pf-global-breakpoint-xl: 1200px;
-}
+  $pf-global-breakpoint--xs: 0;
+  $pf-global-breakpoint--sm: 576px;
+  $pf-global-breakpoint--md: 768px;
+  $pf-global-breakpoint--lg: 992px;
+  $pf-global-breakpoint--xl: 1200px;
 ```
 
-To make sure you are writting mobile first, always do `min-width`:
+To make sure you are writing mobile first, always do `min-width`:
 
 ```scss
 .pf-nav {
   ...
 
   // Styles for small view ports and up
-  @media (min-width: var(--pf-global-breakpoint-xs)) { ... }
+  @media (min-width: $pf-global-breakpoint--xs) { ... }
 }
 ```
 
@@ -309,7 +304,7 @@ States of a component should be included as a nested element. This includes hove
 
 #### Sass variables
 
-We create global Sass variables to keep a Bootstrap theme in sync. These value inform our global CSS variables.
+We create global Sass variables to keep a Bootstrap theme in sync. These values also inform our component level variables .
 
 #### Mixins
 
