@@ -1,18 +1,18 @@
 @import "../../patternfly-utilities";
 
+$pf-l-bullseye--Padding: 0 !default;
+$pf-l-bullseye__item--Padding: 0 !default;
+
 .pf-l-bullseye {
-  $pf-l-bullseye--Padding: 0 !default;
-  $pf-l-bullseye__item--Padding: 0 !default;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   padding: $pf-l-bullseye--Padding;
   margin: 0;
 
-  > &__item {
+  &__item {
     padding: $pf-l-bullseye__item--Padding;
   }
 }

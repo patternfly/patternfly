@@ -1,16 +1,21 @@
 @import "../../patternfly-utilities";
 
+$pf-l-stack--gutter-size: $pf-global--gutter;
+
 .pf-l-stack {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 0;
-  margin: 0;
 
-  > &__item.pf-is-secondary {
-    flex: none;
+  &__item.pf-is-secondary {
+    flex: 0 0 auto;
   }
-  > &__item.pf-is-primary {
-    flex: 1 0 auto;
+  &__item.pf-is-primary {
+    flex: 1 1 auto;
   }
+
+  &.pf-has-gutter > *:not(:last-child) {
+    margin-bottom: $pf-l-stack--gutter-size;
+  }
+
 }
