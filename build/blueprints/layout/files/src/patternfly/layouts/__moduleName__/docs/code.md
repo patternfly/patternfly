@@ -12,6 +12,6 @@ Write accessibility, aria tags, tab index and other notes to make this component
 
 | Class | Usage |
 | -- | -- |
-| `.class-name-here` **Applied to:** `<tags-here>` |  **Outcome:** Outcome-here **Required:** Yes/No **Remarks:** Remarks-here |
-| Example: `.btn` **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
-| `.btn-secondary` **Applied to:** `.btn` | **Outcome:** Adds secondary color **Required:** Yes |
+| `.class-name-here` | **Applied to:** `<tags-here>` |  **Outcome:** Outcome-here | **Required:** Yes/No | **Remarks:** Remarks-here |
+| Example: `.btn` | **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button | **Required:** Yes | **Remarks:** Always use it with a modifier class. |
+| `.btn-secondary` | **Applied to:** `.btn` | **Outcome:** Adds secondary color | **Required:** Yes |
