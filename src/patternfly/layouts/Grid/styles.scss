@@ -1,0 +1,96 @@
+// URL.com/guidelines#layout
+// A layout doesn't have variables
+@import "../../patternfly-utilities";
+
+// Gutter
+$pf-global--gutter: $pf-global--spacer--lg !default;
+
+.pf-l-grid {
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+
+  // Nested grids
+  .pf-l-grid {
+    display: flex;
+    @supports (display: grid) {
+      display: grid;
+    }
+  }
+
+  &__item {
+    @supports (display: grid) {
+      margin: 0;
+    }
+  }
+
+  > * {
+    flex-basis: 100%;
+    @supports (display: grid) {
+      flex-basis: 0;
+      grid-column-start: auto;
+      grid-column-end: span 12;
+    }
+  }
+
+  // Generate default modifier classes
+  $breakpoints: (
+    "": null,
+    "xs": "-on-xs",
+    "sm": "-on-sm",
+    "md": "-on-md",
+    "lg": "-on-lg",
+    "xl": "-on-xl"
+  );
+
+  // Loop through $breakpoints map to generate responsive classes
+  @each $breakpoint, $value in $breakpoints {
+
+    @include GridMediaQuery($breakpoint) {
+      @include FlexboxFallback($value);
+      @include FlexboxWithGuttersFallback($value);
+      @include GridItemModifiers($value);
+    }
+  }
+
+  &.pf-has-gutters {
+    margin: -#{$pf-global--gutter/2};
+    > * {
+      margin: #{$pf-global--gutter/2};
+    }
+  }
+
+  @supports (display: grid) {
+    &.pf-has-gutters {
+      margin: unset;
+      grid-gap: $pf-global--gutter;
+      > * {
+        margin: unset;
+        margin-left: unset;
+      }
+    }
+  }
+}
+
+.is-layout-page {
+  .pf-l-grid > * {
+    box-shadow: 0 0 0 2px #ddd;
+  }
+
+  .pf-l-grid,
+  .pf-l-grid > * {
+
+    @supports (display: grid) {
+      padding: .5rem;
+      background: none;
+      border: 2px dashed #393f44;
+      box-shadow: none;
+    }
+  }
+}
