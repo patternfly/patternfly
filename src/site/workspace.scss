@@ -160,4 +160,22 @@
     height: 300px;
   }
 }
+
+.Documentation {
+  &__section td {
+    vertical-align: top;
+    padding: .5em;
+    code {
+      white-space: nowrap;
+      color: #004368;
+      border-radius: .5em;
+      background-color: #def3ff;
+      padding: .25em .75em;
+    }
+    }
+    h2 {
+      font-size: 1.25em;
+    }
+}
+
 /* stylelint-enable */
