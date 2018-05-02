@@ -1,8 +1,9 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
+// hardcoded value of 15rem for now as we are working through use cases for this layout
 $pf-l-page__sidebar-Width:    15rem !default;
-$pf-l-page--breakpoint:       $pf-global--breakpoint--sm !default;
+$pf-l-page--MediaMinWidth:    $pf-global--breakpoint--sm !default;
 
 .pf-l-page {
   display: flex;
@@ -31,7 +32,7 @@ $pf-l-page--breakpoint:       $pf-global--breakpoint--sm !default;
     flex: 1 0;
   }
 
-  @media (min-width: $pf-l-page--breakpoint) {
+  @media (min-width: $pf-l-page--MediaMinWidth) {
     &__sidebar {
       display: block;
       flex-basis: $pf-l-page__sidebar-Width;
@@ -46,7 +47,7 @@ $pf-l-page--breakpoint:       $pf-global--breakpoint--sm !default;
     grid-template-areas: "header header" "main main";
 
     // show sidebar above small breakpoint
-    @media (min-width: $pf-l-page--breakpoint) {
+    @media (min-width: $pf-l-page--MediaMinWidth) {
       grid-template-areas: "header header" "sidebar main";
       &__sidebar {
         grid-area: sidebar;
