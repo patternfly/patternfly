@@ -6,12 +6,22 @@ $pf-c-button--PaddingBottom: $pf-global--spacer--xs !default;
 $pf-c-button--PaddingLeft: $pf-global--spacer--lg !default;
 $pf-c-button--LineHeight: $pf-global--LineHeight--md !default;
 $pf-c-button--FontWeight: $pf-global--FontWeight--normal !default;
-$pf-c-button--BorderWidth: $pf-global--BorderWidth--md !default;
-$pf-c-button--BorderColor: $pf-global--Color--dark-100 !default;
 $pf-c-button--FontSize: $pf-global--FontSize--md !default;
+$pf-c-button--BackgroundColor: transparent !default;
+$pf-c-button--BorderColor: $pf-global--primary-color !default;
+$pf-c-button--BorderWidth: $pf-global--BorderWidth--sm !default;
+$pf-c-button--Color: $pf-global--primary-color !default;
+$pf-c-button--BorderRadius: $pf-global--BorderRadius !default;
 
-$pf-c-button--hover--Color: $pf-global--Color--light-100 !default;
-$pf-c-button--hover--BackgroundColor: $pf-global--Color--dark-100 !default;
+$pf-c-button--hover--Color: $pf-global--primary-color--dark !default;
+$pf-c-button--hover--BackgroundColor: transparent !default;
+$pf-c-button--hover--BorderColor: $pf-global--primary-color--dark !default;
+$pf-c-button--hover--BorderWidth: $pf-global--BorderWidth--md !default;
+
+$pf-c-button--is-disabled--Color: $pf-color-black-600 !default;
+$pf-c-button--is-disabled--BackgroundColor: $pf-color-black-300 !default;
+$pf-c-button--is-disabled--BorderColor: $pf-c-button--is-disabled--BackgroundColor !default;
+$pf-c-button--is-disabled--BorderWidth: $pf-global--BorderWidth--lg !default;
 
 // Primary btn
 $pf-c-button--is-primary--BackgroundColor: $pf-global--primary-color !default;
@@ -25,37 +35,33 @@ $pf-c-button--is-primary--hover--Color: $pf-global--Color--light-100 !default;
 $pf-c-button--is-secondary--BackgroundColor: transparent !default;
 $pf-c-button--is-secondary--BorderColor: $pf-global--primary-color !default;
 $pf-c-button--is-secondary--Color: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--hover--BackgroundColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--hover--BorderColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--hover--Color: $pf-global--Color--light-100 !default;
+$pf-c-button--is-secondary--hover--BackgroundColor: transparent !default;
+$pf-c-button--is-secondary--hover--BorderColor: $pf-global--primary-color--dark !default;
+$pf-c-button--is-secondary--hover--Color: $pf-global--primary-color--dark !default;
 
 // Secondary Inverse btn
 $pf-c-button--is-secondary-alt--BackgroundColor: transparent !default;
-$pf-c-button--is-secondary-alt--BorderColor: $pf-global--Color--dark-200 !default;
-$pf-c-button--is-secondary-alt--Color: $pf-global--Color--dark-200 !default;
-$pf-c-button--is-secondary-alt--hover--BackgroundColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary-alt--hover--BorderColor: $pf-global--primary-color !default;
+$pf-c-button--is-secondary-alt--BorderColor: $pf-global--Color--light-100 !default;
+$pf-c-button--is-secondary-alt--Color: $pf-global--Color--light-100 !default;
+$pf-c-button--is-secondary-alt--hover--BackgroundColor: transparent !default;
+$pf-c-button--is-secondary-alt--hover--BorderColor: $pf-global--Color--light-100 !default;
 $pf-c-button--is-secondary-alt--hover--Color: $pf-global--Color--light-100 !default;
 
 // Tertiary btn
 $pf-c-button--is-tertiary--BackgroundColor: transparent !default;
-$pf-c-button--is-tertiary--BorderColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--Color: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--hover--BackgroundColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--hover--BorderColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--hover--Color: $pf-global--Color--light-100 !default;
+$pf-c-button--is-tertiary--BorderColor: $pf-global--secondary-color !default;
+$pf-c-button--is-tertiary--Color: $pf-color-black-900 !default;
+$pf-c-button--is-tertiary--hover--BackgroundColor: transparent !default;
+$pf-c-button--is-tertiary--hover--BorderColor: $pf-global--secondary-color !default;
+$pf-c-button--is-tertiary--hover--Color: $pf-color-black-900 !default;
 
 // danger btn
 $pf-c-button--is-danger--BackgroundColor: $pf-global--danger-color !default;
 $pf-c-button--is-danger--BorderColor: $pf-global--danger-color !default;
 $pf-c-button--is-danger--Color: $pf-global--Color--light-100 !default;
 $pf-c-button--is-danger--hover--BackgroundColor: $pf-global--danger-color--dark !default;
-$pf-c-button--is-danger--hover--BorderColor: $pf-global--danger-color--dark !default;
+$pf-c-button--is-danger--hover--BorderColor: $pf-c-button--is-danger--hover--BackgroundColor !default;
 $pf-c-button--is-danger--hover--Color: $pf-global--Color--light-100 !default;
-
-//Sizes
-$pf-c-button--small--FontSize: $pf-global--FontSize--sm !default;
-$pf-c-button--large--FontSize: $pf-global--FontSize--xl !default;
 
 .pf-c-button {
   display: inline-block;
@@ -63,32 +69,28 @@ $pf-c-button--large--FontSize: $pf-global--FontSize--xl !default;
   font-size: $pf-c-button--FontSize;
   font-weight: $pf-c-button--FontWeight;
   line-height: $pf-c-button--LineHeight;
+  color: $pf-c-button--Color;
   text-align: center;
   white-space: nowrap;
+  background-color: $pf-c-button--BackgroundColor;
   border: $pf-c-button--BorderWidth solid $pf-c-button--BorderColor;
-  border-radius: 30rem;
+  border-radius: $pf-c-button--BorderRadius;
 
   &:hover,
   &:active,
   &.pf-is-active,
   &:focus,
   &.pf-has-focus {
+    // Adjust the padding when the border width is increased so that the button doesn't appear to shift
+    // This subtracts the difference of the hover and normal border widths from the padding values
+    padding-top: calc(#{$pf-c-button--PaddingTop} - (#{$pf-c-button--hover--BorderWidth - #{$pf-c-button--BorderWidth}}));
+    padding-right: calc(#{$pf-c-button--PaddingRight} - (#{$pf-c-button--hover--BorderWidth - #{$pf-c-button--BorderWidth}}));
+    padding-bottom: calc(#{$pf-c-button--PaddingBottom} - (#{$pf-c-button--hover--BorderWidth - #{$pf-c-button--BorderWidth}}));
+    padding-left: calc(#{$pf-c-button--PaddingLeft} - (#{$pf-c-button--hover--BorderWidth - #{$pf-c-button--BorderWidth}}));
     color: $pf-c-button--hover--Color;
     background-color: $pf-c-button--hover--BackgroundColor;
-  }
-
-  &:disabled,
-  &.pf-is-disabled {
-    pointer-events: none;
-    opacity: .5;
-  }
-
-  &.pf-is-small {
-    font-size: $pf-c-button--small--FontSize;
-  }
-
-  &.pf-is-large {
-    font-size: $pf-c-button--large--FontSize;
+    border-color: $pf-c-button--hover--BorderColor;
+    border-width: $pf-c-button--hover--BorderWidth;
   }
 
   &.pf-is-block {
@@ -175,4 +177,13 @@ $pf-c-button--large--FontSize: $pf-global--FontSize--xl !default;
       border-color: $pf-c-button--is-danger--hover--BorderColor;
     }
   }
+  &:disabled,
+  &.pf-is-disabled {
+    color: $pf-c-button--is-disabled--Color;
+    pointer-events: none;
+    background-color: $pf-c-button--is-disabled--BackgroundColor;
+    border-color: $pf-c-button--is-disabled--BorderColor;
+  }
+
+
 }

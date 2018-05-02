@@ -13,11 +13,11 @@ The `.pf-is-disabled` class uses `pointer-events: none` to try to disable the li
 ## Usage
 
 | Class | Usage |
-| `.pf-c-button` **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
-| `.pf-is-primary` **Applied to:** `.pf-c-button` | **Outcome:** Modifies for primary styles **Required:** No |
-| `.pf-is-secondary` **Applied to:** `.pf-c-button` | **Outcome:** Modifies for secondary styles **Required:** No |
-| `.pf-is-tertiary` **Applied to:** `.pf-c-button` | **Outcome:** Modifies for tertiary styles **Required:** No |
-| `.pf-is-danger` **Applied to:** `.pf-c-button` | **Outcome:** Modifies for tertiary styles **Required:** No |
-| `.pf-is-block` **Applied to:** `.pf-c-button` | **Outcome:** Creates a block level button **Required:** No |
-| `.pf-is-small` **Applied to:** `.pf-c-button` | **Outcome:** Creates a small button **Required:** No |
-| `.pf-is-small` **Applied to:** `.pf-c-button` | **Outcome:** Creates a large button **Required:** No |
+| -- | -- |
+| `.pf-c-button` | **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button | **Required:** Yes | **Remarks:** Always use it with a modifier class. |
+| `.pf-is-primary` | **Applied to:** `.pf-c-button` | **Outcome:** Modifies for primary styles | **Required:** No |
+| `.pf-is-secondary` | **Applied to:** `.pf-c-button` | **Outcome:** Modifies for secondary styles | **Required:** No |
+| `.pf-is-secondary-alt` | **Applied to:** `.pf-c-button` | **Outcome:** Modifies for alternate secondary styles | **Required:** No |
+| `.pf-is-tertiary` | **Applied to:** `.pf-c-button` | **Outcome:** Modifies for tertiary styles | **Required:** No |
+| `.pf-is-danger` | **Applied to:** `.pf-c-button` | **Outcome:** Modifies for tertiary styles | **Required:** No |
+| `.pf-is-block` | **Applied to:** `.pf-c-button` | **Outcome:** Creates a block level button | **Required:** No |
