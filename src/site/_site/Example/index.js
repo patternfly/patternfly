@@ -5,8 +5,8 @@ import GeneratedSource from '@siteComponents/GeneratedSource';
 import 'prismjs/themes/prism-coy.css';
 import './styles.scss';
 
-export default ({ heading, description, children, isViewport = false }) => (
-  <div className="Example">
+export default ({ heading, description, children, className = '', isViewport = false }) => (
+  <div className={`Example ${className}`}>
     <div className="Example__header">
       <h3 className="Example_heading">{heading}</h3>
       {description && <p className="Example_description">{description}</p>}
