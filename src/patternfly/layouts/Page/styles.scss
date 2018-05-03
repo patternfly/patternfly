@@ -1,0 +1,74 @@
+// URL.com/guidelines#layout
+@import "../../patternfly-utilities";
+
+// hardcoded value of 15rem for now as we are working through use cases for this layout
+$pf-l-page__sidebar-Width:    15rem !default;
+$pf-l-page--MediaMinWidth:    $pf-global--breakpoint--sm !default;
+
+.pf-l-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
+  &__header {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: row;
+    &-sidebar {
+      flex-basis: $pf-l-page__sidebar-Width;
+    }
+    &-main {
+      flex: 1;
+    }
+  }
+
+  &__sidebar {
+    display: none;
+  }
+
+  &__main {
+    flex: 1 0;
+  }
+
+  @media (min-width: $pf-l-page--MediaMinWidth) {
+    &__sidebar {
+      display: block;
+      flex-basis: $pf-l-page__sidebar-Width;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+
+    grid-template-columns: $pf-l-page__sidebar-Width 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header header" "main main";
+
+    // show sidebar above small breakpoint
+    @media (min-width: $pf-l-page--MediaMinWidth) {
+      grid-template-areas: "header header" "sidebar main";
+      &__sidebar {
+        grid-area: sidebar;
+      }
+    }
+
+    &__header {
+      grid-area: header;
+      display: grid;
+      grid-template-columns: $pf-l-page__sidebar-Width 1fr;
+      grid-template-areas: "header-left header-right";
+      &-sidebar {
+        grid-area: header-left;
+      }
+      &-main {
+        grid-area: header-right;
+      }
+    }
+
+    &__main {
+      grid-area: main;
+    }
+  }
+}
