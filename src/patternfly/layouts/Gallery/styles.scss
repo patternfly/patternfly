@@ -1,7 +1,46 @@
+@import "../../patternfly-utilities";
+
+// This variable is here just so that the grid has a width to use in the minmax() for laying out the gallery columns. 
+$pf-l-gallery__item--Width: 250px !default;
+
+$pf-l-gallery--GridGap: $pf-global--gutter !default;
+$pf-l-gallery--GridTemplateColumns: repeat(auto-fill, minmax($pf-l-gallery__item--Width, 1fr)) !default;
+$pf-l-gallery__item--FlexBasis: $pf-l-gallery__item--Width !default;
+
 .pf-l-gallery {
-  display: grid;
-  grid-gap: 1rem; //revisit this value
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  padding: 0;
-  margin: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  &__item {
+    flex-basis: $pf-l-gallery__item--FlexBasis;
+  }
+
+  // These are fallbacks for when grid is not supported.
+  // They add right and bottom margin to the child items in order to simulate the grid gap property. 
+  &.pf-has-gutter > *:not(:last-child) {
+    margin-right: $pf-l-gallery--GridGap;
+  }
+  &.pf-has-gutter > * {
+    margin-bottom: $pf-l-gallery--GridGap;
+  }
+
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $pf-l-gallery--GridTemplateColumns;
+
+    &.pf-has-gutter {
+      grid-gap: $pf-l-gallery--GridGap;
+    }
+    // The right and bottom margin must be reset from the non-grid fallback, which added them to simulate the grid gap.
+    &.pf-has-gutter > *:not(:last-child) {
+      margin-right: 0;
+    }
+    &.pf-has-gutter > * {
+      margin-bottom: 0;
+    }
+
+  }
 }
+

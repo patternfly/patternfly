@@ -8,6 +8,7 @@ child will expand vertically to fill the container if needed.
 
 | Class | Usage |
 | -- | -- |
-| `.pf-l-stack` | **Outcome:** Initiates the stack layout **Required:** Yes |
-| `.pf-l-stack__primary` | **Outcome:** Specifies the primary child of the layout, which expands vertically when needed. **Required:** No |
-| `.pf-l-stack__secondary` | **Outcome:** Specifies a secondary child of the layout, which accommodates its content. **Required:** No **Remarks:** A stack can have one or more secondary children |
+| `.pf-l-stack` | **Outcome:** Initiates the stack layout | **Required:** Yes |
+| `.pf-l-stack__primary` | **Outcome:** Specifies the primary child of the layout, which expands vertically when needed. | **Required:** No |
+| `.pf-l-stack__secondary` | **Outcome:** Specifies a secondary child of the layout, which accommodates its content. | **Required:** No | **Remarks:** A stack can have one or more secondary children |
+| `.pf-has-gutter` | **Outcome:** Adds space between children | **Required:** No |
