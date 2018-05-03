@@ -42,7 +42,7 @@ Some users fall into just one category above, but it’s possible for a user to 
 ### Design and Development Guidelines
 The following are guidelines that we strive to adopt:
 - The [A11Y Project Checklist](https://a11yproject.com/checklist) is a helpful checklist to start with if you’re new to accessibility.
-- Our goal is to meet [level AA in the Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&levels=aaa&technologies=smil%2Cpdf%2Cflash%2Csl). While these guidelines can seem like a lot, the following sections capture some of these by area of focus.
+- Our goal is to meet [level AA in the Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&levels=aaa&technologies=smil%2Cpdf%2Cflash%2Csl). While these guidelines can seem like a lot, the following sections capture some of these.
 
 #### What PatternFly Designers and Developers Should Address
 
@@ -50,26 +50,26 @@ If you use patternfly, or contribute to patternfly as a designer or developer, t
 
 - Experience parity
   - There should be parity between the screen reader contents and visibly rendered contents (refer to the [first Note for aria-hidden](https://www.w3.org/TR/wai-aria/#aria-hidden)).
-  - There should be parity among all input types: touch, mouse, keyboard. Don’t toggle states on hover. Don’t optimize the experience for one input type at the expense of another.
+  - There should be parity among all input types: touch, mouse, and keyboard. Don’t toggle states on hover. Don’t optimize the experience for one input type at the expense of another.
   - There should be parity between hover and focus events. Any information that’s available on hover should be available on focus, too.
-- Semantic html structures are used to accurately communicate purpose and relationship of UI elements [design, html, css] ([WCAG 1.3.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&showtechniques=131#qr-content-structure-separation-programmatic))
-- Color is not the only method of communication - Providing meaning through color is supplementary to providing meaning with text [design, html, css] ([WCAG 1.4.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-without-color))
-- Color contrast [css] ([WCAG 1.4.3](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-contrast))
-- Font sizes can scale and the contents are functional and readable when the contents are doubled [css] ([WCAG 1.4.4](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-scale))
-- Keyboard accessibility [html] ([WCAG 2.1.1 and 2.1.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#keyboard-operation))
-- Order of elements in the HTML and in the layout follow a logical order [design, html, css] ([WCAG 1.3.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-content-structure-separation-sequence) and [WCAG 2.4.3](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-focus-order))
-- Elements with focus are clearly visible [css] ([WCAG 2.4.7](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-focus-visible))
-- An accessible name is provided for all elements [design, html] ([WCAG 4.1.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&showtechniques=412#qr-ensure-compat-rsv))
-- Target area for clickable elements is large enough and not overlapping [css] ([Accessible Styles for Responsive Design, Google Web Fundamentals](https://developers.google.com/web/fundamentals/accessibility/accessible-styles#multi-device_responsive_design))
+- Semantic html structures are used to accurately communicate purpose and relationship of UI elements ([WCAG 1.3.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&showtechniques=131#qr-content-structure-separation-programmatic)).  *[design, html, css]*
+- Color is not the only method of communication. Providing meaning through color is supplementary to providing meaning with text ([WCAG 1.4.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-without-color)).  *[design, html, css]*
+- Colors used provide sufficient contrast ([WCAG 1.4.3](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-contrast)).  *[css]*
+- Font sizes can scale and the contents are functional and readable when the contents are doubled ([WCAG 1.4.4](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-scale)).  *[css]*
+- All functionality is keyboard accessible ([WCAG 2.1.1 and 2.1.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#keyboard-operation)).  *[html]*
+- Order of elements in the HTML and in the layout follow a logical order ([WCAG 1.3.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-content-structure-separation-sequence) and [WCAG 2.4.3](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-focus-order)). *[design, html, css]*
+- Elements with focus are clearly visible ([WCAG 2.4.7](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-focus-visible)). *[css]*
+- An accessible name is provided for all elements ([WCAG 4.1.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&showtechniques=412#qr-ensure-compat-rsv)). *[design, html]*
+- The target area for clickable elements is large enough and not overlapping ([Accessible Styles for Responsive Design, Google Web Fundamentals](https://developers.google.com/web/fundamentals/accessibility/accessible-styles#multi-device_responsive_design)). *[css]*
 
 #### What Product Developers and Designers Should Address
 
 - Skip to Main links ([WCAG 2.4.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-skip))
 - Page Titles ([WCAG 2.4.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-title))
-- Links ([WCAG 2.4.4](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-refs)) - If more than one link has the same label, it should also have the same url. Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user.
-- Landmarks ([ARIA11](https://www.w3.org/TR/WCAG20-TECHS/ARIA11.html)) - Use landmark roles to communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements
-- Headings ([WCAG 2.4.10](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-headings) and [H42](https://www.w3.org/TR/WCAG20-TECHS/H42.html)) - Heading text should be descriptive. Correct heading levels should be used to communicate the outline of the page.
-- Contents - Should be meaningful, clear, and concise
+- Links ([WCAG 2.4.4](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-refs)) — If more than one link has the same label, it should also have the same url. Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user.
+- Landmarks ([ARIA11](https://www.w3.org/TR/WCAG20-TECHS/ARIA11.html)) — Use landmark roles to communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements
+- Headings ([WCAG 2.4.10](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-headings) and [H42](https://www.w3.org/TR/WCAG20-TECHS/H42.html)) — Heading text should be descriptive. Correct heading levels should be used to communicate the outline of the page.
+- Contents — Should be meaningful, clear, and concise
 
 
 ### Testing
