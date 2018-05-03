@@ -1,5 +1,6 @@
 @import "../../patternfly-utilities";
 
+// This variable is here just so that the grid has a width to use in the minmax() for laying out the gallery columns. 
 $pf-l-gallery__item--Width: 250px !default;
 
 $pf-l-gallery--GridGap: $pf-global--gutter !default;
