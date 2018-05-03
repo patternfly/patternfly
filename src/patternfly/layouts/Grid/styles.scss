@@ -1,6 +1,122 @@
 // URL.com/guidelines#layout
-// A layout doesn't have variables
 @import "../../patternfly-utilities";
+
+// Variables
+$pf-l-grid--has-gutter--GridGap: $pf-global--gutter !default;
+
+/// Media query used to create responsive grid items 
+/// @group mixins
+/// @moduleType mixin
+/// @parameter {Point} xs, sm, md, lg, xl, null
+@mixin GridMediaQuery($point) {
+  @if ($point == "xs") {
+    @media screen and (max-width: $pf-global--breakpoint--sm) {
+      @content;
+    }
+  } @else if ($point == "sm" or $point == "" or $point == null) {
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      @content;
+    }
+  } @else if ($point == "md") {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      @content;
+    }
+  } @else if ($point == "lg") {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      @content;
+    }
+  } @else if ($point == "xl") {
+    @media screen and (min-width: $pf-global--breakpoint--xl) {
+      @content;
+    }
+  }
+}
+
+/// Creates flexbox fallback, with gutters for ie11 
+/// @group mixins
+/// @moduleType mixin
+/// @parameter {Suffix} xs, sm, md, lg, xl, null
+@mixin FlexboxFallback($suffix: null) {
+  // Generate column widths
+  // If suffix == default, ignore the suffix
+  $grid-unit: 100% / 12;
+
+  @for $col-num from 1 through 12 {
+    > .pf-is-#{$col-num}-col#{$suffix} {
+      flex-basis: percentage($col-num/12);
+      @supports (display: grid) {
+        flex-basis: 0;
+      }
+    }
+  }
+
+  @for $col-num from 1 through 12 {
+    > .pf-is-offset-#{$col-num}-col#{$suffix} {
+      margin-left: calc(#{$grid-unit} * #{$col-num});
+      @supports (display: grid) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/// Creates flexbox fallback, with gutters for ie11 
+/// @group mixins
+/// @moduleType mixin
+/// @parameter {Suffix} xs, sm, md, lg, xl, null
+@mixin FlexboxWithGuttersFallback($suffix: null) {
+  // Generate column widths
+  $grid-unit: 100% / 12;
+  &.pf-has-gutters {
+    @for $col-num from 1 through 12 {
+      $flex-basis: percentage($col-num/12);
+
+      > .pf-is-#{$col-num}-col#{$suffix} {
+        flex-basis: calc(#{$flex-basis} - #{$pf-l-grid--has-gutter--GridGap});
+        @supports (display: grid) {
+          flex-basis: 0;
+        }
+      }
+    }
+
+    @for $col-num from 1 through 12 {
+      > .pf-is-offset-#{$col-num}-col#{$suffix} {
+        margin-left: calc(#{$grid-unit} * #{$col-num} + #{$pf-l-grid--has-gutter--GridGap/2});
+        @supports (display: grid) {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}
+
+/// Creates grid item 
+/// @group mixins
+/// @moduleType mixin
+/// @parameter {Suffix} xs, sm, md, lg, xl, null
+@mixin GridItemModifiers($suffix: null) {
+  // generate column span modifiers
+  @for $col-num from 1 through 12 {
+    > .pf-is-#{$col-num}-col#{$suffix} {
+      grid-column-start: auto;
+      grid-column-end: span $col-num;
+    }
+  }
+
+  // generate column offset modfiers
+  @for $col-num from 1 through 12 {
+    > .pf-is-offset-#{$col-num}-col#{$suffix} {
+      grid-column-start: col-start $col-num + 1;
+    }
+  }
+
+  // generate row span modfiers
+  @for $row-num from 1 through 12 {
+    > .pf-is-#{$row-num}-row#{$suffix} {
+      grid-row: span $row-num;
+    }
+  }
+}
 
 .pf-l-grid {
   display: flex;
@@ -57,37 +173,20 @@
   }
 
   &.pf-has-gutters {
-    margin: -#{$pf-global--gutter/2};
+    margin: -#{$pf-l-grid--has-gutter--GridGap/2};
     > * {
-      margin: #{$pf-global--gutter/2};
+      margin: #{$pf-l-grid--has-gutter--GridGap/2};
     }
   }
 
   @supports (display: grid) {
     &.pf-has-gutters {
       margin: unset;
-      grid-gap: $pf-global--gutter;
+      grid-gap: $pf-l-grid--has-gutter--GridGap;
       > * {
         margin: unset;
         margin-left: unset;
       }
-    }
-  }
-}
-
-.is-layout-page {
-  .pf-l-grid > * {
-    box-shadow: 0 0 0 2px #ddd;
-  }
-
-  .pf-l-grid,
-  .pf-l-grid > * {
-
-    @supports (display: grid) {
-      padding: .5rem;
-      background: none;
-      border: 2px dashed #393f44;
-      box-shadow: none;
     }
   }
 }
