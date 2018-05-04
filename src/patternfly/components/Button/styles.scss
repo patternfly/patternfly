@@ -120,7 +120,8 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
   border: $pf-c-button--BorderWidth solid $pf-c-button--BorderColor;
   border-radius: $pf-c-button--BorderRadius;
 
-  &:hover {
+  &:hover,
+  &.pf-is-hover {
     // Adjust the padding when the border width is increased so that the button doesn't appear to shift
     // This subtracts the difference of the hover and normal border widths from the padding values
     padding-top: calc(#{$pf-c-button--PaddingTop} - (#{$pf-c-button--hover--BorderWidth - #{$pf-c-button--BorderWidth}}));
@@ -138,6 +139,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     // Adjust the padding when the border width is increased so that the button doesn't appear to shift
     // This subtracts the difference of the active and normal border widths from the padding values
     padding-top: calc(#{$pf-c-button--PaddingTop} - (#{$pf-c-button--active--BorderWidth - #{$pf-c-button--BorderWidth}}));
+    padding-right: calc(#{$pf-c-button--PaddingRight} - (#{$pf-c-button--active--BorderWidth - #{$pf-c-button--BorderWidth}}));
     padding-bottom: calc(#{$pf-c-button--PaddingBottom} - (#{$pf-c-button--active--BorderWidth - #{$pf-c-button--BorderWidth}}));
     padding-left: calc(#{$pf-c-button--PaddingLeft} - (#{$pf-c-button--active--BorderWidth - #{$pf-c-button--BorderWidth}}));
     color: $pf-c-button--active--Color;
@@ -147,7 +149,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
   }
 
   &:focus,
-  &.pf-has-focus {
+  &.pf-is-focus {
     // Adjust the padding when the border width is increased so that the button doesn't appear to shift
     // This subtracts the difference of the focus and normal border widths from the padding values
     padding-top: calc(#{$pf-c-button--PaddingTop} - (#{$pf-c-button--focus--BorderWidth - #{$pf-c-button--BorderWidth}}));
@@ -171,7 +173,8 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     background-color: $pf-c-button--is-primary--BackgroundColor;
     border-color: $pf-c-button--is-primary--BorderColor;
 
-    &:hover {
+    &:hover,
+    &.pf-is-hover {
       color: $pf-c-button--is-primary--hover--Color;
       background-color: $pf-c-button--is-primary--hover--BackgroundColor;
       border-color: $pf-c-button--is-primary--hover--BorderColor;
@@ -185,7 +188,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     }
 
     &:focus,
-    &.pf-has-focus {
+    &.pf-is-focus {
       color: $pf-c-button--is-primary--focus--Color;
       background-color: $pf-c-button--is-primary--focus--BackgroundColor;
       border-color: $pf-c-button--is-primary--focus--BorderColor;
@@ -198,7 +201,8 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     background-color: $pf-c-button--is-secondary--BackgroundColor;
     border-color: $pf-c-button--is-secondary--BorderColor;
 
-    &:hover {
+    &:hover,
+    &.pf-is-hover {
       color: $pf-c-button--is-secondary--hover--Color;
       background-color: $pf-c-button--is-secondary--hover--BackgroundColor;
       border-color: $pf-c-button--is-secondary--hover--BorderColor;
@@ -212,7 +216,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     }
 
     &:focus,
-    &.pf-has-focus {
+    &.pf-is-focus {
       color: $pf-c-button--is-secondary--focus--Color;
       background-color: $pf-c-button--is-secondary--focus--BackgroundColor;
       border-color: $pf-c-button--is-secondary--focus--BorderColor;
@@ -225,7 +229,8 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     background-color: $pf-c-button--is-secondary-alt--BackgroundColor;
     border-color: $pf-c-button--is-secondary-alt--BorderColor;
 
-    &:hover {
+    &:hover,
+    &.pf-is-hover {
       color: $pf-c-button--is-secondary-alt--hover--Color;
       background-color: $pf-c-button--is-secondary-alt--hover--BackgroundColor;
       border-color: $pf-c-button--is-secondary-alt--hover--BorderColor;
@@ -239,7 +244,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     }
 
     &:focus,
-    &.pf-has-focus {
+    &.pf-is-focus {
       color: $pf-c-button--is-secondary-alt--focus--Color;
       background-color: $pf-c-button--is-secondary-alt--focus--BackgroundColor;
       border-color: $pf-c-button--is-secondary-alt--focus--BorderColor;
@@ -253,7 +258,8 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     background-color: $pf-c-button--is-tertiary--BackgroundColor;
     border-color: $pf-c-button--is-tertiary--BorderColor;
 
-    &:hover {
+    &:hover,
+    &.pf-is-hover {
       color: $pf-c-button--is-tertiary--hover--Color;
       background-color: $pf-c-button--is-tertiary--hover--BackgroundColor;
       border-color: $pf-c-button--is-tertiary--hover--BorderColor;
@@ -267,7 +273,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     }
 
     &:focus,
-    &.pf-has-focus {
+    &.pf-is-focus {
       color: $pf-c-button--is-tertiary--focus--Color;
       background-color: $pf-c-button--is-tertiary--focus--BackgroundColor;
       border-color: $pf-c-button--is-tertiary--focus--BorderColor;
@@ -280,7 +286,8 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     background-color: $pf-c-button--is-danger--BackgroundColor;
     border-color: $pf-c-button--is-danger--BorderColor;
 
-    &:hover {
+    &:hover,
+    &.pf-is-hover {
       color: $pf-c-button--is-danger--hover--Color;
       background-color: $pf-c-button--is-danger--hover--BackgroundColor;
       border-color: $pf-c-button--is-danger--hover--BorderColor;
@@ -294,7 +301,7 @@ $pf-c-button--is-danger--active--Color: $pf-global--Color--light-100 !default;
     }
 
     &:focus,
-    &.pf-has-focus {
+    &.pf-is-focus {
       color: $pf-c-button--is-danger--focus--Color;
       background-color: $pf-c-button--is-danger--focus--BackgroundColor;
       border-color: $pf-c-button--is-danger--focus--BorderColor;
