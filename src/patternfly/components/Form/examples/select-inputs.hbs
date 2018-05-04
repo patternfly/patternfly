@@ -1,0 +1,44 @@
+{{#>group}}
+  {{#>label labelFor="select1"}}Select input{{/label}}
+  {{#>form-control}}
+    {{#>select selectId="select1" selectName="example-select1" disabled="true"}}
+      {{#>select-option optionValue="Option 1"}}The first option{{/select-option}}
+      {{#>select-option optionValue="Option 2" selected=true}}The second option{{/select-option}}
+    {{/select}}
+  {{/form-control}}
+{{/group}}
+{{#>group}}
+  {{#>label labelFor="select2"}}Select input{{/label}}
+  {{#>form-control}}
+    {{#>select selectId="select2" selectName="example-select2"}}
+      {{#>select-option optionValue="Option 1"}}The first option{{/select-option}}
+      {{#>select-option optionValue="Option 2" selected=true}}The second option{{/select-option}}
+    {{/select}}
+  {{/form-control}}
+{{/group}}
+{{#>group}}
+  {{#>label labelFor="select3"}}Select input with grouping{{/label}}
+  {{#>form-control}}
+    {{#>select selectId="select3" selectName="example-select3"}}
+      <optgroup label="Group 1">
+        {{#> select-option optionValue="Option 1"}}The first option{{/select-option}}
+        {{#> select-option optionValue="Option 2"}}The second option{{/select-option}}
+      </optgroup>
+      <optgroup label="Group 2">
+        {{#> select-option optionValue="Option 3"}}The third option{{/select-option}}
+        {{#> select-option optionValue="Option 4"}}The fourth option{{/select-option}}
+      </optgroup>
+    {{/select}}
+  {{/form-control}}
+{{/group}}
+{{#>group}}
+  {{#>label labelFor="select4"}}Select multiple{{/label}}
+  {{#>form-control selectStyleModifier="pf-m-multiple"}}
+    {{#>select selectId="select4" selectName="example-select4" multiple="true"}}
+      {{#> select-option optionValue="Option 1"}}The first option{{/select-option}}
+      {{#> select-option optionValue="Option 2"}}The second option{{/select-option}}
+      {{#> select-option optionValue="Option 3"}}The third option{{/select-option}}
+      {{#> select-option optionValue="Option 4"}}The fourth option{{/select-option}}
+    {{/select}}
+  {{/form-control}}
+{{/group}}  
