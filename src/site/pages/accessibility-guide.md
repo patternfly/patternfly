@@ -4,7 +4,7 @@
 
 The goal of software accessibility is to remove barriers to the use of technology so that it can be inclusive of everyone, regardless of physical ability. Accessibility addresses permanent to temporary disabilities and includes a range of visual impairments, as well as physical, sensory or learning challenges, including those that occur normally as adults age. Designing Red Hat software with this broad range of accessibility in mind will empower any user to accomplish their goals with our technology.
 
-Since accessibility is best achieved when it's considered at the beginning, we ask designers and developers who contribute or consume patternfly to understand how accessibility needs can be met. The following is a guide with some techniques on how to design, develop, and test UI to ensure that everyone has a good user experience.
+Since accessibility is best achieved when it's considered at the beginning, we ask designers and developers who contribute or consume PatternFly to understand how accessibility needs can be met. The following is a guide with some techniques on how to design, develop, and test UI to ensure that everyone has a good user experience.
 
 - [Understanding Users’ Needs](#understanding-users-needs)
 - [Checklists](#checklists)
@@ -25,7 +25,7 @@ Users with no vision rely on screen readers to access web sites and applications
 
 ### Low Vision
 
-Users with low vision can have different needs depending on their eye condition. Needs can range from not relying on color to communicate information, color palettes that provide sufficient contrast, and a layout that is responsive when the user zooms in to magnify the contents of the screen.
+Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas. These needs mean that interfaces should not rely on color to communicate information, palettes need to have sufficient contrast, and layouts should be responsive when font sizes are increased.
 
 ### Motor
 
@@ -46,7 +46,7 @@ The following are guidelines that we strive to adopt:
 
 #### What PatternFly Designers and Developers Should Address
 
-If you use patternfly, or contribute to patternfly as a designer or developer, these are the items that are expected to be covered in  PatternFly:
+If you use PatternFly, or contribute to PatternFly as a designer or developer, these are the items that are expected to be covered in PatternFly:
 
 - Experience parity
   - There should be parity between the screen reader contents and visibly rendered contents (refer to the [first Note for aria-hidden](https://www.w3.org/TR/wai-aria/#aria-hidden)).
@@ -55,7 +55,7 @@ If you use patternfly, or contribute to patternfly as a designer or developer, t
 - Semantic html structures are used to accurately communicate purpose and relationship of UI elements ([WCAG 1.3.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&showtechniques=131#qr-content-structure-separation-programmatic)).  *[design, html, css]*
 - Color is not the only method of communication. Providing meaning through color is supplementary to providing meaning with text ([WCAG 1.4.1](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-without-color)).  *[design, html, css]*
 - Colors used provide sufficient contrast ([WCAG 1.4.3](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-contrast)).  *[css]*
-- Font sizes can scale and the contents are functional and readable when the contents are doubled ([WCAG 1.4.4](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-scale)).  *[css]*
+- Font sizes can scale and the contents are functional and readable when the content sizes are doubled ([WCAG 1.4.4](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-visual-audio-contrast-scale)).  *[css]*
 - All functionality is keyboard accessible ([WCAG 2.1.1 and 2.1.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#keyboard-operation)).  *[html]*
 - Order of elements in the HTML and in the layout follow a logical order ([WCAG 1.3.2](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-content-structure-separation-sequence) and [WCAG 2.4.3](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-focus-order)). *[design, html, css]*
 - Elements with focus are clearly visible ([WCAG 2.4.7](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize#qr-navigation-mechanisms-focus-visible)). *[css]*
