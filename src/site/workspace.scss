@@ -82,12 +82,19 @@
     border: 1px solid rgba(0, 0, 0, .1);
   }
   ul, ol {
-    padding-left: .5rem;
-    list-style-position: inside;
+    padding-left: 1rem;
+    margin: .5rem 0 .5rem 1rem;
+    list-style-position: outside;
     list-style-type: disc;
+    p {
+      margin: 0;
+    }
   }
   ol {
     list-style-type: decimal;
+  }
+  li + li {
+    margin-top: .5rem;
   }
 }
 
