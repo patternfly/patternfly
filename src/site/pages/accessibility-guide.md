@@ -2,9 +2,9 @@
 
 *Please note, this guide is a work in progress and will be updated regularly. We welcome your comments and feedback.*
 
-The goal of software accessibility is to remove barriers to the use of technology so that it can be inclusive of everyone, regardless of physical ability. Accessibility addresses permanent to temporary disabilities and includes a range of visual impairments, as well as physical, sensory or learning challenges, including those that occur normally as adults age. Designing Red Hat software with this broad range of accessibility in mind will empower any user to accomplish their goals with our technology.
+The goal of software accessibility is to remove barriers and create inclusive product experiences that work for everyone, regardless of physical ability.
 
-Since accessibility is best achieved when it's considered at the beginning, we ask designers and developers who contribute or consume PatternFly to understand how accessibility needs can be met. The following is a guide with some techniques on how to design, develop, and test UI to ensure that everyone has a good user experience.
+Since accessibility is best achieved when considered early in the design and development process, we ask everyone who contributes to or consumes PatternFly to understand accessibility needs and how they can be met. The following guide provides techniques and suggestions to help you design, develop, and test UIs to ensure that everyone has a good user experience.
 
 - [Understanding Users’ Needs](#understanding-users-needs)
 - [Checklists](#checklists)
@@ -17,11 +17,13 @@ Since accessibility is best achieved when it's considered at the beginning, we a
 
 ## Understanding Users’ Needs
 
-As with any design, it’s important to understand the user you’re designing for. To develop an inclusive design, it’s important to understand the different needs of [different users](https://a11yproject.com/posts/myth-accessibility-is-blind-people/), and consider the assistive tools and methods they use. The following are some of the ways we can help address these different needs.
+Great user experiences don’t just happen; they’re designed, tested, and refined with the user in mind. To develop inclusive products, it’s important to understand the varying needs of a wide range of users and consider the assistive tools and methods they use. This section provides information to help you better understand and address the needs of these [different user groups](https://a11yproject.com/posts/myth-accessibility-is-blind-people/).
+
+Note: It’s possible for a user to fall into more than one group, or to use tools and devices designed for a different user group. One of the greatest benefits of an inclusive design practice is that methods designed for a specific user group will often provide benefits to everyone.
 
 ### No Vision
 
-Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements on the page, like headers, links, or form elements. Using semantic elements and ensuring that these elements are still meaningful when pulled out of context is critical for the usability of the site.
+Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements, like headers, links, or form elements. Use semantic elements and check that labels are meaningful when pulled out of context.
 
 ### Low Vision
 
@@ -29,14 +31,11 @@ Users with low vision can have different needs depending on the nature of their 
 
 ### Motor
 
-Users with poor motor control can use a range of devices to access contents. If these users are using only a keyboard, then they rely on all elements being keyboard accessible, with elements that have focus being highly visible. If these users are using a mouse or touch, then target areas should be large enough to be easy to hit.
+Users with poor motor control can use a range of devices to access contents. Users who rely on a keyboard need elements that are keyboard accessible and highly visible when in focus. Users who rely on a mouse or touch need target areas that are large enough to be hit easily.
 
 ### Cognitive
 
-Users who have difficulty processing information benefit from contents that are well-written. They should be clear and concise, and structured so that the contents are easy to consume by scanning the page. Avoid long paragraphs.
-
-Some users fall into just one category above, but it’s possible for a user to fall into more than one, or use tools and devices designed for a user group they don’t fall into. One of the greatest benefits of inclusive design practices is that methods that are designed for a specific user group will often provide benefits to all users.
-
+Users who have difficulty processing information benefit from well-written content. Information should clear, concise, and easy to scan. Consider visual hierarchy, chunk content into short, related sections, and avoid long paragraphs.
 
 ## Checklists
 ### Design and Development Guidelines
