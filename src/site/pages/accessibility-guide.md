@@ -12,7 +12,7 @@ Since accessibility is best achieved when it's considered at the beginning, we a
       - [What PatternFly Designers and Developers Should Address](#what-patternfly-designers-and-developers-should-address)
       - [What Product Developers and Designers Should Address](#what-product-developers-and-designers-should-address)
   - [Testing](#testing)
-  - [Screen reader support](#screen-reader-support)
+  - [Screen Reader Support](#screen-reader-support)
 - [Methods](#methods)
 
 ## Understanding Users’ Needs
@@ -78,7 +78,7 @@ To keep testing simple and easy to complete, we ask that contributors complete t
 - Disable styles to test the information architecture and presence of adequate text labels
 - Test with any screen reader available in your operating system.
 
-### Screen reader support
+### Screen Reader Support
 *Screen reader support is to be determined.*
 
 ## Methods
