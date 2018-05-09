@@ -1,0 +1,120 @@
+@import "../../patternfly-utilities";
+
+// Toggle
+$pf-c-dropdown__toggle--PaddingTop: $pf-global--spacer--xs !default;
+$pf-c-dropdown__toggle--PaddingRight: $pf-global--spacer--md !default;
+$pf-c-dropdown__toggle--PaddingBottom: $pf-global--spacer--xs !default;
+$pf-c-dropdown__toggle--PaddingLeft: $pf-global--spacer--sm !default;
+$pf-c-dropdown__toggle--FontSize: $pf-global--FontSize--md !default;
+$pf-c-dropdown__toggle--BackgroundColor: $pf-global--BackgroundColor--light-100 !default;
+$pf-c-dropdown__toggle--BorderWidth: $pf-global--BorderWidth--md !default;
+$pf-c-dropdown__toggle--BorderColor: $pf-global--Color--dark-200 !default;
+$pf-c-dropdown__toggle--Color: $pf-global--Color--dark-100 !default;
+
+$pf-c-dropdown__toggle--hover--BorderWidth: 2px !default;
+// replace with variable when Buttons PR is merged
+
+$pf-c-dropdown__toggle--is-expanded--BorderColor: $pf-global--Color--active !default;
+$pf-c-dropdown__toggle--is-expanded--BorderWidth: 2px !default;
+// replace with variable when Buttons PR is merged
+
+// Toggle Chevron
+$pf-c-dropdown__chevron--MarginLeft: $pf-global--spacer--md !default;
+$pf-c-dropdown__chevron--BorderWidth: $pf-global--BorderWidth--md !default;
+
+// Menu
+$pf-c-dropdown__menu--BackgroundColor: $pf-global--BackgroundColor--light-200 !default;
+$pf-c-dropdown__menu--BoxShadow: $pf-global--BoxShadow !default;
+
+// Menu Item
+$pf-c-dropdown__menu-item--PaddingTop: $pf-global--spacer--sm !default;
+$pf-c-dropdown__menu-item--PaddingRight: $pf-global--spacer--md !default;
+$pf-c-dropdown__menu-item--PaddingBottom: $pf-global--spacer--sm !default;
+$pf-c-dropdown__menu-item--PaddingLeft: $pf-global--spacer--md !default;
+$pf-c-dropdown__menu-item--first--PaddingTop: $pf-global--spacer--md !default;
+$pf-c-dropdown__menu-item--last--PaddingBottom: $pf-global--spacer--md !default;
+$pf-c-dropdown__menu-item--Color: $pf-global--Color--dark-100 !default;
+
+$pf-c-dropdown__menu-item--hover--BackgroundColor: $pf-global--BackgroundColor--light-300 !default;
+
+// Menu Item Separator
+$pf-c-dropdown__separator--Height: $pf-global--BorderWidth--md !default;
+$pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-300 !default;
+
+
+.pf-c-dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__toggle {
+    padding: $pf-c-dropdown__toggle--PaddingTop $pf-c-dropdown__toggle--PaddingRight $pf-c-dropdown__toggle--PaddingBottom $pf-c-dropdown__toggle--PaddingLeft;
+    font-size: $pf-c-dropdown__toggle--FontSize;
+    color: $pf-c-dropdown__toggle--Color;
+    background-color: $pf-c-dropdown__toggle--BackgroundColor;
+    border: $pf-c-dropdown__toggle--BorderWidth solid $pf-c-dropdown__toggle--BorderColor;
+
+    &:hover {
+      padding-top: calc(#{$pf-c-dropdown__toggle--PaddingTop} - (#{$pf-c-dropdown__toggle--hover--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      padding-right: calc(#{$pf-c-dropdown__toggle--PaddingRight} - (#{$pf-c-dropdown__toggle--hover--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      padding-bottom: calc(#{$pf-c-dropdown__toggle--PaddingBottom} - (#{$pf-c-dropdown__toggle--hover--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      padding-left: calc(#{$pf-c-dropdown__toggle--PaddingLeft} - (#{$pf-c-dropdown__toggle--hover--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      border-width: $pf-c-dropdown__toggle--hover--BorderWidth;
+    }
+    .pf-is-expanded & {
+      padding-top: calc(#{$pf-c-dropdown__toggle--PaddingTop} - (#{$pf-c-dropdown__toggle--is-expanded--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      padding-right: calc(#{$pf-c-dropdown__toggle--PaddingRight} - (#{$pf-c-dropdown__toggle--is-expanded--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      padding-bottom: calc(#{$pf-c-dropdown__toggle--PaddingBottom} - (#{$pf-c-dropdown__toggle--is-expanded--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      padding-left: calc(#{$pf-c-dropdown__toggle--PaddingLeft} - (#{$pf-c-dropdown__toggle--is-expanded--BorderWidth} - #{$pf-c-dropdown__toggle--BorderWidth}));
+      border-color: $pf-c-dropdown__toggle--is-expanded--BorderColor;
+      border-width: $pf-c-dropdown__toggle--is-expanded--BorderWidth;
+    }
+  }
+
+  &__toggle::after {
+    box-sizing: content-box;
+    display: inline-block;
+    width: calc(#{$pf-c-dropdown__toggle--FontSize} * .3);
+    height: calc(#{$pf-c-dropdown__toggle--FontSize} * .3);
+    margin-left: $pf-c-dropdown__chevron--MarginLeft;
+    vertical-align: calc(#{$pf-c-dropdown__toggle--FontSize} * .25);
+    content: "";
+    border-style: solid;
+    border-width: $pf-c-dropdown__chevron--BorderWidth $pf-c-dropdown__chevron--BorderWidth 0 0;
+    transform: rotate(135deg);
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: 1000;
+    min-width: 100%;
+    background: $pf-c-dropdown__menu--BackgroundColor;
+    box-shadow: $pf-c-dropdown__menu--BoxShadow;
+  }
+
+  &__menu-item {
+    display: block;
+    padding: $pf-c-dropdown__menu-item--PaddingTop $pf-c-dropdown__menu-item--PaddingRight $pf-c-dropdown__menu-item--PaddingBottom $pf-c-dropdown__menu-item--PaddingLeft;
+    color: $pf-c-dropdown__menu-item--Color;
+    white-space: nowrap;
+
+    &:first-child {
+      padding-top: $pf-c-dropdown__menu-item--first--PaddingTop;
+    }
+
+    &:last-child {
+      padding-bottom: $pf-c-dropdown__menu-item--last--PaddingBottom;
+    }
+
+    &:hover,
+    &:focus {
+      color: $pf-c-dropdown__menu-item--Color;
+      text-decoration: none;
+      background-color: $pf-c-dropdown__menu-item--hover--BackgroundColor;
+    }
+  }
+
+  &__separator {
+    height: $pf-c-dropdown__separator--Height;
+    background-color: $pf-c-dropdown__separator--BackgroundColor;
+  }
+}

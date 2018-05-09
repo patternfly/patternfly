@@ -1,0 +1,12 @@
+<div class="pf-c-dropdown {{#if expanded}}pf-is-expanded{{/if}}">
+  <button class="pf-c-dropdown__toggle {{#if expanded}}pf-is-active{{/if}}" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}">
+    {{> @partial-block}}
+  </button>
+  <div class="pf-c-dropdown__menu" {{#unless expanded}}hidden{{/unless}}>
+    <a class="pf-c-dropdown__menu-item" href="#">Link</a>
+    <a class="pf-c-dropdown__menu-item" href="#">Another Link</a>
+    <a class="pf-c-dropdown__menu-item" href="#">Something Else Here</a>
+    <div class="pf-c-dropdown__separator" role="separator"></div>
+    <a class="pf-c-dropdown__menu-item" href="#">Separated Link</a>
+  </div>
+</div>
