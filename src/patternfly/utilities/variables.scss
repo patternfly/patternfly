@@ -66,7 +66,7 @@ $pf-global--danger-color--dark:    $pf-color-red-300 !default;
 
 $pf-global--BoxShadow--sm:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
 $pf-global--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
-$pf-global--LineHeight--lg:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
+$pf-global--BoxShadow--lg:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
 
 $pf-global--BoxShadow--sm-right:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 $pf-global--BoxShadow--sm-left:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
@@ -78,10 +78,10 @@ $pf-global--BoxShadow-left:   pf-size-prem(-5) 0 pf-size-prem(10) pf-size-prem(-
 $pf-global--BoxShadow-bottom: 0 pf-size-prem(5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
 $pf-global--BoxShadow-top:    0 pf-size-prem(-5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
 
-$pf-global--LineHeight--lg-right: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--LineHeight--lg-left:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--LineHeight--lg-bottom: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--LineHeight--lg-top:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-right: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-left:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-bottom: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-top:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
 
 $pf-global--BoxShadow--inset:     inset 0 0 pf-size-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
 
@@ -149,9 +149,8 @@ $pf-global--FontWeight--semi-bold:      600 !default;
 $pf-global--FontWeight--bold:           700 !default;
 
 // Line height
-$pf-global--LineHeight--sm:         1.3 !default;
-$pf-global--LineHeight--md:             1.4 !default;
-$pf-global--LineHeight--lg:         1.5 !default;
+$pf-global--LineHeight--sm:             1.3 !default;
+$pf-global--LineHeight--md:             1.5 !default;
 
 // List
 $global-ListStyle: disc outside !default;
