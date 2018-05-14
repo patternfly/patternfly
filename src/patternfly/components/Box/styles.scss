@@ -1,0 +1,83 @@
+@import "../../patternfly-utilities";
+
+// Component variables 
+$pf-c-box--Padding: 0 !default;
+$pf-c-box--BoxShadow: $pf-global--BoxShadow--sm !default;
+$pf-c-box--BoxShadow--hover: $pf-global--BoxShadow !default;
+$pf-c-box--BoxShadow--active: $pf-global--BoxShadow !default;
+$pf-c-box--BoxShadow--focus: $pf-global--BoxShadow !default;
+
+// Header variables
+$pf-c-box__header--FontSize: $pf-global--FontSize--xxl;
+$pf-c-box__header--PaddingTop: $pf-global--spacer--xl;
+$pf-c-box__header--PaddingRight: $pf-global--spacer--xl;
+$pf-c-box__header--PaddingBottom: $pf-global--spacer--xl;
+$pf-c-box__header--PaddingLeft: $pf-global--spacer--xl;
+
+// Content variables
+$pf-c-box__content--FontSize: $pf-global--FontSize--sm;
+$pf-c-box__content--PaddingTop: $pf-global--spacer--xl;
+$pf-c-box__content--PaddingRight: $pf-global--spacer--xl;
+$pf-c-box__content--PaddingBottom: $pf-global--spacer--xl;
+$pf-c-box__content--PaddingLeft: $pf-global--spacer--xl;
+
+// Footer variables
+$pf-c-box__footer--FontSize: $pf-global--FontSize--sm;
+$pf-c-box__footer--PaddingTop: $pf-global--spacer--xl;
+$pf-c-box__footer--PaddingRight: $pf-global--spacer--xl;
+$pf-c-box__footer--PaddingBottom: $pf-global--spacer--xl;
+$pf-c-box__footer--PaddingLeft: $pf-global--spacer--xl;
+
+.pf-c-box {
+  display: flex;
+  flex-direction: column;
+  padding: $pf-c-box--Padding;
+  border: 1px solid #878;
+  box-shadow: $pf-c-box--BoxShadow;
+
+  &:hover,
+  &.pf-is-hover {
+    box-shadow: $pf-c-box--BoxShadow--hover;
+  }
+
+  &:active,
+  &.pf-is-active {
+    box-shadow: $pf-c-box--BoxShadow--active;
+  }
+
+  &:focus,
+  &.pf-is-focus {
+    box-shadow: $pf-c-box--BoxShadow--focus;
+  }
+
+  // Header
+  &__header {
+    padding-top: $pf-c-box__header--PaddingTop;
+    padding-right: $pf-c-box__header--PaddingRight;
+    padding-bottom: $pf-c-box__header--PaddingBottom;
+    padding-left: $pf-c-box__header--PaddingLeft;
+    font-size: $pf-c-box__header--FontSize;
+  }
+
+  // Content
+  &__content {
+    flex: 1 1 auto;
+    padding-top: $pf-c-box__content--PaddingTop;
+    padding-right: $pf-c-box__content--PaddingRight;
+    padding-bottom: $pf-c-box__content--PaddingBottom;
+    padding-left: $pf-c-box__content--PaddingLeft;
+    font-size: $pf-c-box__content--FontSize;
+    border-top: 1px dashed $pf-global--danger-color; // FOR DISCUSSION PURPOSES ONLY
+    border-bottom: 1px dashed $pf-global--danger-color; // FOR DISCUSSION PURPOSES ONLY
+  }
+
+  // Footer
+  &__footer {
+    padding-top: $pf-c-box__footer--PaddingTop;
+    padding-right: $pf-c-box__footer--PaddingRight;
+    padding-bottom: $pf-c-box__footer--PaddingBottom;
+    padding-left: $pf-c-box__footer--PaddingLeft;
+    font-size: $pf-c-box__footer--FontSize;
+  }
+}
+
