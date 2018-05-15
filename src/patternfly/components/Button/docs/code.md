@@ -6,7 +6,7 @@ Always add a modifier class to add color to the button.
 
 An active state button will appear pressed when active. There’s no need to add a class to `<button>`s as they use a pseudo-class. However, if you are using a button as a toggle, you can still force the same active appearance with `pf-is-active` (and include the `aria-pressed="true"`) should you need to replicate the state programmatically.
 
-Disabled buttons should include the `disabled` attribute to indicate the state of the element to assistive technologies.
+Disabled buttons should include the `disabled="disabled"` attribute to indicate the state of the element to assistive technologies.
 
 ## Usage
 
