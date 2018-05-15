@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - "8"
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
+  local_dir: public
+
+before_script:
+  - npm install -g gulp-cli
+
+script:
+  - npm run lint:styles
+  - npm run build
+
+before_deploy:
+  - cd $TRAVIS_BUILD_DIR
