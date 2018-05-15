@@ -302,6 +302,8 @@ States of a component should be included as a nested element. This includes hove
 }
 ```
 
+Classes that duplicate a state should be named with the prefix `pf-is-`. For example, a class `pf-is-active` can be used to apply the `:active` styling. 
+
 #### Sass variables
 
 We create global Sass variables to keep a Bootstrap theme in sync. These values also inform our component level variables .

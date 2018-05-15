@@ -1,5 +1,11 @@
-<button class="pf-c-button {{ btnClass }}">
+<button class="pf-c-button {{ btnClass }}" 
+  {{#if btnAttributes}}
+    {{{ btnAttributes }}} 
+  {{/if}} 
+  >
+
   {{#if @partial-block}}
     {{> @partial-block }}
   {{/if}}
+  
 </button>

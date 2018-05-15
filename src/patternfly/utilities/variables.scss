@@ -117,11 +117,12 @@ $pf-global--link--TextDecoration--hover:  underline !default;
 
 
 // Borders
-$pf-global--BorderWidth--md:         1px !default;
+$pf-global--BorderWidth--sm:     1px !default;
+$pf-global--BorderWidth--md:     2px !default;
 $pf-global--BorderWidth--lg:     3px !default;
 $pf-global--BorderColor--dark:   $pf-color-black-400 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
-
+$pf-global--BorderRadius:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Fonts
 
