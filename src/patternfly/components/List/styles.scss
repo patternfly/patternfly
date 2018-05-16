@@ -1,31 +1,66 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-c-list__element--modifier--state--PropertyCamelCase
+$pf-c-list--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-list--PaddingLeft: $pf-global--spacer--lg !default;
+$pf-c-list--li--MarginTop: $pf-global--spacer--sm !default;
 
-// The value of component scoped variables is always defined by a global variable:
-:root {
-  // Example block variable
-  --pf-c-list--Color: var(--pf-global--dark--Color);
+// unordered list
+$pf-c-list--is-unordered--MarginTop: $pf-global--spacer--md !default;
+$pf-c-list--is-unordered--MarginLeft: $pf-global--spacer--lg !default;
+$pf-c-list--is-unordered--ListStyle: $global-ListStyle !default;
+$pf-c-list--is-unordered--nested--MarginTop: $pf-global--spacer--sm !default;
+$pf-c-list--is-unordered--nested--MarginLeft: $pf-global--spacer--sm !default;
 
-  // Example element variable
-  --pf-c-list_title--FontSize: var($pf-global--FontSize--xxl);
+// ordered list
+$pf-c-list--is-ordered--MarginTop: $pf-global--spacer--md !default;
+$pf-c-list--is-ordered--MarginLeft: $pf-global--spacer--lg !default;
+$pf-c-list--is-ordered--nested--MarginTop: $pf-global--spacer--sm !default;
+$pf-c-list--is-ordered--nested--MarginLeft: $pf-global--spacer--sm !default;
 
-  // Example modifier variable
-  --pf-c-list--is-danger--BackgroundColor: var(--pf-global--danger-color);
-}
+// Description list
+$pf-c-list--is-description--dd--MarginBottom: $pf-global--spacer--sm !default;
+$pf-c-list--is-description--dd--MarginLeft: $pf-global--spacer--lg !default;
 
 .pf-c-list {
-  color: var(--pf-c-list--Color, #292e34);
+  padding-left: $pf-c-list--PaddingLeft;
+  margin-bottom: $pf-c-list--MarginBottom;
 
-  // Element
-  &_title {
-    font-size: var(--pf-c-list_title--FontSize, 2rem);
+  li + li {
+    margin-top: $pf-c-list--li--MarginTop;
   }
 
-  // Modifier
-  &.is-danger {
-    background-color: var(--pf-c-list--is-danger--BackgroundColor, #c00);
+  &.pf-is-unordered {
+    margin: 0;
+    margin-top: $pf-c-list--is-unordered--MarginTop;
+    margin-left: $pf-c-list--is-unordered--MarginLeft;
+    list-style: $pf-c-list--is-unordered--ListStyle;
+
+    ul {
+      margin-top: $pf-c-list--is-unordered--nested--MarginTop;
+      margin-left: $pf-c-list--is-unordered--nested--MarginLeft;
+    }
+  }
+
+  &.pf-is-ordered {
+    margin: 0;
+    margin-top: $pf-c-list--is-ordered--MarginTop;
+    margin-left: $pf-c-list--is-ordered--MarginLeft;
+
+    ol {
+      margin-top: $pf-c-list--is-ordered--nested--MarginTop;
+      margin-left: $pf-c-list--is-ordered--nested--MarginLeft;
+    }
+  }
+
+  &.pf-is-description {
+
+    dd {
+      margin-bottom: $pf-c-list--is-description--dd--MarginBottom;
+      margin-left: $pf-c-list--is-description--dd--MarginLeft;
+    }
+  }
+
+  &.pf-has-no-margin {
+    margin: 0;
   }
 }
-

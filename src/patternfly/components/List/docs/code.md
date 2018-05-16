@@ -1,17 +1,11 @@
-## Overview
-
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
-## Accessibility
-
-Write accessibility, aria tags, tab index and other notes to make this component accessible.
+This component styles the list. See the content component for larger blocks of content.
 
 ## Usage
 
-| Class | Usage |
-| -- | -- |
-| `.class-name-here` **Applied to:** `<tags-here>` |  **Outcome:** Outcome-here **Required:** Yes/No **Remarks:** Remarks-here |
-| Example: `.btn` **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
-| `.btn-secondary` **Applied to:** `.btn` | **Outcome:** Adds secondary color **Required:** Yes |
+| Class | Applied | Outcome |
+| -- | -- | -- |
+| `.pf-c-list` | `<ul>`,`<ol>`,`<dl>` |  Initiates a list. Always use it with a modifier class. |
+| `.pf-is-unordered` | `.pf-c-list` | Modifies for unordered list styles |
+| `.pf-is-ordered` | `.pf-c-list` | Modifies for ordered list styles |
+| `.pf-is-description` | `.pf-c-list` | Modifies for description list styles |
+| `.pf-has-no-margin` | `.pf-c-list` | Removes margin on list |

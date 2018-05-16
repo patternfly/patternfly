@@ -1,0 +1,12 @@
+{{#> list  listType="ul" styleModifier="pf-is-unordered"}}
+    <li>Unordered List Item</li>
+    <li>Unordered List Item
+        {{#> list  listType="ul" styleModifier="pf-is-unordered"}}
+          <li>Nested Unordered list item</li>
+          <li>Nested Unordered list item</li>
+        {{/list}}
+    </li>
+    <li>Unordered List Item</li>
+    <li>Unordered List Item</li>
+    <li>Unordered List Item</li>
+{{/list}}
