@@ -82,5 +82,6 @@ module.exports = {
   siteMetadata: {
     title: 'PF Next'
   },
+  pathPrefix: '/patternfly-next',
   plugins
 };
