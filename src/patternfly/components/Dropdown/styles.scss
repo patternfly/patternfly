@@ -7,18 +7,16 @@ $pf-c-dropdown__toggle--PaddingBottom: $pf-global--spacer--xs !default;
 $pf-c-dropdown__toggle--PaddingLeft: $pf-global--spacer--sm !default;
 $pf-c-dropdown__toggle--FontSize: $pf-global--FontSize--md !default;
 $pf-c-dropdown__toggle--BackgroundColor: $pf-global--BackgroundColor--light-100 !default;
-$pf-c-dropdown__toggle--BorderWidth: $pf-global--BorderWidth--md !default;
+$pf-c-dropdown__toggle--BorderWidth: $pf-global--BorderWidth--sm !default;
 $pf-c-dropdown__toggle--BorderColor: $pf-global--Color--dark-200 !default;
 $pf-c-dropdown__toggle--Color: $pf-global--Color--dark-100 !default;
 
-$pf-c-dropdown__toggle--hover--BorderWidth: 2px !default;
-// replace with variable when Buttons PR is merged
+$pf-c-dropdown__toggle--hover--BorderWidth: $pf-global--BorderWidth--md !default;
 
 $pf-c-dropdown__toggle--is-expanded--BorderColor: $pf-global--Color--active !default;
-$pf-c-dropdown__toggle--is-expanded--BorderWidth: 2px !default;
-// replace with variable when Buttons PR is merged
+$pf-c-dropdown__toggle--is-expanded--BorderWidth: $pf-global--BorderWidth--md !default;
 
-// Toggle Chevron
+// Toggle Arrow
 $pf-c-dropdown__arrow--MarginLeft: $pf-global--spacer--md !default;
 $pf-c-dropdown__arrow--BorderWidth: $pf-global--BorderWidth--md !default;
 
