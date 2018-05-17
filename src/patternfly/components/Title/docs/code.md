@@ -1,9 +1,8 @@
 ## Overview
-When you don't want to use the Content component and just want to use single title styles.
-
+The title component applies top and bottom margins, font-weight, font-size, and line-height to titles.
 ## Usage
 
-| Class | Applied | Outcomete |
+| Class | Applied | Outcome
 | -- | -- | -- |
 | `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. |
 | `.pf-is-xxxxl` | `.pf-c-title` | Modifies for xxxxl title styles |
@@ -13,4 +12,4 @@ When you don't want to use the Content component and just want to use single tit
 | `.pf-is-lg` | `.pf-c-title` | Modifies for lg title styles |
 | `.pf-is-md` | `.pf-c-title` | Modifies for md title styles |
 | `.pf-is-sm` | `.pf-c-title` | Modifies for sm title styles |
-| `.pf-has-margin` | `.pf-c-title`, `.pf-is-*` | adds top and bottom margins, always use with a title size modifier |
+| `.pf-has-margin` | `.pf-c-title` | adds top and bottom margins, always use with a title size modifier |
