@@ -1,14 +1,18 @@
 ## Overview
 
 ## Accessibility
- This uses `aria-selected="true"` and `aria-disabled="true"` for their respective roles.
+
+| Attribute | Applied | Outcome |
+| -- | -- | -- |
+| `aria-selected="true"` | `.pf-is-active` |  Indicates the selected state of the element to assistive technologies |
+| `aria-disabled="true"` | `.pf-is-disabled` |  Indicates the disabled state of the element to assistive technologies |
 
 ## Usage
 
-| Class | Usage |
-| -- | -- |
-| `.pf-c-secondary-nav` **Applied to:** `<ul>` |  **Outcome:** Applies default styling to parent **Required:** Yes |
-| `.pf-c-secondary-nav__item` **Applied to:** `<li>` |  **Outcome:** Applies default styling to direct child **Required:** Yes |
-| `.pf-c-secondary-nav__link` **Applied to:** `<a>` | **Outcome:** Applies default styling to direct link **Required:** Yes |
-| `.pf-is-active` **Applied to:** `<a>` | **Outcome:** Applies styling to active link **Required:** Yes |
-| `.pf-is-disabled` **Applied to:** `<a>` | **Outcome:** Applies styling to disabled link **Required:** Yes |
+| Class | Applied | Outcomete |
+| -- | -- | -- |
+| `.pf-c-secondary-nav` | `<ul>` |  Applies default styling to parent |
+| `.pf-c-secondary-nav__item` | `<li>` |  Applies default styling to direct child |
+| `.pf-c-secondary-nav__link` | `<a>` | Applies default styling to direct link |
+| `.pf-is-active` | `<a>` | Applies styling to active link |
+| `.pf-is-disabled` | `<a>` | Applies styling to disabled link |

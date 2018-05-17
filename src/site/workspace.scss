@@ -187,18 +187,31 @@
 }
 
 .Documentation {
-  &__section td {
+  &__section {
+    margin-bottom: 2rem;
+  }
+  code {
+    padding: .25em .75em;
+    color: #004368;
+    white-space: nowrap;
+    background-color: #def3ff;
+    border-radius: .5em;
+  }
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  table, td, th, tr {
     padding: .5em;
     vertical-align: top;
-    code {
-      padding: .25em .75em;
-      color: #004368;
-      white-space: nowrap;
-      background-color: #def3ff;
-      border-radius: .5em;
-    }
+    border: 1px solid #ccc;
   }
+
+  tr:nth-child(even) {background: #f1f1f1}
+  
   h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: 1.25em;
   }
 }
