@@ -4,6 +4,6 @@ A box is a generic rectangular container that can be used to build other compone
 
 ## Usage
 
-| Class | Applies to | Usage | Notes
-| -- | -- | -- | -- |
-| `.pf-c-box` | `<div>` | Creates a box containing content |  |
+| Class | Applied | Outcome |
+| -- | -- | -- |
+| `.pf-c-box` | `<div>` | Creates a box containing content |
