@@ -1,0 +1,58 @@
+@import "../../patternfly-utilities";
+
+$pf-c-list--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-list--MarginTop: $pf-global--spacer--md !default;
+$pf-c-list--li--MarginTop: $pf-global--spacer--sm !default;
+
+// unordered list
+$pf-c-list--is-unordered--PaddingLeft: $pf-global--spacer--lg !default;
+$pf-c-list--is-unordered--MarginTop: $pf-global--spacer--md !default;
+$pf-c-list--is-unordered--MarginLeft: $pf-global--spacer--lg !default;
+$pf-c-list--is-unordered--ListStyle: $global-ListStyle !default;
+$pf-c-list--is-unordered__nested--MarginTop: $pf-global--spacer--sm !default;
+
+// ordered list
+$pf-c-list--is-ordered--PaddingLeft: $pf-global--spacer--lg !default;
+$pf-c-list--is-ordered--MarginTop: $pf-global--spacer--md !default;
+$pf-c-list--is-ordered--MarginLeft: $pf-global--spacer--lg !default;
+$pf-c-list--is-ordered__nested--MarginTop: $pf-global--spacer--sm !default;
+
+// Description list
+$pf-c-list--is-description__dd--MarginBottom: $pf-global--spacer--sm !default;
+$pf-c-list--is-description__dd--MarginLeft: $pf-global--spacer--lg !default;
+
+.pf-c-list {
+  &.pf-has-margins {
+    margin-top: $pf-c-list--MarginTop;
+    margin-bottom: $pf-c-list--MarginBottom;
+  }
+
+  li + li {
+    margin-top: $pf-c-list--li--MarginTop;
+  }
+
+  &.pf-is-unordered {
+    padding-left: $pf-c-list--is-unordered--PaddingLeft;
+    list-style: $pf-c-list--is-unordered--ListStyle;
+
+    ul {
+      margin-top: $pf-c-list--is-unordered__nested--MarginTop;
+    }
+  }
+
+  &.pf-is-ordered {
+    padding-left: $pf-c-list--is-ordered--PaddingLeft;
+
+    ol {
+      margin-top: $pf-c-list--is-ordered__nested--MarginTop;
+    }
+  }
+
+  &.pf-is-description {
+
+    dd {
+      margin-bottom: $pf-c-list--is-description__dd--MarginBottom;
+      margin-left: $pf-c-list--is-description__dd--MarginLeft;
+    }
+  }
+}
