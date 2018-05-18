@@ -1,6 +1,7 @@
 @import "../../patternfly-utilities";
-
-$pf-l-split--has-gutter--MarginRight: $pf-global--gutter;
+:root {
+  --pf-l-split--has-gutter--MarginRight: var(--pf-global--gutter);
+}
 
 .pf-l-split {
   display: flex;
@@ -9,7 +10,7 @@ $pf-l-split--has-gutter--MarginRight: $pf-global--gutter;
   margin: 0;
 
   &.pf-has-gutter > *:not(:last-child) {
-    margin-right: $pf-l-split--has-gutter--MarginRight;
+    margin-right: var(--pf-l-split--has-gutter--MarginRight);
   }
 
   &__item {

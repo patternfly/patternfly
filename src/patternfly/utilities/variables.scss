@@ -165,3 +165,130 @@ $global-ListStyle: disc outside !default;
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
 }
+
+/* stylelint-disable */
+
+:root {
+  // Colors
+  // Background color
+  --pf-global--BackgroundColor--light-100: $pf-global--BackgroundColor--light-100;
+  --pf-global--BackgroundColor--light-200: $pf-global--BackgroundColor--light-200;
+  --pf-global--BackgroundColor--light-300: $pf-global--BackgroundColor--light-300;
+  --pf-global--BackgroundColor--dark-100: $pf-global--BackgroundColor--dark-100;
+  --pf-global--BackgroundColor--dark-200: $pf-global--BackgroundColor--dark-200;
+
+  // Text color
+  --pf-global--Color--light-100: $pf-global--Color--light-100;
+  --pf-global--Color--light-200: $pf-global--Color--light-200;
+  --pf-global--Color--dark-100: $pf-global--Color--dark-100;
+  --pf-global--Color--dark-200: $pf-global--Color--dark-200;
+
+  // States color
+  --pf-global--Color--hover: $pf-global--Color--hover;
+  --pf-global--BackgroundColor--hover: $pf-global--BackgroundColor--hover;
+  --pf-global--BorderColor--hover: $pf-global--BorderColor--hover;
+  --pf-global--Color--active: $pf-global--Color--active;
+  --pf-global--BackgroundColor--active: $pf-global--BackgroundColor--active;
+  --pf-global--BorderColor--active: $pf-global--BorderColor--active;
+  --pf-global--Color--disabled: $pf-global--Color--disabled;
+  --pf-global--BackgroundColor--disabled: $pf-global--BackgroundColor--disabled;
+  --pf-global--BorderColor--disabled: $pf-global--BorderColor--disabled;
+
+  // Theme color
+  --pf-global--primary-color: $pf-global--primary-color;
+  --pf-global--primary-color--dark: $pf-global--primary-color--dark;
+  --pf-global--secondary-color: $pf-global--secondary-color;
+  --pf-global--success-color: $pf-global--success-color;
+  --pf-global--success-color--dark: $pf-global--success-color--dark;
+  --pf-global--info-color: $pf-global--info-color;
+  --pf-global--info-color--dark: $pf-global--info-color--dark;
+  --pf-global--warning-color: $pf-global--warning-color;
+  --pf-global--warning-color--dark: $pf-global--warning-color--dark;
+  --pf-global--danger-color: $pf-global--danger-color;
+  --pf-global--danger-color--dark: $pf-global--danger-color--dark;
+
+  // Shadows
+  --pf-global--BoxShadow--sm: $pf-global--BoxShadow--sm;
+  --pf-global--BoxShadow: $pf-global--BoxShadow;
+  --pf-global--BoxShadow--lg: $pf-global--BoxShadow--lg;
+  --pf-global--BoxShadow--sm-right: $pf-global--BoxShadow--sm-right;
+  --pf-global--BoxShadow--sm-left: $pf-global--BoxShadow--sm-left;
+  --pf-global--BoxShadow--sm-bottom: $pf-global--BoxShadow--sm-bottom;
+  --pf-global--BoxShadow--sm-top: $pf-global--BoxShadow--sm-top;
+  --pf-global--BoxShadow-right: $pf-global--BoxShadow-right;
+  --pf-global--BoxShadow-left: $pf-global--BoxShadow-left;
+  --pf-global--BoxShadow-bottom: $pf-global--BoxShadow-bottom;
+  --pf-global--BoxShadow-top: $pf-global--BoxShadow-top;
+  --pf-global--BoxShadow--lg-right: $pf-global--BoxShadow--lg-right;
+  --pf-global--BoxShadow--lg-left: $pf-global--BoxShadow--lg-left;
+  --pf-global--BoxShadow--lg-bottom: $pf-global--BoxShadow--lg-bottom;
+  --pf-global--BoxShadow--lg-top: $pf-global--BoxShadow--lg-top;
+  --pf-global--BoxShadow--inset: $pf-global--BoxShadow--inset;
+
+  // Fontpath
+  --pf-global--font-path: $pf-global--font-path;
+
+  // Spacers
+  --pf-global--spacer--xs: $pf-global--spacer--xs;
+  --pf-global--spacer--sm: $pf-global--spacer--sm;
+  --pf-global--spacer--md: $pf-global--spacer--md;
+  --pf-global--spacer--lg: $pf-global--spacer--lg;
+  --pf-global--spacer--xl: $pf-global--spacer--xl;
+  --pf-global--spacer--xxl: $pf-global--spacer--xxl;
+  --pf-global--spacer--xxxl: $pf-global--spacer--xxxl;
+
+  // Gutter
+  --pf-global--gutter: $pf-global--gutter;
+
+  // Grid breakpoints
+  --pf-global--breakpoint--xs: $pf-global--breakpoint--xs;
+  --pf-global--breakpoint--sm: $pf-global--breakpoint--sm;
+  --pf-global--breakpoint--md: $pf-global--breakpoint--md;
+  --pf-global--breakpoint--lg: $pf-global--breakpoint--lg;
+  --pf-global--breakpoint--xl: $pf-global--breakpoint--xl;
+
+  // Links
+  --pf-global--link--Color: $pf-global--link--Color;
+  --pf-global--link--TextDecoration: $pf-global--link--TextDecoration;
+  --pf-global--link--Color--hover: $pf-global--link--Color--hover;
+  --pf-global--link--TextDecoration--hover: $pf-global--link--TextDecoration--hover;
+
+  // Borders
+  --pf-global--BorderWidth--sm: $pf-global--BorderWidth--sm;
+  --pf-global--BorderWidth--md: $pf-global--BorderWidth--md;
+  --pf-global--BorderWidth--lg: $pf-global--BorderWidth--lg;
+  --pf-global--BorderColor--dark: $pf-global--BorderColor--dark;
+  --pf-global--BorderColor--light: $pf-global--BorderColor--light;
+  --pf-global--BorderRadius: $pf-global--BorderRadius;
+
+  // Fonts
+
+  // Font family
+  --pf-global--FontFamily--sans-serif: $pf-global--FontFamily--sans-serif;
+  --pf-global--FontFamily--monospace: $pf-global--FontFamily--monospace;
+
+  // Font size
+  --pf-global--FontSize--xxxxl: $pf-global--FontSize--xxxxl;
+  --pf-global--FontSize--xxxl: $pf-global--FontSize--xxxl;
+  --pf-global--FontSize--xxl: $pf-global--FontSize--xxl;
+  --pf-global--FontSize--xl: $pf-global--FontSize--xl;
+  --pf-global--FontSize--lg: $pf-global--FontSize--lg;
+  --pf-global--FontSize--md: $pf-global--FontSize--md;
+  --pf-global--FontSize--sm: $pf-global--FontSize--sm;
+  --pf-global--FontSize--xs: $pf-global--FontSize--xs;
+
+  // Font weight
+  --pf-global--FontWeight--light: $pf-global--FontWeight--light;
+  --pf-global--FontWeight--normal: $pf-global--FontWeight--normal;
+  --pf-global--FontWeight--semi-bold: $pf-global--FontWeight--semi-bold;
+  --pf-global--FontWeight--bold: $pf-global--FontWeight--bold;
+
+  // Line height
+  --pf-global--LineHeight--sm: $pf-global--LineHeight--sm;
+  --pf-global--LineHeight--md: $pf-global--LineHeight--md;
+
+  // List
+  --global-ListStyle: $global-ListStyle;
+}
+
+/* stylelint-enable */

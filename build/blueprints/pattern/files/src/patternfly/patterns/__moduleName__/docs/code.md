@@ -6,12 +6,14 @@ For example for buttons: Always add a modifier class to add color to the button.
 
 ## Accessibility
 
-Write accessibility, aria tags, tab index and other notes to make this component accessible.
+| Attribute | Applied To | Outcome |
+| -- | -- | -- |
+| `role` or `aria` | `{{bemName}}` |  accessibility notes. |
+
 
 ## Usage
 
-| Class | Usage |
-| -- | -- |
-| `.class-name-here` **Applied to:** `<tags-here>` |  **Outcome:** Outcome-here **Required:** Yes/No **Remarks:** Remarks-here |
-| Example: `.btn` **Applied to:** `<a>`, `<button>` |  **Outcome:** Initiates a button **Required:** Yes **Remarks:** Always use it with a modifier class. |
-| `.btn-secondary` **Applied to:** `.btn` | **Outcome:** Adds secondary color **Required:** Yes |
+| Class | Applied To | Outcome |
+| -- | -- | -- |
+| `.class-name-here` | `<tags-here>` |  Outcome and remarks |
+| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
