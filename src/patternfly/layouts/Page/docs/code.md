@@ -4,14 +4,14 @@ This layout provides the basic chrome for a page, including sidebar, header and 
 
 ## Accessibility
 
-| Attribute | Applied | Outcome |
+| Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role="banner"` | `.pf-l-page__header` | .  |
 | `role="main"` | `.pf-l-page__main` | .  |
 
 ## Usage
 
-| Class | Applied | Outcomete |
+| Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-l-page` | `<div>` |   Declares the page layout chrome. |
 | `.pf-l-page__header` | `<header>` |   Declares the page header. |

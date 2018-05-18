@@ -6,14 +6,14 @@ For example for buttons: Always add a modifier class to add color to the button.
 
 ## Accessibility
 
-| Attribute | Applied | Outcome |
+| Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `{{bemName}}` |  accecibility notes. |
+| `role` or `aria` | `{{bemName}}` |  accessibility notes. |
 
 
 ## Usage
 
-| Class | Applied | Outcomete |
+| Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.class-name-here` | `<tags-here>` |  Outcome and remarks |
 | Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |

@@ -4,14 +4,15 @@ Always add a modifier class to add color to the button.
 
 ## Accessibility
 
-| Attribute | Applied | Outcome |
+| Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `disabled="disabled"` | `.pf-c-button` | Indicates the disabled state of the element to assistive technologies |
-| `aria-pressed="true or false"` | `.pf-c-button` | If you are using a button as a toggle, you can still force the same active appearance with `pf-is-active` (and include the `aria-pressed=""`) should you need to replicate the state programmatically. |
+| `disabled="disabled"` | `.pf-c-button` | Indicates the disabled state of the `button` to assistive technologies |
+| `aria-pressed="true or false"` | Indicates that the button is a toggle. When set to "true", `pf-is-active` should also be set so that the button displays in an active state. |
+
 
 ## Usage
 
-| Class | Applied | Outcomete |
+| Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. |
 | `.pf-is-primary` | `.pf-c-button` | Modifies for primary styles |

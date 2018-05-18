@@ -1,16 +1,16 @@
 ## Overview
 
-Always add a modifier class. Do not use `.pf-c-alert` on it's own.
+Always add a modifier class. Do not use `.pf-c-alert` on its own.
 
 ## Accessibility
 
-| Attribute | Applied | Outcome |
+| Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role="alert"` | `.pf-c-alert` |  Brings immediate attention to the user. |
 
 ## Usage
 
-| Class | Applied | Outcomete |
+| Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class |
 | `.pf-is-success` | `.pf-c-alert` |  Applies success styling |
