@@ -7,7 +7,7 @@ Always add a modifier class to add color to the button.
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `disabled="disabled"` | `.pf-c-button` | Indicates the disabled state of the `button` to assistive technologies |
-| `aria-pressed="true or false"` | Indicates that the button is a toggle. When set to "true", `pf-is-active` should also be set so that the button displays in an active state. |
+| `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-is-active` should also be set so that the button displays in an active state. |
 
 
 ## Usage
