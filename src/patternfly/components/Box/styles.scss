@@ -11,18 +11,8 @@ $pf-c-box--BoxShadow: $pf-global--BoxShadow--sm !default;
   background-color: $pf-c-box--BackgroundColor;
   box-shadow: $pf-c-box--BoxShadow;
 
-  &.pf-is-fullbleed {
+  &.pf-has-no-Padding {
     padding: 0;
-    & > * {
-      padding-right: $pf-c-box--Padding;
-      padding-left: $pf-c-box--Padding;
-      &:first-child {
-        padding-top: $pf-c-box--Padding;
-      }
-      &:last-child {
-        padding-bottom: $pf-c-box--Padding;
-      }
-    }
   }
 }
 
