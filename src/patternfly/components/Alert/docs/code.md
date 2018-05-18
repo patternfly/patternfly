@@ -1,16 +1,19 @@
 ## Overview
 
-Always add a modifier class. Do not use `.pf-c-alert` on it's own.
+Always add a modifier class. Do not use `.pf-c-alert` on its own.
 
 ## Accessibility
-`role="alert"` is used to bring immediate attention to the user.  
+
+| Attribute | Applied To | Outcome |
+| -- | -- | -- |
+| `role="alert"` | `.pf-c-alert` |  Brings immediate attention to the user. |
 
 ## Usage
 
-| Class | Usage |
-| -- | -- |
-| `.pf-c-alert` **Applied to:** `<div>` |  **Outcome:** Applies default alert styling **Required:** Yes **Remarks:** Always use with a modifier class|
-|`.pf-is-success` **Applied to:** `<div>` |  **Outcome:** Applies success styling **Required:** No **Remarks:** |
-|`.pf-is-danger` **Applied to:** `<div>` |  **Outcome:** Applies danger styling **Required:** No **Remarks:** |
-|`.pf-is-warning` **Applied to:** `<div>` |  **Outcome:** Applies warning styling **Required:** No **Remarks:** |
-|`.pf-is-info` **Applied to:** `<div>` |  **Outcome:** Applies info styling **Required:** No **Remarks:** |
+| Class | Applied To | Outcome |
+| -- | -- | -- |
+| `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class |
+| `.pf-is-success` | `.pf-c-alert` |  Applies success styling |
+| `.pf-is-danger` | `.pf-c-alert` |  Applies danger styling |
+| `.pf-is-warning` | `.pf-c-alert` |  Applies warning styling |
+| `.pf-is-info` | `.pf-c-alert` |  Applies info styling |
