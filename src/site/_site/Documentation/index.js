@@ -10,7 +10,7 @@ export default class Documentation extends React.Component {
   componentDidMount() {
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
-      isFull: window.location.pathname.endsWith('-full/')
+      isFull: window.location.pathname.indexOf('-full') > 0
     });
   }
 
