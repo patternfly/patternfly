@@ -161,7 +161,13 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       page.context.name = pageName;
       page.context.title = pageTitle;
 
-      page.layout = 'demo';
+      let demoPage = Object.assign({}, page);
+      demoPage.context.slug = pageSlug + 'full';
+      demoPage.context.title = pageTitle + ' Full';
+      demoPage.layout = 'demo';
+      let path = demoPage.path;
+      demoPage.path = path.substr(0, path.length - 1) + '-full/';
+      createPage(demoPage);
     }
 
     createPage(page);
