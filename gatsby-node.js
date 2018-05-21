@@ -161,12 +161,12 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       page.context.name = pageName;
       page.context.title = pageTitle;
 
-      let demoPage = Object.assign({}, page);
-      demoPage.context.slug = pageSlug + 'full';
-      demoPage.context.title = pageTitle + ' Full';
+      const demoPage = Object.assign({}, page);
+      demoPage.context.slug = `${pageSlug}full`;
+      demoPage.context.title = `${pageTitle} Full`;
       demoPage.layout = 'demo';
-      let path = demoPage.path;
-      demoPage.path = path.substr(0, path.length - 1) + '-full/';
+      const nodePath = demoPage.path;
+      demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
       createPage(demoPage);
     }
 

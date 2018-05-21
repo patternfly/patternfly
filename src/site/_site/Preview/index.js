@@ -6,12 +6,15 @@ export default class Preview extends React.Component {
   constructor(props) {
     super(props);
     const { viewport = '' } = props;
-    this.isDemo = false;
-    this.state = { viewport };
-    if (window.location.pathname.startsWith('/demo')) {
-      this.isDemo = true;
-    }
-    this.path = window.location.pathname;
+    this.state = { viewport, isDemo: false, path: '' };
+  }
+
+  componentDidMount() {
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({
+      isDemo: window.location.pathname.startsWith('/demo'),
+      path: window.location.pathname
+    });
   }
 
   activateViewport(viewportType) {
@@ -22,16 +25,23 @@ export default class Preview extends React.Component {
   }
 
   renderFullPageLink() {
-    if (this.isDemo) {
-      let fullPath = this.path.substr(0, this.path.length - 1) + '-full/';
+    if (this.state.isDemo) {
+      const fullPath = `${this.state.path.substr(
+        0,
+        this.state.path.length - 1
+      )}-full/`;
       return (
-        <Link to={fullPath} target="_blank" title="Open in new window" className="Preview__viewport-link">
+        <Link
+          to={fullPath}
+          target="_blank"
+          title="Open in new window"
+          className="Preview__viewport-link"
+        >
           <i className="fas fa-external-link-alt" />
         </Link>
       );
-    } else {
-      return;
     }
+    return null;
   }
 
   render() {

@@ -11,7 +11,7 @@ const Navigation = ({ links, isHorizontal = false }) => {
       const { path, text, className } = navItem;
       const isFullPage = path.endsWith('-full/');
       if (isFullPage) {
-        return;
+        return null;
       }
       return (
         <li
