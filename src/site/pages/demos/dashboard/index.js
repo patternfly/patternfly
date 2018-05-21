@@ -1,8 +1,15 @@
 import React from 'react';
 import './styles.scss';
 import Template from './template.hbs';
+import Example from '@siteComponents/Example';
+import Documentation from '@siteComponents/Documentation';
 
 export default () => {
-  const template = { __html: Template() };
-  return <div className="pf-d-dashboard" dangerouslySetInnerHTML={template} />;
+  const template = Template();
+
+  return (
+    <Documentation>
+      <Example className="pf-d-dashboard" heading="Dashboard Demo">{template}</Example>
+    </Documentation>
+  );
 };

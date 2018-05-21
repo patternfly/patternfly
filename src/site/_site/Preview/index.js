@@ -1,14 +1,19 @@
 import React from 'react';
-
+import Link from 'gatsby-link';
 import './styles.scss';
 
 export default class Preview extends React.Component {
   constructor(props) {
     super(props);
     const { viewport = '' } = props;
+    this.state = { viewport, path: '' };
+  }
 
-    this.state = { viewport };
-    this.activateViewport = this.activateViewport.bind(this);
+  componentDidMount() {
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({
+      path: window.location.pathname
+    });
   }
 
   activateViewport(viewportType) {
@@ -16,6 +21,23 @@ export default class Preview extends React.Component {
       viewport:
         prevState.viewport === `is-${viewportType}` ? '' : `is-${viewportType}`
     }));
+  }
+
+  renderFullPageLink() {
+    const fullPath = `${this.state.path.substr(
+      0,
+      this.state.path.length - 1
+    )}-full/`;
+    return (
+      <Link
+        to={fullPath}
+        target="_blank"
+        title="Open in new window"
+        className="Preview__viewport-link"
+      >
+        <i className="fas fa-external-link-alt" />
+      </Link>
+    );
   }
 
   render() {
@@ -57,6 +79,7 @@ export default class Preview extends React.Component {
             >
               <i className="fas fa-desktop" />
             </button>
+            {this.renderFullPageLink()}
           </div>
         </div>
         <div
