@@ -6,13 +6,12 @@ export default class Preview extends React.Component {
   constructor(props) {
     super(props);
     const { viewport = '' } = props;
-    this.state = { viewport, isDemo: false, path: '' };
+    this.state = { viewport, path: '' };
   }
 
   componentDidMount() {
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
-      isDemo: window.location.pathname.startsWith('/demo'),
       path: window.location.pathname
     });
   }
@@ -25,23 +24,20 @@ export default class Preview extends React.Component {
   }
 
   renderFullPageLink() {
-    if (this.state.isDemo) {
-      const fullPath = `${this.state.path.substr(
-        0,
-        this.state.path.length - 1
-      )}-full/`;
-      return (
-        <Link
-          to={fullPath}
-          target="_blank"
-          title="Open in new window"
-          className="Preview__viewport-link"
-        >
-          <i className="fas fa-external-link-alt" />
-        </Link>
-      );
-    }
-    return null;
+    const fullPath = `${this.state.path.substr(
+      0,
+      this.state.path.length - 1
+    )}-full/`;
+    return (
+      <Link
+        to={fullPath}
+        target="_blank"
+        title="Open in new window"
+        className="Preview__viewport-link"
+      >
+        <i className="fas fa-external-link-alt" />
+      </Link>
+    );
   }
 
   render() {

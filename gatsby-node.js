@@ -160,17 +160,18 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       page.context.slug = pageSlug;
       page.context.name = pageName;
       page.context.title = pageTitle;
-
-      const demoPage = Object.assign({}, page);
-      demoPage.context.slug = `${pageSlug}full`;
-      demoPage.context.title = `${pageTitle} Full`;
-      demoPage.layout = 'demo';
-      const nodePath = demoPage.path;
-      demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
-      createPage(demoPage);
     }
 
     createPage(page);
+
+    // create full demo page for each component
+    const demoPage = Object.assign({}, page);
+    // demoPage.context.slug = `${pageSlug}full`;
+    // demoPage.context.title = `${pageTitle} Full`;
+    demoPage.layout = 'demo';
+    const nodePath = demoPage.path;
+    demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
+    createPage(demoPage);
 
     resolve();
   });
