@@ -15,19 +15,19 @@
   --pf-c-button--BorderRadius: var(--pf-global--BorderRadius);
 
   // Hover state variables
-  --pf-c-button--hover--Color: var(--pf-global--primary-color--dark);
+  --pf-c-button--hover--Color: var(--pf-global--primary-color--200);
   --pf-c-button--hover--BackgroundColor: transparent;
   --pf-c-button--hover--BoxShadowColor: var(--pf-global--primary-color--dark);
   --pf-c-button--hover--BoxShadowSpread: var(--pf-global--BorderWidth--md);
 
   // Focus state variables
-  --pf-c-button--focus--Color: var(--pf-global--primary-color--dark);
+  --pf-c-button--focus--Color: var(--pf-global--primary-color--200);
   --pf-c-button--focus--BackgroundColor: transparent;
   --pf-c-button--focus--BoxShadowColor: var(--pf-global--primary-color--dark);
   --pf-c-button--focus--BoxShadowSpread: var(--pf-global--BorderWidth--md);
 
   // Active state variables
-  --pf-c-button--active--Color: var(--pf-global--primary-color--dark);
+  --pf-c-button--active--Color: var(--pf-global--primary-color--200);
   --pf-c-button--active--BackgroundColor: transparent;
   --pf-c-button--active--BoxShadowColor: var(--pf-global--primary-color--dark);
   --pf-c-button--active--BoxShadowSpread: var(--pf-global--BorderWidth--md);
