@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/patternfly-next",
   "description": "Assets, source, tooling, and content for PatternFly Next",
-  "version": "1.0.0-alpha.1",
+  "version": "0.0.0-development",
   "author": "Andres Galante",
   "keywords": [],
   "license": "MIT",
@@ -25,7 +25,8 @@
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.js": [
@@ -102,6 +103,7 @@
     "react-prism": "^4.3.2",
     "rehype-react": "^3.0.2",
     "scaffold-helper": "^1.0.0",
+    "semantic-release": "^15.4.1",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-config-standard": "^18.0.0",
@@ -113,5 +115,27 @@
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patternfly/patternfly-next.git"
+  },
+  "release": {
+    "branch": "release",
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "breaking", "release": "patch"},
+        {"type": "feat", "release": "patch"},
+        {"type": "fix", "release": "patch"},
+        {"type": "perf", "release": "patch"},
+        {"type": "docs", "release": "patch"},
+        {"type": "refactor", "release": "patch"}
+      ]
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "alpha"
   }
 }

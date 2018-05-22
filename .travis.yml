@@ -19,5 +19,8 @@ script:
   - npm run lint:styles
   - npm run build-ghpages
 
+after_success:
+  - ./build/deploy.sh
+
 before_deploy:
   - cd $TRAVIS_BUILD_DIR
