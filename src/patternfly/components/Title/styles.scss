@@ -41,13 +41,6 @@ $pf-c-title--is-md--LineHeight: $pf-global--LineHeight--md !default;
 $pf-c-title--is-md--FontSize: $pf-global--FontSize--md !default;
 $pf-c-title--is-md--FontWeight: $pf-global--FontWeight--semi-bold !default;
 
-// sm
-$pf-c-title--is-sm--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-sm--MarginBottom: $pf-global--spacer--xs !default;
-$pf-c-title--is-sm--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-title--is-sm--FontSize: $pf-global--FontSize--md !default;
-$pf-c-title--is-sm--FontWeight: $pf-global--FontWeight--semi-bold !default;
-
 .pf-c-title {
 
   &.pf-is {
@@ -115,17 +108,6 @@ $pf-c-title--is-sm--FontWeight: $pf-global--FontWeight--semi-bold !default;
       &.pf-has-margin {
         margin-top: $pf-c-title--is-md--MarginTop;
         margin-bottom: $pf-c-title--is-md--MarginBottom;
-      }
-    }
-
-    &-sm {
-      font-size: $pf-c-title--is-sm--FontSize;
-      font-weight: $pf-c-title--is-sm--FontWeight;
-      line-height: $pf-c-title--is-sm--LineHeight;
-
-      &.pf-has-margin {
-        margin-top: $pf-c-title--is-sm--MarginTop;
-        margin-bottom: $pf-c-title--is-sm--MarginBottom;
       }
     }
   }

@@ -11,5 +11,4 @@ The title component applies top and bottom margins, font-weight, font-size, and 
 | `.pf-is-xl` | `.pf-c-title` | Modifies for xl title styles |
 | `.pf-is-lg` | `.pf-c-title` | Modifies for lg title styles |
 | `.pf-is-md` | `.pf-c-title` | Modifies for md title styles |
-| `.pf-is-sm` | `.pf-c-title` | Modifies for sm title styles |
 | `.pf-has-margin` | `.pf-c-title` | adds top and bottom margins, always use with a title size modifier |
