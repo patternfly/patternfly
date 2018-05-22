@@ -5,8 +5,8 @@ import './styles.scss';
 export default class Preview extends React.Component {
   constructor(props) {
     super(props);
-    const { viewport = '' } = props;
-    this.state = { viewport, path: '' };
+    const { viewport = '', heading } = props;
+    this.state = { viewport, path: '', heading };
   }
 
   componentDidMount() {
@@ -27,7 +27,7 @@ export default class Preview extends React.Component {
     const fullPath = `${this.state.path.substr(
       0,
       this.state.path.length - 1
-    )}-full/`;
+    )}-full?component=${this.state.heading}`;
     return (
       <Link
         to={fullPath}
