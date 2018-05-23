@@ -26,7 +26,9 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "node test/test.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release pre && copy package.json dist && npm publish dist && semantic-release post",
+    "semantic-release-post": "semantic-release post",
+    "semantic-release-pre": "semantic-release pre"
   },
   "lint-staged": {
     "*.js": [
