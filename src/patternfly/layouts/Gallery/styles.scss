@@ -9,38 +9,14 @@
 }
 
 .pf-l-gallery {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: var(--pf-l-gallery--GridTemplateColumns);
 
   &__item {
     flex-basis: var(--pf-l-gallery__item--FlexBasis);
   }
 
-  // These are fallbacks for when grid is not supported.
-  // They add right and bottom margin to the child items in order to simulate the grid gap property.
-  &.pf-has-gutter > *:not(:last-child) {
-    margin-right: var(--pf-l-gallery--GridGap);
-  }
-
-  &.pf-has-gutter > * {
-    margin-bottom: var(--pf-l-gallery--GridGap);
-  }
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: var(--pf-l-gallery--GridTemplateColumns);
-
-    &.pf-has-gutter {
-      grid-gap: var(--pf-l-gallery--GridGap);
-    }
-
-    // The right and bottom margin must be reset from the non-grid fallback, which added them to simulate the grid gap.
-    &.pf-has-gutter > *:not(:last-child) {
-      margin-right: 0;
-    }
-
-    &.pf-has-gutter > * {
-      margin-bottom: 0;
-    }
+  &.pf-has-gutter {
+    grid-gap: var(--pf-l-gallery--GridGap);
   }
 }
