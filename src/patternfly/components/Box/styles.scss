@@ -1,18 +1,16 @@
 @import "../../patternfly-utilities";
 
-// Component variables 
+// Component variables
 $pf-c-box--Padding: $pf-global--spacer--xl !default;
 $pf-c-box--BackgroundColor: $pf-global--BackgroundColor--light-100 !default;
 $pf-c-box--BoxShadow: $pf-global--BoxShadow--sm !default;
-
 
 .pf-c-box {
   padding: $pf-c-box--Padding;
   background-color: $pf-c-box--BackgroundColor;
   box-shadow: $pf-c-box--BoxShadow;
 
-  &.pf-has-no-Padding {
+  &.pf-has-no-padding {
     padding: 0;
   }
 }
-
