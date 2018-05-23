@@ -1,13 +1,13 @@
-<div class="pf-c-dropdown{{#if expanded}} pf-is-expanded{{/if}} {{styleModifier}}">
-  <button id="{{id}}" class="pf-c-dropdown__toggle" aria-haspopup="true" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}">
+<div class="pf-c-dropdown{{#if pf-c-dropdown--IsExpanded}} pf-is-expanded{{/if}} {{pf-c-dropdown--Modifier}}">
+  <button id="{{id}}" class="pf-c-dropdown__toggle" aria-haspopup="true" aria-expanded="{{#if pf-c-dropdown--IsExpanded}}true{{else}}false{{/if}}">
     {{> @partial-block}}
   </button>
-  <div class="pf-c-dropdown__menu" role="menu" aria-labelledby="{{id}}" {{#unless expanded}}hidden="hidden"{{/unless}}>
+  <div class="pf-c-dropdown__menu" role="menu" aria-labelledby="{{id}}" {{#unless pf-c-dropdown--IsExpanded}}hidden="hidden"{{/unless}}>
     <a class="pf-c-dropdown__menu-item" role="menuitem" href="#">Link</a>
     <button class="pf-c-dropdown__menu-item" role="menuitem">Action</button>
     <a class="pf-c-dropdown__menu-item pf-is-disabled" role="menuitem" aria-disabled="true" tabindex="-1" href="#">Disabled Link</a>
     <button class="pf-c-dropdown__menu-item pf-is-disabled" role="menuitem" disabled="disabled">Disabled Action</button>
     <div class="pf-c-dropdown__separator" role="separator"></div>
-    <a class="pf-c-dropdown__menu-item" href="#">Separated Link</a>
+    <a class="pf-c-dropdown__menu-item" role="menuitem" href="#">Separated Link</a>
   </div>
 </div>
