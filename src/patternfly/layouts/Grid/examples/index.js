@@ -27,7 +27,7 @@ export default () => {
       <Example heading="Responsive grid">{gridResponsive}</Example>
       <Example heading="Nested grids">{gridNested}</Example>
       <Example heading="Offsets">{gridOffsets}</Example>
-      <Example heading="Row spans (not supported in IE11)">{gridRowspan}</Example>
+      <Example heading="Row spans">{gridRowspan}</Example>
     </Documentation>
   );
 };

@@ -1,102 +1,103 @@
 @import "../../patternfly-utilities";
 
-// Body
-$pf-c-content--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-content--FontSize: $pf-global--FontSize--md !default;
-$pf-c-content--FontWeight: $pf-global--FontWeight--normal !default;
+:root {
+  // Body
+  --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-content--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-content--FontWeight: var(--pf-global--FontWeight--normal);
 
-// h1 - Main title
-$pf-c-content--h1--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-content--h1--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--h1--LineHeight: $pf-global--LineHeight--sm !default;
-$pf-c-content--h1--FontSize: $pf-global--FontSize--xxxl !default;
-$pf-c-content--h1--FontWeight: $pf-global--FontWeight--normal !default;
+  // h1 - Main title
+  --pf-c-content--h1--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--h1--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-content--h1--FontSize: var(--pf-global--FontSize--xxxl);
+  --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--normal);
 
-// h2 - Secondary title
-$pf-c-content--h2--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-content--h2--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--h2--LineHeight: $pf-global--LineHeight--sm !default;
-$pf-c-content--h2--FontSize: $pf-global--FontSize--xxl !default;
-$pf-c-content--h2--FontWeight: $pf-global--FontWeight--normal !default;
+  // h2 - Secondary title
+  --pf-c-content--h2--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-content--h2--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-content--h2--FontSize: var(--pf-global--FontSize--xxl);
+  --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--normal);
 
-// h3 - Sub-title
-$pf-c-content--h3--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-content--h3--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--h3--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-content--h3--FontSize: $pf-global--FontSize--xl !default;
-$pf-c-content--h3--FontWeight: $pf-global--FontWeight--normal !default;
+  // h3 - Sub-title
+  --pf-c-content--h3--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-content--h3--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--h3--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-content--h3--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-content--h3--FontWeight: var(--pf-global--FontWeight--normal);
 
-// h4
-$pf-c-content--h4--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-content--h4--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--h4--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-content--h4--FontSize: $pf-global--FontSize--lg !default;
-$pf-c-content--h4--FontWeight: $pf-global--FontWeight--semi-bold !default;
+  // h4
+  --pf-c-content--h4--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-content--h4--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--h4--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-content--h4--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
-// h5
-$pf-c-content--h5--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-content--h5--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--h5--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-content--h5--FontSize: $pf-global--FontSize--md !default;
-$pf-c-content--h5--FontWeight: $pf-global--FontWeight--semi-bold !default;
+  // h5
+  --pf-c-content--h5--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-content--h5--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--h5--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-content--h5--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
-// h6
-$pf-c-content--h6--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-content--h6--MarginBottom: $pf-global--spacer--xs !default;
-$pf-c-content--h6--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-content--h6--FontSize: $pf-global--FontSize--md !default;
-$pf-c-content--h6--FontWeight: $pf-global--FontWeight--semi-bold !default;
+  // h6
+  --pf-c-content--h6--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-content--h6--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-content--h6--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-content--h6--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
-// Small text
-$pf-c-content--small--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-content--small--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-content--small--FontSize: $pf-global--FontSize--sm !default;
-$pf-c-content--small--Color: $pf-global--Color--dark-200 !default;
+  // Small text
+  --pf-c-content--small--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-content--small--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-content--small--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-content--small--Color: var(--pf-global--Color--dark-200);
 
-// Links
-$pf-c-content--a--Color: $pf-global--link--Color !default;
-$pf-c-content--a--TextDecoration: $pf-global--link--TextDecoration !default;
-$pf-c-content--a--hover--Color: $pf-global--link--Color--hover !default;
-$pf-c-content--a--hover--TextDecoration: $pf-global--link--TextDecoration--hover !default;
+  // Links
+  --pf-c-content--a--Color: var(--pf-global--link--Color);
+  --pf-c-content--a--TextDecoration: var(--pf-global--link--TextDecoration);
+  --pf-c-content--a--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-content--a--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
 
-// Blockquote
-$pf-c-content--blockquote--Padding: $pf-global--spacer--md !default;
-$pf-c-content--blockquote--FontWeight: $pf-global--FontWeight--light !default;
-$pf-c-content--blockquote--Color: $pf-global--Color--dark-200 !default;
-$pf-c-content--blockquote--BorderLeftColor: $pf-global--BorderColor--light !default;
-$pf-c-content--blockquote--BorderLeftWidth: $pf-global--BorderWidth--lg !default;
+  // Blockquote
+  --pf-c-content--blockquote--Padding: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--FontWeight: var(--pf-global--FontWeight--light);
+  --pf-c-content--blockquote--Color: var(--pf-global--Color--dark-200);
+  --pf-c-content--blockquote--BorderLeftColor: var(--pf-global--BorderColor--light);
+  --pf-c-content--blockquote--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
 
-// Lists
-$pf-c-content--ul--PaddingLeft: $pf-global--spacer--lg !default;
-$pf-c-content--ol--MarginTop: $pf-global--spacer--md !default;
-$pf-c-content--ol--MarginLeft: $pf-global--spacer--lg !default;
-$pf-c-content--ul--MarginTop: $pf-global--spacer--md !default;
-$pf-c-content--ul--MarginLeft: $pf-global--spacer--lg !default;
-$pf-c-content--ul--nested--MarginTop: $pf-global--spacer--sm !default;
-$pf-c-content--ul--nested--MarginLeft: $pf-global--spacer--sm !default;
-$pf-c-content--ul--ListStyle: $global-ListStyle !default;
-$pf-c-content--li--MarginTop: $pf-global--spacer--sm !default;
-$pf-c-content--dd--MarginBottom: $pf-global--spacer--sm !default;
-$pf-c-content--dd--MarginLeft: $pf-global--spacer--lg !default;
-
+  // Lists
+  --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--ol--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-content--ol--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--ul--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-content--ul--ListStyle: var(--global-ListStyle);
+  --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--dd--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-content--dd--MarginLeft: var(--pf-global--spacer--lg);
+}
 
 .pf-c-content {
-  font-size: $pf-c-content--FontSize;
-  line-height: $pf-c-content--LineHeight;
+  font-size: var(--pf-c-content--FontSize);
+  line-height: var(--pf-c-content--LineHeight);
 
   a {
-    color: $pf-c-content--a--Color;
-    text-decoration: $pf-c-content--a--TextDecoration;
+    color: var(--pf-c-content--a--Color);
+    text-decoration: var(--pf-c-content--a--TextDecoration);
 
     &:hover {
-      color: $pf-c-content--a--hover--Color;
-      text-decoration: $pf-c-content--a--hover--TextDecoration;
+      color: var(--pf-c-content--a--hover--Color);
+      text-decoration: var(--pf-c-content--a--hover--TextDecoration);
     }
   }
 
   li + li {
-    margin-top: $pf-c-content--li--MarginTop;
+    margin-top: var(--pf-c-content--li--MarginTop);
   }
 
   p,
@@ -109,14 +110,14 @@ $pf-c-content--dd--MarginLeft: $pf-global--spacer--lg !default;
   table {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-      margin-bottom: $pf-c-content--MarginBottom;
+      margin-bottom: var(--pf-c-content--MarginBottom);
     }
   }
 
   ol,
   ul {
     // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-    padding-left: $pf-c-content--ul--PaddingLeft;
+    padding-left: var(--pf-c-content--ul--PaddingLeft);
   }
 
   h1,
@@ -129,98 +130,105 @@ $pf-c-content--dd--MarginLeft: $pf-global--spacer--lg !default;
   }
 
   h1 {
-    margin-bottom: $pf-c-content--h1--MarginBottom;
-    font-size: $pf-c-content--h1--FontSize;
-    font-weight: $pf-c-content--h1--FontWeight;
-    line-height: $pf-c-content--h1--LineHeight;
+    margin-bottom: var(--pf-c-content--h1--MarginBottom);
+    font-size: var(--pf-c-content--h1--FontSize);
+    font-weight: var(--pf-c-content--h1--FontWeight);
+    line-height: var(--pf-c-content--h1--LineHeight);
+
     &:not(:first-child) {
-      margin-top: $pf-c-content--h1--MarginTop;
+      margin-top: var(--pf-c-content--h1--MarginTop);
     }
   }
 
   h2 {
-    margin-bottom: $pf-c-content--h2--MarginBottom;
-    font-size: $pf-c-content--h2--FontSize;
-    font-weight: $pf-c-content--h2--FontWeight;
-    line-height: $pf-c-content--h2--LineHeight;
+    margin-bottom: var(--pf-c-content--h2--MarginBottom);
+    font-size: var(--pf-c-content--h2--FontSize);
+    font-weight: var(--pf-c-content--h2--FontWeight);
+    line-height: var(--pf-c-content--h2--LineHeight);
+
     &:not(:first-child) {
-      margin-top: $pf-c-content--h2--MarginTop;
+      margin-top: var(--pf-c-content--h2--MarginTop);
     }
   }
 
   h3 {
-    margin-bottom: $pf-c-content--h3--MarginBottom;
-    font-size: $pf-c-content--h3--FontSize;
-    font-weight: $pf-c-content--h3--FontWeight;
-    line-height: $pf-c-content--h3--LineHeight;
+    margin-bottom: var(--pf-c-content--h3--MarginBottom);
+    font-size: var(--pf-c-content--h3--FontSize);
+    font-weight: var(--pf-c-content--h3--FontWeight);
+    line-height: var(--pf-c-content--h3--LineHeight);
+
     &:not(:first-child) {
-      margin-top: $pf-c-content--h3--MarginTop;
+      margin-top: var(--pf-c-content--h3--MarginTop);
     }
   }
 
   h4 {
-    margin-bottom: $pf-c-content--h4--MarginBottom;
-    font-size: $pf-c-content--h4--FontSize;
-    font-weight: $pf-c-content--h4--FontWeight;
-    line-height: $pf-c-content--h4--LineHeight;
+    margin-bottom: var(--pf-c-content--h4--MarginBottom);
+    font-size: var(--pf-c-content--h4--FontSize);
+    font-weight: var(--pf-c-content--h4--FontWeight);
+    line-height: var(--pf-c-content--h4--LineHeight);
+
     &:not(:first-child) {
-      margin-top: $pf-c-content--h4--MarginTop;
+      margin-top: var(--pf-c-content--h4--MarginTop);
     }
   }
 
   h5 {
-    margin-bottom: $pf-c-content--h5--MarginBottom;
-    font-size: $pf-c-content--h5--FontSize;
-    font-weight: $pf-c-content--h5--FontWeight;
-    line-height: $pf-c-content--h5--LineHeight;
+    margin-bottom: var(--pf-c-content--h5--MarginBottom);
+    font-size: var(--pf-c-content--h5--FontSize);
+    font-weight: var(--pf-c-content--h5--FontWeight);
+    line-height: var(--pf-c-content--h5--LineHeight);
+
     &:not(:first-child) {
-      margin-top: $pf-c-content--h5--MarginTop;
+      margin-top: var(--pf-c-content--h5--MarginTop);
     }
   }
 
   h6 {
-    margin-bottom: $pf-c-content--h6--MarginBottom;
-    font-size: $pf-c-content--h6--FontSize;
-    font-weight: $pf-c-content--h6--FontWeight;
-    line-height: $pf-c-content--h6--LineHeight;
+    margin-bottom: var(--pf-c-content--h6--MarginBottom);
+    font-size: var(--pf-c-content--h6--FontSize);
+    font-weight: var(--pf-c-content--h6--FontWeight);
+    line-height: var(--pf-c-content--h6--LineHeight);
+
     &:not(:first-child) {
-      margin-top: $pf-c-content--h6--MarginTop;
+      margin-top: var(--pf-c-content--h6--MarginTop);
     }
   }
 
   small {
     display: block;
-    margin-bottom: $pf-c-content--small--MarginBottom;
-    font-size: $pf-c-content--small--FontSize;
-    line-height: $pf-c-content--small--LineHeight;
-    color: $pf-c-content--small--Color;
+    margin-bottom: var(--pf-c-content--small--MarginBottom);
+    font-size: var(--pf-c-content--small--FontSize);
+    line-height: var(--pf-c-content--small--LineHeight);
+    color: var(--pf-c-content--small--Color);
   }
 
   blockquote {
-    padding: $pf-c-content--blockquote--Padding;
-    font-weight: $pf-c-content--blockquote--FontWeight;
-    color: $pf-c-content--blockquote--Color;
-    border-left: $pf-c-content--blockquote--BorderLeftWidth solid $pf-c-content--blockquote--BorderLeftColor;
+    padding: var(--pf-c-content--blockquote--Padding);
+    font-weight: var(--pf-c-content--blockquote--FontWeight);
+    color: var(--pf-c-content--blockquote--Color);
+    border-left: var(--pf-c-content--blockquote--BorderLeftWidth) solid var(--pf-c-content--blockquote--BorderLeftColor);
   }
 
   ol {
-    margin-top: $pf-c-content--ol--MarginTop;
-    margin-left: $pf-c-content--ol--MarginLeft;
+    margin-top: var(--pf-c-content--ol--MarginTop);
+    margin-left: var(--pf-c-content--ol--MarginLeft);
   }
 
   ul {
     margin: 0;
-    margin-top: $pf-c-content--ul--MarginTop;
-    margin-left: $pf-c-content--ul--MarginLeft;
-    list-style: $pf-c-content--ul--ListStyle;
+    margin-top: var(--pf-c-content--ul--MarginTop);
+    margin-left: var(--pf-c-content--ul--MarginLeft);
+    list-style: var(--pf-c-content--ul--ListStyle);
+
     ul {
-      margin-top: $pf-c-content--ul--nested--MarginTop;
-      margin-left: $pf-c-content--ul--nested--MarginLeft;
+      margin-top: var(--pf-c-content--ul--nested--MarginTop);
+      margin-left: var(--pf-c-content--ul--nested--MarginLeft);
     }
   }
 
   dd {
-    margin-bottom: $pf-c-content--dd--MarginBottom;
-    margin-left: $pf-c-content--dd--MarginLeft;
+    margin-bottom: var(--pf-c-content--dd--MarginBottom);
+    margin-left: var(--pf-c-content--dd--MarginLeft);
   }
 }

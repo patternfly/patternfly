@@ -1,12 +1,14 @@
 @import "../../patternfly-utilities";
 
-$pf-l-bullseye--Padding: 0 !default;
+:root {
+  --pf-l-bullseye--Padding: 0;
+}
 
 .pf-l-bullseye {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: $pf-l-bullseye--Padding;
+  padding: var(--pf-l-bullseye--Padding);
   margin: 0;
 }
