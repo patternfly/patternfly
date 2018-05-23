@@ -170,15 +170,11 @@
     box-shadow: 0 0 0 1px #ddd;
   }
 
-  .pf-l-grid,
-  .pf-l-grid > * {
-
-    @supports (display: grid) {
-      padding: .5rem;
-      background: none;
-      border: 2px dashed #393f44;
-      box-shadow: none;
-    }
+  .pf-l-grid .pf-l-grid__item {
+    padding: .5rem;
+    background: none;
+    border: 2px dashed #393f44;
+    box-shadow: none;
   }
 
   .Preview__body {
