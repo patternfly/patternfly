@@ -1,113 +1,113 @@
 @import "../../patternfly-utilities";
+:root {
+  // xxxxl
+  --pf-c-title--is-xxxxl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xxxxl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xxxxl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--is-xxxxl--FontSize: var(--pf-global--FontSize--xxxxl);
+  --pf-c-title--is-xxxxl--FontWeight: var(--pf-global--FontWeight--normal);
+  // xxxl
+  --pf-c-title--is-xxxl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xxxl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xxxl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--is-xxxl--FontSize: var(--pf-global--FontSize--xxxl);
+  --pf-c-title--is-xxxl--FontWeight: var(--pf-global--FontWeight--normal);
 
-// xxxxl
-$pf-c-title--is-xxxxl--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-xxxxl--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-title--is-xxxxl--LineHeight: $pf-global--LineHeight--sm !default;
-$pf-c-title--is-xxxxl--FontSize: $pf-global--FontSize--xxxxl !default;
-$pf-c-title--is-xxxxl--FontWeight: $pf-global--FontWeight--normal !default;
-// xxxl
-$pf-c-title--is-xxxl--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-xxxl--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-title--is-xxxl--LineHeight: $pf-global--LineHeight--sm !default;
-$pf-c-title--is-xxxl--FontSize: $pf-global--FontSize--xxxl !default;
-$pf-c-title--is-xxxl--FontWeight: $pf-global--FontWeight--normal !default;
+  // xxl
+  --pf-c-title--is-xxl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xxl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xxl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--is-xxl--FontSize: var(--pf-global--FontSize--xxl);
+  --pf-c-title--is-xxl--FontWeight: var(--pf-global--FontWeight--normal);
 
-// xxl
-$pf-c-title--is-xxl--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-xxl--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-title--is-xxl--LineHeight: $pf-global--LineHeight--sm !default;
-$pf-c-title--is-xxl--FontSize: $pf-global--FontSize--xxl !default;
-$pf-c-title--is-xxl--FontWeight: $pf-global--FontWeight--normal !default;
+  // xl
+  --pf-c-title--is-xl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xl--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--is-xl--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-title--is-xl--FontWeight: var(--pf-global--FontWeight--normal);
 
-// xl
-$pf-c-title--is-xl--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-xl--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-title--is-xl--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-title--is-xl--FontSize: $pf-global--FontSize--xl !default;
-$pf-c-title--is-xl--FontWeight: $pf-global--FontWeight--normal !default;
+  // lg
+  --pf-c-title--is-lg--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-lg--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-lg--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--is-lg--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-title--is-lg--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
-// lg
-$pf-c-title--is-lg--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-lg--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-title--is-lg--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-title--is-lg--FontSize: $pf-global--FontSize--lg !default;
-$pf-c-title--is-lg--FontWeight: $pf-global--FontWeight--semi-bold !default;
-
-// md
-$pf-c-title--is-md--MarginTop: $pf-global--spacer--lg !default;
-$pf-c-title--is-md--MarginBottom: $pf-global--spacer--md !default;
-$pf-c-title--is-md--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-title--is-md--FontSize: $pf-global--FontSize--md !default;
-$pf-c-title--is-md--FontWeight: $pf-global--FontWeight--semi-bold !default;
-
+  // md
+  --pf-c-title--is-md--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-md--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-md--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--is-md--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-title--is-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
+}
 .pf-c-title {
 
   &.pf-is {
 
     &-xxxxl {
-      font-size: $pf-c-title--is-xxxxl--FontSize;
-      font-weight: $pf-c-title--is-xxxxl--FontWeight;
-      line-height: $pf-c-title--is-xxxxl--LineHeight;
+      font-size: var(--pf-c-title--is-xxxxl--FontSize);
+      font-weight: var(--pf-c-title--is-xxxxl--FontWeight);
+      line-height: var(--pf-c-title--is-xxxxl--LineHeight);
 
       &.pf-has-margin {
-        margin-top: $pf-c-title--is-xxxxl--MarginTop;
-        margin-bottom: $pf-c-title--is-xxxxl--MarginBottom;
+        margin-top: var(--pf-c-title--is-xxxxl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xxxxl--MarginBottom);
       }
     }
 
     &-xxxl {
-      font-size: $pf-c-title--is-xxxl--FontSize;
-      font-weight: $pf-c-title--is-xxxl--FontWeight;
-      line-height: $pf-c-title--is-xxxl--LineHeight;
+      font-size: var(--pf-c-title--is-xxxl--FontSize);
+      font-weight: var(--pf-c-title--is-xxxl--FontWeight);
+      line-height: var(--pf-c-title--is-xxxl--LineHeight);
 
       &.pf-has-margin {
-        margin-top: $pf-c-title--is-xxxl--MarginTop;
-        margin-bottom: $pf-c-title--is-xxxl--MarginBottom;
+        margin-top: var(--pf-c-title--is-xxxl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xxxl--MarginBottom);
       }
     }
 
     &-xxl {
-      font-size: $pf-c-title--is-xxl--FontSize;
-      font-weight: $pf-c-title--is-xxl--FontWeight;
-      line-height: $pf-c-title--is-xxl--LineHeight;
+      font-size: var(--pf-c-title--is-xxl--FontSize);
+      font-weight: var(--pf-c-title--is-xxl--FontWeight);
+      line-height: var(--pf-c-title--is-xxl--LineHeight);
 
       &.pf-has-margin {
-        margin-top: $pf-c-title--is-xxl--MarginTop;
-        margin-bottom: $pf-c-title--is-xxl--MarginBottom;
+        margin-top: var(--pf-c-title--is-xxl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xxl--MarginBottom);
       }
     }
 
     &-xl {
-      font-size: $pf-c-title--is-xl--FontSize;
-      font-weight: $pf-c-title--is-xl--FontWeight;
-      line-height: $pf-c-title--is-xl--LineHeight;
+      font-size: var(--pf-c-title--is-xl--FontSize);
+      font-weight: var(--pf-c-title--is-xl--FontWeight);
+      line-height: var(--pf-c-title--is-xl--LineHeight);
 
       &.pf-has-margin {
-        margin-top: $pf-c-title--is-xl--MarginTop;
-        margin-bottom: $pf-c-title--is-xl--MarginBottom;
+        margin-top: var(--pf-c-title--is-xl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xl--MarginBottom);
       }
     }
 
     &-lg {
-      font-size: $pf-c-title--is-lg--FontSize;
-      font-weight: $pf-c-title--is-lg--FontWeight;
-      line-height: $pf-c-title--is-lg--LineHeight;
+      font-size: var(--pf-c-title--is-lg--FontSize);
+      font-weight: var(--pf-c-title--is-lg--FontWeight);
+      line-height: var(--pf-c-title--is-lg--LineHeight);
 
       &.pf-has-margin {
-        margin-top: $pf-c-title--is-lg--MarginTop;
-        margin-bottom: $pf-c-title--is-lg--MarginBottom;
+        margin-top: var(--pf-c-title--is-lg--MarginTop);
+        margin-bottom: var(--pf-c-title--is-lg--MarginBottom);
       }
     }
 
     &-md {
-      font-size: $pf-c-title--is-md--FontSize;
-      font-weight: $pf-c-title--is-md--FontWeight;
-      line-height: $pf-c-title--is-md--LineHeight;
+      font-size: var(--pf-c-title--is-md--FontSize);
+      font-weight: var(--pf-c-title--is-md--FontWeight);
+      line-height: var(--pf-c-title--is-md--LineHeight);
 
       &.pf-has-margin {
-        margin-top: $pf-c-title--is-md--MarginTop;
-        margin-bottom: $pf-c-title--is-md--MarginBottom;
+        margin-top: var(--pf-c-title--is-md--MarginTop);
+        margin-bottom: var(--pf-c-title--is-md--MarginBottom);
       }
     }
   }
