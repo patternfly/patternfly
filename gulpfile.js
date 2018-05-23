@@ -30,6 +30,7 @@ gulp.task('build-modules', () =>
     .pipe(gulp.dest('./dist'))
 );
 
-gulp.task('copy-source', ['build-tmp'], () =>
-  gulp.src('./tmp/**/*.scss').pipe(gulp.dest('./dist'))
-);
+gulp.task('copy-source', ['build-tmp'], () => {
+  gulp.src('./tmp/**/*.scss').pipe(gulp.dest('./dist'));
+  gulp.src('./static/**/*.*').pipe(gulp.dest('./dist'));
+});
