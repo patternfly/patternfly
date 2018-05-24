@@ -133,6 +133,12 @@
         {"type": "refactor", "release": "patch"}
       ]
     },
+    "prepare": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      }
+    ],
     "publish": [
       {
         "path": "@semantic-release/npm",
