@@ -26,9 +26,7 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "node test/test.js",
-    "semantic-release": "semantic-release pre && copy package.json dist && npm publish dist && semantic-release post",
-    "semantic-release-post": "semantic-release post",
-    "semantic-release-pre": "semantic-release pre"
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.js": [
@@ -134,7 +132,13 @@
         {"type": "docs", "release": "patch"},
         {"type": "refactor", "release": "patch"}
       ]
-    }
+    },
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      }
+    ]
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

@@ -18,6 +18,7 @@ before_script:
 script:
   - npm run lint:styles
   - npm run build-ghpages
+  - npm run build-patternfly
 
 after_success:
   - ./build/deploy.sh
