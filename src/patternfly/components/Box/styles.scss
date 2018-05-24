@@ -1,16 +1,67 @@
 @import "../../patternfly-utilities";
 
-// Component variables
-$pf-c-box--Padding: $pf-global--spacer--xl !default;
-$pf-c-box--BackgroundColor: $pf-global--BackgroundColor--light-100 !default;
-$pf-c-box--BoxShadow: $pf-global--BoxShadow--sm !default;
+:root {
+  // Component variables
+  --pf-c-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-box--BoxShadow: var(--pf-global--BoxShadow--sm);
+
+  // Box Header variables
+  --pf-c-box__header--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-box__header--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-box__header--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-box__header--PaddingLeft: var(--pf-global--spacer--xl);
+
+  // Box Body variables
+  --pf-c-box__body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-box__body--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-box__body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-box__body--PaddingTop: var(--pf-global--spacer--sm);
+
+  // Box Footer variables
+  --pf-c-box__footer--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-box__footer--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-box__footer--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
+
+}
 
 .pf-c-box {
-  padding: $pf-c-box--Padding;
-  background-color: $pf-c-box--BackgroundColor;
-  box-shadow: $pf-c-box--BoxShadow;
+  background-color: var(--pf-c-box--BackgroundColor);
+  box-shadow: var(--pf-c-box--BoxShadow);
 
-  &.pf-has-no-padding {
-    padding: 0;
+  &__header {
+    padding-top: var(--pf-c-box__header--PaddingTop);
+    padding-right: var(--pf-c-box__header--PaddingRight);
+    padding-bottom: var(--pf-c-box__header--PaddingBottom);
+    padding-left: var(--pf-c-box__header--PaddingLeft);
+    // background-color: #abc;
+  }
+
+  &__body {
+    padding-top: var(--pf-c-box__body--PaddingTop);
+    padding-right: var(--pf-c-box__body--PaddingRight);
+    padding-bottom: var(--pf-c-box__body--PaddingBottom);
+    padding-left: var(--pf-c-box__body--PaddingLeft);
+    // background-color: #bac;
+  }
+
+  &__footer {
+    padding-top: var(--pf-c-box__footer--PaddingTop);
+    padding-right: var(--pf-c-box__footer--PaddingRight);
+    padding-bottom: var(--pf-c-box__footer--PaddingBottom);
+    padding-left: var(--pf-c-box__footer--PaddingLeft);
+    // background-color: #cab;
+  }
+
+  // If the first child isn't a header, then we need to put the header's top padding there
+  &__body:first-child,
+  &__footer:first-child {
+    padding-top: var(--pf-c-box__header--PaddingTop);
+  }
+
+  // If the last child isn't the footer, then we need to put the footer's bottom padding there
+  &__header:last-child,
+  &__body:last-child {
+    padding-bottom: var(--pf-c-box__footer--PaddingBottom);
   }
 }
