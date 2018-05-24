@@ -1,0 +1,114 @@
+@import "../../patternfly-utilities";
+:root {
+  // xxxxl
+  --pf-c-title--is-xxxxl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xxxxl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xxxxl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--is-xxxxl--FontSize: var(--pf-global--FontSize--xxxxl);
+  --pf-c-title--is-xxxxl--FontWeight: var(--pf-global--FontWeight--normal);
+  // xxxl
+  --pf-c-title--is-xxxl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xxxl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xxxl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--is-xxxl--FontSize: var(--pf-global--FontSize--xxxl);
+  --pf-c-title--is-xxxl--FontWeight: var(--pf-global--FontWeight--normal);
+
+  // xxl
+  --pf-c-title--is-xxl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xxl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xxl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--is-xxl--FontSize: var(--pf-global--FontSize--xxl);
+  --pf-c-title--is-xxl--FontWeight: var(--pf-global--FontWeight--normal);
+
+  // xl
+  --pf-c-title--is-xl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-xl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-xl--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--is-xl--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-title--is-xl--FontWeight: var(--pf-global--FontWeight--normal);
+
+  // lg
+  --pf-c-title--is-lg--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-lg--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-lg--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--is-lg--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-title--is-lg--FontWeight: var(--pf-global--FontWeight--semi-bold);
+
+  // md
+  --pf-c-title--is-md--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--is-md--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--is-md--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--is-md--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-title--is-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
+}
+.pf-c-title {
+
+  &.pf-is {
+
+    &-xxxxl {
+      font-size: var(--pf-c-title--is-xxxxl--FontSize);
+      font-weight: var(--pf-c-title--is-xxxxl--FontWeight);
+      line-height: var(--pf-c-title--is-xxxxl--LineHeight);
+
+      &.pf-has-margin {
+        margin-top: var(--pf-c-title--is-xxxxl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xxxxl--MarginBottom);
+      }
+    }
+
+    &-xxxl {
+      font-size: var(--pf-c-title--is-xxxl--FontSize);
+      font-weight: var(--pf-c-title--is-xxxl--FontWeight);
+      line-height: var(--pf-c-title--is-xxxl--LineHeight);
+
+      &.pf-has-margin {
+        margin-top: var(--pf-c-title--is-xxxl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xxxl--MarginBottom);
+      }
+    }
+
+    &-xxl {
+      font-size: var(--pf-c-title--is-xxl--FontSize);
+      font-weight: var(--pf-c-title--is-xxl--FontWeight);
+      line-height: var(--pf-c-title--is-xxl--LineHeight);
+
+      &.pf-has-margin {
+        margin-top: var(--pf-c-title--is-xxl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xxl--MarginBottom);
+      }
+    }
+
+    &-xl {
+      font-size: var(--pf-c-title--is-xl--FontSize);
+      font-weight: var(--pf-c-title--is-xl--FontWeight);
+      line-height: var(--pf-c-title--is-xl--LineHeight);
+
+      &.pf-has-margin {
+        margin-top: var(--pf-c-title--is-xl--MarginTop);
+        margin-bottom: var(--pf-c-title--is-xl--MarginBottom);
+      }
+    }
+
+    &-lg {
+      font-size: var(--pf-c-title--is-lg--FontSize);
+      font-weight: var(--pf-c-title--is-lg--FontWeight);
+      line-height: var(--pf-c-title--is-lg--LineHeight);
+
+      &.pf-has-margin {
+        margin-top: var(--pf-c-title--is-lg--MarginTop);
+        margin-bottom: var(--pf-c-title--is-lg--MarginBottom);
+      }
+    }
+
+    &-md {
+      font-size: var(--pf-c-title--is-md--FontSize);
+      font-weight: var(--pf-c-title--is-md--FontWeight);
+      line-height: var(--pf-c-title--is-md--LineHeight);
+
+      &.pf-has-margin {
+        margin-top: var(--pf-c-title--is-md--MarginTop);
+        margin-bottom: var(--pf-c-title--is-md--MarginBottom);
+      }
+    }
+  }
+}
