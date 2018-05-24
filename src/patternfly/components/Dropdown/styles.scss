@@ -1,74 +1,72 @@
 @import "../../patternfly-utilities";
 
-// Toggle
-$pf-c-dropdown__toggle--PaddingTop: $pf-global--spacer--xs !default;
-$pf-c-dropdown__toggle--PaddingRight: $pf-global--spacer--md !default;
-$pf-c-dropdown__toggle--PaddingBottom: $pf-global--spacer--xs !default;
-$pf-c-dropdown__toggle--PaddingLeft: $pf-global--spacer--sm !default;
-$pf-c-dropdown__toggle--FontSize: $pf-global--FontSize--md !default;
-$pf-c-dropdown__toggle--FontWeight: $pf-global--FontWeight--normal !default;
-$pf-c-dropdown__toggle--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-dropdown__toggle--BackgroundColor: $pf-global--BackgroundColor--light-100 !default;
-$pf-c-dropdown__toggle--BorderWidth: $pf-global--BorderWidth--sm !default;
-$pf-c-dropdown__toggle--BorderColor: $pf-global--Color--dark-200 !default;
-$pf-c-dropdown__toggle--Color: $pf-global--Color--dark-100 !default;
+:root {
+  // Toggle
+  --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-dropdown__toggle--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-dropdown__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__toggle--BorderColor: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__toggle--Color: var(--pf-global--Color--dark-100);
+  --pf-c-dropdown__toggle--hover--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__toggle--is-expanded--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--is-expanded--BorderColor: var(--pf-global--Color--active);
 
-$pf-c-dropdown__toggle--hover--BorderWidth: $pf-global--BorderWidth--md !default;
-$pf-c-dropdown__toggle--hover--BorderColor: $pf-global--Color--dark-200 !default;
+  // Toggle Arrow
+  --pf-c-dropdown__arrow--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__arrow--BorderWidth: var(--pf-global--BorderWidth--md);
 
-$pf-c-dropdown__toggle--is-expanded--BorderWidth: $pf-global--BorderWidth--md !default;
-$pf-c-dropdown__toggle--is-expanded--BorderColor: $pf-global--Color--active !default;
+  // Menu
+  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow--sm);
+  --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--xs);
 
-// Toggle Arrow
-$pf-c-dropdown__arrow--MarginLeft: $pf-global--spacer--md !default;
-$pf-c-dropdown__arrow--BorderWidth: $pf-global--BorderWidth--md !default;
+  // Menu Item
+  --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-dropdown__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu-item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__menu-item--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-dropdown__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-dropdown__menu-item--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--dark-100);
+  --pf-c-dropdown__menu-item--is-disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
-// Menu
-
-$pf-c-dropdown__menu--BackgroundColor: $pf-global--BackgroundColor--light-200 !default;
-$pf-c-dropdown__menu--BoxShadow: $pf-global--BoxShadow--sm !default;
-$pf-c-dropdown__menu--PaddingTop: $pf-global--spacer--sm !default;
-$pf-c-dropdown__menu--PaddingBottom: $pf-global--spacer--sm !default;
-
-// Menu Item
-$pf-c-dropdown__menu-item--PaddingTop: $pf-global--spacer--sm !default;
-$pf-c-dropdown__menu-item--PaddingRight: $pf-global--spacer--md !default;
-$pf-c-dropdown__menu-item--PaddingBottom: $pf-global--spacer--sm !default;
-$pf-c-dropdown__menu-item--PaddingLeft: $pf-global--spacer--md !default;
-$pf-c-dropdown__menu-item--FontSize: $pf-global--FontSize--md !default;
-$pf-c-dropdown__menu-item--FontWeight: $pf-global--FontWeight--normal !default;
-$pf-c-dropdown__menu-item--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-dropdown__menu-item--Color: $pf-global--Color--dark-100 !default;
-$pf-c-dropdown__menu-item--is-disabled--Color: $pf-global--Color--dark-200 !default;
-
-$pf-c-dropdown__menu-item--hover--BackgroundColor: $pf-global--BackgroundColor--light-300 !default;
-
-// Menu Item Separator
-$pf-c-dropdown__separator--Height: $pf-global--BorderWidth--sm !default;
-$pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-300 !default;
-
+  // Menu Item Separator
+  --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+}
 
 .pf-c-dropdown {
   position: relative;
   display: inline-block;
 
   &__toggle {
-    padding: $pf-c-dropdown__toggle--PaddingTop $pf-c-dropdown__toggle--PaddingRight $pf-c-dropdown__toggle--PaddingBottom $pf-c-dropdown__toggle--PaddingLeft;
-    font-size: $pf-c-dropdown__toggle--FontSize;
-    font-weight: $pf-c-dropdown__toggle--FontWeight;
-    line-height: $pf-c-dropdown__toggle--LineHeight;
-    color: $pf-c-dropdown__toggle--Color;
-    background-color: $pf-c-dropdown__toggle--BackgroundColor;
+    padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
+    font-size: var(--pf-c-dropdown__toggle--FontSize);
+    font-weight: var(--pf-c-dropdown__toggle--FontWeight);
+    line-height: var(--pf-c-dropdown__toggle--LineHeight);
+    color: var(--pf-c-dropdown__toggle--Color);
+    background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
     border: none;
-    box-shadow: inset 0 0 0 $pf-c-dropdown__toggle--BorderWidth $pf-c-dropdown__toggle--BorderColor;
+    box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--BorderColor);
 
     &:hover {
-      box-shadow: inset 0 0 0 $pf-c-dropdown__toggle--hover--BorderWidth $pf-c-dropdown__toggle--hover--BorderColor;
+      box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--hover--BorderWidth) var(--pf-c-dropdown__toggle--hover--BorderColor);
     }
 
     &:active,
     .pf-is-expanded > & {
-      box-shadow: inset 0 0 0 $pf-c-dropdown__toggle--is-expanded--BorderWidth $pf-c-dropdown__toggle--is-expanded--BorderColor;
+      box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--is-expanded--BorderWidth) var(--pf-c-dropdown__toggle--is-expanded--BorderColor);
     }
 
     .pf-is-ghost > & {
@@ -77,19 +75,19 @@ $pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-3
     }
 
     .pf-has-no-arrow > & {
-      padding-right: $pf-c-dropdown__toggle--PaddingLeft;
+      padding-right: var(--pf-c-dropdown__toggle--PaddingLeft);
     }
 
     &::after {
       box-sizing: content-box;
       display: inline-block;
-      width: calc(#{$pf-c-dropdown__toggle--FontSize} * .3);
-      height: calc(#{$pf-c-dropdown__toggle--FontSize} * .3);
-      margin-left: $pf-c-dropdown__arrow--MarginLeft;
-      vertical-align: calc(#{$pf-c-dropdown__toggle--FontSize} * .25);
+      width: calc(var(--pf-c-dropdown__toggle--FontSize) * .3);
+      height: calc(var(--pf-c-dropdown__toggle--FontSize) * .3);
+      margin-left: var(--pf-c-dropdown__arrow--MarginLeft);
+      vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .25);
       content: "";
       border-style: solid;
-      border-width: $pf-c-dropdown__arrow--BorderWidth $pf-c-dropdown__arrow--BorderWidth 0 0;
+      border-width: var(--pf-c-dropdown__arrow--BorderWidth) var(--pf-c-dropdown__arrow--BorderWidth) 0 0;
       transform: rotate(135deg);
 
       .pf-has-no-arrow > & {
@@ -97,7 +95,7 @@ $pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-3
       }
 
       .pf-is-dropup.pf-is-expanded > & {
-        vertical-align: calc(#{$pf-c-dropdown__toggle--FontSize} * .1);
+        vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .1);
         transform: rotate(-45deg);
       }
     }
@@ -105,12 +103,12 @@ $pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-3
 
   &__menu {
     position: absolute;
-    z-index: 1000;
+    z-index: var(--pf-c-dropdown__menu--ZIndex);
     min-width: 100%;
-    padding-top: $pf-c-dropdown__menu--PaddingTop;
-    padding-bottom: $pf-c-dropdown__menu--PaddingBottom;
-    background: $pf-c-dropdown__menu--BackgroundColor;
-    box-shadow: $pf-c-dropdown__menu--BoxShadow;
+    padding-top: var(--pf-c-dropdown__menu--PaddingTop);
+    padding-bottom: var(--pf-c-dropdown__menu--PaddingBottom);
+    background: var(--pf-c-dropdown__menu--BackgroundColor);
+    box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
     .pf-is-right-aligned > & {
       right: 0;
@@ -125,25 +123,25 @@ $pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-3
   &__menu-item {
     display: block;
     width: 100%;
-    padding: $pf-c-dropdown__menu-item--PaddingTop $pf-c-dropdown__menu-item--PaddingRight $pf-c-dropdown__menu-item--PaddingBottom $pf-c-dropdown__menu-item--PaddingLeft;
-    font-size: $pf-c-dropdown__menu-item--FontSize;
-    font-weight: $pf-c-dropdown__menu-item--FontWeight;
-    line-height: $pf-c-dropdown__menu-item--LineHeight;
-    color: $pf-c-dropdown__menu-item--Color;
+    padding: var(--pf-c-dropdown__menu-item--PaddingTop) var(--pf-c-dropdown__menu-item--PaddingRight) var(--pf-c-dropdown__menu-item--PaddingBottom) var(--pf-c-dropdown__menu-item--PaddingLeft);
+    font-size: var(--pf-c-dropdown__menu-item--FontSize);
+    font-weight: var(--pf-c-dropdown__menu-item--FontWeight);
+    line-height: var(--pf-c-dropdown__menu-item--LineHeight);
+    color: var(--pf-c-dropdown__menu-item--Color);
     text-align: left;
     white-space: nowrap;
     border: none;
 
     &:hover,
     &:focus {
-      color: $pf-c-dropdown__menu-item--Color;
+      color: var(--pf-c-dropdown__menu-item--Color);
       text-decoration: none;
-      background-color: $pf-c-dropdown__menu-item--hover--BackgroundColor;
+      background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
     }
 
     &:disabled,
     &.pf-is-disabled {
-      color: $pf-c-dropdown__menu-item--is-disabled--Color;
+      color: var(--pf-c-dropdown__menu-item--is-disabled--Color);
       pointer-events: none;
       background-color: transparent;
     }
@@ -151,7 +149,7 @@ $pf-c-dropdown__separator--BackgroundColor: $pf-global--BackgroundColor--light-3
   }
 
   &__separator {
-    height: $pf-c-dropdown__separator--Height;
-    background-color: $pf-c-dropdown__separator--BackgroundColor;
+    height: var(--pf-c-dropdown__separator--Height);
+    background-color: var(--pf-c-dropdown__separator--BackgroundColor);
   }
 }
