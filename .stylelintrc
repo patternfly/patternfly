@@ -4,7 +4,9 @@
     "stylelint-order"
   ],
   ignoreFiles: [
-    "./build/blueprints/**/*.scss"
+    "./build/blueprints/**/*.scss",
+    "./tmp/**/*.scss",
+    "./dist/**/*.scss"
   ],
   "rules": {
     "at-rule-empty-line-before": [null,
