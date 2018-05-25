@@ -2,3 +2,4 @@ dist/*
 public/*
 node_modules/*
 static/*
+build/blueprints/*
