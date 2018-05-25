@@ -26,31 +26,34 @@
 }
 
 .pf-c-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: var(--pf-c-box--BackgroundColor);
   box-shadow: var(--pf-c-box--BoxShadow);
 
   &__header {
+    flex: 0 0 auto;
     padding-top: var(--pf-c-box__header--PaddingTop);
     padding-right: var(--pf-c-box__header--PaddingRight);
     padding-bottom: var(--pf-c-box__header--PaddingBottom);
     padding-left: var(--pf-c-box__header--PaddingLeft);
-    // background-color: #abc;
   }
 
   &__body {
+    flex: 1 1 auto;
     padding-top: var(--pf-c-box__body--PaddingTop);
     padding-right: var(--pf-c-box__body--PaddingRight);
     padding-bottom: var(--pf-c-box__body--PaddingBottom);
     padding-left: var(--pf-c-box__body--PaddingLeft);
-    // background-color: #bac;
   }
 
   &__footer {
+    flex: 0 0 auto;
     padding-top: var(--pf-c-box__footer--PaddingTop);
     padding-right: var(--pf-c-box__footer--PaddingRight);
     padding-bottom: var(--pf-c-box__footer--PaddingBottom);
     padding-left: var(--pf-c-box__footer--PaddingLeft);
-    // background-color: #cab;
   }
 
   // If the first child isn't a header, then we need to put the header's top padding there
