@@ -69,7 +69,7 @@
       box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--expanded--BorderWidth) var(--pf-c-dropdown__toggle--expanded--BorderColor);
     }
 
-    .pf-is-ghost > & {
+    .pf-m-ghost > & {
       background-color: transparent;
       box-shadow: none;
     }
@@ -94,7 +94,7 @@
         content: none;
       }
 
-      .pf-is-dropup.pf-is-expanded > & {
+      .pf-m-dropup.pf-m-expanded > & {
         vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .1);
         transform: rotate(-45deg);
       }
@@ -110,11 +110,11 @@
     background: var(--pf-c-dropdown__menu--BackgroundColor);
     box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
-    .pf-is-right-aligned > & {
+    .pf-m-right-aligned > & {
       right: 0;
     }
 
-    .pf-is-dropup > & {
+    .pf-m-dropup > & {
       top: 0;
       transform: translateY(-100%);
     }

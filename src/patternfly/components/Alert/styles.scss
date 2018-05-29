@@ -42,7 +42,7 @@ $pf-c-alert--is-info--BorderColor: $pf-global--info-color--dark !default;
     font-weight: $pf-c-alert__link--FontWeight;
   }
 
-  &.pf-is-success {
+  &.pf-m-success {
     color: $pf-c-alert--is-success--Color;
     background-color: $pf-c-alert--is-success--BackgroundColor;
     border-color: $pf-c-alert--is-success--BorderColor;
@@ -54,13 +54,13 @@ $pf-c-alert--is-info--BorderColor: $pf-global--info-color--dark !default;
     border-color: $pf-c-alert--is-danger--BorderColor;
   }
 
-  &.pf-is-warning {
+  &.pf-m-warning {
     color: $pf-c-alert--is-warning--Color;
     background-color: $pf-c-alert--is-warning--BackgroundColor;
     border-color: $pf-c-alert--is-warning--BorderColor;
   }
 
-  &.pf-is-info {
+  &.pf-m-info {
     color: $pf-c-alert--is-info--Color;
     background-color: $pf-c-alert--is-info--BackgroundColor;
     border-color: $pf-c-alert--is-info--BorderColor;

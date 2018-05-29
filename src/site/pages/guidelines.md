@@ -302,7 +302,7 @@ States of a component should be included as a nested element. This includes hove
 }
 ```
 
-Classes that duplicate a state should be named with the prefix `pf-is-`. For example, a class `pf-m-active` can be used to apply the `:active` styling. 
+Classes that duplicate a state should be named with the prefix `pf-m-`. For example, a class `pf-m-active` can be used to apply the `:active` styling. 
 
 #### Sass variables
 
