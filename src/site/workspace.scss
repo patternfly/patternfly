@@ -217,4 +217,22 @@
     background-color: #292e34;
   }
 }
+
+.is-expanded-dropdown {
+  .Preview__body {
+    height: 17em;
+  }
+}
+
+.is-expanded-dropup {
+  .Preview__body {
+    padding-top: 14em;
+  }
+}
+
+.is-right-aligned {
+  .Preview__body {
+    text-align: right;
+  }
+}
 /* stylelint-enable */
