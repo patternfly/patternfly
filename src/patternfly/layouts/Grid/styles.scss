@@ -2,7 +2,7 @@
 @import "../../patternfly-utilities";
 
 :root {
-  --pf-l-grid--has-gutter--GridGap: var(--pf-global--gutter);
+  --pf-l-grid--gutter--GridGap: var(--pf-global--gutter);
 }
 
 /// Media query used to create responsive grid items 
@@ -86,7 +86,7 @@
     }
   }
 
-  &.pf-has-gutters {
-    grid-gap: var(--pf-l-grid--has-gutter--GridGap);
+  &.pf-m-gutter {
+    grid-gap: var(--pf-l-grid--gutter--GridGap);
   }
 }

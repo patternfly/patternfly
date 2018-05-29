@@ -1,32 +1,32 @@
 @import "../../patternfly-utilities";
 
-$pf-c-alert--PaddingTop:        $pf-global--spacer--sm !default;
-$pf-c-alert--PaddingRight:      $pf-global--spacer--lg !default;
-$pf-c-alert--PaddingBottom:     $pf-global--spacer--sm !default;
-$pf-c-alert--PaddingLeft:       $pf-global--spacer--lg !default;
-$pf-c-alert--MarginBottom:      $pf-global--spacer--md !default;
-$pf-c-alert--BorderWidth:       $pf-global--BorderWidth--md !default;
-$pf-c-alert__link--FontWeight:  $pf-global--FontWeight--bold !default;
+$pf-c-alert--PaddingTop: $pf-global--spacer--sm !default;
+$pf-c-alert--PaddingRight: $pf-global--spacer--lg !default;
+$pf-c-alert--PaddingBottom: $pf-global--spacer--sm !default;
+$pf-c-alert--PaddingLeft: $pf-global--spacer--lg !default;
+$pf-c-alert--MarginBottom: $pf-global--spacer--md !default;
+$pf-c-alert--BorderWidth: $pf-global--BorderWidth--md !default;
+$pf-c-alert__link--FontWeight: $pf-global--FontWeight--bold !default;
 
 //success alert
-$pf-c-alert--is-success--BackgroundColor:  $pf-global--success-color !default;
-$pf-c-alert--is-success--Color:            $pf-global--success-color--dark !default;
-$pf-c-alert--is-success--BorderColor:      $pf-global--success-color--dark !default;
+$pf-c-alert--is-success--BackgroundColor: $pf-global--success-color !default;
+$pf-c-alert--is-success--Color: $pf-global--success-color--dark !default;
+$pf-c-alert--is-success--BorderColor: $pf-global--success-color--dark !default;
 
 //danger alert
-$pf-c-alert--is-danger--BackgroundColor:  $pf-global--danger-color !default;
-$pf-c-alert--is-danger--Color:            $pf-global--Color--light-100 !default;
-$pf-c-alert--is-danger--BorderColor:      $pf-global--danger-color--dark !default;
+$pf-c-alert--is-danger--BackgroundColor: $pf-global--danger-color !default;
+$pf-c-alert--is-danger--Color: $pf-global--Color--light-100 !default;
+$pf-c-alert--is-danger--BorderColor: $pf-global--danger-color--dark !default;
 
 //warning alert
-$pf-c-alert--is-warning--BackgroundColor:  $pf-global--warning-color !default;
-$pf-c-alert--is-warning--Color:            $pf-global--warning-color--dark !default;
-$pf-c-alert--is-warning--BorderColor:      $pf-global--warning-color--dark !default;
+$pf-c-alert--is-warning--BackgroundColor: $pf-global--warning-color !default;
+$pf-c-alert--is-warning--Color: $pf-global--warning-color--dark !default;
+$pf-c-alert--is-warning--BorderColor: $pf-global--warning-color--dark !default;
 
 //info alert
-$pf-c-alert--is-info--BackgroundColor:  $pf-global--info-color !default;
-$pf-c-alert--is-info--Color:            $pf-global--info-color--dark !default;
-$pf-c-alert--is-info--BorderColor:      $pf-global--info-color--dark !default;
+$pf-c-alert--is-info--BackgroundColor: $pf-global--info-color !default;
+$pf-c-alert--is-info--Color: $pf-global--info-color--dark !default;
+$pf-c-alert--is-info--BorderColor: $pf-global--info-color--dark !default;
 
 .pf-c-alert {
   position: relative;
@@ -48,7 +48,7 @@ $pf-c-alert--is-info--BorderColor:      $pf-global--info-color--dark !default;
     border-color: $pf-c-alert--is-success--BorderColor;
   }
 
-  &.pf-is-danger {
+  &.pf-m-danger {
     color: $pf-c-alert--is-danger--Color;
     background-color: $pf-c-alert--is-danger--BackgroundColor;
     border-color: $pf-c-alert--is-danger--BorderColor;

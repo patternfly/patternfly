@@ -14,7 +14,7 @@ description: ''
     </li>
 
     <li class="pf-c-vertical-nav__item">
-      <a href="#" class="pf-c-vertical-nav__link pf-is-active"  aria-selected="true">
+      <a href="#" class="pf-c-vertical-nav__link pf-m-active"  aria-selected="true">
         <span class="pf-c-vertical-nav__link-icon"></span>
         <span class="pf-c-vertical-nav__link-text">Item Active</span>
       </a>
@@ -33,7 +33,7 @@ description: ''
             <a href="#" class="pf-vertical-sub-nav__link">SubItem One</a>
           </li>
           <li class="pf-vertical-sub-nav__item">
-            <a href="#" role="menuitem" class="pf-vertical-sub-nav__link pf-is-active" aria-selected="true">SubItem Two</a>
+            <a href="#" role="menuitem" class="pf-vertical-sub-nav__link pf-m-active" aria-selected="true">SubItem Two</a>
 
             <section class="pf-vertical-sub-nav pf-vertical-sub-nav--second">
               <h2 class="pf-vertical-sub-nav__title">submenu</h2>
@@ -48,10 +48,10 @@ description: ''
                   <a href="#" role="menuitem" class="pf-vertical-sub-nav__link">SubItem Three</a>
                 </li>
                 <li class="pf-vertical-sub-nav__item">
-                  <a href="#" role="menuitem" class="pf-vertical-sub-nav__link pf-is-active" aria-selected="true">SubItem Three</a>
+                  <a href="#" role="menuitem" class="pf-vertical-sub-nav__link pf-m-active" aria-selected="true">SubItem Three</a>
                 </li>
                 <li class="pf-vertical-sub-nav__item">
-                  <a href="#" role="menuitem" class="pf-vertical-sub-nav__link  pf-is-disabled" aria-disabled="true">SubItem Disabled</a>
+                  <a href="#" role="menuitem" class="pf-vertical-sub-nav__link  pf-m-disabled" aria-disabled="true">SubItem Disabled</a>
                 </li>
               </ul>
             </section>
@@ -61,7 +61,7 @@ description: ''
             <a href="#" role="menuitem" class="pf-vertical-sub-nav__link">SubItem Three</a>
           </li>
           <li class="pf-vertical-sub-nav__item">
-            <a href="#" role="menuitem" class="pf-vertical-sub-nav__link  pf-is-disabled" aria-disabled="true">SubItem Disabled</a>
+            <a href="#" role="menuitem" class="pf-vertical-sub-nav__link  pf-m-disabled" aria-disabled="true">SubItem Disabled</a>
           </li>
         </ul>
       </section>
@@ -69,7 +69,7 @@ description: ''
     </li>
 
     <li class="pf-c-vertical-nav__item">
-      <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-is-disabled" aria-disabled="true">
+      <a href="#" role="menuitem" class="pf-c-vertical-nav__link pf-m-disabled" aria-disabled="true">
         <span class="pf-c-vertical-nav__link-icon"></span>
         <span class="pf-c-vertical-nav__link-text">Item Disabled</span>
       </a>

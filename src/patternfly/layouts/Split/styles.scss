@@ -1,6 +1,7 @@
 @import "../../patternfly-utilities";
+
 :root {
-  --pf-l-split--has-gutter--MarginRight: var(--pf-global--gutter);
+  --pf-l-split--gutter--MarginRight: var(--pf-global--gutter);
 }
 
 .pf-l-split {
@@ -9,8 +10,8 @@
   padding: 0;
   margin: 0;
 
-  &.pf-has-gutter > *:not(:last-child) {
-    margin-right: var(--pf-l-split--has-gutter--MarginRight);
+  &.pf-m-gutter > *:not(:last-child) {
+    margin-right: var(--pf-l-split--gutter--MarginRight);
   }
 
   &__item {
@@ -18,11 +19,11 @@
   }
 
   &__item:nth-child(2),
-  &__item.pf-is-primary {
+  &__item.pf-m-primary {
     flex: 1 1 100%;
   }
 
-  &__item.pf-is-secondary {
+  &__item.pf-m-secondary {
     flex: 1 1 auto;
   }
 }
