@@ -21,7 +21,7 @@ export default () => {
   <Example heading="Box">{boxBasicExample}</Example>
   <Example heading="Box with no footer">{boxNoHeaderExample}</Example>
   <Example heading="Box with no header">{boxNoFooterExample}</Example>
-  <Example heading="Bo with only a content section">{boxContentOnlyExample}</Example>
+  <Example heading="Box with only a content section">{boxContentOnlyExample}</Example>
     </Documentation>
   );
 };
