@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <Documentation style={styles} docs={Docs}>
-      <Example className="is-expanded-dropdown" heading="Dropdown Expanded needs to have a larger preview, investigate the html needed for this and let Dana know">{dropdownExpanded}</Example>
+      <Example className="is-expanded-dropdown" heading="Dropdown Expanded">{dropdownExpanded}</Example>
       <Example heading="Dropdown Collapsed">{dropdownCollapsed}</Example>
       <Example className="is-expanded-dropdown" heading="Kebab">{dropdownKebab}</Example>
       <Example className="is-expanded-dropdown is-right-aligned" heading="Kebab Right Aligned">{dropdownKebabRightAligned}</Example>
