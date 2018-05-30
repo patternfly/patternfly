@@ -39,9 +39,7 @@
       "git add"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
     "backstopjs": "^3.2.15",

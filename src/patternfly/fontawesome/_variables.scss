@@ -1,0 +1,85 @@
+// Variables
+// --------------------------
+
+$fa-font-path:                "assets/fonts/webfonts" !default;
+$fa-font-size-base:           16px !default;
+$fa-css-prefix:               fa !default;
+$fa-version:                  "5.0.13" !default;
+$fa-border-color:             #eee !default;
+$fa-inverse:                  #fff !default;
+$fa-li-width:                 2em !default;
+
+// Convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote("\"#{ $fa-var }\"");
+}
+
+$fa-var-angle-double-left: \f100;
+$fa-var-angle-double-right: \f101;
+$fa-var-angle-down: \f107;
+$fa-var-angle-left: \f104;
+$fa-var-angle-right: \f105;
+$fa-var-angle-up: \f106;
+$fa-var-arrow-circle-down: \f0ab;
+$fa-var-arrow-circle-up: \f0aa;
+$fa-var-balance-scale: \f24e;
+$fa-var-ban: \f05e;
+$fa-var-bell: \f0f3;
+$fa-var-bug: \f188;
+$fa-var-caret-down: \f0d7;
+$fa-var-caret-left: \f0d9;
+$fa-var-caret-right: \f0da;
+$fa-var-caret-up: \f0d8;
+$fa-var-check: \f00c;
+$fa-var-check-circle: \f058;
+$fa-var-clipboard-check: \f46c;
+$fa-var-clock: \f017;
+$fa-var-columns: \f0db;
+$fa-var-cube: \f1b2;
+$fa-var-cubes: \f1b3;
+$fa-var-ellipsis-v: \f142;
+$fa-var-exclamation-triangle: \f071;
+$fa-var-external-link-alt: \f35d;
+$fa-var-external-link-square-alt: \f360;
+$fa-var-filter: \f0b0;
+$fa-var-flag: \f024;
+$fa-var-folder: \f07b;
+$fa-var-folder-open: \f07c;
+$fa-var-hdd: \f0a0;
+$fa-var-history: \f1da;
+$fa-var-key: \f084;
+$fa-var-list: \f03a;
+$fa-var-lock: \f023;
+$fa-var-lock-open: \f3c1;
+$fa-var-map-marker: \f041;
+$fa-var-memory: \f538;
+$fa-var-minus: \f068;
+$fa-var-pause-circle: \f28b;
+$fa-var-pencil-alt: \f303;
+$fa-var-plus: \f067;
+$fa-var-plus-circle: \f055;
+$fa-var-plus-square: \f0fe;
+$fa-var-power-off: \f011;
+$fa-var-print: \f02f;
+$fa-var-question-circle: \f059;
+$fa-var-redo: \f01e;
+$fa-var-search: \f002;
+$fa-var-sliders-h: \f1de;
+$fa-var-sort: \f0dc;
+$fa-var-sort-alpha-down: \f15d;
+$fa-var-sort-alpha-up: \f15e;
+$fa-var-sort-numeric-down: \f162;
+$fa-var-sort-numeric-up: \f163;
+$fa-var-sync-alt: \f2f1;
+$fa-var-table: \f0ce;
+$fa-var-tachometer-alt: \f3fd;
+$fa-var-th: \f00a;
+$fa-var-th-large: \f009;
+$fa-var-thumbtack: \f08d;
+$fa-var-times: \f00d;
+$fa-var-times-circle: \f057;
+$fa-var-trash: \f1f8;
+$fa-var-user: \f007;
+$fa-var-user-friends: \f500;
+$fa-var-window-restore: \f2d2;
+$fa-var-wrench: \f0ad;
