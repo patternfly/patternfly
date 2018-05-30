@@ -1,0 +1,15 @@
+//
+// Icons
+// --------------------------------------------------
+// PatternFly uses a combination of Font Awesome 5 icons https://fontawesome.com
+// and custom icons, created by the PatternFly Design Team
+// All icons are SVG based
+//
+
+@if $pf-global--enable-fontawesome-cdn {
+  @import url("https://use.fontawesome.com/releases/v5.0.13/js/all.js");
+} @else if $pf-global--disable-fontawesome {
+  // do not include Font Awesome
+} @else {
+  @import url("#{$pf-global--icon-path}/styles.css");
+}
