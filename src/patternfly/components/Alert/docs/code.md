@@ -13,7 +13,7 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class |
-| `.pf-is-success` | `.pf-c-alert` |  Applies success styling |
-| `.pf-is-danger` | `.pf-c-alert` |  Applies danger styling |
-| `.pf-is-warning` | `.pf-c-alert` |  Applies warning styling |
-| `.pf-is-info` | `.pf-c-alert` |  Applies info styling |
+| `.pf-m-success` | `.pf-c-alert` |  Applies success styling |
+| `.pf-m-danger` | `.pf-c-alert` |  Applies danger styling |
+| `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling |
+| `.pf-m-info` | `.pf-c-alert` |  Applies info styling |
