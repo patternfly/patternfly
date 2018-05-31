@@ -6,7 +6,13 @@ const sassGlob = require('gulp-sass-glob');
 
 gulp.task('build', ['build-modules', 'build-library', 'copy-source']);
 
-gulp.task('build-tmp', () =>
+gulp.task('copy-fa', () =>
+  gulp
+    .src('./node_modules/@fortawesome/fontawesome/styles.css')
+    .pipe(gulp.dest('./static/assets/icons'))
+);
+
+gulp.task('build-tmp', ['copy-fa'], () =>
   gulp
     .src('./src/patternfly/**/*.scss')
     .pipe(insert.append('@import "./components/**/*.scss";\n'))
