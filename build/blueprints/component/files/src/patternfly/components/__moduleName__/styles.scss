@@ -12,7 +12,7 @@
   --{{bemName}}_title--FontSize: var($pf-global--FontSize--xxl);
 
   // Example modifier variable
-  --{{bemName}}--is-danger--BackgroundColor: var(--pf-global--danger-color);
+  --{{bemName}}--m-danger--BackgroundColor: var(--pf-global--danger-color);
 }
 
 .{{bemName}} {
@@ -25,7 +25,7 @@
 
   // Modifier
   &.is-danger {
-    background-color: var(--{{bemName}}--is-danger--BackgroundColor, #c00);
+    background-color: var(--{{bemName}}--m-danger--BackgroundColor, #c00);
   }
 }
 

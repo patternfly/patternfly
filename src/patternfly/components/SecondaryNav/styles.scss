@@ -46,7 +46,7 @@ $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
     color: $pf-p-secondary-nav__link--Color;
 
     // Active State
-    &.pf-is-active {
+    &.pf-m-active {
       color: $pf-p-secondary-nav__link--active--Color;
       // The background creates a thicker blue border under the active link
       background-image:
@@ -59,7 +59,7 @@ $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
     }
 
     // Disabled State
-    &.pf-is-disabled {
+    &.pf-m-disabled {
       color: $pf-p-secondary-nav__link--disabled--Color;
       cursor: not-allowed;
     }

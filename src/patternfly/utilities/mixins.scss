@@ -118,20 +118,20 @@
 
   &:hover,
   &:focus,
-  &.pf-is-focus {
+  &.pf-m-focus {
     color: pf-color-yiq($hover-background);
     background-color: $hover-background;
     border-color: $hover-border;
   }
 
   &:focus,
-  &.pf-is-focus {
+  &.pf-m-focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba($border, .5);
   }
 
   // Disabled comes first so active can properly restyle
-  &.pf-is-disabled,
+  &.pf-m-disabled,
   &:disabled {
     color: pf-color-yiq($background);
     background-color: $background;
