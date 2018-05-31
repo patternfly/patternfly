@@ -39,7 +39,7 @@ For example:
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> box pf-c-box--modifier="pf-is-xxxl pf-has-margin"}}
+{{#> box pf-c-box--modifier="pf-m-xxxl pf-m-margin"}}
   {{> @partial-block}}
 {{/box}}
 ```
@@ -49,9 +49,9 @@ When including a partial within a partial, by default, Handlebars will pass alon
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
 ```html
-{{#> box pf-c-box--modifier="pf-is-xxxl pf-has-margin"}}
+{{#> box pf-c-box--modifier="pf-m-xxxl pf-m-margin"}}
   {{> @partial-block}}
-  {{#> box newcontext pf-c-box--modifier="pf-is-xxxl pf-has-margin"}}
+  {{#> box newcontext pf-c-box--modifier="pf-m-xxxl pf-m-margin"}}
     {{> @partial-block}}
   {{/box}}
 {{/box}}
@@ -63,4 +63,4 @@ Modifier classes help us to create variations of blocks. Reuse names as much as 
 
 | Modifier Class Name | Outcome                                                             |
 | ------------------- | ------------------------------------------------------------------- |
-| `pf-m-has-gutter`   | Adds vertical (if applicable) and horizontal gutters to the element |
+| `pf-m-gutter`   | Adds vertical (if applicable) and horizontal gutters to the element |

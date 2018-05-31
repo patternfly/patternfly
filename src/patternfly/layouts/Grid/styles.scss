@@ -2,7 +2,7 @@
 @import "../../patternfly-utilities";
 
 :root {
-  --pf-l-grid--has-gutter--GridGap: var(--pf-global--gutter);
+  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
 }
 
 /// Media query used to create responsive grid items 
@@ -44,7 +44,7 @@
 @mixin GridItemModifiers($suffix: null) {
   // generate column span modifiers
   @for $col-num from 1 through 12 {
-    > .pf-is-#{$col-num}-col#{$suffix} {
+    > .pf-m-#{$col-num}-col#{$suffix} {
       grid-column-start: auto;
       grid-column-end: span $col-num;
     }
@@ -52,14 +52,14 @@
 
   // generate column offset modfiers
   @for $col-num from 1 through 12 {
-    > .pf-is-offset-#{$col-num}-col#{$suffix} {
+    > .pf-m-offset-#{$col-num}-col#{$suffix} {
       grid-column-start: col-start ($col-num + 1);
     }
   }
 
   // generate row span modfiers
   @for $row-num from 1 through 12 {
-    > .pf-is-#{$row-num}-row#{$suffix} {
+    > .pf-m-#{$row-num}-row#{$suffix} {
       grid-row: span $row-num;
     }
   }
@@ -86,7 +86,7 @@
     }
   }
 
-  &.pf-has-gutters {
-    grid-gap: var(--pf-l-grid--has-gutter--GridGap);
+  &.pf-m-gutters {
+    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
   }
 }

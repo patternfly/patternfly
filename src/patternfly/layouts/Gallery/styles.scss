@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: var(--pf-l-gallery--GridTemplateColumns);
 
-  &.pf-has-gutter {
+  &.pf-m-gutter {
     grid-gap: var(--pf-l-gallery--GridGap);
   }
 }
