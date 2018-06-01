@@ -2,13 +2,6 @@
 
 Always add a modifier class. Never use the class `.pf-c-badge` on its own.
 
-<!--
-## Accessibility
-
-| Attribute | Applied To | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-c-badge` |  accessibility notes. |
--->
 
 ## Usage
 
