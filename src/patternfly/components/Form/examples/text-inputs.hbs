@@ -1,53 +1,49 @@
-{{#>group}}
-  {{#>label labelFor="textInput1"}}Standard input{{/label}}
-  {{#>form-control}}
-    {{#>text-input inputId="textInput1" inputType="text" inputName="textInput1"}}{{/text-input}}
-  {{/form-control}}
-{{/group}}
-{{#>group}}
-  {{#>label labelFor="textInput2"}}Input with placeholder{{/label}}
-  {{#>form-control}}
-    {{#>text-input inputId="textInput2" inputType="text" inputPlaceholder="Example2"}}{{/text-input}}
-  {{/form-control}}
-{{/group}}
-{{#>group}}
-  {{#>label labelFor="textInput3" labelStyleModifier="pf-m-required"}}Required input{{/label}}
-  {{#>form-control}}
-    {{#>text-input inputId="textInput3" inputType="text" required=true}}{{/text-input}}
-  {{/form-control}}
-{{/group}}
-{{#>group}}
-  {{#>label labelFor="textInput3"}}Disabled input{{/label}}
-  {{#>form-control}}
-    {{#>text-input inputId="textInput3" inputType="text" disabled="true"}}{{/text-input}}
-  {{/form-control}}
-{{/group}}
-{{#>group}}
-  {{#>label-group}}
-    {{#>label labelFor="textInput4" labelStyleModifier=" pf-is-required"}}Label with tooltip{{/label}}
+{{#>form}}
+  {{#>group}}
+    {{#>label labelFor="textInput1"}}Standard input{{/label}}
+    {{#>form-control}}
+      {{#>text-input inputId="textInput1" inputType="text" inputName="textInput1"}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label labelFor="textInput2"}}Input with placeholder{{/label}}
+    {{#>form-control}}
+      {{#>text-input inputId="textInput2" inputType="text" inputPlaceholder="Example2"}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label labelFor="textInput3" labelStyleModifier="pf-m-required"}}Required input{{/label}}
+    {{#>form-control}}
+      {{#>text-input inputId="textInput3" inputType="text" required=true}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label labelFor="textInput4" pf-c-form--modifier="pf-m-disabled"}}Disabled input{{/label}}
+    {{#>form-control}}
+      {{#>text-input inputId="textInput4" inputType="text" disabled="true"}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label labelFor="textInput5" pf-c-form-control--modifier="pf-m-required"}}Label with tooltip{{/label}}
     <div class="pf-c-tooltip">
       <i class="fas fa-info-circle"></i>
     </div>
-  {{/label-group}}
-  {{#>form-control}}
-    {{#>text-input inputId="textInput4" inputType="text" required=true}}{{/text-input}}
-  {{/form-control}}
-  {{#>helper-text}}This is helper text{{/helper-text}}
-{{/group}}
-{{#>group}}
-  {{#>label-group}}
-    {{#>label labelFor="textInput5" labelStyleModifier="pf-m-required" inputFor="textInput5"}}Required input with tooltip and error{{/label}}
+    {{#>form-control}}
+      {{#>text-input inputId="textInput5" inputType="text" aria-describedby="helper1" required=true}}{{/text-input}}
+    {{/form-control}}
+    {{#>helper-text helperId="helper1"}}This is helper text{{/helper-text}}
+  {{/group}}
+  {{#>group}}
+    {{#>label labelFor="textInput6" pf-c-form--modifier="pf-m-required" inputFor="textInput5"}}Required input with tooltip and error{{/label}}
     <div class="pf-c-tooltip">
       <i class="fas fa-info-circle"></i>
     </div>      
-  {{/label-group}}
-  {{#>form-control controlStyleModifier="pf-m-error"}}
-    {{#>text-input inputStyleModifier="pf-m-error" inputId="textInput5" inputType="text" inputPlaceholder="Has error" required=true}}{{/text-input}}
-  {{/form-control}}
-  {{#>helper-text helperStyleModifier="pf-m-error"}}This is helper text{{/helper-text}}
-{{/group}}
-
-<div class="pf-c-form__actions">
-  {{#>button type="submit" btnClass="pf-is-primary"}}Create{{/button}}
-  {{#>button btnClass="pf-is-secondary"}}Cancel{{/button}}
-</div>
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>      
+    {{#>form-control newcontent pf-c-form-control--modifier="pf-m-error"}}
+      {{#>text-input inputStyleModifier="pf-m-error" inputId="textInput6" inputType="text" inputPlaceholder="Has error" aria-errormessage="helper2" aria-invalid="true"}}{{/text-input}}
+    {{/form-control}}
+    {{#>helper-text helperStyleModifier="pf-m-error" helperId="helper2"}}This is helper text{{/helper-text}}
+  {{/group}}
+{{/form}}
