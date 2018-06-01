@@ -15,7 +15,7 @@ Always add a modifier class. Never use the class `.pf-c-badge` on its own.
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-badge` | `<span>` | Initiates a badge. Always use with a modifier class. |
-| `.pf-is-read` | `.pf-is-badge` | Applies read badge styling. |
-| `.pf-is-read-alt` | `.pf-is-badge` | Applies read badge styling for use against a dark background. |
-| `.pf-is-unread` | `.pf-is-badge` | Applies unread badge styling. |
-| `.pf-is-unread-alt` | `.pf-is-badge` | Applies unread badge styling for use against a dark background. |
+| `.pf-m-read` | `.pf-c-badge` | Applies read badge styling. |
+| `.pf-m-read-alt` | `.pf-c-badge` | Applies read badge styling for use against a dark background. |
+| `.pf-m-unread` | `.pf-c-badge` | Applies unread badge styling. |
+| `.pf-m-unread-alt` | `.pf-c-badge` | Applies unread badge styling for use against a dark background. |
