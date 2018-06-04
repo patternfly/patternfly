@@ -6,13 +6,16 @@ export default class Preview extends React.Component {
   constructor(props) {
     super(props);
     const { viewport = '', heading } = props;
-    this.state = { viewport, path: '', heading };
+    this.state = { viewport, fullPath: '', heading };
   }
 
   componentDidMount() {
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
-      path: window.location.pathname
+      fullPath: `${window.location.pathname.substr(
+        0,
+        window.location.pathname.length - 1
+      )}-full?component=${this.state.heading}`
     });
   }
 
@@ -24,13 +27,9 @@ export default class Preview extends React.Component {
   }
 
   renderFullPageLink() {
-    const fullPath = `${this.state.path.substr(
-      0,
-      this.state.path.length - 1
-    )}-full?component=${this.state.heading}`;
     return (
       <Link
-        to={fullPath}
+        to={this.state.fullPath}
         target="_blank"
         title="Open in new window"
         className="Preview__viewport-link"
@@ -42,6 +41,21 @@ export default class Preview extends React.Component {
 
   render() {
     const output = { __html: this.props.children };
+    const preview = this.props.fullPageOnly ? (
+      <div className="Preview__body">
+        This Preview can only be accessed in&nbsp;
+        <Link to={this.state.fullPath} target="_blank">
+          full page mode
+        </Link>.
+      </div>
+    ) : (
+      <div
+        className={`Preview__body ${
+          this.props.isViewport ? 'is-viewport' : ''
+        }`}
+        dangerouslySetInnerHTML={output}
+      />
+    );
     return (
       <div className={`Preview ${this.state.viewport}`}>
         <div className="Preview__header">
@@ -82,12 +96,7 @@ export default class Preview extends React.Component {
             {this.renderFullPageLink()}
           </div>
         </div>
-        <div
-          className={`Preview__body ${
-            this.props.isViewport ? 'is-viewport' : ''
-          }`}
-          dangerouslySetInnerHTML={output}
-        />
+        {preview}
       </div>
     );
   }
