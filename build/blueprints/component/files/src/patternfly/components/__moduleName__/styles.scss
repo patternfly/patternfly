@@ -6,26 +6,25 @@
 // The value of component scoped variables is always defined by a global variable:
 :root {
   // Example block variable
-  --{{bemName}}--Color: var(--pf-global--dark--Color);
+  --{{bemName}}--Color: var(--pf-global--Color--dark-100);
 
   // Example element variable
-  --{{bemName}}_title--FontSize: var($pf-global--FontSize--xxl);
+  --{{bemName}}__title--FontSize: var(--pf-global--FontSize--xxl);
 
   // Example modifier variable
   --{{bemName}}--m-danger--BackgroundColor: var(--pf-global--danger-color);
 }
 
 .{{bemName}} {
-  color: var(--{{bemName}}--Color, #292e34);
+  color: var(--{{bemName}}--Color);
 
   // Element
-  &_title {
-    font-size: var(--{{bemName}}_title--FontSize, 2rem);
+  &__title {
+    font-size: var(--{{bemName}}__title--FontSize);
   }
 
   // Modifier
-  &.is-danger {
-    background-color: var(--{{bemName}}--m-danger--BackgroundColor, #c00);
+  &.pf-m-danger {
+    background-color: var(--{{bemName}}--m-danger--BackgroundColor);
   }
 }
-
