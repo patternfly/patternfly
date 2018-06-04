@@ -12,7 +12,9 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Backdrop Example">{backdropExample}</Example>
+      <Example heading="Backdrop Example" fullPageOnly="true">
+        {backdropExample}
+      </Example>
     </Documentation>
   );
 };

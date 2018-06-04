@@ -51,9 +51,11 @@ export default class Example extends React.Component {
       description,
       children,
       className = '',
-      isViewport = false
+      isViewport = false,
+      fullPageOnly
     } = this.props;
     const output = { __html: this.props.children };
+
     if (!this.state.isFull) {
       return (
         <div className={`Example ${className}`}>
@@ -64,7 +66,11 @@ export default class Example extends React.Component {
             )}
           </div>
           <div className="Example__section">
-            <Preview isViewport={isViewport} heading={heading}>
+            <Preview
+              isViewport={isViewport}
+              heading={heading}
+              fullPageOnly={fullPageOnly}
+            >
               {children}
             </Preview>
           </div>
