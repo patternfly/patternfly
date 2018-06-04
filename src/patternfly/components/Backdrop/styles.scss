@@ -2,7 +2,8 @@
 
 :root {
   --pf-c-backdrop--ZIndex: var(--pf-global--ZIndex--xl);
-  --pf-c-backdrop--Color: rgba(0, 0, 0, .5);
+  // The color of the backdrop is pure black but at 42% transparency.
+  --pf-c-backdrop--Color: rgba(0, 0, 0, .42);
   --pf-c-backdrop--BackdropFilter: blur(10px);
 }
 
@@ -15,7 +16,9 @@
   height: 100%;
   background-color: var(--pf-c-backdrop--Color);
   // Vendor prefix needed for Safari, but it is not getting added in the autoprefixer right now
-  //-webkit-backdrop-filter: var(--pf-c-backdrop--BackdropFilter);
+  // Stylelint is disabled for one line so that the prefixed line can be included here
+  /* stylelint-disable-next-line */
+  -webkit-backdrop-filter: var(--pf-c-backdrop--BackdropFilter);
   backdrop-filter: var(--pf-c-backdrop--BackdropFilter);
 }
 
