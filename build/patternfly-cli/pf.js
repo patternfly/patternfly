@@ -56,8 +56,8 @@ program
       bemName: `${prefix}${bemEntity}`,
       moduleName,
       partialBlock: '{{> @partial-block}}',
-      moduleHbOpen: `{{#> ${moduleName}}}`,
-      moduleHbClose: `{{/${moduleName}}}`,
+      moduleHbOpen: `{{#> ${name}}}`,
+      moduleHbClose: `{{/${name}}}`,
       args: blueprintArgs
     };
 
