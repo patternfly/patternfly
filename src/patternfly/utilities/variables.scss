@@ -43,11 +43,15 @@ $pf-global--BorderColor--hover:            $pf-color-red-300 !default;
 
 $pf-global--Color--active:                 $pf-color-blue-400 !default;
 $pf-global--BackgroundColor--active:       $pf-color-blue-100 !default;
-$pf-global--BorderColor--active:           $pf-color-blue-100 !default;
+$pf-global--BorderColor--active:           $pf-color-blue-400 !default;
 
 $pf-global--Color--disabled:               $pf-color-black-400 !default;
 $pf-global--BackgroundColor--disabled:     $pf-color-black-200 !default;
-$pf-global--BorderColor--disabled:         $pf-color-black-200 !default;
+$pf-global--BorderColor--disabled:         $pf-color-black-300 !default;
+
+$pf-global--Color--error:                  $pf-color-red-200 !default;
+$pf-global--BackgroundColor--error:        $pf-color-red-200 !default;
+$pf-global--BorderColor--error:            $pf-color-red-200 !default;
 
 // Theme color
 $pf-global--primary-color:         $pf-color-blue-400 !default;
@@ -122,17 +126,44 @@ $pf-global--link--TextDecoration:         none !default;
 $pf-global--link--Color--hover:           darken($pf-global--primary-color, 15%) !default;
 $pf-global--link--TextDecoration--hover:  underline !default;
 
-
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
 $pf-global--BorderWidth--md:     2px !default;
 $pf-global--BorderWidth--lg:     3px !default;
-$pf-global--BorderColor--dark:   $pf-color-black-400 !default;
+$pf-global--BorderColor--dark:   $pf-color-black-600 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
 $pf-global--BorderRadius:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
-// Fonts
+// Inputs
+$pf-global--input--FontSize: pf-font-prem(16px) !default;
+$pf-global--input--LineHeight: 1.5 !default;
+$pf-global--input--Color: $pf-color-black-900 !default;
+$pf-global--input--Color--disabled: $pf-color-black-400 !default;
+$pf-global--placeholder--Color: $pf-color-black-600 !default;
 
+$pf-global--input--BorderColor: $pf-color-blue-600 !default;
+$pf-global--input--BorderColor--focus: $pf-color-blue-400 !default;
+$pf-global--input--BorderColor--disabled: $pf-color-black-400 !default;
+$pf-global--input--Background: #fff !default;
+$pf-global--input--Background--disabled: $pf-color-black-200 !default;
+$pf-global--input--BorderSize: 1px !default;
+$pf-global--input--BorderSize--hover: 2px !default;
+$pf-global--input--BorderSize--focus: 2px !default;
+
+$pf-global--input--Background: #fff !default;
+$pf-global--input--Background--disabled: $pf-color-black-200 !default;
+
+// Labels
+$pf-global--label--FontSize: pf-font-prem(16px) !default;
+$pf-global--input-placeholder--Color: $pf-color-black-600 !default;
+$pf-global--input--Color: $pf-color-black-600 !default;
+$pf-global--input--BoxShadow: 0 0 0 1px $pf-color-black-600 !default;
+$pf-global--input--BoxShadow--hover: 0 0 0 2px $pf-color-black-600 !default;
+
+// Labels
+$pf-global--label--FontSize: pf-font-prem(16px) !default;
+
+// Fonts
 // Font family
 // stylelint-disable value-keyword-case
 $pf-global--FontFamily--sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -200,6 +231,9 @@ $global-ListStyle: disc outside !default;
   --pf-global--Color--disabled: $pf-global--Color--disabled;
   --pf-global--BackgroundColor--disabled: $pf-global--BackgroundColor--disabled;
   --pf-global--BorderColor--disabled: $pf-global--BorderColor--disabled;
+  --pf-global--Color--error: $pf-global--Color--error;
+  --pf-global--BackgroundColor--error: $pf-global--BackgroundColor--error;
+  --pf-global--BorderColor--error: $pf-global--BorderColor--error;
 
   // Theme color
   --pf-global--primary-color: $pf-global--primary-color;

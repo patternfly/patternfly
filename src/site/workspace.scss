@@ -235,4 +235,10 @@
     text-align: right;
   }
 }
+
+.pf-c-form__fieldset + .pf-c-form__fieldset,
+.pf-c-form__group + .pf-c-form__group {
+  margin-top: 1rem;
+}
+
 /* stylelint-enable */
