@@ -1,0 +1,37 @@
+{{#> modal}}
+  {{#> backdrop }}
+    {{#> bullseye }}
+      {{#> modal-box pf-c-modal-box-modifier="" pf-c-modal-box__label="titleID" pf-c-model-box__description="descriptionID"}}
+        {{#> modal-box-header }}
+          {{#> split}}
+            {{#> split-item classModifier="pf-m-primary"}}
+              {{#> title titleType="h1" pf-c-title--Modifier="pf-m-xxxl" pf-c-title--ID="titleID" }}
+                Overwrite existing file?
+              {{/title}}
+            {{/ split-item }}
+            {{#> split-item classModifier="pf-m-secondary" }}
+              {{!-- Once there is a link button, this should be one and alignment may need to be adjusted --}}
+              {{#> button btnClass="pf-m-link"}}
+                ✖️
+              {{/ button}}
+            {{/ split-item }}
+          {{/ split }}
+        {{/ modal-box-header }}
+        {{#> modal-box-body }}
+          <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
+          <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
+        {{/ modal-box-body }}
+        {{#> modal-box-footer }}
+          <div class="pf-l-alignment pf-m-right">
+            {{#> button}}
+              Save a copy
+            {{/ button }}
+            {{#> button btnClass="pf-m-primary"}}
+              Overwrite
+            {{/button}}
+          </div>
+        {{/ modal-box-footer }}
+      {{/ modal-box}}
+    {{/ bullseye }}
+  {{/ backdrop }}
+{{/ modal }}
