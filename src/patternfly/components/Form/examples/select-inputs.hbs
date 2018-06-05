@@ -1,34 +1,34 @@
 {{#>form}}
   {{#>group}}
-    {{#>label labelFor="select1"}}Select input{{/label}}
+    {{#>label label-for="select1"}}Select input{{/label}}
     {{#>form-control}}
-      {{#>select selectId="select1" selectName="example-select1" disabled="true"}}
-        {{#>select-option optionValue="Option 1"}}The first option{{/select-option}}
-        {{#>select-option optionValue="Option 2" selected=true}}The second option{{/select-option}}
+      {{#>select select-id="select1" select-name="example-select1"}}
+        {{#>select-option option-value="Option 1"}}The first option{{/select-option}}
+        {{#>select-option option-value="Option 2"}}The second option{{/select-option}}
       {{/select}}
     {{/form-control}}
   {{/group}}
   {{#>group}}
-    {{#>label labelFor="select2"}}Select input{{/label}}
+    {{#>label label-for="select2"}}Select input with grouping{{/label}}
     {{#>form-control}}
-      {{#>select selectId="select2" selectName="example-select2"}}
-        {{#>select-option optionValue="Option 1"}}The first option{{/select-option}}
-        {{#>select-option optionValue="Option 2" selected=true}}The second option{{/select-option}}
-      {{/select}}
-    {{/form-control}}
-  {{/group}}
-  {{#>group}}
-    {{#>label labelFor="select3"}}Select input with grouping{{/label}}
-    {{#>form-control}}
-      {{#>select selectId="select3" selectName="example-select3"}}
+      {{#>select select-id="select2" select-name="example-select2"}}
         <optgroup label="Group 1">
-          {{#> select-option optionValue="Option 1"}}The first option{{/select-option}}
-          {{#> select-option optionValue="Option 2"}}The second option{{/select-option}}
+          {{#>select-option option-value="Option 1"}}The first option{{/select-option}}
+          {{#>select-option option-value="Option 2" selected="true"}}The second option is selected by default{{/select-option}}
         </optgroup>
         <optgroup label="Group 2">
-          {{#> select-option optionValue="Option 3"}}The third option{{/select-option}}
-          {{#> select-option optionValue="Option 4"}}The fourth option{{/select-option}}
+          {{#>select-option option-value="Option 3"}}The third option{{/select-option}}
+          {{#>select-option option-value="Option 4"}}The fourth option{{/select-option}}
         </optgroup>
+      {{/select}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label label-for="select3" pf-c-form--modifier="pf-m-disabled"}}Select label and input disabled{{/label}}
+    {{#>form-control newcontent}}
+      {{#>select select-id="select3" select-name="example-select3" disabled="true"}}
+        {{#>select-option option-value="Option 1"}}The first option{{/select-option}}
+        {{#>select-option option-value="Option 2"}}The second option{{/select-option}}
       {{/select}}
     {{/form-control}}
   {{/group}}

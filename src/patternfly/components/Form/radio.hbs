@@ -1,11 +1,11 @@
-{{#if checkNested}}
-  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ radioId }}">
-    <input class="pf-c-form__radio" type="radio" id="{{ radioId }}" name="{{ radioName }}" value="{{ radioValue }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
-    {{ radioLabel }}
+{{#if check-nested}}
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ radio-id }}">
+    <input class="pf-c-form__radio" type="radio" id="{{ radio-id }}" name="{{ radio-name }}" value="{{ radio-value }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
+    {{ radio-label }}
   </label>
   {{> @partial-block}}
 {{else}}
-  <input class="pf-c-form__radio" type="radio" id="{{ radioId }}" name="{{ radioName }}" value="{{ radioValue }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
-  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ radioId }}">{{ radioLabel }}</label>
+  <input class="pf-c-form__radio" type="radio" id="{{ radio-id }}" name="{{ radio-name }}" value="{{ radio-value }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ radio-id }}">{{ radio-label }}</label>
   {{> @partial-block}}
 {{/if}}

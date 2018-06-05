@@ -21,8 +21,8 @@ export default () => {
   return (
     <Documentation docs={Docs}>
       <Example heading="Checkboxes/Radios">{checksRadios}</Example>
-      <Example heading="Select inputs">{selectInputs}</Example>
       <Example heading="Text inputs">{textInputs}</Example>
+      <Example heading="Select inputs">{selectInputs}</Example>
       <Example heading="Textareas">{textareas}</Example>
       <Example heading="Datalist">{datalist}</Example>
     </Documentation>

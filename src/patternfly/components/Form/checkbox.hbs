@@ -1,11 +1,11 @@
-{{#if checkNested}}
-  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ checkboxId }}">
-    <input class="pf-c-form__checkbox" type="checkbox" id="{{ checkboxId }}" name="{{ checkboxName }}" value="{{ checkboxValue }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
-    {{checkboxLabel}}
+{{#if check-nested}}
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ checkbox-id }}">
+    <input class="pf-c-form__checkbox" type="checkbox" id="{{ checkbox-id }}" name="{{ checkbox-name }}" value="{{ checkbox-value }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
+    {{checkbox-label}}
   </label>
   {{> @partial-block }}
 {{else}}
-  <input class="pf-c-form__checkbox" type="checkbox" id="{{ checkboxId }}" name="{{ checkboxName }}" value="{{ checkboxValue }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
-  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ checkboxId }}">{{checkboxLabel}}</label>
+  <input class="pf-c-form__checkbox" type="checkbox" id="{{ checkbox-id }}" name="{{ checkbox-name }}" value="{{ checkbox-value }}" {{#if disabled}} disabled {{/if}} {{#if checked}} checked {{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}} />
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ checkbox-id }}">{{checkbox-value}}</label>
   {{> @partial-block }}
 {{/if}}

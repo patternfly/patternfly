@@ -1,5 +1,8 @@
 {{#>form}}
   {{#>group}}
-    <textarea class="pf-c-form__textarea" rows="4" cols="50"></textarea>
-  {{/group}}    
+    {{#>label label-for="textarea1"}}Textarea{{/label}}
+    {{#>form-control}}
+      <textarea class="pf-c-form__textarea" name="textarea" id="textarea1" rows="4" cols="50"></textarea>
+    {{/form-control}}
+  {{/group}}
 {{/form}}
