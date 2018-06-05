@@ -314,9 +314,9 @@
     }
   }
 
-  // Link and Action Buttons
+  // Link and Icon Buttons
   &.pf-m-link,
-  &.pf-m-action {
+  &.pf-m-icon {
     background-color: transparent;
     box-shadow: none;
 
@@ -366,17 +366,17 @@
 
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-button--m-action--hover--Color);
+      color: var(--pf-c-button--m-icon--hover--Color);
     }
 
     &:active,
     &.pf-m-active {
-      color: var(--pf-c-button--m-action--active--Color);
+      color: var(--pf-c-button--m-icon--active--Color);
     }
 
     &:focus,
     &.pf-m-focus {
-      color: var(--pf-c-button--m-action--focus--Color);
+      color: var(--pf-c-button--m-icon--focus--Color);
     }
   }
 
