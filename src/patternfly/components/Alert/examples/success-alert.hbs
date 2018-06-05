@@ -1,30 +1,33 @@
-{{#> alert pf-c-alert--Modifier="pf-m-success pf-m-top-aligned"}}
-<div class="pf-c-alert__icon">
+{{#> alert pf-c-alert--Modifier="pf-m-success pf-m-top-aligned" pf-c-alert--AriaLabel="Success Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
     <i class="fas fa-check-circle"></i>
 </div>
 <div class="pf-c-alert__body">
-    <h4 class="pf-c-alert__title">Warning notification title</h4>
+    <h4 class="pf-c-alert__title">
+        <span class="sr-only">Success: </span> Success notification title</h4>
     <p class="pf-c-alert__description">This is a description of the notification content.</p>
 </div>
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-success"}}
-<div class="pf-c-alert__icon">
+<br> {{#> alert pf-c-alert--Modifier="pf-m-success" pf-c-alert--AriaLabel="Success Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
     <i class="fas fa-check-circle"></i>
 </div>
 <div class="pf-c-alert__body">
-    <h4 class="pf-c-alert__title">Success notification title</h4>
+    <h4 class="pf-c-alert__title">
+        <span class="sr-only">Success: </span> Success notification title</h4>
 </div>
 <div class="pf-c-alert__action">
     {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
 </div>
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-success"}}
-<div class="pf-c-alert__icon">
+<br> {{#> alert pf-c-alert--Modifier="pf-m-success" pf-c-alert--AriaLabel="Success Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
     <i class="fas fa-check-circle"></i>
 </div>
 <div class="pf-c-alert__body">
-    <h4 class="pf-c-alert__title">Success notification title</h4>
+    <h4 class="pf-c-alert__title">
+        <span class="sr-only">Success: </span> Success notification title</h4>
 </div>
 {{/alert}}
