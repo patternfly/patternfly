@@ -1,0 +1,138 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-vertical-nav__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+
+
+.pf-c-vertical-nav {
+  /* stylelint-disable */
+
+  // Vars
+  // Base
+  --pf-c-vertical-nav--Color:             var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-vertical-nav--BackgroundColor:   var(--pf-global--BackgroundColor--light-100);
+
+  // Nav link
+  --pf-c-vertical-nav__link--PaddingTop:      var(--pf-global--spacer--lg);
+  --pf-c-vertical-nav__link--PaddingRight:    calc(var(--pf-global--spacer--lg) + .875em + var(--pf-c-vertical-nav__link-arrow--Right));
+  --pf-c-vertical-nav__link--PaddingBottom:   var(--pf-global--spacer--lg);
+  --pf-c-vertical-nav__link--PaddingLeft:     var(--pf-global--spacer--xl);
+  --pf-c-vertical-nav__link--MarginTop:       0;
+  --pf-c-vertical-nav__link--MarginBottom:    0;
+  
+  // Link active :after
+  --pf-c-vertical-nav__link-after--active--Left:    calc(var(--pf-c-vertical-nav__link--PaddingLeft) + 1.5rem + var(--pf-c-vertical-nav__link-icon--PaddingRight));
+  --pf-c-vertical-nav__link-after--active--Width:   2rem;
+  --pf-c-vertical-nav__link-after--active--Height:  .25rem;
+  --pf-c-vertical-nav__link-after--active--Color:   var(--pf-global--Color--active);
+
+  // Color
+  --pf-c-vertical-nav__link--Color:             var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--hover--Color:      var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--active--Color:     var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--focus--Color:      var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global--Color--disabled);
+
+  // Background color
+  --pf-c-vertical-nav__link--BackgroundColor:           var(--pf-global--BackgroundColor--light-100);
+  --pf-c-vertical-nav__link--hover--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
+  --pf-c-vertical-nav__link--active--BackgroundColor:   var(--pf-global--BackgroundColor--light-200);
+  --pf-c-vertical-nav__link--focus--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
+  --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
+
+  // Link icon
+  --pf-c-vertical-nav__link-icon--PaddingRight: var(--pf-global--spacer--xl);
+
+  // Link arrow
+  --pf-c-vertical-nav__link-arrow--Right: var(--pf-global--spacer--xl);
+
+  /* stylelint-enable */
+
+  // Base
+  color: var(--pf-c-vertical-nav--Color);
+  background-color: var(--pf-c-vertical-nav--BackgroundColor);
+
+  &__item {
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    padding-top: var(--pf-c-vertical-nav__link--PaddingTop);
+    padding-right: var(--pf-c-vertical-nav__link--PaddingRight);
+    padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom);
+    padding-left: var(--pf-c-vertical-nav__link--PaddingLeft);
+    margin-top: var(--pf-c-vertical-nav__link--MarginTop);
+    margin-bottom: var(--pf-c-vertical-nav__link--MarginBottom);
+    color: var(--pf-c-vertical-nav__link--Color);
+    text-decoration: none;
+    background-color: var(--pf-c-vertical-nav__link--BackgroundColor);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    // Modifiers and states
+    &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-vertical-nav__link--hover--Color);
+      background-color: var(--pf-c-vertical-nav__link--hover--BackgroundColor);
+    }
+
+    &:active,
+    &.pf-m-active {
+      color: var(--pf-c-vertical-nav__link--active--Color);
+      background-color: var(--pf-c-vertical-nav__link--active--BackgroundColor);
+    }
+
+    &:focus,
+    &.pf-m-focus {
+      z-index: 2;
+      color: var(--pf-c-vertical-nav__link--focus--Color);
+      background-color: var(--pf-c-vertical-nav__link--focus--BackgroundColor);
+    }
+
+    &:disabled,
+    &.pf-m-disabled {
+      color: var(--pf-c-vertical-nav__link--disabled--Color);
+      background-color: var(--pf-global--disabled--BackgroundColor);
+    }
+
+    // Modifiers
+    &.pf-m-active {
+
+      // Since we are still unsure about the active state I am going to leave it hardcoded
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: var(--pf-c-vertical-nav__link-after--active--Left);
+        width: var(--pf-c-vertical-nav__link-after--active--Width);
+        height: var(--pf-c-vertical-nav__link-after--active--Height);
+        content: "";
+        background-color: var(--pf-c-vertical-nav__link-after--active--Color);
+      }
+    }
+
+    // Link icon
+    &-icon {
+      padding-right: var(--pf-c-vertical-nav__link-icon--PaddingRight);
+      line-height: 1;
+    }
+
+    // Link text
+    &-text {
+    }
+
+    // Link arrow
+    &-arrow {
+      position: absolute;
+      right: var(--pf-c-vertical-nav__link-arrow--Right);
+    }
+  }
+}
+

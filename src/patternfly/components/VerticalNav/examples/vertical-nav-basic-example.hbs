@@ -1,0 +1,32 @@
+{{#>vertical-nav}}
+  {{#>vertical-nav-item current="true"}}
+    {{#>vertical-nav-link pf-c-vertical-nav--modifier="pf-m-active"}}
+      {{#>vertical-nav-link-icon newcontent icon="fa-home"}}{{/vertical-nav-link-icon}}
+      {{#>vertical-nav-link-text newcontent}}Home{{/vertical-nav-link-text}}
+    {{/vertical-nav-link}}
+  {{/vertical-nav-item}}
+  {{#>vertical-nav-item}}
+    {{#>vertical-nav-link}}
+      {{#>vertical-nav-link-icon newcontent icon="fa-tachometer-alt"}}{{/vertical-nav-link-icon}}
+      {{#>vertical-nav-link-text newcontent}}Unnecessarily long name extending to 2 lines{{/vertical-nav-link-text}}
+    {{/vertical-nav-link}}
+  {{/vertical-nav-item}}
+  {{#>vertical-nav-item}}
+    {{#>vertical-nav-link}}
+      {{#>vertical-nav-link-icon newcontent icon="fa-envelope"}}{{/vertical-nav-link-icon}}
+      {{#>vertical-nav-link-text newcontent}}Monitoring{{/vertical-nav-link-text}}
+    {{/vertical-nav-link}}
+  {{/vertical-nav-item}}
+  {{#>vertical-nav-item}}
+    {{#>vertical-nav-link}}
+      {{#>vertical-nav-link-icon newcontent icon="fa-boxes"}}{{/vertical-nav-link-icon}}
+      {{#>vertical-nav-link-text newcontent}}Builds{{/vertical-nav-link-text}}
+    {{/vertical-nav-link}}
+  {{/vertical-nav-item}}
+  {{#>vertical-nav-item children="true"}}
+    {{#>vertical-nav-link}}
+      {{#>vertical-nav-link-icon newcontent icon="fa-chart-area"}}{{/vertical-nav-link-icon}}
+      {{#>vertical-nav-link-text newcontent}}Subnav example (not functional){{/vertical-nav-link-text}}
+    {{/vertical-nav-link}}
+  {{/vertical-nav-item}}
+{{/vertical-nav}}

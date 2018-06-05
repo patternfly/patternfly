@@ -1,0 +1,35 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-vertical-nav__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  // Base
+}
+
+.demo-vertical-nav {
+
+  .pf-l-page {
+    // Set explicit width value to avoid sidebar shifting
+    grid-template-columns: 350px auto;
+    min-height: 100vh;
+
+    &__header {
+      grid-area: header;
+      height: 100px;
+      padding: 20px;
+      background: #000;
+    }
+
+    &__sidebar {
+      grid-area: sidebar;
+      min-width: pf-size-prem(280px);
+    }
+
+    &__main {
+      grid-area: main;
+      background: $pf-color-black-200;
+    }
+  }
+}
