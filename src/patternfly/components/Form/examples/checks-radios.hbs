@@ -30,19 +30,19 @@
   <fieldset class="pf-c-form__fieldset">
     <legend class="pf-c-form__legend">Inline checkboxes nested in label</legend>
     {{#>group pf-c-form--modifier="pf-m-inline"}}
-      {{#>check}}
+      {{#>check newcontent}}
         {{#>checkbox check-nested="true" checkbox-value="checkboxOption4" checkbox-id="checkbox4" checkbox-name="checkbox4" checkbox-label="Checkbox 1"}}{{/checkbox}}
         <div class="pf-c-tooltip">
           <i class="fas fa-info-circle"></i>
         </div>
       {{/check}}
-      {{#>check}}
+      {{#>check newcontent}}
         {{#>checkbox check-nested="true" checkbox-value="checkboxOption5" checkbox-id="checkbox5" checkbox-name="checkbox5" checkbox-label="Checkbox 2"}}{{/checkbox}}
         <div class="pf-c-tooltip">
           <i class="fas fa-info-circle"></i>
         </div>
       {{/check}}
-      {{#>check}}
+      {{#>check newcontent}}
         {{#>checkbox check-nested="true" checkbox-value="checkboxOption6" checkbox-id="checkbox6" checkbox-name="checkbox6" checkbox-label="Checkbox 3" disabled="true"}}{{/checkbox}}
       {{/check}}
     {{/group}}
