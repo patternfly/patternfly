@@ -116,7 +116,7 @@
   --pf-c-button--m-link--focus--Color: var(--pf-global--primary-color--dark);
   --pf-c-button--m-link--active--Color: var(--pf-global--primary-color--dark);
 
-  // icon btn
+  // Action btn
   --pf-c-button--m-action--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-button--m-action--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-button--m-action--PaddingBottom: var(--pf-global--spacer--sm);
@@ -314,7 +314,7 @@
     }
   }
 
-  // Link and Icon Buttons
+  // Link and Action Buttons
   &.pf-m-link,
   &.pf-m-action {
     background-color: transparent;
