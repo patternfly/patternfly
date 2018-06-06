@@ -316,7 +316,7 @@
 
   // Link and Icon Buttons
   &.pf-m-link,
-  &.pf-m-icon {
+  &.pf-m-action {
     background-color: transparent;
     box-shadow: none;
 
@@ -366,17 +366,17 @@
 
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-button--m-icon--hover--Color);
+      color: var(--pf-c-button--m-action--hover--Color);
     }
 
     &:active,
     &.pf-m-active {
-      color: var(--pf-c-button--m-icon--active--Color);
+      color: var(--pf-c-button--m-action--active--Color);
     }
 
     &:focus,
     &.pf-m-focus {
-      color: var(--pf-c-button--m-icon--focus--Color);
+      color: var(--pf-c-button--m-action--focus--Color);
     }
   }
 
