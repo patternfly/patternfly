@@ -109,9 +109,7 @@
   --pf-c-button--m-danger--active--Color: var(--pf-global--Color--light-100);
 
   // Link btn
-  --pf-c-button--m-link--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-button--m-link--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-button--m-link--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-button--m-link--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-button--m-link--Color: var(--pf-global--primary-color);
   --pf-c-button--m-link--hover--Color: var(--pf-global--primary-color--dark);
@@ -119,15 +117,15 @@
   --pf-c-button--m-link--active--Color: var(--pf-global--primary-color--dark);
 
   // icon btn
-  --pf-c-button--m-icon--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-button--m-icon--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-button--m-icon--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-button--m-icon--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-button--m-icon--Color: var(--pf-global--Color--dark-100);
-  --pf-c-button--m-icon--hover--Color: var(--pf-global--Color--dark-100);
-  --pf-c-button--m-icon--focus--Color: var(--pf-global--Color--dark-100);
-  --pf-c-button--m-icon--active--Color: var(--pf-global--Color--dark-100);
-  --pf-c-button--m-icon--LineHeight: 1;
+  --pf-c-button--m-action--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-button--m-action--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-button--m-action--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-button--m-action--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-button--m-action--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-action--hover--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-action--focus--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-action--active--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--item--MarginRight: var(--pf-global--spacer--xs);
 }
 
 .pf-c-button {
@@ -144,6 +142,11 @@
   border-radius: var(--pf-c-button--BorderRadius);
   outline: 0;
   box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--BoxShadowColor);
+
+  // Add spacing to icon if it appears at the beginning of button
+  > *:first-child {
+    margin-right: var(--pf-c-button--item--MarginRight);
+  }
 
   &:hover,
   &.pf-m-hover {
@@ -313,7 +316,7 @@
 
   // Link and Icon Buttons
   &.pf-m-link,
-  &.pf-m-icon {
+  &.pf-m-action {
     background-color: transparent;
     box-shadow: none;
 
@@ -330,7 +333,8 @@
 
   // Link Buttons
   &.pf-m-link {
-    padding: var(--pf-c-button--m-link--PaddingTop) var(--pf-c-button--m-link--PaddingRight) var(--pf-c-button--m-link--PaddingBottom) var(--pf-c-button--m-link--PaddingLeft);
+    padding-right: var(--pf-c-button--m-link--PaddingRight);
+    padding-left: var(--pf-c-button--m-link--PaddingLeft);
     color: var(--pf-c-button--m-link--Color);
 
     &:hover,
@@ -350,24 +354,29 @@
   }
 
   // Icon Buttons
-  &.pf-m-icon {
-    padding: var(--pf-c-button--m-icon--PaddingTop) var(--pf-c-button--m-icon--PaddingRight) var(--pf-c-button--m-icon--PaddingBottom) var(--pf-c-button--m-icon--PaddingLeft);
-    line-height: var(--pf-c-button--m-icon--LineHeight);
-    color: var(--pf-c-button--m-icon--Color);
+  &.pf-m-action {
+    padding: var(--pf-c-button--m-action--PaddingTop) var(--pf-c-button--m-action--PaddingRight) var(--pf-c-button--m-action--PaddingBottom) var(--pf-c-button--m-action--PaddingLeft);
+    line-height: 1;
+    color: var(--pf-c-button--m-action--Color);
+
+    // Ignore margin for button icons
+    > * {
+      margin: 0;
+    }
 
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-button--m-icon--hover--Color);
+      color: var(--pf-c-button--m-action--hover--Color);
     }
 
     &:active,
     &.pf-m-active {
-      color: var(--pf-c-button--m-icon--active--Color);
+      color: var(--pf-c-button--m-action--active--Color);
     }
 
     &:focus,
     &.pf-m-focus {
-      color: var(--pf-c-button--m-icon--focus--Color);
+      color: var(--pf-c-button--m-action--focus--Color);
     }
   }
 
