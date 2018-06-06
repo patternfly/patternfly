@@ -1,6 +1,6 @@
 ## Overview
 
-A modal is @#$%@@@#$%@#%#$%@#$%@$%%@$%
+This demo implements a basic modal, including the backdrop. Both the normal and large variations of the modal are shown.
 
 ## Accessibility
 
