@@ -2,13 +2,12 @@
 // Files that are imported here will be available to all resources.
 
 // These imports reference files this folder
-
 @import "./functions";
 @import "./colors";
 @import "./variables";
 @import "./bs-variables"; // Overwrites Bootstrap variables
 @import "./mixins";
-
+@import "./placeholders";
 
 // These imports reference files in the node_module folder
 // @import "bootstrap/scss/_functions";

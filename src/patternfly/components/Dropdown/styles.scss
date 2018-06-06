@@ -1,6 +1,6 @@
 @import "../../patternfly-utilities";
 
-:root {
+.pf-c-dropdown {
   // Toggle
   --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--md);
@@ -9,12 +9,12 @@
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-dropdown__toggle--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-dropdown__toggle--BackgroundColor: transparent;
   --pf-c-dropdown__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__toggle--BorderColor: var(--pf-global--Color--dark-200);
-  --pf-c-dropdown__toggle--Color: var(--pf-global--Color--dark-100);
+  --pf-c-dropdown__toggle--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--hover--BorderWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--BorderColor);
   --pf-c-dropdown__toggle--m-expanded--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--m-expanded--BorderColor: var(--pf-global--Color--active);
 
@@ -44,9 +44,7 @@
   // Menu Item Separator
   --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-}
 
-.pf-c-dropdown {
   position: relative;
   display: inline-block;
 

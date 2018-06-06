@@ -1,6 +1,6 @@
 @import "../../patternfly-utilities";
 
-:root {
+.pf-c-box {
   // Component variables
   --pf-c-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-box--BoxShadow: var(--pf-global--BoxShadow--sm);
@@ -22,9 +22,10 @@
   --pf-c-box__footer--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-box__footer--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
-}
 
-.pf-c-box {
+  // This component always needs to be light  
+  @extend %pf-t-light;
+
   display: flex;
   flex-direction: column;
   background-color: var(--pf-c-box--BackgroundColor);

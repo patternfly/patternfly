@@ -1,6 +1,6 @@
 @import "../../patternfly-utilities";
 
-:root {
+.pf-c-modal-box {
   // Component variables
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
@@ -30,9 +30,10 @@
   --pf-c-modal-box__footer--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-modal-box__footer--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-modal-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
-}
 
-.pf-c-modal-box {
+  // This component always needs to be light  
+  @extend %pf-t-light;
+
   z-index: var(--pf-c-modal-box--ZIndex);
   display: flex;
   flex-direction: column;
