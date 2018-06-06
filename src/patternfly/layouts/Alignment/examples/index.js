@@ -1,24 +1,24 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import LeftAlign from './leftAlign.hbs';
-import CenterAlign from './centerAlign.hbs';
-import RightAlign from './rightAlign.hbs';
+import AlignmentLeftAlign from './alignment-left-align.hbs';
+import AlignmentCenterAlign from './alignment-center-align.hbs';
+import AlignmentRightAlign from './alignment-right-align.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
 export const Docs = docs;
 
 export default () => {
-  const leftAlign = LeftAlign();
-  const centerAlign = CenterAlign();
-  const rightAlign = RightAlign();
+  const alignmentLeftAlign = AlignmentLeftAlign();
+  const alignmentCenterAlign = AlignmentCenterAlign();
+  const alignmentRightAlign = AlignmentRightAlign();
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Left Alignment Example">{leftAlign}</Example>
-      <Example heading="Center Alignment Example">{centerAlign}</Example>
-      <Example heading="Right Alignment Example">{rightAlign}</Example>
+      <Example heading="Left Alignment Example">{alignmentLeftAlign}</Example>
+      <Example heading="Center Alignment Example">{alignmentCenterAlign}</Example>
+      <Example heading="Right Alignment Example">{alignmentRightAlign}</Example>
     </Documentation>
   );
 };

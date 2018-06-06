@@ -1,6 +1,6 @@
 ## Overview
 
-Use the alignment layout when you want to align content to the left, right or center.
+Use the alignment layout when you want to align content to the left, right, or center.
 
 ## Usage
 
