@@ -42,8 +42,9 @@ program
       .transform(name, ['underscore', 'titleize', 'dasherize'])
       .toLowerCase();
     const moduleName = inflection.titleize(name).replace(/-/g, '');
-    const camelizedName = inflection.camelize(name);
+    const camelizedName = inflection.camelize(name, true);
     const underScoredName = inflection.underscore(name);
+    const bemName = `${prefix}${bemEntity}`;
 
     const blueprintData = {
       blueprintDir,
@@ -63,9 +64,13 @@ program
       namePascalized: inflection.camelize(name),
       nameTableized: inflection.tableize(name),
       nameCapitalized: inflection.capitalize(name),
-      bemName: `${prefix}${bemEntity}`,
+      bemName: `${bemName}`,
+      bemModifierName: `{{${bemName}--modifier}}`,
       moduleName,
       partialBlock: '{{> @partial-block}}',
+      idBlock: `{{#if ${bemName}__id}}
+    id="{{${bemName}__id}}"
+  {{/if}}`,
       moduleHbOpen: `{{#> ${name}}}`,
       moduleHbClose: `{{/${name}}}`,
       exampleOneReference: `{${camelizedName}Example1}`,
