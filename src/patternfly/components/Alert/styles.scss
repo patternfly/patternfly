@@ -1,68 +1,129 @@
 @import "../../patternfly-utilities";
+:root {
+  // component variables
+  --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
 
-$pf-c-alert--PaddingTop:        $pf-global--spacer--sm !default;
-$pf-c-alert--PaddingRight:      $pf-global--spacer--lg !default;
-$pf-c-alert--PaddingBottom:     $pf-global--spacer--sm !default;
-$pf-c-alert--PaddingLeft:       $pf-global--spacer--lg !default;
-$pf-c-alert--MarginBottom:      $pf-global--spacer--md !default;
-$pf-c-alert--BorderWidth:       $pf-global--BorderWidth--md !default;
-$pf-c-alert__link--FontWeight:  $pf-global--FontWeight--bold !default;
+  // Icon
+  --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
+  --pf-c-alert__icon__svg--MarginTop: var(--pf-global--spacer--xs);
 
-//success alert
-$pf-c-alert--m-success--BackgroundColor:  $pf-global--success-color !default;
-$pf-c-alert--m-success--Color:            $pf-global--success-color--dark !default;
-$pf-c-alert--m-success--BorderColor:      $pf-global--success-color--dark !default;
+  // Body
+  --pf-c-alert__body--Padding: var(--pf-global--spacer--md);
 
-//danger alert
-$pf-c-alert--m-danger--BackgroundColor:  $pf-global--danger-color !default;
-$pf-c-alert--m-danger--Color:            $pf-global--Color--light-100 !default;
-$pf-c-alert--m-danger--BorderColor:      $pf-global--danger-color--dark !default;
+  // Title
+  --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-alert__title--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-alert__title--MarginBottom: var(--pf-global--spacer--xs);
 
-//warning alert
-$pf-c-alert--m-warning--BackgroundColor:  $pf-global--warning-color !default;
-$pf-c-alert--m-warning--Color:            $pf-global--warning-color--dark !default;
-$pf-c-alert--m-warning--BorderColor:      $pf-global--warning-color--dark !default;
+  // Action
+  --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-alert__action--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-alert__action--PaddingLeft: var(--pf-global--spacer--lg);
 
-//info alert
-$pf-c-alert--m-info--BackgroundColor:  $pf-global--info-color !default;
-$pf-c-alert--m-info--Color:            $pf-global--info-color--dark !default;
-$pf-c-alert--m-info--BorderColor:      $pf-global--info-color--dark !default;
+  // Success
+  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
+  --pf-c-alert--m-success__icon--BackgroundColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-success__title--Color: var(--pf-global--success-color--200);
 
+  // Danger
+  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--300);
+  --pf-c-alert--m-danger__icon--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-danger__title--Color: var(--pf-global--danger-color--200);
+
+  // Warning
+  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--200);
+  --pf-c-alert--m-warning__icon--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
+
+  // Info
+  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--200);
+  --pf-c-alert--m-info__icon--BackgroundColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
+
+}
 .pf-c-alert {
-  position: relative;
-  padding: $pf-c-alert--PaddingTop $pf-c-alert--PaddingRight $pf-c-alert--PaddingBottom $pf-c-alert--PaddingLeft;
-  border: $pf-c-alert--BorderWidth solid transparent;
+  display: flex;
+  box-shadow: var(--pf-c-alert--BoxShadow);
 
-  &__heading {
-    // Specified to prevent conflicts of changing $headings-color
-    color: inherit;
+  &__icon {
+    display: flex;
+    padding: var(--pf-c-alert__icon--Padding);
+    font-size: 24px; // this is here until we land on a fixed way to set sizes for icons
+    svg { // b/c the svg is generated it must break BEM and not receive a class.
+      margin-top: var(--pf-c-alert__icon__svg--MarginTop);
+    }
   }
 
-  &__link {
-    font-weight: $pf-c-alert__link--FontWeight;
+  &__body {
+    flex: 1 1 100%;
+    padding: var(--pf-c-alert__body--Padding);
+  }
+
+  &__title {
+    margin-top: var(--pf-c-alert__title--MarginTop);
+    margin-bottom: var(--pf-c-alert__title--MarginBottom);
+    font-size: var(--pf-c-alert__title--FontSize);
+  }
+
+  &__action {
+    padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
   }
 
   &.pf-m-success {
-    color: $pf-c-alert--m-success--Color;
-    background-color: $pf-c-alert--m-success--BackgroundColor;
-    border-color: $pf-c-alert--m-success--BorderColor;
+    .pf-c-alert {
+
+      &__icon {
+        color: var(--pf-c-alert--m-success__icon--Color);
+        background-color: var(--pf-c-alert--m-success__icon--BackgroundColor);
+      }
+
+      &__title {
+        color: var(--pf-c-alert--m-success__title--Color);
+      }
+    }
   }
 
   &.pf-m-danger {
-    color: $pf-c-alert--m-danger--Color;
-    background-color: $pf-c-alert--m-danger--BackgroundColor;
-    border-color: $pf-c-alert--m-danger--BorderColor;
+    .pf-c-alert {
+
+      &__icon {
+        color: var(--pf-c-alert--m-danger__icon--Color);
+        background-color: var(--pf-c-alert--m-danger__icon--BackgroundColor);
+      }
+
+      &__title {
+        color: var(--pf-c-alert--m-danger__title--Color);
+      }
+    }
   }
 
   &.pf-m-warning {
-    color: $pf-c-alert--m-warning--Color;
-    background-color: $pf-c-alert--m-warning--BackgroundColor;
-    border-color: $pf-c-alert--m-warning--BorderColor;
+    .pf-c-alert {
+
+      &__icon {
+        color: var(--pf-c-alert--m-warning__icon--Color);
+        background-color: var(--pf-c-alert--m-warning__icon--BackgroundColor);
+      }
+
+      &__title {
+        color: var(--pf-c-alert--m-warning__title--Color);
+      }
+    }
   }
 
   &.pf-m-info {
-    color: $pf-c-alert--m-info--Color;
-    background-color: $pf-c-alert--m-info--BackgroundColor;
-    border-color: $pf-c-alert--m-info--BorderColor;
+    .pf-c-alert {
+
+      &__icon {
+        color: var(--pf-c-alert--m-info__icon--Color);
+        background-color: var(--pf-c-alert--m-info__icon--BackgroundColor);
+      }
+
+      &__title {
+        color: var(--pf-c-alert--m-info__title--Color);
+      }
+    }
   }
+
 }

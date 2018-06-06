@@ -1,1 +1,33 @@
-{{#> alert modifierClass="pf-m-warning"}}<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>{{/alert}}
+ {{#> alert pf-c-alert--Modifier="pf-m-warning" pf-c-alert--AriaLabel="Warning Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
+  <i class="fas fa-exclamation-triangle"></i>
+</div>
+<div class="pf-c-alert__body">
+  <h4 class="pf-c-alert__title">
+    <span class="sr-only">Warning: </span> Warning notification title</h4>
+    <p>This is a description of the notification content.</p>
+</div>
+{{/alert}}
+<br>
+<br> {{#> alert pf-c-alert--Modifier="pf-m-warning" pf-c-alert--AriaLabel="Warning Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
+  <i class="fas fa-exclamation-triangle"></i>
+</div>
+<div class="pf-c-alert__body">
+  <h4 class="pf-c-alert__title">
+    <span class="sr-only">Warning: </span> Warning notification title</h4>
+</div>
+<div class="pf-c-alert__action">
+  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+</div>
+{{/alert}}
+<br>
+<br> {{#> alert pf-c-alert--Modifier="pf-m-warning" pf-c-alert--AriaLabel="Warning Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
+  <i class="fas fa-exclamation-triangle"></i>
+</div>
+<div class="pf-c-alert__body">
+  <h4 class="pf-c-alert__title">
+    <span class="sr-only">Warning: </span> Warning notification title</h4>
+</div>
+{{/alert}}
