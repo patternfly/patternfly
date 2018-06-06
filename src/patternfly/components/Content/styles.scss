@@ -54,6 +54,7 @@
   --pf-c-content--small--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--small--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-content--small--Color: var(--pf-global--Color--dark-200);
+  --pf-c-content--small--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Links
   --pf-c-content--a--Color: var(--pf-global--link--Color);
@@ -199,6 +200,7 @@
     display: block;
     margin-bottom: var(--pf-c-content--small--MarginBottom);
     font-size: var(--pf-c-content--small--FontSize);
+    font-weight: var(--pf-c-content--small--FontWeight);
     line-height: var(--pf-c-content--small--LineHeight);
     color: var(--pf-c-content--small--Color);
   }
