@@ -5,17 +5,15 @@
 
   // Icon
   --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
-  --pf-c-alert__icon--FontSize: var(--pf-global--FontSize--xxxl);
+  --pf-c-alert__icon__svg--MarginTop: var(--pf-global--spacer--xs);
 
   // Body
   --pf-c-alert__body--Padding: var(--pf-global--spacer--md);
 
-  // Description
-  --pf-c-alert__description--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-alert__description--MarginBottom: var(--pf-global--spacer--xs);
-
   // Title
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-alert__title--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-alert__title--MarginBottom: var(--pf-global--spacer--xs);
 
   // Action
   --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--md);
@@ -48,30 +46,23 @@
   display: flex;
   box-shadow: var(--pf-c-alert--BoxShadow);
 
-  &:not(.pf-m-top-aligned) {
-    .pf-c-alert__icon {
-      align-items: center;
-    }
-  }
-
   &__icon {
     display: flex;
     padding: var(--pf-c-alert__icon--Padding);
-    font-size: var(--pf-c-alert__icon--FontSize);
-    line-height: 0;
+    font-size: 24px; // this is here until we land on a fixed way to set sizes for icons
+    svg { // b/c the svg is generated it must break BEM and not receive a class.
+      margin-top: var(--pf-c-alert__icon__svg--MarginTop);
+    }
   }
 
   &__body {
     flex: 1 1 100%;
-    align-self: center;
     padding: var(--pf-c-alert__body--Padding);
   }
 
-  &__description {
-    margin: var(--pf-c-alert__description--MarginTop) 0 var(--pf-c-alert__description--MarginBottom);
-  }
-
   &__title {
+    margin-top: var(--pf-c-alert__title--MarginTop);
+    margin-bottom: var(--pf-c-alert__title--MarginBottom);
     font-size: var(--pf-c-alert__title--FontSize);
   }
 
