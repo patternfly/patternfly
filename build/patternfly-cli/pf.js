@@ -23,18 +23,27 @@ program
   .alias('g')
   .description('Generates a blueprint and passes arguments')
   .action((type, name, options) => {
-    const blueprintDir = path.join(`${BLUEPRINTS_DIR}/${type}`);
+    const blueprintDir = path.join(`${BLUEPRINTS_DIR}/template`);
     const sourceType = type;
-    const source = path.join(`${BLUEPRINTS_DIR}/${type}/files`);
+    const source = path.join(`${BLUEPRINTS_DIR}/template/files`);
     const destination = PROJECT_DIR;
     const prefix = `pf-${type.charAt(0)}-`;
+    const supportedBlueprints = ['component', 'demo', 'pattern', 'layout'];
 
     name = name.replace(/^pf-(c|p)-/g, '');
+    if (supportedBlueprints.indexOf(sourceType) === -1) {
+      console.error(
+        `Invalid generator type specified (${sourceType}) - please use pf generate component | demo | pattern | layout`
+      );
+      return;
+    }
 
     const bemEntity = inflection
       .transform(name, ['underscore', 'titleize', 'dasherize'])
       .toLowerCase();
     const moduleName = inflection.titleize(name).replace(/-/g, '');
+    const camelizedName = inflection.camelize(name);
+    const underScoredName = inflection.underscore(name);
 
     const blueprintData = {
       blueprintDir,
@@ -42,10 +51,11 @@ program
       destination,
       name,
       sourceType,
+      typeDirectory: `${sourceType}s`,
       namePluralized: inflection.pluralize(name),
       nameSingularized: inflection.singularize(name),
       nameUnderscored: inflection.underscore(name),
-      nameDasherized: inflection.dasherize(name),
+      nameDasherized: inflection.dasherize(underScoredName),
       nameHumanized: inflection.humanize(name),
       nameTitleized: inflection.titleize(name),
       nameClassified: inflection.classify(name),
@@ -58,6 +68,8 @@ program
       partialBlock: '{{> @partial-block}}',
       moduleHbOpen: `{{#> ${name}}}`,
       moduleHbClose: `{{/${name}}}`,
+      exampleOneReference: `{${camelizedName}Example1}`,
+      exampleTwoReference: `{${camelizedName}Example2}`,
       args: blueprintArgs
     };
 
