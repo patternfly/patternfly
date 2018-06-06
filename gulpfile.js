@@ -1,10 +1,23 @@
 const gulp = require('gulp');
 const insert = require('gulp-insert');
+const rename = require('gulp-rename');
 const replace = require('gulp-string-replace');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 
-gulp.task('build', ['build-modules', 'build-library', 'copy-source']);
+gulp.task('build', [
+  'build-modules',
+  'build-library',
+  'copy-fa',
+  'copy-source'
+]);
+
+gulp.task('copy-fa', () =>
+  gulp
+    .src('./node_modules/@fortawesome/fontawesome/styles.css')
+    .pipe(rename('fontawesome.css'))
+    .pipe(gulp.dest('./dist/assets/icons'))
+);
 
 gulp.task('build-tmp', () =>
   gulp
