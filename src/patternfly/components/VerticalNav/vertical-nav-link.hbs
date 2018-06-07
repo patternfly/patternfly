@@ -1,8 +1,10 @@
-<a href="#" class="pf-c-vertical-nav__link {{#if current}}pf-m-active {{/if}}{{ pf-c-vertical-nav--modifier }}" role="link" {{#if current}} aria-current="true" {{/if}}>
+<a href="{{url}}" class="pf-c-vertical-nav__link {{#if current}}pf-m-active {{/if}}{{ pf-c-vertical-nav--modifier }}" role="link" {{#if current}} aria-current="true" {{/if}}>
   {{> @partial-block}}
   {{#if children}}
-  <span class="pf-c-vertical-nav__link-arrow">
-    <i class="fas fa-chevron-down"></i>
+  <span class="pf-c-vertical-nav__link__arrow">
+    <button class="pf-c-button pf-m-action">
+      <i class="fas fa-chevron-down"></i>
+    </button>
   </span>
   {{/if}}
 </a>

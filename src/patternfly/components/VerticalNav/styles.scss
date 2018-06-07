@@ -1,62 +1,58 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-c-vertical-nav__element--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
-
-
 .pf-c-vertical-nav {
   /* stylelint-disable */
 
-  // Vars
-  // Base
+  // Vertical nav
   --pf-c-vertical-nav--Color:             var(--pf-global--BackgroundColor--dark-100);
   --pf-c-vertical-nav--BackgroundColor:   var(--pf-global--BackgroundColor--light-100);
 
-  // Nav link
+  // Vertical nav link
   --pf-c-vertical-nav__link--PaddingTop:      var(--pf-global--spacer--lg);
-  --pf-c-vertical-nav__link--PaddingRight:    calc(var(--pf-global--spacer--lg) + .875em + var(--pf-c-vertical-nav__link-arrow--Right));
+  --pf-c-vertical-nav__link--PaddingRight:    calc(var(--pf-global--spacer--lg) + .875rem + var(--pf-c-vertical-nav__link__arrow--Right));
   --pf-c-vertical-nav__link--PaddingBottom:   var(--pf-global--spacer--lg);
   --pf-c-vertical-nav__link--PaddingLeft:     var(--pf-global--spacer--xl);
   --pf-c-vertical-nav__link--MarginTop:       0;
   --pf-c-vertical-nav__link--MarginBottom:    0;
   
-  // Link active :after
+  // Vertical nav link active :after
   --pf-c-vertical-nav__link-after--active--Left:    calc(var(--pf-c-vertical-nav__link--PaddingLeft) + 1.5rem + var(--pf-c-vertical-nav__link-icon--PaddingRight));
   --pf-c-vertical-nav__link-after--active--Width:   2rem;
   --pf-c-vertical-nav__link-after--active--Height:  .25rem;
   --pf-c-vertical-nav__link-after--active--Color:   var(--pf-global--Color--active);
 
-  // Color
+  // Vertical nav link colors
   --pf-c-vertical-nav__link--Color:             var(--pf-global--Color--dark-100);
   --pf-c-vertical-nav__link--hover--Color:      var(--pf-global--Color--dark-100);
   --pf-c-vertical-nav__link--active--Color:     var(--pf-global--Color--active);
   --pf-c-vertical-nav__link--focus--Color:      var(--pf-global--Color--dark-100);
   --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global--Color--disabled);
 
-  // Background color
+  // Vertical nav link background colors
   --pf-c-vertical-nav__link--BackgroundColor:           var(--pf-global--BackgroundColor--light-100);
   --pf-c-vertical-nav__link--hover--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
   --pf-c-vertical-nav__link--active--BackgroundColor:   var(--pf-global--BackgroundColor--light-200);
   --pf-c-vertical-nav__link--focus--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
   --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
 
-  // Link icon
-  --pf-c-vertical-nav__link-icon--PaddingRight: var(--pf-global--spacer--xl);
+  // Vertical nav link icon
+  --pf-c-vertical-nav__link__icon--MarginRight: var(--pf-global--spacer--xl);
 
-  // Link arrow
-  --pf-c-vertical-nav__link-arrow--Right: var(--pf-global--spacer--xl);
+  // Vertical nav link arrow
+  --pf-c-vertical-nav__link__arrow--Top: calc(var(--pf-c-vertical-nav__link--PaddingTop) - .4rem);
+  --pf-c-vertical-nav__link__arrow--Right: var(--pf-global--spacer--xl);
 
   /* stylelint-enable */
 
-  // Base
+  // List
   color: var(--pf-c-vertical-nav--Color);
   background-color: var(--pf-c-vertical-nav--BackgroundColor);
 
+  // List item
   &__item {
   }
 
+  // Link
   &__link {
     position: relative;
     display: flex;
@@ -71,6 +67,7 @@
     text-decoration: none;
     background-color: var(--pf-c-vertical-nav__link--BackgroundColor);
 
+    // States
     &:hover,
     &:active,
     &:focus {
@@ -100,13 +97,12 @@
     &:disabled,
     &.pf-m-disabled {
       color: var(--pf-c-vertical-nav__link--disabled--Color);
-      background-color: var(--pf-global--disabled--BackgroundColor);
+      background-color: var(--pf-c-vertical-nav__link--disabled--BackgroundColor);
     }
 
-    // Modifiers
+    // Link bottom bar - active
     &.pf-m-active {
 
-      // Since we are still unsure about the active state I am going to leave it hardcoded
       &::after {
         position: absolute;
         bottom: 0;
@@ -118,21 +114,21 @@
       }
     }
 
-    // Link icon
-    &-icon {
-      padding-right: var(--pf-c-vertical-nav__link-icon--PaddingRight);
+    // Icon
+    &__icon {
+      margin-right: var(--pf-c-vertical-nav__link__icon--MarginRight);
       line-height: 1;
     }
 
-    // Link text
-    &-text {
+    // Text
+    &__text {
     }
 
-    // Link arrow
-    &-arrow {
+    // Arrow/chevron
+    &__arrow {
       position: absolute;
-      right: var(--pf-c-vertical-nav__link-arrow--Right);
+      top: var(--pf-c-vertical-nav__link__arrow--Top);
+      right: var(--pf-c-vertical-nav__link__arrow--Right);
     }
   }
 }
-

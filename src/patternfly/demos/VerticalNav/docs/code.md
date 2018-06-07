@@ -1,19 +1,16 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+This demo is a working draft. Classname can and will likely change, however the aria attribute defining the navigation landmark will remain. 
 
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-d-vertical-nav` |  accessibility notes. |
+| `role="navigation"` | `.pf-c-main-nav` (temporary) |  Defines element as navigation landmark. |
 
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-main-nav` (temporary) | `<nav>` |  Initiates vertical nav.  |

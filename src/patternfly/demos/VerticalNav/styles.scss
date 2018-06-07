@@ -12,8 +12,12 @@
 
   .pf-l-page {
     // Set explicit width value to avoid sidebar shifting
-    grid-template-columns: 350px auto;
+    grid-template-columns: "header" "main";
     min-height: 100vh;
+
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      grid-template-columns: 350px auto;
+    }
 
     &__header {
       grid-area: header;
@@ -23,13 +27,31 @@
     }
 
     &__sidebar {
+      position: absolute;
       grid-area: sidebar;
-      min-width: pf-size-prem(280px);
+      height: 100%;
+
+      @media screen and (min-width: $pf-global--breakpoint--sm) {
+        position: static;
+        min-width: pf-size-prem(280px);
+      }
     }
 
     &__main {
       grid-area: main;
-      background: $pf-color-black-200;
+      padding: var(--pf-global--spacer--xl);
+      background-color: var(--pf-global--BackgroundColor--light-300);
+    }
+  }
+
+  .pf-c-main-nav {
+    width: 85vw;
+    height: 100vh;
+    background: var(--pf-global--BackgroundColor--light-100);
+
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      width: initial;
+      height: initial;
     }
   }
 }
