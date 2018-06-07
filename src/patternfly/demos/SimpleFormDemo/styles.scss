@@ -1,0 +1,49 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-d-simple-form-demo__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  // Base
+  --pf-d-simple-form-demo--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-d-simple-form-demo--Color: var(--pf-global--Color--dark-100);
+  --pf-d-simple-form-demo--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-d-simple-form-demo--PaddingLeft: var(--pf-global--spacer--lg);
+
+  // Checkbox overrides
+
+  // Example element variable
+  --pf-d-simple-form-demo__title--FontSize: var(--pf-global--FontSize--xxl);
+
+  // Example modifier variable
+  --pf-d-simple-form-demo--m-danger--BackgroundColor: var(--pf-global--danger-color);
+}
+
+.pf-d-simple-form-demo {
+  padding-right: var(--pf-d-simple-form-demo--PaddingRight);
+  padding-left: var(--pf-d-simple-form-demo--PaddingLeft);
+  color: var(--pf-d-simple-form-demo--Color);
+  background-color: var(--pf-d-simple-form-demo--BackgroundColor);
+
+  .pf-c-form__fieldset + .pf-c-form__fieldset,
+  .pf-c-form__group + .pf-c-form__group {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  // Element
+  // &__title {
+  //   font-size: var(--pf-d-simple-form-demo__title--FontSize);
+  // }
+
+  // Modifier
+  // &.pf-m-danger {
+  //   background-color: var(--pf-d-simple-form-demo--m-danger--BackgroundColor);
+  // }
+}

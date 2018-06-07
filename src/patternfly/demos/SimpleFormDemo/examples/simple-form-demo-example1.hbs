@@ -1,0 +1,279 @@
+{{#> simple-form-demo}}
+  {{#> form}}
+    <section class="pf-c-form__section pf-m-border">
+      <div class="pf-l-grid pf-m-gutters">
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Details
+        {{/title}}
+        <div class="pf-m-12-col">
+          {{#> group}}
+            {{#> label label-for="name" pf-c-form--modifier="pf-m-required"}}Name{{/label}}
+            <i class="fas fa-info-circle"></i>
+            {{#> form-control}}
+              {{#> text-input input-id="name" input-type="text" input-name="app_name"}}{{/text-input}}
+            {{/form-control}}
+          {{/group}}
+        </div>
+        <div class="pf-m-8-col">
+          {{#> group}}
+            {{#> label label-for="git_repo" pf-c-form--modifier="pf-m-required"}}Git Repository URL{{/label}}
+            {{#> form-control}}
+              {{#> text-input input-id="git_repo" input-type="url" input-name="app_git_repository"}}{{/text-input}}
+            {{/form-control}}
+            {{#> helper-text helper-id="git_repo"}}Sample repository for nodejs: https://github.com/openshift/nodejs-ex.git
+              <a href="#">
+                Try it
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            {{/helper-text}}        
+          {{/group}}
+        </div>
+        <div class="pf-m-4-col">
+          {{#> group}}
+            {{#> label label-for="git_reference" pf-c-form--modifier="pf-m-required"}}Git Reference{{/label}}
+            {{#> form-control}}
+              {{#> text-input input-id="git_reference" input-type="text" input-name="app_git_reference" input-placeholder="Workspace Name"}}{{/text-input}}
+            {{/form-control}}
+            {{#> helper-text helper-id="git_reference"}}Optional branch, tag or commit.{{/helper-text}}        
+          {{/group}}
+        </div>
+        <div class="pf-m-12-col">
+          {{#> group}}
+            {{#> label label-for="context_dir" pf-c-form--modifier="pf-m-required"}}Context Dir{{/label}}
+            {{#> form-control}}
+              {{#> text-input input-id="context_dir" input-type="text" input-name="app_context_dir" input-value="/"}}{{/text-input}}
+            {{/form-control}}
+            {{#> helper-text helper-id="context_dir"}}Optional subdirectory for the application source code, used as the context directory for the build{{/helper-text}}        
+          {{/group}}
+        </div>
+
+        <div class="pf-m-12-col">
+          {{#> group}}
+            {{#> label label-for="source_secret"}}Source Secret{{/label}}
+            {{#> form-control}}
+              <input class="pf-c-form__datalist" list="source_secret_list" id="source_secret" name="app_source_seret" placeholder="Source Secret" />
+              {{#> form-datalist datalist-id="source_secret_list"}}
+                <option value="Source secret 1">
+                <option value="Source secret 2">
+                <option value="Source secret 3">
+                <option value="Source secret 4">
+              {{/form-datalist}}
+              {{!-- change me --}}
+              <button class="pf-c-button pf-m-action">
+                <i class="fas fa-times"></i>
+              </button>            
+            {{/form-control}}
+          {{/group}}
+        </div>        
+      </div>
+    </section>
+    <section class="pf-c-form__section pf-m-border">
+      <div class="pf-l-grid pf-m-gutters">
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Routing
+        {{/title}}
+        <div class="pf-m-12-col">
+          {{#> check}}
+            {{#> checkbox check-nested="true" checkbox-id="create-route" checkbox-name="app_create_route" checked="true" checkbox-label="Create a route to the application"}}
+              {{!-- update this when tooltip is available --}}
+              <div class="pf-c-tooltip">
+                <i class="fas fa-info-circle"></i>
+              </div>
+            {{/checkbox}}
+          {{/check}}
+        </div>
+        <div class="pf-m-12-col">
+          {{#> group}}
+            {{#> label label-for="hostname"}}Hostname{{/label}}
+            {{#> form-control}}
+              {{#> text-input input-id="hostname" input-type="url" input-name="app_hostname" input-placeholder="www.example.com"}}{{/text-input}}
+            {{/form-control}}
+            {{#> helper-text helper-id="hostname"}}Public hostname for the route. If not specified, a hostname is generated. The hostname cannot after the route is created.{{/helper-text}}        
+          {{/group}}
+        </div>
+        <div class="pf-m-12-col">
+          {{#> group}}
+            {{#> label label-for="path"}}Path{{/label}}
+            {{#> form-control}}
+              {{#> text-input input-id="path" input-type="text" input-name="app_path" input-value="/"}}{{/text-input}}
+            {{/form-control}}
+            {{#> helper-text helper-id="path"}}Optional subdirectory for the aplication source code, used as the context directory for the build.{{/helper-text}}        
+          {{/group}}
+        </div>
+        <div class="pf-m-12-col">
+          {{#> group}}
+            {{#> label label-for="target_port" pf-c-form--modifier="pf-m-required"}}Target Port{{/label}}
+            {{#> form-control}}
+              {{#> select select-id="target_port" select-name="app_target_port"}}
+                {{#> select-option option-value="8080"}}8080/TCP{{/select-option}}
+                {{#> select-option option-value="8089"}}8089/TCP{{/select-option}}
+                {{#> select-option option-value="8090"}}8090/TCP{{/select-option}}
+              {{/select}}
+            {{/form-control}}
+          {{/group}}
+        </div>
+        <div class="pf-m-12-col">
+          {{#> title titleType="h3" pf-c-title--Modifier="pf-m-md pf-m-subsection-title"}}
+            Security
+          {{/title}}
+          {{#> check}}
+            {{#> checkbox check-nested="true" checkbox-id="secure-route" checkbox-name="app_secure_route" checkbox-label="Secure route"}}
+            {{/checkbox}}
+          {{/check}}
+          {{#> helper-text helper-id="secure_route"}}Optional subdirectory for the aplication source code, used as the context directory for the build.{{/helper-text}}            
+        </div>
+      </div>
+    </section>
+    <section class="pf-c-form__section pf-m-border">
+      <div class="pf-l-grid pf-m-gutters">
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Build Configuration
+        {{/title}}
+        <div class="pf-m-12-col">
+          <fieldset class="pf-c-form__fieldset">
+            <legend class="pf-c-form__legend pf-m-visually-hidden">Build configuration settings</legend>
+            {{#> check}}
+              {{#> checkbox check-nested="true" checkbox-id="webhook-trigger" checkbox-name="app_webhook_trigger" checkbox-label="Configure a webhook trigger" checked="true"}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              {{/checkbox}}
+            {{/check}}
+            {{#> check}}
+              {{#> checkbox check-nested="true" checkbox-id="new-image" checkbox-name="app_new_image" checkbox-label="Automatically build a new image when builder image changes" checked="true"}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              {{/checkbox}}
+            {{/check}}
+            {{#> check}}
+              {{#> checkbox check-nested="true" checkbox-id="launch-first-build" checkbox-name="app_launch_first_build" checkbox-label="Launch the first build when the build configuration is created" checked="true"}}
+              {{/checkbox}}
+            {{/check}}
+          </fieldset>
+        </div>
+        <fieldset class="pf-c-form__fieldset">
+          {{#> group}}
+            <legend class="pf-c-form__legend">Environment Variables (Build and Runtime)</legend>
+            {{!-- update this when tooltip is available --}}
+            <div class="pf-c-tooltip">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="pf-l-grid pf-m-gutters">
+              <div class="pf-m-6-col">
+                {{#> group}}
+                  {{#> label label-for="variable_name" label-hidden="true"}}Environment variable name{{/label}}
+                  {{#> form-control}}
+                    {{#> text-input input-id="variable_name" input-type="text" input-name="app_variable_name" input-placeholder="name"}}{{/text-input}}
+                  {{/form-control}}
+                {{/group}}
+              </div>           
+              <div class="pf-m-6-col">
+                {{#> group}}
+                  {{#> label label-for="variable_value" label-hidden="true"}}Environment variable value{{/label}}
+                  {{#> form-control}}
+                    {{#> text-input input-id="variable_value" input-type="text" input-name="app_variable_value" input-placeholder="value"}}{{/text-input}}
+                    {{!-- change me --}}
+                    <button class="pf-c-button pf-m-action">
+                      <i class="fas fa-times"></i>
+                    </button>              
+                  {{/form-control}}
+                {{/group}}
+              </div>
+            </div>
+            <button class="pf-c-button pf-m-action">
+              <i class="fas fa-plus"></i>
+              Add Value
+            </button>            
+            <button class="pf-c-button pf-m-action">
+              <i class="fas fa-plus"></i>
+              Add Value from Config Map or Secret
+            </button>            
+          {{/group}}
+        </fieldset>
+      </div>
+    </section>
+    <section class="pf-c-form__section">
+      <div class="pf-l-grid pf-m-gutters">
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Resource Limits
+        {{/title}}      
+        <fieldset class="pf-c-form__fieldset">
+          {{#> group}}
+            <legend class="pf-c-form__legend">CPU</legend>
+            <div class="pf-l-grid pf-m-gutters">
+              <div class="pf-m-6-col">
+                {{#> group}}
+                  {{#> label label-for="cpu_request"}}Request{{/label}}
+                  {{!-- update this when tooltip is available --}}
+                  <div class="pf-c-tooltip">
+                    <i class="fas fa-info-circle"></i>
+                  </div>
+                  {{#> form-control}}
+                    {{#> text-input input-id="cpu_request" input-type="text" input-name="app_cpu_request"}}{{/text-input}}
+                    {{#> dropdown id="dropdown-example-collapsed1"}}millicores{{/dropdown}}
+                  {{/form-control}}
+                  {{#> helper-text helper-id="git_repo"}}
+                    <a href="#">What are millicores?</a>
+                  {{/helper-text}}        
+                {{/group}}
+              </div>           
+              <div class="pf-m-6-col">
+                {{#> group}}
+                  {{#> label label-for="cpu_limit"}}Limit{{/label}}
+                  {{!-- update this when tooltip is available --}}
+                  <div class="pf-c-tooltip">
+                    <i class="fas fa-info-circle"></i>
+                  </div>
+                  {{#> form-control}}
+                    {{#> text-input input-id="cpu_limit" input-type="text" input-name="app_cpu_limit"}}{{/text-input}}
+                    {{#> dropdown id="dropdown-example-collapsed2"}}millicores{{/dropdown}}
+                  {{/form-control}}
+                {{/group}}
+              </div>  
+            </div>        
+          {{/group}}
+        </fieldset>
+
+        <fieldset class="pf-c-form__fieldset">
+          {{#> group}}
+            <legend class="pf-c-form__legend">Memory</legend>
+            <div class="pf-l-grid pf-m-gutters">
+              <div class="pf-m-6-col">
+                {{#> group}}
+                  {{#> label label-for="memory_request"}}Request{{/label}}
+                  {{!-- update this when tooltip is available --}}
+                  <div class="pf-c-tooltip">
+                    <i class="fas fa-info-circle"></i>
+                  </div>
+                  {{#> form-control}}
+                    {{#> text-input input-id="memory_request" input-type="text" input-name="app_memory_request"}}{{/text-input}}
+                    {{#> dropdown id="dropdown-example-collapsed3"}}millicores{{/dropdown}}
+                  {{/form-control}}
+                  {{#> helper-text helper-id="git_repo"}}
+                    <a href="#">What are millicores?</a>
+                  {{/helper-text}}        
+                {{/group}}
+              </div>           
+              <div class="pf-m-6-col">
+                {{#> group}}
+                  {{#> label label-for="memory_limit"}}Limit{{/label}}
+                  {{!-- update this when tooltip is available --}}
+                  <div class="pf-c-tooltip">
+                    <i class="fas fa-info-circle"></i>
+                  </div>
+                  {{#> form-control}}
+                    {{#> text-input input-id="memory_limit" input-type="text" input-name="app_memory_limit"}}{{/text-input}}
+                    {{#> dropdown id="dropdown-example-collapsed4"}}millicores{{/dropdown}}
+                  {{/form-control}}
+                {{/group}}
+              </div>  
+            </div>        
+          {{/group}}
+        </fieldset>        
+      </div>
+    </section>
+  {{/form}}
+{{/simple-form-demo}}
