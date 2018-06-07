@@ -26,6 +26,7 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "node test/test.js",
+    "update-modifiers": "./build/extractModifiers.sh",
     "semantic-release": "semantic-release"
   },
   "lint-staged": {
@@ -40,6 +41,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
     "backstopjs": "^3.2.15",
@@ -77,6 +79,7 @@
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
     "gulp-string-replace": "^1.0.0",
