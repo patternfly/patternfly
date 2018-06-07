@@ -8,6 +8,8 @@
   // MaxWidth is based on optimal line length for reading
   --pf-c-modal-box--MaxWidth: pf-size-prem(560px);
   --pf-c-modal-box--MaxWidth--lg: pf-size-prem(1120px);
+  // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
+  --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--xxxl));
 
   // Box Header variables
   --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--xl);
@@ -35,6 +37,7 @@
   flex-direction: column;
   width: 100%;
   max-width: var(--pf-c-modal-box--MaxWidth);
+  max-height: var(--pf-c-modal-box--MaxHeight);
   background-color: var(--pf-c-modal-box--BackgroundColor);
   box-shadow: var(--pf-c-modal-box--BoxShadow);
 
@@ -59,6 +62,8 @@
     padding-right: var(--pf-c-modal-box__body--PaddingRight);
     padding-bottom: var(--pf-c-modal-box__body--PaddingBottom);
     padding-left: var(--pf-c-modal-box__body--PaddingLeft);
+    overflow: auto;
+    overscroll-behavior: contain;
   }
 
   &__footer {
