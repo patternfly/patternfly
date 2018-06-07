@@ -26,6 +26,7 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "node test/test.js",
+    "update-modifiers": "./build/extractModifiers.sh",
     "semantic-release": "semantic-release"
   },
   "lint-staged": {
