@@ -1,5 +1,5 @@
 - pf-m-active
-- pf-m-align
+- pf-m-align-right
 - pf-m-block
 - pf-m-danger
 - pf-m-disabled
@@ -14,13 +14,14 @@
 - pf-m-info
 - pf-m-inline
 - pf-m-margin
-- pf-m-no
+- pf-m-no-arrow
 - pf-m-offset
 - pf-m-primary
 - pf-m-read
 - pf-m-required
-- pf-m-right
+- pf-m-right-aligned
 - pf-m-secondary
+- pf-m-secondary-alt
 - pf-m-success
 - pf-m-tertiary
 - pf-m-unread
