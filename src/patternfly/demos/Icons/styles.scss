@@ -1,0 +1,30 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-d-icons__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  // Success icon color
+  --pf-icon--success__icon--Color: var(--pf-global--success-color--100);
+
+  // Warning icon color
+  --pf-icon--warning__icon--Color: var(--pf-global--warning-color--100);
+
+  // Error icon color
+  --pf-icon--error__icon--Color: var(--pf-global--danger-color--100);
+}
+
+.pf-c-icon {
+  &.pf-m-success {
+    color: var(--pf-icon--success__icon--Color);
+  }
+
+  &.pf-m-warning {
+    color: var(--pf-icon--warning__icon--Color);
+  }
+
+  &.pf-m-error {
+    color: var(--pf-icon--error__icon--Color);
+  }
+}

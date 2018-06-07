@@ -4,7 +4,7 @@
     "stylelint-order"
   ],
   ignoreFiles: [
-    "./src/patternfly/fontawesome/*.scss",
+    "./src/patternfly/assets/fontawesome/*.scss",
     "./build/blueprints/**/*.scss",
     "./tmp/**/*.scss",
     "./dist/**/*.scss"
