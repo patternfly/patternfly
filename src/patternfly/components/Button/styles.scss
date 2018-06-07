@@ -111,10 +111,10 @@
   // Link btn
   --pf-c-button--m-link--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-button--m-link--PaddingLeft: var(--pf-global--spacer--xs);
-  --pf-c-button--m-link--Color: var(--pf-global--primary-color);
-  --pf-c-button--m-link--hover--Color: var(--pf-global--primary-color--dark);
-  --pf-c-button--m-link--focus--Color: var(--pf-global--primary-color--dark);
-  --pf-c-button--m-link--active--Color: var(--pf-global--primary-color--dark);
+  --pf-c-button--m-link--Color: var(--pf-global--link--Color);
+  --pf-c-button--m-link--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-button--m-link--focus--Color: var(--pf-global--link--Color--hover);
+  --pf-c-button--m-link--active--Color: var(--pf-global--link--Color--hover);
 
   // Action btn
   --pf-c-button--m-action--PaddingTop: var(--pf-global--spacer--sm);
