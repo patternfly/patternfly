@@ -1,178 +1,302 @@
 @import "../../patternfly-utilities";
 
-$pf-c-button--PaddingTop: $pf-global--spacer--xs !default;
-$pf-c-button--PaddingRight: $pf-global--spacer--lg !default;
-$pf-c-button--PaddingBottom: $pf-global--spacer--xs !default;
-$pf-c-button--PaddingLeft: $pf-global--spacer--lg !default;
-$pf-c-button--LineHeight: $pf-global--LineHeight--md !default;
-$pf-c-button--FontWeight: $pf-global--FontWeight--normal !default;
-$pf-c-button--BorderWidth: $pf-global--BorderWidth--md !default;
-$pf-c-button--BorderColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--FontSize: $pf-global--FontSize--md !default;
+:root {
+  --pf-c-button--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-button--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-button--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-button--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-button--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-button--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-button--BackgroundColor: transparent;
+  --pf-c-button--BoxShadowColor: var(--pf-global--primary-color);
+  --pf-c-button--BoxShadowSpread: var(--pf-global--BorderWidth--sm);
+  --pf-c-button--Color: var(--pf-global--primary-color);
+  --pf-c-button--BorderRadius: var(--pf-global--BorderRadius);
 
-$pf-c-button--hover--Color: $pf-global--Color--light-100 !default;
-$pf-c-button--hover--BackgroundColor: $pf-global--Color--dark-100 !default;
+  // Hover state variables
+  --pf-c-button--hover--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--hover--BackgroundColor: transparent;
+  --pf-c-button--hover--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--hover--BoxShadowSpread: var(--pf-global--BorderWidth--md);
 
-// Primary btn
-$pf-c-button--is-primary--BackgroundColor: $pf-global--primary-color !default;
-$pf-c-button--is-primary--BorderColor: $pf-global--primary-color !default;
-$pf-c-button--is-primary--Color: $pf-global--Color--light-100 !default;
-$pf-c-button--is-primary--hover--BackgroundColor: $pf-global--primary-color--dark !default;
-$pf-c-button--is-primary--hover--BorderColor: $pf-global--primary-color--dark !default;
-$pf-c-button--is-primary--hover--Color: $pf-global--Color--light-100 !default;
+  // Focus state variables
+  --pf-c-button--focus--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--focus--BackgroundColor: transparent;
+  --pf-c-button--focus--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--focus--BoxShadowSpread: var(--pf-global--BorderWidth--md);
 
-// Secondary btn
-$pf-c-button--is-secondary--BackgroundColor: transparent !default;
-$pf-c-button--is-secondary--BorderColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--Color: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--hover--BackgroundColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--hover--BorderColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary--hover--Color: $pf-global--Color--light-100 !default;
+  // Active state variables
+  --pf-c-button--active--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--active--BackgroundColor: transparent;
+  --pf-c-button--active--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--active--BoxShadowSpread: var(--pf-global--BorderWidth--md);
 
-// Secondary Inverse btn
-$pf-c-button--is-secondary-alt--BackgroundColor: transparent !default;
-$pf-c-button--is-secondary-alt--BorderColor: $pf-global--Color--dark-200 !default;
-$pf-c-button--is-secondary-alt--Color: $pf-global--Color--dark-200 !default;
-$pf-c-button--is-secondary-alt--hover--BackgroundColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary-alt--hover--BorderColor: $pf-global--primary-color !default;
-$pf-c-button--is-secondary-alt--hover--Color: $pf-global--Color--light-100 !default;
+  // Disabled state variables
+  --pf-c-button--m-disabled--Color: var(--pf-color-black-600);
+  --pf-c-button--m-disabled--BackgroundColor: var(--pf-color-black-300);
+  --pf-c-button--m-disabled--BoxShadowColor: var(--pf-c-button--m-disabled--BackgroundColor);
+  --pf-c-button--m-disabled--BoxShadowSpread: var(--pf-global--BorderWidth--lg);
 
-// Tertiary btn
-$pf-c-button--is-tertiary--BackgroundColor: transparent !default;
-$pf-c-button--is-tertiary--BorderColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--Color: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--hover--BackgroundColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--hover--BorderColor: $pf-global--Color--dark-100 !default;
-$pf-c-button--is-tertiary--hover--Color: $pf-global--Color--light-100 !default;
+  // Primary btn
+  --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-primary--BoxShadowColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-primary--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--hover--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--hover--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-primary--focus--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--focus--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-primary--active--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--active--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--active--Color: var(--pf-global--Color--light-100);
 
-// danger btn
-$pf-c-button--is-danger--BackgroundColor: $pf-global--danger-color !default;
-$pf-c-button--is-danger--BorderColor: $pf-global--danger-color !default;
-$pf-c-button--is-danger--Color: $pf-global--Color--light-100 !default;
-$pf-c-button--is-danger--hover--BackgroundColor: $pf-global--danger-color--dark !default;
-$pf-c-button--is-danger--hover--BorderColor: $pf-global--danger-color--dark !default;
-$pf-c-button--is-danger--hover--Color: $pf-global--Color--light-100 !default;
+  // Secondary btn
+  --pf-c-button--m-secondary--BackgroundColor: transparent;
+  --pf-c-button--m-secondary--BoxShadowColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--Color: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--hover--BackgroundColor: transparent;
+  --pf-c-button--m-secondary--hover--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--hover--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--focus--BackgroundColor: transparent;
+  --pf-c-button--m-secondary--focus--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--focus--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--active--BackgroundColor: transparent;
+  --pf-c-button--m-secondary--active--BoxShadowColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--active--Color: var(--pf-global--primary-color--200);
 
-//Sizes
-$pf-c-button--small--FontSize: $pf-global--FontSize--sm !default;
-$pf-c-button--large--FontSize: $pf-global--FontSize--xl !default;
+  // Secondary Inverse btn
+  --pf-c-button--m-secondary-alt--BackgroundColor: transparent;
+  --pf-c-button--m-secondary-alt--BoxShadowColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--hover--BackgroundColor: transparent;
+  --pf-c-button--m-secondary-alt--hover--BoxShadowColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--hover--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--focus--BackgroundColor: transparent;
+  --pf-c-button--m-secondary-alt--focus--BoxShadowColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--active--BackgroundColor: transparent;
+  --pf-c-button--m-secondary-alt--active--BoxShadowColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary-alt--active--Color: var(--pf-global--Color--light-100);
+
+  // Tertiary btn
+  --pf-c-button--m-tertiary--BackgroundColor: transparent;
+  --pf-c-button--m-tertiary--BoxShadowColor: var(--pf-global--secondary-color--100);
+  --pf-c-button--m-tertiary--Color: var(--pf-color-black-900);
+  --pf-c-button--m-tertiary--hover--BackgroundColor: transparent;
+  --pf-c-button--m-tertiary--hover--BoxShadowColor: var(--pf-global--secondary-color--100);
+  --pf-c-button--m-tertiary--hover--Color: var(--pf-color-black-900);
+  --pf-c-button--m-tertiary--focus--BackgroundColor: transparent;
+  --pf-c-button--m-tertiary--focus--BoxShadowColor: var(--pf-global--secondary-color--100);
+  --pf-c-button--m-tertiary--focus--Color: var(--pf-color-black-900);
+  --pf-c-button--m-tertiary--active--BackgroundColor: transparent;
+  --pf-c-button--m-tertiary--active--BoxShadowColor: var(--pf-global--secondary-color--100);
+  --pf-c-button--m-tertiary--active--Color: var(--pf-color-black-900);
+
+  // danger btn
+  --pf-c-button--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-button--m-danger--BoxShadowColor: var(--pf-global--danger-color--100);
+  --pf-c-button--m-danger--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-danger--hover--BackgroundColor: var(--pf-global--danger-color--200);
+  --pf-c-button--m-danger--hover--BoxShadowColor: var(--pf-c-button--m-danger--hover--BackgroundColor);
+  --pf-c-button--m-danger--hover--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-danger--focus--BackgroundColor: var(--pf-global--danger-color--200);
+  --pf-c-button--m-danger--focus--BoxShadowColor: var(--pf-c-button--m-danger--hover--BackgroundColor);
+  --pf-c-button--m-danger--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-danger--active--BackgroundColor: var(--pf-global--danger-color--200);
+  --pf-c-button--m-danger--active--BoxShadowColor: var(--pf-c-button--m-danger--hover--BackgroundColor);
+  --pf-c-button--m-danger--active--Color: var(--pf-global--Color--light-100);
+}
 
 .pf-c-button {
   display: inline-block;
-  padding: $pf-c-button--PaddingTop $pf-c-button--PaddingRight $pf-c-button--PaddingBottom $pf-c-button--PaddingLeft;
-  font-size: $pf-c-button--FontSize;
-  font-weight: $pf-c-button--FontWeight;
-  line-height: $pf-c-button--LineHeight;
+  padding: var(--pf-c-button--PaddingTop) var(--pf-c-button--PaddingRight) var(--pf-c-button--PaddingBottom) var(--pf-c-button--PaddingLeft);
+  font-size: var(--pf-c-button--FontSize);
+  font-weight: var(--pf-c-button--FontWeight);
+  line-height: var(--pf-c-button--LineHeight);
+  color: var(--pf-c-button--Color);
   text-align: center;
   white-space: nowrap;
-  border: $pf-c-button--BorderWidth solid $pf-c-button--BorderColor;
-  border-radius: 30rem;
+  background-color: var(--pf-c-button--BackgroundColor);
+  border: 0;
+  border-radius: var(--pf-c-button--BorderRadius);
+  outline: 0;
+  box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--BoxShadowColor);
 
   &:hover,
+  &.pf-m-hover {
+    color: var(--pf-c-button--hover--Color);
+    background-color: var(--pf-c-button--hover--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--hover--BoxShadowSpread) var(--pf-c-button--hover--BoxShadowColor);
+  }
+
   &:active,
-  &.pf-is-active,
+  &.pf-m-active {
+    color: var(--pf-c-button--active--Color);
+    background-color: var(--pf-c-button--active--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--active--BoxShadowSpread) var(--pf-c-button--active--BoxShadowColor);
+  }
+
   &:focus,
-  &.pf-has-focus {
-    color: $pf-c-button--hover--Color;
-    background-color: $pf-c-button--hover--BackgroundColor;
+  &.pf-m-focus {
+    color: var(--pf-c-button--focus--Color);
+    background-color: var(--pf-c-button--focus--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--focus--BoxShadowSpread) var(--pf-c-button--focus--BoxShadowColor);
   }
 
-  &:disabled,
-  &.pf-is-disabled {
-    pointer-events: none;
-    opacity: .5;
-  }
-
-  &.pf-is-small {
-    font-size: $pf-c-button--small--FontSize;
-  }
-
-  &.pf-is-large {
-    font-size: $pf-c-button--large--FontSize;
-  }
-
-  &.pf-is-block {
+  &.pf-m-block {
     display: block;
     width: 100%;
   }
 
-  &.pf-is-primary {
-    color: $pf-c-button--is-primary--Color;
-    background-color: $pf-c-button--is-primary--BackgroundColor;
-    border-color: $pf-c-button--is-primary--BorderColor;
+  // Primary Buttons
+  &.pf-m-primary {
+    color: var(--pf-c-button--m-primary--Color);
+    background-color: var(--pf-c-button--m-primary--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--m-primary--BoxShadowColor);
 
     &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-button--m-primary--hover--Color);
+      background-color: var(--pf-c-button--m-primary--hover--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--hover--BoxShadowSpread) var(--pf-c-button--m-primary--hover--BoxShadowColor);
+    }
+
     &:active,
-    &.pf-is-active,
+    &.pf-m-active {
+      color: var(--pf-c-button--m-primary--active--Color);
+      background-color: var(--pf-c-button--m-primary--active--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--active--BoxShadowSpread) var(--pf-c-button--m-primary--active--BoxShadowColor);
+    }
+
     &:focus,
-    &.pf-has-focus {
-      color: $pf-c-button--is-primary--hover--Color;
-      background-color: $pf-c-button--is-primary--hover--BackgroundColor;
-      border-color: $pf-c-button--is-primary--hover--BorderColor;
+    &.pf-m-focus {
+      color: var(--pf-c-button--m-primary--focus--Color);
+      background-color: var(--pf-c-button--m-primary--focus--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--focus--BoxShadowSpread) var(--pf-c-button--m-primary--focus--BoxShadowColor);
     }
   }
 
-  &.pf-is-secondary {
-    color: $pf-c-button--is-secondary--Color;
-    background-color: $pf-c-button--is-secondary--BackgroundColor;
-    border-color: $pf-c-button--is-secondary--BorderColor;
+  // Secondary Buttons
+  &.pf-m-secondary {
+    color: var(--pf-c-button--m-secondary--Color);
+    background-color: var(--pf-c-button--m-secondary--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--m-secondary--BoxShadowColor);
 
     &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-button--m-secondary--hover--Color);
+      background-color: var(--pf-c-button--m-secondary--hover--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--hover--BoxShadowSpread) var(--pf-c-button--m-secondary--hover--BoxShadowColor);
+    }
+
     &:active,
-    &.pf-is-active,
+    &.pf-m-active {
+      color: var(--pf-c-button--m-secondary--active--Color);
+      background-color: var(--pf-c-button--m-secondary--active--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--active--BoxShadowSpread) var(--pf-c-button--m-secondary--active--BoxShadowColor);
+    }
+
     &:focus,
-    &.pf-has-focus {
-      color: $pf-c-button--is-secondary--hover--Color;
-      background-color: $pf-c-button--is-secondary--hover--BackgroundColor;
-      border-color: $pf-c-button--is-secondary--hover--BorderColor;
+    &.pf-m-focus {
+      color: var(--pf-c-button--m-secondary--focus--Color);
+      background-color: var(--pf-c-button--m-secondary--focus--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--focus--BoxShadowSpread) var(--pf-c-button--m-secondary--focus--BoxShadowColor);
     }
   }
 
-  &.pf-is-secondary-alt {
-    color: $pf-c-button--is-secondary-alt--Color;
-    background-color: $pf-c-button--is-secondary-alt--BackgroundColor;
-    border-color: $pf-c-button--is-secondary-alt--BorderColor;
+  // Alternate Secondary Buttons
+  &.pf-m-secondary-alt {
+    color: var(--pf-c-button--m-secondary-alt--Color);
+    background-color: var(--pf-c-button--m-secondary-alt--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--m-secondary-alt--BoxShadowColor);
 
     &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-button--m-secondary-alt--hover--Color);
+      background-color: var(--pf-c-button--m-secondary-alt--hover--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--hover--BoxShadowSpread) var(--pf-c-button--m-secondary-alt--hover--BoxShadowColor);
+    }
+
     &:active,
-    &.pf-is-active,
+    &.pf-m-active {
+      color: var(--pf-c-button--m-secondary-alt--active--Color);
+      background-color: var(--pf-c-button--m-secondary-alt--active--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--active--BoxShadowSpread) var(--pf-c-button--m-secondary-alt--active--BoxShadowColor);
+    }
+
     &:focus,
-    &.pf-has-focus {
-      color: $pf-c-button--is-secondary-alt--hover--Color;
-      background-color: $pf-c-button--is-secondary-alt--hover--BackgroundColor;
-      border-color: $pf-c-button--is-secondary-alt--hover--BorderColor;
+    &.pf-m-focus {
+      color: var(--pf-c-button--m-secondary-alt--focus--Color);
+      background-color: var(--pf-c-button--m-secondary-alt--focus--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--focus--BoxShadowSpread) var(--pf-c-button--m-secondary-alt--focus--BoxShadowColor);
     }
   }
 
-  &.pf-is-tertiary {
-    color: $pf-c-button--is-tertiary--Color;
-    background-color: $pf-c-button--is-tertiary--BackgroundColor;
-    border-color: $pf-c-button--is-tertiary--BorderColor;
+  // Tertiary Buttons
+  &.pf-m-tertiary {
+    color: var(--pf-c-button--m-tertiary--Color);
+    background-color: var(--pf-c-button--m-tertiary--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--m-tertiary--BoxShadowColor);
 
     &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-button--m-tertiary--hover--Color);
+      background-color: var(--pf-c-button--m-tertiary--hover--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--hover--BoxShadowSpread) var(--pf-c-button--m-tertiary--hover--BoxShadowColor);
+    }
+
     &:active,
-    &.pf-is-active,
+    &.pf-m-active {
+      color: var(--pf-c-button--m-tertiary--active--Color);
+      background-color: var(--pf-c-button--m-tertiary--active--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--active--BoxShadowSpread) var(--pf-c-button--m-tertiary--active--BoxShadowColor);
+    }
+
     &:focus,
-    &.pf-has-focus {
-      color: $pf-c-button--is-tertiary--hover--Color;
-      background-color: $pf-c-button--is-tertiary--hover--BackgroundColor;
-      border-color: $pf-c-button--is-tertiary--hover--BorderColor;
+    &.pf-m-focus {
+      color: var(--pf-c-button--m-tertiary--focus--Color);
+      background-color: var(--pf-c-button--m-tertiary--focus--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--focus--BoxShadowSpread) var(--pf-c-button--m-tertiary--focus--BoxShadowColor);
     }
   }
 
-  &.pf-is-danger {
-    color: $pf-c-button--is-danger--Color;
-    background-color: $pf-c-button--is-danger--BackgroundColor;
-    border-color: $pf-c-button--is-danger--BorderColor;
+  // Danger Buttons
+  &.pf-m-danger {
+    color: var(--pf-c-button--m-danger--Color);
+    background-color: var(--pf-c-button--m-danger--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--m-danger--BoxShadowColor);
 
     &:hover,
-    &:active,
-    &.pf-is-active,
-    &:focus,
-    &.pf-has-focus {
-      color: $pf-c-button--is-danger--hover--Color;
-      background-color: $pf-c-button--is-danger--hover--BackgroundColor;
-      border-color: $pf-c-button--is-danger--hover--BorderColor;
+    &.pf-m-hover {
+      color: var(--pf-c-button--m-danger--hover--Color);
+      background-color: var(--pf-c-button--m-danger--hover--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--hover--BoxShadowSpread) var(--pf-c-button--m-danger--hover--BoxShadowColor);
     }
+
+    &:active,
+    &.pf-m-active {
+      color: var(--pf-c-button--m-danger--active--Color);
+      background-color: var(--pf-c-button--m-danger--active--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--active--BoxShadowSpread) var(--pf-c-button--m-danger--active--BoxShadowColor);
+    }
+
+    &:focus,
+    &.pf-m-focus {
+      color: var(--pf-c-button--m-danger--focus--Color);
+      background-color: var(--pf-c-button--m-danger--focus--BackgroundColor);
+      box-shadow: inset 0 0 0 var(--pf-c-button--focus--BoxShadowSpread) var(--pf-c-button--m-danger--focus--BoxShadowColor);
+    }
+  }
+
+  // Disabled Buttons
+  // These styles need to go after the button types because they need to override some of the type styling
+  &:disabled,
+  &.pf-m-disabled {
+    color: var(--pf-c-button--m-disabled--Color);
+    pointer-events: none;
+    background-color: var(--pf-c-button--m-disabled--BackgroundColor);
+    box-shadow: inset 0 0 0 var(--pf-c-button--BoxShadowSpread) var(--pf-c-button--m-disabled--BoxShadowColor);
   }
 }

@@ -4,8 +4,8 @@ A level is a layout that distributes the space between children evenly and it ce
 
 ## Usage
 
-| Class | Usage |
-| -- | -- |
-| `.pf-l-level` |  **Outcome:** Initializes the level layout **Required:** Yes |
-| `.pf-l-level__item` |  **Outcome:** Explicitly sets a child of the level | **Required:** No | **Remarks:** This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers.
-| `.pf-has-gutter` |  **Outcome:** Adds space between children | **Required:** No
+| Class | Applied To | Outcome |
+| -- | -- | -- |
+| `.pf-l-level` | `<div>`, `<section>`, or `<article>` | Initializes the level layout |
+| `.pf-l-level__item` | `<div>` | Explicitly sets a child of the level. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers.
+| `.pf-m-gutter` | `.pf-l-level` |  Adds space between children |

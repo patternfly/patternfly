@@ -4,15 +4,18 @@ This layout provides the basic chrome for a page, including sidebar, header and 
 
 ## Accessibility
 
-Make sure to set the `role="banner"` attribute on the `<header>`, and `role="main"` on the `<main>` content areas.
+| Attribute | Applied To | Outcome |
+| -- | -- | -- |
+| `role="banner"` | `.pf-l-page__header` | .  |
+| `role="main"` | `.pf-l-page__main` | .  |
 
 ## Usage
 
-| Class | Usage |
-| -- | -- |
-| `.pf-l-page` **Applied to:** `<div>` |  **Outcome:** Declares the page layout chrome **Required:** Yes |
-| `.pf-l-page__header` **Applied to:** `<header>` |  **Outcome:** Declares the page header **Required:** Yes |
-| `.pf-l-page__header-sidebar` **Applied to:** `<section>` |  **Outcome:** Declares the sidebar section of the header **Required:** Yes |
-| `.pf-l-page__header-main` **Applied to:** `<section>` |  **Outcome:** Declares the main section of the header **Required:** Yes |
-| `.pf-l-page__sidebar` **Applied to:** `<div>` |  **Outcome:** Declares the page sidebar **Required:** Yes |
-| `.pf-l-page__main` **Applied to:** `<main>` |  **Outcome:** Declares the main page area **Required:** Yes |
+| Class | Applied To | Outcome |
+| -- | -- | -- |
+| `.pf-l-page` | `<div>` |   Declares the page layout chrome. |
+| `.pf-l-page__header` | `<header>` |   Declares the page header. |
+| `.pf-l-page__header-sidebar` | `<section>` |   Declares the sidebar section of the header. |
+| `.pf-l-page__header-main` | `<section>` |   Declares the main section of the header. |
+| `.pf-l-page__sidebar` | `<div>` |   Declares the page sidebar. |
+| `.pf-l-page__main` | `<main>` |   Declares the main page area. |

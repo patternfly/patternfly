@@ -1,0 +1,30 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --{{bemName}}__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+:root {
+  // Example block variable
+  --{{bemName}}--Color: var(--pf-global--Color--dark-100);
+
+  // Example element variable
+  --{{bemName}}__title--FontSize: var(--pf-global--FontSize--xxl);
+
+  // Example modifier variable
+  --{{bemName}}--m-danger--BackgroundColor: var(--pf-global--danger-color);
+}
+
+.{{bemName}} {
+  color: var(--{{bemName}}--Color);
+
+  // Element
+  &__title {
+    font-size: var(--{{bemName}}__title--FontSize);
+  }
+
+  // Modifier
+  &.pf-m-danger {
+    background-color: var(--{{bemName}}--m-danger--BackgroundColor);
+  }
+}

@@ -1,14 +1,22 @@
 import React from 'react';
-
+import Link from 'gatsby-link';
 import './styles.scss';
 
 export default class Preview extends React.Component {
   constructor(props) {
     super(props);
-    const { viewport = '' } = props;
+    const { viewport = '', heading } = props;
+    this.state = { viewport, fullPath: '', heading };
+  }
 
-    this.state = { viewport };
-    this.activateViewport = this.activateViewport.bind(this);
+  componentDidMount() {
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({
+      fullPath: `${window.location.pathname.substr(
+        0,
+        window.location.pathname.length - 1
+      )}-full?component=${this.state.heading}`
+    });
   }
 
   activateViewport(viewportType) {
@@ -18,8 +26,36 @@ export default class Preview extends React.Component {
     }));
   }
 
+  renderFullPageLink() {
+    return (
+      <Link
+        to={this.state.fullPath}
+        target="_blank"
+        title="Open in new window"
+        className="Preview__viewport-link"
+      >
+        <i className="fas fa-external-link-alt" />
+      </Link>
+    );
+  }
+
   render() {
     const output = { __html: this.props.children };
+    const preview = this.props.fullPageOnly ? (
+      <div className="Preview__body">
+        This Preview can only be accessed in&nbsp;
+        <Link to={this.state.fullPath} target="_blank">
+          full page mode
+        </Link>.
+      </div>
+    ) : (
+      <div
+        className={`Preview__body ${
+          this.props.isViewport ? 'is-viewport' : ''
+        }`}
+        dangerouslySetInnerHTML={output}
+      />
+    );
     return (
       <div className={`Preview ${this.state.viewport}`}>
         <div className="Preview__header">
@@ -57,14 +93,10 @@ export default class Preview extends React.Component {
             >
               <i className="fas fa-desktop" />
             </button>
+            {this.renderFullPageLink()}
           </div>
         </div>
-        <div
-          className={`Preview__body ${
-            this.props.isViewport ? 'is-viewport' : ''
-          }`}
-          dangerouslySetInnerHTML={output}
-        />
+        {preview}
       </div>
     );
   }

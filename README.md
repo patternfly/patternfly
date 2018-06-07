@@ -46,5 +46,5 @@ To setup the PatternFly Next development environment:
 
 ## FAQ
 
-[How do I use CSS variables (custom properties) to customize
+[How do I use SCSS variables to customize
 the library?](https://pf-next.com/guidelines#variables)

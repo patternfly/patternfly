@@ -1,0 +1,64 @@
+{{#>form}}
+  {{#>group}}
+    {{#>label label-for="textInput1"}}Standard input{{/label}}
+    {{#>form-control}}
+      {{#>text-input input-id="textInput1" input-type="text" input-name="inputName1"}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label label-for="textInput2"}}Input with placeholder{{/label}}
+    {{#>form-control}}
+      {{#>text-input input-id="textInput2" input-type="text" input-name="inputName2" input-placeholder="Example2"}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label label-for="textInput3" pf-c-form--modifier="pf-m-required"}}Required input{{/label}}
+    {{#>form-control}}
+      {{#>text-input input-id="textInput3" input-type="text" input-name="inputName3" required=true}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label label-for="textInput4" pf-c-form--modifier="pf-m-disabled"}}Disabled input{{/label}}
+    {{#>form-control}}
+      {{#>text-input input-id="textInput4" input-type="text" input-name="inputName4" disabled="true"}}{{/text-input}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label label-for="textInput5" pf-c-form-control--modifier="pf-m-required"}}Label with tooltip{{/label}}
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    {{#>form-control pf-c-form--modifier="pf-m-addons"}}
+      {{#>button}}testing{{/button}}
+      {{#>text-input newcontent input-id="textInput5" input-type="text" input-name="inputName5" aria-describedby="helper1" required=true}}{{/text-input}}
+      {{#>button}}testing{{/button}}
+    {{/form-control}}
+    {{#>helper-text helperId="helper1"}}This is helper text{{/helper-text}}
+  {{/group}}
+  {{#>group}}
+    {{#>label label-for="textInput6" pf-c-form--modifier="pf-m-required"}}Required input with tooltip and error{{/label}}
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>      
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>      
+    <a href="#">Test link</a>
+    <div class="pf-c-tooltip pf-m-align-right">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    {{#>form-control}}
+      {{#>text-input pf-c-form--modifier="pf-m-error" input-id="textInput6" input-type="text" input-placeholder="Has error" aria-errormessage="helper2" aria-invalid="true"}}{{/text-input}}
+    {{/form-control}}
+    {{#>helper-text pf-c-form--modifier="pf-m-error" helper-id="helper2"}}This is helper text{{/helper-text}}
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>    
+    <div class="pf-c-tooltip pf-m-align-right">
+      <i class="fas fa-info-circle"></i>
+    </div>    
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>    
+  {{/group}}
+{{/form}}

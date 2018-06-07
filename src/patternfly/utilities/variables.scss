@@ -43,50 +43,58 @@ $pf-global--BorderColor--hover:            $pf-color-red-300 !default;
 
 $pf-global--Color--active:                 $pf-color-blue-400 !default;
 $pf-global--BackgroundColor--active:       $pf-color-blue-100 !default;
-$pf-global--BorderColor--active:           $pf-color-blue-100 !default;
+$pf-global--BorderColor--active:           $pf-color-blue-400 !default;
 
 $pf-global--Color--disabled:               $pf-color-black-400 !default;
 $pf-global--BackgroundColor--disabled:     $pf-color-black-200 !default;
-$pf-global--BorderColor--disabled:         $pf-color-black-200 !default;
+$pf-global--BorderColor--disabled:         $pf-color-black-300 !default;
+
+$pf-global--Color--error:                  $pf-color-red-200 !default;
+$pf-global--BackgroundColor--error:        $pf-color-red-200 !default;
+$pf-global--BorderColor--error:            $pf-color-red-200 !default;
 
 // Theme color
-$pf-global--primary-color:         $pf-color-blue-400 !default;
-$pf-global--primary-color--dark:   $pf-color-blue-500 !default;
-$pf-global--secondary-color:       $pf-color-black-600 !default;
-$pf-global--success-color:         $pf-color-green-100 !default;
-$pf-global--success-color--dark:   $pf-color-green-400 !default;
-$pf-global--info-color:            $pf-color-cyan-100 !default;
-$pf-global--info-color--dark:      $pf-color-cyan-400 !default;
-$pf-global--warning-color:         $pf-color-orange-100 !default;
-$pf-global--warning-color--dark:   $pf-color-orange-400 !default;
-$pf-global--danger-color:          $pf-color-red-100 !default;
-$pf-global--danger-color--dark:    $pf-color-red-300 !default;
+$pf-global--primary-color--100:         $pf-color-blue-400 !default;
+$pf-global--primary-color--200:         $pf-color-blue-500 !default;
+$pf-global--secondary-color--100:       $pf-color-black-600 !default;
+$pf-global--success-color--100:         $pf-color-light-green-400 !default;
+$pf-global--success-color--200:         $pf-color-light-green-600 !default;
+$pf-global--info-color--100:            $pf-color-blue-300 !default;
+$pf-global--info-color--200:            $pf-color-blue-600 !default;
+$pf-global--warning-color--100:         $pf-color-gold-400 !default;
+$pf-global--warning-color--200:         $pf-color-gold-600 !default;
+$pf-global--danger-color--100:          $pf-color-red-100 !default;
+$pf-global--danger-color--200:          $pf-color-red-200 !default;
+$pf-global--danger-color--300:          $pf-color-red-400 !default;
 
 // Shadows
 
 $pf-global--BoxShadow--sm:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
 $pf-global--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
-$pf-global--LineHeight--lg:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
+$pf-global--BoxShadow--lg:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
 
 $pf-global--BoxShadow--sm-right:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 $pf-global--BoxShadow--sm-left:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--BoxShadow--sm-bottom: 0 pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--BoxShadow--sm-top:    0 pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--BoxShadow--sm-bottom: 0 pf-size-prem(4) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--BoxShadow--sm-top:    0 pf-size-prem(-4) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 
 $pf-global--BoxShadow-right:  pf-size-prem(5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
 $pf-global--BoxShadow-left:   pf-size-prem(-5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
 $pf-global--BoxShadow-bottom: 0 pf-size-prem(5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
 $pf-global--BoxShadow-top:    0 pf-size-prem(-5) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;
 
-$pf-global--LineHeight--lg-right: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--LineHeight--lg-left:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--LineHeight--lg-bottom: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
-$pf-global--LineHeight--lg-top:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-right: pf-size-prem(12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-left:  pf-size-prem(-12) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-bottom: 0 pf-size-prem(12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
+$pf-global--BoxShadow--lg-top:   0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .07) !default;
 
 $pf-global--BoxShadow--inset:     inset 0 0 pf-size-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
 
 // Fontpath
 $pf-global--font-path: "/assets/fonts" !default;
+
+// Iconpath
+$pf-global--fontawesome-path: "/assets/icons" !default;
 
 // Spacers
 $pf-global--spacer--xs:    pf-size-prem(4px) !default;
@@ -100,6 +108,13 @@ $pf-global--spacer--xxxl:  pf-size-prem(64px) !default;
 // Gutter
 $pf-global--gutter:   $pf-global--spacer--lg !default;
 
+// Z-Index
+$pf-global--ZIndex--xs:  100;
+$pf-global--ZIndex--sm:  200;
+$pf-global--ZIndex--md:  300;
+$pf-global--ZIndex--lg:  400;
+$pf-global--ZIndex--xl:  500;
+$pf-global--ZIndex--xxl: 600;
 
 // Grid breakpoints
 $pf-global--breakpoint--xs: 0 !default;
@@ -110,21 +125,49 @@ $pf-global--breakpoint--xl: 1200px !default;
 
 
 // Links
-$pf-global--link--Color:                  $pf-global--primary-color !default;
+$pf-global--link--Color:                  $pf-global--primary-color--100 !default;
 $pf-global--link--TextDecoration:         none !default;
-$pf-global--link--Color--hover:           darken($pf-global--primary-color, 15%) !default;
+$pf-global--link--Color--hover:           darken($pf-global--primary-color--100, 15%) !default;
 $pf-global--link--TextDecoration--hover:  underline !default;
 
-
 // Borders
-$pf-global--BorderWidth--md:         1px !default;
+$pf-global--BorderWidth--sm:     1px !default;
+$pf-global--BorderWidth--md:     2px !default;
 $pf-global--BorderWidth--lg:     3px !default;
-$pf-global--BorderColor--dark:   $pf-color-black-400 !default;
+$pf-global--BorderColor--dark:   $pf-color-black-600 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
+$pf-global--BorderRadius:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
+// Inputs
+$pf-global--input--FontSize: pf-font-prem(16px) !default;
+$pf-global--input--LineHeight: 1.5 !default;
+$pf-global--input--Color: $pf-color-black-900 !default;
+$pf-global--input--Color--disabled: $pf-color-black-400 !default;
+$pf-global--placeholder--Color: $pf-color-black-600 !default;
+
+$pf-global--input--BorderColor: $pf-color-blue-600 !default;
+$pf-global--input--BorderColor--focus: $pf-color-blue-400 !default;
+$pf-global--input--BorderColor--disabled: $pf-color-black-400 !default;
+$pf-global--input--Background: #fff !default;
+$pf-global--input--Background--disabled: $pf-color-black-200 !default;
+$pf-global--input--BorderSize: 1px !default;
+$pf-global--input--BorderSize--hover: 2px !default;
+$pf-global--input--BorderSize--focus: 2px !default;
+
+$pf-global--input--Background: #fff !default;
+$pf-global--input--Background--disabled: $pf-color-black-200 !default;
+
+// Labels
+$pf-global--label--FontSize: pf-font-prem(16px) !default;
+$pf-global--input-placeholder--Color: $pf-color-black-600 !default;
+$pf-global--input--Color: $pf-color-black-600 !default;
+$pf-global--input--BoxShadow: 0 0 0 1px $pf-color-black-600 !default;
+$pf-global--input--BoxShadow--hover: 0 0 0 2px $pf-color-black-600 !default;
+
+// Labels
+$pf-global--label--FontSize: pf-font-prem(16px) !default;
 
 // Fonts
-
 // Font family
 // stylelint-disable value-keyword-case
 $pf-global--FontFamily--sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -149,9 +192,8 @@ $pf-global--FontWeight--semi-bold:      600 !default;
 $pf-global--FontWeight--bold:           700 !default;
 
 // Line height
-$pf-global--LineHeight--sm:         1.3 !default;
-$pf-global--LineHeight--md:             1.4 !default;
-$pf-global--LineHeight--lg:         1.5 !default;
+$pf-global--LineHeight--sm:             1.3 !default;
+$pf-global--LineHeight--md:             1.5 !default;
 
 // List
 $global-ListStyle: disc outside !default;
@@ -165,3 +207,142 @@ $global-ListStyle: disc outside !default;
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
 }
+
+/* stylelint-disable */
+
+:root {
+  // Colors
+  // Background color
+  --pf-global--BackgroundColor--light-100: $pf-global--BackgroundColor--light-100;
+  --pf-global--BackgroundColor--light-200: $pf-global--BackgroundColor--light-200;
+  --pf-global--BackgroundColor--light-300: $pf-global--BackgroundColor--light-300;
+  --pf-global--BackgroundColor--dark-100: $pf-global--BackgroundColor--dark-100;
+  --pf-global--BackgroundColor--dark-200: $pf-global--BackgroundColor--dark-200;
+
+  // Text color
+  --pf-global--Color--light-100: $pf-global--Color--light-100;
+  --pf-global--Color--light-200: $pf-global--Color--light-200;
+  --pf-global--Color--dark-100: $pf-global--Color--dark-100;
+  --pf-global--Color--dark-200: $pf-global--Color--dark-200;
+
+  // States color
+  --pf-global--Color--hover: $pf-global--Color--hover;
+  --pf-global--BackgroundColor--hover: $pf-global--BackgroundColor--hover;
+  --pf-global--BorderColor--hover: $pf-global--BorderColor--hover;
+  --pf-global--Color--active: $pf-global--Color--active;
+  --pf-global--BackgroundColor--active: $pf-global--BackgroundColor--active;
+  --pf-global--BorderColor--active: $pf-global--BorderColor--active;
+  --pf-global--Color--disabled: $pf-global--Color--disabled;
+  --pf-global--BackgroundColor--disabled: $pf-global--BackgroundColor--disabled;
+  --pf-global--BorderColor--disabled: $pf-global--BorderColor--disabled;
+  --pf-global--Color--error: $pf-global--Color--error;
+  --pf-global--BackgroundColor--error: $pf-global--BackgroundColor--error;
+  --pf-global--BorderColor--error: $pf-global--BorderColor--error;
+
+  // Theme color
+  --pf-global--primary-color--100: $pf-global--primary-color--100;
+  --pf-global--primary-color--200: $pf-global--primary-color--200;
+  --pf-global--secondary-color--100: $pf-global--secondary-color--100;
+  --pf-global--success-color--100: $pf-global--success-color--100;
+  --pf-global--success-color--200: $pf-global--success-color--200;
+  --pf-global--info-color--100: $pf-global--info-color--100;
+  --pf-global--info-color--200: $pf-global--info-color--200;
+  --pf-global--warning-color--100: $pf-global--warning-color--100;
+  --pf-global--warning-color--200: $pf-global--warning-color--200;
+  --pf-global--danger-color--100: $pf-global--danger-color--100;
+  --pf-global--danger-color--200: $pf-global--danger-color--200;
+  --pf-global--danger-color--300: $pf-global--danger-color--300;
+
+  // Shadows
+  --pf-global--BoxShadow--sm: $pf-global--BoxShadow--sm;
+  --pf-global--BoxShadow: $pf-global--BoxShadow;
+  --pf-global--BoxShadow--lg: $pf-global--BoxShadow--lg;
+  --pf-global--BoxShadow--sm-right: $pf-global--BoxShadow--sm-right;
+  --pf-global--BoxShadow--sm-left: $pf-global--BoxShadow--sm-left;
+  --pf-global--BoxShadow--sm-bottom: $pf-global--BoxShadow--sm-bottom;
+  --pf-global--BoxShadow--sm-top: $pf-global--BoxShadow--sm-top;
+  --pf-global--BoxShadow-right: $pf-global--BoxShadow-right;
+  --pf-global--BoxShadow-left: $pf-global--BoxShadow-left;
+  --pf-global--BoxShadow-bottom: $pf-global--BoxShadow-bottom;
+  --pf-global--BoxShadow-top: $pf-global--BoxShadow-top;
+  --pf-global--BoxShadow--lg-right: $pf-global--BoxShadow--lg-right;
+  --pf-global--BoxShadow--lg-left: $pf-global--BoxShadow--lg-left;
+  --pf-global--BoxShadow--lg-bottom: $pf-global--BoxShadow--lg-bottom;
+  --pf-global--BoxShadow--lg-top: $pf-global--BoxShadow--lg-top;
+  --pf-global--BoxShadow--inset: $pf-global--BoxShadow--inset;
+
+  // Fontpath
+  --pf-global--font-path: $pf-global--font-path;
+
+  // Spacers
+  --pf-global--spacer--xs: $pf-global--spacer--xs;
+  --pf-global--spacer--sm: $pf-global--spacer--sm;
+  --pf-global--spacer--md: $pf-global--spacer--md;
+  --pf-global--spacer--lg: $pf-global--spacer--lg;
+  --pf-global--spacer--xl: $pf-global--spacer--xl;
+  --pf-global--spacer--xxl: $pf-global--spacer--xxl;
+  --pf-global--spacer--xxxl: $pf-global--spacer--xxxl;
+
+  // Gutter
+  --pf-global--gutter: $pf-global--gutter;
+
+  // Z-Index
+  --pf-global--ZIndex--xs:  $pf-global--ZIndex--xs;
+  --pf-global--ZIndex--sm:  $pf-global--ZIndex--sm;
+  --pf-global--ZIndex--md:  $pf-global--ZIndex--md;
+  --pf-global--ZIndex--lg:  $pf-global--ZIndex--lg;
+  --pf-global--ZIndex--xl:  $pf-global--ZIndex--xl;
+  --pf-global--ZIndex--xxl: $pf-global--ZIndex--xxl;
+
+  // Grid breakpoints
+  --pf-global--breakpoint--xs: $pf-global--breakpoint--xs;
+  --pf-global--breakpoint--sm: $pf-global--breakpoint--sm;
+  --pf-global--breakpoint--md: $pf-global--breakpoint--md;
+  --pf-global--breakpoint--lg: $pf-global--breakpoint--lg;
+  --pf-global--breakpoint--xl: $pf-global--breakpoint--xl;
+
+  // Links
+  --pf-global--link--Color: $pf-global--link--Color;
+  --pf-global--link--TextDecoration: $pf-global--link--TextDecoration;
+  --pf-global--link--Color--hover: $pf-global--link--Color--hover;
+  --pf-global--link--TextDecoration--hover: $pf-global--link--TextDecoration--hover;
+
+  // Borders
+  --pf-global--BorderWidth--sm: $pf-global--BorderWidth--sm;
+  --pf-global--BorderWidth--md: $pf-global--BorderWidth--md;
+  --pf-global--BorderWidth--lg: $pf-global--BorderWidth--lg;
+  --pf-global--BorderColor--dark: $pf-global--BorderColor--dark;
+  --pf-global--BorderColor--light: $pf-global--BorderColor--light;
+  --pf-global--BorderRadius: $pf-global--BorderRadius;
+
+  // Fonts
+
+  // Font family
+  --pf-global--FontFamily--sans-serif: $pf-global--FontFamily--sans-serif;
+  --pf-global--FontFamily--monospace: $pf-global--FontFamily--monospace;
+
+  // Font size
+  --pf-global--FontSize--xxxxl: $pf-global--FontSize--xxxxl;
+  --pf-global--FontSize--xxxl: $pf-global--FontSize--xxxl;
+  --pf-global--FontSize--xxl: $pf-global--FontSize--xxl;
+  --pf-global--FontSize--xl: $pf-global--FontSize--xl;
+  --pf-global--FontSize--lg: $pf-global--FontSize--lg;
+  --pf-global--FontSize--md: $pf-global--FontSize--md;
+  --pf-global--FontSize--sm: $pf-global--FontSize--sm;
+  --pf-global--FontSize--xs: $pf-global--FontSize--xs;
+
+  // Font weight
+  --pf-global--FontWeight--light: $pf-global--FontWeight--light;
+  --pf-global--FontWeight--normal: $pf-global--FontWeight--normal;
+  --pf-global--FontWeight--semi-bold: $pf-global--FontWeight--semi-bold;
+  --pf-global--FontWeight--bold: $pf-global--FontWeight--bold;
+
+  // Line height
+  --pf-global--LineHeight--sm: $pf-global--LineHeight--sm;
+  --pf-global--LineHeight--md: $pf-global--LineHeight--md;
+
+  // List
+  --global-ListStyle: $global-ListStyle;
+}
+
+/* stylelint-enable */

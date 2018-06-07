@@ -7,11 +7,16 @@ const glob = require('util').promisify(require('glob'));
 const resolveAliases = require('./build/resolveAliases');
 
 const COMPONENTS_PATH = path.resolve(__dirname, './src/patternfly/components');
+const DEMOS_PATH = path.resolve(__dirname, './src/patternfly/demos');
 const LAYOUTS_PATH = path.resolve(__dirname, './src/patternfly/layouts');
 
 const COMPONENT_PATHS = fs
   .readdirSync(COMPONENTS_PATH)
   .map(name => path.resolve(COMPONENTS_PATH, `./${name}`));
+
+const DEMO_PATH = fs
+  .readdirSync(DEMOS_PATH)
+  .map(name => path.resolve(DEMOS_PATH, `./${name}`));
 
 const LAYOUT_PATHS = fs
   .readdirSync(LAYOUTS_PATH)
@@ -28,6 +33,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     __dirname,
     './src/patternfly/components'
   );
+  const DEMOS_BASE_DIR = path.resolve(__dirname, './src/patternfly/demos');
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts');
   const isMarkdown = node.internal.type === 'MarkdownRemark';
 
@@ -36,6 +42,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     const isPattern = node.fileAbsolutePath.includes(PATTERNS_BASE_DIR);
     const isComponent = node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR);
     const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
+    const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
     if (isPage) {
       const relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath);
       const pagePath = `/${relativePath}`.replace(/\.md$/, '');
@@ -60,6 +67,12 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       createNodeField({ node, name: 'path', value: pagePath });
       createNodeField({ node, name: 'type', value: 'documentation' });
       createNodeField({ node, name: 'contentType', value: 'layout' });
+    } else if (isDemo) {
+      const demoName = path.basename(path.dirname(node.fileAbsolutePath));
+      const pagePath = `/demos/${demoName}/docs`;
+      createNodeField({ node, name: 'path', value: pagePath });
+      createNodeField({ node, name: 'type', value: 'documentation' });
+      createNodeField({ node, name: 'contentType', value: 'demo' });
     }
   }
 };
@@ -122,13 +135,11 @@ exports.createLayouts = ({
 
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts)\/$/;
-  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts)\/([A-Za-z0-9_-]+)/;
-  const DEMO_PAGE_REGEX = /^\/(demos)\/([A-Za-z0-9_-]+)/;
+  const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts|demos)\/$/;
+  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts|demos)\/([A-Za-z0-9_-]+)/;
   return new Promise((resolve, reject) => {
     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
-    const isDemoPage = page.path.match(DEMO_PAGE_REGEX);
 
     page.context.type = 'page';
     page.context.category = 'page';
@@ -150,21 +161,15 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       page.context.slug = pageSlug;
       page.context.name = pageName;
       page.context.title = pageTitle;
-    } else if (isDemoPage) {
-      const pageCategory = page.path.match(DEMO_PAGE_REGEX)[1];
-      const pageSlug = page.path.match(DEMO_PAGE_REGEX)[2];
-      const pageName = pageSlug.replace('-', ' ');
-      const pageTitle = inflection.titleize(pageName);
-      page.context.type = inflection.singularize(pageCategory);
-      page.context.category = pageCategory;
-      page.context.slug = pageSlug;
-      page.context.name = pageName;
-      page.context.title = pageTitle;
-
-      page.layout = 'demo';
     }
-
     createPage(page);
+
+    // create full demo page for each component
+    const demoPage = Object.assign({}, page);
+    demoPage.layout = 'demo';
+    const nodePath = demoPage.path;
+    demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
+    createPage(demoPage);
 
     resolve();
   });
@@ -185,7 +190,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     current.test = /\.hbs$/;
     current.loader = 'handlebars-loader';
     current.query = {
-      partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
+      partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS).concat(DEMO_PATH)
     };
     return current;
   });

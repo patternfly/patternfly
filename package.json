@@ -1,8 +1,8 @@
 {
   "name": "@patternfly/patternfly-next",
   "description": "Assets, source, tooling, and content for PatternFly Next",
-  "version": "0.0.2",
-  "author": "Cliff Pyles",
+  "version": "0.0.0-development",
+  "author": "Andres Galante",
   "keywords": [],
   "license": "MIT",
   "main": "n/a",
@@ -12,6 +12,7 @@
     "bootstrap:build": "node npm-scripts/build-bootstrap-workspace.js",
     "build-patternfly": "rm -rf dist && rm -rf tmp && gulp build",
     "build": "gatsby build",
+    "build-ghpages": "gatsby build --prefix-paths",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "dev": "gatsby develop",
     "develop": "gatsby develop",
@@ -24,7 +25,8 @@
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.js": [
@@ -38,6 +40,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
     "backstopjs": "^3.2.15",
@@ -75,6 +78,7 @@
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
     "gulp-string-replace": "^1.0.0",
@@ -101,6 +105,7 @@
     "react-prism": "^4.3.2",
     "rehype-react": "^3.0.2",
     "scaffold-helper": "^1.0.0",
+    "semantic-release": "^15.4.1",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-config-standard": "^18.0.0",
@@ -112,5 +117,58 @@
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patternfly/patternfly-next.git"
+  },
+  "release": {
+    "branch": "release",
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {
+          "type": "breaking",
+          "release": "patch"
+        },
+        {
+          "type": "feat",
+          "release": "patch"
+        },
+        {
+          "type": "fix",
+          "release": "patch"
+        },
+        {
+          "type": "perf",
+          "release": "patch"
+        },
+        {
+          "type": "docs",
+          "release": "patch"
+        },
+        {
+          "type": "refactor",
+          "release": "patch"
+        }
+      ]
+    },
+    "prepare": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      }
+    ],
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      },
+      "@semantic-release/github"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "alpha"
   }
 }

@@ -1,21 +1,22 @@
 @import "../../patternfly-utilities";
-
-$pf-l-stack--has-gutter--MarginBottom: $pf-global--gutter;
+:root {
+  --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
+}
 
 .pf-l-stack {
   display: flex;
   flex-direction: column;
   height: 100%;
 
-  &__item.pf-is-secondary {
+  &__item.pf-m-secondary {
     flex: 0 0 auto;
   }
-  &__item.pf-is-primary {
+  &__item.pf-m-primary {
     flex: 1 1 auto;
   }
 
-  &.pf-has-gutter > *:not(:last-child) {
-    margin-bottom: $pf-l-stack--has-gutter--MarginBottom;
+  &.pf-m-gutter > *:not(:last-child) {
+    margin-bottom: var(--pf-l-stack--m-gutter--MarginBottom);
   }
 
 }

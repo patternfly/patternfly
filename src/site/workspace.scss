@@ -170,15 +170,11 @@
     box-shadow: 0 0 0 1px #ddd;
   }
 
-  .pf-l-grid,
-  .pf-l-grid > * {
-
-    @supports (display: grid) {
-      padding: .5rem;
-      background: none;
-      border: 2px dashed #393f44;
-      box-shadow: none;
-    }
+  .pf-l-grid .pf-l-grid__item {
+    padding: .5rem;
+    background: none;
+    border: 2px dashed #393f44;
+    box-shadow: none;
   }
 
   .Preview__body {
@@ -187,18 +183,31 @@
 }
 
 .Documentation {
-  &__section td {
+  &__section {
+    margin-bottom: 2rem;
+  }
+  code {
+    padding: .25em .75em;
+    color: #004368;
+    white-space: nowrap;
+    background-color: #def3ff;
+    border-radius: .5em;
+  }
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  table, td, th, tr {
     padding: .5em;
     vertical-align: top;
-    code {
-      padding: .25em .75em;
-      color: #004368;
-      white-space: nowrap;
-      background-color: #def3ff;
-      border-radius: .5em;
-    }
+    border: 1px solid #ccc;
   }
+
+  tr:nth-child(even) {background: #f1f1f1}
+  
   h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: 1.25em;
   }
 }
@@ -208,4 +217,28 @@
     background-color: #292e34;
   }
 }
+
+.is-expanded-dropdown {
+  .Preview__body {
+    height: 17em;
+  }
+}
+
+.is-expanded-dropup {
+  .Preview__body {
+    padding-top: 14em;
+  }
+}
+
+.is-right-aligned {
+  .Preview__body {
+    text-align: right;
+  }
+}
+
+.pf-c-form__fieldset + .pf-c-form__fieldset,
+.pf-c-form__group + .pf-c-form__group {
+  margin-top: 1rem;
+}
+
 /* stylelint-enable */
