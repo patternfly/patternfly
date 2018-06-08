@@ -1,0 +1,9 @@
+<div class="pf-c-modal-box {{ pf-c-modal-box--modifier }}" 
+  role="dialog" 
+  aria-labelledby="{{ pf-c-modal-box__label }}"
+  {{#if pf-c-model-box__description}}
+    aria-describedby="{{ pf-c-model-box__description }}"
+  {{/if}}
+  aria-modal="true">
+  {{> @partial-block}}
+</div>
