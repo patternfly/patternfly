@@ -17,7 +17,6 @@ Always add a modifier class to add color to the button.
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
-| `.pf-m-secondary-alt` | `.pf-c-button` | Modifies for alternate secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
 | `.pf-m-danger` | `.pf-c-button` | Modifies for danger styles. |
 | `.pf-m-link` | `.pf-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |

@@ -5,10 +5,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: $pf-global--FontFamily--sans-serif;
-  font-size: $pf-global--FontSize--md;
-  font-weight: $pf-global--FontWeight--normal;
-  line-height: $pf-global--LineHeight--md;
+  font-family: var(--pf-global--FontFamily--sans-serif);
+  font-size: var(--pf-global--FontSize--md);
+  font-weight: var(--pf-global--FontWeight--normal);
+  line-height: var(--pf-global--LineHeight--md);
+  // this color rule is set here to be able to use themes
+  color: var(--pf-global--Color--100);
   background-color: transparent;
   text-rendering: optimizeLegibility;
 }
@@ -21,6 +23,7 @@
 html {
   font-size: unset !important; // the important is needed because we don't know if pf3 will be loaded after pfnext
 }
+
 /* stylelint-enable */
 
 @if $pf-global--enable-reset {
@@ -62,7 +65,7 @@ html {
   h5,
   h6 {
     font-size: 100%;
-    font-weight: $pf-global--FontWeight--normal;
+    font-weight: var(--pf-global--FontWeight--normal);
   }
 
   ul {
@@ -114,26 +117,24 @@ html {
     line-height: 1.15;
   }
 
-
   body {
-    font-family: $pf-global--FontFamily--sans-serif;
-    font-size: $pf-global--FontSize--md;
-    font-weight: $pf-global--FontWeight--normal;
-    line-height: $pf-global--LineHeight--md;
-    color: $pf-global--Color--dark-100;
+    font-family: var(--pf-global--FontFamily--sans-serif);
+    font-size: var(--pf-global--FontSize--md);
+    font-weight: var(--pf-global--FontWeight--normal);
+    line-height: var(--pf-global--LineHeight--md);
     text-align: left;
-    background-color: $pf-global--BackgroundColor--light-100;
+    background-color: var(--pf-global--BackgroundColor--100);
   }
 
   // Links styles
 
   a {
-    color: $pf-global--link--Color;
-    text-decoration: $pf-global--link--TextDecoration;
+    color: var(--pf-global--link--Color);
+    text-decoration: var(--pf-global--link--TextDecoration);
 
     &:hover {
-      color: $pf-global--link--Color--hover;
-      text-decoration: $pf-global--link--TextDecoration--hover;
+      color: var(--pf-global--link--Color--hover);
+      text-decoration: var(--pf-global--link--TextDecoration--hover);
     }
   }
 
