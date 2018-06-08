@@ -16,10 +16,10 @@
   --pf-c-vertical-nav__link--MarginBottom:    0;
   
   // Vertical nav link active :after
-  --pf-c-vertical-nav__link-after--active--Left:    calc(var(--pf-c-vertical-nav__link--PaddingLeft) + 1.5rem + var(--pf-c-vertical-nav__link-icon--PaddingRight));
-  --pf-c-vertical-nav__link-after--active--Width:   2rem;
-  --pf-c-vertical-nav__link-after--active--Height:  .25rem;
-  --pf-c-vertical-nav__link-after--active--Color:   var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--after--active--Left:    calc(var(--pf-c-vertical-nav__link--PaddingLeft) + 1.5rem + var(--pf-c-vertical-nav__link__icon--MarginRight));
+  --pf-c-vertical-nav__link--after--active--Width:   2rem;
+  --pf-c-vertical-nav__link--after--active--Height:  .25rem;
+  --pf-c-vertical-nav__link--after--active--Color:   var(--pf-global--Color--active);
 
   // Vertical nav link colors
   --pf-c-vertical-nav__link--Color:             var(--pf-global--Color--dark-100);
@@ -106,11 +106,11 @@
       &::after {
         position: absolute;
         bottom: 0;
-        left: var(--pf-c-vertical-nav__link-after--active--Left);
-        width: var(--pf-c-vertical-nav__link-after--active--Width);
-        height: var(--pf-c-vertical-nav__link-after--active--Height);
+        left: var(--pf-c-vertical-nav__link--after--active--Left);
+        width: var(--pf-c-vertical-nav__link--after--active--Width);
+        height: var(--pf-c-vertical-nav__link--after--active--Height);
         content: "";
-        background-color: var(--pf-c-vertical-nav__link-after--active--Color);
+        background-color: var(--pf-c-vertical-nav__link--after--active--Color);
       }
     }
 
