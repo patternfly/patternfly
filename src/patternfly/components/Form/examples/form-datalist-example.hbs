@@ -1,22 +1,22 @@
-{{#>form}}
-  {{#>group}}
-    {{#>label for="datalist1"}}Datalist label{{/label}}
+{{#> form}}
+  {{#> form-group}}
+    {{#> form-label for="datalist1"}}Datalist label{{/form-label}}
     <input class="pf-c-form__datalist" list="myDatalist1" id="datalist1" name="myList1" />
-    {{#>form-datalist id="myDatalist1"}}
+    {{#> form-datalist datalist-id="myDatalist1"}}
       <option value="Option 1">
       <option value="Option 2">
       <option value="Option 3">
       <option value="Option 4">
     {{/form-datalist}}
-  {{/group}}    
-  {{#>group}}
-    {{#>label for="datalist2"}}Datalist disabled{{/label}}
+  {{/form-group}}    
+  {{#> form-group}}
+    {{#> form-label for="datalist2"}}Datalist disabled{{/form-label}}
     <input class="pf-c-form__datalist" list="myDatalist2" id="datalist2" name="myList2" disabled />
-    {{#>form-datalist id="myDatalist2"}}
+    {{#> form-datalist datalist-id="myDatalist2"}}
       <option value="Option 1">
       <option value="Option 2">
       <option value="Option 3">
       <option value="Option 4">
     {{/form-datalist}}      
-  {{/group}}
+  {{/form-group}}
 {{/form}}

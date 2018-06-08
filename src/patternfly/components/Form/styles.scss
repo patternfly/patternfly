@@ -1,6 +1,43 @@
 @import "../../patternfly-utilities";
 
-:root {
+// Select - chevron
+$pf-c-form__select--chevron-svg--Color: $pf-global--BorderColor--dark !default;
+$pf-c-form__select--chevron-svg--disabled--Color: $pf-global--BorderColor--light !default;
+$pf-c-form__select--chevron-svg--Width: 28px !default;
+$pf-c-form__select--chevron-svg--Height: 10px !default;
+$pf-c-form__select--chevron-svg--Coordinates: "M0 1.7L1.7 0l4.7 4.6L11 0l1.7 1.7L6.4 8L0 1.7z" !default;
+$pf-c-form__select--chevron-svg--Viewbox: "0 0 32 10" !default;
+
+// Input - error
+$pf-c-form__select--m-error-svg--Color: $pf-global--Color--error !default;
+$pf-c-form__select--m-error-svg--Width: 32px !default;
+$pf-c-form__select--m-error-svg--Height: 14px !default;
+$pf-c-form__select--m-error-svg--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
+$pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
+
+// Function - strip-unit
+@function pf-strip-unit($val) {
+  @if type-of($val) == "number" and not unitless($val) {
+    @return $val / ($val * 0 + 1);
+  } @else {
+    @return $val;
+  }
+}
+
+// Background svg mixin - likely temporary
+@mixin pf-bg-svg($svg-coordinates, $svg-color, $svg-width: 24, $svg-height: 8,  $svg-viewbox: "0 0 32 10") {
+  $color: str-slice(#{$svg-color}, 2);
+  $svg-width: pf-strip-unit($svg-width);
+  $svg-height: pf-strip-unit($svg-height);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$svg-width}' height='#{$svg-height}' viewBox='#{$svg-viewbox}'%3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+// Base form
+.pf-c-form {
+
+  /* stylelint-disable */
   // Inputs
   // Font-size
   --pf-c-form__input--FontSize: var(--pf-global--FontSize--md);
@@ -31,6 +68,7 @@
   // Input - error state variables
   --pf-c-form__input--m-error--PaddingRight: calc(#{$pf-global--spacer--sm} + #{$pf-global--spacer--md} + #{var(--pf-c-form__input--FontSize)});
   --pf-c-form__input--m-error--BorderColor: var(--pf-global--BorderColor--error);
+  --pf-c-form__input__m-error--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-form__input--m-error--BorderSize: var(--pf-global--BorderWidth--sm);
 
   // Input - background
@@ -94,44 +132,11 @@
 
   // Inline
   --pf-c-form--inline--MarginRight: var(--pf-global--spacer--lg);
-}
 
-// Select - chevron
-$pf-c-form__select--chevron-svg--Color: $pf-global--BorderColor--dark !default;
-$pf-c-form__select--chevron-svg--disabled--Color: $pf-global--BorderColor--light !default;
-$pf-c-form__select--chevron-svg--Width: 28px !default;
-$pf-c-form__select--chevron-svg--Height: 10px !default;
-$pf-c-form__select--chevron-svg--Coordinates: "M0 1.7L1.7 0l4.7 4.6L11 0l1.7 1.7L6.4 8L0 1.7z" !default;
-$pf-c-form__select--chevron-svg--Viewbox: "0 0 32 10" !default;
+  // Button group
+  --pf-c-form--button-group--item--MarginRight: var(--pf-global--spacer--lg);
 
-// Input - error
-$pf-c-form__select--m-error-svg--Color: $pf-global--Color--error !default;
-$pf-c-form__select--m-error-svg--Width: 32px !default;
-$pf-c-form__select--m-error-svg--Height: 14px !default;
-$pf-c-form__select--m-error-svg--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
-$pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
-
-// Function - strip-unit
-@function strip-unit($val) {
-  @if type-of($val) == "number" and not unitless($val) {
-    @return $val / ($val * 0 + 1);
-  } @else {
-    @return $val;
-  }
-}
-
-// Background svg mixin - likely temporary
-@mixin bg-svg($svg-coordinates, $svg-color, $svg-width: 24, $svg-height: 8,  $svg-viewbox: "0 0 32 10") {
-  $color: str-slice(#{$svg-color}, 2);
-  $svg-width: strip-unit($svg-width);
-  $svg-height: strip-unit($svg-height);
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$svg-width}' height='#{$svg-height}' viewBox='#{$svg-viewbox}'%3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center right;
-}
-
-// Base form
-.pf-c-form {
+  /* stylelint-enable */
 
   // Section
   &__section {
@@ -151,7 +156,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     flex-flow: row wrap;
     align-items: baseline;
     // Handle additional items within __group without having an additional wrapper or selector
-    > *:not(.pf-c-form__label):not(.pf-c-form__control):not(.pf-c-form__input):not(.pf-c-form__select):not(.pf-c-form__datalist):not(.pf-c-form__check):not(.pf-c-form__textarea):not(.pf-c-form__helper-text):not(.pf-m-align-right):not(.pf-c-form__legend):not([class*="pf-l-"]) {
+    > *:not(.pf-c-form__label):not(.pf-c-form__control):not(.pf-c-form__input):not(.pf-c-form__select):not(.pf-c-form__datalist):not(.pf-c-form__check):not(.pf-c-form__textarea):not(.pf-c-form__helper-text):not(.pf-m-align-right):not(.pf-c-form__legend):not(.pf-c-form__button-group):not([class*="pf-l-"]) {
       margin-left: var(--pf-c-form--group--MarginLeft);
     }
 
@@ -204,13 +209,11 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
       background-color: none;
     }
 
-    // Disabled
     &.pf-m-disabled {
       color: var(--pf-c-form__label--m-disabled--Color);
       cursor: not-allowed;
     }
 
-    // Required
     &.pf-m-required {
       position: relative;
 
@@ -229,14 +232,16 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
   &__datalist,
   &__textarea {
     width: 100%;
-    padding: var(--pf-c-form__input--PaddingTop) var(--pf-c-form__input--PaddingRight) var(--pf-c-form__input--PaddingBottom) var(--pf-c-form__input--PaddingLeft);
+    padding-top: var(--pf-c-form__input--PaddingTop);
+    padding-right: var(--pf-c-form__input--PaddingRight);
+    padding-bottom: var(--pf-c-form__input--PaddingBottom);
+    padding-left: var(--pf-c-form__input--PaddingLeft);
     font-size: var(--pf-c-form__input--FontSize);
     line-height: var(--pf-c-form__input--LineHeight);
     color: var(--pf-c-form__input--Color);
     background-color: var(--pf-c-form__input--BackgroundColor);
     border: 0;
     border-radius: 0;
-    outline: 0;
     box-shadow: inset 0 0 0 var(--pf-c-form__input--BorderSize) var(--pf-c-form__input--BorderColor);
 
     &::placeholder {
@@ -244,16 +249,19 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     }
 
     // Hover
+    &.pf-m-hover,
     &:hover {
       box-shadow: inset 0 0 0 var(--pf-c-form__input--hover--BorderSize) var(--pf-c-form__input--hover--BorderColor);
     }
 
     // Focus
+    &.pf-m-focus,
     &:focus {
       box-shadow: inset 0 0 0 var(--pf-c-form__input--focus--BorderSize) var(--pf-c-form__input--focus--BorderColor);
     }
 
     // Disabled
+    &.pf-m-disabled,
     &:disabled {
       color: var(--pf-c-form__input--disabled--Color);
       background-color: var(--pf-c-form__input--disabled--BackgroundColor);
@@ -267,8 +275,9 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     &.pf-m-error {
       padding-right: var(--pf-c-form__input--m-error--PaddingRight);
       color: var(--pf-c-form--m-error--Color);
+      background-color: var(--pf-c-form__input__m-error--BackgroundColor);
       box-shadow: inset 0 0 0 var(--pf-c-form__input--m-error--BorderSize) var(--pf-c-form__input--m-error--BorderColor);
-      @include bg-svg($pf-c-form__select--m-error-svg--Coordinates, $pf-c-form__select--m-error-svg--Color, $pf-c-form__select--m-error-svg--Width, $pf-c-form__select--m-error-svg--Height, $pf-c-form__select--m-error-svg--Viewbox);
+      @include pf-bg-svg($pf-c-form__select--m-error-svg--Coordinates, $pf-c-form__select--m-error-svg--Color, $pf-c-form__select--m-error-svg--Width, $pf-c-form__select--m-error-svg--Height, $pf-c-form__select--m-error-svg--Viewbox);
     }
   }
 
@@ -284,14 +293,15 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     /* stylelint-enable */
 
     &:not([multiple]) {
-      @include bg-svg($pf-c-form__select--chevron-svg--Coordinates, $pf-c-form__select--chevron-svg--Color, $pf-c-form__select--chevron-svg--Width, $pf-c-form__select--chevron-svg--Height);
+      @include pf-bg-svg($pf-c-form__select--chevron-svg--Coordinates, $pf-c-form__select--chevron-svg--Color, $pf-c-form__select--chevron-svg--Width, $pf-c-form__select--chevron-svg--Height);
     }
 
+    &.pf-m-disabled,
     &:disabled {
       color: var(--pf-c-form__input--disabled--Color);
       background-color: var(--pf-c-form__input--disabled--BackgroundColor);
       box-shadow: inset 0 0 0 var(--pf-c-form__input--disabled--BorderSize) var(--pf-c-form__input--disabled--BorderColor);
-      @include bg-svg($pf-c-form__select--chevron-svg--Coordinates, $pf-c-form__select--chevron-svg--disabled--Color, $pf-c-form__select--chevron-svg--Width, $pf-c-form__select--chevron-svg--Height);
+      @include pf-bg-svg($pf-c-form__select--chevron-svg--Coordinates, $pf-c-form__select--chevron-svg--disabled--Color, $pf-c-form__select--chevron-svg--Width, $pf-c-form__select--chevron-svg--Height);
     }
 
     &:hover::-webkit-calendar-picker-indicator,
@@ -305,11 +315,12 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     }
   }
 
+  // Datalist
   &__datalist {
 
     // Disabled
-    &:disabled,
-    &.pf-m-disabled {
+    &.pf-m-disabled,
+    &:disabled {
       cursor: not-allowed;
     }
   }
@@ -328,7 +339,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     }
   }
 
-  // Checkbox and radio container - pf-c-form__check
+  // Checkbox and radio container
   &__check {
     // Handle additional elements within __check
     display: flex;
@@ -389,6 +400,15 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
 
     &.pf-m-error {
       color: var(--pf-c-form--m-error--Color);
+    }
+  }
+
+  // Button group
+  &__button-group {
+    display: flex;
+
+    > * {
+      margin-right: var(--pf-c-form--button-group--item--MarginRight);
     }
   }
 
