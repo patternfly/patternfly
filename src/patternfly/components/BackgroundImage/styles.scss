@@ -9,24 +9,21 @@
     width: 100vw;
     height: 100vh;
     content: "";
-    background: url("#{$pf-global--image-path}/pfbg_576.jpg") no-repeat;
+    background-image: url("#{$pf-global--image-path}/pfbg_576.jpg");
     filter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     @media (min-width: $pf-global--breakpoint--sm){
-      background: url("#{$pf-global--image-path}/pfbg_768.jpg") no-repeat;
-      background-attachment: fixed;
+      background-image: url("#{$pf-global--image-path}/pfbg_768.jpg");
     }
     @media (min-width: $pf-global--breakpoint--md){
-      background: url("#{$pf-global--image-path}/pfbg_992.jpg") no-repeat;
-      background-attachment: fixed;
+      background-image: url("#{$pf-global--image-path}/pfbg_992.jpg");
     }
     @media (min-width: $pf-global--breakpoint--lg){
-      background: url("#{$pf-global--image-path}/pfbg_1200.jpg") no-repeat;
-      background-attachment: fixed;
+      background-image: url("#{$pf-global--image-path}/pfbg_1200.jpg");
     }
     @media (min-width: $pf-global--breakpoint--xl){
-      background: url("#{$pf-global--image-path}/pfbg_2000.jpg") no-repeat;
-      background-attachment: fixed;
+      background-image: url("#{$pf-global--image-path}/pfbg_2000.jpg");
     }
   }
 }
