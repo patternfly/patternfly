@@ -6,7 +6,7 @@ export default class Preview extends React.Component {
   constructor(props) {
     super(props);
     const { viewport = '', heading } = props;
-    this.state = { viewport, fullPath: '', heading };
+    this.state = { viewport, fullPath: '', heading, lights: true };
   }
 
   componentDidMount() {
@@ -26,6 +26,12 @@ export default class Preview extends React.Component {
     }));
   }
 
+  toggleLights() {
+    this.setState(prevState => ({
+      lights: !prevState.lights
+    }));
+  }
+
   renderFullPageLink() {
     return (
       <Link
@@ -41,6 +47,7 @@ export default class Preview extends React.Component {
 
   render() {
     const output = { __html: this.props.children };
+    const background = this.state.lights ? '' : 'pf-t-dark pf-m-opaque-200';
     const preview = this.props.fullPageOnly ? (
       <div className="Preview__body">
         This Preview can only be accessed in&nbsp;
@@ -50,7 +57,7 @@ export default class Preview extends React.Component {
       </div>
     ) : (
       <div
-        className={`Preview__body ${
+        className={`Preview__body ${background} ${
           this.props.isViewport ? 'is-viewport' : ''
         }`}
         dangerouslySetInnerHTML={output}
@@ -92,6 +99,13 @@ export default class Preview extends React.Component {
               onClick={() => this.activateViewport('xl')}
             >
               <i className="fas fa-desktop" />
+            </button>
+            <button
+              className="Preview__viewport-background-toggle"
+              onClick={() => this.toggleLights()}
+              title="Toggle dark theme"
+            >
+              <i className="fas fa-adjust" />
             </button>
             {this.renderFullPageLink()}
           </div>
