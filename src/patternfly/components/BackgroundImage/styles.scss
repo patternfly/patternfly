@@ -1,0 +1,32 @@
+@import "../../patternfly-utilities";
+
+.pf-c-background-image {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background: url("#{$pf-global--image-path}/pfbg_576.jpg") no-repeat;
+    filter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
+    background-attachment: fixed;
+    @media (min-width: $pf-global--breakpoint--sm){
+      background: url("#{$pf-global--image-path}/pfbg_768.jpg") no-repeat;
+      background-attachment: fixed;
+    }
+    @media (min-width: $pf-global--breakpoint--md){
+      background: url("#{$pf-global--image-path}/pfbg_992.jpg") no-repeat;
+      background-attachment: fixed;
+    }
+    @media (min-width: $pf-global--breakpoint--lg){
+      background: url("#{$pf-global--image-path}/pfbg_1200.jpg") no-repeat;
+      background-attachment: fixed;
+    }
+    @media (min-width: $pf-global--breakpoint--xl){
+      background: url("#{$pf-global--image-path}/pfbg_2000.jpg") no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}
