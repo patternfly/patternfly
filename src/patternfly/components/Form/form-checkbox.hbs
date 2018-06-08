@@ -1,0 +1,11 @@
+{{#if nested}}
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{id}}">
+    <input class="pf-c-form__checkbox" type="checkbox" id="{{id}}" name="{{name}}" {{#if disabled}} disabled{{/if}} {{#if checked}} checked{{/if}} {{#if tabindex}} tabindex="{{tabindex}}" {{/if}} {{#if aria-describedby}} aria-describedby="{{aria-describedby}}" {{/if}}>
+    {{text}}
+  </label>
+  {{> @partial-block}}
+{{else}}
+  <input class="pf-c-form__checkbox" type="checkbox" id="{{id}}" name="{{name}}" value="{{value}}" {{#if disabled}} disabled{{/if}} {{#if checked}} checked {{/if}} {{#if tabindex}} tabindex="{{tabindex}}" {{/if}} {{#if aria-describedby}} aria-describedby="{{aria-describedby}}" {{/if}}>
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{id}}">{{text}}</label>
+  {{> @partial-block}}
+{{/if}}
