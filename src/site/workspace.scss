@@ -68,7 +68,10 @@
   h1 {
     margin-bottom: .5em;
   }
-  h2, h3, h4, h5, h6 {
+  h2 {
+    margin: 2em 0 .5em 0;
+  }
+  h3, h4, h5, h6 {
     margin: 1em 0 .5em 0;
   }
   p {
@@ -95,6 +98,22 @@
   }
   li + li {
     margin-top: .5rem;
+  }
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  table, td, th, tr {
+    padding: .5em;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  td > code {
+    padding: .25em .75em;
+    color: #004368;
+    white-space: nowrap;
+    background-color: #def3ff;
+    border-radius: .5em;
   }
 }
 
