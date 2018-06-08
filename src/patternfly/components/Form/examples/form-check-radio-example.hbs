@@ -1,0 +1,67 @@
+{{#>form}}
+  <fieldset class="pf-c-form__fieldset">
+    <legend class="pf-c-form__legend">Standard checkboxes nested in label</legend>
+    {{#>check}}
+      {{#>checkbox nested="true" value="checkboxOption1" id="checkbox1" name="checkbox1" label="Checkbox 1"}}
+        <div class="pf-c-tooltip">
+          <i class="fas fa-info-circle"></i>
+        </div>
+      {{/checkbox}}
+    {{/check}}
+    {{#>check}}
+      {{#>checkbox nested="true" value="checkboxOption2" id="checkbox2" name="checkbox2" label="Checkbox 2, checked " checked="true"}}{{/checkbox}}
+    {{/check}}
+    {{#>check}}
+      {{#>checkbox nested="true" value="checkboxOption3" id="checkbox3" name="checkbox3" label="Checkbox 3, disabled" disabled="true"}}{{/checkbox}}
+    {{/check}}
+  </fieldset>
+  <fieldset class="pf-c-form__fieldset">
+    <legend class="pf-c-form__legend">Standard radios nested in label</legend>
+    {{#>check}}
+      {{#>radio nested="true" value="radionOption1" id="radio1" name="radios1" label="Radio 1"}}{{/radio}}
+    {{/check}}
+    {{#>check}}
+      {{#>radio nested="true" value="radionOption2" id="radio2" name="radios1" label="Radio 2, checked" checked="true"}}{{/radio}}
+    {{/check}}
+    {{#>check}}
+      {{#>radio nested="true" value="radionOption3" id="radio3" name="radios1" label="Radio 3, disabled" disabled="true"}}{{/radio}}
+    {{/check}}
+  </fieldset>
+  <fieldset class="pf-c-form__fieldset">
+    <legend class="pf-c-form__legend">Inline checkboxes nested in label</legend>
+    {{#>group pf-c-form--modifier="pf-m-inline"}}
+      {{#>check newcontent}}
+        {{#>checkbox nested="true" value="checkboxOption4" id="checkbox4" name="checkbox4" label="Checkbox 1"}}{{/checkbox}}
+        <div class="pf-c-tooltip">
+          <i class="fas fa-info-circle"></i>
+        </div>
+      {{/check}}
+      {{#>check newcontent}}
+        {{#>checkbox nested="true" value="checkboxOption5" id="checkbox5" name="checkbox5" label="Checkbox 2"}}{{/checkbox}}
+        <div class="pf-c-tooltip">
+          <i class="fas fa-info-circle"></i>
+        </div>
+      {{/check}}
+      {{#>check newcontent}}
+        {{#>checkbox nested="true" value="checkboxOption6" id="checkbox6" name="checkbox6" label="Checkbox 3" disabled="true"}}{{/checkbox}}
+      {{/check}}
+    {{/group}}
+  </fieldset>
+  <fieldset class="pf-c-form__fieldset">
+    <legend class="pf-c-form__legend">Inline radios nested in label</legend>
+    {{#>group pf-c-form--modifier="pf-m-inline"}}
+      {{#>check newcontent nested="true"}}
+        {{#>radio value="radionOption4" id="radio4" name="radios2" label="Radio 1"}}{{/radio}}
+        <div class="pf-c-tooltip">
+          <i class="fas fa-info-circle"></i>
+        </div>        
+      {{/check}}
+      {{#>check newcontent nested="true"}}
+        {{#>radio value="radionOption5" id="radio5" name="radios2" label="Radio 2"}}{{/radio}}
+      {{/check}}
+      {{#>check newcontent nested="true"}}
+        {{#>radio value="radionOption6" id="radio6" name="radios2" label="Radio 3" disabled="true"}}{{/radio}}
+      {{/check}}
+    {{/group}}  
+  </fieldset>
+{{/form}}

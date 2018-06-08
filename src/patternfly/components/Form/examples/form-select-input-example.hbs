@@ -1,0 +1,35 @@
+{{#>form}}
+  {{#>group}}
+    {{#>label for="select1"}}Select input{{/label}}
+    {{#>form-control}}
+      {{#>select id="select1" name="example-select1"}}
+        {{#>select-option value="Option 1"}}The first option{{/select-option}}
+        {{#>select-option value="Option 2"}}The second option{{/select-option}}
+      {{/select}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label for="select2"}}Select input with grouping{{/label}}
+    {{#>form-control}}
+      {{#>select id="select2" name="example-select2"}}
+        <optgroup label="Group 1">
+          {{#>select-option value="Option 1"}}The first option{{/select-option}}
+          {{#>select-option value="Option 2" selected="true"}}The second option is selected by default{{/select-option}}
+        </optgroup>
+        <optgroup label="Group 2">
+          {{#>select-option value="Option 3"}}The third option{{/select-option}}
+          {{#>select-option value="Option 4"}}The fourth option{{/select-option}}
+        </optgroup>
+      {{/select}}
+    {{/form-control}}
+  {{/group}}
+  {{#>group}}
+    {{#>label for="select3" pf-c-form--modifier="pf-m-disabled"}}Select label and input disabled{{/label}}
+    {{#>form-control newcontent}}
+      {{#>select id="select3" name="example-select3" disabled="true"}}
+        {{#>select-option value="Option 1"}}The first option{{/select-option}}
+        {{#>select-option value="Option 2"}}The second option{{/select-option}}
+      {{/select}}
+    {{/form-control}}
+  {{/group}}
+{{/form}}
