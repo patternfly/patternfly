@@ -143,7 +143,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     flex-flow: row wrap;
     align-items: baseline;
     // Handle additional items within __group without having an additional wrapper or selector
-    > *:not(.pf-c-form__label):not(.pf-c-form__control):not(.pf-c-form__input):not(.pf-c-form__select):not(.pf-c-form__datalist):not(.pf-c-form__check):not(.pf-c-form__textarea):not(.pf-c-form__helper-text):not(.pf-m-align-right):not(.pf-c-form__legend):not(.pf-c-form__button-group):not([class*="pf-l-"]) {
+    > *:not(.pf-c-form__label):not(.pf-c-form__control):not(.pf-c-form__input):not(.pf-c-form__select):not(.pf-c-form__datalist):not(.pf-c-form__check):not(.pf-c-form__textarea):not(.pf-c-form__helper-text):not(.pf-m-align-right):not(.pf-c-form__legend):not(.pf-c-form__button-group):not([class*="pf-l-"]):not(.pf-m-right) {
       margin-left: var(--pf-c-form--group--MarginLeft);
     }
 
@@ -418,7 +418,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     }
 
     // Align right
-    &-align-right {
+    &-right {
       margin-left: auto;
     }
 

@@ -1,7 +1,7 @@
 {{#> simple-form-demo}}
   {{#> form}}
-    <section class="pf-c-form__section pf-m-border">
-      {{#> Grid modifierClass="pf-m-gutters"}}
+    {{#> form-section pf-c-form--modifier="pf-m-border"}}
+      {{#> Grid newcontent modifierClass="pf-m-gutters"}}
         {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
           Details
         {{/title}}
@@ -16,7 +16,7 @@
         {{/grid-item}}
         {{#> grid-item modifierClass="pf-m-8-col"}}
           {{#> form-group}}
-            {{#> form-label for="git_repo" pf-c-form--modifier="pf-m-required" required="true"}}Git Repository URL{{/form-label}}
+            {{#> form-label for="git_repo" required="true"}}Git Repository URL{{/form-label}}
             {{#> form-control}}
               {{#> form-input id="git_repo" type="url" name="app_git_repository"required="true" aria-describedby="git_repo_url_helper"}}{{/form-input}}
             {{/form-control}}
@@ -30,7 +30,7 @@
         {{/grid-item}}
         {{#> grid-item modifierClass="pf-m-4-col"}}
           {{#> form-group}}
-            {{#> form-label for="git_reference" pf-c-form--modifier="pf-m-required" required="true"}}Git Reference{{/form-label}}
+            {{#> form-label for="git_reference" required="true"}}Git Reference{{/form-label}}
             {{#> form-control}}
               {{#> form-input id="git_reference" type="text" name="app_git_reference" placeholder="Workspace Name" required="true" aria-describedby="git_reference_helper"}}{{/form-input}}
             {{/form-control}}
@@ -39,7 +39,7 @@
         {{/grid-item}}
         {{#> grid-item modifierClass="pf-m-12-col"}}
           {{#> form-group}}
-            {{#> form-label for="context_dir" pf-c-form--modifier="pf-m-required" required="true"}}Context Dir{{/form-label}}
+            {{#> form-label for="context_dir" required="true"}}Context Dir{{/form-label}}
             {{#> form-control}}
               {{#> form-input id="context_dir" type="text" name="app_context_dir" value="/" required="true" aria-describedby="context_dir_helper"}}{{/form-input}}
             {{/form-control}}
@@ -65,8 +65,8 @@
           {{/form-group}}
         {{/grid-item}}
       {{/Grid}}
-    </section>
-    <section class="pf-c-form__section pf-m-border">
+    {{/form-section}}
+    {{#> form-section pf-c-form--modifier="pf-m-border"}}
       {{#> Grid modifierClass="pf-m-gutters"}}
         {{#> form-title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
           Routing
@@ -122,8 +122,8 @@
           {{#> form-helper-text id="secure_route_helper"}}Optional subdirectory for the aplication source code, used as the context directory for the build.{{/form-helper-text}}            
         {{/grid-item}}
       {{/Grid}}
-    </section>
-    <section class="pf-c-form__section pf-m-border">
+    {{/form-section}}
+    {{#> form-section pf-c-form--modifier="pf-m-border"}}
       {{#> Grid modifierClass="pf-m-gutters"}}
         {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
           Build Configuration
@@ -169,7 +169,7 @@
                   {{/form-control}}
                 {{/form-group}}
               {{/grid-item}}    
-              {{#> grid-item modifierClass="pf-m-12-col"}}
+              {{#> grid-item modifierClass="pf-m-6-col"}}
                 {{#> form-group}}
                   {{#> form-label for="variable_value" hidden="true"}}Environment variable value{{/form-label}}
                   {{#> form-control}}
@@ -194,84 +194,80 @@
           {{/form-group}}
         {{/form-fieldset}}
       {{/Grid}}
-    </section>
-    <section class="pf-c-form__section">
+    {{/form-section}}
+    {{#> form-section}}
       {{#> Grid modifierClass="pf-m-gutters"}}
         {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
           Resource Limits
         {{/title}}      
         {{#> form-fieldset}}
-          {{#> form-group}}
-            {{#> form-legend}}CPU{{/form-legend}}
-            {{#> Grid modifierClass="pf-m-gutters"}}
-              {{#> grid-item modifierClass="pf-m-6-col"}}
-                {{#> form-group}}
-                  {{#> form-label for="cpu_request"}}Request{{/form-label}}
-                  {{!-- update this when tooltip is available --}}
-                  <div class="pf-c-tooltip">
-                    <i class="fas fa-info-circle"></i>
-                  </div>
-                  {{#> form-control}}
-                    {{#> form-input id="cpu_request" type="text" name="app_cpu_request" aria-describedby="git_repo_helper"}}{{/form-input}}
-                    {{#> dropdown id="dropdown-example-collapsed1"}}millicores{{/dropdown}}
-                  {{/form-control}}
-                  {{#> form-helper-text id="git_repo_helper"}}
-                    <a href="#">What are millicores?</a>
-                  {{/form-helper-text}}        
-                {{/form-group}}
-              {{/grid-item}}
-              {{#> grid-item modifierClass="pf-m-6-col"}}
-                {{#> form-group}}
-                  {{#> form-label for="cpu_limit"}}Limit{{/form-label}}
-                  {{!-- update this when tooltip is available --}}
-                  <div class="pf-c-tooltip">
-                    <i class="fas fa-info-circle"></i>
-                  </div>
-                  {{#> form-control}}
-                    {{#> form-input id="cpu_limit" type="text" name="app_cpu_limit"}}{{/form-input}}
-                    {{#> dropdown id="dropdown-example-collapsed2"}}millicores{{/dropdown}}
-                  {{/form-control}}
-                {{/form-group}}
-              {{/grid-item}}
-            {{/Grid}}       
-          {{/form-group}}
+          {{#> form-legend}}CPU{{/form-legend}}
+          {{#> Grid modifierClass="pf-m-gutters"}}
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="cpu_request"}}Request{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="cpu_request" type="text" name="app_cpu_request" aria-describedby="git_repo_helper"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed1"}}millicores{{/dropdown}}
+                {{/form-control}}
+                {{#> form-helper-text id="git_repo_helper"}}
+                  <a href="#">What are millicores?</a>
+                {{/form-helper-text}}        
+              {{/form-group}}
+            {{/grid-item}}
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="cpu_limit"}}Limit{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="cpu_limit" type="text" name="app_cpu_limit"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed2"}}millicores{{/dropdown}}
+                {{/form-control}}
+              {{/form-group}}
+            {{/grid-item}}
+          {{/Grid}}       
         {{/form-fieldset}}
 
         {{#> form-fieldset}}
-          {{#> form-group}}
-            {{#> form-legend}}Memory{{/form-legend}}          
-            {{#> Grid modifierClass="pf-m-gutters"}}
-              <div class="pf-m-6-col">
-                {{#> form-group}}
-                  {{#> form-label for="memory_request"}}Request{{/form-label}}
-                  {{!-- update this when tooltip is available --}}
-                  <div class="pf-c-tooltip">
-                    <i class="fas fa-info-circle"></i>
-                  </div>
-                  {{#> form-control}}
-                    {{#> form-input id="memory_request" type="text" name="app_memory_request" aria-describedby="git_repo_memory"}}{{/form-input}}
-                    {{#> dropdown id="dropdown-example-collapsed3"}}millicores{{/dropdown}}
-                  {{/form-control}}
-                  {{#> form-helper-text id="git_repo_memory"}}
-                    <a href="#">What are MiB?</a>
-                  {{/form-helper-text}}        
-                {{/form-group}}
-              </div>           
-              <div class="pf-m-6-col">
-                {{#> form-group}}
-                  {{#> form-label for="memory_limit"}}Limit{{/form-label}}
-                  {{!-- update this when tooltip is available --}}
-                  <div class="pf-c-tooltip">
-                    <i class="fas fa-info-circle"></i>
-                  </div>
-                  {{#> form-control}}
-                    {{#> form-input id="memory_limit" type="text" name="app_memory_limit"}}{{/form-input}}
-                    {{#> dropdown id="dropdown-example-collapsed4"}}millicores{{/dropdown}}
-                  {{/form-control}}
-                {{/form-group}}
-              </div>  
-            {{/Grid}}       
-          {{/form-group}}
+          {{#> form-legend}}Memory{{/form-legend}}          
+          {{#> Grid modifierClass="pf-m-gutters"}}
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="memory_request"}}Request{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="memory_request" type="text" name="app_memory_request" aria-describedby="git_repo_memory"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed3"}}millicores{{/dropdown}}
+                {{/form-control}}
+                {{#> form-helper-text id="git_repo_memory"}}
+                  <a href="#">What are MiB?</a>
+                {{/form-helper-text}}        
+              {{/form-group}}
+            {{/grid-item}}           
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="memory_limit"}}Limit{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="memory_limit" type="text" name="app_memory_limit"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed4"}}millicores{{/dropdown}}
+                {{/form-control}}
+              {{/form-group}}
+            {{/grid-item}} 
+          {{/Grid}}       
         {{/form-fieldset}}
         {{#> form-button-group}}
           {{#> button btnClass="pf-m-primary"}}
@@ -282,6 +278,6 @@
           {{/button}}
         {{/form-button-group}}
       {{/Grid}}
-    </section>
+    {{/form-section}}
   {{/form}}
 {{/simple-form-demo}}

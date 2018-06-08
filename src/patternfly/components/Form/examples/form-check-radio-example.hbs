@@ -1,6 +1,6 @@
 {{#> form}}
   {{#> form-fieldset}}
-    <legend class="pf-c-form__legend">Standard checkboxes nested in label</legend>
+    {{#> form-legend}}Standard checkboxes nested in label{{/form-legend}}
     {{#> form-check}}
       {{#> form-checkbox nested="true" value="checkboxOption1" id="checkbox1" name="checkbox1" text="Checkbox 1"}}
         <div class="pf-c-tooltip">
@@ -16,7 +16,7 @@
     {{/form-check}}
   {{/form-fieldset}}
   {{#> form-fieldset}}
-    <legend class="pf-c-form__legend">Standard radios nested in label</legend>
+    {{#> form-legend}}Standard radios nested in label{{/form-legend}}
     {{#> form-check}}
       {{#> form-radio nested="true" value="radionOption1" id="radio1" name="radios1" text="Radio 1"}}{{/form-radio}}
     {{/form-check}}
@@ -28,7 +28,7 @@
     {{/form-check}}
   {{/form-fieldset}}
   {{#> form-fieldset}}
-    <legend class="pf-c-form__legend">Inline checkboxes nested in label</legend>
+    {{#> form-legend}}Inline checkboxes nested in label{{/form-legend}}
     {{#> form-group pf-c-form--modifier="pf-m-inline"}}
       {{#> form-check newcontent}}
         {{#> form-checkbox nested="true" value="checkboxOption4" id="checkbox4" name="checkbox4" text="Checkbox 1"}}{{/form-checkbox}}
@@ -42,7 +42,7 @@
     {{/form-group}}
   {{/form-fieldset}}
   {{#> form-fieldset}}
-    <legend class="pf-c-form__legend">Inline radios nested in label</legend>
+    {{#> form-legend}}Inline radios nested in label{{/form-legend}}
     {{#> form-group pf-c-form--modifier="pf-m-inline"}}
       {{#> form-check newcontent nested="true"}}
         {{#> form-radio value="radionOption4" id="radio4" name="radios2" text="Radio 1"}}{{/form-radio}}
