@@ -8,8 +8,10 @@
   // MaxWidth is based on optimal line length for reading
   --pf-c-modal-box--MaxWidth: pf-size-prem(560px);
   --pf-c-modal-box--MaxWidth--lg: pf-size-prem(1120px);
+  // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
+  --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md)));
   // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
-  --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--xxxl));
+  --pf-c-modal-box--MaxHeight: calc(100vh - (2 * (var(--pf-global--spacer--xxxl))));
 
   // Box Header variables
   --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--xl);
@@ -18,10 +20,10 @@
   --pf-c-modal-box__header--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Box Body variables
+  --pf-c-modal-box__body--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-modal-box__body--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-modal-box__body--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-modal-box__body--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__body--PaddingTop: var(--pf-global--spacer--sm);
 
   // Box Footer variables
   --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--xl);
@@ -35,15 +37,12 @@
   z-index: var(--pf-c-modal-box--ZIndex);
   display: flex;
   flex-direction: column;
-  width: 100%;
   max-width: var(--pf-c-modal-box--MaxWidth);
+  min-height: var(--pf-c-modal-box--MinHeight);
   max-height: var(--pf-c-modal-box--MaxHeight);
   background-color: var(--pf-c-modal-box--BackgroundColor);
   box-shadow: var(--pf-c-modal-box--BoxShadow);
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    width: auto;
-  }
   &.pf-m-lg {
     max-width: var(--pf-c-modal-box--MaxWidth--lg);
   }
@@ -62,7 +61,8 @@
     padding-right: var(--pf-c-modal-box__body--PaddingRight);
     padding-bottom: var(--pf-c-modal-box__body--PaddingBottom);
     padding-left: var(--pf-c-modal-box__body--PaddingLeft);
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     overscroll-behavior: contain;
   }
 
