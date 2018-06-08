@@ -25,6 +25,9 @@
     overflow: auto;
     transform: scale(1);
   }
+  &__body.is-dark-preview {
+    background-color: #292e34;
+  }
   &__viewport-toggle {
     font-size: 1.6rem;
     background-color: transparent;
@@ -65,5 +68,14 @@
     padding-left: .5rem;
     font-size: 1.3rem;
     color: #000;
+  }
+  &__viewport-background-toggle {
+    padding-left: .5rem;
+    font-size: 1.3rem;
+    color: #000;
+    background-color: transparent;
+    border-width: 0;
+    border-left: 1px solid #000;
+    outline: 0;
   }
 }

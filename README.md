@@ -38,6 +38,12 @@ To setup the PatternFly Next development environment:
 
 *To view visit http://localhost:8000/patterns/<name>*
 
+### Create a new layout
+
+- run `pf generate layout <name>`
+
+*To view visit http://localhost:8000/layout/<name>*
+
 ### Create a new demo
 
 - run `pf generate demo <name>`

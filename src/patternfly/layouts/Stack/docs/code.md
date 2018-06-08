@@ -11,5 +11,5 @@ child will expand vertically to fill the container if needed.
 | `.pf-l-stack` | `<div>`, `<section>`, or `<article>` | Initiates the stack layout |
 | `.pf-l-stack__primary` | `<div>` | Specifies the primary child of the layout, which expands vertically when needed. |
 | `.pf-l-stack__secondary` | `<div>` | Specifies a secondary child of the layout, which accommodates its content. A stack can have one or more secondary children |
-| `.pf-has-gutter` | `.pf-l-stack` | Adds space between children |
+| `.pf-m-gutter` | `.pf-l-stack` | Adds space between children |
 

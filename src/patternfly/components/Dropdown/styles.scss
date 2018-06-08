@@ -1,0 +1,153 @@
+@import "../../patternfly-utilities";
+
+.pf-c-dropdown {
+  // Toggle
+  --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-dropdown__toggle--BackgroundColor: transparent;
+  --pf-c-dropdown__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__toggle--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__toggle--hover--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-dropdown__toggle--m-expanded--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--m-expanded--BorderColor: var(--pf-global--Color--active);
+
+  // Toggle Arrow
+  --pf-c-dropdown__arrow--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__arrow--BorderWidth: var(--pf-global--BorderWidth--md);
+
+  // Menu
+  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow--sm);
+  --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--xs);
+
+  // Menu Item
+  --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-dropdown__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu-item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__menu-item--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-dropdown__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-dropdown__menu-item--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--dark-100);
+  --pf-c-dropdown__menu-item--m-disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+
+  // Menu Item Separator
+  --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+
+  position: relative;
+  display: inline-block;
+
+  &__toggle {
+    padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
+    font-size: var(--pf-c-dropdown__toggle--FontSize);
+    font-weight: var(--pf-c-dropdown__toggle--FontWeight);
+    line-height: var(--pf-c-dropdown__toggle--LineHeight);
+    color: var(--pf-c-dropdown__toggle--Color);
+    background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
+    border: none;
+    box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--BorderColor);
+
+    &:hover {
+      box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--hover--BorderWidth) var(--pf-c-dropdown__toggle--hover--BorderColor);
+    }
+
+    &:active,
+    .pf-m-expanded > & {
+      box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--m-expanded--BorderWidth) var(--pf-c-dropdown__toggle--m-expanded--BorderColor);
+    }
+
+    .pf-m-ghost > & {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .pf-m-no-arrow > & {
+      padding-right: var(--pf-c-dropdown__toggle--PaddingLeft);
+    }
+
+    &::after {
+      box-sizing: content-box;
+      display: inline-block;
+      width: calc(var(--pf-c-dropdown__toggle--FontSize) * .3);
+      height: calc(var(--pf-c-dropdown__toggle--FontSize) * .3);
+      margin-left: var(--pf-c-dropdown__arrow--MarginLeft);
+      vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .25);
+      content: "";
+      border-style: solid;
+      border-width: var(--pf-c-dropdown__arrow--BorderWidth) var(--pf-c-dropdown__arrow--BorderWidth) 0 0;
+      transform: rotate(135deg);
+
+      .pf-m-no-arrow > & {
+        content: none;
+      }
+
+      .pf-m-dropup.pf-m-expanded > & {
+        vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .1);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: var(--pf-c-dropdown__menu--ZIndex);
+    min-width: 100%;
+    padding-top: var(--pf-c-dropdown__menu--PaddingTop);
+    padding-bottom: var(--pf-c-dropdown__menu--PaddingBottom);
+    background: var(--pf-c-dropdown__menu--BackgroundColor);
+    box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
+
+    .pf-m-right-aligned > & {
+      right: 0;
+    }
+
+    .pf-m-dropup > & {
+      top: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  &__menu-item {
+    display: block;
+    width: 100%;
+    padding: var(--pf-c-dropdown__menu-item--PaddingTop) var(--pf-c-dropdown__menu-item--PaddingRight) var(--pf-c-dropdown__menu-item--PaddingBottom) var(--pf-c-dropdown__menu-item--PaddingLeft);
+    font-size: var(--pf-c-dropdown__menu-item--FontSize);
+    font-weight: var(--pf-c-dropdown__menu-item--FontWeight);
+    line-height: var(--pf-c-dropdown__menu-item--LineHeight);
+    color: var(--pf-c-dropdown__menu-item--Color);
+    text-align: left;
+    white-space: nowrap;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: var(--pf-c-dropdown__menu-item--Color);
+      text-decoration: none;
+      background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
+    }
+
+    &:disabled,
+    &.pf-m-disabled {
+      color: var(--pf-c-dropdown__menu-item--m-disabled--Color);
+      pointer-events: none;
+      background-color: transparent;
+    }
+
+  }
+
+  &__separator {
+    height: var(--pf-c-dropdown__separator--Height);
+    background-color: var(--pf-c-dropdown__separator--BackgroundColor);
+  }
+}

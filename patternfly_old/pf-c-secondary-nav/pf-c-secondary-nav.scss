@@ -67,7 +67,7 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
     // }
 
     // Active State
-    &.pf-is-active {
+    &.pf-m-active {
       // @include hover-focus-active {
       //   // The background creates a thicker blue border under the active link
       //   background-image:
@@ -89,7 +89,7 @@ $pf-c-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
     }
 
     // Disabled State
-    &.pf-is-disabled {
+    &.pf-m-disabled {
       // @include hover-focus-active {
       //   // The background removes the border when hover on disabled state
       //   background-image: none;

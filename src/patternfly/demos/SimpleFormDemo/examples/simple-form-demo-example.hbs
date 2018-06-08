@@ -1,0 +1,283 @@
+{{#> simple-form-demo}}
+  {{#> form}}
+    {{#> form-section pf-c-form--modifier="pf-m-border"}}
+      {{#> Grid newcontent modifierClass="pf-m-gutters"}}
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Details
+        {{/title}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-group}}
+            {{#> form-label for="name" required="true"}}Name{{/form-label}}
+            <i class="fas fa-info-circle"></i>
+            {{#> form-control}}
+              {{#> form-input id="name" type="text" name="app_name" required="true"}}{{/form-input}}
+            {{/form-control}}
+          {{/form-group}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-8-col"}}
+          {{#> form-group}}
+            {{#> form-label for="git_repo" required="true"}}Git Repository URL{{/form-label}}
+            {{#> form-control}}
+              {{#> form-input id="git_repo" type="url" name="app_git_repository"required="true" aria-describedby="git_repo_url_helper"}}{{/form-input}}
+            {{/form-control}}
+            {{#> form-helper-text id="git_repo_url_helper"}}Sample repository for nodejs: https://github.com/openshift/nodejs-ex.git
+              <a href="#">
+                Try it
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            {{/form-helper-text}}        
+          {{/form-group}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-4-col"}}
+          {{#> form-group}}
+            {{#> form-label for="git_reference" required="true"}}Git Reference{{/form-label}}
+            {{#> form-control}}
+              {{#> form-input id="git_reference" type="text" name="app_git_reference" placeholder="Workspace Name" required="true" aria-describedby="git_reference_helper"}}{{/form-input}}
+            {{/form-control}}
+            {{#> form-helper-text id="git_reference_helper"}}Optional branch, tag or commit.{{/form-helper-text}}        
+          {{/form-group}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-group}}
+            {{#> form-label for="context_dir" required="true"}}Context Dir{{/form-label}}
+            {{#> form-control}}
+              {{#> form-input id="context_dir" type="text" name="app_context_dir" value="/" required="true" aria-describedby="context_dir_helper"}}{{/form-input}}
+            {{/form-control}}
+            {{#> form-helper-text id="context_dir_helper"}}Optional subdirectory for the application source code, used as the context directory for the build{{/form-helper-text}}        
+          {{/form-group}}
+        {{/grid-item}}
+
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-group}}
+            {{#> form-label for="source_secret"}}Source Secret{{/form-label}}
+            {{#> form-control}}
+              <input class="pf-c-form__datalist" list="source_secret_list" id="source_secret" name="app_source_seret" placeholder="Source Secret" />
+              {{#> form-datalist datalist-id="source_secret_list"}}
+                <option value="Source secret 1">
+                <option value="Source secret 2">
+                <option value="Source secret 3">
+                <option value="Source secret 4">
+              {{/form-datalist}}
+              {{#> button btnClass="pf-m-action" aria-labelled-by="Remove"}}
+                <i class="fas fa-times"></i>
+              {{/button}}
+            {{/form-control}}
+          {{/form-group}}
+        {{/grid-item}}
+      {{/Grid}}
+    {{/form-section}}
+    {{#> form-section pf-c-form--modifier="pf-m-border"}}
+      {{#> Grid modifierClass="pf-m-gutters"}}
+        {{#> form-title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Routing
+        {{/form-title}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-check}}
+            {{#> form-checkbox nested="true" id="create-route" name="app_create_route" checked="true" text="Create a route to the application"}}
+              {{!-- update this when tooltip is available --}}
+              <div class="pf-c-tooltip">
+                <i class="fas fa-info-circle"></i>
+              </div>
+            {{/form-checkbox}}
+          {{/form-check}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-group}}
+            {{#> form-label for="hostname"}}Hostname{{/form-label}}
+            {{#> form-form-control}}
+              {{#> form-input id="hostname" type="url" name="app_hostname" placeholder="www.example.com" aria-describedby="hostname_helper"}}{{/form-input}}
+            {{/form-form-control}}
+            {{#> form-helper-text id="hostname_helper"}}Public hostname for the route. If not specified, a hostname is generated. The hostname cannot after the route is created.{{/form-helper-text}}        
+          {{/form-group}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-group}}
+            {{#> form-label for="path"}}Path{{/form-label}}
+            {{#> form-control}}
+              {{#> form-input id="path" type="text" name="app_path" value="/" aria-describedby="path_helper"}}{{/form-input}}
+            {{/form-control}}
+            {{#> form-helper-text id="path_helper"}}Optional subdirectory for the aplication source code, used as the context directory for the build.{{/form-helper-text}}        
+          {{/form-group}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-group}}
+            {{#> form-label for="target_port" pf-c-form--modifier="pf-m-required"}}Target Port{{/form-label}}
+            {{#> form-control}}
+              {{#> form-select id="target_port" name="app_target_port"}}
+                {{#> form-select-option option-value="8080"}}8080/TCP{{/form-select-option}}
+                {{#> form-select-option option-value="8089"}}8089/TCP{{/form-select-option}}
+                {{#> form-select-option option-value="8090"}}8090/TCP{{/form-select-option}}
+              {{/form-select}}
+            {{/form-control}}
+          {{/form-group}}
+        {{/grid-item}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> title titleType="h3" pf-c-title--Modifier="pf-m-md pf-m-subsection-title"}}
+            Security
+          {{/title}}
+          {{#> form-check}}
+            {{#> form-checkbox nested="true" id="secure-route" name="app_secure_route" text="Secure route" aria-describedby="secure_route_helper"}}
+            {{/form-checkbox}}
+          {{/form-check}}
+          {{#> form-helper-text id="secure_route_helper"}}Optional subdirectory for the aplication source code, used as the context directory for the build.{{/form-helper-text}}            
+        {{/grid-item}}
+      {{/Grid}}
+    {{/form-section}}
+    {{#> form-section pf-c-form--modifier="pf-m-border"}}
+      {{#> Grid modifierClass="pf-m-gutters"}}
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Build Configuration
+        {{/title}}
+        {{#> grid-item modifierClass="pf-m-12-col"}}
+          {{#> form-fieldset}}
+            {{#> form-legend pf-c-form--modifier="pf-m-visually-hidden"}}Build configuration settings{{/form-legend}}
+            {{#> form-check}}
+              {{#> form-checkbox nested="true" id="webhook-trigger" name="app_webhook_trigger" text="Configure a webhook trigger" checked="true"}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              {{/form-checkbox}}
+            {{/form-check}}
+            {{#> form-check}}
+              {{#> form-checkbox nested="true" id="new-image" name="app_new_image" text="Automatically build a new image when builder image changes" checked="true"}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              {{/form-checkbox}}
+            {{/form-check}}
+            {{#> form-check}}
+              {{#> form-checkbox nested="true" id="launch-first-build" name="app_launch_first_build" text="Launch the first build when the build configuration is created" checked="true"}}
+              {{/form-checkbox}}
+            {{/form-check}}
+          {{/form-fieldset}}
+        {{/grid-item}}
+        {{#> form-fieldset}}
+          {{#> form-group}}
+            {{#> form-legend}}Environment Variables (Build and Runtime){{/form-legend}}
+            {{!-- update this when tooltip is available --}}
+            <div class="pf-c-tooltip">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            {{#> Grid modifierClass="pf-m-gutters"}}
+              {{#> grid-item modifierClass="pf-m-6-col"}}
+                {{#> form-group}}
+                  {{#> form-label for="variable_name" hidden="true"}}Environment variable name{{/form-label}}
+                  {{#> form-control}}
+                    {{#> form-input id="variable_name" type="text" name="app_variable_name" placeholder="name"}}{{/form-input}}
+                  {{/form-control}}
+                {{/form-group}}
+              {{/grid-item}}    
+              {{#> grid-item modifierClass="pf-m-6-col"}}
+                {{#> form-group}}
+                  {{#> form-label for="variable_value" hidden="true"}}Environment variable value{{/form-label}}
+                  {{#> form-control}}
+                    {{#> form-input id="variable_value" type="text" name="app_variable_value" placeholder="value"}}{{/form-input}}
+                    {{#> button btnClass="pf-m-action" aria-labelled-by="Remove"}}
+                      <i class="fas fa-times"></i>
+                    {{/button}}
+                  {{/form-control}}
+                {{/form-group}}
+              {{/grid-item}}
+            {{/Grid}}
+            {{#> form-button-group}}
+              {{#> button btnClass="pf-m-link"}}
+                <i class="fas fa-plus-circle"></i>
+                Add Value
+              {{/button}}
+              {{#> button btnClass="pf-m-link"}}
+                <i class="fas fa-plus-circle"></i>
+                Add Value from Config Map or Secret
+              {{/button}}
+            {{/form-button-group}}
+          {{/form-group}}
+        {{/form-fieldset}}
+      {{/Grid}}
+    {{/form-section}}
+    {{#> form-section}}
+      {{#> Grid modifierClass="pf-m-gutters"}}
+        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
+          Resource Limits
+        {{/title}}      
+        {{#> form-fieldset}}
+          {{#> form-legend}}CPU{{/form-legend}}
+          {{#> Grid modifierClass="pf-m-gutters"}}
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="cpu_request"}}Request{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="cpu_request" type="text" name="app_cpu_request" aria-describedby="git_repo_helper"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed1"}}millicores{{/dropdown}}
+                {{/form-control}}
+                {{#> form-helper-text id="git_repo_helper"}}
+                  <a href="#">What are millicores?</a>
+                {{/form-helper-text}}        
+              {{/form-group}}
+            {{/grid-item}}
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="cpu_limit"}}Limit{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="cpu_limit" type="text" name="app_cpu_limit"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed2"}}millicores{{/dropdown}}
+                {{/form-control}}
+              {{/form-group}}
+            {{/grid-item}}
+          {{/Grid}}       
+        {{/form-fieldset}}
+
+        {{#> form-fieldset}}
+          {{#> form-legend}}Memory{{/form-legend}}          
+          {{#> Grid modifierClass="pf-m-gutters"}}
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="memory_request"}}Request{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="memory_request" type="text" name="app_memory_request" aria-describedby="git_repo_memory"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed3"}}millicores{{/dropdown}}
+                {{/form-control}}
+                {{#> form-helper-text id="git_repo_memory"}}
+                  <a href="#">What are MiB?</a>
+                {{/form-helper-text}}        
+              {{/form-group}}
+            {{/grid-item}}           
+            {{#> grid-item modifierClass="pf-m-6-col"}}
+              {{#> form-group}}
+                {{#> form-label for="memory_limit"}}Limit{{/form-label}}
+                {{!-- update this when tooltip is available --}}
+                <div class="pf-c-tooltip">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                {{#> form-control}}
+                  {{#> form-input id="memory_limit" type="text" name="app_memory_limit"}}{{/form-input}}
+                  {{#> dropdown id="dropdown-example-collapsed4"}}millicores{{/dropdown}}
+                {{/form-control}}
+              {{/form-group}}
+            {{/grid-item}} 
+          {{/Grid}}       
+        {{/form-fieldset}}
+        {{#> form-button-group}}
+          {{#> button btnClass="pf-m-primary"}}
+            Create
+          {{/button}}
+          {{#> button btnClass="pf-m-secondary"}}
+            Cancel
+          {{/button}}
+        {{/form-button-group}}
+      {{/Grid}}
+    {{/form-section}}
+  {{/form}}
+{{/simple-form-demo}}

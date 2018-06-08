@@ -5,5 +5,6 @@ module.exports = {
   '@patterns': path.resolve(__dirname, '../src/patternfly/patterns'),
   '@components': path.resolve(__dirname, '../src/patternfly/components'),
   '@layouts': path.resolve(__dirname, '../src/patternfly/layouts'),
+  '@demos': path.resolve(__dirname, '../src/demos'),
   '@project': path.resolve(__dirname, '../src')
 };

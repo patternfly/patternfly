@@ -1,0 +1,88 @@
+@import "../../patternfly-utilities";
+
+.pf-c-modal-box {
+  // Component variables
+  --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--xxl);
+  // MaxWidth is based on optimal line length for reading
+  --pf-c-modal-box--MaxWidth: pf-size-prem(560px);
+  --pf-c-modal-box--MaxWidth--lg: pf-size-prem(1120px);
+  // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
+  --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md)));
+  // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
+  --pf-c-modal-box--MaxHeight: calc(100vh - (2 * (var(--pf-global--spacer--xxxl))));
+
+  // Box Header variables
+  --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__header--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-modal-box__header--PaddingLeft: var(--pf-global--spacer--xl);
+
+  // Box Body variables
+  --pf-c-modal-box__body--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-modal-box__body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__body--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-modal-box__body--PaddingLeft: var(--pf-global--spacer--xl);
+
+  // Box Footer variables
+  --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__footer--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__footer--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
+
+  // This component always needs to be light  
+  @extend %pf-t-light;
+
+  z-index: var(--pf-c-modal-box--ZIndex);
+  display: flex;
+  flex-direction: column;
+  max-width: var(--pf-c-modal-box--MaxWidth);
+  min-height: var(--pf-c-modal-box--MinHeight);
+  max-height: var(--pf-c-modal-box--MaxHeight);
+  background-color: var(--pf-c-modal-box--BackgroundColor);
+  box-shadow: var(--pf-c-modal-box--BoxShadow);
+
+  &.pf-m-lg {
+    max-width: var(--pf-c-modal-box--MaxWidth--lg);
+  }
+
+  &__header {
+    flex: 0 0 auto;
+    padding-top: var(--pf-c-modal-box__header--PaddingTop);
+    padding-right: var(--pf-c-modal-box__header--PaddingRight);
+    padding-bottom: var(--pf-c-modal-box__header--PaddingBottom);
+    padding-left: var(--pf-c-modal-box__header--PaddingLeft);
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    padding-top: var(--pf-c-modal-box__body--PaddingTop);
+    padding-right: var(--pf-c-modal-box__body--PaddingRight);
+    padding-bottom: var(--pf-c-modal-box__body--PaddingBottom);
+    padding-left: var(--pf-c-modal-box__body--PaddingLeft);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    padding-top: var(--pf-c-modal-box__footer--PaddingTop);
+    padding-right: var(--pf-c-modal-box__footer--PaddingRight);
+    padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
+    padding-left: var(--pf-c-modal-box__footer--PaddingLeft);
+  }
+
+  // If the first child isn't a header, then we need to put the header's top padding there
+  &__body:first-child,
+  &__footer:first-child {
+    padding-top: var(--pf-c-modal-box__header--PaddingTop);
+  }
+
+  // If the last child isn't the footer, then we need to put the footer's bottom padding there
+  &__header:last-child,
+  &__body:last-child {
+    padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
+  }
+}

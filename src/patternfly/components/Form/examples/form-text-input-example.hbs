@@ -1,0 +1,46 @@
+{{#> form}}
+  {{#> form-group}}
+    {{#> form-label for="textInput1"}}Standard input{{/form-label}}
+    {{#> form-control}}
+      {{#> form-input id="textInput1" type="text" name="inputName1"}}{{/form-input}}
+    {{/form-control}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput2"}}Input with placeholder{{/form-label}}
+    {{#> form-control}}
+      {{#> form-input id="textInput2" type="text" name="inputName2" placeholder="Example2"}}{{/form-input}}
+    {{/form-control}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput3" required="true"}}Required input{{/form-label}}
+    {{#> form-control}}
+      {{#> form-input id="textInput3" type="text" name="inputName3" required="true"}}{{/form-input}}
+    {{/form-control}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput4" pf-c-form--modifier="pf-m-disabled"}}Disabled input{{/form-label}}
+    {{#> form-control}}
+      {{#> form-input id="textInput4" type="text" name="inputName4" disabled="true"}}{{/form-input}}
+    {{/form-control}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput5" pf-c-form-control--modifier="pf-m-required"}}Label with tooltip{{/form-label}}
+    <div class="pf-c-tooltip">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    {{#> form-control}}
+      {{#>button btnClass="pf-m-secondary"}}testing{{/button}}
+      {{#> form-input newcontent id="textInput5" type="text" name="inputName5" aria-describedby="helper1" required="true"}}{{/form-input}}
+      {{#>button btnClass="pf-m-secondary"}}testing{{/button}}
+    {{/form-control}}
+    {{#> form-helper-text id="helper1"}}This is helper text{{/form-helper-text}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput6" pf-c-form--modifier="pf-m-required"}}Required input with tooltip and error{{/form-label}}
+    <a href="#" class="pf-m-right">Test link</a>
+    {{#> form-control}}
+      {{#> form-input pf-c-form--modifier="pf-m-error" id="textInput6" type="text" placeholder="Has error" aria-errormessage="helper2" aria-invalid="true"}}{{/form-input}}
+    {{/ form-control}}
+    {{#> form-helper-text pf-c-form--modifier="pf-m-error" id="helper2"}}This is helper text{{/form-helper-text}}
+  {{/form-group}}
+{{/form}}

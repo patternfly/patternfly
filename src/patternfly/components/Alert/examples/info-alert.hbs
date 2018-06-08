@@ -1,1 +1,33 @@
-{{#> alert modifierClass="pf-is-info"}}<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>{{/alert}}
+{{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
+  <i class="fas fa-info-circle"></i>
+</div>
+<div class="pf-c-alert__body">
+  <h4 class="pf-c-alert__title">
+    <span class="sr-only">Info: </span> Info notification title</h4>
+    <p>This is a description of the notification content.</p>
+</div>
+{{/alert}}
+<br>
+<br> {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
+  <i class="fas fa-info-circle"></i>
+</div>
+<div class="pf-c-alert__body">
+  <h4 class="pf-c-alert__title">
+    <span class="sr-only">Info: </span> Info notification title</h4>
+</div>
+<div class="pf-c-alert__action">
+  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+</div>
+{{/alert}}
+<br>
+<br> {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
+<div aria-hidden="true" class="pf-c-alert__icon">
+  <i class="fas fa-info-circle"></i>
+</div>
+<div class="pf-c-alert__body">
+  <h4 class="pf-c-alert__title">
+    <span class="sr-only">Info: </span> Info notification title</h4>
+</div>
+{{/alert}}

@@ -1,0 +1,11 @@
+{{#if nested}}
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{id}}">
+    <input class="pf-c-form__radio" type="radio" id="{{id}}" name="{{name}}" {{#if disabled}} disabled{{/if}} {{#if checked}} checked{{/if}} {{#if tabindex}} tabindex="{{tabindex}}" {{/if}}>
+    {{ text }}
+  </label>
+  {{> @partial-block}}
+{{else}}
+  <input class="pf-c-form__radio" type="radio" id="{{ id }}" name="{{ name }}" {{#if disabled}} disabled{{/if}} {{#if checked}} checked{{/if}} {{#if tabindex }} tabindex="{{ tabindex }}" {{/if}}>
+  <label class="pf-c-form__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{ id }}">{{text}}</label>
+  {{> @partial-block}}
+{{/if}}

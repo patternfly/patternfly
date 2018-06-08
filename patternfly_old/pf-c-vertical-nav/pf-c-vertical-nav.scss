@@ -58,7 +58,7 @@
       background: $pf-color-black-400; //delete when we have icons
     }
 
-    &.pf-is-active {
+    &.pf-m-active {
       position: relative;
 
       // Since we are still unsure about the active state I am going to leave it hardcoded
@@ -76,11 +76,11 @@
   }
 }
 
-.pf-is-active {
+.pf-m-active {
   --pf-c-vertical-nav__link--Color: var(--pf-c-vertical-nav__link--active--Color, #39a5dc);
 }
 
-.pf-is-disabled {
+.pf-m-disabled {
   --pf-c-vertical-nav__link--Color: var(--pf-c-vertical-nav__link--disabled--Color, #ccc);
 }
 
@@ -136,7 +136,7 @@
 //
 //   @include media-breakpoint-up(sm) {
 //     margin-right: -$pf-vertical-sub-nav-padding; // To compensate for the padding on the __content wrapper
-//     &.pf-is-active {
+//     &.pf-m-active {
 //       background-color: $pf-color-black-600;
 //
 //       .pf-vertical-sub-nav--second & {

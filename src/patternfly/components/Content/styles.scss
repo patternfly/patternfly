@@ -1,6 +1,6 @@
 @import "../../patternfly-utilities";
 
-:root {
+.pf-c-content {
   // Body
   --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-content--LineHeight: var(--pf-global--LineHeight--md);
@@ -53,7 +53,7 @@
   --pf-c-content--small--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-content--small--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--small--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-content--small--Color: var(--pf-global--Color--dark-200);
+  --pf-c-content--small--Color: var(--pf-global--Color--200);
 
   // Links
   --pf-c-content--a--Color: var(--pf-global--link--Color);
@@ -64,7 +64,7 @@
   // Blockquote
   --pf-c-content--blockquote--Padding: var(--pf-global--spacer--md);
   --pf-c-content--blockquote--FontWeight: var(--pf-global--FontWeight--light);
-  --pf-c-content--blockquote--Color: var(--pf-global--Color--dark-200);
+  --pf-c-content--blockquote--Color: var(--pf-global--Color--200);
   --pf-c-content--blockquote--BorderLeftColor: var(--pf-global--BorderColor--light);
   --pf-c-content--blockquote--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
 
@@ -80,9 +80,7 @@
   --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-content--dd--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--dd--MarginLeft: var(--pf-global--spacer--lg);
-}
 
-.pf-c-content {
   font-size: var(--pf-c-content--FontSize);
   line-height: var(--pf-c-content--LineHeight);
 
