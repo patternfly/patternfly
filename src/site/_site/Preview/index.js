@@ -5,8 +5,8 @@ import './styles.scss';
 export default class Preview extends React.Component {
   constructor(props) {
     super(props);
-    const { viewport = '', heading } = props;
-    this.state = { viewport, fullPath: '', heading };
+    const { viewport = '', heading, background = '' } = props;
+    this.state = { viewport, fullPath: '', heading, background };
   }
 
   componentDidMount() {
@@ -23,6 +23,12 @@ export default class Preview extends React.Component {
     this.setState(prevState => ({
       viewport:
         prevState.viewport === `is-${viewportType}` ? '' : `is-${viewportType}`
+    }));
+  }
+
+  toggleLights() {
+    this.setState(prevState => ({
+      background: prevState.background === '' ? 'pf-t-dark pf-m-opaque-200' : ''
     }));
   }
 
@@ -50,7 +56,7 @@ export default class Preview extends React.Component {
       </div>
     ) : (
       <div
-        className={`Preview__body ${
+        className={`Preview__body ${this.state.background} ${
           this.props.isViewport ? 'is-viewport' : ''
         }`}
         dangerouslySetInnerHTML={output}
@@ -92,6 +98,13 @@ export default class Preview extends React.Component {
               onClick={() => this.activateViewport('xl')}
             >
               <i className="fas fa-desktop" />
+            </button>
+            <button
+              className="Preview__viewport-background-toggle"
+              onClick={() => this.toggleLights()}
+              title="Toggle dark theme"
+            >
+              <i className="fas fa-adjust" />
             </button>
             {this.renderFullPageLink()}
           </div>
