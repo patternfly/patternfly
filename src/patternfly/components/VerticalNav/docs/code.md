@@ -6,6 +6,7 @@ The vertical navigation list contains list items, links, icons and text. Icons, 
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
+| `role="list"` | `.pf-c-vertical-nav` |  Defines `<ul>` as a list. |
 | `role="link"` | `.pf-c-vertical-nav__link` |  Defines `<a>` as a link. |
 | `aria-current="page"` | `.pf-c-vertical-nav__link` |  Defines link as link to current page. Do not expose `aria-current="false"` or `aria-current` on noncurrent pages. |
 
