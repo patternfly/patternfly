@@ -267,6 +267,12 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
       box-shadow: inset 0 0 0 var(--pf-c-form__input--m-error--BorderSize) var(--pf-c-form__input--m-error--BorderColor);
       @include pf-bg-svg($pf-c-form__select--m-error-svg--Coordinates, $pf-c-form__select--m-error-svg--Color, $pf-c-form__select--m-error-svg--Width, $pf-c-form__select--m-error-svg--Height, $pf-c-form__select--m-error-svg--Viewbox);
     }
+
+    // Disabled
+    &:disabled,
+    &.pf-m-disabled {
+      cursor: not-allowed;
+    }
   }
 
   // Select & datalist
@@ -314,7 +320,6 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
   }
 
   // Input, checkbox, radio, select
-  &__input,
   &__checkbox,
   &__radio,
   &__select {

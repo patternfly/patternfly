@@ -1,10 +1,7 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-d-simple-form-demo__element--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
-:root {
+// Form demo
+.pf-d-simple-form-demo {
   // Base
   --pf-d-simple-form-demo--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-d-simple-form-demo--Color: var(--pf-global--Color--dark-100);
@@ -18,9 +15,6 @@
 
   // Example modifier variable
   --pf-d-simple-form-demo--m-danger--BackgroundColor: var(--pf-global--danger-color);
-}
-
-.pf-d-simple-form-demo {
   padding-right: var(--pf-d-simple-form-demo--PaddingRight);
   padding-left: var(--pf-d-simple-form-demo--PaddingLeft);
   color: var(--pf-d-simple-form-demo--Color);
@@ -36,14 +30,4 @@
   h3 {
     margin: 0;
   }
-
-  // Element
-  // &__title {
-  //   font-size: var(--pf-d-simple-form-demo__title--FontSize);
-  // }
-
-  // Modifier
-  // &.pf-m-danger {
-  //   background-color: var(--pf-d-simple-form-demo--m-danger--BackgroundColor);
-  // }
 }
