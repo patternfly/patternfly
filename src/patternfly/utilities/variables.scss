@@ -98,13 +98,13 @@ $pf-global--BoxShadow--lg-top: 0 pf-size-prem(-12) pf-size-prem(10) pf-size-prem
 $pf-global--BoxShadow--inset: inset 0 0 pf-size-prem(10) 0 rgba($pf-color-black-1000, .25) !default;
 
 // Fontpath
-$pf-global--font-path: "/assets/fonts" !default;
+$pf-global--font-path: "./assets/fonts" !default;
 
 // Iconpath
-$pf-global--fontawesome-path: "/assets/icons" !default;
+$pf-global--fontawesome-path: "./assets/icons" !default;
 
 //Imagepath
-$pf-global--image-path: "/assets/images/" !default;
+$pf-global--image-path: "./assets/images/" !default;
 
 // Spacers
 $pf-global--spacer--xs: pf-size-prem(4px) !default;     // Color in the visuals
