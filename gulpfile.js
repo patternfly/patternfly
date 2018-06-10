@@ -56,5 +56,5 @@ gulp.task('copy-source', ['build-tmp-full', 'build-tmp'], () => {
   gulp.src('./README.md').pipe(gulp.dest('./dist'));
   gulp.src('./package.json').pipe(gulp.dest('./dist'));
   gulp.src('./tmp/**/*.scss').pipe(gulp.dest('./dist'));
-  gulp.src('./static/**/*.*').pipe(gulp.dest('./dist'));
+  gulp.src('./src/patternfly/assets/**/*.*').pipe(gulp.dest('./dist/assets/'));
 });
