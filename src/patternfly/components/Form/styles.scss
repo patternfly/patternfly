@@ -52,7 +52,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
   --pf-c-form__input--hover--BorderSize:          var(--pf-global--BorderWidth--md);
   --pf-c-form__input--focus--BorderSize:          var(--pf-global--BorderWidth--md);
   --pf-c-form__input--disabled--BorderSize:       var(--pf-global--BorderWidth--sm);
-  --pf-c-form__input--BorderColor:                var(--pf-global--BorderColor--dark);
+  --pf-c-form__input--BoxShadowColor:             var(--pf-global--BorderColor--dark);
   --pf-c-form__input--hover--BorderColor:         var(--pf-global--BorderColor--dark);
   --pf-c-form__input--focus--BorderColor:         var(--pf-global--BorderColor--active);
   --pf-c-form__input--disabled--BorderColor:      var(--pf-global--BorderColor--disabled);
@@ -85,7 +85,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
   // Select
   --pf-c-form__select--PaddingRight: calc(#{$pf-global--spacer--sm} + #{$pf-global--spacer--md} + #{var(--pf-c-form__input--FontSize)});
 
-  // Checkbox 
+  // Checkbox
   --pf-c-form__checkbox--MarginRight: var(--pf-global--spacer--md);
 
   // Group
@@ -135,7 +135,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     }
   }
 
-  // Group - label and control container 
+  // Group - label and control container
   // Note: Fieldset and legend are replaced groups. In order to have fieldset elements layout like a group, fieldset contents must be wrapped in __group.
   &__group,
   .pf-m-subsection-title {
@@ -227,10 +227,10 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     line-height: var(--pf-c-form__input--LineHeight);
     color: var(--pf-c-form__input--Color);
     background-color: var(--pf-c-form__input--BackgroundColor);
-    border: 0;
+    border: var(--pf-c-form__input--BorderSize) solid transparent;
     border-radius: 0;
     outline: 0;
-    box-shadow: inset 0 0 0 var(--pf-c-form__input--BorderSize) var(--pf-c-form__input--BorderColor);
+    box-shadow: inset 0 0 0 var(--pf-c-form__input--BorderSize) var(--pf-c-form__input--BoxShadowColor);
 
     &::placeholder {
       color: var(--pf-c-form__input--placeholder--Color);

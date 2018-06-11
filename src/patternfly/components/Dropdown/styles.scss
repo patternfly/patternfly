@@ -24,6 +24,7 @@
 
   // Menu
   --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-dropdown__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow--sm);
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -55,7 +56,7 @@
     line-height: var(--pf-c-dropdown__toggle--LineHeight);
     color: var(--pf-c-dropdown__toggle--Color);
     background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
-    border: none;
+    border: var(--pf-c-dropdown__toggle--BorderWidth) solid transparent;
     box-shadow: inset 0 0 0 var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--BorderColor);
 
     &:hover {
@@ -106,6 +107,7 @@
     padding-top: var(--pf-c-dropdown__menu--PaddingTop);
     padding-bottom: var(--pf-c-dropdown__menu--PaddingBottom);
     background: var(--pf-c-dropdown__menu--BackgroundColor);
+    border: var(--pf-c-dropdown__menu--BorderWidth) solid transparent;
     box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
     .pf-m-right-aligned > & {
