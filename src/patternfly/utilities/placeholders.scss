@@ -2,6 +2,28 @@
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
   --pf-global--BorderColor: var(--pf-global--BorderColor--dark);
+
+  .pf-c-button {
+    // Secondary btn
+    --pf-c-button--m-secondary--BoxShadowColor: var(--pf-global--primary-color--100);
+    --pf-c-button--m-secondary--Color: var(--pf-global--primary-color--100);
+    --pf-c-button--m-secondary--hover--BoxShadowColor: var(--pf-global--primary-color--200);
+    --pf-c-button--m-secondary--hover--Color: var(--pf-global--primary-color--200);
+    --pf-c-button--m-secondary--focus--BoxShadowColor: var(--pf-global--primary-color--200);
+    --pf-c-button--m-secondary--focus--Color: var(--pf-global--primary-color--200);
+    --pf-c-button--m-secondary--active--BoxShadowColor: var(--pf-global--primary-color--200);
+    --pf-c-button--m-secondary--active--Color: var(--pf-global--primary-color--200);
+    // Tertiary btn
+    --pf-c-button--m-tertiary--BoxShadowColor: var(--pf-global--secondary-color--100);
+    --pf-c-button--m-tertiary--Color: var(--pf-color-black-900);
+    --pf-c-button--m-tertiary--hover--BoxShadowColor: var(--pf-global--secondary-color--100);
+    --pf-c-button--m-tertiary--hover--Color: var(--pf-color-black-900);
+    --pf-c-button--m-tertiary--focus--BackgroundColor: transparent;
+    --pf-c-button--m-tertiary--focus--BoxShadowColor: var(--pf-global--secondary-color--100);
+    --pf-c-button--m-tertiary--focus--Color: var(--pf-color-black-900);
+    --pf-c-button--m-tertiary--active--BoxShadowColor: var(--pf-global--secondary-color--100);
+    --pf-c-button--m-tertiary--active--Color: var(--pf-color-black-900);
+  }
 }
 
 %pf-t-dark {
