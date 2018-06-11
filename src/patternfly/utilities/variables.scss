@@ -104,7 +104,7 @@ $pf-global--font-path: "./assets/fonts" !default;
 $pf-global--fontawesome-path: "./assets/icons" !default;
 
 //Imagepath
-$pf-global--image-path: "./assets/images/" !default;
+$pf-global--image-path: "/assets/images" !default;
 
 // Spacers
 $pf-global--spacer--xs: pf-size-prem(4px) !default;     // Color in the visuals
