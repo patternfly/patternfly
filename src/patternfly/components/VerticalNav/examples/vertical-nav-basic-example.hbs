@@ -6,7 +6,7 @@
     {{/vertical-nav-link}}
   {{/vertical-nav-item}}
   {{#> vertical-nav-item}}
-    {{#> vertical-nav-link url="#2"}}
+    {{#> vertical-nav-link pf-c-vertical-nav--modifier="pf-m-disabled" url="#2"}}
       {{#> vertical-nav-link-icon newcontent icon="fa-tachometer-alt"}}{{/vertical-nav-link-icon}}
       {{#> vertical-nav-link-text newcontent}}Unnecessarily long name extending to 2 lines{{/vertical-nav-link-text}}
     {{/vertical-nav-link}}
@@ -23,7 +23,7 @@
       {{#> vertical-nav-link-text newcontent}}Builds{{/vertical-nav-link-text}}
     {{/vertical-nav-link}}
   {{/vertical-nav-item}}
-  {{#> vertical-nav-item children="true"}}
+  {{#> vertical-nav-item children="true" aria-expanded="false"}}
     {{#> vertical-nav-link url="#5"}}
       {{#> vertical-nav-link-icon newcontent icon="fa-chart-area"}}{{/vertical-nav-link-icon}}
       {{#> vertical-nav-link-text newcontent}}Subnav example (not currently functional){{/vertical-nav-link-text}}
