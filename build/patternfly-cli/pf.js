@@ -44,6 +44,7 @@ program
     const moduleName = inflection.titleize(name).replace(/-/g, '');
     const camelizedName = inflection.camelize(name, true);
     const underScoredName = inflection.underscore(name);
+    const dasherizedName = inflection.dasherize(underScoredName);
     const bemName = `${prefix}${bemEntity}`;
 
     const blueprintData = {
@@ -56,7 +57,7 @@ program
       namePluralized: inflection.pluralize(name),
       nameSingularized: inflection.singularize(name),
       nameUnderscored: inflection.underscore(name),
-      nameDasherized: inflection.dasherize(underScoredName),
+      nameDasherized: dasherizedName,
       nameHumanized: inflection.humanize(name),
       nameTitleized: inflection.titleize(name),
       nameClassified: inflection.classify(name),
@@ -71,10 +72,12 @@ program
       idBlock: `{{#if ${bemName}__id}}
     id="{{${bemName}__id}}"
   {{/if}}`,
-      moduleHbOpen: `{{#> ${name}}}`,
-      moduleHbClose: `{{/${name}}}`,
+      moduleHbOpen: `{{#> ${dasherizedName}}}`,
+      moduleHbClose: `{{/${dasherizedName}}}`,
       exampleOneReference: `{${camelizedName}Example1}`,
       exampleTwoReference: `{${camelizedName}Example2}`,
+      exampleOneRawReference: `{${moduleName}Example1Raw}`,
+      exampleTwoRawReference: `{${moduleName}Example2Raw}`,
       args: blueprintArgs
     };
 
