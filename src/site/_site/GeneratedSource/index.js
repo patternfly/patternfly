@@ -17,7 +17,7 @@ export default ({ children }) => {
   return (
     <div className="GeneratedSource">
       <div className="GeneratedSource__header">
-        <h4 className="GeneratedSource_title">HTML</h4>
+        <div className="GeneratedSource_title" />
         <CodepenButton html={indentedOutput} />
       </div>
       <div className="GeneratedSource__body">

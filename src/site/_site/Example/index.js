@@ -1,6 +1,7 @@
 import React from 'react';
 import Preview from '@siteComponents/Preview';
 import GeneratedSource from '@siteComponents/GeneratedSource';
+import Handlebars from '@siteComponents/Handlebars';
 
 import 'prismjs/themes/prism-coy.css';
 import './styles.scss';
@@ -23,7 +24,7 @@ export default class Example extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { isFull: false };
+    this.state = { isFull: false, codeView: 'source' };
   }
 
   componentDidMount() {
@@ -45,6 +46,12 @@ export default class Example extends React.Component {
     });
   }
 
+  showView(codeView) {
+    this.setState(prevState => ({
+      codeView
+    }));
+  }
+
   render() {
     const {
       heading,
@@ -52,10 +59,18 @@ export default class Example extends React.Component {
       children,
       className = '',
       isViewport = false,
+      handlebars = '',
       fullPageOnly
     } = this.props;
     const output = { __html: this.props.children };
-
+    const regex = /pf-[c|l]-[a-zA-Z-]* /gi;
+    const matches = this.props.children.match(regex);
+    const sourceTab =
+      this.state.codeView === 'source' ? (
+        <GeneratedSource>{children}</GeneratedSource>
+      ) : (
+        <Handlebars components={matches}>{handlebars}</Handlebars>
+      );
     if (!this.state.isFull) {
       return (
         <div className={`Example ${className}`}>
@@ -75,7 +90,33 @@ export default class Example extends React.Component {
             </Preview>
           </div>
           <div className="Example__section">
-            <GeneratedSource>{children}</GeneratedSource>
+            <ul className="pf-p-secondary-nav" role="tablist">
+              <li className="pf-p-secondary-nav__item">
+                <button
+                  role="tab"
+                  className={`pf-p-secondary-nav__link ${
+                    this.state.codeView === 'source' ? 'pf-m-active' : ''
+                  } `}
+                  aria-selected={this.state.codeView === 'source'}
+                  onClick={() => this.showView('source')}
+                >
+                  HTML
+                </button>
+              </li>
+              <li className="pf-p-secondary-nav__item">
+                <button
+                  role="tab"
+                  className={`pf-p-secondary-nav__link ${
+                    this.state.codeView === 'handlebars' ? 'pf-m-active' : ''
+                  } `}
+                  aria-selected={this.state.codeView === 'handlebars'}
+                  onClick={() => this.showView('handlebars')}
+                >
+                  Handlebars
+                </button>
+              </li>
+            </ul>
+            {sourceTab}
           </div>
         </div>
       );

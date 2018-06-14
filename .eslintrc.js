@@ -54,7 +54,14 @@ module.exports = {
     'react/forbid-prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-uses-vars': 'error',
-    'react/no-danger': 'off'
+    'react/no-danger': 'off',
+    'import/no-webpack-loader-syntax': 'off',
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [ '!raw!' ]
+      }
+    ]
   },
   extends: [
     'standard',

@@ -13,7 +13,9 @@
     padding: 0 1rem;
   }
   &__section {
-    // max-width: 100%;
+    .pf-p-secondary-nav__link {
+      border: none;
+    }
   }
   &__section:not(:last-of-type) {
     margin-bottom: 1rem;
