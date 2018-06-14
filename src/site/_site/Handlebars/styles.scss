@@ -43,15 +43,5 @@
     border-left: 0;
     box-shadow: none;
   }
-  &__componentLink {
-    padding-top: .25em;
-    ul {
-      display: inline;
-      list-style: none;
-    }
-    li {
-      display: inline-block;
-      padding-right: .25em;
-    }
-  }
+
 }

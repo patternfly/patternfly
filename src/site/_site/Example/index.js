@@ -2,6 +2,7 @@ import React from 'react';
 import Preview from '@siteComponents/Preview';
 import GeneratedSource from '@siteComponents/GeneratedSource';
 import Handlebars from '@siteComponents/Handlebars';
+import Link from 'gatsby-link';
 
 import 'prismjs/themes/prism-coy.css';
 import './styles.scss';
@@ -65,11 +66,37 @@ export default class Example extends React.Component {
     const output = { __html: this.props.children };
     const regex = /pf-[c|l]-[a-zA-Z-]* /gi;
     const matches = this.props.children.match(regex);
+    let navigationItems;
+    const processedComponents = [];
+    if (matches) {
+      navigationItems = matches.map(navItem => {
+        let path = '';
+        if (processedComponents.indexOf(navItem) === -1) {
+          processedComponents.push(navItem);
+          const componentName = navItem.slice(5, navItem.length).trim();
+
+          if (navItem.startsWith('pf-l')) {
+            path = `/layouts/${componentName}/examples`;
+          } else if (navItem.startsWith('pf-c')) {
+            path = `/components/${componentName}/examples`;
+          }
+          return (
+            <li key={`handlebars-nav-${path}`}>
+              <code>
+                <Link to={path}>{componentName}</Link>
+              </code>
+            </li>
+          );
+        }
+        return null;
+      });
+    }
+
     const sourceTab =
       this.state.codeView === 'source' ? (
         <GeneratedSource>{children}</GeneratedSource>
       ) : (
-        <Handlebars components={matches}>{handlebars}</Handlebars>
+        <Handlebars>{handlebars}</Handlebars>
       );
     if (!this.state.isFull) {
       return (
@@ -117,6 +144,9 @@ export default class Example extends React.Component {
               </li>
             </ul>
             {sourceTab}
+            <div className="Example__componentLink">
+              Components used: <ul>{navigationItems}</ul>
+            </div>
           </div>
         </div>
       );
