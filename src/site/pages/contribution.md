@@ -2,7 +2,7 @@
 
 ## Naming Blocks
 
-Components, layouts, patterns, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
+Components, layouts, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
 Example: `Button`, `SecondaryNav`
 
 ### Component Example
