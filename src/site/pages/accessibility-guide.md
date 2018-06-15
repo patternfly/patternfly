@@ -89,7 +89,40 @@ These are guidelines that we have defined for PatternFly.
 
 ## Techniques
 
-The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents)   provide examples on how to meet accessibility guidelines. Additionally, as we discover techniques for specific interaction patterns, we'll document them here so that we can be consistent in our approach.
+The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. Any techniques that are adopted as standard within PatternFly for handling specific patterns are included below.
+
+### Labels and Accessible Names
+
+- #### Form Fields
+  - Use explicit linking between `label` and form input elements (e.g. `input`, `textarea`, or `select`) when both elements are present. Aside from providing an accessible name to screen readers, this method also increases the clickable area of the form element by making the label clickable, too. [H44](https://www.w3.org/TR/WCAG20-TECHS/H44.html)
+  - When a `label` element cannot accompany a form input element, then provide the name using `aria-label` [ARIA14](https://www.w3.org/TR/WCAG20-TECHS/H65.html)
+- #### Landmark Roles
+  - Screen reader users can navigate to sections of a page when landmark roles are used. Whenever a landmark role is used more than once, provide a name using `aria-label` to provide context for that landmark [ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html)
+- #### Icons
+  Icons can either be decorative or semantic. Icons are **decorative** if you can remove an icon without affecting the information that is presented on the page. Icons are **semantic** when they provide information that otherwise isn't present, such as indicating status, indicating type of alert message, or replacing text as button labels. When an icon is semantic, the meaning must be provided in alternative ways to the user. The following guidelines should be followed when using icons within PatternFly components.
+  - Add `aria-hidden="true"` for all icons, either to the icon element or a parent element of the icon. This renders the icon as something that assistive devices can ignore.
+  - Additionally, for **semantic** icons:
+      - Add a label for the icon in tooltip text that displays on hover, and also on focus for focusable elements.
+      - For interactive elements like `<a>` and `<button>` where an icon is used as the label instead of text, provide the label on the interactive element using `aria-label`. For example:
+      ```html
+      <button class="..." aria-label="Close Dialog">
+        <i class="..." aria-hidden="true"></i>
+      </button>
+      ```
+      - For non-interactive icons, include `sr-only` text near the icon. Depending on the component, the `sr-only` text might not be a direct sibling to the icon element. For example, in the Alert component, the icon label text adjacent to the message:
+      ```html
+      <div class="pf-c-alert pf-m-success" aria-label="Success Notification">
+        <div aria-hidden="true" class="pf-c-alert__icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="pf-c-alert__body">
+          <h4 class="pf-c-alert__title">
+            <span class="sr-only">Success: </span> Success notification title
+          </h4>
+        </div>
+      </div>
+      ```
+
 
 ## Testing
 To keep testing simple and easy to complete, we ask that contributors complete the following three types of tests to try to catch most of the accessibility issues that may be present:
