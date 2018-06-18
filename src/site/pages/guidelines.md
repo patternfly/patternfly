@@ -61,17 +61,17 @@ For example a global variable setup would look like:
 ```scss
 
   /* $pf-global--concept--size */
-  $pf-global--spacer--lg: .5rem;
-  $pf-global--spacer--xl: 1rem;
-  $pf-global--spacer--xxl: 2rem;
+  --pf-global--spacer--lg: .5rem;
+  --pf-global--spacer--xl: 1rem;
+  --pf-global--spacer--xxl: 2rem;
 
   /* $pf-global--concept--PropertyCamelCase */ 
-  $pf-global--FontSize--xxxl: 2rem;
-  $pf-global--FontSize--xxl: 1.8rem;
-  $pf-global--FontSize--lg: 1rem;
+  --pf-global--FontSize--xxxl: 2rem;
+  --pf-global--FontSize--xxl: 1.8rem;
+  --pf-global--FontSize--lg: 1rem;
 
   /* pf-global--PropertyCamelCase--state */
-  $pf-global--BackgroundColor--hover: #ccc;
+  --pf-global--BackgroundColor--hover: #ccc;
 ```
 
 ### Component variables
@@ -88,23 +88,23 @@ For example:
 
 ```scss
 /* Component scoped variables are always defined by global variables */
-  $pf-alert--Padding: $pf-global--spacer--xl;
-  $pf-alert--hover--BackgroundColor: $pf-global--BackgroundColor--hover;
-  $pf-alert__title--FontSize: $pf-global--FontSize--xxl;
+  --pf-alert--Padding: var(--pf-global--spacer--xl);
+  --pf-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--hover);
+  --pf-alert__title--FontSize: var(--pf-global--FontSize--xxl);
 
 /* --block--PropertyCamelCase */
 .alert {
-  padding: $pf-alert--Padding;
+  padding: var(--pf-alert--Padding);
 }
 
 /* --block--state--PropertyCamelCase */
 .alert:hover {
-  background-color: $pf-alert--hover--BackgroundColor;
+  background-color: var(--pf-alert--hover--BackgroundColor);
 }
 
 /* --block__element--PropertyCamelCase */
 .alert__title {
-  font-size: $pf-alert__title--FontSize;
+  font-size: var(--pf-alert__title--FontSize);
 }
 ```
 
