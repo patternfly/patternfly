@@ -44,10 +44,6 @@ $pf-global--Color--dark-100:      $pf-color-black-900 !default;
 $pf-global--Color--dark-200:      $pf-color-black-600 !default;
 
 // States color
-$pf-global--Color--hover: $pf-color-red-100 !default;
-$pf-global--BackgroundColor--hover: $pf-color-red-300 !default;
-$pf-global--BorderColor--hover: $pf-color-red-300 !default;
-
 $pf-global--Color--active:                 $pf-color-blue-400 !default;
 $pf-global--BackgroundColor--active:       $pf-color-blue-100 !default;
 $pf-global--BorderColor--active:           $pf-color-blue-400 !default;
@@ -55,10 +51,6 @@ $pf-global--BorderColor--active:           $pf-color-blue-400 !default;
 $pf-global--Color--disabled:               $pf-color-black-600 !default;
 $pf-global--BackgroundColor--disabled:     $pf-color-black-300 !default;
 $pf-global--BorderColor--disabled:         $pf-color-black-300 !default;
-
-$pf-global--Color--error:                  $pf-color-red-200 !default;
-$pf-global--BackgroundColor--error:        $pf-color-red-200 !default;
-$pf-global--BorderColor--error:            $pf-color-red-200 !default;
 
 // Theme color
 $pf-global--primary-color--100:         $pf-color-blue-400 !default;
@@ -244,18 +236,12 @@ $global-ListStyle: disc outside !default;
   --pf-global--Color--dark-200: $pf-global--Color--dark-200;
 
   // States color
-  --pf-global--Color--hover: $pf-global--Color--hover;
-  --pf-global--BackgroundColor--hover: $pf-global--BackgroundColor--hover;
-  --pf-global--BorderColor--hover: $pf-global--BorderColor--hover;
   --pf-global--Color--active: $pf-global--Color--active;
   --pf-global--BackgroundColor--active: $pf-global--BackgroundColor--active;
   --pf-global--BorderColor--active: $pf-global--BorderColor--active;
   --pf-global--Color--disabled: $pf-global--Color--disabled;
   --pf-global--BackgroundColor--disabled: $pf-global--BackgroundColor--disabled;
   --pf-global--BorderColor--disabled: $pf-global--BorderColor--disabled;
-  --pf-global--Color--error: $pf-global--Color--error;
-  --pf-global--BackgroundColor--error: $pf-global--BackgroundColor--error;
-  --pf-global--BorderColor--error: $pf-global--BorderColor--error;
 
   // Theme color
   --pf-global--primary-color--100: $pf-global--primary-color--100;
