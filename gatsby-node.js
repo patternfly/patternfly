@@ -25,10 +25,6 @@ const LAYOUT_PATHS = fs
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   const PAGES_BASE_DIR = path.resolve(__dirname, './src/site/pages');
-  const PATTERNS_BASE_DIR = path.resolve(
-    __dirname,
-    './src/patternfly/patterns'
-  );
   const COMPONENTS_BASE_DIR = path.resolve(
     __dirname,
     './src/patternfly/components'
@@ -39,7 +35,6 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
 
   if (isMarkdown) {
     const isPage = node.fileAbsolutePath.includes(PAGES_BASE_DIR);
-    const isPattern = node.fileAbsolutePath.includes(PATTERNS_BASE_DIR);
     const isComponent = node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR);
     const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
     const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
@@ -55,12 +50,6 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       createNodeField({ node, name: 'path', value: pagePath });
       createNodeField({ node, name: 'type', value: 'documentation' });
       createNodeField({ node, name: 'contentType', value: 'component' });
-    } else if (isPattern) {
-      const patternName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/patterns/${patternName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'pattern' });
     } else if (isLayout) {
       const layoutName = path.basename(path.dirname(node.fileAbsolutePath));
       const pagePath = `/layouts/${layoutName}/docs`;
@@ -135,8 +124,8 @@ exports.createLayouts = ({
 
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts|demos)\/$/;
-  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts|demos)\/([A-Za-z0-9_-]+)/;
+  const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos)\/$/;
+  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos)\/([A-Za-z0-9_-]+)/;
   return new Promise((resolve, reject) => {
     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);

@@ -69,10 +69,6 @@ export default ({ children, data }) => {
             <Navigation links={allPages.layout} />
           </div>
           <div className="layout__sidebar__item">
-            <h3 className="layout__sidebar_heading">Patterns</h3>
-            <Navigation links={allPages.pattern} />
-          </div>
-          <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Demos</h3>
             <Navigation links={allPages.demo} />
           </div>

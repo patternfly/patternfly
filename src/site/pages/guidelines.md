@@ -12,7 +12,6 @@ PatternFly is made out of isolated and modular structures that fall into 3 categ
 
 - Layouts
 - Components
-- Patterns
 
 ### Layout
 
@@ -31,12 +30,6 @@ Components are modular and independent structures concerned with how a thing loo
 - Elements inside a component never use top margins. The first element touches the top of its component.
 
 The parent container of a component is prefixed with `-c` (after the patterfly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
-
-### Patterns
-
-A pattern is structure that is made of more than one component.
-
-A pattern is prefixed with `-p` (after the patterfly prefix `pf-`), for example: `.pf-p-modal`.
 
 ### Utilities
 
