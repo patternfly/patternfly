@@ -13,9 +13,22 @@
     padding: 0 1rem;
   }
   &__section {
-    // max-width: 100%;
+    .pf-p-secondary-nav__link {
+      border: none;
+    }
   }
   &__section:not(:last-of-type) {
     margin-bottom: 1rem;
+  }
+  &__componentLink {
+    padding-top: .25em;
+    ul {
+      display: inline;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+      padding-right: .25em;
+    }
   }
 }
