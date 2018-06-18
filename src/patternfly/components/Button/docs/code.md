@@ -8,6 +8,7 @@ Always add a modifier class to add color to the button.
 | -- | -- | -- |
 | `disabled="disabled"` | `.pf-c-button` | Indicates the disabled state of the `button` to assistive technologies. |
 | `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
+| `aria-label="[button label text]"` | `.pf-m-action` | Provides an accessible name for the button when an icon is used instead of text. |
 
 
 ## Usage
