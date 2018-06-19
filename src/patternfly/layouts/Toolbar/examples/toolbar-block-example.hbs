@@ -1,0 +1,20 @@
+{{#> toolbar}}
+  {{#> toolbar-group pf-l-toolbar--modifier="pf-m-block-on-xs"}}
+    {{#> toolbar-item newcontent}}
+      <span>Some text here</span>
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  {{#> toolbar-group}}
+    {{#> toolbar-item newcontent}}
+      {{#> button btnClass="pf-m-primary"}}Button{{/button}}
+    {{/toolbar-item}}
+    {{#> toolbar-item newcontent}}
+      {{#> button}}Button{{/button}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  {{#> toolbar-group}}
+    {{#> button btnClass="pf-m-action"}}
+      <i class="fas fa-ellipsis-v"></i>
+    {{/button}}
+  {{/toolbar-group}}
+{{/toolbar}}

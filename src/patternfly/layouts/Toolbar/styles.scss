@@ -1,0 +1,48 @@
+@import "../../patternfly-utilities";
+
+// The value of component scoped variables is always defined by a global variable:
+.pf-l-toolbar {
+
+  /* stylelint-disable */
+
+  // Toolbar Group
+  --pf-l-toolbar__group--MarginRight: var(--pf-global--spacer--xl);
+
+  // Toolbar Item
+  --pf-l-toolbar__item--MarginRight:  var(--pf-global--spacer--md);
+  --pf-l-toolbar__item--MarginLeft:   var(--pf-global--spacer--md);;
+
+  // Modifier - Block
+  --pf-l-toolbar--m-block--MarginTop:     var(--pf-global--spacer--sm);
+  --pf-l-toolbar--m-block--MarginBottom:  var(--pf-global--spacer--sm);
+
+  /* stylelint-enable */
+
+  flex-flow: row wrap;
+
+  &,
+  &__group {
+    display: flex;
+    align-items: center;
+  }
+
+  // Group
+  &__group{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-right: var(--pf-l-toolbar__group--MarginRight);
+  }
+
+  // Item
+  &__item {
+    margin-right: var(--pf-l-toolbar__item--MarginRight);
+    // Setting line-height in order to vertically align properly. Ex: badge
+    line-height: 1;
+  }
+
+  .pf-m-align-right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,25 @@
+{{#> toolbar}}
+  {{#> toolbar-group}}
+    {{#> toolbar-item}}
+      <span>Some text here</span>
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  {{#> toolbar-group}}
+    {{#> toolbar-item}}
+      {{#> button btnClass="pf-m-primary"}}Button{{/button}}
+    {{/toolbar-item}}
+    {{#> toolbar-item}}
+      {{#> button}}Button{{/button}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  {{#> toolbar-group pf-l-toolbar--modifier="pf-m-align-right-on-md"}}
+    {{#> toolbar-item newcontent}}
+      {{#> badge pf-c-badge--modifier="pf-m-unread"}}123{{/badge}}
+    {{/toolbar-item}}
+    {{#> toolbar-item newcontent}}
+      {{#> button btnClass="pf-m-action"}}
+        <i class="fas fa-ellipsis-v"></i>
+      {{/button}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+{{/toolbar}}
