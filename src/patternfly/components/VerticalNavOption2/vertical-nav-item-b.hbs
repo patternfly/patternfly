@@ -1,0 +1,10 @@
+<li class="pf-c-vertical-nav__item{{#if current}} pf-m-active{{/if}}{{#if disabled}} pf-m-disabled{{/if}} {{ pf-c-vertical-nav--modifier }}">
+  {{> @partial-block}}
+  {{#if submenu}}
+  <span class="pf-c-vertical-nav__arrow">
+    <button class="pf-c-button pf-m-action" aria-controls="{{submenu}}" {{#if expanded}}aria-expanded="true"{{else}} aria-expanded="false"{{/if}} aria-haspopup="true">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </span>
+  {{/if}}
+</li>

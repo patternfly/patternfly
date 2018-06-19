@@ -24,7 +24,7 @@ The vertical navigation list contains list items, links, icons and text. Icons a
 | `.pf-c-vertical-nav__link_text` | `<span>` |  Initiates link text. It is required. **Required** |
 | `.pf-c-vertical-nav__link_icon` | `<span>` |  Initiates link icon. |
 | `.pf-c-vertical-nav__link__arrow` | `<span>` |  Initiates link arrow, indicating subnavigation. |
-| `.pf-m-hover` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
-| `.pf-m-active` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
-| `.pf-m-focus` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
-| `.pf-m-disabled` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
+| `.pf-m-hover` | `.pf-c-vertical-nav__item` |  Modifies for pf-c-vertical-nav__item background-color, text:after and link color. |
+| `.pf-m-active` | `.pf-c-vertical-nav__item` |  Modifies for pf-c-vertical-nav__item background-color, text:after and link color. |
+| `.pf-m-focus` | `.pf-c-vertical-nav__item` |  Modifies for pf-c-vertical-nav__item background-color, text:after and link color. |
+| `.pf-m-disabled` | `.pf-c-vertical-nav__item` |  Modifies for pf-c-vertical-nav__item background-color, text:after and link color. |

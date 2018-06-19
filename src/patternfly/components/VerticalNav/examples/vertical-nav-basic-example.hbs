@@ -1,32 +1,32 @@
 {{#> vertical-nav}}
-  {{#> vertical-nav-item current="page"}}
-    {{#> vertical-nav-link url="#1"}}
-      {{#> vertical-nav-link-icon newcontent icon="fa-home"}}{{/vertical-nav-link-icon}}
-      {{#> vertical-nav-link-text newcontent}}Home{{/vertical-nav-link-text}}
+  {{#> vertical-nav-item current="true"}}
+    {{#> vertical-nav-link url="#"}}
+      {{#> vertical-nav-link-icon icon="fa-home"}}{{/vertical-nav-link-icon}}
+      {{#> vertical-nav-link-text}}Home{{/vertical-nav-link-text}}
+    {{/vertical-nav-link}}
+  {{/vertical-nav-item}}
+  {{#> vertical-nav-item disabled="true"}}
+    {{#> vertical-nav-link url="#"}}
+      {{#> vertical-nav-link-icon icon="fa-tachometer-alt"}}{{/vertical-nav-link-icon}}
+      {{#> vertical-nav-link-text}}Unnecessarily long name extending to 2 lines{{/vertical-nav-link-text}}
     {{/vertical-nav-link}}
   {{/vertical-nav-item}}
   {{#> vertical-nav-item}}
-    {{#> vertical-nav-link pf-c-vertical-nav--modifier="pf-m-disabled" url="#2"}}
-      {{#> vertical-nav-link-icon newcontent icon="fa-tachometer-alt"}}{{/vertical-nav-link-icon}}
-      {{#> vertical-nav-link-text newcontent}}Unnecessarily long name extending to 2 lines{{/vertical-nav-link-text}}
+    {{#> vertical-nav-link url="#"}}
+      {{#> vertical-nav-link-icon icon="fa-envelope"}}{{/vertical-nav-link-icon}}
+      {{#> vertical-nav-link-text}}Monitoring{{/vertical-nav-link-text}}
     {{/vertical-nav-link}}
   {{/vertical-nav-item}}
   {{#> vertical-nav-item}}
-    {{#> vertical-nav-link url="#3"}}
-      {{#> vertical-nav-link-icon newcontent icon="fa-envelope"}}{{/vertical-nav-link-icon}}
-      {{#> vertical-nav-link-text newcontent}}Monitoring{{/vertical-nav-link-text}}
+    {{#> vertical-nav-link url="#"}}
+      {{#> vertical-nav-link-icon icon="fa-boxes"}}{{/vertical-nav-link-icon}}
+      {{#> vertical-nav-link-text}}Builds{{/vertical-nav-link-text}}
     {{/vertical-nav-link}}
   {{/vertical-nav-item}}
-  {{#> vertical-nav-item}}
-    {{#> vertical-nav-link url="#4"}}
-      {{#> vertical-nav-link-icon newcontent icon="fa-boxes"}}{{/vertical-nav-link-icon}}
-      {{#> vertical-nav-link-text newcontent}}Builds{{/vertical-nav-link-text}}
-    {{/vertical-nav-link}}
-  {{/vertical-nav-item}}
-  {{#> vertical-nav-item children="true" aria-expanded="false"}}
-    {{#> vertical-nav-link url="#5"}}
-      {{#> vertical-nav-link-icon newcontent icon="fa-chart-area"}}{{/vertical-nav-link-icon}}
-      {{#> vertical-nav-link-text newcontent}}Subnav example (not currently functional){{/vertical-nav-link-text}}
+  {{#> vertical-nav-item submenu="some-submenu"}}
+    {{#> vertical-nav-link url="#"}}
+      {{#> vertical-nav-link-icon icon="fa-chart-area"}}{{/vertical-nav-link-icon}}
+      {{#> vertical-nav-link-text}}Subnav placeholder (not currently functional){{/vertical-nav-link-text}}
     {{/vertical-nav-link}}
   {{/vertical-nav-item}}
 {{/vertical-nav}}

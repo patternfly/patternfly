@@ -8,13 +8,10 @@
   --pf-c-vertical-nav--BackgroundColor:   var(--pf-global--BackgroundColor--light-100);
 
   // Vertical nav link
-  --pf-c-vertical-nav__link--PaddingTop:      var(--pf-global--spacer--lg);
   --pf-c-vertical-nav__link--PaddingRight:    var(--pf-global--spacer--xl);
-  --pf-c-vertical-nav__link--PaddingBottom:   var(--pf-global--spacer--lg);
   --pf-c-vertical-nav__link--PaddingLeft:     var(--pf-global--spacer--xl);
   
   // Vertical nav link active :after
-  --pf-c-vertical-nav__link--after--active--Left:    calc(var(--pf-c-vertical-nav__link--PaddingLeft) + 1.5rem + var(--pf-c-vertical-nav__link__icon--MarginRight));
   --pf-c-vertical-nav__link--after--active--Width:   2rem;
   --pf-c-vertical-nav__link--after--active--Height:  .25rem;
   --pf-c-vertical-nav__link--after--active--Color:   var(--pf-global--Color--active);
@@ -22,16 +19,20 @@
   // Vertical nav link colors
   --pf-c-vertical-nav__link--Color:             var(--pf-global--Color--dark-100);
   --pf-c-vertical-nav__link--hover--Color:      var(--pf-global--Color--dark-100);
-  --pf-c-vertical-nav__link--active--Color:     var(--pf-global--Color--active);
   --pf-c-vertical-nav__link--focus--Color:      var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--active--Color:     var(--pf-global--Color--active);
   --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global--Color--disabled);
 
   // Vertical nav link background colors
   --pf-c-vertical-nav__link--BackgroundColor:           var(--pf-global--BackgroundColor--light-100);
   --pf-c-vertical-nav__link--hover--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
-  --pf-c-vertical-nav__link--active--BackgroundColor:   var(--pf-global--BackgroundColor--light-200);
   --pf-c-vertical-nav__link--focus--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
+  --pf-c-vertical-nav__link--active--BackgroundColor:   var(--pf-global--BackgroundColor--light-200);
   --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
+
+  // Vertical nav link text padding
+  --pf-c-vertical-nav__link__text--PaddingTop:     var(--pf-global--spacer--lg);
+  --pf-c-vertical-nav__link__text--PaddingBottom:   var(--pf-global--spacer--lg);
 
   // Vertical nav link icon
   --pf-c-vertical-nav__link__icon--MarginRight: var(--pf-global--spacer--xl);
@@ -48,12 +49,9 @@
 
   // Link
   &__link {
-    position: relative;
     display: flex;
     align-items: baseline;
-    padding-top: var(--pf-c-vertical-nav__link--PaddingTop);
     padding-right: var(--pf-c-vertical-nav__link--PaddingRight);
-    padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom);
     padding-left: var(--pf-c-vertical-nav__link--PaddingLeft);
     color: var(--pf-c-vertical-nav__link--Color);
     text-decoration: none;
@@ -66,13 +64,21 @@
       text-decoration: none;
     }
 
-    // Link bottom bar - active
-    &.pf-m-active {
+    // Using this method to align active marker to text rather than link. Accomodates <a>'s without icons
+    &__text {
+      flex: 1;
+      padding-top: var(--pf-c-vertical-nav__link__text--PaddingTop);
+      padding-bottom: var(--pf-c-vertical-nav__link__text--PaddingBottom);
+    }
+
+    // For the active marker to follow text, it must be positioned relatively to the text
+    .pf-m-active &__text {
+      position: relative;
 
       &::after {
         position: absolute;
         bottom: 0;
-        left: var(--pf-c-vertical-nav__link--after--active--Left);
+        left: 0;
         width: var(--pf-c-vertical-nav__link--after--active--Width);
         height: var(--pf-c-vertical-nav__link--after--active--Height);
         content: "";
@@ -87,10 +93,6 @@
       line-height: 1;
     }
 
-    // Arrow/chevron
-    &__arrow {
-      margin-left: auto;
-    }
 
     // Modifiers and states
     &.pf-m-hover,
@@ -102,6 +104,7 @@
       }
     }
 
+    // States
     &.pf-m-focus,
     &:focus {
       z-index: 2;
@@ -128,10 +131,10 @@
       > * {
         color: var(--pf-c-vertical-nav__link--disabled--Color);
       }
-    }
 
-    &.pf-m-disabled:hover {
-      cursor: not-allowed;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 }
