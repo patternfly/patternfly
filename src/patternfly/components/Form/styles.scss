@@ -9,7 +9,7 @@ $pf-c-form__select--chevron-svg--Coordinates: "M0 1.7L1.7 0l4.7 4.6L11 0l1.7 1.7
 $pf-c-form__select--chevron-svg--Viewbox: "0 0 32 10" !default;
 
 // Input - error
-$pf-c-form__select--m-error-svg--Color: $pf-global--Color--error !default;
+$pf-c-form__select--m-error-svg--Color: $pf-global--danger-color--200 !default;
 $pf-c-form__select--m-error-svg--Width: 32px !default;
 $pf-c-form__select--m-error-svg--Height: 14px !default;
 $pf-c-form__select--m-error-svg--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
@@ -38,7 +38,6 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
 .pf-c-form {
 
   /* stylelint-disable */
-
   // Inputs
   --pf-c-form__input--FontSize:                   var(--pf-global--FontSize--md);
   --pf-c-form__input--LineHeight:                 var(--pf-global--LineHeight--md);
@@ -52,7 +51,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
   --pf-c-form__input--hover--BorderSize:          var(--pf-global--BorderWidth--md);
   --pf-c-form__input--focus--BorderSize:          var(--pf-global--BorderWidth--md);
   --pf-c-form__input--disabled--BorderSize:       var(--pf-global--BorderWidth--sm);
-  --pf-c-form__input--BorderColor:             var(--pf-global--BorderColor--dark);
+  --pf-c-form__input--BorderColor:                var(--pf-global--BorderColor--dark);
   --pf-c-form__input--hover--BorderColor:         var(--pf-global--BorderColor--dark);
   --pf-c-form__input--focus--BorderColor:         var(--pf-global--BorderColor--active);
   --pf-c-form__input--disabled--BorderColor:      var(--pf-global--BorderColor--disabled);
@@ -62,7 +61,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
 
   // Input m-error
   --pf-c-form__input--m-error--PaddingRight:      calc(#{$pf-global--spacer--sm} + #{$pf-global--spacer--md} + #{var(--pf-c-form__input--FontSize)});
-  --pf-c-form__input--m-error--BorderColor:       var(--pf-global--BorderColor--error);
+  --pf-c-form__input--m-error--BorderColor:       var(--pf-global--danger-color--200);
   --pf-c-form__input__m-error--BackgroundColor:   var(--pf-global--BackgroundColor--light-100);
   --pf-c-form__input--m-error--BorderSize:        var(--pf-global--BorderWidth--sm);
 
@@ -100,7 +99,6 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
   // Sub-section
   --pf-c-form--m-subsection-title--MarginBottom: var(--pf-global--spacer--sm);
 
-
   // Legend
   --pf-c-form__legend--MarginBottom:  var(--pf-global--spacer--md);
   --pf-c-form__legend--FontSize:      var(--pf-global--FontSize--lg);
@@ -122,7 +120,6 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
 
   // Button group
   --pf-c-form--button-group--item--MarginRight: var(--pf-global--spacer--lg);
-
   /* stylelint-enable */
 
   // Section
