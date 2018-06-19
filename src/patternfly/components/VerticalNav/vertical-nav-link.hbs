@@ -1,12 +1,3 @@
-{{#if submenu}}
-<a href="{{url}}" class="pf-c-vertical-nav__link{{#if current}} pf-m-active{{/if}}{{#if disabled}} pf-m-disabled{{/if}} {{ pf-c-vertical-nav--modifier }}" {{#if current}} aria-current="page" {{/if}} {{#if submenu}}{{#if expanded}}aria-expanded="true"{{else}} aria-expanded="false"{{/if}}{{/if}} {{#if submenu}}aria-haspopup="true"{{/if}} {{#if disabled}}aria-disabled="true"{{/if}} role="button">
-  {{> @partial-block}}
-  <span class="pf-c-vertical-nav__link__arrow" aria-hidden="true">
-    <i class="fas fa-chevron-down"></i>
-  </span>
-</a>
-{{else}}
 <a href="{{url}}" class="pf-c-vertical-nav__link{{#if current}} pf-m-active{{/if}}{{#if disabled}} pf-m-disabled{{/if}} {{ pf-c-vertical-nav--modifier }}" {{#if current}} aria-current="page" {{/if}} {{#if disabled}}aria-disabled="true"{{/if}}>
   {{> @partial-block}}
 </a>
-{{/if}}

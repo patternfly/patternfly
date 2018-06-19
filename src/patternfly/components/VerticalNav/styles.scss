@@ -25,17 +25,14 @@
 
   // Vertical nav link background colors
   --pf-c-vertical-nav__link--BackgroundColor:           var(--pf-global--BackgroundColor--light-100);
-  --pf-c-vertical-nav__link--hover--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
-  --pf-c-vertical-nav__link--focus--BackgroundColor:    var(--pf-global--BackgroundColor--light-200);
-  --pf-c-vertical-nav__link--active--BackgroundColor:   var(--pf-global--BackgroundColor--light-200);
+  --pf-c-vertical-nav__link--hover--BackgroundColor:    var(--pf-global--BackgroundColor--light-100);
+  --pf-c-vertical-nav__link--focus--BackgroundColor:    var(--pf-global--BackgroundColor--light-100);
+  --pf-c-vertical-nav__link--active--BackgroundColor:   var(--pf-global--BackgroundColor--light-100);
   --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
 
   // Vertical nav link text padding
   --pf-c-vertical-nav__link__text--PaddingTop:     var(--pf-global--spacer--lg);
   --pf-c-vertical-nav__link__text--PaddingBottom:   var(--pf-global--spacer--lg);
-
-  // Vertical nav link icon
-  --pf-c-vertical-nav__link__icon--MarginRight: var(--pf-global--spacer--xl);
 
   // Vertical nav link arrow
   --pf-c-vertical-nav__link__arrow--Top: calc(var(--pf-c-vertical-nav__link--PaddingTop) - .4rem);
@@ -49,6 +46,7 @@
 
   // Link
   &__link {
+    // Align any additional items included in __link
     display: flex;
     align-items: baseline;
     padding-right: var(--pf-c-vertical-nav__link--PaddingRight);
@@ -66,16 +64,13 @@
 
     // Using this method to align active marker to text rather than link. Accomodates <a>'s without icons
     &__text {
+      position: relative;
       flex: 1;
       padding-top: var(--pf-c-vertical-nav__link__text--PaddingTop);
       padding-bottom: var(--pf-c-vertical-nav__link__text--PaddingBottom);
-    }
 
-    // For the active marker to follow text, it must be positioned relatively to the text
-    .pf-m-active &__text {
-      position: relative;
-
-      &::after {
+      // For the active marker to follow text, it must be positioned relatively to the text
+      .pf-m-active &::after {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -85,14 +80,6 @@
         background-color: var(--pf-c-vertical-nav__link--after--active--Color);
       }
     }
-
-    // Icon
-    &__icon {
-      margin-right: var(--pf-c-vertical-nav__link__icon--MarginRight);
-      // Setting line-height as inheritied value adds unnecessary/unwanted vertical space to icons, resetting to 1
-      line-height: 1;
-    }
-
 
     // Modifiers and states
     &.pf-m-hover,
