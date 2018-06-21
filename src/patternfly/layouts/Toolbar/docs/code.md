@@ -1,19 +1,29 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+The toolbar layout assumes that all direct children of `.pf-l-toolbar` appear on a single line, unless `.pf-m-wrap` is set on `.pf-l-toolbar` (generic responsive layout). Toolbar groups and group items are set to wrap by default, which can be changed by applying `.pf-m-nowrap` to the parent element. Toolbar groups can be nested.
 
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-l-toolbar` |  accessibility notes. |
+| `aria-label="[section label text]"` | `.pf-l-toolbar__section` | Provides an accessible name for toolbar section. |
 
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-l-toolbar` | `<div>`, `<section>`, `<header>`, `<footer>` |  Initializes a toolbar layout. **Required.** |
+| `.pf-l-toolbar__section` | `<section>` |  Initiates a toolbar section. Use this when vertically stacking toolbar sections. |
+| `.pf-l-toolbar__group` | `<div>` |  Initiates a toolbar group. **Required.** |
+| `.pf-l-toolbar__item` | `<div>` |  Initiates a toolbar item. **Required.** |
+| `.pf-m-wrap` | `.pf-l-toolbar` |  Sets toolbar items to wrap. |
+| `.pf-m-nowrap` | `.pf-l-group` |  Sets toolbar group items to nowrap. |
+| `.pf-m-stretch`, `.pf-m-stretch-right-on-{sm, md, lg, xl}` | `.pf-l-toolbar__group` | Sets toolbar group to occupy available space. If an item within a group should be aligned right, apply `.pf-m-stretch` or `.pf-m-section` to parent. As as result, applying `.pf-m-stetch` to an item will align adjecent items to right. |
+| `.pf-m-align-right`, `.pf-m-align-right-on-{sm, md, lg, xl}` | `.pf-l-toolbar__group`, `.pf-l-toolbar__item` | Sets toolbar group or toolbar item to align right. If an item within a group should be aligned right, apply `.pf-m-stretch` to parent. As as result, applying `.pf-m-align-right` to an item will align adjecent items to right. |
+| `.pf-m-border-top` | `.pf-l-toolbar__section` |  Adds border-top and padding to toolbar section. |
+| `.pf-m-border-bottom` | `.pf-l-toolbar__section` |  Adds border-bottom and padding to toolbar section. |
+| `.pf-m-align-items-top` | `.pf-l-toolbar`, `.pf-l-section`, `.pf-l-toolbar__group` |  Sets toolbar items to vertically align to flex-start. |
+| `.pf-m-align-items-baseline` | `.pf-l-toolbar`, `.pf-l-section`, `.pf-l-toolbar__group` |  Sets toolbar items to vertically align to baseline. |
+| `.pf-m-align-items-center` | `.pf-l-toolbar`, `.pf-l-section`, `.pf-l-toolbar__group` |  Sets toolbar items to vertically align to center. |
+| `.pf-m-align-items-bottom` | `.pf-l-toolbar`, `.pf-l-section`, `.pf-l-toolbar__group` |  Sets toolbar items to vertically align to flex-end. |

@@ -5,44 +5,169 @@
 
   /* stylelint-disable */
 
+  // Toolbar Section
+  --pf-l-toolbar__section--MarginTop:           var(--pf-global--spacer--md);
+  --pf-l-toolbar__section--PaddingTop:          var(--pf-global--spacer--md);
+  --pf-l-toolbar__section--PaddingBottom:       var(--pf-global--spacer--md);
+  --pf-l-toolbar__section--BorderColor:         var(--pf-global--BorderColor);
+  --pf-l-toolbar__section--BorderTopWidth:      var(--pf-global--BorderWidth--sm);
+  --pf-l-toolbar__section--BorderBottomWidth:   var(--pf-global--BorderWidth--sm);
+
   // Toolbar Group
   --pf-l-toolbar__group--MarginRight: var(--pf-global--spacer--xl);
+  --pf-l-toolbar__group--MarginLeft:  var(--pf-global--spacer--xl);
 
   // Toolbar Item
   --pf-l-toolbar__item--MarginRight:  var(--pf-global--spacer--md);
   --pf-l-toolbar__item--MarginLeft:   var(--pf-global--spacer--md);;
 
-  // Modifier - Block
-  --pf-l-toolbar--m-block--MarginTop:     var(--pf-global--spacer--sm);
-  --pf-l-toolbar--m-block--MarginBottom:  var(--pf-global--spacer--sm);
-
   /* stylelint-enable */
 
+  // Toolbar base styling
   flex-flow: row wrap;
 
+  // toolbar, toolbar__group, toolbar__section shared styles
   &,
+  &__section,
   &__group {
     display: flex;
     align-items: center;
   }
 
-  // Group
-  &__group{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-right: var(--pf-l-toolbar__group--MarginRight);
+  // Section
+  &__section {
+    flex-basis: 100%;
+
+    // Add margin-top for stacked sections
+    &:not(:first-child) {
+      margin-top: var(--pf-l-toolbar__section--MarginTop);
+    }
+
+    // Modifiers
+    &.pf-m-border-top {
+      padding-top: var(--pf-l-toolbar__section--PaddingTop);
+      border-top: var(--pf-l-toolbar__section--BorderTopWidth) solid var(--pf-l-toolbar__section--BorderColor);
+    }
+
+    &.pf-m-border-bottom {
+      padding-bottom: var(--pf-l-toolbar__section--PaddingBottom);
+      border-bottom: var(--pf-l-toolbar__section--BorderTopWidth) solid var(--pf-l-toolbar__section--BorderColor);
+    }
   }
 
-  // Item
+  // Group
+  &__group {
+    flex-flow: row wrap;
+
+    &:not(:last-child) {
+      margin-right: var(--pf-l-toolbar__group--MarginRight);
+    }
+  }
+
+  // toolbar_group, toolbar__item shared styles
   &__item {
-    margin-right: var(--pf-l-toolbar__item--MarginRight);
     // Setting line-height in order to vertically align properly. Ex: badge
     line-height: 1;
+
+    &:not(:last-child) {
+      margin-right: var(--pf-l-toolbar__item--MarginRight);
+    }
   }
 
+  // Modifiers
+  // Set flex items to wrap
+  &.pf-m-wrap,
+  .pf-m-wrap {
+    flex-wrap: wrap;
+  }
+
+  // Set flex items to nowrap
+  &.pf-m-nowrap,
+  .pf-m-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  // Set flex items to align top
+  .pf-m-align-items-top {
+    align-items: flex-start;
+  }
+
+  // Set flex items to align baseline
+  .pf-m-align-items-baseline {
+    align-items: first baseline;
+  }
+
+  // Set flex items to align center
+  .pf-m-align-items-center {
+    align-items: center;
+  }
+
+  // Set flex items to align bottom
+  .pf-m-align-bottom {
+    align-items: flex-end;
+  }
+
+  // Set flex item to occupy available space
+  .pf-m-stretch {
+    flex-grow: 1;
+  }
+
+  // Responsive classes
+  .pf-m-stretch-on {
+    &-sm {
+      @media (min-width: $pf-global--breakpoint--sm) {
+        flex-grow: 1;
+      }
+    }
+
+    &-md {
+      @media (min-width: $pf-global--breakpoint--md) {
+        flex-grow: 1;
+      }
+    }
+
+    &-lg {
+      @media (min-width: $pf-global--breakpoint--lg) {
+        flex-grow: 1;
+      }
+    }
+
+    &-xl {
+      @media (min-width: $pf-global--breakpoint--xl) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  // Set flex item to align right
   .pf-m-align-right {
-    margin-right: 0;
     margin-left: auto;
+  }
+
+  // Responsive classes
+  .pf-m-align-right-on {
+    &-sm {
+      @media (min-width: $pf-global--breakpoint--sm) {
+        margin-left: auto;
+      }
+    }
+
+    &-md {
+      @media (min-width: $pf-global--breakpoint--md) {
+        margin-left: auto;
+      }
+    }
+
+    &-lg {
+      @media (min-width: $pf-global--breakpoint--lg) {
+        margin-left: auto;
+      }
+    }
+
+    &-xl {
+      @media (min-width: $pf-global--breakpoint--xl) {
+        margin-left: auto;
+      }
+    }
   }
 }

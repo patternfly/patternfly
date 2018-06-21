@@ -1,21 +1,19 @@
-{{#> toolbar}}
-  {{#> toolbar-group}}
+{{#> toolbar pf-l-toolbar--modifier="pf-m-wrap"}}
+  {{#> toolbar-group newcontent}}
     {{#> toolbar-item}}
       {{#> title titleType="h3" pf-c-title--Modifier="pf-m-md"}}
           Some title here
-      {{/title}}    
+      {{/title}} 
       <small>Some supporting text here</small>
     {{/toolbar-item}}
   {{/toolbar-group}}
-  {{#> toolbar-group}}
-    {{#> toolbar-item}}
+  {{#> toolbar-group newcontent pf-l-toolbar--modifier="pf-m-stretch-on-md"}}
+    {{#> toolbar-item newcontent}}
       {{#> button btnClass="pf-m-primary"}}Button{{/button}}
     {{/toolbar-item}}
-    {{#> toolbar-item}}
-      {{#> button btnClass="pf-m-secondary"}}Button{{/button}}
+    {{#> toolbar-item newcontent pf-l-toolbar--modifier="pf-m-align-right-on-md"}}
+      <span>Item 1</span>
     {{/toolbar-item}}
-  {{/toolbar-group}}
-  {{#> toolbar-group}}
     {{#> toolbar-item newcontent}}
       {{#> button btnClass="pf-m-action" aria-label="Some action"}}
         <i class="fas fa-ellipsis-v" aria-hidden="true"></i>

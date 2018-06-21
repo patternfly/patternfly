@@ -1,0 +1,42 @@
+{{#> toolbar}}
+  {{#> toolbar-section aria-label="First section" pf-l-toolbar--modifier="pf-m-align-items-top"}}
+    {{#> toolbar-group newcontent pf-l-toolbar--modifier="pf-m-stretch"}}
+      {{#> toolbar-item newcontent}}
+      {{#> title titleType="h3" pf-c-title--Modifier="pf-m-md"}}
+          Some title here
+      {{/title}} 
+        <small>Some supporting text here.</small>
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+    {{#> toolbar-group newcontent pf-l-toolbar--modifier="pf-m-nowrap"}}
+      {{#> toolbar-item newcontent}}
+        {{#> button btnClass="pf-m-action" aria-label="Some action"}}
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        {{/button}}
+      {{/toolbar-item}}    
+      {{#> toolbar-item newcontent}}
+        {{#> button btnClass="pf-m-action" aria-label="Some action"}}
+          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+        {{/button}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+  {{/toolbar-section}}
+  {{#> toolbar-section newcontent aria-label="Second section" pf-l-toolbar--modifier="pf-m-wrap"}}
+    {{#> toolbar-group newcontent}}
+      {{#> toolbar-item}}
+        {{#> badge pf-c-badge--modifier="pf-m-read"}}17{{/badge}}
+      {{/toolbar-item}}
+      {{#> toolbar-item newco}}
+        {{#> badge pf-c-badge--modifier="pf-m-unread"}}3{{/badge}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{#> badge pf-c-badge--modifier="pf-m-unread"}}54321{{/badge}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+    {{#> toolbar-group newcontent  pf-l-toolbar--modifier="pf-m-align-right-on-md"}}
+      {{#> toolbar-item newcontent}}
+        <a href="#">Go to badges</a>
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+  {{/toolbar-section}}
+{{/toolbar}}
