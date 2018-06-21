@@ -34,14 +34,14 @@ For example:
 
 ```html
 <!-- Component definition -->
-<div class="pf-c-box {{ pf-c-box--modifier }}">
+<div class="pf-c-card {{ pf-c-card--modifier }}">
   {{> @partial-block}}
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> box pf-c-box--modifier="pf-m-xxxl pf-m-margin"}}
+{{#> card pf-c-card--modifier="pf-m-xxxl pf-m-margin"}}
   {{> @partial-block}}
-{{/box}}
+{{/card}}
 ```
 
 When including a partial within a partial, by default, Handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
@@ -49,12 +49,12 @@ When including a partial within a partial, by default, Handlebars will pass alon
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
 ```html
-{{#> box pf-c-box--modifier="pf-m-xxxl pf-m-margin"}}
+{{#> card pf-c-card--modifier="pf-m-xxxl pf-m-margin"}}
   {{> @partial-block}}
-  {{#> box newcontext pf-c-box--modifier="pf-m-xxxl pf-m-margin"}}
+  {{#> card newcontext pf-c-card--modifier="pf-m-xxxl pf-m-margin"}}
     {{> @partial-block}}
-  {{/box}}
-{{/box}}
+  {{/card}}
+{{/card}}
 ```
 
 ## Common Modifier Class Names
