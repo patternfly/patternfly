@@ -1,0 +1,60 @@
+@import "../../patternfly-utilities";
+// Input, select, datalist, and textarea
+
+.pf-c-form-control {
+/* stylelint-disable */
+  --pf-c-form-control--FontSize:                          var(--pf-global--FontSize--md);
+  --pf-c-form-control--LineHeight:                        var(--pf-global--LineHeight--md);
+  --pf-c-form-control--Height:                            calc(#{var(--pf-global--FontSize--md)} * 2);
+  // calc is required to get the propper height here to match buttons
+  --pf-c-form-control--PaddingTop:                        calc(#{var(--pf-global--spacer--xs)} - 1px);
+  --pf-c-form-control--PaddingRight:                      var(--pf-global--spacer--sm);
+  --pf-c-form-control--PaddingBottom:                     calc(#{var(--pf-global--spacer--xs)} - 1px);
+  --pf-c-form-control--PaddingLeft:                       var(--pf-global--spacer--sm);
+  --pf-c-form-control--Color:                             var(--pf-global--Color--dark-100);
+  --pf-c-form-control--disabled--Color:                   var(--pf-global--Color--disabled);
+  --pf-c-form-control--BorderSize:                        var(--pf-global--BorderWidth--sm);
+  --pf-c-form-control--focus--BorderSize:                 var(--pf-global--BorderWidth--md);
+  --pf-c-form-control--disabled--BorderSize:              var(--pf-global--BorderWidth--sm);
+  --pf-c-form-control--BorderColor:                       var(--pf-global--BorderColor--dark);
+  --pf-c-form-control--disabled--BorderColor:             var(--pf-global--BorderColor--disabled);
+  --pf-c-form-control--BackgroundColor:                   var(--pf-global--BackgroundColor--light-100);
+  --pf-c-form-control--disabled--BackgroundColor:         var(--pf-global--BackgroundColor--disabled);
+  --pf-c-form-control--placeholder--Color:                var(--pf-global--Color--dark-200);
+  --pf-c-form-control--m-login--focus--BottomBorderWidth: var(--pf-global--BorderWidth--md);
+ 
+  /* stylelint-enable */
+  width: 100%;
+  padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
+  font-size: var(--pf-c-form-control--FontSize);
+  line-height: var(--pf-c-form-control--LineHeight);
+  color: var(--pf-c-form-control--Color);
+  background-color: var(--pf-c-form-control--BackgroundColor);
+  border: var(--pf-c-form-control--BorderSize) solid var(--pf-c-form-control--BorderColor);
+  border-radius: 0;
+
+  &::placeholder {
+    color: var(--pf-c-form-control--placeholder--Color);
+  }
+
+  &:disabled {
+    color: var(--pf-c-form-control--disabled--Color);
+    cursor: not-allowed;
+    background-color: var(--pf-c-form-control--disabled--BackgroundColor);
+    border-color: var(--pf-c-form-control--disabled--BorderColor);
+  }
+
+  @at-root select#{&} {
+    height: var(--pf-c-form-control--Height);
+  }
+
+  // styles for unique login form input
+  &.pf-m-login {
+    border: none;
+    border-bottom: var(--pf-c-form-control--BorderSize) solid var(--pf-c-form-control--BorderColor);
+    &:focus {
+      border-color: var(--pf-c-form-control--focus--BorderColor);
+      border-bottom-width: var(--pf-c-form-control--m-login--focus--BottomBorderWidth);
+    }
+  }
+}
