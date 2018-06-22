@@ -23,14 +23,12 @@
 
   /* stylelint-enable */
 
-  // Toolbar base styling
-  flex-flow: row wrap;
-
   // toolbar, toolbar__group, toolbar__section shared styles
   &,
   &__section,
   &__group {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -56,15 +54,11 @@
   }
 
   // Group
-  &__group {
-    flex-flow: row wrap;
-
-    &:not(:last-child) {
-      margin-right: var(--pf-l-toolbar__group--MarginRight);
-    }
+  &__group:not(:last-child) {
+    margin-right: var(--pf-l-toolbar__group--MarginRight);
   }
 
-  // toolbar_group, toolbar__item shared styles
+  // Item
   &__item {
     // Setting line-height in order to vertically align properly. Ex: badge
     line-height: 1;
@@ -75,12 +69,6 @@
   }
 
   // Modifiers
-  // Set flex items to wrap
-  &.pf-m-wrap,
-  .pf-m-wrap {
-    flex-wrap: wrap;
-  }
-
   // Set flex items to nowrap
   &.pf-m-nowrap,
   .pf-m-nowrap {
@@ -88,13 +76,13 @@
   }
 
   // Set flex items to align top
-  .pf-m-align-items-top {
+  .pf-m-align-items-start {
     align-items: flex-start;
   }
 
   // Set flex items to align baseline
   .pf-m-align-items-baseline {
-    align-items: first baseline;
+    align-items: baseline;
   }
 
   // Set flex items to align center
@@ -108,31 +96,29 @@
   }
 
   // Set flex item to occupy available space
-  .pf-m-stretch {
+  .pf-m-grow {
     flex-grow: 1;
-  }
 
-  // Responsive classes
-  .pf-m-stretch-on {
-    &-sm {
+    // Responsive classes
+    &-on-sm {
       @media (min-width: $pf-global--breakpoint--sm) {
         flex-grow: 1;
       }
     }
 
-    &-md {
+    &-on-md {
       @media (min-width: $pf-global--breakpoint--md) {
         flex-grow: 1;
       }
     }
 
-    &-lg {
+    &-on-lg {
       @media (min-width: $pf-global--breakpoint--lg) {
         flex-grow: 1;
       }
     }
 
-    &-xl {
+    &-on-xl {
       @media (min-width: $pf-global--breakpoint--xl) {
         flex-grow: 1;
       }
@@ -142,29 +128,27 @@
   // Set flex item to align right
   .pf-m-align-right {
     margin-left: auto;
-  }
 
-  // Responsive classes
-  .pf-m-align-right-on {
-    &-sm {
+    // Responsive classes
+    &-on-sm {
       @media (min-width: $pf-global--breakpoint--sm) {
         margin-left: auto;
       }
     }
 
-    &-md {
+    &-on-md {
       @media (min-width: $pf-global--breakpoint--md) {
         margin-left: auto;
       }
     }
 
-    &-lg {
+    &-on-lg {
       @media (min-width: $pf-global--breakpoint--lg) {
         margin-left: auto;
       }
     }
 
-    &-xl {
+    &-on-xl {
       @media (min-width: $pf-global--breakpoint--xl) {
         margin-left: auto;
       }
