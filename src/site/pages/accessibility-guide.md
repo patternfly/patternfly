@@ -7,7 +7,7 @@ The goal of software accessibility is to remove barriers and create inclusive pr
 Since accessibility is best achieved when considered early in the design and development process, we ask everyone who contributes to or consumes PatternFly to understand accessibility needs and how they can be met. The following guide provides techniques and suggestions to help you design, develop, and test UIs to ensure that everyone has a good user experience.
 
 - [Understanding Users’ Needs](#understanding-users-needs)
-- [Level of Support](#level-of-support)
+- [Designing and Developing for Accessibility](#designing-and-developing-for-accessibility)
 - [Checklists](#checklists)
   - [What PatternFly Should Address](#what-patternfly-should-address)
   - [What Products Should Address](#what-products-should-address)
@@ -37,7 +37,7 @@ Users with poor motor control can use a range of devices to access contents. Use
 
 Users who have difficulty processing information benefit from well-written content. Information should clear, concise, and easy to scan. Consider visual hierarchy, chunk content into short, related sections, and avoid long paragraphs.
 
-## Level of Support
+## Designing and Developing for Accessibility
 
 Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). To help you get started, the following sections break some of these down by area of focus.
 
