@@ -1,0 +1,35 @@
+@import "../../patternfly-utilities";
+.pf-c-input-group {
+  display: flex;
+  align-items: stretch;
+  /* stylelint-disable */
+  > * {
+      &:not(:first-child), &:not(:last-child) {
+        border-radius: 0;
+        &::after {
+          border-radius: 0;
+        }
+    }
+  }
+  .pf-c-button:first-child:after {
+    border-radius: 3px 0 0 3px;
+  }
+  .pf-c-button:last-child:after {
+    border-radius: 0 3px 3px 0;
+  }
+  
+  /* stylelint-enable */
+  @media (max-width: $pf-global--breakpoint--md){
+    flex-direction: column;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]), textarea {
+    flex: 2;
+  }
+
+  /* stylelint-disable */
+  > * + * {
+    margin-left: -1px;
+  }
+  /* stylelint-enable */
+}
