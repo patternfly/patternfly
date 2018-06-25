@@ -166,7 +166,8 @@
   }
 }
 
-.is-layout-page {
+.is-layout-page,
+.layout {
   .pf-l-bullseye,
   .pf-l-bullseye > *,
   .pf-l-gallery,
@@ -180,7 +181,9 @@
   .pf-l-split,
   .pf-l-split > *,
   .pf-l-stack,
-  .pf-l-stack > * {
+  .pf-l-stack > *,
+  .pf-l-toolbar__group,
+  .pf-l-toolbar__item  {
     padding: .5rem;
     border: 2px dashed #393f44;
   }

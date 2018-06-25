@@ -1,41 +1,34 @@
 {{#> toolbar}}
-  {{#> toolbar-section aria-label="First section" pf-l-toolbar--modifier="pf-m-align-items-start"}}
-    {{#> toolbar-group newcontent pf-l-toolbar--modifier="pf-m-grow"}}
-      {{#> toolbar-item newcontent}}
-      {{#> title titleType="h3" pf-c-title--Modifier="pf-m-md"}}
-          Some title here
-      {{/title}} 
-        <small>Some supporting text here.</small>
+  {{#> toolbar-section aria-label="First section"}}
+    {{#> toolbar-group}}
+      {{#> toolbar-item}}
+        Item 1
       {{/toolbar-item}}
     {{/toolbar-group}}
-    {{#> toolbar-group newcontent pf-l-toolbar--modifier="pf-m-nowrap"}}
+    {{#> toolbar-group pf-l-toolbar--modifier="pf-m-align-right-on-md"}}
       {{#> toolbar-item newcontent}}
-        {{#> button btnClass="pf-m-action" aria-label="Some action"}}
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-        {{/button}}
+        Item 2
       {{/toolbar-item}}    
       {{#> toolbar-item newcontent}}
-        {{#> button btnClass="pf-m-action" aria-label="Some action"}}
-          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-        {{/button}}
+        Item 3
       {{/toolbar-item}}
     {{/toolbar-group}}
   {{/toolbar-section}}
-  {{#> toolbar-section newcontent aria-label="Second section" pf-l-toolbar--modifier="pf-m-wrap pf-m-align-items-baseline"}}
-    {{#> toolbar-group newcontent}}
+  {{#> toolbar-section aria-label="Second section"}}
+    {{#> toolbar-group}}
       {{#> toolbar-item}}
-        {{#> badge pf-c-badge--modifier="pf-m-read"}}17{{/badge}}
-      {{/toolbar-item}}
-      {{#> toolbar-item newco}}
-        {{#> badge pf-c-badge--modifier="pf-m-unread"}}3{{/badge}}
+        Item 4
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> badge pf-c-badge--modifier="pf-m-unread"}}543+{{/badge}}
+        Item 5
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item 6
       {{/toolbar-item}}
     {{/toolbar-group}}
-    {{#> toolbar-group newcontent  pf-l-toolbar--modifier="pf-m-align-right-on-md"}}
-      {{#> toolbar-item newcontent}}
-        <a href="#">Go to badges</a>
+    {{#> toolbar-group}}
+      {{#> toolbar-item}}
+        Item 7
       {{/toolbar-item}}
     {{/toolbar-group}}
   {{/toolbar-section}}
