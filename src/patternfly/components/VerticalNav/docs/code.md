@@ -19,7 +19,7 @@ The vertical navigation list contains list items, links, icons and text. Icons a
 | `.pf-c-vertical-nav` | `<nav>` |  Initiates vertical navigation. Always use it with a list. **Required** |
 | `.pf-c-vertical-nav__item` | `<li>` |  Initiates navigation items. Always use it with a list item. **Required** |
 | `.pf-c-vertical-nav__link` | `<a>` |  Initiates link. Always use it with an `<a>`. **Required** |
-| `.pf-c-vertical-nav__link_text` | `<span>` |  Initiates link text. It is required. **Required** |
+| `.pf-c-vertical-nav__link-text` | `<span>` |  Initiates link text. It is required. **Required** |
 | `.pf-m-hover` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
 | `.pf-m-active` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
 | `.pf-m-focus` | `.pf-c-vertical-nav__link` |  Modifies for pf-c-vertical-nav__link :after, background-color and color. |
