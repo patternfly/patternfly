@@ -1,10 +1,8 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+This demo implements the about modal, including the backdrop. Documentation can be found in the <a href="../../../../components/AboutModalBox/examples/">AboutModalBox component.</a>
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
-## Accessibility
+<!-- ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
@@ -17,3 +15,4 @@ For example for buttons: Always add a modifier class to add color to the button.
 | -- | -- | -- |
 | `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
 | Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+ -->

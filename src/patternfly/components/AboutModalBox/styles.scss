@@ -14,8 +14,8 @@
   --pf-c-about-modal-box--MinHeight:
     calc(
       var(--pf-c-about-modal-box__brand--MarginBottom--lg)
-      + var(--pf-c-about-modal-box__header--PaddingTop)
-      + var(--pf-c-about-modal-box__header--PaddingBottom)
+      + var(--pf-c-about-modal-box__header--MarginTop)
+      + var(--pf-c-about-modal-box__header--MarginBottom)
       + var(--pf-c-about-modal-box__content--MarginTop)
       + var(--pf-c-about-modal-box__content--MarginBottom)
       + calc(1rem * 6 * var(--pf-global--LineHeight--md))
@@ -37,7 +37,7 @@
   --pf-c-about-modal-box--Margin:                     $pf-c-about-modal-box--Margin;
 
   // Calculate new breakpoint based on max width and minimum horizontal space allowed
-  $pf-c-about-modal-box-breakpoint--min-size:         #{$pf-c-about-modal-box--MaxWidth + ($pf-c-about-modal-box--Margin * 2)};
+  $pf-c-about-modal-box-breakpoint--min-size:         $pf-c-about-modal-box--MaxWidth + ($pf-c-about-modal-box--Margin * 2);
 
 
   // Modal
@@ -71,8 +71,8 @@
 
 
   // Header
-  --pf-c-about-modal-box__header--PaddingTop:         var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__header--PaddingBottom:      var(--pf-global--spacer--sm);
+  --pf-c-about-modal-box__header--MarginTop:          var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__header--MarginBottom:      var(--pf-global--spacer--sm);
 
 
   // Content
@@ -119,6 +119,7 @@
   --pf-c-about-modal-box__dl-dt--Color:                     var(--pf-global--Color--light-100);
   --pf-c-about-modal-box__dl-dd--Color:                     var(--pf-global--Color--dark-200);
 
+  /* stylelint-enable */
 
   dl {
     display: grid;
@@ -137,8 +138,6 @@
       color: var(--pf-c-about-modal-box__dl-dd--Color);
     }
   }
-
-  /* stylelint-enable */
 
 
   // This component always needs to be dark  
@@ -210,7 +209,8 @@
       "content          hero"
       "spacer-bottom    hero";
 
-    height: calc(100vh - var(--pf-c-about-modal-box--MarginTop) - var(--pf-c-about-modal-box--MarginBottom));
+    // For short screen sizes, show margin around modal until min-height
+    height: calc(var(--pf-c-about-modal-box--Height) - var(--pf-c-about-modal-box--MarginTop) - var(--pf-c-about-modal-box--MarginBottom));
     max-height: var(--pf-c-about-modal-box--MaxHeight);
     padding-left: var(--pf-c-about-modal-box--PaddingLeft--lg);
     margin-top: var(--pf-c-about-modal-box--MarginTop);
@@ -218,6 +218,7 @@
     margin-left: var(--pf-c-about-modal-box--MarginRight);
   }
 
+  // Breakpoint - breakpoint--min-size
   @media screen and (min-width: $pf-c-about-modal-box-breakpoint--min-size) {
     grid-template-columns: auto var(--pf-c-about-modal-box__hero--Width);
     max-width: var(--pf-c-about-modal-box--MaxWidth);
@@ -225,7 +226,6 @@
     margin-bottom: 0;
     margin-left: auto;
   }
-
 
   // Hero
   &__hero {
@@ -240,7 +240,6 @@
       display: block;
     }
   }
-
 
   // Brand
   &__brand {
@@ -272,8 +271,8 @@
   &__header {
     grid-area: header;
     // Using padding here in order for logo to align. Defined by design spec.
-    padding-top: var(--pf-c-about-modal-box__header--PaddingTop);
-    padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
+    margin-top: var(--pf-c-about-modal-box__header--MarginTop);
+    margin-bottom: var(--pf-c-about-modal-box__header--MarginBottom);
   }
 
 
@@ -286,7 +285,6 @@
     overflow-y: auto;
     overscroll-behavior: contain;
   }
-
 
   // Logo
   &__logo {
@@ -313,10 +311,11 @@
 
       @media screen and (min-width: $pf-global--breakpoint--lg) {
         height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
       }
     }
   }
-
 
   // Closer
   &__closer {
