@@ -40,17 +40,6 @@
     &:not(:first-child) {
       margin-top: var(--pf-l-toolbar__section--MarginTop);
     }
-
-    // Modifiers
-    &.pf-m-border-top {
-      padding-top: var(--pf-l-toolbar__section--PaddingTop);
-      border-top: var(--pf-l-toolbar__section--BorderTopWidth) solid var(--pf-l-toolbar__section--BorderColor);
-    }
-
-    &.pf-m-border-bottom {
-      padding-bottom: var(--pf-l-toolbar__section--PaddingBottom);
-      border-bottom: var(--pf-l-toolbar__section--BorderTopWidth) solid var(--pf-l-toolbar__section--BorderColor);
-    }
   }
 
   // Group
