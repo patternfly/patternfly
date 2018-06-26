@@ -39,7 +39,7 @@ For example:
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> card pf-c-card--modifier="pf-m-xxxl pf-m-margin"}}
+{{#> card pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
   {{> @partial-block}}
 {{/card}}
 ```
@@ -49,9 +49,9 @@ When including a partial within a partial, by default, Handlebars will pass alon
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
 ```html
-{{#> card pf-c-card--modifier="pf-m-xxxl pf-m-margin"}}
+{{#> card pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
   {{> @partial-block}}
-  {{#> card newcontext pf-c-card--modifier="pf-m-xxxl pf-m-margin"}}
+  {{#> card newcontext pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
     {{> @partial-block}}
   {{/card}}
 {{/card}}

@@ -109,9 +109,9 @@ $line-height-base:            $pf-global--LineHeight--md !default;
 
 $line-height-base:            $pf-global--LineHeight--md !default;
 
-$h1-font-size:                $pf-global--FontSize--xxxxl !default;
-$h2-font-size:                $pf-global--FontSize--xxxl !default;
-$h3-font-size:                $pf-global--FontSize--xxl !default;
+$h1-font-size:                $pf-global--FontSize--4xl !default;
+$h2-font-size:                $pf-global--FontSize--3xl !default;
+$h3-font-size:                $pf-global--FontSize--2xl !default;
 $h4-font-size:                $pf-global--FontSize--xl !default;
 $h5-font-size:                $pf-global--FontSize--lg !default;
 $h6-font-size:                $pf-global--FontSize--sm !default;
@@ -170,7 +170,7 @@ $input-btn-padding-x-lg:      $pf-global--spacer--xl !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // $btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $pf-global--spacer--xxxl !default;
+$btn-padding-x:               $pf-global--spacer--3xl !default;
 // $btn-line-height:             $input-btn-line-height !default;
 
 // $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
@@ -445,7 +445,7 @@ $pagination-padding-x:              $pf-global--spacer--lg !default;
 $pagination-padding-y-sm:           $pf-global--spacer--sm !default;
 $pagination-padding-x-sm:           $pf-global--spacer--md !default;
 $pagination-padding-y-lg:           $pf-global--spacer--lg !default;
-$pagination-padding-x-lg:           $pf-global--spacer--xxl !default;
+$pagination-padding-x-lg:           $pf-global--spacer--2xl !default;
 // $pagination-line-height:            1.25 !default;
 //
 // $pagination-color:                  $link-color !default;

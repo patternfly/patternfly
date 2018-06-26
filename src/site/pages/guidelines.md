@@ -54,7 +54,7 @@ The main reason to have global variables is to maintain consistency. They adhere
   - a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
   - a `modifier` is something like  `sm`, or `lg`;
   - and a `state` is something like  `hover`, or `expanded`;
-- They are concepts, never tied to an element or component. This is incorrect: `$pf-global--h1--FontSize`, this is correct: `$pf-global--FontSize--xxxl`.
+- They are concepts, never tied to an element or component. This is incorrect: `$pf-global--h1--FontSize`, this is correct: `$pf-global--FontSize--3xl`.
 
 For example a global variable setup would look like:
 
@@ -63,11 +63,11 @@ For example a global variable setup would look like:
   /* $pf-global--concept--size */
   --pf-global--spacer--lg: .5rem;
   --pf-global--spacer--xl: 1rem;
-  --pf-global--spacer--xxl: 2rem;
+  --pf-global--spacer--2xl: 2rem;
 
-  /* $pf-global--concept--PropertyCamelCase */ 
-  --pf-global--FontSize--xxxl: 2rem;
-  --pf-global--FontSize--xxl: 1.8rem;
+  /* $pf-global--concept--PropertyCamelCase */
+  --pf-global--FontSize--3xl: 2rem;
+  --pf-global--FontSize--2xl: 1.8rem;
   --pf-global--FontSize--lg: 1rem;
 
   /* pf-global--PropertyCamelCase--state */
@@ -90,7 +90,7 @@ For example:
 /* Component scoped variables are always defined by global variables */
   --pf-alert--Padding: var(--pf-global--spacer--xl);
   --pf-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--hover);
-  --pf-alert__title--FontSize: var(--pf-global--FontSize--xxl);
+  --pf-alert__title--FontSize: var(--pf-global--FontSize--2xl);
 
 /* --block--PropertyCamelCase */
 .alert {
@@ -295,7 +295,7 @@ States of a component should be included as a nested element. This includes hove
 }
 ```
 
-Classes that duplicate a state should be named with the prefix `pf-m-`. For example, a class `pf-m-active` can be used to apply the `:active` styling. 
+Classes that duplicate a state should be named with the prefix `pf-m-`. For example, a class `pf-m-active` can be used to apply the `:active` styling.
 
 #### Sass variables
 

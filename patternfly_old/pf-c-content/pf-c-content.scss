@@ -54,25 +54,25 @@
 
   h1 {
     margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--FontSize--xxxxl;
+    font-size: $pf-global--FontSize--4xl;
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--xxl;
+      margin-top: $pf-global--spacer--2xl;
     }
   }
 
   h2 {
     margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--FontSize--xxxl;
+    font-size: $pf-global--FontSize--3xl;
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--xxxl;
+      margin-top: $pf-global--spacer--3xl;
     }
   }
 
   h3 {
     margin-bottom: $pf-global--spacer--md;
-    font-size: $pf-global--FontSize--xxl;
+    font-size: $pf-global--FontSize--2xl;
     &:not(:first-child) {
-      margin-top: $pf-global--spacer--xxl;
+      margin-top: $pf-global--spacer--2xl;
     }
   }
 
@@ -111,7 +111,7 @@
   }
 
   dd {
-    margin-left: $pf-global--spacer--xxxl;
+    margin-left: $pf-global--spacer--3xl;
   }
 
   // figure {
