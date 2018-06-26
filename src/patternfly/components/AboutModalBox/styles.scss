@@ -32,7 +32,7 @@
   --pf-c-about-modal-box--MaxWidth:                   $pf-c-about-modal-box--MaxWidth;
 
   // Minimum horizontal space allowed at large breakpoint
-  $pf-c-about-modal-box--Margin:                      $pf-global--spacer--xxxl;
+  $pf-c-about-modal-box--Margin:                      $pf-global--spacer--3xl;
 
   --pf-c-about-modal-box--Margin:                     $pf-c-about-modal-box--Margin;
 
@@ -44,74 +44,69 @@
   --pf-c-about-modal-box--Height:                     100vh;
   --pf-c-about-modal-box--PaddingRight:               var(--pf-global--spacer--xl);
   --pf-c-about-modal-box--PaddingLeft:                var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box--sm--PaddingLeft:            var(--pf-global--spacer--xxl);
-  --pf-c-about-modal-box--lg--PaddingLeft:            var(--pf-global--spacer--xxxl);
-  --pf-c-about-modal-box--MarginTop:                  var(--pf-global--spacer--xxxl);
-  --pf-c-about-modal-box--MarginRight:                var(--pf-global--spacer--xxxl);
-  --pf-c-about-modal-box--MarginBottom:               var(--pf-global--spacer--xxxl);
-  --pf-c-about-modal-box--MarginLeft:                 var(--pf-global--spacer--xxxl);
-  --pf-c-about-modal-box--GridColumnGap:              var(--pf-global--spacer--xxl);
+  --pf-c-about-modal-box--sm--PaddingLeft:            var(--pf-global--spacer--2xl);
+  --pf-c-about-modal-box--lg--PaddingLeft:            var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--MarginTop:                  var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--MarginRight:                var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--MarginBottom:               var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--MarginLeft:                 var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--GridColumnGap:              var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box-spacer-top--Height:          var(--pf-global--spacer--xl);
   --pf-c-about-modal-box-spacer-top--lg--Height:      var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box-spacer-bottom--Height:       var(--pf-global--spacer--xxl);
-  --pf-c-about-modal-box-spacer-bottom--lg--Height:   var(--pf-global--spacer--xxl);
+  --pf-c-about-modal-box-spacer-bottom--Height:       var(--pf-global--spacer--2xl);
+  --pf-c-about-modal-box-spacer-bottom--lg--Height:   var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box-spacer-top--lg--Height:      var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box-spacer-bottom--lg--Height:   var(--pf-global--spacer--xxl);
-
+  --pf-c-about-modal-box-spacer-bottom--lg--Height:   var(--pf-global--spacer--2xl);
 
   // Hero background image
-  --pf-c-about-modal-box__hero--BackgroundImage:      url("#{$pf-global--image-path}/pfbg_576.jpg");
   --pf-c-about-modal-box__hero--Width:                pf-size-prem(470px);
-
+  $pf-c-about-modal-box__hero--BackgroundImageUrl:    "/pfbg_576.jpg";
+  $pf-c-about-modal-box__hero--BackgroundImage:       $pf-global--image-path + $pf-c-about-modal-box__hero--BackgroundImageUrl;
 
   // Brand
   --pf-c-about-modal-box__brand--MarginBottom:        var(--pf-global--spacer--md);
   --pf-c-about-modal-box__brand--sm--MarginBottom:    var(--pf-global--spacer--lg);
   --pf-c-about-modal-box__brand--lg--MarginBottom:    var(--pf-global--spacer--xl);
 
-
   // Header
   --pf-c-about-modal-box__header--MarginTop:          var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__header--MarginBottom:      var(--pf-global--spacer--sm);
-
+  --pf-c-about-modal-box__header--MarginBottom:       var(--pf-global--spacer--sm);
 
   // Content
-  --pf-c-about-modal-box__content--MarginTop:         var(--pf-global--spacer--xxl);
+  --pf-c-about-modal-box__content--MarginTop:         var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box__content--MarginBottom:      var(--pf-global--spacer--lg);
 
-
   // Brand-image
-  --pf-c-about-modal-box__brand-image--Height:        pf-size-prem(40px);
-
+  --pf-c-about-modal-box__brand-image--MaxHeight:     pf-size-prem(40px);
 
   // Content
   // This is the min allowable height of the content but is used in the grid row template
   --pf-c-about-modal-box__content--MinHeight:         20%;
 
-
   // Logo image
   --pf-c-about-modal-box__logo-image--Width:                pf-size-prem(236px);
-  --pf-c-about-modal-box__logo-image--PaddingTop:           var(--pf-global--spacer--xl);
+  // Based on line height - desired height is 2x line height
+  --pf-c-about-modal-box__logo-image--PaddingTop:           calc(1rem * 2 * var(--pf-global--LineHeight--sm));
   --pf-c-about-modal-box__logo-image--PaddingRight:         var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box__logo-image--PaddingBottom:        var(--pf-global--spacer--xl);
+  // Based on line height - desired height is 2x line height
+  --pf-c-about-modal-box__logo-image--PaddingBottom:        calc(1rem * 2 * var(--pf-global--LineHeight--sm));
   --pf-c-about-modal-box__logo-image--PaddingLeft:          var(--pf-global--spacer--md);
   --pf-c-about-modal-box__logo-image--BackgroundColor:      var(--pf-global--BackgroundColor--100);
 
-
   // Closer
-  --pf-c-about-modal-box__closer--MarginRight:              var(--pf-global--spacer--xxl);
-
+  --pf-c-about-modal-box__closer--MarginRight:              var(--pf-global--spacer--2xl);
 
   // Closer button
-  --pf-c-about-modal-box__closer-button--BackgroundColor:   $pf-color-black-1000;  
-  --pf-c-about-modal-box__closer-button--FontSize:          pf-font-prem(20px);
-  --pf-c-about-modal-box__closer-button--sm--FontSize:      var(--pf-global--FontSize--lg);
+  --pf-c-about-modal-box__closer-button--FontSize:              pf-font-prem(20px);
+  --pf-c-about-modal-box__closer-button--sm--FontSize:          var(--pf-global--FontSize--lg);
   // Height and width are 2x font-size
-  --pf-c-about-modal-box__closer-button--Width:             calc(var(--pf-c-about-modal-box__closer-button--FontSize) * 2);
-  --pf-c-about-modal-box__closer-button--sm--Width:         calc(var(--pf-c-about-modal-box__closer-button--FontSize--sm) * 2);
-  --pf-c-about-modal-box__closer-button--Height:            var(--pf-c-about-modal-box__closer-button--Width);
-  --pf-c-about-modal-box__closer-button--sm--Height:        var(--pf-c-about-modal-box__closer-button--Width--sm);
+  --pf-c-about-modal-box__closer-button--Width:                 calc(var(--pf-c-about-modal-box__closer-button--FontSize) * 2);
+  --pf-c-about-modal-box__closer-button--sm--Width:             calc(var(--pf-c-about-modal-box__closer-button--sm--FontSize) * 2);
+  --pf-c-about-modal-box__closer-button--Height:                var(--pf-c-about-modal-box__closer-button--Width);
+  --pf-c-about-modal-box__closer-button--sm--Height:            var(--pf-c-about-modal-box__closer-button--sm--Width);
+  --pf-c-about-modal-box__closer-button--BackgroundColor:       $pf-color-black-1000;
 
+  $pf-c-about-modal-box__closer-button--hover--BackgroundColor:   rgba($pf-color-black-1000, .4);
 
   // Dl - temp styles
   --pf-c-about-modal-box__dl--GridGap:                      var(--pf-global--spacer--xl);
@@ -231,7 +226,7 @@
     grid-area: hero;
     display: none;
     background-color: none;
-    background-image: var(--pf-c-about-modal-box__hero--BackgroundImage);
+    background-image: url("#{$pf-c-about-modal-box__hero--BackgroundImage}");
     background-position: center;
     background-size: cover;
 
@@ -255,7 +250,7 @@
 
     // Brand image
     &-image {
-      height: var(--pf-c-about-modal-box__brand-image--Height);
+      height: var(--pf-c-about-modal-box__brand-image--MaxHeight);
     }
   }
 
@@ -338,6 +333,10 @@
       width: var(--pf-c-about-modal-box__closer-button--sm--Width);
       height: var(--pf-c-about-modal-box__closer-button--sm--Height);
       font-size: var(--pf-c-about-modal-box__closer-button--sm--FontSize);
+    }
+
+    &:hover {
+      background-color: $pf-c-about-modal-box__closer-button--hover--BackgroundColor;
     }
   }
 }
