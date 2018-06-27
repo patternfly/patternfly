@@ -1,24 +1,24 @@
 @import "../../patternfly-utilities";
 :root {
-  // xxxxl
-  --pf-c-title--m-xxxxl--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-title--m-xxxxl--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-title--m-xxxxl--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-title--m-xxxxl--FontSize: var(--pf-global--FontSize--xxxxl);
-  --pf-c-title--m-xxxxl--FontWeight: var(--pf-global--FontWeight--normal);
-  // xxxl
-  --pf-c-title--m-xxxl--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-title--m-xxxl--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-title--m-xxxl--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-title--m-xxxl--FontSize: var(--pf-global--FontSize--xxxl);
-  --pf-c-title--m-xxxl--FontWeight: var(--pf-global--FontWeight--normal);
+  // 4xl
+  --pf-c-title--m-4xl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--m-4xl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--m-4xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-4xl--FontSize: var(--pf-global--FontSize--4xl);
+  --pf-c-title--m-4xl--FontWeight: var(--pf-global--FontWeight--normal);
+  // 3xl
+  --pf-c-title--m-3xl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--m-3xl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--m-3xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-3xl--FontSize: var(--pf-global--FontSize--3xl);
+  --pf-c-title--m-3xl--FontWeight: var(--pf-global--FontWeight--normal);
 
-  // xxl
-  --pf-c-title--m-xxl--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-title--m-xxl--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-title--m-xxl--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-title--m-xxl--FontSize: var(--pf-global--FontSize--xxl);
-  --pf-c-title--m-xxl--FontWeight: var(--pf-global--FontWeight--normal);
+  // 2xl
+  --pf-c-title--m-2xl--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-title--m-2xl--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-title--m-2xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-2xl--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-c-title--m-2xl--FontWeight: var(--pf-global--FontWeight--normal);
 
   // xl
   --pf-c-title--m-xl--MarginTop: var(--pf-global--spacer--lg);
@@ -45,36 +45,36 @@
 
   &.pf-m {
 
-    &-xxxxl {
-      font-size: var(--pf-c-title--m-xxxxl--FontSize);
-      font-weight: var(--pf-c-title--m-xxxxl--FontWeight);
-      line-height: var(--pf-c-title--m-xxxxl--LineHeight);
+    &-4xl {
+      font-size: var(--pf-c-title--m-4xl--FontSize);
+      font-weight: var(--pf-c-title--m-4xl--FontWeight);
+      line-height: var(--pf-c-title--m-4xl--LineHeight);
 
       &.pf-m-margin {
-        margin-top: var(--pf-c-title--m-xxxxl--MarginTop);
-        margin-bottom: var(--pf-c-title--m-xxxxl--MarginBottom);
+        margin-top: var(--pf-c-title--m-4xl--MarginTop);
+        margin-bottom: var(--pf-c-title--m-4xl--MarginBottom);
       }
     }
 
-    &-xxxl {
-      font-size: var(--pf-c-title--m-xxxl--FontSize);
-      font-weight: var(--pf-c-title--m-xxxl--FontWeight);
-      line-height: var(--pf-c-title--m-xxxl--LineHeight);
+    &-3xl {
+      font-size: var(--pf-c-title--m-3xl--FontSize);
+      font-weight: var(--pf-c-title--m-3xl--FontWeight);
+      line-height: var(--pf-c-title--m-3xl--LineHeight);
 
       &.pf-m-margin {
-        margin-top: var(--pf-c-title--m-xxxl--MarginTop);
-        margin-bottom: var(--pf-c-title--m-xxxl--MarginBottom);
+        margin-top: var(--pf-c-title--m-3xl--MarginTop);
+        margin-bottom: var(--pf-c-title--m-3xl--MarginBottom);
       }
     }
 
-    &-xxl {
-      font-size: var(--pf-c-title--m-xxl--FontSize);
-      font-weight: var(--pf-c-title--m-xxl--FontWeight);
-      line-height: var(--pf-c-title--m-xxl--LineHeight);
+    &-2xl {
+      font-size: var(--pf-c-title--m-2xl--FontSize);
+      font-weight: var(--pf-c-title--m-2xl--FontWeight);
+      line-height: var(--pf-c-title--m-2xl--LineHeight);
 
       &.pf-m-margin {
-        margin-top: var(--pf-c-title--m-xxl--MarginTop);
-        margin-bottom: var(--pf-c-title--m-xxl--MarginBottom);
+        margin-top: var(--pf-c-title--m-2xl--MarginTop);
+        margin-bottom: var(--pf-c-title--m-2xl--MarginBottom);
       }
     }
 

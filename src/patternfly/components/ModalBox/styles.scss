@@ -6,14 +6,14 @@
   --pf-c-modal-box--BorderColor: transparent;
   --pf-c-modal-box--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--xxl);
+  --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
   // MaxWidth is based on optimal line length for reading
   --pf-c-modal-box--MaxWidth: pf-size-prem(560px);
   --pf-c-modal-box--MaxWidth--lg: pf-size-prem(1120px);
   // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
   --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md)));
   // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
-  --pf-c-modal-box--MaxHeight: calc(100vh - (2 * (var(--pf-global--spacer--xxxl))));
+  --pf-c-modal-box--MaxHeight: calc(100vh - (2 * (var(--pf-global--spacer--3xl))));
 
   // Box Header variables
   --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--xl);
