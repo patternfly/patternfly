@@ -2,7 +2,8 @@
 
 ## Install
 
-- run `npm install @patternfly/patternfly-next`
+- This assumes an environment is alerady set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
+- run `npm install @patternfly/patternfly-next --save`
 
 When you install PatternFly Next, the package includes:
 
@@ -31,12 +32,6 @@ To setup the PatternFly Next development environment:
 - run `pf generate component <name>`
 
 *To view visit http://localhost:8000/components/<name>*
-
-### Create a new pattern
-
-- run `pf generate pattern <name>`
-
-*To view visit http://localhost:8000/patterns/<name>*
 
 ### Create a new layout
 

@@ -125,7 +125,7 @@
     "url": "https://github.com/patternfly/patternfly-next.git"
   },
   "release": {
-    "branch": "release",
+    "branch": "master",
     "analyzeCommits": {
       "preset": "angular",
       "releaseRules": [
@@ -171,6 +171,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "alpha"
+    "tag": "latest"
   }
 }
