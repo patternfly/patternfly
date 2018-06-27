@@ -1,11 +1,15 @@
-{{#> modal-box pf-c-modal-box--modifier="pf-m-lg" }}
-  {{#> modal-box-header pf-c-modal-box__header--modifier="" }}
-    Modal Header
+{{#> modal-box modal-box--modifier="pf-m-lg" aria-labelledby="modal-lg-title"}}
+  {{#> modal-box-header}}
+    {{#> modal-box-button-close id="modal-lg-close"}}
+    {{/modal-box-button-close}}          
+    {{#> modal-box-header-title id="modal-lg-title"}}
+      Modal Header
+    {{/modal-box-header-title}}
   {{/modal-box-header}}
-  {{#> modal-box-body pf-c-modal-box__content--modifier="" }}
+  {{#> modal-box-body}}
     Modal Body
   {{/modal-box-body}}
-  {{#> modal-box-footer pf-c-modal-box__footer--modifier="" }}
+  {{#> modal-box-footer}}
     Modal Footer
   {{/modal-box-footer}}
 {{/modal-box}}

@@ -1,8 +1,8 @@
-## Overview
+<!-- ## Overview -->
 
 This demo implements a basic modal, including the backdrop. Both the normal and large variations of the modal are shown.
 
-## Accessibility
+<!-- ## Accessibility
 
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
@@ -16,3 +16,4 @@ This demo implements a basic modal, including the backdrop. Both the normal and 
 | Class | Applies to | Outcome |
 | -- | -- | -- |
 | `.pf-d-modal` | `<div>` |  Initiates a modal. |
+ -->

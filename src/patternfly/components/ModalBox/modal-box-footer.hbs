@@ -1,3 +1,7 @@
-<div class="pf-c-modal-box__footer {{ pf-c-modal-box__footer--modifier }}">
+<div class="pf-c-modal-box__footer{{#if modal-box-footer--modifier}} {{modal-box-footer--modifier}}{{/if}}"
+  {{#if id}}
+    id="{{id}}"
+  {{/if}}
+>
   {{> @partial-block}}
 </div>

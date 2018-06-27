@@ -1,44 +1,34 @@
 {{#> modal}}
-  {{#> backdrop }}
-    {{#> bullseye }}
-      {{#> modal-box pf-c-modal-box-modifier="" pf-c-modal-box__label="titleID" pf-c-model-box__description="descriptionID"}}
-        {{#> modal-box-header }}
-          {{#> split}}
-            {{#> split-item classModifier="pf-m-primary"}}
-              {{#> title titleType="h1" pf-c-title--Modifier="pf-m-3xl" pf-c-title--ID="titleID" }}
-                Overwrite existing file?
-              {{/title}}
-            {{/ split-item }}
-            {{#> split-item classModifier="pf-m-secondary" }}
-              {{!-- Once there is a link button, this should be one and alignment may need to be adjusted --}}
-              {{#> button btnClass="pf-m-action" btnAttributes="aria-label=\"Close Dialog\" "}}
-                <i class="fas fa-times"></i>
-              {{/ button}}
-            {{/ split-item }}
-          {{/ split }}
-        {{/ modal-box-header }}
-        {{#> modal-box-body }}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box aria-labelledby="modal-scroll-title" aria-describedby="modal-scroll-description"}}
+        {{#> modal-box-header}}
+          {{#> modal-box-button-close id="modal-scroll-close"}}
+          {{/modal-box-button-close}}
+          {{#> modal-box-header-title id="modal-scroll-title"}}
+            This header text is long and will wrap. This text will be truncated when the viewport height or width is limited. To see this in action, reduce the height and/or width of the viewport.
+          {{/modal-box-header-title}}
+        {{/modal-box-header}}
+        {{#> modal-box-body id="modal-scroll-description"}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
-<p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Integer tincidunt. Integer tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-Duis leo. Praesent blandit laoreet nibh. Ut a nisl id ante tempus hendrerit. Maecenas nec odio et ante tincidunt tempus.
-Ut a nisl id ante tempus hendrerit. Nulla sit amet est. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Praesent turpis. Phasellus accumsan cursus velit. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Cras ultricies mi eu turpis hendrerit fringilla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.
-Etiam sit amet orci eget eros faucibus tincidunt. Aliquam eu nunc. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nunc nec neque.
-Ut a nisl id ante tempus hendrerit. Nulla sit amet est. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Praesent turpis. Phasellus accumsan cursus velit. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Cras ultricies mi eu turpis hendrerit fringilla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.
-Etiam sit amet orci eget eros faucibus tincidunt. Aliquam eu nunc. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nunc nec neque.
-</p>
-        {{/ modal-box-body }}
-        {{#> modal-box-footer }}
-          <div class="pf-l-alignment pf-m-right">
-            {{#> button}}
-              Save a copy
-            {{/ button }}
-            {{#> button btnClass="pf-m-primary"}}
-              Overwrite
-            {{/button}}
-          </div>
-        {{/ modal-box-footer }}
-      {{/ modal-box}}
-    {{/ bullseye }}
-  {{/ backdrop }}
-{{/ modal }}
+    <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Integer tincidunt. Integer tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    Duis leo. Praesent blandit laoreet nibh. Ut a nisl id ante tempus hendrerit. Maecenas nec odio et ante tincidunt tempus.
+    Ut a nisl id ante tempus hendrerit. Nulla sit amet est. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Praesent turpis. Phasellus accumsan cursus velit. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Cras ultricies mi eu turpis hendrerit fringilla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.
+    Etiam sit amet orci eget eros faucibus tincidunt. Aliquam eu nunc. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nunc nec neque.
+    Ut a nisl id ante tempus hendrerit. Nulla sit amet est. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Praesent turpis. Phasellus accumsan cursus velit. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Cras ultricies mi eu turpis hendrerit fringilla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.
+    Etiam sit amet orci eget eros faucibus tincidunt. Aliquam eu nunc. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nunc nec neque.
+    </p>
+        {{/modal-box-body}}
+        {{#> modal-box-footer}}
+          {{#> button}}
+            Save a copy
+          {{/button}}
+          {{#> button btnClass="pf-m-primary"}}
+            Overwrite
+          {{/button}}
+        {{/modal-box-footer}}
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
