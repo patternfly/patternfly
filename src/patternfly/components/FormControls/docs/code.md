@@ -7,4 +7,4 @@ Input, Textarea, and select are provided in the form controls component for use 
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-form-control` | `<input>`,`<textarea>`, `<select>` |  Initiates a input, textarea or select. For styling of checkboxes or Radios see the <a href="/components/Check/examples/">check component</a>. **required**  |
+| `.pf-c-form-control` | `<input>`,`<textarea>`, `<select>` |  Initiates an input, textarea or select. For styling of checkboxes or Radios see the <a href="/components/Check/examples/">check component</a>. **required**  |
