@@ -1,4 +1,4 @@
 #!/bin/bash
-if [ "$TRAVIS_BRANCH" == "release" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ]; then
   npm run semantic-release
 fi
