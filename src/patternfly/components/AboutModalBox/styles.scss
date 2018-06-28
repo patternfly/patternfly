@@ -81,7 +81,7 @@
 
   // Content
   // This is the min allowable height of the content but is used in the grid row template
-  --pf-c-about-modal-box__content--MinHeight:         20%;
+  --pf-c-about-modal-box__content--MinHeight:         calc(var(--pf-global--LineHeight--md) * 6 * 1rem);
 
   // Logo image
   --pf-c-about-modal-box__logo-image--Width:                pf-size-prem(236px);
