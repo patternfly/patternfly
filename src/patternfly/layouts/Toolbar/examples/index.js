@@ -26,13 +26,13 @@ export default () => {
         {toolbarBasicExample}
       </Example>
       <Example
-        heading="Toolbar Group Alignment Example (no group item wrapping)"
+        heading="Toolbar Group Alignment Example"
         handlebars={ToolbarGroupAlignmentExampleRaw}
       >
         {toolbarGroupAlignmentExample}
       </Example>
       <Example
-        heading="Toolbar Section Example (responsive modifiers included)"
+        heading="Toolbar Section Example"
         handlebars={ToolbarSectionExampleRaw}
       >
         {toolbarSectionExample}
