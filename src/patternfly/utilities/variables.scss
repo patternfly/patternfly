@@ -138,7 +138,8 @@ $pf-global--BorderWidth--lg:     3px !default;
 $pf-global--BorderColor:         $pf-color-black-600 !default;
 $pf-global--BorderColor--dark:   $pf-color-black-600 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
-$pf-global--BorderRadius:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
+$pf-global--BorderRadius--sm:        3px !default;
+$pf-global--BorderRadius--lg:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Inputs
 $pf-global--input--FontSize: pf-font-prem(16px) !default;
@@ -318,7 +319,9 @@ $global-ListStyle: disc outside !default;
   --pf-global--BorderColor: $pf-global--BorderColor;
   --pf-global--BorderColor--dark: $pf-global--BorderColor--dark;
   --pf-global--BorderColor--light: $pf-global--BorderColor--light;
-  --pf-global--BorderRadius: $pf-global--BorderRadius;
+  --pf-global--BorderRadius--sm: $pf-global--BorderRadius--sm;
+  --pf-global--BorderRadius--lg: $pf-global--BorderRadius--lg;
+
 
   // Fonts
 
