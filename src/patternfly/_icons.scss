@@ -1,9 +1,11 @@
 //
 // Icons
 // --------------------------------------------------
-// PatternFly uses a combination of Font Awesome 5 icons https://fontawesome.com
-// and custom icons, created by the PatternFly Design Team
+// PatternFly icons https://patternfly.org/styles/icons/
+//
+// Font Awesome 5 icons https://fontawesome.com
+// Solid icons contain only those needed by PatternFly
 //
 
-//stylelint-disable
-@import url("#{$pf-global--fontawesome-path}/fontawesome.css");
+@import "./assets/fontawesome/fontawesome.scss";
+@import "./assets/fontawesome/fa-solid.scss";
