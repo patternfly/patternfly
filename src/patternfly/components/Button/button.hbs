@@ -1,7 +1,10 @@
 <button class="pf-c-button {{ btnClass }}" 
   {{#if btnAttributes}}
     {{{ btnAttributes }}} 
-  {{/if}} 
+  {{/if}}
+  {{#if aria-label}}
+    aria-label="{{aria-label}}"
+  {{/if}}
   >
 
   {{#if @partial-block}}

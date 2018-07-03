@@ -1,7 +1,10 @@
 {{#> modal-box aria-labelledby="modal-title"}}
   {{#> modal-box-header}}
-    {{#> modal-box-button-close id="modal-close"}}
-    {{/modal-box-button-close}}          
+    {{#> modal-box-close}}
+      {{#> button btnClass="pf-m-action" aria-label="Close Dialog" id="modal-close"}}
+        <i class="fas fa-times"></i>
+      {{/button}}
+    {{/modal-box-close}}
     {{#> modal-box-header-title id="modal-title"}}
       Modal Header
     {{/modal-box-header-title}}

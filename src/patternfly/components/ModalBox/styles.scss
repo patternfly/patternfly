@@ -51,14 +51,8 @@
   --pf-c-modal-box__footer--ItemSpacer: var(--pf-global--spacer--xs);
 
   // Box button-close variables
-  --pf-c-modal-box__button-close--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__button-close--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__button-close--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__button-close--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__button-close--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-modal-box__button-close--Color: var(--pf-global--Color--100);
-  --pf-c-modal-box__button-close--hover--Color: var(--pf-global--Color--200);
-  --pf-c-modal-box__button-close--hover--BackgroundColor: transparent;
+  --pf-c-modal-box__close--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-modal-box__close--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
 
   // This component always needs to be light
   @extend %pf-t-light;
@@ -98,31 +92,38 @@
 
     // Header title
     &-title {
-      overflow: hidden;
       font-size: var(--pf-c-modal-box__header-title--FontSize);
       font-weight: var(--pf-c-modal-box__header-title--FontWeight);
       line-height: var(--pf-c-modal-box__header-title--LineHeight);
 
       // If -webkit-line-clamp is supported
       @supports (-webkit-line-clamp: var(--pf-c-modal-box--LineClamp)) {
-        // Limit maximum number of lines to six
-        /* stylelint-disable */
-        display: -webkit-box;
-        -webkit-line-clamp: var(--pf-c-modal-box--MaxLineClamp);
-        -webkit-box-orient: vertical;
-        /* stylelint-enable */
 
-        // at smaller than $pf-c-modal-box--breakpoint-sm--Height: reset display and set single line overflow ellipsis
+        // Up to max height $pf-c-modal-box--breakpoint-sm--Height: reset display and set single line overflow ellipsis
         @media screen and (max-height: $pf-c-modal-box--breakpoint-sm--Height) {
-          display: block;
+          // display: block;
+          overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
 
-        // between $pf-c-modal-box--breakpoint-sm--Height and $pf-c-modal-box--breakpoint-md--Height: set line clamp
+        // Between min height $pf-c-modal-box--breakpoint-sm--Height and max height $pf-c-modal-box--breakpoint-md--Height: set line clamp
         @media screen and (min-height: $pf-c-modal-box--breakpoint-sm--Height) and (max-height: $pf-c-modal-box--breakpoint-md--Height) {
           /* stylelint-disable */
+          display: -webkit-box;
+          overflow: hidden;
           -webkit-line-clamp: var(--pf-c-modal-box--LineClamp);
+          -webkit-box-orient: vertical;
+          /* stylelint-enable */
+        }
+
+        // Up to max width $pf-global--breakpoint--sm: limit lines to 5
+        @media screen and (max-width: $pf-global--breakpoint--sm) and (min-height: $pf-c-modal-box--breakpoint-md--Height) {
+          /* stylelint-disable */
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: var(--pf-c-modal-box--MaxLineClamp);
+          -webkit-box-orient: vertical;
           /* stylelint-enable */
         }
       }
@@ -133,11 +134,6 @@
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-        }
-
-        // Reset overflow: hidden
-        @media screen and (min-height: $pf-c-modal-box--breakpoint-sm--Height) {
-          overflow: visible;
         }
       }
     }
@@ -153,6 +149,10 @@
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
+
+    .pf-c-modal-box__close {
+      margin-top: var(--pf-c-modal-box__close--MarginTop);
+    }
   }
 
   // Footer
@@ -182,23 +182,9 @@
   }
 
   // Button close
-  &__button-close {
+  &__close {
     float: right;
-    padding-top: var(--pf-c-modal-box__button-close--PaddingTop);
-    padding-right: var(--pf-c-modal-box__button-close--PaddingRight);
-    padding-bottom: var(--pf-c-modal-box__button-close--PaddingBottom);
-    padding-left: var(--pf-c-modal-box__button-close--PaddingLeft);
-    // Offset margins by padding-right value
-    margin-right: calc(var(--pf-c-modal-box__button-close--PaddingRight) * -1);
-    font-size: var(--pf-c-modal-box__button-close--FontSize);
-    line-height: 1;
-    color: var(--pf-c-modal-box__button-close--Color);
-    border: 0;
-
-    &:hover {
-      color: var(--pf-c-modal-box__button-close--hover--Color);
-      background-color: var(--pf-c-modal-box__button-close--hover--BackgroundColor);
-    }
+    margin-right: var(--pf-c-modal-box__close--MarginRight);
   }
 
   // If the first child isn't a header, then we need to put the header's top padding there

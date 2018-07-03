@@ -3,8 +3,11 @@
     {{#> bullseye}}
       {{#> modal-box aria-labelledby="modal-scroll-title" aria-describedby="modal-scroll-description"}}
         {{#> modal-box-header}}
-          {{#> modal-box-button-close id="modal-scroll-close"}}
-          {{/modal-box-button-close}}
+          {{#> modal-box-close}}
+            {{#> button btnClass="pf-m-action" aria-label="Close Dialog" id="modal-scroll-close"}}
+              <i class="fas fa-times"></i>
+            {{/button}}
+          {{/modal-box-close}}
           {{#> modal-box-header-title id="modal-scroll-title"}}
             This header text is long and will wrap. This text will be truncated when the viewport height or width is limited. To see this in action, reduce the height and/or width of the viewport.
           {{/modal-box-header-title}}
