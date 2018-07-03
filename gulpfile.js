@@ -1,15 +1,18 @@
 const gulp = require('gulp');
-const insert = require('gulp-insert');
 const rename = require('gulp-rename');
 const replace = require('gulp-string-replace');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 
+const cssnano = require('gulp-cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+
 gulp.task('build', [
   'build-modules',
   'build-library',
   'copy-fa',
-  'copy-source'
+  'copy-source',
+  'minify-css'
 ]);
 
 gulp.task('copy-fa', () =>
@@ -27,23 +30,22 @@ gulp.task('build-tmp', () =>
     .pipe(gulp.dest('./tmp'))
 );
 
-gulp.task('build-tmp-full', () =>
-  gulp
-    .src('./src/patternfly/**/patternfly.scss')
-    .pipe(insert.append('@import "./components/**/*.scss";\n'))
-    .pipe(insert.append('@import "./layouts/**/*.scss";\n'))
-    .pipe(sassGlob())
-    .pipe(replace('@import "../../patternfly-utilities";', ''))
-    .pipe(rename('patternfly-full.scss'))
-    .pipe(gulp.dest('./tmp'))
-);
-
 gulp.task('build-library', ['build-tmp'], () =>
   gulp
     .src('./tmp/patternfly*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist'))
 );
+
+gulp.task('minify-css', ['build-library'], () => {
+  gulp
+    .src('./dist/patternfly.css')
+    .pipe(sourcemaps.init())
+    .pipe(cssnano())
+    .pipe(rename('patternfly.min.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('build-modules', () =>
   gulp
@@ -52,7 +54,7 @@ gulp.task('build-modules', () =>
     .pipe(gulp.dest('./dist'))
 );
 
-gulp.task('copy-source', ['build-tmp-full', 'build-tmp'], () => {
+gulp.task('copy-source', ['build-tmp'], () => {
   gulp.src('./README.md').pipe(gulp.dest('./dist'));
   gulp.src('./package.json').pipe(gulp.dest('./dist'));
   gulp.src('./tmp/**/*.scss').pipe(gulp.dest('./dist'));

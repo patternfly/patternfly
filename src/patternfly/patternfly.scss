@@ -1,5 +1,4 @@
-@import "./utilities/_all";
-@import "./_icons";
-@import "./_fonts";
-@import "./_base";
-@import "./_themes";
+@import "./patternfly-base";
+
+@import "./components/**/*.scss";
+@import "./layouts/**/*.scss";
