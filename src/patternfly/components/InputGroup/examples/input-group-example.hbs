@@ -4,23 +4,56 @@
 {{/form-controls}}
     {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
 </div> 
-
+<br>
+<br>
+<div class="pf-c-input-group">
+  {{#> form-controls controlType="textarea" name="textarea" id="textarea1" aria-label="textarea example"}}
+{{/form-controls}}
+    {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
+</div> 
+<br>
+<br>
 <div class="pf-c-input-group">
 {{#> dropdown id="dropdown-example-collapsed"}}Dropdown{{/dropdown}}
   {{#> form-controls controlType="input" input="true" type="text" id="textInput1" placeholder="Standard input example" aria-label="standard input example" }}
 {{/form-controls}}
     {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
 </div>
-
+<br>
+<br>
 <div class="pf-c-input-group">
-  <input type="text">
-    {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-</div>
-
-<div class="pf-c-input-group">
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput1" placeholder="Standard input example" aria-label="standard input example" }}
+  {{/form-controls}}
   {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+  {{#> dropdown id="dropdown-example-collapsed"}}Dropdown{{/dropdown}}
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  <span class="pf-c-input-group__text">
+    <i class="fas fa-dollar-sign"></i>
+  </span>
   {{#> form-controls controlType="input" input="true" type="text" id="textInput1" placeholder="Standard input example" aria-label="standard input example" }}
 {{/form-controls}}
-    {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-    {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+<span class="pf-c-input-group__text">
+    .00
+  </span>
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput1" placeholder="Standard input example" aria-label="standard input example" }}
+{{/form-controls}}
+  <span class="pf-c-input-group__text">
+    @example.com
+  </span>
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  <span class="pf-c-input-group__text" id="inputGroupText1">
+    <i class="fas fa-at"></i>
+  </span>
+  {{#> form-controls controlType="input" input="true" type="email" id="textInput1" placeholder="Standard input example" aria-label="standard input example" aria-describedby="inputGroupText1" }}
+{{/form-controls}}
 </div>

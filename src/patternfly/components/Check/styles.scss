@@ -1,8 +1,6 @@
 @import "../../patternfly-utilities";
 
 .pf-c-check {
-  --pf-c-check--MarginRight: var(--pf-global--spacer--md);
-  margin-right: var(--pf-c-check--MarginRight);
   cursor: pointer;
 
   &:disabled,

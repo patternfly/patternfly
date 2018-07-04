@@ -1,19 +1,17 @@
 ## Overview
-
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+Use the input group to extend form controls by adding text, buttons, dropdowns, etc.
 
 ## Accessibility
+When using the `pf-c-input-group` always ensure labels are used outside the input group with the `.sr-only` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributues. For more information on accessibility and forms see the <a href="/components/form/examples/">form component</a>.
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-c-input-group` |  accessibility notes. |
+| `aria-describedby` | `pf-c-form-control` |  When using `pf-c-input-group__text` make use of this on the input field. |
 
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-input-group` | `<div>` |  Iniaties the input group **Required**. |
+| `.pf-c-input-group__text` | `<span>` |  Iniaties the input group text. This can be used to show text, radio, or check boxes. |
