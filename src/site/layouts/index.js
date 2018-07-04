@@ -5,7 +5,7 @@ import Navigation from '@siteComponents/Navigation';
 import Prisim from 'prismjs'; // eslint-disable-line no-unused-vars
 
 import 'prismjs/themes/prism-coy.css';
-import '../../patternfly/patternfly.scss';
+import '../../patternfly/patternfly-base.scss';
 import '../workspace.scss';
 
 export default ({ children, data }) => {
