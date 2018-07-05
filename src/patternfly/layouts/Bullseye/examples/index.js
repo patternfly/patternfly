@@ -1,7 +1,8 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import BullseyeTemplate from './bullseye-template.hbs';
+import BullseyeTemplateRaw from '!raw!./bullseye-template-example.hbs';
+import BullseyeTemplate from './bullseye-template-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -12,7 +13,9 @@ export default () => {
 
   return (
     <Documentation docs={Docs} className="is-layout-page">
-      <Example heading="Bullseye Example">{bullseyeTemplate}</Example>
+      <Example heading="Bullseye Example" handlebars={BullseyeTemplateRaw}>
+        {bullseyeTemplate}
+      </Example>
     </Documentation>
   );
 };
