@@ -227,7 +227,7 @@ $pf-c-form__select--m-error-svg--Viewbox: "0 0 26 15.8" !default;
     color: var(--pf-c-form__input--Color);
     background-color: var(--pf-c-form__input--BackgroundColor);
     border: var(--pf-c-form__input--BorderSize) solid var(--pf-c-form__input--BorderColor);
-    border-radius: 3px;
+    border-radius: 0;
     outline: 0;
 
     &::placeholder {

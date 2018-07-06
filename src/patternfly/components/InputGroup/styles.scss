@@ -11,7 +11,7 @@
  --pf-c-input-group__text--BorderSize:                        var(--pf-global--BorderWidth--sm);
  --pf-c-input-group__text--BorderColor:                       var(--pf-global--BorderColor--dark);
  --pf-c-input-group__text--BackgroundColor:                   var(--pf-global--BackgroundColor--light-100);
-
+ --pf-c-input-group__textarea--MinHeight:                     var(--pf-global--spacer--xl);
 > * + * {
   margin-left: -1px;
 }
@@ -49,5 +49,8 @@
 
   input:not([type="checkbox"]):not([type="radio"]), textarea {
     flex: 2;
+  }
+  textarea{
+    min-height: var(--pf-c-input-group__textarea--MinHeight);
   }
 }
