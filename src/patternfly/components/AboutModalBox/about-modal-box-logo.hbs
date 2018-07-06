@@ -1,6 +1,6 @@
-<div class="pf-c-about-modal-box__logo {{pf-c-about-modal-box-logo--modifier}}"
-  {{#if pf-c-about-modal-box-logo__id}}
-    id="{{pf-c-about-modal-box-logo__id}}"
+<div class="pf-c-about-modal-box__logo{{#if about-modal-box-logo--modifier}} {{about-modal-box-logo--modifier}}{{/if}}"
+  {{#if about-modal-box-logo--attributes}}
+    {{{about-modal-box-logo--attributes}}}
   {{/if}}>
   {{> @partial-block}}
 </div>

@@ -1,8 +1,6 @@
-<div class="pf-c-about-modal-box__header {{pf-c-about-modal-box-header--modifier}}"
-    {{#if pf-c-about-modal-box-header__id}}
-    id="{{pf-c-about-modal-box-header__id}}"
+<header class="pf-c-about-modal-box__header{{#if about-modal-box-header--modifier}} {{about-modal-box-header--modifier}}{{/if}}"
+  {{#if about-modal-box-header--attributes}}
+    {{{about-modal-box-header--attributes}}}
   {{/if}}>
   {{> @partial-block}}
-</div>
-
-
+</header>

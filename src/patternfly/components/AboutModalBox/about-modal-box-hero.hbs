@@ -1,8 +1,6 @@
-<div class="pf-c-about-modal-box__hero {{pf-c-about-modal-box-hero--modifier}}"
-    {{#if pf-c-about-modal-box-hero__id}}
-    id="{{pf-c-about-modal-box-hero__id}}"
+<div class="pf-c-about-modal-box__hero{{#if about-modal-box-hero--modifier}} {{about-modal-box-hero--modifier}}{{/if}}"
+  {{#if about-modal-box-hero--attributes}}
+    {{{about-modal-box-hero--attributes}}}
   {{/if}}>
   {{> @partial-block}}
 </div>
-
-
