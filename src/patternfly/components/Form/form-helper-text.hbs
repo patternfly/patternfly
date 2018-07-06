@@ -1,1 +1,4 @@
-<p class="pf-c-form__helper-text {{ pf-c-form--modifier }}" {{#if id}} id="{{id}}" {{/if}}>{{> @partial-block }}</p>
+<p class="pf-c-form__helper-text{{#if pf-c-form--modifier}} {{ pf-c-form--modifier }}{{/if}}" 
+{{#if id}} id="{{id}}"{{/if}}>
+{{> @partial-block }}
+</p>

@@ -12,7 +12,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Simple Form Demo Example">
+      <Example heading="Simple Form Demo - check back when all form elements are complete">
         {simpleFormDemoExample}
       </Example>
     </Documentation>

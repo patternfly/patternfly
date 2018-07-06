@@ -6,7 +6,6 @@ import FormTextInputExample from './form-text-input-example.hbs';
 import FormSelectInputExample from './form-select-input-example.hbs';
 import FormChecksRadioExample from './form-check-radio-example.hbs';
 import FormTextareaExample from './form-textarea-example.hbs';
-import FormDatalistExample from './form-datalist-example.hbs';
 import '../styles.scss';
 
 export const Docs = docs;
@@ -16,7 +15,6 @@ export default () => {
   const formSelectInputExample = FormSelectInputExample();
   const formChecksRadioExample = FormChecksRadioExample();
   const formTextareaExample = FormTextareaExample();
-  const formDatalistExample = FormDatalistExample();
 
   return (
     <Documentation docs={Docs}>
@@ -24,7 +22,6 @@ export default () => {
       <Example heading="Text inputs">{formTextInputExample}</Example>
       <Example heading="Select inputs">{formSelectInputExample}</Example>
       <Example heading="Textareas">{formTextareaExample}</Example>
-      <Example heading="Datalist">{formDatalistExample}</Example>
     </Documentation>
   );
 };

@@ -1,14 +1,10 @@
-## Overview
-
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `for` | `<label id="{for}">` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
 | `id` | `all form inputs, radios, checkboxes, selects, textareas...` |  Each `<form>` field must have an `id` attribute that matches its labels `for` value. **Required** |
-| `data-required="true"` | `<label` |  Labels associated with required fields must include this attribute. |
+| `data-required="true"` | `<label>` |  Labels associated with required fields must include this attribute. |
 | `required aria-required="true"` | `<input>` | Required fields must include these attributes. |
 | `id="{helper_text_id}"` | `.pf-c-form__helper-text` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<p class="pf-c-form__helper-text" id="{helper_text_id}" ...>`.  |
 | `aria-describedby="{helper_text_id}"` | `<input>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}" ...>`.  |
