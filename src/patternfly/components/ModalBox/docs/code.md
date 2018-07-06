@@ -1,6 +1,6 @@
 ## Overview
 
-A modal box is a generic rectangular container that can be used to build modals. A modal box can have three sections: header, body, and footer. Header or body is required, but not both.
+A modal box is a generic rectangular container that can be used to build modals. A modal box can have three sections: header, body, and footer. Header or body is required. If no `pf-c-modal-box__header-title` is used, alternative text with a corresponding `id` must be provided for the modal `aria-labeledby` value.
 
 ## Accessibility
 

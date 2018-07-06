@@ -1,11 +1,11 @@
-{{#> modal-box modal-box--modifier="pf-m-lg" aria-labelledby="modal-lg-title"}}
+{{#> modal-box modal-box--modifiers="pf-m-lg" modal-box--attributes='aria-labelledby="modal-lg-title"'}}
   {{#> modal-box-header}}
     {{#> modal-box-close}}
-      {{#> button btnClass="pf-m-action" aria-label="Close Dialog" id="modal-close"}}
+      {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Close Dialog" id="modal-close"'}}
         <i class="fas fa-times"></i>
       {{/button}}
     {{/modal-box-close}}
-    {{#> modal-box-header-title id="modal-lg-title"}}
+    {{#> modal-box-header-title  modal-box-header-title--type="h2" modal-box-header-title--attributes='id="modal-lg-title"'}}
       Modal Header
     {{/modal-box-header-title}}
   {{/modal-box-header}}

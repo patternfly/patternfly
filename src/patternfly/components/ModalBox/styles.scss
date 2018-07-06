@@ -50,10 +50,6 @@
   --pf-c-modal-box__footer--ButtonSpacer: var(--pf-global--spacer--md);
   --pf-c-modal-box__footer--ItemSpacer: var(--pf-global--spacer--xs);
 
-  // Box button-close variables
-  --pf-c-modal-box__close--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
-  --pf-c-modal-box__close--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
-
   // This component always needs to be light
   @extend %pf-t-light;
 
@@ -85,10 +81,7 @@
   // Header
   &__header {
     flex: 0 0 auto;
-    padding-top: var(--pf-c-modal-box__header--PaddingTop);
-    padding-right: var(--pf-c-modal-box__header--PaddingRight);
-    padding-bottom: var(--pf-c-modal-box__header--PaddingBottom);
-    padding-left: var(--pf-c-modal-box__header--PaddingLeft);
+    padding: var(--pf-c-modal-box__header--PaddingTop) var(--pf-c-modal-box__header--PaddingRight) var(--pf-c-modal-box__header--PaddingBottom) var(--pf-c-modal-box__header--PaddingLeft);
 
     // Header title
     &-title {
@@ -101,7 +94,6 @@
 
         // Up to max height $pf-c-modal-box--breakpoint-sm--Height: reset display and set single line overflow ellipsis
         @media screen and (max-height: $pf-c-modal-box--breakpoint-sm--Height) {
-          // display: block;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -142,17 +134,10 @@
   // Body
   &__body {
     flex: 1 1 auto;
-    padding-top: var(--pf-c-modal-box__body--PaddingTop);
-    padding-right: var(--pf-c-modal-box__body--PaddingRight);
-    padding-bottom: var(--pf-c-modal-box__body--PaddingBottom);
-    padding-left: var(--pf-c-modal-box__body--PaddingLeft);
+    padding: var(--pf-c-modal-box__body--PaddingTop) var(--pf-c-modal-box__body--PaddingRight) var(--pf-c-modal-box__body--PaddingBottom) var(--pf-c-modal-box__body--PaddingLeft);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
-
-    .pf-c-modal-box__close {
-      margin-top: var(--pf-c-modal-box__close--MarginTop);
-    }
   }
 
   // Footer
@@ -160,10 +145,7 @@
     display: flex;
     flex: 0 0 auto;
     align-items: center;
-    padding-top: var(--pf-c-modal-box__footer--PaddingTop);
-    padding-right: var(--pf-c-modal-box__footer--PaddingRight);
-    padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
-    padding-left: var(--pf-c-modal-box__footer--PaddingLeft);
+    padding: var(--pf-c-modal-box__footer--PaddingTop) var(--pf-c-modal-box__footer--PaddingRight) var(--pf-c-modal-box__footer--PaddingBottom) var(--pf-c-modal-box__footer--PaddingLeft);
 
     // Using margin-left instead of justify: flex-end; as there may be other elements in the footer that align left
     // Limit scope to direct child buttons, allows use of layouts if needed
@@ -184,7 +166,6 @@
   // Button close
   &__close {
     float: right;
-    margin-right: var(--pf-c-modal-box__close--MarginRight);
   }
 
   // If the first child isn't a header, then we need to put the header's top padding there

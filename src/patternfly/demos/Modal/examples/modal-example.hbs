@@ -1,18 +1,18 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box aria-labelledby="modal-title" aria-describedby="modal-description"}}
+      {{#> modal-box modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
         {{#> modal-box-header}}
           {{#> modal-box-close}}
-            {{#> button btnClass="pf-m-action" aria-label="Close Dialog" id="modal-close"}}
+            {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Close Dialog"'}}
               <i class="fas fa-times"></i>
             {{/button}}
           {{/modal-box-close}}
-          {{#> modal-box-header-title id="modal-title"}}
+          {{#> modal-box-header-title modal-box-header-title--attributes='id="modal-title"'}}
             Overwrite existing file?
           {{/modal-box-header-title}}
         {{/modal-box-header}}
-        {{#> modal-box-body id="modal-description"}}
+        {{#> modal-box-body modal-box-body--attributes='id="modal-description"'}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
         {{/modal-box-body}}
