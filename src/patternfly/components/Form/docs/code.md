@@ -2,13 +2,13 @@
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `for` | `<label id="{for}">` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
-| `id` | `all form inputs, radios, checkboxes, selects, textareas...` |  Each `<form>` field must have an `id` attribute that matches its labels `for` value. **Required** |
+| `for` | `<label>` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
+| `id` | `<input type="radio/checkbox/text">`, `<select>`, `<textarea>` |  Each `<form>` field must have an `id` attribute that matches its label's `for` value. **Required** |
 | `data-required="true"` | `<label>` |  Labels associated with required fields must include this attribute. |
-| `required aria-required="true"` | `<input>` | Required fields must include these attributes. |
+| `required aria-required="true"` | `<input>`, `<select>`, `<textarea>` | Required fields must include these attributes. |
 | `id="{helper_text_id}"` | `.pf-c-form__helper-text` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<p class="pf-c-form__helper-text" id="{helper_text_id}" ...>`.  |
-| `aria-describedby="{helper_text_id}"` | `<input>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}" ...>`.  |
-| `aria-invalid="true" aria-errormessage="{helper_text_id}"` | `<input>` | Where form validation fails, `aria-errormessage` is used instead of `aria-describedby`. |
+| `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}" ...>`.  |
+| `aria-invalid="true" aria-errormessage="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Where form validation fails, `aria-errormessage` is used instead of `aria-describedby`. |
 
 
 ## Usage
@@ -20,7 +20,7 @@
 | `.pf-c-form__input` | `<input>` |  Initiates a form input. **Required** |
 | `.pf-c-form__checkbox` | `<input type="checkbox">` |  Initiates a form checkbox. **Required** |
 | `.pf-c-form__radio` | `<input type="radio">` |  Initiates a form radio. **Required** |
-| `.pf-c-form__select` | `<select>` |  Initiates a form radio. **Required** |
+| `.pf-c-form__select` | `<select>` |  Initiates a form select. **Required** |
 | `.pf-c-form__textarea` | `<textarea>` |  Initiates a form textarea. **Required** |
 | `.pf-c-form__datalist` | `<input list="...">` |  Initiates a form datalist input. **Required** |
 | `.pf-c-form__datalist-list` | `<datalist>` |  Initiates a form datalist. **Required** |
