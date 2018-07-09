@@ -62,9 +62,11 @@ If you use PatternFly, or contribute to PatternFly as a designer or developer, t
 | Functionality that uses complex gestures can also be operated with a single pointer without a path based gesture | [WCAG 2.5.1](https://www.w3.org/WAI/WCAG21/quickref/#pointer-gestures) | `design` |  |  |  |
 | Pointer events can be cancelled  | [WCAG 2.5.2](https://www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation) | | | | `js` |
 | Visible labels of UI components are either the same as the accessible name or used in the beginning of the accessible name | [WCAG 2.5.3](https://www.w3.org/WAI/WCAG21/quickref/#label-in-name) |  | `html` |  |  |
-| The target area for clickable elements is at least 44 by 44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size) |  |  | `css` |  |
+| The target area for clickable elements is at least 32 by 32 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)* |  |  | `css` |  |
 | An accessible name is provided for all elements | [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value) | `design` | `html` |  |  |
 | Status messages can be programmatically determined through role or properties | [WCAG 4.1.3](https://www.w3.org/WAI/WCAG21/quickref/#status-messages) |  | `html` |  |  |
+
+*WCAG 2.5.5 is included for reference only. This guideline suggests a size that is larger than what PatternFly requires.
 
 ### What Products Should Address
 
@@ -105,13 +107,12 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 ### Labels and Accessible Names
 
 - #### Form Fields
-  - Use explicit linking between `label` and form input elements (e.g. `input`, `textarea`, or `select`) when both elements are present. Aside from providing an accessible name to screen readers, this method also increases the clickable area of the form element by making the label clickable, too. [H44](https://www.w3.org/TR/WCAG20-TECHS/H44.html)
+  - Use explicit linking between `label` and form input elements (e.g. `input`, `textarea`, or `select`) when both elements are present. Aside from providing an accessible name to screen readers, this method also increases the clickable area of the form element by making the label clickable, too. ([H44](https://www.w3.org/TR/WCAG20-TECHS/H44.html))
   - When a `label` element cannot accompany a form input element:
-      - Provide the name using `aria-label`. [ARIA14](https://www.w3.org/TR/WCAG20-TECHS/H65.html)
-      - In a single-field form, the submit button label can serve as the field label for sighted users [G167](https://www.w3.org/TR/WCAG20-TECHS/general.html#G167)
-      
+      - Provide the label using `aria-label` or `aria-labelledby`. ([ARIA14](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html))
+      - In a single-field form, the submit button label can serve as the field label for sighted users ([G167](https://www.w3.org/TR/WCAG20-TECHS/general.html#G167)) as well as assistive devices when using `aria-labelledby`
 - #### Landmark Roles
-  - Screen reader users can navigate to sections of a page when [landmark roles](https://www.w3.org/TR/wai-aria-1.1/#landmark_roles) are used. Whenever a landmark role is used more than once, provide a name using `aria-label` or `aria-labelledby` to provide context for that landmark. [ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html) [ARIA16](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html)
+  - Screen reader users can navigate to sections of a page when [landmark roles](https://www.w3.org/TR/wai-aria-1.1/#landmark_roles) are used. Whenever a landmark role is used more than once, provide a name using `aria-label` or `aria-labelledby` to provide context for that landmark. ([ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [ARIA16](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html))
   - While [`toolbar`](https://www.w3.org/TR/wai-aria-1.1/#toolbar) is not a landmark role, the same rule applies to this role.
 - #### Icons
   Icons can either be decorative or semantic. Icons are **decorative** if you can remove an icon without affecting the information that is presented on the page. Icons are **semantic** when they provide information that otherwise isn't present, such as indicating status, indicating type of alert message, or replacing text as button labels. When an icon is semantic, the meaning must be provided in alternative ways to the user. The following guidelines should be followed when using icons within PatternFly components.
@@ -141,7 +142,13 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 
 ## Testing
 To keep testing simple and easy to complete, we ask that contributors complete the following tests to try to catch most of the accessibility issues that may be present:
-- Test keyboard accessibility
+1. Test keyboard accessibility, and check that these requirements are met:
+  - All functionality is keyboard accessible
+  - Order of elements in the HTML and in the layout follow a logical order
+  - Elements with focus are clearly visible
 - Use the [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) to disable styles, then test the information architecture and presence of adequate text labels.
 - Test with any screen reader available in your operating system
-- Check color contrast
+- Check color contrast for:
+  - Text color against background color ([Understanding WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
+  - Text color against link color ([Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html))
+  - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
