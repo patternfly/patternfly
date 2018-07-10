@@ -24,6 +24,10 @@
   --pf-c-modal-box--MarginLeft: var(--pf-c-modal-box--MarginRight);
 
   // Box Header variables
+  --pf-c-modal-box__close--Top: var(--pf-global--spacer--sm);
+  --pf-c-modal-box__close--Right: var(--pf-global--spacer--md);
+
+  // Box Header variables
   --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-modal-box__header--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
@@ -39,6 +43,7 @@
   --pf-c-modal-box__body--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-modal-box__body--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-modal-box__body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__body--MarginTop: var(--pf-global--spacer--xl);
 
   // Box Footer variables
   --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--xl);
@@ -53,6 +58,7 @@
   // This component always needs to be light
   @extend %pf-t-light;
 
+  position: relative;
   z-index: var(--pf-c-modal-box--ZIndex);
   display: flex;
   flex-direction: column;
@@ -135,9 +141,17 @@
   &__body {
     flex: 1 1 auto;
     padding: var(--pf-c-modal-box__body--PaddingTop) var(--pf-c-modal-box__body--PaddingRight) var(--pf-c-modal-box__body--PaddingBottom) var(--pf-c-modal-box__body--PaddingLeft);
+    // Adding margin top here for no header being present. When the header is present, margin-top is removed
+    margin-top: var(--pf-c-modal-box__body--MarginTop);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
+    word-break: break-word;
+  }
+
+  // Removing top margin when header is present
+  &__header + &__body {
+    margin-top: 0;
   }
 
   // Footer
@@ -165,13 +179,9 @@
 
   // Button close
   &__close {
-    float: right;
-  }
-
-  // If the first child isn't a header, then we need to put the header's top padding there
-  &__body:first-child,
-  &__footer:first-child {
-    padding-top: var(--pf-c-modal-box__header--PaddingTop);
+    position: absolute;
+    top: var(--pf-c-modal-box__close--Top);
+    right: var(--pf-c-modal-box__close--Right);
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
