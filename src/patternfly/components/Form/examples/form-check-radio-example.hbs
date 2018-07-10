@@ -24,7 +24,7 @@
       {{#> check pf-c-check-type="radio" name="radios" id="radio2" checked="true"}}{{/check}}  
       Radio 2, checked
     {{/form-label}}
-    {{#> form-label pf-c-form--modifier="pf-m-disabled" for="radio3"}}
+    {{#> form-label pf-c-form__label--modifier="pf-m-disabled" for="radio3"}}
       {{#> check pf-c-check-type="radio" name="radios" id="radio3" disabled="true"}}{{/check}}  
       Radio 3, disabled
     {{/form-label}}
@@ -32,7 +32,7 @@
   
   {{#> form-fieldset}}
     {{#> form-legend}}Inline checkboxes nested in label{{/form-legend}}
-    {{#> form-group pf-c-form--modifier="pf-m-inline"}}
+    {{#> form-group pf-c-form__group--modifier="pf-m-inline"}}
       {{#> form-label for="checkbox4"}}
       {{#> check pf-c-check-type="checkbox" name="checkbox4" id="checkbox4"}}{{/check}}
           Checkbox 1
@@ -49,7 +49,7 @@
   {{/form-fieldset}}
   {{#> form-fieldset}}
     {{#> form-legend}}Inline radios nested in label{{/form-legend}}
-    {{#> form-group pf-c-form--modifier="pf-m-inline"}}
+    {{#> form-group pf-c-form__group--modifier="pf-m-inline"}}
       {{#> form-label for="radio4"}}
       {{#> check pf-c-check-type="radio" name="radios2" id="radio4"}}{{/check}}
           Radio 1
