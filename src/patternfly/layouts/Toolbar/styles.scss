@@ -1,0 +1,60 @@
+@import "../../patternfly-utilities";
+
+// The value of component scoped variables is always defined by a global variable:
+.pf-l-toolbar {
+
+  /* stylelint-disable */
+
+  // Toolbar Section
+  --pf-l-toolbar__section--MarginTop: var(--pf-global--spacer--md);
+
+  // Toolbar Group
+  --pf-l-toolbar__group--MarginRight: var(--pf-global--spacer--xl);
+  --pf-l-toolbar__group--MarginLeft:  var(--pf-global--spacer--xl);
+
+  // Toolbar Item
+  --pf-l-toolbar__item--MarginRight:  var(--pf-global--spacer--md);
+  --pf-l-toolbar__item--MarginLeft:   var(--pf-global--spacer--md);;
+
+  /* stylelint-enable */
+
+  // toolbar, toolbar__group, toolbar__section shared styles
+  &,
+  &__section,
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  // Section
+  &__section {
+    flex-basis: 100%;
+
+    // Add margin-top for stacked sections
+    &:not(:first-child) {
+      margin-top: var(--pf-l-toolbar__section--MarginTop);
+    }
+  }
+
+  // Group
+  &__group:not(:last-child) {
+    margin-right: var(--pf-l-toolbar__group--MarginRight);
+  }
+
+  // Item
+  &__item {
+
+    // Set margin-right so items will align when wrapped
+    &:not(:last-child) {
+      margin-right: var(--pf-l-toolbar__item--MarginRight);
+    }
+  }
+
+  // Set flex item to align right
+  .pf-m-align-right {
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      margin-left: auto;
+    }
+  }
+}
