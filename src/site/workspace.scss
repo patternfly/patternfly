@@ -232,6 +232,10 @@
     margin-bottom: 1rem;
     font-size: 1.25em;
   }
+
+  h2 + p{
+    margin-bottom: 1rem;
+  }
 }
 
 .is-dark-preview {

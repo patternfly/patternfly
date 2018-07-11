@@ -1,0 +1,59 @@
+<div class="pf-c-input-group">
+  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+  {{#> form-controls controlType="textarea" name="textarea1" id="textarea1" }}
+{{/form-controls}}
+    {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
+</div> 
+<br>
+<br>
+<div class="pf-c-input-group">
+  {{#> form-controls controlType="textarea" name="textarea2" id="textarea2" }}
+{{/form-controls}}
+    {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
+</div> 
+<br>
+<br>
+<div class="pf-c-input-group">
+{{#> dropdown id="dropdown-example-collapsed"}}Dropdown{{/dropdown}}
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput3" name="textInput3" }}
+{{/form-controls}}
+    {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput4" name="textInput4" }}
+  {{/form-controls}}
+  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+  {{#> dropdown id="dropdown-example-collapsed"}}Dropdown{{/dropdown}}
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  <span class="pf-c-input-group__text" aria-label="text input label">
+    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+  </span>
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput5" name="textInput5" aria-label="standard input example" }}
+{{/form-controls}}
+<span class="pf-c-input-group__text">
+    .00
+  </span>
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput6" name="textInput6" aria-label="standard input example" }}
+{{/form-controls}}
+  <span class="pf-c-input-group__text">
+    @example.com
+  </span>
+</div>
+<br>
+<br>
+<div class="pf-c-input-group">
+  <span class="pf-c-input-group__text" aria-label="text input label">
+    <i class="fas fa-at" aria-hidden="true"></i>
+  </span>
+  {{#> form-controls controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-label="standard input example" }}
+{{/form-controls}}
+</div>
