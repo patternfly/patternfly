@@ -2,20 +2,25 @@
 
 Always add a modifier class to add color to the button.
 
+## Button vs Link
+Semantic buttons and links are important for usability as well as accessibility. Using an `a` instead of a `button` element to perform user initiated actions should be avoided, unless absolutely necessary.
+
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `disabled="disabled"` | `.pf-c-button` | Indicates the disabled state of the `button` to assistive technologies. |
-| `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
-| `aria-label="[button label text]"` | `.pf-m-action` | Provides an accessible name for the button when an icon is used instead of text. |
-
+| `disabled` | `.pf-c-button` | Indicates the disabled state of the `button` to user agents. **Required when button is disabled** |
+| `aria-disabled="true"` | `.pf-c-button`, `a.pf-c-button` | Indicates the disabled state of the `button` or `a` to assistive technologies. **Required when link or button is disabled** |
+| `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
+| `aria-label="[button label text]"` | `.pf-m-action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
+| `aria-label="[link description]"` | `a.pf-c-button` | The link text should adequately describe the link's purpose. If it does not, aria-label can provide more detailed interaction information. As a rule, always provide an aria-label value for hyperlinks. |
+| `tabindex="-1"` | `a.pf-c-button` | Indicates that the link should be unreachable to user agents and assistive technologies. **Required when link is disabled** |
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |

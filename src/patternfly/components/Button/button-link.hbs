@@ -1,0 +1,12 @@
+<a href="{{button--href}}" class="pf-c-button{{#if btnClass}} {{btnClass}}{{/if}}{{#if button--disabled}} pf-m-disabled{{/if}}"
+  {{#if btnAttributes}}
+    {{{btnAttributes}}} 
+  {{/if}}
+  {{#if button--disabled}}
+    aria-disabled="true"
+    tabindex="-1"
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</a>

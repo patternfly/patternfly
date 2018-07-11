@@ -1,8 +1,11 @@
-<button class="pf-c-button {{ btnClass }}" 
+<button class="pf-c-button{{#if btnClass}} {{btnClass}}{{/if}}{{#if button--disabled}} pf-m-disabled{{/if}}"
   {{#if btnAttributes}}
     {{{ btnAttributes }}} 
   {{/if}} 
-  >
+  {{#if button--disabled}}
+    aria-disabled="disabled"
+    disabled 
+  {{/if}}>
 
   {{#if @partial-block}}
     {{> @partial-block }}
