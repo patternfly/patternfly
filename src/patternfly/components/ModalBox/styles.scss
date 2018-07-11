@@ -2,6 +2,7 @@
 
 .pf-c-modal-box {
   // Component variables
+  // Use sass variables defining height breakpoints to simplify use in multiple media queries that require these values.
   $pf-c-modal-box--breakpoint-sm--Height: 400px;
   $pf-c-modal-box--breakpoint-md--Height: 700px;
 
@@ -52,8 +53,8 @@
   --pf-c-modal-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Box Footer Button variables
+  // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
   --pf-c-modal-box__footer--ButtonSpacer: var(--pf-global--spacer--md);
-  --pf-c-modal-box__footer--ItemSpacer: var(--pf-global--spacer--xs);
 
   // This component always needs to be light
   @extend %pf-t-light;
@@ -110,17 +111,19 @@
           /* stylelint-disable */
           display: -webkit-box;
           overflow: hidden;
-          -webkit-line-clamp: var(--pf-c-modal-box--LineClamp);
+          -webkit-line-clamp: var(--pf-c-modal-box--MaxLineClamp);
+          line-clamp: var(--pf-c-modal-box--MaxLineClamp);
           -webkit-box-orient: vertical;
           /* stylelint-enable */
         }
 
-        // Up to max width $pf-global--breakpoint--sm: limit lines to 5
+        // Up to max width $pf-global--breakpoint--sm: limit lines to --pf-c-modal-box--MaxLineClamp
         @media screen and (max-width: $pf-global--breakpoint--sm) and (min-height: $pf-c-modal-box--breakpoint-md--Height) {
           /* stylelint-disable */
           display: -webkit-box;
           overflow: hidden;
           -webkit-line-clamp: var(--pf-c-modal-box--MaxLineClamp);
+          line-clamp: var(--pf-c-modal-box--MaxLineClamp);
           -webkit-box-orient: vertical;
           /* stylelint-enable */
         }
