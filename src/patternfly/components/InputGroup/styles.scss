@@ -12,6 +12,9 @@
  --pf-c-input-group__text--BorderColor:                       var(--pf-global--BorderColor--dark);
  --pf-c-input-group__text--BackgroundColor:                   var(--pf-global--BackgroundColor--light-100);
  --pf-c-input-group__textarea--MinHeight:                     var(--pf-global--spacer--xl);
+ --pf-c-input-group__button--PaddingRight:                     var(--pf-global--spacer--md);
+ --pf-c-input-group__button--PaddingLeft:                     var(--pf-global--spacer--md);
+ 
 > * + * {
   margin-left: -1px;
 }
@@ -36,6 +39,11 @@
     height: 100%;
   }
 
+  .pf-c-button {
+    padding-right: var(--pf-c-input-group__button--PaddingRight);
+    padding-left: var(--pf-c-input-group__button--PaddingLeft);
+  }
+
   &__text {
     display: flex;
     align-items: center;
@@ -43,6 +51,7 @@
     padding-left: var(--pf-c-input-group__text--PaddingLeft);
     font-size: var(--pf-c-input-group__text--FontSize);
     color: var(--pf-c-input-group__text--Color);
+    text-align: center;
     background-color: var(--pf-c-input-group__text--BackgroundColor);
     border: var(--pf-c-input-group__text--BorderSize) solid var(--pf-c-input-group__text--BorderColor);
   }
