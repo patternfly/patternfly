@@ -1,3 +1,7 @@
-<div class="pf-c-modal-box__header {{ pf-c-modal-box__header--modifier }}">
+<header class="pf-c-modal-box__header{{#if modal-box-header--modifiers}} {{modal-box-header--modifiers}}{{/if}}" 
+  {{#if modal-box-header--attributes}}
+    {{{modal-box-header--attributes}}}
+  {{/if}}
+>  
   {{> @partial-block}}
-</div>
+</header>

@@ -1,38 +1,30 @@
 {{#> modal}}
-  {{#> backdrop }}
-    {{#> bullseye }}
-      {{#> bullseye-item }}
-        {{#> modal-box pf-c-modal-box--modifier="pf-m-lg" pf-c-modal-box__label="titleID" pf-c-model-box__description="descriptionID"}}
-          {{#> modal-box-header }}
-            {{#> split}}
-              {{#> split-item classModifier="pf-m-primary"}}
-                {{#> title titleType="h1" pf-c-title--Modifier="pf-m-3xl" pf-c-title--ID="titleID" }}
-                  Modal overlay title (large example)
-                {{/title}}
-              {{/ split-item }}
-              {{#> split-item classModifier="pf-m-secondary" }}
-                {{!-- Once there is a link button, this should be one and alignment may need to be adjusted --}}
-                {{#> button btnClass="pf-m-action" btnAttributes="aria-label=\"Close Dialog\" "}}
-                  <i class="fas fa-times"></i>
-                {{/ button}}
-              {{/ split-item }}
-            {{/ split }}
-          {{/ modal-box-header }}
-          {{#> modal-box-body }}
-            <p>Form here</p>
-          {{/ modal-box-body }}
-          {{#> modal-box-footer }}
-            <div class="pf-l-alignment pf-m-right">
-              {{#> button}}
-                Cancel
-              {{/ button }}
-              {{#> button btnClass="pf-m-primary"}}
-                Save
-              {{/button}}
-            </div>
-          {{/ modal-box-footer }}
-        {{/ modal-box}}
-      {{/ bullseye-item }}
-    {{/ bullseye }}
-  {{/ backdrop }}
-{{/ modal }}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifiers="pf-m-lg" modal-box--attributes='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
+        {{#> modal-box-close}}
+          {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Close Dialog"'}}
+            <i class="fas fa-times"></i>
+          {{/button}}
+        {{/modal-box-close}}
+        {{#> modal-box-header}}
+          {{#> modal-box-header-title modal-box-header-title--attributes='id="modal-lg-title"'}}
+            This header text is long and will wrap. This text will be truncated when the viewport height or width is limited. To see this in action, reduce the height and/or width of the viewport.
+          {{/modal-box-header-title}}
+        {{/modal-box-header}}
+        {{#> modal-box-body}}
+          <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
+          <p>Form here</p>
+        {{/modal-box-body}}
+        {{#> modal-box-footer}}
+          {{#> button}}
+            Cancel
+          {{/button}}
+          {{#> button btnClass="pf-m-primary"}}
+            Save
+          {{/button}}
+        {{/modal-box-footer}}
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}

@@ -1,11 +1,18 @@
-{{#> modal-box pf-c-modal-box-modifier="" }}
-  {{#> modal-box-header pf-c-modal-box__header-modifier="" }}
-    Modal Header
+{{#> modal-box modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+  {{#> modal-box-close}}
+    {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Close Dialog"'}}
+      <i class="fas fa-times"></i>
+    {{/button}}
+  {{/modal-box-close}}
+  {{#> modal-box-header}}
+    {{#> modal-box-header-title modal-box-header-title--attributes='id="modal-title"'}}
+      Modal Header
+    {{/modal-box-header-title}}
   {{/modal-box-header}}
-  {{#> modal-box-body pf-c-modal-box__content-modifier="" }}
-    Modal Body
+  {{#> modal-box-body modal-box-body--attributes='id="modal-description"'}}
+    To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
   {{/modal-box-body}}
-  {{#> modal-box-footer pf-c-modal-box__footer-modifier="" }}
+  {{#> modal-box-footer}}
     Modal Footer
   {{/modal-box-footer}}
 {{/modal-box}}
