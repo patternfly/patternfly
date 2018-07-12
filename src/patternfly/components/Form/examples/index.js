@@ -4,6 +4,8 @@ import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
 import FormTextInputExampleRaw from '!raw!./form-text-input-example.hbs';
 import FormTextInputExample from './form-text-input-example.hbs';
+import FormInputGroupExampleRaw from '!raw!./form-input-group-example.hbs';
+import FormInputGroupExample from './form-input-group-example.hbs';
 import FormSelectInputExampleRaw from '!raw!./form-select-input-example.hbs';
 import FormSelectInputExample from './form-select-input-example.hbs';
 import FormChecksRadioExampleRaw from '!raw!./form-check-radio-example.hbs';
@@ -16,6 +18,7 @@ export const Docs = docs;
 
 export default () => {
   const formTextInputExample = FormTextInputExample();
+  const formInputGroupExample = FormInputGroupExample();
   const formSelectInputExample = FormSelectInputExample();
   const formChecksRadioExample = FormChecksRadioExample();
   const formTextareaExample = FormTextareaExample();
@@ -27,6 +30,9 @@ export default () => {
       </Example>
       <Example heading="Text inputs" handlebars={FormTextInputExampleRaw}>
       {formTextInputExample}
+      </Example>
+      <Example heading="Input groups" handlebars={FormInputGroupExampleRaw}>
+      {formInputGroupExample}
       </Example>
       <Example heading="Select inputs" handlebars={FormSelectInputExampleRaw}>
       {formSelectInputExample}
