@@ -10,7 +10,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `disabled` | `.pf-c-button` | Indicates the disabled state of the `button` to user agents. **Required when button is disabled** |
-| `aria-disabled="true"` | `.pf-c-button`, `a.pf-c-button` | Indicates the disabled state of the `button` or `a` to assistive technologies. **Required when link or button is disabled** |
+| `aria-disabled="true"` | `a.pf-c-button` | Indicates the disabled state of the `a` to assistive technologies. **Required when link is disabled** |
 | `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
 | `aria-label="[button label text]"` | `.pf-m-action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 | `aria-label="[link description]"` | `a.pf-c-button` | The link text should adequately describe the link's purpose. If it does not, aria-label can provide more detailed interaction information. As a rule, always provide an aria-label value for hyperlinks. |
