@@ -226,12 +226,6 @@
   }
 
   tr:nth-child(even) {background: #f1f1f1}
-  
-  h2:not(.pf-c-modal-box__header-title) {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.25em;
-  }
 
   h2 + p{
     margin-bottom: 1rem;
@@ -268,12 +262,7 @@
 }
 
 .pf-c-about-modal-box {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .pf-c-title {
     margin-top: 0;
     margin-bottom: 0;
   }
