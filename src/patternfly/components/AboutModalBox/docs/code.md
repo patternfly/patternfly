@@ -7,10 +7,10 @@ About modal layout.
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-about-modal-box` | Identifies the element that serves as the modal container. **Required** |
-| `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required** |
 | `aria-labelledby="[id value of element describing modal]"` | `.pf-c-about-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when adequate titling element is present** |
 | `aria-label="[title of modal]"` | `.pf-c-about-modal-box` | Gives the modal an accessible name. **Required when adequate titling element is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-about-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
+| `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required** |
 | `aria-label="Close Dialog"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
 
 
