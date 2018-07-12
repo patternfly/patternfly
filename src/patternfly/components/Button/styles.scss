@@ -149,6 +149,7 @@
   &:hover,
   &.pf-m-hover {
     color: var(--pf-c-button--hover--Color);
+    text-decoration: none;
     background-color: var(--pf-c-button--hover--BackgroundColor);
     &::after {
       border-color: var(--pf-c-button--hover--BorderColor);

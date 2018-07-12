@@ -14,7 +14,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `aria-expanded="true"` | `.pf-c-dropdown__menu` | Indicates that the menu is visible |
 | `role="menuitem"` | `.pf-c-dropdown__menu-item` | Indicates that the menu item is a menu item |
 | `role="separator"` | `.pf-c-dropdown__separator` | Indicates that the separator is a separator |
-| `disabled="disabled"` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
+| `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
 | `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable |
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus |
 
