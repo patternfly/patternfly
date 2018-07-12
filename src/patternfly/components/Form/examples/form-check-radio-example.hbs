@@ -1,61 +1,69 @@
 {{#> form}}
   {{#> form-fieldset}}
     {{#> form-legend}}Standard checkboxes nested in label{{/form-legend}}
-    {{#> form-check}}
-      {{#> form-checkbox nested="true" value="checkboxOption1" id="checkbox1" name="checkbox1" text="Checkbox 1"}}
-        <div class="pf-c-tooltip">
-          <i class="fas fa-info-circle"></i>
-        </div>
-      {{/form-checkbox}}
-    {{/form-check}}
-    {{#> form-check}}
-      {{#> form-checkbox nested="true" value="checkboxOption2" id="checkbox2" name="checkbox2" text="Checkbox 2, checked" checked="true"}}{{/form-checkbox}}
-    {{/form-check}}
-    {{#> form-check}}
-      {{#> form-checkbox nested="true" value="checkboxOption3" id="checkbox3" name="checkbox3" text="Checkbox 3, disabled" disabled="true"}}{{/form-checkbox}}
-    {{/form-check}}
+    {{#> form-label for="checkbox1"}}
+      {{#> check pf-c-check-type="checkbox" name="checkbox1" id="checkbox1"}}{{/check}}
+          Checkbox 1
+    {{/form-label}}
+    {{#> form-label for="checkbox2"}}
+      {{#> check pf-c-check-type="checkbox" name="checkbox2" id="checkbox2" checked="true"}}{{/check}}
+          Checkbox 2, checked
+    {{/form-label}}
+    {{#> form-label pf-c-form--modifier="pf-m-disabled" for="checkbox3"}}
+      {{#> check pf-c-check-type="checkbox" name="checkbox3" id="checkbox3" disabled="true"}}{{/check}}
+          Checkbox 3, disabled
+    {{/form-label}}
   {{/form-fieldset}}
   {{#> form-fieldset}}
     {{#> form-legend}}Standard radios nested in label{{/form-legend}}
-    {{#> form-check}}
-      {{#> form-radio nested="true" value="radionOption1" id="radio1" name="radios1" text="Radio 1"}}{{/form-radio}}
-    {{/form-check}}
-    {{#> form-check}}
-      {{#> form-radio nested="true" value="radionOption2" id="radio2" name="radios1" text="Radio 2, checked" checked="true"}}{{/form-radio}}
-    {{/form-check}}
-    {{#> form-check}}
-      {{#> form-radio nested="true" value="radionOption3" id="radio3" name="radios1" text="Radio 3, disabled" disabled="true"}}{{/form-radio}}
-    {{/form-check}}
+    {{#> form-label for="radio1"}}
+      {{#> check pf-c-check-type="radio" name="radios" id="radio1"}}{{/check}}  
+      Radio 1
+    {{/form-label}}
+    {{#> form-label for="radio2"}}
+      {{#> check pf-c-check-type="radio" name="radios" id="radio2" checked="true"}}{{/check}}  
+      Radio 2, checked
+    {{/form-label}}
+    {{#> form-label pf-c-form__label--modifier="pf-m-disabled" for="radio3"}}
+      {{#> check pf-c-check-type="radio" name="radios" id="radio3" disabled="true"}}{{/check}}  
+      Radio 3, disabled
+    {{/form-label}}
   {{/form-fieldset}}
+  
   {{#> form-fieldset}}
     {{#> form-legend}}Inline checkboxes nested in label{{/form-legend}}
-    {{#> form-group pf-c-form--modifier="pf-m-inline"}}
-      {{#> form-check newcontent}}
-        {{#> form-checkbox nested="true" value="checkboxOption4" id="checkbox4" name="checkbox4" text="Checkbox 1"}}{{/form-checkbox}}
-      {{/form-check}}
-      {{#> form-check newcontent}}
-        {{#> form-checkbox nested="true" value="checkboxOption5" id="checkbox5" name="checkbox5" text="Checkbox 2"}}{{/form-checkbox}}
-      {{/form-check}}
-      {{#> form-check newcontent}}
-        {{#> form-checkbox nested="true" value="checkboxOption6" id="checkbox6" name="checkbox6" text="Checkbox 3" disabled="true"}}{{/form-checkbox}}
-      {{/form-check}}
+    {{#> form-group pf-c-form__group--modifier="pf-m-inline"}}
+      {{#> form-label for="checkbox4"}}
+      {{#> check pf-c-check-type="checkbox" name="checkbox4" id="checkbox4"}}{{/check}}
+          Checkbox 1
+    {{/form-label}}
+    {{#> form-label for="checkbox5"}}
+      {{#> check pf-c-check-type="checkbox" name="checkbox5" id="checkbox5"}}{{/check}}
+          Checkbox 2
+    {{/form-label}}
+    {{#> form-label for="checkbox6"}}
+      {{#> check pf-c-check-type="checkbox" name="checkbox6" id="checkbox6"}}{{/check}}
+          Checkbox 3
+    {{/form-label}}
     {{/form-group}}
   {{/form-fieldset}}
   {{#> form-fieldset}}
     {{#> form-legend}}Inline radios nested in label{{/form-legend}}
-    {{#> form-group pf-c-form--modifier="pf-m-inline"}}
-      {{#> form-check newcontent nested="true"}}
-        {{#> form-radio value="radionOption4" id="radio4" name="radios2" text="Radio 1"}}{{/form-radio}}
-        <div class="pf-c-tooltip">
-          <i class="fas fa-info-circle"></i>
-        </div>        
-      {{/form-check}}
-      {{#> form-check newcontent nested="true"}}
-        {{#> form-radio value="radionOption5" id="radio5" name="radios2" text="Radio 2"}}{{/form-radio}}
-      {{/form-check}}
-      {{#> form-check newcontent nested="true"}}
-        {{#> form-radio value="radionOption6" id="radio6" name="radios2" text="Radio 3" disabled="true"}}{{/form-radio}}
-      {{/form-check}}
+    {{#> form-group pf-c-form__group--modifier="pf-m-inline"}}
+      {{#> form-label for="radio4"}}
+      {{#> check pf-c-check-type="radio" name="radios2" id="radio4"}}{{/check}}
+          Radio 1
+    {{/form-label}}
+    {{#> form-label for="radio5"}}
+      {{#> check pf-c-check-type="radio" name="radios2" id="radio5"}}{{/check}}
+          Radio 2
+    {{/form-label}}
+    {{#> form-label for="radio6"}}
+      {{#> check pf-c-check-type="radio" name="radios2" id="radio6"}}{{/check}}
+          Radio 3
+    {{/form-label}}
     {{/form-group}}  
   {{/form-fieldset}}
+
+
 {{/form}}
