@@ -165,6 +165,8 @@
     grid-area: header;
     display: flex;
     flex-direction: column;
+    // When header text is on one line and the modal-box__logo is taller than header, retain bottom alignment
+    justify-content: flex-end;
     padding-right: var(--pf-c-about-modal-box__header--PaddingRight);
     padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
     padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
