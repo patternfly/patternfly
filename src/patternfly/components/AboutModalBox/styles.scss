@@ -21,11 +21,12 @@
   --pf-c-about-modal-box--MarginLeft: var(--pf-global--spacer--3xl);
   --pf-c-about-modal-box--MarginRight: var(--pf-global--spacer--3xl);
 
-  // Shared padding values
-  --pf-c-about-modal-box--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-about-modal-box--PaddingRight: var(--pf-global--spacer--2xl);
-  --pf-c-about-modal-box--PaddingBottom: var(--pf-global--spacer--2xl);
-  --pf-c-about-modal-box--PaddingLeft: var(--pf-global--spacer--2xl);
+  // Shared padding values allow us to change common padding to all components once
+  // Some modal components have more specific padding values
+  --pf-c-about-modal-box--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box--PaddingLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
     --pf-c-about-modal-box--PaddingTop: var(--pf-global--spacer--3xl);
@@ -37,21 +38,24 @@
   // Element variables
 
   // Brand
+  // Set default padding top, right, left to shared values
   --pf-c-about-modal-box__brand--PaddingTop: var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box__brand--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
   --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-c-about-modal-box--PaddingBottom);
   --pf-c-about-modal-box__brand--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
 
   // Close
+  // Set default padding top, right, bottom to shared values
   --pf-c-about-modal-box__close--PaddingTop: var(--pf-c-about-modal-box__brand--PaddingTop);
-  --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__brand--PaddingBottom);
   --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
+  --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__brand--PaddingBottom);
   --pf-c-about-modal-box__close--ZIndex: var(--pf-global--ZIndex--2xl);
 
   // Brand img
   --pf-c-about-modal-box__brand-image--Height: pf-size-prem(40px);
 
   // Header
+  // Set default padding right, bottom, left to shared values
   --pf-c-about-modal-box__header--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
   --pf-c-about-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-about-modal-box__header--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
@@ -61,6 +65,7 @@
 
   // Content
   // Using global padding values for margins to prevent scrollbar extending past content
+  // Set default margin top, right, bottom, left to shared values
   --pf-c-about-modal-box__content--MarginTop: var(--pf-c-about-modal-box--PaddingTop);
   --pf-c-about-modal-box__content--MarginRight: var(--pf-c-about-modal-box--PaddingRight);
   --pf-c-about-modal-box__content--MarginBottom: var(--pf-c-about-modal-box--PaddingBottom);
@@ -69,6 +74,7 @@
   --pf-c-about-modal-box__content--MinHeight: calc(1rem * 4 * var(--pf-global--LineHeight--md));
 
   // Logo
+  // Set default padding right, bottom, left to shared values
   --pf-c-about-modal-box__logo--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
   --pf-c-about-modal-box__logo--PaddingBottom: var(--pf-c-about-modal-box--PaddingBottom);
   --pf-c-about-modal-box__logo--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
@@ -81,19 +87,21 @@
   // height and width determined manually by visual design
   --pf-c-about-modal-box__logo-image--Width: pf-size-prem(236px);
   --pf-c-about-modal-box__logo-image--Height: pf-size-prem(110px);
-  --pf-c-about-modal-box__logo-image--BackgroundColor: $pf-color-white;
+  --pf-c-about-modal-box__logo-image--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
   // Button close
   --pf-c-about-modal-box__button-close--Color: var(--pf-global--Color--100);
   --pf-c-about-modal-box__button-close--hover--Color: var(--pf-global--Color--100);
   --pf-c-about-modal-box__button-close--ZIndex: var(--pf-global--ZIndex--2xl);
   --pf-c-about-modal-box__button-close--FontSize: var(--pf-global--FontSize--xl);
+
   // Height and width are 2x font-size
   --pf-c-about-modal-box__button-close--Width: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
   --pf-c-about-modal-box__button-close--Height: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
-  --pf-c-about-modal-box__button-close--BackgroundColor: $pf-color-black-1000;
 
-  $pf-c-about-modal-box__button-close--hover--BackgroundColor: rgba($pf-color-black-1000, .6);
+  // Close button uses a non-standard background color
+  --pf-c-about-modal-box__button-close--BackgroundColor: $pf-color-black-1000;
+  --pf-c-about-modal-box__button-close--hover--BackgroundColor: rgba($pf-color-black-1000, .4);
 
 
   // This component always needs to be dark  
@@ -178,6 +186,12 @@
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
+
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      min-height: auto;
+      overflow: visible;
+      overscroll-behavior: auto;
+    }
   }
 
   // Logo
@@ -229,6 +243,7 @@
     }
 
     // Close button
+    // Since this btn is unique to the about modal, use contextual selectors in this specific instance
     .pf-c-button.pf-m-action {
       display: flex;
       align-content: center;
@@ -242,7 +257,7 @@
 
       &:hover {
         color: var(--pf-c-about-modal-box__button-close--hover--Color);
-        background-color: $pf-c-about-modal-box__button-close--hover--BackgroundColor;
+        background-color: var(--pf-c-about-modal-box__button-close--hover--BackgroundColor);
       }
     }
   }

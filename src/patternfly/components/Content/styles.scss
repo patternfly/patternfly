@@ -81,6 +81,7 @@
   --pf-c-content--dl--ColumnGap: var(--pf-global--spacer--2xl);
   --pf-c-content--dl--RowGap: var(--pf-global--spacer--md);
   --pf-c-content--dt--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-content--dt--MarginTop: var(--pf-global--spacer--md);
 
   font-size: var(--pf-c-content--FontSize);
   line-height: var(--pf-c-content--LineHeight);
@@ -228,15 +229,32 @@
 
   dl {
     display: grid;
-    grid-column-gap: var(--pf-c-content--dl--ColumnGap);
-    grid-row-gap: var(--pf-c-content--dl--RowGap);
-    grid-template: auto / auto 1fr;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      grid-template: auto / auto 1fr;
+      grid-column-gap: var(--pf-c-content--dl--ColumnGap);
+      grid-row-gap: var(--pf-c-content--dl--RowGap);
+    }
   }
   dt {
-    grid-column: 1;
     font-weight: var(--pf-c-content--dt--FontWeight);
+
+    &:not(:first-child) {
+      margin-top: var(--pf-c-content--dt--MarginTop);
+
+      @media screen and (min-width: $pf-global--breakpoint--sm) {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      grid-column: 1;
+    }
   }
   dd {
-    grid-column: 2;
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      grid-column: 2;
+    }
   }
 }
