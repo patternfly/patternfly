@@ -78,8 +78,9 @@
   --pf-c-content--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-content--ul--ListStyle: var(--global-ListStyle);
   --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--dd--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--dd--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--dl--ColumnGap: var(--pf-global--spacer--xxl);
+  --pf-c-content--dl--RowGap: var(--pf-global--spacer--md);
+  --pf-c-content--dt--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   font-size: var(--pf-c-content--FontSize);
   line-height: var(--pf-c-content--LineHeight);
@@ -225,8 +226,17 @@
     }
   }
 
+  dl {
+    display: grid;
+    grid-column-gap: var(--pf-c-content--dl--ColumnGap);
+    grid-row-gap: var(--pf-c-content--dl--RowGap);
+    grid-template: auto / auto 1fr;
+  }
+  dt {
+    grid-column: 1;
+    font-weight: var(--pf-c-content--dt--FontWeight);
+  }
   dd {
-    margin-bottom: var(--pf-c-content--dd--MarginBottom);
-    margin-left: var(--pf-c-content--dd--MarginLeft);
+    grid-column: 2;
   }
 }

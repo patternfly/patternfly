@@ -1,0 +1,222 @@
+@import "../../patternfly-utilities";
+
+.pf-c-about-modal-box {
+  --pf-c-about-modal-box--Color: var(--pf-global--Color--dark-100);
+
+  // Component variables
+  --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--xxl);
+  // Modal uses a non-standard background color
+  --pf-c-about-modal-box--BackgroundColor: $pf-color-black-1000;
+  // This is a special one-off glow for the about modal
+  --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(256, 256, 256, .4);
+  --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--xxl);
+  // Width and height values are determined by design
+  --pf-c-about-modal-box--MaxWidth: pf-size-prem(1232px);
+  // Height is optimized for the exact height desired
+  --pf-c-about-modal-box--Height: pf-size-prem(762px);
+  // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
+  --pf-c-about-modal-box--MinHeight: calc(var(--pf-c-about-modal-box__brand--PaddingTop) + var(--pf-c-about-modal-box__header--PaddingTop) + var(--pf-c-about-modal-box__header--PaddingBottom) + var(--pf-c-about-modal-box__content--PaddingTop) + var(--pf-c-about-modal-box__content--PaddingBottom) + var(--pf-c-about-modal-box__brand-image--Height) + calc(1rem * 6 * var(--pf-global--LineHeight--md)));
+  // MaxHeight ensures that the modal will not go off the screen and instead the content will scroll
+  --pf-c-about-modal-box--MaxHeight: calc(100vh - (2 * (var(--pf-global--spacer--xxxl))));
+  //Margin left and right make sure there is some space around the modal at the largest breakpoint
+  --pf-c-about-modal-box--MarginLeft: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box--MarginRight: var(--pf-global--spacer--xxxl);
+
+  // Element variables
+
+  // brand
+  --pf-c-about-modal-box__brand--PaddingTop: var(--pf-global--spacer--xxl);
+  --pf-c-about-modal-box__brand--PaddingRight: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__brand--PaddingLeft: var(--pf-global--spacer--xxxl);
+
+  // brand-image
+  --pf-c-about-modal-box__brand-image--Height: pf-size-prem(40px);
+
+  // header
+  --pf-c-about-modal-box__header--PaddingTop: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__header--PaddingRight: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-about-modal-box__header--PaddingLeft: var(--pf-global--spacer--xxxl);
+
+  // content
+  --pf-c-about-modal-box__content--PaddingTop: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__content--PaddingRight: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__content--PaddingBottom: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__content--PaddingLeft: var(--pf-global--spacer--xxxl);
+  // This is the min allowable height of the content but is used in the grid row template
+  --pf-c-about-modal-box__content--MinHeight: calc(var(--pf-c-about-modal-box__content--PaddingTop) + var(--pf-c-about-modal-box__content--PaddingBottom) + calc(1rem * 1 * var(--pf-global--LineHeight--md)));
+
+  // logo
+  --pf-c-about-modal-box__logo--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__logo--PaddingRight: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__logo--PaddingBottom: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__logo--PaddingLeft: var(--pf-global--spacer--xxxl);
+
+  // logo-background
+  --pf-c-about-modal-box__logo-background--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__logo-background--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__logo-background--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__logo-background--PaddingLeft: var(--pf-global--spacer--md);
+  // height and width determined manually by visual design
+  --pf-c-about-modal-box__logo-background--Width: pf-size-prem(236px);
+  --pf-c-about-modal-box__logo-background--Height: pf-size-prem(110px);
+  --pf-c-about-modal-box__logo-background--BackgroundColor: $pf-color-white;
+
+  // closer
+  --pf-c-about-modal-box__closer--PaddingTop: var(--pf-global--spacer--xxl);
+  --pf-c-about-modal-box__closer--PaddingRight: var(--pf-global--spacer--xxxl);
+  --pf-c-about-modal-box__closer--ZIndex: var(--pf-global--ZIndex--xxl);
+
+  // This component always needs to be dark  
+  @extend %pf-t-dark;
+
+  z-index: var(--pf-c-about-modal-box--ZIndex);
+  display: grid;
+  grid-template-areas:
+    "brand closer"
+    "header header"
+    "content content"
+    "logo logo";
+  //TODO: put in the correct amount of minimum space
+  grid-template-rows: auto auto minmax(var(--pf-c-about-modal-box__content--MinHeight), 1fr) auto;
+  // Modal is full screen until larger breakpoint
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  // Because this component is always dark, set the background color 
+  background-color: var(--pf-c-about-modal-box--BackgroundColor);
+  box-shadow: var(--pf-c-about-modal-box--BoxShadow);
+
+  // Elements
+  & &__brand {
+    display: block;
+    padding-top: var(--pf-c-about-modal-box__brand--PaddingTop);
+    padding-right: var(--pf-c-about-modal-box__brand--PaddingRight);
+    padding-left: var(--pf-c-about-modal-box__brand--PaddingLeft);
+    grid-area: brand;
+  }
+  & &__brand-image {
+    height: var(--pf-c-about-modal-box__brand-image--Height);
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: var(--pf-c-about-modal-box__header--PaddingTop);
+    padding-right: var(--pf-c-about-modal-box__header--PaddingRight);
+    padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
+    padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
+    grid-area: header;
+    // Must override the workspace h2 styling leaking in
+    h2 {
+      margin-top: 0;
+      margin-bottom: var(--pf-global--spacer--md);
+    }
+  }
+  &__content {
+    padding-top: var(--pf-c-about-modal-box__content--PaddingTop);
+    padding-right: var(--pf-c-about-modal-box__content--PaddingRight);
+    padding-left: var(--pf-c-about-modal-box__content--PaddingLeft);
+    margin-bottom: var(--pf-c-about-modal-box__content--PaddingBottom);
+    grid-area: content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  &__logo {
+    padding-top: var(--pf-c-about-modal-box__logo--PaddingTop);
+    padding-right: var(--pf-c-about-modal-box__logo--PaddingRight);
+    padding-bottom: var(--pf-c-about-modal-box__logo--PaddingBottom);
+    padding-left: var(--pf-c-about-modal-box__logo--PaddingLeft);
+    grid-area: logo;
+  }
+  &__logo-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--pf-c-about-modal-box__logo-background--Width);
+    height: var(--pf-c-about-modal-box__logo-background--Height);
+    padding-top: var(--pf-c-about-modal-box__logo-background--PaddingTop);
+    padding-right: var(--pf-c-about-modal-box__logo-background--PaddingRight);
+    padding-bottom: var(--pf-c-about-modal-box__logo-background--PaddingBottom);
+    padding-left: var(--pf-c-about-modal-box__logo-background--PaddingLeft);
+    background-color: var(--pf-c-about-modal-box__logo-background--BackgroundColor);
+  }
+  &__closer {
+    grid-area: closer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: var(--pf-c-about-modal-box__closer--PaddingTop);
+    padding-right: var(--pf-c-about-modal-box__closer--PaddingRight);
+  }
+  // Don't display the hero at the narrowest breakpoint
+  &__hero {
+    display: none;
+  }
+
+  // Responsive behavior - at small breakpoint
+  @media only screen and (min-width: $pf-global--breakpoint--sm)  {
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas:
+      "brand   hero"
+      "header  hero"
+      "content hero"
+      "logo    hero";
+
+    & &__logo {
+      padding-top: 0;
+    }
+    & &__hero {
+      display: block;
+      grid-area: hero;
+    }
+    & &__hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & &__closer {
+      grid-area: 1 / 2 / 2 / 3;
+      // make sure the closer is above the hero image grid area
+      z-index: var(--pf-c-about-modal-box__closer--ZIndex);
+      //center the closer over the narrow hero image
+      justify-content: center;
+      padding-right: 0;
+    }
+  }
+
+  // Responsive behavior - at large breakpoint
+  @media only screen and (min-width: $pf-global--breakpoint--lg)  {
+    grid-template-columns: 62fr 38fr;
+    grid-template-areas:
+      "brand   hero"
+      "header  hero"
+      "content hero"
+      "content hero";
+    max-width: var(--pf-c-about-modal-box--MaxWidth);
+    height: var(--pf-c-about-modal-box--Height);
+    min-height: var(--pf-c-about-modal-box--MinHeight);
+    max-height: var(--pf-c-about-modal-box--MaxHeight);
+    margin-right: var(--pf-c-about-modal-box--MarginRight);
+    margin-left: var(--pf-c-about-modal-box--MarginLeft);
+
+    & &__logo {
+      grid-area: 2 / 2 / 3 / 3;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+    & &__closer {
+      grid-area: 1 / 2 / 2 / 3;
+      justify-content: flex-end;
+      // return to normal spacing now that the hero image is wider
+      padding-right: var(--pf-c-about-modal-box__closer--PaddingRight);
+    }
+  }
+}
