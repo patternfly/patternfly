@@ -1,0 +1,74 @@
+@import "../../patternfly-utilities";
+
+.pf-c-popover {
+  // Component variables
+  --pf-c-popover--MinWidth: 100px;
+  --pf-c-popover--MaxWidth: 300px;
+  --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow);
+  --pf-c-popover--Margin: var(--pf-global--arrow--size);
+
+  // Arrow variables
+  --pf-c-popover__arrow--Size: var(--pf-global--arrow--size);
+  --pf-c-popover__arrow--Margin: var(--pf-global--arrow--size) / 2;
+  --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow);
+  --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
+  $half-size: $pf-global--arrow--size / 2;
+
+  position: relative;
+  min-width: var(--pf-c-popover--MinWidth);
+  max-width: var(--pf-c-popover--MaxWidth);
+  box-shadow: var(--pf-c-popover--BoxShadow);
+
+  &__content {
+    min-height: 0;
+    box-shadow: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    width: var(--pf-c-popover__arrow--Size);
+    height: var(--pf-c-popover__arrow--Size);
+    margin: var(--pf-c-popover__arrow--Margin);
+    pointer-events: none;
+    background-color: var(--pf-c-popover__arrow--BackgroundColor);
+    box-shadow: var(--pf-c-popover__arrow--BoxShadow);
+    transform: rotate(45deg);
+  }
+
+  &.pf-m-top {
+    margin-bottom: var(--pf-c-popover--Margin);
+  }
+
+  &.pf-m-bottom {
+    margin-top: var(--pf-c-popover--Margin);
+  }
+
+  &.pf-m-left {
+    margin-right: var(--pf-c-popover--Margin);
+  }
+
+  &.pf-m-right {
+    margin-left: var(--pf-c-popover--Margin);
+  }
+
+  &.pf-m-top > &__arrow {
+    bottom: -$half-size;
+    left: calc(50% - #{$half-size});
+  }
+
+  &.pf-m-bottom > &__arrow {
+    top: -$half-size;
+    left: calc(50% - #{$half-size});
+  }
+
+  &.pf-m-right > &__arrow {
+    top: calc(50% - #{$half-size});
+    left: -$half-size;
+  }
+
+  &.pf-m-left > &__arrow {
+    top: calc(50% - #{$half-size});
+    right: -$half-size;
+  }
+}

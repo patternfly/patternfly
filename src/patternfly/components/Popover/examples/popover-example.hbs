@@ -1,0 +1,32 @@
+{{#> popover direction="pf-m-right" header="hello"}}
+    World!  I am a popover
+    {{#*inline "popover-parent"}}
+        {{#> button btnClass='pf-m-primary'}}
+            parent
+        {{/button}}
+    {{/inline}}
+{{/popover}}
+{{#> popover direction="pf-m-top" header="I can have a long title"}}
+    And also very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very long body text.
+    {{#*inline "popover-parent"}}
+        {{#> button btnClass='pf-m-primary'}}
+            parent
+        {{/button}}
+    {{/inline}}
+{{/popover}}
+{{#> popover direction="pf-m-bottom"}}
+    Or no body text, and be short
+    {{#*inline "popover-parent"}}
+        {{#> button btnClass='pf-m-primary'}}
+            parent
+        {{/button}}
+    {{/inline}}
+{{/popover}}
+{{#> popover direction="pf-m-left"}}
+    !
+    {{#*inline "popover-parent"}}
+        {{#> button btnClass='pf-m-primary'}}
+            parent
+        {{/button}}
+    {{/inline}}
+{{/popover}}

@@ -1,0 +1,130 @@
+@import "../../patternfly-utilities";
+
+.pf-c-overlay {
+  --pf-c-overlay__container--ZIndex: var(--pf-global--ZIndex--xl);
+
+  position: relative;
+  display: inline-block;
+
+  &__container {
+    position: absolute;
+    z-index: var(--pf-c-overlay__container--ZIndex);
+    display: flex;
+    width: 100vw;
+
+    // necessary due to setting width
+    // this fixes pointer events using a hack
+    // unsure about browser compatibility of this hack
+    pointer-events: none;
+    & > * {
+      pointer-events: all;
+    }
+
+    &.pf-m-left {
+      top: 50%;
+      left: 0;
+      justify-content: flex-end;
+      transform: translate(-100%, -50%);
+    }
+
+    &.pf-m-right {
+      top: 50%;
+      right: 0;
+      justify-content: flex-start;
+      transform: translate(100%, -50%);
+    }
+
+    &.pf-m-top {
+      top: 0;
+      left: 50%;
+      justify-content: center;
+      transform: translate(-50%, -100%);
+    }
+
+    &.pf-m-bottom {
+      bottom: 0;
+      left: 50%;
+      justify-content: center;
+      transform: translate(-50%, 100%);
+    }
+  }
+}
+
+.pf-c-tooltip {
+  // Component variables
+  --pf-c-tooltip--MaxWidth: 200px;
+  --pf-c-tooltip--BoxShadow: var(--pf-global--BoxShadow);
+  --pf-c-tooltip--Margin: var(--pf-global--arrow--size);
+
+  // Content variables
+  --pf-c-tooltip__content--Padding: var(--pf-global--spacer--xl);
+  --pf-c-tooltip__content--Color: var(--pf-global--Color--100);
+  --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
+  // Arrow variables
+  --pf-c-tooltip__arrow--Size: var(--pf-global--arrow--size);
+  --pf-c-tooltip__arrow--Margin: var(--pf-global--arrow--size) / 2;
+  --pf-c-tooltip__arrow--BoxShadow: var(--pf-global--BoxShadow);
+  --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
+  $half-size: $pf-global--arrow--size / 2;
+
+  position: relative;
+  max-width: var(--pf-c-tooltip--MaxWidth);
+  box-shadow: var(--pf-c-tooltip--BoxShadow);
+
+  &__content {
+    position: relative;
+    padding: var(--pf-c-tooltip__content--Padding);
+    color: var(--pf-c-tooltip__content--Color);
+    text-align: center;
+    background-color: var(--pf-c-tooltip__content--BackgroundColor);
+  }
+
+  &__arrow {
+    position: absolute;
+    width: var(--pf-c-tooltip__arrow--Size);
+    height: var(--pf-c-tooltip__arrow--Size);
+    margin: var(--pf-c-tooltip__arrow--Margin);
+    pointer-events: none;
+    background-color: var(--pf-c-tooltip__arrow--BackgroundColor);
+    box-shadow: var(--pf-c-tooltip__arrow--BoxShadow);
+    transform: rotate(45deg);
+  }
+
+  &.pf-m-top {
+    margin-bottom: var(--pf-c-tooltip--Margin);
+  }
+
+  &.pf-m-bottom {
+    margin-top: var(--pf-c-tooltip--Margin);
+  }
+
+  &.pf-m-left {
+    margin-right: var(--pf-c-tooltip--Margin);
+  }
+
+  &.pf-m-right {
+    margin-left: var(--pf-c-tooltip--Margin);
+  }
+
+  &.pf-m-top > &__arrow {
+    bottom: -$half-size;
+    left: calc(50% - #{$half-size});
+  }
+
+  &.pf-m-bottom > &__arrow {
+    top: -$half-size;
+    left: calc(50% - #{$half-size});
+  }
+
+  &.pf-m-right > &__arrow {
+    top: calc(50% - #{$half-size});
+    left: -$half-size;
+  }
+
+  &.pf-m-left > &__arrow {
+    top: calc(50% - #{$half-size});
+    right: -$half-size;
+  }
+}
