@@ -78,4 +78,24 @@
     border-left: 1px solid #000;
     outline: 0;
   }
+
+  .Example.is-tooltip &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .pf-c-overlay {
+      margin: 200px;
+    }
+  }
+
+  .Example.is-popover &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .pf-c-overlay {
+      margin: 300px;
+    }
+  }
 }
