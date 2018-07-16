@@ -1,0 +1,29 @@
+{{#> about-modal-box about-modal-box--attributes='aria-labelledby="about-modal-title"'}}
+  {{#> about-modal-box-brand}}
+    <img class="pf-c-about-modal-box__brand-image" src="/assets/images/pf_mini_logo_white.svg" alt="Patternfly brand logo" />
+  {{/about-modal-box-brand}}
+  {{#> about-modal-box-close about-modal-box-close--attributes='aria-label="Close Dialog"'}}
+    {{#> button btnClass="pf-m-action"}}
+      <i class="fas fa-times"></i> 
+    {{/button}}
+  {{/about-modal-box-close}}
+  {{#> about-modal-box-header}}
+    <div class="pf-c-about-modal-box__header-strapline">
+      {{#> title titleType="h2"}}
+          Trademark and copyright information here
+      {{/title}}
+    </div>
+    {{#> title titleType="h1" pf-c-title--Modifier="pf-m-4xl" pf-c-title--ID="about-modal-title"}}
+        Product Name
+    {{/title}}
+  {{/about-modal-box-header}}
+  {{#> about-modal-box-hero}}
+    <img class="pf-c-about-modal-box__hero-image" src="/assets/images/pfbg_992.jpg" alt="Patternfly Background Image">
+  {{/about-modal-box-hero}}
+  {{#> about-modal-box-logo}}
+    <img class="pf-c-about-modal-box__logo-image" src="/assets/images/pf_logo.svg" alt="Product Logo">
+  {{/about-modal-box-logo}}
+  {{#> about-modal-box-content}}
+    content
+  {{/about-modal-box-content}}
+{{/about-modal-box}}

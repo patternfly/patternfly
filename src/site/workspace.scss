@@ -227,7 +227,7 @@
 
   tr:nth-child(even) {background: #f1f1f1}
   
-  h2:not(.pf-c-modal-box__header-title) {
+  h2:not(.pf-c-modal-box__header-title):not(.pf-c-title) {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 1.25em;
