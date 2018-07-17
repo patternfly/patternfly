@@ -7,7 +7,7 @@ Example: `Button`, `SecondaryNav`
 
 ### Component Example
 
-Examples require a parent javascript class in the component/examples folder (PatternFly uses React for building the example application). These files should be named with Pascal case: ComponentExample.js
+Examples require a parent javascript class in the component/examples folder (PatternFly uses React for building the example application). These files should be named index.js.
 
 The example component will refer to example handlebars files. These should be named with kebab-case, including the block name plus the example name: `component-name-type-of-example.hbs`
 

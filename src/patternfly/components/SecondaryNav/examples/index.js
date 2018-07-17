@@ -1,7 +1,8 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import SecondaryNavTemplate from './secondary-nav-template.hbs';
+import SecondaryNavTemplateRaw from '!raw!./secondary-nav-example.hbs';
+import SecondaryNavTemplate from './secondary-nav-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -12,7 +13,9 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="SecondaryNav Example">{secondaryNavTemplate}</Example>
+      <Example heading="SecondaryNav Example" handlebars={SecondaryNavTemplateRaw}>
+        {secondaryNavTemplate}
+      </Example>
     </Documentation>
   );
 };

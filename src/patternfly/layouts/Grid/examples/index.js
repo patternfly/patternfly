@@ -1,12 +1,18 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import GridBase from './grid-base.hbs';
-import GridGutters from './grid-gutters.hbs';
-import GridNested from './grid-nested.hbs';
-import GridOffsets from './grid-offsets.hbs';
-import GridResponsive from './grid-responsive.hbs';
-import GridRowspan from './grid-rowspan.hbs';
+import GridBaseRaw from '!raw!./grid-base-example.hbs';
+import GridGuttersRaw from '!raw!./grid-gutters-example.hbs';
+import GridNestedRaw from '!raw!./grid-nested-example.hbs';
+import GridOffsetsRaw from '!raw!./grid-offsets-example.hbs';
+import GridResponsiveRaw from '!raw!./grid-responsive-example.hbs';
+import GridRowspanRaw from '!raw!./grid-rowspan-example.hbs';
+import GridBase from './grid-base-example.hbs';
+import GridGutters from './grid-gutters-example.hbs';
+import GridNested from './grid-nested-example.hbs';
+import GridOffsets from './grid-offsets-example.hbs';
+import GridResponsive from './grid-responsive-example.hbs';
+import GridRowspan from './grid-rowspan-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -22,12 +28,24 @@ export default () => {
 
   return (
     <Documentation docs={Docs} className="is-layout-page">
-      <Example heading="Base grid">{gridBase}</Example>
-      <Example heading="Gutters">{gridGutters}</Example>
-      <Example heading="Responsive grid">{gridResponsive}</Example>
-      <Example heading="Nested grids">{gridNested}</Example>
-      <Example heading="Offsets">{gridOffsets}</Example>
-      <Example heading="Row spans">{gridRowspan}</Example>
+      <Example heading="Base grid" handlebars={GridBaseRaw}>
+        {gridBase}
+      </Example>
+      <Example heading="Gutters" handlebars={GridGuttersRaw}>
+        {gridGutters}
+      </Example>
+      <Example heading="Responsive grid" handlebars={GridResponsiveRaw}>
+        {gridResponsive}
+      </Example>
+      <Example heading="Nested grids" handlebars={GridNestedRaw}>
+        {gridNested}
+      </Example>
+      <Example heading="Offsets" handlebars={GridOffsetsRaw}>
+        {gridOffsets}
+      </Example>
+      <Example heading="Row spans" handlebars={GridRowspanRaw}>
+        {gridRowspan}
+      </Example>
     </Documentation>
   );
 };

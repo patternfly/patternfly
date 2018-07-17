@@ -26,22 +26,13 @@ export default () => {
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
       </Example>
-      <Example
-        heading="Card with no footer"
-        handlebars={CardNoFooterExampleRaw}
-      >
-        {cardNoHeaderExample}
-      </Example>
-      <Example
-        heading="Card with no header"
-        handlebars={CardNoHeaderExampleRaw}
-      >
+      <Example heading="Card with no footer" handlebars={CardNoFooterExampleRaw}>
         {cardNoFooterExample}
       </Example>
-      <Example
-        heading="Card with only a content section"
-        handlebars={CardContentOnlyExampleRaw}
-      >
+      <Example heading="Card with no header" handlebars={CardNoHeaderExampleRaw}>
+        {cardNoHeaderExample}
+      </Example>
+      <Example heading="Card with only a content section" handlebars={CardContentOnlyExampleRaw}>
         {cardContentOnlyExample}
       </Example>
     </Documentation>

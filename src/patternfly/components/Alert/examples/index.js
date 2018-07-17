@@ -2,14 +2,14 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import SuccessAlertRaw from '!raw!./success-alert.hbs';
-import WarningAlertRaw from '!raw!./warning-alert.hbs';
-import DangerAlertRaw from '!raw!./danger-alert.hbs';
-import InfoAlertRaw from '!raw!./info-alert.hbs';
-import SuccessAlert from './success-alert.hbs';
-import WarningAlert from './warning-alert.hbs';
-import DangerAlert from './danger-alert.hbs';
-import InfoAlert from './info-alert.hbs';
+import SuccessAlertRaw from '!raw!./success-alert-example.hbs';
+import WarningAlertRaw from '!raw!./warning-alert-example.hbs';
+import DangerAlertRaw from '!raw!./danger-alert-example.hbs';
+import InfoAlertRaw from '!raw!./info-alert-example.hbs';
+import SuccessAlert from './success-alert-example.hbs';
+import WarningAlert from './warning-alert-example.hbs';
+import DangerAlert from './danger-alert-example.hbs';
+import InfoAlert from './info-alert-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
