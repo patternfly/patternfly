@@ -27,10 +27,10 @@ export default () => {
         {cardBasicExample}
       </Example>
       <Example heading="Card with no footer" handlebars={CardNoFooterExampleRaw}>
-        {cardNoHeaderExample}
+        {cardNoFooterExample}
       </Example>
       <Example heading="Card with no header" handlebars={CardNoHeaderExampleRaw}>
-        {cardNoFooterExample}
+        {cardNoHeaderExample}
       </Example>
       <Example heading="Card with only a content section" handlebars={CardContentOnlyExampleRaw}>
         {cardContentOnlyExample}
