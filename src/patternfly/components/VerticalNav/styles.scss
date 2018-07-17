@@ -44,6 +44,7 @@
 
   // Link
   &__link {
+    $l: &;
     // Align any additional items included in __link
     display: flex;
     align-items: baseline;
@@ -60,23 +61,30 @@
       text-decoration: none;
     }
 
-    // Using this method to align active marker to text rather than link. Accomodates <a>'s without icons
     &-text {
       position: relative;
       flex: 1;
       padding-top: var(--pf-c-vertical-nav__link-text--PaddingTop);
       padding-bottom: var(--pf-c-vertical-nav__link-text--PaddingBottom);
+    }
 
-      // For the active marker to follow text, it must be positioned relatively to the text
-      .pf-m-active &::after,
-      &:hover::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: var(--pf-c-vertical-nav__link--after--active--Width);
-        height: var(--pf-c-vertical-nav__link--after--active--Height);
-        content: "";
-        background-color: var(--pf-c-vertical-nav__link--after--active--Color);
+    // Draw a border underneath link text
+    &:not(.pf-m-disabled):not(:disabled) {
+      &.pf-m-active,
+      &.pf-m-focus,
+      &.pf-m-hover,
+      &:active,
+      &:focus,
+      &:hover {
+        #{$l}-text::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: var(--pf-c-vertical-nav__link--after--active--Width);
+          height: var(--pf-c-vertical-nav__link--after--active--Height);
+          content: "";
+          background-color: var(--pf-c-vertical-nav__link--after--active--Color);
+        }
       }
     }
 
@@ -104,14 +112,11 @@
 
     &.pf-m-disabled,
     &:disabled {
+      cursor: not-allowed;
       background-color: var(--pf-c-vertical-nav__link--disabled--BackgroundColor);
 
       > * {
         color: var(--pf-c-vertical-nav__link--disabled--Color);
-      }
-
-      &:hover {
-        cursor: not-allowed;
       }
     }
   }
