@@ -29,7 +29,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page |
 | `.pf-c-dropdown__separator` | `<div>` | Defines a separator within the menu |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
-| `.pf-m-ghost` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
+| `.pf-m-action` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
 | `.pf-m-no-arrow` | `.pf-c-dropdown` | Modifies to display the toggle without the arrow |
 | `.pf-m-dropup` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
 | `.pf-m-right-aligned` | `.pf-c-dropdown` | Modifies to display the menu right-aligned with the toggle |
