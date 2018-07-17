@@ -141,35 +141,6 @@ $pf-global--BorderColor--light:  $pf-color-black-400 !default;
 $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
-// Inputs
-$pf-global--input--FontSize: pf-font-prem(16px) !default;
-$pf-global--input--LineHeight: 1.5 !default;
-$pf-global--input--Color: $pf-color-black-900 !default;
-$pf-global--input--Color--disabled: $pf-color-black-400 !default;
-$pf-global--placeholder--Color: $pf-color-black-600 !default;
-
-$pf-global--input--BorderColor: $pf-color-blue-600 !default;
-$pf-global--input--BorderColor--focus: $pf-color-blue-400 !default;
-$pf-global--input--BorderColor--disabled: $pf-color-black-400 !default;
-$pf-global--input--Background: #fff !default;
-$pf-global--input--Background--disabled: $pf-color-black-200 !default;
-$pf-global--input--BorderSize: 1px !default;
-$pf-global--input--BorderSize--hover: 2px !default;
-$pf-global--input--BorderSize--focus: 2px !default;
-
-$pf-global--input--Background: #fff !default;
-$pf-global--input--Background--disabled: $pf-color-black-200 !default;
-
-// Labels
-$pf-global--label--FontSize: pf-font-prem(16px) !default;
-$pf-global--input-placeholder--Color: $pf-color-black-600 !default;
-$pf-global--input--Color: $pf-color-black-600 !default;
-$pf-global--input--BoxShadow: 0 0 0 1px $pf-color-black-600 !default;
-$pf-global--input--BoxShadow--hover: 0 0 0 2px $pf-color-black-600 !default;
-
-// Labels
-$pf-global--label--FontSize: pf-font-prem(16px) !default;
-
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
