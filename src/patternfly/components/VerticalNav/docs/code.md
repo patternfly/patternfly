@@ -10,6 +10,7 @@ The vertical navigation list contains list items, links, icons and text. Icons a
 | `role="navigation"` | `<nav>` |  Defines `<nav>` as a navigational. |
 | `aria-current="page"` | `.pf-c-vertical-nav__link` |  Defines link as current page. Do not expose `aria-current="false"` or `aria-current` on noncurrent pages. |
 | `aria-disabled` | `.pf-c-vertical-nav__link` | Defines `<a>` elements as disabled, value is `true` when element is disabled. |
+| `tabindex="-1"` | `.pf-c-vertical-nav__link`| When a link element is disabled, removes it from keyboard focus. **Required when link is disabled.** |
 
 
 ## Usage
