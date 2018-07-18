@@ -28,24 +28,23 @@ program
     const source = path.join(`${BLUEPRINTS_DIR}/template/files`);
     const destination = PROJECT_DIR;
     const prefix = `pf-${type.charAt(0)}-`;
-    const supportedBlueprints = ['component', 'demo', 'pattern', 'layout'];
+    const supportedBlueprints = ['component', 'demo', 'pattern', 'layout', 'utility'];
 
     name = name.replace(/^pf-(c|p)-/g, '');
     if (supportedBlueprints.indexOf(sourceType) === -1) {
       console.error(
-        `Invalid generator type specified (${sourceType}) - please use pf generate component | demo | pattern | layout`
+        `Invalid generator type specified (${sourceType}) - please use pf generate component | demo | pattern | layout | utility`
       );
       return;
     }
 
-    const bemEntity = inflection
-      .transform(name, ['underscore', 'titleize', 'dasherize'])
-      .toLowerCase();
+    const bemEntity = inflection.transform(name, ['underscore', 'titleize', 'dasherize']).toLowerCase();
     const moduleName = inflection.titleize(name).replace(/-/g, '');
     const camelizedName = inflection.camelize(name, true);
     const underScoredName = inflection.underscore(name);
     const dasherizedName = inflection.dasherize(underScoredName);
     const bemName = `${prefix}${bemEntity}`;
+    const sourceTypeDirectory = sourceType === 'utility' ? 'utilities' : `${sourceType}s`;
 
     const blueprintData = {
       blueprintDir,
@@ -53,7 +52,7 @@ program
       destination,
       name,
       sourceType,
-      typeDirectory: `${sourceType}s`,
+      typeDirectory: sourceTypeDirectory,
       namePluralized: inflection.pluralize(name),
       nameSingularized: inflection.singularize(name),
       nameUnderscored: inflection.underscore(name),
