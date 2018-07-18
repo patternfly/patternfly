@@ -9,11 +9,14 @@
   // Vertical nav link
   --pf-c-vertical-nav__link--PaddingRight:    var(--pf-global--spacer--xl);
   --pf-c-vertical-nav__link--PaddingLeft:     var(--pf-global--spacer--xl);
+  --pf-c-vertical-nav__link--PaddingTop:      var(--pf-global--spacer--lg);
+  --pf-c-vertical-nav__link--PaddingBottom:   var(--pf-global--spacer--lg);
   
   // Vertical nav link active :after
-  --pf-c-vertical-nav__link--after--active--Width:   2rem;
-  --pf-c-vertical-nav__link--after--active--Height:  .25rem;
-  --pf-c-vertical-nav__link--after--active--Color:   var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--after--active--Width:    2rem;
+  --pf-c-vertical-nav__link--after--active--Height:   .25rem;
+  --pf-c-vertical-nav__link--after--active--Color:    var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--after--active--Left:     var(--pf-c-vertical-nav__link--PaddingLeft);
 
   // Vertical nav link colors
   --pf-c-vertical-nav__link--Color:             var(--pf-global--Color--dark-100);
@@ -29,10 +32,6 @@
   --pf-c-vertical-nav__link--active--BackgroundColor:   transparent;
   --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
 
-  // Vertical nav link text padding
-  --pf-c-vertical-nav__link-text--PaddingTop:     var(--pf-global--spacer--lg);
-  --pf-c-vertical-nav__link-text--PaddingBottom:   var(--pf-global--spacer--lg);
-
   // Vertical nav link arrow
   --pf-c-vertical-nav__link__arrow--Top: calc(var(--pf-c-vertical-nav__link--PaddingTop) - .4rem);
   --pf-c-vertical-nav__link__arrow--Right: var(--pf-global--spacer--xl);
@@ -44,28 +43,21 @@
 
   // Link
   &__link {
-    $l: &;
     // Align any additional items included in __link
-    display: flex;
-    align-items: baseline;
+    position: relative;
+    display: block;
+    padding-top: var(--pf-c-vertical-nav__link--PaddingTop);
     padding-right: var(--pf-c-vertical-nav__link--PaddingRight);
+    padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom);
     padding-left: var(--pf-c-vertical-nav__link--PaddingLeft);
     color: var(--pf-c-vertical-nav__link--Color);
-    text-decoration: none;
     background-color: var(--pf-c-vertical-nav__link--BackgroundColor);
 
-    // // States
+    &,
     &:hover,
-    &:active,
-    &:focus {
+    &:focus,
+    &:active {
       text-decoration: none;
-    }
-
-    &-text {
-      position: relative;
-      flex: 1;
-      padding-top: var(--pf-c-vertical-nav__link-text--PaddingTop);
-      padding-bottom: var(--pf-c-vertical-nav__link-text--PaddingBottom);
     }
 
     // Draw a border underneath link text
@@ -76,10 +68,10 @@
       &:active,
       &:focus,
       &:hover {
-        #{$l}-text::after {
+        &::after {
           position: absolute;
           bottom: 0;
-          left: 0;
+          left: var(--pf-c-vertical-nav__link--after--active--Left);
           width: var(--pf-c-vertical-nav__link--after--active--Width);
           height: var(--pf-c-vertical-nav__link--after--active--Height);
           content: "";
@@ -92,32 +84,23 @@
     &.pf-m-focus,
     &:focus {
       z-index: 2;
+      color: var(--pf-c-vertical-nav__link--focus--Color);
       background-color: var(--pf-c-vertical-nav__link--focus--BackgroundColor);
-
-      > * {
-        color: var(--pf-c-vertical-nav__link--focus--Color);
-      }
     }
 
     &.pf-m-active,
     &.pf-m-hover,
     &:active,
     &:hover {
+      color: var(--pf-c-vertical-nav__link--active--Color);
       background-color: var(--pf-c-vertical-nav__link--active--BackgroundColor);
-
-      > * {
-        color: var(--pf-c-vertical-nav__link--active--Color);
-      }
     }
 
     &.pf-m-disabled,
     &:disabled {
+      color: var(--pf-c-vertical-nav__link--disabled--Color);
       cursor: not-allowed;
       background-color: var(--pf-c-vertical-nav__link--disabled--BackgroundColor);
-
-      > * {
-        color: var(--pf-c-vertical-nav__link--disabled--Color);
-      }
     }
   }
 }
