@@ -2,9 +2,10 @@
 
 .pf-c-dropdown {
   // Toggle
-  --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--xs);
+  // The top and bottom padding for the dropdown is a one-off
+  --pf-c-dropdown__toggle--PaddingTop: pf-size-prem(6px);
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--PaddingBottom: pf-size-prem(6px);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
@@ -24,9 +25,10 @@
   --pf-c-dropdown__arrow--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // Menu
-  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-dropdown__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__menu--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow);
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--xs);
@@ -101,29 +103,13 @@
       }
     }
 
-    .pf-m-no-arrow > & {
-      padding-right: var(--pf-c-dropdown__toggle--PaddingLeft);
-    }
-
-    &::after {
-      box-sizing: content-box;
-      display: inline-block;
-      width: calc(var(--pf-c-dropdown__toggle--FontSize) * .3);
-      height: calc(var(--pf-c-dropdown__toggle--FontSize) * .3);
+    .pf-c-dropdown__toggle-icon {
+      // box-sizing: content-box;
+      // display: inline-block;
       margin-left: var(--pf-c-dropdown__arrow--MarginLeft);
-      vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .25);
-      content: "";
-      border-style: solid;
-      border-width: var(--pf-c-dropdown__arrow--BorderWidth) var(--pf-c-dropdown__arrow--BorderWidth) 0 0;
-      transform: rotate(135deg);
-
-      .pf-m-no-arrow > & {
-        content: none;
-      }
 
       .pf-m-dropup.pf-m-expanded > & {
-        vertical-align: calc(var(--pf-c-dropdown__toggle--FontSize) * .1);
-        transform: rotate(-45deg);
+        transform: rotate(-180deg);
       }
     }
   }
@@ -136,6 +122,7 @@
     padding-bottom: var(--pf-c-dropdown__menu--PaddingBottom);
     background: var(--pf-c-dropdown__menu--BackgroundColor);
     border: var(--pf-c-dropdown__menu--BorderWidth) solid transparent;
+    box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
     .pf-m-right-aligned > & {
       right: 0;
