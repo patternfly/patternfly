@@ -1,3 +1,6 @@
-<div class="pf-l-grid {{ modifierClass }}" >
+<div class="pf-l-grid{{#if grid--modifiers}} {{grid--modifiers}}{{/if}}"
+  {{#if grid--attributes}}
+    {{ grid--attributes}}
+  {{/if}}>
   {{> @partial-block}}
 </div>

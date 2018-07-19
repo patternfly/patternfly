@@ -5,43 +5,11 @@
   --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
 }
 
-/// Media query used to create responsive grid items 
-/// @group mixins
-/// @moduleType mixin
-/// @parameter {Point} xs, sm, md, lg, xl, null
-@mixin GridMediaQuery($point) {
-  @if $point == "xs" {
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
-      @content;
-    }
-  }
-  @else if $point == "sm" or $point == "" or $point == null {
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
-      @content;
-    }
-  }
-  @else if $point == "md" {
-    @media screen and (min-width: $pf-global--breakpoint--md) {
-      @content;
-    }
-  }
-  @else if $point == "lg" {
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      @content;
-    }
-  }
-  @else if $point == "xl" {
-    @media screen and (min-width: $pf-global--breakpoint--xl) {
-      @content;
-    }
-  }
-}
-
 /// Creates grid item 
 /// @group mixins
 /// @moduleType mixin
 /// @parameter {Suffix} xs, sm, md, lg, xl, null
-@mixin GridItemModifiers($suffix: null) {
+@mixin grid-item-modifiers($suffix: null) {
   // generate column span modifiers
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
@@ -63,6 +31,16 @@
       grid-row: span $row-num;
     }
   }
+
+  // generate smart grid cells
+  @for $col-num from 1 through 12 {
+    &.pf-m-all-#{$col-num}-col#{$suffix} {
+      > * {
+        grid-column-start: auto;
+        grid-column-end: span $col-num;
+      }
+    }
+  }
 }
 
 /// Grid base
@@ -76,13 +54,10 @@
     grid-column-end: span 12;
   }
 
-  // Generate default modifier classes
-  $breakpoints: ("": null, "xs": "-on-xs", "sm": "-on-sm", "md": "-on-md", "lg": "-on-lg", "xl": "-on-xl");
-
   // Loop through $breakpoints map to generate responsive classes
-  @each $breakpoint, $value in $breakpoints {
-    @include GridMediaQuery($breakpoint) {
-      @include GridItemModifiers($value);
+  @each $breakpoint, $value in $pf-global--breakpoint-map {
+    @include media-query($breakpoint) {
+      @include grid-item-modifiers($value);
     }
   }
 
