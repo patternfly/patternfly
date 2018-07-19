@@ -32,9 +32,7 @@ export default class Example extends React.Component {
     let showComponent = true;
     if (window.location.search !== '') {
       // specific component was requested - make sure it matches
-      const queryObject = Example.parseQueryString(
-        window.location.search.substr(1)
-      );
+      const queryObject = Example.parseQueryString(window.location.search.substr(1));
       if (queryObject.component !== encodeURI(this.props.heading)) {
         showComponent = false;
       }
@@ -61,9 +59,11 @@ export default class Example extends React.Component {
       className = '',
       isViewport = false,
       handlebars = '',
-      fullPageOnly
+      fullPageOnly,
+      docs
     } = this.props;
     const output = { __html: this.props.children };
+    const htmlDocs = { __html: docs };
     const regex = /pf-[c|l]-[a-zA-Z-]* /gi;
     const matches = this.props.children.match(regex);
     let navigationItems;
@@ -103,16 +103,15 @@ export default class Example extends React.Component {
         <div className={`Example ${className}`}>
           <div className="Example__header">
             <h3 className="Example_heading">{heading}</h3>
-            {description && (
-              <p className="Example_description">{description}</p>
-            )}
+            {description && <p className="Example_description">{description}</p>}
           </div>
+          {htmlDocs && (
+            <div className="Example__documentation">
+              <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
+            </div>
+          )}
           <div className="Example__section">
-            <Preview
-              isViewport={isViewport}
-              heading={heading}
-              fullPageOnly={fullPageOnly}
-            >
+            <Preview isViewport={isViewport} heading={heading} fullPageOnly={fullPageOnly}>
               {children}
             </Preview>
           </div>
@@ -121,9 +120,7 @@ export default class Example extends React.Component {
               <li className="pf-p-secondary-nav__item">
                 <button
                   role="tab"
-                  className={`pf-p-secondary-nav__link ${
-                    this.state.codeView === 'source' ? 'pf-m-active' : ''
-                  } `}
+                  className={`pf-p-secondary-nav__link ${this.state.codeView === 'source' ? 'pf-m-active' : ''} `}
                   aria-selected={this.state.codeView === 'source'}
                   onClick={() => this.showView('source')}
                 >
@@ -133,9 +130,7 @@ export default class Example extends React.Component {
               <li className="pf-p-secondary-nav__item">
                 <button
                   role="tab"
-                  className={`pf-p-secondary-nav__link ${
-                    this.state.codeView === 'handlebars' ? 'pf-m-active' : ''
-                  } `}
+                  className={`pf-p-secondary-nav__link ${this.state.codeView === 'handlebars' ? 'pf-m-active' : ''} `}
                   aria-selected={this.state.codeView === 'handlebars'}
                   onClick={() => this.showView('handlebars')}
                 >
