@@ -8,12 +8,12 @@ This set of rules generate some constraints and conventions. If you run into ins
 
 ## Separation of UI structure concerns
 
-PatternFly is made out of isolated and modular structures that fall into 3 categories:
+PatternFly is made out of isolated and modular structures that fall into 2 categories:
 
 - Layouts
 - Components
 
-### Layout
+### Layouts
 
 Layouts are the containers that allow for organizing and grouping its immediate children on the page.
 
@@ -28,18 +28,32 @@ Components are modular and independent structures concerned with how a thing loo
 - A component always touches all four sides of its parent container.
 - The component itself never has backgrounds, widths, floats or margins.
 - Elements inside a component never use top margins. The first element touches the top of its component.
+- Components should include semantic markup and necessary Aria tags to implement the [accessibility guidelines](accessibility-guide.md).
 
 The parent container of a component is prefixed with `-c` (after the patterfly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
 
-### Utilities
-
-PatternFly is made up of isolated components that don't allow dependencies. Therefore, there are no helpers or utility classes.
-
 ### When to create a new component
 
-As a general rule create extension to an element with BEM modifiers if it’s a change of color or scale, if the change generates a new entity, then create a new component.
+As a general rule, create an extension to an element with BEM modifiers if it’s a change of color or scale. If the change generates a new entity, then create a new component.
 
 Repetition is better than the wrong abstraction.
+
+## Additional features
+
+### Utilities
+
+PatternFly is made up of isolated components that don't allow dependencies. Therefore, the use of helpers or utility classes is discouraged.
+
+However, from time to time it is recognized that an exception to the Patternfly styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
+
+A utility class is prefixed with `-u` (after the patterfly prefix `pf-`), for example: `.pf-u-align-content-center`.
+
+### Demos
+
+Demos show how components and layouts can be put together to build more complex structures. 
+
+- A demo never includes its own styles. If styling is necessary to implement a desired demo, then new components or layouts, or variants of the components or layouts used, should be created instead.
+- A demo doesn't add any accessibility tags that aren't already in the components. All accessibility should be handled at the component level.
 
 ## Variables
 
