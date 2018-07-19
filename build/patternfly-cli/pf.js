@@ -73,10 +73,11 @@ program
   {{/if}}`,
       moduleHbOpen: `{{#> ${dasherizedName}}}`,
       moduleHbClose: `{{/${dasherizedName}}}`,
-      exampleOneReference: `{${camelizedName}Example1}`,
-      exampleTwoReference: `{${camelizedName}Example2}`,
-      exampleOneRawReference: `{${moduleName}Example1Raw}`,
-      exampleTwoRawReference: `{${moduleName}Example2Raw}`,
+      simpleExampleReference: `{${camelizedName}SimpleExample}`,
+      complexExampleReference: `{${camelizedName}ComplexExample}`,
+      complexExampleDocReference: `{${camelizedName}ComplexExampleDoc}`,
+      simpleExampleRawReference: `{${camelizedName}SimpleExampleRaw}`,
+      complexExampleRawReference: `{${camelizedName}ComplexExampleRaw}`,
       args: blueprintArgs
     };
 
