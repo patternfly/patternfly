@@ -171,3 +171,15 @@
     }
   }
 }
+
+// Creates flex item 
+@mixin pf-utility-builder($class-name) {
+  // generate column span modifiers
+  @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
+    .pf-u-#{$class-name}#{$breakpoint-value} {
+      @include pf-media-query($breakpoint) {
+        @content;
+      }
+    }
+  }
+}

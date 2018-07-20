@@ -8,7 +8,7 @@ For example for buttons: Always add a modifier class to add color to the button.
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-u-sample` |  accessibility notes. |
+| `role` or `aria` | `pf-u-display` |  accessibility notes. |
 
 
 ## Usage
