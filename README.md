@@ -26,6 +26,7 @@ To setup the PatternFly Next development environment:
 - run `npm run cli:setup` (only needed if doing development)
 - run `npm run dev`
 - open your browser to `http://localhost:8000`
+- check for a11y violations with `npm run a11y` (ensure dev server is running first)
 
 ### Create a new component
 
