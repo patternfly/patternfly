@@ -209,6 +209,17 @@ $pf-global--spacer-map: (
   "-3xl": "var(--pf-global--spacer--3xl)"
 );
 
+// Spacers
+$pf-global--grid-gap-map: (
+  "-xs": "var(--pf-global--spacer--xs)",
+  "-sm": "var(--pf-global--spacer--sm)",
+  "-md": "var(--pf-global--spacer--md)",
+  "-lg": "var(--pf-global--spacer--lg)",
+  "-xl": "var(--pf-global--spacer--xl)",
+  "-2xl": "var(--pf-global--spacer--2xl)",
+  "-3xl": "var(--pf-global--spacer--3xl)"
+);
+
 /* stylelint-disable */
 
 :root {

@@ -1,15 +1,23 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
-:root {
-  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
+// Generate smart grid layout
+// @parameter {Suffix} xs, sm, md, lg, xl, null
+@mixin pf-smart-grid($suffix: null) {
+  @for $col-num from 1 through 12 {
+    &.pf-m-all-#{$col-num}-col#{$suffix} {
+      > * {
+        grid-column-start: auto;
+        grid-column-end: span $col-num;
+      }
+    }
+  }
 }
 
-/// Creates grid item 
-/// @group mixins
-/// @moduleType mixin
-/// @parameter {Suffix} xs, sm, md, lg, xl, null
-@mixin grid-item-modifiers($suffix: null) {
+// Creates grid item 
+// @parameter {Suffix} xs, sm, md, lg, xl, null
+@mixin pf-grid-item-modifiers($suffix: null) {
+
   // generate column span modifiers
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
@@ -31,20 +39,15 @@
       grid-row: span $row-num;
     }
   }
-
-  // generate smart grid cells
-  @for $col-num from 1 through 12 {
-    &.pf-m-all-#{$col-num}-col#{$suffix} {
-      > * {
-        grid-column-start: auto;
-        grid-column-end: span $col-num;
-      }
-    }
-  }
 }
 
-/// Grid base
+
+// Grid base
 .pf-l-grid {
+  --pf-l-grid--m-grid-gap--GridGap: var(--pf-global--gutter);
+  --pf-l-grid--m-column-gap--ColumnGap: var(--pf-global--gutter);
+  --pf-l-grid--m-row-gap--RowGap: var(--pf-global--gutter);
+
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
@@ -57,11 +60,26 @@
   // Loop through $breakpoints map to generate responsive classes
   @each $breakpoint, $value in $pf-global--breakpoint-map {
     @include media-query($breakpoint) {
-      @include grid-item-modifiers($value);
+      @include pf-smart-grid($value);
     }
   }
 
-  &.pf-m-gutters {
-    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+  // Loop through $breakpoints map to generate responsive classes
+  @each $breakpoint, $value in $pf-global--breakpoint-map {
+    @include media-query($breakpoint) {
+      @include pf-grid-item-modifiers($value);
+    }
+  }
+
+  &.pf-m-gap {
+    grid-gap: var(--pf-l-grid--m-grid-gap--GridGap);
+  }
+
+  &.pf-m-column-gap {
+    column-gap: var(--pf-l-grid--m-column-gap--ColumnGap);
+  }
+
+  &.pf-m-row-gap {
+    row-gap: var(--pf-l-grid--m-row-gap--RowGap);
   }
 }
