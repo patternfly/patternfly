@@ -23,11 +23,12 @@
   --pf-c-vertical-nav__link--disabled--after--BackgroundColor:  transparent;
 
   // Vertical nav link colors
-  --pf-c-vertical-nav__link--Color:             var(--pf-global--Color--dark-100);
-  --pf-c-vertical-nav__link--hover--Color:      var(--pf-global--Color--active);
-  --pf-c-vertical-nav__link--focus--Color:      var(--pf-global--Color--active);
-  --pf-c-vertical-nav__link--active--Color:     var(--pf-global--Color--active);
-  --pf-c-vertical-nav__link--disabled--Color:   var(--pf-global--Color--disabled);
+  --pf-c-vertical-nav__link--Color:               var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--hover--Color:        var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--focus--Color:        var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--active--FontWeight:  var(--pf-global--FontWeight--semi-bold);
+  --pf-c-vertical-nav__link--active--Color:       var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--disabled--Color:     var(--pf-global--Color--disabled);
 
   // Vertical nav link background colors
   --pf-c-vertical-nav__link--BackgroundColor:           transparent;
@@ -97,8 +98,9 @@
       color: var(--pf-c-vertical-nav__link--active--Color);
       background-color: var(--pf-c-vertical-nav__link--active--BackgroundColor);
 
-      &::after {
-        background-color: var(--pf-c-vertical-nav__link--active--after--BackgroundColor);
+      > * {
+        font-weight: var(--pf-c-vertical-nav__link--active--FontWeight);
+        color: var(--pf-c-vertical-nav__link--active--Color);
       }
     }
 

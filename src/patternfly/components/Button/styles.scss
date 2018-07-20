@@ -6,7 +6,7 @@
   --pf-c-button--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-button--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-button--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-button--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-button--FontSize: var(--pf-global--FontSize--md);
   --pf-c-button--BackgroundColor: transparent;
   --pf-c-button--Color: var(--pf-global--primary-color--100);
@@ -33,6 +33,7 @@
   --pf-c-button--active--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // Disabled state variables
+  --pf-c-button--m-disabled--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-button--m-disabled--Color: var(--pf-global--Color--disabled);
   --pf-c-button--m-disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
   --pf-c-button--m-disabled--BorderColor: transparent;
@@ -42,6 +43,7 @@
   // Primary btn
   --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-button--m-primary--BorderColor: transparent;
+  --pf-c-button--m-primary--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-button--m-primary--Color: var(--pf-global--Color--light-100);
   --pf-c-button--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-button--m-primary--hover--BorderColor: transparent;
@@ -56,6 +58,7 @@
   // Secondary btn
   --pf-c-button--m-secondary--BackgroundColor: transparent;
   --pf-c-button--m-secondary--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-button--m-secondary--Color: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--hover--BackgroundColor: transparent;
   --pf-c-button--m-secondary--hover--BorderColor: var(--pf-global--primary-color--200);
@@ -70,6 +73,7 @@
   // Tertiary btn
   --pf-c-button--m-tertiary--BackgroundColor: transparent;
   --pf-c-button--m-tertiary--BorderColor: var(--pf-global--secondary-color--100);
+  --pf-c-button--m-tertiary--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-button--m-tertiary--Color: var(--pf-global--Color--100);
   --pf-c-button--m-tertiary--hover--BackgroundColor: transparent;
   --pf-c-button--m-tertiary--hover--BorderColor: var(--pf-global--secondary-color--100);
@@ -84,6 +88,7 @@
   // danger btn
   --pf-c-button--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-button--m-danger--BorderColor: var(--pf-global--danger-color--100);
+  --pf-c-button--m-danger--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-button--m-danger--Color: var(--pf-global--Color--light-100);
   --pf-c-button--m-danger--hover--BackgroundColor: var(--pf-global--danger-color--200);
   --pf-c-button--m-danger--hover--BorderColor: transparent;
@@ -98,6 +103,7 @@
   // Link btn
   --pf-c-button--m-link--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-button--m-link--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-button--m-link--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-button--m-link--Color: var(--pf-global--link--Color);
   --pf-c-button--m-link--hover--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--focus--Color: var(--pf-global--link--Color--hover);
@@ -109,6 +115,7 @@
   --pf-c-button--m-action--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-button--m-action--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-button--m-action--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-button--m-action--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-button--m-action--Color: var(--pf-global--Color--100);
   --pf-c-button--m-action--hover--BackgroundColor: transparent;
   --pf-c-button--m-action--hover--Color: var(--pf-global--Color--100);
@@ -184,6 +191,7 @@
 
   // Primary Buttons
   &.pf-m-primary {
+    font-weight: var(--pf-c-button--m-primary--FontWeight);
     color: var(--pf-c-button--m-primary--Color);
     background-color: var(--pf-c-button--m-primary--BackgroundColor);
     &::after {
@@ -220,6 +228,7 @@
 
   // Secondary Buttons
   &.pf-m-secondary {
+    font-weight: var(--pf-c-button--m-secondary--FontWeight);
     color: var(--pf-c-button--m-secondary--Color);
     background-color: var(--pf-c-button--m-secondary--BackgroundColor);
     &::after {
@@ -256,6 +265,7 @@
 
   // Tertiary Buttons
   &.pf-m-tertiary {
+    font-weight: var(--pf-c-button--m-tertiary--FontWeight);
     color: var(--pf-c-button--m-tertiary--Color);
     background-color: var(--pf-c-button--m-tertiary--BackgroundColor);
     &::after {
@@ -292,6 +302,7 @@
 
   // Danger Buttons
   &.pf-m-danger {
+    font-weight: var(--pf-c-button--m-danger--FontWeight);
     color: var(--pf-c-button--m-danger--Color);
     background-color: var(--pf-c-button--m-danger--BackgroundColor);
     &::after {
@@ -348,6 +359,7 @@
   &.pf-m-link {
     padding-right: var(--pf-c-button--m-link--PaddingRight);
     padding-left: var(--pf-c-button--m-link--PaddingLeft);
+    font-weight: var(--pf-c-button--m-link--FontWeight);
     color: var(--pf-c-button--m-link--Color);
 
     &:hover,
@@ -369,6 +381,7 @@
   // Icon Buttons
   &.pf-m-action {
     padding: var(--pf-c-button--m-action--PaddingTop) var(--pf-c-button--m-action--PaddingRight) var(--pf-c-button--m-action--PaddingBottom) var(--pf-c-button--m-action--PaddingLeft);
+    font-weight: var(--pf-c-button--m-action--FontWeight);
     line-height: 1;
     color: var(--pf-c-button--m-action--Color);
 
@@ -397,6 +410,7 @@
   // These styles need to go after the button types because they need to override some of the type styling
   &:disabled,
   &.pf-m-disabled {
+    font-weight: var(--pf-c-button--m-disabled--FontWeight);
     color: var(--pf-c-button--m-disabled--Color);
     pointer-events: none;
     background-color: var(--pf-c-button--m-disabled--BackgroundColor);
