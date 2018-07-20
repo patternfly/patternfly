@@ -4,7 +4,7 @@
 
 
 // Build spacing values
-@mixin SpacerBuilder() {
+@mixin pf-spacer-builder() {
 
   // Loop through breakpoints
   @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
@@ -13,11 +13,11 @@
     @each $property, $property-value in $pf-global--spacer-properties-map {
 
       // Loop through spacer values
-      @each $spacer, $spacer-value in $pf-global--spacer-map {    
+      @each $spacer, $spacer-value in $pf-global--spacer-map {
 
         // If breakpoint != null, append responsive value
         .pf-u-#{$property}#{$spacer}#{$breakpoint-value} {
-          @include pf-utility-builder($breakpoint) {
+          @include pf-media-query($breakpoint) {
             $spacer-value: $spacer-value !important;
 
             // If margin x property, set left and right margins
@@ -57,4 +57,4 @@
 /* stylelint-enable */
 
 // Build spacing values
-@include SpacerBuilder();
+@include pf-spacer-builder();

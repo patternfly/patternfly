@@ -1,12 +1,16 @@
 @import "../../patternfly-utilities";
 
-// Display utilities
 /* stylelint-disable */
-@include pf-utility-builder("display-none")                   { display: none !important; }
-@include pf-utility-builder("display-inline-block")           { display: inline-block !important; }
-@include pf-utility-builder("display-block")                  { display: block !important; }
-@include pf-utility-builder("display-inline")                 { display: inline !important; }
-@include pf-utility-builder("display-table")                  { display: table !important; }
-@include pf-utility-builder("display-table-cell")             { display: table-cell !important; }
-@include pf-utility-builder("display-table-row")              { display: table-row !important; }
+// Display utilities
+@include pf-utility-builder("display-none")           { display: none !important; }
+@include pf-utility-builder("display-inline-block")   { display: inline-block !important; }
+@include pf-utility-builder("display-block")          { display: block !important; }
+@include pf-utility-builder("display-inline")         { display: inline !important; }
+@include pf-utility-builder("display-table")          { display: table !important; }
+@include pf-utility-builder("display-table-cell")     { display: table-cell !important; }
+@include pf-utility-builder("display-table-row")      { display: table-row !important; }
+
+// Flex utilities
+@include pf-utility-builder("display-flex")                   { display: flex !important; }
+@include pf-utility-builder("display-inline-flex")            { display: inline-flex !important; }
 /* stylelint-enable */

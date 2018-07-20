@@ -1,19 +1,22 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
-## Accessibility
+<!-- ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-u-display` |  accessibility notes. |
-
+ -->
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
+| `.pf-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |
+| `.pf-u-display-inline{-on-[breakpoint]}` | `*` |  Sets display: inline |
+| `.pf-u-display-table{-on-[breakpoint]}` | `*` |  Sets display: table |
+| `.pf-u-display-table-row{-on-[breakpoint]}` | `*` |  Sets display: table-row |
+| `.pf-u-display-table-cell{-on-[breakpoint]}` | `*` |  Sets display: table-cell |
+| `.pf-u-display-none{-on-[breakpoint]}` | `*` |  Sets display: none |

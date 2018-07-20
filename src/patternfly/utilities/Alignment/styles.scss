@@ -1,28 +1,9 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-u-alignment__element--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
-.pf-u-alignment {
-  // Example block variable
-  --pf-u-alignment--Color: var(--pf-global--Color--dark);
-
-  // Example element variable
-  --pf-u-alignment__title--FontSize: var(--pf-global--FontSize--2xl);
-
-  // Example modifier variable
-  --pf-u-alignment--m-danger--BackgroundColor: var(--pf-global--danger-color);
-
-  color: var(--pf-u-alignment--Color);
-
-  // Element
-  &__title {
-    font-size: var(--pf-u-alignment__title--FontSize);
-  }
-
-  // Modifier
-  &.pf-m-danger {
-    background-color: var(--pf-u-alignment--m-danger--BackgroundColor);
-  }
-}
+/* stylelint-disable */
+// Text utilities
+@include pf-utility-builder("text-left")      { text-align: left !important; }
+@include pf-utility-builder("text-center")    { text-align: center !important; }
+@include pf-utility-builder("text-right")     { text-align: right !important; }
+@include pf-utility-builder("text-justify")   { text-align: justify !important; }
+/* stylelint-enable */

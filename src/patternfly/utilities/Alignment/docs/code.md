@@ -1,19 +1,19 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
-## Accessibility
+<!-- ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-u-alignment` |  accessibility notes. |
-
+ -->
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-u-text-left{-on-[breakpoint]}` | `*` |  Aligns text left |
+| `.pf-u-text-center{-on-[breakpoint]}` | `*` |  Aligns text center |
+| `.pf-u-text-right{-on-[breakpoint]}` | `*` |  Aligns text right |
+| `.pf-u-text-justify{-on-[breakpoint]}` | `*` |  Aligns text justify |

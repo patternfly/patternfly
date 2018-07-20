@@ -141,12 +141,12 @@
 }
 
 // Media query used to create responsive classes
-@mixin media-query($point) {
+@mixin pf-media-query($point) {
   @if $point == "" or $point == null {
     @content;
   }
   @else if $point == "xs" {
-    @media screen and (max-width: $pf-global--breakpoint--xs) {
+    @media screen and (max-width: $pf-global--breakpoint--sm) {
       @content;
     }
   }

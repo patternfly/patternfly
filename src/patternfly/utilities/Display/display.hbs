@@ -1,6 +1,6 @@
-<div class="pf-u-display {{pf-u-display--modifier}}"
-  {{#if pf-u-display__id}}
-    id="{{pf-u-display__id}}"
+<{{#if display--element}}{{display--element}}{{else}}div{{/if}} class="pf-u-display-{{display--type}}{{#if display--modifier}} {{display--modifier}}{{/if}}"
+  {{#if display--attribute}}
+    {{{display--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</div>
+</{{#if display--element}}{{display--element}}{{else}}div{{/if}}>

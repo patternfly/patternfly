@@ -1,19 +1,52 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+## Margin properties:
+| Abbreviation | Property |
+| -- | -- |
+| `m` |  margin |
+| `mt` | margin-top |
+| `mr` | margin-right |
+| `mb` | margin-bottom |
+| `ml` | margin-left |
+| `mx` | margin-left & margin-right |
+| `my` | margin-top & margin-bottom |
 
-## Accessibility
+## Padding properties:
+| Abbreviation | Property |
+| -- | -- |
+| `m` |  margin |
+| `mt` | margin-top |
+| `mr` | margin-right |
+| `mb` | margin-bottom |
+| `ml` | margin-left |
+| `mx` | margin-left & margin-right |
+| `my` | margin-top & margin-bottom |
+
+## Size values:
+| Abbreviation | Property |
+| -- | -- |
+| `auto` |  auto |
+| `0` | 0 |
+| `xs` | var(--pf-global--spacer--xs) |
+| `sm` | var(--pf-global--spacer--sm) |
+| `md` | var(--pf-global--spacer--md) |
+| `lg` | var(--pf-global--spacer--lg) |
+| `xl` | var(--pf-global--spacer--xl) |
+| `2xl` | var(--pf-global--spacer--2xl) |
+| `3xl` | var(--pf-global--spacer--3xl) |
+
+<!-- ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-u-spacing` |  accessibility notes. |
-
+| `role` or `aria` | `pf-u-flex` |  accessibility notes. |
+ -->
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-u-{m, mt, mr, mb, ml, mx, my}-{size}{-on-[breakpoint]}`  | `*` |  Sets margin top, right, bottom, left, margin-left & right, margin-top & bottom to spacer value |
+| `.pf-u-{p, pt, pr, pb, pl, px, py}-{size}{-on-[breakpoint]}`  | `*` |  Sets padding top, right, bottom, left, padding-left & right, padding-top & bottom to spacer value |
