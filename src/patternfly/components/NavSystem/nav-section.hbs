@@ -1,0 +1,12 @@
+<section class="{{#if subnav}}pf-c-nav__subnav{{else}}pf-c-nav__section{{/if}}{{#if nav-section--modifiers}} {{nav-section--modifiers}}{{/if}}"
+  {{#if nav-section--attributes}}
+    {{{nav-section--attributes}}}
+  {{/if}}
+  {{#if expandable}}
+    {{#if expanded}}
+    {{else}}
+      hidden
+    {{/if}}
+  {{/if}}>
+  {{> @partial-block}}
+</section>

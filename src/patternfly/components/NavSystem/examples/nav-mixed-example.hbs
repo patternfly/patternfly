@@ -1,0 +1,108 @@
+{{#> nav}}
+  {{#> nav-list}}
+    {{#> nav-list-item}}
+      {{#> nav-list-link href="#1"}}
+        System Panel
+      {{/nav-list-link}}
+    {{/nav-list-item}}
+    {{#> nav-list-item}}
+      {{#> nav-list-link href="#2"}}
+        Policy
+      {{/nav-list-link}}
+    {{/nav-list-item}}
+    {{#> nav-list-item expandable="true" expanded="true"}}
+      {{#> nav-list-link href="#3"}}
+        Authentication
+      {{/nav-list-link}}
+      {{#> nav-list-expand nav-list-action--attributes='aria-label="expand subnavigation"'}}
+      {{/nav-list-expand}}
+
+      {{#> nav-section subnav="true"}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-list-item nav-list-item--modifiers=""}}
+            {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
+              Overview
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item nav-list-item--modifiers=""}}
+            {{#> nav-list-link href="#4"}}
+              Resource Usage
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item nav-list-item--modifiers=""}}
+            {{#> nav-list-link href="#5"}}
+              Hypervisors
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item nav-list-item--modifiers=""}}
+            {{#> nav-list-link href="#6"}}
+              Instances
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item nav-list-item--modifiers=""}}
+            {{#> nav-list-link href="#7"}}
+              Volumes
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item nav-list-item--modifiers=""}}
+            {{#> nav-list-link href="#8"}}
+              Networks
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+        {{/nav-list}}
+      {{/nav-section}}
+    {{/nav-list-item}}
+    {{#> nav-list-item expandable="true"}}
+      {{#> nav-list-link href="#9"}}
+        Network Services
+      {{/nav-list-link}}
+      {{#> nav-list-expand nav-list-action--attributes='aria-label="expand subnavigation"'}}
+      {{/nav-list-expand}}
+      {{#> nav-section subnav="true"}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#"}}
+              Link 1
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#4"}}
+              Link 2
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#5"}}
+              Link 3
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+        {{/nav-list}}
+      {{/nav-section}}
+    {{/nav-list-item}}
+    {{#> nav-list-item expandable="true"}}
+      {{#> nav-list-link href="#10"}}
+        Server
+      {{/nav-list-link}}
+      {{#> nav-list-expand nav-list-action--attributes='aria-label="expand subnavigation"'}}
+      {{/nav-list-expand}}
+      {{#> nav-section subnav="true"}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#"}}
+              Link 1
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#4"}}
+              Link 2
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#5"}}
+              Link 3
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+        {{/nav-list}}
+      {{/nav-section}}
+    {{/nav-list-item}}
+  {{/nav-list}}
+{{/nav}}
