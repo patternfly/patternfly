@@ -1,13 +1,13 @@
 {{#> nav}}
   {{#> nav-list nav-list--attributes='aria-label="Expandable list example"'}}
     {{#> nav-list-item expandable="true" expanded="true"}}
-      {{#> nav-list-link href="#" nav-list-link--attributes='aria-controls="system-panel-subnav"'}}
-        <span class="pf-c-nav__list-text">System Panel</span>      
+      {{#> nav-list-link href="#" nav-list-link--attributes='aria-controls="subnav1" aria-expanded="true"'}}
+        <span class="pf-c-nav__list-text">System Panel</span>
         <span class="pf-c-nav__list-expand">
           <i class="fas fa-chevron-right"></i>
         </span>
       {{/nav-list-link}}
-      {{#> nav-section subnav="true" nav-section--attributes='id="system-panel-subnav"'}}
+      {{#> nav-section subnav="true" nav-section--attributes='id="subnav1"'}}
         {{#> nav-list newcontent nav-list--type="simple"}}
           {{#> nav-list-item}}
             {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
@@ -46,35 +46,37 @@
       {{#> nav-list-link href="#"}}
         Policy
       {{/nav-list-link}}
-      {{#> nav-list-expand nav-list-expand--attributes='aria-label="Toggle policy sub nav" aria-controls="policy-subnav"'}}
+      {{#> nav-list-expand nav-list-expand--attributes='aria-label="Toggle policy sub nav" aria-controls="subnav2" aria-label="Expand subnav"'}}
       {{/nav-list-expand}}
-      {{#> nav-list nav-list--type="simple" subnav="true" nav-list--attributes='aria-label="Tell me somethin good" id="policy-subnav"'}}
-        {{#> nav-list-item nav-list-item--modifiers=""}}
-          {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
-            Link 1
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item nav-list-item--modifiers=""}}
-          {{#> nav-list-link href="#"}}
-            Link 2
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-      {{/nav-list}}
-    {{/nav-list-item}}
-    {{#> nav-list-item expandable="true"}}
-      {{#> nav-list-link href="#"}}
-        Authentication
-      {{/nav-list-link}}
-      {{#> nav-list-expand}}
-      {{/nav-list-expand}}
-      {{#> nav-section subnav="true"}}
-        {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-section subnav="true" nav-section--attributes='id="subnav2"'}}
+        {{#> nav-list newcontent nav-list--type="simple" nav-list--attributes='aria-label="Tell me somethin good"'}}
           {{#> nav-list-item nav-list-item--modifiers=""}}
             {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
               Link 1
             {{/nav-list-link}}
           {{/nav-list-item}}
-          {{#> nav-list-item nav-list-item--modifiers=""}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#"}}
+              Link 2
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+        {{/nav-list}}
+      {{/nav-section}}
+    {{/nav-list-item}}
+    {{#> nav-list-item expandable="true"}}
+      {{#> nav-list-link href="#"}}
+        Authentication
+      {{/nav-list-link}}
+      {{#> nav-list-expand nav-list-expand--attributes='aria-label="Toggle authentication sub nav" aria-controls="subnav3" aria-label="Expand subnav"'}}
+      {{/nav-list-expand}}
+      {{#> nav-section subnav="true" nav-section--attributes='id="subnav3"'}}
+        {{#> nav-list newcontent nav-list--type="simple" nav-list--attributes='aria-label="Tell me somethin good"'}}
+          {{#> nav-list-item}}
+            {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
+              Link 1
+            {{/nav-list-link}}
+          {{/nav-list-item}}
+          {{#> nav-list-item}}
             {{#> nav-list-link href="#"}}
               Link 2
             {{/nav-list-link}}
@@ -86,16 +88,16 @@
       {{#> nav-list-link href="#"}}
         Network Services
       {{/nav-list-link}}
-      {{#> nav-list-expand}}
+      {{#> nav-list-expand nav-list-expand--attributes='aria-label="Toggle network sub nav" aria-controls="subnav4" aria-label="Expand subnav"'}}
       {{/nav-list-expand}}
-      {{#> nav-section subnav="true"}}
-        {{#> nav-list newcontent nav-list--type="simple"}}
-          {{#> nav-list-item nav-list-item--modifiers=""}}
+      {{#> nav-section subnav="true" nav-section--attributes='id="subnav4"'}}
+        {{#> nav-list newcontent nav-list--type="simple" nav-list--attributes='aria-label="Tell me somethin good"'}}
+          {{#> nav-list-item}}
             {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
               Link 1
             {{/nav-list-link}}
           {{/nav-list-item}}
-          {{#> nav-list-item nav-list-item--modifiers=""}}
+          {{#> nav-list-item}}
             {{#> nav-list-link href="#"}}
               Link 2
             {{/nav-list-link}}
@@ -107,9 +109,9 @@
       {{#> nav-list-link href="#"}}
         Server
       {{/nav-list-link}}
-      {{#> nav-list-expand}}
+      {{#> nav-list-expand nav-list-expand--attributes='aria-label="Toggle server sub nav" aria-controls="subnav5" aria-label="Expand subnav"'}}
       {{/nav-list-expand}}
-      {{#> nav-section subnav="true"}}
+      {{#> nav-section subnav="true" nav-section--attributes='id="subnav5"'}}
         {{#> nav-list newcontent nav-list--type="simple"}}
           {{#> nav-list-item nav-list-item--modifiers=""}}
             {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
