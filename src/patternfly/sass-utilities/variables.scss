@@ -177,6 +177,7 @@ $pf-global--link--FontWeight:             $pf-global--FontWeight--semi-bold !def
 $pf-global--link--Color:                  $pf-global--primary-color--100 !default;
 $pf-global--link--TextDecoration:         none !default;
 $pf-global--link--Color--hover:           darken($pf-global--primary-color--100, 15%) !default;
+$pf-global--link--Color--light-hover:     darken($pf-global--primary-color--light-100, 15%) !default;
 $pf-global--link--TextDecoration--hover:  underline !default;
 
 // List
@@ -295,6 +296,7 @@ $global-ListStyle: disc outside !default;
   --pf-global--link--Color: $pf-global--link--Color;
   --pf-global--link--TextDecoration: $pf-global--link--TextDecoration;
   --pf-global--link--Color--hover: $pf-global--link--Color--hover;
+  --pf-global--link--Color--light-hover: $pf-global--link--Color--light-hover;
   --pf-global--link--TextDecoration--hover: $pf-global--link--TextDecoration--hover;
 
   // Borders
