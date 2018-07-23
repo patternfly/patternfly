@@ -170,6 +170,9 @@
       "@semantic-release/github"
     ]
   },
+  "resolutions": {
+    "node-sass": "4.7.2"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
