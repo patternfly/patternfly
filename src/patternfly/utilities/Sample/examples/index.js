@@ -5,6 +5,7 @@ import SampleExample1Raw from '!raw!./sample-example1.hbs';
 import SampleExample2Raw from '!raw!./sample-example2.hbs';
 import SampleExample1 from './sample-example1.hbs';
 import SampleExample2 from './sample-example2.hbs';
+import sampleExample1Doc from '../docs/sample-example1.md';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -16,7 +17,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Sample Example 1" handlebars={SampleExample1Raw}>
+      <Example heading="Sample Example 1" handlebars={SampleExample1Raw} docs={sampleExample1Doc}>
         {sampleExample1}
       </Example>
       <Example heading="Sample Example 2" handlebars={SampleExample2Raw}>
