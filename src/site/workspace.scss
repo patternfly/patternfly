@@ -30,6 +30,11 @@
   &__sidebar__item + &__sidebar__item {
     margin-top: 1rem;
   }
+
+  .pf-l-grid + .pf-l-grid {
+    margin-top: 1rem; 
+  }
+
   &__content {
     flex: 0 1 80%;
     max-width: 80%;

@@ -139,3 +139,35 @@
     opacity: .5;
   }
 }
+
+// Media query used to create responsive classes
+@mixin media-query($point) {
+  @if $point == "" or $point == null {
+    @content;
+  }
+  @else if $point == "xs" {
+    @media screen and (max-width: $pf-global--breakpoint--xs) {
+      @content;
+    }
+  }
+  @else if $point == "sm" {
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      @content;
+    }
+  }
+  @else if $point == "md" {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      @content;
+    }
+  }
+  @else if $point == "lg" {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      @content;
+    }
+  }
+  @else if $point == "xl" {
+    @media screen and (min-width: $pf-global--breakpoint--xl) {
+      @content;
+    }
+  }
+}
