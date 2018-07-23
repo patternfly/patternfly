@@ -95,6 +95,7 @@
 
     &.pf-m-active,
     &:active {
+      font-weight: var(--pf-c-vertical-nav__link--active--FontWeight);
       color: var(--pf-c-vertical-nav__link--active--Color);
       background-color: var(--pf-c-vertical-nav__link--active--BackgroundColor);
 
