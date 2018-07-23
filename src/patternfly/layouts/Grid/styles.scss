@@ -44,9 +44,7 @@
 
 // Grid base
 .pf-l-grid {
-  --pf-l-grid--m-grid-gap--GridGap: var(--pf-global--gutter);
-  --pf-l-grid--m-column-gap--ColumnGap: var(--pf-global--gutter);
-  --pf-l-grid--m-row-gap--RowGap: var(--pf-global--gutter);
+  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -71,15 +69,7 @@
     }
   }
 
-  &.pf-m-gap {
+  &.pf-m-gutter {
     grid-gap: var(--pf-l-grid--m-grid-gap--GridGap);
-  }
-
-  &.pf-m-column-gap {
-    column-gap: var(--pf-l-grid--m-column-gap--ColumnGap);
-  }
-
-  &.pf-m-row-gap {
-    row-gap: var(--pf-l-grid--m-row-gap--RowGap);
   }
 }
