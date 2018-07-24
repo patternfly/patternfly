@@ -108,7 +108,7 @@
     flex-flow: row wrap;
     align-items: baseline;
     // Handle additional items within __group without having an additional wrapper or selector
-    > *:not(.pf-c-form__label):not(.pf-c-input-group):not(.pf-c-form-control):not(.pf-c-form__helper-text):not(.pf-m-align-right):not(.pf-c-form__legend):not(.pf-c-form__button-group):not([class*="pf-l-"]):not(.pf-m-right) {
+    > *:not(.pf-c-form__label):not(.pf-c-input-group):not(.pf-c-form-control):not(.pf-c-form__helper-text):not(.pf-c-form__legend):not(.pf-c-form__button-group):not([class*="pf-l-"]):not(.pf-m-right) {
       margin-left: var(--pf-c-form--group--MarginLeft);
     }
 
