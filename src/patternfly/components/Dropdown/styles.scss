@@ -31,6 +31,7 @@
   --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow);
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__menu--Top: var(--pf-global--spacer--xs);
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Menu Item
@@ -115,12 +116,14 @@
   }
 
   &__menu {
-    position: absolute;
+    position: relative;
+    top: var(--pf-c-dropdown__menu--Top);
     z-index: var(--pf-c-dropdown__menu--ZIndex);
     min-width: 100%;
     padding-top: var(--pf-c-dropdown__menu--PaddingTop);
     padding-bottom: var(--pf-c-dropdown__menu--PaddingBottom);
     background: var(--pf-c-dropdown__menu--BackgroundColor);
+    background-clip: padding-box;
     border: var(--pf-c-dropdown__menu--BorderWidth) solid transparent;
     box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
