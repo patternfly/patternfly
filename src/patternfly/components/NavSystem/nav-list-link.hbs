@@ -2,9 +2,28 @@
   {{#if nav-list-link--attributes}}
     {{{nav-list-link--attributes}}}
   {{/if}}
+
   {{#if disabled}}
     aria-disabled="true"
     tabindex="-1" 
+  {{/if}}
+
+  {{#if expandable}}
+    {{#unless subnav}}
+      {{#if expanded}}
+        aria-expanded="true"
+      {{else}}
+        aria-expanded="false"
+      {{/if}}
+    {{/unless}}
   {{/if}}>
+
   {{> @partial-block}}
+  {{#if expandable}}
+    {{#unless subnav}}
+    <span class="pf-c-nav__list-expand">
+      <i class="fas fa-chevron-right"></i>
+    </span>
+    {{/unless}}
+  {{/if}}
 </a>

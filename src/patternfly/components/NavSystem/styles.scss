@@ -8,15 +8,20 @@
   $namespace: &;
 
   /* stylelint-disable */
-  // Nav
-  --pf-c-nav__list-link--Color:                               var(--pf-global--Color--dark-100);
+  // Nav 
+  --pf-c-nav--MarginTop:                                      var(--pf-global--spacer--lg);
+  --pf-c-nav--MarginBottom:                                   var(--pf-global--spacer--lg);
 
   // Nav list link
   --pf-c-nav__list-link--PaddingTop:                          var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--PaddingRight:                        var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--PaddingRight:                        var(--pf-global--spacer--2xl);
   --pf-c-nav__list-link--PaddingBottom:                       var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--PaddingLeft:                         var(--pf-global--spacer--xl);
-  --pf-c-nav__list-item--MarginTop:                           var(--pf-global--spacer--md);
+  --pf-c-nav__list-link--PaddingLeft:                         var(--pf-global--spacer--2xl);
+  --pf-c-nav__list-link--FontWeight:                          var(--pf-global--link--FontWeight);
+  --pf-c-nav__list-link--not-first-child--PaddingTop:         var(--pf-global--spacer--xl);
+  
+  // Nav list link color
+  --pf-c-nav__list-link--Color:                               var(--pf-global--Color--dark-100);
 
   // Nav list link :after
   --pf-c-nav__list-link--after--Width:                        3rem;
@@ -43,17 +48,14 @@
   --pf-c-nav__list-link--disabled--BackgroundColor:           var(--pf-global--BackgroundColor--disabled);
 
   // Nav list list action
-  --pf-c-nav__list-action--PaddingTop:                        var(--pf-global--spacer--md);
-  --pf-c-nav__list-action--PaddingRight:                      var(--pf-global--spacer--lg);
-  --pf-c-nav__list-action--PaddingBottom:                     var(--pf-global--spacer--md);
-  --pf-c-nav__list-action--PaddingLeft:                       var(--pf-global--spacer--lg);
+  --pf-c-nav__list-expand--PaddingLeft:                       var(--pf-global--spacer--sm);
+  --pf-c-nav__list-expand--PaddingRight:                      var(--pf-global--spacer--sm);
 
   // Nav list simple link
   --pf-c-nav__list-simple-link--PaddingTop:                   var(--pf-global--spacer--sm);
-  --pf-c-nav__list-simple-link--PaddingRight:                 var(--pf-global--spacer--xl);
+  --pf-c-nav__list-simple-link--PaddingRight:                 var(--pf-global--spacer--2xl);
   --pf-c-nav__list-simple-link--PaddingBottom:                var(--pf-global--spacer--sm);
-  --pf-c-nav__list-simple-link--PaddingLeft:                  var(--pf-global--spacer--xl);
-  --pf-c-nav__list-simple-list--MarginTop:                    var(--pf-global--spacer--md);
+  --pf-c-nav__list-simple-link--PaddingLeft:                  var(--pf-global--spacer--2xl);
   --pf-c-nav__list-simple-link--Color:                        var(--pf-global--Color--dark-100);
   --pf-c-nav__list-simple-link--hover--Color:                 var(--pf-global--Color--active);
   --pf-c-nav__list-simple-link--focus--Color:                 var(--pf-global--Color--active);
@@ -63,37 +65,54 @@
   --pf-c-nav__list-simple-link--focus--BackgroundColor:       var(--pf-global--BackgroundColor--300);
   --pf-c-nav__list-simple-link--active--BackgroundColor:      var(--pf-global--BackgroundColor--300);
   --pf-c-nav__list-simple-link--disabled--BackgroundColor:    var(--pf-global--BackgroundColor--disabled);
+  --pf-c-nav__list-simple-link--FontWeight:                   var(--pf-global--link--FontWeight);
 
-  // Nav action
-  --pf-c-nav__list-horizontal-link--PaddingTop:               var(--pf-global--spacer--md);
+  // Subnav links
+  --pf-c-nav__list-item--pf-c-nav__list-simple-link:          calc(var(--pf-global--spacer--2xl) + var(--pf-global--spacer--md));
+  --pf-c-nav__subnav--MarginTop:                              var(--pf-global--spacer--md);
+
+  // Nav list horizontal link
+  --pf-c-nav__list-horizontal-link--PaddingTop:               var(--pf-global--spacer--xl);
   --pf-c-nav__list-horizontal-link--PaddingRight:             var(--pf-global--spacer--lg);
-  --pf-c-nav__list-horizontal-link--PaddingBottom:            var(--pf-global--spacer--md);
+  --pf-c-nav__list-horizontal-link--PaddingBottom:            var(--pf-global--spacer--xl);
   --pf-c-nav__list-horizontal-link--PaddingLeft:              var(--pf-global--spacer--lg);
+  --pf-c-nav__list-horizontal-link--FontWeight:               var(--pf-global--link--FontWeight);
 
-  // Nav list-horizontal link
-  --pf-c-nav__list-horizontal-link--BackgroundColor:                     transparent;
-  --pf-c-nav__list-horizontal-link--hover--BackgroundColor:              transparent;
-  --pf-c-nav__list-horizontal-link--focus--BackgroundColor:              transparent;
-  --pf-c-nav__list-horizontal-link--active--BackgroundColor:             transparent;
-  --pf-c-nav__list-horizontal-link--disabled--BackgroundColor:           var(--pf-global--BackgroundColor--disabled);
+  // Nav list horizontal link
+  --pf-c-nav__list-horizontal-link--BackgroundColor:                    transparent;
+  --pf-c-nav__list-horizontal-link--hover--BackgroundColor:             transparent;
+  --pf-c-nav__list-horizontal-link--focus--BackgroundColor:             transparent;
+  --pf-c-nav__list-horizontal-link--active--BackgroundColor:            transparent;
+  --pf-c-nav__list-horizontal-link--disabled--BackgroundColor:          var(--pf-global--BackgroundColor--disabled);
 
-  // Nav list-horizontal link::after
+  // Nav list horizontal link::after
   --pf-c-nav__list-horizontal-link--after--BackgroundColor:             transparent;
   --pf-c-nav__list-horizontal-link--focus--after--BackgroundColor:      var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--hover--after--BackgroundColor:      var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--active--after--BackgroundColor:     var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--disabled--after--BackgroundColor:   transparent;
 
+  // Nav list tertiary
+  --pf-c-nav__list-tertiary--PaddingTop:                      var(--pf-global--spacer--lg);
+  --pf-c-nav__list-tertiary--PaddingBottom:                   var(--pf-global--spacer--lg);
+
+  // Nav list tertiary link
+  --pf-c-nav__list-tertiary-link--PaddingTop:                           var(--pf-global--spacer--md);
+  --pf-c-nav__list-tertiary-link--PaddingBottom:                        var(--pf-global--spacer--md);
+  --pf-c-nav__list-tertiary-link--PaddingRight:                         var(--pf-global--spacer--lg);
+  --pf-c-nav__list-tertiary-link--PaddingLeft:                          var(--pf-global--spacer--lg);
+
   // Nav section
-  --pf-c-nav__section--MarginTop:                                       var(--pf-global--spacer--md);
+  --pf-c-nav__section--MarginTop:                                       var(--pf-global--spacer--xl);
 
   // Nav section title
   --pf-c-nav__section-title--PaddingTop:                                var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingRight:                              var(--pf-global--spacer--xl);
+  --pf-c-nav__section-title--PaddingRight:                              var(--pf-global--spacer--2xl);
   --pf-c-nav__section-title--PaddingBottom:                             var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingLeft:                               var(--pf-global--spacer--xl);
+  --pf-c-nav__section-title--PaddingLeft:                               var(--pf-global--spacer--2xl);
   --pf-c-nav__section-title--FontSize:                                  var(--pf-global--FontSize--xs);
   --pf-c-nav__section-title--Color:                                     var(--pf-global--Color--dark-200);
+  --pf-c-nav__section-title--FontWeight:                                var(--pf-global--FontWeight--semi-bold);
 
   /* stylelint-enable */
 
@@ -102,6 +121,16 @@
     display: none;
   }
 
+  padding-top: var(--pf-c-nav--MarginTop);
+  padding-bottom: var(--pf-c-nav--MarginBottom);
+
+  // Add margin to first list, if not horizontal
+  & > *:first-child:not(.pf-c-nav__list-horizontal):not(.pf-c-nav__list-tertiary) {
+  }
+
+  // Add margin to last list, if not horizontal
+  & > *:last-child:not(.pf-c-nav__list-horizontal):not(.pf-c-nav__list-tertiary) {
+  }
 
   // List - default
   &__list {
@@ -112,32 +141,31 @@
       display: flex;
       flex-wrap: wrap;
       align-items: baseline;
-      // color: var(--pf-c-nav__link--Color);
       background-color: var(--pf-c-nav__item--BackgroundColor);
-
-      & + & {
-        margin-top: var(--pf-c-nav__list-item--MarginTop);
-      }
     }
 
     // Link
     &-link {
       position: relative;
-
-      /* stylelint-disable */
-      // Remove this if the link and expand button are siblings
       display: flex;
       flex: 1;
       align-items: baseline;
-      /* stylelint-enable */
-
       padding:
         var(--pf-c-nav__list-link--PaddingTop)
         var(--pf-c-nav__list-link--PaddingRight)
         var(--pf-c-nav__list-link--PaddingBottom)
         var(--pf-c-nav__list-link--PaddingLeft);
-      color: var(--pf-c-nav__list-link--Color);
 
+      font-weight: var(--pf-c-nav__list-link--FontWeight);
+      color: var(--pf-c-nav__list-link--Color);
+      word-break: break-all;
+
+      // Adjust padding top for subsequent links
+      #{$namespace}__list-item:not(:first-child) & {
+        padding-top: var(--pf-c-nav__list-link--not-first-child--PaddingTop);
+      }
+
+      // After - border bottom treatment
       &::after {
         position: absolute;
         bottom: 0;
@@ -171,8 +199,8 @@
       }
 
       // Active / expanded
-      &.pf-m-active,
       .pf-m-expanded &,
+      &.pf-m-active,
       &:active {
         color: var(--pf-c-nav__list-link--active--Color);
         background-color: var(--pf-c-nav__list-link--active--BackgroundColor);
@@ -194,29 +222,15 @@
       }
     }
 
-    // Text
-    // If expandable .pf-c-nav, set text occupy available space
-    &-text {
-      flex: 1;
-    }
-
     // Action
     &-expand {
       flex: none;
-      padding:
-        var(--pf-c-nav__list-action--PaddingTop)
-        var(--pf-c-nav__list-action--PaddingRight)
-        var(--pf-c-nav__list-action--PaddingBottom)
-        var(--pf-c-nav__list-action--PaddingLeft);
+      padding-right: var(--pf-c-nav__list-expand--PaddingLeft);
+      padding-left: var(--pf-c-nav__list-expand--PaddingLeft);
+      margin-left: auto;
       border: 0;
 
-      // Remove this if link and button are siblings
-      // Position button over link
-      #{$namespace}__list-link & {
-        padding: 0;
-      }
-
-      .pf-m-expanded & {
+      .pf-m-expanded & > * {
         transform: rotate(90deg);
       }
     }
@@ -227,12 +241,6 @@
   &__list-simple {
     flex: 1 0 100%;
 
-    // List simple as subnav 
-    // state = default
-    #{$namespace}__list-item & {
-      margin-top: var(--pf-c-nav__list-simple-list--MarginTop);
-    }
-
     // List simple link
     &-link {
       display: block;
@@ -241,6 +249,8 @@
         var(--pf-c-nav__list-simple-link--PaddingRight)
         var(--pf-c-nav__list-simple-link--PaddingBottom)
         var(--pf-c-nav__list-simple-link--PaddingLeft);
+
+      font-weight: var(--pf-c-nav__list-simple-link--FontWeight);
       color: var(--pf-c-nav__list-simple-link--Color);
 
       // States
@@ -276,16 +286,17 @@
           background-color: var(--pf-c-vertical-nav__link--disabled--after--BackgroundColor);
         }
       }
+
       // Adjust padding of descendant links
       #{$namespace}__list-item & {
-        padding-right: calc(var(--pf-c-nav__list-simple-link--PaddingRight) * 1.5);
-        padding-left: calc(var(--pf-c-nav__list-simple-link--PaddingLeft) * 1.5);
+        padding-left: var(--pf-c-nav__list-item--pf-c-nav__list-simple-link);
       }
     }
   }
 
   // List horizontal
-  &__list-horizontal {
+  &__list-horizontal,
+  &__list-tertiary {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -294,13 +305,10 @@
     &-link {
       position: relative;
       display: block;
-      padding:
-        var(--pf-c-nav__list-horizontal-link--PaddingTop)
-        var(--pf-c-nav__list-horizontal-link--PaddingRight)
-        var(--pf-c-nav__list-horizontal-link--PaddingBottom)
-        var(--pf-c-nav__list-horizontal-link--PaddingLeft);
+      font-weight: var(--pf-c-nav__list-horizontal-link--FontWeight);
       white-space: nowrap;
 
+      // After - border bottom treatment
       &::after {
         position: absolute;
         bottom: 0;
@@ -312,6 +320,7 @@
         background-color: var(--pf-c-nav__list-horizontal-link--after--BackgroundColor);
       }
 
+      // Hover
       &.pf-m-hover,
       &:hover {
         background-color: var(--pf-c-nav__list-horizontal-link--hover--BackgroundColor);
@@ -321,6 +330,7 @@
         }
       }
 
+      // Focus
       &.pf-m-focus,
       &:focus {
         background-color: var(--pf-c-nav__list-horizontal-link--focus--BackgroundColor);
@@ -330,6 +340,7 @@
         }
       }
 
+      // Active
       &.pf-m-active,
       &:active {
         background-color: var(--pf-c-nav__list-horizontal-link--active--BackgroundColor);
@@ -339,6 +350,7 @@
         }
       }
 
+      // Disabled
       &.pf-m-disabled,
       &:disabled {
         cursor: not-allowed;
@@ -351,8 +363,36 @@
     }
   }
 
+  // List horizontal
+  &__list-horizontal {
+
+    &-link {
+      padding:
+        var(--pf-c-nav__list-horizontal-link--PaddingTop)
+        var(--pf-c-nav__list-horizontal-link--PaddingRight)
+        var(--pf-c-nav__list-horizontal-link--PaddingBottom)
+        var(--pf-c-nav__list-horizontal-link--PaddingLeft);
+    }
+  }
+
+  // List tertiary
+  &__list-tertiary {
+    // padding-top: var(--pf-c-nav__list-tertiary--PaddingTop);
+    // padding-bottom: var(--pf-c-nav__list-tertiary--PaddingBottom);
+
+    &-link {
+      padding:
+        var(--pf-c-nav__list-tertiary-link--PaddingTop)
+        var(--pf-c-nav__list-tertiary-link--PaddingRight)
+        var(--pf-c-nav__list-tertiary-link--PaddingBottom)
+        var(--pf-c-nav__list-tertiary-link--PaddingLeft);
+    }
+  }
+
+  // Subnav
   &__subnav {
     flex: 1 0 100%;
+    margin-top: var(--pf-c-nav__subnav--MarginTop);
   }
 
   // Section
@@ -367,6 +407,7 @@
         var(--pf-c-nav__section-title--PaddingLeft);
 
       font-size: var(--pf-c-nav__section-title--FontSize);
+      font-weight: var(--pf-c-nav__section-title--FontWeight);
       color: var(--pf-c-nav__section-title--Color);
     }
 

@@ -3,10 +3,9 @@
     {{{nav-section--attributes}}}
   {{/if}}
   {{#if expandable}}
-    {{#if expanded}}
-    {{else}}
+    {{#unless expanded}}
       hidden
-    {{/if}}
+    {{/unless}}
   {{/if}}>
   {{> @partial-block}}
 </section>

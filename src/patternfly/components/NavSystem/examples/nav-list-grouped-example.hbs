@@ -1,59 +1,44 @@
-{{#> nav}}
-  {{#> nav-section}}
-    {{#> nav-section-title nav-section-title--attributes='id="section-title1"'}}
-      System Panel
+{{#> nav nav--attributes='aria-label="Primary Nav Grouped Example"'}}
+  {{#> nav-section nav-section--attributes='aria-labelledby="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attributes='id="grouped-title1"'}}
+      Section title 1
     {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple" nav-list--attributes='aria-labelledby="section-title1"'}}
+    {{#> nav-list nav-list--type="simple"}}
       {{#> nav-list-item}}
-        {{#> nav-list-link href="#" nav-list-link--modifiers="pf-m-active" nav-list-link--attributes='aria-current="page"'}}
-          Overview
+        {{#> nav-list-link href="#"}}
+          Link 1
         {{/nav-list-link}}
       {{/nav-list-item}}
       {{#> nav-list-item}}
         {{#> nav-list-link href="#"}}
-          Resource Usage
+          Link 2
         {{/nav-list-link}}
       {{/nav-list-item}}
       {{#> nav-list-item}}
         {{#> nav-list-link href="#"}}
-          Hypervisors
-        {{/nav-list-link}}
-      {{/nav-list-item}}
-      {{#> nav-list-item}}
-        {{#> nav-list-link href="#"}}
-          Instances
-        {{/nav-list-link}}
-      {{/nav-list-item}}
-      {{#> nav-list-item}}
-        {{#> nav-list-link href="#"}}
-          Volumes
-        {{/nav-list-link}}
-      {{/nav-list-item}}
-      {{#> nav-list-item}}
-        {{#> nav-list-link href="#"}}
-          Networks
+          Link 3
         {{/nav-list-link}}
       {{/nav-list-item}}
     {{/nav-list}}
   {{/nav-section}}
-  {{#> nav-section}}
-    {{#> nav-section-title}}
-      Policy
+  {{#> nav-section nav-section--attributes='aria-labelledby="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attributes='id="grouped-title2"'}}
+      Section title 2
     {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple" nav-list--attributes='aria-labelledby="section-title2"'}}
+    {{#> nav-list nav-list--type="simple"}}
       {{#> nav-list-item}}
         {{#> nav-list-link href="#"}}
-          Hosts
+          Link 1
         {{/nav-list-link}}
       {{/nav-list-item}}
       {{#> nav-list-item}}
         {{#> nav-list-link href="#"}}
-          Virtual Machines
+          Link 2
         {{/nav-list-link}}
       {{/nav-list-item}}
       {{#> nav-list-item}}
         {{#> nav-list-link href="#"}}
-          Storage
+          Link 3
         {{/nav-list-link}}
       {{/nav-list-item}}
     {{/nav-list}}
