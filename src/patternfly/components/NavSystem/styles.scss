@@ -124,14 +124,6 @@
   padding-top: var(--pf-c-nav--MarginTop);
   padding-bottom: var(--pf-c-nav--MarginBottom);
 
-  // Add margin to first list, if not horizontal
-  & > *:first-child:not(.pf-c-nav__list-horizontal):not(.pf-c-nav__list-tertiary) {
-  }
-
-  // Add margin to last list, if not horizontal
-  & > *:last-child:not(.pf-c-nav__list-horizontal):not(.pf-c-nav__list-tertiary) {
-  }
-
   // List - default
   &__list {
 
@@ -214,6 +206,7 @@
       &.pf-m-disabled,
       &:disabled {
         color: var(--pf-c-nav__list-link--disabled--Color);
+        cursor: not-allowed;
         background-color: var(--pf-c-nav__list-link--disabled--BackgroundColor);
 
         &::after {
@@ -222,7 +215,7 @@
       }
     }
 
-    // Action
+    // Expand
     &-expand {
       flex: none;
       padding-right: var(--pf-c-nav__list-expand--PaddingLeft);
@@ -230,6 +223,7 @@
       margin-left: auto;
       border: 0;
 
+      // Rotate the icon
       .pf-m-expanded & > * {
         transform: rotate(90deg);
       }
@@ -377,9 +371,8 @@
 
   // List tertiary
   &__list-tertiary {
-    // padding-top: var(--pf-c-nav__list-tertiary--PaddingTop);
-    // padding-bottom: var(--pf-c-nav__list-tertiary--PaddingBottom);
 
+    // List tertiary link
     &-link {
       padding:
         var(--pf-c-nav__list-tertiary-link--PaddingTop)
