@@ -1,6 +1,6 @@
 ## Overview
 
-The navigation system relies on several different components: 
+The navigation system relies on several different sub-components: 
 
 * `.pf-nav__list` - Default navigation list. It is the basis for both default and expandable, vertical navigation.
 * `.pf-nav__list-simple` - Nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
@@ -43,3 +43,5 @@ The navigation system relies on several different components:
 | `.pf-c-nav__list-expand`              | `<span>`                      | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
 | `.pf-m-expandable`                    | `.pf-c-nav__list-item`        | Modifies for the expandable state |
 | `.pf-m-expanded`                      | `.pf-c-nav__list-item`        | Modifies for the expanded state |
+| `.pf-m-active`                        | `.pf-c-nav__list-link`        | Modifies to display the link as active |
+| `.pf-m-disabled`                      | `.pf-c-nav__list-link`        | Modifies to display the link as disabled |
