@@ -48,14 +48,14 @@ export default () => {
       <Example heading="Nav Expandable" handlebars={navExpandableExampleRaw}>
         {navExpandableExample}
       </Example>
+      <Example heading="Nav Mixed" handlebars={navMixedExampleRaw}>
+        {navMixedExample}
+      </Example>
       <Example heading="Nav List Horizontal (only in masthead)" handlebars={navListHorizontalExampleRaw}>
         {navListHorizontalExample}
       </Example>
       <Example heading="Nav List Tertiary" handlebars={navListTertiaryExampleRaw}>
         {navListTertiaryExample}
-      </Example>
-      <Example heading="Nav Mixed" handlebars={navMixedExampleRaw}>
-        {navMixedExample}
       </Example>
     </Documentation>
   );
