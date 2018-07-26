@@ -7,6 +7,7 @@ import navListSimpleExampleRaw from '!raw!./nav-list-simple-example.hbs';
 import navListGroupedExampleRaw from '!raw!./nav-list-grouped-example.hbs';
 import navExampleRaw from '!raw!./nav-example.hbs';
 import navExpandableExampleRaw from '!raw!./nav-expandable-example.hbs';
+import navExpandableSubnavTitlesExampleRaw from '!raw!./nav-expandable-subnav-titles-example.hbs';
 import navListHorizontalExampleRaw from '!raw!./nav-list-horizontal-example.hbs';
 import navListTertiaryExampleRaw from '!raw!./nav-list-tertiary-example.hbs';
 import navMixedExampleRaw from '!raw!./nav-mixed-example.hbs';
@@ -16,6 +17,7 @@ import NavListSimpleExample from './nav-list-simple-example.hbs';
 import NavListGroupedExample from './nav-list-grouped-example.hbs';
 import NavExample from './nav-example.hbs';
 import NavExpandableExample from './nav-expandable-example.hbs';
+import NavExpandableSubnavTitlesExample from './nav-expandable-subnav-titles-example.hbs';
 import NavListHorizontalExample from './nav-list-horizontal-example.hbs';
 import NavListTertiaryExample from './nav-list-tertiary-example.hbs';
 import NavMixedExample from './nav-mixed-example.hbs';
@@ -30,6 +32,7 @@ export default () => {
   const navListGroupedExample = NavListGroupedExample();
   const navExample = NavExample();
   const navExpandableExample = NavExpandableExample();
+  const navExpandableSubnavTitlesExample = NavExpandableSubnavTitlesExample();
   const navListHorizontalExample = NavListHorizontalExample();
   const navListTertiaryExample = NavListTertiaryExample();
   const navMixedExample = NavMixedExample();
@@ -47,6 +50,9 @@ export default () => {
       </Example>
       <Example heading="Nav Expandable" handlebars={navExpandableExampleRaw}>
         {navExpandableExample}
+      </Example>
+      <Example heading="Nav Expandable (w/subnav titles)" handlebars={navExpandableSubnavTitlesExampleRaw}>
+        {navExpandableSubnavTitlesExample}
       </Example>
       <Example heading="Nav Mixed" handlebars={navMixedExampleRaw}>
         {navMixedExample}
