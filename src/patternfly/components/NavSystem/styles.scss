@@ -249,16 +249,6 @@
         }
       }
 
-      // Current
-      .pf-m-current & {
-        color: var(--pf-c-nav__list-link--current--Color);
-        background-color: var(--pf-c-nav__list-link--current--BackgroundColor);
-
-        &::after {
-          background-color: var(--pf-c-nav__list-link--current--after--BackgroundColor);
-        }
-      }
-
       // Active
       &.pf-m-active,
       &:active {
@@ -271,8 +261,7 @@
       }
 
       // Current
-      &.pf-m-current,
-      &[aria-current="page"] {
+      &.pf-m-current {
         color: var(--pf-c-nav__list-link--current--Color);
         background-color: var(--pf-c-nav__list-link--current--BackgroundColor);
 
@@ -350,8 +339,7 @@
       }
 
       // Current
-      &.pf-m-current,
-      &[aria-current="page"] {
+      &.pf-m-current {
         color: var(--pf-c-nav__list-simple-link--current--Color);
         background-color: var(--pf-c-nav__list-simple-link--current--BackgroundColor);
       }
@@ -485,8 +473,7 @@
       }
 
       // Current
-      &.pf-m-current,
-      &[aria-current="page"] {
+      &.pf-m-current {
         color: var(--pf-c-nav__list-horizontal-link--current--Color);
       }
 
