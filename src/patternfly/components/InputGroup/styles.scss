@@ -19,7 +19,13 @@
   margin-left: -1px;
 }
 
- /* stylelint-enable */
+  .pf-m-error {
+    margin-left: 0;
+    &:not(:last-child){
+      margin-right: 1px;
+    }
+  }
+
   display: flex;
   align-items: stretch;
   width: 100%;

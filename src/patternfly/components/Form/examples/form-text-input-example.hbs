@@ -15,4 +15,14 @@
     {{#> form-label for="textInput4" pf-c-form__label--modifier="pf-m-disabled"}}Disabled input{{/form-label}}
     {{#> form-controls controlType="input" input="true" pf-c-form-control--modifier="pf-m-disabled" type="text" name="textInput4" id="textInput4"  disabled="yes" aria-label="disabled text input" placeholder="Disabled input example"}}{{/form-controls}}
   {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput4"}}Input with helper text{{/form-label}}
+    {{#> form-controls controlType="input" input="true" type="text" name="textInput4" id="textInput4"  aria-label="input with helper text" aria-describedby="helper1"}}{{/form-controls}}
+    {{#> form-helper-text id="helper1"}}This is helper text{{/form-helper-text}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label for="textInput4"}}Error state input with helper text{{/form-label}}
+    {{#> form-controls controlType="input" input="true" pf-c-form-control--modifier="pf-m-error" aria-invalid="true" aria-errormessage="incorrect text" type="text" name="textInput4" id="textInput4"  aria-label="Error state text input" aria-describedby="helper2"}}{{/form-controls}}
+    {{#> form-helper-text pf-c-form__helper--modifier="pf-m-error" id="helper2"}}This is helper text{{/form-helper-text}}
+  {{/form-group}}
 {{/form}}
