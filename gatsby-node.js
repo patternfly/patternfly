@@ -9,28 +9,23 @@ const resolveAliases = require('./build/resolveAliases');
 const COMPONENTS_PATH = path.resolve(__dirname, './src/patternfly/components');
 const DEMOS_PATH = path.resolve(__dirname, './src/patternfly/demos');
 const LAYOUTS_PATH = path.resolve(__dirname, './src/patternfly/layouts');
+const UTILITIES_PATH = path.resolve(__dirname, './src/patternfly/utilities');
 
-const COMPONENT_PATHS = fs
-  .readdirSync(COMPONENTS_PATH)
-  .map(name => path.resolve(COMPONENTS_PATH, `./${name}`));
+const COMPONENT_PATHS = fs.readdirSync(COMPONENTS_PATH).map(name => path.resolve(COMPONENTS_PATH, `./${name}`));
 
-const DEMO_PATH = fs
-  .readdirSync(DEMOS_PATH)
-  .map(name => path.resolve(DEMOS_PATH, `./${name}`));
+const DEMO_PATH = fs.readdirSync(DEMOS_PATH).map(name => path.resolve(DEMOS_PATH, `./${name}`));
 
-const LAYOUT_PATHS = fs
-  .readdirSync(LAYOUTS_PATH)
-  .map(name => path.resolve(LAYOUTS_PATH, `./${name}`));
+const LAYOUT_PATHS = fs.readdirSync(LAYOUTS_PATH).map(name => path.resolve(LAYOUTS_PATH, `./${name}`));
+
+const UTILITIES_PATHS = fs.readdirSync(UTILITIES_PATH).map(name => path.resolve(UTILITIES_PATH, `./${name}`));
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   const PAGES_BASE_DIR = path.resolve(__dirname, './src/site/pages');
-  const COMPONENTS_BASE_DIR = path.resolve(
-    __dirname,
-    './src/patternfly/components'
-  );
+  const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/components');
   const DEMOS_BASE_DIR = path.resolve(__dirname, './src/patternfly/demos');
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts');
+  const UTILITIES_BASE_DIR = path.resolve(__dirname, './src/patternfly/utilities');
   const isMarkdown = node.internal.type === 'MarkdownRemark';
 
   if (isMarkdown) {
@@ -38,6 +33,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     const isComponent = node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR);
     const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
     const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
+    const isUtility = node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
     if (isPage) {
       const relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath);
       const pagePath = `/${relativePath}`.replace(/\.md$/, '');
@@ -62,6 +58,12 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       createNodeField({ node, name: 'path', value: pagePath });
       createNodeField({ node, name: 'type', value: 'documentation' });
       createNodeField({ node, name: 'contentType', value: 'demo' });
+    } else if (isUtility) {
+      const utilityName = path.basename(path.dirname(node.fileAbsolutePath));
+      const pagePath = `/utilities/${utilityName}/docs`;
+      createNodeField({ node, name: 'path', value: pagePath });
+      createNodeField({ node, name: 'type', value: 'documentation' });
+      createNodeField({ node, name: 'contentType', value: 'utility' });
     }
   }
 };
@@ -91,10 +93,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.path,
-        component: path.resolve(
-          __dirname,
-          `./src/site/templates/${node.fields.type}.js`
-        ),
+        component: path.resolve(__dirname, `./src/site/templates/${node.fields.type}.js`),
         layout: 'index',
         context: {
           pagePath: node.fields.path,
@@ -106,11 +105,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   });
 };
 
-exports.createLayouts = ({
-  graphql,
-  store,
-  boundActionCreators: { createLayout, deleteLayout }
-}) =>
+exports.createLayouts = ({ graphql, store, boundActionCreators: { createLayout, deleteLayout } }) =>
   glob(path.resolve(__dirname, 'src/site/layouts/**.js')).then(matches => {
     matches.forEach(layoutFilePath => {
       const id = path.parse(layoutFilePath).name;
@@ -124,8 +119,8 @@ exports.createLayouts = ({
 
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
-  const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos)\/$/;
-  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos)\/([A-Za-z0-9_-]+)/;
+  const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
+  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
   return new Promise((resolve, reject) => {
     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
@@ -179,7 +174,9 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     current.test = /\.hbs$/;
     current.loader = 'handlebars-loader';
     current.query = {
-      partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS).concat(DEMO_PATH)
+      partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
+        .concat(DEMO_PATH)
+        .concat(UTILITIES_PATHS)
     };
     return current;
   });

@@ -10,7 +10,8 @@ $pf-p-secondary-nav__link--Color:                $pf-global--Color--dark-100 !de
 $pf-p-secondary-nav__link--PaddingTop:           $pf-global--spacer--lg !default;
 $pf-p-secondary-nav__link--PaddingBottom:        $pf-global--spacer--lg !default;
 
-$pf-p-secondary-nav__link--active--Color:        $pf-global--Color--active !default;
+$pf-p-secondary-nav__link--active--FontWeight:   $pf-global--FontWeight--semi-bold !default;
+$pf-p-secondary-nav__link--active--Color:        $pf-global--Color--dark-active !default;
 $pf-p-secondary-nav__link--active--BorderColor:  $pf-global--Color--active !default;
 
 $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
@@ -47,6 +48,7 @@ $pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
 
     // Active State
     &.pf-m-active {
+      font-weight: $pf-p-secondary-nav__link--active--FontWeight;
       color: $pf-p-secondary-nav__link--active--Color;
       // The background creates a thicker blue border under the active link
       background-image:
