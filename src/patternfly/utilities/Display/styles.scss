@@ -11,6 +11,6 @@
 @include pf-utility-builder("display-table-row")      { display: table-row !important; }
 
 // Flex utilities
-@include pf-utility-builder("display-flex")                   { display: flex !important; }
-@include pf-utility-builder("display-inline-flex")            { display: inline-flex !important; }
+@include pf-utility-builder("display-flex")           { display: flex !important; }
+@include pf-utility-builder("display-inline-flex")    { display: inline-flex !important; }
 /* stylelint-enable */
