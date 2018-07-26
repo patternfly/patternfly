@@ -240,12 +240,27 @@
       }
 
       // Expanded
-      .pf-m-expanded & {
+      // Only applies to expanded lists
+      .pf-m-expanded > & {
         color: var(--pf-c-nav__list-link--expanded--Color);
         background-color: var(--pf-c-nav__list-link--expanded--BackgroundColor);
 
         &::after {
           background-color: var(--pf-c-nav__list-link--expanded--after--BackgroundColor);
+        }
+      }
+
+      // Current
+      // Applies to flat and exandable lists
+      // For expandable lists - .pf-m-current > &
+      // For flat lists - &.pf-m-current
+      .pf-m-current > &,
+      &.pf-m-current {
+        color: var(--pf-c-nav__list-link--current--Color);
+        background-color: var(--pf-c-nav__list-link--current--BackgroundColor);
+
+        &::after {
+          background-color: var(--pf-c-nav__list-link--current--after--BackgroundColor);
         }
       }
 
@@ -257,16 +272,6 @@
 
         &::after {
           background-color: var(--pf-c-nav__list-link--active--after--BackgroundColor);
-        }
-      }
-
-      // Current
-      &.pf-m-current {
-        color: var(--pf-c-nav__list-link--current--Color);
-        background-color: var(--pf-c-nav__list-link--current--BackgroundColor);
-
-        &::after {
-          background-color: var(--pf-c-nav__list-link--current--after--BackgroundColor);
         }
       }
 
