@@ -21,6 +21,7 @@ Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
 | `.pf-u-justify-content-flex-end{-on-[breakpoint]}`      | `*` |  Sets justify-content: flex-end |
 | `.pf-u-justify-content-center{-on-[breakpoint]}`        | `*` |  Sets justify-content: center |
 | `.pf-u-justify-content-space-around{-on-[breakpoint]}`  | `*` |  Sets justify-content: space-around |
+| `.pf-u-justify-content-space-between{-on-[breakpoint]}` | `*` |  Sets justify-content: space-between |
 | `.pf-u-align-items-flex-start{-on-[breakpoint]}`        | `*` |  Sets align-items: flex-start |
 | `.pf-u-align-items-flex-end{-on-[breakpoint]}`          | `*` |  Sets align-items: flex-start |
 | `.pf-u-align-items-center{-on-[breakpoint]}`            | `*` |  Sets align-items: center |
@@ -39,4 +40,5 @@ Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
 | `.pf-u-align-content-stretch{-on-[breakpoint]}`         | `*` |  Sets align-content: stretch |
 | `.pf-u-flex-shrink{1 or 0}{-on-[breakpoint]}`           | `*` |  Sets flex-shrink to 1 or 0 |
 | `.pf-u-flex-grow{1 or 0}{-on-[breakpoint]}`             | `*` |  Sets flex-grow to 1 or 0 |
+| `.pf-u-flex-basis{0 or auto}{-on-[breakpoint]}`         | `*` |  Sets flex-basis to 0 auto |
 | `.pf-u-flex-fill{-on-[breakpoint]}`                     | `*` |  Sets flex to 1 1 auto |
