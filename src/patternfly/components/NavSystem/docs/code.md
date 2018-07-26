@@ -43,5 +43,6 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__list-expand`              | `<span>`                      | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
 | `.pf-m-expandable`                    | `.pf-c-nav__list-item`        | Modifies for the expandable state |
 | `.pf-m-expanded`                      | `.pf-c-nav__list-item`        | Modifies for the expanded state |
+| `.pf-m-current`                       | `.pf-c-nav__list-item`, `.pf-c-nav__list-link`        | Modifies for the current state |
 | `.pf-m-active`                        | `.pf-c-nav__list-link`        | Modifies to display the link as active |
 | `.pf-m-disabled`                      | `.pf-c-nav__list-link`        | Modifies to display the link as disabled |

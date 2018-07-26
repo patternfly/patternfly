@@ -207,7 +207,9 @@
   }
 
   .Preview__body {
-    //height: 300px;
+    .pf-l-page__header-nav {
+      background: var(--pf-global--BackgroundColor--dark-100);
+    }
   }
 }
 

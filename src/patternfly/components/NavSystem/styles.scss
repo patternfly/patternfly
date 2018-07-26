@@ -31,6 +31,8 @@
   --pf-c-nav__list-link--focus--after--BackgroundColor:       var(--pf-global--Color--active);
   --pf-c-nav__list-link--hover--after--BackgroundColor:       var(--pf-global--Color--active);
   --pf-c-nav__list-link--active--after--BackgroundColor:      var(--pf-global--Color--active);
+  --pf-c-nav__list-link--current--after--BackgroundColor:     var(--pf-global--Color--active);
+  --pf-c-nav__list-link--expanded--after--BackgroundColor:    var(--pf-global--Color--active);
   --pf-c-nav__list-link--disabled--after--BackgroundColor:    transparent;
 
   // Nav list link colors
@@ -38,6 +40,8 @@
   --pf-c-nav__list-link--hover--Color:                        var(--pf-global--Color--active);
   --pf-c-nav__list-link--focus--Color:                        var(--pf-global--Color--active);
   --pf-c-nav__list-link--active--Color:                       var(--pf-global--Color--active);
+  --pf-c-nav__list-link--current--Color:                      var(--pf-global--Color--active);
+  --pf-c-nav__list-link--expanded--Color:                      var(--pf-global--Color--active);
   --pf-c-nav__list-link--disabled--Color:                     var(--pf-global--Color--disabled);
 
   // Nav list link background colors
@@ -45,6 +49,8 @@
   --pf-c-nav__list-link--hover--BackgroundColor:              transparent;
   --pf-c-nav__list-link--focus--BackgroundColor:              transparent;
   --pf-c-nav__list-link--active--BackgroundColor:             transparent;
+  --pf-c-nav__list-link--current--BackgroundColor:            transparent;
+  --pf-c-nav__list-link--expanded--BackgroundColor:           transparent;
   --pf-c-nav__list-link--disabled--BackgroundColor:           var(--pf-global--BackgroundColor--disabled);
 
   // Nav list list action
@@ -62,12 +68,15 @@
   --pf-c-nav__list-simple-link--hover--Color:                 var(--pf-global--Color--active);
   --pf-c-nav__list-simple-link--focus--Color:                 var(--pf-global--Color--active);
   --pf-c-nav__list-simple-link--active--Color:                var(--pf-global--Color--active);
+  --pf-c-nav__list-simple-link--current--Color:               var(--pf-global--Color--active);
+  --pf-c-nav__list-simple-link--disabled--Color:              var(--pf-global--Color--disabled);
 
   // Nav list simple link background color
   --pf-c-nav__list-simple-link--BackgroundColor:              transparent;
   --pf-c-nav__list-simple-link--hover--BackgroundColor:       var(--pf-global--BackgroundColor--300);
   --pf-c-nav__list-simple-link--focus--BackgroundColor:       var(--pf-global--BackgroundColor--300);
   --pf-c-nav__list-simple-link--active--BackgroundColor:      var(--pf-global--BackgroundColor--300);
+  --pf-c-nav__list-simple-link--current--BackgroundColor:     var(--pf-global--BackgroundColor--300);
   --pf-c-nav__list-simple-link--disabled--BackgroundColor:    var(--pf-global--BackgroundColor--disabled);
   --pf-c-nav__list-simple-link--FontWeight:                   var(--pf-global--link--FontWeight);
 
@@ -87,12 +96,15 @@
   --pf-c-nav__list-horizontal-link--hover--Color:                       var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--focus--Color:                       var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--active--Color:                      var(--pf-global--Color--active);
+  --pf-c-nav__list-horizontal-link--current--Color:                     var(--pf-global--Color--active);
+  --pf-c-nav__list-horizontal-link--disabled--Color:                    var(--pf-global--Color--disabled);
 
   // Nav list horizontal link background color
   --pf-c-nav__list-horizontal-link--BackgroundColor:                    transparent;
   --pf-c-nav__list-horizontal-link--hover--BackgroundColor:             transparent;
   --pf-c-nav__list-horizontal-link--focus--BackgroundColor:             transparent;
   --pf-c-nav__list-horizontal-link--active--BackgroundColor:            transparent;
+  --pf-c-nav__list-horizontal-link--current--BackgroundColor:           transparent;
   --pf-c-nav__list-horizontal-link--disabled--BackgroundColor:          var(--pf-global--BackgroundColor--disabled);
 
   // Nav list horizontal link::after background color
@@ -100,6 +112,7 @@
   --pf-c-nav__list-horizontal-link--focus--after--BackgroundColor:      var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--hover--after--BackgroundColor:      var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--active--after--BackgroundColor:     var(--pf-global--Color--active);
+  --pf-c-nav__list-horizontal-link--current--after--BackgroundColor:    var(--pf-global--Color--active);
   --pf-c-nav__list-horizontal-link--disabled--after--BackgroundColor:   transparent;
 
   // Nav list tertiary link padding
@@ -113,6 +126,8 @@
   --pf-c-nav__list-tertiary-link--hover--Color:                         var(--pf-global--link--Color--active);
   --pf-c-nav__list-tertiary-link--focus--Color:                         var(--pf-global--link--Color--active);
   --pf-c-nav__list-tertiary-link--active--Color:                        var(--pf-global--link--Color--active);
+  --pf-c-nav__list-tertiary-link--current--Color:                       var(--pf-global--link--Color--active);
+  --pf-c-nav__list-tertiary-link--disabled--Color:                      var(--pf-global--link--Color--disabled);
 
   // Nav list tertiary link background color
   --pf-c-nav__list-tertiary-link--BackgroundColor:                      transparent;
@@ -212,8 +227,27 @@
         }
       }
 
-      // Active / expanded
-      .pf-m-expanded &,
+      // Expanded
+      .pf-m-expanded & {
+        color: var(--pf-c-nav__list-link--expanded--Color);
+        background-color: var(--pf-c-nav__list-link--expanded--BackgroundColor);
+
+        &::after {
+          background-color: var(--pf-c-nav__list-link--expanded--after--BackgroundColor);
+        }
+      }
+
+      // Current
+      .pf-m-current & {
+        color: var(--pf-c-nav__list-link--current--Color);
+        background-color: var(--pf-c-nav__list-link--current--BackgroundColor);
+
+        &::after {
+          background-color: var(--pf-c-nav__list-link--current--after--BackgroundColor);
+        }
+      }
+
+      // Active
       &.pf-m-active,
       &:active {
         color: var(--pf-c-nav__list-link--active--Color);
@@ -221,6 +255,17 @@
 
         &::after {
           background-color: var(--pf-c-nav__list-link--active--after--BackgroundColor);
+        }
+      }
+
+      // Current
+      &.pf-m-current,
+      &[aria-current="page"] {
+        color: var(--pf-c-nav__list-link--current--Color);
+        background-color: var(--pf-c-nav__list-link--current--BackgroundColor);
+
+        &::after {
+          background-color: var(--pf-c-nav__list-link--current--after--BackgroundColor);
         }
       }
 
@@ -246,7 +291,8 @@
       border: 0;
 
       // Rotate the icon
-      .pf-m-expanded & > * {
+      .pf-m-expanded & > *,
+      .pf-m-current & > * {
         transform: rotate(90deg);
       }
     }
@@ -290,6 +336,13 @@
       &:active {
         color: var(--pf-c-nav__list-simple-link--active--Color);
         background-color: var(--pf-c-nav__list-simple-link--active--BackgroundColor);
+      }
+
+      // Current
+      &.pf-m-current,
+      &[aria-current="page"] {
+        color: var(--pf-c-nav__list-simple-link--current--Color);
+        background-color: var(--pf-c-nav__list-simple-link--current--BackgroundColor);
       }
 
       // Disabled
@@ -367,6 +420,15 @@
         }
       }
 
+      // Current
+      &.pf-m-current {
+        background-color: var(--pf-c-nav__list-horizontal-link--current--BackgroundColor);
+
+        &::after {
+          background-color: var(--pf-c-nav__list-horizontal-link--current--after--BackgroundColor);
+        }
+      }
+
       // Disabled
       &.pf-m-disabled,
       &:disabled {
@@ -410,6 +472,18 @@
       &:active {
         color: var(--pf-c-nav__list-horizontal-link--active--Color);
       }
+
+      // Current
+      &.pf-m-current,
+      &[aria-current="page"] {
+        color: var(--pf-c-nav__list-horizontal-link--current--Color);
+      }
+
+      // Disabled
+      &.pf-m-disabled,
+      &:disabled {
+        color: var(--pf-c-nav__list-horizontal-link--current--Color);
+      }
     }
   }
 
@@ -442,6 +516,17 @@
       &.pf-m-active,
       &:active {
         color: var(--pf-c-nav__list-tertiary-link--active--Color);
+      }
+
+      // Current
+      &.pf-m-current {
+        color: var(--pf-c-nav__list-tertiary-link--current--Color);
+      }
+
+      // Disabled
+      &.pf-m-disabled,
+      &:disabled {
+        color: var(--pf-c-nav__list-tertiary-link--disabled--Color);
       }
     }
   }

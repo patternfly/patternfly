@@ -1,66 +1,66 @@
 {{#> nav nav--attributes='aria-label="Primary Nav Expandable Example"'}}
   {{#> nav-list}}
-    {{#> nav-list-item expandable="true" expanded="true"}}
-      {{#> nav-list-link href="#" nav-list-link--attributes='id="link1"'}}
+    {{#> nav-list-item nav-list-item--expandable="true" nav-list-item--current="true"}}
+      {{#> nav-list-link nav-list-link--href="#" nav-list-link--attributes='id="link1"'}}
         Link 1
       {{/nav-list-link}}
-      {{#> nav-section subnav="true" nav-section--attributes='aria-labelledby="link1"'}}
-        {{#> nav-list nav-list--type="simple"}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+      {{#> nav-subnav nav-subnav--attributes='aria-labelledby="link1"'}}
+        {{#> nav-list-simple}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#" nav-list-simple-link--current="true"}}
               Subnav Link 1
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
               Subnav Link 2
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
               Subnav Link 3
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-        {{/nav-list}}
-      {{/nav-section}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+        {{/nav-list-simple}}
+      {{/nav-subnav}}
     {{/nav-list-item}}
-    {{#> nav-list-item expandable="true"}}
-      {{#> nav-list-link href="#"nav-list-link--attributes='id="link2"'}}
+    {{#> nav-list-item nav-list-item--expandable="true" nav-list-item--expanded="true"}}
+      {{#> nav-list-link nav-list-link--href="#" nav-list-link--attributes='id="link2"'}}
         Link 2
       {{/nav-list-link}}
-      {{#> nav-section subnav="true" nav-section--attributes='aria-labelledby="link2"'}}
-        {{#> nav-list nav-list--type="simple"}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+      {{#> nav-subnav nav-subnav--attributes='aria-labelledby="link2"'}}
+        {{#> nav-list-simple}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
               Subnav Link 1
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
               Subnav Link 2
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-        {{/nav-list}}
-      {{/nav-section}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+        {{/nav-list-simple}}
+      {{/nav-subnav}}
     {{/nav-list-item}}
-    {{#> nav-list-item expandable="true"}}
-      {{#> nav-list-link href="#"nav-list-link--attributes='id="link3"'}}
+    {{#> nav-list-item nav-list-item--expandable="true"}}
+      {{#> nav-list-link nav-list-link--href="#" nav-list-link--attributes='id="link3"'}}
         Link 3
       {{/nav-list-link}}
-      {{#> nav-section subnav="true" nav-section--attributes='aria-labelledby="link3"'}}
-        {{#> nav-list nav-list--type="simple"}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+      {{#> nav-subnav nav-subnav--attributes='aria-labelledby="link3"'}}
+        {{#> nav-list-simple}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
               Subnav Link 1
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link href="#"}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
               Subnav Link 2
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-        {{/nav-list}}
-      {{/nav-section}}
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+        {{/nav-list-simple}}
+      {{/nav-subnav}}
     {{/nav-list-item}}
   {{/nav-list}}
 {{/nav}}
