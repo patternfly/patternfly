@@ -164,8 +164,9 @@
   &__helper-text {
     margin-top: var(--pf-c-form__helper-text--MarginTop);
     font-size: var(--pf-c-form__helper-text--FontSize);
-    color: var(--pf-c-form__helper-text--Color);
-
+    &:not(.pf-m-error){
+      color: var(--pf-c-form__helper-text--Color);
+    }
     &.pf-m-error {
       color: var(--pf-c-form--error--Color);
     }
@@ -198,11 +199,6 @@
         padding-bottom: var(--pf-c-form__label-nested--PaddingBottom);
         padding-left: var(--pf-c-form__label-nested--PaddingLeft);
       }
-    }
-
-    // Align right
-    &-right {
-      margin-left: auto;
     }
 
     // Sub-section title
