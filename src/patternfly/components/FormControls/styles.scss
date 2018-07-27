@@ -81,16 +81,19 @@ $pf-c-form-controls--error-svg--Viewbox: "0 0 26 15.8" !default;
   }
   &.pf-m-error {
     padding-top: var(--pf-c-form-control--error--PaddingTop);
-    padding-right: var(--pf-c-form-control--error--PaddingRight);
     padding-bottom: var(--pf-c-form-control--error--PaddingBottom);
     border-color: var(--pf-c-form-control--error--BorderColor);
     border-width: var(--pf-c-form-control--error--BorderSize);
-    @include pf-bg-svg($pf-c-form-controls--error-svg--Coordinates, $pf-c-form-controls--error-svg--Color, $pf-c-form-controls--error-svg--Width, $pf-c-form-controls--error-svg--Height, $pf-c-form-controls--error-svg--Viewbox);
+    &:not(select){
+      padding-right: var(--pf-c-form-control--error--PaddingRight);
+      @include pf-bg-svg($pf-c-form-controls--error-svg--Coordinates, $pf-c-form-controls--error-svg--Color, $pf-c-form-controls--error-svg--Width, $pf-c-form-controls--error-svg--Height, $pf-c-form-controls--error-svg--Viewbox);
+    }
   }
 
   @at-root select#{&} {
     height: var(--pf-c-form-control--Height);
     &.pf-m-error {
+      padding-right: var(--pf-c-form-control--PaddingRight);
       background: none;
     }
   }
