@@ -35,7 +35,7 @@
   --pf-c-dropdown__menu--Top: calc(100% + var(--pf-global--spacer--xs));
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--xs);
   // The dropup menu must be transformed up and this calculates how much to create space between the toggle and menu
-  --pf-c-dropdown__menu--dropup--Transform: translateY(calc(-100% - var(--pf-global--spacer--sm)));
+  --pf-c-dropdown__menu--dropup--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs)));
 
   // Menu Item
   --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
