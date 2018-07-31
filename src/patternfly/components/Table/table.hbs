@@ -1,0 +1,44 @@
+<table class="pf-c-table{{#if table--modifier}} {{table--modifier}}{{/if}}"
+
+  {{#if table--grid}}
+    role="grid"
+  {{/if}}
+  {{#if table--attribute}}
+    {{{table--attribute}}}
+  {{/if}}
+  {{#if table--interactive}}
+    onClick="(function(){
+      const toggle = event.target;
+      let hit = toggle;
+      hit = hit.dataset.target;
+
+      if (toggle.classList.contains('pf-m-toggle')) {
+        toggle.classList.toggle('pf-m-expanded');
+        let expandableParent = document.getElementById(hit).parentNode.parentNode;
+        let expandableContent = document.getElementById(hit);
+
+        if (toggle.classList.contains('pf-m-expanded')) {
+          expandableParent.removeAttribute('hidden');
+
+          setTimeout(() => {
+            expandableParent.setAttribute('aria-expanded', 'true');
+            expandableParent.classList.add('pf-m-expanded');
+          }, 50);
+
+        } else {
+          expandableParent.classList.remove('pf-m-expanded');
+
+          setTimeout(() => {
+            expandableParent.setAttribute('aria-expanded', 'false');
+          }, 50);
+
+          setTimeout(() => {
+            expandableParent.setAttribute('hidden', '');
+          }, 700);
+        }
+      }
+        return false;
+    })();return false;"
+  {{/if}}>
+  {{> @partial-block}}
+</table>

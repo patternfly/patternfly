@@ -1,0 +1,143 @@
+<div class="demo">
+{{#> table table--modifier="pf-m-compact" table--attribute='id="expandable-table" aria-label="This is a compact table example"'}}
+  {{#> table-caption}}
+  {{/table-caption}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="select all rows" aria-label="Check row"}}
+        {{/check}}
+      {{/table-th}}    
+      {{#> table-th table-th--sortable="true" table-th--asc="true"}}
+        Contributor
+      {{/table-th}}
+      {{#> table-th}}
+        Position
+      {{/table-th}} 
+      {{#> table-th}}
+        Location
+      {{/table-th}} 
+      {{#> table-th}}
+        Last Seen
+      {{/table-th}} 
+      {{#> table-th}}
+        Numbers
+      {{/table-th}} 
+      {{#> table-th table-th--modifier="pf-m-fit-content"}}
+        Icons
+      {{/table-th}} 
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}} 
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}} 
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row1" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Contributor Name"}}
+        Andres Galant
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Position"}}
+        CSS Guru
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Location"}}
+        Not too sure
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        0556
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-md"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Action
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}    
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row2" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Contributor Name"}}
+        Jenny Haines
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Location"}}
+        Raleigh
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9492
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-lg"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Action
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row3" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Contributor Name"}}
+        Kyle Baker
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design Lead
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9929
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-md"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Action
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+</div>

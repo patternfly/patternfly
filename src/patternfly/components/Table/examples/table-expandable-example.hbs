@@ -1,0 +1,206 @@
+<div class="demo">
+{{#> table table--interactive="true" table--grid="true" table--attribute='id="expandable-table" aria-labelledby="expanable-table-caption"'}}
+{{!-- {{#> table table--attribute='id="expandable-table" aria-labelledby="expanable-table-caption"'}} --}}
+  {{#> table-caption table-caption--modifier="pf-u-sr-only" table-caption--attribute='id="expanable-table-caption"'}}
+    Expandable table example
+  {{/table-caption}}
+  {{!-- {{#> table-thead table-thead--interactive="true"}} --}}
+  {{#> table-thead}}
+    {{#> table-th table-th--blank="true"}}
+    {{/table-th}}    
+    {{#> table-th table-th--check="true"}}
+      <input class="pf-c-check" type="checkbox" name="example" aria-label="unselected checkbox example">
+    {{/table-th}}    
+    {{#> table-th table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
+      Repositories
+    {{/table-th}}
+    {{#> table-th table-th--sortable="true"}}
+      Branches
+    {{/table-th}} 
+    {{#> table-th table-th--sortable="true"}}
+      Pull requests
+    {{/table-th}} 
+    {{#> table-th table-th--sortable="true"}}
+      Workspaces
+    {{/table-th}} 
+    {{#> table-th table-th--sortable="true"}}
+      Last Commit
+    {{/table-th}} 
+    {{#> table-th table-th--blank="true"}}
+    {{/table-th}} 
+    {{#> table-th table-th--blank="true"}}
+    {{/table-th}} 
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--expanded="true" table-td--target="expandable-content1" table-td--attribute="autofocus"}}
+      {{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row1" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Repository Name" table-td--attribute='aria-label="Repository Name"'}}
+        <div>Node 1</div>
+        <a href="#">siemur/test-space</a>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code-branch fa-fw"></i> 
+          <span>10</span>
+        </span>
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code fa-fw"></i> 
+          <span>25</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-dolly fa-fw"></i>
+          <span>5</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Open in GitHub
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{!-- {{#> table-tr table-tr--expandable="true" table-tr--expanded="true" table-tr--attribute='role="presentation" tabindex="-1"'}} --}}
+    {{#> table-tr table-tr--expandable="true" table-tr--expanded="true" table-tr--attribute='tabindex="-1"'}}
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--attribute='colspan="1" aria-label="testing relationship" tabindex="-1" role="complementary" id="expandable-content-wrap"'}}
+        {{!-- <div id="test" class="pf-u-sr-only" tabindex="-1">test</div> --}}
+        {{!-- <div class="pf-c-table__expandable-row-content" id="expandable-content1" tabindex="0" aria-owns="expandable-content-wrap"> --}}
+        <div class="pf-c-table__expandable-row-content">
+          content here - this content does not relate to table header cells
+        </div>
+      {{/table-td}}
+      {{#> table-td table-td--attribute='colspan="5" aria-label="This is an expandable section content"'}}
+        <div class="pf-c-table__expandable-row-content" id="expandable-content1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      {{/table-td}}
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}      
+    {{/table-tr}}         
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--attribute='aria-label="this is a table group with an expandable row"'}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--target="expandable-content2"}}
+      {{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row2" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Repository Name"}}
+        <div>Node 1</div>
+        <a href="#">siemur/test-space</a>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code-branch fa-fw"></i> 
+          <span>10</span>
+        </span>
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code fa-fw"></i> 
+          <span>25</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-dolly fa-fw"></i>
+          <span>5</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Open in GitHub
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute='role="presentation"'}}
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--attribute='colspan="4" aria-label="This is an expandable section content" role="presentation"'}}
+        <div class="pf-c-table__expandable-row-content" id="expandable-content2">
+          {{#> grid grid--gutter="true" grid--modifiers="pf-m-gutter"}}
+            {{#> grid-item}}
+              <b>Using layouts inside collapsible cells</b>
+            {{/grid-item}}
+            {{#> grid-item}}
+              {{#> title titleType="h3" pf-c-title--Modifier="pf-m-lg pf-u-m-0"}}
+                Git URL:
+              {{/title}}
+              <a href="#">hit://github.com/mindreeper2420/rhuxd.git</a>
+            {{/grid-item}}
+            {{#> grid-item}}
+              {{#> title titleType="h3" pf-c-title--Modifier="pf-m-lg pf-u-m-0"}}
+                Latest Commit SHA1:
+              {{/title}}
+              <span>64ae92893d7a98c71b3ef56835ed1c96354526be</span>
+            {{/grid-item}}
+            {{#> grid-item}}
+              {{#> title titleType="h3" pf-c-title--Modifier="pf-m-lg pf-u-m-0"}}
+                Status:
+              {{/title}}
+              <span>20 total files changed</span>
+            {{/grid-item}}
+            {{#> grid-item}}
+              {{#> title titleType="h3" pf-c-title--Modifier="pf-m-lg pf-u-m-0"}}
+                License:
+              {{/title}}
+              <span>Apache License 2.9 </span>
+            {{/grid-item}}
+          {{/grid}}
+        </div>
+      {{/table-td}}
+      {{#> table-td table-td--attribute='aria-label="This is an expandable section content" role="presentation"'}}
+        <div class="pf-c-table__expandable-row-content">
+          content here
+        </div>
+      {{/table-td}}
+      {{#> table-td table-td--attribute='aria-label="This is an expandable section content" role="presentation"'}}
+        <div class="pf-c-table__expandable-row-content">
+          content here
+        </div>
+      {{/table-td}}
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+</div>
