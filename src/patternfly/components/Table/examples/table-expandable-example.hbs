@@ -1,0 +1,244 @@
+<div class="demo">
+{{#> table table--interactive="true" table--attributes='id="expandable-table" aria-label="This is a treegrid table example"'}}
+  {{#> table-caption}}
+  {{/table-caption}}
+  {{#> table-thead table-thead--interactive="true"}}
+    {{#> table-tr}}
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}}    
+      {{#> table-th table-th--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="select all rows" aria-label="Select all rows"}}
+        {{/check}}
+      {{/table-th}}    
+      {{#> table-th table-th--sortable="true" table-th--asc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--sortable="true"}}
+        Branches
+      {{/table-th}} 
+      {{#> table-th table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}} 
+      {{#> table-th table-th--sortable="true"}}
+        Workspaces
+      {{/table-th}} 
+      {{#> table-th table-th--sortable="true"}}
+        Last Commit
+      {{/table-th}} 
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}} 
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}} 
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{!-- {{#> table-tr table-tr--level="1" table-tr--expanded="true" table-tr--level="1" table-tr--attribute='aria-posinset="1" aria-setsize="1" tabindex="-1"'}} --}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--target="expandable-content1" table-td--attribute="autofocus"}}
+      {{/table-td}}
+      {{#> table-td table-td--check="true" table-td--attribute='aria-label="Branch count"'}}
+        {{#> check pf-c-check-type="checkbox" name="unselected"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Repository Name" table-td--attribute='aria-label="Repository Name"'}}
+        <div>Node 1</div>
+        <a href="#">siemur/test-space</a>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code-branch fa-fw"></i> 
+          <span>10</span>
+        </span>
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code fa-fw"></i> 
+          <span>25</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-dolly fa-fw"></i>
+          <span>5</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Open in GitHub
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{!-- {{#> table-tr table-tr--expandable="true" table-tr--level="2" table-tr--attribute='aria-posinset="1" aria-setsize="1" tabindex="-1"'}} --}}
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--attribute='colspan="7" aria-label="This is an expandable section content" role="presentation"'}}
+        <div class="pf-c-table__expandable-row-content" id="expandable-content1">
+          <div class="pf-c-content">
+            <ul>
+              <li>
+                <p>
+                  Git URL:
+                </p>
+                <a href="#">hit://github.com/mindreeper2420/rhuxd.git</a>
+              </li>
+              <li>
+                <p>
+                  Latest Commit SHA1:
+                </p>
+                <span>64ae92893d7a98c71b3ef56835ed1c96354526be</span>
+              </li>
+              <li>
+                <p>
+                  Status:
+                </p>
+                <span>20 total files changed</span>
+              </li>
+              <li>
+                <p>
+                  License:
+                </p>
+                <span>Apache License 2.9 </span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <p>
+                  Git URL:
+                </p>
+                <a href="#">hit://github.com/mindreeper2420/rhuxd.git</a>
+              </li>
+              <li>
+                <p>
+                  Latest Commit SHA1:
+                </p>
+                <span>64ae92893d7a98c71b3ef56835ed1c96354526be</span>
+              </li>
+              <li>
+                <p>
+                  Status:
+                </p>
+                <span>20 total files changed</span>
+              </li>
+              <li>
+                <p>
+                  License:
+                </p>
+                <span>Apache License 2.9 </span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <p>
+                  Git URL:
+                </p>
+                <a href="#">hit://github.com/mindreeper2420/rhuxd.git</a>
+              </li>
+              <li>
+                <p>
+                  Latest Commit SHA1:
+                </p>
+                <span>64ae92893d7a98c71b3ef56835ed1c96354526be</span>
+              </li>
+              <li>
+                <p>
+                  Status:
+                </p>
+                <span>20 total files changed</span>
+              </li>
+              <li>
+                <p>
+                  License:
+                </p>
+                <span>Apache License 2.9 </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      {{/table-td}}
+    {{/table-tr}}         
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--attribute='aria-label="this is a table group with an expandable row"'}}
+    {{!-- {{#> table-tr table-tr--level="1" table-tr--expanded="true" table-tr--attribute='aria-posinset="1" aria-setsize="1" tabindex="-1"' table-tr--level="1"}} --}}
+    {{#> table-tr table-tr--level="1" table-tr--expanded="true" table-tr--attribute='aria-posinset="1" aria-setsize="1" tabindex="-1"' table-tr--level="1"}}
+      {{#> table-td table-td--toggle="true" table-td--target="expandable-content2"}}
+      {{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="unselected"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Repository Name"}}
+        <div>Node 1</div>
+        <a href="#">siemur/test-space</a>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code-branch fa-fw"></i> 
+          <span>10</span>
+        </span>
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-code fa-fw"></i> 
+          <span>25</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        <span class="pf-c-table__icon-inline">
+          <i class="fas fa-dolly fa-fw"></i>
+          <span>5</span>
+        </span>
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Open in GitHub
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{!-- {{#> table-tr table-tr--expandable="true" table-tr--level="2" table-tr--expanded="true" table-tr--attribute='aria-posinset="1" aria-setsize="1" tabindex="-1"'}} --}}
+    {{#> table-tr table-tr--expandable="true" table-tr--expanded="true" table-tr--level="2" table-tr--attribute='aria-posinset="1" aria-setsize="1" tabindex="-1" role="presentation"'}}
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--blank="true"}}
+      {{/table-td}}  
+      {{#> table-td table-td--attribute='colspan="7" aria-label="This is an expandable section content" role="presentation"'}}
+        <div class="pf-c-table__expandable-row-content" id="expandable-content2">
+          <div class="pf-c-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      {{/table-td}}
+    {{/table-tr}}          
+
+  {{/table-tbody}}
+{{/table}}
+</div>

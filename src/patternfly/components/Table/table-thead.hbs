@@ -1,0 +1,69 @@
+<thead {{#if table-thead--modifier}}class="{{table-thead--modifier}}"{{/if}}
+  {{#if table-thead--interactive}}
+    onClick="(function(){
+      let selectedTh = event.target;
+
+      const getSiblings = (elem) => {
+        let siblings = [];
+        let sibling = elem.parentNode.firstChild;
+        let skipMe = elem;
+        for ( ; sibling; sibling = sibling.nextSibling ) 
+          if ( sibling.nodeType == 1 && sibling != elem )
+          siblings.push(sibling);
+
+        return siblings;
+      }
+
+      const getIcon = (elem) => {
+        let icon = elem.childNodes[1];
+        icon = icon.childNodes[1];
+
+        return icon;
+      }
+
+      if(selectedTh.classList.contains('pf-c-table__sort')) {
+        let siblings = getSiblings(selectedTh);
+        let icon = getIcon(selectedTh);
+        
+        // deactivate sibling th's
+        for (var sibling of siblings) {
+          if (sibling.classList.contains('pf-m-asc') || sibling.classList.contains('pf-m-desc')) {
+            let icon = getIcon(sibling);
+
+            icon.classList.remove('fa-angle-up');
+            icon.classList.add('fa-sort');
+            sibling.classList.remove('pf-m-asc', 'pf-m-desc');
+            sibling.setAttribute('aria-sort', 'none');
+          }
+        }
+
+        if (selectedTh.classList.contains('pf-m-asc') || selectedTh.classList.contains('pf-m-desc')) {
+          if (selectedTh.classList.contains('pf-m-asc')) {
+            selectedTh.classList.remove('pf-m-asc');
+            selectedTh.classList.add('pf-m-desc');
+            selectedTh.setAttribute('aria-sort', 'asc');
+          } else {
+            selectedTh.classList.add('pf-m-asc');
+            selectedTh.classList.remove('pf-m-desc');
+            selectedTh.setAttribute('aria-sort', 'desc');
+          }      
+        } else {
+          // set active class
+          //- selectedTh.classList.add('pf-m-active');
+          // swap icon classes
+          icon.classList.remove('fa-sort');
+          icon.classList.add('fa-angle-up');
+          // set th to sort ascending 
+          selectedTh.classList.add('pf-m-asc');
+          selectedTh.setAttribute('aria-sort', 'asc');
+        }
+      }
+
+        return false;
+    })();return false;"
+  {{/if}} 
+  {{#if table-thead--attribute}}
+    {{{table-thead--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</thead>
