@@ -2,8 +2,8 @@
 
 /* stylelint-disable */
 // Text utilities
-@include pf-utility-builder("text-left")      { text-align: left !important; }
-@include pf-utility-builder("text-center")    { text-align: center !important; }
-@include pf-utility-builder("text-right")     { text-align: right !important; }
-@include pf-utility-builder("text-justify")   { text-align: justify !important; }
+@include pf-utility-builder("text-align-left")      { text-align: left !important; }
+@include pf-utility-builder("text-align-center")    { text-align: center !important; }
+@include pf-utility-builder("text-align-right")     { text-align: right !important; }
+@include pf-utility-builder("text-align-justify")   { text-align: justify !important; }
 /* stylelint-enable */

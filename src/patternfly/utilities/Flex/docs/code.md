@@ -1,6 +1,6 @@
 ## Overview
 
-Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
+For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl
 
 <!-- ## Accessibility
 
