@@ -4,7 +4,7 @@
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-selected="true"` | `.pf-m-active` |  Indicates the selected state of the element to assistive technologies |
+| `aria-selected="true"` | `.pf-m-current` |  Indicates the selected state of the element to assistive technologies |
 | `aria-disabled="true"` | `.pf-m-disabled` |  Indicates the disabled state of the element to assistive technologies |
 
 ## Usage
@@ -14,5 +14,5 @@
 | `.pf-c-secondary-nav` | `<ul>` |  Applies default styling to parent |
 | `.pf-c-secondary-nav__item` | `<li>` |  Applies default styling to direct child |
 | `.pf-c-secondary-nav__link` | `<a>` | Applies default styling to direct link |
-| `.pf-m-active` | `<a>` | Applies styling to active link |
-| `.pf-m-disabled` | `<a>` | Applies styling to disabled link |
+| `.pf-m-current` | `.pf-c-secondary-nav__link` | Applies styling to current link |
+| `.pf-m-disabled` | `.pf-c-secondary-nav__link` | Applies styling to disabled link |
