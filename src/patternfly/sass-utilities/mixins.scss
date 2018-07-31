@@ -145,11 +145,6 @@
   @if $point == "" or $point == null {
     @content;
   }
-  @else if $point == "xs" {
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
-      @content;
-    }
-  }
   @else if $point == "sm" {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       @content;
