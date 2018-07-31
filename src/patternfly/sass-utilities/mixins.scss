@@ -141,14 +141,9 @@
 }
 
 // Media query used to create responsive classes
-@mixin media-query($point) {
+@mixin pf-media-query($point) {
   @if $point == "" or $point == null {
     @content;
-  }
-  @else if $point == "xs" {
-    @media screen and (max-width: $pf-global--breakpoint--xs) {
-      @content;
-    }
   }
   @else if $point == "sm" {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
@@ -168,6 +163,18 @@
   @else if $point == "xl" {
     @media screen and (min-width: $pf-global--breakpoint--xl) {
       @content;
+    }
+  }
+}
+
+// Creates flex item 
+@mixin pf-utility-builder($class-name) {
+  // generate column span modifiers
+  @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
+    .pf-u-#{$class-name}#{$breakpoint-value} {
+      @include pf-media-query($breakpoint) {
+        @content;
+      }
     }
   }
 }

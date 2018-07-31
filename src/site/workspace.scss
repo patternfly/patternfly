@@ -188,7 +188,9 @@
   .pf-l-stack,
   .pf-l-stack > *,
   .pf-l-toolbar__group,
-  .pf-l-toolbar__item  {
+  .pf-l-toolbar__item,
+  [class*="pf-u-"],
+  [class*="pf-u-"] > * {
     padding: .5rem;
     border: 2px dashed #393f44;
   }
@@ -241,6 +243,19 @@
   h2 + p{
     margin-bottom: 1rem;
   }
+
+  &-container {
+    &-tall {
+      flex-wrap: wrap;
+      min-height: 160px;      
+    }
+
+    &-xtall {
+      flex-wrap: wrap;
+      min-height: 250px;
+    }
+  }
+
 }
 
 .is-dark-preview {
@@ -270,6 +285,37 @@
 .pf-c-form__fieldset + .pf-c-form__fieldset,
 .pf-c-form__group + .pf-c-form__group {
   margin-top: 1rem;
+}
+
+.flex-examples [class*="pf-u-align-"]:not([class*="pf-u-align-content-"]) {
+
+  &:not(.pf-u-align-items-stretch) > * {
+    &:first-child {
+      height: 40px;
+    }
+
+    &:nth-child(2) {
+      height: 60px;
+    }
+
+    &:nth-child(3) {
+      height: 80px;
+    }
+
+    &:nth-child(4) {
+      height: 100px;
+    }
+  }
+}
+
+[class*="pf-u-align-content-"] {
+  flex-wrap: wrap;
+
+  &:not(.pf-u-align-items-stretch):not(.pf-u-align-content-stretch) > * {
+    min-width: 120px;
+    // flex-basis: 40%;
+    height: 40px;
+  }
 }
 
 /* stylelint-enable */

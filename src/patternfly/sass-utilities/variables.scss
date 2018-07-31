@@ -199,28 +199,34 @@ $global-ListStyle: disc outside !default;
 // Breakpoints
 $pf-global--breakpoint-map: (
   "": null,
-  "xs": "-on-xs",
   "sm": "-on-sm",
   "md": "-on-md",
   "lg": "-on-lg",
   "xl": "-on-xl"
 );
 
-// Spacers
+// Spacer properties
+$pf-global--spacer-properties-map: (
+  "m":  "margin",
+  "mt": "margin-top",
+  "mr": "margin-right",
+  "mb": "margin-bottom",
+  "ml": "margin-left",
+  "mx": null,
+  "my": null,
+  "p":  "padding",
+  "pt": "padding-top",
+  "pr": "padding-right",
+  "pb": "padding-bottom",
+  "pl": "padding-left",
+  "px": null,
+  "py": null
+);
+
+// Spacer values
 $pf-global--spacer-map: (
   "-auto": "auto",
   "-0": 0,
-  "-xs": "var(--pf-global--spacer--xs)",
-  "-sm": "var(--pf-global--spacer--sm)",
-  "-md": "var(--pf-global--spacer--md)",
-  "-lg": "var(--pf-global--spacer--lg)",
-  "-xl": "var(--pf-global--spacer--xl)",
-  "-2xl": "var(--pf-global--spacer--2xl)",
-  "-3xl": "var(--pf-global--spacer--3xl)"
-);
-
-// Spacers
-$pf-global--grid-gap-map: (
   "-xs": "var(--pf-global--spacer--xs)",
   "-sm": "var(--pf-global--spacer--sm)",
   "-md": "var(--pf-global--spacer--md)",

@@ -1,6 +1,6 @@
 ## Overview
 
-A Grid layout framework including responsive columns, row spans and gutters. **Breakpoint is optional. Breakpoints: -on-xs, -on-sm, -on-md, -on-lg, -on-xl**
+A Grid layout framework including responsive columns, row spans and gutters. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-m-6-col-on-lg**
 
 ## Usage
 

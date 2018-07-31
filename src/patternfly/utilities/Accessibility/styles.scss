@@ -1,0 +1,17 @@
+@import "../../patternfly-utilities";
+
+// sr-only - visually hide, but expose to screen readers
+@each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
+  .pf-u-sr-only#{$breakpoint-value} {
+    @include pf-media-query($breakpoint) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+}

@@ -57,14 +57,14 @@
 
   // Loop through $breakpoints map to generate responsive classes
   @each $breakpoint, $value in $pf-global--breakpoint-map {
-    @include media-query($breakpoint) {
+    @include pf-media-query($breakpoint) {
       @include pf-smart-grid($value);
     }
   }
 
   // Loop through $breakpoints map to generate responsive classes
   @each $breakpoint, $value in $pf-global--breakpoint-map {
-    @include media-query($breakpoint) {
+    @include pf-media-query($breakpoint) {
       @include pf-grid-item-modifiers($value);
     }
   }
