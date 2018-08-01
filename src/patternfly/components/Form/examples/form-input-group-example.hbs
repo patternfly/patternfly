@@ -10,7 +10,10 @@
   {{#> form-group}}
     {{#> form-label for="textInput2"}}Input with dropdown{{/form-label}}
     {{#> form-input-group}}
-        {{#> dropdown id="dropdown-example-collapsed"}}Dropdown{{/dropdown}}
+        {{#> dropdown id="dropdown-example-collapsed"}}
+          Dropdown
+          <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
+        {{/dropdown}}
         {{#> form-controls controlType="input" input="true" type="text" id="textInput2" name="textInput2" }}{{/form-controls}}    
     {{/form-input-group}}
     
