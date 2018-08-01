@@ -35,6 +35,7 @@
     color: var(--pf-c-form-control--placeholder--Color);
   }
 
+  &.pf-m-disabled,
   &:disabled {
     color: var(--pf-c-form-control--disabled--Color);
     cursor: not-allowed;
