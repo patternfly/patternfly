@@ -25,24 +25,26 @@ The navigation system relies on several different sub-components:
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-nav`                           | `<nav>`                       | Initiates a primary nav element |
-| `.pf-c-nav__list`                     | `<ul>`                        | Initiates default nav list |
-| `.pf-c-nav__list-item`                | `<li>`                        | Initiates default nav list item |
-| `.pf-c-nav__list-link`                | `<a>`                         | Initiates default nav list link |
-| `.pf-c-nav__list-simple`              | `<ul>`                        | Initiates a simple nav list |
-| `.pf-c-nav__list-simple-item`         | `<li>`                        | Initiates a simple nav list item |
-| `.pf-c-nav__list-simple-link`         | `<a>`                         | Initiates a simple nav list link |
-| `.pf-c-nav__list-horizontal`          | `<ul>`                        | Initiates a horizontal nav list |
-| `.pf-c-nav__list-horizontal-item`     | `<li>`                        | Initiates a horizontal nav list item |
-| `.pf-c-nav__list-horizontal-link`     | `<a>`                         | Initiates a horizontal nav list link |
-| `.pf-c-nav__list-tertiary`            | `<ul>`                        | Initiates a tertiary nav list |
-| `.pf-c-nav__list-tertiary-item`       | `<li>`                        | Initiates a tertiary nav list item |
-| `.pf-c-nav__list-tertiary-link`       | `<a>`                         | Initiates a tertiary nav list link |
-| `.pf-c-nav__section`                  | `<ul>`                        | Initiates a nav section element |
-| `.pf-c-nav__section-title`            | `<ul>`                        | Initiates a nav section title |
-| `.pf-c-nav__list-expand`              | `<span>`                      | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
-| `.pf-m-expandable`                    | `.pf-c-nav__list-item`        | Modifies for the expandable state |
-| `.pf-m-expanded`                      | `.pf-c-nav__list-item`        | Modifies for the expanded state |
-| `.pf-m-current`                       | `.pf-c-nav__list-item`, `.pf-c-nav__list-link`        | Modifies for the current state |
-| `.pf-m-active`                        | `.pf-c-nav__list-link`        | Modifies to display the link as active |
-| `.pf-m-disabled`                      | `.pf-c-nav__list-link`        | Modifies to display the link as disabled |
+| `.pf-c-nav`                           | `<nav>`                                 | Initiates a primary nav element |
+| `.pf-c-nav__list`                     | `<ul>`                                  | Initiates default nav list |
+| `.pf-c-nav__list-item`                | `<li>`                                  | Initiates default nav list item |
+| `.pf-c-nav__list-link`                | `<a>`                                   | Initiates default nav list link |
+| `.pf-c-nav__list-simple`              | `<ul>`                                  | Initiates a simple nav list |
+| `.pf-c-nav__list-simple-item`         | `<li>`                                  | Initiates a simple nav list item |
+| `.pf-c-nav__list-simple-link`         | `<a>`                                   | Initiates a simple nav list link |
+| `.pf-c-nav__list-horizontal`          | `<ul>`                                  | Initiates a horizontal nav list |
+| `.pf-c-nav__list-horizontal-item`     | `<li>`                                  | Initiates a horizontal nav list item |
+| `.pf-c-nav__list-horizontal-link`     | `<a>`                                   | Initiates a horizontal nav list link |
+| `.pf-c-nav__list-tertiary`            | `<ul>`                                  | Initiates a tertiary nav list |
+| `.pf-c-nav__list-tertiary-item`       | `<li>`                                  | Initiates a tertiary nav list item |
+| `.pf-c-nav__list-tertiary-link`       | `<a>`                                   | Initiates a tertiary nav list link |
+| `.pf-c-nav__section`                  | `<section>`                             | Initiates a nav section element |
+| `.pf-c-nav__section-title`            | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`                        | Initiates a nav section title |
+| `.pf-c-nav__list-expand`              | `<span>`                                | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
+| `.pf-m-expandable`                    | `.pf-c-nav__list-item`                  | Modifies for the expandable state |
+| `.pf-m-expanded`                      | `.pf-c-nav__list-item`                  | Modifies for the expanded state |
+| `.pf-m-hover`                         | `.pf-c-nav__list-link`                  | Modifies to display the link as hovered |
+| `.pf-m-focus`                         | `.pf-c-nav__list-link`                  | Modifies to display the link as focussed |
+| `.pf-m-current`                       | `.pf-c-nav__list-item`, `.pf-c-nav__list-link`  | Modifies for the current state |
+| `.pf-m-active`                        | `.pf-c-nav__list-link`                  | Modifies to display the link as active |
+| `.pf-m-disabled`                      | `.pf-c-nav__list-link`                  | Modifies to display the link as disabled |
