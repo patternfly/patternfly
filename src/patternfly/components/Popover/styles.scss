@@ -2,18 +2,50 @@
 
 .pf-c-popover {
   // Component variables
-  --pf-c-popover--MinWidth: 100px;
-  --pf-c-popover--MaxWidth: 300px;
+  --pf-c-popover--MinWidth: pf-size-prem(100px);
+  --pf-c-popover--MaxWidth: pf-size-prem(300px);
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow);
-  --pf-c-popover--Margin: var(--pf-global--arrow--size);
+  // Set margin to arrow width for placement
+  --pf-c-popover--MarginBottom: var(--pf-global--arrow--width-lg);
+  --pf-c-popover--MarginTop: var(--pf-global--arrow--width-lg);
+  --pf-c-popover--MarginRight: var(--pf-global--arrow--width-lg);
+  --pf-c-popover--MarginLeft: var(--pf-global--arrow--width-lg);
+
+  // Content variables
+  --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Arrow variables
-  --pf-c-popover__arrow--Size: var(--pf-global--arrow--size);
-  --pf-c-popover__arrow--Margin: var(--pf-global--arrow--size) / 2;
+  --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
+  // Set arrow margin to half arrow width for placement
+  --pf-c-popover__arrow--Margin: var(--pf-global--arrow--width-lg) / 2;
   --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow);
   --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  // used in the directional modifiers for placement
+  --pf-c-popover__arrow-half-size: var(--pf-global--arrow--width) / 2;
 
-  $half-size: $pf-global--arrow--size / 2;
+  // Close container variables
+  --pf-c-popover__close--Top: var(--pf-global--spacer--sm);
+  --pf-c-popover__close--Right: var(--pf-global--spacer--md);
+
+  // Header variables
+  --pf-c-popover__header--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-popover__header--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-popover__header--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-popover__header--PaddingLeft: var(--pf-global--spacer--xl);
+
+  // Header title variables
+  --pf-c-popover__header-title--FontSize: var(--pf-c-title--m-3xl--FontSize);
+  --pf-c-popover__header-title--FontWeight: var(--pf-c-title--m-3xl--FontWeight);
+  --pf-c-popover__header-title--LineHeight: var(--pf-c-title--m-3xl--LineHeight);
+
+  // Body variables
+  --pf-c-popover__body--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-popover__body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-popover__body--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-popover__body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-popover__body--MarginTop: var(--pf-global--spacer--xl);
+
+  $half-size: $pf-global--arrow--width-lg / 2;
 
   position: relative;
   min-width: var(--pf-c-popover--MinWidth);
@@ -21,14 +53,17 @@
   box-shadow: var(--pf-c-popover--BoxShadow);
 
   &__content {
-    min-height: 0;
-    box-shadow: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--pf-c-popover__content--BackgroundColor);
   }
 
   &__arrow {
     position: absolute;
-    width: var(--pf-c-popover__arrow--Size);
-    height: var(--pf-c-popover__arrow--Size);
+    // Popover arrow is square, sharing width value to prevent positioning errors
+    width: var(--pf-c-popover__arrow--Width);
+    height: var(--pf-c-popover__arrow--Width);
     margin: var(--pf-c-popover__arrow--Margin);
     pointer-events: none;
     background-color: var(--pf-c-popover__arrow--BackgroundColor);
@@ -36,39 +71,75 @@
     transform: rotate(45deg);
   }
 
+  &__close {
+    position: absolute;
+    top: var(--pf-c-popover__close--Top);
+    right: var(--pf-c-popover__close--Right);
+  }
+
+  // Header
+  &__header {
+    flex: 0 0 auto;
+    padding: var(--pf-c-popover__header--PaddingTop) var(--pf-c-popover__header--PaddingRight) var(--pf-c-popover__header--PaddingBottom) var(--pf-c-popover__header--PaddingLeft);
+
+    // Header title
+    &-title {
+      font-size: var(--pf-c-popover__header-title--FontSize);
+      font-weight: var(--pf-c-popover__header-title--FontWeight);
+      line-height: var(--pf-c-popover__header-title--LineHeight);
+    }
+  }
+
+  // Body
+  &__body {
+    flex: 1 1 auto;
+    padding: var(--pf-c-popover__body--PaddingTop) var(--pf-c-popover__body--PaddingRight) var(--pf-c-popover__body--PaddingBottom) var(--pf-c-popover__body--PaddingLeft);
+    // Adding margin top here for no header being present. When the header is present, margin-top is removed
+    margin-top: var(--pf-c-popover__body--MarginTop);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    word-break: break-word;
+  }
+
+  // Removing top margin when header is present
+  &__header + &__body {
+    margin-top: 0;
+  }
+
   &.pf-m-top {
-    margin-bottom: var(--pf-c-popover--Margin);
+    margin-bottom: var(--pf-c-popover--MarginBottom);
   }
 
   &.pf-m-bottom {
-    margin-top: var(--pf-c-popover--Margin);
+    margin-top: var(--pf-c-popover--MarginTop);
   }
 
   &.pf-m-left {
-    margin-right: var(--pf-c-popover--Margin);
+    margin-right: var(--pf-c-popover--MarginRight);
   }
 
   &.pf-m-right {
-    margin-left: var(--pf-c-popover--Margin);
+    margin-left: var(--pf-c-popover--MarginLeft);
   }
 
   &.pf-m-top > &__arrow {
-    bottom: -$half-size;
-    left: calc(50% - #{$half-size});
+    bottom: calc(var(--pf-c-popover__arrow-half-size) * -1);
+    left: calc(50% - var(--pf-c-popover__arrow-half-size));
   }
 
   &.pf-m-bottom > &__arrow {
-    top: -$half-size;
-    left: calc(50% - #{$half-size});
+    top: calc(var(--pf-c-popover__arrow-half-size) * -1);
+    left: calc(50% - var(--pf-c-popover__arrow-half-size));
   }
 
   &.pf-m-right > &__arrow {
-    top: calc(50% - #{$half-size});
-    left: -$half-size;
+    top: calc(50% - var(--pf-c-popover__arrow-half-size));
+    left: calc(var(--pf-c-popover__arrow-half-size) * -1);
   }
 
   &.pf-m-left > &__arrow {
-    top: calc(50% - #{$half-size});
-    right: -$half-size;
+    top: calc(50% - var(--pf-c-popover__arrow-half-size));
+    right: calc(var(--pf-c-popover__arrow-half-size) * -1);
   }
 }

@@ -2,11 +2,11 @@
 
 A tooltip is used to provide contextual information for another component on hover.  The tooltip itself is made up of two elements: arrow and content. One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the tooltip component
 
-## TODO: Accessibility
+## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-c-tooltip` |  accessibility notes. |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-tooltip` | Gives the tooltip an accessible description by referring to the tooltip content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 
 
 ## Usage

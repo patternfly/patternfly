@@ -267,11 +267,11 @@
   margin-top: 1rem;
 }
 
-.Overlay {
+.Preview__overlay {
   position: relative;
   display: inline-block;
 
-  &__container {
+  .Preview__overlay-container {
     position: absolute;
     z-index: 500;
     display: flex;
@@ -320,7 +320,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  .Overlay {
+  .Preview__overlay {
     margin: 200px;
   }
 }
@@ -330,7 +330,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  .Overlay {
+  .Preview__overlay {
     margin: 300px;
   }
 }

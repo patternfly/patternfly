@@ -206,7 +206,8 @@ $pf-global--LineHeight--md: 1.5 !default;
 $global-ListStyle: disc outside !default;
 
 // Arrow size (used for tooltips, popovers, etc.)
-$pf-global--arrow--size: pf-font-prem(25px);
+$pf-global--arrow--width: pf-font-prem(15px);
+$pf-global--arrow--width-lg: pf-font-prem(25px);
 
 // filters
 // overlay
@@ -359,7 +360,8 @@ $pf-global--arrow--size: pf-font-prem(25px);
   --global-ListStyle: $global-ListStyle;
 
   // Arrow Size
-  --pf-global--arrow--size: $pf-global--arrow--size;
+  --pf-global--arrow--width: $pf-global--arrow--width;
+  --pf-global--arrow--width-lg: $pf-global--arrow--width-lg;
 }
 
 /* stylelint-enable */

@@ -1,24 +1,23 @@
-<div class="pf-c-overlay">
-  <div class="pf-c-overlay__container {{direction}}">
-      <div class="pf-c-popover {{direction}}">
-        <div class="pf-c-popover__arrow"></div>
-        <div class="pf-c-popover__content pf-c-modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
-          <div class="pf-c-modal-box__close">
-            <button class="pf-c-button pf-m-action" aria-label="Close Dialog">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-          <header class="pf-c-modal-box__header">
-            <h1 class="pf-c-modal-box__header-title" id="modal-title">
-              {{header}}
-            </h1>
-          </header>
-          <div class="pf-c-modal-box__body" id="modal-description">
-            {{> @partial-block}}
-          </div>
+<div class="Preview__overlay">
+  <div class="Preview__overlay-container {{direction}}">
+    <div class="pf-c-popover {{direction}}">
+      <div class="pf-c-popover__arrow"></div>
+      <div class="pf-c-popover__content" role="dialog" aria-modal="true" aria-labelledby="popover-title" aria-describedby="popover-description">
+        <div class="pf-c-popover__close">
+          <button class="pf-c-button pf-m-action" aria-label="Close Dialog">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <header class="pf-c-popover__header">
+          <h1 class="pf-c-popover__header-title" id="popover-title">
+            {{header}}
+          </h1>
+        </header>
+        <div class="pf-c-popover__body" id="popover-description">
+          {{> @partial-block}}
         </div>
       </div>
+    </div>
   </div>
-  {{#> popover-parent }}
-  {{/popover-parent}}
+  {{#> popover-parent }} {{/popover-parent}}
 </div>
