@@ -1,9 +1,6 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-c-nav-system__element--modifier--state--PropertyCamelCase
 
-// The value of component scoped variables is always defined by a global variable:
 .pf-c-nav {
   $namespace: &;
 
