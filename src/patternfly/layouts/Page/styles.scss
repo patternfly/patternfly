@@ -1,64 +1,97 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
+$nav: "pf-c-nav";
+
 .pf-l-page {
+
+  /* stylelint-disable */
+  
+  // Sidebar
   // Sidebar width does not relate to the width propierty
   // it's hardcoded to the fix width of the sidebar
-  --pf-l-page__sidebar--md--Width: pf-size-prem(290px);
-  --pf-l-page__sidebar--sm--Width: 80%;
-  --pf-l-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-l-page__header-nav--sm--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
-  --pf-l-page__header-brand--md--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
-  --pf-l-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-l-page__main-section--BoxShadow: var(--pf-global--BoxShadow--lg-right);
-  --pf-l-page__main-section--Padding: var(--pf-global--spacer--lg);
-  --pf-l-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-l-page__main-section--m-dark--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
-  // --pf-l-page__main-section--m-dark--Padding: var(--pf-global--spacer--xl);
+  // --pf-l-page__sidebar--sm--Width:                      var(--pf-global--nav--Width--mobile);
+  // --pf-l-page__sidebar--BackgroundColor:                var(--pf-global--BackgroundColor--light-100);
 
+  // Header
+  --pf-l-page__header--PaddingTop:                      var(--pf-global--spacer--2xl);
+  --pf-l-page__header--PaddingRight:                    var(--pf-global--spacer--2xl);
+  --pf-l-page__header--PaddingBottom:                   var(--pf-global--spacer--md);
+  --pf-l-page__header--PaddingLeft:                     var(--pf-global--spacer--2xl);
+
+  // Header height
+  --pf-l-page__header--MinHeight: pf-size-prem(120px);
+  --pf-l-page__header--md--MinHeight: pf-size-prem(140px);
+
+  // Header nav
+  --pf-l-page__header-nav--sm--BackgroundColor:         var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__header-nav--sm--MarginTop:               var(--pf-global--spacer--md);
+  --pf-l-page__header-nav--md--MarginLeft:              var(--pf-global--spacer--2xl);
+  --pf-l-page__header-nav--md--MarginRight:             var(--pf-global--spacer--2xl);
+  --pf-l-page__header-nav--PaddingRight:                var(--pf-global--spacer--2xl);
+  --pf-l-page__header-nav--PaddingLeft:                 var(--pf-global--spacer--2xl);
+
+  // Header brand
+  --pf-l-page__header-brand--PaddingTop:                var(--pf-global--spacer--2xl);
+  --pf-l-page__header-brand--PaddingBottom:             var(--pf-global--spacer--xl);
+  --pf-l-page__header-brand--PaddingLeft:               var(--pf-global--spacer--2xl);
+  --pf-l-page__header-brand--sm--PaddingBottom:         var(--pf-global--spacer--lg);
+  --pf-l-page__header-brand--md--BackgroundColor:       var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__header-brand--xl--Width:                 var(--pf-global--nav--Width--desktop);
+
+  // Header brand link
+  --pf-l-page__header-brand-link--MarginLeft:           var(--pf-global--spacer--lg);
+  
+  // Header brand logo
+  --pf-l-page__header-brand-logo--Height:               pf-size-prem(11px);
+
+  // Header toolbar
+  --pf-l-page__header-toolbar--PaddingTop:              var(--pf-global--spacer--2xl);
+  --pf-l-page__header-toolbar--PaddingRight:            var(--pf-global--spacer--2xl);
+  --pf-l-page__header-toolbar--PaddingBottom:           var(--pf-global--spacer--lg);
+  --pf-l-page__header-avatar--Width:                    pf-size-prem(48px);
+  --pf-l-page__header-avatar--Height:                   pf-size-prem(48px);
+  --pf-l__header-icon--FontSize:                        var(--pf-global--FontSize--2xl);
+
+  // Main
+  --pf-l-page__main-section--BackgroundColor:           var(--pf-global--BackgroundColor--light-300);
+  --pf-l-page__main-section--BoxShadow:                 var(--pf-global--BoxShadow--lg-right);
+  --pf-l-page__main-section--PaddingTop:                var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingRight:              var(--pf-global--spacer--2xl);
+  --pf-l-page__main-section--PaddingLeft:               var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingBottom:             var(--pf-global--spacer--2xl);
+  --pf-l-page__main-section--m-light--BackgroundColor:  var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__main-section--m-dark--BackgroundColor:   var(--pf-global--BackgroundColor--dark-transparent-200);
+
+  /* stylelint-enable */
+
+  // Base
   display: grid;
   min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  grid-template-columns: var(--pf-l-page__sidebar--md--Width) 1fr;
-  grid-template-rows: auto 1fr;
+  // padding: 0;
+  // margin: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
   grid-template-areas:
-    "header header"
-    "main main";
+    "header"
+    "main";
 
   @media (min-width: $pf-global--breakpoint--md) {
-    &.pf-m-expanded {
-      grid-template-areas:
-        "header header"
-        "sidebar main";
-    }
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main";
   }
 
-  &__sidebar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: var(--pf-l-page__sidebar--sm--Width);
-    grid-area: sidebar;
-    background-color: var(--pf-l-page__sidebar--BackgroundColor);
-    box-shadow: var(--pf-l-page__main-section--BoxShadow);
-    transform: translate3d(-100%, 0, 0);
-
-    .pf-m-expanded & {
-      transform: translate3d(0, 0, 0);
-    }
-
-    @media (min-width: $pf-global--breakpoint--md) {
-      position: static;
-      display: none;
-      width: 100%;
-      .pf-m-expanded & {
-        display: block;
-      }
-    }
+  // Nav horizontal
+  &.pf-m-nav-horizontal {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
   }
 
+  // Header
   &__header {
     // force the container follow the dark theme
     @extend %pf-t-dark;
@@ -66,35 +99,132 @@
     grid-area: header;
     display: flex;
     flex-wrap: wrap;
+    min-height: var(--pf-l-page__header--MinHeight);
+    padding-top: var(--pf-l-page__header--PaddingTop);
+    padding-right: var(--pf-l-page__header--PaddingRight);
+    padding-left: var(--pf-l-page__header--PaddingLeft);
+
+    @media (min-width: $pf-global--breakpoint--md) {
+      align-items: flex-end;
+      min-height: var(--pf-l-page__header--md--MinHeight);
+      padding-top: 0;
+    }
+
+    // If horizontal nav
+    .pf-m-nav-horizontal & {
+      min-height: 200px;
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        min-height: var(--pf-l-page__header--md--MinHeight);
+      }
+    }
 
     > * {
       display: flex;
       align-items: flex-end;
     }
 
-    &-brand {
-      flex: 0 0 var(--pf-l-page__sidebar--md--Width);
-    }
 
-    &-tools {
-      margin-left: auto; // to push it to the right
+    // Brand
+    &-brand {
+      align-items: center;
+      padding-bottom: var(--pf-l-page__header-brand--sm--PaddingBottom);
+
+      @media (min-width: $pf-global--breakpoint--md) {
+        align-items: flex-end;
+        align-self: stretch;
+        padding-top: var(--pf-l-page__header--PaddingTop);
+        padding-right: var(--pf-l-page__header--PaddingRight);
+        padding-bottom: var(--pf-l-page__header-brand--sm--PaddingBottom);
+        padding-left: var(--pf-l-page__header--PaddingLeft);
+
+        // Offset brand by padding values
+        margin-left: calc(var(--pf-l-page__header--PaddingLeft) * -1);
+        background-color: var(--pf-l-page__header-brand--md--BackgroundColor);
+      }
+
+      @media screen and (min-width: $pf-global--breakpoint--xl) {
+        flex: 0 0 var(--pf-l-page__header-brand--xl--Width);
+      }
+
+      // Group
+      &-group {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        min-height: 40px;
+
+        // > * {
+        //   margin-right: var(--pf-global--spacer--lg);
+        // }
+      }
+
+      // Link
+      &-link {
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        margin-left: var(--pf-l-page__header-brand-link--MarginLeft);
+      }
+
+      // If toggle is present, add margin left
+      .pf-c-nav-toggle + &-link {
+      }
+
+      &-logo {
+        height: var(--pf-l-page__header-brand-logo--Height);
+      }
     }
 
     &-nav {
-      // this is not mobie first since we are changing the order and it'd be too much overwrite to do it with a min-width
-      @media (max-width: $pf-global--breakpoint--md) {
-        flex: 1 0 100%;
-        order: 1;
-        background-color: var(--pf-l-page__header-nav--sm--BackgroundColor);
+      flex: 1 0 100%;
+      order: 1;
+      // Set px value width for container to scale properly
+      width: 320px;
+      padding-left: var(--pf-l-page__header-nav--PaddingLeft);
+      // Header will may contain elements that are hidden at different breakpoint. 
+      // Using negative margins to offset header padding so those elements can layout naturally.
+      margin-right: calc(var(--pf-l-page__header--PaddingRight) * -1);
+      margin-left: calc(var(--pf-l-page__header--PaddingLeft) * -1);
+      overflow-x: auto;
+      background-color: var(--pf-l-page__header-nav--sm--BackgroundColor);
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        flex: 1;
+        order: initial;
+        padding: 0;
+        margin-right: var(--pf-l-page__header-nav--md--MarginRight);
+        margin-left: var(--pf-l-page__header-nav--md--MarginLeft);
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
       }
     }
 
-    @media (min-width: $pf-global--breakpoint--md) {
-      min-height: pf-size-prem(110px);
+    &-selector {
+      align-items: center;
+    }
 
-      &-brand {
-        background-color: var(--pf-l-page__header-brand--md--BackgroundColor);
-      }
+    &-tools {
+      align-items: center;
+      padding-bottom: var(--pf-l-page__header-toolbar--PaddingBottom);
+      margin-left: auto; // to push it to the right
+    }
+
+    .pf-m-action {
+      font-size: var(--pf-l__header-icon--FontSize);
+    }
+
+    .pf-c-dropdown__toggle::after {
+      display: none;
+    }
+
+    &-avatar {
+      width: var(--pf-l-page__header-avatar--Height);
+      height: var(--pf-l-page__header-avatar--Width);
+      margin-bottom: var(--pf-global--spacer--md);
     }
   }
 
@@ -104,7 +234,12 @@
     flex-direction: column;
 
     &-section {
-      padding: var(--pf-l-page__main-section--Padding);
+      padding:
+        var(--pf-l-page__main-section--PaddingTop)
+        var(--pf-l-page__main-section--PaddingRight)
+        var(--pf-l-page__main-section--PaddingLeft)
+        var(--pf-l-page__main-section--PaddingBottom);
+
       background-color: var(--pf-l-page__main-section--BackgroundColor);
 
       &:last-of-type,

@@ -1,28 +1,36 @@
 {{#> background-image}}
 {{/background-image}}
 
-{{#> page page--nav-horizontal="true" page--attribute='id="page"' page--modifier="pf-m-exanded"}}
+{{#> page page--nav-horizontal="true" page--attribute='id="page"'}}
   {{#> page-header}}
 
     {{!-- Brand --}}
-    {{#> page-header-brand}}
+    {{#> page-header-brand page-header-brand--modifier="pf-u-sr-only pf-u-visible-on-md"}}
+      {{#> nav-toggle nav-toggle--attribute='id="nav-toggle"'}}
+        <i class="fas fa-bars"></i>
+      {{/nav-toggle}}
       <a class="pf-l-page__header-brand-link" href="#">
-        <img class="pf-l-page__header-brand-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+        <img class="pf-l-page__header-brand-logo pf-u-sr-only pf-u-visible-on-md" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
       </a>
     {{/page-header-brand}}
 
+    {{!-- Context Selector --}}
+    {{#> page-header-selector}}
+      pf-c-context-selector
+    {{/page-header-selector}}
+
     {{!-- Horizontal Nav --}}
     {{#> page-header-nav}}
-      {{#> nav nav--horizontal="true" nav--attribute='id="nav-primary" aria-label="Primary Nav Default Example"'}}
+      {{#> nav nav--attribute='id="nav-primary" aria-label="Primary Nav Default Example"'}}
         {{#> nav-list nav-list--type="horizontal"}}
           {{#> nav-list-item}}
             {{#> nav-list-link nav-list-link--href="#" nav-list-link--current="true"}}
-              Nav Item 1
+              Current link
             {{/nav-list-link}}
           {{/nav-list-item}}
           {{#> nav-list-item}}
             {{#> nav-list-link nav-list-link--href="#"}}
-              Nav Item 2
+              Link 2
             {{/nav-list-link}}
           {{/nav-list-item}}
           {{#> nav-list-item}}
@@ -46,36 +54,8 @@
 
     {{!-- Toolbar --}}
     {{#> page-header-tools}}
-      {{#> toolbar}}
-        {{#> toolbar-group pf-l-toolbar__group--modifier="pf-u-hidden pf-u-display-flex-on-xl"}}
-          {{#> toolbar-item}}
-            {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
-              <i class="fas fa-bell"></i>
-            {{/button}}
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
-              <i class="fas fa-cog"></i>
-            {{/button}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{#> toolbar-group}}
-          {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-hidden pf-u-display-flex-on-xl"}}
-            {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
-              Kyle Baker
-            {{/dropdown}}
-          {{/toolbar-item}}
-          {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-hidden-on-xl"}}
-            {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
-              <i class="fas fa-ellipsis-v"></i>
-            {{/button}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar}}  
+      pf-l-toolbar
     {{/page-header-tools}}
-    <div class="pf-l-page__header-avatar">
-      <img class="" src="/assets/images/img_avatar.png" alt="Avatar" alt="Account avatar" /> 
-    </div>
   {{/page-header}}
 
   {{#> page-main}}
@@ -184,8 +164,3 @@
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
-
-<script type="text/javascript">
-  const navToggle = document.getElementById("nav-toggle");
-  document.getElementById("nav-toggle").addEventListener("click", classToggle);
-</script>

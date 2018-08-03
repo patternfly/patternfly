@@ -1,117 +1,251 @@
-{{#> page-test}}
-
 {{#> background-image}}
 {{/background-image}}
 
-{{#> page}}
+{{#> page page--nav-vertical="true" page--attribute='id="page"'}}
+  {{#> page-header}}
 
-{{#> page-section pf-l-page__main-section--modifier="pf-m-dark"}}
-Dark content
-{{/page-section}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-group}}
+        {{#> nav-toggle nav-toggle--attribute='id="nav-toggle"'}}
+          <i class="fas fa-bars"></i>
+        {{/nav-toggle}}
+        <a class="pf-l-page__header-brand-link" href="#">
+          <img class="pf-l-page__header-brand-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+        </a>
+      {{/page-header-brand-group}}  
+    {{/page-header-brand}}
+    {{!-- Context Selector --}}
+{{!--     {{#> page-header-selector}}
+      pf-c-context-selector
+    {{/page-header-selector}} --}}
+    {{!-- Toolbar --}}
+    {{#> page-header-tools}}
+      {{#> toolbar}}
+        {{#> toolbar-group pf-l-toolbar__group--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
+          {{#> toolbar-item}}
+            {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
+              <i class="fas fa-bell"></i>
+            {{/button}}
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            {{#> button btnClass="pf-m-action" btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
+              <i class="fas fa-cog"></i>
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
+            {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
+              Kyle Baker
+            {{/dropdown}}
+          {{/toolbar-item}}
+          {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-hidden-on-md"}}
+            {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
+              <i class="fas fa-ellipsis-v"></i>
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/toolbar}}  
+    {{/page-header-tools}}
+    <div class="pf-l-page__header-avatar">
+      <img class="" src="/assets/images/img_avatar.png" alt="Avatar" alt="Account avatar" /> 
+    </div>
+  {{/page-header}}
 
-{{#> page-section pf-l-page__main-section--modifier="pf-m-light"}}
-Light content
-{{/page-section}}
-
-{{#> page-section}}
-
-{{#> gallery modifierClass="pf-m-gutter"}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-  {{#> gallery-item}}
-  {{#> card }}
-    {{#> card-body pf-c-card__content-modifier="" }}
-      This is a card
-    {{/card-body}}
-  {{/card}}
-  {{/gallery-item}}
-
-{{/gallery}}
+  {{!-- Nav --}}
+  {{#> nav nav--attribute='aria-label="Primary Nav Expandable Example"'}}
+    {{#> nav-list nav-list--attribute='id="primary-nav"'}}
+      {{#> nav-list-item nav-list-item--expandable="true" nav-list-item--expanded="true" nav-list-item--current="true"}}
+        {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link1"'}}
+          System Panel
+        {{/nav-list-link}}
+        {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link1"'}}
+          {{#> nav-list-simple}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Overview
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#" nav-list-simple-link--current="true"}}
+                Resource Usage
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Hypervisors
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Instances
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Volumes
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Networks
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+          {{/nav-list-simple}}
+        {{/nav-subnav}}
+      {{/nav-list-item}}
+      {{#> nav-list-item nav-list-item--expandable="true"}}
+        {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link2"'}}
+          Policy
+        {{/nav-list-link}}
+        {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link2"'}}
+          {{#> nav-list-simple}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Subnav link 1
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Subnav link 2
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+          {{/nav-list-simple}}
+        {{/nav-subnav}}
+      {{/nav-list-item}}
+      {{#> nav-list-item nav-list-item--expandable="true"}}
+        {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link3"'}}
+          Authentication
+        {{/nav-list-link}}
+        {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link3"'}}
+          {{#> nav-list-simple}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Subnav link 1
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+            {{#> nav-list-simple-item}}
+              {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                Subnav link 2
+              {{/nav-list-simple-link}}
+            {{/nav-list-simple-item}}
+          {{/nav-list-simple}}
+        {{/nav-subnav}}
+      {{/nav-list-item}}
+    {{/nav-list}}
+  {{/nav}}
 
 
-{{/page-section}}
+  {{#> page-main}}
+    {{#> nav nav--modifier="pf-m-nav-tertiary" nav--attribute='aria-label="Tertiary Example"' aria-labelledby="[id of parent]"}}
+      {{#> nav-list nav-list--type="tertiary"}}
+        {{#> nav-list-item}}
+          {{#> nav-list-link nav-list-link--href="#" nav-list-link--current="true"}}
+            Nav Item 1
+          {{/nav-list-link}}
+        {{/nav-list-item}}
+        {{#> nav-list-item}}
+          {{#> nav-list-link nav-list-link--href="#"}}
+            Nav Item 2
+          {{/nav-list-link}}
+        {{/nav-list-item}}
+        {{#> nav-list-item}}
+          {{#> nav-list-link nav-list-link--href="#"}}
+            Nav Item 3
+          {{/nav-list-link}}
+        {{/nav-list-item}}
+        {{#> nav-list-item}}
+          {{#> nav-list-link nav-list-link--href="#"}}
+            Nav Item 4
+          {{/nav-list-link}}
+        {{/nav-list-item}}
+        {{#> nav-list-item}}
+          {{#> nav-list-link nav-list-link--href="#"}}
+            Nav Item 5
+          {{/nav-list-link}}
+        {{/nav-list-item}}
+      {{/nav-list}}
+    {{/nav}}
+
+{{!--     {{#> page-main-section page-main-section--modifier="pf-m-dark"}}
+      Dark content
+    {{/page-main-section}}
+
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      Light content
+    {{/page-main-section}}
+ --}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{#> content}}
+        {{#> title titleType="h1" pf-c-title--Modifier="pf-m-3xl"}}
+          Main title
+        {{/title}}
+        <p>
+          Body text should be Overpass Regular at 16px. It should have leading of 24px because <br>
+          of it’s relative line height of 1.5.
+        </p>
+      {{/content}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+      {{#> gallery modifierClass="pf-m-gutter"}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+        {{#> gallery-item}}
+        {{#> card }}
+          {{#> card-body }}
+            This is a card
+          {{/card-body}}
+        {{/card}}
+        {{/gallery-item}}
+      {{/gallery}}
+    {{/page-main-section}}
+  {{/page-main}}
 {{/page}}
-
-{{/page-test}}

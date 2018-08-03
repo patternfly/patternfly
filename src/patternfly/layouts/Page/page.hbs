@@ -1,28 +1,6 @@
-<div class="pf-l-page{{#if pf-l-page--IsExpanded}} pf-m-expanded{{/if}} {{#if pf-l-page--modifiers}} {{pf-l-page--modifiers}}{{/if}}"
-  {{#if pf-l-page--attributes}} {{{pf-l-page--attributes}}} {{/if}}>
-  <header role="banner" class="pf-l-page__header">
-    <div class="pf-l-page__header-brand">
-      pf-c-Brand
-    </div>
-
-    <div class="pf-l-page__header-selector">
-      pf-c-context-selector
-    </div>
-
-    <div class="pf-l-page__header-nav">
-      pf-c-horizontal-nav
-    </div>
-
-    <div class="pf-l-page__header-tools">
-      pf-l-toolbar
-    </div>
-  </header>
-
-  <aside class="pf-l-page__sidebar">
-    Nav
-  </aside>
-
-  <main role="main" class="pf-l-page__main">
-    {{> @partial-block}}
-  </main>
+<div class="pf-l-page{{#if page--expanded}} pf-m-expanded{{/if}}{{#if page--modifier}} {{page--modifier}}{{/if}}{{#if page--nav-horizontal}} pf-m-nav-horizontal{{/if}}"
+  {{#if page--attribute}} 
+    {{{page--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
 </div>

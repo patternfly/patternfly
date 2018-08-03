@@ -3,10 +3,20 @@
     {{{nav-subnav--attribute}}}
   {{/if}}
 
-  {{#if nav-list-item--expanded}}
-    {{!-- do nothing --}}
+  {{#if nav-list-item--expandable}}
+    {{#if nav-list-item--expanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+      hidden
+    {{/if}}
+  {{/if}}
+
+{{!--   {{#if nav-list-item--expanded}}
+    do nothing
   {{else}}
     hidden
-  {{/if}}>
+  {{/if}}
+ --}}  >
   {{> @partial-block}}
 </section>
