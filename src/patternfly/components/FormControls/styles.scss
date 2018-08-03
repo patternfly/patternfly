@@ -1,28 +1,14 @@
 @import "../../patternfly-utilities";
 // Input - error
-$pf-c-form-controls--error-svg--Color: $pf-global--danger-color--100 !default;
-$pf-c-form-controls--error-svg--Width: 24px !default;
-$pf-c-form-controls--error-svg--Height: 24px !default;
-$pf-c-form-controls--error-svg--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
-$pf-c-form-controls--error-svg--Viewbox: "0 0 26 15.8" !default;
-
-// Function - strip-unit
-@function pf-strip-unit($val) {
-  @if type-of($val) == "number" and not unitless($val) {
-    @return $val / ($val * 0 + 1);
-  } @else {
-    @return $val;
-  }
-}
-
-// Background svg mixin - likely temporary
-@mixin pf-bg-svg($svg-coordinates, $svg-color, $svg-width: 24, $svg-height: 8,  $svg-viewbox: "0 0 32 10") {
+$pf-c-form-controls--error--Color: $pf-global--danger-color--100 !default;
+$pf-c-form-controls--error--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
+// Background svg mixin
+@mixin pf-bg-svg($svg-coordinates, $svg-color) {
   $color: str-slice(#{$svg-color}, 2);
-  $svg-width: pf-strip-unit($svg-width);
-  $svg-height: pf-strip-unit($svg-height);
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$svg-width}' height='#{$svg-height}' viewBox='#{$svg-viewbox}'%3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right top 4px;
+  background-position: right 6px top 8px;
+  background-size: var(--pf-c-form-control--BackgroundWidth) var(--pf-c-form-control--BackgroundHeight);
 }
 
 .pf-c-form-control {
@@ -50,16 +36,18 @@ $pf-c-form-controls--error-svg--Viewbox: "0 0 26 15.8" !default;
   --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
 
   // input alt style
-  --pf-c-form-control--m-alt--focus--BottomBorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-form-control--alt--BottomBorderWidth: var(--pf-global--BorderWidth--md);
 
   // Input m-error
   --pf-c-form-control--error--PaddingTop: calc(#{var(--pf-global--spacer--sm)} - 4px);
   --pf-c-form-control--error--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-form-control--error--PaddingBottom: calc(#{var(--pf-global--spacer--sm)} - 4px);
+  --pf-c-form-control--error--PaddingLeft: calc(#{var(--pf-global--spacer--sm)} - 1px);
   --pf-c-form-control--error--BorderColor: var(--pf-global--BorderColor--error);
   --pf-c-form-control--error--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-form-control--error--BorderSize: var(--pf-global--BorderWidth--md);
-
+  --pf-c-form-control--BackgroundWidth: var(--pf-global--FontSize--md);
+  --pf-c-form-control--BackgroundHeight: var(--pf-global--FontSize--md);
   width: 100%;
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
@@ -80,30 +68,30 @@ $pf-c-form-controls--error-svg--Viewbox: "0 0 26 15.8" !default;
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
   &.pf-m-error {
-    padding-top: var(--pf-c-form-control--error--PaddingTop);
-    padding-bottom: var(--pf-c-form-control--error--PaddingBottom);
-    border-color: var(--pf-c-form-control--error--BorderColor);
-    border-width: var(--pf-c-form-control--error--BorderSize);
-    &:not(select){
-      padding-right: var(--pf-c-form-control--error--PaddingRight);
-      @include pf-bg-svg($pf-c-form-controls--error-svg--Coordinates, $pf-c-form-controls--error-svg--Color, $pf-c-form-controls--error-svg--Width, $pf-c-form-controls--error-svg--Height, $pf-c-form-controls--error-svg--Viewbox);
+    @include pf-bg-svg($pf-c-form-controls--error--Coordinates, $pf-c-form-controls--error--Color);
+    &:not(.pf-m-form-control-alt){
+      padding: var(--pf-c-form-control--error--PaddingTop) var(--pf-c-form-control--error--PaddingRight) var(--pf-c-form-control--error--PaddingBottom) var(--pf-c-form-control--error--PaddingLeft);
+      border-color: var(--pf-c-form-control--error--BorderColor);
+      border-width: var(--pf-c-form-control--error--BorderSize);
     }
   }
 
   @at-root select#{&} {
     height: var(--pf-c-form-control--Height);
     &.pf-m-error {
-      padding-right: var(--pf-c-form-control--PaddingRight);
       background: none;
     }
   }
 
-  // styles for unique login form input
+  // styles for alternative form input
   &.pf-m-form-control-alt {
     padding-right: 0;
     padding-left: 0;
     border: none;
-    border-bottom: var(--pf-c-form-control--BorderSize) solid var(--pf-c-form-control--BorderColor);
+    border-bottom: var(--pf-c-form-control--alt--BottomBorderWidth) solid var(--pf-c-form-control--BorderColor);
     border-radius: 0;
+    &.pf-m-error {
+      border-bottom-color: var(--pf-c-form-control--error--BorderColor);
+    }
   }
 }
