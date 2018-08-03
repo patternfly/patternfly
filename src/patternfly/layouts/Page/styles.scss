@@ -1,44 +1,127 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
-:root {
-  // hardcoded value of 15rem for now as we are working through use cases for this layout
-  --pf-l-page__sidebar-Width: 15rem;
-}
-
 .pf-l-page {
+  // Sidebar width does not relate to the width propierty
+  // it's hardcoded to the fix width of the sidebar
+  --pf-l-page__sidebar--md--Width: pf-size-prem(290px);
+  --pf-l-page__sidebar--sm--Width: 80%;
+  --pf-l-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__header-nav--sm--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__header-brand--md--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-l-page__main-section--BoxShadow: var(--pf-global--BoxShadow--lg-right);
+  --pf-l-page__main-section--Padding: var(--pf-global--spacer--lg);
+  --pf-l-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__main-section--m-dark--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+  // --pf-l-page__main-section--m-dark--Padding: var(--pf-global--spacer--xl);
+
   display: grid;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
-  grid-template-columns: var(--pf-l-page__sidebar-Width) 1fr;
+  grid-template-columns: var(--pf-l-page__sidebar--md--Width) 1fr;
   grid-template-rows: auto 1fr;
-  grid-template-areas: "header header" "main main";
+  grid-template-areas:
+    "header header"
+    "main main";
 
-  // show sidebar above small breakpoint
-  @media (min-width: $pf-global--breakpoint--sm) {
-    grid-template-areas: "header header" "sidebar main";
+  @media (min-width: $pf-global--breakpoint--md) {
+    &.pf-m-expanded {
+      grid-template-areas:
+        "header header"
+        "sidebar main";
+    }
+  }
 
-    &__sidebar {
-      grid-area: sidebar;
+  &__sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--pf-l-page__sidebar--sm--Width);
+    grid-area: sidebar;
+    background-color: var(--pf-l-page__sidebar--BackgroundColor);
+    box-shadow: var(--pf-l-page__main-section--BoxShadow);
+    transform: translate3d(-100%, 0, 0);
+
+    .pf-m-expanded & {
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media (min-width: $pf-global--breakpoint--md) {
+      position: static;
+      display: none;
+      width: 100%;
+      .pf-m-expanded & {
+        display: block;
+      }
     }
   }
 
   &__header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: var(--pf-l-page__sidebar-Width) 1fr;
-    grid-template-areas: "header-left header-right";
+    // force the container follow the dark theme
+    @extend %pf-t-dark;
 
-    &-sidebar {
-      grid-area: header-left;
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      display: flex;
+      align-items: flex-end;
     }
 
-    &-main {
-      grid-area: header-right;
+    &-brand {
+      flex: 0 0 var(--pf-l-page__sidebar--md--Width);
+    }
+
+    &-tools {
+      margin-left: auto; // to push it to the right
+    }
+
+    &-nav {
+      // this is not mobie first since we are changing the order and it'd be too much overwrite to do it with a min-width
+      @media (max-width: $pf-global--breakpoint--md) {
+        flex: 1 0 100%;
+        order: 1;
+        background-color: var(--pf-l-page__header-nav--sm--BackgroundColor);
+      }
+    }
+
+    @media (min-width: $pf-global--breakpoint--md) {
+      min-height: pf-size-prem(110px);
+
+      &-brand {
+        background-color: var(--pf-l-page__header-brand--md--BackgroundColor);
+      }
     }
   }
 
   &__main {
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+
+    &-section {
+      padding: var(--pf-l-page__main-section--Padding);
+      background-color: var(--pf-l-page__main-section--BackgroundColor);
+
+      &:last-of-type,
+      &:only-child {
+        flex-grow: 1;
+        background-color: var(--pf-l-page__main-section--BackgroundColor);
+      }
+
+      &.pf-m-light {
+        background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
+      }
+
+      &.pf-m-dark {
+        background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
+        // force the container follow the dark theme
+        @extend %pf-t-dark;
+      }
+    }
   }
 }
