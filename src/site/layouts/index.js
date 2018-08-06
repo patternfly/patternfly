@@ -17,9 +17,7 @@ export default ({ children, data }) => {
     }
 
     if (edge.node.context.name == null) {
-      let bestGuessName = edge.node.path
-        .match(/\/([A-Za-z0-9_-]+)$/g)[0]
-        .substring(1);
+      let bestGuessName = edge.node.path.match(/\/([A-Za-z0-9_-]+)$/g)[0].substring(1);
       bestGuessName = bestGuessName.replace(/-/g, ' ');
 
       if (bestGuessName !== 'docs') {
@@ -67,6 +65,10 @@ export default ({ children, data }) => {
           <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Layouts</h3>
             <Navigation links={allPages.layout} />
+          </div>
+          <div className="layout__sidebar__item">
+            <h3 className="layout__sidebar_heading">Utilities</h3>
+            <Navigation links={allPages.utility} />
           </div>
           <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Demos</h3>

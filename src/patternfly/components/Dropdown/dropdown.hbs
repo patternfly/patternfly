@@ -1,6 +1,9 @@
 <div class="pf-c-dropdown{{#if pf-c-dropdown--IsExpanded}} pf-m-expanded{{/if}} {{pf-c-dropdown--Modifier}}">
   <button id="{{id}}" class="pf-c-dropdown__toggle" aria-haspopup="true" aria-expanded="{{#if pf-c-dropdown--IsExpanded}}true{{else}}false{{/if}}">
     {{> @partial-block}}
+    {{#if pf-c-dropdown--HasToggleIcon}}
+     {{> dropdown-toggle-icon}}     
+    {{/if}}
   </button>
   <div class="pf-c-dropdown__menu" role="menu" aria-labelledby="{{id}}" {{#unless pf-c-dropdown--IsExpanded}}hidden="hidden"{{/unless}}>
     <a class="pf-c-dropdown__menu-item" role="menuitem" href="#">Link</a>

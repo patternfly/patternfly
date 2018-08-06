@@ -1,8 +1,9 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import docs from '../docs/code.md';
+import BackdropExampleRaw from '!raw!./backdrop-example.hbs';
 import BackdropExample from './backdrop-example.hbs';
+import docs from '../docs/code.md';
 import '../styles.scss';
 
 export const Docs = docs;
@@ -12,7 +13,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Backdrop Example" fullPageOnly="true">
+      <Example heading="Backdrop Example" fullPageOnly="true" handlebars={BackdropExampleRaw}>
         {backdropExample}
       </Example>
     </Documentation>

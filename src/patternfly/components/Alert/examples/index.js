@@ -2,38 +2,38 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import SuccessAlertRaw from '!raw!./success-alert.hbs';
-import WarningAlertRaw from '!raw!./warning-alert.hbs';
-import DangerAlertRaw from '!raw!./danger-alert.hbs';
-import InfoAlertRaw from '!raw!./info-alert.hbs';
-import SuccessAlert from './success-alert.hbs';
-import WarningAlert from './warning-alert.hbs';
-import DangerAlert from './danger-alert.hbs';
-import InfoAlert from './info-alert.hbs';
+import AlertSuccessRaw from '!raw!./alert-success-example.hbs';
+import AlertWarningRaw from '!raw!./alert-warning-example.hbs';
+import AlertDangerRaw from '!raw!./alert-danger-example.hbs';
+import AlertInfoRaw from '!raw!./alert-info-example.hbs';
+import AlertSuccess from './alert-success-example.hbs';
+import AlertWarning from './alert-warning-example.hbs';
+import AlertDanger from './alert-danger-example.hbs';
+import AlertInfo from './alert-info-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
 export const Docs = docs;
 
 export default () => {
-  const successAlert = SuccessAlert();
-  const warningAlert = WarningAlert();
-  const dangerAlert = DangerAlert();
-  const infoAlert = InfoAlert();
+  const alertSuccess = AlertSuccess();
+  const alertWarning = AlertWarning();
+  const alertDanger = AlertDanger();
+  const alertInfo = AlertInfo();
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Success Alert" handlebars={SuccessAlertRaw}>
-        {successAlert}
+      <Example heading="Success Alert" handlebars={AlertSuccessRaw}>
+        {alertSuccess}
       </Example>
-      <Example heading="Danger Alert" handlebars={DangerAlertRaw}>
-        {dangerAlert}
+      <Example heading="Danger Alert" handlebars={AlertDangerRaw}>
+        {alertDanger}
       </Example>
-      <Example heading="Warning Alert" handlebars={WarningAlertRaw}>
-        {warningAlert}
+      <Example heading="Warning Alert" handlebars={AlertWarningRaw}>
+        {alertWarning}
       </Example>
-      <Example heading="Info Alert" handlebars={InfoAlertRaw}>
-        {infoAlert}
+      <Example heading="Info Alert" handlebars={AlertInfoRaw}>
+        {alertInfo}
       </Example>
     </Documentation>
   );

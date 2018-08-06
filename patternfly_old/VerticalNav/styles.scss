@@ -1,0 +1,119 @@
+@import "../../patternfly-utilities";
+
+.pf-c-vertical-nav {
+  /* stylelint-disable */
+
+  // Vertical nav
+  --pf-c-vertical-nav--Color:             var(--pf-global--Color--dark-100);
+
+  // Vertical nav link
+  --pf-c-vertical-nav__link--PaddingRight:    var(--pf-global--spacer--xl);
+  --pf-c-vertical-nav__link--PaddingLeft:     var(--pf-global--spacer--xl);
+  --pf-c-vertical-nav__link--PaddingTop:      var(--pf-global--spacer--lg);
+  --pf-c-vertical-nav__link--PaddingBottom:   var(--pf-global--spacer--lg);
+  
+  // Vertical nav link :after
+  --pf-c-vertical-nav__link--after--Width:                      2rem;
+  --pf-c-vertical-nav__link--after--Height:                     .25rem;
+  --pf-c-vertical-nav__link--after--Left:                       var(--pf-c-vertical-nav__link--PaddingLeft);
+  --pf-c-vertical-nav__link--after--BackgroundColor:            transparent;
+  --pf-c-vertical-nav__link--focus--after--BackgroundColor:     var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--hover--after--BackgroundColor:     var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--active--after--BackgroundColor:    var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--disabled--after--BackgroundColor:  transparent;
+
+  // Vertical nav link colors
+  --pf-c-vertical-nav__link--Color:               var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--hover--Color:        var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--focus--Color:        var(--pf-global--Color--dark-100);
+  --pf-c-vertical-nav__link--active--FontWeight:  var(--pf-global--FontWeight--semi-bold);
+  --pf-c-vertical-nav__link--active--Color:       var(--pf-global--Color--active);
+  --pf-c-vertical-nav__link--disabled--Color:     var(--pf-global--Color--disabled);
+
+  // Vertical nav link background colors
+  --pf-c-vertical-nav__link--BackgroundColor:           transparent;
+  --pf-c-vertical-nav__link--hover--BackgroundColor:    transparent;
+  --pf-c-vertical-nav__link--focus--BackgroundColor:    transparent;
+  --pf-c-vertical-nav__link--active--BackgroundColor:   transparent;
+  --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--disabled);
+
+  /* stylelint-enable */
+
+  // List
+  color: var(--pf-c-vertical-nav--Color);
+
+  // Link
+  &__link {
+    // Align any additional items included in __link
+    position: relative;
+    display: block;
+    padding-top: var(--pf-c-vertical-nav__link--PaddingTop);
+    padding-right: var(--pf-c-vertical-nav__link--PaddingRight);
+    padding-bottom: var(--pf-c-vertical-nav__link--PaddingBottom);
+    padding-left: var(--pf-c-vertical-nav__link--PaddingLeft);
+    color: var(--pf-c-vertical-nav__link--Color);
+    background-color: var(--pf-c-vertical-nav__link--BackgroundColor);
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: var(--pf-c-vertical-nav__link--after--Left);
+      width: var(--pf-c-vertical-nav__link--after--Width);
+      height: var(--pf-c-vertical-nav__link--after--Height);
+      content: "";
+      background-color: var(--pf-c-vertical-nav__link--after--BackgroundColor);
+    }
+
+    // States
+    &.pf-m-focus,
+    &:focus {
+      z-index: 2;
+      color: var(--pf-c-vertical-nav__link--focus--Color);
+      background-color: var(--pf-c-vertical-nav__link--focus--BackgroundColor);
+
+      &::after {
+        background-color: var(--pf-c-vertical-nav__link--focus--after--BackgroundColor);
+      }
+    }
+
+    &.pf-m-hover,
+    &:hover {
+      color: var(--pf-c-vertical-nav__link--hover--Color);
+      background-color: var(--pf-c-vertical-nav__link--hover--BackgroundColor);
+
+      &::after {
+        background-color: var(--pf-c-vertical-nav__link--hover--after--BackgroundColor);
+      }
+    }
+
+    &.pf-m-active,
+    &:active {
+      font-weight: var(--pf-c-vertical-nav__link--active--FontWeight);
+      color: var(--pf-c-vertical-nav__link--active--Color);
+      background-color: var(--pf-c-vertical-nav__link--active--BackgroundColor);
+
+      > * {
+        font-weight: var(--pf-c-vertical-nav__link--active--FontWeight);
+        color: var(--pf-c-vertical-nav__link--active--Color);
+      }
+    }
+
+    &.pf-m-disabled,
+    &:disabled {
+      color: var(--pf-c-vertical-nav__link--disabled--Color);
+      cursor: not-allowed;
+      background-color: var(--pf-c-vertical-nav__link--disabled--BackgroundColor);
+
+      &::after {
+        background-color: var(--pf-c-vertical-nav__link--disabled--after--BackgroundColor);
+      }
+    }
+  }
+}

@@ -24,13 +24,13 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | -- | -- | -- |
 | `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |
 | `.pf-c-dropdown__toggle` | `<button>` | Defines the dropdown toggle |
+| `.pf-c-dropdown__toggle-icon` | `<i>` | Defines the dropdown toggle icon |
 | `.pf-c-dropdown__menu` | `<div>` | Defines the parent wrapper of the menu items |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page |
 | `.pf-c-dropdown__separator` | `<div>` | Defines a separator within the menu |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
-| `.pf-m-ghost` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
-| `.pf-m-no-arrow` | `.pf-c-dropdown` | Modifies to display the toggle without the arrow |
+| `.pf-m-action` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
 | `.pf-m-dropup` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
 | `.pf-m-right-aligned` | `.pf-c-dropdown` | Modifies to display the menu right-aligned with the toggle |
 | `.pf-m-disabled` | `.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled |

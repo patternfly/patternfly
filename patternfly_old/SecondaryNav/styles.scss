@@ -1,0 +1,70 @@
+@import "../../patternfly-utilities";
+
+$pf-p-secondary-nav--BorderColor:                $pf-global--BorderColor--light !default;
+$pf-p-secondary-nav--BorderWidth:                $pf-global--BorderWidth--md !default;
+
+$pf-p-secondary-nav__item--MarginLeft:           $pf-global--spacer--xl !default;
+$pf-p-secondary-nav__item--MarginRight:          $pf-global--spacer--xl !default;
+
+$pf-p-secondary-nav__link--Color:                $pf-global--Color--dark-100 !default;
+$pf-p-secondary-nav__link--PaddingTop:           $pf-global--spacer--lg !default;
+$pf-p-secondary-nav__link--PaddingBottom:        $pf-global--spacer--lg !default;
+
+$pf-p-secondary-nav__link--current--FontWeight:   $pf-global--FontWeight--semi-bold !default;
+$pf-p-secondary-nav__link--current--Color:        $pf-global--Color--dark-active !default;
+$pf-p-secondary-nav__link--current--BorderColor:  $pf-global--Color--active !default;
+
+$pf-p-secondary-nav__link--disabled--Color:      $pf-color-black-300 !default;
+
+.pf-p-secondary-nav {
+  display: flex;
+  // reset list
+  padding-left: 0;
+  list-style: none;
+  // The background creates a border under the menu
+  background-image:
+    linear-gradient(
+      to top,
+      $pf-p-secondary-nav--BorderColor $pf-p-secondary-nav--BorderWidth,
+      transparent $pf-p-secondary-nav--BorderWidth
+    );
+
+  // Selects every direct child of pf-p-secondary-nav, for example .pf-p-secondary-nav__item
+  > * {
+    display: flex;
+    margin-right: $pf-p-secondary-nav__item--MarginRight;
+    margin-left: $pf-p-secondary-nav__item--MarginLeft;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding-top: $pf-p-secondary-nav__link--PaddingTop;
+    padding-bottom: $pf-p-secondary-nav__link--PaddingBottom;
+    color: $pf-p-secondary-nav__link--Color;
+
+    // Current State
+    &.pf-m-current {
+      font-weight: $pf-p-secondary-nav__link--current--FontWeight;
+      color: $pf-p-secondary-nav__link--current--Color;
+      // The background creates a thicker blue border under the current link
+      background-image:
+        linear-gradient(
+          to top,
+          $pf-p-secondary-nav__link--current--BorderColor ($pf-p-secondary-nav--BorderWidth *
+          2),
+          transparent ($pf-p-secondary-nav--BorderWidth * 2)
+        );
+    }
+
+    // Disabled State
+    &.pf-m-disabled {
+      color: $pf-p-secondary-nav__link--disabled--Color;
+      text-decoration: none;
+      cursor: not-allowed;
+    }
+  }
+}

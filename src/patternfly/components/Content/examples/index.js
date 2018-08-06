@@ -1,7 +1,8 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import ContentTemplate from './content-template.hbs';
+import ContentTemplateRaw from '!raw!./content-template-example.hbs';
+import ContentTemplate from './content-template-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -12,7 +13,9 @@ export default () => {
 
   return (
     <Documentation docs={Docs} className="">
-      <Example heading="Content Example">{contentTemplate}</Example>
+      <Example heading="Content Example" handlebars={ContentTemplateRaw}>
+        {contentTemplate}
+      </Example>
     </Documentation>
   );
 };

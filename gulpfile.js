@@ -7,13 +7,7 @@ const sassGlob = require('gulp-sass-glob');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('build', [
-  'build-modules',
-  'build-library',
-  'copy-fa',
-  'copy-source',
-  'minify-css'
-]);
+gulp.task('build', ['build-modules', 'build-library', 'copy-fa', 'copy-source', 'minify-css']);
 
 gulp.task('copy-fa', () =>
   gulp
@@ -49,7 +43,7 @@ gulp.task('minify-css', ['build-library'], () => {
 
 gulp.task('build-modules', () =>
   gulp
-    .src('./src/patternfly/{components,layouts,patterns}/**/*.scss')
+    .src('./src/patternfly/{components,layouts,patterns,utilities}/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist'))
 );
