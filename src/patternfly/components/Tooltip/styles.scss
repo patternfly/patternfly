@@ -1,0 +1,86 @@
+@import "../../patternfly-utilities";
+
+.pf-c-tooltip {
+  // Component variables
+  --pf-c-tooltip--MaxWidth: pf-size-prem(200px);
+  --pf-c-tooltip--BoxShadow: var(--pf-global--BoxShadow);
+  // Set margin to arrow width for placement
+  --pf-c-tooltip--MarginBottom: var(--pf-global--arrow--width);
+  --pf-c-tooltip--MarginTop: var(--pf-global--arrow--width);
+  --pf-c-tooltip--MarginRight: var(--pf-global--arrow--width);
+  --pf-c-tooltip--MarginLeft: var(--pf-global--arrow--width);
+
+  // Content variables
+  --pf-c-tooltip__content--Padding: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--Color: var(--pf-global--Color--light-100);
+  --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+
+  // Arrow variables
+  --pf-c-tooltip__arrow--Width: var(--pf-global--arrow--width);
+  // Set arrow margin to half arrow width for placement
+  --pf-c-tooltip__arrow--Margin: var(--pf-global--arrow--width) / 2;
+  --pf-c-tooltip__arrow--BoxShadow: var(--pf-global--BoxShadow);
+  --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  // used in the directional modifiers for placement
+  --pf-c-tooltip__arrow-half-size: var(--pf-global--arrow--width) / 2;
+
+  position: relative;
+  max-width: var(--pf-c-tooltip--MaxWidth);
+  box-shadow: var(--pf-c-tooltip--BoxShadow);
+
+  &__content {
+    position: relative;
+    padding: var(--pf-c-tooltip__content--Padding);
+    color: var(--pf-c-tooltip__content--Color);
+    text-align: center;
+    background-color: var(--pf-c-tooltip__content--BackgroundColor);
+  }
+
+  &__arrow {
+    position: absolute;
+    // Popover arrow is square, sharing width value to prevent positioning errors
+    width: var(--pf-c-tooltip__arrow--Width);
+    height: var(--pf-c-tooltip__arrow--Width);
+    margin: var(--pf-c-tooltip__arrow--Margin);
+    pointer-events: none;
+    background-color: var(--pf-c-tooltip__arrow--BackgroundColor);
+    box-shadow: var(--pf-c-tooltip__arrow--BoxShadow);
+    transform: rotate(45deg);
+  }
+
+  &.pf-m-top {
+    margin-bottom: var(--pf-c-tooltip--MarginBottom);
+  }
+
+  &.pf-m-bottom {
+    margin-top: var(--pf-c-tooltip--MarginTop);
+  }
+
+  &.pf-m-left {
+    margin-right: var(--pf-c-tooltip--MarginRight);
+  }
+
+  &.pf-m-right {
+    margin-left: var(--pf-c-tooltip--MarginLeft);
+  }
+
+  &.pf-m-top > &__arrow {
+    bottom: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
+    left: calc(50% - var(--pf-c-tooltip__arrow-half-size));
+  }
+
+  &.pf-m-bottom > &__arrow {
+    top: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
+    left: calc(50% - var(--pf-c-tooltip__arrow-half-size));
+  }
+
+  &.pf-m-right > &__arrow {
+    top: calc(50% - var(--pf-c-tooltip__arrow-half-size));
+    left: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
+  }
+
+  &.pf-m-left > &__arrow {
+    top: calc(50% - var(--pf-c-tooltip__arrow-half-size));
+    right: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
+  }
+}

@@ -78,6 +78,9 @@ $pf-global--primary-color--dark-100:    $pf-color-blue-400 !default;
 
 // Shadows
 
+$pf-global--DropShadow: drop-shadow(pf-size-prem(0) pf-size-prem(.7) pf-size-prem(2.1) rgba($pf-color-black-1000, .14)); // visually comparable to $pf-global--BoxShadow
+$pf-global--DropShadow-2: drop-shadow(pf-size-prem(.7) pf-size-prem(4) pf-size-prem(7.1) rgba($pf-color-black-1000, .14));
+
 $pf-global--BoxShadow--sm: 0 pf-size-prem(1) pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
 $pf-global--BoxShadow: 0 pf-size-prem(1) pf-size-prem(1) pf-size-prem(0) rgba($pf-color-black-1000, .05), 0 pf-size-prem(4) pf-size-prem(8) pf-size-prem(4) rgba($pf-color-black-1000, .06) !default;
 $pf-global--BoxShadow--lg: 0 pf-size-prem(3) pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0 pf-size-prem(11) pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
@@ -184,6 +187,10 @@ $pf-global--link--TextDecoration--hover:  underline !default;
 
 // List
 $global-ListStyle: disc outside !default;
+
+// Arrow size (used for tooltips, popovers, etc.)
+$pf-global--arrow--width: pf-font-prem(15px);
+$pf-global--arrow--width-lg: pf-font-prem(25px);
 
 // filters
 // overlay
@@ -383,6 +390,10 @@ $pf-global--spacer-map: (
 
   // List
   --global-ListStyle: $global-ListStyle;
+
+  // Arrow Size
+  --pf-global--arrow--width: $pf-global--arrow--width;
+  --pf-global--arrow--width-lg: $pf-global--arrow--width-lg;
 }
 
 /* stylelint-enable */

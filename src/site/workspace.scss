@@ -318,4 +318,72 @@
   }
 }
 
+.Preview__overlay {
+  position: relative;
+  display: inline-block;
+
+  .Preview__overlay-container {
+    position: absolute;
+    z-index: 500;
+    display: flex;
+    width: 100vw;
+
+    // necessary due to setting width
+    // this fixes pointer events using a hack
+    // unsure about browser compatibility of this hack
+    pointer-events: none;
+    & > * {
+      pointer-events: all;
+    }
+
+    &.pf-m-left {
+      top: 50%;
+      left: 0;
+      justify-content: flex-end;
+      transform: translate(-100%, -50%);
+    }
+
+    &.pf-m-right {
+      top: 50%;
+      right: 0;
+      justify-content: flex-start;
+      transform: translate(100%, -50%);
+    }
+
+    &.pf-m-top {
+      top: 0;
+      left: 50%;
+      justify-content: center;
+      transform: translate(-50%, -100%);
+    }
+
+    &.pf-m-bottom {
+      bottom: 0;
+      left: 50%;
+      justify-content: center;
+      transform: translate(-50%, 100%);
+    }
+  }
+}
+
+.Example.is-tooltip .Preview__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .Preview__overlay {
+    margin: 200px;
+  }
+}
+
+.Example.is-popover .Preview__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .Preview__overlay {
+    margin: 300px;
+  }
+}
+
 /* stylelint-enable */

@@ -30,7 +30,7 @@ export default () => {
       </Example>
       <Example heading="Links as Buttons" handlebars={ButtonLinkExampleRaw}>
         {buttonLinkExample}
-      </Example>  
+      </Example>
       <Example heading="Button (Block Level)" handlebars={ButtonBlockTemplateRaw}>
         {buttonBlockTemplate}
       </Example>

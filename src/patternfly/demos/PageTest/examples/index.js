@@ -16,18 +16,10 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example
-        heading="Pagetest Example 1"
-        fullPageOnly="true"
-        handlebars={PagetestExample1Raw}
-      >
+      <Example heading="Pagetest Example 1" fullPageOnly="true" handlebars={PagetestExample1Raw}>
         {pageTestExample1}
       </Example>
-      <Example
-        heading="Pagetest Example 2"
-        fullPageOnly="true"
-        handlebars={PagetestExample2Raw}
-      >
+      <Example heading="Pagetest Example 2" fullPageOnly="true" handlebars={PagetestExample2Raw}>
         {pageTestExample2}
       </Example>
     </Documentation>

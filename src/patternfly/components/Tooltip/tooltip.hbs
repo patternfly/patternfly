@@ -1,0 +1,12 @@
+<div class="Preview__overlay">
+  <div class="Preview__overlay-container {{direction}}">
+      <div class="pf-c-tooltip {{direction}}">
+        <div class="pf-c-tooltip__arrow"></div>
+        <div class="pf-c-tooltip__content" id="tooltip-description">
+          {{> @partial-block}}
+        </div>
+      </div>
+  </div>
+  {{#> tooltip-parent }}
+  {{/tooltip-parent}}
+</div>
