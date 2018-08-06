@@ -87,8 +87,8 @@ $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
 
 
-$component-active-color:      $pf-global--Color--active !default;
-$component-active-bg:         $pf-global--BackgroundColor--active !default;
+$component-active-color:      $pf-global--active-100 !default;
+$component-active-bg:         $pf-global--active-200 !default;
 
 
 // Fonts
@@ -217,7 +217,7 @@ $btn-border-radius-sm:        $btn-border-radius !default;
 // $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
 // $input-bg:                              $white !default;
-$input-disabled-bg:                    $pf-global--BackgroundColor--disabled !default;
+$input-disabled-bg:                    $pf-global--disabled-200 !default;
 
 // $input-color:                           $gray-700 !default;
 // $input-border-color:                    $gray-400 !default;
