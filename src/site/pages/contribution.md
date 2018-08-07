@@ -23,6 +23,19 @@ const boxBasicExample = BoxBasicExample();
 <Example heading="Box with no footer">{boxNoHeaderExample}</Example>;
 ```
 
+There are several properties available on the Example component to help with styling the previews.
+
+| Property | Usage                                                             |
+| ------------------- | ------------------------------------------------------------------- |
+| `heading`   | Sets the text displayed above the example (required) |
+| `minHeight`   | Sets the min-height of the preview box - useful for collapsed items that need space to expand or when a set minimum height would provide value (optional) |
+| `docs`   | Sets a reference to an example specific markdown file instead of documentation for the entire component to describe specific functionality displayed (optional) |
+| `fullPageOnly`   | Setting to true will only display the preview when full page mode is used (optional) |
+
+```html
+<Example heading="Heading" minHeight="20em" docs={docReference} fullPageOnly="">{example}</Example>;
+```
+
 ### Handlebars names
 
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
