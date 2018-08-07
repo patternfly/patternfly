@@ -42,17 +42,13 @@ export default () => {
         {dropdownKebab}
       </Example>
       <Example
-        className="is-expanded-dropdown is-right-aligned"
+        className="is-expanded-dropdown is-align-right"
         heading="Kebab Align Right"
         handlebars={DropdownKebabAlignRightRaw}
       >
         {dropdownKebabAlignRight}
       </Example>
-      <Example
-        className="is-expanded-dropdown is-right-aligned"
-        heading="Align Right"
-        handlebars={DropdownAlignRightRaw}
-      >
+      <Example className="is-expanded-dropdown is-align-right" heading="Align Right" handlebars={DropdownAlignRightRaw}>
         {dropdownAlignRight}
       </Example>
       <Example className="is-expanded-dropup" heading="Dropup" handlebars={DropdownDropupRaw}>
