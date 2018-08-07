@@ -6,13 +6,13 @@ import DropdownCollapsedRaw from '!raw!./dropdown-collapsed-example.hbs';
 import DropdownKebabRaw from '!raw!./dropdown-kebab-example.hbs';
 import DropdownKebabAlignRightRaw from '!raw!./dropdown-kebab-align-right-example.hbs';
 import DropdownAlignRightRaw from '!raw!./dropdown-align-right-example.hbs';
-import DropdownDropupRaw from '!raw!./dropdown-dropup-example.hbs';
+import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
 import DropdownCollapsed from './dropdown-collapsed-example.hbs';
 import DropdownKebab from './dropdown-kebab-example.hbs';
 import DropdownKebabAlignRight from './dropdown-kebab-align-right-example.hbs';
 import DropdownAlignRight from './dropdown-align-right-example.hbs';
-import DropdownDropup from './dropdown-dropup-example.hbs';
+import DropdownTop from './dropdown-top-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -24,7 +24,7 @@ export default () => {
   const dropdownKebab = DropdownKebab();
   const dropdownKebabAlignRight = DropdownKebabAlignRight();
   const dropdownAlignRight = DropdownAlignRight();
-  const dropdownDropup = DropdownDropup();
+  const dropdownTop = DropdownTop();
 
   const styles = {
     height: '13em'
@@ -51,8 +51,8 @@ export default () => {
       <Example className="is-expanded-dropdown is-align-right" heading="Align Right" handlebars={DropdownAlignRightRaw}>
         {dropdownAlignRight}
       </Example>
-      <Example className="is-expanded-dropup" heading="Dropup" handlebars={DropdownDropupRaw}>
-        {dropdownDropup}
+      <Example className="is-expanded-top" heading="Top" handlebars={DropdownTopRaw}>
+        {dropdownTop}
       </Example>
     </Documentation>
   );
