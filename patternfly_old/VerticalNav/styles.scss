@@ -28,14 +28,14 @@
   --pf-c-vertical-nav__link--focus--Color:        var(--pf-global--Color--dark-100);
   --pf-c-vertical-nav__link--active--FontWeight:  var(--pf-global--FontWeight--semi-bold);
   --pf-c-vertical-nav__link--active--Color:       var(--pf-global--Color--active);
-  --pf-c-vertical-nav__link--disabled--Color:     var(--pf-global--disabled-100);
+  --pf-c-vertical-nav__link--disabled--Color:     var(--pf-global--disabled-color-100);
 
   // Vertical nav link background colors
   --pf-c-vertical-nav__link--BackgroundColor:           transparent;
   --pf-c-vertical-nav__link--hover--BackgroundColor:    transparent;
   --pf-c-vertical-nav__link--focus--BackgroundColor:    transparent;
   --pf-c-vertical-nav__link--active--BackgroundColor:   transparent;
-  --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--disabled-200);
+  --pf-c-vertical-nav__link--disabled--BackgroundColor: var(--pf-global--disabled-color-200);
 
   /* stylelint-enable */
 
