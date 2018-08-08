@@ -222,17 +222,6 @@
         padding-left: var(--pf-c-form__label-nested--PaddingLeft);
       }
     }
-
-    &-visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-      /* stylelint-disable */
-      position: absolute !important;
-      /* stylelint-enable */
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-      clip: rect(1px, 1px, 1px, 1px);
-    }
   }
 }
 

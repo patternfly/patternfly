@@ -15,7 +15,7 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.sr-only` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert/notification.  ** Required**|
+| `.pf-u-sr-only` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert/notification.  ** Required**|
 
 ## Usage
 
