@@ -79,13 +79,19 @@ For example a global variable setup would look like:
   --pf-global--spacer--xl: 1rem;
   --pf-global--spacer--2xl: 2rem;
 
-  /* $pf-global--concept--PropertyCamelCase */
+  /* $pf-global--PropertyCamelCase--modifier */
   --pf-global--FontSize--3xl: 2rem;
   --pf-global--FontSize--2xl: 1.8rem;
   --pf-global--FontSize--lg: 1rem;
 
   /* pf-global--PropertyCamelCase--state */
   --pf-global--BackgroundColor--hover: #ccc;
+
+  /* $pf-global--PropertyCamelCase--modifier */
+  --pf-global--Color--100: #000;
+
+  /* $pf-global--concept--modifier */
+  --pf-global--primary-color--100: blue;
 ```
 
 ### Component variables
