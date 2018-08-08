@@ -86,14 +86,14 @@
 
     &:active,
     .pf-m-expanded > &,
-    .pf-m-action.pf-m-expanded > & {
+    .pf-m-plain.pf-m-expanded > & {
       &::before {
         border-color: var(--pf-c-dropdown__toggle--expanded--BorderColor);
         border-width: var(--pf-c-dropdown__toggle--expanded--BorderWidth);
       }
     }
 
-    .pf-m-action > & {
+    .pf-m-plain > & {
       background-color: transparent;
       &::before {
         border-color: transparent;
