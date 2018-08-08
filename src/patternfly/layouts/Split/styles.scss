@@ -13,16 +13,7 @@
     margin-right: var(--pf-l-split--m-gutter--MarginRight);
   }
 
-  &__item {
-    flex: 1 1 auto;
-  }
-
-  &__item:nth-child(2),
-  &__item.pf-m-primary {
-    flex: 1 1 100%;
-  }
-
-  &__item.pf-m-secondary {
-    flex: 1 1 auto;
+  &__item:nth-child(2) {
+    flex-grow: 1;
   }
 }

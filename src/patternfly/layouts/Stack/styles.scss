@@ -8,15 +8,11 @@
   flex-direction: column;
   height: 100%;
 
-  &__item.pf-m-secondary {
-    flex: 0 0 auto;
-  }
   &__item.pf-m-primary {
-    flex: 1 1 auto;
+    flex-grow: 1;
   }
 
   &.pf-m-gutter > *:not(:last-child) {
     margin-bottom: var(--pf-l-stack--m-gutter--MarginBottom);
   }
-
 }
