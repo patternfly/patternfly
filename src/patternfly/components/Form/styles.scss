@@ -68,9 +68,6 @@
   --pf-c-form--section--m-border--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-form--section--m-border--BorderBottomColor: var(--pf-global--BorderColor--light);
 
-  // Sub-section
-  --pf-c-form--m-subsection-title--MarginBottom: var(--pf-global--spacer--sm);
-
   // Legend
   --pf-c-form__legend--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-form__legend--FontSize: var(--pf-global--FontSize--lg);
@@ -102,8 +99,7 @@
 
   // Group - label and control container
   // Note: Fieldset and legend are replaced groups. In order to have fieldset elements layout like a group, fieldset contents must be wrapped in __group.
-  &__group,
-  .pf-m-subsection-title {
+  &__group {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
@@ -231,12 +227,6 @@
     &-right {
       margin-left: auto;
     }
-
-    // Sub-section title
-    &-subsection-title {
-      margin-bottom: var(--pf-c-form--m-subsection-title--MarginBottom);
-    }
-
 
     &-visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
       /* stylelint-disable */
