@@ -50,11 +50,4 @@
       margin-right: var(--pf-l-toolbar__item--MarginRight);
     }
   }
-
-  // Set flex item to align right
-  .pf-m-align-right {
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
-      margin-left: auto;
-    }
-  }
 }

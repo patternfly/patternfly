@@ -14,7 +14,6 @@ The toolbar layout assumes that all direct children of `.pf-l-toolbar` appear on
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-l-toolbar` | `<div>`, `<section>`, `<header>`, `<footer>` |  Initializes a toolbar layout. **Required.** |
-| `.pf-l-toolbar__section` | `<section>` |  Initiates a toolbar section. Use this when vertically stacking toolbar sections. |
 | `.pf-l-toolbar__group` | `<div>` |  Initiates a toolbar group. **Required.** |
 | `.pf-l-toolbar__item` | `<div>` |  Initiates a toolbar item. **Required.** |
-| `.pf-m-align-right` | `.pf-l-toolbar__group` | Sets toolbar group to align right. |
+| `.pf-l-toolbar__section` | `<section>` |  Initiates a toolbar section. Use this when vertically stacking toolbar sections. |
