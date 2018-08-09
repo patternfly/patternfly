@@ -1,4 +1,20 @@
 <button class="pf-c-nav-toggle"
+  {{#if button-toggle--interactive}}
+    onClick="(function(){
+      const mq = window.matchMedia('(min-width: 768px)');
+      const page = document.getElementById('primary-nav');
+
+      if (mq.matches) {
+        page.classList.remove('pf-m-expanded');
+        page.classList.toggle('pf-m-collapsed');
+      } else {
+        page.classList.remove('pf-m-collapsed');
+        page.classList.toggle('pf-m-expanded');
+      }
+        return false;
+    })();return false;"
+  {{/if}}
+
   {{#if nav-toggle--attribute}}
     {{{nav-toggle--attribute}}}
   {{/if}}>

@@ -7,7 +7,7 @@
     {{!-- Brand --}}
     {{#> page-header-brand}}
       {{#> page-header-brand-group}}
-        {{#> nav-toggle nav-toggle--attribute='id="nav-toggle"'}}
+        {{#> nav-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle"'}}
           <i class="fas fa-bars"></i>
         {{/nav-toggle}}
         <a class="pf-l-page__header-brand-link" href="#">
@@ -19,8 +19,8 @@
     {{/page-template-header-elements}}
   {{/page-header}}
 
-  {{#> nav nav--attribute='aria-label="Primary Nav Expandable Example"'}}
-    {{#> nav-list nav-list--attribute='id="primary-nav"'}}
+  {{#> nav nav--vertical="true" nav--interactive="true" nav--expandable="true" nav--attribute='id="primary-nav" aria-label="Primary Nav Expandable Example"'}}
+    {{#> nav-list}}
       {{#> nav-list-item nav-list-item--expandable="true" nav-list-item--expanded="true" nav-list-item--current="true"}}
         {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link1"'}}
           System Panel

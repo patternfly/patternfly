@@ -6,7 +6,7 @@
     {{!-- Brand --}}
     {{#> page-header-brand}}
       {{#> page-header-brand-group}}
-        {{#> nav-toggle nav-toggle--attribute='id="nav-toggle"'}}
+        {{#> nav-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle"'}}
           <i class="fas fa-bars"></i>
         {{/nav-toggle}}
         <a class="pf-l-page__header-brand-link" href="#">
@@ -19,7 +19,7 @@
   {{/page-header}}
 
   {{!-- Nav --}}
-  {{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
+  {{#> nav nav--vertical="true" nav--attribute='id="primary-nav" aria-label="Primary Nav Default Example"'}}
     {{#> nav-list}}
       {{#> nav-list-item}}
         {{#> nav-list-link nav-list-link--href="#" nav-list-link--current="true"}}

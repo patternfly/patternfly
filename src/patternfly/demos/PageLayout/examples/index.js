@@ -19,59 +19,6 @@ import '../styles.scss';
 
 export const Docs = docs;
 
-function classToggle() {
-  const mq = window.matchMedia('(min-width: 768px)');
-  const page = document.getElementById('page');
-
-  if (mq.matches) {
-    page.classList.remove('pf-m-expanded');
-    page.classList.toggle('pf-m-collapsed');
-  } else {
-    page.classList.remove('pf-m-collapsed');
-    page.classList.toggle('pf-m-expanded');
-  }
-}
-
-function expandNav(e) {
-  // const target = e.target;
-  const parent = e.target.parentNode;
-  const child = parent.children[1];
-
-  if (e.target.classList.contains('pf-c-nav__list-link')) {
-    if (parent.classList.contains('pf-m-expanded')) {
-      parent.classList.remove('pf-m-expanded');
-      setTimeout(() => {
-        child.setAttribute('aria-expanded', 'false');
-        child.setAttribute('hidden', '');
-      }, 500);
-    } else {
-      child.removeAttribute('hidden');
-      setTimeout(() => {
-        parent.classList.add('pf-m-expanded');
-        child.setAttribute('aria-expanded', 'true');
-      }, 50);
-    }
-  }
-}
-
-if (document.getElementById('nav-toggle') !== null) {
-  document.getElementById('nav-toggle').addEventListener('click', classToggle);
-}
-
-if (document.getElementById('primary-nav') !== null) {
-  document.getElementById('primary-nav').addEventListener('click', expandNav);
-}
-
-// setTimeout(() => {
-//   if (document.getElementById('nav-toggle') !== null) {
-//     document.getElementById('nav-toggle').addEventListener('click', classToggle);
-//   }
-
-//   if (document.getElementById('primary-nav') !== null) {
-//     document.getElementById('primary-nav').addEventListener('click', expandNav);
-//   }
-// }, 1000);
-
 export default () => {
   const pageLayoutDefaultNavExample = PageLayoutDefaultNavExample();
   const pageLayoutExpandableNavExample = PageLayoutExpandableNavExample();
