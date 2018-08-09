@@ -31,6 +31,6 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__separator` | `<div>` | Defines a separator within the menu |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
 | `.pf-m-action` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
-| `.pf-m-dropup` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
-| `.pf-m-right-aligned` | `.pf-c-dropdown` | Modifies to display the menu right-aligned with the toggle |
+| `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
+| `.pf-m-align-right` | `.pf-c-dropdown` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-disabled` | `.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled |

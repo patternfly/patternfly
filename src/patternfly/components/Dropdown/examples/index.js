@@ -4,15 +4,15 @@ import Example from '@siteComponents/Example';
 import DropdownExpandedRaw from '!raw!./dropdown-expanded-example.hbs';
 import DropdownCollapsedRaw from '!raw!./dropdown-collapsed-example.hbs';
 import DropdownKebabRaw from '!raw!./dropdown-kebab-example.hbs';
-import DropdownKebabRightAlignedRaw from '!raw!./dropdown-kebab-right-aligned-example.hbs';
-import DropdownRightAlignedRaw from '!raw!./dropdown-right-aligned-example.hbs';
-import DropdownDropupRaw from '!raw!./dropdown-dropup-example.hbs';
+import DropdownKebabAlignRightRaw from '!raw!./dropdown-kebab-align-right-example.hbs';
+import DropdownAlignRightRaw from '!raw!./dropdown-align-right-example.hbs';
+import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
 import DropdownCollapsed from './dropdown-collapsed-example.hbs';
 import DropdownKebab from './dropdown-kebab-example.hbs';
-import DropdownKebabRightAligned from './dropdown-kebab-right-aligned-example.hbs';
-import DropdownRightAligned from './dropdown-right-aligned-example.hbs';
-import DropdownDropup from './dropdown-dropup-example.hbs';
+import DropdownKebabAlignRight from './dropdown-kebab-align-right-example.hbs';
+import DropdownAlignRight from './dropdown-align-right-example.hbs';
+import DropdownTop from './dropdown-top-example.hbs';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -22,9 +22,9 @@ export default () => {
   const dropdownExpanded = DropdownExpanded();
   const dropdownCollapsed = DropdownCollapsed();
   const dropdownKebab = DropdownKebab();
-  const dropdownKebabRightAligned = DropdownKebabRightAligned();
-  const dropdownRightAligned = DropdownRightAligned();
-  const dropdownDropup = DropdownDropup();
+  const dropdownKebabAlignRight = DropdownKebabAlignRight();
+  const dropdownAlignRight = DropdownAlignRight();
+  const dropdownTop = DropdownTop();
 
   const styles = {
     height: '13em'
@@ -42,21 +42,17 @@ export default () => {
         {dropdownKebab}
       </Example>
       <Example
-        className="is-expanded-dropdown is-right-aligned"
-        heading="Kebab Right Aligned"
-        handlebars={DropdownKebabRightAlignedRaw}
+        className="is-expanded-dropdown is-align-right"
+        heading="Kebab Align Right"
+        handlebars={DropdownKebabAlignRightRaw}
       >
-        {dropdownKebabRightAligned}
+        {dropdownKebabAlignRight}
       </Example>
-      <Example
-        className="is-expanded-dropdown is-right-aligned"
-        heading="Right Aligned"
-        handlebars={DropdownRightAlignedRaw}
-      >
-        {dropdownRightAligned}
+      <Example className="is-expanded-dropdown is-align-right" heading="Align Right" handlebars={DropdownAlignRightRaw}>
+        {dropdownAlignRight}
       </Example>
-      <Example className="is-expanded-dropup" heading="Dropup" handlebars={DropdownDropupRaw}>
-        {dropdownDropup}
+      <Example className="is-expanded-top" heading="Top" handlebars={DropdownTopRaw}>
+        {dropdownTop}
       </Example>
     </Documentation>
   );
