@@ -9,20 +9,11 @@
   padding: 0;
   margin: 0;
 
+  &__item.pf-m-main {
+    flex-grow: 1;
+  }
+
   &.pf-m-gutter > *:not(:last-child) {
     margin-right: var(--pf-l-split--m-gutter--MarginRight);
-  }
-
-  &__item {
-    flex: 1 1 auto;
-  }
-
-  &__item:nth-child(2),
-  &__item.pf-m-primary {
-    flex: 1 1 100%;
-  }
-
-  &__item.pf-m-secondary {
-    flex: 1 1 auto;
   }
 }
