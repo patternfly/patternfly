@@ -20,8 +20,9 @@ $nav: "pf-c-nav";
   --pf-l-page__header--PaddingLeft:                     var(--pf-global--spacer--2xl);
 
   // Header height
-  --pf-l-page__header--MinHeight: pf-size-prem(120px);
-  --pf-l-page__header--md--MinHeight: pf-size-prem(140px);
+  --pf-l-page__header--MinHeight:                       pf-size-prem(120px);
+  --pf-l-page__header--md--MinHeight:                   pf-size-prem(140px);
+  --pf-l-page__header--m-nav-horizontal--MinHeight:     pf-size-prem(200px);
 
   // Header nav
   --pf-l-page__header-nav--sm--BackgroundColor:         var(--pf-global--BackgroundColor--dark-transparent-100);
@@ -38,6 +39,12 @@ $nav: "pf-c-nav";
   --pf-l-page__header-brand--sm--PaddingBottom:         var(--pf-global--spacer--lg);
   --pf-l-page__header-brand--md--BackgroundColor:       var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-l-page__header-brand--xl--Width:                 var(--pf-global--nav--Width--desktop);
+
+  // Header context selector
+  --pf-l-page__header-selector--PaddingTop:             var(--pf-global--spacer--lg);
+  --pf-l-page__header-selector--PaddingRight:           var(--pf-global--spacer--2xl);
+  --pf-l-page__header-selector--PaddingBottom:          var(--pf-global--spacer--lg);
+  --pf-l-page__header-selector--PaddingLeft:            var(--pf-global--spacer--2xl);
 
   // Header brand link
   --pf-l-page__header-brand-link--MarginLeft:           var(--pf-global--spacer--lg);
@@ -112,7 +119,7 @@ $nav: "pf-c-nav";
 
     // If horizontal nav
     .pf-m-nav-horizontal & {
-      min-height: 200px;
+      min-height: var(--pf-l-page__header--m-nav-horizontal--MinHeight);
 
       @media screen and (min-width: $pf-global--breakpoint--md) {
         min-height: var(--pf-l-page__header--md--MinHeight);
@@ -153,10 +160,6 @@ $nav: "pf-c-nav";
         align-items: center;
         align-self: flex-end;
         min-height: 40px;
-
-        // > * {
-        //   margin-right: var(--pf-global--spacer--lg);
-        // }
       }
 
       // Link
@@ -164,11 +167,11 @@ $nav: "pf-c-nav";
         display: flex;
         align-items: center;
         min-height: 40px;
-        margin-left: var(--pf-l-page__header-brand-link--MarginLeft);
       }
 
       // If toggle is present, add margin left
       .pf-c-nav-toggle + &-link {
+        margin-left: var(--pf-l-page__header-brand-link--MarginLeft);
       }
 
       &-logo {
@@ -205,6 +208,11 @@ $nav: "pf-c-nav";
 
     &-selector {
       align-items: center;
+      padding:
+        var(--pf-l-page__header-selector--PaddingTop)
+        var(--pf-l-page__header-selector--PaddingRight)
+        var(--pf-l-page__header-selector--PaddingBottom)
+        var(--pf-l-page__header-selector--PaddingLeft);
     }
 
     &-tools {
@@ -215,10 +223,6 @@ $nav: "pf-c-nav";
 
     .pf-m-action {
       font-size: var(--pf-l__header-icon--FontSize);
-    }
-
-    .pf-c-dropdown__toggle::after {
-      display: none;
     }
 
     &-avatar {
@@ -232,6 +236,7 @@ $nav: "pf-c-nav";
     grid-area: main;
     display: flex;
     flex-direction: column;
+    max-width: 100vw;
 
     &-section {
       padding:

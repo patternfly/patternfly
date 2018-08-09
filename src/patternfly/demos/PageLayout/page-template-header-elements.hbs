@@ -1,0 +1,31 @@
+{{#> page-header-tools}}
+  {{#> toolbar}}
+    {{#> toolbar-group pf-l-toolbar__group--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
+      {{#> toolbar-item}}
+        {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
+          <i class="fas fa-bell"></i>
+        {{/button}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{#> button btnClass="pf-m-action" btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
+          <i class="fas fa-cog"></i>
+        {{/button}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+    {{#> toolbar-group}}
+      {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
+        {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
+          Kyle Baker
+        {{/dropdown}}
+      {{/toolbar-item}}
+      {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-hidden-on-md"}}
+        {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+  {{/toolbar}}  
+{{/page-header-tools}}
+<div class="pf-l-page__header-avatar">
+  <img class="" src="/assets/images/img_avatar.png" alt="Avatar" alt="Account avatar" /> 
+</div>

@@ -11,8 +11,8 @@
   --pf-c-nav--ZIndex:                                         var(--pf-global--ZIndex--xl);
   --pf-c-nav--BackgroundColor:                                var(--pf-global--BackgroundColor--100);
   --pf-c-nav--BoxShadow:                                      var(--pf-global--BoxShadow--lg-right);
-  // --pf-c-nav--FontWeight:                                     var(--pf-global--FontWeight--normal);
-  // --pf-c-nav--active--FontWeight:                             var(--pf-global--FontWeight--bold);
+  --pf-c-nav--Transition:                                     all 500ms cubic-bezier(.42, 0, .58, 1);
+  --pf-c-nav--Transform:                                      translate3d(-100%, 0, 0);
 
   // Nav list link
   --pf-c-nav__list-link--PaddingTop:                          var(--pf-global--spacer--md);
@@ -57,12 +57,12 @@
   // Nav list simple link color
   --pf-c-nav__list-simple-link--Color:                        var(--pf-global--Color--dark-100);
   --pf-c-nav__list-simple-link--active--Color:                var(--pf-global--link--Color);
-  --pf-c-nav__list-simple-link--disabled--Color:              var(--pf-global--Color--disabled);
+  --pf-c-nav__list-simple-link--disabled--Color:              var(--pf-global--disabled-color--100);
 
   // Nav list simple link background color
   --pf-c-nav__list-simple-link--BackgroundColor:              transparent;
   --pf-c-nav__list-simple-link--active--BackgroundColor:      $pf-color-black-150;
-  --pf-c-nav__list-simple-link--disabled--BackgroundColor:    var(--pf-global--BackgroundColor--disabled);
+  --pf-c-nav__list-simple-link--disabled--BackgroundColor:    var(--pf-global--disabled-color--200);
 
   // Subnav links
   --pf-c-nav__list-item--pf-c-nav__list-simple-link:          calc(var(--pf-global--spacer--2xl) + var(--pf-global--spacer--md));
@@ -79,12 +79,12 @@
   // List horizontal color
   --pf-c-nav__list-horizontal-link--Color:                              var(--pf-global--nav__horizontal--link--Color--desktop);
   --pf-c-nav__list-horizontal-link--active--Color:                      var(--pf-global--nav__horizontal--link--Color--desktop--hover);
-  --pf-c-nav__list-horizontal-link--disabled--Color:                    var(--pf-global--Color--disabled);
+  --pf-c-nav__list-horizontal-link--disabled--Color:                    var(--pf-global--disabled-color--100);
 
   // List horizontal link background color
   --pf-c-nav__list-horizontal-link--BackgroundColor:                    transparent;
   --pf-c-nav__list-horizontal-link--active--BackgroundColor:            transparent;
-  --pf-c-nav__list-horizontal-link--disabled--BackgroundColor:          var(--pf-global--BackgroundColor--disabled);
+  --pf-c-nav__list-horizontal-link--disabled--BackgroundColor:          var(--pf-global--disabled-color--200);
 
   // List horizontal link::after background color
   --pf-c-nav__list-horizontal-link--after--BackgroundColor:             transparent;
@@ -150,19 +150,23 @@
   // Set overflow hidden to hide nested list on collapse
   overflow: hidden;
   background-color: var(--pf-c-nav--BackgroundColor);
-  box-shadow: var(--pf-c-nav--BoxShadow);
   -webkit-font-smoothing: antialiased;
+  // Transitions
+  transition: var(--pf-c-nav--Transition);
+  transform: var(--pf-c-nav--Transform);
 
   // Revert to static layout
   @media (min-width: $pf-global--breakpoint--md) {
     width: var(--pf-c-nav--desktop--Width);
     max-width: var(--pf-c-nav--desktop--Width);
+    box-shadow: var(--pf-c-nav--BoxShadow);
     transform: translate3d(0, 0, 0);
   }
 
   // Mobile
   // Expanded nav
   .pf-m-expanded & {
+    box-shadow: var(--pf-c-nav--BoxShadow);
     transform: translate3d(0, 0, 0);
   }
 
@@ -177,7 +181,7 @@
   }
 
 
-  // If navigation, other than header, set width of first children to preserve presentation on navigation collapse
+  // Prevent ul from shrinking when sidenav collapses
   > * {
     // background: #cc0;
     @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -187,7 +191,8 @@
 
   // Horizontal nav, masthead
   .pf-m-nav-horizontal & {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: transparent;
   }
 
@@ -204,15 +209,7 @@
       width: auto;
       max-width: none;
     }
-
-    // > * {
-    //   width: auto;
-    // }
   }
-
-  // Transitions
-  transition: all 500ms cubic-bezier(.42, 0, .58, 1);
-  transform: translate3d(-100%, 0, 0);
 
   // List - default
   &__list {
@@ -347,6 +344,17 @@
         background-color: var(--pf-c-nav__list-simple-link--active--BackgroundColor);
       }
 
+      // Disabled
+      &.pf-m-disabled,
+      &:disabled {
+        color: var(--pf-c-nav__list-simple-link--disabled--Color);
+        background-color: var(--pf-c-nav__list-simple-link--disabled--BackgroundColor);
+
+        &::after {
+          background-color: var(--pf-c-nav__list-simple-link--disabled--after--BackgroundColor);
+        }
+      }
+
       // Adjust padding of descendant links
       #{$namespace}__list-item & {
         padding-left: var(--pf-c-nav__list-item--pf-c-nav__list-simple-link);
@@ -423,7 +431,7 @@
 
   // List tertiary container styling
   &.pf-m-nav-tertiary {
-    width: 100vw;
+    // width: 100vw;
     // padding-right: var(--pf-c-nav--m-nav-tertiary--PaddingRight);
     padding-left: var(--pf-c-nav--m-nav-tertiary--PaddingLeft);
     overflow-x: auto;
@@ -475,7 +483,7 @@
         background-color: var(--pf-c-nav__list-tertiary-link--active--BackgroundColor);
 
         &::after {
-          background-color: var(--pf-c-nav__list-tertiary-link--active--after--BackgroundColor);
+          background-color: var(--pf-c-nav__list-tertiary-link--disabled--after--BackgroundColor);
         }
       }
       // After - border bottom treatment
