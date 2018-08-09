@@ -25,4 +25,3 @@
 | `.pf-m-right` | `.pf-c-form__group > *` | Modifies form element margin-left. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-visually-hidden` | `<label>`, `<legend>` |  Visually hides a label or legend. Most common use case: A section title defines an adjacent radio or checkbox group (fielset), the fieldset legend becomes redundent, but is still necessary for assitive technology. |
-| `.pf-subsection-title` | `.pf-c-title` | Initiates a form subsection [title](https://pf-next.com/components/Title/examples/). |
