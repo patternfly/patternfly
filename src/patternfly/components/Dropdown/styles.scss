@@ -81,7 +81,8 @@
       border-radius: var(--pf-c-dropdown__toggle--BorderRadius);
     }
 
-    &:hover {
+    &:hover,
+    &.pf-m-hover {
       &::before {
         border-color: var(--pf-c-dropdown__toggle--hover--BorderColor);
         border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
@@ -89,6 +90,7 @@
     }
 
     &:active,
+    &.pf-m-active,
     .pf-m-expanded > &,
     .pf-m-plain.pf-m-expanded > & {
       &::before {
@@ -103,7 +105,8 @@
         border-color: transparent;
       }
 
-      &:hover {
+      &:hover,
+      &.pf-m-hover {
         &::before {
           border-color: var(--pf-c-dropdown__toggle--hover--BorderColor);
           border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
@@ -155,7 +158,9 @@
     border: none;
 
     &:hover,
-    &:focus {
+    &.pf-m-hover,
+    &:focus,
+    &.pf-m-focus {
       color: var(--pf-c-dropdown__menu-item--Color);
       text-decoration: none;
       background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
