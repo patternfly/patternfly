@@ -7,5 +7,6 @@ Split layouts are meant for use in positioning items horizontally, with one of t
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-l-split` | `<div>`, `<section>`, or `<article>` | Initiates the split layout. |
-| `.pf-l-split__item` | `<div>` | Initiates a split item. The second item is the main item of the layout, which expands horizontally to fill the available space. **Required** |
+| `.pf-l-split__item` | `<div>` | Initiates a split item. **Required** |
+| `.pf-m-main` | `.pf-l-stack__item` | Specifies the main item of the layout, which expands horizontally when needed. |
 | `.pf-m-gutter` | `.pf-l-split` | Adds space between items. |
