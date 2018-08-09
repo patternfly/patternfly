@@ -3,3 +3,4 @@ public/*
 node_modules/*
 static/*
 build/blueprints/*
+src/html.js
