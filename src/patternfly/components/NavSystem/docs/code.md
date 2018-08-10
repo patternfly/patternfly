@@ -2,10 +2,10 @@
 
 The navigation system relies on several different sub-components: 
 
-* `.pf-nav__list` - Default navigation list. It is the basis for both default and expandable, vertical navigation.
-* `.pf-nav__list-simple` - Nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
-* `.pf-nav__list-horizontal` - Nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
-* `.pf-nav__list-tertiary` - Nav list tertiary is a component that can be used within the `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
+* `.pf-c-nav__list` - Default navigation list. It is the basis for both default and expandable, vertical navigation.
+* `.pf-c-nav__list-simple` - Nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
+* `.pf-c-nav__list-horizontal` - Nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
+* `.pf-c-nav__list-tertiary` - Nav list tertiary is a component that can be used within the `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
 
 ## Accessibility
 
@@ -16,8 +16,8 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="false"` | `pf-c-nav__list-link` |  Indicates that subnav section is hidden |
 | `aria-expanded="true"` | `pf-c-nav__list-link` |  Indicates that subnav section is visible |
 | `hidden` | `pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
-| `aria-disabled="true"`  | `pf-c-nav__list-simple-link`, `pf-c-nav__list-link`, `pf-c-nav__list-horizontal-link` |  Indicates that a link is unavailable |
-| `tabindex="-1"` | `pf-c-nav__list-simple-link`, `pf-c-nav__list-link`, `pf-c-nav__list-horizontal-link` |  Removes link from keyboard focus |
+| `aria-disabled="true"`  | `pf-c-nav__list-simple-link`, `pf-c-nav__list-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link` |  Indicates that a link is unavailable |
+| `tabindex="-1"` | `pf-c-nav__list-simple-link`, `pf-c-nav__list-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link` |  Removes link from keyboard focus |
 | `aria-current="page"`   | `pf-c-nav__list-link` |  Indicates the current page link. Can only occur once on page. |
 
 
@@ -43,8 +43,8 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__list-expand`              | `<span>`                                | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
 | `.pf-m-expandable`                    | `.pf-c-nav__list-item`                  | Modifies for the expandable state |
 | `.pf-m-expanded`                      | `.pf-c-nav__list-item`                  | Modifies for the expanded state |
-| `.pf-m-hover`                         | `.pf-c-nav__list-link`                  | Modifies to display the link as hovered |
-| `.pf-m-focus`                         | `.pf-c-nav__list-link`                  | Modifies to display the link as focussed |
-| `.pf-m-current`                       | `.pf-c-nav__list-item`, `.pf-c-nav__list-link`  | Modifies for the current state |
-| `.pf-m-active`                        | `.pf-c-nav__list-link`                  | Modifies to display the link as active |
-| `.pf-m-disabled`                      | `.pf-c-nav__list-link`                  | Modifies to display the link as disabled |
+| `.pf-m-hover`                         | `.pf-c-nav__list-link`, `.pf-c-nav__list-simple-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link`                  | Modifies to display the link as hovered |
+| `.pf-m-focus`                         | `.pf-c-nav__list-link`, `.pf-c-nav__list-simple-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link`                  | Modifies to display the link as focussed |
+| `.pf-m-current`                       | `.pf-c-nav__list-link`, `.pf-c-nav__list-simple-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link`  | Modifies for the current state |
+| `.pf-m-active`                        | `.pf-c-nav__list-link`, `.pf-c-nav__list-simple-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link`                | Modifies to display the link as active |
+| `.pf-m-disabled`                      | `.pf-c-nav__list-link`, `.pf-c-nav__list-simple-link`, `pf-c-nav__list-horizontal-link`, `pf-c-nav__list-tertiary-link`                  | Modifies to display the link as disabled |

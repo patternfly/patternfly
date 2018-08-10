@@ -7,6 +7,7 @@ This layout provides the basic chrome for a page, including sidebar, header and 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role="banner"` | `.pf-l-page__header` | .  |
+| `role="sidebar"` | `.pf-l-page__sidebar` | .  |
 | `role="main"` | `.pf-l-page__main` | .  |
 
 ## Usage

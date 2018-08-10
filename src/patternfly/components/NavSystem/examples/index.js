@@ -57,7 +57,11 @@ export default () => {
       <Example heading="Nav Mixed" handlebars={navMixedExampleRaw}>
         {navMixedExample}
       </Example>
-      <Example heading="Nav List Horizontal (only in masthead)" handlebars={navListHorizontalExampleRaw}>
+      <Example
+        heading="Nav List Horizontal (only in masthead)"
+        handlebars={navListHorizontalExampleRaw}
+        className="is-dark-preview"
+      >
         {navListHorizontalExample}
       </Example>
       <Example heading="Nav List Tertiary" handlebars={navListTertiaryExampleRaw}>

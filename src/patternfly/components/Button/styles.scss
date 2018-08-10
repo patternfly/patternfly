@@ -118,6 +118,9 @@
   --pf-c-button--m-plain--active--Color: var(--pf-global--Color--100);
   --pf-c-button--item--MarginRight: var(--pf-global--spacer--xs);
 
+  // Button larg
+  --pf-c-button--m-lg--FontSize: var(--pf-global--FontSize--2xl);
+
   position: relative;
   display: inline-block;
   min-width: var(--pf-c-button--MinWidth);
@@ -407,5 +410,9 @@
     &::after {
       border: var(--pf-c-button--BorderWidth) solid var(--pf-c-button--m-disabled--BorderColor);
     }
+  }
+
+  &.pf-m-lg {
+    font-size: var(--pf-c-button--m-lg--FontSize);
   }
 }

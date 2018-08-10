@@ -1,4 +1,4 @@
-<button class="pf-c-nav-toggle"
+<button class="pf-l-page__header-sidebar-toggle"
   {{#if button-toggle--interactive}}
     onClick="(function(){
       const mq = window.matchMedia('(min-width: 768px)');
@@ -19,5 +19,6 @@
   {{#if nav-toggle--attribute}}
     {{{nav-toggle--attribute}}}
   {{/if}}>
+  <i class="fas fa-bars"></i>
   {{> @partial-block}}
 </button>

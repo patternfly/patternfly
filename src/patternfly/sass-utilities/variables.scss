@@ -183,6 +183,10 @@ $pf-global--link--TextDecoration--hover:  underline !default;
 // List
 $global-ListStyle: disc outside !default;
 
+// Transitions
+$pf-global--Transition: all 500ms cubic-bezier(.42, 0, .58, 1);
+$pf-global--TimingFunction: cubic-bezier(.645, .045, .355, 1);
+
 // Arrow size (used for tooltips, popovers, etc.)
 $pf-global--arrow--width: pf-font-prem(15px);
 $pf-global--arrow--width-lg: pf-font-prem(25px);
@@ -386,6 +390,8 @@ $pf-global--spacer-map: (
 
   // List
   --global-ListStyle: $global-ListStyle;
+  --pf-global--Transition: $pf-global--Transition;
+  --pf-global--TimingFunction: $pf-global--TimingFunction;
 
   // Arrow Size
   --pf-global--arrow--width: $pf-global--arrow--width;

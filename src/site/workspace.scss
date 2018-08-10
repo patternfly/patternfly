@@ -186,8 +186,6 @@
   .pf-l-level__group,
   .pf-l-level__item,
   .pf-l-page,
-  .pf-l-page > *,
-  .pf-l-page__header > *,
   .pf-l-split,
   .pf-l-split > *,
   .pf-l-stack,
@@ -200,6 +198,12 @@
     border: 2px dashed #393f44;
   }
 
+  .pf-l-page > *,
+  .pf-l-page__header > * {
+    border: 2px dashed #393f44; 
+  }
+
+
   .pf-l-grid > * {
     box-shadow: 0 0 0 1px #ddd;
   }
@@ -211,11 +215,11 @@
     box-shadow: none;
   }
 
-  .Preview__body {
-    .pf-l-page__header-nav {
-      background: var(--pf-global--BackgroundColor--dark-100);
-    }
-  }
+  // .Preview__body {
+  //   .pf-l-page__header-nav {
+  //     background: var(--pf-global--BackgroundColor--dark-100);
+  //   }
+  // }
 }
 
 .Documentation {

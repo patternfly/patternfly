@@ -4,16 +4,12 @@
 {{#> page page--attribute='id="page"'}}
   {{#> page-header}}
 
-    {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-header-brand-group}}
-        {{#> nav-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle"'}}
-          <i class="fas fa-bars"></i>
-        {{/nav-toggle}}
-        <a class="pf-l-page__header-brand-link" href="#">
-          <img class="pf-l-page__header-brand-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
-        </a>
-      {{/page-header-brand-group}}  
+      {{#> page-sidebar-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
+      {{/page-sidebar-toggle}}
+      <a class="pf-l-page__header-brand-link pf-u-sr-only pf-u-visible-on-md" href="#">
+        <img class="pf-l-page__header-brand-logo pf-m-patternfly-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+      </a>
     {{/page-header-brand}}
     {{#> page-header-selector}}
       pf-c-context-selector
@@ -21,69 +17,69 @@
     {{#> page-template-header-elements}}
     {{/page-template-header-elements}}
   {{/page-header}}
-
-  {{#> nav nav--vertical="true" nav--attribute='aria-label="Primary Nav Grouped Example"'}}
-    {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
-      {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
-        System Panel
-      {{/nav-section-title}}
-      {{#> nav-list-simple}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Overview
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Resource Usage
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#" nav-list-simple-link--current="true"}}
-            Hypervisors
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Instances
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Volumes
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Networks
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-      {{/nav-list-simple}}
-    {{/nav-section}}
-    {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
-      {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
-        Policy
-      {{/nav-section-title}}
-      {{#> nav-list-simple}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Hosts
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Virtual Machines
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
-            Storage
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-      {{/nav-list-simple}}
-    {{/nav-section}}
-  {{/nav}}
-
+  {{#> page-sidebar}}  
+    {{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav, Simple List Example"'}}
+      {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+        {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+          System Panel
+        {{/nav-section-title}}
+        {{#> nav-list-simple}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Overview
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Resource Usage
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#" nav-list-simple-link--current="true"}}
+              Hypervisors
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Instances
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Volumes
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Networks
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+        {{/nav-list-simple}}
+      {{/nav-section}}
+      {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+        {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+          Policy
+        {{/nav-section-title}}
+        {{#> nav-list-simple}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Hosts
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Virtual Machines
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+          {{#> nav-list-simple-item}}
+            {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+              Storage
+            {{/nav-list-simple-link}}
+          {{/nav-list-simple-item}}
+        {{/nav-list-simple}}
+      {{/nav-section}}
+    {{/nav}}
+  {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-template-title}}
     {{/page-template-title}}
