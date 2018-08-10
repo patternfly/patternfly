@@ -60,6 +60,7 @@ export default class Example extends React.Component {
       isViewport = false,
       handlebars = '',
       fullPageOnly,
+      minHeight,
       docs
     } = this.props;
     const output = { __html: this.props.children };
@@ -111,7 +112,7 @@ export default class Example extends React.Component {
             </div>
           )}
           <div className="Example__section">
-            <Preview isViewport={isViewport} heading={heading} fullPageOnly={fullPageOnly}>
+            <Preview isViewport={isViewport} heading={heading} fullPageOnly={fullPageOnly} minHeight={minHeight}>
               {children}
             </Preview>
           </div>

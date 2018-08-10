@@ -17,7 +17,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="{{moduleName}} Simple" handlebars={{simpleExampleRawReference}}>
+      <Example heading="{{moduleName}} Simple" handlebars={{simpleExampleRawReference}} minHeight="20em">
         {{simpleExampleReference}}
       </Example>
       <Example heading="{{moduleName}} Complex" handlebars={{complexExampleRawReference}} docs={{complexExampleDocReference}}>
