@@ -24,4 +24,4 @@
 | `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
-| `.pf-m-required` | `.pf-c-form__section` | Modifies form label to show required state. |
+| `.pf-m-required` | `.pf-c-form__label` | Modifies form label to show required state. |

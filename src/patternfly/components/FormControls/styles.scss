@@ -35,6 +35,12 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   --pf-c-form-control--disabled--BorderColor: var(--pf-global--disabled-color--200);
   --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
 
+  // input readonly style
+  --pf-c-form-control--readonly--Color: var(--pf-global--Color--100);
+  --pf-c-form-control--readonly--BorderSize: var(--pf-global--BorderWidth--sm);
+  --pf-c-form-control--readonly--BorderColor: var(--pf-global--BorderColor--dark);
+  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--BackgroundColor--150);
+
   // input alt style
   --pf-c-form-control--alt--BottomBorderWidth: var(--pf-global--BorderWidth--md);
 
@@ -65,6 +71,10 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     cursor: not-allowed;
     background-color: var(--pf-c-form-control--disabled--BackgroundColor);
     border-color: var(--pf-c-form-control--disabled--BorderColor);
+  }
+  &[readonly]{
+    background-color: var(--pf-c-form-control--readonly--BackgroundColor);
+    border-color: var(--pf-c-form-control--readonly--BorderColor);
   }
   &.pf-m-invalid,
   :invalid {
