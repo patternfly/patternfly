@@ -20,8 +20,8 @@ $nav: "pf-c-nav";
   --pf-l-page__header--PaddingLeft:                     var(--pf-global--spacer--xl);
 
   // Header height
-  --pf-l-page__header--MinHeight:                       pf-size-prem(120px);
-  --pf-l-page__header--md--MinHeight:                   pf-size-prem(110px);
+  --pf-l-page__header--MinHeight:                       pf-size-prem(110px);
+  // --pf-l-page__header--md--MinHeight:                   pf-size-prem(110px);
   --pf-l-page__header--m-nav-horizontal--MinHeight:     pf-size-prem(200px);
 
   // Header nav
@@ -110,12 +110,12 @@ $nav: "pf-c-nav";
     flex-wrap: wrap;
     align-items: flex-end;
     min-height: var(--pf-l-page__header--MinHeight);
-    padding-top: var(--pf-l-page__header--PaddingTop);
+    // padding-top: var(--pf-l-page__header--PaddingTop);
     padding-right: var(--pf-l-page__header--PaddingRight);
     padding-left: var(--pf-l-page__header--PaddingLeft);
 
     @media (min-width: $pf-global--breakpoint--md) {
-      min-height: var(--pf-l-page__header--md--MinHeight);
+      // min-height: var(--pf-l-page__header--md--MinHeight);
       padding-top: 0;
     }
 
@@ -182,32 +182,32 @@ $nav: "pf-c-nav";
       }
     }
 
-    &-nav {
-      flex: 1 0 100%;
-      order: 1;
-      // Set px value width for container to scale properly
-      width: 320px;
-      padding-left: var(--pf-l-page__header-nav--PaddingLeft);
-      // Header will may contain elements that are hidden at different breakpoint. 
-      // Using negative margins to offset header padding so those elements can layout naturally.
-      margin-right: calc(var(--pf-l-page__header--PaddingRight) * -1);
-      margin-left: calc(var(--pf-l-page__header--PaddingLeft) * -1);
-      overflow-x: auto;
-      background-color: var(--pf-l-page__header-nav--sm--BackgroundColor);
+    // &-nav {
+    //   flex: 1 0 100%;
+    //   order: 1;
+    //   // Set px value width for container to scale properly
+    //   width: 320px;
+    //   padding-left: var(--pf-l-page__header-nav--PaddingLeft);
+    //   // Header will may contain elements that are hidden at different breakpoint. 
+    //   // Using negative margins to offset header padding so those elements can layout naturally.
+    //   margin-right: calc(var(--pf-l-page__header--PaddingRight) * -1);
+    //   margin-left: calc(var(--pf-l-page__header--PaddingLeft) * -1);
+    //   overflow-x: auto;
+    //   background-color: var(--pf-l-page__header-nav--sm--BackgroundColor);
 
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        flex: 1;
-        order: initial;
-        padding: 0;
-        margin-right: var(--pf-l-page__header-nav--md--MarginRight);
-        margin-left: var(--pf-l-page__header-nav--md--MarginLeft);
-        background-color: transparent;
-      }
+    //   @media screen and (min-width: $pf-global--breakpoint--md) {
+    //     flex: 1;
+    //     order: initial;
+    //     padding: 0;
+    //     margin-right: var(--pf-l-page__header-nav--md--MarginRight);
+    //     margin-left: var(--pf-l-page__header-nav--md--MarginLeft);
+    //     background-color: transparent;
+    //   }
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
+    //   &::-webkit-scrollbar {
+    //     display: none;
+    //   }
+    // }
 
     &-selector {
       align-items: center;
@@ -235,18 +235,87 @@ $nav: "pf-c-nav";
     }
   }
 
-  > .pf-c-nav {
+  // > .pf-c-nav {
+  //   grid-area: 2 / 1;
+  // }
+
+  &__sidebar {
+    /* stylelint-disable */
+
+    --pf-l-page__sidebar--BackgroundColor:                var(--pf-global--BackgroundColor--light-100);
+    --pf-l-page__sidebar--PaddingTop:                     var(--pf-global--spacer--md);
+    --pf-l-page__sidebar--PaddingBottom:                  var(--pf-global--spacer--md);
+    --pf-l-page__sidebar--BoxShadow:                      var(--pf-global--BoxShadow--lg-right);
+    --pf-l-page__sidebar--ZIndex:                         var(--pf-global--ZIndex--xl);
+    --pf-l-page__sidebar--sm--Width:                      80%;
+    --pf-l-page__sidebar--lg--Width:                      pf-size-prem(290px);
+
+    /* stylelint-enable */
     grid-area: 2 / 1;
+    z-index: var(--pf-l-page__sidebar--ZIndex);
+    // flex: 1 0 100%;
+    order: 1;
+    // Set px value width for container to scale properly
+
+    width: var(--pf-l-page__sidebar--sm--Width);
+    padding-top: var(--pf-l-page__sidebar--PaddingTop);
+    padding-top: var(--pf-l-page__sidebar--PaddingBottom);
+    overflow-x: hidden;
+    background-color: var(--pf-l-page__sidebar--BackgroundColor);
+    // box-shadow: var(--pf-l-page__sidebar--BoxShadow);
+    transition: .3s;
+    transform: translate3d(-100%, 0, 0);
+
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      flex: 1;
+      order: initial;
+      width: var(--pf-l-page__sidebar--lg--Width);
+      // Max-width value set for browser to calculate max-width while transitioning
+      max-width: var(--pf-l-page__sidebar--lg--Width);
+      box-shadow: var(--pf-l-page__sidebar--BoxShadow);
+      transform: translate3d(0, 0, 0);
+    }
+
+    // Mobile
+    // Expanded nav
+    &.pf-m-expanded {
+      box-shadow: var(--pf-l-page__sidebar--BoxShadow);
+      transform: translate3d(0, 0, 0);
+    }
+
+    // Desktop
+    // Collapse nav
+    &.pf-m-collapsed {
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        max-width: 0;
+        overflow: hidden;
+      }
+    }
   }
 
+  // Main
   &__main {
+    --pf-l-page__main-nav--Padding: var(--pf-global--spacer--md);
+
     grid-area: main;
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
-    overflow-y: scroll;
+    // max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-    .pf-c-nav {
+    // Hide scrollbars
+    ::-webkit-scrollbar {
+      display: none;
+      height: 1px;
+    }
+
+    &-nav {
+      flex: none;
+      padding: var(--pf-global--spacer--md);
+      overflow-x: hidden;
       background-color: var(--pf-l-page__nav--BackgroundColor);
     }
 

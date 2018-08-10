@@ -1,23 +1,21 @@
 {{#> page page--nav-direction="vertical"}}
   {{#> page-header}}
-
     {{#> page-header-brand}}
       brand
     {{/page-header-brand}}
-
     {{#> page-header-selector}}
       pf-c-context-selector
     {{/page-header-selector}}
-
     {{#> page-header-tools}}
       pf-l-toolbar
     {{/page-header-tools}}
   {{/page-header}}
 
-  {{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
-    pf-c-nav
-  {{/nav}}
-
+  {{#> page-nav}}
+    {{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
+      pf-c-nav
+    {{/nav}}
+  {{/page-nav}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--modifier="pf-m-dark"}}
       Page Layout Content test 2

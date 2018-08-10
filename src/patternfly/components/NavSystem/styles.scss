@@ -134,46 +134,53 @@
   /* stylelint-enable */
 
   // Base styling
-  flex: none;
+  // flex: none;
   overflow-x: auto;
 
+  .pf-l-page__sidebar & {
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      width: pf-size-prem(290px);
+    }
+  }
+
   &.pf-m-vertical {
-    z-index: var(--pf-c-nav--ZIndex);
-    width: var(--pf-c-nav--Width);
-    padding-top: var(--pf-c-nav--PaddingTop);
-    padding-bottom: var(--pf-c-nav--PaddingBottom);
+    // z-index: var(--pf-c-nav--ZIndex);
+    // width: var(--pf-c-nav--Width);
+    // padding-top: var(--pf-c-nav--PaddingTop);
+    // padding-bottom: var(--pf-c-nav--PaddingBottom);
 
-    // Set overflow hidden to hide nested list on collapse
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: var(--pf-c-nav--BackgroundColor);
-    -webkit-font-smoothing: antialiased;
+    // // Set overflow hidden to hide nested list on collapse
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+    // background-color: var(--pf-c-nav--BackgroundColor);
+    // -webkit-font-smoothing: antialiased;
 
-    // Transitions
-    transition: var(--pf-c-nav--Transition);
-    transform: var(--pf-c-nav--Transform);
+    // // Transitions
+    // transition: var(--pf-c-nav--Transition);
+    // transform: var(--pf-c-nav--Transform);
 
-    // Revert to static layout
-    @media (min-width: $pf-global--breakpoint--md) {
-      width: var(--pf-c-nav--desktop--Width);
-      max-width: var(--pf-c-nav--desktop--Width);
-      box-shadow: var(--pf-c-nav--BoxShadow);
-      transform: translate3d(0, 0, 0);
-    }
+    // // Revert to static layout
+    // @media (min-width: $pf-global--breakpoint--md) {
+    //   width: var(--pf-c-nav--desktop--Width);
+    //   max-width: var(--pf-c-nav--desktop--Width);
+    //   box-shadow: var(--pf-c-nav--BoxShadow);
+    //   transform: translate3d(0, 0, 0);
+    // }
 
-    // Prevent ul from shrinking when sidenav collapses
-    > * {
-      // background: #cc0;
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        width: var(--pf-c-nav--desktop--Width);
-      }
-    }
+    // // Prevent ul from shrinking when sidenav collapses
+    // > * {
+    //   // background: #cc0;
+    //   @media screen and (min-width: $pf-global--breakpoint--md) {
+    //     width: var(--pf-c-nav--desktop--Width);
+    //   }
+    // }
   }
 
   // Mobile
   // Expanded nav
   &.pf-m-expanded {
-    box-shadow: var(--pf-c-nav--BoxShadow);
+    // box-shadow: var(--pf-c-nav--BoxShadow);
     transform: translate3d(0, 0, 0);
   }
 
@@ -187,14 +194,14 @@
     }
   }
 
-  // Hide scrollbars
-  &::-webkit-scrollbar {
-    display: none;
-    height: 1px;
-  }
 
   // List - default
   &__list {
+    // Hide scrollbars
+    &::-webkit-scrollbar {
+      display: none;
+      height: 1px;
+    }
 
     // Item
     &-item {
@@ -427,7 +434,6 @@
 
   // List tertiary
   &__list-tertiary {
-    padding: var(--pf-c-nav__list-tertiary--Padding);
 
     &-item {
       margin-right: var(--pf-c-nav__list-tertiary-item--MarginRight);
