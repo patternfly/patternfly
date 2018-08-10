@@ -22,6 +22,5 @@
 | `.pf-c-form__section` | `<section>`, `<div>` |  Initiates a form section. For larger forms, section grouping may be necessary. This class wraps chunks of code and separates them with padding. |
 | `.pf-c-form__group` | `<div>` |  Wraps form fields `<label>` + `<field>` + `.helper-text` __(not checkboxes or radios)__. Form groups should have no more than one of each element type. Form groups can be nested and, for more complex fieldsets, it may be necessary to do so. |
 | `.pf-m-error` | `.pf-c-form__helper-text`, `.pf-c-form__input` | Modifies form element border and background-image. |
-| `.pf-m-right` | `.pf-c-form__group > *` | Modifies form element margin-left. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-visually-hidden` | `<label>`, `<legend>` |  Visually hides a label or legend. Most common use case: A section title defines an adjacent radio or checkbox group (fielset), the fieldset legend becomes redundent, but is still necessary for assitive technology. |
