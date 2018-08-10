@@ -26,7 +26,7 @@ export default class Documentation extends React.Component {
       </div>
     ) : (
       <div className={className}>
-        <h1>Bare Component Demo</h1>
+        <h1 className={['pf-u-sr-only']}>Bare Component Demo</h1>
         {children}
       </div>
     );
