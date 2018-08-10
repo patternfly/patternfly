@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const backgroundImage = BackgroundImage();
+  const headingText = 'Background Image';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Background image Example" fullPageOnly="true" handlebars={BackgroundImageRaw}>
         {backgroundImage}
       </Example>

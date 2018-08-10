@@ -25,13 +25,14 @@ export default () => {
   const dropdownKebabAlignRight = DropdownKebabAlignRight();
   const dropdownAlignRight = DropdownAlignRight();
   const dropdownTop = DropdownTop();
+  const headingText = 'Dropdown';
 
   const styles = {
     height: '13em'
   };
 
   return (
-    <Documentation style={styles} docs={Docs}>
+    <Documentation style={styles} docs={Docs} heading={headingText}>
       <Example className="is-expanded-dropdown" heading="Dropdown Expanded" handlebars={DropdownExpandedRaw}>
         {dropdownExpanded}
       </Example>

@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const checkCheckboxExample = CheckCheckboxExample();
   const checkRadioExample = CheckRadioExample();
+  const headingText = 'Check';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Checkbox Example" handlebars={CheckCheckboxExampleRaw}>
         {checkCheckboxExample}
       </Example>
