@@ -13,6 +13,8 @@
   --pf-c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-button--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-button--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-button--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-button--MinHeight: var(--pf-global--target-size--MinHeight);
 
   // Hover state variables
   --pf-c-button--hover--Color: var(--pf-global--primary-color--200);
@@ -118,6 +120,8 @@
 
   position: relative;
   display: inline-block;
+  min-width: var(--pf-c-button--MinWidth);
+  min-height: var(--pf-c-button--MinWidth);
   padding: var(--pf-c-button--PaddingTop) var(--pf-c-button--PaddingRight) var(--pf-c-button--PaddingBottom) var(--pf-c-button--PaddingLeft);
   font-size: var(--pf-c-button--FontSize);
   font-weight: var(--pf-c-button--FontWeight);
