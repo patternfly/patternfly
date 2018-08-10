@@ -8,6 +8,7 @@
   <option value="Other">Other</option>
 {{/form-controls}}
 {{#> form-controls controlType="select" id="select2" name="selectexample2" aria-label="select group example"}}
+  <option value="">make selection</option>
   <optgroup label="Group 1">
     <option value="Option 1">The first option</option>
     <option value="Option 2" selected>The second option is selected by default</option>
@@ -17,7 +18,7 @@
     <option value="Option 4">The fourth option</option>
   </optgroup>
 {{/form-controls}}
-{{#> form-controls controlType="select" pf-c-form-control--modifier="pf-m-error" aria-invalid="true" aria-errormessage="incorrect text" id="select2" name="selectexample2" aria-label="select group example"}}
+{{#> form-controls controlType="select" pf-c-form-control--modifier="pf-m-invalid" aria-errormessage="incorrect text" id="select2" name="selectexample2" aria-label="select group example"}}
   <optgroup label="Group 1">
     <option value="Option 1">The first option</option>
     <option value="Option 2" selected>The second option is selected by default</option>
