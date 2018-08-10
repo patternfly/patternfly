@@ -50,21 +50,8 @@ $pf-global--active-color--100:   $pf-color-blue-400 !default;
 $pf-global--active-color--200:   $pf-color-blue-100 !default;
 $pf-global--active-color--300:   $pf-color-blue-300 !default;
 
-<<<<<<< HEAD
 $pf-global--disabled-color--100: $pf-color-black-600 !default;
 $pf-global--disabled-color--200: $pf-color-black-300 !default;
-=======
-$pf-global--Color--disabled:               $pf-color-black-600 !default;
-$pf-global--BackgroundColor--disabled:     $pf-color-black-300 !default;
-$pf-global--BorderColor--disabled:         $pf-color-black-300 !default;
-
-
-$pf-global--BorderColor--error:         $pf-color-red-100 !default;
-
-// do not use - state colors for exceptions and defining theme
-$pf-global--Color--light-active:           $pf-color-blue-300 !default;
-$pf-global--Color--dark-active:            $pf-color-blue-400 !default;
->>>>>>> feat(forms):adds error/required styles to forms and form-component
 
 // Theme color
 $pf-global--primary-color--100:         $pf-color-blue-400 !default;
@@ -278,23 +265,11 @@ $pf-global--spacer-map: (
   --pf-global--Color--dark-200: $pf-global--Color--dark-200;
 
   // States color
-<<<<<<< HEAD
   --pf-global--active-color--100:    $pf-global--active-color--100;
   --pf-global--active-color--200:    $pf-global--active-color--200;
   --pf-global--active-color--300:    $pf-global--active-color--300;
   --pf-global--disabled-color--100:  $pf-global--disabled-color--100;
   --pf-global--disabled-color--200:  $pf-global--disabled-color--200;
-=======
-  --pf-global--Color--active: $pf-global--Color--active;
-  --pf-global--Color--light-active: $pf-global--Color--light-active;
-  --pf-global--Color--dark-active: $pf-global--Color--dark-active;
-  --pf-global--BackgroundColor--active: $pf-global--BackgroundColor--active;
-  --pf-global--BorderColor--active: $pf-global--BorderColor--active;
-  --pf-global--BorderColor--error: $pf-global--BorderColor--error;
-  --pf-global--Color--disabled: $pf-global--Color--disabled;
-  --pf-global--BackgroundColor--disabled: $pf-global--BackgroundColor--disabled;
-  --pf-global--BorderColor--disabled: $pf-global--BorderColor--disabled;
->>>>>>> feat(forms):adds error/required styles to forms and form-component
   
   // Theme color
   --pf-global--primary-color--100: $pf-global--primary-color--100;
