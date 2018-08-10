@@ -37,6 +37,7 @@ export default ({ children, data }) => {
     <div className="layout">
       <Helmet>
         <title>PF Next</title>
+        <html lang="en-US" />
         <script
           defer
           src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
