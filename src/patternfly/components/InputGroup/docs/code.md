@@ -2,7 +2,7 @@
 Use the input group to extend form controls by adding text, buttons, dropdowns, etc.
 
 ## Accessibility
-When using the `pf-c-input-group` always ensure labels are used outside the input group with the `.sr-only` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributues. For more information on accessibility and forms see the <a href="/components/form/examples/">form component</a>.
+When using the `pf-c-input-group` always ensure labels are used outside the input group with the `.pf-u-sr-only` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributues. For more information on accessibility and forms see the <a href="/components/form/examples/">form component</a>.
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
