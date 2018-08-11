@@ -15,7 +15,6 @@
   --pf-c-form__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-form__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form__label--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-form__label--disabled--Color: var(--pf-global--Color--disabled);
 
   // nested Label
   --pf-c-form__label-nested--PaddingTop: var(--pf-global--spacer--xs);
@@ -23,6 +22,11 @@
   --pf-c-form__label-nested--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-form__label-nested--PaddingLeft: 0;
   // --pf-c-form__check--addons--MarginLeft:   var(--pf-global--spacer--sm);
+
+  // required labels
+  --pf-c-form__label-requried-after--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-form__label-requried-after--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-form__label-requried-after--Color: var(--pf-global--danger-color--100);
 
   // Group
   --pf-c-form--group--MarginLeft: var(--pf-global--spacer--sm);
@@ -103,15 +107,14 @@
     }
 
     &.pf-m-disabled {
-      color: var(--pf-c-form__label--disabled--Color);
       cursor: not-allowed;
     }
     &.pf-m-required {
       position: relative;
       &::after {
-        margin-left: 4px;
-        font-size: 14px;
-        color: #c00;
+        margin-left: var(--pf-c-form__label-requried-after--MarginLeft);
+        font-size: var(--pf-c-form__label-requried-after--FontSize);
+        color: var(--pf-c-form__label-requried-after--Color);
         content: "*";
       }
     }
