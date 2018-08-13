@@ -23,7 +23,7 @@
   --pf-c-card__footer--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-card__footer--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // This component always needs to be light  
+  // This component always needs to be light
   @extend %pf-t-light;
 
   display: flex;

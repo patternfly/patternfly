@@ -27,7 +27,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
   // input placeholder style
-  --pf-c-form-control--placeholder--Color: var(--pf-global--Color--200);
+  --pf-c-form-control--placeholder--Color: var(--pf-global--Color--dark-200);
 
   // input disabled style
   --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--100);
@@ -39,7 +39,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   --pf-c-form-control--readonly--Color: var(--pf-global--Color--100);
   --pf-c-form-control--readonly--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-form-control--readonly--BorderColor: var(--pf-global--BorderColor--dark);
-  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--disabled-color--200);
 
   // input alt style
   --pf-c-form-control--alt--BottomBorderWidth: var(--pf-global--BorderWidth--md);
@@ -54,6 +54,10 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   --pf-c-form-control--invalid--BorderSize: var(--pf-global--BorderWidth--md);
   --pf-c-form-control--BackgroundWidth: var(--pf-global--FontSize--md);
   --pf-c-form-control--BackgroundHeight: var(--pf-global--FontSize--md);
+
+  // This component always needs to be light
+  @extend %pf-t-light;
+
   width: 100%;
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
@@ -66,19 +70,23 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   &::placeholder {
     color: var(--pf-c-form-control--placeholder--Color);
   }
+
   &:disabled {
     color: var(--pf-c-form-control--disabled--Color);
     cursor: not-allowed;
     background-color: var(--pf-c-form-control--disabled--BackgroundColor);
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
+
   &[readonly]{
     background-color: var(--pf-c-form-control--readonly--BackgroundColor);
     border-color: var(--pf-c-form-control--readonly--BorderColor);
   }
+
   &.pf-m-invalid,
   :invalid {
     @include pf-bg-svg($pf-c-form-controls--invalid--Coordinates, $pf-c-form-controls--invalid--Color);
+
     &:not(.pf-m-form-control-alt){
       padding: var(--pf-c-form-control--invalid--PaddingTop) var(--pf-c-form-control--invalid--PaddingRight) var(--pf-c-form-control--invalid--PaddingBottom) var(--pf-c-form-control--invalid--PaddingLeft);
       border-color: var(--pf-c-form-control--invalid--BorderColor);
@@ -88,6 +96,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
 
   @at-root select#{&} {
     height: var(--pf-c-form-control--Height);
+
     &.pf-m-invalid,
     :invalid {
       background: none;
@@ -101,6 +110,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     border: none;
     border-bottom: var(--pf-c-form-control--alt--BottomBorderWidth) solid var(--pf-c-form-control--BorderColor);
     border-radius: 0;
+
     &.pf-m-invalid,
     :invalid {
       border-bottom-color: var(--pf-c-form-control--invalid--BorderColor);
