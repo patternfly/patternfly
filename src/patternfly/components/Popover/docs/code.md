@@ -11,7 +11,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-label="[title of popover]"` | `.pf-c-popover` | Gives the popover an accessible name. **Required when .pf-c-popover__header-title is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-popover="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
-| `aria-label="Close Dialog"` | `.pf-c-popover__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
+| `aria-label="Close"` | `.pf-c-popover__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 
 
 ## Usage
