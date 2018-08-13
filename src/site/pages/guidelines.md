@@ -118,8 +118,10 @@ For example:
 }
 
 /* --block--state--PropertyCamelCase */
-.alert:hover {
-  background-color: var(--pf-alert--hover--BackgroundColor);
+.alert {
+  &:hover {
+    background-color: var(--pf-alert--hover--BackgroundColor);
+  }
 }
 
 /* --block__element--PropertyCamelCase */
