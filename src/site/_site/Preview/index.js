@@ -51,7 +51,7 @@ export default class Preview extends React.Component {
     ) : (
       <div
         className={`Preview__body ${background} ${this.props.isViewport ? 'is-viewport' : ''}`}
-        style={{ 'min-height': this.state.minHeight }}
+        style={{ minHeight: this.state.minHeight }}
         dangerouslySetInnerHTML={output}
       />
     );
