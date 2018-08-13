@@ -16,9 +16,10 @@ export default () => {
   const modalBoxBasicExample = ModalBoxBasicExample();
   const modalBoxLgExample = ModalBoxLgExample();
   const modalBoxNoHeaderExample = ModalBoxNoHeaderExample();
+  const headingText = 'Modal Box';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="ModalBox Basic Example" handlebars={ModalBoxBasicExampleRaw}>
         {modalBoxBasicExample}
       </Example>

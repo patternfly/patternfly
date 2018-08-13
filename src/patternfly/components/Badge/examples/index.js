@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const badgeReadExample = BadgeReadExample();
   const badgeUnreadExample = BadgeUnreadExample();
+  const headingText = 'Badge';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Read Badge" handlebars={BadgeReadExampleRaw}>
         {badgeReadExample}
       </Example>

@@ -19,9 +19,10 @@ export default () => {
   const buttonStatesTemplate = ButtonStatesTemplate();
   const buttonLinkExample = ButtonLinkExample();
   const buttonBlockTemplate = ButtonBlockTemplate();
+  const headingText = 'Button';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Button Types" handlebars={ButtonTypesTemplateRaw}>
         {buttonTypesTemplate}
       </Example>

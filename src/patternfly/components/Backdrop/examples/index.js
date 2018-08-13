@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const backdropExample = BackdropExample();
+  const headingText = 'Backdrop';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Backdrop Example" fullPageOnly="true" handlebars={BackdropExampleRaw}>
         {backdropExample}
       </Example>

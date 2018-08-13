@@ -12,13 +12,8 @@ const testPageA11y = testPage =>
   new Promise(resolve =>
     driver.get(`http://${host}:8000${testPage.path}`).then(() => {
       AxeBuilder(driver)
-        // run against specified rulesets
-        // .withRules(['color-contrast', 'link-name'])
-        // .withTags(['wcag2a', 'wcag2aa', 'section508'])
-        // analyze <main> element's content
-        // .include('main')
-        // don't analyze .banner element content
-        // .exclude('.banner')
+        .withTags(['wcag2a', 'wcag2aa'])
+        .disableRules(['document-title'])
         .analyze()
         .then(results => {
           globalViolations.push({

@@ -13,13 +13,11 @@ export const Docs = docs;
 
 export default () => {
   const tooltipExample = TooltipExample();
+  const headingText = 'Tooltip';
+
   return (
-    <Documentation docs={Docs}>
-      <Example
-        className="is-tooltip"
-        heading="Tooltip"
-        handlebars={TooltipExampleRaw}
-      >
+    <Documentation docs={Docs} heading={headingText}>
+      <Example className="is-tooltip" heading="Tooltip" handlebars={TooltipExampleRaw}>
         {tooltipExample}
       </Example>
     </Documentation>
