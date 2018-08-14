@@ -78,7 +78,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
 
-  &[readonly]{
+  &[readonly] {
     background-color: var(--pf-c-form-control--readonly--BackgroundColor);
     border-color: var(--pf-c-form-control--readonly--BorderColor);
   }
@@ -87,7 +87,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   :invalid {
     @include pf-bg-svg($pf-c-form-controls--invalid--Coordinates, $pf-c-form-controls--invalid--Color);
 
-    &:not(.pf-m-form-control-alt){
+    &:not(.pf-m-form-control-alt) {
       padding: var(--pf-c-form-control--invalid--PaddingTop) var(--pf-c-form-control--invalid--PaddingRight) var(--pf-c-form-control--invalid--PaddingBottom) var(--pf-c-form-control--invalid--PaddingLeft);
       border-color: var(--pf-c-form-control--invalid--BorderColor);
       border-width: var(--pf-c-form-control--invalid--BorderSize);

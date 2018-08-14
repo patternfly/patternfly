@@ -134,7 +134,7 @@
       "logo           hero";
   }
 
-  @media only screen and (min-width: $pf-global--breakpoint--lg)  {
+  @media only screen and (min-width: $pf-global--breakpoint--lg) {
     grid-template-columns: 62fr 38fr;
     grid-template-rows: max-content max-content auto;
     grid-template-areas:

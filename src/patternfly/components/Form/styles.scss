@@ -167,7 +167,7 @@
   &__helper-text {
     margin-top: var(--pf-c-form__helper-text--MarginTop);
     font-size: var(--pf-c-form__helper-text--FontSize);
-    &:not(.pf-m-error){
+    &:not(.pf-m-error) {
       color: var(--pf-c-form__helper-text--Color);
     }
     &.pf-m-error {

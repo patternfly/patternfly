@@ -152,6 +152,7 @@ PatternFly doesn't follow these rules:
 - [Multi-line CSS](https://cssguidelin.es/#multi-line-css)
 - [Indenting](https://cssguidelin.es/#indenting)
 - [Meaningful Whitespace](https://cssguidelin.es/#meaningful-whitespace)
+- [80 Characters Wide](https://cssguidelin.es/#characters-wide)
 
 ### Deviations from Harry Robert's Guidelines
 
@@ -311,7 +312,8 @@ States of a component should be included as a nested element. This includes hove
 .pf-button {
   background: $color;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $lighter-color;
   }
 }
