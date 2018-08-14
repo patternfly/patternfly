@@ -8,9 +8,7 @@ $nav: "pf-c-nav";
   /* stylelint-disable */
 
   // Header
-  --pf-l-page__header--PaddingRight:                        var(--pf-global--spacer--xl);
   --pf-l-page__header--PaddingBottom:                       var(--pf-global--spacer--md);
-  --pf-l-page__header--PaddingLeft:                         var(--pf-global--spacer--xl);
   // Hardcode header height base on design spec
   --pf-l-page__header--MinHeight:                           pf-size-prem(110px);
 
@@ -22,10 +20,13 @@ $nav: "pf-c-nav";
   --pf-l-page__header-brand--PaddingBottom--sm:             var(--pf-global--spacer--md);
   --pf-l-page__header-brand--BackgroundColor--md:           var(--pf-global--BackgroundColor--dark-transparent-100);
   // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
-  --pf-l-page__header-brand--Width--lg:                     pf-size-prem(290px);
+  --pf-l-page__header-brand--FlexBasis--lg:                 pf-size-prem(290px);
 
   // Toggle
-  --pf-l-page__header-sidebar-toggle--Padding:              var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingTop:           var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingRight:         var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingBottom:        var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingLeft:          var(--pf-global--spacer--sm);
   --pf-l-page__header-sidebar-toggle--FontSize:             var(--pf-global--FontSize--2xl);
 
   // Header brand link
@@ -38,15 +39,15 @@ $nav: "pf-c-nav";
   --pf-l-page__header-selector--PaddingLeft:                var(--pf-global--spacer--md);
   --pf-l-page__header-selector--PaddingTop:                 var(--pf-global--spacer--lg);
   --pf-l-page__header-selector--PaddingBottom:              var(--pf-global--spacer--lg);
-  --pf-l-page__header-selector--PaddingLeft--md:            var(--pf-global--spacer--xl);
+  --pf-l-page__header-selector--PaddingLeft:            var(--pf-global--spacer--xl);
 
   // Header nav
-  --pf-l-page__header-nav--BackgroundColor--sm:             var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__header-nav--PaddingRight:                    var(--pf-global--spacer--xl);
+  --pf-l-page__header-nav--PaddingLeft:                     var(--pf-global--spacer--xl);
   --pf-l-page__header-nav--MarginTop--sm:                   var(--pf-global--spacer--md);
   --pf-l-page__header-nav--MarginLeft--md:                  var(--pf-global--spacer--xl);
   --pf-l-page__header-nav--MarginRight--md:                 var(--pf-global--spacer--xl);
-  --pf-l-page__header-nav--PaddingRight:                    var(--pf-global--spacer--xl);
-  --pf-l-page__header-nav--PaddingLeft:                     var(--pf-global--spacer--xl);
+  --pf-l-page__header-nav--BackgroundColor--sm:             var(--pf-global--BackgroundColor--dark-transparent-100);
 
   // Header toolbar
   --pf-l-page__header-toolbar--PaddingTop:                  var(--pf-global--spacer--xl);
@@ -54,22 +55,20 @@ $nav: "pf-c-nav";
   --pf-l-page__header-toolbar--PaddingBottom:               var(--pf-global--spacer--md);
   --pf-l-page__header-tools--toolbar--MarginTop:            var(--pf-global--spacer--md);
   --pf-l-page__header-tools--toolbar--MarginBottom:         var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--MarginRight:                   var(--pf-global--spacer--xl);
 
   // Header avatar
-  --pf-l-page__header-avatar--MarginLeft:                   var(--pf-global--spacer--md);
-  --pf-l-page__header-avatar--Width:                        pf-size-prem(48px);
-  --pf-l-page__header-avatar--Height:                       pf-size-prem(48px);
+  --pf-c-avatar--MarginLeft:                                var(--pf-global--spacer--md);
 
   // Sidebar
-  --pf-l-page__sidebar--BackgroundColor:                    var(--pf-global--BackgroundColor--light-100);
-  --pf-l-page__sidebar--PaddingTop:                         var(--pf-global--spacer--md);
-  --pf-l-page__sidebar--PaddingBottom:                      var(--pf-global--spacer--md);
-  --pf-l-page__sidebar--BoxShadow:                          var(--pf-global--BoxShadow--lg-right);
   --pf-l-page__sidebar--ZIndex:                             var(--pf-global--ZIndex--xl);
   --pf-l-page__sidebar--Width--sm:                          80%;
   // hardcode sidebar based on design spec, must match pf-n-nav--Width
   --pf-l-page__sidebar--Width--lg:                          pf-size-prem(290px);
-  --pf-l-page__sidebar--MaxWidth--lg:                       pf-size-prem(290px);
+  --pf-l-page__sidebar--PaddingTop:                         var(--pf-global--spacer--md);
+  --pf-l-page__sidebar--PaddingBottom:                      var(--pf-global--spacer--md);
+  --pf-l-page__sidebar--BackgroundColor:                    var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__sidebar--BoxShadow:                          var(--pf-global--BoxShadow--lg-right);
 
   // Sidebar transitions
   --pf-l-page__sidebar--Transition:                         var(--pf-global--Transition);
@@ -112,218 +111,200 @@ $nav: "pf-c-nav";
       "header header"
       "nav main";
   }
+}
 
-  // Header
-  &__header {
-    // Force the container follow the dark theme
-    @extend %pf-t-dark;
+// Header
+.pf-l-page__header {
+  // force the container follow the dark theme
+  @extend %pf-t-dark;
 
-    grid-area: header;
+  grid-area: header;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: 100%;
+  min-height: var(--pf-l-page__header--MinHeight);
+  overflow-x: hidden;
+
+  > * {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-end;
-    max-width: 100%;
-    min-height: var(--pf-l-page__header--MinHeight);
-    padding-right: var(--pf-l-page__header--PaddingRight);
-    padding-left: var(--pf-l-page__header--PaddingLeft);
-    overflow-x: hidden;
-
-    > * {
-      display: flex;
-      align-items: flex-end;
-    }
-
-    // Toggle
-    &-sidebar-toggle {
-      padding: var(--pf-l-page__header-sidebar-toggle--Padding);
-      // Ensure button does not adjust positioning
-      margin-right: var(--pf-l-page__header-brand-link--MarginLeft);
-      margin-left: calc(var(--pf-l-page__header-sidebar-toggle--Padding) * -1);
-      font-size: var(--pf-l-page__header-sidebar-toggle--FontSize);
-      line-height: 1;
-      border: none;
-    }
-
-    // Brand
-    &-brand {
-      align-items: flex-end;
-      padding-top: var(--pf-l-page__header-brand--PaddingTop);
-      padding-bottom: var(--pf-l-page__header-brand--PaddingBottom);
-
-      @media (min-width: $pf-global--breakpoint--md) {
-        flex: 0 0 var(--pf-l-page__header-brand--Width--lg);
-        align-items: flex-end;
-        align-self: stretch;
-        padding-right: var(--pf-l-page__header-brand--PaddingRight);
-        padding-left: var(--pf-l-page__header-brand--PaddingLeft);
-        // Offset brand by padding values
-        margin-left: calc(var(--pf-l-page__header--PaddingLeft) * -1);
-        background-color: var(--pf-l-page__header-brand--BackgroundColor--md);
-      }
-
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-
-      }
-
-      // Link
-      &-link {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        align-self: flex-end;
-        min-height: 40px;
-      }
-
-      .pf-m-patternfly-logo {
-        height: var(--pf-l-page__header-brand-logo--Height);
-      }
-    }
-
-    // Header navigation
-    &-nav {
-      flex: 1 0 100%;
-      order: 1;
-      // Set width value for container to scale properly
-      width: 100vw;
-      padding-left: var(--pf-l-page__header-nav--PaddingLeft);
-      // Header will may contain elements that are hidden at different breakpoints. 
-      // Using negative margins to offset header padding to allow those elements to layout naturally.
-      margin-right: calc(var(--pf-l-page__header--PaddingRight) * -1);
-      margin-left: calc(var(--pf-l-page__header--PaddingLeft) * -1);
-      overflow: hidden;
-      background-color: var(--pf-l-page__header-nav--BackgroundColor--sm);
-
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        flex: 1;
-        order: initial;
-        width: auto;
-        padding: 0;
-        margin-right: var(--pf-l-page__header-nav--MarginRight--md);
-        margin-left: var(--pf-l-page__header-nav--MarginLeft--md);
-        background-color: transparent;
-      }
-    }
-
-    &-selector {
-      flex-shrink: 1;
-      align-items: center;
-      padding-top: var(--pf-l-page__header-selector--PaddingTop);
-      padding-bottom: var(--pf-l-page__header-selector--PaddingBottom);
-
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        padding-left: var(--pf-l-page__header-selector--PaddingLeft--md);
-      }
-      // .pf-l-page__header-brand + & {
-      //   padding-left: var(--pf-l-page__header-selector--PaddingLeft);
-      // }
-    }
-
-    &-tools {
-      align-items: center;
-      margin-left: auto; // to push it to the right
-
-      .pf-l-toolbar {
-        margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop);
-        margin-bottom: var(--pf-l-page__header-tools--toolbar--MarginBottom);
-      }
-    }
-
-    &-avatar {
-      width: var(--pf-l-page__header-avatar--Height);
-      height: var(--pf-l-page__header-avatar--Width);
-
-      .pf-l-toolbar + & {
-        margin-left: var(--pf-l-page__header-avatar--MarginLeft);
-      }
-    }
   }
 
-  // Sidebar
-  &__sidebar {
-    grid-area: 2 / 1;
-    z-index: var(--pf-l-page__sidebar--ZIndex);
-    width: var(--pf-l-page__sidebar--Width--sm);
-    padding-top: var(--pf-l-page__sidebar--PaddingTop);
-    padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
-    overflow: hidden;
-    background-color: var(--pf-l-page__sidebar--BackgroundColor);
-    transition: var(--pf-l-page__sidebar--Transition);
-    transform: var(--pf-l-page__sidebar--Transform--out);
+  .pf-c-avatar {
+    margin-left: var(--pf-l-page__header-avatar--MarginLeft);
+  }
+}
+
+// Brand
+.pf-l-page__header-brand {
+  align-items: flex-end;
+  padding-top: var(--pf-l-page__header-brand--PaddingTop);
+  padding-right: var(--pf-l-page__header-brand--PaddingRight);
+  padding-bottom: var(--pf-l-page__header-brand--PaddingBottom);
+  padding-left: var(--pf-l-page__header-brand--PaddingLeft);
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    flex: 0 0 var(--pf-l-page__header-brand--FlexBasis--lg);
+    align-items: flex-end;
+    align-self: stretch;
+    background-color: var(--pf-l-page__header-brand--BackgroundColor--md);
+  }
+
+  .pf-m-patternfly-logo {
+    height: var(--pf-l-page__header-brand-logo--Height);
+  }
+}
+
+// Link
+.pf-l-page__header-brand-link {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  align-self: flex-end;
+  min-height: 40px;
+}
+
+// Header navigation
+.pf-l-page__header-nav {
+  order: 1;
+  // set width value for container to scale properly
+  width: 100vw;
+  padding-left: var(--pf-l-page__header-nav--PaddingLeft);
+  overflow: hidden;
+  background-color: var(--pf-l-page__header-nav--BackgroundColor--sm);
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    flex: 1;
+    order: initial;
+    width: auto;
+    padding: 0;
+    margin-right: var(--pf-l-page__header-nav--MarginRight--md);
+    margin-left: var(--pf-l-page__header-nav--MarginLeft--md);
+    background-color: transparent;
+  }
+}
+
+// Context selector
+.pf-l-page__header-selector {
+  flex-shrink: 1;
+  align-items: center;
+  padding-top: var(--pf-l-page__header-selector--PaddingTop);
+  padding-bottom: var(--pf-l-page__header-selector--PaddingBottom);
+  padding-left: var(--pf-l-page__header-selector--PaddingLeft);
+}
+
+// Header tools
+.pf-l-page__header-tools {
+  align-items: center;
+  margin-right: var(--pf-l-page__header-tools--MarginRight);
+  margin-left: auto; // to push it to the right
+
+  .pf-l-toolbar {
+    // include margin-top for avatar to position itself vertically
+    margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop);
+    margin-bottom: var(--pf-l-page__header-tools--toolbar--MarginBottom);
+  }
+}
+
+// Sidebar
+.pf-l-page__sidebar {
+  grid-area: 2 / 1;
+  z-index: var(--pf-l-page__sidebar--ZIndex);
+  width: var(--pf-l-page__sidebar--Width--sm);
+  padding-top: var(--pf-l-page__sidebar--PaddingTop);
+  padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
+  overflow: hidden;
+  background-color: var(--pf-l-page__sidebar--BackgroundColor);
+  transition: var(--pf-l-page__sidebar--Transition);
+  transform: var(--pf-l-page__sidebar--Transform--out);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    flex: 1;
+    order: initial;
+    width: var(--pf-l-page__sidebar--Width--lg);
+    // max-width value set for browser to calculate max-width while transitioning
+    // sharing value to keep consistent
+    max-width: var(--pf-l-page__sidebar--Width--lg);
+    box-shadow: var(--pf-l-page__sidebar--BoxShadow);
+    transform: var(--pf-l-page__sidebar--Transform--in);
+  }
+
+  // Mobile
+  // Expanded nav
+  &.pf-m-expanded {
+    box-shadow: var(--pf-l-page__sidebar--BoxShadow);
+    transform: translate3d(0, 0, 0);
+  }
+
+  // Desktop
+  // Collapse nav
+  &.pf-m-collapsed {
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
-      flex: 1;
-      order: initial;
-      width: var(--pf-l-page__sidebar--Width--lg);
-      // Max-width value set for browser to calculate max-width while transitioning
-      max-width: var(--pf-l-page__sidebar--MaxWidth--lg);
-      box-shadow: var(--pf-l-page__sidebar--BoxShadow);
-      transform: var(--pf-l-page__sidebar--Transform--in);
-    }
-
-    // Mobile
-    // Expanded nav
-    &.pf-m-expanded {
-      box-shadow: var(--pf-l-page__sidebar--BoxShadow);
-      transform: translate3d(0, 0, 0);
-    }
-
-    // Desktop
-    // Collapse nav
-    &.pf-m-collapsed {
-
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        max-width: 0;
-        overflow: hidden;
-      }
+      max-width: 0;
+      overflow: hidden;
     }
   }
+}
 
-  // Main
-  &__main {
-    // change make this a scoped var padding-left: xl, padding-right: 0
+// Toggle
+.pf-l-page__header-sidebar-toggle {
+  padding:
+    var(--pf-l-page__header-sidebar-toggle--PaddingTop)
+    var(--pf-l-page__header-sidebar-toggle--PaddingRight)
+    var(--pf-l-page__header-sidebar-toggle--PaddingBottom)
+    var(--pf-l-page__header-sidebar-toggle--PaddingLeft);
 
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    padding-right: 0;
-    overflow-x: hidden;
-    overflow-y: visible;
+  margin-right: var(--pf-l-page__header-brand-link--MarginLeft);
+  // ensure button does not adjust positioning, offset padding-left
+  margin-left: calc(var(--pf-l-page__header-sidebar-toggle--PaddingLeft) * -1);
+  font-size: var(--pf-l-page__header-sidebar-toggle--FontSize);
+  line-height: 1;
+  border: none;
+}
 
-    &-nav {
-      flex: none;
-      padding:
-        var(--pf-l-page__main-nav--PaddingTop)
-        var(--pf-l-page__main-nav--PaddingRight)
-        var(--pf-l-page__main-nav--PaddingBottom)
-        var(--pf-l-page__main-nav--PaddingLeft);
-      overflow-x: hidden;
-      background-color: var(--pf-l-page__main-nav--BackgroundColor);
-    }
+// Main
+.pf-l-page__main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
 
-    &-section {
-      padding:
-        var(--pf-l-page__main-section--PaddingTop)
-        var(--pf-l-page__main-section--PaddingRight)
-        var(--pf-l-page__main-section--PaddingLeft)
-        var(--pf-l-page__main-section--PaddingBottom);
+.pf-l-page__main-nav {
+  padding:
+    var(--pf-l-page__main-nav--PaddingTop)
+    var(--pf-l-page__main-nav--PaddingRight)
+    var(--pf-l-page__main-nav--PaddingBottom)
+    var(--pf-l-page__main-nav--PaddingLeft);
+  background-color: var(--pf-l-page__main-nav--BackgroundColor);
+}
 
-      background-color: var(--pf-l-page__main-section--BackgroundColor);
+.pf-l-page__main-section {
+  padding:
+    var(--pf-l-page__main-section--PaddingTop)
+    var(--pf-l-page__main-section--PaddingRight)
+    var(--pf-l-page__main-section--PaddingLeft)
+    var(--pf-l-page__main-section--PaddingBottom);
 
-      &:last-of-type,
-      &:only-child {
-        flex-grow: 1;
-        background-color: var(--pf-l-page__main-section--BackgroundColor);
-      }
+  background-color: var(--pf-l-page__main-section--BackgroundColor);
 
-      &.pf-m-light {
-        background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
-      }
+  &:last-of-type,
+  &:only-child {
+    flex-grow: 1;
+    background-color: var(--pf-l-page__main-section--BackgroundColor);
+  }
 
-      &.pf-m-dark {
-        background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
-        // force the container follow the dark theme
-        @extend %pf-t-dark;
-      }
-    }
+  &.pf-m-light {
+    background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
+  }
+
+  &.pf-m-dark {
+    background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
+    // force the container follow the dark theme
+    @extend %pf-t-dark;
   }
 }

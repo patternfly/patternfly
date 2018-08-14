@@ -1,23 +1,18 @@
-{{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
-  {{#> nav-list}}
+{{#> nav nav--attribute='aria-label="Tertiary Example"' aria-labelledby="[id of parent]"}}
+  {{#> nav-list nav-list--type="tertiary"}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Current link
+        Item 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
-        Link 2
+        Item 2
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
-        Link 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 4
+        Item 3
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}

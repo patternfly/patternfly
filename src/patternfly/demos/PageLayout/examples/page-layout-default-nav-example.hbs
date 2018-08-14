@@ -8,7 +8,7 @@
       {{#> page-sidebar-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
       {{/page-sidebar-toggle}}
       <a class="pf-l-page__header-brand-link" href="#">
-        <img class="pf-l-page__header-brand-logo pf-m-patternfly-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+        {{#> brand brand--src="/assets/images/l_pf-reverse.svg" brand--alt="Patternfly Logo" brand--modifier="pf-m-patternfly-logo"}}{{/brand}}
       </a>
     {{/page-header-brand}}
     {{#> page-template-header-elements}}
@@ -19,31 +19,31 @@
   {{#> page-sidebar}}  
     {{#> nav nav--vertical="true" nav--attribute='id="primary-nav" aria-label="Primary Nav Default Example"'}}
       {{#> nav-list}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#" nav-list-link--current="true"}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
             System Panel
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Policy
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Authentication
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Network Services
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Server
-          {{/nav-list-link}}
-        {{/nav-list-item}}
+          {{/nav-link}}
+        {{/nav-item}}
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}

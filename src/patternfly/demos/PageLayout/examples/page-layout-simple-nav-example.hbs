@@ -8,7 +8,7 @@
       {{#> page-sidebar-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
       {{/page-sidebar-toggle}}
       <a class="pf-l-page__header-brand-link" href="#">
-        <img class="pf-l-page__header-brand-logo pf-m-patternfly-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+        {{#> brand brand--src="/assets/images/l_pf-reverse.svg" brand--alt="Patternfly Logo" brand--modifier="pf-m-patternfly-logo"}}{{/brand}}
       </a>
     {{/page-header-brand}}
     {{#> page-template-header-elements}}
@@ -16,38 +16,38 @@
   {{/page-header}}
   {{#> page-sidebar}}  
     {{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav, Simple List Example"'}}
-      {{#> nav-list-simple}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+      {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
             Overview
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
             Resource Usage
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#" nav-list-simple-link--current="true"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
             Hypervisors
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
             Instances
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
             Volumes
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-        {{#> nav-list-simple-item}}
-          {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
             Networks
-          {{/nav-list-simple-link}}
-        {{/nav-list-simple-item}}
-      {{/nav-list-simple}}
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}  
   {{#> page-main}}

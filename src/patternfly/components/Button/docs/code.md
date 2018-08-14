@@ -31,4 +31,3 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-hover` | `.pf-c-button` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.  |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class.  |
 | `.pf-m-focus` | `.pf-c-button` | Forces display of the focus state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class.  |
-| `.pf-m-lg` | `.pf-c-button` | Increases font size of button. Used used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc..  |

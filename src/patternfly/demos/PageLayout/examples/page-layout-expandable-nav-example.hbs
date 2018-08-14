@@ -8,7 +8,7 @@
       {{#> page-sidebar-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
       {{/page-sidebar-toggle}}
       <a class="pf-l-page__header-brand-link" href="#">
-        <img class="pf-l-page__header-brand-logo pf-m-patternfly-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+        {{#> brand brand--src="/assets/images/l_pf-reverse.svg" brand--alt="Patternfly Logo" brand--modifier="pf-m-patternfly-logo"}}{{/brand}}
       </a>
     {{/page-header-brand}}
     {{#> page-template-header-elements}}
@@ -18,88 +18,88 @@
   {{#> page-sidebar}}  
     {{#> nav nav--interactive="true" nav--expandable="true" nav--attribute='id="primary-nav" aria-label="Primary Nav Expandable Example"'}}
       {{#> nav-list}}
-        {{#> nav-list-item nav-list-item--expandable="true" nav-list-item--expanded="true" nav-list-item--current="true"}}
-          {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link1"'}}
+        {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="link1"'}}
             System Panel
-          {{/nav-list-link}}
+          {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link1"'}}
-            {{#> nav-list-simple}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Overview
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#" nav-list-simple-link--current="true"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#" nav-link--current="true"}}
                   Resource Usage
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Hypervisors
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Instances
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Volumes
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Networks
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-            {{/nav-list-simple}}
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
           {{/nav-subnav}}
-        {{/nav-list-item}}
-        {{#> nav-list-item nav-list-item--expandable="true"}}
-          {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link2"'}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="link2"'}}
             Policy
-          {{/nav-list-link}}
+          {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link2"'}}
-            {{#> nav-list-simple}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Subnav link 2
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-            {{/nav-list-simple}}
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
           {{/nav-subnav}}
-        {{/nav-list-item}}
-        {{#> nav-list-item nav-list-item--expandable="true"}}
-          {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link3"'}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="link3"'}}
             Authentication
-          {{/nav-list-link}}
+          {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link3"'}}
-            {{#> nav-list-simple}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-              {{#> nav-list-simple-item}}
-                {{#> nav-list-simple-link nav-list-simple-link--href="#"}}
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
                   Subnav link 2
-                {{/nav-list-simple-link}}
-              {{/nav-list-simple-item}}
-            {{/nav-list-simple}}
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
           {{/nav-subnav}}
-        {{/nav-list-item}}
+        {{/nav-item}}
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-nav page-section--modifier="pf-m-nav"}}
+    {{#> page-main-nav}}
       {{#> page-template-tertiary-nav}}
       {{/page-template-tertiary-nav}}
     {{/page-main-nav}}

@@ -6,7 +6,7 @@
 
     {{#> page-header-brand page-header-brand--modifier="pf-u-sr-only pf-u-visible-on-md"}}
       <a class="pf-l-page__header-brand-link" href="#">
-        <img class="pf-l-page__header-brand-logo pf-m-patternfly-logo" src="/assets/images/l_pf-reverse.svg" alt="Patternfly brand logo" alt="Patternfly Logo" /> 
+        {{#> brand brand--src="/assets/images/l_pf-reverse.svg" brand--alt="Patternfly Logo" brand--modifier="pf-m-patternfly-logo"}}{{/brand}}
       </a>
     {{/page-header-brand}}
 
@@ -17,31 +17,31 @@
     {{#> page-header-nav}}
       {{#> nav nav--horizontal="true" nav--attribute='id="nav-primary" aria-label="Primary Nav Default Example"'}}
         {{#> nav-list nav-list--type="horizontal"}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link nav-list-link--href="#" nav-list-link--current="true"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Nav Item 1
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link nav-list-link--href="#"}}
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
               Nav Item 2
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link nav-list-link--href="#"}}
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
               Link 3
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link nav-list-link--href="#"}}
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
               Link 4
-            {{/nav-list-link}}
-          {{/nav-list-item}}
-          {{#> nav-list-item}}
-            {{#> nav-list-link nav-list-link--href="#"}}
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
               Link 5
-            {{/nav-list-link}}
-          {{/nav-list-item}}
+            {{/nav-link}}
+          {{/nav-item}}
         {{/nav-list}}
       {{/nav}}
     {{/page-header-nav}}

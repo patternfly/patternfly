@@ -58,10 +58,10 @@
   {{!-- Nav --}}
   {{#> nav nav--attribute='aria-label="Primary Nav Expandable Example"'}}
     {{#> nav-list nav-list--attribute='id="primary-nav"'}}
-      {{#> nav-list-item nav-list-item--expandable="true" nav-list-item--expanded="true" nav-list-item--current="true"}}
-        {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link1"'}}
+      {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='id="link1"'}}
           System Panel
-        {{/nav-list-link}}
+        {{/nav-link}}
         {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link1"'}}
           {{#> nav-list-simple}}
             {{#> nav-list-simple-item}}
@@ -96,11 +96,11 @@
             {{/nav-list-simple-item}}
           {{/nav-list-simple}}
         {{/nav-subnav}}
-      {{/nav-list-item}}
-      {{#> nav-list-item nav-list-item--expandable="true"}}
-        {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link2"'}}
+      {{/nav-item}}
+      {{#> nav-item nav-item--expandable="true"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='id="link2"'}}
           Policy
-        {{/nav-list-link}}
+        {{/nav-link}}
         {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link2"'}}
           {{#> nav-list-simple}}
             {{#> nav-list-simple-item}}
@@ -115,11 +115,11 @@
             {{/nav-list-simple-item}}
           {{/nav-list-simple}}
         {{/nav-subnav}}
-      {{/nav-list-item}}
-      {{#> nav-list-item nav-list-item--expandable="true"}}
-        {{#> nav-list-link nav-list-link--href="#" nav-list-link--attribute='id="link3"'}}
+      {{/nav-item}}
+      {{#> nav-item nav-item--expandable="true"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='id="link3"'}}
           Authentication
-        {{/nav-list-link}}
+        {{/nav-link}}
         {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link3"'}}
           {{#> nav-list-simple}}
             {{#> nav-list-simple-item}}
@@ -134,7 +134,7 @@
             {{/nav-list-simple-item}}
           {{/nav-list-simple}}
         {{/nav-subnav}}
-      {{/nav-list-item}}
+      {{/nav-item}}
     {{/nav-list}}
   {{/nav}}
 
@@ -142,31 +142,31 @@
   {{#> page-main}}
     {{#> nav nav--modifier="pf-m-nav-tertiary" nav--attribute='aria-label="Tertiary Example"' aria-labelledby="[id of parent]"}}
       {{#> nav-list nav-list--type="tertiary"}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#" nav-list-link--current="true"}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
             Nav Item 1
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Nav Item 2
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Nav Item 3
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Nav Item 4
-          {{/nav-list-link}}
-        {{/nav-list-item}}
-        {{#> nav-list-item}}
-          {{#> nav-list-link nav-list-link--href="#"}}
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
             Nav Item 5
-          {{/nav-list-link}}
-        {{/nav-list-item}}
+          {{/nav-link}}
+        {{/nav-item}}
       {{/nav-list}}
     {{/nav}}
 
