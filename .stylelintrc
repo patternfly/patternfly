@@ -35,9 +35,6 @@
     "function-comma-newline-before": "never-multi-line",
     "function-url-quotes": "always",
     "max-empty-lines": 2,
-    "max-nesting-depth": [3, {
-      "severity": "warning"
-    }],
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
     "media-query-list-comma-newline-before": "never-multi-line",
