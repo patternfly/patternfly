@@ -7,6 +7,10 @@ const host = 'localhost';
 const globalViolations = [];
 const { pfReporter } = require('./a11yViolationsReporter');
 
+// const chromeOptions = {'args': ['--headless', '--no-sandbox']};
+// const chromeCapabilities = selenium.Capabilities.chrome();
+// chromeCapabilities.set('chromeOptions', chromeOptions);
+// const driver = new selenium.Builder().forBrowser('chrome').withCapabilities(chromeCapabilities).build();
 const driver = new selenium.Builder().forBrowser('chrome').build();
 const testPageA11y = testPage =>
   new Promise(resolve =>
@@ -30,13 +34,16 @@ sitemap
   .then(_ => {
     driver.quit().then(() => {
       pfReporter.report(globalViolations);
+      if (globalViolations.length > 0) {
+        process.exit(1);
+      }
     });
   })
   .catch(error => {
     driver.quit().then(() => {
       if (globalViolations.length > 0) {
         pfReporter.report(globalViolations);
-        // process.exit(1);
+        process.exit(1);
       } else {
         console.log(error);
       }
