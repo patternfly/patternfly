@@ -21,7 +21,9 @@
 - pf-m-link
 - pf-m-main
 - pf-m-offset
-- pf-m-opaque-
+- pf-m-opaque-100
+- pf-m-opaque-200
+- pf-m-opaque-300
 - pf-m-plain
 - pf-m-primary
 - pf-m-read
@@ -32,6 +34,7 @@
 - pf-m-tertiary
 - pf-m-top
 - pf-m-transparent
-- pf-m-transparent-
+- pf-m-transparent-100
+- pf-m-transparent-200
 - pf-m-unread
 - pf-m-warning
