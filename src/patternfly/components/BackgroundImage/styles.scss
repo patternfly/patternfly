@@ -12,17 +12,39 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  /* stylelint-disable */
+  @media (max-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
+    (max-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+    background-image: url("#{$pf-global--image-path}/pfbg_576@2x.jpg");
+  }
+
   @media (min-width: $pf-global--breakpoint--sm) {
     background-image: url("#{$pf-global--image-path}/pfbg_768.jpg");
+  }
+
+  @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+    background-image: url("#{$pf-global--image-path}/pfbg_768@2x.jpg");
   }
 
   @media (min-width: $pf-global--breakpoint--md) {
     background-image: url("#{$pf-global--image-path}/pfbg_992.jpg");
   }
 
+  @media (min-width: $pf-global--breakpoint--md) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: $pf-global--breakpoint--md) and (min-resolution: 192dpi) {
+    background-image: url("#{$pf-global--image-path}/pfbg_992@2x.jpg");
+  }
+
   @media (min-width: $pf-global--breakpoint--lg) {
     background-image: url("#{$pf-global--image-path}/pfbg_1200.jpg");
   }
+
+  @media (min-width: $pf-global--breakpoint--lg) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: $pf-global--breakpoint--lg) and (min-resolution: 192dpi) {
+    background-image: url("#{$pf-global--image-path}/pfbg_2000.jpg");
+  }
+  /* stylelint-enable */
 
   @media (min-width: $pf-global--breakpoint--xl) {
     background-image: url("#{$pf-global--image-path}/pfbg_2000.jpg");
