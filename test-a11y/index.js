@@ -7,7 +7,15 @@ const host = 'localhost';
 const violatingPages = [];
 const { pfReporter } = require('./a11yViolationsReporter');
 
-const chromeOptions = { args: ['--no-sandbox'] };
+let chromeOptions = {};
+
+if (process.env.CI) {
+  console.log(`process.env.CI: ${process.env.CI}`);
+  chromeOptions = { args: ['--headless', '--no-sandbox'] };
+} else {
+  chromeOptions = { args: [] };
+}
+
 const chromeCapabilities = selenium.Capabilities.chrome();
 chromeCapabilities.set('chromeOptions', chromeOptions);
 const driver = new selenium.Builder()
@@ -40,7 +48,8 @@ sitemap
     driver.quit().then(() => {
       const totalViolations = pfReporter.report(violatingPages);
 
-      if (totalViolations.length > 22) {
+      if (totalViolations.length > 18) {
+        console.log(`failing build with ${totalViolations.length} total violations`);
         process.exit(1);
       } else {
         process.exit(0);
@@ -49,7 +58,7 @@ sitemap
   })
   .catch(error => {
     driver.quit().then(() => {
-      console.log('REPORT ERROR: ', error);
+      console.log(`PF Test Runner ERROR: ${error}`);
       process.exit(1);
     });
   });
