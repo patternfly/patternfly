@@ -240,13 +240,13 @@ As a general rule don't overcomplicate Sass, keep it easy to parse for a normal 
 
 #### Nesting
 
-As a general rule avoid Sass nesting to increase specificity. If absolutely necessary, don't exceed a three layer depth.
+As a general rule avoid Sass nesting to increase specificity. Try not to nest more than three layers deep.
 
 Limit nesting to the following use cases:
 
-1. Modifiers and elements of a block
+1. Modifiers
 1. Media queries
-1. States, pseudo-classes and pseudo-elements
+1. States, pseudo-classes, and pseudo-elements
 
 ##### 1. Modifiers and elements of a block
 
@@ -325,13 +325,9 @@ Classes that duplicate a state should be named with the prefix `pf-m-`. For exam
 
 We create global Sass variables to keep a Bootstrap theme in sync. These values also inform our component level variables .
 
-#### Mixins
+#### @mixin and @extend
 
-Since our components are isolated and modular try to avoid mixins because they generate a dependency.
-
-#### @extend
-
-Don't use `@extend`.
+Since our components are isolated and modular try to avoid `@mixin` and `@extend` because they generate a dependency.
 
 ## References
 

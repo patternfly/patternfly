@@ -35,6 +35,9 @@
     "function-comma-newline-before": "never-multi-line",
     "function-url-quotes": "always",
     "max-empty-lines": 2,
+    "max-nesting-depth": [3, {
+      "severity": "warning"
+    }],
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
     "media-query-list-comma-newline-before": "never-multi-line",
@@ -243,6 +246,7 @@
     "selector-max-id": 0,
     "selector-max-type": 2,
     "selector-max-universal": 1,
+    "selector-nested-pattern": "^([a-zA-Z0-9]|\\.|>|&[.:[])",
     "selector-no-qualifying-type": true,
     "selector-no-vendor-prefix": true,
     "shorthand-property-no-redundant-values": true,
