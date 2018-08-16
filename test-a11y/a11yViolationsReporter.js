@@ -75,6 +75,7 @@ module.exports = {
         '------------------------------------------------------------\n'
       );
       violationsReporter(errors, 'writefile');
+      return violations;
     }
   }
 };

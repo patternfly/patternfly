@@ -4,14 +4,17 @@ const AxeBuilder = require('axe-webdriverjs');
 const sitemap = require('../sitemap');
 
 const host = 'localhost';
-const globalViolations = [];
+const violatingPages = [];
 const { pfReporter } = require('./a11yViolationsReporter');
 
-// const chromeOptions = {'args': ['--headless', '--no-sandbox']};
-// const chromeCapabilities = selenium.Capabilities.chrome();
-// chromeCapabilities.set('chromeOptions', chromeOptions);
-// const driver = new selenium.Builder().forBrowser('chrome').withCapabilities(chromeCapabilities).build();
-const driver = new selenium.Builder().forBrowser('chrome').build();
+const chromeOptions = { args: ['--no-sandbox'] };
+const chromeCapabilities = selenium.Capabilities.chrome();
+chromeCapabilities.set('chromeOptions', chromeOptions);
+const driver = new selenium.Builder()
+  .forBrowser('chrome')
+  .withCapabilities(chromeCapabilities)
+  .build();
+// const driver = new selenium.Builder().forBrowser('chrome').build();
 const testPageA11y = testPage =>
   new Promise(resolve =>
     driver.get(`http://${host}:8000${testPage.path}`).then(() => {
@@ -20,10 +23,12 @@ const testPageA11y = testPage =>
         .disableRules(['document-title'])
         .analyze()
         .then(results => {
-          globalViolations.push({
-            page: testPage.path,
-            violations: results.violations
-          });
+          if (results.violations.length > 0) {
+            violatingPages.push({
+              page: testPage.path,
+              violations: results.violations
+            });
+          }
           resolve();
         });
     })
@@ -33,19 +38,18 @@ sitemap
   .reduce((prevPromise, nextPage) => prevPromise.then(() => testPageA11y(nextPage)), Promise.resolve())
   .then(_ => {
     driver.quit().then(() => {
-      pfReporter.report(globalViolations);
-      if (globalViolations.length > 0) {
+      const totalViolations = pfReporter.report(violatingPages);
+
+      if (totalViolations.length > 22) {
         process.exit(1);
+      } else {
+        process.exit(0);
       }
     });
   })
   .catch(error => {
     driver.quit().then(() => {
-      if (globalViolations.length > 0) {
-        pfReporter.report(globalViolations);
-        process.exit(1);
-      } else {
-        console.log(error);
-      }
+      console.log('REPORT ERROR: ', error);
+      process.exit(1);
     });
   });
