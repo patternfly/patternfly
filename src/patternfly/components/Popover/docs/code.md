@@ -7,7 +7,7 @@ A popover is used to provide contextual information for another component on cli
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required**|
-| `aria-labeledby="[id value of .pf-c-popover__header-title]"` | `.pf-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-popover__header-title is present** |
+| `aria-labelledby="[id value of .pf-c-popover__header-title]"` | `.pf-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-popover__header-title is present** |
 | `aria-label="[title of popover]"` | `.pf-c-popover` | Gives the popover an accessible name. **Required when .pf-c-popover__header-title is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-popover="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|

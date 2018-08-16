@@ -7,7 +7,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required**|
-| `aria-labeledby="[id value of .pf-c-modal-box__header-title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-modal-box__header-title is present** |
+| `aria-labelledby="[id value of .pf-c-modal-box__header-title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-modal-box__header-title is present** |
 | `aria-label="[title of modal]"` | `.pf-c-modal-box` | Gives the modal an accessible name. **Required when .pf-c-modal-box__header-title is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
 | `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required**|
