@@ -10,10 +10,9 @@ const { pfReporter } = require('./a11yViolationsReporter');
 let chromeOptions = {};
 
 if (process.env.CI) {
-  console.log(`process.env.CI: ${process.env.CI}`);
-  chromeOptions = { args: ['--headless', '--no-sandbox'] };
+  chromeOptions = { args: ['--headless'] };
 } else {
-  chromeOptions = { args: [] };
+  chromeOptions = { args: ['--start-maximized'] };
 }
 
 const chromeCapabilities = selenium.Capabilities.chrome();
