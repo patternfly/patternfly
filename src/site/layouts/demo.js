@@ -7,7 +7,6 @@ export default ({ children }) => (
   <main>
     <Helmet>
       <title>PF Next</title>
-      <html lang="en-US" />
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
