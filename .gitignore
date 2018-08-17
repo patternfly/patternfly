@@ -18,4 +18,3 @@ yarn.lock
 .idea
 sitemap.json
 test-a11y/pf_a11y_violations.json
-package-lock.json
