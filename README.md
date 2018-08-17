@@ -26,7 +26,12 @@ To setup the PatternFly Next development environment:
 - run `npm run cli:setup` (only needed if doing development)
 - run `npm run dev`
 - open your browser to `http://localhost:8000`
-- check for a11y violations with `npm run a11y` (ensure dev server is running first)
+
+To run the a11y audit locally
+- install latest chromedriver from http://chromedriver.chromium.org/downloads
+- place downloaded chromedriver on your `$PATH`
+- run `npm run dev`
+- run `npm run a11y`
 
 ### Create a new component
 
