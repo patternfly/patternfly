@@ -63,6 +63,9 @@
   .pf-c-button {
     padding-right: var(--pf-c-input-group__button--PaddingRight);
     padding-left: var(--pf-c-input-group__button--PaddingLeft);
+    > *:first-child {
+      margin-right: 0;
+    }
   }
 
   input:not([type="checkbox"]):not([type="radio"]), textarea {
