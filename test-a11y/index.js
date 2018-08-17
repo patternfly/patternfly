@@ -2,12 +2,26 @@
 const selenium = require('selenium-webdriver');
 const AxeBuilder = require('axe-webdriverjs');
 const sitemap = require('../sitemap');
-
-const host = 'localhost';
-const globalViolations = [];
 const { pfReporter } = require('./a11yViolationsReporter');
 
-const driver = new selenium.Builder().forBrowser('chrome').build();
+const host = 'localhost';
+const violatingPages = [];
+const toleranceThreshold = 18;
+let chromeOptions = {};
+
+if (process.env.CI) {
+  chromeOptions = { args: ['--headless'] };
+} else {
+  chromeOptions = { args: ['--start-maximized', '--incognito'] };
+}
+
+const chromeCapabilities = selenium.Capabilities.chrome();
+chromeCapabilities.set('chromeOptions', chromeOptions);
+const driver = new selenium.Builder()
+  .forBrowser('chrome')
+  .withCapabilities(chromeCapabilities)
+  .build();
+
 const testPageA11y = testPage =>
   new Promise(resolve =>
     driver.get(`http://${host}:8000${testPage.path}`).then(() => {
@@ -16,10 +30,12 @@ const testPageA11y = testPage =>
         .disableRules(['document-title'])
         .analyze()
         .then(results => {
-          globalViolations.push({
-            page: testPage.path,
-            violations: results.violations
-          });
+          if (results.violations.length > 0) {
+            violatingPages.push({
+              page: testPage.path,
+              violations: results.violations
+            });
+          }
           resolve();
         });
     })
@@ -29,16 +45,17 @@ sitemap
   .reduce((prevPromise, nextPage) => prevPromise.then(() => testPageA11y(nextPage)), Promise.resolve())
   .then(_ => {
     driver.quit().then(() => {
-      pfReporter.report(globalViolations);
+      const totalViolations = pfReporter.report(violatingPages);
+      if (totalViolations.length > toleranceThreshold) {
+        console.log(`BUILD FAILURE: Too many accessibility violations`);
+        console.log(`Found ${totalViolations.length}, which exceeds our goal of less than ${toleranceThreshold}`);
+        process.exit(1);
+      }
     });
   })
   .catch(error => {
     driver.quit().then(() => {
-      if (globalViolations.length > 0) {
-        pfReporter.report(globalViolations);
-        // process.exit(1);
-      } else {
-        console.log(error);
-      }
+      console.log(`PF Test Runner ERROR: ${error}`);
+      process.exit(1);
     });
   });

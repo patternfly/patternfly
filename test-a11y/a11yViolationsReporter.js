@@ -22,17 +22,20 @@ const logOutput = testPages => {
       page.violations.forEach(v => {
         violations.push(v);
       });
-      console.log(`${logColors.yellow}%s${logColors.reset}`, `${page.violations.length} errors found in: ${page.page}`);
+      console.log(
+        `${logColors.yellow}%s${logColors.reset}`,
+        `${page.violations.length} error${page.violations.length === 1 ? '' : 's'} found in: ${page.page}`
+      );
       const inlineMsg = `\n${page.violations
         .map(
           (v, idx) =>
-            `${idx + 1}) ${v.help} -- (${v.helpUrl.replace('?application=webdriverjs', '')}) -- impact: ${v.impact}`
+            `${idx + 1}) ${v.help} -- ${v.helpUrl.replace('?application=webdriverjs', '')} -- impact: ${v.impact}`
         )
         .join('\n')}
       `;
       console.log(inlineMsg);
       console.log('-------html violation instances-------');
-      const nodesSummary = `\n${page.violations.map(v => v.nodes.map(el => el.html)).join('\n')}`;
+      const nodesSummary = `\n${page.violations.map(v => v.nodes.map(el => el.html).join('\n')).join('\n')}`;
       console.log(nodesSummary, '\n');
     });
   } else {
@@ -74,7 +77,10 @@ module.exports = {
         `${logColors.blue}%s${logColors.reset}`,
         '------------------------------------------------------------\n'
       );
-      violationsReporter(errors, 'writefile');
+      if (!process.env.CI) {
+        violationsReporter(errors, 'writefile');
+      }
+      return violations;
     }
   }
 };
