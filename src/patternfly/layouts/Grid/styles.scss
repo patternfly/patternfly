@@ -14,10 +14,9 @@
   }
 }
 
-// Creates grid item 
+// Creates grid item
 // @parameter {Suffix} xs, sm, md, lg, xl, null
 @mixin pf-grid-item-modifiers($suffix: null) {
-
   // generate column span modifiers
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {

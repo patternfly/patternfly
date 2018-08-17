@@ -12,14 +12,12 @@
 @mixin Layout {
   box-sizing: border-box;
   display: grid;
-  // padding: 0;
   margin: 0;
 
   > *,
   > *::before,
   > *::after {
     box-sizing: border-box;
-    // padding: 0;
     margin: 0;
   }
 }
@@ -29,6 +27,7 @@
 /// @moduleType mixin
 @mixin BreakAwayLayout {
   @include Layout;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -39,9 +38,11 @@
 /// @moduleType mixin
 @mixin BullseyeLayout {
   @include Layout;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   & > *:not(:first-child) {
     display: none;
   }
@@ -53,6 +54,7 @@
 /// @parameter {Length} $maximum-width [1280px] the maximum width of the container
 @mixin ContainerLayout($maximum-width: 1280px) {
   @include Layout;
+
   grid-template: auto / 100%;
   justify-items: center;
 
@@ -66,6 +68,7 @@
 /// @moduleType mixin
 @mixin LevelLayout {
   @include Layout;
+
   grid-template: 1fr / auto;
   grid-auto-flow: column;
   grid-auto-columns: auto;
@@ -84,6 +87,7 @@
 /// @moduleType mixin
 @mixin SplitLayout {
   @include Layout;
+
   grid-template: 1fr / auto;
   grid-auto-flow: column;
   grid-auto-columns: auto;
@@ -102,6 +106,7 @@
 /// @parameter {Number} $columns [5] the number of columns in the tile-board (default - 5)
 @mixin TileBoardLayout($columns: 5) {
   @include Layout;
+
   grid-template-columns: repeat($columns, 1fr);
 }
 
@@ -171,7 +176,7 @@
   }
 }
 
-// Creates flex item 
+// Creates flex item
 @mixin pf-utility-builder($class-name) {
   // generate column span modifiers
   @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {

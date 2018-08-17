@@ -15,7 +15,7 @@ $pf-global--enable-reset: true !default;
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
 // transformation from px to rem.
-$pf-global--font-size-root: 16 !default; //for fonts
+$pf-global--font-size-root: 16 !default; // for fonts
 $pf-global--space-size-root: 16 !default; // for spaces
 
 // Colors
@@ -103,7 +103,7 @@ $pf-global--font-path: "./assets/fonts" !default;
 // Iconpath
 $fa-font-path: "./assets/fonts/webfonts" !default;
 
-//Imagepath
+// Imagepath
 $pf-global--image-path: "/assets/images" !default;
 
 // Spacers
@@ -141,7 +141,7 @@ $pf-global--BorderColor:         $pf-color-black-600 !default;
 $pf-global--BorderColor--dark:   $pf-color-black-600 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
 $pf-global--BorderRadius--sm:        3px !default;
-$pf-global--BorderRadius--lg:        30em !default; //This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
+$pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Fonts
 // Font family

@@ -1,8 +1,8 @@
 @import "../../patternfly-utilities";
-:root {
-  --pf-l-level--m-gutter--MarginRight: var(--pf-global--gutter);
-}
+
 .pf-l-level {
+  --pf-l-level--m-gutter--MarginRight: var(--pf-global--gutter);
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;

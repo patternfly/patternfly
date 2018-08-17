@@ -1,11 +1,9 @@
-.Documentation {
-  &_heading {
-    margin-bottom: .5rem;
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  //&__section {}
-  &__section + &__section {
-    margin-top: 1rem;
-  }
+.Documentation_heading {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.Documentation__section + .Documentation__section {
+  margin-top: 1rem;
 }

@@ -8,13 +8,12 @@
   --pf-d-simple-form-demo--PaddingRight: var(--pf-global--spacer--lg);
   --pf-d-simple-form-demo--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Checkbox overrides
-
   // Example element variable
   --pf-d-simple-form-demo__title--FontSize: var(--pf-global--FontSize--2xl);
 
   // Example modifier variable
   --pf-d-simple-form-demo--m-danger--BackgroundColor: var(--pf-global--danger-color);
+
   padding-right: var(--pf-d-simple-form-demo--PaddingRight);
   padding-left: var(--pf-d-simple-form-demo--PaddingLeft);
   color: var(--pf-d-simple-form-demo--Color);

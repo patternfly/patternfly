@@ -1,7 +1,11 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss"
+  ],
   "plugins": [
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-scss"
   ],
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
@@ -23,29 +27,34 @@
     "at-rule-semicolon-space-before": "never",
     "block-no-empty": true,
     "block-closing-brace-newline-after": ["always", {
-      "ignoreAtRules": ["if", "else"]
+      "ignoreAtRules": [
+        "if",
+        "else"
+      ]
     }],
     "color-named": "never",
     "color-no-invalid-hex": true,
+    "comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": [
+        "after-comment",
+        "stylelint-commands"
+      ]
+    }],
     "declaration-block-semicolon-newline-before": "never-multi-line",
-    "declaration-empty-line-before": null,
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": "numeric",
     "function-comma-newline-before": "never-multi-line",
     "function-url-quotes": "always",
     "max-empty-lines": 2,
-    "max-nesting-depth": [3, {
-      "severity": "warning"
-    }],
+    "max-nesting-depth": 3,
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
     "media-query-list-comma-newline-before": "never-multi-line",
     "no-descending-specificity": null,
     "no-unknown-animations": true,
-    "number-leading-zero": ["never", {
-      "message": "Do not add zeros before a number."
-    }],
+    "number-leading-zero": "never",
     "order/properties-order": [
       "position",
       "top",
@@ -233,7 +242,16 @@
       "animation-direction"
     ],
     "property-no-vendor-prefix": true,
-    "rule-empty-line-before": null,
+    "scss/declaration-nested-properties": "never",
+    "scss/double-slash-comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": [
+        "between-comments",
+        "stylelint-commands"
+      ]
+    }],
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/operator-no-unspaced": true,
     "selector-attribute-quotes": "always",
     "selector-list-comma-newline-after": "always-multi-line",
     "selector-list-comma-newline-before": "never-multi-line",
@@ -246,16 +264,13 @@
     "selector-max-id": 0,
     "selector-max-type": 2,
     "selector-max-universal": 1,
-    "selector-nested-pattern": "^([a-zA-Z0-9]|\\.|>|&[.:[])",
+    "selector-nested-pattern": "^(\\.pf-|[a-z\\[\\{\\*\\+>]|&[\\.,:[]).*",
     "selector-no-qualifying-type": true,
     "selector-no-vendor-prefix": true,
     "shorthand-property-no-redundant-values": true,
     "string-quotes": "double",
     "value-keyword-case": "lower",
     "value-list-comma-newline-before": "never-multi-line",
-    "value-no-vendor-prefix": [true, {
-      "message": "You should use an autoprefixer to add vendor prefixes.",
-      "severity": "warning"
-    }]
+    "value-no-vendor-prefix": true
   }
 }

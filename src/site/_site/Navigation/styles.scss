@@ -1,23 +1,26 @@
-.Navigation {
-  &.is-horizontal > &__items {
-    display: flex;
-  }
-  &.is-horizontal &_link {
-    padding: .5rem;
-  }
-  &__items {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
-  &__item {
-    text-transform: capitalize;
-  }
-  &_link {
-    display: block;
-    padding: .5rem 0;
-  }
-  &_not-found-message {
-    padding: .5rem 0;
-  }
+.Navigation.is-horizontal > .Navigation__items {
+  display: flex;
+}
+
+.Navigation.is-horizontal .Navigation_link {
+  padding: .5rem;
+}
+
+.Navigation__items {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.Navigation__item {
+  text-transform: capitalize;
+}
+
+.Navigation_link {
+  display: block;
+  padding: .5rem 0;
+}
+
+.Navigation_not-found-message {
+  padding: .5rem 0;
 }
