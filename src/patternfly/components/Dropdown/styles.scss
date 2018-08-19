@@ -2,8 +2,7 @@
 
 .pf-c-dropdown {
   // Toggle
-  // The top and bottom padding for the dropdown is a one-off
-  --pf-c-dropdown__toggle--PaddingTop: pf-size-prem(6px);
+  --pf-c-dropdown__toggle--PaddingTop: pf-size-prem(6px); // The top and bottom padding for the dropdown is a one-off
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--PaddingBottom: pf-size-prem(6px);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);

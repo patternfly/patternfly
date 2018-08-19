@@ -1,6 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-button {
+  // Component
   --pf-c-button--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-button--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-button--PaddingBottom: var(--pf-global--spacer--xs);
@@ -39,7 +40,6 @@
   --pf-c-button--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-button--m-disabled--BorderColor: transparent;
   --pf-c-button--m-disabled--BorderWidth: var(--pf-global--BorderWidth--lg);
-
 
   // Primary btn
   --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--100);

@@ -1,21 +1,10 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-d-upgrade-examples__element--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
-:root {
-  // Example block variable
-  --pf-d-upgrade-examples--Color: var(--pf-global--Color--dark-100);
-
-  // Example element variable
-  --pf-d-upgrade-examples__title--FontSize: var(--pf-global--FontSize--xxl);
-
-  // Example modifier variable
-  --pf-d-upgrade-examples--m-danger--BackgroundColor: var(--pf-global--danger-color);
-}
-
 .pf-d-card-upgrade-examples {
+  --pf-d-upgrade-examples--Color: var(--pf-global--Color--dark-100);
+  --pf-d-upgrade-examples__title--FontSize: var(--pf-global--FontSize--xxl);
+  --pf-d-upgrade-examples--m-danger--BackgroundColor: var(--pf-global--danger-color);
+
   color: var(--pf-d-upgrade-examples--Color);
 
   // Modifier

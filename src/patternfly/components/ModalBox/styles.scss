@@ -13,9 +13,7 @@
   --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
   --pf-c-modal-box--MaxWidth: pf-size-prem(560px); // MaxWidth is based on optimal line length for reading
   --pf-c-modal-box--lg--MaxWidth: pf-size-prem(1120px);
-
-  // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
-  --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md)));
+  --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md))); // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
   --pf-c-modal-box--MarginRight: var(--pf-global--spacer--md);
   --pf-c-modal-box--MarginLeft: var(--pf-c-modal-box--MarginRight);
@@ -49,8 +47,7 @@
   --pf-c-modal-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Box Footer Button variables
-  // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
-  --pf-c-modal-box__footer--ButtonSpacer: var(--pf-global--spacer--md);
+  --pf-c-modal-box__footer--ButtonSpacer: var(--pf-global--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
 
   // This component always needs to be light
   @extend %pf-t-light;
@@ -164,8 +161,8 @@
     margin-left: auto;
   }
 
+  // Base margin left and right equal for buttons when wrapped
   > .pf-c-button:not(:last-child) {
-    // Base margin left and right equal for buttons when wrapped
     margin-right: calc(var(--pf-c-modal-box__footer--ButtonSpacer) / 2);
 
     @media screen and (min-width: $pf-global--breakpoint--sm) {

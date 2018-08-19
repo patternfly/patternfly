@@ -46,7 +46,7 @@
   --pf-c-form__legend--FontSize: var(--pf-global--FontSize--lg);
   --pf-c-form__legend--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
-  // // States
+  // States
   --pf-c-form--error--Color: var(--pf-global--danger-color--200);
 
   // Helpers
@@ -68,8 +68,8 @@
     display: flex;
     flex-flow: row wrap;
 
+    // Purpose: larger margin-right than the default value for '--group.'
     > * {
-      // Purpose: larger margin-right than the default value for '--group.'
       flex: auto 0;
       margin-right: var(--pf-c-form--inline--MarginRight);
     }

@@ -126,9 +126,7 @@
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-
-  // Because this component is always dark, set the background color
-  background-color: var(--pf-c-about-modal-box--BackgroundColor);
+  background-color: var(--pf-c-about-modal-box--BackgroundColor); // Because this component is always dark, set the background color
   box-shadow: var(--pf-c-about-modal-box--BoxShadow);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
@@ -172,9 +170,7 @@
   grid-area: header;
   display: flex;
   flex-direction: column;
-
-  // When header text is on one line and the modal-box__logo is taller than header, retain bottom alignment
-  justify-content: flex-end;
+  justify-content: flex-end; // When header text is on one line and the modal-box__logo is taller than header, retain bottom alignment
   padding-right: var(--pf-c-about-modal-box__header--PaddingRight);
   padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
   padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
@@ -188,9 +184,7 @@
 .pf-c-about-modal-box__content {
   grid-area: content;
   min-height: var(--pf-c-about-modal-box__content--MinHeight);
-
-  // Using margin instead of padding to prevent scrollbar extending to top of content block
-  margin-top: var(--pf-c-about-modal-box__content--MarginTop);
+  margin-top: var(--pf-c-about-modal-box__content--MarginTop); // Using margin instead of padding to prevent scrollbar extending to top of content block
   margin-right: var(--pf-c-about-modal-box__content--MarginRight);
   margin-bottom: var(--pf-c-about-modal-box__content--MarginBottom);
   margin-left: var(--pf-c-about-modal-box__content--MarginLeft);
@@ -242,15 +236,12 @@
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
     grid-area: 1 / 2;
-
-    // center the close over the narrow hero image
-    justify-content: center;
+    justify-content: center; // center the close over the narrow hero image
     padding-right: 0;
   }
 
   @media only screen and (min-width: $pf-global--breakpoint--lg) {
-    // align flex end the close over the narrow hero image
-    justify-content: flex-end;
+    justify-content: flex-end; // align flex end the close over the narrow hero image
     padding-right: var(--pf-c-about-modal-box__close--PaddingRight);
   }
 
@@ -277,8 +268,7 @@
 
 // Hero
 .pf-c-about-modal-box__hero {
-  // Don't display the hero at the narrowest breakpoint
-  display: none;
+  display: none; // Don't display the hero at the narrowest breakpoint
   overflow: hidden;
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {

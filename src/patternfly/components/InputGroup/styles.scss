@@ -1,7 +1,10 @@
 @import "../../patternfly-utilities";
 
 .pf-c-input-group {
+  // Component
   --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
+
+  // Text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
@@ -11,7 +14,11 @@
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__text--BorderColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+
+  // Textarea
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
+
+  // Button
   --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-input-group__button--PaddingLeft: var(--pf-global--spacer--md);
 
