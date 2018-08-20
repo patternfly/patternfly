@@ -243,6 +243,13 @@
     ],
     "property-no-vendor-prefix": true,
     "scss/declaration-nested-properties": "never",
+    "scss/dollar-variable-empty-line-before": ["always", {
+      "except": [
+        "first-nested",
+        "after-comment",
+        "after-dollar-variable"
+      ]
+    }],
     "scss/double-slash-comment-empty-line-before": ["always", {
       "except": ["first-nested"],
       "ignore": [
@@ -252,6 +259,8 @@
     }],
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/operator-no-unspaced": true,
+    "scss/dollar-variable-colon-space-after": "at-least-one-space",
+    "scss/dollar-variable-colon-space-before": "never",
     "selector-attribute-quotes": "always",
     "selector-list-comma-newline-after": "always-multi-line",
     "selector-list-comma-newline-before": "never-multi-line",
