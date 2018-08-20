@@ -331,5 +331,3 @@ This guide is inspired by people we follow and respect:
 - **[Robert Harris](http://csswizardry.com/):** [CSS Guidelines](http://cssguidelin.es/)
 - **[Gravity Department](http://gravitydept.com/)**: [Style Guide Field Manual](http://manuals.gravitydept.com/code/css/style-guide)
 - **[Hugo Giraudel](http://hugogiraudel.com/):** [SASS Guidelines](https://sass-guidelin.es/)
-
-Thank you :heart:
