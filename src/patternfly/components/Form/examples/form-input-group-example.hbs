@@ -1,35 +1,35 @@
 {{#> form}}
   {{#> form-group}}
-  {{#> form-label for="textInput1"}}Textarea with button{{/form-label}}
+  {{#> form-label for="textAreaButton"}}Textarea with button{{/form-label}}
   {{#> form-input-group}}
-      {{#> form-controls controlType="textarea" name="textarea1" id="textarea1" }}{{/form-controls}}
+      {{#> form-controls controlType="textarea" name="textAreaButton" id="textAreaButton" }}{{/form-controls}}
     {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
   {{/form-input-group}}
   {{/form-group}}
 
   {{#> form-group}}
-    {{#> form-label for="textInput2"}}Input with dropdown{{/form-label}}
+    {{#> form-label for="textInputDropdown"}}Input with dropdown{{/form-label}}
     {{#> form-input-group}}
         {{#> dropdown id="dropdown-example-collapsed"}}
           Dropdown
           <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
         {{/dropdown}}
-        {{#> form-controls controlType="input" input="true" type="text" id="textInput2" name="textInput2" }}{{/form-controls}}    
+        {{#> form-controls controlType="input" input="true" type="text" id="textInputDropdown" name="textInputDropdown" }}{{/form-controls}}    
     {{/form-input-group}}
     
   {{/form-group}}
   {{#> form-group}}
-    {{#> form-label for="textInput3"}}Input with button{{/form-label}}
+    {{#> form-label for="textInputButton"}}Input with button{{/form-label}}
     {{#> form-input-group}}
         {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-        {{#> form-controls controlType="input" input="true" type="text" id="textInput3" name="textInput3" }}{{/form-controls}}
+        {{#> form-controls controlType="input" input="true" type="text" id="textInputButton" name="textInputButton" }}{{/form-controls}}
     {{/form-input-group}}
     
   {{/form-group}}
   {{#> form-group}}
-    {{#> form-label for="textInput3" required="true"}}Input with text{{/form-label}}
+    {{#> form-label for="textInputText" required="true"}}Input with text{{/form-label}}
     {{#> form-input-group}}
-        {{#> form-controls controlType="input" input="true" type="text" name="textInput3" id="textInput3" required="true"}}{{/form-controls}}
+        {{#> form-controls controlType="input" input="true" type="text" name="textInputText" id="textInputText" required="true"}}{{/form-controls}}
         {{#> form-input-group__text}}
             @example.com
         {{/ form-input-group__text}}
