@@ -1,10 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-input-group {
-  // Component
   --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
-
-  // Text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
@@ -14,20 +11,22 @@
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__text--BorderColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-
-  // Textarea
+  --pf-c-input-group__action--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-input-group__action--Color: var(--pf-global--primary-color--100);
+  --pf-c-input-group__action--PaddingTop: calc(#{var(--pf-global--spacer--xs)} + 1px);
+  --pf-c-input-group__action--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-input-group__action--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-input-group__action--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-input-group__action-hover--color: var(--pf-global--primary-color--200);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
-
-  // Button
   --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-input-group__button--PaddingLeft: var(--pf-global--spacer--md);
-
+  --pf-c-input-group__action-form-control--PaddingRight: var(--pf-global--spacer--xl);
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
   }
   /* stylelint-enable */
-
   .pf-m-invalid {
     margin-left: 0;
 
@@ -36,6 +35,7 @@
     }
   }
 
+  position: relative;
   display: flex;
   align-items: stretch;
   width: 100%;
@@ -48,12 +48,25 @@
     }
   }
 
-  .pf-c-button:first-child::after, .pf-c-dropdown:first-child .pf-c-dropdown__toggle::before, .pf-c-form-control:first-child, .pf-c-input-group__text:first-child {
+  .pf-c-button:first-child::after,
+  .pf-c-dropdown:first-child .pf-c-dropdown__toggle::before,
+  .pf-c-form-control:first-child,
+  &__text:first-child {
     border-radius: var(--pf-c-input-group--BorderRadius) 0 0 var(--pf-c-input-group--BorderRadius);
   }
 
-  .pf-c-button:last-child::after, .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before, .pf-c-form-control:last-child, .pf-c-input-group__text:last-child {
+  .pf-c-button:last-child::after,
+  .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before,
+  .pf-c-form-control:last-child,
+  .pf-c-input-group__text:last-child {
     border-radius: 0 var(--pf-c-input-group--BorderRadius) var(--pf-c-input-group--BorderRadius) 0;
+  }
+
+  // this is to ensure this rule applies regardless of the html order of the elements
+  .pf-c-input-group__action + .pf-c-form-control,
+  .pf-c-form-control + .pf-c-input-group__action {
+    padding-right: var(--pf-c-input-group__action-form-control--PaddingRight);
+    border-radius: var(--pf-c-input-group--BorderRadius);
   }
 
   .pf-c-dropdown__toggle {
@@ -63,7 +76,8 @@
   .pf-c-button {
     padding-right: var(--pf-c-input-group__button--PaddingRight);
     padding-left: var(--pf-c-input-group__button--PaddingLeft);
-    > *:first-child {
+
+    > svg:last-child {
       margin-right: 0;
     }
   }
@@ -87,4 +101,18 @@
   text-align: center;
   background-color: var(--pf-c-input-group__text--BackgroundColor);
   border: var(--pf-c-input-group__text--BorderSize) solid var(--pf-c-input-group__text--BorderColor);
+}
+
+.pf-c-input-group__action {
+  position: absolute;
+  right: 0;
+  padding: var(--pf-c-input-group__action--PaddingTop) var(--pf-c-input-group__action--PaddingRight) var(--pf-c-input-group__action--PaddingBottom) var(--pf-c-input-group__action--PaddingLeft);
+  font-size: var(--pf-c-input-group__action--FontSize);
+  color: var(--pf-c-input-group__action--Color);
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: var(--pf-c-input-group__action-hover--color);
+  }
 }
