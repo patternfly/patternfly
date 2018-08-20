@@ -41,22 +41,22 @@
     margin-left: var(--pf-c-tooltip--MarginLeft);
   }
 
-  &.pf-m-top > &__arrow {
+  &.pf-m-top > .pf-c-tooltip__arrow {
     bottom: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
     left: calc(50% - var(--pf-c-tooltip__arrow-half-size));
   }
 
-  &.pf-m-bottom > &__arrow {
+  &.pf-m-bottom > .pf-c-tooltip__arrow {
     top: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
     left: calc(50% - var(--pf-c-tooltip__arrow-half-size));
   }
 
-  &.pf-m-right > &__arrow {
+  &.pf-m-right > .pf-c-tooltip__arrow {
     top: calc(50% - var(--pf-c-tooltip__arrow-half-size));
     left: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
   }
 
-  &.pf-m-left > &__arrow {
+  &.pf-m-left > .pf-c-tooltip__arrow {
     top: calc(50% - var(--pf-c-tooltip__arrow-half-size));
     right: calc(var(--pf-c-tooltip__arrow-half-size) * -1);
   }

@@ -247,35 +247,29 @@ Limit nesting to the following use cases:
 1. Modifiers
 1. Media queries
 1. States, pseudo-classes, and pseudo-elements
+1. Combinators
 
 ##### 1. Modifiers and elements of a block
 
-Make use of [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to write BEM elements and modifiers. You should only have one block selector:
+Do not use [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
 
 ```sass
 // Good
 .pf-nav {
+  ...
+}
 
-  &__item {
-    ...
-  }
-
-  &.is-modifier {
-    ...
-  }
+.pf-nav__item {
+  ...
 }
 
 // Bad
 .pf-nav {
   ...
-}
 
-.pf-nav--modifier {
-  ...
-}
-
-.pf-nav_item {
-  ...
+  &__item {
+    ...
+  }
 }
 ```
 

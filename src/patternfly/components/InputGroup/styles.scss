@@ -48,11 +48,11 @@
     }
   }
 
-  .pf-c-button:first-child::after, .pf-c-dropdown:first-child .pf-c-dropdown__toggle::before, .pf-c-form-control:first-child, &__text:first-child {
+  .pf-c-button:first-child::after, .pf-c-dropdown:first-child .pf-c-dropdown__toggle::before, .pf-c-form-control:first-child, .pf-c-input-group__text:first-child {
     border-radius: var(--pf-c-input-group--BorderRadius) 0 0 var(--pf-c-input-group--BorderRadius);
   }
 
-  .pf-c-button:last-child::after, .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before, .pf-c-form-control:last-child, &__text:last-child {
+  .pf-c-button:last-child::after, .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before, .pf-c-form-control:last-child, .pf-c-input-group__text:last-child {
     border-radius: 0 var(--pf-c-input-group--BorderRadius) var(--pf-c-input-group--BorderRadius) 0;
   }
 

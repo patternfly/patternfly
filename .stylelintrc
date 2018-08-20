@@ -273,7 +273,7 @@
     "selector-max-id": 0,
     "selector-max-type": 2,
     "selector-max-universal": 1,
-    "selector-nested-pattern": "^(\\.pf-|[a-z\\[\\{\\*\\+>]|&[\\.,:[]).*",
+    "selector-nested-pattern": "^(?!.*&[-_])",
     "selector-no-qualifying-type": true,
     "selector-no-vendor-prefix": true,
     "shorthand-property-no-redundant-values": true,
