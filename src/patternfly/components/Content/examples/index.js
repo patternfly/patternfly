@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const contentTemplate = ContentTemplate();
+  const headingText = 'Content';
 
   return (
-    <Documentation docs={Docs} className="">
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Content Example" handlebars={ContentTemplateRaw}>
         {contentTemplate}
       </Example>

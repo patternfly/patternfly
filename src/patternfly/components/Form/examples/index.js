@@ -22,9 +22,10 @@ export default () => {
   const formSelectInputExample = FormSelectInputExample();
   const formCheckRadioExample = FormCheckRadioExample();
   const formTextareaExample = FormTextareaExample();
+  const headingText = 'Form';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Checkboxes/Radios" handlebars={FormCheckRadioExampleRaw}>
         {formCheckRadioExample}
       </Example>

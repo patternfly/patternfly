@@ -3,6 +3,10 @@ language: node_js
 node_js:
   - "8"
 
+sudo: required
+addons:
+  chrome: stable
+
 cache:
   directories:
     - node_modules
@@ -17,9 +21,13 @@ deploy:
   local_dir: public
 
 before_script:
+  - wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip -d /home/travis/bin/
+  - export CHROME_BIN=chromium-browser
   - npm install -g gulp-cli
 
 script:
+  - npm run test:ci
   - npm run lint:styles
   - npm run build-ghpages
   - npm run build-patternfly
