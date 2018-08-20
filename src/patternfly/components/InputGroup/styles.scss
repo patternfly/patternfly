@@ -11,17 +11,18 @@
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__text--BorderColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-input-group__action--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-input-group__action--Color: var(--pf-global--primary-color--100);
-  --pf-c-input-group__action--PaddingTop: calc(#{var(--pf-global--spacer--xs)} + 1px);
+  --pf-c-input-group__action--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-input-group__action--Color: var(--pf-global--Color--200);
+  --pf-c-input-group__action--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-input-group__action--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-input-group__action--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-input-group__action--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-input-group__action-hover--color: var(--pf-global--primary-color--200);
+  --pf-c-input-group__action-hover--Color: var(--pf-global--Color--100);
+  --pf-c-input-group__action-form-control--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-input-group__action-form-control--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
   --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-input-group__button--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-input-group__action-form-control--PaddingRight: var(--pf-global--spacer--xl);
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
@@ -58,14 +59,12 @@
   .pf-c-button:last-child::after,
   .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before,
   .pf-c-form-control:last-child,
-  .pf-c-input-group__text:last-child {
+  &__text:last-child {
     border-radius: 0 var(--pf-c-input-group--BorderRadius) var(--pf-c-input-group--BorderRadius) 0;
   }
 
   // this is to ensure this rule applies regardless of the html order of the elements
-  .pf-c-input-group__action + .pf-c-form-control,
-  .pf-c-form-control + .pf-c-input-group__action {
-    padding-right: var(--pf-c-input-group__action-form-control--PaddingRight);
+  .pf-c-input-group__action + .pf-c-form-control, .pf-c-form-control + .pf-c-input-group__action {
     border-radius: var(--pf-c-input-group--BorderRadius);
   }
 
@@ -105,7 +104,6 @@
 
 .pf-c-input-group__action {
   position: absolute;
-  right: 0;
   padding: var(--pf-c-input-group__action--PaddingTop) var(--pf-c-input-group__action--PaddingRight) var(--pf-c-input-group__action--PaddingBottom) var(--pf-c-input-group__action--PaddingLeft);
   font-size: var(--pf-c-input-group__action--FontSize);
   color: var(--pf-c-input-group__action--Color);
@@ -113,6 +111,22 @@
   border: none;
 
   &:hover {
-    color: var(--pf-c-input-group__action-hover--color);
+    color: var(--pf-c-input-group__action-hover--Color);
+  }
+
+  &.pf-m-right {
+    right: 0;
+
+    & + .pf-c-form-control {
+      padding-right: var(--pf-c-input-group__action-form-control--PaddingRight);
+    }
+  }
+
+  &.pf-m-left {
+    left: 0;
+
+    & + .pf-c-form-control {
+      padding-left: var(--pf-c-input-group__action-form-control--PaddingLeft);
+    }
   }
 }

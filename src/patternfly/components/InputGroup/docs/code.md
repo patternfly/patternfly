@@ -16,3 +16,5 @@ When using the `pf-c-input-group` always ensure labels are used outside the inpu
 | `.pf-c-input-group` | `<div>` |  Iniaties the input group **Required**. |
 | `.pf-c-input-group__text` | `<span>` |  Iniaties the input group text. This can be used to show text, radio, or check boxes. |
 | `.pf-c-input-group__action` | `<button>, <label>` |  Iniaties the input group action. This can be used to show action icons such as dismiss, info, or calendar. |
+| `.pf-m-right` | `.pf-c-input-group__action` |  Aligns the action icon to the right of the input |
+| `.pf-m-left` | `.pf-c-input-group__action` |  Aligns the action icon to the left of the input |
