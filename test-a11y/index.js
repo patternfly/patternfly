@@ -6,7 +6,7 @@ const { pfReporter } = require('./a11yViolationsReporter');
 
 const host = 'localhost';
 const violatingPages = [];
-const toleranceThreshold = 18;
+const toleranceThreshold = 17;
 let chromeOptions = {};
 
 if (process.env.CI) {
