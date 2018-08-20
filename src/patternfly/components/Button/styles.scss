@@ -56,7 +56,7 @@
   --pf-c-button--m-primary--active--Color: var(--pf-global--Color--light-100);
 
   // Secondary btn
-  --pf-c-button--m-secondary--BackgroundColor: transparent;
+  --pf-c-button--m-secondary--BackgroundColor: var(--pf-c-button--BackgroundColor);
   --pf-c-button--m-secondary--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--Color: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--hover--BackgroundColor: transparent;
@@ -70,7 +70,7 @@
   --pf-c-button--m-secondary--active--Color: var(--pf-global--primary-color--200);
 
   // Tertiary btn
-  --pf-c-button--m-tertiary--BackgroundColor: transparent;
+  --pf-c-button--m-tertiary--BackgroundColor: var(--pf-c-button--BackgroundColor);
   --pf-c-button--m-tertiary--BorderColor: var(--pf-global--secondary-color--100);
   --pf-c-button--m-tertiary--Color: var(--pf-global--Color--100);
   --pf-c-button--m-tertiary--hover--BackgroundColor: transparent;
