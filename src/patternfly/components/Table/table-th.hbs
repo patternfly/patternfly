@@ -1,13 +1,5 @@
-<th class="{{#if table-th--toggle}}pf-c-table__toggle pf-m-fit-content {{else if table-th--check}}pf-c-table__check pf-m-fit-content {{else if table-th--action}}pf-c-table__action pf-m-fit-content {{else if table-th--blank}}pf-m-blank {{else if table-th--sortable}}pf-c-table__sort {{#if table-th--asc}}pf-m-asc {{else if table-th--desc}}pf-m-desc {{else}}{{/if}}{{/if}}{{#if table-th--modifier}}{{table-th--modifier}}{{/if}}"
+<th class="{{#if table-th--toggle}}pf-c-table__toggle pf-m-shrink {{else if table-th--check}}pf-c-table__check pf-m-shrink {{else if table-th--action}}pf-c-table__action pf-m-shrink {{else if table-th--blank}}pf-m-blank {{else if table-th--sortable}}pf-c-table__sort {{#if table-th--asc}}pf-m-ascending {{else if table-th--desc}}pf-m-descending {{else}}{{/if}}{{/if}}{{#if table-th--modifier}}{{table-th--modifier}}{{/if}}"
  
-{{!--   {{#if table--treegrid}}
-    scope="col"
-  {{/if}}
-
-  {{#if table--grid}}
-    scope="col"
-  {{/if}} --}}
-
   {{#if table-th--blank}}
     tabindex="-1"
     aria-hidden="true"
@@ -15,9 +7,9 @@
 
   {{#if table-th--sortable}}
     {{#if table-th--asc}}
-      aria-sort="asc"
+      aria-sort="ascending"
     {{else if table-th--desc}}
-      aria-sort="desc"
+      aria-sort="descending"
     {{else}}
       aria-sort="none"
     {{/if}}

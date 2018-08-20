@@ -1,106 +1,143 @@
-{{!-- ignore this for now --}}
-{{!-- <div class="demo">
-{{#> table table--attributes='aria-label="This is a simple table" role="grid"'}}
+<div class="demo">
+{{#> table table--modifier="pf-m-compact" table--attribute='id="expandable-table" aria-label="This is a compact table example"'}}
+  {{#> table-caption}}
+  {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--modifier="pf-m-narrow pf-m-expand"}}
-        <div class="pf-u-sr-only">Expand row</div>
-      {{/table-th}}    
-      {{#> table-th table-th--modifier="pf-m-narrow pf-m-check"}}
-        {{#> check pf-c-check-type="checkbox" name="unselected checkbox example" aria-label="Check all rows"}}
+      {{#> table-th table-th--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="select all rows" aria-label="Check row"}}
         {{/check}}
       {{/table-th}}    
-      {{#> table-th table-th--sortable="true" table-th--modifier="pf-m-active"}}
-        Repositories
+      {{#> table-th table-th--sortable="true" table-th--asc="true"}}
+        Contributor
+      {{/table-th}}
+      {{#> table-th}}
+        Position
       {{/table-th}} 
       {{#> table-th}}
-        Branches
+        Location
       {{/table-th}} 
       {{#> table-th}}
-        Pull requests
+        Last Seen
       {{/table-th}} 
       {{#> table-th}}
-        Comments
+        Numbers
       {{/table-th}} 
-      {{#> table-th table-th--modifier="pf-m-narrow pf-m-action"}}        
+      {{#> table-th table-th--modifier="pf-m-fit-content"}}
+        Icons
       {{/table-th}} 
-    {{/table-tr}}    
-  {{/table-thead}}
-  {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--modifier="pf-m-narrow pf-m-expand"}}
-        <i class="fas fa-chevron-right"></i>      
-      {{/table-td}}      
-      {{#> table-td table-td--modifier="pf-m-narrow pf-m-check"}}
-        {{#> check pf-c-check-type="checkbox" name="unselected checkbox example"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Repository Name</div>
-        <div class="pf-c-table__value">
-          <div>Node 1</div>
-          <a href="#">siemur/test-space</a>
-        </div>
-      {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Branch name</div>
-        <div class="pf-c-table__value">Really neat branch</div>
-      {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Pull requests</div>
-        <div class="pf-c-table__value">23</div>
-      {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Comments</div>
-        <div class="pf-c-table__value">12</div>
-      {{/table-td}}      
-      {{#> table-td table-td--modifier="pf-m-narrow pf-m-action"}}
-        {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow menu"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
-      {{/table-td}}      
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}} 
+      {{#> table-th table-th--blank="true"}}
+      {{/table-th}} 
     {{/table-tr}}
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Branch name</div>
-        <div class="pf-c-table__value">Really neat branch</div>
-      {{/table-td}}      
-    {{/table-tr}}    
-  {{/table-tbody}}
+  {{/table-thead}}
+
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--modifier="pf-m-narrow pf-m-expand"}}
-        <i class="fas fa-chevron-right"></i>      
-      {{/table-td}}      
-      {{#> table-td table-td--modifier="pf-m-narrow pf-m-check"}}
-        {{#> check pf-c-check-type="checkbox" name="unselected checkbox example"}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row1" aria-label="Check row"}}
         {{/check}}
       {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Repository Name</div>
-        <div class="pf-c-table__value">
-          <div>Node 1</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-td table-td--data-label="Contributor Name"}}
+        Andres Galant
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Position"}}
+        CSS Guru
       {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Branch name</div>
-        <div class="pf-c-table__value">Really neat branch</div>
-      {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Pull requests</div>
-        <div class="pf-c-table__value">23</div>
-      {{/table-td}}      
-      {{#> table-td}}
-        <div class="pf-c-table__key" tabindex="-1">Comments</div>
-        <div class="pf-c-table__value">12</div>
-      {{/table-td}}      
-      {{#> table-td table-td--modifier="pf-m-narrow pf-m-action"}}
-        {{#> button btnClass="pf-m-action" btnAttributes='aria-label="Overflow menu"'}}
+      {{#> table-td table-td--data-label="Location"}}
+        Not too sure
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        0556
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-md"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Action
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
+      {{/table-td}}
+    {{/table-tr}}    
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row2" aria-label="Check row"}}
+        {{/check}}
       {{/table-td}}      
-    {{/table-tr}}  
+      {{#> table-td table-td--data-label="Contributor Name"}}
+        Jenny Haines
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Location"}}
+        Raleigh
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9492
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-lg"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Action
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row3" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Contributor Name"}}
+        Kyle Baker
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design Lead
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9929
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-md"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+        <a href="#">
+          Action
+        </a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
-</div> --}}
+</div>

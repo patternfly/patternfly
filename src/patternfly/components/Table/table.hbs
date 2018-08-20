@@ -1,54 +1,40 @@
 <table class="pf-c-table{{#if table--modifier}} {{table--modifier}}{{/if}}"
-{{!--   {{#if table--treegrid}}
-    role="treegrid"
-  {{/if}} --}}
-{{!--   {{#if table--grid}}
+
+  {{#if table--grid}}
     role="grid"
-  {{/if}} --}}
+  {{/if}}
   {{#if table--attribute}}
     {{{table--attribute}}}
   {{/if}}
   {{#if table--interactive}}
     onClick="(function(){
       const toggle = event.target;
-      const parent = toggle.parentNode.parentNode;
       let hit = toggle;
       hit = hit.dataset.target;
-      // console.log(expandableParent);
 
       if (toggle.classList.contains('pf-m-toggle')) {
         toggle.classList.toggle('pf-m-expanded');
         let expandableParent = document.getElementById(hit).parentNode.parentNode;
+        let expandableContent = document.getElementById(hit);
 
         if (toggle.classList.contains('pf-m-expanded')) {
           expandableParent.removeAttribute('hidden');
 
           setTimeout(() => {
-            parent.setAttribute('aria-expanded', 'true');
-            document.getElementById(hit).classList.add('pf-m-expanded');
-            document.getElementById(hit).setAttribute('style', 'overflow-y: hidden;');
-            expandableParent.classList.add('pf-m-expanded');      
+            expandableParent.setAttribute('aria-expanded', 'true');
+            expandableParent.classList.add('pf-m-expanded');
           }, 50);
 
-          setTimeout(() => {
-            // parent.setAttribute('aria-expanded', 'false');
-            document.getElementById(hit).setAttribute('style', 'overflow-y: auto;');
-          }, 300);
-          
-
         } else {
-          document.getElementById(hit).setAttribute('style', 'overflow-y: hidden;');
-          document.getElementById(hit).classList.remove('pf-m-expanded');
           expandableParent.classList.remove('pf-m-expanded');
 
           setTimeout(() => {
-            parent.setAttribute('aria-expanded', 'false');
+            expandableParent.setAttribute('aria-expanded', 'false');
           }, 50);
 
           setTimeout(() => {
-            // expandableParent.removeAttribute('hidden');
             expandableParent.setAttribute('hidden', '');
-          }, 300);
+          }, 700);
         }
       }
         return false;

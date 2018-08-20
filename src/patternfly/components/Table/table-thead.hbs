@@ -27,35 +27,33 @@
         
         // deactivate sibling th's
         for (var sibling of siblings) {
-          if (sibling.classList.contains('pf-m-asc') || sibling.classList.contains('pf-m-desc')) {
+          if (sibling.classList.contains('pf-m-ascending') || sibling.classList.contains('pf-m-descending')) {
             let icon = getIcon(sibling);
 
             icon.classList.remove('fa-angle-up');
             icon.classList.add('fa-sort');
-            sibling.classList.remove('pf-m-asc', 'pf-m-desc');
+            sibling.classList.remove('pf-m-ascending', 'pf-m-descending');
             sibling.setAttribute('aria-sort', 'none');
           }
         }
 
-        if (selectedTh.classList.contains('pf-m-asc') || selectedTh.classList.contains('pf-m-desc')) {
-          if (selectedTh.classList.contains('pf-m-asc')) {
-            selectedTh.classList.remove('pf-m-asc');
-            selectedTh.classList.add('pf-m-desc');
-            selectedTh.setAttribute('aria-sort', 'asc');
+        if (selectedTh.classList.contains('pf-m-ascending') || selectedTh.classList.contains('pf-m-descending')) {
+          if (selectedTh.classList.contains('pf-m-ascending')) {
+            selectedTh.classList.remove('pf-m-ascending');
+            selectedTh.classList.add('pf-m-descending');
+            selectedTh.setAttribute('aria-sort', 'ascending');
           } else {
-            selectedTh.classList.add('pf-m-asc');
-            selectedTh.classList.remove('pf-m-desc');
-            selectedTh.setAttribute('aria-sort', 'desc');
+            selectedTh.classList.add('pf-m-ascending');
+            selectedTh.classList.remove('pf-m-descending');
+            selectedTh.setAttribute('aria-sort', 'descending');
           }      
         } else {
           // set active class
-          //- selectedTh.classList.add('pf-m-active');
-          // swap icon classes
           icon.classList.remove('fa-sort');
           icon.classList.add('fa-angle-up');
           // set th to sort ascending 
-          selectedTh.classList.add('pf-m-asc');
-          selectedTh.setAttribute('aria-sort', 'asc');
+          selectedTh.classList.add('pf-m-ascending');
+          selectedTh.setAttribute('aria-sort', 'ascending');
         }
       }
 

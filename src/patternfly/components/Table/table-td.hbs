@@ -1,12 +1,4 @@
-<td class="{{#if table-td--toggle}}pf-c-table__toggle pf-m-fit-content {{else if table-td--check}}pf-c-table__check pf-m-fit-content {{else if table-td--action}}pf-c-table__action pf-m-fit-content {{else if table-td--blank}}pf-m-blank {{/if}}{{#if table-td--modifier}}{{table-td--modifier}}{{/if}}"
-
-{{!--   {{#if table--treegrid}}
-    role="gridcell"
-  {{/if}}
- --}}
-  {{#if table--grid}}
-    role="gridcell"
-  {{/if}}
+<td class="{{#if table-td--toggle}}pf-c-table__toggle pf-m-shrink {{else if table-td--check}}pf-c-table__check pf-m-shrink {{else if table-td--action}}pf-c-table__action pf-m-shrink {{else if table-td--blank}}pf-m-blank {{/if}}{{#if table-td--modifier}}{{table-td--modifier}}{{/if}}"
 
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
@@ -27,7 +19,7 @@
   {{/if}}>
 
   {{#if table-td--toggle}}
-    <button class="pf-c-button pf-m-plain pf-m-toggle {{#if table-tr--expanded}} pf-m-expanded{{/if}}" aria-label="Expand row" {{#if table-td--target}}data-target="{{table-td--target}}"{{else}}data-target="must set data target"{{/if}}>
+    <button class="pf-c-button pf-m-plain pf-m-toggle {{#if table-td--expanded}} pf-m-expanded{{/if}}" aria-label="Expand row" {{#if table-td--target}}data-target="{{table-td--target}}"{{else}}data-target="must set data target"{{/if}}>
       {{!-- <i class="fas fa-chevron-down"></i> --}}
       <i class="fas fa-angle-down"></i>
     </button>

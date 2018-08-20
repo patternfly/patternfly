@@ -1,12 +1,10 @@
 <tr class="{{#if table-tr--expandable}}pf-c-table__expandable-row {{/if}}{{#if table-tr--expanded}}pf-m-expanded {{/if}}{{#if table-tr--modifier}}{{table-tr--modifier}}{{/if}}"
 
-  {{#if table-tr--level}}
-    aria-level="{{table-tr--level}}"
-  {{/if}}
-
   {{#if table-tr--expandable}}
     {{#if table-tr--expanded}}
+      aria-expanded="true"
     {{else}}
+      aria-expanded="false"
       hidden
     {{/if}}
   {{/if}}

@@ -1,19 +1,45 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+The table component is used to present tabular data. Simple tables have no interactive elements. Tables containing checkboxes, button, editable cells, etc require the application of `role="grid"` to `<table>`. Expandable table content (`.pf-c-table__expandable-content`) is placed within `<td>` cells.
+This is done to maintain alignment and spacing provided by the tables structure. These `<td>`s can span multiple columns.
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+Expandable tables - table columns may shift when expanding/collapsing. To address this, set `.pf-m-fit-content`, or assign a width `.pf-m-width-[width]` to the corresponding `<th>` defining the start column. Width values are `[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]`.
+
+By default, all table header cells are set to `white-space: nowrap`. If a `<th>`'s content needs to wrap, apply `.pf-m-wrap`.
 
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-c-table` |  accessibility notes. |
-
+| `display="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. |
+| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the abscence of `<caption>` or `<h*>`.** |
+| `aria-expanded=[true/false]` | `.pf-c-table__expandable-row` | Indicates the row is closed. |
+| `aria-sort` | `.pf-c-table__sort` | . |
+| experimental `aria-hidden` | `.pf-c-table__blank`, `.pf-c-table__blank` | . |
+| experimental `hidden` | `.pf-c-table__expandable-row` | Removes element from keyboard focus. |
+| `tabindex="-1"` | `<td>`, `.pf-m-blank` | Removes element from keyboard focus. |
+| `aria-role="presentation"` | `.pf-c-table__expandable-row-content` | Declares that an element is being used only for presentation and therefore does not have any accessibility semantics.  |
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-table`                           | `<table>`                                           | Initiates a table element. |
+| `.pf-c-table__caption`                  | `<caption>`                                         | Initiates a table caption. |
+| `.pf-c-table__expandable-row`           | `<tr>`                                              | Initiates an expandable table row element. |
+| `.pf-c-table__expandable-row-content`   | `<td>:first-child`                                  | Initiates an expandable table row content container. |
+| `.pf-c-table__toggle`                   | `<td>`                                              | Initiates a toggle table cell. |
+| `.pf-c-table__check`                    | `<td>`                                              | Initiates a check table cell. |
+| `.pf-c-table__action`                   | `<td>`                                              | Initiates an action table cell. |
+| `.pf-c-table__sort`                     | `<td>`                                              | Initiates a sort table cell. |
+| `.pf-c-table__sort-indicator`           | `<span>`                                            | Initiates a sort indicator. |
+| `.pf-c-table__icon-inline`              | `<span>`                                            | Initiates an icon with text container. |
+| `.pf-m-ascending`                       | `.pf-c-table__sort`                                 | Modifies for sort ascending state. |
+| `.pf-m-descending`                      | `.pf-c-table__sort`                                 | Modifies for sort descending state. |
+| `.pf-m-expanded `                       | `.pf-c-table__expandable-row`, `.pf-m-toggle`       | Modifies for expanded state. |
+| `.pf-m-compact`                         | `.pf-c-table`                                       | Modifies for table cell padding. |
+| `.pf-m-shrink`                          | `<td>`                                              | Modifies for table cell width and padding. |
+| `.pf-m-fit-content`                     | `<td>`                                              | Modifies for table cell width. |
+| `.pf-m-blank`                           | `<td>`                                              | Modifies for blank table cell. |
+| `.pf-m-wrap`                            | `<td>`                                              | Modifies `<th>` text wrapping. |
+| `.pf-m-width-[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]` | `<td>`                   | Modifies for table cell width. |

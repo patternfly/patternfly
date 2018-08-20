@@ -4,6 +4,10 @@
   {{/table-caption}}
   {{#> table-thead table-thead--interactive="true"}}
     {{#> table-tr}}
+      {{#> table-th table-th--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row" aria-label="Check row"}}
+        {{/check}}
+      {{/table-th}}    
       {{#> table-th table-th--sortable="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
@@ -28,8 +32,13 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row1" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
-        Repository 1
+        <div>Node 1</div>
+        <a href="#">siemur/test-space</a>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         <span class="pf-c-table__icon-inline">
@@ -65,8 +74,13 @@
     {{/table-tr}}    
 
     {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row2" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
-        Repository 2
+        <div>Node 2, this is node with a really long name</div>
+        <a href="#">siemur/test-space</a>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         <span class="pf-c-table__icon-inline">
@@ -102,8 +116,13 @@
     {{/table-tr}}
 
     {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check pf-c-check-type="checkbox" name="check row3" aria-label="Check row"}}
+        {{/check}}
+      {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
-        Repository 3
+        <div>Node 3</div>
+        <a href="#">siemur/test-space</a>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         <span class="pf-c-table__icon-inline">
