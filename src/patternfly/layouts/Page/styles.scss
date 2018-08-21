@@ -140,7 +140,6 @@ $nav: "pf-c-nav";
 .pf-l-page__header-brand {
   align-items: flex-end;
   padding-top: var(--pf-l-page__header-brand--PaddingTop);
-  padding-right: var(--pf-l-page__header-brand--PaddingRight);
   padding-bottom: var(--pf-l-page__header-brand--PaddingBottom);
   padding-left: var(--pf-l-page__header-brand--PaddingLeft);
 
@@ -148,6 +147,8 @@ $nav: "pf-c-nav";
     flex: 0 0 var(--pf-l-page__header-brand--FlexBasis--lg);
     align-items: flex-end;
     align-self: stretch;
+    // set padding right here to allow mobile view to accomodate tools
+    padding-right: var(--pf-l-page__header-brand--PaddingRight);
     background-color: var(--pf-l-page__header-brand--BackgroundColor--md);
   }
 

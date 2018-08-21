@@ -200,11 +200,10 @@
   --pf-c-nav__list-horizontal-link--m-current--after--BackgroundColor:       var(--pf-global--active-color--300);
 
   // Modifier - current item
-  --pf-c-nav__list-tertiary-link--m-current--Color:                               var(--pf-global--link--Color);
-  --pf-c-nav__list-tertiary-link--m-current--FontWeight:                          var(--pf-global--FontWeight--semi-bold);
-  --pf-c-nav__list-tertiary-link--m-current--BackgroundColor:                     transparent;
-  --pf-c-nav__list-tertiary-link--m-current--after--BackgroundColor:              var(--pf-global--link--Color);
-
+  --pf-c-nav__list-tertiary-link--m-current--Color:                          var(--pf-global--link--Color);
+  --pf-c-nav__list-tertiary-link--m-current--FontWeight:                     var(--pf-global--FontWeight--semi-bold);
+  --pf-c-nav__list-tertiary-link--m-current--BackgroundColor:                transparent;
+  --pf-c-nav__list-tertiary-link--m-current--after--BackgroundColor:         var(--pf-global--link--Color);
 
   /* stylelint-enable */
 
