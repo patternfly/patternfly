@@ -251,12 +251,17 @@ Limit nesting to the following use cases:
 
 ##### 1. Modifiers and elements of a block
 
-Do not use [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
+* Do not use [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
+* Do use that method to create compound selectors with modifier classes.
 
 ```sass
 // Good
 .pf-nav {
   ...
+
+  &.pf-m-vertical {
+    ...
+  }
 }
 
 .pf-nav__item {
@@ -270,6 +275,10 @@ Do not use [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/
   &__item {
     ...
   }
+}
+
+.pf-m-nav.pf-m-vertical {
+  ...
 }
 ```
 
