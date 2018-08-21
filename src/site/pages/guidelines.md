@@ -160,10 +160,6 @@ PatternFly doesn't follow these rules:
 
 **Practicality over purity**. Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
 
-#### Lintable HTML rules
-
-The [HTML linter](link) is PatternFly's single source of truth for HTML syntax, Attribute order and other HTML rules.
-
 #### Comment and Organization
 
 Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.
@@ -198,7 +194,7 @@ Describes a specific line of code.
 
 #### Lintable CSS rules
 
-The [CSS linter](link) is PatternFly's single source of truth for CSS syntax, declaration order and other CSS rules like disallow type selectors, disallow vendor prefixes, and more.
+The [CSS linter](https://stylelint.io/) is PatternFly's single source of truth for CSS syntax, declaration order, and other CSS rules like disallow type selectors, disallow vendor prefixes, and more.
 
 #### Shorthand notation
 
