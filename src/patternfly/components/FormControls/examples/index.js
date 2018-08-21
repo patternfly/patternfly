@@ -16,9 +16,10 @@ export default () => {
   const formControlsInputExample = FormControlsInputExample();
   const formControlsSelectExample = FormControlsSelectExample();
   const formControlsTextareaExample = FormControlsTextareaExample();
+  const headingText = 'Form Controls';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Input Example" handlebars={FormControlsInputExampleRaw}>
         {formControlsInputExample}
       </Example>

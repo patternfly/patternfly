@@ -20,9 +20,10 @@ export default () => {
   const alertWarning = AlertWarning();
   const alertDanger = AlertDanger();
   const alertInfo = AlertInfo();
+  const headingText = 'Alert';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Success Alert" handlebars={AlertSuccessRaw}>
         {alertSuccess}
       </Example>

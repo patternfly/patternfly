@@ -4,9 +4,10 @@ import Prism from 'prismjs'; // eslint-disable-line no-unused-vars
 import '../workspace.scss';
 
 export default ({ children }) => (
-  <div>
+  <main>
     <Helmet>
       <title>PF Next</title>
+      <html lang="en-US" />
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -21,5 +22,5 @@ export default ({ children }) => (
       />
     </Helmet>
     <div>{children()}</div>
-  </div>
+  </main>
 );

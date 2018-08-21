@@ -20,9 +20,10 @@ export default () => {
   const cardNoFooterExample = CardNoFooterExample();
   const cardNoHeaderExample = CardNoHeaderExample();
   const cardContentOnlyExample = CardContentOnlyExample();
+  const headingText = 'Card';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
       </Example>

@@ -42,7 +42,7 @@
   --pf-c-alert--m-info__icon--BackgroundColor: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
-  // This component always needs to be light  
+  // This component always needs to be light
   @extend %pf-t-light;
 
   display: flex;
