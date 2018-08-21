@@ -6,10 +6,10 @@
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="link2"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link2"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link2"'}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
@@ -25,10 +25,10 @@
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="link4"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
         Link 4 (current, but not expanded example)
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link3"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
