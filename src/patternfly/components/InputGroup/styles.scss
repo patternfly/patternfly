@@ -84,6 +84,7 @@
   input:not([type="checkbox"]):not([type="radio"]), textarea {
     flex: 2;
   }
+<<<<<<< HEAD
 
   textarea {
     min-height: var(--pf-c-input-group__textarea--MinHeight);
@@ -112,6 +113,33 @@
 
   &:hover {
     color: var(--pf-c-input-group__action-hover--Color);
+=======
+  &__action {
+    position: absolute;
+    padding: var(--pf-c-input-group__action--PaddingTop) var(--pf-c-input-group__action--PaddingRight) var(--pf-c-input-group__action--PaddingBottom) var(--pf-c-input-group__action--PaddingLeft);
+    font-size: var(--pf-c-input-group__action--FontSize);
+    color: var(--pf-c-input-group__action--Color);
+    cursor: pointer;
+    border: none;
+
+    &:hover{
+      color: var(--pf-c-input-group__action-hover--Color);
+    }
+
+    &.pf-m-align-right {
+      right: 0;
+      & + .pf-c-form-control {
+        padding-right: var(--pf-c-input-group__action-form-control--PaddingRight);
+      }
+    }
+
+    &.pf-m-align-left {
+      left: 0;
+      & + .pf-c-form-control {
+        padding-left: var(--pf-c-input-group__action-form-control--PaddingLeft);
+      }
+    }
+>>>>>>> Coker updates
   }
 
   &.pf-m-right {
