@@ -3,7 +3,6 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
 import SimpleFormDemoExample from './simple-form-demo-example.hbs';
-import '../styles.scss';
 
 export const Docs = docs;
 

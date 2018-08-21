@@ -12,8 +12,4 @@ This demo implements a basic modal, including the backdrop. Both the normal and 
 | `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required**|
 
 ## Usage
-
-| Class | Applies to | Outcome |
-| -- | -- | -- |
-| `.pf-d-modal` | `<div>` |  Initiates a modal. |
  -->
