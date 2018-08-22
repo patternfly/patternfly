@@ -9,10 +9,11 @@ export const Docs = docs;
 
 export default () => {
   const aboutModalBoxExample = AboutModalBoxExample();
+  const headingText = 'About modal box';
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="About modal box">{aboutModalBoxExample}</Example>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading={headingText}>{aboutModalBoxExample}</Example>
     </Documentation>
   );
 };

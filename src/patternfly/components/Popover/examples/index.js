@@ -13,14 +13,11 @@ export const Docs = docs;
 
 export default () => {
   const popoverExample = PopoverExample();
+  const headingText = 'Popover';
 
   return (
-    <Documentation docs={Docs}>
-      <Example
-        className="is-popover"
-        heading="Popover"
-        handlebars={PopoverExampleRaw}
-      >
+    <Documentation docs={Docs} heading={headingText}>
+      <Example className="is-popover" heading="Popover" handlebars={PopoverExampleRaw}>
         {popoverExample}
       </Example>
     </Documentation>

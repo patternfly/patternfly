@@ -7,6 +7,8 @@
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--PaddingBottom: pf-size-prem(6px);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-dropdown__toggle--MinHeight: var(--pf-global--target-size--MinHeight);
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
@@ -58,6 +60,8 @@
 
   &__toggle {
     position: relative;
+    min-width: var(--pf-c-dropdown__toggle--MinWidth);
+    min-height: var(--pf-c-dropdown__toggle--MinHeight);
     padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
     font-size: var(--pf-c-dropdown__toggle--FontSize);
     font-weight: var(--pf-c-dropdown__toggle--FontWeight);
@@ -77,7 +81,8 @@
       border-radius: var(--pf-c-dropdown__toggle--BorderRadius);
     }
 
-    &:hover {
+    &:hover,
+    &.pf-m-hover {
       &::before {
         border-color: var(--pf-c-dropdown__toggle--hover--BorderColor);
         border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
@@ -85,6 +90,7 @@
     }
 
     &:active,
+    &.pf-m-active,
     .pf-m-expanded > &,
     .pf-m-plain.pf-m-expanded > & {
       &::before {
@@ -99,7 +105,8 @@
         border-color: transparent;
       }
 
-      &:hover {
+      &:hover,
+      &.pf-m-hover {
         &::before {
           border-color: var(--pf-c-dropdown__toggle--hover--BorderColor);
           border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
@@ -151,7 +158,9 @@
     border: none;
 
     &:hover,
-    &:focus {
+    &.pf-m-hover,
+    &:focus,
+    &.pf-m-focus {
       color: var(--pf-c-dropdown__menu-item--Color);
       text-decoration: none;
       background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);

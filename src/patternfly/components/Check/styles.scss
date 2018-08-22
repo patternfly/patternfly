@@ -3,8 +3,7 @@
 .pf-c-check {
   cursor: pointer;
 
-  &:disabled,
-  &.pf-m-disabled {
+  &:disabled {
     cursor: not-allowed;
   }
 }

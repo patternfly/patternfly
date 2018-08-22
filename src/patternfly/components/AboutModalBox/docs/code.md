@@ -28,3 +28,4 @@ About modal layout.
 | `.pf-c-about-modal-box__logo`         |  `<div>`               |  Initiates a modal box logo cell. |
 | `.pf-c-about-modal-box__logo-image`   |  `<img>`               |  Initiates a modal box logo image. |
 | `.pf-c-about-modal-box__content`      |  `<div>`               |  Initiates a modal box content cell. |
+| `.pf-m-hover` | `.pf-c-about-modal-box__close .pf-c-button.pf-m-action` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.
