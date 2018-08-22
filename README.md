@@ -28,8 +28,8 @@ To setup the PatternFly Next development environment:
 - open your browser to `http://localhost:8000`
 
 To run the a11y audit locally
-- install latest chromedriver from http://chromedriver.chromium.org/downloads
-- place downloaded chromedriver on your `$PATH`
+- install latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
+- alternatively, macOS users can simply `brew cask install chromedriver`
 - run `npm run dev`
 - run `npm run a11y`
 
