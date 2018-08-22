@@ -26,7 +26,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
 | `.pf-m-danger` | `.pf-c-button` | Modifies for danger styles. |
 | `.pf-m-link` | `.pf-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
-| `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for action icons such as close, expand, kebab, etc. |
+| `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
 | `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
 | `.pf-m-hover` | `.pf-c-button` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.  |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class.  |
