@@ -130,7 +130,6 @@ $nav: "pf-c-nav";
     display: flex;
     align-items: flex-end;
   }
-}
 
   .pf-c-avatar {
     margin-left: var(--pf-l-page__header-avatar--MarginLeft);
@@ -148,8 +147,7 @@ $nav: "pf-c-nav";
     flex: 0 0 var(--pf-l-page__header-brand--FlexBasis--lg);
     align-items: flex-end;
     align-self: stretch;
-    // set padding right here to allow mobile view to accomodate tools
-    padding-right: var(--pf-l-page__header-brand--PaddingRight);
+    padding-right: var(--pf-l-page__header-brand--PaddingRight); // set padding right here to allow mobile view to accomodate tools
     background-color: var(--pf-l-page__header-brand--BackgroundColor--md);
   }
 
@@ -170,8 +168,7 @@ $nav: "pf-c-nav";
 // Header navigation
 .pf-l-page__header-nav {
   order: 1;
-  // set width value for container to scale properly
-  width: 100vw;
+  width: 100vw; // set width value for container to scale properly
   padding-left: var(--pf-l-page__header-nav--PaddingLeft);
   overflow: hidden;
   background-color: var(--pf-l-page__header-nav--BackgroundColor--sm);
@@ -225,9 +222,7 @@ $nav: "pf-c-nav";
     flex: 1;
     order: initial;
     width: var(--pf-l-page__sidebar--Width--lg);
-    // max-width value set for browser to calculate max-width while transitioning
-    // sharing value to keep consistent
-    max-width: var(--pf-l-page__sidebar--Width--lg);
+    max-width: var(--pf-l-page__sidebar--Width--lg); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
     box-shadow: var(--pf-l-page__sidebar--BoxShadow);
     transform: var(--pf-l-page__sidebar--Transform--in);
   }
@@ -242,7 +237,6 @@ $nav: "pf-c-nav";
   // Desktop
   // Collapse nav
   &.pf-m-collapsed {
-
     @media screen and (min-width: $pf-global--breakpoint--md) {
       max-width: 0;
       overflow: hidden;
@@ -257,10 +251,8 @@ $nav: "pf-c-nav";
     var(--pf-l-page__header-sidebar-toggle--PaddingRight)
     var(--pf-l-page__header-sidebar-toggle--PaddingBottom)
     var(--pf-l-page__header-sidebar-toggle--PaddingLeft);
-
   margin-right: var(--pf-l-page__header-brand-link--MarginLeft);
-  // ensure button does not adjust positioning, offset padding-left
-  margin-left: calc(var(--pf-l-page__header-sidebar-toggle--PaddingLeft) * -1);
+  margin-left: calc(var(--pf-l-page__header-sidebar-toggle--PaddingLeft) * -1); // ensure button does not adjust positioning, offset padding-left
   font-size: var(--pf-l-page__header-sidebar-toggle--FontSize);
   line-height: 1;
   border: none;
@@ -291,7 +283,6 @@ $nav: "pf-c-nav";
     var(--pf-l-page__main-section--PaddingRight)
     var(--pf-l-page__main-section--PaddingLeft)
     var(--pf-l-page__main-section--PaddingBottom);
-
   background-color: var(--pf-l-page__main-section--BackgroundColor);
 
   &:last-of-type,
@@ -305,8 +296,9 @@ $nav: "pf-c-nav";
   }
 
   &.pf-m-dark {
-    background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
     // force the container follow the dark theme
     @extend %pf-t-dark;
+
+    background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
   }
 }
