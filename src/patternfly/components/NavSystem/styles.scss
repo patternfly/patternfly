@@ -225,7 +225,6 @@
 
 // List default
 .pf-c-nav__list {
-
   // Item
   > .pf-c-nav__item {
     position: relative;
@@ -246,7 +245,6 @@
       var(--pf-c-nav__list-link--PaddingRight)
       var(--pf-c-nav__list-link--PaddingBottom)
       var(--pf-c-nav__list-link--PaddingLeft);
-
     font-weight: var(--pf-c-nav__list-link--FontWeight);
     color: var(--pf-c-nav__list-link--Color);
 
@@ -293,7 +291,6 @@
       content: "";
       background-color: var(--pf-c-nav__list-link--after--BackgroundColor);
     }
-
   }
 
   // States
@@ -325,7 +322,6 @@
   & > * {
     transition: var(--pf-c-nav__list-toggle--Transition);
   }
-
 }
 
 // Rotate the icon
@@ -337,7 +333,6 @@
 // List simple
 // no bottom border, no children. Used independently or as a subnav item of .pf-c-nav__list (default list component).
 .pf-c-nav__simple-list {
-
   // List simple link
   .pf-c-nav__link {
     display: block;
@@ -346,7 +341,6 @@
       var(--pf-c-nav__simple-list-link--PaddingRight)
       var(--pf-c-nav__simple-list-link--PaddingBottom)
       var(--pf-c-nav__simple-list-link--PaddingLeft);
-
     font-weight: var(--pf-c-nav__simple-list-link--FontWeight);
     color: var(--pf-c-nav__simple-list-link--Color);
     background-color: var(--pf-c-nav__simple-list-link--BackgroundColor);
@@ -403,7 +397,6 @@
 
 // List horizontal, masthead
 .pf-c-nav__horizontal-list {
-
   .pf-c-nav__item {
     margin-right: var(--pf-c-nav__horizontal-list-item--MarginRight);
   }
@@ -449,7 +442,7 @@
       }
     }
 
-    &.pf-m-current  {
+    &.pf-m-current {
       font-weight: var(--pf-c-nav__list-horizontal-link--m-current--FontWeight);
       color: var(--pf-c-nav__list-horizontal-link--m-current--Color);
       background-color: var(--pf-c-nav__list-horizontal-link--m-current--BackgroundColor);
@@ -475,7 +468,6 @@
 
 // List tertiary
 .pf-c-nav__tertiary-list {
-
   .pf-c-nav__item {
     margin-right: var(--pf-c-nav__tertiary-list-item--MarginRight);
   }
@@ -549,6 +541,7 @@
 // Subnav
 .pf-c-nav__subnav {
   flex: 1 0 100%;
+
   // Set default states
   max-height: 0;
   margin-top: 0;
@@ -581,7 +574,6 @@
     var(--pf-c-nav__section-title--PaddingRight)
     var(--pf-c-nav__section-title--PaddingBottom)
     var(--pf-c-nav__section-title--PaddingLeft);
-
   font-size: var(--pf-c-nav__section-title--FontSize);
   font-weight: var(--pf-c-nav__section-title--FontWeight);
   color: var(--pf-c-nav__section-title--Color);
