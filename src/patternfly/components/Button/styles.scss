@@ -144,6 +144,37 @@
     margin-right: var(--pf-c-button--item--MarginRight);
   }
 
+  &:hover,
+  &.pf-m-hover {
+    color: var(--pf-c-button--hover--Color);
+    text-decoration: none;
+    background-color: var(--pf-c-button--hover--BackgroundColor);
+    &::after {
+      border-color: var(--pf-c-button--hover--BorderColor);
+      border-width: var(--pf-c-button--hover--BorderWidth);
+    }
+  }
+
+  &:active,
+  &.pf-m-active {
+    color: var(--pf-c-button--active--Color);
+    background-color: var(--pf-c-button--active--BackgroundColor);
+    &::after {
+      border-color: var(--pf-c-button--active--BorderColor);
+      border-width: var(--pf-c-button--focus--BorderWidth);
+    }
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    color: var(--pf-c-button--focus--Color);
+    background-color: var(--pf-c-button--focus--BackgroundColor);
+    &::after {
+      border-color: var(--pf-c-button--focus--BorderColor);
+      border-width: var(--pf-c-button--focus--BorderWidth);
+    }
+  }
+
   &.pf-m-block {
     display: block;
     width: 100%;
