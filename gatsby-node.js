@@ -190,7 +190,9 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
         configFile: './.stylelintrc',
         fix: false,
         failOnError: false,
-        emitErrors: true
+        emitErrors: true,
+        files: 'src/**/*.scss',
+        defaultSeverity: 'error'
       }),
       new WebpackNotifierPlugin({
         title: 'PF-Next',

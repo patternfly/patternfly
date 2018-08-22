@@ -238,6 +238,7 @@
       grid-row-gap: var(--pf-c-content--dl--RowGap);
     }
   }
+
   dt {
     font-weight: var(--pf-c-content--dt--FontWeight);
 
@@ -253,6 +254,7 @@
       grid-column: 1;
     }
   }
+
   dd {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       grid-column: 2;

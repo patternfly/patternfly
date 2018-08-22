@@ -1,86 +1,89 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-d-upgrade-examples__element--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
-:root {
-  // Example block variable
-  --pf-d-upgrade-examples--Color: var(--pf-global--Color--dark-100);
-
-  // Example element variable
-  --pf-d-upgrade-examples__title--FontSize: var(--pf-global--FontSize--xxl);
-
-  // Example modifier variable
-  --pf-d-upgrade-examples--m-danger--BackgroundColor: var(--pf-global--danger-color);
-}
-
 .pf-d-card-upgrade-examples {
+  --pf-d-upgrade-examples--Color: var(--pf-global--Color--dark-100);
+  --pf-d-upgrade-examples__title--FontSize: var(--pf-global--FontSize--xxl);
+  --pf-d-upgrade-examples--m-danger--BackgroundColor: var(--pf-global--danger-color);
+
   color: var(--pf-d-upgrade-examples--Color);
 
+  // Modifier
+  &.pf-m-danger {
+    background-color: var(--pf-d-upgrade-examples--m-danger--BackgroundColor);
+  }
+
+  /* stylelint-disable */
   .row.row-cards-pf {
     display: flex;
   }
+
   .col-sm-3 {
     width: 25%;
     margin-right: 35px;
   }
+
   .container-fluid {
     padding-right: 20px;
     padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
   }
+
   .container-cards-pf {
     margin-top: 0;
   }
+
   .row-cards-pf {
     padding-right: 20px;
     padding-left: 20px;
     margin-right: -10px;
     margin-left: -10px;
+
     &:first-child {
       padding-top: 20px;
     }
   }
+
   .cards-pf {
     background: #f5f5f5;
+
     .row-cards-pf {
       padding: 0 20px;
+
       &:first-child {
         padding-top: 20px;
         padding-bottom: 20px;
       }
     }
   }
+
   .card-pf {
     padding: 0 20px;
     margin: 0 -10px 20px;
     background: #fff;
     border-top: 2px solid transparent;
     box-shadow: 0 1px 1px rgba(3, 3, 3, .175);
-    &-heading {
-      padding: 0 20px 0;
+
+    .card-pf-heading {
+      padding: 0 20px;
       margin: 0 -20px 20px;
       border-bottom: 1px solid #d1d1d1;
     }
-    &-title {
+
+    .card-pf-title {
       padding-bottom: 10px;
       line-height: 1.4;
     }
-    &-body {
+
+    .card-pf-body {
       padding: 0 0 20px;
       margin: 20px 0 0;
     }
   }
+  /* stylelint-enable */
+}
 
-  // Element
-  &__title {
-    font-size: var(--pf-d-upgrade-examples__title--FontSize);
-  }
-
-  // Modifier
-  &.pf-m-danger {
-    background-color: var(--pf-d-upgrade-examples--m-danger--BackgroundColor);
-  }
+// Element
+.pf-d-card-upgrade-examples__title {
+  font-size: var(--pf-d-upgrade-examples__title--FontSize);
 }
