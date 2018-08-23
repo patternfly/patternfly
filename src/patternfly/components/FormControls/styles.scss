@@ -1,10 +1,13 @@
 @import "../../patternfly-utilities";
+
 // Input - error
 $pf-c-form-controls--invalid--Color: $pf-global--danger-color--100 !default;
 $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
+
 // Background svg mixin
 @mixin pf-bg-svg($svg-coordinates, $svg-color) {
   $color: str-slice(#{$svg-color}, 2);
+
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 6px top 8px;
@@ -12,11 +15,11 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
 }
 
 .pf-c-form-control {
+  // Component
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-form-control--Height: calc(#{var(--pf-global--FontSize--md)} * 2 + 4px);
-  // calc is required to get the propper height here to match buttons
-  --pf-c-form-control--PaddingTop: calc(#{var(--pf-global--spacer--sm)} - 3px);
+  --pf-c-form-control--PaddingTop: calc(#{var(--pf-global--spacer--sm)} - 3px); // calc is required to get the propper height here to match buttons
   --pf-c-form-control--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-form-control--PaddingBottom: calc(#{var(--pf-global--spacer--sm)} - 3px);
   --pf-c-form-control--PaddingLeft: var(--pf-global--spacer--sm);
@@ -78,7 +81,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
 
-  &[readonly]{
+  &[readonly] {
     background-color: var(--pf-c-form-control--readonly--BackgroundColor);
     border-color: var(--pf-c-form-control--readonly--BorderColor);
   }
@@ -87,7 +90,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   :invalid {
     @include pf-bg-svg($pf-c-form-controls--invalid--Coordinates, $pf-c-form-controls--invalid--Color);
 
-    &:not(.pf-m-form-control-alt){
+    &:not(.pf-m-form-control-alt) {
       padding: var(--pf-c-form-control--invalid--PaddingTop) var(--pf-c-form-control--invalid--PaddingRight) var(--pf-c-form-control--invalid--PaddingBottom) var(--pf-c-form-control--invalid--PaddingLeft);
       border-color: var(--pf-c-form-control--invalid--BorderColor);
       border-width: var(--pf-c-form-control--invalid--BorderSize);

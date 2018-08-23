@@ -1,4 +1,5 @@
 @import "../../patternfly-utilities";
+
 .pf-c-alert {
   // component variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
@@ -49,84 +50,73 @@
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
 
-  &__icon {
-    display: flex;
-    padding: var(--pf-c-alert__icon--Padding);
-    font-size: 24px; // this is here until we land on a fixed way to set sizes for icons
-    svg { // b/c the svg is generated it must break BEM and not receive a class.
-      margin-top: var(--pf-c-alert__icon__svg--MarginTop);
-    }
-  }
-
-  &__body {
-    flex: 1 1 100%;
-    padding: var(--pf-c-alert__body--Padding);
-  }
-
-  &__title {
-    margin-top: var(--pf-c-alert__title--MarginTop);
-    margin-bottom: var(--pf-c-alert__title--MarginBottom);
-    font-size: var(--pf-c-alert__title--FontSize);
-  }
-
-  &__action {
-    padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
-  }
 
   &.pf-m-success {
-    .pf-c-alert {
+    .pf-c-alert__icon {
+      color: var(--pf-c-alert--m-success__icon--Color);
+      background-color: var(--pf-c-alert--m-success__icon--BackgroundColor);
+    }
 
-      &__icon {
-        color: var(--pf-c-alert--m-success__icon--Color);
-        background-color: var(--pf-c-alert--m-success__icon--BackgroundColor);
-      }
-
-      &__title {
-        color: var(--pf-c-alert--m-success__title--Color);
-      }
+    .pf-c-alert__title {
+      color: var(--pf-c-alert--m-success__title--Color);
     }
   }
 
   &.pf-m-danger {
-    .pf-c-alert {
+    .pf-c-alert__icon {
+      color: var(--pf-c-alert--m-danger__icon--Color);
+      background-color: var(--pf-c-alert--m-danger__icon--BackgroundColor);
+    }
 
-      &__icon {
-        color: var(--pf-c-alert--m-danger__icon--Color);
-        background-color: var(--pf-c-alert--m-danger__icon--BackgroundColor);
-      }
-
-      &__title {
-        color: var(--pf-c-alert--m-danger__title--Color);
-      }
+    .pf-c-alert__title {
+      color: var(--pf-c-alert--m-danger__title--Color);
     }
   }
 
   &.pf-m-warning {
-    .pf-c-alert {
+    .pf-c-alert__icon {
+      color: var(--pf-c-alert--m-warning__icon--Color);
+      background-color: var(--pf-c-alert--m-warning__icon--BackgroundColor);
+    }
 
-      &__icon {
-        color: var(--pf-c-alert--m-warning__icon--Color);
-        background-color: var(--pf-c-alert--m-warning__icon--BackgroundColor);
-      }
-
-      &__title {
-        color: var(--pf-c-alert--m-warning__title--Color);
-      }
+    .pf-c-alert__title {
+      color: var(--pf-c-alert--m-warning__title--Color);
     }
   }
 
   &.pf-m-info {
-    .pf-c-alert {
+    .pf-c-alert__icon {
+      color: var(--pf-c-alert--m-info__icon--Color);
+      background-color: var(--pf-c-alert--m-info__icon--BackgroundColor);
+    }
 
-      &__icon {
-        color: var(--pf-c-alert--m-info__icon--Color);
-        background-color: var(--pf-c-alert--m-info__icon--BackgroundColor);
-      }
-
-      &__title {
-        color: var(--pf-c-alert--m-info__title--Color);
-      }
+    .pf-c-alert__title {
+      color: var(--pf-c-alert--m-info__title--Color);
     }
   }
+}
 
+.pf-c-alert__icon {
+  display: flex;
+  padding: var(--pf-c-alert__icon--Padding);
+  font-size: 24px; // this is here until we land on a fixed way to set sizes for icons
+
+  svg { // b/c the svg is generated it must break BEM and not receive a class.
+    margin-top: var(--pf-c-alert__icon__svg--MarginTop);
+  }
+}
+
+.pf-c-alert__body {
+  flex: 1 1 100%;
+  padding: var(--pf-c-alert__body--Padding);
+}
+
+.pf-c-alert__title {
+  margin-top: var(--pf-c-alert__title--MarginTop);
+  margin-bottom: var(--pf-c-alert__title--MarginBottom);
+  font-size: var(--pf-c-alert__title--FontSize);
+}
+
+.pf-c-alert__action {
+  padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
 }

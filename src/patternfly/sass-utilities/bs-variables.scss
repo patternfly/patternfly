@@ -4,7 +4,7 @@
 // Bootstrap overwrites from patternfly Variables
 
 // Colors
-
+// stylelint-disable
 $white:    $pf-color-white !default;
 $gray-100: $pf-color-black-100 !default;
 $gray-200: $pf-color-black-200 !default;
@@ -148,6 +148,7 @@ $table-cell-padding-sm:       $pf-global--spacer--sm !default;
 
 $input-btn-padding-y:         $pf-global--spacer--sm !default;
 $input-btn-padding-x:         $pf-global--spacer--md !default;
+
 // $input-btn-line-height:       $line-height-base !default;
 
 // $input-btn-focus-width:       .2rem !default;
@@ -156,10 +157,12 @@ $input-btn-padding-x:         $pf-global--spacer--md !default;
 
 $input-btn-padding-y-sm:      $pf-global--spacer--xs !default;
 $input-btn-padding-x-sm:      $pf-global--spacer--md !default;
+
 // $input-btn-line-height-sm:    $line-height-sm !default;
 
 $input-btn-padding-y-lg:      $pf-global--spacer--md !default;
 $input-btn-padding-x-lg:      $pf-global--spacer--xl !default;
+
 // $input-btn-line-height-lg:    $line-height-lg !default;
 
 // $input-btn-border-width:      $border-width !default;
@@ -171,6 +174,7 @@ $input-btn-padding-x-lg:      $pf-global--spacer--xl !default;
 
 // $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $pf-global--spacer--3xl !default;
+
 // $btn-line-height:             $input-btn-line-height !default;
 
 // $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
@@ -185,6 +189,7 @@ $btn-padding-x:               $pf-global--spacer--3xl !default;
 
 // $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              none !default;
+
 // $btn-focus-width:             $input-btn-focus-width !default;
 // $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 // $btn-disabled-opacity:        .65 !default;
@@ -405,6 +410,7 @@ $form-text-margin-top:                  $pf-global--spacer--sm !default;
 // $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 //
 $nav-pills-border-radius:           10em !default;
+
 // $nav-pills-link-active-color:       $component-active-color !default;
 // $nav-pills-link-active-bg:          $component-active-bg !default;
 //
@@ -446,6 +452,7 @@ $pagination-padding-y-sm:           $pf-global--spacer--sm !default;
 $pagination-padding-x-sm:           $pf-global--spacer--md !default;
 $pagination-padding-y-lg:           $pf-global--spacer--lg !default;
 $pagination-padding-x-lg:           $pf-global--spacer--2xl !default;
+
 // $pagination-line-height:            1.25 !default;
 //
 // $pagination-color:                  $link-color !default;

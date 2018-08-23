@@ -1,0 +1,46 @@
+{{#> nav nav--attribute='aria-label="Primary Nav Grouped Example"'}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+      Section title 1
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Disabled link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+      Section title 2
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 2
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
