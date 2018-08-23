@@ -18,6 +18,7 @@
   --pf-c-input-group__action--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-input-group__action--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__action-hover--Color: var(--pf-global--Color--100);
+  --pf-c-input-group__action-focus--Color: var(--pf-global--Color--100);
   --pf-c-input-group__action-form-control--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-input-group__action-form-control--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
@@ -111,8 +112,13 @@
   border: none;
 
   &:hover,
-  &:focus {
+  &.pf-m-hover {
     color: var(--pf-c-input-group__action-hover--Color);
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    color: var(--pf-c-input-group__action-focus--Color);
   }
 
   &.pf-m-align-right {
