@@ -65,16 +65,19 @@ export default class Example extends React.Component {
     } = this.props;
     const output = { __html: this.props.children };
     const htmlDocs = { __html: docs };
-    const regex = /pf-[c|l]-[a-zA-Z-]* /gi;
+    const regex = /pf-[c|l]-[a-zA-Z-]*[ "]/gi;
     const matches = this.props.children.match(regex);
     let navigationItems;
     const processedComponents = [];
     if (matches) {
       navigationItems = matches.map(navItem => {
         let path = '';
-        if (processedComponents.indexOf(navItem) === -1) {
-          processedComponents.push(navItem);
-          const componentName = navItem.slice(5, navItem.length).trim();
+        const componentName = navItem
+          .slice(5, navItem.length)
+          .trim()
+          .replace(/[ -"]/g, '');
+        if (processedComponents.indexOf(componentName) === -1) {
+          processedComponents.push(componentName);
 
           if (navItem.startsWith('pf-l')) {
             path = `/layouts/${componentName}/examples`;
