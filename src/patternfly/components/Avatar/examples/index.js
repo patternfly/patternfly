@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Avatar Simple" handlebars={avatarSimpleExampleRaw} minHeight="20em">
+      <Example heading="Avatar Simple" handlebars={avatarSimpleExampleRaw}>
         {avatarSimpleExample}
       </Example>
     </Documentation>

@@ -1,19 +1,11 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-// --pf-c-avatar__element--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
 .pf-c-avatar {
-  /* stylelint-disable */
+  --pf-c-avatar--Width: 48px;
+  --pf-c-avatar--Height: 48px;
+  --pf-c-avatar--BorderRadius: 50%;
 
-  // Header avatar
-  --pf-l-page__header-avatar--Width:                        pf-size-prem(48px);
-  --pf-l-page__header-avatar--Height:                       pf-size-prem(48px);
-  --pf-l-page__header-avatar--MarginLeft:                   var(--pf-global--spacer--md);
-
-  /* stylelint-enable */
-
-  width: var(--pf-l-page__header-avatar--Height);
-  height: var(--pf-l-page__header-avatar--Width);
+  width: var(--pf-c-avatar--Width);
+  height: var(--pf-c-avatar--Height);
+  border-radius: var(--pf-c-avatar--BorderRadius);
 }
