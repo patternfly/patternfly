@@ -1,19 +1,19 @@
-<div class="pf-c-input-group">
+{{#> input-group }}
   {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
   {{#> form-controls controlType="textarea" name="textarea1" id="textarea1" }}
 {{/form-controls}}
     {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
-</div> 
+{{/input-group}}
 <br>
 <br>
-<div class="pf-c-input-group">
+{{#> input-group }}
   {{#> form-controls controlType="textarea" name="textarea2" id="textarea2" }}
 {{/form-controls}}
     {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
-</div> 
+{{/input-group}}
 <br>
 <br>
-<div class="pf-c-input-group">
+{{#> input-group }}
   {{#> dropdown id="dropdown-example-collapsed"}}
     Dropdown
     <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
@@ -21,10 +21,10 @@
   {{#> form-controls controlType="input" input="true" type="text" id="textInput3" name="textInput3" }}
 {{/form-controls}}
     {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-</div>
+{{/input-group}}
 <br>
 <br>
-<div class="pf-c-input-group">
+{{#> input-group }}
   {{#> form-controls controlType="input" input="true" type="text" id="textInput4" name="textInput4" }}
   {{/form-controls}} 
   {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
@@ -32,34 +32,52 @@
     Dropdown
     <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
   {{/dropdown}}
-</div>
+{{/input-group}}
 <br>
 <br>
-<div class="pf-c-input-group">
-  <span class="pf-c-input-group__text" aria-label="text input label">
+{{#> input-group }}
+  {{#> input-group-text inputGroupTextType="span" aria-label="text input label" }}
     <i class="fas fa-dollar-sign" aria-hidden="true"></i>
-  </span>
+  {{/input-group-text}}
   {{#> form-controls controlType="input" input="true" type="text" id="textInput5" name="textInput5" aria-label="standard input example" }}
 {{/form-controls}}
-<span class="pf-c-input-group__text">
+{{#> input-group-text inputGroupTextType="span"}}
     .00
-  </span>
-</div>
+  {{/input-group-text}}
+{{/input-group}}
 <br>
 <br>
-<div class="pf-c-input-group">
+{{#> input-group }}
   {{#> form-controls controlType="input" input="true" type="text" id="textInput6" name="textInput6" aria-label="standard input example" }}
 {{/form-controls}}
-  <span class="pf-c-input-group__text">
+  {{#> input-group-text inputGroupTextType="span"}}
     @example.com
-  </span>
-</div>
+  {{/input-group-text}}
+{{/input-group}}
 <br>
 <br>
-<div class="pf-c-input-group">
-  <span class="pf-c-input-group__text" aria-label="text input label">
+{{#> input-group }}
+  {{#> input-group-text inputGroupTextType="span" aria-label="text input label" }}
     <i class="fas fa-at" aria-hidden="true"></i>
-  </span>
-  {{#> form-controls pf-c-form-control--modifier="pf-m-invalid" required="true" aria-errormessage="textInput7error" controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-label="standard input example" }}
+  {{/input-group-text}}
+  {{#> form-controls pf-c-form-control--modifier="pf-m-invalid" required="true" controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-label="standard input example" }}
 {{/form-controls}}
-</div>
+{{/input-group}}
+<br>
+<br>
+{{#> input-group }}
+  {{#> input-group-action input-group-action--modifier="pf-m-align-left" inputGroupTextType="label" for="textInput8" for="textInput8"}}
+  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+  {{/input-group-action}}
+  {{#> form-controls controlType="input" input="true" type="date" id="textInput8" name="textInput8" aria-label="Date input example" }}
+{{/form-controls}}
+{{/input-group}}
+<br>
+<br>
+{{#> input-group }}
+        {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="button" aria-label="popover for input"}}
+            <i class="fas fa-question-circle aria-hidden="true"></i>
+        {{/input-group-action}}
+        {{#> form-controls controlType="input" input="true" type="text" id="textInput10" name="textInput10" aria-label="standard input example" }}
+{{/form-controls}}
+{{/input-group}}
