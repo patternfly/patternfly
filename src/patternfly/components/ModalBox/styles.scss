@@ -29,9 +29,9 @@
   --pf-c-modal-box__header--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Box Header Title
-  --pf-c-modal-box__header-title--FontSize: var(--pf-c-title--m-3xl--FontSize);
-  --pf-c-modal-box__header-title--FontWeight: var(--pf-c-title--m-3xl--FontWeight);
-  --pf-c-modal-box__header-title--LineHeight: var(--pf-c-title--m-3xl--LineHeight);
+  --pf-c-modal-box__header-title--FontSize: var(--pf-global--FontSize--3xl);
+  --pf-c-modal-box__header-title--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-modal-box__header-title--LineHeight: var(--pf-global--LineHeight--sm);
 
   // Box Body variables
   --pf-c-modal-box__body--PaddingTop: var(--pf-global--spacer--sm);
