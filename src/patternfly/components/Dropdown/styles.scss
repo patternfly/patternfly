@@ -17,7 +17,7 @@
   --pf-c-dropdown__toggle--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--hover--BorderWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--BorderColor);
   --pf-c-dropdown__toggle--expanded--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--expanded--BorderColor: var(--pf-global--active-color--100);
 
@@ -82,7 +82,6 @@
   &:hover,
   &.pf-m-hover {
     &::before {
-      border-color: var(--pf-c-dropdown__toggle--hover--BorderColor);
       border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
     }
   }
@@ -90,7 +89,8 @@
   &:active,
   &.pf-m-active,
   .pf-m-expanded > &,
-  .pf-m-plain.pf-m-expanded > & {
+  .pf-m-plain.pf-m-expanded > &,
+  .pf-m-plain.pf-m-expanded:hover > & {
     &::before {
       border-color: var(--pf-c-dropdown__toggle--expanded--BorderColor);
       border-width: var(--pf-c-dropdown__toggle--expanded--BorderWidth);
