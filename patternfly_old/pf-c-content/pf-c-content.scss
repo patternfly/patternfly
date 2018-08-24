@@ -30,7 +30,7 @@
   blockquote,
   pre,
   table {
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: $pf-global--spacer--xl;
     }
   }

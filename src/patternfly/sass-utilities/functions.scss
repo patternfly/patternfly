@@ -22,6 +22,7 @@
   $g: green($color);
   $b: blue($color);
 
+  // Create the the YIQ color from RGB values
   $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
   @if ($yiq >= $pf-global-yiq-contrasted-threshold) {

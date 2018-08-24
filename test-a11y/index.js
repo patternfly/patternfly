@@ -27,7 +27,7 @@ const testPageA11y = testPage =>
     driver.get(`http://${host}:8000${testPage.path}`).then(() => {
       AxeBuilder(driver)
         .withTags(['wcag2a', 'wcag2aa'])
-        .disableRules(['document-title'])
+        .disableRules(['document-title', 'color-contrast'])
         .analyze()
         .then(results => {
           if (results.violations.length > 0) {

@@ -20,3 +20,4 @@ For example for buttons: Always add a modifier class to add color to the button.
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-u-sr-only{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
+| `.pf-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-u-sr-only` |

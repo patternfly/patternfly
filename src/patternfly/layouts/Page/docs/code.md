@@ -6,8 +6,8 @@ This layout provides the basic chrome for a page, including sidebar, header and 
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role="banner"` | `.pf-l-page__header` | .  |
-| `role="main"` | `.pf-l-page__main` | .  |
+| `role="banner"` | `.pf-l-page__header` | Identifies the element that serves as the banner region. **Required** |
+| `role="main"` | `.pf-l-page__main` | Identifies the element that serves as the main region. **Required** |
 
 ## Usage
 

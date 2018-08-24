@@ -54,6 +54,7 @@
   --pf-c-content--small--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--small--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-content--small--Color: var(--pf-global--Color--200);
+  --pf-c-content--small--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Links
   --pf-c-content--a--Color: var(--pf-global--link--Color);
@@ -237,6 +238,7 @@
       grid-row-gap: var(--pf-c-content--dl--RowGap);
     }
   }
+
   dt {
     font-weight: var(--pf-c-content--dt--FontWeight);
 
@@ -252,6 +254,7 @@
       grid-column: 1;
     }
   }
+
   dd {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       grid-column: 2;

@@ -1,0 +1,53 @@
+{{#> nav nav--attribute='aria-label="Primary Nav Expandable Example"'}}
+  {{#> nav-list}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 1
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title1"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title1"'}}
+          Current and expanded example sub-navigation
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Current link
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 2
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title2"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title2"'}}
+          Expanded, but not current example sub-navigation
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}

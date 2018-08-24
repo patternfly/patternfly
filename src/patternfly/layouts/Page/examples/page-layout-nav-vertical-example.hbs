@@ -1,0 +1,35 @@
+{{#> page}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-sidebar-toggle nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
+      {{/page-sidebar-toggle}}
+      Logo
+    {{/page-header-brand}}
+    {{#> page-header-selector}}
+      pf-c-context-selector
+    {{/page-header-selector}}
+    {{#> page-header-tools}}
+      pf-l-toolbar
+    {{/page-header-tools}}
+  {{/page-header}}
+
+  {{#> page-sidebar}} 
+    {{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
+      pf-c-nav
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark"}}
+      Page Layout Content test 2
+    {{/page-main-section}}
+
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      Page Layout Content test 2
+    {{/page-main-section}}
+
+    {{#> page-main-section}}
+      Page Layout Content test 2
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}

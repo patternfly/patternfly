@@ -1,11 +1,14 @@
 @import "../../patternfly-utilities";
 
 .pf-c-badge {
+  // Component
   --pf-c-badge--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-badge--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-badge--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-badge--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-badge--PaddingRight: var(--pf-global--spacer--sm);
+
+  // Modifiers
   --pf-c-badge--m-read--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-badge--m-read--Color: var(--pf-global--Color--dark-100);
   --pf-c-badge--m-unread--BackgroundColor: var(--pf-global--primary-color--200);

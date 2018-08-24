@@ -152,16 +152,13 @@ PatternFly doesn't follow these rules:
 - [Multi-line CSS](https://cssguidelin.es/#multi-line-css)
 - [Indenting](https://cssguidelin.es/#indenting)
 - [Meaningful Whitespace](https://cssguidelin.es/#meaningful-whitespace)
+- [80 Characters Wide](https://cssguidelin.es/#characters-wide)
 
 ### Deviations from Harry Robert's Guidelines
 
 #### HTML
 
 **Practicality over purity**. Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
-
-#### Lintable HTML rules
-
-The [HTML linter](link) is PatternFly's single source of truth for HTML syntax, Attribute order and other HTML rules.
 
 #### Comment and Organization
 
@@ -197,7 +194,7 @@ Describes a specific line of code.
 
 #### Lintable CSS rules
 
-The [CSS linter](link) is PatternFly's single source of truth for CSS syntax, declaration order and other CSS rules like disallow type selectors, disallow vendor prefixes, and more.
+The [CSS linter](https://stylelint.io/) is PatternFly's single source of truth for CSS syntax, declaration order, and other CSS rules like disallow type selectors, disallow vendor prefixes, and more.
 
 #### Shorthand notation
 
@@ -239,41 +236,44 @@ As a general rule don't overcomplicate Sass, keep it easy to parse for a normal 
 
 #### Nesting
 
-As a general rule avoid Sass nesting to increase specificity. If absolutely necessary, don't exceed a three layer depth.
+As a general rule avoid Sass nesting to increase specificity. Try not to nest more than three layers deep.
 
 Limit nesting to the following use cases:
 
-1. Modifiers and elements of a block
+1. Modifiers
 1. Media queries
-1. States, pseudo-classes and pseudo-elements
+1. States, pseudo-classes, and pseudo-elements
+1. Combinators
 
 ##### 1. Modifiers and elements of a block
 
-Make use of [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to write BEM elements and modifiers. You should only have one block selector:
+* Do not use [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
+* Do use that method to create compound selectors with modifier classes.
 
 ```sass
 // Good
 .pf-nav {
+  ...
 
-  &__item {
+  &.pf-m-vertical {
     ...
   }
+}
 
-  &.is-modifier {
-    ...
-  }
+.pf-nav__item {
+  ...
 }
 
 // Bad
 .pf-nav {
   ...
+
+  &__item {
+    ...
+  }
 }
 
-.pf-nav--modifier {
-  ...
-}
-
-.pf-nav_item {
+.pf-m-nav.pf-m-vertical {
   ...
 }
 ```
@@ -311,7 +311,8 @@ States of a component should be included as a nested element. This includes hove
 .pf-button {
   background: $color;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $lighter-color;
   }
 }
@@ -323,13 +324,9 @@ Classes that duplicate a state should be named with the prefix `pf-m-`. For exam
 
 We create global Sass variables to keep a Bootstrap theme in sync. These values also inform our component level variables .
 
-#### Mixins
+#### @mixin and @extend
 
-Since our components are isolated and modular try to avoid mixins because they generate a dependency.
-
-#### @extend
-
-Don't use `@extend`.
+Since our components are isolated and modular try to avoid `@mixin` and `@extend` because they generate a dependency.
 
 ## References
 
@@ -339,5 +336,3 @@ This guide is inspired by people we follow and respect:
 - **[Robert Harris](http://csswizardry.com/):** [CSS Guidelines](http://cssguidelin.es/)
 - **[Gravity Department](http://gravitydept.com/)**: [Style Guide Field Manual](http://manuals.gravitydept.com/code/css/style-guide)
 - **[Hugo Giraudel](http://hugogiraudel.com/):** [SASS Guidelines](https://sass-guidelin.es/)
-
-Thank you :heart:

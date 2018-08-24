@@ -146,7 +146,7 @@
   > :first-child {
     margin-right: var(--pf-c-button--item--MarginRight);
   }
-
+  
   &.pf-m-block {
     display: block;
     width: 100%;
@@ -339,6 +339,7 @@
     &.pf-m-focus {
       color: var(--pf-c-button--m-link--focus--Color);
     }
+    
     &::after {
       border: var(--pf-c-button--m-link--Border);
     }

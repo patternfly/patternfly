@@ -12,9 +12,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--pf-c-backdrop--Color);
-  // Vendor prefix needed for Safari, but it is not getting added in the autoprefixer right now
-  // Stylelint is disabled for one line so that the prefixed line can be included here
   /* stylelint-disable-next-line */
-  -webkit-backdrop-filter: var(--pf-c-backdrop--BackdropFilter);
+  -webkit-backdrop-filter: var(--pf-c-backdrop--BackdropFilter); // Vendor prefix needed for Safari, but it is not getting added in the autoprefixer right now
   backdrop-filter: var(--pf-c-backdrop--BackdropFilter);
 }

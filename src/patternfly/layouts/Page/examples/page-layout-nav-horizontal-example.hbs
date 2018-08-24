@@ -1,0 +1,38 @@
+{{#> page page--nav-direction="vertical"}}
+  {{#> page-header}}
+
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      Logo
+    {{/page-header-brand}}
+
+    {{!-- Context Selector --}}
+    {{#> page-header-selector}}
+      pf-c-context-selector
+    {{/page-header-selector}}
+
+    {{!-- Horizontal Nav --}}
+    {{#> page-header-nav}}
+      pf-c-nav
+    {{/page-header-nav}}
+
+    {{!-- Toolbar --}}
+    {{#> page-header-tools}}
+      pf-l-toolbar
+    {{/page-header-tools}}
+  {{/page-header}}
+
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark"}}
+      Page Layout Content test 2
+    {{/page-main-section}}
+
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      Page Layout Content test 2
+    {{/page-main-section}}
+
+    {{#> page-main-section}}
+      Page Layout Content test 2
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}

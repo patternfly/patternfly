@@ -1,59 +1,60 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
-  "plugins": [
-    "stylelint-order"
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss"
   ],
-  ignoreFiles: [
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
     "./build/blueprints/**/*.scss",
     "./tmp/**/*.scss",
     "./dist/**/*.scss"
   ],
   "rules": {
-    "at-rule-empty-line-before": [null,
-      "except": ["first-nested"]
-    ],
+    "at-rule-empty-line-before": [ "always", {
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested"
+      ],
+      "ignore": ["after-comment"],
+      "ignoreAtRules": "else"
+    }],
     "at-rule-name-space-after": "always",
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-space-before": "never",
-    "block-closing-brace-empty-line-before": null,
-    "block-closing-brace-newline-after": null,
-    "block-no-empty": null,
-    "block-opening-brace-space-before": null,
-    "color-named": "never",
-    "declaration-block-semicolon-newline-after": "always-multi-line",
-    "declaration-block-semicolon-newline-before": "never-multi-line",
-    "declaration-block-semicolon-space-after": "always-single-line",
-    "declaration-empty-line-before": null,
-    "declaration-no-important": [true, {
-      "severity": "error"
+    "block-no-empty": true,
+    "block-closing-brace-newline-after": ["always", {
+      "ignoreAtRules": [
+        "if",
+        "else"
+      ]
     }],
+    "color-named": "never",
+    "color-no-invalid-hex": true,
+    "comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": [
+        "after-comment",
+        "stylelint-commands"
+      ]
+    }],
+    "declaration-block-semicolon-newline-before": "never-multi-line",
+    "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": "numeric",
-    "function-url-no-scheme-relative": true,
+    "function-comma-newline-before": "never-multi-line",
     "function-url-quotes": "always",
-    "length-zero-no-unit": true,
     "max-empty-lines": 2,
-    "max-line-length": null,
+    "max-nesting-depth": 3,
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
-    "media-feature-range-operator-space-after": "always",
-    "media-feature-range-operator-space-before": "never",
+    "media-query-list-comma-newline-before": "never-multi-line",
     "no-descending-specificity": null,
-    "no-duplicate-selectors": true,
-    "no-eol-whitespace": true,
-    "no-extra-semicolons": [true, {
-      "message": "You have extra semicolons - please remove them.",
-      "severity": "error"
-    }],
-    "no-invalid-double-slash-comments": [true, {
-      "message": "Double Slash `//` comments are not supported by CSS."
-    }],
     "no-unknown-animations": true,
-    "number-leading-zero": ["never", {
-      "message": "Do not add zeros before a number.",
-      "severity": "error"
-    }],
+    "number-leading-zero": "never",
     "order/properties-order": [
       "position",
       "top",
@@ -240,34 +241,46 @@
       "animation-iteration-count",
       "animation-direction"
     ],
-    "property-no-vendor-prefix": [true, {
-      "severity": "error"
+    "property-no-vendor-prefix": true,
+    "scss/declaration-nested-properties": "never",
+    "scss/dollar-variable-empty-line-before": ["always", {
+      "except": [
+        "first-nested",
+        "after-comment",
+        "after-dollar-variable"
+      ]
     }],
-    "rule-empty-line-before": null,
+    "scss/double-slash-comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": [
+        "between-comments",
+        "stylelint-commands"
+      ]
+    }],
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/operator-no-unspaced": true,
+    "scss/dollar-variable-colon-space-after": "at-least-one-space",
+    "scss/dollar-variable-colon-space-before": "never",
     "selector-attribute-quotes": "always",
+    "selector-class-pattern": "pf-",
     "selector-list-comma-newline-after": "always-multi-line",
     "selector-list-comma-newline-before": "never-multi-line",
     "selector-list-comma-space-after": "always-single-line",
-    "selector-list-comma-space-before": "never-single-line",
+    "selector-list-comma-space-before": "never",
     "selector-max-attribute": 2,
     "selector-max-class": 4,
     "selector-max-combinators": 4,
     "selector-max-compound-selectors": 4,
-    "selector-max-empty-lines": 1,
     "selector-max-id": 0,
-    "selector-max-specificity": null,
     "selector-max-type": 2,
     "selector-max-universal": 1,
+    "selector-nested-pattern": "^(?!.*&[-_])",
     "selector-no-qualifying-type": true,
     "selector-no-vendor-prefix": true,
+    "shorthand-property-no-redundant-values": true,
     "string-quotes": "double",
     "value-keyword-case": "lower",
-    "value-list-comma-newline-after": "never-multi-line",
     "value-list-comma-newline-before": "never-multi-line",
-    "value-list-comma-space-after": "always-single-line",
-    "value-no-vendor-prefix": [true, {
-      "message": "You should use an autoprefixer to add vendor prefixes.",
-      "severity": "warning"
-    }]
+    "value-no-vendor-prefix": true
   }
 }
