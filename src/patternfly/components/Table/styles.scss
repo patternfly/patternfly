@@ -51,10 +51,6 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
   // ============================================================ //
 
 
-
-  // temp global transition, will move after nav system is merged
-  --pf-global--transition:                              var(--pf-global--Transition);
-
   // Table
   --pf-c-table--Color:                                  var(--pf-global--Color--dark-100);
 

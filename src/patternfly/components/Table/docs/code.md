@@ -7,6 +7,8 @@ Expandable tables - table columns may shift when expanding/collapsing. To addres
 
 By default, all table header cells are set to `white-space: nowrap`. If a `<th>`'s content needs to wrap, apply `.pf-m-wrap`.
 
+The current table implementation supports, if expandable, one toggle positioned at the beginning of row. 
+
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
@@ -19,6 +21,8 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 | experimental `hidden` | `.pf-c-table__expandable-row` | Removes element from keyboard focus. |
 | `tabindex="-1"` | `<td>`, `.pf-m-blank` | Removes element from keyboard focus. |
 | `aria-role="presentation"` | `.pf-c-table__expandable-row-content` | Declares that an element is being used only for presentation and therefore does not have any accessibility semantics.  |
+| `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
+
 
 ## Usage
 
