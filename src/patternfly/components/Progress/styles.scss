@@ -56,6 +56,7 @@
     align-self: center;
     height: var(--pf-c-progress__bar--Height);
     background-color: var(--pf-c-progress__bar-underlay--BackgroundColor);
+
     &::before {
       position: absolute;
       width: 100%;
@@ -82,6 +83,7 @@
   &.pf-m-lg {
     --pf-c-progress__bar--Height: var(--pf-c-progress__bar--Height--lg); // set height to the large height
   }
+
   &.pf-m-sm {
     --pf-c-progress__bar--Height: var(--pf-c-progress__bar--Height--sm); // set height to the small height
   }
@@ -93,6 +95,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .pf-c-progress__measure {
       color: var(--pf-c-progress__measure--inside--Color);
       text-align: center;
@@ -104,11 +107,13 @@
     .pf-c-progress__description {
       grid-column: 1 / 3;
     }
+
     .pf-c-progress__status {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
       align-self: center;
     }
+
     .pf-c-progress__bar,
     .pf-c-progress__indicator {
       grid-column: 1 / 2;
@@ -120,6 +125,7 @@
     --pf-c-progress__bar--BackgroundColor: var(--pf-c-progress--m-success--BackgroundColor);
     --pf-c-progress__status--Color: var(--pf-c-progress__status--m-success--Color);
   }
+
   &.pf-m-danger { // set color variables to the danger colors
     --pf-c-progress__bar--BackgroundColor: var(--pf-c-progress--m-danger--BackgroundColor);
     --pf-c-progress__status--Color: var(--pf-c-progress__status--m-danger--Color);
