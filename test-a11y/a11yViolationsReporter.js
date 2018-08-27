@@ -1,15 +1,27 @@
 /* eslint no-console: 0 */
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
+const config = require('./config');
+const { errorsExceedThreshold, dec } = require('./utils');
 
 const violatingPages = [];
 const violations = [];
-const logColors = {
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  blue: '\x1b[36m',
-  yellow: '\x1b[33m',
-  reset: '\x1b[0m'
+const { logColors } = config;
+const reportSummary = () => {
+  console.log(
+    `${logColors.blue}%s${logColors.reset}`,
+    '\n--------------PF Component Accessibility Audit--------------'
+  );
+  console.log(
+    violatingPages.length ? logColors.red : logColors.green,
+    `Found ${violatingPages.length} Page${violatingPages.length === 1 ? '' : 's'} with Accessibility Errors
+    \n ${violations.length} violation${violations.length === 1 ? '' : 's'} in total`
+  );
+  console.log(
+    `${logColors.blue}%s${logColors.reset}`,
+    '------------------------------------------------------------\n'
+  );
 };
 
 const logOutput = testPages => {
@@ -43,44 +55,74 @@ const logOutput = testPages => {
   }
 };
 
+const updateStatus = (status, description) => {
+  const sha = process.env.TRAVIS_PULL_REQUEST_SHA || process.env.TRAVIS_COMMIT;
+  const repoSlug = process.env.TRAVIS_REPO_SLUG;
+  const githubToken = dec(process.env.GITHUB_A11Y_TOKEN);
+  const buildId = process.env.TRAVIS_BUILD_ID;
+  const url = `https://api.github.com/repos/${repoSlug}/statuses/${sha}?access_token=${githubToken}`;
+
+  return axios
+    .post(url, {
+      state: status,
+      context: 'Patternfly Accessibility Reporter',
+      description,
+      target_url: `https://travis-ci.com/${repoSlug}/builds/${buildId}`
+    })
+    .catch(error => {
+      console.log(error);
+    });
+};
+
 const violationsReporter = (testPages, reportType) => {
-  switch (reportType) {
-    case 'json':
-      console.log(JSON.stringify(testPages, null, 2));
-      break;
-    case 'writefile': {
-      const location = path.resolve(__dirname, 'pf_a11y_violations.json');
-      fs.writeFileSync(location, JSON.stringify(testPages, null, 2));
-      console.log(`${logColors.yellow}%s${logColors.reset}`, `Raw audit data available at: ${location}\n`);
-      break;
+  const reportPromise = new Promise((resolve, reject) => {
+    switch (reportType) {
+      case 'json':
+        console.log(JSON.stringify(testPages, null, 2));
+        resolve();
+        break;
+      case 'writefile': {
+        const location = path.resolve(__dirname, 'pf_a11y_violations.json');
+        fs.writeFileSync(location, JSON.stringify(testPages, null, 2));
+        console.log(`${logColors.yellow}%s${logColors.reset}`, `Raw audit data available at: ${location}\n`);
+        resolve();
+        break;
+      }
+      case 'github-status-reporter': {
+        const overErrorLimit = errorsExceedThreshold(violations.length, config.toleranceThreshold);
+        const status = overErrorLimit ? 'failure' : 'success';
+        const description = overErrorLimit ? 'Too many accessibility violations' : 'A11y Checks Pass!';
+        updateStatus(status, description)
+          .then(() => {
+            resolve();
+          })
+          .catch(error => {
+            reject(error);
+          });
+        break;
+      }
+      default: {
+        logOutput(testPages);
+        resolve();
+      }
     }
-    default: {
-      logOutput(testPages);
-    }
-  }
+  });
+
+  return reportPromise;
 };
 
 module.exports = {
   pfReporter: {
-    report: errors => {
-      violationsReporter(errors, 'default');
-      console.log(
-        `${logColors.blue}%s${logColors.reset}`,
-        '\n--------------PF Component Accessibility Audit--------------'
-      );
-      console.log(
-        violatingPages.length ? logColors.red : logColors.green,
-        `Found ${violatingPages.length} Page${violatingPages.length === 1 ? '' : 's'} with Accessibility Errors
-        \n ${violations.length} violation${violations.length === 1 ? '' : 's'} in total`
-      );
-      console.log(
-        `${logColors.blue}%s${logColors.reset}`,
-        '------------------------------------------------------------\n'
-      );
-      if (!process.env.CI) {
-        violationsReporter(errors, 'writefile');
-      }
-      return violations;
-    }
+    report: errors =>
+      violationsReporter(errors, 'default')
+        .then(() => {
+          reportSummary();
+        })
+        .then(() => {
+          const finalReportType = !process.env.CI ? 'writefile' : 'github-status-reporter';
+          return violationsReporter(errors, finalReportType);
+        })
+        .then(() => violations),
+    updateStatus
   }
 };
