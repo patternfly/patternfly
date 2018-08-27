@@ -1,0 +1,51 @@
+{{!--   This builds a progress bar. The handlebars parameters below provide options:
+  pf-c-progress--value The percentage of progress 
+  pf-c-progress--description Description to show above the progress bar 
+  pf-c-progress--modifier Other modifiers: pf-m-lg, pf-m-sm
+  pf-c-progress--inside Modifies to have measure shown inside the progress bar
+  pf-c-progress--success Indicates success
+  pf-c-progress--danger Indicates danger/failure
+  pf-c-progress--no-measure Does not output a measure
+  pf-c-progress__id ID for the component
+ --}}
+<div class="pf-c-progress {{pf-c-progress--modifier}}
+  {{~#if pf-c-progress--inside}}
+    pf-m-inside
+  {{~/if}}
+  {{~#if pf-c-progress--outside}}
+    pf-m-outside
+  {{~/if}}
+  {{~#if pf-c-progress--success}}
+    pf-m-success
+  {{~/if}}
+  {{~#if pf-c-progress--danger}}
+    pf-m-danger
+  {{~/if}}"
+  {{#if pf-c-progress__id}}
+    id="{{pf-c-progress__id}}"
+  {{/if}}
+  role="progressbar"
+  aria-valuemin="0"
+  aria-valuemax="100"
+  aria-valuenow="{{pf-c-progress--value}}"
+  aria-valuetext="{{pf-c-progress--description}}">
+  <div class="pf-c-progress__description">{{pf-c-progress--description}}</div>
+  <div class="pf-c-progress__status">
+    {{#unless pf-c-progress--inside}}
+        {{#unless pf-c-progress--no-measure}}
+          {{>progress__measure}}
+        {{/unless}}
+    {{/unless}}
+    {{> progress__status-icon}}
+  </div>
+  <div class="pf-c-progress__bar">
+  <div class="pf-c-progress__indicator" style="width:{{pf-c-progress--value}}%">
+    {{#if pf-c-progress--inside}}
+      {{#unless pf-c-progress--no-measure}}
+        {{>progress__measure}}
+      {{/unless}}
+    {{/if}}    
+  </div>
+</div>
+  {{> @partial-block}}
+</div>
