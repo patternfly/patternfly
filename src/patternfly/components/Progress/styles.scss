@@ -11,6 +11,7 @@
   --pf-c-progress__status--Color: var(--pf-global--Color--100); // the status icon default color is the default text color
   --pf-c-progress__measure--inside--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
   --pf-c-progress__measure--inside-success--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
+  --pf-c-progress__measure--inside--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress__status-icon--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-progress__bar--Height: var(--pf-global--spacer--md);
   --pf-c-progress__bar--Height--sm: var(--pf-global--spacer--sm);
@@ -49,6 +50,7 @@
     }
 
     .pf-c-progress__measure {
+      font-size: var(--pf-c-progress__measure--inside--FontSize);
       color: var(--pf-c-progress__measure--inside--Color);
       text-align: center;
     }
