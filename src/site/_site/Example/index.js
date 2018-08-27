@@ -65,7 +65,7 @@ export default class Example extends React.Component {
     } = this.props;
     const output = { __html: this.props.children };
     const htmlDocs = { __html: docs };
-    const regex = /pf-[c|l]-[a-zA-Z-]*[ "]/gi;
+    const regex = /pf-[c|l]-[a-zA-Z-]*[\s"]/gi;
     const matches = this.props.children.match(regex);
     let navigationItems;
     const processedComponents = [];
@@ -75,7 +75,7 @@ export default class Example extends React.Component {
         const componentName = navItem
           .slice(5, navItem.length)
           .trim()
-          .replace(/[ -"]/g, '');
+          .replace(/[\s-"]/g, '');
         if (processedComponents.indexOf(componentName) === -1) {
           processedComponents.push(componentName);
 
@@ -144,7 +144,7 @@ export default class Example extends React.Component {
             </ul>
             {sourceTab}
             <div className="Example__componentLink">
-              Components used: <ul>{navigationItems}</ul>
+              Components and Layouts used: <ul>{navigationItems}</ul>
             </div>
           </div>
         </div>
