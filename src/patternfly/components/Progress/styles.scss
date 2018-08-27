@@ -10,11 +10,13 @@
   --pf-c-progress__bar-underlay--BackgroundColor: var(--pf-global--BackgroundColor--light-100); // the bar always needs white under it so that the semi-transparent color shows correctly
   --pf-c-progress__status--Color: var(--pf-global--Color--100); // the status icon default color is the default text color
   --pf-c-progress__measure--inside--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
+  --pf-c-progress__measure--inside-success--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
   --pf-c-progress__status-icon--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-progress__bar--Height: var(--pf-global--spacer--md);
   --pf-c-progress__bar--Height--sm: var(--pf-global--spacer--sm);
   --pf-c-progress__bar--Height--lg: var(--pf-global--spacer--lg);
   --pf-c-progress__bar-overlay--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
+  --pf-c-progress__indicator--MinWidth: var(--pf-global--spacer--xl);
 
   // Modifier variables
   --pf-c-progress--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
@@ -27,56 +29,6 @@
   grid-gap: var(--pf-c-progress--GridGap);
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
-
-  // Element
-
-  // the progress__description is displayed above the progress bar on the left
-  .pf-c-progress__description {
-    grid-column: 1 / 2;
-  }
-
-  // the progress__status is displayed in the upper right
-  .pf-c-progress__status {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    align-self: end;
-  }
-
-  // the progress__status-icon is an icon displayed always in the upper right
-  .pf-c-progress__status-icon {
-    margin-left: var(--pf-c-progress__status-icon--MarginLeft);
-    color: var(--pf-c-progress__status--Color);
-  }
-
-  // The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color
-  .pf-c-progress__bar {
-    position: relative;
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    align-self: center;
-    height: var(--pf-c-progress__bar--Height);
-    background-color: var(--pf-c-progress__bar-underlay--BackgroundColor);
-
-    &::before {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: "";
-      background-color: var(--pf-c-progress__bar--BackgroundColor);
-      opacity: var(--pf-c-progress__bar-overlay--Opacity);
-    }
-  }
-
-  // the progress__indicator is the part that advances (widens) as progress is made
-  // It is assumed that the width of the progress__indicator is set inline or via Javascript
-  .pf-c-progress__indicator {
-    position: absolute; // position absolute to bring above the semi-transparent bar overlay
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    align-self: center;
-    height: var(--pf-c-progress__bar--Height);
-    background-color: var(--pf-c-progress__bar--BackgroundColor);
-  }
 
   // Modifiers
   // size modifiers
@@ -124,6 +76,7 @@
   &.pf-m-success { // set color variables to the success colors
     --pf-c-progress__bar--BackgroundColor: var(--pf-c-progress--m-success--BackgroundColor);
     --pf-c-progress__status--Color: var(--pf-c-progress__status--m-success--Color);
+    --pf-c-progress__measure--inside--Color: var(--pf-c-progress__measure--inside-success--Color);
   }
 
   &.pf-m-danger { // set color variables to the danger colors
@@ -131,3 +84,55 @@
     --pf-c-progress__status--Color: var(--pf-c-progress__status--m-danger--Color);
   }
 }
+
+// Elements
+
+// the progress__description is displayed above the progress bar on the left
+.pf-c-progress__description {
+  grid-column: 1 / 2;
+}
+
+// the progress__status is displayed in the upper right
+.pf-c-progress__status {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: end;
+}
+
+// the progress__status-icon is an icon displayed always in the upper right
+.pf-c-progress__status-icon {
+  margin-left: var(--pf-c-progress__status-icon--MarginLeft);
+  color: var(--pf-c-progress__status--Color);
+}
+
+// The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color
+.pf-c-progress__bar {
+  position: relative;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  align-self: center;
+  height: var(--pf-c-progress__bar--Height);
+  background-color: var(--pf-c-progress__bar-underlay--BackgroundColor);
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: var(--pf-c-progress__bar--BackgroundColor);
+    opacity: var(--pf-c-progress__bar-overlay--Opacity);
+  }
+}
+
+// the progress__indicator is the part that advances (widens) as progress is made
+// It is assumed that the width of the progress__indicator is set inline or via Javascript
+.pf-c-progress__indicator {
+  position: absolute; // position absolute to bring above the semi-transparent bar overlay
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  align-self: center;
+  min-width: var(--pf-c-progress__indicator--MinWidth);
+  height: var(--pf-c-progress__bar--Height);
+  background-color: var(--pf-c-progress__bar--BackgroundColor);
+}
+
