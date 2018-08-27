@@ -49,16 +49,11 @@ $nav: "pf-c-nav";
   --pf-l-page__header-nav--MarginRight--md:                 var(--pf-global--spacer--xl);
   --pf-l-page__header-nav--BackgroundColor--sm:             var(--pf-global--BackgroundColor--dark-transparent-100);
 
-  // Header toolbar
-  --pf-l-page__header-toolbar--PaddingTop:                  var(--pf-global--spacer--xl);
-  --pf-l-page__header-toolbar--PaddingRight:                var(--pf-global--spacer--xl);
-  --pf-l-page__header-toolbar--PaddingBottom:               var(--pf-global--spacer--md);
+  // Header tools
+  --pf-l-page__header-tools--MarginRight:                   var(--pf-global--spacer--xl);
   --pf-l-page__header-tools--toolbar--MarginTop:            var(--pf-global--spacer--md);
   --pf-l-page__header-tools--toolbar--MarginBottom:         var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--MarginRight:                   var(--pf-global--spacer--xl);
-
-  // Header avatar
-  --pf-c-avatar--MarginLeft:                                var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--avatar--MarginLeft:            var(--pf-global--spacer--md);
 
   // Sidebar
   --pf-l-page__sidebar--ZIndex:                             var(--pf-global--ZIndex--xl);
@@ -130,10 +125,6 @@ $nav: "pf-c-nav";
     display: flex;
     align-items: flex-end;
   }
-
-  .pf-c-avatar {
-    margin-left: var(--pf-l-page__header-avatar--MarginLeft);
-  }
 }
 
 // Brand
@@ -203,6 +194,10 @@ $nav: "pf-c-nav";
     // include margin-top for avatar to position itself vertically
     margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop);
     margin-bottom: var(--pf-l-page__header-tools--toolbar--MarginBottom);
+  }
+
+  .pf-c-avatar {
+    margin-left: var(--pf-l-page__header-tools--avatar--MarginLeft);
   }
 }
 
