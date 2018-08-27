@@ -1,6 +1,11 @@
 # Contribution Guidelines
 
-## Naming Blocks
+[Component, Layout, Demo Creation](#component-layout-demo-creation)
+| [Modifiers](#modifiers)
+| [Pull Request Guidelines](#pull-request-guidelines)
+
+## Component, Layout, Demo Creation
+### Naming Blocks
 
 Components, layouts, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
 Example: `Button`, `SecondaryNav`
@@ -40,6 +45,7 @@ There are several properties available on the Example component to help with sty
 
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
 
+## Modifiers
 ### Modifier parameter
 
 Every block and element should have a parameter allowing for modifier classes to be passed in. These should be named in kebab case with the block/element name plus `--modifier`.
@@ -70,10 +76,32 @@ If there is a possibility of a block nested inside another block of the same typ
 {{/card}}
 ```
 
-## Common Modifier Class Names
+### Common Modifier Class Names
 
 Modifier classes help us to create variations of blocks. Reuse names as much as possible to avoid confusion.
 
 | Modifier Class Name | Outcome                                                             |
 | ------------------- | ------------------------------------------------------------------- |
 | `pf-m-gutter`   | Adds vertical (if applicable) and horizontal gutters to the element |
+
+
+## Pull Request Guidelines
+
+In order to streamline reviews and set expectations, the following should be expected when submitting a pull request:
+
+ - All pull requests should have an issue that the work relates to.
+
+ - A single reviewer should follow the PR through from start to finish after it has been submitted - if somebody else needs to follow it through to completion, please make that transition clear in the PR comments.
+
+ - As much as possible, comments should be actionable. It should be clear to the contributor exactly what needs to change. If there are open questions that require in-depth conversation, consider meeting or using [slack](http://slack.patternfly.org) to quickly arrive at an actionable conclusion.
+
+ - If the main issue has been addressed but there is still work that arises from the PR, please open an issue with the necessary information (and referencing this original PR) to follow up on afterwards.
+
+ - The reviewer should consider the following as they review:
+    1) Have all css naming conventions been followed?
+    2) Have the classes been documented?
+    3) Are all variables declared locally and referencing global defaults?
+    4) Have you verified the examples match the design?
+    5) Does the responsive behavior work correctly?
+    6) Have the accessibility standards been followed?
+    7) Is the example resilient - if you put more content in it, do things start to break?
