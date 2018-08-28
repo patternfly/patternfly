@@ -12,6 +12,7 @@ import progressInsideSuccessExampleRaw from '!raw!./progress-inside-success-exam
 import progressOutsideFailureExampleRaw from '!raw!./progress-outside-failure-example.hbs';
 import progressNoMeasureExampleRaw from '!raw!./progress-no-measure-example.hbs';
 import progressNoMeasureFailureExampleRaw from '!raw!./progress-no-measure-failure-example.hbs';
+import progressDynamicExampleRaw from '!raw!./progress-dynamic-example.hbs';
 import ProgressSimpleExample from './progress-simple-example.hbs';
 import ProgressSmallExample from './progress-small-example.hbs';
 import ProgressLargeExample from './progress-large-example.hbs';
@@ -23,7 +24,8 @@ import ProgressInsideSuccessExample from './progress-inside-success-example.hbs'
 import ProgressOutsideFailureExample from './progress-outside-failure-example.hbs';
 import ProgressNoMeasureExample from './progress-no-measure-example.hbs';
 import ProgressNoMeasureFailureExample from './progress-no-measure-failure-example.hbs';
-import progressSmallExampleDoc from '../docs/progress-small.md';
+import ProgressDynamicExample from './progress-dynamic-example.hbs';
+import progressDynamicExampleDoc from '../docs/progress-dynamic.md';
 import docs from '../docs/code.md';
 import '../styles.scss';
 
@@ -41,13 +43,14 @@ export default () => {
   const progressOutsideFailureExample = ProgressOutsideFailureExample();
   const progressNoMeasureExample = ProgressNoMeasureExample();
   const progressNoMeasureFailureExample = ProgressNoMeasureFailureExample();
+  const progressDynamicExample = ProgressDynamicExample();
 
   return (
     <Documentation docs={Docs}>
       <Example heading="Progress Simple" handlebars={progressSimpleExampleRaw}>
         {progressSimpleExample}
       </Example>
-      <Example heading="Progress Small" handlebars={progressSmallExampleRaw} docs={progressSmallExampleDoc}>
+      <Example heading="Progress Small" handlebars={progressSmallExampleRaw}>
         {progressSmallExample}
       </Example>
       <Example heading="Progress Large" handlebars={progressLargeExampleRaw}>
@@ -76,6 +79,13 @@ export default () => {
       </Example>
       <Example heading="Progress Failure Without Measure" handlebars={progressNoMeasureFailureExampleRaw}>
         {progressNoMeasureFailureExample}
+      </Example>
+      <Example
+        heading="Progress with Dynamic Description"
+        handlebars={progressDynamicExampleRaw}
+        docs={progressDynamicExampleDoc}
+      >
+        {progressDynamicExample}
       </Example>
     </Documentation>
   );

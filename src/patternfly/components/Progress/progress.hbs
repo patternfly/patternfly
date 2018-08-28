@@ -6,30 +6,27 @@
   pf-c-progress--success Indicates success
   pf-c-progress--danger Indicates danger/failure
   pf-c-progress--no-measure Does not output a measure
+  pf-c-progress--dynamic If the description is dynamically updated, use aria-valuetext instead of aria-describedby
   pf-c-progress__id ID for the component
  --}}
-<div class="pf-c-progress {{pf-c-progress--modifier}}
-  {{~#if pf-c-progress--inside}}
-    pf-m-inside
-  {{~/if}}
-  {{~#if pf-c-progress--outside}}
-    pf-m-outside
-  {{~/if}}
-  {{~#if pf-c-progress--success}}
-    pf-m-success
-  {{~/if}}
-  {{~#if pf-c-progress--danger}}
-    pf-m-danger
-  {{~/if}}"
-  {{#if pf-c-progress__id}}
-    id="{{pf-c-progress__id}}"
-  {{/if}}
+ 
+<div class="pf-c-progress
+  {{~#if pf-c-progress--modifier}} {{pf-c-progress--modifier}}{{/if}}
+  {{~#if pf-c-progress--inside}} pf-m-inside{{/if}}
+  {{~#if pf-c-progress--outside}} pf-m-outside{{/if}}
+  {{~#if pf-c-progress--success}} pf-m-success{{/if}}
+  {{~#if pf-c-progress--danger}} pf-m-danger{{/if}}"
+  {{#if pf-c-progress__id}}id="{{pf-c-progress__id}}"{{/if}}
   role="progressbar"
   aria-valuemin="0"
   aria-valuemax="100"
   aria-valuenow="{{pf-c-progress--value}}"
-  aria-valuetext="{{pf-c-progress--description}}">
-  <div class="pf-c-progress__description">{{pf-c-progress--description}}</div>
+  {{~#if pf-c-progress--dynamic}}
+    aria-valuetext="{{pf-c-progress--description}}"
+  {{else}}
+    {{~#if pf-c-progress__id}} aria-describedby="{{pf-c-progress__id}}-description"{{/if}}
+  {{/if}}>
+  <div class="pf-c-progress__description" {{~#if pf-c-progress__id}} id="{{pf-c-progress__id}}-description"{{/if}}>{{pf-c-progress--description}}</div>
   <div class="pf-c-progress__status">
     {{#unless pf-c-progress--inside}}
         {{#unless pf-c-progress--no-measure}}

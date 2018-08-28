@@ -6,10 +6,12 @@ Note: If this component is describing the loading progress of a particular regio
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role="progressbar"` | `.pf-c-progress` |  This role is used for an element that displays the progress status for a task that take a long time or consists of several steps. |
-| `aria-valuenow=""` | `.pf-c-progress` |  This value needs to be updated as progress continues |
-| `aria-valuemin="0"` | `.pf-c-progress` |  The minimum value for the progress bar |
-| `aria-valuemax="100"` | `.pf-c-progress` |  The maximum value for the progress bar |
+| `role="progressbar"` | `.pf-c-progress` |  This role is used for an element that displays the progress status for a task that takes a long time or consists of several steps. |
+| `aria-valuenow=""` | `.pf-c-progress` |  This value needs to be updated as progress continues. |
+| `aria-valuemin="0"` | `.pf-c-progress` |  The minimum value for the progress bar. |
+| `aria-valuemax="100"` | `.pf-c-progress` |  The maximum value for the progress bar. |
+| `aria-describedby="[id of .pf-c-progress__description]"` | `.pf-c-progress` |  The description of what progress is being shown. |
+| `aria-valuetext="[loading state]"` | `.pf-c-progress` |  Text that explains the current state of the progress (used in place of aria-describedby only when the text is updated dynamically as progress proceeds). |
 
 
 ## Usage
@@ -25,7 +27,7 @@ Note: If this component is describing the loading progress of a particular regio
 | `.pf-c-progress__indicator` | `<div>` |  Displays with the `.pf-c-progress__bar` to indicate the progress so far. |
 | `.pf-m-lg` | `.pf-c-progress` |  Modifies the progress bar to be larger. |
 | `.pf-m-sm` | `.pf-c-progress` |  Modifies the progress bar to be smaller. |
-| `.pf-m-inside` | `.pf-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`|
+| `.pf-m-inside` | `.pf-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`.|
 | `.pf-m-outside` | `.pf-c-progress` |  Shows the measure and status icon to the right of the progress bar. |
 | `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
 | `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
