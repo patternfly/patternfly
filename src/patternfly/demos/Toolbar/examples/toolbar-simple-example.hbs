@@ -1,0 +1,106 @@
+{{#> toolbar }}
+  {{#> toolbar-group}}
+    {{#> toolbar-group}}
+        {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-align-items-flex-end"}}
+          <div class="pf-c-input-group">
+            {{#> dropdown id="dropdown-example-collapsed"}}
+              All
+              <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
+            {{/dropdown}}
+            {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="button" aria-label="popover for input"}}
+              <i class="fas fa-search aria-hidden="true"></i>
+            {{/input-group-action}}
+            {{#> form-controls controlType="input" input="true" type="text" id="textInput10" name="textInput10" placeholder="Filter..." aria-label="standard input example" }}
+            {{/form-controls}}
+          </div>
+        {{/toolbar-item}}
+    {{/toolbar-group}}
+  
+    {{#> toolbar-group}}
+      {{#> flex-item flex-item--modifier="pf-u-mx-md"}}
+        {{#> toolbar-item}}
+          {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
+            All
+          {{/dropdown}}
+        {{/toolbar-item}}
+      {{/flex-item}}
+        {{#> toolbar-item}}
+          <i class="fas fa-sort-alpha-down"></i>
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+  {{/toolbar-group}}
+
+  {{#> flex-item flex-item--modifier="pf-u-mx-xl"}}
+    {{#> toolbar-group}}
+      {{#> flex-item flex-item--modifier="pf-u-mx-md"}}
+        {{#> toolbar-item}}
+          <i class="fas fa-list"></i>
+        {{/toolbar-item}}
+      {{/flex-item}}
+      {{#> flex-item flex-item--modifier="pf-u-mx-md"}}
+        {{#> toolbar-item}}
+          <i class="fas fa-table"></i>
+        {{/toolbar-item}}
+      {{/flex-item}}
+      {{#> flex-item flex-item--modifier="pf-u-mx-md"}}
+        {{#> toolbar-item}}
+          Action
+        {{/toolbar-item}}
+      {{/flex-item}}
+      {{#> flex-item flex-item--modifier="pf-u-mx-md"}}
+        {{#> toolbar-item}}
+          {{#> button btnClass="pf-m-primary"}}
+            Action
+          {{/button}}
+        {{/toolbar-item}}
+      {{/flex-item}}
+      {{#> flex-item flex-item--modifier="pf-u-mx-md"}}
+        {{#> toolbar-item}}
+          {{#> dropdown id="dropdown-example-kebab" pf-c-dropdown--Modifier="pf-m-action pf-m-align-right"}}
+            <i class="fas fa-ellipsis-v"></i>
+          {{/dropdown}}
+        {{/toolbar-item}}
+      {{/flex-item}}
+    {{/toolbar-group}}
+  {{/flex-item}}
+{{/toolbar}}
+
+<br>
+
+{{#> toolbar}}
+  
+  {{#> toolbar-group}}
+    {{#> toolbar-item}}
+      {{#> check pf-c-check-type="checkbox" name="unselected checkbox example" aria-label="unselected checkbox example"}}
+      {{/check}}
+      <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
+      Repository
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  </div>
+
+  {{#> flex-item flex-item--modifier="pf-u-mx-xl"}}
+  {{#> toolbar-group}}
+    <div class="pf-u-mx-md">
+    {{#> toolbar-item}}
+      Branches
+    {{/toolbar-item}}
+    </div>
+    <div class="pf-u-mx-md">
+    {{#> toolbar-item}}
+      Pull Requests
+    {{/toolbar-item}}
+    </div>
+    <div class="pf-u-mx-md">
+    {{#> toolbar-item}}
+      Work Spaces
+    {{/toolbar-item}}
+    </div>
+    <div class="pf-u-mx-md">
+    {{#> toolbar-item}}
+      Last Commit
+    {{/toolbar-item}}
+    </div>
+  {{/toolbar-group}}
+  {{/flex-item}}
+{{/toolbar}}
