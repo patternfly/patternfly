@@ -1,9 +1,9 @@
 {{#> page}}
   {{#> page-header}}
-    {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-sidebar-toggle nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
-      {{/page-sidebar-toggle}}
+      {{#> button btnClass="pf-m-plain" btnAttributes='id="nav-toggle" aria-label="Toggle primary navigation"'}}
+        <i class="fas fa-bars"></i>
+      {{/button}}
       Logo
     {{/page-header-brand}}
     {{#> page-header-selector}}
@@ -13,7 +13,6 @@
       pf-l-toolbar
     {{/page-header-tools}}
   {{/page-header}}
-
   {{#> page-sidebar}} 
     {{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
       pf-c-nav
@@ -23,11 +22,9 @@
     {{#> page-main-section page-main-section--modifier="pf-m-dark"}}
       Page Layout Content test 2
     {{/page-main-section}}
-
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       Page Layout Content test 2
     {{/page-main-section}}
-
     {{#> page-main-section}}
       Page Layout Content test 2
     {{/page-main-section}}
