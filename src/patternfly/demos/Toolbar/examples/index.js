@@ -17,10 +17,10 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Toolbar Simple" handlebars={toolbarSimpleExampleRaw} minHeight="20em">
+      <Example heading="Toolbar Simple Example" handlebars={toolbarSimpleExampleRaw} minHeight="20em">
         {toolbarSimpleExample}
       </Example>
-      <Example heading="Toolbar Complex" handlebars={toolbarComplexExampleRaw} docs={toolbarComplexExampleDoc}>
+      <Example heading="Toolbar Complex Example" handlebars={toolbarComplexExampleRaw} docs={toolbarComplexExampleDoc}>
         {toolbarComplexExample}
       </Example>
     </Documentation>
