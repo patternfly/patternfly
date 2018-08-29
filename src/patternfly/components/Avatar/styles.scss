@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-avatar {
-  --pf-c-avatar--BorderRadius: 50%;
+  --pf-c-avatar--BorderRadius: var(--pf-global--BorderRadius--lg);
 
   border-radius: var(--pf-c-avatar--BorderRadius);
 }

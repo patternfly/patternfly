@@ -1,10 +1,14 @@
 {{#> page}}
   {{#> page-header}}
     {{#> page-header-brand}}
-      {{#> button btnClass="pf-m-plain" btnAttributes='id="nav-toggle" aria-label="Toggle primary navigation"'}}
-        <i class="fas fa-bars"></i>
-      {{/button}}
-      Logo
+      {{#> page-header-brand-toggle}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='id="nav-toggle" aria-label="Toggle primary navigation"'}}
+          <i class="fas fa-bars"></i>
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link}}
+        Logo
+      {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-selector}}
       pf-c-context-selector
