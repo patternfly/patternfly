@@ -4,97 +4,87 @@
 $nav: "pf-c-nav";
 
 .pf-l-page {
-
-  /* stylelint-disable */
-
   // Header
-  --pf-l-page__header--PaddingBottom:                       var(--pf-global--spacer--md);
-  // Hardcode header height base on design spec
-  --pf-l-page__header--MinHeight:                           pf-size-prem(110px);
+  --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__header--MinHeight: pf-size-prem(110px);
 
   // Header brand
-  --pf-l-page__header-brand--PaddingTop:                    var(--pf-global--spacer--md);
-  --pf-l-page__header-brand--PaddingBottom:                 var(--pf-global--spacer--md);
-  --pf-l-page__header-brand--PaddingLeft:                   var(--pf-global--spacer--xl);
-  --pf-l-page__header-brand--PaddingRight:                  var(--pf-global--spacer--xl);
-  --pf-l-page__header-brand--PaddingBottom--sm:             var(--pf-global--spacer--md);
-  --pf-l-page__header-brand--BackgroundColor--md:           var(--pf-global--BackgroundColor--dark-transparent-100);
-  // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
-  --pf-l-page__header-brand--FlexBasis--lg:                 pf-size-prem(290px);
+  --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-l-page__header-brand--PaddingBottom--sm: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--BackgroundColor--md: var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__header-brand--FlexBasis--lg: pf-size-prem(290px);
 
   // Toggle
-  --pf-l-page__header-sidebar-toggle--PaddingTop:           var(--pf-global--spacer--sm);
-  --pf-l-page__header-sidebar-toggle--PaddingRight:         var(--pf-global--spacer--sm);
-  --pf-l-page__header-sidebar-toggle--PaddingBottom:        var(--pf-global--spacer--sm);
-  --pf-l-page__header-sidebar-toggle--PaddingLeft:          var(--pf-global--spacer--sm);
-  --pf-l-page__header-sidebar-toggle--FontSize:             var(--pf-global--FontSize--2xl);
+  --pf-l-page__header-sidebar-toggle--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle--FontSize: var(--pf-global--FontSize--2xl);
 
   // Header brand link
-  --pf-l-page__header-brand-link--MarginLeft:               var(--pf-global--spacer--md);
-  
+  --pf-l-page__header-brand-link--MarginLeft: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand-link--MinHeight: pf-size-prem(40px);
+
   // Header brand logo
-  --pf-l-page__header-brand-logo--Height:                   pf-size-prem(11px);
+  --pf-l-page__header-brand-logo--Height: pf-size-prem(11px);
 
   // Header context selector
-  --pf-l-page__header-selector--PaddingLeft:                var(--pf-global--spacer--md);
-  --pf-l-page__header-selector--PaddingTop:                 var(--pf-global--spacer--lg);
-  --pf-l-page__header-selector--PaddingBottom:              var(--pf-global--spacer--lg);
-  --pf-l-page__header-selector--PaddingLeft:            var(--pf-global--spacer--xl);
+  --pf-l-page__header-selector--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-l-page__header-selector--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-l-page__header-selector--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-l-page__header-selector--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Header nav
-  --pf-l-page__header-nav--PaddingRight:                    var(--pf-global--spacer--xl);
-  --pf-l-page__header-nav--PaddingLeft:                     var(--pf-global--spacer--xl);
-  --pf-l-page__header-nav--MarginTop--sm:                   var(--pf-global--spacer--md);
-  --pf-l-page__header-nav--MarginLeft--md:                  var(--pf-global--spacer--xl);
-  --pf-l-page__header-nav--MarginRight--md:                 var(--pf-global--spacer--xl);
-  --pf-l-page__header-nav--BackgroundColor--sm:             var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__header-nav--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-l-page__header-nav--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__header-nav--MarginTop--sm: var(--pf-global--spacer--md);
+  --pf-l-page__header-nav--MarginLeft--md: var(--pf-global--spacer--xl);
+  --pf-l-page__header-nav--MarginRight--md: var(--pf-global--spacer--xl);
+  --pf-l-page__header-nav--BackgroundColor--sm: var(--pf-global--BackgroundColor--dark-transparent-100);
 
-  // Header toolbar
-  --pf-l-page__header-toolbar--PaddingTop:                  var(--pf-global--spacer--xl);
-  --pf-l-page__header-toolbar--PaddingRight:                var(--pf-global--spacer--xl);
-  --pf-l-page__header-toolbar--PaddingBottom:               var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--toolbar--MarginTop:            var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--toolbar--MarginBottom:         var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--MarginRight:                   var(--pf-global--spacer--xl);
-
-  // Header avatar
-  --pf-c-avatar--MarginLeft:                                var(--pf-global--spacer--md);
+  // Header tools
+  --pf-l-page__header-tools--MarginRight: var(--pf-global--spacer--xl);
+  --pf-l-page__header-tools--toolbar--MarginTop: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--toolbar--MarginBottom: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--avatar--MarginLeft: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--avatar--Width: pf-size-prem(48px);
+  --pf-l-page__header-tools--avatar--Height: pf-size-prem(48px);
 
   // Sidebar
-  --pf-l-page__sidebar--ZIndex:                             var(--pf-global--ZIndex--xl);
-  --pf-l-page__sidebar--Width--sm:                          80%;
-  // hardcode sidebar based on design spec, must match pf-n-nav--Width
-  --pf-l-page__sidebar--Width--lg:                          pf-size-prem(290px);
-  --pf-l-page__sidebar--PaddingTop:                         var(--pf-global--spacer--md);
-  --pf-l-page__sidebar--PaddingBottom:                      var(--pf-global--spacer--md);
-  --pf-l-page__sidebar--BackgroundColor:                    var(--pf-global--BackgroundColor--light-100);
-  --pf-l-page__sidebar--BoxShadow:                          var(--pf-global--BoxShadow--lg-right);
+  --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--xl);
+  --pf-l-page__sidebar--Width--sm: 80%;
+  --pf-l-page__sidebar--Width--lg: pf-size-prem(290px);
+  --pf-l-page__sidebar--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__sidebar--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
 
   // Sidebar transitions
-  --pf-l-page__sidebar--Transition:                         var(--pf-global--Transition);
-  --pf-l-page__sidebar--Transform--out:                     translate3d(-100%, 0, 0);
-  --pf-l-page__sidebar--Transform--in:                      translate3d(0, 0, 0);
+  --pf-l-page__sidebar--Transition: var(--pf-global--Transition);
+  --pf-l-page__sidebar--Transform--out: translate3d(-100%, 0, 0);
+  --pf-l-page__sidebar--Transform--in: translate3d(0, 0, 0);
 
   // Main section
-  --pf-l-page__main-section--PaddingTop:                    var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--PaddingRight:                  var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--PaddingLeft:                   var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--PaddingBottom:                 var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--BackgroundColor:               var(--pf-global--BackgroundColor--light-300);
-  --pf-l-page__main-section--BoxShadow:                     var(--pf-global--BoxShadow--lg-right);
+  --pf-l-page__main-section--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-l-page__main-section--BoxShadow: var(--pf-global--BoxShadow--lg-right);
 
   // Main section horizontal nav
-  --pf-l-page__main-nav--PaddingTop:                        var(--pf-global--spacer--md);
-  --pf-l-page__main-nav--PaddingRight:                      0;
-  --pf-l-page__main-nav--PaddingBottom:                     var(--pf-global--spacer--md);
-  --pf-l-page__main-nav--PaddingLeft:                       var(--pf-global--spacer--xl);
-  --pf-l-page__main-nav--BackgroundColor:                   var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__main-nav--PaddingRight: 0;
+  --pf-l-page__main-nav--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__main-nav--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
   // Main section modifiers
-  --pf-l-page__main-section--m-light--BackgroundColor:      var(--pf-global--BackgroundColor--light-100);
-  --pf-l-page__main-section--m-dark--BackgroundColor:       var(--pf-global--BackgroundColor--dark-transparent-200);
-
-  /* stylelint-enable */
+  --pf-l-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-l-page__main-section--m-dark--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
   // Base
   display: grid;
@@ -115,44 +105,33 @@ $nav: "pf-c-nav";
 
 // Header
 .pf-l-page__header {
-  // force the container follow the dark theme
-  @extend %pf-t-dark;
+  @extend %pf-t-dark; // force the container follow the dark theme
 
   grid-area: header;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   max-width: 100%;
-  min-height: var(--pf-l-page__header--MinHeight);
+  min-height: var(--pf-l-page__header--MinHeight); // Hardcode header height base on design spec
   overflow-x: hidden;
 
   > * {
     display: flex;
     align-items: flex-end;
   }
-
-  .pf-c-avatar {
-    margin-left: var(--pf-l-page__header-avatar--MarginLeft);
-  }
 }
 
 // Brand
 .pf-l-page__header-brand {
-  align-items: flex-end;
   padding-top: var(--pf-l-page__header-brand--PaddingTop);
   padding-bottom: var(--pf-l-page__header-brand--PaddingBottom);
   padding-left: var(--pf-l-page__header-brand--PaddingLeft);
 
   @media (min-width: $pf-global--breakpoint--md) {
-    flex: 0 0 var(--pf-l-page__header-brand--FlexBasis--lg);
-    align-items: flex-end;
+    flex: 0 0 var(--pf-l-page__header-brand--FlexBasis--lg); // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
     align-self: stretch;
     padding-right: var(--pf-l-page__header-brand--PaddingRight); // set padding right here to allow mobile view to accomodate tools
     background-color: var(--pf-l-page__header-brand--BackgroundColor--md);
-  }
-
-  .pf-m-patternfly-logo {
-    height: var(--pf-l-page__header-brand-logo--Height);
   }
 }
 
@@ -162,7 +141,21 @@ $nav: "pf-c-nav";
   flex: 1;
   align-items: center;
   align-self: flex-end;
-  min-height: 40px;
+  min-height: var(--pf-l-page__header-brand-link--MinHeight); // Hardcode link min-height so it matches the button height
+}
+
+// Sidebar toggle
+.pf-l-page__header-brand-toggle {
+  .pf-c-button {
+    padding:
+      var(--pf-l-page__header-sidebar-toggle--PaddingTop)
+      var(--pf-l-page__header-sidebar-toggle--PaddingRight)
+      var(--pf-l-page__header-sidebar-toggle--PaddingBottom)
+      var(--pf-l-page__header-sidebar-toggle--PaddingLeft);
+    margin-right: var(--pf-l-page__header-brand-link--MarginLeft);
+    margin-left: calc(var(--pf-l-page__header-sidebar-toggle--PaddingLeft) * -1); // ensure button does not adjust positioning, offset padding-left
+    font-size: var(--pf-l-page__header-sidebar-toggle--FontSize);
+  }
 }
 
 // Header navigation
@@ -200,9 +193,14 @@ $nav: "pf-c-nav";
   margin-left: auto; // to push it to the right
 
   .pf-l-toolbar {
-    // include margin-top for avatar to position itself vertically
-    margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop);
+    margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop); // include margin-top for avatar to position itself vertically
     margin-bottom: var(--pf-l-page__header-tools--toolbar--MarginBottom);
+  }
+
+  .pf-c-avatar {
+    width: var(--pf-l-page__header-tools--avatar--Width); // Hardcode avatar width and height to match design spec
+    height: var(--pf-l-page__header-tools--avatar--Height);
+    margin-left: var(--pf-l-page__header-tools--avatar--MarginLeft);
   }
 }
 
@@ -221,7 +219,7 @@ $nav: "pf-c-nav";
   @media screen and (min-width: $pf-global--breakpoint--md) {
     flex: 1;
     order: initial;
-    width: var(--pf-l-page__sidebar--Width--lg);
+    width: var(--pf-l-page__sidebar--Width--lg); // hardcode sidebar based on design spec, must match pf-n-nav--Width
     max-width: var(--pf-l-page__sidebar--Width--lg); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
     box-shadow: var(--pf-l-page__sidebar--BoxShadow);
     transform: var(--pf-l-page__sidebar--Transform--in);
@@ -242,20 +240,6 @@ $nav: "pf-c-nav";
       overflow: hidden;
     }
   }
-}
-
-// Toggle
-.pf-l-page__header-sidebar-toggle {
-  padding:
-    var(--pf-l-page__header-sidebar-toggle--PaddingTop)
-    var(--pf-l-page__header-sidebar-toggle--PaddingRight)
-    var(--pf-l-page__header-sidebar-toggle--PaddingBottom)
-    var(--pf-l-page__header-sidebar-toggle--PaddingLeft);
-  margin-right: var(--pf-l-page__header-brand-link--MarginLeft);
-  margin-left: calc(var(--pf-l-page__header-sidebar-toggle--PaddingLeft) * -1); // ensure button does not adjust positioning, offset padding-left
-  font-size: var(--pf-l-page__header-sidebar-toggle--FontSize);
-  line-height: 1;
-  border: none;
 }
 
 // Main
@@ -296,8 +280,7 @@ $nav: "pf-c-nav";
   }
 
   &.pf-m-dark {
-    // force the container follow the dark theme
-    @extend %pf-t-dark;
+    @extend %pf-t-dark; // force the container follow the dark theme
 
     background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
   }

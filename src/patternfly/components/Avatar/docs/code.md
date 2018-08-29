@@ -13,4 +13,4 @@ Simple avatar component.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-avatar` | `<img>` |  Initiates a brand image. **Required** |
+| `.pf-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |
