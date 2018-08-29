@@ -1,34 +1,34 @@
 {{#> input-group }}
-  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-  {{#> form-controls controlType="textarea" name="textarea1" id="textarea1" }}
+  {{#> button btnClass="pf-m-secondary" id="textAreaButton1"}} Button {{/button}}
+  {{#> form-controls controlType="textarea" name="textarea1" id="textarea1" aria-label="textarea with buttons" aria-describedby="textAreaButton1" }}
 {{/form-controls}}
     {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> form-controls controlType="textarea" name="textarea2" id="textarea2" }}
+  {{#> form-controls controlType="textarea" name="textarea2" id="textarea2" aria-label="textarea with button" aria-describedby="textAreaButton2" }}
 {{/form-controls}}
-    {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
+    {{#> button btnClass="pf-m-tertiary" id="textAreaButton2"}} Button {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> dropdown id="dropdown-example-collapsed"}}
+  {{#> dropdown }}
     Dropdown
     <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
   {{/dropdown}}
-  {{#> form-controls controlType="input" input="true" type="text" id="textInput3" name="textInput3" }}
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"}}
 {{/form-controls}}
-    {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
+    {{#> button btnClass="pf-m-secondary" id="inputDropdownButton1"}} Button {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> form-controls controlType="input" input="true" type="text" id="textInput4" name="textInput4" }}
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput4" name="textInput4" aria-label="another input with dropdown and button" aria-describedby="inputDropdownButton2" }}
   {{/form-controls}} 
-  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-  {{#> dropdown id="dropdown-example-collapsed"}}
+  {{#> button btnClass="pf-m-secondary" id="inputDropdownButton2"}} Button {{/button}}
+  {{#> dropdown }}
     Dropdown
     <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
   {{/dropdown}}
@@ -36,10 +36,10 @@
 <br>
 <br>
 {{#> input-group }}
-  {{#> input-group-text inputGroupTextType="span" aria-label="text input label" }}
+  <span class="pf-c-input-group__text" aria-label="dollar icon" id="value-example">
     <i class="fas fa-dollar-sign" aria-hidden="true"></i>
-  {{/input-group-text}}
-  {{#> form-controls controlType="input" input="true" type="text" id="textInput5" name="textInput5" aria-label="standard input example" }}
+  </span>
+  {{#> form-controls controlType="input" input="true" type="number" id="textInput5" name="textInput5" aria-label="value input example" aria-describedby="value-example" }}
 {{/form-controls}}
 {{#> input-group-text inputGroupTextType="span"}}
     .00
@@ -48,19 +48,29 @@
 <br>
 <br>
 {{#> input-group }}
-  {{#> form-controls controlType="input" input="true" type="text" id="textInput6" name="textInput6" aria-label="standard input example" }}
+  {{#> form-controls controlType="input" input="true" type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example" }}
 {{/form-controls}}
-  {{#> input-group-text inputGroupTextType="span"}}
+  {{#> input-group-text inputGroupTextType="span" id="email-example"}}
     @example.com
   {{/input-group-text}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> input-group-text inputGroupTextType="span" aria-label="text input label" }}
+  {{#> input-group-text inputGroupTextType="span" id="email-example" aria-label="@"}}
     <i class="fas fa-at" aria-hidden="true"></i>
   {{/input-group-text}}
-  {{#> form-controls pf-c-form-control--modifier="pf-m-invalid" required="true" controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-label="standard input example" }}
+  {{#> form-controls pf-c-form-control--modifier="pf-m-invalid" required="true" controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"}}
+{{/form-controls}}
+{{/input-group}}
+<br>
+<br>
+{{#> input-group }}
+  {{#> input-group-text inputGroupTextType="span"}}
+{{#> check pf-c-check-type="checkbox" name="checkbox example" id="checkbox1" aria-label="checkbox for following text input"}}
+{{/check}}
+  {{/input-group-text}}
+  {{#> form-controls controlType="input" input="true" type="text" id="textInput8" name="textInput8" aria-label="input with checkbox example" aria-describedby="checkbox1"}}
 {{/form-controls}}
 {{/input-group}}
 <br>

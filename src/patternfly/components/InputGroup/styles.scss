@@ -29,7 +29,9 @@
     margin-left: -1px;
   }
   /* stylelint-enable */
-  .pf-m-invalid {
+
+  .pf-m-invalid,
+  .pf-c-form-control[aria-invalid="true"] {
     margin-left: 0;
 
     &:not(:last-child) {

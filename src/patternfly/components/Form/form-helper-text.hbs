@@ -1,4 +1,7 @@
 <p class="pf-c-form__helper-text{{#if pf-c-form__helper--modifier}} {{ pf-c-form__helper--modifier }}{{/if}}" 
-{{#if id}} id="{{id}}"{{/if}}>
+{{#if id}} id="{{id}}"{{/if}}
+{{#if aria-live}} aria-live="{{aria-live}}"{{/if}}
+{{#if aria-hidden}} aria-hidden="{{aria-hidden}}" {{/if}}
+>
 {{> @partial-block }}
 </p>

@@ -1,6 +1,9 @@
 <button class="pf-c-button{{#if btnClass}} {{btnClass}}{{/if}}{{#if button--disabled}} pf-m-disabled{{/if}}"
   {{#if btnAttributes}}
     {{{ btnAttributes }}} 
+  {{/if}}
+  {{#if id}}
+    id="{{id}}" 
   {{/if}} 
   {{#if button--disabled}}
     disabled 
