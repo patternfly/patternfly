@@ -142,4 +142,14 @@ html {
   a {
     cursor: pointer;
   }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    &::-moz-focus-inner {
+      padding: 0;
+      border-style: none;
+    }
+  }
 } // ends if
