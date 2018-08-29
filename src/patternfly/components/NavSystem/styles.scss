@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-nav {
-  --pf-c-nav--Width: pf-size-prem(290px);
+  --pf-c-nav--Width: #{pf-size-prem(290px)};
   --pf-c-nav--Transition: var(--pf-global--Transition);
 
   // List link
@@ -60,9 +60,9 @@
 
   // background
   --pf-c-nav__simple-list-link--BackgroundColor: transparent;
-  --pf-c-nav__simple-list-link--hover--BackgroundColor: $pf-color-black-150;
-  --pf-c-nav__simple-list-link--active--BackgroundColor: $pf-color-black-150;
-  --pf-c-nav__simple-list-link--focus--BackgroundColor: $pf-color-black-150;
+  --pf-c-nav__simple-list-link--hover--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-nav__simple-list-link--active--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-nav__simple-list-link--focus--BackgroundColor: #{$pf-color-black-150};
 
   // List horizontal link
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
@@ -75,7 +75,7 @@
   --pf-c-nav__horizontal-list-link--focus--FontWeight: var(--pf-global--FontWeight--bold);
 
   // color
-  --pf-c-nav__horizontal-list-link--Color: $pf-color-black-300;
+  --pf-c-nav__horizontal-list-link--Color: #{$pf-color-black-300};
   --pf-c-nav__horizontal-list-link--hover--Color: var(--pf-global--active-color--300);
   --pf-c-nav__horizontal-list-link--active--Color: var(--pf-global--active-color--300);
   --pf-c-nav__horizontal-list-link--focus--Color: var(--pf-global--active-color--300);
@@ -129,13 +129,13 @@
 
   // Subnav links
   --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-nav__subnav--MaxHeight: pf-size-prem(600px);
+  --pf-c-nav__subnav--MaxHeight: #{pf-size-prem(600px)};
   --pf-c-nav__subnav-item--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md)); // automate this value based on previously set values
 
   // List toggle
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__list-toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-nav__list-toggle--FontSize: pf-font-prem(20px); // set unique font size for dropdown caret based on design spec
+  --pf-c-nav__list-toggle--FontSize: #{pf-font-prem(20px)}; // set unique font size for dropdown caret based on design spec
   --pf-c-nav__list-toggle--Transition: .1s ease-in-out;
 
   // Nav section
@@ -165,7 +165,7 @@
   // Modifier - simple list current
   --pf-c-nav__simple-list-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-nav__simple-list-link--m-current--BackgroundColor: $pf-color-black-150;
+  --pf-c-nav__simple-list-link--m-current--BackgroundColor: #{$pf-color-black-150};
 
   // Modifier - current item
   --pf-c-nav__list-horizontal-link--m-current--Color: var(--pf-global--active-color--300);
