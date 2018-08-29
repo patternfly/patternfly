@@ -7,7 +7,7 @@
 | `required aria-required="true"` | `<input>`, `<select>`, `<textarea>` | Required fields must include these attributes. |
 | `id="{helper_text_id}"` | `.pf-c-form__helper-text` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<p class="pf-c-form__helper-text" id="{helper_text_id}" ...>`.  |
 | `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}" ...>`.  |
-| `aria-invalid="true" aria-errormessage="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Where form validation fails, `aria-errormessage` is used instead of `aria-describedby`. `aria-errormessage` is only present when validation fails so this needs to be handled with Javascript. |
+| `aria-invalid="true" aria-errormessage="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Where form validation fails, `aria-errormessage` is used instead of `aria-describedby`. `aria-errormessage` and `aria-invalid="true"` are only present when validation fails so this needs to be handled with Javascript. |
 
 
 ## Usage
