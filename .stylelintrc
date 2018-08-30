@@ -41,6 +41,7 @@
         "stylelint-commands"
       ]
     }],
+    "custom-property-pattern": "^pf-(global|[lcud])-.+$",
     "declaration-block-semicolon-newline-before": "never-multi-line",
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
