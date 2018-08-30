@@ -1,10 +1,7 @@
-{{#> table table--grid="true" table--attribute='aria-label="This is an expandable table example"'}}
+{{#> table table--attribute='id="sortable-table" aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th}}
-        <input class="pf-c-check" type="checkbox" name="check all rows" aria-label="check rows">
-      {{/table-th}}    
-      {{#> table-th table-th--sortable="true" table-th--asc="true" table-th--modifier="pf-m-width-max"}}
+      {{#> table-th table-th--sortable="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--sortable="true"}}
@@ -24,13 +21,8 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 1" aria-label="checkbox 1"}}
-        {{/check}}
-      {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
-        <div>Node 1</div>
-        <a href="#">siemur/test-space</a>
+        Repository 1
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -43,17 +35,12 @@
       {{/table-td}}  
       {{#> table-td table-td--data-label="Last Commit"}}
         2 days ago
-      {{/table-td}}
-    {{/table-tr}}  
+      {{/table-td}}  
+    {{/table-tr}}    
 
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 3" aria-label="checkbox 3"}}
-        {{/check}}
-      {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
-        <div>Node 2</div>
-        <a href="#">siemur/test-space</a>
+        Repository 2
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -68,14 +55,10 @@
         2 days ago
       {{/table-td}}  
     {{/table-tr}}
+
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 4" aria-label="checkbox 4"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Repository Name"}}
-        <div>Node 3</div>
-        <a href="#">siemur/test-space</a>
+       {{#> table-td table-td--data-label="Repository Name"}}
+        Repository 3
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -88,7 +71,7 @@
       {{/table-td}}  
       {{#> table-td table-td--data-label="Last Commit"}}
         2 days ago
-      {{/table-td}}  
+      {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

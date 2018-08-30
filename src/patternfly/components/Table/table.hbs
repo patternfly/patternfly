@@ -1,40 +1,48 @@
-<table class="pf-c-table{{#if table--modifier}} {{table--modifier}}{{/if}}"
-
-  {{#if table--grid}}
-    role="grid"
-  {{/if}}
+<table class="pf-c-table pf-m-grid{{#if table--modifier}} {{table--modifier}}{{/if}}"
   {{#if table--attribute}}
     {{{table--attribute}}}
   {{/if}}
+  {{#if table--expandable}}
+    role="treegrid"
+  {{else}}
+    role="grid"
+  {{/if}}
   {{#if table--interactive}}
     onClick="(function(){
-      const toggle = event.target;
-      let hit = toggle;
-      hit = hit.dataset.target;
+      let toggle = event.target;
 
-      if (toggle.classList.contains('pf-m-toggle')) {
+      // if toggle is clicked, return true
+      let buttonClick = toggle.classList.contains('pf-m-toggle') ? true : false;
+
+      if (buttonClick) {
+        let toggleParent = toggle.parentNode.parentNode;
+        let siblingRow = toggleParent.nextElementSibling;
+
+        // toggle expanded on button
         toggle.classList.toggle('pf-m-expanded');
-        let expandableParent = document.getElementById(hit).parentNode.parentNode;
-        let expandableContent = document.getElementById(hit);
 
         if (toggle.classList.contains('pf-m-expanded')) {
-          expandableParent.removeAttribute('hidden');
+          siblingRow.removeAttribute('hidden');
 
-          setTimeout(() => {
-            expandableParent.setAttribute('aria-expanded', 'true');
-            expandableParent.classList.add('pf-m-expanded');
-          }, 50);
+          setTimeout(function() {
+            // toggle attributes on sibling row
+            siblingRow.classList.add('pf-m-expanded');
 
+            // toggle attributes on toggle parent
+            toggleParent.setAttribute('aria-expanded', 'true');
+            siblingRow.removeAttribute('aria-hidden');            
+          }, 50); 
         } else {
-          expandableParent.classList.remove('pf-m-expanded');
+          // toggle attributes on sibling row
+          siblingRow.classList.remove('pf-m-expanded');
 
-          setTimeout(() => {
-            expandableParent.setAttribute('aria-expanded', 'false');
-          }, 50);
+          // toggle attributes on toggle parent
+          toggleParent.setAttribute('aria-expanded', 'false');
+          siblingRow.setAttribute('aria-hidden', 'true');
 
-          setTimeout(() => {
-            expandableParent.setAttribute('hidden', '');
-          }, 700);
+          setTimeout(function() {
+            siblingRow.setAttribute('hidden', '');
+          }, 500); 
         }
       }
         return false;
