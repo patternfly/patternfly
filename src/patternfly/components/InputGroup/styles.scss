@@ -31,7 +31,7 @@
   /* stylelint-enable */
 
   .pf-c-form-control[aria-invalid="true"] {
-    margin-left: 0;
+    position: relative;
 
     &:not(:last-child) {
       margin-right: 1px;

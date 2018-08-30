@@ -1,7 +1,7 @@
 {{#> form}}
   {{#> form-group}}
     {{#> form-label for="select1"}}Select input{{/form-label}}
-    {{#> form-controls controlType="select" id="select1" name="select1"}}
+    {{#> form-control controlType="select" id="select1" name="select1"}}
       <option disabled>Please choose</option>
       <option value="Mr">Mr</option>
       <option value="Miss">Miss</option>
@@ -9,11 +9,11 @@
       <option value="Ms">Ms</option>
       <option value="Dr">Dr</option>
       <option value="Other">Other</option>
-    {{/form-controls}}
+    {{/form-control}}
   {{/form-group}}
   {{#> form-group}}
     {{#> form-label for="select2"}}Select input with grouping{{/form-label}}
-    {{#> form-controls controlType="select" id="select2" name="select2"}}
+    {{#> form-control controlType="select" id="select2" name="select2"}}
       <optgroup label="Group 1">
         <option value="Option 1">The first option</option>
         <option value="Option 2" selected>The second option is selected by default</option>
@@ -22,11 +22,11 @@
         <option value="Option 3">The third option</option>
         <option value="Option 4">The fourth option</option>
       </optgroup>
-    {{/form-controls}}
+    {{/form-control}}
   {{/form-group}}
   {{#> form-group}}
     {{#> form-label for="select3" pf-c-form__label--modifier="pf-m-disabled"}}Select label and input disabled{{/form-label}}
-      {{#> form-controls controlType="select" id="select3" name="select3" disabled="true"}}
+      {{#> form-control controlType="select" id="select3" name="select3" disabled="true"}}
         <option value="" selected>Please choose</option>
         <option value="Mr">Mr</option>
         <option value="Miss">Miss</option>
@@ -34,7 +34,7 @@
         <option value="Ms">Ms</option>
         <option value="Dr">Dr</option>
         <option value="Other">Other</option>
-    {{/form-controls}}
+    {{/form-control}}
   {{/form-group}}
 {{/form}}
 

@@ -1,7 +1,7 @@
 {{#> form}}
   {{#> form-group}}
   {{#> form-label for="textareaButton"}}Textarea with button{{/form-label}}
-  {{#> input-group}}{{#> form-controls controlType="textarea" name="textareaButton" id="textareaButton" aria-describedby="TextAreaButtonDescribedBy" }}{{/form-controls}}
+  {{#> input-group}}{{#> form-control controlType="textarea" name="textareaButton" id="textareaButton" aria-describedby="TextAreaButtonDescribedBy" }}{{/form-control}}
     {{#> button btnClass="pf-m-secondary" id="TextAreaButtonDescribedBy"}} Button {{/button}}
   {{/input-group}}
   {{/form-group}}
@@ -13,7 +13,7 @@
           Dropdown
           <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
         {{/dropdown}}
-        {{#> form-controls controlType="input" input="true" type="text" id="textInputDropdown" name="textInputDropdown" }}{{/form-controls}}    
+        {{#> form-control controlType="input" input="true" type="text" id="textInputDropdown" name="textInputDropdown" }}{{/form-control}}    
     {{/input-group}}
     
   {{/form-group}}
@@ -21,15 +21,15 @@
     {{#> form-label for="textInputButton"}}Input with button{{/form-label}}
     {{#> input-group}}
         {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-        {{#> form-controls controlType="input" input="true" type="text" id="textInputButton" name="textInputButton" }}{{/form-controls}}
+        {{#> form-control controlType="input" input="true" type="text" id="textInputButton" name="textInputButton" }}{{/form-control}}
     {{/input-group}}
     
   {{/form-group}}
   {{#> form-group}}
     {{#> form-label for="textInputText1" required="true"}}Email Input with text{{/form-label}}
     {{#> input-group}}
-        {{#> form-controls controlType="input" input="true" type="email" name="textInputText1" id="textInputText1" required="true" aria-describedby="email-example2"}}{{/form-controls}}
-        {{#> input-group-text inputGroupTextType="span" id="email-example2"}}
+        {{#> form-control controlType="input" input="true" type="email" name="textInputText1" id="textInputText1" required="true" aria-describedby="email-example2"}}{{/form-control}}
+        {{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="email-example2"'}}
     @example.com
   {{/input-group-text}}
     {{/input-group}}
