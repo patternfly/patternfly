@@ -24,6 +24,7 @@
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
   --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-input-group__button--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-input-group--form-control-invalid--ZIndex: var(--pf-global--ZIndex--xs);
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
@@ -32,6 +33,7 @@
 
   .pf-c-form-control[aria-invalid="true"] {
     position: relative;
+    z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
 
     &:not(:last-child) {
       margin-right: 1px;
