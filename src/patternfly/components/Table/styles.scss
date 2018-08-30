@@ -14,37 +14,37 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
   // ============================================================ //
 
   // Body
-  --pf-c-table-tbody--MarginTop:                      var(--pf-global--spacer--sm);
+  --pf-c-table-tbody--MarginTop:                              var(--pf-global--spacer--sm);
 
   // Row
-  --pf-c-table-tr--Padding:                           var(--pf-global--spacer--xl);
-  --pf-c-table-tr--MarginTop:                         var(--pf-global--spacer--sm);
-  --pf-c-table-tr--BorderWidth:                       var(--pf-global--BorderWidth--md);
-  --pf-c-table-tr--GridColumnGap:                     var(--pf-global--spacer--md);
-  --pf-c-table-tr--BorderColor:                       $pf-color-black-200;
+  --pf-c-table-tr--Padding:                                   var(--pf-global--spacer--xl);
+  --pf-c-table-tr--MarginTop:                                 var(--pf-global--spacer--sm);
+  --pf-c-table-tr--BorderWidth:                               var(--pf-global--BorderWidth--md);
+  --pf-c-table-tr--GridColumnGap:                             var(--pf-global--spacer--md);
+  --pf-c-table-tr--BorderColor:                               $pf-color-black-200;
 
   // Th
-  --pf-c-table-th--FontSize:                          var(--pf-global--FontSize--sm);
-  --pf-c-table-th--FontWeight:                        var(--pf-global--FontWeight--normal);
-  --pf-c-table-th--PaddingTop:                        var(--pf-global--spacer--md);
-  --pf-c-table-th--PaddingBottom:                     var(--pf-global--spacer--md);
+  --pf-c-table-th--FontSize:                                  var(--pf-global--FontSize--sm);
+  --pf-c-table-th--FontWeight:                                var(--pf-global--FontWeight--normal);
+  --pf-c-table-th--PaddingTop:                                var(--pf-global--spacer--md);
+  --pf-c-table-th--PaddingBottom:                             var(--pf-global--spacer--md);
 
   // Td - small breakpoint
-  --pf-c-table-td--MarginTop--sm:                     var(--pf-global--spacer--sm);
-  --pf-c-table-td--MarginBottom--sm:                  var(--pf-global--spacer--sm);
-  --pf-c-table-td--GridColumnGap:                     var(--pf-global--spacer--md);
+  --pf-c-table-td--MarginTop--sm:                             var(--pf-global--spacer--sm);
+  --pf-c-table-td--MarginBottom--sm:                          var(--pf-global--spacer--sm);
+  --pf-c-table-td--GridColumnGap:                             var(--pf-global--spacer--md);
 
   // Td
-  --pf-c-table-td--FontSize:                          var(--pf-global--FontSize--md);
-  --pf-c-table-td--PaddingTop:                        var(--pf-global--spacer--xl);
-  --pf-c-table-td--PaddingBottom:                     var(--pf-global--spacer--xl);
+  --pf-c-table-td--FontSize:                                  var(--pf-global--FontSize--md);
+  --pf-c-table-td--PaddingTop:                                var(--pf-global--spacer--xl);
+  --pf-c-table-td--PaddingBottom:                             var(--pf-global--spacer--xl);
 
   // Th / td shared variables
-  --pf-c-table-cell--PaddingRight:                    var(--pf-global--spacer--md);
-  --pf-c-table-cell--PaddingLeft:                     var(--pf-global--spacer--md);
-  --pf-c-table-cell--first-child--PaddingLeft:        var(--pf-global--spacer--xl);
-  --pf-c-table-cell--last-child--PaddingRight:        var(--pf-global--spacer--xl);  
-  --pf-c-table--BackgroundColor:                      var(--pf-global--BackgroundColor--100);
+  --pf-c-table-cell--PaddingRight:                            var(--pf-global--spacer--md);
+  --pf-c-table-cell--PaddingLeft:                             var(--pf-global--spacer--md);
+  --pf-c-table-cell--first-child--PaddingLeft:                var(--pf-global--spacer--xl);
+  --pf-c-table-cell--last-child--PaddingRight:                var(--pf-global--spacer--xl);  
+  --pf-c-table--BackgroundColor:                              var(--pf-global--BackgroundColor--100);
 
   // ============================================================ //
   // End non-conformant variables
@@ -52,45 +52,45 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 
 
   // Table
-  --pf-c-table--Color:                                  var(--pf-global--Color--dark-100);
+  --pf-c-table--Color:                                        var(--pf-global--Color--dark-100);
 
   // Table cell - toggle
-  --pf-c-table__toggle--Right:                          var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--Bottom:                         var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--Right--sm:                      var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--Bottom--sm:                     var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--PaddingRight:                   var(--pf-global--spacer--md);
+  --pf-c-table__toggle--Right:                                var(--pf-global--spacer--xl);
+  --pf-c-table__toggle--Bottom:                               var(--pf-global--spacer--xl);
+  --pf-c-table__toggle--Right--sm:                            var(--pf-global--spacer--xl);
+  --pf-c-table__toggle--Bottom--sm:                           var(--pf-global--spacer--xl);
+  --pf-c-table__toggle--PaddingRight:                         var(--pf-global--spacer--md);
 
   // Table check 
-  --pf-c-table__check--MarginLeft:                      var(--pf-global--spacer--sm);
-  --pf-c-table__check--MarginTop:                       var(--pf-global--spacer--sm);
+  --pf-c-table__check--MarginLeft:                            var(--pf-global--spacer--sm);
+  --pf-c-table__check--MarginTop:                             var(--pf-global--spacer--sm);
 
   // Expandable row
   // hardcoding to match design spec
-  --pf-c-table__expandable-row--BorderLeftWidth:        4px;
-  --pf-c-table__expandable-row--Transition:             var(--pf-global--Transition);
+  --pf-c-table__expandable-row--BorderLeftWidth:              4px;
+  --pf-c-table__expandable-row--Transition:                   var(--pf-global--Transition);
 
   // Table rows
-  --pf-c-table__expandable-row-content--PaddingTop:     var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingRight:   var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingBottom:  var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingLeft:    var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--MaxHeight:      600px;
+  --pf-c-table__expandable-row-content--PaddingTop:           var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingRight:         var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingBottom:        var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingLeft:          var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--MaxHeight:            600px;
 
   // Expandable row content
-  --pf-c-table__expandable-row-content--Transition:     var(--pf-global--Transition);
+  --pf-c-table__expandable-row-content--Transition:           var(--pf-global--Transition);
 
   // Table - action cell
-  --pf-c-table__action--PaddingTop:                     var(--pf-global--spacer--sm);
-  --pf-c-table__action--PaddingBottom:                  var(--pf-global--spacer--sm);
-  --pf-c-table__action--MarginLeft:                     var(--pf-global--spacer--xl);
+  --pf-c-table__action--PaddingTop:                           var(--pf-global--spacer--sm);
+  --pf-c-table__action--PaddingBottom:                        var(--pf-global--spacer--sm);
+  --pf-c-table__action--MarginLeft:                           var(--pf-global--spacer--xl);
   
   // Sort indicator
-  --pf-c-table__sort-indicator--MarginLeft:             var(--pf-global--spacer--md);
-  --pf-c-table__sort-indicator--Color:                  var(--pf-global--disabled-color--200);
+  --pf-c-table__sort-indicator--MarginLeft:                   var(--pf-global--spacer--md);
+  --pf-c-table__sort-indicator--Color:                        var(--pf-global--disabled-color--200);
 
   // Icon inline
-  --pf-c-table__icon-inline--MarginRight:               var(--pf-global--spacer--sm);
+  --pf-c-table__icon-inline--MarginRight:                     var(--pf-global--spacer--sm);
 
 
 
@@ -101,36 +101,36 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 
 
   // Modifier - Compact table
-  --pf-c-table--m-compact--PaddingTop:                    var(--pf-global--spacer--md);
-  --pf-c-table--m-compact--PaddingBottom:                 var(--pf-global--spacer--md);
-  --pf-c-table--m-compact--FontSize:                      var(--pf-global--FontSize--sm);
+  --pf-c-table--m-compact--PaddingTop:                        var(--pf-global--spacer--md);
+  --pf-c-table--m-compact--PaddingBottom:                     var(--pf-global--spacer--md);
+  --pf-c-table--m-compact--FontSize:                          var(--pf-global--FontSize--sm);
 
   // Modifier - Toggle
-  --pf-c-table--m-toggle--Transition:                     var(--pf-global--transition);
+  --pf-c-table--m-toggle--Transition:                         var(--pf-global--Transition);
 
   // Modifier - Fit content
-  --pf-c-table--m-fit-content--PaddingRight:              var(--pf-global--spacer--sm);
-  --pf-c-table--m-fit-content--PaddingLeft:               var(--pf-global--spacer--sm);
+  --pf-c-table--m-fit-content--PaddingRight:                  var(--pf-global--spacer--sm);
+  --pf-c-table--m-fit-content--PaddingLeft:                   var(--pf-global--spacer--sm);
 
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BorderLeftColor:  var(--pf-global--active-color--100);
   --pf-c-table__expandable-row--m-expanded--BoxShadow:        var(--pf-global--BoxShadow--lg-bottom);
 
   // Modifier - Sort ascending
-  --pf-c-table__sort--m-sort-ascending--Color:            var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-ascending--BorderColor:      var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-ascending--BorderWidth:      var(--pf-global--BorderWidth--md);
+  --pf-c-table__sort--m-sort-ascending--Color:                var(--pf-global--active-color--100);
+  --pf-c-table__sort--m-sort-ascending--BorderColor:          var(--pf-global--active-color--100);
+  --pf-c-table__sort--m-sort-ascending--BorderWidth:          var(--pf-global--BorderWidth--md);
 
   // Modifier - Sort ascending indicator
-  --pf-c-table__sort-indicator--m-sort-ascending--Color:  var(--pf-global--active-color--100);
+  --pf-c-table__sort-indicator--m-sort-ascending--Color:      var(--pf-global--active-color--100);
 
   // Modifier - Sort descending
-  --pf-c-table__sort--m-sort-descending--Color:           var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-descending--BorderColor:     var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-descending--BorderWidth:     var(--pf-global--BorderWidth--md);
+  --pf-c-table__sort--m-sort-descending--Color:               var(--pf-global--active-color--100);
+  --pf-c-table__sort--m-sort-descending--BorderColor:         var(--pf-global--active-color--100);
+  --pf-c-table__sort--m-sort-descending--BorderWidth:         var(--pf-global--BorderWidth--md);
 
   // Modifier - Sort descending indicator
-  --pf-c-table__sort-indicator--m-sort-descending--Color: var(--pf-global--active-color--100);
+  --pf-c-table__sort-indicator--m-sort-descending--Color:     var(--pf-global--active-color--100);
 
 
   /* stylelint-enable */
@@ -177,15 +177,15 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
     // set background color to transparent for box shadow rendering
     @media screen and (min-width: $pf-c-table--breakpoint--mobile) {
       background-color: transparent;
-      border-top: var(--pf-c-table-tr--BorderWidth) solid var(--pf-c-table-tr--BorderColor);
     }
   }
 
-  // Standard table row (not expandable)
+  // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
     // set position relative for absolutely positioned elements on mobile
     position: relative;
+    border-bottom: var(--pf-c-table-tr--BorderWidth) solid var(--pf-c-table-tr--BorderColor);
 
     // @mobile only
     // set grid to one column, use auto placement for additional td options: .pf-c-table__toggle, .pf-c-table__check, .pf-c-table__action, .pf-m-blank
@@ -205,7 +205,7 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
     }
   }
 
-  // Standard td, in standard row (not expandable)
+  // Standard td, in standard row (non-expandable)
   // exclude specifically styled tds
   tr:not(.pf-c-table__expandable-row) td:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-m-blank) {
     // @mobile only
@@ -243,12 +243,16 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 
   // Table header cell
   th {
-    padding-top: var(--pf-c-table-th--PaddingTop);
-    padding-bottom: var(--pf-c-table-th--PaddingBottom);
     font-size: var(--pf-c-table-th--FontSize);
     font-weight: var(--pf-c-table-th--FontWeight);
     white-space: nowrap;
     vertical-align: top;
+  }
+
+  // ignore table sort cells, apply padding to the nested button
+  th:not(.pf-c-table__sort) {
+    padding-top: var(--pf-c-table-th--PaddingTop);
+    padding-bottom: var(--pf-c-table-th--PaddingBottom);
   }
 
   // Table cell
@@ -300,14 +304,6 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
     font-size: var(--pf-c-table--m-compact--FontSize);
   }
 
-  // // Modifier - compact td
-  // &.pf-m-compact .pf-c-table__action {
-  //   @media screen and (min-width: $pf-c-table--breakpoint--mobile) {
-  //     padding-top: var(--pf-c-table__action--PaddingTop);
-  //     padding-bottom: var(--pf-c-table__action--PaddingBottom);
-  //   }
-  // }
-
   // Modifier - Shrink, reduce padding left and right
   .pf-m-shrink {
     // @desktop
@@ -347,8 +343,7 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 
 // Expandable row
 .pf-c-table__expandable-row {
-  border-top: 0 solid transparent;
-  border-bottom-color: transparent;
+  border-bottom: 0 solid transparent;
   border-left: var(--pf-c-table__expandable-row--BorderLeftWidth) solid transparent;
   transition: var(--pf-c-table__expandable-row--Transition);
 
@@ -392,8 +387,8 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
   // Modifier - Expanded tr
   &.pf-m-expanded {
     // reset borders to default values
-    border-top-color: var(--pf-c-table-tr--BorderColor);
-    border-top-width: var(--pf-c-table-tr--BorderWidth);
+    border-bottom-color: var(--pf-c-table-tr--BorderColor);
+    border-bottom-width: var(--pf-c-table-tr--BorderWidth);
     border-left-color: var(--pf-c-table__expandable-row--m-expanded--BorderLeftColor);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
   }
@@ -542,8 +537,6 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 
 // Table sort
 .pf-c-table__sort {
-  cursor: pointer;
-
   &::selection {
     background-color: transparent;
   }
@@ -573,6 +566,16 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
       transform: rotate(180deg);
     }
   }
+
+  /* stylelint-disable */
+  [role="button"] {
+    display: flex;
+    padding-top: var(--pf-c-table-th--PaddingTop);
+    padding-bottom: var(--pf-c-table-th--PaddingBottom);
+    vertical-align: baseline;
+    cursor: pointer;
+  }
+  /* stylelint-enable */
 }
 
 // Sort indicator
@@ -583,6 +586,7 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 }
 
 // Icon inline
+// replace this when inline text with icon is in place
 .pf-c-table__icon-inline {
   display: flex;
   align-items: center;

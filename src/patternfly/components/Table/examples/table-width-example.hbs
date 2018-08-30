@@ -1,11 +1,9 @@
 <div class="demo">
-{{#> table table--interactive="true" table--grid="true" table--attribute='id="expandable-table" aria-label="This is an expandable table example"'}}
-  {{#> table-caption}}
-  {{/table-caption}}
+{{#> table table--grid="true" table--attribute='aria-label="This is an expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--check="true"}}
-        <input class="pf-c-check" type="checkbox" name="example" aria-label="unselected checkbox example">
+      {{#> table-th}}
+        <input class="pf-c-check" type="checkbox" name="example">
       {{/table-th}}    
       {{#> table-th table-th--sortable="true" table-th--asc="true" table-th--modifier="pf-m-width-max"}}
         Repositories
@@ -26,12 +24,12 @@
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--attribute='tabindex="-1"'}}
+    {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row1" aria-label="Check row"}}
+        {{#> check pf-c-check-type="checkbox" name="check row1"}}
         {{/check}}
       {{/table-td}}      
-      {{#> table-td table-td--data-label="Repository Name" table-td--attribute='aria-label="Repository Name"'}}
+      {{#> table-td table-td--data-label="Repository Name"}}
         <div>Node 1</div>
         <a href="#">siemur/test-space</a>
       {{/table-td}}
@@ -60,7 +58,7 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row2" aria-label="Check row"}}
+        {{#> check pf-c-check-type="checkbox" name="check row2"}}
         {{/check}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
@@ -91,7 +89,7 @@
     {{/table-tr}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row2" aria-label="Check row"}}
+        {{#> check pf-c-check-type="checkbox" name="check row2"}}
         {{/check}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}

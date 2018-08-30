@@ -1,27 +1,38 @@
 ## Overview
 
-The table component is used to present tabular data. Simple tables have no interactive elements. Tables containing checkboxes, button, editable cells, etc require the application of `role="grid"` to `<table>`. Expandable table content (`.pf-c-table__expandable-content`) is placed within `<td>` cells.
-This is done to maintain alignment and spacing provided by the tables structure. These `<td>`s can span multiple columns.
+The table component is used to present tabular data. Simple tables have no interactive elements. Tables containing checkboxes, button, editable cells, etc require the application of `role="grid"` to `<table>`. Expandable table content (`.pf-c-table__expandable-content`) is placed within `<td>`s, within expandable rows.
+This is done to maintain alignment and spacing provided by the table's structure. `<td>`s within expandable rows can span multiple columns.
 
-Expandable tables - table columns may shift when expanding/collapsing. To address this, set `.pf-m-fit-content`, or assign a width `.pf-m-width-[width]` to the corresponding `<th>` defining the start column. Width values are `[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]`.
+Expandable tables - table columns may shift when expanding/collapsing. To address this, set `.pf-m-fit-content`, or assign a width `.pf-m-width-[width]` to the corresponding `<th>` defining the column. Width values are `[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]`.
 
 By default, all table header cells are set to `white-space: nowrap`. If a `<th>`'s content needs to wrap, apply `.pf-m-wrap`.
 
-The current table implementation supports, if expandable, one toggle positioned at the beginning of row. 
+**This component implementation supports:**
+- One expandable button, positioned in the first cell of an expandable row.
+- One checkbox positioned in the first cell of a non-expandable row or the second cell of an expandable row.
+- One action button, positioned at the end of any row.
+- Basic table layout.
+- Compact table layout
+
+
+Role="grid":
+Applying `role="grid"` to tables enhances keyboard navigation. We recommend applying `role="grid"` to all tables, however, in mobile viewports, this can cause unexpected interaction. Therefore, for mobile accessible devices, it is recommended that `role="grid"` be removed.
 
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `display="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. |
-| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the abscence of `<caption>` or `<h*>`.** |
-| `aria-expanded=[true/false]` | `.pf-c-table__expandable-row` | Indicates the row is closed. |
-| `aria-sort` | `.pf-c-table__sort` | . |
-| experimental `aria-hidden` | `.pf-c-table__blank`, `.pf-c-table__blank` | . |
-| experimental `hidden` | `.pf-c-table__expandable-row` | Removes element from keyboard focus. |
-| `tabindex="-1"` | `<td>`, `.pf-m-blank` | Removes element from keyboard focus. |
-| `aria-role="presentation"` | `.pf-c-table__expandable-row-content` | Declares that an element is being used only for presentation and therefore does not have any accessibility semantics.  |
+| `display="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required if table contains interactive elements** |
+| `display="treegrid"` | `.pf-c-table` | Identifies the element that serves as the grid widget whose rows can be expanded and collapsed. **Required if table contains expandable/collapsible rows** |
+| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the abscence of `<caption>` or `<h*>`** |
+| `aria-hidden=[true/false]` | `.pf-c-table__expandable-row` | Indicates whether the element is exposed to an accessibility API. **Required for expandable rows** |
+| `aria-expanded=[true/false]` | `<tr>` | Indicates whether the next sibling row is currently expanded or collapsed. **Required** |
+| `aria-sort=[ascending or descending]` | `.pf-c-table__sort` | Indicates if items in a table or grid are sorted in ascending or descending order. For each table or grid, authors __SHOULD__ apply aria-sort to only one header at a time. **Required**|
 | `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
+| `role="button"` | `.pf-c-table__sort > span` | Indicates that a `<th>` is clickable; implies sort. |
+| `aria-level={int}` | `<tr>` | Defines the hierarchical level of an element within a structure. **Required for treegrid** |
+| `aria-posinset={int}` | `<tr>` | Defines an element's number or position in the current set of listitems or treeitems. **Required if all elements in the set are not present in the DOM** |
+| `aria-setsize={int}` | `<tr>` | Defines the number of items in the current set of listitems or treeitems. **Required if all elements in the set are not present in the DOM** |
 
 
 ## Usage

@@ -1,25 +1,18 @@
 <td class="{{#if table-td--toggle}}pf-c-table__toggle pf-m-shrink {{else if table-td--check}}pf-c-table__check pf-m-shrink {{else if table-td--action}}pf-c-table__action pf-m-shrink {{else if table-td--blank}}pf-m-blank {{/if}}{{#if table-td--modifier}}{{table-td--modifier}}{{/if}}"
-
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
   {{/if}}
-  {{#if table-td--check}}
-    
-  {{/if}}
-  {{#if table-td--action}}
-    
-  {{/if}}
-  {{#if table-td--data-label}}
-    data-label="{{table-td--data-label}}"
+
+  {{#if table--expandable}}
+    role="gridcell"    
   {{/if}}
 
-  {{#if table-td--blank}}
-    tabindex="-1"
-    aria-hidden="true"
+  {{#if table-td--data-label}}
+    data-label="{{table-td--data-label}}"
   {{/if}}>
 
   {{#if table-td--toggle}}
-    <button class="pf-c-button pf-m-plain pf-m-toggle {{#if table-td--expanded}} pf-m-expanded{{/if}}" aria-label="Expand row" {{#if table-td--target}}data-target="{{table-td--target}}"{{else}}data-target="must set data target"{{/if}}>
+    <button class="pf-c-button pf-m-plain pf-m-toggle {{#if table-td--expanded}} pf-m-expanded{{/if}}">
       {{!-- <i class="fas fa-chevron-down"></i> --}}
       <i class="fas fa-angle-down"></i>
     </button>
