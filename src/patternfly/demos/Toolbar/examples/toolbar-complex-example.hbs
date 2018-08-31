@@ -1,3 +1,29 @@
-{{#> toolbar}}
-  Complex Example Content
+
+{{#> toolbar pf-l-toolbar--modifier="pf-u-justify-content-space-between pf-u-mx-xl pf-u-my-md"}}
+
+    {{#> toolbar-group}}
+      {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
+        {{#> check pf-c-check-type="checkbox" name="unselected checkbox example" aria-label="unselected checkbox example"}}
+        {{/check}}
+        <a><i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i></a>
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Repository
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+
+    {{#> toolbar-group}}
+      {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
+        Branches
+      {{/toolbar-item}}
+      {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
+        Pull Requests
+      {{/toolbar-item}}
+      {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
+        Work Spaces
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Last Commit
+      {{/toolbar-item}}
+    {{/toolbar-group}}
 {{/toolbar}}
