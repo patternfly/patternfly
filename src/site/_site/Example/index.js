@@ -143,9 +143,11 @@ export default class Example extends React.Component {
               </li>
             </ul>
             {sourceTab}
-            <div className="Example__componentLink">
-              Components and Layouts used: <ul>{navigationItems}</ul>
-            </div>
+            {navigationItems && (
+              <div className="Example__componentLink">
+                Components and Layouts used: <ul>{navigationItems}</ul>
+              </div>
+            )}
           </div>
         </div>
       );
