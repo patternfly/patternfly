@@ -15,12 +15,12 @@ A modal box is a generic rectangular container that can be used to build modals.
 
 ## Usage
 
-| Class                | Applied     | Outcome                                                                                                                                                                              |
-| -------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `.pf-c-modal-box` |               `<div>` |           Initiates a modal box. **Required** |
-| `.pf-c-modal-box__header` |       `<header>` |           Initiates a modal box header. A modal box header is **required** if there is no modal box body. |
-| `.pf-c-modal-box__header-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` |           Initiates a modal box header title. |
-| `.pf-c-modal-box__body` |         `<div>` |           Initiates a modal box body. A modal box body is **required** if there is no modal box header. |
-| `.pf-c-modal-box__footer` |       `<footer>` |           Initiates a modal box footer. |
-| `.pf-c-modal-box__close` |        `<button>` |        Initiates a modal box close button container. The close container can be nested as the first item in the header or body. **Required** |
-| `.pf-m-lg` |                      `.pf-c-modal-box` | Modifies for a modal box width. |
+| Class | Applied | Outcome |
+| -- | -- | -- |
+| `.pf-c-modal-box` | `<div>` | Initiates a modal box. **Required** |
+| `.pf-c-modal-box__header` | `<header>` | Initiates a modal box header. A modal box header is **required** if there is no modal box body. |
+| `.pf-c-modal-box__header-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a modal box header title. |
+| `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. A modal box body is **required** if there is no modal box header. |
+| `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
+| `.pf-c-modal-box__close` | `<div>` | Initiates a modal box close button container. The close container can be nested as the first item in the modal box. **Required** |
+| `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a modal box width. |
