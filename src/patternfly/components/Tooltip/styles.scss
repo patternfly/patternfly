@@ -2,7 +2,7 @@
 
 .pf-c-tooltip {
   // Component variables
-  --pf-c-tooltip--MaxWidth: pf-size-prem(200px);
+  --pf-c-tooltip--MaxWidth: #{pf-size-prem(200px)};
   --pf-c-tooltip--BoxShadow: var(--pf-global--BoxShadow);
   --pf-c-tooltip--MarginBottom: var(--pf-global--arrow--width); // Set margins to arrow width for placement
   --pf-c-tooltip--MarginTop: var(--pf-global--arrow--width);

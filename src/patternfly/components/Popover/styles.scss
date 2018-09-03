@@ -2,8 +2,8 @@
 
 .pf-c-popover {
   // Component variables
-  --pf-c-popover--MinWidth: pf-size-prem(100px);
-  --pf-c-popover--MaxWidth: pf-size-prem(300px);
+  --pf-c-popover--MinWidth: #{pf-size-prem(100px)};
+  --pf-c-popover--MaxWidth: #{pf-size-prem(300px)};
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow);
 
   // Set margin to arrow width for placement
