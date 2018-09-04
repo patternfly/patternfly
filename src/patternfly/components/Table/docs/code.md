@@ -16,7 +16,7 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 
 
 Role="grid":
-Applying `role="grid"` to tables enhances keyboard navigation. We recommend applying `role="grid"` to all tables, however, in mobile viewports, this can cause unexpected interaction. Therefore, for mobile accessible devices, it is recommended that `role="grid"` be removed.
+Applying `role="grid"` to tables enhances keyboard navigation for desktop viewports. We recommend applying `role="grid"` to all non-expandabled tables, however, in mobile viewports, this can cause an unexpected interaction. Therefore, for mobile devices, it is recommended that `role="grid"` be removed.
 
 ## Accessibility
 
@@ -33,6 +33,7 @@ Applying `role="grid"` to tables enhances keyboard navigation. We recommend appl
 | `aria-level={int}` | `<tr>` | Defines the hierarchical level of an element within a structure. **Required for treegrid** |
 | `aria-posinset={int}` | `<tr>` | Defines an element's number or position in the current set of listitems or treeitems. **Required if all elements in the set are not present in the DOM** |
 | `aria-setsize={int}` | `<tr>` | Defines the number of items in the current set of listitems or treeitems. **Required if all elements in the set are not present in the DOM** |
+| `scope="col"` | `<th>` | Specifies that the cell is a header for a column. **Required for treegrid** |
 
 
 ## Usage

@@ -2,6 +2,12 @@
 
 $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
 
+/* stylelint-disable */
+.demo {
+  padding: 30px;
+}
+/* stylelint-enable */
+
 .pf-c-table {
 
   /* stylelint-disable */
