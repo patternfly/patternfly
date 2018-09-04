@@ -1,4 +1,4 @@
-{{#> toolbar}}
+{{#> toolbar pf-l-toolbar--modifier="pf-u-justify-content-space-between pf-u-mx-xl pf-u-my-md"}}
   {{#> toolbar-group}}
     {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-2xl"}}
       {{#> input-group}}
@@ -19,18 +19,19 @@
       {{/dropdown}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      <button><i class="fas fa-sort-alpha-down"></i></button>
+      <button class="pf-c-button pf-m-plain"><i class="fas fa-sort-alpha-down"></i></button>
     {{/toolbar-item}}
   {{/toolbar-group}}
   {{#> toolbar-group}}
-    {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-m-sm"}}
-      <a class="pf-m-link"><i class="fas fa-list"></i></a>
+    {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
+      <button class="pf-c-button pf-m-plain"><i class="fas fa-table"></i></button>
     {{/toolbar-item}}
-    {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-m-sm"}}
-      <a class="pf-m-link"><i class="fas fa-table"></i></a>
+    {{#> toolbar-item}}
+      <button class="pf-c-button pf-m-plain"><i class="fas fa-list"></i></button>
     {{/toolbar-item}}
-    {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-my-sm pf-u-mx-lg"}}
-       <a class="pf-m-link">Action</a>
+    
+    {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mx-md"}}
+       <button class="pf-c-button pf-m-plain"> Action </button>
     {{/toolbar-item}}
     {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-my-xs pf-u-mr-md"}}
       {{#> button btnClass="pf-m-primary"}}
