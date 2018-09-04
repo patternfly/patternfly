@@ -84,7 +84,8 @@ $nav: "pf-c-nav";
 
   // Main section modifiers
   --pf-l-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-l-page__main-section--m-dark--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+  --pf-l-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-l-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
   // Base
   display: grid;
@@ -279,9 +280,15 @@ $nav: "pf-c-nav";
     background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
   }
 
-  &.pf-m-dark {
+  &[class^="pf-m-dark"] {
     @extend %pf-t-dark; // force the container follow the dark theme
+  }
 
-    background-color: var(--pf-l-page__main-section--m-dark--BackgroundColor);
+  &.pf-m-dark-100 {
+    background-color: var(--pf-l-page__main-section--m-dark-100--BackgroundColor);
+  }
+
+  &.pf-m-dark-200 {
+    background-color: var(--pf-l-page__main-section--m-dark-200--BackgroundColor);
   }
 }
