@@ -3,19 +3,15 @@
 
 {{#> page page--attribute='id="page"'}}
   {{#> page-header}}
-
     {{#> page-header-brand}}
-      {{#> page-sidebar-toggle button-toggle--interactive="true" nav-toggle--attribute='id="nav-toggle" aria-label="Toggle primary navigation"'}}
-      {{/page-sidebar-toggle}}
-      <a class="pf-l-page__header-brand-link pf-u-sr-only pf-u-visible-on-md" href="#">
-        {{#> brand brand--src="/assets/images/l_pf-reverse.svg" brand--alt="Patternfly Logo" brand--modifier="pf-m-patternfly-logo"}}{{/brand}}
-      </a>
+      {{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
+      {{/page-template-header-brand-elements}}
     {{/page-header-brand}}
     {{#> page-header-selector}}
       pf-c-context-selector
     {{/page-header-selector}}
-    {{#> page-template-header-elements}}
-    {{/page-template-header-elements}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-sidebar}}  
     {{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav, Simple List Example"'}}

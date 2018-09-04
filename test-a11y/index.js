@@ -32,7 +32,6 @@ const testPageA11y = testPage =>
     driver.get(`${protocol}://${host}:${port}${testPage.path}`).then(() => {
       AxeBuilder(driver)
         .withTags(['wcag2a', 'wcag2aa'])
-        .disableRules(['color-contrast'])
         .analyze()
         .then(results => {
           if (results.violations.length > 0) {

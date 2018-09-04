@@ -86,8 +86,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     border-color: var(--pf-c-form-control--readonly--BorderColor);
   }
 
-  &.pf-m-invalid,
-  :invalid {
+  &[aria-invalid="true"] {
     @include pf-bg-svg($pf-c-form-controls--invalid--Coordinates, $pf-c-form-controls--invalid--Color);
 
     &:not(.pf-m-form-control-alt) {
@@ -100,8 +99,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
   @at-root select#{&} {
     height: var(--pf-c-form-control--Height);
 
-    &.pf-m-invalid,
-    :invalid {
+    &[aria-invalid="true"] {
       background: none;
     }
   }
@@ -114,8 +112,7 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     border-bottom: var(--pf-c-form-control--alt--BottomBorderWidth) solid var(--pf-c-form-control--BorderColor);
     border-radius: 0;
 
-    &.pf-m-invalid,
-    :invalid {
+    &[aria-invalid="true"] {
       border-bottom-color: var(--pf-c-form-control--invalid--BorderColor);
     }
   }

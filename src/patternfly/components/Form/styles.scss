@@ -201,6 +201,10 @@
   &.pf-m-error {
     color: var(--pf-c-form--error--Color);
   }
+
+  &.pf-m-inactive {
+    display: none;
+  }
 }
 
 // Button group

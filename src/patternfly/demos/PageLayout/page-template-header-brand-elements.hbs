@@ -1,0 +1,26 @@
+{{#if page-template-header-brand--toggle}}
+  {{#> page-header-brand-toggle}}
+    {{#> button btnClass="pf-m-plain"
+      btnAttributes='id="nav-toggle"
+                      aria-label="Toggle primary navigation"
+                      onClick="(function(){
+        const mq = window.matchMedia(\'(min-width: 768px)\');
+        let page = document.getElementById(\'primary-nav\');
+              page = page.parentElement;
+
+        if (mq.matches) {
+          page.classList.remove(\'pf-m-expanded\');
+          page.classList.toggle(\'pf-m-collapsed\');
+        } else {
+          page.classList.remove(\'pf-m-collapsed\');
+          page.classList.toggle(\'pf-m-expanded\');
+        }
+          return false;
+      })();return false;"'}}
+      <i class="fas fa-bars"></i>
+    {{/button}}
+  {{/page-header-brand-toggle}}
+{{/if}}
+{{#> page-header-brand-link page-header-brand-link--href="#"}}
+  {{#> brand brand--src="/assets/images/l_pf-reverse-164x11.png" brand--alt="Patternfly Logo" brand--modifier="pf-m-sm"}}{{/brand}}
+{{/page-header-brand-link}}

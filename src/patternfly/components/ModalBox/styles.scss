@@ -76,6 +76,11 @@
       max-width: var(--pf-c-modal-box--lg--MaxWidth);
     }
   }
+
+  // If the last child isn't the footer, then we need to put the footer's bottom padding there
+  > :last-child:not(.pf-c-modal-box__footer) {
+    padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
+  }
 }
 
 // Header
@@ -176,10 +181,4 @@
   position: absolute;
   top: var(--pf-c-modal-box__close--Top);
   right: var(--pf-c-modal-box__close--Right);
-}
-
-// If the last child isn't the footer, then we need to put the footer's bottom padding there
-.pf-c-modal-box__header:last-child,
-.pf-c-modal-box__body:last-child {
-  padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
 }

@@ -188,7 +188,7 @@ $pf-global--link--Color--light-hover:     darken($pf-global--primary-color--ligh
 $pf-global--link--TextDecoration--hover:  underline !default;
 
 // List
-$global-ListStyle: disc outside !default;
+$pf-global--ListStyle: disc outside !default;
 
 // Transitions
 $pf-global--Transition: all 500ms cubic-bezier(.42, 0, .58, 1);

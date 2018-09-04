@@ -3,17 +3,17 @@
 .pf-c-about-modal-box {
   // Component variables
   // Modal uses a non-standard background color
-  --pf-c-about-modal-box--BackgroundColor: $pf-color-black-1000;
+  --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000};
 
   // This is a special one-off glow for the about modal
   --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(256, 256, 256, .4);
   --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
 
   // Width and height values are determined by design
-  --pf-c-about-modal-box--MaxWidth: pf-size-prem(1232px);
+  --pf-c-about-modal-box--MaxWidth: #{pf-size-prem(1232px)};
 
   // Height is optimized for the exact height desired
-  --pf-c-about-modal-box--Height: pf-size-prem(762px);
+  --pf-c-about-modal-box--Height: #{pf-size-prem(762px)};
 
   // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
   --pf-c-about-modal-box--MinHeight: calc(var(--pf-c-about-modal-box__brand--PaddingTop) + var(--pf-c-about-modal-box__brand--PaddingBottom) + var(--pf-c-about-modal-box__header--PaddingTop) + var(--pf-c-about-modal-box__header--PaddingBottom) + var(--pf-c-about-modal-box__content--PaddingTop) + var(--pf-c-about-modal-box__content--PaddingBottom) + var(--pf-c-about-modal-box__brand-image--Height) + (1rem * 6 * var(--pf-global--LineHeight--md)));
@@ -91,8 +91,8 @@
   --pf-c-about-modal-box__logo-image--PaddingLeft: var(--pf-global--spacer--md);
 
   // height and width determined manually by visual design
-  --pf-c-about-modal-box__logo-image--Width: pf-size-prem(236px);
-  --pf-c-about-modal-box__logo-image--Height: pf-size-prem(110px);
+  --pf-c-about-modal-box__logo-image--Width: #{pf-size-prem(236px)};
+  --pf-c-about-modal-box__logo-image--Height: #{pf-size-prem(110px)};
   --pf-c-about-modal-box__logo-image--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
   // Button close
@@ -106,7 +106,7 @@
   --pf-c-about-modal-box__button-close--Height: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
 
   // Close button uses a non-standard background color
-  --pf-c-about-modal-box__button-close--BackgroundColor: $pf-color-black-1000;
+  --pf-c-about-modal-box__button-close--BackgroundColor: #{$pf-color-black-1000};
   --pf-c-about-modal-box__button-close--hover--BackgroundColor: rgba($pf-color-black-1000, .4);
 
   // This component always needs to be dark
