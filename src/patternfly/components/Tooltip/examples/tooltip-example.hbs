@@ -1,31 +1,31 @@
-{{#> tooltip direction="pf-m-right"}}
+{{#> tooltip direction="pf-m-right" tooltipContentId="right-tooltip-content"}}
     Hello!
     {{#*inline "tooltip-parent"}}
-        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby=\"tooltip-description\" "}}
+        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby='right-tooltip-content'"}}
             parent
         {{/button}}
     {{/inline}}
 {{/tooltip}}
-{{#> tooltip direction="pf-m-top"}}
+{{#> tooltip direction="pf-m-top" tooltipContentId="top-tooltip-content"}}
     I am a tooltip component!
     {{#*inline "tooltip-parent"}}
-        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby=\"tooltip-description\" "}}
+        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby='top-tooltip-content'"}}
             parent
         {{/button}}
     {{/inline}}
 {{/tooltip}}
-{{#> tooltip direction="pf-m-left"}}
+{{#> tooltip direction="pf-m-left" tooltipContentId="left-tooltip-content"}}
     I can container a very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, very, long piece of content.  As well as very short.
     {{#*inline "tooltip-parent"}}
-        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby=\"tooltip-description\" "}}
+        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby='left-tooltip-content'"}}
             parent
         {{/button}}
     {{/inline}}
 {{/tooltip}}
-{{#> tooltip direction="pf-m-bottom"}}
+{{#> tooltip direction="pf-m-bottom" tooltipContentId="bottom-tooltip-content"}}
     !
     {{#*inline "tooltip-parent"}}
-        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby=\"tooltip-description\" "}}
+        {{#> button btnClass='pf-m-primary' btnAttributes="aria-describedby='bottom-tooltip-content'"}}
             parent
         {{/button}}
     {{/inline}}
