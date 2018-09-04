@@ -48,4 +48,8 @@
     --pf-c-button--m-tertiary--active--BoxShadowColor: var(--pf-global--Color--light-100);
     --pf-c-button--m-tertiary--active--Color: var(--pf-global--Color--light-100);
   }
+
+  .pf-c-card {
+    --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+  }
 }
