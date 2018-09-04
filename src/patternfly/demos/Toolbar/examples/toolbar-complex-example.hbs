@@ -2,16 +2,16 @@
     {{#> toolbar-section pf-l-toolbar--modifier="pf-u-justify-content-space-between pf-u-mx-xl pf-u-my-md" aria-label="First section"}}
         {{#> toolbar-group}}
             {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-2xl"}}
-                {{#> input-group}}
+                {{#> input-group }}
                     {{#> dropdown id="dropdown-example-collapsed"}}
-                    All
-                    <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
+                        All
+                        <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
                     {{/dropdown}}
-                    {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="label" aria-label="popover for input"}}
+                {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="label" aria-label="popover for input"}}
                     <i class="fas fa-search aria-hidden="true"></i>
-                    {{/input-group-action}}
-                    {{#> form-controls controlType="input" input="true" type="text" id="textInput10" name="textInput10" placeholder="Filter..." aria-label="standard input example" }}
-                    {{/form-controls}}
+                {{/input-group-action}}
+                {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10" placeholder="Filter..." aria-label="input example with popover" }}
+                {{/form-control}}
                 {{/input-group}}
             {{/toolbar-item}}
             {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-lg"}}
@@ -36,7 +36,7 @@
             {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mx-md"}}
                 <button class="pf-c-button pf-m-plain"> Action </button>
             {{/toolbar-item}}
-            {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-my-xs pf-u-mr-md"}}
+            {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
                 {{#> button btnClass="pf-m-primary"}}
                     Action
                 {{/button}}
