@@ -281,7 +281,7 @@ $nav: "pf-c-nav";
   }
 
   &[class^="pf-m-dark"] {
-    @extend %pf-t-dark; // force the container follow the dark theme
+    @extend %pf-t-dark; // force the container to follow the dark theme
   }
 
   &.pf-m-dark-100 {
