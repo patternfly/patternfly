@@ -1,0 +1,21 @@
+<td class="{{#if table-td--toggle}}pf-c-table__toggle pf-m-shrink {{else if table-td--check}}pf-c-table__check pf-m-shrink {{else if table-td--action}}pf-c-table__action pf-m-shrink {{else if table-td--blank}}pf-m-blank {{/if}}{{#if table-td--modifier}}{{table-td--modifier}}{{/if}}"
+  {{#if table-td--attribute}}
+    {{{table-td--attribute}}}
+  {{/if}}
+
+  {{#if table--expandable}}
+    role="gridcell"    
+  {{/if}}
+
+  {{#if table-td--data-label}}
+    data-label="{{table-td--data-label}}"
+  {{/if}}>
+
+  {{#if table-td--toggle}}
+    <button class="pf-c-button pf-m-plain pf-m-toggle {{#if table-td--expanded}} pf-m-expanded{{/if}}" aria-label="Toggle row">
+      {{!-- <i class="fas fa-chevron-down"></i> --}}
+      <i class="fas fa-angle-down"></i>
+    </button>
+  {{/if}}
+  {{> @partial-block}}
+</td>
