@@ -223,7 +223,7 @@
   .pf-l-toolbar__group,
   .pf-l-toolbar__item,
   [class*="pf-u-"],
-  [class*="pf-u-"] > * {
+  [class*="pf-u-"] > *:not(svg) {
     padding: .5rem;
     border: 2px dashed #393f44;
   }
@@ -280,7 +280,7 @@
 
   .pf-c-table {
     td,
-    th {
+    th:not(.pf-c-table__sort) {
       border: none;
     }
 

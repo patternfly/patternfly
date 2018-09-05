@@ -30,8 +30,8 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
   --pf-c-table-th--PaddingBottom:                             var(--pf-global--spacer--md);
 
   // Td - small breakpoint
-  --pf-c-table-td--MarginTop--sm:                             var(--pf-global--spacer--sm);
-  --pf-c-table-td--MarginBottom--sm:                          var(--pf-global--spacer--sm);
+  --pf-c-table-td--sm--MarginTop:                             var(--pf-global--spacer--sm);
+  --pf-c-table-td--sm--MarginBottom:                          var(--pf-global--spacer--sm);
   --pf-c-table-td--GridColumnGap:                             var(--pf-global--spacer--md);
 
   // Td
@@ -55,10 +55,6 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
   --pf-c-table--Color:                                        var(--pf-global--Color--dark-100);
 
   // Table cell - toggle
-  --pf-c-table__toggle--Right:                                var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--Bottom:                               var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--Right--sm:                            var(--pf-global--spacer--xl);
-  --pf-c-table__toggle--Bottom--sm:                           var(--pf-global--spacer--xl);
   --pf-c-table__toggle--PaddingRight:                         var(--pf-global--spacer--md);
 
   // Table check 
@@ -215,8 +211,8 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
       grid-template-columns: 1fr 1.5fr;
       grid-column: 1;
       grid-column-gap: var(--pf-c-table-td--GridColumnGap);
-      margin-top: var(--pf-c-table-td--MarginTop--sm);
-      margin-bottom: var(--pf-c-table-td--MarginBottom--sm);
+      margin-top: var(--pf-c-table-td--sm--MarginTop);
+      margin-bottom: var(--pf-c-table-td--sm--MarginBottom);
     }
 
     // @mobile, breakpoint small
