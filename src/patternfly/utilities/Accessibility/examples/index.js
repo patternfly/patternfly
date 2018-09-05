@@ -12,7 +12,7 @@ export default () => {
   const srOnlyExample = SrOnlyExample();
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} className="is-utility-page">
       <Example heading="Screen reader only" handlebars={srOnlyExampleRaw}>
         {srOnlyExample}
       </Example>

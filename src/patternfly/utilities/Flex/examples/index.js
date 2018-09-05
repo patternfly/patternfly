@@ -41,7 +41,7 @@ export default () => {
   const flexFillExample = FlexFillExample();
 
   return (
-    <Documentation docs={Docs} className="flex-examples">
+    <Documentation docs={Docs} className="flex-examples is-utility-page">
       <Example heading="Enable flex" handlebars={flexEnableExampleRaw}>
         {flexEnableExample}
       </Example>
