@@ -2,7 +2,7 @@
   {{#if table--attribute}}
     {{{table--attribute}}}
   {{/if}}
-  {{#if table--exandable}}
+  {{#if table--expandable}}
     role="treegrid"
   {{else}}
     role="grid"
@@ -22,12 +22,16 @@
         toggle.classList.toggle('pf-m-expanded');
 
         if (toggle.classList.contains('pf-m-expanded')) {
-          // toggle attributes on sibling row
-          siblingRow.classList.add('pf-m-expanded');
+          siblingRow.removeAttribute('hidden');
 
-          // toggle attributes on toggle parent
-          toggleParent.setAttribute('aria-expanded', 'true');
-          siblingRow.setAttribute('aria-hidden', 'false');
+          setTimeout(function() {
+            // toggle attributes on sibling row
+            siblingRow.classList.add('pf-m-expanded');
+
+            // toggle attributes on toggle parent
+            toggleParent.setAttribute('aria-expanded', 'true');
+            siblingRow.removeAttribute('aria-hidden');            
+          }, 50); 
         } else {
           // toggle attributes on sibling row
           siblingRow.classList.remove('pf-m-expanded');
@@ -35,6 +39,10 @@
           // toggle attributes on toggle parent
           toggleParent.setAttribute('aria-expanded', 'false');
           siblingRow.setAttribute('aria-hidden', 'true');
+
+          setTimeout(function() {
+            siblingRow.setAttribute('hidden', '');
+          }, 500); 
         }
       }
         return false;

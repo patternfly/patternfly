@@ -1,5 +1,5 @@
 <div class="demo">
-{{#> table table--interactive="true" table--expandable="true" table--grid="true" table--attribute='aria-labelledby="expandable-table-caption"'}}
+{{#> table table--interactive="true" table--expandable="true" table--attribute='aria-labelledby="expandable-table-caption"'}}
   {{#> table-caption table-caption--modifier="pf-u-sr-only" table-caption--attribute='id="expandable-table-caption"'}}
     Expandable table example
   {{/table-caption}}
@@ -7,7 +7,7 @@
     {{#> table-th table-th--blank="true"}}
     {{/table-th}}    
     {{#> table-th table-th--check="true"}}
-      <input class="pf-c-check" type="checkbox" name="example">
+      <input class="pf-c-check" type="checkbox" name="check all rows" aria-label="check rows">
     {{/table-th}}    
     {{#> table-th table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
       Repositories
@@ -31,11 +31,11 @@
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--attribute='aria-expanded="true" aria-level="1"'}}
+    {{#> table-tr table-tr--attribute='aria-expanded="true" aria-level="1" aria-posinset="1" aria-setsize="1"'}}
       {{#> table-td table-td--toggle="true" table-td--expanded="true"}}
       {{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row1"}}
+        {{#> check pf-c-check-type="checkbox" name="check row 1" aria-label="checkbox 1"}}
         {{/check}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
@@ -75,7 +75,7 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded" table-tr--attribute='aria-level="2" aria-posinset="1" aria-setsize="1" aria-hidden="false"'}}
+    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded" table-tr--attribute='aria-level="2" aria-posinset="1" aria-setsize="1"'}}
       {{#> table-td table-td--blank="true"}}
       {{/table-td}}  
       {{#> table-td table-td--blank="true"}}
@@ -100,12 +100,12 @@
     {{/table-tr}}         
   {{/table-tbody}}
 
-  {{#> table-tbody table-tbody--attribute='aria-label="this is a table group with an expandable row"'}}
+  {{#> table-tbody}}
     {{#> table-tr table-tr--attribute='aria-expanded="false" aria-level="1"'}}
       {{#> table-td table-td--toggle="true" table-td--target="expandable-content2"}}
       {{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row2"}}
+        {{#> check pf-c-check-type="checkbox" name="check row 2" aria-label="checkbox 2"}}
         {{/check}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Repository Name"}}
@@ -145,7 +145,7 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--attribute='aria-level="2" aria-posinset="1" aria-setsize="1" aria-hidden="true"'}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute='aria-level="2" aria-posinset="1" aria-setsize="1" aria-hidden="true" hidden'}}
       {{#> table-td table-td--blank="true"}}
       {{/table-td}}  
       {{#> table-td table-td--blank="true"}}
