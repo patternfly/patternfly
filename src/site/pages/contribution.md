@@ -61,7 +61,7 @@ For example:
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> card card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="card-id" aria-lable="Card example"'}}
+{{#> card card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="card-id" aria-label="Card example"'}}
   [content]
 {{/card}}
 ```
