@@ -48,18 +48,21 @@ The main handlebars file for a block should be named using kebab case. For examp
 ## Modifiers
 ### Modifier parameter
 
-Every block and element should have a parameter allowing for modifier classes to be passed in. These should be named in kebab case with the block/element name plus `--modifier`.
+Every block and element should have a parameter allowing for modifier classes and attributes to be passed in. These should be named in kebab case with the block/element name plus `--modifier` and `--attribute` respectively.
 For example:
 
 ```html
 <!-- Component definition -->
-<div class="pf-c-card {{ pf-c-card--modifier }}">
+<div class="pf-c-card{{#if card--modifier}} {{card--modifier}}{{/if}}"
+  {{#if card--attribute}}
+    {{{card--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> card pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
-  {{> @partial-block}}
+{{#> card card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="card-id" aria-lable="Card example"'}}
+  [content]
 {{/card}}
 ```
 
@@ -68,9 +71,9 @@ When including a partial within a partial, by default, Handlebars will pass alon
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
 ```html
-{{#> card pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
+{{#> card card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="base-card" aria-label="Base card"'}}
   {{> @partial-block}}
-  {{#> card newcontext pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
+  {{#> card newcontext card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="nested-card" aria-label="Nested card"'}}
     {{> @partial-block}}
   {{/card}}
 {{/card}}
