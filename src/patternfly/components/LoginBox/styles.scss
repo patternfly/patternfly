@@ -1,0 +1,65 @@
+@import "../../patternfly-utilities";
+
+.pf-c-login-box {
+  // Component variables forces to be white
+  --pf-c-login-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+
+  // Login box Header variables
+  --pf-c-login-box__header--PaddingTop: var(--pf-global--spacer--2xl);
+  --pf-c-login-box__header--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login-box__header--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-login-box__header--PaddingLeft: var(--pf-global--spacer--2xl);
+
+  // Login box Body variables
+  --pf-c-login-box__body--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login-box__body--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-login-box__body--PaddingLeft: var(--pf-global--spacer--2xl);
+  --pf-c-login-box__body--PaddingTop: var(--pf-global--spacer--xl);
+
+  // Login box Footer variables
+  --pf-c-login-box__footer--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-login-box__footer--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login-box__footer--PaddingBottom: var(--pf-global--spacer--3xl);
+  --pf-c-login-box__footer--PaddingLeft: var(--pf-global--spacer--2xl);
+
+  // This component always needs to be light
+  @extend %pf-t-light;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--pf-c-login-box--BackgroundColor);
+
+  // If the first child isn't a header, then we need to put the header's top padding there
+  > :first-child:not(.pf-c-login-box__header) {
+    padding-top: var(--pf-c-login-box__header--PaddingTop);
+  }
+
+  // If the last child isn't the footer, then we need to put the footer's bottom padding there
+  > :last-child:not(.pf-c-login-box__footer) {
+    padding-bottom: var(--pf-c-login-box__footer--PaddingBottom);
+  }
+}
+
+.pf-c-login-box__header {
+  flex: 0 0 auto;
+  padding-top: var(--pf-c-login-box__header--PaddingTop);
+  padding-right: var(--pf-c-login-box__header--PaddingRight);
+  padding-bottom: var(--pf-c-login-box__header--PaddingBottom);
+  padding-left: var(--pf-c-login-box__header--PaddingLeft);
+}
+
+.pf-c-login-box__body {
+  flex: 1 1 auto;
+  padding-top: var(--pf-c-login-box__body--PaddingTop);
+  padding-right: var(--pf-c-login-box__body--PaddingRight);
+  padding-bottom: var(--pf-c-login-box__body--PaddingBottom);
+  padding-left: var(--pf-c-login-box__body--PaddingLeft);
+}
+
+.pf-c-login-box__footer {
+  flex: 0 0 auto;
+  padding-top: var(--pf-c-login-box__footer--PaddingTop);
+  padding-right: var(--pf-c-login-box__footer--PaddingRight);
+  padding-bottom: var(--pf-c-login-box__footer--PaddingBottom);
+  padding-left: var(--pf-c-login-box__footer--PaddingLeft);
+}
