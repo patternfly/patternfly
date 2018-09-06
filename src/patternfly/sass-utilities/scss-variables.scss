@@ -212,14 +212,22 @@ $pf-global--target-size--MinHeight: 32px !default;
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
 }
 
-// Global sass maps - used for
-// Breakpoints
+// Global breakpoint map - used for @pf-grid-item-modifiers
 $pf-global--breakpoint-map: (
   "": null,
   "sm": "-on-sm",
   "md": "-on-md",
   "lg": "-on-lg",
   "xl": "-on-xl"
+);
+
+// Global breakpoint list - used for @pf-utility-builder
+$pf-global--breakpoint-list: (
+  null,
+  "sm",
+  "md",
+  "lg",
+  "xl"
 );
 
 // Spacer properties
