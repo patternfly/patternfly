@@ -1,3 +1,6 @@
-<div class="pf-c-login-box__body {{ pf-c-login__body-modifier }}">
+<div class="pf-c-login-box__body{{#if login-box-body--modifier}} {{login-box-body--modifier}}{{/if}}"
+  {{#if login-box-body--attribute}}
+    {{{login-box-body--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>

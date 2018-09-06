@@ -1,7 +1,7 @@
 ## Overview
 The title component applies top and bottom margins, font-weight, font-size, and line-height to titles.
 
-The content component defines marging on headers. To regain the same spacing use spacer utility classes:
+The content component defines margin on headers. To regain the same spacing use spacer utility classes:
 
 | Title | Margin Top | Margin Bottom |
 | -- | -- | -- |

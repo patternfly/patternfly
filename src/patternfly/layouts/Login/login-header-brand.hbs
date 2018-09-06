@@ -1,3 +1,6 @@
-<div class="pf-l-login__header-brand{{#if pf-l-login__header-brand--modifier}} {{pf-l-login__header-brand--modifier}}{{/if}}">
+<div class="pf-l-login__header-brand{{#if login-header-brand--modifier}} {{login-header-brand--modifier}}{{/if}}"
+  {{#if login-header-brand--attribute}}
+    {{{login-header-brand--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>
