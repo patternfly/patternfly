@@ -5,10 +5,10 @@
                 {{#> input-group }}
                     {{#> dropdown id="dropdown-example-collapsed"}}
                         All
-                        <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
+                        <i class="fas fa-caret-down pf-c-dropdown__toggle-icon aria-hidden="true"></i> 
                     {{/dropdown}}
                     {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="label" for="textInput10"}}
-                        <i class="fas fa-search aria-hidden="true"></i>
+                        <i class="fas fa-search" aria-hidden="true"></i>
                     {{/input-group-action}}
                     {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10" placeholder="Filter..." aria-label="filter input with popup button"}}
                     {{/form-control}}
@@ -21,19 +21,19 @@
             {{/toolbar-item}}
             {{#> toolbar-item}}
                 {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes="aria-label=\"Sort A-Z\" "}}
-                    <i class="fas fa-sort-alpha-down"></i>
+                    <i class="fas fa-sort-alpha-down" aria-hidden="true"></i>
                 {{/button}}
             {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-group}}
             {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
                 {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes="aria-label=\"Table\" "}}
-                    <i class="fas fa-table"></i>
+                    <i class="fas fa-table" aria-hidden="true"></i>
                 {{/button}}
             {{/toolbar-item}}
             {{#> toolbar-item}}
                 {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes="aria-label=\"List\" "}}
-                    <i class="fas fa-list"></i>
+                    <i class="fas fa-list" aria-hidden="true"></i>
                 {{/button}}
             {{/toolbar-item}}
             {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mx-md"}}
@@ -48,7 +48,7 @@
             {{/toolbar-item}}
             {{#> toolbar-item}}
                 {{#> dropdown id="dropdown-example-kebab" pf-c-dropdown--Modifier="pf-m-plain"}}
-                    <i class="fas fa-ellipsis-v"></i>
+                    <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
                 {{/dropdown}}
             {{/toolbar-item}}
         {{/toolbar-group}}
