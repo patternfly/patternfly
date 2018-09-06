@@ -28,4 +28,5 @@ This layout provides the basic chrome for a page, including sidebar, header and 
 | `.pf-m-expanded` | `.pf-l-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-l-page__sidebar` |  Modifies the sidebar for the collapsed state. |
 | `.pf-m-light` | `.pf-l-page__main-section` | Modifies a main page section to have a light theme. |
-| `.pf-m-dark` | `.pf-l-page__main-section` |  Modifies a main page section to have a dark theme. |
+| `.pf-m-dark-200` | `.pf-l-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
+| `.pf-m-dark-100` | `.pf-l-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |

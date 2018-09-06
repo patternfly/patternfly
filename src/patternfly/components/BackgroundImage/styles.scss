@@ -1,12 +1,13 @@
 @import "../../patternfly-utilities";
 
 .pf-c-background-image {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pf-global--BackgroundColor--dark-200);
   background-image: url("#{$pf-global--image-path}/pfbg_576.jpg");
   filter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
   background-repeat: no-repeat;

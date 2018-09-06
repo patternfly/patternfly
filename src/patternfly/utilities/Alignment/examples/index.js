@@ -12,7 +12,7 @@ export default () => {
   const alignmentSimpleExample = AlignmentSimpleExample();
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} className="is-utility-page">
       <Example heading="Alignment Simple" handlebars={alignmentSimpleExampleRaw}>
         {alignmentSimpleExample}
       </Example>

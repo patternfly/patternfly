@@ -6,27 +6,32 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
   }
+
   &__main {
     display: flex;
     flex: 1;
   }
+
   &__sidebar {
     flex: 0 1 20%;
     max-width: 20%;
     padding: 1rem 2rem;
     border-right: 1px solid #eaeaea;
   }
+
   &__sidebar_heading {
     margin-bottom: .5rem;
     font-size: 1.2rem;
     font-weight: 700;
   }
+
   &__sidebar__item + &__sidebar__item {
     margin-top: 1rem;
   }
@@ -40,11 +45,13 @@
     max-width: 80%;
     padding: 1rem 2rem;
   }
+
   &__content_heading {
     margin-bottom: .5rem;
     font-size: 1.2rem;
     font-weight: 700;   
   }
+
   &__footer {
     padding: 1rem 2rem;
   }
@@ -55,38 +62,48 @@
     font-size: 2rem;
     font-weight: 700;
   }
+
   h2 {
     font-size: 1.6rem;
     font-weight: 700;
   }
+
   h3 {
     font-size: 1.4rem;
     font-weight: 700;
   }
+
   h4 {
     font-size: 1.2rem;
     font-weight: 700;
   }
+
   h5 {
     font-size: 1.1rem;
     font-weight: 700;
   }
+
   h6 {
     font-size: 1.05rem;
     font-weight: 700;
   }
+
   h1 {
     margin-bottom: .5em;
   }
+
   h2 {
-    margin: 2em 0 .5em 0;
+    margin: 2em 0 .5em;
   }
+
   h3, h4, h5, h6 {
-    margin: 1em 0 .5em 0;
+    margin: 1em 0 .5em;
   }
+
   p {
     margin: .5em 0;
   }
+
   code {
     display: inline-block;
     padding: .25em;
@@ -94,30 +111,37 @@
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(0, 0, 0, .1);
   }
+
   ul, ol {
     padding-left: 1rem;
     margin: .5rem 0 .5rem 1rem;
     list-style-position: outside;
     list-style-type: disc;
+
     p {
       margin: 0;
     }
   }
+
   ol {
     list-style-type: decimal;
   }
+
   li + li {
     margin-top: .5rem;
   }
+
   table {
     width: 100%;
     margin-bottom: 1rem;
   }
+
   table, td, th, tr {
     padding: .5em;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
   }
+
   td > code {
     padding: .25em .75em;
     color: #004368;
@@ -143,6 +167,7 @@
   overflow: auto;
   background-color: #fff;
   border: 1px solid #eaeaea;
+
   pre[class*="prism-language-"],
   pre[class*="prism-language-"] > code {
     box-sizing: border-box;
@@ -150,6 +175,7 @@
     font-size: .95rem;
     line-height: 1.75;
   }
+
   pre[class*="prism-language-"] {
     float: left;
     min-width: 100%;
@@ -160,11 +186,13 @@
     background-color: transparent;
     border-left: 0;
     box-shadow: none;
+
     &::before,
     &::after {
       display: none;
     }
   }
+
   pre[class*="prism-language-"] > code {
     min-width: 100%;
     padding: 0;
@@ -177,7 +205,7 @@
 }
 
 .is-layout-page,
-.layout {
+.is-utility-page {
   .pf-l-bullseye,
   .pf-l-bullseye > *,
   .pf-l-gallery,
@@ -226,6 +254,7 @@
   &__section {
     margin-bottom: 2rem;
   }
+
   code {
     padding: .25em .75em;
     color: #004368;
@@ -233,17 +262,19 @@
     background-color: #def3ff;
     border-radius: .5em;
   }
+
   table {
     width: 100%;
     margin-bottom: 1rem;
   }
+
   table, td, th, tr {
     padding: .5em;
     vertical-align: top;
     border: 1px solid #ccc;
   }
 
-  tr:nth-child(even) {background: #f1f1f1}
+  tr:nth-child(even) {background: #f1f1f1;}
   
   h2:not(.pf-c-modal-box__header-title):not(.pf-c-title):not(.pf-c-nav__section-title) {
     margin-top: 2rem;
@@ -251,7 +282,7 @@
     font-size: 1.25em;
   }
 
-  h2 + p{
+  h2 + p {
     margin-bottom: 1rem;
   }
 
@@ -299,7 +330,6 @@
 }
 
 .flex-examples [class*="pf-u-align-"]:not([class*="pf-u-align-content-"]) {
-
   &:not(.pf-u-align-items-stretch) > * {
     &:first-child {
       height: 40px;
@@ -343,6 +373,7 @@
     // this fixes pointer events using a hack
     // unsure about browser compatibility of this hack
     pointer-events: none;
+
     & > * {
       pointer-events: all;
     }

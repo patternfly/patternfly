@@ -14,20 +14,3 @@
 @function pf-font-prem($pxval, $base: $pf-global--font-size-root) {
   @return pf-strip-unit($pxval) / $base * 1rem;
 }
-
-
-// Color contrast
-@function pf-color-yiq($color) {
-  $r: red($color);
-  $g: green($color);
-  $b: blue($color);
-
-  // Create the the YIQ color from RGB values
-  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-
-  @if ($yiq >= $pf-global-yiq-contrasted-threshold) {
-    @return $pf-global-yiq-text-dark;
-  } @else {
-    @return $pf-global-yiq-text-light;
-  }
-}

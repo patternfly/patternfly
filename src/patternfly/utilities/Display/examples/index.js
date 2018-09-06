@@ -39,7 +39,7 @@ export default () => {
   const displayNoneExample = DisplayNoneExample();
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} className="is-utility-page">
       <Example heading="Display inline-block" handlebars={displayInlineBlockExampleRaw}>
         {displayInlineBlockExample}
       </Example>
