@@ -9,6 +9,10 @@
         {{#if pf-c-dropdown--HasToggleIcon}}
         {{> dropdown-toggle-icon}}
         {{/if}}
+        {{#if pf-c-dropdown__kebab-icon}}
+        {{> kebab-icon}}
+        {{/if}}
+
     </button>
     <div class="pf-c-dropdown__menu" role="menu" aria-labelledby="{{id}}" {{#unless pf-c-dropdown--IsExpanded}}hidden="hidden"{{/unless}}>
         <a class="pf-c-dropdown__menu-item" role="menuitem" href="#">Link</a>
