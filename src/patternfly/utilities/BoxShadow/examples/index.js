@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const boxShadowSimpleExample = BoxshadowSimpleExample();
+  const headingText = 'Box Shadow';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example
         className="box-shadow"
         heading="Boxshadow Utility"

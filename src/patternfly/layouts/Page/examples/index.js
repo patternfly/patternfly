@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const pageLayoutNavVerticalExample = PageLayoutNavVerticalExample();
   const pageLayoutNavHorizontalExample = PageLayoutNavHorizontalExample();
+  const headingText = 'Page';
 
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Page Layout, Nav Vertical Example" handlebars={PageLayoutNavVerticalExampleRaw}>
         {pageLayoutNavVerticalExample}
       </Example>

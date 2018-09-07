@@ -9,7 +9,7 @@ export const Docs = docs;
 
 export default () => {
   const aboutModalBoxExample = AboutModalBoxExample();
-  const headingText = 'About modal box';
+  const headingText = 'About Modal Box';
 
   return (
     <Documentation docs={Docs} heading={headingText}>

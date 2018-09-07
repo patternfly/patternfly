@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const stack = Stack();
   const stackHasGutter = StackHasGutter();
+  const headingText = 'Stack';
 
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Stack Example" handlebars={StackRaw}>
         {stack}
       </Example>

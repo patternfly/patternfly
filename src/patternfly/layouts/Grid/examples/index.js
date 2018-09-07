@@ -31,9 +31,10 @@ export default () => {
   const gridOffsets = GridOffsets();
   const gridResponsive = GridResponsive();
   const gridRowspan = GridRowspan();
+  const headingText = 'Grid';
 
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Smart grid (responsive)" handlebars={GridSmartRaw}>
         {gridSmart}
       </Example>

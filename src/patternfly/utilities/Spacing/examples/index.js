@@ -17,9 +17,10 @@ export default () => {
   const spacingMarginExample = SpacingMarginExample();
   const spacingPaddingExample = SpacingPaddingExample();
   const spacingCombinedExample = SpacingCombinedExample();
+  const headingText = 'Spacing';
 
   return (
-    <Documentation docs={Docs} className="is-utility-page">
+    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Spacer margin" handlebars={spacingMarginExampleRaw}>
         {spacingMarginExample}
       </Example>

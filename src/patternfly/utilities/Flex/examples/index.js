@@ -39,9 +39,10 @@ export default () => {
   const flexGrowExample = FlexGrowExample();
   const flexBasisNoneExample = FlexBasisNoneExample();
   const flexFillExample = FlexFillExample();
+  const headingText = 'Flex';
 
   return (
-    <Documentation docs={Docs} className="flex-examples is-utility-page">
+    <Documentation docs={Docs} heading={headingText} className="flex-examples is-utility-page">
       <Example heading="Enable flex" handlebars={flexEnableExampleRaw}>
         {flexEnableExample}
       </Example>
