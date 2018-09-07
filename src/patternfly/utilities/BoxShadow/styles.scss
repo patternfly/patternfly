@@ -11,15 +11,15 @@
 
 @include pf-utility-builder("box-shadow-sm-left") { box-shadow: var(--pf-global--BoxShadow--sm-left) !important; }
 
-@include pf-utility-builder("box-shadow-md") { box-shadow: var(--pf-global--BoxShadow) !important; }
+@include pf-utility-builder("box-shadow-md") { box-shadow: var(--pf-global--BoxShadow--md) !important; }
 
-@include pf-utility-builder("box-shadow-md-top") { box-shadow: var(--pf-global--BoxShadow-top) !important; }
+@include pf-utility-builder("box-shadow-md-top") { box-shadow: var(--pf-global--BoxShadow--md-top) !important; }
 
-@include pf-utility-builder("box-shadow-md-right") { box-shadow: var(--pf-global--BoxShadow-right) !important; }
+@include pf-utility-builder("box-shadow-md-right") { box-shadow: var(--pf-global--BoxShadow--md-right) !important; }
 
-@include pf-utility-builder("box-shadow-md-bottom") { box-shadow: var(--pf-global--BoxShadow-bottom) !important; }
+@include pf-utility-builder("box-shadow-md-bottom") { box-shadow: var(--pf-global--BoxShadow--md-bottom) !important; }
 
-@include pf-utility-builder("box-shadow-md-left") { box-shadow: var(--pf-global--BoxShadow-left) !important; }
+@include pf-utility-builder("box-shadow-md-left") { box-shadow: var(--pf-global--BoxShadow--md-left) !important; }
 
 @include pf-utility-builder("box-shadow-lg") { box-shadow: var(--pf-global--BoxShadow--lg) !important; }
 
@@ -30,4 +30,6 @@
 @include pf-utility-builder("box-shadow-lg-bottom") { box-shadow: var(--pf-global--BoxShadow--lg-bottom) !important; }
 
 @include pf-utility-builder("box-shadow-lg-left") { box-shadow: var(--pf-global--BoxShadow--lg-left) !important; }
+
+@include pf-utility-builder("box-shadow-inset") { box-shadow: var(--pf-global--BoxShadow--inset) !important; }
 /* stylelint-enable */

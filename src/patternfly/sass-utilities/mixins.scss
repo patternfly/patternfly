@@ -41,27 +41,17 @@
 /// responsive, including all breakpoints    @include pf-utility-builder(class-name, $pf-global--breakpoint-list) { prop: val !important; }
 /// ===============================================================================================
 @mixin pf-utility-builder($class-name, $breakpoints: null) {
-  // if only class-name is passed to mixin, with no breakpoint params, return the prop / value declaration
-  @if $breakpoints == null or $breakpoints == "base" {
-    .pf-u-#{$class-name} {
-      @content;
+  @each $breakpoint in $breakpoints {
+    $suffix: -on-#{$breakpoint};
+
+    // if no media query, set suffix to null
+    @if $breakpoint == null or $breakpoint == "base" {
+      $suffix: "";
     }
-  }
 
-  // if class-name and responsive list values are passed to mixin
-  @else {
-    @each $breakpoint in $breakpoints {
-      $suffix: -on-#{$breakpoint};
-
-      // if no media query, set suffix to null
-      @if $breakpoint == null or $breakpoint == "base" {
-        $suffix: "";
-      }
-
-      .pf-u-#{$class-name}#{$suffix} {
-        @include pf-media-query($breakpoint) {
-          @content;
-        }
+    .pf-u-#{$class-name}#{$suffix} {
+      @include pf-media-query($breakpoint) {
+        @content;
       }
     }
   }
