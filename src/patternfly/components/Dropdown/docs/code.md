@@ -10,6 +10,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle` |  Indicates that the menu is hidden |
 | `aria-expanded="true"` | `.pf-c-dropdown__toggle` |  Indicates that the menu is visible |
 | `aria-label="Actions"` | `.pf-c-dropdown__toggle` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text** |
+| `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon` | Hides the icon from assistive technologies |
 | `role="menu"` | `.pf-c-dropdown__menu` | Indicates that the menu is a menu |
 | `hidden="hidden"` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
 | `aria-expanded="true"` | `.pf-c-dropdown__menu` | Indicates that the menu is visible |
