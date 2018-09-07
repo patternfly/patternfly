@@ -4,7 +4,7 @@
 @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
   .pf-u-sr-only#{$breakpoint-value} {
     @include pf-media-query($breakpoint) {
-      position: absolute;
+      position: fixed;
       overflow: hidden;
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
