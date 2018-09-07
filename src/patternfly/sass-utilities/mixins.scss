@@ -1,6 +1,6 @@
 // Media query used to create responsive classes
 @mixin pf-media-query($point) {
-  @if $point == "" or $point == null {
+  @if $point == "" or $point == null or $point == "base" {
     @content;
   }
 
@@ -29,11 +29,27 @@
   }
 }
 
-// Creates flex item
-@mixin pf-utility-builder($class-name) {
-  // generate column span modifiers
-  @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
-    .pf-u-#{$class-name}#{$breakpoint-value} {
+/// Create single prop / value classes, optionally add responsive suffix
+/// @group mixins
+/// @moduleType mixin
+/// @parameter: {Suffix} xs, sm, md, lg, xl, base or null
+/// @usage: @include pf-utility-builder(class-name, base sm md lg xl);
+/// ===============================================================================================
+/// non-responsive, base only                @include pf-utility-builder(class-name) { prop: val !important; }
+/// responsive, not including base           @include pf-utility-builder(class-name, sm lg) { prop: val !important; }
+/// responsive, including base               @include pf-utility-builder(class-name, base sm lg) { prop: val !important; }
+/// responsive, including all breakpoints    @include pf-utility-builder(class-name, $pf-global--breakpoint-list) { prop: val !important; }
+/// ===============================================================================================
+@mixin pf-utility-builder($class-name, $breakpoints: null) {
+  @each $breakpoint in $breakpoints {
+    $suffix: -on-#{$breakpoint};
+
+    // if no media query, set suffix to null
+    @if $breakpoint == null or $breakpoint == "base" {
+      $suffix: "";
+    }
+
+    .pf-u-#{$class-name}#{$suffix} {
       @include pf-media-query($breakpoint) {
         @content;
       }

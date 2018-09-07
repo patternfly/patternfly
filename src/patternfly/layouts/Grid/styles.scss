@@ -16,8 +16,8 @@
 
 // Creates grid item
 // @parameter {Suffix} xs, sm, md, lg, xl, null
-@mixin pf-grid-item-modifiers($suffix: null) {
-  // generate column span modifiers
+@mixin pf-grid-item-modifier($suffix: null) {
+  // generate column span modifier
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
       grid-column-start: auto;
@@ -64,7 +64,7 @@
   // Loop through $breakpoints map to generate responsive classes
   @each $breakpoint, $value in $pf-global--breakpoint-map {
     @include pf-media-query($breakpoint) {
-      @include pf-grid-item-modifiers($value);
+      @include pf-grid-item-modifier($value);
     }
   }
 

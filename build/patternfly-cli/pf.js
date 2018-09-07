@@ -65,11 +65,11 @@ program
       nameTableized: inflection.tableize(name),
       nameCapitalized: inflection.capitalize(name),
       bemName: `${bemName}`,
-      bemModifierName: `{{${bemName}--modifier}}`,
+      bemModifierBlock: `{{#if ${bemEntity}--modifier}} {{${bemEntity}--modifier}}{{/if}}`,
       moduleName,
       partialBlock: '{{> @partial-block}}',
-      idBlock: `{{#if ${bemName}__id}}
-    id="{{${bemName}__id}}"
+      attributeBlock: `{{#if ${bemEntity}--attribute}}
+    {{{${bemEntity}--attribute}}}
   {{/if}}`,
       moduleHbOpen: `{{#> ${dasherizedName}}}`,
       moduleHbClose: `{{/${dasherizedName}}}`,

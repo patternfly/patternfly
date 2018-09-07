@@ -428,4 +428,20 @@
   }
 }
 
+.Example.box-shadow .Preview__body {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    padding: 1.5rem;
+    margin: 2rem;
+    border: none;
+  }
+
+  [class*="pf-u-box-shadow-lg"] {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 /* stylelint-enable */

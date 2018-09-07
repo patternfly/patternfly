@@ -29,7 +29,7 @@
   --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-dropdown__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__menu--BorderColor: var(--pf-global--BorderColor);
-  --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow);
+  --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu

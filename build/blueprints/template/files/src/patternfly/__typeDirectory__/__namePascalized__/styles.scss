@@ -9,20 +9,20 @@
   --{{bemName}}--Color: var(--pf-global--Color--dark);
 
   // Example element variable
-  --{{bemName}}__title--FontSize: var(--pf-global--FontSize--2xl);
+  --{{bemName}}__element--FontSize: var(--pf-global--FontSize--2xl);
 
   // Example modifier variable
   --{{bemName}}--m-danger--BackgroundColor: var(--pf-global--danger-color);
 
   color: var(--{{bemName}}--Color);
 
-  // Element
-  &__title {
-    font-size: var(--{{bemName}}__title--FontSize);
-  }
-
   // Modifier
   &.pf-m-danger {
     background-color: var(--{{bemName}}--m-danger--BackgroundColor);
   }
+}
+
+// Element
+.{{bemName}}__element {
+  font-size: var(--{{bemName}}__element--FontSize);
 }

@@ -48,19 +48,22 @@ The main handlebars file for a block should be named using kebab case. For examp
 ## Modifiers
 ### Modifier parameter
 
-Every block and element should have a parameter allowing for modifier classes to be passed in. These should be named in kebab case with the block/element name plus `--modifier`.
+Every block and element should have a parameter allowing for modifier classes and attributes to be passed in. These should be named in kebab case with the block/element name plus `--modifier` and `--attribute` respectively.
 For example:
 
 ```html
 <!-- Component definition -->
-<div class="pf-c-card {{ pf-c-card--modifier }}">
+<div class="pf-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
+  {{#if grid--attribute}}
+    {{{grid--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> card pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
-  {{> @partial-block}}
-{{/card}}
+{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="grid-id" aria-label="Grid usage example"'}}
+  [content]
+{{/grid}}
 ```
 
 When including a partial within a partial, by default, Handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
@@ -68,12 +71,15 @@ When including a partial within a partial, by default, Handlebars will pass alon
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
 ```html
-{{#> card pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
-  {{> @partial-block}}
-  {{#> card newcontext pf-c-card--modifier="pf-m-3xl pf-m-margin"}}
-    {{> @partial-block}}
-  {{/card}}
-{{/card}}
+{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="base-grid" aria-label="Base grid"'}}
+  {{#> grid-item grid-item--modifier="pf-m-6-col" grid-item--attribute='id="base-grid-item" aria-label="Base grid item"'}}
+    {{#> grid newcontext}}
+      {{#> grid-item}}
+        (nested grid and grid-item will not inherit --modifier or --attribute values)
+      {{/grid-item}}
+    {{/grid}}
+  {{/grid-item}}
+{{/grid}}
 ```
 
 ### Common Modifier Class Names
