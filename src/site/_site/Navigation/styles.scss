@@ -5,12 +5,20 @@
 
 .Navigation.is-horizontal .Navigation_link {
   padding: .5rem;
+
+  &:hover {
+    font-weight: 500;
+    color: #007bba;
+    text-decoration: none;
+    background-color: transparent;
+  }
 }
 
 .Navigation__items {
-  padding: 0;
+  padding: 0 0 1em;
   margin: 0;
   list-style-type: none;
+  
 }
 
 .Navigation__item {
@@ -20,6 +28,21 @@
 .Navigation_link {
   display: block;
   padding: .5rem 0;
+  padding-left: 2rem;
+  color: #393f44;
+
+  &:focus {
+    font-weight: 500;
+    color: #007bba;
+    text-decoration: none;
+  }
+
+  &:hover {
+    font-weight: 500;
+    color: #007bba;
+    text-decoration: none;
+    background-color: #f5f5f5;
+  }
 }
 
 .Navigation_not-found-message {
