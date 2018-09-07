@@ -53,17 +53,17 @@ For example:
 
 ```html
 <!-- Component definition -->
-<div class="pf-c-card{{#if card--modifier}} {{card--modifier}}{{/if}}"
-  {{#if card--attribute}}
-    {{{card--attribute}}}
+<div class="pf-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
+  {{#if grid--attribute}}
+    {{{grid--attribute}}}
   {{/if}}>
   {{> @partial-block}}
 </div>
 ---
 <!-- Using the component in handlebars -->
-{{#> card card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="card-id" aria-label="Card example"'}}
+{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="grid-id" aria-label="Grid usage example"'}}
   [content]
-{{/card}}
+{{/grid}}
 ```
 
 When including a partial within a partial, by default, Handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
@@ -71,12 +71,15 @@ When including a partial within a partial, by default, Handlebars will pass alon
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
 ```html
-{{#> card card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="base-card" aria-label="Base card"'}}
-  {{> @partial-block}}
-  {{#> card newcontext card--modifier="pf-m-3xl pf-m-margin" card--attribute='id="nested-card" aria-label="Nested card"'}}
-    {{> @partial-block}}
-  {{/card}}
-{{/card}}
+{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="base-grid" aria-label="Base grid"'}}
+  {{#> grid-item grid-item--modifier="pf-m-6-col" grid-item--attribute='id="base-grid-item" aria-label="Base grid item"'}}
+    {{#> grid newcontext}}
+      {{#> grid-item}}
+        (nested grid and grid-item will not inherit --modifier or --attribute values)
+      {{/grid-item}}
+    {{/grid}}
+  {{/grid-item}}
+{{/grid}}
 ```
 
 ### Common Modifier Class Names
