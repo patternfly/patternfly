@@ -19,6 +19,7 @@
 
   &.pf-m-inline {
     display: flex;
+    flex-wrap: wrap;
 
     & li:not(:last-child) {
       margin-right: var(--pf-c-list--m-inline--MarginRight);
