@@ -109,16 +109,16 @@ export default class Example extends React.Component {
             <h3 className="Example_heading">{heading}</h3>
             {description && <p className="Example_description">{description}</p>}
           </div>
-          {htmlDocs && (
-            <div className="Example__documentation">
-              <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
-            </div>
-          )}
           <div className="Example__section">
             <Preview isViewport={isViewport} heading={heading} fullPageOnly={fullPageOnly} minHeight={minHeight}>
               {children}
             </Preview>
           </div>
+          {htmlDocs && (
+            <div className="Example__documentation">
+              <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
+            </div>
+          )}
           <div className="Example__section">
             <ul className="pf-p-secondary-nav" role="tablist">
               <li className="pf-p-secondary-nav__item">

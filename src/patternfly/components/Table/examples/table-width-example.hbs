@@ -1,10 +1,10 @@
-{{#> table table--grid="true" table--attribute='aria-label="This is an expandable table example"'}}
+{{#> table table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th}}
-        <input class="pf-c-check" type="checkbox" name="check all rows" aria-label="check rows">
-      {{/table-th}}    
-      {{#> table-th table-th--sortable="true" table-th--asc="true" table-th--modifier="pf-m-width-max"}}
+      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+      {{/table-th}}
+      {{#> table-th table-th--sortable="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--sortable="true"}}
@@ -13,10 +13,10 @@
       {{#> table-th table-th--sortable="true"}}
         Pull requests
       {{/table-th}} 
-      {{#> table-th}}
+      {{#> table-th table-th--modifier="pf-m-fit-content"}}
         Workspaces
       {{/table-th}} 
-      {{#> table-th}}
+      {{#> table-th table-th--modifier="pf-m-fit-content"}}
         Last Commit
       {{/table-th}} 
     {{/table-tr}}
@@ -24,14 +24,12 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 1" aria-label="checkbox 1"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Repository Name"}}
-        <div>Node 1</div>
-        <a href="#">siemur/test-space</a>
-      {{/table-td}}
+      {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="node1"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-label="Select row"'}}{{/check-input}}
+      {{/table-td}} 
+      {{#> table-th table-td--data-label="Repository Name" table-th--attribute='id="node1"'}}
+        Node 1
+      {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
       {{/table-td}}      
@@ -47,36 +45,13 @@
     {{/table-tr}}  
 
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 3" aria-label="checkbox 3"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Repository Name"}}
+      {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="node2"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-label="Select row"'}}{{/check-input}}
+      {{/table-td}}   
+      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="node2"'}}
         <div>Node 2</div>
         <a href="#">siemur/test-space</a>
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Pull Requests"}}
-        25
-      {{/table-td}}  
-      {{#> table-td table-td--data-label="Workspaces"}}
-        5
-      {{/table-td}}  
-      {{#> table-td table-td--data-label="Last Commit"}}
-        2 days ago
-      {{/table-td}}  
-    {{/table-tr}}
-    {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 4" aria-label="checkbox 4"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Repository Name"}}
-        <div>Node 3</div>
-        <a href="#">siemur/test-space</a>
-      {{/table-td}}
+      {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
       {{/table-td}}      

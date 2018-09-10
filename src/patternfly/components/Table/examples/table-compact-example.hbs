@@ -1,11 +1,10 @@
-{{#> table table--modifier="pf-m-compact" table--attribute='id="expandable-table" aria-label="This is a compact table example"'}}
+{{#> table table--modifier="pf-m-compact" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check all rows" aria-label="row check"}}
-        {{/check}}
-      {{/table-th}}    
-      {{#> table-th table-th--sortable="true" table-th--asc="true"}}
+      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+      {{/table-th}}
+      {{#> table-th}}
         Contributor
       {{/table-th}}
       {{#> table-th}}
@@ -20,25 +19,26 @@
       {{#> table-th}}
         Numbers
       {{/table-th}} 
-      {{#> table-th table-th--modifier="pf-m-fit-content"}}
+      {{#> table-th table-th--modifier="pf-u-text-align-center"}}
         Icons
       {{/table-th}} 
-      {{#> table-th table-th--blank="true"}}
-      {{/table-th}} 
-      {{#> table-th table-th--blank="true"}}
+      {{#> table-th table-th--attribute='aria-label="Link column"'}}{{/table-th}}
+      {{#> table-th table-th--action="true" table-th--attribute='aria-label="Overflow action column"'}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-th}} 
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 1" aria-label="checkbox 1"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Contributor Name"}}
-        Andres Galant
+      {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name1"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name1"'}}
+        Andres Galant
+      {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS Guru
       {{/table-td}}      
@@ -51,13 +51,11 @@
       {{#> table-td table-td--data-label="Last Commit"}}
         0556
       {{/table-td}}  
-      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-md"}}
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
-        <a href="#">
-          Link
-        </a>
+        <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
@@ -67,13 +65,12 @@
     {{/table-tr}}    
 
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 2" aria-label="checkbox 2"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Contributor Name"}}
+      {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name2"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-label="Select row"'}}{{/check-input}}
+      {{/table-td}}       
+      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="name2"'}}
         Jenny Haines
-      {{/table-td}}
+      {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual Design
       {{/table-td}}      
@@ -86,48 +83,11 @@
       {{#> table-td table-td--data-label="Last Commit"}}
         9492
       {{/table-td}}  
-      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-lg"}}
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
-        <a href="#">
-          Link
-        </a>
-      {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check pf-c-check-type="checkbox" name="check row 3" aria-label="checkbox 3"}}
-        {{/check}}
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Contributor Name"}}
-        Kyle Baker
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Position"}}
-        Visual Design Lead
-      {{/table-td}}      
-      {{#> table-td table-td--data-label="Location"}}
-        Westford
-      {{/table-td}}  
-      {{#> table-td table-td--data-label="Workspaces"}}
-        May 9, 2018
-      {{/table-td}}  
-      {{#> table-td table-td--data-label="Last Commit"}}
-        9929
-      {{/table-td}}  
-      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center-on-md"}}
-        <i class="fas fa-check"></i>
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
-        <a href="#">
-          Link
-        </a>
+        <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}

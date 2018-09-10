@@ -2,6 +2,28 @@
 // styles placed here are only meant for styling
 // the workspace or applying styles that are only
 // relevant inside of the workspace
+.Example__documentation {
+  margin: 2rem 0;
+
+  .Example__documentation--text {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 1rem;    
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    table {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 .layout {
   display: flex;
   flex-direction: column;

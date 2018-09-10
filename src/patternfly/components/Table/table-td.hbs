@@ -1,19 +1,13 @@
-<td class="{{#if table-td--toggle}}pf-c-table__toggle pf-m-shrink {{else if table-td--check}}pf-c-table__check pf-m-shrink {{else if table-td--action}}pf-c-table__action pf-m-shrink {{else if table-td--blank}}pf-m-blank {{/if}}{{#if table-td--modifier}}{{table-td--modifier}}{{/if}}"
+<td {{#if table-td--toggle}}class="pf-c-table__toggle"{{else if table-td--check}}class="pf-c-table__check"{{else if table-td--action}}class="pf-c-table__action"{{else if table-td--modifier}}class="{{table-td--modifier}}"{{/if}}
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
   {{/if}}
-
-  {{#if table--expandable}}
-    role="gridcell"    
-  {{/if}}
-
   {{#if table-td--data-label}}
     data-label="{{table-td--data-label}}"
   {{/if}}>
 
   {{#if table-td--toggle}}
-    <button class="pf-c-button pf-m-plain pf-m-toggle {{#if table-td--expanded}} pf-m-expanded{{/if}}" aria-label="Toggle row">
-      {{!-- <i class="fas fa-chevron-down"></i> --}}
+    <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-tr--expanded}}aria-expanded="true"{{/if}} {{#if table-td--button-attribute}}{{{table-td--button-attribute}}}{{/if}}>
       <i class="fas fa-angle-down"></i>
     </button>
   {{/if}}

@@ -31,10 +31,8 @@
         for (var sibling of siblingThs) {
           if (sibling.classList.contains('pf-m-ascending') || sibling.classList.contains('pf-m-descending')) {
             let icon = sibling.childNodes[1].childNodes[1].childNodes[1];
-
-            icon.classList.remove('fa-angle-up');
+            icon.classList.remove('fa-angle-up', 'fa-angle-down');
             icon.classList.add('fa-sort');
-            console.log(sibling);
             sibling.classList.remove('pf-m-ascending', 'pf-m-descending');
             sibling.removeAttribute('aria-sort');
           }

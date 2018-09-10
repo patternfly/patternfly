@@ -1,14 +1,10 @@
-<table class="pf-c-table pf-m-grid{{#if table--modifier}} {{table--modifier}}{{/if}}"
+<table class="pf-c-table{{#if table--modifier}} {{table--modifier}}{{/if}}" role="grid"
   {{#if table--attribute}}
     {{{table--attribute}}}
   {{/if}}
-  {{#if table--expandable}}
-    role="treegrid"
-  {{else}}
-    role="grid"
-  {{/if}}
   {{#if table--interactive}}
     onClick="(function(){
+
       let toggle = event.target;
 
       // if toggle is clicked, return true
@@ -22,14 +18,14 @@
         toggle.classList.toggle('pf-m-expanded');
 
         if (toggle.classList.contains('pf-m-expanded')) {
-          siblingRow.removeAttribute('hidden');
+          // siblingRow.removeAttribute('hidden');
 
           setTimeout(function() {
             // toggle attributes on sibling row
             siblingRow.classList.add('pf-m-expanded');
 
             // toggle attributes on toggle parent
-            toggleParent.setAttribute('aria-expanded', 'true');
+            toggle.setAttribute('aria-expanded', 'true');
             siblingRow.removeAttribute('aria-hidden');            
           }, 50); 
         } else {
@@ -37,12 +33,12 @@
           siblingRow.classList.remove('pf-m-expanded');
 
           // toggle attributes on toggle parent
-          toggleParent.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-expanded', 'false');
           siblingRow.setAttribute('aria-hidden', 'true');
 
-          setTimeout(function() {
+{{!--           setTimeout(function() {
             siblingRow.setAttribute('hidden', '');
-          }, 500); 
+          }, 500);  --}}
         }
       }
         return false;

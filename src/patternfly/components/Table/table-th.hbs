@@ -1,4 +1,5 @@
-<th class="{{#if table-th--toggle}}pf-c-table__toggle pf-m-shrink {{else if table-th--check}}pf-c-table__check pf-m-shrink {{else if table-th--action}}pf-c-table__action pf-m-shrink {{else if table-th--blank}}pf-m-blank {{else if table-th--sortable}}pf-c-table__sort {{#if table-th--asc}}pf-m-ascending {{else if table-th--desc}}pf-m-descending {{else}}{{/if}}{{/if}}{{#if table-th--modifier}}{{table-th--modifier}}{{/if}}"
+<th {{#if table-th--toggle}}class="pf-c-table__toggle {{table-th--modifier}}"{{else if table-th--check}}class="pf-c-table__check {{table-th--modifier}}"
+{{else if table-th--action}}class="pf-c-table__action {{table-th--modifier}}"{{else if table-th--sortable}}class="pf-c-table__sort{{#if table-th--asc}} pf-m-ascending{{/if}}{{#if table-th--desc}}pf-m-descending{{/if}} {{table-th--modifier}}"{{else if table-th--modifier}}class="{{table-th--modifier}}"{{/if}}
 
   {{#if table-th--asc}}
     aria-sort="ascending"
@@ -6,17 +7,16 @@
     aria-sort="descending"
   {{/if}}
 
-  {{#if table--expandable}}
-    scope="col"
+  {{#if table-th--data-label}}
+    data-label="{{table-th--data-label}}"
   {{/if}}
 
   {{#if table-th--attribute}}
     {{{table-th--attribute}}}
   {{/if}}>
 
-  {{!-- <i class="fas fa-chevron-down"></i> --}}
   {{#if table-th--sortable}}
-    <span role="button">
+    <button>
       {{> @partial-block}}
       <span class="pf-c-table__sort-indicator">
         {{#if table-th--asc}}
@@ -27,7 +27,7 @@
           <i class="fas fa-sort"></i>
         {{/if}}
       </span>
-    </span>
+    </button>
   {{else}}
     {{> @partial-block}}
   {{/if}}
