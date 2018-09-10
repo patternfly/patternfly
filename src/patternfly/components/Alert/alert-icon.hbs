@@ -1,0 +1,20 @@
+<div class="pf-c-alert__icon{{#if alert-icon--modifiers}} {{alert-icon--modifiers}}{{/if}}"
+  {{#if alert-icon--attributes}}
+    {{{alert-icon--attributes}}}
+  {{/if}}>
+  {{> @partial-block}}
+  {{#if pf-c-alert-icon--HasCheckCircleIcon}}
+  {{> alert-checkcircle-icon}}
+  {{/if}}
+  {{#if pf-c-alert-icon--HasExclamationCircleIcon}}
+  {{> alert-exclamationcircle-icon}}
+  {{/if}}
+  {{#if pf-c-alert-icon--HasExclamationTriangleIcon}}
+  {{> alert-exclamationtriangle-icon}}
+  {{/if}}
+   {{#if pf-c-alert-icon--HasInfoCircleIcon}}
+  {{> alert-infocircle-icon}}
+  {{/if}}
+
+
+</div>

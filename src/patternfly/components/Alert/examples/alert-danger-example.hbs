@@ -1,33 +1,44 @@
 {{#> alert pf-c-alert--Modifier="pf-m-danger" pf-c-alert--AriaLabel="Danger Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-exclamation-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Danger: </span> Danger notification title</h4>
-    <p>This is a description of the notification content.</p>
-</div>
+  {{#> alert-icon pf-c-alert-icon--HasExclamationCircleIcon="true"}}
+  {{/alert-icon}}
+    {{#> alert-body}}
+      {{#> alert-title}}
+        {{#> sr sr--modifier="pf-u-sr-only"}}
+          Danger:
+        {{/sr}}
+        Danger notification title
+      {{/alert-title}}
+    This is a description of the notification content.
+  {{/alert-body}}
+{{/alert}}
+<br> 
+{{#> alert pf-c-alert--Modifier="pf-m-danger" pf-c-alert--AriaLabel="Danger Notification"}}
+  {{#> alert-icon pf-c-alert-icon--HasExclamationCircleIcon="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> sr sr--modifier="pf-u-sr-only"}}
+        Danger:
+      {{/sr}}
+        Danger notification title
+    {{/alert-title}}
+  {{/alert-body}}
+  {{#> alert-action pf-c-alert--Attribues="pf-c-alert__action"}}
+    {{#> button btnClass="pf-m-secondary"}}
+      Button 
+    {{/button}}
+  {{/alert-action}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-danger" pf-c-alert--AriaLabel="Danger Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-exclamation-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Danger: </span> Danger notification title</h4>
-</div>
-<div class="pf-c-alert__action">
-  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-</div>
-{{/alert}}
-<br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-danger" pf-c-alert--AriaLabel="Danger Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-exclamation-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Danger: </span> Danger notification title</h4>
-</div>
+{{#> alert pf-c-alert--Modifier="pf-m-danger" pf-c-alert--AriaLabel="Danger Notification"}}
+  {{#> alert-icon pf-c-alert-icon--HasExclamationCircleIcon="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> sr sr--modifier="pf-u-sr-only"}}
+        Danger:
+      {{/sr}}
+      Danger notification title
+    {{/alert-title}}
+  {{/alert-body}}
 {{/alert}}

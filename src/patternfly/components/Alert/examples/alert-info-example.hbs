@@ -1,33 +1,44 @@
 {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-info-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Info: </span> Info notification title</h4>
-    <p>This is a description of the notification content.</p>
-</div>
+  {{#> alert-icon pf-c-alert-icon--HasInfoCircleIcon="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> sr sr--modifier="pf-u-sr-only"}}
+        Info:
+      {{/sr}}
+      Info notification title
+    {{/alert-title}}
+    This is a description of the notification content.
+    {{/alert-body}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-info-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Info: </span> Info notification title</h4>
-</div>
-<div class="pf-c-alert__action">
-  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-</div>
+{{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
+  {{#> alert-icon pf-c-alert-icon--HasInfoCircleIcon="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> sr sr--modifier="pf-u-sr-only"}}
+        Info:
+      {{/sr}} 
+      Info notification title
+    {{/alert-title}}
+  {{/alert-body}}
+  {{#> alert-action pf-c-alert--Attribues="pf-c-alert__action"}}
+    {{#> button btnClass="pf-m-secondary"}}
+      Button 
+    {{/button}}
+  {{/alert-action}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-info-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Info: </span> Info notification title</h4>
-</div>
+{{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
+  {{#> alert-icon pf-c-alert-icon--HasInfoCircleIcon="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> sr sr--modifier="pf-u-sr-only"}}
+        Info:
+      {{/sr}}
+      Success notification title
+    {{/alert-title}}
+  {{/alert-body}}
 {{/alert}}
