@@ -3,14 +3,26 @@
   display: flex;
 }
 
-.Navigation.is-horizontal .Navigation_link {
-  padding: .5rem;
+.Navigation {
+  &.is-horizontal {
+    .Navigation_link {
+      padding: .5rem;
 
-  &:hover {
-    font-weight: 500;
-    color: #007bba;
-    text-decoration: none;
-    background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &:not(.is-horizontal) {
+    .Navigation_link {
+      padding: .5rem 0 .5rem 2rem;
+
+      &:focus,
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
   }
 }
 
@@ -18,7 +30,6 @@
   padding: 0 0 1em;
   margin: 0;
   list-style-type: none;
-  
 }
 
 .Navigation__item {
@@ -27,21 +38,13 @@
 
 .Navigation_link {
   display: block;
-  padding: .5rem 0;
-  padding-left: 2rem;
   color: #393f44;
 
-  &:focus {
-    font-weight: 500;
-    color: #007bba;
-    text-decoration: none;
-  }
-
+  &:focus,
   &:hover {
     font-weight: 500;
     color: #007bba;
     text-decoration: none;
-    background-color: #f5f5f5;
   }
 }
 
