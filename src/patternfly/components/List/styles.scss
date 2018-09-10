@@ -39,11 +39,13 @@
     margin-left: var(--pf-c-content--ul--MarginLeft);
     list-style: var(--pf-c-content--ul--ListStyle);
 
+    // Sub-element type selector used to maintain consistency with the content component's list styling
     ul {
       margin-top: var(--pf-c-content--ul--nested--MarginTop);
       margin-left: var(--pf-c-content--ul--nested--MarginLeft);
     }
 
+    // Sub-element type selector used to maintain consistency with the content component's list styling
     li + li {
       margin-top: var(--pf-c-content--li--MarginTop);
     }
