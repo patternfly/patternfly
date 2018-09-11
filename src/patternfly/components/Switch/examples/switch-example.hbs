@@ -1,0 +1,22 @@
+{{#> switch switch--attribute='for="switch-on-example"'}}
+  {{#> switch-input switch-input--attribute='type="checkbox" id="switch-on-example" aria-label="..." checked'}}{{/switch-input}}
+  {{#> switch-label switch-label--modifier='pf-m-off'}}
+  Off
+  {{/switch-label}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label switch-label--modifier='pf-m-on'}}
+  On
+  {{/switch-label}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-off-example"'}}
+  {{#> switch-input switch-input--attribute='type="checkbox" id="switch-off-example" aria-label="..."'}}{{/switch-input}}
+  {{#> switch-label switch-label--modifier='pf-m-off'}}
+  Off
+  {{/switch-label}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label switch-label--modifier='pf-m-on'}}
+  On
+  {{/switch-label}}
+{{/switch}}
