@@ -3,4 +3,7 @@
     {{{alert-body--attribute}}}
   {{/if}}>
   {{> @partial-block}}
+  {{#if pf-c-alert-HasDescription}}
+    {{> alert-description}}
+  {{/if}}
 </div>

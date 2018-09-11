@@ -1,18 +1,17 @@
-{{#> alert pf-c-alert--modifier="pf-m-warning" pf-c-alert--attribute='aria-label="Warning Notification"'}}
+{{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning Notification"'}}
   {{#> alert-icon pf-c-alert-icon--warning="true"}}
   {{/alert-icon}}
-  {{#> alert-body}}
+  {{#> alert-body pf-c-alert-HasDescription="true"}}
     {{#> alert-title}}
       {{#> sr sr--modifier="pf-u-sr-only"}}
         Warning:
       {{/sr}}
       Warning notification title
     {{/alert-title}}
-    <p>This is a description of the notification content.</p>
   {{/alert-body}}
 {{/alert}}
 <br>
-{{#> alert pf-c-alert--modifier="pf-m-warning" pf-c-alert--attribute='aria-label="Warning Notification"'}}
+{{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning Notification"'}}
   {{#> alert-icon pf-c-alert-icon--warning="true"}}
   {{/alert-icon}}
   {{#> alert-body}}
@@ -23,14 +22,14 @@
       Warning notification title
     {{/alert-title}}
   {{/alert-body}}
-  {{#> alert-action pf-c-alert--attribute="pf-c-alert__action"}}
+  {{#> alert-action alert--attribute="pf-c-alert__action"}}
     {{#> button btnClass="pf-m-secondary"}}
       Button 
     {{/button}}
   {{/alert-action}}
 {{/alert}}
 <br>
-{{#> alert pf-c-alert--modifier="pf-m-warning" pf-c-alert--attribute='aria-label="Warning Notification"'}}
+{{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning Notification"'}}
   {{#> alert-icon pf-c-alert-icon--warning="true"}}
   {{/alert-icon}}
   {{#> alert-body}}
