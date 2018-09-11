@@ -11,6 +11,7 @@ import flexShrinkExampleRaw from '!raw!./flex-shrink-example.hbs';
 import flexGrowExampleRaw from '!raw!./flex-grow-example.hbs';
 import flexBasisNoneExampleRaw from '!raw!./flex-basis-none-example.hbs';
 import flexFillExampleRaw from '!raw!./flex-fill-example.hbs';
+import flexWrapExampleRaw from '!raw!./flex-wrap-example.hbs';
 
 import FlexEnableExample from './flex-enable-example.hbs';
 import FlexDirectionExample from './flex-direction-example.hbs';
@@ -22,6 +23,7 @@ import FlexShrinkExample from './flex-shrink-example.hbs';
 import FlexGrowExample from './flex-grow-example.hbs';
 import FlexBasisNoneExample from './flex-basis-none-example.hbs';
 import FlexFillExample from './flex-fill-example.hbs';
+import FlexWrapExample from './flex-wrap-example.hbs';
 
 import docs from '../docs/code.md';
 import '../styles.scss';
@@ -39,7 +41,7 @@ export default () => {
   const flexGrowExample = FlexGrowExample();
   const flexBasisNoneExample = FlexBasisNoneExample();
   const flexFillExample = FlexFillExample();
-  const headingText = 'Flex';
+  const flexWrapExample = FlexWrapExample();
 
   return (
     <Documentation docs={Docs} heading={headingText} className="flex-examples is-utility-page">
@@ -72,6 +74,9 @@ export default () => {
       </Example>
       <Example heading="Flex fill" handlebars={flexFillExampleRaw}>
         {flexFillExample}
+      </Example>
+      <Example heading="Flex wrap" handlebars={flexWrapExampleRaw}>
+        {flexWrapExample}
       </Example>
     </Documentation>
   );

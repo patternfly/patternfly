@@ -1,54 +1,20 @@
 {{#> simple-form-demo}}
-  {{#> form}}
+{{#> form}}
           {{#> form-group}}
             {{#> form-label for="simple-form-name" required="true"}}Name{{/form-label}}
             {{#> form-control controlType="input" input="true" type="text" id="simple-form-name" name="simple-form-name" required="true"}}
             {{/form-control}}
+            {{#> form-helper-text pf-c-form__helper--modifier="pf-m-error" id="helper3" aria-live="polite"}}This is helper text{{/form-helper-text}}
           {{/form-group}}
-          {{#> form-group }}
-            {{#> form-label for="simple-form-git-repo" required="true"}}Git Repository URL{{/form-label}}
-            {{#> form-control controlType="input" input="true" type="text" id="simple-form-git-repo" name="simple-form-git-repo" required="true"}}
-            {{/form-control}}
-          {{/form-group}}
-          {{#> form-group }}
-            {{#> form-label for="simple-form-git-ref" required="true"}}Git Reference{{/form-label}}        
-            {{#> form-control controlType="input" input="true" type="text" id="simple-form-git-ref" name="simple-form-git-ref" required="true"}}
-            {{/form-control}}
-          {{/form-group}}
-            {{#> form-group }}
-            {{#> form-label for="simple-form-context_dir" required="true"}}Context Dir{{/form-label}}
-            {{#> form-control controlType="input" input="true" type="text" id="simple-form-context_dir" name="simple-form-context_dir" required="true"}}
-            {{/form-control}} 
-          {{/form-group}}
-          {{#> form-group }}
-            {{#> form-label for="simple-form-source_secret"}}Source Secret{{/form-label}}
-            {{#> form-control controlType="input" input="true" type="text" id="simple-form-source_secret" name="simple-form-source_secret" required="true"}}
-            {{/form-control}}
-           {{/form-group}}
-           {{#> form-action-group form-action-group--modifier="pf-m-lg"}}
-          {{#> button btnClass="pf-m-primary"}}
-            Create
-          {{/button}}
-          {{#> button btnClass="pf-m-secondary"}}
-            Cancel
-          {{/button}}
-        {{/form-action-group}}
- {{/form}}
-{{/simple-form-demo}}
-
-{{#> simple-form-demo}}
-  {{#> form form--modifier="pf-m-inline"}}
-          {{#> form-group form-group--modifier="pf-m-xl"}}
-            {{#> form-label for="simple-form-name" required="true"}}Name{{/form-label}}
-            {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="text" id="simple-form-name" name="simple-form-name" required="true"}}
-            {{/form-control}}
-          {{/form-group}}
-          {{#> form-group  form-group--modifier="pf-m-xl"}}
+          {{#> form-group}}
             {{#> form-label for="simple-form-git-repo" required="true"}}Email{{/form-label}}
-            {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="email" id="simple-form-git-repo" name="simple-form-git-repo" required="true"}}
+            {{#> form-control controlType="input" input="true" type="email" id="simple-form-git-repo" name="simple-form-git-repo" required="true"}}
             {{/form-control}}
           {{/form-group}}
-           {{#> form-action-group form-action-group--modifier="pf-m-xl"}}
+          {{#> form-group}}
+          {{#> check check-type="checkbox" id="checkbox1" name="checkbox1" text="Checkbox 1" }}{{/check}}
+          {{/form-group}}
+           {{#> form-action-group}}
           {{#> button btnClass="pf-m-primary"}}
             Create
           {{/button}}
@@ -58,111 +24,3 @@
         {{/form-action-group}}
  {{/form}}
 {{/simple-form-demo}}
-    {{!-- {{#> form-section pf-c-form--modifier="pf-m-border"}}
-      {{#> grid grid--modifiers="pf-m-gutter"}}
-        {{#> grid-item grid-item--modifiers="pf-m-12-col"}}
-        {{/grid-item}}
-        {{#> grid-item grid-item--modifiers="pf-m-12-col"}}
-          {{#> form-group}}
-            {{#> form-label for="hostname"}}Hostname{{/form-label}}      
-          {{/form-group}}
-        {{/grid-item}}
-        {{#> grid-item grid-item--modifiers="pf-m-12-col"}}
-          {{#> form-group}}
-            {{#> form-label for="path"}}Path{{/form-label}}      
-          {{/form-group}}
-        {{/grid-item}}
-        {{#> grid-item grid-item--modifiers="pf-m-12-col"}}
-          {{#> form-group}}
-            {{#> form-label for="target_port" pf-c-form--modifier="pf-m-required"}}Target Port{{/form-label}}
-          {{/form-group}}
-        {{/grid-item}}
-        {{#> grid-item grid-item--modifiers="pf-m-12-col"}}
-          {{#> title titleType="h3" }}
-            Security
-          {{/title}}           
-        {{/grid-item}}
-      {{/grid}}
-    {{/form-section}}
-    {{#> form-section pf-c-form--modifier="pf-m-border"}}
-      {{#> grid modifierClass="pf-m-gutter"}}
-        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
-          Build Configuration
-        {{/title}}
-        {{#> grid-item grid-item--modifiers="pf-m-12-col"}}
-          {{#> form-fieldset}}
-            {{#> form-legend pf-c-form--modifier="pf-u-sr-only"}}Build configuration settings{{/form-legend}}
-          {{/form-fieldset}}
-        {{/grid-item}}
-        {{#> form-fieldset}}
-          {{#> form-group}}
-            {{#> form-legend}}Environment Variables (Build and Runtime){{/form-legend}}
-            {{#> grid modifierClass="pf-m-gutter"}}
-              {{#> grid-item grid-item--modifiers="pf-m-6-col"}}
-                {{#> form-group}}
-                  {{#> form-label for="variable_name" hidden="true"}}Environment variable name{{/form-label}}
-                {{/form-group}}
-              {{/grid-item}}    
-              {{#> grid-item grid-item--modifiers="pf-m-6-col"}}
-                {{#> form-group}}
-                  {{#> form-label for="variable_value" hidden="true"}}Environment variable value{{/form-label}}
-                {{/form-group}}
-              {{/grid-item}}
-            {{/grid}}
-            {{#> form-button-group}}
-              {{#> button btnClass="pf-m-plain"}}
-                <i class="fas fa-plus-circle"></i>
-                Add Value
-              {{/button}}
-              {{#> button btnClass="pf-m-plain"}}
-                <i class="fas fa-plus-circle"></i>
-                Add Value from Config Map or Secret
-              {{/button}}
-            {{/form-button-group}}
-          {{/form-group}}
-        {{/form-fieldset}}
-      {{/grid}}
-    {{/form-section}}
-    {{#> form-section}}
-      {{#> grid modifierClass="pf-m-gutter"}}
-        {{#> title titleType="h2" pf-c-title--Modifier="pf-m-xl"}}
-          Resource Limits
-        {{/title}}      
-        {{#> form-fieldset}}
-          {{#> form-legend}}CPU{{/form-legend}}
-          {{#> grid modifierClass="pf-m-gutter"}}
-            {{#> grid-item grid-item--modifiers="pf-m-6-col"}}
-              {{#> form-group}}
-                {{#> form-label for="cpu_request"}}Request{{/form-label}}    
-              {{/form-group}}
-            {{/grid-item}}
-          {{/grid}}       
-        {{/form-fieldset}}
-
-        {{#> form-fieldset}}
-          {{#> form-legend}}Memory{{/form-legend}}          
-          {{#> grid modifierClass="pf-m-gutter"}}
-            {{#> grid-item grid-item--modifiers="pf-m-6-col"}}
-              {{#> form-group}}
-                {{#> form-label for="memory_request"}}Request{{/form-label}}       
-              {{/form-group}}
-            {{/grid-item}}           
-            {{#> grid-item grid-item--modifiers="pf-m-6-col"}}
-              {{#> form-group}}
-                {{#> form-label for="memory_limit"}}Limit{{/form-label}}
-               update this when tooltip is available
-              {{/form-group}}
-            {{/grid-item}} 
-          {{/grid}}       
-        {{/form-fieldset}}
-        {{#> form-button-group}}
-          {{#> button btnClass="pf-m-primary"}}
-            Create
-          {{/button}}
-          {{#> button btnClass="pf-m-secondary"}}
-            Cancel
-          {{/button}}
-        {{/form-button-group}}
-      {{/grid}}
-    {{/form-section}} --}}
- 

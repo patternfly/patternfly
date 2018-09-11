@@ -1,0 +1,56 @@
+{{#> inline-form-demo}}
+  {{#> form form--modifier="pf-m-inline"}}
+          {{#> form-group }}
+            {{#> form-label for="simple-form-name" required="true"}}Name{{/form-label}}
+            {{#> form-control controlType="input" input="true" type="text" id="simple-form-name" name="simple-form-name" required="true" aria-errormessage="simple-form-helper2" aria-invalid="true" }}
+            {{/form-control}}
+            {{#> form-helper-text id="simple-form-helper1" aria-live="polite"}}This is helper text{{/form-helper-text}}
+            {{#> form-helper-text form__helper--modifier="pf-m-error" id="simple-form-helper2" aria-live="polite"}}This is error text{{/form-helper-text}}
+          {{/form-group}}
+          {{#> form-group }}
+            {{#> form-label for="simple-form-git-repo" }}Git Repository URL{{/form-label}}
+            {{#> form-control controlType="input" input="true" type="text" id="simple-form-git-repo" name="simple-form-git-repo" }}
+            {{/form-control}}
+          {{/form-group}}
+          {{#> form-group }}
+            {{#> form-label for="simple-form-git-ref"}}Git Reference{{/form-label}}        
+            {{#> form-control controlType="select" id="simple-form-git-ref" name="simple-form-git-ref" }}
+              <option value="" selected>Please choose</option>
+              <option value="Mr">Mr</option>
+              <option value="Miss">Miss</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+              <option value="Dr">Dr</option>
+              <option value="Other">Other</option>
+            {{/form-control}}
+          {{/form-group}}
+            {{#> form-group }}
+            {{#> form-label for="simple-form-context_dir"}}Context Dir{{/form-label}}
+            {{#> form-control controlType="textarea" name="simple-form-context_dir" id="simple-form-context_dir"}}
+            {{/form-control}} 
+          {{/form-group}}
+          {{#> form-group }}
+            {{#> form-label for="simple-form-source_secret"}}Source Secret{{/form-label}}
+            {{#> form-control controlType="input" input="true" type="text" id="simple-form-source_secret" name="simple-form-source_secret" required="true"}}
+            {{/form-control}}
+           {{/form-group}}
+           {{#> form-group}}
+           
+          {{#> check check-type="checkbox" id="checkbox3" name="checkbox3" text="Checkbox 4" }}{{/check}}
+          {{#> check check-type="checkbox" id="checkbox4" name="checkbox4" text="Checkbox 5" }}{{/check}}
+           {{/form-group}}
+           {{#> form-group}}
+           
+          {{#> check check-type="radio" id="radio1" name="radioexamples" text="Radio 1" }}{{/check}}
+          {{#> check check-type="radio" id="radio2" name="radioexamples" text="Radio 2" }}{{/check}}
+           {{/form-group}}
+           {{#> form-action-group }}
+          {{#> button btnClass="pf-m-primary"}}
+            Create
+          {{/button}}
+          {{#> button btnClass="pf-m-secondary"}}
+            Cancel
+          {{/button}}
+        {{/form-action-group}}
+ {{/form}}
+{{/inline-form-demo}}
