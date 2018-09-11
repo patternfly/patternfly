@@ -1,9 +1,7 @@
-<div class="pf-c-alert {{ pf-c-alert--Modifier }}" aria-label="{{ pf-c-alert--AriaLabel }}">
-    {{#if pf-c-alert--Attributes}}
-    {{{ pf-c-alert--Attributes}}} 
-    {{/if}}
-
-  {{> @partial-block }}
-
-
+<div class="pf-c-alert {{#if pf-c-alert--modifier}} {{pf-c-alert--modifier}}{{/if}}"
+ {{#if pf-c-alert--attribute}}
+   {{{ pf-c-alert--attribute}}}
+ {{/if}}
+>
+ {{> @partial-block }}
 </div>

@@ -1,18 +1,18 @@
-<div class="pf-c-alert__icon{{#if alert-icon--modifiers}} {{alert-icon--modifiers}}{{/if}}"
-  {{#if alert-icon--attributes}}
-    {{{alert-icon--attributes}}}
+<div class="pf-c-alert__icon{{#if alert-icon--modifier}} {{alert-icon--modifier}}{{/if}}"
+  {{#if alert-icon--attribute}}
+    {{{alert-icon--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-  {{#if pf-c-alert-icon--HasCheckCircleIcon}}
+  {{#if pf-c-alert-icon--success}}
   {{> alert-checkcircle-icon}}
   {{/if}}
-  {{#if pf-c-alert-icon--HasExclamationCircleIcon}}
+  {{#if pf-c-alert-icon--danger}}
   {{> alert-exclamationcircle-icon}}
   {{/if}}
-  {{#if pf-c-alert-icon--HasExclamationTriangleIcon}}
+  {{#if pf-c-alert-icon--warning}}
   {{> alert-exclamationtriangle-icon}}
   {{/if}}
-   {{#if pf-c-alert-icon--HasInfoCircleIcon}}
+   {{#if pf-c-alert-icon--info}}
   {{> alert-infocircle-icon}}
   {{/if}}
 
