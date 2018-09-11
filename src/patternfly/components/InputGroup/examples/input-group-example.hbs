@@ -1,82 +1,79 @@
 {{#> input-group }}
-  {{#> button btnClass="pf-m-secondary" btnAttributes='id="textAreaButton1"'}} Button {{/button}}
-  {{#> form-control controlType="textarea" name="textarea1" id="textarea1" aria-label="textarea with buttons" aria-describedby="textAreaButton1" }}
+ {{#> button btnClass="pf-m-secondary" btnAttributes='id="textAreaButton1"'}} Button {{/button}}
+ {{#> form-control controlType="textarea" name="textarea1" id="textarea1" aria-label="textarea with buttons" aria-describedby="textAreaButton1" }}
 {{/form-control}}
-    {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
+   {{#> button btnClass="pf-m-tertiary"}} Button {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> form-control controlType="textarea" name="textarea2" id="textarea2" aria-label="textarea with button" aria-describedby="textAreaButton2" }}
+ {{#> form-control controlType="textarea" name="textarea2" id="textarea2" aria-label="textarea with button" aria-describedby="textAreaButton2" }}
 {{/form-control}}
-    {{#> button btnClass="pf-m-tertiary" btnAttributes='id="textAreaButton2"'}} Button {{/button}}
+   {{#> button btnClass="pf-m-tertiary" btnAttributes='id="textAreaButton2"'}} Button {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> dropdown id="dropdown-example-collapsed1" }}
-    Dropdown
-    <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i> 
-  {{/dropdown}}
-  {{#> form-control controlType="input" input="true" type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"}}
+ {{#> dropdown id="dropdown-example-collapsed1" }}
+   Dropdown
+   <i class="fas fa-caret-down pf-c-dropdown__toggle-icon"></i>
+ {{/dropdown}}
+ {{#> form-control controlType="input" input="true" type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"}}
 {{/form-control}}
-    {{#> button btnClass="pf-m-secondary" btnAttributes='id="inputDropdownButton1"'}} Button {{/button}}
+   {{#> button btnClass="pf-m-secondary" btnAttributes='id="inputDropdownButton1"'}} Button {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> input-group-text inputGroupTextType="span" }}
-    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
-  {{/input-group-text}}
-  {{#> form-control controlType="input" input="true" type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example" }}
+ {{#> input-group-text inputGroupTextType="span" }}
+   <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+ {{/input-group-text}}
+ {{#> form-control controlType="input" input="true" type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example" }}
 {{/form-control}}
 {{#> input-group-text inputGroupTextType="span"}}
-    .00
-  {{/input-group-text}}
+   .00
+ {{/input-group-text}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> form-control controlType="input" input="true" type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example" }}
+ {{#> form-control controlType="input" input="true" type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example" }}
 {{/form-control}}
-  {{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="email-example"'}}
-    @example.com
-  {{/input-group-text}}
+ {{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="email-example"'}}
+   @example.com
+ {{/input-group-text}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="username"' aria-label="@"}}
-    <i class="fas fa-at" aria-hidden="true"></i>
-  {{/input-group-text}}
-  {{#> form-control required="true" controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"}}
-{{/form-control}}
-{{/input-group}}
-<br>
-<br>
-{{#> input-group }}
-  {{#> input-group-text inputGroupTextType="span"}}
-{{#> check pf-c-check-type="checkbox" name="checkbox example" id="checkbox1" aria-label="checkbox for following text input"}}
-{{/check}}
-  {{/input-group-text}}
-  {{#> form-control controlType="input" input="true" type="text" id="textInput8" name="textInput8" aria-label="input with checkbox example" aria-describedby="checkbox1"}}
+ {{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="username"' aria-label="@"}}
+   <i class="fas fa-at" aria-hidden="true"></i>
+ {{/input-group-text}}
+ {{#> form-control required="true" controlType="input" input="true" type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"}}
 {{/form-control}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-  {{#> input-group-action input-group-action--modifier="pf-m-align-left" inputGroupTextType="label" for="textInput9" }}
-  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-  {{/input-group-action}}
-  {{#> form-control controlType="input" input="true" type="date" id="textInput9" name="textInput9" aria-label="Date input example" }}
+ {{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="calendar"' aria-label="calendar" }}
+   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+ {{/input-group-text}}
+ {{#> form-control controlType="input" input="true" type="date" id="textInput9" name="textInput9" aria-label="Date input example" aria-describedby="calendar" }}
 {{/form-control}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group }}
-        {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="button" aria-label="popover for input"}}
-            <i class="fas fa-question-circle aria-hidden="true"></i>
-        {{/input-group-action}}
-        {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10" aria-label="input example with popover" }}
+ {{#> form-control controlType="input" input="true" type="search" id="textInput11" name="textInput11" aria-label="search input example" aria-describedby="search" }}
 {{/form-control}}
+{{#> input-group-text inputGroupTextType="span" input-group-text--attributes='id="search"' aria-label="search" }}
+   <i class="fas fa-search" aria-hidden="true"></i>
+ {{/input-group-text}}
+{{/input-group}}
+<br>
+<br>
+{{#> input-group }}
+       {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10" aria-label="input example with popover" }}
+{{/form-control}}
+{{#> button btnClass="pf-m-tertiary" btnAttributes='id="textAreaButton2"'}} <i class="fas fa-question-circle aria-hidden="true"></i> {{/button}}
 {{/input-group}}
