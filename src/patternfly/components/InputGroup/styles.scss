@@ -3,9 +3,7 @@
 .pf-c-input-group {
   --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__text--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-input-group__text--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
@@ -32,7 +30,6 @@
 
   position: relative;
   display: flex;
-  align-items: stretch;
   width: 100%;
 
   * {
