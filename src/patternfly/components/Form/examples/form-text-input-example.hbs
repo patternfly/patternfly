@@ -28,12 +28,12 @@
   {{#> form-group}}
     {{#> form-label for="textInput7"}}Inactive Error state input with inactive helper text{{/form-label}}
     {{#> form-control controlType="input" input="true" type="text" name="textInput7" id="textInput7" }}{{/form-control}}
-    {{#> form-helper-text pf-c-form__helper--modifier="pf-m-error pf-m-inactive" id="helper2" aria-live="polite"}}This is inactive helper text{{/form-helper-text}}
+    {{#> form-helper-text form__helper--modifier="pf-m-error pf-m-inactive" id="helper2" aria-live="polite"}}This is inactive helper text{{/form-helper-text}}
   {{/form-group}} 
 
   {{#> form-group}}
     {{#> form-label for="textInput8"}}Error state input with helper text{{/form-label}}
     {{#> form-control controlType="input" input="true" pf-c-form-control--modifier="pf-m-invalid" reqiured="true" aria-invalid="true" aria-errormessage="helper3" type="text" name="textInput8" id="textInput8"}}{{/form-control}}
-    {{#> form-helper-text pf-c-form__helper--modifier="pf-m-error" id="helper3" aria-live="polite"}}This is helper text{{/form-helper-text}}
+    {{#> form-helper-text form__helper--modifier="pf-m-error" id="helper3" aria-live="polite"}}This is helper text{{/form-helper-text}}
   {{/form-group}}
 {{/form}}
