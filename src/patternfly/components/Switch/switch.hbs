@@ -1,0 +1,10 @@
+<span class="pf-c-switch" role="switch" aria-checked="{{#if off}}false{{else}}true{{/if}}">
+  <input id="{{id}}" type="checkbox" class="pf-c-switch__input"{{#if disabled}} aria-disabled="true" disabled{{/if}} />
+  <label class="pf-c-switch__label{{#unless off}} pf-m-off{{/unless}}{{#if disabled}} pf-m-disabled{{/if}}">
+    Off
+  </label>
+  <span class="pf-c-switch__toggle{{~#if off}} pf-m-off{{/if}}{{#if disabled}} pf-m-disabled{{/if}}"></span>
+  <label for="{{id}}" class="pf-c-switch__label{{#if off}} pf-m-off{{/if}}{{#if disabled}} pf-m-disabled{{/if}}">
+    On
+  </label>
+</span>

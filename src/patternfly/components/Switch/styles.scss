@@ -1,0 +1,107 @@
+@import "../../patternfly-utilities";
+
+.pf-c-switch {
+  --pf-c-switch--Height: calc(#{var(--pf-global--FontSize--md)} * #{var(--pf-global--LineHeight--md)});
+  --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} * #{var(--pf-global--GoldenRatio)});
+  --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch__toggle--Radius: var(--pf-c-switch--Height);
+  --pf-c-switch__toggle--Padding: calc(#{var(--pf-c-switch--Height)} / 2 * (1 - 1 / #{var(--pf-global--GoldenRatio)}));
+  --pf-c-switch__toggle--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-switch__toggle--m-off--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-switch__toggle--m-disabled--BackgroundColor: #{$pf-color-black-400};
+  --pf-c-switch__thumb--Width: calc(#{var(--pf-c-switch--Height)} / #{var(--pf-global--GoldenRatio)});
+  --pf-c-switch__thumb--Height: var(--pf-c-switch__thumb--Width);
+  --pf-c-switch__thumb--Radius: var(--pf-c-switch__thumb--Width);
+  --pf-c-switch__thumb--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-switch__thumb--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-switch__thumb--m-disabled--BackgroundColor: #{$pf-color-black-200};
+  --pf-c-switch__thumb--LeftPosition: 0;
+  --pf-c-switch__thumb--RighPosition: calc(#{var(--pf-c-switch--Width)} - #{var(--pf-c-switch__thumb--Width)} - 2 * #{var(--pf-c-switch__toggle--Padding)});
+  --pf-c-switch__label--Color: #{$pf-color-black-600};
+  --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-switch__label--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-switch__label--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-switch__label--PaddingRight: var(--pf-global--spacer--md);
+
+  position: relative;
+  display: inline-block;
+  height: var(--pf-c-switch--Height);
+  line-height: var(--pf-c-switch--LineHeight);
+  vertical-align: middle;
+
+  .pf-c-switch__input {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+  }
+
+  .pf-c-switch__toggle {
+    position: relative;
+    display: inline-block;
+    width: var(--pf-c-switch--Width);
+    height: var(--pf-c-switch--Height);
+    cursor: pointer;
+    background-color: var(--pf-c-switch__toggle--BackgroundColor);
+    border-radius: var(--pf-c-switch__toggle--Radius);
+
+    &::before {
+      position: absolute;
+      top: var(--pf-c-switch__toggle--Padding);
+      left: var(--pf-c-switch__toggle--Padding);
+      display: block;
+      width: var(--pf-c-switch__thumb--Width);
+      height: var(--pf-c-switch__thumb--Height);
+      content: "";
+      background-color: var(--pf-c-switch__thumb--BackgroundColor);
+      border-radius: var(--pf-c-switch__thumb--Radius);
+      box-shadow: var(--pf-c-switch__thumb--BoxShadow);
+      transition: transform .25s ease 0s, width .25s ease 0s, left .25s ease 0s;
+      transform: translateX(var(--pf-c-switch__thumb--RighPosition));
+    }
+
+    &.pf-m-off {
+      background-color: var(--pf-c-switch__toggle--m-off--BackgroundColor);
+
+      &::before {
+        transform: translateX(var(--pf-c-switch__thumb--LeftPosition));
+      }
+    }
+
+    &.pf-m-disabled {
+      cursor: not-allowed;
+      background-color: var(--pf-c-switch__toggle--m-disabled--BackgroundColor);
+
+      &::before {
+        background-color: var(--pf-c-switch__thumb--m-disabled--BackgroundColor);
+      }
+    }
+  }
+
+  .pf-c-switch__label {
+    display: inline-block;
+    font-size: var(--pf-c-switch__label--FontSize);
+    font-weight: var(--pf-c-switch__label--FontWeight);
+    line-height: var(--pf-c-switch__label--LineHeight);
+    color: var(--pf-c-switch__label--Color);
+    vertical-align: top;
+    cursor: pointer;
+
+    &.pf-m-off {
+      opacity: .5;
+    }
+
+    &.pf-m-disabled {
+      cursor: not-allowed;
+      opacity: .5;
+    }
+
+    &:first-of-type {
+      padding-right: var(--pf-c-switch__label--PaddingRight);
+    }
+
+    &:last-of-type {
+      padding-left: var(--pf-c-switch__label--PaddingLeft);
+    }
+  }
+}
