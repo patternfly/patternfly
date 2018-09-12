@@ -6,11 +6,9 @@
                     {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
                         All
                     {{/dropdown}}
-                    {{#> input-group-action input-group-action--modifier="pf-m-align-right" inputGroupTextType="label" for="textInput10"}}
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    {{/input-group-action}}
-                    {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10" placeholder="Filter..." aria-label="filter input with popup button"}}
+                    {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"}}
                     {{/form-control}}
+                    {{#> button btnClass="pf-m-tertiary" btnAttributes='id="textAreaButton2"'}} <i class="fas fa-search aria-hidden="true"></i> {{/button}}
                 {{/input-group}}
             {{/toolbar-item}}
             {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-lg"}}
