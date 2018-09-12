@@ -17,18 +17,26 @@
   > * + * {
     margin-left: -1px;
   }
+
+  label.pf-c-input-group__text {
+    cursor: pointer;
+  }
   /* stylelint-enable */
 
-  .pf-c-form-control[aria-invalid="true"] {
+  .pf-c-form-control {
     position: relative;
-    z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
 
-    &:not(:last-child) {
-      margin-right: 1px;
+    &[aria-invalid="true"] {
+      position: relative;
+      z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
+
+      &:not(:last-child) {
+        margin-right: 1px;
+      }
     }
   }
 
-  position: relative;
+
   display: flex;
   width: 100%;
 
