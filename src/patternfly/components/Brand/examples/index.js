@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const brandSimpleExample = BrandSimpleExample();
+  const headingText = 'Brand';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw} minHeight="20em">
         {brandSimpleExample}
       </Example>

@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const srOnlyExample = SrOnlyExample();
+  const headingText = 'Accessibility';
 
   return (
-    <Documentation docs={Docs} className="is-utility-page">
+    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Screen reader only" handlebars={srOnlyExampleRaw}>
         {srOnlyExample}
       </Example>

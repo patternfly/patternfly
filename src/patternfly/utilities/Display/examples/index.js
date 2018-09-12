@@ -37,9 +37,10 @@ export default () => {
   const displayInlineExample = DisplayInlineExample();
   const displayTableExample = DisplayTableExample();
   const displayNoneExample = DisplayNoneExample();
+  const headingText = 'Display';
 
   return (
-    <Documentation docs={Docs} className="is-utility-page">
+    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Display inline-block" handlebars={displayInlineBlockExampleRaw}>
         {displayInlineBlockExample}
       </Example>

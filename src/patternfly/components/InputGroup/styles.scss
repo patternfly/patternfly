@@ -3,24 +3,12 @@
 .pf-c-input-group {
   --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__text--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-input-group__text--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__text--BorderColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-input-group__action--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__action--Color: var(--pf-global--Color--200);
-  --pf-c-input-group__action--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-input-group__action--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-input-group__action--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-input-group__action--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-input-group__action-hover--Color: var(--pf-global--Color--100);
-  --pf-c-input-group__action-focus--Color: var(--pf-global--Color--100);
-  --pf-c-input-group__action-form-control--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-input-group__action-form-control--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
   --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-input-group__button--PaddingLeft: var(--pf-global--spacer--md);
@@ -29,20 +17,27 @@
   > * + * {
     margin-left: -1px;
   }
+
+  label.pf-c-input-group__text {
+    cursor: pointer;
+  }
   /* stylelint-enable */
 
-  .pf-c-form-control[aria-invalid="true"] {
+  .pf-c-form-control {
     position: relative;
-    z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
 
-    &:not(:last-child) {
-      margin-right: 1px;
+    &[aria-invalid="true"] {
+      position: relative;
+      z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
+
+      &:not(:last-child) {
+        margin-right: 1px;
+      }
     }
   }
 
-  position: relative;
+
   display: flex;
-  align-items: stretch;
   width: 100%;
 
   * {
@@ -67,11 +62,6 @@
     border-radius: 0 var(--pf-c-input-group--BorderRadius) var(--pf-c-input-group--BorderRadius) 0;
   }
 
-  // this is to ensure this rule applies regardless of the html order of the elements
-  .pf-c-input-group__action + .pf-c-form-control, .pf-c-form-control + .pf-c-input-group__action {
-    border-radius: var(--pf-c-input-group--BorderRadius);
-  }
-
   .pf-c-dropdown__toggle {
     height: 100%;
   }
@@ -92,51 +82,17 @@
   textarea {
     min-height: var(--pf-c-input-group__textarea--MinHeight);
   }
-}
 
-.pf-c-input-group__text {
-  display: flex;
-  align-items: center;
-  padding-right: var(--pf-c-input-group__text--PaddingRight);
-  padding-left: var(--pf-c-input-group__text--PaddingLeft);
-  font-size: var(--pf-c-input-group__text--FontSize);
-  color: var(--pf-c-input-group__text--Color);
-  text-align: center;
-  background-color: var(--pf-c-input-group__text--BackgroundColor);
-  border: var(--pf-c-input-group__text--BorderSize) solid var(--pf-c-input-group__text--BorderColor);
-}
-
-.pf-c-input-group__action {
-  position: absolute;
-  padding: var(--pf-c-input-group__action--PaddingTop) var(--pf-c-input-group__action--PaddingRight) var(--pf-c-input-group__action--PaddingBottom) var(--pf-c-input-group__action--PaddingLeft);
-  font-size: var(--pf-c-input-group__action--FontSize);
-  color: var(--pf-c-input-group__action--Color);
-  cursor: pointer;
-  border: none;
-
-  &:hover,
-  &.pf-m-hover {
-    color: var(--pf-c-input-group__action-hover--Color);
-  }
-
-  &:focus,
-  &.pf-m-focus {
-    color: var(--pf-c-input-group__action-focus--Color);
-  }
-
-  &.pf-m-align-right {
-    right: 0;
-
-    & + .pf-c-form-control {
-      padding-right: var(--pf-c-input-group__action-form-control--PaddingRight);
-    }
-  }
-
-  &.pf-m-align-left {
-    left: 0;
-
-    & + .pf-c-form-control {
-      padding-left: var(--pf-c-input-group__action-form-control--PaddingLeft);
-    }
+  .pf-c-input-group__text {
+    display: flex;
+    align-items: center;
+    padding-right: var(--pf-c-input-group__text--PaddingRight);
+    padding-left: var(--pf-c-input-group__text--PaddingLeft);
+    font-size: var(--pf-c-input-group__text--FontSize);
+    color: var(--pf-c-input-group__text--Color);
+    text-align: center;
+    background-color: var(--pf-c-input-group__text--BackgroundColor);
+    border: var(--pf-c-input-group__text--BorderSize) solid var(--pf-c-input-group__text--BorderColor);
   }
 }
+

@@ -11,15 +11,12 @@ export const Docs = docs;
 export default () => {
   const cardUpgradeExamplesExample1 = CardupgradeexamplesExample1();
   const cardUpgradeExamplesExample2 = CardupgradeexamplesExample2();
+  const headingText = 'Card Migration';
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="PatternFly 3 Cards">
-        {cardUpgradeExamplesExample1}
-      </Example>
-      <Example heading="PatternFly 4 Cards">
-        {cardUpgradeExamplesExample2}
-      </Example>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="PatternFly 3 Cards">{cardUpgradeExamplesExample1}</Example>
+      <Example heading="PatternFly 4 Cards">{cardUpgradeExamplesExample2}</Example>
     </Documentation>
   );
 };

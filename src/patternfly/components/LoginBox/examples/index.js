@@ -10,10 +10,11 @@ export const Docs = docs;
 
 export default () => {
   const loginBoxExample = LoginboxExample();
+  const headingText = 'Login Box';
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="Loginbox" handlebars={loginBoxExampleRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Login box" handlebars={loginBoxExampleRaw}>
         {loginBoxExample}
       </Example>
     </Documentation>

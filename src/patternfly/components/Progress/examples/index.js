@@ -44,9 +44,10 @@ export default () => {
   const progressNoMeasureExample = ProgressNoMeasureExample();
   const progressNoMeasureFailureExample = ProgressNoMeasureFailureExample();
   const progressDynamicExample = ProgressDynamicExample();
+  const headingText = 'Progress';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Progress Simple" handlebars={progressSimpleExampleRaw}>
         {progressSimpleExample}
       </Example>

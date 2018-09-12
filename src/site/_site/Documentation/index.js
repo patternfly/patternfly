@@ -15,11 +15,11 @@ export default class Documentation extends React.Component {
   }
 
   render() {
-    const { children, className = '', docs = '' } = this.props;
+    const { children, className = '', docs = '', heading = '' } = this.props;
     const HTML_DOCS = { __html: docs };
     return !this.state.isFull ? (
       <div className={`Documentation ${className}`}>
-        <h3 className="Documentation_heading">Examples</h3>
+        <h3 className="Component_heading">{heading}</h3>
         <div className="Documentation__section">{children}</div>
         <h3 className="Documentation_heading">Documentation</h3>
         <div className="Documentation__section" dangerouslySetInnerHTML={HTML_DOCS} />
