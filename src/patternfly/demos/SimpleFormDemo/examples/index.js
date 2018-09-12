@@ -8,9 +8,10 @@ export const Docs = docs;
 
 export default () => {
   const simpleFormDemoExample = SimpleFormDemoExample();
+  const headingText = 'Simple Form Demo';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Simple Form Demo - check back when all form elements are complete">
         {simpleFormDemoExample}
       </Example>

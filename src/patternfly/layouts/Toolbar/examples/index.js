@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const toolbarBasicExample = ToolbarBasicExample();
   const toolbarSectionExample = ToolbarSectionExample();
+  const headingText = 'Toolbar';
 
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example
         heading="Toolbar Basic Example - layout will respond naturally, no additional fitting is applied"
         handlebars={ToolbarBasicExampleRaw}

@@ -9,9 +9,10 @@ export const Docs = docs;
 
 export default () => {
   const loginPageSimpleExample = LoginpageSimpleExample();
+  const headingText = 'Login Page Demo';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Loginpage Simple" fullPageOnly="true" handlebars={loginPageSimpleExampleRaw} minHeight="20em">
         {loginPageSimpleExample}
       </Example>

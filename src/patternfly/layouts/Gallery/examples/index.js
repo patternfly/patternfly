@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const gallery = Gallery();
   const galleryHasGutter = GalleryHasGutter();
+  const headingText = 'Gallery';
 
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Gallery Example" handlebars={GalleryRaw}>
         {gallery}
       </Example>

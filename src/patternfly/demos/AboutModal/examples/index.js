@@ -8,9 +8,10 @@ export const Docs = docs;
 
 export default () => {
   const aboutModalExample = AboutModalExample();
+  const headingText = 'About Modal Demo';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="About Modal Example" fullPageOnly="true">
         {aboutModalExample}
       </Example>

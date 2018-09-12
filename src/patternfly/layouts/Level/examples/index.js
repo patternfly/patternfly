@@ -16,9 +16,10 @@ export default () => {
   const levelTwo = LevelTwo();
   const levelThree = LevelThree();
   const levelGutters = LevelGutters();
+  const headingText = 'Level';
 
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Level Example" description="(with 2 children)" handlebars={LevelTwoRaw}>
         {levelTwo}
       </Example>

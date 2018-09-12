@@ -3,12 +3,31 @@
   display: flex;
 }
 
-.Navigation.is-horizontal .Navigation_link {
-  padding: .5rem;
+.Navigation {
+  &.is-horizontal {
+    .Navigation_link {
+      padding: .5rem;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &:not(.is-horizontal) {
+    .Navigation_link {
+      padding: .5rem 0 .5rem 2rem;
+
+      &:focus,
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
 }
 
 .Navigation__items {
-  padding: 0;
+  padding: 0 0 1em;
   margin: 0;
   list-style-type: none;
 }
@@ -19,7 +38,14 @@
 
 .Navigation_link {
   display: block;
-  padding: .5rem 0;
+  color: #393f44;
+
+  &:focus,
+  &:hover {
+    font-weight: 500;
+    color: #007bba;
+    text-decoration: none;
+  }
 }
 
 .Navigation_not-found-message {
