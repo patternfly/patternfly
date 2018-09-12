@@ -15,14 +15,11 @@ export default () => {
   const modalExample = ModalExample();
   const modalScrollExample = ModalScrollExample();
   const modalLgExample = ModalLgExample();
+  const headingText = 'Modal Demo';
 
   return (
-    <Documentation docs={Docs}>
-      <Example
-        heading="Modal Demo"
-        fullPageOnly="true"
-        handlebars={ModalExampleRaw}
-      >
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Modal Demo" fullPageOnly="true" handlebars={ModalExampleRaw}>
         {modalExample}
       </Example>
       <Example
@@ -32,11 +29,7 @@ export default () => {
       >
         {modalScrollExample}
       </Example>
-      <Example
-        heading="Modal Demo - Large"
-        fullPageOnly="true"
-        handlebars={ModalLgExampleRaw}
-      >
+      <Example heading="Modal Demo - Large" fullPageOnly="true" handlebars={ModalLgExampleRaw}>
         {modalLgExample}
       </Example>
     </Documentation>

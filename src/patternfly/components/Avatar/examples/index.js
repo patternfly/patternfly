@@ -10,9 +10,10 @@ export const Docs = docs;
 
 export default () => {
   const avatarSimpleExample = AvatarSimpleExample();
+  const headingText = 'Avatar';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Avatar Simple" handlebars={avatarSimpleExampleRaw}>
         {avatarSimpleExample}
       </Example>

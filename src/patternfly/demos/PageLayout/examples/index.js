@@ -25,9 +25,10 @@ export default () => {
   const pageLayoutHorizontalNavExample = PageLayoutHorizontalNavExample();
   const pageLayoutSimpleNavExample = PageLayoutSimpleNavExample();
   const pageLayoutGroupedNavExample = PageLayoutGroupedNavExample();
+  const headingText = 'Page Layout Demo';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example
         heading="Page Layout Default Nav Example"
         fullPageOnly="true"

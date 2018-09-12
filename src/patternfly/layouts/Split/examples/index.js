@@ -13,8 +13,10 @@ export const Docs = docs;
 export default () => {
   const split = Split();
   const splitGutters = SplitGutters();
+  const headingText = 'Split';
+
   return (
-    <Documentation docs={Docs} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Split Example" handlebars={SplitRaw}>
         {split}
       </Example>
