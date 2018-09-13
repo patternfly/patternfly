@@ -1,33 +1,37 @@
-{{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-info-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Info: </span> Info notification title</h4>
-    <p>This is a description of the notification content.</p>
-</div>
+{{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
+  {{#> alert-icon alert-icon--info="true"}}
+  {{/alert-icon}}
+  {{#> alert-body alert-HasDescription="true"}}
+    {{#> alert-title}}
+      {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
+      Info notification title
+    {{/alert-title}}
+    {{/alert-body}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-info-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Info: </span> Info notification title</h4>
-</div>
-<div class="pf-c-alert__action">
-  {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-</div>
+{{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
+  {{#> alert-icon alert-icon--info="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
+      Info notification title
+    {{/alert-title}}
+  {{/alert-body}}
+  {{#> alert-action}}
+    {{#> button btnClass="pf-m-secondary"}}
+      Button 
+    {{/button}}
+  {{/alert-action}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-info" pf-c-alert--AriaLabel="Information Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-  <i class="fas fa-info-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-  <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Info: </span> Info notification title</h4>
-</div>
+{{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
+  {{#> alert-icon alert-icon--info="true"}}
+  {{/alert-icon}}
+  {{#> alert-body}}
+    {{#> alert-title}}
+      {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
+      Success notification title
+    {{/alert-title}}
+  {{/alert-body}}
 {{/alert}}

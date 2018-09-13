@@ -1,0 +1,20 @@
+<div class="pf-c-alert__icon{{#if alert-icon--modifier}} {{alert-icon--modifier}}{{/if}}"
+  {{#if alert-icon--attribute}}
+    {{{alert-icon--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+  {{#if alert-icon--success}}
+  {{> alert-checkcircle-icon}}
+  {{/if}}
+  {{#if alert-icon--danger}}
+  {{> alert-exclamationcircle-icon}}
+  {{/if}}
+  {{#if alert-icon--warning}}
+  {{> alert-exclamationtriangle-icon}}
+  {{/if}}
+   {{#if alert-icon--info}}
+  {{> alert-infocircle-icon}}
+  {{/if}}
+
+
+</div>
