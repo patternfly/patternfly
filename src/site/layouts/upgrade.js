@@ -36,7 +36,7 @@ export default ({ children, data }) => {
   return (
     <div className="layout">
       <Helmet>
-        <title>PF Next</title>
+        <title>PF Upgrade Examples</title>
         <html lang="en-US" />
         <script
           defer
@@ -49,6 +49,11 @@ export default ({ children, data }) => {
           src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
           integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
           crossOrigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.1/css/patternfly.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.1/css/patternfly-additions.css"
         />
       </Helmet>
       <header className="layout__header">
@@ -88,7 +93,7 @@ export default ({ children, data }) => {
 };
 
 export const indexPageQuery = graphql`
-  query IndexOtherPageQuery {
+  query IndexUpgradePageQuery {
     allSitePage(filter: { path: { regex: "/^((?!(404)).)*$/" } }) {
       edges {
         node {

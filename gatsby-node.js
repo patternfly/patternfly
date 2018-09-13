@@ -10,6 +10,7 @@ const COMPONENTS_PATH = path.resolve(__dirname, './src/patternfly/components');
 const DEMOS_PATH = path.resolve(__dirname, './src/patternfly/demos');
 const LAYOUTS_PATH = path.resolve(__dirname, './src/patternfly/layouts');
 const UTILITIES_PATH = path.resolve(__dirname, './src/patternfly/utilities');
+const UPGRADE_PATH = path.resolve(__dirname, './src/patternfly/upgrade-examples');
 
 const COMPONENT_PATHS = fs.readdirSync(COMPONENTS_PATH).map(name => path.resolve(COMPONENTS_PATH, `./${name}`));
 
@@ -19,6 +20,8 @@ const LAYOUT_PATHS = fs.readdirSync(LAYOUTS_PATH).map(name => path.resolve(LAYOU
 
 const UTILITIES_PATHS = fs.readdirSync(UTILITIES_PATH).map(name => path.resolve(UTILITIES_PATH, `./${name}`));
 
+const UPGRADES_PATHS = fs.readdirSync(UPGRADE_PATH).map(name => path.resolve(UPGRADE_PATH, `./${name}`));
+
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   const PAGES_BASE_DIR = path.resolve(__dirname, './src/site/pages');
@@ -26,6 +29,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   const DEMOS_BASE_DIR = path.resolve(__dirname, './src/patternfly/demos');
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts');
   const UTILITIES_BASE_DIR = path.resolve(__dirname, './src/patternfly/utilities');
+  const UPGRADES_BASE_DIR = path.resolve(__dirname, './src/patternfly/upgrade-examples');
   const isMarkdown = node.internal.type === 'MarkdownRemark';
 
   if (isMarkdown) {
@@ -34,6 +38,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
     const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
     const isUtility = node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
+    const isUpgrade = node.fileAbsolutePath.includes(UPGRADES_BASE_DIR);
     if (isPage) {
       const relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath);
       const pagePath = `/${relativePath}`.replace(/\.md$/, '');
@@ -64,6 +69,12 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       createNodeField({ node, name: 'path', value: pagePath });
       createNodeField({ node, name: 'type', value: 'documentation' });
       createNodeField({ node, name: 'contentType', value: 'utility' });
+    } else if (isUpgrade) {
+      const upgradeName = path.basename(path.dirname(node.fileAbsolutePath));
+      const pagePath = `/upgrades/${upgradeName}/docs`;
+      createNodeField({ node, name: 'path', value: pagePath });
+      createNodeField({ node, name: 'type', value: 'documentation' });
+      createNodeField({ node, name: 'contentType', value: 'upgrade' });
     }
   }
 };
@@ -121,9 +132,11 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
   const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
+  const UPGRADES_PAGE_REGEX = /^\/(upgrade-examples)\/([A-Za-z0-9_-]+)/;
   return new Promise((resolve, reject) => {
     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
+    const isUpgradePage = page.path.match(UPGRADES_PAGE_REGEX);
 
     page.context.type = 'page';
     page.context.category = 'page';
@@ -145,16 +158,28 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       page.context.slug = pageSlug;
       page.context.name = pageName;
       page.context.title = pageTitle;
+    } else if (isUpgradePage) {
+      const pageCategory = 'upgrade';
+      const pageSlug = page.path.match(UPGRADES_PAGE_REGEX)[2];
+      const pageName = pageSlug.replace('-', ' ');
+      const pageTitle = inflection.titleize(pageName);
+      page.context.type = inflection.singularize(pageCategory);
+      page.context.category = pageCategory;
+      page.context.slug = pageSlug;
+      page.context.name = pageName;
+      page.context.title = pageTitle;
+      page.layout = 'upgrade';
     }
     createPage(page);
 
-    // create full demo page for each component
-    const demoPage = Object.assign({}, page);
-    demoPage.layout = 'demo';
-    const nodePath = demoPage.path;
-    demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
-    createPage(demoPage);
-
+    if (isCategoryChildPage || isUpgradePage) {
+      // create full demo page for each component
+      const demoPage = Object.assign({}, page);
+      demoPage.layout = 'demo';
+      const nodePath = demoPage.path;
+      demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
+      createPage(demoPage);
+    }
     resolve();
   });
 };
@@ -177,6 +202,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
         .concat(DEMO_PATH)
         .concat(UTILITIES_PATHS)
+        .concat(UPGRADES_PATHS)
     };
     return current;
   });
