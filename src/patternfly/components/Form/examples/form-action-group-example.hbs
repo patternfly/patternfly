@@ -1,14 +1,20 @@
 {{#> form}}
-  {{#> form-action-group}}
-    {{#> button btnClass="pf-m-primary"}}
-      Create
-    {{/button}}
-    {{#> button btnClass="pf-m-secondary"}}
-      Cancel
-    {{/button}}
-    {{#> check}}
-      {{#> check-input check-input--attribute='type="checkbox" id="check-action-group" name="check-action-group"'}}{{/check-input}}
-      {{#> check-label check-label--attribute='for="check-action-group"'}}remember my password for 30 days.{{/check-label}}
-    {{/check}}
-  {{/form-action-group}}
+  {{#> form-group form-group--modifier="pf-m-action"}}
+        {{#> toolbar}}
+          {{#> toolbar-group}}
+            {{#> toolbar-item}}
+              {{#> button btnClass="pf-m-primary"}}
+                Submit form
+              {{/button}}
+            {{/toolbar-item}}
+          {{/toolbar-group}}
+          {{#> toolbar-group}}
+            {{#> toolbar-item}}
+              {{#> button btnClass="pf-m-secondary"}}
+                Cancel
+              {{/button}}
+            {{/toolbar-item}}
+          {{/toolbar-group}}
+      {{/toolbar}}
+  {{/form-group}}
 {{/form}}
