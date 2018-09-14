@@ -1,6 +1,15 @@
-{{#> check check-type="radio" id="radio1" name="exampleRadios" text="Radio 1" }}{{/check}}
-{{#> check check-type="radio" id="radio2" name="exampleRadios" text="Radio 2, checked" checked="true"}}{{/check}}
-{{#> check check-type="radio" id="radio3" name="exampleRadios" text="Radio 3, disabled" disabled="true"}}{{/check}}
+{{#> check }}
+  {{#> check-input check-input--attribute='type="radio" id="radio1" name="exampleRadios"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="radio1"'}}Radio 1{{/check-label}}
+{{/check}}
+{{#> check }}
+  {{#> check-input check-input--attribute='type="radio" id="radio2" name="exampleRadios" checked'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="radio2"'}}Radio 2 checked{{/check-label}}
+{{/check}}
+{{#> check}}
+  {{#> check-input check-input--attribute='type="radio" id="radio3" name="exampleRadios" aria-disabled="true" disabled'}}{{/check-input}}
+  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="radio3"'}}Radio 3 disabled{{/check-label}}
+{{/check}}
 
 
     

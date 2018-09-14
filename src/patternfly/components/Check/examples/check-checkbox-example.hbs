@@ -1,6 +1,12 @@
-{{#> check check-type="checkbox" id="checkbox1" name="checkbox1" text="Checkbox 1" }}{{/check}}
-{{#> check check-type="checkbox" id="checkbox2" name="checkbox2" text="Checkbox 2, checked" checked="true"}}{{/check}}
-{{#> check check-type="checkbox" id="checkbox3" name="checkbox3" text="Checkbox 3, disabled" disabled="true"}}{{/check}}
-
-
-    
+{{#> check}}
+  {{#> check-input check-input--attribute='type="checkbox" id="check1" name="examplecheck1"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check1"'}}check 1{{/check-label}}
+{{/check}}
+{{#> check}}
+  {{#> check-input check-input--attribute='type="checkbox" id="check2" name="examplecheck2" checked'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check2"'}}check 2 checked{{/check-label}}
+{{/check}}
+{{#> check}}
+  {{#> check-input check-input--attribute='type="checkbox" id="check3" name="examplecheck3" aria-disabled="true" disabled'}}{{/check-input}}
+  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check3"'}}check 3 disabled{{/check-label}}
+{{/check}}

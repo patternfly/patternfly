@@ -1,5 +1,7 @@
-<label class="pf-c-form__label{{#if pf-c-form__label--modifier}} {{ pf-c-form__label--modifier }}{{/if}}{{#if hidden}} pf-u-sr-only{{/if}}" 
-{{#if for}} for="{{for}}"{{/if}} 
+<label class="pf-c-form__label{{#if form-label--modifier}} {{ form-label--modifier }}{{/if}}{{#if hidden}} pf-u-sr-only{{/if}}" 
+{{#if form-label--attribute}}
+{{{form-label--attribute}}}
+{{/if}} 
 >
 {{> @partial-block }}
 {{#if required}}

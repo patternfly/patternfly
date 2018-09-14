@@ -13,7 +13,11 @@
     cursor: pointer;
   }
 
-  .pf-c-check__label {
+  .pf-c-check__input + .pf-c-check__label {
+    margin-left: var(--pf-c-check__label--MarginLeft);
+  }
+
+  .pf-c-check__label + .pf-c-check__input {
     margin-left: var(--pf-c-check__label--MarginLeft);
   }
 }

@@ -1,16 +1,4 @@
-<div class="pf-c-check">
-    <input class="pf-c-check__input"
-    type="{{check-type}}"
-    id="{{id}}"
-    name="{{name}}"
-    {{#if disabled}} disabled{{/if}}
-    {{#if checked}} checked{{/if}}
-    {{#if tabindex}} {{/if}}
-    {{#if aria-describedby}} aria-describedby="{{aria-describedby}}" {{/if}}
-    {{#if required}} required aria-required="true" {{/if}}
-    {{#if aria-errormessage}} aria-errormessage="{{aria-errormessage}}"{{/if}}
-    >
-    {{#if text}}<label class="pf-c-check__label {{#if disabled}}pf-m-disabled{{/if}}" for="{{id}}">{{text}}</label>{{/if}}
+<div class="pf-c-check{{#if check-modifier}}{{check--modifier}}{{/if}}">
   {{> @partial-block}}
 </div>
   
