@@ -14,9 +14,10 @@ export const Docs = docs;
 export default () => {
   const toolbarSimpleExample = ToolbarSimpleExample();
   const toolbarComplexExample = ToolbarComplexExample();
+  const headingText = 'Toolbar Demo';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Toolbar Simple Example" handlebars={toolbarSimpleExampleRaw}>
         {toolbarSimpleExample}
       </Example>
