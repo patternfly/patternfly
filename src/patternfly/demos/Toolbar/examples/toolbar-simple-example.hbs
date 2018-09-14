@@ -1,14 +1,16 @@
 {{#> toolbar pf-l-toolbar--modifier="pf-u-justify-content-space-between pf-u-mx-xl pf-u-my-md"}}
   {{#> toolbar-group}}
     {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-2xl"}}
-    {{#> input-group }}
-      {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
-        All
-      {{/dropdown}}
-       {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"}}
-      {{/form-control}}
-      {{#> button btnClass="pf-m-tertiary" btnAttributes='id="textAreaButton2"'}} <i class="fas fa-search aria-hidden="true"></i> {{/button}}
-    {{/input-group}}
+      {{#> input-group}}
+        {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
+          All
+        {{/dropdown}}
+        {{#> form-control controlType="input" input="true" type="text" id="textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"}}
+        {{/form-control}}
+        {{#> button btnClass="pf-m-tertiary" btnAttributes='id="textAreaButton2"'}} 
+        <i class="fas fa-search aria-hidden="true"></i>
+        {{/button}}
+      {{/input-group}}
     {{/toolbar-item}}
     {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-lg"}}
       {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
@@ -16,19 +18,19 @@
       {{/dropdown}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes="aria-label=\"Sort A-Z\" "}}
+      {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes='aria-label="Sort A-Z"'}}
         <i class="fas fa-sort-alpha-down" aria-hidden="true"></i>
       {{/button}}
     {{/toolbar-item}}
   {{/toolbar-group}}
   {{#> toolbar-group}}
     {{#> toolbar-item pf-l-toolbar__item--modifier="pf-u-mr-md"}}
-      {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes="aria-label=\"Table\" "}}
+      {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes='aria-label="Table"'}}
         <i class="fas fa-table" aria-hidden="true"></i>
       {{/button}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes="aria-label=\"List\" "}}
+      {{#> button btnClass="pf-c-button pf-m-plain" btnAttributes='aria-label="List"'}}
         <i class="fas fa-list" aria-hidden="true"></i>
       {{/button}}
     {{/toolbar-item}}
