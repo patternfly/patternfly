@@ -42,6 +42,7 @@ export default () => {
   const flexBasisNoneExample = FlexBasisNoneExample();
   const flexFillExample = FlexFillExample();
   const flexWrapExample = FlexWrapExample();
+  const headingText = 'Flex';
 
   return (
     <Documentation docs={Docs} heading={headingText} className="flex-examples is-utility-page">
