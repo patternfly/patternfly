@@ -27,11 +27,7 @@ To setup the PatternFly Next development environment:
 - run `npm run dev`
 - open your browser to `http://localhost:8000`
 
-To run the a11y audit locally
-- install latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
-- alternatively, macOS users can simply `brew cask install chromedriver`
-- run `npm run dev`
-- run `npm run a11y`
+After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
 
 ### Create a new component
 
@@ -56,6 +52,33 @@ To run the a11y audit locally
 - run `pf generate demo <name>`
 
 *To view visit http://localhost:8000/demos/<name>*
+
+## Testing for Accessibility
+
+PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf-next.com/accessibility-guide).
+
+### How to Perform an Accessibility Audit with aXe
+aXe is available as either a browser extension or npm script.
+
+To run the a11y audit locally:
+- install the latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
+  - alternatively, macOS users can simply `brew cask install chromedriver`
+- run `npm run dev`
+- run `npm run a11y` (in a separate terminal)
+
+The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
+
+The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/). 
+
+### Fixing Violations
+
+Ignore the violations that aren’t related to your contribution.
+
+Fix violations related to your contribution.
+
+If there are violations that are not obvious how to fix, then create an issue with information about the violation that was found. For example, some violations might require further discussion before they can be addressed. And some violations may not be valid and require changes to the workspace or tooling to stop flagging the violation.
+
+If you have any suggestions about ways that we can improve how we use this tool, please let us know by opening an issue.
 
 ## FAQ
 
