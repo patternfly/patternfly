@@ -1,33 +1,37 @@
-{{#> alert pf-c-alert--Modifier="pf-m-success" pf-c-alert--AriaLabel="Success Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-    <i class="fas fa-check-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-    <h4 class="pf-c-alert__title">
-    <span class="pf-u-sr-only">Success: </span> Success notification title</h4>
-    <p>This is a description of the notification content.</p>
-</div>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
+    {{#> alert-icon alert-icon--success="true"}}
+    {{/alert-icon}}
+    {{#> alert-body alert-HasDescription="true"}}
+        {{#> alert-title}}
+            {{#> accessibility accessibility--type="sr-only"}}Success: {{/accessibility}}
+            Success notification title
+        {{/alert-title}}
+    {{/alert-body}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-success" pf-c-alert--AriaLabel="Success Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-    <i class="fas fa-check-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-    <h4 class="pf-c-alert__title">
-        <span class="pf-u-sr-only">Success: </span> Success notification title</h4>
-</div>
-<div class="pf-c-alert__action">
-    {{#> button btnClass="pf-m-secondary"}} Button {{/button}}
-</div>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
+    {{#> alert-icon alert-icon--success="true"}}
+    {{/alert-icon}}
+    {{#> alert-body}}
+        {{#> alert-title}}
+            {{#> accessibility accessibility--type="sr-only"}}Success: {{/accessibility}}
+            Success notification title
+        {{/alert-title}}
+    {{/alert-body}}
+    {{#> alert-action}}
+        {{#> button btnClass="pf-m-secondary"}}
+            Button 
+        {{/button}}
+    {{/alert-action}}
 {{/alert}}
 <br>
-<br> {{#> alert pf-c-alert--Modifier="pf-m-success" pf-c-alert--AriaLabel="Success Notification"}}
-<div aria-hidden="true" class="pf-c-alert__icon">
-    <i class="fas fa-check-circle"></i>
-</div>
-<div class="pf-c-alert__body">
-    <h4 class="pf-c-alert__title">
-        <span class="pf-u-sr-only">Success: </span> Success notification title</h4>
-</div>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
+    {{#> alert-icon alert-icon--success="true"}}
+    {{/alert-icon}}
+    {{#> alert-body}}
+        {{#> alert-title}}
+            {{#> accessibility accessibility--type="sr-only"}}Success: {{/accessibility}}
+            Success notification title
+        {{/alert-title}}
+    {{/alert-body}}
 {{/alert}}
