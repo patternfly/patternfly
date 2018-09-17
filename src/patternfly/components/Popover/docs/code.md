@@ -18,13 +18,13 @@ A popover is used to provide contextual information for another component on cli
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-popover` | `<div>` |  Creates a popover. |
-| `.pf-c-popover__arrow` | `.pf-c-popover` |  Creates an arrow pointing towards the element the popover describes. ** Required.** |
-| `.pf-c-popover__content` | `.pf-c-popover` |  Creates the body of the popover. ** Required.** |
-| `.pf-c-popover__close` | `.pf-c-popover__content` |  Contains and positions the close icon in the top-right corner of the popover. ** Required.** |
-| `.pf-c-popover__header` | `.pf-c-popover__content` |  The header text area of the popover. |
-| `.pf-c-popover__title` | `.pf-c-popover__header` |  The actual popover title. |
-| `.pf-c-popover__body` | `.pf-c-popover__content` |  The popover's body text. ** Required.** |
+| `.pf-c-popover` | `<div>` |  Creates a popover. Always use it with a modifier class. |
+| `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. ** Required.** |
+| `.pf-c-popover__content` | `<div>` |  Creates the body of the popover. ** Required.** |
+| `.pf-c-popover__close` | `<div>` |  Contains and positions the close icon in the top-right corner of the popover. ** Required.** |
+| `.pf-c-popover__header` | `<header>` |  The header text area of the popover. |
+| `.pf-c-popover__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  The actual popover title. |
+| `.pf-c-popover__body` | `<div>` |  The popover's body text. ** Required.** |
 | `.pf-m-left` | `.pf-c-popover` | Puts arrow to the left of the popover's content. |
 | `.pf-m-right` | `.pf-c-popover` | Puts arrow to the right of the popover's content. |
 | `.pf-m-top` | `.pf-c-popover` | Puts arrow on top of the popover's content. |
