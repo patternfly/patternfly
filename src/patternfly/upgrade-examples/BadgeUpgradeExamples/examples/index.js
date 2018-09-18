@@ -14,9 +14,10 @@ export const Docs = docs;
 export default () => {
   const badgeUpgradeExamplespf3 = Badgeupgradeexamplespf3();
   const badgeUpgradeExamplespf4 = Badgeupgradeexamplespf4();
+  const headingText = 'Badge Upgrade Examples';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Patternfly 3 Badges" handlebars={badgeUpgradeExamplespf3Raw} minHeight="20em">
         {badgeUpgradeExamplespf3}
       </Example>
