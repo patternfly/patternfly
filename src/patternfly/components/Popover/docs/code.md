@@ -23,7 +23,7 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__content` | `<div>` |  Creates the body of the popover. ** Required.** |
 | `.pf-c-popover__close` | `<div>` |  Contains and positions the close icon in the top-right corner of the popover. ** Required.** |
 | `.pf-c-popover__header` | `<header>` |  The header text area of the popover. |
-| `.pf-c-popover__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  The actual popover title. |
+| `.pf-c-popover__header-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  The actual popover title. |
 | `.pf-c-popover__body` | `<div>` |  The popover's body text. ** Required.** |
 | `.pf-m-left` | `.pf-c-popover` | Puts arrow to the left of the popover's content. |
 | `.pf-m-right` | `.pf-c-popover` | Puts arrow to the right of the popover's content. |
