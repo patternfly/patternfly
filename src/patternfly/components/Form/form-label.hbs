@@ -1,10 +1,9 @@
-<label class="pf-c-form__label{{#if form-label--modifier}} {{ form-label--modifier }}{{/if}}{{#if hidden}} pf-u-sr-only{{/if}}" 
-{{#if form-label--attribute}}
-{{{form-label--attribute}}}
-{{/if}} 
->
-{{> @partial-block }}
-{{#if required}}
-<span class="pf-c-form__label__required" aria-hidden="true">&#42;</span>
-{{/if}}
+<label class="pf-c-form__label{{#if form-label--modifier}} {{form-label--modifier}}{{/if}}" 
+    {{#if form-label--attribute}}
+        {{{form-label--attribute}}}
+    {{/if}}>
+    {{>@partial-block}}
+    {{#if required}}
+        <span class="pf-c-form__label__required" aria-hidden="true">&#42;</span>
+    {{/if}}
 </label>

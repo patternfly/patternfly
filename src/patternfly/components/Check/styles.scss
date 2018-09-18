@@ -4,12 +4,14 @@
   --pf-c-check__label--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-check__label--diabled--color: var(--pf-global--disabled-color--100);
 
-  .pf-c-check__label.pf-m-disabled, .pf-c-check__input:disabled {
+  .pf-c-check__label.pf-m-disabled,
+  .pf-c-check__input:disabled {
     color: var(--pf-c-check__label--diabled--color);
     cursor: not-allowed;
   }
 
-  .pf-c-check__input, .pf-c-check__label {
+  .pf-c-check__input,
+  .pf-c-check__label {
     cursor: pointer;
   }
 

@@ -1,41 +1,41 @@
 {{#> alternative-form-demo}}
-{{#> form }}
-  {{#> form-group}}
-    {{#> form-label form-label--attribute='for="alt-form-git-repo"' required="true"}}Email{{/form-label}}
-    {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="email" id="alt-form-git-repo" name="simple-form-git-repo" required="true"}}
-    {{/form-control}}
-  {{/form-group}}
-  {{#> form-group}}
-    {{#> form-label form-label--attribute='for="alt-form-password"' required="true"}}Password{{/form-label}}
-    {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="password" id="alt-form-password" name="alt-form-password" aria-describedby="alt-helper3" required="true"}}
-    {{/form-control}}
-    {{#> form-helper-text form-helper-text--attribute='id="alt-helper3" aria-live="polite"'}}Must be a minimum of 6 alpha-numeric characters.{{/form-helper-text}}
-  {{/form-group}}
-  {{#> form-group form-group--modifier="pf-m-action"}}
-    {{#> toolbar}}
-  {{#> toolbar-group}}
-    {{#> toolbar-item}}
-      {{#> button btnClass="pf-m-primary"}}
-      Submit form
-    {{/button}}
-    {{/toolbar-item}}
-  {{/toolbar-group}}
-  {{#> toolbar-group}}
-    {{#> toolbar-item}}
-      {{#> button btnClass="pf-m-secondary"}}
-      Cancel
-    {{/button}}
-    {{/toolbar-item}}
-    {{/toolbar-group}}
-    {{#> toolbar-group}}
-    {{#> toolbar-item}}
-      {{#> check}}
-      {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox" name="alt-form-checkbox"'}}{{/check-input}}
-      {{#> check-label check-label--attribute='for="alt-form-checkbox"'}}Remember my password for 30 days{{/check-label}}
-    {{/check}}
-    {{/toolbar-item}}
-  {{/toolbar-group}}
-{{/toolbar}}
-  {{/form-group}}
-{{/form}}
+  {{#> form }}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute='for="alt-form-git-repo"' required="true"}}Email{{/form-label}}
+      {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="email" id="alt-form-git-repo" name="simple-form-git-repo" required="true"}}
+      {{/form-control}}
+    {{/form-group}}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute='for="alt-form-password"' required="true"}}Password{{/form-label}}
+      {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="password" id="alt-form-password" name="alt-form-password" aria-describedby="alt-helper3" required="true"}}
+      {{/form-control}}
+      {{#> form-helper-text form-helper-text--attribute='id="alt-helper3" aria-live="polite"'}}Must be a minimum of 6 alpha-numeric characters.{{/form-helper-text}}
+    {{/form-group}}
+    {{#> form-group form-group--modifier="pf-m-action"}}
+      {{#> toolbar}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item}}
+            {{#> button btnClass="pf-m-primary"}}
+              Submit form
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item}}
+            {{#> button btnClass="pf-m-secondary"}}
+              Cancel
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item}}
+            {{#> check}}
+              {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox" name="alt-form-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="alt-form-checkbox"'}}Remember my password for 30 days{{/check-label}}
+            {{/check}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/toolbar}}
+    {{/form-group}}
+  {{/form}}
 {{/alternative-form-demo}}
