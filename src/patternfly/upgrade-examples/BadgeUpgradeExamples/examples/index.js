@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Patternfly 3 Badges" handlebars={badgeUpgradeExamplespf3Raw} minHeight="20em">
+      <Example heading="Patternfly 3 Badges" handlebars={badgeUpgradeExamplespf3Raw}>
         {badgeUpgradeExamplespf3}
       </Example>
       <Example
