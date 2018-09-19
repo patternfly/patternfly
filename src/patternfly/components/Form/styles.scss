@@ -12,7 +12,7 @@
   --pf-c-form__label--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-form__label--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-form__label--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-form__label-disabled--Color: var(--pf-global--disabled-color--100);
+  --pf-c-form__label--m-disabled--Color: var(--pf-global--disabled-color--100);
 
   // required labels
   --pf-c-form__label__requried--MarginLeft: var(--pf-global--spacer--xs);
@@ -20,10 +20,10 @@
   --pf-c-form__label__requried--Color: var(--pf-global--danger-color--100);
 
   // action group
-  --pf-c-form--action-group--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
 
   // form Group
-  --pf-c-form--group--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
 
   // Helpers
   --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
@@ -32,10 +32,10 @@
 
 
   // Inline
-  --pf-c-form--inline--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-form--m-inline--MarginRight: var(--pf-global--spacer--lg);
 
   // States
-  --pf-c-form--error--Color: var(--pf-global--danger-color--200);
+  --pf-c-form--m-error--Color: var(--pf-global--danger-color--200);
 
 
   display: grid;
@@ -65,6 +65,7 @@
 
       .pf-c-form__group .pf-c-form__label {
         padding-top: var(--pf-c-form__label--PaddingTop);
+        padding-bottom: 0;
       }
 
       .pf-c-form-control,
@@ -87,7 +88,7 @@
     }
 
     &.pf-m-action {
-      margin-top: var(--pf-c-form--action-group--MarginTop);
+      margin-top: var(--pf-c-form__group--m-action--MarginTop);
     }
   }
 
@@ -107,7 +108,7 @@
     }
 
     &.pf-m-disabled {
-      color: var(--pf-c-form__label-disabled--Color);
+      color: var(--pf-c-form__label--m-disabled--Color);
     }
 
     &.pf-m-disabled:hover {
@@ -132,7 +133,7 @@
     }
 
     &.pf-m-error {
-      color: var(--pf-c-form--error--Color);
+      color: var(--pf-c-form--m-error--Color);
     }
 
     &.pf-m-inactive {
@@ -152,7 +153,7 @@
     // Purpose: larger margin-right than the default value for '--group.'
     > *:not(.pf-c-form__label) {
       flex: auto 0;
-      margin-right: var(--pf-c-form--inline--MarginRight);
+      margin-right: var(--pf-c-form--m-inline--MarginRight);
     }
   }
 

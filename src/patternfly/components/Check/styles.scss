@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-check {
-  --pf-c-check__label--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-check__label--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-check__label--diabled--color: var(--pf-global--disabled-color--100);
   --pf-c-check__label--Color: var(--pf-global--Color--100);
   --pf-c-check__label--FontWeight: var(--pf-global--FontWeight--normal);
@@ -28,10 +28,10 @@
   }
 
   .pf-c-check__input + .pf-c-check__label {
-    margin-left: var(--pf-c-check__label--MarginLeft);
+    padding-left: var(--pf-c-check__label--PaddingLeft);
   }
 
   .pf-c-check__label + .pf-c-check__input {
-    margin-left: var(--pf-c-check__label--MarginLeft);
+    padding-left: var(--pf-c-check__label--PaddingLeft);
   }
 }
