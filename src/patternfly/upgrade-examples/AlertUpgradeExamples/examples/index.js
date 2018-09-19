@@ -9,7 +9,6 @@ import Alertupgradeexamplespf3notification from './alert-upgrade-example-pf3-not
 import Alertupgradeexamplespf4 from './alert-upgrade-example-pf4.hbs';
 import alertUpgradeExamplesComplexExampleDoc from '../docs/alert-upgrade-examples-complex.md';
 import docs from '../docs/code.md';
-import '../styles.scss';
 
 export const Docs = docs;
 
@@ -21,7 +20,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Patternfly3 Alert" handlebars={alertUpgradeExamplespf3alertRaw} minHeight="20em">
+      <Example heading="Patternfly3 Alert" handlebars={alertUpgradeExamplespf3alertRaw}>
         {alertUpgradeExamplespf3alert}
       </Example>
       <Example
