@@ -75,7 +75,8 @@
     }
   }
 
-  input:not([type="checkbox"]):not([type="radio"]), textarea {
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea {
     flex: 2;
   }
 
