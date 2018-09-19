@@ -76,10 +76,6 @@ $pf-global--danger-color--300:          $pf-color-red-400 !default;
 $pf-global--primary-color--light-100:   $pf-color-blue-300 !default;
 $pf-global--primary-color--dark-100:    $pf-color-blue-400 !default;
 
-// Shadows
-$pf-global--DropShadow: drop-shadow(pf-size-prem(0) pf-size-prem(.7) pf-size-prem(2.1) rgba($pf-color-black-1000, .14)); // visually comparable to $pf-global--BoxShadow
-$pf-global--DropShadow-2: drop-shadow(pf-size-prem(.7) pf-size-prem(4) pf-size-prem(7.1) rgba($pf-color-black-1000, .14));
-
 // small
 $pf-global--BoxShadow--sm: 0 pf-size-prem(1) pf-size-prem(2) 0 rgba($pf-color-black-1000, .2) !default;
 $pf-global--BoxShadow--sm-right: pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
