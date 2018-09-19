@@ -3,6 +3,18 @@
 .pf-c-check {
   --pf-c-check__label--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-check__label--diabled--color: var(--pf-global--disabled-color--100);
+  --pf-c-check__label--Color: var(--pf-global--Color--100);
+  --pf-c-check__label--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-check__label--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-check__label--LineHeight: var(--pf-global--LineHeight--sm);
+
+  .pf-c-check__label {
+    display: inline-block;
+    font-size: var(--pf-c-check__label--FontSize);
+    font-weight: var(--pf-c-check__label--FontWeight);
+    line-height: var(--pf-c-check__label--LineHeight);
+    color: var(--pf-c-check__label--Color);
+  }
 
   .pf-c-check__label.pf-m-disabled,
   .pf-c-check__input:disabled {
