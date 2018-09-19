@@ -7,7 +7,6 @@ import Badgeupgradeexamplespf3 from './badge-upgrade-examples-pf3.hbs';
 import Badgeupgradeexamplespf4 from './badge-upgrade-examples-pf4.hbs';
 import badgeUpgradeExamplesComplexExampleDoc from '../docs/badge-upgrade-examples-complex.md';
 import docs from '../docs/code.md';
-import '../styles.scss';
 
 export const Docs = docs;
 
