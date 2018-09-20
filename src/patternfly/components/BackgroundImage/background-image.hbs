@@ -1,3 +1,7 @@
-<div class="pf-c-background-image {{ pf-c-background-image--modifier }}">
+<div class="pf-c-background-image {{#if background-image--modifier}} {{background--image--modifier}}{{/if}}"
+  {{#if background-image--attribute}}
+  {{{ background-image--attribute}}}
+  {{/if}}
+>
   {{> @partial-block}}
 </div>
