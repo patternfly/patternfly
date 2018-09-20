@@ -6,7 +6,8 @@ A tooltip is used to provide contextual information for another component on hov
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-describedby="[id value of .pf-c-tooltip__content]"` | `*` | Gives the element that triggers the tooltip an accessible description by referring to the `id` of the `.pf-c-tooltip__content` element in the tooltip that describes the primary message or purpose of the element. Not used if there is no static text that describes the element. |
+| `role="tooltip"` | `.pf-c-tooltip` | Adds a tooltip role to the tooltip component. |
+| `aria-describedby="[id of .pf-c-tooltip__content]"` | `*` | Gives the element that triggers the tooltip an accessible description by referring to the `id` of the `.pf-c-tooltip__content` element in the tooltip, describing the primary message or purpose of the element. Not used if there is no static text that describes the element. |
 
 
 ## Usage
