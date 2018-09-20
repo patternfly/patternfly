@@ -1,217 +1,164 @@
 
 @import "../../patternfly-utilities";
 
-// // Select - chevron
-// $pf-c-form__select--chevron-svg--Color: $pf-global--BorderColor--dark !default;
-// $pf-c-form__select--chevron-svg--disabled--Color: $pf-global--BorderColor--light !default;
-// $pf-c-form__select--chevron-svg--Width: 28px !default;
-// $pf-c-form__select--chevron-svg--Height: 10px !default;
-// $pf-c-form__select--chevron-svg--Coordinates: "M0 1.7L1.7 0l4.7 4.6L11 0l1.7 1.7L6.4 8L0 1.7z" !default;
-// $pf-c-form__select--chevron-svg--Viewbox: "0 0 32 10" !default;
-// Base form
+
 .pf-c-form {
+  --pf-c-form--GridGap: var(--pf-global--gutter);
+
   // Label
   --pf-c-form__label--Color: var(--pf-global--Color--100);
   --pf-c-form__label--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-form__label--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-form__label--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-form__label--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-form__label--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-form__label--PaddingBottom: var(--pf-global--spacer--sm);
-
-  // nested Label
-  --pf-c-form__label-nested--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-form__label-nested--PaddingRight: 0;
-  --pf-c-form__label-nested--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-form__label-nested--PaddingLeft: 0;
-
-  // --pf-c-form__check--addons--MarginLeft:   var(--pf-global--spacer--sm);
+  --pf-c-form__label--m-disabled--Color: var(--pf-global--disabled-color--100);
 
   // required labels
-  --pf-c-form__label-requried-after--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-form__label-requried-after--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-form__label-requried-after--Color: var(--pf-global--danger-color--100);
+  --pf-c-form__label__requried--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-form__label__requried--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-form__label__requried--Color: var(--pf-global--danger-color--100);
 
-  // Group
-  --pf-c-form--group--MarginLeft: var(--pf-global--spacer--sm);
+  // action group
+  --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
 
-  // Section
-  --pf-c-form--section--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-form--section--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-form--section--border--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-form--section--border--BorderBottomColor: var(--pf-global--BorderColor--light);
-
-  // Sub-section
-  --pf-c-form--subsection-title--MarginBottom: var(--pf-global--spacer--sm);
-
-  // Legend
-  --pf-c-form__legend--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-form__legend--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-form__legend--FontWeight: var(--pf-global--FontWeight--semi-bold);
-
-  // States
-  --pf-c-form--error--Color: var(--pf-global--danger-color--200);
+  // form Group
+  --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
 
   // Helpers
-  --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-form__helper-text--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-form__helper-text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__helper-text--Color: var(--pf-global--Color--100);
 
+
   // Inline
-  --pf-c-form--inline--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-form--m-inline--MarginRight: var(--pf-global--spacer--lg);
 
-  // Checkbox
-  --pf-c-check--MarginRight: var(--pf-global--spacer--md);
+  // States
+  --pf-c-form--m-error--Color: var(--pf-global--danger-color--200);
 
-  // Button group
-  --pf-c-form--button-group--item--MarginRight: var(--pf-global--spacer--lg);
+
+  display: grid;
+  grid-gap: var(--pf-c-form--GridGap);
+
+  &.pf-m-horizontal {
+    &.pf-m-align-right {
+      .pf-c-form__label {
+        text-align: right;
+      }
+    }
+
+    .pf-c-form__group {
+      display: grid;
+      grid-column-gap: var(--pf-c-form--GridGap);
+
+      .pf-c-form-control {
+        align-self: start;
+      }
+    }
+
+    @media (min-width: $pf-global--breakpoint--md) {
+      .pf-c-form__group {
+        // this number needs to be confirmed by design :)
+        grid-template-columns: 150px 1fr;
+      }
+
+      .pf-c-form__group .pf-c-form__label {
+        padding-top: var(--pf-c-form__label--PaddingTop);
+        padding-bottom: 0;
+      }
+
+      .pf-c-form-control,
+      .pf-c-form__horizontal-group,
+      .pf-c-form__helper-text,
+      .pf-c-check {
+        grid-column-start: 2;
+      }
+    }
+  }
+
+  .pf-c-form__group {
+    // Handle additional items within __group without having an additional wrapper or selector
+    > *:not(.pf-c-form__label):not(.pf-c-input-group):not(.pf-c-form-control):not(.pf-c-form__helper-text):not(.pf-c-form__legend):not(.pf-c-form__action-group):not(.pf-c-check):not(.pf-c-form__horizontal-group):not([class*="pf-l-"]) {
+      margin-left: var(--pf-c-form--group--MarginLeft);
+    }
+
+    .pf-c-form__label {
+      padding-bottom: var(--pf-c-form__label--PaddingBottom);
+    }
+
+    &.pf-m-action {
+      margin-top: var(--pf-c-form__group--m-action--MarginTop);
+    }
+  }
+
+  .pf-c-form__label {
+    display: inline-block;
+    font-size: var(--pf-c-form__label--FontSize);
+    font-weight: var(--pf-c-form__label--FontWeight);
+    line-height: var(--pf-c-form__label--LineHeight);
+    color: var(--pf-c-form__label--Color);
+
+    &::selection {
+      background-color: none;
+    }
+
+    &:not(.pf-m-disabled):hover {
+      cursor: pointer;
+    }
+
+    &.pf-m-disabled {
+      color: var(--pf-c-form__label--m-disabled--Color);
+    }
+
+    &.pf-m-disabled:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  .pf-c-form__label__required {
+    margin-left: var(--pf-c-form__label__requried--MarginLeft);
+    font-size: var(--pf-c-form__label__requried--FontSize);
+    line-height: 0;
+    color: var(--pf-c-form__label__requried--Color);
+  }
+
+
+  .pf-c-form__helper-text {
+    margin-top: var(--pf-c-form__helper-text--MarginTop);
+    font-size: var(--pf-c-form__helper-text--FontSize);
+
+    &:not(.pf-m-error) {
+      color: var(--pf-c-form__helper-text--Color);
+    }
+
+    &.pf-m-error {
+      color: var(--pf-c-form--m-error--Color);
+    }
+
+    &.pf-m-inactive {
+      display: none;
+    }
+  }
 
   // Inline
   .pf-m-inline {
+    .pf-c-form__label {
+      flex-basis: 100%;
+    }
+
     display: flex;
     flex-flow: row wrap;
 
     // Purpose: larger margin-right than the default value for '--group.'
-    > * {
+    > *:not(.pf-c-form__label) {
       flex: auto 0;
-      margin-right: var(--pf-c-form--inline--MarginRight);
-    }
-
-    .pf-c-form__label {
-      padding-top: var(--pf-c-form__label-nested--PaddingTop);
-      padding-right: var(--pf-c-form__label-nested--PaddingRight);
-      padding-bottom: var(--pf-c-form__label-nested--PaddingBottom);
-      padding-left: var(--pf-c-form__label-nested--PaddingLeft);
+      margin-right: var(--pf-c-form--m-inline--MarginRight);
     }
   }
-}
 
-// Section
-.pf-c-form__section {
-  padding-top: var(--pf-c-form--section--PaddingTop);
-  padding-bottom: var(--pf-c-form--section--PaddingBottom);
-
-  &.pf-m-border {
-    border-bottom: var(--pf-c-form--section--border--BorderBottomWidth) solid var(--pf-c-form--section--border--BorderBottomColor);
-  }
-}
-
-// Group - label and control container
-// Note: Fieldset and legend are replaced groups. In order to have fieldset elements layout like a group, fieldset contents must be wrapped in __group.
-.pf-c-form__group {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: baseline;
-
-  // Handle additional items within __group without having an additional wrapper or selector
-  > *:not(.pf-c-form__label):not(.pf-c-input-group):not(.pf-c-form-control):not(.pf-c-form__helper-text):not(.pf-c-form__legend):not(.pf-c-form__button-group):not([class*="pf-l-"]) {
-    margin-left: var(--pf-c-form--group--MarginLeft);
-  }
-
-  // For pf-l- items to clear appropriately
-  [class*="pf-l-"] {
-    width: 100%;
-  }
-}
-
-// Groups stacked
-.pf-c-form__group + .pf-c-form__group {
-  margin-top: var(--pf-global--gutter);
-}
-
-// Form label
-.pf-c-form__label {
-  display: flex;
-  align-items: baseline;
-  padding-bottom: var(--pf-c-form__label--PaddingBottom); // using padding to prevent flicker
-  font-size: var(--pf-c-form__label--FontSize);
-  font-weight: var(--pf-c-form__label--FontWeight);
-  color: var(--pf-c-form__label--Color);
-
-  // Hide label selection on click
-  &::selection {
-    background-color: none;
-  }
-
-  &.pf-m-disabled {
-    cursor: not-allowed;
-  }
-
-  &.pf-m-required {
-    position: relative;
-
-    &::after {
-      margin-left: var(--pf-c-form__label-requried-after--MarginLeft);
-      font-size: var(--pf-c-form__label-requried-after--FontSize);
-      color: var(--pf-c-form__label-requried-after--Color);
-      content: "*";
-    }
-  }
-}
-
-// // Checkbox and radio container
-// &__check {
-//   // Handle additional elements within check
-//   display: flex;
-//   flex: 1;
-//   align-items: baseline;
-
-//   // Space additional elements within pf-c-check
-//   > *:not(.pf-c-form__label):not(.pf-c-check) {
-//     margin-left: var(--pf-c-form__check--addons--MarginLeft);
-//   }
-
-//   .pf-c-form__label {
-//     // Remove default label padding
-//     padding-bottom: 0;
-
-//     &:not(.pf-m-disabled):hover {
-//       cursor: pointer;
-//     }
-
-//     &.pf-m-disabled:hover {
-//       cursor: not-allowed;
-//     }
-//   }
-// }
-
-// Checkbox, radio
-.pf-c-check {
-  margin-right: var(--pf-c-check--MarginRight);
-}
-
-// Fieldset
-.pf-c-form__fieldset {
-  border: none;
-}
-
-// Legend
-.pf-c-form__legend {
-  margin-bottom: var(--pf-c-form__legend--MarginBottom);
-  font-size: var(--pf-c-form__legend--FontSize);
-  font-weight: var(--pf-c-form__legend--FontWeight);
-}
-
-// Helper text
-.pf-c-form__helper-text {
-  margin-top: var(--pf-c-form__helper-text--MarginTop);
-  font-size: var(--pf-c-form__helper-text--FontSize);
-
-  &:not(.pf-m-error) {
-    color: var(--pf-c-form__helper-text--Color);
-  }
-
-  &.pf-m-error {
-    color: var(--pf-c-form--error--Color);
-  }
-
-  &.pf-m-inactive {
-    display: none;
-  }
-}
-
-// Button group
-.pf-c-form__button-group {
-  display: flex;
-
-  > * {
-    margin-right: var(--pf-c-form--button-group--item--MarginRight);
+  // Fieldset
+  .pf-c-form__fieldset {
+    border: none;
   }
 }

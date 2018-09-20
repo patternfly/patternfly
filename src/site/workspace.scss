@@ -326,10 +326,10 @@
   }
 }
 
-.pf-c-form__fieldset + .pf-c-form__fieldset,
-.pf-c-form__group + .pf-c-form__group {
-  margin-top: 1rem;
-}
+// .pf-c-form__fieldset + .pf-c-form__fieldset,
+// .pf-c-form__group + .pf-c-form__group {
+//   margin-top: 1rem;
+// }
 
 .flex-examples [class*="pf-u-align-"]:not([class*="pf-u-align-content-"]) {
   &:not(.pf-u-align-items-stretch) > * {
