@@ -1,20 +1,20 @@
-<div class="pf-c-dropdown{{#if pf-c-dropdown--IsExpanded}} pf-m-expanded{{/if}} {{pf-c-dropdown--Modifier}}">
+<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}} {{dropdown--modifier}}">
     <button id="{{id}}"
         class="pf-c-dropdown__toggle"
         aria-haspopup="true"
-        aria-expanded="{{#if pf-c-dropdown--IsExpanded}}true{{else}}false{{/if}}"
+        aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
         {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}
     >
         {{> @partial-block}}
-        {{#if pf-c-dropdown--HasToggleIcon}}
+        {{#if dropdown--HasToggleIcon}}
         {{> dropdown-toggle-icon}}
         {{/if}}
-        {{#if pf-c-dropdown__kebab-icon}}
+        {{#if dropdown--HasKebabIcon}}
         {{> kebab-icon}}
         {{/if}}
 
     </button>
-    <div class="pf-c-dropdown__menu" role="menu" aria-labelledby="{{id}}" {{#unless pf-c-dropdown--IsExpanded}}hidden="hidden"{{/unless}}>
+    <div class="pf-c-dropdown__menu" role="menu" aria-labelledby="{{id}}" {{#unless dropdown--IsExpanded}}hidden="hidden"{{/unless}}>
         <a class="pf-c-dropdown__menu-item" role="menuitem" href="#">Link</a>
         <button class="pf-c-dropdown__menu-item" role="menuitem">Action</button>
         <a class="pf-c-dropdown__menu-item pf-m-disabled" role="menuitem" aria-disabled="true" tabindex="-1" href="#">Disabled Link</a>
