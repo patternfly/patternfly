@@ -81,8 +81,6 @@
 
 .pf-c-popover__content {
   position: relative;
-  display: flex;
-  flex-direction: column;
   background-color: var(--pf-c-popover__content--BackgroundColor);
 }
 
@@ -103,7 +101,6 @@
 
 // Header
 .pf-c-popover__header {
-  flex: 0 0 auto;
   padding: var(--pf-c-popover__header--PaddingTop) var(--pf-c-popover__header--PaddingRight) var(--pf-c-popover__header--PaddingBottom) var(--pf-c-popover__header--PaddingLeft);
 }
 
@@ -116,13 +113,9 @@
 
 // Body
 .pf-c-popover__body {
-  flex: 1 1 auto;
   padding: var(--pf-c-popover__body--PaddingTop) var(--pf-c-popover__body--PaddingRight) var(--pf-c-popover__body--PaddingBottom) var(--pf-c-popover__body--PaddingLeft);
   margin-top: var(--pf-c-popover__body--MarginTop); // Adding margin top here for no header being present. When the header is present, margin-top is removed
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  word-break: break-word;
+  word-wrap: break-word;
 }
 
 // Removing top margin when header is present
