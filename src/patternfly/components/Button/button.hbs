@@ -1,12 +1,19 @@
-<button class="pf-c-button{{#if btnClass}} {{btnClass}}{{/if}}{{#if button--disabled}} pf-m-disabled{{/if}}"
-  {{#if btnAttributes}}
-    {{{ btnAttributes }}} 
+<button class="pf-c-button{{#if button--modifier}} {{button--modifier}}{{/if}}"
+  {{#if button--attribute}}
+    {{{ button--attribute}}}
   {{/if}}
-  {{#if button--disabled}}
-    disabled 
-  {{/if}}>
-
-  {{#if @partial-block}}
-    {{> @partial-block }}
+>
+  {{#if button--HasPlusCircleIcon}}
+    {{> button-plus-circle-icon}}
   {{/if}}
+  {{#if button--HasTimesIcon}}
+    {{> button-times-icon}}
+  {{/if}}
+  {{#if button--HasSearchIcon}}
+    {{> button-search-icon}}
+  {{/if}}
+  {{#if button--HasQuestionCircleIcon}}
+    {{> button-question-circle-icon}}
+  {{/if}}
+  {{> @partial-block}}
 </button>
