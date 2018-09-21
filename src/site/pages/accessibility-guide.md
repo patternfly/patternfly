@@ -62,7 +62,7 @@ If you use PatternFly, or contribute to PatternFly as a designer or developer, t
 | Functionality that uses complex gestures can also be operated with a single pointer without a path based gesture | [WCAG 2.5.1](https://www.w3.org/WAI/WCAG21/quickref/#pointer-gestures) | `design` |  |  |  |
 | Pointer events can be cancelled  | [WCAG 2.5.2](https://www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation) | | | | `js` |
 | Visible labels of UI components are either the same as the accessible name or used in the beginning of the accessible name | [WCAG 2.5.3](https://www.w3.org/WAI/WCAG21/quickref/#label-in-name) |  | `html` |  |  |
-| The target area for clickable elements is at least 32 by 32 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)* |  |  | `css` |  |
+| The target area for clickable elements is at least 44 by 44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)* |  |  | `css` |  |
 | An accessible name is provided for all elements | [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value) | `design` | `html` |  |  |
 | Status messages can be programmatically determined through role or properties | [WCAG 4.1.3](https://www.w3.org/WAI/WCAG21/quickref/#status-messages) |  | `html` |  |  |
 
