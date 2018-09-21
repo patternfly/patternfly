@@ -7,9 +7,9 @@ A popover is used to provide contextual information for another component on cli
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required**|
-| `aria-labelledby="[id of .pf-c-popover__header-title]"` | `button` | Gives the button that triggers the popover an accessible name by referring to popover's title. **Required when .pf-c-popover__header-title is present** |
-| `aria-label="[title of popover]"` | `button` | Gives the button that triggers the popover an accessible name. **Required when .pf-c-popover__header-title is _not_ present** |
-| `aria-describedby="[id of .pf-c-popover__body]"` | `button` | Gives the button that triggers popover an accessible description by referring to the popover's body text, describing the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
+| `aria-labelledby="[id of .pf-c-popover__header-title]"` | `.pf-c-button` | Gives the element that triggers the popover an accessible name by referring to popover's title. **Required when .pf-c-popover__header-title is present** |
+| `aria-label="[title of popover]"` | `.pf-c-button` | Gives the element that triggers the popover an accessible name. **Required when .pf-c-popover__header-title is _not_ present** |
+| `aria-describedby="[id of .pf-c-popover__body]"` | `.pf-c-button` | Gives the element that triggers popover an accessible description by referring to the popover's body text, describing the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-popover="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-popover__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 
