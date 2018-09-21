@@ -54,10 +54,21 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   --pf-c-table-td--responsive--MarginBottom:                  var(--pf-global--spacer--sm);
   --pf-c-table-td--responsive--GridColumnGap:                 var(--pf-global--spacer--md);
 
+  // Expandable row content  
+  --pf-c-table__expandable-row-content--responsive--PaddingRight:         var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--responsive--PaddingLeft:          var(--pf-global--spacer--xl);
+
+  // Table check 
+  --pf-c-table__check--responsive--MarginLeft:                            var(--pf-global--spacer--sm);
+  --pf-c-table__check--responsive--MarginTop:                             var(--pf-global--spacer--xs);
+
+  // Table action
+  --pf-c-table__action--responsive--MarginLeft:                           var(--pf-global--spacer--xl);
 
   // End responsive vars
   // ==================================================================
 
+ 
   --pf-c-table--BackgroundColor:                              var(--pf-global--BackgroundColor--light-100);
   --pf-c-table--BorderColor:                                  var(--pf-global--BorderColor--light-200);
   --pf-c-table--BorderWidth:                                  var(--pf-global--BorderWidth--sm);
@@ -90,24 +101,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // ============================================================ //
   // End non-conformant variables
   // ============================================================ //
-
-  // Responsive vars
-  // ==================================================================
-  
-  // Expandable row content  
-  --pf-c-table__expandable-row-content--responsive--PaddingRight:         var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--responsive--PaddingLeft:          var(--pf-global--spacer--xl);
-
-  // Table check 
-  --pf-c-table__check--responsive--MarginLeft:                            var(--pf-global--spacer--sm);
-  --pf-c-table__check--responsive--MarginTop:                             var(--pf-global--spacer--xs);
-
-  // Table action
-  --pf-c-table__action--responsive--MarginLeft:                           var(--pf-global--spacer--xl);
-
-
-  // End responsive vars
-  // ==================================================================
   
 
   // Table cell - toggle
@@ -127,13 +120,13 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   --pf-c-table__expandable-row--Transition:                   var(--pf-global--Transition);
 
   // hardcoding to match design spec
-  --pf-c-table__expandable-row--before--Width:                4px;
+  --pf-c-table__expandable-row--before--Width:                var(--pf-global--BorderWidth--lg);
   --pf-c-table__expandable-row--before--BackgroundColor:      var(--pf-global--active-color--100);
 
   // Table rows
   --pf-c-table__expandable-row-content--PaddingTop:           var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--PaddingBottom:        var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--MaxHeight:            600px;
+  --pf-c-table__expandable-row-content--MaxHeight:            #{pf-size-prem(600px)};
 
   // Expandable row content
   --pf-c-table__expandable-row-content--Transition:           var(--pf-global--Transition);
@@ -167,21 +160,10 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow:        var(--pf-global--BoxShadow--md);
 
-  // Modifier - Sort ascending
-  --pf-c-table__sort--m-sort-ascending--Color:                var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-ascending--BorderColor:          var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-ascending--BorderWidth:          var(--pf-global--BorderWidth--md);
-
-  // Modifier - Sort ascending indicator
-  --pf-c-table__sort-indicator--m-sort-ascending--Color:      var(--pf-global--active-color--100);
-
   // Modifier - Sort descending
-  --pf-c-table__sort--m-sort-descending--Color:               var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-descending--BorderColor:         var(--pf-global--active-color--100);
-  --pf-c-table__sort--m-sort-descending--BorderWidth:         var(--pf-global--BorderWidth--md);
-
-  // Modifier - Sort descending indicator
-  --pf-c-table__sort-indicator--m-sort-descending--Color:     var(--pf-global--active-color--100);
+  --pf-c-table__sort--sorted--Color:                          var(--pf-global--active-color--100);
+  --pf-c-table__sort--sorted--BorderColor:                    var(--pf-global--active-color--100);
+  --pf-c-table__sort--sorted--BorderWidth:                    var(--pf-global--BorderWidth--md);
 
   /* stylelint-enable */
 
@@ -383,32 +365,24 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 
 // Table sort
 .pf-c-table__sort {
-  // sorted ascending
-  &.pf-m-ascending {
-    border-bottom: var(--pf-c-table__sort--m-sort-ascending--BorderWidth) solid var(--pf-c-table__sort--m-sort-ascending--BorderColor);
+  &.pf-m-ascending,
+  &.pf-m-descending {
+    border-bottom: var(--pf-c-table__sort--sorted--BorderWidth) solid var(--pf-c-table__sort--sorted--BorderColor);
 
     button,
     .pf-c-table__sort-indicator {
-      color: var(--pf-c-table__sort-indicator--m-sort-ascending--Color);
-    }
-
-    button .pf-c-table__sort-indicator {
-      transform: rotate(0deg);
+      color: var(--pf-c-table__sort--sorted--Color);
     }
   }
 
+  // sorted ascending
+  &.pf-m-ascending .pf-c-table__sort-indicator {
+    transform: rotate(0deg);
+  }
+
   // sorted descending
-  &.pf-m-descending {
-    border-bottom: var(--pf-c-table__sort--m-sort-descending--BorderWidth) solid var(--pf-c-table__sort--m-sort-descending--BorderColor);
-
-    button,
-    .pf-c-table__sort-indicator {
-      color: var(--pf-c-table__sort-indicator--m-sort-descending--Color);
-    }
-
-    button .pf-c-table__sort-indicator {
-      transform: rotate(180deg);
-    }
+  &.pf-m-descending button .pf-c-table__sort-indicator {
+    transform: rotate(180deg);
   }
 
   /* stylelint-disable */
@@ -592,23 +566,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     background-color: var(--pf-c-table--BackgroundColor);
   }
 
-  // Standard table row (non-expandable)
-  // exclude expandable rows
-  #{$pf-c-table-standard-row} {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    // set subsequent auto column width to max-content
-    grid-auto-columns: max-content;
-    grid-column-gap: var(--pf-c-table-tr--responsive--GridColumnGap);
-    padding: var(--pf-c-table-tr--responsive--Padding);
-    border-bottom: none;
-  }
-
-  #{$pf-c-table-standard-row} + #{$pf-c-table-standard-row} {
-    margin-top: var(--pf-c-table-tr--responsive--MarginTop);
-  }
-
   // Reset td padding
   td,
   tbody th {
@@ -634,8 +591,25 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     padding-left: 0;
   }
 
+  // Standard table row (non-expandable)
+  // exclude expandable rows
+  #{$pf-c-table-standard-row} {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    // set subsequent auto column width to max-content
+    grid-auto-columns: max-content;
+    grid-column-gap: var(--pf-c-table-tr--responsive--GridColumnGap);
+    padding: var(--pf-c-table-tr--responsive--Padding);
+    border-bottom: none;
+  }
+
+  #{$pf-c-table-standard-row} + #{$pf-c-table-standard-row} {
+    margin-top: var(--pf-c-table-tr--responsive--MarginTop);
+  }
+
   // Standard td, in standard row (non-expandable)
-  // exclude specifically styled tds, as they are placed explicitly with grid
+  // exclude specifically styled tds, as they are placed explicitly within grid
   #{$pf-c-table-standard-row} #{$pf-c-table-standard-th},
   #{$pf-c-table-standard-row} #{$pf-c-table-standard-td} {
     // responsive layout, set td to two column grid
