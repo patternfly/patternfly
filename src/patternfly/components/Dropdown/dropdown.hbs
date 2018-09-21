@@ -1,7 +1,26 @@
-<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}} {{#if dropdown--modifier}} {{dropdown--modifier}}{{/if}}"
-  {{#if dropdown--attribute}}
-    {{{dropdown--attribute}}}
-  {{/if}}>
-	{{> dropdown-toggle}}
-  {{> dropdown-menu}}
+<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}}{{#if dropdown--modifier}} {{dropdown--modifier}}{{/if}}">
+    <button id="{{id}}"
+        class="pf-c-dropdown__toggle"
+        {{#if dropdown--IsSelect}}aria-haspopup="listbox"{{/if}}
+        aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
+        {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
+        {{> @partial-block}}
+        {{#if dropdown--HasToggleIcon}}
+        {{> dropdown-toggle-icon}}
+        {{/if}}
+        {{#if dropdown__kebab-icon}}
+        {{> kebab-icon}}
+        {{/if}}
+
+    </button>
+    {{#if dropdown--IsSelect}}
+        {{> dropdown-select}}
+    {{else if dropdown--IsMultiSelect}}
+        {{> dropdown-multi-select}}
+    {{else if dropdown--IsActionMenu}}
+        {{> dropdown-menu}}
+    {{else}}
+        {{> dropdown-basic}}
+    {{/if}}
+
 </div>

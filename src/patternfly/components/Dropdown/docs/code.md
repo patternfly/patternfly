@@ -6,14 +6,16 @@ The dropdown menu can contain either links or buttons, depending on the expected
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `aria-haspopup="true"` | `.pf-c-dropdown__toggle` | Indicates the button has a popup menu. |
+| `aria-haspopup="listbox"` | `.pf-c-dropdown__toggle` | **Select variation only** Indicates the button has a popup menu. |
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle` |  Indicates that the menu is hidden |
 | `aria-expanded="true"` | `.pf-c-dropdown__toggle` |  Indicates that the menu is visible |
 | `aria-label="Actions"` | `.pf-c-dropdown__toggle` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text** |
 | `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon` | Hides the icon from assistive technologies |
-| `role="menu"` | `.pf-c-dropdown__menu` | Indicates that the menu is a menu |
+| `role="menu"` | `.pf-c-dropdown__menu` | **Action/link menu only** Indicates that the menu is a menu |
+| `role="dialog"` | `.pf-c-dropdown__menu` | **Multi-select variation only** Indicates that the menu is a menu |
 | `hidden="hidden"` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
 | `aria-expanded="true"` | `.pf-c-dropdown__menu` | Indicates that the menu is visible |
+| `aria-activedescendant="ID_REF"` | `.pf-c-dropdown__menu` | **Select and Multi-select variations only** This attribute should be programmatically set to indicate the element with focus |
 | `role="menuitem"` | `.pf-c-dropdown__menu-item` | Indicates that the menu item is a menu item |
 | `role="separator"` | `.pf-c-dropdown__separator` | Indicates that the separator is a separator |
 | `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
