@@ -58,14 +58,13 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // End responsive vars
   // ==================================================================
 
-  --pf-c-table--BorderWidth:                                  var(--pf-global--BorderWidth--md);
   --pf-c-table--BackgroundColor:                              var(--pf-global--BackgroundColor--light-100);
   --pf-c-table--BorderColor:                                  var(--pf-global--BorderColor--light-200);
-  --pf-c-table--BorderWidth:                                  var(--pf-global--BorderWidth--md);
+  --pf-c-table--BorderWidth:                                  var(--pf-global--BorderWidth--sm);
+  --pf-c-table--FontWeight:                                   var(--pf-global--FontWeight--normal);
 
   // Th
   --pf-c-table-th--FontSize:                                  var(--pf-global--FontSize--sm);
-  --pf-c-table-th--FontWeight:                                var(--pf-global--FontWeight--normal);
   --pf-c-table-th--FontFamily:                                var(--pf-global--FontFamily--sans-serif);
   --pf-c-table-th--LineHeight:                                var(--pf-global--LineHeight--md);
   --pf-c-table-th--PaddingTop:                                var(--pf-global--spacer--md);
@@ -73,7 +72,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 
   // Td
   --pf-c-table-td--FontSize:                                  var(--pf-global--FontSize--md);
-  --pf-c-table-td--FontWeight:                                var(--pf-global--FontWeight--normal);
   --pf-c-table-td--PaddingTop:                                var(--pf-global--spacer--xl);
   --pf-c-table-td--PaddingBottom:                             var(--pf-global--spacer--xl);
 
@@ -207,7 +205,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // Table header cell
   thead th {
     font-size: var(--pf-c-table-th--FontSize);
-    font-weight: var(--pf-c-table-th--FontWeight);
     white-space: nowrap;
     vertical-align: top;
 
@@ -220,11 +217,11 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 
   // Table cell
   #{$pf-c-table-standard-row} #{$pf-c-table-standard-td},
-  tbody #{$pf-c-table-standard-row} #{$pf-c-table-standard-th} {
+  tbody #{$pf-c-table-standard-row} th {
     padding-top: var(--pf-c-table-td--PaddingTop);
     padding-bottom: var(--pf-c-table-td--PaddingBottom);
     font-size: var(--pf-c-table-td--FontSize);
-    font-weight: var(--pf-c-table-td--FontWeight);
+    font-weight: var(--pf-c-table--FontWeight);
     word-break: break-word;
   }
 
@@ -233,8 +230,9 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   td {
     padding-right: var(--pf-c-table-cell--PaddingRight);
     padding-left: var(--pf-c-table-cell--PaddingLeft);
+    font-weight: var(--pf-c-table--FontWeight);
 
-    // First child padding right
+    // First child padding left
     &:first-child {
       padding-left: var(--pf-c-table-cell--first-child--PaddingLeft);
     }
@@ -256,8 +254,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 // Expandable row
 .pf-c-table__expandable-row {
   position: relative;
-
-  // border-bottom: 0 solid transparent;
   border-bottom: 0 solid transparent;
   box-shadow: 0 0 0 0 transparent;
 
@@ -269,18 +265,16 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // Td
   td {
     position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    vertical-align: top;
   }
 
-  // using firts child as row does not calculate height appropriately
+  // Border treatment
+  // using first child as row does not calculate height appropriately
   td:first-child::before {
     position: absolute;
 
     // offset top to extend above tr border
     top: calc(var(--pf-c-table__expandable-row--before--Width) / 2 * -1);
-    left: -1px;
+    left: calc(var(--pf-c-table--BorderWidth) * -1);
     width: var(--pf-c-table__expandable-row--before--Width);
 
     // offset height to extend above tr border
@@ -354,6 +348,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     transform: rotate(-90deg);
   }
 
+  // Rotate toggle button icon
   .pf-c-button.pf-m-expanded > * {
     transform: rotate(0deg);
   }
@@ -371,15 +366,14 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   vertical-align: top;
 }
 
-// Action table cell - reduce padding for checkbox to align correctly
+// Action table cell
 .pf-c-table .pf-c-table__action {
-  // button padding offsets checkbox if present, adjusting padding-top to compensate
-  padding-top: 0;
   padding-left: var(--pf-c-table__action--PaddingLeft);
   vertical-align: middle;
 }
 
 // Table sort padding
+// unset padding, button adds appropriate padding
 .pf-c-table .pf-c-table__sort,
 .pf-c-table .pf-c-table__sort:first-child,
 .pf-c-table .pf-c-table__sort:last-child {
@@ -389,10 +383,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 
 // Table sort
 .pf-c-table__sort {
-  &::selection {
-    background-color: transparent;
-  }
-
   // sorted ascending
   &.pf-m-ascending {
     border-bottom: var(--pf-c-table__sort--m-sort-ascending--BorderWidth) solid var(--pf-c-table__sort--m-sort-ascending--BorderColor);
@@ -402,7 +392,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
       color: var(--pf-c-table__sort-indicator--m-sort-ascending--Color);
     }
 
-    button > * {
+    button .pf-c-table__sort-indicator {
       transform: rotate(0deg);
     }
   }
@@ -416,7 +406,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
       color: var(--pf-c-table__sort-indicator--m-sort-descending--Color);
     }
 
-    button > * {
+    button .pf-c-table__sort-indicator {
       transform: rotate(180deg);
     }
   }
@@ -468,8 +458,8 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 
 .pf-c-table.pf-m-compact {
   thead #{$pf-c-table-standard-th},
-  #{$pf-c-table-standard-row} #{$pf-c-table-standard-td},
-  tbody #{$pf-c-table-standard-row} #{$pf-c-table-standard-th} {
+  tbody #{$pf-c-table-standard-td},
+  tbody #{$pf-c-table-standard-th} {
     padding:
       var(--pf-c-table--m-compact--PaddingTop)
       var(--pf-c-table--m-compact--PaddingRight)
@@ -493,20 +483,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   .pf-c-table__check {
     padding-right: var(--pf-c-table--m-compact--PaddingRight);
   }
-
-  .pf-c-table__expandable-row td {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .pf-c-table__expandable-row-content {
-    font-size: var(--pf-c-table--m-compact--FontSize);
-  }
-
-  .pf-m-expanded .pf-c-table__expandable-row-content {
-    padding-top: var(--pf-c-table--m-compact--PaddingTop);
-    padding-bottom: var(--pf-c-table--m-compact--PaddingBottom);
-  }
 }
 
 // Icon inline
@@ -524,7 +500,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 .pf-c-table .pf-m-wrap {
   white-space: normal;
 }
-
 
 // Modifier - Width
 /* stylelint-disable */
@@ -606,14 +581,13 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   tbody {
     display: block;
 
-    // border: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
-
     & + tbody {
       margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
     }
   }
 
   // Table row
+  // using background color on tr as they are presented as block level elements for responsive view
   tr {
     background-color: var(--pf-c-table--BackgroundColor);
   }
@@ -632,7 +606,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   }
 
   #{$pf-c-table-standard-row} + #{$pf-c-table-standard-row} {
-    // tr margin on mobile view
     margin-top: var(--pf-c-table-tr--responsive--MarginTop);
   }
 

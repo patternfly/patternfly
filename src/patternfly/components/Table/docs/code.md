@@ -26,3 +26,9 @@ Applying `role="grid"` to tables enhances keyboard navigation for desktop viewpo
 | -- | -- | -- |
 | `.pf-m-grid-md`, `.pf-m-grid-lg`  | `.pf-c-table`   | Changes tabular layout to responsive, grid based layout as suffixed breakpoint. |
 | `.pf-m-grid`  | `.pf-c-table`   | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
+
+## Extra modifiers
+
+| Class | Applied To | Outcome |
+| -- | -- | -- |
+| `.pf-m-wrap`  | `<th>`, `<td>` | Modifies content to wrap. |

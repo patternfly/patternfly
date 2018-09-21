@@ -1,48 +1,6 @@
 <table class="pf-c-table{{#if table--modifier}} {{table--modifier}}{{/if}}" role="grid"
   {{#if table--attribute}}
     {{{table--attribute}}}
-  {{/if}}
-  {{#if table--interactive}}
-    onClick="(function(){
-
-      let toggle = event.target;
-
-      // if toggle is clicked, return true
-      let buttonClick = toggle.classList.contains('pf-m-toggle') ? true : false;
-
-      if (buttonClick) {
-        let toggleParent = toggle.parentNode.parentNode;
-        let siblingRow = toggleParent.nextElementSibling;
-
-        // toggle expanded on button
-        toggle.classList.toggle('pf-m-expanded');
-
-        if (toggle.classList.contains('pf-m-expanded')) {
-          // siblingRow.removeAttribute('hidden');
-
-          setTimeout(function() {
-            // toggle attributes on sibling row
-            siblingRow.classList.add('pf-m-expanded');
-
-            // toggle attributes on toggle parent
-            toggle.setAttribute('aria-expanded', 'true');
-            siblingRow.removeAttribute('aria-hidden');            
-          }, 50); 
-        } else {
-          // toggle attributes on sibling row
-          siblingRow.classList.remove('pf-m-expanded');
-
-          // toggle attributes on toggle parent
-          toggle.setAttribute('aria-expanded', 'false');
-          siblingRow.setAttribute('aria-hidden', 'true');
-
-{{!--           setTimeout(function() {
-            siblingRow.setAttribute('hidden', '');
-          }, 500);  --}}
-        }
-      }
-        return false;
-    })();return false;"
   {{/if}}>
   {{> @partial-block}}
 </table>
