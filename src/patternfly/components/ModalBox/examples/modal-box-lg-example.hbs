@@ -1,15 +1,14 @@
-{{#> modal-box modal-box--modifiers="pf-m-lg" modal-box--attributes='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
+{{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
   {{#> modal-box-close}}
-    {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close"'}}
-      <i class="fas fa-times"></i>
+    {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close"'}}
     {{/button}}
   {{/modal-box-close}}
   {{#> modal-box-header}}
-    {{#> modal-box-header-title  modal-box-header-title--type="h2" modal-box-header-title--attributes='id="modal-lg-title"'}}
+    {{#> modal-box-header-title  modal-box-header-title--type="h2" modal-box-header-title--attribute='id="modal-lg-title"'}}
       Modal Header
     {{/modal-box-header-title}}
   {{/modal-box-header}}
-  {{#> modal-box-body modal-box-body--attributes='id="modal-lg-description"'}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-lg-description"'}}
     Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
