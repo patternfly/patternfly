@@ -1,12 +1,8 @@
 @import "../../patternfly-utilities";
 
-$pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
-
 /* stylelint-disable */
 @mixin pf-mobile-layout {
-  .pf-m-grid {
-    @content;
-  }
+  .pf-m-grid { @content; }
 
   .pf-m-grid-md {
     @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -19,7 +15,6 @@ $pf-c-table--breakpoint--mobile: $pf-global--breakpoint--lg;
       @content;
     }
   }
-
 }
 /* stylelint-enable */
 $pf-c-table-standard-row: "tr:not(.pf-c-table__expandable-row)";
@@ -68,7 +63,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // End responsive vars
   // ==================================================================
 
- 
+  // Base
   --pf-c-table--BackgroundColor:                              var(--pf-global--BackgroundColor--light-100);
   --pf-c-table--BorderColor:                                  var(--pf-global--BorderColor--light-200);
   --pf-c-table--BorderWidth:                                  var(--pf-global--BorderWidth--sm);
@@ -144,9 +139,11 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // ============================================================ //
 
   // Modifier - Compact table
-  --pf-c-table--m-compact--PaddingTop:                        var(--pf-global--spacer--md);
+  --pf-c-table--m-compact-th--PaddingTop:                     var(--pf-global--spacer--md);
+  --pf-c-table--m-compact-th--PaddingBottom:                  var(--pf-global--spacer--md);
+  --pf-c-table--m-compact--PaddingTop:                        var(--pf-global--spacer--sm);
   --pf-c-table--m-compact--PaddingRight:                      var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact--PaddingBottom:                     var(--pf-global--spacer--md);
+  --pf-c-table--m-compact--PaddingBottom:                     var(--pf-global--spacer--sm);
   --pf-c-table--m-compact--PaddingLeft:                       var(--pf-global--spacer--sm);
   --pf-c-table--m-compact--FontSize:                          var(--pf-global--FontSize--sm);
 
@@ -431,15 +428,52 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 // ==================================================================
 
 .pf-c-table.pf-m-compact {
-  thead #{$pf-c-table-standard-th},
-  tbody #{$pf-c-table-standard-td},
-  tbody #{$pf-c-table-standard-th} {
+  thead #{$pf-c-table-standard-th} {
     padding:
-      var(--pf-c-table--m-compact--PaddingTop)
+      var(--pf-c-table--m-compact-th--PaddingTop)
       var(--pf-c-table--m-compact--PaddingRight)
-      var(--pf-c-table--m-compact--PaddingBottom)
+      var(--pf-c-table--m-compact-th--PaddingBottom)
       var(--pf-c-table--m-compact--PaddingLeft);
-    font-size: var(--pf-c-table--m-compact--FontSize);
+  }
+
+  tbody {
+    #{$pf-c-table-standard-td},
+    #{$pf-c-table-standard-th} {
+      padding:
+        var(--pf-c-table--m-compact--PaddingTop)
+        var(--pf-c-table--m-compact--PaddingRight)
+        var(--pf-c-table--m-compact--PaddingBottom)
+        var(--pf-c-table--m-compact--PaddingLeft);
+      font-size: var(--pf-c-table--m-compact--FontSize);
+    }
+  }
+
+  // First row has 2x padding as subsequent rows
+  tbody tr:first-child {
+    #{$pf-c-table-standard-th},
+    #{$pf-c-table-standard-td} {
+      padding-top: calc(var(--pf-c-table--m-compact--PaddingTop) * 2);
+    }
+
+    .pf-c-table__toggle,
+    .pf-c-table__check,
+    .pf-c-table__action {
+      padding-top: var(--pf-c-table--m-compact--PaddingTop);
+    }
+  }
+
+  // Last row has 2x padding as subsequent rows
+  tbody tr:last-child {
+    #{$pf-c-table-standard-th},
+    #{$pf-c-table-standard-td} {
+      padding-bottom: calc(var(--pf-c-table--m-compact--PaddingBottom) * 3);
+    }
+
+    .pf-c-table__toggle,
+    .pf-c-table__check,
+    .pf-c-table__action {
+      padding-bottom: calc(var(--pf-c-table--m-compact--PaddingBottom) * 2);
+    }
   }
 
   tbody #{$pf-c-table-standard-row} {
@@ -581,8 +615,28 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     td,
     tbody th {
       padding: 0;
-    }    
+    }
+
+    tbody tr,
+    tbody tr:first-child,
+    tbody tr:last-child {
+      #{$pf-c-table-standard-th},
+      #{$pf-c-table-standard-td} {
+        padding: 0;
+      }
+    }
+
+    tbody tr,
+    tbody tr:first-child,
+    tbody tr:last-child {
+      .pf-c-table__toggle,
+      .pf-c-table__check,
+      .pf-c-table__action {
+        padding: 0;
+      }
+    }
   }
+
 
   // Reset first/last child td, th padding
   > *:first-child,
@@ -618,7 +672,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     padding-bottom: 0;
     margin-top: var(--pf-c-table-td--responsive--MarginTop);
     margin-bottom: var(--pf-c-table-td--responsive--MarginBottom);
-    grid-column: 1 / 3;
+    grid-column: 1;
     grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
 
     // @mobile, breakpoint small
@@ -703,18 +757,9 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     grid-row-start: 1;
     grid-column-start: 2;
 
-    // @smallest breakpoint
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
-      grid-row-start: 1;
-      grid-column-start: 1;
-      justify-self: end;
-    }
-
     // if action is present, add margin left to accommodate checkbox
     & ~ .pf-c-table__action {
-      @media screen and (min-width: $pf-global--breakpoint--sm) {    
-        margin-left: var(--pf-c-table__action--responsive--MarginLeft);
-      }
+      margin-left: var(--pf-c-table__action--responsive--MarginLeft);
     }    
   }
 

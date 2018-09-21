@@ -23,11 +23,7 @@
         Icons
       {{/table-th}} 
       {{#> table-th table-th--attribute='aria-label="Link column"'}}{{/table-th}}
-      {{#> table-th table-th--action="true" table-th--attribute='aria-label="Overflow action column"'}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
-      {{/table-th}} 
+      {{#> table-th table-th--action="true" table-th--attribute='aria-label="Overflow action column"'}}{{/table-th}} 
     {{/table-tr}}
   {{/table-thead}}
 
@@ -54,7 +50,7 @@
       {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+      {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
@@ -68,7 +64,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name2"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}       
-      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="name2"'}}
+      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name2"'}}
         Jenny Haines
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
@@ -86,8 +82,40 @@
       {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Action" table-td--modifier="pf-m-fit-content"}}
+      {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name3"'}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow3" aria-label="Select row"'}}{{/check-input}}
+      {{/table-td}}       
+      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name3"'}}
+        Kyle Baker
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design Lead
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9929
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-u-text-align-center"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 3</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Overflow menu"'}}
