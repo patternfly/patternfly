@@ -12,9 +12,13 @@
 
   // Arrow variables
   --pf-c-tooltip__arrow--Width: var(--pf-global--arrow--width);
-  --pf-c-tooltip__arrow--Height: var(--pf-c-tooltip__arrow--Width);
+  --pf-c-tooltip__arrow--Height: var(--pf-global--arrow--width);
   --pf-c-tooltip__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-tooltip__arrow--m-top--Transform: translate(-50%, 50%) rotate(45deg);
+  --pf-c-tooltip__arrow--m-right--Transform: translate(-50%, -50%) rotate(45deg);
+  --pf-c-tooltip__arrow--m-bottom--Transform: translate(-50%, -50%) rotate(45deg);
+  --pf-c-tooltip__arrow--m-left--Transform: translate(50%, -50%) rotate(45deg);
 
   position: relative;
   max-width: var(--pf-c-tooltip--MaxWidth);
@@ -24,7 +28,7 @@
     .pf-c-tooltip__arrow {
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 50%) rotate(45deg);
+      transform: var(--pf-c-tooltip__arrow--m-top--Transform);
     }
   }
 
@@ -32,7 +36,7 @@
     .pf-c-tooltip__arrow {
       top: 0;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
+      transform: var(--pf-c-tooltip__arrow--m-bottom--Transform);
     }
   }
 
@@ -40,7 +44,7 @@
     .pf-c-tooltip__arrow {
       top: 50%;
       right: 0;
-      transform: translate(50%, -50%) rotate(45deg);
+      transform: var(--pf-c-tooltip__arrow--m-left--Transform);
     }
   }
 
@@ -48,7 +52,7 @@
     .pf-c-tooltip__arrow {
       top: 50%;
       left: 0;
-      transform: translate(-50%, -50%) rotate(45deg);
+      transform: var(--pf-c-tooltip__arrow--m-right--Transform);
     }
   }
 }

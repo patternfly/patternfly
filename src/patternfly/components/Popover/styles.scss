@@ -11,8 +11,13 @@
 
   // Arrow variables
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
+  --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-popover__arrow--m-top--Transform: translate(-50%, 50%) rotate(45deg);
+  --pf-c-popover__arrow--m-right--Transform: translate(-50%, -50%) rotate(45deg);
+  --pf-c-popover__arrow--m-bottom--Transform: translate(-50%, -50%) rotate(45deg);
+  --pf-c-popover__arrow--m-left--Transform: translate(50%, -50%) rotate(45deg);
 
   // Close container variables
   --pf-c-popover__close--Top: var(--pf-global--spacer--sm);
@@ -45,7 +50,7 @@
     .pf-c-popover__arrow {
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 50%) rotate(45deg);
+      transform: var(--pf-c-popover__arrow--m-top--Transform);
     }
   }
 
@@ -53,7 +58,7 @@
     .pf-c-popover__arrow {
       top: 0;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
+      transform: var(--pf-c-popover__arrow--m-bottom--Transform);
     }
   }
 
@@ -61,7 +66,7 @@
     .pf-c-popover__arrow {
       top: 50%;
       right: 0;
-      transform: translate(50%, -50%) rotate(45deg);
+      transform: var(--pf-c-popover__arrow--m-left--Transform);
     }
   }
 
@@ -69,7 +74,7 @@
     .pf-c-popover__arrow {
       top: 50%;
       left: 0;
-      transform: translate(-50%, -50%) rotate(45deg);
+      transform: var(--pf-c-popover__arrow--m-right--Transform);
     }
   }
 }
@@ -84,7 +89,7 @@
 .pf-c-popover__arrow {
   position: absolute;
   width: var(--pf-c-popover__arrow--Width);
-  height: var(--pf-c-popover__arrow--Width); // Popover arrow is square, sharing width value to prevent positioning errors
+  height: var(--pf-c-popover__arrow--Height);
   pointer-events: none;
   background-color: var(--pf-c-popover__arrow--BackgroundColor);
   box-shadow: var(--pf-c-popover__arrow--BoxShadow);
