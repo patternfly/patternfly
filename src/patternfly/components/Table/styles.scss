@@ -32,7 +32,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // this is purposeful and necessary to avoid adding selectors to each td/th
   // ============================================================ //
 
-
   // Responsive vars
   // ==================================================================
 
@@ -97,7 +96,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   // End non-conformant variables
   // ============================================================ //
   
-
   // Table cell - toggle
   --pf-c-table__toggle--PaddingTop:                           #{pf-size-prem(26px)};
   --pf-c-table__toggle--PaddingRight:                         var(--pf-global--spacer--sm);
@@ -132,7 +130,6 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
 
   // Icon inline
   --pf-c-table__icon-inline--MarginRight:                     var(--pf-global--spacer--sm);
-
 
   // ============================================================ //
   // Modifiers
