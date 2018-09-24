@@ -47,7 +47,7 @@ export default () => {
         {tableSortableExample}
       </Example>
       <Example
-        heading="Table with checkboxes/actions"
+        heading="Table with checkboxes and actions"
         handlebars={tableSimpleWithCheckboxesExampleRaw}
         docs={tableCheckboxesActionsDoc}
       >

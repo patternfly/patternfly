@@ -496,7 +496,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   display: flex;
   align-items: center;
 
-  > *:not(:last-child) {
+  > :not(:last-child) {
     margin-right: var(--pf-c-table__icon-inline--MarginRight);
   }
 }
@@ -512,64 +512,61 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   table-layout: fixed;
 }
 
-.pf-c-table .pf-m-width- {
-  &10 {
-    width: 10%;
-  }
-
-  &15 {
-    width: 15%;
-  }
-
-  &20 {
-    width: 20%;
-  }
-
-  &25 {
-    width: 25%;
-  }
-
-  &30 {
-    width: 30%;
-  }
-
-  &35 {
-    width: 35%;
-  }
-
-  &40 {
-    width: 40%;
-  }
-
-  &45 {
-    width: 45%;
-  }
-
-  &50 {
-    width: 50%;
-  }
-
-  &60 {
-    width: 60%;
-  }
-
-  &70 {
-    width: 70%;
-  }
-
-  &80 {
-    width: 80%;
-  }
-
-  &90 {
-    width: 90%;
-  }
-
-  &max {
-    width: 100%;    
-  }
+.pf-c-table .pf-m-width-10 {
+  width: 10%;
 }
 
+.pf-c-table .pf-m-width-15 {
+  width: 15%;
+}
+
+.pf-c-table .pf-m-width-20 {
+  width: 20%;
+}
+
+.pf-c-table .pf-m-width-25 {
+  width: 25%;
+}
+
+.pf-c-table .pf-m-width-30 {
+  width: 30%;
+}
+
+.pf-c-table .pf-m-width-35 {
+  width: 35%;
+}
+
+.pf-c-table .pf-m-width-40 {
+  width: 40%;
+}
+
+.pf-c-table .pf-m-width-45 {
+  width: 45%;
+}
+
+.pf-c-table .pf-m-width-50 {
+  width: 50%;
+}
+
+.pf-c-table .pf-m-width-60 {
+  width: 60%;
+}
+
+.pf-c-table .pf-m-width-70 {
+  width: 70%;
+}
+
+.pf-c-table .pf-m-width-80 {
+  width: 80%;
+}
+
+.pf-c-table .pf-m-width-90 {
+  width: 90%;
+}
+
+.pf-c-table .pf-m-width-max {
+  width: 100%;    
+}
 
 // Check table cell
 @include pf-mobile-layout {

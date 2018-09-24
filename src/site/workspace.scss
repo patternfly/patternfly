@@ -303,6 +303,8 @@
   }
 
   .pf-c-table {
+    margin-bottom: 0;
+    
     td,
     th:not(.pf-c-table__sort) {
       border: none;
