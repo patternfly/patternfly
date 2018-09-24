@@ -1,3 +1,7 @@
-<section class="pf-l-toolbar__section{{#if pf-l-toolbar--modifier}} {{pf-l-toolbar--modifier}}{{/if}}" aria-label="{{aria-label}}">
+<section class="pf-l-toolbar__section{{#if toolbar-section--modifier}}{{toolbar-section--modifier}}{{/if}}" 
+  {{#if toolbar-section--attribute}}
+    {{{ toolbar-section--attribute}}}
+  {{/if}}
+>
   {{> @partial-block}}
 </section>
