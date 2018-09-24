@@ -18,10 +18,17 @@ gulp.task('copy-fa', () =>
 
 gulp.task('build-tmp', () =>
   gulp
-    .src('./src/patternfly/**/*.scss')
-    .pipe(sassGlob())
+    .src([
+      './src/patternfly/**/*.scss',
+      '!./src/patternfly/**/examples/*.scss',
+      '!./src/patternfly/_gatsby-variables.scss'
+    ])
+    .pipe(
+      sassGlob({
+        ignorePaths: ['**/examples/*.scss']
+      })
+    )
     .pipe(replace('@import "../../patternfly-utilities";', ''))
-    .pipe(replace('pf-global--image-path: "/assets/images"', 'pf-global--image-path: "./assets/images"'))
     .pipe(gulp.dest('./tmp'))
 );
 
@@ -44,7 +51,10 @@ gulp.task('minify-css', ['build-library'], () => {
 
 gulp.task('build-modules', () =>
   gulp
-    .src('./src/patternfly/{components,layouts,patterns,utilities}/**/*.scss')
+    .src([
+      './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+      '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
+    ])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist'))
 );
