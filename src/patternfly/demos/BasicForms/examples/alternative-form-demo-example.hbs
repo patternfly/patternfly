@@ -1,13 +1,13 @@
 {{#> alternative-form-demo}}
-  {{#> form }}
+  {{#> form}}
     {{#> form-group}}
       {{#> form-label form-label--attribute='for="alt-form-git-repo"' required="true"}}Email{{/form-label}}
-      {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="email" id="alt-form-git-repo" name="simple-form-git-repo" required="true"}}
+      {{#> form-control form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="email" id="alt-form-git-repo" name="simple-form-git-repo" required="true"}}
       {{/form-control}}
     {{/form-group}}
     {{#> form-group}}
       {{#> form-label form-label--attribute='for="alt-form-password"' required="true"}}Password{{/form-label}}
-      {{#> form-control pf-c-form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="password" id="alt-form-password" name="alt-form-password" aria-describedby="alt-helper3" required="true"}}
+      {{#> form-control form-control--modifier="pf-m-form-control-alt" controlType="input" input="true" type="password" id="alt-form-password" name="alt-form-password" aria-describedby="alt-helper3" required="true"}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--attribute='id="alt-helper3" aria-live="polite"'}}Must be a minimum of 6 alpha-numeric characters.{{/form-helper-text}}
     {{/form-group}}
@@ -15,14 +15,14 @@
       {{#> toolbar}}
         {{#> toolbar-group}}
           {{#> toolbar-item}}
-            {{#> button btnClass="pf-m-primary"}}
+            {{#> button button--modifier="pf-m-primary"}}
               Submit form
             {{/button}}
           {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-group}}
           {{#> toolbar-item}}
-            {{#> button btnClass="pf-m-secondary"}}
+            {{#> button button--modifier="pf-m-secondary"}}
               Cancel
             {{/button}}
           {{/toolbar-item}}
