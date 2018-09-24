@@ -12,6 +12,12 @@
   // Toolbar Item
   --pf-l-toolbar__item--MarginRight: var(--pf-global--spacer--md);
   --pf-l-toolbar__item--MarginLeft: var(--pf-global--spacer--md);
+
+  // immediate descendant selector for toolbar should provide margin by default
+  .pf-l-toolbar__group,
+  .pf-l-toolbar__item {
+    margin-top: 10px;
+  }
 }
 
 // toolbar, toolbar__group, toolbar__section shared styles
@@ -34,8 +40,11 @@
 }
 
 // Group
-.pf-l-toolbar__group:not(:last-child) {
-  margin-right: var(--pf-l-toolbar__group--MarginRight);
+.pf-l-toolbar__group {
+  // Set margin-right so groups will align when wrapped
+  .pf-l-toolbar__group:not(:last-child) {
+    margin-right: var(--pf-l-toolbar__group--MarginRight);
+  }
 }
 
 // Item
