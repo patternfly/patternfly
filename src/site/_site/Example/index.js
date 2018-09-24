@@ -114,11 +114,6 @@ export default class Example extends React.Component {
               {children}
             </Preview>
           </div>
-          {htmlDocs && (
-            <div className="Example__documentation">
-              <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
-            </div>
-          )}
           <div className="Example__section">
             <ul className="pf-p-secondary-nav" role="tablist">
               <li className="pf-p-secondary-nav__item">
@@ -149,6 +144,11 @@ export default class Example extends React.Component {
               </div>
             )}
           </div>
+          {htmlDocs && (
+            <div className="Example__documentation">
+              <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
+            </div>
+          )}
         </div>
       );
     } else if (this.state.showComponent) {
