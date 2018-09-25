@@ -1,3 +1,7 @@
-<div class="pf-c-form__action-group{{#if form-action-group--modifier}} {{form-action-group--modifier}}{{/if}}">
+<div class="pf-c-form__action-group{{#if form-action-group--modifier}} {{form-action-group--modifier}}{{/if}}"
+  {{#if form-action-group--attribute}}
+    {{{form-action-group--attribute}}}
+  {{/if}}>
+>
   {{>@partial-block}}
 </div>
