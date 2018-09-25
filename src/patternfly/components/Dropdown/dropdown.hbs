@@ -3,8 +3,7 @@
         class="pf-c-dropdown__toggle"
         aria-haspopup="true"
         aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
-        {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}
-    >
+        {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
         {{> @partial-block}}
         {{#if dropdown--HasToggleIcon}}
         {{> dropdown-toggle-icon}}
