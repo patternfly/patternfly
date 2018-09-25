@@ -4,10 +4,9 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 
 ## Usage
 
-| PatternFly 3 | Replaced By | PatternFly 4 |
-| -- | -- | -- |
-| `<div class="container-fluid container-cards-pf">` |  | `<div class="pf-l-grid pf-m-gutter">` |
-| `<div class="col-sm-3">` |  | `<div class="pf-l-grid__item pf-m-3-col">` |
-| `<div class="card-pf">` |  | `<div class="pf-c-card">` |
-| `<div class="card-pf-heading">` `<h2 class="card-pf-title"></h2>` |  | `<div class="pf-c-card__header">` |
-| `<div class="card-pf-body">` |  | `<div class="pf-c-card__body">`|
+| PF3 Class | Applied To | PF4 Class | Applied To | Outcome |
+| -- | -- | -- | -- | -- |
+| `cards-pf` | `<body>` | `.pf-c-card` | `<div>` | Creates a card containing content. |
+| `card-pf-heading` | `<div>` | `.pf-c-card__header` | `.pf-c-card` | Creates the header of a card. |    
+| `card-pf-body` | `<div>` | `.pf-c-card__body` | `.pf-c-card` | Creates the body of a card. Required. | 
+| `card-pf-footer` | `<div>` | `.pf-c-card__footer` | `.pf-c-card` | Creates the footer of a card. | 
