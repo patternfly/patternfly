@@ -1,3 +1,3 @@
-The Dropdown Select should be used when the user is selecting an optoin from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and Aria tag structure is specific to a select list.
+The Dropdown Select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and Aria tag structure is specific to a select list.
 
 *Note:* The attribute `aria-activedescendant` should be set programmatically to the active item.
