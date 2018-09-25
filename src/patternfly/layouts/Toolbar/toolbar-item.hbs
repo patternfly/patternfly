@@ -1,3 +1,6 @@
-<div class="pf-l-toolbar__item{{#if toolbar-item--modifier}} {{toolbar-item--modifier}}{{/if}}">
+<div class="pf-l-toolbar__item{{#if toolbar-item--modifier}} {{toolbar-item--modifier}}{{/if}}"
+  {{#if toolbar-item--attribute}}
+    {{{ toolbar-item--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>

@@ -1,4 +1,7 @@
-<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}} {{dropdown--modifier}}">
+<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}} {{#if dropdown--modifier}} {{dropdown--modifier}}{{/if}}"
+    {{#if dropdown--attribute}}
+        {{{dropdown--attribute}}}
+    {{/if}}>
     <button id="{{id}}"
         class="pf-c-dropdown__toggle"
         aria-haspopup="true"
