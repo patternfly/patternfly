@@ -10,8 +10,7 @@
   progress--dynamic If the description is dynamically updated, use aria-valuetext instead of aria-describedby
  --}}
  
-<div class="pf-c-progress
-  {{~#if progress--modifier}} {{progress--modifier}}{{/if}}
+<div class="pf-c-progress{{~#if progress--modifier}} {{progress--modifier}}{{/if}}
   {{~#if progress--inside}} pf-m-inside{{/if}}
   {{~#if progress--outside}} pf-m-outside{{/if}}
   {{~#if progress--success}} pf-m-success{{/if}}
