@@ -2,21 +2,22 @@
 
 // The value of component scoped variables is always defined by a global variable:
 .pf-l-toolbar {
+  padding: 0 0 2em 2em;
+
   // Toolbar Section
-  --pf-l-toolbar__section--MarginTop: var(--pf-global--spacer--md);
+  --pf-l-toolbar__section--MarginTop: var(--pf-global--spacer--xl);
 
   // Toolbar Group
+  --pf-l-toolbar__group--Padding: var(--pf-global--spacer--xl);
+  --pf-l-toolbar__group--Margin: var(--pf-global--spacer--md);
   --pf-l-toolbar__group--MarginRight: var(--pf-global--spacer--xl);
-  --pf-l-toolbar__group--MarginLeft: var(--pf-global--spacer--xl);
 
   // Toolbar Item
+  --pf-l-toolbar__item--MarginTop: var(--pf-global--spacer--md);
   --pf-l-toolbar__item--MarginRight: var(--pf-global--spacer--md);
-  --pf-l-toolbar__item--MarginLeft: var(--pf-global--spacer--md);
 
-  // immediate descendant selector for toolbar should provide margin by default
-  .pf-l-toolbar__group,
-  .pf-l-toolbar__item {
-    margin-top: 10px;
+  .pf-l-toolbar__group {
+    margin-right: var(--pf-l-toolbar__group--MarginRight);
   }
 }
 
@@ -32,15 +33,15 @@
 // Section
 .pf-l-toolbar__section {
   flex-basis: 100%;
-
-  // Add margin-top for stacked sections
-  &:not(:first-child) {
-    margin-top: var(--pf-l-toolbar__section--MarginTop);
-  }
 }
 
 // Group
 .pf-l-toolbar__group {
+  padding: var(--pf-global--spacer--xl);
+
+  // Add margin-top for stacked groups
+  margin-top: var(--pf-l-toolbar__section--MarginTop);
+
   // Set margin-right so groups will align when wrapped
   .pf-l-toolbar__group:not(:last-child) {
     margin-right: var(--pf-l-toolbar__group--MarginRight);
@@ -49,6 +50,8 @@
 
 // Item
 .pf-l-toolbar__item {
+  margin: 0;
+
   // Set margin-right so items will align when wrapped
   .pf-l-toolbar:not(:last-child) {
     margin-right: var(--pf-l-toolbar__item--MarginRight);
