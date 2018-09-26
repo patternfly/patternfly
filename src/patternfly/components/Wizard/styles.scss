@@ -1,0 +1,28 @@
+@import "../../patternfly-utilities";
+
+// Component variables follow this formula:
+// --pf-c-wizard__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+.pf-c-wizard {
+  // Example block variable
+  --pf-c-wizard--Color: var(--pf-global--Color--dark);
+
+  // Example element variable
+  --pf-c-wizard__element--FontSize: var(--pf-global--FontSize--2xl);
+
+  // Example modifier variable
+  --pf-c-wizard--m-danger--BackgroundColor: var(--pf-global--danger-color);
+
+  color: var(--pf-c-wizard--Color);
+
+  // Modifier
+  &.pf-m-danger {
+    background-color: var(--pf-c-wizard--m-danger--BackgroundColor);
+  }
+}
+
+// Element
+.pf-c-wizard__element {
+  font-size: var(--pf-c-wizard__element--FontSize);
+}

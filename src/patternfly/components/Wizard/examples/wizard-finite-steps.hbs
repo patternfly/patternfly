@@ -1,0 +1,26 @@
+{{#> wizard}}
+  {{#> wizard-sequence}}
+    {{#> wizard-list}}
+      {{#> wizard-item}}
+      <!--For the item include a true/false for the bar's color-->
+        {{#> wizard-item-number}}1{{/wizard-item-number}}
+        {{#> wizard-item-title}}Step One{{/wizard-item-title}}
+        {{#> wizard-item-status}}Complete{{/wizard-item-status}}
+      {{/wizard-item}}
+
+      {{#> wizard-item}}
+      <!--For the item include a true/false for the bar's color-->
+        {{#> wizard-item-number}}2{{/wizard-item-number}}
+        {{#> wizard-item-title}}Step Two{{/wizard-item-title}}
+        {{#> wizard-item-status}}Complete{{/wizard-item-status}}
+      {{/wizard-item}}
+
+      {{#> wizard-item}}
+      <!--For the item include a true/false for the bar's color-->
+        {{#> wizard-item-number}}3{{/wizard-item-number}}
+        {{#> wizard-item-title}}Step Three{{/wizard-item-title}}
+        {{#> wizard-item-status}}Complete{{/wizard-item-status}}
+      {{/wizard-item}}
+    {{/wizard-list}}
+  {{/wizard-sequence}}
+{{/wizard}}
