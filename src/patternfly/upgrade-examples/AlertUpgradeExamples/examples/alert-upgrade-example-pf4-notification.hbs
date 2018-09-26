@@ -7,6 +7,11 @@
 			The server configuration changed.
 		{{/alert-description}}
 	{{/alert-body}}
+  {{#> alert-action}}
+        {{#> button btnClass="pf-m-secondary"}}
+            Button 
+        {{/button}}
+    {{/alert-action}}
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Notification"'}}
@@ -17,6 +22,11 @@
 			Failed to add server_abc.
 		{{/alert-description}}
   {{/alert-body}}
+  {{#> alert-action}}
+        {{#> button btnClass="pf-m-secondary"}}
+            Button 
+        {{/button}}
+    {{/alert-action}}
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning Notification"'}}
@@ -30,6 +40,11 @@
 			Reload server.
 		{{/alert-link}}
   {{/alert-body}}
+  {{#> alert-action}}
+        {{#> button btnClass="pf-m-secondary"}}
+            Button 
+        {{/button}}
+    {{/alert-action}}
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
@@ -43,5 +58,10 @@
 			Reload server.
 		{{/alert-link}}
     {{/alert-body}}
+    {{#> alert-action}}
+        {{#> button btnClass="pf-m-secondary"}}
+            Button 
+        {{/button}}
+    {{/alert-action}}
 {{/alert}}
 {{/alert-upgrade-examples}}

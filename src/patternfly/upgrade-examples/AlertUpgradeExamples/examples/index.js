@@ -41,7 +41,7 @@ export default () => {
         {alertUpgradeExamplespf3notification}
       </Example>
       <Example
-        heading="Patternfly4 Notification"
+        heading="Patternfly4 Toast Notification"
         handlebars={alertUpgradeExamplespf4notificationRaw}
         docs={alertUpgradeExamplesComplexExampleDoc}
       >
