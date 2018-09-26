@@ -24,6 +24,9 @@
     aria-valuetext="{{progress__description}}"
   {{else}}
     {{~#if progress__id}} aria-describedby="{{progress__id}}-description"{{/if}}
+  {{/if}}
+  {{#if progress--attribute}}
+    {{{progress--attribute}}}
   {{/if}}>
   {{> progress-description}}
   {{> progress-status}}
