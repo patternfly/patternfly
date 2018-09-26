@@ -1,1 +1,6 @@
-<p>This is a description of the notification content.</p>
+<span class="pf-c-alert-description{{#if alert-description--modifier}} {{alert-description--modifier}}{{/if}}"
+  {{#if alert-description--attribute}}
+    {{{alert-description--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</span>
