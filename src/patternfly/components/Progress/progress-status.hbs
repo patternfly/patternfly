@@ -1,8 +1,11 @@
-{{!-- <div class="pf-c-progress__status">
+<div class="pf-c-progress__status{{#if progress-status--modifier}} {{progress-status--modifier}}{{/if}}"
+  {{#if progress-status--attribute}}
+    {{{progress-status--attribute}}}
+  {{/if}}>
   {{#unless progress--inside}}
     {{#unless progress--no-measure}}
       {{>progress__measure}}
         {{/unless}}
     {{/unless}}
   {{> progress__status-icon}}
-  </div> --}}
+  </div>

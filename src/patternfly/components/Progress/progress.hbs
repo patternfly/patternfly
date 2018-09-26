@@ -25,23 +25,8 @@
   {{else}}
     {{~#if progress__id}} aria-describedby="{{progress__id}}-description"{{/if}}
   {{/if}}>
-  <div class="pf-c-progress__description" {{~#if progress__id}} id="{{progress__id}}-description"{{/if}}>{{progress__description}}</div>
-  <div class="pf-c-progress__status">
-    {{#unless progress--inside}}
-        {{#unless progress--no-measure}}
-          {{>progress__measure}}
-        {{/unless}}
-    {{/unless}}
-    {{> progress__status-icon}}
-  </div>
-  <div class="pf-c-progress__bar">
-  <div class="pf-c-progress__indicator" style="width: {{progress__value}}%;">
-    {{#if progress--inside}}
-      {{#unless progress--no-measure}}
-        {{>progress__measure}}
-      {{/unless}}
-    {{/if}}    
-  </div>
-</div>
+  {{> progress-description}}
+  {{> progress-status}}
+  {{> progress-bar}}
   {{> @partial-block}}
 </div>
