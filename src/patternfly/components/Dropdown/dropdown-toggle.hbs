@@ -1,6 +1,9 @@
-<button class="pf-c-dropdown__toggle" id="{{id}}" aria-haspopup="true" aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
+<button class="pf-c-dropdown__toggle{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}" id="{{id}}" aria-haspopup="true" aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
 	{{#if aria-label}}
 		aria-label="{{aria-label}}" 
+	{{/if}}
+	{{#if dropdown-toggle--attribute}}
+		{{{dropdown-toggle--attribute}}}
 	{{/if}}>
 	{{> @partial-block}}
 	{{#if dropdown--HasToggleIcon}}
