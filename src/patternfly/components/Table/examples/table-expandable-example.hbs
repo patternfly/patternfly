@@ -1,20 +1,20 @@
 {{#> table table--grid="true" table--modifier="pf-u-box-shadow-md pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-th table-th--attribute='aria-label="Toggle row column"'}}{{/table-th}}    
-    {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column"'}}
+    {{#> table-th table-th--attribute='aria-label="Toggle row column" scope="col"'}}{{/table-th}}    
+    {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column" scope="col"'}}
       {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
     {{/table-th}}  
-    {{#> table-th table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
+    {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
       Repositories
     {{/table-th}}
-    {{#> table-th}}
+    {{#> table-th table-th--attribute='scope="col"'}}
       Branches
     {{/table-th}} 
-    {{#> table-th}}
+    {{#> table-th table-th--attribute='scope="col"'}}
       Pull requests
     {{/table-th}} 
-    {{#> table-th table-th--attribute='aria-label="Link column"'}}{{/table-th}} 
-    {{#> table-th table-th--attribute='aria-label="Overflow action column"'}}{{/table-th}} 
+    {{#> table-th table-th--attribute='aria-label="Link column" scope="col"'}}{{/table-th}} 
+    {{#> table-th table-th--attribute='aria-label="Overflow action column" scope="col"'}}{{/table-th}} 
   {{/table-thead}}
 
   {{#> table-tbody}}
@@ -23,7 +23,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="node1"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}     
-      {{#> table-th table-th--attribute='id="node1"' table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--attribute='id="node1" scope="row"' table-th--data-label="Repository Name"}}
         Node 1
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
@@ -68,7 +68,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="node1"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}     
-      {{#> table-th table-th--attribute='id="node2"' table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--attribute='id="node2" scope="row"' table-th--data-label="Repository Name"}}
         <div>Node 2</div>
         <a href="#">siemur/test-space</a>
       {{/table-th}}

@@ -1,22 +1,22 @@
 {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column"'}}
+      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column" scope="col"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
       {{/table-th}}
-      {{#> table-th table-th--sortable="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Branches
       {{/table-th}} 
-      {{#> table-th table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Pull requests
       {{/table-th}} 
-      {{#> table-th table-th--modifier="pf-m-fit-content"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
         Workspaces
       {{/table-th}} 
-      {{#> table-th table-th--modifier="pf-m-fit-content"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
         Last Commit
       {{/table-th}} 
     {{/table-tr}}
@@ -27,7 +27,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="node1"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}} 
-      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="node1"'}}
+      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="node1" scope="row"'}}
         Node 1
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
@@ -48,7 +48,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="node2"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}   
-      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="node2"'}}
+      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="node2" scope="row"'}}
         <div>Node 2</div>
         <a href="#">siemur/test-space</a>
       {{/table-th}}

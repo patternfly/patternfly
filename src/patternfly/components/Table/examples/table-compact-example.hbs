@@ -1,29 +1,29 @@
 {{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column"'}}
+      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row column" scope="col"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Position
       {{/table-th}} 
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Location
       {{/table-th}} 
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Last Seen
       {{/table-th}} 
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Numbers
       {{/table-th}} 
-      {{#> table-th table-th--modifier="pf-u-text-align-center"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-u-text-align-center"}}
         Icons
       {{/table-th}} 
-      {{#> table-th table-th--attribute='aria-label="Link column"'}}{{/table-th}}
-      {{#> table-th table-th--action="true" table-th--attribute='aria-label="Overflow action column"'}}{{/table-th}} 
+      {{#> table-th table-th--attribute='aria-label="Link column" scope="col"'}}{{/table-th}}
+      {{#> table-th table-th--action="true" table-th--attribute='aria-label="Overflow action column" scope="col"'}}{{/table-th}} 
     {{/table-tr}}
   {{/table-thead}}
 
@@ -32,7 +32,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name1"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name1"'}}
+      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name1" scope="row"'}}
         Andres Galant
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
@@ -64,7 +64,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name2"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}       
-      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name2"'}}
+      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name2" scope="row"'}}
         Jenny Haines
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
@@ -96,7 +96,7 @@
       {{#> table-td table-td--check="true" table-td--attribute='aria-labelledby="name3"'}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow3" aria-label="Select row"'}}{{/check-input}}
       {{/table-td}}       
-      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name3"'}}
+      {{#> table-th table-th--data-label="Contributor Name" table-th--attribute='id="name3" scope="row"'}}
         Kyle Baker
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
