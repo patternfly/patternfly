@@ -21,6 +21,7 @@ gulp.task('build-tmp', () =>
     .src('./src/patternfly/**/*.scss')
     .pipe(sassGlob())
     .pipe(replace('@import "../../patternfly-utilities";', ''))
+    .pipe(replace('pf-global--image-path: "/assets/images"', 'pf-global--image-path: "./assets/images"'))
     .pipe(gulp.dest('./tmp'))
 );
 
