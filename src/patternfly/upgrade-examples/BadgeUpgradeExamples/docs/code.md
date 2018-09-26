@@ -10,3 +10,8 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 | `.badge` | `<span>` | `.pf-c-badge` | `<span>` | `Initiates a badge. Always use with a modifier class.` |
 | `--` | `--` | `.pf-m-read` | `.pf-c-badge` | `Applies read badge styling.` |
 | `--` | `--` | `.pf-m-unread` | `.pf-c-badge` | `Applies unread badge styling.` |
+
+
+| Main Differences in pf3 | Main differences in pf4|
+| -- | -- |
+| | Badges have different styles for read and unread to make the state of that badge clearer. |
