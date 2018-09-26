@@ -7,6 +7,6 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 
 | PF3 Class | Applied To | PF4 Class | Applied To | Outcome |
 | -- | -- | -- | -- | -- |
-| `badge` | `<span>` | `pf-c-badge` | `<span>` | `Initiates a badge. Always use with a modifier class.` |
-| `--` | `--` | `pf-m-read` | `pf-c-badge` | `Applies read badge styling.` |
-| `--` | `--` | `pf-m-unread` | `pf-c-badge` | `Applies unread badge styling.` |
+| `.badge` | `<span>` | `.pf-c-badge` | `<span>` | `Initiates a badge. Always use with a modifier class.` |
+| `--` | `--` | `.pf-m-read` | `.pf-c-badge` | `Applies read badge styling.` |
+| `--` | `--` | `.pf-m-unread` | `.pf-c-badge` | `Applies unread badge styling.` |
