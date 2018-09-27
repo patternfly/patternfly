@@ -1,6 +1,5 @@
-{{#> wizard}}
-  {{#> wizard-sequence}}
-    {{#> wizard-list}}
+{{#> wizard-sequence}}
+    {{#> wizard-list display--modifier="flex pf-u-justify-content-center"}}
       {{#> wizard-item}}
       <!--For the item include a true/false for the bar's color-->
         {{#> wizard-item-number}}1{{/wizard-item-number}}
@@ -22,5 +21,4 @@
         {{#> wizard-item-status}}Complete{{/wizard-item-status}}
       {{/wizard-item}}
     {{/wizard-list}}
-  {{/wizard-sequence}}
-{{/wizard}}
+{{/wizard-sequence}}
