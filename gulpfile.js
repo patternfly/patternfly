@@ -18,11 +18,7 @@ gulp.task('copy-fa', () =>
 
 gulp.task('build-tmp', () =>
   gulp
-    .src([
-      './src/patternfly/**/*.scss',
-      '!./src/patternfly/**/examples/*.scss',
-      '!./src/patternfly/_gatsby-variables.scss'
-    ])
+    .src(['./src/patternfly/**/*.scss', '!./src/patternfly/**/examples/*.scss'])
     .pipe(
       sassGlob({
         ignorePaths: ['**/examples/*.scss']
@@ -56,6 +52,7 @@ gulp.task('build-modules', () =>
       '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
     ])
     .pipe(sass().on('error', sass.logError))
+    .pipe(replace('./assets/images', '../../assets/images'))
     .pipe(gulp.dest('./dist'))
 );
 
