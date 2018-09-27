@@ -2,6 +2,9 @@
   {{#if form-label--attribute}}
     {{{form-label--attribute}}}
   {{/if}}>
+	{{#if required}}
+    required
+  {{/if}}
   {{>@partial-block}}
   {{#if required}}
     <span class="pf-c-form__label__required" aria-hidden="true">&#42;</span>

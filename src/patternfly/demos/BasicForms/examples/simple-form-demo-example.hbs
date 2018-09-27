@@ -2,18 +2,18 @@
   {{#> form}}
     {{#> form-group}}
       {{#> form-label form-label--attribute='for="simple-form-name"' required="true"}}Name{{/form-label}}
-      {{#> form-control controlType="input" input="true" type="text" id="simple-form-name" name="simple-form-name" required="true" aria-describedby="simple-form-name-helper-1"}}
+      {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="simple-form-name" name="simple-form-name" aria-describedby="simple-form-name-helper-1"'}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--attribute='id="simple-form-name-helper-1" aria-live="polite"'}}Please provide your full name{{/form-helper-text}}
     {{/form-group}}
     {{#> form-group}}
       {{#> form-label form-label--attribute='for="simple-form-email"' required="true"}}Email{{/form-label}}
-      {{#> form-control controlType="input" input="true" type="email" id="simple-form-email" name="simple-form-email" required="true"}}
+      {{#> form-control controlType="input" form-control--attribute='required input="true" type="email" id="simple-form-email" name="simple-form-email"'}}
       {{/form-control}}
     {{/form-group}}
     {{#> form-group}}
       {{#> form-label form-label--attribute='for="simple-form-number"' }}Phone Number{{/form-label}}
-      {{#> form-control controlType="input" input="true" type="tel" id="simple-form-number" name="simple-form-number" placeholder="555-555-5555"}}
+      {{#> form-control controlType="input" form-control--attribute='input="true" type="tel" id="simple-form-number" name="simple-form-number" placeholder="555-555-5555"'}}
       {{/form-control}}
     {{/form-group}}
     {{#> form-group form-group--modifier="pf-m-inline"}} 
