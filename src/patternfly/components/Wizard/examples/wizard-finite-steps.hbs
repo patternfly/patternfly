@@ -1,24 +1,33 @@
 {{#> wizard-sequence}}
     {{#> wizard-list display--modifier="flex pf-u-justify-content-center"}}
       {{#> wizard-item}}
-      <!--For the item include a true/false for the bar's color-->
-        {{#> wizard-item-number}}1{{/wizard-item-number}}
-        {{#> wizard-item-title}}Step One{{/wizard-item-title}}
-        {{#> wizard-item-status}}Complete{{/wizard-item-status}}
+        {{#> wizard-item-position}}
+          {{#> wizard-item-position-number}}1{{/wizard-item-position-number}}
+        {{/wizard-item-position}}
+        {{#> wizard-item-description}}
+          {{#> wizard-item-description-title}}Information{{/wizard-item-description-title}}
+          {{#> wizard-item-description-status}}Complete{{/wizard-item-description-status}}
+        {{/wizard-item-description}}
+        {{#> wizard-item-bar}}
+        {{/wizard-item-bar}}
       {{/wizard-item}}
-
       {{#> wizard-item}}
-      <!--For the item include a true/false for the bar's color-->
-        {{#> wizard-item-number}}2{{/wizard-item-number}}
-        {{#> wizard-item-title}}Step Two{{/wizard-item-title}}
-        {{#> wizard-item-status}}Complete{{/wizard-item-status}}
+        {{#> wizard-item-position}}
+          {{#> wizard-item-position-number}}2{{/wizard-item-position-number}}
+        {{/wizard-item-position}}
+        {{#> wizard-item-description}}
+          {{#> wizard-item-description-title}}Configuration{{/wizard-item-description-title}}
+          {{#> wizard-item-description-status}}Pending{{/wizard-item-description-status}}
+        {{/wizard-item-description}}
       {{/wizard-item}}
-
       {{#> wizard-item}}
-      <!--For the item include a true/false for the bar's color-->
-        {{#> wizard-item-number}}3{{/wizard-item-number}}
-        {{#> wizard-item-title}}Step Three{{/wizard-item-title}}
-        {{#> wizard-item-status}}Complete{{/wizard-item-status}}
+        {{#> wizard-item-position}}
+          {{#> wizard-item-position-number}}3{{/wizard-item-position-number}}
+        {{/wizard-item-position}}
+        {{#> wizard-item-description}}
+          {{#> wizard-item-description-title}}Results{{/wizard-item-description-title}}
+          {{#> wizard-item-description-status}}Incomplete{{/wizard-item-description-status}}
+        {{/wizard-item-description}}
       {{/wizard-item}}
     {{/wizard-list}}
 {{/wizard-sequence}}
