@@ -2,9 +2,9 @@
 
 `** All simple table accessibility and usage requirements apply.`
 <br>
-`** All sortable table accessibility notes and usage requirements apply.`
+`** All sortable table accessibility and usage requirements apply.`
 <br>
-`** All checkbox/action button accessibility notes and usage requirements apply.`
+`** All checkbox/action button accessibility and usage requirements apply.`
 
 ### Accessibility
 | Attribute | Applied To | Outcome |
