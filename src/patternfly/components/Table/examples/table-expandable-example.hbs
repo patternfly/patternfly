@@ -1,9 +1,9 @@
 {{#> table table--grid="true" table--modifier="pf-u-box-shadow-md pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-th table-th--attribute='aria-label="Toggle row" scope="col"'}}{{/table-th}}    
-    {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row" scope="col"'}}
-      {{#> check-input check-input--attribute='type="checkbox" name="check-all"'}}{{/check-input}}
-    {{/table-th}}  
+    {{#> table-td}}{{/table-td}}
+    {{#> table-td table-td--check="true"}}
+      {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+    {{/table-td}}
     {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
       Repositories
     {{/table-th}}
@@ -13,8 +13,8 @@
     {{#> table-th table-th--attribute='scope="col"'}}
       Pull requests
     {{/table-th}} 
-    {{#> table-th}}{{/table-th}} 
-    {{#> table-th}}{{/table-th}} 
+    {{#> table-td}}{{/table-td}} 
+    {{#> table-td}}{{/table-td}} 
   {{/table-thead}}
 
   {{#> table-tbody}}

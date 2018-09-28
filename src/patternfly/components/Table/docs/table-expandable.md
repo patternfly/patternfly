@@ -1,10 +1,10 @@
 ### Table Expandable Notes
 
-`** All simple table accessibility and usage requirements apply.`
+<mark>**All simple table accessibility and usage requirements apply.**</mark>
 <br>
-`** All sortable table accessibility and usage requirements apply.`
+<mark>**All sortable table accessibility and usage requirements apply.**</mark>
 <br>
-`** All checkbox/action button accessibility and usage requirements apply.`
+<mark>**All checkbox/action button accessibility and usage requirements apply.**</mark>
 
 ### Accessibility
 | Attribute | Applied To | Outcome |

@@ -1,9 +1,9 @@
 {{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--check="true" table-th--attribute='aria-label="Select row" scope="col"'}}
-        {{#> check-input check-input--attribute='type="checkbox" name="check-all"'}}{{/check-input}}
-      {{/table-th}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+      {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
@@ -22,8 +22,8 @@
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-u-text-align-center"}}
         Icons
       {{/table-th}} 
-      {{#> table-th}}{{/table-th}}
-      {{#> table-th}}{{/table-th}} 
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}} 
     {{/table-tr}}
   {{/table-thead}}
 

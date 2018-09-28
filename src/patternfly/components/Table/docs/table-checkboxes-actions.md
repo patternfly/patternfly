@@ -1,14 +1,18 @@
-`** All simple table accessibility and usage requirements apply.`
-`** All sortable table accessibility and usage requirements apply.`
 
-Note: When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
+<mark>**All simple table accessibility and usage requirements apply**</mark>
+<br>
+<mark>**All sortable table accessibility and usage requirements apply**</mark>
+<br>
+
+Note: When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s. 
+
+Note: When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
 
 
 ### Thead Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="[descriptive text]"` | `.pf-c-table__check` | Provides an accessible name for checkbox header cells. **Required** |
-
 
 ### Tbody Accessibility
 | Attribute | Applied To | Outcome |

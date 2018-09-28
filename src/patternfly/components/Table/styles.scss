@@ -20,6 +20,7 @@
 $pf-c-table-standard-row: "tr:not(.pf-c-table__expandable-row)";
 $pf-c-table-standard-td: "td:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action)";
 $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)";
+$pf-c-table-xs-breakpoint: 380px;
 
 .pf-c-table {
 
@@ -179,20 +180,31 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
   }
 
   // Table header cell
-  thead th {
-    font-size: var(--pf-c-table-th--FontSize);
-    white-space: nowrap;
-    vertical-align: top;
+  thead {
+    th {
+      font-size: var(--pf-c-table-th--FontSize);
+      white-space: nowrap;
+      vertical-align: top;
 
-    // ignore table sort and special cells, apply padding to the nested button
-    &:not(.pf-c-table__sort):not(.pf-c-table__toggle):not(.pf-c-table__action) {
-      padding-top: var(--pf-c-table-th--PaddingTop);
-      padding-bottom: var(--pf-c-table-th--PaddingBottom);
+      // ignore table sort and special cells, apply padding to the nested button
+      &:not(.pf-c-table__sort) {
+        padding-top: var(--pf-c-table-th--PaddingTop);
+        padding-bottom: var(--pf-c-table-th--PaddingBottom);
+      }
+    }
+
+    td,
+    .pf-c-table__toggle,
+    .pf-c-table__check,
+    .pf-c-table__action {
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: middle;
     }
   }
 
   // Table cell
-  #{$pf-c-table-standard-row} #{$pf-c-table-standard-td},
+  tbody #{$pf-c-table-standard-row} #{$pf-c-table-standard-td},
   tbody #{$pf-c-table-standard-row} th {
     padding-top: var(--pf-c-table-td--PaddingTop);
     padding-bottom: var(--pf-c-table-td--PaddingBottom);
@@ -433,16 +445,14 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
       var(--pf-c-table--m-compact--PaddingLeft);
   }
 
-  tbody {
-    #{$pf-c-table-standard-td},
-    #{$pf-c-table-standard-th} {
-      padding:
-        var(--pf-c-table--m-compact--PaddingTop)
-        var(--pf-c-table--m-compact--PaddingRight)
-        var(--pf-c-table--m-compact--PaddingBottom)
-        var(--pf-c-table--m-compact--PaddingLeft);
-      font-size: var(--pf-c-table--m-compact--FontSize);
-    }
+  tbody #{$pf-c-table-standard-row} #{$pf-c-table-standard-td},
+  tbody #{$pf-c-table-standard-row} th {
+    padding:
+      var(--pf-c-table--m-compact--PaddingTop)
+      var(--pf-c-table--m-compact--PaddingRight)
+      var(--pf-c-table--m-compact--PaddingBottom)
+      var(--pf-c-table--m-compact--PaddingLeft);
+    font-size: var(--pf-c-table--m-compact--FontSize);
   }
 
   // First row has 2x padding as subsequent rows
@@ -670,14 +680,14 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
     grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
 
     // @mobile, breakpoint small
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
       grid-template-columns: 1fr 1.5fr;
       grid-column: 1;
     }
 
     // set contents of td to start at column two of td grid
     * {
-      @media screen and (min-width: $pf-global--breakpoint--sm) {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
         grid-column: 2;
       }
     }
@@ -690,7 +700,7 @@ $pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):no
       content: attr(data-label);
 
 
-      @media screen and (min-width: $pf-global--breakpoint--sm) {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
         font-weight: normal;
         // set ::before to span all rows, up to 100
         grid-row: 1 / 100;
