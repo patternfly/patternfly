@@ -64,7 +64,7 @@ To run the a11y audit locally:
 - install the latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
   - alternatively, macOS users can simply `brew cask install chromedriver`
 - run `npm run dev`
-- run `npm run a11y` (in a separate terminal)
+- run `npm run a11y` (in another console)
 
 The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
 

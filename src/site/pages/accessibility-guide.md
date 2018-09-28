@@ -147,8 +147,11 @@ Many accessibility issues can be found by doing a few simple checks:
     - All functionality is keyboard accessible
     - Order of elements in the HTML and in the layout follow a logical order
     - Elements with focus are clearly visible
-3. Use the [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) to disable styles, then test the information architecture and presence of adequate text labels.
-4. Test with any screen reader available in your operating system
+3. Disable styles, then test the information architecture and presence of adequate text labels. The [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using. 
+4. Test with any screen reader available in your operating system. Screen readers that we target for testing PatternFly are:
+    - JAWS with Chrome, Windows ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
+    - Voiceover with Safari, Mac ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
+    - NVDA with Firefox, Windows ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
 5. Check color contrast for:
     - Text color against background color ([Understanding WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
     - Text color against link color ([Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html))
