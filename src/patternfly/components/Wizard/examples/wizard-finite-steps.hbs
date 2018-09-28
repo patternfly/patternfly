@@ -1,33 +1,35 @@
-{{#> wizard-sequence}}
-    {{#> wizard-list display--modifier="flex pf-u-justify-content-center"}}
-      {{#> wizard-item}}
-        {{#> wizard-item-position}}
-          {{#> wizard-item-position-number}}1{{/wizard-item-position-number}}
-        {{/wizard-item-position}}
-        {{#> wizard-item-description}}
-          {{#> wizard-item-description-title}}Information{{/wizard-item-description-title}}
-          {{#> wizard-item-description-status}}Complete{{/wizard-item-description-status}}
-        {{/wizard-item-description}}
-        {{#> wizard-item-bar}}
-        {{/wizard-item-bar}}
-      {{/wizard-item}}
-      {{#> wizard-item}}
-        {{#> wizard-item-position}}
-          {{#> wizard-item-position-number}}2{{/wizard-item-position-number}}
-        {{/wizard-item-position}}
-        {{#> wizard-item-description}}
-          {{#> wizard-item-description-title}}Configuration{{/wizard-item-description-title}}
-          {{#> wizard-item-description-status}}Pending{{/wizard-item-description-status}}
-        {{/wizard-item-description}}
-      {{/wizard-item}}
-      {{#> wizard-item}}
-        {{#> wizard-item-position}}
-          {{#> wizard-item-position-number}}3{{/wizard-item-position-number}}
-        {{/wizard-item-position}}
-        {{#> wizard-item-description}}
-          {{#> wizard-item-description-title}}Results{{/wizard-item-description-title}}
-          {{#> wizard-item-description-status}}Incomplete{{/wizard-item-description-status}}
-        {{/wizard-item-description}}
-      {{/wizard-item}}
-    {{/wizard-list}}
-{{/wizard-sequence}}
+{{#> wizard}}
+  {{#> wizard-sequence}}
+      {{#> wizard-list display--modifier="flex pf-u-justify-content-center"}}
+        {{#> wizard-item}}
+          {{#> wizard-item-position}}
+            {{#> wizard-item-position-number}}1{{/wizard-item-position-number}}
+          {{/wizard-item-position}}
+          {{#> wizard-item-description}}
+            {{#> wizard-item-description-title}}Information{{/wizard-item-description-title}}
+            {{#> wizard-item-description-status}}Complete{{/wizard-item-description-status}}
+          {{/wizard-item-description}}
+          {{#> wizard-item-bar}}
+          {{/wizard-item-bar}}
+        {{/wizard-item}}
+        {{#> wizard-item}}
+          {{#> wizard-item-position}}
+            {{#> wizard-item-position-number}}2{{/wizard-item-position-number}}
+          {{/wizard-item-position}}
+          {{#> wizard-item-description}}
+            {{#> wizard-item-description-title}}Configuration{{/wizard-item-description-title}}
+            {{#> wizard-item-description-status}}Pending{{/wizard-item-description-status}}
+          {{/wizard-item-description}}
+        {{/wizard-item}}
+        {{#> wizard-item}}
+          {{#> wizard-item-position}}
+            {{#> wizard-item-position-number}}3{{/wizard-item-position-number}}
+          {{/wizard-item-position}}
+          {{#> wizard-item-description}}
+            {{#> wizard-item-description-title}}Results{{/wizard-item-description-title}}
+            {{#> wizard-item-description-status}}Incomplete{{/wizard-item-description-status}}
+          {{/wizard-item-description}}
+        {{/wizard-item}}
+      {{/wizard-list}}
+  {{/wizard-sequence}}
+{{/wizard}}

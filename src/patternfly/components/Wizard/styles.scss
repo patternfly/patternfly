@@ -1,13 +1,64 @@
 @import "../../patternfly-utilities";
 
 .pf-c-wizard {
-  --pf-c-wizard__sequence-list-item-number--MarginLeft: var(--pf-global--spacer--md);
+  // Background Color
+  --pf-c-wizard__sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+
+  // Item
+  --pf-c-wizard__item--BottomBorderColor: var(--pf-global--Color--200);
+
+  // hover
+  --pf-c-wizard__item-hover--BottomBorderColor: var(--pf-global--primary-color--100);
+
+  // Item Position
+  --pf-c-wizard__item-position--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-wizard__item-position--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-wizard__item-position--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-wizard__item-position--MarginLeft: var(--pf-global--spacer--lg);
+
+  // Item Position Number
+  --pf-c-wizard__item-position-number--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-wizard__item-position-number--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-wizard__item-position-number--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-wizard__item-position-number--MarginBottom: var(--pf-global--spacer--sm);
+
+  // Color
+  --pf-c-wizard__item-position-number--Color: var(--pf-global--Color--200);
+
+  // Font
+  --pf-c-wizard__item-position-number--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-wizard__item-position-number--FontWeight: var(--pf-global--FontWeight--bold);
+
+  // Border Radius
+  --pf-c-wizard__item-position-number--BorderRadius: var(--pf-global--BorderRadius--lg);
+
+  // Hover
+  --pf-c-wizard__item-position-number-hover--Color: var(--pf-global--primary-color--100);
+  --pf-c-wizard__item-position-number-hover--FontSize: var(--pf-global--FontSize--xl);
+
+
+  // Item Description
+  --pf-c-wizard__item-description--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-wizard__item-description--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard__item-description--MarginBottom: var(--pf-global--spacer--lg);
+
+  // Color
+  --pf-c-wizard__item-description-title--Color: var(--pf-global--Color--light-100);
+  --pf-c-wizard__item-description-status--Color: var(--pf-global--Color--200);
+
+  // Font
+  --pf-c-wizard__item-description-title--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-wizard__item-description-status--FontSize: var(--pf-global--FontSize--xs);
+
+  // Hover
+  --pf-c-wizard__item-description-title-hover--Color: var(--pf-global--primary-color--100);
 }
 
+// Wizard Sequence
 .pf-c-wizard__sequence {
   display: flex;
   justify-content: center;
-  background-color: var(--pf-global--BackgroundColor--dark-100);
+  background-color: var(--pf-c-wizard__sequence--BackgroundColor);
 }
 
 // Horizontal list
@@ -15,62 +66,94 @@
   display: inline-flex;
 }
 
-.pf-c-wizard__item {
+// List Items
+a > .pf-c-wizard__item {
   display: flex;
   justify-content: flex-start;
   margin-right: 1px;
   margin-left: 1px;
   text-decoration: underline;
-  border-bottom: 4px solid var(--pf-global--Color--200);
+  border-bottom: 4px solid var(--pf-c-wizard__item--BottomBorderColor);
 
   &:hover {
-    border-bottom: 4px solid var(pf-global--primary-color--100);
+    border-bottom: 4px solid var(--pf-c-wizard__item-hover--BottomBorderColor);
+  }
+
+  &:focus {
+    border-bottom: 4px solid var(--pf-c-wizard__item-hover--BottomBorderColor);
+  }
+
+  &:hover .pf-c-wizard__item-position-number {
+    width: 34px;
+    height: 34px;
+    font-size: var(--pf-c-wizard__item-position-number-hover--FontSize);
+    color: var(--pf-c-wizard__item-position-number-hover--Color);
+  }
+
+  &:focus .pf-c-wizard__item-position-number {
+    color: var(--pf-c-wizard__item-position-number-hover--Color);
+  }
+
+  &:hover .pf-c-wizard__item-description-title {
+    color: var(--pf-c-wizard__item-description-title-hover--Color);
+  }
+
+  &:focus .pf-c-wizard__item-description-title {
+    color: var(--pf-c-wizard__item-description-title-hover--Color);
   }
 }
 
+// Items Position
 .pf-c-wizard__item-position {
-  margin-top: var(--pf-global--spacer--lg);
-  margin-right: var(--pf-global--spacer--lg);
-  margin-bottom: var(--pf-global--spacer--lg);
-  margin-left: var(--pf-global--spacer--xl);
+  margin-top: var(--pf-c-wizard__item-position--MarginTop);
+  margin-right: var(--pf-c-wizard__item-position--MarginRight);
+  margin-bottom: var(--pf-c-wizard__item-position--MarginBottom);
+  margin-left: var(--pf-c-wizard__item-position--MarginLeft);
 }
 
+// Position Number
 .pf-c-wizard__item-position-number {
-  display: inline-block;
-  padding-right: var(--pf-global--spacer--sm);
-  padding-left: var(--pf-global--spacer--sm);
-  margin-top: var(--pf-global--spacer--sm);
-  margin-bottom: var(--pf-global--spacer--sm);
-  font-size: var(--pf-global--FontSize--md);
-  font-weight: var(--pf-global--FontWeight--bold);
-  color: var(--pf-global--Color--200);
+  width: 23px;
+  height: 23px;
+  margin-top: var(--pf-c-wizard__item-position-number--MarginTop);
+  margin-bottom: var(--pf-c-wizard__item-position-number--MarginBottom);
+  color: var(--pf-c-wizard__item-position-number--Color);
   text-align: center;
   border: 2px solid;
-  border-radius: var(--pf-global--BorderRadius--lg);
-
-  &:hover {
-    color: var(pf-global--primary-color--100);
-    border-radius: var(pf-global--primary-color--100);
-  }
+  border-radius: 50%;
 }
 
+// display: inline-block;
+//   padding-right: var(--pf-c-wizard__item-position-number--PaddingRight);
+//   padding-left: var(--pf-c-wizard__item-position-number--PaddingLeft);
+//   margin-top: var(--pf-c-wizard__item-position-number--MarginTop);
+//   margin-bottom: var(--pf-c-wizard__item-position-number--MarginBottom);
+//   font-size: var(--pf-c-wizard__item-position-number--FontSize);
+//   font-weight: var(--pf-c-wizard__item-position-number--FontWeight);
+//   color: var(--pf-c-wizard__item-position-number--Color);
+//   text-align: center;
+//   border: 2px solid;
+//   border-radius: var(--pf-c-wizard__item-position-number--BorderRadius);
+
+// Items Description
 .pf-c-wizard__item-description {
-  padding-right: var(--pf-global--spacer--xl);
-  margin-top: var(--pf-global--spacer--lg);
-  margin-bottom: var(--pf-global--spacer--lg);
+  margin-top: var(--pf-c-wizard__item-description--MarginTop);
+  margin-right: var(--pf-c-wizard__item-description--MarginRight);
+  margin-bottom: var(--pf-c-wizard__item-description--MarginBottom);
 }
 
-
+// Description Title
 .pf-c-wizard__item-description-title {
   display: inline-flex;
-  color: var(--pf-global--Color--light-100);
+  color: var(--pf-c-wizard__item-description-title--Color);
 
   &:hover {
-    color: var(pf-global--primary-color--100);
+    color: var(--pf-c-wizard__item-description-title-hover--Color);
   }
 }
 
+// Description Status
 .pf-c-wizard__item-description-status {
-  font-size: var(--pf-global--FontSize--xs);
-  color: var(--pf-global--Color--200);
+  font-size: var(--pf-c-wizard__item-description-status--FontSize);
+  color: var(--pf-c-wizard__item-description-status--Color);
 }
