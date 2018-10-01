@@ -63,3 +63,8 @@ gulp.task('copy-source', ['build-tmp'], () => {
   gulp.src('./static/assets/images/**/*.*').pipe(gulp.dest('./dist/assets/images/'));
   gulp.src('./src/patternfly/assets/**/*.*').pipe(gulp.dest('./dist/assets/'));
 });
+
+gulp.task('copy-icons', () => {
+  gulp.src('./src/icons/definitions/**/*.*').pipe(gulp.dest('./dist/icons/'));
+  gulp.src('./src/icons/PfIcons/**/*.*').pipe(gulp.dest('./dist/icons/PfIcons/'));
+});
