@@ -142,7 +142,7 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 
 ## Testing
 Many accessibility issues can be found by doing a few simple checks:
-1. Use an accessibility audit tool to check for violations. If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. If you are contributing to PatternFly, refer to our [README.md](https://github.com/patternfly/patternfly-next/blob/master/README.md) on how to run this tool.
+1. Use an accessibility audit tool to check for violations. If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. If you are contributing to PatternFly, refer to our [README.md](https://github.com/patternfly/patternfly-next/blob/master/README.md#testing-for-accessibility) on how to run this tool.
 2. Test keyboard accessibility, and check that these requirements are met:
     - All functionality is keyboard accessible
     - Order of elements in the HTML and in the layout follow a logical order

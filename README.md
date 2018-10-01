@@ -76,7 +76,7 @@ Ignore the violations that aren’t related to your contribution.
 
 Fix violations related to your contribution.
 
-If there are violations that are not obvious how to fix, then create an issue with information about the violation that was found. For example, some violations might require further discussion before they can be addressed. And some violations may not be valid and require changes to the workspace or tooling to stop flagging the violation.
+If there are violations that are not obvious how to fix, then [create an issue](https://github.com/patternfly/patternfly-next/issues/new) with information about the violation that was found. For example, some violations might require further discussion before they can be addressed. And some violations may not be valid and require changes to the workspace or tooling to stop flagging the violation.
 
 If you have any suggestions about ways that we can improve how we use this tool, please let us know by opening an issue.
 
