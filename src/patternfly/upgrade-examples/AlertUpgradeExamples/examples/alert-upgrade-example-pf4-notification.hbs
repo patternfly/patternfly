@@ -1,18 +1,18 @@
 {{#> alert-upgrade-examples}}
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
-  {{#> alert-icon alert-icon--success="true"}}
-  {{/alert-icon}}
-  {{#> alert-body alert-body--attribute='role="alert"'}}
-    {{#> alert-description}}
-			The server configuration changed.
-		{{/alert-description}}
-	{{/alert-body}}
-  {{#> alert-action}}
-		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
-				<i class="fas fa-times"></i> 
-		{{/button}}
-    {{/alert-action}}
-{{/alert}}
+  {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
+    {{#> alert-icon alert-icon--success="true"}}
+    {{/alert-icon}}
+    {{#> alert-body alert-body--attribute='role="alert"'}}
+      {{#> alert-description}}
+        The server configuration changed.
+      {{/alert-description}}
+    {{/alert-body}}
+    {{#> alert-action}}
+      {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Remove"'}}
+          <i class="fas fa-times"></i> 
+      {{/button}}
+      {{/alert-action}}
+  {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Notification"'}}
   {{#> alert-icon alert-icon--danger="true"}}
@@ -30,14 +30,13 @@
   {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-description}}
 			The server configuration changed. 
-			{{#> alert-action alert-action--modifier="pf-c-button pf-m-link"}}
-        	Reload server.
-      {{/alert-action}}
 		{{/alert-description}}
-
   {{/alert-body}}
   {{#> alert-action}}
-		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
+    {{#> button btnClass="pf-m-link"}}
+          Reload server.
+    {{/button}}
+		{{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Remove"'}}
 				<i class="fas fa-times"></i> 
 		{{/button}}
     {{/alert-action}}
@@ -49,13 +48,15 @@
   {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-description}}
 			Great job! This is really working out.
-			{{#> alert-action alert-action--modifier="pf-c-button pf-m-link" }}
-        Reload server.
-      {{/alert-action}}
 		{{/alert-description}}
+    {{#> alert-action}}
+        {{#> button btnClass="pf-m-link"}}
+          Reload server.
+        {{/button}}
+      {{/alert-action}}
     {{/alert-body}}
     {{#> alert-action}}
-		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
+		{{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Remove"'}}
 				<i class="fas fa-ellipsis-v"></i> 
 		{{/button}}
     {{/alert-action}}
