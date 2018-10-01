@@ -141,14 +141,18 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 
 
 ## Testing
-To keep testing simple and easy to complete, we ask that contributors complete the following tests to try to catch most of the accessibility issues that may be present:
-1. Test keyboard accessibility, and check that these requirements are met:
+Many accessibility issues can be found by doing a few simple checks:
+1. Use an accessibility audit tool to check for violations. If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. If you are contributing to PatternFly, refer to our [README.md](https://github.com/patternfly/patternfly-next/blob/master/README.md#testing-for-accessibility) on how to run this tool.
+2. Test keyboard accessibility, and check that these requirements are met:
     - All functionality is keyboard accessible
     - Order of elements in the HTML and in the layout follow a logical order
     - Elements with focus are clearly visible
-2. Use the [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) to disable styles, then test the information architecture and presence of adequate text labels.
-3. Test with any screen reader available in your operating system
-4. Check color contrast for:
+3. Disable styles, then test the information architecture and presence of adequate text labels. The [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using. 
+4. Test with any screen reader available in your operating system. Screen readers that we target for testing PatternFly are:
+    - JAWS with Chrome, Windows ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
+    - Voiceover with Safari, Mac ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
+    - NVDA with Firefox, Windows ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
+5. Check color contrast for:
     - Text color against background color ([Understanding WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
     - Text color against link color ([Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html))
     - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
