@@ -11,9 +11,8 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 | `.alert-danger` | `<div>` | `.pf-m-danger` | `.pf-c-alert` | Applies danger styling. |
 | `.alert-warning` | `<div>` | `.pf-m-warning` | `.pf-c-alert` | Applies warning styling. |
 | `.alert-info` | `<div>` | `.pf-m-info` | `.pf-c-alert` | Applies info styling.|
-| `.alert-link` | `<a>` | `.pf-c-alert-action` | `.pf-c-alert` | Applies link or button styling. |
+| `.alert-link` | `<a>` | `.pf-c-alert-action` | `.pf-c-alert` | Applies link styling. |
 | `.pficon` | `<div>` | `.pf-c-alert__icon` | `<div>`| Defines the alert icon. Required. |
 | `--` | `--` | `.pf-c-alert__title` | `<div>` | Defines the alert title. Required. |
 | `--` | `--` | `.pf-c-alert__body` | `<div>` | Defines the alert body. Required. |
 | `--` | `__` | `.pf-c-alert__description` | `<span>`| Descriptive text for the alert body. |
-| `--` | `--` | `.pf-c-alert__action` | `<div>` | Defines the alert action. Required. |
