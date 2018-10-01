@@ -33,13 +33,14 @@
 		{{/alert-description}}
   {{/alert-body}}
   {{#> alert-action}}
-    {{#> button btnClass="pf-m-link"}}
-          Reload server.
-    {{/button}}
-		{{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Remove"'}}
-				<i class="fas fa-times"></i> 
-		{{/button}}
-    {{/alert-action}}
+  {{#> button btnClass="pf-m-link"}}
+    <i class="fas fa-times"></i>
+    Reload server
+  {{/button}}
+  {{#> button btnClass="pf-m-plain" btnAttributes="aria-label=\"Remove\" "}}
+    <i class="fas fa-times"></i>
+  {{/button}}
+  {{/alert-action}}
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
@@ -49,13 +50,11 @@
     {{#> alert-description}}
 			Great job! This is really working out.
 		{{/alert-description}}
-    {{#> alert-action}}
-        {{#> button btnClass="pf-m-link"}}
-          Reload server.
-        {{/button}}
-      {{/alert-action}}
-    {{/alert-body}}
-    {{#> alert-action}}
+  {{/alert-body}}
+  {{#> alert-action}}
+    {{#> button btnClass="pf-m-link"}}
+      Reload server
+    {{/button}}
 		{{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Remove"'}}
 				<i class="fas fa-ellipsis-v"></i> 
 		{{/button}}
