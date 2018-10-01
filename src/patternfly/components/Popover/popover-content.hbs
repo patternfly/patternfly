@@ -1,0 +1,8 @@
+<div class="pf-c-popover__content{{#if popover-content--modifier}} {{popover-content--modifier}}{{/if}}"
+  {{#if popover-content--attribute}}
+    {{{popover-content--attribute}}} 
+  {{/if}}>
+  {{#> popover-close}}
+  {{/popover-close}}
+  {{> @partial-block}}
+</div>

@@ -4,7 +4,7 @@ import Example from '@siteComponents/Example';
 import BackgroundImageRaw from '!raw!./background-image-example.hbs';
 import BackgroundImage from './background-image-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import './examples.scss';
 
 export const Docs = docs;
 

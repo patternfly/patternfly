@@ -6,21 +6,18 @@
   --pf-c-popover--MaxWidth: #{pf-size-prem(300px)};
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
-  // Set margin to arrow width for placement
-  --pf-c-popover--MarginBottom: var(--pf-global--arrow--width-lg);
-  --pf-c-popover--MarginTop: var(--pf-global--arrow--width-lg);
-  --pf-c-popover--MarginRight: var(--pf-global--arrow--width-lg);
-  --pf-c-popover--MarginLeft: var(--pf-global--arrow--width-lg);
-
   // Content variables
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Arrow variables
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
-  --pf-c-popover__arrow--Margin: var(--pf-global--arrow--width-lg) / 2; // Set arrow margin to half arrow width for placement
+  --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-popover__arrow-half-size: var(--pf-global--arrow--width) / 2; // used in the directional modifiers for placement
+  --pf-c-popover__arrow--m-top--Transform: translate(-50%, 50%) rotate(45deg);
+  --pf-c-popover__arrow--m-right--Transform: translate(-50%, -50%) rotate(45deg);
+  --pf-c-popover__arrow--m-bottom--Transform: translate(-50%, -50%) rotate(45deg);
+  --pf-c-popover__arrow--m-left--Transform: translate(50%, -50%) rotate(45deg);
 
   // Close container variables
   --pf-c-popover__close--Top: var(--pf-global--spacer--sm);
@@ -50,58 +47,50 @@
   box-shadow: var(--pf-c-popover--BoxShadow);
 
   &.pf-m-top {
-    margin-bottom: var(--pf-c-popover--MarginBottom);
+    .pf-c-popover__arrow {
+      bottom: 0;
+      left: 50%;
+      transform: var(--pf-c-popover__arrow--m-top--Transform);
+    }
   }
 
   &.pf-m-bottom {
-    margin-top: var(--pf-c-popover--MarginTop);
+    .pf-c-popover__arrow {
+      top: 0;
+      left: 50%;
+      transform: var(--pf-c-popover__arrow--m-bottom--Transform);
+    }
   }
 
   &.pf-m-left {
-    margin-right: var(--pf-c-popover--MarginRight);
+    .pf-c-popover__arrow {
+      top: 50%;
+      right: 0;
+      transform: var(--pf-c-popover__arrow--m-left--Transform);
+    }
   }
 
   &.pf-m-right {
-    margin-left: var(--pf-c-popover--MarginLeft);
-  }
-
-  &.pf-m-top > .pf-c-popover__arrow {
-    bottom: calc(var(--pf-c-popover__arrow-half-size) * -1);
-    left: calc(50% - var(--pf-c-popover__arrow-half-size));
-  }
-
-  &.pf-m-bottom > .pf-c-popover__arrow {
-    top: calc(var(--pf-c-popover__arrow-half-size) * -1);
-    left: calc(50% - var(--pf-c-popover__arrow-half-size));
-  }
-
-  &.pf-m-right > .pf-c-popover__arrow {
-    top: calc(50% - var(--pf-c-popover__arrow-half-size));
-    left: calc(var(--pf-c-popover__arrow-half-size) * -1);
-  }
-
-  &.pf-m-left > .pf-c-popover__arrow {
-    top: calc(50% - var(--pf-c-popover__arrow-half-size));
-    right: calc(var(--pf-c-popover__arrow-half-size) * -1);
+    .pf-c-popover__arrow {
+      top: 50%;
+      left: 0;
+      transform: var(--pf-c-popover__arrow--m-right--Transform);
+    }
   }
 }
 
 .pf-c-popover__content {
   position: relative;
-  display: flex;
-  flex-direction: column;
   background-color: var(--pf-c-popover__content--BackgroundColor);
 }
 
 .pf-c-popover__arrow {
   position: absolute;
   width: var(--pf-c-popover__arrow--Width);
-  height: var(--pf-c-popover__arrow--Width); // Popover arrow is square, sharing width value to prevent positioning errors
-  margin: var(--pf-c-popover__arrow--Margin);
+  height: var(--pf-c-popover__arrow--Height);
   pointer-events: none;
   background-color: var(--pf-c-popover__arrow--BackgroundColor);
   box-shadow: var(--pf-c-popover__arrow--BoxShadow);
-  transform: rotate(45deg);
 }
 
 .pf-c-popover__close {
@@ -112,7 +101,6 @@
 
 // Header
 .pf-c-popover__header {
-  flex: 0 0 auto;
   padding: var(--pf-c-popover__header--PaddingTop) var(--pf-c-popover__header--PaddingRight) var(--pf-c-popover__header--PaddingBottom) var(--pf-c-popover__header--PaddingLeft);
 }
 
@@ -125,13 +113,9 @@
 
 // Body
 .pf-c-popover__body {
-  flex: 1 1 auto;
   padding: var(--pf-c-popover__body--PaddingTop) var(--pf-c-popover__body--PaddingRight) var(--pf-c-popover__body--PaddingBottom) var(--pf-c-popover__body--PaddingLeft);
   margin-top: var(--pf-c-popover__body--MarginTop); // Adding margin top here for no header being present. When the header is present, margin-top is removed
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  word-break: break-word;
+  word-wrap: break-word;
 }
 
 // Removing top margin when header is present
