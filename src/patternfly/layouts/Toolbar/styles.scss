@@ -2,16 +2,44 @@
 
 // The value of component scoped variables is always defined by a global variable:
 .pf-l-toolbar {
+  --pf-l-toolbar--MarginTop: var(--pf-global--spacer--sm);
+
   // Toolbar Section
   --pf-l-toolbar__section--MarginTop: var(--pf-global--spacer--md);
 
   // Toolbar Group
+  --pf-l-toolbar__group--MarginTop: var(--pf-global--spacer--sm);
+  --pf-l-toolbar__group--MarginBottom: var(--pf-global--spacer--sm);
   --pf-l-toolbar__group--MarginRight: var(--pf-global--spacer--xl);
+  --pf-l-toolbar__group--MarginRight-Zero: var(0);
   --pf-l-toolbar__group--MarginLeft: var(--pf-global--spacer--xl);
 
   // Toolbar Item
+  --pf-l-toolbar__item--MarginTop: var(--pf-global--spacer--sm);
   --pf-l-toolbar__item--MarginRight: var(--pf-global--spacer--md);
   --pf-l-toolbar__item--MarginLeft: var(--pf-global--spacer--md);
+  --pf-l-toolbar__item--MarginRight-Zero: var(0);
+  --pf-l-toolbar__group-item--MarginRight-Zero: var(0);
+  --pf-l-toolbar__group-item--MarginTop: var(--pf-global--spacer--sm);
+  --pf-l-toolbar__group-item--MarginRight: var(--pf-global--spacer--sm);
+
+  // Toolbar Layout
+  // adds negative margin to toolbar to offset the top margin given on all group divs
+  margin-top: calc(var(--pf-l-toolbar--MarginTop) * -1);
+
+  // direct descendent of toolbar for groups
+  & > .pf-l-toolbar__group {
+    margin-top: calc(var(--pf-l-toolbar__group--MarginTop) * 1);
+  }
+
+  & > .pf-l-toolbar__group:last-child {
+    margin-right: var(--pf-l-toolbar__group--MarginRight-Zero);
+  }
+
+  // direct descendent of toolbar for items
+  & > .pf-l-toolbar__item {
+    margin-top: calc(var(--pf-l-toolbar__group-item--MarginTop) * 1);
+  }
 }
 
 // toolbar, toolbar__group, toolbar__section shared styles
@@ -34,14 +62,23 @@
 }
 
 // Group
-.pf-l-toolbar__group:not(:last-child) {
+.pf-l-toolbar__group {
+  // adds top margin to all group divs
+  margin-top: var(--pf-l-toolbar__group--MarginTop);
   margin-right: var(--pf-l-toolbar__group--MarginRight);
+
+  .pf-l-toolbar__item {
+    margin-top: var(--pf-l-toolbar__group-item--MarginRight-Zero);
+    margin-right: var(--pf-l-toolbar__group-item--MarginRight-Zero);
+  }
+
+  .pf-l-toolbar__item:last-child {
+    margin-right: var(--pf-l-toolbar__group-item--MarginRight-Zero);
+  }
 }
 
 // Item
 .pf-l-toolbar__item {
-  // Set margin-right so items will align when wrapped
-  .pf-l-toolbar:not(:last-child) {
-    margin-right: var(--pf-l-toolbar__item--MarginRight);
-  }
+  margin-top: var(--pf-l-toolbar__item--MarginTop);
+  margin-right: var(--pf-l-toolbar__item--MarginRight);
 }
