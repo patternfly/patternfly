@@ -30,10 +30,11 @@
   {{#> alert-body}}
     {{#> alert-description}}
 			The server configuration changed. 
+			{{#> alert-action alert-action--modifier="pf-c-button pf-m-link"}}
+        	Reload server.
+      {{/alert-action}}
 		{{/alert-description}}
-        {{#> alert-action alert-action--modifier="pf-c-button pf-m-link" }}
-            Reload server.
-        {{/alert-action}}
+
   {{/alert-body}}
   {{#> alert-action}}
 		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
@@ -48,10 +49,10 @@
   {{#> alert-body}}
     {{#> alert-description}}
 			Great job! This is really working out.
+			{{#> alert-action alert-action--modifier="pf-c-button pf-m-link" }}
+        Reload server.
+      {{/alert-action}}
 		{{/alert-description}}
-        {{#> alert-action alert-action--modifier="pf-c-button pf-m-link" }}
-            Reload server.
-        {{/alert-action}}
     {{/alert-body}}
     {{#> alert-action}}
 		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
