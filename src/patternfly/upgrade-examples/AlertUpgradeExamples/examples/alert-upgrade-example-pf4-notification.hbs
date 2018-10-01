@@ -8,9 +8,9 @@
 		{{/alert-description}}
 	{{/alert-body}}
   {{#> alert-action}}
-        {{#> button btnClass="pf-m-secondary"}}
-            Button 
-        {{/button}}
+		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
+				<i class="fas fa-times"></i> 
+		{{/button}}
     {{/alert-action}}
 {{/alert}}
 <br>
@@ -22,11 +22,6 @@
 			Failed to add server_abc.
 		{{/alert-description}}
   {{/alert-body}}
-  {{#> alert-action}}
-        {{#> button btnClass="pf-m-secondary"}}
-            Button 
-        {{/button}}
-    {{/alert-action}}
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning Notification"'}}
@@ -36,14 +31,14 @@
     {{#> alert-description}}
 			The server configuration changed. 
 		{{/alert-description}}
-		{{#> alert-link alert-link--modifier="pf-c-button pf-m-link"}}
-			Reload server.
-		{{/alert-link}}
+        {{#> alert-action alert-action--modifier="pf-c-button pf-m-link" }}
+            Reload server.
+        {{/alert-action}}
   {{/alert-body}}
   {{#> alert-action}}
-        {{#> button btnClass="pf-m-secondary"}}
-            Button 
-        {{/button}}
+		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
+				<i class="fas fa-times"></i> 
+		{{/button}}
     {{/alert-action}}
 {{/alert}}
 <br>
@@ -54,14 +49,14 @@
     {{#> alert-description}}
 			Great job! This is really working out.
 		{{/alert-description}}
-		{{#> alert-link alert-link--modifier="pf-c-button pf-m-link"}}
-			Reload server.
-		{{/alert-link}}
+        {{#> alert-action alert-action--modifier="pf-c-button pf-m-link" }}
+            Reload server.
+        {{/alert-action}}
     {{/alert-body}}
     {{#> alert-action}}
-        {{#> button btnClass="pf-m-secondary"}}
-            Button 
-        {{/button}}
+		{{#> button btnClass="pf-c-button" btnAttributes='aria-label="Remove"'}}
+				<i class="fas fa-ellipsis-v"></i> 
+		{{/button}}
     {{/alert-action}}
 {{/alert}}
 {{/alert-upgrade-examples}}
