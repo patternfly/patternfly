@@ -1,0 +1,15 @@
+{{#> tabs tabs--attribute='aria-label="Tabs Example"'}}
+  {{#> tabs-item tabs-item--attribute='id="ex1-tab1"'}}Tab item 1{{/tabs-item}}
+  {{#> tabs-item tabs-item--attribute='id="ex1-tab2"' tabs-item--current="true"}}Tab item 2{{/tabs-item}}
+  {{#> tabs-item tabs-item--attribute='id="ex1-tab3"'}}Tab item 3{{/tabs-item}}
+{{/tabs}}
+
+<section role="tabpanel" id="section1" aria-labelledby="ex1-tab1" hidden>
+  Tab 1 section
+</section>
+<section role="tabpanel" id="section2" aria-labelledby="ex1-tab2">
+  Tab 2 section
+</section>
+<section role="tabpanel" id="section3" aria-labelledby="ex1-tab3" hidden>
+  Tab 3 section
+</section>

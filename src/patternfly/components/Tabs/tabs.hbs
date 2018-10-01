@@ -1,0 +1,15 @@
+<div class="pf-c-tabs{{#if tabs--modifier}} {{tabs--modifier}}{{/if}}">
+  <ul class="pf-c-tabs__list{{#if tabs-list-modifier}} {{tabs-list--modifier}}{{/if}}" 
+    role="tablist"
+    {{#if tabs-list--attribute}}
+      {{{tabs-list--attribute}}}
+    {{/if}}>
+    {{> @partial-block}}
+  </ul>
+  <button class="pf-c-tabs__scroll-button" aria-label="Scroll left">
+    <i class="fas fa-angle-left" aria-hidden="true"></i>
+  </button>
+  <button class="pf-c-tabs__scroll-button" aria-label="Scroll right">
+    <i class="fas fa-angle-right" aria-hidden="true"></i>
+  </button>
+</div>
