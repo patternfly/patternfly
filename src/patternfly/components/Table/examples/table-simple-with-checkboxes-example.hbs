@@ -28,9 +28,9 @@
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="simple-node1"'}}{{/check-input}}
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="simple-node1"'}}
-        Node 1
-      {{/table-th}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <span id="simple-node1">Node 1</span>
+      {{/table-th}}      
       {{#> table-td table-td--data-label="Branches"}}
         10
       {{/table-td}}      
@@ -44,7 +44,7 @@
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='id="simple-action1" aria-labelledby="simple-node1 simple-action1" aria-label="Actions"'}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='id="simple-action1" aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
@@ -54,10 +54,10 @@
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="simple-node2"'}}{{/check-input}}
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name" table-th--attribute='id="simple-node2"'}}
-        <div>Node 2</div>
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <span id="simple-node2">Node 2</span>
         <a href="#">siemur/test-space</a>
-      {{/table-th}}
+      {{/table-th}}      
       {{#> table-td table-td--data-label="Branches"}}
         10
       {{/table-td}}      
@@ -71,7 +71,7 @@
         2 days ago
       {{/table-td}}  
       {{#> table-td table-td--action="true"}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='id="simple-action2" aria-labelledby="simple-node2 simple-action2" aria-label="Actions"'}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='id="simple-action2" aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}

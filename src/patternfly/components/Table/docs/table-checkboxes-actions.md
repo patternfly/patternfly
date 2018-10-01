@@ -19,7 +19,7 @@ Note: When header cells are empty or they contain interactive elements, `<th>` s
 | -- | -- | -- |
 | `aria-labelledby="{title_cell_id} {element_id}"` | `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible name for special cells containing interactive elements. **Required** |
 | `aria-label="[descriptive text]"`  | `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible name for `checkboxes` and `buttons`. **Required** |
-| `id`  | title cell `<th>`, `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible description for special cells. **Required** |
+| `id`  | title cell `<th>` > `<span>`, `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible description for special cells. **Required** |
 
 
 ### Usage
