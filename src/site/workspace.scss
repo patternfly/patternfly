@@ -2,6 +2,28 @@
 // styles placed here are only meant for styling
 // the workspace or applying styles that are only
 // relevant inside of the workspace
+.Example__documentation {
+  margin: 2rem 0;
+
+  .Example__documentation--text {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 1rem;    
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    table {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -138,10 +160,12 @@
     margin-bottom: 1rem;
   }
 
-  table, td, th, tr {
-    padding: .5em;
-    vertical-align: top;
-    border-bottom: 1px solid #ccc;
+  table:not(.pf-c-table) {
+    &, td, th, tr {
+      padding: .5em;
+      vertical-align: top;
+      border-bottom: 1px solid #ccc;
+    }
   }
 
   td > code {
@@ -223,7 +247,7 @@
   .pf-l-toolbar__group,
   .pf-l-toolbar__item,
   [class*="pf-u-"],
-  [class*="pf-u-"] > * {
+  [class*="pf-u-"] > *:not(svg) {
     padding: .5rem;
     border: 2px dashed #393f44;
   }
@@ -265,16 +289,36 @@
     border-radius: .5em;
   }
 
+  mark {
+    background-color: #ffe995;
+  }
+
   table {
     width: 100%;
     margin-bottom: 1rem;
   }
 
-  table, td, th, tr {
-    padding: .5em;
-    vertical-align: top;
-    border: 1px solid #ccc;
+  table:not(.pf-c-table) { 
+    td, th, tr {
+      padding: .5em;
+      vertical-align: top;
+      border: 1px solid #ccc;
+    }
   }
+
+  .pf-c-table {
+    margin-bottom: 0;
+    
+    td,
+    th:not(.pf-c-table__sort) {
+      border: none;
+    }
+
+    tr:nth-child(even) {
+      background-color: transparent;
+    }
+  }
+
 
   tr:nth-child(even) {background: #f1f1f1;}
   
