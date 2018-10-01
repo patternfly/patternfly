@@ -41,6 +41,7 @@ There are several properties available on the Example component to help with sty
 <Example heading="Heading" minHeight="20em" docs={docReference} fullPageOnly="">{example}</Example>;
 ```
 
+If an ID is needed for an element, please use the Handlebars unique ID helper.  This can be used by appending {{uniqueId} to the ID attribute so it looks like this:  id="badge-{{uniqueId}}".
 ### Handlebars names
 
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
