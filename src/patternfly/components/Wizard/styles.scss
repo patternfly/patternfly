@@ -98,6 +98,18 @@ a > .pf-c-wizard__item {
   }
 }
 
+// States
+.pf-m-current.pf-c-wizard__item,
+.pf-m-current > .pf-c-wizard__item {
+  font-weight: var(--pf-c-nav__list-link--m-current--FontWeight);
+  color: var(--pf-c-nav__list-link--m-current--Color);
+  background-color: var(--pf-c-nav__list-link--m-current--BackgroundColor);
+
+  &::after {
+    background-color: var(--pf-c-nav__list-link--m-current--after--BackgroundColor);
+  }
+}
+
 // Items Position
 .pf-c-wizard__item-position {
   margin-top: var(--pf-c-wizard__item-position--MarginTop);
