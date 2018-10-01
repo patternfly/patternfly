@@ -71,8 +71,8 @@
   display: inline-flex;
 }
 
-// List Items
-a > .pf-c-wizard__item {
+// List Items/Link
+.pf-c-wizard__link {
   display: flex;
   justify-content: flex-start;
   margin-right: var(--pf-c-wizard__item--MarginRight);
@@ -80,11 +80,11 @@ a > .pf-c-wizard__item {
   text-decoration: underline;
   border-bottom: 4px solid var(--pf-c-wizard__item--BottomBorderColor);
 
-  &:hover {
+  &:focus {
     border-bottom: 4px solid var(--pf-c-wizard__item-hover--BottomBorderColor);
   }
 
-  &:hover .pf-c-wizard__item-position-number {
+  &:focus .pf-c-wizard__item-position-number {
     width: 34px;
     height: 34px;
     margin-top: var(--pf-c-wizard__item-position-number-hover-MarginTop);
@@ -93,20 +93,17 @@ a > .pf-c-wizard__item {
     color: var(--pf-c-wizard__item-position-number-hover--Color);
   }
 
-  &:hover .pf-c-wizard__item-description-title {
+  &:focus .pf-c-wizard__item-description-title {
     color: var(--pf-c-wizard__item-description-title-hover--Color);
   }
 }
 
 // States
-.pf-m-current.pf-c-wizard__item,
-.pf-m-current > .pf-c-wizard__item {
-  font-weight: var(--pf-c-nav__list-link--m-current--FontWeight);
-  color: var(--pf-c-nav__list-link--m-current--Color);
-  background-color: var(--pf-c-nav__list-link--m-current--BackgroundColor);
+.pf-m-current > .pf-c-wizard__link {
+  background-color: var(--pf-c-wizard__item-description-title-hover--Color);
 
   &::after {
-    background-color: var(--pf-c-nav__list-link--m-current--after--BackgroundColor);
+    border-bottom: 4px solid var(--pf-c-wizard__item-hover--BottomBorderColor);
   }
 }
 
