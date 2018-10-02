@@ -2,25 +2,24 @@
 
 .pf-c-wizard {
   // Wizard sequence
-  // remove this when added to the wizard
   --pf-c-wizard__sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
 
-  // Wizard > Sequence > List > Item
+  // List Item
   --pf-c-wizard__sequence-item--MarginRight: 1px;
   --pf-c-wizard__sequence-item--MarginLeft: 1px;
 
-  // Wizard > Sequence > List > Item > Link
+  // Link
   --pf-c-wizard__sequence-link--BottomBorderColor: var(--pf-global--Color--200);
   --pf-c-wizard__sequence-link--hover--BottomBorderColor: var(--pf-global--primary-color--100);
   --pf-c-wizard__sequence-link--focus--BottomBorderColor: var(--pf-global--primary-color--100);
 
-  // Wizard > Sequence > List > Item > Link > Position
+  // Position
   --pf-c-wizard__sequence-link-position--MarginTop: var(--pf-global--spacer--md);
   --pf-c-wizard__sequence-link-position--MarginRight: var(--pf-global--spacer--md);
   --pf-c-wizard__sequence-link-position--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-wizard__sequence-link-position--MarginLeft: var(--pf-global--spacer--lg);
 
-  // Wizard > Sequence > List > Item > Link > Position > Number
+  // Position Number
   --pf-c-wizard__sequence-link-position-number--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-wizard__sequence-link-position-number--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-wizard__sequence-link-position-number--MarginTop: var(--pf-global--spacer--md);
@@ -30,31 +29,31 @@
   --pf-c-wizard__sequence-link-position-number--focus-MarginTop: var(--pf-global--spacer--md);
   --pf-c-wizard__sequence-link-position-number--focus-MarginBottom: var(--pf-global--spacer--sm);
 
-  // Wizard > Sequence > List > Item > Link > Position > Number > Color
+  // Position Number Color
   --pf-c-wizard__sequence-link-position-number--Color: var(--pf-global--Color--200);
   --pf-c-wizard__sequence-link-position-number--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-wizard__sequence-link-position-number--focus--Color: var(--pf-global--primary-color--100);
 
-  // Wizard > Sequence > List > Item > Link > Position > Number > Font
+  // Position Number Font
   --pf-c-wizard__sequence-link-position-number--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-wizard__sequence-link-position-number--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-wizard__sequence-link-position-number--hover--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-wizard__sequence-link-position-number--focus--FontSize: var(--pf-global--FontSize--xl);
 
-  // Wizard > Sequence > List > Item > Link > Position > Number > Border Radius
+  // Position Number Border Radius
   --pf-c-wizard__sequence-link-position-number--BorderRadius: var(--pf-global--BorderRadius--lg);
 
-  // Wizard > Sequence > List > Item > Link > Description
+  // Link Description
   --pf-c-wizard__sequence-link-description--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-wizard__sequence-link-description--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-wizard__sequence-link-description--MarginBottom: var(--pf-global--spacer--lg);
 
-  // Wizard > Sequence > List > Item > Link > Description > Title > Color
+  // Link Description Color
   --pf-c-wizard__sequence-link-description-title--Color: var(--pf-global--Color--light-100);
   --pf-c-wizard__sequence-link-description-title--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-wizard__sequence-link-description-title--focus--Color: var(--pf-global--primary-color--100);
 
-  // Wizard > Sequence > List > Item > Link > Description > Title > Font
+  // Link
   --pf-c-wizard__sequence-link-description-title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-wizard__sequence-link-description-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-wizard__sequence-link-description-title--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
@@ -80,14 +79,14 @@
 
 // Items inside of list
 .pf-c-wizard__sequence-item {
+  display: flex;
+  justify-content: flex-start;
   margin-right: var(--pf-c-wizard__sequence-item--MarginRight);
   margin-left: var(--pf-c-wizard__sequence-item--MarginLeft);
 }
 
 // Link
 .pf-c-wizard__sequence-link {
-  display: flex;
-  justify-content: flex-start;
   border-bottom: 4px solid var(--pf-c-wizard__sequence-link--BottomBorderColor);
 
   &:focus {
