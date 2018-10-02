@@ -108,14 +108,14 @@
   }
 }
 
-// States
+// Current State
 .pf-m-current > .pf-c-wizard__sequence-link {
   &::after {
     border-bottom: 4px solid var(--pf-c-wizard__item-hover--BottomBorderColor);
   }
 }
 
-// Items Position
+// Wizard Sequence Link Position
 .pf-c-wizard__link-position {
   margin-top: var(--pf-c-wizard__sequence-link-position--MarginTop);
   margin-right: var(--pf-c-wizard__sequence-link-position--MarginRight);
@@ -123,40 +123,36 @@
   margin-left: var(--pf-c-wizard__sequence-link-position--MarginLeft);
 }
 
-// Position Number
-.pf-c-wizard__item-position-number {
+// Wizard Sequence Link Position Number
+.pf-c-wizard__sequence-link-position-number {
   width: 25px;
   height: 25px;
   margin-top: var(--pf-c-wizard__sequence-link-position-number--MarginTop);
-  margin-bottom: var(--pf-c-wizard__item-position-number--MarginBottom);
-  font-size: var(--pf-c-wizard__item-position-number--FontSize);
-  font-weight: var(--pf-c-wizard__item-position-number--FontWeight);
-  color: var(--pf-c-wizard__item-position-number--Color);
+  margin-bottom: var(--pf-c-wizard__sequence-link-position-number--MarginBottom);
+  font-size: var(--pf-c-wizard__sequence-link-position-number--FontSize);
+  font-weight: var(--pf-c-wizard__sequence-link-position-number--FontWeight);
+  color: var(--pf-c-wizard__sequence-link-position-number--Color);
   text-align: center;
   border: 2px solid;
   border-radius: 50%;
 }
 
-// Items Description
-.pf-c-wizard__item-description {
-  margin-top: var(--pf-c-wizard__item-description--MarginTop);
-  margin-right: var(--pf-c-wizard__item-description--MarginRight);
-  margin-bottom: var(--pf-c-wizard__item-description--MarginBottom);
+// Wizard Sequence Link Position
+.pf-c-wizard__sequence-link-description {
+  margin-top: var(--pf-c-wizard__sequence-link-description--MarginTop);
+  margin-right: var(--pf-c-wizard__sequence-link-description--MarginRight);
+  margin-bottom: var(--pf-c-wizard__sequence-link-description--MarginBottom);
 }
 
 // Description Title
 .pf-c-wizard__item-description-title {
   display: inline-flex;
-  font-weight: var(--pf-c-wizard__item-description-title--FontWeight);
-  color: var(--pf-c-wizard__item-description-title--Color);
-
-  &:hover {
-    color: var(--pf-c-wizard__item-description-title-hover--Color);
-  }
+  font-weight: var(--pf-c-wizard__sequence-link-description-title--FontWeight);
+  color: var(--pf-c-wizard__sequence-link-description-title--Color);
 }
 
 // Description Status
 .pf-c-wizard__item-description-status {
-  font-size: var(--pf-c-wizard__item-description-status--FontSize);
-  color: var(--pf-c-wizard__item-description-status--Color);
+  font-size: var(--pf-c-wizard__sequence-description-status--FontSize);
+  color: var(--pf-c-wizard__sequence-description-status--Color);
 }
