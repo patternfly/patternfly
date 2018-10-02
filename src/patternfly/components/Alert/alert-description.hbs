@@ -1,1 +1,6 @@
-<p>This is a description of the notification content.</p>
+<p{{#if alert-description--modifier}} class="{{alert-description--modifier}}"{{/if}}
+  {{#if alert-description--attribute}}
+    {{{alert-description--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</p>

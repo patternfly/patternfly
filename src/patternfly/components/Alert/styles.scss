@@ -119,4 +119,5 @@
 
 .pf-c-alert__action {
   padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
+  white-space: nowrap;
 }
