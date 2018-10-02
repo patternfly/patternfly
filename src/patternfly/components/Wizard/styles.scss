@@ -9,12 +9,13 @@
   --pf-c-wizard__sequence-item--MarginLeft: 1px;
 
   // Link
-  --pf-c-wizard__sequence-link--BottomBorderColor: var(--pf-global--Color--200);
-  --pf-c-wizard__sequence-link--hover--BottomBorderColor: var(--pf-global--primary-color--100);
-  --pf-c-wizard__sequence-link--focus--BottomBorderColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-link--BorderBottomColor: var(--pf-global--Color--200);
+  --pf-c-wizard__sequence-link--BorderBottomHeight: 4px;
+  --pf-c-wizard__sequence-link--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-link--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Position
-  --pf-c-wizard__sequence-link-position--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-wizard__sequence-link-position--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-wizard__sequence-link-position--MarginRight: var(--pf-global--spacer--md);
   --pf-c-wizard__sequence-link-position--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-wizard__sequence-link-position--MarginLeft: var(--pf-global--spacer--lg);
@@ -22,12 +23,18 @@
   // Position Number
   --pf-c-wizard__sequence-link-position-number--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-wizard__sequence-link-position-number--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-wizard__sequence-link-position-number--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-wizard__sequence-link-position-number--hover-MarginTop: var(--pf-global--spacer--md);
-  --pf-c-wizard__sequence-link-position-number--hover-MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--focus-MarginTop: var(--pf-global--spacer--md);
-  --pf-c-wizard__sequence-link-position-number--focus-MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--Width: 25px;
+  --pf-c-wizard__sequence-link-position-number--Height: 25px;
+  --pf-c-wizard__sequence-link-position-number--hover--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--hover--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--hover--Width: 34px;
+  --pf-c-wizard__sequence-link-position-number--hover--Height: 34px;
+  --pf-c-wizard__sequence-link-position-number--focus--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--focus--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-link-position-number--focus--Width: 34px;
+  --pf-c-wizard__sequence-link-position-number--focus--Height: 34px;
 
   // Position Number Color
   --pf-c-wizard__sequence-link-position-number--Color: var(--pf-global--Color--200);
@@ -40,28 +47,31 @@
   --pf-c-wizard__sequence-link-position-number--hover--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-wizard__sequence-link-position-number--focus--FontSize: var(--pf-global--FontSize--xl);
 
-  // Position Number Border Radius
+  // Position Number Border
   --pf-c-wizard__sequence-link-position-number--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-wizard__sequence-link-position-number--BorderWeight: 2px;
+  --pf-c-wizard__sequence-link-position-number--BorderStyle: solid;
 
-  // Link Description
+  // Description
   --pf-c-wizard__sequence-link-description--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-wizard__sequence-link-description--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-wizard__sequence-link-description--MarginBottom: var(--pf-global--spacer--lg);
 
-  // Link Description Color
+  // Description Title Color
   --pf-c-wizard__sequence-link-description-title--Color: var(--pf-global--Color--light-100);
   --pf-c-wizard__sequence-link-description-title--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-wizard__sequence-link-description-title--focus--Color: var(--pf-global--primary-color--100);
 
-  // Link
+  // Description Title Font
   --pf-c-wizard__sequence-link-description-title--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-wizard__sequence-link-description-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-wizard__sequence-link-description-title--FontWeight: var(--pf-global--FontWeight--reguar);
   --pf-c-wizard__sequence-link-description-title--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-wizard__sequence-link-description-title--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
-  // Wizard > Sequence > List > Item > Link > Description > Status > Color
+  // Description Status Color
   --pf-c-wizard__sequence-link-description-status--Color: var(--pf-global--Color--200);
 
-  // Wizard > Sequence > List > Item > Link > Description > Status > Font
+  // Description Status Font
   --pf-c-wizard__sequence-link-description-status--FontSize: var(--pf-global--FontSize--xs);
 }
 
@@ -79,43 +89,75 @@
 
 // Items inside of list
 .pf-c-wizard__sequence-item {
-  display: flex;
-  justify-content: flex-start;
   margin-right: var(--pf-c-wizard__sequence-item--MarginRight);
   margin-left: var(--pf-c-wizard__sequence-item--MarginLeft);
 }
 
 // Link
 .pf-c-wizard__sequence-link {
-  border-bottom: 4px solid var(--pf-c-wizard__sequence-link--BottomBorderColor);
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--BorderBottomColor);
 
   &:focus {
-    border-bottom: 4px solid var(--pf-c-wizard__sequence-link--focus--BottomBorderColor);
+    border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--focus--BorderBottomColor);
+  }
+
+  &:hover {
+    border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--hover--BorderBottomColor);
   }
 
   &:focus .pf-c-wizard__sequence-link-position-number {
-    width: 34px;
-    height: 34px;
-    margin-top: var(--pf-c-wizard__sequence-link-position-number--focus-MarginTop);
-    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--focus-MarginBottom);
-    font-size: var(--pf-c-wizard__sequence-link-position-number--FontSize);
+    width: var(--pf-c-wizard__sequence-link-position-number--focus--Width);
+    height: var(--pf-c-wizard__sequence-link-position-number--focus--Height);
+    margin-top: var(--pf-c-wizard__sequence-link-position-number--focus--MarginTop);
+    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--focus--MarginBottom);
+    font-size: var(--pf-c-wizard__sequence-link-position-number--focus--FontSize);
     color: var(--pf-c-wizard__sequence-link-position-number--focus--Color);
   }
 
+  &:hover .pf-c-wizard__sequence-link-position-number {
+    width: var(--pf-c-wizard__sequence-link-position-number--hover--Width);
+    height: var(--pf-c-wizard__sequence-link-position-number--hover--Height);
+    margin-top: var(--pf-c-wizard__sequence-link-position-number--hover--MarginTop);
+    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--hover--MarginBottom);
+    font-size: var(--pf-c-wizard__sequence-link-position-number--hover--FontSize);
+    color: var(--pf-c-wizard__sequence-link-position-number--hover--Color);
+  }
+
   &:focus .pf-c-wizard__sequence-link-description-title {
+    font-weight: var(--pf-c-wizard__sequence-link-description-title--focus--FontWeight);
     color: var(--pf-c-wizard__sequence-link-description-title--focus--Color);
+  }
+
+  &:hover .pf-c-wizard__sequence-link-description-title {
+    font-weight: var(--pf-c-wizard__sequence-link-description-title--hover--FontWeight);
+    color: var(--pf-c-wizard__sequence-link-description-title--hover--Color);
   }
 }
 
 // Current State
+.pf-m-current.pf-c-wizard__sequence-link,
 .pf-m-current > .pf-c-wizard__sequence-link {
-  &::after {
-    border-bottom: 4px solid var(--pf-c-wizard__item-hover--BottomBorderColor);
+  border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--focus--BorderBottomColor);
+
+  .pf-c-wizard__sequence-link-position-number {
+    width: var(--pf-c-wizard__sequence-link-position-number--focus--Width);
+    height: var(--pf-c-wizard__sequence-link-position-number--focus--Height);
+    margin-top: var(--pf-c-wizard__sequence-link-position-number--focus--MarginTop);
+    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--focus--MarginBottom);
+    font-size: var(--pf-c-wizard__sequence-link-position-number--focus--FontSize);
+    color: var(--pf-c-wizard__sequence-link-position-number--focus--Color);
+  }
+
+  .pf-c-wizard__sequence-link-description-title {
+    font-weight: var(--pf-c-wizard__sequence-link-description-title--focus--FontWeight);
+    color: var(--pf-c-wizard__sequence-link-description-title--focus--Color);
   }
 }
 
 // Wizard Sequence Link Position
-.pf-c-wizard__link-position {
+.pf-c-wizard__sequence-link-position {
   margin-top: var(--pf-c-wizard__sequence-link-position--MarginTop);
   margin-right: var(--pf-c-wizard__sequence-link-position--MarginRight);
   margin-bottom: var(--pf-c-wizard__sequence-link-position--MarginBottom);
@@ -124,15 +166,15 @@
 
 // Wizard Sequence Link Position Number
 .pf-c-wizard__sequence-link-position-number {
-  width: 25px;
-  height: 25px;
+  width: var(--pf-c-wizard__sequence-link-position-number--Width);
+  height: var(--pf-c-wizard__sequence-link-position-number--Height);
   margin-top: var(--pf-c-wizard__sequence-link-position-number--MarginTop);
   margin-bottom: var(--pf-c-wizard__sequence-link-position-number--MarginBottom);
   font-size: var(--pf-c-wizard__sequence-link-position-number--FontSize);
   font-weight: var(--pf-c-wizard__sequence-link-position-number--FontWeight);
   color: var(--pf-c-wizard__sequence-link-position-number--Color);
   text-align: center;
-  border: 2px solid;
+  border: var(--pf-c-wizard__sequence-link-position-number--BorderWeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle);
   border-radius: 50%;
 }
 
@@ -144,14 +186,14 @@
 }
 
 // Description Title
-.pf-c-wizard__item-description-title {
+.pf-c-wizard__sequence-link-description-title {
   display: inline-flex;
   font-weight: var(--pf-c-wizard__sequence-link-description-title--FontWeight);
   color: var(--pf-c-wizard__sequence-link-description-title--Color);
 }
 
 // Description Status
-.pf-c-wizard__item-description-status {
-  font-size: var(--pf-c-wizard__sequence-description-status--FontSize);
-  color: var(--pf-c-wizard__sequence-description-status--Color);
+.pf-c-wizard__sequence-link-description-status {
+  font-size: var(--pf-c-wizard__sequence-link-description-status--FontSize);
+  color: var(--pf-c-wizard__sequence-link-description-status--Color);
 }
