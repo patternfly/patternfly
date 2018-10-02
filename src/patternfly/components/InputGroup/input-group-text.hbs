@@ -1,10 +1,18 @@
 <{{ inputGroupTextType }} class="pf-c-input-group__text{{#if input-group-text--modifier}} {{input-group-text--modifier}}{{/if}}"
-{{#if aria-label}}
-    aria-label="{{aria-label}}"
-{{/if}}
-{{#if input-group-text--attribute}}
+  {{#if aria-label}}
+  	aria-label="{{aria-label}}"
+	{{/if}}
+	{{#if input-group-text--attribute}}
     {{{ input-group-text--attribute}}}
-{{/if}}
->
-    {{> @partial-block}}
+	{{/if}}>
+	{{> @partial-block}}
+	{{#if input-group-text--HasDollarSignIcon}}
+		{{> input-group-dollarsign-icon}}
+	{{/if}}
+	{{#if input-group-text--HasAtIcon}}
+		{{> input-group-at-icon}}
+	{{/if}}
+	{{#if input-group-text--HasCalendarIcon}}
+		{{> input-group-calendar-icon}}
+	{{/if}}
 </{{ inputGroupTextType }}>

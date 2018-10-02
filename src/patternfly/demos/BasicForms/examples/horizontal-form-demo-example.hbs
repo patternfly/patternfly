@@ -3,23 +3,22 @@
     {{#> form-group }}
       {{#> form-label form-label--attribute='for="horizontal-form-name"' required="true"}}Name{{/form-label}}
       {{#> horizontal-form-group}}
-        {{#> form-control controlType="input" input="true" type="text" id="horizontal-form-name" name="horizontal-form-name" required="true" aria-describedby="horizontal-form-name-helper2" }}
+        {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="horizontal-form-name" name="horizontal-form-name" aria-describedby="horizontal-form-name-helper2"'}}
         {{/form-control}}
         {{#> form-helper-text form-helper-text--attribute='id="horizontal-form-name-helper2" aria-live="polite"'}}Please provide your full name{{/form-helper-text}}
       {{/horizontal-form-group}}
     {{/form-group}}
-
     {{#> form-group }}
       {{#> form-label form-label--attribute='for="horizontal-form-email"' }}Email{{/form-label}}
       {{#> horizontal-form-group}}
-        {{#> form-control controlType="input" input="true" type="email" id="horizontal-form-email" name="horizontal-form-email" }}
+        {{#> form-control controlType="input" form-control--attribute='input="true" type="email" id="horizontal-form-email" name="horizontal-form-email"'}}
         {{/form-control}}
       {{/horizontal-form-group}}
     {{/form-group}}
     {{#> form-group }}
       {{#> form-label form-label--attribute='for="horizontal-form-title"'}}Your title{{/form-label}}        
       {{#> horizontal-form-group}}
-        {{#> form-control controlType="select" id="horizontal-form-title" name="horizontal-form-title" }}
+        {{#> form-control controlType="select" form-control--attribute='id="horizontal-form-title" name="horizontal-form-title"'}}
           <option value="" selected>Please choose</option>
           <option value="Mr">Mr</option>
           <option value="Miss">Miss</option>
@@ -33,11 +32,10 @@
     {{#> form-group }}
       {{#> form-label form-label--attribute='for="horizontal-form-exp"'}}Your experience{{/form-label}}
       {{#> horizontal-form-group}}
-        {{#> form-control controlType="textarea" name="horizontal-form-exp" id="horizontal-form-exp"}}
+        {{#> form-control controlType="textarea" form-control--attribute='name="horizontal-form-exp" id="horizontal-form-exp"'}}
         {{/form-control}} 
       {{/horizontal-form-group}}
     {{/form-group}}
-
     {{#> form-group}}
       {{#> form-label form-label--attribute='for="horizontal-radio1"'}}Can we follow up via email?{{/form-label}}
       {{#> horizontal-form-group}}  
@@ -56,14 +54,14 @@
         {{#> toolbar}}
           {{#> toolbar-group}}
             {{#> toolbar-item}}
-              {{#> button btnClass="pf-m-primary"}}
+              {{#> button button--modifier="pf-m-primary"}}
                 Submit form
               {{/button}}
             {{/toolbar-item}}
           {{/toolbar-group}}
           {{#> toolbar-group}}
             {{#> toolbar-item}}
-              {{#> button btnClass="pf-m-secondary"}}
+              {{#> button button--modifier="pf-m-secondary"}}
                 Cancel
               {{/button}}
             {{/toolbar-item}}

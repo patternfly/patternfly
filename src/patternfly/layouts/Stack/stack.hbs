@@ -1,3 +1,6 @@
-<div class="pf-l-stack{{#if classModifier }} {{ classModifier }}{{/if}}">
-  {{> @partial-block }}
+<div class="pf-l-stack{{#if stack--modifier}} {{stack--modifier}}{{/if}}"
+{{#if stack--attribute}}
+    {{{ stack--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
 </div>

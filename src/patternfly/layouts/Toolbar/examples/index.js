@@ -6,7 +6,7 @@ import ToolbarSectionExampleRaw from '!raw!./toolbar-section-example.hbs';
 import docs from '../docs/code.md';
 import ToolbarBasicExample from './toolbar-basic-example.hbs';
 import ToolbarSectionExample from './toolbar-section-example.hbs';
-import '../styles.scss';
+import '../toolbar.scss';
 
 export const Docs = docs;
 

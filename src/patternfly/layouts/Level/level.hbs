@@ -1,3 +1,6 @@
-<div class="pf-l-level{{#if modifierClass }} {{ modifierClass }}{{/if}} Documentation-container-tall">
+<div class="pf-l-level{{#if level--modifier}} {{level--modifier}}{{/if}} Documentation-container-tall"
+  {{#if level--attribute}}
+    {{{level--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>

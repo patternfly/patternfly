@@ -10,7 +10,7 @@ import ButtonStatesTemplate from './button-states-example.hbs';
 import ButtonBlockTemplate from './button-block-example.hbs';
 import ButtonLinkExample from './button-link-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../button.scss';
 
 export const Docs = docs;
 

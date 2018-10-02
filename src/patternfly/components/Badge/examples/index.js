@@ -6,7 +6,7 @@ import BadgeUnreadExampleRaw from '!raw!./badge-unread-example.hbs';
 import BadgeReadExample from './badge-read-example.hbs';
 import BadgeUnreadExample from './badge-unread-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../badge.scss';
 
 export const Docs = docs;
 

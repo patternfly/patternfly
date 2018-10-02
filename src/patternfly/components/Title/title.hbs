@@ -1,3 +1,6 @@
-<{{ titleType }} class="pf-c-title {{ pf-c-title--Modifier }}" {{#if pf-c-title--ID }} id="{{ pf-c-title--ID }}" {{/if}}>
-    {{> @partial-block }}
+<{{ titleType }} class="pf-c-title{{#if title--modifier}} {{title--modifier}}{{/if}}"
+	{{#if title--attribute}}
+   {{{ title--attribute}}}
+ 	{{/if}}>
+  {{> @partial-block }}
 </{{ titleType }}> 

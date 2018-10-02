@@ -1,3 +1,6 @@
-<div class="pf-l-alignment {{ pf-c-alignment--Modifier }}">
-  {{> @partial-block }}
+<div class="pf-l-alignment{{#if alignment--modifier}} {{alignment--modifier}}{{/if}}"
+  {{#if alignment--attribute}}
+    {{{alignment--attribute}}}
+  {{/if}}
+  {{> @partial-block}}
 </div>

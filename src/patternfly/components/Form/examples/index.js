@@ -10,7 +10,7 @@ import FormHorizontalAlignLabelsExample from './form-horizontal-align-labels-exa
 import FormHelpTextExample from './form-help-text-example.hbs';
 import FormActionGroupExample from './form-action-group-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../form.scss';
 
 export const Docs = docs;
 

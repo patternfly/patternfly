@@ -18,7 +18,7 @@ import GridOffsets from './grid-offsets-example.hbs';
 import GridResponsive from './grid-responsive-example.hbs';
 import GridRowspan from './grid-rowspan-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../grid.scss';
 
 export const Docs = docs;
 

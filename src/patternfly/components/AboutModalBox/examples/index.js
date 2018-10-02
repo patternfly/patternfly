@@ -3,7 +3,7 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
 import AboutModalBoxExample from './about-modal-box-example.hbs';
-import '../styles.scss';
+import '../about-modal-box.scss';
 
 export const Docs = docs;
 

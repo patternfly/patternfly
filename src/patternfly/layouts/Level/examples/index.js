@@ -8,7 +8,7 @@ import LevelTwo from './level-two-example.hbs';
 import LevelThree from './level-three-example.hbs';
 import LevelGutters from './level-gutters-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../level.scss';
 
 export const Docs = docs;
 
