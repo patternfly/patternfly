@@ -27,7 +27,7 @@ import ProgressNoMeasureFailureExample from './progress-no-measure-failure-examp
 import ProgressDynamicExample from './progress-dynamic-example.hbs';
 import progressDynamicExampleDoc from '../docs/progress-dynamic.md';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../progress.scss';
 
 export const Docs = docs;
 

@@ -6,7 +6,7 @@ import GalleryHasGutterRaw from '!raw!./gallery-has-gutter-example.hbs';
 import Gallery from './gallery-example.hbs';
 import GalleryHasGutter from './gallery-has-gutter-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../gallery.scss';
 
 export const Docs = docs;
 

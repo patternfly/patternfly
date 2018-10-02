@@ -8,7 +8,7 @@ import ModalBoxBasicExample from './modal-box-basic-example.hbs';
 import ModalBoxLgExample from './modal-box-lg-example.hbs';
 import ModalBoxNoHeaderExample from './modal-box-no-header-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../modal-box.scss';
 
 export const Docs = docs;
 

@@ -13,7 +13,7 @@ import TooltipBottomExample from './tooltip-bottom-example.hbs';
 import TooltipLeftExample from './tooltip-left-example.hbs';
 
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../tooltip.scss';
 
 export const Docs = docs;
 

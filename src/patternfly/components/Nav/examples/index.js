@@ -23,7 +23,7 @@ import NavListTertiaryExample from './nav-tertiary-list-example.hbs';
 import NavMixedExample from './nav-mixed-example.hbs';
 
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../nav.scss';
 
 export const Docs = docs;
 

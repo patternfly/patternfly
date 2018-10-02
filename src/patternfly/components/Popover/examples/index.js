@@ -13,7 +13,7 @@ import PopoverBottomExample from './popover-bottom-example.hbs';
 import PopoverLeftExample from './popover-left-example.hbs';
 
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../popover.scss';
 
 export const Docs = docs;
 

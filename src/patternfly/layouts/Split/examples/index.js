@@ -6,7 +6,7 @@ import SplitGuttersRaw from '!raw!./split-gutters-example.hbs';
 import Split from './split-example.hbs';
 import SplitGutters from './split-gutters-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../split.scss';
 
 export const Docs = docs;
 

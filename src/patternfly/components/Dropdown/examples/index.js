@@ -14,7 +14,7 @@ import DropdownKebabAlignRight from './dropdown-kebab-align-right-example.hbs';
 import DropdownAlignRight from './dropdown-align-right-example.hbs';
 import DropdownTop from './dropdown-top-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../dropdown.scss';
 
 export const Docs = docs;
 

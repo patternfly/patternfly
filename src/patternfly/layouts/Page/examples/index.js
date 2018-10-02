@@ -6,7 +6,7 @@ import PageLayoutNavHorizontalExampleRaw from '!raw!./page-layout-nav-horizontal
 import PageLayoutNavVerticalExample from './page-layout-nav-vertical-example.hbs';
 import PageLayoutNavHorizontalExample from './page-layout-nav-horizontal-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../page.scss';
 
 export const Docs = docs;
 

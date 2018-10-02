@@ -26,7 +26,7 @@ import tableCompactDoc from '../docs/table-compact.md';
 import TableWidthExample from './table-width-example.hbs';
 import tableWidthDoc from '../docs/table-width.md';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../table.scss';
 
 export const Docs = docs;
 

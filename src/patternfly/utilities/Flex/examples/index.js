@@ -26,7 +26,7 @@ import FlexFillExample from './flex-fill-example.hbs';
 import FlexWrapExample from './flex-wrap-example.hbs';
 
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../flex.scss';
 
 export const Docs = docs;
 
