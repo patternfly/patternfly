@@ -1,18 +1,21 @@
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
   {{#> alert-icon alert-icon--info="true"}}
   {{/alert-icon}}
-  {{#> alert-body alert-HasDescription="true"}}
+  {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
       {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
       Info notification title
     {{/alert-title}}
+    {{#> alert-description}}
+			Info notification description. <a href="#">This is a link.</a>
+		{{/alert-description}}
     {{/alert-body}}
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
   {{#> alert-icon alert-icon--info="true"}}
   {{/alert-icon}}
-  {{#> alert-body}}
+  {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
       {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
       Info notification title
@@ -28,10 +31,10 @@
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
   {{#> alert-icon alert-icon--info="true"}}
   {{/alert-icon}}
-  {{#> alert-body}}
+  {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
       {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
-      Success notification title
+      Info notification title
     {{/alert-title}}
   {{/alert-body}}
 {{/alert}}

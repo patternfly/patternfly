@@ -202,7 +202,8 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
         .concat(DEMO_PATH)
         .concat(UTILITIES_PATHS)
-        .concat(UPGRADES_PATHS)
+        .concat(UPGRADES_PATHS),
+      helperDirs: path.resolve(__dirname, './build/helpers')
     };
     return current;
   });

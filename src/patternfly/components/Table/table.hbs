@@ -1,0 +1,9 @@
+<table class="pf-c-table{{#if table--modifier}} {{table--modifier}}{{/if}}" 
+  {{#if table--grid}}
+    role="grid"
+  {{/if}}
+  {{#if table--attribute}}
+    {{{table--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</table>
