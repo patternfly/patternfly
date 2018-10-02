@@ -1,12 +1,39 @@
-<button class="pf-c-button{{#if btnClass}} {{btnClass}}{{/if}}{{#if button--disabled}} pf-m-disabled{{/if}}"
-  {{#if btnAttributes}}
-    {{{ btnAttributes }}} 
-  {{/if}}
-  {{#if button--disabled}}
-    disabled 
+<button class="pf-c-button{{#if button--modifier}} {{button--modifier}}{{/if}}"
+  {{#if button--attribute}}
+    {{{ button--attribute}}}
   {{/if}}>
-
-  {{#if @partial-block}}
-    {{> @partial-block }}
+  {{#if button--HasPlusCircleIcon}}
+    {{> button-plus-circle-icon}}
   {{/if}}
+  {{#if button--HasTimesIcon}}
+    {{> button-times-icon}}
+  {{/if}}
+  {{#if button--HasSearchIcon}}
+    {{> button-search-icon}}
+  {{/if}}
+  {{#if button--HasQuestionCircleIcon}}
+    {{> button-question-circle-icon}}
+  {{/if}}
+  {{#if button--HasBarsIcon}}
+    {{> button-bars-icon}}
+  {{/if}}
+  {{#if button--HasBellIcon}}
+    {{> button-bell-icon}}
+  {{/if}}
+  {{#if button--HasCogIcon}}
+    {{> button-cog-icon}}
+  {{/if}}
+  {{#if button--HasEllipsisIcon}}
+    {{> button-ellipsis-icon}}
+  {{/if}}
+  {{#if button--HasSortAlphaDownIcon}}
+    {{> button-sort-alphadown-icon}}
+  {{/if}}
+  {{#if button--HasTableIcon}}
+    {{> button-table-icon}}
+  {{/if}}
+  {{#if button--HasListIcon}}
+    {{> button-list-icon}}
+  {{/if}}
+  {{> @partial-block}}
 </button>

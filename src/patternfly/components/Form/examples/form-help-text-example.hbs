@@ -1,14 +1,22 @@
 {{#> form}}
   {{#> form-group}}
-    {{#> form-label form-label--attribute='for="simple-form-name"' required="true"}}Name{{/form-label}}
-    {{#> form-control controlType="input" input="true" type="text" id="simple-form-name" name="simple-form-name" required="true" aria-errormessage="simple-form-name-helper-1"}}
+    {{#> form-label form-label--attribute='for="simple-form-name"' required='true'}}
+      Name
+    {{/form-label}}
+    {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="simple-form-name" name="simple-form-name" aria-errormessage="simple-form-name-helper-1"'}}
     {{/form-control}}
-    {{#> form-helper-text form-helper-text--modifier='id="simple-form-name-helper-1" aria-live="polite"'}}This is helper text{{/form-helper-text}}
+    {{#> form-helper-text form-helper-text--modifier='id="simple-form-name-helper-1" aria-live="polite"'}}
+      This is helper text
+    {{/form-helper-text}}
   {{/form-group}}
   {{#> form-group}}
-    {{#> form-label form-label--attribute='for="simple-form-address"' required="true"}}address{{/form-label}}
-    {{#> form-control controlType="input" input="true" type="text" id="simple-form-name" name="simple-form-name" required="true" aria-invalid="true" aria-errormessage="simple-form-name-helper-2"}}
+    {{#> form-label form-label--attribute='for="simple-form-address"' required='true'}}
+      address
+    {{/form-label}}
+    {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="simple-form-name" name="simple-form-name" aria-invalid="true" aria-errormessage="simple-form-name-helper-2"'}}
     {{/form-control}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="simple-form-name-helper-2" aria-live="polite"'}}This is helper text for an invalid input{{/form-helper-text}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="simple-form-name-helper-2" aria-live="polite"'}}
+      This is helper text for an invalid input
+    {{/form-helper-text}}
   {{/form-group}}
 {{/form}}

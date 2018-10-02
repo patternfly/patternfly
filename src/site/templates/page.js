@@ -11,10 +11,7 @@ export default ({ data }) => {
 
   return (
     <div className="page-template">
-      <div
-        className="page-template__content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <div className="page-template__content" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 };

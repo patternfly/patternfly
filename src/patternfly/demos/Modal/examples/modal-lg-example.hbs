@@ -1,14 +1,13 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifiers="pf-m-lg" modal-box--attributes='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
+      {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
         {{#> modal-box-close}}
-          {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
-            <i class="fas fa-times"></i>
+          {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close Dialog"'}}
           {{/button}}
         {{/modal-box-close}}
         {{#> modal-box-header}}
-          {{#> modal-box-header-title modal-box-header-title--attributes='id="modal-lg-title"'}}
+          {{#> modal-box-header-title modal-box-header-title--attribute='id="modal-lg-title"'}}
             This header text is long and will wrap. This text will be truncated when the viewport height or width is limited. To see this in action, reduce the height and/or width of the viewport.
           {{/modal-box-header-title}}
         {{/modal-box-header}}
@@ -20,7 +19,7 @@
           {{#> button}}
             Cancel
           {{/button}}
-          {{#> button btnClass="pf-m-primary"}}
+          {{#> button button--modifier="pf-m-primary"}}
             Save
           {{/button}}
         {{/modal-box-footer}}

@@ -4,10 +4,7 @@ export default ({ data }) => {
   const { html } = data.markdownRemark;
   return (
     <div className="documentation-template">
-      <div
-        className="documentation-template__content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <div className="documentation-template__content" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 };
