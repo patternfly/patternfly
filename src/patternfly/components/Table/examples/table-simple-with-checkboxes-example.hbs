@@ -1,0 +1,80 @@
+{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}} 
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}} 
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}} 
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last Commit
+      {{/table-th}} 
+      {{#> table-td}}{{/table-td}} 
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="simple-node1"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <span id="simple-node1">Node 1</span>
+      {{/table-th}}      
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        25
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='id="simple-action1" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}    
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="simple-node2"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <span id="simple-node2">Node 2</span>
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}      
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        25
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}  
+      {{#> table-td table-td--action="true"}}
+        {{#> button btnClass="pf-m-plain" btnAttributes='id="simple-action2" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}

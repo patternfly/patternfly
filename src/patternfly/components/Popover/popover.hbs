@@ -1,23 +1,10 @@
-<div class="Preview__overlay">
-  <div class="Preview__overlay-container {{direction}}">
-    <div class="pf-c-popover {{direction}}">
-      <div class="pf-c-popover__arrow"></div>
-      <div class="pf-c-popover__content" role="dialog" aria-modal="true" aria-labelledby="{{popover-title-id}}" aria-describedby="{{popover-description-id}}">
-        <div class="pf-c-popover__close">
-          <button class="pf-c-button pf-m-plain" aria-label="Close">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <header class="pf-c-popover__header">
-          <h1 class="pf-c-popover__header-title" id="{{popover-title-id}}">
-            {{header}}
-          </h1>
-        </header>
-        <div class="pf-c-popover__body" id="{{popover-description-id}}">
-          {{> @partial-block}}
-        </div>
-      </div>
-    </div>
-  </div>
-  {{#> popover-parent }} {{/popover-parent}}
+<div class="pf-c-popover{{#if popover--modifier}} {{popover--modifier}}{{/if}}"
+  role="dialog"
+  aria-modal="true"
+  {{#if popover--attribute}}
+    {{popover--attribute}} 
+  {{/if}}>
+  {{#> popover-arrow}}
+  {{/popover-arrow}}
+  {{> @partial-block}}
 </div>

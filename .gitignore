@@ -8,6 +8,7 @@ public/
 static/admin/*.bundle.*
 local/
 tmp/
+src/icons/**/*.svg
 
 .DS_Store
 .codetoolsrc.js
