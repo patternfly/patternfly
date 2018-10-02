@@ -8,7 +8,7 @@ import ListSimpleExample from './list-simple-example.hbs';
 import ListInlineExample from './list-inline-example.hbs';
 import ListGridExample from './list-grid-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../list.scss';
 
 export const Docs = docs;
 

@@ -15,7 +15,6 @@ import PageLayoutSimpleNavExample from './page-layout-simple-nav-example.hbs';
 import PageLayoutGroupedNavExample from './page-layout-grouped-nav-example.hbs';
 
 import docs from '../docs/code.md';
-import '../styles.scss';
 
 export const Docs = docs;
 

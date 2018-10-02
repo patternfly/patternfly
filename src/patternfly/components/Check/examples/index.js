@@ -6,7 +6,7 @@ import CheckRadioExampleRaw from '!raw!./check-radio-example.hbs';
 import CheckCheckboxExample from './check-checkbox-example.hbs';
 import CheckRadioExample from './check-radio-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../check.scss';
 
 export const Docs = docs;
 

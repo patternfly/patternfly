@@ -4,7 +4,7 @@ import Example from '@siteComponents/Example';
 import InputgroupExampleRaw from '!raw!./input-group-example.hbs';
 import InputgroupExample from './input-group-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../input-group.scss';
 
 export const Docs = docs;
 

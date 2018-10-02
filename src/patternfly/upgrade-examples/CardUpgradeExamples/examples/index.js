@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
 import CardupgradeexamplesExample1 from './card-upgrade-examples-example1.hbs';
 import CardupgradeexamplesExample2 from './card-upgrade-examples-example2.hbs';
-import '../styles.scss';
 
 export const Docs = docs;
 

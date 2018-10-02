@@ -9,7 +9,7 @@ import SpacingPaddingExample from './spacing-padding-example.hbs';
 import SpacingCombinedExample from './spacing-combined-example.hbs';
 
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../spacing.scss';
 
 export const Docs = docs;
 

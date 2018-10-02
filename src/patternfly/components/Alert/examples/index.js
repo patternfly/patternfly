@@ -11,7 +11,7 @@ import AlertWarning from './alert-warning-example.hbs';
 import AlertDanger from './alert-danger-example.hbs';
 import AlertInfo from './alert-info-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../alert.scss';
 
 export const Docs = docs;
 

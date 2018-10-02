@@ -4,7 +4,7 @@ import Example from '@siteComponents/Example';
 import loginSimpleExampleRaw from '!raw!./login-example.hbs';
 import LoginSimpleExample from './login-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../login.scss';
 
 export const Docs = docs;
 

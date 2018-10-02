@@ -8,7 +8,7 @@ import SrOnlyExample from './accessibility-sr-only-example.hbs';
 import VisibleExample from './accessibility-visible-example.hbs';
 import HiddenExample from './accessibility-hidden-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../accessibility.scss';
 
 export const Docs = docs;
 

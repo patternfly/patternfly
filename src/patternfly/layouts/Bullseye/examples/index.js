@@ -4,7 +4,7 @@ import Example from '@siteComponents/Example';
 import BullseyeRaw from '!raw!./bullseye-example.hbs';
 import Bullseye from './bullseye-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../bullseye.scss';
 
 export const Docs = docs;
 
