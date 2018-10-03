@@ -4,9 +4,10 @@
   // Wizard sequence
   --pf-c-wizard__sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
 
-  // List Item
+  // Item
   --pf-c-wizard__sequence-item--MarginRight: 1px;
   --pf-c-wizard__sequence-item--MarginLeft: 1px;
+  --pf-c-wizard__sequence-item--MaxWidth: 200px;
 
   // Link
   --pf-c-wizard__sequence-link--BorderBottomColor: var(--pf-global--Color--200);
@@ -15,26 +16,30 @@
   --pf-c-wizard__sequence-link--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Position
-  --pf-c-wizard__sequence-link-position--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-wizard__sequence-link-position--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-wizard__sequence-link-position--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-wizard__sequence-link-position--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-position--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard__sequence-link-position--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-position--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard__sequence-link-position--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-wizard__sequence-link-position--hover--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-position--focus--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-position--hover--PaddingRight: 19px;
+  --pf-c-wizard__sequence-link-position--focus--PaddingRight: 19px;
+  --pf-c-wizard__sequence-link-position--hover--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-position--focus--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-position--hover--PaddingLeft: 27px;
+  --pf-c-wizard__sequence-link-position--focus--PaddingLeft: 27px;
 
   // Position Number
-  --pf-c-wizard__sequence-link-position-number--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-wizard__sequence-link-position-number--Width: 25px;
   --pf-c-wizard__sequence-link-position-number--Height: 25px;
-  --pf-c-wizard__sequence-link-position-number--hover--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--hover--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--hover--Width: 34px;
-  --pf-c-wizard__sequence-link-position-number--hover--Height: 34px;
-  --pf-c-wizard__sequence-link-position-number--focus--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--focus--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-wizard__sequence-link-position-number--focus--Width: 34px;
-  --pf-c-wizard__sequence-link-position-number--focus--Height: 34px;
+  --pf-c-wizard__sequence-link-position-number--hover--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-wizard__sequence-link-position-number--hover--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-wizard__sequence-link-position-number--hover--Width: 35px;
+  --pf-c-wizard__sequence-link-position-number--hover--Height: 35px;
+  --pf-c-wizard__sequence-link-position-number--focus--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-wizard__sequence-link-position-number--focus--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-wizard__sequence-link-position-number--focus--Width: 35px;
+  --pf-c-wizard__sequence-link-position-number--focus--Height: 35px;
 
   // Position Number Color
   --pf-c-wizard__sequence-link-position-number--Color: var(--pf-global--Color--200);
@@ -53,9 +58,12 @@
   --pf-c-wizard__sequence-link-position-number--BorderStyle: solid;
 
   // Description
-  --pf-c-wizard__sequence-link-description--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-wizard__sequence-link-description--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-wizard__sequence-link-description--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-description--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-description--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-wizard__sequence-link-description--PaddingRight: var(--pf-global--spacer--xl);
+
+  // Description Title
+  --pf-c-wizard__sequence-link-description--title--MaxWidth: 100px;
 
   // Description Title Color
   --pf-c-wizard__sequence-link-description-title--Color: var(--pf-global--Color--light-100);
@@ -85,12 +93,64 @@
 // Horizontal list
 .pf-c-wizard__sequence-list {
   display: inline-flex;
+  overflow: scroll;
 }
 
 // Items inside of list
 .pf-c-wizard__sequence-item {
+  max-width: var(--pf-c-wizard__sequence-item--MaxWidth);
   margin-right: var(--pf-c-wizard__sequence-item--MarginRight);
   margin-left: var(--pf-c-wizard__sequence-item--MarginLeft);
+}
+
+// Wizard Sequence Link Position
+.pf-c-wizard__sequence-link-position {
+  padding-top: var(--pf-c-wizard__sequence-link-position--PaddingTop);
+  padding-right: var(--pf-c-wizard__sequence-link-position--PaddingRight);
+  padding-bottom: var(--pf-c-wizard__sequence-link-position--PaddingBottom);
+  padding-left: var(--pf-c-wizard__sequence-link-position--PaddingLeft);
+}
+
+// Wizard Sequence Link Position Number
+.pf-c-wizard__sequence-link-position-number {
+  width: var(--pf-c-wizard__sequence-link-position-number--Width);
+  height: var(--pf-c-wizard__sequence-link-position-number--Height);
+  font-size: var(--pf-c-wizard__sequence-link-position-number--FontSize);
+  font-weight: var(--pf-c-wizard__sequence-link-position-number--FontWeight);
+  color: var(--pf-c-wizard__sequence-link-position-number--Color);
+  text-align: center;
+  border: var(--pf-c-wizard__sequence-link-position-number--BorderWeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle);
+  border-radius: 50%;
+}
+
+// Wizard Sequence Link Description
+.pf-c-wizard__sequence-link-description {
+  padding-top: var(--pf-c-wizard__sequence-link-description--PaddingTop);
+  padding-right: var(--pf-c-wizard__sequence-link-description--PaddingRight);
+  padding-bottom: var(--pf-c-wizard__sequence-link-description--PaddingBottom);
+}
+
+.pf-c-wizard__sequence-link-description-text {
+  display: flex;
+  align-items: center;
+}
+
+
+// Description Title
+.pf-c-wizard__sequence-link-description-title {
+  display: block;
+  max-width: var(--pf-c-wizard__sequence-link-description--title--MaxWidth);
+  overflow: hidden;
+  font-weight: var(--pf-c-wizard__sequence-link-description-title--FontWeight);
+  color: var(--pf-c-wizard__sequence-link-description-title--Color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Description Status
+.pf-c-wizard__sequence-link-description-status {
+  font-size: var(--pf-c-wizard__sequence-link-description-status--FontSize);
+  color: var(--pf-c-wizard__sequence-link-description-status--Color);
 }
 
 // Link
@@ -107,11 +167,25 @@
     border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--hover--BorderBottomColor);
   }
 
+  &:focus .pf-c-wizard__sequence-link-position {
+    padding-top: var(--pf-c-wizard__sequence-link-position--focus--PaddingTop);
+    padding-right: var(--pf-c-wizard__sequence-link-position--focus--PaddingRight);
+    padding-bottom: var(--pf-c-wizard__sequence-link-position--focus--PaddingBottom);
+    padding-left: var(--pf-c-wizard__sequence-link-position--focus--PaddingLeft);
+  }
+
+  &:hover .pf-c-wizard__sequence-link-position {
+    padding-top: var(--pf-c-wizard__sequence-link-position--hover--PaddingTop);
+    padding-right: var(--pf-c-wizard__sequence-link-position--hover--PaddingRight);
+    padding-bottom: var(--pf-c-wizard__sequence-link-position--hover--PaddingRighst);
+    padding-left: var(--pf-c-wizard__sequence-link-position--hover--PaddingLeft);
+  }
+
   &:focus .pf-c-wizard__sequence-link-position-number {
     width: var(--pf-c-wizard__sequence-link-position-number--focus--Width);
     height: var(--pf-c-wizard__sequence-link-position-number--focus--Height);
-    margin-top: var(--pf-c-wizard__sequence-link-position-number--focus--MarginTop);
-    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--focus--MarginBottom);
+    margin-top: 4px;
+    margin-bottom: 2px;
     font-size: var(--pf-c-wizard__sequence-link-position-number--focus--FontSize);
     color: var(--pf-c-wizard__sequence-link-position-number--focus--Color);
   }
@@ -119,8 +193,8 @@
   &:hover .pf-c-wizard__sequence-link-position-number {
     width: var(--pf-c-wizard__sequence-link-position-number--hover--Width);
     height: var(--pf-c-wizard__sequence-link-position-number--hover--Height);
-    margin-top: var(--pf-c-wizard__sequence-link-position-number--hover--MarginTop);
-    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--hover--MarginBottom);
+    margin-top: 4px;
+    margin-bottom: 2px;
     font-size: var(--pf-c-wizard__sequence-link-position-number--hover--FontSize);
     color: var(--pf-c-wizard__sequence-link-position-number--hover--Color);
   }
@@ -141,11 +215,16 @@
 .pf-m-current > .pf-c-wizard__sequence-link {
   border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--focus--BorderBottomColor);
 
+  .pf-c-wizard__sequence-position {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
   .pf-c-wizard__sequence-link-position-number {
     width: var(--pf-c-wizard__sequence-link-position-number--focus--Width);
     height: var(--pf-c-wizard__sequence-link-position-number--focus--Height);
-    margin-top: var(--pf-c-wizard__sequence-link-position-number--focus--MarginTop);
-    margin-bottom: var(--pf-c-wizard__sequence-link-position-number--focus--MarginBottom);
+    margin-top: 3px;
+    margin-bottom: 3px;
     font-size: var(--pf-c-wizard__sequence-link-position-number--focus--FontSize);
     color: var(--pf-c-wizard__sequence-link-position-number--focus--Color);
   }
@@ -154,46 +233,4 @@
     font-weight: var(--pf-c-wizard__sequence-link-description-title--focus--FontWeight);
     color: var(--pf-c-wizard__sequence-link-description-title--focus--Color);
   }
-}
-
-// Wizard Sequence Link Position
-.pf-c-wizard__sequence-link-position {
-  margin-top: var(--pf-c-wizard__sequence-link-position--MarginTop);
-  margin-right: var(--pf-c-wizard__sequence-link-position--MarginRight);
-  margin-bottom: var(--pf-c-wizard__sequence-link-position--MarginBottom);
-  margin-left: var(--pf-c-wizard__sequence-link-position--MarginLeft);
-}
-
-// Wizard Sequence Link Position Number
-.pf-c-wizard__sequence-link-position-number {
-  width: var(--pf-c-wizard__sequence-link-position-number--Width);
-  height: var(--pf-c-wizard__sequence-link-position-number--Height);
-  margin-top: var(--pf-c-wizard__sequence-link-position-number--MarginTop);
-  margin-bottom: var(--pf-c-wizard__sequence-link-position-number--MarginBottom);
-  font-size: var(--pf-c-wizard__sequence-link-position-number--FontSize);
-  font-weight: var(--pf-c-wizard__sequence-link-position-number--FontWeight);
-  color: var(--pf-c-wizard__sequence-link-position-number--Color);
-  text-align: center;
-  border: var(--pf-c-wizard__sequence-link-position-number--BorderWeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle);
-  border-radius: 50%;
-}
-
-// Wizard Sequence Link Position
-.pf-c-wizard__sequence-link-description {
-  margin-top: var(--pf-c-wizard__sequence-link-description--MarginTop);
-  margin-right: var(--pf-c-wizard__sequence-link-description--MarginRight);
-  margin-bottom: var(--pf-c-wizard__sequence-link-description--MarginBottom);
-}
-
-// Description Title
-.pf-c-wizard__sequence-link-description-title {
-  display: inline-flex;
-  font-weight: var(--pf-c-wizard__sequence-link-description-title--FontWeight);
-  color: var(--pf-c-wizard__sequence-link-description-title--Color);
-}
-
-// Description Status
-.pf-c-wizard__sequence-link-description-status {
-  font-size: var(--pf-c-wizard__sequence-link-description-status--FontSize);
-  color: var(--pf-c-wizard__sequence-link-description-status--Color);
 }
