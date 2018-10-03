@@ -4,6 +4,7 @@ import Example from '@siteComponents/Example';
 import DropdownExpandedRaw from '!raw!./dropdown-expanded-example.hbs';
 import DropdownBasicExpandedRaw from '!raw!./dropdown-basic-expanded-example.hbs';
 import DropdownSelectExpandedRaw from '!raw!./dropdown-select-expanded-example.hbs';
+import DropdownSelectExpandedSelectedRaw from '!raw!./dropdown-select-expanded-selected-example.hbs';
 import DropdownSelectRaw from '!raw!./dropdown-select-example.hbs';
 import DropdownMultiSelectRaw from '!raw!./dropdown-multi-select-example.hbs';
 import DropdownMultiSelectExpandedRaw from '!raw!./dropdown-multi-select-expanded-example.hbs';
@@ -15,6 +16,7 @@ import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
 import DropdownBasicExpanded from './dropdown-basic-expanded-example.hbs';
 import DropdownSelectExpanded from './dropdown-select-expanded-example.hbs';
+import DropdownSelectExpandedSelected from './dropdown-select-expanded-selected-example.hbs';
 import DropdownSelect from './dropdown-select-example.hbs';
 import DropdownMultiSelect from './dropdown-multi-select-example.hbs';
 import DropdownMultiSelectExpanded from './dropdown-multi-select-expanded-example.hbs';
@@ -35,6 +37,7 @@ export default () => {
   const dropdownExpanded = DropdownExpanded();
   const dropdownBasicExpanded = DropdownBasicExpanded();
   const dropdownSelectExpanded = DropdownSelectExpanded();
+  const dropdownSelectExpandedSelected = DropdownSelectExpandedSelected();
   const dropdownSelect = DropdownSelect();
   const dropdownMultiSelect = DropdownMultiSelect();
   const dropdownMultiSelectExpanded = DropdownMultiSelectExpanded();
@@ -66,9 +69,16 @@ export default () => {
         docs={DropdownSelectDoc}>
         {dropdownSelectExpanded}
       </Example>
+      <Example className="is-expanded-dropdown" 
+        heading="Dropdown Select (expanded, first item selected)" 
+        handlebars={DropdownSelectExpandedSelectedRaw}
+        docs={DropdownSelectDoc}>
+        {dropdownSelectExpandedSelected}
+      </Example>
       <Example 
         heading="Dropdown Select (collapsed)" 
-        handlebars={DropdownSelectRaw}>
+        handlebars={DropdownSelectRaw} 
+        docs={DropdownSelectDoc}>
         {dropdownSelect}
       </Example>
       <Example className="is-expanded-dropdown" heading="Dropdown Multi-Select (expanded)" handlebars={DropdownMultiSelectExpandedRaw} docs={DropdownMultiSelectDoc}>

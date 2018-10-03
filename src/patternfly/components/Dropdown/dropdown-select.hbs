@@ -1,11 +1,9 @@
 <ul class="pf-c-dropdown__menu" 
-role="listbox" 
-aria-labelledby="{{id}}" 
-aria-activedescendant="ID_REF" 
-{{#unless pf-c-dropdown--IsExpanded}}hidden="hidden"{{/unless}}>
-    <li class="pf-c-dropdown__menu-item" role="option" tabindex="0">Apples</li>
-    <li class="pf-c-dropdown__menu-item" role="option" tabindex="0">Oranges</li>
-    <li class="pf-c-dropdown__menu-item pf-m-disabled" role="option" >Bananas</li>
+aria-labelledby="{{id}}-label" 
+{{#unless pf-c-dropdown--IsExpanded}}hidden{{/unless}}>
+    <li><button class="pf-c-dropdown__menu-item" {{#if pf-c-dropdown--ItemIsSelected}} aria-pressed="true"{{else}} aria-pressed="false"{{/if}}>Apples</button></li>
+    <li><button class="pf-c-dropdown__menu-item" aria-pressed="false">Oranges</button></li>
+    <li><button class="pf-c-dropdown__menu-item" aria-pressed="false" disabled>Bananas</button></li>
     <li class="pf-c-dropdown__separator" role="separator"></li>
-    <li class="pf-c-dropdown__menu-item" role="option" tabindex="0">Carrots</li>
+    <li><button class="pf-c-dropdown__menu-item" aria-pressed="false">Carrots</button></li>
 </ul>
