@@ -1,7 +1,6 @@
 @import "../../patternfly-utilities";
 
 .pf-c-background-image {
-  --pf-c-background-image--BackgroundImageFilter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
   --pf-c-background-image--BackgroundImage--xs: url("#{$pf-global--image-path}/pfbg_576.jpg");
   --pf-c-background-image--BackgroundImage--xs-2x: url("#{$pf-global--image-path}/pfbg_576@2x.jpg");
   --pf-c-background-image--BackgroundImage--sm: url("#{$pf-global--image-path}/pfbg_768.jpg");
@@ -10,6 +9,7 @@
   --pf-c-background-image--BackgroundImage--md-2x: url("#{$pf-global--image-path}/pfbg_992@2x.jpg");
   --pf-c-background-image--BackgroundImage--lg: url("#{$pf-global--image-path}/pfbg_1200.jpg");
   --pf-c-background-image--BackgroundImage--xl: url("#{$pf-global--image-path}/pfbg_2000.jpg");
+  --pf-c-background-image--Filter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
 
   position: fixed;
   top: 0;
@@ -19,7 +19,7 @@
   height: 100%;
   background-color: var(--pf-global--BackgroundColor--dark-200);
   background-image: var(--pf-c-background-image--BackgroundImage--xs);
-  filter: var(--pf-c-background-image--BackgroundImageFilter);
+  filter: var(--pf-c-background-image--Filter);
   background-repeat: no-repeat;
   background-size: cover;
 
