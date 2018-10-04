@@ -1,52 +1,78 @@
-<h3 class="Preview__section-title">Section 1</h3>
-
-{{#> data-list data-list--modifier="pf-u-box-shadow-md"}}
+{{!-- Example 1 --}}
+<h2 class="Preview__section-title">Default fitting - example 1</h2>
+{{#> data-list data-list--modifier="pf-u-box-shadow-md" data-list--attribute='aria-label="Width modifier data list example"'}}
   {{#> data-list-item}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="width-check1" aria-labelledby="width-check1 width-cell1" id="width-check1" aria-label="Check"'}}{{/data-list-check}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="width-ex1-check1" aria-labelledby="width-ex1-check1 width-cell1" id="width-ex1-check1" aria-label="Check"'}}{{/data-list-check}}
     {{#> data-list-separator}}{{/data-list-separator}}
     {{#> data-list-cell}}
-      <span class="placeholder" id="width-cell1">default</span>
-    {{/data-list-cell}}
-    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-3"}}
-      <b class="placeholder">pf-m-flex-3</b>
+      <div class="Preview__placeholder" id="width-ex1-cell1">
+        <b>default</b>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </div>
     {{/data-list-cell}}
     {{#> data-list-cell}}
-      <span class="placeholder">default</span>
+      <div class="Preview__placeholder">
+        <b>default</b>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>      
+      </div>
+    {{/data-list-cell}}
+  {{/data-list-item}}
+{{/data-list}}
+
+{{!-- Example 2 --}}
+<h2 class="Preview__section-title">Flex modifiers - example 2</h2>
+{{#> data-list data-list--modifier="pf-u-box-shadow-md"}}
+  {{#> data-list-item}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="width-ex2-check1" aria-labelledby="width-ex2-check1 width-ex2-cell1" id="width-ex2-check1" aria-label="Check"'}}{{/data-list-check}}
+    {{#> data-list-separator}}{{/data-list-separator}}
+    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-2"}}
+      <div class="Preview__placeholder" id="width-ex2-cell1">
+        <b>.pf-m-flex-2</b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+    {{/data-list-cell}}
+    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-4"}}
+      <div class="Preview__placeholder">
+        <b>.pf-m-flex-4</b>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
   {{/data-list-item}}
 {{/data-list}}
 
-<h3 class="Preview__section-title">Section 2</h3>
-
-{{#> data-list data-list--modifier="pf-u-box-shadow-md"}}
-  {{#> data-list-item}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="width-check2" aria-labelledby="width-check2 width-cell2" id="width-check2" aria-label="Check"'}}{{/data-list-check}}
+{{!-- Example 3 --}}
+<h2 class="Preview__section-title">Flex modifiers - example 3</h2>
+{{#> data-list data-list--interactive="true" data-list--modifier="pf-u-box-shadow-md"}}
+  {{#> data-list-item data-list-item--expanded="true"}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="width-ex3-toggle1 width-ex3-cell1" id="width-ex3-toggle1" aria-label="Toggle" aria-expanded="true"'}}{{/data-list-toggle}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="width-ex3-check1" aria-labelledby="width-ex3-check1 width-ex3-cell1" id="width-ex3-check1" aria-label="Check"'}}{{/data-list-check}}
     {{#> data-list-separator}}{{/data-list-separator}}
-    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-3"}}
-      <b class="placeholder" id="width-cell2">pf-m-flex-3</b>
+    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-5"}}
+      <div class="Preview__placeholder" id="width-ex3-cell1">
+        <b>.pf-m-flex-5</b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
     {{/data-list-cell}}
-    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-4"}}
-      <b class="placeholder">pf-m-flex-4</b>
+    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-2"}}
+      <div class="Preview__placeholder">
+        <b>.pf-m-flex-2</b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
     {{/data-list-cell}}
     {{#> data-list-cell}}
-      <span class="placeholder">default</span>
+      <div class="Preview__placeholder">default</div>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
-  {{/data-list-item}}
-
-  {{#> data-list-item}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="width-check2" aria-labelledby="width-check2 width-cell2" id="width-check2" aria-label="Check"'}}{{/data-list-check}}
-    {{#> data-list-separator}}{{/data-list-separator}}
-    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-3"}}
-      <b class="placeholder" id="width-cell2">pf-m-flex-3</b>
-    {{/data-list-cell}}
-    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-4"}}
-      <b class="placeholder">pf-m-flex-4</b>
-    {{/data-list-cell}}
-    {{#> data-list-cell}}
-      <span class="placeholder">default</span>
-    {{/data-list-cell}}
-    {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
+    {{#> data-list-expandable-content}}
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    {{/data-list-expandable-content}}
   {{/data-list-item}}
 {{/data-list}}

@@ -1,4 +1,4 @@
-<li class="pf-c-data-list__item{{#if data-list-item--modifier}} {{data-list-item--modifier}}{{/if}}"
+<li class="pf-c-data-list__item{{#if data-list-item--modifier}} {{data-list-item--modifier}}{{/if}}{{#if data-list-item--expanded}} pf-m-expanded{{/if}}"
   {{#if data-list-item--attribute}}
     {{{data-list-item--attribute}}}
   {{/if}}
@@ -6,9 +6,10 @@
     onClick="(function(){
 
       let toggle = event.target;
+      let toggleParent = toggle.parentNode;
 
       // if toggle is clicked, return true
-      let buttonClick = toggle.classList.contains('pf-m-toggle') ? true : false;
+      let buttonClick = toggleParent.classList.contains('pf-c-data-list__toggle') ? true : false;
 
       if (buttonClick) {
         let toggleParent = toggle.parentNode.parentNode;

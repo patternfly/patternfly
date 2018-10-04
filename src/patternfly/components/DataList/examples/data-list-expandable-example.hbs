@@ -1,52 +1,44 @@
-{{#> data-list data-list--interactive="true" data-list--modifier="pf-u-box-shadow-md"}}
-  {{#> data-list-item data-list-item--modifier="pf-m-expanded"}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-cell1" id="ex-toggle1" aria-label="Toggle"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check1" aria-labelledby="ex-check1 ex-cell1" id="ex-check1" aria-label="Check"'}}{{/data-list-check}}
+{{!-- {{#> data-list data-list--interactive="true" data-list--modifier="pf-u-box-shadow-md" data-list--attribute='aria-label="Expandable data list example"'}} --}}
+{{#> data-list data-list--modifier="pf-u-box-shadow-md" data-list--attribute='aria-label="Expandable data list example"'}}
+  {{#> data-list-item data-list-item--expanded="true"}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-cell1" id="ex-toggle1" aria-label="Toggle" aria-expanded="true"'}}{{/data-list-toggle}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check1" aria-labelledby="ex-cell1" aria-label="Check"'}}{{/data-list-check}}
     {{#> data-list-separator}}{{/data-list-separator}}
-    {{#> data-list-cell data-list-cell--attribute='id="ex-cell1"'}}
-      <div>Primary textual cell</div>
+    {{#> data-list-cell}}
+      <div id="ex-cell1">Primary content</div>
       <a href="#">link</a>
     {{/data-list-cell}}
     {{#> data-list-cell}}
       <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </span>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
     {{#> data-list-expandable-content}}
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        tempor incididunt ut labore et dolore magna aliqua.
       </p>
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
   {{#> data-list-item}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-cell2" id="ex-toggle2" aria-label="Toggle"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check2" aria-labelledby="ex-check2 ex-cell2" id="ex-check2" aria-label="Check"'}}{{/data-list-check}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-cell2" id="ex-toggle2" aria-label="Toggle" aria-expanded="false"'}}{{/data-list-toggle}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check2" aria-labelledby="ex-cell2" aria-label="Check"'}}{{/data-list-check}}
     {{#> data-list-separator}}{{/data-list-separator}}
-    {{#> data-list-cell data-list-cell--attribute='id="ex-cell2"'}}
-      <div>Primary textual cell</div>
-      <a href="#">link</a>
+    {{#> data-list-cell}}
+      <div id="ex-cell2">Primary content</div>
     {{/data-list-cell}}
     {{#> data-list-cell}}
       <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+        Lorem ipsum dolor sit amet.
       </span>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
     {{#> data-list-expandable-content}}
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        tempor incididunt ut labore et dolore magna aliqua.
       </p>
     {{/data-list-expandable-content}}
   {{/data-list-item}}

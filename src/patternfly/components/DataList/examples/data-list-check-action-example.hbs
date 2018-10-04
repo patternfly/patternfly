@@ -1,42 +1,25 @@
-{{#> data-list data-list--modifier='pf-u-box-shadow-md'}}
+{{#> data-list data-list--modifier='pf-u-box-shadow-md' data-list--attribute='aria-label="Checkbox and action data list example"'}}
   {{#> data-list-item}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="check-action-check1" aria-labelledby="check-action-check1 check-action-cell1" id="check-action-check1" aria-label="Check"'}}{{/data-list-check}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="check-action-check1" aria-labelledby="check-action-cell1" aria-label="Check"'}}{{/data-list-check}}
     {{#> data-list-separator}}{{/data-list-separator}}
     {{#> data-list-cell}}
-      <span id='check-action-cell1'>Primary textual cell 1</span>
+      <span id='check-action-cell1'>Primary content</span>
     {{/data-list-cell}}
     {{#> data-list-cell}}
-      <span>Primary textual cell 2</span>
+      Secondary content
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
   {{/data-list-item}}
 
   {{#> data-list-item}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="check-action-check2" aria-labelledby="check-action-check2 check-action-cell2" id="check-action-check2" aria-label="Check"'}}{{/data-list-check}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="check-action-check2" aria-labelledby="check-action-cell2" aria-label="Check"'}}{{/data-list-check}}
     {{#> data-list-separator}}{{/data-list-separator}}
     {{#> data-list-cell}}
-      <span id='check-action-cell1'>Primary textual cell 1</span>
+      <span id='check-action-cell2'>Primary content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</span>
     {{/data-list-cell}}
     {{#> data-list-cell}}
-      <span id='check-action-cell1'>Primary textual cell 2</span>
+      Secondary content
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-label="Actions"'}}{{/data-list-action}}
   {{/data-list-item}}
 {{/data-list}}
-
-{{!-- {{#> data-list}}
-  {{#> data-list-item}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="simple-check1" aria-labelledby="simple-check1 simple-cell1" id="simple-check1" aria-label="Check"'}}{{/data-list-check}}
-    {{#> data-list-separator}}{{/data-list-separator}}
-    {{#> data-list-cell}}
-      <span class="placeholder" id="simple-cell1">Default simple</span>
-    {{/data-list-cell}}
-    {{#> data-list-cell data-list-cell--modifier="pf-m-flex-3"}}
-      <span class="placeholder">Secondary textual cell</span>
-    {{/data-list-cell}}
-    {{#> data-list-cell}}
-      <span class="placeholder">Default simple</span>
-    {{/data-list-cell}}
-    {{#> data-list-action btnAttributes='aria-labelledby="simple-action1 simple-cell1" id="simple-action1" aria-label="Actions"'}}{{/data-list-action}}
-  {{/data-list-item}}
-{{/data-list}} --}}

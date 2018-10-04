@@ -1,13 +1,25 @@
-{{#> data-list data-list--modifier='pf-u-box-shadow-md'}}
+{{#> data-list data-list--modifier='pf-u-box-shadow-md' data-list--attribute='aria-label="Simple data list example"'}}
   {{#> data-list-item}}
-    {{#> data-list-cell data-list-cell--attribute='id="simple-cell1"'}}
-      <span>Primary textual cell 1</span>
+    {{#> data-list-cell}}
+      Primary content
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      Secondary content
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      More content
     {{/data-list-cell}}
   {{/data-list-item}}
 
   {{#> data-list-item}}
-    {{#> data-list-cell data-list-cell--attribute='id="simple-cell2"'}}
-      <span>Primary textual cell 2</span>
+    {{#> data-list-cell}}
+      Primary content
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      Secondary content
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      More content
     {{/data-list-cell}}
   {{/data-list-item}}
 {{/data-list}}
