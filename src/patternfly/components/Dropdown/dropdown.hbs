@@ -2,10 +2,10 @@
     {{#if dropdown--IsSelect}}
         <span id="{{id}}-label" hidden>Select a fruit</span>
     {{else if dropdown--IsMultiSelect}}
-        <span id="{{id}}-label" hidden>Select a fruit</span>
+        <span id="{{id}}-label" hidden>Select one or more fruits</span>
     {{/if}}
    <button id="{{id}}-button"
-        class="dropdown__toggle"
+        class="pf-c-dropdown__toggle"
     {{#if dropdown--IsSelect}}
         aria-labelledby="{{id}}-label {{id}}-button"
     {{else if dropdown--IsMultiSelect}}
@@ -17,7 +17,7 @@
         {{#if dropdown--HasToggleIcon}}
         {{> dropdown-toggle-icon}}
         {{/if}}
-        {{#if dropdown__kebab-icon}}
+        {{#if dropdown--HasKebabIcon}}
         {{> kebab-icon}}
         {{/if}}
 

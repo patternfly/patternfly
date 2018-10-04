@@ -1,7 +1,6 @@
-<div class="pf-c-dropdown__menu" aria-labelledby="{{id}}-label" {{#unless dropdown--IsExpanded}}hidden{{/unless}}>
+<div class="pf-c-dropdown__menu" {{#unless dropdown--IsExpanded}}hidden{{/unless}}>
     <form class="pf-c-form">
-    <fieldset class="pf-c-form__fieldset">
-        <legend class="pf-u-sr-only">Choose one or more items</legend>
+    <fieldset class="pf-c-form__fieldset" aria-labelledby="{{id}}-label">
         {{#> check check--modifier="pf-c-dropdown__menu-item"}}
             {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-apples" name="fruit"') }}{{/check-input}}
             {{#> check-label check-label--attribute=(concat 'for="' id '-apples"') }}Apples{{/check-label}}
