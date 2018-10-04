@@ -1,15 +1,5 @@
 @import "../../patternfly-utilities";
 
-// Component variables follow this formula:
-
-/* stylelint-disable */
-// .datalist-demo {
-//   padding: 30px;
-//   background-color: #ddd;
-// }
-/* stylelint-enable */
-
-// The value of component scoped variables is always defined by a global variable:
 .pf-c-data-list {
   /* stylelint-disable */
   --pf-c-data-list--BackgroundColor:                      var(--pf-global--BackgroundColor--light-100);
@@ -31,16 +21,10 @@
   --pf-c-data-list__toggle--Transition:                   var(--pf-global--Transition);
 
   // Check
-  --pf-c-data-list__check--MarginRight:                   var(--pf-global--spacer--lg);
+  --pf-c-data-list__check--MarginRight:                   var(--pf-global--spacer--xl);
 
   // Actions
   --pf-c-data-list__actions--MarginLeft:                  var(--pf-global--spacer--lg);
-
-  // Separator
-  --pf-c-data-list__separator--Width:                     #{pf-size-prem(1px)};
-  --pf-c-data-list__separator--Height:                    var(--pf-global--spacer--xl);
-  --pf-c-data-list__separator--MarginRight:               var(--pf-global--spacer--lg);
-  --pf-c-data-list__seperator--BackgroundColor:           var(--pf-global--BorderColor--light);
 
   // List item border left
   --pf-c-data-list__item--before--Color:                  var(--pf-global--active-color--100);
@@ -68,7 +52,6 @@
     --pf-c-data-list__toggle--MarginRight:                var(--pf-global--spacer--sm);
     --pf-c-data-list__check--MarginRight:                 var(--pf-global--spacer--md);
     --pf-c-data-list__actions--MarginLeft:                var(--pf-global--spacer--sm);
-    --pf-c-data-list__separator--MarginRight:             var(--pf-global--spacer--md);
   }
 
   /* stylelint-enable */
@@ -81,7 +64,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   padding-right: var(--pf-c-data-list__item--PaddingRight);
   padding-left: var(--pf-c-data-list__item--PaddingLeft);
 
@@ -115,7 +98,6 @@
 // non-textual items
 .pf-c-data-list__toggle,
 .pf-c-data-list__check,
-.pf-c-data-list__separator,
 .pf-c-data-list__action {
   flex: none;
 }
@@ -139,10 +121,8 @@
 
 // Checkbox
 .pf-c-data-list__check {
+  display: flex;
   margin-right: var(--pf-c-data-list__check--MarginRight);
-
-  // reset line height
-  line-height: 0;
 }
 
 
@@ -177,14 +157,6 @@
   margin-left: var(--pf-c-data-list__actions--MarginLeft);
 }
 
-// Separator
-.pf-c-data-list__separator {
-  width: var(--pf-c-data-list__separator--Width);
-  height: var(--pf-c-data-list__separator--Height);
-  margin-right: var(--pf-c-data-list__separator--MarginRight);
-  background-color: var(--pf-c-data-list__seperator--BackgroundColor);
-}
-
 
 // add keyframes to prevent flicker when expandable content scrolls
 @keyframes pf-c-data-list--expandable-content--in {
@@ -196,6 +168,7 @@
 // Expandable content
 .pf-c-data-list__expandable-content {
   flex: 1 0 100%;
+  align-self: flex-start;
   order: 2;
   max-height: 0;
 
@@ -207,7 +180,7 @@
   margin-right: calc(var(--pf-c-data-list__item--PaddingRight) * -1);
   margin-left: calc(var(--pf-c-data-list__item--PaddingLeft) * -1);
   overflow: hidden;
-  border-top: var(--pf-c-data-list__expandable-content--BorderTopWidth) solid var(--pf-c-data-list__expandable-content--BorderTopColor);
+  border-top: 0 solid var(--pf-c-data-list__expandable-content--BorderTopColor);
   opacity: 0;
   transition: var(--pf-c-data-list__expandable-content--Transition);
 

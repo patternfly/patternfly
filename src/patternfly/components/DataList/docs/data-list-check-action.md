@@ -14,5 +14,4 @@
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list__check` | `<div>` | Initiates a data list check cell. **Required** |
-| `.pf-c-data-list__separator` | `<span>` | Initiates a data list separator element. **Required** |
 | `.pf-c-data-list__action` | `<div>` | Initiates a data list action button cell. **Required** |

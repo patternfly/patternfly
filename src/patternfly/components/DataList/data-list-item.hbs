@@ -1,39 +1,6 @@
 <li class="pf-c-data-list__item{{#if data-list-item--modifier}} {{data-list-item--modifier}}{{/if}}{{#if data-list-item--expanded}} pf-m-expanded{{/if}}"
   {{#if data-list-item--attribute}}
     {{{data-list-item--attribute}}}
-  {{/if}}
-  {{#if data-list--interactive}}
-    onClick="(function(){
-
-      let toggle = event.target;
-      let toggleParent = toggle.parentNode;
-
-      // if toggle is clicked, return true
-      let buttonClick = toggleParent.classList.contains('pf-c-data-list__toggle') ? true : false;
-
-      if (buttonClick) {
-        let toggleParent = toggle.parentNode.parentNode;
-        let expandableContent = toggleParent.getElementsByClassName('pf-c-data-list__expandable-content');
-        expandableContent = expandableContent[0];
-        
-        if (toggleParent.classList.contains('pf-m-expanded')) {
-          toggleParent.classList.remove('pf-m-expanded');
-          toggle.setAttribute('aria-expanded', 'false');
-
-          setTimeout(function() {
-            expandableContent.setAttribute('hidden', '');
-          }, 500); 
-        } else {
-          expandableContent.removeAttribute('hidden', '');
-          toggle.setAttribute('aria-expanded', 'true');
-
-          setTimeout(function() {
-            toggleParent.classList.add('pf-m-expanded');
-          }, 50); 
-        }
-      }
-        return false;
-    })();return false;"
   {{/if}}>  
   {{> @partial-block}}
 </li>
