@@ -1,0 +1,12 @@
+<div class="pf-c-wizard__sequence-control-icon{{#if wizard-sequence-control-icon--modifier}} {{wizard-sequence-control-icon--modifier}}{{/if}}"
+  {{#if wizard-sequence-control-icon--attribute}}
+		{{{wizard-sequence-control-icon--attribute}}}
+	{{/if}}>
+	{{> @partial-block}}
+	{{#if wizard-sequence-control-icon--right}}
+		{{> angle-right-icon}}
+	{{/if}}
+	{{#if wizard-sequence-control-icon--left}}
+		{{> angle-left-icon}}
+	{{/if}}
+</div>

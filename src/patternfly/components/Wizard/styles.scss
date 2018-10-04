@@ -4,6 +4,45 @@
   // Wizard sequence
   --pf-c-wizard__sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
 
+  // Wizard Control
+  --pf-c-wizard__sequence-control--PositionTop: 0;
+  --pf-c-wizard__sequence-control--PositionBottom: 0;
+  --pf-c-wizard__sequence-control--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard__sequence-control--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-wizard__sequence-control--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard__sequence-control--PaddingLeft: var(--pf-global--spacer--sm);
+
+  // Wizard Control Left
+  --pf-c-wizard__sequence-control-left--PositionLeft: 0;
+  --pf-c-wizard__sequence-control-left--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-wizard__sequence-control-left--BorderRightWidth: 1px;
+  --pf-c-wizard__sequence-control-left--BorderRightColor: var(--pf-global--Color--200);
+  --pf-c-wizard__sequence-control-left--hover--BorderTopHeight: 4px;
+  --pf-c-wizard__sequence-control-left--focus--BorderTopHeight: 4px;
+  --pf-c-wizard__sequence-control-left--hover--BorderBottomHeight: 4px;
+  --pf-c-wizard__sequence-control-left--focus--BorderBottomHeight: 4px;
+  --pf-c-wizard__sequence-control-left--hover--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-control-left--focus--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-control-left--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-control-left--focus--BorderBottomColor: var(--pf-global--primary-color--100);
+
+  // Wizard Control Right
+  --pf-c-wizard__sequence-control-right--PositionRight: 0;
+  --pf-c-wizard__sequence-control-right--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-wizard__sequence-control-right--BorderLeftWidth: 1px;
+  --pf-c-wizard__sequence-control-right--BorderLeftColor: var(--pf-global--Color--200);
+  --pf-c-wizard__sequence-control-right--hover--BorderTopHeight: 4px;
+  --pf-c-wizard__sequence-control-right--focus--BorderTopHeight: 4px;
+  --pf-c-wizard__sequence-control-right--hover--BorderBottomHeight: 4px;
+  --pf-c-wizard__sequence-control-right--focus--BorderBottomHeight: 4px;
+  --pf-c-wizard__sequence-control-right--hover--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-control-right--focus--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-control-right--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-wizard__sequence-control-right--focus--BorderBottomColor: var(--pf-global--primary-color--100);
+
+  // Wizard Control Icon
+  --pf-c-wizard__sequence-control-icon--Color: var(--pf-global--Color--light-100);
+
   // Item
   --pf-c-wizard__sequence-item--MarginRight: 1px;
   --pf-c-wizard__sequence-item--MarginLeft: 1px;
@@ -81,10 +120,61 @@
 
   // Description Status Font
   --pf-c-wizard__sequence-link-description-status--FontSize: var(--pf-global--FontSize--xs);
+
+  // Current
+  --pf-c-wizard__sequence-link--current--BorderBottomHeight: 4px;
+  --pf-c-wizard__sequence-link--current--BorderBottomColor: var(--pf-global--primary-color--100);
+}
+
+.pf-c-wizard__sequence-control {
+  position: absolute;
+  top: var(--pf-c-wizard__sequence-control--PositionTop);
+  bottom: var(--pf-c-wizard__sequence-control--PositionBottom);
+  padding-top: var(--pf-c-wizard__sequence-control--PaddingTop);
+  padding-right: var(--pf-c-wizard__sequence-control--PaddingRight);
+  padding-bottom: var(--pf-c-wizard__sequence-control--PaddingBottom);
+  padding-left: var(--pf-c-wizard__sequence-control--PaddingLeft);
+}
+
+.pf-c-wizard__sequence-control-left {
+  left: var(--pf-c-wizard__sequence-control-left--PositionLeft);
+  background-color: var(--pf-c-wizard__sequence-control-left--BackgroundColor);
+  border-right: var(--pf-c-wizard__sequence-control-left--BorderRightWidth) solid var(--pf-c-wizard__sequence-control-left--BorderRightColor);
+
+  &:focus {
+    border-top: var(--pf-c-wizard__sequence-control-left--focus--BorderTopHeight) solid var(--pf-c-wizard__sequence-control-left--focus--BorderTopColor);
+    border-bottom: var(--pf-c-wizard__sequence-control-left--focus--BorderBottomHeight) solid var(--pf-c-wizard__sequence-control-left--focus--BorderBottomColor);
+  }
+
+  &:hover {
+    border-top: var(--pf-c-wizard__sequence-control-left--hover--BorderTopHeight) solid var(--pf-c-wizard__sequence-control-left--hover--BorderTopColor);
+    border-bottom: var(--pf-c-wizard__sequence-control-left--hover--BorderBottomHeight) solid var(--pf-c-wizard__sequence-control-left--hover--BorderBottomColor);
+  }
+}
+
+.pf-c-wizard__sequence-control-right {
+  right: var(--pf-c-wizard__sequence-control-right--PositionRight);
+  background-color: var(--pf-c-wizard__sequence-control-right--BackgroundColor);
+  border-left: var(--pf-c-wizard__sequence-control-right--BorderLeftWidth) solid var(--pf-c-wizard__sequence-control-right--BorderLeftColor);
+
+  &:focus {
+    border-top: var(--pf-c-wizard__sequence-control-right--focus--BorderTopHeight) solid var(--pf-c-wizard__sequence-control-right--focus--BorderTopColor);
+    border-bottom: var(--pf-c-wizard__sequence-control-right--focus--BorderBottomHeight) solid var(--pf-c-wizard__sequence-control-right--focus--BorderBottomColor);
+  }
+
+  &:hover {
+    border-top: var(--pf-c-wizard__sequence-control-right--hover--BorderTopHeight) solid var(--pf-c-wizard__sequence-control-right--hover--BorderTopColor);
+    border-bottom: var(--pf-c-wizard__sequence-control-right--hover--BorderBottomHeight) solid var(--pf-c-wizard__sequence-control-right--hover--BorderBottomColor);
+  }
+}
+
+.pf-c-wizard__sequence-control-icon {
+  color: var(--pf-c-wizard__sequence-control-icon--Color);
 }
 
 // Wizard Sequence
 .pf-c-wizard__sequence {
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: var(--pf-c-wizard__sequence--BackgroundColor);
@@ -157,14 +247,14 @@
 .pf-c-wizard__sequence-link {
   display: flex;
   justify-content: flex-start;
-  border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--BorderBottomColor);
+  border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) solid var(--pf-c-wizard__sequence-link--BorderBottomColor);
 
   &:focus {
-    border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--focus--BorderBottomColor);
+    border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) solid var(--pf-c-wizard__sequence-link--focus--BorderBottomColor);
   }
 
   &:hover {
-    border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--hover--BorderBottomColor);
+    border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) solid var(--pf-c-wizard__sequence-link--hover--BorderBottomColor);
   }
 
   &:focus .pf-c-wizard__sequence-link-position {
@@ -213,7 +303,7 @@
 // Current State
 .pf-m-current.pf-c-wizard__sequence-link,
 .pf-m-current > .pf-c-wizard__sequence-link {
-  border-bottom: var(--pf-c-wizard__sequence-link--BorderBottomHeight) var(--pf-c-wizard__sequence-link-position-number--BorderStyle) var(--pf-c-wizard__sequence-link--focus--BorderBottomColor);
+  border-bottom: var(--pf-c-wizard__sequence-link--current--BorderBottomHeight) solid var(--pf-c-wizard__sequence-link--current--BorderBottomColor);
 
   .pf-c-wizard__sequence-position {
     padding-top: 24px;
