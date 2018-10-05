@@ -59,39 +59,51 @@
           <p class="pf-u-mb-md">Or log in with</p>
           {{#> list list--modifier="pf-m-grid"}}
             <li>
-              {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
-                <img src="/assets/images/logo-google.svg" alt="" />
-                <p class="pf-u-ml-sm">Google</p>
-              {{/display}}
+              <a href="#">
+                {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+                  <img src="/assets/images/logo-google.svg" alt="" />
+                  <p class="pf-u-ml-sm">Google</p>
+                {{/display}}
+              </a>
             </li>
             <li>
-              {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
-                <img src="/assets/images/logo-github.svg" alt="" />
-                <p class="pf-u-ml-sm">GitHub</p>
-              {{/display}}
+              <a href="#">
+                {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+                  <img src="/assets/images/logo-github.svg" alt="" />
+                  <p class="pf-u-ml-sm">GitHub</p>
+                {{/display}}
+              </a>
             </li>
             <li>
+              <a href="#">
               {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
                 <img src="/assets/images/logo-dropbox.svg" alt="" />
                 <p class="pf-u-ml-sm">Dropbox</p>
               {{/display}}
+              </a>
             </li>
             <li>
-              {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
-                <img src="/assets/images/logo-facebook.svg" alt="" />
-                <p class="pf-u-ml-sm">Facebook</p>
-              {{/display}}
+              <a href="#">
+                {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+                  <img src="/assets/images/logo-facebook.svg" alt="" />
+                  <p class="pf-u-ml-sm">Facebook</p>
+                {{/display}}
+              </a>
             </li>
             <li>
-              {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
-                <img class="" src="/assets/images/logo-gitlab.svg" alt="" />
-                <p class="pf-u-ml-sm">GitLab</p>
-              {{/display}}
+              <a href="#">
+                {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+                  <img class="" src="/assets/images/logo-gitlab.svg" alt="" />
+                  <p class="pf-u-ml-sm">GitLab</p>
+                {{/display}}
+              </a>
             </li>
             <li>
-              {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
-                <p class=""><a href="https://www.patternfly.org/">More...</a></p>
-              {{/display}}
+              <a href="#">
+                {{#> display display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+                  <p class="">More...</p>
+                {{/display}}
+              </a>
             </li>
           {{/list}}
         {{/login-box-footer}}
@@ -99,9 +111,9 @@
     {{/login-main}}
     {{#> login-footer}}
       {{#> list list--modifier="pf-m-inline"}}
-        <li>Terms of Use</li>
-        <li>Help</li>
-        <li>Privacy Policy</li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy Policy</a></li>
       {{/list}}
     {{/login-footer}}
   {{/login}}
