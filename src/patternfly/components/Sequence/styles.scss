@@ -73,6 +73,8 @@
   // Number Border
   --pf-c-sequence__number--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-sequence__number--BorderWeight: var(--pf-global--BorderWidth--md);
+  --pf-c-sequence__number-border--hover--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__number-border--focus--Color: var(--pf-global--primary-color--100);
 
   // content Title
   --pf-c-sequence__content--title--MaxWidth: 100px;
@@ -156,20 +158,29 @@
 
 // Sequence Link Position Number
 .pf-c-sequence__number {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: var(--pf-c-sequence__number--PaddingRight);
-  padding-left: var(--pf-c-sequence__number--PaddingLeft);
-  margin-right: var(--pf-c-sequence__number--MarginRight);
-  font-size: var(--pf-c-sequence__number--FontSize);
-  font-weight: var(--pf-c-sequence__number--FontWeight);
-  color: var(--pf-c-sequence__number--Color);
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+}
+
+.pf-c-sequence__number-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   text-align: center;
 }
 
 .pf-c-sequence__number:first-child {
-  border: 2px solid var(--pf-c-sequence__number--Color);
+  // border: 2px solid var(--pf-c-sequence__number--Color);
+  // border-radius: 50%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background: #ddd;
   border-radius: 50%;
 }
 
@@ -223,6 +234,14 @@
   &:hover .pf-c-sequence__number {
     font-size: var(--pf-c-sequence__number--hover--FontSize);
     color: var(--pf-c-sequence__number--hover--Color);
+  }
+
+  &:focus .pf-c-sequence__number:first-child {
+    border: 2px solid var(--pf-c-sequence__number-border--focus--Color);
+  }
+
+  &:hover .pf-c-sequence__number:first-child {
+    border: 2px solid var(--pf-c-sequence__number-border--hover--Color);
   }
 
   &:focus .pf-c-sequence__content-title {
