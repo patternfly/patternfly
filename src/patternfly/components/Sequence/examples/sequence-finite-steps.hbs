@@ -1,53 +1,31 @@
-{{#> wizard}}
-  {{#> wizard-sequence}}
-    {{#> wizard-sequence-list}}
-      {{#> wizard-sequence-item}}
-        {{#> wizard-sequence-link wizard-sequence-link--modifier="pf-m-current" wizard-sequence-link--attribute='href="#"'}}
-          {{#> wizard-sequence-link-position}}
-            {{#> wizard-sequence-link-position-number}}
-              1
-            {{/wizard-sequence-link-position-number}}
-          {{/wizard-sequence-link-position}}
-          {{#> wizard-sequence-link-description}}
-            {{#> wizard-sequence-link-description-title}}Information{{/wizard-sequence-link-description-title}}
-            {{#> wizard-sequence-link-description-status}}Complete{{/wizard-sequence-link-description-status}}
-          {{/wizard-sequence-link-description}}
-          {{/wizard-sequence-link}}
-        {{/wizard-sequence-item}}
-        {{#> wizard-sequence-item}}
-          {{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-          {{#> wizard-sequence-link-position}}
-            {{#> wizard-sequence-link-position-number}}
-              2
-            {{/wizard-sequence-link-position-number}}
-          {{/wizard-sequence-link-position}}
-          {{#> wizard-sequence-link-description}}
-            {{#> wizard-sequence-link-description-title}}
-              Configuration
-            {{/wizard-sequence-link-description-title}}
-            {{#> wizard-sequence-link-description-status}}
-              Pending
-            {{/wizard-sequence-link-description-status}}
-          {{/wizard-sequence-link-description}}
-          {{/wizard-sequence-link}}
-        {{/wizard-sequence-item}}
-        {{#> wizard-sequence-item}}
-          {{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-          {{#> wizard-sequence-link-position}}
-            {{#> wizard-sequence-link-position-number}}
-              3
-            {{/wizard-sequence-link-position-number}}
-          {{/wizard-sequence-link-position}}
-          {{#> wizard-sequence-link-description}}
-            {{#> wizard-sequence-link-description-title}}
-              This is a long string of text that should be truncated
-            {{/wizard-sequence-link-description-title}}
-            {{#> wizard-sequence-link-description-status}}
-              Incomplete
-            {{/wizard-sequence-link-description-status}}
-          {{/wizard-sequence-link-description}}
-          {{/wizard-sequence-link}}
-        {{/wizard-sequence-item}}
-      {{/wizard-sequence-list}}
-  {{/wizard-sequence}}
-{{/wizard}}
+{{#> sequence}}
+	{{#> sequence-list}}
+		{{#> sequence-item}}
+			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+				{{#> sequence-number}}1{{/sequence-number}}
+				{{#> sequence-content}}
+					{{#> sequence-content-title}}Step One{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+				{{/sequence-content}}
+			{{/sequence-link}}
+		{{/sequence-item}}
+		{{#> sequence-item}}
+			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+				{{#> sequence-number}}10{{/sequence-number}}
+				{{#> sequence-content}}
+					{{#> sequence-content-title}}Step Two{{/sequence-content-title}}
+					{{#> sequence-content-status}}Status{{/sequence-content-status}}
+				{{/sequence-content}}
+			{{/sequence-link}}
+		{{/sequence-item}}
+	  {{#> sequence-item}}
+			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+				{{#> sequence-number}}8{{/sequence-number}}
+				{{#> sequence-content}}
+					{{#> sequence-content-title}}Step Three{{/sequence-content-title}}
+					{{#> sequence-content-status}}Status{{/sequence-content-status}}
+				{{/sequence-content}}
+			{{/sequence-link}}
+		{{/sequence-item}}
+  {{/sequence-list}}
+{{/sequence}}

@@ -1,127 +1,44 @@
 {{#> sequence}}
-	{{#> sequence-control wizard-sequence-control--modifier="pf-c-wizard__sequence-control-left"}}
-		{{#> sequence-control-icon wizard-sequence-control-icon--left="true"}}
-		{{/wizard-sequence-control-icon}}
-	{{/wizard-sequence-control}}
-	{{#> wizard-sequence-control wizard-sequence-control--modifier="pf-c-wizard__sequence-control-right"}}
-		{{#> wizard-sequence-control-icon wizard-sequence-control-icon--right="true"}}
-		{{/wizard-sequence-control-icon}}
-	{{/wizard-sequence-control}}
-	{{#> wizard-sequence-list}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--modifier="pf-m-current" wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}1{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step One{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}2{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}
-						Step Two
-					{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}
-						Status
-					{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}3{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 3{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}4{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 4{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}5{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 5{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}6{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 6{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}7{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 7{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}8{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 8{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}9{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 9{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-		{{#> wizard-sequence-item}}
-			{{#> wizard-sequence-link wizard-sequence-link--attribute='href="#"'}}
-				{{#> wizard-sequence-link-position}}
-					{{#> wizard-sequence-link-position-number}}10{{/wizard-sequence-link-position-number}}
-				{{/wizard-sequence-link-position}}
-				{{#> wizard-sequence-link-description}}
-					{{#> wizard-sequence-link-description-title}}Step 10{{/wizard-sequence-link-description-title}}
-					{{#> wizard-sequence-link-description-status}}Status{{/wizard-sequence-link-description-status}}
-				{{/wizard-sequence-link-description}}
-			{{/wizard-sequence-link}}
-		{{/wizard-sequence-item}}
-{{/wizard-sequence-list}}
-{{/wizard-sequence}}
-{{/wizard}}
+	{{#> sequence-control sequence-control--modifier="pf-c-sequence__control-left"}}
+		{{#> sequence-control-icon sequence-control-icon--left="true"}}
+		{{/sequence-control-icon}}
+	{{/sequence-control}}
+	{{#> sequence-control sequence-control--modifier="pf-c-sequence__control-right"}}
+		{{#> sequence-control-icon sequence-control-icon--right="true"}}
+		{{/sequence-control-icon}}
+	{{/sequence-control}}
+	{{#> sequence-list}}
+		{{#> sequence}}
+	{{#> sequence-list}}
+		{{#> sequence-item}}
+			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+				{{#> sequence-number}}1{{/sequence-number}}
+				{{#> sequence-content}}
+					{{#> sequence-content-title}}Step One{{/sequence-content-title}}
+					{{#> sequence-content-status}}Status{{/sequence-content-status}}
+				{{/sequence-content}}
+			{{/sequence-link}}
+		{{/sequence-item}}
+		{{#> sequence-item}}
+			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+				{{#> sequence-number}}1{{/sequence-number}}
+				{{#> sequence-content}}
+					{{#> sequence-content-title}}Step One{{/sequence-content-title}}
+					{{#> sequence-content-status}}Status{{/sequence-content-status}}
+				{{/sequence-content}}
+			{{/sequence-link}}
+		{{/sequence-item}}
+	  {{#> sequence-item}}
+			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+				{{#> sequence-number}}1{{/sequence-number}}
+				{{#> sequence-content}}
+					{{#> sequence-content-title}}Step One{{/sequence-content-title}}
+					{{#> sequence-content-status}}Status{{/sequence-content-status}}
+				{{/sequence-content}}
+			{{/sequence-link}}
+		{{/sequence-item}}
+  {{/sequence-list}}
+{{/sequence}}
+
+{{/sequence-list}}
+{{/sequence}}
