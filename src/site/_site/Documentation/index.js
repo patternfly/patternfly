@@ -22,7 +22,7 @@ export default class Documentation extends React.Component {
         <h3 className="Component_heading">{heading}</h3>
         <div className="Documentation__section">{children}</div>
         <h3 className="Documentation_heading">Documentation</h3>
-        <div className="Documentation__section" dangerouslySetInnerHTML={HTML_DOCS} />
+        <div className="Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
       </div>
     ) : (
       <div className={className}>
