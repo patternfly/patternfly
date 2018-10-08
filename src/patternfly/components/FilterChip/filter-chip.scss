@@ -1,0 +1,24 @@
+@import "../../patternfly-utilities";
+
+.pf-c-filter-chip {
+  --pf-c-filter-chip--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-filter-chip--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-filter-chip--BorderWeight: 1px;
+  --pf-c-filter-chip--BorderRadius: 3px;
+  --pf-c-filter-chip--Color: var(--pf-global--Color--100);
+  --pf-c-filter-chip--BorderColor: var(--pf-global--secondary-color--100);
+  --pf-c-filter-chip--FontSize: var(--pf-global--FontSize--xs);
+
+  display: inline-block;
+  padding:
+    var(--pf-c-filter-chip--PaddingTop)
+    var(--pf-c-filter-chip--PaddingRight)
+    var(--pf-c-filter-chip--PaddingBottom)
+    var(--pf-c-filter-chip--PaddingLeft);
+  font-size: var(--pf-c-filter-chip--FontSize);
+  color: var(--pf-c-filter-chip--Color);
+  border: var(--pf-c-filter-chip--BorderWeight) solid var(--pf-c-filter-chip--BorderColor);
+  border-radius: var(--pf-c-filter-chip--BorderRadius);
+}
