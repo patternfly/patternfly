@@ -7,7 +7,7 @@ import SequenceFiniteSteps from './sequence-finite-steps.hbs';
 import SequenceComplexExample from './sequence-complex-example.hbs';
 import sequenceComplexExampleDoc from '../docs/sequence-complex.md';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../sequence.scss';
 
 export const Docs = docs;
 
@@ -17,11 +17,11 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Sequence Finite Steps" handlebars={sequenceFiniteStepsRaw}>
+      <Example heading="Sequence Finite Steps Simple" handlebars={sequenceFiniteStepsRaw}>
         {sequenceFiniteSteps}
       </Example>
       <Example
-        heading="Sequence Infinite Steps"
+        heading="Sequence Finite Steps Complex"
         handlebars={sequenceComplexExampleRaw}
         docs={sequenceComplexExampleDoc}
       >

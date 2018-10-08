@@ -1,6 +1,6 @@
-{{#> sequence}}
+{{#> sequence sequence--modifier='aria-label="Finite Sequence Example"'}}
 	{{#> sequence-list}}
-		{{#> sequence-item}}
+		{{#> sequence-item sequence-item--attribute='aria-labelledby="position-1"'}}
 			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
 				{{#> sequence-number}}1{{/sequence-number}}
 				{{#> sequence-content}}
@@ -9,18 +9,18 @@
 				{{/sequence-content}}
 			{{/sequence-link}}
 		{{/sequence-item}}
-		{{#> sequence-item}}
+		{{#> sequence-item sequence-item--attribute='aria-labelledby="position-2"'}}
 			{{#> sequence-link sequence-link--attribute='href="#"'}}
-				{{#> sequence-number}}10{{/sequence-number}}
+				{{#> sequence-number}}2{{/sequence-number}}
 				{{#> sequence-content}}
 					{{#> sequence-content-title}}Step Two{{/sequence-content-title}}
 					{{#> sequence-content-status}}Status{{/sequence-content-status}}
 				{{/sequence-content}}
 			{{/sequence-link}}
 		{{/sequence-item}}
-	  {{#> sequence-item}}
+	  {{#> sequence-item sequence-item--attribute='aria-labelledby="position-3"'}}
 			{{#> sequence-link sequence-link--attribute='href="#"'}}
-				{{#> sequence-number}}8{{/sequence-number}}
+				{{#> sequence-number}}3{{/sequence-number}}
 				{{#> sequence-content}}
 					{{#> sequence-content-title}}Step Three{{/sequence-content-title}}
 					{{#> sequence-content-status}}Status{{/sequence-content-status}}
