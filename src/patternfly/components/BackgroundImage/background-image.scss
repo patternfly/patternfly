@@ -11,53 +11,56 @@
   --pf-c-background-image--BackgroundImage--xl: url("#{$pf-global--image-path}/pfbg_2000.jpg");
   --pf-c-background-image--Filter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: var(--pf-global--BackgroundColor--dark-200);
-  background-image: var(--pf-c-background-image--BackgroundImage--xs);
-  filter: var(--pf-c-background-image--Filter);
-  background-repeat: no-repeat;
-  background-size: cover;
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: var(--pf-global--BackgroundColor--dark-200);
+    background-image: var(--pf-c-background-image--BackgroundImage--xs);
+    filter: var(--pf-c-background-image--Filter);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  /* stylelint-disable */
-  @media (max-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
-    (max-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
-    background-image: var(--pf-c-background-image--BackgroundImage--xs-2x);
-  }
+    /* stylelint-disable */
+    @media (max-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
+      (max-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+      background-image: var(--pf-c-background-image--BackgroundImage--xs-2x);
+    }
 
-  @media (min-width: $pf-global--breakpoint--sm) {
-    background-image: var(--pf-c-background-image--BackgroundImage--sm);
-  }
+    @media (min-width: $pf-global--breakpoint--sm) {
+      background-image: var(--pf-c-background-image--BackgroundImage--sm);
+    }
 
-  @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
-    (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
-    background-image: var(--pf-c-background-image--BackgroundImage--sm-2x);
-  }
+    @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
+      (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+      background-image: var(--pf-c-background-image--BackgroundImage--sm-2x);
+    }
 
-  @media (min-width: $pf-global--breakpoint--md) {
-    background-image: var(--pf-c-background-image--BackgroundImage--md);
-  }
+    @media (min-width: $pf-global--breakpoint--md) {
+      background-image: var(--pf-c-background-image--BackgroundImage--md);
+    }
 
-  @media (min-width: $pf-global--breakpoint--md) and (-webkit-min-device-pixel-ratio: 2),
-    (min-width: $pf-global--breakpoint--md) and (min-resolution: 192dpi) {
-    background-image: var(--pf-c-background-image--BackgroundImage--md-2x);
-  }
+    @media (min-width: $pf-global--breakpoint--md) and (-webkit-min-device-pixel-ratio: 2),
+      (min-width: $pf-global--breakpoint--md) and (min-resolution: 192dpi) {
+      background-image: var(--pf-c-background-image--BackgroundImage--md-2x);
+    }
 
-  @media (min-width: $pf-global--breakpoint--lg) {
-    background-image: var(--pf-c-background-image--BackgroundImage--lg);
-  }
+    @media (min-width: $pf-global--breakpoint--lg) {
+      background-image: var(--pf-c-background-image--BackgroundImage--lg);
+    }
 
-  @media (min-width: $pf-global--breakpoint--lg) and (-webkit-min-device-pixel-ratio: 2),
-    (min-width: $pf-global--breakpoint--lg) and (min-resolution: 192dpi) {
-    background-image: var(--pf-c-background-image--BackgroundImage--xl);
-  }
-  /* stylelint-enable */
+    @media (min-width: $pf-global--breakpoint--lg) and (-webkit-min-device-pixel-ratio: 2),
+      (min-width: $pf-global--breakpoint--lg) and (min-resolution: 192dpi) {
+      background-image: var(--pf-c-background-image--BackgroundImage--xl);
+    }
+    /* stylelint-enable */
 
-  @media (min-width: $pf-global--breakpoint--xl) {
-    background-image: var(--pf-c-background-image--BackgroundImage--xl);
+    @media (min-width: $pf-global--breakpoint--xl) {
+      background-image: var(--pf-c-background-image--BackgroundImage--xl);
+    }
   }
 }
