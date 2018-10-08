@@ -16,12 +16,16 @@
   --pf-c-sequence__control--BorderTopColor: transparent;
   --pf-c-sequence__control--BorderBottomColor: transparent;
   --pf-c-sequence__control--hover--BorderTopHeight: var(--pf-global--BorderWidth--lg);
+  --pf-c-sequence__control--active--BorderTopHeight: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--focus--BorderTopHeight: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--hover--BorderBottomHeight: var(--pf-global--BorderWidth--lg);
+  --pf-c-sequence__control--active--BorderTopHeight: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--focus--BorderBottomHeight: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--hover--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__control--active--BorderTopColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__control--focus--BorderTopColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__control--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__control--active--BorderTopColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Sequence Control Left
@@ -52,6 +56,7 @@
   --pf-c-sequence__link--BorderBottomColor: var(--pf-global--Color--200);
   --pf-c-sequence__link--BorderBottomHeight: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__link--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__link--active--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Number
@@ -62,18 +67,21 @@
   // Number Color
   --pf-c-sequence__number--Color: var(--pf-global--Color--200);
   --pf-c-sequence__number--hover--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__number--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--focus--Color: var(--pf-global--primary-color--100);
 
   // Number Font
   --pf-c-sequence__number--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-sequence__number--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-sequence__number--hover--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-sequence__number--active--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-sequence__number--focus--FontSize: var(--pf-global--FontSize--xl);
 
   // Number Border
   --pf-c-sequence__number--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-sequence__number--BorderWeight: var(--pf-global--BorderWidth--md);
   --pf-c-sequence__number--hover--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__number--active--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--focus--BorderColor: var(--pf-global--primary-color--100);
 
   // content Title
@@ -82,12 +90,14 @@
   // Content Title Color
   --pf-c-sequence__content-title--Color: var(--pf-global--Color--light-100);
   --pf-c-sequence__content-title--hover--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--Color: var(--pf-global--primary-color--100);
 
   // Content Title Font
   --pf-c-sequence__content-title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-sequence__content-title--FontWeight: var(--pf-global--FontWeight--reguar);
   --pf-c-sequence__content-title--hover--FontWeight: var(--pf-global--FontWeight--regular);
+  --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Content Status Color
@@ -132,16 +142,22 @@ button {
   border-top: var(--pf-c-sequence__control--BorderTopHeight) solid var(--pf-c-sequence__control--BorderTopColor);
   border-bottom: var(--pf-c-sequence__control--BorderBottomHeight) solid var(--pf-c-sequence__control--BorderBottomColor);
 
-  &.pf-m-focus,
-  &:focus {
-    border-top: var(--pf-c-sequence__control--focus--BorderTopHeight) solid var(--pf-c-sequence__control--focus--BorderTopColor);
-    border-bottom: var(--pf-c-sequence__control--focus--BorderBottomHeight) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
-  }
-
   &.pf-m-hover,
   &:hover {
     border-top: var(--pf-c-sequence__control--hover--BorderTopHeight) solid var(--pf-c-sequence__control--hover--BorderTopColor);
     border-bottom: var(--pf-c-sequence__control--hover--BorderBottomHeight) solid var(--pf-c-sequence__control--hover--BorderBottomColor);
+  }
+
+  &.pf-m-active,
+  &:active {
+    border-top: var(--pf-c-sequence__control--active--BorderTopHeight) solid var(--pf-c-sequence__control--active--BorderTopColor);
+    border-bottom: var(--pf-c-sequence__control--active--BorderBottomHeight) solid var(--pf-c-sequence__control--active--BorderBottomColor);
+  }
+
+  &.pf-m-focus,
+  &:focus {
+    border-top: var(--pf-c-sequence__control--focus--BorderTopHeight) solid var(--pf-c-sequence__control--focus--BorderTopColor);
+    border-bottom: var(--pf-c-sequence__control--focus--BorderBottomHeight) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
   }
 }
 
@@ -222,45 +238,57 @@ button {
 .pf-c-sequence__link {
   display: flex;
   justify-content: flex-start;
-  padding-top: var(--pf-c-sequence__link--PaddingTop);
-  padding-right: var(--pf-c-sequence__link--PaddingRight);
-  padding-bottom: var(--pf-c-sequence__link--PaddingBottom);
-  padding-left: var(--pf-c-sequence__link--PaddingLeft);
+  padding:
+    var(--pf-c-sequence__link--PaddingTop)
+    var(--pf-c-sequence__link--PaddingRight)
+    var(--pf-c-sequence__link--PaddingBottom)
+    var(--pf-c-sequence__link--PaddingLeft);
   border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--BorderBottomColor);
-
-  &.pf-m-focus,
-  &:focus {
-    border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--focus--BorderBottomColor);
-  }
 
   &.pf-m-hover,
   &:hover {
     border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--hover--BorderBottomColor);
+
+    .pf-c-sequence__number {
+      font-size: var(--pf-c-sequence__number--hover--FontSize);
+      color: var(--pf-c-sequence__number--hover--Color);
+      border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--hover--Color);
+    }
+
+    .pf-c-sequence__content-title {
+      color: var(--pf-c-sequence__content-title--hover--Color);
+    }
+  }
+
+  &.pf-m-active,
+  &:active {
+    border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--active--BorderBottomColor);
+
+    .pf-c-sequence__number {
+      font-size: var(--pf-c-sequence__number--active--FontSize);
+      color: var(--pf-c-sequence__number--active--Color);
+      border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--active--Color);
+    }
+
+    .pf-c-sequence__content-title {
+      color: var(--pf-c-sequence__content-title--active--Color);
+    }
   }
 
   &.pf-m-focus,
-  &:focus .pf-c-sequence__number {
-    font-size: var(--pf-c-sequence__number--focus--FontSize);
-    color: var(--pf-c-sequence__number--focus--Color);
-    border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--focus--Color);
-  }
+  &:focus {
+    border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--focus--BorderBottomColor);
 
-  &.pf-m-hover,
-  &:hover .pf-c-sequence__number {
-    font-size: var(--pf-c-sequence__number--hover--FontSize);
-    color: var(--pf-c-sequence__number--hover--Color);
-    border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--hover--Color);
-  }
+    .pf-c-sequence__number {
+      font-size: var(--pf-c-sequence__number--focus--FontSize);
+      color: var(--pf-c-sequence__number--focus--Color);
+      border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--focus--Color);
+    }
 
-  &.pf-m-focus,
-  &:focus .pf-c-sequence__content-title {
-    font-weight: var(--pf-c-sequence__content-title--focus--FontWeight);
-    color: var(--pf-c-sequence__content-title--focus--Color);
-  }
-
-  &.pf-m-hover,
-  &:hover .pf-c-sequence__content-title {
-    color: var(--pf-c-sequence__content-title--hover--Color);
+    .pf-c-sequence__content-title {
+      font-weight: var(--pf-c-sequence__content-title--focus--FontWeight);
+      color: var(--pf-c-sequence__content-title--focus--Color);
+    }
   }
 
   &.pf-m-current {
