@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-sequence {
-  --pf-c-sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100); // this color is interchangable
+  --pf-c-sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100); // this background color is interchangable
 
   // Sequence Control
   --pf-c-sequence__control--PositionTop: 0;
@@ -62,6 +62,14 @@
   --pf-c-sequence__number--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-sequence__number--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-sequence__number--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-sequence__number--MinWidth: var(--pf-global--spacer--lg);
+  --pf-c-sequence__number--MaxHeight: var(--pf-global--spacer--lg);
+  --pf-c-sequence__number--hover--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--hover--MaxHeight: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--active--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--active--MaxHeight: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--focus--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--focus--MaxHeight: var(--pf-global--spacer--xl);
 
   // Number Color
   --pf-c-sequence__number--Color: var(--pf-global--Color--200);
@@ -77,6 +85,7 @@
   --pf-c-sequence__number--focus--FontSize: var(--pf-global--FontSize--xl);
 
   // Number Border
+  --pf-c-sequence__number--BorderColor: var(--pf-global--Color--200);
   --pf-c-sequence__number--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-sequence__number--BorderWeight: var(--pf-global--BorderWidth--md);
   --pf-c-sequence__number--hover--BorderColor: var(--pf-global--primary-color--100);
@@ -117,7 +126,9 @@
   --pf-c-sequence__number--m-current--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-sequence__content-title--m-current--FontWeight: var(--pf-global--FontWeight--regular);
 
-  // Modifier - current border
+  // Modifier - current number
+  --pf-c-sequence__number--m-current--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--m-current--MaxHeight: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--m-current--BorderColor: var(--pf-global--primary-color--100);
 
   position: relative;
@@ -131,6 +142,7 @@
   }
 }
 
+// Override button styles
 button {
   padding: 0;
   background-color: transparent;
@@ -201,24 +213,38 @@ button {
   margin-left: var(--pf-c-sequence__item--MarginLeft);
 }
 
-// Sequence Link Position Number
-.pf-c-sequence__number {
-  position: absolute;
+// Vertically centers number and border
+.pf-c-sequence__number-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: var(--pf-c-sequence__number--PaddingRight);
-  padding-left: var(--pf-c-sequence__number--PaddingLeft);
+}
+
+// Sequence Link Position Number
+.pf-c-sequence__number {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: var(--pf-c-sequence__number--MinWidth);
+  max-height: var(--pf-c-sequence__number--MaxHeight);
+  padding: 4px;
   margin-right: var(--pf-c-sequence__number--MarginRight);
   font-size: var(--pf-c-sequence__number--FontSize);
   color: var(--pf-c-sequence__number--Color);
   text-align: center;
-}
 
-.pf-c-sequence__number:first-child {
-  position: relative;
-  border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--Color);
-  border-radius: 50%;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--BorderColor);
+    border-radius: var(--pf-c-sequence__number--BorderRadius);
+  }
 }
 
 // Content
@@ -260,14 +286,19 @@ button {
   &:hover {
     border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--hover--BorderBottomColor);
 
-    .pf-c-sequence__number {
-      font-size: var(--pf-c-sequence__number--hover--FontSize);
-      color: var(--pf-c-sequence__number--hover--Color);
-      border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--hover--Color);
-    }
-
     .pf-c-sequence__content-title {
       color: var(--pf-c-sequence__content-title--hover--Color);
+    }
+
+    .pf-c-sequence__number {
+      min-width: var(--pf-c-sequence__number--hover--MinWidth);
+      max-height: var(--pf-c-sequence__number--hover--MaxHeight);
+      font-size: var(--pf-c-sequence__number--hover--FontSize);
+      color: var(--pf-c-sequence__number--hover--Color);
+
+      &::before {
+        border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--hover--Color);
+      }
     }
   }
 
@@ -276,9 +307,14 @@ button {
     border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--active--BorderBottomColor);
 
     .pf-c-sequence__number {
+      min-width: var(--pf-c-sequence__number--active--MinWidth);
+      max-height: var(--pf-c-sequence__number--active--MaxHeight);
       font-size: var(--pf-c-sequence__number--active--FontSize);
       color: var(--pf-c-sequence__number--active--Color);
-      border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--active--Color);
+
+      &::before {
+        border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--active--Color);
+      }
     }
 
     .pf-c-sequence__content-title {
@@ -291,9 +327,14 @@ button {
     border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--focus--BorderBottomColor);
 
     .pf-c-sequence__number {
+      min-width: var(--pf-c-sequence__number--focus--MinWidth);
+      max-height: var(--pf-c-sequence__number--focus--MaxHeight);
       font-size: var(--pf-c-sequence__number--focus--FontSize);
       color: var(--pf-c-sequence__number--focus--Color);
-      border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--focus--Color);
+
+      &::before {
+        border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--focus--Color);
+      }
     }
 
     .pf-c-sequence__content-title {
@@ -306,9 +347,14 @@ button {
     border-bottom: var(--pf-c-sequence__link--m-current--BorderBottomHeight) solid var(--pf-c-sequence__link--m-current--BorderBottomColor);
 
     .pf-c-sequence__number {
+      min-width: var(--pf-c-sequence__number--m-current--MinWidth);
+      max-height: var(--pf-c-sequence__number--m-current--MaxHeight);
       font-size: var(--pf-c-sequence__number--m-current--FontSize);
       color: var(--pf-c-sequence__number--m-current--Color);
-      border-color: var(--pf-c-sequence__number--m-current--BorderColor);
+
+      &::before {
+        border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--m-current--Color);
+      }
     }
 
     .pf-c-sequence__content-title {
