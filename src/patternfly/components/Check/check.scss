@@ -2,10 +2,10 @@
 
 .pf-c-check {
   --pf-c-check__label--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-check__label--diabled--color: var(--pf-global--disabled-color--100);
+  --pf-c-check__label--disabled--color: var(--pf-global--disabled-color--100);
   --pf-c-check__label--Color: var(--pf-global--Color--100);
   --pf-c-check__label--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-check__label--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-check__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-check__label--LineHeight: var(--pf-global--LineHeight--sm);
 
   .pf-c-check__label {
@@ -18,7 +18,7 @@
 
   .pf-c-check__label.pf-m-disabled,
   .pf-c-check__input:disabled {
-    color: var(--pf-c-check__label--diabled--color);
+    color: var(--pf-c-check__label--disabled--color);
     cursor: not-allowed;
   }
 
