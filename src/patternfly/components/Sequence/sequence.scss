@@ -4,8 +4,6 @@
   --pf-c-sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100); // this background color is interchangable
 
   // Sequence Control
-  --pf-c-sequence__control--PositionTop: 0;
-  --pf-c-sequence__control--PositionBottom: 0;
   --pf-c-sequence__control--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-sequence__control--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-sequence__control--PaddingBottom: var(--pf-global--spacer--xl);
@@ -59,8 +57,7 @@
   --pf-c-sequence__link--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Number
-  --pf-c-sequence__number--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-sequence__number--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-sequence__number--Padding: var(--pf-global--spacer--xs);
   --pf-c-sequence__number--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--MinWidth: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--MaxHeight: var(--pf-global--spacer--lg);
@@ -91,6 +88,9 @@
   --pf-c-sequence__number--hover--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--active--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--focus--BorderColor: var(--pf-global--primary-color--100);
+
+  // Content
+  --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--xl);
 
   // content Title
   --pf-c-sequence__content--title--MaxWidth: 100px;
@@ -155,8 +155,8 @@ button {
 
 .pf-c-sequence__control {
   position: absolute;
-  top: var(--pf-c-sequence__control--PositionTop);
-  bottom: var(--pf-c-sequence__control--PositionBottom);
+  top: 0;
+  bottom: 0;
   padding:
     var(--pf-c-sequence__control--PaddingTop)
     var(--pf-c-sequence__control--PaddingRight)
@@ -229,7 +229,7 @@ button {
   justify-content: center;
   min-width: var(--pf-c-sequence__number--MinWidth);
   max-height: var(--pf-c-sequence__number--MaxHeight);
-  padding: 4px;
+  padding: var(--pf-c-sequence__number--Padding);
   margin-right: var(--pf-c-sequence__number--MarginRight);
   font-size: var(--pf-c-sequence__number--FontSize);
   color: var(--pf-c-sequence__number--Color);
@@ -252,6 +252,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: var(--pf-c-sequence__content--MinHeight);
 }
 
 // Content Title

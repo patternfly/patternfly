@@ -8,10 +8,10 @@ For example for buttons: Always add a modifier class to add color to the button.
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label="[landmark description]"` | `pf-c-sequence` | Describes <sequence> landmark |
-| `aria-labelledby="[id value of position in sequence]"` | `pf-c-sequence__item` | Gives the sequence <item> landmark an accessible name by referring to the element that provides the postion of the item in the given sequence.|
-| `role="controlleft` | `pf-c-sequence__control` | Indicates that the button can be used to move left through the sequence |
-| `role="controlright` | `pf-c-sequence__control` | Indicates that the button can be used to move right through the sequence |
+| `aria-label="[landmark description]"` | `.pf-c-sequence` | Describes <sequence> landmark |
+| `aria-labelledby="[id value of position in sequence]"` | `.pf-c-sequence__item` | Gives the sequence <item> landmark an accessible name by referring to the element that provides the postion of the item in the given sequence.|
+| `role="controlleft"` | `.pf-c-sequence__control` | Indicates that the button can be used to move left through the sequence |
+| `role="controlright"` | `.pf-c-sequence__control` | Indicates that the button can be used to move right through the sequence |
 
 
 
