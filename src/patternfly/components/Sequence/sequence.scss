@@ -61,10 +61,13 @@
   --pf-c-sequence__number--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--MinWidth: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--MaxHeight: var(--pf-global--spacer--lg);
+  --pf-c-sequence__number--hover--MarginRight: var(--pf-global--spacer--md);
   --pf-c-sequence__number--hover--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--hover--MaxHeight: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--active--MarginRight: var(--pf-global--spacer--md);
   --pf-c-sequence__number--active--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--active--MaxHeight: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--focus--MarginRight: var(--pf-global--spacer--md);
   --pf-c-sequence__number--focus--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--focus--MaxHeight: var(--pf-global--spacer--xl);
 
@@ -127,6 +130,7 @@
   --pf-c-sequence__content-title--m-current--FontWeight: var(--pf-global--FontWeight--regular);
 
   // Modifier - current number
+  --pf-c-sequence__number--m-current--MarginRight: var(--pf-global--spacer--md);
   --pf-c-sequence__number--m-current--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--m-current--MaxHeight: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--m-current--BorderColor: var(--pf-global--primary-color--100);
@@ -294,6 +298,7 @@
     .pf-c-sequence__number {
       min-width: var(--pf-c-sequence__number--hover--MinWidth);
       max-height: var(--pf-c-sequence__number--hover--MaxHeight);
+      margin-right: var(--pf-c-sequence__number--hover--MarginRight);
       font-size: var(--pf-c-sequence__number--hover--FontSize);
       color: var(--pf-c-sequence__number--hover--Color);
 
@@ -310,6 +315,7 @@
     .pf-c-sequence__number {
       min-width: var(--pf-c-sequence__number--active--MinWidth);
       max-height: var(--pf-c-sequence__number--active--MaxHeight);
+      margin-right: var(--pf-c-sequence__number--active--MarginRight);
       font-size: var(--pf-c-sequence__number--active--FontSize);
       color: var(--pf-c-sequence__number--active--Color);
 
@@ -330,6 +336,7 @@
     .pf-c-sequence__number {
       min-width: var(--pf-c-sequence__number--focus--MinWidth);
       max-height: var(--pf-c-sequence__number--focus--MaxHeight);
+      margin-right: var(--pf-c-sequence__number--focus--MarginRight);
       font-size: var(--pf-c-sequence__number--focus--FontSize);
       color: var(--pf-c-sequence__number--focus--Color);
 
@@ -350,6 +357,7 @@
     .pf-c-sequence__number {
       min-width: var(--pf-c-sequence__number--m-current--MinWidth);
       max-height: var(--pf-c-sequence__number--m-current--MaxHeight);
+      margin-right: var(--pf-c-sequence__number--m-current--MarginRight);
       font-size: var(--pf-c-sequence__number--m-current--FontSize);
       color: var(--pf-c-sequence__number--m-current--Color);
 
