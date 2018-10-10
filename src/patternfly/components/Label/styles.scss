@@ -18,8 +18,8 @@
   --pf-c-label--hover--BackgroundColor: var(--pf-global--primary-color--200);
 
   // Font
-  --pf-c-label--m-small--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-label--m-large--FontSize: var(--pf-global--FontSize--sm);
+  // --pf-c-label--m-small--FontSize: var(--pf-global--FontSize--xs);
+  // --pf-c-label--m-large--FontSize: var(--pf-global--FontSize--sm);
 
   position: relative;
   display: inline-block;
@@ -39,11 +39,11 @@
     background-color: var(--pf-c-label--hover--BackgroundColor);
   }
 
-  &.pf-m-small {
-    font-size: var(--pf-c-label--m-small--FontSize);
-  }
+  // &.pf-m-small {
+  //   font-size: var(--pf-c-label--m-small--FontSize);
+  // }
 
-  &.pf-m-large {
-    font-size: var(--pf-c-label--m-large--FontSize);
-  }
+  // &.pf-m-large {
+  //   font-size: var(--pf-c-label--m-large--FontSize);
+  // }
 }
