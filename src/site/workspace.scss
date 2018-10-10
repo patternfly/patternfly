@@ -244,7 +244,9 @@
   .pf-l-split > *,
   .pf-l-stack,
   .pf-l-stack > *,
+  .pf-l-login,
   .pf-l-login > * > *,
+  .pf-l-login > * > *:first-child > *,
   .pf-l-toolbar__group,
   .pf-l-toolbar__item,
   [class*="pf-u-"],
@@ -254,7 +256,8 @@
   }
 
   .pf-l-page > *,
-  .pf-l-page__header > * {
+  .pf-l-page__header > *,
+  .pf-l-login__container {
     border: 2px dashed #393f44; 
   }
 
