@@ -194,10 +194,9 @@
   list-style-type: none;
 
   // added so that the list will be read by screen reader
-  &::before {
-    width: 1px;
-    content: "";
-  }
+  // &::before {
+  //   content: "/200B";
+  // }
 }
 
 // Items inside of list
