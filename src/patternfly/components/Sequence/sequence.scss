@@ -372,20 +372,3 @@
     }
   }
 }
-
-// Override button styles
-button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-
-  &:focus {
-    outline-style: none;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 0;  /* remove scrollbar space */
-  height: 0;
-  background: transparent;  /* optional: just make scrollbar invisible */
-}

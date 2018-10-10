@@ -22,11 +22,12 @@ For example for buttons: Always add a modifier class to add color to the button.
 | `.pf-c-sequence__list` | `<ul>` | Initiates a default sequence list |
 | `.pf-c-sequence__item` | `<li>` | Initiates a default sequence list item |
 | `.pf-c-sequence__link` | `<a>` | Initiates a default sequence list link |
+| `.pf-c-sequence__number-container` | `<div>` | Initiates a sequence number container element |
 | `.pf-c-sequence__number` | `<div>` | Initiates a sequence number element |
 | `.pf-c-sequence__content` | `<div>` | Initiates a sequence content element |
 | `.pf-c-sequence__content-title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` | Initiates a sequence content title |
 | `.pf-c-sequence__content-status` | `<p>` | Initiates a sequence content status |
 | `.pf-m-hover` | `.pf-c-sequence__link` | Modifies to display the link as hovered |
 | `.pf-m-active` | `.pf-c-sequence__link` | Modifies to display the link as active |
-| `.pf-m-focus` | `.pf-c-sequence__link` | Modifies to display the link as focussed |
+| `.pf-m-focus` | `.pf-c-sequence__link` | Modifies to display the link as focused |
 | `.pf-m-current` | `.pf-c-sequence__link` | Modifies for the current state |
