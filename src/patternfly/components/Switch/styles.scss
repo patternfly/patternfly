@@ -1,0 +1,132 @@
+@import "../../patternfly-utilities";
+
+.pf-c-switch {
+  --pf-c-switch--Height: calc(#{var(--pf-global--FontSize--md)} * #{var(--pf-global--LineHeight--md)});
+  --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} * #{var(--pf-global--golden-ratio)});
+  --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-switch__input--checked__toggle--before--Transform: translateX(calc(#{var(--pf-c-switch--Width)} - #{var(--pf-c-switch__toggle--before--Width)} - 2 * #{var(--pf-c-switch__toggle--Padding)}));
+  --pf-c-switch__input--checked__label--m-off--Color: var(--pf-global--disabled-color--100);
+  --pf-c-switch__input--checked__label--m-on--Color: var(--pf-global--disabled-color--100);
+  --pf-c-switch__input--not-checked__label--m-off--Color: var(--pf-global--Color--dark-100);
+  --pf-c-switch__input--disabled__toggle--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+  --pf-c-switch__input--disabled__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-switch__input--disabled__label--m-off--Color: var(--pf-global--disabled-color--100);
+  --pf-c-switch__input--disabled__label--m-on--Color: var(--pf-global--disabled-color--100);
+  --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch--Height);
+  --pf-c-switch__toggle--Padding: calc(#{var(--pf-c-switch--Height)} / 2 * (1 - 1 / #{var(--pf-global--golden-ratio)}));
+  --pf-c-switch__toggle--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-switch__toggle--before--Width: calc(#{var(--pf-c-switch--Height)} / #{var(--pf-global--golden-ratio)});
+  --pf-c-switch__toggle--before--Height: var(--pf-c-switch__toggle--before--Width);
+  --pf-c-switch__toggle--before--BorderRadius: var(--pf-c-switch__toggle--before--Width);
+  --pf-c-switch__toggle--before--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
+  --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-switch__label--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-switch__label--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch__label--m-on--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-switch__label--m-off--PaddingRight: var(--pf-global--spacer--md);
+
+  position: relative;
+  display: inline-block;
+  height: var(--pf-c-switch--Height);
+  line-height: var(--pf-c-switch--LineHeight);
+  vertical-align: middle;
+  cursor: pointer;
+
+  .pf-c-switch__input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+
+    &:checked {
+      ~ .pf-c-switch__label.pf-m-off {
+        color: var(--pf-c-switch__input--checked__label--m-off--Color);
+      }
+
+      ~ .pf-c-switch__toggle {
+        background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
+      }
+
+      ~ .pf-c-switch__toggle::before {
+        transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
+      }
+    }
+
+    &:not(:checked) {
+      ~ .pf-c-switch__label.pf-m-off {
+        color: var(--pf-c-switch__input--not-checked__label--m-off--Color);
+      }
+
+      ~ .pf-c-switch__label.pf-m-on {
+        color: var(--pf-c-switch__input--checked__label--m-on--Color);
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      ~ .pf-c-switch__label.pf-m-off {
+        color: var(--pf-c-switch__input--disabled__label--m-off--Color);
+        cursor: not-allowed;
+      }
+
+      ~ .pf-c-switch__label.pf-m-on {
+        color: var(--pf-c-switch__input--disabled__label--m-on--Color);
+        cursor: not-allowed;
+      }
+
+      ~ .pf-c-switch__toggle {
+        cursor: not-allowed;
+        background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
+      }
+
+      ~ .pf-c-switch__toggle::before {
+        cursor: not-allowed;
+        background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
+      }
+    }
+  }
+
+  .pf-c-switch__toggle {
+    position: relative;
+    display: inline-block;
+    width: var(--pf-c-switch--Width);
+    height: var(--pf-c-switch--Height);
+    background-color: var(--pf-c-switch__toggle--BackgroundColor);
+    border-radius: var(--pf-c-switch__toggle--BorderRadius);
+
+    &::before {
+      position: absolute;
+      top: var(--pf-c-switch__toggle--Padding);
+      left: var(--pf-c-switch__toggle--Padding);
+      display: block;
+      width: var(--pf-c-switch__toggle--before--Width);
+      height: var(--pf-c-switch__toggle--before--Height);
+      content: "";
+      background-color: var(--pf-c-switch__toggle--before--BackgroundColor);
+      border-radius: var(--pf-c-switch__toggle--before--BorderRadius);
+      box-shadow: var(--pf-c-switch__toggle--before--BoxShadow);
+      transition: transform .25s ease 0s, width .25s ease 0s, left .25s ease 0s;
+      transform: translateX(0);
+    }
+  }
+
+  .pf-c-switch__label {
+    display: inline-block;
+    font-size: var(--pf-c-switch__label--FontSize);
+    font-weight: var(--pf-c-switch__label--FontWeight);
+    line-height: var(--pf-c-switch__label--LineHeight);
+    color: var(--pf-c-switch__label--Color);
+    vertical-align: top;
+
+    &.pf-m-off {
+      padding-right: var(--pf-c-switch__label--m-off--PaddingRight);
+    }
+
+    &.pf-m-on {
+      padding-left: var(--pf-c-switch__label--m-on--PaddingLeft);
+    }
+  }
+}

@@ -9,4 +9,4 @@ Checkbox and Radio are provided in the check component for use cases outside of 
 | -- | -- | -- |
 | `.pf-c-check` | `<input type="checkbox">`,`<input type="radio">` |  Initiates a checkbox or radio. **required**  |
 | `.pf-c-check__label` | `<label>` |  Initiates a label. **required**  |
-| `.pf-m-disabled` | `pf-c-check__label` |  Initiates a disabled style for labels.  |
+| `.pf-m-disabled` | `.pf-c-check__label` |  Initiates a disabled style for labels.  |
