@@ -61,15 +61,9 @@
   --pf-c-sequence__number--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--MinWidth: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--MaxHeight: var(--pf-global--spacer--lg);
-  --pf-c-sequence__number--hover--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-sequence__number--hover--MinWidth: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--hover--MaxHeight: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--active--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-sequence__number--active--MinWidth: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--active--MaxHeight: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--focus--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-sequence__number--focus--MinWidth: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--focus--MaxHeight: var(--pf-global--spacer--xl);
+  --pf-c-sequence__number--hover--Transform: scale(1.333333);
+  --pf-c-sequence__number--active--Transform: scale(1.333333);
+  --pf-c-sequence__number--focus--Transform: scale(1.333333);
 
   // Number Color
   --pf-c-sequence__number--Color: var(--pf-global--Color--200);
@@ -134,16 +128,12 @@
   --pf-c-sequence__number--m-current--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--m-current--MaxHeight: var(--pf-global--spacer--xl);
   --pf-c-sequence__number--m-current--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__number--m-current--Transform: scale(1.333333);
 
   position: relative;
   display: flex;
   justify-content: center;
   background-color: var(--pf-c-sequence--BackgroundColor);
-
-  // Hide scrollbars
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .pf-c-sequence__control {
@@ -296,11 +286,12 @@
     }
 
     .pf-c-sequence__number {
-      min-width: var(--pf-c-sequence__number--hover--MinWidth);
-      max-height: var(--pf-c-sequence__number--hover--MaxHeight);
-      margin-right: var(--pf-c-sequence__number--hover--MarginRight);
-      font-size: var(--pf-c-sequence__number--hover--FontSize);
+      // min-width: var(--pf-c-sequence__number--hover--MinWidth);
+      // max-height: var(--pf-c-sequence__number--hover--MaxHeight);
+      // margin-right: var(--pf-c-sequence__number--hover--MarginRight);
+      // font-size: var(--pf-c-sequence__number--hover--FontSize);
       color: var(--pf-c-sequence__number--hover--Color);
+      transform: var(--pf-c-sequence__number--hover--Transform);
 
       &::before {
         border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--hover--Color);
@@ -313,11 +304,12 @@
     border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--active--BorderBottomColor);
 
     .pf-c-sequence__number {
-      min-width: var(--pf-c-sequence__number--active--MinWidth);
-      max-height: var(--pf-c-sequence__number--active--MaxHeight);
-      margin-right: var(--pf-c-sequence__number--active--MarginRight);
-      font-size: var(--pf-c-sequence__number--active--FontSize);
+      // min-width: var(--pf-c-sequence__number--active--MinWidth);
+      // max-height: var(--pf-c-sequence__number--active--MaxHeight);
+      // margin-right: var(--pf-c-sequence__number--active--MarginRight);
+      // font-size: var(--pf-c-sequence__number--active--FontSize);
       color: var(--pf-c-sequence__number--active--Color);
+      transform: var(--pf-c-sequence__number--active--Transform);
 
       &::before {
         border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--active--Color);
@@ -334,11 +326,12 @@
     border-bottom: var(--pf-c-sequence__link--BorderBottomHeight) solid var(--pf-c-sequence__link--focus--BorderBottomColor);
 
     .pf-c-sequence__number {
-      min-width: var(--pf-c-sequence__number--focus--MinWidth);
-      max-height: var(--pf-c-sequence__number--focus--MaxHeight);
-      margin-right: var(--pf-c-sequence__number--focus--MarginRight);
-      font-size: var(--pf-c-sequence__number--focus--FontSize);
+      // min-width: var(--pf-c-sequence__number--focus--MinWidth);
+      // max-height: var(--pf-c-sequence__number--focus--MaxHeight);
+      // // margin-right: var(--pf-c-sequence__number--focus--MarginRight);
+      // font-size: var(--pf-c-sequence__number--focus--FontSize);
       color: var(--pf-c-sequence__number--focus--Color);
+      transform: var(--pf-c-sequence__number--focus--Transform);
 
       &::before {
         border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--focus--Color);
@@ -355,11 +348,8 @@
     border-bottom: var(--pf-c-sequence__link--m-current--BorderBottomHeight) solid var(--pf-c-sequence__link--m-current--BorderBottomColor);
 
     .pf-c-sequence__number {
-      min-width: var(--pf-c-sequence__number--m-current--MinWidth);
-      max-height: var(--pf-c-sequence__number--m-current--MaxHeight);
-      margin-right: var(--pf-c-sequence__number--m-current--MarginRight);
-      font-size: var(--pf-c-sequence__number--m-current--FontSize);
       color: var(--pf-c-sequence__number--m-current--Color);
+      transform: var(--pf-c-sequence__number--m-current--Transform);
 
       &::before {
         border: var(--pf-c-sequence__number--BorderWeight) solid var(--pf-c-sequence__number--m-current--Color);
