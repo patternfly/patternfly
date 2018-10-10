@@ -143,16 +143,6 @@ html {
     cursor: pointer;
   }
 
-  button {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      outline-style: none;
-    }
-  }
-
   button,
   [type="button"],
   [type="reset"],
@@ -163,12 +153,3 @@ html {
     }
   }
 } // ends if
-
-// remove scrollbar space
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-
-  // make scrollbar invisible
-  background: transparent;
-}

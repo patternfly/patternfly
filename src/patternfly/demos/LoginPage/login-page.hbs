@@ -1,1 +1,6 @@
-{{> @partial-block}}
+<div class="pf-d-login-page {{#if login-page--modifier}}{{login-page--modifier}}{{/if}}"
+  {{#if login-page__id}}
+    id="{{login-page__id}}"
+  {{/if}}>
+  {{> @partial-block}}
+</div>
