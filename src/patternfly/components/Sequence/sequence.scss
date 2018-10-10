@@ -142,17 +142,6 @@
   }
 }
 
-// Override button styles
-button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-
-  &:focus {
-    outline-style: none;
-  }
-}
-
 .pf-c-sequence__control {
   position: absolute;
   top: 0;
@@ -204,6 +193,17 @@ button {
 .pf-c-sequence__list {
   display: inline-flex;
   overflow: scroll;
+}
+
+// Change default styles for the list and list items
+.pf-c-sequence__list .pf-c-sequence__item {
+  list-style-type: none;
+
+  // added so that the list will be read by screen reader
+  &::before {
+    width: 1px;
+    content: "";
+  }
 }
 
 // Items inside of list
@@ -364,3 +364,15 @@ button {
     }
   }
 }
+
+// Override button styles
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline-style: none;
+  }
+}
+

@@ -9,11 +9,10 @@ For example for buttons: Always add a modifier class to add color to the button.
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-sequence` | Describes <sequence> landmark |
-| `aria-labelledby="[id value of position in sequence]"` | `.pf-c-sequence__item` | Gives the sequence <item> landmark an accessible name by referring to the element that provides the postion of the item in the given sequence.|
-| `role="controlleft"` | `.pf-c-sequence__control` | Indicates that the button can be used to move left through the sequence |
-| `role="controlright"` | `.pf-c-sequence__control` | Indicates that the button can be used to move right through the sequence |
-
-
+| `aria-setsize` | `.pf-c-sequence__item` | Indicates the total number of items in the list |
+| `aria-posinset` | `.pf-c-sequence__item` | Indicates the position of an item within a list |
+| `aria-hidden="true"` | `.pf-c-sequence__control-icon` | Hides the icon from assistive technologies |
+| `aria-label="actions"` | `.pf-c-sequence__control-icon` | Provides an accessible name for the dropdown when an icon is used instead of text. Required when an icon is used with no supporting text |
 
 ## Usage
 
