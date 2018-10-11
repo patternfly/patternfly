@@ -1,6 +1,6 @@
 {{#> sequence sequence--attribute='aria-label="Sequence"'}}
-	{{#> sequence-list}}
-		{{#> sequence-item}}
+	{{#> sequence-list sequence-list--attribute='role="list"'}}
+		{{#> sequence-item sequence-item--attribute='role="list item"'}}
 			{{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
 					{{#> sequence-number}}1{{/sequence-number}}
 				{{#> sequence-content}}
@@ -8,7 +8,7 @@
 				{{/sequence-content}}
 			{{/sequence-link}}
 		{{/sequence-item}}
-		{{#> sequence-item}}
+		{{#> sequence-item sequence-item--attribute='role="list item"'}}
 			{{#> sequence-link sequence-link--attribute='href="#"'}}
 					{{#> sequence-number}}2{{/sequence-number}}
 				{{#> sequence-content}}
@@ -16,7 +16,7 @@
 				{{/sequence-content}}
 			{{/sequence-link}}
 		{{/sequence-item}}
-	  {{#> sequence-item}}
+	  {{#> sequence-item sequence-item--attribute='role="list item"'}}
 			{{#> sequence-link sequence-link--attribute='href="#"'}}
 					{{#> sequence-number}}3{{/sequence-number}}
 				{{#> sequence-content}}

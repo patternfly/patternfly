@@ -208,8 +208,14 @@
 // Items inside of list
 .pf-c-sequence__item {
   max-width: var(--pf-c-sequence__item--MaxWidth);
-  margin-right: var(--pf-c-sequence__item--MarginRight);
-  margin-left: var(--pf-c-sequence__item--MarginLeft);
+
+  &:not(:first-child) {
+    margin-left: var(--pf-c-sequence__item--MarginLeft);
+  }
+
+  &:not(:last-child) {
+    margin-right: var(--pf-c-sequence__item--MarginRight);
+  }
 }
 
 // Sequence Link Position Number
