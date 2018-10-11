@@ -1,8 +1,6 @@
 @import "../../patternfly-utilities";
 
 .pf-c-sequence {
-  --pf-c-sequence--BackgroundColor: var(--pf-global--BackgroundColor--dark-100); // this background color is interchangable
-
   // Sequence Control
   --pf-c-sequence__control--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-sequence__control--PaddingRight: var(--pf-global--spacer--sm);
@@ -27,18 +25,16 @@
 
   // Sequence Control Left
   --pf-c-sequence__control-left--PositionLeft: 0;
-  --pf-c-sequence__control-left--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
   --pf-c-sequence__control-left--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-sequence__control-left--BorderRightColor: var(--pf-global--Color--200);
 
   // Sequence Control Right
   --pf-c-sequence__control-right--PositionRight: 0;
-  --pf-c-sequence__control-right--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
   --pf-c-sequence__control-right--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-sequence__control-right--BorderLeftColor: var(--pf-global--Color--200);
 
   // Sequence Control Icon
-  --pf-c-sequence__control-icon--Color: var(--pf-global--Color--light-100);
+  --pf-c-sequence__control-icon--Color: var(--pf-global--Color--100);
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
 
   // Item
@@ -94,7 +90,7 @@
   --pf-c-sequence__content--title--MaxWidth: #{pf-size-prem(100px)};
 
   // Content Title Color
-  --pf-c-sequence__content-title--Color: var(--pf-global--Color--light-100);
+  --pf-c-sequence__content-title--Color: var(--pf-global--Color--100);
   --pf-c-sequence__content-title--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--Color: var(--pf-global--primary-color--100);
@@ -134,7 +130,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: var(--pf-c-sequence--BackgroundColor);
 }
 
 .pf-c-sequence__control {
