@@ -110,11 +110,6 @@
   line-height: var(--pf-c-button--LineHeight);
   text-align: center;
   white-space: nowrap;
-  /* stylelint-disable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  /* stylelint-enable */
   user-select: none;
   border: 0;
   border-radius: var(--pf-c-button--BorderRadius);
