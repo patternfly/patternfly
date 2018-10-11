@@ -43,7 +43,7 @@
   // Item
   --pf-c-sequence__item--MarginRight: 1px;
   --pf-c-sequence__item--MarginLeft: 1px;
-  --pf-c-sequence__item--MaxWidth: 200px;
+  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(200px)};
 
   // Link
   --pf-c-sequence__link--PaddingTop: var(--pf-global--spacer--xl);
@@ -90,7 +90,7 @@
   --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--xl);
 
   // content Title
-  --pf-c-sequence__content--title--MaxWidth: 100px;
+  --pf-c-sequence__content--title--MaxWidth: #{pf-size-prem(100px)};
 
   // Content Title Color
   --pf-c-sequence__content-title--Color: var(--pf-global--Color--light-100);

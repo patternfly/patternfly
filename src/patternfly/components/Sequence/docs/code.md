@@ -9,8 +9,6 @@ For example for buttons: Always add a modifier class to add color to the button.
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-sequence` | Describes <sequence> landmark |
-| `aria-setsize` | `.pf-c-sequence__item` | Indicates the total number of items in the list |
-| `aria-posinset` | `.pf-c-sequence__item` | Indicates the position of an item within a list |
 | `aria-hidden="true"` | `.pf-c-sequence__control-icon` | Hides the icon from assistive technologies |
 | `aria-label="actions"` | `.pf-c-sequence__control-icon` | Provides an accessible name for the dropdown when an icon is used instead of text. Required when an icon is used with no supporting text |
 
