@@ -39,6 +39,7 @@
 
   // Sequence Control Icon
   --pf-c-sequence__control-icon--Color: var(--pf-global--Color--light-100);
+  --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
 
   // Item
   --pf-c-sequence__item--MarginRight: 1px;
@@ -139,11 +140,8 @@
 .pf-c-sequence__control {
   top: 0;
   bottom: 0;
-  padding:
-    var(--pf-c-sequence__control--PaddingTop)
-    var(--pf-c-sequence__control--PaddingRight)
-    var(--pf-c-sequence__control--PaddingBottom)
-    var(--pf-c-sequence__control--PaddingLeft);
+  padding-top: var(--pf-c-sequence__control--PaddingTop);
+  padding-bottom: var(--pf-c-sequence__control--PaddingBottom);
 
   &::before {
     content: "";
@@ -185,6 +183,7 @@
 }
 
 .pf-c-sequence__control-icon {
+  min-width: var(--pf-c-sequence__control-icon--MinWidth);
   color: var(--pf-c-sequence__control-icon--Color);
 }
 
@@ -198,11 +197,6 @@
 // Change default styles for the list and list items
 .pf-c-sequence__list .pf-c-sequence__item {
   list-style-type: none;
-
-  // added so that the list will be read by screen reader
-  // &::before {
-  //   content: "/200B";
-  // }
 }
 
 // Items inside of list
