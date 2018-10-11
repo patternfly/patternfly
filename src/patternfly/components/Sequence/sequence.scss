@@ -23,15 +23,15 @@
   --pf-c-sequence__control--active--BorderTopColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
-  // Sequence Control Left
-  --pf-c-sequence__control-left--PositionLeft: 0;
-  --pf-c-sequence__control-left--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-sequence__control-left--BorderRightColor: var(--pf-global--Color--200);
+  // Sequence Control Modifier Start
+  --pf-c-sequence__control-m-start--PositionLeft: 0;
+  --pf-c-sequence__control-m-start--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-sequence__control-m-start--BorderRightColor: var(--pf-global--Color--200);
 
-  // Sequence Control Right
-  --pf-c-sequence__control-right--PositionRight: 0;
-  --pf-c-sequence__control-right--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-sequence__control-right--BorderLeftColor: var(--pf-global--Color--200);
+  // Sequence Control Modifier - End
+  --pf-c-sequence__control-m-end--PositionRight: 0;
+  --pf-c-sequence__control-m-end--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-sequence__control-m-end--BorderLeftColor: var(--pf-global--Color--200);
 
   // Sequence Control Icon
   --pf-c-sequence__control-icon--Color: var(--pf-global--Color--100);
@@ -87,7 +87,7 @@
   --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--xl);
 
   // content Title
-  --pf-c-sequence__content--title--MaxWidth: #{pf-size-prem(100px)};
+  --pf-c-sequence__content-title--MaxWidth: #{pf-size-prem(100px)};
 
   // Content Title Color
   --pf-c-sequence__content-title--Color: var(--pf-global--Color--100);
@@ -102,11 +102,15 @@
   --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
+  // Content Status
+  --pf-c-sequence__content-status--MaxWidth: #{pf-size-prem(100px)};
+
   // Content Status Color
   --pf-c-sequence__content-status--Color: var(--pf-global--Color--200);
 
   // Content Status Font
   --pf-c-sequence__content-status--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-sequence__content-status--FontWeight: var(--pf-global--FontWeight--regular);
 
   // Modifier - current link
   --pf-c-sequence__link--m-current--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
@@ -163,18 +167,16 @@
   }
 }
 
-.pf-c-sequence__control-left {
-  left: var(--pf-c-sequence__control-left--PositionLeft);
+.pf-c-sequence__control-m-start {
+  left: var(--pf-c-sequence__control-m-start--PositionLeft);
   order: 1;
-  background-color: var(--pf-c-sequence__control-left--BackgroundColor);
-  border-right: var(--pf-c-sequence__control-left--BorderRightWidth) solid var(--pf-c-sequence__control-left--BorderRightColor);
+  border-right: var(--pf-c-sequence__control-m-start--BorderRightWidth) solid var(--pf-c-sequence__control-m-start--BorderRightColor);
 }
 
-.pf-c-sequence__control-right {
-  right: var(--pf-c-sequence__control-right--PositionRight);
+.pf-c-sequence__control-m-end {
+  right: var(--pf-c-sequence__control-m-end--PositionRight);
   order: 3;
-  background-color: var(--pf-c-sequence__control-right--BackgroundColor);
-  border-left: var(--pf-c-sequence__control-right--BorderLeftWidth) solid var(--pf-c-sequence__control-right--BorderLeftColor);
+  border-left: var(--pf-c-sequence__control-m-end--BorderLeftWidth) solid var(--pf-c-sequence__control-m-end--BorderLeftColor);
 }
 
 .pf-c-sequence__control-icon {
@@ -234,8 +236,9 @@
 
 // Content Title
 .pf-c-sequence__content-title {
-  max-width: var(--pf-c-sequence__content--title--MaxWidth);
+  max-width: var(--pf-c-sequence__content-title--MaxWidth);
   overflow: hidden;
+  font-size: var(--pf-c-sequence__content-title--FontSize);
   font-weight: var(--pf-c-sequence__content-title--FontWeight);
   color: var(--pf-c-sequence__content-title--Color);
   text-overflow: ellipsis;
@@ -244,8 +247,13 @@
 
 // Content Status
 .pf-c-sequence__content-status {
+  max-width: var(--pf-c-sequence__content-status--MaxWidth);
+  overflow: hidden;
   font-size: var(--pf-c-sequence__content-status--FontSize);
+  font-weight: var(--pf-c-sequence__content-status--FontWeight);
   color: var(--pf-c-sequence__content-status--Color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Link
