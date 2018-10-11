@@ -38,8 +38,7 @@
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
 
   // Item
-  --pf-c-sequence__item--MarginRight: 1px;
-  --pf-c-sequence__item--MarginLeft: 1px;
+  --pf-c-sequence__item--MarginRight: 2px;
   --pf-c-sequence__item--MaxWidth: #{pf-size-prem(200px)};
 
   // Link
@@ -134,6 +133,13 @@
   position: relative;
   display: flex;
   justify-content: center;
+
+  // remove scrollbar
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
 }
 
 .pf-c-sequence__control {
@@ -164,6 +170,16 @@
   &:focus {
     border-top: var(--pf-c-sequence__control--focus--BorderTopWidth) solid var(--pf-c-sequence__control--focus--BorderTopColor);
     border-bottom: var(--pf-c-sequence__control--focus--BorderBottomWidth) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
+  }
+
+  button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline-style: none;
+    }
   }
 }
 
@@ -199,10 +215,6 @@
 // Items inside of list
 .pf-c-sequence__item {
   max-width: var(--pf-c-sequence__item--MaxWidth);
-
-  &:not(:first-child) {
-    margin-left: var(--pf-c-sequence__item--MarginLeft);
-  }
 
   &:not(:last-child) {
     margin-right: var(--pf-c-sequence__item--MarginRight);
@@ -329,21 +341,4 @@
   }
 }
 
-// remove scrollbar space
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 
-  // make scrollbar invisible
-  background: transparent;
-}
-
-button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-
-  &:focus {
-    outline-style: none;
-  }
-}
