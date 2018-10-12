@@ -1,7 +1,35 @@
-<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}} {{#if dropdown--modifier}} {{dropdown--modifier}}{{/if}}"
-  {{#if dropdown--attribute}}
-    {{{dropdown--attribute}}}
-  {{/if}}>
-	{{> dropdown-toggle}}
-  {{> dropdown-menu}}
+<div class="pf-c-dropdown{{#if dropdown--IsExpanded}} pf-m-expanded{{/if}}{{#if dropdown--modifier}} {{dropdown--modifier}}{{/if}}">
+    {{#if dropdown--IsSelect}}
+        <span id="{{id}}-label" hidden>Select a fruit</span>
+    {{else if dropdown--IsMultiSelect}}
+        <span id="{{id}}-label" hidden>Select one or more fruits</span>
+    {{/if}}
+   <button id="{{id}}-button"
+        class="pf-c-dropdown__toggle"
+    {{#if dropdown--IsSelect}}
+        aria-labelledby="{{id}}-label {{id}}-button"
+    {{else if dropdown--IsMultiSelect}}
+        aria-labelledby="{{id}}-label {{id}}-button"
+    {{/if}}
+        aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
+        {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
+        {{> @partial-block}}
+        {{#if dropdown--HasToggleIcon}}
+        {{> dropdown-toggle-icon}}
+        {{/if}}
+        {{#if dropdown--HasKebabIcon}}
+        {{> kebab-icon}}
+        {{/if}}
+
+    </button>
+    {{#if dropdown--IsSelect}}
+        {{> dropdown-select}}
+    {{else if dropdown--IsMultiSelect}}
+        {{> dropdown-multi-select}}
+    {{else if dropdown--IsActionMenu}}
+        {{> dropdown-menu}}
+    {{else}}
+        {{> dropdown-basic}}
+    {{/if}}
+
 </div>
