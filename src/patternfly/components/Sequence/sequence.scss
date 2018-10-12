@@ -128,8 +128,12 @@
     border-bottom: 0;
 
     &:focus {
-      outline-style: none;
+      outline: none;
     }
+  }
+
+  button::-moz-focus-inner {
+    border: 0;
   }
 
   // remove scrollbar
@@ -170,7 +174,7 @@
     border-bottom: var(--pf-c-sequence__control--focus--BorderBottomWidth) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
   }
 
-  @media screen and (max-width: $pf-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
     display: none;
   }
 }
