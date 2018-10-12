@@ -2,22 +2,22 @@
 
 /* stylelint-disable */
 // Display utilities
-@include pf-utility-builder("display-none", $pf-global--breakpoint-list) { display: none !important; }
+// @include pf-utility-builder("display-none", $pf-global--breakpoint-list) { display: none !important; }
 
-@include pf-utility-builder("display-inline-block", $pf-global--breakpoint-list) { display: inline-block !important; }
+// @include pf-utility-builder("display-inline-block", $pf-global--breakpoint-list) { display: inline-block !important; }
 
-@include pf-utility-builder("display-block", $pf-global--breakpoint-list) { display: block !important; }
+// @include pf-utility-builder("display-block", $pf-global--breakpoint-list) { display: block !important; }
 
-@include pf-utility-builder("display-inline", $pf-global--breakpoint-list) { display: inline !important; }
+// @include pf-utility-builder("display-inline", $pf-global--breakpoint-list) { display: inline !important; }
 
-@include pf-utility-builder("display-table", $pf-global--breakpoint-list) { display: table !important; }
+// @include pf-utility-builder("display-table", $pf-global--breakpoint-list) { display: table !important; }
 
-@include pf-utility-builder("display-table-cell", $pf-global--breakpoint-list) { display: table-cell !important; }
+// @include pf-utility-builder("display-table-cell", $pf-global--breakpoint-list) { display: table-cell !important; }
 
-@include pf-utility-builder("display-table-row", $pf-global--breakpoint-list) { display: table-row !important; }
+// @include pf-utility-builder("display-table-row", $pf-global--breakpoint-list) { display: table-row !important; }
 
-// Flex utilities
-@include pf-utility-builder("display-flex", $pf-global--breakpoint-list) { display: flex !important; }
+// // Flex utilities
+// @include pf-utility-builder("display-flex", $pf-global--breakpoint-list) { display: flex !important; }
 
-@include pf-utility-builder("display-inline-flex", $pf-global--breakpoint-list) { display: inline-flex !important; }
+// @include pf-utility-builder("display-inline-flex", $pf-global--breakpoint-list) { display: inline-flex !important; }
 /* stylelint-enable */

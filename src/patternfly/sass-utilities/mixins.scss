@@ -41,18 +41,60 @@
 /// responsive, including all breakpoints    @include pf-utility-builder(class-name, $pf-global--breakpoint-list) { prop: val !important; }
 /// ===============================================================================================
 @mixin pf-utility-builder($class-name, $breakpoints: null) {
-  @each $breakpoint in $breakpoints {
-    $suffix: -on-#{$breakpoint};
+  // if $class-name is a map
 
-    // if no media query, set suffix to null
-    @if $breakpoint == null or $breakpoint == "base" {
-      $suffix: "";
+  /* stylelint-disable */
+  @if type-of($class-name) == map {
+    @each $class, $val in $class-name {
+      $property: nth($val, 1);
+      $value: #{nth($val, 2) !important};
+
+      .pf-u-#{$class} {
+        #{$property}: #{$value};
+      }
     }
 
-    .pf-u-#{$class-name}#{$suffix} {
-      @include pf-media-query($breakpoint) {
-        @content;
+    @if $breakpoints != null {
+      @each $breakpoint in $breakpoints {
+        $suffix: -on-#{$breakpoint};
+
+        @include pf-media-query($breakpoint) {
+          @each $class, $val in $class-name {
+            $property: nth($val, 1);
+            $value: #{nth($val, 2) !important};
+
+            .pf-u-#{$class}#{$suffix} {
+              #{$property}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @else {
+    .pf-u-#{$class-name} {
+      @content;
+    }
+
+    @if $breakpoints != null {
+      @each $breakpoint in $breakpoints {
+        $suffix: -on-#{$breakpoint};
+
+        @warn $suffix;
+
+        // if no media query, set suffix to null
+        @if $breakpoint == null or $breakpoint == "base" {
+          $suffix: "";
+        }
+
+        .pf-u-#{$class-name}#{$suffix} {
+          @include pf-media-query($breakpoint) {
+            @content;
+          }
+        }
       }
     }
   }
 }
+/* stylelint-enable */

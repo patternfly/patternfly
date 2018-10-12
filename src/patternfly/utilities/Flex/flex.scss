@@ -2,92 +2,92 @@
 
 /* stylelint-disable */
 // Flex direction
-@include pf-utility-builder("flex-column") { flex-direction: column !important; }
+// @include pf-utility-builder("flex-column") { flex-direction: column !important; }
 
-@include pf-utility-builder("flex-column-reverse") { flex-direction: column-reverse !important; }
+// @include pf-utility-builder("flex-column-reverse") { flex-direction: column-reverse !important; }
 
-@include pf-utility-builder("flex-row-reverse") { flex-direction: row-reverse !important; }
+// @include pf-utility-builder("flex-row-reverse") { flex-direction: row-reverse !important; }
 
-@include pf-utility-builder("flex-row") { flex-direction: row !important; }
+// @include pf-utility-builder("flex-row") { flex-direction: row !important; }
 
-// Wrap
-@include pf-utility-builder("flex-wrap") { flex-wrap: wrap !important; }
+// // Wrap
+// @include pf-utility-builder("flex-wrap") { flex-wrap: wrap !important; }
 
-@include pf-utility-builder("flex-nowrap") { flex-wrap: nowrap !important; }
+// @include pf-utility-builder("flex-nowrap") { flex-wrap: nowrap !important; }
 
-@include pf-utility-builder("flex-wrap-reverse") { flex-wrap: wrap-reverse !important; }
+// @include pf-utility-builder("flex-wrap-reverse") { flex-wrap: wrap-reverse !important; }
 
-// Align items
-@include pf-utility-builder("align-items-flex-start") { align-items: flex-start !important; }
+// // Align items
+// @include pf-utility-builder("align-items-flex-start") { align-items: flex-start !important; }
 
-@include pf-utility-builder("align-items-flex-end") { align-items: flex-end !important; }
+// @include pf-utility-builder("align-items-flex-end") { align-items: flex-end !important; }
 
-@include pf-utility-builder("align-items-center") { align-items: center !important; }
+// @include pf-utility-builder("align-items-center") { align-items: center !important; }
 
-@include pf-utility-builder("align-items-baseline") { align-items: baseline !important; }
+// @include pf-utility-builder("align-items-baseline") { align-items: baseline !important; }
 
-@include pf-utility-builder("align-items-stretch") { align-items: stretch !important; }
+// @include pf-utility-builder("align-items-stretch") { align-items: stretch !important; }
 
-// Align self
-@include pf-utility-builder("align-self-flex-start") { align-self: flex-start !important; }
+// // Align self
+// @include pf-utility-builder("align-self-flex-start") { align-self: flex-start !important; }
 
-@include pf-utility-builder("align-self-flex-end") { align-self: flex-end !important; }
+// @include pf-utility-builder("align-self-flex-end") { align-self: flex-end !important; }
 
-@include pf-utility-builder("align-self-center") { align-self: center !important; }
+// @include pf-utility-builder("align-self-center") { align-self: center !important; }
 
-@include pf-utility-builder("align-self-baseline") { align-self: baseline !important; }
+// @include pf-utility-builder("align-self-baseline") { align-self: baseline !important; }
 
-@include pf-utility-builder("align-self-stretch") { align-self: stretch !important; }
+// @include pf-utility-builder("align-self-stretch") { align-self: stretch !important; }
 
-// Align content
-@include pf-utility-builder("align-content-flex-start") { align-content: flex-start !important; }
+// // Align content
+// @include pf-utility-builder("align-content-flex-start") { align-content: flex-start !important; }
 
-@include pf-utility-builder("align-content-flex-end") { align-content: flex-end !important; }
+// @include pf-utility-builder("align-content-flex-end") { align-content: flex-end !important; }
 
-@include pf-utility-builder("align-content-center") { align-content: center !important; }
+// @include pf-utility-builder("align-content-center") { align-content: center !important; }
 
-@include pf-utility-builder("align-content-space-between") { align-content: space-between !important; }
+// @include pf-utility-builder("align-content-space-between") { align-content: space-between !important; }
 
-@include pf-utility-builder("align-content-space-around") { align-content: space-around !important; }
+// @include pf-utility-builder("align-content-space-around") { align-content: space-around !important; }
 
-@include pf-utility-builder("align-content-stretch") { align-content: stretch !important; }
+// @include pf-utility-builder("align-content-stretch") { align-content: stretch !important; }
 
-// Justify content
-@include pf-utility-builder("justify-content-flex-start") { justify-content: flex-start !important; }
+// // Justify content
+// @include pf-utility-builder("justify-content-flex-start") { justify-content: flex-start !important; }
 
-@include pf-utility-builder("justify-content-flex-end") { justify-content: flex-end !important; }
+// @include pf-utility-builder("justify-content-flex-end") { justify-content: flex-end !important; }
 
-@include pf-utility-builder("justify-content-center") { justify-content: center !important; }
+// @include pf-utility-builder("justify-content-center") { justify-content: center !important; }
 
-@include pf-utility-builder("justify-content-space-between") { justify-content: space-between !important; }
+// @include pf-utility-builder("justify-content-space-between") { justify-content: space-between !important; }
 
-@include pf-utility-builder("justify-content-space-around") { justify-content: space-around !important; }
+// @include pf-utility-builder("justify-content-space-around") { justify-content: space-around !important; }
 
-// Flex shrink / grow
-@include pf-utility-builder("flex-shrink-1") { flex-shrink: 1 !important; }
+// // Flex shrink / grow
+// @include pf-utility-builder("flex-shrink-1") { flex-shrink: 1 !important; }
 
-@include pf-utility-builder("flex-grow-1") { flex-grow: 1 !important; }
+// @include pf-utility-builder("flex-grow-1") { flex-grow: 1 !important; }
 
-@include pf-utility-builder("flex-shrink-0") { flex-shrink: 0 !important; }
+// @include pf-utility-builder("flex-shrink-0") { flex-shrink: 0 !important; }
 
-@include pf-utility-builder("flex-grow-0") { flex-grow: 0 !important; }
+// @include pf-utility-builder("flex-grow-0") { flex-grow: 0 !important; }
 
-// Flex basis
-@include pf-utility-builder("flex-basis-0") { flex-basis: 0 !important; }
+// // Flex basis
+// @include pf-utility-builder("flex-basis-0") { flex-basis: 0 !important; }
 
-@include pf-utility-builder("flex-basis-auto") { flex-basis: auto !important; }
+// @include pf-utility-builder("flex-basis-auto") { flex-basis: auto !important; }
 
-@include pf-utility-builder("flex-none") { flex: none !important; }
+// @include pf-utility-builder("flex-none") { flex: none !important; }
 
-@include pf-utility-builder("flex-1") { flex: 1 !important; }
+// @include pf-utility-builder("flex-1") { flex: 1 !important; }
 
-// Flex fill
-@include pf-utility-builder("flex-fill") { flex: 1 1 auto !important; }
+// // Flex fill
+// @include pf-utility-builder("flex-fill") { flex: 1 1 auto !important; }
 
-@include pf-utility-builder("flex-none", $pf-global--breakpoint-list) { flex: none !important; }
+// @include pf-utility-builder("flex-none", $pf-global--breakpoint-list) { flex: none !important; }
 
-@include pf-utility-builder("flex-1", $pf-global--breakpoint-list) { flex: 1 !important; }
+// @include pf-utility-builder("flex-1", $pf-global--breakpoint-list) { flex: 1 !important; }
 
-// Flex fill
-@include pf-utility-builder("flex-fill", $pf-global--breakpoint-list) { flex: 1 1 auto !important; }
+// // Flex fill
+// @include pf-utility-builder("flex-fill", $pf-global--breakpoint-list) { flex: 1 1 auto !important; }
 /* stylelint-enable */
