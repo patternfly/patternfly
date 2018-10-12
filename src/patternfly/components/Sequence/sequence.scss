@@ -169,6 +169,10 @@
     border-top: var(--pf-c-sequence__control--focus--BorderTopWidth) solid var(--pf-c-sequence__control--focus--BorderTopColor);
     border-bottom: var(--pf-c-sequence__control--focus--BorderBottomWidth) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
   }
+
+  @media screen and (max-width: $pf-global--breakpoint--lg) {
+    display: none;
+  }
 }
 
 .pf-c-sequence__control-m-start {
