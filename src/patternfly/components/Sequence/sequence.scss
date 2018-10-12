@@ -134,6 +134,18 @@
   display: flex;
   justify-content: center;
 
+  // remove default border styling
+  button {
+    padding: 0;
+    background-color: transparent;
+    border-top: 0;
+    border-bottom: 0;
+
+    &:focus {
+      outline-style: none;
+    }
+  }
+
   // remove scrollbar
   ::-webkit-scrollbar {
     width: 0;
@@ -171,27 +183,19 @@
     border-top: var(--pf-c-sequence__control--focus--BorderTopWidth) solid var(--pf-c-sequence__control--focus--BorderTopColor);
     border-bottom: var(--pf-c-sequence__control--focus--BorderBottomWidth) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
   }
-
-  button {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      outline-style: none;
-    }
-  }
 }
 
 .pf-c-sequence__control-m-start {
   left: var(--pf-c-sequence__control-m-start--PositionLeft);
   order: 1;
   border-right: var(--pf-c-sequence__control-m-start--BorderRightWidth) solid var(--pf-c-sequence__control-m-start--BorderRightColor);
+  border-left: 0;
 }
 
 .pf-c-sequence__control-m-end {
   right: var(--pf-c-sequence__control-m-end--PositionRight);
   order: 3;
+  border-right: 0;
   border-left: var(--pf-c-sequence__control-m-end--BorderLeftWidth) solid var(--pf-c-sequence__control-m-end--BorderLeftColor);
 }
 
@@ -205,6 +209,7 @@
   display: inline-flex;
   order: 2;
   overflow: scroll;
+  scrollbar-base-color: transparent;
 }
 
 // Change default styles for the list and list items

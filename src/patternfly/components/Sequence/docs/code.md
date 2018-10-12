@@ -1,8 +1,6 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+A sequence acts as navigation within a wizard or a page. A sequence should have a finite number of steps with each step behaving as a link and comprising of a step number, title and status. Start and end buttons help to navigate the sequence when there is a large number of steps. 
 
 ## Accessibility
 
