@@ -11,16 +11,16 @@
   --pf-c-sequence__control--BorderTopColor: transparent;
   --pf-c-sequence__control--BorderBottomColor: transparent;
   --pf-c-sequence__control--hover--BorderTopWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-sequence__control--active--BorderTopWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-sequence__control--focus--BorderTopWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--hover--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-sequence__control--active--BorderTopWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-sequence__control--focus--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--hover--BorderTopColor: var(--pf-global--primary-color--100);
-  --pf-c-sequence__control--active--BorderTopColor: var(--pf-global--primary-color--100);
-  --pf-c-sequence__control--focus--BorderTopColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__control--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__control--active--BorderTopWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-sequence__control--active--BorderTopWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__control--active--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__control--active--BorderTopColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__control--focus--BorderTopWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-sequence__control--focus--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-sequence__control--focus--BorderTopColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Sequence Control Modifier Start
@@ -28,7 +28,7 @@
   --pf-c-sequence__control-m-start--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-sequence__control-m-start--BorderRightColor: var(--pf-global--Color--200);
 
-  // Sequence Control Modifier - End
+  // Sequence Control Modifier End
   --pf-c-sequence__control-m-end--PositionRight: 0;
   --pf-c-sequence__control-m-end--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-sequence__control-m-end--BorderLeftColor: var(--pf-global--Color--200);
@@ -51,6 +51,7 @@
   --pf-c-sequence__link--hover--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--active--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--focus--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__link--m-current--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Number
   --pf-c-sequence__number--Padding: var(--pf-global--spacer--xs);
@@ -60,12 +61,14 @@
   --pf-c-sequence__number--hover--Transform: scale(1.333333);
   --pf-c-sequence__number--active--Transform: scale(1.333333);
   --pf-c-sequence__number--focus--Transform: scale(1.333333);
+  --pf-c-sequence__number--m-current--Transform: scale(1.333333);
 
   // Number Color
   --pf-c-sequence__number--Color: var(--pf-global--Color--200);
   --pf-c-sequence__number--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--focus--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__number--m-current--Color: var(--pf-global--primary-color--100);
 
   // Number Font
   --pf-c-sequence__number--FontSize: var(--pf-global--FontSize--sm);
@@ -73,6 +76,7 @@
   --pf-c-sequence__number--hover--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-sequence__number--active--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-sequence__number--focus--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-sequence__number--m-current--FontSize: var(--pf-global--FontSize--xl);
 
   // Number Border
   --pf-c-sequence__number--BorderColor: var(--pf-global--Color--200);
@@ -81,6 +85,7 @@
   --pf-c-sequence__number--hover--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--active--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__number--focus--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__number--m-current--BorderColor: var(--pf-global--primary-color--100);
 
   // Content
   --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--xl);
@@ -93,13 +98,14 @@
   --pf-c-sequence__content-title--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__content-title--m-current--Color: var(--pf-global--primary-color--100);
 
   // Content Title Font
   --pf-c-sequence__content-title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-sequence__content-title--FontWeight: var(--pf-global--FontWeight--reguar);
-  --pf-c-sequence__content-title--hover--FontWeight: var(--pf-global--FontWeight--regular);
-  --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__content-title--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-sequence__content-title--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-sequence__content-title--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Content Status
   --pf-c-sequence__content-status--MaxWidth: #{pf-size-prem(100px)};
@@ -110,25 +116,6 @@
   // Content Status Font
   --pf-c-sequence__content-status--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-sequence__content-status--FontWeight: var(--pf-global--FontWeight--regular);
-
-  // Modifier - current link
-  --pf-c-sequence__link--m-current--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-sequence__link--m-current--BorderBottomColor: var(--pf-global--primary-color--100);
-
-  // Modifier - current color
-  --pf-c-sequence__number--m-current--Color: var(--pf-global--primary-color--100);
-  --pf-c-sequence__content-title--m-current--Color: var(--pf-global--primary-color--100);
-
-  // Modifier - current font
-  --pf-c-sequence__number--m-current--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-sequence__content-title--m-current--FontWeight: var(--pf-global--FontWeight--regular);
-
-  // Modifier - current number
-  --pf-c-sequence__number--m-current--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-sequence__number--m-current--MinWidth: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--m-current--MaxHeight: var(--pf-global--spacer--xl);
-  --pf-c-sequence__number--m-current--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-sequence__number--m-current--Transform: scale(1.333333);
 
   position: relative;
   display: flex;
@@ -209,7 +196,6 @@
   display: inline-flex;
   order: 2;
   overflow: scroll;
-  scrollbar-base-color: transparent;
 }
 
 // Change default styles for the list and list items
@@ -310,6 +296,7 @@
     }
 
     .pf-c-sequence__content-title {
+      font-weight: var(--pf-c-sequence__content-title--active--FontWeight);
       color: var(--pf-c-sequence__content-title--active--Color);
     }
   }
