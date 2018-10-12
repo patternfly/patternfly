@@ -10,7 +10,7 @@
 | `aria-expanded="true"`                          | `.pf-c-data-list__toggle` > `.pf-c-button`    | Indicates that the expandable content is visible. **Required**|
 | `hidden`                                        | `.pf-c-data-list__expandable-content`         | Indicates that the expandable content is hidden. **Required**|
 | `aria-label="[descriptive text]"`               | `.pf-c-data-list__toggle` > `.pf-c-button`    | Provides an accessible name for toggle button. **Required**|
-| `aria-labelledby="{title_cell_id} {button_id}"` | `.pf-c-data-list__toggle` > `.pf-c-button`    | Provides an accessible description for toggle button. **Required** |
+| `aria-labelledby="{title_cell_id} {button_id}"` | `.pf-c-data-list__toggle` > `.pf-c-button`    | Establishes relationship between aria-label text and toggle button. **Required**
 | `id="{button_id}"`                              | `.pf-c-data-list__toggle` > `.pf-c-button`    | Provides a reference for toggle button description. **Required** |
 
 ### Usage
