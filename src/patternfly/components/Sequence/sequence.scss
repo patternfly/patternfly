@@ -54,10 +54,9 @@
   --pf-c-sequence__link--m-current--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Number
-  --pf-c-sequence__number--Padding: var(--pf-global--spacer--xs);
   --pf-c-sequence__number--MarginRight: var(--pf-global--spacer--lg);
-  --pf-c-sequence__number--MinWidth: var(--pf-global--spacer--lg);
-  --pf-c-sequence__number--MaxHeight: var(--pf-global--spacer--lg);
+  --pf-c-sequence__number--Width: var(--pf-global--spacer--lg);
+  --pf-c-sequence__number--Height: var(--pf-global--spacer--lg);
   --pf-c-sequence__number--hover--Transform: scale(1.333333);
   --pf-c-sequence__number--active--Transform: scale(1.333333);
   --pf-c-sequence__number--focus--Transform: scale(1.333333);
@@ -218,9 +217,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: var(--pf-c-sequence__number--MinWidth);
-  max-height: var(--pf-c-sequence__number--MaxHeight);
-  padding: var(--pf-c-sequence__number--Padding);
+  width: var(--pf-c-sequence__number--Width);
+  height: var(--pf-c-sequence__number--Height);
   margin-right: var(--pf-c-sequence__number--MarginRight);
   font-size: var(--pf-c-sequence__number--FontSize);
   color: var(--pf-c-sequence__number--Color);
@@ -272,7 +270,7 @@
 
   &.pf-m-hover,
   &:hover {
-    border-bottom: var(--pf-c-sequence__link--BorderBottomWidth) solid var(--pf-c-sequence__link--hover--BorderBottomColor);
+    border-bottom-color: var(--pf-c-sequence__link--hover--BorderBottomColor);
 
     .pf-c-sequence__content-title {
       color: var(--pf-c-sequence__content-title--hover--Color);
@@ -287,7 +285,7 @@
 
   &.pf-m-active,
   &:active {
-    border-bottom: var(--pf-c-sequence__link--BorderBottomWidth) solid var(--pf-c-sequence__link--active--BorderBottomColor);
+    border-bottom-color: var(--pf-c-sequence__link--active--BorderBottomColor);
 
     .pf-c-sequence__number {
       color: var(--pf-c-sequence__number--active--Color);
@@ -303,7 +301,7 @@
 
   &.pf-m-focus,
   &:focus {
-    border-bottom: var(--pf-c-sequence__link--BorderBottomWidth) solid var(--pf-c-sequence__link--focus--BorderBottomColor);
+    border-bottom-color: var(--pf-c-sequence__link--focus--BorderBottomColor);
 
     .pf-c-sequence__number {
       color: var(--pf-c-sequence__number--focus--Color);
@@ -318,7 +316,7 @@
   }
 
   &.pf-m-current {
-    border-bottom: var(--pf-c-sequence__link--m-current--BorderBottomWidth) solid var(--pf-c-sequence__link--m-current--BorderBottomColor);
+    border-bottom-color: var(--pf-c-sequence__link--m-current--BorderBottomColor);
 
     .pf-c-sequence__number {
       color: var(--pf-c-sequence__number--m-current--Color);
