@@ -5,9 +5,9 @@
 ### Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label="[descriptive text]"`                                       | `.pf-c-data-list__check` > `.pf-c-check__input`, `.pf-c-data-list__action` > `.pf-c-button` | Provides an accessible label for `checkboxes` and `buttons`. **Required** |
-| `aria-labelledby="{title_cell_id} {data_list_interactive_element_id}"`  | `.pf-c-data-list__check` > `.pf-c-check__input`, `.pf-c-data-list__action` > `.pf-c-button` | Establishes relationship between aria-label text and interactive element. **Required** |
-| `id`                                                                    | `.pf-c-data-list__cell > *`, `.pf-c-data-list__action` > `.pf-c-button`                     | Provides a reference for `.pf-c-data-list__item`. **Required** |
+| `aria-label="[descriptive text]"`                                       | `.pf-c-data-list__action` > `.pf-c-button`                                                    | Provides an accessible label buttons. **Required** |
+| `aria-labelledby="{title_cell_id} {data_list_interactive_element_id}"`  | `.pf-c-data-list__check` > `.pf-c-check__input`, `.pf-c-data-list__action` > `.pf-c-button`   | Establishes relationship between interactive element and aria-label. **Required** |
+| `id`                                                                    | `.pf-c-data-list__cell > *`, `.pf-c-data-list__check` > `.pf-c-check__input`, `.pf-c-data-list__action` > `.pf-c-button` | Provides a reference for interactive elements. **Required** |
 
 ### Usage
 
