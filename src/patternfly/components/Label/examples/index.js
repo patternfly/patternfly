@@ -1,10 +1,10 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import labelSmallExampleRaw from '!raw!./label-small-example.hbs';
-import labelLargeExampleRaw from '!raw!./label-large-example.hbs';
-import LabelSmallExample from './label-small-example.hbs';
-import LabelLargeExample from './label-large-example.hbs';
+import labelExampleRaw from '!raw!./label-example.hbs';
+import labelTableExampleRaw from '!raw!./label-table-example.hbs';
+import LabelExample from './label-example.hbs';
+import LabelTableExample from './label-table-example.hbs';
 import labelComplexExampleDoc from '../docs/label-complex.md';
 import docs from '../docs/code.md';
 import '../styles.scss';
@@ -12,16 +12,20 @@ import '../styles.scss';
 export const Docs = docs;
 
 export default () => {
-  const labelSmallExample = LabelSmallExample();
-  const labelLargeExample = LabelLargeExample();
+  const labelExample = LabelExample();
+  const labelTableExample = LabelTableExample();
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Label Small" handlebars={labelSmallExampleRaw}>
-        {labelSmallExample}
+      <Example heading="Label Component" handlebars={labelExampleRaw}>
+        {labelExample}
       </Example>
-      <Example heading="Label Large" handlebars={labelLargeExampleRaw} docs={labelComplexExampleDoc}>
-        {labelLargeExample}
+      <Example
+        heading="Label in Default Table/Compact Table"
+        handlebars={labelTableExampleRaw}
+        docs={labelComplexExampleDoc}
+      >
+        {labelTableExample}
       </Example>
     </Documentation>
   );

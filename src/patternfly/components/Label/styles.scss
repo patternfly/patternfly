@@ -7,27 +7,29 @@
   --pf-c-label--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-label--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-label--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-label--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-label--BorderRadius: 2px;
 
   // Color
   --pf-c-label--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-label--Color: var(--pf-global--Color--light-100);
 
-  // States
-  --pf-c-label--hover--BackgroundColor: var(--pf-global--primary-color--200);
-
   // Font
-  // --pf-c-label--m-small--FontSize: var(--pf-global--FontSize--xs);
-  // --pf-c-label--m-large--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-label--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-label--FontWeight: var(--pf-global--FontWeight--semi-bold);
+
+  // Modifiers
+  --pf-c-label--hover--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
   position: relative;
   display: inline-block;
-  padding-top: var(--pf-c-label--PaddingTop);
-  padding-right: var(--pf-c-label--PaddingRight);
-  padding-bottom: var(--pf-c-label--PaddingBottom);
-  padding-left: var(--pf-c-label--PaddingLeft);
+  padding:
+    var(--pf-c-label--PaddingTop)
+    var(--pf-c-label--PaddingRight)
+    var(--pf-c-label--PaddingBottom)
+    var(--pf-c-label--PaddingLeft);
   margin: auto 0;
+  font-size: var(--pf-c-label--FontSize);
   font-weight: var(--pf-c-label--FontWeight);
   line-height: var(--pf-c-label--LineHeight);
   color: var(--pf-c-label--Color);
@@ -38,12 +40,8 @@
   &:hover {
     background-color: var(--pf-c-label--hover--BackgroundColor);
   }
+}
 
-  // &.pf-m-small {
-  //   font-size: var(--pf-c-label--m-small--FontSize);
-  // }
-
-  // &.pf-m-large {
-  //   font-size: var(--pf-c-label--m-large--FontSize);
-  // }
+.pf-m-compact {
+  font-size: var(--pf-c-label--m-compact--FontSize);
 }
