@@ -7,7 +7,7 @@
   --pf-c-label--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-label--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-label--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-label--BorderRadius: 2px;
+  --pf-c-label--BorderRadius: var(--pf-global--BorderRadius--sm);
 
   // Color
   --pf-c-label--BackgroundColor: var(--pf-global--primary-color--100);
@@ -15,20 +15,18 @@
 
   // Font
   --pf-c-label--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-label--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-label--FontWeight: var(--pf-global--FontWeight--regular);
 
   // Modifiers
   --pf-c-label--hover--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
-  position: relative;
   display: inline-block;
   padding:
     var(--pf-c-label--PaddingTop)
     var(--pf-c-label--PaddingRight)
     var(--pf-c-label--PaddingBottom)
     var(--pf-c-label--PaddingLeft);
-  margin: auto 0;
   font-size: var(--pf-c-label--FontSize);
   font-weight: var(--pf-c-label--FontWeight);
   line-height: var(--pf-c-label--LineHeight);
