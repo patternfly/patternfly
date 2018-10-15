@@ -1,6 +1,8 @@
 @import "../../patternfly-utilities";
 
 .pf-c-sequence {
+  --pf-c-sequence--Height: #{pf-size-prem(100px)}; // fixed height hides scrollbar
+
   // Sequence Control
   --pf-c-sequence__control--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-sequence__control--PaddingRight: var(--pf-global--spacer--sm);
@@ -36,6 +38,10 @@
   // Sequence Control Icon
   --pf-c-sequence__control-icon--Color: var(--pf-global--Color--100);
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
+
+  // Sequence List
+  --pf-c-sequence__list--Height: #{pf-size-prem(132px)};
+  --pf-c-sequence__list--PaddingBottom: var(--pf-global--spacer--xl);
 
   // Item
   --pf-c-sequence__item--MarginRight: 2px;
@@ -119,6 +125,8 @@
   position: relative;
   display: flex;
   justify-content: center;
+  height: var(--pf-c-sequence--Height);
+  overflow-y: hidden;
 
   // remove default border styling
   button {
@@ -138,9 +146,8 @@
 
   // remove scrollbar
   ::-webkit-scrollbar {
+    display: none;
     width: 0;
-    height: 0;
-    background: transparent;
   }
 }
 
@@ -202,7 +209,9 @@
 .pf-c-sequence__list {
   display: inline-flex;
   order: 2;
-  overflow: scroll;
+  height: var(--pf-c-sequence__list--Height);
+  padding-bottom: var(--pf-c-sequence__list--PaddingBottom);
+  overflow-x: scroll;
 }
 
 // Change default styles for the list and list items

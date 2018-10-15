@@ -10,7 +10,6 @@ A sequence acts as navigation within a wizard or a page. A sequence should have 
 | `aria-hidden="true"` | `.pf-c-sequence__control-icon` | Hides the icon from assistive technologies |
 | `aria-label="actions"` | `.pf-c-sequence__control-icon` | Provides an accessible name for the action when an icon is used instead of text. Required when an icon is used with no supporting text |
 | `role="list"` | `.pf-c-sequence__list` | Indicates that the list is a list |
-| `role="list-item"` | `.pf-c-sequence__item` | Indicates that the list item is a list item |
 
 ## Usage
 
