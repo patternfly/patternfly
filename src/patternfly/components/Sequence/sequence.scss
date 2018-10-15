@@ -231,9 +231,6 @@
 // Sequence Link Position Number
 .pf-c-sequence__number {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: var(--pf-c-sequence__number--Width);
   height: var(--pf-c-sequence__number--Height);
   margin-right: var(--pf-c-sequence__number--MarginRight);
