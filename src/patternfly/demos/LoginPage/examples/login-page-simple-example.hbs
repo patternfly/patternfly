@@ -27,28 +27,28 @@
             {{#> form-group}}
               {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
               {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username" aria-describedby="login-demo-username-helper"'}}{{/form-control}}
-              {{#> form-helper-text form-helper-text--attribute='id="login-demo-username-helper" aria-live="polite"'}}Please provide a username{{/form-helper-text}}
             {{/form-group}}
             {{#> form-group}}
               {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
               {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password" aria-describedby="login-demo-password-helper"'}}{{/form-control}}
-              {{#> form-helper-text form-helper-text--attribute='id="login-demo-password-helper" aria-live="polite"'}}Please provide a password{{/form-helper-text}}
             {{/form-group}}
             {{#> form-group form-group--modifier="pf-m-action"}}
-              {{#> toolbar}}
+              {{#> toolbar toolbar--modifier="pf-u-flex-column pf-u-flex-row-on-md"}}
                 {{#> toolbar-group toolbar-group--modifier="pf-u-mr-lg"}}
                   {{#> toolbar-item}}
-                    {{#> button button--modifier="pf-m-primary"}}
+                    {{#> button button--modifier="pf-m-primary pf-m-block"}}
                       Sign in
                     {{/button}}
                   {{/toolbar-item}}
                 {{/toolbar-group}}
                 {{#> toolbar-group}}
                   {{#> toolbar-item}}
-                    {{#> check}}
-                      {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
-                      {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me signed in for 30 days.{{/check-label}}
-                    {{/check}}
+                    {{#> alignment alignment--type="center" alignment--modifier="pf-u-text-align-left-on-md"}}
+                      {{#> check}}
+                        {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
+                        {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me signed in for 30 days.{{/check-label}}
+                      {{/check}}
+                    {{/alignment}}
                   {{/toolbar-item}}
                 {{/toolbar-group}}
               {{/toolbar}}
@@ -56,42 +56,52 @@
           {{/form}}
         {{/login-box-body}}
         {{#> login-box-footer}}
-          {{#> title titleType="h2" title--modifier="pf-m-md pf-u-mb-md"}}
+          {{#> title titleType="h2" title--modifier="pf-m-md pf-u-mb-md pf-u-text-align-center pf-u-text-align-left-on-md"}}
             Or log in with
           {{/title}}
           {{#> list list--modifier="pf-m-grid"}}
             <li>
-              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-pt-sm pf-u-pb-sm"}}
                 <img src="/assets/images/logo-google.svg" alt="" />
-                <p class="pf-u-ml-sm">Google</p>
+                {{#> display display--element="p" display--type="block-on-sm" display--modifier="pf-u-ml-sm pf-u-display-none"}}
+                  Google
+                {{/display}}
               {{/display}}
             </li>
             <li>
-              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-pt-sm pf-u-pb-sm"}}
                 <img src="/assets/images/logo-github.svg" alt="" />
-                <p class="pf-u-ml-sm">GitHub</p>
+                {{#> display display--element="p" display--type="block-on-sm" display--modifier="pf-u-ml-sm pf-u-display-none"}}
+                  GitHub
+                {{/display}}
               {{/display}}
             </li>
             <li>
-              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-pt-sm pf-u-pb-sm"}}
                 <img src="/assets/images/logo-dropbox.svg" alt="" />
-                <p class="pf-u-ml-sm">Dropbox</p>
+                {{#> display display--element="p" display--type="block-on-sm" display--modifier="pf-u-ml-sm pf-u-display-none"}}
+                  Dropbox
+                {{/display}}
               {{/display}}
             </li>
             <li>
-              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-pt-sm pf-u-pb-sm"}}
                 <img src="/assets/images/logo-facebook.svg" alt="" />
-                <p class="pf-u-ml-sm">Facebook</p>
+                {{#> display display--element="p" display--type="block-on-sm" display--modifier="pf-u-ml-sm pf-u-display-none"}}
+                  Facebook
+                {{/display}}
               {{/display}}
             </li>
             <li>
-              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm"}}
+              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-pt-sm pf-u-pb-sm"}}
                 <img class="" src="/assets/images/logo-gitlab.svg" alt="" />
-                <p class="pf-u-ml-sm">GitLab</p>
+                {{#> display display--element="p" display--type="block-on-sm" display--modifier="pf-u-ml-sm pf-u-display-none"}}
+                  GitLab
+                {{/display}}
               {{/display}}
             </li>
             <li>
-              {{#> display display--element="a" display--type="flex" display--modifier="pf-u-align-items-center pf-u-mt-sm pf-u-mb-sm pf-m-link"}}
+              {{#> display display--element="button" display--attribute='id="login-more"' display--modifier="pf-c-button pf-m-link pf-u-align-items-center pf-u-pt-sm pf-u-pb-sm"}}
                 More...
               {{/display}}
             </li>
