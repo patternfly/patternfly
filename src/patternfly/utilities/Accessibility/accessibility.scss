@@ -1,5 +1,27 @@
 @import "../../patternfly-utilities";
 
+.pf-u-sr-only {
+  position: fixed;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pf-u-visible {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: inherit;
+}
+
+.pf-u-hidden {
+  /* stylelint-disable */
+  display: none !important;
+  /* stylelint-enable */
+}
+
 // sr-only - visually hide, but expose to screen readers
 @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
   .pf-u-sr-only#{$breakpoint-value} {

@@ -40,12 +40,12 @@
 /// responsive, including base               @include pf-utility-builder(class-name, base sm lg) { prop: val !important; }
 /// responsive, including all breakpoints    @include pf-utility-builder(class-name, $pf-global--breakpoint-list) { prop: val !important; }
 /// ===============================================================================================
-@mixin pf-utility-builder($class-name, $breakpoints: null) {
+@mixin pf-utility-builder($props, $breakpoints: null) {
   // if $class-name is a map
 
   /* stylelint-disable */
-  @if type-of($class-name) == map {
-    @each $class, $val in $class-name {
+  @if type-of($props) == map {
+    @each $class, $val in $props {
       $property: nth($val, 1);
       $value: #{nth($val, 2) !important};
 
@@ -54,12 +54,13 @@
       }
     }
 
+    // if breakpoints are requested
     @if $breakpoints != null {
       @each $breakpoint in $breakpoints {
         $suffix: -on-#{$breakpoint};
 
         @include pf-media-query($breakpoint) {
-          @each $class, $val in $class-name {
+          @each $class, $val in $props {
             $property: nth($val, 1);
             $value: #{nth($val, 2) !important};
 
@@ -72,25 +73,22 @@
     }
   }
 
-  @else {
-    .pf-u-#{$class-name} {
-      @content;
+  @else if type-of($props) == list {
+    $class: nth($props, 1);
+    $property: nth($props, 2);
+    $value: nth($props, 3) !important;
+
+    .pf-u-#{$class} {
+      #{$property}: #{$value};
     }
 
     @if $breakpoints != null {
       @each $breakpoint in $breakpoints {
         $suffix: -on-#{$breakpoint};
 
-        @warn $suffix;
-
-        // if no media query, set suffix to null
-        @if $breakpoint == null or $breakpoint == "base" {
-          $suffix: "";
-        }
-
-        .pf-u-#{$class-name}#{$suffix} {
+        .pf-u-#{$class}#{$suffix} {
           @include pf-media-query($breakpoint) {
-            @content;
+            #{$property}: #{$value};
           }
         }
       }
