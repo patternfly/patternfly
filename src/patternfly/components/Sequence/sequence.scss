@@ -144,7 +144,7 @@
     border: 0;
   }
 
-  // remove scrollbar
+  // remove scrollbar works on Chrome and Safari
   ::-webkit-scrollbar {
     display: none;
     width: 0;
