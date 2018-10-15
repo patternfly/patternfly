@@ -9,7 +9,7 @@
   --pf-c-filter-chip--BorderRadius: var(--pf-global--BorderWidth--lg);
   --pf-c-filter-chip--Color: var(--pf-global--Color--100);
   --pf-c-filter-chip--BorderColor: var(--pf-global--secondary-color--100);
-  --pf-c-filter-chip--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-filter-chip--FontSize: var(--pf-global--FontSize--xs);
 
   display: inline-block;
   padding:
@@ -22,8 +22,16 @@
   border: var(--pf-c-filter-chip--BorderWidth) solid var(--pf-c-filter-chip--BorderColor);
   border-radius: var(--pf-c-filter-chip--BorderRadius);
 
-  button {
-    min-width: 24px;
-    min-height: 24px;
+  .pf-m-plain {
+    padding: 0;
+  }
+
+  .pf-c-button {
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  .pf-c-button i {
+    font-size: var(--pf-c-filter-chip--FontSize);
   }
 }
