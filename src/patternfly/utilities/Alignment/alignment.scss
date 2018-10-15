@@ -2,7 +2,7 @@
 
 /* stylelint-disable */
 
-$alignment-options: (
+$pf-u-alignment-options: (
   text-align-left:    (text-align left),
   text-align-center:  (text-align center),
   text-align-right:   (text-align right),
@@ -10,6 +10,6 @@ $alignment-options: (
 );
 
 // Text utilities
-@include pf-utility-builder($alignment-options, $pf-global--breakpoint-list); 
+@include pf-utility-builder($pf-u-alignment-options, $pf-global--breakpoint-list); 
 
 /* stylelint-enable */

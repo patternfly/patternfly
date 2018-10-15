@@ -29,17 +29,30 @@
   }
 }
 
-/// Create single prop / value classes, optionally add responsive suffix
-/// @group mixins
-/// @moduleType mixin
-/// @parameter: {Suffix} xs, sm, md, lg, xl, base or null
-/// @usage: @include pf-utility-builder(class-name, base sm md lg xl);
-/// ===============================================================================================
-/// non-responsive, base only                @include pf-utility-builder(class-name) { prop: val !important; }
-/// responsive, not including base           @include pf-utility-builder(class-name, sm lg) { prop: val !important; }
-/// responsive, including base               @include pf-utility-builder(class-name, base sm lg) { prop: val !important; }
-/// responsive, including all breakpoints    @include pf-utility-builder(class-name, $pf-global--breakpoint-list) { prop: val !important; }
-/// ===============================================================================================
+// Create single prop / value classes, optionally add responsive suffix
+// @group mixins
+// @moduleType mixin
+// @parameter: {Suffix} xs, sm, md, lg, xl, base or null
+// @usage: @include pf-utility-builder(class-name, base sm md lg xl);
+// ===============================================================================================
+// ## Example sass map:
+// this must be used when order matters or a cluster of similar utilties need to overwrite each other
+//
+// Justify content options
+// $pf-u-flex-options: (
+//   flex-none:  (flex none),
+//   flex-1:     (flex 1)
+// );
+//
+// non-responsive, base only                @include pf-utility-builder($sass-map)
+// responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
+//
+//
+// ## Passing individual utilities values
+// ===============================================================================================
+// Example individual utility:
+// @include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
+
 @mixin pf-utility-builder($props, $breakpoints: null) {
   // if $class-name is a map
 
