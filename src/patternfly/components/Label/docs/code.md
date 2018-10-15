@@ -7,4 +7,5 @@ The label component is to be used in a table. When the table component has a com
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-label` | `<span>` | Iniates a label |
+| `.pf-m-hover` | `.pf-c-label` | Modifies label for a hover state |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for a compact table. |
