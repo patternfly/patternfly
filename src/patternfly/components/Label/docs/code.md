@@ -1,6 +1,6 @@
 ## Overview
 
-The label component is to be used in a table. When the table component has a compact modifier on it, the label is required to have one too in order to adjust the font size.
+Labels can be used in a variety of components and can adjust in font size to match that of the component it lives in. For example, labels can be used in tables. Specifically, the compact table has a modifier that adjusts its font size, so when using a label in this table its important to also add its respective modifier.
 
 ## Usage
 
