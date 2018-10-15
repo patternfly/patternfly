@@ -35,6 +35,7 @@
 // @parameter: {Suffix} xs, sm, md, lg, xl, base or null
 // @usage: @include pf-utility-builder(class-name, base sm md lg xl);
 // ===============================================================================================
+//
 // ## Example sass map:
 // this must be used when order matters or a cluster of similar utilties need to overwrite each other
 //
@@ -46,7 +47,6 @@
 //
 // non-responsive, base only                @include pf-utility-builder($sass-map)
 // responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
-//
 //
 // ## Passing individual utilities values
 // ===============================================================================================
