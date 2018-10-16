@@ -186,6 +186,16 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  // Disable underline
+  [class*="list"] [class*="link"] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 // Set width when nav is child of sidebar to prevent collapsing
@@ -549,14 +559,4 @@
   font-size: var(--pf-c-nav__section-title--FontSize);
   font-weight: var(--pf-c-nav__section-title--FontWeight);
   color: var(--pf-c-nav__section-title--Color);
-}
-
-// Disable underline
-[class*="list"] [class*="link"] {
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-  }
 }
