@@ -13,7 +13,7 @@
       {{#> login-box}}
         {{#> login-box-header}}
           {{#> title titleType="h1" title--modifier="pf-m-3xl pf-u-mb-sm"}}
-            Sign in to your account
+            Log in to your account
           {{/title}}
           {{#> display display--type="inline-flex" display--modifier="pf-u-align-items-center"}}
             {{#> dropdown id="dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
@@ -32,26 +32,16 @@
               {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
               {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password" aria-describedby="login-demo-password-helper"'}}{{/form-control}}
             {{/form-group}}
-            {{#> form-group form-group--modifier="pf-m-action"}}
-              {{#> toolbar toolbar--modifier="pf-u-flex-column pf-u-flex-row-on-md"}}
-                {{#> toolbar-group toolbar-group--modifier="pf-u-mr-lg"}}
-                  {{#> toolbar-item}}
-                    {{#> button button--modifier="pf-m-primary pf-m-block"}}
-                      Sign in
-                    {{/button}}
-                  {{/toolbar-item}}
-                {{/toolbar-group}}
-                {{#> toolbar-group}}
-                  {{#> toolbar-item}}
-                    {{#> alignment alignment--type="center" alignment--modifier="pf-u-text-align-left-on-md"}}
-                      {{#> check}}
-                        {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
-                        {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me signed in for 30 days.{{/check-label}}
-                      {{/check}}
-                    {{/alignment}}
-                  {{/toolbar-item}}
-                {{/toolbar-group}}
-              {{/toolbar}}
+            {{#> form-group form-group--modifier="pf-m-action pf-u-align-items-center pf-u-display-flex-on-md"}}
+              {{#> button button--modifier="pf-m-primary pf-m-block pf-u-display-inline-block-on-md pf-u-mr-lg"}}
+                Sign in
+              {{/button}}
+              {{#> alignment alignment--type="center" alignment--modifier="pf-u-text-align-left-on-md"}}
+                {{#> check}}
+                  {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
+                  {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+                {{/check}}
+              {{/alignment}}
             {{/form-group}}
           {{/form}}
         {{/login-box-body}}
