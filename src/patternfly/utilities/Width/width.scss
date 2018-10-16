@@ -1,0 +1,15 @@
+@import "../../patternfly-utilities";
+
+/* stylelint-disable */
+
+// Width options
+$pf-u-width-options: (
+  width-auto:    (width auto),
+  width-full:    (width 100%),
+  width-initial: (width initial),
+  width-inherit: (width inherit)
+);
+
+@include pf-utility-builder($pf-u-width-options, $pf-global--breakpoint-list);
+
+/* stylelint-enable */
