@@ -1,20 +1,16 @@
 <th{{#if table-th--toggle}} class="pf-c-table__toggle {{table-th--modifier}}"{{else if table-th--check}} class="pf-c-table__check {{table-th--modifier}}"
 {{else if table-th--action}} class="pf-c-table__action {{table-th--modifier}}"{{else if table-th--sortable}} class="pf-c-table__sort{{#if table-th--asc}} pf-m-ascending{{/if}}{{#if table-th--desc}} pf-m-descending{{/if}} {{table-th--modifier}}"{{else if table-th--modifier}} class="{{table-th--modifier}}"{{/if}}
-
   {{#if table-th--asc}}
     aria-sort="ascending"
   {{else if table-th--desc}}
     aria-sort="descending"
   {{/if}}
-
   {{#if table-th--data-label}}
     data-label="{{table-th--data-label}}"
   {{/if}}
-
   {{#if table-th--attribute}}
     {{{table-th--attribute}}}
   {{/if}}>
-
   {{#if table-th--sortable}}
     <button>
       {{> @partial-block}}
