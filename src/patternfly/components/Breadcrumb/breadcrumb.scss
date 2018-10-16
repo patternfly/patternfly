@@ -1,0 +1,125 @@
+@import "../../patternfly-utilities";
+
+.pf-c-breadcrumb {
+  --pf-c-breadcrumb--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-breadcrumb--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-breadcrumb--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-breadcrumb--PaddingLeft: var(--pf-global--spacer--xl);
+
+  // Breadcrumb Item
+  --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-breadcrumb__item--Color: var(--pf-global--Color--300);
+  --pf-c-breadcrumb__item--hover--Color: var(--pf-global--Color--300);
+
+  // Breadcrumb Link
+  --pf-c-breadcrumb__link--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-breadcrumb__link--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-breadcrumb__link--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-breadcrumb__link--Color: var(--pf-global--link--Color);
+  --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color);
+  --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+
+  // Breadcrumb Divider
+  --pf-c-breadcrumb__divider--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-breadcrumb__divider--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-breadcrumb__divider--FontFamily: "Font Awesome 5 Free";
+  --pf-c-breadcrumb__divider--Color: var(--pf-global--Color--300);
+  --pf-c-breadcrumb__divider--Content: "\f105";
+
+  // ============================================================ //
+  // Modifiers
+  // ============================================================ //
+
+  // Modifier - active item
+  --pf-c-breadcrumb__item--m-active--Color: var(--pf-c-breadcrumb__item--Color);
+  --pf-c-breadcrumb__item--m-active--hover--Color: var(--pf-c-breadcrumb__item--Color);
+
+  // Modifier - title item
+  --pf-c-breadcrumb__item--m-title--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-breadcrumb__item--m-title--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-breadcrumb__item--m-title--FontSize: var(--pf-global--FontSize--3xl);
+  --pf-c-breadcrumb__item--m-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-breadcrumb__item--m-title--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-breadcrumb__item--m-title--Color: var(--pf-global--Color--300);
+  --pf-c-breadcrumb__item--m-title--hover--Color: var(--pf-global--Color--300);
+
+  display: inline-flex;
+  padding-top: var(--pf-c-breadcrumb--PaddingTop);
+  padding-right: var(--pf-c-breadcrumb--PaddingRight);
+  padding-bottom: var(--pf-c-breadcrumb--PaddingBottom);
+  padding-left: var(--pf-c-breadcrumb--PaddingLeft);
+}
+
+.pf-c-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.pf-c-breadcrumb__item {
+  display: flex;
+  align-items: center;
+  font-size: var(--pf-c-breadcrumb__item--FontSize);
+  font-weight: var(--pf-c-breadcrumb__item--FontWeight);
+  line-height: var(--pf-c-breadcrumb__item--LineHeight);
+  color: var(--pf-c-breadcrumb__item--Color);
+  cursor: default;
+
+  &:first-child::before {
+    content: none;
+  }
+
+  &::before {
+    margin-right: var(--pf-c-breadcrumb__divider--MarginRight);
+    margin-left: var(--pf-c-breadcrumb__divider--MarginLeft);
+    font-family: var(--pf-c-breadcrumb__divider--FontFamily);
+    color: var(--pf-c-breadcrumb__divider--Color);
+    content: var(--pf-c-breadcrumb__divider--Content);
+  }
+}
+
+.pf-c-breadcrumb__item.pf-m-active * {
+  color: var(--pf-c-breadcrumb__item--m-active--Color);
+  text-decoration: none;
+  cursor: default;
+
+  &:hover {
+    color: var(--pf-c-breadcrumb__item--m-active--hover--Color);
+    text-decoration: none;
+  }
+}
+
+.pf-c-breadcrumb__item.pf-m-title {
+  flex: 100%;
+  margin-top: var(--pf-c-breadcrumb__item--m-title--MarginTop);
+  margin-bottom: var(--pf-c-breadcrumb__item--m-title--MarginBottom);
+  font-size: var(--pf-c-breadcrumb__item--m-title--FontSize);
+  font-weight: var(--pf-c-breadcrumb__item--m-title--FontWeight);
+  line-height: var(--pf-c-breadcrumb__item--m-title--LineHeight);
+  color: var(--pf-c-breadcrumb__item--m-title--Color);
+  cursor: default;
+
+  &:hover {
+    color: var(--pf-c-breadcrumb__item--m-title--hover--Color);
+    text-decoration: none;
+  }
+
+  &::before {
+    content: none;
+  }
+}
+
+.pf-c-breadcrumb__link {
+  font-size: var(--pf-c-breadcrumb__link--FontSize);
+  font-weight: var(--pf-c-breadcrumb__link--FontWeight);
+  line-height: var(--pf-c-breadcrumb__link--LineHeight);
+  color: var(--pf-c-breadcrumb__link--Color);
+
+  &:hover {
+    color: var(--pf-c-breadcrumb__link--hover--Color);
+    text-decoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+  }
+}
