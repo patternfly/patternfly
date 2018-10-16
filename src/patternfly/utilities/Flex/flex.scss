@@ -1,93 +1,99 @@
 @import "../../patternfly-utilities";
 
 /* stylelint-disable */
-// Flex direction
-@include pf-utility-builder("flex-column") { flex-direction: column !important; }
 
-@include pf-utility-builder("flex-column-reverse") { flex-direction: column-reverse !important; }
+// Flex direction options
+$pf-u-flex-direction-options: (
+  flex-direction-column:            (flex-direction column),
+  flex-direction-column-reverse:    (flex-direction column-reverse),
+  flex-direction-row:               (flex-direction row),
+  flex-direction-row-reverse:       (flex-direction row-reverse)
+);
 
-@include pf-utility-builder("flex-row-reverse") { flex-direction: row-reverse !important; }
+@include pf-utility-builder($pf-u-flex-direction-options, $pf-global--breakpoint-list);
 
-@include pf-utility-builder("flex-row") { flex-direction: row !important; }
+// Flex wrap options
+$pf-u-flex-wrap-options: (
+  flex-wrap:                (flex-wrap wrap),
+  flex-nowrap:              (flex-wrap nowrap),
+  flex-wrap-reverse:        (flex-wrap wrap-reverse)
+);
 
-// Wrap
-@include pf-utility-builder("flex-wrap") { flex-wrap: wrap !important; }
+@include pf-utility-builder($pf-u-flex-wrap-options, $pf-global--breakpoint-list);
 
-@include pf-utility-builder("flex-nowrap") { flex-wrap: nowrap !important; }
+// Align item options
+$pf-u-align-items-options: (
+  align-items-flex-start:   (align-items flex-start),
+  align-items-flex-end:     (align-items flex-end),
+  align-items-center:       (align-items center),
+  align-items-baseline:     (align-items baseline),
+  align-items-stretch:      (align-items stretch)
+);
 
-@include pf-utility-builder("flex-wrap-reverse") { flex-wrap: wrap-reverse !important; }
+@include pf-utility-builder($pf-u-align-items-options, $pf-global--breakpoint-list);
 
-// Align items
-@include pf-utility-builder("align-items-flex-start") { align-items: flex-start !important; }
+// Align self options
+$pf-u-align-self-options: (
+  align-self-flex-start:    (align-self flex-start),
+  align-self-flex-end:      (align-self flex-end),
+  align-self-center:        (align-self center),
+  align-self-baseline:      (align-self baseline),
+  align-self-stretch:       (align-self stretch)
+);
 
-@include pf-utility-builder("align-items-flex-end") { align-items: flex-end !important; }
+@include pf-utility-builder($pf-u-align-self-options, $pf-global--breakpoint-list);
 
-@include pf-utility-builder("align-items-center") { align-items: center !important; }
+// Align content options
+$pf-u-align-content-options: (
+  align-content-flex-start:    (align-content flex-start),
+  align-content-flex-end:      (align-content flex-end),
+  align-content-center:        (align-content center),
+  align-content-space-between: (align-content space-between),
+  align-content-space-around:  (align-content space-around),
+  align-content-stretch:       (align-content stretch)
+);
 
-@include pf-utility-builder("align-items-baseline") { align-items: baseline !important; }
+@include pf-utility-builder($pf-u-align-content-options, $pf-global--breakpoint-list);
 
-@include pf-utility-builder("align-items-stretch") { align-items: stretch !important; }
+// Justify content options
+$pf-u-justify-content-options: (
+  justify-content-flex-start:    (justify-content flex-start),
+  justify-content-flex-end:      (justify-content flex-end),
+  justify-content-center:        (justify-content center),
+  justify-content-space-between: (justify-content space-between),
+  justify-content-space-around:  (justify-content space-around),
+  justify-content-stretch:       (justify-content stretch)
+);
 
-// Align self
-@include pf-utility-builder("align-self-flex-start") { align-self: flex-start !important; }
+@include pf-utility-builder($pf-u-justify-content-options, $pf-global--breakpoint-list);
 
-@include pf-utility-builder("align-self-flex-end") { align-self: flex-end !important; }
+// Justify content options
+$pf-u-flex-shrink-grow-options: (
+  flex-shrink-1:    (flex-shrink 1),
+  flex-grow-1:      (flex-grow 1),
+  flex-shrink-0:    (flex-shrink 0),
+  flex-grow-0:      (flex-grow 0)
+);
 
-@include pf-utility-builder("align-self-center") { align-self: center !important; }
+@include pf-utility-builder($pf-u-flex-shrink-grow-options, $pf-global--breakpoint-list);
 
-@include pf-utility-builder("align-self-baseline") { align-self: baseline !important; }
+// Flex basis options
+$pf-u-flex-basis-options: (
+  flex-basis-0:     (flex-basis 0),
+  flex-basis-auto:  (flex-basis auto)
+);
 
-@include pf-utility-builder("align-self-stretch") { align-self: stretch !important; }
+@include pf-utility-builder($pf-u-flex-basis-options, $pf-global--breakpoint-list);
 
-// Align content
-@include pf-utility-builder("align-content-flex-start") { align-content: flex-start !important; }
+// Justify content options
+$pf-u-flex-options: (
+  flex-none:  (flex none),
+  flex-1:     (flex 1)
+);
 
-@include pf-utility-builder("align-content-flex-end") { align-content: flex-end !important; }
-
-@include pf-utility-builder("align-content-center") { align-content: center !important; }
-
-@include pf-utility-builder("align-content-space-between") { align-content: space-between !important; }
-
-@include pf-utility-builder("align-content-space-around") { align-content: space-around !important; }
-
-@include pf-utility-builder("align-content-stretch") { align-content: stretch !important; }
-
-// Justify content
-@include pf-utility-builder("justify-content-flex-start") { justify-content: flex-start !important; }
-
-@include pf-utility-builder("justify-content-flex-end") { justify-content: flex-end !important; }
-
-@include pf-utility-builder("justify-content-center") { justify-content: center !important; }
-
-@include pf-utility-builder("justify-content-space-between") { justify-content: space-between !important; }
-
-@include pf-utility-builder("justify-content-space-around") { justify-content: space-around !important; }
-
-// Flex shrink / grow
-@include pf-utility-builder("flex-shrink-1") { flex-shrink: 1 !important; }
-
-@include pf-utility-builder("flex-grow-1") { flex-grow: 1 !important; }
-
-@include pf-utility-builder("flex-shrink-0") { flex-shrink: 0 !important; }
-
-@include pf-utility-builder("flex-grow-0") { flex-grow: 0 !important; }
-
-// Flex basis
-@include pf-utility-builder("flex-basis-0") { flex-basis: 0 !important; }
-
-@include pf-utility-builder("flex-basis-auto") { flex-basis: auto !important; }
-
-@include pf-utility-builder("flex-none") { flex: none !important; }
-
-@include pf-utility-builder("flex-1") { flex: 1 !important; }
+@include pf-utility-builder($pf-u-flex-options, $pf-global--breakpoint-list);
 
 // Flex fill
-@include pf-utility-builder("flex-fill") { flex: 1 1 auto !important; }
+@include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
 
-@include pf-utility-builder("flex-none", $pf-global--breakpoint-list) { flex: none !important; }
-
-@include pf-utility-builder("flex-1", $pf-global--breakpoint-list) { flex: 1 !important; }
-
-// Flex fill
-@include pf-utility-builder("flex-fill", $pf-global--breakpoint-list) { flex: 1 1 auto !important; }
 /* stylelint-enable */
