@@ -16,7 +16,7 @@
   --pf-c-label--FontSize: var(--pf-global--FontSize--sm);
 
   // Modifiers
-  --pf-c-label--m-hover--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-label--hover--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
   display: inline-block;
@@ -35,7 +35,7 @@
 
   &:hover,
   &.pf-m-hover {
-    background-color: var(--pf-c-label--m-hover--BackgroundColor);
+    background-color: var(--pf-c-label--hover--BackgroundColor);
   }
 
   &.pf-m-compact {
