@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-sequence {
-  --pf-c-sequence--Height: #{pf-size-prem(100px)}; // fixed height hides scrollbar
+  --pf-c-sequence--Height: #{pf-size-prem(101px)}; // fixed height hides scrollbar
 
   // Sequence Control
   --pf-c-sequence__control--PaddingTop: var(--pf-global--spacer--xl);
@@ -26,12 +26,10 @@
   --pf-c-sequence__control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Sequence Control Modifier Start
-  --pf-c-sequence__control-m-start--PositionLeft: 0;
   --pf-c-sequence__control-m-start--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-sequence__control-m-start--BorderRightColor: var(--pf-global--Color--200);
 
   // Sequence Control Modifier End
-  --pf-c-sequence__control-m-end--PositionRight: 0;
   --pf-c-sequence__control-m-end--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-sequence__control-m-end--BorderLeftColor: var(--pf-global--Color--200);
 
@@ -110,7 +108,6 @@
   --pf-c-sequence__content-status--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-sequence__content-status--FontWeight: var(--pf-global--FontWeight--regular);
 
-  position: relative;
   display: flex;
   justify-content: center;
   height: var(--pf-c-sequence--Height);
@@ -118,7 +115,6 @@
 
   // remove default border styling
   button {
-    padding: 0;
     background-color: transparent;
     border-top: 0;
     border-bottom: 0;
@@ -140,8 +136,6 @@
 }
 
 .pf-c-sequence__control {
-  top: 0;
-  bottom: 0;
   padding-top: var(--pf-c-sequence__control--PaddingTop);
   padding-bottom: var(--pf-c-sequence__control--PaddingBottom);
 
@@ -175,15 +169,11 @@
 }
 
 .pf-c-sequence__control-m-start {
-  left: var(--pf-c-sequence__control-m-start--PositionLeft);
-  order: 1;
   border-right: var(--pf-c-sequence__control-m-start--BorderRightWidth) solid var(--pf-c-sequence__control-m-start--BorderRightColor);
   border-left: 0;
 }
 
 .pf-c-sequence__control-m-end {
-  right: var(--pf-c-sequence__control-m-end--PositionRight);
-  order: 3;
   border-right: 0;
   border-left: var(--pf-c-sequence__control-m-end--BorderLeftWidth) solid var(--pf-c-sequence__control-m-end--BorderLeftColor);
 }
@@ -196,7 +186,6 @@
 // Horizontal list
 .pf-c-sequence__list {
   display: inline-flex;
-  order: 2;
   height: var(--pf-c-sequence__list--Height);
   padding-bottom: var(--pf-c-sequence__list--PaddingBottom);
   overflow-x: scroll;
@@ -259,7 +248,6 @@
   border-bottom: var(--pf-c-sequence__link--BorderBottomWidth) solid var(--pf-c-sequence__link--BorderBottomColor);
 
   &::before {
-    position: relative;
     width: var(--pf-c-sequence__link--Width);
     height: var(--pf-c-sequence__link--Height);
     margin-right: var(--pf-c-sequence__link--MarginRight);
