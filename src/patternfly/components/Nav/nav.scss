@@ -12,8 +12,8 @@
 
   // font weight
   --pf-c-nav__list-link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__list-link--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-nav__list-link--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-nav__list-link--active--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-nav__list-link--focus--FontWeight: var(--pf-global--FontWeight--normal);
 
   // color
   --pf-c-nav__list-link--Color: var(--pf-global--Color--dark-100);
@@ -297,7 +297,7 @@
 }
 
 // Rotate the icon
-.pf-m-expanded .pf-c-nav__toggle > * {
+.pf-c-nav__item.pf-m-expanded .pf-c-nav__toggle > * {
   transform: rotate(90deg);
 }
 
