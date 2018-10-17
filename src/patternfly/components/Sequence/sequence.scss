@@ -43,7 +43,7 @@
 
   // Item
   --pf-c-sequence__item--MarginRight: 2px;
-  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(200px)};
+  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(260px)};
 
   // Link
   --pf-c-sequence__link--PaddingTop: var(--pf-global--spacer--xl);
@@ -82,7 +82,7 @@
   --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--xl);
 
   // content Title
-  --pf-c-sequence__content-title--MaxWidth: #{pf-size-prem(100px)};
+  --pf-c-sequence__content-title--MaxWidth: #{pf-size-prem(140px)};
 
   // Content Title Color
   --pf-c-sequence__content-title--Color: var(--pf-global--Color--100);
@@ -99,7 +99,7 @@
   --pf-c-sequence__content-title--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Content Status
-  --pf-c-sequence__content-status--MaxWidth: #{pf-size-prem(100px)};
+  --pf-c-sequence__content-status--MaxWidth: #{pf-size-prem(140px)};
 
   // Content Status Color
   --pf-c-sequence__content-status--Color: var(--pf-global--Color--200);
@@ -124,10 +124,6 @@
     }
   }
 
-  button::-moz-focus-inner {
-    border: 0;
-  }
-
   // remove scrollbar works on Chrome and Safari
   ::-webkit-scrollbar {
     display: none;
@@ -149,12 +145,6 @@
   &:hover {
     border-top: var(--pf-c-sequence__control--hover--BorderTopWidth) solid var(--pf-c-sequence__control--hover--BorderTopColor);
     border-bottom: var(--pf-c-sequence__control--hover--BorderBottomWidth) solid var(--pf-c-sequence__control--hover--BorderBottomColor);
-  }
-
-  &.pf-m-active,
-  &:active {
-    border-top: var(--pf-c-sequence__control--active--BorderTopWidth) solid var(--pf-c-sequence__control--active--BorderTopColor);
-    border-bottom: var(--pf-c-sequence__control--active--BorderBottomWidth) solid var(--pf-c-sequence__control--active--BorderBottomColor);
   }
 
   &.pf-m-focus,
