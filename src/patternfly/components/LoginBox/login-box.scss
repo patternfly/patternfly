@@ -62,13 +62,4 @@
   padding-right: var(--pf-c-login-box__footer--PaddingRight);
   padding-bottom: var(--pf-c-login-box__footer--PaddingBottom);
   padding-left: var(--pf-c-login-box__footer--PaddingLeft);
-
-  // Hover behavior
-  & a:hover {
-    text-decoration: none;
-
-    & p {
-      color: var(--pf-global--Color--200);
-    }
-  }
 }
