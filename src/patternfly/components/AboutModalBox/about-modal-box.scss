@@ -56,7 +56,7 @@
   --pf-c-about-modal-box__close--ZIndex: var(--pf-global--ZIndex--2xl);
 
   // Brand img
-  --pf-c-about-modal-box__brand-image--Height: pf-size-prem(40px);
+  --pf-c-about-modal-box__brand-image--Height: #{pf-size-prem(40px)};
 
   // Header
   // Set default padding right, bottom, left to shared values

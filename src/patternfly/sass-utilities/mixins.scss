@@ -29,30 +29,83 @@
   }
 }
 
-/// Create single prop / value classes, optionally add responsive suffix
-/// @group mixins
-/// @moduleType mixin
-/// @parameter: {Suffix} xs, sm, md, lg, xl, base or null
-/// @usage: @include pf-utility-builder(class-name, base sm md lg xl);
-/// ===============================================================================================
-/// non-responsive, base only                @include pf-utility-builder(class-name) { prop: val !important; }
-/// responsive, not including base           @include pf-utility-builder(class-name, sm lg) { prop: val !important; }
-/// responsive, including base               @include pf-utility-builder(class-name, base sm lg) { prop: val !important; }
-/// responsive, including all breakpoints    @include pf-utility-builder(class-name, $pf-global--breakpoint-list) { prop: val !important; }
-/// ===============================================================================================
-@mixin pf-utility-builder($class-name, $breakpoints: null) {
-  @each $breakpoint in $breakpoints {
-    $suffix: -on-#{$breakpoint};
+// Create single prop / value classes, optionally add responsive suffix
+// @group mixins
+// @moduleType mixin
+// @parameter: {Suffix} xs, sm, md, lg, xl, base or null
+// @usage: @include pf-utility-builder(class-name, base sm md lg xl);
+// ===============================================================================================
+//
+// ## Example sass map:
+// this must be used when order matters or a cluster of similar utilties need to overwrite each other
+//
+// Justify content options
+// $pf-u-flex-options: (
+//   flex-none:  (flex none),
+//   flex-1:     (flex 1)
+// );
+//
+// non-responsive, base only                @include pf-utility-builder($sass-map)
+// responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
+//
+// ## Passing individual utilities values
+// ===============================================================================================
+// Example individual utility:
+// @include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
 
-    // if no media query, set suffix to null
-    @if $breakpoint == null or $breakpoint == "base" {
-      $suffix: "";
+@mixin pf-utility-builder($props, $breakpoints: null) {
+  // if $class-name is a map
+
+  /* stylelint-disable */
+  @if type-of($props) == map {
+    @each $class, $val in $props {
+      $property: nth($val, 1);
+      $value: #{nth($val, 2) !important};
+
+      .pf-u-#{$class} {
+        #{$property}: #{$value};
+      }
     }
 
-    .pf-u-#{$class-name}#{$suffix} {
-      @include pf-media-query($breakpoint) {
-        @content;
+    // if breakpoints are requested
+    @if $breakpoints != null {
+      @each $breakpoint in $breakpoints {
+        $suffix: -on-#{$breakpoint};
+
+        @include pf-media-query($breakpoint) {
+          @each $class, $val in $props {
+            $property: nth($val, 1);
+            $value: #{nth($val, 2) !important};
+
+            .pf-u-#{$class}#{$suffix} {
+              #{$property}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @else if type-of($props) == list {
+    $class: nth($props, 1);
+    $property: nth($props, 2);
+    $value: nth($props, 3) !important;
+
+    .pf-u-#{$class} {
+      #{$property}: #{$value};
+    }
+
+    @if $breakpoints != null {
+      @each $breakpoint in $breakpoints {
+        $suffix: -on-#{$breakpoint};
+
+        .pf-u-#{$class}#{$suffix} {
+          @include pf-media-query($breakpoint) {
+            #{$property}: #{$value};
+          }
+        }
       }
     }
   }
 }
+/* stylelint-enable */

@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-backdrop {
-  --pf-c-backdrop--ZIndex: var(--pf-global--ZIndex--xl);
+  --pf-c-backdrop--ZIndex: var(--pf-global--ZIndex--2xl);
   --pf-c-backdrop--Color: var(--pf-global--BackgroundColor--dark-transparent-200);
   --pf-c-backdrop--BackdropFilter: blur(10px);
 
@@ -15,4 +15,8 @@
   /* stylelint-disable-next-line */
   -webkit-backdrop-filter: var(--pf-c-backdrop--BackdropFilter); // Vendor prefix needed for Safari, but it is not getting added in the autoprefixer right now
   backdrop-filter: var(--pf-c-backdrop--BackdropFilter);
+}
+
+.pf-c-backdrop__open {
+  overflow: hidden;
 }

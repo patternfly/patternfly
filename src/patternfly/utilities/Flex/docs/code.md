@@ -13,10 +13,10 @@ For these utilities to have effect, the parent element must be set to `display: 
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-u-flex-row{-on-[breakpoint]}`                      | `*` |  Sets flex-direction: row |
-| `.pf-u-flex-row-reverse{-on-[breakpoint]}`              | `*` |  Sets flex-direction: row-reverse |
-| `.pf-u-flex-column{-on-[breakpoint]}`                   | `*` |  Sets flex-direction: column |
-| `.pf-u-flex-column-reverse{-on-[breakpoint]}`           | `*` |  Sets flex-direction: column-reverse |
+| `.pf-u-flex-direction-row{-on-[breakpoint]}`            | `*` |  Sets flex-direction: row |
+| `.pf-u-flex-direction-row-reverse{-on-[breakpoint]}`    | `*` |  Sets flex-direction: row-reverse |
+| `.pf-u-flex-direction-column{-on-[breakpoint]}`         | `*` |  Sets flex-direction: column |
+| `.pf-u-flex-direction-column-reverse{-on-[breakpoint]}` | `*` |  Sets flex-direction: column-reverse |
 | `.pf-u-justify-content-flex-start{-on-[breakpoint]}`    | `*` |  Sets justify-content: flex-start |
 | `.pf-u-justify-content-flex-end{-on-[breakpoint]}`      | `*` |  Sets justify-content: flex-end |
 | `.pf-u-justify-content-center{-on-[breakpoint]}`        | `*` |  Sets justify-content: center |
