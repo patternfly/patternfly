@@ -8,7 +8,7 @@ import SwitchExample from './switch-example.hbs';
 import SwitchDisabledExample from './switch-disabled-example.hbs';
 import SwitchNoLabelExample from './switch-no-label-example.hbs';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../switch.scss';
 
 export const Docs = docs;
 
