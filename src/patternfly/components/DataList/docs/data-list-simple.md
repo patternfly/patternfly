@@ -2,7 +2,6 @@
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role="list"`       | `.pf-c-data-list` | Indicates that the data list is a list. **Required** |
-| `role="listitem"`   | `.pf-c-data-list__item` | Indicates that the data list item is a list item. **Required** |
 | `aria-label`        | `.pf-c-data-list`       | Provides an accessible name for the data list. **Required** |
 | `aria-labelledby`   | `.pf-c-data-list__item` | Provides an accessible description for data list item. **Required** |
 | `id`                | `.pf-c-data-list__cell`, `.pf-c-data-list__cell *`  | Provides a reference for data list item description. **Required** |

@@ -2,10 +2,8 @@
   {{#if data-list-expandable-content--attribute}}
     {{{data-list-expandable-content--attribute}}}
   {{/if}}
-  {{#if data-list-item--expanded}}
-    {{!-- do nothing --}}
-  {{else}}
+  {{#unless data-list-item--expanded}}
     hidden
-  {{/if}}>
+  {{/unless}}>
   {{> @partial-block}}
 </section>
