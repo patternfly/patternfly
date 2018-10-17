@@ -32,12 +32,12 @@
               {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
               {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
             {{/form-group}}
-            {{#> form-group form-group--modifier="pf-m-action pf-u-align-items-center pf-u-display-flex-on-md"}}
-              {{#> button button--modifier="pf-m-primary pf-u-mr-lg pf-u-width-full pf-u-width-initial-on-md"}}
+            {{#> form-group form-group--modifier="pf-m-action pf-u-align-items-center pf-u-display-flex pf-u-flex-direction-column pf-u-flex-direction-row-on-md"}}
+              {{#> button button--modifier="pf-c-button pf-m-primary pf-u-mr-lg-on-md pf-u-px-xl pf-u-align-self-stretch pf-u-align-self-flex-start-on-md"}}
                 Log in
               {{/button}}
               {{#> alignment alignment--type="center" alignment--modifier="pf-u-text-align-left-on-md"}}
-                {{#> check check--modifier="pf-u-m-md"}}
+                {{#> check check--modifier="pf-u-m-md pf-u-display-flex"}}
                   {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
                   {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
                 {{/check}}
