@@ -1,0 +1,24 @@
+{{#> data-list data-list--modifier='pf-u-box-shadow-md' data-list--attribute='aria-label="Checkbox and action data list example"'}}
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="check-action-item1"'}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="check-action-check1" aria-labelledby="check-action-item1"'}}{{/data-list-check}}
+    {{#> data-list-cell}}
+      <span id='check-action-item1'>Primary content</span>
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      Secondary content
+    {{/data-list-cell}}
+    {{#> data-list-action button--attribute='aria-labelledby="check-action-item1 check-action-action1" id="check-action-action1" aria-label="Actions"'}}{{/data-list-action}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="check-action-item2"'}}
+    {{#> data-list-check check-input--attribute='type="checkbox" name="check-action-check2" aria-labelledby="check-action-item2"'}}{{/data-list-check}}
+    {{#> data-list-separator}}{{/data-list-separator}}
+    {{#> data-list-cell}}
+      <span id='check-action-item2'>Primary content - Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      Secondary content
+    {{/data-list-cell}}
+    {{#> data-list-action button--attribute='aria-labelledby="check-action-item2 check-action-action2" id="check-action-action2" aria-label="Actions"'}}{{/data-list-action}}
+  {{/data-list-item}}
+{{/data-list}}
