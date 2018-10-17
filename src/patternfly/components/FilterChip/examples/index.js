@@ -14,13 +14,18 @@ export const Docs = docs;
 export default () => {
   const filterChipSimpleExample = FilterchipSimpleExample();
   const filterChipComplexExample = FilterchipComplexExample();
+  const headingText = 'Filter Chip';
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="Filterchip Simple" handlebars={filterChipSimpleExampleRaw} minHeight="20em">
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Individual Filter Chips" handlebars={filterChipSimpleExampleRaw} minHeight="20em">
         {filterChipSimpleExample}
       </Example>
-      <Example heading="Filterchip Complex" handlebars={filterChipComplexExampleRaw} docs={filterChipComplexExampleDoc}>
+      <Example
+        heading="Grouped Filter Chips"
+        handlebars={filterChipComplexExampleRaw}
+        docs={filterChipComplexExampleDoc}
+      >
         {filterChipComplexExample}
       </Example>
     </Documentation>
