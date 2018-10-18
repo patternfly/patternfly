@@ -1,18 +1,20 @@
-<div class="pf-c-groupborder">
-  Category One
-{{#> filter-chip}}
-  Value One
-  {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-  {{/button}}
-{{/filter-chip}}
-{{#> filter-chip}}
-  Value Two
-  {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-  {{/button}}
-{{/filter-chip}}
-{{#> filter-chip}}
-  Value Three
-  {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-  {{/button}}
-{{/filter-chip}}
-</div>
+{{#> filter-chip-group}}
+  {{#> filter-chip-label}}
+    Category One
+  {{/filter-chip-label}}
+  {{#> filter-chip}}
+    Value One
+    {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+    {{/button}}
+  {{/filter-chip}}
+  {{#> filter-chip}}
+    Value Two
+    {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+    {{/button}}
+  {{/filter-chip}}
+  {{#> filter-chip}}
+    Value Three
+    {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+    {{/button}}
+  {{/filter-chip}}
+{{/filter-chip-group}}

@@ -92,15 +92,22 @@
   }
 }
 
-// .pf-c-groupborder {
-//   display: flex;
-//   height: 40px;
-//   padding-top: 4px;
-//   padding-right: 8px;
-//   padding-bottom: 4px;
-//   padding-left: 8px;
-//   background-color: rgb(161, 161, 161);
-// }
+.pf-c-filter-chip__group {
+  display: flex;
+  display: inline-block;
+  height: 40px;
+  padding-top: 4px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  background-color: var(--pf-global--BackgroundColor--200);
+  border-radius: 3px;
+}
+
+.pf-c-filter-chip__label {
+  margin-right: 8px;
+  font-size: 14px;
+}
 
 // this is the style the focus ring on the filter chip rather than the button? probably remove
 // &:focus {
