@@ -32,7 +32,7 @@
         {{/button}}
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier="pf-u-mx-md"}}
-        {{#> button button--modifier="pf-m-plain"}}
+        {{#> button button--modifier="pf-m-link"}}
           Action
         {{/button}}
       {{/toolbar-item}}
@@ -53,31 +53,42 @@
         17 of 80 items
       {{/toolbar-item}}
       {{#> toolbar-item}}
-      {{#> filter-chip-label}}
+        Active Filters
+      {{!-- {{#> filter-chip-label}}
           Category One
-        {{/filter-chip-label}}
-       {{#> filter-chip}}
-            Value One
+        {{/filter-chip-label}} --}}
+       {{!-- {{#> filter-chip}}
+            Category: Value One
             {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
             {{/button}}
-          {{/filter-chip}}
+          {{/filter-chip}} --}}
       {{#> filter-chip-group}}
-        {{#> filter-chip-label}}
+        {{!-- {{#> filter-chip-label}}
           Category Two
-        {{/filter-chip-label}}
+        {{/filter-chip-label}} --}}
           {{#> filter-chip}}
-            Value One
+            Category: Value One
             {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
             {{/button}}
           {{/filter-chip}}
           {{#> filter-chip}}
-            Value Two
+            Category: Value Two
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            Category: Value Two
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            Category: Value Two
             {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
             {{/button}}
           {{/filter-chip}}
         {{/filter-chip-group}}
-        {{#> button button--modifier="pf-m-plain"}}
-          Action
+        {{#> button button--modifier="pf-m-link"}}
+          Clear all Filters
         {{/button}}
       {{/toolbar-item}}
     {{/toolbar-group}}
