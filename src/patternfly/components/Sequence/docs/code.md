@@ -15,15 +15,18 @@ A sequence acts as navigation within a wizard or a page. A sequence should have 
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-sequence` | `<nav>` |  Initiates a primary sequence element |
-| `.pf-c-sequence__list` | `<ul>` | Initiates a default sequence list |
-| `.pf-c-sequence__item` | `<li>` | Initiates a default sequence list item |
-| `.pf-c-sequence__link` | `<a>` | Initiates a default sequence list link |
-| `.pf-c-sequence__number` | `<span>` | Initiates a sequence number element |
-| `.pf-c-sequence__content` | `<span>` | Initiates a sequence content element |
-| `.pf-c-sequence__content-title` | `<span>` | Initiates a sequence content title |
-| `.pf-c-sequence__content-status` | `<p>` | Initiates a sequence content status |
-| `.pf-m-hover` | `.pf-c-sequence__link` | Modifies to display the link as hovered |
-| `.pf-m-active` | `.pf-c-sequence__link` | Modifies to display the link as active |
-| `.pf-m-focus` | `.pf-c-sequence__link` | Modifies to display the link as focused |
-| `.pf-m-current` | `.pf-c-sequence__link` | Modifies for the current state |
+| `.pf-c-sequence` | `<nav>` |  Initiates a primary sequence element. |
+| `.pf-c-sequence__list` | `<ul>` | Initiates a default sequence list. |
+| `.pf-c-sequence__item` | `<li>` | Initiates a default sequence list item. |
+| `.pf-c-sequence__link` | `<a>` | Initiates a default sequence list link. |
+| `.pf-c-sequence__control` | `<button>` | Initiates a control button. |
+| `.pf-c-sequence__control-icon` | `<i>` | Initiates an icon for the control button. |
+| `.pf-c-sequence__content` | `<span>` | Initiates a sequence content element. |
+| `.pf-c-sequence__content-title` | `<span>` | Initiates a sequence content title. |
+| `.pf-c-sequence__content-status` | `<p>` | Initiates a sequence content status. |
+| `.pf-m-hover` | `.pf-c-sequence__link` | Modifies to display the link as hovered. |
+| `.pf-m-active` | `.pf-c-sequence__link` | Modifies to display the link as active. |
+| `.pf-m-focus` | `.pf-c-sequence__link` | Modifies to display the link as focused. |
+| `.pf-m-current` | `.pf-c-sequence__link` | Modifies for the current state. |
+| `.pf-m-start` | `.pf-c-sequence__control` | Modifies the control button to be positioned at the start. |
+| `.pf-m-end` | `.pf-c-sequence__control` | Modifies the control button to be positioned at the end. |
