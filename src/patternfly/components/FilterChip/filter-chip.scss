@@ -3,14 +3,17 @@
 .pf-c-filter-chip {
   --pf-c-filter-chip--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-filter-chip--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-filter-chip--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-filter-chip--Color: var(--pf-global--Color--100);
   --pf-c-filter-chip--BackgroundColor: var(--pf-global--Color--light-100);
   --pf-c-filter-chip--BorderColor: var(--pf-global--Color--200);
   --pf-c-filter-chip--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-filter-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-filter-chip--hover--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-filter-chip--m-current--BorderColor: var(--pf-global--primary-color--100);
+
+  // Text Styles
+  --pf-c-filter-chip__text--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-filter-chip__text--Color: var(--pf-global--Color--100);
+  --pf-c-filter-chip__text--MaxWidth: #{pf-size-prem(140px)};
 
   // Button Styles
   --pf-c-filter-chip__button--PaddingTop: var(--pf-global--spacer--sm);
@@ -26,9 +29,12 @@
   --pf-c-filter-chip__button--m-current--Color: var(--pf-global--primary-color--100);
 
   display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: var(--pf-c-filter-chip--PaddingLeft);
   margin-right: var(--pf-c-filter-chip--MarginRight); // change this to be all except last child
   font-size: var(--pf-c-filter-chip--FontSize);
+  line-height: 0;
   color: var(--pf-c-filter-chip--Color);
   background-color: var(--pf-c-filter-chip--BackgroundColor);
   border: var(--pf-c-filter-chip--BorderWidth) solid var(--pf-c-filter-chip--BorderColor);
@@ -51,14 +57,30 @@
     }
   }
 
+  .pf-c-filter-chip__text {
+    display: inline-block;
+    max-width: var(--pf-c-filter-chip__text--MaxWidth);
+    overflow-x: hidden;
+    font-size: var(--pf-c-filter-chip__text--FontSize);
+    line-height: 14px;
+    color: var(--pf-c-filter-chip__text--Color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .pf-c-button {
-    min-width: 32px;
-    min-height: 30px;
-    padding:
-      var(--pf-c-filter-chip__button--PaddingTop)
-      var(--pf-c-filter-chip__button--PaddingRight)
-      var(--pf-c-filter-chip__button--PaddingBottom)
-      var(--pf-c-filter-chip__button--PaddingLeft);
+    min-width: 14px;
+    min-height: 14px;
+    padding-top: 0;
+    padding-right: 8px;
+    padding-bottom: 0;
+    padding-left: 4px;
+
+    // padding:
+    //   var(--pf-c-filter-chip__button--PaddingTop)
+    //   var(--pf-c-filter-chip__button--PaddingRight)
+    //   var(--pf-c-filter-chip__button--PaddingBottom)
+    //   var(--pf-c-filter-chip__button--PaddingLeft);
     font-size: var(--pf-c-filter-chip__button--FontSize);
     line-height: var(--pf-c-filter-chip__button--LineHeight);
     color: var(--pf-c-filter-chip--button--Color);
