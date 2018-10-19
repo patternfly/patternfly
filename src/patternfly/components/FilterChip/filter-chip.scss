@@ -10,17 +10,18 @@
   --pf-c-filter-chip--hover--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-filter-chip--m-current--BorderColor: var(--pf-global--primary-color--100);
 
-  // Text Styles
+  // Filter chip text
+  --pf-c-filter-chip__text--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-filter-chip__text--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-filter-chip__text--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-filter-chip__text--LineHeight: var(--pf-global--FontSize--sm);
   --pf-c-filter-chip__text--Color: var(--pf-global--Color--100);
   --pf-c-filter-chip__text--MaxWidth: #{pf-size-prem(140px)};
 
-  // Button Styles
-  --pf-c-filter-chip__button--PaddingTop: var(--pf-global--spacer--sm);
+  // Filter chip button
   --pf-c-filter-chip__button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-filter-chip__button--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-filter-chip__button--PaddingLeft: var(--pf-global--spacer--xs);
-  --pf-c-filter-chip--button--Color: var(--pf-global--secondary-color--100);
+  --pf-c-filter-chip__button--Color: var(--pf-global--secondary-color--100);
   --pf-c-filter-chip__button--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-filter-chip__button--LineHeight: var(--pf-global--FontSize--sm);
   --pf-c-filter-chip__button--focus--Color: var(--pf-global--primary-color--200);
@@ -28,9 +29,8 @@
   --pf-c-filter-chip__button--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-filter-chip__button--m-current--Color: var(--pf-global--primary-color--100);
 
-  display: inline-block;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  position: relative;
+  display: inline-flex;
   padding-left: var(--pf-c-filter-chip--PaddingLeft);
   margin-right: var(--pf-c-filter-chip--MarginRight); // change this to be all except last child
   font-size: var(--pf-c-filter-chip--FontSize);
@@ -60,38 +60,43 @@
   .pf-c-filter-chip__text {
     display: inline-block;
     max-width: var(--pf-c-filter-chip__text--MaxWidth);
-    overflow-x: hidden;
+    padding-top: var(--pf-c-filter-chip__text--PaddingTop);
+    padding-bottom: var(--pf-c-filter-chip__text--PaddingBottom);
+    overflow: hidden;
     font-size: var(--pf-c-filter-chip__text--FontSize);
-    line-height: 14px;
+    line-height: var(--pf-c-filter-chip__text--LineHeight);
     color: var(--pf-c-filter-chip__text--Color);
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   .pf-c-button {
-    min-width: 14px;
-    min-height: 14px;
-    padding-top: 0;
-    padding-right: 8px;
-    padding-bottom: 0;
-    padding-left: 4px;
-
-    // padding:
-    //   var(--pf-c-filter-chip__button--PaddingTop)
-    //   var(--pf-c-filter-chip__button--PaddingRight)
-    //   var(--pf-c-filter-chip__button--PaddingBottom)
-    //   var(--pf-c-filter-chip__button--PaddingLeft);
+    min-width: 32px;
+    min-height: 30px;
+    padding-right: var(--pf-c-filter-chip__button--PaddingRight);
+    padding-left: var(--pf-c-filter-chip__button--PaddingLeft);
     font-size: var(--pf-c-filter-chip__button--FontSize);
     line-height: var(--pf-c-filter-chip__button--LineHeight);
-    color: var(--pf-c-filter-chip--button--Color);
+    color: var(--pf-c-filter-chip__button--Color);
     text-align: center;
+
+    // &::after {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   content: "";
+    //   border: 1px solid #000;
+    // }
 
     &.pf-m-focus,
     &:focus {
       color: var(--pf-c-filter-chip__button--focus--Color);
-      outline: none;
 
-      // .pf-c-filter-chip {
+      // &::after {
       //   border-color: var(--pf-global--primary-color--100);
       // }
     }
@@ -99,15 +104,13 @@
     &.pf-m-active,
     &:active {
       color: var(--pf-c-filter-chip__button--active--Color);
-      outline: none;
 
-      // .pf-c-filter-chip {
-      //   background-color: #000;
+      // &::after {
       //   border-color: var(--pf-global--primary-color--100);
       // }
     }
 
-
+    // Turn off default button style
     > :first-child {
       margin-right: 0;
     }
@@ -115,27 +118,33 @@
 }
 
 .pf-c-filter-chip__group {
-  display: flex;
-  display: inline-block;
-  height: 40px;
-  padding-top: 4px;
-  padding-right: 4px;
-  padding-bottom: 4px;
-  padding-left: 4px;
-  background-color: var(--pf-global--BackgroundColor--200);
-  border-radius: 3px;
+  --pf-c-filter-chip__group--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip__group--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip__group--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip__group--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip__group--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-filter-chip__group--BackgroundColor: var(--pf-global--BackgroundColor--200);
+
+  // label in group
+  --pf-c-filter-chip__label--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-filter-chip__label--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-filter-chip__label--FontSize: var(--pf-global--FontSize--sm);
+
+  display: inline-flex;
+  padding:
+    var(--pf-c-filter-chip__group--PaddingTop)
+    var(--pf-c-filter-chip__group--PaddingRight)
+    var(--pf-c-filter-chip__group--PaddingBottom)
+    var(--pf-c-filter-chip__group--PaddingLeft);
+  background-color: var(--pf-c-filter-chip__group--BackgroundColor);
+  border-radius: var(--pf-c-filter-chip__group--BorderRadius);
+
+  .pf-c-filter-chip__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: var(--pf-c-filter-chip__label--MarginRight);
+    margin-left: var(--pf-c-filter-chip__label--MarginLeft);
+    font-size: var(--pf-c-filter-chip__label--FontSize);
+  }
 }
-
-.pf-c-filter-chip__label {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-// this is the style the focus ring on the filter chip rather than the button? probably remove
-// &:focus {
-//   outline: -webkit-focus-ring-color auto 5px;
-//   outline-width: 5px;
-//   outline-style: auto;
-//   outline-color: -webkit-focus-ring-color;
-// }
-

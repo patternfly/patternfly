@@ -53,19 +53,10 @@
         17 of 80 items
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        Active Filters
-      {{!-- {{#> filter-chip-label}}
-          Category One
-        {{/filter-chip-label}} --}}
-       {{!-- {{#> filter-chip}}
-            Category: Value One
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}} --}}
-      {{#> filter-chip-group}}
-        {{!-- {{#> filter-chip-label}}
-          Category Two
-        {{/filter-chip-label}} --}}
+        {{#> filter-chip-group}}
+          {{#> filter-chip-label}}
+            Category One
+          {{/filter-chip-label}}
           {{#> filter-chip}}
             {{#> filter-chip-text}}
               Value One
@@ -75,6 +66,25 @@
           {{/filter-chip}}
           {{#> filter-chip}}
             {{#> filter-chip-text}}
+              Value Two
+            {{/filter-chip-text}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            {{#> filter-chip-text}}
+              Value Three
+            {{/filter-chip-text}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+        {{/filter-chip-group}}
+        {{#> filter-chip-group}}
+          {{#> filter-chip-label}}
+            Category One
+          {{/filter-chip-label}}
+          {{#> filter-chip}}
+            {{#> filter-chip-text}}
               Value One
             {{/filter-chip-text}}
             {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
@@ -82,7 +92,14 @@
           {{/filter-chip}}
           {{#> filter-chip}}
             {{#> filter-chip-text}}
-              Value One
+              Value Two
+            {{/filter-chip-text}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            {{#> filter-chip-text}}
+              Value Three
             {{/filter-chip-text}}
             {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
             {{/button}}
