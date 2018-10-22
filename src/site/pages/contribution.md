@@ -34,7 +34,7 @@ There are several properties available on the Example component to help with sty
 | ------------------- | ------------------------------------------------------------------- |
 | `heading`   | Sets the text displayed above the example (required) |
 | `minHeight`   | Sets the min-height of the preview box - useful for collapsed items that need space to expand or when a set minimum height would provide value (optional) |
-| `docs`   | Sets a reference to an example specific markdown file instead of documentation for the entire component to describe specific functionality displayed |
+| `docs`   | Sets a reference to an example-specific markdown (.md) file to describe the functionality displayed |
 | `fullPageOnly`   | Setting to true will only display the preview when full page mode is used (optional) |
 
 ```html
@@ -47,7 +47,7 @@ If an ID is needed for an element, please use the Handlebars unique ID helper.  
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
 
 ## Documentation
-For each example in the component you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
+For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
 
 A good example of this approach is the <a href="/components/Table/examples">table component</a>.
 
