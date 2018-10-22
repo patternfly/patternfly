@@ -1,12 +1,12 @@
 ## Overview
 
-The filter chips are used 
+Filter chips are used to display items that have been filtered from a larger group. Filter chips are made of a text element and a button component, whereby the button is used to remove the filter chip. When more than one chip has been filtered the filter chips will belong in a group. Groups should be divided by the categories that the filter chips belong to, if any, and the label should be used to display this category name.
 
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when icon is used when no supporting text. |
+| `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used when no supporting text. |
 | `aria-hidden="true"` | `<i>` |  Hides the icon from assistive technologies. |
 
 ## Usage
