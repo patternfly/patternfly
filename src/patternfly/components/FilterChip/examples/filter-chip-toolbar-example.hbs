@@ -53,33 +53,7 @@
         17 of 80 items
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> filter-chip-group}}
-          {{#> filter-chip-label}}
-            Category One
-          {{/filter-chip-label}}
-          {{#> filter-chip}}
-            {{#> filter-chip-text}}
-              Value One
-            {{/filter-chip-text}}
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}}
-          {{#> filter-chip}}
-            {{#> filter-chip-text}}
-              Value Two
-            {{/filter-chip-text}}
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}}
-          {{#> filter-chip}}
-            {{#> filter-chip-text}}
-              Value Three
-            {{/filter-chip-text}}
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}}
-        {{/filter-chip-group}}
-        {{#> filter-chip-group}}
+        {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
           {{#> filter-chip-label}}
             Category One
           {{/filter-chip-label}}

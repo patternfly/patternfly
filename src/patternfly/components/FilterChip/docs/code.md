@@ -8,6 +8,7 @@ Filter chips are used to display items that have been filtered from a larger gro
 | -- | -- | -- |
 | `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used when no supporting text. |
 | `aria-hidden="true"` | `<i>` |  Hides the icon from assistive technologies. |
+| `role="group of filter chips"` | `.pf-c-filter-chip__group` | Indicates the filter chip group is a filter chip group. |
 
 ## Usage
 
