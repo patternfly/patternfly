@@ -107,22 +107,14 @@
   justify-content: center;
   height: var(--pf-c-sequence--Height);
   overflow-y: hidden;
-
-  // remove default border styling
-  button {
-    background-color: transparent;
-    border: 0;
-
-    &:focus {
-      outline: 0;
-    }
-  }
 }
 
 // Control Buttons
 .pf-c-sequence__control {
   padding-top: var(--pf-c-sequence__control--PaddingTop);
   padding-bottom: var(--pf-c-sequence__control--PaddingBottom);
+  background-color: transparent;
+  border: 0;
 
   &::before {
     content: "";
@@ -140,6 +132,7 @@
   &:focus {
     border-top: var(--pf-c-sequence__control--focus--BorderTopWidth) solid var(--pf-c-sequence__control--focus--BorderTopColor);
     border-bottom: var(--pf-c-sequence__control--focus--BorderBottomWidth) solid var(--pf-c-sequence__control--focus--BorderBottomColor);
+    outline: 0;
   }
 
   &.pf-m-start {
