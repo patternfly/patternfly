@@ -1,53 +1,52 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--attribute='id="page"' page--modifier="pf-m-exanded"}}
-  {{#> page-header}}
-    {{#> page-header-brand page-header-brand--modifier="pf-u-sr-only pf-u-visible-on-md"}}
-      {{#> page-template-header-brand-elements}}
-      {{/page-template-header-brand-elements}}
-    {{/page-header-brand}}
-    {{#> page-header-selector}}
-      pf-c-context-selector
-    {{/page-header-selector}}
-    {{#> page-header-nav}}
-      {{#> nav nav--horizontal="true" nav--attribute='id="nav-primary" aria-label="Primary Nav Default Example"'}}
-        {{#> nav-list nav-list--type="horizontal"}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Nav Item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Nav Item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Link 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Link 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Link 5
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-header-nav}}
-    {{#> page-template-header-tools-elements}}
-    {{/page-template-header-tools-elements}}
-  {{/page-header}}
-  {{#> page-main}}
-    {{#> page-template-title}}
-    {{/page-template-title}}
-    {{#> page-template-gallery}}
-    {{/page-template-gallery}}
-  {{/page-main}}
+{{#> page page--attribute='id="page-layout-horizontal-nav"' page--modifier="pf-m-scroll-content"}}
+{{#> page-header}}
+{{#> page-header-brand page-header-brand--modifier="pf-u-sr-only pf-u-visible-on-md"}}
+{{#> page-template-header-brand-elements}}
+{{/page-template-header-brand-elements}}
+{{/page-header-brand}}
+{{#> page-header-selector}}
+pf-c-context-selector
+{{/page-header-selector}}
+{{#> page-header-nav}}
+{{#> nav nav--horizontal="true" nav--attribute='id="nav-primary" aria-label="Primary Nav Default Example"'}}
+{{#> nav-list nav-list--type="horizontal"}}
+{{#> nav-item}}
+{{#> nav-link nav-link--href="#" nav-link--current="true"}}
+Nav Item 1
+{{/nav-link}}
+{{/nav-item}}
+{{#> nav-item}}
+{{#> nav-link nav-link--href="#"}}
+Nav Item 2
+{{/nav-link}}
+{{/nav-item}}
+{{#> nav-item}}
+{{#> nav-link nav-link--href="#"}}
+Link 3
+{{/nav-link}}
+{{/nav-item}}
+{{#> nav-item}}
+{{#> nav-link nav-link--href="#"}}
+Link 4
+{{/nav-link}}
+{{/nav-item}}
+{{#> nav-item}}
+{{#> nav-link nav-link--href="#"}}
+Link 5
+{{/nav-link}}
+{{/nav-item}}
+{{/nav-list}}
+{{/nav}}
+{{/page-header-nav}}
+{{#> page-template-header-tools-elements}}
+{{/page-template-header-tools-elements}}
+{{/page-header}}
+{{#> page-main}}
+{{#> page-template-title}}
+{{/page-template-title}}
+{{#> page-template-gallery}}
+{{/page-template-gallery}}
+{{/page-main}}
 {{/page}}
-
