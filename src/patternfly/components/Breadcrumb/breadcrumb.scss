@@ -1,9 +1,9 @@
 @import "../../patternfly-utilities";
 
 .pf-c-breadcrumb {
-  --pf-c-breadcrumb--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-breadcrumb--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-breadcrumb--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-breadcrumb--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-breadcrumb--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-breadcrumb--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Breadcrumb Item
@@ -32,9 +32,9 @@
   // Modifiers
   // ============================================================ //
 
-  // Modifier - active item
-  --pf-c-breadcrumb__item--m-active--Color: var(--pf-c-breadcrumb__item--Color);
-  --pf-c-breadcrumb__item--m-active--hover--Color: var(--pf-c-breadcrumb__item--Color);
+  // Modifier - current item
+  --pf-c-breadcrumb__item--m-current--Color: var(--pf-c-breadcrumb__item--Color);
+  --pf-c-breadcrumb__item--m-current--hover--Color: var(--pf-c-breadcrumb__item--Color);
 
   // Modifier - title item
   --pf-c-breadcrumb__item--m-title--MarginTop: var(--pf-global--spacer--md);
@@ -68,47 +68,42 @@
   color: var(--pf-c-breadcrumb__item--Color);
   cursor: default;
 
-  &:first-child::before {
-    content: none;
-  }
-
-  &::before {
+  &:not(:first-child):not(.pf-m-title)::before {
     margin-right: var(--pf-c-breadcrumb__divider--MarginRight);
-    margin-left: var(--pf-c-breadcrumb__divider--MarginLeft);
     font-family: var(--pf-c-breadcrumb__divider--FontFamily);
     color: var(--pf-c-breadcrumb__divider--Color);
     content: var(--pf-c-breadcrumb__divider--Content);
   }
+
+  &:not(:last-child) {
+    margin-right: var(--pf-c-breadcrumb__divider--MarginRight);
+  }
+
+  &.pf-m-title {
+    flex: 100%;
+    margin-top: var(--pf-c-breadcrumb__item--m-title--MarginTop);
+    margin-bottom: var(--pf-c-breadcrumb__item--m-title--MarginBottom);
+    font-size: var(--pf-c-breadcrumb__item--m-title--FontSize);
+    font-weight: var(--pf-c-breadcrumb__item--m-title--FontWeight);
+    line-height: var(--pf-c-breadcrumb__item--m-title--LineHeight);
+    color: var(--pf-c-breadcrumb__item--m-title--Color);
+    cursor: default;
+
+    &:hover {
+      color: var(--pf-c-breadcrumb__item--m-title--hover--Color);
+      text-decoration: none;
+    }
+  }
 }
 
-.pf-c-breadcrumb__item.pf-m-active * {
-  color: var(--pf-c-breadcrumb__item--m-active--Color);
+.pf-c-breadcrumb__item.pf-m-current * {
+  color: var(--pf-c-breadcrumb__item--m-current--Color);
   text-decoration: none;
   cursor: default;
 
   &:hover {
-    color: var(--pf-c-breadcrumb__item--m-active--hover--Color);
+    color: var(--pf-c-breadcrumb__item--m-current--hover--Color);
     text-decoration: none;
-  }
-}
-
-.pf-c-breadcrumb__item.pf-m-title {
-  flex: 100%;
-  margin-top: var(--pf-c-breadcrumb__item--m-title--MarginTop);
-  margin-bottom: var(--pf-c-breadcrumb__item--m-title--MarginBottom);
-  font-size: var(--pf-c-breadcrumb__item--m-title--FontSize);
-  font-weight: var(--pf-c-breadcrumb__item--m-title--FontWeight);
-  line-height: var(--pf-c-breadcrumb__item--m-title--LineHeight);
-  color: var(--pf-c-breadcrumb__item--m-title--Color);
-  cursor: default;
-
-  &:hover {
-    color: var(--pf-c-breadcrumb__item--m-title--hover--Color);
-    text-decoration: none;
-  }
-
-  &::before {
-    content: none;
   }
 }
 

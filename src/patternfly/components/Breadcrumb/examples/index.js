@@ -20,10 +20,10 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw} minHeight="10em">
+      <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw}>
         {breadcrumbExample}
       </Example>
-      <Example heading="Breadcrumb without Home Link" handlebars={breadcrumbWithoutHomeLinkRaw} minHeight="10em">
+      <Example heading="Breadcrumb without Home Link" handlebars={breadcrumbWithoutHomeLinkRaw}>
         {breadcrumbWithoutHomeLink}
       </Example>
       <Example
