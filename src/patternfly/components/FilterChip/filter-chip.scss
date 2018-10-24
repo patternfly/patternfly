@@ -10,26 +10,27 @@
   --pf-c-filter-chip--hover--BorderColor: var(--pf-global--primary-color--100);
 
   // Filter chip text
-  --pf-c-filter-chip__text--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-filter-chip__text--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-filter-chip__text--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-filter-chip__text--LineHeight: var(--pf-global--FontSize--sm); // Line height same as font size
+  --pf-c-filter-chip__text--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-filter-chip__text--LineHeight: var(--pf-global--FontSize--xs); // Line height same as font size
   --pf-c-filter-chip__text--Color: var(--pf-global--Color--100);
   --pf-c-filter-chip__text--MaxWidth: #{pf-size-prem(120px)};
 
   // Filter chip button
   --pf-c-filter-chip__button--MinWidth: var(--pf-global--spacer--xl);
-  --pf-c-filter-chip__button--MinHeight: var(--pf-global--spacer--xl) - var(--pf-c-filter-chip--BorderWidth) - var(--pf-c-filter-chip--BorderWidth);
-  --pf-c-filter-chip__button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-filter-chip__button--MinHeight: #{pf-size-prem(26px)}; // Custom size for min height is as close as possible to 32px;
+  --pf-c-filter-chip__button--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-filter-chip__button--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-filter-chip__button--Color: var(--pf-global--Color--200);
-  --pf-c-filter-chip__button--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-filter-chip__button--LineHeight: var(--pf-global--FontSize--sm); // Line height same as font size
+  --pf-c-filter-chip__button--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-filter-chip__button--LineHeight: var(--pf-global--FontSize--xs); // Line height same as font size
   --pf-c-filter-chip__button--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-filter-chip__button--focus--Color: var(--pf-global--primary-color--200);
   --pf-c-filter-chip__button--active--Color: var(--pf-global--primary-color--200);
 
   // Filter Chip Badge
+  --pf-c-filter-chip__badge--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip__badge--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-filter-chip__badge--MarginBottom: var(--pf-global--spacer--xs);
 
   position: relative;
   display: inline-flex;
@@ -55,9 +56,10 @@
 
   // Text Element
   .pf-c-filter-chip__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: var(--pf-c-filter-chip__text--MaxWidth);
-    padding-top: var(--pf-c-filter-chip__text--PaddingTop);
-    padding-bottom: var(--pf-c-filter-chip__text--PaddingBottom);
     overflow: hidden;
     font-size: var(--pf-c-filter-chip__text--FontSize);
     line-height: var(--pf-c-filter-chip__text--LineHeight);
@@ -68,41 +70,25 @@
 
   // Remove Button
   .pf-c-button {
+    display: flex;
+    justify-content: center;
     min-width: var(--pf-c-filter-chip__button--MinWidth);
     min-height: var(--pf-c-filter-chip__button--MinHeight);
     padding-right: var(--pf-c-filter-chip__button--PaddingRight);
-    padding-left: var(--pf-c-filter-chip__button--PaddingLeft);
+    padding-left: var(--pf-c-filter-chip__button--PaddingRight);
     font-size: var(--pf-c-filter-chip__button--FontSize);
     line-height: var(--pf-c-filter-chip__button--LineHeight);
     color: var(--pf-c-filter-chip__button--Color);
     text-align: center;
 
-    // &::after {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   content: "";
-    //   border: 1px solid #000;
-    // }
-
     &.pf-m-focus,
     &:focus {
       color: var(--pf-c-filter-chip__button--focus--Color);
-
-      // &::after {
-      //   border-color: var(--pf-global--primary-color--100);
-      // }
     }
 
     &.pf-m-active,
     &:active {
       color: var(--pf-c-filter-chip__button--active--Color);
-
-      // &::after {
-      //   border-color: var(--pf-global--primary-color--100);
-      // }
     }
 
     // Turn off default button margin-right style
@@ -112,9 +98,9 @@
   }
 
   .pf-c-badge {
-    margin-right: 4px;
-
-    // line-height: 14px;
+    margin-top: var(--pf-c-filter-chip__badge--MarginTop);
+    margin-right: var(--pf-c-filter-chip__badge--MarginRight);
+    margin-bottom: var(--pf-c-filter-chip__badge--MarginBottom);
   }
 }
 
@@ -126,6 +112,7 @@
   --pf-c-filter-chip__group--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-filter-chip__group--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-filter-chip__group--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-filter-chip__group--MarginRight: var(--pf-global--spacer--sm);
 
   // Label in group
   --pf-c-filter-chip__label--PaddingLeft: var(--pf-global--spacer--xs);
@@ -138,12 +125,11 @@
     var(--pf-c-filter-chip__group--PaddingRight)
     var(--pf-c-filter-chip__group--PaddingBottom)
     var(--pf-c-filter-chip__group--PaddingLeft);
-  counter-reset: filternumber;
   background-color: var(--pf-c-filter-chip__group--BackgroundColor);
   border-radius: var(--pf-c-filter-chip__group--BorderRadius);
 
   &:not(:last-child) {
-    margin-right: 8px;
+    margin-right: var(--pf-c-filter-chip__group--MarginRight);
   }
 
   .pf-c-filter-chip__label {
@@ -157,8 +143,8 @@
 }
 
 .pf-c-filter-chip__container {
-  width: 100%;
-  max-width: 700px;
+  width: 100%; // Change this depending on discussion
+  max-width: 700px; // Change this depending on discussion
   overflow: scroll;
   white-space: nowrap;
 }
