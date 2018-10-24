@@ -146,11 +146,6 @@
   .pf-c-sequence__control-icon {
     min-width: var(--pf-c-sequence__control-icon--MinWidth);
   }
-
-  // at this size control buttons dont display
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    display: none;
-  }
 }
 
 // Horizontal list
