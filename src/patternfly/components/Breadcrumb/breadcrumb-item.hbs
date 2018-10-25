@@ -1,0 +1,9 @@
+<li class="pf-c-breadcrumb__item{{#if breadcrumb-item--modifier}} {{breadcrumb-item--modifier}}{{/if}}"
+  {{#if breadcrumb-item--attribute}}
+    {{{breadcrumb-item--attribute}}}
+  {{/if}}
+  {{#if breadcrumb-item--current}}
+    aria-current="page"
+  {{/if}}>
+  {{> @partial-block}}
+</li>
