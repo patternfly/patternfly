@@ -1,7 +1,7 @@
 @import "../../patternfly-utilities";
 
 .pf-c-sequence {
-  --pf-c-sequence--Height: #{pf-size-prem(101px)}; // fixed height hides scrollbar
+  --pf-c-sequence--Height: #{pf-size-prem(99px)}; // fixed height hides scrollbar
 
   // Sequence Control
   --pf-c-sequence__control--PaddingTop: var(--pf-global--spacer--xl);
@@ -45,7 +45,7 @@
   --pf-c-sequence__item--MaxWidth: #{pf-size-prem(260px)};
 
   // Link
-  --pf-c-sequence__link--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-sequence__link--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-sequence__link--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--PaddingLeft: var(--pf-global--spacer--xl);
@@ -80,7 +80,7 @@
   --pf-c-sequence__link--before--m-current--BorderColor: var(--pf-global--primary-color--100);
 
   // Content
-  --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--xl);
+  --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--2xl);
   --pf-c-sequence__content--MaxWidth: #{pf-size-prem(140px)};
 
   // Content Title Color

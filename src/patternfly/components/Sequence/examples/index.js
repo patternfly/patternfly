@@ -14,7 +14,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Sequence Finite" handlebars={sequenceExampleRaw} docs={sequenceComplexExampleDoc}>
+      <Example heading="Sequence Finite with overflow" handlebars={sequenceExampleRaw} docs={sequenceComplexExampleDoc}>
         {sequenceExample}
       </Example>
     </Documentation>
