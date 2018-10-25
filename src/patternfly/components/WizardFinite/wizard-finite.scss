@@ -9,16 +9,17 @@
   --pf-c-wizard-finite__title--PaddingRight: var(--pf-global--spacer--2xl);
   --pf-c-wizard-finite__title--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-wizard-finite__title--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-wizard-finite__title--Background: var(--pf-global--BackgroundColor--dark-transparent-200);
+  --pf-c-wizard-finite__title--Background: var(--pf-global--BackgroundColor--dark-transparent-100);
 
   // Description variables
   --pf-c-wizard-finite__description--Color: var(--pf-global--Color--200);
 
   // Sequence variables
-  --pf-c-wizard-finite__sequence--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard-finite__sequence--PaddingTop: 0;// var(--pf-global--spacer--xl);
   --pf-c-wizard-finite__sequence--PaddingRight: 0;
   --pf-c-wizard-finite__sequence--PaddingBottom: 0;
   --pf-c-wizard-finite__sequence--PaddingLeft: 0;
+  --pf-c-wizard-finite__sequence--Background: var(--pf-global--BackgroundColor--dark-transparent-200);
 
   // Content variables
   --pf-c-wizard-finite__content--PaddingTop: var(--pf-global--spacer--xl);
@@ -62,6 +63,7 @@
   padding-right: var(--pf-c-wizard-finite__sequence--PaddingRight);
   padding-bottom: var(--pf-c-wizard-finite__sequence--PaddingBottom);
   padding-left: var(--pf-c-wizard-finite__sequence--PaddingLeft);
+  background: var(--pf-c-wizard-finite__sequence--Background);
 }
 
 .pf-c-wizard-finite__content {
