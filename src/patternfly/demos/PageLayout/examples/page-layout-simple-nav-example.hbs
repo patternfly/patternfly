@@ -1,55 +1,55 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--modifier="pf-m-scroll-content" page--attribute='id="page-layout-simple-nav"'}}
-{{#> page-header}}
-{{!-- Brand --}}
-{{#> page-header-brand}}
-{{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
-{{/page-template-header-brand-elements}}
-{{/page-header-brand}}
-{{#> page-template-header-tools-elements}}
-{{/page-template-header-tools-elements}}
-{{/page-header}}
-{{#> page-sidebar}}
-{{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav, Simple List Example"'}}
-{{#> nav-list nav-list--type="simple"}}
-{{#> nav-item newcontent}}
-{{#> nav-link nav-link--href="#"}}
-Overview
-{{/nav-link}}
-{{/nav-item}}
-{{#> nav-item newcontent}}
-{{#> nav-link nav-link--href="#"}}
-Resource Usage
-{{/nav-link}}
-{{/nav-item}}
-{{#> nav-item newcontent}}
-{{#> nav-link nav-link--href="#" nav-link--current="true"}}
-Hypervisors
-{{/nav-link}}
-{{/nav-item}}
-{{#> nav-item newcontent}}
-{{#> nav-link nav-link--href="#"}}
-Instances
-{{/nav-link}}
-{{/nav-item}}
-{{#> nav-item newcontent}}
-{{#> nav-link nav-link--href="#"}}
-Volumes
-{{/nav-link}}
-{{/nav-item}}
-{{#> nav-item newcontent}}
-{{#> nav-link nav-link--href="#"}}
-Networks
-{{/nav-link}}
-{{/nav-item}}
-{{/nav-list}}
-{{/nav}}
-{{/page-sidebar}}
-{{#> page-main}}
-{{#> page-template-title}}
-{{/page-template-title}}
-{{#> page-template-gallery}}
-{{/page-template-gallery}}
-{{/page-main}}
+{{#> page page--attribute='id="page-layout-simple-nav"'}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
+      {{/page-template-header-brand-elements}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-sidebar}}  
+    {{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav, Simple List Example"'}}
+      {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
+            Overview
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
+            Resource Usage
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            Hypervisors
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
+            Instances
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
+            Volumes
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item newcontent}}
+          {{#> nav-link nav-link--href="#"}}
+            Networks
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}  
+  {{#> page-main}}
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
 {{/page}}

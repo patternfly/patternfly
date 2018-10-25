@@ -1,4 +1,5 @@
 {
-  "prettier.stylelintIntegration": true
+  "prettier.stylelintIntegration": true,
+  "files.autoSave": "afterDelay"
 }
   

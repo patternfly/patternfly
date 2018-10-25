@@ -143,7 +143,6 @@ $nav: "pf-c-nav";
   align-items: flex-end;
   max-width: 100%;
   min-height: var(--pf-l-page__header--MinHeight); // Hardcode header height base on design spec
-  overflow-x: hidden;
   transition: var(--pf-l-page--m-condensed--transition--in);
 
   > * {
