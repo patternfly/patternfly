@@ -1,0 +1,111 @@
+{{#> wizard-modal}}
+{{#> wizard-finite}}
+
+{{#> modal}}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+        {{#> wizard-finite-header}}
+          {{#> modal-box-close}}
+            {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
+              <i class="fas fa-times"></i>
+            {{/button}}
+          {{/modal-box-close}}
+
+          {{#> wizard-finite-title}}
+            {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+                Wizard title
+            {{/title}}
+            {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
+                Wizard description
+            {{/title}}
+          {{/wizard-finite-title}}
+
+          {{!-- Sequence will be added here --}}
+          <div class="pf-c-wizard-finite__sequence">
+            sequence here
+          </div>
+
+        {{/wizard-finite-header}}
+
+        {{#> wizard-finite-content}}
+          {{#> title titleType="h3" title--modifier="pf-m-md pf-u-mb-md"}}
+              Configure Your Project
+          {{/title}}
+
+          {{#> form}}
+
+            {{#> grid grid--modifier="pf-m-all-12-col-on-sm pf-m-all-6-col-on-lg pf-m-gutter"}}
+              {{#> grid-item}}
+                {{#> form-group}}
+                  {{#> form-label form-label--attribute='for="example-add-to-project"' }}Git Repository{{/form-label}}
+                  {{#> form-control controlType="select" form-control--attribute='id="example-add-to-project" name="add-to-project" aria-label="add to project"'}}
+                    <option value="Option 1">No Project</option>
+                    <option value="Option 2" selected>My Project</option>
+                    <option value="Option 3">Your Project</option>
+                    <option value="Option 4">Their Project</option>
+                  {{/form-control}}
+                {{/form-group}}
+                
+                {{#> form-group}}
+                  {{#> form-label form-label--attribute='for="example-version"' }}Version{{/form-label}}
+                  {{#> form-control controlType="select" form-control--attribute='id="example-version" name="version" aria-label="version"'}}
+                    <option value="Option 3">2.2.8</option>
+                    <option value="Option 1">2.3</option>
+                    <option value="Option 2" selected>2.4 (latest)</option>
+                  {{/form-control}}
+                {{/form-group}}
+
+                {{#> form-group}}
+                  {{#> form-label form-label--attribute='for="example-repository"' }}Git Repository{{/form-label}}
+                  {{#> form-control controlType="input" form-control--attribute='input="true" type="url" id="example-repository" name="example-repository" placeholder="https://github.com/openshirt/httpd-ex.git"'}}
+                    {{#> form-helper-text form-helper-text--attribute='id="example-repository-helper" aria-live="polite"'}}<a href="#">Try Sample Repository</a>{{/form-helper-text}}
+                  {{/form-control}}
+                {{/form-group}}
+              {{/grid-item}}
+              {{#> grid-item}}
+                {{#> form-group}}
+                  {{#> form-label form-label--attribute='for="example-application-name"' }}Application Name{{/form-label}}
+                  {{#> form-control controlType="input" form-control--attribute='input="true" type="url" id="example-application-name" name="example-application-name" placeholder="http-ex"'}}
+                  {{#> form-helper-text form-helper-text--attribute='id="example-repository-helper" aria-live="polite"'}}If you have a private git repository or need to change application defaults view <a href="#">advanced options</a>.{{/form-helper-text}}
+                  {{/form-control}}
+                {{/form-group}}
+              {{/grid-item}}
+            {{/grid}}
+
+            {{#> form-group form-group--modifier="pf-m-action"}}
+              {{#> toolbar toolbar--modifier="pf-u-justify-content-flex-end"}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-link"}}
+                      Cancel
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-secondary"}}
+                      Back
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-primary"}}
+                      Next
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+              {{/toolbar}}
+            {{/form-group}}
+          {{/form}}
+
+        {{/wizard-finite-content}}  
+
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
+
+{{/wizard-finite}}
+{{/wizard-modal}}

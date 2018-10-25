@@ -1,0 +1,67 @@
+{{#> wizard-modal}}
+{{#> wizard-finite}}
+
+{{#> modal}}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+        {{#> wizard-finite-header}}
+          {{#> modal-box-close}}
+            {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
+              <i class="fas fa-times"></i>
+            {{/button}}
+          {{/modal-box-close}}
+
+          {{#> wizard-finite-title}}
+            {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+                Wizard title
+            {{/title}}
+            {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
+                Wizard description
+            {{/title}}
+          {{/wizard-finite-title}}
+
+          {{!-- Sequence will be added here --}}
+          <div class="pf-c-wizard-finite__sequence">
+            sequence here
+          </div>
+
+        {{/wizard-finite-header}}
+
+        {{#> wizard-finite-content}}
+          {{#>stack stack--modifier="pf-u-align-items-center"}}
+            {{#> stack-item}}
+              {{#> title titleType="h1" title--modifier="pf-m-2xl pf-u-text-align-center"}}
+                Configuration in progress
+              {{/title}}
+            {{/stack-item}}
+            {{#> stack-item stack-item--modifier="pf-u-align-self-stretch"}}
+              {{#> progress 
+                progress__value="33" 
+                progress__description="" 
+                progress__id="progress-simple-example"
+                progress--modifier="pf-m-block"
+              }}
+              {{/progress}}
+            {{/stack-item}}
+            {{#> stack-item}}
+                <p class="pf-u-mt-xl">Phasellus tempus. Ut id nisl quis enim dignissim sagittis. Quisque ut nisi. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
+                </p>
+            {{/stack-item}}
+            {{#> stack-item}}
+                {{!-- <div class="pf-u-text-align-center"> --}}
+                  {{#> button button--modifier="pf-m-link"}}
+                    Cancel
+                  {{/button}}  
+                {{!-- </div> --}}
+            {{/stack-item}}
+          {{/stack}}
+        {{/wizard-finite-content}}  
+
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
+
+{{/wizard-finite}}
+{{/wizard-modal}}

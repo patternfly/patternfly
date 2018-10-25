@@ -1,0 +1,84 @@
+{{#> wizard-modal}}
+{{#> wizard-finite}}
+
+{{#> modal}}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+        {{#> wizard-finite-header}}
+          {{#> modal-box-close}}
+            {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
+              <i class="fas fa-times"></i>
+            {{/button}}
+          {{/modal-box-close}}
+
+          {{#> wizard-finite-title}}
+            {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+                Wizard title
+            {{/title}}
+            {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
+                A description of the wizard goes here
+            {{/title}}
+          {{/wizard-finite-title}}
+
+          {{!-- Sequence will be added here --}}
+          <div class="pf-c-wizard-finite__sequence">
+            sequence here
+          </div>
+
+        {{/wizard-finite-header}}
+
+        {{#> wizard-finite-content}}
+          {{#> title titleType="h3" title--modifier="pf-m-md pf-u-mb-md"}}
+              Enter your information
+          {{/title}}
+
+          {{#> form}}
+            {{#> form-group}}
+              {{#> form-label form-label--attribute='for="example-account-name"' }}Account name{{/form-label}}
+              {{#> form-control controlType="input" form-control--attribute='input="true" type="url" id="example-account-name" name="example-account-name"'}}
+              {{/form-control}}
+            {{/form-group}}
+            
+            {{#> form-group}}
+              {{#> form-label form-label--attribute='for="example-access-key"' }}Access key{{/form-label}}
+              {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="example-access-key" aria-label="access key text area"'}}
+              {{/form-control}}
+            {{/form-group}}
+
+            {{#> form-group form-group--modifier="pf-m-action"}}
+              {{#> toolbar toolbar--modifier="pf-u-justify-content-flex-end"}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-link"}}
+                      Cancel
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-secondary pf-m-disabled"}}
+                      Back
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-primary"}}
+                      Next
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+              {{/toolbar}}
+            {{/form-group}}
+          {{/form}}
+
+        {{/wizard-finite-content}}  
+
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
+
+{{/wizard-finite}}
+{{/wizard-modal}}

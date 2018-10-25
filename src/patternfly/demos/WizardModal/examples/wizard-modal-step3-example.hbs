@@ -1,0 +1,85 @@
+{{#> wizard-modal}}
+{{#> wizard-finite}}
+
+{{#> modal}}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+        {{#> wizard-finite-header}}
+          {{#> modal-box-close}}
+            {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
+              <i class="fas fa-times"></i>
+            {{/button}}
+          {{/modal-box-close}}
+
+          {{#> wizard-finite-title}}
+            {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+                Wizard title
+            {{/title}}
+            {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
+                Wizard description
+            {{/title}}
+          {{/wizard-finite-title}}
+
+          {{!-- Sequence will be added here --}}
+          <div class="pf-c-wizard-finite__sequence">
+            sequence here
+          </div>
+
+        {{/wizard-finite-header}}
+
+        {{#> wizard-finite-content}}
+          {{#> title titleType="h3" title--modifier="pf-m-md pf-u-mb-md"}}
+              Configuration Details
+          {{/title}}
+
+          {{#> form}}
+            {{#> content}}
+            <p>Review the information below and click Finish to configure your project. Use the Back button to make changes.</p>
+            <dl>
+              <dt>Account Name</dt>
+              <dd>Admin</dd>
+              <dt>Project</dt>
+              <dd>My Project</dd>
+              <dt>Version</dt>
+              <dd>2.4</dd>
+              <dt>Git Repository</dt>
+              <dd>https://github.com/openshirt/httpd-ex.git</dd>
+            </dl>
+            {{/content}}
+            {{#> form-group form-group--modifier="pf-m-action"}}
+              {{#> toolbar toolbar--modifier="pf-u-justify-content-flex-end"}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-link"}}
+                      Cancel
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-secondary"}}
+                      Back
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+                {{#> toolbar-group}}
+                  {{#> toolbar-item}}
+                    {{#> button button--modifier="pf-m-primary"}}
+                      Next
+                    {{/button}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+              {{/toolbar}}
+            {{/form-group}}
+          {{/form}}
+
+        {{/wizard-finite-content}}  
+
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
+
+{{/wizard-finite}}
+{{/wizard-modal}}

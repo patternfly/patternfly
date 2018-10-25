@@ -6,6 +6,7 @@
   --pf-c-modal-box--breakpoint-md--Height: 700px;
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-modal-box--BorderColor: transparent;
+  --pf-c-modal-box--dark--BorderColor: var($pf-global--BorderColor--dark);
   --pf-c-modal-box--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-modal-box--LineClamp: 3;
@@ -75,6 +76,11 @@
     @media screen and (min-width: $pf-global--breakpoint--xl) {
       max-width: var(--pf-c-modal-box--lg--MaxWidth);
     }
+  }
+
+  // dark border option
+  &.pf-m-dark {
+    --pf-c-modal-box--BorderColor: var(--pf-c-modal-box--dark--BorderColor);
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
