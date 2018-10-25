@@ -5,23 +5,31 @@
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
 - run `npm install @patternfly/patternfly-next`
 
-Any of the files below are meant for use in consuming the library. The recommended consumption approach will vary from project to project.
+Any of the files below are meant for use in consuming PatternFly's styles. The recommended consumption approach will vary from project to project.
 
-- a single file for the entire compiled library:
+- a single file for the complete PatternFly styles:
 
-  `node_modules/@patternfly/patternfly-next/patternfly.css`
+  ```
+  node_modules/@patternfly/patternfly-next/patternfly.css
+  ```
 
-- individual files with each component compiled separately:
+- individual stylesheets for each of PatternFly's blueprints (e.g. components, layout):
 
-  `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.css`
+  ```
+  node_modules/@patternfly/patternfly-next/<BlueprintType>/<BlueprintName>/<blueprint-name>.css
+  ```
 
-- a single file for the entire library's source (SASS):
+- the base source file for PatternFly's styles ([SASS](https://sass-lang.com/)):
 
-  `node_modules/@patternfly/patternfly-next/patternfly.scss`
+  ```
+  node_modules/@patternfly/patternfly-next/patternfly.scss
+  ```
 
-- individual files for each component's source (SASS):
+- individual source files for each PatternFly blueprint (SASS):
 
-  `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.scss`
+  ```
+  node_modules/@patternfly/patternfly-next/<BlueprintType>/<BlueprintName>/<blueprint-name>.scss
+  ```
 
 ## Development
 
