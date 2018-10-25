@@ -59,7 +59,7 @@
   // Link Before
   --pf-c-sequence__link--before--Width: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--before--Height: var(--pf-global--spacer--lg);
-  --pf-c-sequence__link--before--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-sequence__link--before--MarginRight: var(--pf-global--spacer--lg); // change back to lg
   --pf-c-sequence__link--before--Color: var(--pf-global--Color--200);
   --pf-c-sequence__link--before--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-sequence__link--before--FontWeight: var(--pf-global--FontWeight--bold);
@@ -212,8 +212,12 @@
   border-bottom: var(--pf-c-sequence__link--BorderBottomWidth) solid var(--pf-c-sequence__link--BorderBottomColor);
 
   &::before {
-    width: var(--pf-c-sequence__link--before--Width);
-    height: var(--pf-c-sequence__link--before--Height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75em;
+    height: 1.75em;
     margin-right: var(--pf-c-sequence__link--before--MarginRight);
     font-size: var(--pf-c-sequence__link--before--FontSize);
     font-weight: var(--pf-c-sequence__link--before--FontWeight);
