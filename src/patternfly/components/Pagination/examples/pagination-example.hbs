@@ -1,0 +1,26 @@
+{{#> pagination}}
+<div class="pf-c-dropdown pf-m-expanded">
+  <button id="dropdown-pagination-button" class="pf-c-dropdown__toggle" aria-expanded="true">
+    1 - 10 of 97
+    <i class="fas fa-caret-down pf-c-dropdown__toggle-icon" aria-hidden="true"></i>
+  </button>
+  <ul class="pf-c-dropdown__menu" aria-labelledby="dropdownpagination-button">
+    <li>
+      <button type="button" class="pf-c-button pf-m-plain" aria-label="select 5 elements per page"><b>5</b> per page</button>
+    </li>
+    <li>
+      <button type="button" class="pf-c-button pf-m-plain" aria-label="select 10 elements per page"><b>10</b> per page</button>
+    </li>
+    <li>
+      <button type="button" class="pf-c-button pf-m-plain" aria-label="select 20 elements per page"><b>20</b> per page</button>
+    </li>
+  </ul>
+</div>
+<button type="button" class="pf-c-button pf-m-plain" aria-label="select first page"><i class="fas fa-angle-double-left" aria-hidden="true"></i></button>
+<button type="button" class="pf-c-button pf-m-plain" aria-label="select previous page"><i class="fas fa-angle-left" aria-hidden="true"></i></button>
+<input class="pf-c-form-control" type="text" id="foo" aria-label="select page" style="width: 30px;">
+<span>of</span>
+<span>9</span>
+<button type="button" class="pf-c-button pf-m-plain" aria-label="select first page"><i class="fas fa-angle-right" aria-hidden="true"></i></button>
+<button type="button" class="pf-c-button pf-m-plain" aria-label="select next page"><i class="fas fa-angle-double-right" aria-hidden="true"></i></button>
+{{/pagination}}

@@ -1,0 +1,15 @@
+@import "../../patternfly-utilities";
+
+.pf-c-pagination {
+  .pf-c-dropdown {
+    margin-right: 2em;
+  }
+
+  .pf-c-dropdown__toggle::before {
+    border: none;
+  }
+
+  .pf-c-dropdown__menu {
+    border-top: 1px solid #007bba;
+  }
+}
