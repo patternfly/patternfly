@@ -1,6 +1,6 @@
 ## Overview
 
-A sequence acts as navigation within a wizard or a page. A sequence should have a finite number of steps with each step behaving as a link and comprising of a step number, title and status. Start and end buttons help to navigate the sequence when there is a large number of steps. 
+The sequence acts as a navigation at the top of a wizard or a page. A sequence should have a finite number of steps with each step behaving as a link and comprising of a step number, title and status. When the number of steps is too large that it overflows outside of its boundary, the sequence will scroll and control buttons with arrows should appear to indicate where the overflow occurs. For example if there is an overflow to the right of the sequence, the right control button should appear and be used to navigate to the right. If there is an overflow to the left of the sequence, the left control button should appear and be used to navigate to the left. This implementation will occur in PF-React.
 
 ## Accessibility
 
