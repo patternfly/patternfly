@@ -5,49 +5,62 @@
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
 - run `npm install @patternfly/patternfly-next`
 
-When you install PatternFly Next, the package includes:
+Any of the files below are meant for use in consuming the library. The recommended consumption approach will vary from project to project.
 
-- a single file for the entire compiled library: `node_modules/@patternfly/patternfly-next/patternfly.css`
-- individual files with each component compiled separately: `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.css`
-- a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly-next/patternfly.scss`
-- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.scss`
+- a single file for the entire compiled library:
 
-Any of the files above are meant for use in consuming the library. The recommended
-consumption approach will vary from project to project.
+  `node_modules/@patternfly/patternfly-next/patternfly.css`
+
+- individual files with each component compiled separately:
+
+  `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.css`
+
+- a single file for the entire library's source (SASS):
+
+  `node_modules/@patternfly/patternfly-next/patternfly.scss`
+
+- individual files for each component's source (SASS):
+
+  `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.scss`
 
 ## Development
 
 **PatternFly Next Development requires Node v8.0.0 or greater**
 
-To setup the PatternFly Next development environment:
+To set up the PatternFly Next development environment:
 
 - clone the project
 - run `npm install` from the project root
-- run `npm run cli:setup` (only needed if doing development)
 - run `npm run dev`
 - open your browser to `http://localhost:8000`
 
-After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
+After working on your contribution follow the guidelines in [Testing for Accessibility](#testing-for-accessibility), below.
 
-### Create a new component
+### Create new blueprints
+
+The blueprint generation commands require patternfly-cli. To install it:
+
+- run `npm run cli:setup`
+
+#### Create a new component
 
 - run `pf generate component <name>`
 
 *To view visit <http://localhost:8000/components/ComponentName/examples/>*
 
-### Create a new layout
+#### Create a new layout
 
 - run `pf generate layout <name>`
 
 *To view visit <http://localhost:8000/layouts/LayoutName/examples/>*
 
-### Create a new utility
+#### Create a new utility
 
 - run `pf generate utility <name>`
 
 *To view visit <http://localhost:8000/utilities/UtilityName/examples/>*
 
-### Create a new demo
+#### Create a new demo
 
 - run `pf generate demo <name>`
 
@@ -68,7 +81,7 @@ To run the a11y audit locally:
 
 The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
 
-The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/). 
+The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
 ### Fixing Violations
 
