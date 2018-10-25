@@ -37,8 +37,8 @@
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
 
   // Sequence List
-  --pf-c-sequence__list--Height: #{pf-size-prem(132px)};
-  --pf-c-sequence__list--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-sequence__list--Height: calc(var(--pf-c-sequence__list--PaddingBottom) + var(--pf-c-sequence--Height));
+  --pf-c-sequence__list--PaddingBottom: var(--pf-global--spacer--2xl);
 
   // Item
   --pf-c-sequence__item--MarginRight: 2px;
@@ -57,9 +57,9 @@
   --pf-c-sequence__link--m-current--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Link Before
-  --pf-c-sequence__link--before--Width: var(--pf-global--spacer--lg);
-  --pf-c-sequence__link--before--Height: var(--pf-global--spacer--lg);
-  --pf-c-sequence__link--before--MarginRight: var(--pf-global--spacer--lg); // change back to lg
+  --pf-c-sequence__link--before--Width: 1.7em; // responsive size for the width
+  --pf-c-sequence__link--before--Height: 1.7em; // responsive size for the height
+  --pf-c-sequence__link--before--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--before--Color: var(--pf-global--Color--200);
   --pf-c-sequence__link--before--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-sequence__link--before--FontWeight: var(--pf-global--FontWeight--bold);
@@ -80,7 +80,7 @@
   --pf-c-sequence__link--before--m-current--BorderColor: var(--pf-global--primary-color--100);
 
   // Content
-  --pf-c-sequence__content--MinHeight: var(--pf-global--spacer--2xl);
+  --pf-c-sequence__content--MinHeight: #{pf-size-prem(48px)};
   --pf-c-sequence__content--MaxWidth: #{pf-size-prem(140px)};
 
   // Content Title Color
@@ -216,8 +216,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.75em;
-    height: 1.75em;
+    width: var(--pf-c-sequence__link--before--Width);
+    height: var(--pf-c-sequence__link--before--Height);
     margin-right: var(--pf-c-sequence__link--before--MarginRight);
     font-size: var(--pf-c-sequence__link--before--FontSize);
     font-weight: var(--pf-c-sequence__link--before--FontWeight);
