@@ -8,9 +8,9 @@
 When you install PatternFly Next, the package includes:
 
 - a single file for the entire compiled library: `node_modules/@patternfly/patternfly-next/patternfly.css`
-- individual files with each component compiled separately: `node_modules/@patternfly/patternfly-next/<ComponentName>/styles.css`
+- individual files with each component compiled separately: `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.css`
 - a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly-next/patternfly.scss`
-- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly-next/<ComponentName>/styles.scss`
+- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly-next/Components/<ComponentName>/component-name.scss`
 
 Any of the files above are meant for use in consuming the library. The recommended
 consumption approach will vary from project to project.
@@ -33,25 +33,25 @@ After working on your contribution, check for [accessibility violations](#testin
 
 - run `pf generate component <name>`
 
-*To view visit http://localhost:8000/components/<name>*
+*To view visit <http://localhost:8000/components/ComponentName/examples/>*
 
 ### Create a new layout
 
 - run `pf generate layout <name>`
 
-*To view visit http://localhost:8000/layout/<name>*
+*To view visit <http://localhost:8000/layouts/LayoutName/examples/>*
 
 ### Create a new utility
 
 - run `pf generate utility <name>`
 
-*To view visit http://localhost:8000/utilities/<name>*
+*To view visit <http://localhost:8000/utilities/UtilityName/examples/>*
 
 ### Create a new demo
 
 - run `pf generate demo <name>`
 
-*To view visit http://localhost:8000/demos/<name>*
+*To view visit <http://localhost:8000/demos/DemoName/examples/>*
 
 ## Testing for Accessibility
 
