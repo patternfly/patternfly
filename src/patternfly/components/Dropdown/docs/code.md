@@ -32,7 +32,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
 | `.pf-m-plain` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
 | `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
-| `.pf-m-align-right` | `.pf-c-dropdown` | Modifies to display the menu aligned to the right edge of the toggle |
+| `.pf-m-align-right` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-hover` | `.pf-c-dropdown__menu-item`, `.pf-c-dropdown__toggle` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-dropdown__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |

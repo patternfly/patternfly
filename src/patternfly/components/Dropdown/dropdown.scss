@@ -134,11 +134,11 @@
   border: var(--pf-c-dropdown__menu--BorderWidth) solid transparent;
   box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
-  .pf-m-align-right > & {
+  &.pf-m-align-right {
     right: 0;
   }
 
-  .pf-m-top > & {
+  .pf-c-dropdown.pf-m-top & {
     top: 0;
     transform: var(--pf-c-dropdown__menu--top--Transform);
   }

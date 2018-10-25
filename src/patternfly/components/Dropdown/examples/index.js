@@ -93,8 +93,7 @@ export default () => {
       <Example
         className="is-expanded-dropdown is-align-right"
         heading="Kebab Align Right"
-        handlebars={DropdownKebabAlignRightRaw}
-      >
+        handlebars={DropdownKebabAlignRightRaw}>
         {dropdownKebabAlignRight}
       </Example>
       <Example className="is-expanded-dropdown is-align-right" heading="Align Right" handlebars={DropdownAlignRightRaw}>
