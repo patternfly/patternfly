@@ -37,12 +37,12 @@
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
 
   // Sequence List
-  --pf-c-sequence__list--Height: #{pf-size-prem(132px)};
-  --pf-c-sequence__list--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-sequence__list--Height: #{pf-size-prem(132px)}; // *** This should be the actual height that you want it to display as, likely a multiple of a spacer?
+  --pf-c-sequence__list--PaddingBottom: var(--pf-global--spacer--xl); // *** This should be the height that effectively hides the scrollbar
 
   // Item
   --pf-c-sequence__item--MarginRight: 2px;
-  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(260px)};
+  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(260px)}; // *** Can this be in ems instead? Is the 260 meaningful?
 
   // Link
   --pf-c-sequence__link--PaddingTop: var(--pf-global--spacer--lg);
@@ -151,7 +151,7 @@
 // Horizontal list
 .pf-c-sequence__list {
   display: inline-flex;
-  height: var(--pf-c-sequence__list--Height);
+  height: calc(var(--pf-c-sequence__list--Height) + var(--pf-c-sequence__list--PaddingBottom)); // *** Add padding to hide the horizontal scrollbar
   padding-bottom: var(--pf-c-sequence__list--PaddingBottom);
   overflow-x: scroll;
   counter-reset: sequence-number;
