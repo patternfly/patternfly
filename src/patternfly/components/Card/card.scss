@@ -29,12 +29,14 @@
   box-shadow: var(--pf-c-card--BoxShadow);
 
   // If the first child isn't the header, then we need to put the header's top padding there
-  > :first-child:not(.pf-c-card__header) {
+  > :first-child.pf-c-card__body,
+  > :first-child.pf-c-card__footer {
     padding-top: var(--pf-c-card__header--PaddingTop);
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
-  > :last-child:not(.pf-c-card__footer) {
+  > :last-child.pf-c-card__header,
+  > :last-child.pf-c-card__body {
     padding-bottom: var(--pf-c-card__footer--PaddingBottom);
   }
 }
