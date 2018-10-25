@@ -8,9 +8,9 @@
 When you install PatternFly Next, the package includes:
 
 - a single file for the entire compiled library: `node_modules/@patternfly/patternfly-next/patternfly.css`
-- individual files with each component compiled separately: `node_modules/@patternfly/patternfly-next/<ComponentName>/styles.css`
+- individual files with each component compiled separately: `node_modules/@patternfly/patternfly-next/<ComponentName>/<componentName>.css`
 - a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly-next/patternfly.scss`
-- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly-next/<ComponentName>/styles.scss`
+- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly-next/<ComponentName>/<componentName>.scss`
 
 Any of the files above are meant for use in consuming the library. The recommended
 consumption approach will vary from project to project.
