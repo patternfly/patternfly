@@ -57,8 +57,8 @@
   --pf-c-sequence__link--m-current--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // Link Before
-  --pf-c-sequence__link--before--Width: 1.5em; // responsive size for the width
-  --pf-c-sequence__link--before--Height: 1.5em; // responsive size for the height
+  --pf-c-sequence__link--before--Width: var(--pf-global--spacer--lg);
+  --pf-c-sequence__link--before--Height: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--before--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--before--Color: var(--pf-global--Color--200);
   --pf-c-sequence__link--before--FontSize: var(--pf-global--FontSize--sm);
@@ -214,12 +214,12 @@
   &::before {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-items: center;
     justify-content: center;
     width: var(--pf-c-sequence__link--before--Width);
     height: var(--pf-c-sequence__link--before--Height);
     margin-right: var(--pf-c-sequence__link--before--MarginRight);
-    font-size: var(--pf-c-sequence_link--before--FontSize);
+    font-size: var(--pf-c-sequence__link--before--FontSize);
     font-weight: var(--pf-c-sequence__link--before--FontWeight);
     color: var(--pf-c-sequence__link--before--Color);
     text-align: center;
