@@ -42,7 +42,7 @@
 
   // Item
   --pf-c-sequence__item--MarginRight: 2px;
-  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(260px)};
+  --pf-c-sequence__item--MaxWidth: #{pf-size-prem(280px)};
 
   // Link
   --pf-c-sequence__link--PaddingTop: var(--pf-global--spacer--lg);
@@ -212,9 +212,9 @@
   border-bottom: var(--pf-c-sequence__link--BorderBottomWidth) solid var(--pf-c-sequence__link--BorderBottomColor);
 
   &::before {
-    position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-self: center;
     justify-content: center;
     width: var(--pf-c-sequence__link--before--Width);
     height: var(--pf-c-sequence__link--before--Height);
