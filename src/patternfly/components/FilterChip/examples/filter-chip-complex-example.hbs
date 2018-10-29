@@ -1,7 +1,4 @@
 {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
-  {{#> filter-chip-label}}
-    Category
-  {{/filter-chip-label}}
   {{#> filter-chip}}
     {{#> filter-chip-text}}
       Value One
@@ -33,11 +30,10 @@
 {{/filter-chip-group}}
 <br>
 <br>
-{{#> filter-chip-container}}
   {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
-    {{!-- {{#> filter-chip-label}}
+    {{#> filter-chip-label}}
       United States
-    {{/filter-chip-label}} --}}
+    {{/filter-chip-label}}
     {{#> filter-chip}}
       {{#> filter-chip-text}}
         Texas
@@ -93,4 +89,3 @@
       {{/button}}
     {{/filter-chip}}
   {{/filter-chip-group}}
-{{/filter-chip-container}}
