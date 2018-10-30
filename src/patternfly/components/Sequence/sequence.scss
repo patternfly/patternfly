@@ -1,8 +1,6 @@
 @import "../../patternfly-utilities";
 
 .pf-c-sequence {
-  --pf-c-sequence--Height: #{pf-size-prem(99px)}; // fixed height hides scrollbar
-
   // Sequence Control
   --pf-c-sequence__control--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-sequence__control--PaddingRight: var(--pf-global--spacer--sm);
@@ -27,21 +25,17 @@
 
   // Sequence Control Modifier Start
   --pf-c-sequence__control-m-start--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-sequence__control-m-start--BorderRightColor: var(--pf-global--Color--200);
+  --pf-c-sequence__control-m-start--BorderRightColor: var(--pf-global--disabled-color--200);
 
   // Sequence Control Modifier End
   --pf-c-sequence__control-m-end--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-sequence__control-m-end--BorderLeftColor: var(--pf-global--Color--200);
+  --pf-c-sequence__control-m-end--BorderLeftColor: var(--pf-global--disabled-color--200);
 
   // Sequence Control Icon
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
 
-  // Sequence List
-  --pf-c-sequence__list--Height: calc(var(--pf-c-sequence__list--PaddingBottom) + var(--pf-c-sequence--Height));
-  --pf-c-sequence__list--PaddingBottom: var(--pf-global--spacer--2xl);
-
   // Item
-  --pf-c-sequence__item--MarginRight: 2px;
+  --pf-c-sequence__item--MarginRight: 1px; // follows design
   --pf-c-sequence__item--MaxWidth: #{pf-size-prem(280px)};
 
   // Link
@@ -49,21 +43,22 @@
   --pf-c-sequence__link--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-sequence__link--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-sequence__link--BorderBottomColor: var(--pf-global--Color--200);
+  --pf-c-sequence__link--BorderBottomColor: var(--pf-global--disabled-color--200);
   --pf-c-sequence__link--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-sequence__link--hover--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--active--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--focus--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--m-current--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__link--m-disabled--BottomBorderColor: var(--pf-global--disabled-color--100);
 
   // Link Before
   --pf-c-sequence__link--before--Width: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--before--Height: var(--pf-global--spacer--lg);
   --pf-c-sequence__link--before--MarginRight: var(--pf-global--spacer--lg);
-  --pf-c-sequence__link--before--Color: var(--pf-global--Color--200);
+  --pf-c-sequence__link--before--Color: var(--pf-global--disabled-color--200);
   --pf-c-sequence__link--before--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-sequence__link--before--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-sequence__link--before--BorderColor: var(--pf-global--Color--200);
+  --pf-c-sequence__link--before--BorderColor: var(--pf-global--disabled-color--200);
   --pf-c-sequence__link--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-sequence__link--before--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-sequence__link--before--hover--Transform: scale(1.333333);
@@ -78,6 +73,8 @@
   --pf-c-sequence__link--before--m-current--Transform: scale(1.333333);
   --pf-c-sequence__link--before--m-current--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__link--before--m-current--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-sequence__link--before--m-disabled--Color: var(--pf-global--disabled-color--100);
+  --pf-c-sequence__link--before--m-disabled--BorderColor: var(--pf-global--disabled-color--100);
 
   // Content
   --pf-c-sequence__content--MinHeight: #{pf-size-prem(48px)};
@@ -89,6 +86,7 @@
   --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--m-current--Color: var(--pf-global--primary-color--100);
+  --pf-c-sequence__content-title--m-disabled--Color: var(--pf-global--disabled-color--100);
 
   // Content Title Font
   --pf-c-sequence__content-title--FontSize: var(--pf-global--FontSize--md);
@@ -98,15 +96,14 @@
   --pf-c-sequence__content-title--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Content Status Color
-  --pf-c-sequence__content-status--Color: var(--pf-global--Color--200);
+  --pf-c-sequence__content-status--Color: var(--pf-global--disabled-color--200);
+  --pf-c-sequence__content-status--m-disabled--Color: var(--pf-global--disabled-color--100);
 
   // Content Status Font
   --pf-c-sequence__content-status--FontSize: var(--pf-global--FontSize--xs);
 
   display: flex;
   justify-content: center;
-  height: var(--pf-c-sequence--Height);
-  overflow-y: hidden;
 }
 
 // Control Buttons
@@ -151,16 +148,9 @@
 // Horizontal list
 .pf-c-sequence__list {
   display: inline-flex;
-  height: var(--pf-c-sequence__list--Height);
-  padding-bottom: var(--pf-c-sequence__list--PaddingBottom);
   overflow-x: scroll;
   counter-reset: sequence-number;
-
-  // remove scrollbar works on Chrome and Safari
-  ::-webkit-scrollbar {
-    display: none;
-    width: 0;
-  }
+  -webkit-overflow-scrolling: touch;
 }
 
 // List items
@@ -227,6 +217,25 @@
     counter-increment: sequence-number;
     border: var(--pf-c-sequence__link--before--BorderWidth) solid var(--pf-c-sequence__link--before--BorderColor);
     border-radius: var(--pf-c-sequence__link--before--BorderRadius);
+  }
+
+  &:disabled,
+  &.pf-m-disabled {
+    pointer-events: none;
+    border-bottom-color: var(--pf-c-sequence__link--m-disabled--BottomBorderColor);
+
+    &::before {
+      color: var(--pf-c-sequence__link--before--m-disabled--Color);
+      border-color: var(--pf-c-sequence__link--before--m-disabled--BorderColor);
+    }
+
+    .pf-c-sequence__content-title {
+      color: var(--pf-c-sequence__content-title--m-disabled--Color);
+    }
+
+    .pf-c-sequence__content-status {
+      color: var(--pf-c-sequence__content-status--m-disabled--Color);
+    }
   }
 
   &.pf-m-hover,
