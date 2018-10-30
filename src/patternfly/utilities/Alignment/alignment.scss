@@ -1,12 +1,15 @@
 @import "../../patternfly-utilities";
 
 /* stylelint-disable */
+
+$pf-u-alignment-options: (
+  text-align-left:    (text-align left),
+  text-align-center:  (text-align center),
+  text-align-right:   (text-align right),
+  text-align-justify: (text-align justify)
+);
+
 // Text utilities
-@include pf-utility-builder("text-align-left", $pf-global--breakpoint-list) { text-align: left !important; }
+@include pf-utility-builder($pf-u-alignment-options, $pf-global--breakpoint-list); 
 
-@include pf-utility-builder("text-align-center", $pf-global--breakpoint-list) { text-align: center !important; }
-
-@include pf-utility-builder("text-align-right", $pf-global--breakpoint-list) { text-align: right !important; }
-
-@include pf-utility-builder("text-align-justify", $pf-global--breakpoint-list) { text-align: justify !important; }
 /* stylelint-enable */

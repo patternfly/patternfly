@@ -1,28 +1,4 @@
 <nav class="pf-c-nav{{#if nav--modifier}} {{nav--modifier}}{{/if}}"
-  {{#if nav--interactive}}
-    onClick="(function(){
-      const target = event.target;
-      const parent = target.parentNode;
-      const child = parent.children[1];
-
-      if (target.classList.contains('pf-c-nav__link')) {
-        if (parent.classList.contains('pf-m-expanded')) {
-          parent.classList.remove('pf-m-expanded');
-          setTimeout(() => {
-            child.setAttribute('aria-expanded', 'false');
-            child.setAttribute('hidden', '');
-          }, 600);
-        } else {
-          child.removeAttribute('hidden');
-          setTimeout(() => {
-            parent.classList.add('pf-m-expanded');
-            child.setAttribute('aria-expanded', 'true');
-          }, 50);
-        }
-      }
-      return false;
-    })();return false;"
-  {{/if}}
   {{#if nav--attribute}}
     {{{nav--attribute}}}
   {{/if}}>

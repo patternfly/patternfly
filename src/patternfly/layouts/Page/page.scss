@@ -6,7 +6,8 @@ $nav: "pf-c-nav";
 .pf-l-page {
   // Header
   --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-l-page__header--MinHeight: pf-size-prem(110px);
+  --pf-l-page__header--MinHeight: #{pf-size-prem(110px)};
+  --pf-l-page__header--m-condensed--MinHeight: #{pf-size-prem(20px)};
 
   // Header brand
   --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--md);
@@ -15,7 +16,9 @@ $nav: "pf-c-nav";
   --pf-l-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--PaddingBottom--sm: var(--pf-global--spacer--md);
   --pf-l-page__header-brand--BackgroundColor--md: var(--pf-global--BackgroundColor--dark-transparent-100);
-  --pf-l-page__header-brand--FlexBasis--lg: pf-size-prem(290px);
+  --pf-l-page__header-brand--FlexBasis--lg: #{pf-size-prem(290px)};
+  --pf-l-page__header-brand--m-condensed--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-l-page__header-brand--m-condensed--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Toggle
   --pf-l-page__header-sidebar-toggle--PaddingTop: var(--pf-global--spacer--sm);
@@ -26,10 +29,10 @@ $nav: "pf-c-nav";
 
   // Header brand link
   --pf-l-page__header-brand-link--MarginLeft: var(--pf-global--spacer--md);
-  --pf-l-page__header-brand-link--MinHeight: pf-size-prem(40px);
+  --pf-l-page__header-brand-link--MinHeight: #{pf-size-prem(40px)};
 
   // Header brand logo
-  --pf-l-page__header-brand-logo--Height: pf-size-prem(11px);
+  --pf-l-page__header-brand-logo--Height: #{pf-size-prem(11px)};
 
   // Header context selector
   --pf-l-page__header-selector--PaddingLeft: var(--pf-global--spacer--md);
@@ -50,13 +53,17 @@ $nav: "pf-c-nav";
   --pf-l-page__header-tools--toolbar--MarginTop: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--toolbar--MarginBottom: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--avatar--MarginLeft: var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--avatar--Width: pf-size-prem(48px);
-  --pf-l-page__header-tools--avatar--Height: pf-size-prem(48px);
+  --pf-l-page__header-tools--avatar--Width: #{pf-size-prem(48px)};
+  --pf-l-page__header-tools--avatar--Height: #{pf-size-prem(48px)};
+  --pf-l-page__header-tools--m-condensed--avatar--Width: #{pf-size-prem(30px)};
+  --pf-l-page__header-tools--m-condensed--avatar--Height: #{pf-size-prem(30px)};
+  --pf-l-page__header--m-condensed--toolbar--MarginTop: var(--pf-global--spacer--sm);
+  --pf-l-page__header--m-condensed--toolbar--MarginBottom: var(--pf-global--spacer--sm);
 
   // Sidebar
   --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-l-page__sidebar--Width--sm: 80%;
-  --pf-l-page__sidebar--Width--lg: pf-size-prem(290px);
+  --pf-l-page__sidebar--Width--lg: #{pf-size-prem(290px)};
   --pf-l-page__sidebar--PaddingTop: var(--pf-global--spacer--md);
   --pf-l-page__sidebar--PaddingBottom: var(--pf-global--spacer--md);
   --pf-l-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -87,9 +94,21 @@ $nav: "pf-c-nav";
   --pf-l-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-l-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
+  // context selector
+  --pf-l-page__header-selector--m-condensed--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__header-selector--m-condensed--PaddingBottom: var(--pf-global--spacer--md);
+
+  // Horizontal nav links
+  --pf-c-nav__link--m-condensed--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-nav__link--m-condensed--PaddingBottom: var(--pf-global--spacer--md);
+
+  // transitions
+  --pf-l-page--m-condensed--transition--in: 250ms;
+  --pf-l-page--m-condensed--transition--out: 150ms;
+
   // Base
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas:
@@ -104,6 +123,16 @@ $nav: "pf-c-nav";
   }
 }
 
+.pf-l-page__header-brand,
+.pf-l-toolbar,
+.pf-c-avatar {
+  transition: var(--pf-l-page--m-condensed--transition--in);
+
+  .pf-m-condensed & {
+    transition: var(--pf-l-page--m-condensed--transition--out);
+  }
+}
+
 // Header
 .pf-l-page__header {
   @extend %pf-t-dark; // force the container follow the dark theme
@@ -114,11 +143,40 @@ $nav: "pf-c-nav";
   align-items: flex-end;
   max-width: 100%;
   min-height: var(--pf-l-page__header--MinHeight); // Hardcode header height base on design spec
-  overflow-x: hidden;
+  transition: var(--pf-l-page--m-condensed--transition--in);
 
   > * {
     display: flex;
     align-items: flex-end;
+  }
+
+  &.pf-m-condensed {
+    min-height: var(--pf-l-page__header--m-condensed--MinHeight);
+
+    .pf-l-page__header-brand {
+      padding-top: var(--pf-l-page__header-brand--m-condensed--PaddingTop);
+      padding-bottom: var(--pf-l-page__header-brand--m-condensed--PaddingBottom);
+    }
+
+    .pf-c-avatar {
+      width: var(--pf-l-page__header-tools--m-condensed--avatar--Width);
+      height: var(--pf-l-page__header-tools--m-condensed--avatar--Height);
+    }
+
+    .pf-l-toolbar {
+      margin-top: var(--pf-l-page__header--m-condensed--toolbar--MarginTop);
+      margin-bottom: var(--pf-l-page__header--m-condensed--toolbar--MarginBottom);
+    }
+
+    .pf-c-nav__horizontal-list .pf-c-nav__link {
+      padding-top: var(--pf-c-nav__link--m-condensed--PaddingTop);
+      padding-bottom: var(--pf-c-nav__link--m-condensed--PaddingBottom);
+    }
+
+    .pf-l-page__header-selector {
+      padding-top: var(--pf-l-page__header-selector--m-condensed--PaddingTop);
+      padding-bottom: var(--pf-l-page__header-selector--m-condensed--PaddingBottom);
+    }
   }
 }
 
@@ -212,7 +270,8 @@ $nav: "pf-c-nav";
   width: var(--pf-l-page__sidebar--Width--sm);
   padding-top: var(--pf-l-page__sidebar--PaddingTop);
   padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: var(--pf-l-page__sidebar--BackgroundColor);
   transition: var(--pf-l-page__sidebar--Transition);
   transform: var(--pf-l-page__sidebar--Transform--out);
@@ -250,7 +309,7 @@ $nav: "pf-c-nav";
   flex-direction: column;
   padding-right: 0;
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: auto;
 }
 
 .pf-l-page__main-nav {

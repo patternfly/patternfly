@@ -12,8 +12,8 @@
 
   // font weight
   --pf-c-nav__list-link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__list-link--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-nav__list-link--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-nav__list-link--active--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-nav__list-link--focus--FontWeight: var(--pf-global--FontWeight--normal);
 
   // color
   --pf-c-nav__list-link--Color: var(--pf-global--Color--dark-100);
@@ -186,6 +186,16 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  // Disable underline
+  [class*="list"] [class*="link"] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 // Set width when nav is child of sidebar to prevent collapsing
@@ -297,7 +307,7 @@
 }
 
 // Rotate the icon
-.pf-m-expanded .pf-c-nav__toggle > * {
+.pf-c-nav__item.pf-m-expanded .pf-c-nav__toggle > * {
   transform: rotate(90deg);
 }
 
@@ -549,14 +559,4 @@
   font-size: var(--pf-c-nav__section-title--FontSize);
   font-weight: var(--pf-c-nav__section-title--FontWeight);
   color: var(--pf-c-nav__section-title--Color);
-}
-
-// Disable underline
-[class*="list"] [class*="link"] {
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-  }
 }

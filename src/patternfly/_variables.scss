@@ -15,6 +15,7 @@
   // Text color
   --pf-global--Color--100: #{$pf-global--Color--100};
   --pf-global--Color--200: #{$pf-global--Color--200};
+  --pf-global--Color--300: #{$pf-global--Color--300};
   --pf-global--Color--light-100: #{$pf-global--Color--light-100};
   --pf-global--Color--light-200: #{$pf-global--Color--light-200};
   --pf-global--Color--dark-100: #{$pf-global--Color--dark-100};
@@ -144,6 +145,7 @@
   --pf-global-ListStyle: #{$pf-global--ListStyle};
   --pf-global--Transition: #{$pf-global--Transition};
   --pf-global--TimingFunction: #{$pf-global--TimingFunction};
+  --pf-global--TransitionDuration: #{$pf-global--TransitionDuration};
 
   // Arrow Size
   --pf-global--arrow--width: #{$pf-global--arrow--width};
