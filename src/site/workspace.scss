@@ -331,6 +331,7 @@
     td, th, tr {
       min-width: 200px;
       padding: .5em;
+      word-wrap: break-word;
       vertical-align: top;
       border: 1px solid #ccc;
     }
