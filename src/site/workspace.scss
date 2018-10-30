@@ -68,7 +68,8 @@
     flex: 0 1 20%;
     max-width: 20%;
     padding: 2rem 0;
-    overflow-x: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-right: 1px solid #eaeaea;
   }
 
