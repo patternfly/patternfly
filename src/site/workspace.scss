@@ -54,6 +54,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    overflow: auto;
+    word-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
   &__main {
