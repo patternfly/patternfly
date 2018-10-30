@@ -13,12 +13,12 @@
   // Primary Tab Items
   --pf-c-tabs__item--BackgroundColor:       var(--pf-global--BackgroundColor--100);
   --pf-c-tabs__item--current--Color:        var(--pf-global--active-color--100);
-  --pf-c-tabs__item--hover--BoxShadowColor: var(--pf-global--BorderColor--light);
+  --pf-c-tabs__item--hover--BoxShadowColor: #8b8d8f;
   --pf-c-tabs__item--BorderWidth:           var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__item--BorderColor:           var(--pf-global--BorderColor--light);
+  --pf-c-tabs__item--BorderColor:           #ededed;
 
   // Secondary Tab Items
-  --pf-c-tabs__item--hover--Color: var(--pf-global--BorderColor--light);
+  --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
 
   // Tab Buttons
   --pf-c-tabs__button--PaddingTop:    var(--pf-global--spacer--sm);
@@ -29,7 +29,7 @@
   // Scroll Buttons
   --pf-c-tabs__scroll-button--Width:           var(--pf-global--spacer--xl);
   --pf-c-tabs__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-tabs__scroll-button--BorderColor:     var(--pf-global--BorderColor--light);
+  --pf-c-tabs__scroll-button--BorderColor:     #ededed;
 
   /* stylelint-enable */
 
@@ -73,15 +73,24 @@
     display: block;
   }
 
-  // Highlighted state
+  &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
+    display: block;
+  }
+
+  // Current state
   &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
   &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
     border-top-color: var(--pf-c-tabs__item--current--Color);
     box-shadow: inset 0 2px 0 0 var(--pf-c-tabs__item--current--Color);
   }
 
-  &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
-    display: block;
+  // Hover/Focus state
+  &:not(.pf-m-start-current) .pf-c-tabs__scroll-button:nth-of-type(1):hover,
+  &:not(.pf-m-start-current) .pf-c-tabs__scroll-button:nth-of-type(1):focus-within,
+  &:not(.pf-m-end-current) .pf-c-tabs__scroll-button:nth-of-type(2):hover,
+  &:not(.pf-m-end-current) .pf-c-tabs__scroll-button:nth-of-type(2):focus-within {
+    border-top-color: var(--pf-c-tabs__item--hover--BoxShadowColor);
+    box-shadow: inset 0 2px 0 0 var(--pf-c-tabs__item--hover--BoxShadowColor);
   }
 }
 
@@ -114,10 +123,15 @@
     }
   }
 
-  // Hover/Focus state
+  // Item Hover/Focus state
+  &:not(.pf-m-current):hover,
+  &:not(.pf-m-current):focus-within {
+    border-top-color: var(--pf-c-tabs__item--hover--BoxShadowColor);
+  }
+
+  // Button Hover/Focus state
   &:not(.pf-m-current):hover .pf-c-tabs__button,
   &:not(.pf-m-current):focus-within .pf-c-tabs__button {
-    border-top-color: var(--pf-c-tabs__item--current--Color);
     box-shadow: inset 0 2px 0 0 var(--pf-c-tabs__item--hover--BoxShadowColor);
   }
 }
@@ -140,7 +154,6 @@
 
   // Different styling for secondary tab buttons
   .pf-c-tabs__button {
-    border-top-color: initial;
     box-shadow: initial;
     box-shadow: none;
 
