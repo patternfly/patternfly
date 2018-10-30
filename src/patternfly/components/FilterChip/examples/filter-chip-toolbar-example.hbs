@@ -52,7 +52,7 @@
       {{#> toolbar-item toolbar-item--modifier="pf-u-mr-md"}}
         17 of 80 items
       {{/toolbar-item}}
-      {{#> toolbar-item toolbar-item--modifier="pf-u-flex-basis-0"}}
+      {{#> toolbar-item}}
         {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
           {{#> filter-chip-label}}
             United States
@@ -79,32 +79,15 @@
             {{/button}}
           {{/filter-chip}}
         {{/filter-chip-group}}
-        {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
-          {{#> filter-chip-label}}
-            Mexico
-          {{/filter-chip-label}}
-          {{#> filter-chip}}
+      {{/toolbar-item}}
+      {{#> toolbar-item toolbar-item--modifier="pf-u-ml-sm"}}
+        {{#> filter-chip filter-chip--modifier="pf-m-overflow"}}
+          {{#> button}}
             {{#> filter-chip-text}}
-              Baja California
+              4 More
             {{/filter-chip-text}}
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}}
-          {{#> filter-chip}}
-            {{#> filter-chip-text}}
-              Chihuahua
-            {{/filter-chip-text}}
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}}
-          {{#> filter-chip}}
-            {{#> filter-chip-text}}
-              Mexico City
-            {{/filter-chip-text}}
-            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
-            {{/button}}
-          {{/filter-chip}}
-        {{/filter-chip-group}}
+          {{/button}}
+        {{/filter-chip}}
       {{/toolbar-item}}
     {{/toolbar-group}}
   {{/toolbar-section}}
@@ -192,15 +175,39 @@
             {{/button}}
           {{/filter-chip}}
         {{/filter-chip-group}}
-      {{/toolbar-item}}
-      {{#> toolbar-item toolbar-item--modifier="pf-u-ml-sm"}}
-        {{#> filter-chip filter-chip--modifier="pf-m-overflow"}}
-          {{#> button}}
+        {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
+          {{#> filter-chip-label}}
+            Mexico
+          {{/filter-chip-label}}
+          {{#> filter-chip}}
             {{#> filter-chip-text}}
-              4 More
+              Baja California
             {{/filter-chip-text}}
-          {{/button}}
-        {{/filter-chip}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            {{#> filter-chip-text}}
+              Chihuahua
+            {{/filter-chip-text}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            {{#> filter-chip-text}}
+              Mexico City
+            {{/filter-chip-text}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+          {{#> filter-chip}}
+            {{#> filter-chip-text}}
+              Quintana Roo
+            {{/filter-chip-text}}
+            {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
+            {{/button}}
+          {{/filter-chip}}
+        {{/filter-chip-group}}
       {{/toolbar-item}}
     {{/toolbar-group}}
   {{/toolbar-section}}

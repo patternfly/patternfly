@@ -3,10 +3,10 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import filterChipSimpleExampleRaw from '!raw!./filter-chip-simple-example.hbs';
 import filterChipComplexExampleRaw from '!raw!./filter-chip-complex-example.hbs';
-import filterChipToolbarExampleRaw from '!raw!./filter-chip-toolbar-example.hbs';
+// import filterChipToolbarExampleRaw from '!raw!./filter-chip-toolbar-example.hbs';
 import FilterchipSimpleExample from './filter-chip-simple-example.hbs';
 import FilterchipComplexExample from './filter-chip-complex-example.hbs';
-import FilterchipToolbarExample from './filter-chip-toolbar-example.hbs';
+// import FilterchipToolbarExample from './filter-chip-toolbar-example.hbs';
 import filterChipComplexExampleDoc from '../docs/filter-chip-complex.md';
 import docs from '../docs/code.md';
 import '../filter-chip.scss';
@@ -16,7 +16,7 @@ export const Docs = docs;
 export default () => {
   const filterChipSimpleExample = FilterchipSimpleExample();
   const filterChipComplexExample = FilterchipComplexExample();
-  const filterChipToolbarExample = FilterchipToolbarExample();
+  // const filterChipToolbarExample = FilterchipToolbarExample();
   const headingText = 'Filter Chip';
 
   return (
@@ -31,9 +31,9 @@ export default () => {
       >
         {filterChipComplexExample}
       </Example>
-      <Example heading="Filter Chips in the Toolbar" handlebars={filterChipToolbarExampleRaw}>
+      {/* <Example heading="Filter Chips in the Toolbar" handlebars={filterChipToolbarExampleRaw}>
         {filterChipToolbarExample}
-      </Example>
+      </Example> */}
     </Documentation>
   );
 };

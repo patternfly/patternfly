@@ -150,9 +150,8 @@
   --pf-c-filter-chip__group--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-filter-chip__group--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-filter-chip__group--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-filter-chip__group--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-filter-chip__group--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-filter-chip__group--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-filter-chip__group--MarginBottom: var(--pf-glocal--spacer--sm);
 
   // Label in group (optional)
   --pf-c-filter-chip__label--PaddingLeft: var(--pf-global--spacer--xs);
@@ -168,11 +167,8 @@
   background-color: var(--pf-c-filter-chip__group--BackgroundColor);
   border-radius: var(--pf-c-filter-chip__group--BorderRadius);
 
-
   &:not(:last-child) {
-    margin-top: -20px;
     margin-right: var(--pf-c-filter-chip__group--MarginRight);
-    margin-bottom: var(--pf-c-filter-chip__group--MarginBottom);
   }
 
   .pf-c-filter-chip__label {
