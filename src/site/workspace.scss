@@ -21,6 +21,10 @@
     table {
       margin-bottom: 3rem;
     }
+
+    code {
+      white-space: pre-wrap;
+    }
   }
 }
 
@@ -61,6 +65,7 @@
     flex: 0 1 20%;
     max-width: 20%;
     padding: 2rem 0;
+    overflow-x: hidden;
     border-right: 1px solid #eaeaea;
   }
 
@@ -304,7 +309,7 @@
   code {
     padding: .25em .75em;
     color: #004368;
-    white-space: nowrap;
+    white-space: pre-wrap;
     background-color: #def3ff;
     border-radius: .5em;
   }
@@ -316,10 +321,12 @@
   table {
     width: 100%;
     margin-bottom: 1rem;
+    table-layout: fixed;
   }
 
   table:not(.pf-c-table) { 
     td, th, tr {
+      min-width: 200px;
       padding: .5em;
       vertical-align: top;
       border: 1px solid #ccc;
