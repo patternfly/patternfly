@@ -11,14 +11,14 @@
   /* stylelint-disable */
 
   // Primary Tab Items
-  --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-tabs__item--current--Color:  var(--pf-global--active-color--300);
-  --pf-c-tabs__item--hover--BoxShadowColor:  #b3b3b3;
-  --pf-c-tabs__item--BorderWidth:     var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__item--BorderColor:     var(--pf-global--BorderColor--light);
+  --pf-c-tabs__item--BackgroundColor:       var(--pf-global--BackgroundColor--100);
+  --pf-c-tabs__item--current--Color:        var(--pf-global--active-color--100);
+  --pf-c-tabs__item--hover--BoxShadowColor: var(--pf-global--BorderColor--light);
+  --pf-c-tabs__item--BorderWidth:           var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__item--BorderColor:           var(--pf-global--BorderColor--light);
 
   // Secondary Tab Items
-  --pf-c-tabs__item--hover--Color:  #b3b3b3;
+  --pf-c-tabs__item--hover--Color: var(--pf-global--BorderColor--light);
 
   // Tab Buttons
   --pf-c-tabs__button--PaddingTop:    var(--pf-global--spacer--sm);
