@@ -101,8 +101,9 @@
   }
 
   &.pf-m-current {
+    z-index: 1;
     border-top-color: var(--pf-c-tabs__item--current--Color);
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--pf-c-tabs__item--BackgroundColor);
 
     .pf-c-tabs__button {
       color: var(--pf-c-tabs__item--current--Color);
@@ -121,6 +122,7 @@
 // Secondary tabs
 .pf-c-tabs.pf-m-tabs-secondary {
   .pf-c-tabs__item {
+    z-index: initial;
     border-top-color: var(--pf-c-tabs__item--BorderColor);
     border-right: none;
     border-bottom: none;
