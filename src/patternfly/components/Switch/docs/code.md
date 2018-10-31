@@ -22,5 +22,3 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `.pf-c-switch__input` | `<input type="checkbox">` |  Hide the checkbox inside the switch. **required**  |
 | `.pf-c-switch__toggle` | `<span>` |  Initiates the toggle inside the switch. **required**  |
 | `.pf-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
-| `.pf-m-off` | `.pf-c-switch__label` | Modifies for the off state. |
-| `.pf-m-on` | `.pf-c-switch__label` | Modifies for the on state. |
