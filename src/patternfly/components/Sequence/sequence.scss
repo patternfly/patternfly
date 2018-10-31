@@ -33,6 +33,7 @@
 
   // Sequence Control Icon
   --pf-c-sequence__control-icon--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-sequence__control-icon--Color: var(--pf-global--Color--light-100);
 
   // Item
   --pf-c-sequence__item--MarginRight: 1px; // follows design
@@ -81,7 +82,7 @@
   --pf-c-sequence__content--MaxWidth: #{pf-size-prem(140px)};
 
   // Content Title Color
-  --pf-c-sequence__content-title--Color: var(--pf-global--Color--100);
+  --pf-c-sequence__content-title--Color: var(--pf-global--Color--light-100);
   --pf-c-sequence__content-title--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--active--Color: var(--pf-global--primary-color--100);
   --pf-c-sequence__content-title--focus--Color: var(--pf-global--primary-color--100);
@@ -144,6 +145,7 @@
 
   .pf-c-sequence__control-icon {
     min-width: var(--pf-c-sequence__control-icon--MinWidth);
+    color: var(--pf-c-sequence__control-icon--Color);
     text-align: center;
   }
 }
@@ -154,6 +156,7 @@
   overflow-x: scroll;
   counter-reset: sequence-number;
   -webkit-overflow-scrolling: touch;
+  transform: translateY(0);
 }
 
 // List items
@@ -185,6 +188,7 @@
 .pf-c-sequence__content-title {
   font-size: var(--pf-c-sequence__content-title--FontSize);
   font-weight: var(--pf-c-sequence__content-title--FontWeight);
+  color: var(--pf-c-sequence__content-title--Color);
 }
 
 // Content Status
