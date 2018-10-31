@@ -6,19 +6,18 @@ $nav: "pf-c-nav";
 .pf-l-page {
   // Header
   --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-l-page__header--MinHeight: #{pf-size-prem(110px)};
-  --pf-l-page__header--m-condensed--MinHeight: #{pf-size-prem(20px)};
+  --pf-l-page__header--m-expanded--MinHeight: #{pf-size-prem(110px)};
 
   // Header brand
-  --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--md);
-  --pf-l-page__header-brand--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-l-page__header-brand--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--PaddingBottom--sm: var(--pf-global--spacer--md);
   --pf-l-page__header-brand--BackgroundColor--md: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-l-page__header-brand--FlexBasis--lg: #{pf-size-prem(290px)};
-  --pf-l-page__header-brand--m-condensed--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-l-page__header-brand--m-condensed--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-l-page__header-brand--m-expanded--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--m-expanded--PaddingBottom: var(--pf-global--spacer--md);
 
   // Toggle
   --pf-l-page__header-sidebar-toggle--PaddingTop: var(--pf-global--spacer--sm);
@@ -49,16 +48,12 @@ $nav: "pf-c-nav";
   --pf-l-page__header-nav--BackgroundColor--sm: var(--pf-global--BackgroundColor--dark-transparent-100);
 
   // Header tools
+  --pf-l-page__header-tools--toolbar--MarginTop: var(--pf-global--spacer--sm);
+  --pf-l-page__header-tools--toolbar--MarginBottom: var(--pf-global--spacer--sm);
   --pf-l-page__header-tools--MarginRight: var(--pf-global--spacer--xl);
-  --pf-l-page__header-tools--toolbar--MarginTop: var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--toolbar--MarginBottom: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--avatar--MarginLeft: var(--pf-global--spacer--md);
-  --pf-l-page__header-tools--avatar--Width: #{pf-size-prem(48px)};
-  --pf-l-page__header-tools--avatar--Height: #{pf-size-prem(48px)};
-  --pf-l-page__header-tools--m-condensed--avatar--Width: #{pf-size-prem(30px)};
-  --pf-l-page__header-tools--m-condensed--avatar--Height: #{pf-size-prem(30px)};
-  --pf-l-page__header--m-condensed--toolbar--MarginTop: var(--pf-global--spacer--sm);
-  --pf-l-page__header--m-condensed--toolbar--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-l-page__header-tools--toolbar--m-expanded--MarginTop: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--toolbar--m-expanded--MarginBottom: var(--pf-global--spacer--md);
 
   // Sidebar
   --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--xl);
@@ -95,16 +90,18 @@ $nav: "pf-c-nav";
   --pf-l-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
   // context selector
-  --pf-l-page__header-selector--m-condensed--PaddingTop: var(--pf-global--spacer--md);
-  --pf-l-page__header-selector--m-condensed--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__header-selector--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__header-selector--PaddingBottom: var(--pf-global--spacer--md);
 
   // Horizontal nav links
-  --pf-c-nav__link--m-condensed--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-nav__link--m-condensed--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--m-expanded--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-nav__horizontal-list-link--m-expanded--PaddingBottom: var(--pf-global--spacer--lg);
 
   // transitions
-  --pf-l-page--m-condensed--transition--in: 250ms;
-  --pf-l-page--m-condensed--transition--out: 150ms;
+  --pf-l-page--m-expanded--transition--in: 250ms;
+  --pf-l-page--m-expanded--transition--out: 150ms;
 
   // Base
   display: grid;
@@ -126,10 +123,10 @@ $nav: "pf-c-nav";
 .pf-l-page__header-brand,
 .pf-l-toolbar,
 .pf-c-avatar {
-  transition: var(--pf-l-page--m-condensed--transition--in);
+  transition: var(--pf-l-page--m-expanded--transition--in);
 
-  .pf-m-condensed & {
-    transition: var(--pf-l-page--m-condensed--transition--out);
+  .pf-m-expanded & {
+    transition: var(--pf-l-page--m-expanded--transition--out);
   }
 }
 
@@ -142,48 +139,57 @@ $nav: "pf-c-nav";
   flex-wrap: wrap;
   align-items: flex-end;
   max-width: 100%;
-  min-height: var(--pf-l-page__header--MinHeight); // Hardcode header height base on design spec
-  transition: var(--pf-l-page--m-condensed--transition--in);
+  transition: var(--pf-l-page--m-expanded--transition--in);
 
   > * {
     display: flex;
     align-items: flex-end;
   }
 
-  &.pf-m-condensed {
-    min-height: var(--pf-l-page__header--m-condensed--MinHeight);
+  .pf-l-page__header-brand {
+    padding-top: var(--pf-l-page__header-brand--PaddingTop);
+    padding-bottom: var(--pf-l-page__header-brand--PaddingBottom);
+  }
+
+  .pf-l-page__header-tools {
+    .pf-l-toolbar {
+      margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop);
+      margin-bottom: var(--pf-l-page__header-tools--toolbar--MarginBottom);
+    }
+  }
+
+  .pf-c-nav__horizontal-list .pf-c-nav__link {
+    padding-top: var(--pf-c-nav__horizontal-list-link--PaddingTop);
+    padding-bottom: var(--pf-c-nav__horizontal-list-link--PaddingBottom);
+  }
+
+  .pf-l-page__header-selector {
+    padding-top: var(--pf-l-page__header-selector--PaddingTop);
+    padding-bottom: var(--pf-l-page__header-selector--PaddingBottom);
+  }
+
+  &.pf-m-expanded {
+    min-height: var(--pf-l-page__header--m-expanded--MinHeight);
 
     .pf-l-page__header-brand {
-      padding-top: var(--pf-l-page__header-brand--m-condensed--PaddingTop);
-      padding-bottom: var(--pf-l-page__header-brand--m-condensed--PaddingBottom);
-    }
-
-    .pf-c-avatar {
-      width: var(--pf-l-page__header-tools--m-condensed--avatar--Width);
-      height: var(--pf-l-page__header-tools--m-condensed--avatar--Height);
+      padding-top: var(--pf-l-page__header-brand--m-expanded--PaddingTop);
+      padding-bottom: var(--pf-l-page__header-brand--m-expanded--PaddingBottom);
     }
 
     .pf-l-toolbar {
-      margin-top: var(--pf-l-page__header--m-condensed--toolbar--MarginTop);
-      margin-bottom: var(--pf-l-page__header--m-condensed--toolbar--MarginBottom);
+      margin-top: var(--pf-l-page__header-tools--toolbar--m-expanded--MarginTop); // include margin-top for avatar to position itself vertically
+      margin-bottom: var(--pf-l-page__header-tools--toolbar--m-expanded--MarginBottom);
     }
 
     .pf-c-nav__horizontal-list .pf-c-nav__link {
-      padding-top: var(--pf-c-nav__link--m-condensed--PaddingTop);
-      padding-bottom: var(--pf-c-nav__link--m-condensed--PaddingBottom);
-    }
-
-    .pf-l-page__header-selector {
-      padding-top: var(--pf-l-page__header-selector--m-condensed--PaddingTop);
-      padding-bottom: var(--pf-l-page__header-selector--m-condensed--PaddingBottom);
+      padding-top: var(--pf-c-nav__horizontal-list-link--m-expanded--PaddingTop);
+      padding-bottom: var(--pf-c-nav__horizontal-list-link--m-expanded--PaddingBottom);
     }
   }
 }
 
 // Brand
 .pf-l-page__header-brand {
-  padding-top: var(--pf-l-page__header-brand--PaddingTop);
-  padding-bottom: var(--pf-l-page__header-brand--PaddingBottom);
   padding-left: var(--pf-l-page__header-brand--PaddingLeft);
 
   @media (min-width: $pf-global--breakpoint--md) {
@@ -251,14 +257,7 @@ $nav: "pf-c-nav";
   margin-right: var(--pf-l-page__header-tools--MarginRight);
   margin-left: auto; // to push it to the right
 
-  .pf-l-toolbar {
-    margin-top: var(--pf-l-page__header-tools--toolbar--MarginTop); // include margin-top for avatar to position itself vertically
-    margin-bottom: var(--pf-l-page__header-tools--toolbar--MarginBottom);
-  }
-
   .pf-c-avatar {
-    width: var(--pf-l-page__header-tools--avatar--Width); // Hardcode avatar width and height to match design spec
-    height: var(--pf-l-page__header-tools--avatar--Height);
     margin-left: var(--pf-l-page__header-tools--avatar--MarginLeft);
   }
 }
