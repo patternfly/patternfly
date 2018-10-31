@@ -20,11 +20,16 @@ export default () => {
       <Example
         heading="Sequence with overflow"
         handlebars={sequenceOverflowExampleRaw}
+        className="is-dark-preview"
         docs={sequenceComplexExampleDoc}
       >
         {sequenceOverflowExample}
       </Example>
-      <Example heading="Sequence without overflow" handlebars={sequenceNoOverflowExampleRaw}>
+      <Example
+        heading="Sequence without overflow"
+        handlebars={sequenceNoOverflowExampleRaw}
+        className="is-dark-preview"
+      >
         {sequenceNoOverflowExample}
       </Example>
     </Documentation>
