@@ -108,6 +108,8 @@
 
 // Control Buttons
 .pf-c-sequence__control {
+  display: flex;
+  align-items: center;
   padding-top: var(--pf-c-sequence__control--PaddingTop);
   padding-bottom: var(--pf-c-sequence__control--PaddingBottom);
   background-color: transparent;
@@ -142,6 +144,7 @@
 
   .pf-c-sequence__control-icon {
     min-width: var(--pf-c-sequence__control-icon--MinWidth);
+    text-align: center;
   }
 }
 
