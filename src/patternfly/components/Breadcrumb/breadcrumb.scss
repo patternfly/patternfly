@@ -1,32 +1,26 @@
 @import "../../patternfly-utilities";
 
 .pf-c-breadcrumb {
-  --pf-c-breadcrumb--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-breadcrumb--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-breadcrumb--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-breadcrumb--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-breadcrumb--title--MarginTop: var(--pf-global--spacer--md);
 
   // Breadcrumb Item
   --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--lg);
   --pf-c-breadcrumb__item--Color: var(--pf-global--Color--300);
   --pf-c-breadcrumb__item--hover--Color: var(--pf-global--Color--300);
+  --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
+
+  // Breadcrumb Divider
+  --pf-c-breadcrumb__item-divider--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--Color--300);
+  --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
   // Breadcrumb Link
-  --pf-c-breadcrumb__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-breadcrumb__link--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-breadcrumb__link--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-breadcrumb__link--Color: var(--pf-global--link--Color);
   --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color);
   --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
-
-  // Breadcrumb Divider
-  --pf-c-breadcrumb__divider--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-breadcrumb__divider--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-breadcrumb__divider--FontFamily: "Font Awesome 5 Free";
-  --pf-c-breadcrumb__divider--Color: var(--pf-global--Color--300);
-  --pf-c-breadcrumb__divider--Content: "\f105";
 
   // ============================================================ //
   // Modifiers
@@ -38,27 +32,18 @@
 
   // Modifier - title item
   --pf-c-breadcrumb__item--m-title--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-breadcrumb__item--m-title--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-breadcrumb__item--m-title--FontSize: var(--pf-global--FontSize--3xl);
-  --pf-c-breadcrumb__item--m-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-breadcrumb__item--m-title--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-breadcrumb__item--m-title--Color: var(--pf-global--Color--300);
-  --pf-c-breadcrumb__item--m-title--hover--Color: var(--pf-global--Color--300);
 
   display: inline-flex;
-  padding-top: var(--pf-c-breadcrumb--PaddingTop);
-  padding-right: var(--pf-c-breadcrumb--PaddingRight);
-  padding-bottom: var(--pf-c-breadcrumb--PaddingBottom);
-  padding-left: var(--pf-c-breadcrumb--PaddingLeft);
 }
 
+// Breadcrumb list
 .pf-c-breadcrumb__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  list-style: none;
 }
 
+// Breadcrumb list item
 .pf-c-breadcrumb__item {
   display: flex;
   align-items: center;
@@ -68,52 +53,41 @@
   color: var(--pf-c-breadcrumb__item--Color);
   cursor: default;
 
-  &:not(:first-child):not(.pf-m-title)::before {
-    margin-right: var(--pf-c-breadcrumb__divider--MarginRight);
-    font-family: var(--pf-c-breadcrumb__divider--FontFamily);
-    color: var(--pf-c-breadcrumb__divider--Color);
-    content: var(--pf-c-breadcrumb__divider--Content);
-  }
-
   &:not(:last-child) {
-    margin-right: var(--pf-c-breadcrumb__divider--MarginRight);
+    margin-right: var(--pf-c-breadcrumb__item--MarginRight);
   }
 
-  &.pf-m-title {
-    flex: 100%;
-    margin-top: var(--pf-c-breadcrumb__item--m-title--MarginTop);
-    margin-bottom: var(--pf-c-breadcrumb__item--m-title--MarginBottom);
-    font-size: var(--pf-c-breadcrumb__item--m-title--FontSize);
-    font-weight: var(--pf-c-breadcrumb__item--m-title--FontWeight);
-    line-height: var(--pf-c-breadcrumb__item--m-title--LineHeight);
-    color: var(--pf-c-breadcrumb__item--m-title--Color);
+  // current item
+  &.pf-m-current * {
+    color: var(--pf-c-breadcrumb__item--m-current--Color);
+    text-decoration: none;
     cursor: default;
 
-    &:hover {
-      color: var(--pf-c-breadcrumb__item--m-title--hover--Color);
+    &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-breadcrumb__item--m-current--hover--Color);
       text-decoration: none;
     }
   }
 }
 
-.pf-c-breadcrumb__item.pf-m-current * {
-  color: var(--pf-c-breadcrumb__item--m-current--Color);
-  text-decoration: none;
-  cursor: default;
-
-  &:hover {
-    color: var(--pf-c-breadcrumb__item--m-current--hover--Color);
-    text-decoration: none;
-  }
+// Breadcrumb divider
+.pf-c-breadcrumb__item-divider {
+  margin-left: var(--pf-c-breadcrumb__item-divider--MarginLeft);
+  font-size: var(--pf-c-breadcrumb__item-divider--FontSize);
+  line-height: 1;
+  color: var(--pf-c-breadcrumb__item-divider--Color);
 }
 
+// Breadcrumb link
 .pf-c-breadcrumb__link {
-  font-size: var(--pf-c-breadcrumb__link--FontSize);
+  font-size: inherit;
   font-weight: var(--pf-c-breadcrumb__link--FontWeight);
-  line-height: var(--pf-c-breadcrumb__link--LineHeight);
+  line-height: inherit;
   color: var(--pf-c-breadcrumb__link--Color);
 
-  &:hover {
+  &:hover,
+  &.pf-m-hover {
     color: var(--pf-c-breadcrumb__link--hover--Color);
     text-decoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
   }
