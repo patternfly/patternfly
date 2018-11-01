@@ -7,6 +7,7 @@ $nav: "pf-c-nav";
   // Header
   --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
   --pf-l-page__header--m-expanded--MinHeight: #{pf-size-prem(110px)};
+  --pf-l-page__header--MinHeight: 0;
 
   // Header brand
   --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
@@ -139,7 +140,9 @@ $nav: "pf-c-nav";
   flex-wrap: wrap;
   align-items: flex-end;
   max-width: 100%;
+  min-height: var(--pf-l-page__header--MinHeight);
   transition: var(--pf-l-page--m-expanded--transition--in);
+
 
   > * {
     display: flex;
