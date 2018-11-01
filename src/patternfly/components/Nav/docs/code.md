@@ -31,9 +31,10 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section-title`            | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`                        | Initiates a nav section title |
 | `.pf-c-nav__toggle`                    | `<span>`                                | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
 | `.pf-m-expandable`                    | `.pf-c-nav__item`                       | Modifies for the expandable state |
-| `.pf-m-expanded`                      | `.pf-c-nav__item`, `.pf-c-nav__horizontal-list`                       | Modifies for the expanded state |
+| `.pf-m-expanded`                      | `.pf-c-nav__item`                       | Modifies for the expanded state |
 | `.pf-m-hover`                         | `.pf-c-nav__link`                       | Modifies to display the link as hovered |
 | `.pf-m-focus`                         | `.pf-c-nav__link`                       | Modifies to display the link as focussed |
 | `.pf-m-current`                       | `.pf-c-nav__link`                       | Modifies for the current state |
 | `.pf-m-active`                        | `.pf-c-nav__link`,                      | Modifies to display the link as active |
 | `.pf-m-disabled`                      | `.pf-c-nav__link`,                      | Modifies to display the link as disabled |
+| `.pf-m-tall`                      | `.pf-c-nav__horizontal-list`,                      | Modifies to display the tall horizontal nav. This is related to the page layout for desktop view with a tall header.  |
