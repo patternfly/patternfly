@@ -157,12 +157,17 @@
   counter-reset: sequence-number;
   -webkit-overflow-scrolling: touch;
   transform: translateY(0);
+  scroll-behavior: smooth;
 }
 
 // List items
 .pf-c-sequence__item {
   max-width: var(--pf-c-sequence__item--MaxWidth);
   list-style-type: none;
+
+  &:target {
+    transform: translateY(0);
+  }
 
   &:not(:last-child) {
     margin-right: var(--pf-c-sequence__item--MarginRight);
