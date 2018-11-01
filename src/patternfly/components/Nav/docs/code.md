@@ -37,4 +37,4 @@ The navigation system relies on several different sub-components:
 | `.pf-m-current`                       | `.pf-c-nav__link`                       | Modifies for the current state |
 | `.pf-m-active`                        | `.pf-c-nav__link`,                      | Modifies to display the link as active |
 | `.pf-m-disabled`                      | `.pf-c-nav__link`,                      | Modifies to display the link as disabled |
-| `.pf-m-tall`                      | `.pf-c-nav__horizontal-list`,                      | Modifies to display the tall horizontal nav. This is related to the page layout for desktop view with a tall header.  |
+| `.pf-m-tall`                      | `.pf-c-nav__horizontal-list`                | Modifies to display the tall horizontal nav. This is related to the page layout for desktop view with a tall header.  |

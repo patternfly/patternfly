@@ -30,4 +30,4 @@ This layout provides the basic chrome for a page, including sidebar, header and 
 | `.pf-m-light` | `.pf-l-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-l-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-l-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
-| `.pf-m-expanded` | `.pf-l-page__header` |   Modifies header to expanded height on desktop. This class should be added on desktop/toggled on scroll via Javascript. |
+| `.pf-m-tall` | `.pf-l-page__header` |   Modifies header to tallest height on desktop. This class should be added on desktop/toggled on scroll via Javascript. |
