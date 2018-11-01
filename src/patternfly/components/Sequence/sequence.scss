@@ -153,7 +153,7 @@
 // Horizontal list
 .pf-c-sequence__list {
   display: inline-flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   counter-reset: sequence-number;
   -webkit-overflow-scrolling: touch;
   transform: translateY(0);

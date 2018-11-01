@@ -1,0 +1,84 @@
+{{#> sequence sequence--attribute='aria-label="sequence"'}}
+  {{!-- {{#> sequence-control sequence-control--modifier="pf-m-start" sequence-control--attribute='href="#start" aria-label="Start"'}}
+    {{#> sequence-control-icon sequence-control-icon--start="true"}}
+    {{/sequence-control-icon}}
+  {{/sequence-control}} --}}
+  {{#> sequence-list sequence-list--attribute='role="list"'}}
+    {{#> sequence-item sequence-item--attribute='id="start"'}}
+      {{#> sequence-link sequence-link--attribute='href="#"'}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step One{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"'}} 
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Two{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-current"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Three{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-disabled"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Four{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-disabled"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Five{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-disabled"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Six{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-disabled"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Seven{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-disabled"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Eight{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+    {{#> sequence-item sequence-item--attribute='id="end"'}}
+      {{#> sequence-link sequence-link--attribute='href="#"' sequence-link--modifier="pf-m-disabled"}}
+        {{#> sequence-content}}
+          {{#> sequence-content-title}}Step Nine{{/sequence-content-title}}
+          {{#> sequence-content-status}}Status{{/sequence-content-status}}
+        {{/sequence-content}}
+      {{/sequence-link}}
+    {{/sequence-item}}
+  {{/sequence-list}}
+  {{!-- {{#> sequence-control sequence-control--modifier="pf-m-end" sequence-control--attribute=' href="#end" aria-label="End"'}}
+    {{#> sequence-control-icon sequence-control-icon--end="true"}}
+    {{/sequence-control-icon}}
+  {{/sequence-control}} --}}
+{{/sequence}}
