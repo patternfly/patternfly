@@ -39,7 +39,7 @@ export default () => {
       <Example heading="Width" handlebars={sizingExampleWidthRaw} docs={sizingWidthDocs}>
         {sizingExampleWidth}
       </Example>
-      <Example heading="Height" handlebars={sizingExampleHeightRaw} docs={sizingHeightDocs} minHeight="15rem">
+      <Example heading="Height" handlebars={sizingExampleHeightRaw} docs={sizingHeightDocs} className="is-tall-body">
         {sizingExampleHeight}
       </Example>
       <Example heading="Breakpoint demo" handlebars={sizingExampleBreakpointRaw}>
