@@ -2,36 +2,51 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import sizingSimpleExampleRaw from '!raw!./sizing-simple-example.hbs';
-import sizingBreakpointExampleRaw from '!raw!./sizing-breakpoint-example.hbs';
-import sizingButtonExampleRaw from '!raw!./sizing-button-example.hbs';
+// Raw
+import sizingExampleWidthRaw from '!raw!./sizing-width.hbs';
+import sizingExampleHeightRaw from '!raw!./sizing-height.hbs';
+import sizingExampleBreakpointRaw from '!raw!./sizing-breakpoint.hbs';
+import sizingExampleButtonRaw from '!raw!./sizing-button.hbs';
 
-import SizingSimpleExample from './sizing-simple-example.hbs';
-import SizingBreakpointExample from './sizing-breakpoint-example.hbs';
-import SizingButtonExample from './sizing-button-example.hbs';
+// Width
+import SizingExampleWidth from './sizing-width.hbs';
+import sizingWidthDocs from '../docs/sizing-width.md';
+
+// Height
+import SizingExampleHeight from './sizing-height.hbs';
+import sizingHeightDocs from '../docs/sizing-height.md';
+
+// Breakpoint demo
+import SizingExampleBreakpoint from './sizing-breakpoint.hbs';
+
+// Button demo
+import SizingExampleButton from './sizing-button.hbs';
 
 import docs from '../docs/code.md';
 import '../sizing.scss';
 
 export const Docs = docs;
+export const headingText = 'Sizing';
 
 export default () => {
-  const sizingSimpleExample = SizingSimpleExample();
-  const sizingBreakpointExample = SizingBreakpointExample();
-  const sizingButtonExample = SizingButtonExample();
-
-  const headingText = 'Sizing';
+  const sizingExampleWidth = SizingExampleWidth();
+  const sizingExampleHeight = SizingExampleHeight();
+  const sizingExampleBreakpoint = SizingExampleBreakpoint();
+  const sizingExampleButton = SizingExampleButton();
 
   return (
     <Documentation docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Sizing" handlebars={sizingSimpleExampleRaw}>
-        {sizingSimpleExample}
+      <Example heading="Width" handlebars={sizingExampleWidthRaw} docs={sizingWidthDocs}>
+        {sizingExampleWidth}
       </Example>
-      <Example heading="Sizing" handlebars={sizingBreakpointExampleRaw}>
-        {sizingBreakpointExample}
+      <Example heading="Height" handlebars={sizingExampleHeightRaw} docs={sizingHeightDocs} minHeight="15rem">
+        {sizingExampleHeight}
       </Example>
-      <Example heading="Sizing" handlebars={sizingButtonExampleRaw}>
-        {sizingButtonExample}
+      <Example heading="Breakpoint demo" handlebars={sizingExampleBreakpointRaw}>
+        {sizingExampleBreakpoint}
+      </Example>
+      <Example heading="Button demo" handlebars={sizingExampleButtonRaw}>
+        {sizingExampleButton}
       </Example>
     </Documentation>
   );
