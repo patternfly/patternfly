@@ -66,8 +66,12 @@
 
   // List horizontal link
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--m-tall--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-nav__horizontal-list-link--m-tall--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-nav__horizontal-list-link--m-tall--transition--in: 250ms;
+  --pf-c-nav__horizontal-list-link--m-tall--transition--out: 150ms;
 
   // font
   --pf-c-nav__horizontal-list-link--FontWeight: var(--pf-global--FontWeight--normal);
@@ -390,6 +394,7 @@
     color: var(--pf-c-nav__horizontal-list-link--Color);
     white-space: nowrap;
     background-color: var(--pf-c-nav__horizontal-list-link--BackgroundColor);
+    transition: var(--pf-c-nav__horizontal-list-link--m-tall--transition--in);
 
     // States
     &.pf-m-hover,
@@ -444,6 +449,14 @@
       height: var(--pf-c-nav__horizontal-list-link--after--Height);
       content: "";
       background-color: var(--pf-c-nav__horizontal-list-link--after--BackgroundColor);
+    }
+  }
+
+  &.pf-m-tall {
+    .pf-c-nav__link {
+      padding-top: var(--pf-c-nav__horizontal-list-link--m-tall--PaddingTop);
+      padding-bottom: var(--pf-c-nav__horizontal-list-link--m-tall--PaddingBottom);
+      transition: var(--pf-c-nav__horizontal-list-link--m-tall--transition--out);
     }
   }
 }
