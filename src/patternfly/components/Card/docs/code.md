@@ -1,6 +1,6 @@
 ## Overview
 
-A card is a generic rectangular container that can be used to build other components. A card can have three optional sections: header, body and footer.
+A card is a generic rectangular container that can be used to build other components. A card can have three optional sections: header, body, and footer.
 
 ## Usage
 
