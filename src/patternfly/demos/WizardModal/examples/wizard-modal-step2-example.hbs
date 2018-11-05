@@ -4,7 +4,7 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark pf-u-w-75-on-sm" modal-box--attribute='aria-labelledby="modal-step2-title" aria-describedby="modal-step2-description"'}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark pf-u-w-75-on-sm" modal-box--attribute='aria-labelledby="wizard-step2-title" aria-describedby="wizard-step2-description"'}}
         {{#> wizard-finite-header}}
           {{#> modal-box-close}}
             {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
@@ -29,7 +29,7 @@
                   {{#> sequence-control-icon sequence-control-icon--start="true"}}
                   {{/sequence-control-icon}}
                 {{/sequence-control}}
-                {{#> sequence-list sequence-list--attribute='role="list"'}}
+                {{#> sequence-list}}
                   {{#> sequence-item}}
                     {{#> sequence-link sequence-link--attribute='href="#"'}}
                       {{#> sequence-content}}
@@ -103,7 +103,7 @@
                 {{#> form-group}}
                   {{#> form-label form-label--attribute='for="example-application-name"' }}Application Name{{/form-label}}
                   {{#> form-control controlType="input" form-control--attribute='input="true" type="url" id="example-application-name" name="example-application-name" placeholder="http-ex"'}}
-                  {{#> form-helper-text form-helper-text--attribute='id="example-repository-helper" aria-live="polite"'}}If you have a private git repository or need to change application defaults view <a href="#">advanced options</a>.{{/form-helper-text}}
+                  {{#> form-helper-text form-helper-text--attribute='id="example-application-name-helper" aria-live="polite"'}}If you have a private git repository or need to change application defaults view <a href="#">advanced options</a>.{{/form-helper-text}}
                   {{/form-control}}
                 {{/form-group}}
               {{/grid-item}}

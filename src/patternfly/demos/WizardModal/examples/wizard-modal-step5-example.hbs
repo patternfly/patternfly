@@ -4,7 +4,7 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark pf-u-w-75-on-sm" modal-box--attribute='aria-labelledby="modal-step5-title" aria-describedby="modal-step5-description"'}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark pf-u-w-75-on-sm" modal-box--attribute='aria-labelledby="wizard-step5-title" aria-describedby="wizard-step5-description"'}}
         {{#> wizard-finite-header}}
           {{#> modal-box-close}}
             {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
@@ -30,7 +30,7 @@
                   {{#> sequence-control-icon sequence-control-icon--start="true"}}
                   {{/sequence-control-icon}}
                 {{/sequence-control}}
-                {{#> sequence-list sequence-list--attribute='role="list"'}}
+                {{#> sequence-list}}
                   {{#> sequence-item}}
                     {{#> sequence-link sequence-link--attribute='href="#"'}}
                       {{#> sequence-content}}
