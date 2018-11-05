@@ -2,13 +2,6 @@
 
 The Finite Wizard defines the content of a finite wizard. It is intended to be put into a modal or elsewhere as needed.
 
-## Accessibility
-
-| Attribute | Applied To | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-c-wizard-finite` |  accessibility notes. |
-
-
 ## Usage
 
 | Class | Applied To | Outcome |
