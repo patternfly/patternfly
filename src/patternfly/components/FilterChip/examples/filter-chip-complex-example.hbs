@@ -27,7 +27,21 @@
     {{#> button button--HasTimesCircleIcon="true" button--attribute='aria-label="Remove"'}}
     {{/button}}
   {{/filter-chip}}
+  {{#> filter-chip filter-chip--modifier="pf-m-overflow"}}
+  {{#> button}}
+    {{#> filter-chip-text}}
+      4 More
+    {{/filter-chip-text}}
+  {{/button}}
+{{/filter-chip}}
 {{/filter-chip-group}}
+{{#> filter-chip filter-chip--modifier="pf-m-overflow"}}
+  {{#> button}}
+    {{#> filter-chip-text}}
+      4 More
+    {{/filter-chip-text}}
+  {{/button}}
+{{/filter-chip}}
 <br>
 <br>
   {{#> filter-chip-group filter-chip-group--attribute='role="group of filter chips"'}}
