@@ -10,7 +10,7 @@ export const Docs = docs;
 export default () => {
   const PopoverUpgradeExamplesExample1 = PopoverupgradeexamplesExample1();
   const PopoverUpgradeExamplesExample2 = PopoverupgradeexamplesExample2();
-  const headingText = 'Card Migration';
+  const headingText = 'Popover Migration';
 
   return (
     <Documentation docs={Docs} heading={headingText}>
