@@ -1,0 +1,32 @@
+@import "../../patternfly-utilities";
+
+/* stylelint-disable */
+
+// Width options
+$pf-u-width-options: (
+  w-auto:    (width auto),
+  w-initial: (width initial),
+  w-inherit: (width inherit),
+  w-0:       (width 0%),
+  w-25:      (width 25%),
+  w-50:      (width 50%),
+  w-75:      (width 75%),
+  w-100:     (width 100%)
+);
+
+// Height options
+$pf-u-height-options: (
+  h-auto:    (height auto),
+  h-initial: (height initial),
+  h-inherit: (height inherit),
+  h-0:       (height 0%),
+  h-25:      (height 25%),
+  h-50:      (height 50%),
+  h-75:      (height 75%),
+  h-100:     (height 100%),
+);
+
+@include pf-utility-builder($pf-u-width-options, $pf-global--breakpoint-list);
+@include pf-utility-builder($pf-u-height-options, $pf-global--breakpoint-list);
+
+/* stylelint-enable */
