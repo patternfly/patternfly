@@ -27,16 +27,6 @@
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--dark-100);
 
   .pf-c-button {
-    // btns
-    --pf-c-button--m-secondary--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--hover--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--hover--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--focus--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--focus--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--active--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--active--Color: var(--pf-global--Color--light-100);
-
     // tertiary inverse btn default styles
     --pf-c-button--m-tertiary--BoxShadowColor: var(--pf-global--Color--light-100);
     --pf-c-button--m-tertiary--Color: var(--pf-global--Color--light-100);

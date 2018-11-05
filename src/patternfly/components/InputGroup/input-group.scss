@@ -7,7 +7,10 @@
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__text--BorderColor: var(--pf-global--BorderColor--dark);
+  --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
   --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
@@ -16,6 +19,10 @@
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
+  }
+
+  > .pf-c-button:first-child + * {
+    margin-left: -2px; // hide the 2px border on buttons
   }
 
   label.pf-c-input-group__text {
@@ -52,14 +59,14 @@
   .pf-c-dropdown:first-child .pf-c-dropdown__toggle::before,
   .pf-c-form-control:first-child,
   &__text:first-child {
-    border-radius: var(--pf-c-input-group--BorderRadius) 0 0 var(--pf-c-input-group--BorderRadius);
+    border-radius: var(--pf-c-input-group--BorderRadius) 0 0;
   }
 
   .pf-c-button:last-child::after,
   .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before,
   .pf-c-form-control:last-child,
   &__text:last-child {
-    border-radius: 0 var(--pf-c-input-group--BorderRadius) var(--pf-c-input-group--BorderRadius) 0;
+    border-radius: 0 var(--pf-c-input-group--BorderRadius) 0 0;
   }
 
   .pf-c-dropdown__toggle {
@@ -93,7 +100,7 @@
     color: var(--pf-c-input-group__text--Color);
     text-align: center;
     background-color: var(--pf-c-input-group__text--BackgroundColor);
-    border: var(--pf-c-input-group__text--BorderSize) solid var(--pf-c-input-group__text--BorderColor);
+    border: var(--pf-c-input-group__text--BorderSize) solid;
+    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
   }
 }
-
