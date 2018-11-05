@@ -4,22 +4,24 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attribute='aria-labelledby="wizard-step1-title" aria-describedby="wizard-step1-description"'}}
         {{#> wizard-finite-header}}
           {{#> modal-box-close}}
-            {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
               <i class="fas fa-times"></i>
             {{/button}}
           {{/modal-box-close}}
 
-          {{#> wizard-finite-title}}
-            {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+          {{#> wizard-finite-title-area}}
+            {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="wizard-step1-title"'}}
                 Wizard title
             {{/title}}
-            {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
-                A description of the wizard goes here
-            {{/title}}
-          {{/wizard-finite-title}}
+            {{#> wizard-finite-description}}
+              {{#> title titleType="h2"  title--attribute='id="wizard-step1-description"'}}
+                Wizard description
+              {{/title}}
+            {{/wizard-finite-description}}
+          {{/wizard-finite-title-area}}
 
             <div class="pf-c-wizard-finite__sequence">
               {{#> sequence sequence--attribute='aria-label="sequence"'}}
@@ -32,7 +34,7 @@
                     {{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
                       {{#> sequence-content}}
                         {{#> sequence-content-title}}Information{{/sequence-content-title}}
-                        {{!-- {{#> sequence-content-status}}Status{{/sequence-content-status}} --}}
+                        {{#> sequence-content-status}}Status{{/sequence-content-status}}
                       {{/sequence-content}}
                     {{/sequence-link}}
                   {{/sequence-item}}
@@ -40,7 +42,7 @@
                     {{#> sequence-link sequence-link--attribute='href="#"'}}
                       {{#> sequence-content}}
                         {{#> sequence-content-title}}Configuration{{/sequence-content-title}}
-                        {{!-- {{#> sequence-content-status}}Status{{/sequence-content-status}} --}}
+                        {{#> sequence-content-status}}Status{{/sequence-content-status}}
                       {{/sequence-content}}
                     {{/sequence-link}}
                   {{/sequence-item}}

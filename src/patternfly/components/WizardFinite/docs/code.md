@@ -1,8 +1,6 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+The Finite Wizard defines the content of a finite wizard. It is intended to be put into a modal or elsewhere as needed.
 
 ## Accessibility
 
@@ -15,5 +13,10 @@ For example for buttons: Always add a modifier class to add color to the button.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-wizard-finite` | `<div>` |  Initiates a finite wizard. |
+| `.pf-c-wizard-finite__header` | `<div>` | Initiates a header for the finite wizard. |
+| `.pf-c-wizard-finite__title-area` | `<div>` | Initiates a title area for the finite wizard. |
+| `.pf-c-wizard-finite__description` | `<h2>` | Initiates a description for the finite wizard. |
+| `.pf-c-wizard-finite__sequence` | `<div>` | Initiates an container for a sequence for the finite wizard. |
+| `.pf-c-wizard-finite__content` | `<div>` | Initiates an area for the content of the finite wizard. |
+| `.pf-c-wizard-finite__icon` | `<div>` | Initiates an icon for the finite wizard to be used as status in the final step. |

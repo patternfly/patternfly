@@ -2,14 +2,16 @@
 
   {{#> wizard-finite-header}}
 
-    {{#> wizard-finite-title}}
+    {{#> wizard-finite-title-area}}
       {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
           Wizard title
       {{/title}}
-      {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
-          Wizard description
-      {{/title}}
-    {{/wizard-finite-title}}
+      {{#> wizard-finite-description}}
+        {{#> title titleType="h2"}}
+            Wizard description
+        {{/title}}
+      {{/wizard-finite-description}}
+    {{/wizard-finite-title-area}}
 
       {{!-- Sequence will be added here --}}
             <div class="pf-c-wizard-finite__sequence">

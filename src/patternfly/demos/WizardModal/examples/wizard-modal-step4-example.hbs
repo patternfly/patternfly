@@ -4,27 +4,64 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attributes='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+      {{#> modal-box modal-box--modifier="pf-m-lg pf-m-dark" modal-box--attribute='aria-labelledby="modal-step4-title" aria-describedby="modal-step4-description"'}}
         {{#> wizard-finite-header}}
           {{#> modal-box-close}}
-            {{#> button btnClass="pf-m-plain" btnAttributes='aria-label="Close Dialog"'}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
               <i class="fas fa-times"></i>
             {{/button}}
           {{/modal-box-close}}
 
-          {{#> wizard-finite-title}}
-            {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+          {{#> wizard-finite-title-area}}
+            {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="wizard-step4-title"'}}
                 Wizard title
             {{/title}}
-            {{#> title titleType="h1" title--modifier="pf-m-md pf-c-wizard-finite__description"}}
+            {{#> wizard-finite-description}}
+              {{#> title titleType="h2"  title--attribute='id="wizard-step4-description"'}}
                 Wizard description
-            {{/title}}
-          {{/wizard-finite-title}}
+              {{/title}}
+            {{/wizard-finite-description}}
+          {{/wizard-finite-title-area}}
 
-          {{!-- Sequence will be added here --}}
-          <div class="pf-c-wizard-finite__sequence">
-            sequence here
-          </div>
+
+            <div class="pf-c-wizard-finite__sequence">
+              {{#> sequence sequence--attribute='aria-label="sequence"'}}
+                {{#> sequence-control sequence-control--modifier="pf-m-start" sequence-control--attribute='aria-label="Start"'}}
+                  {{#> sequence-control-icon sequence-control-icon--start="true"}}
+                  {{/sequence-control-icon}}
+                {{/sequence-control}}
+                {{#> sequence-list sequence-list--attribute='role="list"'}}
+                  {{#> sequence-item}}
+                    {{#> sequence-link sequence-link--attribute='href="#"'}}
+                      {{#> sequence-content}}
+                        {{#> sequence-content-title}}Information{{/sequence-content-title}}
+                        {{#> sequence-content-status}}Status{{/sequence-content-status}}
+                      {{/sequence-content}}
+                    {{/sequence-link}}
+                  {{/sequence-item}}
+                  {{#> sequence-item}}
+                    {{#> sequence-link sequence-link--attribute='href="#"'}}
+                      {{#> sequence-content}}
+                        {{#> sequence-content-title}}Configuration{{/sequence-content-title}}
+                        {{#> sequence-content-status}}Status{{/sequence-content-status}}
+                      {{/sequence-content}}
+                    {{/sequence-link}}
+                  {{/sequence-item}}
+                  {{#> sequence-item}}
+                    {{#> sequence-link sequence-link--modifier="pf-m-current" sequence-link--attribute='href="#"'}}
+                      {{#> sequence-content}}
+                        {{#> sequence-content-title}}Review{{/sequence-content-title}}
+                        {{#> sequence-content-status}}Status{{/sequence-content-status}}
+                      {{/sequence-content}}
+                    {{/sequence-link}}
+                  {{/sequence-item}}
+                {{/sequence-list}}
+                {{#> sequence-control sequence-control--modifier="pf-m-end" sequence-control--attribute='aria-label="End"'}}
+                  {{#> sequence-control-icon sequence-control-icon--end="true"}}
+                  {{/sequence-control-icon}}
+                {{/sequence-control}}
+              {{/sequence}}
+            </div>
 
         {{/wizard-finite-header}}
 
