@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
@@ -14,6 +15,13 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
+      <Helmet>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.1/css/patternfly.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.1/css/patternfly-additions.css"
+        />
+      </Helmet>
       <Example heading="PatternFly 3 Popover">{PopoverUpgradeExamplesExample1}</Example>
       <Example heading="PatternFly 4 Popover">{PopoverUpgradeExamplesExample2}</Example>
     </Documentation>
