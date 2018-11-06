@@ -1,10 +1,8 @@
 <li class="pf-c-tabs__item{{#if tabs-item--current}} pf-m-current{{/if}}{{#if tabs-item--modifier}} {{tabs-item--modifier}}{{/if}}" 
-  role="presentation"
   {{#if tabs-item--attribute}}
     {{{tabs-item--attribute}}}
   {{/if}}>
   <button id="{{tabs-item--button-id}}" class="pf-c-tabs__button{{#if tab-item--current}} pf-m-current{{/if}}{{#if tab-item--modifier}} {{tab-item--modifier}}{{/if}}" 
-    role="tab" 
     {{#if tab-item--current}}
       aria-selected="true"
     {{/if}}>
