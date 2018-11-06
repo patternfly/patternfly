@@ -18,7 +18,7 @@
   --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-dropdown__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
-  --pf-c-dropdown__toggle--hover--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
@@ -84,7 +84,7 @@
   &:hover,
   &.pf-m-hover {
     &::before {
-      border-bottom-width: var(--pf-c-dropdown__toggle--hover--BorderBottomWidth);
+      border-bottom-color: var(--pf-c-dropdown__toggle--hover--BorderBottomColor);
     }
   }
 
