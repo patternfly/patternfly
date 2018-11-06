@@ -48,6 +48,9 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control--readonly--focus--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--disabled-color--200);
 
+  // input alt style
+  --pf-c-form-control--alt--BottomBorderColor: var(--pf-global--BorderColor--dark);
+
   // Input m-invalid
   --pf-c-form-control--invalid--PaddingBottom: calc(var(--pf-c-form-control--PaddingBottom) - calc(var(--pf-c-form-control--invalid--BorderBottomWidth) - var(--pf-c-form-control--BorderWidth)));
   --pf-c-form-control--invalid--BorderBottomColor: var(--pf-global--danger-color--100);
@@ -87,6 +90,33 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     color: var(--pf-c-form-control--placeholder--Color);
   }
 
+  &[readonly] {
+    border-bottom-color: var(--pf-c-form-control--readonly--BorderBottomColor);
+
+    &:focus {
+      padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
+      border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
+      border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
+    }
+  }
+
+  &.pf-m-form-control-alt {
+    padding-right: 0;
+    padding-left: 0;
+    border-color: transparent transparent var(--pf-c-form-control--alt--BottomBorderColor);
+  }
+
+  @at-root select#{&} {
+    padding-right: var(--pf-c-form-control__select--PaddingRight);
+    background: var(--pf-c-form-control__select--Background);
+
+    &[aria-invalid="true"] {
+      --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--FontSize) - calc(var(--pf-c-form-control--PaddingRight) * 2));
+
+      background: var(--pf-c-form-control__select--Background), var(--pf-c-form-control--invalid--Background);
+    }
+  }
+
   &.pf-m-hover,
   &:hover {
     border-bottom-color: var(--pf-c-form-control--hover--BorderBottomColor);
@@ -106,32 +136,11 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
 
-  &[readonly] {
-    border-bottom-color: var(--pf-c-form-control--readonly--BorderBottomColor);
-
-    &:focus {
-      padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
-      border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
-      border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
-    }
-  }
-
   &[aria-invalid="true"] {
     padding-right: var(--pf-c-form-control--invalid--PaddingRight);
     padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom);
     background: var(--pf-c-form-control--invalid--Background);
     border-bottom-color: var(--pf-c-form-control--invalid--BorderBottomColor);
     border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
-  }
-
-  @at-root select#{&} {
-    padding-right: var(--pf-c-form-control__select--PaddingRight);
-    background: var(--pf-c-form-control__select--Background);
-
-    &[aria-invalid="true"] {
-      --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--FontSize) - calc(var(--pf-c-form-control--PaddingRight) * 2));
-
-      background: var(--pf-c-form-control__select--Background), var(--pf-c-form-control--invalid--Background);
-    }
   }
 }
