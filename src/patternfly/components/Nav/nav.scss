@@ -7,7 +7,7 @@
   // List link
   --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__list-link--PaddingLeft: var(--pf-global--spacer--xl);
 
   // font weight
@@ -37,9 +37,6 @@
   // hardcoding border bottom to match design spec
   --pf-c-nav__list-link--after--Width: 3.125rem;
   --pf-c-nav__list-link--after--Height: 3px;
-
-  // list item
-  --pf-c-nav__list-item--not-first-child--MarginTop: var(--pf-global--spacer--sm);
 
   // List simple link
   --pf-c-nav__simple-list-link--PaddingTop: var(--pf-global--spacer--sm);
@@ -105,7 +102,7 @@
   // List tertiary item
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__tertiary-list-link--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-nav__tertiary-list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__tertiary-list-link--PaddingBottom: var(--pf-global--spacer--sm);
 
   // font
   --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-global--link--normal);
@@ -132,14 +129,14 @@
   --pf-c-nav__tertiary-list-link--focus--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Subnav links
-  --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__subnav--MaxHeight: #{pf-size-prem(600px)};
   --pf-c-nav__subnav-item--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md)); // automate this value based on previously set values
 
   // List toggle
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__list-toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-nav__list-toggle--FontSize: #{pf-font-prem(20px)}; // set unique font size for dropdown caret based on design spec
+  --pf-c-nav__list-toggle--FontSize: #{pf-font-prem(16px)}; // set unique font size for dropdown caret based on design spec
   --pf-c-nav__list-toggle--Transition: .1s ease-in-out;
 
   // Nav section
@@ -214,11 +211,6 @@
   // Item
   > .pf-c-nav__item {
     position: relative;
-
-    // Adjust padding top for subsequent links
-    &:not(:first-child) {
-      margin-top: var(--pf-c-nav__list-item--not-first-child--MarginTop);
-    }
   }
 
   // Link
