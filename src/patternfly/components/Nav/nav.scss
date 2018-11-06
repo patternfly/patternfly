@@ -5,9 +5,9 @@
   --pf-c-nav--Transition: var(--pf-global--Transition);
 
   // List link
-  --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__list-link--PaddingLeft: var(--pf-global--spacer--xl);
 
   // font weight
@@ -102,7 +102,7 @@
   // List tertiary item
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__tertiary-list-link--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-nav__tertiary-list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__tertiary-list-link--PaddingBottom: var(--pf-global--spacer--sm);
 
   // font
   --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-global--link--normal);
