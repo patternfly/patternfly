@@ -8,7 +8,7 @@
 .GeneratedSource__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .GeneratedSource__body {
@@ -16,6 +16,27 @@
   padding: 0;
   background-color: #fff;
   border: 1px solid #eaeaea;
+
+  &.body-collapse {
+    height: 1em;
+    overflow-y: hidden;
+  }
+}
+
+.GeneratedSource__collapse {
+  padding-right: 20px;
+}
+
+.GeneratedSource__link {
+  font-size: 18px;
+  color: #000;
+  border: none;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: #007bba;
+  }
 }
 
 .GeneratedSource__pre[class*="language-"],

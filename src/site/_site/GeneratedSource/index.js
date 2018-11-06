@@ -7,24 +7,41 @@ import CodepenButton from '@siteComponents/CodepenButton';
 import 'prismjs/themes/prism-coy.css';
 import './styles.scss';
 
-export default ({ children }) => {
-  const output =
-    typeof children === 'string'
-      ? children
-      : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
-  const indentedOutput = pretty(output, { ocd: true });
+export default class GeneratedSource extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hideSource: true };
+  }
 
-  return (
-    <div className="GeneratedSource">
-      <div className="GeneratedSource__header">
-        <div className="GeneratedSource_title" />
-        <CodepenButton html={indentedOutput} />
+  showView() {
+    this.setState(prevState => ({
+      hideSource: !prevState.hideSource
+    }));
+  }
+
+  render() {
+    const { children } = this.props;
+    const output =
+      typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
+    const indentedOutput = pretty(output, { ocd: true });
+
+    return (
+      <div className="GeneratedSource">
+        <div className="GeneratedSource__header">
+          <div className="GeneratedSource_title" />
+          <span className="GeneratedSource__collapse">
+            <button className="GeneratedSource__link" onClick={() => this.showView('source')}>
+              {this.state.hideSource ? 'Expand Code' : 'Collapse Code'}
+            </button>
+          </span>
+          <CodepenButton html={indentedOutput} />
+        </div>
+        <div className={`GeneratedSource__body ${this.state.hideSource ? 'body-collapse' : ''} `}>
+          <pre className="GeneratedSource__pre">
+            <PrismCode className="language-html">{indentedOutput}</PrismCode>
+          </pre>
+        </div>
       </div>
-      <div className="GeneratedSource__body">
-        <pre className="GeneratedSource__pre">
-          <PrismCode className="language-html">{indentedOutput}</PrismCode>
-        </pre>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
