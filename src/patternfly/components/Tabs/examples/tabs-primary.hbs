@@ -4,12 +4,6 @@
   {{#> tabs-item tabs-item--attribute='id="ex1-tab3"'}}Tab item 3{{/tabs-item}}
 {{/tabs}}
 
-<section id="section1" aria-labelledby="ex1-tab1" hidden>
-  Tab 1 section
-</section>
-<section id="section2" aria-labelledby="ex1-tab2">
-  Tab 2 section
-</section>
-<section id="section3" aria-labelledby="ex1-tab3" hidden>
-  Tab 3 section
-</section>
+{{#> tabs-section tabs-section--attribute='id="ex1-section1" aria-labelledby="ex1-tab1"'}}Tab 1 section{{/tabs-section}}
+{{#> tabs-section tabs-section--attribute='id="ex1-section2" aria-labelledby="ex1-tab2" hidden'}}Tab 2 section{{/tabs-section}}
+{{#> tabs-section tabs-section--attribute='id="ex1-section3" aria-labelledby="ex1-tab3" hidden'}}Tab 3 section{{/tabs-section}}
