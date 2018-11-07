@@ -41,7 +41,6 @@
   color: var(--pf-c-chip--Color);
   vertical-align: middle;
   background-color: var(--pf-c-chip--BackgroundColor);
-  border: 0;
   border-radius: var(--pf-c-chip--BorderRadius);
 
   &::before {
@@ -85,13 +84,13 @@
       padding-right: var(--pf-c-chip--m-overflow__button--PaddingRight);
       padding-left: var(--pf-c-chip--m-overflow__button--PaddingLeft);
 
-      &.pf-m-active,
+      &.pf-m-active::after,
       &:active::after {
         border: var(--pf-c-chip__button--active--BorderWidth) solid var(--pf-c-chip__button--active--BorderColor);
         border-radius: var(--pf-c-chip__button--BorderRadius);
       }
 
-      &.pf-m-focus,
+      &.pf-m-focus::after,
       &:focus::after {
         border: var(--pf-c-chip__button--focus--BorderWidth) solid var(--pf-c-chip__button--focus--BorderColor);
         border-radius: var(--pf-c-chip__button--BorderRadius);
@@ -106,17 +105,6 @@
     }
   }
 
-  // Text Element
-  .pf-c-chip__text {
-    max-width: var(--pf-c-chip__text--MaxWidth);
-    margin: auto;
-    overflow: hidden;
-    font-size: var(--pf-c-chip__text--FontSize);
-    color: var(--pf-c-chip__text--Color);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
   // Remove Button
   .pf-c-button {
     min-width: var(--pf-c-chip__button--MinWidth);
@@ -125,6 +113,11 @@
     padding-left: var(--pf-c-chip__button--PaddingLeft);
     font-size: var(--pf-c-chip__button--FontSize);
     color: var(--pf-c-chip__button--Color);
+
+    &.pf-m-plain {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     &.pf-m-focus,
     &:focus {
@@ -142,6 +135,17 @@
       margin-right: 0;
     }
   }
+}
+
+// Text Element
+.pf-c-chip__text {
+  max-width: var(--pf-c-chip__text--MaxWidth);
+  margin: auto;
+  overflow: hidden;
+  font-size: var(--pf-c-chip__text--FontSize);
+  color: var(--pf-c-chip__text--Color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Chip group container
@@ -171,15 +175,15 @@
   &:not(:last-child) {
     margin-right: var(--pf-c-chip__group--MarginRight);
   }
+}
 
-  .pf-c-chip__label {
-    padding-right: var(--pf-c-chip__label--PaddingRight);
-    padding-left: var(--pf-c-chip__label--PaddingLeft);
-    margin: auto;
-    overflow: hidden;
-    font-size: var(--pf-c-chip__label--FontSize);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+.pf-c-chip__label {
+  padding-right: var(--pf-c-chip__label--PaddingRight);
+  padding-left: var(--pf-c-chip__label--PaddingLeft);
+  margin: auto;
+  overflow: hidden;
+  font-size: var(--pf-c-chip__label--FontSize);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
