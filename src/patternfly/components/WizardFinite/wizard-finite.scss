@@ -72,7 +72,12 @@
 
 // This styling must be applied to the children of the description because otherwise it is overridden by the default styling on .pf-*
 .pf-c-wizard-finite__description > * {
-  color: var(--pf-c-wizard-finite__description--Color);
+  // This element always needs to be dark
+  @extend %pf-t-dark;
+
+  color: var(--pf-global--Color--200);
+
+  // doesn't work to use a variable defined in the normal place because the variables above get defined in normal (light) mode color, not dark as should be used for this part of the component: var(--pf-c-wizard-finite__description--Color);
 }
 
 .pf-c-wizard-finite__sequence {
