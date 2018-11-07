@@ -20,4 +20,4 @@ A breadcrumb is a list of links to display a user's navigational hierarchy. The 
 | `.pf-c-breadcrumb__item`          | `<li>`                    | Initiates default breadcrumb list item. |
 | `.pf-c-breadcrumb__item-divider`  | `<span>`                  | Initiates default breadcrumb list item divider. |
 | `.pf-c-breadcrumb__link`          | `<a>`                     | Initiates default breadcrumb list link. |
-| `.pf-m-current`                   | `.pf-c-breadcrumb__item`  | Modifies to display the list item as the current item. |
+| `.pf-m-current`                   | `.pf-c-breadcrumb__link`  | Modifies to display the list item as the current item. |
