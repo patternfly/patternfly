@@ -49,9 +49,11 @@
   grid-template-columns: repeat(12, [col-start] 1fr);
 
   > *,
-  &__item {
+  .pf-l-grid__item {
     grid-column-start: auto;
     grid-column-end: span 12;
+    min-width: 0;
+    min-height: 0;
   }
 
   // Loop through $breakpoints map to generate responsive classes
