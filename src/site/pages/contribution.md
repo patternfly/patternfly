@@ -46,6 +46,13 @@ If an ID is needed for an element, please use the Handlebars unique ID helper.  
 
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
 
+### Handlebars utilities
+| Property | Usage                                                          | Example
+| ------------ | --------------------------------------------------- | -------------
+| `uniqueId`   | Creates a unique id | badge-{{uniqueId}}
+| `concat`   | Join multiple strings or variables together |  {{concat 'Hello' ' world' '!!!'}} results in Hello world!!!
+| `contains` | Tests to see if a string contains another string | {{#contains alert--modifier 'pf-m-amazingmodifier'}}<br>&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br>{{else}}<br>&nbsp;&nbsp;&lt;span&gt;Alternate Text&lt;/span&gt;<br>{{/contains}}
+
 ## Documentation
 For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
 
