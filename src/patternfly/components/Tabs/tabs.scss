@@ -11,11 +11,11 @@
   // Primary Tab Items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs__item--current--Color: var(--pf-global--active-color--100);
-  --pf-c-tabs__item--hover--BoxShadowColor: #8b8d8f;
+  --pf-c-tabs__item--hover--BoxShadowColor: $pf-color-black-500;
   --pf-c-tabs__item--hover--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--hover--BoxShadowColor);
   --pf-c-tabs__item--current--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--current--Color);
   --pf-c-tabs__item--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__item--BorderColor: #ededed;
+  --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--light-200);
 
   // Secondary Tab Items
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
@@ -29,7 +29,7 @@
   // Scroll Buttons
   --pf-c-tabs__scroll-button--Width: var(--pf-global--spacer--xl);
   --pf-c-tabs__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-tabs__scroll-button--BorderColor: #ededed;
+  --pf-c-tabs__scroll-button--BorderColor: var(--pf-global--BorderColor--light-200);
 
   position: relative;
   display: inline-flex;
