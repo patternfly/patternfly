@@ -92,6 +92,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-string-replace": "^1.0.0",
     "handlebars-loader": "^1.7.0",
+    "handlebars-utils": "^1.0.6",
     "html-loader": "^0.5.5",
     "husky": "^0.14.3",
     "inflection": "^1.12.0",
