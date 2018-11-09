@@ -2,9 +2,9 @@
 
 .pf-c-button {
   // Component
-  --pf-c-button--PaddingTop: #{pf-size-prem(6px)};
+  --pf-c-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-button--PaddingBottom: #{pf-size-prem(6px)};
+  --pf-c-button--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-button--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);

@@ -21,8 +21,8 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   // padding
   // Note for top/bottom padding, subtracting the border height so the height of the input is consistent with buttons and dropdowns that use the same spacing but draw their borders with pseudo elements
-  --pf-c-form-control--PaddingTop: calc(#{pf-size-prem(6px)} - var(--pf-global--BorderWidth--sm));
-  --pf-c-form-control--PaddingBottom: calc(#{pf-size-prem(6px)} - var(--pf-global--BorderWidth--sm));
+  --pf-c-form-control--PaddingTop: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+  --pf-c-form-control--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
   --pf-c-form-control--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-form-control--PaddingLeft: var(--pf-global--spacer--sm);
 
