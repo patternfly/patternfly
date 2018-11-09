@@ -19,9 +19,11 @@
   --pf-c-tabs__item--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__item--current--ZIndex: var(--pf-global--ZIndex--sm);
 
   // Secondary Tab Items
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
+  --pf-c-tabs__item--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Tab Buttons
   --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
@@ -37,6 +39,7 @@
   --pf-c-tabs__scroll-button--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
 
   position: relative;
   display: inline-flex;
@@ -112,7 +115,7 @@
 
   // Current state
   &.pf-m-current {
-    z-index: 1;
+    z-index: var(--pf-c-tabs__item--current--ZIndex);
     border-top-color: var(--pf-c-tabs__item--current--Color);
     border-bottom-color: var(--pf-c-tabs__item--BackgroundColor);
     border-bottom-width: var(--pf-c-tabs__item--BorderBottomWidth);
@@ -137,7 +140,7 @@
 // Secondary tabs
 .pf-c-tabs.pf-m-tabs-secondary {
   .pf-c-tabs__item {
-    z-index: initial;
+    z-index: var(--pf-c-tabs__item--ZIndex);
     border-width: inherit none none;
     border-top-color: var(--pf-c-tabs__item--BorderColor);
 
@@ -172,7 +175,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: var(--pf-c-tabs__scroll-button--ZIndex);
   display: none;
   flex: none;
   width: var(--pf-c-tabs__scroll-button--Width);
