@@ -1,6 +1,6 @@
-{{#> chip-group chip-group--attribute='role="list"'}}
+{{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--attribute='role="list"'}}
 {{#> chip-group-label}}
-      Category
+      Category One
     {{/chip-group-label}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute='id="chip_one"'}}
@@ -9,7 +9,7 @@
     {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
     {{/button}}
   {{/chip}}
-  {{#> chip}}
+  {{!-- {{#> chip}}
     {{#> chip-text chip-text--attribute='id="chip_two"'}}
       Chip Two
     {{/chip-text}}
@@ -18,18 +18,18 @@
   {{/chip}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute='id="chip_three"'}}
-      Chip Three
+      Chip One
     {{/chip-text}}
     {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_three chip_three" aria-label="Remove" id="remove_chip_three"'}}
     {{/button}}
   {{/chip}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute='id="chip_four"'}}
-      Chip Four
+      Chip Two
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_four chip_four" aria-label="Remove" id="remove_chip_four"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_two chip_two" aria-label="Remove" id="remove_chip_four"'}}
     {{/button}}
-  {{/chip}}
+  {{/chip}} --}}
 {{/chip-group}}
 <br>
 <br>

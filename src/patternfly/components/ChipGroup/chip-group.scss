@@ -7,8 +7,9 @@
   --pf-c-chip__group--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip__group--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip__group--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-chip__group--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-chip__group--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-chip__group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-chip__group--m-select-BackgroundColor: transparent;
 
   // Label in group
   --pf-c-chip__label--PaddingLeft: var(--pf-global--spacer--xs);
@@ -16,13 +17,24 @@
   --pf-c-chip__label--FontSize: var(--pf-global--FontSize--sm);
 
   display: inline-flex;
-  padding:
-    var(--pf-c-chip__group--PaddingTop)
-    var(--pf-c-chip__group--PaddingRight)
-    var(--pf-c-chip__group--PaddingBottom)
-    var(--pf-c-chip__group--PaddingLeft);
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: var(--pf-c-chip__group--PaddingRight);
+  padding-left: var(--pf-c-chip__group--PaddingLeft);
+  overflow: hidden;
   background-color: var(--pf-c-chip__group--BackgroundColor);
   border-radius: var(--pf-c-chip__group--BorderRadius);
+
+  &.pf-m-toolbar {
+    background-color: var(--pf-c-chip__group--m-toolbar--BackgroundColor);
+  }
+
+  &.pf-m-select {
+    max-width: 400px;
+    height: 36px;
+    background-color: var(--pf-c-chip__group--m-select--BackgroundColor);
+    outline: 1px solid var(--pf-global--Color--200); // remove
+  }
 
   &:not(:last-child) {
     margin-right: var(--pf-c-chip__group--MarginRight);
@@ -37,5 +49,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+}
+
+/* stylelint-disable-next-line */
+.pf-c-chip-toggle__input:not(checked) ~ .pf-c-chip-group {
+  height: 0;
+}
+
+.pf-c-chip-toggle__input:checked + .pf-c-chip-group {
+  height: 72px;
 }
 
