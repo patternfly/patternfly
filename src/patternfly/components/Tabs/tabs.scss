@@ -10,16 +10,16 @@
 .pf-c-tabs {
   // Primary Tab Items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-tabs__item--current--Color: var(--pf-global--active-color--100);
+  --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
   --pf-c-tabs__item--hover--BoxShadowColor: $pf-color-black-500;
   --pf-c-tabs__item--hover--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--hover--BoxShadowColor);
-  --pf-c-tabs__item--current--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--current--Color);
+  --pf-c-tabs__item--m-current--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--m-current--Color);
   --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--light-200);
   --pf-c-tabs__item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__item--current--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-tabs__item--m-current--ZIndex: var(--pf-global--ZIndex--sm);
 
   // Secondary Tab Items
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
@@ -84,8 +84,8 @@
   // Current state
   &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
   &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
-    border-top-color: var(--pf-c-tabs__item--current--Color);
-    box-shadow: var(--pf-c-tabs__item--current--BoxShadow);
+    border-top-color: var(--pf-c-tabs__item--m-current--Color);
+    box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
   }
 
   // Hover state
@@ -115,14 +115,14 @@
 
   // Current state
   &.pf-m-current {
-    z-index: var(--pf-c-tabs__item--current--ZIndex);
-    border-top-color: var(--pf-c-tabs__item--current--Color);
+    z-index: var(--pf-c-tabs__item--m-current--ZIndex);
+    border-top-color: var(--pf-c-tabs__item--m-current--Color);
     border-bottom-color: var(--pf-c-tabs__item--BackgroundColor);
     border-bottom-width: var(--pf-c-tabs__item--BorderBottomWidth);
 
     .pf-c-tabs__button {
-      color: var(--pf-c-tabs__item--current--Color);
-      box-shadow: var(--pf-c-tabs__item--current--BoxShadow);
+      color: var(--pf-c-tabs__item--m-current--Color);
+      box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
     }
   }
 
