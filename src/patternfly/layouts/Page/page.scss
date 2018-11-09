@@ -1,8 +1,6 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
-$nav: "pf-c-nav";
-
 .pf-l-page {
   // Header
   --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
@@ -281,8 +279,8 @@ $nav: "pf-c-nav";
   padding:
     var(--pf-l-page__main-section--PaddingTop)
     var(--pf-l-page__main-section--PaddingRight)
-    var(--pf-l-page__main-section--PaddingLeft)
-    var(--pf-l-page__main-section--PaddingBottom);
+    var(--pf-l-page__main-section--PaddingBottom)
+    var(--pf-l-page__main-section--PaddingLeft);
   background-color: var(--pf-l-page__main-section--BackgroundColor);
 
   &:last-of-type,
@@ -295,7 +293,7 @@ $nav: "pf-c-nav";
     background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
   }
 
-  &[class^="pf-m-dark"] {
+  &[class*="pf-m-dark-"] {
     @extend %pf-t-dark; // force the container to follow the dark theme
   }
 
