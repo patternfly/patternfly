@@ -11,7 +11,7 @@
   // Primary Tab Items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
-  --pf-c-tabs__item--hover--BoxShadowColor: $pf-color-black-500;
+  --pf-c-tabs__item--hover--BoxShadowColor: var(--pf-global--BorderColor--light);
   --pf-c-tabs__item--hover--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--hover--BoxShadowColor);
   --pf-c-tabs__item--m-current--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--m-current--Color);
   --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--light-200);
