@@ -8,8 +8,11 @@
   --pf-c-chip__group--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip__group--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip__group--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-chip__group--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-chip__group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-chip__group--m-toolbar-MaxWidth: #{pf-size-prem(500px)}; // for demo
   --pf-c-chip__group--m-select-BackgroundColor: transparent;
+  --pf-c-chip__group--m-select-Width: #{pf-size-prem(375px)}; // for demo
 
   // Label in group
   --pf-c-chip__label--PaddingLeft: var(--pf-global--spacer--xs);
@@ -19,25 +22,31 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: var(--pf-c-chip__group--PaddingTop);
   padding-right: var(--pf-c-chip__group--PaddingRight);
+  padding-bottom: var(--pf-c-chip__group--PaddingBottom);
   padding-left: var(--pf-c-chip__group--PaddingLeft);
   overflow: hidden;
   background-color: var(--pf-c-chip__group--BackgroundColor);
   border-radius: var(--pf-c-chip__group--BorderRadius);
 
+  &:not(:last-child) {
+    margin-right: var(--pf-c-chip__group--MarginRight);
+    margin-bottom: var(--pf-c-chip__group--MarginBottom);
+  }
+
   &.pf-m-toolbar {
+    max-width: var(--pf-c-chip__group--m-toolbar-MaxWidth);
     background-color: var(--pf-c-chip__group--m-toolbar--BackgroundColor);
   }
 
   &.pf-m-select {
-    max-width: 400px;
-    height: 36px;
+    width: var(--pf-c-chip__group--m-select-Width);
     background-color: var(--pf-c-chip__group--m-select--BackgroundColor);
-    outline: 1px solid var(--pf-global--Color--200); // remove
-  }
 
-  &:not(:last-child) {
-    margin-right: var(--pf-c-chip__group--MarginRight);
+    .pf-c-chip {
+      margin-bottom: 4px;
+    }
   }
 
   .pf-c-chip-group__label {
@@ -50,13 +59,3 @@
     white-space: nowrap;
   }
 }
-
-/* stylelint-disable-next-line */
-.pf-c-chip-toggle__input:not(checked) ~ .pf-c-chip-group {
-  height: 0;
-}
-
-.pf-c-chip-toggle__input:checked + .pf-c-chip-group {
-  height: 72px;
-}
-
