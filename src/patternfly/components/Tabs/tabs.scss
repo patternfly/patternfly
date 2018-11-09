@@ -66,10 +66,7 @@
   }
 
   // Scroll button modifiers
-  &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1) {
-    display: block;
-  }
-
+  &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1),
   &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
     display: block;
   }
