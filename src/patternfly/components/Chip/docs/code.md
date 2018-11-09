@@ -1,6 +1,6 @@
 ## Overview
 
-Chips are used to display items that have been filtered or selected from a larger group. Chips are made of a text element and a button component that is used to remove the chip from selection. When the text overflows it will be truncated using ellipses. When more than one chip has been filtered/selected it belongs to a group (see ChipGroup).
+Chips are used to display items that have been filtered or selected from a larger group. They comprise of a text element and a required button component that is used to remove the chip from selection. When the text overflows its truncated using ellipses. When more than one chip has been filtered/selected it belongs to a group (see ChipGroup).
 
 ## Accessibility
 
@@ -14,7 +14,7 @@ Chips are used to display items that have been filtered or selected from a large
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip` | `<div>` | Initiates the body of a chip. |
+| `.pf-c-chip` | `<li>` | Initiates the body of a chip. |
 | `.pf-c-chip__text` | `<p>` | Initiates the text inside the chip. |
 | `.pf-c-button` | `<button>` | Initiates the button used to remove the chip. |
 | `.pf-m-overflow` | `.pf-c-chip` | Applies styling of the overflow chip. |

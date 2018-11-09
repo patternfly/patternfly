@@ -1,6 +1,6 @@
 ## Overview
 
- Chip Groups require modifiers depending on their use in toolbars or selects. In Toolbars the Filter component can have more than one category which means there will be multiple Chip Groups displayed. The group's label element indicates the category's label name and its heading level should be based on the context in which this component exists on the page. When groups of chips overflow they will wrap to the next line. This overflow is indicated by a chip with the modifier `.pf-m-overflow' that acts as a button to show/hide the overflown chips by expanding the height of the container they belong to. Selects have one chip group without a transparent color and they also wrap to the next line when overflown.
+ Chip Groups require modifiers depending on their use in toolbars or selects. For Toolbars use `.pf-m-toolbar`. If the Filter component on a toolbar has more than one category, multiple Chip Groups should display on the toolbar. The group's label element (not required) indicates the category's label name and its heading level should be based on the context in which this component exists on the page. When groups of chips overflow they will wrap to the next line. This overflow is indicated by a chip with the modifier `.pf-m-overflow` that acts as a button to show/hide the overflown chips by expanding the height of the container they belong to. For selects use `.pf-m-select`. Selects take on the same properties as the toolbar except that they are apart of just one group  and have a transparent background color.
 
 ## Accessibility
 
@@ -12,7 +12,7 @@
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip__group` | `<div>` | Initiates the container used to group chips. |
+| `.pf-c-chip__group` | `<ul>` | Initiates the container used to group chips. |
 | `.pf-c-chip__label` | `<h4>` | Initiates the label for a group of chips. |
 | `.pf-m-toolbar` | `.pf-c-chip__group` | Modifies `.pf-c-chip__group` to be used in a toolbar. |
 | `.pf-m-select` | `.pf-c-chip__group` | Modifies `.pf-c-chip__group` to be used in a select. |

@@ -14,6 +14,9 @@
   --pf-c-chip__group--m-select-BackgroundColor: transparent;
   --pf-c-chip__group--m-select-Width: #{pf-size-prem(375px)}; // for demo
 
+  // Chip
+  --pf-c-chip--MarginBottom: var(--pf-global--spacer--xs);
+
   // Label in group
   --pf-c-chip__label--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-chip__label--PaddingRight: var(--pf-global--spacer--sm);
@@ -45,7 +48,7 @@
     background-color: var(--pf-c-chip__group--m-select--BackgroundColor);
 
     .pf-c-chip {
-      margin-bottom: 4px;
+      margin-bottom: var(--pf-c-chip--MarginBottom);
     }
   }
 
