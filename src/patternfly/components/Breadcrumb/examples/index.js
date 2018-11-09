@@ -27,7 +27,7 @@ export default () => {
         {breadcrumbWithoutHomeLink}
       </Example>
       <Example
-        heading="Breadcrumb and Title"
+        heading="Breadcrumb with Heading"
         handlebars={breadcrumbWithTitleExampleRaw}
         docs={breadcrumbWithTitleExampleDoc}
       >

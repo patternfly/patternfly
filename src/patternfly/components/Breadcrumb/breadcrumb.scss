@@ -19,6 +19,9 @@
   --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color);
   --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
 
+  // Heading
+  --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
+
   // ============================================================ //
   // Modifiers
   // ============================================================ //
@@ -85,4 +88,8 @@
       text-decoration: none;
     }
   }
+}
+
+.pf-c-breadcrumb__heading {
+  font-size: var(--pf-c-breadcrumb__heading--FontSize);
 }

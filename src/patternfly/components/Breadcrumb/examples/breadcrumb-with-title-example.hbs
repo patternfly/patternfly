@@ -25,13 +25,11 @@
       {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
-      {{#> breadcrumb-link breadcrumb-link--current="true"}}
-        Section Title
-      {{/breadcrumb-link}}
+      {{#> breadcrumb-heading}}
+        {{#> breadcrumb-link breadcrumb-link--current="true"}}
+          Section Title
+        {{/breadcrumb-link}}
+      {{/breadcrumb-heading}}
     {{/breadcrumb-item}}
   {{/breadcrumb-list}}
 {{/breadcrumb}}
-
-{{#> title titleType="h1" title--modifier="pf-m-xl pf-u-mt-md"}}
-  Main Title
-{{/title}}
