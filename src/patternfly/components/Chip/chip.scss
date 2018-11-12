@@ -12,8 +12,15 @@
   --pf-c-chip--m-overflow--PaddingLeft: 0;
   --pf-c-chip--m-overflow--BorderColor: transparent;
   --pf-c-chip--m-overflow--BorderWidth: 0;
-  --pf-c-chip--m-overflow__button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip--m-overflow__button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip--m-overflow--button--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-chip--m-overflow--button--BorderWidth: 0;
+  --pf-c-chip--m-overflow--button--BorderColor: transparent;
+  --pf-c-chip--m-overflow--button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip--m-overflow--button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip--m-overflow--button--active--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-chip--m-overflow--button--active--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-chip--m-overflow--button--focus--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-chip--m-overflow--button--focus--BorderColor: var(--pf-global--BorderColor);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -27,17 +34,10 @@
   --pf-c-chip__button--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-chip__button--Color: var(--pf-global--Color--200);
   --pf-c-chip__button--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-chip__button--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-chip__button--BorderWidth: 0;
-  --pf-c-chip__button--BorderColor: transparent;
   --pf-c-chip__button--hover--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-chip__button--hover--BorderColor: var(--pf-global--BorderColor);
   --pf-c-chip__button--hover--Color: var(--pf-global--primary-color--100);
-  --pf-c-chip__button--active--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-chip__button--active--BorderColor: var(--pf-global--BorderColor);
   --pf-c-chip__button--active--Color: var(--pf-global--primary-color--200);
-  --pf-c-chip__button--focus--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-chip__button--focus--BorderColor: var(--pf-global--BorderColor);
   --pf-c-chip__button--focus--Color: var(--pf-global--primary-color--200);
 
   position: relative;
@@ -97,16 +97,16 @@
     }
 
     .pf-c-button {
-      padding-right: var(--pf-c-chip--m-overflow__button--PaddingRight);
-      padding-left: var(--pf-c-chip--m-overflow__button--PaddingLeft);
-      border: var(--pf-c-chip__button--BorderWidth) solid var(--pf-c-chip__button--BorderColor);
+      padding-right: var(--pf-c-chip--m-overflow--button--PaddingRight);
+      padding-left: var(--pf-c-chip--m-overflow--button--PaddingLeft);
+      border: var(--pf-c-chip--m-overflow--button--BorderWidth) solid var(--pf-c-chip--m-overflow--button--BorderColor);
 
       &.pf-m-active,
       &:active {
         /* stylelint-disable-next-line */
         &::after {
-          border: var(--pf-c-chip__button--active--BorderWidth) solid var(--pf-c-chip__button--active--BorderColor);
-          border-radius: var(--pf-c-chip__button--BorderRadius);
+          border: var(--pf-c-chip--m-overflow--button--active--BorderWidth) solid var(--pf-c-chip--m-overflow--button--active--BorderColor);
+          border-radius: var(--pf-c-chip--m-overflow--button--BorderRadius);
         }
       }
 
@@ -114,14 +114,14 @@
       &:focus {
         /* stylelint-disable-next-line */
         &::after {
-          border: var(--pf-c-chip__button--focus--BorderWidth) solid var(--pf-c-chip__button--focus--BorderColor); // TO DO
-          border-radius: var(--pf-c-chip__button--BorderRadius);
+          border: var(--pf-c-chip--m-overflow--button--focus--BorderWidth) solid var(--pf-c-chip--m-overflow--button--focus--BorderColor);
+          border-radius: var(--pf-c-chip--m-overflow--button--BorderRadius);
         }
       }
     }
   }
 
-  // Remove Button
+  // Button
   .pf-c-button {
     min-width: var(--pf-c-chip__button--MinWidth);
     min-height: var(--pf-c-chip__button--MinHeight);
@@ -135,14 +135,9 @@
       padding-bottom: 0;
     }
 
-    &.pf-m-hover,
-    &:hover {
-      --pf-c-chip__button--Color: var(--pf-c-chip__button--hover--Color);
-    }
-
     &.pf-m-focus,
     &:focus {
-      color: var(--pf-c-chip__button--focus--Color); // no
+      color: var(--pf-c-chip__button--focus--Color);
       outline: none; // turn off default button focus styles
     }
 
