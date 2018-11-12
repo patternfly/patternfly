@@ -8,30 +8,26 @@
 
 // Tabs
 .pf-c-tabs {
-  // Primary Tab Items
+  // Primary Tab items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
-  --pf-c-tabs__item--hover--BoxShadowColor: var(--pf-global--BorderColor--light);
-  --pf-c-tabs__item--hover--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--hover--BoxShadowColor);
-  --pf-c-tabs__item--m-current--BoxShadow: inset 0 pf-size-prem(2) 0 0 var(--pf-c-tabs__item--m-current--Color);
   --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--light-200);
   --pf-c-tabs__item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__item--m-current--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
+  --pf-c-tabs__item--m-current--BorderTopWidth: pf-size-prem(2);
 
-  // Secondary Tab Items
+  // Secondary Tab items
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
-  --pf-c-tabs__item--ZIndex: var(--pf-global--ZIndex--xs);
 
-  // Tab Buttons
+  // Tab buttons
   --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingLeft: var(--pf-global--spacer--sm);
 
-  // Scroll Buttons
+  // Scroll buttons
   --pf-c-tabs__scroll-button--Width: var(--pf-global--spacer--xl);
   --pf-c-tabs__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs__scroll-button--BorderColor: var(--pf-global--BorderColor--light-200);
@@ -39,15 +35,12 @@
   --pf-c-tabs__scroll-button--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
+  --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--sm);
 
   position: relative;
-  display: inline-flex;
-
-  // Overlap secondary tab border
-  & ~ .pf-c-tabs.pf-m-tabs-secondary {
-    margin-top: -1px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   // Filled style
   &.pf-m-fill {
@@ -74,142 +67,175 @@
       }
     }
   }
-
-  // Scroll button modifiers
-  &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1),
-  &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
-    display: block;
-  }
-
-  // Scroll button Current state
-  &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
-  &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
-    padding-top: var(--pf-c-tabs__item--BorderTopWidth);
-    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
-    box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
-
-    &::before {
-      display: block;
-      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
-      content: "";
-      border-top: pf-size-prem(2) solid var(--pf-c-tabs__item--hover--Color);
-    }
-  }
-
-  // Hover state
-  &:not(.pf-m-start-current) .pf-c-tabs__scroll-button:nth-of-type(1):hover,
-  &:not(.pf-m-end-current) .pf-c-tabs__scroll-button:nth-of-type(2):hover {
-    padding-top: calc(var(--pf-c-tabs__button--PaddingTop) + var(--pf-c-tabs__item--BorderTopWidth));
-    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
-    box-shadow: var(--pf-c-tabs__item--hover--BoxShadow);
-  }
 }
 
 // Tab List
 .pf-c-tabs__list {
+  position: relative;
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+
+  // Right border on last tab
+  .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
+    border-right-width: var(--pf-c-tabs__item--BorderRightWidth);
+  }
+
+  // Scroll buttons
+  &.pf-m-start .pf-c-tabs__scroll-button,
+  &.pf-m-end .pf-c-tabs__scroll-button {
+    display: block;
+  }
+
+  // Scroll button current state
+  &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
+  &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-left: var(--pf-c-tabs__item--BorderLeftWidth);
+      content: "";
+      border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--m-current--Color);
+    }
+  }
+
+  // Scroll button hover state
+  &:not(.pf-m-start-current) .pf-c-tabs__scroll-button:nth-of-type(1):hover,
+  &:not(.pf-m-end-current) .pf-c-tabs__scroll-button:nth-of-type(2):hover {
+    ::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-left: var(--pf-c-tabs__item--BorderLeftWidth);
+      content: "";
+      border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
+    }
+  }
 }
 
 // Tab items
 .pf-c-tabs__item {
   flex: none;
-  border: solid var(--pf-c-tabs__item--BorderColor);
-  border-width: var(--pf-c-tabs__item--BorderTopWidth) 0 var(--pf-c-tabs__item--BorderBottomWidth) var(--pf-c-tabs__item--BorderLeftWidth);
 
-  &:last-child {
-    border-right-width: var(--pf-c-tabs__item--BorderRightWidth);
-  }
-
-  // Current state
-  &.pf-m-current {
-    z-index: var(--pf-c-tabs__item--m-current--ZIndex);
-    border-bottom-color: var(--pf-c-tabs__item--BackgroundColor);
-    border-bottom-width: var(--pf-c-tabs__item--BorderBottomWidth);
-
-    &::before {
-      display: block;
-      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
-      content: "";
-      border-top: pf-size-prem(2) solid var(--pf-c-tabs__item--m-current--Color);
-    }
-
-    &.pf-c-tabs__button {
-      margin-top: -2px;
-      color: var(--pf-c-tabs__item--m-current--Color);
-    }
-  }
-
-  &:not(.pf-m-current):hover {
-    &::before {
-      display: block;
-      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
-      content: "";
-      border-top: pf-size-prem(2) solid var(--pf-c-tabs__item--hover--Color);
-    }
-
-    &.pf-c-tabs__button {
-      margin-top: -2px;
-    }
-  }
-
-  // Button Hover state
-  &:not(.pf-m-current):hover .pf-c-tabs__button {
-    padding-top: calc(var(--pf-c-tabs__button--PaddingTop) + var(--pf-c-tabs__item--BorderTopWidth));
-    margin-top: -2px;
-  }
-}
-
-// Secondary tabs
-.pf-c-tabs.pf-m-tabs-secondary {
-  .pf-c-tabs__item {
-    z-index: var(--pf-c-tabs__item--ZIndex);
-    border-width: inherit none none;
-
-    // Hover state
-    &:not(.pf-m-current):hover .pf-c-tabs__button {
-      color: var(--pf-c-tabs__item--hover--Color);
-    }
-  }
-
-  // Different styling for secondary tab buttons
+  // Tab button
   .pf-c-tabs__button {
-    box-shadow: none;
+    position: relative;
+    padding-top: var(--pf-c-tabs__button--PaddingTop);
+    padding-right: var(--pf-c-tabs__button--PaddingRight);
+    padding-bottom: var(--pf-c-tabs__button--PaddingBottom);
+    padding-left: var(--pf-c-tabs__button--PaddingLeft);
+    user-select: none;
+    border: initial;
 
-    &:hover {
-      box-shadow: none;
+    // Tab button borders
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      border: solid var(--pf-c-tabs__item--BorderColor);
+      border-width: var(--pf-c-tabs__item--BorderTopWidth) 0 var(--pf-c-tabs__item--BorderBottomWidth) var(--pf-c-tabs__item--BorderLeftWidth);
     }
+  }
+
+  // Tab item hover state
+  &:not(.pf-m-current):hover .pf-c-tabs__button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: var(--pf-c-tabs__item--BorderLeftWidth);
+    content: "";
+    border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
+  }
+
+  // Tab item current state
+  &.pf-m-current .pf-c-tabs__button {
+    color: var(--pf-c-tabs__item--m-current--Color);
+
+    &::before {
+      border-bottom-color: var(--pf-c-tabs__item--BackgroundColor);
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-left: var(--pf-c-tabs__item--BorderLeftWidth);
+      content: "";
+      border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--m-current--Color);
+    }
+  }
+
+  // Secondary tab states
+  .pf-m-tabs-secondary & .pf-c-tabs__button {
+    // Remove current state
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    // Remove hover state
+    &:hover::after {
+      content: none;
+    }
+  }
+
+  // Secondary tab hover state
+  .pf-m-tabs-secondary &:not(.pf-m-current) .pf-c-tabs__button:hover {
+    color: var(--pf-c-tabs__item--hover--Color);
   }
 }
 
-// Tab buttons
-.pf-c-tabs__button {
-  padding-top: var(--pf-c-tabs__button--PaddingTop);
-  padding-right: var(--pf-c-tabs__button--PaddingRight);
-  padding-bottom: var(--pf-c-tabs__button--PaddingBottom);
-  padding-left: var(--pf-c-tabs__button--PaddingLeft);
-  user-select: none;
-  border: initial;
-}
-
-// Directional scroll buttons
+// Scroll buttons
 .pf-c-tabs__scroll-button {
   position: absolute;
   top: 0;
   bottom: 0;
   z-index: var(--pf-c-tabs__scroll-button--ZIndex);
-  display: none;
   flex: none;
   width: var(--pf-c-tabs__scroll-button--Width);
   line-height: 1;
   background-color: var(--pf-c-tabs__scroll-button--BackgroundColor);
-  border: solid var(--pf-c-tabs__item--BorderColor);
-  border-width: var(--pf-c-tabs__scroll-button--BorderTopWidth) var(--pf-c-tabs__scroll-button--BorderRightWidth) var(--pf-c-tabs__scroll-button--BorderBottomWidth) var(--pf-c-tabs__scroll-button--BorderLeftWidth);
+  border: initial;
+  border-width: initial;
   border-radius: initial;
 
-  // Right scroll button
+  // Align right scroll button
   &:nth-of-type(2) {
     right: 0;
+  }
+
+  // Scroll button borders
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: solid var(--pf-c-tabs__scroll-button--BorderColor);
+    border-width: var(--pf-c-tabs__scroll-button--BorderTopWidth) var(--pf-c-tabs__scroll-button--BorderRightWidth) var(--pf-c-tabs__scroll-button--BorderBottomWidth) var(--pf-c-tabs__scroll-button--BorderLeftWidth);
+  }
+
+  // Scroll button hover state
+  &:hover::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
   }
 }
