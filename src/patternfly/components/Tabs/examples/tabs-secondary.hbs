@@ -1,37 +1,39 @@
 <div class="pf-c-tabs-container">
   {{#> tabs tabs--attribute='aria-label="Secondary tabs example"'}}
-    {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-tab1" aria-controls="ex3-section1"'}}
-        Tab item 1
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-tab2" aria-controls="ex3-section2"'}}
-        Tab item 2
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-tab3" aria-controls="ex3-section3"'}}
-        Tab item 3
-      {{/tabs-button}}
-    {{/tabs-item}}
-  {{/tabs}}
+    {{#> tabs-list}}
+      {{#> tabs-item tabs-item--current="true"}}
+        {{#> tabs-button tabs-button--attribute='id="ex3-tab1" aria-controls="ex3-section1"'}}
+          Tab item 1
+        {{/tabs-button}}
+      {{/tabs-item}}
+      {{#> tabs-item}}
+        {{#> tabs-button tabs-button--attribute='id="ex3-tab2" aria-controls="ex3-section2"'}}
+          Tab item 2
+        {{/tabs-button}}
+      {{/tabs-item}}
+      {{#> tabs-item}}
+        {{#> tabs-button tabs-button--attribute='id="ex3-tab3" aria-controls="ex3-section3"'}}
+          Tab item 3
+        {{/tabs-button}}
+      {{/tabs-item}}
+    {{/tabs-list}}
 
-  {{#> tabs tabs--modifier="pf-m-tabs-secondary" tabs--attribute='aria-label="Secondary Tabs Example"'}}
-    {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab1" aria-controls="ex3-secondary-section1"'}}
-        Secondary tab item 1
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab2" aria-controls="ex3-secondary-section2"'}}
-        Secondary tab item 2
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab3" aria-controls="ex3-secondary-section3"'}}
-        Secondary tab item 3
-      {{/tabs-button}}
-    {{/tabs-item}}
+    {{#> tabs-list tabs-list--modifier="pf-m-tabs-secondary"}}
+      {{#> tabs-item tabs-item--current="true"}}
+        {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab1" aria-controls="ex3-secondary-section1"'}}
+          Secondary tab item 1
+        {{/tabs-button}}
+      {{/tabs-item}}
+      {{#> tabs-item}}
+        {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab2" aria-controls="ex3-secondary-section2"'}}
+          Secondary tab item 2
+        {{/tabs-button}}
+      {{/tabs-item}}
+      {{#> tabs-item}}
+        {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab3" aria-controls="ex3-secondary-section3"'}}
+          Secondary tab item 3
+        {{/tabs-button}}
+      {{/tabs-item}}
+    {{/tabs-list}}
   {{/tabs}}
 </div>

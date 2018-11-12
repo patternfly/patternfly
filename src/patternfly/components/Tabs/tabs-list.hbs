@@ -1,0 +1,24 @@
+<ul class="pf-c-tabs__list{{#if tabs-list--modifier}} {{tabs-list--modifier}}{{/if}}" 
+  {{#if tabs-list--attribute}}
+    {{{tabs-list--attribute}}}
+  {{/if}}>
+  <button class="pf-c-tabs__scroll-button" aria-label="Scroll left" 
+  {{#if tabs-scroll-buttons--attribute}}
+    {{{tabs-scroll-buttons--attribute}}}
+  {{/if}}
+  {{#contains tabs--modifier 'pf-m-start'}}{{else}}
+  hidden
+  {{/contains}}>
+    <i class="fas fa-angle-left" hidden></i>
+  </button>
+  {{> @partial-block}}
+  <button class="pf-c-tabs__scroll-button" aria-label="Scroll right" 
+  {{#if tabs-scroll-buttons--attribute}}
+    {{{tabs-scroll-buttons--attribute}}}
+  {{/if}}
+  {{#contains tabs--modifier 'pf-m-end'}}{{else}}
+  hidden
+  {{/contains}}>
+    <i class="fas fa-angle-right" hidden></i>
+  </button>
+</ul>

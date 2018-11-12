@@ -1,32 +1,34 @@
-{{#> tabs tabs--modifier="pf-m-start pf-m-start-current pf-m-end" tabs--attribute='aria-label="Scroll buttons example"'}}
-  {{#> tabs-item tabs-item--current="true"}}
-    {{#> tabs-button tabs-button--attribute='id="ex2-tab1" aria-controls="ex2-section1"'}}
-      Tab item 1
-    {{/tabs-button}}
-  {{/tabs-item}}
-  {{#> tabs-item}}
-    {{#> tabs-button tabs-button--attribute='id="ex2-tab2" aria-controls="ex2-section2"'}}
-      Tab item 2
-    {{/tabs-button}}
-  {{/tabs-item}}
-  {{#> tabs-item}}
-    {{#> tabs-button tabs-button--attribute='id="ex2-tab3" aria-controls="ex2-section3"'}}
-      Tab item 3
-    {{/tabs-button}}
-  {{/tabs-item}}
-  {{#> tabs-item}}
-    {{#> tabs-button tabs-button--attribute='id="ex2-tab4" aria-controls="ex2-section4"'}}
-      Tab item 4
-    {{/tabs-button}}
-  {{/tabs-item}}
-  {{#> tabs-item}}
-    {{#> tabs-button tabs-button--attribute='id="ex2-tab5" aria-controls="ex2-section5"'}}
-      Tab item 5
-    {{/tabs-button}}
-  {{/tabs-item}}
-  {{#> tabs-item}}
-    {{#> tabs-button tabs-button--attribute='id="ex2-tab6" aria-controls="ex2-section6"'}}
-      Tab item 6
-    {{/tabs-button}}
-  {{/tabs-item}}
+{{#> tabs tabs--attribute='aria-label="Scroll buttons example"'}}
+  {{#> tabs-list tabs-list--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute='id="ex2-tab1" aria-controls="ex2-section1"'}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute='id="ex2-tab2" aria-controls="ex2-section2"'}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute='id="ex2-tab3" aria-controls="ex2-section3"'}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute='id="ex2-tab4" aria-controls="ex2-section4"'}}
+        Tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute='id="ex2-tab5" aria-controls="ex2-section5"'}}
+        Tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute='id="ex2-tab6" aria-controls="ex2-section6"'}}
+        Tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
 {{/tabs}}
