@@ -1,12 +1,18 @@
 {{#> tabs tabs--attribute='aria-label="Primary tabs with sections example"'}}
-  {{#> tabs-item tabs-item--attribute='id="ex1-tab1"' tabs-item--current="true"}}
-    Tab item 1
+  {{#> tabs-item tabs-item--attribute='' tabs-item--current="true"}}
+    {{#> tabs-button tabs-button--attribute='id="ex1-tab1" aria-controls="ex1-section1"'}}
+      Tab item 1
+    {{/tabs-button}}
   {{/tabs-item}}
-  {{#> tabs-item tabs-item--attribute='id="ex1-tab2"'}}
-    Tab item 2
+  {{#> tabs-item}}
+    {{#> tabs-button tabs-button--attribute='id="ex1-tab2" aria-controls="ex1-section2"'}}
+      Tab item 2
+    {{/tabs-button}}
   {{/tabs-item}}
-  {{#> tabs-item tabs-item--attribute='id="ex1-tab3"'}}
-    Tab item 3
+  {{#> tabs-item}}
+    {{#> tabs-button tabs-button--attribute='id="ex1-tab3" aria-controls="ex1-section3"'}}
+      Tab item 3
+    {{/tabs-button}}
   {{/tabs-item}}
 {{/tabs}}
 

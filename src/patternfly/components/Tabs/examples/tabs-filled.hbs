@@ -1,11 +1,17 @@
 {{#> tabs tabs--modifier="pf-m-fill" tabs--attribute='aria-label="Filled tabs example"'}}
-  {{#> tabs-item tabs-item--attribute='id="ex4-tab1"' tabs-item--current="true"}}
-    Tab item 1
+  {{#> tabs-item tabs-item--current="true"}}
+    {{#> tabs-button tabs-button--attribute='id="ex4-tab1" aria-controls="ex4-section1"'}}
+      Tab item 3
+    {{/tabs-button}}
   {{/tabs-item}}
-  {{#> tabs-item tabs-item--attribute='id="ex4-tab2"'}}
-    Tab item 2
+  {{#> tabs-item}}
+    {{#> tabs-button tabs-button--attribute='id="ex4-tab2" aria-controls="ex4-section2"'}}
+      Tab item 2
+    {{/tabs-button}}
   {{/tabs-item}}
-  {{#> tabs-item tabs-item--attribute='id="ex4-tab3"'}}
-    Tab item 3
+  {{#> tabs-item}}
+    {{#> tabs-button tabs-button--attribute='id="ex4-tab3" aria-controls="ex4-section3"'}}
+      Tab item 3
+    {{/tabs-button}}
   {{/tabs-item}}
 {{/tabs}}

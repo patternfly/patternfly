@@ -2,10 +2,5 @@
   {{#if tabs-item--attribute}}
     {{{tabs-item--attribute}}}
   {{/if}}>
-  <button id="{{tabs-item--button-id}}" class="pf-c-tabs__button{{#if tab-item--current}} pf-m-current{{/if}}{{#if tab-item--modifier}} {{tab-item--modifier}}{{/if}}" 
-    {{#if tab-item--current}}
-      aria-selected="true"
-    {{/if}}>
-    {{> @partial-block}}
-  </button>
+  {{> @partial-block}}
 </li>
