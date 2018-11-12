@@ -29,14 +29,11 @@
   padding-right: var(--pf-c-chip__group--PaddingRight);
   padding-bottom: var(--pf-c-chip__group--PaddingBottom);
   padding-left: var(--pf-c-chip__group--PaddingLeft);
+  margin-right: var(--pf-c-chip__group--MarginRight);
+  margin-bottom: var(--pf-c-chip__group--MarginBottom);
   overflow: hidden;
   background-color: var(--pf-c-chip__group--BackgroundColor);
   border-radius: var(--pf-c-chip__group--BorderRadius);
-
-  &:not(:last-child) {
-    margin-right: var(--pf-c-chip__group--MarginRight);
-    margin-bottom: var(--pf-c-chip__group--MarginBottom);
-  }
 
   &.pf-m-toolbar {
     max-width: var(--pf-c-chip__group--m-toolbar-MaxWidth);
