@@ -94,8 +94,8 @@
   --pf-c-button--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
 
-  // First child of button
-  --pf-c-button--first-child--MarginRight: var(--pf-global--spacer--xs);
+  // Styles for an icon in button
+  --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
 
   position: relative;
   display: inline-block;
@@ -143,11 +143,6 @@
     &::after {
       border-width: var(--pf-c-button--focus--BorderWidth);
     }
-  }
-
-  // Add spacing to icon if it appears at the beginning of button
-  > :first-child {
-    margin-right: var(--pf-c-button--first-child--MarginRight);
   }
 
   &.pf-m-block {
@@ -314,11 +309,6 @@
     color: var(--pf-c-button--m-plain--Color);
     background-color: var(--pf-c-button--m-plain--BackgroundColor);
 
-    // Ignore margin for button icons
-    > :first-child {
-      margin: 0;
-    }
-
     &:hover,
     &.pf-m-hover {
       color: var(--pf-c-button--m-plain--hover--Color);
@@ -353,4 +343,9 @@
       border-color: var(--pf-c-button--disabled--BorderColor);
     }
   }
+}
+
+// Add spacing to an icon in the button
+.pf-c-button__icon {
+  margin-right: var(--pf-c-button__icon--MarginRight);
 }

@@ -105,8 +105,8 @@
     &:hover,
     &.pf-m-hover {
       &::before {
-        border-color: var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--BorderRightColor) var(--pf-c-dropdown__toggle--BorderBottomColor) var(--pf-c-dropdown__toggle--BorderLeftColor);
-        border-width: var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--hover--BorderBottomWidth) var(--pf-c-dropdown__toggle--BorderWidth);
+        border-color: var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--BorderRightColor) var(--pf-c-dropdown__toggle--hover--BorderBottomColor) var(--pf-c-dropdown__toggle--BorderLeftColor);
+        border-width: var(--pf-c-dropdown__toggle--BorderWidth);
       }
     }
 
