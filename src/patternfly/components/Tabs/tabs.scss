@@ -84,14 +84,16 @@
   // Current state
   &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
   &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
-    border-top-color: var(--pf-c-tabs__item--m-current--Color);
+    padding-top: var(--pf-c-tabs__item--BorderTopWidth);
+    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
     box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
   }
 
   // Hover state
   &:not(.pf-m-start-current) .pf-c-tabs__scroll-button:nth-of-type(1):hover,
   &:not(.pf-m-end-current) .pf-c-tabs__scroll-button:nth-of-type(2):hover {
-    border-top-color: var(--pf-c-tabs__item--hover--BoxShadowColor);
+    padding-top: calc(var(--pf-c-tabs__button--PaddingTop) + var(--pf-c-tabs__item--BorderTopWidth));
+    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
     box-shadow: var(--pf-c-tabs__item--hover--BoxShadow);
   }
 }
@@ -116,23 +118,26 @@
   // Current state
   &.pf-m-current {
     z-index: var(--pf-c-tabs__item--m-current--ZIndex);
-    border-top-color: var(--pf-c-tabs__item--m-current--Color);
     border-bottom-color: var(--pf-c-tabs__item--BackgroundColor);
     border-bottom-width: var(--pf-c-tabs__item--BorderBottomWidth);
 
-    .pf-c-tabs__button {
-      color: var(--pf-c-tabs__item--m-current--Color);
+    &::before {
+      display: block;
+      height: pf-size-prem(2);
+      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
+      content: "";
       box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
     }
-  }
 
-  // Item Hover state
-  &:not(.pf-m-current):hover {
-    border-top-color: var(--pf-c-tabs__item--hover--BoxShadowColor);
+    .pf-c-tabs__button {
+      color: var(--pf-c-tabs__item--m-current--Color);
+    }
   }
 
   // Button Hover state
   &:not(.pf-m-current):hover .pf-c-tabs__button {
+    padding-top: calc(var(--pf-c-tabs__button--PaddingTop) + var(--pf-c-tabs__item--BorderTopWidth));
+    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
     box-shadow: var(--pf-c-tabs__item--hover--BoxShadow);
   }
 }
@@ -142,7 +147,6 @@
   .pf-c-tabs__item {
     z-index: var(--pf-c-tabs__item--ZIndex);
     border-width: inherit none none;
-    border-top-color: var(--pf-c-tabs__item--BorderColor);
 
     // Hover state
     &:not(.pf-m-current):hover .pf-c-tabs__button {
