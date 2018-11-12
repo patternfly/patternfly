@@ -81,12 +81,19 @@
     display: block;
   }
 
-  // Current state
+  // Scroll button Current state
   &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
   &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
     padding-top: var(--pf-c-tabs__item--BorderTopWidth);
     margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
     box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
+
+    &::before {
+      display: block;
+      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
+      content: "";
+      border-top: pf-size-prem(2) solid var(--pf-c-tabs__item--hover--Color);
+    }
   }
 
   // Hover state
@@ -123,22 +130,34 @@
 
     &::before {
       display: block;
-      height: pf-size-prem(2);
       margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
       content: "";
-      box-shadow: var(--pf-c-tabs__item--m-current--BoxShadow);
+      border-top: pf-size-prem(2) solid var(--pf-c-tabs__item--m-current--Color);
     }
 
-    .pf-c-tabs__button {
+    &.pf-c-tabs__button {
+      margin-top: -2px;
       color: var(--pf-c-tabs__item--m-current--Color);
+    }
+  }
+
+  &:not(.pf-m-current):hover {
+    &::before {
+      display: block;
+      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
+      content: "";
+      border-top: pf-size-prem(2) solid var(--pf-c-tabs__item--hover--Color);
+    }
+
+    &.pf-c-tabs__button {
+      margin-top: -2px;
     }
   }
 
   // Button Hover state
   &:not(.pf-m-current):hover .pf-c-tabs__button {
     padding-top: calc(var(--pf-c-tabs__button--PaddingTop) + var(--pf-c-tabs__item--BorderTopWidth));
-    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
-    box-shadow: var(--pf-c-tabs__item--hover--BoxShadow);
+    margin-top: -2px;
   }
 }
 
