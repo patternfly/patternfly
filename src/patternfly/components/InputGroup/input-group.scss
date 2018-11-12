@@ -49,6 +49,7 @@
       border-radius: 0;
     }
 
+    // Applies top/left and bottom/left border-radius to a button if it's the first item in the input group
     &:first-child {
       &,
       &::after {
@@ -56,6 +57,7 @@
       }
     }
 
+    // Applies top/right and bottom/right border-radius to a button if it's the last item in the input group
     &:last-child {
       &,
       &::after {
