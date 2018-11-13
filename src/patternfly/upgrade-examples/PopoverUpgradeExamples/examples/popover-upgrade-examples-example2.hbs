@@ -1,10 +1,21 @@
 {{#> popover-upgrade-examples}}
-  {{#> popover}}
-    {{#> popover-header}}
-      Header
-    {{/popover-header}}
-    {{#> popover-body}}
-      Body
-    {{/popover-body}}
-  {{/popover}}
+  <div class="pf-c-popover pf-m-right" role="dialog" aria-modal="true" aria-labelledby="popover-right-header" aria-describedby="popover-right-body">
+  <div class="pf-c-popover__arrow">
+  </div>
+  <div class="pf-c-popover__content">
+    <div class="pf-c-popover__close">
+      <button class="pf-c-button pf-m-plain" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <header class="pf-c-popover__header">
+      <h1 class="pf-c-popover__header-title" id="popover-right-header">
+        Popover Header
+      </h1>
+    </header>
+    <div class="pf-c-popover__body" id="popover-right-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+    </div>
+  </div>
+</div>
 {{/popover-upgrade-examples}}
