@@ -12,7 +12,6 @@ chip-groups require modifiers depending on their use in toolbars or selects. For
 | `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
 | `aria-labelledby="[id value of .pf-c-button]"` | `.pf-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. Required when the button is being removed. |
 | `aria-hidden="true"` | `<i>` |  Hides the icon from assistive technologies. |
-| `role="listbox"` | `.pf-c-chip-group` | Indicates that the chip group is a chip group. |
 
 ## Usage
 
