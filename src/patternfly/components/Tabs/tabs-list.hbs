@@ -5,20 +5,14 @@
   <button class="pf-c-tabs__scroll-button" aria-label="Scroll left" 
   {{#if tabs-scroll-buttons--attribute}}
     {{{tabs-scroll-buttons--attribute}}}
-  {{/if}}
-  {{#contains tabs--modifier 'pf-m-start'}}{{else}}
-  hidden
-  {{/contains}}>
+  {{/if}}>
     <i class="fas fa-angle-left" hidden></i>
   </button>
   {{> @partial-block}}
   <button class="pf-c-tabs__scroll-button" aria-label="Scroll right" 
   {{#if tabs-scroll-buttons--attribute}}
     {{{tabs-scroll-buttons--attribute}}}
-  {{/if}}
-  {{#contains tabs--modifier 'pf-m-end'}}{{else}}
-  hidden
-  {{/contains}}>
+  {{/if}}>
     <i class="fas fa-angle-right" hidden></i>
   </button>
 </ul>

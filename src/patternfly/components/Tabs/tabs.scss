@@ -81,10 +81,17 @@
     border-right-width: var(--pf-c-tabs__item--BorderRightWidth);
   }
 
-  // Scroll buttons
+  // Scroll buttons hidden by default
+  .pf-c-tabs__scroll-button {
+    display: none;
+    visibility: hidden;
+  }
+
+  // Scroll buttons shown with modifiers
   &.pf-m-start .pf-c-tabs__scroll-button,
   &.pf-m-end .pf-c-tabs__scroll-button {
     display: block;
+    visibility: visible;
   }
 
   // Scroll button current state
