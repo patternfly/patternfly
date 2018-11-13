@@ -1,0 +1,188 @@
+@import "../../patternfly-utilities";
+
+.pf-c-pagination {
+
+  /* stylelint-disable */
+
+  // Base
+  --pf-c-pagination--FontSize:                          var(--pf-global--FontSize--sm);
+
+  // Select
+  --pf-c-pagination--item--MarginLeft:                  var(--pf-global--spacer--lg);
+  --pf-c-pagination--item--MarginRight:                 var(--pf-global--spacer--lg);
+
+  // Item
+  --pf-c-pagination__item--MarginRight:                 var(--pf-global--spacer--lg);
+
+  // Select
+  --pf-c-pagination__select--item--MarginRight:         var(--pf-global--spacer--sm);
+
+  // Nav
+  --pf-c-pagination__nav--MinHeight:                    #{pf-size-prem(44px)};
+  --pf-c-pagination__nav--FontSize:                     var(--pf-global--FontSize--lg);
+  --pf-c-pagination__nav--BorderWidth:                  var(--pf-global--BorderWidth--sm);
+  --pf-c-pagination__nav--BorderColor:                  var(--pf-global--BorderColor--light-200);
+
+  // Nav page
+  --pf-c-pagination__nav-page--PaddingRight:            var(--pf-global--spacer--md);
+  --pf-c-pagination__nav-page--PaddingLeft:             var(--pf-global--spacer--md);
+  --pf-c-pagination__nav-page--item--MarginRight:       var(--pf-global--spacer--xs);
+
+  // Form inputs
+  --pf-c-pagination__form-control--MinWidth:            #{pf-size-prem(28px)};
+  --pf-c-pagination__form-control--PaddingRight:        var(--pf-global--spacer--xs);
+  --pf-c-pagination__form-control--PaddingLeft:         var(--pf-global--spacer--xs);
+  --pf-c-pagination__form-control--BorderColor:         var(--pf-global--BorderColor--light);
+
+  // Dropdown
+  --pf-c-pagination__dropdown__arrow--MarginLeft:       var(--pf-global--spacer--xs);
+
+  // Buttons
+  --pf-c-pagination--button--disabled--Color:           var(--pf-global--disabled-color--200);
+
+  // Complementary text
+  --pf-c-pagination__complementary-text--Color:         var(--pf-global--Color--200);
+
+  // Nav buttons
+  --pf-c-pagination__nav--button--MinWidth:             #{pf-size-prem(26px)};
+  --pf-c-pagination__nav--button--m-footer--MinWidth:   var(--pf-global--spacer--2xl);
+  --pf-c-pagination__nav--button--m-footer--MinHeight:  #{pf-size-prem(54px)};
+
+  /* stylelint-enable */
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: var(--pf-c-pagination--FontSize);
+
+  * {
+    font-size: inherit;
+    white-space: nowrap;
+  }
+
+  // align first child container
+  > :first-child {
+    flex: 1;
+  }
+
+  > *:not(:last-child) {
+    margin-right: var(--pf-c-pagination--item--MarginRight);
+  }
+
+  // reset some base form-control styles
+  .pf-c-form-control {
+    width: auto;
+    min-width: var(--pf-c-pagination__form-control--MinWidth);
+    padding-right: var(--pf-c-pagination__form-control--PaddingRight);
+    font-size: inherit;
+    text-align: right;
+    border-color: var(--pf-c-pagination__form-control--BorderColor);
+  }
+
+  // remove after button treatment updates
+  .pf-c-dropdown__toggle::before {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  // remove after button treatment updates
+  .pf-c-dropdown__toggle .pf-c-dropdown__toggle-icon {
+    margin-left: var(--pf-c-pagination__dropdown__arrow--MarginLeft);
+  }
+}
+
+// Select
+.pf-c-pagination__select {
+  display: flex;
+  align-items: center;
+
+  // space text after dropdown
+  > *:not(:last-child) {
+    margin-right: var(--pf-c-pagination__select--item--MarginRight);
+  }
+}
+
+// Nav
+.pf-c-pagination__nav {
+  display: inline-flex;
+  justify-content: flex-end;
+  min-height: var(--pf-c-pagination__nav--MinHeight);
+
+  .pf-c-button {
+    min-width: var(--pf-c-pagination__nav--button--MinWidth);
+    font-size: var(--pf-c-pagination__nav--FontSize);
+
+    // Remove after buttons are updated
+    border-radius: 0;
+
+    &.pf-m-disabled {
+      color: var(--pf-c-pagination--button--disabled--Color);
+      background-color: transparent;
+    }
+  }
+}
+
+// Nav page element
+.pf-c-pagination__nav-page {
+  display: flex;
+  align-items: center;
+  padding-right: var(--pf-c-pagination__nav-page--PaddingRight);
+  padding-left: var(--pf-c-pagination__nav-page--PaddingLeft);
+  white-space: nowrap;
+
+  > *:not(:last-child) {
+    margin-right: var(--pf-c-pagination__nav-page--item--MarginRight);
+  }
+}
+
+// Complementary text
+.pf-c-pagination__complementary-text {
+  color: var(--pf-c-pagination__complementary-text--Color);
+}
+
+// Footer modifier
+.pf-c-pagination.pf-m-footer {
+  display: flex;
+
+  // align first child container
+  > :first-child {
+    margin-left: var(--pf-c-pagination--item--MarginLeft);
+  }
+
+  .pf-c-pagination__nav {
+    flex: 1 0 100%;
+    align-items: stretch;
+    align-self: stretch;
+    border-top: var(--pf-c-pagination__nav--BorderWidth) solid var(--pf-c-pagination__nav--BorderColor);
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      flex: none;
+      border-top: none;
+    }
+
+    .pf-c-button {
+      min-width: var(--pf-c-pagination__nav--button--m-footer--MinWidth);
+      min-height: var(--pf-c-pagination__nav--button--m-footer--MinHeight);
+    }
+  }
+
+  .pf-c-pagination__nav > * {
+    border-left: var(--pf-c-pagination__nav--BorderWidth) solid var(--pf-c-pagination__nav--BorderColor);
+  }
+
+  .pf-c-pagination__select {
+    align-self: stretch;
+
+    .pf-c-dropdown {
+      display: flex;
+    }
+
+    .pf-c-dropdown,
+    .pf-c-dropdown__toggle {
+      align-self: stretch;
+    }
+  }
+}

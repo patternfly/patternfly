@@ -61,6 +61,10 @@
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
 
+  // Complementary Text
+  --pf-c-dropdown__complementary-text--Color: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__complementary-text--hover--Color: var(--pf-global--Color--dark-100);
+
   // Menu Item Separator
   --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
@@ -233,6 +237,10 @@
 
     text-decoration: none;
     background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
+
+    .pf-c-dropdown__complementary-text {
+      color: var(--pf-c-dropdown__complementary-text--hover--Color);
+    }
   }
 
   &:disabled,
@@ -244,9 +252,14 @@
   }
 }
 
+.pf-c-dropdown__complementary-text {
+  color: var(--pf-c-dropdown__complementary-text--Color);
+}
+
 .pf-c-dropdown__separator {
   height: var(--pf-c-dropdown__separator--Height);
   margin-top: var(--pf-c-dropdown__separator--MarginTop);
   margin-bottom: var(--pf-c-dropdown__separator--MarginBottom);
   background-color: var(--pf-c-dropdown__separator--BackgroundColor);
 }
+
