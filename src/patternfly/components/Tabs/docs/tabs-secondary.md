@@ -1,4 +1,4 @@
-### Usage
+### Modifiers
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
