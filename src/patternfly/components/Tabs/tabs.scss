@@ -38,22 +38,9 @@
   --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--sm);
 
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-// Tab List
-.pf-c-tabs__list {
-  position: relative;
-  display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-
-  // Right border on last tab
-  .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
-    border-right-width: var(--pf-c-tabs__item--BorderRightWidth);
-  }
 
   // Scroll buttons hidden by default
   .pf-c-tabs__scroll-button {
@@ -100,7 +87,11 @@
 
   // Filled style
   &.pf-m-fill {
-    width: 100%;
+    display: flex;
+
+    .pf-c-tabs__list {
+      width: 100%;
+    }
 
     .pf-c-tabs__item {
       flex: 1;
@@ -118,6 +109,19 @@
         width: 100%;
       }
     }
+  }
+}
+
+// Tab List
+.pf-c-tabs__list {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  // Right border on last tab
+  .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
+    border-right-width: var(--pf-c-tabs__item--BorderRightWidth);
   }
 }
 
@@ -200,6 +204,21 @@
   }
 }
 
+.pf-c-tabs__scroll-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--pf-c-tabs__scroll-button--Width);
+
+  &:first-of-type {
+    left: 0;
+  }
+
+  &:last-of-type {
+    right: 0;
+  }
+}
+
 // Scroll buttons
 .pf-c-tabs__scroll-button {
   position: absolute;
@@ -210,8 +229,6 @@
   line-height: 1;
   background-color: var(--pf-c-tabs__scroll-button--BackgroundColor);
   border: initial;
-  border-width: initial;
-  border-radius: initial;
 
   // Align right scroll button
   &:nth-of-type(2) {
