@@ -1,0 +1,17 @@
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+  {{#> modal-box-close}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close"'}}
+    {{/button}}
+  {{/modal-box-close}}
+  {{#> modal-box-header}}
+    {{#> modal-box-header-title modal-box-header-title--attribute='id="modal-title"'}}
+      Modal Header
+    {{/modal-box-header-title}}
+  {{/modal-box-header}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
+    To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+  {{/modal-box-body}}
+  {{#> modal-box-footer}}
+    Modal Footer
+  {{/modal-box-footer}}
+{{/modal-box}}
