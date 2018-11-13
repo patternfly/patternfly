@@ -1,0 +1,60 @@
+@import "../../patternfly-utilities";
+
+.pf-c-chip-group {
+  --pf-c-chip-group--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-chip-group--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-chip-group--m-toolbar-MaxWidth: #{pf-size-prem(500px)}; // for demo
+  --pf-c-chip-group--m-select-BackgroundColor: transparent;
+  --pf-c-chip-group--m-select-Width: #{pf-size-prem(375px)}; // for demo
+
+  // chip
+  --pf-c-chip--MarginBottom: var(--pf-global--spacer--xs);
+
+  // Label in group
+  --pf-c-chip-group__label--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-chip-group__label--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: var(--pf-c-chip-group--PaddingTop);
+  padding-right: var(--pf-c-chip-group--PaddingRight);
+  padding-bottom: var(--pf-c-chip-group--PaddingBottom);
+  padding-left: var(--pf-c-chip-group--PaddingLeft);
+  margin-right: var(--pf-c-chip-group--MarginRight);
+  margin-bottom: var(--pf-c-chip-group--MarginBottom);
+  overflow: hidden;
+  background-color: var(--pf-c-chip-group--BackgroundColor);
+  border-radius: var(--pf-c-chip-group--BorderRadius);
+
+  &.pf-m-toolbar {
+    max-width: var(--pf-c-chip-group--m-toolbar-MaxWidth);
+    background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
+  }
+
+  &.pf-m-select {
+    width: var(--pf-c-chip-group--m-select-Width);
+    background-color: var(--pf-c-chip-group--m-select--BackgroundColor);
+
+    .pf-c-chip {
+      margin-bottom: var(--pf-c-chip--MarginBottom);
+    }
+  }
+
+  .pf-c-chip-group__label {
+    padding-right: var(--pf-c-chip-group__label--PaddingRight);
+    padding-left: var(--pf-c-chip-group__label--PaddingLeft);
+    margin: auto;
+    overflow: hidden;
+    font-size: var(--pf-c-chip-group__label--FontSize);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

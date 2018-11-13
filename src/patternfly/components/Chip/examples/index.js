@@ -13,7 +13,8 @@ import chipsSelectExpandedExample from './chips-select-expanded-example.hbs';
 import chipsSelectCollapsedExample from './chips-select-collapsed-example.hbs';
 import ChipsExampleDoc from '../docs/chips.md';
 import docs from '../docs/code.md';
-import '../chips.scss';
+import '../chip.scss';
+import '../chip-group.scss';
 
 export const Docs = docs;
 
