@@ -14,7 +14,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw} minHeight="20em">
+      <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw}>
         {brandSimpleExample}
       </Example>
     </Documentation>
