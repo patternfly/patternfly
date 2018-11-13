@@ -41,32 +41,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  // Filled style
-  &.pf-m-fill {
-    display: flex;
-
-    .pf-c-tabs__list,
-    .pf-c-tabs__item {
-      flex: 1;
-    }
-
-    .pf-c-tabs__item {
-      white-space: nowrap;
-
-      &:first-child {
-        border-left: none;
-      }
-
-      &:last-child {
-        border-right: none;
-      }
-
-      .pf-c-tabs__button {
-        width: 100%;
-      }
-    }
-  }
 }
 
 // Tab List
@@ -88,8 +62,8 @@
   }
 
   // Scroll buttons shown with modifiers
-  &.pf-m-start .pf-c-tabs__scroll-button,
-  &.pf-m-end .pf-c-tabs__scroll-button {
+  &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1),
+  &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
     display: block;
     visibility: visible;
   }
@@ -121,6 +95,28 @@
       margin-left: var(--pf-c-tabs__item--BorderLeftWidth);
       content: "";
       border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
+    }
+  }
+
+  // Filled style
+  &.pf-m-fill {
+    width: 100%;
+
+    .pf-c-tabs__item {
+      flex: 1;
+      white-space: nowrap;
+
+      &:first-of-type .pf-c-tabs__button::before {
+        border-left: none;
+      }
+
+      &:last-of-type .pf-c-tabs__button::before {
+        border-right: none;
+      }
+
+      .pf-c-tabs__button {
+        width: 100%;
+      }
     }
   }
 }
