@@ -29,21 +29,21 @@
     </div>
   {{/pagination-select}}
   {{#> pagination-nav}}
-    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+    {{#> pagination-nav-button pagination-nav-button--modifier="pf-m-disabled" pagination-nav-button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
       <i class="fas fa-angle-double-left" aria-hidden="true"></i>
-    {{/button}}
-    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+    {{/pagination-nav-button}}
+    {{#> pagination-nav-button pagination-nav-button--modifier="pf-m-disabled" pagination-nav-button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
       <i class="fas fa-angle-left" aria-hidden="true"></i>
-    {{/button}}
-    {{#> pagination-nav-page pagination-nav-page--attribute='aria-label="Current page 2 of 9"'}}
-      <input class="pf-c-form-control" aria-label="Current page" type="number" min="1" max="9" value="2">
+    {{/pagination-nav-button}}
+    {{#> pagination-nav-page pagination-nav-page--attribute='aria-label="Current page 1 of 9"'}}
+      <input class="pf-c-pagination__nav-input" aria-label="Current page" type="number" min="1" max="9" value="1">
       <span aria-hidden="true">of 9</span>
     {{/pagination-nav-page}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+    {{#> pagination-nav-button pagination-nav-button--attribute='aria-label="Go to next page"'}}
       <i class="fas fa-angle-right" aria-hidden="true"></i>
-    {{/button}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+    {{/pagination-nav-button}}
+    {{#> pagination-nav-button pagination-nav-button--attribute='aria-label="Go to last page"'}}
       <i class="fas fa-angle-double-right" aria-hidden="true"></i>
-    {{/button}}
+    {{/pagination-nav-button}}
   {{/pagination-nav}}
 {{/pagination}}

@@ -8,6 +8,7 @@
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-pagination__range`     | `<div>` |  Initiates pagination range. |
-| `.pf-c-pagination__complementary-text`     | `<span>` |  Initiates pagination complementarty text. |
-| `.pf-m-footer`            | `.pf-c-pagination` |  Modifiers for pagination layout. |
+| `.pf-c-pagination__range`               | `<div>` |  Initiates pagination range. |
+| `.pf-c-pagination__complementary-text`  | `<span>` |  Initiates pagination complementarty text. |
+| `.pf-c-pagination__nav-input`           | `<div>` |  Initiates pagination nav. |
+| `.pf-m-footer`                          | `.pf-c-pagination` |  Modifiers for pagination layout. |

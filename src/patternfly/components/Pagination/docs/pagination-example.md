@@ -2,16 +2,16 @@
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label`                                          | `.pf-c-pagination`, `.pf-c-pagination__nav`, `.pf-c-pagination__nav-page`, `.pf-c-pagination__nav-page` > `.pf-c-form-control` |  Provides an accessible name for pagination elements. **Required** |
+| `aria-label`  | `.pf-c-pagination`, `.pf-c-pagination__nav`, `.pf-c-pagination__nav-page`, `.pf-c-pagination__nav-button`, `.pf-c-pagination__nav-page` > `.pf-c-form-control` |  Provides an accessible name for pagination elements. **Required** |
 
 ## Pagination nav input
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `type="number"`  | `.pf-c-pagination__nav-page` > `.pf-c-form-control` |  Defines a field as a number. **Required** |
-| `value` | `.pf-c-pagination__nav-page` > `.pf-c-form-control` | Provides initial integer value. **Required** |
-| `min`   | `.pf-c-pagination__nav-page` > `.pf-c-form-control` | Provides minimum integer value. **Required** |
-| `max`   | `.pf-c-pagination__nav-page` > `.pf-c-form-control` | Provides max integer value. **Required** |
+| `type="number"`  | `.pf-c-pagination__nav-input`  |  Defines a field as a number. **Required** |
+| `value` | `.pf-c-pagination__nav-input`  | Provides initial integer value. **Required** |
+| `min`   | `.pf-c-pagination__nav-input`  | Provides minimum integer value. **Required** |
+| `max`   | `.pf-c-pagination__nav-input`  | Provides max integer value. **Required** |
 
 ## Usage
 
@@ -21,3 +21,4 @@
 | `.pf-c-pagination__select`    | `<div>` |  Initiates pagination select. |
 | `.pf-c-pagination__range`     | `<div>` |  Initiates pagination range. |
 | `.pf-c-pagination__nav`       | `<div>` |  Initiates pagination nav. |
+| `.pf-m-disabled`              | `.pf-c-pagination__nav-button` |  Modifies to display as disabled. |
