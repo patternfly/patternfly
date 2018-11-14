@@ -22,10 +22,10 @@ export default () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.1/css/patternfly-additions.css"
         />
       </Helmet>
-      <Example heading="PatternFly 3 Login" fullPageOnly="true">
+      <Example heading="PatternFly 3 Login" handlebars={LoginUpgradeExamplePF3}>
         {LoginUpgradeExamplePF3}
       </Example>
-      <Example heading="PatternFly 4 Login" fullPageOnly="true">
+      <Example heading="PatternFly 4 Login" fullPageOnly="true" handlebars={LoginUpgradeExamplePF4}>
         {LoginUpgradeExamplePF4}
       </Example>
     </Documentation>
