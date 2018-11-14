@@ -15,6 +15,7 @@
   --pf-c-tabs__item--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__item--m-current--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
   --pf-c-tabs__item--m-current--BorderTopWidth: pf-size-prem(2);
 
@@ -35,7 +36,7 @@
   --pf-c-tabs__scroll-button--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
 
   position: relative;
   display: inline-flex;
@@ -83,6 +84,13 @@
       content: "";
       border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
     }
+  }
+
+  // Primary with secondary tabs style
+  & + .pf-m-tabs-secondary {
+    display: flex;
+    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
+    border-top: var(--pf-c-tabs__item--BorderTopWidth) solid var(--pf-c-tabs__item--BorderColor);
   }
 
   // Filled style
@@ -166,6 +174,7 @@
 
   // Tab item current state
   &.pf-m-current .pf-c-tabs__button {
+    z-index: var(--pf-c-tabs__item--m-current--ZIndex);
     color: var(--pf-c-tabs__item--m-current--Color);
 
     &::before {
