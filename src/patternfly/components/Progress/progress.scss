@@ -18,7 +18,7 @@
   --pf-c-progress__bar--Height--sm: var(--pf-global--spacer--sm);
   --pf-c-progress__bar--Height--lg: var(--pf-global--spacer--lg);
   --pf-c-progress__bar-overlay--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
-  --pf-c-progress__indicator--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-progress__indicator--inside--MinWidth: var(--pf-global--spacer--xl);
 
   // Modifier variables
   --pf-c-progress--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
@@ -48,6 +48,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      min-width: var(--pf-c-progress__indicator--inside--MinWidth);
     }
 
     .pf-c-progress__measure {
@@ -138,8 +139,6 @@
   grid-column: 1 / 3;
   grid-row: 2 / 3;
   align-self: center;
-  min-width: var(--pf-c-progress__indicator--MinWidth);
-  max-width: 100%;
   height: var(--pf-c-progress__bar--Height);
   background-color: var(--pf-c-progress__bar--BackgroundColor);
 }
