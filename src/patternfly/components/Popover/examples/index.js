@@ -6,11 +6,13 @@ import PopoverTopExampleRaw from '!raw!./popover-top-example.hbs';
 import PopoverRightExampleRaw from '!raw!./popover-right-example.hbs';
 import PopoverBottomExampleRaw from '!raw!./popover-bottom-example.hbs';
 import PopoverLeftExampleRaw from '!raw!./popover-left-example.hbs';
+import PopoverNoHeaderExampleRaw from '!raw!./popover-no-header-example.hbs';
 
 import PopoverTopExample from './popover-top-example.hbs';
 import PopoverRightExample from './popover-right-example.hbs';
 import PopoverBottomExample from './popover-bottom-example.hbs';
 import PopoverLeftExample from './popover-left-example.hbs';
+import PopoverNoHeaderExample from './popover-no-header-example.hbs';
 
 import docs from '../docs/code.md';
 import '../popover.scss';
@@ -22,6 +24,7 @@ export default () => {
   const popoverRightExample = PopoverRightExample();
   const popoverBottomExample = PopoverBottomExample();
   const popoverLeftExample = PopoverLeftExample();
+  const popoverNoHeaderExample = PopoverNoHeaderExample();
   const headingText = 'Popover';
 
   return (
@@ -37,6 +40,9 @@ export default () => {
       </Example>
       <Example heading="Popover Left" handlebars={PopoverLeftExampleRaw}>
         {popoverLeftExample}
+      </Example>
+      <Example heading="Popover No Header" handlebars={PopoverNoHeaderExampleRaw}>
+        {popoverNoHeaderExample}
       </Example>
     </Documentation>
   );

@@ -115,28 +115,34 @@ export default class Example extends React.Component {
             </Preview>
           </div>
           <div className="Example__section">
-            <ul className="pf-p-secondary-nav" role="tablist">
-              <li className="pf-p-secondary-nav__item">
-                <button
-                  role="tab"
-                  className={`pf-p-secondary-nav__link ${this.state.codeView === 'source' ? 'pf-m-active' : ''} `}
-                  aria-selected={this.state.codeView === 'source'}
-                  onClick={() => this.showView('source')}
-                >
-                  HTML
-                </button>
-              </li>
-              <li className="pf-p-secondary-nav__item">
-                <button
-                  role="tab"
-                  className={`pf-p-secondary-nav__link ${this.state.codeView === 'handlebars' ? 'pf-m-active' : ''} `}
-                  aria-selected={this.state.codeView === 'handlebars'}
-                  onClick={() => this.showView('handlebars')}
-                >
-                  Handlebars
-                </button>
-              </li>
-            </ul>
+            <nav className="pf-c-nav" aria-label="code link">
+              <ul className="pf-c-nav__tertiary-list">
+                <li className="pf-c-nav__item">
+                  <button
+                    role="tab"
+                    className={`pf-c-nav__link Example__button ${
+                      this.state.codeView === 'source' ? 'pf-m-current' : ''
+                    } `}
+                    aria-current={this.state.codeView === 'source'}
+                    onClick={() => this.showView('source')}
+                  >
+                    HTML
+                  </button>
+                </li>
+                <li className="pf-c-nav__item">
+                  <button
+                    role="tab"
+                    className={`pf-c-nav__link Example__button ${
+                      this.state.codeView === 'handlebars' ? 'pf-m-current' : ''
+                    } `}
+                    aria-current={this.state.codeView === 'handlebars'}
+                    onClick={() => this.showView('handlebars')}
+                  >
+                    Handlebars
+                  </button>
+                </li>
+              </ul>
+            </nav>
             {sourceTab}
             {navigationItems && (
               <div className="Example__componentLink">

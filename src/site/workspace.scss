@@ -271,6 +271,10 @@
     border: 2px dashed #393f44;
   }
 
+  button[class*="pf-u-w"] {
+    border: none;
+  }
+
   .pf-l-page > *,
   .pf-l-page__header > *,
   .pf-l-login__container {
@@ -361,7 +365,8 @@
   }
 }
 
-.is-expanded-dropdown {
+.is-expanded-dropdown,
+.is-tall-body {
   .Preview__body {
     height: 17em;
   }

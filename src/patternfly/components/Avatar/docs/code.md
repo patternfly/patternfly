@@ -1,6 +1,6 @@
 ## Overview
 
-Simple avatar component.
+The avatar component provides a default SVG icon. If an image is used it should be 36px by 36px.
 
 ## Accessibility
 
