@@ -1,16 +1,17 @@
 @import "../../patternfly-utilities";
 
 .pf-c-chip-group {
-  --pf-c-chip-group--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--PaddingTop: calc(#{var(--pf-global--spacer--xs)} / 2);
   --pf-c-chip-group--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--PaddingBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
   --pf-c-chip-group--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip-group--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-chip-group--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--BackgroundColor: transparent;
   --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-chip-group--m-toolbar-MaxWidth: #{pf-size-prem(500px)}; // for demo
   --pf-c-chip-group--m-select-BackgroundColor: transparent;
+  --pf-c-chip-group--m-select-PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-select-Width: #{pf-size-prem(375px)}; // for demo
 
   // chip
@@ -22,8 +23,8 @@
   --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
 
   display: inline-flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   padding-top: var(--pf-c-chip-group--PaddingTop);
   padding-right: var(--pf-c-chip-group--PaddingRight);
   padding-bottom: var(--pf-c-chip-group--PaddingBottom);
@@ -35,23 +36,13 @@
   border-radius: var(--pf-c-chip-group--BorderRadius);
 
   &.pf-m-toolbar {
-    max-width: var(--pf-c-chip-group--m-toolbar-MaxWidth);
     background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
   }
 
-  &.pf-m-select {
-    width: var(--pf-c-chip-group--m-select-Width);
-    background-color: var(--pf-c-chip-group--m-select--BackgroundColor);
-
-    .pf-c-chip {
-      margin-bottom: var(--pf-c-chip--MarginBottom);
-    }
-  }
-
   .pf-c-chip-group__label {
+    align-items: baseline;
     padding-right: var(--pf-c-chip-group__label--PaddingRight);
     padding-left: var(--pf-c-chip-group__label--PaddingLeft);
-    margin: auto;
     overflow: hidden;
     font-size: var(--pf-c-chip-group__label--FontSize);
     text-overflow: ellipsis;

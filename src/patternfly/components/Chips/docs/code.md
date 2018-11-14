@@ -25,6 +25,5 @@ chip-groups require modifiers depending on their use in toolbars or selects. For
 | `.pf-m-overflow` | `.pf-c-chip` | Applies styling of the overflow chip. |
 | `.pf-m-hover` | `.pf-c-chip` | Forces display of the hover state of the chip. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo class. |
 | `.pf-m-toolbar` | `.pf-c-chip-group` | Modifies `.pf-c-chip-group` to be used in a toolbar. |
-| `.pf-m-select` | `.pf-c-chip-group` | Modifies `.pf-c-chip-group` to be used in a select. |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo class. |
 | `.pf-m-focus` | `.pf-c-button` | Forces display of the focus state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo class. |
