@@ -191,9 +191,9 @@ $pf-global--link--TextDecoration--hover:  underline !default;
 $pf-global--ListStyle: disc outside !default;
 
 // Transitions
-$pf-global--Transition: all 500ms cubic-bezier(.42, 0, .58, 1);
+$pf-global--Transition: all 250ms cubic-bezier(.42, 0, .58, 1);
 $pf-global--TimingFunction: cubic-bezier(.645, .045, .355, 1);
-$pf-global--TransitionDuration: 500ms;
+$pf-global--TransitionDuration: 250ms;
 
 // Arrow size (used for tooltips, popovers, etc.)
 $pf-global--arrow--width: pf-font-prem(15px);

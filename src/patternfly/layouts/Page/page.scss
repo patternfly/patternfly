@@ -1,19 +1,20 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
+$nav: "pf-c-nav";
+
 .pf-l-page {
   // Header
   --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
   --pf-l-page__header--m-tall--MinHeight: #{pf-size-prem(110px)};
   --pf-l-page__header--MinHeight: 0;
-  --pf-l-page__header--ZIndex: var(--pf-global--ZIndex--md);
 
   // Header brand
   --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
   --pf-l-page__header-brand--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
   --pf-l-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-l-page__header-brand--PaddingBottom--sm: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--PaddingLeft--md: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--BackgroundColor--md: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-l-page__header-brand--FlexBasis--lg: #{pf-size-prem(290px)};
   --pf-l-page__header-brand--m-tall--PaddingTop: var(--pf-global--spacer--md);
@@ -44,15 +45,16 @@
   // Header tools
   --pf-l-page__header-tools--MarginTop: var(--pf-global--spacer--sm);
   --pf-l-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-l-page__header-tools--MarginRight: var(--pf-global--spacer--xl);
+  --pf-l-page__header-tools--MarginRight: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--MarginRight--md: var(--pf-global--spacer--xl);
   --pf-l-page__header-tools--avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--m-tall--MarginTop: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--m-tall--MarginBottom: var(--pf-global--spacer--md);
 
   // Sidebar
-  --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-l-page__sidebar--Width--sm: 80%;
-  --pf-l-page__sidebar--Width--lg: #{pf-size-prem(290px)};
+  --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--xl);
+  --pf-l-page__sidebar--Width: 80%;
+  --pf-l-page__sidebar--Width--md: #{pf-size-prem(290px)};
   --pf-l-page__sidebar--PaddingTop: var(--pf-global--spacer--md);
   --pf-l-page__sidebar--PaddingBottom: var(--pf-global--spacer--md);
   --pf-l-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -64,14 +66,16 @@
   --pf-l-page__sidebar--Transform--in: translate3d(0, 0, 0);
 
   // Main section
-  --pf-l-page__main-section--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-l-page__main-section--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingTop: var(--pf-global--spacer--md);
+  --pf-l-page__main-section--PaddingRight: var(--pf-global--spacer--md);
+  --pf-l-page__main-section--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-l-page__main-section--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-l-page__main-section--PaddingTop--md: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingRight--md: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingBottom--md: var(--pf-global--spacer--xl);
+  --pf-l-page__main-section--PaddingLeft--md: var(--pf-global--spacer--xl);
   --pf-l-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-l-page__main-section--BoxShadow: var(--pf-global--BoxShadow--lg-right);
-  --pf-l-page__main--ZIndex: var(--pf-global--ZIndex--xs);
-
 
   // Main section horizontal nav
   --pf-l-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
@@ -112,7 +116,6 @@
   @extend %pf-t-dark; // force the container follow the dark theme
 
   grid-area: header;
-  z-index: var(--pf-l-page__header--ZIndex);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -161,6 +164,8 @@
   padding-left: var(--pf-l-page__header-brand--PaddingLeft);
 
   @media (min-width: $pf-global--breakpoint--md) {
+    --pf-l-page__header-brand--PaddingLeft: var(--pf-l-page__header-brand--PaddingLeft--md);
+
     flex: 0 0 var(--pf-l-page__header-brand--FlexBasis--lg); // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
     align-self: stretch;
     padding-right: var(--pf-l-page__header-brand--PaddingRight); // set padding right here to allow mobile view to accomodate tools
@@ -170,11 +175,15 @@
 
 // Link
 .pf-l-page__header-brand-link {
-  display: flex;
+  display: none;
   flex: 1;
   align-items: center;
   align-self: flex-end;
   min-height: var(--pf-l-page__header-brand-link--MinHeight); // Hardcode link min-height so it matches the button height
+
+  @media (min-width: $pf-global--breakpoint--sm) {
+    display: flex;
+  }
 }
 
 // Sidebar toggle
@@ -216,6 +225,10 @@
   margin-right: var(--pf-l-page__header-tools--MarginRight);
   margin-left: auto; // to push it to the right
 
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-l-page__header-tools--MarginRight: var(--pf-l-page__header-tools--MarginRight--md);
+  }
+
   .pf-c-avatar {
     margin-left: var(--pf-l-page__header-tools--avatar--MarginLeft);
   }
@@ -225,7 +238,7 @@
 .pf-l-page__sidebar {
   grid-area: 2 / 1;
   z-index: var(--pf-l-page__sidebar--ZIndex);
-  width: var(--pf-l-page__sidebar--Width--sm);
+  width: var(--pf-l-page__sidebar--Width);
   padding-top: var(--pf-l-page__sidebar--PaddingTop);
   padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
   overflow-x: hidden;
@@ -237,8 +250,8 @@
   @media screen and (min-width: $pf-global--breakpoint--md) {
     flex: 1;
     order: initial;
-    width: var(--pf-l-page__sidebar--Width--lg); // hardcode sidebar based on design spec, must match pf-n-nav--Width
-    max-width: var(--pf-l-page__sidebar--Width--lg); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
+    width: var(--pf-l-page__sidebar--Width--md); // hardcode sidebar based on design spec, must match pf-n-nav--Width
+    max-width: var(--pf-l-page__sidebar--Width--md); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
     box-shadow: var(--pf-l-page__sidebar--BoxShadow);
     transform: var(--pf-l-page__sidebar--Transform--in);
   }
@@ -263,7 +276,6 @@
 // Main
 .pf-l-page__main {
   grid-area: main;
-  z-index: var(--pf-l-page__main--ZIndex);
   display: flex;
   flex-direction: column;
   padding-right: 0;
@@ -284,9 +296,16 @@
   padding:
     var(--pf-l-page__main-section--PaddingTop)
     var(--pf-l-page__main-section--PaddingRight)
-    var(--pf-l-page__main-section--PaddingBottom)
-    var(--pf-l-page__main-section--PaddingLeft);
+    var(--pf-l-page__main-section--PaddingLeft)
+    var(--pf-l-page__main-section--PaddingBottom);
   background-color: var(--pf-l-page__main-section--BackgroundColor);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-l-page__main-section--PaddingTop: var(--pf-l-page__main-section--PaddingTop--md);
+    --pf-l-page__main-section--PaddingRight: var(--pf-l-page__main-section--PaddingRight--md);
+    --pf-l-page__main-section--PaddingLeft: var(--pf-l-page__main-section--PaddingBottom--md);
+    --pf-l-page__main-section--PaddingBottom: var(--pf-l-page__main-section--PaddingLeft--md);
+  }
 
   &:last-of-type,
   &:only-child {
@@ -298,7 +317,7 @@
     background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
   }
 
-  &[class*="pf-m-dark-"] {
+  &[class^="pf-m-dark"] {
     @extend %pf-t-dark; // force the container to follow the dark theme
   }
 
