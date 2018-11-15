@@ -44,7 +44,7 @@ export default () => {
       <Example heading="Scroll buttons" handlebars={tabsExampleScrollRaw} docs={tabsScrollDocs}>
         {tabsExampleScroll}
       </Example>
-      <Example heading="Secondary tabs" handlebars={tabsExampleSecondaryRaw} docs={tabsSecondaryDocs}>
+      <Example heading="Primary tabs with secondary tabs" handlebars={tabsExampleSecondaryRaw} docs={tabsSecondaryDocs}>
         {tabsExampleSecondary}
       </Example>
       <Example heading="Filled tabs" handlebars={tabsExampleFilledRaw} docs={tabsFilledDocs}>
