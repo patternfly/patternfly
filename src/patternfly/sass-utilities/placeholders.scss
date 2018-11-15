@@ -2,10 +2,9 @@
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
   --pf-global--BorderColor: var(--pf-global--BorderColor--dark);
-  --pf-global--active-color--100: var(--pf-global--active-color--100);
-  --pf-global--active-color--100: var(--pf-global--active-color--100);
   --pf-global--primary-color--100: var(--pf-global--primary-color--dark-100);
   --pf-global--link--Color: var(--pf-global--primary-color--dark-100);
+  --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100);
 
   .pf-c-button {
     // Secondary btn
@@ -22,10 +21,10 @@
   --pf-global--Color--100: var(--pf-global--Color--light-100);
   --pf-global--Color--200: var(--pf-global--Color--light-200);
   --pf-global--BorderColor: var(--pf-global--BorderColor--light);
-  --pf-global--active-color--100: var(--pf-global--active-color--100);
   --pf-global--primary-color--100: var(--pf-global--primary-color--light-100);
   --pf-global--link--Color: var(--pf-global--primary-color--light-100);
   --pf-global--link--Color--hover: var(--pf-global--link--Color--light-hover);
+  --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--dark-100);
 
   .pf-c-button {
     // btns
