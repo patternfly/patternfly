@@ -87,7 +87,8 @@
   }
 
   // Primary with secondary tabs style
-  & + .pf-m-tabs-secondary {
+  & + &.pf-m-tabs-secondary,
+  & + .pf-m-tabs-secondary & {
     margin-top: calc(-1 * var(--pf-c-tabs__item--BorderTopWidth));
     border-top: var(--pf-c-tabs__item--BorderTopWidth) solid var(--pf-c-tabs__item--BorderColor);
 
