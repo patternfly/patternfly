@@ -6,25 +6,28 @@
   --pf-c-chip--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip--MarginBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
-  --pf-c-chip--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-chip--BorderColor: var(--pf-global--secondary-color--100);
   --pf-c-chip--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-chip--hover--BorderColor: var(--pf-global--primary-color--100);
 
   // modified chip
   --pf-c-chip--m-overflow--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-chip--m-overflow--PaddingLeft: 0;
   --pf-c-chip--m-overflow--BorderColor: transparent;
   --pf-c-chip--m-overflow--BorderWidth: 0;
+  --pf-c-chip--m-overflow--hover--BorderColor: var(--pf-global--secondary-color--100);
+  --pf-c-chip--m-overflow--hover--BorderWidth: var(--pf-global--BorderWidth--sm);
+
+  // modified chip button
   --pf-c-chip--m-overflow--button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip--m-overflow--button--BorderWidth: 0;
   --pf-c-chip--m-overflow--button--BorderColor: transparent;
   --pf-c-chip--m-overflow--button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-chip--m-overflow--button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip--m-overflow--button--active--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-chip--m-overflow--button--active--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-chip--m-overflow--button--active--BorderColor: var(--pf-global--secondary-color--100);
   --pf-c-chip--m-overflow--button--focus--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-chip--m-overflow--button--focus--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-chip--m-overflow--button--focus--BorderColor: var(--pf-global--secondary-color--100);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -38,11 +41,6 @@
   --pf-c-chip__button--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-chip__button--Color: var(--pf-global--Color--200);
   --pf-c-chip__button--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-chip__button--hover--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-chip__button--hover--BorderColor: var(--pf-global--BorderColor);
-  --pf-c-chip__button--hover--Color: var(--pf-global--primary-color--100);
-  --pf-c-chip__button--active--Color: var(--pf-global--primary-color--200);
-  --pf-c-chip__button--focus--Color: var(--pf-global--primary-color--200);
 
   position: relative;
   display: inline-flex;
@@ -69,18 +67,6 @@
     margin-right: var(--pf-c-chip--MarginRight);
   }
 
-  // Chip Hover State
-  &.pf-m-hover,
-  &:hover {
-    &::before {
-      --pf-c-chip--BorderColor: var(--pf-c-chip--hover--BorderColor);
-    }
-
-    .pf-c-button {
-      color: var(--pf-c-chip__button--hover--Color);
-    }
-  }
-
   // Chip Overflow Modifier
   &.pf-m-overflow {
     --pf-c-chip--PaddingLeft: var(--pf-c-chip--m-overflow--PaddingLeft);
@@ -88,17 +74,17 @@
 
     // Remove Chip border
     &::before {
+      content: "";
+
       --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--BorderColor);
       --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--BorderWidth);
-
-      content: "";
     }
 
     &.pf-m-hover,
     &:hover {
       &::before {
-        --pf-c-chip--BorderColor: var(--pf-c-chip__button--hover--BorderColor);
-        --pf-c-chip--BorderWidth: var(--pf-c-chip__button--hover--BorderWidth);
+        --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--hover--BorderColor);
+        --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--hover--BorderWidth);
       }
     }
 
@@ -142,17 +128,6 @@
     &.pf-m-plain {
       padding-top: 0;
       padding-bottom: 0;
-    }
-
-    &.pf-m-focus,
-    &:focus {
-      color: var(--pf-c-chip__button--focus--Color);
-      outline: none; // turn off default button focus styles
-    }
-
-    &.pf-m-active,
-    &:active {
-      color: var(--pf-c-chip__button--active--Color);
     }
 
     // Turn off default button margin-right style
