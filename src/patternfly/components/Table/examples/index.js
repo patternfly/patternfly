@@ -7,6 +7,7 @@ import tableSimpleWithCheckboxesExampleRaw from '!raw!./table-simple-with-checkb
 import tableExpandableExampleRaw from '!raw!./table-expandable-example.hbs';
 import tableCompactExampleRaw from '!raw!./table-compact-example.hbs';
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
+import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
 
 import TableSimpleExample from './table-simple-example.hbs';
 import tableSimpleDoc from '../docs/table-simple.md';
@@ -25,6 +26,9 @@ import tableCompactDoc from '../docs/table-compact.md';
 
 import TableWidthExample from './table-width-example.hbs';
 import tableWidthDoc from '../docs/table-width.md';
+
+import TableCompoundExpansionExample from './table-compound-expansion-example.hbs';
+
 import docs from '../docs/code.md';
 import '../table.scss';
 
@@ -37,6 +41,7 @@ export default () => {
   const tableCompactExample = TableCompactExample();
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
+  const tableCompoundExpansionExample = TableCompoundExpansionExample();
 
   return (
     <Documentation docs={Docs}>
@@ -61,6 +66,9 @@ export default () => {
       </Example>
       <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
         {tableWidthExample}
+      </Example>
+      <Example heading="Table with Compound Expansion" handlebars={tableCompoundExpansionExampleRaw}>
+        {tableCompoundExpansionExample}
       </Example>
     </Documentation>
   );
