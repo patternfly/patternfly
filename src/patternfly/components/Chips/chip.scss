@@ -39,7 +39,6 @@
   --pf-c-chip__button--MinHeight: #{pf-size-prem(28px)}; // Custom size for min height is as close as possible to target size for accessibility;
   --pf-c-chip__button--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-chip__button--PaddingLeft: var(--pf-global--spacer--xs);
-  --pf-c-chip__button--Color: var(--pf-global--Color--200);
   --pf-c-chip__button--FontSize: var(--pf-global--FontSize--xs);
 
   position: relative;
@@ -115,20 +114,9 @@
 
   // Button
   .pf-c-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     min-width: var(--pf-c-chip__button--MinWidth);
     min-height: var(--pf-c-chip__button--MinHeight);
-    padding-right: var(--pf-c-chip__button--PaddingRight);
-    padding-left: var(--pf-c-chip__button--PaddingLeft);
     font-size: var(--pf-c-chip__button--FontSize);
-    color: var(--pf-c-chip__button--Color);
-
-    &.pf-m-plain {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
   }
 }
 
