@@ -3,10 +3,6 @@
 {{#> table table--grid="true" table--modifier="pf-u-box-shadow-md pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
-      {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
         Repositories
       {{/table-th}}
@@ -15,29 +11,48 @@
       {{/table-th}} 
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
-      {{/table-th}} 
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Work Spaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Last Commit
+      {{/table-th}}
       {{#> table-td}}{{/table-td}} 
       {{#> table-td}}{{/table-td}} 
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button-attribute='aria-labelledby="expandable-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details"'}}{{/table-td}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="expandable-node1"'}}{{/check-input}}
-      {{/table-td}}     
+    {{#> table-tr table-tr--expanded="true"}}    
       {{#> table-th table-th--data-label="Repository Name"}}
-        <span id="expandable-node1">Node 1</span>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
+      {{!-- this table-td should have a modifier --}}
+      {{#> table-td table-td--data-label="Branches"}} 
+        {{!-- add an icon --}}
+        {{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+            10
+        {{/button}}
+        {{!-- <a href="#">10</a>   --}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Pull Requests"}}
-        25
+        {{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+            4
+        {{/button}}
       {{/table-td}}  
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Link 1</a>
+        {{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+            4
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <span id="expandable-node2">20 minutes ago</span>
+      {{/table-td}}
+    {{#> table-td table-td--data-label="Action"}}
+        {{#> button button--modifier="pf-m-link"}}
+            Open in Github
+        {{/button}}
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> button btnClass="pf-m-plain" btnAttributes='id="example1action1" aria-label="Actions"'}}
