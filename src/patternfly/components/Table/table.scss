@@ -220,6 +220,15 @@ $pf-c-table-xs-breakpoint: 380px;
     padding-left: var(--pf-c-table-cell--PaddingLeft);
     font-weight: var(--pf-c-table--FontWeight);
 
+    /* stylelint-disable */ // change these
+    &.pf-m-active {  
+      border-top: var(--pf-global--BorderWidth--md) solid var(--pf-global--primary-color--100);
+      border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light-200);
+      border-bottom: var(--pf-global--BorderWidth--sm) solid #fff;
+      border-left: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light-200);
+      /* stylelint-enable */
+    }
+
     // First child padding left
     &:first-child {
       padding-left: var(--pf-c-table-cell--first-child--PaddingLeft);
@@ -230,6 +239,32 @@ $pf-c-table-xs-breakpoint: 380px;
       padding-right: var(--pf-c-table-cell--last-child--PaddingRight);
     }
   }
+
+  .pf-m-nested {
+    td,
+    th {
+      font-size: 14px; // change this
+    }
+
+    table {
+      box-shadow: var(--pf-global--BoxShadow--md-bottom);
+    }
+
+    thead {
+      border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+    }
+
+    // First child padding left
+    &:first-child {
+      padding-left: 0;
+    }
+
+    // Last child padding right
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
 
   // Modifier - fit-content
   .pf-m-fit-content {
@@ -268,7 +303,9 @@ $pf-c-table-xs-breakpoint: 380px;
     // offset height to extend above tr border
     height: calc(100% + calc(var(--pf-c-table__expandable-row--before--Width) / 2));
     content: "";
-    background-color: transparent;
+
+    // add border left
+    background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
   }
 
   // Modifier - Expanded tr

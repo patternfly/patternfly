@@ -1,9 +1,7 @@
- {{!-- change this --}}
-
 {{#> table table--grid="true" table--modifier="pf-u-box-shadow-md pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -26,28 +24,28 @@
   {{#> table-tbody}}
     {{#> table-tr table-tr--expanded="true"}}    
       {{#> table-th table-th--data-label="Repository Name"}}
-        <a href="#">siemur/test-space</a>
+        {{#> button button--modifier="pf-m-link"}}
+            siemur/test-space
+        {{/button}}
       {{/table-th}}
       {{!-- this table-td should have a modifier --}}
-      {{#> table-td table-td--data-label="Branches"}} 
-        {{!-- add an icon --}}
-        {{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+      {{#> table-td table-td--modifier="pf-m-active" table-td--data-label="Branches"}} 
+        {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
             10
         {{/button}}
-        {{!-- <a href="#">10</a>   --}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Pull Requests"}}
-        {{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+        {{#> button button--modifier="pf-m-link" button--HasCodeIcon="true"}}
             4
         {{/button}}
       {{/table-td}}  
       {{#> table-td table-td--data-label="Action"}}
-        {{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+        {{#> button button--modifier="pf-m-link" button--HasCubeIcon="true"}}
             4
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
-        <span id="expandable-node2">20 minutes ago</span>
+        <span>20 minutes ago</span>
       {{/table-td}}
     {{#> table-td table-td--data-label="Action"}}
         {{#> button button--modifier="pf-m-link"}}
@@ -61,68 +59,187 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
-      {{#> table-td}}
-      {{/table-td}}  
-      {{#> table-td}}
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--modifier="pf-m-nested" table-td--attribute='colspan="7"'}}
+        {{!-- INSERT TABLE INTO TABLE-TD --}}
+        {{#> table table--modifier="pf-u-box-shadow-md-bottom" table--grid="true"}}
+          {{#> table-thead table-thead--modifier="pf-m-nested"}}
+            {{#> table-tr}}
+              {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}} 
+              {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Date{{/table-th}}
+              {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Status{{/table-th}}
+              {{#> table-th table-th--attribute='scope="col"'}}{{/table-th}}
+            {{/table-tr}}
+          {{/table-thead}}
+          {{#> table-tbody}}
+            {{#> table-tr}}
+              {{#> table-th table-th--attribute='scope="row"'}}Item One{{/table-th}}  
+              {{#> table-td table-td--attribute='colspan="1"'}}May 9, 2018{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}Active{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}
+                {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-v"></i>
+                {{/button}}
+              {{/table-td}}
+            {{/table-tr}}
+            {{#> table-tr}}
+              {{#> table-th table-th--attribute='scope="row"'}}Item Two{{/table-th}}  
+              {{#> table-td table-td--attribute='colspan="1"'}}May 9, 2018{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}Warning{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}
+                {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-v"></i>
+                {{/button}}
+              {{/table-td}}
+            {{/table-tr}}
+            {{#> table-tr}}
+              {{#> table-th table-th--attribute='scope="row"'}}Item Three{{/table-th}}  
+              {{#> table-td table-td--attribute='colspan="1"'}}May 9, 2018{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}Active{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}
+                {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-v"></i>
+                {{/button}}
+              {{/table-td}}
+            {{/table-tr}}
+            {{#> table-tr}}
+              {{#> table-th table-th--attribute='scope="row"'}}Item Four{{/table-th}}  
+              {{#> table-td table-td--attribute='colspan="1"'}}May 9, 2018{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}Active{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}
+                {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-v"></i>
+                {{/button}}
+              {{/table-td}}
+            {{/table-tr}}
+            {{#> table-tr}}
+              {{#> table-th table-th--attribute='scope="row"'}}Item Five{{/table-th}}  
+              {{#> table-td table-td--attribute='colspan="1"'}}May 9, 2018{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}Active{{/table-td}}
+              {{#> table-td table-td--attribute='colspan="1"'}}
+                {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-v"></i>
+                {{/button}}
+              {{/table-td}}
+            {{/table-tr}}
+          {{/table-tbody}}
+        {{/table}}
       {{/table-td}}
-      {{#> table-td table-td--attribute='colspan="4"'}}
-        <div class="pf-c-table__expandable-row-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      {{/table-td}}
-      {{#> table-td}}
-      {{/table-td}} 
     {{/table-tr}}         
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button-attribute='aria-labelledby="expandable-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-expanded="false"'}}{{/table-td}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="expandable-node2"'}}{{/check-input}}
-      {{/table-td}}     
+    {{#> table-tr table-tr--expanded="true"}}    
       {{#> table-th table-th--data-label="Repository Name"}}
-        <span id="expandable-node2">Node 2</span>
-        <a href="#">siemur/test-space</a>
+        {{#> button button--modifier="pf-m-link"}}
+            che-sample/web-react-spring-petclinic
+        {{/button}}
       {{/table-th}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
+      {{!-- this table-td should have a modifier --}}
+      {{#> table-td table-td--data-label="Branches"}} 
+        {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
+            3
+        {{/button}}
       {{/table-td}}      
       {{#> table-td table-td--data-label="Pull Requests"}}
-        25
+        {{#> button button--modifier="pf-m-link" button--HasCodeIcon="true"}}
+            4
+        {{/button}}
       {{/table-td}}  
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Link 2</a>
+        {{#> button button--modifier="pf-m-link" button--HasCubeIcon="true"}}
+            2
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <span>1 day ago</span>
+      {{/table-td}}
+    {{#> table-td table-td--data-label="Action"}}
+        {{#> button button--modifier="pf-m-link"}}
+            Open in Github
+        {{/button}}
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='id="expandable-action2" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
     {{/table-tr}}
+  {{/table-tbody}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
-      {{#> table-td}}
+    {{#> table-tbody}}
+    {{#> table-tr table-tr--expanded="true"}}    
+      {{#> table-th table-th--data-label="Repository Name"}}
+        {{#> button button--modifier="pf-m-link"}}
+            che-sample/web-java-spring-petclinic
+        {{/button}}
+      {{/table-th}}
+      {{!-- this table-td should have a modifier --}}
+      {{#> table-td table-td--data-label="Branches"}} 
+        {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
+            70
+        {{/button}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        {{#> button button--modifier="pf-m-link" button--HasCodeIcon="true"}}
+            15
+        {{/button}}
       {{/table-td}}  
-      {{#> table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        {{#> button button--modifier="pf-m-link" button--HasCubeIcon="true"}}
+            12
+        {{/button}}
       {{/table-td}}
-      {{#> table-td table-td--attribute='colspan="4"'}}
-        <div class="pf-c-table__expandable-row-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+      {{#> table-td table-td--data-label="Action"}}
+        <span>2 days ago</span>
       {{/table-td}}
-      {{#> table-td}}
+    {{#> table-td table-td--data-label="Action"}}
+        {{#> button button--modifier="pf-m-link"}}
+            Open in Github
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+      {{#> table-tbody}}
+    {{#> table-tr table-tr--expanded="true"}}    
+      {{#> table-th table-th--data-label="Repository Name"}}
+        {{#> button button--modifier="pf-m-link"}}
+            che-sample/web-java-spring-petclinic
+        {{/button}}
+      {{/table-th}}
+      {{!-- this table-td should have a modifier --}}
+      {{#> table-td table-td--data-label="Branches"}} 
+        {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
+            22
+        {{/button}}
+      {{/table-td}}      
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        {{#> button button--modifier="pf-m-link" button--HasCodeIcon="true"}}
+            4
+        {{/button}}
+      {{/table-td}}  
+      {{#> table-td table-td--data-label="Action"}}
+        {{#> button button--modifier="pf-m-link" button--HasCubeIcon="true"}}
+            23
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <span>20 minutes ago</span>
+      {{/table-td}}
+    {{#> table-td table-td--data-label="Action"}}
+        {{#> button button--modifier="pf-m-link"}}
+            Open in Github
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
