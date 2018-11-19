@@ -8,7 +8,7 @@
     <span id="{{id}}-label" hidden>Select one or more fruits</span>
   {{/if}}
   <button id="{{id}}-button"
-    class="pf-c-dropdown__toggle"
+    class="pf-c-dropdown__toggle{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}"
     {{#if dropdown--IsSelect}}
       aria-labelledby="{{id}}-label {{id}}-button"
     {{else if dropdown--IsMultiSelect}}

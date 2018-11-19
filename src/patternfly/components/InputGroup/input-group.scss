@@ -1,17 +1,18 @@
 @import "../../patternfly-utilities";
 
 .pf-c-input-group {
-  --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-input-group__button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
   --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__text--BorderColor: var(--pf-global--BorderColor--dark);
+  --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
-  --pf-c-input-group__button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-input-group__button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-input-group--form-control-invalid--ZIndex: var(--pf-global--ZIndex--xs);
   /* stylelint-disable */
   > * + * {
@@ -24,7 +25,7 @@
   /* stylelint-enable */
 
   .pf-c-form-control {
-    position: relative;
+    position: static;
 
     &[aria-invalid="true"] {
       position: relative;
@@ -40,39 +41,33 @@
   display: flex;
   width: 100%;
 
-  * {
-    border-radius: 0;
+  .pf-c-button {
+    position: relative;
 
+    &,
     &::after {
       border-radius: 0;
     }
-  }
 
-  .pf-c-button:first-child::after,
-  .pf-c-dropdown:first-child .pf-c-dropdown__toggle::before,
-  .pf-c-form-control:first-child,
-  &__text:first-child {
-    border-radius: var(--pf-c-input-group--BorderRadius) 0 0 var(--pf-c-input-group--BorderRadius);
-  }
+    // Applies top/left and bottom/left border-radius to a button if it's the first item in the input group
+    &:first-child {
+      &,
+      &::after {
+        border-radius: var(--pf-c-input-group__button--BorderRadius) 0 0 var(--pf-c-input-group__button--BorderRadius);
+      }
+    }
 
-  .pf-c-button:last-child::after,
-  .pf-c-dropdown:last-child .pf-c-dropdown__toggle::before,
-  .pf-c-form-control:last-child,
-  &__text:last-child {
-    border-radius: 0 var(--pf-c-input-group--BorderRadius) var(--pf-c-input-group--BorderRadius) 0;
+    // Applies top/right and bottom/right border-radius to a button if it's the last item in the input group
+    &:last-child {
+      &,
+      &::after {
+        border-radius: 0 var(--pf-c-input-group__button--BorderRadius) var(--pf-c-input-group__button--BorderRadius) 0;
+      }
+    }
   }
 
   .pf-c-dropdown__toggle {
     height: 100%;
-  }
-
-  .pf-c-button {
-    padding-right: var(--pf-c-input-group__button--PaddingRight);
-    padding-left: var(--pf-c-input-group__button--PaddingLeft);
-
-    > svg:last-child {
-      margin-right: 0;
-    }
   }
 
   input:not([type="checkbox"]):not([type="radio"]),
@@ -93,7 +88,7 @@
     color: var(--pf-c-input-group__text--Color);
     text-align: center;
     background-color: var(--pf-c-input-group__text--BackgroundColor);
-    border: var(--pf-c-input-group__text--BorderSize) solid var(--pf-c-input-group__text--BorderColor);
+    border: var(--pf-c-input-group__text--BorderSize) solid;
+    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
   }
 }
-
