@@ -18,8 +18,10 @@
 - pf-m-descending
 - pf-m-disabled
 - pf-m-end
+- pf-m-end-current
 - pf-m-error
 - pf-m-expanded
+- pf-m-fill
 - pf-m-fit-content
 - pf-m-flex-2
 - pf-m-flex-3
@@ -42,9 +44,7 @@
 - pf-m-link
 - pf-m-main
 - pf-m-md
-- pf-m-off
 - pf-m-offset
-- pf-m-on
 - pf-m-opaque-100
 - pf-m-opaque-200
 - pf-m-opaque-300
@@ -56,7 +56,10 @@
 - pf-m-secondary
 - pf-m-sm
 - pf-m-start
+- pf-m-start-current
 - pf-m-success
+- pf-m-tabs-secondary
+- pf-m-tall
 - pf-m-tertiary
 - pf-m-top
 - pf-m-transparent
