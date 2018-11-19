@@ -15,9 +15,9 @@
   --pf-c-form__label--m-disabled--Color: var(--pf-global--disabled-color--100);
 
   // required labels
-  --pf-c-form__label__requried--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-form__label__requried--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-form__label__requried--Color: var(--pf-global--danger-color--100);
+  --pf-c-form__label-required--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-form__label-required--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-form__label-required--Color: var(--pf-global--danger-color--100);
 
   // action group
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
@@ -116,11 +116,11 @@
     }
   }
 
-  .pf-c-form__label__required {
-    margin-left: var(--pf-c-form__label__requried--MarginLeft);
-    font-size: var(--pf-c-form__label__requried--FontSize);
+  .pf-c-form__label-required {
+    margin-left: var(--pf-c-form__label-required--MarginLeft);
+    font-size: var(--pf-c-form__label-required--FontSize);
     line-height: 0;
-    color: var(--pf-c-form__label__requried--Color);
+    color: var(--pf-c-form__label-required--Color);
   }
 
 

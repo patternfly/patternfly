@@ -48,9 +48,6 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control--readonly--focus--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--disabled-color--200);
 
-  // input alt style
-  --pf-c-form-control--alt--BottomBorderColor: var(--pf-global--BorderColor--dark);
-
   // Input m-invalid
   --pf-c-form-control--invalid--PaddingBottom: calc(var(--pf-c-form-control--PaddingBottom) - calc(var(--pf-c-form-control--invalid--BorderBottomWidth) - var(--pf-c-form-control--BorderWidth)));
   --pf-c-form-control--invalid--BorderBottomColor: var(--pf-global--danger-color--100);
@@ -98,12 +95,6 @@ $pf-c-form-control__select--ViewBox: "320" !default;
       border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
       border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
     }
-  }
-
-  &.pf-m-form-control-alt {
-    padding-right: 0;
-    padding-left: 0;
-    border-color: transparent transparent var(--pf-c-form-control--alt--BottomBorderColor);
   }
 
   @at-root select#{&} {
