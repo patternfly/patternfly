@@ -32,13 +32,11 @@
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-chip__text--Color: var(--pf-global--Color--100);
-  --pf-c-chip__text--MaxWidth: #{pf-size-prem(120px)}; // This can be changed for different use cases
+  --pf-c-chip__text--MaxWidth: #{pf-size-prem(120px)}; // Hard coded
 
-  // Chip button
-  --pf-c-chip__button--MinWidth: var(--pf-global--spacer--xl); // Change this to a new target size for accessibility
-  --pf-c-chip__button--MinHeight: #{pf-size-prem(28px)}; // Custom size for min height is as close as possible to target size for accessibility;
-  --pf-c-chip__button--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-chip__button--PaddingLeft: var(--pf-global--spacer--xs);
+  // chip button
+  --pf-c-chip__button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip__button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-chip__button--FontSize: var(--pf-global--FontSize--xs);
 
   position: relative;
@@ -114,8 +112,8 @@
 
   // Button
   .pf-c-button {
-    min-width: var(--pf-c-chip__button--MinWidth);
-    min-height: var(--pf-c-chip__button--MinHeight);
+    padding-right: var(--pf-c-chip__button--PaddingRight);
+    padding-left: var(--pf-c-chip__button--PaddingLeft);
     font-size: var(--pf-c-chip__button--FontSize);
   }
 }
