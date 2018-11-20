@@ -88,8 +88,10 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   }
 
   &[readonly] {
-    border-bottom-color: var(--pf-c-form-control--readonly--BorderBottomColor);
-
+    &,
+    &.pf-m-hover,
+    &:hover,
+    &.pf-m-focus,
     &:focus {
       padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
       border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
