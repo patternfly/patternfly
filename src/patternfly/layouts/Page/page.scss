@@ -174,15 +174,11 @@
 
 // Link
 .pf-l-page__header-brand-link {
-  display: none;
+  display: flex;
   flex: 1;
   align-items: center;
   align-self: flex-end;
   min-height: var(--pf-l-page__header-brand-link--MinHeight); // Hardcode link min-height so it matches the button height
-
-  @media (min-width: $pf-global--breakpoint--sm) {
-    display: flex;
-  }
 }
 
 // Sidebar toggle
