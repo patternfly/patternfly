@@ -8,5 +8,8 @@
   {{/page-header-brand-toggle}}
 {{/if}}
 {{#> page-header-brand-link page-header-brand-link--href="#"}}
-  {{#> brand brand--modifier="pf-m-sm" brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
+  {{#> brand }}
+    {{#> brand-source brand-source--attribute='media="(min-width: 765px)" srcset="/assets/images/l_pf-reverse.svg" alt="Patternfly Logo"'}}{{/brand-source}}
+    {{#> brand-default-image brand-default-image--attribute='src="/assets/images/pf_mini_logo_white.svg" alt="Patternfly Logo"'}}{{/brand-default-image}}
+  {{/brand}}
 {{/page-header-brand-link}}
