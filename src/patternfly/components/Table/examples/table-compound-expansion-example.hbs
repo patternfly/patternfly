@@ -28,8 +28,7 @@
             siemur/test-space
         {{/button}}
       {{/table-th}}
-      {{!-- this table-td should have a modifier --}}
-      {{#> table-td table-td--modifier="pf-m-active" table-td--data-label="Branches"}} 
+      {{#> table-td table-td--modifier="pf-m-expandlink" table-td--data-label="Branches"}} 
         {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
             10
         {{/button}}
@@ -63,7 +62,7 @@
       {{#> table-td table-td--modifier="pf-m-nested" table-td--attribute='colspan="7"'}}
         {{!-- INSERT TABLE INTO TABLE-TD --}}
         {{#> table table--modifier="pf-u-box-shadow-md-bottom" table--grid="true"}}
-          {{#> table-thead table-thead--modifier="pf-m-nested"}}
+          {{#> table-thead}}
             {{#> table-tr}}
               {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}} 
               {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Date{{/table-th}}
