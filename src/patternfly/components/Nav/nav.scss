@@ -6,9 +6,11 @@
 
   // List link
   --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-nav__list-link--md--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__list-link--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav__list-link--md--PaddingLeft: var(--pf-global--spacer--xl);
 
   // font weight
   --pf-c-nav__list-link--FontWeight: var(--pf-global--FontWeight--normal);
@@ -28,7 +30,8 @@
   --pf-c-nav__list-link--focus--BackgroundColor: transparent;
 
   // after
-  --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingLeft); // share padding value to properly position after
+  --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingLeft);
+  --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--PaddingLeft--md);
   --pf-c-nav__list-link--after--BackgroundColor: transparent;
   --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
   --pf-c-nav__list-link--active--after--BackgroundColor: var(--pf-global--link--Color);
@@ -64,7 +67,7 @@
   // List horizontal link
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__horizontal-list-link--m-tall--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-link--m-tall--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-link--m-tall--transition--in: 250ms;
@@ -226,6 +229,11 @@
     font-weight: var(--pf-c-nav__list-link--FontWeight);
     color: var(--pf-c-nav__list-link--Color);
 
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      --pf-c-nav__list-link--PaddingRight: var(--pf-c-nav__list-link--md--PaddingRight);
+      --pf-c-nav__list-link--PaddingLeft: var(--pf-c-nav__list-link--md--PaddingLeft);
+    }
+
     // States
     &.pf-m-hover,
     &:hover {
@@ -268,6 +276,10 @@
       height: var(--pf-c-nav__list-link--after--Height);
       content: "";
       background-color: var(--pf-c-nav__list-link--after--BackgroundColor);
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--after--md--Left);
+      }
     }
   }
 
