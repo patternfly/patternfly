@@ -18,4 +18,4 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 
 | Main Differences in pf3 | Main differences in pf4|
 | -- | -- |
-| Modals have a modal-dialog class. |    |
+| Modals have a modal-dialog class. | -- |
