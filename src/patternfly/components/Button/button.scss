@@ -2,18 +2,16 @@
 
 .pf-c-button {
   // Component
-  --pf-c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-button--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-button--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-button--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-button--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-button--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-button--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-button--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-button--BorderColor: transparent;
   --pf-c-button--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-button--MinWidth: var(--pf-global--target-size--MinWidth);
-  --pf-c-button--MinHeight: var(--pf-global--target-size--MinHeight);
 
   // Hover state variables
   --pf-c-button--hover--BorderWidth: var(--pf-global--BorderWidth--md);
@@ -25,9 +23,9 @@
   --pf-c-button--active--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // Disabled state variables
-  --pf-c-button--m-disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-button--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-  --pf-c-button--m-disabled--BorderColor: transparent;
+  --pf-c-button--disabled--Color: var(--pf-global--disabled-color--100);
+  --pf-c-button--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-button--disabled--BorderColor: transparent;
 
   // Primary btn
   --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
@@ -44,14 +42,14 @@
   --pf-c-button--m-secondary--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--Color: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--hover--BackgroundColor: transparent;
-  --pf-c-button--m-secondary--hover--BorderColor: var(--pf-global--primary-color--200);
-  --pf-c-button--m-secondary--hover--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--hover--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--hover--Color: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--focus--BackgroundColor: transparent;
-  --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--primary-color--200);
-  --pf-c-button--m-secondary--focus--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--focus--Color: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--active--BackgroundColor: transparent;
-  --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--primary-color--200);
-  --pf-c-button--m-secondary--active--Color: var(--pf-global--primary-color--200);
+  --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--active--Color: var(--pf-global--primary-color--100);
 
   // Tertiary btn
   --pf-c-button--m-tertiary--BackgroundColor: transparent;
@@ -78,27 +76,22 @@
   --pf-c-button--m-danger--active--Color: var(--pf-global--Color--light-100);
 
   // Link btn
-  --pf-c-button--m-link--BackgroundColor: transparent;
-  --pf-c-button--m-link--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-button--m-link--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-button--m-link--Color: var(--pf-global--link--Color);
   --pf-c-button--m-link--hover--Color: var(--pf-global--link--Color--hover);
-  --pf-c-button--m-link--hover--BackgroundColor: transparent;
   --pf-c-button--m-link--focus--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--active--Color: var(--pf-global--link--Color--hover);
+  --pf-c-button--m-link--disabled--BackgroundColor: transparent;
 
   // Plain btn
-  --pf-c-button--m-plain--BackgroundColor: transparent;
-  --pf-c-button--m-plain--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-button--m-plain--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-button--m-plain--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-button--m-plain--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-button--m-plain--Color: var(--pf-global--Color--100);
-  --pf-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-c-button--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-button--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-button--m-plain--focus--Color: var(--pf-global--Color--100);
   --pf-c-button--m-plain--active--Color: var(--pf-global--Color--100);
-  --pf-c-button--item--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-button--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
+
+  // Styles for an icon in button
+  --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
 
   position: relative;
   display: inline-block;
@@ -146,11 +139,6 @@
     &::after {
       border-width: var(--pf-c-button--focus--BorderWidth);
     }
-  }
-
-  // Add spacing to icon if it appears at the beginning of button
-  > :first-child {
-    margin-right: var(--pf-c-button--item--MarginRight);
   }
 
   &.pf-m-block {
@@ -288,10 +276,7 @@
 
   // Link Buttons
   &.pf-m-link {
-    padding-right: var(--pf-c-button--m-link--PaddingRight);
-    padding-left: var(--pf-c-button--m-link--PaddingLeft);
     color: var(--pf-c-button--m-link--Color);
-    background-color: var(--pf-c-button--m-link--BackgroundColor);
 
     &:hover,
     &.pf-m-hover {
@@ -307,19 +292,16 @@
     &.pf-m-focus {
       color: var(--pf-c-button--m-link--focus--Color);
     }
+
+    &:disabled,
+    &.pf-m-disabled {
+      background-color: var(--pf-c-button--m-link--disabled--BackgroundColor);
+    }
   }
 
   // Icon Buttons
   &.pf-m-plain {
-    padding: var(--pf-c-button--m-plain--PaddingTop) var(--pf-c-button--m-plain--PaddingRight) var(--pf-c-button--m-plain--PaddingBottom) var(--pf-c-button--m-plain--PaddingLeft);
-    line-height: 1;
     color: var(--pf-c-button--m-plain--Color);
-    background-color: var(--pf-c-button--m-plain--BackgroundColor);
-
-    // Ignore margin for button icons
-    > :first-child {
-      margin: 0;
-    }
 
     &:hover,
     &.pf-m-hover {
@@ -335,18 +317,29 @@
     &.pf-m-focus {
       color: var(--pf-c-button--m-plain--focus--Color);
     }
+
+    &:disabled,
+    &.pf-m-disabled {
+      color: var(--pf-c-button--m-plain--disabled--Color);
+      background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
+    }
   }
 
   // Disabled Buttons
   // These styles need to go after the button types because they need to override some of the type styling
   &:disabled,
   &.pf-m-disabled {
-    color: var(--pf-c-button--m-disabled--Color);
+    color: var(--pf-c-button--disabled--Color);
     pointer-events: none;
-    background-color: var(--pf-c-button--m-disabled--BackgroundColor);
+    background-color: var(--pf-c-button--disabled--BackgroundColor);
 
     &::after {
-      border-color: var(--pf-c-button--m-disabled--BorderColor);
+      border-color: var(--pf-c-button--disabled--BorderColor);
     }
   }
+}
+
+// Add spacing to an icon in the button
+.pf-c-button__icon {
+  margin-right: var(--pf-c-button__icon--MarginRight);
 }

@@ -7,9 +7,10 @@
 {{#> button button--modifier="pf-m-primary pf-m-active"}}
   Primary Active
 {{/button}}
-{{#> button button--modifier="pf-m-primary pf-m-disabled"}}
+{{#> button button--modifier="pf-m-primary" button--attribute="disabled"}}
   Primary Disabled
 {{/button}}
+<br><br>
 {{#> button button--modifier="pf-m-secondary"}}
   Secondary
 {{/button}}
@@ -19,9 +20,10 @@
 {{#> button button--modifier="pf-m-secondary pf-m-active"}}
   Secondary Active
 {{/button}}
-{{#> button button--modifier="pf-m-secondary pf-m-disabled"}}
+{{#> button button--modifier="pf-m-secondary" button--attribute="disabled"}}
   Secondary Disabled
 {{/button}}
+<br><br>
 {{#> button button--modifier="pf-m-tertiary"}}
   Tertiary
 {{/button}}
@@ -31,9 +33,10 @@
 {{#> button button--modifier="pf-m-tertiary pf-m-active"}}
   Tertiary Active
 {{/button}}
-{{#> button button--modifier="pf-m-tertiary pf-m-disabled"}}
+{{#> button button--modifier="pf-m-tertiary" button--attribute="disabled"}}
   Tertiary Disabled
 {{/button}}
+<br><br>
 {{#> button button--modifier="pf-m-danger"}}
   Danger
 {{/button}}
@@ -43,18 +46,32 @@
 {{#> button button--modifier="pf-m-danger pf-m-active"}}
   Danger Active
 {{/button}}
-{{#> button button--modifier="pf-m-danger pf-m-disabled"}}
+{{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
   Danger Disabled
 {{/button}}
-{{#> button button--modifier="pf-m-link" button--HasPlusCircleIcon="true"}}
+<br><br>
+{{#> button button--modifier="pf-m-link"}}
+  {{> button-icon button-icon--type="plus-circle" button-icon--modifier="pf-c-button__icon"}}
   Link button
 {{/button}}
-{{#> button button--modifier="pf-m-link pf-m-focus" button--HasPlusCircleIcon="true"}}
+{{#> button button--modifier="pf-m-link pf-m-focus"}}
+  {{> button-icon button-icon--type="plus-circle" button-icon--modifier="pf-c-button__icon"}}
   Link button
 {{/button}}
-{{#> button button--modifier="pf-m-link pf-m-active" button--HasPlusCircleIcon="true"}}
+{{#> button button--modifier="pf-m-link pf-m-active"}}
+  {{> button-icon button-icon--type="plus-circle" button-icon--modifier="pf-c-button__icon"}}
   Link button
 {{/button}}
-{{#> button button--modifier="pf-m-link pf-m-disabled" button--HasPlusCircleIcon="true"}}
+{{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
+  {{> button-icon button-icon--type="plus-circle" button-icon--modifier="pf-c-button__icon"}}
   Link button
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Remove"'}}
+{{/button}}
+{{#> button button--modifier="pf-m-plain pf-m-focus" button--HasTimesIcon="true" button--attribute='aria-label="Remove"'}}
+{{/button}}
+{{#> button button--modifier="pf-m-plain pf-m-active" button--HasTimesIcon="true" button--attribute='aria-label="Remove"'}}
+{{/button}}
+{{#> button button--modifier="pf-m-plain" button--attribute="disabled" button--HasTimesIcon="true" button--attribute='aria-label="Remove"'}}
 {{/button}}

@@ -1,77 +1,123 @@
 @import "../../patternfly-utilities";
 
 // Input - error
-$pf-c-form-controls--invalid--Color: $pf-global--danger-color--100 !default;
-$pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12.3,0 7.9C0 3.5 3.5 0 7.9 0S15.8,3.5,15.8,7.9z M7.9 9.5c-0.8 0-1.5 0.7-1.5 1.5 s0.7,1.5 1.5 1.5s1.5-0.7 1.5-1.5S8.7 9.5 7.9,9.5z M6.5 4.2l0.2 4.3c0 0.2 0.2 0.4 0.4 0.4h1.5c0.2 0 0.4-0.2 0.4-0.4l0.2-4.3 c0-0.2-0.2-0.4-0.4-0.4h-2C6.7 3.8 6.5 4 6.5 4.2L6.5 4.2z" !default;
-
-// Background svg mixin
-@mixin pf-bg-svg($svg-coordinates, $svg-color) {
-  $color: str-slice(#{$svg-color}, 2);
-
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 6px top 8px;
-  background-size: var(--pf-c-form-control--BackgroundWidth) var(--pf-c-form-control--BackgroundHeight);
-}
+$pf-c-form-control--invalid--Color: $pf-global--danger-color--100 !default;
+$pf-c-form-control--invalid--Coordinates: "M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" !default;
+$pf-c-form-control__select--Coordinates: "M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" !default;
+$pf-c-form-control__select--ViewBox: "320" !default;
 
 .pf-c-form-control {
   // Component
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-form-control--Height: calc(#{var(--pf-global--FontSize--md)} * 2 + 4px);
-  --pf-c-form-control--PaddingTop: calc(#{var(--pf-global--spacer--sm)} - 3px); // calc is required to get the propper height here to match buttons
-  --pf-c-form-control--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-form-control--PaddingBottom: calc(#{var(--pf-global--spacer--sm)} - 3px);
-  --pf-c-form-control--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-form-control--Color: var(--pf-global--Color--dark-100);
-  --pf-c-form-control--BorderSize: var(--pf-global--BorderWidth--sm);
-  --pf-c-form-control--BorderColor: var(--pf-global--BorderColor--dark);
-  --pf-c-form-control--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-form-control--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-form-control--BorderTopColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-form-control--BorderRightColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--dark);
+  --pf-c-form-control--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-form-control--BorderRadius: 0;
   --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+
+  // padding
+  // Note for top/bottom padding, subtracting the border height so the height of the input is consistent with buttons and dropdowns that use the same spacing but draw their borders with pseudo elements
+  --pf-c-form-control--PaddingTop: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+  --pf-c-form-control--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+  --pf-c-form-control--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-form-control--PaddingLeft: var(--pf-global--spacer--sm);
+
+  // hover
+  --pf-c-form-control--hover--BorderBottomColor: var(--pf-global--primary-color--100);
+
+  // focus
+  --pf-c-form-control--focus--PaddingBottom: calc(var(--pf-c-form-control--PaddingBottom) - calc(var(--pf-c-form-control--focus--BorderBottomWidth) - var(--pf-c-form-control--BorderWidth)));
+  --pf-c-form-control--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-form-control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // input placeholder style
   --pf-c-form-control--placeholder--Color: var(--pf-global--Color--dark-200);
 
   // input disabled style
   --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-form-control--disabled--BorderSize: var(--pf-global--BorderWidth--sm);
-  --pf-c-form-control--disabled--BorderColor: var(--pf-global--disabled-color--200);
   --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-form-control--disabled--BorderColor: transparent;
 
   // input readonly style
-  --pf-c-form-control--readonly--Color: var(--pf-global--Color--100);
-  --pf-c-form-control--readonly--BorderSize: var(--pf-global--BorderWidth--sm);
-  --pf-c-form-control--readonly--BorderColor: var(--pf-global--BorderColor--dark);
-  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--disabled-color--200);
-
-  // input alt style
-  --pf-c-form-control--alt--BottomBorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-form-control--readonly--BorderBottomColor: var(--pf-global--disabled-color--200);
+  --pf-c-form-control--readonly--focus--PaddingBottom: var(--pf-c-form-control--PaddingBottom);
+  --pf-c-form-control--readonly--focus--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--disabled-color--200);
 
   // Input m-invalid
-  --pf-c-form-control--invalid--PaddingTop: calc(#{var(--pf-global--spacer--sm)} - 4px);
+  --pf-c-form-control--invalid--PaddingBottom: calc(var(--pf-c-form-control--PaddingBottom) - calc(var(--pf-c-form-control--invalid--BorderBottomWidth) - var(--pf-c-form-control--BorderWidth)));
+  --pf-c-form-control--invalid--BorderBottomColor: var(--pf-global--danger-color--100);
+  --pf-c-form-control--invalid--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-form-control--invalid--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-form-control--invalid--PaddingBottom: calc(#{var(--pf-global--spacer--sm)} - 4px);
-  --pf-c-form-control--invalid--PaddingLeft: calc(#{var(--pf-global--spacer--sm)} - 1px);
-  --pf-c-form-control--invalid--BorderColor: var(--pf-global--danger-color--100);
-  --pf-c-form-control--invalid--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-form-control--invalid--BorderSize: var(--pf-global--BorderWidth--md);
-  --pf-c-form-control--BackgroundWidth: var(--pf-global--FontSize--md);
-  --pf-c-form-control--BackgroundHeight: var(--pf-global--FontSize--md);
+  --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--PaddingLeft)) var(--pf-c-form-control--PaddingLeft);
+  --pf-c-form-control--invalid--BackgroundSize: var(--pf-c-form-control--FontSize) var(--pf-c-form-control--FontSize);
+  --pf-c-form-control--invalid--BackgroundUrl: #{pf-bg-svg($pf-c-form-control--invalid--Coordinates, $svg-color: $pf-c-form-control--invalid--Color)};
+  --pf-c-form-control--invalid--Background: var(--pf-c-form-control--invalid--BackgroundUrl) var(--pf-c-form-control--invalid--BackgroundPosition) / var(--pf-c-form-control--invalid--BackgroundSize) no-repeat;
+
+  // Select
+  --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox)};
+  --pf-c-form-control__select--BackgroundSize: #{pf-size-prem(14px)};
+  --pf-c-form-control__select--BackgroundPosition: calc(100% - var(--pf-c-form-control--PaddingRight)) center;
+  --pf-c-form-control__select--Background: var(--pf-c-form-control__select--BackgroundUrl) var(--pf-c-form-control__select--BackgroundPosition) / var(--pf-c-form-control__select--BackgroundSize) no-repeat;
+  --pf-c-form-control__select--PaddingRight: var(--pf-global--spacer--lg);
 
   // This component always needs to be light
   @extend %pf-t-light;
 
+  position: relative;
   width: 100%;
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
   line-height: var(--pf-c-form-control--LineHeight);
   color: var(--pf-c-form-control--Color);
   background-color: var(--pf-c-form-control--BackgroundColor);
-  border: var(--pf-c-form-control--BorderSize) solid var(--pf-c-form-control--BorderColor);
+  border: var(--pf-c-form-control--BorderWidth) solid;
+  border-color: var(--pf-c-form-control--BorderTopColor) var(--pf-c-form-control--BorderRightColor) var(--pf-c-form-control--BorderBottomColor) var(--pf-c-form-control--BorderLeftColor);
   border-radius: var(--pf-c-form-control--BorderRadius);
+  /* stylelint-disable */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  /* stylelint-enable */
 
   &::placeholder {
     color: var(--pf-c-form-control--placeholder--Color);
+  }
+
+  &[readonly] {
+    border-bottom-color: var(--pf-c-form-control--readonly--BorderBottomColor);
+
+    &:focus {
+      padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
+      border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
+      border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
+    }
+  }
+
+  @at-root select#{&} {
+    padding-right: var(--pf-c-form-control__select--PaddingRight);
+    background: var(--pf-c-form-control__select--Background);
+
+    &[aria-invalid="true"] {
+      --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--FontSize) - calc(var(--pf-c-form-control--PaddingRight) * 2));
+
+      background: var(--pf-c-form-control__select--Background), var(--pf-c-form-control--invalid--Background);
+    }
+  }
+
+  &.pf-m-hover,
+  &:hover {
+    border-bottom-color: var(--pf-c-form-control--hover--BorderBottomColor);
+  }
+
+  &.pf-m-focus,
+  &:focus {
+    padding-bottom: var(--pf-c-form-control--focus--PaddingBottom);
+    border-bottom-color: var(--pf-c-form-control--focus--BorderBottomColor);
+    border-bottom-width: var(--pf-c-form-control--focus--BorderBottomWidth);
   }
 
   &:disabled {
@@ -81,39 +127,11 @@ $pf-c-form-controls--invalid--Coordinates: "M15.8 7.9c0 4.4-3.5 7.9-7.9,7.9S0 12
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
 
-  &[readonly] {
-    background-color: var(--pf-c-form-control--readonly--BackgroundColor);
-    border-color: var(--pf-c-form-control--readonly--BorderColor);
-  }
-
   &[aria-invalid="true"] {
-    @include pf-bg-svg($pf-c-form-controls--invalid--Coordinates, $pf-c-form-controls--invalid--Color);
-
-    &:not(.pf-m-form-control-alt) {
-      padding: var(--pf-c-form-control--invalid--PaddingTop) var(--pf-c-form-control--invalid--PaddingRight) var(--pf-c-form-control--invalid--PaddingBottom) var(--pf-c-form-control--invalid--PaddingLeft);
-      border-color: var(--pf-c-form-control--invalid--BorderColor);
-      border-width: var(--pf-c-form-control--invalid--BorderSize);
-    }
-  }
-
-  @at-root select#{&} {
-    height: var(--pf-c-form-control--Height);
-
-    &[aria-invalid="true"] {
-      background: none;
-    }
-  }
-
-  // styles for alternative form input
-  &.pf-m-form-control-alt {
-    padding-right: 0;
-    padding-left: 0;
-    border: none;
-    border-bottom: var(--pf-c-form-control--alt--BottomBorderWidth) solid var(--pf-c-form-control--BorderColor);
-    border-radius: 0;
-
-    &[aria-invalid="true"] {
-      border-bottom-color: var(--pf-c-form-control--invalid--BorderColor);
-    }
+    padding-right: var(--pf-c-form-control--invalid--PaddingRight);
+    padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom);
+    background: var(--pf-c-form-control--invalid--Background);
+    border-bottom-color: var(--pf-c-form-control--invalid--BorderBottomColor);
+    border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
   }
 }
