@@ -3,9 +3,10 @@
     {{#> alert-icon alert-icon--success="true"}}
     {{/alert-icon}}
     {{#> alert-body alert-body--attribute='role="alert"'}}
-      {{#> alert-description}}
+      {{#> alert-title}}
+        {{#> accessibility accessibility--type="sr-only"}}success: {{/accessibility}}
         The server configuration changed.
-      {{/alert-description}}
+      {{/alert-title}}
     {{/alert-body}}
     {{#> alert-action}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
@@ -18,9 +19,10 @@
   {{#> alert-icon alert-icon--danger="true"}}
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
-    {{#> alert-description}}
-			Failed to add server_abc.
-		{{/alert-description}}
+    {{#> alert-title}}
+      {{#> accessibility accessibility--type="sr-only"}}danger: {{/accessibility}}
+        Failed to add server_abc.
+      {{/alert-title}}
   {{/alert-body}}
 {{/alert}}
 <br>
@@ -28,9 +30,10 @@
   {{#> alert-icon alert-icon--warning="true"}}
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
-    {{#> alert-description}}
-			The server configuration changed. 
-		{{/alert-description}}
+    {{#> alert-title}}
+      {{#> accessibility accessibility--type="sr-only"}}warning: {{/accessibility}}
+      The server configuration changed.
+    {{/alert-title}}
   {{/alert-body}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-link"}}
@@ -46,9 +49,10 @@
   {{#> alert-icon alert-icon--info="true"}}
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
-    {{#> alert-description}}
-			Great job! This is really working out.
-		{{/alert-description}}
+    {{#> alert-title}}
+      {{#> accessibility accessibility--type="sr-only"}}info: {{/accessibility}}
+      Great job! This is really working out.
+    {{/alert-title}}
   {{/alert-body}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-link"}}
