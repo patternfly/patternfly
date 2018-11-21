@@ -3,11 +3,9 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import simpleFormDemoExampleRaw from '!raw!./simple-form-demo-example.hbs';
 import horizontalFormDemoExampleRaw from '!raw!./horizontal-form-demo-example.hbs';
-import alternativeFormDemoExampleRaw from '!raw!./alternative-form-demo-example.hbs';
 
 import SimpleFormDemoExample from './simple-form-demo-example.hbs';
 import HorizontalFormDemoExample from './horizontal-form-demo-example.hbs';
-import AlternativeFormDemoExample from './alternative-form-demo-example.hbs';
 
 import docs from '../docs/code.md';
 
@@ -16,7 +14,6 @@ export const Docs = docs;
 export default () => {
   const simpleFormDemoExample = SimpleFormDemoExample();
   const horizontalFormDemoExample = HorizontalFormDemoExample();
-  const alternativeFormDemoExample = AlternativeFormDemoExample();
 
   return (
     <Documentation docs={Docs}>
@@ -25,9 +22,6 @@ export default () => {
       </Example>
       <Example heading="Horizontal Form Demo" handlebars={horizontalFormDemoExampleRaw}>
         {horizontalFormDemoExample}
-      </Example>
-      <Example heading="Alternative Form Demo" handlebars={alternativeFormDemoExampleRaw}>
-        {alternativeFormDemoExample}
       </Example>
     </Documentation>
   );

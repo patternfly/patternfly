@@ -1,13 +1,12 @@
 // URL.com/guidelines#layout
 @import "../../patternfly-utilities";
 
-$nav: "pf-c-nav";
-
 .pf-l-page {
   // Header
   --pf-l-page__header--PaddingBottom: var(--pf-global--spacer--md);
   --pf-l-page__header--m-tall--MinHeight: #{pf-size-prem(110px)};
   --pf-l-page__header--MinHeight: 0;
+  --pf-l-page__header--ZIndex: var(--pf-global--ZIndex--md);
 
   // Header brand
   --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
@@ -51,7 +50,7 @@ $nav: "pf-c-nav";
   --pf-l-page__header-tools--m-tall--MarginBottom: var(--pf-global--spacer--md);
 
   // Sidebar
-  --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--xl);
+  --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-l-page__sidebar--Width--sm: 80%;
   --pf-l-page__sidebar--Width--lg: #{pf-size-prem(290px)};
   --pf-l-page__sidebar--PaddingTop: var(--pf-global--spacer--md);
@@ -71,6 +70,8 @@ $nav: "pf-c-nav";
   --pf-l-page__main-section--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-l-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-l-page__main-section--BoxShadow: var(--pf-global--BoxShadow--lg-right);
+  --pf-l-page__main--ZIndex: var(--pf-global--ZIndex--xs);
+
 
   // Main section horizontal nav
   --pf-l-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
@@ -111,6 +112,7 @@ $nav: "pf-c-nav";
   @extend %pf-t-dark; // force the container follow the dark theme
 
   grid-area: header;
+  z-index: var(--pf-l-page__header--ZIndex);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -261,6 +263,7 @@ $nav: "pf-c-nav";
 // Main
 .pf-l-page__main {
   grid-area: main;
+  z-index: var(--pf-l-page__main--ZIndex);
   display: flex;
   flex-direction: column;
   padding-right: 0;
@@ -281,8 +284,8 @@ $nav: "pf-c-nav";
   padding:
     var(--pf-l-page__main-section--PaddingTop)
     var(--pf-l-page__main-section--PaddingRight)
-    var(--pf-l-page__main-section--PaddingLeft)
-    var(--pf-l-page__main-section--PaddingBottom);
+    var(--pf-l-page__main-section--PaddingBottom)
+    var(--pf-l-page__main-section--PaddingLeft);
   background-color: var(--pf-l-page__main-section--BackgroundColor);
 
   &:last-of-type,
@@ -295,7 +298,7 @@ $nav: "pf-c-nav";
     background-color: var(--pf-l-page__main-section--m-light--BackgroundColor);
   }
 
-  &[class^="pf-m-dark"] {
+  &[class*="pf-m-dark-"] {
     @extend %pf-t-dark; // force the container to follow the dark theme
   }
 

@@ -21,6 +21,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
+| `.pf-c-button__icon` | `*` |  Applies styles to icons in a button. For use when there is an icon followed by text. |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
