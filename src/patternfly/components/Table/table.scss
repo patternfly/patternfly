@@ -156,10 +156,16 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table__td--m-expandlink--BorderLeft--BorderColor:     var(--pf-global--BorderColor--light-200);
 
   // Modifier - Nested Table (Compound Expansion)
-  --pf-c-table-td--m-nested--FontSize:                        var(--pf-global--FontSize--sm);
-  --pf-c-table__thead--m-nested--BorderWidth:                 var(--pf-global--BorderWidth--sm);
-  --pf-c-table__thead--m-nested--BorderColor:                 var(--pf-global--BorderColor--light-200);
-  --pf-c-table__expandable-row-th--m-nested--PaddingTop:      var(--pf-global--spacer--md);
+  --pf-c-table-td--m-nested--FontSize:                          var(--pf-global--FontSize--sm);
+  --pf-c-table__thead--m-nested--BorderWidth:                   var(--pf-global--BorderWidth--sm);
+  --pf-c-table__thead--m-nested--BorderColor:                   var(--pf-global--BorderColor--light-200);
+  --pf-c-table__thead-expandable-row-th--m-nested--PaddingTop:  var(--pf-global--spacer--md);
+  --pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft: var(--pf-global--spacer--3xl);
+  --pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop: var(--pf-global--spacer--sm);
 
   // Modifier - Toggle
   --pf-c-table--m-toggle--Transition:                         var(--pf-global--Transition);
@@ -256,51 +262,58 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  /* stylelint-disable */
   .pf-m-nested {
+    thead {
+      border-bottom: var(--pf-c-table__thead--m-nested--BorderWidth) solid var(--pf-c-table__thead--m-nested--BorderColor);
+
+      .pf-c-table__expandable-row th {
+        padding-top: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingTop);
+
+        &:first-child {
+          padding-left: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft);
+        }
+      }
+    }
+
+    tbody {
+      .pf-c-table__expandable-row th:first-child {
+        padding-left: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft);
+      }
+
+      .pf-c-table__expandable-row:first-child th {
+        padding-top: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop);
+      }
+
+      .pf-c-table__expandable-row:first-child td {
+        padding-top: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop);
+      }
+
+      .pf-c-table__expandable-row:last-child th {
+        padding-bottom: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom);
+      }
+      
+      .pf-c-table__expandable-row:last-child td {
+        padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
+      }
+    }
+
     th,
     td {
       font-size: var(--pf-c-table-td--m-nested--FontSize);
     }
 
-    // adding padding to nested table
-    /* stylelint-disable */
-    thead .pf-c-table__expandable-row th {
-      padding-top: var(--pf-c-table__expandable-row-th--m-nested--PaddingTop);
-    }
-    // find select that joins these
-    tbody .pf-c-table__expandable-row:last-child td {
-      padding-bottom: var(--pf-global--spacer--lg);
-    }
-
-    tbody .pf-c-table__expandable-row:last-child th {
-      padding-bottom: var(--pf-global--spacer--lg);
-    }
-    
-
-    thead {
-      border-bottom: var(--pf-c-table__thead--m-nested--BorderWidth) solid var(--pf-c-table__thead--m-nested--BorderColor);
-    }
-
-    thead th:first-child {
-      padding-left: 30px;
-    }
-
-    tbody th:first-child {
-      padding-left: 30px;
-    }
-
-    // First child padding left
+    // padding left on td
     &:first-child {
       padding-left: 0;
     }
 
-    // Last child padding right
+    // padding right on td
     &:last-child {
       padding-right: 0;
     }
   }
   /* stylelint-enable */
-
 
   // Modifier - fit-content
   .pf-m-fit-content {
