@@ -166,6 +166,7 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table__tbody-expandable-row-td--m-nested--PaddingRight: var(--pf-global--spacer--3xl);
 
   // Modifier - Toggle
   --pf-c-table--m-toggle--Transition:                         var(--pf-global--Transition);
@@ -277,24 +278,35 @@ $pf-c-table-xs-breakpoint: 380px;
     }
 
     tbody {
-      .pf-c-table__expandable-row th:first-child {
-        padding-left: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft);
-      }
+      .pf-c-table__expandable-row {
+        th:first-child {
+          padding-left: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft);
+        }
 
-      .pf-c-table__expandable-row:first-child th {
-        padding-top: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop);
-      }
+        td:last-child {
+          padding-right: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingRight); 
+          text-align: right;
+        }
 
-      .pf-c-table__expandable-row:first-child td {
-        padding-top: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop);
-      }
+        &:first-child {
+          th {
+            padding-top: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop);
+          }
 
-      .pf-c-table__expandable-row:last-child th {
-        padding-bottom: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom);
-      }
-      
-      .pf-c-table__expandable-row:last-child td {
-        padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
+          td {
+            padding-top: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop);
+          }
+        }
+
+        &:last-child {
+          th {
+            padding-bottom: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom);
+          }
+
+          td {
+            padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
+          }
+        }
       }
     }
 
