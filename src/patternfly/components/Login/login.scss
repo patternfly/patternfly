@@ -41,7 +41,7 @@
   --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--2xl);
   --pf-c-login__main-body--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-login__main-body-form-group--m-action--GridGap: var(--pf-global--spacer--md);
+  --pf-c-login__main-body-form-group--m-action--GridGap: var(--pf-global--spacer--lg);
   --pf-c-login__main-body-form-group--m-action__button--PaddingX: var(--pf-global--spacer--xl);
 
   // Login box Footer variables
@@ -170,6 +170,7 @@
 
     @media (min-width: $pf-global--breakpoint--md) {
       grid-template-columns: auto 1fr;
+      justify-items: start;
     }
 
     .pf-c-button {
