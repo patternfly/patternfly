@@ -2,11 +2,11 @@
   {{#> toolbar}}
     {{#> toolbar-group toolbar-group--modifier="pf-u-sr-only pf-u-visible-on-lg"}}
       {{#> toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--HasBellIcon="true" pagelayout-icon--bell="true" button--attribute='aria-label="Overflow actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--HasBellIcon="true" pagelayout-icon--bell="true" button--attribute='aria-label="Notifications"'}}
         {{/button}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--HasCogIcon="true" button--attribute='aria-label="Overflow actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--HasCogIcon="true" button--attribute='aria-label="Settings"'}}
         {{/button}}
       {{/toolbar-item}}
     {{/toolbar-group}}
@@ -16,8 +16,7 @@
         {{/button}}
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier="pf-u-sr-only pf-u-visible-on-md"}}
-        {{#> dropdown dropdown-toggle--modifier="pf-m-plain" id="dropdown-example-collapsed" dropdown--attribute="pf-m-plain" dropdown--HasToggleIcon="true"}}
-          Kyle Baker
+        {{#> dropdown dropdown-toggle-text="Kyle Baker" dropdown-toggle--modifier="pf-m-plain" id="dropdown-example-collapsed" dropdown--attribute="pf-m-plain" dropdown--HasToggleIcon="true"}}
         {{/dropdown}}
       {{/toolbar-item}}
     {{/toolbar-group}}

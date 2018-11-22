@@ -48,6 +48,7 @@
   --pf-l-page__header-tools--avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--m-tall--MarginTop: var(--pf-global--spacer--md);
   --pf-l-page__header-tools--m-tall--MarginBottom: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools-c-dropdown__toggle-text--MaxWidth: 20ch;
 
   // Sidebar
   --pf-l-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
@@ -135,6 +136,13 @@
   .pf-l-page__header-tools {
     padding-top: var(--pf-l-page__header-tools--MarginTop);
     padding-bottom: var(--pf-l-page__header-tools--MarginBottom);
+
+    .pf-c-dropdown__toggle-text {
+      max-width: var(--pf-l-page__header-tools-c-dropdown__toggle-text--MaxWidth);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   &.pf-m-tall {

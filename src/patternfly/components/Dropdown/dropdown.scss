@@ -22,6 +22,7 @@
   --pf-c-dropdown__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
+  --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
 
   // Toggle Arrow
   --pf-c-dropdown__arrow--MarginLeft: var(--pf-global--spacer--md);
@@ -60,15 +61,21 @@
 
 .pf-c-dropdown__toggle {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: var(--pf-c-dropdown__toggle--MinWidth);
   min-height: var(--pf-c-dropdown__toggle--MinHeight);
   padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
   font-size: var(--pf-c-dropdown__toggle--FontSize);
   font-weight: var(--pf-c-dropdown__toggle--FontWeight);
   line-height: var(--pf-c-dropdown__toggle--LineHeight);
-  color: var(--pf-c-dropdown__toggle--Color);
   background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
   border: none;
+
+  & > * {
+    color: var(--pf-c-dropdown__toggle--Color);
+  }
 
   &::before {
     position: absolute;
@@ -103,19 +110,14 @@
     }
 
     &:hover,
-    &.pf-m-hover {
-      &::before {
-        border-color: var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--BorderRightColor) var(--pf-c-dropdown__toggle--hover--BorderBottomColor) var(--pf-c-dropdown__toggle--BorderLeftColor);
-        border-width: var(--pf-c-dropdown__toggle--BorderWidth);
-      }
-    }
-
+    &.pf-m-hover,
     &:active,
     &.pf-m-active,
     .pf-m-expanded > & {
+      --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-plain--Color);
+
       &::before {
-        border-color: var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--expanded--BorderBottomColor) var(--pf-c-dropdown__toggle--BorderTopColor);
-        border-width: var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--BorderWidth) var(--pf-c-dropdown__toggle--expanded--BorderBottomWidth) var(--pf-c-dropdown__toggle--BorderWidth);
+        border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
       }
     }
   }
