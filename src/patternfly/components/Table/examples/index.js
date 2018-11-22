@@ -28,6 +28,7 @@ import TableWidthExample from './table-width-example.hbs';
 import tableWidthDoc from '../docs/table-width.md';
 
 import TableCompoundExpansionExample from './table-compound-expansion-example.hbs';
+import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
 
 import docs from '../docs/code.md';
 import '../table.scss';
@@ -67,7 +68,11 @@ export default () => {
       <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
         {tableWidthExample}
       </Example>
-      <Example heading="Table with Compound Expansion" handlebars={tableCompoundExpansionExampleRaw}>
+      <Example
+        heading="Table with Compound Expansion"
+        handlebars={tableCompoundExpansionExampleRaw}
+        docs={tableCompoundExpansionDoc}
+      >
         {tableCompoundExpansionExample}
       </Example>
     </Documentation>
