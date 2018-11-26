@@ -21,7 +21,7 @@
 
   // Header brand link
   --pf-l-page__header-brand-link--MarginLeft: var(--pf-global--spacer--md);
-  --pf-l-page__header-brand-link-c-brand--MaxHeight: #{pf-size-prem(60px)};
+  --pf-l-page__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
   --pf-l-page__header-brand-link--md--MaxWidth: #{pf-size-prem(150px)};
 
   // Header nav
@@ -125,7 +125,7 @@
   align-items: center;
 
   .pf-c-brand {
-    max-height: var(--pf-l-page__header-brand-link-c-brand--MaxHeight); // Hardcode brand image max-height so it always aligns with everthing else.
+    max-height: var(--pf-l-page__header-brand-link--c-brand--MaxHeight); // Hardcode brand image max-height so it always aligns with everthing else.
   }
 
 
