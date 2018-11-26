@@ -7,7 +7,6 @@
   --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
-  --pf-c-dropdown__toggle--MinHeight: var(--pf-global--target-size--MinHeight);
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
@@ -65,7 +64,6 @@
   align-items: center;
   justify-content: center;
   min-width: var(--pf-c-dropdown__toggle--MinWidth);
-  min-height: var(--pf-c-dropdown__toggle--MinHeight);
   padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
   font-size: var(--pf-c-dropdown__toggle--FontSize);
   font-weight: var(--pf-c-dropdown__toggle--FontWeight);
