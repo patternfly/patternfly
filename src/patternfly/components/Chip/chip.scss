@@ -2,9 +2,6 @@
 
 .pf-c-chip {
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip--MarginTop: calc(#{var(--pf-global--spacer--xs)} / 2);
-  --pf-c-chip--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-chip--MarginBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
   --pf-c-chip--BorderColor: var(--pf-global--secondary-color--100);
   --pf-c-chip--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -43,8 +40,6 @@
   display: inline-flex;
   align-items: center;
   padding-left: var(--pf-c-chip--PaddingLeft);
-  margin-top: var(--pf-c-chip--MarginTop);
-  margin-bottom: var(--pf-c-chip--MarginBottom);
   color: var(--pf-c-chip--Color);
   background-color: var(--pf-c-chip--BackgroundColor);
   border-radius: var(--pf-c-chip--BorderRadius);
@@ -60,10 +55,10 @@
     border-radius: var(--pf-c-chip--BorderRadius);
   }
 
-  &:not(:last-child),
-  &:not(:only-child) {
-    margin-right: var(--pf-c-chip--MarginRight);
-  }
+  // &:not(:last-child),
+  // &:not(:only-child) {
+  //   margin-right: var(--pf-c-chip--MarginRight);
+  // }
 
   // Chip Overflow Modifier
   &.pf-m-overflow {
@@ -121,7 +116,7 @@
 
 // Text Element
 .pf-c-chip__text {
-  align-items: baseline;
+  // align-items: baseline;
   max-width: var(--pf-c-chip__text--MaxWidth);
   overflow: hidden;
   font-size: var(--pf-c-chip__text--FontSize);
