@@ -3,7 +3,7 @@
 .pf-c-login {
   --pf-c-login--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-login--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-login__container--GridColumnGap: var(--pf-global--spacer--3xl);
+  --pf-c-login__container--xl--GridColumnGap: var(--pf-global--spacer--3xl);
 
   // This is a magic number to prevent the login layout grow more than what's defined in the specs.
   --pf-c-login__container--MaxWidth: #{pf-size-prem(500px)};
@@ -11,8 +11,8 @@
   --pf-c-login__container--PaddingRight: #{pf-size-prem(98px)};
 
   // These next 2 variables are full of magic numbers, they are unique to the login layout
-  --pf-c-login__container--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)});
-  --pf-c-login--BackgroundImage: linear-gradient(to right, var(--pf-global--BackgroundColor--dark-transparent-200), var(--pf-global--BackgroundColor--dark-transparent-200) calc((98px - var(--pf-c-login__container--GridColumnGap)) + var(--pf-c-login__container--GridColumnGap) + 272px), transparent calc((98px - var(--pf-c-login__container--GridColumnGap)) + var(--pf-c-login__container--GridColumnGap) + 272px));
+  --pf-c-login__container--xl--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)});
+  --pf-c-login--xl--BackgroundImage: linear-gradient(to right, var(--pf-global--BackgroundColor--dark-transparent-200), var(--pf-global--BackgroundColor--dark-transparent-200) calc((98px - var(--pf-c-login__container--xl--GridColumnGap)) + var(--pf-c-login__container--xl--GridColumnGap) + 272px), transparent calc((98px - var(--pf-c-login__container--xl--GridColumnGap)) + var(--pf-c-login__container--xl--GridColumnGap) + 272px));
   --pf-c-login__header--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-login__header--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__header--sm--PaddingRight: var(--pf-global--spacer--md);
@@ -20,7 +20,7 @@
   --pf-c-login__header--xl--MarginTop: var(--pf-global--spacer--3xl);
   --pf-c-login__header-brand--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-login__header-brand--xl--MarginBottom: var(--pf-global--spacer--2xl);
-  --pf-c-login__main--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-c-login__main--xl--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-login__footer-link--Color: var(--pf-global--Color--light-100);
@@ -63,7 +63,7 @@
 
   @media (min-width: $pf-global--breakpoint--xl) {
     justify-content: flex-start;
-    background-image: var(--pf-c-login--BackgroundImage);
+    background-image: var(--pf-c-login--xl--BackgroundImage);
   }
 
   @media (min-width: $pf-global--breakpoint--sm) {
@@ -79,8 +79,8 @@
   // Large viewports
   @media (min-width: $pf-global--breakpoint--xl) {
     display: grid;
-    grid-column-gap: var(--pf-c-login__container--GridColumnGap);
-    grid-template-columns: var(--pf-c-login__container--GridTemplateColumns);
+    grid-column-gap: var(--pf-c-login__container--xl--GridColumnGap);
+    grid-template-columns: var(--pf-c-login__container--xl--GridTemplateColumns);
     grid-template-areas:
       "main header"
       "main footer"
@@ -119,8 +119,6 @@
   @extend %pf-t-light;
 
   grid-area: main;
-  display: flex;
-  flex-direction: column;
   background-color: var(--pf-c-login__main--BackgroundColor);
 
   // If the first child isn't a header, then we need to put the header's top padding there
@@ -135,7 +133,7 @@
 
   // This is not mobile first but avoids removing the margin for larger devices
   @media (max-width: $pf-global--breakpoint--xl) {
-    margin-bottom: var(--pf-c-login__main--MarginBottom);
+    margin-bottom: var(--pf-c-login__main--xl--MarginBottom);
   }
 }
 
@@ -144,7 +142,6 @@
   grid-template-columns: auto 1fr;
   column-gap: var(--pf-c-login__main-header--ColumnGap);
   row-gap: var(--pf-c-login__main-header--RowGap);
-  flex: 0 0 auto;
   align-items: center;
   padding-top: var(--pf-c-login__main-header--PaddingTop);
   padding-right: var(--pf-c-login__main-header--PaddingRight);
@@ -157,7 +154,6 @@
 }
 
 .pf-c-login__main-body {
-  flex: 1 1 auto;
   padding-top: var(--pf-c-login__main-body--PaddingTop);
   padding-right: var(--pf-c-login__main-body--PaddingRight);
   padding-bottom: var(--pf-c-login__main-body--PaddingBottom);
@@ -188,7 +184,6 @@
 }
 
 .pf-c-login__main-footer {
-  flex: 0 0 auto;
   padding-top: var(--pf-c-login__main-footer--PaddingTop);
   padding-right: var(--pf-c-login__main-footer--PaddingRight);
   padding-bottom: var(--pf-c-login__main-footer--PaddingBottom);
