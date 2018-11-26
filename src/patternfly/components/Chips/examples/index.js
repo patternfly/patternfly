@@ -6,11 +6,18 @@ import ChipsToolbarCollapsedExampleRaw from '!raw!./chips-toolbar-collapsed-exam
 import ChipsToolbarExpandedExampleRaw from '!raw!./chips-toolbar-expanded-example.hbs';
 import ChipsSelectExpandedExampleRaw from '!raw!./chips-select-expanded-example.hbs';
 import ChipsSelectCollapsedExampleRaw from '!raw!./chips-select-collapsed-example.hbs';
+
 import chipsExample from './chips-example.hbs';
+import chipSingleDoc from '../docs/chip-single.md';
+
 import chipsToolbarCollapsedExample from './chips-toolbar-collapsed-example.hbs';
 import chipsToolbarExpandedExample from './chips-toolbar-expanded-example.hbs';
+import chipsToolbarDoc from '../docs/chips-toolbar.md';
+
 import chipsSelectExpandedExample from './chips-select-expanded-example.hbs';
 import chipsSelectCollapsedExample from './chips-select-collapsed-example.hbs';
+import chipsMultiSelectDoc from '../docs/chips-multi-select.md';
+
 import ChipsExampleDoc from '../docs/chips.md';
 import docs from '../docs/code.md';
 import '../chip.scss';
@@ -27,14 +34,14 @@ export default () => {
   const headingText = 'Chips';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Single Chips" handlebars={ChipsExampleRaw}>
+    <Documentation heading={headingText}>
+      <Example heading="Single Chips" handlebars={ChipsExampleRaw} docs={chipSingleDoc}>
         {ChipsExample}
       </Example>
       <Example heading="Chips Toolbar (Collapsed)" handlebars={ChipsToolbarCollapsedExampleRaw}>
         {ChipsToolbarCollapsedExample}
       </Example>
-      <Example heading="Chips Toolbar (Expanded)" handlebars={ChipsToolbarExpandedExampleRaw}>
+      <Example heading="Chips Toolbar (Expanded)" handlebars={ChipsToolbarExpandedExampleRaw} docs={chipsToolbarDoc}>
         {ChipsToolbarExpandedExample}
       </Example>
       <Example
@@ -47,7 +54,7 @@ export default () => {
       <Example
         heading="Chips Multi-Select (Expanded)"
         handlebars={ChipsSelectExpandedExampleRaw}
-        docs={ChipsExampleDoc}
+        docs={chipsMultiSelectDoc}
       >
         {ChipsSelectExpandedExample}
       </Example>
