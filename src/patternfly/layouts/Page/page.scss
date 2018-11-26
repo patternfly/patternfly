@@ -186,25 +186,21 @@
 
 // Sidebar
 .pf-l-page__sidebar {
-  grid-area: 2 / 1;
   z-index: var(--pf-l-page__sidebar--ZIndex);
-  width: var(--pf-l-page__sidebar--Width);
+  flex: 1;
+  order: initial;
+  width: var(--pf-l-page__sidebar--md--Width); // hardcode sidebar based on design spec, must match pf-n-nav--Width
+  max-width: var(--pf-l-page__sidebar--md--Width); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
+  grid-area: 2 / 1;
   padding-top: var(--pf-l-page__sidebar--PaddingTop);
   padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--pf-l-page__sidebar--BackgroundColor);
+  box-shadow: var(--pf-l-page__sidebar--BoxShadow);
   transition: var(--pf-l-page__sidebar--Transition);
-  transform: var(--pf-l-page__sidebar--Transform--out);
+  transform: var(--pf-l-page__sidebar--Transform--in);
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    flex: 1;
-    order: initial;
-    width: var(--pf-l-page__sidebar--md--Width); // hardcode sidebar based on design spec, must match pf-n-nav--Width
-    max-width: var(--pf-l-page__sidebar--md--Width); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
-    box-shadow: var(--pf-l-page__sidebar--BoxShadow);
-    transform: var(--pf-l-page__sidebar--Transform--in);
-  }
 
   // Mobile
   // Expanded nav

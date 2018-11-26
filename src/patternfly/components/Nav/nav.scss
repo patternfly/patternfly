@@ -185,7 +185,8 @@
   --pf-c-nav__list-tertiary-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Base styling
-  overflow-x: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 
   // Hide scrollbars
   &::-webkit-scrollbar {
