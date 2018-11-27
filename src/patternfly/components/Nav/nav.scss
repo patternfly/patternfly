@@ -31,7 +31,7 @@
 
   // after
   --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingLeft);
-  --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--PaddingLeft--md);
+  --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--md--PaddingLeft);
   --pf-c-nav__list-link--after--BackgroundColor: transparent;
   --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
   --pf-c-nav__list-link--active--after--BackgroundColor: var(--pf-global--link--Color);
@@ -68,6 +68,7 @@
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav__horizontal-list-link--lg--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-link--m-tall--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-link--m-tall--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-link--m-tall--transition--in: 250ms;
@@ -399,6 +400,10 @@
     white-space: nowrap;
     background-color: var(--pf-c-nav__horizontal-list-link--BackgroundColor);
     transition: var(--pf-c-nav__horizontal-list-link--m-tall--transition--in);
+
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-c-nav__horizontal-list-link--lg--PaddingBottom);
+    }
 
     // States
     &.pf-m-hover,
