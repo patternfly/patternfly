@@ -54,6 +54,7 @@
 
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
 
 .pf-c-dropdown__toggle {
@@ -62,6 +63,7 @@
   align-items: center;
   justify-content: center;
   min-width: var(--pf-c-dropdown__toggle--MinWidth);
+  max-width: 100%;
   padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
   font-size: var(--pf-c-dropdown__toggle--FontSize);
   font-weight: var(--pf-c-dropdown__toggle--FontWeight);
