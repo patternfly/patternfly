@@ -155,6 +155,10 @@ $pf-global--BorderColor--light-200: $pf-color-black-200 !default;
 $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
+// Icons
+$pf-global--icon--Color: $pf-color-black-400 !default;
+$pf-global--icon--FontSize: pf-font-prem(54px) !default;
+
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
