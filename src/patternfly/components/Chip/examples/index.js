@@ -35,18 +35,28 @@ export default () => {
 
   return (
     <Documentation heading={headingText}>
-      <Example heading="Single Chips" handlebars={ChipsExampleRaw} docs={chipSingleDoc}>
+      <Example heading="Single Chips" handlebars={ChipsExampleRaw} className="is-light-preview" docs={chipSingleDoc}>
         {ChipsExample}
       </Example>
-      <Example heading="Chips Toolbar (Collapsed)" handlebars={ChipsToolbarCollapsedExampleRaw}>
+      <Example
+        heading="Chips Toolbar (Collapsed)"
+        handlebars={ChipsToolbarCollapsedExampleRaw}
+        className="is-light-preview"
+      >
         {ChipsToolbarCollapsedExample}
       </Example>
-      <Example heading="Chips Toolbar (Expanded)" handlebars={ChipsToolbarExpandedExampleRaw} docs={chipsToolbarDoc}>
+      <Example
+        heading="Chips Toolbar (Expanded)"
+        handlebars={ChipsToolbarExpandedExampleRaw}
+        className="is-light-preview"
+        docs={chipsToolbarDoc}
+      >
         {ChipsToolbarExpandedExample}
       </Example>
       <Example
         heading="Chips Multi-Select (Collapsed)"
         handlebars={ChipsSelectCollapsedExampleRaw}
+        className="is-light-preview"
         docs={ChipsExampleDoc}
       >
         {ChipsSelectCollapsedExample}
@@ -54,6 +64,7 @@ export default () => {
       <Example
         heading="Chips Multi-Select (Expanded)"
         handlebars={ChipsSelectExpandedExampleRaw}
+        className="is-light-preview"
         docs={chipsMultiSelectDoc}
       >
         {ChipsSelectExpandedExample}

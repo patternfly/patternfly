@@ -1,6 +1,8 @@
 @import "../../patternfly-utilities";
 
 .pf-c-chip-group {
+  @extend %pf-t-light; // force the container follow the light theme
+
   --pf-c-chip-group--PaddingTop: calc(#{var(--pf-global--spacer--xs)} / 2);
   --pf-c-chip-group--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-chip-group--PaddingBottom: calc(#{var(--pf-global--spacer--xs)} / 2);

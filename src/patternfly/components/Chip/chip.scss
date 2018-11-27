@@ -1,6 +1,8 @@
 @import "../../patternfly-utilities";
 
 .pf-c-chip {
+  @extend %pf-t-light; // force the container follow the light theme
+
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
   --pf-c-chip--BorderColor: var(--pf-global--secondary-color--100);
