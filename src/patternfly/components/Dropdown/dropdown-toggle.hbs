@@ -2,9 +2,9 @@
 	{{#if dropdown--IsSelect}}
 		aria-labelledby="{{id}}-label {{id}}-button"
 	{{else if dropdown--IsMultiSelect}}
-			aria-labelledby="{{id}}-label {{id}}-button"
+		aria-labelledby="{{id}}-label {{id}}-button"
 	{{/if}}
-	aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
+		aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
 	{{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
 		{{> dropdown-toggle-text}}
 	{{#if dropdown--HasToggleIcon}}
