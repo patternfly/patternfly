@@ -10,8 +10,8 @@
   --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
   --pf-l-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-l-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-l-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-l-page__header-brand--md--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-l-page__header-brand--md--FlexBasis: #{pf-size-prem(290px)};
 
@@ -48,7 +48,7 @@
   // Sidebar transitions
   --pf-l-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-l-page__sidebar--Transform--out: translate3d(-100%, 0, 0);
-  --pf-l-page__sidebar--Transform--in: translate3d(0, 0, 0);
+  --pf-l-page__sidebar--md--Transform--in: translate3d(0, 0, 0);
 
   // Main section
   --pf-l-page__main-section--Padding: var(--pf-global--spacer--md);
@@ -60,7 +60,8 @@
   --pf-l-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
   --pf-l-page__main-nav--PaddingRight: 0;
   --pf-l-page__main-nav--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-l-page__main-nav--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-l-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-l-page__main-nav--md--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-l-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
   // Main section modifiers
@@ -186,21 +187,26 @@
 
 // Sidebar
 .pf-l-page__sidebar {
-  z-index: var(--pf-l-page__sidebar--ZIndex);
-  flex: 1;
-  order: initial;
-  width: var(--pf-l-page__sidebar--md--Width); // hardcode sidebar based on design spec, must match pf-n-nav--Width
-  max-width: var(--pf-l-page__sidebar--md--Width); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
   grid-area: 2 / 1;
+  z-index: var(--pf-l-page__sidebar--ZIndex);
+  width: var(--pf-l-page__sidebar--Width);
   padding-top: var(--pf-l-page__sidebar--PaddingTop);
   padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   background-color: var(--pf-l-page__sidebar--BackgroundColor);
-  box-shadow: var(--pf-l-page__sidebar--BoxShadow);
   transition: var(--pf-l-page__sidebar--Transition);
-  transform: var(--pf-l-page__sidebar--Transform--in);
+  transform: var(--pf-l-page__sidebar--Transform--out);
 
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    flex: 1;
+    order: initial;
+    width: var(--pf-l-page__sidebar--md--Width); // hardcode sidebar based on design spec, must match pf-n-nav--Width
+    max-width: var(--pf-l-page__sidebar--md--Width); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
+    box-shadow: var(--pf-l-page__sidebar--BoxShadow);
+    transform: var(--pf-l-page__sidebar--md--Transform--in);
+  }
 
   // Mobile
   // Expanded nav
@@ -237,6 +243,10 @@
     var(--pf-l-page__main-nav--PaddingBottom)
     var(--pf-l-page__main-nav--PaddingLeft);
   background-color: var(--pf-l-page__main-nav--BackgroundColor);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-l-page__main-nav--PaddingLeft: var(--pf-l-page__main-nav--md--PaddingLeft);
+  }
 }
 
 .pf-l-page__main-section {

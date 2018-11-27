@@ -31,7 +31,7 @@
 
   // after
   --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingLeft);
-  --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--PaddingLeft--md);
+  --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--md--PaddingLeft);
   --pf-c-nav__list-link--after--BackgroundColor: transparent;
   --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
   --pf-c-nav__list-link--active--after--BackgroundColor: var(--pf-global--link--Color);
@@ -185,8 +185,7 @@
   --pf-c-nav__list-tertiary-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Base styling
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
 
   // Hide scrollbars
   &::-webkit-scrollbar {
