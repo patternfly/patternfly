@@ -1,24 +1,24 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import ChipsExampleRaw from '!raw!./chips-example.hbs';
-import ChipsToolbarCollapsedExampleRaw from '!raw!./chips-toolbar-collapsed-example.hbs';
-import ChipsToolbarExpandedExampleRaw from '!raw!./chips-toolbar-expanded-example.hbs';
-import ChipsSelectExpandedExampleRaw from '!raw!./chips-select-expanded-example.hbs';
-import ChipsSelectCollapsedExampleRaw from '!raw!./chips-select-collapsed-example.hbs';
+import ChipExampleRaw from '!raw!./chip-example.hbs';
+import ChipToolbarCollapsedExampleRaw from '!raw!./chip-toolbar-collapsed-example.hbs';
+import ChipToolbarExpandedExampleRaw from '!raw!./chip-toolbar-expanded-example.hbs';
+import ChipSelectExpandedExampleRaw from '!raw!./chip-select-expanded-example.hbs';
+import ChipSelectCollapsedExampleRaw from '!raw!./chip-select-collapsed-example.hbs';
 
-import chipsExample from './chips-example.hbs';
+import chipExample from './chip-example.hbs';
 import chipSingleDoc from '../docs/chip-single.md';
 
-import chipsToolbarCollapsedExample from './chips-toolbar-collapsed-example.hbs';
-import chipsToolbarExpandedExample from './chips-toolbar-expanded-example.hbs';
-import chipsToolbarDoc from '../docs/chips-toolbar.md';
+import chipToolbarCollapsedExample from './chip-toolbar-collapsed-example.hbs';
+import chipToolbarExpandedExample from './chip-toolbar-expanded-example.hbs';
+import chipToolbarDoc from '../docs/chip-toolbar.md';
 
-import chipsSelectExpandedExample from './chips-select-expanded-example.hbs';
-import chipsSelectCollapsedExample from './chips-select-collapsed-example.hbs';
-import chipsMultiSelectDoc from '../docs/chips-multi-select.md';
+import chipSelectExpandedExample from './chip-select-expanded-example.hbs';
+import chipSelectCollapsedExample from './chip-select-collapsed-example.hbs';
+import chipMultiSelectDoc from '../docs/chip-multi-select.md';
 
-import ChipsExampleDoc from '../docs/chips.md';
+import ChipExampleDoc from '../docs/chip.md';
 import docs from '../docs/code.md';
 import '../chip.scss';
 import '../chip-group.scss';
@@ -26,48 +26,48 @@ import '../chip-group.scss';
 export const Docs = docs;
 
 export default () => {
-  const ChipsExample = chipsExample();
-  const ChipsToolbarCollapsedExample = chipsToolbarCollapsedExample();
-  const ChipsToolbarExpandedExample = chipsToolbarExpandedExample();
-  const ChipsSelectExpandedExample = chipsSelectExpandedExample();
-  const ChipsSelectCollapsedExample = chipsSelectCollapsedExample();
-  const headingText = 'Chips';
+  const ChipExample = chipExample();
+  const ChipToolbarCollapsedExample = chipToolbarCollapsedExample();
+  const ChipToolbarExpandedExample = chipToolbarExpandedExample();
+  const ChipSelectExpandedExample = chipSelectExpandedExample();
+  const ChipSelectCollapsedExample = chipSelectCollapsedExample();
+  const headingText = 'Chip';
 
   return (
     <Documentation heading={headingText}>
-      <Example heading="Single Chips" handlebars={ChipsExampleRaw} className="is-light-preview" docs={chipSingleDoc}>
-        {ChipsExample}
+      <Example heading="Single Chip" handlebars={ChipExampleRaw} className="is-light-preview" docs={chipSingleDoc}>
+        {ChipExample}
       </Example>
       <Example
-        heading="Chips Toolbar (Collapsed)"
-        handlebars={ChipsToolbarCollapsedExampleRaw}
+        heading="Chip Toolbar (Collapsed)"
+        handlebars={ChipToolbarCollapsedExampleRaw}
         className="is-light-preview"
       >
-        {ChipsToolbarCollapsedExample}
+        {ChipToolbarCollapsedExample}
       </Example>
       <Example
-        heading="Chips Toolbar (Expanded)"
-        handlebars={ChipsToolbarExpandedExampleRaw}
+        heading="Chip Toolbar (Expanded)"
+        handlebars={ChipToolbarExpandedExampleRaw}
         className="is-light-preview"
-        docs={chipsToolbarDoc}
+        docs={chipToolbarDoc}
       >
-        {ChipsToolbarExpandedExample}
+        {ChipToolbarExpandedExample}
       </Example>
       <Example
-        heading="Chips Multi-Select (Collapsed)"
-        handlebars={ChipsSelectCollapsedExampleRaw}
+        heading="Chip Multi-Select (Collapsed)"
+        handlebars={ChipSelectCollapsedExampleRaw}
         className="is-light-preview"
-        docs={ChipsExampleDoc}
+        docs={ChipExampleDoc}
       >
-        {ChipsSelectCollapsedExample}
+        {ChipSelectCollapsedExample}
       </Example>
       <Example
-        heading="Chips Multi-Select (Expanded)"
-        handlebars={ChipsSelectExpandedExampleRaw}
+        heading="Chip Multi-Select (Expanded)"
+        handlebars={ChipSelectExpandedExampleRaw}
         className="is-light-preview"
-        docs={chipsMultiSelectDoc}
+        docs={chipMultiSelectDoc}
       >
-        {ChipsSelectExpandedExample}
+        {ChipSelectExpandedExample}
       </Example>
     </Documentation>
   );
