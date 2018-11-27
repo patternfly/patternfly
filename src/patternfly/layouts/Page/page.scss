@@ -139,9 +139,6 @@
 
     .pf-c-dropdown__toggle-text {
       max-width: var(--pf-l-page__header-tools--c-dropdown__toggle-text--MaxWidth);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 
