@@ -4,20 +4,23 @@
 .pf-l-page {
   // Header
   --pf-l-page__header--ZIndex: var(--pf-global--ZIndex--md);
-  --pf-l-page__header--Height: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
+  --pf-l-page__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
   --pf-l-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
   --pf-l-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-l-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-l-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-l-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-l-page__header-brand--md--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-l-page__header-brand--md--FlexBasis: #{pf-size-prem(290px)};
 
   // Toggle
-  --pf-l-page__header-sidebar-toggle--Padding: var(--pf-global--spacer--sm);
-  --pf-l-page__header-sidebar-toggle--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-l-page__header-sidebar-toggle__c-button--Padding: var(--pf-global--spacer--sm);
+  --pf-l-page__header-sidebar-toggle__c-button--MarginRight: var(--pf-global--spacer--md);
+  --pf-l-page__header-sidebar-toggle__c-button--MarginLeft: calc(#{var(--pf-global--spacer--xs)} * -1);
+  --pf-l-page__header-sidebar-toggle__c-button--md--MarginLeft: calc(#{var(--pf-global--spacer--sm)} * -1);
+  --pf-l-page__header-sidebar-toggle__c-button--FontSize: var(--pf-global--FontSize--2xl);
 
   // Header brand link
   --pf-l-page__header-brand-link--MarginLeft: var(--pf-global--spacer--md);
@@ -32,7 +35,9 @@
   --pf-l-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
 
   // Header tools
+  --pf-l-page__header-tools--MarginTop: var(--pf-global--spacer--sm);
   --pf-l-page__header-tools--MarginRight: var(--pf-global--spacer--md);
+  --pf-l-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-l-page__header-tools--md--MarginRight: var(--pf-global--spacer--xl);
   --pf-l-page__header-tools--avatar--MarginLeft: var(--pf-global--spacer--md);
 
@@ -97,7 +102,7 @@
   flex-wrap: wrap;
   align-items: center;
   max-width: 100%;
-  height: var(--pf-l-page__header--Height);
+  min-height: var(--pf-l-page__header--MinHeight);
 
   > * {
     display: flex;
@@ -138,11 +143,15 @@
 // Sidebar toggle
 .pf-l-page__header-brand-toggle {
   .pf-c-button {
-    padding: var(--pf-l-page__header-sidebar-toggle--Padding);
-    margin-right: var(--pf-l-page__header-brand-link--MarginLeft);
-    margin-left: calc(var(--pf-l-page__header-sidebar-toggle--PaddingLeft) * -1); // ensure button does not adjust positioning, offset padding-left
-    font-size: var(--pf-l-page__header-sidebar-toggle--FontSize);
+    padding: var(--pf-l-page__header-sidebar-toggle__c-button--Padding);
+    margin-right: var(--pf-l-page__header-sidebar-toggle__c-button--MarginRight);
+    margin-left: var(--pf-l-page__header-sidebar-toggle__c-button--MarginLeft);
+    font-size: var(--pf-l-page__header-sidebar-toggle__c-button--FontSize);
     line-height: 1;
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      --pf-l-page__header-sidebar-toggle__c-button--MarginLeft: var(--pf-l-page__header-sidebar-toggle__c-button--md--MarginLeft);
+    }
   }
 }
 
@@ -173,7 +182,9 @@
 // Header tools
 .pf-l-page__header-tools {
   align-items: center;
+  margin-top: var(--pf-l-page__header-tools--MarginTop);
   margin-right: var(--pf-l-page__header-tools--MarginRight);
+  margin-bottom: var(--pf-l-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
