@@ -157,7 +157,10 @@ $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently la
 
 // Icons
 $pf-global--icon--Color: $pf-color-black-400 !default;
-$pf-global--icon--FontSize: pf-font-prem(54px) !default;
+$pf-global--icon--FontSize--sm: pf-font-prem(10px) !default;
+$pf-global--icon--FontSize--md: pf-font-prem(18px) !default;
+$pf-global--icon--FontSize--lg: pf-font-prem(24px) !default;
+$pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 
 // Fonts
 // Font family
