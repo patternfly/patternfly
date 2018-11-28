@@ -72,19 +72,22 @@
 
   &:hover,
   &.pf-m-hover {
-    color: var(--pf-c-breadcrumb__link--hover--Color);
     text-decoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+
+    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
   }
 
   // current item
   &.pf-m-current {
-    color: var(--pf-c-breadcrumb__link--m-current--Color);
     text-decoration: none;
     cursor: default;
 
+    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--m-current--Color);
+
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-breadcrumb__link--m-current--hover--Color);
+      --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--m-current--hover--Color);
+
       text-decoration: none;
     }
   }
