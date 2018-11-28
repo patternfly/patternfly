@@ -2,30 +2,18 @@
   {{#if select--attribute}}
     {{{select--attribute}}}
   {{/if}}>
-  {{#if select--IsSelect}}
-    <span id="{{id}}-label" hidden>Select a fruit</span>
-  {{else if select--IsMultiSelect}}
-    <span id="{{id}}-label" hidden>Select one or more fruits</span>
+  {{#if select--IsMultiSelect}}
+    <span id="{{id}}-label" hidden>{{#if select---typeahead--Placeholder}} {{select---typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
+  {{else}}
+    <span id="{{id}}-label" hidden>{{#if select---typeahead--Placeholder}} {{select---typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
   {{/if}}
-  <button id="{{id}}-button"
-    class="pf-c-select__toggle"
-    {{#if select--IsSelect}}
-      aria-labelledby="{{id}}-label {{id}}-button"
-    {{else if select--IsMultiSelect}}
-        aria-labelledby="{{id}}-label {{id}}-button"
-    {{/if}}
-    aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
-    {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
-    {{> @partial-block}}
-    {{> select-toggle-icon}}
-  </button>
-  {{#if select--IsSelect}}
-    {{> select-single}}
-  {{else if select--IsMultiSelect}}
+      
+  {{> select-toggle}}
+
+  {{#if select--IsMultiSelect}}
     {{> select-multi}}
   {{else}}
     {{> select-single}}
   {{/if}}
 
-  {{> @partial-block}}
 </div>

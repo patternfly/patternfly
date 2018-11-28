@@ -7,7 +7,8 @@
   --pf-c-select__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-select__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-select__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
-  --pf-c-select__toggle--MinHeight: var(--pf-global--target-size--MinHeight);
+
+  // --pf-c-select__toggle--MinHeight: var(--pf-global--target-size--MinHeight);
   --pf-c-select__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-select__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__toggle--LineHeight: var(--pf-global--LineHeight--md);
@@ -59,18 +60,28 @@
 }
 
 .pf-c-select__toggle {
+  // TODO: remove padding
+  // TODO: control whitespace so it doesn't wrap
+
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: var(--pf-c-select__toggle--MinWidth);
-  min-height: var(--pf-c-select__toggle--MinHeight);
+
+  // min-height: var(--pf-c-select__toggle--MinHeight);
+  // padding: 0 var(--pf-c-select__toggle--PaddingRight) 0 var(--pf-c-select__toggle--PaddingLeft);
+
   padding: var(--pf-c-select__toggle--PaddingTop) var(--pf-c-select__toggle--PaddingRight) var(--pf-c-select__toggle--PaddingBottom) var(--pf-c-select__toggle--PaddingLeft);
   font-size: var(--pf-c-select__toggle--FontSize);
   font-weight: var(--pf-c-select__toggle--FontWeight);
   line-height: var(--pf-c-select__toggle--LineHeight);
   color: var(--pf-c-select__toggle--Color);
+  white-space: nowrap;
   background-color: var(--pf-c-select__toggle--BackgroundColor);
   border: none;
 
-  &::before {
+  &::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -95,6 +106,14 @@
       border-bottom-color: var(--pf-c-select__toggle--expanded--BorderBottomColor);
       border-bottom-width: var(--pf-c-select__toggle--expanded--BorderBottomWidth);
     }
+  }
+
+  &.pf-m-typeahead {
+    --pf-c-select__toggle--PaddingTop: 0;
+    --pf-c-select__toggle--PaddingBottom: 0;
+
+    // may need to revisit this, good when the input is the first (only) thing but not otherwise
+    --pf-c-select__toggle--PaddingLeft: 0;
   }
 
   &.pf-m-plain {
@@ -127,6 +146,18 @@
       transform: rotate(-180deg);
     }
   }
+}
+
+.pf-c-select__typeahead {
+  // TODO: Need to fix and make variables
+  flex-basis: 10em;
+  flex-grow: 1;
+  flex-shrink: 0;
+  background-color: transparent;
+  border-right: none;
+  border-bottom-color: inherit;
+  border-bottom-style: inherit;
+  border-left: none;
 }
 
 .pf-c-select__menu {

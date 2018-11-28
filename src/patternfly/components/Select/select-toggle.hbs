@@ -1,0 +1,25 @@
+<div class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}} {{#if select--IsTypeahead}}pf-m-typeahead{{/if}}"
+  id="{{id}}" 
+  aria-haspopup="true" 
+  aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
+	{{#if aria-label}}
+		aria-label="{{aria-label}}" 
+	{{/if}}
+	{{#if select-toggle--attribute}}
+		{{{select-toggle--attribute}}}
+	{{/if}}>
+	{{> @partial-block}}
+	{{#if select--IsMultiSelect}}
+		<div>
+			chips here
+			{{#if select--IsTypeahead}}
+				{{> select-toggle-typeahead select-typeahead--Placeholder="type to filter"}}
+			{{/if}}
+		</div>
+	{{else}}
+		{{#if select--IsTypeahead}}
+			{{> select-toggle-typeahead select-typeahead--Placeholder="type to select"}}
+		{{/if}}
+	{{/if}}
+	{{> select-toggle-icon}}
+</div>

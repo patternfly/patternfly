@@ -1,0 +1,15 @@
+{{!-- <input class="pf-c-select__typeahead {{#if select-typeahead--modifier}}{{select-typeahead--modifier}}{{/if}}" type="text" 
+  {{#if select-typeahead--placeholder}}placeholder="{{select-typeahead--placeholder}}"{{/if}}
+  id="{{id}}" 
+	{{#if aria-label}}
+		aria-label="{{aria-label}}" 
+	{{/if}}
+	{{#if select-typeahead--attribute}}
+		{{{select-typeahead--attribute}}}
+	{{/if}}> --}}
+
+{{#> form-control controlType="input" 
+input="true" 
+form-control--modifier="pf-c-select__typeahead" 
+form-control--attribute=(concat 'type="text" id="textInput1" aria-label="input example" placeholder="' select-typeahead--Placeholder '"')}}
+{{/form-control}}

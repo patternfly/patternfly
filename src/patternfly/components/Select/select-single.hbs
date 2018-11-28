@@ -1,12 +1,12 @@
-<ul class="pf-c-dropdown__menu{{#if dropdown-select--modifier}} {{dropdown-select--modifier}}{{/if}}" 
+<ul class="pf-c-select__menu{{#if select--modifier}} {{select--modifier}}{{/if}}" 
   aria-labelledby="{{id}}-label" 
-  {{#unless dropdown--IsExpanded}}hidden{{/unless}}
-  {{#if dropdown-select--attribute}}
-    {{{dropdown-select--attribute}}}
+  {{#unless select--IsExpanded}}hidden{{/unless}}
+  {{#if select--attribute}}
+    {{{select--attribute}}}
   {{/if}}>
-  <li><button class="pf-c-dropdown__menu-item" {{#if dropdown--ItemIsSelected}} aria-pressed="true"{{else}} aria-pressed="false"{{/if}}>Apples</button></li>
-  <li><button class="pf-c-dropdown__menu-item" aria-pressed="false">Oranges</button></li>
-  <li><button class="pf-c-dropdown__menu-item" aria-pressed="false" disabled>Bananas</button></li>
-  <li class="pf-c-dropdown__separator" role="separator"></li>
-  <li><button class="pf-c-dropdown__menu-item" aria-pressed="false">Carrots</button></li>
+  <li><button class="pf-c-select__menu-item" {{#if select--ItemIsSelected}} aria-pressed="true"{{else}} aria-pressed="false"{{/if}}>Apples</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Oranges</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false" disabled>Bananas</button></li>
+  <li class="pf-c-select__separator" role="separator"></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Carrots</button></li>
 </ul>
