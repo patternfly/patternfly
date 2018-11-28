@@ -460,14 +460,6 @@
       background-color: var(--pf-c-nav__horizontal-list-link--after--BackgroundColor);
     }
   }
-
-  &.pf-m-tall {
-    .pf-c-nav__link {
-      padding-top: var(--pf-c-nav__horizontal-list-link--m-tall--PaddingTop);
-      padding-bottom: var(--pf-c-nav__horizontal-list-link--m-tall--PaddingBottom);
-      transition: var(--pf-c-nav__horizontal-list-link--m-tall--transition--out);
-    }
-  }
 }
 
 // List tertiary
