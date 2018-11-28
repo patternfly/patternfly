@@ -330,36 +330,55 @@ $pf-c-table-xs-breakpoint: 380px;
     &:last-child {
       padding-right: 0;
     }
-
-
+    
     // FIX HERE //
-    // @mobile, breakpoint small
-    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-      grid-template-columns: 1fr 1.5fr;
-      grid-column: 2;
-    }
+    @media (min-width: $pf-c-table-xs-breakpoint) {
 
-    // set contents of td to start at column two of td grid
-    * {
-      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-        grid-column: 2;
+      // exclude specifically styled tds, as they are placed explicitly within grid
+      .pf-c-table__expandable-row th,
+      .pf-c-table__expandable-row td {
+        // responsive layout, set td to two column grid
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: var(--pf-c-table-td--responsive--MarginTop);
+        margin-bottom: var(--pf-c-table-td--responsive--MarginBottom);
+        grid-column: 1;
+        grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
+
+        // @mobile, breakpoint small
+        @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+          grid-template-columns: 1fr 1.5fr;
+          grid-column: 1;
+        }
+
+        // set contents of td to start at column two of td grid
+        * {
+          @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+            grid-column: 2;
+          }
+        }
+
+        // @mobile only
+        // set contents of ::before pseudo element to start at column one of td grid
+        &::before {
+          padding-left: 30px;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: left;
+          content: attr(data-label);
+
+          @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+            font-weight: normal;
+            // set ::before to span all rows, up to 100
+            grid-row: 1 / 100;
+          }
+        }
       }
     }
 
-    // @mobile only
-    // set contents of ::before pseudo element to start at column one of td grid
-    &::before {
-      font-weight: bold;
-      text-align: left;
-      content: attr(data-label);
 
 
-      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-        font-weight: normal;
-        // set ::before to span all rows, up to 100
-        grid-row: 1 / 100;
-      }
-    }
   }
   /* stylelint-enable */
 
