@@ -285,7 +285,6 @@ $pf-c-table-xs-breakpoint: 380px;
 
         td:last-child {
           padding-right: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingRight); 
-          text-align: right;
         }
 
         &:first-child {
@@ -323,6 +322,34 @@ $pf-c-table-xs-breakpoint: 380px;
     // padding right on td
     &:last-child {
       padding-right: 0;
+    }
+
+    // @mobile, breakpoint small
+    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+      grid-template-columns: 1fr 1.5fr;
+      grid-column: 1;
+    }
+
+    // set contents of td to start at column two of td grid
+    * {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+        grid-column: 2;
+      }
+    }
+
+    // @mobile only
+    // set contents of ::before pseudo element to start at column one of td grid
+    &::before {
+      font-weight: bold;
+      text-align: left;
+      content: attr(data-label);
+
+
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+        font-weight: normal;
+        // set ::before to span all rows, up to 100
+        grid-row: 1 / 100;
+      }
     }
   }
   /* stylelint-enable */
