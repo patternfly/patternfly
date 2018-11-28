@@ -263,14 +263,17 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  // START FROM HERE //
   /* stylelint-disable */
   .pf-m-nested {
+    // Add bottom-border to thead
+
     thead {
       border-bottom: var(--pf-c-table__thead--m-nested--BorderWidth) solid var(--pf-c-table__thead--m-nested--BorderColor);
-
+      // Add top padding to head
       .pf-c-table__expandable-row th {
         padding-top: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingTop);
-
+        // first child on the left add padding
         &:first-child {
           padding-left: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft);
         }
@@ -279,29 +282,32 @@ $pf-c-table-xs-breakpoint: 380px;
 
     tbody {
       .pf-c-table__expandable-row {
+        // first child on the left add padding
         th:first-child {
           padding-left: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft);
         }
-
+        // last child on the right add padding
         td:last-child {
           padding-right: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingRight); 
         }
-
+        
         &:first-child {
+          // first row - th padding top
           th {
             padding-top: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop);
           }
-
+          // first row - td padding top
           td {
             padding-top: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop);
           }
         }
 
         &:last-child {
+          // last row - th padding bottom
           th {
             padding-bottom: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom);
           }
-
+          // last row - td padding bottom
           td {
             padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
           }
@@ -309,25 +315,28 @@ $pf-c-table-xs-breakpoint: 380px;
       }
     }
 
+    // make font size smaller
     th,
     td {
       font-size: var(--pf-c-table-td--m-nested--FontSize);
     }
 
-    // padding left on td
+    // padding left on td > table (sit to edge)
     &:first-child {
       padding-left: 0;
     }
 
-    // padding right on td
+    // padding right on td > table (sit to edge)
     &:last-child {
       padding-right: 0;
     }
 
+
+    // FIX HERE //
     // @mobile, breakpoint small
     @media screen and (min-width: $pf-c-table-xs-breakpoint) {
       grid-template-columns: 1fr 1.5fr;
-      grid-column: 1;
+      grid-column: 2;
     }
 
     // set contents of td to start at column two of td grid
