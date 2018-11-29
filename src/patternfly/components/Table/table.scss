@@ -828,6 +828,51 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  // NESTED // 
+  .pf-c-table .pf-c-table__expandable-row th,
+  .pf-c-table .pf-c-table__expandable-row td {
+    // responsive layout, set td to two column grid
+    display: grid;
+    padding-top: 0;
+    padding-right: 64px; // set variable
+    padding-bottom: 0;
+    padding-left: 64px; // set variable
+    margin-top: var(--pf-c-table-td--responsive--MarginTop);
+    margin-bottom: var(--pf-c-table-td--responsive--MarginBottom);
+    grid-column: 2;
+    grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
+
+
+    // @mobile, breakpoint small
+    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+      grid-template-columns: 1fr 1.5fr;
+      grid-column: 1;
+    }
+
+    // set contents of td to start at column two of td grid
+    * {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+        grid-column: 2;
+      }
+    }
+
+    // @mobile only
+    // set contents of ::before pseudo element to start at column one of td grid
+    &::before {
+      font-size: 14px; // set variable
+      font-weight: bold;
+      text-align: left;
+      content: attr(data-label);
+
+
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+        font-weight: normal;
+        // set ::before to span all rows, up to 100
+        grid-row: 1 / 100;
+      }
+    }
+  }
+
   // Expandable row
   .pf-c-table__expandable-row {
     display: block;
