@@ -16,7 +16,7 @@
   --pf-c-about-modal-box--lg--Height: #{pf-size-prem(762px)};
 
   // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
-  --pf-c-about-modal-box--lg--MinHeight: calc(var(--pf-c-about-modal-box__brand--PaddingTop) + var(--pf-c-about-modal-box__brand--PaddingBottom) + var(--pf-c-about-modal-box__header--PaddingTop) + var(--pf-c-about-modal-box__header--PaddingBottom) + var(--pf-c-about-modal-box__content--PaddingTop) + var(--pf-c-about-modal-box__content--PaddingBottom) + var(--pf-c-about-modal-box__brand-image--Height) + (1rem * 6 * var(--pf-global--LineHeight--md)));
+  --pf-c-about-modal-box--lg--MinHeight: calc(var(--pf-c-about-modal-box__brand--PaddingTop) + var(--pf-c-about-modal-box__brand--PaddingBottom) + var(--pf-c-about-modal-box__header--PaddingBottom) + var(--pf-c-about-modal-box__content--PaddingTop) + var(--pf-c-about-modal-box__content--PaddingBottom) + var(--pf-c-about-modal-box__brand-image--Height) + (1rem * 6 * var(--pf-global--LineHeight--md)));
 
   // MaxHeight ensures that the modal will not go off the screen and instead the content will scroll
   --pf-c-about-modal-box--lg--MaxHeight: calc(100vh - var(--pf-global--spacer--xl));
@@ -38,16 +38,15 @@
   // Brand
   // Set default padding top, right, left to shared values
   --pf-c-about-modal-box__brand--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-about-modal-box__brand--PaddingRight: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__brand--PaddingX: var(--pf-c-about-modal-box--Padding);
   --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-c-about-modal-box--Padding);
-  --pf-c-about-modal-box__brand--PaddingLeft: var(--pf-c-about-modal-box--Padding);
 
   // Close
   // Set default padding top, right, bottom to shared values
   --pf-c-about-modal-box__close--PaddingTop: var(--pf-c-about-modal-box__brand--PaddingTop);
   --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box--Padding);
   --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__brand--PaddingBottom);
-  --pf-c-about-modal-box__close--sm--PaddingRight: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__close--sm--PaddingRight: 0;
   --pf-c-about-modal-box__close--lg--PaddingRight: var(--pf-c-about-modal-box--Padding);
   --pf-c-about-modal-box__close--ZIndex: var(--pf-global--ZIndex--2xl);
 
@@ -56,9 +55,8 @@
 
   // Header
   // Set default padding right, bottom, left to shared values
-  --pf-c-about-modal-box__header--PaddingRight: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__header--PaddingX: var(--pf-c-about-modal-box--Padding);
   --pf-c-about-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-about-modal-box__header--PaddingLeft: var(--pf-c-about-modal-box--Padding);
 
   // Strapline
   --pf-c-about-modal-box__header-strapline--PaddingBottom: var(--pf-global--spacer--md);
@@ -73,15 +71,12 @@
 
   // Logo
   // Set default padding right, bottom, left to shared values
-  --pf-c-about-modal-box__logo--PaddingRight: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__logo--PaddingX: var(--pf-c-about-modal-box--Padding);
   --pf-c-about-modal-box__logo--PaddingBottom: var(--pf-c-about-modal-box--Padding);
-  --pf-c-about-modal-box__logo--PaddingLeft: var(--pf-c-about-modal-box--Padding);
 
   // Logo image
-  --pf-c-about-modal-box__logo-image--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__logo-image--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__logo-image--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__logo-image--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__logo-image--PaddingY: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__logo-image--PaddingX: var(--pf-global--spacer--md);
 
   // height and width determined manually by visual design
   --pf-c-about-modal-box__logo-image--Width: #{pf-size-prem(236px)};
@@ -89,18 +84,19 @@
   --pf-c-about-modal-box__logo-image--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
   // Button close
-  --pf-c-about-modal-box__button-close--Color: var(--pf-global--Color--100);
-  --pf-c-about-modal-box__button-close--hover--Color: var(--pf-global--Color--100);
-  --pf-c-about-modal-box__button-close--ZIndex: var(--pf-global--ZIndex--2xl);
-  --pf-c-about-modal-box__button-close--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-about-modal-box__close--c-button--Color: var(--pf-global--Color--100);
+  --pf-c-about-modal-box__close--c-button--hover--Color: var(--pf-global--Color--100);
+  --pf-c-about-modal-box__close--c-button--ZIndex: var(--pf-global--ZIndex--2xl);
+  --pf-c-about-modal-box__close--c-button--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
 
   // Height and width are 2x font-size
-  --pf-c-about-modal-box__button-close--Width: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
-  --pf-c-about-modal-box__button-close--Height: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
+  --pf-c-about-modal-box__close--c-button--Width: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
+  --pf-c-about-modal-box__close--c-button--Height: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
 
   // Close button uses a non-standard background color
-  --pf-c-about-modal-box__button-close--BackgroundColor: #{$pf-color-black-1000};
-  --pf-c-about-modal-box__button-close--hover--BackgroundColor: rgba($pf-color-black-1000, .4);
+  --pf-c-about-modal-box__close--c-button--BackgroundColor: #{$pf-color-black-1000};
+  --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: rgba($pf-color-black-1000, .4);
 
   // This component always needs to be dark
   @extend %pf-t-dark;
@@ -151,7 +147,7 @@
 .pf-c-about-modal-box__brand {
   grid-area: brand;
   display: flex;
-  padding: var(--pf-c-about-modal-box__brand--PaddingTop) var(--pf-c-about-modal-box__brand--PaddingRight) var(--pf-c-about-modal-box__brand--PaddingBottom) var(--pf-c-about-modal-box__brand--PaddingLeft);
+  padding: var(--pf-c-about-modal-box__brand--PaddingTop) var(--pf-c-about-modal-box__brand--PaddingX) var(--pf-c-about-modal-box__brand--PaddingBottom);
 }
 
 .pf-c-about-modal-box__brand-image {
@@ -164,9 +160,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end; // When header text is on one line and the modal-box__logo is taller than header, retain bottom alignment
-  padding-right: var(--pf-c-about-modal-box__header--PaddingRight);
+  padding-right: var(--pf-c-about-modal-box__header--PaddingX);
   padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
-  padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
+  padding-left: var(--pf-c-about-modal-box__header--PaddingX);
 }
 
 .pf-c-about-modal-box__header-strapline {
@@ -192,9 +188,9 @@
 // Logo
 .pf-c-about-modal-box__logo {
   grid-area: logo;
-  padding-right: var(--pf-c-about-modal-box__logo--PaddingRight);
+  padding-right: var(--pf-c-about-modal-box__logo--PaddingX);
   padding-bottom: var(--pf-c-about-modal-box__logo--PaddingBottom);
-  padding-left: var(--pf-c-about-modal-box__logo--PaddingLeft);
+  padding-left: var(--pf-c-about-modal-box__logo--PaddingX);
 
   @media only screen and (min-width: $pf-global--breakpoint--lg) {
     grid-area: 2 / 2;
@@ -209,7 +205,7 @@
   justify-content: center;
   width: var(--pf-c-about-modal-box__logo-image--Width);
   height: var(--pf-c-about-modal-box__logo-image--Height);
-  padding: var(--pf-c-about-modal-box__logo-image--PaddingTop) var(--pf-c-about-modal-box__logo-image--PaddingRight) var(--pf-c-about-modal-box__logo-image--PaddingBottom) var(--pf-c-about-modal-box__logo-image--PaddingLeft);
+  padding: var(--pf-c-about-modal-box__logo-image--PaddingY) var(--pf-c-about-modal-box__logo-image--PaddingX);
   background-color: var(--pf-c-about-modal-box__logo-image--BackgroundColor);
 }
 
@@ -225,7 +221,7 @@
   padding-bottom: var(--pf-c-about-modal-box__close--PaddingBottom);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box__close--lg--PaddingRight);
+    --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box__close--sm--PaddingRight);
 
     grid-area: 1 / 2;
     justify-content: center; // center the close over the narrow hero image
@@ -240,20 +236,21 @@
   // Close button
   // Since this btn is unique to the about modal, use contextual selectors in this specific instance
   .pf-c-button {
+    --pf-c-button--FontSize: var(--pf-c-about-modal-box__close--c-button--FontSize);
+    --pf-c-button--BorderRadius: var(--pf-c-about-modal-box__close--c-button--BorderRadius);
+
     display: flex;
     align-content: center;
     justify-content: center;
-    width: var(--pf-c-about-modal-box__button-close--Width);
-    height: var(--pf-c-about-modal-box__button-close--Height);
-    font-size: var(--pf-c-about-modal-box__button-close--FontSize);
-    color: var(--pf-c-about-modal-box__button-close--Color);
-    background-color: var(--pf-c-about-modal-box__button-close--BackgroundColor);
-    border-radius: 50%;
+    width: var(--pf-c-about-modal-box__close--c-button--Width);
+    height: var(--pf-c-about-modal-box__close--c-button--Height);
+    color: var(--pf-c-about-modal-box__close--c-button--Color);
+    background-color: var(--pf-c-about-modal-box__close--c-button--BackgroundColor);
 
     &:hover,
     &.pf-m-hover {
-      --pf-c-about-modal-box__button-close--Color: var(--pf-c-about-modal-box__button-close--hover--Color);
-      --pf-c-about-modal-box__button-close--BackgroundColor: var(--pf-c-about-modal-box__button-close--hover--BackgroundColor);
+      --pf-c-about-modal-box__close--c-button--Color: var(--pf-c-about-modal-box__close--c-button--hover--Color);
+      --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-c-about-modal-box__close--c-button--hover--BackgroundColor);
     }
   }
 }
