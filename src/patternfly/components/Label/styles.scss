@@ -2,10 +2,8 @@
 
 .pf-c-label {
   // Component
-  --pf-c-label--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-label--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-label--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-label--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-label--PaddingY: var(--pf-global--spacer--xs);
+  --pf-c-label--PaddingX: var(--pf-global--spacer--sm);
   --pf-c-label--BorderRadius: var(--pf-global--BorderRadius--sm);
 
   // Color
@@ -20,11 +18,7 @@
   --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
   display: inline-block;
-  padding:
-    var(--pf-c-label--PaddingTop)
-    var(--pf-c-label--PaddingRight)
-    var(--pf-c-label--PaddingBottom)
-    var(--pf-c-label--PaddingLeft);
+  padding: var(--pf-c-label--PaddingY) var(--pf-c-label--PaddingX);
   font-size: var(--pf-c-label--FontSize);
   color: var(--pf-c-label--Color);
   text-align: center;
@@ -34,11 +28,11 @@
 
   &:hover,
   &.pf-m-hover {
-    background-color: var(--pf-c-label--hover--BackgroundColor);
+    --pf-c-label--BackgroundColor: var(--pf-c-label--hover--BackgroundColor);
   }
 
   &.pf-m-compact {
-    font-size: var(--pf-c-label--m-compact--FontSize);
+    --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
   }
 }
 
