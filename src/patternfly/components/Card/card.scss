@@ -31,13 +31,15 @@
   // If the first child isn't the header, then we need to put the header's top padding there
   > :first-child.pf-c-card__body,
   > :first-child.pf-c-card__footer {
-    padding-top: var(--pf-c-card__header--PaddingTop);
+    --pf-c-card__body--PaddingTop: var(--pf-c-card__header--PaddingTop);
+    --pf-c-card__footer--PaddingTop: var(--pf-c-card__header--PaddingTop);
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child.pf-c-card__header,
   > :last-child.pf-c-card__body {
-    padding-bottom: var(--pf-c-card__footer--PaddingBottom);
+    --pf-c-card__header--PaddingBottom: var(--pf-c-card__footer--PaddingBottom);
+    --pf-c-card__body--PaddingBottom: var(--pf-c-card__footer--PaddingBottom);
   }
 }
 
