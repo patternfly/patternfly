@@ -204,8 +204,7 @@
   padding-top: var(--pf-l-page__sidebar--PaddingTop);
   padding-bottom: var(--pf-l-page__sidebar--PaddingBottom);
   overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
   background-color: var(--pf-l-page__sidebar--BackgroundColor);
   transition: var(--pf-l-page__sidebar--Transition);
   transform: var(--pf-l-page__sidebar--Transform--out);
