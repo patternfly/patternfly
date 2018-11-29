@@ -131,7 +131,8 @@
   // Subnav links
   --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__subnav--MaxHeight: #{pf-size-prem(600px)};
-  --pf-c-nav__subnav-item--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md)); // automate this value based on previously set values
+  --pf-c-nav__subnav-item--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-nav__subnav-item--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md));
 
   // List toggle
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -362,6 +363,10 @@
     // Adjust padding of descendant links
     .pf-c-nav__item & {
       padding-left: var(--pf-c-nav__subnav-item--PaddingLeft);
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        --pf-c-nav__subnav-item--PaddingLeft: var(--pf-c-nav__subnav-item--md--PaddingLeft);
+      }
     }
 
     // If child of list, hide bottom border treatment
