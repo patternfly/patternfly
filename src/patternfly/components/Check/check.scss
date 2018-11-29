@@ -7,11 +7,12 @@
   --pf-c-check__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-check__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-check__label--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-check__label--MarginTop: pf-size-prem(-3px);
 
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--pf-c-check--GridGap);
-  align-items: baseline;
+  align-items: center;
 }
 
 .pf-c-check__label {
@@ -19,6 +20,10 @@
   font-weight: var(--pf-c-check__label--FontWeight);
   line-height: var(--pf-c-check__label--LineHeight);
   color: var(--pf-c-check__label--Color);
+}
+
+.pf-c-check__input {
+  margin-top: var(--pf-c-check__label--MarginTop);
 }
 
 .pf-c-check__label,
