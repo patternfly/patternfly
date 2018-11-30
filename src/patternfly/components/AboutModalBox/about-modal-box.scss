@@ -26,11 +26,14 @@
 
   // Shared padding values allow us to change common padding to all components once
   // Some modal components have more specific padding values
-  --pf-c-about-modal-box--Padding: var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box--sm--Padding: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box--PaddingX: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box--sm--PaddingY: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--sm--PaddingX: var(--pf-global--spacer--3xl);
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-about-modal-box--Padding: var(--pf-c-about-modal-box--sm--Padding);
+    --pf-c-about-modal-box--PaddingY: var(--pf-c-about-modal-box--sm--PaddingY);
+    --pf-c-about-modal-box--PaddingX: var(--pf-c-about-modal-box--sm--PaddingX);
   }
 
   // Element variables
@@ -38,16 +41,16 @@
   // Brand
   // Set default padding top, right, left to shared values
   --pf-c-about-modal-box__brand--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-about-modal-box__brand--PaddingX: var(--pf-c-about-modal-box--Padding);
-  --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__brand--PaddingX: var(--pf-c-about-modal-box--PaddingX);
+  --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-c-about-modal-box--PaddingY);
 
   // Close
   // Set default padding top, right, bottom to shared values
   --pf-c-about-modal-box__close--PaddingTop: var(--pf-c-about-modal-box__brand--PaddingTop);
-  --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box--PaddingX);
   --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__brand--PaddingBottom);
   --pf-c-about-modal-box__close--sm--PaddingRight: 0;
-  --pf-c-about-modal-box__close--lg--PaddingRight: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__close--lg--PaddingRight: var(--pf-c-about-modal-box--PaddingX);
   --pf-c-about-modal-box__close--ZIndex: var(--pf-global--ZIndex--2xl);
 
   // Brand img
@@ -55,7 +58,7 @@
 
   // Header
   // Set default padding right, bottom, left to shared values
-  --pf-c-about-modal-box__header--PaddingX: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__header--PaddingX: var(--pf-c-about-modal-box--PaddingX);
   --pf-c-about-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Strapline
@@ -64,15 +67,16 @@
   // Content
   // Using global padding values for margins to prevent scrollbar extending past content
   // Set default margin top, right, bottom, left to shared values
-  --pf-c-about-modal-box__content--Margin: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__content--MarginY: var(--pf-c-about-modal-box--PaddingY);
+  --pf-c-about-modal-box__content--MarginX: var(--pf-c-about-modal-box--PaddingX);
 
   // This is the min allowable height of the content
   --pf-c-about-modal-box__content--MinHeight: calc(1rem * 4 * var(--pf-global--LineHeight--md));
 
   // Logo
   // Set default padding right, bottom, left to shared values
-  --pf-c-about-modal-box__logo--PaddingX: var(--pf-c-about-modal-box--Padding);
-  --pf-c-about-modal-box__logo--PaddingBottom: var(--pf-c-about-modal-box--Padding);
+  --pf-c-about-modal-box__logo--PaddingX: var(--pf-c-about-modal-box--PaddingX);
+  --pf-c-about-modal-box__logo--PaddingBottom: var(--pf-c-about-modal-box--PaddingY);
 
   // Logo image
   --pf-c-about-modal-box__logo-image--PaddingY: var(--pf-global--spacer--md);
@@ -173,7 +177,7 @@
 .pf-c-about-modal-box__content {
   grid-area: content;
   min-height: var(--pf-c-about-modal-box__content--MinHeight);
-  margin: var(--pf-c-about-modal-box__content--Margin); // Using margin instead of padding to prevent scrollbar extending to top of content block
+  margin: var(--pf-c-about-modal-box__content--MarginY) var(--pf-c-about-modal-box__content--MarginX); // Using margin instead of padding to prevent scrollbar extending to top of content block
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
