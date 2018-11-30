@@ -8,14 +8,14 @@
   --pf-c-list--m-grid--GridGap: var(--pf-global--spacer--md);
 
   // Content variables (no modifier)
+  --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--ul--MarginTop: var(--pf-c-content--MarginBottom);
+  --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--PaddingLeft);
   --pf-c-content--ul--ListStyle: var(--pf-global--ListStyle);
   --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-content--ul--nested--MarginLeft: var(---pf-c-content--ul--nested--MarginTop);
 
   &.pf-m-inline {
     display: flex;
@@ -42,8 +42,8 @@
 
     // Sub-element type selector used to maintain consistency with the content component's list styling
     ul {
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
-      margin-left: var(--pf-c-content--ul--nested--MarginLeft);
+      --pf-c-content--ul--MarginTop: var(--pf-c-content--ul--nested--MarginTop);
+      --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
     }
 
     // Sub-element type selector used to maintain consistency with the content component's list styling
