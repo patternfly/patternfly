@@ -21,7 +21,7 @@
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody}}
+  {{#> table-tbody table-tbody--modifier="pf-m-selectmobile"}}
     {{#> table-tr table-tr--expanded="true"}}    
       {{#> table-th table-th--data-label="Repository Name"}}
         {{#> button button--modifier="pf-m-link"}}
@@ -60,7 +60,7 @@
 
     {{#> table-tr table-tr--expandable="true"}}
       {{#> table-td table-td--modifier="pf-m-nested" table-td--attribute='colspan="7"'}}
-        {{#> table table--modifier="pf-m-grid-md pf-m-compact pf-u-box-shadow-md-bottom" table--grid="true"}}
+        {{#> table table--modifier="pf-m-grid-md pf-m-nestedtable pf-u-box-shadow-md-bottom" table--grid="true"}}
           {{#> table-thead}}
             {{#> table-tr}}
               {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}} 
@@ -69,7 +69,7 @@
               {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-u-text-align-center"}}{{/table-th}}
             {{/table-tr}}
           {{/table-thead}}
-          {{#> table-tbody}}
+          {{#> table-tbody table-tbody--modifier="pf-m-nestedtable"}}
             {{#> table-tr}}
               {{#> table-th table-th--attribute='scope="row"' table-th--data-label="Description"}}Item One{{/table-th}}  
               {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Date"}}May 9, 2018{{/table-td}}
