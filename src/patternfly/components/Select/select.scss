@@ -81,7 +81,7 @@
   background-color: var(--pf-c-select__toggle--BackgroundColor);
   border: none;
 
-  &::after {
+  &::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -95,7 +95,7 @@
   &:hover,
   &.pf-m-hover {
     &::before {
-      border-bottom-color: var(--pf-c-select__toggle--hover--BorderBottomColor);
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--hover--BorderBottomColor);
     }
   }
 
@@ -103,7 +103,8 @@
   &.pf-m-active,
   .pf-m-expanded > & {
     &::before {
-      border-bottom-color: var(--pf-c-select__toggle--expanded--BorderBottomColor);
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--expanded--BorderBottomColor);
+
       border-bottom-width: var(--pf-c-select__toggle--expanded--BorderBottomWidth);
     }
   }
@@ -113,7 +114,10 @@
     --pf-c-select__toggle--PaddingBottom: 0;
 
     // may need to revisit this, good when the input is the first (only) thing but not otherwise
-    --pf-c-select__toggle--PaddingLeft: 0;
+    input:first-child {
+      margin-left: calc(-1 * var(--pf-c-select__toggle--PaddingLeft));
+      border: 1px solid #0c0;
+    }
   }
 
   &.pf-m-plain {
@@ -145,6 +149,17 @@
     .pf-m-top.pf-m-expanded > & {
       transform: rotate(-180deg);
     }
+  }
+}
+
+// TODO: Fix naming
+.pf-c-select-toggle__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid #c00;
+
+  > * {
+    margin-right: .5em; // TODO: variable
   }
 }
 

@@ -8,18 +8,41 @@
 	{{#if select-toggle--attribute}}
 		{{{select-toggle--attribute}}}
 	{{/if}}>
-	{{> @partial-block}}
-	{{#if select--IsMultiSelect}}
-		<div>
-			chips here
+	<div class="pf-c-select-toggle__wrapper">	
+		{{#if select--IsMultiSelect}}
+				{{#if select--ItemIsSelected}}
+					{{> select-chip-group-collapsed}}
+				{{/if}}
+				{{#if select--IsTypeahead}}
+					{{#if select-typeahead--Placeholder}}
+						{{> select-toggle-typeahead }}
+					{{else}}
+						{{!-- default placeholder text --}}
+						{{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
+					{{/if}}
+				{{/if}}
+		{{else if select--IsCheckboxSelect}}
+			{{!-- TODO --}}
+				{{#if select--ItemIsSelected}} 
+					{{#> badge badge--modifier="pf-m-unread"}}
+						7
+					{{/badge}}
+				{{/if}}
+		{{else}}
+			{{!-- single select --}}
 			{{#if select--IsTypeahead}}
-				{{> select-toggle-typeahead select-typeahead--Placeholder="type to filter"}}
+				{{#if select-typeahead--Placeholder}}
+					{{> select-toggle-typeahead }}
+				{{else}}
+					{{!-- default placeholder text --}}
+					{{> select-toggle-typeahead select-typeahead--Placeholder="Type to select" }}
+				{{/if}}
+			{{else if partial-block}}
+				{{> @partial-block}}
+			{{else}}
+				Select
 			{{/if}}
-		</div>
-	{{else}}
-		{{#if select--IsTypeahead}}
-			{{> select-toggle-typeahead select-typeahead--Placeholder="type to select"}}
 		{{/if}}
-	{{/if}}
+	</div>
 	{{> select-toggle-icon}}
 </div>

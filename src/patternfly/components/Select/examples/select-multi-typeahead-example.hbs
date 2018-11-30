@@ -1,3 +1,9 @@
-{{#> select id="multi-select-example" select--IsMultiSelect="true" select--IsTypeahead="true"}}
-  Apples, Oranges
+{{#> select id="multi-select-example" select--IsMultiSelect="true" select--IsTypeahead="true" select-typeahead--Placeholder="Filter by fruit"}}
+  {{#> chip}}
+    {{#> chip-text chip-text--attribute='id="chip_one"'}}
+      Chip
+    {{/chip-text}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+    {{/button}}
+  {{/chip}}
 {{/select}}

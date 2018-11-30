@@ -2,16 +2,19 @@
   {{#if select--attribute}}
     {{{select--attribute}}}
   {{/if}}>
+  {{!-- hidden spans for a11y --}}
   {{#if select--IsMultiSelect}}
-    <span id="{{id}}-label" hidden>{{#if select---typeahead--Placeholder}} {{select---typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
+    <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
   {{else}}
-    <span id="{{id}}-label" hidden>{{#if select---typeahead--Placeholder}} {{select---typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
+    <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
   {{/if}}
       
   {{> select-toggle}}
 
   {{#if select--IsMultiSelect}}
     {{> select-multi}}
+  {{else if select--IsCheckboxSelect}}
+    {{> select-checkbox}}
   {{else}}
     {{> select-single}}
   {{/if}}
