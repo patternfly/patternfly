@@ -105,7 +105,7 @@
     &.pf-m-active,
     &:focus,
     &.pf-m-focus {
-      background-color: var(--pf-c-button--m-primary--hover--BackgroundColor);
+      --pf-c-button--m-primary--BackgroundColor: var(--pf-c-button--m-primary--hover--BackgroundColor);
     }
   }
 
@@ -140,7 +140,7 @@
     &.pf-m-active,
     &:focus,
     &.pf-m-focus {
-      background-color: var(--pf-c-button--m-danger--hover--BackgroundColor);
+      --pf-c-button--m-danger--BackgroundColor: var(--pf-c-button--m-danger--hover--BackgroundColor);
     }
   }
 
@@ -173,12 +173,13 @@
     &.pf-m-active,
     &:focus,
     &.pf-m-focus {
-      color: var(--pf-c-button--m-plain--hover--Color);
+      --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--hover--Color);
     }
 
     &:disabled,
     &.pf-m-disabled {
-      color: var(--pf-c-button--m-plain--disabled--Color);
+      --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--disabled--Color);
+
       background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
     }
   }
