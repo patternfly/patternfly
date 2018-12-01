@@ -1,62 +1,116 @@
 {{#> login-upgrade-examples}}
-  {{#> background-image}}{{/background-image}}
+  
+  <div class="pf-t-dark pf-m-opaque-200">
   {{#> login}}
+  {{#> login-container}}
     {{#> login-header}}
-      {{#> login-header-brand}}
-        {{#> brand brand--attribute='src="/assets/images/pf_logo_color.svg" alt="PatternFly Logo"'}}{{/brand}}
-      {{/login-header-brand}}
-      {{#> content}}
-        <p>This is placeholder text only. Use this area to place any information or introductory message about your application that may be relevant to users.</p>
-      {{/content}}
+      {{#> brand brand--attribute='src="/assets/images/pf_logo_color.svg" alt="PatternFly Logo"'}}{{/brand}}
+      <p>This is placeholder text only. Use this area to place any information or introductory message about your application that may be relevant to users.</p>
     {{/login-header}}
     {{#> login-main}}
-      {{#> login-box}}
-        {{#> login-box-header}}
-          {{#> title titleType="h1" title--modifier="pf-m-3xl pf-u-mb-sm"}}
-            Log in to your account
-          {{/title}}
-          {{#> display display--type="inline-flex" display--modifier="pf-u-align-items-center"}}
-            {{#> dropdown id="dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
-              English
-            {{/dropdown}}
-            <p class="pf-u-ml-md">Need an account? <a href="https://www.patternfly.org/">Sign up.</a></p>
-          {{/display}}
-        {{/login-box-header}}
-        {{#> login-box-body}}
-          {{#> form }}
-            {{#> form-group}}
-              {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
-              {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
-            {{/form-group}}
-            {{#> form-group}}
-              {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
-              {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
-            {{/form-group}}
-            {{#> form-group form-group--modifier="pf-m-action pf-u-align-items-center pf-u-display-flex pf-u-flex-direction-column pf-u-flex-direction-row-on-md"}}
-              {{#> button button--modifier="pf-c-button pf-m-primary pf-u-mr-lg-on-md pf-u-px-xl pf-u-align-self-stretch pf-u-align-self-flex-start-on-md"}}
-                Log in
-              {{/button}}
-              {{#> alignment alignment--type="center" alignment--modifier="pf-u-text-align-left-on-md"}}
-                {{#> check check--modifier="pf-u-m-md pf-u-align-items-center pf-u-display-flex"}}
-                  {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
-                  {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
-                {{/check}}
-              {{/alignment}}
-            {{/form-group}}
-          {{/form}}
-        {{/login-box-body}}
-        {{#> login-box-footer}}
-
-         
-        {{/login-box-footer}}
-      {{/login-box}}
+      {{#> login-main-header}}
+        {{#> title titleType="h1" title--modifier="pf-m-3xl"}}
+          Log in to your account
+        {{/title}}
+        {{#> dropdown id="dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
+          English
+        {{/dropdown}}
+        <p>Need an account? <a href="https://www.patternfly.org/">Sign up.</a></p>
+      {{/login-main-header}}
+      {{#> login-main-body}}
+        {{#> form}}
+          {{#> form-group}}
+            {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
+            {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+          {{/form-group}}
+          {{#> form-group}}
+            {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
+            {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+          {{/form-group}}
+          {{#> form-group form-group--modifier="pf-m-action"}}
+            {{#> button button--modifier="pf-c-button pf-m-primary" button--attribute='type="submit"'}}
+              Log in
+            {{/button}}
+            {{#> check}}
+              {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+            {{/check}}
+          {{/form-group}}
+        {{/form}}
+      {{/login-main-body}}
+      {{#> login-main-footer}}
+        {{#> title titleType="h2" title--modifier="pf-m-md"}}
+          Or log in with
+        {{/title}}
+        {{#> list list--modifier="pf-m-grid"}}
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-google.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                Google
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-github.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                GitHub
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-dropbox.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                Dropbox
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-facebook.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                Facebook
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-gitlab.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                GitLab
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> button button--attribute='id="login-more"' button--modifier="pf-c-button pf-m-link"}}
+              More...
+            {{/button}}
+          </li>
+        {{/list}}
+      {{/login-main-footer}}
     {{/login-main}}
     {{#> login-footer}}
       {{#> list list--modifier="pf-m-inline"}}
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li>
+          {{#> login-footer-link}}
+            Terms of Use
+          {{/login-footer-link}}
+        </li>
+        <li>
+          {{#> login-footer-link}}
+            Help
+          {{/login-footer-link}}
+        </li>
+        <li>
+          {{#> login-footer-link}}
+            Privacy Policy
+          {{/login-footer-link}}
+        </li>
       {{/list}}
     {{/login-footer}}
-  {{/login}}
+  {{/login-container}}
+{{/login}}
+</div>
 {{/login-upgrade-examples}}
