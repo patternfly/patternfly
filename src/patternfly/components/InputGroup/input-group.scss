@@ -1,7 +1,6 @@
 @import "../../patternfly-utilities";
 
 .pf-c-input-group {
-  --pf-c-input-group__button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingX: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
@@ -12,9 +11,12 @@
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
 
+  // Button
+  --pf-c-input-group--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
+
   // Form Control
-  --pf-c-input-group--form-control-invalid--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-input-group--form-control--MarginRight: 1px;
+  --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-input-group--c-form-control--MarginRight: 1px;
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
@@ -30,10 +32,10 @@
 
     &[aria-invalid="true"] {
       position: relative;
-      z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
+      z-index: var(--pf-c-input-group--c-form-control--invalid--ZIndex);
 
       &:not(:last-child) {
-        margin-right: var(--pf-c-input-group--form-control--MarginRight);
+        margin-right: var(--pf-c-input-group--c-form-control--MarginRight);
       }
     }
   }
@@ -53,7 +55,7 @@
     &:first-child {
       &,
       &::after {
-        border-radius: var(--pf-c-input-group__button--BorderRadius) 0 0 var(--pf-c-input-group__button--BorderRadius);
+        border-radius: var(--pf-c-input-group--c-button--BorderRadius) 0 0 var(--pf-c-input-group--c-button--BorderRadius);
       }
     }
 
@@ -61,7 +63,7 @@
     &:last-child {
       &,
       &::after {
-        border-radius: 0 var(--pf-c-input-group__button--BorderRadius) var(--pf-c-input-group__button--BorderRadius) 0;
+        border-radius: 0 var(--pf-c-input-group--c-button--BorderRadius) var(--pf-c-input-group--c-button--BorderRadius) 0;
       }
     }
   }
@@ -89,6 +91,6 @@
     text-align: center;
     background-color: var(--pf-c-input-group__text--BackgroundColor);
     border: var(--pf-c-input-group__text--BorderWidth) solid;
-    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderXColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderXColor);
+    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderXColor) var(--pf-c-input-group__text--BorderBottomColor);
   }
 }
