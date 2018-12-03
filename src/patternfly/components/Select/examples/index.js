@@ -112,11 +112,7 @@ export default () => {
       <Example heading="Select Multi - Expanded" handlebars={SelectMultiExpandedExampleRaw} minHeight="20em">
         {selectMultiExpandedExample}
       </Example>
-      <Example
-        heading="Select Multi - Expanded and Selected"
-        handlebars={SelectMultiExpandedSelectedExampleRaw}
-        minHeight="20em"
-      >
+      <Example heading="Select Multi - Expanded and Selected" handlebars={SelectMultiExpandedSelectedExampleRaw}>
         {selectMultiExpandedSelectedExample}
       </Example>
       <Example heading="Select Checkbox" handlebars={SelectCheckboxExampleRaw}>
@@ -126,9 +122,9 @@ export default () => {
         {selectCheckboxExpandedExample}
       </Example>
       <Example
-        heading="Select Checkbox - Expanded and Selected"
+        heading="Select Checkbox - Expanded and Selected with Groups"
         handlebars={SelectCheckboxExpandedSelectedExampleRaw}
-        minHeight="20em"
+        minHeight="29em"
       >
         {selectCheckboxExpandedSelectedExample}
       </Example>

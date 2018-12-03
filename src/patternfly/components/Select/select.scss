@@ -234,3 +234,11 @@
   height: var(--pf-c-select__separator--Height);
   background-color: var(--pf-c-select__separator--BackgroundColor);
 }
+
+.pf-c-select__menu-group-title {
+  padding-top: var(--pf-c-select__menu-item--PaddingTop);
+  padding-right: var(--pf-c-select__menu-item--PaddingRight);
+  padding-bottom: var(--pf-c-select__menu-item--PaddingBottom);
+  padding-left: var(--pf-c-select__menu-item--PaddingLeft);
+  font-size: var(--pf-global--FontSize--sm);
+}

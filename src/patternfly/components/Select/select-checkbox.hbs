@@ -6,21 +6,24 @@
   <form class="pf-c-form">
   <fieldset class="pf-c-form__fieldset" aria-labelledby="{{id}}-label">
     {{#> check check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-apples" name="fruit"')}}{{/check-input}}
-      {{#> check-label check-label--attribute=(concat 'for="' id '-apples"')}}Apples{{/check-label}}
+      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="status"')}}{{/check-input}}
+      {{#> check-label check-label--attribute=(concat 'for="' id '-running"')}}Running{{/check-label}}
     {{/check}}
     {{#> check check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-oranges" name="fruit" checked')}}{{/check-input}}
-      {{#> check-label check-label--attribute=(concat 'for="' id '-oranges"')}}Oranges{{/check-label}}
+      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-stopped" name="status" checked')}}{{/check-input}}
+      {{#> check-label check-label--attribute=(concat 'for="' id '-stopped"')}}Stopped{{/check-label}}
     {{/check}}
     {{#> check check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-bananas" name="fruit" aria-disabled="true" disabled')}}{{/check-input}}
-      {{#> check-label check-label--attribute=(concat 'for="' id '-bananas"')}}Bananas{{/check-label}}
+      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-down" name="status" checked')}}{{/check-input}}
+      {{#> check-label check-label--attribute=(concat 'for="' id '-down"')}}Down{{/check-label}}
     {{/check}}
-    <div class="pf-c-select__separator" role="separator"></div>
     {{#> check check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-carrots" name="fruit"')}}{{/check-input}}
-      {{#> check-label check-label--attribute=(concat 'for="' id '-carrots"')}}Carrots{{/check-label}}
+      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-degraded" name="status"')}}{{/check-input}}
+      {{#> check-label check-label--attribute=(concat 'for="' id '-degraded"')}}Degraded{{/check-label}}
+    {{/check}}
+    {{#> check check--modifier="pf-c-select__menu-item"}}
+      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-needsMaintenance" name="status" checked')}}{{/check-input}}
+      {{#> check-label check-label--attribute=(concat 'for="' id '-needsMaintenance"')}}Needs Maintenance{{/check-label}}
     {{/check}}
   </fieldset>
   </form>

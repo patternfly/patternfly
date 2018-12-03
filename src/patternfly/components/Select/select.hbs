@@ -12,11 +12,23 @@
   {{> select-toggle}}
 
   {{#if select--IsMultiSelect}}
-    {{> select-multi}}
+    {{#if select--IsTypeahead}}
+      {{> select-single-typeahead}}
+    {{else}}
+      {{> select-multi}}
+    {{/if}}
   {{else if select--IsCheckboxSelect}}
-    {{> select-checkbox}}
+    {{#if select--HasGroups}}
+      {{>select-checkbox-groups}}
+    {{else}}
+      {{> select-checkbox}}
+    {{/if}}
   {{else}}
-    {{> select-single}}
+    {{#if select--IsTypeahead}}
+      {{> select-single-typeahead}}
+    {{else}}
+      {{> select-single}}
+    {{/if}}
   {{/if}}
 
 </div>

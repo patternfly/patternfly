@@ -1,0 +1,21 @@
+<ul class="pf-c-select__menu{{#if select--modifier}} {{select--modifier}}{{/if}}" 
+  aria-labelledby="{{id}}-label" 
+  {{#unless select--IsExpanded}}hidden{{/unless}}
+  {{#if select--attribute}}
+    {{{select--attribute}}}
+  {{/if}}>
+  {{#unless select--IsCurrentlyTyping}}
+    <li><button class="pf-c-select__menu-item" aria-pressed="false">Alabama</button></li>
+    <li><button class="pf-c-select__menu-item" aria-pressed="false">Florida</button></li>
+  {{/unless}}
+  <li><button class="pf-c-select__menu-item" aria-pressed="false"> {{#if select--IsCurrentlyTyping}}<strong>{{/if}}New {{#if select--IsCurrentlyTyping}}</strong>{{/if}} Jersey</button></li>
+  {{#if select--IsCurrentlyTyping}}
+    {{#unless select--IsMultiSelect}}
+      <li><button class="pf-c-select__menu-item" {{#unless select--ItemIsSelected}} aria-pressed="true"{{else}} aria-pressed="false"{{/unless}}><strong>New</strong> Mexico</button></li>
+    {{/unless}}
+  {{/if}}
+  <li><button class="pf-c-select__menu-item" aria-pressed="false"> {{#if select--IsCurrentlyTyping}}<strong>{{/if}}New {{#if select--IsCurrentlyTyping}}</strong>{{/if}} York</button></li>
+  {{#unless select--IsCurrentlyTyping}}
+    <li><button class="pf-c-select__menu-item" aria-pressed="false">North Carolina</button></li>
+  {{/unless}}
+</ul>
