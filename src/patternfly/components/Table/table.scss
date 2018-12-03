@@ -2,15 +2,15 @@
 
 /* stylelint-disable */
 @mixin pf-mobile-layout {
-  .pf-m-grid { @content; }
+  .pf-m-grid.pf-c-table { @content; }
 
-  .pf-m-grid-md {
+  .pf-m-grid-md.pf-c-table {
     @media screen and (max-width: $pf-global--breakpoint--md) {
       @content;
     }
   }
 
-  .pf-m-grid-lg {
+  .pf-m-grid-lg.pf-c-table {
     @media screen and (max-width: $pf-global--breakpoint--lg) {
       @content;
     }
@@ -29,7 +29,7 @@ $pf-c-table-xs-breakpoint: 380px;
   // ============================================================ //
   // Start non-conformant variables
   //
-  // these variables do not conform to guidelines as styling targets individual elements 
+  // these variables do not conform to guidelines as styling targets individual elements
   // this is purposeful and necessary to avoid adding selectors to each td/th
   // ============================================================ //
 
@@ -49,11 +49,11 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-td--responsive--MarginBottom:                  var(--pf-global--spacer--sm);
   --pf-c-table-td--responsive--GridColumnGap:                 var(--pf-global--spacer--md);
 
-  // Expandable row content  
+  // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingRight:         var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--responsive--PaddingLeft:          var(--pf-global--spacer--xl);
 
-  // Table check 
+  // Table check
   --pf-c-table__check--responsive--MarginLeft:                            var(--pf-global--spacer--sm);
   --pf-c-table__check--responsive--MarginTop:                             var(--pf-global--spacer--xs);
 
@@ -91,15 +91,16 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-cell--PaddingRight:                            var(--pf-global--spacer--md);
   --pf-c-table-cell--PaddingLeft:                             var(--pf-global--spacer--md);
   --pf-c-table-cell--first-child--PaddingLeft:                var(--pf-global--spacer--xl);
-  --pf-c-table-cell--last-child--PaddingRight:                var(--pf-global--spacer--xl);  
+  --pf-c-table-cell--last-child--PaddingRight:                var(--pf-global--spacer--xl);
 
   // ============================================================ //
   // End non-conformant variables
   // ============================================================ //
-  
+
   // Table cell - toggle
   --pf-c-table__toggle--PaddingTop:                           #{pf-size-prem(22px)};
   --pf-c-table__toggle--PaddingRight:                         var(--pf-global--spacer--sm);
+  --pf-c-table__toggle--c-button--MarginTop:                  var(--pf-global--spacer--xs);
 
   // Table cell - check
   --pf-c-table__check--PaddingTop:                            #{pf-size-prem(30px)};
@@ -304,8 +305,8 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   /* stylelint-disable */
-  &::-webkit-scrollbar { 
-    display: none; 
+  &::-webkit-scrollbar {
+    display: none;
   }
   /* stylelint-enable */
 
@@ -329,6 +330,11 @@ $pf-c-table-xs-breakpoint: 380px;
   padding-top: var(--pf-c-table__toggle--PaddingTop);
   padding-right: 0;
   vertical-align: baseline;
+
+  // Toggle button
+  .pf-c-button {
+    margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
+  }
 
   // Toggle button icon
   .pf-c-button > * {
@@ -575,7 +581,7 @@ $pf-c-table-xs-breakpoint: 380px;
 }
 
 .pf-c-table .pf-m-width-max {
-  width: 100%;    
+  width: 100%;
 }
 
 // Check table cell
@@ -764,7 +770,7 @@ $pf-c-table-xs-breakpoint: 380px;
     // if action is present, add margin left to accommodate checkbox
     & ~ .pf-c-table__action {
       margin-left: var(--pf-c-table__action--responsive--MarginLeft);
-    }    
+    }
   }
 
   // Action cell
