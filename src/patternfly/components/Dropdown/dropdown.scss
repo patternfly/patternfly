@@ -22,6 +22,7 @@
   --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
+  --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
@@ -103,6 +104,8 @@
   }
 
   &.pf-m-plain {
+    --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-plain--Color);
+
     &::before {
       border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
     }
@@ -112,7 +115,7 @@
     &:active,
     &.pf-m-active,
     .pf-m-expanded > & {
-      --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-plain--Color);
+      --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-plain--hover--Color);
 
       &::before {
         border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
