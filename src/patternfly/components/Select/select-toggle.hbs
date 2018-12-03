@@ -9,40 +9,51 @@
 		{{{select-toggle--attribute}}}
 	{{/if}}>
 	<div class="pf-c-select-toggle__wrapper">	
+		{{!-- First part, chips --}}
 		{{#if select--IsMultiSelect}}
-				{{#if select--ItemIsSelected}}
+			{{#if select--ItemIsSelected}}
+				{{#if select--IsExpandedChips}}
+					{{> select-chip-group-expanded}}
+				{{else}}
 					{{> select-chip-group-collapsed}}
 				{{/if}}
-				{{#if select--IsTypeahead}}
-					{{#if select-typeahead--Placeholder}}
-						{{> select-toggle-typeahead }}
-					{{else}}
-						{{!-- default placeholder text --}}
-						{{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
-					{{/if}}
-				{{/if}}
-		{{else if select--IsCheckboxSelect}}
-			{{!-- TODO --}}
-				{{#if select--ItemIsSelected}} 
-					{{#> badge badge--modifier="pf-m-unread"}}
-						7
-					{{/badge}}
-				{{/if}}
-		{{else}}
-			{{!-- single select --}}
-			{{#if select--IsTypeahead}}
-				{{#if select-typeahead--Placeholder}}
-					{{> select-toggle-typeahead }}
-				{{else}}
-					{{!-- default placeholder text --}}
-					{{> select-toggle-typeahead select-typeahead--Placeholder="Type to select" }}
-				{{/if}}
-			{{else if partial-block}}
-				{{> @partial-block}}
+			{{/if}}
+		{{!-- {{else if select--IsCheckboxSelect}}
+			{{#if select--ItemIsSelected}}
+				{{> select-chip-group-collapsed}}
+			{{/if}} --}}
+		{{/if}}
+
+		{{!-- Second part, text or typeahead --}}
+		{{#if select--IsTypeahead}}
+			{{#if select-typeahead--Placeholder}}
+				{{> select-toggle-typeahead }}
 			{{else}}
-				Select
+				{{!-- default placeholder text --}}
+				{{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
+			{{/if}}
+		{{else if @partial-block}}
+				<span>{{> @partial-block}}</span>
+		{{else}}
+				<span>Select</span>
+		{{/if}}
+
+		{{!-- Third part, badge --}}
+		{{#if select--IsCheckboxSelect}}
+			{{#if select--ItemIsSelected}} 
+				{{#> badge badge--modifier="pf-m-unread"}}
+					3
+				{{/badge}}
 			{{/if}}
 		{{/if}}
 	</div>
+
+	{{!-- Clear button if it's typeahead and something has been typed --}}
+	{{#if select--IsTypeahead}}
+		{{#if select--ItemIsSelected}}
+			{{> button button--modifier="pf-m-plain pf-c-select-toggle__clear" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="TODOremove_chip_two chip_two" aria-label="Remove" id="TODOremove_chip_two"'}}
+		{{/if}}
+	{{/if}}
+
 	{{> select-toggle-icon}}
 </div>

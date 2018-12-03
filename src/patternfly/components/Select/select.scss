@@ -1,6 +1,8 @@
 @import "../../patternfly-utilities";
 
 .pf-c-select {
+  @extend %pf-t-light; // force the container follow the light theme
+
   // Toggle
   --pf-c-select__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-select__toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -116,7 +118,6 @@
     // may need to revisit this, good when the input is the first (only) thing but not otherwise
     input:first-child {
       margin-left: calc(-1 * var(--pf-c-select__toggle--PaddingLeft));
-      border: 1px solid #0c0;
     }
   }
 
@@ -155,11 +156,13 @@
 // TODO: Fix naming
 .pf-c-select-toggle__wrapper {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-start;
-  border: 1px solid #c00;
 
-  > * {
-    margin-right: .5em; // TODO: variable
+  > *:not(:last-child),
+  > *:not(:only-child) {
+    margin-right: var(--pf-global--spacer--xs); // TODO: variable
   }
 }
 
@@ -169,6 +172,7 @@
   flex-grow: 1;
   flex-shrink: 0;
   background-color: transparent;
+  border-top: none;
   border-right: none;
   border-bottom-color: inherit;
   border-bottom-style: inherit;

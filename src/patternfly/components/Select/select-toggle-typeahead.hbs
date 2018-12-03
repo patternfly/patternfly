@@ -8,8 +8,17 @@
 		{{{select-typeahead--attribute}}}
 	{{/if}}> --}}
 
+{{#if select--ItemIsSelected}}
 {{#> form-control controlType="input" 
-input="true" 
-form-control--modifier="pf-c-select__typeahead" 
-form-control--attribute=(concat 'type="text" id="textInput1" aria-label="input example" placeholder="' select-typeahead--Placeholder '"')}}
+	input="true" 
+	form-control--modifier="pf-c-select__typeahead" 
+	form-control--attribute=(concat 'type="text" id="textInput1" aria-label="input example" value="' select-typeahead--Placeholder '"')}}
 {{/form-control}}
+
+{{else}}
+{{#> form-control controlType="input" 
+	input="true" 
+	form-control--modifier="pf-c-select__typeahead" 
+	form-control--attribute=(concat 'type="text" id="textInput1" aria-label="input example" placeholder="' select-typeahead--Placeholder '"')}}
+{{/form-control}}
+{{/if}}
