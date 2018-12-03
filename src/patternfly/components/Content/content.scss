@@ -66,7 +66,8 @@
   --pf-c-content--a--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
 
   // Blockquote
-  --pf-c-content--blockquote--Padding: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--PaddingX: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--PaddingY: var(--pf-global--spacer--md);
   --pf-c-content--blockquote--FontWeight: var(--pf-global--FontWeight--light);
   --pf-c-content--blockquote--Color: var(--pf-global--Color--200);
   --pf-c-content--blockquote--BorderLeftColor: var(--pf-global--BorderColor--light);
@@ -74,8 +75,6 @@
 
   // Lists
   --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ol--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-content--ol--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ul--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
@@ -99,8 +98,8 @@
     text-decoration: var(--pf-c-content--a--TextDecoration);
 
     &:hover {
-      color: var(--pf-c-content--a--hover--Color);
-      text-decoration: var(--pf-c-content--a--hover--TextDecoration);
+      --pf-c-content--a--Color: var(--pf-c-content--a--hover--Color);
+      --pf-c-content--a--TextDecoration: var(--pf-c-content--a--hover--TextDecoration);
     }
   }
 
@@ -117,15 +116,16 @@
   pre,
   table {
     &:not(:last-child) {
-      // This variable name doesn't reflect the selector, it's an excpection to the variable system.
       margin-bottom: var(--pf-c-content--MarginBottom);
     }
   }
 
   ol,
   ul {
-    // This variable name doesn't reflect the selector, it's an excpection to the variable system.
     padding-left: var(--pf-c-content--ul--PaddingLeft);
+    margin: 0;
+    margin-top: var(--pf-c-content--ul--MarginTop);
+    margin-left: var(--pf-c-content--ul--MarginLeft);
   }
 
   h1,
@@ -212,21 +212,13 @@
   }
 
   blockquote {
-    padding: var(--pf-c-content--blockquote--Padding);
+    padding: var(--pf-c-content--blockquote--PaddingY) var(--pf-c-content--blockquote--PaddingX);
     font-weight: var(--pf-c-content--blockquote--FontWeight);
     color: var(--pf-c-content--blockquote--Color);
     border-left: var(--pf-c-content--blockquote--BorderLeftWidth) solid var(--pf-c-content--blockquote--BorderLeftColor);
   }
 
-  ol {
-    margin-top: var(--pf-c-content--ol--MarginTop);
-    margin-left: var(--pf-c-content--ol--MarginLeft);
-  }
-
   ul {
-    margin: 0;
-    margin-top: var(--pf-c-content--ul--MarginTop);
-    margin-left: var(--pf-c-content--ul--MarginLeft);
     list-style: var(--pf-c-content--ul--ListStyle);
 
     ul {
