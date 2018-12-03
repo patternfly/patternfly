@@ -1,6 +1,6 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--attribute='id="page-layout-default-nav"'}}
+{{#> page page--id="page-layout-default-nav"}}
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
@@ -12,7 +12,7 @@
   {{/page-header}}
   {{!-- Nav --}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav Default Example"'}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Primary Nav Default Example"')}}
       {{#> nav-list}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true"}}

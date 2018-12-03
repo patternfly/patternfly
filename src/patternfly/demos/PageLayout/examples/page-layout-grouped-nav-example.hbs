@@ -1,7 +1,7 @@
 {{#> background-image}}
 {{/background-image}}
 
-{{#> page page--attribute='id="page-layout-grouped-nav"'}}
+{{#> page page--id="page-layout-grouped-nav"}}
   {{#> page-header}}
     {{#> page-header-brand}}
       {{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
@@ -10,8 +10,8 @@
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
-  {{#> page-sidebar}}  
-    {{#> nav nav--attribute='id="primary-nav" aria-label="Primary Nav, Simple List Example"'}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Grouped Nav Example"')}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System Panel
@@ -77,13 +77,10 @@
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      Light content
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
-      Dark content
     {{/page-main-section}}
     {{#> page-main-section}}
-      Content
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}

@@ -16,11 +16,11 @@
         {{/button}}
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier="pf-u-sr-only pf-u-visible-on-md"}}
-        {{#> dropdown dropdown-toggle--modifier="pf-m-plain" id="dropdown-example-collapsed" dropdown--attribute="pf-m-plain" dropdown--HasToggleIcon="true"}}
-          Kyle Baker
+        {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--attribute="pf-m-plain" dropdown--HasToggleIcon="true"}}
+          <i class="fas fa-cog"></i>
         {{/dropdown}}
       {{/toolbar-item}}
     {{/toolbar-group}}
-  {{/toolbar}}  
+  {{/toolbar}}
   {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar Image"'}}{{/avatar}}
 {{/page-header-tools}}
