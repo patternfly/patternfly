@@ -831,7 +831,6 @@ $pf-c-table-xs-breakpoint: 380px;
       text-align: left;
       content: attr(data-label);
 
-
       @media screen and (min-width: $pf-c-table-xs-breakpoint) {
         font-weight: normal;
         // set ::before to span all rows, up to 100
@@ -841,7 +840,7 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   // change this
-  // override background color before to be transparent
+  // override left border on every second row
   tr td:first-child::before {
     background-color: transparent;
   }
@@ -852,6 +851,14 @@ $pf-c-table-xs-breakpoint: 380px;
     border: 0;
     border-bottom: 3px solid var(--pf-global--active-color--100); // CHANGE THIS
   }
+
+  // td .pf-c-table__action {
+  //   @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+  //     background-color: #000;
+  //     grid-row-start: 1;
+  //     grid-column-start: 2;
+  //   }
+  // }
 
   // NESTED // 
   .pf-c-table .pf-c-table__expandable-row th,
@@ -895,19 +902,6 @@ $pf-c-table-xs-breakpoint: 380px;
         grid-row: 1 / 100;
       }
     }
-
-    // // Action cell
-    // .pf-c-table__action {
-    //   grid-row-start: 1;
-    //   grid-column-start: 3;
-
-    //   // @smallest breakpoint
-    //   @media screen and (max-width: $pf-global--breakpoint--sm) {
-    //     grid-row-start: 1;
-    //     grid-column-start: 2;
-    //     margin-left: 0;
-    //   }
-    // }
   }
 
   // Expandable row
