@@ -10,12 +10,12 @@
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Branches
-      {{/table-th}} 
+      {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
-      {{/table-th}} 
-      {{#> table-td}}{{/table-td}} 
-      {{#> table-td}}{{/table-td}} 
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -24,21 +24,21 @@
       {{#> table-td table-td--toggle="true" table-td--button-attribute='aria-labelledby="expandable-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details"'}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="expandable-node1"'}}{{/check-input}}
-      {{/table-td}}     
+      {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <span id="expandable-node1">Node 1</span>
+        <div id="expandable-node1">Node 1</div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
-      {{/table-td}}      
+      {{/table-td}}
       {{#> table-td table-td--data-label="Pull Requests"}}
         25
-      {{/table-td}}  
+      {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='id="example1action1" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
@@ -46,7 +46,7 @@
 
     {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
       {{#> table-td}}
-      {{/table-td}}  
+      {{/table-td}}
       {{#> table-td}}
       {{/table-td}}
       {{#> table-td table-td--attribute='colspan="4"'}}
@@ -60,8 +60,8 @@
         </div>
       {{/table-td}}
       {{#> table-td}}
-      {{/table-td}} 
-    {{/table-tr}}         
+      {{/table-td}}
+    {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody}}
@@ -69,22 +69,22 @@
       {{#> table-td table-td--toggle="true" table-td--button-attribute='aria-labelledby="expandable-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-expanded="false"'}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="expandable-node2"'}}{{/check-input}}
-      {{/table-td}}     
+      {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <span id="expandable-node2">Node 2</span>
+        <div id="expandable-node2">Node 2</div>
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
-      {{/table-td}}      
+      {{/table-td}}
       {{#> table-td table-td--data-label="Pull Requests"}}
         25
-      {{/table-td}}  
+      {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button btnClass="pf-m-plain" btnAttributes='id="expandable-action2" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="expandable-action2" aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
@@ -92,7 +92,7 @@
 
     {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
       {{#> table-td}}
-      {{/table-td}}  
+      {{/table-td}}
       {{#> table-td}}
       {{/table-td}}
       {{#> table-td table-td--attribute='colspan="4"'}}
