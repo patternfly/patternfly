@@ -7,21 +7,16 @@
 
   // Card Header variables
   --pf-c-card__header--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-card__header--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-card__header--PaddingX: var(--pf-global--spacer--lg);
   --pf-c-card__header--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-card__header--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Card Body variables
-  --pf-c-card__body--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-card__body--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-card__body--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-card__body--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-card__body--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-card__body--PaddingX: var(--pf-global--spacer--lg);
 
   // Card Footer variables
-  --pf-c-card__footer--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-card__footer--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-card__footer--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-card__footer--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-card__footer--PaddingY: var(--pf-global--spacer--lg);
+  --pf-c-card__footer--PaddingX: var(--pf-global--spacer--lg);
 
   display: flex;
   flex-direction: column;
@@ -37,30 +32,21 @@
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child.pf-c-card__header,
   > :last-child.pf-c-card__body {
-    padding-bottom: var(--pf-c-card__footer--PaddingBottom);
+    padding-bottom: var(--pf-c-card__footer--PaddingY);
   }
 }
 
 .pf-c-card__header {
   flex: 0 0 auto;
-  padding-top: var(--pf-c-card__header--PaddingTop);
-  padding-right: var(--pf-c-card__header--PaddingRight);
-  padding-bottom: var(--pf-c-card__header--PaddingBottom);
-  padding-left: var(--pf-c-card__header--PaddingLeft);
+  padding: var(--pf-c-card__header--PaddingTop) var(--pf-c-card__header--PaddingX) var(--pf-c-card__header--PaddingBottom);
 }
 
 .pf-c-card__body {
   flex: 1 1 auto;
-  padding-top: var(--pf-c-card__body--PaddingTop);
-  padding-right: var(--pf-c-card__body--PaddingRight);
-  padding-bottom: var(--pf-c-card__body--PaddingBottom);
-  padding-left: var(--pf-c-card__body--PaddingLeft);
+  padding: var(--pf-c-card__body--PaddingY) var(--pf-c-card__body--PaddingX);
 }
 
 .pf-c-card__footer {
   flex: 0 0 auto;
-  padding-top: var(--pf-c-card__footer--PaddingTop);
-  padding-right: var(--pf-c-card__footer--PaddingRight);
-  padding-bottom: var(--pf-c-card__footer--PaddingBottom);
-  padding-left: var(--pf-c-card__footer--PaddingLeft);
+  padding: var(--pf-c-card__footer--PaddingY) var(--pf-c-card__footer--PaddingX);
 }
