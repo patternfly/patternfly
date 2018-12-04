@@ -159,7 +159,8 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-td--m-nested--FontSize:                          var(--pf-global--FontSize--sm);
   --pf-c-table__thead--m-nested--BorderWidth:                   var(--pf-global--BorderWidth--sm);
   --pf-c-table__thead--m-nested--BorderColor:                   var(--pf-global--BorderColor--light-200);
-  --pf-c-table__thead-expandable-row-th--m-nested--PaddingTop:  var(--pf-global--spacer--md);
+  --pf-c-table__thead-expandable-row-th--m-nested--PaddingTop:  var(--pf-global--spacer--xl);
+  --pf-c-table__thead-expandable-row-th--m-nested--PaddingBottom:  var(--pf-global--spacer--md);
   --pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft: var(--pf-global--spacer--3xl);
   --pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom: var(--pf-global--spacer--md);
@@ -266,13 +267,11 @@ $pf-c-table-xs-breakpoint: 380px;
   // START FROM HERE //
   /* stylelint-disable */
   .pf-m-nested {
-    // Add bottom-border to thead
-
     thead {
-      border-bottom: var(--pf-c-table__thead--m-nested--BorderWidth) solid var(--pf-c-table__thead--m-nested--BorderColor);
       // Add top padding to head
-      .pf-c-table__expandable-row th {
+      tr th {
         padding-top: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingTop);
+        padding-bottom: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingBottom);
         // first child on the left add padding
         &:first-child {
           padding-left: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft);
@@ -280,8 +279,8 @@ $pf-c-table-xs-breakpoint: 380px;
       }
     }
 
-    tbody {
-      .pf-c-table__expandable-row {
+    .pf-m-nestedtable tbody {
+      tr {
         // first child on the left add padding
         th:first-child {
           padding-left: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft);
@@ -330,8 +329,6 @@ $pf-c-table-xs-breakpoint: 380px;
     &:last-child {
       padding-right: 0;
     }
-    
-    // FIX HERE //
   }
   /* stylelint-enable */
 
@@ -711,7 +708,7 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   // turn off the top and bottom padding on the first and last rows
-  .pf-m-nested tbody .pf-c-table__expandable-row {
+  .pf-m-nested tbody tr {
     &:first-child {
       th, td {
         padding-top: 0;
@@ -798,6 +795,29 @@ $pf-c-table-xs-breakpoint: 380px;
     margin-top: var(--pf-c-table-tr--responsive--MarginTop);
   }
 
+  table .pf-m-nestedtable {
+    padding-top: 0;
+    padding-right: 48px; // change this
+    padding-left: 48px; // change this
+
+    tr {
+      padding: 16px; 
+    }
+  }
+
+  .pf-m-nestedtable tbody { // get this to work
+    tr {
+      &:last-child {
+        // last row - td padding bottom
+        td {
+          padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
+        }
+      }
+    }
+  }
+
+
+
   // Standard td, in standard row (non-expandable)
   // exclude specifically styled tds, as they are placed explicitly within grid
   #{$pf-c-table-standard-row} #{$pf-c-table-standard-th},
@@ -850,58 +870,6 @@ $pf-c-table-xs-breakpoint: 380px;
     padding-bottom: 0;
     border: 0;
     border-bottom: 3px solid var(--pf-global--active-color--100); // CHANGE THIS
-  }
-
-  // td .pf-c-table__action {
-  //   @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-  //     background-color: #000;
-  //     grid-row-start: 1;
-  //     grid-column-start: 2;
-  //   }
-  // }
-
-  // NESTED // 
-  .pf-c-table .pf-c-table__expandable-row th,
-  .pf-c-table .pf-c-table__expandable-row td {
-    // responsive layout, set td to two column grid
-    display: grid;
-    padding-top: 0;
-    padding-right: 64px; // set variable
-    padding-bottom: 0;
-    padding-left: 64px; // set variable
-    margin-top: var(--pf-c-table-td--responsive--MarginTop);
-    margin-bottom: var(--pf-c-table-td--responsive--MarginBottom);
-    grid-column: 2;
-    grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
-
-    // @mobile, breakpoint small
-    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-      grid-template-columns: 1fr 1.5fr;
-      grid-column: 1;
-    }
-
-    // set contents of td to start at column two of td grid
-    * {
-      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-        grid-column: 2;
-      }
-    }
-
-    // @mobile only
-    // set contents of ::before pseudo element to start at column one of td grid
-    &::before {
-      font-size: 14px; // set variable
-      font-weight: bold;
-      text-align: left;
-      content: attr(data-label);
-
-
-      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
-        font-weight: normal;
-        // set ::before to span all rows, up to 100
-        grid-row: 1 / 100;
-      }
-    }
   }
 
   // Expandable row
