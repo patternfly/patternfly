@@ -329,7 +329,7 @@ $pf-c-table-xs-breakpoint: 380px;
 .pf-c-table .pf-c-table__toggle {
   padding-top: var(--pf-c-table__toggle--PaddingTop);
   padding-right: 0;
-  vertical-align: baseline;
+  vertical-align: top;
 
   // Toggle button
   .pf-c-button {
