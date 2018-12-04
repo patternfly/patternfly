@@ -13,10 +13,10 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 | -- | -- | `.pf-c-login__main-body` | `<div>` | Main form container. |
 | `.login-pf-brand`| `<img>` | `.pf-c-brand` | `<img>` | Patternfly logo brand image tag. |
 | `.login-pf-header` | `<header>` | `.pf-c-login__main-header` | `<header>` | Header container that sits inside of the login component. |
-| `.card-pf` > `.login-pf-signup` | -- | -- | -- | PF3 signup section. |
+| `.card-pf` > `.login-pf-signup` | `<p>` | -- | -- | PF3 signup section. |
 | `.login-pf-page-footer` | `<footer>` | `.pf-c-login__footer` | `<footer>` | Footer container that sits inside of the login component |
 | -- | -- | `.pf-c-login__main-footer` | `<footer>` | Main footer container for social media logins. |
-| `.login-pf-page-footer-sso-services` | -- | -- | -- | PF3 footer servies section. |
+| `.login-pf-page-footer-sso-services` | `<code>` | -- | -- | PF3 footer servies section. |
 | `.login-pf-page-footer-sso-services-logos` | `<ul>` | `.pf-c-list.pf-m-grid` | `<ul>` | Grid of social media connections. |
 | `.login-pf-page-footer-links`| `<ul>` | `.pf-c-list.pf-m-inline`| `<ul>` | Terms and policy links. |
 | `.login-pf-page-footer-link`| `<a>` | `.pf-c-login__footer-link `| `<a>` | Terms and policy linked `a` tags. |
