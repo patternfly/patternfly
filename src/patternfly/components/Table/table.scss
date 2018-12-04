@@ -710,6 +710,21 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  // turn off the top and bottom padding on the first and last rows
+  .pf-m-nested tbody .pf-c-table__expandable-row {
+    &:first-child {
+      th, td {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      th, td {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   // Table row
   // using background color on tr as they are presented as block level elements for responsive view
   tr {
@@ -831,10 +846,11 @@ $pf-c-table-xs-breakpoint: 380px;
     background-color: transparent;
   }
 
+  // override expandlink styles
   td.pf-m-expandlink {
     padding-bottom: 0;
     border: 0;
-    border-bottom: 3px solid var(--pf-global--active-color--100);
+    border-bottom: 3px solid var(--pf-global--active-color--100); // CHANGE THIS
   }
 
   // NESTED // 
@@ -880,18 +896,18 @@ $pf-c-table-xs-breakpoint: 380px;
       }
     }
 
-    // Action cell
-    .pf-c-table__action {
-      grid-row-start: 1;
-      grid-column-start: 3;
+    // // Action cell
+    // .pf-c-table__action {
+    //   grid-row-start: 1;
+    //   grid-column-start: 3;
 
-      // @smallest breakpoint
-      @media screen and (max-width: $pf-global--breakpoint--sm) {
-        grid-row-start: 1;
-        grid-column-start: 2;
-        margin-left: 0;
-      }
-    }
+    //   // @smallest breakpoint
+    //   @media screen and (max-width: $pf-global--breakpoint--sm) {
+    //     grid-row-start: 1;
+    //     grid-column-start: 2;
+    //     margin-left: 0;
+    //   }
+    // }
   }
 
   // Expandable row
