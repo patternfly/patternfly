@@ -145,29 +145,23 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table--m-compact--PaddingLeft:                       var(--pf-global--spacer--sm);
   --pf-c-table--m-compact--FontSize:                          var(--pf-global--FontSize--sm);
 
-  // Modifier - Expand Link
+  // Modifier - Expand Link (Styles an expanded link td)
   --pf-c-table__td--m-expandlink--BorderTop--BorderWidth:      var(--pf-global--BorderWidth--md);
   --pf-c-table__td--m-expandlink--BorderTop--BorderColor:      var(--pf-global--primary-color--100);
-  --pf-c-table__td--m-expandlink--BorderRight--BorderWidth:    var(--pf-global--BorderWidth--sm);
-  --pf-c-table__td--m-expandlink--BorderRight--BorderColor:    var(--pf-global--BorderColor--light-200);
+  --pf-c-table__td--m-expandlink--BorderX--BorderWidth:        var(--pf-global--BorderWidth--sm);
+  --pf-c-table__td--m-expandlink--BorderX--BorderColor:        var(--pf-global--BorderColor--light-200);
   --pf-c-table__td--m-expandlink--BorderBottom--BorderWidth:   var(--pf-global--BorderWidth--sm);
   --pf-c-table__td--m-expandlink--BorderBottom--BorderColor:   var(--pf-global--BackgroundColor--100);
-  --pf-c-table__td--m-expandlink--BorderLeft--BorderWidth:     var(--pf-global--BorderWidth--sm);
-  --pf-c-table__td--m-expandlink--BorderLeft--BorderColor:     var(--pf-global--BorderColor--light-200);
+  --pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderColor: var(--pf-global--active-color--100);
 
   // Modifier - Nested Table (Compound Expansion)
-  --pf-c-table-td--m-nested--FontSize:                          var(--pf-global--FontSize--sm);
-  --pf-c-table__thead--m-nested--BorderWidth:                   var(--pf-global--BorderWidth--sm);
-  --pf-c-table__thead--m-nested--BorderColor:                   var(--pf-global--BorderColor--light-200);
-  --pf-c-table__thead-expandable-row-th--m-nested--PaddingTop:  var(--pf-global--spacer--xl);
-  --pf-c-table__thead-expandable-row-th--m-nested--PaddingBottom:  var(--pf-global--spacer--md);
-  --pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft: var(--pf-global--spacer--3xl);
-  --pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table__tbody-expandable-row-td--m-nested--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-table--m-nestedtable-thead-tr-th--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table--m-nestedtable-thead-tr-th--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table--m-nestedtable-tbody-tr-th--PaddingX: var(--pf-global--spacer--3xl);
+  --pf-c-table-tbody--m-expandbody--BorderLeft--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-table-tbody--m-expandbody--BorderLeft--BorderColor: var(--pf-global--active-color--100);
+
 
   // Modifier - Toggle
   --pf-c-table--m-toggle--Transition:                         var(--pf-global--Transition);
@@ -244,12 +238,13 @@ $pf-c-table-xs-breakpoint: 380px;
     padding-left: var(--pf-c-table-cell--PaddingLeft);
     font-weight: var(--pf-c-table--FontWeight);
 
+    // Compound Expansion Style
     /* stylelint-disable */
     &.pf-m-expandlink {
       border-top: var(--pf-c-table__td--m-expandlink--BorderTop--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderTop--BorderColor);
-      border-right: var(--pf-c-table__td--m-expandlink--BorderRight--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderRight--BorderColor);
+      border-right: var(--pf-c-table__td--m-expandlink--BorderX--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderX--BorderColor);
       border-bottom: var(--pf-c-table__td--m-expandlink--BorderBottom--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderBottom--BorderColor);
-      border-left: var(--pf-c-table__td--m-expandlink--BorderLeft--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderLeft--BorderColor);
+      border-left: var(--pf-c-table__td--m-expandlink--BorderX--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderX--BorderColor);
       /* stylelint-enable */
     }
 
@@ -264,70 +259,41 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
-  // START FROM HERE //
+  // Styles for Compound Expansion //
   /* stylelint-disable */
   .pf-m-nested {
-    thead {
-      // Add top padding to head
-      tr th {
-        padding-top: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingTop);
-        padding-bottom: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingBottom);
-        // first child on the left add padding
-        &:first-child {
-          padding-left: var(--pf-c-table__thead-expandable-row-th--m-nested--PaddingLeft);
-        }
-      }
-    }
-
-    .pf-m-nestedtable tbody {
-      tr {
-        // first child on the left add padding
-        th:first-child {
-          padding-left: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingLeft);
-        }
-        // last child on the right add padding
-        td:last-child {
-          padding-right: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingRight); 
-        }
-        
-        &:first-child {
-          // first row - th padding top
-          th {
-            padding-top: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingTop);
-          }
-          // first row - td padding top
-          td {
-            padding-top: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingTop);
-          }
-        }
-
-        &:last-child {
-          // last row - th padding bottom
-          th {
-            padding-bottom: var(--pf-c-table__tbody-expandable-row-th--m-nested--PaddingBottom);
-          }
-          // last row - td padding bottom
-          td {
-            padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
-          }
-        }
-      }
-    }
-
-    // make font size smaller
-    th,
-    td {
-      font-size: var(--pf-c-table-td--m-nested--FontSize);
-    }
-
-    // padding left on td > table (sit to edge)
+    // removes padding from td with modifier pf-m-nested
     &:first-child {
       padding-left: 0;
     }
 
-    // padding right on td > table (sit to edge)
     &:last-child {
       padding-right: 0;
+    }
+
+    .pf-m-nestedtable {
+      thead {
+        tr th {
+          padding: 0;
+          font-size: var(--pf-c-table--m-nestedtable-thead-tr-th--FontSize);
+
+          &:first-child {
+            padding-left: var(--pf-c-table--m-nestedtable-thead-tr-th--PaddingLeft);
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          th:first-child {
+            padding-left: var(--pf-c-table--m-nestedtable-tbody-tr-th--PaddingX);
+          }
+
+          td:last-child {
+            padding-right: var(--pf-c-table--m-nestedtable-tbody-tr-th--PaddingX); 
+          }
+        }
+      }
     }
   }
   /* stylelint-enable */
@@ -696,29 +662,8 @@ $pf-c-table-xs-breakpoint: 380px;
   tbody {
     display: block;
 
-    &.pf-m-selectmobile {
-      &:not(.pf-m-nestedtable) {
-        border-left: 4px solid var(--pf-global--active-color--100); //change this
-      }
-    }
-
     & + tbody {
       margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
-    }
-  }
-
-  // turn off the top and bottom padding on the first and last rows
-  .pf-m-nested tbody tr {
-    &:first-child {
-      th, td {
-        padding-top: 0;
-      }
-    }
-
-    &:last-child {
-      th, td {
-        padding-bottom: 0;
-      }
     }
   }
 
@@ -726,12 +671,6 @@ $pf-c-table-xs-breakpoint: 380px;
   // using background color on tr as they are presented as block level elements for responsive view
   tr {
     background-color: var(--pf-c-table--BackgroundColor);
-
-    // align link buttons with th
-    .pf-c-button {
-      min-height: 0;
-      text-align: left;
-    }
   }
 
   // Reset td padding
@@ -795,29 +734,6 @@ $pf-c-table-xs-breakpoint: 380px;
     margin-top: var(--pf-c-table-tr--responsive--MarginTop);
   }
 
-  table .pf-m-nestedtable {
-    padding-top: 0;
-    padding-right: 48px; // change this
-    padding-left: 48px; // change this
-
-    tr {
-      padding: 16px; 
-    }
-  }
-
-  .pf-m-nestedtable tbody { // get this to work
-    tr {
-      &:last-child {
-        // last row - td padding bottom
-        td {
-          padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
-        }
-      }
-    }
-  }
-
-
-
   // Standard td, in standard row (non-expandable)
   // exclude specifically styled tds, as they are placed explicitly within grid
   #{$pf-c-table-standard-row} #{$pf-c-table-standard-th},
@@ -859,18 +775,72 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  // COMPOUND EXPANSION RESPONSIVE
+
+  // override expandlink styles
+  td.pf-m-expandlink {
+    border: 0;
+    border-bottom: var(--pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderColor);
+  }
+
+  // Tbody
+  tbody {
+    &.pf-m-expandbody {
+      border-left: var(--pf-c-table-tbody--m-expandbody--BorderLeft--BorderWidth) solid var(--pf-c-table-tbody--m-expandbody--BorderLeft--BorderColor);
+    }
+  }
+
+  tr {
+    // align link buttons with th
+    .pf-c-button {
+      min-height: 0;
+      text-align: left;
+    }
+  }
+
+  // turn off the top and bottom padding on the first and last rows
+  .pf-m-nested tbody tr {
+    &:first-child {
+      th, td {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      th, td {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+
+  table .pf-m-nestedtable {
+    padding-top: 0;
+    padding-right: 48px; // change this
+    padding-left: 48px; // change this
+
+    tr {
+      padding: 16px; 
+    }
+  }
+
+  .pf-m-nestedtable tbody { // get this to work
+    tr {
+      &:last-child {
+        // last row - td padding bottom
+        td {
+          padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
+        }
+      }
+    }
+  }
+
   // change this
   // override left border on every second row
   tr td:first-child::before {
     background-color: transparent;
   }
 
-  // override expandlink styles
-  td.pf-m-expandlink {
-    padding-bottom: 0;
-    border: 0;
-    border-bottom: 3px solid var(--pf-global--active-color--100); // CHANGE THIS
-  }
 
   // Expandable row
   .pf-c-table__expandable-row {
