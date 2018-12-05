@@ -776,69 +776,70 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   // COMPOUND EXPANSION RESPONSIVE
-
-  // override expandlink styles
-  td.pf-m-expandlink {
-    border: 0;
-    border-bottom: var(--pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderColor);
-  }
-
   // Tbody
   tbody {
     &.pf-m-expandbody {
       border-left: var(--pf-c-table-tbody--m-expandbody--BorderLeft--BorderWidth) solid var(--pf-c-table-tbody--m-expandbody--BorderLeft--BorderColor);
     }
-  }
 
-  tr {
-    // align link buttons with th
-    .pf-c-button {
-      min-height: 0;
-      text-align: left;
-    }
-  }
+    tr {
+      // override expandlink styles
+      td.pf-m-expandlink {
+        border: 0;
+        border-bottom: var(--pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderWidth) solid var(--pf-c-table__td--m-expandlink--BorderBottom--responsive--BorderColor);
+      }
 
-  // turn off the top and bottom padding on the first and last rows
-  .pf-m-nested tbody tr {
-    &:first-child {
-      th, td {
+      // align link buttons with th
+      .pf-m-link {
+        min-height: 0;
         padding-top: 0;
-      }
-    }
-
-    &:last-child {
-      th, td {
-        padding-bottom: 0;
+        text-align: left;
       }
     }
   }
 
+  // override left border on every second row
+  tr td:first-child::before {
+    background-color: transparent;
+  }
 
-  table .pf-m-nestedtable {
+  .pf-m-nested .pf-m-nestedtable tbody {
+    tr td {
+      padding: 0;
+    }
+  }
+
+  // // turn off the top and bottom padding on the first and last rows
+  // .pf-m-nested tbody tr {
+  //   &:first-child {
+  //     th, td {
+  //       padding-top: 0;
+  //     }
+  //   }
+
+  //   &:last-child {
+  //     th, td {
+  //       padding-bottom: 0;
+  //     }
+  //   }
+  // }
+
+  // take off padding-right on the last-child
+  .pf-m-nested .pf-m-nestedtable tbody {
+    tr td:last-child {
+      padding-right: 0;
+    }
+  }
+
+
+  .pf-m-nestedtable tbody {
     padding-top: 0;
     padding-right: 48px; // change this
     padding-left: 48px; // change this
 
     tr {
-      padding: 16px; 
+      padding: 16px; // change this
     }
-  }
-
-  .pf-m-nestedtable tbody { // get this to work
-    tr {
-      &:last-child {
-        // last row - td padding bottom
-        td {
-          padding-bottom: var(--pf-c-table__tbody-expandable-row-td--m-nested--PaddingBottom);
-        }
-      }
-    }
-  }
-
-  // change this
-  // override left border on every second row
-  tr td:first-child::before {
-    background-color: transparent;
   }
 
 
