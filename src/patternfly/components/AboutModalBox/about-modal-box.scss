@@ -249,7 +249,7 @@
   // Since this btn is unique to the about modal, use contextual selectors in this specific instance
   .pf-c-button.pf-m-plain {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     width: var(--pf-c-about-modal-box__button-close--Width);
     height: var(--pf-c-about-modal-box__button-close--Height);

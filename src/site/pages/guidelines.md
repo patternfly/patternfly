@@ -50,7 +50,7 @@ A utility class is prefixed with `-u` (after the patterfly prefix `pf-`), for ex
 
 ### Demos
 
-Demos show how components and layouts can be put together to build more complex structures. 
+Demos show how components and layouts can be put together to build more complex structures.
 
 - A demo never includes its own styles. If styling is necessary to implement a desired demo, then new components or layouts, or variants of the components or layouts used, should be created instead.
 - A demo doesn't add any accessibility tags that aren't already in the components. All accessibility should be handled at the component level.
@@ -63,74 +63,92 @@ PatternFly follows a two-layer theming system where **global variables** always 
 
 The main reason to have global variables is to maintain consistency. They adhere to the following rules:
 
-- They are prefixed with the word `global` and follow the formula `$pf-global--concept--PropertyCamelCase--modifier--state`.
+- They are prefixed with the word `global` and follow the formula `--pf-global--concept--PropertyCamelCase--modifier--state`.
   - a `concept` is something like a `spacer` or `main-title`;
   - a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
   - a `modifier` is something like  `sm`, or `lg`;
   - and a `state` is something like  `hover`, or `expanded`;
-- They are concepts, never tied to an element or component. This is incorrect: `$pf-global--h1--FontSize`, this is correct: `$pf-global--FontSize--3xl`.
+- They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--3xl`.
 
 For example a global variable setup would look like:
 
 ```scss
 
-  /* $pf-global--concept--size */
+  /* --pf-global--concept--size */
   --pf-global--spacer--lg: .5rem;
   --pf-global--spacer--xl: 1rem;
   --pf-global--spacer--2xl: 2rem;
 
-  /* $pf-global--PropertyCamelCase--modifier */
+  /* --pf-global--PropertyCamelCase--modifier */
   --pf-global--FontSize--3xl: 2rem;
   --pf-global--FontSize--2xl: 1.8rem;
   --pf-global--FontSize--lg: 1rem;
 
-  /* pf-global--PropertyCamelCase--state */
+  /* --pf-global--PropertyCamelCase--state */
   --pf-global--BackgroundColor--hover: #ccc;
 
-  /* $pf-global--PropertyCamelCase--modifier */
+  /* --pf-global--PropertyCamelCase--modifier */
   --pf-global--Color--100: #000;
 
-  /* $pf-global--concept--modifier */
+  /* --pf-global--concept--modifier */
   --pf-global--primary-color--100: blue;
 ```
 
 ### Component variables
 
-The second layer is scoped to themeable component properties and follow these rules:
+The second layer is scoped to themeable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
 
-- They follow this formula `$pf-c-block__element--modifier--state--PropertyCamelCase`.
-  - The `pf-c-block__element--modifier` is the selector name is something like `pf-c-alert__actions`;
-  - a `state` is something like `hover` or `active`;
-- The variable always has a default value.
-- The value of component scoped variables is **always** defined by a global variable.
+- They follow this general formula `--pf-c-block__element--modifier--state--breakpoint--pseudo-element--PropertyCamelCase`.
+  - `pf-c-block` refers to the block, usually the component or layout name (i.e., `pf-c-alert`).
+  - `__element` refers to the element inside of the block (i.e., `__title`).
+  - `modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (i.e., `m-danger`)
+  - `state` is something like `hover` or `active`.
+  - `breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
+  - `pseudo-element` is one of either `before` or `after`.
+- The value of a component variable is **always** defined by a global variable.
+- It's possible to include multiple elements, modifiers, states, and breakpoints in a single component variable.
+- The order of elements, modifiers, sttates, and breakpoints in the variable name should match the selector order.
 
 For example:
 
 ```scss
 /* Component scoped variables are always defined by global variables */
-  --pf-alert--Padding: var(--pf-global--spacer--xl);
-  --pf-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--hover);
-  --pf-alert__title--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-c-alert--Padding: var(--pf-global--spacer--xl);
+  --pf-c-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-alert__title--FontSize: var(--pf-global--FontSize--2xl);
 
 /* --block--PropertyCamelCase */
-.alert {
-  padding: var(--pf-alert--Padding);
+.pf-c-alert {
+  padding: var(--pf-c-alert--Padding);
 }
 
 /* --block--state--PropertyCamelCase */
-.alert {
+.pf-c-alert {
   &:hover {
-    background-color: var(--pf-alert--hover--BackgroundColor);
+    background-color: var(--pf-c-alert--hover--BackgroundColor);
   }
 }
 
 /* --block__element--PropertyCamelCase */
-.alert__title {
-  font-size: var(--pf-alert__title--FontSize);
+.pf-c-alert__title {
+  font-size: var(--pf-c-alert__title--FontSize);
+}
+
+/* A more complex example */
+.pf-c-switch {
+  @media (max-width: $pf-global--breakpoint--sm) {
+    .pf-c-switch__input {
+      &:disabled {
+        ~ .pf-c-switch__toggle {
+          &::before {
+            background-color: var(--pf-c-switch--sm__input--disabled__toggle--before--BackgroundColor);
+          }
+        }
+      }
+    }
+  }
 }
 ```
-
-This setup allows for consistency across components, it generates a common language between designers and developers, and it gives granular control to authors.
 
 ### Comment all magic values
 
@@ -308,17 +326,17 @@ To make sure you are writing mobile first, always do `min-width`:
 States of a component should be included as a nested element. This includes hover, focus, and active states:
 
 ```sass
-.pf-button {
-  background: $color;
+.pf-c-button {
+  background: var(--pf-c-button--Background);
 
-  &:hover,
-  &:focus {
-    background: $lighter-color;
+  .pf-m-hover,
+  :hover {
+    background: var(--pf-c-button--hover--Background);
   }
 }
 ```
 
-Classes that duplicate a state should be named with the prefix `pf-m-`. For example, a class `pf-m-active` can be used to apply the `:active` styling.
+Classes that duplicate a state should be named with the prefix `pf-m-`. For example, a class `.pf-m-active` can be used to apply the `:active` styling.
 
 #### Sass variables
 

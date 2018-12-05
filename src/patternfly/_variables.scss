@@ -74,6 +74,9 @@
   --pf-global--spacer--2xl: #{$pf-global--spacer--2xl};
   --pf-global--spacer--3xl: #{$pf-global--spacer--3xl};
 
+  // Form Spacer
+  --pf-global--spacer--form-element: #{$pf-global--spacer--form-element};
+
   // Gutter
   --pf-global--gutter: #{$pf-global--gutter};
 
@@ -113,6 +116,10 @@
   --pf-global--BorderColor--light-200: #{$pf-global--BorderColor--light-200};
   --pf-global--BorderRadius--sm: #{$pf-global--BorderRadius--sm};
   --pf-global--BorderRadius--lg: #{$pf-global--BorderRadius--lg};
+
+  // Icons
+  --pf-global--icon--Color: #{$pf-global--icon--Color};
+  --pf-global--icon--FontSize: #{$pf-global--icon--FontSize};
 
 
   // Fonts

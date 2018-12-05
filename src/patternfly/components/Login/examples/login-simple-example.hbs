@@ -1,0 +1,112 @@
+{{#> background-image}}{{/background-image}}
+{{#> login}}
+  {{#> login-container}}
+    {{#> login-header}}
+      {{#> brand brand--attribute='src="/assets/images/pf_logo_color.svg" alt="PatternFly Logo"'}}{{/brand}}
+      <p>This is placeholder text only. Use this area to place any information or introductory message about your application that may be relevant to users.</p>
+    {{/login-header}}
+    {{#> login-main}}
+      {{#> login-main-header}}
+        {{#> title titleType="h1" title--modifier="pf-m-3xl"}}
+          Log in to your account
+        {{/title}}
+        {{#> dropdown id="dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
+          English
+        {{/dropdown}}
+        <p>Need an account? <a href="https://www.patternfly.org/">Sign up.</a></p>
+      {{/login-main-header}}
+      {{#> login-main-body}}
+        {{#> form}}
+          {{#> form-group}}
+            {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
+            {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+          {{/form-group}}
+          {{#> form-group}}
+            {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
+            {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+          {{/form-group}}
+          {{#> form-group form-group--modifier="pf-m-action"}}
+            {{#> button button--modifier="pf-m-primary" button--attribute='type="submit"'}}
+              Log in
+            {{/button}}
+            {{#> check}}
+              {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+            {{/check}}
+          {{/form-group}}
+        {{/form}}
+      {{/login-main-body}}
+      {{#> login-main-footer}}
+        {{#> title titleType="h2" title--modifier="pf-m-md"}}
+          Or log in with
+        {{/title}}
+        {{#> list list--modifier="pf-m-grid"}}
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-google.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                Google
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-github.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                GitHub
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-dropbox.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                Dropbox
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-facebook.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                Facebook
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> login-main-footer-link}}
+              <img src="/assets/images/logo-gitlab.svg" alt="">
+              {{#> login-main-footer-link-text}}
+                GitLab
+              {{/login-main-footer-link-text}}
+            {{/login-main-footer-link}}
+          </li>
+          <li>
+            {{#> button button--attribute='id="login-more"' button--modifier="pf-m-link"}}
+              More...
+            {{/button}}
+          </li>
+        {{/list}}
+      {{/login-main-footer}}
+    {{/login-main}}
+    {{#> login-footer}}
+      {{#> list list--modifier="pf-m-inline"}}
+        <li>
+          {{#> login-footer-link}}
+            Terms of Use
+          {{/login-footer-link}}
+        </li>
+        <li>
+          {{#> login-footer-link}}
+            Help
+          {{/login-footer-link}}
+        </li>
+        <li>
+          {{#> login-footer-link}}
+            Privacy Policy
+          {{/login-footer-link}}
+        </li>
+      {{/list}}
+    {{/login-footer}}
+  {{/login-container}}
+{{/login}}

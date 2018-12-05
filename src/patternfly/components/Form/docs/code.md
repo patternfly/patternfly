@@ -23,6 +23,5 @@
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
-| `.pf-m-required` | `.pf-c-form__label` | Modifies form label to show required state. |
 | `.pf-m-inline` | `.pf-c-form__group` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |

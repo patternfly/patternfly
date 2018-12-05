@@ -25,15 +25,16 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |
 | `.pf-c-dropdown__toggle` | `<button>` | Defines the dropdown toggle |
 | `.pf-c-dropdown__toggle-icon` | `<i>` | Defines the dropdown toggle icon |
+| `.pf-c-dropdown__toggle-text` | `<span>` | Defines the dropdown toggle text |
 | `.pf-c-dropdown__menu` | `<div>` | Defines the parent wrapper of the menu items |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page |
 | `.pf-c-dropdown__separator` | `<div>` | Defines a separator within the menu |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
-| `.pf-m-plain` | `.pf-c-dropdown` | Modifies to display the toggle with no border or background |
 | `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
 | `.pf-m-align-right` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-hover` | `.pf-c-dropdown__menu-item`, `.pf-c-dropdown__toggle` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-dropdown__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
+| `.pf-m-plain` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with no border |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `:disabled` attribute on `button.pf-c-dropdown__menu-item`|

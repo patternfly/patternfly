@@ -2,33 +2,34 @@
 
 .pf-c-dropdown {
   // Toggle
-  --pf-c-dropdown__toggle--PaddingTop: #{pf-size-prem(6px)}; // The top and bottom padding for the dropdown is a one-off
+  --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle--PaddingBottom: #{pf-size-prem(6px)};
+  --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
-  --pf-c-dropdown__toggle--MinHeight: var(--pf-global--target-size--MinHeight);
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-dropdown__toggle--BackgroundColor: transparent;
   --pf-c-dropdown__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__toggle--BorderColor: var(--pf-global--BorderColor);
-  --pf-c-dropdown__toggle--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-dropdown__toggle--BorderTopColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-dropdown__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-global--BorderColor--dark);
+  --pf-c-dropdown__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
-  --pf-c-dropdown__toggle--hover--BorderWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-dropdown__toggle--hover--BorderColor: var(--pf-global--BorderColor);
-  --pf-c-dropdown__toggle--expanded--BorderWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-dropdown__toggle--expanded--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
+  --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
+  --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // Toggle Arrow
-  --pf-c-dropdown__arrow--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-dropdown__arrow--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Menu
   --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-dropdown__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__menu--BorderColor: var(--pf-global--BorderColor);
   --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -54,19 +55,26 @@
 
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
 
 .pf-c-dropdown__toggle {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: var(--pf-c-dropdown__toggle--MinWidth);
-  min-height: var(--pf-c-dropdown__toggle--MinHeight);
+  max-width: 100%;
   padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
   font-size: var(--pf-c-dropdown__toggle--FontSize);
   font-weight: var(--pf-c-dropdown__toggle--FontWeight);
   line-height: var(--pf-c-dropdown__toggle--LineHeight);
-  color: var(--pf-c-dropdown__toggle--Color);
   background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
   border: none;
+
+  & > * {
+    color: var(--pf-c-dropdown__toggle--Color);
+  }
 
   &::before {
     position: absolute;
@@ -75,46 +83,54 @@
     bottom: 0;
     left: 0;
     content: "";
-    border: var(--pf-c-dropdown__toggle--BorderWidth) solid var(--pf-c-dropdown__toggle--BorderColor);
-    border-radius: var(--pf-c-dropdown__toggle--BorderRadius);
+    border: var(--pf-c-dropdown__toggle--BorderWidth) solid;
+    border-color: var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--BorderRightColor) var(--pf-c-dropdown__toggle--BorderBottomColor) var(--pf-c-dropdown__toggle--BorderLeftColor);
   }
 
   &:hover,
   &.pf-m-hover {
     &::before {
-      border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
+      border-bottom-color: var(--pf-c-dropdown__toggle--hover--BorderBottomColor);
     }
   }
 
   &:active,
   &.pf-m-active,
-  .pf-m-expanded > &,
-  .pf-m-plain.pf-m-expanded > &,
-  .pf-m-plain.pf-m-expanded:hover > & {
+  .pf-m-expanded > & {
     &::before {
-      border-color: var(--pf-c-dropdown__toggle--expanded--BorderColor);
-      border-width: var(--pf-c-dropdown__toggle--expanded--BorderWidth);
+      border-bottom-color: var(--pf-c-dropdown__toggle--expanded--BorderBottomColor);
+      border-bottom-width: var(--pf-c-dropdown__toggle--expanded--BorderBottomWidth);
     }
   }
 
-  .pf-m-plain > & {
-    background-color: transparent;
+  &.pf-m-plain {
+    --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-plain--Color);
 
     &::before {
-      border-color: transparent;
+      border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
     }
 
     &:hover,
-    &.pf-m-hover {
+    &.pf-m-hover,
+    &:active,
+    &.pf-m-active,
+    .pf-m-expanded > & {
+      --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-plain--hover--Color);
+
       &::before {
-        border-color: var(--pf-c-dropdown__toggle--hover--BorderColor);
-        border-width: var(--pf-c-dropdown__toggle--hover--BorderWidth);
+        border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
       }
     }
   }
 
+  .pf-c-dropdown__toggle-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .pf-c-dropdown__toggle-icon {
-    margin-left: var(--pf-c-dropdown__arrow--MarginLeft);
+    margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
 
     .pf-m-top.pf-m-expanded > & {
       transform: rotate(-180deg);

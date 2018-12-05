@@ -2,52 +2,19 @@
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
   --pf-global--BorderColor: var(--pf-global--BorderColor--dark);
-  --pf-global--active-color--100: var(--pf-global--active-color--100);
-  --pf-global--active-color--100: var(--pf-global--active-color--100);
   --pf-global--primary-color--100: var(--pf-global--primary-color--dark-100);
   --pf-global--link--Color: var(--pf-global--primary-color--dark-100);
-
-  .pf-c-button {
-    // Secondary btn
-    --pf-c-button--m-secondary--BoxShadowColor: var(--pf-global--primary-color--100);
-    --pf-c-button--m-secondary--Color: var(--pf-global--primary-color--dark-100);
-    --pf-c-button--m-secondary--hover--BoxShadowColor: var(--pf-global--primary-color--200);
-    --pf-c-button--m-secondary--hover--Color: var(--pf-global--primary-color--dark-200);
-    --pf-c-button--m-secondary--focus--BoxShadowColor: var(--pf-global--primary-color--200);
-    --pf-c-button--m-secondary--active--BoxShadowColor: var(--pf-global--primary-color--200);
-  }
+  --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100);
 }
 
 %pf-t-dark {
   --pf-global--Color--100: var(--pf-global--Color--light-100);
   --pf-global--Color--200: var(--pf-global--Color--light-200);
   --pf-global--BorderColor: var(--pf-global--BorderColor--light);
-  --pf-global--active-color--100: var(--pf-global--active-color--100);
   --pf-global--primary-color--100: var(--pf-global--primary-color--light-100);
   --pf-global--link--Color: var(--pf-global--primary-color--light-100);
   --pf-global--link--Color--hover: var(--pf-global--link--Color--light-hover);
-
-  .pf-c-button {
-    // btns
-    --pf-c-button--m-secondary--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--hover--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--hover--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--focus--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--focus--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--active--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-secondary--active--Color: var(--pf-global--Color--light-100);
-
-    // tertiary inverse btn default styles
-    --pf-c-button--m-tertiary--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--hover--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--hover--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--focus--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--focus--Color: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--active--BoxShadowColor: var(--pf-global--Color--light-100);
-    --pf-c-button--m-tertiary--active--Color: var(--pf-global--Color--light-100);
-  }
+  --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--dark-100);
 
   .pf-c-card {
     --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
