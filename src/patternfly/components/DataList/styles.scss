@@ -1,61 +1,59 @@
 @import "../../patternfly-utilities";
 
 .pf-c-data-list {
-  /* stylelint-disable */
-  --pf-c-data-list--BackgroundColor:                      var(--pf-global--BackgroundColor--light-100);
-  
+  --pf-c-data-list--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+
   // Item
-  --pf-c-data-list__item--PaddingTop:                     var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--PaddingRight:                   var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--PaddingBottom:                  var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--PaddingLeft:                    var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--MarginLeft:                     var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--BorderColor:                    var(--pf-global--Color--light-200);
-  --pf-c-data-list__item--BorderWidth:                    var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list__item--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item--PaddingX: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item--380--PaddingX: var(--pf-global--spacer--lg);
+  --pf-c-data-list__item--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item--BorderColor: var(--pf-global--Color--light-200);
+  --pf-c-data-list__item--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Toggle
-  --pf-c-data-list__toggle--MarginRight:                  var(--pf-global--spacer--md);
+  --pf-c-data-list__toggle--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-data-list__toggle--MarginLeft: calc(var(--pf-global--spacer--sm) * -1); // offset toggle to align left
+  --pf-c-data-list__toggle--Transition: var(--pf-global--Transition);
+  --pf-c-data-list__toggle--c-button--Transform: rotate(0deg);
+  --pf-c-data-list__toggle--c-button--m-expanded--Transform: rotate(90deg);
 
-  // offset toggle to align left
-  --pf-c-data-list__toggle--MarginLeft:                   calc(var(--pf-global--spacer--sm) * -1);
-  --pf-c-data-list__toggle--Transition:                   var(--pf-global--Transition);
+  // Cell
+  --pf-c-data-list__cell-cell--PaddingTop: 0;
+  --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-c-data-list__item--PaddingY);
 
   // Check
-  --pf-c-data-list__check--MarginRight:                   var(--pf-global--spacer--xl);
+  --pf-c-data-list__check--MarginRight: var(--pf-global--spacer--xl);
 
   // Actions
-  --pf-c-data-list__action--MarginLeft:                   var(--pf-global--spacer--lg);
+  --pf-c-data-list__action--MarginLeft: var(--pf-global--spacer--lg);
 
   // List item border left
-  --pf-c-data-list__item--before--BackgroundColor:        transparent;
-  --pf-c-data-list__item--before--Width:                  var(--pf-global--BorderWidth--lg);
-  --pf-c-data-list__item--before--Transition:             var(--pf-global--Transition);
-  --pf-c-data-list__item--before--ZIndex:                 var(--pf-global--ZIndex--xl);
+  --pf-c-data-list__item--before--BackgroundColor: transparent;
+  --pf-c-data-list__item--before--Width: var(--pf-global--BorderWidth--lg);
+  --pf-c-data-list__item--before--Transition: var(--pf-global--Transition);
+  --pf-c-data-list__item--before--ZIndex: var(--pf-global--ZIndex--xl);
 
   // Expandable content
-  --pf-c-data-list__expandable-content--PaddingTop:       var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content--PaddingBottom:    var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content--MaxHeight:        #{pf-size-prem(600px)};
-  --pf-c-data-list__expandable-content--Transition:       var(--pf-global--Transition);
-  --pf-c-data-list__expandable-content--BorderTopColor:   var(--pf-global--Color--light-200);
-  --pf-c-data-list__expandable-content--BorderTopWidth:   var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list__expandable-content--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-data-list__expandable-content--MaxHeight: #{pf-size-prem(600px)};
+  --pf-c-data-list__expandable-content--Transition: var(--pf-global--Transition);
+  --pf-c-data-list__expandable-content--BorderTopColor: var(--pf-global--Color--light-200);
+  --pf-c-data-list__expandable-content--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
   // Expanded modifier
-  --pf-c-data-list--m-expanded--BoxShadow:                var(--pf-global--BoxShadow--md);
-  --pf-c-data-list--m-expanded--TransitionDuration:       var(--pf-global--TransitionDuration);
-  --pf-c-data-list__item--m-expanded--before--BackgroundColor:  var(--pf-global--active-color--100);
+  --pf-c-data-list--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-data-list--m-expanded--TransitionDuration: var(--pf-global--TransitionDuration);
+  --pf-c-data-list__item--m-expanded--before--BackgroundColor: var(--pf-global--active-color--100);
 
   // spacers are a bit large on mobile view
   // reduce spacer values for up to 380px
   @media screen and (max-width: 380px) {
-    --pf-c-data-list__item--PaddingRight:                 var(--pf-global--spacer--lg);
-    --pf-c-data-list__item--PaddingLeft:                  var(--pf-global--spacer--lg);
-    --pf-c-data-list__toggle--MarginRight:                var(--pf-global--spacer--sm);
-    --pf-c-data-list__check--MarginRight:                 var(--pf-global--spacer--md);
-    --pf-c-data-list__action--MarginLeft:                var(--pf-global--spacer--sm);
+    --pf-c-data-list__item--PaddingX: var(--pf-c-data-list__item--380--PaddingX);
+    --pf-c-data-list__toggle--MarginRight: var(--pf-global--spacer--sm);
+    --pf-c-data-list__check--MarginRight: var(--pf-global--spacer--md);
+    --pf-c-data-list__action--MarginLeft: var(--pf-global--spacer--sm);
   }
-
-  /* stylelint-enable */
 
   list-style-type: disc;
   background-color: var(--pf-c-data-list--BackgroundColor);
@@ -67,8 +65,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  padding-right: var(--pf-c-data-list__item--PaddingRight);
-  padding-left: var(--pf-c-data-list__item--PaddingLeft);
+  padding-right: var(--pf-c-data-list__item--PaddingX);
+  padding-left: var(--pf-c-data-list__item--PaddingX);
 
   // add border top to subsequent li's
   & + & {
@@ -113,10 +111,10 @@
   .pf-c-button > * {
     pointer-events: none;
     transition: var(--pf-c-data-list__toggle--Transition);
-    transform: rotate(0deg);
+    transform: var(--pf-c-data-list__toggle--c-button--Transform);
 
     .pf-m-expanded & {
-      transform: rotate(90deg);
+      --pf-c-data-list__toggle--c-button--Transform: var(--pf-c-data-list__toggle--c-button--m-expanded--Transform);
     }
   }
 }
@@ -127,23 +125,23 @@
   margin-right: var(--pf-c-data-list__check--MarginRight);
 }
 
-
 // Content cells
 .pf-c-data-list__cell {
   flex: 1;
-  padding-top: var(--pf-c-data-list__item--PaddingTop);
-  padding-bottom: var(--pf-c-data-list__item--PaddingBottom);
+  padding-top: var(--pf-c-data-list__item--PaddingY);
+  padding-bottom: var(--pf-c-data-list__item--PaddingY);
 
   // for all subsequent .pf-c-data-list__cell's, set to full width
   & + & {
     flex: 1 0 100%;
     order: 1;
-    padding-top: 0;
+    padding-top: var(--pf-c-data-list__cell-cell--PaddingTop);
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
+      --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list__cell-cell--md--PaddingTop);
+
       flex: 1;
       order: initial;
-      padding-top: var(--pf-c-data-list__item--PaddingTop);
       margin-left: var(--pf-c-data-list__item--MarginLeft);
     }
   }
@@ -175,12 +173,12 @@
   max-height: 0;
 
   // reset li padding on expandable content
-  padding-right: var(--pf-c-data-list__item--PaddingRight);
-  padding-left: var(--pf-c-data-list__item--PaddingLeft);
+  padding-right: var(--pf-c-data-list__item--PaddingX);
+  padding-left: var(--pf-c-data-list__item--PaddingX);
 
   // offset for li padding for border to extend to li edges
-  margin-right: calc(var(--pf-c-data-list__item--PaddingRight) * -1);
-  margin-left: calc(var(--pf-c-data-list__item--PaddingLeft) * -1);
+  margin-right: calc(var(--pf-c-data-list__item--PaddingX) * -1);
+  margin-left: calc(var(--pf-c-data-list__item--PaddingX) * -1);
   overflow: hidden;
   border-top: 0 solid var(--pf-c-data-list__expandable-content--BorderTopColor);
   opacity: 0;
@@ -188,8 +186,8 @@
 
   .pf-m-expanded & {
     max-height: var(--pf-c-data-list__expandable-content--MaxHeight);
-    padding-top: var(--pf-c-data-list__expandable-content--PaddingTop);
-    padding-bottom: var(--pf-c-data-list__expandable-content--PaddingBottom);
+    padding-top: var(--pf-c-data-list__expandable-content--PaddingY);
+    padding-bottom: var(--pf-c-data-list__expandable-content--PaddingY);
     border-top-width: var(--pf-c-data-list__expandable-content--BorderTopWidth);
     box-shadow: var(--pf-global--BoxShadow--md-bottom);
     opacity: 1;
