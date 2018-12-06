@@ -14,6 +14,7 @@ When converting PatternFly 3 components to PatternFly 4 components, you must als
 | -- | -- | `.pf-c-login__main` | `<main>` | Main login container. |
 | -- | -- | `.pf-c-login__main-body` | `<div>` | Main form container. |
 | `.login-pf-header` | `<header>` | `.pf-c-login__main-header` | `<header>` | Header container that sits inside of the login component. |
+| `.login-pf-signup` | `<p>` | -- | -- | PF3 signup section. |
 | `.login-pf-settings`| `<div>` | `.pf-c-check` | `<div>` | Login "Keep me logged in for 30 days" instructions. |
 | `.login-pf-page-footer` | `<footer>` | `.pf-c-login__footer` | `<footer>` | Footer container that sits inside of the login component |
 | -- | -- | `.pf-c-login__main-footer` | `<footer>` | Main footer container for social media logins. |
