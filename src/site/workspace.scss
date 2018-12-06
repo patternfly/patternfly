@@ -437,4 +437,117 @@
   }
 }
 
+.plf-block {
+  --plf-block--BackgroundColor: #a6e2cf;
+
+  position: relative;
+  z-index: 99;
+  padding: 14px 22px;
+  font-family: var(--pf-global--FontFamily--monospace);
+  color: rgba(0,0,0,.5);
+  background-color: var(--plf-block--BackgroundColor);
+
+  &.hollow {
+    --plf-block--BackgroundColor: transparent;
+
+    border: 1px solid #ddd;
+  }
+
+  &.blue { --plf-block--BackgroundColor: lightblue; }
+  &.red { --plf-block--BackgroundColor: lightsalmon; }
+  &.green { --plf-block--BackgroundColor: lightgreen; }
+}
+
+.Example {
+  .pf-l-flex {
+    // padding: var(--pf-global--spacer--sm);
+    // border: 1px solid #ddd;
+  }
+
+  .pf-l-flex:hover {
+    --pf-l-flex--before--Offset: -16px;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: var(--pf-l-flex--before--Offset);
+      right: var(--pf-l-flex--before--Offset);
+      bottom: var(--pf-l-flex--before--Offset);
+      left: var(--pf-l-flex--before--Offset);
+      content: "";
+      border: 1px solid #ddd;
+    }
+  }
+
+  .pf-l-flex .pf-l-flex {
+    z-index: 2;
+  }
+
+  .pf-l-flex .pf-l-flex:hover {
+    --pf-l-flex--before--Offset: -6px;
+
+    &::before {
+      border: 4px dashed rgba(0,0,0,.2);
+    }
+  }
+}
+
+.content-section {
+  padding: 20px;
+}
+
+.section-title {
+  &:not(:first-of-type) {
+    margin-top: var(--pf-global--spacer--lg);
+  }
+
+  margin-bottom: var(--pf-global--spacer--md);
+  font-size: var(--pf-global--FontSize--md);
+  color: #888;
+}
+
+.pf-c-box {
+  padding: 30px;
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+.pf-c-page-title {
+  border: 1px solid #ddd;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.widget-section {
+  padding: var(--pf-global--spacer--md);
+  border: 1px dashed #ddd;
+}
+
+.widget-section + .widget-section {
+  margin-top: var(--pf-global--spacer--lg);
+}
+
+.widget {
+  padding: var(--pf-global--spacer--md);
+  background-color: lightslategray;
+}
+
+.widget-title {
+  &:not(:only-child) {
+    margin-bottom: var(--pf-global--spacer--md);
+  }
+}
+
+button {
+  padding: 8px 12px;
+}
+
+.num {
+  font-size: 42px;
+}
+
 /* stylelint-enable */
