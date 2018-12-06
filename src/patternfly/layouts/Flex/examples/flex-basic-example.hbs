@@ -1,0 +1,142 @@
+<div class="example__annotated">
+  <h2 class="section-title">
+    Basic flex - <code>.pf-l-flex</code>
+  </h2>
+  {{#> flex}}
+    {{#> example-block count="1"}}{{/example-block}}
+    {{#> example-block count="2"}}{{/example-block}}
+    {{#> example-block count="3"}}{{/example-block}}
+    {{#> example-block count="4"}}{{/example-block}}
+    {{#> example-block count="5"}}{{/example-block}}
+  {{/flex}}
+
+  <h2 class="section-title">
+    Flex with modified spacing - <code>.pf-l-flex.pf-m-space-items-xl</code>
+  </h2>
+  {{#> flex flex--modifier="pf-m-space-items-xl"}}
+    {{#> example-block count="1" example-block--modifier="blue"}}{{/example-block}}
+    {{#> example-block count="2" example-block--modifier="blue"}}{{/example-block}}
+    {{#> example-block count="3" example-block--modifier="blue"}}{{/example-block}}
+    {{#> example-block count="4" example-block--modifier="blue"}}{{/example-block}}
+    {{#> example-block count="5" example-block--modifier="blue"}}{{/example-block}}
+  {{/flex}}
+  <h2 class="section-title">
+    Flex with modified spacing - <code>.pf-l-flex.pf-m-space-items-none</code>
+  </h2>
+  {{#> flex flex--modifier="pf-m-space-items-none"}}
+    {{#> example-block count="1" example-block--modifier="hollow"}}{{/example-block}}
+    {{#> example-block count="2" example-block--modifier="hollow"}}{{/example-block}}
+    {{#> example-block count="3" example-block--modifier="hollow"}}{{/example-block}}
+    {{#> example-block count="4" example-block--modifier="hollow"}}{{/example-block}}
+    {{#> example-block count="5" example-block--modifier="hollow"}}{{/example-block}}
+  {{/flex}}
+
+
+  {{!-- <br>
+  <br>
+  <br>
+  <br>
+  {{#> card}}
+    {{#> card-header card-header--modifier="pf-l-flex pf-m-justify-space-between"}}
+      <h2 class="pf-m-scale">this is the header</h2>
+      {{#> flex}}
+        {{#> flex}}
+          {{#> button button--modifier="pf-m-primary"}}This is a button{{/button}}
+          {{#> button button--modifier="pf-m-secondary"}}This is a button{{/button}}
+        {{/flex}}
+      {{/flex}}
+    {{/card-header}}
+    {{#> card-body}}
+      this is the body
+    {{/card-body}}
+    {{#> card-footer}}
+      this is the footer
+    {{/card-footer}}
+  {{/card}} --}}
+  {{!-- <br>
+  <br>
+  {{#> flex}}
+    {{#> button button--modifier="pf-m-primary"}}primary button{{/button}}
+    {{#> button button--modifier="pf-m-secondary"}}secondary button{{/button}}
+  {{/flex}}
+  <br>
+  <br>
+  {{#> flex}}
+    {{#> flex flex--modifier="pf-m-spacer-xl"}}
+      {{#> button button--modifier="pf-m-primary"}}primary button{{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}secondary button{{/button}}
+    {{/flex}}
+    {{#> flex}}
+      {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-collapsed"}}
+        {{#> chip-group-label}}
+            Category One
+          {{/chip-group-label}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one"')}}
+            Chip One
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one ' chip-group--id 'chip_one" aria-label="Remove" id="' chip-group--id 'remove_chip_one"')}}
+          {{/button}}
+        {{/chip}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two"')}}
+            Chip Two
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two ' chip-group--id 'chip_two" aria-label="Remove" id="' chip-group--id 'remove_chip_two"')}}
+          {{/button}}
+        {{/chip}}
+      {{/chip-group}}
+        {{#> chip chip--modifier="pf-m-overflow"}}
+          {{#> button button--modifier="pf-m-plain"}}
+            {{#> chip-text}}
+              3 more
+            {{/chip-text}}
+          {{/button}}
+        {{/chip}}
+    {{/flex}}
+  {{/flex}}
+  <br>
+  <br>
+  {{#> flex flex--modifier="pf-m-justify-space-between"}}
+    {{#> flex flex--modifier="pf-m-space-self-xl"}}
+      {{#> button button--modifier="pf-m-primary"}}primary button{{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}secondary button{{/button}}
+    {{/flex}}
+    {{#> flex flex--modifier="pf-m-stretch"}}
+      {{#> example-block}}{{/example-block}}
+      {{#> example-block}}{{/example-block}}
+    {{/flex}}
+    {{#> flex flex--modifier="pf-m-stretch"}}
+      {{#> example-block}}{{/example-block}}
+      {{#> example-block}}{{/example-block}}
+    {{/flex}}
+    {{#> flex}}
+      {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-collapsed"}}
+        {{#> chip-group-label}}
+            Category One
+          {{/chip-group-label}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one"')}}
+            Chip One
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one ' chip-group--id 'chip_one" aria-label="Remove" id="' chip-group--id 'remove_chip_one"')}}
+          {{/button}}
+        {{/chip}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two"')}}
+            Chip Two
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two ' chip-group--id 'chip_two" aria-label="Remove" id="' chip-group--id 'remove_chip_two"')}}
+          {{/button}}
+        {{/chip}}
+      {{/chip-group}}
+        {{#> chip chip--modifier="pf-m-overflow"}}
+          {{#> button button--modifier="pf-m-plain"}}
+            {{#> chip-text}}
+              3 more
+            {{/chip-text}}
+          {{/button}}
+        {{/chip}}
+    {{/flex}}
+  {{/flex}} --}}
+</div>

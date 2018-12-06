@@ -1,0 +1,86 @@
+{{!-- <section class="content-section">
+  <p>Flexbox helper seeks to eliminate rigid structure or need for wrapping elements to achieve desired layout.</p>
+  <ul>
+    <li>It can be applied to container elements OR components. </li>
+    <li>Where content dictates layout and elements wrap when necessary.</li>
+    <li>Break dependancy upon adding utility classes to each child</li>
+    <li>Does not require wrapping elements in columns or rows</li>
+    <li>Does not replicate css grid layout or provide column alignment</li>
+    <li>Helpers, unlike utilities, may contain multiple css declarations and do not use the !important tag</li>
+  </ul>
+</section> --}}
+
+<section class="content-section">
+	<h2 class="section-title">
+    Justify flex-end
+  </h2>
+  {{#> flex flex--modifier="pf-m-justify-flex-end"}}
+    {{#> example-block}}1{{/example-block}}
+    {{#> example-block}}2{{/example-block}}
+    {{#> example-block}}3{{/example-block}}
+    {{#> example-block}}4{{/example-block}}
+    {{#> example-block}}5{{/example-block}}
+  {{/flex}}
+
+	<h2 class="section-title">
+    Justifying nested flex groups flex-end.
+    </h2>
+	{{#> flex flex--modifier="pf-m-justify-flex-end"}}
+		{{#> flex}}
+      {{#> example-block}}1{{/example-block}}
+      {{#> example-block}}2{{/example-block}}
+      {{#> example-block}}3{{/example-block}}
+      {{#> example-block}}4{{/example-block}}
+      {{#> example-block}}5{{/example-block}}
+    {{/flex}}
+		{{#> flex}}
+      {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}2{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}3{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}4{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}5{{/example-block}}
+    {{/flex}}
+		{{#> flex}}
+      {{#> example-block example-block--modifier="red"}}1{{/example-block}}
+      {{#> example-block example-block--modifier="red"}}2{{/example-block}}
+      {{#> example-block example-block--modifier="red"}}3{{/example-block}}
+    {{/flex}}
+  {{/flex}}
+
+	<h2 class="section-title">
+    Justify space-between.
+    </h2>
+	{{#> flex flex--modifier="pf-m-justify-space-between"}}
+    {{#> example-block}}1{{/example-block}}
+    {{#> example-block}}2{{/example-block}}
+    {{#> example-block}}3{{/example-block}}
+    {{#> example-block}}4{{/example-block}}
+    {{#> example-block}}5{{/example-block}}
+  {{/flex}}
+
+
+	<h2 class="section-title">
+    Justifying nested flex groups space-between.
+    </h2>
+	{{#> flex flex--modifier="pf-m-justify-space-between"}}
+		{{#> flex newcontext}}
+      {{#> example-block}}1{{/example-block}}
+      {{#> example-block}}2{{/example-block}}
+      {{#> example-block}}3{{/example-block}}
+      {{#> example-block}}4{{/example-block}}
+      {{#> example-block}}5{{/example-block}}
+    {{/flex}}
+		{{#> flex newcontext}}
+      {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}2{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}3{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}4{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}5{{/example-block}}
+    {{/flex}}
+		{{#> flex newcontext}}
+      {{#> example-block example-block--modifier="red"}}1{{/example-block}}
+      {{#> example-block example-block--modifier="red"}}2{{/example-block}}
+      {{#> example-block example-block--modifier="red"}}3{{/example-block}}
+    {{/flex}}
+  {{/flex}}
+</section>

@@ -1,0 +1,40 @@
+<section class="content-section">
+	<h2 class="section-title">
+    Align right on individual elements.
+  </h2>
+	<h2 class="section-title">Aligning right with align right. This solution will always align element right by setting margin-left: auto, including when wrapped.</h2>
+	{{#> flex}}
+    {{#> example-block}}1{{/example-block}}
+    {{#> example-block}}2{{/example-block}}
+    {{#> example-block}}3{{/example-block}}
+    {{#> example-block example-block--modifier="pf-m-align-right blue"}}4{{/example-block}}
+    {{#> example-block example-block--modifier="blue"}}5{{/example-block}}
+  {{/flex}}
+
+	<h2 class="section-title">
+    Align right on single groups.
+  </h2>
+	<h2 class="section-title">Aligning right with align right. This solution will always align element right by setting margin-left: auto, including when wrapped.</h2>
+	{{#> flex}}
+    {{#> flex flex--modifier="pf-m-align-right"}}
+      {{#> example-block example-block--modifier="blue"}}4{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}5{{/example-block}}
+    {{/flex}}
+  {{/flex}}
+
+	<h2 class="section-title">
+    Align right on multiple groups.
+  </h2>
+	<h2 class="section-title">Aligning right with align right. This solution will always align element right by setting margin-left: auto, including when wrapped.</h2>
+	{{#> flex}}
+    {{#> flex}}
+      {{#> example-block}}1{{/example-block}}
+      {{#> example-block}}2{{/example-block}}
+      {{#> example-block}}3{{/example-block}}
+    {{/flex}}
+    {{#> flex flex--modifier="pf-m-align-right"}}
+      {{#> example-block example-block--modifier="blue"}}4{{/example-block}}
+      {{#> example-block example-block--modifier="blue"}}5{{/example-block}}
+    {{/flex}}
+  {{/flex}}
+</section>

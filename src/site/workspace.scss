@@ -136,7 +136,10 @@
     margin: 2em 0 .5em;
   }
 
-  h3, h4, h5, h6 {
+  h3,
+ h4,
+ h5,
+ h6 {
     margin: 1em 0 .5em;
   }
 
@@ -152,7 +155,8 @@
     border: 1px solid rgba(0, 0, 0, .1);
   }
 
-  ul, ol {
+  ul,
+ ol {
     padding-left: 1rem;
     margin: .5rem 0 .5rem 1rem;
     list-style-position: outside;
@@ -177,7 +181,10 @@
   }
 
   table:not(.pf-c-table) {
-    &, td, th, tr {
+    &,
+ td,
+ th,
+ tr {
       padding: .5em;
       vertical-align: top;
       border-bottom: 1px solid #ccc;
@@ -320,7 +327,9 @@
   }
 
   table:not(.pf-c-table) {
-    td, th, tr {
+    td,
+ th,
+ tr {
       padding: .5em;
       vertical-align: top;
       border: 1px solid #ccc;
@@ -340,7 +349,7 @@
     }
   }
 
-  tr:nth-child(even) {background: #f1f1f1;}
+  tr:nth-child(even) { background: #f1f1f1; }
 
   &-container {
     &-tall {
@@ -437,15 +446,19 @@
   }
 }
 
-.plf-block {
+.example-block {
   --plf-block--BackgroundColor: #a6e2cf;
 
   position: relative;
   z-index: 99;
+  display: inline-flex;
+  align-items: center;
+  min-width: 56px;
+  min-height: 56px;
   padding: 14px 22px;
-  font-family: var(--pf-global--FontFamily--monospace);
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, .6);
   background-color: var(--plf-block--BackgroundColor);
+  border-radius: 8px;
 
   &.hollow {
     --plf-block--BackgroundColor: transparent;
@@ -456,98 +469,170 @@
   &.blue { --plf-block--BackgroundColor: lightblue; }
   &.red { --plf-block--BackgroundColor: lightsalmon; }
   &.green { --plf-block--BackgroundColor: lightgreen; }
+  &.yellow { --plf-block--BackgroundColor: lightgoldenrodyellow; }
+
+  .count {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 50%;
+  }
 }
 
-.Example {
-  .pf-l-flex {
-    // padding: var(--pf-global--spacer--sm);
-    // border: 1px solid #ddd;
+.Documentation.flex-documentation {
+  .Preview__body {
+    padding: 40px;
   }
 
-  .pf-l-flex:hover {
-    --pf-l-flex--before--Offset: -16px;
+  .example__annotated {
+    --pf-l-flex--before--Offset: -8px;
+    --pf-l-flex--BorderRadius: 8px;
+    $pf-l-flex--Color: rgba(0, 0, 0, .8);
 
-    position: relative;
+    .pf-l-flex {
+      @media screen and (min-width: 600px) {
+        position: relative;
 
-    &::before {
-      position: absolute;
-      top: var(--pf-l-flex--before--Offset);
-      right: var(--pf-l-flex--before--Offset);
-      bottom: var(--pf-l-flex--before--Offset);
-      left: var(--pf-l-flex--before--Offset);
-      content: "";
-      border: 1px solid #ddd;
+        &::before {
+          position: absolute;
+          top: var(--pf-l-flex--before--Offset);
+          right: var(--pf-l-flex--before--Offset);
+          bottom: var(--pf-l-flex--before--Offset);
+          left: var(--pf-l-flex--before--Offset);
+          content: "";
+          border: 1.5px dashed rgba(0, 0, 0, .2);
+          border-radius: var(--pf-l-flex--BorderRadius);
+        }
+
+        &::after {
+          position: absolute;
+          top: -18px;
+          left: 0;
+          padding: 0 4px;
+          font-size: 12px;
+          color: rgba(0, 0, 0, .6);
+          content: "default item spacing";
+          background: #fff;
+        }
+
+        &.pf-m-space-items-none::after {
+          content: "item spacing none";
+        }
+
+        &.pf-m-space-items-xs::after {
+          content: "item spacing xs";
+        }
+
+        &.pf-m-space-items-sm::after {
+          content: "item spacing sm";
+        }
+
+        &.pf-m-space-items-md::after {
+          content: "item spacing md";
+        }
+
+        &.pf-m-space-items-lg::after {
+          content: "item spacing lg";
+        }
+
+        &.pf-m-space-items-xl::after {
+          content: "item spacing xl";
+        }
+
+        &.pf-m-space-items-2xl::after {
+          content: "item spacing 2xl";
+        }
+
+        &.pf-m-space-items-3xl::after {
+          content: "item spacing 3xl";
+        }
+      }
     }
+  }
+
+  .section-title {
+    &:not(:first-of-type) {
+      margin-top: var(--pf-global--spacer--2xl);
+    }
+
+    margin-bottom: var(--pf-global--spacer--xl);
+    font-size: var(--pf-global--FontSize--md);
+    color: #888;
   }
 
   .pf-l-flex .pf-l-flex {
     z-index: 2;
   }
 
-  .pf-l-flex .pf-l-flex:hover {
-    --pf-l-flex--before--Offset: -6px;
+  .pf-l-flex .pf-l-flex {
+    --pf-l-flex--before--Offset: -3px;
 
     &::before {
-      border: 4px dashed rgba(0,0,0,.2);
+      border: 2px dashed rgba(0, 0, 0, .2);
+    }
+  }
+
+  .pf-l-flex .pf-l-flex .pf-l-flex {
+    --pf-l-flex--before--Offset: -1px;
+
+    &::before {
+      border-color: lightblue;
     }
   }
 }
 
-.content-section {
-  padding: 20px;
-}
 
-.section-title {
-  &:not(:first-of-type) {
+.Example {
+  .pf-c-box {
+    padding: 30px;
+    margin: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .pf-c-page-title {
+    border: 1px solid #ddd;
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .widget-section {
+    padding: var(--pf-global--spacer--md);
+    border: 1px dashed #ddd;
+  }
+
+  .widget-section + .widget-section {
     margin-top: var(--pf-global--spacer--lg);
   }
 
-  margin-bottom: var(--pf-global--spacer--md);
-  font-size: var(--pf-global--FontSize--md);
-  color: #888;
-}
-
-.pf-c-box {
-  padding: 30px;
-  margin: 10px;
-  border: 1px solid #ddd;
-}
-
-.pf-c-page-title {
-  border: 1px solid #ddd;
-
-  h1 {
-    margin-top: 0;
-    margin-bottom: 0;
+  .widget {
+    padding: var(--pf-global--spacer--md);
+    background-color: lightslategray;
   }
-}
 
-.widget-section {
-  padding: var(--pf-global--spacer--md);
-  border: 1px dashed #ddd;
-}
-
-.widget-section + .widget-section {
-  margin-top: var(--pf-global--spacer--lg);
-}
-
-.widget {
-  padding: var(--pf-global--spacer--md);
-  background-color: lightslategray;
-}
-
-.widget-title {
-  &:not(:only-child) {
-    margin-bottom: var(--pf-global--spacer--md);
+  .widget-title {
+    &:not(:only-child) {
+      margin-bottom: var(--pf-global--spacer--md);
+    }
   }
-}
 
-button {
-  padding: 8px 12px;
-}
+  button {
+    padding: 8px 12px;
+  }
 
-.num {
-  font-size: 42px;
+  .num {
+    font-size: 42px;
+  }
 }
 
 /* stylelint-enable */

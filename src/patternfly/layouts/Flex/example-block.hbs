@@ -1,0 +1,9 @@
+<div class="example-block{{#if example-block--modifier}} {{example-block--modifier}}{{/if}}"
+  {{#if example-block--attribute}}
+    {{{example-block--attribute}}}
+  {{/if}}>
+  {{#if count}}
+    <span class="count">{{{count}}}</span>
+  {{/if}}
+  {{> @partial-block}}
+</div>

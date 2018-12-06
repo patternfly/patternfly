@@ -1,0 +1,246 @@
+@import "../../patternfly-utilities";
+
+/* stylelint-disable */
+
+// New breakpoints
+$pf-global--breakpoint--mobile-only: 599px;
+$pf-global--breakpoint--tablet: 600px;
+$pf-global--breakpoint--desktop: 1200px;
+
+// Add name to breakpoints
+$mobile-only: $pf-global--breakpoint--mobile-only, -mobile-only;
+$tablet: $pf-global--breakpoint--tablet, -tablet-up;
+$desktop: $pf-global--breakpoint--desktop, -desktop-up;
+
+/* stylelint-enable */
+
+.pf-l-flex {
+  // Default values: these get reset based on modifier usage
+  --pf-l-flex--spacer--base: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer: var(--pf-l-flex--spacer--base);
+  --pf-l-flex--m-space-items: var(--pf-l-flex--spacer--base);
+  --pf-l-flex--m-spacer: var(--pf-l-flex--spacer--base);
+  --pf-l-flex--row-gap: var(--pf-global--spacer--md);
+
+  // Flex spacer values
+  --pf-l-flex--spacer--none: 0;
+  --pf-l-flex--spacer--xs: var(--pf-global--spacer--xs);
+  --pf-l-flex--spacer--sm: var(--pf-global--spacer--sm);
+  --pf-l-flex--spacer--md: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer--lg: var(--pf-global--spacer--lg);
+  --pf-l-flex--spacer--xl: var(--pf-global--spacer--xl);
+  --pf-l-flex--spacer--2xl: var(--pf-global--spacer--2xl);
+  --pf-l-flex--spacer--3xl: var(--pf-global--spacer--x3l);
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--pf-l-flex--row-gap);
+
+  // set base flex spacers
+  > * {
+    margin-right: var(--pf-l-flex--spacer);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &[class*="pf-m-space-items"] > * {
+    margin-right: var(--pf-l-flex--m-space-items);
+
+    &:last-child {
+      --pf-l-flex--m-space-items: 0;
+    }
+  }
+
+  [class*="pf-m-spacer"] {
+    margin-right: var(--pf-l-flex--m-spacer);
+
+    &:last-child {
+      --pf-l-flex--m-space-items: 0;
+    }
+  }
+
+  //
+  //
+  //
+  //
+  //
+  // Modifiers
+  &.pf-m-justify-flex-end {
+    justify-content: flex-end;
+  }
+
+  &.pf-m-fill-items > .pf-l-flex {
+    --pf-l-flex--spacer: 0;
+
+    flex: 1 100%;
+  }
+
+  .pf-m-full-width {
+    flex: 1 0 100%;
+  }
+
+  &.pf-m-inline-flex {
+    display: inline-flex;
+  }
+
+  .pf-m-section {
+    border: 1px dashed;
+  }
+
+  &.pf-m-align-center {
+    align-items: center;
+  }
+
+  // if set on child
+  .pf-m-align-center {
+    align-self: center;
+  }
+
+  // if set on child
+  &.pf-m-align-flex-start {
+    align-items: flex-start;
+  }
+
+  &.pf-m-align-right,
+  .pf-m-align-right {
+    margin-left: auto;
+  }
+
+  &.pf-m-overflow-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  &.pf-m-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.pf-m-columns {
+    flex-direction: column;
+
+    > *:not(:first-child) {
+      margin-top: var(--pf-l-flex--spacer);
+    }
+  }
+}
+
+/* stylelint-disable */
+.pf-l-flex {
+  .pf-m-flex-1 {
+    flex: 1;
+  }
+
+  .pf-m-stretch {
+    flex: 1 auto;
+  }
+
+  &.pf-m-justify-space-between {
+    justify-content: space-between;
+  }
+
+  &.pf-m-justify-center {
+    justify-content: center;
+  }
+
+  &.pf-m-justify-space-around {
+    justify-content: space-around;
+  }
+
+  // if set on parent
+  &.pf-m-justify-space-between,
+  &.pf-m-justify-center,
+  &.pf-m-space-between {
+    > * {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.pf-l-flex-section,
+.pf-l-flex__section {
+  display: flex;
+  flex: 1 100%;
+}
+
+// Spacer values
+$pf-flex-spacer-map: (
+  "none": "var(--pf-l-flex--spacer--none)",
+  "xs": "var(--pf-l-flex--spacer--xs)",
+  "sm": "var(--pf-l-flex--spacer--sm)",
+  "md": "var(--pf-l-flex--spacer--md)",
+  "lg": "var(--pf-l-flex--spacer--lg)",
+  "xl": "var(--pf-l-flex--spacer--xl)",
+  "2xl": "var(--pf-l-flex--spacer--2xl)",
+  "3xl": "var(--pf-l-flex--spacer--3xl)"
+);
+
+@mixin pf-l-flex--space-items-builder {
+  @each $prop, $value in $pf-flex-spacer-map {
+    .pf-l-flex.pf-m-space-items-#{$prop} > * {
+      --pf-l-flex--m-space-items: #{$value};
+    }
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-l-flex.pf-m-space-items-#{$prop}-mobile-only > * {
+        --pf-l-flex--m-space-items: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-l-flex.pf-m-space-items-#{$prop}-tablet-plus > * {
+        --pf-l-flex--m-space-items: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-l-flex.pf-m-space-items-#{$prop}-desktop-plus > * {
+        --pf-l-flex--m-space-items: #{$value};
+      }
+    }
+  }
+}
+
+
+@mixin pf-l-flex--spacer-builder {
+  @each $prop, $value in $pf-flex-spacer-map {
+    .pf-l-flex .pf-m-spacer-#{$prop} {
+      --pf-l-flex--m-spacer: #{$value};
+    }
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-l-flex .pf-m-spacer-#{$prop}-mobile-only {
+        --pf-l-flex--m-spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-l-flex .pf-m-spacer-#{$prop}-tablet-plus {
+        --pf-l-flex--m-spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-l-flex .pf-m-spacer-#{$prop}-desktop-plus {
+        --pf-l-flex--m-spacer: #{$value};
+      }
+    }
+  }
+}
+
+@include pf-l-flex--space-items-builder;
+@include pf-l-flex--spacer-builder;
