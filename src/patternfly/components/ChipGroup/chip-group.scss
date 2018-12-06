@@ -3,10 +3,8 @@
 .pf-c-chip-group {
   @extend %pf-t-light; // force the container follow the light theme
 
-  --pf-c-chip-group--PaddingTop: calc(#{var(--pf-global--spacer--xs)} / 2);
-  --pf-c-chip-group--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--PaddingBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
-  --pf-c-chip-group--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--PaddingY: calc(#{var(--pf-global--spacer--xs)} / 2);
+  --pf-c-chip-group--PaddingX: var(--pf-global--spacer--sm);
   --pf-c-chip-group--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
 
@@ -17,27 +15,23 @@
   --pf-c-chip-group__label--Maxwidth: #{pf-size-prem(120px)};
 
   // Chip
-  --pf-c-chip--MarginTop: calc(#{var(--pf-global--spacer--xs)} / 2);
+  --pf-c-chip--MarginY: calc(#{var(--pf-global--spacer--xs)} / 2);
   --pf-c-chip--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-chip--MarginBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
 
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: var(--pf-c-chip-group--PaddingTop);
-  padding-right: var(--pf-c-chip-group--PaddingRight);
-  padding-bottom: var(--pf-c-chip-group--PaddingBottom);
-  padding-left: var(--pf-c-chip-group--PaddingLeft);
+  padding: var(--pf-c-chip-group--PaddingY) var(--pf-c-chip-group--PaddingX);
   background-color: var(--pf-c-chip-group--BackgroundColor);
   border-radius: var(--pf-c-chip-group--BorderRadius);
 
   &.pf-m-toolbar {
-    background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
+    --pf-c-chip-group--BackgroundColor: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
   }
 
   > * {
-    margin-top: var(--pf-c-chip--MarginTop);
-    margin-bottom: var(--pf-c-chip--MarginBottom);
+    margin-top: var(--pf-c-chip--MarginY);
+    margin-bottom: var(--pf-c-chip--MarginY);
 
     &:not(:last-child),
     &:not(:only-child) {
