@@ -18,8 +18,8 @@
   --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
   --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingX);
   --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--md--PaddingX);
-  --pf-c-nav__list-link--after--Width: 3.125rem; // hardcoding border bottom to match design spec
-  --pf-c-nav__list-link--after--Height: 3px; // hardcoding border bottom to match design spec
+  --pf-c-nav__list-link--after--Width: #{pf-size-prem(3.125rem)}; // hardcoding border bottom to match design spec
+  --pf-c-nav__list-link--after--Height: #{pf-size-prem(3px)};// hardcoding border bottom to match design spec
 
   // Modifier - current item
   --pf-c-nav__list-link--m-current--Color: var(--pf-global--link--Color);
