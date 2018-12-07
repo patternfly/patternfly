@@ -14,8 +14,6 @@
   --pf-c-chip--m-overflow--PaddingLeft: 0;
   --pf-c-chip--m-overflow--BorderColor: transparent;
   --pf-c-chip--m-overflow--BorderWidth: 0;
-  --pf-c-chip--m-overflow--hover--BorderColor: var(--pf-c-chip--BorderColor);
-  --pf-c-chip--m-overflow--hover--BorderWidth: var(--pf-c-chip--BorderWidth);
 
   // modified chip button
   --pf-c-chip--m-overflow--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -23,7 +21,7 @@
   --pf-c-chip--m-overflow--c-button--BorderColor: transparent;
   --pf-c-chip--m-overflow--c-button--PaddingX: var(--pf-global--spacer--sm);
 
-  // active,focus
+  // active,focus,hover
   --pf-c-chip--m-overflow--c-button--active--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-chip--m-overflow--c-button--active--BorderColor: var(--pf-global--secondary-color--100);
 
@@ -67,14 +65,6 @@
       --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--BorderWidth);
     }
 
-    &.pf-m-hover,
-    &:hover {
-      &::before {
-        --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--hover--BorderColor);
-        --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--hover--BorderWidth);
-      }
-    }
-
     .pf-c-button {
       padding-right: var(--pf-c-chip--m-overflow--c-button--PaddingX);
       padding-left: var(--pf-c-chip--m-overflow--c-button--PaddingX);
@@ -84,6 +74,8 @@
         border-radius: var(--pf-c-chip--m-overflow--c-button--BorderRadius);
       }
 
+      &.pf-m-hover,
+      &:hover,
       &.pf-m-active,
       &:active,
       &.pf-m-focus,
