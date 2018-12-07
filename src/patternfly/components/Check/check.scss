@@ -13,6 +13,7 @@
   grid-template-columns: auto 1fr;
   grid-gap: var(--pf-c-check--GridGap);
   align-items: center;
+  justify-items: start;
 }
 
 .pf-c-check__label {
