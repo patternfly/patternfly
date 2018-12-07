@@ -140,6 +140,19 @@
     }
   }
 
+  // Disabled Buttons
+  // These styles need to go after the button types because they need to override some of the type styling
+  &:disabled,
+  &.pf-m-disabled {
+    color: var(--pf-c-button--disabled--Color);
+    pointer-events: none;
+    background-color: var(--pf-c-button--disabled--BackgroundColor);
+
+    &::after {
+      --pf-c-button--BorderColor: var(--pf-c-button--disabled--BorderColor);
+    }
+  }
+
   // Link Buttons
   &.pf-m-link {
     color: var(--pf-c-button--m-link--Color);
@@ -150,11 +163,13 @@
     &.pf-m-active,
     &:focus,
     &.pf-m-focus {
-      color: var(--pf-c-button--m-link--hover--Color);
+      --pf-c-button--m-link--Color: var(--pf-c-button--m-link--hover--Color);
     }
 
     &:disabled,
     &.pf-m-disabled {
+      --pf-c-button--m-link--Color: var(--pf-c-button--disabled--Color);
+
       background-color: var(--pf-c-button--m-link--disabled--BackgroundColor);
     }
   }
@@ -177,19 +192,6 @@
       --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--disabled--Color);
 
       background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
-    }
-  }
-
-  // Disabled Buttons
-  // These styles need to go after the button types because they need to override some of the type styling
-  &:disabled,
-  &.pf-m-disabled {
-    color: var(--pf-c-button--disabled--Color);
-    pointer-events: none;
-    background-color: var(--pf-c-button--disabled--BackgroundColor);
-
-    &::after {
-      --pf-c-button--BorderColor: var(--pf-c-button--disabled--BorderColor);
     }
   }
 }
