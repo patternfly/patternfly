@@ -7,8 +7,7 @@
   @for $col-num from 1 through 12 {
     &.pf-m-all-#{$col-num}-col#{$suffix} {
       > * {
-        grid-column-start: auto;
-        grid-column-end: span $col-num;
+        --pf-l-grid__item--GridColumnEnd: span $col-num;
       }
     }
   }
@@ -20,15 +19,14 @@
   // generate column span modifier
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
-      grid-column-start: auto;
-      grid-column-end: span $col-num;
+      --pf-l-grid__item--GridColumnEnd: span $col-num;
     }
   }
 
   // generate column offset modfiers
   @for $col-num from 1 through 12 {
     > .pf-m-offset-#{$col-num}-col#{$suffix} {
-      grid-column-start: col-start ($col-num + 1);
+      --pf-l-grid__item--GridColumnStart: col-start ($col-num + 1);
     }
   }
 
@@ -44,14 +42,16 @@
 // Grid base
 .pf-l-grid {
   --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
+  --pf-l-grid__item--GridColumnStart: auto;
+  --pf-l-grid__item--GridColumnEnd: span 12;
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
   > *,
   .pf-l-grid__item {
-    grid-column-start: auto;
-    grid-column-end: span 12;
+    grid-column-start: var(--pf-l-grid__item--GridColumnStart);
+    grid-column-end: var(--pf-l-grid__item--GridColumnEnd);
     min-width: 0;
     min-height: 0;
   }
