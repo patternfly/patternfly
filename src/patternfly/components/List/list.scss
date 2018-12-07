@@ -21,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    & li:not(:last-child) {
+    li:not(:last-child) {
       margin-right: var(--pf-c-list--m-inline--MarginRight);
     }
   }
@@ -34,10 +34,7 @@
 
   &:not(.pf-m-grid):not(.pf-m-inline) {
     padding-left: var(--pf-c-content--ul--PaddingLeft);
-    margin: 0;
-    margin-top: var(--pf-c-content--ul--MarginTop);
-    margin-bottom: var(--pf-c-content--MarginBottom);
-    margin-left: var(--pf-c-content--ul--MarginLeft);
+    margin: var(--pf-c-content--ul--MarginTop) 0 var(--pf-c-content--MarginBottom) var(--pf-c-content--ul--MarginLeft);
     list-style: var(--pf-c-content--ul--ListStyle);
 
     // Sub-element type selector used to maintain consistency with the content component's list styling
