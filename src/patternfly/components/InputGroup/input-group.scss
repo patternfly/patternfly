@@ -1,19 +1,22 @@
 @import "../../patternfly-utilities";
 
 .pf-c-input-group {
-  --pf-c-input-group__button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-input-group__text--PaddingX: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
-  --pf-c-input-group__text--BorderSize: var(--pf-global--BorderWidth--sm);
+  --pf-c-input-group__text--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderXColor: var(--pf-global--BorderColor--light-200);
   --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
-  --pf-c-input-group--form-control-invalid--ZIndex: var(--pf-global--ZIndex--xs);
+
+  // Button
+  --pf-c-input-group--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
+
+  // Form Control
+  --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-input-group--c-form-control--MarginRight: 1px;
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
@@ -29,14 +32,13 @@
 
     &[aria-invalid="true"] {
       position: relative;
-      z-index: var(--pf-c-input-group--form-control-invalid--ZIndex);
+      z-index: var(--pf-c-input-group--c-form-control--invalid--ZIndex);
 
       &:not(:last-child) {
-        margin-right: 1px;
+        margin-right: var(--pf-c-input-group--c-form-control--MarginRight);
       }
     }
   }
-
 
   display: flex;
   width: 100%;
@@ -53,7 +55,7 @@
     &:first-child {
       &,
       &::after {
-        border-radius: var(--pf-c-input-group__button--BorderRadius) 0 0 var(--pf-c-input-group__button--BorderRadius);
+        border-radius: var(--pf-c-input-group--c-button--BorderRadius) 0 0 var(--pf-c-input-group--c-button--BorderRadius);
       }
     }
 
@@ -61,7 +63,7 @@
     &:last-child {
       &,
       &::after {
-        border-radius: 0 var(--pf-c-input-group__button--BorderRadius) var(--pf-c-input-group__button--BorderRadius) 0;
+        border-radius: 0 var(--pf-c-input-group--c-button--BorderRadius) var(--pf-c-input-group--c-button--BorderRadius) 0;
       }
     }
   }
@@ -82,13 +84,13 @@
   .pf-c-input-group__text {
     display: flex;
     align-items: center;
-    padding-right: var(--pf-c-input-group__text--PaddingRight);
-    padding-left: var(--pf-c-input-group__text--PaddingLeft);
+    padding-right: var(--pf-c-input-group__text--PaddingX);
+    padding-left: var(--pf-c-input-group__text--PaddingX);
     font-size: var(--pf-c-input-group__text--FontSize);
     color: var(--pf-c-input-group__text--Color);
     text-align: center;
     background-color: var(--pf-c-input-group__text--BackgroundColor);
-    border: var(--pf-c-input-group__text--BorderSize) solid;
-    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
+    border: var(--pf-c-input-group__text--BorderWidth) solid;
+    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderXColor) var(--pf-c-input-group__text--BorderBottomColor);
   }
 }
