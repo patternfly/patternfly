@@ -8,14 +8,14 @@
   --pf-c-list--m-grid--GridGap: var(--pf-global--spacer--md);
 
   // Content variables (no modifier)
-  --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--MarginTop: var(--pf-c-content--MarginBottom);
-  --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--PaddingLeft);
-  --pf-c-content--ul--ListStyle: var(--pf-global--ListStyle);
-  --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--nested--MarginLeft: var(---pf-c-content--ul--nested--MarginTop);
+  --pf-c-list--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-list--li--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-list--ul--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-list--ul--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-list--ul--MarginLeft: var(--pf-c-list--ul--PaddingLeft);
+  --pf-c-list--ul--ListStyle: var(--pf-global--ListStyle);
+  --pf-c-list--ul--nested--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-list--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
 
   &.pf-m-inline {
     display: flex;
@@ -33,19 +33,19 @@
   }
 
   &:not(.pf-m-grid):not(.pf-m-inline) {
-    padding-left: var(--pf-c-content--ul--PaddingLeft);
-    margin: var(--pf-c-content--ul--MarginTop) 0 var(--pf-c-content--MarginBottom) var(--pf-c-content--ul--MarginLeft);
-    list-style: var(--pf-c-content--ul--ListStyle);
+    padding-left: var(--pf-c-list--ul--PaddingLeft);
+    margin: var(--pf-c-list--ul--MarginTop) 0 var(--pf-c-list--MarginBottom) var(--pf-c-list--ul--MarginLeft);
+    list-style: var(--pf-c-list--ul--ListStyle);
 
     // Sub-element type selector used to maintain consistency with the content component's list styling
     ul {
-      --pf-c-content--ul--MarginTop: var(--pf-c-content--ul--nested--MarginTop);
-      --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+      --pf-c-list--ul--MarginTop: var(--pf-c-list--ul--nested--MarginTop);
+      --pf-c-list--ul--MarginLeft: var(--pf-c-list--ul--nested--MarginLeft);
     }
 
     // Sub-element type selector used to maintain consistency with the content component's list styling
     li + li {
-      margin-top: var(--pf-c-content--li--MarginTop);
+      margin-top: var(--pf-c-list--li--MarginTop);
     }
   }
 }
