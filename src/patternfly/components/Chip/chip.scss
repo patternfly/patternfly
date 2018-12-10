@@ -12,13 +12,11 @@
   // modified chip
   --pf-c-chip--m-overflow--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-chip--m-overflow--PaddingLeft: 0;
-  --pf-c-chip--m-overflow--BorderColor: transparent;
   --pf-c-chip--m-overflow--BorderWidth: 0;
 
   // modified chip button
   --pf-c-chip--m-overflow--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip--m-overflow--c-button--BorderWidth: 0;
-  --pf-c-chip--m-overflow--c-button--BorderColor: transparent;
   --pf-c-chip--m-overflow--c-button--PaddingX: var(--pf-global--spacer--sm);
 
   // active,focus,hover
@@ -61,14 +59,13 @@
     &::before {
       content: "";
 
-      --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--BorderColor);
       --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--BorderWidth);
     }
 
     .pf-c-button {
       padding-right: var(--pf-c-chip--m-overflow--c-button--PaddingX);
       padding-left: var(--pf-c-chip--m-overflow--c-button--PaddingX);
-      border: var(--pf-c-chip--m-overflow--c-button--BorderWidth) solid var(--pf-c-chip--m-overflow--c-button--BorderColor);
+      border-width: var(--pf-c-chip--m-overflow--c-button--BorderWidth);
 
       &::after {
         border-radius: var(--pf-c-chip--m-overflow--c-button--BorderRadius);
