@@ -8,6 +8,8 @@
   // Icon
   --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
   --pf-c-alert__icon__svg--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-alert__icon--Color: var(--pf-global--Color--100);
+  --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--lg);
 
   // Body
   --pf-c-alert__body--Padding: var(--pf-global--spacer--md);
@@ -16,12 +18,11 @@
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-alert__title--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-alert__title--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-alert__title--Color: var(--pf-global--Color--100);
 
   // Action
-  --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-alert__action--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-alert__action--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-alert__action--PaddingY: var(--pf-global--spacer--md);
+  --pf-c-alert__action--PaddingX: var(--pf-global--spacer--lg);
 
   // Success
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
@@ -50,56 +51,37 @@
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
 
-
   &.pf-m-success {
-    .pf-c-alert__icon {
-      color: var(--pf-c-alert--m-success__icon--Color);
-      background-color: var(--pf-c-alert--m-success__icon--BackgroundColor);
-    }
-
-    .pf-c-alert__title {
-      color: var(--pf-c-alert--m-success__title--Color);
-    }
+    --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);
+    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-success__icon--BackgroundColor);
+    --pf-c-alert__title--Color: var(--pf-c-alert--m-success__title--Color);
   }
 
   &.pf-m-danger {
-    .pf-c-alert__icon {
-      color: var(--pf-c-alert--m-danger__icon--Color);
-      background-color: var(--pf-c-alert--m-danger__icon--BackgroundColor);
-    }
-
-    .pf-c-alert__title {
-      color: var(--pf-c-alert--m-danger__title--Color);
-    }
+    --pf-c-alert__icon--Color: var(--pf-c-alert--m-danger__icon--Color);
+    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-danger__icon--BackgroundColor);
+    --pf-c-alert__title--Color: var(--pf-c-alert--m-danger__title--Color);
   }
 
   &.pf-m-warning {
-    .pf-c-alert__icon {
-      color: var(--pf-c-alert--m-warning__icon--Color);
-      background-color: var(--pf-c-alert--m-warning__icon--BackgroundColor);
-    }
-
-    .pf-c-alert__title {
-      color: var(--pf-c-alert--m-warning__title--Color);
-    }
+    --pf-c-alert__icon--Color: var(--pf-c-alert--m-warning__icon--Color);
+    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-warning__icon--BackgroundColor);
+    --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
   }
 
   &.pf-m-info {
-    .pf-c-alert__icon {
-      color: var(--pf-c-alert--m-info__icon--Color);
-      background-color: var(--pf-c-alert--m-info__icon--BackgroundColor);
-    }
-
-    .pf-c-alert__title {
-      color: var(--pf-c-alert--m-info__title--Color);
-    }
+    --pf-c-alert__icon--Color: var(--pf-c-alert--m-info__icon--Color);
+    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-info__icon--BackgroundColor);
+    --pf-c-alert__title--Color: var(--pf-c-alert--m-info__title--Color);
   }
 }
 
 .pf-c-alert__icon {
   display: flex;
   padding: var(--pf-c-alert__icon--Padding);
-  font-size: 24px; // this is here until we land on a fixed way to set sizes for icons
+  font-size: var(--pf-c-alert__icon--FontSize);
+  color: var(--pf-c-alert__icon--Color);
+  background-color: var(--pf-c-alert__icon--BackgroundColor);
 
   svg { // b/c the svg is generated it must break BEM and not receive a class.
     margin-top: var(--pf-c-alert__icon__svg--MarginTop);
@@ -115,9 +97,10 @@
   margin-top: var(--pf-c-alert__title--MarginTop);
   margin-bottom: var(--pf-c-alert__title--MarginBottom);
   font-size: var(--pf-c-alert__title--FontSize);
+  color: var(--pf-c-alert__title--Color);
 }
 
 .pf-c-alert__action {
-  padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
+  padding: var(--pf-c-alert__action--PaddingY) var(--pf-c-alert__action--PaddingX);
   white-space: nowrap;
 }

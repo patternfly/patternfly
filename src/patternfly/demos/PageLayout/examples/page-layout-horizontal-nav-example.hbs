@@ -1,13 +1,13 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--attribute='id="page-layout-horizontal-nav"'}}
+{{#> page page--id="page-layout-horizontal-nav"}}
   {{#> page-header}}
     {{#> page-header-brand}}
       {{#> page-template-header-brand-elements}}
       {{/page-template-header-brand-elements}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-      {{#> nav nav--horizontal="true" nav--attribute='id="nav-primary" aria-label="Primary Nav Default Example"'}}
+      {{#> nav nav--horizontal="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Horizontal Nav Example"')}}
         {{#> nav-list nav-list--type="horizontal"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}

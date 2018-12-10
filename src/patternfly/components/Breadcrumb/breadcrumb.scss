@@ -22,14 +22,6 @@
   // Heading
   --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
 
-  // ============================================================ //
-  // Modifiers
-  // ============================================================ //
-
-  // Modifier - current item
-  --pf-c-breadcrumb__link--m-current--Color: var(--pf-c-breadcrumb__item--Color);
-  --pf-c-breadcrumb__link--m-current--hover--Color: var(--pf-c-breadcrumb__item--Color);
-
   display: inline-flex;
 }
 
@@ -70,21 +62,21 @@
   line-height: inherit;
   color: var(--pf-c-breadcrumb__link--Color);
 
+  &,
   &:hover,
   &.pf-m-hover {
-    color: var(--pf-c-breadcrumb__link--hover--Color);
-    text-decoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
   }
 
   // current item
   &.pf-m-current {
-    color: var(--pf-c-breadcrumb__link--m-current--Color);
-    text-decoration: none;
     cursor: default;
 
+    &,
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-breadcrumb__link--m-current--hover--Color);
+      --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__item--Color);
+
       text-decoration: none;
     }
   }

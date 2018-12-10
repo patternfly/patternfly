@@ -3,6 +3,10 @@
   {{#> check-label check-label--attribute='for="radio1"'}}Radio 1{{/check-label}}
 {{/check}}
 {{#> check}}
+  {{#> check-label check-label--attribute='for="radio1-rev"'}}Radio 1 Reversed{{/check-label}}
+  {{#> check-input check-input--attribute='type="radio" id="radio1-rev" name="exampleRadios"'}}{{/check-input}}
+{{/check}}
+{{#> check}}
   {{#> check-input check-input--attribute='type="radio" id="radio2" name="exampleRadios" checked'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="radio2"'}}Radio 2 checked{{/check-label}}
 {{/check}}
@@ -10,6 +14,3 @@
   {{#> check-input check-input--attribute='type="radio" id="radio3" name="exampleRadios" aria-disabled="true" disabled'}}{{/check-input}}
   {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="radio3"'}}Radio 3 disabled{{/check-label}}
 {{/check}}
-
-
-    

@@ -6,11 +6,12 @@
   {{/if}}
   aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
   {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
-  {{> dropdown-toggle-text}}
-  {{#if dropdown--HasToggleIcon}}
-    {{> dropdown-toggle-icon}}
-  {{/if}}
   {{#if dropdown--HasKebabIcon}}
     {{> kebab-icon}}
+    {{else}}
+    {{> dropdown-toggle-text}}
+  {{/if}}
+  {{#if dropdown--HasToggleIcon}}
+    {{> dropdown-toggle-icon}}
   {{/if}}
 </button>

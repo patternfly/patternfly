@@ -33,7 +33,7 @@
   --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__subnav--MaxHeight: #{pf-size-prem(600px)};
   --pf-c-nav__subnav-item--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__subnav-item--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md)); // automate this value based on previously set values
+  --pf-c-nav__subnav-item--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md));
 
   // List toggle
   --pf-c-nav__list-toggle--PaddingX: var(--pf-global--spacer--sm);

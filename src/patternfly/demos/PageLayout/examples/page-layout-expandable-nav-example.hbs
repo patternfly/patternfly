@@ -1,7 +1,7 @@
 {{#> background-image}}
 {{/background-image}}
 
-{{#> page page--attribute='id="page-layout-expandable-nav"'}}
+{{#> page page--id="page-layout-expandable-nav"}}
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
@@ -12,14 +12,14 @@
     {{/page-template-header-tools-elements}}
   {{/page-header}}
 
-  {{#> page-sidebar}}  
-    {{#> nav nav--expandable="true" nav--attribute='id="primary-nav" aria-label="Primary Nav Expandable Example"'}}
+  {{#> page-sidebar}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Primary Nav Expandable Example"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="link1"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
             System Panel
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link1"'}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link1"'}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -55,10 +55,10 @@
           {{/nav-subnav}}
         {{/nav-item}}
         {{#> nav-item nav-item--expandable="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="link2"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link2"'}}
             Policy
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link2"'}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link2"'}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -74,10 +74,10 @@
           {{/nav-subnav}}
         {{/nav-item}}
         {{#> nav-item nav-item--expandable="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="link3"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
             Authentication
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="link3"'}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link3"'}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
