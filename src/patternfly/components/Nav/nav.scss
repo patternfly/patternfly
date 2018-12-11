@@ -93,11 +93,18 @@
     &.pf-m-focus,
     &:focus {
       --pf-c-nav__list-link--Color: var(--pf-c-nav__list-link--hover--Color);
-      --pf-c-nav__list-link--FontWeight: var(--pf-c-nav__list-link--m-current--FontWeight);
 
       &::after {
         background-color: var(--pf-c-nav__list-link--hover--Color);
       }
+    }
+
+    // States
+    &.pf-m-active,
+    &:active,
+    &.pf-m-focus,
+    &:focus {
+      --pf-c-nav__list-link--FontWeight: var(--pf-c-nav__list-link--m-current--FontWeight);
     }
 
     // After - border bottom treatment
@@ -171,8 +178,7 @@
     &:active,
     &.pf-m-current {
       --pf-c-nav__list-link--Color: var(--pf-c-nav__list-link--hover--Color);
-
-      background-color: var(--pf-c-nav__simple-list-link--hover--BackgroundColor);
+      --pf-c-nav__list-link--BackgroundColor: var(--pf-c-nav__simple-list-link--hover--BackgroundColor);
     }
 
     &.pf-m-focus,
@@ -224,7 +230,7 @@
     white-space: nowrap;
 
     @media screen and (min-width: $pf-global--breakpoint--lg) {
-      --pf-c-nav__list-link--PaddingY: var(--pf-c-nav__horizontal-list-link--lg--PaddingBottom);
+      padding-bottom: var(--pf-c-nav__horizontal-list-link--lg--PaddingBottom);
     }
 
     // States
