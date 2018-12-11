@@ -23,8 +23,9 @@
   --pf-c-nav__simple-list-link--hover--BackgroundColor: #{$pf-color-black-150};
 
   // Nav horizontal list link
+  --pf-c-nav__horizontal-list-link--PaddingY: var(--pf-global--spacer--lg);
+  --pf-c-nav__horizontal-list-link--PaddingX: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-nav__horizontal-list-link--lg--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-nav__horizontal-list-link--focus--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-nav__horizontal-list-link--Color: #{$pf-color-black-300};
   --pf-c-nav__horizontal-list-link--hover--Color: var(--pf-global--active-color--300);
@@ -218,20 +219,11 @@
 
 // List horizontal, masthead
 .pf-c-nav__horizontal-list {
-  .pf-c-nav__item {
-    margin-right: var(--pf-c-nav__horizontal-list-item--MarginRight);
-  }
-
   .pf-c-nav__link {
-    padding-top: var(--pf-c-nav__list-link--PaddingY);
-    padding-bottom: var(--pf-c-nav__list-link--PaddingY);
+    padding: var(--pf-c-nav__horizontal-list-link--PaddingY) var(--pf-c-nav__horizontal-list-link--PaddingY);
     font-weight: var(--pf-c-nav__list-link--FontWeight);
     color: var(--pf-c-nav__horizontal-list-link--Color);
     white-space: nowrap;
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      padding-bottom: var(--pf-c-nav__horizontal-list-link--lg--PaddingBottom);
-    }
 
     // States
     &.pf-m-hover,
@@ -271,6 +263,9 @@
 
 // List tertiary
 .pf-c-nav__tertiary-list {
+  padding-top: var(--pf-c-nav__list-link--PaddingY);
+  padding-bottom: var(--pf-c-nav__list-link--PaddingY);
+
   .pf-c-nav__item {
     margin-right: var(--pf-c-nav__horizontal-list-item--MarginRight);
   }
