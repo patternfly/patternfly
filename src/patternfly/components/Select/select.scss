@@ -38,7 +38,7 @@
   --pf-c-select-toggle__wrapper--c-chip--c-button--PaddingBottom: var(--pf-global--spacer--xs);
 
   // Select input for typeahead
-  --pf-c-select-toggle__typeahead--FlexBasis: 10em; // TODO Variables
+  --pf-c-select-toggle__typeahead--FlexBasis: 10em;
   --pf-c-select-toggle__typeahead--BackgroundColor: transparent;
   --pf-c-select-toggle__typeahead--BorderTop: none;
   --pf-c-select-toggle__typeahead--BorderRight: none;
@@ -84,6 +84,10 @@
   --pf-c-select__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-select__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
+  // Menu group
+  // add a little space if it's not the first group because the first one also has the menu padding
+  --pf-c-select__menu-group--not-first--PaddingTop: var(--pf-global--spacer--sm);
+
   // Menu section heading
   // Paddings are set to always line up with the other menu items
   --pf-c-select__menu-group-title--PaddingTop: var(--pf-c-select__menu-item--PaddingTop);
@@ -96,8 +100,6 @@
 
   position: relative;
   display: inline-block;
-
-  // min-width: var(--pf-c-select__toggle--MinWidth);
   max-width: 100%;
 }
 
@@ -263,8 +265,6 @@
 .pf-c-select__menu-item {
   display: block;
   width: 100%;
-
-  // TODO: x y or trbl?
   padding: var(--pf-c-select__menu-item--PaddingTop) var(--pf-c-select__menu-item--PaddingRight) var(--pf-c-select__menu-item--PaddingBottom) var(--pf-c-select__menu-item--PaddingLeft);
   font-size: var(--pf-c-select__menu-item--FontSize);
   font-weight: var(--pf-c-select__menu-item--FontWeight);
@@ -302,11 +302,11 @@
 }
 
 .pf-c-select__menu-group:not(:first-of-type) {
-  padding-top: 8px; // TODO what is this?
+  padding-top: var(--pf-c-select__menu-group--not-first--PaddingTop);
 }
 
 .pf-c-select__menu-group-title {
-  padding-top: var(--pf-c-select__menu-group-title--PaddingTop); // TODO: x y or trbl?
+  padding-top: var(--pf-c-select__menu-group-title--PaddingTop);
   padding-right: var(--pf-c-select__menu-group-title--PaddingRight);
   padding-bottom: var(--pf-c-select__menu-group-title--PaddingBottom);
   padding-left: var(--pf-c-select__menu-group-title--PaddingLeft);
