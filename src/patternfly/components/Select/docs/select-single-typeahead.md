@@ -1,4 +1,4 @@
-The Single Select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and Aria tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.
+The Single Select Typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
 
 ## Accessibility
 
@@ -17,7 +17,10 @@ The Single Select should be used when the user is selecting an option from a lis
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates a custom toggle. |
+| `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
 | `.pf-c-select-toggle__wrapper` | `<div>` |  Initiates a custom select toggle wrapper. |
+| `.pf-c-select-toggle__typeahead` | `<input class="pf-c-form-control">` |  Initiates the input field for typeahead. |
+| `.pf-c-select-toggle__clear` | `<button class="pf-m-plain">` |  Initiates a clear button in the toggle. |
 | `.pf-c-select-toggle__arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<ul>` |  Initiates the custom select dropdown menu. |
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |

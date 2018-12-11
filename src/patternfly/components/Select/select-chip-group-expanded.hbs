@@ -1,39 +1,35 @@
-{{!-- {{#> chip-group}} --}}
-{{!-- CHIP GROUP may be needed for the spacing it gives, or maybe we can do away with it because it groups the chips so that you can't wrap the input with them --}}
-{{!-- maybe this is a place where i have to copy the chip group styles to the select chip group? --}}
   {{#> chip}}
-    {{#> chip-text chip-text--attribute='id="chip_one"'}}
+    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_one"')}}
       Arkansas
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_chip_one ' id '-chip_one" aria-label="Remove" id="remove_chip_one"')}}
     {{/button}}
   {{/chip}}
   {{#> chip}}
-    {{#> chip-text chip-text--attribute='id="chip_two"'}}
+    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_two"')}}
       Massachusetts
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_two chip_two" aria-label="Remove" id="remove_chip_two"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_two ' id '-chip_two" aria-label="Remove" id="remove_' id '_chip_two"')}}
     {{/button}}
   {{/chip}}
   {{#> chip}}
-    {{#> chip-text chip-text--attribute='id="chip_three"'}}
+    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_three"')}}
       New Mexico
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_three chip_three" aria-label="Remove" id="remove_chip_three"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_three ' id '-chip_three" aria-label="Remove" id="remove_' id '_chip_three"')}}
     {{/button}}
   {{/chip}}
   {{#> chip}}
-    {{#> chip-text chip-text--attribute='id="chip_four"'}}
+    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_four"')}}
       Ohio
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_four chip_four" aria-label="Remove" id="remove_chip_four"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_four ' id '-chip_four" aria-label="Remove" id="remove_' id '_chip_four"')}}
     {{/button}}
   {{/chip}}
   {{#> chip}}
-    {{#> chip-text chip-text--attribute='id="chip_five"'}}
+    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_five"')}}
       Washington
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute='aria-labelledby="remove_chip_five chip_five" aria-label="Remove" id="remove_chip_five"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_five ' id '-chip_five" aria-label="Remove" id="remove_' id '_chip_five"')}}
     {{/button}}
   {{/chip}}
-{{!-- {{/chip-group}} --}}

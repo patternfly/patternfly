@@ -9,26 +9,20 @@
     <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
   {{/if}}
       
+  {{!-- create the toggle and all its components --}}
   {{> select-toggle}}
 
-  {{#if select--IsMultiSelect}}
-    {{#if select--IsTypeahead}}
-      {{> select-single-typeahead}}
-    {{else}}
-      {{> select-multi}}
-    {{/if}}
+{{!-- create the dropdown menu part --}}
+  {{#if select--IsTypeahead}}
+    {{> select-typeahead}}
   {{else if select--IsCheckboxSelect}}
     {{#if select--HasGroups}}
-      {{>select-checkbox-groups}}
+      {{> select-checkbox-groups}}
     {{else}}
       {{> select-checkbox}}
     {{/if}}
   {{else}}
-    {{#if select--IsTypeahead}}
-      {{> select-single-typeahead}}
-    {{else}}
-      {{> select-single}}
-    {{/if}}
+    {{> select-single}}
   {{/if}}
 
 </div>

@@ -1,19 +1,4 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+There are 4 variants of the custom select: single select, single select with typeahead, multiple select with typeahead, and a multiple checkbox select. See the examples for more details about each variation.
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
-## Accessibility
-
-| Attribute | Applied To | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-c-select` |  accessibility notes. |
-
-
-## Usage
-
-| Class | Applied To | Outcome |
-| -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
