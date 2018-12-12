@@ -329,10 +329,10 @@
   .pf-c-table {
     margin-bottom: 0;
 
-    td,
-    th:not(.pf-c-table__sort) {
-      border: none;
-    }
+    // td,
+    // th:not(.pf-c-table__sort) {
+    //   border: none;
+    // }
 
     tr:nth-child(even) {
       background-color: transparent;

@@ -1,0 +1,320 @@
+@import "../../patternfly-utilities";
+
+/* stylelint-disable */
+@mixin pf-mobile-layout {
+  .pf-m-grid.pf-c-table { @content; }
+
+  .pf-m-grid-md.pf-c-table {
+    @media screen and (max-width: $pf-global--breakpoint--md) {
+      @content;
+    }
+  }
+
+  .pf-m-grid-lg.pf-c-table {
+    @media screen and (max-width: $pf-global--breakpoint--lg) {
+      @content;
+    }
+  }
+}
+
+$pf-c-table-standard-row: "tr:not(.pf-c-table__expandable-row)";
+$pf-c-table-standard-td: "td:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)";
+$pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)";
+$pf-c-table-xs-breakpoint: 380px;
+
+.pf-c-table {
+  // ============================================================ //
+  // Start non-conformant variables
+  //
+  // these variables do not conform to guidelines as styling targets individual elements
+  // this is purposeful and necessary to avoid adding selectors to each td/th
+  // ============================================================ //
+
+  // Responsive vars
+  // ==================================================================
+
+  // Body
+  --pf-c-table-tbody--responsive--MarginTop:                  var(--pf-global--spacer--sm);
+
+  // Row
+  --pf-c-table-tr--responsive--GridColumnGap:                 var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--PaddingY:                      var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingX:                      var(--pf-global--spacer--xl);
+
+  // Setting these individually in order to update them individually
+  --pf-c-table-tr--responsive--PaddingTop:                    var(--pf-c-table-tr--responsive--PaddingY);
+  --pf-c-table-tr--responsive--PaddingRight:                  var(--pf-c-table-tr--responsive--PaddingX);
+  --pf-c-table-tr--responsive--PaddingBottom:                 var(--pf-c-table-tr--responsive--PaddingY);
+  --pf-c-table-tr--responsive--PaddingLeft:                   var(--pf-c-table-tr--responsive--PaddingX);
+  --pf-c-table-tr--responsive--MarginTop:                     var(--pf-global--spacer--sm);
+  --pf-c-table-tr--responsive--nested-table--PaddingY:        var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingX:        var(--pf-global--spacer--2xl);
+
+  // Td
+  --pf-c-table-td--responsive--PaddingY:                      var(--pf-global--spacer--sm);
+  --pf-c-table-td--responsive--GridColumnGap:                 var(--pf-global--spacer--md);
+  --pf-c-table-cell--responsive--PaddingTop:                  var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingRight:                0;
+  --pf-c-table-cell--responsive--PaddingBottom:               var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingLeft:                 0;
+
+  // Expandable row content
+  --pf-c-table__expandable-row-content--responsive--PaddingX: var(--pf-global--spacer--xl);
+
+  // Table check
+  --pf-c-table__check--responsive--MarginLeft:                var(--pf-global--spacer--sm);
+  --pf-c-table__check--responsive--MarginTop:                 #{pf-size-prem(11px)};
+
+  // Table action
+  --pf-c-table__action--responsive--MarginLeft:               var(--pf-global--spacer--xl);
+
+  // End responsive vars
+  // ==================================================================
+}
+
+// Check table cell
+@include pf-mobile-layout {
+  display: grid;
+  background-color: transparent;
+  border: none;
+
+  // Thead
+  thead {
+    display: none;
+  }
+
+  // Tbody
+  tbody {
+    display: block;
+
+    // add top margin to siblings
+    & + tbody {
+      margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
+    }
+  }
+
+  // Table row
+  // using background color on tr as they are presented as block level elements for responsive view
+  tr {
+    background-color: var(--pf-c-table--BackgroundColor);
+  }
+
+  // Reset td padding
+  tr > *,
+  tr > *:first-child,
+  tr > *:last-child {
+    padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingRight) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingLeft);
+  }
+
+  // Standard table row (non-expandable)
+  // exclude expandable rows
+  tr:not(.pf-c-table__expandable-row) {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    // set subsequent auto column width to max-content
+    grid-auto-columns: max-content;
+    grid-column-gap: var(--pf-c-table-tr--responsive--GridColumnGap);
+
+    // set base variables to reset later
+    padding: var(--pf-c-table-tr--responsive--PaddingTop) var(--pf-c-table-tr--responsive--PaddingRight) var(--pf-c-table-tr--responsive--PaddingBottom) var(--pf-c-table-tr--responsive--PaddingLeft);
+
+    // nested tables, remove padding-top for subsequent tr
+    & + tr:not(.pf-c-table__expandable-row) {
+      --pf-c-table-tr--responsive--PaddingTop: 0;
+    }
+  }
+
+  // Standard td, in standard row (non-expandable)
+  // exclude specifically styled tds, as they are placed explicitly within grid
+  // :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)
+  tr:not(.pf-c-table__expandable-row) > :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort) {
+    // responsive layout, set td to two column grid
+    display: grid;
+    grid-column: 1;
+    grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
+    align-items: start;
+
+    // @mobile, breakpoint small
+    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+      grid-template-columns: 1fr 1.5fr;
+      grid-column: 1;
+    }
+
+    // set contents of td to start at column two of td grid
+    * {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+        grid-column: 2;
+      }
+    }
+
+    // @mobile only
+    // set contents of ::before pseudo element to start at column one of td grid
+    &::before {
+      font-weight: bold;
+      text-align: left;
+      content: attr(data-label);
+
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+        font-weight: normal;
+        // set ::before to span all rows, up to 100
+        grid-row: 1;
+      }
+    }
+  }
+
+
+  // nested tables
+  .pf-c-table {
+    --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--nested-table--PaddingY);
+    --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--nested-table--PaddingX);
+    --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table-tr--responsive--nested-table--PaddingY);
+    --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--nested-table--PaddingX);
+
+    border: 0;
+  }
+
+  .pf-c-table__compound-expansion-toggle {
+    // Compound expansion toggle
+    // reset compound expansion toggle::before
+    &::before {
+      position: static;
+      border: 0;
+    }
+
+    // reset compound expansion toggle::after
+    &::after {
+      top: auto;
+      right: 0;
+      left: 0;
+    }
+
+    // add bottom border to expansion toggle::after
+    &.pf-m-active::after {
+      border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
+    }
+
+    // reset button padding
+    .pf-c-button {
+      padding: 0;
+    }
+  }
+
+  // COMPOUND EXPANSION RESPONSIVE
+  // Tbody
+  tbody {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      width: var(--pf-c-table__expandable-row--before--Width);
+      content: "";
+      background-color: transparent;
+    }
+
+    &.pf-m-expanded::before {
+      background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
+    }
+  }
+  // COMPOUND EXPANSION RESPONSIVE END
+
+
+  // Expandable row
+  .pf-c-table__expandable-row {
+    --pf-c-table-cell--responsive--PaddingTop: 0;
+    --pf-c-table-cell--responsive--PaddingRight: 0;
+    --pf-c-table-cell--responsive--PaddingBottom: 0;
+    --pf-c-table-cell--responsive--PaddingLeft: 0;
+    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
+    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
+
+    display: block;
+    border-top: var(--pf-c-table--BorderWidth) solid transparent;
+    border-bottom: none;
+    box-shadow: none;
+
+    // cells
+    > * {
+      position: static;
+      display: block;
+    }
+
+    // Modifier - Expanded tr
+    &.pf-m-expanded {
+      border-top-color: var(--pf-c-table--BorderColor);
+    }
+
+    td:first-child::before {
+      // Border treatment
+      display: none;
+    }
+  }
+
+  // Set defaults
+  .pf-c-table__toggle,
+  .pf-c-table__check,
+  .pf-c-table__action {
+    --pf-c-table-cell--responsive--PaddingTop: 0;
+    --pf-c-table-cell--responsive--PaddingRight: 0;
+    --pf-c-table-cell--responsive--PaddingBottom: 0;
+    --pf-c-table-cell--responsive--PaddingLeft: 0;
+
+    width: auto;
+  }
+
+  .pf-c-table__toggle {
+    grid-row-start: 20;
+    grid-column: -1;
+    justify-self: end;
+    padding-right: 0;
+  }
+
+  // Check table cell
+  .pf-c-table__check {
+    margin-top: var(--pf-c-table__check--responsive--MarginTop);
+    margin-left: var(--pf-c-table__check--responsive--MarginLeft);
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    // if action is present, add margin left to accommodate checkbox
+    & ~ .pf-c-table__action {
+      margin-left: var(--pf-c-table__action--responsive--MarginLeft);
+    }
+  }
+
+  // Action cell
+  .pf-c-table__action {
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    // @smallest breakpoint
+    @media screen and (max-width: $pf-global--breakpoint--sm) {
+      grid-row-start: 1;
+      grid-column-start: 2;
+      margin-left: 0;
+    }
+  }
+
+  // Toggles
+  .pf-c-table__toggle {
+    .pf-c-button > * {
+      transform: rotate(0deg);
+    }
+
+    .pf-c-button.pf-m-expanded > * {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Fit content
+  .pf-m-fit-content {
+    width: auto;
+    white-space: normal;
+  }
+}
+
+/* stylelint-enable */

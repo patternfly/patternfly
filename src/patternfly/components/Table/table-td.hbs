@@ -1,4 +1,10 @@
-<td{{#if table-td--toggle}} class="pf-c-table__toggle"{{else if table-td--check}} class="pf-c-table__check"{{else if table-td--action}} class="pf-c-table__action"{{else if table-td--modifier}} class="{{table-td--modifier}}"{{/if}}
+<td{{#if table-td--toggle}} class="pf-c-table__toggle"
+    {{else if table-td--check}} class="pf-c-table__check"
+    {{else if table-td--action}} class="pf-c-table__action"
+    {{else if table-td--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle pf-m-button-cell {{table-td--modifier}}"
+    {{else if table-td--action}} class="pf-c-table__action"
+    {{else if table-td--modifier}} class="{{table-td--modifier}}"
+    {{/if}}
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
   {{/if}}
