@@ -63,6 +63,7 @@
   --pf-c-about-modal-box__header--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
   --pf-c-about-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-about-modal-box__header--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
+  --pf-c-about-modal-box__header--PaddingTop: var(--pf-c-about-modal-box--PaddingTop);
 
   // Strapline
   --pf-c-about-modal-box__header-strapline--PaddingBottom: var(--pf-global--spacer--md);
@@ -74,6 +75,8 @@
   --pf-c-about-modal-box__content--MarginRight: var(--pf-c-about-modal-box--PaddingRight);
   --pf-c-about-modal-box__content--MarginBottom: var(--pf-c-about-modal-box--PaddingBottom);
   --pf-c-about-modal-box__content--MarginLeft: var(--pf-c-about-modal-box--PaddingLeft);
+  --pf-c-about-modal-box__content--PaddingBottom: var(--pf-c-about-modal-box--PaddingBottom);
+  --pf-c-about-modal-box__content--PaddingTop: var(--pf-c-about-modal-box--PaddingTop);
 
   // This is the min allowable height of the content
   --pf-c-about-modal-box__content--MinHeight: calc(1rem * 4 * var(--pf-global--LineHeight--md));

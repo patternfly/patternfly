@@ -80,7 +80,7 @@
   .pf-c-form__group {
     // Handle additional items within __group without having an additional wrapper or selector
     > *:not(.pf-c-form__label):not(.pf-c-input-group):not(.pf-c-form-control):not(.pf-c-form__helper-text):not(.pf-c-form__legend):not(.pf-c-form__action-group):not(.pf-c-check):not(.pf-c-form__horizontal-group):not([class*="pf-l-"]) {
-      margin-left: var(--pf-c-form--group--MarginLeft);
+      margin-left: var(--pf-c-form__group--MarginLeft);
     }
 
     .pf-c-form__label {
