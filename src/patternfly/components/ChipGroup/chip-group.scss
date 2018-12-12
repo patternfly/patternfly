@@ -22,11 +22,10 @@
   flex-wrap: wrap;
   align-items: center;
   padding: var(--pf-c-chip-group--PaddingY) var(--pf-c-chip-group--PaddingX);
-  background-color: var(--pf-c-chip-group--BackgroundColor);
   border-radius: var(--pf-c-chip-group--BorderRadius);
 
   &.pf-m-toolbar {
-    --pf-c-chip-group--BackgroundColor: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
+    background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
   }
 
   > * {

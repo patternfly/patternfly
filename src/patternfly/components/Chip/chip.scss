@@ -57,17 +57,17 @@
 
     // Remove Chip border
     &::before {
-      content: "";
-
       --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--BorderWidth);
+
+      content: "";
     }
 
     .pf-c-button {
       padding-right: var(--pf-c-chip--m-overflow--c-button--PaddingX);
       padding-left: var(--pf-c-chip--m-overflow--c-button--PaddingX);
-      border-width: var(--pf-c-chip--m-overflow--c-button--BorderWidth);
 
       &::after {
+        border: var(--pf-c-chip--m-overflow--c-button--BorderWidth) solid var(--pf-c-chip--m-overflow--c-button--active--BorderColor);
         border-radius: var(--pf-c-chip--m-overflow--c-button--BorderRadius);
       }
 
@@ -79,7 +79,7 @@
       &:focus {
         /* stylelint-disable-next-line */
         &::after {
-          border: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth) solid var(--pf-c-chip--m-overflow--c-button--active--BorderColor);
+          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth);
         }
       }
     }
