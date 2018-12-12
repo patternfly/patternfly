@@ -155,6 +155,7 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow:        var(--pf-global--BoxShadow--md);
+  --pf-c-table__expandable-row--m-expanded--BoxShadow--bottom:var(--pf-global--BoxShadow--md-bottom);
 
   // Modifier - Sort descending
   --pf-c-table__sort--sorted--Color:                          var(--pf-global--active-color--100);
@@ -277,7 +278,7 @@ $pf-c-table-xs-breakpoint: 380px;
     // reset borders to default values
     border-bottom-color: var(--pf-c-table--BorderColor);
     border-bottom-width: var(--pf-c-table--BorderWidth);
-    box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
+    box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow--bottom);
 
     td:first-child::before {
       background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
