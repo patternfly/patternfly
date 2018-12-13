@@ -4,16 +4,13 @@
   --pf-c-switch--Height: calc(#{var(--pf-global--FontSize--md)} * #{var(--pf-global--LineHeight--md)});
   --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} * #{var(--pf-global--golden-ratio)});
   --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
-
-  // Switch Input Checked Toggle
-  --pf-c-switch__toggle--checked--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-switch__toggle--checked--before--Transform: translateX(calc(#{var(--pf-c-switch--Width)} - #{var(--pf-c-switch__toggle--before--Width)} - 2 * #{var(--pf-c-switch__toggle--Padding)}));
-
-  // Switch Input
-  --pf-c-switch__toggle--disabled--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
-  --pf-c-switch__toggle--disabled--before--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-
-  // Switch Toggle
+  --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-switch__input--checked__toggle--before--Transform: translateX(calc(#{var(--pf-c-switch--Width)} - #{var(--pf-c-switch__toggle--before--Width)} - 2 * #{var(--pf-c-switch__toggle--Padding)}));
+  --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--dark-100);
+  --pf-c-switch__input--not-checked__label--Color: var(--pf-global--disabled-color--100);
+  --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
+  --pf-c-switch__input--disabled__toggle--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+  --pf-c-switch__input--disabled__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch--Height);
   --pf-c-switch__toggle--Padding: calc(#{var(--pf-c-switch--Height)} / 2 * (1 - 1 / #{var(--pf-global--golden-ratio)}));
   --pf-c-switch__toggle--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
@@ -22,15 +19,11 @@
   --pf-c-switch__toggle--before--BorderRadius: var(--pf-c-switch__toggle--before--Width);
   --pf-c-switch__toggle--before--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-
-  // Switch Label
   --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
   --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-switch__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-switch__label--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-switch__label--checked--Color: var(--pf-global--Color--dark-100);
-  --pf-c-switch__label--not-checked--Color: var(--pf-global--disabled-color--100);
 
   position: relative;
   display: inline-block;
@@ -45,19 +38,20 @@
     opacity: 0;
 
     ~ .pf-c-switch__label {
-      color: var(--pf-c-switch__label--notChecked--Color);
+      color: var(--pf-c-switch__input--not-checked__label--Color);
     }
 
     &:checked {
       ~ .pf-c-switch__label {
-        color: var(--pf-c-switch__label--checked--Color);
+        color: var(--pf-c-switch__input--checked__label--Color);
       }
 
       ~ .pf-c-switch__toggle {
-        background-color: var(--pf-c-switch__toggle--checked--BackgroundColor);
+        background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
+
         /* stylelint-disable-next-line */
         &::before {
-          transform: var(--pf-c-switch__toggle--checked--before--Transform);
+          transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
         }
       }
     }
@@ -66,17 +60,16 @@
       cursor: not-allowed;
 
       ~ .pf-c-switch__label {
-        color: var(--pf-c-switch__label--notChecked--Color);
+        color: var(--pf-c-switch__input--disabled__label--Color);
         cursor: not-allowed;
       }
 
       ~ .pf-c-switch__toggle {
         cursor: not-allowed;
-        background-color: var(--pf-c-switch__toggle--disabled--BackgroundColor);
+        background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
         /* stylelint-disable-next-line */
         &::before {
-          cursor: not-allowed;
-          background-color: var(--pf-c-switch__toggle--disabled--before--BackgroundColor);
+          background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
         }
       }
     }
