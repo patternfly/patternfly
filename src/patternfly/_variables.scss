@@ -150,9 +150,10 @@
   // Line height
   --pf-global--LineHeight--sm: #{$pf-global--LineHeight--sm};
   --pf-global--LineHeight--md: #{$pf-global--LineHeight--md};
+  --pf-global--LineHeight--lg: #{$pf-global--LineHeight--lg};
 
   // List
-  --pf-global-ListStyle: #{$pf-global--ListStyle};
+  --pf-global--ListStyle: #{$pf-global--ListStyle};
   --pf-global--Transition: #{$pf-global--Transition};
   --pf-global--TimingFunction: #{$pf-global--TimingFunction};
   --pf-global--TransitionDuration: #{$pf-global--TransitionDuration};
