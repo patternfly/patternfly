@@ -14,6 +14,8 @@
     {{> dropdown-multi-select}}
   {{else if dropdown--IsActionMenu}}
     {{> dropdown-menu}}
+  {{else if dropdown--IsSearch}}
+    {{> dropdown-menu-search}}    
   {{else}}
     {{> dropdown-basic}}
   {{/if}}

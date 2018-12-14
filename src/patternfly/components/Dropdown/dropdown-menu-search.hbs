@@ -1,0 +1,21 @@
+<ul class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
+  aria-labelledby="{{id}}-button"
+  {{#unless dropdown--IsExpanded}}hidden{{/unless}}
+  {{#if dropdown-menu--attribute}}
+	  {{{dropdown-menu--attribute}}}
+  {{/if}}>
+  <li>
+    {{#> input-group}}
+      {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
+      {{/form-control}}
+      {{#> button button--modifier="pf-m-tertiary" button--HasSearchIcon="true" button--attribute='aria-label="search button for search input"'}}
+      {{/button}}
+    {{/input-group}}
+  </li>
+  <li><a class="pf-c-dropdown__menu-item" href="#">Link</a></li>
+  <li><button class="pf-c-dropdown__menu-item">Action</button></li>
+  <li><a class="pf-c-dropdown__menu-item pf-m-disabled" aria-disabled="true" tabindex="-1" href="#">Disabled Link</a></li>
+  <li><button class="pf-c-dropdown__menu-item" disabled>Disabled Action</button></li>
+  <li class="pf-c-dropdown__separator" role="separator"></li>
+  <li><a class="pf-c-dropdown__menu-item" href="#">Separated Link</a></li>
+</ul>

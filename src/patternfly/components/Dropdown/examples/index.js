@@ -14,6 +14,8 @@ import DropdownKebabAlignRightRaw from '!raw!./dropdown-kebab-align-right-exampl
 import DropdownAlignRightRaw from '!raw!./dropdown-align-right-example.hbs';
 import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
+import DropdownSearchExpandedRaw from '!raw!./dropdown-search-expanded-example.hbs';
+import DropdownSearchExpanded from './dropdown-search-expanded-example.hbs';
 import DropdownBasicExpanded from './dropdown-basic-expanded-example.hbs';
 import DropdownSelectExpanded from './dropdown-select-expanded-example.hbs';
 import DropdownSelectExpandedSelected from './dropdown-select-expanded-selected-example.hbs';
@@ -35,6 +37,7 @@ export const Docs = docs;
 
 export default () => {
   const dropdownExpanded = DropdownExpanded();
+  const dropdownSearchExpanded = DropdownSearchExpanded();
   const dropdownBasicExpanded = DropdownBasicExpanded();
   const dropdownSelectExpanded = DropdownSelectExpanded();
   const dropdownSelectExpandedSelected = DropdownSelectExpandedSelected();
@@ -63,21 +66,24 @@ export default () => {
       <Example heading="Dropdown (collapsed)" handlebars={DropdownCollapsedRaw}>
         {dropdownCollapsed}
       </Example>
-      <Example className="is-expanded-dropdown" 
-        heading="Dropdown Select (expanded)" 
+      <Example className="is-expanded-dropdown" heading="Dropdown with links and actions and search (expanded)" handlebars={DropdownSearchExpandedRaw}>
+        {dropdownSearchExpanded}
+      </Example>
+      <Example className="is-expanded-dropdown"
+        heading="Dropdown Select (expanded)"
         handlebars={DropdownSelectExpandedRaw}
         docs={DropdownSelectDoc}>
         {dropdownSelectExpanded}
       </Example>
-      <Example className="is-expanded-dropdown" 
-        heading="Dropdown Select (expanded, first item selected)" 
+      <Example className="is-expanded-dropdown"
+        heading="Dropdown Select (expanded, first item selected)"
         handlebars={DropdownSelectExpandedSelectedRaw}
         docs={DropdownSelectDoc}>
         {dropdownSelectExpandedSelected}
       </Example>
-      <Example 
-        heading="Dropdown Select (collapsed)" 
-        handlebars={DropdownSelectRaw} 
+      <Example
+        heading="Dropdown Select (collapsed)"
+        handlebars={DropdownSelectRaw}
         docs={DropdownSelectDoc}>
         {dropdownSelect}
       </Example>
