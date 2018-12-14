@@ -66,7 +66,7 @@
 .pf-c-tooltip__arrow {
   position: absolute;
   width: var(--pf-c-tooltip__arrow--Width);
-  height: var(--pf-c-tooltip__arrow--Width);
+  height: var(--pf-c-tooltip__arrow--Width); // width and height should be the same, so using a single variable for both
   pointer-events: none;
   background-color: var(--pf-c-tooltip__content--BackgroundColor);
   box-shadow: var(--pf-c-tooltip--BoxShadow);
