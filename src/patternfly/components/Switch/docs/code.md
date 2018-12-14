@@ -11,6 +11,8 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="..."` | `.pf-c-switch__input` |  Indicates the action triggered by the switch. **required**  |
+| `for` | `<label>` | Each `<label>` must have a `for` attribute that matches its input id. **Required** |
+| `id` | `<input type="checkbox">` | Each `<input>` must have an `id` attribute that matches its label's `for` value. **Required** |
 | `checked` | `.pf-c-switch__input` |  Indicates that the input is checked |
 | `disabled` | `.pf-c-switch__input` |  Indicates that the input is disabled |
 
