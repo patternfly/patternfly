@@ -92,6 +92,7 @@
 .pf-c-tabs__list {
   position: relative;
   display: flex;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 
