@@ -13,4 +13,5 @@
 | `.pf-c-empty-state__icon` | `<i>` |  Creates the empty state icon. |
 | `.pf-c-title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Creates the empty state title. **Required** |
 | `.pf-c-empty-state__body` | `<p>` |  Creates the empty state body content. |
-| `.pf-c-empty-state__action` | `<div>` |  Creates the empty state action section. |
+| `.pf-c-button.pf-m-primary` | `<button>` |  Creates the primary action button. |
+| `.pf-c-empty-state__secondary` | `<div>` |  Creates area for secondary actions. |
