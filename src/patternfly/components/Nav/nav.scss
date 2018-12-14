@@ -201,7 +201,7 @@
 }
 
 // Set width when nav is child of sidebar to prevent collapsing
-.pf-l-page__sidebar .pf-c-nav {
+.pf-c-page__sidebar .pf-c-nav {
   @media screen and (min-width: $pf-global--breakpoint--md) {
     width: var(--pf-c-nav--Width);
   }
