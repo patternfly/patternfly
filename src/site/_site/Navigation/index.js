@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import './styles.scss';
 
 const Navigation = ({ links, isHorizontal = false }) => {
@@ -14,10 +14,7 @@ const Navigation = ({ links, isHorizontal = false }) => {
         return null;
       }
       return (
-        <li
-          className={`Navigation__item ${className}`}
-          key={`navigation-${path}`}
-        >
+        <li className={`Navigation__item ${className}`} key={`navigation-${path}`}>
           <Link className={`Navigation_link ${className}`} to={path}>
             {text}
           </Link>
