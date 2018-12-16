@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@siteComponents/Layout';
+import FullPageExampleLayout from '@siteComponents/FullPageExampleLayout';
 import './styles.scss';
 
 export default class Documentation extends React.Component {
@@ -28,10 +29,12 @@ export default class Documentation extends React.Component {
         </div>
       </Layout>
     ) : (
-      <div className={className}>
-        <h1 className="pf-u-sr-only">{this.props.heading} full example</h1>
-        {children}
-      </div>
+      <FullPageExampleLayout>
+        <div className={className}>
+          <h1 className="pf-u-sr-only">{this.props.heading} full example</h1>
+          {children}
+        </div>
+      </FullPageExampleLayout>
     );
   }
 }
