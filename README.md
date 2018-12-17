@@ -29,6 +29,11 @@ To setup the PatternFly Next development environment:
 
 After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
 
+## Set PatternFly Next IP Address
+
+If Gatsby needs to run on local IP for testing on other machines or devices use `npm run dev:expose` which sets host to `0.0.0.0`.
+If you want to set host to a specific IP address for example `172.17.12.1` run `npm run dev -H 172.17.12.1`.
+
 ### Create a new component
 
 - run `pf generate component <name>`
