@@ -81,23 +81,6 @@
   // This is the min allowable height of the content
   --pf-c-about-modal-box__content--MinHeight: calc(1rem * 4 * var(--pf-global--LineHeight--md));
 
-  // Logo
-  // Set default padding right, bottom, left to shared values
-  --pf-c-about-modal-box__logo--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
-  --pf-c-about-modal-box__logo--PaddingBottom: var(--pf-c-about-modal-box--PaddingBottom);
-  --pf-c-about-modal-box__logo--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
-
-  // Logo image
-  --pf-c-about-modal-box__logo-image--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__logo-image--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__logo-image--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-about-modal-box__logo-image--PaddingLeft: var(--pf-global--spacer--md);
-
-  // height and width determined manually by visual design
-  --pf-c-about-modal-box__logo-image--Width: #{pf-size-prem(236px)};
-  --pf-c-about-modal-box__logo-image--Height: #{pf-size-prem(110px)};
-  --pf-c-about-modal-box__logo-image--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-
   // Button close
   --pf-c-about-modal-box__button-close--Color: var(--pf-global--Color--100);
   --pf-c-about-modal-box__button-close--hover--Color: var(--pf-global--Color--100);
