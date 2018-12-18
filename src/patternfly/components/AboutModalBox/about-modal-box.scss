@@ -9,7 +9,7 @@
   --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000};
 
   // This is a special one-off glow for the about modal
-  --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(256, 256, 256, .05);
+  --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(255, 255, 255, .05);
   --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
 
   // Width and height values are determined by design
@@ -128,15 +128,11 @@
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  /* stylelint-disable */
-  scrollbar-color: #c10;
   background-color: var(--pf-c-about-modal-box--BackgroundColor); // Because this component is always dark, set the background color
   box-shadow: var(--pf-c-about-modal-box--BoxShadow);
-  grid-template-columns: var(--pf-c-about-modal-box--grid-template-columns);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-about-modal-box--grid-template-columns: var(--pf-c-about-modal-box--lg--grid-template-columns);
-
+    grid-template-columns: var(--pf-c-about-modal-box--sm--grid-template-columns);
     grid-template-areas:
       "brand          hero"
       "header         hero"
