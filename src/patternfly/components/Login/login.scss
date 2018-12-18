@@ -212,7 +212,7 @@
 .pf-c-login__main-footer-link-text {
   display: none;
 
-  @media (min-width: $pf-global--breakpoint--sm) {
+  @media (min-width: $pf-global--breakpoint--md) {
     display: initial;
   }
 }
