@@ -17,12 +17,9 @@
   }
 }
 
-$pf-c-table-standard-row: "tr:not(.pf-c-table__expandable-row)";
-$pf-c-table-standard-td: "td:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)";
-$pf-c-table-standard-th: "th:not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)";
 $pf-c-table-xs-breakpoint: 380px;
 
-.pf-c-table {
+.pf-c-table[class*="pf-m-grid"] {
   // ============================================================ //
   // Start non-conformant variables
   //
@@ -46,24 +43,21 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--PaddingX);
   --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table-tr--responsive--PaddingY);
   --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--PaddingX);
-  --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--nested-table--PaddingY: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingX: var(--pf-global--spacer--2xl);
 
   // Td
   --pf-c-table-td--responsive--PaddingY: var(--pf-global--spacer--sm);
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table-cell--responsive--PaddingRight: 0;
-  --pf-c-table-cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table-cell--responsive--PaddingLeft: 0;
+  --pf-c-table-cell--responsive--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingX: 0;
 
   // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingX: var(--pf-global--spacer--xl);
 
   // Table check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(11px)};
+  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(6px)};
 
   // Table action
   --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
@@ -99,13 +93,6 @@ $pf-c-table-xs-breakpoint: 380px;
     background-color: var(--pf-c-table--BackgroundColor);
   }
 
-  // Reset td padding
-  tr > *,
-  tr > *:first-child,
-  tr > *:last-child {
-    padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingRight) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingLeft);
-  }
-
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
@@ -119,6 +106,11 @@ $pf-c-table-xs-breakpoint: 380px;
 
     // set base variables to reset later
     padding: var(--pf-c-table-tr--responsive--PaddingTop) var(--pf-c-table-tr--responsive--PaddingRight) var(--pf-c-table-tr--responsive--PaddingBottom) var(--pf-c-table-tr--responsive--PaddingLeft);
+
+    // Reset td padding
+    & > * {
+      padding: var(--pf-c-table-cell--responsive--PaddingY) var(--pf-c-table-cell--responsive--PaddingX);
+    }
   }
 
   // Standard td, in standard row (non-expandable)
@@ -189,7 +181,7 @@ $pf-c-table-xs-breakpoint: 380px;
     }
 
     // add bottom border to expansion toggle::after
-    &.pf-m-active::after {
+    &.pf-m-expanded::after {
       border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
     }
 
@@ -198,13 +190,13 @@ $pf-c-table-xs-breakpoint: 380px;
       padding: 0;
     }
 
-    &.pf-m-active .pf-c-button::after,
+    &.pf-m-expanded .pf-c-button::after,
     &:hover .pf-c-button::after {
       border-right: 0;
       border-left: 0;
     }
 
-    &.pf-m-active .pf-c-button::before,
+    &.pf-m-expanded .pf-c-button::before,
     &:hover .pf-c-button::before {
       top: auto;
       bottom: 0;
@@ -246,6 +238,8 @@ $pf-c-table-xs-breakpoint: 380px;
     --pf-c-table-cell--responsive--PaddingRight: 0;
     --pf-c-table-cell--responsive--PaddingBottom: 0;
     --pf-c-table-cell--responsive--PaddingLeft: 0;
+    --pf-c-table-cell--PaddingRight: 0;
+    --pf-c-table-cell--PaddingLeft: 0;
     --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
     --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
 
@@ -271,15 +265,13 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   // Set defaults
-  .pf-c-table__toggle,
-  .pf-c-table__check,
-  .pf-c-table__action {
-    --pf-c-table-cell--responsive--PaddingTop: 0;
-    --pf-c-table-cell--responsive--PaddingRight: 0;
-    --pf-c-table-cell--responsive--PaddingBottom: 0;
-    --pf-c-table-cell--responsive--PaddingLeft: 0;
-
-    width: auto;
+  tr:not(.pf-c-table__expandable-row) {
+    .pf-c-table__toggle,
+    .pf-c-table__check,
+    .pf-c-table__action {
+      width: auto;
+      padding: 0;
+    }
   }
 
   .pf-c-table__toggle {

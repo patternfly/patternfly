@@ -1,4 +1,4 @@
-{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--id="compound-expansion-table" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30"}}
@@ -24,22 +24,22 @@
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-th table-th--compound-expansion-toggle="true" table-th--data-label="Repository Name"}}
-        {{#> button button--modifier="pf-m-link"}}
+        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
           siemur/test-space
         {{/button}}
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-active" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
+        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="true"' button--HasCodeBranchIcon="true"}}
             10
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull Requests"}}
-        {{#> button button--modifier="pf-m-link" button--HasCodeIcon="true"}}
+        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"' button--HasCodeIcon="true"}}
             4
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work Spaces"}}
-        {{#> button button--modifier="pf-m-link" button--HasCubeIcon="true"}}
+        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"' button--HasCubeIcon="true"}}
             4
         {{/button}}
       {{/table-td}}
@@ -50,16 +50,16 @@
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action1" aria-label="Actions"')}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
         <div class="pf-c-table__expandable-row-content">
-          {{#> table-nested}}
+          {{#> table-nested table-nested-id="nested-table-1"}}
           {{/table-nested}}
         </div>
       {{/table-td}}
@@ -68,25 +68,25 @@
     {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
         <div class="pf-c-table__expandable-row-content">
-          {{#> table-nested}}
+          {{#> table-nested table-nested-id="nested-table-2"}}
           {{/table-nested}}
         </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
         <div class="pf-c-table__expandable-row-content">
-          {{#> table-nested}}
+          {{#> table-nested table-nested-id="nested-table-3"}}
           {{/table-nested}}
         </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
         <div class="pf-c-table__expandable-row-content">
-          {{#> table-nested}}
+          {{#> table-nested table-nested-id="nested-table-4"}}
           {{/table-nested}}
         </div>
       {{/table-td}}
@@ -122,7 +122,7 @@
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action7" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action2" aria-label="Actions"')}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
@@ -158,43 +158,7 @@
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action8" aria-label="Actions"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
-      {{/table-td}}
-    {{/table-tr}}
-  {{/table-tbody}}
-
-  {{#> table-tbody}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-th table-th--compound-expansion-toggle="true" table-th--data-label="Repository Name"}}
-        {{#> button button--modifier="pf-m-link"}}
-            siemur/test-space
-        {{/button}}
-      {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--HasCodeBranchIcon="true"}}
-            22
-        {{/button}}
-      {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull Requests"}}
-        {{#> button button--modifier="pf-m-link" button--HasCodeIcon="true"}}
-            4
-        {{/button}}
-      {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work Spaces"}}
-        {{#> button button--modifier="pf-m-link" button--HasCubeIcon="true"}}
-            23
-        {{/button}}
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last Commit"}}
-        <span>20 minutes</span>
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Open in Github</a>
-      {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action9" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action3" aria-label="Actions"')}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
