@@ -41,11 +41,6 @@
     @media (min-width: $pf-global--breakpoint--lg) {
       --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage--lg);
     }
-
-    @media (min-width: $pf-global--breakpoint--lg) and (-webkit-min-device-pixel-ratio: 2),
-      (min-width: $pf-global--breakpoint--lg) and (min-resolution: 192dpi) {
-      --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage--lg);
-    }
     /* stylelint-enable */
   }
 }
