@@ -48,10 +48,11 @@
 
       ~ .pf-c-switch__toggle {
         background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
-      }
 
-      ~ .pf-c-switch__toggle::before {
-        transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
+        /* stylelint-disable-next-line */
+        &::before {
+          transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
+        }
       }
     }
 
@@ -66,11 +67,10 @@
       ~ .pf-c-switch__toggle {
         cursor: not-allowed;
         background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
-      }
-
-      ~ .pf-c-switch__toggle::before {
-        cursor: not-allowed;
-        background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
+        /* stylelint-disable-next-line */
+        &::before {
+          background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
+        }
       }
     }
   }
@@ -109,3 +109,4 @@
     vertical-align: top;
   }
 }
+

@@ -16,6 +16,7 @@
     "build-ghpages": "gatsby build --prefix-paths",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "dev": "gatsby develop",
+    "dev:expose": "gatsby develop -H 0.0.0.0",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
     "lint": "npm run lint:styles && npm run lint:js",
