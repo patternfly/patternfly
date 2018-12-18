@@ -1,4 +1,4 @@
-{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30"}}
@@ -56,71 +56,38 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded pf-m-nested-table"}}
+    {{#> table-tr table-tr--expandable="true"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
-          <div class="pf-c-table__expandable-row-content">
-          {{#> table newcontext table--modifier="pf-m-compact" table--grid="true"}}
-            {{#> table-thead}}
-              {{#> table-tr}}
-                {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}}
-                {{#> table-th table-th--attribute='scope="col"'}}Date{{/table-th}}
-                {{#> table-th table-th--attribute='scope="col"'}}Status{{/table-th}}
-                {{#> table-td table-td--attribute='scope="col"'}}{{/table-td}}
-              {{/table-tr}}
-            {{/table-thead}}
-            {{#> table-tbody}}
-              {{#> table-tr}}
-                {{#> table-th table-th--attribute='scope="row"' table-th--data-label="Description"}}Item One{{/table-th}}
-                {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
-                {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
-                {{#> table-td table-td--action="true"}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action2" aria-label="Actions"'}}
-                    <i class="fas fa-ellipsis-v"></i>
-                  {{/button}}
-                {{/table-td}}
-              {{/table-tr}}
-              {{#> table-tr}}
-                {{#> table-th table-th--attribute='scope="row"' table-th--data-label="Description"}}Item Two{{/table-th}}
-                {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
-                {{#> table-td table-td--data-label="Status"}}Warning{{/table-td}}
-                {{#> table-td table-td--action="true"}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action3" aria-label="Actions"'}}
-                    <i class="fas fa-ellipsis-v"></i>
-                  {{/button}}
-                {{/table-td}}
-              {{/table-tr}}
-              {{#> table-tr}}
-                {{#> table-th table-th--attribute='scope="row"' table-th--data-label="Description"}}Item Three{{/table-th}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Date"}}May 9, 2018{{/table-td}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Status"}}Active{{/table-td}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--action="true"}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action4" aria-label="Actions"'}}
-                    <i class="fas fa-ellipsis-v"></i>
-                  {{/button}}
-                {{/table-td}}
-              {{/table-tr}}
-              {{#> table-tr}}
-                {{#> table-th table-th--attribute='scope="row"' table-th--data-label="Description"}}Item Four{{/table-th}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Date"}}May 9, 2018{{/table-td}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Status"}}Active{{/table-td}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--action="true"}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action5" aria-label="Actions"'}}
-                    <i class="fas fa-ellipsis-v"></i>
-                  {{/button}}
-                {{/table-td}}
-              {{/table-tr}}
-              {{#> table-tr}}
-                {{#> table-th table-th--attribute='scope="row"' table-th--data-label="Description"}}Item Five{{/table-th}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Date"}}May 9, 2018{{/table-td}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--data-label="Status"}}Active{{/table-td}}
-                {{#> table-td table-td--attribute='colspan="1"' table-td--action="true"}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action6" aria-label="Actions"'}}
-                    <i class="fas fa-ellipsis-v"></i>
-                  {{/button}}
-                {{/table-td}}
-              {{/table-tr}}
-            {{/table-tbody}}
-          {{/table}}
+        <div class="pf-c-table__expandable-row-content">
+          {{#> table-nested}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content">
+          {{#> table-nested}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content">
+          {{#> table-nested}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content">
+          {{#> table-nested}}
+          {{/table-nested}}
         </div>
       {{/table-td}}
     {{/table-tr}}

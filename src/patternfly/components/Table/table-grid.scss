@@ -34,39 +34,39 @@ $pf-c-table-xs-breakpoint: 380px;
   // ==================================================================
 
   // Body
-  --pf-c-table-tbody--responsive--MarginTop:                  var(--pf-global--spacer--sm);
+  --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--sm);
 
   // Row
-  --pf-c-table-tr--responsive--GridColumnGap:                 var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingY:                      var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--PaddingX:                      var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingX: var(--pf-global--spacer--xl);
 
   // Setting these individually in order to update them individually
-  --pf-c-table-tr--responsive--PaddingTop:                    var(--pf-c-table-tr--responsive--PaddingY);
-  --pf-c-table-tr--responsive--PaddingRight:                  var(--pf-c-table-tr--responsive--PaddingX);
-  --pf-c-table-tr--responsive--PaddingBottom:                 var(--pf-c-table-tr--responsive--PaddingY);
-  --pf-c-table-tr--responsive--PaddingLeft:                   var(--pf-c-table-tr--responsive--PaddingX);
-  --pf-c-table-tr--responsive--MarginTop:                     var(--pf-global--spacer--sm);
-  --pf-c-table-tr--responsive--nested-table--PaddingY:        var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--nested-table--PaddingX:        var(--pf-global--spacer--2xl);
+  --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--PaddingY);
+  --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--PaddingX);
+  --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table-tr--responsive--PaddingY);
+  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--PaddingX);
+  --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-table-tr--responsive--nested-table--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingX: var(--pf-global--spacer--2xl);
 
   // Td
-  --pf-c-table-td--responsive--PaddingY:                      var(--pf-global--spacer--sm);
-  --pf-c-table-td--responsive--GridColumnGap:                 var(--pf-global--spacer--md);
-  --pf-c-table-cell--responsive--PaddingTop:                  var(--pf-global--spacer--sm);
-  --pf-c-table-cell--responsive--PaddingRight:                0;
-  --pf-c-table-cell--responsive--PaddingBottom:               var(--pf-global--spacer--sm);
-  --pf-c-table-cell--responsive--PaddingLeft:                 0;
+  --pf-c-table-td--responsive--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingRight: 0;
+  --pf-c-table-cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingLeft: 0;
 
   // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingX: var(--pf-global--spacer--xl);
 
   // Table check
-  --pf-c-table__check--responsive--MarginLeft:                var(--pf-global--spacer--sm);
-  --pf-c-table__check--responsive--MarginTop:                 #{pf-size-prem(11px)};
+  --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(11px)};
 
   // Table action
-  --pf-c-table__action--responsive--MarginLeft:               var(--pf-global--spacer--xl);
+  --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
 
   // End responsive vars
   // ==================================================================
@@ -86,11 +86,11 @@ $pf-c-table-xs-breakpoint: 380px;
   // Tbody
   tbody {
     display: block;
+  }
 
-    // add top margin to siblings
-    & + tbody {
-      margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
-    }
+  // add top margin to siblings
+  tbody + tbody {
+    margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
   }
 
   // Table row
@@ -111,6 +111,7 @@ $pf-c-table-xs-breakpoint: 380px;
   tr:not(.pf-c-table__expandable-row) {
     display: grid;
     grid-template-columns: 1fr;
+    height: auto;
 
     // set subsequent auto column width to max-content
     grid-auto-columns: max-content;
@@ -118,11 +119,6 @@ $pf-c-table-xs-breakpoint: 380px;
 
     // set base variables to reset later
     padding: var(--pf-c-table-tr--responsive--PaddingTop) var(--pf-c-table-tr--responsive--PaddingRight) var(--pf-c-table-tr--responsive--PaddingBottom) var(--pf-c-table-tr--responsive--PaddingLeft);
-
-    // nested tables, remove padding-top for subsequent tr
-    & + tr:not(.pf-c-table__expandable-row) {
-      --pf-c-table-tr--responsive--PaddingTop: 0;
-    }
   }
 
   // Standard td, in standard row (non-expandable)
@@ -163,7 +159,6 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
-
   // nested tables
   .pf-c-table {
     --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--nested-table--PaddingY);
@@ -172,6 +167,10 @@ $pf-c-table-xs-breakpoint: 380px;
     --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--nested-table--PaddingX);
 
     border: 0;
+
+    tr:not(.pf-c-table__expandable-row) + tr:not(.pf-c-table__expandable-row) {
+      --pf-c-table-tr--responsive--PaddingTop: 0;
+    }
   }
 
   .pf-c-table__compound-expansion-toggle {
@@ -198,6 +197,18 @@ $pf-c-table-xs-breakpoint: 380px;
     .pf-c-button {
       padding: 0;
     }
+
+    &.pf-m-active .pf-c-button::after,
+    &:hover .pf-c-button::after {
+      border-right: 0;
+      border-left: 0;
+    }
+
+    &.pf-m-active .pf-c-button::before,
+    &:hover .pf-c-button::before {
+      top: auto;
+      bottom: 0;
+    }
   }
 
   // COMPOUND EXPANSION RESPONSIVE
@@ -219,6 +230,12 @@ $pf-c-table-xs-breakpoint: 380px;
     &.pf-m-expanded::before {
       background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
     }
+
+    > tr > :first-child::before {
+      position: static;
+      width: auto;
+      background-color: transparent;
+    }
   }
   // COMPOUND EXPANSION RESPONSIVE END
 
@@ -233,7 +250,6 @@ $pf-c-table-xs-breakpoint: 380px;
     --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
 
     display: block;
-    border-top: var(--pf-c-table--BorderWidth) solid transparent;
     border-bottom: none;
     box-shadow: none;
 
