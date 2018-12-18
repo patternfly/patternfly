@@ -7,6 +7,9 @@
   --pf-c-content--FontSize: var(--pf-global--FontSize--md);
   --pf-c-content--FontWeight: var(--pf-global--FontWeight--normal);
 
+  // this ensures color is not overridden
+  --pf-c-content--Color: var(--pf-global--Color--100);
+
   // h1 - Main title
   --pf-c-content--h1--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--md);
@@ -86,6 +89,10 @@
 
   font-size: var(--pf-c-content--FontSize);
   line-height: var(--pf-c-content--LineHeight);
+
+  & * {
+    color: var(--pf-c-content--Color);
+  }
 
   a {
     color: var(--pf-c-content--a--Color);
