@@ -107,7 +107,7 @@
 
   // Close button uses a non-standard background color
   --pf-c-about-modal-box__button-close--BackgroundColor: #{$pf-color-black-1000};
-  --pf-c-about-modal-box__button-close--hover--BackgroundColor: rgba($pf-color-black-1000, .4);
+  --pf-c-about-modal-box__button-close--hover--BackgroundColor: #{rgba($pf-color-black-1000, .4)};
 
   // This component always needs to be dark
   @extend %pf-t-dark;
