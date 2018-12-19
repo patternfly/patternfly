@@ -55,6 +55,12 @@
   --pf-c-login__main-footer-link--Color: var(--pf-global--Color--dark-100);
   --pf-c-login__main-footer-link--hover--Color: var(--pf-global--Color--dark-200);
   --pf-c-login__main-footer-grid--GridGap: var(--pf-global--gutter);
+  --pf-c-login__main-footer-grid--GridTemplateColumns: repeat(5, 1fr);
+  --pf-c-login__main-footer-grid--md--GridTemplateColumns: repeat(auto-fit, minmax(100px, 1fr));
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    --pf-c-login__main-footer-grid--GridTemplateColumns: var(--pf-c-login__main-footer-grid--md--GridTemplateColumns);
+  }
 
   display: flex;
   justify-content: center;
@@ -198,11 +204,14 @@
 .pf-c-login__main-footer-link {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--pf-c-login__main-footer-link--GridGap);
   align-items: center;
   padding-top: var(--pf-c-login__main-footer-link--PaddingX);
   padding-bottom: var(--pf-c-login__main-footer-link--PaddingX);
   color: var(--pf-c-login__main-footer-link--Color);
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    grid-gap: var(--pf-c-login__main-footer-link--GridGap);
+  }
 
   &:hover,
   &.pf-m-hover {
@@ -230,36 +239,15 @@
 .pf-c-login__main-footer-grid {
   display: grid;
   grid-gap: var(--pf-c-login__main-footer-grid--GridGap);
-  grid-column-start: auto;
-  grid-column-end: span 12;
-  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-template-columns: var(--pf-c-login__main-footer-grid--GridTemplateColumns);
+  justify-items: center;
+}
 
-  @media (min-width: $pf-global--breakpoint--xs) {
-    grid-template-columns: repeat(5, [col-start] 1fr);
-
-    .pf-c-login__main-footer-grid-item {
-      justify-self: center;
+.pf-c-login__main-footer-grid-item {
+  &.pf-m-more {
+    @media (max-width: $pf-global--breakpoint--md) {
+      grid-column: 1 / -1;
     }
-
-    .pf-c-login__main-footer-grid-item:last-child {
-      grid-column-start: 3;
-    }
-  }
-
-  @media (min-width: $pf-global--breakpoint--md) {
-    grid-template-columns: repeat(3, [col-start] 1fr);
-
-    .pf-c-login__main-footer-grid-item {
-      justify-self: left;
-    }
-
-    .pf-c-login__main-footer-grid-item:last-child {
-      grid-column-start: auto;
-    }
-  }
-
-  @media (min-width: $pf-global--breakpoint--lg) {
-    grid-template-columns: repeat(4, [col-start] 1fr);
   }
 }
 
