@@ -5,6 +5,8 @@
   --pf-c-list--ul--nested--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-list--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-list--ul--ListStyle: var(--pf-global--ListStyle);
+  --pf-c-list--ul--ListStyle: none;
+  --pf-c-list--ul--ListStyleImage: url("/assets/images/img_avatar.svg");
   --pf-c-list--li--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-list--m-inline--li--MarginRight: var(--pf-global--spacer--lg);
 
@@ -19,6 +21,10 @@
 
     @at-root ul#{&} {
       list-style: var(--pf-c-list--ul--ListStyle);
+
+      &.pf-m-avatar {
+        list-style-image: var(--pf-c-list--ul--ListStyleImage);
+      }
     }
 
     li + li {
