@@ -241,13 +241,16 @@
   grid-gap: var(--pf-c-login__main-footer-grid--GridGap);
   grid-template-columns: var(--pf-c-login__main-footer-grid--GridTemplateColumns);
   justify-items: left;
+
+  @media (max-width: $pf-global--breakpoint--md) {
+    justify-items: center;
+  }
 }
 
 .pf-c-login__main-footer-grid-item {
   &.pf-m-more {
     @media (max-width: $pf-global--breakpoint--md) {
       grid-column: 1 / -1;
-      justify-items: center;
     }
   }
 }
