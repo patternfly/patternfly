@@ -22,10 +22,10 @@
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
 
   // Tr
-  --pf-c-table-th--PaddingY: var(--pf-global--spacer--md);
+  --pf-c-table-thead-cell--PaddingY: var(--pf-global--spacer--md);
 
   // Td
-  --pf-c-table-td--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-table-tbody-cell--PaddingY: var(--pf-global--spacer--xl);
 
   // Th / td shared variables
   // Padding vars must be individual as they are contextually reset
@@ -49,8 +49,6 @@
   // Table cell - action
   --pf-c-table__action--PaddingY: 0;
   --pf-c-table__action--PaddingX: var(--pf-global--spacer--sm);
-  --pf-c-table__action--m-compact--PaddingTop: #{pf-size-prem(20px)};
-  --pf-c-table__action--m-compact--PaddingBottom: 0;
 
   // Expandable row
   // hardcoding to match design spec
@@ -98,15 +96,9 @@
   --pf-c-table__compound-expansion-toggle--BorderX--BorderColor: var(--pf-global--BorderColor--light-200);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-table__compound-expansion-toggle--BorderBottom--responsive--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-table__compound-expansion-toggle--BorderBottom--responsive--BorderColor: var(--pf-global--active-color--100);
 
   // Modifier - Toggle
   --pf-c-table--m-toggle--Transition: var(--pf-global--Transition);
-
-  // Modifier - Fit content
-  --pf-c-table--m-fit-content--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-table--m-fit-content--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
@@ -161,8 +153,8 @@
 
   // Table header cell
   thead {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table-th--PaddingY);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-th--PaddingY);
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingY);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingY);
     --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
 
     white-space: nowrap;
@@ -172,8 +164,8 @@
   // Table body cell
   /* stylelint-disable */
   tbody {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table-td--PaddingY);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-td--PaddingY);
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingY);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingY);
     --pf-c-table-cell--FontSize: var(--pf-c-table-tbody--FontSize);
 
     // Border treatment
@@ -444,7 +436,6 @@
 .pf-c-table.pf-m-compact {
   // Thead only
   thead {
-    --pf-c-table--m-compact-cell--PaddingY: var(--pf-c-table--m-compact-th--PaddingY);
     --pf-c-table--m-compact-cell--PaddingY: var(--pf-c-table--m-compact-th--PaddingY);
   }
 
