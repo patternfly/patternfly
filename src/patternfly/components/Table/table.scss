@@ -124,7 +124,6 @@
     // content wraps. for those special cases, there must be an explicit height set on tr and table cell
     // for button height: 100% to work
     height: 1px;
-    border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
   }
 
   // Table row
