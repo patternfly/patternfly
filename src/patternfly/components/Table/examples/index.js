@@ -32,6 +32,7 @@ import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
 
 import docs from '../docs/code.md';
 import '../table.scss';
+import '../table-grid.scss';
 
 export const Docs = docs;
 
@@ -62,18 +63,18 @@ export default () => {
       <Example heading="Expandable Table" handlebars={tableExpandableExampleRaw} docs={tableExpandableDoc}>
         {tableExpandableExample}
       </Example>
-      <Example heading="Compact Table" handlebars={tableCompactExampleRaw} docs={tableCompactDoc}>
-        {tableCompactExample}
-      </Example>
-      <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
-        {tableWidthExample}
-      </Example>
       <Example
         heading="Table with Compound Expansion"
         handlebars={tableCompoundExpansionExampleRaw}
         docs={tableCompoundExpansionDoc}
       >
         {tableCompoundExpansionExample}
+      </Example>
+      <Example heading="Compact Table" handlebars={tableCompactExampleRaw} docs={tableCompactDoc}>
+        {tableCompactExample}
+      </Example>
+      <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
+        {tableWidthExample}
       </Example>
     </Documentation>
   );
