@@ -2,39 +2,43 @@
 
 .pf-c-list {
   --pf-c-list--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-list--ul--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-list--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-list--ul--ListStyle: var(--pf-global--ListStyle);
   --pf-c-list--ul--ListStyle: none;
-  --pf-c-list--li--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-list--m-inline--li--MarginRight: var(--pf-global--spacer--lg);
-
-  ol,
-  ul {
-    margin-top: var(--pf-c-list--ul--nested--MarginTop);
-    margin-left: var(--pf-c-list--ul--nested--MarginLeft);
-  }
-
-  /* stylelint-disable */ 
-  &:not(.pf-m-inline) {
-    li {
-      padding-left: var(--pf-c-list--PaddingLeft);
-    }
-  }
 
   @at-root ul#{&} {
     list-style: var(--pf-c-list--ul--ListStyle);
 
+    /* stylelint-disable */
     li {
       display: flex;
       align-items: center;
       padding-top: 8px; // make variable
       padding-bottom: 8px; // make variable
+      padding-left: 32px;
       line-height: 16px; // make variable
       list-style: none;
 
+      .pf-c-list__item-text {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          font-size: 14px; // make variable
+          color: var(--pf-global--Color--200); // make variable
+        }
+      }
+
+      .pf-c-list__item-icon {
+        position: absolute;
+        right: 24px;
+        color: var(--pf-global--Color--200);
+      }
+
       &:hover {
         background-color: #{$pf-color-black-150}; // make variable
+
+        .pf-c-list__item-icon {
+          color: var(--pf-global--Color--300);
+        }
       }
     }
 
@@ -50,54 +54,8 @@
           content: "";
           background-image: url("/assets/images/img_avatar.svg");
         }
-
-        .list-item-text {
-          display: flex;
-          flex-direction: column;
-        }
-
-        // p {
-        //   background-color: #000;
-        //   position: absolute;
-        //   bottom: -8px;
-        //   left: 64px;
-        //   right: 0;
-        // }
-
-        // &::after {
-        //   content: 'WOW';
-        //   position: absolute;
-        //   bottom: 0;
-        //   left: 0;
-        //   right: 0;  
-        // }
-
-        .pf-c-check__input {
-          position: absolute;
-          right: 24px;
-        }
+        /* stylelint-enable */
       }
-    }
-
-    &.pf-m-star {
-
-    }
-  }
-
-  /* stylelint-enable */
-
-  &.pf-m-inline {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-
-    li {
-      margin-right: var(--pf-c-list--m-inline--li--MarginRight);
     }
   }
 }
-
-// Add this to the standard modifier
-// li + li {
-//   margin-top: var(--pf-c-list--li--MarginTop); // change variable name
-// }
