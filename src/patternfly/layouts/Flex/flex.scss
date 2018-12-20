@@ -69,6 +69,15 @@ $desktop: $pf-global--breakpoint--desktop, -desktop-up;
   // Modifiers
   &.pf-m-justify-flex-end {
     justify-content: flex-end;
+
+    > * {
+      margin-right: 0;
+      margin-left: var(--pf-l-flex--spacer);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 
   &.pf-m-fill-items > .pf-l-flex {
@@ -83,10 +92,6 @@ $desktop: $pf-global--breakpoint--desktop, -desktop-up;
 
   &.pf-m-inline-flex {
     display: inline-flex;
-  }
-
-  .pf-m-section {
-    border: 1px dashed;
   }
 
   &.pf-m-align-center {

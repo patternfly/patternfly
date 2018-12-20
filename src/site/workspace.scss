@@ -137,9 +137,9 @@
   }
 
   h3,
- h4,
- h5,
- h6 {
+  h4,
+  h5,
+  h6 {
     margin: 1em 0 .5em;
   }
 
@@ -156,7 +156,7 @@
   }
 
   ul,
- ol {
+  ol {
     padding-left: 1rem;
     margin: .5rem 0 .5rem 1rem;
     list-style-position: outside;
@@ -182,9 +182,9 @@
 
   table:not(.pf-c-table) {
     &,
- td,
- th,
- tr {
+    td,
+    th,
+    tr {
       padding: .5em;
       vertical-align: top;
       border-bottom: 1px solid #ccc;
@@ -328,8 +328,8 @@
 
   table:not(.pf-c-table) {
     td,
- th,
- tr {
+    th,
+    tr {
       padding: .5em;
       vertical-align: top;
       border: 1px solid #ccc;
@@ -446,119 +446,134 @@
   }
 }
 
-.example-block {
-  --plf-block--BackgroundColor: #a6e2cf;
+.flex-documentation {
+  --example--before--Offset: -8px;
+  --example--BorderRadius: 8px;
+  --example--Color: #888;
 
-  position: relative;
-  z-index: 99;
-  display: inline-flex;
-  align-items: center;
-  min-width: 56px;
-  min-height: 56px;
-  padding: 14px 22px;
-  color: rgba(0, 0, 0, .6);
-  background-color: var(--plf-block--BackgroundColor);
-  border-radius: 8px;
+  padding: 40px;
 
-  &.hollow {
-    --plf-block--BackgroundColor: transparent;
-
-    border: 1px solid #ddd;
-  }
-
-  &.blue { --plf-block--BackgroundColor: lightblue; }
-  &.red { --plf-block--BackgroundColor: lightsalmon; }
-  &.green { --plf-block--BackgroundColor: lightgreen; }
-  &.yellow { --plf-block--BackgroundColor: lightgoldenrodyellow; }
-
-  .count {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    font-size: 12px;
-    color: #fff;
-    background: rgba(0, 0, 0, .4);
-    border-radius: 50%;
-  }
-}
-
-.Documentation.flex-documentation {
   .Preview__body {
     padding: 40px;
   }
 
-  .example__annotated {
-    --pf-l-flex--before--Offset: -8px;
-    --pf-l-flex--BorderRadius: 8px;
-    $pf-l-flex--Color: rgba(0, 0, 0, .8);
+  .pf-l-flex {
+    position: relative;
+  }
 
-    .pf-l-flex {
-      @media screen and (min-width: 600px) {
-        position: relative;
+  .pf-l-flex .pf-l-flex:hover {
+    z-index: 2;
+  }
 
-        &::before {
-          position: absolute;
-          top: var(--pf-l-flex--before--Offset);
-          right: var(--pf-l-flex--before--Offset);
-          bottom: var(--pf-l-flex--before--Offset);
-          left: var(--pf-l-flex--before--Offset);
-          content: "";
-          border: 1.5px dashed rgba(0, 0, 0, .2);
-          border-radius: var(--pf-l-flex--BorderRadius);
-        }
+  .pf-l-flex .pf-l-flex .pf-l-flex:hover {
+    z-index: 3;
+  }
 
-        &::after {
-          position: absolute;
-          top: -18px;
-          left: 0;
-          padding: 0 4px;
-          font-size: 12px;
-          color: rgba(0, 0, 0, .6);
-          content: "default item spacing";
-          background: #fff;
-        }
+  .example {
+    --plf-block--BackgroundColor: #a6e2cf;
 
-        &.pf-m-space-items-none::after {
-          content: "item spacing none";
-        }
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .6);
+    background-color: var(--plf-block--BackgroundColor);
+    border-radius: 8px;
 
-        &.pf-m-space-items-xs::after {
-          content: "item spacing xs";
-        }
+    &.hollow {
+      --plf-block--BackgroundColor: transparent;
 
-        &.pf-m-space-items-sm::after {
-          content: "item spacing sm";
-        }
+      border: 1px solid #ddd;
+    }
 
-        &.pf-m-space-items-md::after {
-          content: "item spacing md";
-        }
+    &.blue { --plf-block--BackgroundColor: lightblue; }
+    &.red { --plf-block--BackgroundColor: lightsalmon; }
+    &.green { --plf-block--BackgroundColor: lightgreen; }
+    &.yellow { --plf-block--BackgroundColor: lightgoldenrodyellow; }
 
-        &.pf-m-space-items-lg::after {
-          content: "item spacing lg";
-        }
+    &__strapline,
+    &::before,
+    &::after {
+      font-weight: normal;
+    }
 
-        &.pf-m-space-items-xl::after {
-          content: "item spacing xl";
-        }
-
-        &.pf-m-space-items-2xl::after {
-          content: "item spacing 2xl";
-        }
-
-        &.pf-m-space-items-3xl::after {
-          content: "item spacing 3xl";
-        }
-      }
+    &__strapline {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      left: 0;
+      padding: 0 4px;
+      font-size: 13px;
+      text-align: center;
+      // color: #fff;
     }
   }
 
-  .section-title {
+
+  [class*="example-label"] {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    z-index: 2;
+    padding: 0 4px;
+    font-size: 13px;
+    color: var(--example--Color);
+    background: #fff;
+  }
+
+  .pf-l-flex .pf-l-flex [class*="example-label"] {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    padding: 0 8px;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  [class*="example-border"] {
+    position: absolute;
+    top: var(--example--before--Offset);
+    right: var(--example--before--Offset);
+    bottom: var(--example--before--Offset);
+    left: var(--example--before--Offset);
+    content: "";
+    border: 1px dashed rgba(0, 0, 0, .4);
+    border-radius: var(--example--BorderRadius);
+  }
+
+  .pf-l-flex .pf-l-flex [class*="example-border"] {
+    --example--before--Offset: -4px;
+
+    border: 1px dashed rgba(0, 0, 0, .2);
+  }
+
+  [class*="example-label"],
+  [class*="example-border"] {
+    margin: 0 !important;
+  }
+
+  .example-label--hover,
+  .example-border--hover {
+    display: none;
+  }
+
+  .pf-l-flex:hover > {
+    .example-label--hover,
+    .example-border--hover {
+      display: block;
+    }
+  }
+
+  .example-title {
     &:not(:first-of-type) {
       margin-top: var(--pf-global--spacer--2xl);
     }
@@ -567,21 +582,33 @@
     font-size: var(--pf-global--FontSize--md);
     color: #888;
   }
+}
 
-  .pf-l-flex .pf-l-flex {
-    z-index: 2;
-  }
+.Documentation.flex-documentation {
 
-  .pf-l-flex .pf-l-flex {
-    --pf-l-flex--before--Offset: -3px;
+  // .pf-l-flex .pf-l-flex {
+  //   z-index: 2;
+  // }
 
-    &::before {
-      border: 2px dashed rgba(0, 0, 0, .2);
-    }
-  }
+  // .pf-l-flex .pf-l-flex {
+  //   --example--before--Offset: -3px;
+
+  //   &::after {
+  //     top: auto;
+  //     right: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     padding: 0 4px;
+  //     background: rgba(255,255,255,.4);
+  //     z-index: 99;
+  //     border: 1px dashed rgba(0, 0, 0, .2);
+  //     border-bottom-right-radius: 6px;
+  //     border-bottom-left-radius: 6px;
+  //   }
+  // }
 
   .pf-l-flex .pf-l-flex .pf-l-flex {
-    --pf-l-flex--before--Offset: -1px;
+    --example--before--Offset: -1px;
 
     &::before {
       border-color: lightblue;

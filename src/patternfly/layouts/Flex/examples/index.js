@@ -34,7 +34,12 @@ export default () => {
 
   return (
     <Documentation docs={Docs} className="flex-documentation">
-      <Example heading="Basic Usage" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
+      <Example
+        heading="Basic Usage"
+        handlebars={flexBasicExampleRaw}
+        docs={flexBasicExampleDoc}
+        className="example__annotated"
+      >
         {flexBasicExample}
       </Example>
       <Example
@@ -44,13 +49,23 @@ export default () => {
       >
         {flexIndividuallySpacedExample}
       </Example>
-      <Example heading="Nested Usage" handlebars={flexNestedExampleRaw} docs={flexNestedExampleDoc}>
+      <Example
+        heading="Nested Usage"
+        handlebars={flexNestedExampleRaw}
+        docs={flexNestedExampleDoc}
+        className="example__annotated"
+      >
         {flexNestedExample}
       </Example>
       <Example heading="Alignment" handlebars={flexAlignmentExampleRaw} docs={flexAlignmentExampleDoc}>
         {flexAlignmentExample}
       </Example>
-      <Example heading="Justification" handlebars={flexJustificationExampleRaw} docs={flexJustificationExampleDoc}>
+      <Example
+        heading="Justification"
+        handlebars={flexJustificationExampleRaw}
+        docs={flexJustificationExampleDoc}
+        className="example__annotated"
+      >
         {flexJustificationExample}
       </Example>
     </Documentation>

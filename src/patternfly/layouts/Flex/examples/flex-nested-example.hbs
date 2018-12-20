@@ -1,90 +1,82 @@
 <section class="content-section">
-	<h2 class="section-title">
-    Nested flex items
-  </h2>
-  {{#> flex flex--modifier="pf-m-fill-items-mobile-only"}}
-    {{#> flex newcontext}}
-      {{#> example-block example-block--attribute='title="something"'}}1{{/example-block}}
-      {{#> example-block}}2{{/example-block}}
-      {{#> example-block}}3{{/example-block}}
+  {{#> example-title}}Nested flex items{{/example-title}}
+  {{#> flex flex--modifier="" example--label="Item spacing default" example--border="true"}}
+    {{#> flex newcontext example--label-hover="Item spacing default" example--border="true"}}
+      {{#> example example--attribute='title="something"'}}1{{/example}}
+      {{#> example}}2{{/example}}
+      {{#> example}}3{{/example}}
     {{/flex}}
-    {{#> flex newcontext}}
-      {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
-      {{#> example-block example-block--modifier="blue"}}2{{/example-block}}
-      {{#> example-block example-block--modifier="blue"}}3{{/example-block}}
+    {{#> flex newcontext example--label-hover="Item spacing default" example--border="true"}}
+      {{#> example example--modifier="blue"}}1{{/example}}
+      {{#> example example--modifier="blue"}}2{{/example}}
+      {{#> example example--modifier="blue"}}3{{/example}}
     {{/flex}}
-    {{#> flex newcontext}}
-      {{#> example-block example-block--modifier="red"}}1{{/example-block}}
-      {{#> example-block example-block--modifier="red"}}2{{/example-block}}
-      {{#> example-block example-block--modifier="red"}}3{{/example-block}}
+    {{#> flex newcontext example--label-hover="Item spacing default" example--border="true"}}
+      {{#> example example--modifier="red"}}1{{/example}}
+      {{#> example example--modifier="red"}}2{{/example}}
+      {{#> example example--modifier="red"}}3{{/example}}
     {{/flex}}
   {{/flex}}
 
-	<h2 class="section-title">
-    Mixed nesting flex items
-  </h2>
-  {{#> flex flex--modifier="pf-m-space-items-xl"}}
-    {{#> example-block example-block--attribute='title="block does not belong to a nested flex layout"'}}1{{/example-block}}
-    {{#> example-block}}2{{/example-block}}
-    {{#> example-block}}3{{/example-block}}
-    {{#> flex}}
-      {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
-      {{#> example-block example-block--modifier="blue"}}2{{/example-block}}
-      {{#> example-block example-block--modifier="blue"}}3{{/example-block}}
+  {{#> example-title}}Mixed nesting flex items{{/example-title}}
+  {{#> flex flex--modifier="pf-m-space-items-xl" example--label="Item spacing xl" example--border="true"}}
+    {{#> example example--attribute='title="block does not belong to a nested flex layout"'}}1{{/example}}
+    {{#> example}}2{{/example}}
+    {{#> example}}3{{/example}}
+    {{#> flex newcontext example--label-hover="Item spacing default" example--border="true"}}
+      {{#> example example--modifier="blue"}}1{{/example}}
+      {{#> example example--modifier="blue"}}2{{/example}}
+      {{#> example example--modifier="blue"}}3{{/example}}
     {{/flex}}
-    {{#> example-block example-block--modifier="red"}}1{{/example-block}}
-    {{#> example-block example-block--modifier="red"}}2{{/example-block}}
-    {{#> example-block example-block--modifier="red"}}3{{/example-block}}
+    {{#> example example--modifier="red"}}1{{/example}}
+    {{#> example example--modifier="red"}}2{{/example}}
+    {{#> example example--modifier="red"}}3{{/example}}
   {{/flex}}
 
-	<h2 class="section-title">
-    Mixed nesting flex items
-  </h2>
-  {{#> flex}}
-    {{#> example-block}}1{{/example-block}}
-    {{#> flex}}
-      {{#> flex}}
-        {{#> example-block example-block--modifier="yellow"}}1{{/example-block}}
-        {{#> example-block example-block--modifier="yellow"}}2{{/example-block}}
+  {{#> example-title}}Mixed nesting flex items{{/example-title}}
+  {{#> flex example--label="Item spacing default" example--border="true"}}
+    {{#> example}}1{{/example}}
+    {{#> flex newcontext example--border="true"}}
+      {{#> flex newcontext example--label-hover="Item spacing default" example--border="true"}}
+        {{#> example example--modifier="yellow"}}1{{/example}}
+        {{#> example example--modifier="yellow"}}2{{/example}}
       {{/flex}}
-      {{#> flex}}
-        {{#> example-block example-block--modifier="yellow"}}1{{/example-block}}
-        {{#> example-block example-block--modifier="yellow"}}2{{/example-block}}
+      {{#> flex newcontext example--label-hover="Item spacing default" example--border="true"}}
+        {{#> example example--modifier="yellow"}}1{{/example}}
+        {{#> example example--modifier="yellow"}}2{{/example}}
       {{/flex}}
-      {{#> example-block}}3{{/example-block}}
+      {{#> example}}3{{/example}}
     {{/flex}}
-    {{#> flex}}
-      {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
-      {{#> example-block example-block--modifier="blue"}}2{{/example-block}}
-      {{#> example-block example-block--modifier="blue"}}3{{/example-block}}
+    {{#> flex newcontext example--border="true" example--label-hover="Item spacing default"}}
+      {{#> example example--modifier="blue"}}1{{/example}}
+      {{#> example example--modifier="blue"}}2{{/example}}
+      {{#> example example--modifier="blue"}}3{{/example}}
     {{/flex}}
-    {{#> example-block example-block--modifier="red"}}1{{/example-block}}
-    {{#> example-block example-block--modifier="red"}}2{{/example-block}}
-    {{#> example-block example-block--modifier="red"}}3{{/example-block}}
+    {{#> example example--modifier="red"}}1{{/example}}
+    {{#> example example--modifier="red"}}2{{/example}}
+    {{#> example example--modifier="red"}}3{{/example}}
   {{/flex}}
 
-	<h2 class="section-title">
-    Inception grouping
-  </h2>
+  {{#> example-title}}Inception grouping{{/example-title}}
   {{#> flex}}
-    {{#> example-block}}1{{/example-block}}
+    {{#> example}}1{{/example}}
     {{#> flex}}
       {{#> flex}}
-        {{#> example-block example-block--modifier="yellow"}}1{{/example-block}}
-        {{#> example-block example-block--modifier="yellow"}}2{{/example-block}}
+        {{#> example example--modifier="yellow"}}1{{/example}}
+        {{#> example example--modifier="yellow"}}2{{/example}}
         {{#> flex}}
-          {{#> example-block example-block--modifier="red"}}1{{/example-block}}
-          {{#> example-block example-block--modifier="red"}}2{{/example-block}}
+          {{#> example example--modifier="red"}}1{{/example}}
+          {{#> example example--modifier="red"}}2{{/example}}
         {{/flex}}
       {{/flex}}
       {{#> flex}}
-        {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
-        {{#> example-block example-block--modifier="blue"}}2{{/example-block}}
+        {{#> example example--modifier="blue"}}1{{/example}}
+        {{#> example example--modifier="blue"}}2{{/example}}
       {{/flex}}
-      {{#> example-block}}3{{/example-block}}
+      {{#> example}}3{{/example}}
     {{/flex}}
     {{#> flex}}
-      {{#> example-block example-block--modifier="blue"}}1{{/example-block}}
+      {{#> example example--modifier="blue"}}1{{/example}}
     {{/flex}}
   {{/flex}}
 </section>

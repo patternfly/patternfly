@@ -2,5 +2,17 @@
   {{#if flex--attribute}}
     {{{flex--attribute}}}
   {{/if}}>
+  {{#if example--label}}
+    <span class="example-label">{{{example--label}}}</span>
+  {{/if}}
+  {{#if example--label-hover}}
+    <span class="example-label--hover">{{{example--label-hover}}}</span>
+  {{/if}}
+  {{#if example--border}}
+    <span class="example-border"></span>
+  {{/if}}
+  {{#if example--border-hover}}
+    <span class="example-border--hover"></span>
+  {{/if}}
   {{> @partial-block}}
 </div>
