@@ -1,7 +1,8 @@
 {{#if page-template-header-brand--toggle}}
   {{#> page-header-brand-toggle}}
-    {{#> button button--modifier="pf-m-plain"
-      button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Toggle primary navigation"') button--HasBarsIcon="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Toggle primary navigation"')}}
+      {{#> button-icon button-icon--type="bars"}}
+      {{/button-icon}}
     {{/button}}
   {{/page-header-brand-toggle}}
 {{/if}}
