@@ -265,10 +265,20 @@
   }
 }
 
-.pf-c-login__footer-link {
+.pf-c-login__footer-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 16px;
+  }
+}
+
+.pf-c-login__footer-list-link {
   &,
   &:hover,
   &.pf-m-hover {
     color: var(--pf-c-login__footer-link--Color);
   }
 }
+
