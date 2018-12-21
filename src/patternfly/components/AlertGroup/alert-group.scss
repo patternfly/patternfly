@@ -6,13 +6,9 @@
   --pf-c-alert-group__item--MarginBottom: var(--pf-global--spacer--sm);
 
   // Toast variables
-  --pf-c-alert-group--m-toast--Top: 0;
-  --pf-c-alert-group--m-toast--Right: 0;
+  --pf-c-alert-group--m-toast--Top: var(--pf-global--spacer--2xl);
+  --pf-c-alert-group--m-toast--Right: var(--pf-global--spacer--xl);
   --pf-c-alert-group--m-toast--MaxWidth: #{pf-size-prem(600px)};
-  --pf-c-alert-group--m-toast--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-alert-group--m-toast--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-alert-group--m-toast--PaddingBottom: 0;
-  --pf-c-alert-group--m-toast--PaddingLeft: var(--pf-global--spacer--xl);
 
   width: 100%;
 
@@ -26,12 +22,7 @@
     position: fixed;
     top: var(--pf-c-alert-group--m-toast--Top);
     right: var(--pf-c-alert-group--m-toast--Right);
+    width: calc(100% - calc(var(--pf-c-alert-group--m-toast--Right) * 2));
     max-width: var(--pf-c-alert-group--m-toast--MaxWidth);
-    padding: var(--pf-c-alert-group--m-toast--PaddingTop) var(--pf-c-alert-group--m-toast--PaddingRight) var(--pf-c-alert-group--m-toast--PaddingBottom) var(--pf-c-alert-group--m-toast--PaddingLeft);
-    pointer-events: none;
-
-    & > * {
-      pointer-events: initial;
-    }
   }
 }
