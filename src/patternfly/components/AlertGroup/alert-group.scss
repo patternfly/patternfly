@@ -10,8 +10,6 @@
   --pf-c-alert-group--m-toast--Right: var(--pf-global--spacer--xl);
   --pf-c-alert-group--m-toast--MaxWidth: #{pf-size-prem(600px)};
 
-  width: 100%;
-
   // Spacing between alerts
   > .pf-c-alert:not(:last-child) {
     margin-bottom: var(--pf-c-alert-group__item--MarginBottom);
