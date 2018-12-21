@@ -1,3 +1,7 @@
+## Overview 
+
+`.pf-c-alert-group` is required when used for toast notifications.
+
 ### Modifiers
 
 | Class | Applied To | Outcome |
