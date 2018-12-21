@@ -3,7 +3,7 @@
 // Tabs
 .pf-c-alert-group {
   // Alert Group variables
-  --pf-c-alert-group__item--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-alert-group__item--MarginTop: var(--pf-global--spacer--sm);
 
   // Toast variables
   --pf-c-alert-group--m-toast--Top: var(--pf-global--spacer--2xl);
@@ -11,8 +11,8 @@
   --pf-c-alert-group--m-toast--MaxWidth: #{pf-size-prem(600px)};
 
   // Spacing between alerts
-  > .pf-c-alert:not(:last-child) {
-    margin-bottom: var(--pf-c-alert-group__item--MarginBottom);
+  > * + * {
+    margin-top: var(--pf-c-alert-group__item--MarginTop);
   }
 
   // Toast positioning modifier
