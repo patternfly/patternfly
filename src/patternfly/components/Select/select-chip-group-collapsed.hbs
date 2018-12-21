@@ -1,28 +1,28 @@
-  {{#> chip}}
-    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_one"')}}
-      Arkansas
+{{#> chip}}
+  {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_one"')}}
+    Arkansas
+  {{/chip-text}}
+  {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_one ' id '-chip_one" aria-label="Remove" id="remove_' id '_chip_one"')}}
+  {{/button}}
+{{/chip}}
+{{#> chip}}
+  {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_two"')}}
+    Massachusetts
+  {{/chip-text}}
+  {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_two ' id '-chip_two" aria-label="Remove" id="remove_' id '_chip_two"')}}
+  {{/button}}
+{{/chip}}
+{{#> chip}}
+  {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_three"')}}
+    New Mexico
+  {{/chip-text}}
+  {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_three ' id '-chip_three" aria-label="Remove" id="remove_' id '_chip_three"')}}
+  {{/button}}
+{{/chip}}
+{{#> chip chip--modifier="pf-m-overflow"}}
+  {{#> button button--modifier="pf-m-plain"}}
+    {{#> chip-text}}
+      2 more
     {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_one ' id '-chip_one" aria-label="Remove" id="remove_' id '_chip_one"')}}
-    {{/button}}
-  {{/chip}}
-  {{#> chip}}
-    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_two"')}}
-      Massachusetts
-    {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_two ' id '-chip_two" aria-label="Remove" id="remove_' id '_chip_two"')}}
-    {{/button}}
-  {{/chip}}
-  {{#> chip}}
-    {{#> chip-text chip-text--attribute=(concat 'id="' id '-chip_three"')}}
-      New Mexico
-    {{/chip-text}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesCircleIcon="true" button--attribute=(concat 'aria-labelledby="remove_' id '_chip_three ' id '-chip_three" aria-label="Remove" id="remove_' id '_chip_three"')}}
-    {{/button}}
-  {{/chip}}
-	{{#> chip chip--modifier="pf-m-overflow"}}
-  	{{#> button button--modifier="pf-m-plain"}}
-    	{{#> chip-text}}
-      	2 more
-    	{{/chip-text}}
-  	{{/button}}
-	{{/chip}}
+  {{/button}}
+{{/chip}}

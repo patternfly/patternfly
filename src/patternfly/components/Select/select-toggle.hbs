@@ -9,7 +9,7 @@
 	{{#if select-toggle--attribute}}
 		{{{select-toggle--attribute}}}
 	{{/if}}>
-	<div class="pf-c-select-toggle__wrapper">	
+	<div class="pf-c-select__toggle-wrapper">	
 		{{!-- First part, chips --}}
 		{{#if select--IsMultiSelect}}
 			{{#if select--ItemIsSelected}}
@@ -30,7 +30,7 @@
 				{{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
 			{{/if}}
 		{{else if @partial-block}}
-				<span class="pf-c-select-toggle__text">{{> @partial-block}}</span>
+				<span class="pf-c-select__toggle-text">{{> @partial-block}}</span>
 		{{else}}
 				<span>Select</span>
 		{{/if}}
@@ -40,7 +40,7 @@
 	{{!-- Third part, badge --}}
 		{{#if select--IsCheckboxSelect}}
 			{{#if select--ItemIsSelected}} 
-				<div class="pf-c-select-toggle__badge">
+				<div class="pf-c-select__toggle-badge">
 				{{#> badge badge--modifier="pf-m-unread"}}
 					3
 				{{/badge}}
@@ -51,7 +51,7 @@
 	{{!-- Clear button if it's typeahead and something has been typed --}}
 	{{#if select--IsTypeahead}}
 		{{#if select--ItemIsSelected}}
-			{{> button button--modifier="pf-m-plain pf-c-select-toggle__clear" button--HasTimesCircleIcon="true" button--attribute='aria-label="Clear all"'}}
+			{{> button button--modifier="pf-m-plain pf-c-select__toggle-clear" button--HasTimesCircleIcon="true" button--attribute='aria-label="Clear all"'}}
 		{{/if}}
 	{{/if}}
 
