@@ -1,8 +1,19 @@
 @import "../../patternfly-utilities";
 
 .pf-c-list {
-  --pf-c-list--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-list--ul--ListStyle: none;
+  --pf-c-list--ul--li--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-list--ul--li--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-list--ul--li--icon--Right: var(--pf-global--spacer--lg);
+  --pf-c-list--ul--li--icon--Color: var(--pf-global--Color--200);
+  --pf-c-list--ul--li--hover--icon--Color: var(--pf-global--Color--300);
+  --pf-c-list--ul--li--hover--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-list--ul--li--text--secondary--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-list--ul--li--text--secondary--Color: var(--pf-global--Color--200);
+  --pf-c-list--ul--m-avatar--li--before--Width: var(--pf-global--spacer--lg);
+  --pf-c-list--ul--m-avatar--li--before--Height: var(--pf-global--spacer--lg);
+  --pf-c-list--ul--m-avatar--li--before--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-list--ul--m-avatar--li--before--BackgroundImage: url("/assets/images/img_avatar.svg");
 
   @at-root ul#{&} {
     list-style: var(--pf-c-list--ul--ListStyle);
@@ -11,33 +22,31 @@
     li {
       display: flex;
       align-items: center;
-      padding-top: 8px; // make variable
-      padding-bottom: 8px; // make variable
-      padding-left: 32px;
-      line-height: 16px; // make variable
-      list-style: none;
+      padding-top: var(--pf-c-list--ul--li--PaddingY);
+      padding-bottom: var(--pf-c-list--ul--li--PaddingY);
+      padding-left: var(--pf-c-list--ul--li--PaddingLeft);
 
       .pf-c-list__item-text {
         display: flex;
         flex-direction: column;
 
-        p {
-          font-size: 14px; // make variable
-          color: var(--pf-global--Color--200); // make variable
+        .pf-c-list__item-text-secondary {
+          font-size: var(--pf-c-list--ul--li--text--secondary--FontSize);
+          color: var(--pf-c-list--ul--li--text--secondary--Color);
         }
       }
 
       .pf-c-list__item-icon {
         position: absolute;
-        right: 24px;
-        color: var(--pf-global--Color--200);
+        right: var(--pf-c-list--ul--li--icon--Right);
+        color: var(--pf-c-list--ul--li--icon--Color);
       }
 
       &:hover {
-        background-color: #{$pf-color-black-150}; // make variable
+        background-color: var(--pf-c-list--ul--li--hover--BackgroundColor);
 
         .pf-c-list__item-icon {
-          color: var(--pf-global--Color--300);
+          color: var(--pf-c-list--ul--li--hover--icon--Color);
         }
       }
     }
@@ -48,11 +57,11 @@
   
         &::before {
           display: inline-block;
-          width: 24px; // make variable 
-          height: 24px; // make variable
-          margin-right: 16px; // make variable
+          width: var(--pf-c-list--ul--m-avatar--li--before--Width); 
+          height: var(--pf-c-list--ul--m-avatar--li--before--Height);
+          margin-right: var(--pf-c-list--ul--m-avatar--li--before--MarginRight);
           content: "";
-          background-image: url("/assets/images/img_avatar.svg");
+          background-image: var(--pf-c-list--ul--m-avatar--li--before--BackgroundImage);
         }
         /* stylelint-enable */
       }
