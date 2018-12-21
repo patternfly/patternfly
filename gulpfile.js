@@ -24,13 +24,12 @@ gulp.task('build-tmp', () =>
         ignorePaths: ['**/examples/*.scss']
       })
     )
-    .pipe(replace('@import "../../patternfly-utilities";', ''))
     .pipe(gulp.dest('./tmp'))
 );
 
 gulp.task('build-library', ['build-tmp'], () =>
   gulp
-    .src('./tmp/patternfly*.scss')
+    .src(['./tmp/patternfly*.scss', '!./tmp/patternfly-imports.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist'))
 );
