@@ -2,7 +2,8 @@
 
 .pf-c-list {
   --pf-c-list--ul--ListStyle: none;
-  --pf-c-list--ul--li--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-list--ul--li--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-list--ul--li--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-list--ul--li--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-list--ul--li--icon--Right: var(--pf-global--spacer--lg);
   --pf-c-list--ul--li--icon--Color: var(--pf-global--Color--200);
@@ -22,8 +23,8 @@
     li {
       display: flex;
       align-items: center;
-      padding-top: var(--pf-c-list--ul--li--PaddingY);
-      padding-bottom: var(--pf-c-list--ul--li--PaddingY);
+      padding-top: var(--pf-c-list--ul--li--PaddingTop);
+      padding-bottom: var(--pf-c-list--ul--li--PaddingBottom);
       padding-left: var(--pf-c-list--ul--li--PaddingLeft);
 
       .pf-c-list__item-text {
