@@ -40,53 +40,53 @@
         {{#> title titleType="h2" title--modifier="pf-m-md"}}
           Or log in with
         {{/title}}
-        {{#> list list--modifier="pf-m-grid"}}
-          <li>
+        {{#> login-main-footer-grid}}
+          {{#> login-main-footer-grid-item}}
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-google.svg" alt="">
               {{#> login-main-footer-link-text}}
                 Google
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          </li>
-          <li>
+          {{/login-main-footer-grid-item}}
+          {{#> login-main-footer-grid-item}}
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-github.svg" alt="">
               {{#> login-main-footer-link-text}}
                 GitHub
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          </li>
-          <li>
+          {{/login-main-footer-grid-item}}
+          {{#> login-main-footer-grid-item}}
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-dropbox.svg" alt="">
               {{#> login-main-footer-link-text}}
                 Dropbox
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          </li>
-          <li>
+          {{/login-main-footer-grid-item}}
+          {{#> login-main-footer-grid-item}}
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-facebook.svg" alt="">
               {{#> login-main-footer-link-text}}
                 Facebook
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          </li>
-          <li>
+          {{/login-main-footer-grid-item}}
+          {{#> login-main-footer-grid-item}}
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-gitlab.svg" alt="">
               {{#> login-main-footer-link-text}}
                 GitLab
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          </li>
-          <li>
+          {{/login-main-footer-grid-item}}
+          {{#> login-main-footer-grid-item login-main-footer-grid-item--modifier="pf-m-more"}}
             {{#> button button--attribute='id="login-more"' button--modifier="pf-m-link"}}
               More...
             {{/button}}
-          </li>
-        {{/list}}
+          {{/login-main-footer-grid-item}}
+        {{/login-main-footer-grid}}
       {{/login-main-footer}}
     {{/login-main}}
     {{#> login-footer}}

@@ -54,6 +54,13 @@
   --pf-c-login__main-footer-link--GridGap: var(--pf-global--spacer--sm);
   --pf-c-login__main-footer-link--Color: var(--pf-global--Color--dark-100);
   --pf-c-login__main-footer-link--hover--Color: var(--pf-global--Color--dark-200);
+  --pf-c-login__main-footer-grid--GridGap: var(--pf-global--gutter);
+  --pf-c-login__main-footer-grid--GridTemplateColumns: repeat(5, 1fr);
+  --pf-c-login__main-footer-grid--md--GridTemplateColumns: repeat(auto-fit, minmax(100px, 1fr));
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    --pf-c-login__main-footer-grid--GridTemplateColumns: var(--pf-c-login__main-footer-grid--md--GridTemplateColumns);
+  }
 
   display: flex;
   justify-content: center;
@@ -197,11 +204,14 @@
 .pf-c-login__main-footer-link {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--pf-c-login__main-footer-link--GridGap);
   align-items: center;
   padding-top: var(--pf-c-login__main-footer-link--PaddingX);
   padding-bottom: var(--pf-c-login__main-footer-link--PaddingX);
   color: var(--pf-c-login__main-footer-link--Color);
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    grid-gap: var(--pf-c-login__main-footer-link--GridGap);
+  }
 
   &:hover,
   &.pf-m-hover {
@@ -210,10 +220,13 @@
 }
 
 .pf-c-login__main-footer-link-text {
-  display: none;
-
-  @media (min-width: $pf-global--breakpoint--sm) {
-    display: initial;
+  // styles the text to be hidden from the screen but read by a screen reader.
+  @media (max-width: $pf-global--breakpoint--md) {
+    position: fixed;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 }
 
@@ -223,6 +236,32 @@
   @media (max-width: $pf-global--breakpoint--sm) {
     padding-right: var(--pf-c-login__footer--sm--PaddingRight);
     padding-left: var(--pf-c-login__footer--sm--PaddingLeft);
+  }
+}
+
+.pf-c-login__main-footer-grid {
+  display: grid;
+  grid-gap: var(--pf-c-login__main-footer-grid--GridGap);
+  grid-template-columns: var(--pf-c-login__main-footer-grid--GridTemplateColumns);
+
+  @media (max-width: $pf-global--breakpoint--md) {
+    justify-items: center;
+  }
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    .pf-c-login__main-footer-grid-item {
+      .pf-c-button {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.pf-c-login__main-footer-grid-item {
+  &.pf-m-more {
+    @media (max-width: $pf-global--breakpoint--md) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
