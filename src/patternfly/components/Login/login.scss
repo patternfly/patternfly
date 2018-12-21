@@ -23,7 +23,8 @@
   --pf-c-login__main--xl--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-login__footer-link--Color: var(--pf-global--Color--light-100);
+  --pf-c-login__footer-list-link--Color: var(--pf-global--Color--light-100);
+  --pf-c-login__footer-list-li--MarginRight: var(--pf-global--spacer--md);
 
   // Login Box
   --pf-c-login__main--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -270,15 +271,16 @@
   flex-wrap: wrap;
 
   li {
-    margin-right: 16px;
+    &:not(:last-child) {
+      margin-right: var(--pf-c-login__footer-list-li--MarginRight);
+    }
+  }
+
+  .pf-c-login__footer-list-link {
+    &,
+    &:hover,
+    &.pf-m-hover {
+      color: var(--pf-c-login__footer-list-link--Color);
+    }
   }
 }
-
-.pf-c-login__footer-list-link {
-  &,
-  &:hover,
-  &.pf-m-hover {
-    color: var(--pf-c-login__footer-link--Color);
-  }
-}
-
