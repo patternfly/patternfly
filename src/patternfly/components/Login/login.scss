@@ -220,9 +220,6 @@
 }
 
 .pf-c-login__main-footer-link-text {
-  display: initial;
-
-
   // styles the text to be hidden from the screen but read by a screen reader.
   @media (max-width: $pf-global--breakpoint--md) {
     position: fixed;
