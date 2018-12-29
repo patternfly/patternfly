@@ -12,7 +12,10 @@
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--lg);
 
   // Body
-  --pf-c-alert__body--Padding: var(--pf-global--spacer--md);
+  --pf-c-alert__body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__body--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-alert__body--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-alert__body--PaddingLeft: var(--pf-global--spacer--md);
 
   // Title
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
@@ -21,8 +24,10 @@
   --pf-c-alert__title--Color: var(--pf-global--Color--100);
 
   // Action
-  --pf-c-alert__action--PaddingY: var(--pf-global--spacer--md);
-  --pf-c-alert__action--PaddingX: var(--pf-global--spacer--lg);
+  --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-alert__action--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-alert__action--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Success
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
@@ -90,7 +95,7 @@
 
 .pf-c-alert__body {
   flex: 1 1 100%;
-  padding: var(--pf-c-alert__body--Padding);
+  padding: var(--pf-c-alert__body--PaddingTop) var(--pf-c-alert__body--PaddingRight) var(--pf-c-alert__body--PaddingBottom) var(--pf-c-alert__body--PaddingLeft);
 }
 
 .pf-c-alert__title {
@@ -101,6 +106,6 @@
 }
 
 .pf-c-alert__action {
-  padding: var(--pf-c-alert__action--PaddingY) var(--pf-c-alert__action--PaddingX);
+  padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
   white-space: nowrap;
 }
