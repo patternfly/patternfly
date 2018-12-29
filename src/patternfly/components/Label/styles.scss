@@ -2,8 +2,10 @@
 
 .pf-c-label {
   // Component
-  --pf-c-label--PaddingY: var(--pf-global--spacer--xs);
-  --pf-c-label--PaddingX: var(--pf-global--spacer--sm);
+  --pf-c-label--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-label--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-label--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-label--BorderRadius: var(--pf-global--BorderRadius--sm);
 
   // Color
@@ -18,7 +20,11 @@
   --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
   display: inline-block;
-  padding: var(--pf-c-label--PaddingY) var(--pf-c-label--PaddingX);
+  padding:
+    var(--pf-c-label--PaddingTop)
+    var(--pf-c-label--PaddingRight)
+    var(--pf-c-label--PaddingBottom)
+    var(--pf-c-label--PaddingLeft);
   font-size: var(--pf-c-label--FontSize);
   color: var(--pf-c-label--Color);
   text-align: center;
@@ -35,5 +41,3 @@
     --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
   }
 }
-
-
