@@ -5,7 +5,8 @@
   --pf-c-badge--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-badge--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-badge--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-badge--PaddingX: var(--pf-global--spacer--sm);
+  --pf-c-badge--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-badge--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-badge--Color: var(--pf-global--Color--dark-100);
 
   // Modifiers
@@ -15,8 +16,8 @@
   --pf-c-badge--m-unread--Color: var(--pf-global--Color--light-100);
 
   display: inline-block;
-  padding-right: var(--pf-c-badge--PaddingX);
-  padding-left: var(--pf-c-badge--PaddingX);
+  padding-right: var(--pf-c-badge--PaddingRight);
+  padding-left: var(--pf-c-badge--PaddingLeft);
   font-size: var(--pf-c-badge--FontSize);
   font-weight: var(--pf-c-badge--FontWeight);
   color: var(--pf-c-badge--Color);
