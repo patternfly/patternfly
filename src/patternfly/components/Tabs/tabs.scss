@@ -13,8 +13,10 @@
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
 
   // Tab buttons
-  --pf-c-tabs__button--PaddingY: var(--pf-global--spacer--sm);
-  --pf-c-tabs__button--PaddingX: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Scroll buttons
   --pf-c-tabs__scroll-button--Width: var(--pf-global--spacer--xl);
@@ -159,7 +161,7 @@
 // Tab button
 .pf-c-tabs__button {
   position: relative;
-  padding: var(--pf-c-tabs__button--PaddingY) var(--pf-c-tabs__button--PaddingX);
+  padding: var(--pf-c-tabs__button--PaddingTop) var(--pf-c-tabs__button--PaddingRight) var(--pf-c-tabs__button--PaddingBottom) var(--pf-c-tabs__button--PaddingLeft);
   user-select: none;
   border: 0;
 
