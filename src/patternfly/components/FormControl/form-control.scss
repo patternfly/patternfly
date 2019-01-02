@@ -84,7 +84,7 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   /* stylelint-enable */
 
   &::placeholder {
-    color: var(--pf-c-form-control--placeholder--Color);
+    --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color);
   }
 
   &[readonly] {
@@ -93,48 +93,52 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     &:hover,
     &.pf-m-focus,
     &:focus {
-      padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
+      --pf-c-form-control--PaddingBottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
+      --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
+
       background-color: var(--pf-c-form-control--readonly--focus--BackgroundColor);
-      border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
       border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
     }
   }
 
   @at-root select#{&} {
-    padding-right: var(--pf-c-form-control__select--PaddingRight);
+    --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
+
     background: var(--pf-c-form-control__select--Background);
 
     &[aria-invalid="true"] {
       --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--FontSize) - calc(var(--pf-c-form-control--PaddingRight) * 2));
-
-      background: var(--pf-c-form-control__select--Background), var(--pf-c-form-control--invalid--Background);
+      --pf-c-form-control__select--Background: var(--pf-c-form-control__select--Background), var(--pf-c-form-control--invalid--Background);
     }
   }
 
   &.pf-m-hover,
   &:hover {
-    border-bottom-color: var(--pf-c-form-control--hover--BorderBottomColor);
+    --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--hover--BorderBottomColor);
   }
 
   &.pf-m-focus,
   &:focus {
-    padding-bottom: var(--pf-c-form-control--focus--PaddingBottom);
-    border-bottom-color: var(--pf-c-form-control--focus--BorderBottomColor);
+    --pf-c-form-control--PaddingBottom: var(--pf-c-form-control--focus--PaddingBottom);
+    --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--focus--BorderBottomColor);
+
     border-bottom-width: var(--pf-c-form-control--focus--BorderBottomWidth);
   }
 
   &:disabled {
-    color: var(--pf-c-form-control--disabled--Color);
+    --pf-c-form-control--Color: var(--pf-c-form-control--disabled--Color);
+    --pf-c-form-control--BackgroundColor: var(--pf-c-form-control--disabled--BackgroundColor);
+
     cursor: not-allowed;
-    background-color: var(--pf-c-form-control--disabled--BackgroundColor);
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
 
   &[aria-invalid="true"] {
-    padding-right: var(--pf-c-form-control--invalid--PaddingRight);
-    padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom);
+    --pf-c-form-control--PaddingRight: var(--pf-c-form-control--invalid--PaddingRight);
+    --pf-c-form-control--PaddingBottom: var(--pf-c-form-control--invalid--PaddingBottom);
+    --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--invalid--BorderBottomColor);
+
     background: var(--pf-c-form-control--invalid--Background);
-    border-bottom-color: var(--pf-c-form-control--invalid--BorderBottomColor);
     border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
   }
 }
