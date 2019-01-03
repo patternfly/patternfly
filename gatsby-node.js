@@ -3,7 +3,6 @@ const fs = require('fs-extra');
 const inflection = require('inflection');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const glob = require('util').promisify(require('glob'));
 const resolveAliases = require('./build/resolveAliases');
 
 const COMPONENTS_PATH = path.resolve(__dirname, './src/patternfly/components');
@@ -22,8 +21,8 @@ const UTILITIES_PATHS = fs.readdirSync(UTILITIES_PATH).map(name => path.resolve(
 
 const UPGRADES_PATHS = fs.readdirSync(UPGRADE_PATH).map(name => path.resolve(UPGRADE_PATH, `./${name}`));
 
-exports.onCreateNode = ({ node, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions;
   const PAGES_BASE_DIR = path.resolve(__dirname, './src/site/pages');
   const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/components');
   const DEMOS_BASE_DIR = path.resolve(__dirname, './src/patternfly/demos');
@@ -79,8 +78,8 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   }
 };
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   return graphql(`
     {
@@ -116,20 +115,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   });
 };
 
-exports.createLayouts = ({ graphql, store, boundActionCreators: { createLayout, deleteLayout } }) =>
-  glob(path.resolve(__dirname, 'src/site/layouts/**.js')).then(matches => {
-    matches.forEach(layoutFilePath => {
-      const id = path.parse(layoutFilePath).name;
-      deleteLayout(id);
-      createLayout({
-        id,
-        component: layoutFilePath
-      });
-    });
-  });
-
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions;
   const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
   const UPGRADES_PAGE_REGEX = /^\/(upgrade-examples)\/([A-Za-z0-9_-]+)/;
@@ -184,33 +171,32 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   });
 };
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  config.loader('markdown-loader', current => {
-    current.test = /\.md$/;
-    current.loader = 'html-loader!markdown-loader';
-    return current;
-  });
-  config.loader('html-loader', current => {
-    current.test = /\.html$/;
-    current.loader = 'html-loader';
-    return current;
-  });
-  config.loader('handlebars-loader', current => {
-    current.test = /\.hbs$/;
-    current.loader = 'handlebars-loader';
-    current.query = {
-      partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
-        .concat(DEMO_PATH)
-        .concat(UTILITIES_PATHS)
-        .concat(UPGRADES_PATHS),
-      helperDirs: path.resolve(__dirname, './build/helpers')
-    };
-    return current;
-  });
-
-  config.merge({
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          loader: 'html-loader!markdown-loader'
+        },
+        {
+          test: /\.hbs$/,
+          query: {
+            partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
+              .concat(DEMO_PATH)
+              .concat(UTILITIES_PATHS)
+              .concat(UPGRADES_PATHS),
+            helperDirs: path.resolve(__dirname, './build/helpers')
+          },
+          loader: 'handlebars-loader'
+        }
+      ]
+    },
     resolve: {
       alias: resolveAliases
+    },
+    resolveLoader: {
+      alias: { raw: 'raw-loader' }
     },
     plugins: [
       new StyleLintPlugin({
@@ -227,5 +213,4 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       })
     ]
   });
-  return config;
 };
