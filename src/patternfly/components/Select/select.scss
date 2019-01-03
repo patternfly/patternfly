@@ -140,14 +140,8 @@
     &::before {
       --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--m-expanded--BorderBottomColor);
       --pf-c-form-control--focus--BorderBottomWidth: var(--pf-c-select__toggle--m-expanded--BorderBottomWidth);
-
-      // border-bottom-width: var(--pf-c-select__toggle--m-expanded--BorderBottomWidth);
     }
   }
-
-
-  // --pf-c-form-control--focus--PaddingBottom: calc(var(--pf-c-form-control--PaddingBottom) - calc(var(--pf-c-form-control--focus--BorderBottomWidth) - var(--pf-c-form-control--BorderWidth)));
-
 
   &.pf-m-typeahead {
     --pf-c-select__toggle--PaddingTop: 0;
@@ -248,6 +242,12 @@
   border-bottom-style: inherit;
   border-bottom-width: inherit;
   border-left: var(--pf-c-select__toggle-typeahead--BorderLeft);
+
+  &:focus,
+  &.pf-m-focus {
+    // Set the bottom margin to allow for the bottom border width of the containing toggle
+    padding-bottom: var(--pf-c-form-control--PaddingBottom);
+  }
 }
 
 .pf-c-select__menu {
