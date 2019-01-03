@@ -1,12 +1,15 @@
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
   {{#> popover-content}}
-    {{#> popover-header}}
-      {{#> popover-header-title popover-header-title--attribute='id="popover-left-header"'}}
+    {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close"'}}
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-left-header"'}}
         Popover Header
-      {{/popover-header-title}}
-    {{/popover-header}}
+    {{/title}}
     {{#> popover-body popover-body--attribute='id="popover-left-body"'}}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+      Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
+    {{#> popover-footer}}
+      Popover Footer
+    {{/popover-footer}}
   {{/popover-content}}
 {{/popover}}

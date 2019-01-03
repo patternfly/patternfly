@@ -1,21 +1,17 @@
 {{#> popover-upgrade-examples}}
-<div class="pf-c-popover pf-m-right" role="dialog" aria-modal="true" aria-labelledby="popover-right-header" aria-describedby="popover-right-body">
-  <div class="pf-c-popover__arrow">
-  </div>
-  <div class="pf-c-popover__content">
-    <div class="pf-c-popover__close">
-      <button class="pf-c-button pf-m-plain" aria-label="Close">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <header class="pf-c-popover__header">
-      <h1 class="pf-c-popover__header-title" id="popover-right-header">
+  {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-labelledby="popover-right-header" aria-describedby="popover-right-body"'}}
+    {{#> popover-content}}
+      {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close"'}}
+      {{/button}}
+      {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-right-header"'}}
         Popover Header
-      </h1>
-    </header>
-    <div class="pf-c-popover__body" id="popover-right-body">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
-    </div>
-  </div>
-</div>
+      {{/title}}
+      {{#> popover-body popover-body--attribute='id="popover-right-body"'}}
+        Popovers are triggered by click rather than hover. Click again to close.
+      {{/popover-body}}
+      {{#> popover-footer}}
+        Popover Footer
+      {{/popover-footer}}
+    {{/popover-content}}
+  {{/popover}}
 {{/popover-upgrade-examples}}
