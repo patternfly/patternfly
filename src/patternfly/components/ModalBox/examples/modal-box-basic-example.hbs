@@ -1,14 +1,10 @@
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      {{> button-icon button-icon--type="times"}}
-    {{/button}}
-  {{/modal-box-close}}
-  {{#> modal-box-header}}
-    {{#> modal-box-header-title modal-box-header-title--attribute='id="modal-title"'}}
-      Modal Header
-    {{/modal-box-header-title}}
-  {{/modal-box-header}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+    {{> button-icon button-icon--type="times"}}
+  {{/button}}
+  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
+    Modal Header
+  {{/title}}
   {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
     To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
   {{/modal-box-body}}
