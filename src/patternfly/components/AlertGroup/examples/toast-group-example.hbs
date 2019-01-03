@@ -11,6 +11,11 @@
             Success notification title
         {{/alert-title}}
       {{/alert-body}}
+      {{#> alert-action}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss"'}}
+          <i class="fas fa-times"></i> 
+        {{/button}}
+      {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
 
@@ -25,8 +30,8 @@
         {{/alert-title}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Button 
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss"'}}
+          <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
     {{/alert}}
@@ -42,9 +47,17 @@
           Info notification title
         {{/alert-title}}
         {{#> alert-description}}
-          This is a description of the notification content.
+          There are 2 more unread notifications. Open the notification drawer to see them.
         {{/alert-description}}
       {{/alert-body}}
+      {{#> alert-action}}
+        {{#> button button--modifier="pf-m-link" button--attribute='aria-label="View all notifications"'}}
+          View all
+        {{/button}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss"'}}
+          <i class="fas fa-times"></i> 
+        {{/button}}
+      {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
 {{/alert-group}}

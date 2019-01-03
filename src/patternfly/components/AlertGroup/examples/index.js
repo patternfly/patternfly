@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Alert Group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
+      <Example heading="Inline Alert Group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
         {alertGroupExample}
       </Example>
       <Example heading="Toast Alert Group" fullPageOnly="true" handlebars={toastGroupExampleRaw} docs={toastGroupDocs}>

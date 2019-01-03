@@ -1,4 +1,4 @@
-## Overview 
+## Overview
 
 `.pf-c-alert-group` is optional when only one alert is needed. It becomes required when more than one alert is used in a list.
 
