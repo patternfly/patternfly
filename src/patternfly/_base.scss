@@ -1,7 +1,13 @@
 // CSS shild against PF 3
-[class^="pf-"],
-[class^="pf-"]::before,
-[class^="pf-"]::after {
+[class*="pf-c-"],
+[class*="pf-l-"],
+[class*="pf-u-"],
+[class*="pf-c-"]::before,
+[class*="pf-l-"]::before,
+[class*="pf-u-"]::before,
+[class*="pf-c-"]::after,
+[class*="pf-l-"]::after,
+[class*="pf-u-"]::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
