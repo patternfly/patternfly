@@ -1,7 +1,6 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import Upgrade from '@siteComponents/Upgrade';
 import alertUpgradeExamplespf3alertRaw from '!raw!./alert-upgrade-example-pf3-alert.hbs';
 import alertUpgradeExamplespf3notificationRaw from '!raw!./alert-upgrade-example-pf3-notification.hbs';
 import alertUpgradeExamplespf4alertRaw from '!raw!./alert-upgrade-example-pf4-alert.hbs';
@@ -24,7 +23,6 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Upgrade />
       <Example heading="Patternfly3 Alert" handlebars={alertUpgradeExamplespf3alertRaw}>
         {alertUpgradeExamplespf3alert}
       </Example>

@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import '../../../patternfly/patternfly-base.scss';
+import Prism from 'prismjs'; // eslint-disable-line no-unused-vars
+import '../workspace.scss';
 
 export default ({ children }) => (
-  <div>
+  <main>
     <Helmet>
       <title>PF Next</title>
       <html lang="en-US" />
@@ -20,6 +21,6 @@ export default ({ children }) => (
         crossOrigin="anonymous"
       />
     </Helmet>
-    <div>{children}</div>
-  </div>
+    <div>{children()}</div>
+  </main>
 );

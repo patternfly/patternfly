@@ -2,7 +2,7 @@ import React from 'react';
 import Preview from '@siteComponents/Preview';
 import GeneratedSource from '@siteComponents/GeneratedSource';
 import Handlebars from '@siteComponents/Handlebars';
-import { Link } from 'gatsby';
+import Link from 'gatsby-link';
 
 import 'prismjs/themes/prism-coy.css';
 import './styles.scss';

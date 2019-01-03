@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'gatsby-link';
 import './styles.scss';
 
 export default class Preview extends React.Component {
