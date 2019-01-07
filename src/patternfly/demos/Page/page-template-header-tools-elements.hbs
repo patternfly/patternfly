@@ -2,17 +2,20 @@
   {{#> toolbar}}
     {{#> toolbar-group toolbar-group--modifier="pf-u-sr-only pf-u-visible-on-lg"}}
       {{#> toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--HasBellIcon="true" pagelayout-icon--bell="true" button--attribute='aria-label="Notifications"'}}
+        {{#> button button--modifier="pf-m-plain" pagelayout-icon--bell="true" button--attribute='aria-label="Notifications"'}}
+          {{> button-icon button-icon--type="bell"}}
         {{/button}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--HasCogIcon="true" button--attribute='aria-label="Settings"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
+          {{> button-icon button-icon--type="cog"}}
         {{/button}}
       {{/toolbar-item}}
     {{/toolbar-group}}
     {{#> toolbar-group}}
       {{#> toolbar-item toolbar-item--modifier="pf-u-hidden-on-lg pf-u-mr-0"}}
-        {{#> button button--modifier="pf-m-plain" button--HasEllipsisIcon="true" button--attribute='aria-label="Overflow actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Overflow actions"'}}
+          {{> button-icon button-icon--type="ellipsis-v"}}
         {{/button}}
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier="pf-u-sr-only pf-u-visible-on-md"}}
