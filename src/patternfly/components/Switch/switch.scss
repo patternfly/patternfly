@@ -11,6 +11,9 @@
   --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__toggle--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
   --pf-c-switch__input--disabled__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  /* stylelint-disable */
+  --pf-c-switch__input--checked__toggle-Color: var(--pf-c-switch__toggle--before--BackgroundColor);
+  /* stylelint-enable */
   --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch--Height);
   --pf-c-switch__toggle--Padding: calc(#{var(--pf-c-switch--Height)} / 2 * (1 - 1 / #{var(--pf-global--golden-ratio)}));
   --pf-c-switch__toggle--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
@@ -48,6 +51,12 @@
 
       ~ .pf-c-switch__toggle {
         background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
+
+        /* stylelint-disable */
+        .svg-inline--fa.fa-check {
+          color: var(--pf-c-switch__input--checked__toggle-Color);
+        }
+        /* stylelint-enable */
 
         /* stylelint-disable-next-line */
         &::before {
