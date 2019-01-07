@@ -10,28 +10,31 @@
         {{#> title titleType="h1" title--modifier="pf-m-3xl"}}
           Log in to your account
         {{/title}}
-        {{#> dropdown id="login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
+        {{#> dropdown id="invalid-login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
           English
         {{/dropdown}}
         <p>Need an account? <a href="https://www.patternfly.org/">Sign up.</a></p>
       {{/login-main-header}}
       {{#> login-main-body}}
         {{#> form}}
+          {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='aria-live="polite"'}}
+            Invalid username or password. Please try again.
+          {{/form-helper-text}}
           {{#> form-group}}
-            {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
-            {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+            {{#> form-label form-label--attribute='for="invalid-login-demo-form-username"' required="true"}}Username{{/form-label}}
+            {{#> form-control controlType="input" input="true" form-control--attribute='required type="text" id="invalid-login-demo-form-username" name="invalid-login-demo-form-username" aria-invalid="true"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
-            {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
-            {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+            {{#> form-label form-label--attribute='for="invalid-login-demo-form-password"' required="true"}}Password{{/form-label}}
+            {{#> form-control controlType="input" input="true" form-control--attribute='required type="password" id="invalid-login-demo-form-password" name="invalid-login-demo-form-password" aria-invalid="true"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}
             {{#> button button--modifier="pf-m-primary" button--attribute='type="submit"'}}
               Log in
             {{/button}}
             {{#> check}}
-              {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
-              {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+              {{#> check-input check-input--attribute='type="checkbox" id="invalid-login-demo-checkbox" name="invalid-login-demo-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="invalid-login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}
           {{/form-group}}
         {{/form}}
@@ -40,53 +43,53 @@
         {{#> title titleType="h2" title--modifier="pf-m-md"}}
           Or log in with
         {{/title}}
-        {{#> login-main-footer-grid}}
-          {{#> login-main-footer-grid-item}}
+        {{#> list list--modifier="pf-m-grid"}}
+          <li>
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-google.svg" alt="">
               {{#> login-main-footer-link-text}}
                 Google
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          {{/login-main-footer-grid-item}}
-          {{#> login-main-footer-grid-item}}
+          </li>
+          <li>
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-github.svg" alt="">
               {{#> login-main-footer-link-text}}
                 GitHub
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          {{/login-main-footer-grid-item}}
-          {{#> login-main-footer-grid-item}}
+          </li>
+          <li>
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-dropbox.svg" alt="">
               {{#> login-main-footer-link-text}}
                 Dropbox
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          {{/login-main-footer-grid-item}}
-          {{#> login-main-footer-grid-item}}
+          </li>
+          <li>
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-facebook.svg" alt="">
               {{#> login-main-footer-link-text}}
                 Facebook
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          {{/login-main-footer-grid-item}}
-          {{#> login-main-footer-grid-item}}
+          </li>
+          <li>
             {{#> login-main-footer-link}}
               <img src="/assets/images/logo-gitlab.svg" alt="">
               {{#> login-main-footer-link-text}}
                 GitLab
               {{/login-main-footer-link-text}}
             {{/login-main-footer-link}}
-          {{/login-main-footer-grid-item}}
-          {{#> login-main-footer-grid-item login-main-footer-grid-item--modifier="pf-m-more"}}
-            {{#> button button--attribute='id="login-demo-more"' button--modifier="pf-m-link"}}
+          </li>
+          <li>
+            {{#> button button--attribute='id="invalid-login-demo-more"' button--modifier="pf-m-link"}}
               More...
             {{/button}}
-          {{/login-main-footer-grid-item}}
-        {{/login-main-footer-grid}}
+          </li>
+        {{/list}}
       {{/login-main-footer}}
     {{/login-main}}
     {{#> login-footer}}
