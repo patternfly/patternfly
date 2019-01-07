@@ -47,7 +47,6 @@
   --pf-c-nav__simple-list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--xl);
 
-
   // font
   --pf-c-nav__simple-list-link--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-nav__simple-list-link--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
@@ -170,10 +169,11 @@
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: #{$pf-color-black-150};
 
-  // Modifer - simple list separator
-  --pf-c-nav__simple-list-link-m-separator--after--Width: calc(100% - var(--pf-global--spacer--xl));
-  --pf-c-nav__simple-list-link-m-separator--after--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__simple-list-link-m-separator--after--Background: var(--pf-global--BorderColor--light-200);
+  // Modifier - simple list separator
+  --pf-c-nav__simple-list-link--m-separator--after--Width: calc(100% - var(--pf-c-nav__simple-list-link--PaddingLeft));
+  --pf-c-nav__simple-list-link--m-separator--after--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__simple-list-link--m-separator--after--Background: var(--pf-global--BorderColor--light-200);
+  --pf-c-nav__simple-list-link--m-separator--after--Bottom: calc(-1 * var(--pf-c-nav__simple-list-link--m-separator--after--Height));
 
   // Modifier - current item
   --pf-c-nav__list-horizontal-link--m-current--Color: var(--pf-global--active-color--300);
@@ -368,15 +368,16 @@
 
     &.pf-m-separator {
       position: relative;
+      margin-bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
 
       &::after {
         position: absolute;
         right: 0;
-        bottom: 0;
-        width: var(--pf-c-nav__simple-list-link-m-separator--after--Width);
-        height: var(--pf-c-nav__simple-list-link-m-separator--after--Height);
+        bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Bottom);
+        width: var(--pf-c-nav__simple-list-link--m-separator--after--Width);
+        height: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
         content: "";
-        background: var(--pf-c-nav__simple-list-link-m-separator--after--Background);
+        background: var(--pf-c-nav__simple-list-link--m-separator--after--Background);
       }
     }
 
@@ -389,7 +390,7 @@
       }
     }
 
-    // If child of list, hide bottom border treatment
+    // If child of list, hide bottom border treatment unless includes .pf-m-separator
     &:not(.pf-m-separator) {
       &::after {
         display: none;
