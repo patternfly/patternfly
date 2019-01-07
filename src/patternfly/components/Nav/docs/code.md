@@ -37,3 +37,4 @@ The navigation system relies on several different sub-components:
 | `.pf-m-current`                       | `.pf-c-nav__link`                       | Modifies for the current state |
 | `.pf-m-active`                        | `.pf-c-nav__link`,                      | Modifies to display the link as active |
 | `.pf-m-disabled`                      | `.pf-c-nav__link`,                      | Modifies to display the link as disabled |
+| `.pf-m-separator`                    | `.pf-c-nav__simple-list.pf-c-nav__link`                       | Modifies to display the separator state for link in the simple list |

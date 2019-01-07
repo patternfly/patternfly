@@ -47,6 +47,7 @@
   --pf-c-nav__simple-list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--xl);
 
+
   // font
   --pf-c-nav__simple-list-link--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-nav__simple-list-link--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
@@ -168,6 +169,11 @@
   --pf-c-nav__simple-list-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: #{$pf-color-black-150};
+
+  // Modifer - simple list separator
+  --pf-c-nav__simple-list-link-m-separator--after--Width: calc(100% - var(--pf-global--spacer--xl));
+  --pf-c-nav__simple-list-link-m-separator--after--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__simple-list-link-m-separator--after--Background: var(--pf-global--BorderColor--light-200);
 
   // Modifier - current item
   --pf-c-nav__list-horizontal-link--m-current--Color: var(--pf-global--active-color--300);
@@ -360,6 +366,20 @@
       background-color: var(--pf-c-nav__simple-list-link--m-current--BackgroundColor);
     }
 
+    &.pf-m-separator {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: var(--pf-c-nav__simple-list-link-m-separator--after--Width);
+        height: var(--pf-c-nav__simple-list-link-m-separator--after--Height);
+        content: "";
+        background: var(--pf-c-nav__simple-list-link-m-separator--after--Background);
+      }
+    }
+
     // Adjust padding of descendant links
     .pf-c-nav__item & {
       padding-left: var(--pf-c-nav__subnav-item--PaddingLeft);
@@ -370,8 +390,10 @@
     }
 
     // If child of list, hide bottom border treatment
-    &::after {
-      display: none;
+    &:not(.pf-m-separator) {
+      &::after {
+        display: none;
+      }
     }
   }
 }
