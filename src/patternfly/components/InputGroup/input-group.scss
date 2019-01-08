@@ -2,12 +2,14 @@
 
 .pf-c-input-group {
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__text--PaddingX: var(--pf-global--spacer--sm);
+  --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
   --pf-c-input-group__text--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BorderXColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--light-200);
   --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--dark);
+  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
 
@@ -84,13 +86,13 @@
   .pf-c-input-group__text {
     display: flex;
     align-items: center;
-    padding-right: var(--pf-c-input-group__text--PaddingX);
-    padding-left: var(--pf-c-input-group__text--PaddingX);
+    padding-right: var(--pf-c-input-group__text--PaddingRight);
+    padding-left: var(--pf-c-input-group__text--PaddingLeft);
     font-size: var(--pf-c-input-group__text--FontSize);
     color: var(--pf-c-input-group__text--Color);
     text-align: center;
     background-color: var(--pf-c-input-group__text--BackgroundColor);
     border: var(--pf-c-input-group__text--BorderWidth) solid;
-    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderXColor) var(--pf-c-input-group__text--BorderBottomColor);
+    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
   }
 }
