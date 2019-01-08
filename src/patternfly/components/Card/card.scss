@@ -43,24 +43,15 @@
 
 .pf-c-card__header {
   flex: 0 0 auto;
-  padding-top: var(--pf-c-card__header--PaddingTop);
-  padding-right: var(--pf-c-card__header--PaddingRight);
-  padding-bottom: var(--pf-c-card__header--PaddingBottom);
-  padding-left: var(--pf-c-card__header--PaddingLeft);
+  padding: var(--pf-c-card__header--PaddingTop) var(--pf-c-card__header--PaddingRight) var(--pf-c-card__header--PaddingBottom) var(--pf-c-card__header--PaddingLeft);
 }
 
 .pf-c-card__body {
   flex: 1 1 auto;
-  padding-top: var(--pf-c-card__body--PaddingTop);
-  padding-right: var(--pf-c-card__body--PaddingRight);
-  padding-bottom: var(--pf-c-card__body--PaddingBottom);
-  padding-left: var(--pf-c-card__body--PaddingLeft);
+  padding: var(--pf-c-card__body--PaddingTop) var(--pf-c-card__body--PaddingRight) var(--pf-c-card__body--PaddingBottom) var(--pf-c-card__body--PaddingLeft);
 }
 
 .pf-c-card__footer {
   flex: 0 0 auto;
-  padding-top: var(--pf-c-card__footer--PaddingTop);
-  padding-right: var(--pf-c-card__footer--PaddingRight);
-  padding-bottom: var(--pf-c-card__footer--PaddingBottom);
-  padding-left: var(--pf-c-card__footer--PaddingLeft);
+  padding: var(--pf-c-card__footer--PaddingTop) var(--pf-c-card__footer--PaddingRight) var(--pf-c-card__footer--PaddingBottom) var(--pf-c-card__footer--PaddingLeft);
 }
