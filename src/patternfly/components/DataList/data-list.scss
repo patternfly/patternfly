@@ -10,9 +10,9 @@ $pf-data-list--breakpoint--mobile: 380px;
   --pf-c-data-list__item--mobile--PaddingRight: var(--pf-global--spacer--lg); // custom name for one-off breakpoint
   --pf-c-data-list__item--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-data-list__item--mobile--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-data-list__item--BorderTopColor: var(--pf-global--Color--light-200);
-  --pf-c-data-list__item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list__item--m-expanded--before--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--Color--light-200);
+  --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
   @media screen and (max-width: $pf-data-list--breakpoint--mobile) {
     --pf-c-data-list__item--PaddingRight: var(--pf-c-data-list__item--mobile--PaddingRight);
@@ -24,11 +24,17 @@ $pf-data-list--breakpoint--mobile: 380px;
   --pf-c-data-list__item--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-data-list__item--before--Transition: var(--pf-global--Transition);
   --pf-c-data-list__item--before--ZIndex: var(--pf-global--ZIndex--xl);
+  --pf-c-data-list__item--before--Top: 0;
+  --pf-c-data-list__item--before--Height: 100%;
+  --pf-c-data-list__item-item--before--Top: calc(var(--pf-c-data-list__item-item--BorderTopWidth) * -1);
+  --pf-c-data-list__item-item--before--Height: calc(100% + var(--pf-c-data-list__item-item--BorderTopWidth));
 
   // Cell
   --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-data-list__cell--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__cell-cell--PaddingTop: 0;
+  --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-c-data-list__cell--PaddingTop);
+  --pf-c-data-list__cell-cell--md--MarginLeft: var(--pf-global--spacer--xl);
 
   // Toggle
   --pf-c-data-list__toggle--MarginRight: var(--pf-global--spacer--md);
@@ -92,23 +98,28 @@ $pf-data-list--breakpoint--mobile: 380px;
   padding-right: var(--pf-c-data-list__item--PaddingRight);
   padding-left: var(--pf-c-data-list__item--PaddingLeft);
 
-  // add border top to subsequent li's
-  & + & {
-    border-top: var(--pf-c-data-list__item--BorderTopWidth) solid var(--pf-c-data-list__item--BorderTopColor);
-  }
-
   // left border treatment base
   // color is transparent by default
   &::before {
     position: absolute;
-    top: calc(var(--pf-c-data-list__item--BorderTopWidth) * -1); // offset border positioning by parent border width
+    top: var(--pf-c-data-list__item--before--Top);
     left: 0;
     z-index: var(--pf-c-data-list__item--before--ZIndex);
     width: var(--pf-c-data-list__item--before--Width);
-    height: calc(100% + var(--pf-c-data-list__item--BorderTopWidth));
+    height: var(--pf-c-data-list__item--before--Height);
     content: "";
     background-color: var(--pf-c-data-list__item--before--BackgroundColor);
     transition: var(--pf-c-data-list__item--before--Transition);
+  }
+
+  // add border top to subsequent li's
+  & + & {
+    border-top: var(--pf-c-data-list__item-item--BorderTopWidth) solid var(--pf-c-data-list__item-item--BorderTopColor);
+
+    &::before {
+      --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
+      --pf-c-data-list__item--before--Height: var(--pf-c-data-list__item-item--before--Height);
+    }
   }
 
   // expanded border treatment color
@@ -149,7 +160,6 @@ $pf-data-list--breakpoint--mobile: 380px;
   margin-right: var(--pf-c-data-list__check--MarginRight);
 }
 
-
 // Content cells
 .pf-c-data-list__cell {
   flex: 1;
@@ -160,13 +170,14 @@ $pf-data-list--breakpoint--mobile: 380px;
   & + & {
     flex: 1 0 100%;
     order: 1;
-    padding-top: 0;
+    padding-top: var(--pf-c-data-list__cell-cell--PaddingTop);
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
+      --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list__cell-cell--md--PaddingTop);
+
       flex: 1;
       order: initial;
-      padding-top: var(--pf-c-data-list__cell--PaddingTop);
-      margin-left: var(--pf-c-data-list__cell--MarginLeft);
+      margin-left: var(--pf-c-data-list__cell-cell--md--MarginLeft);
     }
   }
 
@@ -180,7 +191,6 @@ $pf-data-list--breakpoint--mobile: 380px;
 .pf-c-data-list__action {
   margin-left: var(--pf-c-data-list__action--MarginLeft);
 }
-
 
 // add keyframes to prevent flicker when expandable content scrolls
 @keyframes pf-c-data-list--expandable-content--in {
