@@ -5,7 +5,7 @@ import labelExampleRaw from '!raw!./label-example.hbs';
 import LabelExample from './label-example.hbs';
 import labelComplexExampleDoc from '../docs/label-complex.md';
 import docs from '../docs/code.md';
-import '../styles.scss';
+import '../label.scss';
 
 export const Docs = docs;
 
