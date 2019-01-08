@@ -77,7 +77,7 @@ gulp.task('compile-scss', () =>
     .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/components/**/*.scss";\n'))
     .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/layouts/**/*.scss";\n'))
     .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly-next/patternfly-utilities";', ''))
+    .pipe(replace('@import "./@node_modules/@patternfly/patternfly-next/patternfly-imports";', ''))
     .pipe(gulp.dest('./css'))
 );
 ```
@@ -93,7 +93,7 @@ gulp.task('compile-scss', () =>
     .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/components/Content/*.scss";\n'))
     .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/components/Content/*.scss";\n'))
     .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly-next/patternfly-utilities";', ''))
+    .pipe(replace('@import "./@node_modules/@patternfly/patternfly-next/patternfly-imports";', ''))
     .pipe(gulp.dest('./css'))
 );
 ```
