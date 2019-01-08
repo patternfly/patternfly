@@ -172,8 +172,10 @@
   // Modifier - simple list separator
   --pf-c-nav__simple-list-link--m-separator--after--Width: calc(100% - var(--pf-c-nav__simple-list-link--PaddingLeft));
   --pf-c-nav__simple-list-link--m-separator--after--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__simple-list-link--m-separator--after--Background: var(--pf-global--BorderColor--light-200);
+  --pf-c-nav__simple-list-link--m-separator--after--Background: var(--pf-global--BorderColor--light);
   --pf-c-nav__simple-list-link--m-separator--after--Bottom: calc(-1 * var(--pf-c-nav__simple-list-link--m-separator--after--Height));
+  --pf-c-nav__subnav-item--m-separator--after--Width: calc(100% - var(--pf-c-nav__subnav-item--PaddingLeft));
+  --pf-c-nav__subnav-item--m-separator--after--md--Width: calc(100% - var(--pf-c-nav__subnav-item--md--PaddingLeft));
 
   // Modifier - current item
   --pf-c-nav__list-horizontal-link--m-current--Color: var(--pf-global--active-color--300);
@@ -218,6 +220,23 @@
   // Item
   > .pf-c-nav__item {
     position: relative;
+  }
+
+  > .pf-c-nav__item > .pf-c-nav__link {
+    // After - border bottom treatment for top level links
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: var(--pf-c-nav__list-link--after--Left);
+      width: var(--pf-c-nav__list-link--after--Width);
+      height: var(--pf-c-nav__list-link--after--Height);
+      content: "";
+      background-color: var(--pf-c-nav__list-link--after--BackgroundColor);
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--after--md--Left);
+      }
+    }
   }
 
   // Link
@@ -268,21 +287,6 @@
 
       &::after {
         background-color: var(--pf-c-nav__list-link--focus--after--BackgroundColor);
-      }
-    }
-
-    // After - border bottom treatment
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: var(--pf-c-nav__list-link--after--Left);
-      width: var(--pf-c-nav__list-link--after--Width);
-      height: var(--pf-c-nav__list-link--after--Height);
-      content: "";
-      background-color: var(--pf-c-nav__list-link--after--BackgroundColor);
-
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--after--md--Left);
       }
     }
   }
@@ -388,12 +392,13 @@
       @media screen and (min-width: $pf-global--breakpoint--md) {
         --pf-c-nav__subnav-item--PaddingLeft: var(--pf-c-nav__subnav-item--md--PaddingLeft);
       }
-    }
 
-    // If child of list, hide bottom border treatment unless includes .pf-m-separator
-    &:not(.pf-m-separator) {
-      &::after {
-        display: none;
+      &.pf-m-separator::after {
+        width: var(--pf-c-nav__subnav-item--m-separator--after--Width);
+      }
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        --pf-c-nav__subnav-item--m-separator--after--Width: var(--pf-c-nav__subnav-item--m-separator--after--md--Width);
       }
     }
   }
