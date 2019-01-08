@@ -66,16 +66,22 @@
   --pf-c-content--a--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
 
   // Blockquote
-  --pf-c-content--blockquote--Padding: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-content--blockquote--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-content--blockquote--FontWeight: var(--pf-global--FontWeight--light);
   --pf-c-content--blockquote--Color: var(--pf-global--Color--200);
   --pf-c-content--blockquote--BorderLeftColor: var(--pf-global--BorderColor--light);
   --pf-c-content--blockquote--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
 
   // Lists
-  --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--ol--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ol--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--ol--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-content--ol--nested--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-content--ol--nested--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ul--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
@@ -86,11 +92,12 @@
   --pf-c-content--dl--RowGap: var(--pf-global--spacer--md);
   --pf-c-content--dt--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-content--dt--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-content--dt--sm--MarginTop: 0;
 
   font-size: var(--pf-c-content--FontSize);
   line-height: var(--pf-c-content--LineHeight);
 
-  & * {
+  * {
     color: var(--pf-c-content--Color);
   }
 
@@ -99,8 +106,8 @@
     text-decoration: var(--pf-c-content--a--TextDecoration);
 
     &:hover {
-      color: var(--pf-c-content--a--hover--Color);
-      text-decoration: var(--pf-c-content--a--hover--TextDecoration);
+      --pf-c-content--a--Color: var(--pf-c-content--a--hover--Color);
+      --pf-c-content--a--TextDecoration: var(--pf-c-content--a--hover--TextDecoration);
     }
   }
 
@@ -122,18 +129,14 @@
     }
   }
 
-  ol,
-  ul {
-    // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-    padding-left: var(--pf-c-content--ul--PaddingLeft);
-  }
-
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  ol,
+  ul {
     margin: 0;
   }
 
@@ -212,26 +215,42 @@
   }
 
   blockquote {
-    padding: var(--pf-c-content--blockquote--Padding);
+    padding: var(--pf-c-content--blockquote--PaddingTop) var(--pf-c-content--blockquote--PaddingRight) var(--pf-c-content--blockquote--PaddingBottom) var(--pf-c-content--blockquote--PaddingLeft);
     font-weight: var(--pf-c-content--blockquote--FontWeight);
     color: var(--pf-c-content--blockquote--Color);
     border-left: var(--pf-c-content--blockquote--BorderLeftWidth) solid var(--pf-c-content--blockquote--BorderLeftColor);
   }
 
   ol {
+    padding-left: var(--pf-c-content--ol--PaddingLeft);
     margin-top: var(--pf-c-content--ol--MarginTop);
     margin-left: var(--pf-c-content--ol--MarginLeft);
+
+    ul {
+      --pf-c-content--ul--MarginTop: var(--pf-c-content--ul--nested--MarginTop);
+      --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+    }
+
+    ol {
+      --pf-c-content--ol--MarginTop: var(--pf-c-content--ol--nested--MarginTop);
+      --pf-c-content--ol--MarginLeft: var(--pf-c-content--ol--nested--MarginLeft);
+    }
   }
 
   ul {
-    margin: 0;
+    padding-left: var(--pf-c-content--ul--PaddingLeft);
     margin-top: var(--pf-c-content--ul--MarginTop);
     margin-left: var(--pf-c-content--ul--MarginLeft);
     list-style: var(--pf-c-content--ul--ListStyle);
 
     ul {
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
-      margin-left: var(--pf-c-content--ul--nested--MarginLeft);
+      --pf-c-content--ul--MarginTop: var(--pf-c-content--ul--nested--MarginTop);
+      --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+    }
+
+    ol {
+      --pf-c-content--ol--MarginTop: var(--pf-c-content--ol--nested--MarginTop);
+      --pf-c-content--ol--MarginLeft: var(--pf-c-content--ol--nested--MarginLeft);
     }
   }
 
@@ -253,7 +272,7 @@
       margin-top: var(--pf-c-content--dt--MarginTop);
 
       @media screen and (min-width: $pf-global--breakpoint--sm) {
-        margin-top: 0;
+        --pf-c-content--dt--MarginTop: var(--pf-c-content--dt--sm--MarginTop);
       }
     }
 
