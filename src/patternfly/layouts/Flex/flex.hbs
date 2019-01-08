@@ -1,18 +1,12 @@
 <div class="pf-l-flex{{#if flex--modifier}} {{flex--modifier}}{{/if}}"
   {{#if flex--attribute}}
     {{{flex--attribute}}}
-  {{/if}}>
+  {{/if}}
   {{#if example--label}}
-    <span class="example-label">{{{example--label}}}</span>
+    data-label="{{{example--label}}}"
   {{/if}}
   {{#if example--label-hover}}
-    <span class="example-label--hover">{{{example--label-hover}}}</span>
-  {{/if}}
-  {{#if example--border}}
-    <span class="example-border"></span>
-  {{/if}}
-  {{#if example--border-hover}}
-    <span class="example-border--hover"></span>
-  {{/if}}
+    data-label-hover="{{{example--label-hover}}}"
+  {{/if}}>
   {{> @partial-block}}
 </div>

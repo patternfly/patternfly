@@ -1,0 +1,23 @@
+<h2 class="example-title">
+  Column flex - <code>.pf-l-flex.pf-m-columns</code>
+</h2>
+{{#> flex flex--modifier="pf-m-columns"}}
+  {{#> flex newcontext}}
+    {{#> example}}1{{/example}}
+    {{#> example}}2{{/example}}
+  {{/flex}}
+
+  {{#> flex newcontext}}
+    {{#> example example--modifier="blue"}}1{{/example}}
+    {{#> example example--modifier="blue"}}2{{/example}}
+    {{#> example example--modifier="blue"}}3{{/example}}
+  {{/flex}}
+
+  {{#> flex newcontext}}
+    {{#> example example--modifier="red"}}1{{/example}}
+    {{#> example example--modifier="red"}}2{{/example}}
+    {{#> example example--modifier="red"}}3{{/example}}
+    {{#> example example--modifier="red"}}4{{/example}}
+    {{#> example example--modifier="red"}}5{{/example}}
+  {{/flex}}
+{{/flex}}

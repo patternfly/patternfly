@@ -1,49 +1,14 @@
-{{!-- <section class="content-section">
-<p>Flexbox helper seeks to eliminate rigid structure or need for wrapping elements to achieve desired layout.</p>
-<ul>
-  <li>It can be applied to container elements OR components. </li>
-  <li>Where content dictates layout and elements wrap when necessary.</li>
-  <li>Break dependancy upon adding utility classes to each child</li>
-  <li>Does not require wrapping elements in columns or rows</li>
-  <li>Does not replicate css grid layout or provide column alignment</li>
-  <li>Helpers, unlike utilities, may contain multiple css declarations and do not use the !important tag</li>
-</ul>
-</section> --}}
-
-{{#> example-title}}Justify flex end, ungrouped children.{{/example-title}}
-{{#> flex flex--modifier="pf-m-justify-flex-end" example--label-hover="Item spacing default" example--border="true"}}
+{{#> example-title}}Justify flex end.{{/example-title}}
+{{#> flex flex--modifier="pf-m-justify-flex-end example-border" example--label="Item spacing default"}}
   {{#> example}}1{{/example}}
   {{#> example}}2{{/example}}
   {{#> example}}3{{/example}}
   {{#> example}}4{{/example}}
   {{#> example}}5{{/example}}
-{{/flex}}
-
-{{#> example-title}}Justify flex end, grouped children.{{/example-title}}
-{{#> flex flex--modifier="pf-m-justify-flex-end" example--label-hover="Item spacing default" example--border="true"}}
-  {{#> flex newcontext}}
-    {{#> example}}1{{/example}}
-    {{#> example}}2{{/example}}
-    {{#> example}}3{{/example}}
-    {{#> example}}4{{/example}}
-    {{#> example}}5{{/example}}
-  {{/flex}}
-  {{#> flex newcontext}}
-    {{#> example example--modifier="blue"}}1{{/example}}
-    {{#> example example--modifier="blue"}}2{{/example}}
-    {{#> example example--modifier="blue"}}3{{/example}}
-    {{#> example example--modifier="blue"}}4{{/example}}
-    {{#> example example--modifier="blue"}}5{{/example}}
-  {{/flex}}
-  {{#> flex newcontext}}
-    {{#> example example--modifier="red"}}1{{/example}}
-    {{#> example example--modifier="red"}}2{{/example}}
-    {{#> example example--modifier="red"}}3{{/example}}
-  {{/flex}}
 {{/flex}}
 
 {{#> example-title}}Justify space-between.{{/example-title}}
-{{#> flex flex--modifier="pf-m-justify-space-between" example--label-hover="Item spacing default" example--border="true"}}
+{{#> flex flex--modifier="pf-m-justify-space-between example-border" example--label="Item spacing default"}}
   {{#> example}}1{{/example}}
   {{#> example}}2{{/example}}
   {{#> example}}3{{/example}}
@@ -51,25 +16,11 @@
   {{#> example}}5{{/example}}
 {{/flex}}
 
-{{#> example-title}}Justifying nested flex groups space-between.{{/example-title}}
-{{#> flex flex--modifier="pf-m-justify-space-between" example--label-hover="Item spacing default" example--border="true"}}
-  {{#> flex newcontext example--border="true"}}
-    {{#> example}}1{{/example}}
-    {{#> example}}2{{/example}}
-    {{#> example}}3{{/example}}
-    {{#> example}}4{{/example}}
-    {{#> example}}5{{/example}}
-  {{/flex}}
-  {{#> flex newcontext example--border="true"}}
-    {{#> example example--modifier="blue"}}1{{/example}}
-    {{#> example example--modifier="blue"}}2{{/example}}
-    {{#> example example--modifier="blue"}}3{{/example}}
-    {{#> example example--modifier="blue"}}4{{/example}}
-    {{#> example example--modifier="blue"}}5{{/example}}
-  {{/flex}}
-  {{#> flex newcontext example--border="true"}}
-    {{#> example example--modifier="red"}}1{{/example}}
-    {{#> example example--modifier="red"}}2{{/example}}
-    {{#> example example--modifier="red"}}3{{/example}}
-  {{/flex}}
+{{#> example-title}}Justifying flex start (use to reset flex-direction to default).{{/example-title}}
+{{#> flex flex--modifier="pf-m-justify-flex-start example-border" example--label="Item spacing default"}}
+  {{#> example}}1{{/example}}
+  {{#> example}}2{{/example}}
+  {{#> example}}3{{/example}}
+  {{#> example}}4{{/example}}
+  {{#> example}}5{{/example}}
 {{/flex}}

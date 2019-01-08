@@ -61,10 +61,12 @@ export default class Example extends React.Component {
       handlebars = '',
       fullPageOnly,
       minHeight,
-      docs
+      docs,
+      intro
     } = this.props;
     const output = { __html: this.props.children };
     const htmlDocs = { __html: docs };
+    const htmlIntro = { __html: intro };
     const regex = /pf-[c|l]-[a-zA-Z-]*[\s"]/gi;
     const matches = this.props.children.match(regex);
     let navigationItems;
@@ -105,6 +107,11 @@ export default class Example extends React.Component {
     if (!this.state.isFull) {
       return (
         <div className={`Example ${className}`}>
+          {htmlIntro && (
+            <div className="Example__documentation">
+              <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlIntro} />
+            </div>
+          )}
           <div className="Example__header">
             <h3 className="Example_heading">{heading}</h3>
             {description && <p className="Example_description">{description}</p>}

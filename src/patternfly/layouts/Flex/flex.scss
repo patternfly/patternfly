@@ -2,25 +2,25 @@
 
 /* stylelint-disable */
 
-// New breakpoints
-$pf-global--breakpoint--mobile-only: 599px;
-$pf-global--breakpoint--tablet: 600px;
-$pf-global--breakpoint--desktop: 1200px;
-
 // Add name to breakpoints
 $mobile-only: $pf-global--breakpoint--mobile-only, -mobile-only;
 $tablet: $pf-global--breakpoint--tablet, -tablet-up;
 $desktop: $pf-global--breakpoint--desktop, -desktop-up;
 
+$pf-flex-breakpoints: (
+  base: "",
+  -mobile-only: $pf-global--breakpoint--mobile-only,
+  -tablet-plus: $pf-global--breakpoint--tablet,
+  -desktop-plus: $pf-global--breakpoint--desktop
+);
 /* stylelint-enable */
 
 .pf-l-flex {
   // Default values: these get reset based on modifier usage
-  --pf-l-flex--spacer--base: var(--pf-global--spacer--md);
-  --pf-l-flex--spacer: var(--pf-l-flex--spacer--base);
-  --pf-l-flex--m-space-items: var(--pf-l-flex--spacer--base);
-  --pf-l-flex--m-spacer: var(--pf-l-flex--spacer--base);
+  --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
   --pf-l-flex--row-gap: var(--pf-global--spacer--md);
+  --pf-l-flex--space-items: var(--pf-l-flex--spacer);
 
   // Flex spacer values
   --pf-l-flex--spacer--none: 0;
@@ -34,145 +34,67 @@ $desktop: $pf-global--breakpoint--desktop, -desktop-up;
 
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   row-gap: var(--pf-l-flex--row-gap);
 
-  // set base flex spacers
   > * {
-    margin-right: var(--pf-l-flex--spacer);
+    --pf-l-flex--spacer--Right: var(--pf-l-flex--spacer);
 
-    &:last-child {
-      margin-right: 0;
-    }
+    margin-right: var(--pf-l-flex--spacer--Right);
   }
 
-  &[class*="pf-m-space-items"] > * {
-    margin-right: var(--pf-l-flex--m-space-items);
-
-    &:last-child {
-      --pf-l-flex--m-space-items: 0;
-    }
+  > :last-child {
+    --pf-l-flex--spacer--Right: 0;
   }
 
-  [class*="pf-m-spacer"] {
-    margin-right: var(--pf-l-flex--m-spacer);
-
-    &:last-child {
-      --pf-l-flex--m-space-items: 0;
-    }
-  }
-
-  //
-  //
-  //
-  //
-  //
-  // Modifiers
-  &.pf-m-justify-flex-end {
-    justify-content: flex-end;
-
+  // reset nested flex layouts
+  .pf-l-flex {
     > * {
-      margin-right: 0;
-      margin-left: var(--pf-l-flex--spacer);
+      --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+      --pf-l-flex--spacer--Right: var(--pf-l-flex--spacer);
+    }
 
-      &:first-child {
-        margin-left: 0;
-      }
+    > :last-child {
+      --pf-l-flex--spacer--Right: 0;
     }
   }
 
-  &.pf-m-fill-items > .pf-l-flex {
-    --pf-l-flex--spacer: 0;
+  // &.pf-m-inline-flex {
+  //   display: inline-flex;
+  // }
 
-    flex: 1 100%;
-  }
+  // &.pf-m-align-center {
+  //   align-items: center;
+  // }
 
-  .pf-m-full-width {
-    flex: 1 0 100%;
-  }
+  // // if set on child
+  // .pf-m-align-center {
+  //   align-self: center;
+  // }
 
-  &.pf-m-inline-flex {
-    display: inline-flex;
-  }
+  // // if set on child
+  // &.pf-m-align-flex-start {
+  //   align-items: flex-start;
+  // }
 
-  &.pf-m-align-center {
-    align-items: center;
-  }
+  // &.pf-m-align-right,
+  // .pf-m-align-right {
+  //   margin-left: auto;
+  // }
 
-  // if set on child
-  .pf-m-align-center {
-    align-self: center;
-  }
+  // &.pf-m-overflow-scroll {
+  //   flex-wrap: nowrap;
+  //   overflow-x: auto;
+  // }
 
-  // if set on child
-  &.pf-m-align-flex-start {
-    align-items: flex-start;
-  }
-
-  &.pf-m-align-right,
-  .pf-m-align-right {
-    margin-left: auto;
-  }
-
-  &.pf-m-overflow-scroll {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  &.pf-m-nowrap {
-    flex-wrap: nowrap;
-  }
-
-  &.pf-m-columns {
-    flex-direction: column;
-
-    > *:not(:first-child) {
-      margin-top: var(--pf-l-flex--spacer);
-    }
-  }
-}
-
-/* stylelint-disable */
-.pf-l-flex {
-  .pf-m-flex-1 {
-    flex: 1;
-  }
-
-  .pf-m-stretch {
-    flex: 1 auto;
-  }
-
-  &.pf-m-justify-space-between {
-    justify-content: space-between;
-  }
-
-  &.pf-m-justify-center {
-    justify-content: center;
-  }
-
-  &.pf-m-justify-space-around {
-    justify-content: space-around;
-  }
-
-  // if set on parent
-  &.pf-m-justify-space-between,
-  &.pf-m-justify-center,
-  &.pf-m-space-between {
-    > * {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-}
-
-.pf-l-flex-section,
-.pf-l-flex__section {
-  display: flex;
-  flex: 1 100%;
+  // &.pf-m-nowrap {
+  //   flex-wrap: nowrap;
+  // }
 }
 
 // Spacer values
 $pf-flex-spacer-map: (
-  "none": "var(--pf-l-flex--spacer--none)",
+  "none": 0,
   "xs": "var(--pf-l-flex--spacer--xs)",
   "sm": "var(--pf-l-flex--spacer--sm)",
   "md": "var(--pf-l-flex--spacer--md)",
@@ -185,14 +107,14 @@ $pf-flex-spacer-map: (
 @mixin pf-l-flex--space-items-builder {
   @each $prop, $value in $pf-flex-spacer-map {
     .pf-l-flex.pf-m-space-items-#{$prop} > * {
-      --pf-l-flex--m-space-items: #{$value};
+      --pf-l-flex--spacer: #{$value};
     }
   }
 
   @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-l-flex.pf-m-space-items-#{$prop}-mobile-only > * {
-        --pf-l-flex--m-space-items: #{$value};
+        --pf-l-flex--spacer: #{$value};
       }
     }
   }
@@ -200,7 +122,7 @@ $pf-flex-spacer-map: (
   @media screen and (min-width: $pf-global--breakpoint--tablet) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-l-flex.pf-m-space-items-#{$prop}-tablet-plus > * {
-        --pf-l-flex--m-space-items: #{$value};
+        --pf-l-flex--spacer: #{$value};
       }
     }
   }
@@ -208,24 +130,27 @@ $pf-flex-spacer-map: (
   @media screen and (min-width: $pf-global--breakpoint--desktop) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-l-flex.pf-m-space-items-#{$prop}-desktop-plus > * {
-        --pf-l-flex--m-space-items: #{$value};
+        --pf-l-flex--spacer: #{$value};
       }
     }
   }
 }
 
-
 @mixin pf-l-flex--spacer-builder {
   @each $prop, $value in $pf-flex-spacer-map {
     .pf-l-flex .pf-m-spacer-#{$prop} {
-      --pf-l-flex--m-spacer: #{$value};
+      --pf-l-flex--spacer: #{$value};
+
+      margin-right: #{$value};
     }
   }
 
   @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-l-flex .pf-m-spacer-#{$prop}-mobile-only {
-        --pf-l-flex--m-spacer: #{$value};
+        --pf-l-flex--spacer: #{$value};
+
+        margin-right: #{$value};
       }
     }
   }
@@ -233,7 +158,9 @@ $pf-flex-spacer-map: (
   @media screen and (min-width: $pf-global--breakpoint--tablet) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-l-flex .pf-m-spacer-#{$prop}-tablet-plus {
-        --pf-l-flex--m-spacer: #{$value};
+        --pf-l-flex--spacer: #{$value};
+
+        margin-right: #{$value};
       }
     }
   }
@@ -241,7 +168,9 @@ $pf-flex-spacer-map: (
   @media screen and (min-width: $pf-global--breakpoint--desktop) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-l-flex .pf-m-spacer-#{$prop}-desktop-plus {
-        --pf-l-flex--m-spacer: #{$value};
+        --pf-l-flex--spacer: #{$value};
+
+        margin-right: #{$value};
       }
     }
   }
@@ -249,3 +178,203 @@ $pf-flex-spacer-map: (
 
 @include pf-l-flex--space-items-builder;
 @include pf-l-flex--spacer-builder;
+
+@mixin pf-l-flex-justify-flex-end {
+  justify-content: flex-end;
+
+  > * {
+    margin-right: 0;
+    margin-left: var(--pf-l-flex--spacer);
+  }
+}
+
+@mixin pf-l-flex-justify-flex-start {
+  justify-content: flex-start;
+
+  > * {
+    margin-right: var(--pf-l-flex--spacer--Right);
+    margin-left: 0;
+  }
+
+  > :last-child {
+    --pf-l-flex--spacer--Right: 0;
+  }
+}
+
+// Justify space between
+@mixin pf-l-flex-justify-space-between {
+  justify-content: space-between;
+
+  > * {
+    --pf-l-flex--spacer--Right: 0;
+  }
+}
+
+// Column layout
+@mixin pf-l-flex-columns {
+  flex-direction: column;
+}
+
+@mixin pf-l-flex-rows {
+  flex-direction: row;
+}
+
+@mixin pf-l-flex-grow {
+  flex-grow: 1;
+}
+
+@mixin pf-l-flex-full-width {
+  flex: 1 0 100%;
+}
+
+@mixin pf-l-flex-align-right {
+  margin-left: auto;
+}
+
+@mixin pf-l-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Set base css for responsive classes
+.pf-l-flex.pf-m-justify-flex-end {
+  @include pf-l-flex-justify-flex-end;
+}
+
+.pf-l-flex.pf-m-justify-space-between {
+  @include pf-l-flex-justify-space-between;
+}
+
+.pf-l-flex.pf-m-justify-flex-start {
+  @include pf-l-flex-justify-flex-start;
+}
+
+.pf-l-flex.pf-m-columns {
+  @include pf-l-flex-columns;
+}
+
+.pf-l-flex.pf-m-rows {
+  @include pf-l-flex-rows;
+}
+
+.pf-l-flex .pf-m-grow {
+  @include pf-l-flex-grow;
+}
+
+.pf-l-flex .pf-m-full-width {
+  @include pf-l-flex-full-width;
+}
+
+.pf-l-flex.pf-m-align-right,
+.pf-l-flex .pf-m-align-right {
+  @include pf-l-flex-align-right;
+}
+
+.pf-l-flex.pf-m-nowrap {
+  @include pf-l-flex-nowrap;
+}
+
+
+// Mobile class definitions
+@media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+  .pf-l-flex.pf-m-justify-flex-end-mobile-only {
+    @include pf-l-flex-justify-flex-end;
+  }
+
+  .pf-l-flex.pf-m-justify-space-between-mobile-only {
+    @include pf-l-flex-justify-space-between;
+  }
+
+  .pf-l-flex.pf-m-justify-flex-start-mobile-only {
+    @include pf-l-flex-justify-flex-start;
+  }
+
+  .pf-l-flex.pf-m-columns-mobile-only {
+    @include pf-l-flex-columns;
+  }
+
+  .pf-l-flex.pf-m-rows-mobile-only {
+    @include pf-l-flex-rows;
+  }
+
+  .pf-l-flex .pf-m-grow-mobile-only {
+    @include pf-l-flex-grow;
+  }
+
+  .pf-l-flex .pf-m-full-width-mobile-only {
+    @include pf-l-flex-grow;
+  }
+
+  .pf-l-flex.pf-m-nowrap-mobile-only {
+    @include pf-l-flex-nowrap;
+  }
+}
+
+// Tablet class definitions
+@media screen and (min-width: $pf-global--breakpoint--tablet) {
+  .pf-l-flex.pf-m-justify-flex-end-tablet-plus {
+    @include pf-l-flex-justify-flex-end;
+  }
+
+  .pf-l-flex.pf-m-justify-space-between-tablet-plus {
+    @include pf-l-flex-justify-space-between;
+  }
+
+  .pf-l-flex.pf-m-justify-flex-start-tablet-plus {
+    @include pf-l-flex-justify-flex-start;
+  }
+
+  .pf-l-flex.pf-m-columns-tablet-plus {
+    @include pf-l-flex-columns;
+  }
+
+  .pf-l-flex.pf-m-rows-tablet-plus {
+    @include pf-l-flex-rows;
+  }
+
+  .pf-l-flex .pf-m-grow-tablet-plus {
+    @include pf-l-flex-grow;
+  }
+
+  .pf-l-flex .pf-m-full-width-tablet-plus {
+    @include pf-l-flex-grow;
+  }
+
+  .pf-l-flex.pf-m-nowrap-tablet-plus {
+    @include pf-l-flex-nowrap;
+  }
+}
+
+// Desktop class definitions
+@media screen and (min-width: $pf-global--breakpoint--desktop) {
+  .pf-l-flex.pf-m-justify-flex-end-desktop-plus {
+    @include pf-l-flex-justify-flex-end;
+  }
+
+  .pf-l-flex.pf-m-justify-space-between-desktop-plus {
+    @include pf-l-flex-justify-space-between;
+  }
+
+  .pf-l-flex.pf-m-justify-flex-start-desktop-plus {
+    @include pf-l-flex-justify-flex-start;
+  }
+
+  .pf-l-flex.pf-m-columns-desktop-plus {
+    @include pf-l-flex-columns;
+  }
+
+  .pf-l-flex.pf-m-rows-desktop-plus {
+    @include pf-l-flex-rows;
+  }
+
+  .pf-l-flex .pf-m-grow-desktop-plus {
+    @include pf-l-flex-grow;
+  }
+
+  .pf-l-flex .pf-m-full-width-desktop-plus {
+    @include pf-l-flex-grow;
+  }
+
+  .pf-l-flex.pf-m-nowrap-desktop-plus {
+    @include pf-l-flex-nowrap;
+  }
+}

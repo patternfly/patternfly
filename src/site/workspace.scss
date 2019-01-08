@@ -451,10 +451,25 @@
   --example--BorderRadius: 8px;
   --example--Color: #888;
 
-  padding: 40px;
-
   .Preview__body {
     padding: 40px;
+
+    [class*="example-border"]::before {
+      position: absolute;
+      top: var(--example--before--Offset);
+      right: var(--example--before--Offset);
+      bottom: var(--example--before--Offset);
+      left: var(--example--before--Offset);
+      content: "";
+      border: 1px dashed rgba(0, 0, 0, .4);
+      border-radius: var(--example--BorderRadius);
+    }
+
+    .pf-l-flex .pf-l-flex [class*="example-border"]::before {
+      --example--before--Offset: -4px;
+
+      border-color: rgba(0, 0, 0, .2);
+    }
   }
 
   .pf-l-flex {
@@ -467,6 +482,48 @@
 
   .pf-l-flex .pf-l-flex .pf-l-flex:hover {
     z-index: 3;
+  }
+
+  [data-label]::after,
+  [data-label-hover]::after {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    z-index: 2;
+    padding: 0 4px;
+    font-size: 13px;
+    color: var(--example--Color);
+    background: #fff;
+  }
+
+  [data-label]::after {
+    content: attr(data-label);
+  }
+
+  [data-label-hover]::after {
+    content: attr(data-label-hover);
+  }
+
+  [data-label-hover]::after {
+    display: none;
+  }
+
+  [data-label-hover]:hover::after {
+    display: block;
+  }
+
+  .pf-l-flex [data-label]::after,
+  .pf-l-flex [data-label-hover]::after {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    padding: 0 8px;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
 
   .example {
@@ -495,83 +552,44 @@
     &.red { --plf-block--BackgroundColor: lightsalmon; }
     &.green { --plf-block--BackgroundColor: lightgreen; }
     &.yellow { --plf-block--BackgroundColor: lightgoldenrodyellow; }
-
-    &__strapline,
-    &::before,
-    &::after {
-      font-weight: normal;
-    }
-
-    &__strapline {
-      position: absolute;
-      top: 1px;
-      right: 0;
-      left: 0;
-      padding: 0 4px;
-      font-size: 13px;
-      text-align: center;
-      // color: #fff;
-    }
   }
 
 
-  [class*="example-label"] {
-    position: absolute;
-    top: -24px;
-    left: 0;
-    z-index: 2;
-    padding: 0 4px;
-    font-size: 13px;
-    color: var(--example--Color);
-    background: #fff;
-  }
+  // [class*="example-label"] {
+  //   position: absolute;
+  //   top: -24px;
+  //   left: 0;
+  //   z-index: 2;
+  //   padding: 0 4px;
+  //   font-size: 13px;
+  //   color: var(--example--Color);
+  //   background: #fff;
+  // }
 
-  .pf-l-flex .pf-l-flex [class*="example-label"] {
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
-    padding: 0 8px;
-    color: #fff;
-    background: rgba(0, 0, 0, .6);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
+  // .pf-l-flex .pf-l-flex [class*="example-label"] {
+  //   top: auto;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 4;
+  //   padding: 0 8px;
+  //   color: #fff;
+  //   background: rgba(0, 0, 0, .6);
+  //   border-bottom-right-radius: 8px;
+  //   border-bottom-left-radius: 8px;
+  // }
 
-  [class*="example-border"] {
-    position: absolute;
-    top: var(--example--before--Offset);
-    right: var(--example--before--Offset);
-    bottom: var(--example--before--Offset);
-    left: var(--example--before--Offset);
-    content: "";
-    border: 1px dashed rgba(0, 0, 0, .4);
-    border-radius: var(--example--BorderRadius);
-  }
+  // .example-label--hover,
+  // .example-border--hover {
+  //   display: none;
+  // }
 
-  .pf-l-flex .pf-l-flex [class*="example-border"] {
-    --example--before--Offset: -4px;
-
-    border: 1px dashed rgba(0, 0, 0, .2);
-  }
-
-  [class*="example-label"],
-  [class*="example-border"] {
-    margin: 0 !important;
-  }
-
-  .example-label--hover,
-  .example-border--hover {
-    display: none;
-  }
-
-  .pf-l-flex:hover > {
-    .example-label--hover,
-    .example-border--hover {
-      display: block;
-    }
-  }
+  // .pf-l-flex:hover > {
+  //   .example-label--hover,
+  //   .example-border--hover {
+  //     display: block;
+  //   }
+  // }
 
   .example-title {
     &:not(:first-of-type) {
