@@ -23,4 +23,5 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `.pf-c-switch` | `<label>` |  Initiates a switch. **required**  |
 | `.pf-c-switch__input` | `<input type="checkbox">` |  Hide the checkbox inside the switch. **required**  |
 | `.pf-c-switch__toggle` | `<span>` |  Initiates the toggle inside the switch. **required**  |
+| `.pf-c-switch__check` | `<i>` |  Initiates the font awesome check mark inside the switch. **required**  |
 | `.pf-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
