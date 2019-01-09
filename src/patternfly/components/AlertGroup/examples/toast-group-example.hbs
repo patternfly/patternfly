@@ -4,15 +4,15 @@
       {{#> alert-icon alert-icon--success="true"}}
       {{/alert-icon}}
         {{#> alert-body alert-body--attribute='role="alert"'}}
-          {{#> alert-title}}
+          {{#> alert-title alert-title--attribute='id="notification_one_title"'}}
             {{#> accessibility accessibility--type="sr-only"}}
-              Success: 
+              Success notification: 
             {{/accessibility}}
             Success notification title
         {{/alert-title}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="notification_one_title"'}}
           <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
@@ -24,13 +24,15 @@
       {{#> alert-icon alert-icon--danger="true"}}
       {{/alert-icon}}
       {{#> alert-body alert-body--attribute='role="alert"'}}
-        {{#> alert-title}}
-          {{#> accessibility accessibility--type="sr-only"}}Danger: {{/accessibility}}
+        {{#> alert-title alert-title--attribute='id="notification_two_title"'}}
+          {{#> accessibility accessibility--type="sr-only"}}
+            Danger notification: 
+          {{/accessibility}}
           Danger notification title
         {{/alert-title}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="notification_two_title"'}}
           <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
@@ -42,8 +44,10 @@
       {{#> alert-icon alert-icon--info="true"}}
       {{/alert-icon}}
       {{#> alert-body alert-body--attribute='role="alert"'}}
-        {{#> alert-title}}
-          {{#> accessibility accessibility--type="sr-only"}}Info: {{/accessibility}}
+        {{#> alert-title alert-title--attribute='id="notification_three_title"'}}
+          {{#> accessibility accessibility--type="sr-only"}}
+            Info notification: 
+          {{/accessibility}}
           Info notification title
         {{/alert-title}}
         {{#> alert-description}}
@@ -51,7 +55,7 @@
         {{/alert-description}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="notification_three_title"'}}
           <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
