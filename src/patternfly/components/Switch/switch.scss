@@ -91,7 +91,7 @@
 
         /* stylelint-disable-next-line */
         .pf-c-switch__check path {
-          display: none;
+          color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
         }
 
         /* stylelint-disable-next-line */
