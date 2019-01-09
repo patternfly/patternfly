@@ -51,12 +51,15 @@
         background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
 
         /* stylelint-disable-next-line */
-        .pf-c-switch__check path {
+        .pf-c-switch__check {
           position: absolute;
           top: 5px;
           left: 5px;
           display: block;
           font-size: .8em;
+        }
+        /* stylelint-disable-next-line */
+        .pf-c-switch__check path {
           color: var(--pf-c-switch__input--checked__toggle-Color);
         }
 
@@ -89,6 +92,14 @@
         cursor: not-allowed;
         background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
 
+        /* stylelint-disable-next-line */
+        .pf-c-switch__check {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          display: block;
+          font-size: .8em;
+        }
         /* stylelint-disable-next-line */
         .pf-c-switch__check path {
           color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
