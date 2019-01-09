@@ -25,6 +25,9 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__main` | `<main>` |   Declares the main page area. |
 | `.pf-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
 | `.pf-c-page__main-section` | `<section>` |  Creates a section container in the main page area. |
+| `.pf-m-icons` | `.pf-c-page__header-tools .pf-l-toolbar__group` | Modifier for responsive behavior of header icons list. |
+| `.pf-m-mobile` | `.pf-c-page__header-tools .pf-l-toolbar__item` | Modifier for responsive behavior of mobile menu. |
+| `.pf-m-user` | `.pf-c-page__header-tools .pf-l-toolbar__item` | Modifier for responsive behavior of user menu. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
