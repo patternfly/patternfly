@@ -1,0 +1,21 @@
+{{#> list listType="ol"}}
+  <li>Donec blandit a lorem id convallis.</li>
+  <li>Cras gravida arcu at diam gravida gravida.</li>
+  <li>Integer in volutpat libero.</li>
+  <li>Donec a diam tellus.</li>
+  <li>Etiam auctor nisl et.
+    {{#> list listType="ul"}}
+    <li>Donec blandit a lorem id convallis.</li>
+    <li>Cras gravida arcu at diam gravida gravida.</li>
+    <li>Integer in volutpat libero.
+      {{#> list listType="ol"}}
+      <li>Donec blandit a lorem id convallis.</li>
+      <li>Cras gravida arcu at diam gravida gravida.</li>
+      {{/list}}
+    </li>
+    </li>
+    {{/list}}
+  <li>Aenean nec tortor orci.</li>
+  <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+  <li>Vivamus maximus ultricies pulvinar.</li>
+{{/list}}
