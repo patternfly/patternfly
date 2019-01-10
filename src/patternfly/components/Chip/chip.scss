@@ -17,11 +17,14 @@
   // modified chip button
   --pf-c-chip--m-overflow--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip--m-overflow--c-button--BorderWidth: 0;
-  --pf-c-chip--m-overflow--c-button--PaddingX: var(--pf-global--spacer--sm);
-
-  // active,focus,hover
+  --pf-c-chip--m-overflow--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip--m-overflow--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip--m-overflow--c-button--hover--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-chip--m-overflow--c-button--hover--BorderColor: var(--pf-global--secondary-color--100);
   --pf-c-chip--m-overflow--c-button--active--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-chip--m-overflow--c-button--active--BorderColor: var(--pf-global--secondary-color--100);
+  --pf-c-chip--m-overflow--c-button--focus--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-chip--m-overflow--c-button--focus--BorderColor: var(--pf-global--secondary-color--100);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -29,7 +32,8 @@
   --pf-c-chip__text--MaxWidth: #{pf-size-prem(120px)};
 
   // chip button
-  --pf-c-chip--c-button--PaddingX: var(--pf-global--spacer--sm);
+  --pf-c-chip--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-chip--c-button--FontSize: var(--pf-global--FontSize--xs);
 
   position: relative;
@@ -58,13 +62,11 @@
     // Remove Chip border
     &::before {
       --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--BorderWidth);
-
-      content: "";
     }
 
     .pf-c-button {
-      padding-right: var(--pf-c-chip--m-overflow--c-button--PaddingX);
-      padding-left: var(--pf-c-chip--m-overflow--c-button--PaddingX);
+      padding-right: var(--pf-c-chip--m-overflow--c-button--PaddingRight);
+      padding-left: var(--pf-c-chip--m-overflow--c-button--PaddingLeft);
 
       &::after {
         border: var(--pf-c-chip--m-overflow--c-button--BorderWidth) solid var(--pf-c-chip--m-overflow--c-button--active--BorderColor);
@@ -72,23 +74,38 @@
       }
 
       &.pf-m-hover,
-      &:hover,
+      &:hover {
+        /* stylelint-disable-next-line */
+        &::after {
+          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--hover--BorderWidth);
+          --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--hover--BorderColor);
+        }
+      }
+
       &.pf-m-active,
-      &:active,
+      &:active {
+        /* stylelint-disable-next-line */
+        &::after {
+          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth);
+          --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--active--BorderColor);
+        }
+      }
+
       &.pf-m-focus,
       &:focus {
         /* stylelint-disable-next-line */
         &::after {
-          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth);
+          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--focus--BorderWidth);
+          --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--focus--BorderColor);
         }
       }
     }
   }
 
   // Button
-  .pf-c-button {
-    padding-right: var(--pf-c-chip--c-button--PaddingX);
-    padding-left: var(--pf-c-chip--c-button--PaddingX);
+  > .pf-c-button {
+    padding-right: var(--pf-c-chip--c-button--PaddingRight);
+    padding-left: var(--pf-c-chip--c-button--PaddingLeft);
     font-size: var(--pf-c-chip--c-button--FontSize);
   }
 }
