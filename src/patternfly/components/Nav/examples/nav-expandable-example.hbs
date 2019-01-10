@@ -5,10 +5,10 @@
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{!--         
+        {{!--
         {{#> nav-subnav-title}}
           Current and expanded example sub-navigation
-        {{/nav-subnav-title}} 
+        {{/nav-subnav-title}}
         --}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
@@ -17,7 +17,7 @@
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -34,10 +34,10 @@
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
-        {{!--         
+        {{!--
         {{#> nav-subnav-title}}
           Expanded, but not current example sub-navigation
-        {{/nav-subnav-title}} 
+        {{/nav-subnav-title}}
         --}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
