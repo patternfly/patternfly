@@ -46,6 +46,12 @@
   --pf-c-nav__simple-list-link--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-nav__simple-list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__simple-list-link--nested--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-nav__simple-list-link--nested--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md));
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-nav__simple-list-link--nested--PaddingLeft: var(--pf-c-nav__simple-list-link--nested--md--PaddingLeft);
+  }
 
   // font
   --pf-c-nav__simple-list-link--FontWeight: var(--pf-global--FontWeight--normal);
@@ -131,8 +137,6 @@
   // Subnav links
   --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__subnav--MaxHeight: #{pf-size-prem(600px)};
-  --pf-c-nav__subnav-item--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__subnav-item--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md));
 
   // List toggle
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -170,12 +174,10 @@
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: #{$pf-color-black-150};
 
   // Modifier - simple list separator
-  --pf-c-nav__simple-list-link--m-separator--after--Width: calc(100% - var(--pf-c-nav__simple-list-link--PaddingLeft));
+  --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--PaddingLeft);
   --pf-c-nav__simple-list-link--m-separator--after--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__simple-list-link--m-separator--after--Background: var(--pf-global--BorderColor--light);
   --pf-c-nav__simple-list-link--m-separator--after--Bottom: calc(-1 * var(--pf-c-nav__simple-list-link--m-separator--after--Height));
-  --pf-c-nav__subnav-item--m-separator--after--Width: calc(100% - var(--pf-c-nav__subnav-item--PaddingLeft));
-  --pf-c-nav__subnav-item--m-separator--after--md--Width: calc(100% - var(--pf-c-nav__subnav-item--md--PaddingLeft));
 
   // Modifier - current item
   --pf-c-nav__list-horizontal-link--m-current--Color: var(--pf-global--active-color--300);
@@ -378,7 +380,7 @@
         position: absolute;
         right: 0;
         bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Bottom);
-        width: var(--pf-c-nav__simple-list-link--m-separator--after--Width);
+        left: var(--pf-c-nav__simple-list-link--m-separator--after--Left);
         height: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
         content: "";
         background: var(--pf-c-nav__simple-list-link--m-separator--after--Background);
@@ -387,18 +389,10 @@
 
     // Adjust padding of descendant links
     .pf-c-nav__item & {
-      padding-left: var(--pf-c-nav__subnav-item--PaddingLeft);
-
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        --pf-c-nav__subnav-item--PaddingLeft: var(--pf-c-nav__subnav-item--md--PaddingLeft);
-      }
+      --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
 
       &.pf-m-separator::after {
-        width: var(--pf-c-nav__subnav-item--m-separator--after--Width);
-      }
-
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        --pf-c-nav__subnav-item--m-separator--after--Width: var(--pf-c-nav__subnav-item--m-separator--after--md--Width);
+        --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
       }
     }
   }
