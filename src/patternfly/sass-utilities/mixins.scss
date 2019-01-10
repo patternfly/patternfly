@@ -109,3 +109,19 @@
   }
 }
 /* stylelint-enable */
+
+@mixin pf-u-screen-reader {
+  position: fixed;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin pf-u-visible {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: inherit;
+}

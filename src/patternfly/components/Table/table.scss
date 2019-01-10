@@ -230,6 +230,11 @@ $pf-c-table-xs-breakpoint: 380px;
     &:last-child {
       padding-right: var(--pf-c-table-cell--last-child--PaddingRight);
     }
+
+    /* stylelint-disable-next-line */
+    &.pf-m-center {
+      text-align: center;
+    }
   }
 
   // Modifier - fit-content

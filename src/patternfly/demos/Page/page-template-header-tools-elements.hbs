@@ -1,6 +1,6 @@
 {{#> page-header-tools}}
   {{#> toolbar}}
-    {{#> toolbar-group toolbar-group--modifier="pf-u-sr-only pf-u-visible-on-lg"}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-icons pf-screen-reader"}}
       {{#> toolbar-item}}
         {{#> button button--modifier="pf-m-plain" pagelayout-icon--bell="true" button--attribute='aria-label="Notifications"'}}
           {{> button-icon button-icon--type="bell"}}
@@ -13,12 +13,12 @@
       {{/toolbar-item}}
     {{/toolbar-group}}
     {{#> toolbar-group}}
-      {{#> toolbar-item toolbar-item--modifier="pf-u-hidden-on-lg pf-u-mr-0"}}
+      {{#> toolbar-item toolbar-item--modifier="pf-m-mobile"}}
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Overflow actions"'}}
           {{> button-icon button-icon--type="ellipsis-v"}}
         {{/button}}
       {{/toolbar-item}}
-      {{#> toolbar-item toolbar-item--modifier="pf-u-sr-only pf-u-visible-on-md"}}
+      {{#> toolbar-item toolbar-item--modifier="pf-m-user pf-screen-reader"}}
         {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
           Kyle Baker
         {{/dropdown}}

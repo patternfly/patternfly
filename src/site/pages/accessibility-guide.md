@@ -125,7 +125,7 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
         <i class="..." aria-hidden="true"></i>
       </button>
       ```
-      - For non-interactive icons, include `pf-u-sr-only` text near the icon. Depending on the component, the `pf-u-sr-only` text might not be a direct sibling to the icon element. For example, in the Alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
+      - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the Alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
       ```html
       <div class="pf-c-alert pf-m-success" aria-label="Success Notification">
         <div aria-hidden="true" class="pf-c-alert__icon">
@@ -133,7 +133,7 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
         </div>
         <div class="pf-c-alert__body">
           <h4 class="pf-c-alert__title">
-            <span class="pf-u-sr-only">Success: </span> Success notification title
+            {{#> screen-reader}}Success:{{/screen-reader}} Success notification title
           </h4>
         </div>
       </div>

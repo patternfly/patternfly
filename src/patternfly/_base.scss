@@ -29,6 +29,9 @@ html {
   font-size: unset !important; // the important is needed because we don't know if pf3 will be loaded after pfnext
 }
 
+.pf-screen-reader {
+  @include pf-u-screen-reader; // for use with assistive technologies
+}
 /* stylelint-enable */
 
 @if $pf-global--enable-reset {

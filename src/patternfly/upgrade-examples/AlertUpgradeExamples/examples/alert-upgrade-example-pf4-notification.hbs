@@ -4,13 +4,13 @@
     {{/alert-icon}}
     {{#> alert-body alert-body--attribute='role="alert"'}}
       {{#> alert-title}}
-        {{#> accessibility accessibility--type="sr-only"}}success: {{/accessibility}}
+        {{#> screen-reader}}success:{{/screen-reader}}
         The server configuration changed.
       {{/alert-title}}
     {{/alert-body}}
     {{#> alert-action}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-          <i class="fas fa-times"></i> 
+        {{> button-icon button-icon--type="times"}}
       {{/button}}
       {{/alert-action}}
   {{/alert}}
@@ -20,7 +20,7 @@
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
-      {{#> accessibility accessibility--type="sr-only"}}danger: {{/accessibility}}
+      {{#> screen-reader}}danger:{{/screen-reader}}
         Failed to add server_abc.
       {{/alert-title}}
   {{/alert-body}}
@@ -31,7 +31,7 @@
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
-      {{#> accessibility accessibility--type="sr-only"}}warning: {{/accessibility}}
+      {{#> screen-reader}}warning:{{/screen-reader}}
       The server configuration changed.
     {{/alert-title}}
   {{/alert-body}}
@@ -40,7 +40,7 @@
       Reload server
     {{/button}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-      <i class="fas fa-times"></i>
+      {{> button-icon button-icon--type="times"}}
     {{/button}}
   {{/alert-action}}
 {{/alert}}
@@ -50,7 +50,7 @@
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
-      {{#> accessibility accessibility--type="sr-only"}}info: {{/accessibility}}
+      {{#> screen-reader}}info:{{/screen-reader}}
       Great job! This is really working out.
     {{/alert-title}}
   {{/alert-body}}
@@ -59,7 +59,7 @@
       Reload server
     {{/button}}
 		{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-				<i class="fas fa-ellipsis-v"></i> 
+				{{> button-icon button-icon--type="ellipsis-v"}}
 		{{/button}}
   {{/alert-action}}
 {{/alert}}

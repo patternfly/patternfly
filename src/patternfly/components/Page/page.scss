@@ -196,6 +196,30 @@
     max-width: var(--pf-c-page__header-tools--c-dropdown__toggle-text--MaxWidth);
   }
 
+  .pf-l-toolbar__group {
+    &.pf-m-icons {
+      @media screen and (min-width: $pf-global--breakpoint--lg) {
+        @include pf-u-visible;
+      }
+    }
+  }
+
+  .pf-l-toolbar__item {
+    &.pf-m-mobile {
+      margin-right: 0;
+
+      @media screen and (min-width: $pf-global--breakpoint--lg) {
+        display: none;
+      }
+    }
+
+    &.pf-m-user {
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        @include pf-u-visible;
+      }
+    }
+  }
+
   .pf-c-avatar {
     margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
   }
