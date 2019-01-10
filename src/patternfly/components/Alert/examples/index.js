@@ -2,39 +2,27 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import AlertSuccessRaw from '!raw!./alert-success-example.hbs';
-import AlertWarningRaw from '!raw!./alert-warning-example.hbs';
-import AlertDangerRaw from '!raw!./alert-danger-example.hbs';
-import AlertInfoRaw from '!raw!./alert-info-example.hbs';
-import AlertSuccess from './alert-success-example.hbs';
-import AlertWarning from './alert-warning-example.hbs';
-import AlertDanger from './alert-danger-example.hbs';
-import AlertInfo from './alert-info-example.hbs';
+import AlertTypesRaw from '!raw!./alert-types-example.hbs';
+import AlertVariationsRaw from '!raw!./alert-variations-example.hbs';
+import AlertTypes from './alert-types-example.hbs';
+import AlertVariations from './alert-variations-example.hbs';
 import docs from '../docs/code.md';
 import '../alert.scss';
 
 export const Docs = docs;
 
 export default () => {
-  const alertSuccess = AlertSuccess();
-  const alertWarning = AlertWarning();
-  const alertDanger = AlertDanger();
-  const alertInfo = AlertInfo();
+  const alertTypes = AlertTypes();
+  const alertVariations = AlertVariations();
   const headingText = 'Alert';
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Success Alert" handlebars={AlertSuccessRaw}>
-        {alertSuccess}
+      <Example heading="Alert Types" handlebars={AlertTypesRaw}>
+        {alertTypes}
       </Example>
-      <Example heading="Danger Alert" handlebars={AlertDangerRaw}>
-        {alertDanger}
-      </Example>
-      <Example heading="Warning Alert" handlebars={AlertWarningRaw}>
-        {alertWarning}
-      </Example>
-      <Example heading="Info Alert" handlebars={AlertInfoRaw}>
-        {alertInfo}
+      <Example heading="Alert Variations" handlebars={AlertVariationsRaw}>
+        {alertVariations}
       </Example>
     </Documentation>
   );

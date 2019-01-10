@@ -3,16 +3,14 @@
     {{#> alert-icon alert-icon--success="true"}}
     {{/alert-icon}}
     {{#> alert-body alert-body--attribute='role="alert"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+        {{> button-icon button-icon--type="times"}}
+      {{/button}}
       {{#> alert-title}}
         {{#> screen-reader}}success:{{/screen-reader}}
         The server configuration changed.
       {{/alert-title}}
     {{/alert-body}}
-    {{#> alert-action}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-        {{> button-icon button-icon--type="times"}}
-      {{/button}}
-      {{/alert-action}}
   {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Notification"'}}
@@ -30,37 +28,28 @@
   {{#> alert-icon alert-icon--warning="true"}}
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+      {{> button-icon button-icon--type="times"}}
+    {{/button}}
     {{#> alert-title}}
       {{#> screen-reader}}warning:{{/screen-reader}}
       The server configuration changed.
     {{/alert-title}}
   {{/alert-body}}
-  {{#> alert-action}}
-    {{#> button button--modifier="pf-m-link"}}
-      Reload server
-    {{/button}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-      {{> button-icon button-icon--type="times"}}
-    {{/button}}
-  {{/alert-action}}
+  
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
   {{#> alert-icon alert-icon--info="true"}}
   {{/alert-icon}}
   {{#> alert-body alert-body--attribute='role="alert"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+			{{> button-icon button-icon--type="ellipsis-v"}}
+		{{/button}}
     {{#> alert-title}}
       {{#> screen-reader}}info:{{/screen-reader}}
       Great job! This is really working out.
     {{/alert-title}}
-  {{/alert-body}}
-  {{#> alert-action}}
-    {{#> button button--modifier="pf-m-link"}}
-      Reload server
-    {{/button}}
-		{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-				{{> button-icon button-icon--type="ellipsis-v"}}
-		{{/button}}
-  {{/alert-action}}
+  {{/alert-body}}		  
 {{/alert}}
 {{/alert-upgrade-examples}}
