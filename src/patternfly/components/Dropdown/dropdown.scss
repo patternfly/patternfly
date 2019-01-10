@@ -18,6 +18,8 @@
   --pf-c-dropdown__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
@@ -35,7 +37,8 @@
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-dropdown__menu--top--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+  --pf-c-dropdown--m-top__menu--Top: 0;
+  --pf-c-dropdown--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
   --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -48,6 +51,7 @@
   --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
 
   // Menu Item Separator
   --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
@@ -90,15 +94,23 @@
   &:hover,
   &.pf-m-hover {
     &::before {
-      border-bottom-color: var(--pf-c-dropdown__toggle--hover--BorderBottomColor);
+      --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--hover--BorderBottomColor);
     }
   }
 
   &:active,
-  &.pf-m-active,
+  &.pf-m-active {
+    &::before {
+      --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--active--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-dropdown__toggle--active--BorderBottomWidth);
+    }
+  }
+
   .pf-m-expanded > & {
     &::before {
-      border-bottom-color: var(--pf-c-dropdown__toggle--expanded--BorderBottomColor);
+      --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--expanded--BorderBottomColor);
+
       border-bottom-width: var(--pf-c-dropdown__toggle--expanded--BorderBottomWidth);
     }
   }
@@ -155,8 +167,9 @@
   }
 
   .pf-c-dropdown.pf-m-top & {
-    top: 0;
-    transform: var(--pf-c-dropdown__menu--top--Transform);
+    --pf-c-dropdown__menu--Top: var(--pf-c-dropdown--m-top__menu--Top);
+
+    transform: var(--pf-c-dropdown--m-top__menu--Transform);
   }
 }
 
@@ -176,16 +189,18 @@
   &.pf-m-hover,
   &:focus,
   &.pf-m-focus {
-    color: var(--pf-c-dropdown__menu-item--Color);
+    --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--Color);
+
     text-decoration: none;
     background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
   }
 
   &:disabled,
   &.pf-m-disabled {
-    color: var(--pf-c-dropdown__menu-item--disabled--Color);
+    --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--disabled--Color);
+
     pointer-events: none;
-    background-color: transparent;
+    background-color: var(--pf-c-dropdown__menu-item--disabled--BackgroundColor);
   }
 }
 
