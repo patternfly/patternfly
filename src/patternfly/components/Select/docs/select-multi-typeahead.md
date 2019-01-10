@@ -17,7 +17,7 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates a custom toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates a custom select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/Check/examples/) for more details) |
+| `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/Check/examples/) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
 | `.pf-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
 | `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |

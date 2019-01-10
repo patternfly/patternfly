@@ -48,12 +48,10 @@
   // Toggle Arrow
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-select__toggle-arrow--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // Menu
   --pf-c-select__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-select__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-select__menu--BorderColor: var(--pf-global--BorderColor);
   --pf-c-select__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-select__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-select__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -112,6 +110,7 @@
   line-height: var(--pf-c-select__toggle--LineHeight);
   color: var(--pf-c-select__toggle--Color);
   white-space: nowrap;
+  cursor: pointer;
   background-color: var(--pf-c-select__toggle--BackgroundColor);
   border: none;
 
@@ -245,7 +244,7 @@
 
   &:focus,
   &.pf-m-focus {
-    // Set the bottom margin to allow for the bottom border width of the containing toggle
+    // Set the bottom padding to allow for the bottom border width of the containing toggle
     padding-bottom: var(--pf-c-form-control--PaddingBottom);
   }
 }

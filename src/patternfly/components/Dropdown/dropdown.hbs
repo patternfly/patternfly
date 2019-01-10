@@ -2,18 +2,8 @@
   {{#if dropdown--attribute}}
     {{dropdown--attribute}}
   {{/if}}>
-  {{!-- {{#if dropdown--IsSelect}}
-    <span id="{{id}}-label" hidden>Select a fruit</span>
-  {{else if dropdown--IsMultiSelect}}
-    <span id="{{id}}-label" hidden>Select one or more fruits</span>
-  {{/if}} --}}
   <button id="{{id}}-button"
     class="pf-c-dropdown__toggle{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}"
-    {{!-- {{#if dropdown--IsSelect}}
-      aria-labelledby="{{id}}-label {{id}}-button"
-    {{else if dropdown--IsMultiSelect}}
-        aria-labelledby="{{id}}-label {{id}}-button"
-    {{/if}} --}}
     aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
     {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
     {{> @partial-block}}
@@ -24,10 +14,6 @@
     {{> kebab-icon}}
     {{/if}}
   </button>
-  {{!-- {{#if dropdown--IsSelect}}
-    {{> dropdown-select}}
-  {{else if dropdown--IsMultiSelect}}
-    {{> dropdown-multi-select}} --}}
   {{#if dropdown--IsActionMenu}}
     {{> dropdown-menu}}
   {{else}}

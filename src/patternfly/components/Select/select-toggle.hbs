@@ -51,7 +51,9 @@
 	{{!-- Clear button if it's typeahead and something has been typed --}}
 	{{#if select--IsTypeahead}}
 		{{#if select--ItemIsSelected}}
-			{{> button button--modifier="pf-m-plain pf-c-select__toggle-clear" button--HasTimesCircleIcon="true" button--attribute='aria-label="Clear all"'}}
+			{{#> button button--modifier="pf-m-plain pf-c-select__toggle-clear" button--attribute='aria-label="Clear all"'}}
+				{{> button-icon button-icon--type="times-circle"}}
+			{{/button}}
 		{{/if}}
 	{{/if}}
 

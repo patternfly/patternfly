@@ -3,46 +3,46 @@
   {{#if select-multi--attribute}}
     {{{select-multi-attribute}}}
   {{/if}}>
-  <form class="pf-c-form">
-  <fieldset class="pf-c-form__fieldset" aria-labelledby="{{id}}-label">
-    <div class="pf-c-select__menu-group">
-      <div class="pf-c-select__menu-group-title">Status</div>
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="running"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-running"')}}Running{{/check-label}}
-      {{/check}}
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-stopped" name="stopped" checked')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-stopped"')}}Stopped{{/check-label}}
-      {{/check}}
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-down" name="down" checked')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-down"')}}Down{{/check-label}}
-      {{/check}}
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-degraded" name="degraded"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-degraded"')}}Degraded{{/check-label}}
-      {{/check}}
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-needsMaintenance" name="needsMaintenance" checked')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-needsMaintenance"')}}Needs Maintenance{{/check-label}}
-      {{/check}}
-    </div>
-    <div class="pf-c-select__menu-group">
-      <div class="pf-c-select__menu-group-title">Vendor</div>
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-dell" name="dell"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-dell"')}}Dell{{/check-label}}
-      {{/check}}
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-samsung" name="samsung" aria-disabled="true" disabled')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-samsung"')}}Samsung{{/check-label}}
-      {{/check}}
-      {{#> check check--modifier="pf-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-hp" name="hp"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' id '-hp"')}}Hewlett-Packard{{/check-label}}
-      {{/check}}
-    </div>
-  </fieldset>
-  </form>
+  {{#> form}}
+    {{#> form-group form-group--modifier="pf-c-form__fieldset" form-group--attribute=(concat 'aria-labelledby="' id '-label"')}}
+      <div class="pf-c-select__menu-group">
+        <div class="pf-c-select__menu-group-title">Status</div>
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="running"')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-running"')}}Running{{/check-label}}
+        {{/check}}
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-stopped" name="stopped" checked')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-stopped"')}}Stopped{{/check-label}}
+        {{/check}}
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-down" name="down" checked')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-down"')}}Down{{/check-label}}
+        {{/check}}
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-degraded" name="degraded"')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-degraded"')}}Degraded{{/check-label}}
+        {{/check}}
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-needsMaintenance" name="needsMaintenance" checked')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-needsMaintenance"')}}Needs Maintenance{{/check-label}}
+        {{/check}}
+      </div>
+      <div class="pf-c-select__menu-group">
+        <div class="pf-c-select__menu-group-title">Vendor</div>
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-dell" name="dell"')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-dell"')}}Dell{{/check-label}}
+        {{/check}}
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-samsung" name="samsung" aria-disabled="true" disabled')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-samsung"')}}Samsung{{/check-label}}
+        {{/check}}
+        {{#> check check--modifier="pf-c-select__menu-item"}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-hp" name="hp"')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' id '-hp"')}}Hewlett-Packard{{/check-label}}
+        {{/check}}
+      </div>
+    {{/form-group}}
+  {{/form}}
 </div>
