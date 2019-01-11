@@ -7,7 +7,6 @@
 
   // Icon
   --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
-  --pf-c-alert__icon__svg--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-alert__icon--Color: var(--pf-global--Color--100);
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--lg);
 
@@ -19,15 +18,13 @@
 
   // Title
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-alert__title--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-alert__title--MarginBottom: var(--pf-global--spacer--xs);
   --pf-c-alert__title--Color: var(--pf-global--Color--100);
+  --pf-c-alert__title--siblings--MarginTop: var(--pf-global--spacer--xs);
 
-  // Action
-  --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-alert__action--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-alert__action--PaddingLeft: var(--pf-global--spacer--lg);
+  // Dismiss button
+  --pf-c-alert__body--c-button--Top: var(--pf-global--spacer--sm);
+  --pf-c-alert__body--c-button--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-alert__body--c-button--sibling--PaddingRight: var(--pf-global--spacer--lg);
 
   // Success
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
@@ -55,6 +52,7 @@
   display: flex;
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
+
 
   &.pf-m-success {
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);
@@ -87,25 +85,38 @@
   font-size: var(--pf-c-alert__icon--FontSize);
   color: var(--pf-c-alert__icon--Color);
   background-color: var(--pf-c-alert__icon--BackgroundColor);
-
-  svg { // b/c the svg is generated it must break BEM and not receive a class.
-    margin-top: var(--pf-c-alert__icon__svg--MarginTop);
-  }
 }
 
 .pf-c-alert__body {
+  position: relative;
+  display: flex;
   flex: 1 1 100%;
+  flex-direction: column;
+  justify-content: center;
   padding: var(--pf-c-alert__body--PaddingTop) var(--pf-c-alert__body--PaddingRight) var(--pf-c-alert__body--PaddingBottom) var(--pf-c-alert__body--PaddingLeft);
+
+  > .pf-c-button {
+    position: absolute;
+    top: var(--pf-c-alert__body--c-button--Top);
+    right: 0;
+    font-size: var(--pf-c-alert__body--c-button--FontSize);
+
+    + * {
+      padding-right: var(--pf-c-alert__body--c-button--sibling--PaddingRight);
+    }
+  }
 }
 
 .pf-c-alert__title {
-  margin-top: var(--pf-c-alert__title--MarginTop);
-  margin-bottom: var(--pf-c-alert__title--MarginBottom);
   font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
+
+  ~ * {
+    margin-top: var(--pf-c-alert__title--siblings--MarginTop);
+  }
 }
 
 .pf-c-alert__action {
-  padding: var(--pf-c-alert__action--PaddingTop) var(--pf-c-alert__action--PaddingRight) var(--pf-c-alert__action--PaddingBottom) var(--pf-c-alert__action--PaddingLeft);
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
