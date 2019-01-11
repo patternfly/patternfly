@@ -21,13 +21,10 @@
   --pf-c-alert__title--Color: var(--pf-global--Color--100);
   --pf-c-alert__title--siblings--MarginTop: var(--pf-global--spacer--xs);
 
-  // Action
-  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--sm);
-
   // Dismiss button
-  --pf-c-alert--c-button--Top: var(--pf-global--spacer--sm);
-  --pf-c-alert--c-button--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-alert--c-button--sibling--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-alert__body--c-button--Top: var(--pf-global--spacer--sm);
+  --pf-c-alert__body--c-button--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-alert__body--c-button--sibling--PaddingRight: var(--pf-global--spacer--lg);
 
   // Success
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
@@ -100,12 +97,12 @@
 
   > .pf-c-button {
     position: absolute;
-    top: var(--pf-c-alert--c-button--Top);
+    top: var(--pf-c-alert__body--c-button--Top);
     right: 0;
-    font-size: var(--pf-c-alert--c-button--FontSize);
+    font-size: var(--pf-c-alert__body--c-button--FontSize);
 
     + * {
-      padding-right: var(--pf-c-alert--c-button--sibling--PaddingRight);
+      padding-right: var(--pf-c-alert__body--c-button--sibling--PaddingRight);
     }
   }
 }
@@ -122,8 +119,4 @@
 .pf-c-alert__action {
   display: flex;
   align-items: center;
-
-  &:last-child {
-    padding-right: var(--pf-c-alert__action--PaddingRight);
-  }
 }
