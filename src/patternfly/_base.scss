@@ -31,21 +31,24 @@
 .pf-c-table,
 .pf-c-tabs,
 .pf-c-title,
-.pf-c-tooltip {
-  &,
-  &::before,
-  &::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: var(--pf-global--FontFamily--sans-serif);
-    font-size: var(--pf-global--FontSize--md);
-    font-weight: var(--pf-global--FontWeight--normal);
-    line-height: var(--pf-global--LineHeight--md);
-    color: var(--pf-global--Color--100); // this color rule is set here to be able to use themes
-    background-color: transparent;
-    text-rendering: optimizeLegibility;
-  }
+.pf-c-tooltip,
+.pf-l-bullseye,
+.pf-l-gallery,
+.pf-l-grid,
+.pf-l-level,
+.pf-l-split,
+.pf-l-stack,
+.pf-l-toolbar {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--pf-global--FontFamily--sans-serif);
+  font-size: var(--pf-global--FontSize--md);
+  font-weight: var(--pf-global--FontWeight--normal);
+  line-height: var(--pf-global--LineHeight--md);
+  color: var(--pf-global--Color--100); // this color rule is set here to be able to use themes
+  background-color: transparent;
+  text-rendering: optimizeLegibility;
 }
 
 // Since PF3 sets root font size to 10px, we need to unset it.
