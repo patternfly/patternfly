@@ -9,7 +9,7 @@ const plugins = [
   'gatsby-transformer-json',
   'gatsby-transformer-yaml',
   {
-    resolve: `gatsby-plugin-sass`,
+    resolve: `gatsby-plugin-custom-sass`,
     options: {
       postCssPlugins: [],
       precision: 5

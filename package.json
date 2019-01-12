@@ -118,6 +118,7 @@
     "react-load-script": "0.0.6",
     "react-prism": "^4.3.2",
     "rehype-react": "^3.0.2",
+    "sass-loader": "^7.0.1",
     "scaffold-helper": "^1.0.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "semantic-release": "^15.4.1",
