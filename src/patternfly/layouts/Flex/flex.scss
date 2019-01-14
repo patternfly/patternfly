@@ -1,96 +1,6 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
-/* stylelint-disable */
-
-// Add name to breakpoints
-$mobile-only: $pf-global--breakpoint--mobile-only, -mobile-only;
-$tablet: $pf-global--breakpoint--tablet, -tablet-up;
-$desktop: $pf-global--breakpoint--desktop, -desktop-up;
-
-$pf-flex-breakpoints: (
-  base: "",
-  -mobile-only: $pf-global--breakpoint--mobile-only,
-  -tablet-plus: $pf-global--breakpoint--tablet,
-  -desktop-plus: $pf-global--breakpoint--desktop
-);
-/* stylelint-enable */
-
-.pf-l-flex {
-  // Default values: these get reset based on modifier usage
-  --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
-  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
-  --pf-l-flex--row-gap: var(--pf-global--spacer--md);
-  --pf-l-flex--space-items: var(--pf-l-flex--spacer);
-
-  // Flex spacer values
-  --pf-l-flex--spacer--none: 0;
-  --pf-l-flex--spacer--xs: var(--pf-global--spacer--xs);
-  --pf-l-flex--spacer--sm: var(--pf-global--spacer--sm);
-  --pf-l-flex--spacer--md: var(--pf-global--spacer--md);
-  --pf-l-flex--spacer--lg: var(--pf-global--spacer--lg);
-  --pf-l-flex--spacer--xl: var(--pf-global--spacer--xl);
-  --pf-l-flex--spacer--2xl: var(--pf-global--spacer--2xl);
-  --pf-l-flex--spacer--3xl: var(--pf-global--spacer--x3l);
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  row-gap: var(--pf-l-flex--row-gap);
-
-  > * {
-    --pf-l-flex--spacer--Right: var(--pf-l-flex--spacer);
-
-    margin-right: var(--pf-l-flex--spacer--Right);
-  }
-
-  > :last-child {
-    --pf-l-flex--spacer--Right: 0;
-  }
-
-  // reset nested flex layouts
-  .pf-l-flex {
-    > * {
-      --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
-      --pf-l-flex--spacer--Right: var(--pf-l-flex--spacer);
-    }
-
-    > :last-child {
-      --pf-l-flex--spacer--Right: 0;
-    }
-  }
-
-  // &.pf-m-inline-flex {
-  //   display: inline-flex;
-  // }
-
-  // &.pf-m-align-center {
-  //   align-items: center;
-  // }
-
-  // // if set on child
-  // .pf-m-align-center {
-  //   align-self: center;
-  // }
-
-  // // if set on child
-  // &.pf-m-align-flex-start {
-  //   align-items: flex-start;
-  // }
-
-  // &.pf-m-align-right,
-  // .pf-m-align-right {
-  //   margin-left: auto;
-  // }
-
-  // &.pf-m-overflow-scroll {
-  //   flex-wrap: nowrap;
-  //   overflow-x: auto;
-  // }
-
-  // &.pf-m-nowrap {
-  //   flex-wrap: nowrap;
-  // }
-}
+// Mixins
 
 // Spacer values
 $pf-flex-spacer-map: (
@@ -106,14 +16,14 @@ $pf-flex-spacer-map: (
 
 @mixin pf-l-flex--space-items-builder {
   @each $prop, $value in $pf-flex-spacer-map {
-    .pf-l-flex.pf-m-space-items-#{$prop} > * {
+    &.pf-m-space-items-#{$prop} > * {
       --pf-l-flex--spacer: #{$value};
     }
   }
 
   @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-l-flex.pf-m-space-items-#{$prop}-mobile-only > * {
+      &.pf-m-space-items-#{$prop}-mobile-only > * {
         --pf-l-flex--spacer: #{$value};
       }
     }
@@ -121,7 +31,7 @@ $pf-flex-spacer-map: (
 
   @media screen and (min-width: $pf-global--breakpoint--tablet) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-l-flex.pf-m-space-items-#{$prop}-tablet-plus > * {
+      &.pf-m-space-items-#{$prop}-tablet-plus > * {
         --pf-l-flex--spacer: #{$value};
       }
     }
@@ -129,7 +39,7 @@ $pf-flex-spacer-map: (
 
   @media screen and (min-width: $pf-global--breakpoint--desktop) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-l-flex.pf-m-space-items-#{$prop}-desktop-plus > * {
+      &.pf-m-space-items-#{$prop}-desktop-plus > * {
         --pf-l-flex--spacer: #{$value};
       }
     }
@@ -138,84 +48,55 @@ $pf-flex-spacer-map: (
 
 @mixin pf-l-flex--spacer-builder {
   @each $prop, $value in $pf-flex-spacer-map {
-    .pf-l-flex .pf-m-spacer-#{$prop} {
+    .pf-m-spacer-#{$prop} {
       --pf-l-flex--spacer: #{$value};
-
-      margin-right: #{$value};
     }
   }
 
   @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-l-flex .pf-m-spacer-#{$prop}-mobile-only {
+      .pf-m-spacer-#{$prop}-mobile-only {
         --pf-l-flex--spacer: #{$value};
-
-        margin-right: #{$value};
       }
     }
   }
 
   @media screen and (min-width: $pf-global--breakpoint--tablet) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-l-flex .pf-m-spacer-#{$prop}-tablet-plus {
+      .pf-m-spacer-#{$prop}-tablet-plus {
         --pf-l-flex--spacer: #{$value};
-
-        margin-right: #{$value};
       }
     }
   }
 
   @media screen and (min-width: $pf-global--breakpoint--desktop) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-l-flex .pf-m-spacer-#{$prop}-desktop-plus {
+      .pf-m-spacer-#{$prop}-desktop-plus {
         --pf-l-flex--spacer: #{$value};
-
-        margin-right: #{$value};
       }
     }
   }
 }
 
-@include pf-l-flex--space-items-builder;
-@include pf-l-flex--spacer-builder;
-
 @mixin pf-l-flex-justify-flex-end {
   justify-content: flex-end;
-
-  > * {
-    margin-right: 0;
-    margin-left: var(--pf-l-flex--spacer);
-  }
 }
 
 @mixin pf-l-flex-justify-flex-start {
   justify-content: flex-start;
-
-  > * {
-    margin-right: var(--pf-l-flex--spacer--Right);
-    margin-left: 0;
-  }
-
-  > :last-child {
-    --pf-l-flex--spacer--Right: 0;
-  }
 }
 
 // Justify space between
 @mixin pf-l-flex-justify-space-between {
   justify-content: space-between;
-
-  > * {
-    --pf-l-flex--spacer--Right: 0;
-  }
 }
 
 // Column layout
-@mixin pf-l-flex-columns {
+@mixin pf-l-flex-column {
   flex-direction: column;
 }
 
-@mixin pf-l-flex-rows {
+@mixin pf-l-flex-row {
   flex-direction: row;
 }
 
@@ -235,146 +116,285 @@ $pf-flex-spacer-map: (
   flex-wrap: nowrap;
 }
 
-// Set base css for responsive classes
-.pf-l-flex.pf-m-justify-flex-end {
-  @include pf-l-flex-justify-flex-end;
+@mixin pf-l-flex-inline-flex {
+  display: inline-flex;
 }
 
-.pf-l-flex.pf-m-justify-space-between {
-  @include pf-l-flex-justify-space-between;
+@mixin pf-l-flex-align-items-center {
+  align-items: center;
 }
 
-.pf-l-flex.pf-m-justify-flex-start {
-  @include pf-l-flex-justify-flex-start;
+@mixin pf-l-flex-align-self-center {
+  align-self: center;
 }
 
-.pf-l-flex.pf-m-columns {
-  @include pf-l-flex-columns;
+@mixin pf-l-flex-align-items-flex-start {
+  align-items: flex-start;
 }
 
-.pf-l-flex.pf-m-rows {
-  @include pf-l-flex-rows;
-}
+.pf-l-flex {
+  --pf-l-flex--Display: flex;
+  --pf-l-flex--FlexWrap: wrap;
+  --pf-l-flex--AlignItems: baseline;
+  --pf-l-flex--item--MarginRight: var(--pf-l-flex--spacer-base);
+  --pf-l-flex--item--MarginLeft: 0;
 
-.pf-l-flex .pf-m-grow {
-  @include pf-l-flex-grow;
-}
+  // Default values: these get reset based on modifier usage
+  --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
 
-.pf-l-flex .pf-m-full-width {
-  @include pf-l-flex-full-width;
-}
+  // Flex spacer values
+  --pf-l-flex--spacer--none: 0;
+  --pf-l-flex--spacer--xs: var(--pf-global--spacer--xs);
+  --pf-l-flex--spacer--sm: var(--pf-global--spacer--sm);
+  --pf-l-flex--spacer--md: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer--lg: var(--pf-global--spacer--lg);
+  --pf-l-flex--spacer--xl: var(--pf-global--spacer--xl);
+  --pf-l-flex--spacer--2xl: var(--pf-global--spacer--2xl);
+  --pf-l-flex--spacer--3xl: var(--pf-global--spacer--3xl);
 
-.pf-l-flex.pf-m-align-right,
-.pf-l-flex .pf-m-align-right {
-  @include pf-l-flex-align-right;
-}
+  display: var(--pf-l-flex--Display);
+  flex-wrap: var(--pf-l-flex--FlexWrap);
+  align-items: var(--pf-l-flex--AlignItems);
 
-.pf-l-flex.pf-m-nowrap {
-  @include pf-l-flex-nowrap;
-}
+  > * {
+    margin-left: 0;
 
+    &:not(:last-child) {
+      margin-right: var(--pf-l-flex--spacer);
+    }
+  }
 
-// Mobile class definitions
-@media screen and (max-width: $pf-global--breakpoint--mobile-only) {
-  .pf-l-flex.pf-m-justify-flex-end-mobile-only {
+  [class*="pf-m-justify-flex-end"] {
+    > * {
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-left: var(--pf-l-flex--spacer);
+      }
+    }
+  }
+
+  [class*="pf-m-justify-space-between"] {
+    > * {
+      --pf-l-flex--spacer: 0;
+    }
+  }
+
+  // reset nested flex layouts
+  & & {
+    > * {
+      --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+    }
+  }
+
+  @include pf-l-flex--space-items-builder;
+  @include pf-l-flex--spacer-builder;
+
+  // Set base css for responsive classes
+  &.pf-m-justify-flex-end {
     @include pf-l-flex-justify-flex-end;
   }
 
-  .pf-l-flex.pf-m-justify-space-between-mobile-only {
+  &.pf-m-justify-space-between {
     @include pf-l-flex-justify-space-between;
   }
 
-  .pf-l-flex.pf-m-justify-flex-start-mobile-only {
+  &.pf-m-justify-flex-start {
     @include pf-l-flex-justify-flex-start;
   }
 
-  .pf-l-flex.pf-m-columns-mobile-only {
-    @include pf-l-flex-columns;
+  &.pf-m-column {
+    @include pf-l-flex-column;
   }
 
-  .pf-l-flex.pf-m-rows-mobile-only {
-    @include pf-l-flex-rows;
+  &.pf-m-row {
+    @include pf-l-flex-row;
   }
 
-  .pf-l-flex .pf-m-grow-mobile-only {
+  .pf-m-grow {
     @include pf-l-flex-grow;
   }
 
-  .pf-l-flex .pf-m-full-width-mobile-only {
-    @include pf-l-flex-grow;
+  .pf-m-full-width {
+    @include pf-l-flex-full-width;
   }
 
-  .pf-l-flex.pf-m-nowrap-mobile-only {
+  &.pf-m-align-right,
+  .pf-m-align-right {
+    @include pf-l-flex-align-right;
+  }
+
+  &.pf-m-nowrap {
     @include pf-l-flex-nowrap;
   }
-}
 
-// Tablet class definitions
-@media screen and (min-width: $pf-global--breakpoint--tablet) {
-  .pf-l-flex.pf-m-justify-flex-end-tablet-plus {
-    @include pf-l-flex-justify-flex-end;
+  &.pf-m-inline-flex {
+    @include pf-l-flex-inline-flex;
   }
 
-  .pf-l-flex.pf-m-justify-space-between-tablet-plus {
-    @include pf-l-flex-justify-space-between;
+  &.pf-m-align-items-center {
+    @include pf-l-flex-align-items-center;
   }
 
-  .pf-l-flex.pf-m-justify-flex-start-tablet-plus {
-    @include pf-l-flex-justify-flex-start;
+  &.pf-m-align-self-center {
+    @include pf-l-flex-align-self-center;
   }
 
-  .pf-l-flex.pf-m-columns-tablet-plus {
-    @include pf-l-flex-columns;
+  &.pf-m-align-items-flex-start {
+    @include pf-l-flex-align-items-flex-start;
   }
 
-  .pf-l-flex.pf-m-rows-tablet-plus {
-    @include pf-l-flex-rows;
+  // Mobile class definitions
+  @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+    &.pf-m-justify-flex-end-mobile-only {
+      @include pf-l-flex-justify-flex-end;
+    }
+
+    &.pf-m-justify-space-between-mobile-only {
+      @include pf-l-flex-justify-space-between;
+    }
+
+    &.pf-m-justify-flex-start-mobile-only {
+      @include pf-l-flex-justify-flex-start;
+    }
+
+    &.pf-m-column-mobile-only {
+      @include pf-l-flex-column;
+    }
+
+    &.pf-m-row-mobile-only {
+      @include pf-l-flex-row;
+    }
+
+    .pf-m-grow-mobile-only {
+      @include pf-l-flex-grow;
+    }
+
+    .pf-m-full-width-mobile-only {
+      @include pf-l-flex-grow;
+    }
+
+    &.pf-m-nowrap-mobile-only {
+      @include pf-l-flex-nowrap;
+    }
+
+    &.pf-m-inline-flex {
+      @include pf-l-flex-inline-flex;
+    }
+
+    &.pf-m-align-items-center {
+      @include pf-l-flex-align-items-center;
+    }
+
+    &.pf-m-align-self-center {
+      @include pf-l-flex-align-self-center;
+    }
+
+    &.pf-m-align-items-flex-start {
+      @include pf-l-flex-align-items-flex-start;
+    }
   }
 
-  .pf-l-flex .pf-m-grow-tablet-plus {
-    @include pf-l-flex-grow;
+  // Tablet class definitions
+  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+    &.pf-m-justify-flex-end-tablet-plus {
+      @include pf-l-flex-justify-flex-end;
+    }
+
+    &.pf-m-justify-space-between-tablet-plus {
+      @include pf-l-flex-justify-space-between;
+    }
+
+    &.pf-m-justify-flex-start-tablet-plus {
+      @include pf-l-flex-justify-flex-start;
+    }
+
+    &.pf-m-column-tablet-plus {
+      @include pf-l-flex-column;
+    }
+
+    &.pf-m-row-tablet-plus {
+      @include pf-l-flex-row;
+    }
+
+    .pf-m-grow-tablet-plus {
+      @include pf-l-flex-grow;
+    }
+
+    .pf-m-full-width-tablet-plus {
+      @include pf-l-flex-grow;
+    }
+
+    &.pf-m-nowrap-tablet-plus {
+      @include pf-l-flex-nowrap;
+    }
+
+    &.pf-m-inline-flex {
+      @include pf-l-flex-inline-flex;
+    }
+
+    &.pf-m-align-items-center {
+      @include pf-l-flex-align-items-center;
+    }
+
+    &.pf-m-align-self-center {
+      @include pf-l-flex-align-self-center;
+    }
+
+    &.pf-m-align-items-flex-start {
+      @include pf-l-flex-align-items-flex-start;
+    }
   }
 
-  .pf-l-flex .pf-m-full-width-tablet-plus {
-    @include pf-l-flex-grow;
-  }
+  // Desktop class definitions
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+    &.pf-m-justify-flex-end-desktop-plus {
+      @include pf-l-flex-justify-flex-end;
+    }
 
-  .pf-l-flex.pf-m-nowrap-tablet-plus {
-    @include pf-l-flex-nowrap;
-  }
-}
+    &.pf-m-justify-space-between-desktop-plus {
+      @include pf-l-flex-justify-space-between;
+    }
 
-// Desktop class definitions
-@media screen and (min-width: $pf-global--breakpoint--desktop) {
-  .pf-l-flex.pf-m-justify-flex-end-desktop-plus {
-    @include pf-l-flex-justify-flex-end;
-  }
+    &.pf-m-justify-flex-start-desktop-plus {
+      @include pf-l-flex-justify-flex-start;
+    }
 
-  .pf-l-flex.pf-m-justify-space-between-desktop-plus {
-    @include pf-l-flex-justify-space-between;
-  }
+    &.pf-m-column-desktop-plus {
+      @include pf-l-flex-column;
+    }
 
-  .pf-l-flex.pf-m-justify-flex-start-desktop-plus {
-    @include pf-l-flex-justify-flex-start;
-  }
+    &.pf-m-row-desktop-plus {
+      @include pf-l-flex-row;
+    }
 
-  .pf-l-flex.pf-m-columns-desktop-plus {
-    @include pf-l-flex-columns;
-  }
+    .pf-m-grow-desktop-plus {
+      @include pf-l-flex-grow;
+    }
 
-  .pf-l-flex.pf-m-rows-desktop-plus {
-    @include pf-l-flex-rows;
-  }
+    .pf-m-full-width-desktop-plus {
+      @include pf-l-flex-grow;
+    }
 
-  .pf-l-flex .pf-m-grow-desktop-plus {
-    @include pf-l-flex-grow;
-  }
+    &.pf-m-nowrap-desktop-plus {
+      @include pf-l-flex-nowrap;
+    }
 
-  .pf-l-flex .pf-m-full-width-desktop-plus {
-    @include pf-l-flex-grow;
-  }
+    &.pf-m-inline-flex {
+      @include pf-l-flex-inline-flex;
+    }
 
-  .pf-l-flex.pf-m-nowrap-desktop-plus {
-    @include pf-l-flex-nowrap;
+    &.pf-m-align-items-center {
+      @include pf-l-flex-align-items-center;
+    }
+
+    &.pf-m-align-self-center {
+      @include pf-l-flex-align-self-center;
+    }
+
+    &.pf-m-align-items-flex-start {
+      @include pf-l-flex-align-items-flex-start;
+    }
   }
 }

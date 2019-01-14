@@ -1,19 +1,19 @@
 <h2 class="example-title">
-  Column flex - <code>.pf-l-flex.pf-m-columns</code>
+  Column flex - <code>.pf-l-flex.pf-m-column</code>
 </h2>
-{{#> flex flex--modifier="pf-m-columns"}}
-  {{#> flex newcontext}}
+{{#> flex flex--modifier="pf-m-column"}}
+  {{#> flex newcontext flex--modifier="example-border"}}
     {{#> example}}1{{/example}}
     {{#> example}}2{{/example}}
   {{/flex}}
 
-  {{#> flex newcontext}}
+  {{#> flex newcontext flex--modifier="example-border pf-m-spacer-xs"}}
     {{#> example example--modifier="blue"}}1{{/example}}
     {{#> example example--modifier="blue"}}2{{/example}}
     {{#> example example--modifier="blue"}}3{{/example}}
   {{/flex}}
 
-  {{#> flex newcontext}}
+  {{#> flex newcontext flex--modifier="example-border pf-m-spacer-xl"}}
     {{#> example example--modifier="red"}}1{{/example}}
     {{#> example example--modifier="red"}}2{{/example}}
     {{#> example example--modifier="red"}}3{{/example}}
