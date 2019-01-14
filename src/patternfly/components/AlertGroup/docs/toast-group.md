@@ -2,7 +2,13 @@
 
 An alert group that includes the `.pf-m-toast` modifier becomes a Toast Alert Group with unique positioning in the top-right corner of the window. `.pf-c-alert-group` is required to create a Toast Alert Group.
 
-Every alert within a Toast Alert group must include a close button to dismiss the alert.
+Every Toast alert must include a close button to dismiss the alert.
+
+## Accessibility
+
+| Attribute | Applied To | Outcome |
+| -- | -- | -- |
+| `role="alert"` | `.pf-c-alert` | Used to communicate the toast alert's time-sensitive information to screen reader users. |
 
 ### Modifiers
 
