@@ -1,18 +1,18 @@
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
+    {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Toast Alert"'}}
       {{#> alert-icon alert-icon--success="true"}}
       {{/alert-icon}}
         {{#> alert-body alert-body--attribute='role="alert"'}}
-          {{#> alert-title alert-title--attribute='id="notification_one_title"'}}
+          {{#> alert-title alert-title--attribute='id="alert_one_title"'}}
             {{#> accessibility accessibility--type="sr-only"}}
-              Success notification: 
+              Success alert: 
             {{/accessibility}}
-            Success notification title
+            Success alert title
         {{/alert-title}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="notification_one_title"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="alert_one_title"'}}
           <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
@@ -20,19 +20,19 @@
   {{/alert-item}}
 
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Notification"'}}
+    {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Toast Alert"'}}
       {{#> alert-icon alert-icon--danger="true"}}
       {{/alert-icon}}
       {{#> alert-body alert-body--attribute='role="alert"'}}
-        {{#> alert-title alert-title--attribute='id="notification_two_title"'}}
+        {{#> alert-title alert-title--attribute='id="alert_two_title"'}}
           {{#> accessibility accessibility--type="sr-only"}}
-            Danger notification: 
+            Danger alert: 
           {{/accessibility}}
-          Danger notification title
+          Danger alert title
         {{/alert-title}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="notification_two_title"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="alert_two_title"'}}
           <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
@@ -40,22 +40,22 @@
   {{/alert-item}}
 
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Notification"'}}
+    {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Toast Alert"'}}
       {{#> alert-icon alert-icon--info="true"}}
       {{/alert-icon}}
       {{#> alert-body alert-body--attribute='role="alert"'}}
-        {{#> alert-title alert-title--attribute='id="notification_three_title"'}}
+        {{#> alert-title alert-title--attribute='id="alert_three_title"'}}
           {{#> accessibility accessibility--type="sr-only"}}
-            Info notification: 
+            Info alert: 
           {{/accessibility}}
-          Info notification title
+          Info alert title
         {{/alert-title}}
         {{#> alert-description}}
-          This is a description of the notification content.
+          This is a description of the alert content.
         {{/alert-description}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="notification_three_title"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Dismiss" aria-labelledby="alert_three_title"'}}
           <i class="fas fa-times"></i> 
         {{/button}}
       {{/alert-action}}
