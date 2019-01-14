@@ -1,14 +1,12 @@
 {{#> alert-group}}
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Alert"'}}
+    {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
       {{#> alert-icon alert-icon--success="true"}}
       {{/alert-icon}}
-        {{#> alert-body alert-body--attribute='role="alert"'}}
-          {{#> alert-title}}
-            {{#> accessibility accessibility--type="sr-only"}}
-              Success alert: 
-            {{/accessibility}}
-            Success alert title
+      {{#> alert-body alert-body--attribute='role="alert"'}}
+        {{#> alert-title}}
+          {{#> screen-reader}}Success alert:{{/screen-reader}}
+          Success alert title
         {{/alert-title}}
       {{/alert-body}}
     {{/alert}}
@@ -16,19 +14,17 @@
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Alert"'}}
-      {{#> alert-icon alert-icon--danger="true"}}
+      {{#> alert-icon alert-icon--success="true"}}
       {{/alert-icon}}
       {{#> alert-body alert-body--attribute='role="alert"'}}
         {{#> alert-title}}
-          {{#> accessibility accessibility--type="sr-only"}}
-            Danger alert:
-          {{/accessibility}}
+          {{#> screen-reader}}Danger alert:{{/screen-reader}}
           Danger alert title
         {{/alert-title}}
       {{/alert-body}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Button
+        {{#> button button--modifier="pf-m-link"}}
+          Action Button
         {{/button}}
       {{/alert-action}}
     {{/alert}}
@@ -40,13 +36,11 @@
       {{/alert-icon}}
       {{#> alert-body alert-body--attribute='role="alert"'}}
         {{#> alert-title}}
-          {{#> accessibility accessibility--type="sr-only"}}
-            Info alert:
-          {{/accessibility}}
+          {{#> screen-reader}}Info alert:{{/screen-reader}}
           Info alert title
         {{/alert-title}}
         {{#> alert-description}}
-          This is a description of the alert content.
+          Info alert description. <a href="#">This is a link.</a>
         {{/alert-description}}
       {{/alert-body}}
     {{/alert}}
