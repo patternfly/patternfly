@@ -14,4 +14,4 @@ Every Toast alert must include a close button to dismiss the alert.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-m-toast`| `.pf-c-alert-group` | Applies toast notification styling to an alert group. |
+| `.pf-m-toast`| `.pf-c-alert-group` | Applies toast alert styling to an alert group. |
