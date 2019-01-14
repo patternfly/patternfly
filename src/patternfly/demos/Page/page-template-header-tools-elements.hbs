@@ -1,5 +1,5 @@
 {{#> page-header-tools}}
-    <div class="pf-m-show-lg pf-screen-reader">
+    <div class="pf-m-icons pf-screen-reader">
       {{#> button button--modifier="pf-m-plain" pagelayout-icon--bell="true" button--attribute='aria-label="Notifications"'}}
         {{> button-icon button-icon--type="bell"}}
       {{/button}}
@@ -8,10 +8,10 @@
       {{/button}}
     </div>
     {{#> page-header-tools-group}}
-      {{#> button button--modifier="pf-m-plain pf-m-hide-lg" button--attribute='aria-label="Overflow actions"'}}
+      {{#> button button--modifier="pf-m-plain pf-m-mobile" button--attribute='aria-label="Overflow actions"'}}
         {{> button-icon button-icon--type="ellipsis-v"}}
       {{/button}}
-      <div class="pf-m-show-md pf-screen-reader">
+      <div class="pf-m-user pf-screen-reader">
         {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
           Kyle Baker
         {{/dropdown}}

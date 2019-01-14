@@ -224,27 +224,28 @@
     max-width: var(--pf-c-page__header-tools--c-dropdown__toggle-text--MaxWidth);
   }
 
-  .pf-c-avatar {
-    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+  .pf-m-icons {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      @include pf-u-visible;
+    }
   }
 
-  // Responsive helpers for showing/hiding nav elements
-  .pf-m-hide-lg {
+  .pf-m-mobile {
+    margin-right: 0;
+
     @media screen and (min-width: $pf-global--breakpoint--lg) {
       display: none;
     }
   }
 
-  .pf-m-show-md {
+  .pf-m-user {
     @media screen and (min-width: $pf-global--breakpoint--md) {
       @include pf-u-visible;
     }
   }
 
-  .pf-m-show-lg {
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      @include pf-u-visible;
-    }
+  .pf-c-avatar {
+    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
   }
 }
 
