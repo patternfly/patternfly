@@ -81,6 +81,7 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   /* stylelint-disable */
   -moz-appearance: none;
   -webkit-appearance: none;
+  box-shadow: none;
   /* stylelint-enable */
 
   &::placeholder {
