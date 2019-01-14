@@ -354,6 +354,11 @@
     }
   }
 
+  .Documentation__docsection {
+    p + p {
+      margin-top: 1em;
+    }
+  }
 }
 
 .is-dark-preview {

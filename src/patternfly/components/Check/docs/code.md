@@ -2,6 +2,8 @@
 
 Checkbox and Radio are provided in the check component for use cases outside of forms. If they are used without label text ensure some sort of label for assistive technologies. (for example: `aria-label`)
 
+If you extend this component or modify the styles of this component, then make sure any hover styles defined are applied to the clickable elements, like `<input>` or `<label>` since hover styles are used to convey the clickable target area of an element. To maximize the target area, use the example html where the `<label>` is the wrapping element
+
 ## Accessibility
 
 | Attribute | Applied To | Outcome |
