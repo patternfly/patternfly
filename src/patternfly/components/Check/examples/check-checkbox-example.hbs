@@ -6,11 +6,15 @@
   {{#> check-label check-label--attribute='for="check1-rev"'}}Check 1 reversed{{/check-label}}
   {{#> check-input check-input--attribute='type="checkbox" id="check1-rev" name="examplecheck1-rev"'}}{{/check-input}}
 {{/check}}
-{{#> check}}
-  {{#> check-input check-input--attribute='type="checkbox" id="check2" name="examplecheck2" checked'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check2"'}}Check 2 checked{{/check-label}}
+{{#> check check--type="label" check--attribute='for="check2"'}}
+  {{#> check-input check-input--attribute='type="checkbox" id="check2" name="examplecheck2"'}}{{/check-input}}
+  {{#> check-label check-label--type="span"}}Check 2 label wraps input{{/check-label}}
 {{/check}}
 {{#> check}}
-  {{#> check-input check-input--attribute='type="checkbox" id="check3" name="examplecheck3" aria-disabled="true" disabled'}}{{/check-input}}
-  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check3"'}}Check 3 disabled{{/check-label}}
+  {{#> check-input check-input--attribute='type="checkbox" id="check3" name="examplecheck3" checked'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check3"'}}Check 3 checked{{/check-label}}
+{{/check}}
+{{#> check}}
+  {{#> check-input check-input--attribute='type="checkbox" id="check4" name="examplecheck4" disabled'}}{{/check-input}}
+  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check4"'}}Check 4 disabled{{/check-label}}
 {{/check}}
