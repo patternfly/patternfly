@@ -1,4 +1,5 @@
 const path = require('path');
+const globImporter = require('node-sass-glob-importer');
 
 const PROJECT_ROOT = path.resolve(__dirname);
 
@@ -9,8 +10,9 @@ const plugins = [
   'gatsby-transformer-json',
   'gatsby-transformer-yaml',
   {
-    resolve: `gatsby-plugin-custom-sass`,
+    resolve: `gatsby-plugin-sass`,
     options: {
+      importer: globImporter(),
       postCssPlugins: [],
       precision: 5
     }

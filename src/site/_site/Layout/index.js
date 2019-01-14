@@ -5,7 +5,7 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 import Prism from 'prismjs'; // eslint-disable-line no-unused-vars
 
 import 'prismjs/themes/prism-coy.css';
-import '../../../patternfly/patternfly-base.scss';
+import '../../../patternfly/patternfly.scss';
 import '../../workspace.scss';
 
 export default ({ children }) => (
