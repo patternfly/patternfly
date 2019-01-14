@@ -8,7 +8,7 @@ Every Toast alert must include a close button to dismiss the alert.
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role="alert"` | `.pf-c-alert` | Used to communicate the toast alert's time-sensitive information to screen reader users. |
+| `role="alert"` | `.pf-c-alert__body` |  Communicates contents of the alert message to the user. **Required** |
 
 ### Modifiers
 
