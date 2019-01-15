@@ -29,6 +29,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu` | `<div>` | Defines the parent wrapper of the menu items |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page |
+| `.pf-c-dropdown__menu-item` | `label.pf-c-check` | Defines a menu item that contains a checkbox in a multi-select dropdown |
 | `.pf-c-dropdown__separator` | `<div>` | Defines a separator within the menu |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
 | `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
