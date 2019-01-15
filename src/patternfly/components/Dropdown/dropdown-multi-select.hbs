@@ -13,9 +13,9 @@
       {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-oranges" name="fruit" checked')}}{{/check-input}}
       {{#> check-label check-label--attribute=(concat 'for="' id '-oranges"')}}Oranges{{/check-label}}
     {{/check}}
-    {{#> check check--modifier="pf-c-dropdown__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-bananas" name="fruit" aria-disabled="true" disabled')}}{{/check-input}}
-      {{#> check-label check-label--attribute=(concat 'for="' id '-bananas"')}}Bananas{{/check-label}}
+    {{#> check check--modifier="pf-c-dropdown__menu-item pf-m-disabled"}}
+      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-bananas" name="fruit" disabled')}}{{/check-input}}
+      {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute=(concat 'for="' id '-bananas"')}}Bananas{{/check-label}}
     {{/check}}
     <div class="pf-c-dropdown__separator" role="separator"></div>
     {{#> check check--modifier="pf-c-dropdown__menu-item"}}
