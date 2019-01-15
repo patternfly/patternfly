@@ -3,5 +3,4 @@ public/*
 node_modules/*
 static/*
 build/blueprints/*
-plugins/*
 src/patternfly/components/Dropdown/examples/index.js*
