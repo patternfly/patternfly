@@ -1,7 +1,10 @@
-<div class="pf-c-app-launcher{{#if applauncher--IsExpanded}} pf-m-expanded{{/if}}{{#if app-launcher--modifier}} {{app-launcher--modifier}}{{/if}}"
-  {{#if app-launcher--attribute}}
-    {{{app-launcher--attribute}}}
+<ul class="pf-c-app-launcher__menu{{#if app-launcher-menu--modifier}} {{app-launcher-menu--modifier}}{{/if}}"
+  aria-labelledby="{{id}}-button"
+  {{#unless app-launcher--IsExpanded}}hidden{{/unless}}
+  {{#if app-launcher-menu--attribute}}
+	  {{{app-launcher-menu--attribute}}}
   {{/if}}>
-  {{> app-launcher-toggle}}
-  {{> app-launcher-menu}}
-</div>
+  <li><a class="pf-c-app-launcher__menu-item" href="#">Link</a></li>
+  <li><a class="pf-c-app-launcher__menu-item" href="#">Link two</a></li>
+  <li><a class="pf-c-app-launcher__menu-item pf-m-disabled" aria-disabled="true" tabindex="-1" href="#">Disabled Link</a></li>  
+</ul>

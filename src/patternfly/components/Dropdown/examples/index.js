@@ -49,7 +49,7 @@ export default () => {
   const headingText = 'Dropdown';
 
   const styles = {
-    height: '13em'
+    height: '13em',
   };
 
   return (
