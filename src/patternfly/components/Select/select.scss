@@ -20,9 +20,13 @@
   --pf-c-select__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-select__toggle--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-select__toggle--m-expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--m-plain--BorderColor: transparent;
+  --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--200);
+  --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // Space for the children of the toggle
   --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
@@ -41,6 +45,9 @@
   --pf-c-select__toggle-typeahead--BorderTop: none;
   --pf-c-select__toggle-typeahead--BorderRight: none;
   --pf-c-select__toggle-typeahead--BorderLeft: none;
+
+  // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
+  --pf-c-select__toggle-typeahead--active--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
 
   // Select toggle badge
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--md);
@@ -70,6 +77,7 @@
   --pf-c-select__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-select__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
 
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
@@ -114,6 +122,10 @@
   background-color: var(--pf-c-select__toggle--BackgroundColor);
   border: none;
 
+  & > * {
+    color: var(--pf-c-select__toggle--Color);
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -134,11 +146,39 @@
 
   &:active,
   &.pf-m-active,
-  &:focus-within,
+  &:focus-within {
+    &::before {
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--hover--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-select__toggle--active--BorderBottomWidth);
+    }
+  }
+
   .pf-m-expanded > & {
     &::before {
-      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--m-expanded--BorderBottomColor);
-      --pf-c-form-control--focus--BorderBottomWidth: var(--pf-c-select__toggle--m-expanded--BorderBottomWidth);
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--expanded--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-select__toggle--expanded--BorderBottomWidth);
+    }
+  }
+
+  &.pf-m-plain {
+    --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--Color);
+
+    &::before {
+      border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
+    }
+
+    &:hover,
+    &.pf-m-hover,
+    &:active,
+    &.pf-m-active,
+    .pf-m-expanded > & {
+      --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--hover--Color);
+
+      &::before {
+        border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
+      }
     }
   }
 
@@ -155,29 +195,6 @@
     // When the input is the first thing then use a negative left padding so it matches the toggle container
     input:first-child {
       margin-left: calc(-1 * var(--pf-c-select__toggle--PaddingLeft));
-    }
-  }
-
-  &.pf-m-plain {
-    &::before {
-      border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
-    }
-
-    &:hover,
-    &.pf-m-hover {
-      &::before {
-        border-color: var(--pf-c-select__toggle--BorderTopColor) var(--pf-c-select__toggle--BorderRightColor) var(--pf-c-select__toggle--hover--BorderBottomColor) var(--pf-c-select__toggle--BorderLeftColor);
-        border-width: var(--pf-c-select__toggle--BorderWidth);
-      }
-    }
-
-    &:active,
-    &.pf-m-active,
-    .pf-m-expanded > & {
-      &::before {
-        border-color: var(--pf-c-select__toggle--BorderTopColor) var(--pf-c-select__toggle--BorderTopColor) var(--pf-c-select__toggle--m-expanded--BorderBottomColor) var(--pf-c-select__toggle--BorderTopColor);
-        border-width: var(--pf-c-select__toggle--BorderWidth) var(--pf-c-select__toggle--BorderWidth) var(--pf-c-select__toggle--m-expanded--BorderBottomWidth) var(--pf-c-select__toggle--BorderWidth);
-      }
     }
   }
 
@@ -245,7 +262,8 @@
   &:focus,
   &.pf-m-focus {
     // Set the bottom padding to allow for the bottom border width of the containing toggle
-    padding-bottom: var(--pf-c-form-control--PaddingBottom);
+    // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
+    padding-bottom: var(--pf-c-select__toggle-typeahead--active--PaddingBottom);
   }
 }
 
