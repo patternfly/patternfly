@@ -32,6 +32,7 @@
   --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-app-launcher__menu-item--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   position: relative;
   display: inline-block;
@@ -48,17 +49,17 @@
 
   .pf-c-app-launcher__toggle-icon {
     color: var(--pf-c-app-launcher__toggle--Color);
+  }
 
-    &:hover,
-    &.pf-m-hover {
-      --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--hover--Color);
-    }
+  &:hover,
+  &.pf-m-hover {
+    --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--hover--Color);
+  }
 
-    &:active,
-    &.pf-m-active,
-    .pf-m-expanded > & {
-      --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--active--Color);
-    }
+  &:active,
+  &.pf-m-active,
+  .pf-m-expanded > & {
+    --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--active--Color);
   }
 }
 
@@ -69,7 +70,7 @@
   min-width: 100%;
   padding-top: var(--pf-c-app-launcher__menu--PaddingTop);
   padding-bottom: var(--pf-c-app-launcher__menu--PaddingBottom);
-  background: var(--pf-c-app-launcher__menu--BackgroundColor);
+  background-color: var(--pf-c-app-launcher__menu--BackgroundColor);
   background-clip: padding-box;
   border: var(--pf-c-app-launcher__menu--BorderWidth) solid transparent;
   box-shadow: var(--pf-c-app-launcher__menu--BoxShadow);
@@ -86,12 +87,15 @@
   white-space: nowrap;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
-    color: var(--pf-c-app-launcher__menu-item--Color);
+  &.pf-m-hover {
     text-decoration: none;
     background-color: var(--pf-c-app-launcher__menu-item--hover--BackgroundColor);
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    text-decoration: none;
+    background-color: var(--pf-c-app-launcher__menu-item--active--BackgroundColor);
   }
 
   &:disabled,

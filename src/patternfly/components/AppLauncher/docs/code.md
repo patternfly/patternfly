@@ -19,12 +19,11 @@
 | `.pf-c-app-launcher` | `<div>` | Defines the parent wrapper of the app launcher. |
 | `.pf-c-app-launcher__toggle` | `<button>` | Defines the app launcher toggle |
 | `.pf-c-app-launcher__toggle-icon` | `<i>` | Defines the app launcher toggle icon |
-| `.pf-c-app-launcher__toggle-text` | `<span>` | Defines the app launcher toggle text |
-| `.pf-c-app-launcher__menu` | `<div>` | Defines the parent wrapper of the menu items |
-| `.pf-c-app-launcher__menu-item` | `<a>` | Defines a menu item that navigates to another page |
-| `.pf-c-app-launcher__menu-item` | `<button>` | Defines a menu item that performs an action on the current page |
+| `.pf-c-app-launcher__menu` | `<ul>` | Defines the parent wrapper of the menu items |
+| `.pf-c-app-launcher__menu-item` | `<a>` | Defines a menu item |
+
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state |
 | `.pf-m-hover` | `.pf-c-app-launcher__menu-item`, `.pf-c-app-launcher__toggle` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-app-launcher__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
 | `.pf-m-active` | `.pf-c-app-launcher__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |
-| `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-app-launcher__menu-item` and should not be used in lieu of the `:disabled` attribute on `button.pf-c-app-launcher__menu-item`|
+| `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-app-launcher__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-app-launcher__menu-item`|
