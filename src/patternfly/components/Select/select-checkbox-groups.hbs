@@ -35,8 +35,8 @@
           {{#> check-label check-label--type="span"}}Dell{{/check-label}}
         {{/check}}
         {{#> check  check--type="label" check--attribute=(concat 'for="' id '-samsung"') check--modifier="pf-c-select__menu-item pf-m-disabled"}}
-          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-samsung" name="samsung" aria-disabled="true" disabled')}}{{/check-input}}
-          {{#> check-label check-label--type="span"}}Samsung{{/check-label}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-samsung" name="samsung" disabled')}}{{/check-input}}
+          {{#> check-label check-label--type="span" check-label--modifier="pf-m-disabled"}}Samsung{{/check-label}}
         {{/check}}
         {{#> check check--type="label" check--attribute=(concat 'for="' id '-hp"') check--modifier="pf-c-select__menu-item"}}
           {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-hp" name="hp"')}}{{/check-input}}

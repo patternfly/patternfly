@@ -274,7 +274,7 @@
   min-width: 100%;
   padding-top: var(--pf-c-select__menu--PaddingTop);
   padding-bottom: var(--pf-c-select__menu--PaddingBottom);
-  background: var(--pf-c-select__menu--BackgroundColor);
+  background-color: var(--pf-c-select__menu--BackgroundColor);
   background-clip: padding-box;
   border: var(--pf-c-select__menu--BorderWidth) solid transparent;
   box-shadow: var(--pf-c-select__menu--BoxShadow);
@@ -298,6 +298,7 @@
   color: var(--pf-c-select__menu-item--Color);
   text-align: left;
   white-space: nowrap;
+  background-color: transparent;
   border: none;
 
   &:hover,
