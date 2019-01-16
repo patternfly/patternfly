@@ -21,10 +21,8 @@
   --pf-c-alert__title--Color: var(--pf-global--Color--100);
   --pf-c-alert__title--siblings--MarginTop: var(--pf-global--spacer--xs);
 
-  // Dismiss button
-  --pf-c-alert__body--c-button--Top: var(--pf-global--spacer--sm);
-  --pf-c-alert__body--c-button--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-alert__body--c-button--sibling--PaddingRight: var(--pf-global--spacer--lg);
+  // action
+  --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--sm);
 
   // Success
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
@@ -39,6 +37,7 @@
   // Warning
   --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--200);
   --pf-c-alert--m-warning__icon--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-warning__icon--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
 
   // Info
@@ -49,6 +48,7 @@
   // This component always needs to be light
   @extend %pf-t-light;
 
+  position: relative;
   display: flex;
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
@@ -70,6 +70,10 @@
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-warning__icon--Color);
     --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-warning__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
+
+    .pf-c-alert__icon {
+      --pf-c-alert__icon--FontSize: var(--pf-c-alert--m-warning__icon--FontSize); // ensures icons are all same width.
+    }
   }
 
   &.pf-m-info {
@@ -88,26 +92,19 @@
 }
 
 .pf-c-alert__body {
-  position: relative;
   display: flex;
   flex: 1 1 100%;
   flex-direction: column;
   justify-content: center;
   padding: var(--pf-c-alert__body--PaddingTop) var(--pf-c-alert__body--PaddingRight) var(--pf-c-alert__body--PaddingBottom) var(--pf-c-alert__body--PaddingLeft);
 
-  > .pf-c-button {
-    position: absolute;
-    top: var(--pf-c-alert__body--c-button--Top);
-    right: 0;
-    font-size: var(--pf-c-alert__body--c-button--FontSize);
-
-    + * {
-      padding-right: var(--pf-c-alert__body--c-button--sibling--PaddingRight);
-    }
+  &:not(:last-child) {
+    --pf-c-alert__body--PaddingRight: 0;
   }
 }
 
 .pf-c-alert__title {
+  overflow: auto;
   font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
 
@@ -117,6 +114,7 @@
 }
 
 .pf-c-alert__action {
-  display: flex;
-  align-items: center;
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
 }
