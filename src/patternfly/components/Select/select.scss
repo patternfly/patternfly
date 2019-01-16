@@ -148,7 +148,7 @@
   &.pf-m-active,
   &:focus-within {
     &::before {
-      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--hover--BorderBottomColor);
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--active--BorderBottomColor);
 
       border-bottom-width: var(--pf-c-select__toggle--active--BorderBottomWidth);
     }
@@ -319,7 +319,7 @@
   &.pf-m-disabled {
     color: var(--pf-c-select__menu-item--disabled--Color);
     pointer-events: none;
-    background-color: transparent;
+    background-color: var(--pf-c-select__menu-item--disabled--BackgroundColor);
   }
 }
 
