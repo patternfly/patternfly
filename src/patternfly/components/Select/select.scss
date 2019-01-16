@@ -298,7 +298,7 @@
   color: var(--pf-c-select__menu-item--Color);
   text-align: left;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: transparent; // this can be removed if the shield in _base.css works for FF
   border: none;
 
   &:hover,
@@ -308,6 +308,11 @@
     color: var(--pf-c-select__menu-item--Color);
     text-decoration: none;
     background-color: var(--pf-c-select__menu-item--hover--BackgroundColor);
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    position: relative;
   }
 
   &:disabled,
