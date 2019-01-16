@@ -1,17 +1,6 @@
 @import "../../patternfly-imports";
 
 .pf-c-app-launcher {
-  // Toggle
-  --pf-c-app-launcher__toggle--PaddingTop: var(--pf-global--spacer--form-element);
-  --pf-c-app-launcher__toggle--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-app-launcher__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
-  --pf-c-app-launcher__toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-app-launcher__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
-  --pf-c-app-launcher__toggle--BackgroundColor: transparent;
-  --pf-c-app-launcher__toggle--Color: var(--pf-global--Color--200);
-  --pf-c-app-launcher__toggle--hover--Color: var(--pf-global--Color--100);
-  --pf-c-app-launcher__toggle--active--Color: var(--pf-global--Color--100);
-
   // Menu
   --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-app-launcher__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -26,9 +15,6 @@
   --pf-c-app-launcher__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-app-launcher__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-app-launcher__menu-item--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-app-launcher__menu-item--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-app-launcher__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-app-launcher__menu-item--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
@@ -37,30 +23,6 @@
   position: relative;
   display: inline-block;
   max-width: 100%;
-}
-
-.pf-c-app-launcher__toggle {
-  display: flex;
-  justify-content: center;
-  min-width: var(--pf-c-app-launcher__toggle--MinWidth);
-  padding: var(--pf-c-app-launcher__toggle--PaddingTop) var(--pf-c-app-launcher__toggle--PaddingRight) var(--pf-c-app-launcher__toggle--PaddingBottom) var(--pf-c-app-launcher__toggle--PaddingLeft);
-  background-color: var(--pf-c-app-launcher__toggle--BackgroundColor);
-  border: none;
-
-  .pf-c-app-launcher__toggle-icon {
-    color: var(--pf-c-app-launcher__toggle--Color);
-  }
-
-  &:hover,
-  &.pf-m-hover {
-    --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--hover--Color);
-  }
-
-  &:active,
-  &.pf-m-active,
-  .pf-m-expanded > & {
-    --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--active--Color);
-  }
 }
 
 .pf-c-app-launcher__menu {
@@ -72,7 +34,7 @@
   padding-bottom: var(--pf-c-app-launcher__menu--PaddingBottom);
   background-color: var(--pf-c-app-launcher__menu--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-app-launcher__menu--BorderWidth) solid transparent;
+  border: var(--pf-c-app-launcher__menu--BorderWidth) solid transparent; // this is for high contrast mode in windows
   box-shadow: var(--pf-c-app-launcher__menu--BoxShadow);
 }
 
@@ -80,9 +42,6 @@
   display: block;
   width: 100%;
   padding: var(--pf-c-app-launcher__menu-item--PaddingTop) var(--pf-c-app-launcher__menu-item--PaddingRight) var(--pf-c-app-launcher__menu-item--PaddingBottom) var(--pf-c-app-launcher__menu-item--PaddingLeft);
-  font-size: var(--pf-c-app-launcher__menu-item--FontSize);
-  font-weight: var(--pf-c-app-launcher__menu-item--FontWeight);
-  line-height: var(--pf-c-app-launcher__menu-item--LineHeight);
   color: var(--pf-c-app-launcher__menu-item--Color);
   white-space: nowrap;
 
