@@ -7,6 +7,34 @@ const sassGlob = require('gulp-sass-glob');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
+const iconfont = require('gulp-iconfont');
+
+const pficonRunTimestamp = Math.round(Date.now() / 1000);
+const iconfontCss = require('gulp-iconfont-css');
+
+const pficonFontName = 'pficon';
+
+gulp.task('build-pficonfont', () => {
+  gulp
+    .src(['./src/icons/PfIcons/*.svg'])
+    .pipe(
+      iconfontCss({
+        fontName: pficonFontName,
+        targetPath: 'pficon.css',
+        fontPath: './',
+        cssClass: 'pficon'
+      })
+    )
+    .pipe(
+      iconfont({
+        fontName: pficonFontName,
+        formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+        timestamp: pficonRunTimestamp
+      })
+    )
+    .pipe(gulp.dest('./src/patternfly/assets/pficon/'));
+});
+
 gulp.task('build', ['build-modules', 'build-library', 'copy-fa', 'copy-source', 'minify-css']);
 
 gulp.task('copy-fa', () =>
