@@ -59,7 +59,8 @@
 
   &:disabled,
   &.pf-m-disabled {
-    color: var(--pf-c-app-launcher__menu-item--disabled--Color);
+    --pf-c-app-launcher__menu-item--Color: var(--pf-c-app-launcher__menu-item--disabled--Color);
+
     pointer-events: none;
     background-color: transparent;
   }

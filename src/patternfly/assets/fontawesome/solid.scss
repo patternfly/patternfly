@@ -12,8 +12,13 @@
   url('#{$fa-font-path}/fa-solid-900.svg#fontawesome') format('svg');
 }
 
+// Need to add ::before, color, and font-size to override pf shield
 .fa,
-.fas {
+.fas,
+.fa::before,
+.fas::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
+  color: inherit;
+  font-size: inherit;
 }
