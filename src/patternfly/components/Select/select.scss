@@ -1,0 +1,348 @@
+@import "../../patternfly-imports";
+
+.pf-c-select {
+  @extend %pf-t-light; // force the container follow the light theme
+
+  // Toggle
+  --pf-c-select__toggle--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-select__toggle--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-select__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-select__toggle--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-select__toggle--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-select__toggle--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-select__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__toggle--BorderTopColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-select__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-select__toggle--BorderBottomColor: var(--pf-global--BorderColor--dark);
+  --pf-c-select__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-select__toggle--Color: var(--pf-global--Color--100);
+  --pf-c-select__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--m-plain--BorderColor: transparent;
+  --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--200);
+  --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
+
+  // Space for the children of the toggle
+  --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
+
+  // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
+  // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
+  --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
+
+  // The button inside a chip must be adjusted to reduce the padding, which is driving the height of the chip, so it fits within the toggle
+  --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom: var(--pf-global--spacer--xs);
+
+  // Select input for typeahead
+  --pf-c-select__toggle-typeahead--FlexBasis: 10em;
+  --pf-c-select__toggle-typeahead--BackgroundColor: transparent;
+  --pf-c-select__toggle-typeahead--BorderTop: none;
+  --pf-c-select__toggle-typeahead--BorderRight: none;
+  --pf-c-select__toggle-typeahead--BorderLeft: none;
+
+  // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
+  --pf-c-select__toggle-typeahead--active--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+
+  // Select toggle badge
+  --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--md);
+
+  // Toggle Arrow
+  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
+
+  // Menu
+  --pf-c-select__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-select__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__menu--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-select__menu--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-select__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --pf-c-select__menu--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-select__menu--m-top--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+
+  // Menu Item
+  --pf-c-select__menu-item--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-select__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-select__menu-item--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-select__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-select__menu-item--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-select__menu-item--Color: var(--pf-global--Color--dark-100);
+  --pf-c-select__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
+
+  // Match within a menu item when using typeahead
+  --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
+
+  // Menu Item Separator
+  --pf-c-select__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+
+  // Menu group
+  // add a little space if it's not the first group because the first one also has the menu padding
+  --pf-c-select__menu-group--not-first--PaddingTop: var(--pf-global--spacer--sm);
+
+  // Menu section heading
+  // Paddings are set to always line up with the other menu items
+  --pf-c-select__menu-group-title--PaddingTop: var(--pf-c-select__menu-item--PaddingTop);
+  --pf-c-select__menu-group-title--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
+  --pf-c-select__menu-group-title--PaddingBottom: var(--pf-c-select__menu-item--PaddingBottom);
+  --pf-c-select__menu-group-title--PaddingLeft: var(--pf-c-select__menu-item--PaddingLeft);
+  --pf-c-select__menu-group-title--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-select__menu-group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-select__menu-group-title--Color: var(--pf-global--Color--dark-200);
+
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.pf-c-select__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: var(--pf-c-select__toggle--MinWidth);
+  max-width: 100%;
+  padding: var(--pf-c-select__toggle--PaddingTop) var(--pf-c-select__toggle--PaddingRight) var(--pf-c-select__toggle--PaddingBottom) var(--pf-c-select__toggle--PaddingLeft);
+  font-size: var(--pf-c-select__toggle--FontSize);
+  font-weight: var(--pf-c-select__toggle--FontWeight);
+  line-height: var(--pf-c-select__toggle--LineHeight);
+  color: var(--pf-c-select__toggle--Color);
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: var(--pf-c-select__toggle--BackgroundColor);
+  border: none;
+
+  & > * {
+    color: var(--pf-c-select__toggle--Color);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: var(--pf-c-select__toggle--BorderWidth) solid;
+    border-color: var(--pf-c-select__toggle--BorderTopColor) var(--pf-c-select__toggle--BorderRightColor) var(--pf-c-select__toggle--BorderBottomColor) var(--pf-c-select__toggle--BorderLeftColor);
+  }
+
+  &:hover,
+  &.pf-m-hover {
+    &::before {
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--hover--BorderBottomColor);
+    }
+  }
+
+  &:active,
+  &.pf-m-active,
+  &:focus-within {
+    &::before {
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--active--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-select__toggle--active--BorderBottomWidth);
+    }
+  }
+
+  .pf-m-expanded > & {
+    &::before {
+      --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--expanded--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-select__toggle--expanded--BorderBottomWidth);
+    }
+  }
+
+  &.pf-m-plain {
+    --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--Color);
+
+    &::before {
+      border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
+    }
+
+    &:hover,
+    &.pf-m-hover,
+    &:active,
+    &.pf-m-active,
+    .pf-m-expanded > & {
+      --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--hover--Color);
+
+      &::before {
+        border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
+      }
+    }
+  }
+
+  &.pf-m-typeahead {
+    --pf-c-select__toggle--PaddingTop: 0;
+    --pf-c-select__toggle--PaddingBottom: 0;
+
+    input {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    // When the input is the first thing then use a negative left padding so it matches the toggle container
+    input:first-child {
+      margin-left: calc(-1 * var(--pf-c-select__toggle--PaddingLeft));
+    }
+  }
+
+  .pf-c-select__toggle-arrow {
+    margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
+
+    .pf-m-top.pf-m-expanded > & {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.pf-c-select__toggle-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pf-c-select__toggle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
+  // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
+  max-width: var(--pf-c-select__toggle-wrapper--MaxWidth);
+  white-space: normal;
+
+  // Add space between children
+  > *:not(:last-child),
+  > *:not(:only-child) {
+    margin-right: var(--pf-c-select__toggle-wrapper--not-last-child--MarginRight);
+  }
+
+  // need to reduce the padding, which is driving the height of the chip, so it fits within the toggle
+  .pf-c-chip .pf-c-button {
+    padding-top: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop);
+    padding-bottom: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom);
+  }
+}
+
+.pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
+  // This is adjusted so that the clear button can maintain even padding around while not creating too much space between the clear and arrow
+  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
+}
+
+.pf-c-select__toggle-badge {
+  display: flex;
+  padding-left: var(--pf-c-select__toggle-badge--PaddingLeft);
+}
+
+.pf-c-select__toggle-typeahead {
+  flex-basis: var(--pf-c-select__toggle-typeahead--FlexBasis);
+  flex-grow: 1;
+  flex-shrink: 0;
+  background-color: var(--pf-c-select__toggle-typeahead--BackgroundColor);
+  border-top: var(--pf-c-select__toggle-typeahead--BorderTop);
+  border-right: var(--pf-c-select__toggle-typeahead--BorderRight);
+  border-bottom-color: inherit;
+  border-bottom-style: inherit;
+  border-bottom-width: inherit;
+  border-left: var(--pf-c-select__toggle-typeahead--BorderLeft);
+
+  &:focus,
+  &.pf-m-focus {
+    // Set the bottom padding to allow for the bottom border width of the containing toggle
+    // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
+    padding-bottom: var(--pf-c-select__toggle-typeahead--active--PaddingBottom);
+  }
+}
+
+.pf-c-select__menu {
+  position: absolute;
+  top: var(--pf-c-select__menu--Top);
+  z-index: var(--pf-c-select__menu--ZIndex);
+  min-width: 100%;
+  padding-top: var(--pf-c-select__menu--PaddingTop);
+  padding-bottom: var(--pf-c-select__menu--PaddingBottom);
+  background-color: var(--pf-c-select__menu--BackgroundColor);
+  background-clip: padding-box;
+  border: var(--pf-c-select__menu--BorderWidth) solid transparent;
+  box-shadow: var(--pf-c-select__menu--BoxShadow);
+
+  &.pf-m-align-right {
+    right: 0;
+  }
+
+  .pf-c-select.pf-m-top & {
+    top: 0;
+    transform: var(--pf-c-select__menu--m-top--Transform);
+  }
+}
+
+.pf-c-select__menu-item {
+  width: 100%;
+  padding: var(--pf-c-select__menu-item--PaddingTop) var(--pf-c-select__menu-item--PaddingRight) var(--pf-c-select__menu-item--PaddingBottom) var(--pf-c-select__menu-item--PaddingLeft);
+  font-size: var(--pf-c-select__menu-item--FontSize);
+  font-weight: var(--pf-c-select__menu-item--FontWeight);
+  line-height: var(--pf-c-select__menu-item--LineHeight);
+  color: var(--pf-c-select__menu-item--Color);
+  text-align: left;
+  white-space: nowrap;
+  background-color: transparent; // this can be removed if the shield in _base.css works for FF
+  border: none;
+
+  &:hover,
+  &.pf-m-hover,
+  &:focus,
+  &.pf-m-focus {
+    color: var(--pf-c-select__menu-item--Color);
+    text-decoration: none;
+    background-color: var(--pf-c-select__menu-item--hover--BackgroundColor);
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    position: relative;
+  }
+
+  &:disabled,
+  &.pf-m-disabled {
+    color: var(--pf-c-select__menu-item--disabled--Color);
+    pointer-events: none;
+    background-color: var(--pf-c-select__menu-item--disabled--BackgroundColor);
+  }
+}
+
+.pf-c-select__menu-item--match {
+  font-weight: var(--pf-c-select__menu-item--match--FontWeight);
+  background-color: inherit;
+}
+
+.pf-c-select__separator {
+  height: var(--pf-c-select__separator--Height);
+  background-color: var(--pf-c-select__separator--BackgroundColor);
+}
+
+.pf-c-select__menu-group:not(:first-of-type) {
+  padding-top: var(--pf-c-select__menu-group--not-first--PaddingTop);
+}
+
+.pf-c-select__menu-group-title {
+  padding-top: var(--pf-c-select__menu-group-title--PaddingTop);
+  padding-right: var(--pf-c-select__menu-group-title--PaddingRight);
+  padding-bottom: var(--pf-c-select__menu-group-title--PaddingBottom);
+  padding-left: var(--pf-c-select__menu-group-title--PaddingLeft);
+  font-size: var(--pf-c-select__menu-group-title--FontSize);
+  font-weight: var(--pf-c-select__menu-group-title--FontWeight);
+  color: var(--pf-c-select__menu-group-title--Color);
+}
