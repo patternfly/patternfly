@@ -20,9 +20,9 @@ A popover is used to provide contextual information for another component on cli
 | -- | -- | -- |
 | `.pf-c-popover` | `<div>` |  Creates a popover. Always use it with a modifier class that positions the popover relative to the element that triggered it. **Required** |
 | `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
-| `.pf-c-popover__content` | `<div>` |  Creates the body of the popover. **Required** |
+| `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` |  Positions the close icon in the top-right corner of the popover. **Required** |
-| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class.|
+| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See <a href="/components/Title/examples/">Title component</a> for more info.|
 | `.pf-c-popover__body` | `<div>` |  The popover's body text. **Required** |
 | `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
 | `.pf-m-left` | `.pf-c-popover` | Positions the popover to the left of the element. |
