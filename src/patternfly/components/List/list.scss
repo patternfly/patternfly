@@ -20,7 +20,7 @@
     margin-top: var(--pf-c-list--li--MarginTop);
   }
 
-  @at-root ul#{&}:not(.pf-m-inline) {
+  @at-root ul#{&}:not(.pf-m-inline) { // targets ul.pf-c-list that is not .pf-m-inline
     list-style: var(--pf-c-list--ul--ListStyle);
   }
 
