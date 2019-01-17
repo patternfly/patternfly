@@ -18,7 +18,6 @@
   --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-app-launcher__menu-item--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   position: relative;
   display: inline-block;
@@ -46,15 +45,11 @@
   white-space: nowrap;
 
   &:hover,
-  &.pf-m-hover {
-    text-decoration: none;
-    background-color: var(--pf-c-app-launcher__menu-item--hover--BackgroundColor);
-  }
-
+  &.pf-m-hover,
   &:focus,
   &.pf-m-focus {
     text-decoration: none;
-    background-color: var(--pf-c-app-launcher__menu-item--active--BackgroundColor);
+    background-color: var(--pf-c-app-launcher__menu-item--hover--BackgroundColor);
   }
 
   &:disabled,
