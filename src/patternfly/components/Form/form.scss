@@ -1,6 +1,5 @@
 
-@import "../../patternfly-utilities";
-
+@import "../../patternfly-imports";
 
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter);
@@ -24,12 +23,12 @@
 
   // form Group
   --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-form--m-horizontal--md__group--GridTemplateColumns: 150px 1fr;
 
   // Helpers
   --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-form__helper-text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__helper-text--Color: var(--pf-global--Color--100);
-
 
   // Inline
   --pf-c-form--m-inline--MarginRight: var(--pf-global--spacer--lg);
@@ -59,8 +58,7 @@
 
     @media (min-width: $pf-global--breakpoint--md) {
       .pf-c-form__group {
-        // this number needs to be confirmed by design :)
-        grid-template-columns: 150px 1fr;
+        grid-template-columns: var(--pf-c-form--m-horizontal--md__group--GridTemplateColumns);
       }
 
       .pf-c-form__group .pf-c-form__label {
@@ -76,79 +74,24 @@
       }
     }
   }
+}
 
-  .pf-c-form__group {
-    // Handle additional items within __group without having an additional wrapper or selector
-    > *:not(.pf-c-form__label):not(.pf-c-input-group):not(.pf-c-form-control):not(.pf-c-form__helper-text):not(.pf-c-form__legend):not(.pf-c-form__action-group):not(.pf-c-check):not(.pf-c-form__horizontal-group):not([class*="pf-l-"]) {
-      margin-left: var(--pf-c-form--group--MarginLeft);
-    }
-
-    .pf-c-form__label {
-      padding-bottom: var(--pf-c-form__label--PaddingBottom);
-    }
-
-    &.pf-m-action {
-      margin-top: var(--pf-c-form__group--m-action--MarginTop);
-    }
-  }
-
+.pf-c-form__group {
   .pf-c-form__label {
-    display: inline-block;
-    font-size: var(--pf-c-form__label--FontSize);
-    font-weight: var(--pf-c-form__label--FontWeight);
-    line-height: var(--pf-c-form__label--LineHeight);
-    color: var(--pf-c-form__label--Color);
-
-    &::selection {
-      background-color: none;
-    }
-
-    &:not(.pf-m-disabled):hover {
-      cursor: pointer;
-    }
-
-    &.pf-m-disabled {
-      color: var(--pf-c-form__label--m-disabled--Color);
-    }
-
-    &.pf-m-disabled:hover {
-      cursor: not-allowed;
-    }
+    padding-bottom: var(--pf-c-form__label--PaddingBottom);
   }
 
-  .pf-c-form__label-required {
-    margin-left: var(--pf-c-form__label-required--MarginLeft);
-    font-size: var(--pf-c-form__label-required--FontSize);
-    line-height: 0;
-    color: var(--pf-c-form__label-required--Color);
+  &.pf-m-action {
+    margin-top: var(--pf-c-form__group--m-action--MarginTop);
   }
 
+  &.pf-m-inline {
+    display: flex;
+    flex-flow: row wrap;
 
-  .pf-c-form__helper-text {
-    margin-top: var(--pf-c-form__helper-text--MarginTop);
-    font-size: var(--pf-c-form__helper-text--FontSize);
-
-    &:not(.pf-m-error) {
-      color: var(--pf-c-form__helper-text--Color);
-    }
-
-    &.pf-m-error {
-      color: var(--pf-c-form--m-error--Color);
-    }
-
-    &.pf-m-inactive {
-      display: none;
-    }
-  }
-
-  // Inline
-  .pf-m-inline {
     .pf-c-form__label {
       flex-basis: 100%;
     }
-
-    display: flex;
-    flex-flow: row wrap;
 
     // Purpose: larger margin-right than the default value for '--group.'
     > *:not(.pf-c-form__label) {
@@ -156,9 +99,60 @@
       margin-right: var(--pf-c-form--m-inline--MarginRight);
     }
   }
+}
 
-  // Fieldset
-  .pf-c-form__fieldset {
-    border: none;
+.pf-c-form__label {
+  display: inline-block;
+  font-size: var(--pf-c-form__label--FontSize);
+  font-weight: var(--pf-c-form__label--FontWeight);
+  line-height: var(--pf-c-form__label--LineHeight);
+  color: var(--pf-c-form__label--Color);
+
+  &::selection {
+    background-color: none;
   }
+
+  &:not(.pf-m-disabled):hover {
+    cursor: pointer;
+  }
+
+  &.pf-m-disabled {
+    color: var(--pf-c-form__label--m-disabled--Color);
+  }
+
+  &.pf-m-disabled:hover {
+    cursor: not-allowed;
+  }
+}
+
+.pf-c-form__label-required {
+  margin-left: var(--pf-c-form__label-required--MarginLeft);
+  font-size: var(--pf-c-form__label-required--FontSize);
+  line-height: 0;
+  color: var(--pf-c-form__label-required--Color);
+}
+
+.pf-c-form__helper-text {
+  font-size: var(--pf-c-form__helper-text--FontSize);
+
+  .pf-c-form-control + & {
+    margin-top: var(--pf-c-form__helper-text--MarginTop);
+  }
+
+  &:not(.pf-m-error) {
+    color: var(--pf-c-form__helper-text--Color);
+  }
+
+  &.pf-m-error {
+    color: var(--pf-c-form--m-error--Color);
+  }
+
+  &.pf-m-inactive {
+    display: none;
+  }
+}
+
+// Fieldset
+.pf-c-form__fieldset {
+  border: none;
 }

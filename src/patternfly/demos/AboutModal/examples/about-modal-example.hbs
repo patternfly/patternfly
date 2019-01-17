@@ -7,7 +7,8 @@
           {{/about-modal-box-brand-image}}
         {{/about-modal-box-brand}}
         {{#> about-modal-box-close}}
-          {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close Dialog"'}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
+            {{> button-icon button-icon--type="times"}}
           {{/button}}
         {{/about-modal-box-close}}
         {{#> about-modal-box-header}}
@@ -24,10 +25,6 @@
           {{#> about-modal-box-hero-image about-modal-box-hero-image--attribute='src="/assets/images/pfbg_992.jpg" alt="Patternfly Background Image"'}}
           {{/about-modal-box-hero-image}}
         {{/about-modal-box-hero}}
-        {{#> about-modal-box-logo}}
-          {{#> about-modal-box-logo-image about-modal-box-logo-image--attribute='src="/assets/images/pf_logo.svg" alt="Product Logo"'}}
-          {{/about-modal-box-logo-image}}
-        {{/about-modal-box-logo}}
         {{#> about-modal-box-content}}
           {{#> content}}
           <dl>

@@ -1,24 +1,16 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
-// sr-only - visually hide, but expose to screen readers
+// screen-reader - visually hide, but expose to screen readers
 @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
-  .pf-u-sr-only#{$breakpoint-value} {
+  .pf-u-screen-reader#{$breakpoint-value} {
     @include pf-media-query($breakpoint) {
-      position: fixed;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      @include pf-u-screen-reader;
     }
   }
 
   .pf-u-visible#{$breakpoint-value} {
     @include pf-media-query($breakpoint) {
-      position: static;
-      overflow: visible;
-      clip: auto;
-      white-space: normal;
-      border: inherit;
+      @include pf-u-visible;
     }
   }
 

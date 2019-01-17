@@ -1,8 +1,6 @@
-<div class="pf-c-check{{#if check--modifier}} {{check--modifier}}{{/if}}"
+<{{#if check--type}}{{check--type}}{{else}}div{{/if}} class="pf-c-check{{#if check--modifier}} {{check--modifier}}{{/if}}"
   {{#if check--attribute}}
     {{{check--attribute}}}
   {{/if}}>
   {{>@partial-block}}
-</div>
-
-  
+</{{#if check--type}}{{check--type}}{{else}}div{{/if}}>

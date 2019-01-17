@@ -2,14 +2,14 @@
 // --------------------------
 
 @mixin fa-icon {
-  display: inline-block;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  vertical-align: -.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: -.125em;
 }
 
 @mixin fa-icon-rotate($degrees, $rotation) {
@@ -28,14 +28,14 @@
 // See: http://a11yproject.com/posts/how-to-hide-content/
 
 @mixin sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.
@@ -47,11 +47,11 @@
 @mixin sr-only-focusable {
   &:active,
   &:focus {
-    position: static;
-    width: auto;
+    clip: auto;
     height: auto;
     margin: 0;
     overflow: visible;
-    clip: auto;
+    position: static;
+    width: auto;
   }
 }

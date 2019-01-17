@@ -270,7 +270,6 @@
     "selector-max-compound-selectors": 4,
     "selector-max-id": 0,
     "selector-max-type": 2,
-    "selector-max-universal": 1,
     "selector-nested-pattern": "^(?!.*&[-_])",
     "selector-no-qualifying-type": true,
     "selector-no-vendor-prefix": true,

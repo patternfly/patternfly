@@ -1,4 +1,4 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
 .pf-c-table {
 
@@ -147,6 +147,11 @@
     // Last child padding right
     &:last-child {
       --pf-c-table-cell--PaddingRight: var(--pf-c-table-cell--first-last-child--PaddingX);
+    }
+
+    /* stylelint-disable-next-line */
+    &.pf-m-center {
+      text-align: center;
     }
   }
 

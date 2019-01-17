@@ -1,10 +1,10 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
 .pf-c-breadcrumb {
   // Breadcrumb Item
   --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--lg);
+  --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-breadcrumb__item--Color: var(--pf-global--Color--300);
   --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
 
@@ -20,15 +20,7 @@
   --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
 
   // Heading
-  --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
-
-  // ============================================================ //
-  // Modifiers
-  // ============================================================ //
-
-  // Modifier - current item
-  --pf-c-breadcrumb__link--m-current--Color: var(--pf-c-breadcrumb__item--Color);
-  --pf-c-breadcrumb__link--m-current--hover--Color: var(--pf-c-breadcrumb__item--Color);
+  --pf-c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--sm);
 
   display: inline-flex;
 }
@@ -70,21 +62,21 @@
   line-height: inherit;
   color: var(--pf-c-breadcrumb__link--Color);
 
+  &,
   &:hover,
   &.pf-m-hover {
-    color: var(--pf-c-breadcrumb__link--hover--Color);
-    text-decoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
   }
 
   // current item
   &.pf-m-current {
-    color: var(--pf-c-breadcrumb__link--m-current--Color);
-    text-decoration: none;
     cursor: default;
 
+    &,
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-breadcrumb__link--m-current--hover--Color);
+      --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__item--Color);
+
       text-decoration: none;
     }
   }

@@ -1,0 +1,51 @@
+{{#> background-image}}
+{{/background-image}}
+{{#> page page--id="page-layout-default-nav"}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
+      {{/page-template-header-brand-elements}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{!-- Nav --}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Primary Nav Default Example"')}}
+      {{#> nav-list}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            System Panel
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Policy
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Authentication
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Network Services
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Server
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}

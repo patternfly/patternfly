@@ -38,7 +38,7 @@
   {{#> dropdown id="dropdown-example-collapsed1" dropdown--HasToggleIcon="true"}}
     Dropdown
   {{/dropdown}}
-  {{#> form-control controlType="input" form-control--attribute='input="true" type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"'}}
   {{/form-control}}
   {{#> button button--modifier="pf-m-secondary" button--attribute='id="inputDropdownButton1"'}}
     Button
@@ -49,7 +49,7 @@
 {{#> input-group}}
  {{#> input-group-text inputGroupTextType="span" input-group-text--HasDollarSignIcon="true"}}
  {{/input-group-text}}
- {{#> form-control controlType="input" form-control--attribute='input="true" type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
  {{/form-control}}
 {{#> input-group-text inputGroupTextType="span"}}
    .00
@@ -58,7 +58,7 @@
 <br>
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" form-control--attribute='input="true" type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example"'}}
   {{/form-control}}
  {{#> input-group-text inputGroupTextType="span" input-group-text--attribute='id="email-example"'}}
    @example.com
@@ -69,7 +69,7 @@
 {{#> input-group}}
  {{#> input-group-text inputGroupTextType="span" input-group-text--HasAtIcon="true"  input-group-text--attribute='id="username"' aria-label="@"}}
  {{/input-group-text}}
- {{#> form-control controlType="input" form-control--attribute='required input="true" type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
 {{/form-control}}
 {{/input-group}}
 <br>
@@ -77,22 +77,24 @@
 {{#> input-group}}
  {{#> input-group-text inputGroupTextType="label" input-group-text--HasCalendarIcon="true" input-group-text--attribute='for="textInput9"'}}
  {{/input-group-text}}
- {{#> form-control controlType="input" form-control--attribute='input="true" type="date" id="textInput9" name="textInput9" aria-label="Date input example"'}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='type="date" id="textInput9" name="textInput9" aria-label="Date input example"'}}
 {{/form-control}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" form-control--attribute='input="true" type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-tertiary" button--HasSearchIcon="true" button--attribute='aria-label="search button for search input"'}}
+  {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="search button for search input"'}}
+    {{> button-icon button-icon--type="search"}}
   {{/button}}
 {{/input-group}}
 <br>
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" form-control--attribute='input="true" type="text" id="textInput10" name="textInput10" aria-label="input example with popover"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput10" name="textInput10" aria-label="input example with popover"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-tertiary" button--HasQuestionCircleIcon="true" button--attribute='aria-label="popover for input"'}}
+  {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="popover for input"'}}
+    {{> button-icon button-icon--type="question-circle"}}
   {{/button}}
 {{/input-group}}

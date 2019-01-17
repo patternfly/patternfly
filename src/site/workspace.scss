@@ -247,7 +247,8 @@
 }
 
 .is-layout-page,
-.is-utility-page {
+.is-utility-page,
+.is-component-page {
   .pf-l-bullseye,
   .pf-l-bullseye > *,
   .pf-l-gallery,
@@ -255,7 +256,7 @@
   .pf-l-level,
   .pf-l-level__group,
   .pf-l-level__item,
-  .pf-l-page,
+  .pf-c-page,
   .pf-l-split,
   .pf-l-split > *,
   .pf-l-stack,
@@ -272,8 +273,8 @@
     border: none;
   }
 
-  .pf-l-page > *,
-  .pf-l-page__header > * {
+  .pf-c-page > *,
+  .pf-c-page__header > * {
     border: 2px dashed #393f44;
   }
 
@@ -290,7 +291,7 @@
   }
 
   // .Preview__body {
-  //   .pf-l-page__header-nav {
+  //   .pf-c-page__header-nav {
   //     background: var(--pf-global--BackgroundColor--dark-100);
   //   }
   // }
@@ -353,6 +354,11 @@
     }
   }
 
+  .Documentation__docsection {
+    p + p {
+      margin-top: 1em;
+    }
+  }
 }
 
 .is-dark-preview {

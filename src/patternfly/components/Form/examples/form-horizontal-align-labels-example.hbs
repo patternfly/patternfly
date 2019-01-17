@@ -1,10 +1,10 @@
-{{#> form form--modifier="pf-m-horizontal"}}
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels"}}
   {{#> form-group}}
-    {{#> form-label form-label--attribute='for="horizontal-form-name"' required="true"}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"') required="true"}}
       Name
     {{/form-label}}
     {{#> horizontal-form-group}}
-      {{#> form-control controlType="input" form-control--attribute='input="true" type="text" id="horizontal-form-name" name="horizontal-form-name" required'}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-horizontal-form-name" name="' form--id '-horizontal-form-name" required')}}
       {{/form-control}}
     {{/horizontal-form-group}}
   {{/form-group}}

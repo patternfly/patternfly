@@ -10,3 +10,4 @@
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
+| `.pf-m-center`  | `<th>`, `<td>` | Modifies cell to center its contents. |

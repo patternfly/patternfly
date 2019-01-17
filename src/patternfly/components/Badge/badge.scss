@@ -1,12 +1,13 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
 .pf-c-badge {
   // Component
   --pf-c-badge--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-badge--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-badge--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-badge--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-badge--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-badge--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-badge--Color: var(--pf-global--Color--dark-100);
 
   // Modifiers
   --pf-c-badge--m-read--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
@@ -19,15 +20,17 @@
   padding-left: var(--pf-c-badge--PaddingLeft);
   font-size: var(--pf-c-badge--FontSize);
   font-weight: var(--pf-c-badge--FontWeight);
+  color: var(--pf-c-badge--Color);
+  background-color: var(--pf-c-badge--BackgroundColor);
   border-radius: var(--pf-c-badge--BorderRadius);
 
   &.pf-m-read {
-    color: var(--pf-c-badge--m-read--Color);
-    background-color: var(--pf-c-badge--m-read--BackgroundColor);
+    --pf-c-badge--Color: var(--pf-c-badge--m-read--Color);
+    --pf-c-badge--BackgroundColor: var(--pf-c-badge--m-read--BackgroundColor);
   }
 
   &.pf-m-unread {
-    color: var(--pf-c-badge--m-unread--Color);
-    background-color: var(--pf-c-badge--m-unread--BackgroundColor);
+    --pf-c-badge--Color: var(--pf-c-badge--m-unread--Color);
+    --pf-c-badge--BackgroundColor: var(--pf-c-badge--m-unread--BackgroundColor);
   }
 }

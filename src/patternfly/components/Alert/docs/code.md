@@ -15,7 +15,7 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-u-sr-only` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert/notification.  ** Required**|
+| `.pf-screen-reader` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert/notification.  ** Required**|
 
 ## Usage
 
@@ -24,7 +24,8 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class. ** Required**|
 | `.pf-c-alert__icon` | `<div>` |  	Defines the alert icon. ** Required **|
 | `.pf-c-alert__body` | `<div>` |  Defines the alert body.  ** Required **|
-| `.pf-c-alert__action` | `<div>` |  Define the alert action. |
+| `.pf-c-alert__title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Defines the alert title. |
+| `.pf-c-alert__action` | `<div>` |  Define the action button wrapper. |
 | `.pf-m-success` | `.pf-c-alert` |  Applies success styling. |
 | `.pf-m-danger` | `.pf-c-alert` |  Applies danger styling. |
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |

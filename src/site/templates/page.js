@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '@siteComponents/Layout';
 
 export default ({ data }) => {
   let html = '';
@@ -10,9 +12,11 @@ export default ({ data }) => {
   }
 
   return (
-    <div className="page-template">
-      <div className="page-template__content" dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    <Layout>
+      <div className="page-template">
+        <div className="page-template__content" dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+    </Layout>
   );
 };
 
