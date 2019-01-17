@@ -4,25 +4,30 @@
   // component variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-alert--grid-template-columns: max-content 1fr max-content;
+  --pf-c-alert--grid-template-rows: 1fr auto;
 
   // Icon
   --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
   --pf-c-alert__icon--Color: var(--pf-global--Color--100);
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--lg);
 
-  // Body
-  --pf-c-alert__body--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-alert__body--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-alert__body--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-alert__body--PaddingLeft: var(--pf-global--spacer--md);
-
   // Title
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-alert__title--Color: var(--pf-global--Color--100);
-  --pf-c-alert__title--siblings--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-alert__title--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__title--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-alert__title--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-alert__title--PaddingLeft: var(--pf-global--spacer--md);
+
+  // description
+  --pf-c-alert__description--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-alert__description--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-alert__description--PaddingLeft: var(--pf-global--spacer--md);
 
   // action
-  --pf-c-alert__action--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-alert__action--PaddingTop: #{pf-size-prem(11px)}; // one off spacer to align properly.
+  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--xs);
 
   // Success
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
@@ -49,8 +54,8 @@
   @extend %pf-t-light;
 
   display: grid;
-  grid-template-columns: max-content 1fr max-content;
-  grid-template-rows: 1fr auto;
+  grid-template-columns: var(--pf-c-alert--grid-template-columns);
+  grid-template-rows: var(--pf-c-alert--grid-template-rows);
   grid-template-areas:
     "icon title action"
     "icon content content";
@@ -96,32 +101,20 @@
   background-color: var(--pf-c-alert__icon--BackgroundColor);
 }
 
-// .pf-c-alert__body {
-//   display: flex;
-//   flex: 1 1 100%;
-//   flex-direction: column;
-//   justify-content: center;
-//   padding: var(--pf-c-alert__body--PaddingTop) var(--pf-c-alert__body--PaddingRight) var(--pf-c-alert__body--PaddingBottom) var(--pf-c-alert__body--PaddingLeft);
-
-//   &:not(:last-child) {
-//     --pf-c-alert__body--PaddingRight: 0;
-//   }
-// }
-
 .pf-c-alert__title {
   grid-area: title;
-  padding: 16px 16px 0;
+  padding: var(--pf-c-alert__title--PaddingTop) var(--pf-c-alert__title--PaddingRight) var(--pf-c-alert__title--PaddingBottom)  var(--pf-c-alert__title--PaddingLeft);
   font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
 }
 
 .pf-c-alert__description {
   grid-area: content;
-  padding: 0 16px 16px;
+  padding: 0 var(--pf-c-alert__description--PaddingRight) var(--pf-c-alert__description--PaddingBottom) var(--pf-c-alert__description--PaddingLeft);
 }
 
 .pf-c-alert__action {
   grid-area: action;
-  padding-top: 11px;
-  padding-right: 4px;
+  padding-top: var(--pf-c-alert__action--PaddingTop);
+  padding-right: var(--pf-c-alert__action--PaddingRight);
 }
