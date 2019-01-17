@@ -24,10 +24,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: var(--pf-c-chip-group--PaddingTop);
-  padding-right: var(--pf-c-chip-group--PaddingRight);
-  padding-bottom: var(--pf-c-chip-group--PaddingBottom);
-  padding-left: var(--pf-c-chip-group--PaddingLeft);
+  padding: var(--pf-c-chip-group--PaddingTop) var(--pf-c-chip-group--PaddingRight) var(--pf-c-chip-group--PaddingBottom) var(--pf-c-chip-group--PaddingLeft);
   background-color: var(--pf-c-chip-group--BackgroundColor);
   border-radius: var(--pf-c-chip-group--BorderRadius);
 
