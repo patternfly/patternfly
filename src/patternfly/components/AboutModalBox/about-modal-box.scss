@@ -64,13 +64,12 @@
 
   // Close Button
   --pf-c-about-modal-box__close--c-button--Color: var(--pf-global--Color--100);
-  --pf-c-about-modal-box__close--c-button--hover--Color: var(--pf-global--Color--100);
   --pf-c-about-modal-box__close--c-button--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-about-modal-box__close--c-button--Width: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2); // Height and width are 2x font-size
   --pf-c-about-modal-box__close--c-button--Height: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
   --pf-c-about-modal-box__close--c-button--BackgroundColor: #{$pf-color-black-1000}; // Close button uses a non-standard background color
-  --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: rgba($pf-color-black-1000, .4);
+  --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: #{rgba($pf-color-black-1000, .4)};
 
   // Brand img
   --pf-c-about-modal-box__brand-image--Height: #{pf-size-prem(40px)};
@@ -218,7 +217,6 @@
 
     &:hover,
     &.pf-m-hover {
-      --pf-c-about-modal-box__close--c-button--Color: var(--pf-c-about-modal-box__close--c-button--hover--Color);
       --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-c-about-modal-box__close--c-button--hover--BackgroundColor);
     }
   }
