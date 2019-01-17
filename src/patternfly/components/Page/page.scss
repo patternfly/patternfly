@@ -7,9 +7,8 @@
   --pf-c-page__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
-  --pf-c-page__header-brand--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-page__header-brand--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__header-brand--md--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-page__header-brand--md--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-c-page__header-brand--md--FlexBasis: #{pf-size-prem(290px)};
@@ -163,7 +162,7 @@
   @media (min-width: $pf-global--breakpoint--md) {
     flex: 0 0 var(--pf-c-page__header-brand--md--FlexBasis); // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
     align-self: stretch;
-    padding-right: var(--pf-c-page__header-brand--PaddingRight); // set padding right here to allow mobile view to accomodate tools
+    padding-right: var(--pf-c-page__header-brand--md--PaddingRight); // set padding right here to allow mobile view to accomodate tools
     background-color: var(--pf-c-page__header-brand--md--BackgroundColor);
   }
 }
