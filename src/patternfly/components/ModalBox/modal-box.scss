@@ -15,7 +15,6 @@
   --pf-c-modal-box--MaxWidth: calc(100% - var(pf-global--spacer--xl)); // Create space between the browser width and modal width
   --pf-c-modal-box--sm--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(560px)});
   --pf-c-modal-box--lg--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(1120px)});
-  --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md))); // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
   // Title
@@ -39,7 +38,6 @@
 
   // This component always needs to be light
   @extend %pf-t-light;
-  /* stylelint-disable */
 
   position: relative;
   z-index: var(--pf-c-modal-box--ZIndex);
