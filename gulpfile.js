@@ -22,7 +22,7 @@ gulp.task('build-pficonfont', () => {
         fontName: pficonFontName,
         targetPath: 'pficon.css',
         fontPath: './',
-        cssClass: 'pficon'
+        cssClass: 'pf-icon'
       })
     )
     .pipe(
