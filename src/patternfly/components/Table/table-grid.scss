@@ -49,10 +49,13 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-tr--responsive--nested-table--PaddingX: var(--pf-global--spacer--2xl);
 
   // Td
-  --pf-c-table-td--responsive--PaddingY: var(--pf-global--spacer--sm);
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table-cell--responsive--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table-cell--responsive--PaddingX: 0;
+
+  // Compact Table
+  --pf-c-table--m-compact-tr-td--responsive--PaddingY: var(--pf-global--spacer--sm);
 
   // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingX: var(--pf-global--spacer--xl);
@@ -120,7 +123,24 @@ $pf-c-table-xs-breakpoint: 380px;
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table-cell--responsive--PaddingY) var(--pf-c-table-cell--responsive--PaddingX);
+      padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingX) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingX);
+    }
+  }
+
+  // Remove min-height on buttons
+  td.pf-c-table__compound-expansion-toggle,
+  th.pf-c-table__compound-expansion-toggle {
+    .pf-c-button {
+      min-height: 0;
+    }
+  }
+
+  .pf-c-table.pf-m-compact {
+    tr {
+      & > * {
+        padding-top: var(--pf-c-table--m-compact-tr-td--responsive--PaddingY);
+        padding-bottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingY);
+      }
     }
   }
 
