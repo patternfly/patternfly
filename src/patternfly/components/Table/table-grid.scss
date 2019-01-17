@@ -37,6 +37,8 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingY: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--PaddingX: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
 
   // Setting these individually in order to update them individually
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--PaddingY);
@@ -90,7 +92,16 @@ $pf-c-table-xs-breakpoint: 380px;
   // Table row
   // using background color on tr as they are presented as block level elements for responsive view
   tr {
-    background-color: var(--pf-c-table--BackgroundColor);
+    background-color: var(--pf-c-table-tr--responsive--BackgroundColor);
+
+    &:not(:first-child):not(.pf-c-table__expandable-row) {
+      margin-top: var(--pf-c-table-tr--responsive--MarginTop);
+    }
+
+    // undo default styling for each even child
+    &:nth-child(even) {
+      background-color: var(--pf-c-table-tr--responsive--BackgroundColor);
+    }
   }
 
   // Standard table row (non-expandable)

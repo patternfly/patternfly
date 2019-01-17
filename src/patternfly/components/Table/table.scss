@@ -126,6 +126,13 @@
     height: 1px;
   }
 
+  // undo default styling for each even child
+  tr {
+    &:nth-child(even) {
+      background-color: var(--pf-c-table--BackgroundColor);
+    }
+  }
+
   // Table row
   tr > * {
     // set position relative for ::before borders
