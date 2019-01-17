@@ -21,4 +21,4 @@
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state |
 | `.pf-m-hover` | `.pf-c-app-launcher__menu-item` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-app-launcher__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
-| `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-app-launcher__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-app-launcher__menu-item`|
+| `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled.|
