@@ -48,8 +48,12 @@
   // This component always needs to be light
   @extend %pf-t-light;
 
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "icon title action"
+    "icon content content";
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
 
@@ -85,36 +89,39 @@
 
 .pf-c-alert__icon {
   display: flex;
+  grid-area: icon;
   padding: var(--pf-c-alert__icon--Padding);
   font-size: var(--pf-c-alert__icon--FontSize);
   color: var(--pf-c-alert__icon--Color);
   background-color: var(--pf-c-alert__icon--BackgroundColor);
 }
 
-.pf-c-alert__body {
-  display: flex;
-  flex: 1 1 100%;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--pf-c-alert__body--PaddingTop) var(--pf-c-alert__body--PaddingRight) var(--pf-c-alert__body--PaddingBottom) var(--pf-c-alert__body--PaddingLeft);
+// .pf-c-alert__body {
+//   display: flex;
+//   flex: 1 1 100%;
+//   flex-direction: column;
+//   justify-content: center;
+//   padding: var(--pf-c-alert__body--PaddingTop) var(--pf-c-alert__body--PaddingRight) var(--pf-c-alert__body--PaddingBottom) var(--pf-c-alert__body--PaddingLeft);
 
-  &:not(:last-child) {
-    --pf-c-alert__body--PaddingRight: 0;
-  }
-}
+//   &:not(:last-child) {
+//     --pf-c-alert__body--PaddingRight: 0;
+//   }
+// }
 
 .pf-c-alert__title {
-  overflow: auto;
+  grid-area: title;
+  padding: 16px 16px 0;
   font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
+}
 
-  ~ * {
-    margin-top: var(--pf-c-alert__title--siblings--MarginTop);
-  }
+.pf-c-alert__description {
+  grid-area: content;
+  padding: 0 16px 16px;
 }
 
 .pf-c-alert__action {
-  float: right;
-  padding-top: 10px;
-  padding-right: 10px;
+  grid-area: action;
+  padding-top: 11px;
+  padding-right: 4px;
 }
