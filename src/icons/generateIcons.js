@@ -21,8 +21,8 @@ function getPfIcon(iconName) {
 
 function generateIcon(iconDef, iconName) {
   return {
-    id: `${iconName}-icon`,
-    name: pascalCase(`${iconName}-icon`),
+    id: `${iconName}`,
+    name: pascalCase(`${iconName}`),
     group: iconDef.group,
     width: iconDef.width,
     height: iconDef.height,
