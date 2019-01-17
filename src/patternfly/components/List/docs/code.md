@@ -6,5 +6,5 @@ Non-inline lists can be nested up to any level.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-list` | `<ul>, <ol>` | Initiates a list. Must be used with a modifier. |
+| `.pf-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
 | `.pf-m-inline` | `.pf-c-list` |  Modifies for inline list style. |
