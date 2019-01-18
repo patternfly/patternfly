@@ -2,8 +2,8 @@
 
 .pf-c-list {
   --pf-c-list--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-list--ul--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-list--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-list--nested--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-list--nested--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-list--ul--ListStyle: var(--pf-global--ListStyle);
   --pf-c-list--li--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-list--m-inline--li--MarginRight: var(--pf-global--spacer--lg);
@@ -12,8 +12,8 @@
 
   ol,
   ul {
-    margin-top: var(--pf-c-list--ul--nested--MarginTop);
-    margin-left: var(--pf-c-list--ul--nested--MarginLeft);
+    margin-top: var(--pf-c-list--nested--MarginTop);
+    margin-left: var(--pf-c-list--nested--MarginLeft);
   }
 
   li + li {
@@ -33,7 +33,9 @@
     li {
       --pf-c-list--li--MarginTop: 0;
 
-      margin-right: var(--pf-c-list--m-inline--li--MarginRight);
+      &:not(:last-child) {
+        margin-right: var(--pf-c-list--m-inline--li--MarginRight);
+      }
     }
   }
 }
