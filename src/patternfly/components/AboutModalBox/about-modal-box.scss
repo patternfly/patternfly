@@ -2,113 +2,122 @@
 
 .pf-c-about-modal-box {
   // Component variables
-  --pf-c-about-modal-box--sm--grid-template-columns: 5fr 1fr;
-  --pf-c-about-modal-box--lg--grid-template-columns: 70fr 30fr;
-
-  // Modal uses a non-standard background color
-  --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000};
-
-  // This is a special one-off glow for the about modal
-  --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(255, 255, 255, .05);
+  --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000}; // Modal uses a non-standard background color
+  --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(255, 255, 255, .05);  // This is a special one-off glow for the about modal
   --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
-
-  // Width and height values are determined by design
-  --pf-c-about-modal-box--MaxWidth: #{pf-size-prem(1109px)};
-
-  // Height is optimized for the exact height desired
-  --pf-c-about-modal-box--Height: #{pf-size-prem(686px)};
-
-  // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
-  --pf-c-about-modal-box--MinHeight: calc(var(--pf-c-about-modal-box__brand--PaddingTop) + var(--pf-c-about-modal-box__brand--PaddingBottom) + var(--pf-c-about-modal-box__header--PaddingBottom) + var(--pf-c-about-modal-box__content--MarginTop) + var(--pf-c-about-modal-box__content--MarginBottom) + var(--pf-c-about-modal-box__brand-image--Height) + (1rem * 6 * var(--pf-global--LineHeight--md)));
-
-  // MaxHeight ensures that the modal will not go off the screen and instead the content will scroll
-  --pf-c-about-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--xl));
-
-  // Margin left and right make sure there is some space around the modal at the largest breakpoint
-  --pf-c-about-modal-box--MarginLeft: var(--pf-global--spacer--3xl);
-  --pf-c-about-modal-box--MarginRight: var(--pf-global--spacer--3xl);
-
-  // Shared padding values allow us to change common padding to all components once
-  // Some modal components have more specific padding values
+  --pf-c-about-modal-box--Height: 100%;
+  --pf-c-about-modal-box--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
+  --pf-c-about-modal-box--lg--MaxHeight: calc(100% - var(--pf-global--spacer--xl)); // MaxHeight ensures that the modal will not go off the screen and instead the content will scroll
+  --pf-c-about-modal-box--Width: 100vw;
+  --pf-c-about-modal-box--lg--Width: calc(100% - (var(--pf-global--spacer--3xl) * 2)); // Modal should be full width with a gutter on either side until it hits a max-width
+  --pf-c-about-modal-box--lg--MaxWidth: #{pf-size-prem(1232px)};
   --pf-c-about-modal-box--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box--sm--PaddingTop: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--sm--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--sm--PaddingBottom: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--sm--PaddingLeft: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box--sm--grid-template-columns: 5fr 1fr;
+  --pf-c-about-modal-box--lg--grid-template-columns: 1fr .6fr;
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-about-modal-box--PaddingTop: var(--pf-global--spacer--3xl);
-    --pf-c-about-modal-box--PaddingRight: var(--pf-global--spacer--3xl);
-    --pf-c-about-modal-box--PaddingBottom: var(--pf-global--spacer--3xl);
-    --pf-c-about-modal-box--PaddingLeft: var(--pf-global--spacer--3xl);
+    --pf-c-about-modal-box--PaddingTop: var(--pf-c-about-modal-box--sm--PaddingTop);
+    --pf-c-about-modal-box--PaddingRight: var(--pf-c-about-modal-box--sm--PaddingRight);
+    --pf-c-about-modal-box--PaddingBottom: var(--pf-c-about-modal-box--sm--PaddingBottom);
+    --pf-c-about-modal-box--PaddingLeft: var(--pf-c-about-modal-box--sm--PaddingLeft);
   }
 
-  // Element variables
-
   // Brand
-  // Set default padding top, right, left to shared values
   --pf-c-about-modal-box__brand--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-about-modal-box__brand--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
-  --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-c-about-modal-box--PaddingBottom);
-  --pf-c-about-modal-box__brand--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
+  --pf-c-about-modal-box__brand--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__brand--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__brand--sm--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__brand--sm--PaddingLeft: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__brand--sm--PaddingBottom: var(--pf-global--spacer--3xl);
+
+  @media screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-about-modal-box__brand--PaddingRight: var(--pf-c-about-modal-box__brand--sm--PaddingRight);
+    --pf-c-about-modal-box__brand--PaddingLeft: var(--pf-c-about-modal-box__brand--sm--PaddingLeft);
+    --pf-c-about-modal-box__brand--PaddingBottom: var(--pf-c-about-modal-box__brand--sm--PaddingBottom);
+  }
 
   // Close
-  // Set default padding top, right, bottom to shared values
-  --pf-c-about-modal-box__close--PaddingTop: var(--pf-c-about-modal-box__brand--PaddingTop);
-  --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
-  --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__brand--PaddingBottom);
   --pf-c-about-modal-box__close--ZIndex: var(--pf-global--ZIndex--2xl);
+  --pf-c-about-modal-box__close--PaddingTop: var(--pf-global--spacer--2xl);
+  --pf-c-about-modal-box__close--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__close--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__close--sm--PaddingBottom: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__close--sm--PaddingRight: 0;
+  --pf-c-about-modal-box__close--lg--PaddingRight: var(--pf-global--spacer--3xl);
+
+  @media only screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box__close--sm--PaddingRight);
+    --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__close--sm--PaddingBottom);
+  }
+
+  @media only screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box__close--lg--PaddingRight);
+  }
+
+  // Close Button
+  --pf-c-about-modal-box__close--c-button--Color: var(--pf-global--Color--100);
+  --pf-c-about-modal-box__close--c-button--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-about-modal-box__close--c-button--Width: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2); // Height and width are 2x font-size
+  --pf-c-about-modal-box__close--c-button--Height: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
+  --pf-c-about-modal-box__close--c-button--BackgroundColor: #{$pf-color-black-1000}; // Close button uses a non-standard background color
+  --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: #{rgba($pf-color-black-1000, .4)};
 
   // Brand img
   --pf-c-about-modal-box__brand-image--Height: #{pf-size-prem(40px)};
 
   // Header
-  // Set default padding right, bottom, left to shared values
-  --pf-c-about-modal-box__header--PaddingRight: var(--pf-c-about-modal-box--PaddingRight);
+  --pf-c-about-modal-box__header--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-about-modal-box__header--PaddingLeft: var(--pf-c-about-modal-box--PaddingLeft);
+  --pf-c-about-modal-box__header--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__header--sm--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__header--sm--PaddingLeft: var(--pf-global--spacer--3xl);
+
+  @media only screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-about-modal-box__header--PaddingRight: var(--pf-c-about-modal-box__header--sm--PaddingRight);
+    --pf-c-about-modal-box__header--PaddingLeft: var(--pf-c-about-modal-box__header--sm--PaddingLeft);
+  }
 
   // Strapline
   --pf-c-about-modal-box__header-strapline--PaddingBottom: var(--pf-global--spacer--md);
 
   // Content
-  // Using global padding values for margins to prevent scrollbar extending past content
-  // Set default margin top, right, bottom, left to shared values
-  --pf-c-about-modal-box__content--MarginTop: var(--pf-c-about-modal-box--PaddingTop);
-  --pf-c-about-modal-box__content--MarginRight: var(--pf-c-about-modal-box--PaddingRight);
-  --pf-c-about-modal-box__content--MarginBottom: var(--pf-c-about-modal-box--PaddingBottom);
-  --pf-c-about-modal-box__content--MarginLeft: var(--pf-c-about-modal-box--PaddingLeft);
+  --pf-c-about-modal-box__content--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__content--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__content--MarginBottom: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__content--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__content--sm--MarginTop: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginRight: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginBottom: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginLeft: var(--pf-global--spacer--3xl);
 
-  // This is the min allowable height of the content
-  --pf-c-about-modal-box__content--MinHeight: calc(1rem * 4 * var(--pf-global--LineHeight--md));
-
-  // Button close
-  --pf-c-about-modal-box__button-close--Color: var(--pf-global--Color--100);
-  --pf-c-about-modal-box__button-close--hover--Color: var(--pf-global--Color--100);
-  --pf-c-about-modal-box__button-close--ZIndex: var(--pf-global--ZIndex--2xl);
-  --pf-c-about-modal-box__button-close--FontSize: var(--pf-global--FontSize--xl);
-
-  // Height and width are 2x font-size
-  --pf-c-about-modal-box__button-close--Width: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
-  --pf-c-about-modal-box__button-close--Height: calc(var(--pf-c-about-modal-box__button-close--FontSize) * 2);
-
-  // Close button uses a non-standard background color
-  --pf-c-about-modal-box__button-close--BackgroundColor: #{$pf-color-black-1000};
-  --pf-c-about-modal-box__button-close--hover--BackgroundColor: #{rgba($pf-color-black-1000, .4)};
+  @media only screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-about-modal-box__content--MarginTop: var(--pf-c-about-modal-box__content--sm--MarginTop);
+    --pf-c-about-modal-box__content--MarginRight: var(--pf-c-about-modal-box__content--sm--MarginRight);
+    --pf-c-about-modal-box__content--MarginBottom: var(--pf-c-about-modal-box__content--sm--MarginBottom);
+    --pf-c-about-modal-box__content--MarginLeft: var(--pf-c-about-modal-box__content--sm--MarginLeft);
+  }
 
   // This component always needs to be dark
   @extend %pf-t-dark;
 
   z-index: var(--pf-c-about-modal-box--ZIndex);
   display: grid;
-  grid-template-rows: max-content max-content auto max-content;
+  grid-template-rows: max-content max-content auto;
   grid-template-areas:
     "brand close"
     "header header"
     "content content";
-
-  // Modal is full screen until larger breakpoint
-  width: 100vw;
-  height: 100vh;
+  width: var(--pf-c-about-modal-box--Width);
+  height: var(--pf-c-about-modal-box--Height);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--pf-c-about-modal-box--BackgroundColor); // Because this component is always dark, set the background color
@@ -123,14 +132,13 @@
   }
 
   @media only screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-about-modal-box--Height: var(--pf-c-about-modal-box--lg--Height);
+    --pf-c-about-modal-box--Width: var(--pf-c-about-modal-box--lg--Width);
+
     grid-template-columns: var(--pf-c-about-modal-box--lg--grid-template-columns);
     grid-template-rows: max-content max-content auto;
-    max-width: var(--pf-c-about-modal-box--MaxWidth);
-    height: var(--pf-c-about-modal-box--Height);
-    min-height: var(--pf-c-about-modal-box--MinHeight);
-    max-height: var(--pf-c-about-modal-box--MaxHeight);
-    margin-right: var(--pf-c-about-modal-box--MarginRight);
-    margin-left: var(--pf-c-about-modal-box--MarginLeft);
+    max-width: var(--pf-c-about-modal-box--lg--MaxWidth);
+    max-height: var(--pf-c-about-modal-box--lg--MaxHeight);
   }
 }
 
@@ -150,7 +158,6 @@
   grid-area: header;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; // When header text is on one line and the modal-box__logo is taller than header, retain bottom alignment
   padding-right: var(--pf-c-about-modal-box__header--PaddingRight);
   padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
   padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
@@ -163,18 +170,13 @@
 // Content
 .pf-c-about-modal-box__content {
   grid-area: content;
-  min-height: var(--pf-c-about-modal-box__content--MinHeight);
-  margin-top: var(--pf-c-about-modal-box__content--MarginTop); // Using margin instead of padding to prevent scrollbar extending to top of content block
-  margin-right: var(--pf-c-about-modal-box__content--MarginRight);
-  margin-bottom: var(--pf-c-about-modal-box__content--MarginBottom);
-  margin-left: var(--pf-c-about-modal-box__content--MarginLeft);
+  margin: var(--pf-c-about-modal-box__content--MarginTop) var(--pf-c-about-modal-box__content--MarginRight) var(--pf-c-about-modal-box__content--MarginBottom) var(--pf-c-about-modal-box__content--MarginLeft); // Using margin instead of padding to prevent scrollbar extending to top of content block
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
-    min-height: auto;
     overflow: visible;
     overscroll-behavior: auto;
   }
@@ -194,31 +196,28 @@
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
     grid-area: 1 / 2;
     justify-content: center; // center the close over the narrow hero image
-    padding-right: 0;
   }
 
   @media only screen and (min-width: $pf-global--breakpoint--lg) {
     justify-content: flex-end; // align flex end the close over the narrow hero image
-    padding-right: var(--pf-c-about-modal-box__close--PaddingRight);
   }
 
   // Close button
   // Since this btn is unique to the about modal, use contextual selectors in this specific instance
-  .pf-c-button.pf-m-plain {
+  .pf-c-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--pf-c-about-modal-box__button-close--Width);
-    height: var(--pf-c-about-modal-box__button-close--Height);
-    font-size: var(--pf-c-about-modal-box__button-close--FontSize);
-    color: var(--pf-c-about-modal-box__button-close--Color);
-    background-color: var(--pf-c-about-modal-box__button-close--BackgroundColor);
-    border-radius: 50%;
+    width: var(--pf-c-about-modal-box__close--c-button--Width);
+    height: var(--pf-c-about-modal-box__close--c-button--Height);
+    font-size: var(--pf-c-about-modal-box__close--c-button--FontSize);
+    color: var(--pf-c-about-modal-box__close--c-button--Color);
+    background-color: var(--pf-c-about-modal-box__close--c-button--BackgroundColor);
+    border-radius: var(--pf-c-about-modal-box__close--c-button--BorderRadius);
 
     &:hover,
     &.pf-m-hover {
-      color: var(--pf-c-about-modal-box__button-close--hover--Color);
-      background-color: var(--pf-c-about-modal-box__button-close--hover--BackgroundColor);
+      --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-c-about-modal-box__close--c-button--hover--BackgroundColor);
     }
   }
 }
