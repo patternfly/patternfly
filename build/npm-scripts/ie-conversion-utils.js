@@ -4,7 +4,11 @@ const presetEnv = require('postcss-preset-env');
 const postcss = require('postcss');
 const cssvariables = require('postcss-css-variables');
 
-// [utils] build an array of global variables
+/**
+ * Build an array of global variables
+ * @param stylesheetPath: string  an absolute path to a stylesheet
+ * @example /Users/path/to/patternfly-base.css
+ */
 function getGlobalVarDefinitions(stylesheetPath) {
   const fullPfStylesheet = fs.readFileSync(stylesheetPath, 'utf8').match(/[^\r\n]+/g);
   const startToken = '--pf-global--';
@@ -13,7 +17,11 @@ function getGlobalVarDefinitions(stylesheetPath) {
     .map(el => el.substring(el.indexOf(startToken), el.lastIndexOf(';') + 1));
 }
 
-// [utils] build an array of local variables
+/**
+ * Build an array of local variables
+ * @param stylesheet: string  a well-formed CSS stylesheet as a string
+ * @example `:root {--mycolor: #ff0;} html {color: var(--mycolor);}`
+ */
 function getLocalVarDefinitions(stylesheet) {
   const singleStylesheet = stylesheet.match(/[^\r\n]+/g);
   const startToken = '--pf-';
@@ -22,7 +30,11 @@ function getLocalVarDefinitions(stylesheet) {
     .map(el => el.substring(el.indexOf(startToken), el.lastIndexOf(';') + 1));
 }
 
-// [utils] transforms variables to static values
+/**
+ * Transforms variables to static values
+ * @param stylesheet: string  a well-formed CSS stylesheet as a string
+ * @example `:root {--mycolor: #ff0;} html {color: var(--mycolor);}`
+ */
 function transformVars(stylesheet) {
   return postcss([
     presetEnv({
@@ -43,7 +55,11 @@ function transformVars(stylesheet) {
     });
 }
 
-// [utils] transforms modern grid definitions into legacy IE11 grid definitions
+/**
+ * Transforms modern grid definitions into legacy IE11 grid definitions
+ * @param stylesheet: string  a well-formed static CSS stylesheet as a string
+ * @example `html {color: #ff0;}`
+ */
 function transformGrid(staticStylesheet) {
   return postcss([
     presetEnv({
@@ -61,15 +77,19 @@ function transformGrid(staticStylesheet) {
     });
 }
 
-function getGlobalVars(stylesheetPath) {
-  return getGlobalVarDefinitions(stylesheetPath).join('\n');
-}
-
-// [utils] transforms a string of css into an ie11 ready format
-function transform(stylesheet, basePfStylesheetPath) {
+/**
+ * Transforms a string of CSS into an older string of CSS
+ * @param stylesheet: string  a well-formed CSS stylesheet as a string
+ * @example `:root {--mycolor: #ff0;} html {color: var(--mycolor);}`
+ * @param globalsStylesheetPath: string  a path to patternfly-base.css
+ * @example /Users/path/to/patternfly-base.css
+ * @param excludeBase: boolean  the ability to exclude the patternfly-base.css from the stylesheet
+ * @example true
+ */
+function transform(stylesheet, globalsStylesheetPath, excludeBase) {
   const localVars = getLocalVarDefinitions(stylesheet).join('\n');
-  const basePf = fs.readFileSync(basePfStylesheetPath, 'utf8');
-  const globalVars = getGlobalVars(basePfStylesheetPath);
+  const basePf = excludeBase ? '' : fs.readFileSync(globalsStylesheetPath, 'utf8');
+  const globalVars = getGlobalVarDefinitions(globalsStylesheetPath).join('\n');
   const newStylesheet = `:root {\n${globalVars}\n ${localVars} } \n${basePf} \n\n${stylesheet}`;
   return transformVars(newStylesheet)
     .then(staticStylesheet => transformGrid(staticStylesheet))
@@ -78,12 +98,14 @@ function transform(stylesheet, basePfStylesheetPath) {
     });
 }
 
-// globPattern is a fileGlob that points to patternfly stylesheet we want to include
-// for example: path.resolve(__dirname, '../node_modules/@patternfly/patternfly-next/{components,utilities,layouts}/**/*.css');
-// excludes is an array of stylesheets to exclude, use the Uppercase directory name
-// for example: ['Table', 'Stack', 'BoxShadow']
-// appStylesheets is an array of abs paths to stylesheets to be appended to the end of the array
-// returns a promise which resolves to an array of stylesheet paths
+/**
+ * Constructs an array of stylesheets to be processed, in an optimal order for post-processing
+ * @param basePfCssGlob: a fileGlob pattern that selects patternfly stylesheet we want to include
+ * @example { 'myEndpoint': '/exployees/list/{role}/{name}' }
+ * @param excludes: an array of stylesheets to exclude, use the Uppercase directory name
+ * @example ['Table', 'Stack', 'BoxShadow']
+ * @param appStylesheets: an array of paths to stylesheets to append, comes last in the cascade
+ */
 function getStylesheetPaths(basePfCssGlob, excludes = [], appStylesheets = []) {
   return new Promise((resolve, reject) => {
     glob(basePfCssGlob, (error, files) => {
@@ -104,7 +126,6 @@ module.exports = {
   getGlobalVarDefinitions,
   getLocalVarDefinitions,
   getStylesheetPaths,
-  getGlobalVars,
   transform,
   transformGrid,
   transformVars
