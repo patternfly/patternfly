@@ -1,27 +1,23 @@
-{{#> alert-group}}
-  {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
-      {{#> alert-icon alert-icon--success="true"}}
+{{#> alert-group alert-group--attribute='role="status"'}}
+  {{#> alert-item}}  
+    {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Alert"'}}
+      {{#> alert-icon alert-icon--type="check-circle"}}
       {{/alert-icon}}
-      {{#> alert-body alert-body--attribute='role="alert"'}}
         {{#> alert-title}}
           {{#> screen-reader}}Success alert:{{/screen-reader}}
-          Success alert title
+          Success Alert Title
         {{/alert-title}}
-      {{/alert-body}}
     {{/alert}}
   {{/alert-item}}
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Alert"'}}
-      {{#> alert-icon alert-icon--success="true"}}
+      {{#> alert-icon alert-icon--type="exclamation-circle"}}
       {{/alert-icon}}
-      {{#> alert-body alert-body--attribute='role="alert"'}}
         {{#> alert-title}}
           {{#> screen-reader}}Danger alert:{{/screen-reader}}
-          Danger alert title
+          Danger Alert Title
         {{/alert-title}}
-      {{/alert-body}}
       {{#> alert-action}}
         {{#> button button--modifier="pf-m-link"}}
           Action Button
@@ -32,17 +28,15 @@
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Alert"'}}
-      {{#> alert-icon alert-icon--info="true"}}
+      {{#> alert-icon alert-icon--type="info-circle"}}
       {{/alert-icon}}
-      {{#> alert-body alert-body--attribute='role="alert"'}}
         {{#> alert-title}}
           {{#> screen-reader}}Info alert:{{/screen-reader}}
-          Info alert title
+          Info Alert Title
         {{/alert-title}}
         {{#> alert-description}}
           Info alert description. <a href="#">This is a link.</a>
         {{/alert-description}}
-      {{/alert-body}}
     {{/alert}}
   {{/alert-item}}
 {{/alert-group}}
