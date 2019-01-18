@@ -70,6 +70,7 @@
   // Sort indicator
   --pf-c-table__sort-indicator--MarginX: var(--pf-global--spacer--md);
   --pf-c-table__sort-indicator--Color: var(--pf-global--disabled-color--200);
+  --pf-c-table__sort-indicator--hover--Color: var(--pf-global--Color--100);
 
   // Icon inline
   --pf-c-table__icon-inline--MarginX: var(--pf-global--spacer--sm);
@@ -340,6 +341,18 @@
     .pf-c-table__sort-indicator {
       color: var(--pf-c-table__sort--sorted--Color);
     }
+
+    &:hover {
+      .pf-c-table__sort-indicator {
+        color: var(--pf-c-table__sort--sorted--Color);
+      }
+    }
+  }
+
+  &:hover {
+    .pf-c-table__sort-indicator {
+      color: var(--pf-c-table__sort-indicator--hover--Color);
+    }
   }
 }
 
@@ -351,14 +364,6 @@
   line-height: 1;
   color: var(--pf-c-table__sort-indicator--Color);
   pointer-events: none;
-
-  .pf-c-table__sort.pf-m-ascending & {
-    transform: rotate(0deg);
-  }
-
-  .pf-c-table__sort.pf-m-descending & {
-    transform: rotate(180deg);
-  }
 }
 
 // Expandable row

@@ -1,7 +1,7 @@
 <th{{#if table-th--toggle}} class="pf-c-table__toggle {{table-th--modifier}}"
     {{else if table-th--check}} class="pf-c-table__check {{table-th--modifier}}"
     {{else if table-th--action}} class="pf-c-table__action {{table-th--modifier}}"
-    {{else if table-th--sortable}} class="pf-c-table__sort{{#if table-th--asc}} pf-m-ascending{{/if}}{{#if table-th--desc}} pf-m-descending{{/if}} {{table-th--modifier}}"
+    {{else if table-th--sortable}} class="pf-c-table__sort {{#if table-th--selected}} pf-m-selected{{/if}}{{#if table-th--asc}} pf-m-ascending{{/if}}{{#if table-th--desc}} pf-m-descending{{/if}} {{table-th--modifier}}"
     {{else if table-th--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle {{table-th--modifier}}"
     {{else if table-th--modifier}} class="{{table-th--modifier}}"
   {{/if}}
@@ -20,12 +20,14 @@
     {{#> button button--modifier="pf-m-plain"}}
       {{> @partial-block}}
       <span class="pf-c-table__sort-indicator">
-        {{#if table-th--asc}}
-          <i class="fas fa-angle-up"></i>
-        {{else if table-th-desc}}
-          <i class="fas fa-angle-down"></i>
+        {{#if table-th--selected}}
+          {{#if table-th--asc}}
+            <i class="fas fa-long-arrow-alt-up"></i>
+          {{else}}
+            <i class="fas fa-long-arrow-alt-down"></i>
+          {{/if}}
         {{else}}
-          <i class="fas fa-sort"></i>
+          <i class="fas fa-arrows-alt-v"></i>
         {{/if}}
       </span>
     {{/button}}
