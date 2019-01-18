@@ -15,8 +15,6 @@
   --pf-c-empty-state__secondary--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-empty-state__secondary--c-button--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-empty-state__secondary--c-button--MarginBottom: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__action--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__action--GridGap: var(--pf-global--spacer--xs);
 
   max-width: var(--pf-c-empty-state--MaxWidth);
   padding: var(--pf-c-empty-state--Padding);
@@ -40,13 +38,6 @@
 .pf-c-empty-state__body {
   margin-top: var(--pf-c-empty-state__body--MarginTop);
   color: var(--pf-c-empty-state__body--Color);
-}
-
-.pf-c-empty-state__action {
-  display: grid;
-  margin-top: var(--pf-c-empty-state__action--MarginTop);
-  justify-items: center;
-  grid-gap: var(--pf-c-empty-state__action--GridGap);
 }
 
 .pf-c-empty-state__secondary {
