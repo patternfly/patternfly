@@ -60,6 +60,7 @@
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-page__header-tools--c-dropdown__toggle-text--MaxWidth: 20ch;
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
@@ -223,32 +224,36 @@
     max-width: var(--pf-c-page__header-tools--c-dropdown__toggle-text--MaxWidth);
   }
 
-  .pf-l-toolbar__group {
-    &.pf-m-icons {
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        @include pf-u-visible;
-      }
+  .pf-m-icons {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      @include pf-u-visible;
     }
   }
 
-  .pf-l-toolbar__item {
-    &.pf-m-mobile {
-      margin-right: 0;
+  .pf-m-mobile {
+    margin-right: 0;
 
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        display: none;
-      }
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      display: none;
     }
+  }
 
-    &.pf-m-user {
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        @include pf-u-visible;
-      }
+  .pf-m-user {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      @include pf-u-visible;
     }
   }
 
   .pf-c-avatar {
     margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+  }
+}
+
+.pf-c-page__header-tools-group {
+  display: flex;
+
+  & + & {
+    margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
   }
 }
 
