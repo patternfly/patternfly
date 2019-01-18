@@ -5,27 +5,27 @@
   --pf-c-progress--GridGap: var(--pf-global--spacer--md);
 
   // Element variables
-  --pf-c-progress__bar--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-progress__bar--before--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-progress__bar--Height: var(--pf-global--spacer--md);
-  --pf-c-progress__bar-underlay--BackgroundColor: var(--pf-global--BackgroundColor--light-100); // the bar always needs white under it so that the semi-transparent color shows correctly
+  --pf-c-progress__bar--BackgroundColor: var(--pf-global--BackgroundColor--light-100); // the bar always needs white under it so that the semi-transparent color shows correctly
   --pf-c-progress__status--Color: var(--pf-global--Color--100); // the status icon default color is the default text color
   --pf-c-progress__status-icon--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
-  --pf-c-progress__measure--m-inside--m-success--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
-  --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-progress--m-outside__measure--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-progress__bar--Height--sm: var(--pf-global--spacer--sm);
-  --pf-c-progress__bar--Height--lg: var(--pf-global--spacer--lg);
-  --pf-c-progress__bar-overlay--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
+  --pf-c-progress__bar--before--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
   --pf-c-progress__indicator--Height: var(--pf-c-progress__bar--Height);
-  --pf-c-progress__indicator--BackgroundColor: var(--pf-c-progress__bar--BackgroundColor);
-  --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-progress__indicator--BackgroundColor: var(--pf-c-progress__bar--before--BackgroundColor);
 
   // Modifier variables
-  --pf-c-progress--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
-  --pf-c-progress--m-success--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-progress__status--m-danger--Color: var(--pf-global--danger-color--100);
-  --pf-c-progress__status--m-success--Color: var(--pf-global--success-color--100);
+  --pf-c-progress--m-danger__bar--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-progress--m-success__bar--BackgroundColor: var(--pf-global--success-color--100);
+  --pf-c-progress--m-danger__status--Color: var(--pf-global--danger-color--100);
+  --pf-c-progress--m-success__status--Color: var(--pf-global--success-color--100);
+  --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
+  --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
+  --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
+  --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-progress--m-outside__measure--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-progress--m-sm__bar--Height: var(--pf-global--spacer--sm);
+  --pf-c-progress--m-lg__bar--Height: var(--pf-global--spacer--lg);
 
   // Component styles
   display: grid;
@@ -35,12 +35,12 @@
 
   // Modifiers
   // size modifiers
-  &.pf-m-lg {
-    --pf-c-progress__bar--Height: var(--pf-c-progress__bar--Height--lg); // set height to the large height
+  &.pf-m-sm {
+    --pf-c-progress__bar--Height: var(--pf-c-progress--m-sm__bar--Height); // set height to the small height
   }
 
-  &.pf-m-sm {
-    --pf-c-progress__bar--Height: var(--pf-c-progress__bar--Height--sm); // set height to the small height
+  &.pf-m-lg {
+    --pf-c-progress__bar--Height: var(--pf-c-progress--m-lg__bar--Height); // set height to the large height
   }
 
   // No Description or Status Modifier
@@ -97,14 +97,14 @@
 
   // status modifiers
   &.pf-m-success { // set color variables to the success colors
-    --pf-c-progress__bar--BackgroundColor: var(--pf-c-progress--m-success--BackgroundColor);
-    --pf-c-progress__status--Color: var(--pf-c-progress__status--m-success--Color);
-    --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress__measure--m-inside--m-success--Color);
+    --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-success__bar--BackgroundColor);
+    --pf-c-progress__status--Color: var(--pf-c-progress--m-success__status--Color);
+    --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-success--m-inside__measure--Color);
   }
 
   &.pf-m-danger { // set color variables to the danger colors
-    --pf-c-progress__bar--BackgroundColor: var(--pf-c-progress--m-danger--BackgroundColor);
-    --pf-c-progress__status--Color: var(--pf-c-progress__status--m-danger--Color);
+    --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-danger__bar--BackgroundColor);
+    --pf-c-progress__status--Color: var(--pf-c-progress--m-danger__status--Color);
   }
 }
 
@@ -135,15 +135,15 @@
   grid-row: 2 / 3;
   align-self: center;
   height: var(--pf-c-progress__bar--Height);
-  background-color: var(--pf-c-progress__bar-underlay--BackgroundColor);
+  background-color: var(--pf-c-progress__bar--BackgroundColor);
 
   &::before {
     position: absolute;
     width: 100%;
     height: 100%;
     content: "";
-    background-color: var(--pf-c-progress__bar--BackgroundColor);
-    opacity: var(--pf-c-progress__bar-overlay--Opacity);
+    background-color: var(--pf-c-progress__bar--before--BackgroundColor);
+    opacity: var(--pf-c-progress__bar--before--Opacity);
   }
 }
 
