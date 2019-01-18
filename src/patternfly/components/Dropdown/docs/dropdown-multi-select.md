@@ -1,1 +1,0 @@
-The Dropdown Multi Select should be used when the user is selecting multiple items from a list. Although the presentation is similar to the basic dropdown, the underlying HTML and Aria tag structure is specific to a select list.

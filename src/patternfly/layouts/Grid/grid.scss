@@ -1,5 +1,5 @@
 // URL.com/guidelines#layout
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
@@ -7,7 +7,7 @@
   @for $col-num from 1 through 12 {
     &.pf-m-all-#{$col-num}-col#{$suffix} {
       > * {
-        --pf-l-grid__item--GridColumnEnd: span $col-num;
+        --pf-l-grid__item--GridColumnEnd: span #{$col-num};
       }
     }
   }
@@ -19,21 +19,21 @@
   // generate column span modifier
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
-      --pf-l-grid__item--GridColumnEnd: span $col-num;
+      --pf-l-grid__item--GridColumnEnd: span #{$col-num};
     }
   }
 
   // generate column offset modfiers
   @for $col-num from 1 through 12 {
     > .pf-m-offset-#{$col-num}-col#{$suffix} {
-      --pf-l-grid__item--GridColumnStart: col-start ($col-num + 1);
+      --pf-l-grid__item--GridColumnStart: col-start calc(#{$col-num} + 1);
     }
   }
 
   // generate row span modfiers
   @for $row-num from 1 through 12 {
     > .pf-m-#{$row-num}-row#{$suffix} {
-      grid-row: span $row-num;
+      grid-row: span #{$row-num};
     }
   }
 }

@@ -1,0 +1,13 @@
+<ul class="pf-c-select__menu{{#if select--modifier}} {{select--modifier}}{{/if}}" 
+  aria-labelledby="{{id}}-label" 
+  {{#unless select--IsExpanded}}hidden{{/unless}}
+  {{#if select--attribute}}
+    {{{select--attribute}}}
+  {{/if}}>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">January</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">February</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">March</button></li>
+  <li><button class="pf-c-select__menu-item" {{#if select--ItemIsSelected}} aria-pressed="true"{{else}} aria-pressed="false"{{/if}}>April</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">May</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">June</button></li>
+</ul>

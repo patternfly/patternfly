@@ -1,6 +1,6 @@
 ## Overview
 
-Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-sr-only-on-lg**
+Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-screen-reader-on-lg**
 
 <!-- ## Overview
 
@@ -19,5 +19,5 @@ For example for buttons: Always add a modifier class to add color to the button.
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-u-sr-only{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
-| `.pf-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-u-sr-only` |
+| `.pf-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
+| `.pf-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-u-screen-reader` and `.pf-screen-reader` |

@@ -1,11 +1,6 @@
-//
-// Icons
-// --------------------------------------------------
-// PatternFly icons https://patternfly.org/styles/icons/
-//
 // Font Awesome 5 icons https://fontawesome.com
-// Solid icons contain only those needed by PatternFly
-//
-
 @import "./assets/fontawesome/fontawesome.scss";
-@import "./assets/fontawesome/fa-solid.scss";
+@import "./assets/fontawesome/solid.scss";
+
+// PFIcons
+@import "./assets/pficon/pficon.css";

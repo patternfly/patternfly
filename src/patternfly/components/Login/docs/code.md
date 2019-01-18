@@ -20,3 +20,4 @@
 | `.pf-c-login__footer` | `<footer>` |  Positions the login footer. |
 | `.pf-c-login__footer .pf-c-list` | `<ul>` |  Creates a list of links in the login footer. |
 | `.pf-c-login__footer-link` | `<a>` |  Creates links in the login footer. |
+| `.pf-m-more` | `.pf-c-login__main-footer-grid-item` | Adds a modifier to the grid item that holds the "more" button to allow for custom positioning. |

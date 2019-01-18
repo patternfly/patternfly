@@ -1,0 +1,28 @@
+<div class="pf-c-select{{#if select--IsExpanded}} pf-m-expanded{{/if}}{{#if select--modifier}} {{select--modifier}}{{/if}}"
+  {{#if select--attribute}}
+    {{{select--attribute}}}
+  {{/if}}>
+  {{!-- hidden spans for a11y --}}
+  {{#if select--IsMultiSelect}}
+    <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
+  {{else}}
+    <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
+  {{/if}}
+      
+  {{!-- create the toggle and all its components --}}
+  {{> select-toggle}}
+
+  {{!-- create the dropdown menu part --}}
+  {{#if select--IsTypeahead}} 
+    {{> select-typeahead}}
+  {{else if select--IsCheckboxSelect}}
+    {{#if select--HasGroups}}
+      {{> select-checkbox-groups}}
+    {{else}}
+      {{> select-checkbox}}
+    {{/if}}
+  {{else}}
+    {{> select-single}}
+  {{/if}}
+
+</div>

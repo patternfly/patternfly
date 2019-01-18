@@ -1,4 +1,4 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
 .pf-c-tooltip {
   // Component variables
@@ -6,15 +6,16 @@
   --pf-c-tooltip--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Content variables
-  --pf-c-tooltip__content--Padding: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tooltip__content--Color: var(--pf-global--Color--light-100);
   --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Arrow variables
   --pf-c-tooltip__arrow--Width: var(--pf-global--arrow--width);
   --pf-c-tooltip__arrow--Height: var(--pf-global--arrow--width);
-  --pf-c-tooltip__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-tooltip__arrow--m-top--Transform: translate(-50%, 50%) rotate(45deg);
   --pf-c-tooltip__arrow--m-right--Transform: translate(-50%, -50%) rotate(45deg);
   --pf-c-tooltip__arrow--m-bottom--Transform: translate(-50%, -50%) rotate(45deg);
@@ -59,7 +60,7 @@
 
 .pf-c-tooltip__content {
   position: relative;
-  padding: var(--pf-c-tooltip__content--Padding);
+  padding: var(--pf-c-tooltip__content--PaddingTop) var(--pf-c-tooltip__content--PaddingRight) var(--pf-c-tooltip__content--PaddingBottom) var(--pf-c-tooltip__content--PaddingLeft);
   color: var(--pf-c-tooltip__content--Color);
   text-align: center;
   background-color: var(--pf-c-tooltip__content--BackgroundColor);
@@ -70,6 +71,6 @@
   width: var(--pf-c-tooltip__arrow--Width);
   height: var(--pf-c-tooltip__arrow--Height);
   pointer-events: none;
-  background-color: var(--pf-c-tooltip__arrow--BackgroundColor);
-  box-shadow: var(--pf-c-tooltip__arrow--BoxShadow);
+  background-color: var(--pf-c-tooltip__content--BackgroundColor);
+  box-shadow: var(--pf-c-tooltip--BoxShadow);
 }

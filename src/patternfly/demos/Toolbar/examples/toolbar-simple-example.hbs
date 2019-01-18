@@ -7,7 +7,8 @@
         {{/dropdown}}
         {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
         {{/form-control}}
-        {{#> button button--modifier="pf-m-tertiary" button--HasSearchIcon="true" button--attribute='id="dropdown-simple-textAreaButton2"'}}
+        {{#> button button--modifier="pf-m-tertiary" button--attribute='id="dropdown-simple-textAreaButton2"'}}
+          {{> button-icon button-icon--type="search"}}
         {{/button}}
       {{/input-group}}
     {{/toolbar-item}}
@@ -17,17 +18,20 @@
       {{/dropdown}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--HasSortAlphaDownIcon="true" button--attribute='aria-label="Sort A-Z"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort A-Z"'}}
+        {{> button-icon button-icon--type="sort-alpha-down"}}
       {{/button}}
     {{/toolbar-item}}
   {{/toolbar-group}}
   {{#> toolbar-group}}
     {{#> toolbar-item toolbar-item--modifier="pf-u-mr-md"}}
-      {{#> button button--modifier="pf-m-plain" button--HasTableIcon="true" button--attribute='aria-label="Table"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Table"'}}
+        {{> button-icon button-icon--type="table"}}
       {{/button}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--HasListIcon="true" button--attribute='aria-label="List"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="List"'}}
+        {{> button-icon button-icon--type="list"}}
       {{/button}}
     {{/toolbar-item}}
     {{#> toolbar-item toolbar-item--modifier="pf-u-mx-md"}}
