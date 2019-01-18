@@ -33,8 +33,12 @@ $pf-data-list--breakpoint--mobile: 380px;
   --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell-cell--PaddingTop: 0;
-  --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-c-data-list__cell--PaddingTop);
+  --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell-cell--md--MarginLeft: var(--pf-global--spacer--xl);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list__cell-cell--md--PaddingTop);
+  }
 
   // Toggle
   --pf-c-data-list__toggle--MarginRight: var(--pf-global--spacer--md);
@@ -173,8 +177,6 @@ $pf-data-list--breakpoint--mobile: 380px;
     padding-top: var(--pf-c-data-list__cell-cell--PaddingTop);
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
-      --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list__cell-cell--md--PaddingTop);
-
       flex: 1;
       order: initial;
       margin-left: var(--pf-c-data-list__cell-cell--md--MarginLeft);
