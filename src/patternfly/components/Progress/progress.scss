@@ -45,7 +45,16 @@
 
   // No Description or Status Modifier
   &.pf-m-nodescription {
-    grid-gap: 0;
+    grid-template-rows: none;
+
+    .pf-c-progress__description,
+    .pf-c-progress__status {
+      display: none;
+    }
+
+    .pf-c-progress__bar {
+      grid-row: 1;
+    }
   }
 
   // an inside-style progress component shows the measure inside the indicator
