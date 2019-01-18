@@ -110,7 +110,9 @@
 
 .pf-c-alert__description {
   grid-area: content;
-  padding: 0 var(--pf-c-alert__description--PaddingRight) var(--pf-c-alert__description--PaddingBottom) var(--pf-c-alert__description--PaddingLeft);
+  padding-right: var(--pf-c-alert__description--PaddingRight);
+  padding-bottom: var(--pf-c-alert__description--PaddingBottom);
+  padding-left: var(--pf-c-alert__description--PaddingLeft);
 }
 
 .pf-c-alert__action {
