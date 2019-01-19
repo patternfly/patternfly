@@ -94,7 +94,7 @@
     }
   }
 
-  .pf-m-expanded > & {
+  .pf-c-options-menu.pf-m-expanded > & {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--expanded--BorderBottomColor);
 
