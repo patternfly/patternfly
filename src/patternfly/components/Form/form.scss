@@ -18,8 +18,9 @@
   --pf-c-form__label-required--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__label-required--Color: var(--pf-global--danger-color--100);
 
-  // action group
+  // actions
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-form__action-group--MarginRight: var(--pf-global--spacer--xl);
 
   // form Group
   --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
@@ -155,4 +156,14 @@
 // Fieldset
 .pf-c-form__fieldset {
   border: none;
+}
+
+.pf-c-form__action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pf-c-form__action-group:not(:last-child) {
+  margin-right: var(--pf-c-form__action-group--MarginRight);
 }

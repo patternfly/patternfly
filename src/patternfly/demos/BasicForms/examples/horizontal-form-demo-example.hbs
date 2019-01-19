@@ -49,31 +49,19 @@
     {{/horizontal-form-group}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
-    {{#> horizontal-form-group}}
-      {{#> toolbar}}
-        {{#> toolbar-group}}
-          {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-primary"}}
-              Submit form
-            {{/button}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{#> toolbar-group}}
-          {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-secondary"}}
-              Cancel
-            {{/button}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{#> toolbar-group}}
-          {{#> toolbar-item}}
-            {{#> check}}
-              {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox"'}}{{/check-input}}
-              {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Remember my password for 30 days{{/check-label}}
-            {{/check}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar}}
+    {{#> horizontal-form-group }}
+      {{#> form-action-row}}
+        {{#> button button--modifier="pf-m-primary pf-c-form__action-group"}}
+          Submit form
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary pf-c-form__action-group"}}
+          Cancel
+        {{/button}}
+        {{#> check check--modifier="pf-c-form__action-group"}}
+          {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox"'}}{{/check-input}}
+          {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Remember my password for 30 days{{/check-label}}
+        {{/check}}
+      {{/form-action-row}}
     {{/horizontal-form-group}}
   {{/form-group}}
 {{/form}}

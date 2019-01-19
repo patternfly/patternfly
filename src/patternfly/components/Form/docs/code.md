@@ -19,6 +19,8 @@
 | `.pf-c-form__helper-text` | `<p>` |  Initiates a form helper text block. |
 | `.pf-c-form__group` | `<div>` |  Wraps form fields `<label>` + `<field>` + `.form-helper-text`. |
 | `.pf-c-form__horizontal-group` | `<div>`| Wraps `.pf-c-form-control` when using `.pf-m-horizontal` on `.pf-c-form` to provide proper spacing for longer labels. |
+| `.pf-c-form__action-row` | `<div>` | Iniates a row of actions. |
+| `.pf-c-form__action-group` | `*` | Indicates that an item or group of items is a group and spaced from adjacent actions. |
 | `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text. |
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
