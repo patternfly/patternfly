@@ -2,21 +2,14 @@
   {{#if dropdown--attribute}}
     {{dropdown--attribute}}
   {{/if}}>
-  <button id="{{id}}-button"
-    class="pf-c-dropdown__toggle{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}"
-    aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
-    {{#if aria-label}} aria-label="{{aria-label}}" {{/if}}>
+  {{#> dropdown-toggle}}
     {{> @partial-block}}
-    {{#if dropdown--HasToggleIcon}}
-    {{> dropdown-toggle-icon}}
-    {{/if}}
-    {{#if dropdown--HasKebabIcon}}
-    {{> kebab-icon}}
-    {{/if}}
-  </button>
+  {{/dropdown-toggle}}
   {{#if dropdown--IsActionMenu}}
     {{> dropdown-menu}}
+  {{else if dropdown--isSplitButton}}
+    {{> dropdown-menu-split-button}}
   {{else}}
-    {{> dropdown-basic}}
+    {{> dropdown-menu-basic}}
   {{/if}}
 </div>

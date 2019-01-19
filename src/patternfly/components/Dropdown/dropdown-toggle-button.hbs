@@ -1,0 +1,11 @@
+<button class="pf-c-dropdown__toggle-button{{#if dropdown-toggle-button--modifier}} {{dropdown-toggle-button--modifier}}{{/if}}"
+  id="{{dropdown-toggle-button--id}}"
+  aria-label="Actions"
+  {{#if dropdown--IsToggleButton}}
+    aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
+  {{/if}}
+  {{#if dropdown-toggle-button--attribute}}
+	  {{{dropdown-toggle-button--attribute}}}
+  {{/if}}>
+  <i class="fas fa-caret-down" aria-hidden="true"></i>
+</button>
