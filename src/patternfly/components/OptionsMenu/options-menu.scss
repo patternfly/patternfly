@@ -32,7 +32,8 @@
   --pf-c-options-menu__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-options-menu__menu--Top: calc(100% + var(--pf-global--spacer--xs));
   --pf-c-options-menu__menu--ZIndex: var(--pf-global--ZIndex--xs);
-
+  --pf-c-options-menu--m-top__menu--Top: 0;
+  --pf-c-options-menu--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
   --pf-c-options-menu__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -148,6 +149,16 @@
   background-clip: padding-box;
   border: var(--pf-c-options-menu__menu--BorderWidth) solid transparent; // this is for high contrast mode in windows
   box-shadow: var(--pf-c-options-menu__menu--BoxShadow);
+
+  &.pf-m-align-right {
+    right: 0;
+  }
+
+  .pf-c-options-menu.pf-m-top & {
+    --pf-c-options-menu__menu--Top: var(--pf-c-options-menu--m-top__menu--Top);
+
+    transform: var(--pf-c-options-menu--m-top__menu--Transform);
+  }
 }
 
 .pf-c-options-menu__menu-item {

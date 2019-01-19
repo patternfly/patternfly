@@ -20,5 +20,7 @@
 | `.pf-c-options-menu__menu-item` | `<li>` |  Initiates the items in the custom options-menu dropdown menu. |
 | `.pf-c-options-menu__menu-item-icon` | `<i>` |  Initiates the icon to indicate selected menu items. |
 | `.pf-c-options-menu__separator` | `<li>` | Initiates a separator in the menu list. |
+| `.pf-m-top` | `.pf-c-options-menu` | Modifies to display the menu above the toggle. |
+| `.pf-m-align-right` | `.pf-c-options-menu__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-expanded` | `.pf-c-options-menu` |  Modifies for the expanded state. |
 | `.pf-m-plain` | `.pf-c-options-menu__toggle` |  Modifies to display the toggle with no border. |
