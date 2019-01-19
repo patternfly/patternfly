@@ -6,11 +6,12 @@ The dropdown menu can contain either links or buttons, depending on the expected
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `aria-expanded="false"` | `.pf-c-dropdown__toggle` |  Indicates that the menu is hidden |
-| `aria-expanded="true"` | `.pf-c-dropdown__toggle` |  Indicates that the menu is visible |
-| `aria-label="Actions"` | `.pf-c-dropdown__toggle` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text** |
-| `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon` | Hides the icon from assistive technologies |
+| `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden |
+| `aria-expanded="true"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is visible |
+| `aria-label="Actions"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text** |
+| `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon`, `<i>` | Hides the icon from assistive technologies |
 | `hidden` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
+| `aria-labelledby="{toggle button id}"` | `.pf-c-dropdown__menu` | Gives the menu an accessible name by referring to the element that toggles the menu |
 | `aria-expanded="true"` | `.pf-c-dropdown__menu` | Indicates that the menu is visible |
 | `role="separator"` | `.pf-c-dropdown__separator` | Indicates that the separator is a separator |
 | `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
