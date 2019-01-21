@@ -17,12 +17,10 @@
   --pf-c-modal-box--lg--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(1120px)});
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
-  // Title
-  --pf-c-modal-box--c-title--MarginBottom: var(--pf-global--spacer--md);
-
   // Body
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
   --pf-c-modal-box--body--MaxHeight: #{pf-size-prem(360px)};
+  --pf-c-modal-box--c-title--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
   --pf-c-modal-box--c-button--Top: calc(var(--pf-c-modal-box--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
@@ -79,11 +77,14 @@
       margin-right: var(--pf-c-modal-box--c-button--sibling--MarginRight); // Create room for the close button
     }
   }
-}
 
-.pf-c-title {
-  flex: 0 0 auto;
-  margin-bottom: var(--pf-c-modal-box--c-title--MarginBottom);
+  .pf-c-title {
+    flex: 0 0 auto;
+
+    + .pf-c-modal-box__body {
+      padding-top: var(--pf-c-modal-box--c-title--body--PaddingTop);
+    }
+  }
 }
 
 // Body
