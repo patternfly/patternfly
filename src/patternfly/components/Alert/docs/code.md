@@ -23,7 +23,7 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class. ** Required**|
 | `.pf-c-alert__icon` | `<div>` |  	Defines the alert icon. ** Required **|
-| `.pf-c-alert__title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Defines the alert title. |
+| `.pf-c-alert__title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Defines the alert title. ** Required **|
 | `.pf-c-alert__description` | `<div>` |  Defines the alert description area. |
 | `.pf-c-alert__action` | `<div>` |  Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
 | `.pf-m-success` | `.pf-c-alert` |  Applies success styling. |
