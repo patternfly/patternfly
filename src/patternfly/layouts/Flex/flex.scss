@@ -21,7 +21,7 @@ $pf-flex-spacer-map: (
     }
   }
 
-  @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+  @media screen and (max-width: $pf-global--breakpoint--mobile) {
     @each $prop, $value in $pf-flex-spacer-map {
       &.pf-m-space-items-#{$prop}-mobile-only > * {
         --pf-l-flex--spacer: #{$value};
@@ -53,7 +53,7 @@ $pf-flex-spacer-map: (
     }
   }
 
-  @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+  @media screen and (max-width: $pf-global--breakpoint--mobile) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-m-spacer-#{$prop}-mobile-only {
         --pf-l-flex--spacer: #{$value};
@@ -143,7 +143,7 @@ $pf-flex-spacer-map: (
   // Breakpoints with responsive modifiers
   $breakpoint-list: (
     (null),
-    ($pf-global--breakpoint--mobile-only, "-mobile-only", "max-width"),
+    ($pf-global--breakpoint--mobile, "-mobile-only", "max-width"),
     ($pf-global--breakpoint--tablet,"-tablet-plus", null),
     ($pf-global--breakpoint--desktop, "-desktop-plus", null),
   );

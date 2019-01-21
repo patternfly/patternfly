@@ -3,12 +3,12 @@
 /* stylelint-disable */
 
 // New breakpoints
-$pf-global--breakpoint--mobile-only: 599px;
+$pf-global--breakpoint--mobile: 599px;
 $pf-global--breakpoint--tablet: 600px;
 $pf-global--breakpoint--desktop: 1200px;
 
 // Add name to breakpoints
-$mobile-only: $pf-global--breakpoint--mobile-only, -mobile-only;
+$mobile-only: $pf-global--breakpoint--mobile, -mobile-only;
 $tablet: $pf-global--breakpoint--tablet, -tablet;
 $desktop: $pf-global--breakpoint--desktop, -desktop;
 
@@ -80,7 +80,7 @@ $desktop: $pf-global--breakpoint--desktop, -desktop;
   --pf-l-flex--spacer--base: var(--pf-global--spacer--md);
   --pf-l-flex--row-gap--base: var(--pf-global--spacer--md);
 
-  // This value is gets reset based on modifier usage
+  // This value gets reset based on modifier usage
   --pf-l-flex--spacer: var(--pf-l-flex--spacer--base);
   --pf-l-flex--row-gap: var(--pf-l-flex--row-gap--base);
 
@@ -141,7 +141,7 @@ $desktop: $pf-global--breakpoint--desktop, -desktop;
   // }
 
   &.pf-m-fill-items-mobile-only > .pf-l-flex {
-    @media screen and (max-width: $pf-global--breakpoint--mobile-only) {
+    @media screen and (max-width: $pf-global--breakpoint--mobile) {
       --pf-l-flex--spacer: 0;
 
       flex: 1 100%;
