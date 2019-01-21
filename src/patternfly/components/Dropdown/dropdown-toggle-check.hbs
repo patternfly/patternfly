@@ -3,5 +3,8 @@
   {{#if dropdown-toggle-check--attribute}}
 	  {{{dropdown-toggle-check--attribute}}}
   {{/if}}>
-  <input type="checkbox" id="{{dropdown-toggle-check--id}}">
+  <input type="checkbox" id="{{dropdown-toggle-check--id}}"
+    {{#if aria-label}}
+      aria-label="{{aria-label}}"
+    {{/if}}>
 </label>
