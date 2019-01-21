@@ -318,6 +318,7 @@
   &:last-of-type,
   &:only-child {
     flex-grow: 1;
+    height: 100%; // to allow children to have height: 100% that occupy the full height
   }
 
   &.pf-m-light {
