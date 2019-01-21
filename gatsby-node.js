@@ -170,7 +170,11 @@ const continueWebpackConfig = ({ stage, actions }) => {
           query: {
             extensions: '.hbs',
             partialResolver(partial, callback) {
-              callback(null, partialsToLocationsMap[partial]);
+              if (partialsToLocationsMap[partial]) {
+                callback(null, partialsToLocationsMap[partial]);
+              } else {
+                throw new Error(`Could not find partial: ${partial}`);
+              }
             },
             helperDirs: path.resolve(__dirname, './build/helpers')
           },
