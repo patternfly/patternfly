@@ -20,7 +20,7 @@
 
   // actions
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-form__action-group--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-form__action-item--MarginRight: var(--pf-global--spacer--xl);
 
   // form Group
   --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
@@ -164,6 +164,6 @@
   align-items: center;
 }
 
-.pf-c-form__action-group:not(:last-child) {
-  margin-right: var(--pf-c-form__action-group--MarginRight);
+.pf-c-form__action-item:not(:last-child) {
+  margin-right: var(--pf-c-form__action-item--MarginRight);
 }
