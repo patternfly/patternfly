@@ -21,9 +21,9 @@
 | `.pf-c-form__horizontal-group` | `<div>`| Wraps `.pf-c-form-control` when using `.pf-m-horizontal` on `.pf-c-form` to provide proper spacing for longer labels. |
 | `.pf-c-form__action-row` | `<div>` | Iniates a row of actions. |
 | `.pf-c-form__action-item` | `*` | Indicates an item in an iaction row that is spaced from adjacent action items. |
+| `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text. |
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
 | `.pf-m-inline` | `.pf-c-form__group` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
-| `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
