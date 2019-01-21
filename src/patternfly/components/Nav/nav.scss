@@ -33,7 +33,6 @@
   // after
   --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingLeft);
   --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--md--PaddingLeft);
-  --pf-c-nav__list-link--after--BackgroundColor: transparent;
   --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
   --pf-c-nav__list-link--active--after--BackgroundColor: var(--pf-global--link--Color);
   --pf-c-nav__list-link--focus--after--BackgroundColor: var(--pf-global--link--Color);
@@ -215,7 +214,6 @@
       width: var(--pf-c-nav__list-link--after--Width);
       height: var(--pf-c-nav__list-link--after--Height);
       content: "";
-      background-color: var(--pf-c-nav__list-link--after--BackgroundColor);
     }
   }
 
@@ -393,8 +391,6 @@
     font-weight: var(--pf-c-nav__horizontal-list-link--FontWeight);
     color: var(--pf-c-nav__horizontal-list-link--Color);
     white-space: nowrap;
-    background-color: var(--pf-c-nav__horizontal-list-link--BackgroundColor);
-
 
     // States
     &.pf-m-hover,
@@ -444,7 +440,6 @@
       width: 100%;
       height: var(--pf-c-nav__horizontal-list-link--after--Height);
       content: "";
-      background-color: var(--pf-c-nav__horizontal-list-link--after--BackgroundColor);
     }
   }
 }
@@ -462,7 +457,6 @@
     font-weight: var(--pf-c-nav__tertiary-list-link--FontWeight);
     color: var(--pf-c-nav__tertiary-list-link--Color);
     white-space: nowrap;
-    background-color: var(--pf-c-nav__tertiary-list-link--BackgroundColor);
 
     // Hover
     &.pf-m-hover,
@@ -512,7 +506,6 @@
       width: 100%;
       height: var(--pf-c-nav__tertiary-list-link--after--Height);
       content: "";
-      background-color: var(--pf-c-nav__tertiary-list-link--after--BackgroundColor);
     }
   }
 }
