@@ -104,10 +104,8 @@
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
 
-  // Modifier - Sort descending
+  // Modifier - Sort ascending/descending
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
-  --pf-c-table__sort--sorted--BorderColor: var(--pf-global--active-color--100);
-  --pf-c-table__sort--sorted--BorderWidth: var(--pf-global--BorderWidth--md);
 
   /* stylelint-enable */
 
@@ -332,26 +330,19 @@
 // Table sort
 // ==================================================================
 .pf-c-table__sort {
-  &.pf-m-ascending,
-  &.pf-m-descending {
-    border-bottom: var(--pf-c-table__sort--sorted--BorderWidth) solid var(--pf-c-table__sort--sorted--BorderColor);
-
+  &.pf-m-selected {
     // set button and indicator color
     button,
     .pf-c-table__sort-indicator {
       color: var(--pf-c-table__sort--sorted--Color);
     }
-
-    &:hover {
-      .pf-c-table__sort-indicator {
-        color: var(--pf-c-table__sort--sorted--Color);
-      }
-    }
   }
 
-  &:hover {
-    .pf-c-table__sort-indicator {
-      color: var(--pf-c-table__sort-indicator--hover--Color);
+  &:not(.pf-m-selected) {
+    &:hover {
+      .pf-c-table__sort-indicator {
+        color: var(--pf-c-table__sort-indicator--hover--Color);
+      }
     }
   }
 }
