@@ -1,81 +1,79 @@
-{{#> horizontal-form-demo}}
-  {{#> form form--modifier="pf-m-horizontal"}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute='for="horizontal-form-name"' required="true"}}Name{{/form-label}}
-      {{#> horizontal-form-group}}
-        {{#> form-control controlType="input" input="true" form-control--attribute='required type="text" id="horizontal-form-name" name="horizontal-form-name" aria-describedby="horizontal-form-name-helper2"'}}
-        {{/form-control}}
-        {{#> form-helper-text form-helper-text--attribute='id="horizontal-form-name-helper2" aria-live="polite"'}}Please provide your full name{{/form-helper-text}}
-      {{/horizontal-form-group}}
-    {{/form-group}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute='for="horizontal-form-email"'}}Email{{/form-label}}
-      {{#> horizontal-form-group}}
-        {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="horizontal-form-email" name="horizontal-form-email"'}}
-        {{/form-control}}
-      {{/horizontal-form-group}}
-    {{/form-group}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute='for="horizontal-form-title"'}}Your title{{/form-label}}
-      {{#> horizontal-form-group}}
-        {{#> form-control controlType="select" form-control--attribute='id="horizontal-form-title" name="horizontal-form-title"'}}
-          <option value="" selected>Please choose</option>
-          <option value="Mr">Mr</option>
-          <option value="Miss">Miss</option>
-          <option value="Mrs">Mrs</option>
-          <option value="Ms">Ms</option>
-          <option value="Dr">Dr</option>
-          <option value="Other">Other</option>
-        {{/form-control}}
-      {{/horizontal-form-group}}
-    {{/form-group}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute='for="horizontal-form-exp"'}}Your experience{{/form-label}}
-      {{#> horizontal-form-group}}
-        {{#> form-control controlType="textarea" form-control--attribute='name="horizontal-form-exp" id="horizontal-form-exp"'}}
-        {{/form-control}}
-      {{/horizontal-form-group}}
-    {{/form-group}}
-    {{#> form-group}}
-      {{#> form-label}}Can we follow up via email?{{/form-label}}
-      {{#> horizontal-form-group}}
-        {{#> check}}
-          {{#> check-input check-input--attribute='type="radio" id="horizontal-radio1" name="horizontal-radios"'}}{{/check-input}}
-          {{#> check-label check-label--attribute='for="horizontal-radio1"'}}Yes{{/check-label}}
-        {{/check}}
-        {{#> check}}
-          {{#> check-input check-input--attribute='type="radio" id="horizontal-radio2" name="horizontal-radios"'}}{{/check-input}}
-          {{#> check-label check-label--attribute='for="horizontal-radio2"'}}No{{/check-label}}
-        {{/check}}
-      {{/horizontal-form-group}}
-    {{/form-group}}
-    {{#> form-group form-group--modifier="pf-m-action"}}
-      {{#> horizontal-form-group}}
-        {{#> toolbar}}
-          {{#> toolbar-group}}
-            {{#> toolbar-item}}
-              {{#> button button--modifier="pf-m-primary"}}
-                Submit form
-              {{/button}}
-            {{/toolbar-item}}
-          {{/toolbar-group}}
-          {{#> toolbar-group}}
-            {{#> toolbar-item}}
-              {{#> button button--modifier="pf-m-secondary"}}
-                Cancel
-              {{/button}}
-            {{/toolbar-item}}
-          {{/toolbar-group}}
-          {{#> toolbar-group}}
-            {{#> toolbar-item}}
-              {{#> check}}
-                {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox"'}}{{/check-input}}
-                {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Remember my password for 30 days{{/check-label}}
-              {{/check}}
-            {{/toolbar-item}}
-          {{/toolbar-group}}
-        {{/toolbar}}
-      {{/horizontal-form-group}}
-    {{/form-group}}
-  {{/form}}
-{{/horizontal-form-demo}}
+{{#> form form--modifier="pf-m-horizontal"}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute='for="horizontal-form-name"' required="true"}}Name{{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="input" input="true" form-control--attribute='required type="text" id="horizontal-form-name" name="horizontal-form-name" aria-describedby="horizontal-form-name-helper2"'}}
+      {{/form-control}}
+      {{#> form-helper-text form-helper-text--attribute='id="horizontal-form-name-helper2" aria-live="polite"'}}Please provide your full name{{/form-helper-text}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute='for="horizontal-form-email"'}}Email{{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="horizontal-form-email" name="horizontal-form-email"'}}
+      {{/form-control}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute='for="horizontal-form-title"'}}Your title{{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="select" form-control--attribute='id="horizontal-form-title" name="horizontal-form-title"'}}
+        <option value="" selected>Please choose</option>
+        <option value="Mr">Mr</option>
+        <option value="Miss">Miss</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Ms">Ms</option>
+        <option value="Dr">Dr</option>
+        <option value="Other">Other</option>
+      {{/form-control}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute='for="horizontal-form-exp"'}}Your experience{{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="textarea" form-control--attribute='name="horizontal-form-exp" id="horizontal-form-exp"'}}
+      {{/form-control}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label}}Can we follow up via email?{{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> check}}
+        {{#> check-input check-input--attribute='type="radio" id="horizontal-radio1" name="horizontal-radios"'}}{{/check-input}}
+        {{#> check-label check-label--attribute='for="horizontal-radio1"'}}Yes{{/check-label}}
+      {{/check}}
+      {{#> check}}
+        {{#> check-input check-input--attribute='type="radio" id="horizontal-radio2" name="horizontal-radios"'}}{{/check-input}}
+        {{#> check-label check-label--attribute='for="horizontal-radio2"'}}No{{/check-label}}
+      {{/check}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+  {{#> form-group form-group--modifier="pf-m-action"}}
+    {{#> horizontal-form-group}}
+      {{#> toolbar}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-primary"}}
+              Submit form
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-secondary"}}
+              Cancel
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{#> toolbar-group}}
+          {{#> toolbar-item}}
+            {{#> check}}
+              {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Remember my password for 30 days{{/check-label}}
+            {{/check}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/toolbar}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+{{/form}}
