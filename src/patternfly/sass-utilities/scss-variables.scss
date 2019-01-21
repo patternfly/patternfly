@@ -54,6 +54,7 @@ $pf-global--Color--dark-200:      $pf-color-black-600 !default;
 $pf-global--active-color--100:   $pf-color-blue-400 !default;
 $pf-global--active-color--200:   $pf-color-blue-100 !default;
 $pf-global--active-color--300:   $pf-color-blue-300 !default;
+$pf-global--active-color--400:   $pf-color-blue-200 !default;
 
 // disabled
 $pf-global--disabled-color--100: $pf-color-black-600 !default;
@@ -190,11 +191,14 @@ $pf-global--LineHeight--sm: 1.3 !default;
 $pf-global--LineHeight--md: 1.5 !default;
 
 // Links
-$pf-global--link--FontWeight:             $pf-global--FontWeight--semi-bold !default;
 $pf-global--link--Color:                  $pf-global--primary-color--100 !default;
+$pf-global--link--Color--hover:           $pf-global--primary-color--200 !default;
+$pf-global--link--Color--light:           $pf-global--active-color--300 !default;
+$pf-global--link--Color--light--hover:    $pf-global--active-color--400 !default;
+$pf-global--link--Color--dark:            $pf-global--primary-color--100 !default;
+$pf-global--link--Color--dark--hover:     $pf-global--primary-color--200 !default;
+$pf-global--link--FontWeight:             $pf-global--FontWeight--semi-bold !default;
 $pf-global--link--TextDecoration:         none !default;
-$pf-global--link--Color--hover:           darken($pf-global--primary-color--100, 15%) !default;
-$pf-global--link--Color--light-hover:     darken($pf-global--primary-color--light-100, 15%) !default;
 $pf-global--link--TextDecoration--hover:  underline !default;
 
 // List

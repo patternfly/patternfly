@@ -4,12 +4,6 @@ An alert group that includes the `.pf-m-toast` modifier becomes a Toast Alert Gr
 
 Every Toast alert must include a close button to dismiss the alert.
 
-## Accessibility
-
-| Attribute | Applied To | Outcome |
-| -- | -- | -- |
-| `role="alert"` | `.pf-c-alert__body` |  Communicates contents of the alert message to the user. **Required** |
-
 ### Modifiers
 
 | Class | Applied To | Outcome |

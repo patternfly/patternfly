@@ -41,7 +41,7 @@ export default () => {
       <Example heading="Popover Left" handlebars={PopoverLeftExampleRaw}>
         {popoverLeftExample}
       </Example>
-      <Example heading="Popover No Header" handlebars={PopoverNoHeaderExampleRaw}>
+      <Example heading="Popover No Header/Footer" handlebars={PopoverNoHeaderExampleRaw}>
         {popoverNoHeaderExample}
       </Example>
     </Documentation>

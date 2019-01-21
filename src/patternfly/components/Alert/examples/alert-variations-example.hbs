@@ -1,43 +1,41 @@
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
-  {{#> alert-icon alert-icon--success="true"}}
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
-  {{#> alert-body alert-body--attribute='role="alert"'}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      {{> button-icon button-icon--type="times"}}
-    {{/button}}
     {{#> alert-title}}
-      {{#> screen-reader}}Success:{{/screen-reader}}
-      Success notification title
+      {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success Alert Title
     {{/alert-title}}
     {{#> alert-description}}
-			Success notification description. <a href="#">This is a link.</a>
+			Success alert description. <a href="#">This is a link.</a>
 		{{/alert-description}}
-	{{/alert-body}}
-{{/alert}}
-<br>
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
-  {{#> alert-icon alert-icon--success="true"}}
-  {{/alert-icon}}
-  {{#> alert-body alert-body--attribute='role="alert"'}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Success Alert: Success Alert Title"'}}
       {{> button-icon button-icon--type="times"}}
     {{/button}}
-    {{#> alert-title}}
-      {{#> screen-reader}}Success:{{/screen-reader}}
-      Success notification title
-    {{/alert-title}}
-  {{/alert-body}}
+  {{/alert-action}}
 {{/alert}}
 <br>
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
-  {{#> alert-icon alert-icon--success="true"}}
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
-  {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
-      {{#> screen-reader}}Success:{{/screen-reader}}
-        Success notification title
+      {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success Alert Title
     {{/alert-title}}
-  {{/alert-body}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Success Alert: Success Alert Title"'}}
+      {{> button-icon button-icon--type="times"}}
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+    {{#> alert-title}}
+      {{#> screen-reader}}Success alert:{{/screen-reader}}
+        Success Alert Title
+    {{/alert-title}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-link"}}
       Action Button
@@ -45,13 +43,11 @@
   {{/alert-action}}
 {{/alert}}
 <br>
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Notification"'}}
-  {{#> alert-icon alert-icon--success="true"}}
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
-  {{#> alert-body alert-body--attribute='role="alert"'}}
     {{#> alert-title}}
-      {{#> screen-reader}}Success:{{/screen-reader}}
-        Success notification title
+      {{#> screen-reader}}Success alert:{{/screen-reader}}
+        Success Alert Title
     {{/alert-title}}
-  {{/alert-body}}
 {{/alert}}
