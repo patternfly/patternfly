@@ -80,6 +80,9 @@
 
   .pf-c-title {
     flex: 0 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     + .pf-c-modal-box__body {
       padding-top: var(--pf-c-modal-box--c-title--body--PaddingTop);
