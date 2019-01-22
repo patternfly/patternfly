@@ -31,7 +31,7 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   // focus
   --pf-c-form-control--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-form-control--focus--PaddingBottom: calc(var(--pf-c-form-control--PaddingBottom) - calc(var(--pf-c-form-control--focus--BorderBottomWidth) - var(--pf-c-form-control--BorderWidth)));
+  --pf-c-form-control--focus--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-c-form-control--focus--BorderBottomWidth));
   --pf-c-form-control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
   // input placeholder style
