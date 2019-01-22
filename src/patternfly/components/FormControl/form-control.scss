@@ -93,9 +93,9 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     &:hover,
     &.pf-m-focus,
     &:focus {
-      --pf-c-form-control--PaddingBottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
       --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
 
+      padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
       background-color: var(--pf-c-form-control--readonly--focus--BackgroundColor);
       border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
     }
@@ -119,9 +119,9 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   &.pf-m-focus,
   &:focus {
-    --pf-c-form-control--PaddingBottom: var(--pf-c-form-control--focus--PaddingBottom);
     --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--focus--BorderBottomColor);
 
+    padding-bottom: var(--pf-c-form-control--focus--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     border-bottom-width: var(--pf-c-form-control--focus--BorderBottomWidth);
   }
 
@@ -135,9 +135,9 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   &[aria-invalid="true"] {
     --pf-c-form-control--PaddingRight: var(--pf-c-form-control--invalid--PaddingRight);
-    --pf-c-form-control--PaddingBottom: var(--pf-c-form-control--invalid--PaddingBottom);
     --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--invalid--BorderBottomColor);
 
+    padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     background: var(--pf-c-form-control--invalid--Background);
     border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
   }
