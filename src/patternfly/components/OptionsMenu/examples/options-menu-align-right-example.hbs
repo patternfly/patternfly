@@ -1,6 +1,9 @@
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-multiple-example" options-menu--label-text="Choose sort methods"  options-menu--modifier="pf-m-align-right"}}
-  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by date, descending"'}}
-    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+{{#> options-menu options-menu--modifier="pf-m-align-right" options-menu--IsExpanded="true" id="options-menu-single-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div"}}
+    <span class="pf-c-options-menu__toggle-text">
+      1-10 of 25 Items
+    </span>
+    {{> options-menu-toggle-button aria-label="Select"}}
   {{/options-menu-toggle}}
-  {{> options-menu-multiple}}
+  {{> options-menu-single}}
 {{/options-menu}}

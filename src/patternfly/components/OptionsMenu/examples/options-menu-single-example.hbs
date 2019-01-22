@@ -1,19 +1,19 @@
-{{#> options-menu id="options-menu-single-example" options-menu--label-text="Choose number of items per page"}}
-  {{#> options-menu-toggle}}
+{{#> options-menu id="options-menu-single-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div"}}
     <span class="pf-c-options-menu__toggle-text">
       1-10 of 25 Items
     </span>
-    <i class="fas fa-caret-down pf-c-options-menu__toggle-icon"></i>
+    {{> options-menu-toggle-button aria-label="Select"}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-single-example" options-menu--label-text="Choose number of items per page"}}
-  {{#> options-menu-toggle}}
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-single-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div"}}
     <span class="pf-c-options-menu__toggle-text">
       1-10 of 25 Items
     </span>
-    <i class="fas fa-caret-down pf-c-options-menu__toggle-icon"></i>
+    {{> options-menu-toggle-button aria-label="Select"}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}

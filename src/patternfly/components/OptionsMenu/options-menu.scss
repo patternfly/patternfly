@@ -24,6 +24,12 @@
   // Toggle Arrow
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
+  // Text toggle button
+  --pf-c-options-menu__toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-options-menu__toggle-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-options-menu__toggle-button--PaddingLeft: var(--pf-global--spacer--sm);
+
   // Menu
   --pf-c-options-menu__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-options-menu__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -65,7 +71,7 @@
   justify-content: center;
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
-  padding: var(--pf-c-options-menu__toggle--PaddingTop) var(--pf-c-options-menu__toggle--PaddingRight) var(--pf-c-options-menu__toggle--PaddingBottom) var(--pf-c-options-menu__toggle--PaddingLeft);
+  padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
   border: none;
 
   &::before {
@@ -74,24 +80,31 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: -1;
     content: "";
     border: var(--pf-c-options-menu__toggle--BorderWidth) solid;
     border-color: var(--pf-c-options-menu__toggle--BorderTopColor) var(--pf-c-options-menu__toggle--BorderRightColor) var(--pf-c-options-menu__toggle--BorderBottomColor) var(--pf-c-options-menu__toggle--BorderLeftColor);
   }
 
-  &:hover,
-  &.pf-m-hover {
-    &::before {
-      --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--hover--BorderBottomColor);
+  &:not(.pf-m-text) {
+    padding-top: var(--pf-c-options-menu__toggle--PaddingTop);
+    padding-right: var(--pf-c-options-menu__toggle--PaddingRight);
+    padding-bottom: var(--pf-c-options-menu__toggle--PaddingBottom);
+
+    &:hover,
+    &.pf-m-hover {
+      &::before {
+        --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--hover--BorderBottomColor);
+      }
     }
-  }
 
-  &:active,
-  &.pf-m-active {
-    &::before {
-      --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--active--BorderBottomColor);
+    &:active,
+    &.pf-m-active {
+      &::before {
+        --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--active--BorderBottomColor);
 
-      border-bottom-width: var(--pf-c-options-menu__toggle--active--BorderBottomWidth);
+        border-bottom-width: var(--pf-c-options-menu__toggle--active--BorderBottomWidth);
+      }
     }
   }
 
@@ -122,6 +135,11 @@
       }
     }
   }
+}
+
+.pf-c-options-menu__toggle-button {
+  padding: var(--pf-c-options-menu__toggle-button--PaddingTop) var(--pf-c-options-menu__toggle-button--PaddingRight) var(--pf-c-options-menu__toggle-button--PaddingBottom) var(--pf-c-options-menu__toggle-button--PaddingLeft);
+  border: 0;
 }
 
 .pf-c-options-menu__toggle-text {
@@ -173,16 +191,13 @@
   &.pf-m-hover,
   &:focus,
   &.pf-m-focus {
-    --pf-c-options-menu__menu-item--Color: var(--pf-c-options-menu__menu-item--Color);
-
     text-decoration: none;
     background-color: var(--pf-c-options-menu__menu-item--hover--BackgroundColor);
   }
 
   &:disabled,
   &.pf-m-disabled {
-    --pf-c-options-menu__menu-item--Color: var(--pf-c-options-menu__menu-item--disabled--Color);
-
+    color: var(--pf-c-options-menu__menu-item--disabled--Color);
     pointer-events: none;
     background-color: var(--pf-c-options-menu__menu-item--disabled--BackgroundColor);
   }

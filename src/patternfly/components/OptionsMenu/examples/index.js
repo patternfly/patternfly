@@ -29,11 +29,7 @@ export default () => {
       >
         {optionsMenuSingleExample}
       </Example>
-      <Example
-        heading="Options Menu - Multiple options"
-        className="is-expanded-dropdown"
-        handlebars={OptionsMenuMultipleExampleRaw}
-      >
+      <Example heading="Options Menu - Multiple options" minHeight="20em" handlebars={OptionsMenuMultipleExampleRaw}>
         {optionsMenuMultipleExample}
       </Example>
       <Example heading="Options Menu - Top" className="is-expanded-top" handlebars={OptionsMenuTopExampleRaw}>
@@ -41,7 +37,7 @@ export default () => {
       </Example>
       <Example
         heading="Options Menu - Align Right"
-        className="is-expanded-dropdown is-align-right"
+        className="is-align-right is-expanded-dropdown"
         handlebars={OptionsMenuAlignRightExampleRaw}
       >
         {optionsMenuAlignRightExample}
