@@ -76,7 +76,7 @@
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
-  --pf-c-page__sidebar--m-expanded--Transform: translate3d(-100%, 0, 0);
+  --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
