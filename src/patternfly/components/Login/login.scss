@@ -32,44 +32,66 @@
 
   // main header
   --pf-c-login__main-header--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-header--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-header--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-login__main-header--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-login__main-header--PaddingLeft: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-header--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-login__main-header--md--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-header--md--PaddingLeft: var(--pf-global--spacer--2xl);
   --pf-c-login__main-header--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-login__main-header--RowGap: var(--pf-global--spacer--sm);
 
-  // main body
-  --pf-c-login__main-body--PaddingRight: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-body--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-login__main-body--c-form__group--m-action--GridGap: var(--pf-global--spacer--lg);
-  --pf-c-login__main-body--c-form__group--m-action--c-button--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-login__main-body--c-form__group--m-action--c-button--PaddingLeft: var(--pf-global--spacer--xl);
-
-  // main footer
-  --pf-c-login__main-footer--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-login__main-footer--PaddingRight: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-footer--PaddingBottom: var(--pf-global--spacer--3xl);
-  --pf-c-login__main-footer--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-footer--c-title--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-login__main-footer-link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-login__main-footer-link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-login__main-footer-link--GridGap: var(--pf-global--spacer--sm);
-  --pf-c-login__main-footer-link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-login__main-footer-link--hover--Color: var(--pf-global--Color--dark-200);
-  --pf-c-login__main-footer-grid--GridGap: var(--pf-global--gutter);
-  --pf-c-login__main-footer-grid--GridTemplateColumns: repeat(5, 1fr);
-  --pf-c-login__main-footer-grid--md--GridTemplateColumns: repeat(auto-fit, minmax(100px, 1fr));
+  // --pf-c-login__main-header-c-title--md--MarginBottom: var(--pf-global--spacer--lg);
 
   @media (min-width: $pf-global--breakpoint--md) {
-    --pf-c-login__main-footer-grid--GridTemplateColumns: var(--pf-c-login__main-footer-grid--md--GridTemplateColumns);
+    --pf-c-login__main-header--PaddingRight: var(--pf-c-login__main-header--md--PaddingRight);
+    --pf-c-login__main-header--PaddingLeft: var(--pf-c-login__main-header--md--PaddingLeft);
   }
+
+  // main body
+  // --pf-c-login__main-body--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--md--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-body--md--PaddingLeft: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-body-c-form-helper-text-svg--Width: var(--pf-global--icon--FontSize--md);
+  --pf-c-login__main-body-c-form-helper-text-svg--Height: var(--pf-global--icon--FontSize--md);
+  --pf-c-login__main-body-c-form-helper-text-svg--MarginRight: var(--pf-global--spacer--sm);
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    --pf-c-login__main-body--PaddingRight: var(--pf-c-login__main-body--md--PaddingRight);
+    --pf-c-login__main-body--PaddingLeft: var(--pf-c-login__main-body--md--PaddingLeft);
+  }
+
+  // main footer
+  --pf-c-login__main-footer--PaddingBottom: var(--pf-global--spacer--3xl);
+  --pf-c-login__main-footer--c-title--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-links--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-login__main-footer-links--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-login__main-footer-links--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-login__main-footer-links--PaddingLeft: var(--pf-global--spacer--3xl);
+  --pf-c-login__main-footer-links-item--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-login__main-footer-links-item-link-svg--Fill: var(--pf-global--icon--Color--light);
+  --pf-c-login__main-footer-links-item-link-svg--Width: #{pf-size-prem(25px)};
+  --pf-c-login__main-footer-links-item-link-svg--Height: #{pf-size-prem(25px)};
+  --pf-c-login__main-footer-links-item-link-svg--hover--Fill: var(--pf-global--icon--Color--dark);
+  --pf-c-login__main-footer-band--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-login__main-footer-band--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-band--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-login__main-footer-band--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-band--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-login__main-footer-band--Color: var(--pf-global--Color--300);
+  --pf-c-login__main-footer-band-item: var(--pf-global--spacer--md);
 
   // footer
   --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-login__footer-link--Color: var(--pf-global--Color--light-100);
+  --pf-c-login__footer-c-list--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-login__footer-c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__footer-c-list--PaddingTop: var(--pf-c-login__footer-c-list--xl--PaddingTop);
+  }
 
   display: flex;
   justify-content: center;
@@ -109,7 +131,6 @@
 
 .pf-c-login__header {
   grid-area: header;
-  margin-bottom: var(--pf-c-login__header--MarginBottom);
 
   @media (max-width: $pf-global--breakpoint--sm) {
     padding-right: var(--pf-c-login__header--sm--PaddingRight);
@@ -150,62 +171,57 @@
 
 .pf-c-login__main-header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   column-gap: var(--pf-c-login__main-header--ColumnGap);
   row-gap: var(--pf-c-login__main-header--RowGap);
   align-items: center;
   padding: var(--pf-c-login__main-header--PaddingTop) var(--pf-c-login__main-header--PaddingRight) var(--pf-c-login__main-header--PaddingBottom) var(--pf-c-login__main-header--PaddingLeft);
 
   .pf-c-title {
-    grid-column: -1 / 1;
+    @media (max-width: $pf-global--breakpoint--md) {
+      grid-column: -1 / 1;
+    }
   }
 }
 
 .pf-c-login__main-body {
-  padding: var(--pf-c-login__main-body--PaddingTop) var(--pf-c-login__main-body--PaddingRight) var(--pf-c-login__main-body--PaddingBottom) var(--pf-c-login__main-body--PaddingLeft);
+  padding-right: var(--pf-c-login__main-body--PaddingRight);
+  padding-bottom: var(--pf-c-login__main-body--PaddingBottom);
+  padding-left: var(--pf-c-login__main-body--PaddingLeft);
 
-  .pf-c-form__group.pf-m-action {
-    display: grid;
-    justify-items: center;
-    grid-gap: var(--pf-c-login__main-body--c-form__group--m-action--GridGap);
+  // the form helper text is always present but visually hidden to provide proper spacing if the error is shown.
+  .pf-c-form__helper-text {
+    display: flex;
+    align-items: center;
 
-    @media (min-width: $pf-global--breakpoint--md) {
-      grid-template-columns: auto 1fr;
-      justify-items: start;
-    }
-
-    .pf-c-button {
-      padding-right: var(--pf-c-login__main-body--c-form__group--m-action--c-button--PaddingRight);
-      padding-left: var(--pf-c-login__main-body--c-form__group--m-action--c-button--PaddingLeft);
-      justify-self: stretch;
+    svg {
+      width: var(--pf-c-login__main-body-c-form-helper-text-svg--Width);
+      height: var(--pf-c-login__main-body-c-form-helper-text-svg--Height);
+      margin-right: var(--pf-c-login__main-body-c-form-helper-text-svg--MarginRight);
     }
   }
 }
 
 .pf-c-login__main-footer {
-  padding: var(--pf-c-login__main-footer--PaddingTop) var(--pf-c-login__main-footer--PaddingRight) var(--pf-c-login__main-footer--PaddingBottom) var(--pf-c-login__main-footer--PaddingLeft);
+  display: flex;
+  flex-wrap: wrap;
 
   .pf-c-title {
     margin-bottom: var(--pf-c-login__main-footer--c-title--MarginBottom);
     text-align: center;
+  }
 
-    @media (min-width: $pf-global--breakpoint--md) {
-      text-align: left;
-    }
+  > * {
+    flex-basis: 100%;
   }
 }
 
-.pf-c-login__main-footer-link {
-  display: grid;
-  grid-template-columns: auto 1fr;
+.pf-c-login__main-footer-links {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding-top: var(--pf-c-login__main-footer-link--PaddingTop);
-  padding-bottom: var(--pf-c-login__main-footer-link--PaddingBottom);
-  color: var(--pf-c-login__main-footer-link--Color);
-
-  @media (min-width: $pf-global--breakpoint--md) {
-    grid-gap: var(--pf-c-login__main-footer-link--GridGap);
-  }
+  justify-content: center;
+  padding: var(--pf-c-login__main-footer-links--PaddingTop) var(--pf-c-login__main-footer-links--PaddingRight) var(--pf-c-login__main-footer-links--PaddingBottom) var(--pf-c-login__main-footer-links--PaddingLeft);
 
   &:hover,
   &.pf-m-hover {
@@ -213,14 +229,36 @@
   }
 }
 
-.pf-c-login__main-footer-link-text {
-  // styles the text to be hidden from the screen but read by a screen reader.
-  @media (max-width: $pf-global--breakpoint--md) {
-    position: fixed;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+.pf-c-login__main-footer-links-item {
+  &:not(:last-child) {
+    padding-right: var(--pf-c-login__main-footer-links-item--PaddingRight);
+  }
+}
+
+.pf-c-login__main-footer-links-item-link {
+  svg {
+    fill: var(--pf-c-login__main-footer-links-item-link-svg--Fill);
+    width: var(--pf-c-login__main-footer-links-item-link-svg--Width);
+    height: var(--pf-c-login__main-footer-links-item-link-svg--Height);
+  }
+
+  &:hover {
+    svg {
+      fill: var(--pf-c-login__main-footer-links-item-link-svg--hover--Fill);
+    }
+  }
+}
+
+.pf-c-login__main-footer-band {
+  padding: var(--pf-c-login__main-footer-band--PaddingTop) var(--pf-c-login__main-footer-band--PaddingRight) var(--pf-c-login__main-footer-band--PaddingBottom) var(--pf-c-login__main-footer-band--PaddingLeft);
+  color: var(--pf-c-login__main-footer-band--Color);
+  text-align: center;
+  background-color: var(--pf-c-login__main-footer-band--BackgroundColor);
+}
+
+.pf-c-login__main-footer-band-item {
+  &:first-child {
+    padding-bottom: var(--pf-c-login__main-footer-band-item);
   }
 }
 
@@ -231,38 +269,10 @@
     padding-right: var(--pf-c-login__footer--sm--PaddingRight);
     padding-left: var(--pf-c-login__footer--sm--PaddingLeft);
   }
-}
 
-.pf-c-login__main-footer-grid {
-  display: grid;
-  grid-gap: var(--pf-c-login__main-footer-grid--GridGap);
-  grid-template-columns: var(--pf-c-login__main-footer-grid--GridTemplateColumns);
-
-  @media (max-width: $pf-global--breakpoint--md) {
-    justify-items: center;
-  }
-
-  @media (min-width: $pf-global--breakpoint--md) {
-    .pf-c-login__main-footer-grid-item {
-      .pf-c-button {
-        padding-left: 0;
-      }
+  .pf-c-list {
+    &:not(:only-child) { // paragraph text might not always be included.
+      padding-top: var(--pf-c-login__footer-c-list--PaddingTop);
     }
-  }
-}
-
-.pf-c-login__main-footer-grid-item {
-  &.pf-m-more {
-    @media (max-width: $pf-global--breakpoint--md) {
-      grid-column: 1 / -1;
-    }
-  }
-}
-
-.pf-c-login__footer-link {
-  &,
-  &:hover,
-  &.pf-m-hover {
-    color: var(--pf-c-login__footer-link--Color);
   }
 }
