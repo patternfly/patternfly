@@ -1,0 +1,23 @@
+{{#> context-selector}}
+{{/context-selector}}
+
+{{#> context-selector context-selector--IsExpanded="true"}}
+  {{#> context-selector-toggle}}
+    {{#> context-selector-toggle-text}}
+      My Project
+    {{/context-selector-toggle-text}}
+    {{#> context-selector-toggle-icon}}
+    {{/context-selector-toggle-icon}}
+  {{/context-selector-toggle}}
+  {{#> context-selector-menu}}
+    {{#> context-selector-menu-input}}
+    {{/context-selector-menu-input}}
+    {{#> context-selector-menu-menu}}
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          My Project
+        {{/context-selector-menu-menu-item}}
+      </li>
+    {{/context-selector-menu-menu}}
+  {{/context-selector-menu}}
+{{/context-selector}}
