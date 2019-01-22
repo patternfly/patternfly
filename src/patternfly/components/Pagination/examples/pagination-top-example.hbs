@@ -1,0 +1,52 @@
+{{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+    <div class="pf-c-pagination__current">
+      <b>1 - 10</b> of <b>17</b> items
+    </div>
+    <div class="pf-c-dropdown">
+    <span id="pagination-select-label" hidden>Items per page.</span>
+    <button id="pagination-select-button" class="pf-c-dropdown__toggle pf-m-plain" aria-labelledby="pagination-select-label pagination-select-button" aria-expanded="false">
+      <span class="pf-c-dropdown__toggle-text">
+        <b>1 - 10</b> of <b>17</b> items
+      </span>
+      <i class="fas fa-caret-down pf-c-dropdown__toggle-icon" aria-hidden="true"></i>
+    </button>
+    <ul class="pf-c-dropdown__menu" aria-labelledby="pagination-select-label" hidden>
+      <li>
+        <button class="pf-c-dropdown__menu-item" aria-pressed="false">
+          <b>5</b> <span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+      <li>
+        <button class="pf-c-dropdown__menu-item" aria-pressed="true">
+          <b>10</b> <span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+      <li>
+        <button class="pf-c-dropdown__menu-item" aria-pressed="false">
+          <b>20</b> <span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{/button}}
+
+    {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 9"'}}
+      <input class="pf-c-form-control" aria-label="Current page" type="number" min="1" max="9" size="2" value="1">
+      <span aria-hidden="true">of 9</span>
+    {{/pagination-nav-page-select}}
+
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}

@@ -1,29 +1,29 @@
-@import "../../patternfly-utilities";
+@import "../../patternfly-imports";
 
 .pf-c-pagination {
-
-  /* stylelint-disable */
-
   // Base
   --pf-c-pagination--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-pagination--item--MarginX: var(--pf-global--spacer--lg);
+  --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
 
-  // Nav page
-  --pf-c-pagination__nav-page--PaddingX: var(--pf-global--spacer--md);
-  --pf-c-pagination__nav-page--item--MarginX: var(--pf-global--spacer--xs);
+  // Dropdown
+  --pf-c-pagination--c-dropdown__toggle--Color: var(--pf-global--Color--100);
+  --pf-c-pagination__menu-text--Color: var(--pf-global--Color--200);
 
-  // Complementary text
-  --pf-c-pagination__complementary-text--Color: var(--pf-global--Color--200);
+  // Nav
+  --pf-c-pagination__nav--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-pagination__nav--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-pagination__nav--c-button--FontSize: var(--pf-global--FontSize--md);
 
-  // Buttons
-  --pf-c-pagination--c-button--PaddingX: var(--pf-global--spacer--sm);
-  --pf-c-pagination--c-button--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-pagination--c-form-control--MaxWidth: #{pf-size-prem(40px)};
-  /* stylelint-enable */
+  // Nav page select
+  --pf-c-pagination__nav-page-select--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-pagination__nav-page-select--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-pagination__nav-page-select--child--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-pagination__nav-page-select--c-form-control--MaxWidth: #{pf-size-prem(48px)}; // custom value to show 2 numbers
 
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   font-size: var(--pf-c-pagination--FontSize);
 
   * {
@@ -31,8 +31,26 @@
     white-space: nowrap;
   }
 
-  > *:not(:last-child) {
-    margin-right: var(--pf-c-pagination--item--MarginX);
+  > *:not(:last-child):not(.pf-c-pagination__current) {
+    margin-right: var(--pf-c-pagination--child--MarginRight);
+  }
+
+  // Top pagination
+  &:not(.pf-m-footer) {
+    justify-content: flex-end;
+
+    .pf-c-dropdown,
+    .pf-c-pagination__nav {
+      display: none;
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        display: flex;
+      }
+    }
+  }
+
+  .pf-c-dropdown__toggle {
+    color: var(--pf-c-pagination--c-dropdown__toggle--Color);
   }
 }
 
@@ -40,12 +58,11 @@
 .pf-c-pagination__nav {
   display: inline-flex;
   justify-content: flex-end;
-  min-height: var(--pf-c-pagination__nav--MinHeight);
 
   .pf-c-button {
-    --pf-c-button--PaddingX: var(--pf-c-pagination--c-button--PaddingX);
-
-    font-size: var(--pf-c-pagination--c-button--FontSize);
+    padding-right: var(--pf-c-pagination__nav--c-button--PaddingRight);
+    padding-left: var(--pf-c-pagination__nav--c-button--PaddingLeft);
+    font-size: var(--pf-c-pagination__nav--c-button--FontSize);
   }
 }
 
@@ -53,19 +70,26 @@
 .pf-c-pagination__nav-page-select {
   display: flex;
   align-items: center;
-  padding-right: var(--pf-c-pagination__nav-page--PaddingX);
-  padding-left: var(--pf-c-pagination__nav-page--PaddingX);
+  padding-right: var(--pf-c-pagination__nav-page-select--PaddingRight);
+  padding-left: var(--pf-c-pagination__nav-page-select--PaddingLeft);
 
   > *:not(:last-child) {
-    margin-right: var(--pf-c-pagination__nav-page--item--MarginX);
+    margin-right: var(--pf-c-pagination__nav-page-select--child--MarginRight);
   }
 
   .pf-c-form-control {
-    width: var(--pf-c-pagination--c-form-control--MaxWidth);
+    width: var(--pf-c-pagination__nav-page-select--c-form-control--MaxWidth);
   }
 }
 
-// Complementary text
-.pf-c-pagination__complementary-text {
-  color: var(--pf-c-pagination__complementary-text--Color);
+// Mobile element for current items
+.pf-c-pagination__current {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    display: none;
+  }
+}
+
+// Dropdown elements
+.pf-c-pagination__menu-text {
+  color: var(--pf-c-pagination__menu-text--Color);
 }

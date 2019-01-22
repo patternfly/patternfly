@@ -1,16 +1,31 @@
 {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+  <div class="pf-c-pagination__current">
+    <b>1 - 10</b> of <b>17</b> items
+  </div>
   <div class="pf-c-dropdown pf-m-expanded">
     <span id="pagination-select-label" hidden>Items per page.</span>
     <button id="pagination-select-button" class="pf-c-dropdown__toggle pf-m-plain" aria-labelledby="pagination-select-label pagination-select-button" aria-expanded="true">
       <span class="pf-c-dropdown__toggle-text">
-          1 - 10 of 17 items
+        <b>1 - 10</b> of <b>17</b> items
       </span>
       <i class="fas fa-caret-down pf-c-dropdown__toggle-icon" aria-hidden="true"></i>
     </button>
     <ul class="pf-c-dropdown__menu" aria-labelledby="pagination-select-label">
-      <li><button class="pf-c-dropdown__menu-item" aria-pressed="false">5 <span class="pf-c-pagination__complementary-text">per page</span></button></li>
-      <li><button class="pf-c-dropdown__menu-item" aria-pressed="true">10 <span class="pf-c-pagination__complementary-text">per page</span></button></li>
-      <li><button class="pf-c-dropdown__menu-item" aria-pressed="false">20 <span class="pf-c-pagination__complementary-text">per page</span></button></li>
+      <li>
+        <button class="pf-c-dropdown__menu-item" aria-pressed="false">
+          <b>5</b> <span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+      <li>
+        <button class="pf-c-dropdown__menu-item" aria-pressed="true">
+          <b>10</b> <span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+      <li>
+        <button class="pf-c-dropdown__menu-item" aria-pressed="false">
+          <b>20</b> <span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
     </ul>
   </div>
 
