@@ -37,8 +37,21 @@
   --pf-c-context-selector__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-context-selector__menu--BoxShadow: var(--pf-global--BoxShadow--md);
 
+  // Menu Input
+  --pf-c-context-selector__menu-input--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-input--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-input--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-input--PaddingLeft: var(--pf-global--spacer--md);
+
+  // Menu Item
+  --pf-c-context-selector__menu-menu-item--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-menu-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-menu-item--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-menu-item--PaddingLeft: var(--pf-global--spacer--md);
+
   position: relative;
   display: inline-block;
+  width: 250px; // add variable
   max-width: 100%;
 }
 
@@ -48,7 +61,7 @@
   align-items: center;
   justify-content: space-between;
   min-width: var(--pf-c-context-selector__toggle--MinWidth);
-  max-width: 100%;
+  min-width: 100%;
   padding: var(--pf-c-context-selector__toggle--PaddingTop) var(--pf-c-context-selector__toggle--PaddingRight) var(--pf-c-context-selector__toggle--PaddingBottom) var(--pf-c-context-selector__toggle--PaddingLeft);
   color: var(--pf-c-context-selector__toggle--Color);
   white-space: nowrap;
@@ -115,10 +128,25 @@
   top: var(--pf-c-context-selector__menu--Top);
   z-index: var(--pf-c-context-selector__menu--ZIndex);
   min-width: 100%;
+  max-height: 350px; // add variable
   padding-top: var(--pf-c-context-selector__menu--PaddingTop);
   padding-bottom: var(--pf-c-context-selector__menu--PaddingBottom);
+  overflow-y: scroll;
   background-color: var(--pf-c-context-selector__menu--BackgroundColor);
   background-clip: padding-box;
   border: var(--pf-c-context-selector__menu--BorderWidth) solid transparent;
   box-shadow: var(--pf-c-context-selector__menu--BoxShadow);
+}
+
+.pf-c-context-selector__menu-input {
+  padding: var(--pf-c-context-selector__menu-input--PaddingTop) var(--pf-c-context-selector__menu-input--PaddingRight) var(--pf-c-context-selector__menu-input--PaddingBottom) var(--pf-c-context-selector__menu-input--PaddingLeft);
+}
+
+.pf-c-context-selector__menu-menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--pf-c-context-selector__menu-menu-item--PaddingTop) var(--pf-c-context-selector__menu-menu-item--PaddingRight) var(--pf-c-context-selector__menu-menu-item--PaddingBottom) var(--pf-c-context-selector__menu-menu-item--PaddingLeft);
+  white-space: nowrap;
+  border: none;
 }

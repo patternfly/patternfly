@@ -11,11 +11,63 @@
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-input}}
+      {{#> input-group}}
+        {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
+        {{/form-control}}
+        {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="search button for search input"'}}
+          {{> button-icon button-icon--type="search"}}
+        {{/button}}
+      {{/input-group}}
     {{/context-selector-menu-input}}
     {{#> context-selector-menu-menu}}
       <li>
         {{#> context-selector-menu-menu-item}}
           My Project
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          OpenShift Cluster
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Production Ansible
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          AWS
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Azure
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          My Project
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          OpenShift Cluster
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Production Ansible
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          AWS
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Azure
         {{/context-selector-menu-menu-item}}
       </li>
     {{/context-selector-menu-menu}}
