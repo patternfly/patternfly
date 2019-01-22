@@ -56,14 +56,18 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--PaddingLeft)) var(--pf-c-form-control--PaddingLeft);
   --pf-c-form-control--invalid--BackgroundSize: var(--pf-c-form-control--FontSize) var(--pf-c-form-control--FontSize);
   --pf-c-form-control--invalid--BackgroundUrl: #{pf-bg-svg($pf-c-form-control--invalid--Coordinates, $svg-color: $pf-c-form-control--invalid--Color)};
-  --pf-c-form-control--invalid--Background: var(--pf-c-form-control--invalid--BackgroundUrl) var(--pf-c-form-control--invalid--BackgroundPosition) / var(--pf-c-form-control--invalid--BackgroundSize) no-repeat;
+  --pf-c-form-control--invalid--exclamation--Background: var(--pf-c-form-control--invalid--BackgroundUrl) var(--pf-c-form-control--invalid--BackgroundPosition) / var(--pf-c-form-control--invalid--BackgroundSize) no-repeat;
+  --pf-c-form-control--invalid--Background: var(--pf-c-form-control--invalid--exclamation--Background);
 
   // Select
+  --pf-c-form-control__select--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox)};
   --pf-c-form-control__select--BackgroundSize: #{pf-size-prem(14px)};
-  --pf-c-form-control__select--BackgroundPosition: calc(100% - var(--pf-c-form-control--PaddingRight)) center;
-  --pf-c-form-control__select--Background: var(--pf-c-form-control__select--BackgroundUrl) var(--pf-c-form-control__select--BackgroundPosition) / var(--pf-c-form-control__select--BackgroundSize) no-repeat;
-  --pf-c-form-control__select--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-form-control__select--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm)) center;
+  --pf-c-form-control__select--arrow--Background: var(--pf-c-form-control__select--BackgroundUrl) var(--pf-c-form-control__select--BackgroundPosition) / var(--pf-c-form-control__select--BackgroundSize) no-repeat;
+  --pf-c-form-control__select--Background: var(--pf-c-form-control__select--arrow--Background);
+  --pf-c-form-control__select--invalid--Background: var(--pf-c-form-control--invalid--exclamation--Background), var(--pf-c-form-control__select--arrow--Background);
+  --pf-c-form-control__select--invalid--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
 
   // This component always needs to be light
   @extend %pf-t-light;
@@ -101,17 +105,6 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     }
   }
 
-  @at-root select#{&} {
-    --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
-
-    background: var(--pf-c-form-control__select--Background);
-
-    &[aria-invalid="true"] {
-      --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-c-form-control--FontSize) - calc(var(--pf-c-form-control--PaddingRight) * 2));
-      --pf-c-form-control__select--Background: var(--pf-c-form-control__select--Background), var(--pf-c-form-control--invalid--Background);
-    }
-  }
-
   &.pf-m-hover,
   &:hover {
     --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--hover--BorderBottomColor);
@@ -140,5 +133,17 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     background: var(--pf-c-form-control--invalid--Background);
     border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
+  }
+
+  @at-root select#{&} {
+    --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
+
+    background: var(--pf-c-form-control__select--Background);
+
+    &[aria-invalid="true"] {
+      --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--invalid--PaddingRight);
+      --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm) - var(--pf-global--spacer--lg));
+      --pf-c-form-control--invalid--Background: var(--pf-c-form-control__select--invalid--Background);
+    }
   }
 }
