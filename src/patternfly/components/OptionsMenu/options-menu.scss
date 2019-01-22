@@ -58,6 +58,8 @@
   // Menu Item Separator
   --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm);
 
   position: relative;
   display: inline-block;
@@ -215,5 +217,7 @@
 
 .pf-c-options-menu__separator {
   height: var(--pf-c-options-menu__separator--Height);
+  margin-top: var(--pf-c-options-menu__separator--MarginTop);
+  margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
   background-color: var(--pf-c-options-menu__separator--BackgroundColor);
 }
