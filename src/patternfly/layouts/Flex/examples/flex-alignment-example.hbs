@@ -1,0 +1,65 @@
+{{#> example-title}}Aligning right with align right. This solution will always align element right by setting margin-left: auto, including when wrapped.{{/example-title}}
+{{#> l-flex flex--modifier="example-border" example--label-hover="Item spacing default"}}
+  {{#> example}}1{{/example}}
+  {{#> example}}2{{/example}}
+  {{#> example}}3{{/example}}
+  {{#> example example--modifier="pf-m-align-right blue"}}4{{/example}}
+  {{#> example example--modifier="blue"}}5{{/example}}
+{{/l-flex}}
+
+{{#> example-title}}Align right on single groups.{{/example-title}}
+{{#> l-flex flex--modifier="example-border" example--label-hover="Item spacing default"}}
+  {{#> l-flex flex--modifier="pf-m-align-right"}}
+    {{#> example example--modifier="blue"}}1{{/example}}
+    {{#> example example--modifier="blue"}}2{{/example}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Align right on multiple groups.{{/example-title}}
+{{#> l-flex flex--modifier="example-border" example--label-hover="Item spacing default"}}
+  {{#> l-flex newcontext}}
+    {{#> example}}1{{/example}}
+    {{#> example}}2{{/example}}
+    {{#> example}}3{{/example}}
+  {{/l-flex}}
+  {{#> l-flex newcontext flex--modifier="pf-m-align-right"}}
+    {{#> example example--modifier="blue"}}4{{/example}}
+    {{#> example example--modifier="blue"}}5{{/example}}
+  {{/l-flex}}
+  {{#> l-flex newcontext flex--modifier="pf-m-align-right"}}
+    {{#> example example--modifier="red"}}6{{/example}}
+    {{#> example example--modifier="red"}}7{{/example}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Using <code>.pf-m-flex-grow</code> + <code>.pf-m-nowrap</code>.{{/example-title}}
+{{#> l-flex flex--modifier="pf-m-nowrap"}}
+  {{#> l-flex newcontext flex--modifier="pf-m-grow example-border"}}
+    {{#> example}}1{{/example}}
+    {{#> example}}2{{/example}}
+    {{#> example}}3{{/example}}
+    {{#> example}}4{{/example}}
+    {{#> example}}5{{/example}}
+  {{/l-flex}}
+  {{#> example example--modifier="blue example-border"}}1{{/example}}
+  {{#> example example--modifier="red example-border"}}1{{/example}}
+{{/l-flex}}
+
+{{#> example-title}}Using <code>.pf-m-flex-grow</code> + <code>.pf-m-nowrap</code> (responsive).{{/example-title}}
+{{#> l-flex flex--modifier="pf-m-nowrap-tablet-plus"}}
+  {{#> l-flex newcontext flex--modifier="pf-m-grow example-border"}}
+    {{#> example}}1{{/example}}
+    {{#> example}}2{{/example}}
+    {{#> example}}3{{/example}}
+    {{#> example}}4{{/example}}
+    {{#> example}}5{{/example}}
+  {{/l-flex}}
+  {{#> l-flex newcontext flex--modifier="pf-m-nowrap-tablet-plus example-border"}}
+    {{#> example example--modifier="blue"}}1{{/example}}
+    {{#> example example--modifier="blue"}}2{{/example}}
+  {{/l-flex}}
+  {{#> l-flex newcontext flex--modifier="pf-m-nowrap-tablet-plus example-border"}}
+    {{#> example example--modifier="red"}}1{{/example}}
+    {{#> example example--modifier="red"}}2{{/example}}
+  {{/l-flex}}
+{{/l-flex}}

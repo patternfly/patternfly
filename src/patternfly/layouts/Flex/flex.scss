@@ -1,0 +1,327 @@
+@import "../../patternfly-imports";
+
+// Mixins
+
+// Spacer values
+$pf-flex-spacer-map: (
+  "none": 0,
+  "xs": "var(--pf-l-flex--spacer--xs)",
+  "sm": "var(--pf-l-flex--spacer--sm)",
+  "md": "var(--pf-l-flex--spacer--md)",
+  "lg": "var(--pf-l-flex--spacer--lg)",
+  "xl": "var(--pf-l-flex--spacer--xl)",
+  "2xl": "var(--pf-l-flex--spacer--2xl)",
+  "3xl": "var(--pf-l-flex--spacer--3xl)"
+);
+
+@mixin pf-l-flex--space-items-builder {
+  @each $prop, $value in $pf-flex-spacer-map {
+    &.pf-m-space-items-#{$prop} > * {
+      --pf-l-flex--spacer: #{$value};
+    }
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--mobile) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      &.pf-m-space-items-#{$prop}-mobile-only > * {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      &.pf-m-space-items-#{$prop}-tablet-plus > * {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      &.pf-m-space-items-#{$prop}-desktop-plus > * {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+}
+
+@mixin pf-l-flex--spacer-builder {
+  @each $prop, $value in $pf-flex-spacer-map {
+    .pf-m-spacer-#{$prop} {
+      --pf-l-flex--spacer: #{$value};
+    }
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--mobile) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-m-spacer-#{$prop}-mobile-only {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-m-spacer-#{$prop}-tablet-plus {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-m-spacer-#{$prop}-desktop-plus {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+}
+
+.pf-l-flex {
+  --pf-l-flex--Display: flex;
+  --pf-l-flex--FlexWrap: wrap;
+  --pf-l-flex--AlignItems: baseline;
+  --pf-l-flex--item--MarginRight: var(--pf-l-flex--spacer-base);
+  --pf-l-flex--item--MarginLeft: 0;
+
+  // Default values: these get reset based on modifier usage
+  --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+
+  // Flex spacer values
+  --pf-l-flex--spacer--none: 0;
+  --pf-l-flex--spacer--xs: var(--pf-global--spacer--xs);
+  --pf-l-flex--spacer--sm: var(--pf-global--spacer--sm);
+  --pf-l-flex--spacer--md: var(--pf-global--spacer--md);
+  --pf-l-flex--spacer--lg: var(--pf-global--spacer--lg);
+  --pf-l-flex--spacer--xl: var(--pf-global--spacer--xl);
+  --pf-l-flex--spacer--2xl: var(--pf-global--spacer--2xl);
+  --pf-l-flex--spacer--3xl: var(--pf-global--spacer--3xl);
+
+  display: var(--pf-l-flex--Display);
+  flex-wrap: var(--pf-l-flex--FlexWrap);
+  align-items: var(--pf-l-flex--AlignItems);
+
+  // Establish default item spacing
+  > * {
+    margin-left: 0;
+
+    &:not(:last-child) {
+      margin-right: var(--pf-l-flex--spacer);
+    }
+  }
+
+  // Spacing for flex-end justification - attr selector to target base + responsive classes
+  &[class*="pf-m-justify-flex-end"] {
+    > * {
+      margin-right: 0;
+
+      &:not(:first-child) {
+        margin-left: var(--pf-l-flex--spacer);
+      }
+    }
+  }
+
+  // Remove spacers for space-between
+  &[class*="pf-m-justify-space-between"] {
+    > * {
+      --pf-l-flex--spacer: 0;
+    }
+  }
+
+  // Reset item spacing in nested flex layouts
+  & & {
+    > * {
+      --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+    }
+  }
+
+  @include pf-l-flex--space-items-builder;
+  @include pf-l-flex--spacer-builder;
+
+  // Breakpoints with responsive modifiers
+  $breakpoint-list: (
+    (null),
+    ($pf-global--breakpoint--mobile, "-mobile-only", "max-width"),
+    ($pf-global--breakpoint--tablet,"-tablet-plus", null),
+    ($pf-global--breakpoint--desktop, "-desktop-plus", null),
+  );
+
+  // List of modifiers
+  @mixin flex-modifiers($mod: null) {
+    // display
+    &.pf-m-flex#{$mod} {
+      display: flex;
+    }
+
+    &.pf-m-inline-flex#{$mod} {
+      display: inline-flex;
+    }
+
+    // flex-direction
+    &.pf-m-column#{$mod} {
+      flex-direction: column;
+    }
+
+    &.pf-m-column-reverse#{$mod} {
+      flex-direction: column-reverse;
+    }
+
+    &.pf-m-row#{$mod} {
+      flex-direction: row;
+    }
+
+    &.pf-m-row-reverse#{$mod} {
+      flex-direction: row-reverse;
+    }
+
+    // flex-wrap
+    &.pf-m-wrap#{$mod} {
+      flex-wrap: wrap;
+    }
+
+    &.pf-m-nowrap#{$mod} {
+      flex-wrap: nowrap;
+    }
+
+    &.pf-m-wrap-reverse#{$mod} {
+      flex-wrap: wrap-reverse;
+    }
+
+    // justify-content
+    &.pf-m-justify-content-flex-start#{$mod} {
+      justify-content: flex-start;
+    }
+
+    &.pf-m-justify-content-flex-end#{$mod} {
+      justify-content: flex-end;
+    }
+
+    &.pf-m-justify-content-center#{$mod} {
+      justify-content: center;
+    }
+
+    &.pf-m-justify-content-space-between#{$mod} {
+      justify-content: space-between;
+    }
+
+    &.pf-m-justify-content-space-around#{$mod} {
+      justify-content: space-around;
+    }
+
+    &.pf-m-justify-content-space-evenly#{$mod} {
+      justify-content: space-evenly;
+    }
+
+    // align-items
+    &.pf-m-align-items-flex-start#{$mod} {
+      align-items: flex-start;
+    }
+
+    &.pf-m-align-items-flex-end#{$mod} {
+      align-items: flex-end;
+    }
+
+    &.pf-m-align-items-center#{$mod} {
+      align-items: center;
+    }
+
+    &.pf-m-align-items-stretch#{$mod} {
+      align-items: stretch;
+    }
+
+    &.pf-m-align-items-baseline#{$mod} {
+      align-items: baseline;
+    }
+
+    // align-content
+    &.pf-m-align-content-flex-start#{$mod} {
+      align-content: flex-start;
+    }
+
+    &.pf-m-align-content-flex-end#{$mod} {
+      align-content: flex-end;
+    }
+
+    &.pf-m-align-content-center#{$mod} {
+      align-content: center;
+    }
+
+    &.pf-m-align-content-stretch#{$mod} {
+      align-content: stretch;
+    }
+
+    &.pf-m-align-content-space-between#{$mod} {
+      align-content: space-between;
+    }
+
+    &.pf-m-align-content-space-around#{$mod} {
+      align-content: space-around;
+    }
+
+    // alignment
+    &.pf-m-align-right#{$mod},
+    .pf-m-align-right#{$mod} {
+      margin-left: auto;
+    }
+
+    &.pf-m-align-left#{$mod},
+    .pf-m-align-left#{$mod} {
+      margin-right: auto;
+    }
+
+    // item properties
+    .pf-m-grow#{$mod} {
+      flex-grow: 1;
+    }
+
+    .pf-m-shrink#{$mod} {
+      flex-shrink: 1;
+    }
+
+    .pf-m-full-width#{$mod} {
+      --pf-l-flex--spacer: 0;
+
+      flex: 1 0 100%;
+    }
+
+    // align-self
+    .pf-m-align-self-flex-start#{$mod} {
+      align-self: flex-start;
+    }
+
+    .pf-m-align-self-flex-end#{$mod} {
+      align-self: flex-end;
+    }
+
+    .pf-m-align-self-center#{$mod} {
+      align-self: center;
+    }
+
+    .pf-m-align-baseline#{$mod} {
+      align-self: baseline;
+    }
+
+    .pf-m-align-self-stretch#{$mod} {
+      align-self: stretch;
+    }
+  }
+
+  /* stylelint-disable */
+  // Build the base + responsive modifier selectors
+  @each $bp, $mod, $prop in $breakpoint-list {
+    @if $bp {
+      @if $prop == null {
+        $prop: "min-width";
+      }
+
+      @media screen and (#{$prop}: #{$bp}) {
+        @include flex-modifiers($mod);
+      }
+    } @else {
+      @include flex-modifiers($mod);
+    }
+  }
+  /* stylelint-enable */
+}

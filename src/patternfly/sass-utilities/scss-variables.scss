@@ -145,6 +145,11 @@ $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
 
+// Device breakpoints
+$pf-global--breakpoint--mobile: 599px;
+$pf-global--breakpoint--tablet: 600px;
+$pf-global--breakpoint--desktop: 1200px;
+
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
 $pf-global--BorderWidth--md:     2px !default;
@@ -166,8 +171,8 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
-$pf-global--FontFamily--sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$pf-global--FontFamily--monospace: “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$pf-global--FontFamily--sans-serif: “overpass”, overpass, “open sans”, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global--FontFamily--monospace: “overpass-mono”, overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 // Font size
