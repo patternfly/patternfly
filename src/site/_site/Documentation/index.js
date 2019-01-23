@@ -6,7 +6,7 @@ import './styles.scss';
 export default class Documentation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isFull: false };
+    this.state = { isFull: null };
   }
 
   componentDidMount() {
@@ -19,22 +19,25 @@ export default class Documentation extends React.Component {
   render() {
     const { children, className = '', docs = '', heading = '' } = this.props;
     const HTML_DOCS = { __html: docs };
-    return !this.state.isFull ? (
-      <Layout>
-        <div className={`Documentation ${className}`}>
-          <h3 className="Component_heading">{heading}</h3>
-          <div className="Documentation__section">{children}</div>
-          <h3 className="Documentation_heading">Documentation</h3>
-          <div className="Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
-        </div>
-      </Layout>
-    ) : (
-      <FullPageExampleLayout>
-        <div className={className}>
-          <h1 className="pf-screen-reader">{this.props.heading} full example</h1>
-          {children}
-        </div>
-      </FullPageExampleLayout>
+    return (
+      this.state.isFull !== null &&
+      (!this.state.isFull ? (
+        <Layout>
+          <div className={`Documentation ${className}`}>
+            <h3 className="Component_heading">{heading}</h3>
+            <div className="Documentation__section">{children}</div>
+            <h3 className="Documentation_heading">Documentation</h3>
+            <div className="Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
+          </div>
+        </Layout>
+      ) : (
+        <FullPageExampleLayout>
+          <div className={className}>
+            <h1 className="pf-screen-reader">{this.props.heading} full example</h1>
+            {children}
+          </div>
+        </FullPageExampleLayout>
+      ))
     );
   }
 }
