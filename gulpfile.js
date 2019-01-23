@@ -19,7 +19,8 @@ gulp.task('build-pficonfont', () => {
     .pipe(
       iconfontCss({
         fontName: pficonFontName,
-        targetPath: 'pficon.css',
+        path: 'scss',
+        targetPath: 'pficon.scss',
         fontPath: './',
         cssClass: 'pf-icon'
       })
