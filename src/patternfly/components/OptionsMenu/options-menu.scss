@@ -158,7 +158,7 @@
 .pf-c-options-menu__toggle-icon {
   margin-left: var(--pf-c-options-menu__toggle-icon--MarginLeft);
 
-  .pf-m-top.pf-m-expanded > & {
+  .pf-c-options-menu.pf-m-top.pf-m-expanded & {
     transform: rotate(-180deg);
   }
 }

@@ -141,7 +141,8 @@
   .pf-c-dropdown__toggle-icon {
     margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
 
-    .pf-m-top.pf-m-expanded > & {
+    /* stylelint-disable-next-line */
+    .pf-c-dropdown.pf-m-top.pf-m-expanded > & {
       transform: rotate(-180deg);
     }
   }
