@@ -301,7 +301,6 @@
   z-index: var(--pf-c-page__main--ZIndex);
   display: flex;
   flex-direction: column;
-  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -318,8 +317,7 @@
 
   &:last-of-type,
   &:only-child {
-    flex-grow: 1;
-    height: 100%; // to allow children to have height: 100% that occupy the full height
+    flex: 1 0;
   }
 
   &.pf-m-light {
