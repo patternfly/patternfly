@@ -11,5 +11,5 @@ A chip-group used in a multi-select do not require a modifier as its parent will
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip-group` | `<div>` | Initiates the container used to group chips. **Required.** |
+| `.pf-c-chip-group` | `<div>, <ul>` | Initiates the container used to group chips. Use `<ul>` if nested lists of chips with `.pf-c-chip-group__label` are needed. **Required.** |
 | `.pf-c-button` | `<button>` | Initiates the button used to expand overflown chips. |

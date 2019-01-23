@@ -11,7 +11,7 @@ A chip-group used in a toolbar require the modifier `.pf-m-toolbar` which styles
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip-group` | `<div>` | Initiates the container used to group chips. **Required** |
-| `.pf-c-chip-group__label` | `<h4>` | Initiates the label for a group of chips. |
+| `.pf-c-chip-group` | `<div>, <ul>` | Initiates the container used to group chips. Use `<ul>` if nested lists of chips with `.pf-c-chip-group__label` are needed. **Required.** |
+| `.pf-c-chip-group__label` | `<li>` | Initiates the label for a group of chips. |
 | `.pf-c-button` | `<button>` | Initiates the button used to show overflown chips. |
 | `.pf-m-toolbar` | `.pf-c-chip-group` | Modifies `.pf-c-chip-group` to be used in a toolbar. **Required** |
