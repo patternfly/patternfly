@@ -3,30 +3,37 @@
 // the workspace or applying styles that are only
 // relevant inside of the workspace
 
-// html {
-//   height: 100%;
-//   > body {
-//     height: 100%;
-//     > div {
-//       height: 100%;
-//       > div {
-//         height: 100%;
-//         > div {
-//           height: 100%;
-//           > div {
-//             height: 100%;
-//             > div {
-//               height: 100%;
-//               > div {
-//                 height: 100%;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+html {
+  height: 100%;
+
+  > body {
+    height: 100%;
+
+    > div {
+      height: 100%;
+
+      > div {
+        height: 100%;
+
+        > div {
+          height: 100%;
+
+          > div {
+            height: 100%;
+
+            > div {
+              height: 100%;
+
+              > div {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .Example__documentation {
   margin: 2rem 0;
