@@ -8,9 +8,14 @@
   // container
   --pf-c-login__container--xl--GridColumnGap: var(--pf-global--spacer--3xl);
   --pf-c-login__container--MaxWidth: #{pf-size-prem(500px)}; // This is a magic number to prevent the login layout grow more than what's defined in the specs.
+  --pf-c-login__container--xl--MaxWidth: none;
   --pf-c-login__container--PaddingLeft: #{pf-size-prem(98px)};
   --pf-c-login__container--PaddingRight: #{pf-size-prem(98px)};
   --pf-c-login__container--xl--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)}); // unique to the login layout
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__container--MaxWidth: var(--pf-c-login__container--xl--MaxWidth);
+  }
 
   // header
   --pf-c-login__header--MarginBottom: var(--pf-global--spacer--md);
@@ -52,8 +57,8 @@
   --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-login__main-body--md--PaddingRight: var(--pf-global--spacer--2xl);
   --pf-c-login__main-body--md--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-body-c-form-helper-text-icon--FontSize: var(--pf-global--icon--FontSize--md);
-  --pf-c-login__main-body-c-form-helper-text-icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-login__main-body-c-form__helper-text-icon--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-login__main-body-c-form__helper-text-icon--MarginRight: var(--pf-global--spacer--sm);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-login__main-body--PaddingRight: var(--pf-c-login__main-body--md--PaddingRight);
@@ -81,16 +86,16 @@
   --pf-c-login__main-footer-band--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-band--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-login__main-footer-band--Color: var(--pf-global--Color--300);
-  --pf-c-login__main-footer-band-item: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-band-item--PaddingBottom: var(--pf-global--spacer--md);
 
   // footer
   --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-login__footer-c-list--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-login__footer-c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
+  --pf-c-login__footer--c-list--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-login__footer--c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
 
   @media (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-login__footer-c-list--PaddingTop: var(--pf-c-login__footer-c-list--xl--PaddingTop);
+    --pf-c-login__footer--c-list--PaddingTop: var(--pf-c-login__footer--c-list--xl--PaddingTop);
   }
 
   display: flex;
@@ -123,7 +128,6 @@
       "main header"
       "main footer"
       "main .";
-    max-width: none;
     padding-right: var(--pf-c-login__container--PaddingRight);
     padding-left: var(--pf-c-login__container--PaddingLeft);
   }
@@ -195,8 +199,8 @@
     align-items: center;
 
     .pf-c-form__helper-text-icon {
-      margin-right: var(--pf-c-login__main-body-c-form-helper-text-icon--MarginRight);
-      font-size: var(--pf-c-login__main-body-c-form-helper-text-icon--FontSize);
+      margin-right: var(--pf-c-login__main-body-c-form__helper-text-icon--MarginRight);
+      font-size: var(--pf-c-login__main-body-c-form__helper-text-icon--FontSize);
     }
   }
 }
@@ -256,8 +260,8 @@
 }
 
 .pf-c-login__main-footer-band-item {
-  &:first-child {
-    padding-bottom: var(--pf-c-login__main-footer-band-item);
+  > * + * {
+    padding-top: var(--pf-c-login__main-footer-band-item--PaddingTop);
   }
 }
 
@@ -271,7 +275,7 @@
 
   .pf-c-list {
     &:not(:only-child) { // paragraph text might not always be included.
-      padding-top: var(--pf-c-login__footer-c-list--PaddingTop);
+      padding-top: var(--pf-c-login__footer--c-list--PaddingTop);
     }
   }
 }
