@@ -15,7 +15,7 @@ A Chip is used to display items that have been filtered or selected from a large
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip` | `<div>` | Initiates the body of a chip. |
+| `.pf-c-chip` | `<div>, <li>` | Initiates the body of a chip. If used inside a `.pf-c-chip-group` use `<li>`. |
 | `.pf-c-chip__text` | `<span>` | Initiates the text inside of the chip. **Required.** |
 | `.pf-c-button` | `<button>` | Initiates the button used to remove the chip. **Required.** |
 | `.pf-m-overflow` | `.pf-c-chip` | Applies styling of the overflow chip. |
