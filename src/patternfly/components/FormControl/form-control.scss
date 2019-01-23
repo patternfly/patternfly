@@ -39,14 +39,14 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   // input disabled style
   --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-form-control--disabled--BorderColor: transparent;
 
   // input readonly style
-  --pf-c-form-control--readonly--BorderBottomColor: var(--pf-global--disabled-color--200);
+  --pf-c-form-control--readonly--focus--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-form-control--readonly--focus--PaddingBottom: var(--pf-c-form-control--PaddingBottom);
   --pf-c-form-control--readonly--focus--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--disabled-color--200);
+  --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--disabled-color--100);
 
   // Input m-invalid
   --pf-c-form-control--invalid--BorderBottomWidth: var(--pf-global--BorderWidth--md);
@@ -94,6 +94,7 @@ $pf-c-form-control__select--ViewBox: "320" !default;
     &.pf-m-focus,
     &:focus {
       padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
+      background-color: var(--pf-c-form-control--readonly--focus--BackgroundColor);
       border-bottom-color: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
       border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
     }
