@@ -77,8 +77,8 @@
   --pf-c-login__main-footer-links-item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-links-item--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-login__main-footer-links-item-link-svg--Fill: var(--pf-global--icon--Color--light);
-  --pf-c-login__main-footer-links-item-link-svg--Width: #{pf-size-prem(25px)};
-  --pf-c-login__main-footer-links-item-link-svg--Height: #{pf-size-prem(25px)};
+  --pf-c-login__main-footer-links-item-link-svg--Width: var(--pf-global--icon--FontSize--lg);
+  --pf-c-login__main-footer-links-item-link-svg--Height: var(--pf-global--icon--FontSize--lg);
   --pf-c-login__main-footer-links-item-link-svg--hover--Fill: var(--pf-global--icon--Color--dark);
   --pf-c-login__main-footer-band--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-login__main-footer-band--PaddingRight: var(--pf-global--spacer--md);
@@ -86,7 +86,7 @@
   --pf-c-login__main-footer-band--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-band--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-login__main-footer-band--Color: var(--pf-global--Color--300);
-  --pf-c-login__main-footer-band-item--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-band-item--PaddingTop: var(--pf-global--spacer--md);
 
   // footer
   --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
@@ -241,8 +241,10 @@
 .pf-c-login__main-footer-links-item-link {
   svg {
     fill: var(--pf-c-login__main-footer-links-item-link-svg--Fill);
-    width: var(--pf-c-login__main-footer-links-item-link-svg--Width);
-    height: var(--pf-c-login__main-footer-links-item-link-svg--Height);
+    width: 100%;
+    max-width: var(--pf-c-login__main-footer-links-item-link-svg--Width);
+    height: 100%;
+    max-height: var(--pf-c-login__main-footer-links-item-link-svg--Height);
   }
 
   &:hover {
@@ -257,9 +259,7 @@
   color: var(--pf-c-login__main-footer-band--Color);
   text-align: center;
   background-color: var(--pf-c-login__main-footer-band--BackgroundColor);
-}
 
-.pf-c-login__main-footer-band-item {
   > * + * {
     padding-top: var(--pf-c-login__main-footer-band-item--PaddingTop);
   }
