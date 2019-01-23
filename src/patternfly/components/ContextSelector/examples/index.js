@@ -14,7 +14,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Context Selector Example" handlebars={ContextSelectorExampleRaw}>
+      <Example heading="Context Selector Example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
         {contextselectorexample}
       </Example>
     </Documentation>
