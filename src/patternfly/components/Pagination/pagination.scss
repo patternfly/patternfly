@@ -39,7 +39,7 @@
   &:not(.pf-m-footer) {
     justify-content: flex-end;
 
-    .pf-c-dropdown,
+    .pf-c-options-menu,
     .pf-c-pagination__nav {
       display: none;
 
@@ -49,7 +49,7 @@
     }
   }
 
-  .pf-c-dropdown__toggle {
+  .pf-c-options-menu__toggle {
     color: var(--pf-c-pagination--c-dropdown__toggle--Color);
   }
 }
