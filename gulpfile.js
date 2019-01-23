@@ -3,7 +3,6 @@ const rename = require('gulp-rename');
 const replace = require('gulp-string-replace');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
-const shell = require('gulp-shell');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
@@ -20,7 +19,8 @@ gulp.task('build-pficonfont', () => {
     .pipe(
       iconfontCss({
         fontName: pficonFontName,
-        targetPath: 'pficon.css',
+        path: 'scss',
+        targetPath: 'pficon.scss',
         fontPath: './',
         cssClass: 'pf-icon'
       })
@@ -96,5 +96,3 @@ gulp.task('copy-icons', () => {
   gulp.src('./src/icons/definitions/**/*.*').pipe(gulp.dest('./dist/icons/'));
   gulp.src('./src/icons/PfIcons/**/*.*').pipe(gulp.dest('./dist/icons/PfIcons/'));
 });
-
-gulp.task('ie-post-process', shell.task('node ./build/npm-scripts/ie11-stylesheet-converter.js'));

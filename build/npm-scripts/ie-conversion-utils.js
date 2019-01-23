@@ -27,7 +27,8 @@ function getLocalVarDefinitions(stylesheet) {
   const startToken = '--pf-';
   return singleStylesheet
     .filter(el => el.trim().startsWith(startToken))
-    .map(el => el.substring(el.indexOf(startToken), el.lastIndexOf(';') + 1));
+    .map(el => el.substring(el.indexOf(startToken), el.lastIndexOf(';') + 1))
+    .filter(el => !el.startsWith('--pf-global--'));
 }
 
 /**
