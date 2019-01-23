@@ -126,7 +126,8 @@
   --pf-global--BorderRadius--lg: #{$pf-global--BorderRadius--lg};
 
   // Icons
-  --pf-global--icon--Color: #{$pf-global--icon--Color};
+  --pf-global--icon--Color--light: #{$pf-global--icon--Color--light};
+  --pf-global--icon--Color--dark: #{$pf-global--icon--Color--dark};
   --pf-global--icon--FontSize--sm: #{$pf-global--icon--FontSize--sm};
   --pf-global--icon--FontSize--md: #{$pf-global--icon--FontSize--md};
   --pf-global--icon--FontSize--lg: #{$pf-global--icon--FontSize--lg};

@@ -166,7 +166,8 @@ $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Icons
-$pf-global--icon--Color: $pf-color-black-400 !default;
+$pf-global--icon--Color--light: $pf-color-black-500 !default;
+$pf-global--icon--Color--dark: $pf-color-black-900 !default;
 $pf-global--icon--FontSize--sm: pf-font-prem(10px) !default;
 $pf-global--icon--FontSize--md: pf-font-prem(18px) !default;
 $pf-global--icon--FontSize--lg: pf-font-prem(24px) !default;
