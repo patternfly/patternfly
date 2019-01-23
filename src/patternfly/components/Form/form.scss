@@ -121,7 +121,7 @@
   }
 
   &.pf-m-disabled {
-    color: var(--pf-c-form__label--m-disabled--Color);
+    --pf-c-form__label--Color: var(--pf-c-form__label--m-disabled--Color);
   }
 
   &.pf-m-disabled:hover {
