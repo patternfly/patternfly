@@ -40,7 +40,6 @@
   --pf-c-login__main-header--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-login__main-header--RowGap: var(--pf-global--spacer--sm);
 
-  // --pf-c-login__main-header-c-title--md--MarginBottom: var(--pf-global--spacer--lg);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-login__main-header--PaddingRight: var(--pf-c-login__main-header--md--PaddingRight);
@@ -48,7 +47,6 @@
   }
 
   // main body
-  // --pf-c-login__main-body--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-login__main-body--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--xl);
@@ -69,7 +67,10 @@
   --pf-c-login__main-footer-links--PaddingRight: var(--pf-global--spacer--3xl);
   --pf-c-login__main-footer-links--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-login__main-footer-links--PaddingLeft: var(--pf-global--spacer--3xl);
-  --pf-c-login__main-footer-links-item--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-login__main-footer-links--MarginBottom: calc(var(--pf-c-login__main-footer-links--MarginBottom) * -1);
+  --pf-c-login__main-footer-links-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-links-item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-links-item--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-login__main-footer-links-item-link-svg--Fill: var(--pf-global--icon--Color--light);
   --pf-c-login__main-footer-links-item-link-svg--Width: #{pf-size-prem(25px)};
   --pf-c-login__main-footer-links-item-link-svg--Height: #{pf-size-prem(25px)};
@@ -217,9 +218,9 @@
 .pf-c-login__main-footer-links {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   padding: var(--pf-c-login__main-footer-links--PaddingTop) var(--pf-c-login__main-footer-links--PaddingRight) var(--pf-c-login__main-footer-links--PaddingBottom) var(--pf-c-login__main-footer-links--PaddingLeft);
+  margin-bottom: var(--pf-c-login__main-footer-links--MarginBottom);
 
   &:hover,
   &.pf-m-hover {
@@ -228,9 +229,9 @@
 }
 
 .pf-c-login__main-footer-links-item {
-  &:not(:last-child) {
-    padding-right: var(--pf-c-login__main-footer-links-item--PaddingRight);
-  }
+  padding-right: var(--pf-c-login__main-footer-links-item--PaddingRight);
+  padding-left: var(--pf-c-login__main-footer-links-item--PaddingLeft);
+  margin-bottom: var(--pf-c-login__main-footer-links-item--MarginBottom);
 }
 
 .pf-c-login__main-footer-links-item-link {
