@@ -2,12 +2,12 @@
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
   {{/options-menu-toggle}}
-  {{> options-menu-multiple}}
+  {{> options-menu-single}}
 {{/options-menu}}
 
 {{#> options-menu options-menu--IsExpanded="true" id="options-menu-plain-example" options-menu--label-text="Sort methods"}}
-  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain"}}
+  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
   {{/options-menu-toggle}}
-  {{> options-menu-multiple}}
+  {{> options-menu-single}}
 {{/options-menu}}
