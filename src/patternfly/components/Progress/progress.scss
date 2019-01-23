@@ -47,8 +47,7 @@
   &.pf-m-singleline {
     grid-template-rows: none;
 
-    .pf-c-progress__description,
-    .pf-c-progress__status {
+    .pf-c-progress__description {
       display: none;
     }
 
