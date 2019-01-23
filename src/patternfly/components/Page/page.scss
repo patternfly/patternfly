@@ -122,7 +122,12 @@
 
   // Base
   display: grid;
-  height: 100vh;
+  height: 100%;
+
+  @media (min-width: $pf-global--breakpoint--sm) {
+    height: 100vh;
+  }
+
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas:
