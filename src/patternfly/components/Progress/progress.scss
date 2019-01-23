@@ -44,7 +44,7 @@
   }
 
   // No Description or Status Modifier
-  &.pf-m-nodescription {
+  &.pf-m-singleline {
     grid-template-rows: none;
 
     .pf-c-progress__description,
