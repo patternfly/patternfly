@@ -1,6 +1,9 @@
 @import "../../patternfly-imports";
 
 .pf-c-context-selector {
+  // Context Selector
+  --pf-c-context-selector--Width: #{pf-size-prem(250px)};
+
   // Toggle
   --pf-c-context-selector__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -32,7 +35,6 @@
   --pf-c-context-selector__menu--Top: calc(100% + var(--pf-global--spacer--xs));
   --pf-c-context-selector__menu--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-context-selector__menu--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-context-selector__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-context-selector__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-context-selector__menu--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -40,18 +42,27 @@
   // Menu Input
   --pf-c-context-selector__menu-input--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-context-selector__menu-input--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-context-selector__menu-input--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-input--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-context-selector__menu-input--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-input--BottomBorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-context-selector__menu-input--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
+
+  // Menu Menu Item
+  --pf-c-context-selector__menu-menu--MaxHeight: #{pf-size-prem(200px)};
 
   // Menu Item
   --pf-c-context-selector__menu-menu-item--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__menu-menu-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-menu-item--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-context-selector__menu-menu-item--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__menu-menu-item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-menu-item--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-context-selector__menu-menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-context-selector__menu-menu-item--disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-context-selector__menu-menu-item--disabled--BackgroundColor: transparent;
+
 
   position: relative;
   display: inline-block;
-  width: 250px; // add variable
+  width: var(--pf-c-context-selector--Width);
   max-width: 100%;
 }
 
@@ -128,10 +139,7 @@
   top: var(--pf-c-context-selector__menu--Top);
   z-index: var(--pf-c-context-selector__menu--ZIndex);
   min-width: 100%;
-  max-height: 350px; // add variable
   padding-top: var(--pf-c-context-selector__menu--PaddingTop);
-  padding-bottom: var(--pf-c-context-selector__menu--PaddingBottom);
-  overflow-y: scroll;
   background-color: var(--pf-c-context-selector__menu--BackgroundColor);
   background-clip: padding-box;
   border: var(--pf-c-context-selector__menu--BorderWidth) solid transparent;
@@ -140,6 +148,12 @@
 
 .pf-c-context-selector__menu-input {
   padding: var(--pf-c-context-selector__menu-input--PaddingTop) var(--pf-c-context-selector__menu-input--PaddingRight) var(--pf-c-context-selector__menu-input--PaddingBottom) var(--pf-c-context-selector__menu-input--PaddingLeft);
+  border-bottom: var(--pf-c-context-selector__menu-input--BottomBorderWidth) solid var(--pf-c-context-selector__menu-input--BottomBorderColor);
+}
+
+.pf-c-context-selector__menu-menu {
+  max-height: var(--pf-c-context-selector__menu-menu--MaxHeight);
+  overflow-y: scroll;
 }
 
 .pf-c-context-selector__menu-menu-item {
@@ -149,4 +163,19 @@
   padding: var(--pf-c-context-selector__menu-menu-item--PaddingTop) var(--pf-c-context-selector__menu-menu-item--PaddingRight) var(--pf-c-context-selector__menu-menu-item--PaddingBottom) var(--pf-c-context-selector__menu-menu-item--PaddingLeft);
   white-space: nowrap;
   border: none;
+
+  &:hover,
+  &.pf-m-hover,
+  &:focus,
+  &.pf-m-focus {
+    text-decoration: none;
+    background-color: var(--pf-c-context-selector__menu-menu-item--hover--BackgroundColor);
+  }
+
+  &:disabled,
+  &.pf-m-disabled {
+    color: var(--pf-c-context-selector__menu-menu-item--disabled--Color);
+    pointer-events: none;
+    background-color: var(--pf-c-context-selector__menu-menu-item--disabled--BackgroundColor);
+  }
 }
