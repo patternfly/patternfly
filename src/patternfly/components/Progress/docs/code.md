@@ -29,6 +29,6 @@ Note: If this component is describing the loading progress of a particular regio
 | `.pf-m-sm` | `.pf-c-progress` |  Modifies the progress bar to be smaller. |
 | `.pf-m-inside` | `.pf-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`.|
 | `.pf-m-outside` | `.pf-c-progress` |  Shows the measure and status icon to the right of the progress bar. |
-| `.pf-m-singleline` | `.pf-c-progress` | Modifies the progress component to only have the progress bar. |
+| `.pf-m-singleline` | `.pf-c-progress` | Modifies the progress component to exist on one row. |
 | `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
 | `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
