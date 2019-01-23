@@ -1,0 +1,143 @@
+@import "../../patternfly-imports";
+
+// The value of component scoped variables is always defined by a global variable:
+.pf-c-toolbar {
+  --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);
+
+  // Bulk Select
+  --pf-c-toobar__bulk-select--MarginRight: var(--pf-global--spacer--md);
+
+  // Filter
+  --pf-c-toolbar__filter--MarginTop: calc(var(--pf-c-toolbar--PaddingBottom) + var(--pf-global--spacer--md));
+  --pf-c-toolbar__filter--MarginLeft: 0;
+
+  // Filter toggle toggle
+  --pf-c-toolbar__filter-toggle--MarginLeft: var(--pf-global--spacer--md);
+
+  // Sort
+  --pf-c-toolbar__sort--MarginLeft: var(--pf-global--spacer--sm);
+
+  // Action group
+  --pf-c-toolbar__action-group--child--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-toolbar__sort--action-group--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-toolbar__filter--action-group--MarginLeft: var(--pf-global--spacer--xl);
+
+  // Action list
+  --pf-c-toolbar__action-list--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-toolbar__sort--action-list--MarginLeft: var(--pf-global--spacer--sm);
+
+  // Filter list
+  --pf-c-toolbar__filter-list--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-toolbar__filter-list--c-button--MarginLeft: var(--pf-global--spacer--sm);
+
+  flex-wrap: wrap;
+  padding: var(--pf-c-toolbar--PaddingTop) var(--pf-c-toolbar--PaddingRight) var(--pf-c-toolbar--PaddingBottom) var(--pf-c-toolbar--PaddingLeft);
+
+  // default spacing between children
+  > * + * {
+    margin-left: var(--pf-c-toolbar--child--MarginLeft);
+  }
+}
+
+.pf-c-toolbar,
+.pf-c-toolbar__filter-list,
+.pf-c-toolbar__action-group {
+  display: flex;
+  align-items: center;
+}
+
+// Bulk Select
+.pf-c-toobar__bulk-select {
+  margin-right: var(--pf-c-toobar__bulk-select--MarginRight);
+}
+
+// Filter input group
+.pf-c-toolbar__filter-toggle {
+  --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__filter-toggle--MarginLeft);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    display: none;
+  }
+}
+
+.pf-c-toolbar__filter {
+  flex-basis: 100%;
+  order: 1;
+  width: auto;
+  margin-top: var(--pf-c-toolbar__filter--MarginTop);
+  margin-left: var(--pf-c-toolbar__filter--MarginLeft);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    display: none;
+
+    &.pf-m-expanded {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-toolbar__filter--MarginTop: 0;
+    --pf-c-toolbar__filter--MarginBottom: 0;
+
+    flex-basis: auto;
+    order: 0;
+  }
+
+  + .pf-c-toolbar__action-group {
+    --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__filter--action-group--MarginLeft);
+  }
+}
+
+.pf-c-toolbar__sort {
+  --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__sort--MarginLeft);
+
+  + .pf-c-toolbar__action-group {
+    --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__sort--action-group--MarginLeft);
+  }
+
+  + .pf-c-toolbar__action-list {
+    --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__sort--action-list--MarginLeft);
+  }
+}
+
+.pf-c-toolbar__action-group {
+  display: none;
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    display: flex;
+  }
+
+  > * + * {
+    margin-left: var(--pf-c-toolbar__action-group--child--MarginLeft);
+  }
+}
+
+.pf-c-toolbar__action-list {
+  --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__action-list--MarginLeft);
+}
+
+.pf-c-toolbar__pagination,
+.pf-c-toolbar__current {
+  margin-left: auto;
+}
+
+.pf-c-toolbar__filter-list {
+  display: none;
+  flex-basis: 100%;
+  order: 2;
+  padding-left: 0;
+  margin-top: var(--pf-c-toolbar__filter-list--MarginTop);
+  margin-left: 0;
+
+  &.pf-m-expanded {
+    display: block;
+  }
+
+  > .pf-c-button {
+    margin-left: var(--pf-c-toolbar__filter-list--c-button--MarginLeft);
+  }
+}

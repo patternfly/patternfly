@@ -1,0 +1,51 @@
+{{#> c-toolbar}}
+  {{#> dropdown id="dropdown-simple-example-collapsed" dropdown--HasToggleIcon="true" dropdown--modifier="pf-c-toobar__bulk-select"}}
+    <input type="checkbox">
+  {{/dropdown}}
+  {{#> dropdown id="dropdown-simple-example-collapsed" dropdown-toggle--modifier="pf-m-plain" dropdown--modifier="pf-c-toolbar__filter-toggle"}}
+    <i class="fas fa-filter"></i>
+  {{/dropdown}}
+  {{#> input-group input-group--modifier="pf-c-toolbar__filter"}}
+    {{#> select id="select-single"}}<i class="fas fa-filter" aria-hidden="true"></i> Name{{/select}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-tertiary" button--attribute='id="dropdown-simple-textAreaButton2"'}}
+      {{> button-icon button-icon--type="search"}}
+    {{/button}}
+  {{/input-group}}
+  {{#> dropdown id="dropdown-simple-example-collapsed" dropdown-toggle--modifier="pf-m-plain" dropdown--modifier="pf-c-toolbar__sort"}}
+    <i class="fas fa-sort-alpha-down"></i>
+  {{/dropdown}}
+  {{#> c-toolbar-action-group}}
+    {{#> button button--modifier="pf-m-primary"}}
+      action
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      secondary
+    {{/button}}
+  {{/c-toolbar-action-group}}
+  {{#> dropdown id="dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
+  {{/dropdown}}
+  <div class="pf-c-pagination pf-c-toolbar__pagination">pagination</div>
+  {{#> chip-group chip-group--modifier="pf-c-toolbar__filter-list"}}
+    {{#> chip}}
+      {{#> chip-text chip-text--attribute='id="chip_one"'}}
+        Chip
+      {{/chip-text}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+        {{> button-icon button-icon--type="times-circle"}}
+      {{/button}}
+    {{/chip}}
+    {{#> chip}}
+      {{#> chip-text chip-text--attribute='id="chip_one"'}}
+        Chip
+      {{/chip-text}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+        {{> button-icon button-icon--type="times-circle"}}
+      {{/button}}
+    {{/chip}}
+    {{#> button button--modifier="pf-m-link"}}
+      Clear Filters
+    {{/button}}
+  {{/chip-group}}
+{{/c-toolbar}}
