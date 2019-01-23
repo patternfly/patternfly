@@ -259,7 +259,9 @@
 
 // Sidebar
 .pf-c-page__sidebar {
-  grid-area: 2 / 1;
+  grid-area: nav;
+  grid-row-start: 2;
+  grid-column-start: 1;
   z-index: var(--pf-c-page__sidebar--ZIndex);
   width: var(--pf-c-page__sidebar--Width);
   padding-top: var(--pf-c-page__sidebar--PaddingTop);
