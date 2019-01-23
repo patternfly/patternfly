@@ -67,7 +67,7 @@
 }
 
 .pf-c-options-menu__toggle,
-.pf-m-text .pf-c-options-menu__toggle-button {
+.pf-c-options-menu.pf-m-text:not(.pf-m-plain) .pf-c-options-menu__toggle-button {
   &::before {
     position: absolute;
     top: 0;
@@ -122,7 +122,9 @@
   }
 
   &.pf-m-plain {
-    color: var(--pf-c-options-menu__toggle--m-plain--Color);
+    &:not(.pf-m-text) {
+      color: var(--pf-c-options-menu__toggle--m-plain--Color);
+    }
 
     &::before {
       border-color: var(--pf-c-options-menu__toggle--m-plain--BorderColor);

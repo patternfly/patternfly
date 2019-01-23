@@ -1,0 +1,19 @@
+{{#> options-menu id="options-menu-single-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+    <span class="pf-c-options-menu__toggle-text">
+      1-10 of 25 Items
+    </span>
+    {{> options-menu-toggle-button aria-label="Select"}}
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-single-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+    <span class="pf-c-options-menu__toggle-text">
+      1-10 of 25 Items
+    </span>
+    {{> options-menu-toggle-button aria-label="Select"}}
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}

@@ -5,10 +5,12 @@ import OptionsMenuSingleExampleRaw from '!raw!./options-menu-single-example.hbs'
 import OptionsMenuMultipleExampleRaw from '!raw!./options-menu-multiple-example.hbs';
 import OptionsMenuTopExampleRaw from '!raw!./options-menu-top-example.hbs';
 import OptionsMenuAlignRightExampleRaw from '!raw!./options-menu-align-right-example.hbs';
+import OptionsMenuPlainTextExampleRaw from '!raw!./options-menu-plain-text-example.hbs';
 import OptionsMenuSingleExample from './options-menu-single-example.hbs';
 import OptionsMenuMultipleExample from './options-menu-multiple-example.hbs';
 import OptionsMenuTopExample from './options-menu-top-example.hbs';
 import OptionsMenuAlignRightExample from './options-menu-align-right-example.hbs';
+import OptionsMenuPlainTextExample from './options-menu-plain-text-example.hbs';
 import docs from '../docs/code.md';
 import '../options-menu.scss';
 
@@ -19,6 +21,7 @@ export default () => {
   const optionsMenuMultipleExample = OptionsMenuMultipleExample();
   const optionsMenuTopExample = OptionsMenuTopExample();
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
+  const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
 
   return (
     <Documentation docs={Docs}>
@@ -41,6 +44,13 @@ export default () => {
         handlebars={OptionsMenuAlignRightExampleRaw}
       >
         {optionsMenuAlignRightExample}
+      </Example>
+      <Example
+        heading="Options Menu - Plain with text"
+        className="is-expanded-dropdown"
+        handlebars={OptionsMenuPlainTextExampleRaw}
+      >
+        {optionsMenuPlainTextExample}
       </Example>
     </Documentation>
   );
