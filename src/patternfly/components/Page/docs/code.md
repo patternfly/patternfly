@@ -8,6 +8,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | -- | -- | -- |
 | `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
 | `role="main"` | `.pf-c-page__main` | Identifies the element that serves as the main region. **Required** |
+| `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
 
 ## Usage
 
