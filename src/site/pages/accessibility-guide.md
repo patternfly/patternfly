@@ -141,6 +141,13 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
       ```
 
 
+### Trapping Focus
+The recommended interaction pattern for the modal components like the Modal or Popover is to trap focus within the modal element of the component when it becomes visible. For keyboard-only users that use the Tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the Tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. For screen reader users, the other contents on the page should be hidden from the screen reader. 
+
+The method we recommend <a href="#testing">based on the screen reader / browser combinations we use for testing</a> is to apply `aria-hidden="true"` to the parent wrapping element of the page contents. Note that the modal element of the component must not be a descendent of this element with aria-hidden="true" and should be included as a sibling to this element.
+
+
+
 ## Testing
 Many accessibility issues can be found by doing a few simple checks:
 1. Use an accessibility audit tool to check for violations. If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. If you are contributing to PatternFly, refer to our [README.md](https://github.com/patternfly/patternfly-next/blob/master/README.md#testing-for-accessibility) on how to run this tool.
