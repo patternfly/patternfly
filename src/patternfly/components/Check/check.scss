@@ -29,7 +29,10 @@
 
 .pf-c-check__label,
 .pf-c-check__input {
-  cursor: pointer;
+  @at-root label.pf-c-check,
+  &, {
+    cursor: pointer;
+  }
 
   &:disabled,
   &.pf-m-disabled {
