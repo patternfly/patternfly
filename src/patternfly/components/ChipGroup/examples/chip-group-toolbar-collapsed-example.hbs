@@ -1,9 +1,9 @@
 {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-collapsed"}}
-  {{#> chip-group-list-item}}
+  {{#> chip-group-list-item }}
     {{#> chip-group-label}}
       Category One
     {{/chip-group-label}}
-    {{#> chip-group}}
+    {{#> chip-group newcontext}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one"')}}
           Chip One
@@ -46,3 +46,4 @@
     {{/chip-text}}
   {{/button}}
 {{/chip}}
+
