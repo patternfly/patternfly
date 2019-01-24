@@ -3,11 +3,11 @@
 .pf-c-chip-group {
   @extend %pf-t-light; // force the container follow the light theme
 
-  --pf-c-chip-group--PaddingTop: calc(#{var(--pf-global--spacer--xs)} / 2);
-  --pf-c-chip-group--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--PaddingBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
-  --pf-c-chip-group--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-chip-group--m-toolbar-PaddingTop: calc(#{var(--pf-global--spacer--xs)} / 2);
+  --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-toolbar-PaddingBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
+  --pf-c-chip-group--m-toolbar-PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-toolbar-BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-chip-group__li--MarginRight: var(--pf-global--spacer--sm);
 
@@ -18,9 +18,9 @@
   --pf-c-chip-group__label--Maxwidth: #{pf-size-prem(120px)};
 
   // Chip
-  --pf-c-chip--MarginTop: calc(#{var(--pf-global--spacer--xs)} / 2);
-  --pf-c-chip--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-chip--MarginBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
+  --pf-c-chip-group--c-chip--MarginTop: calc(#{var(--pf-global--spacer--xs)} / 2);
+  --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--c-chip--MarginBottom: calc(#{var(--pf-global--spacer--xs)} / 2);
 
   display: inline-flex;
   flex-wrap: wrap;
@@ -28,19 +28,19 @@
 
 
   &.pf-m-toolbar {
-    > li {
-      padding: var(--pf-c-chip-group--PaddingTop) var(--pf-c-chip-group--PaddingRight) var(--pf-c-chip-group--PaddingBottom) var(--pf-c-chip-group--PaddingLeft);
+    & > li {
+      padding: var(--pf-c-chip-group--m-toolbar-PaddingTop) var(--pf-c-chip-group--m-toolbar-PaddingRight) var(--pf-c-chip-group--m-toolbar-PaddingBottom) var(--pf-c-chip-group--m-toolbar-PaddingLeft);
       background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
-      border-radius: var(--pf-c-chip-group--BorderRadius);
+      border-radius: var(--pf-c-chip-group--m-toolbar-BorderRadius);
 
       .pf-c-chip-group__label,
       .pf-c-chip {
-        margin-top: var(--pf-c-chip--MarginTop);
-        margin-bottom: var(--pf-c-chip--MarginBottom);
+        margin-top: var(--pf-c-chip-group--c-chip--m-toolbar--MarginTop);
+        margin-bottom: var(--pf-c-chip-group--c-chip--m-toolbar--MarginBottom);
       }
 
       &:not(:last-child) {
-        margin-right: var(--pf-c-chip-group__li--MarginRight);
+        margin-right: var(--pf-c-chip-group__li--m-toolbar--MarginRight);
       }
     }
   }
@@ -58,7 +58,7 @@
 
   .pf-c-chip {
     &:not(:last-child):not(:only-child) {
-      margin-right: var(--pf-c-chip--MarginRight);
+      margin-right: var(--pf-c-chip-group--c-chip--MarginRight);
     }
   }
 }
