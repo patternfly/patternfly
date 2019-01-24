@@ -15,10 +15,10 @@
 
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
-      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+      {{> button-icon button-icon--type="angle-double-left"}}
     {{/button}}
     {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
-      <i class="fas fa-angle-left" aria-hidden="true"></i>
+      {{> button-icon button-icon--type="angle-left"}}
     {{/button}}
 
     {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
@@ -27,10 +27,10 @@
     {{/pagination-nav-page-select}}
 
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-      <i class="fas fa-angle-right" aria-hidden="true"></i>
+      {{> button-icon button-icon--type="angle-right"}}
     {{/button}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
-      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+      {{> button-icon button-icon--type="angle-double-right"}}
     {{/button}}
   {{/pagination-nav}}
 {{/pagination}}

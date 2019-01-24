@@ -6,7 +6,6 @@
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
 
   // Dropdown
-  --pf-c-pagination--c-dropdown__toggle--Color: var(--pf-global--Color--100);
   --pf-c-pagination__menu-text--Color: var(--pf-global--Color--200);
 
   // Nav
@@ -47,10 +46,6 @@
         display: flex;
       }
     }
-  }
-
-  .pf-c-options-menu__toggle {
-    color: var(--pf-c-pagination--c-dropdown__toggle--Color);
   }
 }
 
