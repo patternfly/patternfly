@@ -16,7 +16,7 @@ The content component defines margin on headers. To regain the same spacing use 
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. |
+| `.pf-c-title` | `*` |  Initiates a title. Always use it with a modifier class. |
 | `.pf-m-4xl` | `.pf-c-title` | Modifies for 4xl size |
 | `.pf-m-3xl` | `.pf-c-title` | Modifies for 3xl size |
 | `.pf-m-2xl` | `.pf-c-title` | Modifies for 2xl size |
