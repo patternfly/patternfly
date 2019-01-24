@@ -59,7 +59,7 @@
 .pf-c-toolbar__filter-toggle {
   --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__filter-toggle--MarginLeft);
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: none;
   }
 }
@@ -71,7 +71,7 @@
   margin-top: var(--pf-c-toolbar__filter--MarginTop);
   margin-left: var(--pf-c-toolbar__filter--MarginLeft);
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (max-width: $pf-global--breakpoint--lg) {
     display: none;
 
     &.pf-m-expanded {
@@ -79,7 +79,7 @@
     }
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-toolbar__filter--MarginTop: 0;
     --pf-c-toolbar__filter--MarginBottom: 0;
 
@@ -107,7 +107,7 @@
 .pf-c-toolbar__action-group {
   display: none;
 
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
     display: flex;
   }
 

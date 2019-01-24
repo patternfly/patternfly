@@ -7,7 +7,10 @@
     <i class="fas fa-filter"></i>
   {{/dropdown}}
   {{#> input-group input-group--modifier="pf-c-toolbar__filter pf-m-expanded"}}
-    {{#> select id="toolbar-expanded-select-single"}}<i class="fas fa-filter" aria-hidden="true"></i> Name{{/select}}
+    {{#> select id="toolbar-expanded-select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true"}}
+      <i class="fas fa-filter" aria-hidden="true"></i>
+      Filter by status
+    {{/select}}
     {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="toolbar-expanded-dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-tertiary" button--attribute='id="toolbar-expanded-dropdown-simple-textAreaButton2"'}}
