@@ -17,7 +17,8 @@ Since accessibility is best achieved when considered early in the design and dev
 
 ## Understanding Users’ Needs
 
-Great user experiences don’t just happen; they’re designed, tested, and refined with the user in mind. To develop inclusive products, it’s important to understand the varying needs of a wide range of users and consider the assistive tools and methods they use. This section provides information to help you better understand and address the needs of these [different user groups](https://a11yproject.com/posts/myth-accessibility-m-blind-people/).
+Great user experiences don’t just happen; they’re designed, tested, and refined with the user in mind. To develop inclusive products, it’s important to understand the varying needs of a wide range of users and consider the assistive tools and methods they use. This section provides information to help you better understand and address the needs of these [different user groups]
+(https://a11yproject.com/posts/myth-accessibility-m-blind-people/).
 
 Note: It’s possible for a user to fall into more than one group, or to use tools and devices designed for a different user group. One of the greatest benefits of an inclusive design practice is that methods designed for a specific user group will often provide benefits to everyone.
 
@@ -127,13 +128,13 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
       ```
       - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the Alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
       ```html
-      <div class="pf-c-alert pf-m-success" aria-label="Success Notification">
+      <div class="pf-c-alert pf-m-success" aria-label="Success Alert">
         <div aria-hidden="true" class="pf-c-alert__icon">
           <i class="fas fa-check-circle"></i>
         </div>
         <div class="pf-c-alert__body">
           <h4 class="pf-c-alert__title">
-            {{#> screen-reader}}Success:{{/screen-reader}} Success notification title
+            {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
           </h4>
         </div>
       </div>

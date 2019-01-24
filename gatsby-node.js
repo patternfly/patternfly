@@ -1,25 +1,9 @@
 const path = require('path');
-const fs = require('fs-extra');
 const inflection = require('inflection');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const resolveAliases = require('./build/resolveAliases');
-
-const COMPONENTS_PATH = path.resolve(__dirname, './src/patternfly/components');
-const DEMOS_PATH = path.resolve(__dirname, './src/patternfly/demos');
-const LAYOUTS_PATH = path.resolve(__dirname, './src/patternfly/layouts');
-const UTILITIES_PATH = path.resolve(__dirname, './src/patternfly/utilities');
-const UPGRADE_PATH = path.resolve(__dirname, './src/patternfly/upgrade-examples');
-
-const COMPONENT_PATHS = fs.readdirSync(COMPONENTS_PATH).map(name => path.resolve(COMPONENTS_PATH, `./${name}`));
-
-const DEMO_PATH = fs.readdirSync(DEMOS_PATH).map(name => path.resolve(DEMOS_PATH, `./${name}`));
-
-const LAYOUT_PATHS = fs.readdirSync(LAYOUTS_PATH).map(name => path.resolve(LAYOUTS_PATH, `./${name}`));
-
-const UTILITIES_PATHS = fs.readdirSync(UTILITIES_PATH).map(name => path.resolve(UTILITIES_PATH, `./${name}`));
-
-const UPGRADES_PATHS = fs.readdirSync(UPGRADE_PATH).map(name => path.resolve(UPGRADE_PATH, `./${name}`));
+const glob = require('glob');
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
@@ -171,7 +155,9 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
+let partialsToLocationsMap = null;
+
+const continueWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
@@ -182,10 +168,15 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
         {
           test: /\.hbs$/,
           query: {
-            partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
-              .concat(DEMO_PATH)
-              .concat(UTILITIES_PATHS)
-              .concat(UPGRADES_PATHS),
+            extensions: '.hbs',
+            partialResolver(partial, callback) {
+              if (partialsToLocationsMap[partial]) {
+                callback(null, partialsToLocationsMap[partial]);
+              } else {
+                console.log(`Could not find partial: ${partial}`);
+                callback(new Error(`Could not find partial: ${partial}`), '');
+              }
+            },
             helperDirs: path.resolve(__dirname, './build/helpers')
           },
           loader: 'handlebars-loader'
@@ -214,3 +205,22 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     ]
   });
 };
+
+exports.onCreateWebpackConfig = ({ stage, actions }) =>
+  new Promise((resolve, reject) => {
+    if (partialsToLocationsMap === null) {
+      partialsToLocationsMap = {};
+      glob(path.resolve(__dirname, './src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
+        files.forEach(file => {
+          const fileNameArr = file.split('/');
+          const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
+          partialsToLocationsMap[fileName] = file;
+        });
+        continueWebpackConfig({ stage, actions });
+        resolve();
+      });
+    } else {
+      continueWebpackConfig({ stage, actions });
+      resolve();
+    }
+  });

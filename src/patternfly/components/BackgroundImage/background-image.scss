@@ -7,7 +7,7 @@
   --pf-c-background-image--BackgroundImage--sm: url("#{$pf-global--image-path}/pfbg_768.jpg");
   --pf-c-background-image--BackgroundImage--sm-2x: url("#{$pf-global--image-path}/pfbg_768@2x.jpg");
   --pf-c-background-image--BackgroundImage--lg: url("#{$pf-global--image-path}/pfbg_2000.jpg");
-  --pf-c-background-image--Filter: url("#{$pf-global--image-path}/background-filter.svg#image_overlay");
+  --pf-c-background-image--Filter: url("#image_overlay");
 
   &::before {
     position: fixed;
@@ -43,4 +43,8 @@
     }
     /* stylelint-enable */
   }
+}
+
+.pf-c-background-image__filter {
+  display: block;
 }

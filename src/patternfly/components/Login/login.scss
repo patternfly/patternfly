@@ -3,63 +3,99 @@
 .pf-c-login {
   --pf-c-login--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-login--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-login__container--xl--GridColumnGap: var(--pf-global--spacer--3xl);
+  --pf-c-login--xl--BackgroundImage: linear-gradient(to right, var(--pf-global--BackgroundColor--dark-transparent-200), var(--pf-global--BackgroundColor--dark-transparent-200) calc((98px - var(--pf-c-login__container--xl--GridColumnGap)) + var(--pf-c-login__container--xl--GridColumnGap) + 272px), transparent calc((98px - var(--pf-c-login__container--xl--GridColumnGap)) + var(--pf-c-login__container--xl--GridColumnGap) + 272px)); // unique to the login layout
 
-  // This is a magic number to prevent the login layout grow more than what's defined in the specs.
-  --pf-c-login__container--MaxWidth: #{pf-size-prem(500px)};
+  // container
+  --pf-c-login__container--xl--GridColumnGap: var(--pf-global--spacer--3xl);
+  --pf-c-login__container--MaxWidth: #{pf-size-prem(500px)}; // This is a magic number to prevent the login layout grow more than what's defined in the specs.
+  --pf-c-login__container--xl--MaxWidth: none;
   --pf-c-login__container--PaddingLeft: #{pf-size-prem(98px)};
   --pf-c-login__container--PaddingRight: #{pf-size-prem(98px)};
+  --pf-c-login__container--xl--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)}); // unique to the login layout
 
-  // These next 2 variables are full of magic numbers, they are unique to the login layout
-  --pf-c-login__container--xl--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)});
-  --pf-c-login--xl--BackgroundImage: linear-gradient(to right, var(--pf-global--BackgroundColor--dark-transparent-200), var(--pf-global--BackgroundColor--dark-transparent-200) calc((98px - var(--pf-c-login__container--xl--GridColumnGap)) + var(--pf-c-login__container--xl--GridColumnGap) + 272px), transparent calc((98px - var(--pf-c-login__container--xl--GridColumnGap)) + var(--pf-c-login__container--xl--GridColumnGap) + 272px));
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__container--MaxWidth: var(--pf-c-login__container--xl--MaxWidth);
+  }
+
+  // header
   --pf-c-login__header--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-login__header--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__header--sm--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-login__header--xl--MarginBottom: var(--pf-global--spacer--2xl);
   --pf-c-login__header--xl--MarginTop: var(--pf-global--spacer--3xl);
-  --pf-c-login__header-brand--MarginBottom: var(--pf-global--spacer--lg);
-  --pf-c-login__header-brand--xl--MarginBottom: var(--pf-global--spacer--2xl);
-  --pf-c-login__main--xl--MarginBottom: var(--pf-global--spacer--lg);
-  --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-login__footer-link--Color: var(--pf-global--Color--light-100);
+  --pf-c-login__header--c-brand--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-c-login__header--c-brand--xl--MarginBottom: var(--pf-global--spacer--2xl);
 
-  // Login Box
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__header--MarginBottom: var(--pf-c-login__header--xl--MarginBottom);
+    --pf-c-login__header--c-brand--MarginBottom: var(--pf-c-login__header--c-brand--xl--MarginBottom);
+  }
+
+  // main
   --pf-c-login__main--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-login__main--xl--MarginBottom: var(--pf-global--spacer--lg);
 
-  // Login box Header variables
+  // main header
   --pf-c-login__main-header--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-header--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-header--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-login__main-header--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-login__main-header--PaddingLeft: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-header--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-login__main-header--md--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-header--md--PaddingLeft: var(--pf-global--spacer--2xl);
   --pf-c-login__main-header--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-login__main-header--RowGap: var(--pf-global--spacer--sm);
 
-  // Login box Body variables
-  --pf-c-login__main-body--PaddingRight: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-body--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-login__main-body-form-group--m-action--GridGap: var(--pf-global--spacer--lg);
-  --pf-c-login__main-body-form-group--m-action__button--PaddingX: var(--pf-global--spacer--xl);
-
-  // Login box Footer variables
-  --pf-c-login__main-footer--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-login__main-footer--PaddingRight: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-footer--PaddingBottom: var(--pf-global--spacer--3xl);
-  --pf-c-login__main-footer--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-footer-title--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-login__main-footer-link--PaddingX: var(--pf-global--spacer--sm);
-  --pf-c-login__main-footer-link--GridGap: var(--pf-global--spacer--sm);
-  --pf-c-login__main-footer-link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-login__main-footer-link--hover--Color: var(--pf-global--Color--dark-200);
-  --pf-c-login__main-footer-grid--GridGap: var(--pf-global--gutter);
-  --pf-c-login__main-footer-grid--GridTemplateColumns: repeat(5, 1fr);
-  --pf-c-login__main-footer-grid--md--GridTemplateColumns: repeat(auto-fit, minmax(100px, 1fr));
 
   @media (min-width: $pf-global--breakpoint--md) {
-    --pf-c-login__main-footer-grid--GridTemplateColumns: var(--pf-c-login__main-footer-grid--md--GridTemplateColumns);
+    --pf-c-login__main-header--PaddingRight: var(--pf-c-login__main-header--md--PaddingRight);
+    --pf-c-login__main-header--PaddingLeft: var(--pf-c-login__main-header--md--PaddingLeft);
+  }
+
+  // main body
+  --pf-c-login__main-body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-login__main-body--md--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-body--md--PaddingLeft: var(--pf-global--spacer--2xl);
+  --pf-c-login__main-body--c-form__helper-text-icon--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-login__main-body--c-form__helper-text-icon--MarginRight: var(--pf-global--spacer--sm);
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    --pf-c-login__main-body--PaddingRight: var(--pf-c-login__main-body--md--PaddingRight);
+    --pf-c-login__main-body--PaddingLeft: var(--pf-c-login__main-body--md--PaddingLeft);
+  }
+
+  // main footer
+  --pf-c-login__main-footer--PaddingBottom: var(--pf-global--spacer--3xl);
+  --pf-c-login__main-footer--c-title--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-links--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-login__main-footer-links--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-login__main-footer-links--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-login__main-footer-links--PaddingLeft: var(--pf-global--spacer--3xl);
+  --pf-c-login__main-footer-links--MarginBottom: calc(var(--pf-c-login__main-footer-links--MarginBottom) * -1);
+  --pf-c-login__main-footer-links-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-links-item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-links-item--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-login__main-footer-links-item-link-svg--Fill: var(--pf-global--icon--Color--light);
+  --pf-c-login__main-footer-links-item-link-svg--Width: var(--pf-global--icon--FontSize--lg);
+  --pf-c-login__main-footer-links-item-link-svg--Height: var(--pf-global--icon--FontSize--lg);
+  --pf-c-login__main-footer-links-item-link-svg--hover--Fill: var(--pf-global--icon--Color--dark);
+  --pf-c-login__main-footer-band--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-login__main-footer-band--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-band--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-login__main-footer-band--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__main-footer-band--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-login__main-footer-band--Color: var(--pf-global--Color--300);
+  --pf-c-login__main-footer-band-item--PaddingTop: var(--pf-global--spacer--md);
+
+  // footer
+  --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__footer--c-list--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-login__footer--c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__footer--c-list--PaddingTop: var(--pf-c-login__footer--c-list--xl--PaddingTop);
   }
 
   display: flex;
@@ -92,7 +128,6 @@
       "main header"
       "main footer"
       "main .";
-    max-width: none;
     padding-right: var(--pf-c-login__container--PaddingRight);
     padding-left: var(--pf-c-login__container--PaddingLeft);
   }
@@ -100,7 +135,6 @@
 
 .pf-c-login__header {
   grid-area: header;
-  margin-bottom: var(--pf-c-login__header--MarginBottom);
 
   @media (max-width: $pf-global--breakpoint--sm) {
     padding-right: var(--pf-c-login__header--sm--PaddingRight);
@@ -109,15 +143,10 @@
 
   @media (min-width: $pf-global--breakpoint--xl) {
     margin-top: var(--pf-c-login__header--xl--MarginTop);
-    margin-bottom: var(--pf-c-login__header--xl--MarginBottom);
   }
 
   .pf-c-brand {
-    margin-bottom: var(--pf-c-login__header-brand--MarginBottom);
-
-    @media (min-width: $pf-global--breakpoint--xl) {
-      margin-bottom: var(--pf-c-login__header-brand--xl--MarginBottom);
-    }
+    margin-bottom: var(--pf-c-login__header--c-brand--MarginBottom);
   }
 }
 
@@ -146,87 +175,93 @@
 
 .pf-c-login__main-header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   column-gap: var(--pf-c-login__main-header--ColumnGap);
   row-gap: var(--pf-c-login__main-header--RowGap);
   align-items: center;
-  padding-top: var(--pf-c-login__main-header--PaddingTop);
-  padding-right: var(--pf-c-login__main-header--PaddingRight);
-  padding-bottom: var(--pf-c-login__main-header--PaddingBottom);
-  padding-left: var(--pf-c-login__main-header--PaddingLeft);
+  padding: var(--pf-c-login__main-header--PaddingTop) var(--pf-c-login__main-header--PaddingRight) var(--pf-c-login__main-header--PaddingBottom) var(--pf-c-login__main-header--PaddingLeft);
 
   .pf-c-title {
-    grid-column: -1 / 1;
+    @media (max-width: $pf-global--breakpoint--md) {
+      grid-column: -1 / 1;
+    }
   }
 }
 
 .pf-c-login__main-body {
-  padding-top: var(--pf-c-login__main-body--PaddingTop);
   padding-right: var(--pf-c-login__main-body--PaddingRight);
   padding-bottom: var(--pf-c-login__main-body--PaddingBottom);
   padding-left: var(--pf-c-login__main-body--PaddingLeft);
 
-  .pf-c-form__group.pf-m-action {
-    display: grid;
-    justify-items: center;
-    grid-gap: var(--pf-c-login__main-body-form-group--m-action--GridGap);
+  // the form helper text is always present but visually hidden to provide proper spacing if the error is shown.
+  .pf-c-form__helper-text {
+    display: flex;
+    align-items: center;
 
-    @media (min-width: $pf-global--breakpoint--md) {
-      grid-template-columns: auto 1fr;
-      justify-items: start;
-    }
-
-    .pf-c-button {
-      --pf-c-button--PaddingLeft: var(--pf-c-login__main-body-form-group--m-action__button--PaddingX);
-      --pf-c-button--PaddingRight: var(--pf-c-login__main-body-form-group--m-action__button--PaddingX);
-
-      justify-self: stretch;
+    .pf-c-form__helper-text-icon {
+      margin-right: var(--pf-c-login__main-body--c-form__helper-text-icon--MarginRight);
+      font-size: var(--pf-c-login__main-body--c-form__helper-text-icon--FontSize);
     }
   }
 }
 
 .pf-c-login__main-footer {
-  padding-top: var(--pf-c-login__main-footer--PaddingTop);
-  padding-right: var(--pf-c-login__main-footer--PaddingRight);
-  padding-bottom: var(--pf-c-login__main-footer--PaddingBottom);
-  padding-left: var(--pf-c-login__main-footer--PaddingLeft);
+  display: flex;
+  flex-wrap: wrap;
 
   .pf-c-title {
-    margin-bottom: var(--pf-c-login__main-footer-title--MarginBottom);
+    margin-bottom: var(--pf-c-login__main-footer--c-title--MarginBottom);
     text-align: center;
+  }
 
-    @media (min-width: $pf-global--breakpoint--md) {
-      text-align: left;
+  > * {
+    flex-basis: 100%;
+  }
+}
+
+.pf-c-login__main-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--pf-c-login__main-footer-links--PaddingTop) var(--pf-c-login__main-footer-links--PaddingRight) var(--pf-c-login__main-footer-links--PaddingBottom) var(--pf-c-login__main-footer-links--PaddingLeft);
+  margin-bottom: var(--pf-c-login__main-footer-links--MarginBottom);
+
+  &:hover,
+  &.pf-m-hover {
+    --pf-c-login__main-footer-link--Color: var(--pf-c-login__main-footer-link--hover--Color);
+  }
+}
+
+.pf-c-login__main-footer-links-item {
+  padding-right: var(--pf-c-login__main-footer-links-item--PaddingRight);
+  padding-left: var(--pf-c-login__main-footer-links-item--PaddingLeft);
+  margin-bottom: var(--pf-c-login__main-footer-links-item--MarginBottom);
+}
+
+.pf-c-login__main-footer-links-item-link {
+  svg {
+    fill: var(--pf-c-login__main-footer-links-item-link-svg--Fill);
+    width: 100%;
+    max-width: var(--pf-c-login__main-footer-links-item-link-svg--Width);
+    height: 100%;
+    max-height: var(--pf-c-login__main-footer-links-item-link-svg--Height);
+  }
+
+  &:hover {
+    svg {
+      fill: var(--pf-c-login__main-footer-links-item-link-svg--hover--Fill);
     }
   }
 }
 
-.pf-c-login__main-footer-link {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding-top: var(--pf-c-login__main-footer-link--PaddingX);
-  padding-bottom: var(--pf-c-login__main-footer-link--PaddingX);
-  color: var(--pf-c-login__main-footer-link--Color);
+.pf-c-login__main-footer-band {
+  padding: var(--pf-c-login__main-footer-band--PaddingTop) var(--pf-c-login__main-footer-band--PaddingRight) var(--pf-c-login__main-footer-band--PaddingBottom) var(--pf-c-login__main-footer-band--PaddingLeft);
+  color: var(--pf-c-login__main-footer-band--Color);
+  text-align: center;
+  background-color: var(--pf-c-login__main-footer-band--BackgroundColor);
 
-  @media (min-width: $pf-global--breakpoint--md) {
-    grid-gap: var(--pf-c-login__main-footer-link--GridGap);
-  }
-
-  &:hover,
-  &.pf-m-hover {
-    color: var(--pf-c-login__main-footer-link--hover--Color);
-  }
-}
-
-.pf-c-login__main-footer-link-text {
-  // styles the text to be hidden from the screen but read by a screen reader.
-  @media (max-width: $pf-global--breakpoint--md) {
-    position: fixed;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  > * + * {
+    padding-top: var(--pf-c-login__main-footer-band-item--PaddingTop);
   }
 }
 
@@ -237,38 +272,10 @@
     padding-right: var(--pf-c-login__footer--sm--PaddingRight);
     padding-left: var(--pf-c-login__footer--sm--PaddingLeft);
   }
-}
 
-.pf-c-login__main-footer-grid {
-  display: grid;
-  grid-gap: var(--pf-c-login__main-footer-grid--GridGap);
-  grid-template-columns: var(--pf-c-login__main-footer-grid--GridTemplateColumns);
-
-  @media (max-width: $pf-global--breakpoint--md) {
-    justify-items: center;
-  }
-
-  @media (min-width: $pf-global--breakpoint--md) {
-    .pf-c-login__main-footer-grid-item {
-      .pf-c-button {
-        padding-left: 0;
-      }
+  .pf-c-list {
+    &:not(:only-child) { // paragraph text might not always be included.
+      padding-top: var(--pf-c-login__footer--c-list--PaddingTop);
     }
-  }
-}
-
-.pf-c-login__main-footer-grid-item {
-  &.pf-m-more {
-    @media (max-width: $pf-global--breakpoint--md) {
-      grid-column: 1 / -1;
-    }
-  }
-}
-
-.pf-c-login__footer-link {
-  &,
-  &:hover,
-  &.pf-m-hover {
-    color: var(--pf-c-login__footer-link--Color);
   }
 }

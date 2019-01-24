@@ -5,7 +5,7 @@
   --pf-c-empty-state--Padding: var(--pf-global--spacer--xl);
   --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
-  --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color);
+  --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
   --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
   --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
   --pf-c-empty-state--c-button--MarginTop: var(--pf-global--spacer--xl);
@@ -38,13 +38,6 @@
 .pf-c-empty-state__body {
   margin-top: var(--pf-c-empty-state__body--MarginTop);
   color: var(--pf-c-empty-state__body--Color);
-}
-
-.pf-c-empty-state__action {
-  display: grid;
-  margin-top: var(--pf-c-empty-state__action--MarginTop);
-  justify-items: center;
-  grid-gap: var(--pf-c-empty-state__action--GridGap);
 }
 
 .pf-c-empty-state__secondary {

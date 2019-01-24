@@ -1,0 +1,5 @@
+<button id="{{id}}-button" class="pf-c-button pf-m-plain{{#if app-launcher-toggle--modifier}} {{app-launcher-toggle--modifier}}{{/if}}"
+  aria-expanded="{{#if app-launcher--IsExpanded}}true{{else}}false{{/if}}"
+  {{#if aria-label}} aria-label="{{aria-label}}"{{/if}}>
+    {{> app-launcher-toggle-icon}}
+</button>

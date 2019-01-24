@@ -1,6 +1,7 @@
 // CSS shild against PF 3
 .pf-c-about-modal-box,
 .pf-c-alert,
+.pf-c-application-launcher,
 .pf-c-avatar,
 .pf-c-backdrop,
 .pf-c-background-image,
@@ -27,6 +28,7 @@
 .pf-c-page,
 .pf-c-popover,
 .pf-c-progress,
+.pf-c-options-menu,
 .pf-c-switch,
 .pf-c-table,
 .pf-c-tabs,
@@ -59,7 +61,7 @@
 
 // Since PF3 sets root font size to 10px, we need to unset it.
 // This doesn't affect PF3.
-// https://github.com/twbs/bootstrap/blob/v3.4.0-dev/less/scaffolding.less#L23
+// https://github.com/twbs/bootstrap/blob/v3.4.0/less/scaffolding.less#L23
 
 /* stylelint-disable */
 html {
@@ -101,6 +103,11 @@ html {
   h6 {
     padding: 0;
     margin: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
   }
 
   h1,

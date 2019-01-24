@@ -3,6 +3,7 @@ node_modules/
 test/scenario_tests/
 test/results/
 .sass-cache/
+.vscode/
 .cache/
 public/
 static/admin/*.bundle.*

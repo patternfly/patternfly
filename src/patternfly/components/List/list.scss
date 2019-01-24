@@ -1,54 +1,41 @@
 @import "../../patternfly-imports";
 
 .pf-c-list {
-  // Inline modifier variables
-  --pf-c-list--m-inline--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-list--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-list--nested--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-list--nested--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-list--ul--ListStyle: var(--pf-global--ListStyle);
+  --pf-c-list--li--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-list--m-inline--li--MarginRight: var(--pf-global--spacer--lg);
 
-  // Grid modifier variables
-  --pf-c-list--m-grid--GridGap: var(--pf-global--spacer--md);
+  padding-left: var(--pf-c-list--PaddingLeft);
 
-  // Content variables (no modifier)
-  --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--ListStyle: var(--pf-global--ListStyle);
-  --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
+  ol,
+  ul {
+    margin-top: var(--pf-c-list--nested--MarginTop);
+    margin-left: var(--pf-c-list--nested--MarginLeft);
+  }
+
+  li + li {
+    margin-top: var(--pf-c-list--li--MarginTop);
+  }
+
+  @at-root ul#{&}:not(.pf-m-inline) { // targets ul.pf-c-list that is not .pf-m-inline
+    list-style: var(--pf-c-list--ul--ListStyle);
+  }
 
   &.pf-m-inline {
+    --pf-c-list--PaddingLeft: 0;
+
     display: flex;
     flex-wrap: wrap;
 
-    & li:not(:last-child) {
-      margin-right: var(--pf-c-list--m-inline--MarginRight);
-    }
-  }
+    li {
+      --pf-c-list--li--MarginTop: 0;
 
-  &.pf-m-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: var(--pf-c-list--m-grid--GridGap);
-  }
-
-  &:not(.pf-m-grid):not(.pf-m-inline) {
-    padding-left: var(--pf-c-content--ul--PaddingLeft);
-    margin: 0;
-    margin-top: var(--pf-c-content--ul--MarginTop);
-    margin-bottom: var(--pf-c-content--MarginBottom);
-    margin-left: var(--pf-c-content--ul--MarginLeft);
-    list-style: var(--pf-c-content--ul--ListStyle);
-
-    // Sub-element type selector used to maintain consistency with the content component's list styling
-    ul {
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
-      margin-left: var(--pf-c-content--ul--nested--MarginLeft);
-    }
-
-    // Sub-element type selector used to maintain consistency with the content component's list styling
-    li + li {
-      margin-top: var(--pf-c-content--li--MarginTop);
+      &:not(:last-child) {
+        margin-right: var(--pf-c-list--m-inline--li--MarginRight);
+      }
     }
   }
 }

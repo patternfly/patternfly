@@ -54,10 +54,12 @@ $pf-global--Color--dark-200:      $pf-color-black-600 !default;
 $pf-global--active-color--100:   $pf-color-blue-400 !default;
 $pf-global--active-color--200:   $pf-color-blue-100 !default;
 $pf-global--active-color--300:   $pf-color-blue-300 !default;
+$pf-global--active-color--400:   $pf-color-blue-200 !default;
 
 // disabled
 $pf-global--disabled-color--100: $pf-color-black-600 !default;
 $pf-global--disabled-color--200: $pf-color-black-300 !default;
+$pf-global--disabled-color--300: $pf-color-black-200 !default;
 
 // Theme color
 $pf-global--primary-color--100:         $pf-color-blue-400 !default;
@@ -108,6 +110,9 @@ $pf-global--font-path: "./assets/fonts" !default;
 // Iconpath
 $fa-font-path: "./assets/fonts/webfonts" !default;
 
+// FontIcon Path
+$pf-global--fonticon-path: "./assets/pficon" !default;
+
 // Imagepath
 $pf-global--image-path: "./assets/images" !default;
 
@@ -144,6 +149,11 @@ $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
 
+// Device breakpoints
+$pf-global--breakpoint--mobile: 599px;
+$pf-global--breakpoint--tablet: 600px;
+$pf-global--breakpoint--desktop: 1200px;
+
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
 $pf-global--BorderWidth--md:     2px !default;
@@ -156,7 +166,8 @@ $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Icons
-$pf-global--icon--Color: $pf-color-black-400 !default;
+$pf-global--icon--Color--light: $pf-color-black-500 !default;
+$pf-global--icon--Color--dark: $pf-color-black-900 !default;
 $pf-global--icon--FontSize--sm: pf-font-prem(10px) !default;
 $pf-global--icon--FontSize--md: pf-font-prem(18px) !default;
 $pf-global--icon--FontSize--lg: pf-font-prem(24px) !default;
@@ -165,8 +176,8 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
-$pf-global--FontFamily--sans-serif: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$pf-global--FontFamily--monospace: “Overpass-mono”, Overpass-mono, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$pf-global--FontFamily--sans-serif: “overpass”, overpass, “open sans”, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global--FontFamily--monospace: “overpass-mono”, overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 // Font size
@@ -190,11 +201,14 @@ $pf-global--LineHeight--sm: 1.3 !default;
 $pf-global--LineHeight--md: 1.5 !default;
 
 // Links
-$pf-global--link--FontWeight:             $pf-global--FontWeight--semi-bold !default;
 $pf-global--link--Color:                  $pf-global--primary-color--100 !default;
+$pf-global--link--Color--hover:           $pf-global--primary-color--200 !default;
+$pf-global--link--Color--light:           $pf-global--active-color--300 !default;
+$pf-global--link--Color--light--hover:    $pf-global--active-color--400 !default;
+$pf-global--link--Color--dark:            $pf-global--primary-color--100 !default;
+$pf-global--link--Color--dark--hover:     $pf-global--primary-color--200 !default;
+$pf-global--link--FontWeight:             $pf-global--FontWeight--semi-bold !default;
 $pf-global--link--TextDecoration:         none !default;
-$pf-global--link--Color--hover:           darken($pf-global--primary-color--100, 15%) !default;
-$pf-global--link--Color--light-hover:     darken($pf-global--primary-color--light-100, 15%) !default;
 $pf-global--link--TextDecoration--hover:  underline !default;
 
 // List
