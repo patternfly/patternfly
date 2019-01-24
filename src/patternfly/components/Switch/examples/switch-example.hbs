@@ -1,16 +1,18 @@
-{{#> switch switch--attribute='for="switch-on-example"'}}
-  {{#> switch-input switch-input--attribute='type="checkbox" id="switch-on-example" aria-label="..." checked'}}{{/switch-input}}
+{{#> switch switch--attribute='for="on"'}}
+  {{#> switch-input id="on" switch-input--attribute='type="checkbox" checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--attribute='aria-hidden="true"'}}
-  label
-  {{/switch-label}}
+  {{#> switch-label-on switch-label-on--attribute='aria-hidden="true"'}}
+  {{/switch-label-on}}
+  {{#> switch-label-off switch-label-off--attribute='aria-hidden="true"'}}
+  {{/switch-label-off}}
 {{/switch}}
 <br/>
 <br/>
-{{#> switch switch--attribute='for="switch-off-example"'}}
-  {{#> switch-input switch-input--attribute='type="checkbox" id="switch-off-example" aria-label="..."'}}{{/switch-input}}
+{{#> switch switch--attribute='for="off"'}}
+  {{#> switch-input id="off" switch-input--attribute='type="checkbox"'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--attribute='aria-hidden="true"'}}
-  label
-  {{/switch-label}}
+  {{#> switch-label-on switch-label-on--attribute='aria-hidden="true"'}}
+  {{/switch-label-on}}
+  {{#> switch-label-off switch-label-off--attribute='aria-hidden="true"'}}
+  {{/switch-label-off}}
 {{/switch}}

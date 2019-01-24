@@ -10,7 +10,7 @@ Use checkbox if your user has to perform additional steps for changes to become 
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label="..."` | `.pf-c-switch__input` |  Indicates the action triggered by the switch. **required**  |
+| `aria-labelledby="..."` | `.pf-c-switch__input` |  Indicates the action triggered by the switch. **required**  |
 | `for` | `<label>` | Each `<label>` must have a `for` attribute that matches its input id. **Required** |
 | `id` | `<input type="checkbox">` | Each `<input>` must have an `id` attribute that matches its label's `for` value. **Required** |
 | `checked` | `.pf-c-switch__input` |  Indicates that the input is checked |
@@ -23,4 +23,5 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `.pf-c-switch` | `<label>` |  Initiates a switch. **required**  |
 | `.pf-c-switch__input` | `<input type="checkbox">` |  Hide the checkbox inside the switch. **required**  |
 | `.pf-c-switch__toggle` | `<span>` |  Initiates the toggle inside the switch. **required**  |
+| `.pf-c-switch__toggle-icon` | `<i>` | Initiates an icon inside the switch toggle. **required when the switch is used without a label** |
 | `.pf-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
