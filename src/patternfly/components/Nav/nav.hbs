@@ -1,4 +1,9 @@
 <nav class="pf-c-nav{{#if nav--modifier}} {{nav--modifier}}{{/if}}"
+  {{#if aria-label}}
+    aria-label="{{aria-label}}"
+  {{else}}
+    aria-label="Global"
+  {{/if}}
   {{#if nav--attribute}}
     {{{nav--attribute}}}
   {{/if}}>
