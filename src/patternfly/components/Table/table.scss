@@ -402,12 +402,6 @@
   border-top-width: 0;
   transition: var(--pf-c-table__expandable-row-content--Transition);
 
-  ::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    background: transparent; /* make scrollbar transparent */
-  }
-
   // Modifier on td- Expanded
   /* stylelint-disable */
   tr.pf-m-expanded & {
