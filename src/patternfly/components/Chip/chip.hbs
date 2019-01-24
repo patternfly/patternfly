@@ -1,6 +1,6 @@
-<div class="pf-c-chip{{#if chip--modifier}} {{chip--modifier}}{{/if}}"
+<{{#if chip--type}}{{chip--type}}{{else}}li{{/if}} class="pf-c-chip{{#if chip--modifier}} {{chip--modifier}}{{/if}}"
   {{#if chip--attribute}}
     {{{chip--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</div>
+</{{#if chip--type}}{{chip--type}}{{else}}li{{/if}}>
