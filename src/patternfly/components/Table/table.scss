@@ -196,11 +196,6 @@
       // add border left
       background-color: transparent;
     }
-
-    // add background color when active
-    &.pf-m-expanded > tr > :first-child::before {
-      background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
-    }
   }
   /* stylelint-enable */
 
@@ -407,6 +402,12 @@
   border-top-width: 0;
   transition: var(--pf-c-table__expandable-row-content--Transition);
 
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
+  }
+
   // Modifier on td- Expanded
   /* stylelint-disable */
   tr.pf-m-expanded & {
@@ -414,11 +415,7 @@
     --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingY);
 
     max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
-    overflow-y: auto;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
+    overflow-y: scroll;
   }
   /* stylelint-enable */
 }
