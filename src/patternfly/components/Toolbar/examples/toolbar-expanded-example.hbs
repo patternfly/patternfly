@@ -44,6 +44,7 @@
           {{#> chip}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip_one"')}}
             Stopped
+            {{#> badge badge--modifier="pf-m-read"}}8{{/badge}}
           {{/chip-text}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one ' chip-group--id 'chip_one" aria-label="Remove" id="' chip-group--id 'remove_chip_one"')}}
             {{> button-icon button-icon--type="times-circle"}}
@@ -52,6 +53,7 @@
           {{#> chip}}
             {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two"')}}
               Down
+              {{#> badge badge--modifier="pf-m-read"}}12{{/badge}}
             {{/chip-text}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two ' chip-group--id 'chip_two" aria-label="Remove" id="' chip-group--id 'remove_chip_two"')}}
               {{> button-icon button-icon--type="times-circle"}}
@@ -60,6 +62,7 @@
           {{#> chip}}
             {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three"')}}
               Needs Maintenance
+              {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
             {{/chip-text}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three ' chip-group--id 'chip_three" aria-label="Remove" id="' chip-group--id 'remove_chip_three"')}}
               {{> button-icon button-icon--type="times-circle"}}
