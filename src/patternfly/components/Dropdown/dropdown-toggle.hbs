@@ -1,17 +1,16 @@
-<button id="{{id}}-button" class="pf-c-dropdown__toggle{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}"
-  {{#if dropdown--IsSelect}}
-    aria-labelledby="{{id}}-label {{id}}-button"
-  {{else if dropdown--IsMultiSelect}}
-	  aria-labelledby="{{id}}-label {{id}}-button"
-  {{/if}}
-  aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
-  {{#if aria-label}} aria-label="{{aria-label}}"{{/if}}>
-  {{#if dropdown--HasKebabIcon}}
-    {{> kebab-icon}}
-    {{else}}
-    {{> dropdown-toggle-text}}
-  {{/if}}
+<{{# if dropdown-toggle--type}}{{dropdown-toggle--type}}{{else}}button{{/if}} class="pf-c-dropdown__toggle{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}"
+  {{#unless dropdown--isSplitButton}}
+    id="{{id}}-button"
+    aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
+  {{/unless}}
+  {{#if aria-label}}
+    aria-label="{{aria-label}}"
+  {{/if}}>
+  {{> @partial-block}}
   {{#if dropdown--HasToggleIcon}}
     {{> dropdown-toggle-icon}}
   {{/if}}
-</button>
+  {{#if dropdown--HasKebabIcon}}
+    {{> kebab-icon}}
+  {{/if}}
+</{{# if dropdown-toggle--type}}{{dropdown-toggle--type}}{{else}}button{{/if}}>
