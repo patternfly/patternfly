@@ -3,7 +3,7 @@
   {{#if select-multi--attribute}}
     {{{select-multi-attribute}}}
   {{/if}}>
-  <form class="pf-c-form">
+  <form novalidate class="pf-c-form">
   <fieldset class="pf-c-form__fieldset" aria-labelledby="{{id}}-label">
     {{#> check check--type="label" check--attribute=(concat 'for="' id '-running"') check--modifier="pf-c-select__menu-item"}}
       {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="' id '-running"')}}{{/check-input}}
