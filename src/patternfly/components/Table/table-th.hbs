@@ -5,10 +5,14 @@
     {{else if table-th--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle {{table-th--modifier}}"
     {{else if table-th--modifier}} class="{{table-th--modifier}}"
   {{/if}}
-  {{#if table-th--asc}}
-    aria-sort="ascending"
-  {{else if table-th--desc}}
-    aria-sort="descending"
+  {{#if table-th--sortable}}
+    {{#if table-th--asc}}
+      aria-sort="ascending"
+    {{else if table-th--desc}}
+      aria-sort="descending"
+    {{else}}
+      aria-sort="none"
+    {{/if}}
   {{/if}}
   {{#if table-th--data-label}}
     data-label="{{table-th--data-label}}"
