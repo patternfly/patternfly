@@ -122,7 +122,7 @@
 
   // Base
   display: grid;
-  height: 100vh;
+  height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas:
@@ -319,8 +319,7 @@
 
   &:last-of-type,
   &:only-child {
-    flex-grow: 1;
-    height: 100%; // to allow children to have height: 100% that occupy the full height
+    flex: 1 0;
   }
 
   &.pf-m-light {
