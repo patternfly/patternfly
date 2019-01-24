@@ -18,6 +18,19 @@
 {{/chip}}
 <br>
 <br>
+{{#> chip chip--type="div"}}
+  {{#> chip-text chip-text--attribute='id="chip_one"'}}
+    Chip
+  {{/chip-text}}
+  {{#> badge badge--modifier="pf-m-read"}}
+  7
+{{/badge}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+    {{> button-icon button-icon--type="times-circle"}}
+  {{/button}}
+{{/chip}}
+<br>
+<br>
 {{#> chip chip--type="div" chip--modifier="pf-m-overflow"}}
   {{#> button button--modifier="pf-m-plain"}}
     {{#> chip-text}}

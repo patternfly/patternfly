@@ -36,6 +36,9 @@
   --pf-c-chip--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-chip--c-button--FontSize: var(--pf-global--FontSize--xs);
 
+  // chip badge
+  --pf-c-chip--c-badge--MarginLeft: var(--pf-global--spacer--xs);
+
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -108,6 +111,11 @@
     padding-right: var(--pf-c-chip--c-button--PaddingRight);
     padding-left: var(--pf-c-chip--c-button--PaddingLeft);
     font-size: var(--pf-c-chip--c-button--FontSize);
+  }
+
+  // badge
+  .pf-c-badge {
+    margin-left: var(--pf-c-chip--c-badge--MarginLeft);
   }
 }
 
