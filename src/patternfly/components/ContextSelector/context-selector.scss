@@ -27,6 +27,7 @@
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-context-selector__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-context-selector__toggle-text--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-context-selector__toggle-text--MaxWidth: calc(var(--pf-c-context-selector--Width) - var(--pf-c-context-selector__toggle-icon--MarginLeft) - 30px); // hard coded last variable
 
   // Toggle Icon Arrow
   --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
@@ -48,16 +49,17 @@
   --pf-c-context-selector__menu-input--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Menu Menu Item
-  --pf-c-context-selector__menu-menu--MaxHeight: #{pf-size-prem(200px)};
+  --pf-c-context-selector__menu-list--MaxHeight: #{pf-size-prem(200px)};
 
   // Menu Item
-  --pf-c-context-selector__menu-menu-item--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__menu-menu-item--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-context-selector__menu-menu-item--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__menu-menu-item--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-context-selector__menu-menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-context-selector__menu-menu-item--disabled--Color: var(--pf-global--Color--dark-200);
-  --pf-c-context-selector__menu-menu-item--disabled--BackgroundColor: transparent;
+  --pf-c-context-selector__menu-list-item--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-list-item--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-context-selector__menu-list-item--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-list-item--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-context-selector__menu-list-item--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-context-selector__menu-list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-context-selector__menu-list-item--disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-context-selector__menu-list-item--disabled--BackgroundColor: transparent;
 
 
   position: relative;
@@ -71,7 +73,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: var(--pf-c-context-selector__toggle--MinWidth);
   min-width: 100%;
   padding: var(--pf-c-context-selector__toggle--PaddingTop) var(--pf-c-context-selector__toggle--PaddingRight) var(--pf-c-context-selector__toggle--PaddingBottom) var(--pf-c-context-selector__toggle--PaddingLeft);
   color: var(--pf-c-context-selector__toggle--Color);
@@ -125,6 +126,7 @@
   }
 
   .pf-c-context-selector__toggle-text {
+    max-width: var(--pf-c-context-selector__toggle-text--MaxWidth);
     overflow: hidden;
     font-size: var(--pf-c-context-selector__toggle-text--FontSize);
     font-weight: var(--pf-c-context-selector__toggle-text--FontWeight);
@@ -147,21 +149,23 @@
 }
 
 .pf-c-context-selector__menu-input {
+  position: relative;
   padding: var(--pf-c-context-selector__menu-input--PaddingTop) var(--pf-c-context-selector__menu-input--PaddingRight) var(--pf-c-context-selector__menu-input--PaddingBottom) var(--pf-c-context-selector__menu-input--PaddingLeft);
   border-bottom: var(--pf-c-context-selector__menu-input--BottomBorderWidth) solid var(--pf-c-context-selector__menu-input--BottomBorderColor);
 }
 
-.pf-c-context-selector__menu-menu {
-  max-height: var(--pf-c-context-selector__menu-menu--MaxHeight);
+.pf-c-context-selector__menu-list {
+  max-height: var(--pf-c-context-selector__menu-list--MaxHeight);
   overflow-y: scroll;
 }
 
-.pf-c-context-selector__menu-menu-item {
+.pf-c-context-selector__menu-list-item {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--pf-c-context-selector__menu-menu-item--PaddingTop) var(--pf-c-context-selector__menu-menu-item--PaddingRight) var(--pf-c-context-selector__menu-menu-item--PaddingBottom) var(--pf-c-context-selector__menu-menu-item--PaddingLeft);
+  padding: var(--pf-c-context-selector__menu-list-item--PaddingTop) var(--pf-c-context-selector__menu-list-item--PaddingRight) var(--pf-c-context-selector__menu-list-item--PaddingBottom) var(--pf-c-context-selector__menu-list-item--PaddingLeft);
   white-space: nowrap;
+  background-color: var(--pf-c-context-selector__menu-list-item--BackgroundColor);
   border: none;
 
   &:hover,
@@ -169,13 +173,14 @@
   &:focus,
   &.pf-m-focus {
     text-decoration: none;
-    background-color: var(--pf-c-context-selector__menu-menu-item--hover--BackgroundColor);
+
+    --pf-c-context-selector__menu-list-item--BackgroundColor: var(--pf-c-context-selector__menu-list-item--hover--BackgroundColor);
   }
 
   &:disabled,
   &.pf-m-disabled {
-    color: var(--pf-c-context-selector__menu-menu-item--disabled--Color);
+    color: var(--pf-c-context-selector__menu-list-item--disabled--Color);
     pointer-events: none;
-    background-color: var(--pf-c-context-selector__menu-menu-item--disabled--BackgroundColor);
+    background-color: var(--pf-c-context-selector__menu-list-item--disabled--BackgroundColor);
   }
 }
