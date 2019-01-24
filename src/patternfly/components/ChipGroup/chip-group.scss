@@ -3,9 +3,10 @@
 .pf-c-chip-group {
   @extend %pf-t-light; // force the container follow the light theme
 
-  --pf-c-chip-group--m-toolbar-PaddingTop: calc(#{var(--pf-global--spacer--xs)});
+  --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
+  --pf-c-chip-group--m-toolbar-PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--m-toolbar-PaddingBottom: calc(#{var(--pf-global--spacer--xs)});
+  --pf-c-chip-group--m-toolbar-PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-toolbar-PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip-group--m-toolbar-BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
@@ -21,10 +22,12 @@
 
   // Chip
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--c-chip--MarginBottom: var(--pf-global--spacer--xs);
 
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: var(--pf-c-chip-group--MarginBottom);
 
 
   &.pf-m-toolbar {
@@ -50,6 +53,8 @@
   }
 
   .pf-c-chip {
+    margin-bottom: var(--pf-c-chip-group--c-chip--MarginBottom);
+
     &:not(:last-child):not(:only-child) {
       margin-right: var(--pf-c-chip-group--c-chip--MarginRight);
     }
