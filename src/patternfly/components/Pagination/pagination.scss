@@ -17,7 +17,7 @@
   --pf-c-pagination__nav-page-select--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--child--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-pagination__nav-page-select--c-form-control--MaxWidth: #{pf-size-prem(48px)}; // custom value to show 2 numbers
+  --pf-c-pagination__nav-page-select--c-form-control--Width: #{pf-size-prem(48px)}; // custom value to show 2 numbers
 
   display: flex;
   flex-wrap: wrap;
@@ -36,8 +36,6 @@
 
   // Top pagination
   &:not(.pf-m-footer) {
-    justify-content: flex-end;
-
     .pf-c-options-menu,
     .pf-c-pagination__nav {
       display: none;
@@ -73,7 +71,7 @@
   }
 
   .pf-c-form-control {
-    width: var(--pf-c-pagination__nav-page-select--c-form-control--MaxWidth);
+    width: var(--pf-c-pagination__nav-page-select--c-form-control--Width);
   }
 }
 
