@@ -7,7 +7,7 @@ echo "### PF Icons" > $ICON_OUT
 echo "| icon name | icon | code |" >> $ICON_OUT
 echo "| --- | --- | --- |" >> $ICON_OUT
 
-grep '"' < $ICON_SRC | while read line; do
+grep ':' < $ICON_SRC | while read line; do
   CLASS=`echo $line | cut -d '"' -f2`
-  echo '|' $CLASS '| <i class="pficon pficon-'$CLASS'-icon"></i> | &lt;i class=&quot;pficon pficon-'$CLASS'-icon&quot;&gt;&lt;/i&gt;'
+  echo '|' $CLASS '| <i class="pf-icon pf-icon-'$CLASS'"></i> | &lt;i class=&quot;pf-icon pf-icon-'$CLASS'&quot;&gt;&lt;/i&gt;'
 done >> $ICON_OUT

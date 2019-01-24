@@ -25,8 +25,10 @@
   --pf-global--active-color--100: #{$pf-global--active-color--100};
   --pf-global--active-color--200: #{$pf-global--active-color--200};
   --pf-global--active-color--300: #{$pf-global--active-color--300};
+  --pf-global--active-color--400: #{$pf-global--active-color--400};
   --pf-global--disabled-color--100: #{$pf-global--disabled-color--100};
   --pf-global--disabled-color--200: #{$pf-global--disabled-color--200};
+  --pf-global--disabled-color--300: #{$pf-global--disabled-color--300};
 
   // Theme color
   --pf-global--primary-color--100: #{$pf-global--primary-color--100};
@@ -99,11 +101,14 @@
   --pf-global--breakpoint--xl: #{$pf-global--breakpoint--xl};
 
   // Links
-  --pf-global--link--FontWeight: #{$pf-global--link--FontWeight};
   --pf-global--link--Color: #{$pf-global--link--Color};
-  --pf-global--link--TextDecoration: #{$pf-global--link--TextDecoration};
   --pf-global--link--Color--hover: #{$pf-global--link--Color--hover};
-  --pf-global--link--Color--light-hover: #{$pf-global--link--Color--light-hover};
+  --pf-global--link--Color--light: #{$pf-global--link--Color--light};
+  --pf-global--link--Color--light--hover: #{$pf-global--link--Color--light--hover};
+  --pf-global--link--Color--dark: #{$pf-global--link--Color--dark};
+  --pf-global--link--Color--dark--hover: #{$pf-global--link--Color--dark--hover};
+  --pf-global--link--FontWeight: #{$pf-global--link--FontWeight};
+  --pf-global--link--TextDecoration: #{$pf-global--link--TextDecoration};
   --pf-global--link--TextDecoration--hover: #{$pf-global--link--TextDecoration--hover};
 
   // Borders

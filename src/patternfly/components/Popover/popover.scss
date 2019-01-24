@@ -1,19 +1,19 @@
 @import "../../patternfly-imports";
 
 .pf-c-popover {
-  // Component variables
-  --pf-c-popover--MinWidth: #{pf-size-prem(100px)};
-  --pf-c-popover--MaxWidth: #{pf-size-prem(300px)};
+  // Component
+  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(100px)});
+  --pf-c-popover--MaxWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
-  // Content variables
+  // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-popover__content--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-popover__content--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-popover__content--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-popover__content--PaddingLeft: var(--pf-global--spacer--xl);
 
-  // Arrow variables
+  // Arrow
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -23,24 +23,17 @@
   --pf-c-popover__arrow--m-bottom--Transform: translate(-50%, -50%) rotate(45deg);
   --pf-c-popover__arrow--m-left--Transform: translate(50%, -50%) rotate(45deg);
 
-  // Close container variables
-  --pf-c-popover__close--Top: var(--pf-global--spacer--sm);
-  --pf-c-popover__close--Right: var(--pf-global--spacer--md);
+  // Close
+  --pf-c-popover--c-button--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
+  --pf-c-popover--c-button--Right: var(--pf-global--spacer--md);
+  --pf-c-popover--c-button--sibling--PaddingRight: var(--pf-global--spacer--lg);
 
-  // Header variables
-  --pf-c-popover__header--MarginBottom: var(--pf-global--spacer--md);
+  // Header
+  --pf-c-popover--c-title--MarginBottom: var(--pf-global--spacer--lg);
 
-  // Header title variables
-  --pf-c-popover__header-title--FontSize: var(--pf-c-title--m-3xl--FontSize);
-  --pf-c-popover__header-title--FontWeight: var(--pf-c-title--m-3xl--FontWeight);
-  --pf-c-popover__header-title--LineHeight: var(--pf-c-title--m-3xl--LineHeight);
-
-  // Body variables
-  --pf-c-popover__body--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-popover__body--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-popover__body--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-popover__body--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-popover__body--MarginTop: var(--pf-global--spacer--xl);
+  // Footer
+  --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--lg);
 
   position: relative;
   min-width: var(--pf-c-popover--MinWidth);
@@ -84,6 +77,18 @@
   position: relative;
   padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
   background-color: var(--pf-c-popover__content--BackgroundColor);
+
+  // Close button
+  > .pf-c-button {
+    position: absolute;
+    top: var(--pf-c-popover--c-button--Top);
+    right: var(--pf-c-popover--c-button--Right);
+
+    // Create room for the close button
+    + * {
+      padding-right: var(--pf-c-popover--c-button--sibling--PaddingRight);
+    }
+  }
 }
 
 .pf-c-popover__arrow {
@@ -95,25 +100,17 @@
   box-shadow: var(--pf-c-popover__arrow--BoxShadow);
 }
 
-.pf-c-popover__close {
-  position: absolute;
-  top: var(--pf-c-popover__close--Top);
-  right: var(--pf-c-popover__close--Right);
-}
-
-// Header
-.pf-c-popover__header {
-  margin-bottom: var(--pf-c-popover__header--MarginBottom);
-}
-
-// Header title
-.pf-c-popover__header-title {
-  font-size: var(--pf-c-popover__header-title--FontSize);
-  font-weight: var(--pf-c-popover__header-title--FontWeight);
-  line-height: var(--pf-c-popover__header-title--LineHeight);
+.pf-c-title {
+  margin-bottom: var(--pf-c-popover--c-title--MarginBottom);
+  line-height: 1;
 }
 
 // Body
 .pf-c-popover__body {
   word-wrap: break-word;
 }
+
+.pf-c-popover__footer {
+  margin-top: var(--pf-c-popover__footer--MarginTop);
+}
+
