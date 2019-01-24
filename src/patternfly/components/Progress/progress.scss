@@ -8,7 +8,7 @@
   --pf-c-progress__bar--before--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-progress__bar--Height: var(--pf-global--spacer--md);
   --pf-c-progress__bar--BackgroundColor: var(--pf-global--BackgroundColor--light-100); // the bar always needs white under it so that the semi-transparent color shows correctly
-  --pf-c-progress__status--Color: var(--pf-global--Color--100); // the status icon default color is the default text color
+  --pf-c-progress__status-icon--Color: var(--pf-global--Color--100); // the status icon default color is the default text color
   --pf-c-progress__status-icon--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-progress__bar--before--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
   --pf-c-progress__indicator--Height: var(--pf-c-progress__bar--Height);
@@ -17,8 +17,8 @@
   // Modifier variables
   --pf-c-progress--m-danger__bar--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-progress--m-success__bar--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-progress--m-danger__status--Color: var(--pf-global--danger-color--100);
-  --pf-c-progress--m-success__status--Color: var(--pf-global--success-color--100);
+  --pf-c-progress--m-danger__status-icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-progress--m-success__status-icon--Color: var(--pf-global--success-color--100);
   --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
   --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
@@ -103,13 +103,13 @@
   // status modifiers
   &.pf-m-success { // set color variables to the success colors
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-success__bar--BackgroundColor);
-    --pf-c-progress__status--Color: var(--pf-c-progress--m-success__status--Color);
+    --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-success__status-icon--Color);
     --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-success--m-inside__measure--Color);
   }
 
   &.pf-m-danger { // set color variables to the danger colors
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-danger__bar--BackgroundColor);
-    --pf-c-progress__status--Color: var(--pf-c-progress--m-danger__status--Color);
+    --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-danger__status-icon--Color);
   }
 }
 
@@ -130,7 +130,7 @@
 // the progress__status-icon is an icon displayed always in the upper right
 .pf-c-progress__status-icon {
   margin-left: var(--pf-c-progress__status-icon--MarginLeft);
-  color: var(--pf-c-progress__status--Color);
+  color: var(--pf-c-progress__status-icon--Color);
 }
 
 // The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color
