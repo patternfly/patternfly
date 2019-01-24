@@ -1,19 +1,20 @@
 {{#> c-toolbar}}
-  {{#> dropdown id="toolbar-simple-dropdown-simple-example-collapsed" dropdown--HasToggleIcon="true" dropdown--modifier="pf-c-toobar__bulk-select"}}
-    <input type="checkbox">
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsExpanded="true" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-expanded-example-button"}}
+    {{> dropdown-toggle-check dropdown-toggle-check--id="toolbar-expanded-split-button-dropdown-expanded-example-check" aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="toolbar-expanded-split-button-dropdown-expanded-example-button"  aria-label="Select"}}
   {{/dropdown}}
-  {{#> dropdown id="toolbar-simple-dropdown-simple-example-collapsed" dropdown-toggle--modifier="pf-m-plain" dropdown--modifier="pf-c-toolbar__filter-toggle"  aria-label="Filter results"}}
+  {{#> dropdown id="toolbar-expanded-dropdown-simple-example-collapsed" dropdown-toggle--modifier="pf-m-plain" dropdown--modifier="pf-c-toolbar__filter-toggle"  aria-label="Filter results"}}
     <i class="fas fa-filter"></i>
   {{/dropdown}}
   {{#> input-group input-group--modifier="pf-c-toolbar__filter pf-m-expanded"}}
-    {{#> select id="toolbar-simple-select-single"}}<i class="fas fa-filter" aria-hidden="true"></i> Name{{/select}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="toolbar-simple-dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
+    {{#> select id="toolbar-expanded-select-single"}}<i class="fas fa-filter" aria-hidden="true"></i> Name{{/select}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="toolbar-expanded-dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
     {{/form-control}}
-    {{#> button button--modifier="pf-m-tertiary" button--attribute='id="toolbar-simple-dropdown-simple-textAreaButton2"'}}
+    {{#> button button--modifier="pf-m-tertiary" button--attribute='id="toolbar-expanded-dropdown-simple-textAreaButton2"'}}
       {{> button-icon button-icon--type="search"}}
     {{/button}}
   {{/input-group}}
-  {{#> options-menu id="toolbar-simple-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort" options-menu--IsExpanded="true"}}
+  {{#> options-menu id="toolbar-expanded-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort" options-menu--IsExpanded="true"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -27,23 +28,23 @@
       secondary
     {{/button}}
   {{/c-toolbar-action-group}}
-  {{#> dropdown id="toolbar-simple-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
+  {{#> dropdown id="toolbar-expanded-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
   <div class="pf-c-toolbar__current">17 Items</div>
   {{#> chip-group chip-group--modifier="pf-c-toolbar__filter-list pf-m-expanded"}}
     {{#> chip}}
-      {{#> chip-text chip-text--attribute='id="toolbar-simple-chip_one"'}}
+      {{#> chip-text chip-text--attribute='id="toolbar-expanded-chip_one"'}}
         Chip
       {{/chip-text}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="toolbar-simple-remove_chip_one"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="toolbar-expanded-remove_chip_one"'}}
         {{> button-icon button-icon--type="times-circle"}}
       {{/button}}
     {{/chip}}
     {{#> chip}}
-      {{#> chip-text chip-text--attribute='id="toolbar-simple-chip_one"'}}
+      {{#> chip-text chip-text--attribute='id="toolbar-expanded-chip_one"'}}
         Chip
       {{/chip-text}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="toolbar-simple-remove_chip_one"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="toolbar-expanded-remove_chip_one"'}}
         {{> button-icon button-icon--type="times-circle"}}
       {{/button}}
     {{/chip}}
