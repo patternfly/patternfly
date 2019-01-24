@@ -136,8 +136,8 @@
   &.pf-m-expanded {
     display: block;
   }
+}
 
-  > .pf-c-button {
-    margin-left: var(--pf-c-toolbar__filter-list--c-button--MarginLeft);
-  }
+.pf-c-toolbar__filter-clear {
+  margin-left: var(--pf-c-toolbar__filter-list--c-button--MarginLeft);
 }
