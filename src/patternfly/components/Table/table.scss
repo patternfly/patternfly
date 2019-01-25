@@ -111,9 +111,6 @@
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
 
-  // Modifier - Toggle
-  --pf-c-table--m-toggle--Transition: var(--pf-global--Transition);
-
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
 
@@ -261,17 +258,6 @@
 
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
-  }
-
-  // Toggle button icon
-  .pf-c-button > * {
-    transition: var(--pf-c-table--m-toggle--Transition);
-    transform: rotate(-90deg);
-  }
-
-  // Rotate toggle button icon
-  .pf-c-button.pf-m-expanded > * {
-    transform: rotate(0deg);
   }
 
   svg {
