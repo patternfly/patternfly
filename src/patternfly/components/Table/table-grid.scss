@@ -35,31 +35,32 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // Row
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingY: var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--PaddingX: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
-
-  // Setting these individually in order to update them individually
-  --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--PaddingY);
-  --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--PaddingX);
-  --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table-tr--responsive--PaddingY);
-  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--PaddingX);
-  --pf-c-table-tr--responsive--nested-table--PaddingY: var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--nested-table--PaddingX: var(--pf-global--spacer--2xl);
+  --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--2xl);
 
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table-cell-th--responsive--Padding: var(--pf-global--spacer--sm);
-  --pf-c-table-cell--responsive--PaddingX: 0;
+  --pf-c-table-cell-th--responsive--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table-cell--responsive--PaddingRight: 0;
+  --pf-c-table-cell--responsive--PaddingLeft: 0;
 
   // Compact Table
-  --pf-c-table--m-compact-tr-td--responsive--PaddingY: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-tr-td--responsive--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Expandable row content
-  --pf-c-table__expandable-row-content--responsive--PaddingX: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Table check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
@@ -124,12 +125,12 @@ $pf-c-table-xs-breakpoint: 380px;
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingX) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingX);
+      padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingRight) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingLeft);
     }
 
     // remove padding from first th to align with kebab
     th {
-      padding-top: var(--pf-c-table-cell-th--responsive--Padding);
+      padding-top: var(--pf-c-table-cell-th--responsive--PaddingTop);
     }
   }
 
@@ -144,8 +145,8 @@ $pf-c-table-xs-breakpoint: 380px;
   .pf-c-table.pf-m-compact {
     tr {
       & > * {
-        padding-top: var(--pf-c-table--m-compact-tr-td--responsive--PaddingY);
-        padding-bottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingY);
+        padding-top: var(--pf-c-table--m-compact-tr-td--responsive--PaddingTop);
+        padding-bottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingBottom);
       }
     }
   }
@@ -190,10 +191,10 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // nested tables
   .pf-c-table {
-    --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--nested-table--PaddingY);
-    --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--nested-table--PaddingX);
-    --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table-tr--responsive--nested-table--PaddingY);
-    --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--nested-table--PaddingX);
+    --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--nested-table--PaddingTop);
+    --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--nested-table--PaddingRight);
+    --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table-tr--responsive--nested-table--PaddingBottom);
+    --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--nested-table--PaddingLeft);
 
     border: 0;
 
@@ -277,8 +278,8 @@ $pf-c-table-xs-breakpoint: 380px;
     --pf-c-table-cell--responsive--PaddingLeft: 0;
     --pf-c-table-cell--PaddingRight: 0;
     --pf-c-table-cell--PaddingLeft: 0;
-    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
-    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingX);
+    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table__expandable-row-content--responsive--PaddingRight);
+    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingLeft);
 
     display: block;
     border-bottom: none;

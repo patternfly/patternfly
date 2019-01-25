@@ -22,10 +22,12 @@
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
 
   // Tr
-  --pf-c-table-thead-cell--PaddingY: var(--pf-global--spacer--md);
+  --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Td
-  --pf-c-table-tbody-cell--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-table-tbody-cell--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table-tbody-cell--PaddingBottom: var(--pf-global--spacer--xl);
 
   // Th / td shared variables
   // Padding vars must be individual as they are contextually reset
@@ -34,7 +36,8 @@
   --pf-c-table-cell--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table-cell--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-table-cell--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-table-cell--first-last-child--PaddingX: var(--pf-global--spacer--xl);
+  --pf-c-table-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-cell--first-last-child--PaddingRight: var(--pf-global--spacer--xl);
 
   // ============================================================ //
   // End non-conformant variables
@@ -47,8 +50,10 @@
   --pf-c-table__check--input--MarginTop: #{pf-size-prem(3px)};
 
   // Table cell - action
-  --pf-c-table__action--PaddingY: 0;
-  --pf-c-table__action--PaddingX: var(--pf-global--spacer--sm);
+  --pf-c-table__action--PaddingTop: 0;
+  --pf-c-table__action--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-table__action--PaddingBottom: 0;
+  --pf-c-table__action--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Expandable row
   // hardcoding to match design spec
@@ -65,37 +70,44 @@
   --pf-c-table__expandable-row-content--PaddingLeft: 0;
   --pf-c-table__expandable-row-content--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
-  --pf-c-table__expandable-row-content--m-expanded--PaddingY: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--m-expanded--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--m-expanded--PaddingBottom: var(--pf-global--spacer--xl);
 
   // Sort indicator
-  --pf-c-table__sort-indicator--MarginX: var(--pf-global--spacer--md);
+  --pf-c-table__sort-indicator--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-table__sort-indicator--Color: var(--pf-global--disabled-color--200);
   --pf-c-table__sort-indicator--hover--Color: var(--pf-global--Color--100);
   --pf-c-table__sort--c-button--Color: var(--pf-global--Color--100);
 
   // Icon inline
-  --pf-c-table__icon-inline--MarginX: var(--pf-global--spacer--sm);
+  --pf-c-table__icon-inline--MarginRight: var(--pf-global--spacer--sm);
 
   // Nested table
-  --pf-c-table--nested--first-last-child--PaddingX: var(--pf-global--spacer--3xl);
-
+  --pf-c-table--nested--first-last-child--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-table--nested--first-last-child--PaddingLeft: var(--pf-global--spacer--3xl);
 
   // ============================================================ //
   // Modifiers
   // ============================================================ //
 
   // Modifier - Compact table
-  --pf-c-table--m-compact-th--PaddingY: var(--pf-global--spacer--md);
-  --pf-c-table--m-compact-cell--PaddingY: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact-cell--PaddingX: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact-cell--first-last-child--PaddingX: var(--pf-global--spacer--xl);
+  --pf-c-table--m-compact-th--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-compact-th--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--m-compact-cell--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-cell--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-cell--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table--m-compact-cell--first-last-child--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table--m-compact--FontSize: var(--pf-global--FontSize--sm);
 
   // Modifier - Compound expansion toggle
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-table__compound-expansion-toggle--BorderX--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle--BorderX--BorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__compound-expansion-toggle--BorderRight--BorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor: var(--pf-global--BorderColor--light-200);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
 
@@ -149,12 +161,12 @@
 
     // First child padding left
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table-cell--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingLeft: var(--pf-c-table-cell--first-last-child--PaddingLeft);
     }
 
     // Last child padding right
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table-cell--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingRight: var(--pf-c-table-cell--first-last-child--PaddingRight);
     }
 
     /* stylelint-disable-next-line */
@@ -165,8 +177,8 @@
 
   // Table header cell
   thead {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingY);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingY);
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingTop);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingBottom);
     --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
 
     white-space: nowrap;
@@ -176,8 +188,8 @@
   // Table body cell
   /* stylelint-disable */
   tbody {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingY);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingY);
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingTop);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingBottom);
     --pf-c-table-cell--FontSize: var(--pf-c-table-tbody--FontSize);
 
     // Border treatment
@@ -283,7 +295,7 @@
 .pf-c-table__action {
   --pf-c-table-cell--PaddingTop: 0;
   --pf-c-table-cell--PaddingBottom: 0;
-  --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingX);
+  --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
 
   padding-top: 0;
   padding-bottom: 0;
@@ -314,8 +326,8 @@
 
     .pf-c-button::after {
       bottom: calc(var(--pf-c-table--BorderWidth) * -1);
-      border-right: var(--pf-c-table__compound-expansion-toggle--BorderX--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderX--BorderColor);
-      border-left: var(--pf-c-table__compound-expansion-toggle--BorderX--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderX--BorderColor);
+      border-right: var(--pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderRight--BorderColor);
+      border-left: var(--pf-c-table__compound-expansion-toggle--BorderLeft--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor);
     }
   }
 
@@ -357,7 +369,7 @@
 
 // Sort indicator
 .pf-c-table__sort-indicator {
-  margin-left: var(--pf-c-table__sort-indicator--MarginX);
+  margin-left: var(--pf-c-table__sort-indicator--MarginLeft);
 
   // set line-height to 1 so it does not adjust height of button
   line-height: 1;
@@ -410,8 +422,8 @@
   // Modifier on td- Expanded
   /* stylelint-disable */
   tr.pf-m-expanded & {
-    --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table__expandable-row-content--m-expanded--PaddingY);
-    --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingY);
+    --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table__expandable-row-content--m-expanded--PaddingTop);
+    --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingBottom);
 
     max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
   }
@@ -432,12 +444,12 @@
   tr > * {
     // First child padding left
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
     }
 
     // Last child padding right
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
     }
   }
 }
@@ -447,7 +459,8 @@
 .pf-c-table.pf-m-compact {
   // Thead only
   thead {
-    --pf-c-table--m-compact-cell--PaddingY: var(--pf-c-table--m-compact-th--PaddingY);
+    --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
+    --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
   }
 
   // Tbody only
@@ -456,44 +469,44 @@
     --pf-c-table--BorderColor: transparent;
 
     tr:first-child > * {
-      --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingY) * 2);
+      --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
     }
 
     tr:last-child > * {
-      --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingY) * 2);
+      --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
     }
   }
 
   tr > * {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingY);
-    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingX);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingY);
-    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingX);
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
+    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
+    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
     --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
 
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
     }
 
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
     }
   }
 
   .pf-c-table__action {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingY);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingY);
-    --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingX);
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
+    --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
   }
 
   // nested tables
   .pf-c-table & tr > * {
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
     }
 
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingX);
+      --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
     }
   }
 }
@@ -505,7 +518,7 @@
   align-items: center;
 
   > :not(:last-child) {
-    margin-right: var(--pf-c-table__icon-inline--MarginX);
+    margin-right: var(--pf-c-table__icon-inline--MarginRight);
   }
 }
 
