@@ -196,6 +196,11 @@
       // add border left
       background-color: transparent;
     }
+
+    // add background color when active
+    &.pf-m-expanded > tr > :first-child::before {
+      background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
+    }
   }
   /* stylelint-enable */
 
