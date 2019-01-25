@@ -23,7 +23,11 @@
         {{> select-checkbox-groups}}
       {{/if}}
     {{else}}
-      {{> select-checkbox}}
+      {{#if select--IsChecked}}
+        {{> select-checkbox-checked}}
+      {{else}}
+        {{> select-checkbox}}
+      {{/if}}
     {{/if}}
   {{else}}
     {{> select-single}}

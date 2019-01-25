@@ -1,4 +1,4 @@
-{{#> c-toolbar}}
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-simple-example-button"}}
     {{> dropdown-toggle-check dropdown-toggle-check--id="toolbar-filter-expanded-checked-split-button-dropdown-simple-example-check" aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="toolbar-filter-expanded-checked-split-button-dropdown-simple-example-button"  aria-label="Select"}}
@@ -9,31 +9,26 @@
       {{#> badge badge--modifier="pf-m-read"}}3{{/badge}}
     {{/button}}
   </div>
-  {{#> input-group input-group--modifier="pf-c-toolbar__filter"}}
-    {{#> select id="toolbar-filter-expanded-checked-select-checkbox" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+  <div class="pf-c-toolbar__filter">
+    {{#> select id="toolbar-filter-expanded-checked-select-checkbox" select--IsChecked="true" select--IsExpanded="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
       Status
     {{/select}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="toolbar-filter-expanded-checked-dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-tertiary" button--attribute='id="toolbar-filter-expanded-checked-dropdown-simple-textAreaButton2"'}}
-      {{> button-icon button-icon--type="search"}}
-    {{/button}}
-  {{/input-group}}
+  </div>
   {{#> options-menu id="toolbar-filter-expanded-checked-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
     {{> options-menu-multiple}}
   {{/options-menu}}
-  {{#> c-toolbar-action-group}}
+  {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
       action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
       secondary
     {{/button}}
-  {{/c-toolbar-action-group}}
+  {{/toolbar-action-group}}
   {{#> dropdown id="toolbar-filter-expanded-checked-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
   <div class="pf-c-toolbar__current">17 Items</div>
@@ -78,4 +73,4 @@
       Clear filters
     {{/button}}
   </div>
-{{/c-toolbar}}
+{{/toolbar}}
