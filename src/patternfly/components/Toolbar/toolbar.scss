@@ -9,7 +9,7 @@
   --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);
 
   // Bulk Select
-  --pf-c-toobar__bulk-select--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-toolbar__bulk-select--MarginRight: var(--pf-global--spacer--md);
 
   // Filter
   --pf-c-toolbar__filter--MarginTop: calc(var(--pf-c-toolbar--PaddingBottom) + var(--pf-global--spacer--md));
@@ -53,7 +53,7 @@
 
 // Bulk Select
 .pf-c-toolbar__bulk-select {
-  margin-right: var(--pf-c-toobar__bulk-select--MarginRight);
+  margin-right: var(--pf-c-toolbar__bulk-select--MarginRight);
 }
 
 // Filter input group

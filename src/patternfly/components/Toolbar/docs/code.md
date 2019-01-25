@@ -11,7 +11,7 @@
 | -- | -- | -- |
 | `.pf-c-toolbar` | `<div>` |  Initiates the toolbar component. **Required** |
 | `.pf-c-toolbar__bulk-select` | `.pf-c-dropdown` |  Indicates the bulk select. |
-| `.pf-c-toolbar__filter-toggle` | `.pf-c-button` |  Indicates the filter toggle button on small screens. **Required** |
+| `.pf-c-toolbar__filter-toggle` | `.pf-c-button.pf-m-plain` |  Indicates the filter toggle button on small screens. **Required** |
 | `.pf-c-toolbar__filter` | `<div>` |  Initiates the filter area. **Required** |
 | `.pf-c-toolbar__sort` | `.pf-c-options-menu` |  Initiates the options menu for sorting options. |
 | `.pf-c-toolbar__action-group` | `<div>` |  Initiates the action group. **Required. Note - at least one action is required.**|
