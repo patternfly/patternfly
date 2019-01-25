@@ -1,14 +1,10 @@
 {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      {{> button-icon button-icon--type="times"}}
-    {{/button}}
-  {{/modal-box-close}}
-  {{#> modal-box-header}}
-    {{#> modal-box-header-title  modal-box-header-title--type="h2" modal-box-header-title--attribute='id="modal-lg-title"'}}
-      Modal Header
-    {{/modal-box-header-title}}
-  {{/modal-box-header}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+    {{> button-icon button-icon--type="times"}}
+  {{/button}}
+  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
+    Modal Header
+  {{/title}}
   {{#> modal-box-body modal-box-body--attribute='id="modal-lg-description"'}}
     Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

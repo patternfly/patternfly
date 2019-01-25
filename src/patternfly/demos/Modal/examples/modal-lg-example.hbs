@@ -2,16 +2,12 @@
   {{#> backdrop}}
     {{#> bullseye}}
       {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
-        {{#> modal-box-close}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
             {{> button-icon button-icon--type="times"}}
           {{/button}}
-        {{/modal-box-close}}
-        {{#> modal-box-header}}
-          {{#> modal-box-header-title modal-box-header-title--attribute='id="modal-lg-title"'}}
-            This header text is long and will wrap. This text will be truncated when the viewport height or width is limited. To see this in action, reduce the height and/or width of the viewport.
-          {{/modal-box-header-title}}
-        {{/modal-box-header}}
+          {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
+            This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
+          {{/title}}
         {{#> modal-box-body}}
           <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
           <p>Form here</p>

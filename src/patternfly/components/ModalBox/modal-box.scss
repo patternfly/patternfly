@@ -1,53 +1,38 @@
 @import "../../patternfly-imports";
 
 .pf-c-modal-box {
-  // Component variables
-  --pf-c-modal-box--breakpoint-sm--Height: 400px;
-  --pf-c-modal-box--breakpoint-md--Height: 700px;
+  --pf-c-modal-box--breakpoint-sm--Height: #{pf-size-prem(400px)};
+  --pf-c-modal-box--breakpoint-md--Height: #{pf-size-prem(700px)};
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-modal-box--BorderColor: transparent;
+  --pf-c-modal-box--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-modal-box--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-modal-box--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-modal-box--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-modal-box--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-modal-box--LineClamp: 3;
-  --pf-c-modal-box--MaxLineClamp: 5;
   --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
-  --pf-c-modal-box--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
-  --pf-c-modal-box--lg--MaxWidth: #{pf-size-prem(1120px)};
-  --pf-c-modal-box--MinHeight: calc(var(--pf-c-modal-box__header--PaddingTop) + var(--pf-c-modal-box__header--PaddingBottom) + var(--pf-c-modal-box__body--PaddingTop) + var(--pf-c-modal-box__body--PaddingBottom) + var(--pf-c-modal-box__footer--PaddingTop) + var(--pf-c-modal-box__footer--PaddingBottom) + calc(1rem * 4 * var(--pf-global--LineHeight--md))); // MinHeight is based on all the spacers we know we have, plus some LineHeight to make some space for at least one line of content in each section
+  --pf-c-modal-box--MaxWidth: calc(100% - var(pf-global--spacer--xl)); // Create space between the browser width and modal width
+  --pf-c-modal-box--sm--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(560px)});
+  --pf-c-modal-box--lg--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(1120px)});
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
-  --pf-c-modal-box--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-modal-box--MarginLeft: var(--pf-c-modal-box--MarginRight);
 
-  // Box Header variables
-  --pf-c-modal-box__close--Top: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__close--Right: var(--pf-global--spacer--md);
+  // Body
+  --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
+  --pf-c-modal-box--body--MaxHeight: #{pf-size-prem(360px)};
+  --pf-c-modal-box--c-title--body--PaddingTop: var(--pf-global--spacer--md);
 
-  // Box Header variables
-  --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__header--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__header--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__header--PaddingLeft: var(--pf-global--spacer--xl);
+  // Close
+  --pf-c-modal-box--c-button--Top: calc(var(--pf-c-modal-box--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
+  --pf-c-modal-box--c-button--Right: var(--pf-global--spacer--md);
+  --pf-c-modal-box--c-button--sibling--MarginRight: var(--pf-global--spacer--xl);
 
-  // Box Header Title
-  --pf-c-modal-box__header-title--FontSize: var(--pf-global--FontSize--3xl);
-  --pf-c-modal-box__header-title--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-modal-box__header-title--LineHeight: var(--pf-global--LineHeight--sm);
+  // Footer
+  --pf-c-modal-box__footer--MarginTop: var(--pf-global--spacer--xl);
 
-  // Box Body variables
-  --pf-c-modal-box__body--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__body--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__body--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-modal-box__body--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__body--MarginTop: var(--pf-global--spacer--xl);
-
-  // Box Footer variables
-  --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__footer--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__footer--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-modal-box__footer--PaddingLeft: var(--pf-global--spacer--xl);
-
-  // Box Footer Button variables
-  --pf-c-modal-box__footer--ButtonSpacer: var(--pf-global--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
+  // Footer buttons
+  --pf-c-modal-box__footer--c-button--MarginRight: var(--pf-global--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
+  --pf-c-modal-box__footer--c-button--sm--MarginRight: calc(var(--pf-c-modal-box__footer--c-button--MarginRight) / 2);
 
   // This component always needs to be light
   @extend %pf-t-light;
@@ -56,9 +41,9 @@
   z-index: var(--pf-c-modal-box--ZIndex);
   display: flex;
   flex-direction: column;
-  max-width: calc(100% - var(--pf-c-modal-box--MarginLeft) - var(--pf-c-modal-box--MarginRight)); // Ensure modal has margins at breakpoint - sm
-  min-height: var(--pf-c-modal-box--MinHeight);
+  max-width: var(--pf-c-modal-box--MaxWidth);
   max-height: var(--pf-c-modal-box--MaxHeight);
+  padding: var(--pf-c-modal-box--PaddingTop) var(--pf-c-modal-box--PaddingRight) var(--pf-c-modal-box--PaddingBottom) var(--pf-c-modal-box--PaddingLeft);
   background-color: var(--pf-c-modal-box--BackgroundColor);
   border: var(--pf-c-modal-box--BorderSize) solid var(--pf-c-modal-box--BorderColor);
   box-shadow: var(--pf-c-modal-box--BoxShadow);
@@ -66,73 +51,41 @@
   // At breakpoint--sm, set max width to variable value and ignore margins
   &:not(.pf-m-lg) {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
-      max-width: var(--pf-c-modal-box--MaxWidth);
+      --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--sm--MaxWidth);
     }
   }
 
   // At breakpoint--xl, set max width to variable value and ignore margins
   &.pf-m-lg {
     @media screen and (min-width: $pf-global--breakpoint--xl) {
-      max-width: var(--pf-c-modal-box--lg--MaxWidth);
+      --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--lg--MaxWidth);
     }
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child:not(.pf-c-modal-box__footer) {
-    padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
+    padding-bottom: var(--pf-c-modal-box__footer--PaddingY);
   }
-}
 
-// Header
-.pf-c-modal-box__header {
-  flex: 0 0 auto;
-  padding: var(--pf-c-modal-box__header--PaddingTop) var(--pf-c-modal-box__header--PaddingRight) var(--pf-c-modal-box__header--PaddingBottom) var(--pf-c-modal-box__header--PaddingLeft);
-}
+  // Close button
+  > .pf-c-button {
+    position: absolute;
+    top: var(--pf-c-modal-box--c-button--Top);
+    right: var(--pf-c-modal-box--c-button--Right);
 
-// Header title
-.pf-c-modal-box__header-title {
-  font-size: var(--pf-c-modal-box__header-title--FontSize);
-  font-weight: var(--pf-c-modal-box__header-title--FontWeight);
-  line-height: var(--pf-c-modal-box__header-title--LineHeight);
-
-  // If -webkit-line-clamp is supported
-  @supports (-webkit-line-clamp: var(--pf-c-modal-box--LineClamp)) {
-    // Up to max height var(--pf-c-modal-box--breakpoint-sm--Height): reset display and set single line overflow ellipsis
-    @media screen and (max-height: var(--pf-c-modal-box--breakpoint-sm--Height)) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    // Between min height var(--pf-c-modal-box--breakpoint-sm--Height) and max height var(--pf-c-modal-box--breakpoint-md--Height): set line clamp
-    @media screen and (min-height: var(--pf-c-modal-box--breakpoint-sm--Height)) and (max-height: var(--pf-c-modal-box--breakpoint-md--Height)) {
-      /* stylelint-disable */
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-line-clamp: var(--pf-c-modal-box--MaxLineClamp);
-      line-clamp: var(--pf-c-modal-box--MaxLineClamp);
-      -webkit-box-orient: vertical;
-      /* stylelint-enable */
-    }
-
-    // Up to max width $pf-global--breakpoint--sm: limit lines to --pf-c-modal-box--MaxLineClamp
-    @media screen and (max-width: $pf-global--breakpoint--sm) and (min-height: var(--pf-c-modal-box--breakpoint-md--Height)) {
-      /* stylelint-disable */
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-line-clamp: var(--pf-c-modal-box--MaxLineClamp);
-      line-clamp: var(--pf-c-modal-box--MaxLineClamp);
-      -webkit-box-orient: vertical;
-      /* stylelint-enable */
+    + * {
+      margin-right: var(--pf-c-modal-box--c-button--sibling--MarginRight); // Create room for the close button
     }
   }
 
-  // If -webkit-line-clamp is not supported, limit text to overflow to single line
-  @supports not (-webkit-line-clamp: var(--pf-c-modal-box--LineClamp)) {
-    @media screen and (max-height: var(--pf-c-modal-box--breakpoint-sm--Height)) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+  .pf-c-title {
+    flex: 0 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    + .pf-c-modal-box__body {
+      padding-top: var(--pf-c-modal-box--c-title--body--PaddingTop);
     }
   }
 }
@@ -140,17 +93,12 @@
 // Body
 .pf-c-modal-box__body {
   flex: 1 1 auto;
-  padding: var(--pf-c-modal-box__body--PaddingTop) var(--pf-c-modal-box__body--PaddingRight) var(--pf-c-modal-box__body--PaddingBottom) var(--pf-c-modal-box__body--PaddingLeft);
-  margin-top: var(--pf-c-modal-box__body--MarginTop); // Adding margin top here for no header being present. When the header is present, margin-top is removed
+  min-height: var(--pf-c-modal-box--body--MinHeight);
+  max-height: var(--pf-c-modal-box--body--MaxHeight);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   word-break: break-word;
-}
-
-// Removing top margin when header is present
-.pf-c-modal-box__header + .pf-c-modal-box__body {
-  margin-top: 0;
 }
 
 // Footer
@@ -158,7 +106,7 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  padding: var(--pf-c-modal-box__footer--PaddingTop) var(--pf-c-modal-box__footer--PaddingRight) var(--pf-c-modal-box__footer--PaddingBottom) var(--pf-c-modal-box__footer--PaddingLeft);
+  margin-top: var(--pf-c-modal-box__footer--MarginTop);
 
   // Using margin-left instead of justify: flex-end; as there may be other elements in the footer that align left
   // Limit scope to direct child buttons, allows use of layouts if needed
@@ -168,17 +116,11 @@
 
   // Base margin left and right equal for buttons when wrapped
   > .pf-c-button:not(:last-child) {
-    margin-right: calc(var(--pf-c-modal-box__footer--ButtonSpacer) / 2);
+    margin-right: var(--pf-c-modal-box__footer--c-button--MarginRight);
 
     @media screen and (min-width: $pf-global--breakpoint--sm) {
-      margin-right: var(--pf-c-modal-box__footer--ButtonSpacer);
+      --pf-c-modal-box__footer--c-button--MarginRight: var(--pf-c-modal-box__footer--c-button--sm--MarginRight);
     }
   }
 }
 
-// Button close
-.pf-c-modal-box__close {
-  position: absolute;
-  top: var(--pf-c-modal-box__close--Top);
-  right: var(--pf-c-modal-box__close--Right);
-}
