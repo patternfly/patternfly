@@ -12,7 +12,7 @@ About modal layout.
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-about-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
 | `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required** |
 | `aria-label="Close Dialog"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
-| `aria-hidden="true"` | Parent element containing the page contents | Hides main contents of the page from screen readers. The element with .pf-c-modal-box must not be a descendent of the element with `aria-hidden="true"`. For more info see <a href="/accessibility-guide#trapping-focus">trapping focus</a> **Required** |
+| `aria-hidden="true"` | Parent element containing the page contents when the modal is open. | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see <a href="/accessibility-guide#trapping-focus">trapping focus</a> **Required** |
 
 ## Usage
 
