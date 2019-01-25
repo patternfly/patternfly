@@ -198,7 +198,7 @@
     }
 
     // add background color when active
-    &.pf-m-expanded > tr > :first-child::before:not(th) {
+    &.pf-m-expanded > tr > :not(th):first-child::before {
       background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
     }
   }
@@ -401,7 +401,7 @@
 
   // set base variables to reset later
   padding: var(--pf-c-table__expandable-row-content--PaddingTop) var(--pf-c-table__expandable-row-content--PaddingRight) var(--pf-c-table__expandable-row-content--PaddingBottom) var(--pf-c-table__expandable-row-content--PaddingLeft);
-  overflow: hidden;
+  overflow: auto;
   word-break: break-word;
   border-top-color: transparent;
   border-top-width: 0;
@@ -414,7 +414,6 @@
     --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingY);
 
     max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
-    overflow-y: scroll;
   }
   /* stylelint-enable */
 }

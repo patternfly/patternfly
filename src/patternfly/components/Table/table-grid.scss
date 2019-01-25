@@ -52,6 +52,7 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table-cell-th--responsive--Padding: var(--pf-global--spacer--sm);
   --pf-c-table-cell--responsive--PaddingX: 0;
 
   // Compact Table
@@ -124,6 +125,11 @@ $pf-c-table-xs-breakpoint: 380px;
     // Reset td padding
     & > * {
       padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingX) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingX);
+    }
+
+    // remove padding from first th to align with kebab
+    th {
+      padding-top: var(--pf-c-table-cell-th--responsive--Padding);
     }
   }
 
@@ -292,6 +298,14 @@ $pf-c-table-xs-breakpoint: 380px;
     td:first-child::before {
       // Border treatment
       display: none;
+    }
+  }
+
+  // Overflow scroll should only happen on responsive
+  .pf-c-table__expandable-row-content {
+    tr.pf-m-expanded & {
+      max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
+      overflow-y: scroll;
     }
   }
 
