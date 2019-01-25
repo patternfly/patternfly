@@ -1,12 +1,12 @@
 {{#> switch switch--attribute='for="on-disabled"'}}
   {{#> switch-input id="on-disabled" switch-input--attribute='type="checkbox" disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label}}{{/switch-label}}
+  {{#> switch-label switch-label--attribute='aria-hidden="true"'}}{{/switch-label}}
 {{/switch}}
 <br/>
 <br/>
 {{#> switch switch--attribute='for="off-disabled"'}}
   {{#> switch-input id="off-disabled" switch-input--attribute='type="checkbox" disabled'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label}}{{/switch-label}}
+  {{#> switch-label switch-label--attribute='aria-hidden="true"'}}{{/switch-label}}
 {{/switch}}
