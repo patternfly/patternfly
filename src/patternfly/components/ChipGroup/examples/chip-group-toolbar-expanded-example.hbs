@@ -5,7 +5,7 @@
   {{/chip-group-label}}
     {{#> chip-group newcontext}}
       {{#> chip}}
-      {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip_one_toolbar"')}}
+      {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
         Chip One
       {{/chip-text}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
