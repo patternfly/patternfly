@@ -1,5 +1,13 @@
 <input class="pf-c-switch__input{{#if switch-input--modifier}} {{switch-input--modifier}}{{/if}}"
+  type="checkbox"
+  id="{{id}}"
+  aria-labelledby="switch-is-{{id}}"
   {{#if switch-input--attribute}}
     {{{switch-input--attribute}}}
-  {{/if}}>
-  
+  {{/if}}
+  {{#if checked}}
+    {{{switch-label-on}}}
+  {{else}}
+    {{{switch-label-off}}}
+  {{/if}}
+>
