@@ -2,6 +2,40 @@
 // styles placed here are only meant for styling
 // the workspace or applying styles that are only
 // relevant inside of the workspace
+ 
+//This is to make the ancestors of our demo markup take up 100% height of the page
+html {
+  height: 100%;
+
+  > body {
+    height: 100%;
+
+    > div {
+      height: 100%;
+
+      > div {
+        height: 100%;
+
+        > div {
+          height: 100%;
+
+          > div {
+            height: 100%;
+
+            > div {
+              height: 100%;
+
+              > div {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .Example__documentation {
   margin: 2rem 0;
 
@@ -669,10 +703,6 @@
     &:not(:only-child) {
       margin-bottom: var(--pf-global--spacer--md);
     }
-  }
-
-  button {
-    padding: 8px 12px;
   }
 
   .num {

@@ -110,6 +110,9 @@ $pf-global--font-path: "./assets/fonts" !default;
 // Iconpath
 $fa-font-path: "./assets/fonts/webfonts" !default;
 
+// FontIcon Path
+$pf-global--fonticon-path: "./assets/pficon" !default;
+
 // Imagepath
 $pf-global--image-path: "./assets/images" !default;
 
@@ -163,7 +166,8 @@ $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Icons
-$pf-global--icon--Color: $pf-color-black-400 !default;
+$pf-global--icon--Color--light: $pf-color-black-500 !default;
+$pf-global--icon--Color--dark: $pf-color-black-900 !default;
 $pf-global--icon--FontSize--sm: pf-font-prem(10px) !default;
 $pf-global--icon--FontSize--md: pf-font-prem(18px) !default;
 $pf-global--icon--FontSize--lg: pf-font-prem(24px) !default;
@@ -226,12 +230,6 @@ $pf-global--target-size--MinHeight: 44px !default;
 // filters
 // overlay
 // animations
-
-@if $pf-global--load-pf-3 {
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
-}
 
 // Global breakpoint map - used for @pf-grid-item-modifiers
 $pf-global--breakpoint-map: (

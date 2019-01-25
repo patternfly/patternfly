@@ -5,5 +5,7 @@
   {{#if progress-description--attribute}}
     {{{progress-description--attribute}}}
   {{/if}}>
-  {{progress__description}}
+  {{#unless progress--no-description}}
+    {{progress__description}}
+  {{/unless}}
 </div>

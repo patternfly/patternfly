@@ -1,6 +1,13 @@
-// CSS shild against PF 3
+@if $pf-global--load-pf-3 {
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
+}
+
+// CSS shield against PF 3
 .pf-c-about-modal-box,
 .pf-c-alert,
+.pf-c-application-launcher,
 .pf-c-avatar,
 .pf-c-backdrop,
 .pf-c-background-image,
@@ -27,6 +34,7 @@
 .pf-c-page,
 .pf-c-popover,
 .pf-c-progress,
+.pf-c-options-menu,
 .pf-c-switch,
 .pf-c-table,
 .pf-c-tabs,
@@ -47,9 +55,8 @@
   text-rendering: optimizeLegibility;
 
   &,
-  *,
-  *::before,
-  *::after {
+  &::before,
+  &::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -101,6 +108,11 @@ html {
   h6 {
     padding: 0;
     margin: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
   }
 
   h1,

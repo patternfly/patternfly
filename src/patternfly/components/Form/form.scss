@@ -38,7 +38,7 @@
   --pf-c-form--m-inline--MarginRight: var(--pf-global--spacer--lg);
 
   // States
-  --pf-c-form--m-error--Color: var(--pf-global--danger-color--200);
+  --pf-c-form--m-error--Color: var(--pf-global--danger-color--100);
 
 
   display: grid;
@@ -121,7 +121,7 @@
   }
 
   &.pf-m-disabled {
-    color: var(--pf-c-form__label--m-disabled--Color);
+    --pf-c-form__label--Color: var(--pf-c-form__label--m-disabled--Color);
   }
 
   &.pf-m-disabled:hover {
@@ -153,6 +153,11 @@
 
   &.pf-m-inactive {
     display: none;
+  }
+
+  &.pf-m-hidden {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 

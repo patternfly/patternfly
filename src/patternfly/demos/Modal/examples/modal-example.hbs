@@ -1,23 +1,19 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
-        {{#> modal-box-close}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
-            {{> button-icon button-icon--type="times"}}
-          {{/button}}
-        {{/modal-box-close}}
-        {{#> modal-box-header}}
-          {{#> modal-box-header-title modal-box-header-title--attribute='id="modal-title"'}}
-            Overwrite existing file?
-          {{/modal-box-header-title}}
-        {{/modal-box-header}}
+      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
+          {{> button-icon button-icon--type="times"}}
+        {{/button}}
+        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
+          Overwrite existing file?
+        {{/title}}
         {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
         {{/modal-box-body}}
         {{#> modal-box-footer}}
-          {{#> button}}
+          {{#> button button--modifier="pf-m-link"}}
             Save a copy
           {{/button}}
           {{#> button button--modifier="pf-m-primary"}}

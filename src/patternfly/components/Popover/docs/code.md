@@ -12,6 +12,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-modal="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
+| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`For more info see <a href="/accessibility-guide#trapping-focus">trapping focus</a>. **Required** |
 
 
 ## Usage
