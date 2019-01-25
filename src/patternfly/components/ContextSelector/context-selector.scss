@@ -9,7 +9,6 @@
   --pf-c-context-selector__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__toggle--BackgroundColor: transparent;
   --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--light-200);
   --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
@@ -58,8 +57,8 @@
   --pf-c-context-selector__menu-list-item--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-context-selector__menu-list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-context-selector__menu-list-item--disabled--Color: var(--pf-global--Color--dark-200);
-  --pf-c-context-selector__menu-list-item--disabled--BackgroundColor: transparent;
 
+  @extend %pf-t-light;
 
   position: relative;
   display: inline-block;
@@ -77,7 +76,6 @@
   color: var(--pf-c-context-selector__toggle--Color);
   white-space: nowrap;
   cursor: pointer;
-  background-color: var(--pf-c-context-selector__toggle--BackgroundColor);
   border: none;
 
   & > * {
@@ -180,6 +178,5 @@
   &.pf-m-disabled {
     color: var(--pf-c-context-selector__menu-list-item--disabled--Color);
     pointer-events: none;
-    background-color: var(--pf-c-context-selector__menu-list-item--disabled--BackgroundColor);
   }
 }
