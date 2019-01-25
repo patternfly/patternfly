@@ -30,7 +30,7 @@
     white-space: nowrap;
   }
 
-  > *:not(:last-child):not(.pf-c-pagination__current) {
+  > *:not(:last-child):not(.pf-c-pagination__total-items) {
     margin-right: var(--pf-c-pagination--child--MarginRight);
   }
 
@@ -75,8 +75,8 @@
   }
 }
 
-// Mobile element for current items
-.pf-c-pagination__current {
+// Mobile element for total-items items
+.pf-c-pagination__total-items {
   @media screen and (min-width: $pf-global--breakpoint--md) {
     display: none;
   }

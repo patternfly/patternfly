@@ -4,7 +4,13 @@
   {{#if dropdown-menu--attribute}}
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
-  <li><button class="pf-c-dropdown__menu-item">Action</button></li>
-  <li><button class="pf-c-dropdown__menu-item" disabled>Disabled Action</button></li>
-  <li><button class="pf-c-dropdown__menu-item">Other Action</button></li>
+  {{#if dropdown--IsBulkSelect}}
+    <li><button class="pf-c-dropdown__menu-item">Select all</button></li>
+    <li><button class="pf-c-dropdown__menu-item">Select none</button></li>
+    <li><button class="pf-c-dropdown__menu-item">Other Action</button></li>
+  {{else}}
+    <li><button class="pf-c-dropdown__menu-item">Action</button></li>
+    <li><button class="pf-c-dropdown__menu-item" disabled>Disabled Action</button></li>
+    <li><button class="pf-c-dropdown__menu-item">Other Action</button></li>
+  {{/if}}
 </ul>

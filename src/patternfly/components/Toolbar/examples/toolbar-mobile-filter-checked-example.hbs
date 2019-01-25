@@ -1,0 +1,74 @@
+{{#> toolbar}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-mobile-filter-checked-split-button-dropdown-simple-example-button"}}
+    {{> dropdown-toggle-check dropdown-toggle-check--id="toolbar-mobile-filter-checked-split-button-dropdown-simple-example-check" aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="toolbar-mobile-filter-checked-split-button-dropdown-simple-example-button"  aria-label="Select"}}
+  {{/dropdown}}
+  {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" aria-label="Filter results"}}
+    {{> button-icon button-icon--type="filter"}}
+    {{#> badge badge--modifier="pf-m-read"}}3{{/badge}}
+  {{/button}}
+  {{#> toolbar-filter toolbar-filter--modifier="pf-m-expanded"}}
+    {{#> select id="toolbar-mobile-filter-checked-select-checkbox" select--IsChecked="true" select--IsExpanded="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+      <i class="fas fa-filter" aria-hidden="true"></i>
+      Status
+    {{/select}}
+  {{/toolbar-filter}}
+  {{#> options-menu id="toolbar-mobile-filter-checked-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
+    {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+      <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    {{/options-menu-toggle}}
+    {{> options-menu-multiple}}
+  {{/options-menu}}
+  {{#> toolbar-action-group}}
+    {{#> button button--modifier="pf-m-primary"}}
+      action
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      secondary
+    {{/button}}
+  {{/toolbar-action-group}}
+  {{#> dropdown id="toolbar-mobile-filter-checked-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
+  {{/dropdown}}
+  {{#> toolbar-total-items}}37 Items{{/toolbar-total-items}}
+  {{#> toolbar-filter-list toolbar-filter-list--modifier="pf-m-expanded"}}
+    {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-mobile-filter-checked-toolbar-expanded"}}
+      {{#> chip-group-list-item}}
+        {{#> chip-group-label}}
+            Status
+        {{/chip-group-label}}
+        {{#> chip-group newcontext}}
+          {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip_one"')}}
+            Stopped
+          {{/chip-text}}
+          {{#> badge badge--modifier="pf-m-read"}}18{{/badge}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one ' chip-group--id 'chip_one" aria-label="Remove" id="' chip-group--id 'remove_chip_one"')}}
+            {{> button-icon button-icon--type="times-circle"}}
+          {{/button}}
+          {{/chip}}
+          {{#> chip}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two"')}}
+              Down
+            {{/chip-text}}
+            {{#> badge badge--modifier="pf-m-read"}}12{{/badge}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two ' chip-group--id 'chip_two" aria-label="Remove" id="' chip-group--id 'remove_chip_two"')}}
+              {{> button-icon button-icon--type="times-circle"}}
+            {{/button}}
+          {{/chip}}
+          {{#> chip}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three"')}}
+              Needs Maintenance
+            {{/chip-text}}
+            {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three ' chip-group--id 'chip_three" aria-label="Remove" id="' chip-group--id 'remove_chip_three"')}}
+              {{> button-icon button-icon--type="times-circle"}}
+            {{/button}}
+          {{/chip}}
+        {{/chip-group}}
+      {{/chip-group-list-item}}
+    {{/chip-group}}
+    {{#> button button--modifier="pf-m-link pf-c-toolbar__filter-clear"}}
+      Clear filters
+    {{/button}}
+  {{/toolbar-filter-list}}
+{{/toolbar}}

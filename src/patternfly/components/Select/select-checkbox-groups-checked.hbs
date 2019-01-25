@@ -12,11 +12,11 @@
           {{#> check-label check-label--type="span"}}Running{{/check-label}}
         {{/check}}
         {{#> check  check--type="label" check--attribute=(concat 'for="' id '-stopped"') check--modifier="pf-c-select__menu-item"}}
-          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-stopped" name="stopped"')}}{{/check-input}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-stopped" name="stopped" checked')}}{{/check-input}}
           {{#> check-label check-label--type="span"}}Stopped{{/check-label}}
         {{/check}}
         {{#> check  check--type="label" check--attribute=(concat 'for="' id '-down"') check--modifier="pf-c-select__menu-item"}}
-          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-down" name="down"')}}{{/check-input}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-down" name="down" checked')}}{{/check-input}}
           {{#> check-label check-label--type="span"}}Down{{/check-label}}
         {{/check}}
         {{#> check  check--type="label" check--attribute=(concat 'for="' id '-degraded"') check--modifier="pf-c-select__menu-item"}}
@@ -24,7 +24,7 @@
           {{#> check-label check-label--type="span"}}Degraded{{/check-label}}
         {{/check}}
         {{#> check  check--type="label" check--attribute=(concat 'for="' id '-needsMaintenance"') check--modifier="pf-c-select__menu-item"}}
-          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-needsMaintenance" name="needsMaintenance"')}}{{/check-input}}
+          {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-needsMaintenance" name="needsMaintenance" checked')}}{{/check-input}}
           {{#> check-label check-label--type="span"}}Needs Maintenance{{/check-label}}
         {{/check}}
       </div>
