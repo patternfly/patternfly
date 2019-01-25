@@ -1,6 +1,7 @@
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      {{> button-icon button-icon--type="times"}}
     {{/button}}
     {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-left-header"'}}
         Popover Header

@@ -28,6 +28,7 @@
   --pf-global--active-color--400: #{$pf-global--active-color--400};
   --pf-global--disabled-color--100: #{$pf-global--disabled-color--100};
   --pf-global--disabled-color--200: #{$pf-global--disabled-color--200};
+  --pf-global--disabled-color--300: #{$pf-global--disabled-color--300};
 
   // Theme color
   --pf-global--primary-color--100: #{$pf-global--primary-color--100};
@@ -65,6 +66,9 @@
 
   // Fontpath
   --pf-global--font-path: #{$pf-global--font-path};
+
+  // FontIconPath
+  --pf-global--fonticon-path: #{$pf-global--fonticon-path};
 
   // Spacers
   --pf-global--spacer--xs: #{$pf-global--spacer--xs};
@@ -122,7 +126,8 @@
   --pf-global--BorderRadius--lg: #{$pf-global--BorderRadius--lg};
 
   // Icons
-  --pf-global--icon--Color: #{$pf-global--icon--Color};
+  --pf-global--icon--Color--light: #{$pf-global--icon--Color--light};
+  --pf-global--icon--Color--dark: #{$pf-global--icon--Color--dark};
   --pf-global--icon--FontSize--sm: #{$pf-global--icon--FontSize--sm};
   --pf-global--icon--FontSize--md: #{$pf-global--icon--FontSize--md};
   --pf-global--icon--FontSize--lg: #{$pf-global--icon--FontSize--lg};

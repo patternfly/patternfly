@@ -1,0 +1,36 @@
+{{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+  {{#> pagination-current}}
+    <b>1 - 10</b> of <b>37</b> Items
+  {{/pagination-current}}
+
+  {{#> options-menu options-menu--IsExpanded="true" id="pagination-options-menu-top-expanded-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+    {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+      <span class="pf-c-options-menu__toggle-text">
+        <b>1 - 10</b> of <b>37</b> Items
+      </span>
+      {{> options-menu-toggle-button aria-label="Select"}}
+    {{/options-menu-toggle}}
+    {{> options-menu-single}}
+  {{/options-menu}}
+
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+      {{> button-icon button-icon--type="angle-double-left"}}
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+      {{> button-icon button-icon--type="angle-left"}}
+    {{/button}}
+
+    {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+      <input class="pf-c-form-control" aria-label="Current page" type="number" min="1" max="4" size="2" value="1">
+      <span aria-hidden="true">of 4</span>
+    {{/pagination-nav-page-select}}
+
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+      {{> button-icon button-icon--type="angle-right"}}
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+      {{> button-icon button-icon--type="angle-double-right"}}
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}

@@ -17,13 +17,14 @@
   --pf-c-alert__title--Color: var(--pf-global--Color--100);
   --pf-c-alert__title--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-alert__title--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-alert__title--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-alert__title--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert__title--PaddingLeft: var(--pf-global--spacer--md);
 
   // description
   --pf-c-alert__description--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-alert__description--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert__description--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-alert__description--MarginTop: calc(-1 * var(--pf-global--spacer--sm));
 
   // action
   --pf-c-alert__action--PaddingTop: #{pf-size-prem(11px)}; // one off spacer to align properly.
@@ -106,6 +107,10 @@
   padding: var(--pf-c-alert__title--PaddingTop) var(--pf-c-alert__title--PaddingRight) var(--pf-c-alert__title--PaddingBottom)  var(--pf-c-alert__title--PaddingLeft);
   font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
+
+  & + .pf-c-alert__description {
+    margin-top: var(--pf-c-alert__description--MarginTop);
+  }
 }
 
 .pf-c-alert__description {

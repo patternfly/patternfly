@@ -76,7 +76,7 @@
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
-  --pf-c-page__sidebar--m-expanded--Transform: translate3d(-100%, 0, 0);
+  --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -122,7 +122,7 @@
 
   // Base
   display: grid;
-  height: 100vh;
+  height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas:
@@ -259,7 +259,9 @@
 
 // Sidebar
 .pf-c-page__sidebar {
-  grid-area: 2 / 1;
+  grid-area: nav;
+  grid-row-start: 2;
+  grid-column-start: 1;
   z-index: var(--pf-c-page__sidebar--ZIndex);
   width: var(--pf-c-page__sidebar--Width);
   padding-top: var(--pf-c-page__sidebar--PaddingTop);
@@ -317,7 +319,7 @@
 
   &:last-of-type,
   &:only-child {
-    flex-grow: 1;
+    flex: 1 0;
   }
 
   &.pf-m-light {

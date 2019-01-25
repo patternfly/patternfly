@@ -9,6 +9,7 @@
   ],
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
+    "./src/patternfly/assets/pficon/*.scss",
     "./build/blueprints/**/*.scss",
     "./tmp/**/*.scss",
     "./dist/**/*.scss"

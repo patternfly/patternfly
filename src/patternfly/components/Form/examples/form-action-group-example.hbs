@@ -1,20 +1,12 @@
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
-      {{#> toolbar}}
-        {{#> toolbar-group}}
-          {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-primary"}}
-              Submit form
-            {{/button}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{#> toolbar-group}}
-          {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-secondary"}}
-              Cancel
-            {{/button}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar}}
+    {{#> form-actions}}
+      {{#> button button--modifier="pf-m-primary"}}
+        Submit form
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Cancel
+      {{/button}}
+    {{/form-actions}}
   {{/form-group}}
 {{/form}}

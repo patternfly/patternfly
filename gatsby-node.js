@@ -173,7 +173,8 @@ const continueWebpackConfig = ({ stage, actions }) => {
               if (partialsToLocationsMap[partial]) {
                 callback(null, partialsToLocationsMap[partial]);
               } else {
-                throw new Error(`Could not find partial: ${partial}`);
+                console.log(`Could not find partial: ${partial}`);
+                callback(new Error(`Could not find partial: ${partial}`), '');
               }
             },
             helperDirs: path.resolve(__dirname, './build/helpers')
