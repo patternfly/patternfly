@@ -11,8 +11,10 @@
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__sort`           | `<th>`                                      | Initiates a sort table cell. **Required for sortable table columns** |
-| `.pf-m-ascending`             | `.pf-c-table__sort`                         | Modifies for sort ascending state. **Required for sortable table columns** |
-| `.pf-m-descending`            | `.pf-c-table__sort`                         | Modifies for sort descending state. **Required for sortable table columns** |
+| `.pf-m-selected`             | `.pf-c-table__sort`                          | Modifies for sort selected state. **Required for sortable table columns** |
+| `.pf-m-ascending`             | `.pf-c-table__sort`                         | Modifies for sort ascending state. **Must be used with the .pf-m-selected modifier. Required for sortable table columns** |
+| `.pf-m-descending`            | `.pf-c-table__sort`                         | Modifies for sort descending state. **Must be used with the .pf-m-selected modifier. Required for sortable table columns** |
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span`         | Initiates a sort indicator. **Required for sortable table columns** |
-| `.fa-sort`                    | `.pf-c-table__sort > button > span > .fas`  | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
-| `.fa-angle-up`                | `.pf-c-table__sort > button > span > .fas`  | Initiates icon within sorted, sortable table header. **Required for sortable table columns** |
+| `.fa-arrows-alt-v`                    | `.pf-c-table__sort > button > span > .fas`  | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
+| `.fa-long-arrow-alt-up`                | `.pf-c-table__sort > button > span > .fas`  | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
+| `.fa-long-arrow-alt-down`                | `.pf-c-table__sort > button > span > .fas`  | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |

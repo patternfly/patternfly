@@ -5,13 +5,13 @@
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
       {{/table-td}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--asc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--desc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Pull requests
       {{/table-th}}
       {{#> table-td}}{{/table-td}}
@@ -19,14 +19,14 @@
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody}}
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute='aria-labelledby="expandable-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details"'}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="expandable-node1"'}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow1" aria-labelledby="' table--id '-node1" aria-label="Details"')}}{{/check-input}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="expandable-node1">Node 1</div>
+        <div id="expandable-table-node1">Node 1</div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -38,7 +38,7 @@
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="example1action1" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action1" aria-label="Actions"')}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}
@@ -66,12 +66,12 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute='aria-labelledby="expandable-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-expanded="false"'}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="expandable-node2"'}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow2" aria-labelledby="' table--id '-node2" aria-label="Details"')}}{{/check-input}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="expandable-node2">Node 2</div>
+        <div id="expandable-table-node2">Node 2</div>
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
@@ -84,7 +84,7 @@
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="expandable-action2" aria-label="Actions"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action2" aria-label="Actions"')}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
       {{/table-td}}

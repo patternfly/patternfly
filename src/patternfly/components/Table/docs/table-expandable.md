@@ -9,10 +9,12 @@
 ### Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
+| `hidden`                                        | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
 | `aria-expanded="true"`                          | `.pf-c-table__toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
 | `aria-label="[descriptive text]"`               | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible name for toggle button. **Required**|
 | `aria-labelledby="{title_cell_id} {button_id}"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible description for toggle button. **Required** |
 | `id="{button_id}"`                              | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
+
 
 ### Usage
 
