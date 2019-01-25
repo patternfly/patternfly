@@ -1,8 +1,9 @@
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--attribute='aria-labelledby="modal-scroll-title" aria-describedby="modal-scroll-description"'}}
-        {{#> button button--modifier="pf-m-plain" button--HasTimesIcon="true" button--attribute='aria-label="Close Dialog"'}}
+      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-scroll-title" aria-describedby="modal-scroll-description"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
+          {{> button-icon button-icon--type="times"}}
         {{/button}}
         {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-scroll-title"'}}
           This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.        {{/title}}
@@ -18,7 +19,7 @@
           </p>
         {{/modal-box-body}}
         {{#> modal-box-footer}}
-          {{#> button}}
+          {{#> button button--modifier="pf-m-link"}}
             Save a copy
           {{/button}}
           {{#> button button--modifier="pf-m-primary"}}
