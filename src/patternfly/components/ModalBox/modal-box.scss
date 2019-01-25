@@ -12,9 +12,10 @@
   --pf-c-modal-box--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
-  --pf-c-modal-box--MaxWidth: calc(100% - var(pf-global--spacer--xl)); // Create space between the browser width and modal width
-  --pf-c-modal-box--sm--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(560px)});
-  --pf-c-modal-box--lg--MaxWidth: calc(var(--pf-c-modal-box--c-button--sibling--MarginRight) + #{pf-size-prem(1120px)});
+  --pf-c-modal-box--Width: 100%;
+  --pf-c-modal-box--MaxWidth: calc(100% - var(--pf-c-modal-box--MarginLeft) - var(--pf-c-modal-box--MarginRight)); // Ensure modal has gutters at full width
+  --pf-c-modal-box--m-sm--sm--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
+  --pf-c-modal-box--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
   // Body
@@ -41,6 +42,7 @@
   z-index: var(--pf-c-modal-box--ZIndex);
   display: flex;
   flex-direction: column;
+  width: var(--pf-c-modal-box--Width);
   max-width: var(--pf-c-modal-box--MaxWidth);
   max-height: var(--pf-c-modal-box--MaxHeight);
   padding: var(--pf-c-modal-box--PaddingTop) var(--pf-c-modal-box--PaddingRight) var(--pf-c-modal-box--PaddingBottom) var(--pf-c-modal-box--PaddingLeft);
@@ -49,16 +51,16 @@
   box-shadow: var(--pf-c-modal-box--BoxShadow);
 
   // At breakpoint--sm, set max width to variable value and ignore margins
-  &:not(.pf-m-lg) {
+  &.pf-m-sm {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
-      --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--sm--MaxWidth);
+      --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--m-sm--sm--MaxWidth);
     }
   }
 
   // At breakpoint--xl, set max width to variable value and ignore margins
   &.pf-m-lg {
     @media screen and (min-width: $pf-global--breakpoint--xl) {
-      --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--lg--MaxWidth);
+      --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--m-lg--lg--MaxWidth);
     }
   }
 

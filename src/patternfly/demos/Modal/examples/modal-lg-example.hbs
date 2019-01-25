@@ -2,18 +2,18 @@
   {{#> backdrop}}
     {{#> bullseye}}
       {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
-            {{> button-icon button-icon--type="times"}}
-          {{/button}}
-          {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
-            This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
-          {{/title}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close Dialog"'}}
+          {{> button-icon button-icon--type="times"}}
+        {{/button}}
+        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
+          This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
+        {{/title}}
         {{#> modal-box-body}}
           <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
           <p>Form here</p>
         {{/modal-box-body}}
         {{#> modal-box-footer}}
-          {{#> button}}
+          {{#> button button--modifier="pf-m-link"}}
             Cancel
           {{/button}}
           {{#> button button--modifier="pf-m-primary"}}
