@@ -198,7 +198,7 @@
     }
 
     // add background color when active
-    &.pf-m-expanded > tr > :first-child::before {
+    &.pf-m-expanded > tr > :first-child::before:not(th) {
       background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
     }
   }
