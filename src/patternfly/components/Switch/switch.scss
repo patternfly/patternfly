@@ -51,39 +51,45 @@
     cursor: pointer;
     opacity: 0;
 
-    ~ .pf-c-switch__label-off {
-      color: var(--pf-c-switch__input--not-checked__label--Color);
-    }
-
+    /* stylelint-disable */
     &:checked {
-      ~ .pf-c-switch__label-on {
+      ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--checked__label--Color);
+
+        &::before {
+          content: "On";
+        }
       }
 
       ~ .pf-c-switch__toggle {
         background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
 
-        /* stylelint-disable-next-line */
         &::before {
           transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
         }
       }
     }
-    /* stylelint-disable */
+
     &:not(:checked) {
+      ~ .pf-c-switch__label {
+        color: var(--pf-c-switch__input--not-checked__label--Color);
+
+        &::before {
+          content: "Off";
+        }
+      }
+
       ~ .pf-c-switch__toggle {
         .pf-c-switch__toggle-icon {
           display: none;
         }
       }
     }
-    /* stylelint-enable */
 
     &:disabled {
       cursor: not-allowed;
 
-      ~ .pf-c-switch__label-on,
-      .pf-c-switch__label-off {
+      ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--disabled__label--Color);
         cursor: not-allowed;
       }
@@ -91,13 +97,14 @@
       ~ .pf-c-switch__toggle {
         cursor: not-allowed;
         background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
-        /* stylelint-disable-next-line */
+
         &::before {
           background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
         }
       }
     }
   }
+  /* stylelint-enable */
 
   .pf-c-switch__toggle {
     position: relative;
@@ -126,14 +133,12 @@
   .pf-c-switch__toggle-icon {
     position: absolute;
     top: var(--pf-c-switch__toggle-icon--Top);
-    display: block;
     padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
     font-size: var(--pf-c-switch__toggle-icon--FontSize);
     color: var(--pf-c-switch__toggle-icon--Color);
   }
 
-  .pf-c-switch__label-on,
-  .pf-c-switch__label-off {
+  .pf-c-switch__label {
     display: inline-block;
     padding-left: var(--pf-c-switch__label--PaddingLeft);
     font-size: var(--pf-c-switch__label--FontSize);
@@ -141,11 +146,5 @@
     line-height: var(--pf-c-switch__label--LineHeight);
     color: var(--pf-c-switch__label--Color);
     vertical-align: top;
-  }
-
-  // Turns off the label when its not in use
-  .pf-c-switch__input:not(:checked) ~ .pf-c-switch__label-on,
-  .pf-c-switch__input:checked ~ .pf-c-switch__label-off {
-    display: none;
   }
 }
