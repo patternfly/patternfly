@@ -15,9 +15,13 @@
   --pf-c-toolbar__filter--MarginTop: calc(var(--pf-c-toolbar--PaddingBottom) + var(--pf-global--spacer--md));
   --pf-c-toolbar__filter--MarginLeft: 0;
 
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-toolbar__filter--MarginTop: 0;
+  }
+
   // Filter toggle toggle
   --pf-c-toolbar__filter-toggle--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-toolbar__filter-toggle--m-expanded--c-button--Color: var(--pf-global--Color--100);
+  --pf-c-toolbar__filter-toggle--m-expanded--Color: var(--pf-global--Color--100);
 
   // Sort
   --pf-c-toolbar__sort--MarginLeft: var(--pf-global--spacer--sm);
@@ -93,9 +97,6 @@
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-toolbar__filter--MarginTop: 0;
-    --pf-c-toolbar__filter--MarginBottom: 0;
-
     flex-basis: auto;
     order: 0;
   }

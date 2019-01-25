@@ -52,7 +52,7 @@
       {{/button}}
 
       {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
-        <input class="pf-c-form-control" aria-label="Current page" type="number" min="1" max="4" size="2" value="1">
+        {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" size="2" value="1"'}}
         <span aria-hidden="true">of 4</span>
       {{/pagination-nav-page-select}}
 
