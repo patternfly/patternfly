@@ -2,6 +2,7 @@
 
 .pf-c-options-menu {
   // Toggle
+  --pf-c-options-menu__toggle--Background: transparent;
   --pf-c-options-menu__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-options-menu__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -25,6 +26,7 @@
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Text toggle button
+  --pf-c-options-menu__toggle-button--Background: transparent;
   --pf-c-options-menu__toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-options-menu__toggle-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -42,6 +44,7 @@
   --pf-c-options-menu--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
+  --pf-c-options-menu__menu-item--Background: transparent;
   --pf-c-options-menu__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-options-menu__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
@@ -105,6 +108,7 @@
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
   padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
+  background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
   &:not(.pf-m-text) {
@@ -146,6 +150,7 @@
 
 .pf-c-options-menu__toggle-button {
   padding: var(--pf-c-options-menu__toggle-button--PaddingTop) var(--pf-c-options-menu__toggle-button--PaddingRight) var(--pf-c-options-menu__toggle-button--PaddingBottom) var(--pf-c-options-menu__toggle-button--PaddingLeft);
+  background: var(--pf-c-options-menu__toggle-button--Background);
   border: 0;
 }
 
@@ -192,6 +197,7 @@
   width: 100%;
   padding: var(--pf-c-options-menu__menu-item--PaddingTop) var(--pf-c-options-menu__menu-item--PaddingRight) var(--pf-c-options-menu__menu-item--PaddingBottom) var(--pf-c-options-menu__menu-item--PaddingLeft);
   white-space: nowrap;
+  background: var(--pf-c-options-menu__menu-item--Background);
   border: none;
 
   &:hover,

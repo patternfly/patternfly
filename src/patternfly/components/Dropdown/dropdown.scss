@@ -50,6 +50,7 @@
   --pf-c-dropdown--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
+  --pf-c-dropdown__menu-item--BackgroundColor: transparent;
   --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-dropdown__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
@@ -225,6 +226,7 @@
   color: var(--pf-c-dropdown__menu-item--Color);
   text-align: left;
   white-space: nowrap;
+  background-color: var(--pf-c-dropdown__menu-item--BackgroundColor);
   border: none;
 
   &:hover,
@@ -232,17 +234,17 @@
   &:focus,
   &.pf-m-focus {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--Color);
+    --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
 
     text-decoration: none;
-    background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
   }
 
   &:disabled,
   &.pf-m-disabled {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--disabled--Color);
+    --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--disabled--BackgroundColor);
 
     pointer-events: none;
-    background-color: var(--pf-c-dropdown__menu-item--disabled--BackgroundColor);
   }
 }
 
