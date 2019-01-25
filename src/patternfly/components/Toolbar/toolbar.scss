@@ -31,6 +31,9 @@
   --pf-c-toolbar__action-list--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-toolbar__sort--action-list--MarginLeft: var(--pf-global--spacer--sm);
 
+  // Total item text
+  --pf-c-toolbar__total-items--FontSize: var(--pf-global--FontSize--sm);
+
   // Filter list
   --pf-c-toolbar__filter-list--MarginTop: var(--pf-global--spacer--md);
   --pf-c-toolbar__filter-list--c-button--MarginLeft: var(--pf-global--spacer--sm);
@@ -131,8 +134,12 @@
 }
 
 .pf-c-toolbar__pagination,
-.pf-c-toolbar__current {
+.pf-c-toolbar__total-items {
   margin-left: auto;
+}
+
+.pf-c-toolbar__total-items {
+  font-size: var(--pf-c-toolbar__total-items--FontSize);
 }
 
 .pf-c-toolbar__filter-list {

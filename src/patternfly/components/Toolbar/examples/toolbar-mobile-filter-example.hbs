@@ -6,12 +6,12 @@
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" aria-label="Filter results"}}
     {{> button-icon button-icon--type="filter"}}
   {{/button}}
-  <div class="pf-c-toolbar__filter pf-m-expanded">
+  {{#> toolbar-filter toolbar-filter--modifier="pf-m-expanded"}}
     {{#> select id="toolbar-filter-expanded-checked-select-checkbox" select--IsCheckboxSelect="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
       Status
     {{/select}}
-  </div>
+  {{/toolbar-filter}}
   {{#> options-menu id="toolbar-mobile-filter-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
@@ -28,6 +28,6 @@
   {{/toolbar-action-group}}
   {{#> dropdown id="toolbar-mobile-filter-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
-  <div class="pf-c-toolbar__current">37 Items</div>
-  <div class="pf-c-toolbar__filter-list"></div>
+  {{#> toolbar-total-items}}37 Items{{/toolbar-total-items}}
+  {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
 {{/toolbar}}

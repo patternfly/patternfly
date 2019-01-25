@@ -7,12 +7,12 @@
     {{> button-icon button-icon--type="filter"}}
     {{#> badge badge--modifier="pf-m-read"}}3{{/badge}}
   {{/button}}
-  <div class="pf-c-toolbar__filter">
+  {{#> toolbar-filter}}
     {{#> select id="toolbar-filter-expanded-checked-select-checkbox" select--IsChecked="true" select--IsExpanded="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
       Status
     {{/select}}
-  </div>
+  {{/toolbar-filter}}
   {{#> options-menu id="toolbar-filter-expanded-checked-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
@@ -29,8 +29,8 @@
   {{/toolbar-action-group}}
   {{#> dropdown id="toolbar-filter-expanded-checked-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
-  <div class="pf-c-toolbar__current">17 Items</div>
-  <div class="pf-c-toolbar__filter-list pf-m-expanded">
+  {{#> toolbar-total-items}}37 Items{{/toolbar-total-items}}
+  {{#> toolbar-filter-list toolbar-filter-list--modifier="pf-m-expanded"}}
     {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-filter-expanded"}}
       {{#> chip-group-list-item}}
         {{#> chip-group-label}}
@@ -70,5 +70,5 @@
     {{#> button button--modifier="pf-m-link pf-c-toolbar__filter-clear"}}
       Clear filters
     {{/button}}
-  </div>
+  {{/toolbar-filter-list}}
 {{/toolbar}}

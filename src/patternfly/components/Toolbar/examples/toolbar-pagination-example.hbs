@@ -6,12 +6,12 @@
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" aria-label="Filter results"}}
     {{> button-icon button-icon--type="filter"}}
   {{/button}}
-  <div class="pf-c-toolbar__filter">
+  {{#> toolbar-filter}}
     {{#> select id="toolbar-filter-expanded-checked-select-checkbox" select--IsCheckboxSelect="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
       Status
     {{/select}}
-  </div>
+  {{/toolbar-filter}}
   {{#> options-menu id="toolbar-pagination-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
@@ -29,9 +29,9 @@
   {{#> dropdown id="toolbar-pagination-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-c-toolbar__pagination"}}
-    {{#> pagination-current}}
+    {{#> pagination-total-items}}
       37 Items
-    {{/pagination-current}}
+    {{/pagination-total-items}}
 
     {{#> options-menu id="toolbar-pagination-pagination-options-menu-top-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
       {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
@@ -64,5 +64,5 @@
       {{/button}}
     {{/pagination-nav}}
   {{/pagination}}
-  <div class="pf-c-toolbar__filter-list"></div>
+  {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
 {{/toolbar}}
