@@ -15,6 +15,8 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `id` | `<input type="checkbox">` | Each `<input>` must have an `id` attribute that matches its label's `for` value. **Required** |
 | `checked` | `.pf-c-switch__input` |  Indicates that the input is checked |
 | `disabled` | `.pf-c-switch__input` |  Indicates that the input is disabled |
+| `role=presentational` | `.pf-c-switch__label` | Hides the generated content from the screen reader. **Required** |
+| `aria-hidden="true"` | `.pf-c-switch__label` | Hides the text from the screen reader. |
 
 ## Usage
 

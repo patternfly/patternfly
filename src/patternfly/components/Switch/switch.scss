@@ -23,7 +23,7 @@
   --pf-c-switch__toggle--before--Width: calc(#{var(--pf-c-switch--Height)} / #{var(--pf-global--golden-ratio)});
   --pf-c-switch__toggle--before--Height: var(--pf-c-switch__toggle--before--Width);
   --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-switch__toggle--before--BorderRadius: var(--pf-c-switch__toggle--before--Width);
+  --pf-c-switch__toggle--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-switch__toggle--before--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Switch Icon
