@@ -17,6 +17,7 @@
 
   // Filter toggle toggle
   --pf-c-toolbar__filter-toggle--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-toolbar__filter-toggle--m-expanded--c-button--Color: var(--pf-global--Color--100);
 
   // Sort
   --pf-c-toolbar__sort--MarginLeft: var(--pf-global--spacer--sm);
@@ -58,6 +59,17 @@
 // Filter input group
 .pf-c-toolbar__filter-toggle {
   --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__filter-toggle--MarginLeft);
+
+  &.pf-m-expanded {
+    .pf-c-button {
+      color: var(--pf-c-toolbar__filter-toggle--m-expanded--Color);
+    }
+  }
+
+  .pf-c-button {
+    display: flex;
+    align-items: center;
+  }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: none;

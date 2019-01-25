@@ -3,13 +3,15 @@
     {{> dropdown-toggle-check dropdown-toggle-check--id="toolbar-expanded-split-button-dropdown-expanded-example-check" aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="toolbar-expanded-split-button-dropdown-expanded-example-button"  aria-label="Select"}}
   {{/dropdown}}
-  {{#> dropdown id="toolbar-expanded-dropdown-simple-example-collapsed" dropdown-toggle--modifier="pf-m-plain" dropdown--modifier="pf-c-toolbar__filter-toggle"  aria-label="Filter results"}}
-    <i class="fas fa-filter"></i>
-  {{/dropdown}}
+  <div class="pf-c-toolbar__filter-toggle">
+    {{#> button button--modifier="pf-m-plain" aria-label="Filter results"}}
+      {{> button-icon button-icon--type="filter"}}
+    {{/button}}
+  </div>
   {{#> input-group input-group--modifier="pf-c-toolbar__filter pf-m-expanded"}}
-    {{#> select id="toolbar-expanded-select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true"}}
+    {{#> select id="toolbar-expanded-select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--HasGroups="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
-      Filter by status
+      Status
     {{/select}}
     {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="toolbar-expanded-dropdown-simple-textInput10" name="textInput10"  placeholder="Filter..." aria-label="filter input with popup button"'}}
     {{/form-control}}
@@ -31,48 +33,43 @@
       secondary
     {{/button}}
   {{/c-toolbar-action-group}}
-  {{#> dropdown id="toolbar-expanded-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
+  {{#> dropdown id="toolbar-expanded-dropdown-simple-example-collapsed3" dropdown--IsBasicActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
-  <div class="pf-c-toolbar__current">17 Items</div>
-  <div class="pf-c-toolbar__filter-list pf-m-expanded">
-    {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-expanded"}}
-      {{#> chip-group-list-item}}
-        {{#> chip-group-label}}
-            Status
-        {{/chip-group-label}}
-        {{#> chip-group newcontext}}
-          {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip_one"')}}
-            Stopped
-          {{/chip-text}}
-          {{#> badge badge--modifier="pf-m-read"}}18{{/badge}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one ' chip-group--id 'chip_one" aria-label="Remove" id="' chip-group--id 'remove_chip_one"')}}
-            {{> button-icon button-icon--type="times-circle"}}
-          {{/button}}
-          {{/chip}}
-          {{#> chip}}
-            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two"')}}
-              Down
-            {{/chip-text}}
-            {{#> badge badge--modifier="pf-m-read"}}12{{/badge}}
-            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two ' chip-group--id 'chip_two" aria-label="Remove" id="' chip-group--id 'remove_chip_two"')}}
-              {{> button-icon button-icon--type="times-circle"}}
-            {{/button}}
-          {{/chip}}
-          {{#> chip}}
-            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three"')}}
-              Needs Maintenance
-            {{/chip-text}}
-            {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
-            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three ' chip-group--id 'chip_three" aria-label="Remove" id="' chip-group--id 'remove_chip_three"')}}
-              {{> button-icon button-icon--type="times-circle"}}
-            {{/button}}
-          {{/chip}}
-        {{/chip-group}}
-      {{/chip-group-list-item}}
-    {{/chip-group}}
-    {{#> button button--modifier="pf-m-link pf-c-toolbar__filter-clear"}}
-      Clear filters
-    {{/button}}
-  </div>
+  {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-c-toolbar__pagination"}}
+    {{#> pagination-current}}
+      <b>1 - 10</b> of <b>37</b> Items
+    {{/pagination-current}}
+
+    {{#> options-menu id="toolbar-expanded-pagination-options-menu-top-example" options-menu--IsExpanded="true" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+      {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+        <span class="pf-c-options-menu__toggle-text">
+          <b>1 - 10</b> of <b>37</b> Items
+        </span>
+        {{> options-menu-toggle-button aria-label="Select"}}
+      {{/options-menu-toggle}}
+      {{> options-menu-single}}
+    {{/options-menu}}
+
+    {{#> pagination-nav}}
+      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+        {{> button-icon button-icon--type="angle-double-left"}}
+      {{/button}}
+      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+        {{> button-icon button-icon--type="angle-left"}}
+      {{/button}}
+
+      {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+        <input class="pf-c-form-control" aria-label="Current page" type="number" min="1" max="4" size="2" value="1">
+        <span aria-hidden="true">of 4</span>
+      {{/pagination-nav-page-select}}
+
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+        {{> button-icon button-icon--type="angle-right"}}
+      {{/button}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+        {{> button-icon button-icon--type="angle-double-right"}}
+      {{/button}}
+    {{/pagination-nav}}
+  {{/pagination}}
+  <div class="pf-c-toolbar__filter-list"></div>
 {{/c-toolbar}}

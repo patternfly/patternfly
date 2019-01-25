@@ -7,6 +7,8 @@
   {{/dropdown-toggle}}
   {{#if dropdown--IsActionMenu}}
     {{> dropdown-menu}}
+  {{else if dropdown--IsBasicActionMenu}}
+    {{> dropdown-menu-basic-action}}
   {{else if dropdown--IsSplitButton}}
     {{> dropdown-menu-split-button}}
   {{else}}
