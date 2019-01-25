@@ -102,11 +102,6 @@ $pf-c-table-xs-breakpoint: 380px;
     &:not(:first-child):not(.pf-c-table__expandable-row) {
       margin-top: var(--pf-c-table-tr--responsive--MarginTop);
     }
-
-    // undo default styling for each even child
-    &:nth-child(even) {
-      background-color: var(--pf-c-table-tr--responsive--BackgroundColor);
-    }
   }
 
   tbody.pf-m-expanded {
@@ -260,7 +255,6 @@ $pf-c-table-xs-breakpoint: 380px;
       z-index: 10;
       width: var(--pf-c-table__expandable-row--before--Width);
       content: "";
-      background-color: transparent;
     }
 
     &.pf-m-expanded::before {
