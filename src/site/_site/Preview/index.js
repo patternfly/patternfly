@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { withPrefix } from 'gatsby';
 import './styles.scss';
 
 export default class Preview extends React.Component {
@@ -32,9 +32,14 @@ export default class Preview extends React.Component {
 
   renderFullPageLink() {
     return (
-      <Link to={this.state.fullPath} target="_blank" title="Open in new window" className="Preview__viewport-link">
+      <a
+        href={withPrefix(this.state.fullPath)}
+        target="_blank"
+        title="Open in new window"
+        className="Preview__viewport-link"
+      >
         <i className="fas fa-external-link-alt" />
-      </Link>
+      </a>
     );
   }
 
@@ -44,9 +49,10 @@ export default class Preview extends React.Component {
     const preview = this.props.fullPageOnly ? (
       <div className="Preview__body ">
         This Preview can only be accessed in&nbsp;
-        <Link to={this.state.fullPath} target="_blank">
+        <a href={withPrefix(this.state.fullPath)} target="_blank">
           full page mode
-        </Link>.
+        </a>
+        .
       </div>
     ) : (
       <div
