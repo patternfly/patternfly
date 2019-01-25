@@ -61,9 +61,7 @@
   --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__filter-toggle--MarginLeft);
 
   &.pf-m-expanded {
-    .pf-c-button {
-      color: var(--pf-c-toolbar__filter-toggle--m-expanded--Color);
-    }
+    color: var(--pf-c-toolbar__filter-toggle--m-expanded--Color);
   }
 
   .pf-c-button {
