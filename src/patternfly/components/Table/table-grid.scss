@@ -109,6 +109,12 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  tbody.pf-m-expanded {
+    tr:not(.pf-c-table__expandable-row) {
+      border-bottom: 0;
+    }
+  }
+
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
