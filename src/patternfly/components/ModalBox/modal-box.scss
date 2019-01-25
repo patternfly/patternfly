@@ -1,8 +1,6 @@
 @import "../../patternfly-imports";
 
 .pf-c-modal-box {
-  --pf-c-modal-box--breakpoint-sm--Height: #{pf-size-prem(400px)};
-  --pf-c-modal-box--breakpoint-md--Height: #{pf-size-prem(700px)};
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-modal-box--BorderColor: transparent;
   --pf-c-modal-box--PaddingTop: var(--pf-global--spacer--xl);
@@ -62,11 +60,6 @@
     @media screen and (min-width: $pf-global--breakpoint--xl) {
       --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--m-lg--lg--MaxWidth);
     }
-  }
-
-  // If the last child isn't the footer, then we need to put the footer's bottom padding there
-  > :last-child:not(.pf-c-modal-box__footer) {
-    padding-bottom: var(--pf-c-modal-box__footer--PaddingY);
   }
 
   // Close button
