@@ -3,9 +3,9 @@ import editIcon from './edit.svg';
 import './styles.scss';
 
 export default ({
-  title = 'PatternFly Next Pen',
-  description = 'PatternFly Next Pen',
-  tags = ['PatternFly', 'PatternFly Next'],
+  title = 'PatternFly 4 Pen',
+  description = 'PatternFly 4 Pen',
+  tags = ['PatternFly', 'PatternFly 4'],
   html = '',
   css = '',
   js = '',
