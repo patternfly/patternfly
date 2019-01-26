@@ -29,7 +29,7 @@
         {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="simple-table-with-checkboxes-node1">Node 1</div>
+        <div id="{{table--id}}-node1">Node 1</div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -55,7 +55,7 @@
         {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow2" aria-labelledby="' table--id '-node2"')}}{{/check-input}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="simple-table-with-checkboxes-node2">Node 2</div>
+        <div id="{{table--id}}-node2">Node 2</div>
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
