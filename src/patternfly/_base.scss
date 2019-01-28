@@ -59,6 +59,36 @@
   line-height: var(--pf-global--LineHeight--md);
   color: var(--pf-global--Color--100); // this color rule is set here to be able to use themes
   text-rendering: optimizeLegibility;
+}
+
+[class*="pf-c"],
+[class*="pf-u"],
+[class*="pf-l"] {
+  @at-root {
+    ul#{&} {
+      list-style: none;
+    }
+
+    button#{&},
+    input#{&},
+    optgroup#{&},
+    select#{&},
+    textarea#{&} {
+      font-family: var(--pf-global--FontFamily--sans-serif);
+      font-size: 100%;
+      line-height: var(--pf-global--LineHeight--md);
+    }
+
+    h1#{&},
+    h2#{&},
+    h3#{&},
+    h4#{&},
+    h5#{&},
+    h6#{&} {
+      font-size: 100%;
+      font-weight: var(--pf-global--FontWeight--normal);
+    }
+  }
 
   &,
   &::before,
