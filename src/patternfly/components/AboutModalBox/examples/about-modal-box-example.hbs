@@ -8,12 +8,7 @@
       {{> button-icon button-icon--type="times"}}
     {{/button}}
   {{/about-modal-box-close}}
-  {{#> about-modal-box-header}} 
-    {{#> about-modal-box-header-strapline}}
-      {{#> title titleType="p" title--modifier="pf-m-md"}}
-          Trademark and copyright information here
-      {{/title}}
-    {{/about-modal-box-header-strapline}} 
+  {{#> about-modal-box-header}}
     {{#> title titleType="h1" title--modifier="pf-m-4xl" title--attribute='id="about-modal-title"'}}
         Product Name
     {{/title}}
@@ -24,6 +19,11 @@
   {{/about-modal-box-hero}}
   {{#> about-modal-box-content}}
     content
+    {{#> about-modal-box-strapline}}
+      {{#> title titleType="p" title--modifier="pf-m-md"}}
+          Trademark and copyright information here
+      {{/title}}
+    {{/about-modal-box-strapline}}
   {{/about-modal-box-content}}
 {{/about-modal-box}}
 
