@@ -9,7 +9,7 @@ export default ({
   html = '',
   css = '',
   js = '',
-  cssExternal = 'https://pf-next.com/styles.css',
+  cssExternal = 'https://pf4.patternfly.org/styles.css',
   jsExternal = '',
   height = 40,
   width = 40

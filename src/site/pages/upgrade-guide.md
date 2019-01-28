@@ -28,7 +28,7 @@ npm install @patternfly/patternfly
 
 ## Configure your project
 
-1. Navigate to the patternfly-next package you just installed and find the PatternFly 4 CSS stylesheet, `patternfly.css`. This file contains all of the updated PatternFly 4 styles.
+1. Navigate to the @patternfly/patternfly package you just installed and find the PatternFly 4 CSS stylesheet, `patternfly.css`. This file contains all of the updated PatternFly 4 styles.
 2. Copy `patternfly.css` to your project's CSS directory.
 3. In your HTML file, add the following line to the bottom of your list of CSS files to link to your new stylesheet:
 

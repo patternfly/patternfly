@@ -60,7 +60,7 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 ## Testing for Accessibility
 
-PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf-next.com/accessibility-guide).
+PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf4.patternfly.org/accessibility-guide).
 
 ### How to Perform an Accessibility Audit with aXe
 aXe is available as either a browser extension or npm script.
@@ -88,4 +88,4 @@ If you have any suggestions about ways that we can improve how we use this tool,
 ## FAQ
 
 [How do I use SCSS variables to customize
-the library?](https://pf-next.com/guidelines#variables)
+the library?](https://pf4.patternfly.org/guidelines#variables)
