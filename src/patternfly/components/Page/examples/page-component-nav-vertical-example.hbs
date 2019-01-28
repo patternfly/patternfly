@@ -2,7 +2,7 @@
   {{#> page-header}}
     {{#> page-header-brand}}
       {{#> page-header-brand-toggle}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="nav-toggle" aria-label="Global Navigation" aria-expanded="true"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="nav-toggle" aria-label="Global Navigation" aria-expanded="true" aria-controls="page-nav"'}}
           {{> button-icon button-icon--type="bars"}}
         {{/button}}
       {{/page-header-brand-toggle}}
@@ -15,7 +15,7 @@
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute='aria-label="Primary Nav Default Example"'}}
+    {{#> nav nav--attribute='id="page-nav" aria-label="Primary Nav Default Example"'}}
       pf-c-nav
     {{/nav}}
   {{/page-sidebar}}

@@ -43,7 +43,7 @@
 <h2 class="Preview__section-title">Flex modifiers - example 3</h2>
 {{#> data-list data-list--attribute='aria-label="Width modifier data list example 3"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="width-ex3-item1"'}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="width-ex3-toggle1 width-ex3-item1" id="width-ex3-toggle1" aria-label="Toggle details for" aria-expanded="true"'}}{{/data-list-toggle}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="width-ex3-toggle1 width-ex3-item1" id="width-ex3-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-3"'}}{{/data-list-toggle}}
     {{#> data-list-check check-input--attribute='type="checkbox" name="width-ex3-check1" aria-labelledby="width-ex3-item1"'}}{{/data-list-check}}
     {{#> data-list-cell data-list-cell--modifier="pf-m-flex-5"}}
       <div class="Preview__placeholder">
@@ -61,7 +61,7 @@
       <div class="Preview__placeholder">default</div>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-labelledby="width-ex3-item1 width-ex3-action1" id="width-ex3-action1" aria-label="Actions"'}}{{/data-list-action}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute='aria-label="Primary Content Details"'}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-3" aria-label="Primary Content Details"'}}
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     {{/data-list-expandable-content}}
   {{/data-list-item}}
