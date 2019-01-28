@@ -11,7 +11,7 @@
 | -- | -- | -- |
 | `hidden`                                        | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
 | `aria-expanded="true"`                          | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
-
+| `aria-controls="[id of content it controls]"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Identifies the section controlled by the button. **Required** |
 
 ### Usage
 
