@@ -1,0 +1,27 @@
+@import "../../patternfly-imports";
+
+.pf-c-clipboard-copy {
+  // Clipboard Copy Expanded Content
+  --pf-c-clipboard-copy__expanded-content--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-clipboard-copy__expanded-content--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-clipboard-copy__expanded-content--BoxShadow: var(--pf-global--BoxShadow--md);
+
+  position: relative;
+  display: flex;
+  max-width: 100%;
+
+  .pf-c-clipboard-copy__expanded-content {
+    position: absolute;
+    top: calc(100% + var(--pf-global--spacer--xs)); // add variable
+    z-index: var(--pf-global--ZIndex--xs); // add variable
+    min-width: 100%;
+    background-color: var(--pf-c-clipboard-copy__expanded-content--BackgroundColor); // add variable
+    background-clip: padding-box;
+    border: var(--pf-c-clipboard-copy__expanded-content--BorderWidth) solid transparent;
+    box-shadow: var(--pf-c-clipboard-copy__expanded-content--BoxShadow);
+  }
+}
+
+button {
+  position: relative;
+}
