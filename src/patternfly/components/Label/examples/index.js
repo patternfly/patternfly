@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Label Component" handlebars={labelExampleRaw} docs={docs}>
+      <Example heading="Label Component" handlebars={labelExampleRaw}>
         {labelExample}
       </Example>
     </Documentation>
