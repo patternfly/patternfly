@@ -61,30 +61,46 @@
   text-rendering: optimizeLegibility;
 }
 
-[class*="pf-c"],
-[class*="pf-u"],
-[class*="pf-l"] {
-  &,
-  &::before,
-  &::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-  }
-}
-
 // Attributes for shield element attr selectors
 $shield-attrs: '[class*="pf-c"]', '[class*="pf-u"]', '[class*="pf-l"]';
 
 @mixin buildShieldAttrSel($els) {
+  $pseudo: "";
+  $del: ":";
+
   @each $el in $els {
+    @if (str-index($el, $del)) {
+      $idx: str-index($el, $del);
+
+      @if str-index($el, "::") {
+        $sep: "::";
+        $pseudo: $sep + str-slice($el, ($idx + 2));
+      } @else {
+        $sep: $del;
+        $pseudo: $sep + str-slice($el, ($idx + 1));
+      }
+
+      $el: str-slice($el, 0, ($idx - 1));
+    }
+
     @each $attr in $shield-attrs {
-      #{$el}#{$attr} {
+      #{$el}#{$attr}#{$pseudo} {
         @content;
       }
     }
   }
+}
+
+// All
+%all-styles {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+@include buildShieldAttrSel("" "::before" "::after") {
+  @extend %all-styles;
 }
 
 // Lists
@@ -92,7 +108,7 @@ $shield-attrs: '[class*="pf-c"]', '[class*="pf-u"]', '[class*="pf-l"]';
   list-style: none;
 }
 
-@include buildShieldAttrSel(ul) {
+@include buildShieldAttrSel("ul") {
   @extend %list-styles;
 }
 
@@ -103,7 +119,7 @@ $shield-attrs: '[class*="pf-c"]', '[class*="pf-u"]', '[class*="pf-l"]';
   line-height: var(--pf-global--LineHeight--md);
 }
 
-@include buildShieldAttrSel(button input optgroup select textarea) {
+@include buildShieldAttrSel("button" "input" "optgroup" "select" "textarea") {
   @extend %form-el-styles;
 }
 
@@ -113,8 +129,87 @@ $shield-attrs: '[class*="pf-c"]', '[class*="pf-u"]', '[class*="pf-l"]';
   font-weight: var(--pf-global--FontWeight--normal);
 }
 
-@include buildShieldAttrSel(h1 h2 h3 h4 h5 h6) {
+@include buildShieldAttrSel("h1" "h2" "h3" "h4" "h5" "h6") {
   @extend %heading-styles;
+}
+
+// Media elements
+%media-el-styles {
+  max-width: 100%;
+  height: auto;
+}
+
+@include buildShieldAttrSel("img" "embed" "iframe" "object" "audio" "video") {
+  @extend %media-el-styles;
+}
+
+// Iframes
+%iframe-styles {
+  border: 0;
+}
+
+@include buildShieldAttrSel("iframe") {
+  @extend %iframe-styles;
+}
+
+// Tables
+%table-styles {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+@include buildShieldAttrSel("table") {
+  @extend %table-styles;
+}
+
+// Table cells
+%table-cell-styles {
+  padding: 0;
+  text-align: left;
+}
+
+@include buildShieldAttrSel("td" "th") {
+  @extend %table-cell-styles;
+}
+
+// Link cells
+%link-styles {
+  font-weight: var(--pf-global--link--FontWeight);
+  color: var(--pf-global--link--Color);
+  text-decoration: var(--pf-global--link--TextDecoration);
+}
+
+@include buildShieldAttrSel("a") {
+  @extend %link-styles;
+}
+
+// Link hover cells
+%link-hover-styles {
+  --pf-global--link--Color: var(--pf-global--link--Color--hover);
+  --pf-global--link--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+}
+
+@include buildShieldAttrSel("a:hover") {
+  @extend %link-hover-styles;
+}
+
+// Interactive elements
+%interactive-el-styles {
+  cursor: pointer;
+}
+
+@include buildShieldAttrSel("button" "a") {
+  @extend %interactive-el-styles;
+}
+
+// Interactive elements
+%focus-inner-styles {
+  padding: 0;
+  border-style: none;
+}
+
+@include buildShieldAttrSel("button::-moz-focus-inner" '[type="button"]::-moz-focus-inner' '[type="reset"]::-moz-focus-inner' '[type="submit"]::-moz-focus-inner') {
+  @extend %focus-inner-styles;
 }
 
 
