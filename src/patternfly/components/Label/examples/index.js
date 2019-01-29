@@ -3,7 +3,6 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import labelExampleRaw from '!raw!./label-example.hbs';
 import LabelExample from './label-example.hbs';
-import labelComplexExampleDoc from '../docs/label-complex.md';
 import docs from '../docs/code.md';
 import '../label.scss';
 
@@ -14,7 +13,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Label Component" handlebars={labelExampleRaw} docs={labelComplexExampleDoc}>
+      <Example heading="Label Component" handlebars={labelExampleRaw}>
         {labelExample}
       </Example>
     </Documentation>
