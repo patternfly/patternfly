@@ -34,7 +34,7 @@
   --pf-c-modal-box__footer--c-button--sm--MarginRight: calc(var(--pf-c-modal-box__footer--c-button--MarginRight) / 2);
 
   // This component always needs to be light
-  @extend %pf-t-light;
+  @include pf-t-light;
 
   position: relative;
   z-index: var(--pf-c-modal-box--ZIndex);

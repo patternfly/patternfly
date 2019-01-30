@@ -52,7 +52,7 @@
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
   // This component always needs to be light
-  @extend %pf-t-light;
+  @include pf-t-light;
 
   display: grid;
   grid-template-columns: var(--pf-c-alert--grid-template-columns);
