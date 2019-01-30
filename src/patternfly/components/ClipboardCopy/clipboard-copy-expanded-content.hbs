@@ -1,4 +1,5 @@
 <div class="pf-c-clipboard-copy__expanded-content{{#if clipboard-copy-expanded-content--modifier}} {{clipboard-copy-expanded-content--modifier}}{{/if}}"
+  {{#unless clipboard-copy--IsExpanded}}hidden{{/unless}}
   {{#if clipboard-copy-expanded-content--attribute}}
     {{{clipboard-copy-expanded-content--attribute}}}
   {{/if}}>

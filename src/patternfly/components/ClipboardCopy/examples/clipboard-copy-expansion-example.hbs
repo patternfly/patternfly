@@ -1,0 +1,26 @@
+{{#> clipboard-copy}}
+  {{#> clipboard-copy-group}}
+    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute='aria-controls="ex-content-1"'}}{{/clipboard-copy-group-toggle}}
+    {{#> clipboard-copy-group-text}}
+      Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
+    {{/clipboard-copy-group-text}}
+    {{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
+  {{/clipboard-copy-group}}
+  {{#> clipboard-copy-expanded-content clipboard-copy-expanded-content--Id="ex-content-1"}}
+    Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
+  {{/clipboard-copy-expanded-content}}
+{{/clipboard-copy}}
+<br>
+<br>
+{{#> clipboard-copy clipboard-copy--IsExpanded="true"}}
+  {{#> clipboard-copy-group}}
+    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute='aria-controls="ex-content-2"'}}{{/clipboard-copy-group-toggle}}
+    {{#> clipboard-copy-group-text}}
+      Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
+    {{/clipboard-copy-group-text}}
+    {{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
+  {{/clipboard-copy-group}}
+  {{#> clipboard-copy-expanded-content clipboard-copy-expanded-content--Id="ex-content-2"}}
+    Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
+  {{/clipboard-copy-expanded-content}}
+{{/clipboard-copy}}
