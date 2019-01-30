@@ -1,4 +1,6 @@
-<img class="pf-c-avatar{{#if avatar--modifier}} {{avatar--modifier}}{{/if}}"
-  {{#if avatar--attribute}}
-    {{{avatar--attribute}}}
-  {{/if}}> 
+<ul class="pf-c-accordion{{#if accordion--modifier}} {{accordion--modifier}}{{/if}}"
+ {{#if accordion--attribute}}
+   {{{accordion--attribute}}}
+ {{/if}}>
+ {{> @partial-block}}
+</ul>
