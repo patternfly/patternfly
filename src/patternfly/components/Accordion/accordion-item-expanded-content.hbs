@@ -1,0 +1,7 @@
+<div class="pf-c-accordion__item-expanded-content{{#if accordion-item-expanded-content--modifier}} {{accordion-item-expanded-content--modifier}}{{/if}}"
+  {{#unless accordion-item--IsExpanded}}hidden{{/unless}}
+  {{#if accordion-item-expanded-content--attribute}}
+    {{{accordion-item-expanded-content--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</div>

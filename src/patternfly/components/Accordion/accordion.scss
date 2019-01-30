@@ -1,11 +1,25 @@
 @import "../../patternfly-imports";
 
-.pf-c-avatar {
-  --pf-c-avatar--BorderRadius: var(--pf-global--BorderRadius--lg);
-  --pf-c-avatar--Width: #{pf-size-prem(36px)};
-  --pf-c-avatar--Height: #{pf-size-prem(36px)};
+.pf-c-accordion {
+  // accordion
+  --pf-c-accordion--Width: #{pf-size-prem(300px)};
+  --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-accordion--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-accordion--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-accordion--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-accordion--PaddingBottom: var(--pf-global--spacer--lg);
 
-  width: var(--pf-c-avatar--Width);
-  height: var(--pf-c-avatar--Height);
-  border-radius: var(--pf-c-avatar--BorderRadius);
+  width: var(--pf-c-accordion--Width);
+  padding-top: var(--pf-c-accordion--PaddingTop);
+  padding-bottom: var(--pf-c-accordion--PaddingBottom);
+  background-color: var(--pf-c-accordion--BackgroundColor);
+  border: var(--pf-c-accordion--BorderWidth) solid transparent;
+  box-shadow: var(--pf-c-accordion--BoxShadow);
+
+  .pf-c-accordion__item-button {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+  }
 }
