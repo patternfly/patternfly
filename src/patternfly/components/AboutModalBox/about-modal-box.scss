@@ -74,7 +74,7 @@
   // hero image
   --pf-c-about-modal-box__hero--sm--BackgroundImage: url("#{$pf-global--image-path}/pfbg_992@2x.jpg");
   --pf-c-about-modal-box__hero--sm--BackgroundPosition: top left;
-  --pf-c-about-modal-box__hero--sm--BackgroundPosition: cover;
+  --pf-c-about-modal-box__hero--sm--BackgroundSize: cover;
 
   // Brand img
   --pf-c-about-modal-box__brand-image--Height: #{pf-size-prem(40px)};
