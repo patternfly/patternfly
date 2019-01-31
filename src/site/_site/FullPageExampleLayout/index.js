@@ -5,7 +5,7 @@ import '../../../patternfly/patternfly-base.scss';
 export default ({ children }) => (
   <div>
     <Helmet>
-      <title>PF Next</title>
+      <title>PatternFly 4</title>
       <html lang="en-US" />
     </Helmet>
     <div>{children}</div>
