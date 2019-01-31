@@ -3,7 +3,7 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
 import AboutModalBoxExample from './about-modal-box-example.hbs';
-import '../about-modal-box.scss';
+import './examples.scss';
 
 export const Docs = docs;
 
@@ -13,7 +13,9 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading={headingText}>{aboutModalBoxExample}</Example>
+      <Example fullPageOnly="true" heading={headingText}>
+        {aboutModalBoxExample}
+      </Example>
     </Documentation>
   );
 };
