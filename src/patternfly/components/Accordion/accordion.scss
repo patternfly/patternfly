@@ -40,6 +40,7 @@
   --pf-c-accordion__item-expanded-content--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-accordion__item-expanded-content--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-accordion__item-expanded-content--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-accordion__item-expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   position: relative;
   width: var(--pf-c-accordion--Width);
@@ -123,7 +124,7 @@
     color: var(--pf-c-accordion__item-expanded-content--Color);
 
     &.pf-m-fixed {
-      max-height: 150px;
+      max-height: var(--pf-c-accordion__item-expanded-content--m-fixed--MaxHeight);
       overflow-y: scroll;
     }
   }
