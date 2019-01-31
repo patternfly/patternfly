@@ -92,6 +92,7 @@
     padding: 0;
 
     > * {
+      position: relative;
       padding-top: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingTop);
       padding-right: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingRight);
       padding-bottom: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingBottom);
@@ -127,7 +128,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
     content: "";
     border: var(--pf-c-dropdown__toggle--BorderWidth) solid;
     border-color: var(--pf-c-dropdown__toggle--BorderTopColor) var(--pf-c-dropdown__toggle--BorderRightColor) var(--pf-c-dropdown__toggle--BorderBottomColor) var(--pf-c-dropdown__toggle--BorderLeftColor);

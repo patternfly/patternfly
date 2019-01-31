@@ -69,7 +69,7 @@
   max-width: 100%;
 }
 
-.pf-c-options-menu__toggle,
+.pf-c-options-menu__toggle:not(.pf-m-plain),
 .pf-c-options-menu.pf-m-text:not(.pf-m-plain) .pf-c-options-menu__toggle-button {
   &::before {
     position: absolute;
@@ -77,7 +77,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
     content: "";
     border: var(--pf-c-options-menu__toggle--BorderWidth) solid;
     border-color: var(--pf-c-options-menu__toggle--BorderTopColor) var(--pf-c-options-menu__toggle--BorderRightColor) var(--pf-c-options-menu__toggle--BorderBottomColor) var(--pf-c-options-menu__toggle--BorderLeftColor);
