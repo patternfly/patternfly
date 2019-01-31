@@ -187,7 +187,9 @@
   tbody {
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingBottom);
-    --pf-c-table-cell--FontSize: var(--pf-c-table-tbody--FontSize);
+    //TODO: --pf-c-table-tbody--FontSize is undefined
+    // --pf-c-table-cell--FontSize: var(--pf-c-table-tbody--FontSize);
+    --pf-c-table-cell--FontSize: inherit;
 
     // Border treatment
     // using first child as row does not calculate height appropriately

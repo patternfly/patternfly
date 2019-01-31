@@ -228,7 +228,10 @@
 
   &:hover,
   &.pf-m-hover {
-    --pf-c-login__main-footer-link--Color: var(--pf-c-login__main-footer-link--hover--Color);
+    // TODO: --pf-c-login__main-footer-link--hover--Color is undefined
+
+    // --pf-c-login__main-footer-link--Color: var(--pf-c-login__main-footer-link--hover--Color);
+    --pf-c-login__main-footer-link--Color: inherit;
   }
 }
 
