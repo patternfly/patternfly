@@ -73,6 +73,8 @@
 
   // hero image
   --pf-c-about-modal-box__hero--sm--BackgroundImage: url("#{$pf-global--image-path}/pfbg_992@2x.jpg");
+  --pf-c-about-modal-box__hero--sm--BackgroundPosition: top left;
+  --pf-c-about-modal-box__hero--sm--BackgroundPosition: cover;
 
   // Brand img
   --pf-c-about-modal-box__brand-image--Height: #{pf-size-prem(40px)};
@@ -198,8 +200,6 @@
 .pf-c-about-modal-box__close {
   grid-area: close;
   position: sticky;
-  top: 0;
-  right: 0;
   z-index: var(--pf-c-about-modal-box__close--ZIndex);
   display: flex;
   align-items: flex-start;
@@ -246,8 +246,8 @@
     background-image: var(--pf-c-about-modal-box__hero--sm--BackgroundImage);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top left;
-    background-size: auto;
+    background-position: var(--pf-c-about-modal-box__hero--sm--BackgroundPosition);
+    background-size: var(--pf-c-about-modal-box__hero--sm--BackgroundSize);
     grid-area: hero;
   }
 }
