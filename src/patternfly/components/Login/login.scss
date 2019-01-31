@@ -225,14 +225,6 @@
   justify-content: center;
   padding: var(--pf-c-login__main-footer-links--PaddingTop) var(--pf-c-login__main-footer-links--PaddingRight) var(--pf-c-login__main-footer-links--PaddingBottom) var(--pf-c-login__main-footer-links--PaddingLeft);
   margin-bottom: var(--pf-c-login__main-footer-links--MarginBottom);
-
-  &:hover,
-  &.pf-m-hover {
-    // TODO: --pf-c-login__main-footer-link--hover--Color is undefined
-
-    // --pf-c-login__main-footer-link--Color: var(--pf-c-login__main-footer-link--hover--Color);
-    --pf-c-login__main-footer-link--Color: inherit;
-  }
 }
 
 .pf-c-login__main-footer-links-item {
