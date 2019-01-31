@@ -49,7 +49,7 @@
   "dependencies": {},
   "devDependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
-    "axe-core": "^3.0.3",
+    "axe-core": "^3.1.2",
     "axe-webdriverjs": "^2.0.1",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
