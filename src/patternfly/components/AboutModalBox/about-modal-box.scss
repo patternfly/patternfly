@@ -87,16 +87,21 @@
   }
 
   // Strapline
-  --pf-c-about-modal-box__header-strapline--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__strapline--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__strapline--sm--PaddingTop: var(--pf-global--spacer--2xl);
+
+  @media only screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-about-modal-box__strapline--PaddingTop: var(--pf-c-about-modal-box__strapline--sm--PaddingTop);
+  }
 
   // Content
   --pf-c-about-modal-box__content--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__content--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__content--MarginBottom: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__content--MarginLeft: var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box__content--sm--MarginTop: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginTop: var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box__content--sm--MarginRight: var(--pf-global--spacer--3xl);
-  --pf-c-about-modal-box__content--sm--MarginBottom: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginBottom: var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box__content--sm--MarginLeft: var(--pf-global--spacer--3xl);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
@@ -163,12 +168,15 @@
   padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
 }
 
-.pf-c-about-modal-box__header-strapline {
-  padding-bottom: var(--pf-c-about-modal-box__header-strapline--PaddingBottom);
+.pf-c-about-modal-box__strapline {
+  padding-top: var(--pf-c-about-modal-box__strapline--PaddingTop);
+  margin-top: auto;
 }
 
 // Content
 .pf-c-about-modal-box__content {
+  display: flex;
+  flex-direction: column;
   grid-area: content;
   margin: var(--pf-c-about-modal-box__content--MarginTop) var(--pf-c-about-modal-box__content--MarginRight) var(--pf-c-about-modal-box__content--MarginBottom) var(--pf-c-about-modal-box__content--MarginLeft); // Using margin instead of padding to prevent scrollbar extending to top of content block
   overflow-x: hidden;
