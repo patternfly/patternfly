@@ -1,6 +1,6 @@
 {{#> data-list data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item1"'}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true"'}}{{/data-list-toggle}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-1"'}}{{/data-list-toggle}}
     {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check1" aria-labelledby="ex-item1"'}}{{/data-list-check}}
     {{#> data-list-cell}}
       <div id="ex-item1">Primary content</div>
@@ -10,13 +10,13 @@
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-labelledby="ex-item1 ex-action1" id="ex-action1" aria-label="Actions"'}}{{/data-list-action}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute='aria-label="Primary Content Details"'}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-1" aria-label="Primary Content Details"'}}
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
   {{#> data-list-item data-list-item--attribute='aria-labelledby="ex-item2"'}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false"'}}{{/data-list-toggle}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-2"'}}{{/data-list-toggle}}
     {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check2" aria-labelledby="ex-item2"'}}{{/data-list-check}}
     {{#> data-list-cell}}
       <div id="ex-item2">Primary content</div>
@@ -25,7 +25,7 @@
       <span>Lorem ipsum dolor sit amet.</span>
     {{/data-list-cell}}
     {{#> data-list-action button--attribute='aria-labelledby="ex-item2 ex-action2" id="ex-action2" aria-label="Actions"'}}{{/data-list-action}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute='aria-label="Primary Content Details"'}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Primary Content Details"'}}
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     {{/data-list-expandable-content}}
   {{/data-list-item}}

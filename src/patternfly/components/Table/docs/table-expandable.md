@@ -14,6 +14,7 @@
 | `aria-label="[descriptive text]"`               | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible name for toggle button. **Required**|
 | `aria-labelledby="{title_cell_id} {button_id}"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible description for toggle button. **Required** |
 | `id="{button_id}"`                              | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
+| `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
 
 ### Usage
