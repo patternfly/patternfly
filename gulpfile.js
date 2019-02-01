@@ -7,7 +7,6 @@ const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const gulpStylelint = require('gulp-stylelint');
-
 const pficonRunTimestamp = Math.round(Date.now() / 1000);
 const iconfontCss = require('gulp-iconfont-css');
 
@@ -63,7 +62,7 @@ gulp.task('build-library', ['build-tmp'], () =>
 );
 
 gulp.task('lint-css', ['minify-css'], () => {
-  const options = { logs: false };
+  const options = { logs: false}
   gulp
     .src('./dist/patternfly.css')
     .pipe(replace('stylelint-enable', '', options))
