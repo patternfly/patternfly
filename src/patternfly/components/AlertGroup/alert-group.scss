@@ -4,6 +4,7 @@
 .pf-c-alert-group {
   // Alert Group variables
   --pf-c-alert-group__item--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-alert-group__item-m-toast--Width: var(--pf-c-alert-group--m-toast--MaxWidth);
 
   // Toast variables
   --pf-c-alert-group--m-toast--Top: var(--pf-global--spacer--2xl);
@@ -20,7 +21,11 @@
     position: fixed;
     top: var(--pf-c-alert-group--m-toast--Top);
     right: var(--pf-c-alert-group--m-toast--Right);
-    width: calc(100% - calc(var(--pf-c-alert-group--m-toast--Right) * 2));
-    max-width: var(--pf-c-alert-group--m-toast--MaxWidth);
+    display: flex;
+    flex-direction: column;
+
+    > .pf-c-alert-group__item {
+      width: var(--pf-c-alert-group__item-m-toast--Width);
+    }
   }
 }
