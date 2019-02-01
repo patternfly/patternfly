@@ -30,7 +30,13 @@ export default ({
   return (
     <form action="https://codepen.io/pen/define" method="POST" target="_blank">
       <input type="hidden" name="data" value={data} />
-      <input type="image" src={editIcon} alt="Edit on CodePen" width={width} height={height} />
+      <input
+        type="image"
+        src={editIcon}
+        alt="Edit on CodePen"
+        width={width}
+        height={height}
+      />
     </form>
   );
 };
