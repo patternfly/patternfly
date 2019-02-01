@@ -1,0 +1,21 @@
+{{#> page-header-tools}}
+  {{#> page-header-tools-group page-header-tools-group--modifier="pf-m-icons pf-screen-reader"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Alerts"'}}
+      {{> button-icon button-icon--type="bell"}}
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
+      {{> button-icon button-icon--type="cog"}}
+    {{/button}}
+  {{/page-header-tools-group}}
+  {{#> page-header-tools-group}}
+    {{#> button button--modifier="pf-m-plain pf-m-mobile" button--attribute='aria-label="Overflow actions"'}}
+      {{> button-icon button-icon--type="ellipsis-v"}}
+    {{/button}}
+    <div class="pf-m-user pf-screen-reader">
+      {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
+        Kyle Baker
+      {{/dropdown}}
+    </div>
+  {{/page-header-tools-group}}
+  {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar Image"'}}{{/avatar}}
+{{/page-header-tools}}

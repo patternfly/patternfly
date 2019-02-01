@@ -1,0 +1,173 @@
+{{#> background-image}}
+{{/background-image}}
+{{#> page page--id="page-layout-expandable-nav"}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
+      {{/page-template-header-brand-elements}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Primary Nav Expandable Example"')}}
+      {{#> nav-list}}
+        {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
+            System Panel
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link1"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Overview
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                  Resource Usage
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Hypervisors
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
+                  Instances
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Volumes
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Networks
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link2"'}}
+            Policy
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link2"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
+            Authentication
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link3"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-nav}}
+      {{#> nav nav--attribute='aria-label="Tertiary Example"' aria-labelledby="primary-nav"}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Nav Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-main-nav}}
+       {{#> alert-group alert-group--attribute='role="status"' alert-group--modifier="pf-m-toast"}}
+      {{#> alert-item}}  
+        {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success Alert"'}}
+          {{#> alert-icon alert-icon--type="check-circle"}}
+          {{/alert-icon}}
+            {{#> alert-title}}
+              {{#> screen-reader}}Success alert:{{/screen-reader}}
+              Success Alert Title
+            {{/alert-title}}
+        {{/alert}}
+      {{/alert-item}}
+      {{#> alert-item}}
+        {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger Alert"'}}
+          {{#> alert-icon alert-icon--type="exclamation-circle"}}
+          {{/alert-icon}}
+            {{#> alert-title}}
+              {{#> screen-reader}}Danger alert:{{/screen-reader}}
+              Danger Alert Title
+            {{/alert-title}}
+          {{#> alert-action}}
+            {{#> button button--modifier="pf-m-link"}}
+              Action Button
+            {{/button}}
+          {{/alert-action}}
+        {{/alert}}
+      {{/alert-item}}
+      {{#> alert-item}}
+        {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information Alert"'}}
+          {{#> alert-icon alert-icon--type="info-circle"}}
+          {{/alert-icon}}
+            {{#> alert-title}}
+              {{#> screen-reader}}Info alert:{{/screen-reader}}
+              Info Alert Title
+            {{/alert-title}}
+            {{#> alert-description}}
+              Info alert description. <a href="#">This is a link.</a>
+            {{/alert-description}}
+        {{/alert}}
+      {{/alert-item}}
+    {{/alert-group}}
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}
