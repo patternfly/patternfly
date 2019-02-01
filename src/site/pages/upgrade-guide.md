@@ -21,14 +21,14 @@ $pf-global--enable-reset: false !default;
 Run the following commands to install:
 
 ```bash
-npm install @patternfly/patternfly-next
+npm install @patternfly/patternfly
 ```
 
 ----
 
 ## Configure your project
 
-1. Navigate to the patternfly-next package you just installed and find the PatternFly 4 CSS stylesheet, `patternfly.css`. This file contains all of the updated PatternFly 4 styles.
+1. Navigate to the @patternfly/patternfly package you just installed and find the PatternFly 4 CSS stylesheet, `patternfly.css`. This file contains all of the updated PatternFly 4 styles.
 2. Copy `patternfly.css` to your project's CSS directory.
 3. In your HTML file, add the following line to the bottom of your list of CSS files to link to your new stylesheet:
 
@@ -49,9 +49,9 @@ Each module delivers a sass file (`scss`) and CSS file so you can either include
 
 - _If you need to overwrite any elements, we recommend extending the variables found in the `.scss` files, rather than manually overwriting the CSS._
 
-All of PatternFly 4's components are kept under `@patternfly/patternfly-next/components/`.
+All of PatternFly 4's components are kept under `@patternfly/patternfly/components/`.
 
-All of PatternFly 4's layouts are kept under `@patternfly/patternfly-next/layouts/`.
+All of PatternFly 4's layouts are kept under `@patternfly/patternfly/layouts/`.
 
 ### Build Examples
 
@@ -73,11 +73,11 @@ _Code Snippet_
 ```js
 gulp.task('compile-scss', () =>
   gulp
-    .src('./@node_modules/@patternfly/patternfly-next/**/*.scss')
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/components/**/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/layouts/**/*.scss";\n'))
+    .src('./@node_modules/@patternfly/patternfly/**/*.scss')
+    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/**/*.scss";\n'))
+    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/**/*.scss";\n'))
     .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly-next/patternfly-imports";', ''))
+    .pipe(replace('@import "./@node_modules/@patternfly/patternfly/patternfly-imports";', ''))
     .pipe(gulp.dest('./css'))
 );
 ```
@@ -87,13 +87,13 @@ gulp.task('compile-scss', () =>
 ```js
 gulp.task('compile-scss', () =>
   gulp
-    .src('./@node_modules/@patternfly/patternfly-next/**/*.scss')
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/layouts/Page/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/layouts/Grid/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/components/Content/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly-next/components/Content/*.scss";\n'))
+    .src('./@node_modules/@patternfly/patternfly/**/*.scss')
+    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/Page/*.scss";\n'))
+    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/Grid/*.scss";\n'))
+    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/Content/*.scss";\n'))
+    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/Content/*.scss";\n'))
     .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly-next/patternfly-imports";', ''))
+    .pipe(replace('@import "./@node_modules/@patternfly/patternfly/patternfly-imports";', ''))
     .pipe(gulp.dest('./css'))
 );
 ```
@@ -127,7 +127,7 @@ module.exports = {
         loader: "sass-loader",
         options: {
           includePaths: [
-            "../node_modules/@patternfly/patternfly-next/"
+            "../node_modules/@patternfly/patternfly/"
           ]
         }
       }]
@@ -151,11 +151,11 @@ module.exports = {
         loader: "sass-loader",
         options: {
           includePaths: [
-            "../node_modules/@patternfly/patternfly-next/layouts/Page/",
-            "../node_modules/@patternfly/patternfly-next/layouts/Grid",
-            "../node_modules/@patternfly/patternfly-next/components/Content",
-            "../node_modules/@patternfly/patternfly-next/components/SecondaryNav",
-            "../node_modules/@patternfly/patternfly-next/components/Button"
+            "../node_modules/@patternfly/patternfly/layouts/Page/",
+            "../node_modules/@patternfly/patternfly/layouts/Grid",
+            "../node_modules/@patternfly/patternfly/components/Content",
+            "../node_modules/@patternfly/patternfly/components/SecondaryNav",
+            "../node_modules/@patternfly/patternfly/components/Button"
           ]
         }
       }]
@@ -196,7 +196,7 @@ Font Awesome 5 is now part of PatternFly 4, and we give you options for utilizin
 
 As part of PatternFly 4, we give users the option to either use Font Awesome 5 as an included set (prebuilt into the CSS), or as a CDN reference.
 
-If you wish to use the CDN, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly-next/`) and update the `utilities/variables.scss` file as follows:
+If you wish to use the CDN, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`) and update the `utilities/variables.scss` file as follows:
 
 ```scss
 $pf-global--enable-fontawesome-cdn: true !default;
@@ -219,7 +219,7 @@ $pf-global--disable-fontawesome: true !default;
 
 #### Font Awesome 5 Tree Shaking
 
-Additionally, Font Awesome 5 now provides the option for [tree shaking](https://fontawesome.com/how-to-use/use-with-node-js#tree-shaking). In order to utilize this option, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly-next/`), and update the `utilities/variables.scss` file accordingly.
+Additionally, Font Awesome 5 now provides the option for [tree shaking](https://fontawesome.com/how-to-use/use-with-node-js#tree-shaking). In order to utilize this option, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`), and update the `utilities/variables.scss` file accordingly.
 
 The updated `variables.scss` file should look as follows:
 

@@ -1,25 +1,25 @@
-# PatternFly Next
+# PatternFly 4
 
 ## Install 
 
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
-- run `npm install @patternfly/patternfly-next --save`
+- run `npm install @patternfly/patternfly --save`
 
-When you install PatternFly Next, the package includes:
+When you install PatternFly 4, the package includes:
 
-- a single file for the entire compiled library: `node_modules/@patternfly/patternfly-next/patternfly.css`
-- individual files with each component compiled separately: `node_modules/@patternfly/patternfly-next/<ComponentName>/styles.css`
-- a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly-next/patternfly.scss`
-- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly-next/<ComponentName>/styles.scss`
+- a single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
+- individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
+- a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly/patternfly.scss`
+- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
 
 Any of the files above are meant for use in consuming the library. The recommended
 consumption approach will vary from project to project.
 
 ## Development
 
-**PatternFly Next Development requires Node v8.0.0 or greater**
+**PatternFly 4 Development requires Node v8.0.0 or greater**
 
-To setup the PatternFly Next development environment:
+To setup the PatternFly 4 development environment:
 
 - clone the project
 - run `npm install` from the project root
@@ -29,7 +29,7 @@ To setup the PatternFly Next development environment:
 
 After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
 
-## Set PatternFly Next IP Address
+## Set PatternFly 4 IP Address
 
 If Gatsby needs to run on local IP for testing on other machines or devices use `npm run dev:expose` which sets host to `0.0.0.0`.
 If you want to set host to a specific IP address for example `172.17.12.1` run `npm run dev -H 172.17.12.1`.
@@ -60,7 +60,7 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 ## Testing for Accessibility
 
-PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf-next.com/accessibility-guide).
+PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf4.patternfly.org/accessibility-guide).
 
 ### How to Perform an Accessibility Audit with aXe
 aXe is available as either a browser extension or npm script.
@@ -88,4 +88,4 @@ If you have any suggestions about ways that we can improve how we use this tool,
 ## FAQ
 
 [How do I use SCSS variables to customize
-the library?](https://pf-next.com/guidelines#variables)
+the library?](https://pf4.patternfly.org/guidelines#variables)

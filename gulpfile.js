@@ -5,8 +5,8 @@ const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
-
 const iconfont = require('gulp-iconfont');
+const gulpStylelint = require('gulp-stylelint');
 
 const pficonRunTimestamp = Math.round(Date.now() / 1000);
 const iconfontCss = require('gulp-iconfont-css');
@@ -35,7 +35,7 @@ gulp.task('build-pficonfont', () => {
     .pipe(gulp.dest('./src/patternfly/assets/pficon/'));
 });
 
-gulp.task('build', ['build-modules', 'build-library', 'copy-fa', 'copy-source', 'minify-css']);
+gulp.task('build', ['build-modules', 'build-library', 'copy-fa', 'copy-source', 'minify-css', 'lint-css']);
 
 gulp.task('copy-fa', () =>
   gulp
@@ -62,26 +62,43 @@ gulp.task('build-library', ['build-tmp'], () =>
     .pipe(gulp.dest('./dist'))
 );
 
-gulp.task('minify-css', ['build-library'], () => {
+gulp.task('lint-css', ['minify-css'], () => {
+  const options = { logs: false };
   gulp
     .src('./dist/patternfly.css')
-    .pipe(sourcemaps.init())
-    .pipe(cssnano())
-    .pipe(rename('patternfly.min.css'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist'));
+    .pipe(replace('stylelint-enable', '', options))
+    .pipe(replace('stylelint-disable', '', options))
+    .pipe(
+      gulpStylelint({
+        failAfterError: true,
+        configFile: './.cssstylelint',
+        defaultSeverity: 'error',
+        reporters: [{ formatter: 'string', console: true }]
+      })
+    );
 });
 
-gulp.task('build-modules', () =>
-  gulp
-    .src([
-      './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-      '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
-    ])
-    .pipe(sass().on('error', sass.logError))
-    .pipe(replace('./assets/images', '../../assets/images'))
-    .pipe(gulp.dest('./dist'))
-);
+gulp
+  .task('minify-css', ['build-library'], () => {
+    gulp
+      .src('./dist/patternfly.css')
+
+      .pipe(sourcemaps.init())
+      .pipe(cssnano())
+      .pipe(rename('patternfly.min.css'))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('./dist'));
+  })
+  .task('build-modules', () =>
+    gulp
+      .src([
+        './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+        '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
+      ])
+      .pipe(sass().on('error', sass.logError))
+      .pipe(replace('./assets/images', '../../assets/images'))
+      .pipe(gulp.dest('./dist'))
+  );
 
 gulp.task('copy-source', ['copy-icons', 'build-tmp'], () => {
   gulp.src('./README.md').pipe(gulp.dest('./dist'));

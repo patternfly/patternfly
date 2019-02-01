@@ -140,7 +140,7 @@
 
 // Header
 .pf-c-page__header {
-  @extend %pf-t-dark; // force the container to follow the dark theme
+  @include pf-t-dark; // force the container to follow the dark theme
 
   grid-area: header;
   z-index: var(--pf-c-page__header--ZIndex);
@@ -327,7 +327,7 @@
   }
 
   &[class*="pf-m-dark-"] {
-    @extend %pf-t-dark; // force the container to follow the dark theme
+    @include pf-t-dark; // force the container to follow the dark theme
   }
 
   &.pf-m-dark-100 {

@@ -58,7 +58,7 @@
   --pf-c-context-selector__menu-list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-context-selector__menu-list-item--disabled--Color: var(--pf-global--Color--dark-200);
 
-  @extend %pf-t-light;
+  @include pf-t-light;
 
   position: relative;
   display: inline-block;

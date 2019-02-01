@@ -59,7 +59,11 @@
   line-height: var(--pf-global--LineHeight--md);
   color: var(--pf-global--Color--100); // this color rule is set here to be able to use themes
   text-rendering: optimizeLegibility;
+}
 
+[class*="pf-c"],
+[class*="pf-u"],
+[class*="pf-l"] {
   &,
   &::before,
   &::after {
