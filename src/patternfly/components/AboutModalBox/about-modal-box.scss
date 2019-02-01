@@ -117,7 +117,7 @@
   }
 
   // This component always needs to be dark
-  @extend %pf-t-dark;
+  @include pf-t-dark;
 
   position: relative;
   z-index: var(--pf-c-about-modal-box--ZIndex);

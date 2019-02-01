@@ -125,3 +125,15 @@
   white-space: normal;
   border: inherit;
 }
+
+@mixin pf-t-light($color: "--pf-global--Color--100") {
+  color: var(#{$color});
+
+  @extend %pf-t-light;
+}
+
+@mixin pf-t-dark($color: "--pf-global--Color--100") {
+  color: var(#{$color});
+
+  @extend %pf-t-dark;
+}
