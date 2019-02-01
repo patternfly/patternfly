@@ -114,7 +114,7 @@
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
 
-  // Modifier - Sort 
+  // Modifier - Sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
 
   /* stylelint-enable */
@@ -187,7 +187,6 @@
   tbody {
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingBottom);
-    --pf-c-table-cell--FontSize: var(--pf-c-table-tbody--FontSize);
 
     // Border treatment
     // using first child as row does not calculate height appropriately
