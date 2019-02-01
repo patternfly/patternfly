@@ -5,7 +5,6 @@
 - pf-m-active
 - pf-m-align-right
 - pf-m-all
-- pf-m-ascending
 - pf-m-block
 - pf-m-bottom
 - pf-m-collapsed
@@ -15,7 +14,6 @@
 - pf-m-dark
 - pf-m-dark-100
 - pf-m-dark-200
-- pf-m-descending
 - pf-m-disabled
 - pf-m-end
 - pf-m-end-current

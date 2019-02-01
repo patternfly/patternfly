@@ -56,12 +56,12 @@ export default ({ children }) => (
       return (
         <div className="layout">
           <Helmet>
-            <title>PF Next</title>
+            <title>PatternFly 4</title>
             <html lang="en-US" />
           </Helmet>
           <header className="layout__header">
             <h1>
-              <Link to="/">PF Next</Link>
+              <Link to="/">PatternFly 4</Link>
             </h1>
             <Navigation links={allPages.page} isHorizontal />
           </header>

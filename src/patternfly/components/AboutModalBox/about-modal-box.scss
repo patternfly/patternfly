@@ -71,6 +71,11 @@
   --pf-c-about-modal-box__close--c-button--BackgroundColor: #{$pf-color-black-1000}; // Close button uses a non-standard background color
   --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: #{rgba($pf-color-black-1000, .4)};
 
+  // hero image
+  --pf-c-about-modal-box__hero--sm--BackgroundImage: url("#{$pf-global--image-path}/pfbg_992@2x.jpg");
+  --pf-c-about-modal-box__hero--sm--BackgroundPosition: top left;
+  --pf-c-about-modal-box__hero--sm--BackgroundSize: cover;
+
   // Brand img
   --pf-c-about-modal-box__brand-image--Height: #{pf-size-prem(40px)};
 
@@ -87,16 +92,21 @@
   }
 
   // Strapline
-  --pf-c-about-modal-box__header-strapline--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-about-modal-box__strapline--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__strapline--sm--PaddingTop: var(--pf-global--spacer--2xl);
+
+  @media only screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-about-modal-box__strapline--PaddingTop: var(--pf-c-about-modal-box__strapline--sm--PaddingTop);
+  }
 
   // Content
   --pf-c-about-modal-box__content--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__content--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__content--MarginBottom: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__content--MarginLeft: var(--pf-global--spacer--xl);
-  --pf-c-about-modal-box__content--sm--MarginTop: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginTop: var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box__content--sm--MarginRight: var(--pf-global--spacer--3xl);
-  --pf-c-about-modal-box__content--sm--MarginBottom: var(--pf-global--spacer--3xl);
+  --pf-c-about-modal-box__content--sm--MarginBottom: var(--pf-global--spacer--2xl);
   --pf-c-about-modal-box__content--sm--MarginLeft: var(--pf-global--spacer--3xl);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
@@ -107,8 +117,9 @@
   }
 
   // This component always needs to be dark
-  @extend %pf-t-dark;
+  @include pf-t-dark;
 
+  position: relative;
   z-index: var(--pf-c-about-modal-box--ZIndex);
   display: grid;
   grid-template-rows: max-content max-content auto;
@@ -163,12 +174,15 @@
   padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
 }
 
-.pf-c-about-modal-box__header-strapline {
-  padding-bottom: var(--pf-c-about-modal-box__header-strapline--PaddingBottom);
+.pf-c-about-modal-box__strapline {
+  padding-top: var(--pf-c-about-modal-box__strapline--PaddingTop);
+  margin-top: auto;
 }
 
 // Content
 .pf-c-about-modal-box__content {
+  display: flex;
+  flex-direction: column;
   grid-area: content;
   margin: var(--pf-c-about-modal-box__content--MarginTop) var(--pf-c-about-modal-box__content--MarginRight) var(--pf-c-about-modal-box__content--MarginBottom) var(--pf-c-about-modal-box__content--MarginLeft); // Using margin instead of padding to prevent scrollbar extending to top of content block
   overflow-x: hidden;
@@ -185,6 +199,7 @@
 // Close
 .pf-c-about-modal-box__close {
   grid-area: close;
+  position: sticky;
   z-index: var(--pf-c-about-modal-box__close--ZIndex);
   display: flex;
   align-items: flex-start;
@@ -225,16 +240,14 @@
 // Hero
 .pf-c-about-modal-box__hero {
   display: none; // Don't display the hero at the narrowest breakpoint
-  overflow: hidden;
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
     display: block;
+    background-image: var(--pf-c-about-modal-box__hero--sm--BackgroundImage);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: var(--pf-c-about-modal-box__hero--sm--BackgroundPosition);
+    background-size: var(--pf-c-about-modal-box__hero--sm--BackgroundSize);
     grid-area: hero;
   }
-}
-
-.pf-c-about-modal-box__hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

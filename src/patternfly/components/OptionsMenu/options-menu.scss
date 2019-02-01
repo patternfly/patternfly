@@ -18,7 +18,6 @@
   --pf-c-options-menu__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-options-menu__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-options-menu__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-options-menu__toggle--m-plain--BorderColor: transparent;
   --pf-c-options-menu__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-options-menu__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
@@ -69,7 +68,7 @@
   max-width: 100%;
 }
 
-.pf-c-options-menu__toggle,
+.pf-c-options-menu__toggle:not(.pf-m-plain),
 .pf-c-options-menu.pf-m-text:not(.pf-m-plain) .pf-c-options-menu__toggle-button {
   &::before {
     position: absolute;
@@ -77,7 +76,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
     content: "";
     border: var(--pf-c-options-menu__toggle--BorderWidth) solid;
     border-color: var(--pf-c-options-menu__toggle--BorderTopColor) var(--pf-c-options-menu__toggle--BorderRightColor) var(--pf-c-options-menu__toggle--BorderBottomColor) var(--pf-c-options-menu__toggle--BorderLeftColor);
@@ -111,6 +109,10 @@
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
+  > * {
+    position: relative;
+  }
+
   &:not(.pf-m-text) {
     padding-top: var(--pf-c-options-menu__toggle--PaddingTop);
     padding-right: var(--pf-c-options-menu__toggle--PaddingRight);
@@ -130,20 +132,12 @@
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 
-    &::before {
-      border-color: var(--pf-c-options-menu__toggle--m-plain--BorderColor);
-    }
-
     &:hover,
     &.pf-m-hover,
     &:active,
     &.pf-m-active,
     .pf-c-options-menu.pf-m-expanded > & {
       --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--hover--Color);
-
-      &::before {
-        border-color: var(--pf-c-options-menu__toggle--m-plain--BorderColor);
-      }
     }
   }
 }

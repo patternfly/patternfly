@@ -11,7 +11,7 @@
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
   --pf-c-modal-box--Width: 100%;
-  --pf-c-modal-box--MaxWidth: calc(100% - var(--pf-c-modal-box--MarginLeft) - var(--pf-c-modal-box--MarginRight)); // Ensure modal has gutters at full width
+  --pf-c-modal-box--MaxWidth: calc(100% - var(--pf-global--spacer--xl)); // Ensure modal has gutters at full width
   --pf-c-modal-box--m-sm--sm--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
   --pf-c-modal-box--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
@@ -34,7 +34,7 @@
   --pf-c-modal-box__footer--c-button--sm--MarginRight: calc(var(--pf-c-modal-box__footer--c-button--MarginRight) / 2);
 
   // This component always needs to be light
-  @extend %pf-t-light;
+  @include pf-t-light;
 
   position: relative;
   z-index: var(--pf-c-modal-box--ZIndex);

@@ -199,7 +199,7 @@ const continueWebpackConfig = ({ stage, actions }) => {
         defaultSeverity: 'error'
       }),
       new WebpackNotifierPlugin({
-        title: 'PF-Next',
+        title: 'PatternFly 4',
         skipFirstNotification: true
       })
     ]

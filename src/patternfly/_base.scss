@@ -74,50 +74,6 @@
   }
 }
 
-// Attributes for shield element attr selectors
-$shield-attrs: '[class*="pf-c"]', '[class*="pf-u"]', '[class*="pf-l"]';
-
-@mixin buildShieldAttrSel($els) {
-  @each $el in $els {
-    @each $attr in $shield-attrs {
-      #{$el}#{$attr} {
-        @content;
-      }
-    }
-  }
-}
-
-// Lists
-%list-styles {
-  list-style: none;
-}
-
-@include buildShieldAttrSel(ul) {
-  @extend %list-styles;
-}
-
-// Form elements
-%form-el-styles {
-  font-family: var(--pf-global--FontFamily--sans-serif);
-  font-size: 100%;
-  line-height: var(--pf-global--LineHeight--md);
-}
-
-@include buildShieldAttrSel(button input optgroup select textarea) {
-  @extend %form-el-styles;
-}
-
-// Headings
-%heading-styles {
-  font-size: 100%;
-  font-weight: var(--pf-global--FontWeight--normal);
-}
-
-@include buildShieldAttrSel(h1 h2 h3 h4 h5 h6) {
-  @extend %heading-styles;
-}
-
-
 // Since PF3 sets root font size to 10px, we need to unset it.
 // This doesn't affect PF3.
 // https://github.com/twbs/bootstrap/blob/v3.4.0/less/scaffolding.less#L23
