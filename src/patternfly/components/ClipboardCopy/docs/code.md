@@ -18,9 +18,10 @@
 | `.pf-c-clipboard-copy` | `<div>` | Initiates a clipboard copy component. |
 | `.pf-c-clipboard-copy__group` | `<div>` | Initiates a wrapper for the clipboard copy group. |
 | `.pf-c-clipboard-copy__group-toggle` | `<button>` | Initiates a toggle button that expands content. |
+| `.pf-c-clipboard-copy__group-toggle-icon` | `<i>` | Initiates a toggle buttin icon. |
 | `.pf-c-clipboard-copy__group-text` | `<span>` |  Initiates text within the clipboard copy component. **Required** |
 | `.pf-c-clipboard-copy__group-copy` | `<button>` | Initiates a copy button with the clipboard icon. **Required** |
 | `.pf-c-clipboard-copy__expanded-content` | `<div>` | Initiates an expanded text element. |
 | `.pf-m-expanded` | `.pf-c-clipboard-copy__group-toggle` | Modifies toggle button for the expanded state. |
-| `.pf-m-hover` | `.pf-c-clipboard-copy__group-toggle` `.pf-c-clipboard-copy__group-copy`| Modifies buttons for the hover state. |
-| `.pf-m-active` | `.pf-c-clipboard-copy__group-toggle `| Modifies toggle button for the hover state. |
+| `.pf-m-hover` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies buttons for the hover state. |
+| `.pf-m-active` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies toggle button for the active state. |

@@ -12,8 +12,8 @@
   --pf-c-clipboard-copy__group-toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-clipboard-copy__group-toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-clipboard-copy__group-toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-clipboard-copy__group-toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-clipboard-copy__group-toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomColor: var(--pf-global--active-color--100);
 
   // Clipboard Copy Copy
   --pf-c-clipboard-copy__group-copy--PaddingRight: var(--pf-global--spacer--md);
@@ -32,7 +32,7 @@
   --pf-c-clipboard-copy__group-text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-clipboard-copy__group-text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-clipboard-copy__group-text--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-clipboard-copy__group-text--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-clipboard-copy__group-text--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-clipboard-copy__group-text--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-clipboard-copy__group-text--BorderTopColor: var(--pf-global--BorderColor--light-200);
   --pf-c-clipboard-copy__group-text--BorderRightColor: var(--pf-global--BorderColor--light-200);
@@ -59,6 +59,10 @@
     position: relative;
     display: flex;
 
+    * + * {
+      margin-left: -1px;
+    }
+
     .pf-c-clipboard-copy__group-toggle {
       position: relative;
       padding-right: var(--pf-c-clipboard-copy__group-toggle--PaddingRight);
@@ -77,7 +81,7 @@
       }
 
       &:hover,
-      .pf-m-hover {
+      &.pf-m-hover {
         &::before {
           --pf-c-clipboard-copy__group-toggle--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--hover--BorderBottomColor);
         }
@@ -111,7 +115,7 @@
       }
 
       &:hover,
-      .pf-m-hover {
+      &.pf-m-hover {
         &::before {
           --pf-c-clipboard-copy__group-copy--BorderBottomColor: var(--pf-c-clipboard-copy__group-copy--hover--BorderBottomColor);
         }
@@ -121,7 +125,7 @@
     .pf-c-clipboard-copy__group-text {
       position: relative;
       max-width: var(--pf-c-clipboard-copy__group-text--MaxWidth);
-      padding: var(--pf-c-clipboard-copy__group-text--PaddingTop) var(--pf-c-clipboard-copy__group-text--PaddingRight) var(--pf-c-clipboard-copy__group-text--PaddingTop) var(--pf-c-clipboard-copy__group-text--PaddingLeft);
+      padding: var(--pf-c-clipboard-copy__group-text--PaddingTop) var(--pf-c-clipboard-copy__group-text--PaddingRight) var(--pf-c-clipboard-copy__group-text--PaddingBottom) var(--pf-c-clipboard-copy__group-text--PaddingLeft);
       overflow: hidden;
       font-size: var(--pf-c-clipboard-copy__group-text--FontSize);
       line-height: var(--pf-c-clipboard-copy__group-text--LineHeight);
@@ -149,12 +153,12 @@
   // Toggle button expanded
   &.pf-m-expanded .pf-c-clipboard-copy__group-toggle {
     &::before {
-      --pf-c-clipboard-copy__group-toggle--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--expanded--BorderBottomColor);
+      --pf-c-clipboard-copy__group-toggle--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomColor);
 
-      border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--expanded--BorderBottomWidth);
+      border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomWidth);
     }
 
-    i {
+    .pf-c-clipboard-copy__group-toggle-icon {
       transform: rotate(90deg);
     }
   }
