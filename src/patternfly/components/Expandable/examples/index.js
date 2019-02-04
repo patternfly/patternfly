@@ -1,20 +1,26 @@
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import expandableExampleRaw from '!raw!./expandable-example.hbs';
-import ExpandableExample from './expandable-example.hbs';
+import expandableExpandedExampleRaw from '!raw!./expandable-expanded-example.hbs';
+import expandableHiddenExampleRaw from '!raw!./expandable-hidden-example.hbs';
+import ExpandableExpandedExample from './expandable-expanded-example.hbs';
+import ExpandableHiddenExample from './expandable-hidden-example.hbs';
 import docs from '../docs/code.md';
 import '../expandable.scss';
 
 export const Docs = docs;
 
 export default () => {
-  const expandableExample = ExpandableExample();
+  const expandableExpandedExample = ExpandableExpandedExample();
+  const expandableHiddenExample = ExpandableHiddenExample();
 
   return (
     <Documentation docs={Docs}>
-      <Example heading="Expandable Example" handlebars={expandableExampleRaw}>
-        {expandableExample}
+      <Example heading="Hidden Example" handlebars={expandableHiddenExampleRaw}>
+        {expandableHiddenExample}
+      </Example>
+      <Example heading="Expanded Example" handlebars={expandableExpandedExampleRaw}>
+        {expandableExpandedExample}
       </Example>
     </Documentation>
   );

@@ -1,0 +1,76 @@
+{{#> expandable expandable--IsExpanded="true"}}
+  {{#> expandable-section}}
+    {{#> title titleType="h1" title--modifier="pf-m-xl"}}
+      Payment Information
+    {{/title}}
+    {{#> form form--id="expandable-section"}}
+      {{#> form-group}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+          Card Number
+        {{/form-label}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" placeholder="XXXX XXXX XXXX XXXX"')}}
+        {{/form-control}}
+      {{/form-group}}
+      {{#> form-group}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+          Expiration Date
+        {{/form-label}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" placeholder="06/18"')}}
+        {{/form-control}}
+      {{/form-group}}
+      {{#> form-group}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+          CVV
+        {{/form-label}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" placeholder="XXX"')}}
+        {{/form-control}}
+      {{/form-group}}
+    {{/form}}
+  {{/expandable-section}}
+  {{#> expandable-toggle}}
+  {{/expandable-toggle}}
+  {{#> expandable-expanded}}
+  {{#> form form--id="expanded"}}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+        Name
+      {{/form-label}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
+      {{/form-control}}
+    {{/form-group}}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+        Address
+      {{/form-label}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
+      {{/form-control}}
+    {{/form-group}}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+        City
+      {{/form-label}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
+      {{/form-control}}
+    {{/form-group}}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+        State
+      {{/form-label}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
+      {{/form-control}}
+    {{/form-group}}
+    {{#> form-group}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
+        Zip
+      {{/form-label}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
+      {{/form-control}}
+    {{/form-group}}
+  {{/form}}
+  {{/expandable-expanded}}
+  {{#> expandable-footer}}
+    {{#> button button--modifier="pf-m-primary"}}
+      Primary
+    {{/button}}
+  {{/expandable-footer}}
+{{/expandable}}

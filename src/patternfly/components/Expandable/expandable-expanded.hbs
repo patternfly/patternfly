@@ -1,4 +1,5 @@
 <div class="pf-c-expandable__expanded{{#if expandable-expanded--modifier}} {{expandable-expanded--modifier}}{{/if}}"
+  {{#unless expandable--IsExpanded}}hidden{{/unless}}
   {{#if expandable-expanded--attribute}}
     {{{expandable-expanded--attribute}}}
   {{/if}}>
