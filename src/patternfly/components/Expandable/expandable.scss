@@ -1,6 +1,8 @@
 @import "../../patternfly-imports";
 
 .pf-c-expandable {
+  // Expandable
+  --pf-c-expandable--Width: #{pf-size-prem(450px)};
   --pf-c-expandable--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-expandable--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-expandable--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -9,7 +11,25 @@
   --pf-c-expandable--PaddingBottom: var(--pf-global--spacer--2xl);
   --pf-c-expandable--PaddingLeft: var(--pf-global--spacer--2xl);
 
-  width: 450px;
+  // Title
+  --pf-c-expandable--c-title--MarginBottom: var(--pf-global--spacer--lg);
+
+  // Expandable Toggle
+  --pf-c-expandable__toggle--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-expandable__toggle--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-expandable__toggle--Color: var(--pf-global--active-color--300);
+
+  // Expandable Toggle Icon
+  --pf-c-expandable__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-expandable__toggle-icon--Color: var(--pf-global--Color--100);
+
+  // Expandable Expanded
+  --pf-c-expandable__expanded--MarginTop: var(--pf-global--spacer--xl);
+
+  // Expandable Footer
+  --pf-c-expandable__footer--Margin-Top: var(--pf-global--spacer--2xl);
+
+  width: var(--pf-c-expandable--Width);
   padding: var(--pf-c-expandable--PaddingTop) var(--pf-c-expandable--PaddingRight) var(--pf-c-expandable--PaddingBottom) var(--pf-c-expandable--PaddingLeft);
   background-color: var(--pf-c-expandable--BackgroundColor);
   background-clip: padding-box;
@@ -29,18 +49,18 @@
   }
 
   .pf-c-title {
-    margin-bottom: var(--pf-global--spacer--lg); // add variable
+    margin-bottom: var(--pf-c-expandable--c-title--MarginBottom);
   }
 
   .pf-c-expandable__toggle {
-    margin-top: var(--pf-global--spacer--xl); // add variable
-    font-weight: var(--pf-global--FontWeight--semi-bold); // add variable
-    color: var(--pf-global--active-color--300); // add variable
+    margin-top: var(--pf-c-expandable__toggle--MarginTop);
+    font-weight: var(--pf-c-expandable__toggle--FontWeight);
+    color: var(--pf-c-expandable__toggle--Color);
     border: none;
 
     .pf-c-expandable__toggle-icon {
-      margin-right: var(--pf-global--spacer--sm);
-      color: var(--pf-global--Color--100);
+      margin-right: var(--pf-c-expandable__toggle-icon--MarginRight);
+      color: var(--pf-c-expandable__toggle-icon--Color);
     }
 
     &::after {
@@ -49,13 +69,13 @@
   }
 
   .pf-c-expandable__expanded {
-    margin-top: var(--pf-global--spacer--xl); // add variable
+    margin-top: var(--pf-c-expandable__expanded--MarginTop);
   }
 
   .pf-c-expandable__footer {
     display: flex;
     flex: 0 0 auto;
-    margin-top: var(--pf-global--spacer--2xl); // add variable
+    margin-top: var(--pf-c-expandable__footer--Margin-Top);
 
     .pf-c-button {
       margin-left: auto;

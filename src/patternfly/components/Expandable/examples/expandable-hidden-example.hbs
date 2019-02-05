@@ -27,9 +27,9 @@
       {{/form-group}}
     {{/form}}
   {{/expandable-section}}
-  {{#> expandable-toggle}}
+  {{#> expandable-toggle expandable-toggle--attribute='aria-controls="expanded-section-1"'}}
   {{/expandable-toggle}}
-  {{#> expandable-expanded}}
+  {{#> expandable-expanded expandable-expanded--attribute='id="expanded-section-1"'}}
   {{#> form form--id="expanded"}}
     {{#> form-group}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}

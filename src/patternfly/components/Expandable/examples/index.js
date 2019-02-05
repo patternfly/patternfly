@@ -13,9 +13,10 @@ export const Docs = docs;
 export default () => {
   const expandableExpandedExample = ExpandableExpandedExample();
   const expandableHiddenExample = ExpandableHiddenExample();
+  const headingText = 'Expandable';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Hidden Example" handlebars={expandableHiddenExampleRaw}>
         {expandableHiddenExample}
       </Example>
