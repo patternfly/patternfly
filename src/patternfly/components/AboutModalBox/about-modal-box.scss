@@ -200,6 +200,7 @@
 .pf-c-about-modal-box__close {
   grid-area: close;
   position: sticky;
+  top: 0;
   z-index: var(--pf-c-about-modal-box__close--ZIndex);
   display: flex;
   align-items: flex-start;
