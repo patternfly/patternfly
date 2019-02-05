@@ -219,9 +219,15 @@ html {
   [type="button"],
   [type="reset"],
   [type="submit"] {
+    // Remove the inner border and padding in Firefox.
     &::-moz-focus-inner {
       padding: 0;
       border-style: none;
+    }
+
+    // Restore the focus styles unset by the previous rule.
+    &:-moz-focusring {
+      outline: 1px dotted ButtonText;
     }
   }
 } // ends if
