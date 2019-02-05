@@ -39,6 +39,9 @@
   --pf-c-clipboard-copy__group-text--BorderBottomColor: var(--pf-global--disabled-color--200);
   --pf-c-clipboard-copy__group-text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-clipboard-copy__group-text--MaxWidth: #{pf-size-prem(300px)};
+  --pf-c-clipboard-copy__group-text--m-editable--BorderBottomColor: var(--pf-global--BorderColor--dark);
+  --pf-c-clipboard-copy__group-text--m-editable--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-clipboard-copy__group-text--m-editable--Height: #{pf-size-prem(36px)};
 
   // Clipboard Copy Expanded Content
   --pf-c-clipboard-copy__expanded-content--PaddingTop: var(--pf-global--spacer--md);
@@ -134,6 +137,14 @@
       background-color: var(--pf-c-clipboard-copy__group-text--BackgroundColor);
       border: var(--pf-c-clipboard-copy__group-text--BorderWidth) solid;
       border-color: var(--pf-c-clipboard-copy__group-text--BorderTopColor) var(--pf-c-clipboard-copy__group-text--BorderRightColor) var(--pf-c-clipboard-copy__group-text--BorderBottomColor) var(--pf-c-clipboard-copy__group-text--BorderLeftColor);
+
+      &.pf-m-editable {
+        --pf-c-clipboard-copy__group-text--BackgroundColor: var(--pf-c-clipboard-copy__group-text--m-editable--BackgroundColor);
+
+        height: var(--pf-c-clipboard-copy__group-text--m-editable--Height);
+
+        --pf-c-clipboard-copy__group-text--BorderBottomColor: var(--pf-c-clipboard-copy__group-text--m-editable--BorderBottomColor);
+      }
     }
   }
   /* stylelint-enable */
