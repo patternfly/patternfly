@@ -1,10 +1,10 @@
 Read-Only
 <br>
 {{#> clipboard-copy}}
-  {{#> clipboard-copy-group}}
-    {{#> clipboard-copy-group-text}}This text is read-only{{/clipboard-copy-group-text}}
-    {{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
-  {{/clipboard-copy-group}}
+	{{#> clipboard-copy-group}}
+		{{#> clipboard-copy-group-text}}This text is read-only{{/clipboard-copy-group-text}}
+		{{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
+	{{/clipboard-copy-group}}
 {{/clipboard-copy}}
 <br>
 <br>
@@ -12,7 +12,7 @@ Editable
 <br>
 {{#> clipboard-copy}}
 	{{#> clipboard-copy-group}}
-	{{#> clipboard-copy-group-text clipboard-copy-group-text--type="textarea" clipboard-copy-group-text--modifier="pf-m-editable"}}This text is editable{{/clipboard-copy-group-text}}
+	{{#> clipboard-copy-group-text clipboard-copy-group-text--modifier="pf-m-editable" clipboard-copy-group-text--type="textarea"}}This text is editable{{/clipboard-copy-group-text}}
 		{{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
 	{{/clipboard-copy-group}}
 {{/clipboard-copy}}
