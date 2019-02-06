@@ -1,15 +1,11 @@
 {{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-pagination-split-button-dropdown-pagination-example-button"}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id="toolbar-pagination-split-button-dropdown-pagination-example-check" aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="toolbar-pagination-split-button-dropdown-pagination-example-button"  aria-label="Select"}}
-  {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" aria-label="Filter results"}}
     {{> button-icon button-icon--type="filter"}}
   {{/button}}
   {{#> toolbar-filter}}
     {{#> select id="toolbar-pagination-select-checkbox" select--IsCheckboxSelect="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
-      Status
+      Name
     {{/select}}
   {{/toolbar-filter}}
   {{#> options-menu id="toolbar-pagination-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
@@ -20,10 +16,10 @@
   {{/options-menu}}
   {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
-      action
+      Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      secondary
+      Action
     {{/button}}
   {{/toolbar-action-group}}
   {{#> dropdown id="toolbar-pagination-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
@@ -36,7 +32,7 @@
     {{#> options-menu id="toolbar-pagination-pagination-options-menu-top-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
       {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
         <span class="pf-c-options-menu__toggle-text">
-          <b>1 - 10</b> of <b>37</b> Items
+          <b>1 - 5</b> of <b>10</b> Items
         </span>
         {{> options-menu-toggle-button aria-label="Select"}}
       {{/options-menu-toggle}}
@@ -53,7 +49,7 @@
 
       {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
         {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" size="2" value="1"'}}
-        <span aria-hidden="true">of 4</span>
+        <span aria-hidden="true">of 2</span>
       {{/pagination-nav-page-select}}
 
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
