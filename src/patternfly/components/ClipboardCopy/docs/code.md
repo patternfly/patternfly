@@ -25,4 +25,4 @@
 | `.pf-m-expanded` | `.pf-c-clipboard-copy__group-toggle` | Modifies toggle button for the expanded state. |
 | `.pf-m-hover` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies buttons for the hover state. |
 | `.pf-m-active` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies toggle button for the active state. |
-| `.pf-m-editable` | `.pf-c-clipboard-copy__group-text` | Modifies the clipboard copy text to be editable. |
+| `.pf-m-editable` | `.pf-c-clipboard-copy__group-text` | Modifies the clipboard copy text to be editable. Must be used with `contenteditable="true"`|
