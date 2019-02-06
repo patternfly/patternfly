@@ -2,12 +2,11 @@
 
 .pf-c-accordion {
   // accordion
-  --pf-c-accordion--Width: #{pf-size-prem(300px)};
   --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-accordion--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-accordion--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-accordion--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-accordion--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-accordion--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-accordion--PaddingBottom: var(--pf-global--spacer--xl);
 
   // accordion item
   --pf-c-accordion__item-button--hover--BackgroundColor: #{$pf-color-black-150};
@@ -24,7 +23,6 @@
   --pf-c-accordion__item--before--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-accordion__item--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__item--before--BackgroundColor: transparent;
-  --pf-c-accordion__item--before--Transition: var(--pf-global--Transition);
   --pf-c-accordion__item--m-expanded--before--BackgroundColor: var(--pf-global--link--Color);
 
   // accordion button
@@ -43,7 +41,6 @@
   --pf-c-accordion__item-expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   position: relative;
-  width: var(--pf-c-accordion--Width);
   padding-top: var(--pf-c-accordion--PaddingTop);
   padding-bottom: var(--pf-c-accordion--PaddingBottom);
   background-color: var(--pf-c-accordion--BackgroundColor);
@@ -60,7 +57,6 @@
       height: 100%;
       content: "";
       background-color: var(--pf-c-accordion__item--before--BackgroundColor);
-      transition: var(--pf-c-accordion__item--before--Transition);
     }
 
     &.pf-m-expanded {
@@ -73,7 +69,7 @@
         color: var(--pf-c-accordion__item-button-text--expanded--Color);
       }
 
-      .pf-c-accordion__item-button-toggle > i {
+      .pf-c-accordion__item-button-toggle-icon {
         transform: rotate(90deg);
       }
     }
