@@ -38,7 +38,7 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Primary tabs with sections" handlebars={tabsExamplePrimaryRaw} docs={tabsPrimaryDocs}>
+      <Example heading="Primary tabs" handlebars={tabsExamplePrimaryRaw} docs={tabsPrimaryDocs}>
         {tabsExamplePrimary}
       </Example>
       <Example heading="Scroll buttons" handlebars={tabsExampleScrollRaw} docs={tabsScrollDocs}>
