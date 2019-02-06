@@ -7,7 +7,7 @@
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-accordion__item` | Indicates that the expanded content element is hidden. **Required**|
 | `aria-expanded="true"` | `.pf-c-accordion__item`, `.pf-c-accordion__item-expanded-content` | Indicates that the expanded content element is visible. **Required**|
-| `hidden` | `.pf-c-accordion__item-expanded-content` | Indicates that the expanded content element is hidden.**Required** |
+| `hidden` | `.pf-c-accordion__item-expanded-content` | Indicates that the expanded content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-c-accordion__item-button-toggle-icon` | Hides the icon from assistive technologies.**Required** |
 | `aria-controls="[id of .pf-c-accordion__item-expanded-content]"` | `.pf-c-accordion__item__button` | Identifies the element controlled by the button. **Required**.
 
