@@ -1,57 +1,25 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--id="page-layout-default-nav"}}
+{{#> page page--id="page-layout-data-list-actionable"}}
   {{#> page-header}}
-    {{!-- Brand --}}
-    {{#> page-header-brand}}
-      {{#> page-header-brand-toggle}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-primary-nav"')}}
-          {{> button-icon button-icon--type="bars"}}
-        {{/button}}
-      {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
-      {{/page-header-brand-link}}
-    {{/page-header-brand}}
-    {{#> page-template-header-tools-elements}}
-    {{/page-template-header-tools-elements}}
+    {{> data-list-page-header}}
   {{/page-header}}
-  {{!-- Nav --}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Primary Nav Default Example"')}}
-      {{#> nav-list}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            System Panel
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Policy
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Authentication
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Network Services
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Server
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
+    {{> data-list-page-nav}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-template-title}}
-    {{/page-template-title}}
-    {{#> page-template-gallery}}
-    {{/page-template-gallery}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-actionable-nav}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-actionable-content}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+      {{#> card}}
+        {{> data-list-toolbar}}
+        {{> data-list-actionable-data-list}}
+        {{> data-list-pagination}}
+      {{/card}}
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}

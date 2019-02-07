@@ -1,68 +1,24 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--id="page-layout-default-nav"}}
+{{#> page page--id="page-layout-data-list-simple"}}
   {{#> page-header}}
-    {{!-- Brand --}}
-    {{#> page-header-brand}}
-      {{#> page-header-brand-toggle}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-primary-nav"')}}
-          {{> button-icon button-icon--type="bars"}}
-        {{/button}}
-      {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
-      {{/page-header-brand-link}}
-    {{/page-header-brand}}
-    {{#> page-template-header-tools-elements}}
-    {{/page-template-header-tools-elements}}
+    {{> data-list-page-header}}
   {{/page-header}}
-  {{!-- Nav --}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Primary Nav Default Example"')}}
-      {{#> nav-list}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            System Panel
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Policy
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Authentication
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Network Services
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Server
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
+    {{> data-list-page-nav}}
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      {{#> content}}
-        <h1>Simple Data List</h1>
-        <p>
-          Body text should be Overpass Regular at 16px. It should have leading of 24px because <br>
-          of it’s relative line height of 1.5.
-        </p>
-      {{/content}}
+      {{> data-list-simple-nav}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-simple-content}}
     {{/page-main-section}}
     {{#> page-main-section}}
       {{#> card}}
-        {{> data-list-simple-toolbar}}
+        {{> data-list-toolbar}}
         {{> data-list-simple-data-list}}
-        {{> data-list-simple-pagination}}
+        {{> data-list-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}

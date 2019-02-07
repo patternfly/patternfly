@@ -1,1 +1,25 @@
-{{> page-demo-default}}
+{{#> background-image}}
+{{/background-image}}
+{{#> page page--id="page-layout-data-list-expandable"}}
+  {{#> page-header}}
+    {{> data-list-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> data-list-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-expandable-nav}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-expandable-content}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+      {{#> card}}
+        {{> data-list-toolbar}}
+        {{> data-list-expandable-data-list}}
+        {{> data-list-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
