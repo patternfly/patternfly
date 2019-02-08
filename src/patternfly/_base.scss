@@ -61,9 +61,8 @@
   text-rendering: optimizeLegibility;
 }
 
-[class*="pf-c"],
-[class*="pf-u"],
-[class*="pf-l"] {
+[class*="pf-c-"],
+[class*="pf-l-"] {
   &,
   &::before,
   &::after {
