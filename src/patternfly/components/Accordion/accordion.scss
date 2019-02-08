@@ -20,10 +20,10 @@
   --pf-c-accordion__item-button-text--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-accordion__item-button-text--expanded--Color: var(--pf-global--link--Color);
   --pf-c-accordion__item-button-text--expanded--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__item-button-text--width: calc(100% - var(--pf-global--spacer--lg));
   --pf-c-accordion__item--before--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-accordion__item--before--Width: var(--pf-global--BorderWidth--lg);
-  --pf-c-accordion__item--before--BackgroundColor: transparent;
-  --pf-c-accordion__item--m-expanded--before--BackgroundColor: var(--pf-global--link--Color);
+  --pf-c-accordion__item--m-expanded--before--BackgroundColor: var(--pf-global--primary-color--100);
 
   // accordion button
   --pf-c-accordion__item-button--PaddingTop: var(--pf-global--spacer--sm);
@@ -50,17 +50,13 @@
   .pf-c-accordion__item {
     position: relative;
 
-    &::before {
-      position: absolute;
-      z-index: var(--pf-c-accordion__item--before--ZIndex);
-      width: var(--pf-c-accordion__item--before--Width);
-      height: 100%;
-      content: "";
-      background-color: var(--pf-c-accordion__item--before--BackgroundColor);
-    }
-
     &.pf-m-expanded {
       &::before {
+        position: absolute;
+        z-index: var(--pf-c-accordion__item--before--ZIndex);
+        width: var(--pf-c-accordion__item--before--Width);
+        height: 100%;
+        content: "";
         background-color: var(--pf-c-accordion__item--m-expanded--before--BackgroundColor);
       }
 
@@ -76,7 +72,6 @@
   }
 
   .pf-c-accordion__item-button {
-    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -84,7 +79,7 @@
     border: 0;
 
     .pf-c-accordion__item-button-text {
-      width: 90%;
+      width: var(--pf-c-accordion__item-button-text--width);
       overflow: hidden;
       text-align: left;
       text-overflow: ellipsis;
