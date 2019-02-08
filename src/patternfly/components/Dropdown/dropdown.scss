@@ -24,6 +24,7 @@
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__toggle-text--Width: calc(100% - var(--pf-global--spacer--lg));
 
   // split buttons
   --pf-c-dropdown__toggle--m-split-button--child--PaddingTop: var(--pf-global--spacer--form-element);
@@ -178,6 +179,7 @@
   }
 
   .pf-c-dropdown__toggle-text {
+    width: var(--pf-c-dropdown__toggle-text--Width);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
