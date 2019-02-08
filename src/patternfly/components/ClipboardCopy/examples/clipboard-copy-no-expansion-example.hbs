@@ -1,6 +1,14 @@
 Read-Only
-<br>
 {{#> clipboard-copy}}
+	{{#> input-group}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput10" name="textInput10" aria-label="input example with popover"'}}
+      This text is editable. Edit me, then copy me.
+    {{/form-control}}
+	  {{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
+	{{/input-group}}
+{{/clipboard-copy}}
+<br>
+{{!-- {{#> clipboard-copy}}
 	{{#> clipboard-copy-group}}
 		{{#> clipboard-copy-group-text}}This text is read-only{{/clipboard-copy-group-text}}
 		{{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
@@ -15,4 +23,4 @@ Editable
 	{{#> clipboard-copy-group-text clipboard-copy-group-text--modifier="pf-m-editable" clipboard-copy-group-text--attribute='contenteditable="true"'}}This text is editable{{/clipboard-copy-group-text}}
 		{{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
 	{{/clipboard-copy-group}}
-{{/clipboard-copy}}
+{{/clipboard-copy}} --}}
