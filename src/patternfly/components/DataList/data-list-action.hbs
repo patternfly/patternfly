@@ -2,8 +2,5 @@
   {{#if data-list-action--attribute}}
     {{{data-list-action--attribute}}}
   {{/if}}>
-  {{!-- use 'button--attribute' param on parent to set attributes on button --}}
-  {{#> button button--modifier="pf-m-plain"}}
-    <i class="fas fa-ellipsis-v"></i>
-  {{/button}}
+  {{> @partial-block}}
 </div>
