@@ -1,41 +1,31 @@
 {{#> accordion}}
-  {{#> accordion-item}}
-    {{#> accordion-item-button accordion-item-button--attribute='aria-expanded="false"'}}
-      {{#> accordion-item-button-text}}Item One{{/accordion-item-button-text}}
-      {{#> accordion-item-button-toggle}}{{/accordion-item-button-toggle}}
-    {{/accordion-item-button}}
-    {{#> accordion-item-expanded-content accordion-item-expanded-content--IsFixed="true"}}{{/accordion-item-expanded-content}}
-  {{/accordion-item}}
+    {{#> accordion-button accordion-button--attribute='aria-expanded="false"'}}
+      {{#> accordion-button-text}}Item One{{/accordion-button-text}}
+      {{#> accordion-button-toggle}}{{/accordion-button-toggle}}
+    {{/accordion-button}}
+    {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}{{/accordion-expanded-content}}
 
-  {{#> accordion-item accordion-item--IsExpanded="true"}}
-    {{#> accordion-item-button accordion-item-button--attribute='aria-expanded="true"'}}
-      {{#> accordion-item-button-text}}Item Two{{/accordion-item-button-text}}
-      {{#> accordion-item-button-toggle}}{{/accordion-item-button-toggle}}
-    {{/accordion-item-button}}
-    {{#> accordion-item-expanded-content accordion-item-expanded-content--attribute='aria-expanded="true"' accordion-item-expanded-content--IsFixed="true"}}{{/accordion-item-expanded-content}}
-  {{/accordion-item}}
+    {{#> accordion-button accordion-button--attribute='aria-expanded="true"'}}
+      {{#> accordion-button-text}}Item Two{{/accordion-button-text}}
+      {{#> accordion-button-toggle}}{{/accordion-button-toggle}}
+    {{/accordion-button}}
+    {{#> accordion-expanded-content accordion-expanded-content--attribute='aria-expanded="true"' accordion-expanded-content--IsFixed="true"}}{{/accordion-expanded-content}}
 
-  {{#> accordion-item}}
-    {{#> accordion-item-button accordion-item-button--attribute='aria-expanded="false"'}}
-      {{#> accordion-item-button-text}}Item Three{{/accordion-item-button-text}}
-      {{#> accordion-item-button-toggle}}{{/accordion-item-button-toggle}}
-    {{/accordion-item-button}}
-    {{#> accordion-item-expanded-content accordion-item-expanded-content--IsFixed="true"}}{{/accordion-item-expanded-content}}
-  {{/accordion-item}}
+    {{#> accordion-button accordion-button--attribute='aria-expanded="false"'}}
+      {{#> accordion-button-text}}Item Three{{/accordion-button-text}}
+      {{#> accordion-button-toggle}}{{/accordion-button-toggle}}
+    {{/accordion-button}}
+    {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}{{/accordion-expanded-content}}
 
-  {{#> accordion-item}}
-    {{#> accordion-item-button accordion-item-button--attribute='aria-expanded="false"'}}
-      {{#> accordion-item-button-text}}Item Four{{/accordion-item-button-text}}
-      {{#> accordion-item-button-toggle}}{{/accordion-item-button-toggle}}
-    {{/accordion-item-button}}
-    {{#> accordion-item-expanded-content accordion-item-expanded-content--IsFixed="true"}}{{/accordion-item-expanded-content}}
-  {{/accordion-item}}
+    {{#> accordion-button accordion-button--IsExpanded="true" accordion-button--attribute='aria-expanded="false"'}}
+      {{#> accordion-button-text}}Item Four{{/accordion-button-text}}
+      {{#> accordion-button-toggle}}{{/accordion-button-toggle}}
+    {{/accordion-button}}
+    {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true" accordion-expanded-content--IsFixed="true"}}{{/accordion-expanded-content}}
 
-  {{#> accordion-item}}
-    {{#> accordion-item-button accordion-item-button--attribute='aria-expanded="false"'}}
-      {{#> accordion-item-button-text}}Item Five{{/accordion-item-button-text}}
-      {{#> accordion-item-button-toggle}}{{/accordion-item-button-toggle}}
-    {{/accordion-item-button}}
-    {{#> accordion-item-expanded-content accordion-item-expanded-content--IsFixed="true"}}{{/accordion-item-expanded-content}}
-  {{/accordion-item}}
+    {{#> accordion-button accordion-button--attribute='aria-expanded="false"'}}
+      {{#> accordion-button-text}}Item Five{{/accordion-button-text}}
+      {{#> accordion-button-toggle}}{{/accordion-button-toggle}}
+    {{/accordion-button}}
+    {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}{{/accordion-expanded-content}}
 {{/accordion}}
