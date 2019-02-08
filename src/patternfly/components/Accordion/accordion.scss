@@ -13,9 +13,9 @@
   --pf-c-accordion__button--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-accordion__button--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-accordion__button--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-accordion__button--hover--BackgroundColor: #{$pf-color-black-150};
-  --pf-c-accordion__button--focus--BackgroundColor: #{$pf-color-black-150};
-  --pf-c-accordion__button--active--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-accordion__button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-accordion__button--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-accordion__button--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-accordion__button--m-expanded--before--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-accordion__button--m-expanded--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__button--m-expanded--before--BorderColor: var(--pf-global--primary-color--100);
