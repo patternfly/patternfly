@@ -15,6 +15,8 @@
   --pf-c-clipboard-copy__group-toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-clipboard-copy__group-toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-clipboard-copy__group-toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-clipboard-copy__group-toggle--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-clipboard-copy__group-toggle--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomColor: var(--pf-global--active-color--100);
 
@@ -27,6 +29,10 @@
   --pf-c-clipboard-copy__group-copy--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-clipboard-copy__group-copy--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-clipboard-copy__group-copy--hover--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-clipboard-copy__group-copy--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-clipboard-copy__group-copy--active--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-clipboard-copy__group-copy--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-clipboard-copy__group-copy--focus--BorderBottomColor: var(--pf-global--active-color--100);
 
   // Clipboard Copy Text
   --pf-c-clipboard-copy__group-text--PaddingTop: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
@@ -97,6 +103,15 @@
           border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--active--BorderBottomWidth);
         }
       }
+
+      &:focus,
+      &.pf-m-focus {
+        &::before {
+          --pf-c-clipboard-copy__group-toggle--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--focus--BorderBottomColor);
+
+          border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--focus--BorderBottomWidth);
+        }
+      }
     }
 
     .pf-c-clipboard-copy__group-copy {
@@ -120,6 +135,24 @@
       &.pf-m-hover {
         &::before {
           --pf-c-clipboard-copy__group-copy--BorderBottomColor: var(--pf-c-clipboard-copy__group-copy--hover--BorderBottomColor);
+        }
+      }
+
+      &:active,
+      &.pf-m-active {
+        &::before {
+          --pf-c-clipboard-copy__group-copy--BorderBottomColor: var(--pf-c-clipboard-copy__group-copy--active--BorderBottomColor);
+
+          border-bottom-width: var(--pf-c-clipboard-copy__group-copy--active--BorderBottomWidth);
+        }
+      }
+
+      &:focus,
+      &.pf-m-focus {
+        &::before {
+          --pf-c-clipboard-copy__group-copy--BorderBottomColor: var(--pf-c-clipboard-copy__group-copy--focus--BorderBottomColor);
+
+          border-bottom-width: var(--pf-c-clipboard-copy__group-copy--focus--BorderBottomWidth);
         }
       }
     }
