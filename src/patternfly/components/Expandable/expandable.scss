@@ -24,7 +24,7 @@
   --pf-c-expandable__toggle-icon--Color: var(--pf-global--Color--100);
 
   // Expandable Expanded
-  --pf-c-expandable__expanded--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--xl);
 
   // Expandable Footer
   --pf-c-expandable__footer--Margin-Top: var(--pf-global--spacer--2xl);
@@ -68,8 +68,8 @@
     }
   }
 
-  .pf-c-expandable__expanded {
-    margin-top: var(--pf-c-expandable__expanded--MarginTop);
+  .pf-c-expandable__content {
+    margin-top: var(--pf-c-expandable__content--MarginTop);
   }
 
   .pf-c-expandable__footer {

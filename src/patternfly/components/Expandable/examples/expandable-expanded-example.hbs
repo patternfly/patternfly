@@ -1,100 +1,12 @@
 {{#> expandable expandable--IsExpanded="true"}}
   {{#> expandable-section}}
-    {{#> title titleType="h1" title--modifier="pf-m-xl"}}
-      Payment Information
-    {{/title}}
-    {{#> form form--id="expandable-section"}}
-      {{#> grid grid--modifier="pf-m-gutter"}}
-      {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-      {{#> form-group}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-          Card Number
-        {{/form-label}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" placeholder="XXXX XXXX XXXX XXXX"')}}
-        {{/form-control}}
-      {{/form-group}}
-      {{/grid-item}}
-      {{#> grid-item grid-item--modifier="pf-m-6-col"}}
-      {{#> form-group}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-          Expiration Date
-        {{/form-label}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" placeholder="06/18"')}}
-        {{/form-control}}
-      {{/form-group}}
-      {{/grid-item}}
-      {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-      {{#> form-group}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-          CVV
-        {{/form-label}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" placeholder="XXX"')}}
-        {{/form-control}}
-      {{/form-group}}
-      {{/grid-item}}
-    {{/grid}}
-    {{/form}}
+    This section is always visible.
   {{/expandable-section}}
-  {{#> expandable-toggle expandable-toggle--attribute='aria-controls="expanded-section-2" aria-expanded="true"'}}
+  {{#> expandable-toggle expandable-toggle--attribute='aria-controls="expanded-content-1" aria-expanded="true"'}}
   {{/expandable-toggle}}
-  {{#> expandable-expanded expandable-expanded--attribute='id="expanded-section-2"'}}
-  {{#> form form--id="expanded"}}
-  {{#> grid grid--modifier="pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-        Name
-      {{/form-label}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
-      {{/form-control}}
-    {{/form-group}}
-    {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-        Address
-      {{/form-label}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
-      {{/form-control}}
-    {{/form-group}}
-    {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-6-col"}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-        City
-      {{/form-label}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
-      {{/form-control}}
-    {{/form-group}}
-    {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-        State
-      {{/form-label}}
-       {{#> form-control controlType="select" form-control--attribute='id="select-form" name="select-form"'}}
-        <option value="" selected></option>
-        <option value="AL">AL</option>
-        <option value="AK">AK</option>
-        <option value="AZ">AZ</option>
-        <option value="AR">AR</option>
-        <option value="CA">CA</option>
-        <option value="CO">CO</option>
-      {{/form-control}}
-    {{/form-group}}
-    {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-    {{#> form-group}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"')}}
-        Zip
-      {{/form-label}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name"')}}
-      {{/form-control}}
-    {{/form-group}}
-    {{/grid-item}}
-    {{/grid}}
-  {{/form}}
-  {{/expandable-expanded}}
+  {{#> expandable-content expandable-content--attribute='id="expanded-content-1"'}}
+    This content is visible only when the component is expanded.
+  {{/expandable-content}}
   {{#> expandable-footer}}
     {{#> button button--modifier="pf-m-primary"}}
       Primary
