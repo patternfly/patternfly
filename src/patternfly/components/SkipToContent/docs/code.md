@@ -1,19 +1,11 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
+Skip to content allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
 
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
-## Accessibility
-
-| Attribute | Applied To | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-c-skip-to-content` |  accessibility notes. |
-
+When using `.pf-c-skip-to-content` you must also provide an anchor with the matching id that is applied to the `href` attribute of `.pf-c-skip-to-content`. You will typically place this just before the main content of the page. Ex: `<a id="main-content" name="main-content"></a>` For a demo of this see the <a href="/demos/Page/examples">Page demo</a>.
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-skip-to-content` | `<a>` |  initiates the skip to content link. |
