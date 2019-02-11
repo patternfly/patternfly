@@ -9,7 +9,6 @@
 | `aria-expanded="true"` | `.pf-c-accordion__button`, `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is visible. **Required**|
 | `hidden` | `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-c-accordion__button-toggle-icon` | Hides the icon from assistive technologies.**Required** |
-| `aria-controls="[id of .pf-c-accordion__expanded-content]"` | `.pf-c-accordion__button` | Identifies the element controlled by the button. **Required**.
 
 
 ## Usage

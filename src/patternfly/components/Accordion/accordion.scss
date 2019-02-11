@@ -43,6 +43,9 @@
   --pf-c-accordion__expanded-content--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__expanded-content--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
 
+  // This component always needs to be light
+  @include pf-t-light;
+
   position: relative;
   padding-top: var(--pf-c-accordion--PaddingTop);
   padding-bottom: var(--pf-c-accordion--PaddingBottom);
@@ -117,7 +120,7 @@
 
     &.pf-m-fixed {
       max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
-      overflow: scroll;
+      overflow-y: auto;
     }
 
     &.pf-m-expanded {
