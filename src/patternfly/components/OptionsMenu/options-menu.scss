@@ -8,6 +8,7 @@
   --pf-c-options-menu__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-options-menu__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-options-menu__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-options-menu__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__toggle--BorderTopColor: var(--pf-global--BorderColor--light-200);
   --pf-c-options-menu__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
@@ -16,6 +17,8 @@
   --pf-c-options-menu__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-options-menu__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-options-menu__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-options-menu__toggle--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-options-menu__toggle--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-options-menu__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-options-menu__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-options-menu__toggle--m-plain--Color: var(--pf-global--Color--200);
@@ -96,6 +99,15 @@
       border-bottom-width: var(--pf-c-options-menu__toggle--active--BorderBottomWidth);
     }
   }
+
+  &:focus,
+  &.pf-m-focus {
+    &::before {
+      --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--focus--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-options-menu__toggle--focus--BorderBottomWidth);
+    }
+  }
 }
 
 .pf-c-options-menu__toggle {
@@ -106,6 +118,7 @@
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
   padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
+  line-height: var(--pf-c-options-menu__toggle--LineHeight);
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
@@ -132,10 +145,16 @@
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 
+    > i {
+      line-height: var(--pf-c-options-menu__toggle--LineHeight);
+    }
+
     &:hover,
     &.pf-m-hover,
     &:active,
     &.pf-m-active,
+    &.pf-m-focus,
+    &:focus,
     .pf-c-options-menu.pf-m-expanded > & {
       --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--hover--Color);
     }

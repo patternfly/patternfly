@@ -24,5 +24,8 @@
 | `.pf-m-top` | `.pf-c-options-menu` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-options-menu__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-expanded` | `.pf-c-options-menu` |  Modifies for the expanded state. |
+| `.pf-m-hover` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle .pf-m-plain` | Modifies for the hover state. |
+| `.pf-m-active` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle .pf-m-plain` | Modifies for the active state. |
+| `.pf-m-focus` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle .pf-m-plain` | Modifies for the focus state. |
 | `.pf-m-plain` | `.pf-c-options-menu__toggle` |  Modifies to display the toggle with no border. |
 | `.pf-m-text` | `.pf-c-options-menu__toggle` |  For use when the `.pf-c-options-menu__toggle` is a `<div>` or some non-interactive elment, and you're using a custom `.pf-c-options-menu__toggle-button` to toggle the options menu. |
