@@ -14,7 +14,6 @@ import OptionsMenuTopExample from './options-menu-top-example.hbs';
 import OptionsMenuAlignRightExample from './options-menu-align-right-example.hbs';
 import OptionsMenuPlainTextExample from './options-menu-plain-text-example.hbs';
 import docs from '../docs/code.md';
-import '../options-menu.scss';
 
 export const Docs = docs;
 

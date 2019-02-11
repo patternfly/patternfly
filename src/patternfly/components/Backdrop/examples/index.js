@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import BackdropExampleRaw from '!raw!./backdrop-example.hbs';
 import BackdropExample from './backdrop-example.hbs';
 import docs from '../docs/code.md';
-import '../backdrop.scss';
 
 export const Docs = docs;
 

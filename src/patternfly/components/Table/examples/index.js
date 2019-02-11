@@ -31,8 +31,6 @@ import TableCompoundExpansionExample from './table-compound-expansion-example.hb
 import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
 
 import docs from '../docs/code.md';
-import '../table.scss';
-import '../table-grid.scss';
 
 export const Docs = docs;
 

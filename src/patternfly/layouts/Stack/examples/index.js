@@ -6,7 +6,6 @@ import StackHasGutterRaw from '!raw!./stack-has-gutter-example.hbs';
 import Stack from './stack-example.hbs';
 import StackHasGutter from './stack-has-gutter-example.hbs';
 import docs from '../docs/code.md';
-import '../stack.scss';
 
 export const Docs = docs;
 
