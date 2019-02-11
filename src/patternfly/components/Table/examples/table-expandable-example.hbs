@@ -21,7 +21,7 @@
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow1" aria-labelledby="' table--id '-node1" aria-label="Details"')}}{{/check-input}}
       {{/table-td}}
@@ -50,7 +50,7 @@
       {{#> table-td}}
       {{/table-td}}
       {{#> table-td table-td--attribute='colspan="4"'}}
-        <div class="pf-c-table__expandable-row-content">
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-content1">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -66,7 +66,7 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow2" aria-labelledby="' table--id '-node2" aria-label="Details"')}}{{/check-input}}
       {{/table-td}}
@@ -96,7 +96,7 @@
       {{#> table-td}}
       {{/table-td}}
       {{#> table-td table-td--attribute='colspan="4"'}}
-        <div class="pf-c-table__expandable-row-content">
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-content2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

@@ -1,7 +1,7 @@
 @import "../../patternfly-imports";
 
 .pf-c-chip-group {
-  @extend %pf-t-light; // force the container follow the light theme
+  @include pf-t-light; // force the container follow the light theme
 
   --pf-c-chip-group--MarginRight: calc(var(--pf-c-chip-group--c-chip--MarginRight) * -1);
   --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);

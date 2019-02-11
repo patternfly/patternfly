@@ -10,7 +10,6 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   // Component
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-form-control--Color: var(--pf-global--Color--dark-100);
   --pf-c-form-control--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-form-control--BorderTopColor: var(--pf-global--BorderColor--light-200);
   --pf-c-form-control--BorderRightColor: var(--pf-global--BorderColor--light-200);
@@ -18,6 +17,7 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control--BorderLeftColor: var(--pf-global--BorderColor--light-200);
   --pf-c-form-control--BorderRadius: 0;
   --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-form-control--Height: calc(var(--pf-c-form-control--FontSize) * var(--pf-c-form-control--LineHeight) + var(--pf-c-form-control--BorderWidth) * 2 + var(--pf-c-form-control--PaddingTop) + var(--pf-c-form-control--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
 
   // padding
   // Note for top/bottom padding, subtracting the border height so the height of the input is consistent with buttons and dropdowns that use the same spacing but draw their borders with pseudo elements
@@ -70,14 +70,13 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control__select--invalid--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
 
   // This component always needs to be light
-  @extend %pf-t-light;
+  @include pf-t-light;
 
   position: relative;
   width: 100%;
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
   line-height: var(--pf-c-form-control--LineHeight);
-  color: var(--pf-c-form-control--Color);
   background-color: var(--pf-c-form-control--BackgroundColor);
   border: var(--pf-c-form-control--BorderWidth) solid;
   border-color: var(--pf-c-form-control--BorderTopColor) var(--pf-c-form-control--BorderRightColor) var(--pf-c-form-control--BorderBottomColor) var(--pf-c-form-control--BorderLeftColor);
@@ -89,6 +88,10 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   &::placeholder {
     --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color);
+  }
+
+  &:not(textarea) {
+    height: var(--pf-c-form-control--Height);
   }
 
   &[readonly] {

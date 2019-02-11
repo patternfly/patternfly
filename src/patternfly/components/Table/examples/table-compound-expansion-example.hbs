@@ -27,19 +27,19 @@
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="true"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
           {{> button-icon button-icon--type="code-branch"}}
           10
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull Requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
           {{> button-icon button-icon--type="code"}}
           4
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work Spaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
           {{> button-icon button-icon--type="cube"}}
           4
         {{/button}}
@@ -57,18 +57,18 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
-        <div class="pf-c-table__expandable-row-content">
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-1">
           {{#> table-nested table-nested-id="nested-table-1"}}
           {{/table-nested}}
         </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
-        <div class="pf-c-table__expandable-row-content">
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-2">
           {{#> table-nested table-nested-id="nested-table-2"}}
           {{/table-nested}}
         </div>
@@ -77,17 +77,8 @@
 
     {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
       {{#> table-td table-td--attribute='colspan="7"'}}
-        <div class="pf-c-table__expandable-row-content">
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-3">
           {{#> table-nested table-nested-id="nested-table-3"}}
-          {{/table-nested}}
-        </div>
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
-      {{#> table-td table-td--attribute='colspan="7"'}}
-        <div class="pf-c-table__expandable-row-content">
-          {{#> table-nested table-nested-id="nested-table-4"}}
           {{/table-nested}}
         </div>
       {{/table-td}}
@@ -100,19 +91,19 @@
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
           {{> button-icon button-icon--type="code-branch"}}
           3
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull Requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
           {{> button-icon button-icon--type="code"}}
           4
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work Spaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
           {{> button-icon button-icon--type="cube"}}
           2
         {{/button}}
@@ -129,6 +120,33 @@
         {{/button}}
       {{/table-td}}
     {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="4"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-4">
+          {{#> table-nested table-nested-id="nested-table-4"}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="5"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-5">
+          {{#> table-nested table-nested-id="nested-table-5"}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="6"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-6">
+          {{#> table-nested table-nested-id="nested-table-6"}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody}}
@@ -137,19 +155,19 @@
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
           {{> button-icon button-icon--type="code-branch"}}
           70
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull Requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
           {{> button-icon button-icon--type="code"}}
           15
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work Spaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute='aria-expanded="false"'}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
           {{> button-icon button-icon--type="cube"}}
           12
         {{/button}}
@@ -164,6 +182,33 @@
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action3" aria-label="Actions"')}}
           <i class="fas fa-ellipsis-v"></i>
         {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-7">
+          {{#> table-nested table-nested-id="nested-table-7"}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-8">
+          {{#> table-nested table-nested-id="nested-table-8"}}
+          {{/table-nested}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-9">
+          {{#> table-nested table-nested-id="nested-table-9"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

@@ -1,7 +1,7 @@
 @import "../../patternfly-imports";
 
 .pf-c-select {
-  @extend %pf-t-light; // force the container follow the light theme
+  @include pf-t-light; // force the container follow the light theme
 
   // Toggle
   --pf-c-select__toggle--PaddingTop: var(--pf-global--spacer--form-element);
