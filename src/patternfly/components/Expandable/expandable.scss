@@ -2,20 +2,14 @@
 
 .pf-c-expandable {
   // Expandable
-  --pf-c-expandable--Width: #{pf-size-prem(450px)};
-  --pf-c-expandable--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-expandable--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-expandable--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-expandable--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-expandable--PaddingTop: var(--pf-global--spacer--2xl);
   --pf-c-expandable--PaddingRight: var(--pf-global--spacer--3xl);
   --pf-c-expandable--PaddingBottom: var(--pf-global--spacer--2xl);
   --pf-c-expandable--PaddingLeft: var(--pf-global--spacer--2xl);
 
-  // Title
-  --pf-c-expandable--c-title--MarginBottom: var(--pf-global--spacer--lg);
-
   // Expandable Toggle
-  --pf-c-expandable__toggle--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-expandable__toggle--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-expandable__toggle--Color: var(--pf-global--active-color--300);
 
@@ -26,59 +20,32 @@
   // Expandable Expanded
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--xl);
 
-  // Expandable Footer
-  --pf-c-expandable__footer--Margin-Top: var(--pf-global--spacer--2xl);
+  // This component always needs to be light
+  @include pf-t-light;
 
-  width: var(--pf-c-expandable--Width);
   padding: var(--pf-c-expandable--PaddingTop) var(--pf-c-expandable--PaddingRight) var(--pf-c-expandable--PaddingBottom) var(--pf-c-expandable--PaddingLeft);
   background-color: var(--pf-c-expandable--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-expandable--BorderWidth) solid transparent;
   box-shadow: var(--pf-c-expandable--BoxShadow);
 
   &.pf-m-expanded {
-    .pf-c-expandable__toggle {
-      .pf-c-expandable__toggle-icon {
-        transform: rotate(90deg);
-      }
-
-      &::after {
-        content: "Show less";
-      }
+    .pf-c-expandable__toggle-icon {
+      transform: rotate(90deg);
     }
-  }
-
-  .pf-c-title {
-    margin-bottom: var(--pf-c-expandable--c-title--MarginBottom);
   }
 
   .pf-c-expandable__toggle {
-    margin-top: var(--pf-c-expandable__toggle--MarginTop);
     font-weight: var(--pf-c-expandable__toggle--FontWeight);
     color: var(--pf-c-expandable__toggle--Color);
     border: none;
+  }
 
-    .pf-c-expandable__toggle-icon {
-      margin-right: var(--pf-c-expandable__toggle-icon--MarginRight);
-      color: var(--pf-c-expandable__toggle-icon--Color);
-    }
-
-    &::after {
-      content: "Show more";
-    }
+  .pf-c-expandable__toggle-icon {
+    margin-right: var(--pf-c-expandable__toggle-icon--MarginRight);
+    color: var(--pf-c-expandable__toggle-icon--Color);
   }
 
   .pf-c-expandable__content {
     margin-top: var(--pf-c-expandable__content--MarginTop);
-  }
-
-  .pf-c-expandable__footer {
-    display: flex;
-    flex: 0 0 auto;
-    margin-top: var(--pf-c-expandable__footer--Margin-Top);
-
-    .pf-c-button {
-      margin-left: auto;
-    }
   }
 }

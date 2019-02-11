@@ -4,4 +4,9 @@
   {{/if}}>
   {{> @partial-block}}
   <i class="fas fa-angle-right pf-c-expandable__toggle-icon" aria-hidden="true"></i>
+  {{#if expandable--IsExpanded}}
+    <span>Show Less</span>
+  {{else}}
+    <span>Show More</span>
+  {{/if}}
 </button>

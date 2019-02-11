@@ -1,15 +1,7 @@
 {{#> expandable}}
-  {{#> expandable-section}}
-    This section is always visible.
-  {{/expandable-section}}
-  {{#> expandable-toggle expandable-toggle--attribute='aria-controls="expanded-content-2" aria-expanded="true"'}}
+  {{#> expandable-toggle expandable-toggle--attribute='aria-expanded="true"'}}
   {{/expandable-toggle}}
-  {{#> expandable-content expandable-content--attribute='id="expanded-content-2"'}}
+  {{#> expandable-content}}
     This content is visible only when the component is expanded.
   {{/expandable-content}}
-  {{#> expandable-footer}}
-    {{#> button button--modifier="pf-m-primary"}}
-      Primary
-    {{/button}}
-  {{/expandable-footer}}
 {{/expandable}}
