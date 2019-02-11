@@ -2,7 +2,7 @@
 
 .pf-c-accordion {
   // accordion
-  --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-accordion--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-accordion--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-accordion--PaddingTop: var(--pf-global--spacer--xl);
@@ -13,12 +13,13 @@
   --pf-c-accordion__button--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-accordion__button--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-accordion__button--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-accordion__button--BorderLeftColor: transparent;
   --pf-c-accordion__button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-accordion__button--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-accordion__button--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-accordion__button--m-expanded--before--ZIndex: var(--pf-global--ZIndex--xl);
-  --pf-c-accordion__button--m-expanded--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-accordion__button--m-expanded--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__button--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-accordion__button--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
 
   // accordion button text
   --pf-c-accordion__button-text--hover--Color: var(--pf-global--link--Color);
@@ -37,9 +38,10 @@
   --pf-c-accordion__expanded-content--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-accordion__expanded-content--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-accordion__expanded-content--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-accordion__expanded-content--BorderLeftColor: transparent;
   --pf-c-accordion__expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
-  --pf-c-accordion__expanded-content--m-expanded--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-accordion__expanded-content--m-expanded--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__expanded-content--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-accordion__expanded-content--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
 
   position: relative;
   padding-top: var(--pf-c-accordion--PaddingTop);
@@ -49,12 +51,12 @@
   box-shadow: var(--pf-c-accordion--BoxShadow);
 
   .pf-c-accordion__button {
-    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: var(--pf-c-accordion__button--PaddingTop) var(--pf-c-accordion__button--PaddingRight) var(--pf-c-accordion__button--PaddingBottom) var(--pf-c-accordion__button--PaddingLeft);
     border: 0;
+    border-left: var(--pf-c-accordion__button--m-expanded--BorderWidth) solid var(--pf-c-accordion__button--BorderLeftColor);
 
     .pf-c-accordion__button-text {
       width: var(--pf-c-accordion__button-text--width);
@@ -65,15 +67,7 @@
     }
 
     &.pf-m-expanded {
-      &::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        content: "";
-        border-left: var(--pf-c-accordion__button--m-expanded--before--BorderWidth) solid var(--pf-c-accordion__button--m-expanded--before--BorderColor);
-      }
+      --pf-c-accordion__button--BorderLeftColor: var(--pf-c-accordion__button--m-expanded--BorderLeftColor);
 
       .pf-c-accordion__button-text {
         font-weight: var(--pf-c-accordion__button-text--expanded--FontWeight);
@@ -117,25 +111,17 @@
   }
 
   .pf-c-accordion__expanded-content {
-    position: relative;
     padding: var(--pf-c-accordion__expanded-content--PaddingTop) var(--pf-c-accordion__expanded-content--PaddingRight) var(--pf-c-accordion__expanded-content--PaddingBottom) var(--pf-c-accordion__expanded-content--PaddingLeft);
     font-size: var(--pf-c-accordion__expanded-content--FontSize);
+    border-left: var(--pf-c-accordion__expanded-content--m-expanded--BorderWidth) solid var(--pf-c-accordion__expanded-content--BorderLeftColor);
 
     &.pf-m-fixed {
       max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
-      overflow-y: scroll;
+      overflow: scroll;
     }
 
     &.pf-m-expanded {
-      &::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        content: "";
-        border-left: var(--pf-c-accordion__expanded-content--m-expanded--before--BorderWidth) solid var(--pf-c-accordion__expanded-content--m-expanded--before--BorderColor);
-      }
+      --pf-c-accordion__expanded-content--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
     }
   }
 }
