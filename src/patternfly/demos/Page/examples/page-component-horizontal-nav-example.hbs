@@ -1,6 +1,9 @@
 {{#> background-image}}
 {{/background-image}}
 {{#> page page--id="page-layout-horizontal-nav"}}
+  {{#> skip-to-content skip-to-content--attribute='href="#content"'}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{#> page-header-brand}}
       {{#> page-header-brand-toggle}}
@@ -47,6 +50,7 @@
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-main}}
+    <a id="main-content"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

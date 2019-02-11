@@ -2,6 +2,9 @@
 {{/background-image}}
 
 {{#> page page--id="page-layout-expandable-nav"}}
+  {{#> skip-to-content skip-to-content--attribute='href="#content"'}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
@@ -133,6 +136,7 @@
         {{/nav-list}}
       {{/nav}}
     {{/page-main-nav}}
+    <a id="main-content"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

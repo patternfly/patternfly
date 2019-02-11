@@ -10,6 +10,7 @@
   left: -300%; /* moves off screen */
   z-index: var(--pf-c-skip-to-content--ZIndex);
 
+  &.pf-m-focus,
   &:focus {
     left: var(--pf-c-skip-to-content--focus--Left);
   }
