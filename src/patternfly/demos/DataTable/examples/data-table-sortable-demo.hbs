@@ -1,0 +1,23 @@
+{{#> background-image}}
+{{/background-image}}
+{{#> page page--id="page-layout-data-list-actionable"}}
+  {{#> page-header}}
+    {{> data-table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> data-table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-table-main-section-nav}}
+      {{> data-table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+      {{#> card}}
+        {{> data-table-toolbar}}
+        {{> data-table-sortable-table}}
+        {{> data-table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}

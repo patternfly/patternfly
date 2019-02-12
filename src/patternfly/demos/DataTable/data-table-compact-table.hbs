@@ -1,0 +1,127 @@
+{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Contributor
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Position
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Location
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last Seen
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Numbers
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-center"}}
+        Icons
+      {{/table-th}}
+      {{#> table-th}}{{/table-th}}
+      {{#> table-th}}{{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="name1"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor Name"}}
+        <span id="name1">Andres Galant</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        CSS Guru
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Not too sure
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last Commit"}}
+        0556
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-m-center"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 1</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="action1" aria-labelledby="name1 action1" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="name2"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor Name"}}
+        <span id="name2">Jenny Haines</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Raleigh
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9492
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-m-center"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 2</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="action2" aria-labelledby="name2 action2" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        {{#> check-input check-input--attribute='type="checkbox" name="checkrow3" aria-labelledby="name3"'}}{{/check-input}}
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor Name"}}
+        <span id="name3">Kyle Baker</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual Design Lead
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last Commit"}}
+        9929
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--modifier="pf-m-center"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 3</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='id="action3" aria-labelledby="node3 action3" aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}

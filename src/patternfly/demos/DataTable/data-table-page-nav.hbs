@@ -1,29 +1,94 @@
-{{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Data Table Page Nav Example"')}}
+{{#> nav}}
   {{#> nav-list}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        System Panel
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#"}}
-        Policy
+        Components
       {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title1"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title1"'}}
+          First Nav Item
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Forms
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Data Table
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Data List
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Icons
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Layouts
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              List
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item}}
+    {{#> nav-item nav-item--expandable="true"}}
       {{#> nav-link nav-link--href="#"}}
-        Authentication
+        Patterns
       {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title2"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title2"'}}
+          Second Nav Item
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+        {{/nav-list}}
+      {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
       {{#> nav-link nav-link--href="#"}}
-        Network Services
+        Typography
       {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title3"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title3"'}}
+          Third Nav Item
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+        {{/nav-list}}
+      {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item}}
+    {{#> nav-item nav-item--expandable="true"}}
       {{#> nav-link nav-link--href="#"}}
-        Server
+        Icons
       {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title4"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title4"'}}
+          Second Nav Item
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Colors
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title5"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title5"'}}
+          Second Nav Item
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+        {{/nav-list}}
+      {{/nav-subnav}}
     {{/nav-item}}
   {{/nav-list}}
 {{/nav}}
