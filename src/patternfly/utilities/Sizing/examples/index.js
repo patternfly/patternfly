@@ -15,7 +15,6 @@ import SizingExampleHeight from './sizing-height.hbs';
 import sizingHeightDocs from '../docs/sizing-height.md';
 
 import docs from '../docs/code.md';
-import '../sizing.scss';
 
 export const Docs = docs;
 export const headingText = 'Sizing';
