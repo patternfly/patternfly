@@ -17,7 +17,6 @@ import DataListExpandableExampleDoc from '../docs/data-list-expandable.md';
 import DataListWidthExampleDoc from '../docs/data-list-width.md';
 
 import docs from '../docs/code.md';
-import '../data-list.scss';
 
 export const Docs = docs;
 

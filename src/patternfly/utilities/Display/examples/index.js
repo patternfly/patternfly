@@ -25,7 +25,6 @@ import DisplayNoneExample from './display-none-example.hbs';
 // import displayNoneExampleDoc from '../docs/display-none.md';
 
 import docs from '../docs/code.md';
-import '../display.scss';
 
 export const Docs = docs;
 

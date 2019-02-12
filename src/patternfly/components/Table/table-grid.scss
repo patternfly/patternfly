@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 /* stylelint-disable */
 @mixin pf-mobile-layout {
   .pf-m-grid.pf-c-table { @content; }

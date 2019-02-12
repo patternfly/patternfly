@@ -21,7 +21,6 @@ import sizingHeightPercentDocs from '../docs/sizing-height-percent.md';
 import sizingHeightViewportDocs from '../docs/sizing-height-viewport.md';
 
 import docs from '../docs/code.md';
-import '../sizing.scss';
 
 export const Docs = docs;
 export const headingText = 'Sizing';

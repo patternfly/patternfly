@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-l-gallery {
   --pf-l-gallery--m-gutter--GridGap: var(--pf-global--gutter);
   --pf-l-gallery--GridTemplateColumns: repeat(auto-fill, minmax(250px, 1fr)); // The 250px value is here just so that the grid has a width to use in the minmax() for laying out the gallery columns.
