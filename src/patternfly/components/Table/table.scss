@@ -410,8 +410,6 @@
   tr.pf-m-expanded & {
     --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table__expandable-row-content--m-expanded--PaddingTop);
     --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingBottom);
-
-    // max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
   }
   /* stylelint-enable */
 }
