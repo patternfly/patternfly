@@ -4,7 +4,7 @@
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-expandable__toggle` | Indicated that the expandable content is visible. **Required** |
 | `hidden` | `.pf-c-expandable__content` | Indicates that the expandable content is hidden. **Required**. |
-| `aria-hidden="true"` | `.pf-c-expandable__toggle-icon` | Hides from screen readers. |
+| `aria-hidden="true"` | `.pf-c-expandable__toggle-icon` | Hides from screen readers. **Required** |
 
 ## Usage
 
