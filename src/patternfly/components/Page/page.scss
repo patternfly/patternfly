@@ -100,6 +100,13 @@
     --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--md--PaddingLeft);
   }
 
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-page__main-section--PaddingTop: 0;
+    --pf-c-page__main-section--PaddingRight: 0;
+    --pf-c-page__main-section--PaddingBottom: 0;
+    --pf-c-page__main-section--PaddingLeft: 0;
+  }
+
   // Main section horizontal nav
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingRight: 0;
