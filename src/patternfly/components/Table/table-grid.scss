@@ -27,6 +27,7 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // Responsive vars
   // ==================================================================
+  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   // Body
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--sm);
@@ -75,6 +76,7 @@ $pf-c-table-xs-breakpoint: 380px;
 // Check table cell
 @include pf-mobile-layout {
   display: grid;
+  background-color: var(--pf-c-table--BackgroundColor);
   border: none;
 
   // Thead

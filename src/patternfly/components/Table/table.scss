@@ -9,7 +9,6 @@
   // ============================================================ //
 
   // Base
-  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--light-200);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
@@ -123,7 +122,6 @@
 
   // Base
   width: 100%;
-  background-color: var(--pf-c-table--BackgroundColor);
 
   // Standard table row (non-expandable)
   // exclude expandable rows
@@ -140,6 +138,10 @@
 
   tr {
     background-color: var(--pf-c-table__tr--BackgroundColor);
+
+    &:nth-child(even) {
+      background-color: var(--pf-c-table__tr--BackgroundColor);
+    }
   }
 
   // Table row
