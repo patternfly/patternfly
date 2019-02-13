@@ -27,7 +27,6 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // Responsive vars
   // ==================================================================
-  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   // Body
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
@@ -76,7 +75,6 @@ $pf-c-table-xs-breakpoint: 380px;
 // Check table cell
 @include pf-mobile-layout {
   display: grid;
-  background-color: var(--pf-c-table--BackgroundColor);
   border: none;
 
   // Thead
@@ -87,27 +85,30 @@ $pf-c-table-xs-breakpoint: 380px;
   // Tbody
   tbody {
     display: block;
+
+    //border-top: 4px solid var(--pf-c-table--BorderColor); // add variable
   }
 
   // add top margin to siblings
-  tbody + tbody {
-    margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
-  }
+  // tbody + tbody {
+  //   margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
+  // }
 
   // Table row
   // using background color on tr as they are presented as block level elements for responsive view
   tr {
-    &:not(.pf-c-table__expandable-row) {
-      margin-top: var(--pf-c-table-tr--responsive--MarginTop);
+    &:first-child {
+      border-top: 8px solid var(--pf-c-table--BorderColor);
+    }
+
+    border-bottom: 4px solid var(--pf-c-table--BorderColor); // add var
+
+    &:last-child {
+      border-bottom-width: 1px;
     }
   }
 
   tbody.pf-m-expanded {
-    &::before {
-      top: var(--pf-c-table-tbody--m-expanded--before--Top);
-      content: "";
-    }
-
     tr:not(.pf-c-table__expandable-row) {
       border-bottom: 0;
     }
