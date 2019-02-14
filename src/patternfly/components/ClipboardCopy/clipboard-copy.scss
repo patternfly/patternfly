@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-clipboard-copy {
   // Clipboard Copy Toggle
   --pf-c-clipboard-copy__group-toggle--PaddingRight: var(--pf-global--spacer--md);
@@ -56,7 +54,6 @@
 
 .pf-c-clipboard-copy__group {
   display: flex;
-  width: 100%;
 
   > * + * {
     margin-left: -1px;
@@ -149,7 +146,7 @@
   }
 }
 
-.pf-c-clipboard-copy__expanded-content {
+.pf-c-clipboard-copy__expandable-content {
   padding: var(--pf-c-clipboard-copy__expanded-content--PaddingTop) var(--pf-c-clipboard-copy__expanded-content--PaddingRight) var(--pf-c-clipboard-copy__expanded-content--PaddingBottom) var(--pf-c-clipboard-copy__expanded-content--PaddingLeft);
   background-color: var(--pf-c-clipboard-copy__expanded-content--BackgroundColor);
   background-clip: padding-box;
