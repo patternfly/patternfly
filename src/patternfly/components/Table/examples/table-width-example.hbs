@@ -2,7 +2,7 @@
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Check all rows"'}}{{/check-input}}
+        <input type="checkbox" name="check-all" aria-label="Check all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
         Repositories
@@ -25,7 +25,7 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="width-node1"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="width-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
         <div id="width-node1">Node 1</div>
@@ -46,7 +46,7 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="width-node2"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="width-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
         <div id="width-node2">Node 2<div><a href="#">siemur/test-space</a></div></div>
