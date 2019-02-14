@@ -11,8 +11,6 @@ import CardNoFooterExample from './card-no-footer-example.hbs';
 import CardNoHeaderExample from './card-no-header-example.hbs';
 import CardContentOnlyExample from './card-content-only-example.hbs';
 
-import '../card.scss';
-
 export const Docs = docs;
 
 export default () => {

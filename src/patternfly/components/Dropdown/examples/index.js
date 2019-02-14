@@ -19,7 +19,6 @@ import DropdownTop from './dropdown-top-example.hbs';
 import DropdownSplitButton from './dropdown-split-button-example.hbs';
 import DropdownBasicDoc from '../docs/dropdown-basic.md';
 import docs from '../docs/code.md';
-import '../dropdown.scss';
 
 export const Docs = docs;
 

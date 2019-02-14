@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import CheckExampleRaw from '!raw!./check-example.hbs';
 import CheckExample from './check-example.hbs';
 import docs from '../docs/code.md';
-import '../check.scss';
 
 export const Docs = docs;
 

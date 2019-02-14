@@ -9,7 +9,6 @@ import BreadcrumbWithTitleExample from './breadcrumb-with-title-example.hbs';
 import BreadcrumbWithoutHomeLink from './breadcrumb-without-home-link-example.hbs';
 import breadcrumbWithTitleExampleDoc from '../docs/breadcrumb-with-title.md';
 import docs from '../docs/code.md';
-import '../breadcrumb.scss';
 
 export const Docs = docs;
 

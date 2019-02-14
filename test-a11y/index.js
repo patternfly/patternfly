@@ -27,24 +27,48 @@ const driver = new selenium.Builder()
   .withCapabilities(chromeCapabilities)
   .build();
 
-const testPageA11y = testPage =>
-  new Promise(resolve =>
-    driver.get(`${protocol}://${host}:${port}${testPage.path}`).then(() => {
-      AxeBuilder(driver)
-        .withTags(['wcag2a', 'wcag2aa'])
-        .disableRules(['color-contrast', 'document-title', 'html-has-lang'])
-        .analyze()
-        .then(results => {
-          if (results.violations.length > 0) {
-            violatingPages.push({
-              page: testPage.path,
-              violations: results.violations
-            });
-          }
-          resolve();
+function runAxe(pagePath, res, rej) {
+  return AxeBuilder(driver)
+    .withTags(['wcag2a', 'wcag2aa'])
+    .disableRules(['color-contrast', 'document-title', 'html-has-lang'])
+    .analyze()
+    .then(results => {
+      if (results.violations.length > 0) {
+        violatingPages.push({
+          page: pagePath,
+          violations: results.violations
         });
+      }
+      res();
     })
-  );
+    .catch(error => {
+      rej(error);
+    });
+}
+
+function domReflowBuffer(testPage, res, rej) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({ path: testPage.path, res, rej });
+    }, 1000);
+  });
+}
+
+const testPageA11y = testPage =>
+  new Promise((resolve, reject) => {
+    driver.get(`${protocol}://${host}:${port}${testPage.path}`);
+    return (
+      driver
+        // wait for JS to build the DOM
+        .wait(selenium.until.elementLocated(selenium.By.css('#___gatsby > div'), 10000))
+        // allow time for the repaint/relow so styles are applied before we analyze the page
+        .then(() => domReflowBuffer(testPage, resolve, reject))
+        .then(({ path, res, rej }) => runAxe(path, res, rej))
+        .catch(error => {
+          reject(error);
+        })
+    );
+  });
 
 if (process.env.CI) {
   pfReporter.updateStatus('pending', 'Running A11y Audit');
@@ -56,18 +80,22 @@ sitemap
     driver.quit().then(() => {
       const totalViolationsPromise = pfReporter.report(violatingPages);
 
-      totalViolationsPromise.then(totalViolations => {
-        if (errorsExceedThreshold(totalViolations.length, config.toleranceThreshold)) {
-          console.log(`${logColors.red}%s${logColors.reset}`, `BUILD FAILURE: Too many accessibility violations`);
-          console.log(
-            `${logColors.red}%s${logColors.reset}`,
-            `Found ${totalViolations.length}, which exceeds our goal of less than ${config.toleranceThreshold} \n`
-          );
-          process.exit(1);
-        } else {
-          console.log(`${logColors.green}%s${logColors.reset}`, 'ACCESSIBILITY AUDIT PASSES \n');
-        }
-      });
+      totalViolationsPromise
+        .then(totalViolations => {
+          if (errorsExceedThreshold(totalViolations.length, config.toleranceThreshold)) {
+            console.log(`${logColors.red}%s${logColors.reset}`, `BUILD FAILURE: Too many accessibility violations`);
+            console.log(
+              `${logColors.red}%s${logColors.reset}`,
+              `Found ${totalViolations.length}, which exceeds our goal of less than ${config.toleranceThreshold} \n`
+            );
+            process.exit(1);
+          } else {
+            console.log(`${logColors.green}%s${logColors.reset}`, 'ACCESSIBILITY AUDIT PASSES \n');
+          }
+        })
+        .catch(error => {
+          throw new Error(error);
+        });
     });
   })
   .catch(error => {

@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import RadioExampleRaw from '!raw!./radio-example.hbs';
 import RadioExample from './radio-example.hbs';
 import docs from '../docs/code.md';
-import '../radio.scss';
 
 export const Docs = docs;
 

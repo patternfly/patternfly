@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import labelExampleRaw from '!raw!./label-example.hbs';
 import LabelExample from './label-example.hbs';
 import docs from '../docs/code.md';
-import '../label.scss';
 
 export const Docs = docs;
 

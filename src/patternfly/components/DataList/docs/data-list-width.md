@@ -6,6 +6,10 @@
 <br>
 <mark>**All expandable data list accessibility and usage requirements apply.**</mark>
 
+### Accessibility
+| Attribute | Applied To | Outcome |
+| -- | -- | -- |
+| `aria-controls="[id of element controlled]"` | `.pf-c-data-list__toggle` > `.pf-c-button`    | Identifies the section controlled by the toggle button. **Required** |
 
 ### Usage
 

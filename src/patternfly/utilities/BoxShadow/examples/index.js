@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import boxShadowSimpleExampleRaw from '!raw!./box-shadow-simple-example.hbs';
 import BoxshadowSimpleExample from './box-shadow-simple-example.hbs';
 import docs from '../docs/code.md';
-import '../box-shadow.scss';
 
 export const Docs = docs;
 
