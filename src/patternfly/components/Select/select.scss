@@ -28,11 +28,8 @@
   --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
-  // Toggle wrapper doesn't need top padding unless there's a typeahead with adjustment for the input
-  --pf-c-select__toggle-wrapper--PaddingTop: 0;
-
   // When there is a typeahead (input box) adjust the top padding of the wrapper in case it wraps to the second line
-  --pf-c-select__toggle-wrapper--typeahead--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--m-typeahead--PaddingTop: var(--pf-global--spacer--xs);
 
   // Space for the children of the toggle
   --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
@@ -196,7 +193,8 @@
   &.pf-m-typeahead {
     --pf-c-select__toggle--PaddingTop: 0;
     --pf-c-select__toggle--PaddingBottom: 0;
-    --pf-c-select__toggle-wrapper--PaddingTop: var(--pf-c-select__toggle-wrapper--typeahead--PaddingTop);
+
+    padding-top: var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop);
 
     input {
       overflow: hidden;
@@ -234,7 +232,6 @@
   // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
   // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
   max-width: var(--pf-c-select__toggle-wrapper--MaxWidth);
-  padding-top: var(--pf-c-select__toggle-wrapper--PaddingTop);
   white-space: normal;
 
   // Add space between children
@@ -250,8 +247,8 @@
   }
 
   // if there is an input in the toggle-wrapper, then give it a negative top margin to match the typeahead top padding
-  > input {
-    margin-top: calc(-1 * var(--pf-c-select__toggle-wrapper--typeahead--PaddingTop));
+  > .pf-c-form-control {
+    margin-top: calc(-1 * var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop));
   }
 
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
