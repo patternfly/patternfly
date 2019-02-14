@@ -1,17 +1,9 @@
 @import "../../patternfly-imports";
 
 .pf-c-expandable {
-  // Expandable
-  --pf-c-expandable--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-expandable--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-expandable--PaddingTop: var(--pf-global--spacer--2xl);
-  --pf-c-expandable--PaddingRight: var(--pf-global--spacer--3xl);
-  --pf-c-expandable--PaddingBottom: var(--pf-global--spacer--2xl);
-  --pf-c-expandable--PaddingLeft: var(--pf-global--spacer--2xl);
-
   // Expandable Toggle
   --pf-c-expandable__toggle--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-expandable__toggle--Color: var(--pf-global--active-color--300);
+  --pf-c-expandable__toggle--Color: var(--pf-global--link--Color);
 
   // Expandable Toggle Icon
   --pf-c-expandable__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -19,14 +11,7 @@
 
   // Expandable Expanded
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--xl);
-
-  // This component always needs to be light
-  @include pf-t-light;
-
-  padding: var(--pf-c-expandable--PaddingTop) var(--pf-c-expandable--PaddingRight) var(--pf-c-expandable--PaddingBottom) var(--pf-c-expandable--PaddingLeft);
-  background-color: var(--pf-c-expandable--BackgroundColor);
-  background-clip: padding-box;
-  box-shadow: var(--pf-c-expandable--BoxShadow);
+  --pf-c-expandable__content--Color: var(--pf-global--Color--100);
 
   &.pf-m-expanded {
     .pf-c-expandable__toggle-icon {
@@ -47,5 +32,6 @@
 
   .pf-c-expandable__content {
     margin-top: var(--pf-c-expandable__content--MarginTop);
+    color: var(--pf-c-expandable__content--Color);
   }
 }
