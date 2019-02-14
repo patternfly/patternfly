@@ -6,7 +6,6 @@ import ClipboardCopyExpansionExampleRaw from '!raw!./clipboard-copy-expansion-ex
 import ClipboardCopyNoExpansionExample from './clipboard-copy-no-expansion-example.hbs';
 import ClipboardCopyExpansionExample from './clipboard-copy-expansion-example.hbs';
 import docs from '../docs/code.md';
-import '../clipboard-copy.scss';
 
 export const Docs = docs;
 
