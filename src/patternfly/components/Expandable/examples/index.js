@@ -6,7 +6,6 @@ import expandableHiddenExampleRaw from '!raw!./expandable-hidden-example.hbs';
 import ExpandableExpandedExample from './expandable-expanded-example.hbs';
 import ExpandableHiddenExample from './expandable-hidden-example.hbs';
 import docs from '../docs/code.md';
-import '../expandable.scss';
 
 export const Docs = docs;
 
