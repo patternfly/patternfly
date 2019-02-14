@@ -85,8 +85,10 @@ $pf-c-table-xs-breakpoint: 380px;
   // Tbody
   tbody {
     display: block;
+  }
 
-    //border-top: 4px solid var(--pf-c-table--BorderColor); // add variable
+  tbody:first-of-type {
+    border-top: 8px solid var(--pf-c-table--BorderColor); // add variable
   }
 
   // add top margin to siblings
@@ -97,18 +99,24 @@ $pf-c-table-xs-breakpoint: 380px;
   // Table row
   // using background color on tr as they are presented as block level elements for responsive view
   tr {
-    &:first-child {
-      border-top: 8px solid var(--pf-c-table--BorderColor);
-    }
+    // &:first-child {
+    //   border-top: 8px solid var(--pf-c-table--BorderColor);
+    // }
 
-    border-bottom: 4px solid var(--pf-c-table--BorderColor); // add var
+    // border-bottom: 4px solid var(--pf-c-table--BorderColor); // add var
 
-    &:last-child {
-      border-bottom-width: 1px;
+    &:not(.pf-c-table__expandable-row) {
+      border-bottom-width: 8px; // overrides the bottom border
+
+      &:last-child {
+        border-bottom-width: 1px;
+      }
     }
   }
 
   tbody.pf-m-expanded {
+    border-bottom: 8px solid var(--pf-c-table--BorderColor);
+
     tr:not(.pf-c-table__expandable-row) {
       border-bottom: 0;
     }
