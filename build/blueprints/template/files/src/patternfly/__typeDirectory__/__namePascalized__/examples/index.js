@@ -7,7 +7,6 @@ import {{moduleName}}SimpleExample from './{{nameDasherized}}-simple-example.hbs
 import {{moduleName}}ComplexExample from './{{nameDasherized}}-complex-example.hbs';
 import {{nameCamelized}}ComplexExampleDoc from '../docs/{{nameDasherized}}-complex.md';
 import docs from '../docs/code.md';
-import '../{{nameDasherized}}.scss';
 
 export const Docs = docs;
 

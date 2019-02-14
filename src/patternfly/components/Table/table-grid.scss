@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 /* stylelint-disable */
 @mixin pf-mobile-layout {
   .pf-m-grid.pf-c-table { @content; }
@@ -304,10 +302,8 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // Overflow scroll should only happen on responsive
   .pf-c-table__expandable-row-content {
-    tr.pf-m-expanded & {
-      max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
-      overflow-y: scroll;
-    }
+    max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
+    overflow-y: auto;
   }
 
   // Set defaults

@@ -8,7 +8,6 @@ import FormControlInputExample from './form-control-input-example.hbs';
 import FormControlSelectExample from './form-control-select-example.hbs';
 import FormControlTextareaExample from './form-control-textarea-example.hbs';
 import docs from '../docs/code.md';
-import '../form-control.scss';
 
 export const Docs = docs;
 

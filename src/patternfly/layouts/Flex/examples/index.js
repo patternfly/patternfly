@@ -25,7 +25,6 @@ import flexJustificationExampleDoc from '../docs/flex-justification.md';
 import flexColumnsExampleDoc from '../docs/flex-columns.md';
 
 import docs from '../docs/code.md';
-import '../flex.scss';
 
 export const Docs = docs;
 

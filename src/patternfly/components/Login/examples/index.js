@@ -6,7 +6,6 @@ import loginInvalidExampleRaw from '!raw!./login-invalid-example.hbs';
 import LoginSimpleExample from './login-simple-example.hbs';
 import LoginInvalidExample from './login-invalid-example.hbs';
 import docs from '../docs/code.md';
-import '../login.scss';
 
 export const Docs = docs;
 

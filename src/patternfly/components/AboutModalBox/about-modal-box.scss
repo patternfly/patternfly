@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-about-modal-box {
   // Component variables
   --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000}; // Modal uses a non-standard background color
@@ -200,6 +198,7 @@
 .pf-c-about-modal-box__close {
   grid-area: close;
   position: sticky;
+  top: 0;
   z-index: var(--pf-c-about-modal-box__close--ZIndex);
   display: flex;
   align-items: flex-start;

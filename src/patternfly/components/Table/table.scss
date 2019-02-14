@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-table {
 
   /* stylelint-disable */
@@ -389,16 +387,19 @@
     border-bottom-width: var(--pf-c-table--BorderWidth);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
   }
+
+  &:not(.pf-m-expanded) {
+    .pf-c-table__expandable-row-content {
+      display: none;
+    }
+  }
 }
 
 // Expandable row content
 // ==================================================================
 .pf-c-table__expandable-row-content {
-  max-height: 0;
-
   // set base variables to reset later
   padding: var(--pf-c-table__expandable-row-content--PaddingTop) var(--pf-c-table__expandable-row-content--PaddingRight) var(--pf-c-table__expandable-row-content--PaddingBottom) var(--pf-c-table__expandable-row-content--PaddingLeft);
-  overflow: auto;
   word-break: break-word;
   border-top-color: transparent;
   border-top-width: 0;
@@ -409,8 +410,6 @@
   tr.pf-m-expanded & {
     --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table__expandable-row-content--m-expanded--PaddingTop);
     --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingBottom);
-
-    max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
   }
   /* stylelint-enable */
 }

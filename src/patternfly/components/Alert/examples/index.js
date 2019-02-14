@@ -7,7 +7,6 @@ import AlertVariationsRaw from '!raw!./alert-variations-example.hbs';
 import AlertTypes from './alert-types-example.hbs';
 import AlertVariations from './alert-variations-example.hbs';
 import docs from '../docs/code.md';
-import '../alert.scss';
 
 export const Docs = docs;
 

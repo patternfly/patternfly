@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import emptyStateSimpleExampleRaw from '!raw!./empty-state-simple-example.hbs';
 import EmptystateSimpleExample from './empty-state-simple-example.hbs';
 import docs from '../docs/code.md';
-import '../empty-state.scss';
 
 export const Docs = docs;
 

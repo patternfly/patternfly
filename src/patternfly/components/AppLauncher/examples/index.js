@@ -6,7 +6,6 @@ import AppLauncherExpandedExampleRaw from '!raw!./app-launcher-expanded-example.
 import ApplauncherCollapsedExample from './app-launcher-collapsed-example.hbs';
 import ApplauncherExpandedExample from './app-launcher-expanded-example.hbs';
 import docs from '../docs/code.md';
-import '../app-launcher.scss';
 
 export const Docs = docs;
 

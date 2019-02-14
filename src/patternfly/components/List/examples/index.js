@@ -8,7 +8,6 @@ import ListUnorderedExample from './list-unordered-example.hbs';
 import ListOrderedExample from './list-ordered-example.hbs';
 import ListInlineExample from './list-inline-example.hbs';
 import docs from '../docs/code.md';
-import '../list.scss';
 
 export const Docs = docs;
 
