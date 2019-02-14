@@ -31,8 +31,11 @@ $pf-c-table-xs-breakpoint: 380px;
   // Body
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-table-tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
+  --pf-c-table-tbody--responsive--BorderWidth: var(--pf-global--spacer--sm);
 
   // Row
+  --pf-c-table-tr--responsive--BorderWidth: var(--pf-global--spacer--sm);
+  --pf-c-table-tr--responsive--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--xl);
@@ -85,37 +88,26 @@ $pf-c-table-xs-breakpoint: 380px;
   // Tbody
   tbody {
     display: block;
-  }
 
-  tbody:first-of-type {
-    border-top: 8px solid var(--pf-c-table--BorderColor); // add variable
-  }
-
-  // add top margin to siblings
-  // tbody + tbody {
-  //   margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
-  // }
-
-  // Table row
-  // using background color on tr as they are presented as block level elements for responsive view
-  tr {
-    // &:first-child {
-    //   border-top: 8px solid var(--pf-c-table--BorderColor);
-    // }
-
-    // border-bottom: 4px solid var(--pf-c-table--BorderColor); // add var
-
-    &:not(.pf-c-table__expandable-row) {
-      border-bottom-width: 8px; // overrides the bottom border
-
-      &:last-child {
-        border-bottom-width: 1px;
-      }
+    &:first-of-type {
+      border-top: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
     }
   }
 
+  tr {
+    &:not(.pf-c-table__expandable-row) {
+      border-bottom-width: var(--pf-c-table-tr--responsive--BorderWidth);
+    }
+  }
+
+  // The last tr should always have a border width of 1px
+  tr:last-child,
+  tbody:last-of-type:not(:only-of-type) > tr {
+    border-bottom-width: var(--pf-c-table-tr--responsive--last-child--BorderWidth);
+  }
+
   tbody.pf-m-expanded {
-    border-bottom: 8px solid var(--pf-c-table--BorderColor);
+    border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
 
     tr:not(.pf-c-table__expandable-row) {
       border-bottom: 0;
