@@ -1,15 +1,15 @@
 {{#> clipboard-copy}}
-	{{#> input-group}}
-	{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="This is editable" id="textInput1" aria-label="standard input"'}}
+	{{#> clipboard-copy-group}}
+	{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="This is editable" id="text-input-1" aria-label="copyable input"'}}
 	{{/form-control}}
-	  {{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
-	{{/input-group}}
+	  {{#> clipboard-copy-group-copy clipboard-copy-group-copy--attribute='id="copy-button-1" aria-labelledby="copy-button-1 text-input-1"'}}{{/clipboard-copy-group-copy}}
+	{{/clipboard-copy-group}}
 {{/clipboard-copy}}
 <br>
 {{#> clipboard-copy}}
-	{{#> input-group}}
-	{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="This is read-only" id="textInput2" aria-label="readonly input"'}}
+	{{#> clipboard-copy-group}}
+	{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="This is read-only" id="text-input-2" aria-label="copyable input"'}}
 	{{/form-control}}
-	  {{#> clipboard-copy-group-copy}}{{/clipboard-copy-group-copy}}
-	{{/input-group}}
+	  {{#> clipboard-copy-group-copy clipboard-copy-group-copy--attribute='id="copy-button-2" aria-labelledby="copy-button-2 text-input-2"'}}{{/clipboard-copy-group-copy}}
+	{{/clipboard-copy-group}}
 {{/clipboard-copy}}
