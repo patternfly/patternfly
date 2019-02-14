@@ -1,7 +1,13 @@
 <button class="pf-c-expandable__toggle{{#if expandable-toggle--modifier}} {{expandable-toggle--modifier}}{{/if}}"
   {{#if expandable-toggle--attribute}}
     {{{expandable-toggle--attribute}}}
-  {{/if}}>
+  {{/if}}
+  {{#if expandable--IsExpanded}}
+  aria-expanded="true"
+  {{else}}
+  aria-expanded="false"
+  {{/if}}
+  >
   {{> @partial-block}}
   <i class="fas fa-angle-right pf-c-expandable__toggle-icon" aria-hidden="true"></i>
   {{#if expandable--IsExpanded}}

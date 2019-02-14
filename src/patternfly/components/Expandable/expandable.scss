@@ -2,6 +2,10 @@
 
 .pf-c-expandable {
   // Expandable Toggle
+  --pf-c-expandable__toggle--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-expandable__toggle--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-expandable__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-expandable__toggle--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-expandable__toggle--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-expandable__toggle--Color: var(--pf-global--link--Color);
 
@@ -11,7 +15,6 @@
 
   // Expandable Expanded
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-expandable__content--Color: var(--pf-global--Color--100);
 
   &.pf-m-expanded {
     .pf-c-expandable__toggle-icon {
@@ -20,6 +23,7 @@
   }
 
   .pf-c-expandable__toggle {
+    padding: var(--pf-c-expandable__toggle--PaddingTop) var(--pf-c-expandable__toggle--PaddingRight) var(--pf-c-expandable__toggle--PaddingBottom) var(--pf-c-expandable__toggle--PaddingLeft);
     font-weight: var(--pf-c-expandable__toggle--FontWeight);
     color: var(--pf-c-expandable__toggle--Color);
     border: none;
@@ -32,6 +36,5 @@
 
   .pf-c-expandable__content {
     margin-top: var(--pf-c-expandable__content--MarginTop);
-    color: var(--pf-c-expandable__content--Color);
   }
 }
