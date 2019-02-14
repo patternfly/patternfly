@@ -138,10 +138,6 @@
 
   tr {
     background-color: var(--pf-c-table__tr--BackgroundColor);
-
-    &:nth-child(even) {
-      background-color: var(--pf-c-table__tr--BackgroundColor);
-    }
   }
 
   // Table row
