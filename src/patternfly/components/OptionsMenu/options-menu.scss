@@ -14,6 +14,7 @@
   --pf-c-options-menu__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
   --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-options-menu__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-options-menu__toggle--Color: var(--pf-global--Color--100);
   --pf-c-options-menu__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-options-menu__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-options-menu__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
@@ -119,6 +120,7 @@
   max-width: 100%;
   padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
   line-height: var(--pf-c-options-menu__toggle--LineHeight);
+  color: var(--pf-c-options-menu__toggle--Color);
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
@@ -145,7 +147,7 @@
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 
-    > i {
+    > * {
       line-height: var(--pf-c-options-menu__toggle--LineHeight);
     }
 
