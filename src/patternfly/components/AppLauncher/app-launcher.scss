@@ -27,6 +27,7 @@
   --pf-c-app-launcher__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-app-launcher__menu-item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--dark-100);
+  --pf-c-app-launcher__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
@@ -79,6 +80,7 @@
   display: block;
   width: 100%;
   padding: var(--pf-c-app-launcher__menu-item--PaddingTop) var(--pf-c-app-launcher__menu-item--PaddingRight) var(--pf-c-app-launcher__menu-item--PaddingBottom) var(--pf-c-app-launcher__menu-item--PaddingLeft);
+  font-weight: var(--pf-c-app-launcher__menu-item--FontWeight);
   color: var(--pf-c-app-launcher__menu-item--Color);
   white-space: nowrap;
 
