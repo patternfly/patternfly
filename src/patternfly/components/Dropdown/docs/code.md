@@ -12,12 +12,10 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon`, `<i>` | Hides the icon from assistive technologies |
 | `hidden` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
 | `aria-labelledby="{toggle button id}"` | `.pf-c-dropdown__menu` | Gives the menu an accessible name by referring to the element that toggles the menu |
-| `aria-expanded="true"` | `.pf-c-dropdown__menu` | Indicates that the menu is visible |
 | `role="separator"` | `.pf-c-dropdown__separator` | Indicates that the separator is a separator |
 | `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
 | `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable |
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus |
-| `aria-pressed="true"` | `button.pf-c-dropdown__menu-item` | **Select only** The attribute `aria-pressed="true"` should be set programmatically to the active item. Value should be false when not selected.|
 
 ## Usage
 
@@ -38,7 +36,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-align-right` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-split-button` | `.pf-c-dropdown__toggle` | Modifies the dropdown toggle area to allow for interactive elements |
 | `.pf-m-hover` | `.pf-c-dropdown__menu-item`, `.pf-c-dropdown__toggle` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
-| `.pf-m-focus` | `.pf-c-dropdown__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
+| `.pf-m-focus` | `.pf-c-dropdown__menu-item`, `.pf-c-dropdown__toggle` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
 | `.pf-m-plain` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with no border |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`|

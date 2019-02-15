@@ -2,8 +2,7 @@
   {{#if data-list-action--attribute}}
     {{{data-list-action--attribute}}}
   {{/if}}>
-  {{!-- use 'button--attribute' param on parent to set attributes on button --}}
-  {{#> button button--modifier="pf-m-plain"}}
-    <i class="fas fa-ellipsis-v"></i>
-  {{/button}}
+  {{#> dropdown dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+  {{/dropdown}}
+  {{> @partial-block}}
 </div>
