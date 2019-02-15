@@ -4,6 +4,10 @@
   // Base
   --pf-c-pagination--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-pagination--m-footer--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-footer--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-pagination--m-footer--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-footer--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Dropdown
   --pf-c-pagination__menu-text--Color: var(--pf-global--Color--200);
@@ -44,6 +48,10 @@
         display: flex;
       }
     }
+  }
+
+  &.pf-m-footer {
+    padding: var(--pf-c-pagination--m-footer--PaddingTop) var(--pf-c-pagination--m-footer--PaddingRight) var(--pf-c-pagination--m-footer--PaddingBottom) var(--pf-c-pagination--m-footer--PaddingLeft);
   }
 }
 
