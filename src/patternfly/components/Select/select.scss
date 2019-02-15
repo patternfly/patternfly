@@ -26,12 +26,18 @@
   --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
+  // When there is a typeahead (input box) adjust the top padding of the wrapper in case it wraps to the second line
+  --pf-c-select__toggle-wrapper--m-typeahead--PaddingTop: var(--pf-global--spacer--xs);
+
   // Space for the children of the toggle
   --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
 
   // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
   // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
   --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
+
+  // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: 0;
 
   // The button inside a chip must be adjusted to reduce the padding, which is driving the height of the chip, so it fits within the toggle
   --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop: var(--pf-global--spacer--xs);
@@ -186,6 +192,8 @@
     --pf-c-select__toggle--PaddingTop: 0;
     --pf-c-select__toggle--PaddingBottom: 0;
 
+    padding-top: var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop);
+
     input {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -234,6 +242,16 @@
   .pf-c-chip .pf-c-button {
     padding-top: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop);
     padding-bottom: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom);
+  }
+
+  // if there is an input in the toggle-wrapper, then give it a negative top margin to match the typeahead top padding
+  > .pf-c-form-control {
+    margin-top: calc(-1 * var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop));
+  }
+
+  // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
+  .pf-c-chip-group {
+    margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
   }
 }
 
