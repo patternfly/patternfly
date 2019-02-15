@@ -19,9 +19,7 @@
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--md);
 
   &.pf-m-expanded {
-    .pf-c-expandable__toggle {
-      color: var(--pf-c-expandable__toggle--m-expanded--Color);
-    }
+    --pf-c-expandable__toggle--Color: var(--pf-c-expandable__toggle--m-expanded--Color);
 
     .pf-c-expandable__toggle-icon {
       transform: rotate(90deg);
