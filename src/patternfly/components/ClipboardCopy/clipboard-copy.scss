@@ -30,13 +30,13 @@
   --pf-c-clipboard-copy__group-copy--focus--BorderBottomColor: var(--pf-global--active-color--100);
 
   // Clipboard Copy Expanded Content
-  --pf-c-clipboard-copy__expanded-content--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expanded-content--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expanded-content--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expanded-content--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expanded-content--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-clipboard-copy__expanded-content--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-clipboard-copy__expanded-content--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-clipboard-copy__expandable-content--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-clipboard-copy__expandable-content--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-clipboard-copy__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-clipboard-copy__expandable-content--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-clipboard-copy__expandable-content--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-clipboard-copy__expandable-content--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-clipboard-copy__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Toggle button expanded
   &.pf-m-expanded .pf-c-clipboard-copy__group-toggle {
@@ -147,9 +147,9 @@
 }
 
 .pf-c-clipboard-copy__expandable-content {
-  padding: var(--pf-c-clipboard-copy__expanded-content--PaddingTop) var(--pf-c-clipboard-copy__expanded-content--PaddingRight) var(--pf-c-clipboard-copy__expanded-content--PaddingBottom) var(--pf-c-clipboard-copy__expanded-content--PaddingLeft);
-  background-color: var(--pf-c-clipboard-copy__expanded-content--BackgroundColor);
+  padding: var(--pf-c-clipboard-copy__expandable-content--PaddingTop) var(--pf-c-clipboard-copy__expandable-content--PaddingRight) var(--pf-c-clipboard-copy__expandable-content--PaddingBottom) var(--pf-c-clipboard-copy__expandable-content--PaddingLeft);
+  background-color: var(--pf-c-clipboard-copy__expandable-content--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-clipboard-copy__expanded-content--BorderWidth) solid transparent;
-  box-shadow: var(--pf-c-clipboard-copy__expanded-content--BoxShadow);
+  border: var(--pf-c-clipboard-copy__expandable-content--BorderWidth) solid transparent;
+  box-shadow: var(--pf-c-clipboard-copy__expandable-content--BoxShadow);
 }

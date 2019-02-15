@@ -21,7 +21,7 @@
 | `.pf-c-clipboard-copy__group-toggle` | `<button>` | Initiates a toggle button that expands content. |
 | `.pf-c-clipboard-copy__group-toggle-icon` | `<i>` | Initiates a toggle button icon. |
 | `.pf-c-clipboard-copy__group-copy` | `<button>` | Initiates a copy button with the clipboard icon. **Required** |
-| `.pf-c-clipboard-copy__expandable-content` | `<div>` | Initiates an expanded text element. |
+| `.pf-c-clipboard-copy__expandable-content` | `<div>` | Initiates an expandable element. |
 | `.pf-m-hover` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies buttons for the hover state. |
 | `.pf-m-active` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies toggle button for the active state. |
 | `.pf-m-focus` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies toggle button for the focus state. |
