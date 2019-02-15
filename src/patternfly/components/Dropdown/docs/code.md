@@ -12,7 +12,6 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon`, `<i>` | Hides the icon from assistive technologies |
 | `hidden` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
 | `aria-labelledby="{toggle button id}"` | `.pf-c-dropdown__menu` | Gives the menu an accessible name by referring to the element that toggles the menu |
-| `aria-expanded="true"` | `.pf-c-dropdown__menu` | Indicates that the menu is visible |
 | `role="separator"` | `.pf-c-dropdown__separator` | Indicates that the separator is a separator |
 | `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
 | `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable |

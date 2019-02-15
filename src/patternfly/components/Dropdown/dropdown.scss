@@ -28,6 +28,9 @@
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
+  // toggle button
+  --pf-c-dropdown__toggle-button--Color: var(--pf-global--color--100);
+
   // split buttons
   --pf-c-dropdown__toggle--m-split-button--child--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--m-split-button--child--PaddingRight: var(--pf-global--spacer--xs);
@@ -123,6 +126,7 @@
     }
 
     .pf-c-dropdown__toggle-button {
+      color: var(--pf-c-dropdown__toggle-button--Color);
       border: 0;
     }
   }
