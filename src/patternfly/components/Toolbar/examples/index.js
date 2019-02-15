@@ -16,7 +16,6 @@ import ToolbarFilterExpandedCheckedExample from './toolbar-filter-expanded-check
 import ToolbarMobileFilterExample from './toolbar-mobile-filter-example.hbs';
 import ToolbarMobileFilterCheckedExample from './toolbar-mobile-filter-checked-example.hbs';
 import docs from '../docs/code.md';
-import '../toolbar.scss';
 
 export const Docs = docs;
 

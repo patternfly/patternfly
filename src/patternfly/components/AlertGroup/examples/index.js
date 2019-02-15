@@ -15,7 +15,6 @@ import ToastGroupExample from './toast-group-example.hbs';
 import toastGroupDocs from '../docs/toast-group.md';
 
 import docs from '../docs/code.md';
-import '../alert-group.scss';
 
 export const headingText = 'Alert Group';
 export const Docs = docs;

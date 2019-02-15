@@ -13,7 +13,9 @@
     {{/button}}
     <div class="pf-m-user pf-screen-reader">
       {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
-        Kyle Baker
+        {{#> dropdown-toggle-text}}
+          Kyle Baker
+        {{/dropdown-toggle-text}}
       {{/dropdown}}
     </div>
   {{/page-header-tools-group}}

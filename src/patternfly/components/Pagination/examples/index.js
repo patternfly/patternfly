@@ -10,7 +10,6 @@ import PaginationBottomExample from './pagination-bottom-example.hbs';
 import paginationTopExampleDoc from '../docs/pagination-top-example.md';
 import paginationBottomExampleDoc from '../docs/pagination-bottom-example.md';
 import docs from '../docs/code.md';
-import '../pagination.scss';
 
 export const Docs = docs;
 

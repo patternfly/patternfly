@@ -15,7 +15,6 @@ import chipGroupSelectCollapsedExample from './chip-group-select-collapsed-examp
 import chipGroupMultiSelectDoc from '../docs/chip-group-multi-select.md';
 
 import docs from '../docs/code.md';
-import '../chip-group.scss';
 
 export const Docs = docs;
 

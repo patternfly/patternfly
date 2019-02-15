@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import ContextSelectorExampleRaw from '!raw!./context-selector-example.hbs';
 import ContextSelectorExample from './context-selector-example.hbs';
 import docs from '../docs/code.md';
-import '../context-selector.scss';
 
 export const Docs = docs;
 

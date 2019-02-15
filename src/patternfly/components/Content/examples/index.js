@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import ContentTemplateRaw from '!raw!./content-template-example.hbs';
 import ContentTemplate from './content-template-example.hbs';
 import docs from '../docs/code.md';
-import '../content.scss';
 
 export const Docs = docs;
 

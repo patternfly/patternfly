@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import TitleTemplateRaw from '!raw!./title-types-example.hbs';
 import TitleTemplate from './title-types-example.hbs';
 import docs from '../docs/code.md';
-import '../title.scss';
 
 export const Docs = docs;
 

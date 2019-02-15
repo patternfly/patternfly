@@ -15,7 +15,6 @@ import PopoverLeftExample from './popover-left-example.hbs';
 import PopoverNoHeaderExample from './popover-no-header-example.hbs';
 
 import docs from '../docs/code.md';
-import '../popover.scss';
 
 export const Docs = docs;
 

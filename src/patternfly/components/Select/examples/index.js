@@ -30,7 +30,6 @@ import SelectSingleTypeaheadExampleDoc from '../docs/select-single-typeahead.md'
 import SelectMultiTypeaheadExampleDoc from '../docs/select-multi-typeahead.md';
 import SelectCheckboxExampleDoc from '../docs/select-checkbox.md';
 import docs from '../docs/code.md';
-import '../select.scss';
 
 export const selectSingleExampleDoc = SelectSingleExampleDoc;
 export const selectSingleTypeaheadExampleDoc = SelectSingleTypeaheadExampleDoc;

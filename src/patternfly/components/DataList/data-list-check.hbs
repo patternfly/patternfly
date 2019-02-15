@@ -2,6 +2,8 @@
   {{#if data-list-check--attribute}}
     {{{data-list-check--attribute}}}
   {{/if}}>
-  {{!-- use 'check-input--attribute' param on parent to set attributes on checkbox --}}
-  {{#> check-input }}{{/check-input}}
+  <input type="checkbox"
+    {{#if checkbox--attribute}}
+      {{{checkbox--attribute}}}
+    {{/if}}>
 </div>

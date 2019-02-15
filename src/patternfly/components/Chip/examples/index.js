@@ -4,7 +4,6 @@ import Example from '@siteComponents/Example';
 import ChipExampleRaw from '!raw!./chip-example.hbs';
 import chipExample from './chip-example.hbs';
 import docs from '../docs/code.md';
-import '../chip.scss';
 
 export const Docs = docs;
 

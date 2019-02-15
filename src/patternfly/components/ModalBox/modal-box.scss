@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-modal-box {
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-modal-box--BorderColor: transparent;
@@ -18,7 +16,6 @@
 
   // Body
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
-  --pf-c-modal-box--body--MaxHeight: #{pf-size-prem(360px)};
   --pf-c-modal-box--c-title--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
@@ -89,11 +86,11 @@
 .pf-c-modal-box__body {
   flex: 1 1 auto;
   min-height: var(--pf-c-modal-box--body--MinHeight);
-  max-height: var(--pf-c-modal-box--body--MaxHeight);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   word-break: break-word;
+  -webkit-overflow-scrolling: touch;
 }
 
 // Footer

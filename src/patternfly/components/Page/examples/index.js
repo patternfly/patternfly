@@ -6,7 +6,6 @@ import PageComponentNavHorizontalExampleRaw from '!raw!./page-component-nav-hori
 import PageComponentNavVerticalExample from './page-component-nav-vertical-example.hbs';
 import PageComponentNavHorizontalExample from './page-component-nav-horizontal-example.hbs';
 import docs from '../docs/code.md';
-import '../page.scss';
 
 export const Docs = docs;
 
