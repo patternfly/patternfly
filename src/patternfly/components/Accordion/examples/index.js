@@ -6,7 +6,6 @@ import accordionFixedExampleRaw from '!raw!./accordion-fixed-example.hbs';
 import AccordionFluidExample from './accordion-fluid-example.hbs';
 import AccordionFixedExample from './accordion-fixed-example.hbs';
 import docs from '../docs/code.md';
-import '../accordion.scss';
 
 export const Docs = docs;
 
