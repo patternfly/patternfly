@@ -5,11 +5,14 @@
   --pf-global--BackgroundColor--150: #{$pf-global--BackgroundColor--150};
   --pf-global--BackgroundColor--200: #{$pf-global--BackgroundColor--200};
   --pf-global--BackgroundColor--300: #{$pf-global--BackgroundColor--300};
+  --pf-global--BackgroundColor--hover: #{$pf-color-blue-50};
   --pf-global--BackgroundColor--light-100: #{$pf-global--BackgroundColor--light-100};
   --pf-global--BackgroundColor--light-200: #{$pf-global--BackgroundColor--light-200};
   --pf-global--BackgroundColor--light-300: #{$pf-global--BackgroundColor--light-300};
+  --pf-global--BackgroundColor--light-hover: #{$pf-color-blue-50};
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
   --pf-global--BackgroundColor--dark-200: #{$pf-global--BackgroundColor--dark-200};
+  --pf-global--BackgroundColor--dark-hover: #{$pf-color-blue-50};
   --pf-global--BackgroundColor--dark-transparent-100: #{$pf-global--BackgroundColor--dark-transparent-100};
   --pf-global--BackgroundColor--dark-transparent-200: #{$pf-global--BackgroundColor--dark-transparent-200};
 
@@ -120,9 +123,12 @@
   --pf-global--BorderWidth--md: #{$pf-global--BorderWidth--md};
   --pf-global--BorderWidth--lg: #{$pf-global--BorderWidth--lg};
   --pf-global--BorderColor: #{$pf-global--BorderColor};
+  --pf-global--BorderColor--hover: #{$pf-color-blue-200};
   --pf-global--BorderColor--dark: #{$pf-global--BorderColor--dark};
+  --pf-global--BorderColor--dark-hover: #{$pf-color-blue-200};
   --pf-global--BorderColor--light: #{$pf-global--BorderColor--light};
   --pf-global--BorderColor--light-200: #{$pf-global--BorderColor--light-200};
+  --pf-global--BorderColor--light-hover: #{$pf-color-blue-200};
   --pf-global--BorderRadius--sm: #{$pf-global--BorderRadius--sm};
   --pf-global--BorderRadius--lg: #{$pf-global--BorderRadius--lg};
 

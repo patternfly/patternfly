@@ -23,16 +23,19 @@ $pf-global--BackgroundColor--100: $pf-color-white !default;
 $pf-global--BackgroundColor--150: $pf-color-black-150 !default;
 $pf-global--BackgroundColor--200: $pf-color-black-100 !default;
 $pf-global--BackgroundColor--300: $pf-color-black-200 !default;
+$pf-global--BackgroundColor--hover: $pf-color-blue-50 !default;
 
 // do not use - background colors for exceptions and defining theme
 // light theme
 $pf-global--BackgroundColor--light-100:     $pf-color-white !default;
 $pf-global--BackgroundColor--light-200:     $pf-color-black-100 !default;
 $pf-global--BackgroundColor--light-300:     $pf-color-black-200 !default;
+$pf-global--BackgroundColor--light-hover:   $pf-color-blue-50 !default;
 
 // dark theme
 $pf-global--BackgroundColor--dark-100:      $pf-color-black-900 !default;
 $pf-global--BackgroundColor--dark-200:      $pf-color-black-800 !default;
+$pf-global--BackgroundColor--dark-hover:    $pf-color-blue-50 !default;
 $pf-global--BackgroundColor--dark-transparent-100:  rgba($pf-color-black-1000, .62) !default;
 $pf-global--BackgroundColor--dark-transparent-200:  rgba($pf-color-black-1000, .32) !default;
 
@@ -160,9 +163,12 @@ $pf-global--BorderWidth--sm:     1px !default;
 $pf-global--BorderWidth--md:     2px !default;
 $pf-global--BorderWidth--lg:     3px !default;
 $pf-global--BorderColor:         $pf-color-black-600 !default;
+$pf-global--BorderColor--hover:  $pf-color-blue-200 !default;
 $pf-global--BorderColor--dark:   $pf-color-black-600 !default;
+$pf-global--BorderColor--dark-hover:  $pf-color-blue-200 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
 $pf-global--BorderColor--light-200: $pf-color-black-200 !default;
+$pf-global--BorderColor--light-hover:  $pf-color-blue-200 !default;
 $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 

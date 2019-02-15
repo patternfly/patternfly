@@ -5,6 +5,8 @@ import tableSimpleExampleRaw from '!raw!./table-simple-example.hbs';
 import tableSortableExampleRaw from '!raw!./table-sortable-example.hbs';
 import tableSimpleWithCheckboxesExampleRaw from '!raw!./table-simple-with-checkboxes-example.hbs';
 import tableExpandableExampleRaw from '!raw!./table-expandable-example.hbs';
+import tableEditableExampleRaw from '!raw!./table-editable-example.hbs';
+import tableEditableColumnExampleRaw from '!raw!./table-editable-column-example.hbs';
 import tableCompactExampleRaw from '!raw!./table-compact-example.hbs';
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
 import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
@@ -20,6 +22,12 @@ import tableCheckboxesActionsDoc from '../docs/table-checkboxes-actions.md';
 
 import TableExpandableExample from './table-expandable-example.hbs';
 import tableExpandableDoc from '../docs/table-expandable.md';
+
+import TableEditableExample from './table-editable-example.hbs';
+import tableEditableDoc from '../docs/table-editable.md';
+
+import TableEditableColumnExample from './table-editable-column-example.hbs';
+import tableEditableColumnDoc from '../docs/table-editable-column.md';
 
 import TableCompactExample from './table-compact-example.hbs';
 import tableCompactDoc from '../docs/table-compact.md';
@@ -38,6 +46,8 @@ export default () => {
   const tableSimpleExample = TableSimpleExample();
   const tableSortableExample = TableSortableExample();
   const tableExpandableExample = TableExpandableExample();
+  const tableEditableExample = TableEditableExample();
+  const tableEditableColumnExample = TableEditableColumnExample();
   const tableCompactExample = TableCompactExample();
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
@@ -67,6 +77,12 @@ export default () => {
         docs={tableCompoundExpansionDoc}
       >
         {tableCompoundExpansionExample}
+      </Example>
+      <Example heading="Editable Table" handlebars={tableEditableExampleRaw} docs={tableEditableDoc}>
+        {tableEditableExample}
+      </Example>
+      <Example heading="Editable Column Table" handlebars={tableEditableColumnExampleRaw} docs={tableEditableColumnDoc}>
+        {tableEditableColumnExample}
       </Example>
       <Example heading="Compact Table" handlebars={tableCompactExampleRaw} docs={tableCompactDoc}>
         {tableCompactExample}
