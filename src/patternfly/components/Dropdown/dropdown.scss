@@ -29,7 +29,7 @@
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // toggle button
-  --pf-c-dropdown__toggle-button--Color: var(--pf-global--color--100);
+  --pf-c-dropdown__toggle-button--Color: var(--pf-global--Color--100);
 
   // split buttons
   --pf-c-dropdown__toggle--m-split-button--child--PaddingTop: var(--pf-global--spacer--form-element);
@@ -39,7 +39,7 @@
   --pf-c-dropdown__toggle--m-split-button--child--BackgroundColor: transparent;
   --pf-c-dropdown__toggle--m-split-button--first-child--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--m-split-button--last-child--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle-m-split-button__toggle-check__input--Transform: translateY(#{pf-size-prem(-1px)});
+  --pf-c-dropdown__toggle--m-split-button__toggle-check__input--Transform: translateY(#{pf-size-prem(-1px)});
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
@@ -121,7 +121,7 @@
 
       /* stylelint-disable-next-line */
       input {
-        transform: var(--pf-c-dropdown__toggle-m-split-button__toggle-check__input--Transform);
+        transform: var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--Transform);
       }
     }
 
