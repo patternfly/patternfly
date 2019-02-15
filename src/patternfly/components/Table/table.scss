@@ -14,7 +14,6 @@
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
   --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-table__tr--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
@@ -134,10 +133,6 @@
     // for button height: 100% to work
     height: 1px;
     border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
-  }
-
-  tr {
-    background-color: var(--pf-c-table__tr--BackgroundColor);
   }
 
   // Table row
