@@ -13,6 +13,12 @@
       @content;
     }
   }
+
+  .pf-m-grid-xl.pf-c-table {
+    @media screen and (max-width: $pf-global--breakpoint--xl) {
+      @content;
+    }
+  }
 }
 
 .pf-c-table[class*="pf-m-grid"] {
@@ -60,6 +66,7 @@
   // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--responsive--MaxHeight: #{pf-size-prem(480px)};
   --pf-c-table__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Table check
@@ -165,14 +172,14 @@
     align-items: start;
 
     // @mobile, breakpoint small
-    @media screen and (min-width: $pf-global--breakpoint--mobile) {
+    @media screen and (min-width: $pf-global--breakpoint--xs) {
       grid-template-columns: 1fr 1.5fr;
       grid-column: 1;
     }
 
     // set contents of td to start at column two of td grid
     * {
-      @media screen and (min-width: $pf-global--breakpoint--mobile) {
+      @media screen and (min-width: $pf-global--breakpoint--xs) {
         grid-column: 2;
       }
     }
@@ -184,7 +191,7 @@
       text-align: left;
       content: attr(data-label);
 
-      @media screen and (min-width: $pf-global--breakpoint--mobile) {
+      @media screen and (min-width: $pf-global--breakpoint--xs) {
         font-weight: normal;
         // set ::before to span all rows, up to 100
         grid-row: 1;
@@ -308,12 +315,8 @@
 
   // Overflow scroll should only happen on responsive
   .pf-c-table__expandable-row-content {
-    max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
+    max-height: var(--pf-c-table__expandable-row-content--responsive--MaxHeight);
     overflow-y: auto;
-
-    > .pf-c-table {
-      background-color: var(--pf-c-table__expandable-row-content--BackgroundColor);
-    }
   }
 
   // Set defaults

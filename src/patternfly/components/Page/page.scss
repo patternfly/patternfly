@@ -82,23 +82,12 @@
   }
 
   // Main section
-  --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--md--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--2xl);
+  --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
-
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--md--PaddingTop);
-    --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--md--PaddingRight);
-    --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--md--PaddingBottom);
-    --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--md--PaddingLeft);
-  }
 
   // Main section horizontal nav
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);

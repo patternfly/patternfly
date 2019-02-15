@@ -66,7 +66,6 @@
   --pf-c-table__expandable-row-content--PaddingRight: 0;
   --pf-c-table__expandable-row-content--PaddingBottom: 0;
   --pf-c-table__expandable-row-content--PaddingLeft: 0;
-  --pf-c-table__expandable-row-content--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
   --pf-c-table__expandable-row-content--m-expanded--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--m-expanded--PaddingBottom: var(--pf-global--spacer--xl);
@@ -446,7 +445,6 @@
   // Tbody only
   tbody {
     --pf-c-table--BorderWidth: 0;
-    --pf-c-table--BorderColor: transparent;
 
     tr:first-child > * {
       --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
