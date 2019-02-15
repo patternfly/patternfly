@@ -7,9 +7,11 @@
 // Patternfly Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$pf-global--enable-font-overpass-cdn: false !default;
-$pf-global--load-pf-3: false !default;
 $pf-global--enable-reset: true !default;
+$pf-global--enable-font-overpass-cdn: false !default;
+$pf-global--enable-fontawesome-cdn: false !default;
+$pf-global--disable-fontawesome: false !default;
+$pf-global--load-pf-3: false !default;
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
