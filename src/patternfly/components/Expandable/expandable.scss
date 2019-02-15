@@ -6,6 +6,10 @@
   --pf-c-expandable__toggle--PaddingLeft: 0;
   --pf-c-expandable__toggle--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-expandable__toggle--Color: var(--pf-global--link--Color);
+  --pf-c-expandable__toggle--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-expandable__toggle--active--Color: var(--pf-global--link--Color--hover);
+  --pf-c-expandable__toggle--focus--Color: var(--pf-global--link--Color--hover);
+  --pf-c-expandable__toggle--m-expanded--Color: var(--pf-global--link--Color--hover);
 
   // Expandable Toggle Icon
   --pf-c-expandable__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -15,6 +19,10 @@
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--md);
 
   &.pf-m-expanded {
+    .pf-c-expandable__toggle {
+      color: var(--pf-c-expandable__toggle--m-expanded--Color);
+    }
+
     .pf-c-expandable__toggle-icon {
       transform: rotate(90deg);
     }
@@ -25,6 +33,21 @@
     font-weight: var(--pf-c-expandable__toggle--FontWeight);
     color: var(--pf-c-expandable__toggle--Color);
     border: none;
+
+    &:hover,
+    &.pf-m-hover {
+      --pf-c-expandable__toggle--Color: var(--pf-c-expandable__toggle--hover--Color);
+    }
+
+    &:active,
+    &.pf-m-active {
+      --pf-c-expandable__toggle--Color: var(--pf-c-expandable__toggle--active--Color);
+    }
+
+    &:focus,
+    &.pf-m-focus {
+      --pf-c-expandable__toggle--Color: var(--pf-c-expandable__toggle--focus--Color);
+    }
   }
 
   .pf-c-expandable__toggle-icon {
