@@ -15,8 +15,6 @@
   }
 }
 
-$pf-c-table-xs-breakpoint: 380px;
-
 .pf-c-table[class*="pf-m-grid"] {
   // ============================================================ //
   // Start non-conformant variables
@@ -167,14 +165,14 @@ $pf-c-table-xs-breakpoint: 380px;
     align-items: start;
 
     // @mobile, breakpoint small
-    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+    @media screen and (min-width: $pf-global--breakpoint--mobile) {
       grid-template-columns: 1fr 1.5fr;
       grid-column: 1;
     }
 
     // set contents of td to start at column two of td grid
     * {
-      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+      @media screen and (min-width: $pf-global--breakpoint--mobile) {
         grid-column: 2;
       }
     }
@@ -186,7 +184,7 @@ $pf-c-table-xs-breakpoint: 380px;
       text-align: left;
       content: attr(data-label);
 
-      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
+      @media screen and (min-width: $pf-global--breakpoint--mobile) {
         font-weight: normal;
         // set ::before to span all rows, up to 100
         grid-row: 1;
