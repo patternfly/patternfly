@@ -16,7 +16,6 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
 | `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable |
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus |
-| `aria-pressed="true"` | `button.pf-c-dropdown__menu-item` | **Select only** The attribute `aria-pressed="true"` should be set programmatically to the active item. Value should be false when not selected.|
 
 ## Usage
 
