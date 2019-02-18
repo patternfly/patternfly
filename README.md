@@ -58,6 +58,14 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 *To view visit http://localhost:8000/demos/<name>*
 
+## Guidelines for CSS Development
+
+- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged.
+- The UX/Visual designer and CSS developer of a component/enhancement should be involved in the review process throughout the life cycle of that component/enhancement.
+- If global variables are modified in Core, a React issue should be opened to address this.
+- CSS developers should ensure that animation is well docume ted and communicated to the respective Reacted developer.
+- CSS developers should communicate with the Sketch file lead about any design changes, so that it can be updated in the Sketch file.
+
 ## Testing for Accessibility
 
 PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf4.patternfly.org/accessibility-guide).
