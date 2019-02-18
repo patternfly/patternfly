@@ -99,6 +99,11 @@
     }
   }
 
+  // Remove the border from the body inside of the nested table
+  table.pf-m-compact > tbody {
+    border-top: 0;
+  }
+
   tr {
     &:not(.pf-c-table__expandable-row) {
       border-bottom-width: var(--pf-c-table-tr--responsive--BorderWidth);
