@@ -149,6 +149,12 @@
     }
   }
 
+  tr > * {
+    &.pf-m-center {
+      text-align: left;
+    }
+  }
+
   // Remove min-height on buttons
   td.pf-c-table__compound-expansion-toggle,
   th.pf-c-table__compound-expansion-toggle {
