@@ -195,6 +195,10 @@
     }
   }
 
+  &.pf-m-align-right {
+    text-align: right;
+  }
+
   &.pf-m-flex-2 { flex-grow: 2; }
   &.pf-m-flex-3 { flex-grow: 3; }
   &.pf-m-flex-4 { flex-grow: 4; }
