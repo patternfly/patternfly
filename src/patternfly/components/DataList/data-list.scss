@@ -95,6 +95,8 @@
     --pf-c-data-list__expandable-content--PaddingLeft: var(--pf-c-data-list__expandable-content--mobile--PaddingLeft);
   }
 
+  @include pf-t-light;
+
   list-style-type: disc;
   background-color: var(--pf-c-data-list--BackgroundColor);
   border-top: var(--pf-c-data-list--BorderTopWidth) solid var(--pf-c-data-list--BorderTopColor);
@@ -197,6 +199,10 @@
 
   &.pf-m-align-right {
     text-align: right;
+
+    @media screen and (max-width: $pf-global--breakpoint--md) {
+      text-align: left;
+    }
   }
 
   &.pf-m-flex-2 { flex-grow: 2; }
