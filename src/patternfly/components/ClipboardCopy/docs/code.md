@@ -4,7 +4,9 @@
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-c-clipboard-copy__group-toggle`,`.pf-c-clipboard-copy__group-copy` |  Provides an accessible name for the button when an icon is used instead of text. **Required when an icon is used with no supporting text.** |
+| `aria-label="Show Contents"` | `.pf-c-clipboard-copy__group-toggle` |  Provides an accessible name for the button when an icon is used instead of text. **Required when an icon is used with no supporting text.** |
+| `aria-label="Copy to Clipboard"` | `.pf-c-clipboard-copy__group-copy` |  Provides an accessible name for the button when an icon is used instead of text. **Required when an icon is used with no supporting text.** |
+| `aria-label="[input label text]"` | `.pf-c-form-control` | Provides an accessible label for the input. Provide a label that describes the contents in the input. **Required** |
 | `aria-hidden="true"` | `<i>` |  Hides the icon from assistive technologies. 
 | `aria-controls="[id of expandable element]"` | `.pf-c-clipboard-copy__group-toggle` | Identifies the element controlled by the toggle button. **Required** |
 | `aria-expanded="true"` | `.pf-c-clipboard-copy__group-toggle` | Indicates that the expandable content is visible. |

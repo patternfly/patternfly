@@ -3,12 +3,11 @@
     {{{clipboard-copy-group-toggle--attribute}}}
   {{/if}}
   {{#if clipboard-copy--IsExpanded}}
-    aria-label="Show Less"
     aria-expanded="true"
   {{else}}
-    aria-label="Show More"
     aria-expanded="false"
   {{/if}}
+    aria-label="Show Content"
   >
   {{> @partial-block}}
     <i class="fas fa-angle-right pf-c-clipboard-copy__group-toggle-icon" aria-hidden="true"></i>
