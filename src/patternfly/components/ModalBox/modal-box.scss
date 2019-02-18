@@ -16,7 +16,7 @@
 
   // Body
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
-  --pf-c-modal-box--c-title--body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-modal-box--c-title--body--MarginTop: var(--pf-global--spacer--lg);
 
   // Close
   --pf-c-modal-box--c-button--Top: calc(var(--pf-c-modal-box--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
@@ -77,7 +77,7 @@
     white-space: nowrap;
 
     + .pf-c-modal-box__body {
-      padding-top: var(--pf-c-modal-box--c-title--body--PaddingTop);
+      margin-top: var(--pf-c-modal-box--c-title--body--MarginTop);
     }
   }
 }
