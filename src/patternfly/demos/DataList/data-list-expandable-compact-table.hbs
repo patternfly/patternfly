@@ -1,0 +1,100 @@
+{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-lg" table--attribute='aria-label="This is a compact table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Commit Number
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Description
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Date
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Contributor
+      {{/table-th}}
+      {{#> table-th}}{{/table-th}}
+      {{#> table-th}}{{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="name1">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Commit Number"}}
+        001
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Description"}}
+        Commit One
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Date"}}
+        February 18, 2019
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Contributor"}}
+        Kyle Baker
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 1</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-8" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="name1">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Commit Number"}}
+        002
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Description"}}
+        Commit Two
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Date"}}
+        February 03, 2019
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Contributor"}}
+        Michael Celedonia
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 2</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id="dropdown-example-right-aligned-9" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+           {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="name1">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Commit Number"}}
+        003
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Description"}}
+        Commit Three
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Date"}}
+        February 21, 2019
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Contributor"}}
+        Gina Doyle
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 3</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-10" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
