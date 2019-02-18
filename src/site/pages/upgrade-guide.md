@@ -9,7 +9,7 @@ Use the following steps to upgrade from PatternFly 3 to PatternFly 4.
 - **Do you know what your build process is?**
   - Steps and requirements differ for basic HTML, Gulp, and Webpack, so be prepared with that information going in.
 - **Do you need to run PatternFly 3 and PatternFly 4 together?**
-  - If the answer is yes, use the following steps to update your configuration in the `src/patternfly/utilities/variables.scss` file to state `false`:
+  - If the answer is yes, use the following steps to update your configuration in the `src/patternfly/sass-utilities/scss-variables.scss` file to state `false`:
 
 ```scss
 $pf-global--enable-reset: false !default;
@@ -175,8 +175,8 @@ Overpass can be utilized in two different ways:
 1. Built into PatternFly 4
     - By default, we include Overpass as part of the PatternFly 4 distributed CSS file. You do not need to do anything with your configuration to use this new font family.
 1. Used as a CDN
-    - If you wish to use the CDN for Overpass rather than the default approach, you will need to update the `utilities/variables.scss` file and build PatternFly 4 as part of your build process.
-    - To use the CDN vs the standard build, update the `utilities/variables.scss` file as follows:
+    - If you wish to use the CDN for Overpass rather than the default approach, you will need to update the `sass-utilities/scss-variables.scss` file and build PatternFly 4 as part of your build process.
+    - To use the CDN vs the standard build, update the `sass-utilities/scss-variables.scss` file as follows:
 
 ```scss
   $pf-global--enable-font-overpass-cdn: true !default;
@@ -196,7 +196,7 @@ Font Awesome 5 is now part of PatternFly 4, and we give you options for utilizin
 
 As part of PatternFly 4, we give users the option to either use Font Awesome 5 as an included set (prebuilt into the CSS), or as a CDN reference.
 
-If you wish to use the CDN, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`) and update the `utilities/variables.scss` file as follows:
+If you wish to use the CDN, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`) and update the `sass-utilities/scss-variables.scss` file as follows:
 
 ```scss
 $pf-global--enable-fontawesome-cdn: true !default;
@@ -211,7 +211,7 @@ If you are currently using Font Awesome 4 and just want to use Font Awesome 5 im
 <script defer src="https://use.fontawesome.com/releases/[VERSION]/js/v4-shims.js"></script>
 ```
 
-This replaces the bundled Font Awesome 5 files in PatternFly 4, so your configuration file (`utilities/variables.scss`) will need to be updated to remove Font Awesome 5.
+This replaces the bundled Font Awesome 5 files in PatternFly 4, so your configuration file (`sass-utilities/scss-variables.scss`) will need to be updated to remove Font Awesome 5.
 
 ```scss
 $pf-global--disable-fontawesome: true !default;
@@ -219,9 +219,9 @@ $pf-global--disable-fontawesome: true !default;
 
 #### Font Awesome 5 Tree Shaking
 
-Additionally, Font Awesome 5 now provides the option for [tree shaking](https://fontawesome.com/how-to-use/use-with-node-js#tree-shaking). In order to utilize this option, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`), and update the `utilities/variables.scss` file accordingly.
+Additionally, Font Awesome 5 now provides the option for [tree shaking](https://fontawesome.com/how-to-use/use-with-node-js#tree-shaking). In order to utilize this option, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`), and update the `sass-utilities/scss-variables.scss` file accordingly.
 
-The updated `variables.scss` file should look as follows:
+The updated `scss-variables.scss` file should look as follows:
 
 ```scss
 $pf-global--disable-fontawesome: true !default;
