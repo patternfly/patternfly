@@ -18,4 +18,5 @@
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-m-expanded`                          | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
+| `.pf-c-table__expandable-row-table` | `.pf-c-table__expandable-row` > `<td>` > `<div>`  | Initiates an expandable row content wrapper. |
 | `.pf-c-table__compound-expansion-toggle`  | `<td>` | Modifies a `<td>` on active/focus. |
