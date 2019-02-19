@@ -1,0 +1,21 @@
+<ul class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
+  aria-labelledby="{{id}}-button"
+  {{#unless dropdown--IsExpanded}}hidden{{/unless}}
+  {{#if dropdown-menu--attribute}}
+	  {{{dropdown-menu--attribute}}}
+  {{/if}}>
+  <li>
+    <div class="pf-c-dropdown__group-title">App</div>
+    <ul>
+      <li><a href="#" class="pf-c-dropdown__menu-item">Configuration</a></li>
+      <li><a href="#" class="pf-c-dropdown__menu-item">Stats</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="pf-c-dropdown__group-title">User</div>
+    <ul>
+      <li><a href="#" class="pf-c-dropdown__menu-item">Profile</a></li>
+      <li><a href="#" class="pf-c-dropdown__menu-item">Privacy</a></li>
+    </ul>
+  </li>
+</ul>

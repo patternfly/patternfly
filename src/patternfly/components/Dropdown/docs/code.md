@@ -21,7 +21,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |
+| `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown |
 | `.pf-c-dropdown__toggle` | `<button>` | Defines the dropdown toggle |
 | `.pf-c-dropdown__toggle-icon` | `<i>` | Defines the dropdown toggle icon |
 | `.pf-c-dropdown__toggle-text` | `<span>` | Defines the dropdown toggle text. ** Required when text is present, adds truncation ** |
@@ -31,6 +31,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page |
 | `.pf-c-dropdown__separator` | `<div>` | Defines a separator within the menu |
+| `.pf-c-dropdown__group-title` | `<div>` | Defines the title for a group of items in the dropdown menu |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state |
 | `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle |
 | `.pf-m-align-right` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle |
