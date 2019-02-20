@@ -69,7 +69,7 @@ export default () => {
       <Example className="is-expanded-dropdown" heading="Split Button" handlebars={DropdownSplitButtonRaw}>
         {dropdownSplitButton}
       </Example>
-      <Example minHeight="22em" heading="Dropdown with Groups" handlebars={DropdownGroupsRaw}>
+      <Example minHeight="25em" heading="Dropdown with Groups" handlebars={DropdownGroupsRaw}>
         {dropdownGroups}
       </Example>
     </Documentation>
