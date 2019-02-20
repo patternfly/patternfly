@@ -63,8 +63,8 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 - For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged.
 - The UX/Visual designer and CSS developer of a component/enhancement should be involved in the review process throughout the life cycle of that component/enhancement.
 - If global variables are modified in Core, a React issue should be opened to address this.
-- CSS developers should ensure that animation is well docume ted and communicated to the respective Reacted developer.
-- CSS developers should communicate with the Sketch file lead about any design changes, so that it can be updated in the Sketch file.
+- CSS developers should ensure that animation is well documented and communicated to the respective React developer.
+- CSS developers should communicate any design changes back to the design team, so that the changes can be updated in the master Sketch file.
 
 ## Testing for Accessibility
 
