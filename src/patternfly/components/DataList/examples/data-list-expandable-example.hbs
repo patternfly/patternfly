@@ -1,7 +1,7 @@
 {{#> data-list data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item1"'}}
     {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-1"'}}{{/data-list-toggle}}
-    {{#> data-list-check checkbox--attribute='name="ex-check1" aria-labelledby="ex-item1"'}}{{/data-list-check}}
+    {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
     {{#> data-list-cell}}
       <div id="ex-item1">Primary content</div>
       <a href="#">link</a>
@@ -17,16 +17,15 @@
 
   {{#> data-list-item data-list-item--attribute='aria-labelledby="ex-item2"'}}
     {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-2"'}}{{/data-list-toggle}}
-    {{#> data-list-check checkbox--attribute='name="ex-check2" aria-labelledby="ex-item2"'}}{{/data-list-check}}
-    {{#> data-list-icon data-list-icon--type="box"}}{{/data-list-icon}}
+    {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
     {{#> data-list-cell}}
-      <div id="ex-item2">Primary content</div>
+      <div id="ex-item2">Secondary content</div>
     {{/data-list-cell}}
     {{#> data-list-cell}}
       <span>Lorem ipsum dolor sit amet.</span>
     {{/data-list-cell}}
     {{#> data-list-action id="dropdown-kebab-right-action-4"}}{{/data-list-action}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Primary Content Details"'}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Secondary Content Details"'}}
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     {{/data-list-expandable-content}}
   {{/data-list-item}}
