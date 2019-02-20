@@ -6,6 +6,8 @@
 <br>
 <mark>**All checkbox/action button accessibility and usage requirements apply.**</mark>
 
+Note: To apply padding to `.pf-c-table__expandable-row` wrap the content in `.pf-c-table__expandable-row-content`. 
+
 ### Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
