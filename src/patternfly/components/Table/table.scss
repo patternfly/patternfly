@@ -373,6 +373,7 @@
   // no padding on standard td
   td:only-child {
     padding: 0;
+    padding-left: var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
   }
 
   .pf-c-table__expandable-row-content {
