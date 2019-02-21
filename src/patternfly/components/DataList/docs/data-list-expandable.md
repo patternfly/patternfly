@@ -19,4 +19,5 @@
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list__toggle`         | `<div>`               | Initiates a toggle button. |
+| `.pf-c-data-list__icon`  | `<i>` | Initiates a toggle icon. |
 | `.pf-m-expanded`                  | `.pf-c-table__item`   | Modifies for expanded state. |
