@@ -1,6 +1,6 @@
 {{#> background-image}}
 {{/background-image}}
-{{#> page page--id="page-layout-data-list-actionable"}}
+{{#> page page--id="page-layout-data-table-sortable"}}
   {{#> page-header}}
     {{> data-table-page-header}}
   {{/page-header}}
@@ -20,7 +20,7 @@
     {{/page-main-section}}
     {{#> page-main-section}}
       {{#> card}}
-        {{> data-table-toolbar}}
+        {{> data-table-toolbar-no-sort}}
         {{> data-table-sortable-table}}
         {{> data-table-pagination}}
       {{/card}}
