@@ -58,14 +58,6 @@ $pf-data-list--breakpoint--mobile: 380px;
     --pf-c-data-list__check--MarginRight: var(--pf-c-data-list__check--mobile--MarginRight);
   }
 
-  // Icon
-  --pf-c-data-list__icon--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-data-list__icon--mobile--MarginRight: var(--pf-global--spacer--md);
-
-  @media screen and (max-width: $pf-data-list--breakpoint--mobile) {
-    --pf-c-data-list__icon--MarginRight: var(--pf-c-data-list__icon--mobile--MarginRight);
-  }
-
   // Actions
   --pf-c-data-list__action--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-data-list__action--mobile--MarginLeft: var(--pf-global--spacer--sm);
@@ -143,7 +135,6 @@ $pf-data-list--breakpoint--mobile: 380px;
 // non-textual items
 .pf-c-data-list__toggle,
 .pf-c-data-list__check,
-.pf-c-data-list__icon,
 .pf-c-data-list__action {
   flex: none;
 }
@@ -167,11 +158,8 @@ $pf-data-list--breakpoint--mobile: 380px;
 
 // Checkbox
 .pf-c-data-list__check {
+  display: flex;
   margin-right: var(--pf-c-data-list__check--MarginRight);
-}
-
-.pf-c-data-list__icon {
-  margin-right: var(--pf-c-data-list__icon--MarginRight);
 }
 
 // Content cells
