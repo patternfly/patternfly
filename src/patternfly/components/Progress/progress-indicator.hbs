@@ -1,5 +1,5 @@
 <div class="pf-c-progress__indicator{{#if progress-indicator--modifier}} {{progress-indicator--modifier}}{{/if}}" 
-  style="width: {{progress__value}}%;"
+style="width: {{~#if progress__width}}{{progress__width}}{{else}}{{progress__value}}{{/if}}%;"
   {{#if progress-indicator--attribute}}
     {{{progress-indicator--attribute}}}
   {{/if}}>

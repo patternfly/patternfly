@@ -1,1 +1,1 @@
-If the description is updated dynamically, then the ARIA tag `aria-valuetext` should be used to provide this dynamic description. (And then `aria-describedby` is no longer used.)
+If the description is updated dynamically, then the ARIA tag `aria-valuetext` should be used to provide this dynamic description.

@@ -11,7 +11,7 @@ Note: If this component is describing the loading progress of a particular regio
 | `aria-valuemin="0"` | `.pf-c-progress` |  The minimum value for the progress bar. |
 | `aria-valuemax="100"` | `.pf-c-progress` |  The maximum value for the progress bar. |
 | `aria-describedby="[id of .pf-c-progress__description]"` | `.pf-c-progress` |  The description of what progress is being shown. |
-| `aria-valuetext="[loading state]"` | `.pf-c-progress` |  Text that explains the current state of the progress (used in place of aria-describedby only when the text is updated dynamically as progress proceeds). |
+| `aria-valuetext="[loading state]"` | `.pf-c-progress` |  Provide a text string that communicates current status. Only use if the important information about status is included in the text string. Do no use if percentage is the most important value to communicate. Some screen readers will ignore the percentage value determined from `aria-valuenow` when `aria-valuetext` is used. |
 
 
 ## Usage

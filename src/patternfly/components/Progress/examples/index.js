@@ -13,6 +13,8 @@ import progressInsideSuccessExampleRaw from '!raw!./progress-inside-success-exam
 import progressOutsideFailureExampleRaw from '!raw!./progress-outside-failure-example.hbs';
 import progressNoMeasureExampleRaw from '!raw!./progress-no-measure-example.hbs';
 import progressNoMeasureFailureExampleRaw from '!raw!./progress-no-measure-failure-example.hbs';
+import progressStepIntegerExampleRaw from '!raw!./progress-step-integer-example.hbs';
+import progressStepInstructionExampleRaw from '!raw!./progress-step-instruction-example.hbs';
 import progressDynamicExampleRaw from '!raw!./progress-dynamic-example.hbs';
 import ProgressSimpleExample from './progress-simple-example.hbs';
 import ProgressSingleLineExample from './progress-single-line-example.hbs';
@@ -26,6 +28,8 @@ import ProgressInsideSuccessExample from './progress-inside-success-example.hbs'
 import ProgressOutsideFailureExample from './progress-outside-failure-example.hbs';
 import ProgressNoMeasureExample from './progress-no-measure-example.hbs';
 import ProgressNoMeasureFailureExample from './progress-no-measure-failure-example.hbs';
+import ProgressStepIntegerExample from './progress-step-integer-example.hbs';
+import ProgressStepInstructionExample from './progress-step-instruction-example.hbs';
 import ProgressDynamicExample from './progress-dynamic-example.hbs';
 import progressDynamicExampleDoc from '../docs/progress-dynamic.md';
 import docs from '../docs/code.md';
@@ -45,6 +49,8 @@ export default () => {
   const progressOutsideFailureExample = ProgressOutsideFailureExample();
   const progressNoMeasureExample = ProgressNoMeasureExample();
   const progressNoMeasureFailureExample = ProgressNoMeasureFailureExample();
+  const progressStepIntegerExample = ProgressStepIntegerExample();
+  const progressStepInstructionExample = ProgressStepInstructionExample();
   const progressDynamicExample = ProgressDynamicExample();
   const headingText = 'Progress';
 
@@ -86,6 +92,23 @@ export default () => {
       <Example heading="Progress Failure Without Measure" handlebars={progressNoMeasureFailureExampleRaw}>
         {progressNoMeasureFailureExample}
       </Example>
+
+      <Example
+        heading="Progress Step Integer"
+        handlebars={progressStepIntegerExampleRaw}
+        docs={progressDynamicExampleDoc}
+      >
+        {progressStepIntegerExample}
+      </Example>
+
+      <Example
+        heading="Progress Step Instruction"
+        handlebars={progressStepInstructionExampleRaw}
+        docs={progressDynamicExampleDoc}
+      >
+        {progressStepInstructionExample}
+      </Example>
+
       <Example
         heading="Progress with Dynamic Description"
         handlebars={progressDynamicExampleRaw}
