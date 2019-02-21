@@ -60,11 +60,10 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 ## Guidelines for CSS Development
 
-- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged.
-- The UX/Visual designer and CSS developer of a component/enhancement should be involved in the review process throughout the life cycle of that component/enhancement.
+- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://pf4.patternfly.org, and information detailing the change.
 - If global variables are modified in Core, a React issue should be opened to address this.
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
-- CSS developers should communicate any design changes back to the design team, so that the changes can be updated in the master Sketch file.
+- Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
 ## Testing for Accessibility
 
