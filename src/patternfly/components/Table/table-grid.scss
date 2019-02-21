@@ -280,6 +280,8 @@ $pf-c-table-xs-breakpoint: 380px;
     --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingLeft);
 
     display: block;
+    max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
+    overflow-y: auto;
     border-bottom: none;
     box-shadow: none;
 
@@ -298,12 +300,10 @@ $pf-c-table-xs-breakpoint: 380px;
       // Border treatment
       display: none;
     }
-  }
 
-  // Overflow scroll should only happen on responsive
-  .pf-c-table__expandable-row-content {
-    max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
-    overflow-y: auto;
+    &:not(.pf-m-expanded) {
+      display: none;
+    }
   }
 
   // Set defaults
