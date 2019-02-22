@@ -1,6 +1,5 @@
 .pf-c-popover {
   // Component
-  --pf-c-popover--Width: 100%;
   --pf-c-popover--m-sm--MaxWidth: #{pf-size-prem(300px)};
   --pf-c-popover--m-lg--MaxWidth: #{pf-size-prem(540px)};
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -35,7 +34,7 @@
   --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--lg);
 
   position: relative;
-  width: var(--pf-c-popover--Width);
+  display: inline-block;
   box-shadow: var(--pf-c-popover--BoxShadow);
 
   &.pf-m-top {
