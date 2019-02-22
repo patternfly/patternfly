@@ -1,18 +1,18 @@
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsExpanded="true" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-expanded-example-button"}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id="toolbar-expanded-split-button-dropdown-expanded-example-check" aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="toolbar-expanded-split-button-dropdown-expanded-example-button"  aria-label="Select"}}
+{{#> toolbar toolbar--id="toolbar-expanded-example"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsExpanded="true" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
+    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" aria-label="Filter results"}}
     {{> button-icon button-icon--type="filter"}}
   {{/button}}
   {{#> toolbar-filter}}
-    {{#> select id="toolbar-expanded-select-checkbox" select--IsCheckboxSelect="true"}}
+    {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id="toolbar-expanded-options-menu-example" options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort" options-menu--IsExpanded="true"}}
+  {{#> options-menu id=(concat toolbar--id '-options-menu') options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort" options-menu--IsExpanded="true"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -26,14 +26,14 @@
       secondary
     {{/button}}
   {{/toolbar-action-group}}
-  {{#> dropdown id="toolbar-expanded-dropdown-simple-example-collapsed3" dropdown--IsBasicActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
+  {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--IsBasicActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
   {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-c-toolbar__pagination"}}
     {{#> pagination-total-items}}
       37 Items
     {{/pagination-total-items}}
 
-    {{#> options-menu id="toolbar-expanded-pagination-options-menu-top-example" options-menu--IsExpanded="true" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--IsExpanded="true" options-menu--label-text="Items per page" options-menu--IsText="true"}}
       {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
         <span class="pf-c-options-menu__toggle-text">
           <b>1 - 10</b> of <b>37</b> Items
