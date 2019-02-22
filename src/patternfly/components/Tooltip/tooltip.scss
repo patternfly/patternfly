@@ -1,6 +1,6 @@
 .pf-c-tooltip {
   // Component variables
-  --pf-c-tooltip--MaxWidth: #{pf-size-prem(200px)};
+  --pf-c-tooltip--MaxWidth: #{pf-size-prem(540px)};
 
   // Content variables
   --pf-c-tooltip__content--PaddingTop: var(--pf-global--spacer--md);
@@ -20,6 +20,7 @@
   --pf-c-tooltip__arrow--m-left--Transform: translate(50%, -50%) rotate(45deg);
 
   position: relative;
+  display: inline-block;
   max-width: var(--pf-c-tooltip--MaxWidth);
 
   &.pf-m-top {
@@ -57,6 +58,7 @@
 
 .pf-c-tooltip__content {
   position: relative;
+  width: 100%;
   padding: var(--pf-c-tooltip__content--PaddingTop) var(--pf-c-tooltip__content--PaddingRight) var(--pf-c-tooltip__content--PaddingBottom) var(--pf-c-tooltip__content--PaddingLeft);
   font-size: var(--pf-c-tooltip__content--FontSize);
   color: var(--pf-c-tooltip__content--Color);

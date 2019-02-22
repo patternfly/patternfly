@@ -6,11 +6,13 @@ import TooltipTopExampleRaw from '!raw!./tooltip-top-example.hbs';
 import TooltipRightExampleRaw from '!raw!./tooltip-right-example.hbs';
 import TooltipBottomExampleRaw from '!raw!./tooltip-bottom-example.hbs';
 import TooltipLeftExampleRaw from '!raw!./tooltip-left-example.hbs';
+import TooltipLargeExampleRaw from '!raw!./tooltip-large-example.hbs';
 
 import TooltipTopExample from './tooltip-top-example.hbs';
 import TooltipRightExample from './tooltip-right-example.hbs';
 import TooltipBottomExample from './tooltip-bottom-example.hbs';
 import TooltipLeftExample from './tooltip-left-example.hbs';
+import TooltipLargeExample from './tooltip-large-example.hbs';
 
 import docs from '../docs/code.md';
 
@@ -21,6 +23,7 @@ export default () => {
   const tooltipRightExample = TooltipRightExample();
   const tooltipBottomExample = TooltipBottomExample();
   const tooltipLeftExample = TooltipLeftExample();
+  const tooltipLargeExample = TooltipLargeExample();
   const headingText = 'Tooltip';
 
   return (
@@ -36,6 +39,9 @@ export default () => {
       </Example>
       <Example className="is-tooltip" heading="Tooltip Left" handlebars={TooltipLeftExampleRaw}>
         {tooltipLeftExample}
+      </Example>
+      <Example className="is-tooltip" heading="Tooltip Large" handlebars={TooltipLargeExampleRaw}>
+        {tooltipLargeExample}
       </Example>
     </Documentation>
   );
