@@ -1,7 +1,8 @@
 .pf-c-popover {
   // Component
-  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(100px)});
-  --pf-c-popover--MaxWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(300px)});
+  --pf-c-popover--Width: 100%;
+  --pf-c-popover--m-sm--MaxWidth: #{pf-size-prem(300px)};
+  --pf-c-popover--m-lg--MaxWidth: #{pf-size-prem(600px)};
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Content
@@ -34,9 +35,16 @@
   --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--lg);
 
   position: relative;
-  min-width: var(--pf-c-popover--MinWidth);
-  max-width: var(--pf-c-popover--MaxWidth);
+  width: var(--pf-c-popover--Width);
   box-shadow: var(--pf-c-popover--BoxShadow);
+
+  &.pf-m-sm {
+    max-width: var(--pf-c-popover--m-sm--MaxWidth);
+  }
+
+  &.pf-m-lg {
+    max-width: var(--pf-c-popover--m-lg--MaxWidth);
+  }
 
   &.pf-m-top {
     .pf-c-popover__arrow {
