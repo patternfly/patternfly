@@ -5,7 +5,14 @@
   --pf-c-background-image--BackgroundImage--sm: url("#{$pf-global--image-path}/pfbg_768.jpg");
   --pf-c-background-image--BackgroundImage--sm-2x: url("#{$pf-global--image-path}/pfbg_768@2x.jpg");
   --pf-c-background-image--BackgroundImage--lg: url("#{$pf-global--image-path}/pfbg_2000.jpg");
-  --pf-c-background-image--Filter: url("#image_overlay");
+
+  // This moves the background filter SVG to the scss.
+  // However, in Safari, although the filter shows as there, it is not being applied.
+  // This works in Chrome and FF.
+  --pf-c-background-image--Filter:
+    url(
+      'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="pf-c-background-image__filter" width="0" height="0"><filter id="image_overlay" width=""><feColorMatrix type="matrix" values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0"/><feComponentTransfer color-interpolation-filters="sRGB" result="duotone"><feFuncR type="table" tableValues="0.086274509803922 0.43921568627451"/><feFuncG type="table" tableValues="0.086274509803922 0.43921568627451"/><feFuncB type="table" tableValues="0.086274509803922 0.43921568627451"/><feFuncA type="table" tableValues="0 1"/></feComponentTransfer></filter></svg>#image_overlay'
+    );
 
   &::before {
     position: fixed;
