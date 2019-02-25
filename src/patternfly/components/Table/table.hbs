@@ -4,6 +4,12 @@
   {{/if}}
   {{#if table--attribute}}
     {{{table--attribute}}}
+  {{/if}}
+  {{#if table-nested--attribute}}
+    {{{table-nested--attribute}}}
+  {{/if}}
+  {{#if table--id}}
+    id="{{{table--id}}}"
   {{/if}}>
   {{> @partial-block}}
 </table>
