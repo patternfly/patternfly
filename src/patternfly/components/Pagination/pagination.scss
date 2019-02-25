@@ -32,6 +32,10 @@
     white-space: nowrap;
   }
 
+  &.pf-m-footer {
+    margin-left: auto;
+  }
+
   > *:not(:last-child):not(.pf-c-pagination__total-items) {
     margin-right: var(--pf-c-pagination--child--MarginRight);
   }
@@ -46,10 +50,6 @@
         display: flex;
       }
     }
-  }
-
-  &.pf-m-footer {
-    padding: var(--pf-c-pagination--m-footer--PaddingTop) var(--pf-c-pagination--m-footer--PaddingRight) var(--pf-c-pagination--m-footer--PaddingBottom) var(--pf-c-pagination--m-footer--PaddingLeft);
   }
 }
 
