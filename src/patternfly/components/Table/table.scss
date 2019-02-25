@@ -455,6 +455,10 @@
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
   }
 
+  .pf-c-table__check {
+    vertical-align: middle;
+  }
+
   // nested tables
   .pf-c-table & tr > * {
     &:first-child {
