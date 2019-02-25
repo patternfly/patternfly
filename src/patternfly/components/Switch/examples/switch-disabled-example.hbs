@@ -1,12 +1,14 @@
 {{#> switch switch--attribute='for="on-disabled"'}}
   {{#> switch-input id="on-disabled" switch-input--attribute='name="switchExample1" disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--attribute='aria-hidden="true"'}}{{/switch-label}}
+  {{#> switch-label switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
 {{/switch}}
 <br/>
 <br/>
 {{#> switch switch--attribute='for="off-disabled"'}}
   {{#> switch-input id="off-disabled" switch-input--attribute='name="switchExample2" disabled'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--attribute='aria-hidden="true"'}}{{/switch-label}}
+  {{#> switch-label switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
 {{/switch}}

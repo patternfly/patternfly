@@ -53,10 +53,6 @@
     &:checked {
       ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--checked__label--Color);
-
-        &::before {
-          content: "On";
-        }
       }
 
       ~ .pf-c-switch__toggle {
@@ -66,15 +62,15 @@
           transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
         }
       }
+
+      ~ .pf-m-off {
+        display: none;
+      }
     }
 
     &:not(:checked) {
       ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--not-checked__label--Color);
-
-        &::before {
-          content: "Off";
-        }
       }
 
       ~ .pf-c-switch__toggle {
@@ -82,6 +78,10 @@
           display: none;
           visibility: hidden;
         }
+      }
+
+      ~ .pf-m-on {
+        display: none;
       }
     }
 
