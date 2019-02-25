@@ -30,5 +30,3 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-m-right` | `.pf-c-popover` | Positions the popover to the right of the element. |
 | `.pf-m-top` | `.pf-c-popover` | Positions the popover to the top of the element. |
 | `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. |
-| `.pf-m-sm` | `.pf-c-popover` | Modifies the width of the popover to be small. |
-| `.pf-m-lg` | `.pf-c-popover` | Modifies the width of the popover to be large. |
