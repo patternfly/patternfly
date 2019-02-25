@@ -3,6 +3,9 @@
     id="{{id}}-button"
     aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
   {{/unless}}
+  {{#if dropdown-toggle-disabled}}
+    disabled="{{dropdown-toggle-disabled}}"
+  {{/if}}
   {{#if aria-label}}
     aria-label="{{aria-label}}"
   {{/if}}>
