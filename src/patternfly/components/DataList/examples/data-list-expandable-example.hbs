@@ -10,9 +10,11 @@
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
     {{/data-list-cell}}
     {{#> data-list-action id="dropdown-kebab-right-action-3"}}{{/data-list-action}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-1" aria-label="Primary Content Details"'}}
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    {{/data-list-expandable-content}}
+    {{#> data-list-expandable-row data-list-expandable-row--attribute='id="content-1" aria-label="Primary Content Details"'}}
+      {{#> data-list-expandable-row-content}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-row-content}}
+    {{/data-list-expandable-row}}
   {{/data-list-item}}
 
   {{#> data-list-item data-list-item--attribute='aria-labelledby="ex-item2"'}}
@@ -25,8 +27,10 @@
       <span>Lorem ipsum dolor sit amet.</span>
     {{/data-list-cell}}
     {{#> data-list-action id="dropdown-kebab-right-action-4"}}{{/data-list-action}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Secondary Content Details"'}}
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    {{/data-list-expandable-content}}
+    {{#> data-list-expandable-row data-list-expandable-row--attribute='id="content-2" aria-label="Secondary Content Details"'}}
+      {{#> data-list-expandable-row-content}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-row-content}}    
+    {{/data-list-expandable-row}}
   {{/data-list-item}}
 {{/data-list}}
