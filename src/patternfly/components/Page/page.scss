@@ -67,8 +67,8 @@
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-page__sidebar--Width: 80%;
   --pf-c-page__sidebar--md--Width: #{pf-size-prem(290px)};
-  --pf-c-page__sidebar--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__sidebar--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar--child--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar--child--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
@@ -257,8 +257,6 @@
   grid-column-start: 1;
   z-index: var(--pf-c-page__sidebar--ZIndex);
   width: var(--pf-c-page__sidebar--Width);
-  padding-top: var(--pf-c-page__sidebar--PaddingTop);
-  padding-bottom: var(--pf-c-page__sidebar--PaddingBottom);
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -270,6 +268,11 @@
     flex: 1;
     max-width: var(--pf-c-page__sidebar--md--Width); // max-width value set for browser to calculate max-width while transitioning. sharing value to keep consistent
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
+  }
+
+  & > * {
+    padding-top: var(--pf-c-page__sidebar--child--PaddingTop);
+    padding-bottom: var(--pf-c-page__sidebar--child--PaddingBottom);
   }
 
   // Mobile
