@@ -6,7 +6,7 @@
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is hidden. **Required**|
-| `aria-expanded="true"` | `.pf-c-accordion__toggle`, `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is visible. **Required**|
+| `aria-expanded="true"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is visible. **Required**|
 | `hidden` | `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-c-accordion__toggle-icon` | Hides the icon from assistive technologies.**Required** |
 
