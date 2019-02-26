@@ -20,7 +20,6 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-pagination` | `<div>` |  Initiates pagination. |
-| `.pf-c-pagination__items` | `<div>` | Initiates pagination items. |
 | `.pf-c-pagination__current` | `<div>` |  Initiates element to display currently displayed items for use in responsive view. Only needed for default pagination, not `.pf-m-footer`. |
 | `.pf-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
