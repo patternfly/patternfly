@@ -422,6 +422,17 @@ html {
   }
 }
 
+.is-height-flex-column-grow {
+  .Preview__body {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      flex-grow: 1;
+    }
+  }
+}
+
 // .pf-c-form__fieldset + .pf-c-form__fieldset,
 // .pf-c-form__group + .pf-c-form__group {
 //   margin-top: 1rem;
