@@ -1,23 +1,21 @@
-<ul class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
+<div class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
   aria-labelledby="{{id}}-button"
   {{#unless dropdown--IsExpanded}}hidden{{/unless}}
   {{#if dropdown-menu--attribute}}
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
-  <li><a class="pf-c-dropdown__menu-item" href="#">Link</a></li>
-  <li><button class="pf-c-dropdown__menu-item">Action</button></li>
-  <li>
-    <div class="pf-c-dropdown__group-title">Group 1</div>
+  <section class="pf-c-dropdown__group">
+    <h1 class="pf-c-dropdown__group-title">Group 1</h1>
     <ul>
-      <li><a class="pf-c-dropdown__menu-item" href="#">Link</a></li>
-      <li><button class="pf-c-dropdown__menu-item">Action</button></li>
+        <li><a class="pf-c-dropdown__menu-item" href="#">Group 1 Link</a></li>
+        <li><button class="pf-c-dropdown__menu-item">Group 1 Action</button></li>
     </ul>
-  </li>
-  <li>
-    <div class="pf-c-dropdown__group-title">Group 2</div>
+  </section>
+  <section class="pf-c-dropdown__group">
+    <h1 class="pf-c-dropdown__group-title">Group 2</h1>
     <ul>
-      <li><a class="pf-c-dropdown__menu-item" href="#">Link</a></li>
-      <li><button class="pf-c-dropdown__menu-item">Action</button></li>
+        <li><a class="pf-c-dropdown__menu-item" href="#">Group 2 Link</a></li>
+        <li><button class="pf-c-dropdown__menu-item">Group 2 Action</button></li>
     </ul>
-  </li>
-</ul>
+  </section>
+</div>
