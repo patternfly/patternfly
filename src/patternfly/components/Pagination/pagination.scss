@@ -34,7 +34,6 @@
 
   // Top pagination
   &:not(.pf-m-footer) {
-    .pf-c-options-menu,
     .pf-c-pagination__nav {
       display: flex;
 
@@ -84,14 +83,6 @@
 
   .pf-c-form-control {
     width: var(--pf-c-pagination__nav-page-select--c-form-control--Width);
-  }
-}
-
-// Mobile element for items
-.pf-c-pagination__items {
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    display: none;
-    visibility: hidden;
   }
 }
 
