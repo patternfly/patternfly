@@ -459,6 +459,10 @@
     vertical-align: middle;
   }
 
+  .pf-c-table__icon {
+    text-align: center;
+  }
+
   // nested tables
   .pf-c-table & tr > * {
     &:first-child {
