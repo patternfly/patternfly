@@ -33,11 +33,11 @@
 | `.pf-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
 | `.pf-c-wizard__nav-link` | `<a>` | Initiates a step link. **Required** |
 | `.pf-c-wizard__main` | `<main>` | Initiates the main container. **Required** |
-| `.pf-c-wizard__body` | `<div>` | Initiates the main body container. |
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
+| `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container to remove the padding. |
 | `.pf-m-hover` | `.pf-c-wizard__nav-link` | Modifies a step link for the hovered state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-wizard__nav-link` | Modifies a step link for the focus state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class.|
 | `.pf-m-align-right` | `.pf-c-wizard__footer` | Modifies the footer to right align it's content. |

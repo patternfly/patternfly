@@ -76,22 +76,26 @@
   --pf-c-wizard__nav--lg--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-wizard__nav--Width: 100%;
   --pf-c-wizard__nav--lg--Width: #{pf-size-prem(300px)};
-  --pf-c-wizard__nav--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-wizard__nav--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-wizard__nav--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-wizard__nav--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
-  --pf-c-wizard__nav--lg--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-wizard__nav--lg--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__nav--PaddingRight: var(--pf-c-wizard__nav--lg--PaddingRight);
-    --pf-c-wizard__nav--PaddingLeft: var(--pf-c-wizard__nav--lg--PaddingLeft);
     --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
   }
 
   // Nav List (nested)
-  --pf-c-wizard__nav--nested--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-wizard__nav--nested--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-wizard__nav-list--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard__nav-list--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-wizard__nav-list--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard__nav-list--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+  --pf-c-wizard__nav-list--lg--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard__nav-list--lg--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+  --pf-c-wizard__nav-list--nested--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-wizard__nav-list--nested--MarginTop: var(--pf-global--spacer--md);
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-wizard__nav-list--PaddingRight: var(--pf-c-wizard__nav-list--lg--PaddingRight);
+    --pf-c-wizard__nav-list--PaddingLeft: var(--pf-c-wizard__nav-list--lg--PaddingLeft);
+  }
+
 
   // Nav Item
   --pf-c-wizard__nav-item--MarginTop: var(--pf-global--spacer--md);
@@ -123,20 +127,20 @@
   --pf-c-wizard__outer-wrap--lg--PaddingLeft: var(--pf-c-wizard__nav--lg--Width);
 
   // Body
-  --pf-c-wizard__body--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-wizard__body--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-wizard__body--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-wizard__body--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-wizard__body--lg--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-wizard__body--lg--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-wizard__body--lg--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-wizard__body--lg--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-wizard__main--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-wizard__main--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-wizard__main--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-wizard__main--lg--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main--lg--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main--lg--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main--lg--PaddingLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__body--PaddingTop: var(--pf-c-wizard__body--lg--PaddingTop);
-    --pf-c-wizard__body--PaddingRight: var(--pf-c-wizard__body--lg--PaddingRight);
-    --pf-c-wizard__body--PaddingBottom: var(--pf-c-wizard__body--lg--PaddingBottom);
-    --pf-c-wizard__body--PaddingLeft: var(--pf-c-wizard__body--lg--PaddingLeft);
+    --pf-c-wizard__main--PaddingTop: var(--pf-c-wizard__main--lg--PaddingTop);
+    --pf-c-wizard__main--PaddingRight: var(--pf-c-wizard__main--lg--PaddingRight);
+    --pf-c-wizard__main--PaddingBottom: var(--pf-c-wizard__main--lg--PaddingBottom);
+    --pf-c-wizard__main--PaddingLeft: var(--pf-c-wizard__main--lg--PaddingLeft);
   }
 
   // Footer
@@ -300,9 +304,6 @@
   display: none;
   width: var(--pf-c-wizard__nav--Width);
   max-height: 100%;
-  padding-top: var(--pf-c-wizard__nav--PaddingTop);
-  padding-right: var(--pf-c-wizard__nav--PaddingRight);
-  padding-left: var(--pf-c-wizard__nav--PaddingLeft);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   visibility: hidden;
@@ -323,23 +324,21 @@
     height: 100%;
     visibility: visible;
   }
-
-  // Fix FF bug https://github.com/w3c/csswg-drafts/issues/129
-  &::after {
-    display: block;
-    height: var(--pf-c-wizard__nav--PaddingBottom);
-    content: "";
-  }
 }
 
 .pf-c-wizard__nav-list {
+  padding-top: var(--pf-c-wizard__nav-list--PaddingTop);
+  padding-right: var(--pf-c-wizard__nav-list--PaddingRight);
+  padding-bottom: var(--pf-c-wizard__nav-list--PaddingBottom);
+  padding-left: var(--pf-c-wizard__nav-list--PaddingLeft);
   list-style: none;
   counter-reset: wizard-nav-count;
 
   // Nested sub menus
   & & {
-    margin-top: var(--pf-c-wizard__nav--nested--MarginTop);
-    margin-left: var(--pf-c-wizard__nav--nested--MarginLeft);
+    padding: 0;
+    margin-top: var(--pf-c-wizard__nav-list--nested--MarginTop);
+    margin-left: var(--pf-c-wizard__nav-list--nested--MarginLeft);
 
     // Reset styles for nested nav links
     .pf-c-wizard__nav-link {
@@ -422,12 +421,13 @@
 }
 
 .pf-c-wizard__main {
+  padding: var(--pf-c-wizard__main--PaddingTop) var(--pf-c-wizard__main--PaddingRight) var(--pf-c-wizard__main--PaddingLeft) var(--pf-c-wizard__main--PaddingRight);
   overflow-y: auto;
   word-break: break-word;
-}
 
-.pf-c-wizard__body {
-  padding: var(--pf-c-wizard__body--PaddingTop) var(--pf-c-wizard__body--PaddingRight) var(--pf-c-wizard__body--PaddingLeft) var(--pf-c-wizard__body--PaddingRight);
+  &.pf-m-no-padding {
+    padding: 0;
+  }
 }
 
 .pf-c-wizard__footer {
