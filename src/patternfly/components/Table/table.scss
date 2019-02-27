@@ -13,7 +13,6 @@
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--light-200);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
   --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
 
   // Thead
@@ -110,6 +109,9 @@
   // Modifier - Sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
 
+  // This component always needs to be light
+  @include pf-t-light;
+
   /* stylelint-enable */
 
   // Base
@@ -127,13 +129,6 @@
     // for button height: 100% to work
     height: 1px;
     border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
-  }
-
-  // undo default styling for each even child
-  tr {
-    &:nth-child(even) {
-      background-color: var(--pf-c-table--BackgroundColor);
-    }
   }
 
   // Table row
@@ -422,7 +417,6 @@
   // Tbody only
   tbody {
     --pf-c-table--BorderWidth: 0;
-    --pf-c-table--BorderColor: transparent;
 
     tr:first-child > * {
       --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
