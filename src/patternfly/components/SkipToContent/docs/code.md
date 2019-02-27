@@ -8,5 +8,5 @@ When using `.pf-c-skip-to-content` you must also provide an anchor with the matc
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-skip-to-content` | `<a href="#main-content">` |  initiates the skip to content link. |
+| `.pf-c-skip-to-content` | `<a>` |  initiates the skip to content link. |
 | `.pf-m-focus` | `.pf-c-skip-to-content` |  Forces display of the focus state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
