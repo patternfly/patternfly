@@ -21,6 +21,8 @@
   }
 }
 
+$pf-c-table-xs-breakpoint: 380px;
+
 .pf-c-table[class*="pf-m-grid"] {
   // ============================================================ //
   // Start non-conformant variables
@@ -33,14 +35,11 @@
   // ==================================================================
 
   // Body
-  --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-table-tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
-  --pf-c-table-tbody--responsive--BorderWidth: var(--pf-global--spacer--sm);
+  --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--sm);
 
   // Row
-  --pf-c-table-tr--responsive--BorderWidth: var(--pf-global--spacer--sm);
-  --pf-c-table-tr--responsive--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--xl);
@@ -66,8 +65,6 @@
   // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--responsive--MaxHeight: #{pf-size-prem(480px)};
-  --pf-c-table__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Table check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
@@ -83,6 +80,7 @@
 // Check table cell
 @include pf-mobile-layout {
   display: grid;
+  background-color: transparent;
   border: none;
 
   // Thead
@@ -93,46 +91,26 @@
   // Tbody
   tbody {
     display: block;
-
-    @media screen and (max-width: $pf-global--breakpoint--md) {
-      &:first-of-type {
-        border-top: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
-      }
-    }
   }
 
-  // Remove the border from the body inside of the nested table
-  table.pf-m-compact > tbody {
-    border-top: 0;
+  // add top margin to siblings
+  tbody + tbody {
+    margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
   }
 
+  // Table row
+  // using background color on tr as they are presented as block level elements for responsive view
   tr {
-    @media screen and (max-width: $pf-global--breakpoint--md) {
-      &:not(.pf-c-table__expandable-row) {
-        border-bottom-width: var(--pf-c-table-tr--responsive--BorderWidth);
-      }
-    }
-  }
+    background-color: var(--pf-c-table-tr--responsive--BackgroundColor);
 
-  // The last tr should always have a border width of 1px
-  tr:last-child,
-  tbody:last-of-type:not(:only-of-type) > tr {
-    border-bottom-width: var(--pf-c-table-tr--responsive--last-child--BorderWidth);
+    &:not(:first-child):not(.pf-c-table__expandable-row) {
+      margin-top: var(--pf-c-table-tr--responsive--MarginTop);
+    }
   }
 
   tbody.pf-m-expanded {
-    @media screen and (max-width: $pf-global--breakpoint--xl) {
-      border-bottom: 1px solid var(--pf-c-table--BorderColor);
-    }
-
-    @media screen and (max-width: $pf-global--breakpoint--md) {
-      border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
-    }
-
-    @media screen and (max-width: $pf-global--breakpoint--xl) {
-      tr:not(.pf-c-table__expandable-row) {
-        border-bottom: 0;
-      }
+    tr:not(.pf-c-table__expandable-row) {
+      border-bottom: 0;
     }
   }
 
@@ -158,12 +136,6 @@
     // remove padding from first th to align with kebab
     th {
       padding-top: var(--pf-c-table-cell-th--responsive--PaddingTop);
-    }
-  }
-
-  tr > * {
-    &.pf-m-center {
-      text-align: left;
     }
   }
 
@@ -195,14 +167,14 @@
     align-items: start;
 
     // @mobile, breakpoint small
-    @media screen and (min-width: $pf-global--breakpoint--xs) {
+    @media screen and (min-width: $pf-c-table-xs-breakpoint) {
       grid-template-columns: 1fr 1.5fr;
       grid-column: 1;
     }
 
     // set contents of td to start at column two of td grid
     * {
-      @media screen and (min-width: $pf-global--breakpoint--xs) {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
         grid-column: 2;
       }
     }
@@ -214,7 +186,7 @@
       text-align: left;
       content: attr(data-label);
 
-      @media screen and (min-width: $pf-global--breakpoint--xs) {
+      @media screen and (min-width: $pf-c-table-xs-breakpoint) {
         font-weight: normal;
         // set ::before to span all rows, up to 100
         grid-row: 1;
@@ -289,10 +261,8 @@
       content: "";
     }
 
-    &.pf-m-expanded {
-      &::before {
-        background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
-      }
+    &.pf-m-expanded::before {
+      background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
     }
 
     > tr > :first-child::before {

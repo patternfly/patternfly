@@ -32,10 +32,6 @@
     margin-right: var(--pf-c-pagination--child--MarginRight);
   }
 
-  &.pf-m-footer {
-    margin-left: auto;
-  }
-
   // Top pagination
   &:not(.pf-m-footer) {
     .pf-c-options-menu,
