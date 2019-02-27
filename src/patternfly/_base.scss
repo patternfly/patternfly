@@ -6,6 +6,7 @@
 
 // CSS shield against PF 3
 .pf-c-about-modal-box,
+.pf-c-accordion,
 .pf-c-alert,
 .pf-c-alert-group,
 .pf-c-app-launcher,
@@ -43,6 +44,7 @@
 .pf-c-radio,
 .pf-c-select,
 .pf-c-switch,
+.pf-c-tab-content,
 .pf-c-table,
 .pf-c-tabs,
 .pf-c-title,
@@ -149,6 +151,7 @@ html {
     font-family: inherit;
     font-size: 100%;
     line-height: var(--pf-global--LineHeight--md);
+    color: var(--pf-global--Color--100);
   }
 
   img,
