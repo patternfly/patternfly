@@ -50,9 +50,10 @@ export default () => {
   const selectCheckboxExample = SelectCheckboxExample();
   const selectCheckboxExpandedExample = SelectCheckboxExpandedExample();
   const selectCheckboxExpandedSelectedExample = SelectCheckboxExpandedSelectedExample();
+  const headingText = 'Select';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Select - Single" handlebars={SelectSingleExampleRaw}>
         {selectSingleExample}
       </Example>

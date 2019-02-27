@@ -25,9 +25,10 @@ export default () => {
   const dataListCheckActionExample = DataListCheckActionExample();
   const dataListExpandableExample = DataListExpandableExample();
   const dataListWidthExample = DataListWidthExample();
+  const headingText = 'Data List';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Data List Simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
         {dataListSimpleExample}
       </Example>

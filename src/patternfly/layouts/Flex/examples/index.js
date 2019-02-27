@@ -35,7 +35,7 @@ export default () => {
   const flexAlignmentExample = FlexAlignmentExample();
   const flexJustificationExample = FlexJustificationExample();
   const flexColumnsExample = FlexColumnsExample();
-  const headingText = 'Flex layout system';
+  const headingText = 'Flex';
 
   return (
     <Documentation docs={Docs} heading={headingText} className="flex-documentation">

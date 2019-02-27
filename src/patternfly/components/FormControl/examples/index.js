@@ -15,7 +15,7 @@ export default () => {
   const formControlInputExample = FormControlInputExample();
   const formControlSelectExample = FormControlSelectExample();
   const formControlTextareaExample = FormControlTextareaExample();
-  const headingText = 'Form Controls';
+  const headingText = 'Form Control';
 
   return (
     <Documentation docs={Docs} heading={headingText}>

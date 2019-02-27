@@ -27,9 +27,10 @@ export default () => {
   const toolbarFilterExpandedCheckedExample = ToolbarFilterExpandedCheckedExample();
   const toolbarMobileFilterExample = ToolbarMobileFilterExample();
   const toolbarMobileFilterCheckedExample = ToolbarMobileFilterCheckedExample();
+  const headingText = 'Toolbar';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example fullPageOnly="true" heading="Toolbar simple" handlebars={toolbarSimpleExampleRaw}>
         {toolbarSimpleExample}
       </Example>

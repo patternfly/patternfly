@@ -9,9 +9,10 @@ export const Docs = docs;
 
 export default () => {
   const emptyStateSimpleExample = EmptystateSimpleExample();
+  const headingText = 'Empty State';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Empty State" handlebars={emptyStateSimpleExampleRaw}>
         {emptyStateSimpleExample}
       </Example>

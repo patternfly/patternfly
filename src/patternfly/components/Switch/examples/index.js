@@ -15,9 +15,10 @@ export default () => {
   const switchExample = SwitchExample();
   const switchDisabledExample = SwitchDisabledExample();
   const switchNoLabelExample = SwitchNoLabelExample();
+  const headingText = 'Switch';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Switch" handlebars={SwitchExampleRaw}>
         {switchExample}
       </Example>

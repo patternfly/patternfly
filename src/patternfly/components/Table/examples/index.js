@@ -42,9 +42,10 @@ export default () => {
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
+  const headingText = 'Table';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Simple Table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
         {tableSimpleExample}
       </Example>

@@ -17,9 +17,10 @@ export default () => {
   const paginationTopExample = PaginationTopExample();
   const paginationTopExpandedExample = PaginationTopExpandedExample();
   const paginationBottomExample = PaginationBottomExample();
+  const headingText = 'Pagination';
 
   return (
-    <Documentation docs={docs}>
+    <Documentation docs={docs} heading={headingText}>
       <Example
         heading="Pagination Top"
         handlebars={paginationTopExampleRaw}

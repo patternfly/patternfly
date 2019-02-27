@@ -35,7 +35,7 @@ export default () => {
   const navHorizontalListExample = NavHorizontalListExample();
   const navListTertiaryExample = NavListTertiaryExample();
   const navMixedExample = NavMixedExample();
-  const headingText = 'Navigation';
+  const headingText = 'Nav';
 
   return (
     <Documentation docs={Docs} heading={headingText}>

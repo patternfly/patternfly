@@ -24,9 +24,10 @@ export default () => {
   const optionsMenuTopExample = OptionsMenuTopExample();
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
   const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
+  const headingText = 'Options Menu';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example
         heading="Options Menu - Single option"
         className="is-expanded-dropdown"

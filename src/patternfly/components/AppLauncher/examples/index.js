@@ -12,9 +12,10 @@ export const Docs = docs;
 export default () => {
   const AppLauncherCollapsedExample = ApplauncherCollapsedExample();
   const AppLauncherExpandedExample = ApplauncherExpandedExample();
+  const headingText = 'App Launcher';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Applauncher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
         {AppLauncherCollapsedExample}
       </Example>

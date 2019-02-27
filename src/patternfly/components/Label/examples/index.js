@@ -9,9 +9,10 @@ export const Docs = docs;
 
 export default () => {
   const labelExample = LabelExample();
+  const headingText = 'Label';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Label Component" handlebars={labelExampleRaw}>
         {labelExample}
       </Example>

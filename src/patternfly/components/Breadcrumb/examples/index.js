@@ -16,9 +16,10 @@ export default () => {
   const breadcrumbExample = BreadcrumbExample();
   const breadcrumbWithTitleExample = BreadcrumbWithTitleExample();
   const breadcrumbWithoutHomeLink = BreadcrumbWithoutHomeLink();
+  const headingText = 'Breadcrumb';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw}>
         {breadcrumbExample}
       </Example>
