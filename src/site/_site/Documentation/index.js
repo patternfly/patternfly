@@ -15,7 +15,8 @@ const propTypes = {
 
 const defaultProps = {
   className: '',
-  docs: ''
+  docs: '',
+  variablesRoot: null
 };
 
 export default class Documentation extends React.Component {
