@@ -94,5 +94,5 @@ If you have any suggestions about ways that we can improve how we use this tool,
 
 ## FAQ
 
-[How do I use SCSS variables to customize
+[How do I use CSS variables to customize
 the library?](https://pf4.patternfly.org/guidelines#variables)
