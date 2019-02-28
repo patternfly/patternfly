@@ -10,10 +10,9 @@ export const Docs = docs;
 export default () => {
   const brandSimpleExample = BrandSimpleExample();
   const headingText = 'Brand';
-  const variablesRoot = 'pf-c-brand';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw}>
         {brandSimpleExample}
       </Example>
