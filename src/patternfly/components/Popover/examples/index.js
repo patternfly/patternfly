@@ -25,9 +25,10 @@ export default () => {
   const popoverLeftExample = PopoverLeftExample();
   const popoverNoHeaderExample = PopoverNoHeaderExample();
   const headingText = 'Popover';
+  const variablesRoot = 'pf-c-popover';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Popover Top" handlebars={PopoverTopExampleRaw}>
         {popoverTopExample}
       </Example>

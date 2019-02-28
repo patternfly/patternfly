@@ -12,9 +12,11 @@ export const Docs = docs;
 export default () => {
   const wizardExample = WizardExample();
   const wizardExpandedExample = WizardExpandedExample();
+  const headingText = 'Wizard';
+  const variablesRoot = 'pf-c-wizard';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Wizard" handlebars={wizardExampleRaw} fullPageOnly="true">
         {wizardExample}
       </Example>

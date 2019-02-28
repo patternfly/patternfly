@@ -25,9 +25,10 @@ export default () => {
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
   const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
   const headingText = 'Options Menu';
+  const variablesRoot = 'pf-c-options-menu';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Options Menu - Single option"
         className="is-expanded-dropdown"

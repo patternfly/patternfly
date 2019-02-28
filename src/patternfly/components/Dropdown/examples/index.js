@@ -32,13 +32,14 @@ export default () => {
   const dropdownTop = DropdownTop();
   const dropdownSplitButton = DropdownSplitButton();
   const headingText = 'Dropdown';
+  const variablesRoot = 'pf-c-dropdown';
 
   const styles = {
     height: '13em',
   };
 
   return (
-    <Documentation style={styles} docs={Docs} heading={headingText}>
+    <Documentation style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example className="is-expanded-dropdown" heading="Basic Dropdown (expanded)" handlebars={DropdownBasicExpandedRaw} docs={DropdownBasicDoc}>
         {dropdownBasicExpanded}
       </Example>

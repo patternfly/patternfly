@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const labelExample = LabelExample();
   const headingText = 'Label';
+  const variablesRoot = 'pf-c-label';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Label Component" handlebars={labelExampleRaw}>
         {labelExample}
       </Example>

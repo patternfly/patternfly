@@ -10,9 +10,11 @@ export const Docs = docs;
 
 export default () => {
   const skipToContentExample = SkiptocontentExample();
+  const headingText = 'Skip to content';
+  const variablesRoot = 'pf-c-skip-to-content';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading="Skip to content" handlebars={skipToContentExampleRaw}>
         {skipToContentExample}
       </Example>

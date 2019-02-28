@@ -26,9 +26,10 @@ export default () => {
   const dataListExpandableExample = DataListExpandableExample();
   const dataListWidthExample = DataListWidthExample();
   const headingText = 'Data List';
+  const variablesRoot = 'pf-c-data-list';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Data List Simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
         {dataListSimpleExample}
       </Example>

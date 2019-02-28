@@ -16,9 +16,10 @@ export default () => {
   const listOrderedExample = ListOrderedExample();
   const listInlineExample = ListInlineExample();
   const headingText = 'List';
+  const variablesRoot = 'pf-c-list';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Unordered List" handlebars={listUnorderedExampleRaw}>
         {listUnorderedExample}
       </Example>

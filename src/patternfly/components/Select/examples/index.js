@@ -51,9 +51,10 @@ export default () => {
   const selectCheckboxExpandedExample = SelectCheckboxExpandedExample();
   const selectCheckboxExpandedSelectedExample = SelectCheckboxExpandedSelectedExample();
   const headingText = 'Select';
+  const variablesRoot = 'pf-c-select';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Select - Single" handlebars={SelectSingleExampleRaw}>
         {selectSingleExample}
       </Example>

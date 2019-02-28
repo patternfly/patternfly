@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const emptyStateSimpleExample = EmptystateSimpleExample();
   const headingText = 'Empty State';
+  const variablesRoot = 'pf-c-empty-state';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Empty State" handlebars={emptyStateSimpleExampleRaw}>
         {emptyStateSimpleExample}
       </Example>

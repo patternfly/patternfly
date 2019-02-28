@@ -35,10 +35,11 @@ export default () => {
   const flexAlignmentExample = FlexAlignmentExample();
   const flexJustificationExample = FlexJustificationExample();
   const flexColumnsExample = FlexColumnsExample();
-  const headingText = 'Flex';
+  const headingText = 'Flex layout system';
+  const variablesRoot = 'pf-l-flex';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="flex-documentation">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="flex-documentation">
       <Example intro={flexIntroDoc} heading="Basic Usage" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
         {flexBasicExample}
       </Example>

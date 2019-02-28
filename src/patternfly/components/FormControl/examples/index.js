@@ -16,9 +16,10 @@ export default () => {
   const formControlSelectExample = FormControlSelectExample();
   const formControlTextareaExample = FormControlTextareaExample();
   const headingText = 'Form Control';
+  const variablesRoot = 'pf-c-form-control';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Input Example" handlebars={FormControlInputExampleRaw}>
         {formControlInputExample}
       </Example>

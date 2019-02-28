@@ -17,9 +17,10 @@ export default () => {
   const breadcrumbWithTitleExample = BreadcrumbWithTitleExample();
   const breadcrumbWithoutHomeLink = BreadcrumbWithoutHomeLink();
   const headingText = 'Breadcrumb';
+  const variablesRoot = 'pf-c-breadcrumb';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw}>
         {breadcrumbExample}
       </Example>

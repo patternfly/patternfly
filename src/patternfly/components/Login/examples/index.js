@@ -13,9 +13,10 @@ export default () => {
   const loginSimpleExample = LoginSimpleExample();
   const loginInvalidExample = LoginInvalidExample();
   const headingText = 'Login';
+  const variablesRoot = 'pf-c-login';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Login Simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw}>
         {loginSimpleExample}
       </Example>

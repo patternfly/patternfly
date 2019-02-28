@@ -28,9 +28,10 @@ export default () => {
   const toolbarMobileFilterExample = ToolbarMobileFilterExample();
   const toolbarMobileFilterCheckedExample = ToolbarMobileFilterCheckedExample();
   const headingText = 'Toolbar';
+  const variablesRoot = 'pf-c-toolbar';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading="Toolbar simple" handlebars={toolbarSimpleExampleRaw}>
         {toolbarSimpleExample}
       </Example>

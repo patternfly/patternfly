@@ -43,9 +43,10 @@ export default () => {
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
   const headingText = 'Table';
+  const variablesRoot = 'pf-c-table';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Simple Table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
         {tableSimpleExample}
       </Example>
