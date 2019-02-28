@@ -17,40 +17,42 @@
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-simple-nav" aria-label="Simple Nav Example"')}}
-      {{#> nav-list nav-list--type="simple"}}
-        {{#> nav-item newcontent}}
-          {{#> nav-link nav-link--href="#"}}
-            Overview
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item newcontent}}
-          {{#> nav-link nav-link--href="#"}}
-            Resource Usage
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item newcontent}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Hypervisors
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item newcontent}}
-          {{#> nav-link nav-link--href="#"}}
-            Instances
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item newcontent}}
-          {{#> nav-link nav-link--href="#"}}
-            Volumes
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item newcontent}}
-          {{#> nav-link nav-link--href="#"}}
-            Networks
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
+    {{#> page-sidebar-body}}
+      {{#> nav nav--attribute=(concat 'id="' page--id '-simple-nav" aria-label="Simple Nav Example"')}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Overview
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Resource Usage
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Hypervisors
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Instances
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Volumes
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Networks
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-template-title}}

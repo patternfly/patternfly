@@ -67,8 +67,8 @@
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-page__sidebar--Width: 80%;
   --pf-c-page__sidebar--md--Width: #{pf-size-prem(290px)};
-  --pf-c-page__sidebar--child--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__sidebar--child--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
@@ -270,9 +270,10 @@
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
   }
 
-  & > * {
-    padding-top: var(--pf-c-page__sidebar--child--PaddingTop);
-    padding-bottom: var(--pf-c-page__sidebar--child--PaddingBottom);
+  .pf-c-page__sidebar-body {
+    height: 100%;
+    padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
+    padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
   }
 
   // Mobile

@@ -4,7 +4,9 @@
       {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
     {{/accordion-toggle}}
     {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
-      <p>This text is hidden</p>
+      {{#> accordion-expanded-content-body}}
+        This text is hidden
+      {{/accordion-expanded-content-body}}
     {{/accordion-expanded-content}}
 
     {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
@@ -12,11 +14,11 @@
       {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
     {{/accordion-toggle}}
     {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true" accordion-expanded-content--attribute='aria-expanded="true"' accordion-expanded-content--IsFixed="true"}}
-      <p>
+      {{#> accordion-expanded-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit Bla Bla Blee Bla. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit Bla Bla Blee Bla. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit Bla Bla Blee Bla. 
-      </p>
+      {{/accordion-expanded-content-body}}
     {{/accordion-expanded-content}}
 
     {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
@@ -24,7 +26,9 @@
       {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
     {{/accordion-toggle}}
     {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
-      <p>This text is hidden</p>
+      {{#> accordion-expanded-content-body}}
+        This text is hidden
+      {{/accordion-expanded-content-body}}
     {{/accordion-expanded-content}}
 
    {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
@@ -32,7 +36,9 @@
       {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
     {{/accordion-toggle}}
     {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
-      <p>This text is hidden</p>
+      {{#> accordion-expanded-content-body}}
+        This text is hidden
+      {{/accordion-expanded-content-body}}
     {{/accordion-expanded-content}}
 
     {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
@@ -40,6 +46,8 @@
       {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
     {{/accordion-toggle}}
     {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
-      <p>This text is hidden</p>
+      {{#> accordion-expanded-content-body}}
+        This text is hidden
+      {{/accordion-expanded-content-body}}
     {{/accordion-expanded-content}}
 {{/accordion}}
