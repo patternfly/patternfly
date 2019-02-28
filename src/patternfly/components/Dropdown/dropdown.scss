@@ -22,9 +22,11 @@
   --pf-c-dropdown__toggle--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-dropdown__toggle-text--Width: calc(100% - var(--pf-global--spacer--lg));
 
   // toggle button
@@ -94,6 +96,19 @@
   color: var(--pf-c-dropdown__toggle--Color);
   background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
   border: none;
+
+  &.pf-m-disabled,
+  &:disabled {
+    pointer-events: none;
+
+    &:not(.pf-m-plain) {
+      --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
+
+      &::before {
+        border-color: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
+      }
+    }
+  }
 
   &.pf-m-split-button {
     padding: 0;
@@ -197,6 +212,11 @@
       &::before {
         border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
       }
+    }
+
+    &.pf-m-disabled,
+    &:disabled {
+      --pf-c-dropdown__toggle--m-plain--Color: var(--pf-c-dropdown__toggle--m-plain--disabled--Color);
     }
   }
 
