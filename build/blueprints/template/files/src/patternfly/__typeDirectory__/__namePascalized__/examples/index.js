@@ -13,9 +13,11 @@ export const Docs = docs;
 export default () => {
   const {{nameCamelized}}SimpleExample = {{moduleName}}SimpleExample();
   const {{nameCamelized}}ComplexExample = {{moduleName}}ComplexExample();
+  const headingText = '{{moduleName}}';
+  const variablesRoot = '{{bemName}}';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="{{moduleName}} Simple" handlebars={{simpleExampleRawReference}} minHeight="20em">
         {{simpleExampleReference}}
       </Example>
