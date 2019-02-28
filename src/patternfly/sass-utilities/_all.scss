@@ -1,15 +1,7 @@
-// All imports must not have any rendered output.
-// Files that are imported here will be available to all resources.
-
-// These imports reference files this folder
+// These imports must not contain any rendered output
 @import "./functions";
 @import "./colors";
 @import "./scss-variables";
 @import "./bs-variables"; // Overwrites Bootstrap variables
 @import "./mixins";
 @import "./placeholders";
-
-// These imports reference files in the node_module folder
-// @import "bootstrap/scss/_functions";
-// @import "bootstrap/scss/_variables";
-// @import "bootstrap/scss/_mixins";
