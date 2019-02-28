@@ -17,9 +17,11 @@ export default () => {
   const paginationTopExample = PaginationTopExample();
   const paginationTopExpandedExample = PaginationTopExpandedExample();
   const paginationBottomExample = PaginationBottomExample();
+  const headingText = 'Pagination';
+  const variablesRoot = 'pf-c-pagination';
 
   return (
-    <Documentation docs={docs}>
+    <Documentation docs={docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Pagination Top"
         handlebars={paginationTopExampleRaw}

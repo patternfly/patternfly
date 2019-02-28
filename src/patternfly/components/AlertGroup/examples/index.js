@@ -22,9 +22,10 @@ export const Docs = docs;
 export default () => {
   const alertGroupExample = AlertGroupExample();
   const toastGroupExample = ToastGroupExample();
+  const variablesRoot = 'pf-c-alert-group';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Inline Alert Group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
         {alertGroupExample}
       </Example>

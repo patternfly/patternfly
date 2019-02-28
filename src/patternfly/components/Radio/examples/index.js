@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const radioExample = RadioExample();
   const headingText = 'Radio';
+  const variablesRoot = 'pf-c-radio';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Radio Example" handlebars={RadioExampleRaw}>
         {radioExample}
       </Example>

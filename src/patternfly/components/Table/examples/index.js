@@ -42,9 +42,11 @@ export default () => {
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
+  const headingText = 'Table';
+  const variablesRoot = 'pf-c-table';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Simple Table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
         {tableSimpleExample}
       </Example>

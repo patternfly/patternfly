@@ -13,9 +13,10 @@ export default () => {
   const split = Split();
   const splitGutters = SplitGutters();
   const headingText = 'Split';
+  const variablesRoot = 'pf-l-split';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Split Example" handlebars={SplitRaw}>
         {split}
       </Example>

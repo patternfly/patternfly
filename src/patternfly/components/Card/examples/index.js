@@ -19,9 +19,10 @@ export default () => {
   const cardNoHeaderExample = CardNoHeaderExample();
   const cardContentOnlyExample = CardContentOnlyExample();
   const headingText = 'Card';
+  const variablesRoot = 'pf-c-card';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
       </Example>
