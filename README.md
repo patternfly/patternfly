@@ -1,6 +1,6 @@
 # PatternFly 4
 
-## Install 
+## Install
 
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
 - run `npm install @patternfly/patternfly --save`
@@ -74,13 +74,13 @@ aXe is available as either a browser extension or npm script.
 
 To run the a11y audit locally:
 - install the latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
-  - alternatively, macOS users can simply `brew cask install chromedriver`
+  - macOS users can simply `brew cask install chromedriver`
 - run `npm run dev`
 - run `npm run a11y` (in another console)
 
 The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
 
-The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/). 
+The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
 ### Fixing Violations
 
