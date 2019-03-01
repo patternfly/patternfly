@@ -228,6 +228,7 @@
 
     @media screen and (min-width: $pf-global--breakpoint--lg) {
       display: none;
+      visibility: hidden;
     }
   }
 
