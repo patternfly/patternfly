@@ -26,6 +26,7 @@
   --pf-c-context-selector__toggle-text--MaxWidth: calc(var(--pf-c-context-selector--Width) - var(--pf-c-context-selector__toggle-icon--MarginLeft) - 30px); // hard coded last variable
 
   // Toggle Icon Arrow
+  --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Menu
@@ -114,6 +115,7 @@
   }
 
   .pf-c-context-selector__toggle-icon {
+    margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
     margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
   }
 

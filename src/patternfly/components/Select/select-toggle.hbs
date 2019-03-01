@@ -1,4 +1,4 @@
-<div class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
+<{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
   id="{{id}}-toggle" 
   aria-haspopup="true" 
   aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
@@ -57,5 +57,11 @@
 		{{/if}}
 	{{/if}}
 
-	{{> select-toggle-icon}}
-</div>
+  {{#if select--IsTypeahead}}
+    <button>
+      {{> select-toggle-icon}}
+    </button>
+  {{else}}
+	  {{> select-toggle-icon}}
+  {{/if}}
+</{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}}>

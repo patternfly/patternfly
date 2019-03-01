@@ -57,7 +57,8 @@
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--md);
 
   // Toggle Arrow
-  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
 
   // Menu
@@ -207,12 +208,41 @@
   }
 
   .pf-c-select__toggle-arrow {
+    margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
     margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
 
     .pf-m-top.pf-m-expanded > & {
       transform: rotate(-180deg);
     }
   }
+
+  button:not(.pf-c-button) {
+    padding: 0;
+    border: 0;
+
+    &:focus {
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    &:active {
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
+
+  // button > .pf-c-select__toggle-arrow {
+  //   & {
+  //     padding: 0;
+  //     border: 0;
+  //   }
+  // }
+
+  // .pf-c-button > .pf-c-select__toggle-arrow {
+  //   margin-left: 0;
+
+  //   & {
+  //     padding: 0;
+  //   }
+  // }
 }
 
 .pf-c-select__toggle-text {
@@ -257,7 +287,10 @@
 
 .pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
   // This is adjusted so that the clear button can maintain even padding around while not creating too much space between the clear and arrow
-  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
+
+  .pf-c-select__toggle-arrow {
+    padding-left: -16px;
+  }
 }
 
 .pf-c-select__toggle-badge {

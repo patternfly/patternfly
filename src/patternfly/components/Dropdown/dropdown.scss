@@ -43,6 +43,7 @@
   --pf-c-dropdown__toggle--m-split-button__toggle-check__input--Transform: translateY(#{pf-size-prem(-1px)});
 
   // Toggle Arrow
+  --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Menu
@@ -239,6 +240,7 @@
   }
 
   .pf-c-dropdown__toggle-icon {
+    margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
     margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
     line-height: var(--pf-c-dropdown__toggle--LineHeight);
 
