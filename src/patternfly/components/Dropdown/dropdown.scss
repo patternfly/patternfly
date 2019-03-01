@@ -105,7 +105,7 @@
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
 
       &::before {
-        border-color: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
+        border: 0;
       }
     }
   }
