@@ -4,7 +4,14 @@
   --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-toolbar--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-toolbar--md--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-toolbar--PaddingRight: var(--pf-c-toolbar--md--PaddingRight);
+    --pf-c-toolbar--PaddingLeft: var(--pf-c-toolbar--md--PaddingLeft);
+  }
 
   // Bulk Select
   --pf-c-toolbar__bulk-select--MarginRight: var(--pf-global--spacer--md);
