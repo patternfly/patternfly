@@ -76,6 +76,7 @@
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -88,9 +89,11 @@
 
   @media screen and (max-width: $pf-global--breakpoint--lg) {
     display: none;
+    visibility: hidden;
 
     &.pf-m-expanded {
       display: flex;
+      visibility: visible;
     }
   }
 
@@ -117,10 +120,11 @@
 }
 
 .pf-c-toolbar__action-group {
-  display: none;
+  display: flex;
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    display: flex;
+  @media screen and (max-width: $pf-global--breakpoint--xl) {
+    display: none;
+    visibility: hidden;
   }
 
   > * + * {
@@ -148,9 +152,11 @@
   padding-left: 0;
   margin-top: var(--pf-c-toolbar__filter-list--MarginTop);
   margin-left: 0;
+  visibility: hidden;
 
   &.pf-m-expanded {
     display: block;
+    visibility: visible;
   }
 }
 

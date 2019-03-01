@@ -201,12 +201,13 @@
 }
 
 .pf-c-wizard__description {
-  display: none;
+  display: block;
   padding-top: var(--pf-c-wizard__description--PaddingTop);
   color: var(--pf-c-wizard__description--Color);
 
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    display: block;
+  @media screen and (max-width: $pf-global--breakpoint--lg) {
+    display: none;
+    visibility: hidden;
   }
 }
 

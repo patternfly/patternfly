@@ -238,15 +238,16 @@
 
 // Hero
 .pf-c-about-modal-box__hero {
-  display: none; // Don't display the hero at the narrowest breakpoint
+  display: block;
+  background-image: var(--pf-c-about-modal-box__hero--sm--BackgroundImage);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: var(--pf-c-about-modal-box__hero--sm--BackgroundPosition);
+  background-size: var(--pf-c-about-modal-box__hero--sm--BackgroundSize);
+  grid-area: hero;
 
-  @media only screen and (min-width: $pf-global--breakpoint--sm) {
-    display: block;
-    background-image: var(--pf-c-about-modal-box__hero--sm--BackgroundImage);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: var(--pf-c-about-modal-box__hero--sm--BackgroundPosition);
-    background-size: var(--pf-c-about-modal-box__hero--sm--BackgroundSize);
-    grid-area: hero;
+  @media only screen and (max-width: $pf-global--breakpoint--sm) {
+    display: none; // Don't display the hero at the narrowest breakpoint
+    visibility: hidden;
   }
 }
