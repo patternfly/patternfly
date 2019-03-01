@@ -9,6 +9,7 @@ import DropdownKebabAlignRightRaw from '!raw!./dropdown-kebab-align-right-exampl
 import DropdownAlignRightRaw from '!raw!./dropdown-align-right-example.hbs';
 import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownSplitButtonRaw from '!raw!./dropdown-split-button-example.hbs';
+import DropdownGroupsRaw from '!raw!./dropdown-groups-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
 import DropdownBasicExpanded from './dropdown-basic-expanded-example.hbs';
 import DropdownCollapsed from './dropdown-collapsed-example.hbs';
@@ -17,6 +18,7 @@ import DropdownKebabAlignRight from './dropdown-kebab-align-right-example.hbs';
 import DropdownAlignRight from './dropdown-align-right-example.hbs';
 import DropdownTop from './dropdown-top-example.hbs';
 import DropdownSplitButton from './dropdown-split-button-example.hbs';
+import DropdownGroups from './dropdown-groups-example.hbs';
 import DropdownBasicDoc from '../docs/dropdown-basic.md';
 import docs from '../docs/code.md';
 
@@ -31,6 +33,7 @@ export default () => {
   const dropdownAlignRight = DropdownAlignRight();
   const dropdownTop = DropdownTop();
   const dropdownSplitButton = DropdownSplitButton();
+  const dropdownGroups = DropdownGroups();
   const headingText = 'Dropdown';
   const variablesRoot = 'pf-c-dropdown';
 
@@ -66,6 +69,9 @@ export default () => {
       </Example>
       <Example className="is-expanded-dropdown" heading="Split Button" handlebars={DropdownSplitButtonRaw}>
         {dropdownSplitButton}
+      </Example>
+      <Example minHeight="25em" heading="Dropdown with Groups" handlebars={DropdownGroupsRaw}>
+        {dropdownGroups}
       </Example>
     </Documentation>
   );
