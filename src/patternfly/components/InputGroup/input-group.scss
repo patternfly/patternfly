@@ -1,4 +1,8 @@
 .pf-c-input-group {
+  // Input Group
+  --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+
+  // Input Group Text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
@@ -17,6 +21,14 @@
   // Form Control
   --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-input-group--c-form-control--MarginRight: 1px;
+
+  // This component always needs to be light
+  @include pf-t-light;
+
+  display: flex;
+  width: 100%;
+  background-color: var(--pf-c-input-group--BackgroundColor);
+
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
@@ -39,9 +51,6 @@
       }
     }
   }
-
-  display: flex;
-  width: 100%;
 
   .pf-c-button {
     position: relative;
