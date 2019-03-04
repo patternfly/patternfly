@@ -148,6 +148,7 @@
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
     font-weight: var(--pf-c-table--FontWeight);
+    vertical-align: baseline;
 
     // First child padding left
     &:first-child {
@@ -453,10 +454,6 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
-  }
-
-  .pf-c-table__check {
-    vertical-align: middle;
   }
 
   .pf-c-table__icon {
