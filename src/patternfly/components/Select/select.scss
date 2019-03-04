@@ -61,6 +61,12 @@
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
 
+  // Toggle Button
+  --pf-c-select__toggle-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-button--MarginLeft: #{pf-size-prem(-8px)};
+  --pf-c-select__toggle-button--Color: var(--pf-global--Color--100);
+
   // Menu
   --pf-c-select__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-select__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -216,33 +222,13 @@
     }
   }
 
-  button:not(.pf-c-button) {
-    padding: 0;
+  .pf-c-select__toggle-button {
+    padding-right: var(--pf-c-select__toggle-button--PaddingRight);
+    padding-left: var(--pf-c-select__toggle-button--PaddingLeft);
+    margin-left: var(--pf-c-select__toggle-button--MarginLeft);
+    color: var(--pf-c-select__toggle-button--Color);
     border: 0;
-
-    &:focus {
-      outline: 5px auto -webkit-focus-ring-color;
-    }
-
-    &:active {
-      outline: 5px auto -webkit-focus-ring-color;
-    }
   }
-
-  // button > .pf-c-select__toggle-arrow {
-  //   & {
-  //     padding: 0;
-  //     border: 0;
-  //   }
-  // }
-
-  // .pf-c-button > .pf-c-select__toggle-arrow {
-  //   margin-left: 0;
-
-  //   & {
-  //     padding: 0;
-  //   }
-  // }
 }
 
 .pf-c-select__toggle-text {
