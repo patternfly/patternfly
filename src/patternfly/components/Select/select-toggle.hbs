@@ -1,11 +1,13 @@
 <{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
-  id="{{id}}-toggle" 
-  aria-haspopup="true"
-  aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
-	aria-labelledby="{{id}}-label {{id}}-toggle"
-	{{#if aria-label}}
-		aria-label="{{aria-label}}" 
-	{{/if}}
+  {{#unless select--IsTypeahead}}
+		id="{{id}}-toggle" 
+		aria-haspopup="true"
+		aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
+		aria-labelledby="{{id}}-label {{id}}-toggle"
+		{{#if aria-label}}
+			aria-label="{{aria-label}}" 
+		{{/if}}
+	{{/unless}}
 	{{#if select-toggle--attribute}}
 		{{{select-toggle--attribute}}}
 	{{/if}}>
