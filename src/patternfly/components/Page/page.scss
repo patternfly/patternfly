@@ -90,10 +90,10 @@
   --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--m-no-padding--PaddingTop: 0;
-  --pf-c-page__main-section--md--m-no-padding--PaddingRight: 0;
-  --pf-c-page__main-section--md--m-no-padding--PaddingBottom: 0;
-  --pf-c-page__main-section--md--m-no-padding--PaddingLeft: 0;
+  --pf-c-page__main-section--md--m-no-padding-mobile--PaddingTop: 0;
+  --pf-c-page__main-section--md--m-no-padding-mobile--PaddingRight: 0;
+  --pf-c-page__main-section--md--m-no-padding-mobile--PaddingBottom: 0;
+  --pf-c-page__main-section--md--m-no-padding-mobile--PaddingLeft: 0;
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
 
@@ -335,12 +335,12 @@
     --pf-c-page__main-section--BackgroundColor: var(--pf-c-page__main-section--m-dark-200--BackgroundColor);
   }
 
-  &.pf-m-no-padding {
+  &.pf-m-no-padding-mobile {
     @media screen and (max-width: $pf-global--breakpoint--md) {
-      --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--md--m-no-padding--PaddingTop);
-      --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--md--m-no-padding--PaddingRight);
-      --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--md--m-no-padding--PaddingBottom);
-      --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--md--m-no-padding--PaddingLeft);
+      --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--md--m-no-padding-mobile--PaddingTop);
+      --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--md--m-no-padding-mobile--PaddingRight);
+      --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--md--m-no-padding-mobile--PaddingBottom);
+      --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--md--m-no-padding-mobile--PaddingLeft);
     }
   }
 }
