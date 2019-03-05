@@ -57,14 +57,13 @@
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--md);
 
   // Toggle Arrow
-  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
 
   // Toggle Button
-  --pf-c-select__toggle-button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-button--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-button--MarginLeft: #{pf-size-prem(-8px)};
+  --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-clear--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-select__toggle-button--Color: var(--pf-global--Color--100);
 
   // Menu
@@ -222,10 +221,14 @@
     }
   }
 
+  .pf-c-select__toggle-clear {
+    padding-right: var(--pf-c-select__toggle-clear--PaddingRight);
+    padding-left: var(--pf-c-select__toggle-clear--PaddingLeft);
+  }
+
   .pf-c-select__toggle-button {
-    padding-right: var(--pf-c-select__toggle-button--PaddingRight);
-    padding-left: var(--pf-c-select__toggle-button--PaddingLeft);
-    margin-left: var(--pf-c-select__toggle-button--MarginLeft);
+    position: relative;
+    padding: 0;
     color: var(--pf-c-select__toggle-button--Color);
     border: 0;
   }
@@ -245,6 +248,7 @@
 
   // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
   // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
+  min-width: 0;
   max-width: var(--pf-c-select__toggle-wrapper--MaxWidth);
   white-space: normal;
 
@@ -268,14 +272,6 @@
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
   .pf-c-chip-group {
     margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
-  }
-}
-
-.pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
-  // This is adjusted so that the clear button can maintain even padding around while not creating too much space between the clear and arrow
-
-  .pf-c-select__toggle-arrow {
-    padding-left: -16px;
   }
 }
 

@@ -57,15 +57,7 @@
 				{{> button-icon button-icon--type="times-circle"}}
 			{{/button}}
 		{{/if}}
-		{{#if select--IsExpanded}}
-			{{#> button button--modifier="pf-m-plain pf-c-select__toggle-button" button--attribute=(concat 'id="' id '-toggle" aria-label="Select" aria-labelledby="' id '-label ' id '-toggle" aria-haspopup="true" aria-expanded="true"')}}
-				{{> button-icon button-icon--type="caret-down"}}
-			{{/button}}
-		{{else}}
-			{{#> button button--modifier="pf-m-plain pf-c-select__toggle-button" button--attribute=(concat 'id="' id '-toggle" aria-label="Select" aria-labelledby="' id '-label ' id '-toggle" aria-haspopup="true" aria-expanded="false"')}}
-				{{> button-icon button-icon--type="caret-down"}}
-			{{/button}}
-		{{/if}}
+			{{> select-toggle-button}}
 		{{else}}
 	  {{> select-toggle-icon}}
 	{{/if}}

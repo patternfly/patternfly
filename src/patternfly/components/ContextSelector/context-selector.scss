@@ -23,7 +23,7 @@
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-context-selector__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-context-selector__toggle-text--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-context-selector__toggle-text--MaxWidth: calc(var(--pf-c-context-selector--Width) - var(--pf-c-context-selector__toggle-icon--MarginLeft) - 30px); // hard coded last variable
+  --pf-c-context-selector__toggle-text--MaxWidth: calc(var(--pf-c-context-selector--Width) - var(--pf-global--spacer--md) - var(--pf-global--BorderWidth--sm) - var(--pf-global--BorderWidth--sm) - var(--pf-global--spacer--xl)); // width of the context selector minus the padding and borders.
 
   // Toggle Icon Arrow
   --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);

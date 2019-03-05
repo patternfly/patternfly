@@ -27,7 +27,6 @@
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
-  --pf-c-dropdown__toggle-text--Width: calc(100% - var(--pf-global--spacer--lg));
 
   // toggle button
   --pf-c-dropdown__toggle-button--Color: var(--pf-global--Color--100);
@@ -233,7 +232,6 @@
   }
 
   .pf-c-dropdown__toggle-text {
-    width: var(--pf-c-dropdown__toggle-text--Width);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
