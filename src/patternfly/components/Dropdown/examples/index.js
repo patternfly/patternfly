@@ -4,6 +4,7 @@ import Example from '@siteComponents/Example';
 import DropdownExpandedRaw from '!raw!./dropdown-expanded-example.hbs';
 import DropdownBasicExpandedRaw from '!raw!./dropdown-basic-expanded-example.hbs';
 import DropdownCollapsedRaw from '!raw!./dropdown-collapsed-example.hbs';
+import DropdownDisabledRaw from '!raw!./dropdown-disabled-example.hbs';
 import DropdownKebabRaw from '!raw!./dropdown-kebab-example.hbs';
 import DropdownKebabAlignRightRaw from '!raw!./dropdown-kebab-align-right-example.hbs';
 import DropdownAlignRightRaw from '!raw!./dropdown-align-right-example.hbs';
@@ -13,6 +14,7 @@ import DropdownGroupsRaw from '!raw!./dropdown-groups-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
 import DropdownBasicExpanded from './dropdown-basic-expanded-example.hbs';
 import DropdownCollapsed from './dropdown-collapsed-example.hbs';
+import DropdownDisabled from './dropdown-disabled-example.hbs';
 import DropdownKebab from './dropdown-kebab-example.hbs';
 import DropdownKebabAlignRight from './dropdown-kebab-align-right-example.hbs';
 import DropdownAlignRight from './dropdown-align-right-example.hbs';
@@ -28,6 +30,7 @@ export default () => {
   const dropdownExpanded = DropdownExpanded();
   const dropdownBasicExpanded = DropdownBasicExpanded();
   const dropdownCollapsed = DropdownCollapsed();
+  const dropdownDisabled = DropdownDisabled();
   const dropdownKebab = DropdownKebab();
   const dropdownKebabAlignRight = DropdownKebabAlignRight();
   const dropdownAlignRight = DropdownAlignRight();
@@ -51,6 +54,9 @@ export default () => {
       </Example>
       <Example heading="Dropdown (collapsed)" handlebars={DropdownCollapsedRaw}>
         {dropdownCollapsed}
+      </Example>
+      <Example heading="Dropdown (disabled)" handlebars={DropdownDisabledRaw}>
+        {dropdownDisabled}
       </Example>
       <Example className="is-expanded-dropdown" heading="Kebab" handlebars={DropdownKebabRaw}>
         {dropdownKebab}
