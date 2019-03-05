@@ -16,6 +16,13 @@
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
   --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
 
+  // Caption
+  --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table-caption--Color: var(--pf-global--Color--200);
+  --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--xl);
+
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
 
@@ -163,6 +170,16 @@
     &.pf-m-center {
       text-align: center;
     }
+  }
+
+  // Table caption
+  caption {
+    padding-top: var(--pf-c-table-caption--PaddingTop);
+    padding-bottom: var(--pf-c-table-caption--PaddingBottom);
+    padding-left: var(--pf-c-table-caption--PaddingLeft);
+    font-size: var(--pf-c-table-caption--FontSize);
+    color: var(--pf-c-table-caption--Color);
+    text-align: left;
   }
 
   // Table header cell
