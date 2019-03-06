@@ -65,5 +65,27 @@
         2 days ago
       {{/table-td}}
     {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="width-node2">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <div id="width-node2">Node 2</div>
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

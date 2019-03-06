@@ -104,7 +104,11 @@ $pf-c-table-xs-breakpoint: 380px;
 
   tbody.pf-m-expanded {
     tr:not(.pf-c-table__expandable-row) {
-      border-bottom: 0;
+      > * {
+        &::after {
+          border-bottom: 0;
+        }
+      }
     }
   }
 
@@ -124,7 +128,14 @@ $pf-c-table-xs-breakpoint: 380px;
 
     // Reset td padding
     & > * {
+      position: static;
       padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingRight) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingLeft);
+
+      &:not(:last-child) {
+        &::after {
+          border: 0;
+        }
+      }
     }
 
     // remove padding from first th to align with kebab
@@ -202,7 +213,9 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
-  .pf-c-table__compound-expansion-toggle {
+  td.pf-c-table__compound-expansion-toggle {
+    position: relative;
+
     // Compound expansion toggle
     // reset compound expansion toggle::before
     &::before {
@@ -215,11 +228,6 @@ $pf-c-table-xs-breakpoint: 380px;
       top: auto;
       right: 0;
       left: 0;
-    }
-
-    // add bottom border to expansion toggle::after
-    &.pf-m-expanded::after {
-      border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
     }
 
     // reset button padding

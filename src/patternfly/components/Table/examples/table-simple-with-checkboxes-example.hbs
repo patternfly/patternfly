@@ -74,5 +74,31 @@
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <div id="{{table--id}}-node3">Node 3</div>
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-3" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

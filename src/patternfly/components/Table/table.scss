@@ -126,7 +126,17 @@
     // content wraps. for those special cases, there must be an explicit height set on tr and table cell
     // for button height: 100% to work
     height: 1px;
-    border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+
+    > * {
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: "";
+        border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+      }
+    }
   }
 
   // undo default styling for each even child
@@ -284,10 +294,14 @@
 // using this method because the button may not always be full height of the parent cell if siblings wrap
 // ==================================================================
 .pf-c-table__compound-expansion-toggle {
-  position: relative;
+  @at-root .pf-c-table & {  // increase specificity
+    position: relative;
 
-  &.pf-m-expanded {
-    border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor);
+    &.pf-m-expanded {
+      &::after {
+        border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor);
+      }
+    }
   }
 
   &.pf-m-expanded,
