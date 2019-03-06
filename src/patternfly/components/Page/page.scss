@@ -90,6 +90,10 @@
   --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop: 0;
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight: 0;
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom: 0;
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: 0;
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
 
@@ -329,5 +333,14 @@
 
   &.pf-m-dark-200 {
     --pf-c-page__main-section--BackgroundColor: var(--pf-c-page__main-section--m-dark-200--BackgroundColor);
+  }
+
+  &.pf-m-no-padding-mobile {
+    @media screen and (max-width: $pf-global--breakpoint--md) {
+      --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop);
+      --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight);
+      --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom);
+      --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft);
+    }
   }
 }
