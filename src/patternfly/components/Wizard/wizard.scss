@@ -202,12 +202,12 @@
 
 .pf-c-wizard__description {
   display: none;
+  padding-top: var(--pf-c-wizard__description--PaddingTop);
+  color: var(--pf-c-wizard__description--Color);
   visibility: hidden;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: block;
-    padding-top: var(--pf-c-wizard__description--PaddingTop);
-    color: var(--pf-c-wizard__description--Color);
     visibility: visible;
   }
 }
