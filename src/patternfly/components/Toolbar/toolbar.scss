@@ -120,11 +120,12 @@
 }
 
 .pf-c-toolbar__action-group {
-  display: flex;
+  display: none;
+  visibility: hidden;
 
-  @media screen and (max-width: $pf-global--breakpoint--xl) {
-    display: none;
-    visibility: hidden;
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    display: flex;
+    visibility: visible;
   }
 
   > * + * {
