@@ -6,8 +6,8 @@
   {{#> form}}
     {{#> form-group form-group--attribute=(concat 'aria-labelledby="' id '-label"')}}
       <div class="pf-c-select__menu-group">
-        <div aria-hidden="true" id="group-status" class="pf-c-select__menu-group-title">Status</div>
-         {{#> form-fieldset form-fieldset--attribute='aria-labelledby="group-status"'}}
+        <div aria-hidden="true" id="{{id}}-group-status" class="pf-c-select__menu-group-title">Status</div>
+         {{#> form-fieldset form-fieldset--attribute=(concat 'aria-labelledby="' id '-group-status"')}}
           {{#> check check--type="label" check--attribute=(concat 'for="' id '-running"') check--modifier="pf-c-select__menu-item"}}
             {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="running"')}}{{/check-input}}
             {{#> check-label check-label--type="span"}}Running{{/check-label}}
@@ -31,8 +31,8 @@
         {{/form-fieldset}}
       </div>
       <div class="pf-c-select__menu-group">
-        <div aria-hidden="true" id="group-vendor" class="pf-c-select__menu-group-title">Vendor</div>
-          {{#> form-fieldset form-fieldset--attribute='aria-labelledby="group-vendor"'}}
+        <div aria-hidden="true" id="{{id}}-group-vendor" class="pf-c-select__menu-group-title">Vendor</div>
+          {{#> form-fieldset form-fieldset--attribute=(concat 'aria-labelledby="' id '-group-vendor"')}}
             {{#> check check--type="label" check--attribute=(concat 'for="' id '-dell"') check--modifier="pf-c-select__menu-item"}}
               {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-dell" name="dell"')}}{{/check-input}}
               {{#> check-label check-label--type="span"}}Dell{{/check-label}}
