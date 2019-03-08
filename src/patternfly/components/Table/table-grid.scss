@@ -184,6 +184,7 @@ $pf-c-table-xs-breakpoint: 380px;
         font-weight: normal;
         // set ::before to span all rows, up to 100
         grid-row: 1;
+        grid-row-end: 100;
       }
     }
   }
