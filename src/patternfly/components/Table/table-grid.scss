@@ -151,6 +151,10 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  .pf-c-table__icon > * {
+    text-align: left;
+  }
+
   // Standard td, in standard row (non-expandable)
   // exclude specifically styled tds, as they are placed explicitly within grid
   // :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)
