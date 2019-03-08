@@ -1,6 +1,7 @@
 .pf-c-input-group {
   // Input Group
-  --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
 
   // Input Group Text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
@@ -12,7 +13,7 @@
   --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--light-200);
   --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--dark);
   --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
 
   // Button
@@ -28,6 +29,7 @@
   display: flex;
   width: 100%;
   background-color: var(--pf-c-input-group--BackgroundColor);
+  border-radius: var(--pf-c-input-group--BorderRadius); // This adds a default border radius to make sure the input group wont display if a button with a border radius is used.
 
   /* stylelint-disable */
   > * + * {
