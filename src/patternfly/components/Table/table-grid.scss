@@ -80,6 +80,7 @@ $pf-c-table-xs-breakpoint: 380px;
   // Thead
   thead {
     display: none;
+    visibility: hidden;
   }
 
   // Tbody
@@ -299,10 +300,12 @@ $pf-c-table-xs-breakpoint: 380px;
     td:first-child::before {
       // Border treatment
       display: none;
+      visibility: hidden;
     }
 
     &:not(.pf-m-expanded) {
       display: none;
+      visibility: hidden;
     }
   }
 
