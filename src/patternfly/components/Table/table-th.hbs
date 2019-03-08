@@ -20,6 +20,7 @@
   {{#if table-th--attribute}}
     {{{table-th--attribute}}}
   {{/if}}>
+  {{#> table-cell-content}}
     {{#if table-th--sortable}}
       {{#> button button--modifier="pf-m-plain"}}
         {{> @partial-block}}
@@ -38,4 +39,5 @@
     {{else}}
       {{> @partial-block}}
     {{/if}}
+  {{/table-cell-content}}
 </th>
