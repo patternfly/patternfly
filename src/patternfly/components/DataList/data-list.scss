@@ -44,7 +44,7 @@ $pf-data-list--breakpoint--mobile: 380px;
   --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell-cell--md--MarginLeft: var(--pf-global--spacer--xl);
 
-  @media screen and (min-width: $pf-data-list--breakpoint--mobile) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list__cell-cell--md--PaddingTop);
   }
 
