@@ -102,7 +102,7 @@
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 
-  @media (any-pointer: none) {
+  @media (pointer: coarse) and (hover: none) {
     margin-bottom: 0;
   }
 
