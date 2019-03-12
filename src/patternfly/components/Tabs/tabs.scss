@@ -101,6 +101,7 @@
   margin-bottom: var(--pf-c-tabs__list--MarginBottom);
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 
   @media (any-hover: none) {
     margin-bottom: 0;
