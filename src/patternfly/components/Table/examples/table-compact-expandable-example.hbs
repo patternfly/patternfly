@@ -1,0 +1,87 @@
+{{#> table table--id="compact-expandable-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--desc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="compact-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}" aria-label="Details">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <p id="{{table--id}}-node1">Node 1</p>
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 1</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-11" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
+        <div class="pf-c-table__expandable-row-content">
+          This content has padding.
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="compact-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}" aria-label="Details">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository Name"}}
+        <p id="{{table--id}}-node2">Node 2</p>
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull Requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 2</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-12" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
+        This content has no padding.
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}

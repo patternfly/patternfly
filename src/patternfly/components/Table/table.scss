@@ -74,6 +74,8 @@
   --pf-c-table__expandable-row--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-table__expandable-row--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-table__expandable-row--before--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-table__expandable-row--before--Top: calc(var(--pf-c-table--BorderWidth) * -1);
+  --pf-c-table__expandable-row--before--Bottom: calc(var(--pf-c-table--BorderWidth) * -1);
   --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
   --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--xl);
@@ -208,8 +210,8 @@
       position: absolute;
 
       // offset top to extend above tr border
-      top: calc(var(--pf-c-table--BorderWidth) * -1);
-      bottom: calc(var(--pf-c-table--BorderWidth) * -1);
+      top: var(--pf-c-table__expandable-row--before--Top);
+      bottom: var(--pf-c-table__expandable-row--before--Bottom);
       left: 0;
       z-index: var(--pf-c-table__expandable-row--before--ZIndex);
       width: var(--pf-c-table__expandable-row--before--Width);
