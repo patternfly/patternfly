@@ -23,11 +23,18 @@
     Chip
   {{/chip-text}}
   {{#> badge badge--modifier="pf-m-read"}}
-  7
-{{/badge}}
+    7
+  {{/badge}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_three chip_three" aria-label="Remove" id="remove_chip_three"'}}
     {{> button-icon button-icon--type="times-circle"}}
   {{/button}}
+{{/chip}}
+<br>
+<br>
+{{#> chip chip--type="div" chip--modifier="pf-m-read-only"}}
+  {{#> chip-text}}
+    Read-only Chip
+  {{/chip-text}}
 {{/chip}}
 <br>
 <br>
