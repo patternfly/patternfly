@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 // screen-reader - visually hide, but expose to screen readers
 @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
   .pf-u-screen-reader#{$breakpoint-value} {

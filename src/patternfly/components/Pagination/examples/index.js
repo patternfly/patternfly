@@ -10,7 +10,6 @@ import PaginationBottomExample from './pagination-bottom-example.hbs';
 import paginationTopExampleDoc from '../docs/pagination-top-example.md';
 import paginationBottomExampleDoc from '../docs/pagination-bottom-example.md';
 import docs from '../docs/code.md';
-import '../pagination.scss';
 
 export const Docs = docs;
 
@@ -18,9 +17,11 @@ export default () => {
   const paginationTopExample = PaginationTopExample();
   const paginationTopExpandedExample = PaginationTopExpandedExample();
   const paginationBottomExample = PaginationBottomExample();
+  const headingText = 'Pagination';
+  const variablesRoot = 'pf-c-pagination';
 
   return (
-    <Documentation docs={docs}>
+    <Documentation docs={docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Pagination Top"
         handlebars={paginationTopExampleRaw}

@@ -23,7 +23,6 @@ import NavListTertiaryExample from './nav-tertiary-list-example.hbs';
 import NavMixedExample from './nav-mixed-example.hbs';
 
 import docs from '../docs/code.md';
-import '../nav.scss';
 
 export const Docs = docs;
 
@@ -37,9 +36,10 @@ export default () => {
   const navListTertiaryExample = NavListTertiaryExample();
   const navMixedExample = NavMixedExample();
   const headingText = 'Navigation';
+  const variablesRoot = 'pf-c-nav';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Simple Nav" handlebars={navSimpleListExampleRaw}>
         {navSimpleListExample}
       </Example>

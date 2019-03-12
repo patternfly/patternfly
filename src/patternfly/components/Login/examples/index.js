@@ -6,16 +6,17 @@ import loginInvalidExampleRaw from '!raw!./login-invalid-example.hbs';
 import LoginSimpleExample from './login-simple-example.hbs';
 import LoginInvalidExample from './login-invalid-example.hbs';
 import docs from '../docs/code.md';
-import '../login.scss';
 
 export const Docs = docs;
 
 export default () => {
   const loginSimpleExample = LoginSimpleExample();
   const loginInvalidExample = LoginInvalidExample();
+  const headingText = 'Login';
+  const variablesRoot = 'pf-c-login';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Login Simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw}>
         {loginSimpleExample}
       </Example>

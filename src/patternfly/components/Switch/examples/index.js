@@ -8,7 +8,6 @@ import SwitchExample from './switch-example.hbs';
 import SwitchDisabledExample from './switch-disabled-example.hbs';
 import SwitchNoLabelExample from './switch-no-label-example.hbs';
 import docs from '../docs/code.md';
-import '../switch.scss';
 
 export const Docs = docs;
 
@@ -16,9 +15,11 @@ export default () => {
   const switchExample = SwitchExample();
   const switchDisabledExample = SwitchDisabledExample();
   const switchNoLabelExample = SwitchNoLabelExample();
+  const headingText = 'Switch';
+  const variablesRoot = 'pf-c-switch';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Switch" handlebars={SwitchExampleRaw}>
         {switchExample}
       </Example>

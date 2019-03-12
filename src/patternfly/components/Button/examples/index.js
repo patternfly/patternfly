@@ -10,7 +10,6 @@ import ButtonStatesTemplate from './button-states-example.hbs';
 import ButtonBlockTemplate from './button-block-example.hbs';
 import ButtonLinkExample from './button-link-example.hbs';
 import docs from '../docs/code.md';
-import '../button.scss';
 
 export const Docs = docs;
 
@@ -20,9 +19,10 @@ export default () => {
   const buttonLinkExample = ButtonLinkExample();
   const buttonBlockTemplate = ButtonBlockTemplate();
   const headingText = 'Button';
+  const variablesRoot = 'pf-c-button';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Button Types" handlebars={ButtonTypesTemplateRaw}>
         {buttonTypesTemplate}
       </Example>

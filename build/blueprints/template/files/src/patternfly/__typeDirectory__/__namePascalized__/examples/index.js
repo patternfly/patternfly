@@ -7,20 +7,21 @@ import {{moduleName}}SimpleExample from './{{nameDasherized}}-simple-example.hbs
 import {{moduleName}}ComplexExample from './{{nameDasherized}}-complex-example.hbs';
 import {{nameCamelized}}ComplexExampleDoc from '../docs/{{nameDasherized}}-complex.md';
 import docs from '../docs/code.md';
-import '../{{nameDasherized}}.scss';
 
 export const Docs = docs;
 
 export default () => {
   const {{nameCamelized}}SimpleExample = {{moduleName}}SimpleExample();
   const {{nameCamelized}}ComplexExample = {{moduleName}}ComplexExample();
+  const headingText = '{{nameTitleized}}';
+  const variablesRoot = '{{bemName}}';
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="{{moduleName}} Simple" handlebars={{simpleExampleRawReference}} minHeight="20em">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="{{nameTitleized}} Simple" handlebars={{simpleExampleRawReference}} minHeight="20em">
         {{simpleExampleReference}}
       </Example>
-      <Example heading="{{moduleName}} Complex" handlebars={{complexExampleRawReference}} docs={{complexExampleDocReference}}>
+      <Example heading="{{nameTitleized}} Complex" handlebars={{complexExampleRawReference}} docs={{complexExampleDocReference}}>
         {{complexExampleReference}}
       </Example>
     </Documentation>

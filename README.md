@@ -1,6 +1,6 @@
 # PatternFly 4
 
-## Install 
+## Install
 
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
 - run `npm install @patternfly/patternfly --save`
@@ -58,6 +58,13 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 *To view visit http://localhost:8000/demos/<name>*
 
+## Guidelines for CSS Development
+
+- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://pf4.patternfly.org, and information detailing the change.
+- If global variables are modified in Core, a React issue should be opened to address this.
+- CSS developers should ensure that animation is well documented and communicated to the respective React developer.
+- Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
+
 ## Testing for Accessibility
 
 PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf4.patternfly.org/accessibility-guide).
@@ -67,13 +74,13 @@ aXe is available as either a browser extension or npm script.
 
 To run the a11y audit locally:
 - install the latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
-  - alternatively, macOS users can simply `brew cask install chromedriver`
+  - macOS users can simply `brew cask install chromedriver`
 - run `npm run dev`
 - run `npm run a11y` (in another console)
 
 The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
 
-The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/). 
+The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
 ### Fixing Violations
 
@@ -87,5 +94,5 @@ If you have any suggestions about ways that we can improve how we use this tool,
 
 ## FAQ
 
-[How do I use SCSS variables to customize
+[How do I use CSS variables to customize
 the library?](https://pf4.patternfly.org/guidelines#variables)

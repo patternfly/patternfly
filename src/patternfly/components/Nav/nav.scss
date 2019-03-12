@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-nav {
   --pf-c-nav--Width: #{pf-size-prem(290px)};
   --pf-c-nav--Transition: var(--pf-global--Transition);
@@ -65,9 +63,9 @@
   --pf-c-nav__simple-list-link--focus--Color: var(--pf-global--link--Color);
 
   // background
-  --pf-c-nav__simple-list-link--hover--BackgroundColor: #{$pf-color-black-150};
-  --pf-c-nav__simple-list-link--active--BackgroundColor: #{$pf-color-black-150};
-  --pf-c-nav__simple-list-link--focus--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-nav__simple-list-link--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-nav__simple-list-link--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-nav__simple-list-link--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
   // List horizontal link
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
@@ -154,7 +152,7 @@
   // Modifier - simple list current
   --pf-c-nav__simple-list-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-nav__simple-list-link--m-current--BackgroundColor: #{$pf-color-black-150};
+  --pf-c-nav__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
   // Modifier - simple list separator
   --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--PaddingLeft);
@@ -178,6 +176,7 @@
   // Hide scrollbars
   &::-webkit-scrollbar {
     display: none;
+    visibility: hidden;
   }
 
   // Disable underline
@@ -524,6 +523,7 @@
   // Hide scrollbars
   &::-webkit-scrollbar {
     display: none;
+    visibility: hidden;
   }
 
   // Expanded list item

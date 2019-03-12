@@ -14,7 +14,6 @@ import OptionsMenuTopExample from './options-menu-top-example.hbs';
 import OptionsMenuAlignRightExample from './options-menu-align-right-example.hbs';
 import OptionsMenuPlainTextExample from './options-menu-plain-text-example.hbs';
 import docs from '../docs/code.md';
-import '../options-menu.scss';
 
 export const Docs = docs;
 
@@ -25,9 +24,11 @@ export default () => {
   const optionsMenuTopExample = OptionsMenuTopExample();
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
   const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
+  const headingText = 'Options Menu';
+  const variablesRoot = 'pf-c-options-menu';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Options Menu - Single option"
         className="is-expanded-dropdown"

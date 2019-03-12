@@ -9,7 +9,6 @@ import BreadcrumbWithTitleExample from './breadcrumb-with-title-example.hbs';
 import BreadcrumbWithoutHomeLink from './breadcrumb-without-home-link-example.hbs';
 import breadcrumbWithTitleExampleDoc from '../docs/breadcrumb-with-title.md';
 import docs from '../docs/code.md';
-import '../breadcrumb.scss';
 
 export const Docs = docs;
 
@@ -17,9 +16,11 @@ export default () => {
   const breadcrumbExample = BreadcrumbExample();
   const breadcrumbWithTitleExample = BreadcrumbWithTitleExample();
   const breadcrumbWithoutHomeLink = BreadcrumbWithoutHomeLink();
+  const headingText = 'Breadcrumb';
+  const variablesRoot = 'pf-c-breadcrumb';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw}>
         {breadcrumbExample}
       </Example>

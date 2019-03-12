@@ -8,7 +8,6 @@ import ListUnorderedExample from './list-unordered-example.hbs';
 import ListOrderedExample from './list-ordered-example.hbs';
 import ListInlineExample from './list-inline-example.hbs';
 import docs from '../docs/code.md';
-import '../list.scss';
 
 export const Docs = docs;
 
@@ -17,9 +16,10 @@ export default () => {
   const listOrderedExample = ListOrderedExample();
   const listInlineExample = ListInlineExample();
   const headingText = 'List';
+  const variablesRoot = 'pf-c-list';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Unordered List" handlebars={listUnorderedExampleRaw}>
         {listUnorderedExample}
       </Example>

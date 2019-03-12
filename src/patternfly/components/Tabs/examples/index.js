@@ -25,7 +25,6 @@ import TabsExampleScroll from './tabs-scroll.hbs';
 import tabsScrollDocs from '../docs/tabs-scroll.md';
 
 import docs from '../docs/code.md';
-import '../tabs.scss';
 
 export const headingText = 'Tabs';
 export const Docs = docs;
@@ -35,10 +34,11 @@ export default () => {
   const tabsExampleSecondary = TabsExampleSecondary();
   const tabsExampleFilled = TabsExampleFilled();
   const tabsExampleScroll = TabsExampleScroll();
+  const variablesRoot = 'pf-c-tabs';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Primary tabs with sections" handlebars={tabsExamplePrimaryRaw} docs={tabsPrimaryDocs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Primary tabs" handlebars={tabsExamplePrimaryRaw} docs={tabsPrimaryDocs}>
         {tabsExamplePrimary}
       </Example>
       <Example heading="Scroll buttons" handlebars={tabsExampleScrollRaw} docs={tabsScrollDocs}>

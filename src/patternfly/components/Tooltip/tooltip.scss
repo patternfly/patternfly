@@ -1,8 +1,6 @@
-@import "../../patternfly-imports";
-
 .pf-c-tooltip {
   // Component variables
-  --pf-c-tooltip--MaxWidth: #{pf-size-prem(200px)};
+  --pf-c-tooltip--MaxWidth: #{pf-size-prem(300px)};
 
   // Content variables
   --pf-c-tooltip__content--PaddingTop: var(--pf-global--spacer--md);

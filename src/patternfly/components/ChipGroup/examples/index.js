@@ -15,7 +15,6 @@ import chipGroupSelectCollapsedExample from './chip-group-select-collapsed-examp
 import chipGroupMultiSelectDoc from '../docs/chip-group-multi-select.md';
 
 import docs from '../docs/code.md';
-import '../chip-group.scss';
 
 export const Docs = docs;
 
@@ -25,9 +24,10 @@ export default () => {
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
   const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
   const headingText = 'Chip Group';
+  const variablesRoot = 'pf-c-chip-group';
 
   return (
-    <Documentation heading={headingText}>
+    <Documentation heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Chip Group Toolbar (Collapsed)"
         handlebars={ChipGroupToolbarCollapsedExampleRaw}

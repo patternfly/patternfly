@@ -9,7 +9,7 @@
     "backstop:approve": "node test/approve-conflicts.js",
     "backstop:init": "node test/create-references.js",
     "bootstrap:build": "node npm-scripts/build-bootstrap-workspace.js",
-    "build-patternfly": "rm -rf dist && rm -rf tmp && npm run build:pficons && gulp build",
+    "build-patternfly": "gulp pre-clean && npm run build:pficons && gulp build && gulp post-clean",
     "build": "gatsby build",
     "build:pficons": "node ./src/icons/generateIcons.js",
     "build:pficonfont": "gulp build-pficonfont",
@@ -47,8 +47,10 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^7.4.0",
+    "@commitlint/config-conventional": "^7.3.1",
     "@fortawesome/fontawesome": "^1.1.8",
-    "axe-core": "^3.0.3",
+    "axe-core": "^3.1.2",
     "axe-webdriverjs": "^2.0.1",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
@@ -87,6 +89,7 @@
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.3",
+    "gulp-header": "^2.0.7",
     "gulp-iconfont": "^10.0.2",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-rename": "^1.2.3",
@@ -98,7 +101,7 @@
     "handlebars-loader": "^1.7.0",
     "handlebars-utils": "^1.0.6",
     "html-loader": "^0.5.5",
-    "husky": "^0.14.3",
+    "husky": "^1.3.1",
     "inflection": "^1.12.0",
     "jsdom": "^11.8.0",
     "lint-staged": "^7.0.4",
@@ -197,5 +200,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

@@ -11,8 +11,6 @@ import CardNoFooterExample from './card-no-footer-example.hbs';
 import CardNoHeaderExample from './card-no-header-example.hbs';
 import CardContentOnlyExample from './card-content-only-example.hbs';
 
-import '../card.scss';
-
 export const Docs = docs;
 
 export default () => {
@@ -21,9 +19,10 @@ export default () => {
   const cardNoHeaderExample = CardNoHeaderExample();
   const cardContentOnlyExample = CardContentOnlyExample();
   const headingText = 'Card';
+  const variablesRoot = 'pf-c-card';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
       </Example>

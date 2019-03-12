@@ -10,7 +10,9 @@
           Log in to your account
         {{/title}}
         {{#> dropdown id="invalid-login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
-          English
+          {{#> dropdown-toggle-text}}
+            English
+          {{/dropdown-toggle-text}}
         {{/dropdown}}
       {{/login-main-header}}
       {{#> login-main-body}}
@@ -29,8 +31,8 @@
           {{/form-group}}
           {{#> form-group}}
           {{#> check}}
-              {{#> check-input check-input--attribute='type="checkbox" id="invalid-login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
-              {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+              {{#> check-input check-input--attribute='type="checkbox" id="invalid-login-demo-checkbox" name="invalid-login-demo-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="invalid-login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}

@@ -10,7 +10,6 @@ import FormHorizontalAlignLabelsExample from './form-horizontal-align-labels-exa
 import FormHelpTextExample from './form-help-text-example.hbs';
 import FormActionGroupExample from './form-action-group-example.hbs';
 import docs from '../docs/code.md';
-import '../form.scss';
 
 export const Docs = docs;
 
@@ -20,9 +19,10 @@ export default () => {
   const formHelpTextExample = FormHelpTextExample();
   const formActionGroupExample = FormActionGroupExample();
   const headingText = 'Form';
+  const variablesRoot = 'pf-c-form';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Vertical aligned Labels" handlebars={FormVerticalAlignLabelsExampleRaw}>
         {formVerticalAlignLabelsExample}
       </Example>

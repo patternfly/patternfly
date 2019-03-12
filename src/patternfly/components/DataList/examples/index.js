@@ -17,7 +17,6 @@ import DataListExpandableExampleDoc from '../docs/data-list-expandable.md';
 import DataListWidthExampleDoc from '../docs/data-list-width.md';
 
 import docs from '../docs/code.md';
-import '../data-list.scss';
 
 export const Docs = docs;
 
@@ -26,9 +25,11 @@ export default () => {
   const dataListCheckActionExample = DataListCheckActionExample();
   const dataListExpandableExample = DataListExpandableExample();
   const dataListWidthExample = DataListWidthExample();
+  const headingText = 'Data List';
+  const variablesRoot = 'pf-c-data-list';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Data List Simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
         {dataListSimpleExample}
       </Example>

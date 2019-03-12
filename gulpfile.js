@@ -7,10 +7,31 @@ const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const gulpStylelint = require('gulp-stylelint');
-const pficonRunTimestamp = Math.round(Date.now() / 1000);
+const del = require('del');
 const iconfontCss = require('gulp-iconfont-css');
+const header = require('gulp-header');
 
+const pficonRunTimestamp = Math.round(Date.now() / 1000);
 const pficonFontName = 'pficon';
+const conf = {
+  dirs: {
+    build: ['./dist', './tmp', './src/icons/PfIcons']
+  },
+  files: {
+    tmpSrc: [
+      './dist/patternfly-variables.scss',
+      './dist/patternfly-themes.scss',
+      './dist/patternfly-shield-noninheritable.scss',
+      './dist/patternfly-shield-inheritable.scss',
+      './dist/patternfly-pf-icons.scss',
+      './dist/patternfly-icons.scss',
+      './dist/patternfly-globals.scss',
+      './dist/patternfly-fonts.scss',
+      './dist/patternfly-fa-icons.scss',
+      './dist/patternfly-common.scss'
+    ]
+  }
+};
 
 gulp.task('build-pficonfont', () => {
   gulp
@@ -62,7 +83,7 @@ gulp.task('build-library', ['build-tmp'], () =>
 );
 
 gulp.task('lint-css', ['minify-css'], () => {
-  const options = { logs: false}
+  const options = { logs: false };
   gulp
     .src('./dist/patternfly.css')
     .pipe(replace('stylelint-enable', '', options))
@@ -94,6 +115,7 @@ gulp
         './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
         '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
       ])
+      .pipe(header('@import "../../patternfly-imports";'))
       .pipe(sass().on('error', sass.logError))
       .pipe(replace('./assets/images', '../../assets/images'))
       .pipe(gulp.dest('./dist'))
@@ -112,3 +134,6 @@ gulp.task('copy-icons', () => {
   gulp.src('./src/icons/definitions/**/*.*').pipe(gulp.dest('./dist/icons/'));
   gulp.src('./src/icons/PfIcons/**/*.*').pipe(gulp.dest('./dist/icons/PfIcons/'));
 });
+
+gulp.task('pre-clean', () => del(conf.dirs.build));
+gulp.task('post-clean', () => del(conf.files.tmpSrc));

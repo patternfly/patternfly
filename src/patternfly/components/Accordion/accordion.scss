@@ -1,0 +1,132 @@
+.pf-c-accordion {
+  // accordion
+  --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-accordion--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-accordion--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-accordion--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-accordion--PaddingBottom: var(--pf-global--spacer--xl);
+
+  // accordion toggle
+  --pf-c-accordion__toggle--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-accordion__toggle--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-accordion__toggle--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-accordion__toggle--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-accordion__toggle--BorderLeftColor: transparent;
+  --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-accordion__toggle--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-accordion__toggle--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
+
+  // accordion toggle text
+  --pf-c-accordion__toggle-text--hover--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle-text--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle-text--active--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle-text--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle-text--focus--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle-text--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle-text--expanded--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle-text--expanded--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle-text--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
+
+  // accordion toggle icon
+  --pf-c-accordion__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
+
+  // accordion expanded content
+  --pf-c-accordion__expanded-content--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-accordion__expanded-content--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-accordion__expanded-content--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-accordion__expanded-content--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-accordion__expanded-content--Color: var(--pf-global--secondary-color--100);
+  --pf-c-accordion__expanded-content--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-accordion__expanded-content--BorderLeftColor: transparent;
+  --pf-c-accordion__expanded-content--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-accordion__expanded-content--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
+
+  // This component always needs to be light
+  @include pf-t-light;
+
+  padding-top: var(--pf-c-accordion--PaddingTop);
+  padding-bottom: var(--pf-c-accordion--PaddingBottom);
+  background-color: var(--pf-c-accordion--BackgroundColor);
+  box-shadow: var(--pf-c-accordion--BoxShadow);
+
+  .pf-c-accordion__toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--pf-c-accordion__toggle--PaddingTop) var(--pf-c-accordion__toggle--PaddingRight) var(--pf-c-accordion__toggle--PaddingBottom) var(--pf-c-accordion__toggle--PaddingLeft);
+    border: 0;
+    border-left: var(--pf-c-accordion__toggle--m-expanded--BorderWidth) solid var(--pf-c-accordion__toggle--BorderLeftColor);
+
+    .pf-c-accordion__toggle-text {
+      max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .pf-c-accordion__toggle-icon {
+      line-height: var(--pf-c-accordion__toggle-icon--LineHeight);
+    }
+
+    &.pf-m-expanded {
+      --pf-c-accordion__toggle--BorderLeftColor: var(--pf-c-accordion__toggle--m-expanded--BorderLeftColor);
+
+      .pf-c-accordion__toggle-text {
+        font-weight: var(--pf-c-accordion__toggle-text--expanded--FontWeight);
+        color: var(--pf-c-accordion__toggle-text--expanded--Color);
+      }
+
+      .pf-c-accordion__toggle-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.pf-m-hover,
+    &:hover {
+      background-color: var(--pf-c-accordion__toggle--hover--BackgroundColor);
+
+      .pf-c-accordion__toggle-text {
+        color: var(--pf-c-accordion__toggle-text--hover--Color);
+      }
+    }
+
+    &.pf-m-active,
+    &:active {
+      background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
+
+      .pf-c-accordion__toggle-text {
+        font-weight: var(--pf-c-accordion__toggle-text--active--FontWeight);
+        color: var(--pf-c-accordion__toggle-text--active--Color);
+      }
+    }
+
+    &.pf-m-focus,
+    &:focus {
+      background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
+
+      .pf-c-accordion__toggle-text {
+        font-weight: var(--pf-c-accordion__toggle-text--focus--FontWeight);
+        color: var(--pf-c-accordion__toggle-text--focus--Color);
+      }
+    }
+  }
+
+  .pf-c-accordion__expanded-content {
+    padding: var(--pf-c-accordion__expanded-content--PaddingTop) var(--pf-c-accordion__expanded-content--PaddingRight) var(--pf-c-accordion__expanded-content--PaddingBottom) var(--pf-c-accordion__expanded-content--PaddingLeft);
+    font-size: var(--pf-c-accordion__expanded-content--FontSize);
+    color: var(--pf-c-accordion__expanded-content--Color);
+    border-left: var(--pf-c-accordion__expanded-content--m-expanded--BorderWidth) solid var(--pf-c-accordion__expanded-content--BorderLeftColor);
+
+    &.pf-m-fixed {
+      max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
+      overflow-y: auto;
+    }
+
+    &.pf-m-expanded {
+      --pf-c-accordion__expanded-content--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
+    }
+  }
+}

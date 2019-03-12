@@ -4,16 +4,16 @@ import Example from '@siteComponents/Example';
 import BackgroundImageRaw from '!raw!./background-image-example.hbs';
 import BackgroundImage from './background-image-example.hbs';
 import docs from '../docs/code.md';
-import './examples.scss';
 
 export const Docs = docs;
 
 export default () => {
   const backgroundImage = BackgroundImage();
   const headingText = 'Background Image';
+  const variablesRoot = 'pf-c-background-image';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Background image Example" fullPageOnly="true" handlebars={BackgroundImageRaw}>
         {backgroundImage}
       </Example>

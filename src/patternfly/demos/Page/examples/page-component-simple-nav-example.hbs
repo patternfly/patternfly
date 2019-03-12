@@ -1,11 +1,20 @@
 {{#> background-image}}
 {{/background-image}}
 {{#> page page--id="page-layout-simple-nav"}}
+  {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-template-header-brand-elements page-template-header-brand--toggle="true"}}
-      {{/page-template-header-brand-elements}}
+      {{#> page-header-brand-toggle}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-simple-nav"')}}
+          {{> button-icon button-icon--type="bars"}}
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
@@ -47,6 +56,7 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
+    <a id="main-content"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

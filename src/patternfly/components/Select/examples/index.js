@@ -30,7 +30,6 @@ import SelectSingleTypeaheadExampleDoc from '../docs/select-single-typeahead.md'
 import SelectMultiTypeaheadExampleDoc from '../docs/select-multi-typeahead.md';
 import SelectCheckboxExampleDoc from '../docs/select-checkbox.md';
 import docs from '../docs/code.md';
-import '../select.scss';
 
 export const selectSingleExampleDoc = SelectSingleExampleDoc;
 export const selectSingleTypeaheadExampleDoc = SelectSingleTypeaheadExampleDoc;
@@ -51,9 +50,11 @@ export default () => {
   const selectCheckboxExample = SelectCheckboxExample();
   const selectCheckboxExpandedExample = SelectCheckboxExpandedExample();
   const selectCheckboxExpandedSelectedExample = SelectCheckboxExpandedSelectedExample();
+  const headingText = 'Select';
+  const variablesRoot = 'pf-c-select';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Select - Single" handlebars={SelectSingleExampleRaw}>
         {selectSingleExample}
       </Example>

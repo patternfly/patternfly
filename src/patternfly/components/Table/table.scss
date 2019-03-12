@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-table {
 
   /* stylelint-disable */
@@ -17,6 +15,13 @@
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
   --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
+
+  // Caption
+  --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table-caption--Color: var(--pf-global--Color--200);
+  --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
@@ -61,17 +66,12 @@
   --pf-c-table__expandable-row--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-table__expandable-row--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-table__expandable-row--before--ZIndex: var(--pf-global--ZIndex--sm);
-
-  // Table rows
-  // Padding vars must be individual as they are contextually reset
-  --pf-c-table__expandable-row-content--PaddingTop: 0;
-  --pf-c-table__expandable-row-content--PaddingRight: 0;
-  --pf-c-table__expandable-row-content--PaddingBottom: 0;
-  --pf-c-table__expandable-row-content--PaddingLeft: 0;
-  --pf-c-table__expandable-row-content--MaxHeight: #{pf-size-prem(450px)};
+  --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
-  --pf-c-table__expandable-row-content--m-expanded--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--m-expanded--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Sort indicator
   --pf-c-table__sort-indicator--MarginLeft: var(--pf-global--spacer--md);
@@ -155,6 +155,7 @@
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
     font-weight: var(--pf-c-table--FontWeight);
+    vertical-align: baseline;
 
     // First child padding left
     &:first-child {
@@ -170,6 +171,16 @@
     &.pf-m-center {
       text-align: center;
     }
+  }
+
+  // Table caption
+  caption {
+    padding-top: var(--pf-c-table-caption--PaddingTop);
+    padding-bottom: var(--pf-c-table-caption--PaddingBottom);
+    padding-left: var(--pf-c-table-caption--PaddingLeft);
+    font-size: var(--pf-c-table-caption--FontSize);
+    color: var(--pf-c-table-caption--Color);
+    text-align: left;
   }
 
   // Table header cell
@@ -377,9 +388,14 @@
     transition: var(--pf-c-table__expandable-row--Transition);
   }
 
-  // Td
-  td {
-    position: relative;
+  // no padding on standard td
+  td:only-child {
+    padding: 0;
+    padding-left: var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
+  }
+
+  .pf-c-table__expandable-row-content {
+    padding: var(--pf-c-table__expandable-row-content--PaddingTop) var(--pf-c-table__expandable-row-content--PaddingRight) var(--pf-c-table__expandable-row-content--PaddingBottom) var(--pf-c-table__expandable-row-content--PaddingLeft);
   }
 
   // Modifier - Expanded tr
@@ -389,39 +405,13 @@
     border-bottom-width: var(--pf-c-table--BorderWidth);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
   }
-}
 
-// Expandable row content
-// ==================================================================
-.pf-c-table__expandable-row-content {
-  max-height: 0;
-
-  // set base variables to reset later
-  padding: var(--pf-c-table__expandable-row-content--PaddingTop) var(--pf-c-table__expandable-row-content--PaddingRight) var(--pf-c-table__expandable-row-content--PaddingBottom) var(--pf-c-table__expandable-row-content--PaddingLeft);
-  overflow: auto;
-  word-break: break-word;
-  border-top-color: transparent;
-  border-top-width: 0;
-  transition: var(--pf-c-table__expandable-row-content--Transition);
-
-  // Modifier on td- Expanded
-  /* stylelint-disable */
-  tr.pf-m-expanded & {
-    --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table__expandable-row-content--m-expanded--PaddingTop);
-    --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table__expandable-row-content--m-expanded--PaddingBottom);
-
-    max-height: var(--pf-c-table__expandable-row-content--MaxHeight);
-  }
-  /* stylelint-enable */
-}
-
-.pf-c-table td:only-child,
-.pf-c-table th:only-child {
-  &,
-  .pf-c-table__expandable-row-content {
-    padding: 0;
+  &:not(.pf-m-expanded) {
+    display: none;
+    visibility: hidden;
   }
 }
+
 
 // Nested table
 // ==================================================================
@@ -482,6 +472,10 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+  }
+
+  .pf-c-table__icon {
+    text-align: center;
   }
 
   // nested tables

@@ -25,7 +25,6 @@ import flexJustificationExampleDoc from '../docs/flex-justification.md';
 import flexColumnsExampleDoc from '../docs/flex-columns.md';
 
 import docs from '../docs/code.md';
-import '../flex.scss';
 
 export const Docs = docs;
 
@@ -37,9 +36,10 @@ export default () => {
   const flexJustificationExample = FlexJustificationExample();
   const flexColumnsExample = FlexColumnsExample();
   const headingText = 'Flex layout system';
+  const variablesRoot = 'pf-l-flex';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="flex-documentation">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="flex-documentation">
       <Example intro={flexIntroDoc} heading="Basic Usage" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
         {flexBasicExample}
       </Example>

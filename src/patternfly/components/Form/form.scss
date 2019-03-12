@@ -1,6 +1,3 @@
-
-@import "../../patternfly-imports";
-
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter);
 
@@ -25,8 +22,7 @@
 
   // actions
   --pf-c-form__actions--MarginBottom: calc(var(--pf-c-form__actions--child--MarginBottom) * -1);
-  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--md);
   --pf-c-form__actions--child--MarginBottom: var(--pf-global--spacer--sm);
 
   // Helpers
@@ -153,6 +149,7 @@
 
   &.pf-m-inactive {
     display: none;
+    visibility: hidden;
   }
 
   &.pf-m-hidden {

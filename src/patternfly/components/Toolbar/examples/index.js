@@ -16,7 +16,6 @@ import ToolbarFilterExpandedCheckedExample from './toolbar-filter-expanded-check
 import ToolbarMobileFilterExample from './toolbar-mobile-filter-example.hbs';
 import ToolbarMobileFilterCheckedExample from './toolbar-mobile-filter-checked-example.hbs';
 import docs from '../docs/code.md';
-import '../toolbar.scss';
 
 export const Docs = docs;
 
@@ -28,9 +27,11 @@ export default () => {
   const toolbarFilterExpandedCheckedExample = ToolbarFilterExpandedCheckedExample();
   const toolbarMobileFilterExample = ToolbarMobileFilterExample();
   const toolbarMobileFilterCheckedExample = ToolbarMobileFilterCheckedExample();
+  const headingText = 'Toolbar';
+  const variablesRoot = 'pf-c-toolbar';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading="Toolbar simple" handlebars={toolbarSimpleExampleRaw}>
         {toolbarSimpleExample}
       </Example>

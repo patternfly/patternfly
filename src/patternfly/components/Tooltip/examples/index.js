@@ -13,7 +13,6 @@ import TooltipBottomExample from './tooltip-bottom-example.hbs';
 import TooltipLeftExample from './tooltip-left-example.hbs';
 
 import docs from '../docs/code.md';
-import '../tooltip.scss';
 
 export const Docs = docs;
 
@@ -23,9 +22,10 @@ export default () => {
   const tooltipBottomExample = TooltipBottomExample();
   const tooltipLeftExample = TooltipLeftExample();
   const headingText = 'Tooltip';
+  const variablesRoot = 'pf-c-tooltip';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example className="is-tooltip" heading="Tooltip Top" handlebars={TooltipTopExampleRaw}>
         {tooltipTopExample}
       </Example>

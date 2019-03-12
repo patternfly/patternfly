@@ -9,6 +9,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
 | `role="main"` | `.pf-c-page__main` | Identifies the element that serves as the main region. **Required** |
 | `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
+| `aria-controls="[id of nav]"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Identifies the element controlled by the toggle. **Required**
 
 ## Usage
 
@@ -35,3 +36,4 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
+| `.pf-m-no-padding-mobile` | `.pf-c-page__main-section` | Modifies a main page section to have no padding on mobile. |
