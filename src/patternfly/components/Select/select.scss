@@ -59,7 +59,7 @@
   // Toggle Arrow
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
 
   // Toggle Button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--xs);
@@ -273,6 +273,15 @@
   .pf-c-chip-group {
     margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
   }
+}
+
+// Remove this selector during breaking change period
+.pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
+  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
+}
+
+.pf-c-select__toggle-clear + .pf-c-select__toggle-button {
+  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
 }
 
 .pf-c-select__toggle-badge {
