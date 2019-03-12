@@ -433,6 +433,10 @@
     tbody {
       --pf-c-table--BorderWidth: 0;
       --pf-c-table--BorderColor: transparent;
+
+      tr:first-child > * {
+        --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
+      }
     }
   }
 
@@ -440,13 +444,6 @@
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
-  }
-
-  // Tbody only
-  tbody {
-    tr:first-child > * {
-      --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
-    }
   }
 
   tr > * {
