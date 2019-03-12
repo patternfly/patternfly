@@ -63,7 +63,8 @@
 
   // Toggle Button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-select__toggle-clear--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-clear--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-select__toggle-button--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-select__toggle-button--Color: var(--pf-global--Color--100);
 
   // Menu
@@ -196,6 +197,7 @@
 
   &.pf-m-typeahead {
     --pf-c-select__toggle--PaddingTop: 0;
+    --pf-c-select__toggle--PaddingRight: 0;
     --pf-c-select__toggle--PaddingBottom: 0;
 
     padding-top: var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop);
@@ -212,25 +214,29 @@
     }
   }
 
-  .pf-c-select__toggle-arrow {
-    margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
-    margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
-
-    .pf-m-top.pf-m-expanded > & {
-      transform: rotate(-180deg);
-    }
-  }
-
   .pf-c-select__toggle-clear {
     padding-right: var(--pf-c-select__toggle-clear--PaddingRight);
     padding-left: var(--pf-c-select__toggle-clear--PaddingLeft);
   }
 
   .pf-c-select__toggle-button {
-    position: relative;
-    padding: 0;
     color: var(--pf-c-select__toggle-button--Color);
-    border: 0;
+  }
+
+  .pf-c-select__toggle-clear + .pf-c-select__toggle-button {
+    padding-left: var(--pf-c-select__toggle-button--PaddingLeft);
+  }
+}
+
+
+.pf-c-select__toggle-arrow {
+  * + & {
+    margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
+    margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
+  }
+
+  .pf-m-top.pf-m-expanded > & {
+    transform: rotate(-180deg);
   }
 }
 
@@ -277,10 +283,6 @@
 
 // Remove this selector during breaking change period
 .pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
-  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
-}
-
-.pf-c-select__toggle-clear + .pf-c-select__toggle-button {
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
 }
 
