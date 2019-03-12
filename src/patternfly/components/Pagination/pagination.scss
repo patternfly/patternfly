@@ -36,22 +36,24 @@
   &:not(.pf-m-footer) {
     .pf-c-options-menu,
     .pf-c-pagination__nav {
-      display: flex;
+      display: none;
+      visibility: hidden;
 
-      @media screen and (max-width: $pf-global--breakpoint--md) {
-        display: none;
-        visibility: hidden;
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        display: flex;
+        visibility: visible;
       }
     }
   }
 
   &.pf-m-footer {
     .pf-c-options-menu {
-      display: flex;
+      display: none;
+      visibility: hidden;
 
-      @media screen and (max-width: $pf-global--breakpoint--md) {
-        display: none;
-        visibility: hidden;
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        display: flex;
+        visibility: visible;
       }
     }
   }
