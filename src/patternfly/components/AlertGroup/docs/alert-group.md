@@ -6,7 +6,6 @@
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `role="status"` | `.pf-c-alert-group` |  Communicates contents of the alert message to the user. **Required** |
 
 ### Usage
 
