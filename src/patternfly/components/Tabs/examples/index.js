@@ -34,9 +34,10 @@ export default () => {
   const tabsExampleSecondary = TabsExampleSecondary();
   const tabsExampleFilled = TabsExampleFilled();
   const tabsExampleScroll = TabsExampleScroll();
+  const variablesRoot = 'pf-c-tabs';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Primary tabs" handlebars={tabsExamplePrimaryRaw} docs={tabsPrimaryDocs}>
         {tabsExamplePrimary}
       </Example>

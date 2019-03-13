@@ -13,9 +13,10 @@ export default () => {
   const badgeReadExample = BadgeReadExample();
   const badgeUnreadExample = BadgeUnreadExample();
   const headingText = 'Badge';
+  const variablesRoot = 'pf-c-badge';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Read Badge" handlebars={BadgeReadExampleRaw}>
         {badgeReadExample}
       </Example>

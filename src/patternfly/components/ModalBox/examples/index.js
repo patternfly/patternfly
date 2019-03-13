@@ -19,9 +19,10 @@ export default () => {
   const modalBoxLgExample = ModalBoxLgExample();
   const modalBoxNoHeaderExample = ModalBoxNoHeaderExample();
   const headingText = 'Modal Box';
+  const variablesRoot = 'pf-c-modal-box';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="ModalBox Basic Example" handlebars={ModalBoxBasicExampleRaw}>
         {modalBoxBasicExample}
       </Example>

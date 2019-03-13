@@ -22,9 +22,11 @@
   --pf-c-dropdown__toggle--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-dropdown__toggle--m-plain--BorderColor: transparent;
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-dropdown__toggle-text--Width: calc(100% - var(--pf-global--spacer--lg));
 
   // toggle button
@@ -75,6 +77,17 @@
   --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm);
 
+  // Groups
+  --pf-c-dropdown__group--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-dropdown__group--first-child--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__group-title--PaddingRight: var(--pf-c-dropdown__menu-item--PaddingRight);
+  --pf-c-dropdown__group-title--PaddingBottom: var(--pf-c-dropdown__menu-item--PaddingBottom);
+  --pf-c-dropdown__group-title--PaddingLeft: var(--pf-c-dropdown__menu-item--PaddingLeft);
+  --pf-c-dropdown__group-title--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-dropdown__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-dropdown__group-title--Color: var(--pf-global--Color--dark-200);
+
+
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -94,6 +107,19 @@
   color: var(--pf-c-dropdown__toggle--Color);
   background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
   border: none;
+
+  &.pf-m-disabled,
+  &:disabled {
+    pointer-events: none;
+
+    &:not(.pf-m-plain) {
+      --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
+
+      &::before {
+        border: 0;
+      }
+    }
+  }
 
   &.pf-m-split-button {
     padding: 0;
@@ -198,6 +224,11 @@
         border-color: var(--pf-c-dropdown__toggle--m-plain--BorderColor);
       }
     }
+
+    &.pf-m-disabled,
+    &:disabled {
+      --pf-c-dropdown__toggle--m-plain--Color: var(--pf-c-dropdown__toggle--m-plain--disabled--Color);
+    }
   }
 
   .pf-c-dropdown__toggle-text {
@@ -278,4 +309,21 @@
   margin-top: var(--pf-c-dropdown__separator--MarginTop);
   margin-bottom: var(--pf-c-dropdown__separator--MarginBottom);
   background-color: var(--pf-c-dropdown__separator--BackgroundColor);
+}
+
+.pf-c-dropdown__group {
+  padding-top: var(--pf-c-dropdown__group--PaddingTop);
+
+  &:first-child {
+    --pf-c-dropdown__group--PaddingTop: var(--pf-c-dropdown__group--first-child--PaddingTop);
+  }
+}
+
+.pf-c-dropdown__group-title {
+  padding-right: var(--pf-c-dropdown__group-title--PaddingRight);
+  padding-bottom: var(--pf-c-dropdown__group-title--PaddingBottom);
+  padding-left: var(--pf-c-dropdown__group-title--PaddingLeft);
+  font-size: var(--pf-global--FontSize--sm);
+  font-weight: var(--pf-global--FontWeight--semi-bold);
+  color: var(--pf-global--Color--dark-200);
 }

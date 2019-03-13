@@ -19,9 +19,10 @@ export default () => {
   const buttonLinkExample = ButtonLinkExample();
   const buttonBlockTemplate = ButtonBlockTemplate();
   const headingText = 'Button';
+  const variablesRoot = 'pf-c-button';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Button Types" handlebars={ButtonTypesTemplateRaw}>
         {buttonTypesTemplate}
       </Example>

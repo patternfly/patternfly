@@ -8,13 +8,12 @@
     {{/button}}
   {{/page-header-tools-group}}
   {{#> page-header-tools-group}}
-    {{#> button button--modifier="pf-m-plain pf-m-mobile" button--attribute='aria-label="Overflow actions"'}}
-      {{> button-icon button-icon--type="ellipsis-v"}}
-    {{/button}}
+    {{#> dropdown id="dropdown-kebab-right-aligned-1" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-mobile  pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
     <div class="pf-m-user pf-screen-reader">
       {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
         {{#> dropdown-toggle-text}}
-          Kyle Baker
+          John Smith
         {{/dropdown-toggle-text}}
       {{/dropdown}}
     </div>

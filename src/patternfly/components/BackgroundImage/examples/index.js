@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const backgroundImage = BackgroundImage();
   const headingText = 'Background Image';
+  const variablesRoot = 'pf-c-background-image';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Background image Example" fullPageOnly="true" handlebars={BackgroundImageRaw}>
         {backgroundImage}
       </Example>

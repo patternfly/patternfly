@@ -26,7 +26,8 @@
         <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}" aria-label="Details">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node1">Node 1</div>
+        <p id="{{table--id}}-node1">Node 1</p>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -59,7 +60,7 @@
         <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}" aria-label="Details">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node2">Node 2</div>
+        <p id="{{table--id}}-node2">Node 2</p>
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
@@ -78,7 +79,7 @@
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
         This content has no padding.
       {{/table-td}}
     {{/table-tr}}

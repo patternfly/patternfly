@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const bullseye = Bullseye();
   const headingText = 'Bullseye';
+  const variablesRoot = 'pf-l-bullseye';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Bullseye Example" handlebars={BullseyeRaw}>
         {bullseye}
       </Example>

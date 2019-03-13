@@ -4,6 +4,9 @@
 	  {{{dropdown-toggle-check--attribute}}}
   {{/if}}>
   <input type="checkbox" id="{{dropdown-toggle-check--id}}"
+    {{#if dropdown-toggle--IsDisabled}}
+      disabled
+    {{/if}}
     {{#if aria-label}}
       aria-label="{{aria-label}}"
     {{/if}}>
