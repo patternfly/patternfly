@@ -1,4 +1,4 @@
-{{#> table newcontext table--attribute=table-nested--attribute table--modifier="pf-m-compact" table--grid="true"}}
+{{#> table newcontext table--id=table--id table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact" table--grid="true"}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}}
@@ -13,7 +13,7 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table-nested--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
@@ -22,7 +22,7 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Warning{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table-nested--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
@@ -31,7 +31,7 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table-nested--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
@@ -40,7 +40,7 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table-nested--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
@@ -49,7 +49,7 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table-nested--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
