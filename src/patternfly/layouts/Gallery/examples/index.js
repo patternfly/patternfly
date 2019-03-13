@@ -13,9 +13,10 @@ export default () => {
   const gallery = Gallery();
   const galleryHasGutter = GalleryHasGutter();
   const headingText = 'Gallery';
+  const variablesRoot = 'pf-l-gallery';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Gallery Example" handlebars={GalleryRaw}>
         {gallery}
       </Example>

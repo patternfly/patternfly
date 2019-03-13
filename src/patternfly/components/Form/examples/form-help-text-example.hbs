@@ -3,7 +3,7 @@
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-name"') required='true'}}
       Name
     {{/form-label}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-simple-form-name" name="' form--id '-simple-form-name" aria-errormessage="' form--id '-simple-form-name-helper"')}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-simple-form-name" name="' form--id '-simple-form-name" aria-describedby="' form--id '-simple-form-name-helper"')}}
     {{/form-control}}
     {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id '-simple-form-name-helper" aria-live="polite"')}}
       This is helper text
@@ -13,7 +13,7 @@
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-address"') required='true'}}
       address
     {{/form-label}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-simple-form-address" name="' form--id '-simple-form-address" aria-invalid="true" aria-errormessage="' form--id '-simple-form-address-helper"')}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-simple-form-address" name="' form--id '-simple-form-address" aria-invalid="true" aria-describedby="' form--id '-simple-form-address-helper"')}}
     {{/form-control}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-address-helper" aria-live="polite"')}}
       This is helper text for an invalid input

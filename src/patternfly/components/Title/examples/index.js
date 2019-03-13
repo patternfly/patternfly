@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const titleTemplate = TitleTemplate();
   const headingText = 'Title';
+  const variablesRoot = 'pf-c-title';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Title Types" handlebars={TitleTemplateRaw}>
         {titleTemplate}
       </Example>

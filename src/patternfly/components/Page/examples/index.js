@@ -13,9 +13,10 @@ export default () => {
   const pageComponentNavVerticalExample = PageComponentNavVerticalExample();
   const pageComponentNavHorizontalExample = PageComponentNavHorizontalExample();
   const headingText = 'Page';
+  const variablesRoot = 'pf-c-page';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-component-page">
+    <Documentation docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
       <Example heading="Page Component, Nav Vertical Example" handlebars={PageComponentNavVerticalExampleRaw}>
         {pageComponentNavVerticalExample}
       </Example>

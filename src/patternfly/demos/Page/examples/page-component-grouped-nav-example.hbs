@@ -2,6 +2,9 @@
 {{/background-image}}
 
 {{#> page page--id="page-layout-grouped-nav"}}
+  {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{#> page-header-brand}}
       {{#> page-header-brand-toggle}}
@@ -80,6 +83,7 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
+    <a id="main-content"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}

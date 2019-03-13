@@ -16,6 +16,13 @@
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
   --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
 
+  // Caption
+  --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table-caption--Color: var(--pf-global--Color--200);
+  --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--xl);
+
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
 
@@ -148,6 +155,7 @@
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
     font-weight: var(--pf-c-table--FontWeight);
+    vertical-align: baseline;
 
     // First child padding left
     &:first-child {
@@ -163,6 +171,16 @@
     &.pf-m-center {
       text-align: center;
     }
+  }
+
+  // Table caption
+  caption {
+    padding-top: var(--pf-c-table-caption--PaddingTop);
+    padding-bottom: var(--pf-c-table-caption--PaddingBottom);
+    padding-left: var(--pf-c-table-caption--PaddingLeft);
+    font-size: var(--pf-c-table-caption--FontSize);
+    color: var(--pf-c-table-caption--Color);
+    text-align: left;
   }
 
   // Table header cell
@@ -390,6 +408,7 @@
 
   &:not(.pf-m-expanded) {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -453,6 +472,10 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+  }
+
+  .pf-c-table__icon {
+    text-align: center;
   }
 
   // nested tables

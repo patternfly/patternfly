@@ -42,6 +42,7 @@ $pf-global--BackgroundColor--dark-transparent-200:  rgba($pf-color-black-1000, .
 $pf-global--Color--100: $pf-color-black-900 !default;
 $pf-global--Color--200: $pf-color-black-600 !default;
 $pf-global--Color--300: $pf-color-black-800 !default;
+$pf-global--Color--400: $pf-color-black-500 !default;
 
 // do not use - text colors for exceptions and defining theme
 // light theme
@@ -179,8 +180,8 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
-$pf-global--FontFamily--sans-serif: “overpass”, overpass, “open sans”, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$pf-global--FontFamily--monospace: “overpass-mono”, overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
+$pf-global--FontFamily--sans-serif: "overpass", overpass, "open sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global--FontFamily--monospace: "overpass-mono", overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 // Font size

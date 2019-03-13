@@ -9,7 +9,7 @@
     "backstop:approve": "node test/approve-conflicts.js",
     "backstop:init": "node test/create-references.js",
     "bootstrap:build": "node npm-scripts/build-bootstrap-workspace.js",
-    "build-patternfly": "rm -rf dist && rm -rf tmp && npm run build:pficons && gulp build",
+    "build-patternfly": "gulp pre-clean && npm run build:pficons && gulp build && gulp post-clean",
     "build": "gatsby build",
     "build:pficons": "node ./src/icons/generateIcons.js",
     "build:pficonfont": "gulp build-pficonfont",

@@ -13,9 +13,10 @@ export default () => {
   const stack = Stack();
   const stackHasGutter = StackHasGutter();
   const headingText = 'Stack';
+  const variablesRoot = 'pf-l-stack';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Stack Example" handlebars={StackRaw}>
         {stack}
       </Example>

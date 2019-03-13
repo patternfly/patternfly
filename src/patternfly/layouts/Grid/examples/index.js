@@ -31,9 +31,10 @@ export default () => {
   const gridResponsive = GridResponsive();
   const gridRowspan = GridRowspan();
   const headingText = 'Grid';
+  const variablesRoot = 'pf-l-grid';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Smart grid (responsive)" handlebars={GridSmartRaw}>
         {gridSmart}
       </Example>

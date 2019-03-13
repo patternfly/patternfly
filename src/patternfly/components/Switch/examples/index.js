@@ -15,9 +15,11 @@ export default () => {
   const switchExample = SwitchExample();
   const switchDisabledExample = SwitchDisabledExample();
   const switchNoLabelExample = SwitchNoLabelExample();
+  const headingText = 'Switch';
+  const variablesRoot = 'pf-c-switch';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Switch" handlebars={SwitchExampleRaw}>
         {switchExample}
       </Example>

@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const inputGroupExample = InputgroupExample();
   const headingText = 'Input Group';
+  const variablesRoot = 'pf-c-input-group';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Inputgroup Example" handlebars={InputgroupExampleRaw}>
         {inputGroupExample}
       </Example>

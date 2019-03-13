@@ -9,9 +9,11 @@ export const Docs = docs;
 
 export default () => {
   const tabContentExample = TabcontentExample();
+  const headingText = 'Tab Content';
+  const variablesRoot = 'pf-c-tab-content';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Tab Content" handlebars={tabContentExampleRaw}>
         {tabContentExample}
       </Example>
