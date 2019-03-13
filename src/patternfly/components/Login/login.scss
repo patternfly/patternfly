@@ -52,6 +52,7 @@
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-login__main-header--PaddingRight: var(--pf-c-login__main-header--md--PaddingRight);
     --pf-c-login__main-header--PaddingLeft: var(--pf-c-login__main-header--md--PaddingLeft);
+    --pf-c-login__main-header-desc--MarginBottom: var(--pf-c-login__main-header-desc--md--MarginBottom);
   }
 
   // main body
@@ -203,10 +204,6 @@
   margin-bottom: var(--pf-c-login__main-header-desc--MarginBottom);
   font-size: var(--pf-c-login__main-header-desc--FontSize);
   grid-column: 1 / -1;
-
-  @media (max-width: $pf-global--breakpoint--md) {
-    --pf-c-login__main-header-desc--MarginBottom: var(--pf-c-login__main-header-desc--md--MarginBottom);
-  }
 }
 
 .pf-c-login__main-body {
