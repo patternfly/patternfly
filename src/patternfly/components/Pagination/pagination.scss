@@ -28,7 +28,7 @@
     white-space: nowrap;
   }
 
-  > *:not(:last-child):not(.pf-c-pagination__items) {
+  > *:not(:last-child):not(.pf-c-pagination__total-items) {
     margin-right: var(--pf-c-pagination--child--MarginRight);
   }
 
