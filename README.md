@@ -96,3 +96,16 @@ If you have any suggestions about ways that we can improve how we use this tool,
 
 [How do I use CSS variables to customize
 the library?](https://pf4.patternfly.org/guidelines#variables)
+
+### PatternFly 3 Compatibility
+
+Due to differences in how PatternFly 3 and PatternFly 4 CSS is written, there are cases where PatternFly 3 CSS may take precedence over PatternFly 4 CSS in an application that uses both systems. Below are some snippets that will help ensure PatternFly 4 components are displayed consistently.
+
+```
+.pf-c-dropdown__menu-item {
+  &:hover,
+  &:focus {
+    color: var(--pf-c-dropdown__menu-item--hover--Color);
+  }
+}
+```
