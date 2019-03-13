@@ -58,7 +58,14 @@
 
   // Toggle Arrow
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
+
+  // Toggle Button
+  --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-clear--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-select__toggle-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-button--Color: var(--pf-global--Color--100);
 
   // Menu
   --pf-c-select__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -190,6 +197,7 @@
 
   &.pf-m-typeahead {
     --pf-c-select__toggle--PaddingTop: 0;
+    --pf-c-select__toggle--PaddingRight: 0;
     --pf-c-select__toggle--PaddingBottom: 0;
 
     padding-top: var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop);
@@ -206,12 +214,29 @@
     }
   }
 
-  .pf-c-select__toggle-arrow {
-    margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
+  .pf-c-select__toggle-clear {
+    padding-right: var(--pf-c-select__toggle-clear--PaddingRight);
+    padding-left: var(--pf-c-select__toggle-clear--PaddingLeft);
+  }
 
-    .pf-m-top.pf-m-expanded > & {
-      transform: rotate(-180deg);
-    }
+  .pf-c-select__toggle-button {
+    color: var(--pf-c-select__toggle-button--Color);
+  }
+
+  .pf-c-select__toggle-clear + .pf-c-select__toggle-button {
+    padding-left: var(--pf-c-select__toggle-button--PaddingLeft);
+  }
+}
+
+
+.pf-c-select__toggle-arrow {
+  * + & {
+    margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
+    margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
+  }
+
+  .pf-m-top.pf-m-expanded > & {
+    transform: rotate(-180deg);
   }
 }
 
@@ -229,6 +254,7 @@
 
   // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
   // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
+  min-width: 0;
   max-width: var(--pf-c-select__toggle-wrapper--MaxWidth);
   white-space: normal;
 
@@ -255,8 +281,8 @@
   }
 }
 
+// Remove this selector during breaking change period
 .pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
-  // This is adjusted so that the clear button can maintain even padding around while not creating too much space between the clear and arrow
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
 }
 

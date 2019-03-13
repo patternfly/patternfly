@@ -24,6 +24,7 @@
   --pf-c-options-menu__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // Toggle Arrow
+  --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Text toggle button
@@ -174,6 +175,7 @@
 }
 
 .pf-c-options-menu__toggle-icon {
+  margin-right: var(--pf-c-options-menu__toggle-icon--MarginRight);
   margin-left: var(--pf-c-options-menu__toggle-icon--MarginLeft);
 
   .pf-c-options-menu.pf-m-top.pf-m-expanded & {

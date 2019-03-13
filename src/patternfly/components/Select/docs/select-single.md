@@ -15,7 +15,7 @@ The Single Select should be used when the user is selecting an option from a lis
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
-| `.pf-c-select__toggle` | `<div>` |  Initiates a custom toggle. |
+| `.pf-c-select__toggle` | `<button>` |  Initiates a custom toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates a custom select toggle wrapper. |
 | `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<ul>` |  Initiates the custom select dropdown menu. |

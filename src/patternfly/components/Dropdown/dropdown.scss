@@ -27,7 +27,6 @@
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
-  --pf-c-dropdown__toggle-text--Width: calc(100% - var(--pf-global--spacer--lg));
 
   // toggle button
   --pf-c-dropdown__toggle-button--Color: var(--pf-global--Color--100);
@@ -43,6 +42,7 @@
   --pf-c-dropdown__toggle--m-split-button__toggle-check__input--Transform: translateY(#{pf-size-prem(-1px)});
 
   // Toggle Arrow
+  --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Menu
@@ -232,13 +232,13 @@
   }
 
   .pf-c-dropdown__toggle-text {
-    width: var(--pf-c-dropdown__toggle-text--Width);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   .pf-c-dropdown__toggle-icon {
+    margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
     margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
     line-height: var(--pf-c-dropdown__toggle--LineHeight);
 

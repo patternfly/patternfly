@@ -1,15 +1,17 @@
-<div class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
-  id="{{id}}-toggle" 
-  aria-haspopup="true" 
-  aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
-	aria-labelledby="{{id}}-label {{id}}-toggle"
-	{{#if aria-label}}
-		aria-label="{{aria-label}}" 
-	{{/if}}
+<{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
+  {{#unless select--IsTypeahead}}
+		id="{{id}}-toggle"
+		aria-haspopup="true"
+		aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
+		aria-labelledby="{{id}}-label {{id}}-toggle"
+		{{#if aria-label}}
+			aria-label="{{aria-label}}"
+		{{/if}}
+	{{/unless}}
 	{{#if select-toggle--attribute}}
 		{{{select-toggle--attribute}}}
 	{{/if}}>
-	<div class="pf-c-select__toggle-wrapper">	
+	<div class="pf-c-select__toggle-wrapper">
 		{{!-- First part, chips --}}
 		{{#if select--IsMultiSelect}}
 			{{#if select--ItemIsSelected}}
@@ -39,7 +41,7 @@
 
 	{{!-- Third part, badge --}}
 		{{#if select--IsCheckboxSelect}}
-			{{#if select--ItemIsSelected}} 
+			{{#if select--ItemIsSelected}}
 				<div class="pf-c-select__toggle-badge">
 				{{#> badge badge--modifier="pf-m-read"}}
 					3
@@ -55,7 +57,8 @@
 				{{> button-icon button-icon--type="times-circle"}}
 			{{/button}}
 		{{/if}}
+			{{> select-toggle-button}}
+		{{else}}
+	  {{> select-toggle-icon}}
 	{{/if}}
-
-	{{> select-toggle-icon}}
-</div>
+</{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}}>
