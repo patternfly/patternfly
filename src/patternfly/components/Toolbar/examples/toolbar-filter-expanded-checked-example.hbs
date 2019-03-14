@@ -27,7 +27,7 @@
       secondary
     {{/button}}
   {{/toolbar-action-group}}
-  {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain"}}
+  {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label=(concat toolbar--id '-dropdown-simple')}}
   {{/dropdown}}
   {{#> toolbar-total-items}}36 of 37 Items{{/toolbar-total-items}}
   {{#> toolbar-filter-list toolbar-filter-list--modifier="pf-m-expanded"}}
