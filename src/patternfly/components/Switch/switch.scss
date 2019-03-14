@@ -54,8 +54,10 @@
       ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--checked__label--Color);
 
-        &::before {
-          content: "On";
+        &:not(.pf-m-on):not(.pf-m-off) {
+          &::before {
+            content: "On";
+          }
         }
       }
 
@@ -66,14 +68,20 @@
           transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
         }
       }
+
+      ~ .pf-m-off {
+        display: none;
+      }
     }
 
     &:not(:checked) {
       ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--not-checked__label--Color);
 
-        &::before {
-          content: "Off";
+        &:not(.pf-m-on):not(.pf-m-off) {
+          &::before {
+            content: "Off";
+          }
         }
       }
 
@@ -82,6 +90,10 @@
           display: none;
           visibility: hidden;
         }
+      }
+
+      ~ .pf-m-on {
+        display: none;
       }
     }
 
