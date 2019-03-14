@@ -21,9 +21,14 @@
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
 
   // actions
+  --pf-c-form__actions--MarginTop: calc(var(--pf-c-form__actions--child--MarginTop) * -1);
+  --pf-c-form__actions--MarginRight: calc(var(--pf-c-form__actions--child--MarginRight) * -1);
   --pf-c-form__actions--MarginBottom: calc(var(--pf-c-form__actions--child--MarginBottom) * -1);
-  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-form__actions--MarginLeft: calc(var(--pf-c-form__actions--child--MarginLeft) * -1);
+  --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-form__actions--child--MarginLeft: var(--pf-global--spacer--sm);
 
   // Helpers
   --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
@@ -166,13 +171,16 @@
 .pf-c-form__actions {
   display: flex;
   flex-wrap: wrap;
+  margin-top: var(--pf-c-form__actions--MarginTop);
+  margin-right: var(--pf-c-form__actions--MarginRight);
   margin-bottom: var(--pf-c-form__actions--MarginBottom);
+  margin-left: var(--pf-c-form__actions--MarginLeft);
+  overflow: hidden; // keeps the margin bottom on children from causing overflow issues
 
   > * {
+    margin-top: var(--pf-c-form__actions--child--MarginTop);
+    margin-right: var(--pf-c-form__actions--child--MarginRight);
     margin-bottom: var(--pf-c-form__actions--child--MarginBottom);
-
-    &:not(:last-child) {
-      margin-right: var(--pf-c-form__actions--child--MarginRight);
-    }
+    margin-left: var(--pf-c-form__actions--child--MarginLeft);
   }
 }
