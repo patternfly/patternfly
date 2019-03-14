@@ -82,10 +82,6 @@
 }
 
 .pf-c-form__group {
-  .pf-c-form__label {
-    padding-bottom: var(--pf-c-form__label--PaddingBottom);
-  }
-
   &.pf-m-action {
     margin-top: var(--pf-c-form__group--m-action--MarginTop);
   }
@@ -103,6 +99,14 @@
       flex: auto 0;
       margin-right: var(--pf-c-form--m-inline--MarginRight);
     }
+  }
+
+  .pf-c-form__label {
+    padding-bottom: var(--pf-c-form__label--PaddingBottom);
+  }
+
+  .pf-c-form__helper-text {
+    margin-top: var(--pf-c-form__helper-text--MarginTop);
   }
 }
 
@@ -139,10 +143,6 @@
 
 .pf-c-form__helper-text {
   font-size: var(--pf-c-form__helper-text--FontSize);
-
-  .pf-c-form-control + & {
-    margin-top: var(--pf-c-form__helper-text--MarginTop);
-  }
 
   &:not(.pf-m-error) {
     color: var(--pf-c-form__helper-text--Color);
