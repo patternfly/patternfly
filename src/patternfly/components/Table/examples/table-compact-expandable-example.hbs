@@ -21,13 +21,12 @@
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="compact-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}" aria-label="Details">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
         <p id="{{table--id}}-node1">Node 1</p>
-        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -55,13 +54,12 @@
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="compact-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}" aria-label="Details">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
         <p id="{{table--id}}-node2">Node 2</p>
-        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -79,7 +77,7 @@
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
         This content has no padding.
       {{/table-td}}
     {{/table-tr}}
