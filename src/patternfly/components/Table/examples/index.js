@@ -79,7 +79,7 @@ export default () => {
         {tableCompactExample}
       </Example>
       <Example
-        heading="Compact Table with bordeers"
+        heading="Compact Table with borders"
         handlebars={tableCompactBorderRowsExampleRaw}
         docs={tableCompactBorderRowsDoc}
       >

@@ -1,4 +1,4 @@
-{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
+{{#> table table--id="compact-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
@@ -30,10 +30,10 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="name1">
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="name1">Sam Jones</span>
+        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS Guru
@@ -54,17 +54,17 @@
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-8" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="name2">
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="name2">Amy Miller</span>
+        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual Design
@@ -85,17 +85,17 @@
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-example-right-aligned-9" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="name3">
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="name3">Steve Wilson</span>
+        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual Design Lead
@@ -116,17 +116,17 @@
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-10" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="name4">
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor Name"}}
-        <span id="name4">Emma Jackson</span>
+        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction Design
@@ -147,7 +147,7 @@
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-11" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
