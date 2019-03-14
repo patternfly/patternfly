@@ -437,6 +437,10 @@
       tr:first-child > * {
         --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
       }
+
+      tr:last-child > * {
+        --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
+      }
     }
   }
 
