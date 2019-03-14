@@ -9,9 +9,10 @@ export const Docs = docs;
 export default () => {
   const aboutModalBoxExample = AboutModalBoxExample();
   const headingText = 'About Modal Box';
+  const variablesRoot = 'pf-c-about-modal-box';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading={headingText}>
         {aboutModalBoxExample}
       </Example>

@@ -14,9 +14,10 @@ export default () => {
   const alertTypes = AlertTypes();
   const alertVariations = AlertVariations();
   const headingText = 'Alert';
+  const variablesRoot = 'pf-c-alert';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Alert Types" handlebars={AlertTypesRaw}>
         {alertTypes}
       </Example>

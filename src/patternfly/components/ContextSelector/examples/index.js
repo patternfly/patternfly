@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const contextselectorexample = ContextSelectorExample();
   const headingText = 'Context Selector';
+  const variablesRoot = 'pf-c-context-selector';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Context Selector Example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
         {contextselectorexample}
       </Example>

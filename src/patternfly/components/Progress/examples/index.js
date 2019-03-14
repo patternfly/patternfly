@@ -50,9 +50,10 @@ export default () => {
   const progressFiniteStepExample = ProgressFiniteStepExample();
   const progressStepInstructionExample = ProgressStepInstructionExample();
   const headingText = 'Progress';
+  const variablesRoot = 'pf-c-progress';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Progress Simple" handlebars={progressSimpleExampleRaw}>
         {progressSimpleExample}
       </Example>

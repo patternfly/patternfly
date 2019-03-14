@@ -1,7 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Layout from '@siteComponents/Layout';
 import FullPageExampleLayout from '@siteComponents/FullPageExampleLayout';
 import './styles.scss';
+
+const propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  docs: PropTypes.string,
+  heading: PropTypes.string.isRequired,
+  // eslint-disable-next-line
+  variablesRoot: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+};
+
+const defaultProps = {
+  className: '',
+  docs: '',
+  variablesRoot: null
+};
 
 export default class Documentation extends React.Component {
   constructor(props) {
@@ -17,7 +33,7 @@ export default class Documentation extends React.Component {
   }
 
   render() {
-    const { children, className = '', docs = '', heading = '' } = this.props;
+    const { children, className, docs, heading } = this.props;
     const HTML_DOCS = { __html: docs };
     return (
       this.state.isFull !== null &&
@@ -41,3 +57,6 @@ export default class Documentation extends React.Component {
     );
   }
 }
+
+Documentation.propTypes = propTypes;
+Documentation.defaultProps = defaultProps;

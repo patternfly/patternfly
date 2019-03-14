@@ -1,6 +1,9 @@
 {{#> background-image}}
 {{/background-image}}
 {{#> page page--id="page-layout-simple-nav"}}
+  {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
@@ -53,6 +56,7 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
+    <a id="main-content"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

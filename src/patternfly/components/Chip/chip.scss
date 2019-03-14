@@ -7,12 +7,12 @@
   --pf-c-chip--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
 
-  // modified chip
+  // overflow chip
   --pf-c-chip--m-overflow--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-chip--m-overflow--PaddingLeft: 0;
   --pf-c-chip--m-overflow--BorderWidth: 0;
 
-  // modified chip button
+  // overflow chip button
   --pf-c-chip--m-overflow--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip--m-overflow--c-button--BorderWidth: 0;
   --pf-c-chip--m-overflow--c-button--PaddingLeft: var(--pf-global--spacer--sm);
@@ -23,6 +23,11 @@
   --pf-c-chip--m-overflow--c-button--active--BorderColor: var(--pf-global--secondary-color--100);
   --pf-c-chip--m-overflow--c-button--focus--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-chip--m-overflow--c-button--focus--BorderColor: var(--pf-global--secondary-color--100);
+
+  // read-only chip
+  --pf-c-chip--m-read-only--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-chip--m-read-only--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip--m-read-only--PaddingBottom: var(--pf-global--spacer--form-element);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -102,6 +107,12 @@
         }
       }
     }
+  }
+
+  &.pf-m-read-only {
+    padding-top: var(--pf-c-chip--m-read-only--PaddingTop);
+    padding-right: var(--pf-c-chip--m-read-only--PaddingRight);
+    padding-bottom: var(--pf-c-chip--m-read-only--PaddingBottom);
   }
 
   // Button

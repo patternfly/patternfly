@@ -12,9 +12,11 @@ export const Docs = docs;
 export default () => {
   const AppLauncherCollapsedExample = ApplauncherCollapsedExample();
   const AppLauncherExpandedExample = ApplauncherExpandedExample();
+  const headingText = 'App Launcher';
+  const variablesRoot = 'pf-c-app-launcher';
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Applauncher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
         {AppLauncherCollapsedExample}
       </Example>

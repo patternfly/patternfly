@@ -1,0 +1,9 @@
+<a href="#" class="pf-c-wizard__nav-link{{#if wizard-nav-link--modifier}} {{wizard-nav-link--modifier}}{{/if}}"
+  {{#if wizard-nav-link--IsCurrent}}
+    aria-current="page"
+  {{/if}}
+  {{#if wizard-nav-link--attribute}}
+    {{{wizard-nav-link--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</a>
