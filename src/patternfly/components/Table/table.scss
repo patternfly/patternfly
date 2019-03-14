@@ -126,9 +126,6 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
-    // set position relative for absolutely positioned elements in responsive view
-    position: relative;
-
     // hack: buttons inside table cells will not occupy full height of parent when adjacent cells'
     // content wraps. for those special cases, there must be an explicit height set on tr and table cell
     // for button height: 100% to work
