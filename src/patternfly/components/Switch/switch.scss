@@ -53,6 +53,12 @@
     &:checked {
       ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--checked__label--Color);
+
+        &:not(.pf-m-on):not(.pf-m-off) {
+          &::before {
+            content: "On";
+          }
+        }
       }
 
       ~ .pf-c-switch__toggle {
@@ -71,6 +77,12 @@
     &:not(:checked) {
       ~ .pf-c-switch__label {
         color: var(--pf-c-switch__input--not-checked__label--Color);
+
+        &:not(.pf-m-on):not(.pf-m-off) {
+          &::before {
+            content: "Off";
+          }
+        }
       }
 
       ~ .pf-c-switch__toggle {
