@@ -58,6 +58,8 @@
 
   // Table cell - toggle
   --pf-c-table__toggle--c-button--MarginTop: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table--m-compact__toggle--PaddingTop: 0;
+  --pf-c-table--m-compact__toggle--PaddingBottom: 0;
 
   // Table cell - check
   --pf-c-table__check--input--MarginTop: #{pf-size-prem(3px)};
@@ -489,6 +491,11 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+  }
+
+  .pf-c-table__toggle {
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact__toggle--PaddingTop);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact__toggle--PaddingBottom);
   }
 
   .pf-c-table__icon {
