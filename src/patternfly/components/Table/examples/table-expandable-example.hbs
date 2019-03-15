@@ -39,7 +39,7 @@
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-3" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
@@ -73,7 +73,7 @@
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-4" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}

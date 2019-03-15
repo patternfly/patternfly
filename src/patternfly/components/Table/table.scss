@@ -429,24 +429,25 @@
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
+  &:not(.pf-m-border-rows) {
+    tbody {
+      --pf-c-table--BorderWidth: 0;
+      --pf-c-table--BorderColor: transparent;
+
+      tr:first-child > * {
+        --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
+      }
+
+      tr:last-child > * {
+        --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
+      }
+    }
+  }
+
   // Thead only
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
-  }
-
-  // Tbody only
-  tbody {
-    --pf-c-table--BorderWidth: 0;
-    --pf-c-table--BorderColor: transparent;
-
-    tr:first-child > * {
-      --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
-    }
-
-    tr:last-child > * {
-      --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
-    }
   }
 
   tr > * {
