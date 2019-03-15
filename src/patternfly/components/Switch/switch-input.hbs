@@ -5,9 +5,15 @@
   {{#if switch-input--attribute}}
     {{{switch-input--attribute}}}
   {{/if}}
-  {{#if checked}}
-    {{{switch-label-on}}}
+  {{#if aria-labelledby}}
   {{else}}
-    {{{switch-label-off}}}
+    {{#if checked}}
+      aria-label="switch is on"
+    {{else}}
+      aria-label="switch is off"
+    {{/if}}
+  {{/if}}
+  {{#if switch-input--attribute}}
+    {{{switch-input--attribute}}}
   {{/if}}
 >
