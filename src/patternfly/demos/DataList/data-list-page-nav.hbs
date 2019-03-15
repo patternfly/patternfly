@@ -4,8 +4,8 @@
       {{#> nav-link nav-link--href="#"}}
         Components
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title1"'}}
-        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title1"'}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-subnav-title1"')}}
+        {{#> nav-subnav-title nav-subnav-title--attribute=(concat 'id="' page--id '-subnav-title1"')}}
           First Nav Item
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
@@ -46,8 +46,8 @@
       {{#> nav-link nav-link--href="#"}}
         Patterns
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title2"'}}
-        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title2"'}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-subnav-title2"')}}
+        {{#> nav-subnav-title nav-subnav-title--attribute=(concat 'id="' page--id '-subnav-title2"')}}
           Second Nav Item
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
@@ -58,8 +58,8 @@
       {{#> nav-link nav-link--href="#"}}
         Typography
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title3"'}}
-        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title3"'}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-subnav-title3"')}}
+        {{#> nav-subnav-title nav-subnav-title--attribute=(concat 'id="' page--id '-subnav-title3"')}}
           Third Nav Item
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
@@ -70,8 +70,8 @@
       {{#> nav-link nav-link--href="#"}}
         Icons
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title4"'}}
-        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title4"'}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-subnav-title4"')}}
+        {{#> nav-subnav-title nav-subnav-title--attribute=(concat 'id="' page--id '-subnav-title4"')}}
           Second Nav Item
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
@@ -82,8 +82,8 @@
       {{#> nav-link nav-link--href="#"}}
         Colors
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title5"'}}
-        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title5"'}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-subnav-title5"')}}
+        {{#> nav-subnav-title nav-subnav-title--attribute=(concat 'id="' page--id '-subnav-title5"')}}
           Second Nav Item
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
