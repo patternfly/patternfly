@@ -154,6 +154,13 @@
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
+  // List item seperator
+  --pf-c-nav__item--m-separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__item--m-separator--BackgroundColor: var(--pf-global--BorderColor--light);
+  --pf-c-nav__item--m-separator--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft);
+  --pf-c-nav__simple-list__item--m-separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
+  --pf-c-nav__simple-list--nested__item--m-separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
+
   // Modifier - simple list separator
   --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--PaddingLeft);
   --pf-c-nav__simple-list-link--m-separator--after--Height: var(--pf-global--BorderWidth--sm);
@@ -269,6 +276,23 @@
 
     &::after {
       background-color: var(--pf-c-nav__list-link--m-current--after--BackgroundColor);
+    }
+  }
+}
+
+// List item
+.pf-c-nav__item {
+  &.pf-m-separator {
+    height: var(--pf-c-nav__item--m-separator--Height);
+    margin-left: var(--pf-c-nav__item--m-separator--MarginLeft);
+    background-color: var(--pf-c-nav__item--m-separator--BackgroundColor);
+
+    .pf-c-nav__simple-list & {
+      --pf-c-nav__item--m-separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
+
+      .pf-c-nav__item & {
+        --pf-c-nav__item--m-separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
+      }
     }
   }
 }
