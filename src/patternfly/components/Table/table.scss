@@ -448,18 +448,10 @@
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
-  &:not(.pf-m-border-rows) {
+  &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
       --pf-c-table--BorderWidth: 0;
       --pf-c-table--BorderColor: transparent;
-
-      /* stylelint-disable */
-      &:not(.pf-m-expanded),
-      &.pf-m-expanded > tr:not(:first-child) {
-        --pf-c-table--BorderWidth: 0;
-        --pf-c-table--BorderColor: transparent;
-      }
-      /* stylelint-enable */
 
       tr:first-child > * {
         --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
