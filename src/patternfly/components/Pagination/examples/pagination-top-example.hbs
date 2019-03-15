@@ -1,4 +1,4 @@
-{{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+{{#> pagination}}
   {{#> pagination-total-items}}
     <b>1 - 10</b> of <b>37</b>
   {{/pagination-total-items}}
@@ -21,7 +21,7 @@
       {{> button-icon button-icon--type="angle-left"}}
     {{/button}}
 
-    {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+    {{#> pagination-nav-page-select}}
       {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" size="2" value="1"'}}
       <span aria-hidden="true">of 4</span>
     {{/pagination-nav-page-select}}
