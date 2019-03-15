@@ -4,7 +4,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label`  | `.pf-c-pagination__nav` |  Provides an accessible name for pagination elements. **Required** |
+| `aria-label`  | `.pf-c-pagination__nav` |  Provides an accessible name for pagination navigation element. **Required** |
 
 ## Pagination nav input
 
