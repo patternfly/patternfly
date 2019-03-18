@@ -1,7 +1,27 @@
-{{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
-  {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-item1"'}}
+{{#> data-list data-list--id="simple-data-list" data-list--attribute='aria-label="Simple data list example"'}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-cell}}
-      {{> data-list-content-1}}
+      {{#> grid grid--modifier="pf-m-gutter"}}
+        {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+          <p id='{{data-list--id}}-item1'>patternfly-next</p> 
+          <small>Working repo for Patternfly4 <a href="">https://pf-next.com/</a></small>
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          10
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+          <i class="fas fa-code" aria-hidden="true"></i>
+            4
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+          <i class="fas fa-cube" aria-hidden="true"></i>
+          5
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-6-col"}}
+          Updated 2 days ago
+        {{/grid-item}}
+      {{/grid}}
     {{/data-list-cell}}
     {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
       {{#> button button--modifier="pf-m-secondary"}}
