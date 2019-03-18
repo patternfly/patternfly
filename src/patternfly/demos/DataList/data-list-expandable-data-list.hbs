@@ -1,7 +1,7 @@
 {{#> data-list data-list--id="data-list-expandable" data-list--attribute='aria-label="Data List Expandable Demo"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-1"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check1" aria-labelledby="ex-item1"'}}{{/data-list-check}}
+    {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="ex-toggle1 ' data-list--id '-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-1"')}}{{/data-list-toggle}}
+    {{#> data-list-check checkbox--attribute=(concat 'type="checkbox" name="check-expandable-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
     {{#> data-list-cell}}
       {{> data-list-content-1}}
     {{/data-list-cell}}
@@ -18,9 +18,8 @@
     {{/data-list-expandable-content}}
   {{/data-list-item}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-2"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check2" aria-labelledby="ex-item2"'}}{{/data-list-check}}
-    {{#> data-list-cell}}
+    {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="ex-toggle2 ' data-list--id '-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-2"')}}{{/data-list-toggle}}
+    {{#> data-list-check checkbox--attribute=(concat 'type="checkbox" name="check-expandable-check2" aria-labelledby="' data-list--id '-item2"')}}{{/data-list-check}}    {{#> data-list-cell}}
       {{> data-list-content-2}}
     {{/data-list-cell}}
     {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
@@ -36,9 +35,8 @@
     {{/data-list-expandable-content}}
   {{/data-list-item}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle3 ex-item3" id="ex-toggle3" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-3"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check3" aria-labelledby="ex-item3"'}}{{/data-list-check}}
-    {{#> data-list-cell}}
+    {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="ex-toggle3 ' data-list--id '-item3" id="ex-toggle3" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-3"')}}{{/data-list-toggle}}
+    {{#> data-list-check checkbox--attribute=(concat 'type="checkbox" name="check-expandable-check3" aria-labelledby="' data-list--id '-item3"')}}{{/data-list-check}}    {{#> data-list-cell}}
       {{> data-list-content-3}}
     {{/data-list-cell}}
     {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
@@ -54,9 +52,8 @@
     {{/data-list-expandable-content}}
   {{/data-list-item}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle4 ex-item4" id="ex-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-4"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check4" aria-labelledby="ex-item4"'}}{{/data-list-check}}
-    {{#> data-list-cell}}
+    {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="ex-toggle4 ' data-list--id '-item4" id="ex-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-4"')}}{{/data-list-toggle}}
+    {{#> data-list-check checkbox--attribute=(concat 'type="checkbox" name="check-expandable-check4" aria-labelledby="' data-list--id '-item4"')}}{{/data-list-check}}    {{#> data-list-cell}}
       {{> data-list-content-4}}
     {{/data-list-cell}}
     {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
@@ -72,9 +69,8 @@
     {{/data-list-expandable-content}}
   {{/data-list-item}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item5"')}}
-    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle5 ex-item5" id="ex-toggle5" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-5"'}}{{/data-list-toggle}}
-    {{#> data-list-check check-input--attribute='type="checkbox" name="ex-check5" aria-labelledby="ex-item5"'}}{{/data-list-check}}
-    {{#> data-list-cell}}
+    {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="ex-toggle5 ' data-list--id '-item5" id="ex-toggle5" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-5"')}}{{/data-list-toggle}}
+    {{#> data-list-check checkbox--attribute=(concat 'type="checkbox" name="check-expandable-check5" aria-labelledby="' data-list--id '-item5"')}}{{/data-list-check}}    {{#> data-list-cell}}
       {{> data-list-content-5}}
     {{/data-list-cell}}
     {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
