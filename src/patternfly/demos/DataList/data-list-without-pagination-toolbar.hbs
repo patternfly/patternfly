@@ -3,7 +3,7 @@
     {{> button-icon button-icon--type="filter"}}
   {{/button}}
   {{#> toolbar-filter}}
-    {{#> select id="toolbar-pagination-select-checkbox" select--IsCheckboxSelect="true"}}
+    {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
       Name
     {{/select}}
