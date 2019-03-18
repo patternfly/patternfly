@@ -1,6 +1,6 @@
-{{#> toolbar}}
+{{#> toolbar toolbar--id=(concat page--id '-toolbar-bottom')}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-m-footer"}}
-    {{#> options-menu id="pagination-options-menu-bottom" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu-text') options-menu--label-text="Items per page" options-menu--IsText="true"}}
       {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
         <span class="pf-c-options-menu__toggle-text">
           <b>1 - 5</b> of <b>10</b> Items
