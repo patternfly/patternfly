@@ -37,9 +37,7 @@
 				<span>Select</span>
 		{{/if}}
 
-	</div>
-
-	{{!-- Third part, badge --}}
+		{{!-- Third part, badge --}}
 		{{#if select--IsCheckboxSelect}}
 			{{#if select--ItemIsSelected}}
 				<div class="pf-c-select__toggle-badge">
@@ -49,6 +47,8 @@
 				</div>
 			{{/if}}
 		{{/if}}
+
+	</div>
 
 	{{!-- Clear button if it's typeahead and something has been typed --}}
 	{{#if select--IsTypeahead}}
