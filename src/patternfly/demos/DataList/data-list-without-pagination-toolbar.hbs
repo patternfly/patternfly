@@ -22,7 +22,7 @@
       Action
     {{/button}}
   {{/toolbar-action-group}}
-  {{#> dropdown id="toolbar-data-list-simple-dropdown-collapsed" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
+  {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
   {{/dropdown}}
   {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
 {{/toolbar}}

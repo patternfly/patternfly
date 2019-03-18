@@ -26,16 +26,16 @@
       Action
     {{/button}}
   {{/toolbar-action-group}}
-  {{#> dropdown id="toolbar-pagination-dropdown-simple-example-collapsed3" dropdown--modifier="pf-c-toolbar__action-list" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-  {{/dropdown}}
+    {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
+    {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-c-toolbar__pagination"}}
     {{#> pagination-total-items}}
       <b>1 - 10</b> of <b>37</b>
     {{/pagination-total-items}}
-    {{#> options-menu id="toolbar-pagination-pagination-options-menu-top-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
+    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
       {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
         <span class="pf-c-options-menu__toggle-text">
-          <b>1 - 5</b> of <b>10</b> Items
+          <b>1 - 10</b> of <b>37</b> Items
         </span>
         {{> options-menu-toggle-button aria-label="Select"}}
       {{/options-menu-toggle}}
