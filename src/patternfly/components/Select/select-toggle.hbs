@@ -22,34 +22,30 @@
 				{{/if}}
 			{{/if}}
 		{{/if}}
-
 		{{!-- Second part, text or typeahead --}}
 		{{#if select--IsTypeahead}}
-			{{#if select-typeahead--Placeholder}}
-				{{> select-toggle-typeahead }}
+		  {{#if select-typeahead--Placeholder}}
+			  {{> select-toggle-typeahead }}
 			{{else}}
 				{{!-- default placeholder text --}}
 				{{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
 			{{/if}}
 		{{else if @partial-block}}
-				<span class="pf-c-select__toggle-text">{{> @partial-block}}</span>
+			<span class="pf-c-select__toggle-text">{{> @partial-block}}</span>
 		{{else}}
-				<span>Select</span>
+			<span>Select</span>
 		{{/if}}
-
 		{{!-- Third part, badge --}}
 		{{#if select--IsCheckboxSelect}}
 			{{#if select--ItemIsSelected}}
-				<div class="pf-c-select__toggle-badge">
-				{{#> badge badge--modifier="pf-m-read"}}
-					3
-				{{/badge}}
+			  <div class="pf-c-select__toggle-badge">
+          {{#> badge badge--modifier="pf-m-read"}}
+            3
+          {{/badge}}
 				</div>
 			{{/if}}
 		{{/if}}
-
 	</div>
-
 	{{!-- Clear button if it's typeahead and something has been typed --}}
 	{{#if select--IsTypeahead}}
 		{{#if select--ItemIsSelected}}
