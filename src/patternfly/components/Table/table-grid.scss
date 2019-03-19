@@ -281,8 +281,6 @@ $pf-c-table-xs-breakpoint: 380px;
     --pf-c-table-cell--responsive--PaddingLeft: 0;
     --pf-c-table-cell--PaddingRight: 0;
     --pf-c-table-cell--PaddingLeft: 0;
-    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table__expandable-row-content--responsive--PaddingRight);
-    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--PaddingLeft);
 
     display: block;
     max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
@@ -310,6 +308,11 @@ $pf-c-table-xs-breakpoint: 380px;
     &:not(.pf-m-expanded) {
       display: none;
       visibility: hidden;
+    }
+
+    .pf-c-table__expandable-row-content {
+      padding-right: var(--pf-c-table__expandable-row-content--responsive--PaddingRight);
+      padding-left: var(--pf-c-table__expandable-row-content--responsive--PaddingLeft);
     }
   }
 

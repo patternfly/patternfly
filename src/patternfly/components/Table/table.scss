@@ -69,9 +69,7 @@
   --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
   --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Sort indicator
   --pf-c-table__sort-indicator--MarginLeft: var(--pf-global--spacer--md);
@@ -392,7 +390,8 @@
   }
 
   .pf-c-table__expandable-row-content {
-    padding: var(--pf-c-table__expandable-row-content--PaddingTop) var(--pf-c-table__expandable-row-content--PaddingRight) var(--pf-c-table__expandable-row-content--PaddingBottom) var(--pf-c-table__expandable-row-content--PaddingLeft);
+    padding-top: var(--pf-c-table__expandable-row-content--PaddingTop);
+    padding-bottom: var(--pf-c-table__expandable-row-content--PaddingBottom);
   }
 
   // Modifier - Expanded tr
