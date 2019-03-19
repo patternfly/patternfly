@@ -26,6 +26,11 @@
   flex-direction: column;
   align-items: flex-start;
 
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
   // Scroll buttons hidden by default
   .pf-c-tabs__scroll-button {
     display: none;
@@ -220,11 +225,39 @@
     border: var(--pf-c-tabs__item--BorderWidth) solid var(--pf-c-tabs__item--BorderColor);
   }
 
-  &.pf-m-secondary {
-    color: var(--pf-global--active-color--100);
+  &.pf-m-secondary-left {
+    box-shadow: var(--pf-global--BoxShadow--lg-right);
 
     &::before {
       border: none;
+    }
+
+    &:hover,
+    &:active,
+    &.pf-m-current {
+      color: var(--pf-global--active-color--100);
+
+      &::after {
+        border-top: 0;
+      }
+    }
+  }
+
+  &.pf-m-secondary-right {
+    box-shadow: var(--pf-global--BoxShadow--lg-left);
+
+    &::before {
+      border: none;
+    }
+
+    &:hover,
+    &:active,
+    &.pf-m-current {
+      color: var(--pf-global--active-color--100);
+
+      &::after {
+        border-top: 0;
+      }
     }
   }
 

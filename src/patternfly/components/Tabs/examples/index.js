@@ -50,7 +50,7 @@ export default () => {
       <Example heading="Primary tabs with secondary tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
         {tabsSecondaryExample}
       </Example>
-      <Example heading="Scroll buttons" handlebars={tabsScrollExampleRaw} docs={tabsScrollDocs}>
+      <Example heading="Overflow Tabs" handlebars={tabsScrollExampleRaw} docs={tabsScrollDocs}>
         {tabsScrollExample}
       </Example>
       <Example heading="Filled tabs" handlebars={tabsFilledExampleRaw} docs={tabsFilledDocs}>
