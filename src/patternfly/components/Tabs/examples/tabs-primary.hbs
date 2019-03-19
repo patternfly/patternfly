@@ -1,4 +1,6 @@
 {{#> tabs}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--attribute='' tabs-item--current="true"}}
       {{#> tabs-button tabs-button--attribute='id="ex1-tab1"'}}
@@ -16,4 +18,6 @@
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}

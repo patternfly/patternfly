@@ -1,4 +1,6 @@
 {{#> tabs tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
       {{#> tabs-button tabs-button--attribute='id="ex2-tab1"'}}
@@ -51,9 +53,13 @@
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}
 
 {{#> tabs tabs--IsSecondary="true" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
       {{#> tabs-button tabs-button--attribute='id="ex2-tab1"'}}
@@ -106,5 +112,7 @@
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}
 

@@ -220,6 +220,14 @@
     border: var(--pf-c-tabs__item--BorderWidth) solid var(--pf-c-tabs__item--BorderColor);
   }
 
+  &.pf-m-secondary {
+    color: var(--pf-global--active-color--100);
+
+    &::before {
+      border: none;
+    }
+  }
+
   // Scroll button hover state
   &:hover::after {
     position: absolute;

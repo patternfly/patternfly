@@ -47,11 +47,11 @@ export default () => {
       <Example heading="Primary tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
         {tabsPrimaryExample}
       </Example>
-      <Example heading="Scroll buttons" handlebars={tabsScrollExampleRaw} docs={tabsScrollDocs}>
-        {tabsScrollExample}
-      </Example>
       <Example heading="Primary tabs with secondary tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
         {tabsSecondaryExample}
+      </Example>
+      <Example heading="Scroll buttons" handlebars={tabsScrollExampleRaw} docs={tabsScrollDocs}>
+        {tabsScrollExample}
       </Example>
       <Example heading="Filled tabs" handlebars={tabsFilledExampleRaw} docs={tabsFilledDocs}>
         {tabsFilledExample}

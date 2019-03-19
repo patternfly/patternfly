@@ -1,4 +1,6 @@
 {{#> tabs tabs--type="nav" tabs--modifier="pf-m-start pf-m-start-current pf-m-end" tabs--attribute='aria-label="Local"'}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
       {{#> tabs-button tabs-button--attribute='id="ex5-tab1"'}}
@@ -51,11 +53,15 @@
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}
 
 <br><br>
 
 {{#> tabs tabs--type="nav" tabs--attribute='arial-label="Local"'}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
       {{#> tabs-button tabs-button--attribute='id="ex6-tab1"'}}
@@ -73,9 +79,13 @@
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}
 
 {{#> tabs tabs--type="nav" tabs--IsSecondary="true" tabs--attribute='arial-label="Local secondary"'}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
       {{#> tabs-button tabs-button--attribute='id="ex6-secondary-tab1"'}}
@@ -93,4 +103,6 @@
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}
