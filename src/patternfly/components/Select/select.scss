@@ -260,8 +260,7 @@
   white-space: normal;
 
   // Add space between children
-  > *:not(:last-child),
-  > :not(* + *) {
+  > :not(:last-child) {
     margin-right: var(--pf-c-select__toggle-wrapper--not-last-child--MarginRight);
   }
 
