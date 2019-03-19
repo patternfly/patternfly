@@ -162,9 +162,8 @@ $pf-global--breakpoint--desktop: 1200px;
 $pf-global--BorderWidth--sm:     1px !default;
 $pf-global--BorderWidth--md:     2px !default;
 $pf-global--BorderWidth--lg:     3px !default;
-$pf-global--BorderColor:         $pf-color-black-600 !default;
+$pf-global--BorderColor:         $pf-color-black-300 !default;
 $pf-global--BorderColor--100:    $pf-color-black-500 !default;
-$pf-global--BorderColor--200:    $pf-color-black-300 !default;
 $pf-global--BorderColor--dark:   $pf-color-black-600 !default;
 $pf-global--BorderColor--light:  $pf-color-black-400 !default;
 $pf-global--BorderColor--light-200: $pf-color-black-200 !default;
@@ -172,7 +171,7 @@ $pf-global--BorderRadius--sm:        3px !default;
 $pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Icons
-$pf-global--icon--Color--light: $pf-color-black-500 !default;
+$pf-global--icon--Color--light: $pf-color-black-600 !default;
 $pf-global--icon--Color--dark: $pf-color-black-900 !default;
 $pf-global--icon--FontSize--sm: pf-font-prem(10px) !default;
 $pf-global--icon--FontSize--md: pf-font-prem(18px) !default;

@@ -31,7 +31,7 @@
 }
 
 .Preview__body.is-dark-preview {
-  background-color: #292e34;
+  background-color: var(--pf-global--BackgroundColor--dark-100);
 }
 
 .Preview__viewport-toggle {

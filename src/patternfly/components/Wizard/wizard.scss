@@ -13,6 +13,7 @@
   }
 
   // Header
+  --pf-c-wizard__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
   --pf-c-wizard__header--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-wizard__header--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-wizard__header--PaddingBottom: var(--pf-global--spacer--lg);
@@ -40,7 +41,7 @@
 
   // Description
   --pf-c-wizard__description--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-wizard__description--Color: var(--pf-global--Color--400);
+  --pf-c-wizard__description--Color: var(--pf-global--Color--light-200);
 
   // Toggle
   --pf-c-wizard__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -174,12 +175,6 @@
     max-height: var(--pf-c-wizard--lg--MaxHeight);
   }
 
-  .pf-c-background-image {
-    &::before {
-      position: absolute;
-    }
-  }
-
   > *:not(.pf-c-wizard__outer-wrap) {
     flex-shrink: 0;
   }
@@ -190,6 +185,7 @@
 
   position: relative;
   padding: var(--pf-c-wizard__header--PaddingTop) var(--pf-c-wizard__header--PaddingRight) var(--pf-c-wizard__header--PaddingBottom) var(--pf-c-wizard__header--PaddingLeft);
+  background-color: var(--pf-c-wizard__header--BackgroundColor);
 
   // Nested selector to match button component color specificity
   .pf-c-wizard__close {
