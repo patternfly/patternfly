@@ -1,60 +1,60 @@
 <{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
   {{#unless select--IsTypeahead}}
-		id="{{id}}-toggle"
-		aria-haspopup="true"
-		aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
-		aria-labelledby="{{id}}-label {{id}}-toggle"
-		{{#if aria-label}}
-			aria-label="{{aria-label}}"
-		{{/if}}
-	{{/unless}}
-	{{#if select-toggle--attribute}}
-		{{{select-toggle--attribute}}}
-	{{/if}}>
-	<div class="pf-c-select__toggle-wrapper">
-		{{!-- First part, chips --}}
-		{{#if select--IsMultiSelect}}
-			{{#if select--ItemIsSelected}}
-				{{#if select--IsExpandedChips}}
-					{{> select-chip-group-expanded}}
-				{{else}}
-					{{> select-chip-group-collapsed}}
-				{{/if}}
-			{{/if}}
-		{{/if}}
-		{{!-- Second part, text or typeahead --}}
-		{{#if select--IsTypeahead}}
-		  {{#if select-typeahead--Placeholder}}
-			  {{> select-toggle-typeahead }}
-			{{else}}
-				{{!-- default placeholder text --}}
-				{{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
-			{{/if}}
-		{{else if @partial-block}}
-			<span class="pf-c-select__toggle-text">{{> @partial-block}}</span>
-		{{else}}
-			<span>Select</span>
-		{{/if}}
-		{{!-- Third part, badge --}}
-		{{#if select--IsCheckboxSelect}}
-			{{#if select--ItemIsSelected}}
-			  <div class="pf-c-select__toggle-badge">
+    id="{{id}}-toggle"
+    aria-haspopup="true"
+    aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
+    aria-labelledby="{{id}}-label {{id}}-toggle"
+    {{#if aria-label}}
+      aria-label="{{aria-label}}"
+    {{/if}}
+    {{/unless}}
+  {{#if select-toggle--attribute}}
+    {{{select-toggle--attribute}}}
+  {{/if}}>
+  <div class="pf-c-select__toggle-wrapper">
+    {{!-- First part, chips --}}
+    {{#if select--IsMultiSelect}}
+      {{#if select--ItemIsSelected}}
+        {{#if select--IsExpandedChips}}
+          {{> select-chip-group-expanded}}
+        {{else}}
+          {{> select-chip-group-collapsed}}
+        {{/if}}
+      {{/if}}
+    {{/if}}
+    {{!-- Second part, text or typeahead --}}
+    {{#if select--IsTypeahead}}
+      {{#if select-typeahead--Placeholder}}
+        {{> select-toggle-typeahead }}
+      {{else}}
+        {{!-- default placeholder text --}}
+        {{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
+      {{/if}}
+    {{else if @partial-block}}
+      <span class="pf-c-select__toggle-text">{{> @partial-block}}</span>
+    {{else}}
+      <span>Select</span>
+    {{/if}}
+    {{!-- Third part, badge --}}
+    {{#if select--IsCheckboxSelect}}
+      {{#if select--ItemIsSelected}}
+        <div class="pf-c-select__toggle-badge">
           {{#> badge badge--modifier="pf-m-read"}}
             3
           {{/badge}}
-				</div>
-			{{/if}}
-		{{/if}}
-	</div>
-	{{!-- Clear button if it's typeahead and something has been typed --}}
-	{{#if select--IsTypeahead}}
-		{{#if select--ItemIsSelected}}
-			{{#> button button--modifier="pf-m-plain pf-c-select__toggle-clear" button--attribute='aria-label="Clear all"'}}
-				{{> button-icon button-icon--type="times-circle"}}
-			{{/button}}
-		{{/if}}
-			{{> select-toggle-button}}
-		{{else}}
-	  {{> select-toggle-icon}}
-	{{/if}}
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+  {{!-- Clear button if it's typeahead and something has been typed --}}
+  {{#if select--IsTypeahead}}
+    {{#if select--ItemIsSelected}}
+      {{#> button button--modifier="pf-m-plain pf-c-select__toggle-clear" button--attribute='aria-label="Clear all"'}}
+        {{> button-icon button-icon--type="times-circle"}}
+      {{/button}}
+    {{/if}}
+      {{> select-toggle-button}}
+    {{else}}
+    {{> select-toggle-icon}}
+  {{/if}}
 </{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}}>
