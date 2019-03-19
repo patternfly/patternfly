@@ -3,19 +3,15 @@
   --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-breadcrumb__item--Color: var(--pf-global--Color--100);
   --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
 
   // Breadcrumb Divider
   --pf-c-breadcrumb__item-divider--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--Color--100);
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
   // Breadcrumb Link
   --pf-c-breadcrumb__link--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-breadcrumb__link--Color: var(--pf-global--link--Color);
-  --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color);
-  --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+  --pf-c-breadcrumb__link--m-current--Color: var(--pf-global--Color--100);
 
   // Heading
   --pf-c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--sm);
@@ -37,7 +33,6 @@
   font-size: var(--pf-c-breadcrumb__item--FontSize);
   font-weight: var(--pf-c-breadcrumb__item--FontWeight);
   line-height: var(--pf-c-breadcrumb__item--LineHeight);
-  color: var(--pf-c-breadcrumb__item--Color);
   cursor: default;
 
   &:not(:last-child) {
@@ -50,7 +45,6 @@
   margin-left: var(--pf-c-breadcrumb__item-divider--MarginLeft);
   font-size: var(--pf-c-breadcrumb__item-divider--FontSize);
   line-height: 1;
-  color: var(--pf-c-breadcrumb__item-divider--Color);
 }
 
 // Breadcrumb link
@@ -58,13 +52,6 @@
   font-size: inherit;
   font-weight: var(--pf-c-breadcrumb__link--FontWeight);
   line-height: inherit;
-  color: var(--pf-c-breadcrumb__link--Color);
-
-  &,
-  &:hover,
-  &.pf-m-hover {
-    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
-  }
 
   // current item
   &.pf-m-current {
@@ -73,8 +60,7 @@
     &,
     &:hover,
     &.pf-m-hover {
-      --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__item--Color);
-
+      color: var(--pf-c-breadcrumb__link--m-current--Color);
       text-decoration: none;
     }
   }
