@@ -4,10 +4,15 @@
   {{#if select--attribute}}
     {{{select--attribute}}}
   {{/if}}>
+  {{#if select--IsLanguageMenu}}
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">English</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Español</button></li>
+  {{else}}
   <li><button class="pf-c-select__menu-item" aria-pressed="false">January</button></li>
   <li><button class="pf-c-select__menu-item" aria-pressed="false">February</button></li>
   <li><button class="pf-c-select__menu-item" aria-pressed="false">March</button></li>
   <li><button class="pf-c-select__menu-item" {{#if select--ItemIsSelected}} aria-pressed="true"{{else}} aria-pressed="false"{{/if}}>April</button></li>
   <li><button class="pf-c-select__menu-item" aria-pressed="false">May</button></li>
   <li><button class="pf-c-select__menu-item" aria-pressed="false">June</button></li>
+  {{/if}}
 </ul>

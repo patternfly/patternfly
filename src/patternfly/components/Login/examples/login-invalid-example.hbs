@@ -12,11 +12,9 @@
         {{#> login-main-header-desc}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         {{/login-main-header-desc}}
-        {{#> dropdown id="invalid-login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
-          {{#> dropdown-toggle-text}}
-            English
-          {{/dropdown-toggle-text}}
-        {{/dropdown}}
+        {{#> select id="login-invalid-select-single" select--IsLanguageMenu="true"}}
+          English
+        {{/select}}
       {{/login-main-header}}
       {{#> login-main-body}}
         {{#> form}}
