@@ -81,7 +81,7 @@ export default () => {
       <Example heading="Tertiary Nav" handlebars={navListTertiaryExampleRaw}>
         {navListTertiaryExample}
       </Example>
-      <Example heading="Tertiary Nav" handlebars={navListTertiaryOverflowExampleRaw}>
+      <Example heading="Tertiary Nav Overflow" handlebars={navListTertiaryOverflowExampleRaw}>
         {navListTertiaryOverflowExample}
       </Example>
     </Documentation>

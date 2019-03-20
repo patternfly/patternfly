@@ -550,3 +550,16 @@
   font-weight: var(--pf-c-nav__section-title--FontWeight);
   color: var(--pf-c-nav__section-title--Color);
 }
+
+// // Scroll buttons hidden by default
+// .pf-c-tabs__scroll-button {
+//   display: none;
+//   visibility: hidden;
+// }
+
+// // Scroll buttons shown with modifiers
+// &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1),
+// &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
+//   display: block;
+//   visibility: visible;
+// }
