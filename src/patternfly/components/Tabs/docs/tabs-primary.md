@@ -13,7 +13,7 @@
 | `.pf-c-tabs__list` | `<ul>` | Creates a tab list. **Required**          |
 | `.pf-c-tabs__item` | `<li>` | Creates a tab item. **Required**          |
 | `.pf-c-tabs__button` | `<button>` | Creates a tab button. **Required**        |
-| `id="tab1"` | `.pf-c-tabs__button` | Uniquely identifies the tab. **Required** |
+| `id="{id of tabs + id of tab button}"` | `.pf-c-tabs__button` | Uniquely identifies the tab button within the tab component. **Required** |
 
 ### Modifiers
 
