@@ -1,0 +1,98 @@
+{{#> tabs tabs--id="primary-scroll" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab6"')}}
+        Tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7"')}}
+        Tab item 7
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab8"')}}
+        Tab item 8
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab9"')}}
+        Tab item 9
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab10"')}}
+        Tab item 10
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+{{#> tabs tabs--id="secondary-scroll" tabs--IsSecondary="true" tabs--modifier="pf-m-start pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary-left" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Secondary tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Secondary tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+     {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7"')}}
+        Secondary tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary-right" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
