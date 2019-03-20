@@ -92,6 +92,10 @@
   --pf-c-content--dt--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--dt--sm--MarginTop: 0;
 
+  // hr
+  --pf-c-content--hr--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-content--hr--BackgroundColor: var(--pf-global--BorderColor--light-200);
+
   font-size: var(--pf-c-content--FontSize);
   line-height: var(--pf-c-content--LineHeight);
   color: var(--pf-c-content--Color);
@@ -117,7 +121,8 @@
   blockquote,
   small,
   pre,
-  table {
+  table,
+  hr {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
       margin-bottom: var(--pf-c-content--MarginBottom);
@@ -214,6 +219,12 @@
     font-weight: var(--pf-c-content--blockquote--FontWeight);
     color: var(--pf-c-content--blockquote--Color);
     border-left: var(--pf-c-content--blockquote--BorderLeftWidth) solid var(--pf-c-content--blockquote--BorderLeftColor);
+  }
+
+  hr {
+    height: var(--pf-c-content--hr--Height);
+    background-color: var(--pf-c-content--hr--BackgroundColor);
+    border: none;
   }
 
   ol {
