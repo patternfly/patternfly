@@ -179,6 +179,11 @@
     visibility: hidden;
   }
 
+  .pf-c-nav__scroll-button {
+    display: none;
+    visibility: hidden;
+  }
+
   // Disable underline
   [class*="list"] [class*="link"] {
     &,
@@ -187,6 +192,11 @@
     &:active {
       text-decoration: none;
     }
+  }
+
+  &.pf-m-overflow-left .pf-nav__scroll-button {
+    display: block;
+    visibility: visible;
   }
 }
 
