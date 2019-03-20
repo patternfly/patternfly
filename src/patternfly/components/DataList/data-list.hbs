@@ -2,6 +2,9 @@
   role="list"
   {{#if data-list--attribute}}
     {{{data-list--attribute}}}
+  {{/if}}
+  {{#if data-list--id}}
+    id="{{{data-list--id}}}"
   {{/if}}>
   {{> @partial-block}}
 </ul>
