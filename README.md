@@ -94,5 +94,15 @@ If you have any suggestions about ways that we can improve how we use this tool,
 
 ## FAQ
 
+#### CSS Variables
 [How do I use CSS variables to customize
 the library?](https://pf4.patternfly.org/guidelines#variables)
+
+#### Browser Support
+PatternFly 4 is supported on the following browsers:
+- Chrome
+- Firefox
+- Safari
+- Edge
+
+We also provide documentation for IE11 support.  This isn't baked into the library directly, but we provide information on how to achieve it in our [wiki](https://github.com/patternfly/patternfly-next/wiki/IE11-Support). 
