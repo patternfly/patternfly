@@ -99,7 +99,7 @@ If you have any suggestions about ways that we can improve how we use this tool,
 the library?](https://pf4.patternfly.org/guidelines#variables)
 
 #### Browser Support
-PatternFly 4 is supported on the following browsers:
+PatternFly 4 is supported on the latest version of the following browsers:
 - Chrome
 - Firefox
 - Safari
