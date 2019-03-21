@@ -84,15 +84,15 @@
 
   // color
   --pf-c-nav__horizontal-list-link--Color: #{$pf-color-black-300};
-  --pf-c-nav__horizontal-list-link--hover--Color: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--active--Color: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--focus--Color: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--hover--Color: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--active--Color: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--focus--Color: var(--pf-global--link--Color);
 
   // after
   --pf-c-nav__horizontal-list-link--after--Height: #{pf-size-prem(3px)};
-  --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--focus--after--BackgroundColor: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-nav__horizontal-list-link--focus--after--BackgroundColor: var(--pf-global--active-color--100);
 
   // List tertiary item
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
@@ -171,12 +171,11 @@
   --pf-c-nav__tertiary-list-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Base styling
-  overflow-x: auto;
+  position: relative;
 
-  // Hide scrollbars
-  &::-webkit-scrollbar {
-    display: none;
-    visibility: hidden;
+  &.pf-m-dark {
+    // This component modification always needs to be dark
+    @include pf-t-dark;
   }
 
   .pf-c-nav__scroll-button {
@@ -194,7 +193,12 @@
     }
   }
 
-  &.pf-m-overflow-left .pf-nav__scroll-button {
+  &.pf-m-overflow-left .pf-c-nav__scroll-button.pf-m-left {
+    display: block;
+    visibility: visible;
+  }
+
+  &.pf-m-overflow-right .pf-c-nav__scroll-button.pf-m-right {
     display: block;
     visibility: visible;
   }
@@ -381,6 +385,14 @@
 .pf-c-nav__horizontal-list,
 .pf-c-nav__tertiary-list {
   display: inline-flex;
+  max-width: 100%;
+  overflow-x: scroll;
+
+  // Hide scrollbars
+  &::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+  }
 
   .pf-c-nav__link {
     position: relative;
@@ -390,6 +402,8 @@
 
 // List horizontal, masthead
 .pf-c-nav__horizontal-list {
+  @include pf-t-dark;
+
   .pf-c-nav__item {
     margin-right: var(--pf-c-nav__horizontal-list-item--MarginRight);
   }
@@ -561,15 +575,42 @@
   color: var(--pf-c-nav__section-title--Color);
 }
 
-// // Scroll buttons hidden by default
-// .pf-c-tabs__scroll-button {
-//   display: none;
-//   visibility: hidden;
-// }
+.pf-c-nav__scroll-button {
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  z-index: var(--pf-global--ZIndex--md);
+  width: var(--pf-global--spacer--xl);
+  padding-top: var(--pf-global--spacer--sm);
+  padding-right: var(--pf-global--spacer--sm);
+  padding-bottom: var(--pf-global--spacer--sm);
+  padding-left: var(--pf-global--spacer--sm);
+  line-height: 1;
+  background-color: #fff;
+  border: initial;
 
-// // Scroll buttons shown with modifiers
-// &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1),
-// &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
-//   display: block;
-//   visibility: visible;
-// }
+  &.pf-m-hover,
+  &:hover,
+  &.pf-m-active,
+  &:active,
+  &.pf-m-focus,
+  &:focus {
+    color: var(--pf-global--active-color--100);
+  }
+
+  &:nth-of-type(1) {
+    left: 0;
+  }
+
+  &:nth-of-type(2) {
+    right: 0;
+  }
+
+  &.pf-m-left {
+    box-shadow: var(--pf-global--BoxShadow--lg-right);
+  }
+
+  &.pf-m-right {
+    box-shadow: var(--pf-global--BoxShadow--lg-left);
+  }
+}
