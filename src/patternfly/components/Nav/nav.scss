@@ -90,9 +90,9 @@
 
   // after
   --pf-c-nav__horizontal-list-link--after--Height: #{pf-size-prem(3px)};
-  --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--active-color--100);
-  --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--active-color--100);
-  --pf-c-nav__horizontal-list-link--focus--after--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--focus--after--BackgroundColor: var(--pf-global--link--Color);
 
   // List tertiary item
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
@@ -161,9 +161,9 @@
   --pf-c-nav__simple-list-link--m-separator--after--Bottom: calc(-1 * var(--pf-c-nav__simple-list-link--m-separator--after--Height));
 
   // Modifier - current item
-  --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-nav__horizontal-list-link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-nav__horizontal-list-link--m-current--after--BackgroundColor: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Modifier - current item
   --pf-c-nav__tertiary-list-link--m-current--Color: var(--pf-global--link--Color);
@@ -180,8 +180,8 @@
   --pf-c-nav__scroll-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-nav__scroll-button--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__scroll-button--m-left--BoxShadow: var(--pf-global--BoxShadow--lg-right);
-  --pf-c-nav__scroll-button--m-right--BoxShadow: var(--pf-global--BoxShadow--lg-left);
+  --pf-c-nav__scroll-button--nth-of-type-1--BoxShadow: var(--pf-global--BoxShadow--lg-right);
+  --pf-c-nav__scroll-button--nth-of-type-2--BoxShadow: var(--pf-global--BoxShadow--lg-left);
 
   // Base styling
   position: relative;
@@ -206,12 +206,12 @@
     }
   }
 
-  &.pf-m-overflow-left .pf-c-nav__scroll-button.pf-m-left {
+  &.pf-m-start .pf-c-nav__scroll-button:nth-of-type(1) {
     display: block;
     visibility: visible;
   }
 
-  &.pf-m-overflow-right .pf-c-nav__scroll-button.pf-m-right {
+  &.pf-m-end .pf-c-nav__scroll-button:nth-of-type(2) {
     display: block;
     visibility: visible;
   }
@@ -613,17 +613,11 @@
 
   &:nth-of-type(1) {
     left: 0;
+    box-shadow: var(--pf-c-nav__scroll-button--nth-of-type-1--BoxShadow);
   }
 
   &:nth-of-type(2) {
     right: 0;
-  }
-
-  &.pf-m-left {
-    box-shadow: var(--pf-c-nav__scroll-button--m-left--BoxShadow);
-  }
-
-  &.pf-m-right {
-    box-shadow: var(--pf-c-nav__scroll-button--m-right--BoxShadow);
+    box-shadow: var(--pf-c-nav__scroll-button--nth-of-type-2--BoxShadow);
   }
 }
