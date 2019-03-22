@@ -1,0 +1,64 @@
+{{#> toolbar toolbar--id=(concat page--id '-toolbar-top')}}
+    {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-simple-split-button-dropdown-simple-example-button"}}
+      {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-simple-example-check') aria-label="Select all"}}
+      {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-simple-example-button')  aria-label="Select"}}
+    {{/dropdown}}
+    {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
+      {{> button-icon button-icon--type="filter"}}
+    {{/button}}
+    {{#> toolbar-filter}}
+      {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
+        <i class="fas fa-filter" aria-hidden="true"></i>
+        Name
+      {{/select}}
+    {{/toolbar-filter}}
+    {{#> options-menu id=(concat toolbar--id '-options-menu') options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
+    {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+      <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    {{/options-menu-toggle}}
+    {{> options-menu-multiple}}
+  {{/options-menu}}
+  {{#> toolbar-action-group}}
+    {{#> button button--modifier="pf-m-primary"}}
+      Action
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action
+    {{/button}}
+  {{/toolbar-action-group}}
+    {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
+    {{/dropdown}}
+  {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-c-toolbar__pagination"}}
+    {{#> pagination-total-items}}
+      <b>1 - 10</b> of <b>37</b>
+    {{/pagination-total-items}}
+    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
+      {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+        <span class="pf-c-options-menu__toggle-text">
+          <b>1 - 10</b> of <b>37</b> Items
+        </span>
+        {{> options-menu-toggle-button aria-label="Select"}}
+      {{/options-menu-toggle}}
+      {{> options-menu-single}}
+    {{/options-menu}}
+    {{#> pagination-nav}}
+      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+        {{> button-icon button-icon--type="angle-double-left"}}
+      {{/button}}
+      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+        {{> button-icon button-icon--type="angle-left"}}
+      {{/button}}
+      {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+        {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" size="2" value="1"'}}
+        <span aria-hidden="true">of 2</span>
+      {{/pagination-nav-page-select}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+        {{> button-icon button-icon--type="angle-right"}}
+      {{/button}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+        {{> button-icon button-icon--type="angle-double-right"}}
+      {{/button}}
+    {{/pagination-nav}}
+  {{/pagination}}
+  {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
+{{/toolbar}}
