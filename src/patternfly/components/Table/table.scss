@@ -383,11 +383,18 @@
     transition: var(--pf-c-table__expandable-row--Transition);
   }
 
-  // no padding on standard td
-  td:only-child {
-    padding: 0;
-    padding-left: var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
+  /* stylelint-disable */
+  td {
+    &.pf-m-no-padding {
+      padding: 0;
+      padding-left: var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
+
+      .pf-c-table__expandable-row-content {
+        padding: 0;
+      }
+    }
   }
+  /* stylelint-enable */
 
   .pf-c-table__expandable-row-content {
     padding-top: var(--pf-c-table__expandable-row-content--PaddingTop);
