@@ -1,5 +1,5 @@
-{{#> context-selector id="context-selector-collapsed-example" context-selector--label-text="Selected Project"}}
-  {{#> context-selector-toggle context-selector-toggle--attribute='id="context-selector-expanded-example-toggle" aria-labelledby="context-selector-expanded-example-toggle context-selector-expanded-example-label"'}}
+{{#> context-selector context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected Project"}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-toggle ' context-selector--id '-label"')}}
     {{#> context-selector-toggle-text}}
       My Project
     {{/context-selector-toggle-text}}
@@ -9,9 +9,9 @@
   {{#> context-selector-menu}}
     {{#> context-selector-menu-input}}
       {{#> input-group}}
-        {{#> form-control controlType="input" input="true" form-control--attribute='type="search" placeholder="Search" id="textInput1" name="textInput1" aria-labelledby="search-button"'}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search"' 'placeholder="Search"' 'id="textInput1"' 'name="textInput1"' 'aria-labelledby="' context-selector--id '-search-button"')}}
         {{/form-control}}
-        {{#> button button--modifier="pf-m-tertiary" button--attribute='id="search-button" aria-label="Search menu items"'}}
+        {{#> button button--modifier="pf-m-tertiary" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
           {{> button-icon button-icon--type="search"}}
         {{/button}}
       {{/input-group}}
@@ -71,8 +71,8 @@
   {{/context-selector-menu}}
 {{/context-selector}}
 
-{{#> context-selector id="context-selector-expanded-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
-  {{#> context-selector-toggle  context-selector-toggle--attribute='id="context-selector-expanded-example-toggle" aria-labelledby="context-selector-expanded-example-toggle context-selector-expanded-example-label"'}}
+{{#> context-selector context-selector--id="context-selector-expanded-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
+  {{#> context-selector-toggle  context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-toggle ' context-selector--id '-label"')}}
     {{#> context-selector-toggle-text}}
       My Project
     {{/context-selector-toggle-text}}
@@ -82,9 +82,9 @@
   {{#> context-selector-menu}}
     {{#> context-selector-menu-input}}
       {{#> input-group}}
-        {{#> form-control controlType="input" input="true" form-control--attribute='type="search" placeholder="Search" id="textInput2" name="textInput2" aria-labelledby="search-button"'}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="textInput2" name="textInput2" aria-labelledby="' context-selector--id '-search-button"')}}
         {{/form-control}}
-        {{#> button button--modifier="pf-m-tertiary" button--attribute='id="search-button" aria-label="Search menu items"'}}
+        {{#> button button--modifier="pf-m-tertiary" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
           {{> button-icon button-icon--type="search"}}
         {{/button}}
       {{/input-group}}
