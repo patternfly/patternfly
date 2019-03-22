@@ -105,4 +105,4 @@ PatternFly 4 is supported on the latest version of the following browsers:
 - Safari
 - Edge
 
-We also provide documentation for IE11 support.  This isn't baked into the library directly, but we provide information on how to achieve it in our [wiki](https://github.com/patternfly/patternfly-next/wiki/IE11-Support). 
+We also provide documentation for how to enable IE11 support in our [wiki](https://github.com/patternfly/patternfly-next/wiki/IE11-Support). 
