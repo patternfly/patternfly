@@ -157,6 +157,8 @@
   // List item seperator
   --pf-c-nav__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__separator--BackgroundColor: var(--pf-global--BorderColor--light);
+  --pf-c-nav__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__separator--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft);
   --pf-c-nav__simple-list__separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
   --pf-c-nav__simple-list--nested__separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
@@ -277,6 +279,8 @@
 // Separator
 .pf-c-nav__separator {
   height: var(--pf-c-nav__separator--Height);
+  margin-top: var(--pf-c-nav__separator--MarginTop);
+  margin-bottom: var(--pf-c-nav__separator--MarginBottom);
   margin-left: var(--pf-c-nav__separator--MarginLeft);
   background-color: var(--pf-c-nav__separator--BackgroundColor);
 
