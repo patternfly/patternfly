@@ -40,9 +40,9 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-tr--responsive--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--nested-table--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--2xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
@@ -193,6 +193,18 @@ $pf-c-table-xs-breakpoint: 380px;
     }
   }
 
+  tr > * {
+    // Remove First child padding left
+    &:first-child {
+      --pf-c-table-cell--PaddingLeft: 0;
+    }
+
+    // Remove Last child padding right
+    &:last-child {
+      --pf-c-table-cell--PaddingRight: 0;
+    }
+  }
+
   // nested tables
   .pf-c-table {
     --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table-tr--responsive--nested-table--PaddingTop);
@@ -303,6 +315,14 @@ $pf-c-table-xs-breakpoint: 380px;
       // Border treatment
       display: none;
       visibility: hidden;
+    }
+
+    td {
+      &.pf-m-no-padding {
+        .pf-c-table__expandable-row-content {
+          padding: 0;
+        }
+      }
     }
 
     &:not(.pf-m-expanded) {
