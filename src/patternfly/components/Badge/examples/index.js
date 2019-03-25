@@ -6,7 +6,6 @@ import BadgeUnreadExampleRaw from '!raw!./badge-unread-example.hbs';
 import BadgeReadExample from './badge-read-example.hbs';
 import BadgeUnreadExample from './badge-unread-example.hbs';
 import docs from '../docs/code.md';
-import '../badge.scss';
 
 export const Docs = docs;
 
@@ -14,9 +13,10 @@ export default () => {
   const badgeReadExample = BadgeReadExample();
   const badgeUnreadExample = BadgeUnreadExample();
   const headingText = 'Badge';
+  const variablesRoot = 'pf-c-badge';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Read Badge" handlebars={BadgeReadExampleRaw}>
         {badgeReadExample}
       </Example>

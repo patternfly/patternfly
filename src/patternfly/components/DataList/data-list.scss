@@ -2,15 +2,25 @@ $pf-data-list--breakpoint--mobile: 380px;
 
 .pf-c-data-list {
   --pf-c-data-list--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-data-list--BorderTopColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-data-list--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list--mobile--BorderTopWidth: var(--pf-global--spacer--sm);
+  --pf-c-data-list--BorderBottomColor: var(--pf-global--Color--light-200);
+  --pf-c-data-list--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+
+  @media screen and (max-width: $pf-global--breakpoint--mobile) {
+    --pf-c-data-list--BorderTopWidth: var(--pf-c-data-list--mobile--BorderTopWidth);
+  }
 
   // Item
   --pf-c-data-list__item--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--mobile--PaddingRight: var(--pf-global--spacer--lg); // custom name for one-off breakpoint
+  --pf-c-data-list__item--mobile--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item--mobile--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-data-list__item--mobile--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item--m-expanded--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--Color--light-200);
   --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list__item-item--mobile--BorderTopWidth: #{pf-size-prem(8px)};
 
   @media screen and (max-width: $pf-data-list--breakpoint--mobile) {
     --pf-c-data-list__item--PaddingRight: var(--pf-c-data-list__item--mobile--PaddingRight);
@@ -58,6 +68,14 @@ $pf-data-list--breakpoint--mobile: 380px;
     --pf-c-data-list__check--MarginRight: var(--pf-c-data-list__check--mobile--MarginRight);
   }
 
+  // Icon
+  --pf-c-data-list__icon--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-data-list__icon--mobile--MarginRight: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-data-list--breakpoint--mobile) {
+    --pf-c-data-list__icon--MarginRight: var(--pf-c-data-list__icon--mobile--MarginRight);
+  }
+
   // Actions
   --pf-c-data-list__action--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-data-list__action--mobile--MarginLeft: var(--pf-global--spacer--sm);
@@ -70,9 +88,9 @@ $pf-data-list--breakpoint--mobile: 380px;
   --pf-c-data-list__expandable-content--Transition: var(--pf-global--Transition);
   --pf-c-data-list__expandable-content--BorderTopColor: var(--pf-global--Color--light-200);
   --pf-c-data-list__expandable-content--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content--mobile--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-data-list__expandable-content--mobile--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-data-list__expandable-content--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content--mobile--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-data-list__expandable-content--mobile--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__expandable-content--MarginRight: calc(var(--pf-c-data-list__expandable-content--PaddingRight) * -1);
   --pf-c-data-list__expandable-content--MarginLeft: calc(var(--pf-c-data-list__expandable-content--PaddingLeft) * -1);
   --pf-c-data-list__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
@@ -87,8 +105,12 @@ $pf-data-list--breakpoint--mobile: 380px;
     --pf-c-data-list__expandable-content--PaddingLeft: var(--pf-c-data-list__expandable-content--mobile--PaddingLeft);
   }
 
+  @include pf-t-light;
+
   list-style-type: disc;
   background-color: var(--pf-c-data-list--BackgroundColor);
+  border-top: var(--pf-c-data-list--BorderTopWidth) solid var(--pf-c-data-list--BorderTopColor);
+  border-bottom: var(--pf-c-data-list--BorderBottomWidth) solid var(--pf-c-data-list--BorderBottomColor);
 }
 
 // li
@@ -118,6 +140,10 @@ $pf-data-list--breakpoint--mobile: 380px;
   & + & {
     border-top: var(--pf-c-data-list__item-item--BorderTopWidth) solid var(--pf-c-data-list__item-item--BorderTopColor);
 
+    @media screen and (max-width: $pf-global--breakpoint--mobile) {
+      --pf-c-data-list__item-item--BorderTopWidth: var(--pf-c-data-list__item-item--mobile--BorderTopWidth);
+    }
+
     &::before {
       --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
       --pf-c-data-list__item--before--Height: var(--pf-c-data-list__item-item--before--Height);
@@ -135,6 +161,7 @@ $pf-data-list--breakpoint--mobile: 380px;
 // non-textual items
 .pf-c-data-list__toggle,
 .pf-c-data-list__check,
+.pf-c-data-list__icon,
 .pf-c-data-list__action {
   flex: none;
 }
@@ -158,8 +185,11 @@ $pf-data-list--breakpoint--mobile: 380px;
 
 // Checkbox
 .pf-c-data-list__check {
-  display: flex;
   margin-right: var(--pf-c-data-list__check--MarginRight);
+}
+
+.pf-c-data-list__icon {
+  margin-right: var(--pf-c-data-list__icon--MarginRight);
 }
 
 // Content cells

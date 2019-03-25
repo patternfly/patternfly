@@ -15,7 +15,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
-| `.pf-c-select__toggle` | `<div>` |  Initiates a custom toggle. |
+| `.pf-c-select__toggle` | `<button>` |  Initiates a custom toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates a custom select toggle wrapper so that chips and input field can wrap together. |
 | `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/Check/examples/) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |

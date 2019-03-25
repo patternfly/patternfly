@@ -11,3 +11,4 @@
 | -- | -- | -- |
 | `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
 | `.pf-m-center`  | `<th>`, `<td>` | Modifies cell to center its contents. |
+| `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |

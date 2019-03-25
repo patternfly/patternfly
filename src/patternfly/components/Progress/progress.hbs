@@ -16,15 +16,6 @@
   {{~#if progress--success}} pf-m-success{{/if}}
   {{~#if progress--danger}} pf-m-danger{{/if}}"
   {{#if progress__id}}id="{{progress__id}}"{{/if}}
-  role="progressbar"
-  aria-valuemin="0"
-  aria-valuemax="100"
-  aria-valuenow="{{progress__value}}"
-  {{~#if progress--dynamic}}
-    aria-valuetext="{{progress__description}}"
-  {{else}}
-    {{~#if progress__id}} aria-describedby="{{progress__id}}-description"{{/if}}
-  {{/if}}
   {{#if progress--attribute}}
     {{{progress--attribute}}}
   {{/if}}>

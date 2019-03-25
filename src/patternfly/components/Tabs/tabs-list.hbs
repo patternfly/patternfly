@@ -1,18 +1,22 @@
-<button class="pf-c-tabs__scroll-button" aria-label="Scroll left" 
-{{#if tabs-scroll-buttons--attribute}}
-  {{{tabs-scroll-buttons--attribute}}}
-{{/if}}>
-  <i class="fas fa-angle-left" hidden></i>
-</button>
-<ul class="pf-c-tabs__list{{#if tabs-list--modifier}} {{tabs-list--modifier}}{{/if}}" 
+{{#unless tabs--IsSecondary}}
+  <button class="pf-c-tabs__scroll-button" aria-label="Scroll left"
+    {{#if tabs-scroll-buttons--attribute}}
+      {{{tabs-scroll-buttons--attribute}}}
+    {{/if}}>
+    <i class="fas fa-angle-left" hidden></i>
+  </button>
+{{/unless}}
+<ul class="pf-c-tabs__list{{#if tabs-list--modifier}} {{tabs-list--modifier}}{{/if}}"
   {{#if tabs-list--attribute}}
     {{{tabs-list--attribute}}}
   {{/if}}>
   {{> @partial-block}}
 </ul>
-<button class="pf-c-tabs__scroll-button" aria-label="Scroll right" 
-{{#if tabs-scroll-buttons--attribute}}
-  {{{tabs-scroll-buttons--attribute}}}
-{{/if}}>
-  <i class="fas fa-angle-right" hidden></i>
-</button>
+{{#unless tabs--IsSecondary}}
+  <button class="pf-c-tabs__scroll-button" aria-label="Scroll right"
+  {{#if tabs-scroll-buttons--attribute}}
+    {{{tabs-scroll-buttons--attribute}}}
+  {{/if}}>
+    <i class="fas fa-angle-right" hidden></i>
+  </button>
+{{/unless}}

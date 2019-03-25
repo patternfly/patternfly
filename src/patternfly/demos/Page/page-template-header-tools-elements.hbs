@@ -8,7 +8,7 @@
     {{/button}}
   {{/page-header-tools-group}}
   {{#> page-header-tools-group}}
-    {{#> dropdown id="dropdown-kebab-right-aligned-1" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-mobile  pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-mobile pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
     {{/dropdown}}
     <div class="pf-m-user pf-screen-reader">
       {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}

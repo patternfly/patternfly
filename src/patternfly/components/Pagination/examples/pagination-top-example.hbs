@@ -1,12 +1,12 @@
-{{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+{{#> pagination}}
   {{#> pagination-total-items}}
-    37 Items
+    <b>1 - 10</b> of <b>37</b>
   {{/pagination-total-items}}
 
   {{#> options-menu id="pagination-options-menu-top-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
     {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
       <span class="pf-c-options-menu__toggle-text">
-        <b>1 - 10</b> of <b>37</b> Items
+        <b>1 - 10</b> of <b>37</b>
       </span>
       {{> options-menu-toggle-button aria-label="Select"}}
     {{/options-menu-toggle}}
@@ -21,7 +21,7 @@
       {{> button-icon button-icon--type="angle-left"}}
     {{/button}}
 
-    {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+    {{#> pagination-nav-page-select}}
       {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" size="2" value="1"'}}
       <span aria-hidden="true">of 4</span>
     {{/pagination-nav-page-select}}

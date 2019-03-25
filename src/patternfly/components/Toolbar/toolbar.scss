@@ -4,7 +4,14 @@
   --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-toolbar--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-toolbar--md--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-toolbar--PaddingRight: var(--pf-c-toolbar--md--PaddingRight);
+    --pf-c-toolbar--PaddingLeft: var(--pf-c-toolbar--md--PaddingLeft);
+  }
 
   // Bulk Select
   --pf-c-toolbar__bulk-select--MarginRight: var(--pf-global--spacer--md);
@@ -76,6 +83,7 @@
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -88,9 +96,11 @@
 
   @media screen and (max-width: $pf-global--breakpoint--lg) {
     display: none;
+    visibility: hidden;
 
     &.pf-m-expanded {
       display: flex;
+      visibility: visible;
     }
   }
 
@@ -118,9 +128,11 @@
 
 .pf-c-toolbar__action-group {
   display: none;
+  visibility: hidden;
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     display: flex;
+    visibility: visible;
   }
 
   > * + * {
@@ -132,7 +144,7 @@
   --pf-c-toolbar--child--MarginLeft: var(--pf-c-toolbar__action-list--MarginLeft);
 }
 
-.pf-c-toolbar__pagination,
+.pf-c-pagination,
 .pf-c-toolbar__total-items {
   margin-left: auto;
 }
@@ -148,9 +160,11 @@
   padding-left: 0;
   margin-top: var(--pf-c-toolbar__filter-list--MarginTop);
   margin-left: 0;
+  visibility: hidden;
 
   &.pf-m-expanded {
     display: block;
+    visibility: visible;
   }
 }
 

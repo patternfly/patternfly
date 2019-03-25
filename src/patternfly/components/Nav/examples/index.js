@@ -36,9 +36,10 @@ export default () => {
   const navListTertiaryExample = NavListTertiaryExample();
   const navMixedExample = NavMixedExample();
   const headingText = 'Navigation';
+  const variablesRoot = 'pf-c-nav';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Simple Nav" handlebars={navSimpleListExampleRaw}>
         {navSimpleListExample}
       </Example>

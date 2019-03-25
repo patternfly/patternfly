@@ -9,6 +9,9 @@
         {{#> title titleType="h1" title--modifier="pf-m-3xl"}}
           Log in to your account
         {{/title}}
+        {{#> login-main-header-desc}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        {{/login-main-header-desc}}
         {{#> dropdown id="invalid-login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
           {{#> dropdown-toggle-text}}
             English
@@ -31,8 +34,8 @@
           {{/form-group}}
           {{#> form-group}}
           {{#> check}}
-              {{#> check-input check-input--attribute='type="checkbox" id="invalid-login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
-              {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+              {{#> check-input check-input--attribute='type="checkbox" id="invalid-login-demo-checkbox" name="invalid-login-demo-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="invalid-login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}

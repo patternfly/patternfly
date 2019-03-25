@@ -13,9 +13,10 @@ export default () => {
   const expandableExpandedExample = ExpandableExpandedExample();
   const expandableHiddenExample = ExpandableHiddenExample();
   const headingText = 'Expandable';
+  const variablesRoot = 'pf-c-expandable';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Hidden Example" handlebars={expandableHiddenExampleRaw}>
         {expandableHiddenExample}
       </Example>
