@@ -8,7 +8,7 @@
     {{> data-table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
       {{#> grid grid--modifier="pf-m-gutter"}}
         {{#> grid-item grid-item--modifier="pf-m-12-col"}}
           {{> data-table-main-section-nav}}
@@ -17,8 +17,8 @@
           {{> data-table-main-section-content}}
         {{/grid-item}}
       {{/grid}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-table"}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
         {{> data-table-toolbar-no-sort}}
         {{> data-table-sortable-table}}
