@@ -222,8 +222,12 @@
   margin-left: auto; // to push it to the right
 
   .pf-m-icons {
+    display: none;
+    visibility: hidden;
+
     @media screen and (min-width: $pf-global--breakpoint--lg) {
-      @include pf-u-visible;
+      display: block;
+      visibility: visible;
     }
   }
 
@@ -237,8 +241,12 @@
   }
 
   .pf-m-user {
+    display: none;
+    visibility: hidden;
+
     @media screen and (min-width: $pf-global--breakpoint--md) {
-      @include pf-u-visible;
+      display: block;
+      visibility: visible;
     }
   }
 
