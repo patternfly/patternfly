@@ -281,11 +281,6 @@
   }
 }
 
-// Remove this selector during breaking change period
-.pf-c-select__toggle-clear + .pf-c-select__toggle-arrow {
-  --pf-c-select__toggle-arrow--MarginLeft: var(--pf-c-select__toggle-arrow--with-clear--MarginLeft);
-}
-
 .pf-c-select__toggle-badge {
   display: flex;
   padding-left: var(--pf-c-select__toggle-badge--PaddingLeft);
