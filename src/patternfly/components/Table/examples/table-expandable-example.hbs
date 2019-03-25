@@ -50,9 +50,9 @@
       {{#> table-td}}{{/table-td}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td table-td--attribute=(concat 'colspan="4 id="' table--id '-content1"')}}
-        <div class="pf-c-table__expandable-row-content">
+        {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        {{/table-expandable-row-content}}
       {{/table-td}}
       {{#> table-td}}{{/table-td}}
     {{/table-tr}}
@@ -60,7 +60,7 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node2'}}" aria-label="Details">
       {{/table-td}}
@@ -120,9 +120,9 @@
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content3"')}}
-        <div class="pf-c-table__expandable-row-content">
+        {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -156,9 +156,9 @@
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content4"')}}
-        <div class="pf-c-table__expandable-row-content">
+        {{#> table-expandable-row-content}}
           Expandable row content has no padding.
-        </div>
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
