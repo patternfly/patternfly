@@ -600,6 +600,13 @@
   background-color: var(--pf-c-nav__scroll-button--BackgroundColor);
   border: 0;
 
+  // /* Remove button padding in FF */
+  // button::-moz-focus-inner {
+  //   padding: 0;
+  //   margin-top: -2px;
+  //   margin-bottom: -2px;
+  // }
+
   &.pf-m-hover,
   &:hover,
   &.pf-m-active,
