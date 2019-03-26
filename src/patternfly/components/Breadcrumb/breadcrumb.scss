@@ -6,6 +6,7 @@
   --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
 
   // Breadcrumb Divider
+  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor);
   --pf-c-breadcrumb__item-divider--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
@@ -45,6 +46,7 @@
   margin-left: var(--pf-c-breadcrumb__item-divider--MarginLeft);
   font-size: var(--pf-c-breadcrumb__item-divider--FontSize);
   line-height: 1;
+  color: var(--pf-c-breadcrumb__item-divider--Color);
 }
 
 // Breadcrumb link
