@@ -5,7 +5,7 @@
 | `.pf-c-login` | `<div>` |  Initializes the login component. **Required**|
 | `.pf-c-login__container` | `<div>` |  Positions the login component content. **Required**|
 | `.pf-c-login__header` | `<header>` |  Positions the login header. **Required**|
-| `.pf-c-login__header .pf-c-brand` | `<img>` |  Creates a brand image inside of login header. |
+| `.pf-c-login__header .pf-c-brand` | `<img>` |  Creates a brand image inside of login header. **Required** |
 | `.pf-c-login__main` | `<main>` |  Positions the login main area. **Required** |
 | `.pf-c-login__main-header` | `<header>` |  Creates the header of the main area. **Required** |
 | `.pf-c-login__main-header .pf-c-title` | `<h1>,<h2>,<h3>,<h4>,<h5>,<h6>` |  Creates a title in the main header area. **Required** |
