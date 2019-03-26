@@ -40,9 +40,9 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-tr--responsive--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--nested-table--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
@@ -57,8 +57,8 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Expandable row content
-  --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Table check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
