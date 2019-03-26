@@ -2,8 +2,8 @@
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-login` | `<div>` |  Initializes the login component. |
-| `.pf-c-login__container` | `<div>` |  Positions the login component content. |
+| `.pf-c-login` | `<div>` |  Initializes the login component. **Required**|
+| `.pf-c-login__container` | `<div>` |  Positions the login component content. **Required**|
 | `.pf-c-login__header` | `<header>` |  Positions the login header. |
 | `.pf-c-login__header .pf-c-brand` | `<img>` |  Creates a brand image inside of login header. |
 | `.pf-c-login__main` | `<main>` |  Positions the login main area. **Required** |
@@ -12,12 +12,12 @@
 | `.pf-c-login__main-header-desc` | `<p>` |  Creates the description in the main area header. |
 | `.pf-c-login__main-header .pf-c-dropdown` | `<div>` |  Creates a language selector dropdown in the main header area. |
 | `.pf-c-login__main-body` | `<div>` |  Creates the body of the main area. **Required** |
-| `.pf-c-login__main-body .pf-c-form` | `<form>` |  Creates the login form in the main body area. |
+| `.pf-c-login__main-body .pf-c-form` | `<form>` |  Creates the login form in the main body area. **Required**|
 | `.pf-c-login__main-body .pf-c-form .pf-c-form-helper-text.pf-m-error` | `<form>` |  Creates the error text above the form fields. **Required**. When not active, apply .pf-m-hidden`. |
 | `.pf-c-login__main-footer` | `<footer>` |  Creates the footer of the main area. **Required** |
-| `.pf-c-login__main-footer-links` | `<ul>` |  Creates a list of links in the main footer. |
-| `.pf-c-login__main-footer-links-item` | `<li>` |  Creates proper spacing for links in the main footer. |
-| `.pf-c-login__main-footer-links-item-link` | `<a>` |  Creates link in links list in footer. |
+| `.pf-c-login__main-footer-links` | `<ul>` |  Creates a list of links in the main footer. **Required** |
+| `.pf-c-login__main-footer-links-item` | `<li>` |  Creates proper spacing for links in the main footer. **Required** |
+| `.pf-c-login__main-footer-links-item-link` | `<a>` |  Creates link in links list in footer. **Required** |
 | `.pf-c-login__main-footer-band` | `<div>` | Styles a band in the footer. |
 | `.pf-c-login__main-footer-band-item` | `<p>` | Adds information to the band in the footer. |
 | `.pf-c-login__footer` | `<footer>` |  Positions the login footer. |
