@@ -10,7 +10,7 @@
 
   // Base
   --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-table--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
@@ -120,8 +120,8 @@
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderLeft--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle--BorderRight--BorderColor: var(--pf-global--BorderColor);
-  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor: var(--pf-global--BorderColor);
+  --pf-c-table__compound-expansion-toggle--BorderRight--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
 
