@@ -174,6 +174,7 @@
   --pf-c-nav__scroll-button--Top: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-nav__scroll-button--Width: var(--pf-global--spacer--xl);
+  --pf-c-nav__scroll-button--Height: #{pf-size-prem(40px)};
   --pf-c-nav__scroll-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -595,17 +596,11 @@
   bottom: 0;
   z-index: var(--pf-c-nav__scroll-button--ZIndex);
   width: var(--pf-c-nav__scroll-button--Width);
+  height: var(--pf-c-nav__scroll-button--Height); // this fixes the positioning on FF
   padding-right: var(--pf-c-nav__scroll-button--PaddingRight);
   padding-left: var(--pf-c-nav__scroll-button--PaddingLeft);
   background-color: var(--pf-c-nav__scroll-button--BackgroundColor);
   border: 0;
-
-  // /* Remove button padding in FF */
-  // button::-moz-focus-inner {
-  //   padding: 0;
-  //   margin-top: -2px;
-  //   margin-bottom: -2px;
-  // }
 
   &.pf-m-hover,
   &:hover,
