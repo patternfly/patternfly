@@ -598,7 +598,7 @@
   padding-right: var(--pf-c-nav__scroll-button--PaddingRight);
   padding-left: var(--pf-c-nav__scroll-button--PaddingLeft);
   background-color: var(--pf-c-nav__scroll-button--BackgroundColor);
-  border: initial;
+  border: 0;
 
   &.pf-m-hover,
   &:hover,
