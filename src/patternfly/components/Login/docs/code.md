@@ -4,7 +4,7 @@
 | -- | -- | -- |
 | `.pf-c-login` | `<div>` |  Initializes the login component. **Required**|
 | `.pf-c-login__container` | `<div>` |  Positions the login component content. **Required**|
-| `.pf-c-login__header` | `<header>` |  Positions the login header. |
+| `.pf-c-login__header` | `<header>` |  Positions the login header. **Required**|
 | `.pf-c-login__header .pf-c-brand` | `<img>` |  Creates a brand image inside of login header. |
 | `.pf-c-login__main` | `<main>` |  Positions the login main area. **Required** |
 | `.pf-c-login__main-header` | `<header>` |  Creates the header of the main area. **Required** |
@@ -20,5 +20,5 @@
 | `.pf-c-login__main-footer-links-item-link` | `<a>` |  Creates link in links list in footer. **Required** |
 | `.pf-c-login__main-footer-band` | `<div>` | Styles a band in the footer. |
 | `.pf-c-login__main-footer-band-item` | `<p>` | Adds information to the band in the footer. |
-| `.pf-c-login__footer` | `<footer>` |  Positions the login footer. |
-| `.pf-c-login__footer .pf-c-list` | `<ul>` |  Creates a list of links in the login footer. |
+| `.pf-c-login__footer` | `<footer>` |  Positions the login footer. **Required** |
+| `.pf-c-login__footer .pf-c-list` | `<ul>` |  Creates a list of links in the login footer. **Required** |
