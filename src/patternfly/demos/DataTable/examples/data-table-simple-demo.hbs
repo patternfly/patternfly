@@ -9,15 +9,11 @@
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
-      {{#> grid grid--modifier="pf-m-gutter"}}
-        {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-          {{> data-table-main-section-nav}}
-        {{/grid-item}}
-        {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-          {{> data-table-main-section-content}}
-        {{/grid-item}}
-      {{/grid}}
+      {{> data-table-main-section-nav}}
     {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-table-main-section-content}}
+    {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
         {{> data-table-toolbar}}

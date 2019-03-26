@@ -1,8 +1,8 @@
-{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-lg" table--attribute='aria-label="This is a compact table example"'}}
+{{#> table table--id="compact-table-demo" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
@@ -19,7 +19,7 @@
       {{#> table-th table-th--attribute='scope="col"'}}
         Numbers
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
         Icons
       {{/table-th}}
       {{#> table-th}}{{/table-th}}
@@ -30,10 +30,10 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="name1"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="name1">Amy Smith</span>
+        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS Guru
@@ -47,24 +47,24 @@
       {{#> table-td table-td--data-label="Numbers"}}
         0556
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon"}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-1" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="name2"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="name2">John Miller</span>
+        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual Design
@@ -78,24 +78,24 @@
       {{#> table-td table-td--data-label="Numbers"}}
         9492
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon"}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-2" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow3" aria-labelledby="name3"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="name3">Steve Wilson</span>
+        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual Design Lead
@@ -109,107 +109,45 @@
       {{#> table-td table-td--data-label="Numbers"}}
         9929
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon"}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-3" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow4" aria-labelledby="name4"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor Name"}}
-        <span id="name4">Mary Brown</span>
+        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
-        CSS Guru
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Location"}}
-        Not too sure
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last Seen"}}
-        May 9, 2018
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Numbers"}}
-        0556
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Icon"}}
-        <i class="fas fa-check"></i>
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
-      {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-4" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow5" aria-labelledby="name5"'}}{{/check-input}}
-      {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor Name"}}
-        <span id="name5">Jenny Johnson</span>
-      {{/table-th}}
-      {{#> table-td table-td--data-label="Position"}}
-        Visual Design
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Location"}}
-        Raleigh
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last Seen"}}
-        May 9, 2018
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Numbers"}}
-        9492
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Icon"}}
-        <i class="fas fa-check"></i>
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
-      {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-5" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow6" aria-labelledby="name6"'}}{{/check-input}}
-      {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor Name"}}
-        <span id="name6">Jo Davis</span>
-      {{/table-th}}
-      {{#> table-td table-td--data-label="Position"}}
-        Visual Design Lead
+        Interaction Design
       {{/table-td}}
       {{#> table-td table-td--data-label="Location"}}
         Westford
       {{/table-td}}
-      {{#> table-td table-td--data-label="Last Seen"}}
+      {{#> table-td table-td--data-label="Workspaces"}}
         May 9, 2018
       {{/table-td}}
-      {{#> table-td table-td--data-label="Numbers"}}
-        9929
+      {{#> table-td table-td--data-label="Last Commit"}}
+        2217
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon"}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id="dropdown-kebab-right-aligned-6" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
         {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
