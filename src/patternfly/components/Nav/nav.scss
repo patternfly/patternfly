@@ -397,13 +397,16 @@
 .pf-c-nav__tertiary-list {
   display: inline-flex;
   max-width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
 
   // Hide scrollbars
   &::-webkit-scrollbar {
     display: none;
     visibility: hidden;
   }
+
+  scrollbar-width: none; // hides scrollbars in Firefox 64 and up
+  -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 
   .pf-c-nav__link {
     position: relative;
