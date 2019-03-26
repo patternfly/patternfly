@@ -36,9 +36,17 @@ $pf-c-table-xs-breakpoint: 380px;
   --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--md--PaddingLeft: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--md--PaddingRight);
+    --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--md--PaddingLeft);
+  }
+
   --pf-c-table-tr--responsive--nested-table--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--2xl);
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
