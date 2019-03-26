@@ -22,10 +22,10 @@ Use checkbox if your user has to perform additional steps for changes to become 
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-switch` | `<label>` |  Initiates a switch. **required**  |
-| `.pf-c-switch__input` | `<input type="checkbox">` |  Hide the checkbox inside the switch. **required**  |
-| `.pf-c-switch__toggle` | `<span>` |  Initiates the toggle inside the switch. **required**  |
-| `.pf-c-switch__toggle-icon` | `<i>` | Initiates an icon inside the switch toggle. **required when the switch is used without a label** |
+| `.pf-c-switch` | `<label>` |  Initiates a switch. **Required**  |
+| `.pf-c-switch__input` | `<input type="checkbox">` |  Hide the checkbox inside the switch. **Required**  |
+| `.pf-c-switch__toggle` | `<span>` |  Initiates the toggle inside the switch. **Required**  |
+| `.pf-c-switch__toggle-icon` | `<i>` | Initiates an icon inside the switch toggle. **Required when the switch is used without a label** |
 | `.pf-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
 | `.pf-m-on` | `.pf-c-switch__label` | Modifies the switch label to display the on message. |
 | `.pf-m-off` | `.pf-c-switch__label` | Modifies the switch label to display the off message. |
