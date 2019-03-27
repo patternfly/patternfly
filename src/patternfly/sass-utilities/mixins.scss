@@ -137,3 +137,9 @@
 
   @extend %pf-t-dark;
 }
+
+@mixin pf-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

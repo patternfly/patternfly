@@ -119,12 +119,11 @@
   }
 
   .pf-c-context-selector__toggle-text {
-    overflow: hidden;
+    @include pf-text-overflow;
+
     font-size: var(--pf-c-context-selector__toggle-text--FontSize);
     font-weight: var(--pf-c-context-selector__toggle-text--FontWeight);
     line-height: var(--pf-c-context-selector__toggle-text--LineHeight);
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }
 

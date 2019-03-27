@@ -169,9 +169,7 @@
 }
 
 .pf-c-options-menu__toggle-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @include pf-text-overflow;
 }
 
 .pf-c-options-menu__toggle-icon {
