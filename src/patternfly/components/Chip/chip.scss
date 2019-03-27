@@ -130,10 +130,9 @@
 
 // Text Element
 .pf-c-chip__text {
+  @include pf-text-overflow;
+
   max-width: var(--pf-c-chip__text--MaxWidth);
-  overflow: hidden;
   font-size: var(--pf-c-chip__text--FontSize);
   color: var(--pf-c-chip__text--Color);
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
