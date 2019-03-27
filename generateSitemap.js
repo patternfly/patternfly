@@ -6,7 +6,7 @@ const path = require('path');
 const allSitePagesQuery = {
   query: `
     query AllComponents {
-      examples: allSitePage(filter: { path: {regex: "/examples-full/" } }) {
+      examples: allSitePage(filter: { path: {regex: "/(components|demos|layouts|utilities).*examples-full/" } }) {
         edges {
           node {
             id,
@@ -25,10 +25,7 @@ axios
     // gather page objects from response data
     const pages = response.data.data.examples.edges.map(edge => edge.node);
     // write a nicely formatted array of pages to a file
-    fs.writeFileSync(
-      path.resolve(__dirname, 'sitemap.json'),
-      JSON.stringify(pages, null, 2)
-    );
+    fs.writeFileSync(path.resolve(__dirname, 'sitemap.json'), JSON.stringify(pages, null, 2));
   })
   .catch(error => {
     console.log(error);

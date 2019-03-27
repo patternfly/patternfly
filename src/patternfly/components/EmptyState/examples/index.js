@@ -15,10 +15,12 @@ export default () => {
   const emptyStateSimpleExample = EmptystateSimpleExample();
   const emptyStateSmallExample = EmptystateSmallExample();
   const emptyStateLargeExample = EmptystateLargeExample();
+  const headingText = 'Empty State';
+  const variablesRoot = 'pf-c-empty-state';
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="Empty State Simple" handlebars={emptyStateSimpleExampleRaw}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Empty State" handlebars={emptyStateSimpleExampleRaw}>
         {emptyStateSimpleExample}
       </Example>
       <Example heading="Empty State Small" handlebars={emptyStateSmallExampleRaw}>

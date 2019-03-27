@@ -1,0 +1,28 @@
+{{#> background-image}}
+{{/background-image}}
+{{#> page page--id="page-layout-data-list-simple-without-pagination"}}
+  {{#> page-header}}
+    {{> data-list-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> data-list-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{#> grid grid--modifier="pf-m-gutter"}}
+        {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+          {{> data-list-main-section-nav}}
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+          {{> data-list-main-section-content}}
+        {{/grid-item}}
+      {{/grid}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> data-list-without-pagination-toolbar}}
+        {{> data-list-simple-no-pagination-data-list}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}

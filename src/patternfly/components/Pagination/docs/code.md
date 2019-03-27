@@ -4,7 +4,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label`  | `.pf-c-pagination`, `.pf-c-pagination__nav`, `.pf-c-pagination__nav-page-select` |  Provides an accessible name for pagination elements. **Required** |
+| `aria-label`  | `.pf-c-pagination__nav` |  Provides an accessible name for pagination navigation element. **Required** |
 
 ## Pagination nav input
 
@@ -21,6 +21,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | -- | -- | -- |
 | `.pf-c-pagination` | `<div>` |  Initiates pagination. |
 | `.pf-c-pagination__current` | `<div>` |  Initiates element to display currently displayed items for use in responsive view. Only needed for default pagination, not `.pf-m-footer`. |
+| `.pf-c-pagination__total-items` | `<div>` | Initiates element to replace the options menu on mobile. |
 | `.pf-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
 | `.pf-c-pagination__menu-text` | `<span>` | Indicates text in menu dropdown. |

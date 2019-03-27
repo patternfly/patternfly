@@ -9,9 +9,10 @@ export const Docs = docs;
 
 export default () => {
   const alignmentSimpleExample = AlignmentSimpleExample();
+  const headingText = 'Alignment';
 
   return (
-    <Documentation docs={Docs} className="is-utility-page">
+    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Alignment Simple" handlebars={alignmentSimpleExampleRaw}>
         {alignmentSimpleExample}
       </Example>

@@ -39,23 +39,54 @@ html {
 
 .Example__documentation {
   margin: 2rem 0;
+}
 
-  .Example__documentation--text {
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin-bottom: 1rem;
-      font-weight: 600;
+.Example__documentation--text,
+.Example__documentation,
+.Documentation__docsection {
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  table {
+    margin-bottom: 3rem;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    td,
+    th,
+    tr {
+      padding: .5em;
+      vertical-align: top;
+      border: 1px solid #ccc;
     }
 
-    p {
-      margin-bottom: 1rem;
+    tr:nth-child(even) {
+      background: #f1f1f1;
     }
+  }
 
-    table {
-      margin-bottom: 3rem;
-    }
+  code {
+    padding: .25em .75em;
+    color: #004368;
+    white-space: nowrap;
+    background-color: #def3ff;
+    border-radius: .5em;
+  }
+
+  mark {
+    background-color: #ffe995;
   }
 }
 
@@ -210,12 +241,10 @@ html {
     margin-top: .5rem;
   }
 
-  table {
+  table:not(.pf-c-table) {
     width: 100%;
     margin-bottom: 1rem;
-  }
 
-  table:not(.pf-c-table) {
     &,
     td,
     th,
@@ -348,48 +377,6 @@ html {
   &__section {
     margin-bottom: 2rem;
   }
-
-  code {
-    padding: .25em .75em;
-    color: #004368;
-    white-space: nowrap;
-    background-color: #def3ff;
-    border-radius: .5em;
-  }
-
-  mark {
-    background-color: #ffe995;
-  }
-
-  table {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  table:not(.pf-c-table) {
-    td,
-    th,
-    tr {
-      padding: .5em;
-      vertical-align: top;
-      border: 1px solid #ccc;
-    }
-  }
-
-  .pf-c-table {
-    margin-bottom: 0;
-
-    // td,
-    // th:not(.pf-c-table__sort) {
-    //   border: none;
-    // }
-
-    tr:nth-child(even) {
-      background-color: transparent;
-    }
-  }
-
-  tr:nth-child(even) { background: #f1f1f1; }
 
   &-container {
     &-tall {

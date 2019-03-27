@@ -13,9 +13,10 @@ export default () => {
   const clipboardCopyNoExpansionExample = ClipboardCopyNoExpansionExample();
   const clipboardCopyExpansionExample = ClipboardCopyExpansionExample();
   const headingText = 'Copy to Clipboard';
+  const variablesRoot = 'pf-c-clipboard-copy';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Copy to Clipboard No Expansion" handlebars={ClipboardCopyNoExpansionExampleRaw}>
         {clipboardCopyNoExpansionExample}
       </Example>

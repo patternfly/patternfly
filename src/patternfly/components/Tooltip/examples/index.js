@@ -22,9 +22,10 @@ export default () => {
   const tooltipBottomExample = TooltipBottomExample();
   const tooltipLeftExample = TooltipLeftExample();
   const headingText = 'Tooltip';
+  const variablesRoot = 'pf-c-tooltip';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example className="is-tooltip" heading="Tooltip Top" handlebars={TooltipTopExampleRaw}>
         {tooltipTopExample}
       </Example>

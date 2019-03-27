@@ -16,6 +16,21 @@
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
   --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
 
+  // Caption
+  --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table-caption--Color: var(--pf-global--Color--200);
+  --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-caption--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-caption--md--PaddingLeft: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-table-caption--PaddingRight: var(--pf-c-table-caption--md--PaddingRight);
+    --pf-c-table-caption--PaddingLeft: var(--pf-c-table-caption--md--PaddingLeft);
+  }
+
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
 
@@ -119,9 +134,6 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
-    // set position relative for absolutely positioned elements in responsive view
-    position: relative;
-
     // hack: buttons inside table cells will not occupy full height of parent when adjacent cells'
     // content wraps. for those special cases, there must be an explicit height set on tr and table cell
     // for button height: 100% to work
@@ -148,6 +160,7 @@
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
     font-weight: var(--pf-c-table--FontWeight);
+    vertical-align: baseline;
 
     // First child padding left
     &:first-child {
@@ -163,6 +176,16 @@
     &.pf-m-center {
       text-align: center;
     }
+  }
+
+  // Table caption
+  caption {
+    padding-top: var(--pf-c-table-caption--PaddingTop);
+    padding-bottom: var(--pf-c-table-caption--PaddingBottom);
+    padding-left: var(--pf-c-table-caption--PaddingLeft);
+    font-size: var(--pf-c-table-caption--FontSize);
+    color: var(--pf-c-table-caption--Color);
+    text-align: left;
   }
 
   // Table header cell
@@ -390,6 +413,7 @@
 
   &:not(.pf-m-expanded) {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -413,24 +437,25 @@
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
+  &:not(.pf-m-border-rows) {
+    tbody {
+      --pf-c-table--BorderWidth: 0;
+      --pf-c-table--BorderColor: transparent;
+
+      tr:first-child > * {
+        --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
+      }
+
+      tr:last-child > * {
+        --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
+      }
+    }
+  }
+
   // Thead only
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
-  }
-
-  // Tbody only
-  tbody {
-    --pf-c-table--BorderWidth: 0;
-    --pf-c-table--BorderColor: transparent;
-
-    tr:first-child > * {
-      --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
-    }
-
-    tr:last-child > * {
-      --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
-    }
   }
 
   tr > * {
@@ -453,6 +478,10 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+  }
+
+  .pf-c-table__icon {
+    text-align: center;
   }
 
   // nested tables
