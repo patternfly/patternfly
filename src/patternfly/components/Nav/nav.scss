@@ -98,14 +98,14 @@
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__tertiary-list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__tertiary-list-link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__tertiary-list--first-of-type-1--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-nav__tertiary-list--last-of-type-2--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-nav__tertiary-list--first-of-type-1--md--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__tertiary-list--last-of-type-2--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-nav__tertiary-list-item--first-of-type-1--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__tertiary-list-item--last-of-type-2--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__tertiary-list-item--first-of-type-1--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav__tertiary-list-item--last-of-type-2--md--PaddingRight: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
-    --pf-c-nav__tertiary-list--first-of-type-1--PaddingLeft: var(--pf-c-nav__tertiary-list--first-of-type-1--md--PaddingLeft);
-    --pf-c-nav__tertiary-list--first-of-type-2--PaddingRight: var(--pf-c-nav__tertiary-list--first-of-type-2--md--PaddingRight);
+    --pf-c-nav__tertiary-list-item--first-of-type-1--PaddingLeft: var(--pf-c-nav__tertiary-list-item--first-of-type-1--md--PaddingLeft);
+    --pf-c-nav__tertiary-list-item--first-of-type-2--PaddingRight: var(--pf-c-nav__tertiary-list-item--first-of-type-2--md--PaddingRight);
   }
 
   // font
@@ -507,11 +507,11 @@
     margin-right: var(--pf-c-nav__tertiary-list-item--MarginRight);
 
     &:first-of-type {
-      padding-left: var(--pf-c-nav__tertiary-list--first-of-type-1--PaddingLeft);
+      padding-left: var(--pf-c-nav__tertiary-list-item--first-of-type-1--PaddingLeft);
     }
 
     &:last-of-type {
-      padding-right: var(--pf-c-nav__tertiary-list--last-of-type-2--PaddingRight);
+      padding-right: var(--pf-c-nav__tertiary-list-item--last-of-type-2--PaddingRight);
     }
   }
 
