@@ -20,8 +20,16 @@
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table-caption--Color: var(--pf-global--Color--200);
   --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-caption--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-caption--md--PaddingLeft: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-table-caption--PaddingRight: var(--pf-c-table-caption--md--PaddingRight);
+    --pf-c-table-caption--PaddingLeft: var(--pf-c-table-caption--md--PaddingLeft);
+  }
 
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
