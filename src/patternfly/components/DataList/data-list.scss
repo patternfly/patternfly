@@ -6,7 +6,7 @@
   --pf-c-data-list--BorderBottomColor: var(--pf-global--Color--light-200);
   --pf-c-data-list--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
-  @media screen and (max-width: $pf-global--breakpoint--sm) {
+  @media screen and (max-width: $pf-global--breakpoint--mobile) {
     --pf-c-data-list--BorderTopWidth: var(--pf-c-data-list--mobile--BorderTopWidth);
   }
 
