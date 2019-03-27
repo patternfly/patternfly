@@ -9,7 +9,7 @@
   // ============================================================ //
 
   // Base
-  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
@@ -134,6 +134,8 @@
 
   /* stylelint-enable */
 
+  @include pf-t-light; // This component always needs to be light
+
   // Base
   width: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
@@ -193,6 +195,7 @@
     font-size: var(--pf-c-table-caption--FontSize);
     color: var(--pf-c-table-caption--Color);
     text-align: left;
+    background-color: var(--pf-c-table--BackgroundColor);
   }
 
   // Table header cell

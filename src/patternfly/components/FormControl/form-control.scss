@@ -14,7 +14,7 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--200);
   --pf-c-form-control--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-form-control--BorderRadius: 0;
-  --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-form-control--Height: calc(var(--pf-c-form-control--FontSize) * var(--pf-c-form-control--LineHeight) + var(--pf-c-form-control--BorderWidth) * 2 + var(--pf-c-form-control--PaddingTop) + var(--pf-c-form-control--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
 
   // padding
@@ -55,14 +55,14 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   --pf-c-form-control--invalid--BackgroundSize: var(--pf-c-form-control--FontSize) var(--pf-c-form-control--FontSize);
   --pf-c-form-control--invalid--BackgroundUrl: #{pf-bg-svg($pf-c-form-control--invalid--Coordinates, $svg-color: $pf-c-form-control--invalid--Color)};
   --pf-c-form-control--invalid--exclamation--Background: var(--pf-c-form-control--invalid--BackgroundUrl) var(--pf-c-form-control--invalid--BackgroundPosition) / var(--pf-c-form-control--invalid--BackgroundSize) no-repeat;
-  --pf-c-form-control--invalid--Background: var(--pf-c-form-control--invalid--exclamation--Background);
+  --pf-c-form-control--invalid--Background: var(--pf-c-form-control--BackgroundColor) var(--pf-c-form-control--invalid--exclamation--Background);
 
   // Select
   --pf-c-form-control__select--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox)};
   --pf-c-form-control__select--BackgroundSize: #{pf-size-prem(14px)};
   --pf-c-form-control__select--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm)) center;
-  --pf-c-form-control__select--arrow--Background: var(--pf-c-form-control__select--BackgroundUrl) var(--pf-c-form-control__select--BackgroundPosition) / var(--pf-c-form-control__select--BackgroundSize) no-repeat;
+  --pf-c-form-control__select--arrow--Background: var(--pf-c-form-control--BackgroundColor) var(--pf-c-form-control__select--BackgroundUrl) var(--pf-c-form-control__select--BackgroundPosition) / var(--pf-c-form-control__select--BackgroundSize) no-repeat;
   --pf-c-form-control__select--Background: var(--pf-c-form-control__select--arrow--Background);
   --pf-c-form-control__select--invalid--Background: var(--pf-c-form-control--invalid--exclamation--Background), var(--pf-c-form-control__select--arrow--Background);
   --pf-c-form-control__select--invalid--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
