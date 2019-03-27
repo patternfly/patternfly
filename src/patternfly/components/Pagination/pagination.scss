@@ -37,9 +37,23 @@
     .pf-c-options-menu,
     .pf-c-pagination__nav {
       display: none;
+      visibility: hidden;
 
       @media screen and (min-width: $pf-global--breakpoint--md) {
         display: flex;
+        visibility: visible;
+      }
+    }
+  }
+
+  &.pf-m-footer {
+    .pf-c-options-menu {
+      display: none;
+      visibility: hidden;
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        display: flex;
+        visibility: visible;
       }
     }
   }
@@ -77,6 +91,7 @@
 .pf-c-pagination__total-items {
   @media screen and (min-width: $pf-global--breakpoint--md) {
     display: none;
+    visibility: hidden;
   }
 }
 

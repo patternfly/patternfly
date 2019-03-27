@@ -13,9 +13,10 @@ export default () => {
   const accordionFluidExample = AccordionFluidExample();
   const accordionFixedExample = AccordionFixedExample();
   const headingText = 'Accordion';
+  const variablesRoot = 'pf-c-accordion';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Accordion Fluid Example" handlebars={accordionFluidExampleRaw}>
         {accordionFluidExample}
       </Example>

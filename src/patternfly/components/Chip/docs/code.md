@@ -21,3 +21,4 @@ A Chip is used to display items that have been filtered or selected from a large
 | `.pf-c-badge` | `<span>` | Initiates the badge inside the chip. |
 | `.pf-m-overflow` | `.pf-c-chip` | Applies styling of the overflow chip. |
 | `.pf-c-button` | `.pf-c-chip.pf-m-overflow <button>` | Initiates the button used to show the overflow toggle. |
+| `.pf-m-read-only` | `.pf-c-chip` | Modifies chip for read-only state. |

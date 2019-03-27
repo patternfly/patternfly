@@ -58,7 +58,7 @@ program
       nameUnderscored: inflection.underscore(name),
       nameDasherized: dasherizedName,
       nameHumanized: inflection.humanize(name),
-      nameTitleized: inflection.titleize(name),
+      nameTitleized: inflection.transform(name, ['underscore', 'titleize']),
       nameClassified: inflection.classify(name),
       nameCamelized: inflection.camelize(name, true),
       namePascalized: inflection.camelize(name),

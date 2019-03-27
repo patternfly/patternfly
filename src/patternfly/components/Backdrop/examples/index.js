@@ -10,9 +10,10 @@ export const Docs = docs;
 export default () => {
   const backdropExample = BackdropExample();
   const headingText = 'Backdrop';
+  const variablesRoot = 'pf-c-backdrop';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Backdrop Example" fullPageOnly="true" handlebars={BackdropExampleRaw}>
         {backdropExample}
       </Example>

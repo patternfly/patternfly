@@ -24,9 +24,10 @@ export default () => {
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
   const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
   const headingText = 'Chip Group';
+  const variablesRoot = 'pf-c-chip-group';
 
   return (
-    <Documentation heading={headingText}>
+    <Documentation heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Chip Group Toolbar (Collapsed)"
         handlebars={ChipGroupToolbarCollapsedExampleRaw}

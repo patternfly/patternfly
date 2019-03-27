@@ -176,6 +176,7 @@
   // Hide scrollbars
   &::-webkit-scrollbar {
     display: none;
+    visibility: hidden;
   }
 
   // Disable underline
@@ -522,6 +523,7 @@
   // Hide scrollbars
   &::-webkit-scrollbar {
     display: none;
+    visibility: hidden;
   }
 
   // Expanded list item

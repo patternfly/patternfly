@@ -1,6 +1,6 @@
-<div class="pf-c-tabs{{#if tabs--modifier}} {{tabs--modifier}}{{/if}}"
+<{{#if tabs--type}}{{tabs--type}}{{else}}div{{/if}} class="pf-c-tabs{{#if tabs--IsSecondary}} pf-m-tabs-secondary{{/if}}{{#if tabs--modifier}} {{tabs--modifier}}{{/if}}"
   {{#if tabs--attribute}}
     {{{tabs--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</div>
+</{{#if tabs--type}}{{tabs--type}}{{else}}div{{/if}}>
