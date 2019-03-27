@@ -26,4 +26,4 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
 | `.pf-c-table__expandable-row-content` | `.pf-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
 | `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |
-| `.pf-m-no-padding` | `.pf-c-expandable-row` > `<td>` | Modifies the expandable row to have no padding.
+| `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding.
