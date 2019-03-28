@@ -450,6 +450,8 @@
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
+  --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+
   &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
       --pf-c-table--BorderWidth: 0;
@@ -465,26 +467,31 @@
     }
   }
 
+  tr {
+    > * {
+      --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+      --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
+      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
+
+      &:first-child {
+        --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
+      }
+
+      &:last-child {
+        --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
+      }
+    }
+
+    &:not(.pf-c-table__expandable-row) {
+      --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
+      --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
+    }
+  }
+
   // Thead only
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
-  }
-
-  tr > * {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
-    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
-    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
-    --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
-
-    &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
-    }
-
-    &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
-    }
   }
 
   .pf-c-table__action {
@@ -513,13 +520,11 @@
     }
   }
 
-  .pf-c-table__expandable-row {
-    .pf-c-table__expandable-row-content {
-      --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table--m-compact__expandable-row-content--PaddingTop);
-      --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table--m-compact__expandable-row-content--PaddingRight);
-      --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table--m-compact__expandable-row-content--PaddingBottom);
-      --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table--m-compact__expandable-row-content--PaddingLeft);
-    }
+  .pf-c-table__expandable-row-content {
+    --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table--m-compact__expandable-row-content--PaddingTop);
+    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table--m-compact__expandable-row-content--PaddingRight);
+    --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table--m-compact__expandable-row-content--PaddingBottom);
+    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table--m-compact__expandable-row-content--PaddingLeft);
   }
 }
 
