@@ -1,5 +1,5 @@
 {{#> context-selector context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected Project"}}
-  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-toggle ' context-selector--id '-label"')}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
     {{#> context-selector-toggle-text}}
       My Project
     {{/context-selector-toggle-text}}
@@ -72,7 +72,7 @@
 {{/context-selector}}
 
 {{#> context-selector context-selector--id="context-selector-expanded-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
-  {{#> context-selector-toggle  context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
     {{#> context-selector-toggle-text}}
       My Project
     {{/context-selector-toggle-text}}
