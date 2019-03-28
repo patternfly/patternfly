@@ -67,14 +67,14 @@
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-page__sidebar--Width: 80%;
   --pf-c-page__sidebar--md--Width: #{pf-size-prem(290px)};
-  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
   --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
+  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__sidebar--Width: var(--pf-c-page__sidebar--md--Width); // hardcode sidebar based on design spec, must match pf-n-nav--Width
@@ -274,11 +274,6 @@
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
   }
 
-  .pf-c-page__sidebar-body {
-    padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
-    padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
-  }
-
   // Mobile
   // Expanded nav
   &.pf-m-expanded {
@@ -295,6 +290,11 @@
       overflow: hidden;
     }
   }
+}
+
+.pf-c-page__sidebar-body {
+  padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
+  padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
 }
 
 // Main

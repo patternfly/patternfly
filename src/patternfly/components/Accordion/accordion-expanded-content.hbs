@@ -3,5 +3,7 @@
   {{#if accordion-expanded-content--attribute}}
     {{{accordion-expanded-content--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> accordion-expanded-content-body}}
+    {{> @partial-block}}
+  {{/accordion-expanded-content-body}}
 </dd>
