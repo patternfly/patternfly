@@ -89,12 +89,13 @@ $pf-data-list--breakpoint--mobile: 380px;
   --pf-c-data-list__expandable-content--MarginRight: calc(var(--pf-c-data-list__expandable-content-body--PaddingRight) * -1);
   --pf-c-data-list__expandable-content--MarginLeft: calc(var(--pf-c-data-list__expandable-content-body--PaddingLeft) * -1);
   --pf-c-data-list__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-data-list__expandable-content--MaxHeight: #{pf-size-prem(600px)};
+  --pf-c-data-list__expandable-content--md--MaxHeight: #{pf-size-prem(600px)};
   --pf-c-data-list__item--m-expanded__expandable-content--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list__expandable-content-body--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__expandable-content-body--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-data-list__expandable-content-body--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-data-list__expandable-content-body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__expandable-content-body--m-no-padding--Padding: 0;
   --pf-c-data-list__expandable-content-body--mobile--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__expandable-content-body--mobile--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-data-list__expandable-content-body--mobile--PaddingBottom: var(--pf-global--spacer--lg);
@@ -230,12 +231,10 @@ $pf-data-list--breakpoint--mobile: 380px;
   flex: 1 0 100%;
   align-self: flex-start;
   order: 2;
-  max-height: var(--pf-c-data-list__expandable-content--MaxHeight);
 
   // offset for li padding for border to extend to li edges
   margin-right: var(--pf-c-data-list__expandable-content--MarginRight);
   margin-left: var(--pf-c-data-list__expandable-content--MarginLeft);
-  overflow-y: auto;
   border-top: 0 solid var(--pf-c-data-list__expandable-content--BorderTopColor);
   box-shadow: var(--pf-c-data-list__expandable-content--BoxShadow);
 
@@ -245,5 +244,10 @@ $pf-data-list--breakpoint--mobile: 380px;
 
   .pf-c-data-list__expandable-content-body {
     padding: var(--pf-c-data-list__expandable-content-body--PaddingTop) var(--pf-c-data-list__expandable-content-body--PaddingRight) var(--pf-c-data-list__expandable-content-body--PaddingBottom) var(--pf-c-data-list__expandable-content-body--PaddingLeft);
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    max-height: var(--pf-c-data-list__expandable-content--md--MaxHeight);
+    overflow-y: auto;
   }
 }
