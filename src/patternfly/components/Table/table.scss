@@ -468,23 +468,25 @@
   }
 
   tr {
-    > * {
-      --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
-
-      &:first-child {
-        --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
-      }
-
-      &:last-child {
-        --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
-      }
-    }
+    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
+    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
 
     &:not(.pf-c-table__expandable-row) {
+      --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
       --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
       --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
+
+      /* stylelint-disable */
+      > * {
+        &:first-child {
+          --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
+        }
+
+        &:last-child {
+          --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
+        }
+      }
+      /* stylelint-enable */
     }
   }
 
@@ -522,9 +524,7 @@
 
   .pf-c-table__expandable-row-content {
     --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table--m-compact__expandable-row-content--PaddingTop);
-    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table--m-compact__expandable-row-content--PaddingRight);
     --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table--m-compact__expandable-row-content--PaddingBottom);
-    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table--m-compact__expandable-row-content--PaddingLeft);
   }
 }
 
