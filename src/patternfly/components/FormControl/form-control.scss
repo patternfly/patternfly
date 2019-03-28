@@ -90,6 +90,9 @@ $pf-c-form-control__select--ViewBox: "320" !default;
 
   &:not(textarea) {
     height: var(--pf-c-form-control--Height);
+
+    // truncate overflow text
+    text-overflow: ellipsis;
   }
 
   &[readonly] {
