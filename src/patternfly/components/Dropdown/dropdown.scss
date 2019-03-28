@@ -232,9 +232,7 @@
   }
 
   .pf-c-dropdown__toggle-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include pf-text-overflow;
   }
 
   .pf-c-dropdown__toggle-icon {

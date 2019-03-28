@@ -15,3 +15,5 @@
 | `.pf-c-empty-state__body` | `<p>` |  Creates the empty state body content. |
 | `.pf-c-button.pf-m-primary` | `<button>` |  Creates the primary action button. |
 | `.pf-c-empty-state__secondary` | `<div>` |  Creates area for secondary actions. |
+| `.pf-m-sm` | `.pf-c-empty-state` | Modifies the empty state for a small max-width |
+| `.pf-m-lg` | `.pf-c-empty-state` | Modifies the empty state for a large max-width |

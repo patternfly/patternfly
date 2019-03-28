@@ -77,9 +77,7 @@
   --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
   --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Sort indicator
   --pf-c-table__sort-indicator--MarginLeft: var(--pf-global--spacer--md);
@@ -393,14 +391,21 @@
     transition: var(--pf-c-table__expandable-row--Transition);
   }
 
-  // no padding on standard td
-  td:only-child {
-    padding: 0;
-    padding-left: var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
+  /* stylelint-disable */
+  td {
+    &.pf-m-no-padding {
+      padding: 0 0 0 var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
+
+      .pf-c-table__expandable-row-content {
+        padding: 0;
+      }
+    }
   }
+  /* stylelint-enable */
 
   .pf-c-table__expandable-row-content {
-    padding: var(--pf-c-table__expandable-row-content--PaddingTop) var(--pf-c-table__expandable-row-content--PaddingRight) var(--pf-c-table__expandable-row-content--PaddingBottom) var(--pf-c-table__expandable-row-content--PaddingLeft);
+    padding-top: var(--pf-c-table__expandable-row-content--PaddingTop);
+    padding-bottom: var(--pf-c-table__expandable-row-content--PaddingBottom);
   }
 
   // Modifier - Expanded tr

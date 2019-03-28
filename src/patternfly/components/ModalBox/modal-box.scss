@@ -71,10 +71,9 @@
   }
 
   .pf-c-title {
+    @include pf-text-overflow;
+
     flex: 0 0 auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 
     + .pf-c-modal-box__body {
       margin-top: var(--pf-c-modal-box--c-title--body--MarginTop);

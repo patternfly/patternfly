@@ -61,10 +61,9 @@
     border-left: var(--pf-c-accordion__toggle--m-expanded--BorderWidth) solid var(--pf-c-accordion__toggle--BorderLeftColor);
 
     .pf-c-accordion__toggle-text {
+      @include pf-text-overflow;
+
       max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
 
     .pf-c-accordion__toggle-icon {

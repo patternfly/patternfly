@@ -1,5 +1,4 @@
 .pf-c-empty-state {
-  --pf-c-empty-state--MaxWidth: #{pf-size-prem(600px)}; // one off to match design
   --pf-c-empty-state--Padding: var(--pf-global--spacer--xl);
   --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
@@ -13,8 +12,9 @@
   --pf-c-empty-state__secondary--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-empty-state__secondary--c-button--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-empty-state__secondary--c-button--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-empty-state--m-sm--MaxWidth: #{pf-size-prem(400px)};
+  --pf-c-empty-state--m-lg--MaxWidth: #{pf-size-prem(600px)};
 
-  max-width: var(--pf-c-empty-state--MaxWidth);
   padding: var(--pf-c-empty-state--Padding);
   text-align: center;
 
@@ -24,6 +24,14 @@
     + .pf-c-empty-state__secondary {
       margin-top: var(--pf-c-empty-state--c-button__secondary--MarginTop);
     }
+  }
+
+  &.pf-m-sm {
+    max-width: var(--pf-c-empty-state--m-sm--MaxWidth);
+  }
+
+  &.pf-m-lg {
+    max-width: var(--pf-c-empty-state--m-lg--MaxWidth);
   }
 }
 
