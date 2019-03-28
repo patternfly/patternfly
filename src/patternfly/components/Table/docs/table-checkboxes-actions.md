@@ -12,18 +12,16 @@ Note: When header cells are empty or they contain interactive elements, `<th>` s
 ### Thead Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-label="[descriptive text]"` | `.pf-c-table__check` | Provides an accessible name for checkbox header cells. **Required** |
+| `aria-label="[descriptive text]"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
 
 ### Tbody Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `aria-labelledby="{title_cell_id} {element_id}"` | `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible name for special cells containing interactive elements. **Required** |
-| `aria-label="[descriptive text]"`  | `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible name for `checkboxes` and `buttons`. **Required** |
-| `id`  | title cell `<th>` > `<span>`, `.pf-c-check__input`, `.pf-c-button`  | Provides an accessible description for special cells. **Required** |
+| `aria-labelledby="{title_cell_id}"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
+| `id`  | title cell `<th>` > `*` | Provides an accessible description for the checkbox. **Required** |
 
 
 ### Usage
-
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__check`  | `<th>`, `<td>` | Initiates a check table cell. |
