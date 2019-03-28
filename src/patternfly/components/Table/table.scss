@@ -58,6 +58,8 @@
 
   // Table cell - toggle
   --pf-c-table__toggle--c-button--MarginTop: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table--m-compact__toggle--PaddingTop: 0;
+  --pf-c-table--m-compact__toggle--PaddingBottom: 0;
 
   // Table cell - check
   --pf-c-table__check--input--MarginTop: #{pf-size-prem(3px)};
@@ -74,6 +76,8 @@
   --pf-c-table__expandable-row--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-table__expandable-row--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-table__expandable-row--before--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-table__expandable-row--before--Top: calc(var(--pf-c-table--BorderWidth) * -1);
+  --pf-c-table__expandable-row--before--Bottom: calc(var(--pf-c-table--BorderWidth) * -1);
   --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
   --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--xl);
@@ -106,6 +110,10 @@
   --pf-c-table--m-compact-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-table--m-compact-cell--first-last-child--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-table--m-compact--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table--m-compact__expandable-row-content--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-table--m-compact__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--m-compact__expandable-row-content--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-table--m-compact__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Modifier - Compound expansion toggle
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth: var(--pf-global--BorderWidth--lg);
@@ -208,8 +216,8 @@
       position: absolute;
 
       // offset top to extend above tr border
-      top: calc(var(--pf-c-table--BorderWidth) * -1);
-      bottom: calc(var(--pf-c-table--BorderWidth) * -1);
+      top: var(--pf-c-table__expandable-row--before--Top);
+      bottom: var(--pf-c-table__expandable-row--before--Bottom);
       left: 0;
       z-index: var(--pf-c-table__expandable-row--before--ZIndex);
       width: var(--pf-c-table__expandable-row--before--Width);
@@ -442,7 +450,9 @@
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
-  &:not(.pf-m-border-rows) {
+  --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+
+  &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
       --pf-c-table--BorderWidth: 0;
       --pf-c-table--BorderColor: transparent;
@@ -457,32 +467,44 @@
     }
   }
 
+  tr {
+    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
+    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
+
+    &:not(.pf-c-table__expandable-row) {
+      --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+      --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
+      --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
+
+      /* stylelint-disable */
+      > * {
+        &:first-child {
+          --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
+        }
+
+        &:last-child {
+          --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
+        }
+      }
+      /* stylelint-enable */
+    }
+  }
+
   // Thead only
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
   }
 
-  tr > * {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
-    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
-    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
-    --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
-
-    &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
-    }
-
-    &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
-    }
-  }
-
   .pf-c-table__action {
     --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
     --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+  }
+
+  .pf-c-table__toggle {
+    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact__toggle--PaddingTop);
+    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact__toggle--PaddingBottom);
   }
 
   .pf-c-table__icon {
@@ -498,6 +520,11 @@
     &:last-child {
       --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
     }
+  }
+
+  .pf-c-table__expandable-row-content {
+    --pf-c-table__expandable-row-content--PaddingTop: var(--pf-c-table--m-compact__expandable-row-content--PaddingTop);
+    --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-c-table--m-compact__expandable-row-content--PaddingBottom);
   }
 }
 
