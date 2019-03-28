@@ -20,7 +20,7 @@
   --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list__item-item--sm--BorderTopWidth: #{pf-size-prem(8px)};
 
-  @media screen and (max-width: $pf-global--breakpoint--sm) {
+  @media screen and (max-width: $pf-global--breakpoint--md) {
     --pf-c-data-list__item--PaddingRight: var(--pf-c-data-list__item--sm--PaddingRight);
     --pf-c-data-list__item--PaddingLeft: var(--pf-c-data-list__item--sm--PaddingLeft);
   }
