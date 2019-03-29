@@ -15,12 +15,12 @@
 
   > * {
     flex: 0 0 auto;
-    padding-right: var(--pf-global--spacer--lg);
-    padding-bottom: var(--pf-global--spacer--lg);
-    padding-left: var(--pf-global--spacer--lg);
+    padding-right: var(--pf-c-card--child--PaddingRight);
+    padding-bottom: var(--pf-c-card--child--PaddingBottom);
+    padding-left: var(--pf-c-card--child--PaddingLeft);
 
     &:first-child {
-      padding-top: var(--pf-global--spacer--lg);
+      padding-top: var(--pf-c-card--first-child--PaddingTop);
     }
   }
 }
@@ -31,6 +31,6 @@
 
 .pf-c-card__header {
   &:not(:last-child) {
-    padding-bottom: var(--pf-global--spacer--md);
+    padding-bottom: var(--pf-c-card__header--not-last-child--PaddingBottom);
   }
 }
