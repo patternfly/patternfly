@@ -89,7 +89,6 @@
   --pf-c-login__main-footer-band--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-login__main-footer-band--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-band--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-login__main-footer-band--Color: var(--pf-global--Color--300);
   --pf-c-login__main-footer-band-item--PaddingTop: var(--pf-global--spacer--md);
 
   // footer
@@ -269,7 +268,6 @@
 
 .pf-c-login__main-footer-band {
   padding: var(--pf-c-login__main-footer-band--PaddingTop) var(--pf-c-login__main-footer-band--PaddingRight) var(--pf-c-login__main-footer-band--PaddingBottom) var(--pf-c-login__main-footer-band--PaddingLeft);
-  color: var(--pf-c-login__main-footer-band--Color);
   text-align: center;
   background-color: var(--pf-c-login__main-footer-band--BackgroundColor);
 

@@ -1,7 +1,7 @@
 .pf-c-alert {
   // component variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert--grid-template-columns: max-content 1fr max-content;
   --pf-c-alert--grid-template-rows: 1fr auto;
 
@@ -49,8 +49,7 @@
   --pf-c-alert--m-info__icon--BackgroundColor: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
-  // This component always needs to be light
-  @include pf-t-light;
+  @include pf-t-light; // This component always needs to be light
 
   display: grid;
   grid-template-columns: var(--pf-c-alert--grid-template-columns);

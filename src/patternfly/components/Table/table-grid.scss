@@ -39,7 +39,6 @@ $pf-c-table-xs-breakpoint: 380px;
 
   // Row
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--xl);
@@ -108,10 +107,7 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   // Table row
-  // using background color on tr as they are presented as block level elements for responsive view
   tr {
-    background-color: var(--pf-c-table-tr--responsive--BackgroundColor);
-
     &:not(:first-child):not(.pf-c-table__expandable-row) {
       margin-top: var(--pf-c-table-tr--responsive--MarginTop);
     }
