@@ -3,7 +3,7 @@
     {{#> table-tr}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
@@ -29,10 +29,13 @@
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow1" aria-labelledby="' table--id '-node1" aria-label="Details"')}}{{/check-input}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node1">Node 1<div><a href="#">siemur/test-space</a></div></div>
+        <div>
+          <div id="{{table--id}}-node1">Node 1</div>
+          <a href="#">siemur/test-space</a>
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
@@ -77,10 +80,13 @@
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow2" aria-labelledby="' table--id '-node2" aria-label="Details"')}}{{/check-input}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node2">Node 2<div><a href="#">siemur/test-space</a></div></div>
+        <div>
+          <div id="{{table--id}}-node2">Node 2</div>
+          <a href="#">siemur/test-space</a>
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
@@ -127,10 +133,13 @@
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow3" aria-labelledby="' table--id '-node3" aria-label="Details"')}}{{/check-input}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node3">Node 3<div><a href="#">siemur/test-space</a></div></div>
+        <div>
+          <div id="{{table--id}}-node3">Node 3</div>
+          <a href="#">siemur/test-space</a>
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
@@ -171,10 +180,13 @@
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow4" aria-labelledby="' table--id '-node4" aria-label="Details"')}}{{/check-input}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node4">Node 4<div><a href="#">siemur/test-space</a></div></div>
+        <div>
+          <div id="{{table--id}}-node4">Node 4</div>
+          <a href="#">siemur/test-space</a>
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
@@ -215,10 +227,13 @@
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 expandable-toggle5" id="expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" name="checkrow5" aria-labelledby="' table--id '-node5" aria-label="Details"')}}{{/check-input}}
+        <input type="checkbox" name="checkrow5" aria-labelledby="{{table--id}}-node5">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository Name"}}
-        <div id="{{table--id}}-node5">Node 5<div><a href="#">siemur/test-space</a></div></div>
+        <div>
+          <div id="{{table--id}}-node5">Node 5</div>
+          <a href="#">siemur/test-space</a>
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>

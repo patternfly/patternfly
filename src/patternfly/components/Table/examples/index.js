@@ -6,7 +6,8 @@ import tableSortableExampleRaw from '!raw!./table-sortable-example.hbs';
 import tableSimpleWithCheckboxesExampleRaw from '!raw!./table-simple-with-checkboxes-example.hbs';
 import tableExpandableExampleRaw from '!raw!./table-expandable-example.hbs';
 import tableCompactExampleRaw from '!raw!./table-compact-example.hbs';
-import tableCompactBorderRowsExampleRaw from '!raw!./table-compact-border-rows-example.hbs';
+import tableCompactNoBorderRowsExampleRaw from '!raw!./table-compact-no-border-rows-example.hbs';
+import tableCompactExpandableExampleRaw from '!raw!./table-compact-expandable-example.hbs';
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
 import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
 
@@ -25,8 +26,10 @@ import tableExpandableDoc from '../docs/table-expandable.md';
 import TableCompactExample from './table-compact-example.hbs';
 import tableCompactDoc from '../docs/table-compact.md';
 
-import TableCompactBorderRowsExample from './table-compact-border-rows-example.hbs';
-import tableCompactBorderRowsDoc from '../docs/table-compact-border-rows.md';
+import TableCompactNoBorderRowsExample from './table-compact-no-border-rows-example.hbs';
+import tableCompactNoBorderRowsDoc from '../docs/table-compact-no-border-rows.md';
+import TableCompactExpandableExample from './table-compact-expandable-example.hbs';
+import tableCompactExpandableDoc from '../docs/table-compact-expandable.md';
 
 import TableWidthExample from './table-width-example.hbs';
 import tableWidthDoc from '../docs/table-width.md';
@@ -43,7 +46,8 @@ export default () => {
   const tableSortableExample = TableSortableExample();
   const tableExpandableExample = TableExpandableExample();
   const tableCompactExample = TableCompactExample();
-  const tableCompactBorderRowsExample = TableCompactBorderRowsExample();
+  const tableCompactNoBorderRowsExample = TableCompactNoBorderRowsExample();
+  const tableCompactExpandableExample = TableCompactExpandableExample();
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
@@ -79,11 +83,18 @@ export default () => {
         {tableCompactExample}
       </Example>
       <Example
-        heading="Compact Table with borders"
-        handlebars={tableCompactBorderRowsExampleRaw}
-        docs={tableCompactBorderRowsDoc}
+        heading="Compact Table with no borders"
+        handlebars={tableCompactNoBorderRowsExampleRaw}
+        docs={tableCompactNoBorderRowsDoc}
       >
-        {tableCompactBorderRowsExample}
+        {tableCompactNoBorderRowsExample}
+      </Example>
+      <Example
+        heading="Compact Expandable Table"
+        handlebars={tableCompactExpandableExampleRaw}
+        docs={tableCompactExpandableDoc}
+      >
+        {tableCompactExpandableExample}
       </Example>
       <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
         {tableWidthExample}
