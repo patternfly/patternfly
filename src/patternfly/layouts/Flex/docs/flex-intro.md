@@ -4,9 +4,11 @@ The system relies on a default spacer value, that is applied to flex items. For 
 
 `.pf-l-flex` is infinitely nestable and can be used to group items within.
 
-`.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to parent or direct children and changes the spacer value for only the element to which it is applied. The root flexbox container will not respond to `pf-m-spacer-{value}`.
+`.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to parent or direct children and changes the spacer value for only the element to which it is applied. The root flexbox container will not respond to `pf-m-spacer-{value}`. Responsive spacers can be used by appending `{-on-[breakpoint]}` to `.pf-m-spacer-{size}`. Example: `.pf-m-spacer-lg-on-xl`.
 
-`.pf-m-space-items-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to `.pf-l-flex` only and changes the spacing of direct children only.
+`.pf-m-space-items-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to `.pf-l-flex` only and changes the spacing of direct children only. Responsive spacers can be used by appending `{-on-[breakpoint]}` to `.pf-m-space-items-{size}`. Example: `.pf-m-space-items-lg-on-xl`.
+
+Available breakpoints are: `-on-sm, -on-md, -on-lg, -on-xl`.
 
 Use `.pf-l-flex` when:
 - Content dictates layout and elements wrap when necessary.
