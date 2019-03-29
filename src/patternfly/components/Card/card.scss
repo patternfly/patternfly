@@ -22,11 +22,11 @@
     &:first-child {
       padding-top: var(--pf-global--spacer--lg);
     }
-
-    &.pf-m-fill {
-      flex: 1 1 auto;
-    }
   }
+}
+
+.pf-c-card__body:not(.pf-m-no-fill) {
+  flex: 1 1 auto;
 }
 
 .pf-c-card__header {
