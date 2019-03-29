@@ -35,7 +35,8 @@ $pf-c-table-xs-breakpoint: 380px;
   // ==================================================================
 
   // Body
-  --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--sm);
+  // --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-table-tbody--responsive--BorderWidth: var(--pf-global--spacer--sm);
 
   // Row
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
@@ -103,17 +104,21 @@ $pf-c-table-xs-breakpoint: 380px;
   }
 
   // add top margin to siblings
-  tbody + tbody {
-    margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
-  }
+  // tbody + tbody {
+  //   margin-top: var(--pf-c-table-tbody--responsive--MarginTop);
+  // }
 
   // Table row
   // using background color on tr as they are presented as block level elements for responsive view
   tr {
     background-color: var(--pf-c-table-tr--responsive--BackgroundColor);
 
-    &:not(:first-child):not(.pf-c-table__expandable-row) {
-      margin-top: var(--pf-c-table-tr--responsive--MarginTop);
+    // &:not(:first-child):not(.pf-c-table__expandable-row) {
+    //   margin-top: var(--pf-c-table-tr--responsive--MarginTop);
+    // }
+
+    &:not(.pf-c-table__expandable-row) {
+      border-bottom-width: var(--pf-c-table-tr--responsive--BorderWidth);
     }
   }
 
