@@ -93,10 +93,10 @@
   --pf-c-data-list__expandable-content-body--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-data-list__expandable-content-body--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-data-list__expandable-content-body--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content-body--mobile--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-data-list__expandable-content-body--mobile--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__expandable-content-body--mobile--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-data-list__expandable-content-body--mobile--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-data-list__expandable-content-body--sm--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-data-list__expandable-content-body--sm--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-data-list__expandable-content-body--sm--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-data-list__expandable-content-body--sm--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--sm) {
     --pf-c-data-list__expandable-content-body--PaddingTop: var(--pf-c-data-list__expandable-content-body--sm--PaddingTop);
