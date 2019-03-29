@@ -154,11 +154,14 @@
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
-  // Modifier - simple list separator
-  --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--PaddingLeft);
-  --pf-c-nav__simple-list-link--m-separator--after--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__simple-list-link--m-separator--after--Background: var(--pf-global--BorderColor--light);
-  --pf-c-nav__simple-list-link--m-separator--after--Bottom: calc(-1 * var(--pf-c-nav__simple-list-link--m-separator--after--Height));
+  // List item seperator
+  --pf-c-nav__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__separator--BackgroundColor: var(--pf-global--BorderColor--light);
+  --pf-c-nav__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__separator--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft);
+  --pf-c-nav__simple-list__separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
+  --pf-c-nav__simple-list--nested__separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
 
   // Modifier - current item
   --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--active-color--300);
@@ -273,6 +276,23 @@
   }
 }
 
+// Separator
+.pf-c-nav__separator {
+  height: var(--pf-c-nav__separator--Height);
+  margin-top: var(--pf-c-nav__separator--MarginTop);
+  margin-bottom: var(--pf-c-nav__separator--MarginBottom);
+  margin-left: var(--pf-c-nav__separator--MarginLeft);
+  background-color: var(--pf-c-nav__separator--BackgroundColor);
+
+  .pf-c-nav__simple-list & {
+    --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list__separator--MarginLeft);
+  }
+
+  .pf-c-nav__item & {
+    --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list--nested__separator--MarginLeft);
+  }
+}
+
 // Toggle caret
 .pf-c-nav__toggle {
   flex: none;
@@ -341,28 +361,9 @@
       background-color: var(--pf-c-nav__simple-list-link--m-current--BackgroundColor);
     }
 
-    &.pf-m-separator {
-      position: relative;
-      margin-bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
-
-      &::after {
-        position: absolute;
-        right: 0;
-        bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Bottom);
-        left: var(--pf-c-nav__simple-list-link--m-separator--after--Left);
-        height: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
-        content: "";
-        background: var(--pf-c-nav__simple-list-link--m-separator--after--Background);
-      }
-    }
-
     // Adjust padding of descendant links
     .pf-c-nav__item & {
       --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
-
-      &.pf-m-separator::after {
-        --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
-      }
     }
   }
 }
