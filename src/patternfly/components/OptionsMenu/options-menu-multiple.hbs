@@ -1,43 +1,29 @@
 {{#> options-menu-menu}}
 <li>
   <ul aria-label="Sort by">
-    <li>
-      <button class="pf-c-options-menu__menu-item">
-        Name
-      </button>
-    </li>
-    <li>
-      <button class="pf-c-options-menu__menu-item pf-m-selected">
-        Date
-        <i class="fas fa-check pf-c-options-menu__menu-item-icon" aria-hidden="true"></i>
-      </button>
-    </li>
-    <li>
-      <button class="pf-c-options-menu__menu-item pf-m-selected" disabled>
-        Disabled
-      </button>
-    </li>
-    <li>
-      <button class="pf-c-options-menu__menu-item">
-        Size
-      </button>
-    </li>
+    {{#> options-menu-menu-item}}
+      Name
+    {{/options-menu-menu-item}}
+    {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
+      Date
+    {{/options-menu-menu-item}}
+    {{#> options-menu-menu-item options-menu-menu-item--attribute="disabled"}}
+      Disabled
+    {{/options-menu-menu-item}}
+    {{#> options-menu-menu-item}}
+      Size
+    {{/options-menu-menu-item}}
   </ul>
 </li>
-<li class="pf-c-options-menu__separator" role="separator"></li>
+{{#> options-menu-separator}}{{/options-menu-separator}}
 <li>
   <ul aria-label="Sort direction">
-    <li>
-      <button class="pf-c-options-menu__menu-item pf-m-selected">
-        Ascending
-        <i class="fas fa-check pf-c-options-menu__menu-item-icon" aria-hidden="true"></i>
-      </button>
-    </li>
-    <li>
-      <button class="pf-c-options-menu__menu-item">
-        Descending
-      </button>
-    </li>
+    {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
+      Ascending
+    {{/options-menu-menu-item}}
+    {{#> options-menu-menu-item}}
+      Descending
+    {{/options-menu-menu-item}}
   </ul>
 </li>
 {{/options-menu-menu}}

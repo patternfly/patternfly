@@ -47,6 +47,7 @@
 
   // Menu Item
   --pf-c-options-menu__menu-item--Background: transparent;
+  --pf-c-options-menu__menu-item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-options-menu__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-options-menu__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
@@ -206,9 +207,10 @@
 
 .pf-c-options-menu__menu-item {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
   padding: var(--pf-c-options-menu__menu-item--PaddingTop) var(--pf-c-options-menu__menu-item--PaddingRight) var(--pf-c-options-menu__menu-item--PaddingBottom) var(--pf-c-options-menu__menu-item--PaddingLeft);
+  font-size: var(--pf-c-options-menu__menu-item--FontSize);
   white-space: nowrap;
   background: var(--pf-c-options-menu__menu-item--Background);
   border: none;
@@ -230,6 +232,7 @@
 }
 
 .pf-c-options-menu__menu-item-icon {
+  align-self: center;
   padding-left: var(--pf-c-options-menu__menu-item-icon--PaddingLeft);
   margin-left: auto;
   font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
