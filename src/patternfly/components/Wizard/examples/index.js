@@ -20,11 +20,7 @@ export default () => {
       <Example heading="Wizard" handlebars={wizardExampleRaw} fullPageOnly="true">
         {wizardExample}
       </Example>
-      <Example
-        heading="Wizard Expanded (mobile) and right-aligned footer"
-        handlebars={wizardExpandedExampleRaw}
-        fullPageOnly="true"
-      >
+      <Example heading="Wizard Expanded (mobile)" handlebars={wizardExpandedExampleRaw} fullPageOnly="true">
         {wizardExpandedExample}
       </Example>
     </Documentation>
