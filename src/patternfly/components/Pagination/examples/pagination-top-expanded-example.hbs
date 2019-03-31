@@ -10,7 +10,24 @@
       </span>
       {{> options-menu-toggle-button aria-label="Select"}}
     {{/options-menu-toggle}}
-    {{> options-menu-single}}
+    {{#> options-menu-menu}}
+      <li>
+        <button class="pf-c-options-menu__menu-item">
+          10&nbsp;<span class="pf-c-pagination__menu-text">per page</span>
+          <i class="fas fa-check pf-c-options-menu__menu-item-icon" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li>
+        <button class="pf-c-options-menu__menu-item pf-m-selected">
+          20&nbsp;<span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+      <li>
+        <button class="pf-c-options-menu__menu-item">
+          50&nbsp;<span class="pf-c-pagination__menu-text">per page</span>
+        </button>
+      </li>
+    {{/options-menu-menu}}
   {{/options-menu}}
 
   {{#> pagination-nav}}
