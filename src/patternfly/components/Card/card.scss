@@ -13,7 +13,9 @@
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
 
-  > * {
+  .pf-c-card__header,
+  .pf-c-card__body,
+  .pf-c-card__footer {
     flex: 0 0 auto;
     padding-right: var(--pf-c-card--child--PaddingRight);
     padding-bottom: var(--pf-c-card--child--PaddingBottom);
