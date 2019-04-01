@@ -178,6 +178,17 @@
   > *:not(.pf-c-wizard__outer-wrap) {
     flex-shrink: 0;
   }
+
+  &.pf-m-finished {
+    --pf-c-wizard__outer-wrap--lg--PaddingLeft: 0;
+
+    .pf-c-wizard__nav,
+    .pf-c-wizard__footer,
+    .pf-c-wizard__toggle {
+      display: none;
+      visibility: hidden;
+    }
+  }
 }
 
 .pf-c-wizard__header {

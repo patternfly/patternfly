@@ -35,6 +35,7 @@
 | `.pf-c-wizard__main` | `<main>` | Initiates the main container. **Required** |
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
+| `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
 | `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container to remove the padding. |
