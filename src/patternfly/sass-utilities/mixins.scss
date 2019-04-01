@@ -143,3 +143,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+@mixin pf-overflow-hide-scroll {
+  ::-webkit-scrollbar { display: none; } // hides scrollbars in Chrome
+
+  scrollbar-width: none; // hides scrollbars in Firefox 64 and up
+  -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
+}

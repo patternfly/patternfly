@@ -97,6 +97,8 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 
+  @include pf-overflow-hide-scroll;
+
   // Right border on last tab
   .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
     border-right-width: var(--pf-c-tabs__item--BorderWidth);
