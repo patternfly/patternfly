@@ -1,4 +1,4 @@
-<i class="fas fa-cubes pf-c-empty-state__icon{{#if empty-state-icon--modifier}} {{empty-state-icon--modifier}}{{/if}}"
+<i class="fas fa-{{#if empty-state-icon--type}} fa-{{empty-state-icon--type}}{{else}}cubes{{/if}} pf-c-empty-state__icon{{#if empty-state-icon--modifier}} {{empty-state-icon--modifier}}{{/if}}"
   aria-hidden="true"
   {{#if empty-state-icon--attribute}}
     {{{empty-state-icon--attribute}}}
