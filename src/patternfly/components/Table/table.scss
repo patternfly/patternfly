@@ -9,8 +9,8 @@
   // ============================================================ //
 
   // Base
-  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-table--BorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
@@ -120,18 +120,21 @@
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderLeft--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle--BorderRight--BorderColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-table__compound-expansion-toggle--BorderRight--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
 
   // Modifier - Expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
+  --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BackgroundColor--light-100);
 
   // Modifier - Sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
 
   /* stylelint-enable */
+
+  @include pf-t-light; // This component always needs to be light
 
   // Base
   width: 100%;
@@ -192,6 +195,7 @@
     font-size: var(--pf-c-table-caption--FontSize);
     color: var(--pf-c-table-caption--Color);
     text-align: left;
+    background-color: var(--pf-c-table--BackgroundColor);
   }
 
   // Table header cell
@@ -418,8 +422,7 @@
 
   // Modifier - Expanded tr
   &.pf-m-expanded {
-    // reset borders to default values
-    border-bottom-color: var(--pf-c-table--BorderColor);
+    border-bottom-color: var(--pf-c-table__expandable-row--m-expanded--BorderBottomColor);
     border-bottom-width: var(--pf-c-table--BorderWidth);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
   }
