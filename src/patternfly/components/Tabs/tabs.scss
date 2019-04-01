@@ -108,10 +108,10 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 
-  // For Demonstration purposes - remove
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     display: none;
-    visibility: hidden;
+    width: 0;
+    visibility: hidden;  // Hide scrollbars in Chrome
   }
 
   scrollbar-width: none; // hides scrollbars in Firefox 64 and up
