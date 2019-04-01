@@ -1,6 +1,4 @@
 .pf-c-chip {
-  @include pf-t-light; // force the container follow the light theme
-
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
   --pf-c-chip--BorderColor: var(--pf-global--secondary-color--100);
@@ -8,7 +6,7 @@
   --pf-c-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
 
   // overflow chip
-  --pf-c-chip--m-overflow--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-chip--m-overflow--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-chip--m-overflow--PaddingLeft: 0;
   --pf-c-chip--m-overflow--BorderWidth: 0;
 
@@ -41,6 +39,8 @@
 
   // chip badge
   --pf-c-chip--c-badge--MarginLeft: var(--pf-global--spacer--xs);
+
+  @include pf-t-light;  // This component always needs to be light
 
   position: relative;
   display: inline-flex;
@@ -130,10 +130,9 @@
 
 // Text Element
 .pf-c-chip__text {
+  @include pf-text-overflow;
+
   max-width: var(--pf-c-chip__text--MaxWidth);
-  overflow: hidden;
   font-size: var(--pf-c-chip__text--FontSize);
   color: var(--pf-c-chip__text--Color);
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

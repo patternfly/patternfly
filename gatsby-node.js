@@ -12,7 +12,6 @@ exports.onCreateNode = ({ node, actions }) => {
   const DEMOS_BASE_DIR = path.resolve(__dirname, './src/patternfly/demos');
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts');
   const UTILITIES_BASE_DIR = path.resolve(__dirname, './src/patternfly/utilities');
-  const UPGRADES_BASE_DIR = path.resolve(__dirname, './src/patternfly/upgrade-examples');
   const isMarkdown = node.internal.type === 'MarkdownRemark';
 
   if (isMarkdown) {
@@ -21,7 +20,6 @@ exports.onCreateNode = ({ node, actions }) => {
     const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
     const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
     const isUtility = node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
-    const isUpgrade = node.fileAbsolutePath.includes(UPGRADES_BASE_DIR);
     if (isPage) {
       const relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath);
       const pagePath = `/${relativePath}`.replace(/\.md$/, '');
@@ -52,12 +50,6 @@ exports.onCreateNode = ({ node, actions }) => {
       createNodeField({ node, name: 'path', value: pagePath });
       createNodeField({ node, name: 'type', value: 'documentation' });
       createNodeField({ node, name: 'contentType', value: 'utility' });
-    } else if (isUpgrade) {
-      const upgradeName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/upgrades/${upgradeName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'upgrade' });
     }
   }
 };
@@ -103,11 +95,9 @@ exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions;
   const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
-  const UPGRADES_PAGE_REGEX = /^\/(upgrade-examples)\/([A-Za-z0-9_-]+)/;
   return new Promise((resolve, reject) => {
     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
-    const isUpgradePage = page.path.match(UPGRADES_PAGE_REGEX);
 
     page.context.type = 'page';
     page.context.category = 'page';
@@ -129,21 +119,10 @@ exports.onCreatePage = async ({ page, actions }) => {
       page.context.slug = pageSlug;
       page.context.name = pageName;
       page.context.title = pageTitle;
-    } else if (isUpgradePage) {
-      const pageCategory = 'upgrade';
-      const pageSlug = page.path.match(UPGRADES_PAGE_REGEX)[2];
-      const pageName = pageSlug.replace('-', ' ');
-      const pageTitle = inflection.titleize(pageName);
-      page.context.type = inflection.singularize(pageCategory);
-      page.context.category = pageCategory;
-      page.context.slug = pageSlug;
-      page.context.name = pageName;
-      page.context.title = pageTitle;
-      page.layout = 'upgrade';
     }
     createPage(page);
 
-    if (isCategoryChildPage || isUpgradePage) {
+    if (isCategoryChildPage) {
       // create full demo page for each component
       const demoPage = Object.assign({}, page);
       demoPage.layout = 'demo';

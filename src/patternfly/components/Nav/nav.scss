@@ -154,11 +154,14 @@
   --pf-c-nav__simple-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
-  // Modifier - simple list separator
-  --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--PaddingLeft);
-  --pf-c-nav__simple-list-link--m-separator--after--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__simple-list-link--m-separator--after--Background: var(--pf-global--BorderColor--light);
-  --pf-c-nav__simple-list-link--m-separator--after--Bottom: calc(-1 * var(--pf-c-nav__simple-list-link--m-separator--after--Height));
+  // List item seperator
+  --pf-c-nav__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__separator--BackgroundColor: var(--pf-global--BorderColor--100);
+  --pf-c-nav__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__separator--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft);
+  --pf-c-nav__simple-list__separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
+  --pf-c-nav__simple-list--nested__separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
 
   // Modifier - current item
   --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--link--Color);
@@ -183,15 +186,6 @@
   --pf-c-nav__scroll-button--nth-of-type-2--BoxShadow: -20px 0 10px -4px rgba(255, 255, 255, .7); // This is a special one-off shadow for nav
   --pf-c-nav__scroll-button--m-dark--nth-of-type-1--BoxShadow: 20px 0 10px -4px rgba(41, 46, 52, .7); // This is a special one-off shadow for nav
   --pf-c-nav__scroll-button--m-dark--nth-of-type-2--BoxShadow: -20px 0 10px -4px rgba(41, 46, 52, .7); // This is a special one-off shadow for nav
-  // --pf-c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--xl) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
-  // --pf-c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
-  // --pf-c-nav__scroll-button--nth-of-type-2--Right: calc(-1 * (var(--pf-global--spacer--xl) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
-  // --pf-c-nav__scroll-button--nth-of-type-1--md--Right: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
-
-  // @media screen and (max-width: $pf-global--breakpoint--md) {
-  //   --pf-c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-nav__scroll-button--nth-of-type-1--md--Left);
-  //   --pf-c-nav__scroll-button--nth-of-type-2--Right: var(--pf-c-nav__scroll-button--nth-of-type-1--md--Right);
-  // }
 
   // Base styling
   position: relative;
@@ -318,6 +312,23 @@
   }
 }
 
+// Separator
+.pf-c-nav__separator {
+  height: var(--pf-c-nav__separator--Height);
+  margin-top: var(--pf-c-nav__separator--MarginTop);
+  margin-bottom: var(--pf-c-nav__separator--MarginBottom);
+  margin-left: var(--pf-c-nav__separator--MarginLeft);
+  background-color: var(--pf-c-nav__separator--BackgroundColor);
+
+  .pf-c-nav__simple-list & {
+    --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list__separator--MarginLeft);
+  }
+
+  .pf-c-nav__item & {
+    --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list--nested__separator--MarginLeft);
+  }
+}
+
 // Toggle caret
 .pf-c-nav__toggle {
   flex: none;
@@ -386,28 +397,9 @@
       background-color: var(--pf-c-nav__simple-list-link--m-current--BackgroundColor);
     }
 
-    &.pf-m-separator {
-      position: relative;
-      margin-bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
-
-      &::after {
-        position: absolute;
-        right: 0;
-        bottom: var(--pf-c-nav__simple-list-link--m-separator--after--Bottom);
-        left: var(--pf-c-nav__simple-list-link--m-separator--after--Left);
-        height: var(--pf-c-nav__simple-list-link--m-separator--after--Height);
-        content: "";
-        background: var(--pf-c-nav__simple-list-link--m-separator--after--Background);
-      }
-    }
-
     // Adjust padding of descendant links
     .pf-c-nav__item & {
       --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
-
-      &.pf-m-separator::after {
-        --pf-c-nav__simple-list-link--m-separator--after--Left: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
-      }
     }
   }
 }

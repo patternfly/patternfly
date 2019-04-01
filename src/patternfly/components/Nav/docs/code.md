@@ -17,12 +17,14 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
+| `role="separator"` | `.pf-c-nav__separator` |  Indicates that the divider separates and distinguishes sections of links in the nav. |
 
 
 ## Usage
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
+<<<<<<< HEAD
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element. |
 | `.pf-c-nav__list` | `<ul>` | Initiates default nav list. |
 | `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list. |
@@ -42,3 +44,21 @@ The navigation system relies on several different sub-components:
 | `.pf-m-separator` | `.pf-c-nav__simple-list .pf-c-nav__link` | Modifies to display the separator state for link in the simple list. |
 | `.pf-m-start` | `.pf-c-nav` | Modifiers the nav to show the overflow at the start. |
 | `.pf-m-end` | `.pf-c-nav` | Modifiers the nav to show the overflow at the end. |
+=======
+| `.pf-c-nav` | `<nav>` | Initiates a primary nav element |
+| `.pf-c-nav__list` | `<ul>` | Initiates default nav list |
+| `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list |
+| `.pf-c-nav__item` | `<li>` | Initiates default nav list item |
+| `.pf-c-nav__separator` | `<li>` | Initiates list separator |
+| `.pf-c-nav__link` | `<a>` | Initiates default nav list link |
+| `.pf-c-nav__section` | `<section>` | Initiates a nav section element |
+| `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title |
+| `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
+| `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state |
+| `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state |
+| `.pf-m-hover` | `.pf-c-nav__link` | Modifies to display the link as hovered |
+| `.pf-m-focus` | `.pf-c-nav__link` | Modifies to display the link as focussed |
+| `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state |
+| `.pf-m-active` | `.pf-c-nav__link` | Modifies to display the link as active |
+| `.pf-m-disabled` | `.pf-c-nav__link` | Modifies to display the link as disabled |
+>>>>>>> master

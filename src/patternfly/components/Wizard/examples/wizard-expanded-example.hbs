@@ -1,7 +1,6 @@
 {{#> backdrop}}
 {{#> bullseye}}
   {{#> wizard wizard--IsExpanded="true"}}
-    {{#> background-image}}{{/background-image}}
     {{#> wizard-header}}
       {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
         {{> button-icon button-icon--type="times"}}
@@ -71,7 +70,7 @@
           <p>wizard content goes here</p>
         {{/wizard-main}}
       {{/wizard-inner-wrap}}
-      {{#> wizard-footer wizard-footer--modifier="pf-m-align-right"}}
+      {{#> wizard-footer}}
         {{#> button button--modifier="pf-m-primary" button--attribute='type="submit"'}}
           Next
         {{/button}}

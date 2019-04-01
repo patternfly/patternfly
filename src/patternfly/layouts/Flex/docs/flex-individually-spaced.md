@@ -2,4 +2,4 @@
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}` | `.pf-l-flex > *` |  Modifies direct descendant of `.pf-l-flex` item. |
+| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex > *` |  Modifies direct descendant of `.pf-l-flex` item. |

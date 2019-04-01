@@ -19,25 +19,33 @@ $pf-flex-spacer-map: (
     }
   }
 
-  @media screen and (max-width: $pf-global--breakpoint--mobile) {
+  @media screen and (min-width: $pf-global--breakpoint--sm) {
     @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-mobile-only > * {
+      &.pf-m-space-items-#{$prop}-on-sm > * {
         --pf-l-flex--spacer: #{$value};
       }
     }
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-tablet-plus > * {
+      &.pf-m-space-items-#{$prop}-on-md > * {
         --pf-l-flex--spacer: #{$value};
       }
     }
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
     @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-desktop-plus > * {
+      &.pf-m-space-items-#{$prop}-on-lg > * {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      &.pf-m-space-items-#{$prop}-on-xl > * {
         --pf-l-flex--spacer: #{$value};
       }
     }
@@ -51,25 +59,33 @@ $pf-flex-spacer-map: (
     }
   }
 
-  @media screen and (max-width: $pf-global--breakpoint--mobile) {
+  @media screen and (min-width: $pf-global--breakpoint--sm) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-mobile-only {
+      .pf-m-spacer-#{$prop}-on-sm {
         --pf-l-flex--spacer: #{$value};
       }
     }
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--tablet) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-tablet-plus {
+      .pf-m-spacer-#{$prop}-on-md {
         --pf-l-flex--spacer: #{$value};
       }
     }
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--desktop) {
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
     @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-desktop-plus {
+      .pf-m-spacer-#{$prop}-on-lg {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-m-spacer-#{$prop}-on-xl {
         --pf-l-flex--spacer: #{$value};
       }
     }
@@ -141,9 +157,10 @@ $pf-flex-spacer-map: (
   // Breakpoints with responsive modifiers
   $breakpoint-list: (
     (null),
-    ($pf-global--breakpoint--mobile, "-mobile-only", "max-width"),
-    ($pf-global--breakpoint--tablet,"-tablet-plus", null),
-    ($pf-global--breakpoint--desktop, "-desktop-plus", null),
+    ($pf-global--breakpoint--sm, "-on-sm"),
+    ($pf-global--breakpoint--md,"-on-md"),
+    ($pf-global--breakpoint--lg, "-on-lg"),
+    ($pf-global--breakpoint--xl, "-on-xl")
   );
 
   // List of modifiers
@@ -308,13 +325,9 @@ $pf-flex-spacer-map: (
 
   /* stylelint-disable */
   // Build the base + responsive modifier selectors
-  @each $bp, $mod, $prop in $breakpoint-list {
+  @each $bp, $mod in $breakpoint-list {
     @if $bp {
-      @if $prop == null {
-        $prop: "min-width";
-      }
-
-      @media screen and (#{$prop}: #{$bp}) {
+      @media screen and (min-width: #{$bp}) {
         @include flex-modifiers($mod);
       }
     } @else {

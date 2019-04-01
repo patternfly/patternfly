@@ -20,6 +20,7 @@
 | `.pf-c-accordion__toggle-text` | `<span>` | Initiates the text inside the toggle. **Required** |
 | `.pf-c-accordion__toggle-icon` | `<i>` | Initiates the toggle icon. **Required** |
 | `.pf-c-accordion__expanded-content` | `<dd>` | Initiates expanded content. **Must be paired with a button** |
+| `.pf-c-accordion__expanded-content-body` | `<div>` | Initiates expanded content body. **Required** |
 | `.pf-m-expanded` | `.pf-c-accordion__toggle`, `.pf-c-accordion__expanded-content` | Modifies the accordion button and expanded content for the expanded state. |
 | `.pf-m-hover` | `.pf-c-accordion__toggle` | Modifies the accordion button for the hover state. |
 | `.pf-m-active` | `.pf-c-accordion__toggle` | Modifies the accordion button for the active state. |

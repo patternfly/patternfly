@@ -28,7 +28,7 @@
   {{/toolbar-action-group}}
   {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--IsBasicActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
   {{/dropdown}}
-  {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-c-toolbar__pagination"}}
+  {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
     {{#> pagination-total-items}}
       37 Items
     {{/pagination-total-items}}
@@ -52,7 +52,7 @@
       {{/button}}
 
       {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
-        {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" size="2" value="1"'}}
+        {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
         <span aria-hidden="true">of 4</span>
       {{/pagination-nav-page-select}}
 
