@@ -11,10 +11,10 @@
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-dropdown__toggle--BackgroundColor: transparent;
   --pf-c-dropdown__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__toggle--BorderTopColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-dropdown__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-global--BorderColor--dark);
-  --pf-c-dropdown__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-dropdown__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-dropdown__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-dropdown__toggle--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-dropdown__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
@@ -73,7 +73,7 @@
 
   // Menu Item Separator
   --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BorderColor--100);
   --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm);
 
@@ -86,7 +86,6 @@
   --pf-c-dropdown__group-title--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-dropdown__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-dropdown__group-title--Color: var(--pf-global--Color--dark-200);
-
 
   position: relative;
   display: inline-block;
@@ -232,9 +231,7 @@
   }
 
   .pf-c-dropdown__toggle-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include pf-text-overflow;
   }
 
   .pf-c-dropdown__toggle-icon {

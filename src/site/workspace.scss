@@ -399,7 +399,7 @@ html {
 
 .is-dark-preview {
   .Preview__body {
-    background-color: #292e34;
+    background-color: var(--pf-global--BackgroundColor--dark-100);
   }
 }
 

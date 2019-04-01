@@ -30,7 +30,7 @@ const driver = new selenium.Builder()
 function runAxe(pagePath, res, rej) {
   return AxeBuilder(driver)
     .withTags(['wcag2a', 'wcag2aa'])
-    .disableRules(['color-contrast', 'document-title', 'html-has-lang'])
+    .disableRules(['document-title', 'html-has-lang'])
     .analyze()
     .then(results => {
       if (results.violations.length > 0) {

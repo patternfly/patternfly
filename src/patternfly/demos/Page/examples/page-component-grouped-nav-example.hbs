@@ -1,6 +1,3 @@
-{{#> background-image}}
-{{/background-image}}
-
 {{#> page page--id="page-layout-grouped-nav"}}
   {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
     Skip to content
@@ -20,67 +17,69 @@
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Grouped Nav Example"')}}
-      {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
-        {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
-          System Panel
-        {{/nav-section-title}}
-        {{#> nav-list nav-list--type="simple"}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Overview
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Resource Usage
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Hypervisors
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Instances
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Volumes
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Networks
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav-section}}
-      {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
-        {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
-          Policy
-        {{/nav-section-title}}
-        {{#> nav-list nav-list--type="simple"}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Hosts
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Virtual Machines
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
-              Storage
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav-section}}
-    {{/nav}}
+    {{#> page-sidebar-body}}
+      {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Grouped Nav Example"')}}
+        {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+          {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+            System Panel
+          {{/nav-section-title}}
+          {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Overview
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Resource Usage
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                Hypervisors
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Instances
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Volumes
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Networks
+              {{/nav-link}}
+            {{/nav-item}}
+          {{/nav-list}}
+        {{/nav-section}}
+        {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+          {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+            Policy
+          {{/nav-section-title}}
+          {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Hosts
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Virtual Machines
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Storage
+              {{/nav-link}}
+            {{/nav-item}}
+          {{/nav-list}}
+        {{/nav-section}}
+      {{/nav}}
+    {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
     <a id="main-content"></a>

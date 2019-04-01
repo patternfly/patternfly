@@ -2,5 +2,7 @@
   {{#if page-sidebar--attribute}}
     {{{page-sidebar--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> page-sidebar-body}}
+    {{> @partial-block}}
+  {{/page-sidebar-body}}
 </div>
