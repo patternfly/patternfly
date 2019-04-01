@@ -24,7 +24,7 @@
 | `.pf-c-wizard__toggle-list` | `<ol>` | Initiates the toggle list. **Required** |
 | `.pf-c-wizard__toggle-list-item` | `<li>` | Initiates a toggle list item. **Required** |
 | `.pf-c-wizard__toggle-num` | `<span>` | Initiates the step number. **Required** |
-| `.pf-c-wizard__toggle-divider` | `<i>` | Initiates the divider between steps. |
+| `.pf-c-wizard__toggle-separator` | `<i>` | Initiates the separator between steps. |
 | `.pf-c-wizard__toggle-icon` | `<i>` | Initiates the toggle icon. **Required** |
 | `.pf-c-wizard__outer-wrap` | `<div>` | Initiates the outer wrapper. **Required** |
 | `.pf-c-wizard__inner-wrap` | `<div>` | Initiates the inner wrapper. **Required** |
@@ -33,6 +33,7 @@
 | `.pf-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
 | `.pf-c-wizard__nav-link` | `<a>` | Initiates a step link. **Required** |
 | `.pf-c-wizard__main` | `<main>` | Initiates the main container. **Required** |
+| `.pf-c-wizard__main-body` | `<div>` | Initiates the main container body section. **Required** |
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
