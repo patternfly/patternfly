@@ -31,12 +31,6 @@
   flex-direction: column;
   align-items: flex-start;
 
-  // For Demonstration purposes - remove
-  ::-webkit-scrollbar {
-    display: none;
-    width: 0;
-  }
-
   // Scroll buttons hidden by default
   .pf-c-tabs__scroll-button {
     display: none;
@@ -113,6 +107,15 @@
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+
+  // For Demonstration purposes - remove
+  ::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+  }
+
+  scrollbar-width: none; // hides scrollbars in Firefox 64 and up
+  -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 
   // Right border on last tab
   .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
@@ -219,7 +222,7 @@
   width: var(--pf-c-tabs__scroll-button--Width);
   line-height: 1;
   background-color: var(--pf-c-tabs__item--BackgroundColor);
-  border: initial;
+  border: 0;
 
   // Align right scroll button
   &:nth-of-type(2) {
@@ -239,7 +242,7 @@
 
   &.pf-m-secondary {
     &::before {
-      border: none;
+      border: 0;
     }
 
     &.pf-m-hover,
