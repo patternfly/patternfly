@@ -42,7 +42,8 @@
   --pf-c-table-tr--responsive--BorderWidth: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+
+  // --pf-c-table-tr--responsive--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--xl);
@@ -361,7 +362,7 @@
       border-top-color: var(--pf-c-table--BorderColor);
     }
 
-    td:first-child::before {
+    td:first-child:not(.pf-c-table__check)::before {
       // Border treatment
       display: none;
       visibility: hidden;
