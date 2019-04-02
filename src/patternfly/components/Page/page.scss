@@ -1,5 +1,7 @@
 // URL.com/guidelines#layout
 .pf-c-page {
+  --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+
   // Header
   --pf-c-page__header--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
@@ -8,7 +10,6 @@
   --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-brand--md--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-page__header-brand--md--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-c-page__header-brand--md--FlexBasis: #{pf-size-prem(290px)};
 
   @media (min-width: $pf-global--breakpoint--md) {
@@ -67,14 +68,14 @@
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-page__sidebar--Width: 80%;
   --pf-c-page__sidebar--md--Width: #{pf-size-prem(290px)};
-  --pf-c-page__sidebar--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__sidebar--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
   --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
+  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__sidebar--Width: var(--pf-c-page__sidebar--md--Width); // hardcode sidebar based on design spec, must match pf-n-nav--Width
@@ -129,6 +130,7 @@
   grid-template-areas:
     "header"
     "main";
+  background-color: var(--pf-c-page--BackgroundColor);
 
   @media (min-width: $pf-global--breakpoint--md) {
     grid-template-columns: max-content 1fr;
@@ -165,7 +167,6 @@
     flex: 0 0 var(--pf-c-page__header-brand--md--FlexBasis); // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
     align-self: stretch;
     padding-right: var(--pf-c-page__header-brand--md--PaddingRight); // set padding right here to allow mobile view to accomodate tools
-    background-color: var(--pf-c-page__header-brand--md--BackgroundColor);
   }
 }
 
@@ -222,8 +223,12 @@
   margin-left: auto; // to push it to the right
 
   .pf-m-icons {
+    display: none;
+    visibility: hidden;
+
     @media screen and (min-width: $pf-global--breakpoint--lg) {
-      @include pf-u-visible;
+      display: block;
+      visibility: visible;
     }
   }
 
@@ -237,8 +242,12 @@
   }
 
   .pf-m-user {
+    display: none;
+    visibility: hidden;
+
     @media screen and (min-width: $pf-global--breakpoint--md) {
-      @include pf-u-visible;
+      display: block;
+      visibility: visible;
     }
   }
 
@@ -262,8 +271,6 @@
   grid-column-start: 1;
   z-index: var(--pf-c-page__sidebar--ZIndex);
   width: var(--pf-c-page__sidebar--Width);
-  padding-top: var(--pf-c-page__sidebar--PaddingTop);
-  padding-bottom: var(--pf-c-page__sidebar--PaddingBottom);
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -292,6 +299,11 @@
       overflow: hidden;
     }
   }
+}
+
+.pf-c-page__sidebar-body {
+  padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
+  padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
 }
 
 // Main

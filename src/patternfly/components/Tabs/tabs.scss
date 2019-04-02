@@ -1,7 +1,7 @@
 .pf-c-tabs {
   // Primary Tab items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-tabs__item--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__item--m-current--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
@@ -91,6 +91,8 @@
 
 // Tab List
 .pf-c-tabs__list {
+  @include pf-overflow-hide-scroll;
+
   position: relative;
   display: flex;
   max-width: 100%;

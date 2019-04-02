@@ -11,7 +11,9 @@
     {{/data-list-cell}}
     {{#> data-list-action id="dropdown-kebab-right-action-3"}}{{/data-list-action}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-1" aria-label="Primary Content Details"'}}
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
@@ -26,7 +28,26 @@
     {{/data-list-cell}}
     {{#> data-list-action id="dropdown-kebab-right-action-4"}}{{/data-list-action}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Secondary Content Details"'}}
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}    
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item3"'}}
+    {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle3 ex-item3" id="ex-toggle3" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-3"'}}{{/data-list-toggle}}
+    {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+    {{#> data-list-cell}}
+      <div id="ex-item3">Tertiary content</div>
+    {{/data-list-cell}}
+    {{#> data-list-cell}}
+      <span>Lorem ipsum dolor sit amet.</span>
+    {{/data-list-cell}}
+    {{#> data-list-action id="dropdown-kebab-right-action-5"}}{{/data-list-action}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-3" aria-label="Tertiary Content Details"'}}
+      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
+        This expanded section has no padding.
+      {{/data-list-expandable-content-body}}    
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 {{/data-list}}

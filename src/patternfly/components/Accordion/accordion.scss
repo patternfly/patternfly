@@ -33,10 +33,10 @@
   --pf-c-accordion__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
 
   // accordion expanded content
-  --pf-c-accordion__expanded-content--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-accordion__expanded-content--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-accordion__expanded-content--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-accordion__expanded-content--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-accordion__expanded-content-body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-accordion__expanded-content-body--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-accordion__expanded-content-body--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-accordion__expanded-content--Color: var(--pf-global--secondary-color--100);
   --pf-c-accordion__expanded-content--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-accordion__expanded-content--BorderLeftColor: transparent;
@@ -114,10 +114,13 @@
   }
 
   .pf-c-accordion__expanded-content {
-    padding: var(--pf-c-accordion__expanded-content--PaddingTop) var(--pf-c-accordion__expanded-content--PaddingRight) var(--pf-c-accordion__expanded-content--PaddingBottom) var(--pf-c-accordion__expanded-content--PaddingLeft);
     font-size: var(--pf-c-accordion__expanded-content--FontSize);
     color: var(--pf-c-accordion__expanded-content--Color);
     border-left: var(--pf-c-accordion__expanded-content--m-expanded--BorderWidth) solid var(--pf-c-accordion__expanded-content--BorderLeftColor);
+
+    .pf-c-accordion__expanded-content-body {
+      padding: var(--pf-c-accordion__expanded-content-body--PaddingTop) var(--pf-c-accordion__expanded-content-body--PaddingRight) var(--pf-c-accordion__expanded-content-body--PaddingBottom) var(--pf-c-accordion__expanded-content-body--PaddingLeft);
+    }
 
     &.pf-m-fixed {
       max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);

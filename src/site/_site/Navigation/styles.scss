@@ -43,7 +43,7 @@
   &:focus,
   &:hover {
     font-weight: 500;
-    color: #007bba;
+    color: var(--pf-global--link--Color);
     text-decoration: none;
   }
 }

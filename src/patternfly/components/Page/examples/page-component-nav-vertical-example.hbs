@@ -13,9 +13,11 @@
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute='id="page-nav" aria-label="Primary Nav Default Example"'}}
-      pf-c-nav
-    {{/nav}}
+    {{#> page-sidebar-body}}
+      {{#> nav nav--attribute='id="page-nav" aria-label="Primary Nav Default Example"'}}
+        pf-c-nav
+      {{/nav}}
+    {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--modifier="pf-m-dark-100"}}

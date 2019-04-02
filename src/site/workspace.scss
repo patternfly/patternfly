@@ -399,7 +399,7 @@ html {
 
 .is-dark-preview {
   .Preview__body {
-    background-color: #292e34;
+    background-color: var(--pf-global--BackgroundColor--dark-100);
   }
 }
 
@@ -419,6 +419,17 @@ html {
 .is-align-right {
   .Preview__body {
     text-align: right;
+  }
+}
+
+.is-height-flex-column-grow {
+  .Preview__body {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      flex-grow: 1;
+    }
   }
 }
 
