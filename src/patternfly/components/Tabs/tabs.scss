@@ -102,6 +102,8 @@
 
 // Tab List
 .pf-c-tabs__list {
+  @include pf-overflow-hide-scroll;
+
   position: relative;
   display: flex;
   max-width: 100%;
