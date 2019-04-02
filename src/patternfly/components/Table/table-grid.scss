@@ -131,10 +131,10 @@
 
   tbody.pf-m-expanded {
     @media screen and (max-width: $pf-global--breakpoint--xl) {
-      border-bottom: 1px solid var(--pf-c-table--BorderColor);
+      border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
     }
 
-    @media screen and (max-width: $pf-global--breakpoint--md) {
+    @media screen and (max-width: $pf-global--breakpoint--sm) {
       border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
     }
 
