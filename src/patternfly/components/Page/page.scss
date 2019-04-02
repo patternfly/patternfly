@@ -212,16 +212,32 @@
   order: 1;
   width: 100vw; // set width value for container to scale properly
   padding-left: var(--pf-c-page__header-nav--PaddingLeft);
-  overflow: hidden;
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
+
+  > * {
+    overflow-x: auto;
+  }
+
+  // Hide scrollbars
+  &::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+  }
+
+  scrollbar-width: none; // hides scrollbars in Firefox 64 and up
+  -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     flex: 1;
     align-self: flex-end;
     order: initial;
-    width: auto;
     margin-right: var(--pf-c-page__header-nav--lg--MarginRight);
     margin-left: var(--pf-c-page__header-nav--lg--MarginLeft);
+
+    > * {
+      width: 500px;
+      overflow-x: auto;
+    }
   }
 }
 
