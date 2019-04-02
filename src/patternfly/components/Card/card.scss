@@ -2,54 +2,37 @@
   // Component variables
   --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-card--BoxShadow: var(--pf-global--BoxShadow--sm);
-
-  // Card Header variables
-  --pf-c-card__header--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-card__header--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-card__header--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-card__header--PaddingLeft: var(--pf-global--spacer--lg);
-
-  // Card Body variables
-  --pf-c-card__body--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-card__body--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-card__body--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-card__body--PaddingLeft: var(--pf-global--spacer--lg);
-
-  // Card Footer variables
-  --pf-c-card__footer--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-card__footer--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-card__footer--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-card__footer--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-card--first-child--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-card--child--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-card--child--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-card--child--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-card__header--not-last-child--PaddingBottom: var(--pf-global--spacer--md);
 
   display: flex;
   flex-direction: column;
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
 
-  // If the first child isn't the header, then we need to put the header's top padding there
-  > :first-child.pf-c-card__body,
-  > :first-child.pf-c-card__footer {
-    padding-top: var(--pf-c-card__header--PaddingTop);
-  }
+  .pf-c-card__header,
+  .pf-c-card__body,
+  .pf-c-card__footer {
+    flex: 0 0 auto;
+    padding-right: var(--pf-c-card--child--PaddingRight);
+    padding-bottom: var(--pf-c-card--child--PaddingBottom);
+    padding-left: var(--pf-c-card--child--PaddingLeft);
 
-  // If the last child isn't the footer, then we need to put the footer's bottom padding there
-  > :last-child.pf-c-card__header,
-  > :last-child.pf-c-card__body {
-    padding-bottom: var(--pf-c-card__footer--PaddingBottom);
+    &:first-child {
+      padding-top: var(--pf-c-card--first-child--PaddingTop);
+    }
   }
+}
+
+.pf-c-card__body:not(.pf-m-no-fill) {
+  flex: 1 1 auto;
 }
 
 .pf-c-card__header {
-  flex: 0 0 auto;
-  padding: var(--pf-c-card__header--PaddingTop) var(--pf-c-card__header--PaddingRight) var(--pf-c-card__header--PaddingBottom) var(--pf-c-card__header--PaddingLeft);
-}
-
-.pf-c-card__body {
-  flex: 1 1 auto;
-  padding: var(--pf-c-card__body--PaddingTop) var(--pf-c-card__body--PaddingRight) var(--pf-c-card__body--PaddingBottom) var(--pf-c-card__body--PaddingLeft);
-}
-
-.pf-c-card__footer {
-  flex: 0 0 auto;
-  padding: var(--pf-c-card__footer--PaddingTop) var(--pf-c-card__footer--PaddingRight) var(--pf-c-card__footer--PaddingBottom) var(--pf-c-card__footer--PaddingLeft);
+  &:not(:last-child) {
+    padding-bottom: var(--pf-c-card__header--not-last-child--PaddingBottom);
+  }
 }
