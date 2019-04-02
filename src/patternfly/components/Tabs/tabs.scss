@@ -110,15 +110,6 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 
-  &::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    visibility: hidden;  // Hide scrollbars in Chrome
-  }
-
-  scrollbar-width: none; // hides scrollbars in Firefox 64 and up
-  -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
-
   // Right border on last tab
   .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
     border-right-width: var(--pf-c-tabs__item--BorderWidth);
