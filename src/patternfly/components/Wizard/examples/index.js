@@ -3,8 +3,10 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import wizardExampleRaw from '!raw!./wizard-example.hbs';
 import wizardExpandedExampleRaw from '!raw!./wizard-expanded-example.hbs';
+import wizardFinishedExampleRaw from '!raw!./wizard-finished-example.hbs';
 import WizardExample from './wizard-example.hbs';
 import WizardExpandedExample from './wizard-expanded-example.hbs';
+import WizardFinishedExample from './wizard-finished-example.hbs';
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -12,6 +14,7 @@ export const Docs = docs;
 export default () => {
   const wizardExample = WizardExample();
   const wizardExpandedExample = WizardExpandedExample();
+  const wizardFinishedExample = WizardFinishedExample();
   const headingText = 'Wizard';
   const variablesRoot = 'pf-c-wizard';
 
@@ -22,6 +25,9 @@ export default () => {
       </Example>
       <Example heading="Wizard Expanded (mobile)" handlebars={wizardExpandedExampleRaw} fullPageOnly="true">
         {wizardExpandedExample}
+      </Example>
+      <Example heading="Wizard Finished" handlebars={wizardFinishedExampleRaw} fullPageOnly="true">
+        {wizardFinishedExample}
       </Example>
     </Documentation>
   );
