@@ -408,8 +408,6 @@
 
 // List horizontal, masthead
 .pf-c-nav__horizontal-list {
-  @include pf-t-dark;
-
   .pf-c-nav__scroll-button {
     background-color: var(--pf-global--BackgroundColor--100);
 
