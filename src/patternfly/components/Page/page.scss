@@ -166,7 +166,6 @@
   padding-left: var(--pf-c-page__header-brand--PaddingLeft);
 
   @media (min-width: $pf-global--breakpoint--md) {
-    align-self: stretch;
     padding-right: var(--pf-c-page__header-brand--md--PaddingRight); // set padding right here to allow mobile view to accomodate tools
   }
 }
