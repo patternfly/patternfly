@@ -17,10 +17,15 @@ export default () => {
 
   return (
     <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Stack Example" handlebars={StackRaw}>
+      <Example heading="Stack Example" handlebars={StackRaw} minHeight="30em" className="is-height-flex-column-grow">
         {stack}
       </Example>
-      <Example heading="Stack Example with Gutter" handlebars={StackHasGutterRaw}>
+      <Example
+        heading="Stack Example with Gutter"
+        handlebars={StackHasGutterRaw}
+        minHeight="30em"
+        className="is-height-flex-column-grow"
+      >
         {stackHasGutter}
       </Example>
     </Documentation>
