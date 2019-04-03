@@ -1,7 +1,7 @@
-{{#> nav nav--modifier="pf-m-end" aria-label="Local"}}
-  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-  {{/nav-scroll-button}}
+{{#> nav nav--modifier="pf-m-start pf-m-end" aria-label="Local"}}
   {{#> nav-list nav-list--type="tertiary"}}
+    {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+    {{/nav-scroll-button}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Tertiary Nav Item 1
@@ -27,43 +27,7 @@
         Tertiary Nav Item 5
       {{/nav-link}}
     {{/nav-item}}
+    {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+    {{/nav-scroll-button}}
   {{/nav-list}}
-  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-  {{/nav-scroll-button}}
-{{/nav}}
-
-<br><br>
-
-{{#> nav nav--modifier="pf-m-start" aria-label="Local"}}
-  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-  {{/nav-scroll-button}}
-  {{#> nav-list nav-list--type="tertiary"}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary Nav Item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary Nav Item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary Nav Item 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Tertiary Nav Item 4
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary Nav Item 5
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-  {{/nav-scroll-button}}
 {{/nav}}
