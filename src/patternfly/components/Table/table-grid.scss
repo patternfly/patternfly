@@ -134,13 +134,15 @@
       border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
     }
 
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
-      border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
-    }
-
     @media screen and (max-width: $pf-global--breakpoint--xl) {
       tr:not(.pf-c-table__expandable-row) {
         border-bottom: 0;
+      }
+    }
+
+    &:not(:last-of-type) {
+      @media screen and (max-width: $pf-global--breakpoint--sm) {
+        border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
       }
     }
   }
