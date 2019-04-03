@@ -1,8 +1,8 @@
 <div class="pf-c-page__header-nav">
   {{#> nav nav--modifier="pf-m-start pf-m-end"}}
+    {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+    {{/nav-scroll-button}}
     {{#> nav-list nav-list--type="horizontal"}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Horizontal Nav Item 1
@@ -28,8 +28,8 @@
           Horizontal Nav Item 5
         {{/nav-link}}
       {{/nav-item}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
     {{/nav-list}}
+    {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+    {{/nav-scroll-button}}
   {{/nav}}
 </div>
