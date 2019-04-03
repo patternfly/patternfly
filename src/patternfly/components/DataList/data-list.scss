@@ -211,6 +211,10 @@
     }
   }
 
+  &:last-of-type {
+    margin-right: 48px;
+  }
+
   &.pf-m-flex-2 { flex-grow: 2; }
   &.pf-m-flex-3 { flex-grow: 3; }
   &.pf-m-flex-4 { flex-grow: 4; }
@@ -219,6 +223,9 @@
 
 // Action
 .pf-c-data-list__action {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   margin-left: var(--pf-c-data-list__action--MarginLeft);
 }
 
