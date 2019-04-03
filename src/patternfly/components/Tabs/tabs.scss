@@ -223,21 +223,30 @@
   }
 
   // Scroll button borders
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    border: var(--pf-c-tabs__item--BorderWidth) solid var(--pf-c-tabs__item--BorderColor);
-  }
-
-  &.pf-m-secondary {
+  &:not(.pf-m-secondary) {
     &::before {
-      border: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      border: var(--pf-c-tabs__item--BorderWidth) solid var(--pf-c-tabs__item--BorderColor);
     }
 
+    &:hover::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
+    }
+  }
+
+
+  &.pf-m-secondary {
     &.pf-m-hover,
     &:hover,
     &.pf-m-active,
@@ -245,10 +254,6 @@
     &.pf-m-focus,
     &:focus {
       color: var(--pf-c-tabs__scroll-button--m-secondary--hover--Color);
-
-      &::after {
-        border-top: 0;
-      }
     }
 
     &:nth-of-type(1) {
@@ -258,16 +263,5 @@
     &:nth-of-type(2) {
       box-shadow: var(--pf-c-tabs__scroll-button--m-secondary--nth-of-type-2--BoxShadow);
     }
-  }
-
-  // Scroll button hover state
-  &:hover::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
   }
 }
