@@ -215,7 +215,7 @@
   overflow: hidden;
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
 
-  > * {
+  > .pf-c-nav {
     overflow: auto;
   }
 
