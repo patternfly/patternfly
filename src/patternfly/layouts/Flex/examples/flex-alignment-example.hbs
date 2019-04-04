@@ -1,65 +1,109 @@
-{{#> example-title}}Aligning right with align right. This solution will always align element right by setting margin-left: auto, including when wrapped.{{/example-title}}
-{{#> l-flex flex--modifier="example-border" example--label-hover="Item spacing default"}}
-  {{#> example}}1{{/example}}
-  {{#> example}}2{{/example}}
-  {{#> example}}3{{/example}}
-  {{#> example example--modifier="pf-m-align-right blue"}}4{{/example}}
-  {{#> example example--modifier="blue"}}5{{/example}}
+{{#> example-title}}Aligning right with <code>.pf-m-align-right</code>. This solution will always align element right by setting margin-left: auto, including when wrapped.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="pf-m-align-right example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
 {{/l-flex}}
 
-{{#> example-title}}Align right on single groups.{{/example-title}}
-{{#> l-flex flex--modifier="example-border" example--label-hover="Item spacing default"}}
-  {{#> l-flex flex--modifier="pf-m-align-right"}}
-    {{#> example example--modifier="blue"}}1{{/example}}
-    {{#> example example--modifier="blue"}}2{{/example}}
-  {{/l-flex}}
+{{#> example-title}}Align right on single item.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> example-text example-text--modifier="pf-m-align-right example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
 {{/l-flex}}
 
 {{#> example-title}}Align right on multiple groups.{{/example-title}}
-{{#> l-flex flex--modifier="example-border" example--label-hover="Item spacing default"}}
+{{#> l-flex l-flex--modifier="example-border"}}
   {{#> l-flex newcontext}}
-    {{#> example}}1{{/example}}
-    {{#> example}}2{{/example}}
-    {{#> example}}3{{/example}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
-  {{#> l-flex newcontext flex--modifier="pf-m-align-right"}}
-    {{#> example example--modifier="blue"}}4{{/example}}
-    {{#> example example--modifier="blue"}}5{{/example}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-align-right"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
-  {{#> l-flex newcontext flex--modifier="pf-m-align-right"}}
-    {{#> example example--modifier="red"}}6{{/example}}
-    {{#> example example--modifier="red"}}7{{/example}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-align-right"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
 {{/l-flex}}
 
-{{#> example-title}}Using <code>.pf-m-flex-grow</code> + <code>.pf-m-nowrap</code>.{{/example-title}}
-{{#> l-flex flex--modifier="pf-m-nowrap"}}
-  {{#> l-flex newcontext flex--modifier="pf-m-grow example-border"}}
-    {{#> example}}1{{/example}}
-    {{#> example}}2{{/example}}
-    {{#> example}}3{{/example}}
-    {{#> example}}4{{/example}}
-    {{#> example}}5{{/example}}
+{{#> example-title}}Using <code>.pf-m-flex-1</code> to align adjacent content.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
-  {{#> example example--modifier="blue example-border"}}1{{/example}}
-  {{#> example example--modifier="red example-border"}}1{{/example}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
 {{/l-flex}}
 
-{{#> example-title}}Using <code>.pf-m-flex-grow</code> + <code>.pf-m-nowrap</code> (responsive).{{/example-title}}
-{{#> l-flex flex--modifier="pf-m-nowrap-tablet-plus"}}
-  {{#> l-flex newcontext flex--modifier="pf-m-grow example-border"}}
-    {{#> example}}1{{/example}}
-    {{#> example}}2{{/example}}
-    {{#> example}}3{{/example}}
-    {{#> example}}4{{/example}}
-    {{#> example}}5{{/example}}
+{{#> example-title}}Using <code>.pf-m-flex-1</code> to align adjacent content.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
-  {{#> l-flex newcontext flex--modifier="pf-m-nowrap-tablet-plus example-border"}}
-    {{#> example example--modifier="blue"}}1{{/example}}
-    {{#> example example--modifier="blue"}}2{{/example}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
-  {{#> l-flex newcontext flex--modifier="pf-m-nowrap-tablet-plus example-border"}}
-    {{#> example example--modifier="red"}}1{{/example}}
-    {{#> example example--modifier="red"}}2{{/example}}
+{{/l-flex}}
+
+{{#> example-title}}<code>.pf-m-align-self-flex-end</code> {{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-flex-end example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}<code>.pf-m-align-self-center</code> {{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-center example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}<code>.pf-m-align-self-baseline</code> {{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-baseline example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}<code>.pf-m-align-self-stretch</code> {{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-stretch example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
   {{/l-flex}}
 {{/l-flex}}

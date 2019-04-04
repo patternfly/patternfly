@@ -1,12 +1,12 @@
-<div class="pf-l-flex{{#if flex--modifier}} {{flex--modifier}}{{/if}}"
-  {{#if flex--attribute}}
-    {{{flex--attribute}}}
+<{{#if l-flex--type}}{{l-flex--type}}{{else}}div{{/if}} class="pf-l-flex{{#if l-flex--modifier}} {{l-flex--modifier}}{{/if}}"
+  {{#if l-flex--attribute}}
+    {{{l-flex--attribute}}}
+  {{/if}}
+  {{#if l-flex--id}}
+    id="{{{l-flex--id}}}"
   {{/if}}
   {{#if example--label}}
     data-label="{{{example--label}}}"
-  {{/if}}
-  {{#if example--label-hover}}
-    data-label-hover="{{{example--label-hover}}}"
   {{/if}}>
   {{> @partial-block}}
-</div>
+</{{#if l-flex--type}}{{l-flex--type}}{{else}}div{{/if}}>
