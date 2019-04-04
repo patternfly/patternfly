@@ -179,6 +179,11 @@
   }
 }
 
+.pf-c-data-list__item-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 // Checkbox
 .pf-c-data-list__check {
   margin-right: var(--pf-c-data-list__check--MarginRight);
@@ -190,7 +195,7 @@
 
 // Content cells
 .pf-c-data-list__cell {
-  flex: 1;
+  // flex: 1;
   padding-top: var(--pf-c-data-list__cell--PaddingTop);
   padding-bottom: var(--pf-c-data-list__cell--PaddingBottom);
   margin-right: var(--pf-c-data-list__cell-cell--MarginRight);
