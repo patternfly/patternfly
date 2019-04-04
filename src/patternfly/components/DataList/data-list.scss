@@ -215,6 +215,14 @@
   &.pf-m-flex-3 { flex-grow: 3; }
   &.pf-m-flex-4 { flex-grow: 4; }
   &.pf-m-flex-5 { flex-grow: 5; }
+
+  &.pf-m-align-right {
+    text-align: right;
+
+    @media screen and (max-width: $pf-global--breakpoint--md) {
+      text-align: left;
+    }
+  }
 }
 
 // Action
