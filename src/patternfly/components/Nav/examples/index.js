@@ -67,14 +67,14 @@ export default () => {
       <Example
         heading="Horizontal Nav (only in masthead)"
         handlebars={navHorizontalListExampleRaw}
-        className="is-dark-preview"
+        className="is-dark-preview pf-t-dark"
       >
         {navHorizontalListExample}
       </Example>
       <Example
         heading="Horizontal Nav Overflow (only in masthead)"
         handlebars={navHorizontalListOverflowExampleRaw}
-        className="is-dark-preview"
+        className="is-dark-preview pf-t-dark"
       >
         {navHorizontalListOverflowExample}
       </Example>

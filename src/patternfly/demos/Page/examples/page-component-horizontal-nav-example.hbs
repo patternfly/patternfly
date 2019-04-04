@@ -14,10 +14,10 @@
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-    {{#> nav nav--modifier="pf-m-end"}}
+    {{#> nav nav--modifier="pf-m-end" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+      {{/nav-scroll-button}}
       {{#> nav-list nav-list--type="horizontal"}}
-        {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-        {{/nav-scroll-button}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#"}}
             Horizontal Nav Item 1
@@ -43,9 +43,9 @@
             Horizontal Nav Item 5
           {{/nav-link}}
         {{/nav-item}}
-        {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-        {{/nav-scroll-button}}
       {{/nav-list}}
+      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+      {{/nav-scroll-button}}
     {{/nav}}
     {{/page-header-nav}}
     {{#> page-template-header-tools-elements}}
