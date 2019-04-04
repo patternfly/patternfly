@@ -410,6 +410,12 @@ html {
   }
 }
 
+.is-extra-tall-body {
+  .Preview__body {
+    height: 30em;
+  }
+}
+
 .is-expanded-top {
   .Preview__body {
     padding-top: 14em;
