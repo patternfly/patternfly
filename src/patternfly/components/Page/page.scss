@@ -330,8 +330,13 @@
   background-color: var(--pf-c-page__main-section--BackgroundColor);
 
   &:last-of-type,
-  &:only-child {
+  &:only-child,
+  &.pf-m-fill {
     flex: 1 0 auto;
+  }
+
+  &.pf-m-no-fill {
+    flex: 0 0 auto;
   }
 
   &.pf-m-light {
