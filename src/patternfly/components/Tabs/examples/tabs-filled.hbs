@@ -1,19 +1,23 @@
-{{#> tabs tabs--modifier="pf-m-fill"}}
+{{#> tabs tabs--id="primary-filled" tabs--modifier="pf-m-fill"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute='id="ex4-tab1"'}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
         Tab item 1
       {{/tabs-button}}
     {{/tabs-item}}
     {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex4-tab2"'}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
         Tab item 2
       {{/tabs-button}}
     {{/tabs-item}}
     {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex4-tab3"'}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
         Tab item 3
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}

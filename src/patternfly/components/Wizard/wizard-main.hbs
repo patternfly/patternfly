@@ -2,5 +2,7 @@
   {{#if wizard-main--attribute}}
     {{{wizard-main--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> wizard-main-body}}
+    {{> @partial-block}}
+  {{/wizard-main-body}}
 </main>

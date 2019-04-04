@@ -1,5 +1,5 @@
 {{#> page page--id="page-layout-expandable-nav"}}
-  {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
   {{#> page-header}}
@@ -139,7 +139,7 @@
         {{/nav-scroll-button}}
       {{/nav}}
     {{/page-main-nav}}
-    <a id="main-content"></a>
+    <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

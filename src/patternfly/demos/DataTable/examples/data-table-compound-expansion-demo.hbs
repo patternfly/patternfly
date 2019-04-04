@@ -1,4 +1,7 @@
 {{#> page page--id="page-layout-data-table-compound-expansion"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{> data-table-page-header}}
   {{/page-header}}
@@ -9,6 +12,7 @@
     {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
       {{> data-table-main-section-nav}}
     {{/page-main-nav}}
+    <a id="main-content-{{page--id}}"></a>
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> data-table-main-section-content}}
     {{/page-main-section}}

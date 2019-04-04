@@ -1,4 +1,55 @@
-{{#> tabs tabs--id="primary-scroll-nav" tabs--type="nav" tabs--modifier="pf-m-start pf-m-start-current pf-m-end" tabs--attribute='aria-label="Local"'}}
+{{#> tabs tabs--id="primary-with-secondary"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--attribute='' tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+{{#> tabs tabs--id="secondary-with-primary" tabs--IsSecondary="true"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+<br>
+<br>
+
+{{#> tabs tabs--id="primary-with-secondary-scroll" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
   {{#> tabs-list}}
@@ -57,33 +108,7 @@
   {{/tabs-scroll-button}}
 {{/tabs}}
 
-<br><br>
-
-{{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--attribute='aria-label="Local"'}}
-  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
-  {{/tabs-scroll-button}}
-  {{#> tabs-list}}
-    {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
-        Tab item 1
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
-        Tab item 2
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
-        Tab item 3
-      {{/tabs-button}}
-    {{/tabs-item}}
-  {{/tabs-list}}
-  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
-  {{/tabs-scroll-button}}
-{{/tabs}}
-
-{{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsSecondary="true" tabs--attribute='aria-label="Local secondary"'}}
+{{#> tabs tabs--id="secondary-with-primary-scroll" tabs--IsSecondary="true" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
   {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
   {{#> tabs-list}}
@@ -102,7 +127,23 @@
         Secondary tab item 3
       {{/tabs-button}}
     {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Secondary tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Secondary tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+     {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7"')}}
+        Secondary tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
   {{/tabs-list}}
   {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
   {{/tabs-scroll-button}}
 {{/tabs}}
+

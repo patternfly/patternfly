@@ -4,26 +4,35 @@ import Example from '@siteComponents/Example';
 
 // Raw
 import tabsPrimaryExampleRaw from '!raw!./tabs-primary.hbs';
+import tabsPrimaryOverflowExampleRaw from '!raw!./tabs-primary-overflow.hbs';
+
 import tabsSecondaryExampleRaw from '!raw!./tabs-secondary.hbs';
+import tabsSecondaryOverflowExampleRaw from '!raw!./tabs-secondary-overflow.hbs';
+
+import tabsPrimarySecondaryExampleRaw from '!raw!./tabs-primary-secondary.hbs';
+
 import tabsFilledExampleRaw from '!raw!./tabs-filled.hbs';
-import tabsScrollExampleRaw from '!raw!./tabs-scroll.hbs';
+
 import tabsNavExampleRaw from '!raw!./tabs-nav.hbs';
 
 // Primary tabs
 import TabsPrimaryExample from './tabs-primary.hbs';
+import TabsPrimaryOverflowExample from './tabs-primary-overflow.hbs';
 import tabsPrimaryDocs from '../docs/tabs-primary.md';
+import tabsPrimaryOverflowDocs from '../docs/tabs-primary-overflow.md';
 
 // Secondary tabs
 import TabsSecondaryExample from './tabs-secondary.hbs';
+import TabsSecondaryOverflowExample from './tabs-secondary-overflow.hbs';
 import tabsSecondaryDocs from '../docs/tabs-secondary.md';
+import tabsSecondaryOverflowDocs from '../docs/tabs-secondary-overflow.md';
+
+// Primary and Secondary
+import TabsPrimarySecondaryExample from './tabs-primary-secondary.hbs';
 
 // Filled tabs
 import TabsFilledExample from './tabs-filled.hbs';
 import tabsFilledDocs from '../docs/tabs-filled.md';
-
-// Scroll buttons
-import TabsScrollExample from './tabs-scroll.hbs';
-import tabsScrollDocs from '../docs/tabs-scroll.md';
 
 // Nav example
 import TabsNavExample from './tabs-nav.hbs';
@@ -36,22 +45,38 @@ export const Docs = docs;
 
 export default () => {
   const tabsPrimaryExample = TabsPrimaryExample();
+  const tabsPrimaryOverflowExample = TabsPrimaryOverflowExample();
   const tabsSecondaryExample = TabsSecondaryExample();
+  const tabsSecondaryOverflowExample = TabsSecondaryOverflowExample();
+  const tabsPrimarySecondaryExample = TabsPrimarySecondaryExample();
   const tabsFilledExample = TabsFilledExample();
-  const tabsScrollExample = TabsScrollExample();
   const tabsNavExample = TabsNavExample();
   const variablesRoot = 'pf-c-tabs';
 
   return (
     <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Primary tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
+      <Example heading="Primary Tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
         {tabsPrimaryExample}
       </Example>
-      <Example heading="Scroll buttons" handlebars={tabsScrollExampleRaw} docs={tabsScrollDocs}>
-        {tabsScrollExample}
+      <Example
+        heading="Primary Tabs Overflow"
+        handlebars={tabsPrimaryOverflowExampleRaw}
+        docs={tabsPrimaryOverflowDocs}
+      >
+        {tabsPrimaryOverflowExample}
       </Example>
-      <Example heading="Primary tabs with secondary tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
+      <Example heading="Secondary Tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
         {tabsSecondaryExample}
+      </Example>
+      <Example
+        heading="Secondary Tabs Overflow"
+        handlebars={tabsSecondaryOverflowExampleRaw}
+        docs={tabsSecondaryOverflowDocs}
+      >
+        {tabsSecondaryOverflowExample}
+      </Example>
+      <Example heading="Primary Tabs with Secondary Tabs" handlebars={tabsPrimarySecondaryExampleRaw}>
+        {tabsPrimarySecondaryExample}
       </Example>
       <Example heading="Filled tabs" handlebars={tabsFilledExampleRaw} docs={tabsFilledDocs}>
         {tabsFilledExample}

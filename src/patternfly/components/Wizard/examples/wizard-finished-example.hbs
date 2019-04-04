@@ -1,6 +1,6 @@
 {{#> backdrop}}
 {{#> bullseye}}
-  {{#> wizard wizard--IsExpanded="true"}}
+  {{#> wizard wizard--modifier="pf-m-finished"}}
     {{#> wizard-header}}
       {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
         {{> button-icon button-icon--type="times"}}
@@ -33,7 +33,7 @@
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
             {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+              {{#> wizard-nav-link}}
                 Configuration
               {{/wizard-nav-link}}
               {{#> wizard-nav-list}}
@@ -43,7 +43,7 @@
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
                 {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                  {{#> wizard-nav-link}}
                     Substep B
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
@@ -60,14 +60,32 @@
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
             {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+              {{#> wizard-nav-link}}
                 Review
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
           {{/wizard-nav-list}}
         {{/wizard-nav}}
         {{#> wizard-main}}
-          <p>wizard content goes here</p>
+          {{#> bullseye}}
+            {{#> empty-state empty-state--modifier="pf-m-lg"}}
+              {{#> empty-state-icon empty-state-icon--type="cogs"}}{{/empty-state-icon}}
+              {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+                Configuration in progress
+              {{/title}}
+              {{#> empty-state-body}}
+                {{#> progress progress__value="33" progress--modifier="pf-m-singleline" progress__id="progress-singleline-example"}}{{/progress}}
+              {{/empty-state-body}}
+              {{#> empty-state-body}}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non pulvinar tortor. Maecenas sit amet pellentesque velit, eu eleifend mauris.
+              {{/empty-state-body}}
+              {{#> empty-state-secondary}}
+                {{#> button button--modifier="pf-m-link"}}
+                  Cancel
+                {{/button}}
+              {{/empty-state-secondary}}
+            {{/empty-state}}
+          {{/bullseye}}
         {{/wizard-main}}
       {{/wizard-inner-wrap}}
       {{#> wizard-footer}}

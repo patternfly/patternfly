@@ -1,13 +1,5 @@
 {{#> pagination pagination--modifier="pf-m-footer"}}
-  {{#> options-menu id="pagination-options-menu-bottom-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
-    {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
-      <span class="pf-c-options-menu__toggle-text">
-        <b>1 - 10</b> of <b>37</b>
-      </span>
-      {{> options-menu-toggle-button aria-label="Select"}}
-    {{/options-menu-toggle}}
-    {{> options-menu-single}}
-  {{/options-menu}}
+  {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--label-text="Items per page" options-menu--IsText="true"}}
 
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}

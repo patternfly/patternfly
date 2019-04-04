@@ -10,7 +10,6 @@
   --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-brand--md--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-page__header-brand--md--FlexBasis: #{pf-size-prem(290px)};
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-brand--PaddingLeft: var(--pf-c-page__header-brand--md--PaddingLeft);
@@ -32,7 +31,6 @@
 
   // Header brand link
   --pf-c-page__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
-  --pf-c-page__header-brand-link--md--MaxWidth: #{pf-size-prem(150px)};
 
   // Header nav
   --pf-c-page__header-nav--PaddingLeft: var(--pf-global--spacer--md);
@@ -156,27 +154,29 @@
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
 
-  grid-area: header;
   z-index: var(--pf-c-page__header--ZIndex);
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: auto auto;
+  display: grid;
+  grid-area: header;
   align-items: center;
-  max-width: 100%;
   min-height: var(--pf-c-page__header--MinHeight);
 
   > * {
     display: flex;
     align-items: center;
   }
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    grid-template-columns: auto 1fr auto;
+  }
 }
 
 // Brand
 .pf-c-page__header-brand {
+  grid-column: 1 / 2;
   padding-left: var(--pf-c-page__header-brand--PaddingLeft);
 
   @media (min-width: $pf-global--breakpoint--md) {
-    flex: 0 0 var(--pf-c-page__header-brand--md--FlexBasis); // Hardcode header brand width based on design spec, must match --pf-c-nav--Width
-    align-self: stretch;
     padding-right: var(--pf-c-page__header-brand--md--PaddingRight); // set padding right here to allow mobile view to accomodate tools
   }
 }
@@ -189,10 +189,6 @@
 
   .pf-c-brand {
     max-height: var(--pf-c-page__header-brand-link--c-brand--MaxHeight); // Hardcode brand image max-height so it always aligns with everthing else.
-  }
-
-  @media screen and (max-width: $pf-global--breakpoint--md) {
-    max-width: var(--pf-c-page__header-brand-link--md--MaxWidth);
   }
 }
 
@@ -209,8 +205,8 @@
 
 // Header navigation
 .pf-c-page__header-nav {
-  order: 1;
-  width: 100vw; // set width value for container to scale properly
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
   padding-left: var(--pf-c-page__header-nav--PaddingLeft);
   overflow: hidden;
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
@@ -220,6 +216,8 @@
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     flex: 1;
     align-self: flex-end;
     order: initial;
@@ -231,6 +229,7 @@
 
 // Header tools
 .pf-c-page__header-tools {
+  grid-column: 2 / 3;
   align-items: center;
   margin-top: var(--pf-c-page__header-tools--MarginTop);
   margin-right: var(--pf-c-page__header-tools--MarginRight);
@@ -268,6 +267,10 @@
 
   .pf-c-avatar {
     margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    grid-column: 3 / 4;
   }
 }
 
@@ -354,8 +357,13 @@
   background-color: var(--pf-c-page__main-section--BackgroundColor);
 
   &:last-of-type,
-  &:only-child {
+  &:only-child,
+  &.pf-m-fill {
     flex: 1 0 auto;
+  }
+
+  &.pf-m-no-fill {
+    flex: 0 0 auto;
   }
 
   &.pf-m-light {
