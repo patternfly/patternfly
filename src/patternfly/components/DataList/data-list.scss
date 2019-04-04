@@ -113,7 +113,7 @@
 .pf-c-data-list__item {
   position: relative;
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   align-items: baseline;
   padding-right: var(--pf-c-data-list__item--PaddingRight);
   padding-left: var(--pf-c-data-list__item--PaddingLeft);
@@ -152,6 +152,15 @@
       --pf-c-data-list__item--before--BackgroundColor: var(--pf-c-data-list__item--m-expanded--before--BackgroundColor);
     }
   }
+
+  > div {
+    flex-wrap: wrap;
+  }
+}
+
+.pf-c-data-list__item-row {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .pf-c-data-list__item-actions {
