@@ -13,3 +13,4 @@
 | `.pf-c-data-list` | `<ul>` | Initiates a data list. **Required** |
 | `.pf-c-data-list__item` | `<li>` | Initiates a data list item. **Required** |
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
+| `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies the content in a data list cell to be right aligned on desktop and left-aligned on mobile. |

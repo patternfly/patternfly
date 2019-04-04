@@ -3,17 +3,17 @@
     {{#> data-list-cell}}
       <span id="simple-item1">Primary content</span>
     {{/data-list-cell}}
-    {{#> data-list-cell}}
-      Secondary content
+    {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
+      Secondary content (Right Aligned)
     {{/data-list-cell}}
   {{/data-list-item}}
 
   {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-item2"'}}
     {{#> data-list-cell}}
-      <span id="simple-item2">Second list item title</span>
+      <span id="simple-item2">Primary Content Item 2</span>
     {{/data-list-cell}}
-    {{#> data-list-cell}}
-      Secondary content
+    {{#> data-list-cell data-list-cell--modifier="pf-m-align-right"}}
+      Secondary content (Right Aligned)
     {{/data-list-cell}}
   {{/data-list-item}}
 {{/data-list}}
