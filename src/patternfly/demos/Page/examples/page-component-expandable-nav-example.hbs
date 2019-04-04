@@ -20,7 +20,7 @@
 
   {{#> page-sidebar}}
     {{#> page-sidebar-body}}
-      {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Primary Nav Expandable Example"')}}
+      {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
         {{#> nav-list}}
           {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
             {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
@@ -105,34 +105,38 @@
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-nav}}
-      {{#> nav nav--attribute='aria-label="Tertiary Example"' aria-labelledby="primary-nav"}}
+      {{#> nav nav--modifier="pf-m-start pf-m-end" aria-label="Local"}}
+        {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+        {{/nav-scroll-button}}
         {{#> nav-list nav-list--type="tertiary"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Nav Item 1
+              Tertiary Nav Item 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
-              Nav Item 2
+              Tertiary Nav Item 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
-              Nav Item 3
+              Tertiary Nav Item 3
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
-              Nav Item 4
+              Tertiary Nav Item 4
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
-              Nav Item 5
+              Tertiary Nav Item 5
             {{/nav-link}}
           {{/nav-item}}
         {{/nav-list}}
+        {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+        {{/nav-scroll-button}}
       {{/nav}}
     {{/page-main-nav}}
     <a id="main-content-{{page--id}}"></a>
