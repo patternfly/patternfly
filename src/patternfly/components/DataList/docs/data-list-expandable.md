@@ -18,6 +18,7 @@
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
+| `.pf-c-data-list__item-controls` | `<div>` | Initiates a container for data list controls. For example, add `.pf-c-data-list__toggle` here. **Required** |
 | `.pf-c-data-list__toggle` | `<div>` | Initiates a toggle button. |
 | `.pf-c-data-list__icon`  | `<i>` | Initiates a toggle icon. |
 | `.pf-c-data-list__expandable-content` | `<div>` | Initiates an expandable content container. |
