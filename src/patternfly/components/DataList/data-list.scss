@@ -71,22 +71,6 @@
     --pf-c-data-list__item-controls--Margin-Right: var(--pf-c-data-list__item-controls--md--Margin-Right);
   }
 
-  // Check
-  --pf-c-data-list__check--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-data-list__check--sm--MarginRight: var(--pf-global--spacer--md);
-
-  @media screen and (max-width: $pf-global--breakpoint--sm) {
-    --pf-c-data-list__check--MarginRight: var(--pf-c-data-list__check--sm--MarginRight);
-  }
-
-  // Icon
-  --pf-c-data-list__icon--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-data-list__icon--sm--MarginRight: var(--pf-global--spacer--md);
-
-  @media screen and (max-width: $pf-global--breakpoint--sm) {
-    --pf-c-data-list__icon--MarginRight: var(--pf-c-data-list__icon--sm--MarginRight);
-  }
-
   // Actions
   --pf-c-data-list__item-actions--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-actions--MarginLeft: var(--pf-global--spacer--xl);
