@@ -15,5 +15,5 @@
 | `.pf-c-data-list__item-row` | `<div>` | Initiates a data list item row. **Required** |
 | `.pf-c-data-list__item-content` | `<div>` | Initiates a container for data list content. **Required**|
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
-| `.pf-m-shrink-start` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow when its the first data-list__cell element. For example use `.pf-c-data-list__icon`. |
-| `.pf-m-shrink-end` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow when its the last data-list__cell element. For example use `.pf-c-data-list__icon`. |
+| `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. For example use `.pf-c-data-list__icon`. |
+| `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-right when its the last data-list__cell element. For example use `.pf-c-data-list__icon`. |
