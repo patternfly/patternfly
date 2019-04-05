@@ -62,25 +62,25 @@
   --pf-c-data-list__item--m-expanded__toggle--c-button--Transform: rotate(90deg);
 
   // Controls
-  --pf-c-data-list__item-controls--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-controls--Margin-Right: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-controls--md--Margin-Right: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-controls--not-last-child--Margin-Right: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-control--Margin-Right: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-control--md--Margin-Right: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-control--not-last-child--Margin-Right: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
-    --pf-c-data-list__item-controls--Margin-Right: var(--pf-c-data-list__item-controls--md--Margin-Right);
+    --pf-c-data-list__item-control--Margin-Right: var(--pf-c-data-list__item-control--md--Margin-Right);
   }
 
   // Actions
-  --pf-c-data-list__item-actions--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-actions--MarginLeft: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-actions--md--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-actions--not-last-child--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-actions--not-last-child--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-action--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-action--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-action--md--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-action--not-last-child--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-action--not-last-child--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-data-list__action--MarginTop: #{pf-size-prem(-6px)};
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
-    --pf-c-data-list__item-actions--MarginLeft: var(--pf-c-data-list__item-actions--md--MarginLeft);
+    --pf-c-data-list__item-action--MarginLeft: var(--pf-c-data-list__item-action--md--MarginLeft);
   }
 
   // Expandable content
@@ -165,17 +165,17 @@
   padding-left: var(--pf-c-data-list__item-row--PaddingLeft);
 }
 
-.pf-c-data-list__item-actions {
+.pf-c-data-list__item-action {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
   align-content: flex-start;
-  padding-top: var(--pf-c-data-list__item-actions--PaddingTop);
-  margin-left: var(--pf-c-data-list__item-actions--MarginLeft);
+  padding-top: var(--pf-c-data-list__item-action--PaddingTop);
+  margin-left: var(--pf-c-data-list__item-action--MarginLeft);
 
   > *:not(:last-child) {
-    margin-right: var(--pf-c-data-list__item-actions--not-last-child--MarginRight);
-    margin-bottom: var(--pf-c-data-list__item-actions--not-last-child--MarginBottom);
+    margin-right: var(--pf-c-data-list__item-action--not-last-child--MarginRight);
+    margin-bottom: var(--pf-c-data-list__item-action--not-last-child--MarginBottom);
   }
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -188,14 +188,14 @@
   }
 }
 
-.pf-c-data-list__item-controls {
+.pf-c-data-list__item-control {
   display: flex;
   flex-wrap: nowrap;
-  padding-top: var(--pf-c-data-list__item-controls--PaddingTop);
-  margin-right: var(--pf-c-data-list__item-controls--Margin-Right);
+  padding-top: var(--pf-c-data-list__item-control--PaddingTop);
+  margin-right: var(--pf-c-data-list__item-control--Margin-Right);
 
   > *:not(:last-child) {
-    margin-right: var(--pf-c-data-list__item-controls--not-last-child--Margin-Right);
+    margin-right: var(--pf-c-data-list__item-control--not-last-child--Margin-Right);
   }
 }
 
