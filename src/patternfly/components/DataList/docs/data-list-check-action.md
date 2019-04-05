@@ -14,7 +14,7 @@
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-data-list__item-controls` | `<div>` | Initiates a container for data list controls. For example, add `.pf-c-data-list__check` here. **Required** |
+| `.pf-c-data-list__item-control` | `<div>` | Initiates a container for data list controls. For example, add `.pf-c-data-list__check` here. **Required** |
 | `.pf-c-data-list__item-action` | `<div>` | Initiates a container for the data list actions. For example, add `.pf-c-data-list__action` here. **Required** |
 | `.pf-c-data-list__check`  | `<div>` | Initiates a data list check cell. **Required** |
 | `.pf-c-data-list__action` | `<div>` | Initiates a data list action button cell. **Required** |

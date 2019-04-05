@@ -56,13 +56,14 @@
 
   // Toggle
   --pf-c-data-list__toggle--MarginLeft: calc(var(--pf-global--spacer--sm) * -1); // offset toggle to align left
-  --pf-c-data-list__toggle--MarginTop: calc(var(pf-global--spacer--form-element) * -1);
+  --pf-c-data-list__toggle--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-data-list__toggle--c-button--Transition: var(--pf-global--Transition);
   --pf-c-data-list__toggle--c-button--Transform: rotate(0deg);
   --pf-c-data-list__item--m-expanded__toggle--c-button--Transform: rotate(90deg);
 
   // Controls
   --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-control--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-control--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-control--md--MarginRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item-control--not-last-child--MarginRight: var(--pf-global--spacer--md);
@@ -73,11 +74,12 @@
 
   // Actions
   --pf-c-data-list__item-action--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-action--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-action--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-action--md--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item-action--not-last-child--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-action--not-last-child--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-data-list__action--MarginTop: calc(var(pf-global--spacer--form-element) * -1);
+  --pf-c-data-list__item-action--not-last-child--lg--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-data-list__action--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
     --pf-c-data-list__item-action--MarginLeft: var(--pf-c-data-list__item-action--md--MarginLeft);
@@ -165,37 +167,42 @@
   padding-left: var(--pf-c-data-list__item-row--PaddingLeft);
 }
 
+.pf-c-data-list__item-control {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-top: var(--pf-c-data-list__item-control--PaddingTop);
+  padding-bottom: var(--pf-c-data-list__item-control--PaddingBottom);
+  margin-right: var(--pf-c-data-list__item-control--MarginRight);
+
+  > *:not(:last-child) {
+    margin-right: var(--pf-c-data-list__item-control--not-last-child--MarginRight);
+  }
+}
+
 .pf-c-data-list__item-action {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
   align-content: flex-start;
   padding-top: var(--pf-c-data-list__item-action--PaddingTop);
+  padding-bottom: var(--pf-c-data-list__item-action--PaddingBottom);
   margin-left: var(--pf-c-data-list__item-action--MarginLeft);
 
   > *:not(:last-child) {
     margin-right: var(--pf-c-data-list__item-action--not-last-child--MarginRight);
-    margin-bottom: var(--pf-c-data-list__item-action--not-last-child--MarginBottom);
+
+    @media screen and (max-width: $pf-global--breakpoint--lg) {
+      margin-bottom: var(--pf-c-data-list__item-action--not-last-child--lg--MarginBottom);
+    }
   }
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (max-width: $pf-global--breakpoint--lg) {
     flex-wrap: wrap;
   }
 
   // Offset action button
   .pf-c-data-list__action {
     margin-top: var(--pf-c-data-list__action--MarginTop);
-  }
-}
-
-.pf-c-data-list__item-control {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-top: var(--pf-c-data-list__item-control--PaddingTop);
-  margin-right: var(--pf-c-data-list__item-control--MarginRight);
-
-  > *:not(:last-child) {
-    margin-right: var(--pf-c-data-list__item-control--not-last-child--MarginRight);
   }
 }
 
