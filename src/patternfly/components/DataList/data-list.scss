@@ -49,20 +49,21 @@
   }
 
   // Toggle
-  --pf-c-data-list__toggle--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__toggle--sm--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-data-list__toggle--MarginLeft: calc(var(--pf-global--spacer--sm) * -1); // offset toggle to align left
   --pf-c-data-list__toggle--MarginTop: #{pf-size-prem(-6px)};
   --pf-c-data-list__toggle--c-button--Transition: var(--pf-global--Transition);
   --pf-c-data-list__toggle--c-button--Transform: rotate(0deg);
   --pf-c-data-list__item--m-expanded__toggle--c-button--Transform: rotate(90deg);
 
-  @media screen and (max-width: $pf-global--breakpoint--sm) {
-    --pf-c-data-list__toggle--MarginRight: var(--pf-c-data-list__toggle--sm--MarginRight);
-  }
-
   // Controls
   --pf-c-data-list__item-controls--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-controls--Margin-Right: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-controls--md--Margin-Right: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-controls--not-last-child--Margin-Right: var(--pf-global--spacer--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-data-list__item-controls--Margin-Right: var(--pf-c-data-list__item-controls--md--Margin-Right);
+  }
 
   // Check
   --pf-c-data-list__check--MarginRight: var(--pf-global--spacer--xl);
@@ -82,7 +83,13 @@
 
   // Actions
   --pf-c-data-list__item-actions--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-actions--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-actions--md--MarginLeft: 0;
   --pf-c-data-list__action--MarginTop: #{pf-size-prem(-6px)};
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-c-data-list__item-actions--MarginLeft: var(--pf-c-data-list__item-actions--md--MarginLeft);
+  }
 
   // Expandable content
   --pf-c-data-list__expandable-content--BorderTopColor: var(--pf-global--Color--light-200);
@@ -170,6 +177,7 @@
   order: 2;
   float: right;
   padding-top: var(--pf-c-data-list__item-actions--PaddingTop);
+  margin-left: var(--pf-c-data-list__item-actions--MarginLeft);
 
   // Offset action button
   .pf-c-data-list__action {
@@ -181,21 +189,16 @@
   display: flex;
   flex-wrap: nowrap;
   padding-top: var(--pf-c-data-list__item-controls--PaddingTop);
+  margin-right: var(--pf-c-data-list__item-controls--Margin-Right);
 
-  // Checkbox
-  .pf-c-data-list__check {
-    margin-right: var(--pf-c-data-list__check--MarginRight);
-  }
-
-  .pf-c-data-list__icon {
-    margin-right: var(--pf-c-data-list__icon--MarginRight);
+  > *:not(:last-child) {
+    margin-right: var(--pf-c-data-list__item-controls--not-last-child--Margin-Right);
   }
 }
 
 // Toggle
 .pf-c-data-list__toggle {
   margin-top: var(--pf-c-data-list__toggle--MarginTop);
-  margin-right: var(--pf-c-data-list__toggle--MarginRight);
   margin-left: var(--pf-c-data-list__toggle--MarginLeft);
 
   // rotate icon
