@@ -261,6 +261,10 @@
     grid-column: 1/2;
   }
 
+  &.pf-m-shrink-end {
+    flex-grow: 0;
+  }
+
   &.pf-m-shrink-start + & {
     grid-column: 2/3;
     padding-top: var(--pf-c-data-list__cell--PaddingTop);
