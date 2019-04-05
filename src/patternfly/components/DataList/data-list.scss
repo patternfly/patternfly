@@ -44,7 +44,7 @@
   --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell--md--PaddingBottom: 0;
-  --pf-c-data-list__cell--m-align-left--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-data-list__cell--m-icon--MarginRight: var(--pf-global--spacer--md);
   --pf-c-data-list__cell-cell--PaddingTop: 0;
   --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell-cell--MarginRight: var(--pf-global--spacer--xl);
@@ -262,7 +262,7 @@
 
   &.pf-m-icon {
     flex-grow: 0;
-    margin-right: var(--pf-c-data-list__cell--m-align-left--MarginRight);
+    margin-right: var(--pf-c-data-list__cell--m-icon-left--MarginRight);
     grid-column: 1 / 2;
   }
 
@@ -276,7 +276,7 @@
     margin-left: auto;
 
     @media screen and (max-width: $pf-global--breakpoint--md) {
-      margin-left: unset;
+      margin-left: 0;
     }
   }
 
