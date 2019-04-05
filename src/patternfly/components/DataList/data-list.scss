@@ -120,8 +120,7 @@
 .pf-c-data-list__item {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  flex-direction: column;
 
   // left border treatment base
   // color is transparent by default
@@ -162,7 +161,6 @@
 .pf-c-data-list__item-row {
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
   padding-right: var(--pf-c-data-list__item-row--PaddingRight);
   padding-left: var(--pf-c-data-list__item-row--PaddingLeft);
 }
@@ -241,7 +239,7 @@
 .pf-c-data-list__cell {
   flex: 1;
   padding-top: var(--pf-c-data-list__cell--PaddingTop);
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   padding-bottom: var(--pf-c-data-list__cell--PaddingBottom);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -265,7 +263,7 @@
   &.pf-m-align-left {
     flex-grow: 0;
     margin-right: var(--pf-c-data-list__cell--m-align-left--MarginRight);
-    grid-column: 1/2;
+    grid-column: 1 / 2;
   }
 
   &.pf-m-align-right {
@@ -273,7 +271,7 @@
   }
 
   &.pf-m-align-left + & {
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     padding-top: var(--pf-c-data-list__cell--PaddingTop);
   }
 
@@ -285,7 +283,6 @@
 
 // Expandable content
 .pf-c-data-list__expandable-content {
-  width: 100%;
   border-top: 0 solid var(--pf-c-data-list__expandable-content--BorderTopColor);
 
   .pf-c-data-list__item.pf-m-expanded & {
