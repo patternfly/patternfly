@@ -63,12 +63,12 @@
 
   // Controls
   --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-control--Margin-Right: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-control--md--Margin-Right: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-control--not-last-child--Margin-Right: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-control--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-control--md--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-data-list__item-control--not-last-child--MarginRight: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
-    --pf-c-data-list__item-control--Margin-Right: var(--pf-c-data-list__item-control--md--Margin-Right);
+    --pf-c-data-list__item-control--MarginRight: var(--pf-c-data-list__item-control--md--MarginRight);
   }
 
   // Actions
@@ -192,10 +192,10 @@
   display: flex;
   flex-wrap: nowrap;
   padding-top: var(--pf-c-data-list__item-control--PaddingTop);
-  margin-right: var(--pf-c-data-list__item-control--Margin-Right);
+  margin-right: var(--pf-c-data-list__item-control--MarginRight);
 
   > *:not(:last-child) {
-    margin-right: var(--pf-c-data-list__item-control--not-last-child--Margin-Right);
+    margin-right: var(--pf-c-data-list__item-control--not-last-child--MarginRight);
   }
 }
 
