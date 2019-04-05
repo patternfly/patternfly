@@ -4,11 +4,13 @@
       {{#> data-list-item-controls}}
         {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-1"'}}{{/data-list-toggle}}
         {{#> data-list-check checkbox--attribute='name="check-action-check1" aria-labelledby="check-action-item1"'}}{{/data-list-check}}
-        {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
       {{/data-list-item-controls}}
       {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-shrink-start"}}
+          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+        {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="ex-item1">Primary content</div>
+          <div id="ex-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <a href="#">link</a>
         {{/data-list-cell}}
         {{#> data-list-cell}}
@@ -33,11 +35,13 @@
     {{#> data-list-item-row}}
       {{#> data-list-item-controls}}
         {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-2"'}}{{/data-list-toggle}}
-        {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
       {{/data-list-item-controls}}
       {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-shrink-start"}}
+          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+        {{/data-list-cell}}        
         {{#> data-list-cell}}
-          <div id="ex-item2">Secondary content</div>
+          <div id="ex-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -61,11 +65,13 @@
     {{#> data-list-item-row}}
       {{#> data-list-item-controls}}
         {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle3 ex-item3" id="ex-toggle3" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-3"'}}{{/data-list-toggle}}
-        {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
       {{/data-list-item-controls}}
       {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-shrink-start"}}
+          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+        {{/data-list-cell}}        
         {{#> data-list-cell}}
-          <div id="ex-item3">Tertiary content</div>
+          <div id="ex-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
