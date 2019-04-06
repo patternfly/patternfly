@@ -1,5 +1,5 @@
 {{#> page page--id="page-layout-grouped-nav"}}
-  {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
   {{#> page-header}}
@@ -18,7 +18,7 @@
   {{/page-header}}
   {{#> page-sidebar}}
     {{#> page-sidebar-body}}
-      {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Grouped Nav Example"')}}
+      {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
         {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
           {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
             System Panel
@@ -82,7 +82,7 @@
     {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
-    <a id="main-content"></a>
+    <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}

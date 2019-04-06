@@ -1,39 +1,23 @@
-{{#> tabs}}
+{{#> tabs tabs--id="secondary" tabs--IsSecondary="true"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-tab1"'}}
-        Tab item 1
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-tab2"'}}
-        Tab item 2
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-tab3"'}}
-        Tab item 3
-      {{/tabs-button}}
-    {{/tabs-item}}
-  {{/tabs-list}}
-{{/tabs}}
-
-{{#> tabs tabs--IsSecondary="true"}}
-  {{#> tabs-list}}
-    {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab1"'}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
         Secondary tab item 1
       {{/tabs-button}}
     {{/tabs-item}}
     {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab2"'}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
         Secondary tab item 2
       {{/tabs-button}}
     {{/tabs-item}}
     {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute='id="ex3-secondary-tab3"'}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
         Secondary tab item 3
       {{/tabs-button}}
     {{/tabs-item}}
   {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
 {{/tabs}}

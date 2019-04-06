@@ -91,6 +91,10 @@ sitemap
             process.exit(1);
           } else {
             console.log(`${logColors.green}%s${logColors.reset}`, 'ACCESSIBILITY AUDIT PASSES \n');
+            console.log(
+              `${logColors.green}%s${logColors.reset}`,
+              `Found ${totalViolations.length}, which satisfies our goal of less than ${config.toleranceThreshold} \n`
+            );
           }
         })
         .catch(error => {

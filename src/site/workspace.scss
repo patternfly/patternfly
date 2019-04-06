@@ -349,12 +349,6 @@ html {
     border: 2px dashed #393f44;
   }
 
-  .pf-c-page__header-tools,
-  .pf-c-page__header-nav {
-    color: #393f44;
-  }
-
-
   .pf-l-grid > * {
     box-shadow: 0 0 0 1px #ddd;
   }
@@ -407,6 +401,12 @@ html {
 .is-tall-body {
   .Preview__body {
     height: 17em;
+  }
+}
+
+.is-extra-tall-body {
+  .Preview__body {
+    height: 30em;
   }
 }
 

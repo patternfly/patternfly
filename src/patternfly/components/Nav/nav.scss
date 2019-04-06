@@ -84,15 +84,15 @@
 
   // color
   --pf-c-nav__horizontal-list-link--Color: #{$pf-color-black-300};
-  --pf-c-nav__horizontal-list-link--hover--Color: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--active--Color: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--focus--Color: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--hover--Color: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--active--Color: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--focus--Color: var(--pf-global--link--Color);
 
   // after
   --pf-c-nav__horizontal-list-link--after--Height: #{pf-size-prem(3px)};
-  --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--active-color--300);
-  --pf-c-nav__horizontal-list-link--focus--after--BackgroundColor: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--link--Color);
+  --pf-c-nav__horizontal-list-link--focus--after--BackgroundColor: var(--pf-global--link--Color);
 
   // List tertiary item
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
@@ -164,20 +164,33 @@
   --pf-c-nav__simple-list--nested__separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
 
   // Modifier - current item
-  --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-nav__horizontal-list-link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-nav__horizontal-list-link--m-current--after--BackgroundColor: var(--pf-global--active-color--300);
+  --pf-c-nav__horizontal-list-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Modifier - current item
   --pf-c-nav__tertiary-list-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-nav__tertiary-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__tertiary-list-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
-  // Base styling
-  overflow-x: auto;
+  // Scroll Button
+  --pf-c-nav__scroll-button--Top: var(--pf-global--spacer--sm);
+  --pf-c-nav__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
+  --pf-c-nav__scroll-button--Width: var(--pf-global--spacer--xl);
+  --pf-c-nav__scroll-button--Height: #{pf-size-prem(40px)};
+  --pf-c-nav__scroll-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-nav__scroll-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-nav__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-nav__scroll-button--hover--Color: var(--pf-global--link--Color);
+  --pf-c-nav__scroll-button--nth-of-type-1--BoxShadow: 20px 0 10px -4px rgba(255, 255, 255, .7); // This is a special one-off shadow for nav
+  --pf-c-nav__scroll-button--nth-of-type-2--BoxShadow: -20px 0 10px -4px rgba(255, 255, 255, .7); // This is a special one-off shadow for nav
+  --pf-c-nav__scroll-button--m-dark--nth-of-type-1--BoxShadow: 20px 0 10px -4px rgba(21, 21, 21, .7); // This is a special one-off shadow for nav
+  --pf-c-nav__scroll-button--m-dark--nth-of-type-2--BoxShadow: -20px 0 10px -4px rgba(21, 21, 21, .7); // This is a special one-off shadow for nav
 
-  // Hide scrollbars
-  &::-webkit-scrollbar {
+  // Base styling
+  position: relative;
+
+  .pf-c-nav__scroll-button {
     display: none;
     visibility: hidden;
   }
@@ -191,6 +204,16 @@
       text-decoration: none;
     }
   }
+
+  &.pf-m-start .pf-c-nav__scroll-button:nth-of-type(1) {
+    display: block;
+    visibility: visible;
+  }
+
+  &.pf-m-end .pf-c-nav__scroll-button:nth-of-type(2) {
+    display: block;
+    visibility: visible;
+  }
 }
 
 // Set width when nav is child of sidebar to prevent collapsing
@@ -199,6 +222,21 @@
     width: var(--pf-c-nav--Width);
   }
 }
+
+.pf-c-page__header-nav {
+  .pf-c-nav__scroll-button {
+    background-color: var(--pf-global--BackgroundColor--100);
+
+    &:nth-of-type(1) {
+      box-shadow: var(--pf-c-nav__scroll-button--m-dark--nth-of-type-1--BoxShadow);
+    }
+
+    &:nth-of-type(2) {
+      box-shadow: var(--pf-c-nav__scroll-button--m-dark--nth-of-type-2--BoxShadow);
+    }
+  }
+}
+
 
 // List default
 .pf-c-nav__list {
@@ -371,7 +409,11 @@
 // Horizontal and tertiary nav
 .pf-c-nav__horizontal-list,
 .pf-c-nav__tertiary-list {
+  @include pf-overflow-hide-scroll;
+
   display: inline-flex;
+  max-width: 100%;
+  overflow-x: auto;
 
   .pf-c-nav__link {
     position: relative;
@@ -550,4 +592,36 @@
   font-size: var(--pf-c-nav__section-title--FontSize);
   font-weight: var(--pf-c-nav__section-title--FontWeight);
   color: var(--pf-c-nav__section-title--Color);
+}
+
+.pf-c-nav__scroll-button {
+  position: absolute;
+  top: var(--pf-c-nav__scroll-button--Top);
+  bottom: 0;
+  z-index: var(--pf-c-nav__scroll-button--ZIndex);
+  width: var(--pf-c-nav__scroll-button--Width);
+  height: var(--pf-c-nav__scroll-button--Height); // this fixes the positioning on FF
+  padding-right: var(--pf-c-nav__scroll-button--PaddingRight);
+  padding-left: var(--pf-c-nav__scroll-button--PaddingLeft);
+  background-color: var(--pf-c-nav__scroll-button--BackgroundColor);
+  border: 0;
+
+  &.pf-m-hover,
+  &:hover,
+  &.pf-m-active,
+  &:active,
+  &.pf-m-focus,
+  &:focus {
+    color: var(--pf-c-nav__scroll-button--hover--Color);
+  }
+
+  &:nth-of-type(1) {
+    left: 0;
+    box-shadow: var(--pf-c-nav__scroll-button--nth-of-type-1--BoxShadow);
+  }
+
+  &:nth-of-type(2) {
+    right: 0;
+    box-shadow: var(--pf-c-nav__scroll-button--nth-of-type-2--BoxShadow);
+  }
 }

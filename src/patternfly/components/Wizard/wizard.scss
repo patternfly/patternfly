@@ -64,8 +64,9 @@
   --pf-c-wizard__toggle-list-item--not-last-child--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-wizard__toggle-list-item--MarginBottom: var(--pf-global--spacer--xs);
 
-  // Toggle Divider
-  --pf-c-wizard__toggle-divider--MarginLeft: var(--pf-global--spacer--sm);
+  // Toggle Separator
+  --pf-c-wizard__toggle-separator--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-wizard__toggle-separator--Color: var(--pf-global--BorderColor--200);
 
   // Toggle Icon
   --pf-c-wizard__toggle-icon--MarginTop: #{pf-size-prem(6px)};
@@ -128,20 +129,20 @@
   --pf-c-wizard__outer-wrap--lg--PaddingLeft: var(--pf-c-wizard__nav--lg--Width);
 
   // Body
-  --pf-c-wizard__main--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-wizard__main--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-wizard__main--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-wizard__main--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-wizard__main--lg--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-wizard__main--lg--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-wizard__main--lg--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-wizard__main--lg--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-wizard__main-body--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-wizard__main-body--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-wizard__main-body--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-wizard__main-body--lg--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main-body--lg--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main-body--lg--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard__main-body--lg--PaddingLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__main--PaddingTop: var(--pf-c-wizard__main--lg--PaddingTop);
-    --pf-c-wizard__main--PaddingRight: var(--pf-c-wizard__main--lg--PaddingRight);
-    --pf-c-wizard__main--PaddingBottom: var(--pf-c-wizard__main--lg--PaddingBottom);
-    --pf-c-wizard__main--PaddingLeft: var(--pf-c-wizard__main--lg--PaddingLeft);
+    --pf-c-wizard__main-body--PaddingTop: var(--pf-c-wizard__main-body--lg--PaddingTop);
+    --pf-c-wizard__main-body--PaddingRight: var(--pf-c-wizard__main-body--lg--PaddingRight);
+    --pf-c-wizard__main-body--PaddingBottom: var(--pf-c-wizard__main-body--lg--PaddingBottom);
+    --pf-c-wizard__main-body--PaddingLeft: var(--pf-c-wizard__main-body--lg--PaddingLeft);
   }
 
   // Footer
@@ -177,6 +178,17 @@
 
   > *:not(.pf-c-wizard__outer-wrap) {
     flex-shrink: 0;
+  }
+
+  &.pf-m-finished {
+    --pf-c-wizard__outer-wrap--lg--PaddingLeft: 0;
+
+    .pf-c-wizard__nav,
+    .pf-c-wizard__footer,
+    .pf-c-wizard__toggle {
+      display: none;
+      visibility: hidden;
+    }
   }
 }
 
@@ -263,8 +275,9 @@
   --pf-c-wizard__nav-link--before--Top: var(--pf-c-wizard__toggle-num--before--Top);
 }
 
-.pf-c-wizard__toggle-divider {
-  margin-left: var(--pf-c-wizard__toggle-divider--MarginLeft);
+.pf-c-wizard__toggle-separator {
+  margin-left: var(--pf-c-wizard__toggle-separator--MarginLeft);
+  color: var(--pf-c-wizard__toggle-separator--Color);
 }
 
 .pf-c-wizard__toggle-icon {
@@ -276,6 +289,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-height: 0;
   background-color: var(--pf-c-wizard__outer-wrap--BackgroundColor);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -288,6 +302,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-height: 0;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     position: static;
@@ -421,13 +436,17 @@
 }
 
 .pf-c-wizard__main {
-  padding: var(--pf-c-wizard__main--PaddingTop) var(--pf-c-wizard__main--PaddingRight) var(--pf-c-wizard__main--PaddingBottom) var(--pf-c-wizard__main--PaddingLeft);
+  overflow-x: hidden;
   overflow-y: auto;
   word-break: break-word;
 
   &.pf-m-no-padding {
     padding: 0;
   }
+}
+
+.pf-c-wizard__main-body {
+  padding: var(--pf-c-wizard__main-body--PaddingTop) var(--pf-c-wizard__main-body--PaddingRight) var(--pf-c-wizard__main-body--PaddingBottom) var(--pf-c-wizard__main-body--PaddingLeft);
 }
 
 .pf-c-wizard__footer {
