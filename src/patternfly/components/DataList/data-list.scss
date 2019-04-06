@@ -266,13 +266,11 @@
     grid-column: 1 / 2;
   }
 
-  &.pf-m-align-left {
+  &.pf-m-no-fill {
     flex-grow: 0;
-    margin-right: auto;
   }
 
   &.pf-m-align-right {
-    flex-grow: 0;
     margin-left: auto;
 
     @media screen and (max-width: $pf-global--breakpoint--md) {
