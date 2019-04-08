@@ -32,7 +32,7 @@ script:
   - npm run build-ghpages
   - npm run build-patternfly
 
- after_success:
+after_success:
   - ./build/deploy.sh
 
 before_deploy:
