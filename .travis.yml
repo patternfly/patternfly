@@ -32,8 +32,8 @@ script:
   - npm run build-ghpages
   - npm run build-patternfly
 
-# after_success:
-#  - ./build/deploy.sh - temporarily disable releases while merging breaking change pr's
+ after_success:
+  - ./build/deploy.sh
 
 before_deploy:
   - cd $TRAVIS_BUILD_DIR
