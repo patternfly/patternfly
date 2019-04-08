@@ -12,4 +12,9 @@
 | -- | -- | -- |
 | `.pf-c-data-list` | `<ul>` | Initiates a data list. **Required** |
 | `.pf-c-data-list__item` | `<li>` | Initiates a data list item. **Required** |
+| `.pf-c-data-list__item-row` | `<div>` | Initiates a data list item row. **Required** |
+| `.pf-c-data-list__item-content` | `<div>` | Initiates a container for data list content. **Required**|
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
+| `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. For example use `.pf-c-data-list__icon`. |
+| `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
+| `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
