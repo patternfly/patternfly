@@ -7,9 +7,7 @@ sudo: required
 addons:
   chrome: stable
 
-cache:
-  directories:
-    - node_modules
+cache: false
 
 deploy:
   provider: pages
