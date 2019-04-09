@@ -19,89 +19,87 @@
   {{/page-header}}
 
   {{#> page-sidebar}}
-    {{#> page-sidebar-body}}
-      {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
-        {{#> nav-list}}
-          {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-            {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
-              System Panel
-            {{/nav-link}}
-            {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link1"'}}
-              {{#> nav-list nav-list--type="simple"}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Overview
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-                    Resource Usage
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Hypervisors
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
-                    Instances
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Volumes
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Networks
-                  {{/nav-link}}
-                {{/nav-item}}
-              {{/nav-list}}
-            {{/nav-subnav}}
-          {{/nav-item}}
-          {{#> nav-item nav-item--expandable="true"}}
-            {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link2"'}}
-              Policy
-            {{/nav-link}}
-            {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link2"'}}
-              {{#> nav-list nav-list--type="simple"}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Subnav link 1
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Subnav link 2
-                  {{/nav-link}}
-                {{/nav-item}}
-              {{/nav-list}}
-            {{/nav-subnav}}
-          {{/nav-item}}
-          {{#> nav-item nav-item--expandable="true"}}
-            {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
-              Authentication
-            {{/nav-link}}
-            {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link3"'}}
-              {{#> nav-list nav-list--type="simple"}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Subnav link 1
-                  {{/nav-link}}
-                {{/nav-item}}
-                {{#> nav-item newcontent}}
-                  {{#> nav-link nav-link--href="#"}}
-                    Subnav link 2
-                  {{/nav-link}}
-                {{/nav-item}}
-              {{/nav-list}}
-            {{/nav-subnav}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-sidebar-body}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
+      {{#> nav-list}}
+        {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
+            System Panel
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link1"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Overview
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                  Resource Usage
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Hypervisors
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
+                  Instances
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Volumes
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Networks
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link2"'}}
+            Policy
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link2"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
+            Authentication
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link3"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-nav}}
