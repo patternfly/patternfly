@@ -126,6 +126,21 @@
     --pf-c-page__main-nav--PaddingLeft: var(--pf-c-page__main-nav--md--PaddingLeft);
   }
 
+  // Main section breadcrumb
+  --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-page__main-breadcrumb--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-page__main-breadcrumb--PaddingBottom: 0;
+  --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__main-breadcrumb--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-page__main-breadcrumb--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__main-nav--main-breadcrumb--PaddingTop: 0;
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-c-page__main-breadcrumb--md--PaddingRight);
+    --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-c-page__main-breadcrumb--md--PaddingLeft);
+  }
+
   // Main section modifiers
   --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
@@ -349,6 +364,15 @@
         right: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right);
       }
     }
+  }
+}
+
+.pf-c-page__main-breadcrumb {
+  padding: var(--pf-c-page__main-breadcrumb--PaddingTop) var(--pf-c-page__main-breadcrumb--PaddingRight) var(--pf-c-page__main-breadcrumb--PaddingBottom) var(--pf-c-page__main-breadcrumb--PaddingLeft);
+  background-color: var(--pf-c-page__main-breadcrumb--BackgroundColor);
+
+  .pf-c-page__main-nav + & {
+    --pf-c-page__main-breadcrumb--PaddingTop: var(--pf-c-page__main-nav--main-breadcrumb--PaddingTop);
   }
 }
 
