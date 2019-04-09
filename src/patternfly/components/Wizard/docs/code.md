@@ -39,6 +39,6 @@
 | `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
-| `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container to remove the padding. |
+| `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container body to remove the padding. |
 | `.pf-m-hover` | `.pf-c-wizard__nav-link` | Modifies a step link for the hovered state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-wizard__nav-link` | Modifies a step link for the focus state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class.|

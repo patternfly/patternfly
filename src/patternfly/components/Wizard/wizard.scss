@@ -441,7 +441,9 @@
   word-break: break-word;
 
   &.pf-m-no-padding {
-    padding: 0;
+    .pf-c-wizard__main-body {
+      padding: 0;
+    }
   }
 }
 
