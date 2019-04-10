@@ -1,0 +1,27 @@
+{{#> card-header}}
+    {{#> l-flex flex--modifier="pf-m-align-right"}}
+    {{#> l-flex flex--modifier="pf-m-grow"}}
+    {{#> brand brand--attribute='src="/assets/images/pf-logo-blue.png" alt="Logo"'}} 
+    {{/brand}}
+{{/l-flex}}
+    {{#> dropdown id="dropdown-example-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
+    {{#> check}} 
+    {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check-example"')}}{{/check-input}}
+    {{#> check-label check-label--attribute=(concat 'for="' card--id '-check"')}}{{/check-label}}
+    {{/check}}
+{{/l-flex}}
+{{/card-header}}
+{{#> card-body}}
+{{#> content content--modifier="pf-m-no-margin"}}
+    <h4>Avro</h4>
+{{/content}}
+{{#> content}}
+    <small>Provided by Red Hat</small>
+{{/content}}
+{{#> content content--modifier="pf-m-no-margin"}}
+    <small>
+    This component provides a dataformat for avro, which allows serialization and deserialization of messages using Apache Avro’s binary dataformat. Moreover, it provides support for Apache Avro’s rpc, by providing producers and consumers endpoint for using avro over netty or http.
+    </small>
+{{/content}}
+{{/card-body}}
