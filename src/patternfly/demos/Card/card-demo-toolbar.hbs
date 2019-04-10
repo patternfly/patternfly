@@ -21,9 +21,7 @@
     {{#> pagination-total-items}}
       10 Items
     {{/pagination-total-items}}
-
     {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
-
     {{#> pagination-nav}}
       {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
         {{> button-icon button-icon--type="angle-double-left"}}
@@ -31,12 +29,10 @@
       {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
         {{> button-icon button-icon--type="angle-left"}}
       {{/button}}
-
       {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 2"'}}
         {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="2" value="1"'}}
         <span aria-hidden="true">of 2</span>
       {{/pagination-nav-page-select}}
-
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
         {{> button-icon button-icon--type="angle-right"}}
       {{/button}}

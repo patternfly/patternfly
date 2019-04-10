@@ -1,27 +1,26 @@
 {{#> card-header}}
-    {{#> l-flex flex--modifier="pf-m-align-right"}}
+  {{#> l-flex flex--modifier="pf-m-align-right"}}
     {{#> l-flex flex--modifier="pf-m-grow"}}
-    {{#> brand brand--attribute='src="/assets/images/pf-logo-blue.png" alt="Logo"'}} 
-    {{/brand}}
-{{/l-flex}}
-    {{#> dropdown id="dropdown-example-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{#> brand brand--attribute='src="/assets/images/pf-logo-blue.png" alt="Logo"'}} 
+      {{/brand}}
+    {{/l-flex}}
+    {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
     {{/dropdown}}
     {{#> check}} 
-    {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check-example"')}}{{/check-input}}
-    {{#> check-label check-label--attribute=(concat 'for="' card--id '-check"')}}{{/check-label}}
+      {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id '-check-label"')}}{{/check-input}}
     {{/check}}
-{{/l-flex}}
+  {{/l-flex}}
 {{/card-header}}
 {{#> card-body}}
-{{#> content content--modifier="pf-m-no-margin"}}
-    <h4>Patternfly</h4>
-{{/content}}
-{{#> content}}
+  {{#> content content--modifier="pf-m-no-margin"}}
+    <h4 id="{{concat card--id "-check-label"}}">Patternfly</h4>
+  {{/content}}
+  {{#> content}}
     <small>Provided by Red Hat</small>
-{{/content}}
-{{#> content content--modifier="pf-m-no-margin"}}
+  {{/content}}
+  {{#> content content--modifier="pf-m-no-margin"}}
     <small>
-    PatternFly is a community project that promotes design commonality and improves user experience.
+      PatternFly is a community project that promotes design commonality and improves user experience.
     </small>
-{{/content}}
+  {{/content}}
 {{/card-body}}
