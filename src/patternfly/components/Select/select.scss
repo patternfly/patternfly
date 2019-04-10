@@ -80,6 +80,7 @@
   // Menu Item
   --pf-c-select__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-select__menu-item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-select__menu-item--m-selected--PaddingRight: var(--pf-global--spacer--2xl);
   --pf-c-select__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-select__menu-item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-select__menu-item--FontSize: var(--pf-global--FontSize--md);
@@ -89,6 +90,11 @@
   --pf-c-select__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
+
+  // Menu item icon
+  --pf-c-select__menu-item-icon--Color: var(--pf-global--active-color--100);
+  --pf-c-select__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-select__menu-item-icon--Right: var(--pf-global--spacer--md);
 
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
@@ -325,6 +331,7 @@
 }
 
 .pf-c-select__menu-item {
+  position: relative;
   width: 100%;
   padding: var(--pf-c-select__menu-item--PaddingTop) var(--pf-c-select__menu-item--PaddingRight) var(--pf-c-select__menu-item--PaddingBottom) var(--pf-c-select__menu-item--PaddingLeft);
   font-size: var(--pf-c-select__menu-item--FontSize);
@@ -356,6 +363,20 @@
     pointer-events: none;
     background-color: var(--pf-c-select__menu-item--disabled--BackgroundColor);
   }
+
+  &.pf-m-selected {
+    --pf-c-select__menu-item--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
+  }
+}
+
+.pf-c-select__menu-item-icon {
+  position: absolute;
+  top: 50%;
+  right: var(--pf-c-select__menu-item-icon--Right);
+  margin-left: auto;
+  font-size: var(--pf-c-select__menu-item-icon--FontSize);
+  color: var(--pf-c-select__menu-item-icon--Color);
+  transform: translateY(-50%);
 }
 
 .pf-c-select__menu-item--match {
