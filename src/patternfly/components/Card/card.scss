@@ -2,7 +2,7 @@
   // Component variables
   --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-card--BoxShadow: var(--pf-global--BoxShadow--sm);
-  --pf-c-card--m-hover--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-card--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-card--first-child--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingBottom: var(--pf-global--spacer--lg);
@@ -14,9 +14,9 @@
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
 
-  &.pf-m-hover {
+  &.pf-m-hoverable {
     &:hover {
-      box-shadow: var(--pf-c-card--m-hover--hover--BoxShadow);
+      box-shadow: var(--pf-c-card--m-hoverable--hover--BoxShadow);
     }
   }
 

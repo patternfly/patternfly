@@ -17,6 +17,8 @@
       Create a project
     {{/button}}
   {{/toolbar-action-group}}
+  {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
+  {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
     {{#> pagination-total-items}}
       10 Items
