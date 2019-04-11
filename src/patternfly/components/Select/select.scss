@@ -95,6 +95,8 @@
   --pf-c-select__menu-item-icon--Color: var(--pf-global--active-color--100);
   --pf-c-select__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-select__menu-item-icon--Right: var(--pf-global--spacer--md);
+  --pf-c-select__menu-item-icon--Top: 50%;
+  --pf-c-select__menu-item-icon--Transform: translateY(-50%);
 
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
@@ -371,12 +373,11 @@
 
 .pf-c-select__menu-item-icon {
   position: absolute;
-  top: 50%;
+  top: var(--pf-c-select__menu-item-icon--Top);
   right: var(--pf-c-select__menu-item-icon--Right);
-  margin-left: auto;
   font-size: var(--pf-c-select__menu-item-icon--FontSize);
   color: var(--pf-c-select__menu-item-icon--Color);
-  transform: translateY(-50%);
+  transform: var(--pf-c-select__menu-item-icon--Transform);
 }
 
 .pf-c-select__menu-item--match {
