@@ -1,11 +1,13 @@
 .pf-c-wizard {
+  --pf-c-wizard--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-wizard--Height: 100%;
   --pf-c-wizard--Width: 100vw;
-  --pf-c-wizard--lg--Height: #{pf-size-prem(762px)}; // Shares height with about modal
-  --pf-c-wizard--lg--MaxHeight: calc(100% - var(--pf-global--spacer--xl));
   --pf-c-wizard--lg--Width: calc(100% - (var(--pf-global--spacer--3xl) * 2));
   --pf-c-wizard--lg--MaxWidth: #{pf-size-prem(1232px)}; // Shares with with about modal
-  --pf-c-wizard--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-wizard--lg--Height: #{pf-size-prem(762px)}; // Shares height with about modal
+  --pf-c-wizard--lg--MaxHeight: calc(100% - var(--pf-global--spacer--xl));
+  --pf-c-wizard--m-full-width--lg--MaxWidth: auto;
+  --pf-c-wizard--m-full-height--lg--Height: 100%;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard--Width: var(--pf-c-wizard--lg--Width);
@@ -174,6 +176,14 @@
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     max-width: var(--pf-c-wizard--lg--MaxWidth);
     max-height: var(--pf-c-wizard--lg--MaxHeight);
+
+    &.pf-m-full-width {
+      --pf-c-wizard--lg--MaxWidth: var(--pf-c-wizard--m-full-width--lg--MaxWidth);
+    }
+
+    &.pf-m-full-height {
+      --pf-c-wizard--lg--Height: var(--pf-c-wizard--m-full-height--lg--Height);
+    }
   }
 
   > *:not(.pf-c-wizard__outer-wrap) {
