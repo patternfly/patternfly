@@ -8,3 +8,9 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | -- | -- | -- |
 | `aria-label="Local"` | `nav.pf-c-tabs` | Gives the `<nav>` element an accessible name. **Required when `.pf-c-tabs` is used with `<nav>`**
 | `aria-label="Local secondary"` | `nav.pf-c-tabs.pf-m-tabs-secondary` | Gives the `<nav>` element an accessible name. **Required when `.pf-c-tabs.pf-m-tabs-secondary` is used with `<nav>`**
+
+### Usage
+
+| Attribute | Applied To | Outcome |
+| -- | -- | -- |
+| `.pf-c-tabs__button` | `<a>` | Creates a tab link. **Required** |
