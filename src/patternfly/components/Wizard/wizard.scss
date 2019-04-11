@@ -2,10 +2,10 @@
   --pf-c-wizard--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-wizard--Height: 100%;
   --pf-c-wizard--Width: 100vw;
-  --pf-c-wizard--lg--Width: calc(100% - (var(--pf-global--spacer--3xl) * 2));
+  --pf-c-wizard--lg--Width: calc(100% - (var(--pf-global--spacer--2xl) * 2));
   --pf-c-wizard--lg--MaxWidth: #{pf-size-prem(1232px)}; // Shares with with about modal
   --pf-c-wizard--lg--Height: #{pf-size-prem(762px)}; // Shares height with about modal
-  --pf-c-wizard--lg--MaxHeight: calc(100% - var(--pf-global--spacer--xl));
+  --pf-c-wizard--lg--MaxHeight: calc(100% - (var(--pf-global--spacer--2xl) * 2));
   --pf-c-wizard--m-full-width--lg--MaxWidth: auto;
   --pf-c-wizard--m-full-height--lg--Height: 100%;
 
