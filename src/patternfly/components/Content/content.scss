@@ -100,12 +100,6 @@
   line-height: var(--pf-c-content--LineHeight);
   color: var(--pf-c-content--Color);
 
-  &.pf-m-no-margin {
-    > * {
-      margin: 0;
-    }
-  }
-
   a {
     color: var(--pf-c-content--a--Color);
     text-decoration: var(--pf-c-content--a--TextDecoration);

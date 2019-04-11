@@ -1,26 +1,24 @@
 {{#> card-header}}
-  {{#> l-flex flex--modifier="pf-m-align-right"}}
+  {{#> l-flex flex--modifier="pf-m-align-center"}}
     {{#> l-flex flex--modifier="pf-m-grow"}}
-      {{#> brand brand--attribute='src="/assets/images/pf-logo-small.svg" alt="Logo"'}} 
+      {{#> brand brand--attribute='src="/assets/images/camel-avro_200x150.png" width="60px" alt="Logo"'}} 
       {{/brand}}
     {{/l-flex}}
-    {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-    {{/dropdown}}
-    {{#> check}} 
-      {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id '-check-label"')}}{{/check-input}}
-    {{/check}}
+    {{#> flex-item flex-item--modifier="pf-u-mr-0"}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+    {{/flex-item}}
+     <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
   {{/l-flex}}
 {{/card-header}}
 {{#> card-body}}
-  {{#> content content--modifier="pf-m-no-margin"}}
-    <h4 id="{{concat card--id "-check-label"}}">Avro</h4>
-  {{/content}}
-  {{#> content}}
-    <small>Provided by Red Hat</small>
-  {{/content}}
-  {{#> content content--modifier="pf-m-no-margin"}}
-    <small>
-      This component provides a dataformat for avro, which allows serialization and deserialization of messages using Apache Avro’s binary dataformat. Moreover, it provides support for Apache Avro’s rpc, by providing producers and consumers endpoint for using avro over netty or http.
-    </small>
-  {{/content}}
+  {{#> l-flex flex--modifier="pf-m-column"}}
+    <p style="font-size:18px" id="{{concat card--id "-check-label"}}">Avro</p>
+    <p style="font-size:14px;color:#8B8D8F;">Provided by Red Hat</p>
+    {{#> flex-item flex-item--modifier="pf-u-mt-md"}}
+      <p style="font-size:14px">
+        This component provides a dataformat for avro, which allows serialization and deserialization of messages using Apache Avro’s binary dataformat. Moreover, it provides support for Apache Avro’s rpc, by providing producers and consumers endpoint for using avro over netty or http.
+      </p>
+    {{/flex-item}}
+  {{/l-flex}}
 {{/card-body}}
