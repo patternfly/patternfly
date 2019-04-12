@@ -334,6 +334,11 @@
       background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
     }
   }
+
+  &.pf-m-inline {
+    display: inline;
+    padding: 0;
+  }
 }
 
 // Add spacing to an icon in the button
