@@ -2,7 +2,6 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import DropdownExpandedRaw from '!raw!./dropdown-expanded-example.hbs';
-import DropdownBasicExpandedRaw from '!raw!./dropdown-basic-expanded-example.hbs';
 import DropdownCollapsedRaw from '!raw!./dropdown-collapsed-example.hbs';
 import DropdownDisabledRaw from '!raw!./dropdown-disabled-example.hbs';
 import DropdownKebabRaw from '!raw!./dropdown-kebab-example.hbs';
@@ -11,8 +10,8 @@ import DropdownAlignRightRaw from '!raw!./dropdown-align-right-example.hbs';
 import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownSplitButtonRaw from '!raw!./dropdown-split-button-example.hbs';
 import DropdownGroupsRaw from '!raw!./dropdown-groups-example.hbs';
+import DropdownPanelRaw from '!raw!./dropdown-panel-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
-import DropdownBasicExpanded from './dropdown-basic-expanded-example.hbs';
 import DropdownCollapsed from './dropdown-collapsed-example.hbs';
 import DropdownDisabled from './dropdown-disabled-example.hbs';
 import DropdownKebab from './dropdown-kebab-example.hbs';
@@ -21,14 +20,15 @@ import DropdownAlignRight from './dropdown-align-right-example.hbs';
 import DropdownTop from './dropdown-top-example.hbs';
 import DropdownSplitButton from './dropdown-split-button-example.hbs';
 import DropdownGroups from './dropdown-groups-example.hbs';
-import DropdownBasicDoc from '../docs/dropdown-basic.md';
+import DropdownPanel from './dropdown-panel-example.hbs';
+import DropdownPanelDoc from '../docs/dropdown-panel.md';
 import docs from '../docs/code.md';
 
 export const Docs = docs;
 
 export default () => {
   const dropdownExpanded = DropdownExpanded();
-  const dropdownBasicExpanded = DropdownBasicExpanded();
+  const dropdownPanel = DropdownPanel();
   const dropdownCollapsed = DropdownCollapsed();
   const dropdownDisabled = DropdownDisabled();
   const dropdownKebab = DropdownKebab();
@@ -46,10 +46,7 @@ export default () => {
 
   return (
     <Documentation style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example className="is-expanded-dropdown" heading="Basic Dropdown (expanded)" handlebars={DropdownBasicExpandedRaw} docs={DropdownBasicDoc}>
-        {dropdownBasicExpanded}
-      </Example>
-      <Example className="is-expanded-dropdown" heading="Dropdown with links and actions (expanded)" handlebars={DropdownExpandedRaw}>
+      <Example className="is-expanded-dropdown" heading="Dropdown (expanded)" handlebars={DropdownExpandedRaw}>
         {dropdownExpanded}
       </Example>
       <Example heading="Dropdown (collapsed)" handlebars={DropdownCollapsedRaw}>
@@ -78,6 +75,9 @@ export default () => {
       </Example>
       <Example minHeight="25em" heading="Dropdown with Groups" handlebars={DropdownGroupsRaw}>
         {dropdownGroups}
+      </Example>
+      <Example className="is-expanded-dropdown" heading="Dropdown Panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
+        {dropdownPanel}
       </Example>
     </Documentation>
   );
