@@ -12,6 +12,7 @@ Always add a modifier class: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, o
 | `aria-label="Information alert"` | `.pf-c-alert` |  Indicates the information alert. |
 | `aria-label="Close success alert: Success alert title"` | `.pf-c-button.pf-m-plain` | Indicates the close button. Please provide descriptive text to ensure assistive technologies clearly state which alert is being closed.|
 | `aria-hidden="true"` | `.pf-c-alert__icon <i>` |  Hides icon for assistive technologies. ** Required **|
+| `aria-atomic="false" aria-live="polite" aria-relevant="additions text"` | `.pf-c-alert__content` | Communicates contents of a dynamic alert to users of assistive technology when alerts are dynamically added to `.pf-c-alert-group`.  **Required for alerts that display after page load**
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -23,6 +24,7 @@ Always add a modifier class: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, o
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class. ** Required**|
 | `.pf-c-alert__icon` | `<div>` |  	Defines the alert icon. ** Required **|
+| `.pf-c-alert__content` | `<div>` |  Defines the alert content. ** Required **|
 | `.pf-c-alert__title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Defines the alert title. ** Required **|
 | `.pf-c-alert__description` | `<div>` |  Defines the alert description area. |
 | `.pf-c-alert__action` | `<div>` |  Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
@@ -31,3 +33,4 @@ Always add a modifier class: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, o
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |
 | `.pf-m-info` | `.pf-c-alert` |  Applies info styling. |
 | `.pf-m-inline` | `.pf-c-alert` |  Applies inline styling. |
+| `.pf-m-live` | `.pf-c-alert` |  Indicates that the alert is a live region, and the contents in `.pf-c-alert__content` will be announced by screen readers after the alert loads. **Required for alerts that display after page load** |

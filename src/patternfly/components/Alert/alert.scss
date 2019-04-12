@@ -161,6 +161,25 @@
       font-size: var(--pf-c-alert__m-inline__icon--FontSize);
     }
   }
+
+  &.pf-m-live {
+    .pf-c-alert__content {
+      animation: pf-load-live 1s 1;
+    }
+  }
+
+  @keyframes pf-load-live {
+    0%,
+    95% {
+      display: none;
+      visibility: hidden;
+    }
+
+    100% {
+      display: block;
+      visibility: visible;
+    }
+  }
 }
 
 .pf-c-alert__icon {

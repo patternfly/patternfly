@@ -1,13 +1,15 @@
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
+  {{#> alert-content}}
     {{#> alert-title}}
       {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
     {{/alert-title}}
     {{#> alert-description}}
-			Success alert description. <a href="#">This is a link.</a>
-		{{/alert-description}}
+      Success alert description. <a href="#">This is a link.</a>
+    {{/alert-description}}
+  {{/alert-content}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
       {{> button-icon button-icon--type="times"}}
@@ -18,10 +20,12 @@
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
+  {{#> alert-content}}
     {{#> alert-title}}
       {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
     {{/alert-title}}
+  {{/alert-content}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
       {{> button-icon button-icon--type="times"}}
@@ -32,10 +36,12 @@
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
+  {{#> alert-content}}
     {{#> alert-title}}
       {{#> screen-reader}}Success alert:{{/screen-reader}}
         Success alert title
     {{/alert-title}}
+  {{/alert-content}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-link"}}
       Action button
@@ -46,8 +52,10 @@
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
+  {{#> alert-content}}
     {{#> alert-title}}
       {{#> screen-reader}}Success alert:{{/screen-reader}}
         Success alert title
     {{/alert-title}}
+  {{/alert-content}}
 {{/alert}}

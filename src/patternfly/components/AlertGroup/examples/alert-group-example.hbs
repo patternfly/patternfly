@@ -1,12 +1,14 @@
 {{#> alert-group}}
-  {{#> alert-item}}  
+  {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
       {{#> alert-icon alert-icon--type="check-circle"}}
       {{/alert-icon}}
+      {{#> alert-content}}
         {{#> alert-title}}
           {{#> screen-reader}}Success alert:{{/screen-reader}}
           Success alert title
         {{/alert-title}}
+      {{/alert-content}}
     {{/alert}}
   {{/alert-item}}
 
@@ -14,10 +16,12 @@
     {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
       {{#> alert-icon alert-icon--type="exclamation-circle"}}
       {{/alert-icon}}
+      {{#> alert-content}}
         {{#> alert-title}}
           {{#> screen-reader}}Danger alert:{{/screen-reader}}
           Danger alert title
         {{/alert-title}}
+      {{/alert-content}}
       {{#> alert-action}}
         {{#> button button--modifier="pf-m-link"}}
           Action button
@@ -30,6 +34,7 @@
     {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
       {{#> alert-icon alert-icon--type="info-circle"}}
       {{/alert-icon}}
+      {{#> alert-content}}
         {{#> alert-title}}
           {{#> screen-reader}}Info alert:{{/screen-reader}}
           Info alert title
@@ -37,6 +42,7 @@
         {{#> alert-description}}
           Info alert description. <a href="#">This is a link.</a>
         {{/alert-description}}
+      {{/alert-content}}
     {{/alert}}
   {{/alert-item}}
 {{/alert-group}}
