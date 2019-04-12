@@ -37,6 +37,8 @@
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
+| `.pf-m-full-width` | `.pf-c-wizard` | Modifies the wizard to expand the full width of the viewport. |
+| `.pf-m-full-height` | `.pf-c-wizard` | Modifies the wizard to expand the full height of the viewport. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
 | `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container body to remove the padding. |
