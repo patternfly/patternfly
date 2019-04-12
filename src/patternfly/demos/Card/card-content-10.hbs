@@ -1,24 +1,15 @@
-{{#> card-header}}
-  {{#> l-flex flex--modifier="pf-m-align-center"}}
-    {{#> l-flex flex--modifier="pf-m-grow"}}
-      {{#> brand brand--attribute='src="/assets/images/camel-swagger-java_200x150.png" width="60px" alt="Logo"'}} 
-      {{/brand}}
-    {{/l-flex}}
-    {{#> flex-item flex-item--modifier="pf-u-mr-0"}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-    {{/flex-item}}
-     <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
-  {{/l-flex}}
+{{#> card-header card-header--modifier="pf-l-flex pf-m-space-items-none pf-m-align-center"}}
+  <img class="pf-m-align-left" src="/assets/images/camel-swagger-java_200x150.png" width="60px" alt="Logo">
+  {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+  {{/dropdown}}
+  <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
 {{/card-header}}
 {{#> card-body}}
   {{#> l-flex flex--modifier="pf-m-column"}}
-    <p style="font-size:18px" id="{{concat card--id "-check-label"}}">SWAGGER</p>
-    <p style="font-size:14px;color:#8B8D8F;">Provided by Red Hat</p>
-    {{#> flex-item flex-item--modifier="pf-u-mt-md"}}
-      <p style="font-size:14px">
-        Expose REST services and their APIs using Swagger specification   
-      </p>
-    {{/flex-item}}
+    {{#> title title--modifier="pf-m-lg" title--attribute=(concat 'id="' card--id '-check-label"')}}SWAGGER{{/title}}
+    {{#> content}}
+      <small>Provided by Red Hat</small>
+      <p style="font-size:14px">Expose REST services and their APIs using Swagger specification.</p>
+    {{/content}}
   {{/l-flex}}
 {{/card-body}}

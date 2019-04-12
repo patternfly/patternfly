@@ -9,7 +9,7 @@
   {{#> toolbar-filter}}
     {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
       <i class="fas fa-filter" aria-hidden="true"></i>
-      Filter
+      Creator
     {{/select}}
   {{/toolbar-filter}}
   {{#> toolbar-action-group}}
@@ -21,9 +21,29 @@
   {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
     {{#> pagination-total-items}}
-      10 Items
-    {{/pagination-total-items}}
-    {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
+      20 Items
+    {{/pagination-total-items}}    
+    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
+      {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+        <span class="pf-c-options-menu__toggle-text">
+          <b>1 - 10</b> of <b>20</b>
+        </span>
+        {{> options-menu-toggle-button aria-label="Select"}}
+      {{/options-menu-toggle}}
+      {{#> options-menu-menu}}
+        {{#> options-menu-menu-item}}
+          5 <span class="pf-c-pagination__menu-text">per page</span>
+        {{/options-menu-menu-item}}
+        {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
+          10 <span class="pf-c-pagination__menu-text">per page</span>
+        {{/options-menu-menu-item}}
+        {{#> options-menu-menu-item}}
+          20 <span class="pf-c-pagination__menu-text">per page</span>
+        {{/options-menu-menu-item}}
+      {{/options-menu-menu}}
+    {{/options-menu}}
+
+
     {{#> pagination-nav}}
       {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
         {{> button-icon button-icon--type="angle-double-left"}}
