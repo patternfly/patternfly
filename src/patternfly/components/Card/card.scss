@@ -29,8 +29,13 @@
   }
 }
 
-.pf-c-card__body,
-.pf-c-card__footer {
+.pf-c-card__header {
+  &:not(:last-child) {
+    padding-bottom: var(--pf-c-card__header--not-last-child--PaddingBottom);
+  }
+}
+
+.pf-c-card__body {
   font-size: var(--pf-c-card__body--FontSize);
 }
 
@@ -38,8 +43,6 @@
   flex: 1 1 auto;
 }
 
-.pf-c-card__header {
-  &:not(:last-child) {
-    padding-bottom: var(--pf-c-card__header--not-last-child--PaddingBottom);
-  }
+.pf-c-card__footer {
+  font-size: var(--pf-c-card__footer--FontSize);
 }
