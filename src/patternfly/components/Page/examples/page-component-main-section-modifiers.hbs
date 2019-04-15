@@ -1,0 +1,29 @@
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        toggle
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link}}
+        Logo
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-tools}}
+      header-tools
+    {{/page-header-tools}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    pf-c-nav
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section}}
+      This `.pf-c-page__main-section` has default padding.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
+      This `.pf-c-page__main-section` uses `.pf-m-no-padding` to remove all padding.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      This `.pf-c-page__main-section` uses `.pf-m-no-padding-mobile` to remove padding on mobile only.
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}

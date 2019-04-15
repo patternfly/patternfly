@@ -38,7 +38,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
-| `.pf-m-no-padding` | `.pf-c-page__main-section` | Modifies a main page section to have no padding.
+| `.pf-m-no-padding` | `.pf-c-page__main-section` | Modifies a main page section to have no padding. |
 | `.pf-m-no-padding-mobile` | `.pf-c-page__main-section` | Modifies a main page section to have no padding on mobile. |
 | `.pf-m-fill` | `.pf-c-page__main-section` | Modifies a main page section to grow to fill the available vertical space. |
 | `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
