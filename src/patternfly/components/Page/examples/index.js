@@ -36,7 +36,10 @@ export default () => {
       >
         {pageComponentFillExample}
       </Example>
-      <Example heading="Page Component Main Section Modifiers" handlebars={PageComponentMainSectionModifiersRaw}>
+      <Example
+        heading="Page Component Main Section Padding Modifiers"
+        handlebars={PageComponentMainSectionModifiersRaw}
+      >
         {pageComponentMainSectionModifiersExample}
       </Example>
     </Documentation>
