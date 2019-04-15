@@ -408,6 +408,10 @@
     --pf-c-page__main-section--BackgroundColor: var(--pf-c-page__main-section--m-dark-200--BackgroundColor);
   }
 
+  &.pf-m-no-padding {
+    padding: 0;
+  }
+
   &.pf-m-no-padding-mobile {
     @media screen and (max-width: $pf-global--breakpoint--md) {
       --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop);
