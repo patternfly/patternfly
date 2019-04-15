@@ -46,6 +46,6 @@
 * **Split, Stack**: The class used to define the element that grows/fills in the stack and split layouts changed. The use of .pf-m-main changed to .pf-m-fill. ([#1687](https://github.com/patternfly/patternfly-next/issues/1687))
 * **Flex**: The Flex layout responsive breakpoints and modifiers now use the global breakpoints and modifier sizes.The old device breakpoints  ($pf-global--breakpoint--mobile, $pf-global--breakpoint--tablet, $pf-global--breakpoint--desktop) were removed from PatternFly and should no longer be used. The device modifiers (-mobile-only, -tablet-plus, -desktop-plus) were removed, and now use names based on the global breakpoints (-on-xs, -on-sm, -on-md, -on-lg, -on-xl, -on-2xl).([#1657](https://github.com/patternfly/patternfly-next/issues/1657))
 
-#### Miscelanneous
+#### Miscellaneous
 * **Many components and Global vars**: Global colors and multiple components refactored to use updated color system. The Background Image component was removed from the Wizard and Page components, plus many other updates. Most notably, the use of Background Image will need to be removed from the Wizard and Page components, and many of the CSS and SCSS global color variables names and values changed. A high level overview of the changes are in the PR description with a detailed list of exactly what changed in the PR file diff. ([#1600](https://github.com/patternfly/patternfly-next/issues/1600))
 
