@@ -13,4 +13,4 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
-| `.pf-c-tabs__button` | `<a>`, `<button>` | Creates a tab link/button. **Required** |
+| `.pf-c-tabs__button` | `<a>`, `<button>` | Creates a tab link/button. **Note: `<a>` should be used when there is a URL associated with the tab, and should only be used when `.pf-c-tabs` is used with `<nav>`.** **Required** |
