@@ -19,7 +19,7 @@
 * **page:** add fill/no-fill modifiers for main-section elements ([#1689](https://github.com/patternfly/patternfly-next/issues/1689)) ([e300ccf](https://github.com/patternfly/patternfly-next/commit/e300ccf))
 * **tabs:** add overflow styles for secondary tabs ([#1606](https://github.com/patternfly/patternfly-next/issues/1606)) ([5e34dfe](https://github.com/patternfly/patternfly-next/commit/5e34dfe))
 * **wizard:** add support for finished state ([#1672](https://github.com/patternfly/patternfly-next/issues/1672)) ([14cc898](https://github.com/patternfly/patternfly-next/commit/14cc898))
-
+* **card:** allow for multiple body, add grow modifier ([#1484](https://github.com/patternfly/patternfly-next/pull/1484)) ([aa04c8a](https://github.com/patternfly/patternfly-next/commit/aa04c8ab9d0015b62479cafa38b8a626e9f475d0))
 
 ### BREAKING CHANGES
 
