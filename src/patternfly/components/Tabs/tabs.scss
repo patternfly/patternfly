@@ -12,6 +12,7 @@
 
   // Tab buttons
   --pf-c-tabs__button--Background: transparent;
+  --pf-c-tabs__button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
   --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingBottom: var(--pf-global--spacer--sm);
@@ -177,6 +178,7 @@
   user-select: none;
   background: var(--pf-c-tabs__button--Background);
   border: 0;
+  outline-offset: var(--pf-c-tabs__button--OutlineOffset);
 
   // Tab button borders
   &::before {
