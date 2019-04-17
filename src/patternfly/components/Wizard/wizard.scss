@@ -8,7 +8,6 @@
   --pf-c-wizard--lg--MaxHeight: calc(100% - (var(--pf-global--spacer--2xl) * 2));
   --pf-c-wizard--m-full-width--lg--MaxWidth: auto;
   --pf-c-wizard--m-full-height--lg--Height: 100%;
-  --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard--Width: var(--pf-c-wizard--lg--Width);
@@ -81,6 +80,8 @@
   --pf-c-wizard__nav--lg--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-wizard__nav--Width: 100%;
   --pf-c-wizard__nav--lg--Width: #{pf-size-prem(300px)};
+  --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
+
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
