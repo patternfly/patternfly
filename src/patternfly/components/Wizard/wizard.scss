@@ -8,6 +8,7 @@
   --pf-c-wizard--lg--MaxHeight: calc(100% - (var(--pf-global--spacer--2xl) * 2));
   --pf-c-wizard--m-full-width--lg--MaxWidth: auto;
   --pf-c-wizard--m-full-height--lg--Height: 100%;
+  --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard--Width: var(--pf-c-wizard--lg--Width);
@@ -183,6 +184,10 @@
 
     &.pf-m-full-height {
       --pf-c-wizard--lg--Height: var(--pf-c-wizard--m-full-height--lg--Height);
+    }
+
+    &.pf-m-compact-nav {
+      --pf-c-wizard__nav--lg--Width: var(--pf-c-wizard--m-compact-nav__nav--lg--Width);
     }
   }
 
