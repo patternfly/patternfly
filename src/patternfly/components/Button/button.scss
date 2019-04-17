@@ -79,6 +79,9 @@
   --pf-c-button--m-link--focus--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--disabled--BackgroundColor: transparent;
+  --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+  --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
+
 
   // Plain btn
   --pf-c-button--m-plain--Color: var(--pf-global--Color--200);
@@ -274,24 +277,37 @@
   &.pf-m-link {
     color: var(--pf-c-button--m-link--Color);
 
-    &:hover,
-    &.pf-m-hover {
-      --pf-c-button--m-link--Color: var(--pf-c-button--m-link--hover--Color);
-    }
+    &:not(.pf-m-inline) {
+      &:hover,
+      &.pf-m-hover {
+        --pf-c-button--m-link--Color: var(--pf-c-button--m-link--hover--Color);
+      }
 
-    &:active,
-    &.pf-m-active {
-      --pf-c-button--m-link--Color: var(--pf-c-button--m-link--active--Color);
-    }
+      &:active,
+      &.pf-m-active {
+        --pf-c-button--m-link--Color: var(--pf-c-button--m-link--active--Color);
+      }
 
-    &:focus,
-    &.pf-m-focus {
-      --pf-c-button--m-link--Color: var(--pf-c-button--m-link--focus--Color);
+      &:focus,
+      &.pf-m-focus {
+        --pf-c-button--m-link--Color: var(--pf-c-button--m-link--focus--Color);
+      }
     }
 
     &:disabled,
     &.pf-m-disabled {
       background-color: var(--pf-c-button--m-link--disabled--BackgroundColor);
+    }
+
+    &.pf-m-inline {
+      display: inline;
+      padding: 0;
+
+      &:hover {
+        --pf-c-button--m-link--Color: var(--pf-c-button--m-link--m-inline--hover--Color);
+
+        text-decoration: var(--pf-c-button--m-link--m-inline--hover--TextDecoration);
+      }
     }
   }
 
