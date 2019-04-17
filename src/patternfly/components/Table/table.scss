@@ -276,6 +276,16 @@
 
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
+
+    > * {
+      transform: rotate(270deg);
+    }
+
+    &.pf-m-expanded {
+      > * {
+        transform: rotate(0deg);
+      }
+    }
   }
 
   svg {
