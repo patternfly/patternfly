@@ -8,6 +8,7 @@ import CardContentOnlyExampleRaw from '!raw!./card-content-only-example.hbs';
 import CardMultipleBodyExampleRaw from '!raw!./card-multiple-body-example.hbs';
 import CardFillExampleRaw from '!raw!./card-no-fill-example.hbs';
 import CardHoverExampleRaw from '!raw!./card-hover-example.hbs';
+import CardImgActionRaw from '!raw!./card-img-action.hbs';
 import docs from '../docs/code.md';
 import CardBasicExample from './card-basic-example.hbs';
 import CardNoFooterExample from './card-no-footer-example.hbs';
@@ -16,6 +17,7 @@ import CardContentOnlyExample from './card-content-only-example.hbs';
 import CardMultipleBodyExample from './card-multiple-body-example.hbs';
 import CardFillExample from './card-no-fill-example.hbs';
 import CardHoverExample from './card-hover-example.hbs';
+import CardImgActionExample from './card-img-action.hbs';
 
 export const Docs = docs;
 
@@ -27,6 +29,7 @@ export default () => {
   const cardMultipleBodyExample = CardMultipleBodyExample();
   const cardFillExample = CardFillExample();
   const cardHoverExample = CardHoverExample();
+  const cardImgActionExample = CardImgActionExample();
   const headingText = 'Card';
   const variablesRoot = 'pf-c-card';
 
@@ -34,6 +37,9 @@ export default () => {
     <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
+      </Example>
+      <Example heading="Card with Logo and Action" handlebars={CardImgActionRaw}>
+        {cardImgActionExample}
       </Example>
       <Example heading="Card with no footer" handlebars={CardNoFooterExampleRaw}>
         {cardNoFooterExample}
