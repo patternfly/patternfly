@@ -80,6 +80,8 @@
   --pf-c-wizard__nav--lg--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-wizard__nav--Width: 100%;
   --pf-c-wizard__nav--lg--Width: #{pf-size-prem(300px)};
+  --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
+
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
@@ -183,6 +185,10 @@
 
     &.pf-m-full-height {
       --pf-c-wizard--lg--Height: var(--pf-c-wizard--m-full-height--lg--Height);
+    }
+
+    &.pf-m-compact-nav {
+      --pf-c-wizard__nav--lg--Width: var(--pf-c-wizard--m-compact-nav__nav--lg--Width);
     }
   }
 
