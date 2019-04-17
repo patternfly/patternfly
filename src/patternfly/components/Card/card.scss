@@ -29,6 +29,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  > :not(.pf-c-card__actions) {
+    flex: 1 1 auto;
+  }
 }
 
 .pf-c-card__actions {
