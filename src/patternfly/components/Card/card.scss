@@ -10,6 +10,7 @@
   --pf-c-card__header--not-last-child--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-card__footer--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
 
   display: flex;
   flex-direction: column;
@@ -36,11 +37,10 @@
 
 .pf-c-card__actions {
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   align-self: flex-start;
   order: 99;
-  padding-left: 16px;
+  padding-left: var(--pf-c-card__actions--PaddingLeft);
   margin-left: auto;
 
   & + .pf-c-card__header,
