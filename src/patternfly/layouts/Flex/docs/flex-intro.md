@@ -3,9 +3,9 @@ The Flex layout is designed to achieve simple, flexbox layouts by eliminating th
 The system relies on a default spacer value, that is applied to flex items. These spacers respond contextually.
 
 - Default spacing for flex items (not last child): `margin-right: 16px`.
-- Default spacing for nested `.pf-l-flex` containers (not last child): `margin-right: 24px`.
+- Default spacing for nested `.pf-l-flex` containers (not last child): `margin-right: 16px`.
 - Default spacing for `.pf-m-column` direct descendants (not first child): `margin-bottom: 16px`.
-- Default spacing for `.pf-m-column` nested `.pf-l-flex` containers (not last child): `margin-bottom: 24px`.
+- Default spacing for `.pf-m-column` nested `.pf-l-flex` containers (not last child): `margin-bottom: 16px`.
 
 
 `.pf-l-flex` is infinitely nestable and can be used to group items within.
