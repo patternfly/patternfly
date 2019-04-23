@@ -10,6 +10,7 @@ import tableCompactNoBorderRowsExampleRaw from '!raw!./table-compact-no-border-r
 import tableCompactExpandableExampleRaw from '!raw!./table-compact-expandable-example.hbs';
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
 import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
+import tableHiddenVisibleExampleRaw from '!raw!./table-hidden-visible-example.hbs';
 
 import TableSimpleExample from './table-simple-example.hbs';
 import tableSimpleDoc from '../docs/table-simple.md';
@@ -37,6 +38,9 @@ import tableWidthDoc from '../docs/table-width.md';
 import TableCompoundExpansionExample from './table-compound-expansion-example.hbs';
 import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
 
+import TableHiddenVisibleExample from './table-hidden-visible-example.hbs';
+import tableHiddenVisibleDoc from '../docs/table-hidden-visible.md';
+
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -51,6 +55,7 @@ export default () => {
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
+  const tableHiddenVisibleExample = TableHiddenVisibleExample();
   const headingText = 'Table';
   const variablesRoot = 'pf-c-table';
 
@@ -98,6 +103,13 @@ export default () => {
       </Example>
       <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
         {tableWidthExample}
+      </Example>
+      <Example
+        heading="Table with hidden/visible breakpoint modifiers"
+        handlebars={tableHiddenVisibleExampleRaw}
+        docs={tableHiddenVisibleDoc}
+      >
+        {tableHiddenVisibleExample}
       </Example>
     </Documentation>
   );

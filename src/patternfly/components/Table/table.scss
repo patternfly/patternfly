@@ -34,6 +34,9 @@
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
 
+  // Cell
+  --pf-c-table-cell--hidden-visible--Display: table-cell;
+
   // Tr
   --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
@@ -152,6 +155,8 @@
 
   // Table row
   tr > * {
+    @include pf-hidden-visible(var(--pf-c-table-cell--hidden-visible--Display));
+
     // set position relative for ::before borders
     position: relative;
 
@@ -174,7 +179,6 @@
       --pf-c-table-cell--PaddingRight: var(--pf-c-table-cell--first-last-child--PaddingRight);
     }
 
-    /* stylelint-disable-next-line */
     &.pf-m-center {
       text-align: center;
     }

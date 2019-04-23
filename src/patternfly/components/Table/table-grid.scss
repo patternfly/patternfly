@@ -1,6 +1,8 @@
 /* stylelint-disable */
 @mixin pf-mobile-layout {
-  .pf-m-grid.pf-c-table { @content; }
+  .pf-m-grid.pf-c-table {
+    @content;
+  }
 
   .pf-m-grid-md.pf-c-table {
     @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -58,6 +60,9 @@
   --pf-c-table-tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
+
+  // Cell
+  --pf-c-table-cell--m-grid--hidden-visible--Display: grid;
 
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
@@ -194,11 +199,11 @@
   }
 
   // Standard td, in standard row (non-expandable)
-  // exclude specifically styled tds, as they are placed explicitly within grid
-  // :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)
-  tr:not(.pf-c-table__expandable-row) > :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort) {
+  [data-label] {
+    // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
+    --pf-c-table-cell--hidden-visible--Display: var(--pf-c-table-cell--m-grid--hidden-visible--Display);
+
     // responsive layout, set td to two column grid
-    display: grid;
     grid-column: 1;
     grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
     align-items: start;
