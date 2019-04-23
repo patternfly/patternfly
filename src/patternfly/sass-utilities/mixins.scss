@@ -152,3 +152,10 @@
   scrollbar-width: none; // hides scrollbars in Firefox 64 and up
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
+
+@mixin pf-hidden-visible($val: "block") {
+  /* stylelint-disable-next-line */
+  --pf-hidden-visible--visible--Display: #{$val};
+
+  @extend %pf-hidden-visible;
+}

@@ -248,6 +248,14 @@ $pf-global--breakpoint-list: (
   "xl"
 );
 
+// Global breakpoint name map - used for %pf-hidden-visible
+$pf-global--breakpoint-name-map: (
+  "sm": $pf-global--breakpoint--sm,
+  "md": $pf-global--breakpoint--md,
+  "lg": $pf-global--breakpoint--lg,
+  "xl": $pf-global--breakpoint--xl
+);
+
 // Spacer properties
 $pf-global--spacer-properties-map: (
   "m":  "margin",
