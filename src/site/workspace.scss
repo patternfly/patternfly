@@ -364,6 +364,13 @@ html {
     padding: .5rem;
   }
 
+  ul,
+  ol {
+    margin: .5rem 0 .5rem 1rem;
+    list-style-position: outside;
+    list-style-type: disc;
+  }
+
   // .Preview__body {
   //   .pf-c-page__header-nav {
   //     background: var(--pf-global--BackgroundColor--dark-100);

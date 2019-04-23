@@ -49,13 +49,13 @@ export default () => {
       variablesRoot={variablesRoot}
       className="flex-documentation is-layout-page"
     >
-      <Example intro={flexIntroDoc} heading="Basic Usage" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
+      <Example intro={flexIntroDoc} heading="Flex Basics" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
         {flexBasicExample}
       </Example>
-      <Example heading="Spacing" handlebars={flexSpacingExampleRaw} docs={flexSpacingExampleDoc}>
+      <Example heading="Flex Spacing" handlebars={flexSpacingExampleRaw} docs={flexSpacingExampleDoc}>
         {flexSpacingExample}
       </Example>
-      <Example heading="Layout Modifiers" handlebars={flexLayoutExampleRaw} docs={flexLayoutExampleDoc}>
+      <Example heading="Flex Layout Modifiers" handlebars={flexLayoutExampleRaw} docs={flexLayoutExampleDoc}>
         {flexLayoutExample}
       </Example>
       <Example
@@ -72,10 +72,10 @@ export default () => {
       >
         {flexLayoutResponsiveExample}
       </Example>
-      <Example heading="Alignment" handlebars={flexAlignmentExampleRaw} docs={flexAlignmentExampleDoc}>
+      <Example heading="Flex Alignment" handlebars={flexAlignmentExampleRaw} docs={flexAlignmentExampleDoc}>
         {flexAlignmentExample}
       </Example>
-      <Example heading="Justification" handlebars={flexJustificationExampleRaw} docs={flexJustificationExampleDoc}>
+      <Example heading="Flex Justification" handlebars={flexJustificationExampleRaw} docs={flexJustificationExampleDoc}>
         {flexJustificationExample}
       </Example>
     </Documentation>
