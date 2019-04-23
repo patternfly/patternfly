@@ -148,6 +148,7 @@
 
 .pf-c-clipboard-copy__expandable-content {
   padding: var(--pf-c-clipboard-copy__expandable-content--PaddingTop) var(--pf-c-clipboard-copy__expandable-content--PaddingRight) var(--pf-c-clipboard-copy__expandable-content--PaddingBottom) var(--pf-c-clipboard-copy__expandable-content--PaddingLeft);
+  word-wrap: break-word;
   background-color: var(--pf-c-clipboard-copy__expandable-content--BackgroundColor);
   background-clip: padding-box;
   border: var(--pf-c-clipboard-copy__expandable-content--BorderWidth) solid transparent;
