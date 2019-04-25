@@ -19,7 +19,7 @@ deploy:
   local_dir: public
 
 before_script:
-  - wget https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip
+  - wget https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /home/travis/bin/
   - export CHROME_BIN=chromium-browser
   - npm install -g gulp-cli
