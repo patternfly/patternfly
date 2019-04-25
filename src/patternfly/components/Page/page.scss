@@ -9,7 +9,7 @@
   // Header brand
   --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-brand--md--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__header-brand--md--PaddingLeft: var(--pf-global--spacer--lg);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-brand--PaddingLeft: var(--pf-c-page__header-brand--md--PaddingLeft);
@@ -54,7 +54,7 @@
   --pf-c-page__header-tools--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--md);
   --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
@@ -85,10 +85,10 @@
   --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--md--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__main-section--md--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop: 0;
   --pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight: 0;
   --pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom: 0;
@@ -109,11 +109,11 @@
   --pf-c-page__main-nav--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-nav--md--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-page__main-nav--md--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--xl) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
+  --pf-c-page__main-nav--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__main-nav--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--lg) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
   --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: calc(-1 * (var(--pf-global--spacer--xl) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
+  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: calc(-1 * (var(--pf-global--spacer--lg) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
   --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--md--Right: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -132,9 +132,9 @@
   --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-breadcrumb--PaddingBottom: 0;
   --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-breadcrumb--md--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-page__main-breadcrumb--md--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-page__main-breadcrumb--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__main-breadcrumb--md--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-page__main-breadcrumb--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__main-breadcrumb--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__main-nav--main-breadcrumb--PaddingTop: 0;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {

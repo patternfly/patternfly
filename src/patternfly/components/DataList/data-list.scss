@@ -27,9 +27,9 @@
   --pf-c-data-list__item-item--before--Height: calc(100% + var(--pf-c-data-list__item-item--BorderTopWidth));
 
   // Data List Item Row
-  --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-row--md--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-row--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-row--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-row--md--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {

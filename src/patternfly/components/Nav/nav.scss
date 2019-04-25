@@ -5,10 +5,10 @@
   // List link
   --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__list-link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__list-link--after--Width: #{pf-size-prem(50px)};
   --pf-c-nav__list-link--after--Height: #{pf-size-prem(3px)};
 
@@ -41,11 +41,11 @@
 
   // List simple link
   --pf-c-nav__simple-list-link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__simple-list-link--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__simple-list-link--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__simple-list-link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__simple-list-link--nested--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__simple-list-link--nested--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md));
+  --pf-c-nav__simple-list-link--nested--md--PaddingLeft: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--md));
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-nav__simple-list-link--nested--PaddingLeft: var(--pf-c-nav__simple-list-link--nested--md--PaddingLeft);
@@ -131,9 +131,9 @@
 
   // Nav section title
   --pf-c-nav__section-title--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Nav section title fonts
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
