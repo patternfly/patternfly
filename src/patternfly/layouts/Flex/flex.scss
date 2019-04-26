@@ -1,5 +1,3 @@
-// Mixins
-
 // Spacer values
 $pf-flex-spacer-map: (
   "none": 0,
@@ -96,12 +94,13 @@ $pf-flex-spacer-map: (
   --pf-l-flex--Display: flex;
   --pf-l-flex--FlexWrap: wrap;
   --pf-l-flex--AlignItems: baseline;
-  --pf-l-flex--item--MarginRight: var(--pf-l-flex--spacer-base);
-  --pf-l-flex--item--MarginLeft: 0;
+  --pf-l-flex--m-row--AlignItems: baseline;
+  --pf-l-flex--m-row-reverse--AlignItems: baseline;
 
   // Default values: these get reset based on modifier usage
   --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+  --pf-l-flex--flex--spacer: var(--pf-global--spacer--lg);
 
   // Flex spacer values
   --pf-l-flex--spacer--none: 0;
@@ -119,35 +118,24 @@ $pf-flex-spacer-map: (
 
   // Establish default item spacing
   > * {
-    margin-left: 0;
+    margin-right: var(--pf-l-flex--spacer);
 
-    &:not(:last-child) {
-      margin-right: var(--pf-l-flex--spacer);
-    }
-  }
-
-  // Spacing for flex-end justification - attr selector to target base + responsive classes
-  &[class*="pf-m-justify-flex-end"] {
-    > * {
-      margin-right: 0;
-
-      &:not(:first-child) {
-        margin-left: var(--pf-l-flex--spacer);
-      }
-    }
-  }
-
-  // Remove spacers for space-between
-  &[class*="pf-m-justify-space-between"] {
-    > * {
+    &:last-child:not([class*="pf-m-spacer"]) {
       --pf-l-flex--spacer: 0;
     }
   }
 
   // Reset item spacing in nested flex layouts
   & & {
+    --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+
     > * {
       --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+    }
+
+    > :last-child:not([class*="pf-m-spacer"]),
+    &:last-child:not([class*="pf-m-spacer"]) {
+      --pf-l-flex--spacer: 0;
     }
   }
 
@@ -167,28 +155,51 @@ $pf-flex-spacer-map: (
   @mixin flex-modifiers($mod: null) {
     // display
     &.pf-m-flex#{$mod} {
-      display: flex;
+      display: var(--pf-l-flex--Display);
     }
 
     &.pf-m-inline-flex#{$mod} {
-      display: inline-flex;
+      --pf-l-flex--Display: inline-flex;
     }
 
     // flex-direction
     &.pf-m-column#{$mod} {
       flex-direction: column;
+      align-items: normal;
+
+      > * {
+        margin: 0 0 var(--pf-l-flex--spacer) 0;
+      }
     }
 
+    // flex-direction
     &.pf-m-column-reverse#{$mod} {
       flex-direction: column-reverse;
+      align-items: normal;
+
+      > * {
+        margin: var(--pf-l-flex--spacer) 0 0 0;
+      }
     }
 
     &.pf-m-row#{$mod} {
       flex-direction: row;
+      align-items: var(--pf-l-flex--m-row--AlignItems);
+
+      // unset styling set for .pf-m-column
+      > * {
+        margin: 0 var(--pf-l-flex--spacer) 0 0;
+      }
     }
 
     &.pf-m-row-reverse#{$mod} {
       flex-direction: row-reverse;
+      align-items: var(--pf-l-flex--m-row-reverse--AlignItems);
+
+      // unset styling set for .pf-m-column
+      > * {
+        margin: 0 0 0 var(--pf-l-flex--spacer);
+      }
     }
 
     // flex-wrap
@@ -196,12 +207,12 @@ $pf-flex-spacer-map: (
       flex-wrap: wrap;
     }
 
-    &.pf-m-nowrap#{$mod} {
-      flex-wrap: nowrap;
-    }
-
     &.pf-m-wrap-reverse#{$mod} {
       flex-wrap: wrap-reverse;
+    }
+
+    &.pf-m-nowrap#{$mod} {
+      flex-wrap: nowrap;
     }
 
     // justify-content
@@ -269,6 +280,11 @@ $pf-flex-spacer-map: (
 
     &.pf-m-align-content-space-between#{$mod} {
       align-content: space-between;
+
+      > * {
+        margin-right: 0;
+        margin-left: 0;
+      }
     }
 
     &.pf-m-align-content-space-around#{$mod} {
@@ -283,7 +299,8 @@ $pf-flex-spacer-map: (
 
     &.pf-m-align-left#{$mod},
     .pf-m-align-left#{$mod} {
-      margin-right: auto;
+      margin-right: var(--pf-l-flex--spacer);
+      margin-left: 0;
     }
 
     // item properties
@@ -296,9 +313,28 @@ $pf-flex-spacer-map: (
     }
 
     .pf-m-full-width#{$mod} {
-      --pf-l-flex--spacer: 0;
+      width: 100%;
+      margin-right: 0;
+    }
 
-      flex: 1 0 100%;
+    .pf-m-flex-1#{$mod} {
+      flex: 1 0 0;
+    }
+
+    .pf-m-flex-2#{$mod} {
+      flex: 2 0 0;
+    }
+
+    .pf-m-flex-3#{$mod} {
+      flex: 3 0 0;
+    }
+
+    .pf-m-flex-default {
+      flex: 0 1 auto;
+    }
+
+    &.pf-m-flex-none#{$mod} {
+      flex: none;
     }
 
     // align-self
@@ -314,7 +350,7 @@ $pf-flex-spacer-map: (
       align-self: center;
     }
 
-    .pf-m-align-baseline#{$mod} {
+    .pf-m-align-self-baseline#{$mod} {
       align-self: baseline;
     }
 
