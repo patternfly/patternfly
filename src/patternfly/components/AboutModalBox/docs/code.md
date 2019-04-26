@@ -25,5 +25,4 @@ About modal layout.
 | `.pf-c-about-modal-box__header`       |  `<div>`, `<header>`   |  Initiates a modal box header cell. |
 | `.pf-c-about-modal-box__hero`         |  `<div>`               |  Initiates a modal box hero cell. |
 | `.pf-c-about-modal-box__content`      |  `<div>`               |  Initiates a modal box content cell. |
-| `.pf-c-content`                       |  `<div>`               |  Initiates the content component for the about modal content. |
 | `.pf-m-hover` | `.pf-c-about-modal-box__close .pf-c-button.pf-m-action` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.
