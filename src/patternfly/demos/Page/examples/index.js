@@ -5,13 +5,13 @@ import Example from '@siteComponents/Example';
 import PageComponentDefaultNavHeaderExampleRaw from '!raw!./page-component-default-nav-header-example.hbs';
 import PageComponentExpandableNavExampleRaw from '!raw!./page-component-expandable-nav-example.hbs';
 import PageComponentHorizontalNavExampleRaw from '!raw!./page-component-horizontal-nav-example.hbs';
-import PageComponentSimpleNavExampleRaw from '!raw!./page-component-simple-nav-example.hbs';
+import PageComponentTertiaryNavExampleRaw from '!raw!./page-component-tertiary-nav-example.hbs';
 import PageComponentGroupedNavExampleRaw from '!raw!./page-component-grouped-nav-example.hbs';
 
 import PageComponentDefaultNavHeaderExample from './page-component-default-nav-header-example.hbs';
 import PageComponentExpandableNavExample from './page-component-expandable-nav-example.hbs';
 import PageComponentHorizontalNavExample from './page-component-horizontal-nav-example.hbs';
-import PageComponentSimpleNavExample from './page-component-simple-nav-example.hbs';
+import PageComponentTertiaryNavExample from './page-component-tertiary-nav-example.hbs';
 import PageComponentGroupedNavExample from './page-component-grouped-nav-example.hbs';
 
 import docs from '../docs/code.md';
@@ -22,7 +22,7 @@ export default () => {
   const pageComponentDefaultNavHeaderExample = PageComponentDefaultNavHeaderExample();
   const pageComponentExpandableNavExample = PageComponentExpandableNavExample();
   const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
-  const pageComponentSimpleNavExample = PageComponentSimpleNavExample();
+  const pageComponentTertiaryNavExample = PageComponentTertiaryNavExample();
   const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
   const headingText = 'Page Component Demo';
 
@@ -50,11 +50,11 @@ export default () => {
         {pageComponentHorizontalNavExample}
       </Example>
       <Example
-        heading="Page Component Simple Nav Example"
+        heading="Page Component Tertiary Nav Example"
         fullPageOnly="true"
-        handlebars={PageComponentSimpleNavExampleRaw}
+        handlebars={PageComponentTertiaryNavExampleRaw}
       >
-        {pageComponentSimpleNavExample}
+        {pageComponentTertiaryNavExample}
       </Example>
       <Example
         heading="Page Component Grouped Nav Example"

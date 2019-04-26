@@ -127,7 +127,8 @@
   --pf-c-nav__list-toggle--Transition: .1s ease-in-out;
 
   // Nav section
-  --pf-c-nav__section--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__section__section--MarginTop: var(--pf-global--spacer--xl);
 
   // Nav section title
   --pf-c-nav__section-title--PaddingTop: var(--pf-global--spacer--sm);
@@ -578,8 +579,12 @@
   }
 }
 
-.pf-c-nav__section + .pf-c-nav__section {
+.pf-c-nav__section {
   margin-top: var(--pf-c-nav__section--MarginTop);
+
+  + .pf-c-nav__section {
+    --pf-c-nav__section--MarginTop: var(--pf-c-nav__section__section--MarginTop);
+  }
 }
 
 // Section

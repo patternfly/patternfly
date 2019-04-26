@@ -1,4 +1,4 @@
-{{#> page page--id="page-layout-expandable-nav"}}
+{{#> page page--id="page-layout-tertiary-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
@@ -6,7 +6,7 @@
     {{!-- Brand --}}
     {{#> page-header-brand}}
       {{#> page-header-brand-toggle}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-expandable-nav"')}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-tertiary-nav"')}}
           {{> button-icon button-icon--type="bars"}}
         {{/button}}
       {{/page-header-brand-toggle}}
@@ -19,13 +19,13 @@
   {{/page-header}}
 
   {{#> page-sidebar}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
             System Panel
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link1"'}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link1"'}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -61,10 +61,10 @@
           {{/nav-subnav}}
         {{/nav-item}}
         {{#> nav-item nav-item--expandable="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link2"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link2"'}}
             Policy
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link2"'}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link2"'}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -80,10 +80,10 @@
           {{/nav-subnav}}
         {{/nav-item}}
         {{#> nav-item nav-item--expandable="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link3"'}}
             Authentication
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link3"'}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link3"'}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -102,6 +102,41 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
+    {{#> page-main-nav}}
+      {{#> nav nav--modifier="pf-m-start pf-m-end" aria-label="Local"}}
+        {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+        {{/nav-scroll-button}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Tertiary Nav Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary Nav Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary Nav Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary Nav Item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary Nav Item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+        {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+        {{/nav-scroll-button}}
+      {{/nav}}
+    {{/page-main-nav}}
     {{#> page-template-breadcrumb}}
     {{/page-template-breadcrumb}}
     <a id="main-content-{{page--id}}"></a>
