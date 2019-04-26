@@ -72,7 +72,7 @@
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
   --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
-  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -105,7 +105,7 @@
 
   // Main section horizontal nav
   --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__main-nav--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
