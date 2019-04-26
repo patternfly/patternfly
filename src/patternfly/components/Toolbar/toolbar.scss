@@ -1,9 +1,9 @@
 // The value of component scoped variables is always defined by a global variable:
 .pf-c-toolbar {
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-toolbar--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-toolbar--md--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);

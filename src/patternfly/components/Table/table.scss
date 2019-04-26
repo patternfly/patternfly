@@ -20,10 +20,10 @@
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table-caption--Color: var(--pf-global--Color--200);
   --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table-caption--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-table-caption--md--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -42,8 +42,8 @@
   --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Td
-  --pf-c-table-tbody-cell--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table-tbody-cell--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table-tbody-cell--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-table-tbody-cell--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Th / td shared variables
   // Padding vars must be individual as they are contextually reset
@@ -52,8 +52,8 @@
   --pf-c-table-cell--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table-cell--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-table-cell--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-table-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-table-cell--first-last-child--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table-cell--first-last-child--PaddingRight: var(--pf-global--spacer--lg);
 
   // ============================================================ //
   // End non-conformant variables
@@ -83,8 +83,8 @@
   --pf-c-table__expandable-row--before--Bottom: calc(var(--pf-c-table--BorderWidth) * -1);
   --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
   --pf-c-table__expandable-row-content--Transition: var(--pf-global--Transition);
-  --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table__expandable-row-content--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Sort indicator
   --pf-c-table__sort-indicator--MarginLeft: var(--pf-global--spacer--md);
@@ -110,8 +110,8 @@
   --pf-c-table--m-compact-cell--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-table--m-compact-cell--first-last-child--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table--m-compact-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--m-compact-cell--first-last-child--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table--m-compact__expandable-row-content--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
