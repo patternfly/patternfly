@@ -4,8 +4,10 @@ import Example from '@siteComponents/Example';
 
 import AlertTypesRaw from '!raw!./alert-types-example.hbs';
 import AlertVariationsRaw from '!raw!./alert-variations-example.hbs';
+import AlertInlineRaw from '!raw!./alert-inline-example.hbs';
 import AlertTypes from './alert-types-example.hbs';
 import AlertVariations from './alert-variations-example.hbs';
+import AlertInline from './alert-inline-example.hbs';
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -13,6 +15,7 @@ export const Docs = docs;
 export default (props) => {
   const alertTypes = AlertTypes();
   const alertVariations = AlertVariations();
+  const alertInline = AlertInline();
   const headingText = 'Alert';
   const variablesRoot = 'pf-c-alert';
 
@@ -23,6 +26,9 @@ export default (props) => {
       </Example>
       <Example heading="Alert variations" handlebars={AlertVariationsRaw}>
         {alertVariations}
+      </Example>
+      <Example heading="Inline Alert Types" handlebars={AlertInlineRaw}>
+        {alertInline}
       </Example>
     </Documentation>
   );

@@ -1,6 +1,6 @@
 ## Overview
 
-Always add a modifier class. Do not use `.pf-c-alert` on its own.
+Always add a modifier class: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`. Do not use `.pf-c-alert` on its own.
 
 ## Accessibility
 
@@ -30,3 +30,4 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 | `.pf-m-danger` | `.pf-c-alert` |  Applies danger styling. |
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |
 | `.pf-m-info` | `.pf-c-alert` |  Applies info styling. |
+| `.pf-m-inline` | `.pf-c-alert` |  Applies inline styling. |
