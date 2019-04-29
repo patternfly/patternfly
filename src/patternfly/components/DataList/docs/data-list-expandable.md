@@ -1,8 +1,8 @@
 ### Data List Expandable Notes
 
-<mark>**All simple data list accessibility and usage requirements apply.**</mark>
+**All simple data list accessibility and usage requirements apply.**
 <br>
-<mark>**All data list checkbox/action button accessibility and usage requirements apply.**</mark>
+**All data list checkbox/action button accessibility and usage requirements apply.**
 
 ### Accessibility
 | Attribute | Applied To | Outcome |

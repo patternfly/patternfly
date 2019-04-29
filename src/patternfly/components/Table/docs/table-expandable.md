@@ -1,10 +1,10 @@
 ### Table Expandable Notes
 
-<mark>**All simple table accessibility and usage requirements apply.**</mark>
+**All simple table accessibility and usage requirements apply.**
 <br>
-<mark>**All sortable table accessibility and usage requirements apply.**</mark>
+**All sortable table accessibility and usage requirements apply.**
 <br>
-<mark>**All checkbox/action button accessibility and usage requirements apply.**</mark>
+**All checkbox/action button accessibility and usage requirements apply.**
 
 Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
 

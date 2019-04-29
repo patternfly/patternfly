@@ -1,6 +1,6 @@
 ### Data List Checkbox/Action Button Notes
 
-<mark>**All simple data list accessibility and usage requirements apply.**</mark>
+**All simple data list accessibility and usage requirements apply.**
 
 ### Accessibility
 | Attribute | Applied To | Outcome |
