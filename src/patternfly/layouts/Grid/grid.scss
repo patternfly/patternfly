@@ -36,15 +36,23 @@
   }
 }
 
+// Creates grid gutter
+@mixin pf-grid-gutter-modifier($spacer: null, $spacer-value: null, $suffix: null) {
+  &.pf-m-gutter#{$spacer}#{$suffix} {
+    --pf-l-grid--GridGap: #{$spacer-value};
+  }
+}
 
 // Grid base
 .pf-l-grid {
+  --pf-l-grid--GridGap: 0;
   --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
   --pf-l-grid__item--GridColumnStart: auto;
   --pf-l-grid__item--GridColumnEnd: span 12;
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: var(--pf-l-grid--GridGap);
 
   > *,
   .pf-l-grid__item {
@@ -68,7 +76,16 @@
     }
   }
 
-  &.pf-m-gutter {
-    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+  $pf-u-spacing--spacer-map: (
+    "": "var(--pf-l-grid--m-gutter--GridGap)"
+  );
+
+  // Loop through $pf-global--spacer-map to generate different gutter spacers
+  @each $breakpoint, $value in $pf-global--breakpoint-map {
+    @each $spacer, $spacer-value in map-merge($pf-u-spacing--spacer-map, $pf-global--spacer-map) {
+      @include pf-media-query($breakpoint) {
+        @include pf-grid-gutter-modifier($spacer, $spacer-value, $value);
+      }
+    }
   }
 }

@@ -8,6 +8,7 @@ import GridSmartOverridesRaw from '!raw!./grid-smart-grid-overrides-example.hbs'
 import GridNestedRaw from '!raw!./grid-nested-example.hbs';
 import GridOffsetsRaw from '!raw!./grid-offsets-example.hbs';
 import GridResponsiveRaw from '!raw!./grid-responsive-example.hbs';
+import GridResponsiveGuttersRaw from '!raw!./grid-responsive-gutters-example.hbs';
 import GridRowspanRaw from '!raw!./grid-rowspan-example.hbs';
 import GridBase from './grid-base-example.hbs';
 import GridGutter from './grid-gutter-example.hbs';
@@ -16,6 +17,7 @@ import GridSmartOverrides from './grid-smart-grid-overrides-example.hbs';
 import GridNested from './grid-nested-example.hbs';
 import GridOffsets from './grid-offsets-example.hbs';
 import GridResponsive from './grid-responsive-example.hbs';
+import GridResponsiveGutters from './grid-responsive-gutters-example.hbs';
 import GridRowspan from './grid-rowspan-example.hbs';
 import docs from '../docs/code.md';
 
@@ -29,6 +31,7 @@ export default () => {
   const gridNested = GridNested();
   const gridOffsets = GridOffsets();
   const gridResponsive = GridResponsive();
+  const gridResponsiveGutters = GridResponsiveGutters();
   const gridRowspan = GridRowspan();
   const headingText = 'Grid';
   const variablesRoot = 'pf-l-grid';
@@ -44,11 +47,14 @@ export default () => {
       <Example heading="Base grid" handlebars={GridBaseRaw}>
         {gridBase}
       </Example>
-      <Example heading="Grid gutter" handlebars={GridGutterRaw}>
+      <Example heading="Grid gutters" handlebars={GridGutterRaw}>
         {gridGutter}
       </Example>
       <Example heading="Responsive grid" handlebars={GridResponsiveRaw}>
         {gridResponsive}
+      </Example>
+      <Example heading="Responsive grid gutters" handlebars={GridResponsiveGuttersRaw}>
+        {gridResponsiveGutters}
       </Example>
       <Example heading="Nested grids" handlebars={GridNestedRaw}>
         {gridNested}

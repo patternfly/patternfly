@@ -1,5 +1,10 @@
 /* stylelint-disable */
 
+$pf-u-spacing--spacer-map: (
+  "-auto": "auto",
+  "-0": 0
+);
+
 // Build spacing values
 @mixin pf-spacer-builder() {
 
@@ -10,7 +15,7 @@
     @each $property, $property-value in $pf-global--spacer-properties-map {
 
       // Loop through spacer values
-      @each $spacer, $spacer-value in $pf-global--spacer-map {
+      @each $spacer, $spacer-value in map-merge($pf-u-spacing--spacer-map, $pf-global--spacer-map) {
 
         // If breakpoint != null, append responsive value
         .pf-u-#{$property}#{$spacer}#{$breakpoint-value} {
