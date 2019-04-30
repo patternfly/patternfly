@@ -5,6 +5,13 @@
   --pf-c-alert--grid-template-columns: max-content 1fr max-content;
   --pf-c-alert--grid-template-rows: 1fr auto;
 
+  // Alert border left base
+  --pf-c-alert--before--BackgroundColor: transparent;
+  --pf-c-alert--before--Width: var(--pf-global--BorderWidth--lg);
+  --pf-c-alert--before--ZIndex: var(--pf-global--ZIndex--xl);
+  --pf-c-alert--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
+  --pf-c-alert--before--Height: calc(100% + var(--pf-c-alert--m-inline--BorderTopWidth) + var(--pf-c-alert--m-inline--BorderBottomWidth));
+
   // Icon
   --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
   --pf-c-alert__icon--Color: var(--pf-global--Color--100);
@@ -53,27 +60,28 @@
   --pf-c-alert--m-inline__title--Color: var(--pf-global--Color--100);
   --pf-c-alert--m-inline--BoxShadow: none;
   --pf-c-alert--m-inline--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-alert--m-inline--BorderLeftColor: var(--pf-global--info-color--200);
   --pf-c-alert--m-inline--BorderStyle: solid;
-  --pf-c-alert--m-inline--BorderLeftStyle: solid;
-  --pf-c-alert--m-inline--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-alert--m-inline--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-alert--m-inline--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-alert--m-inline--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-alert--m-inline--BorderLeftWidth: 0;
   --pf-c-alert--m-inline__icon--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert__m-inline__icon--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-alert__m-inline__icon--PaddingRight: 0;
   --pf-c-alert__m-inline__icon--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert__m-inline__icon--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-alert--m-success-inline__icon--Color: var(--pf-global--success-color--100);
-  --pf-c-alert--m-success-inline--BorderLeftColor: var(--pf-global--success-color--100);
-  --pf-c-alert--m-danger-inline__icon--Color: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-danger-inline--BorderLeftColor: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-warning-inline__icon--Color: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-warning-inline--BorderLeftColor: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-info-inline__icon--Color: var(--pf-global--info-color--100);
-  --pf-c-alert--m-info-inline--BorderLeftColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-inline--m-success__icon--Color: var(--pf-global--success-color--100);
+  --pf-c-alert--m-inline--m-success--before--BackgroundColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-inline--m-danger__icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-inline--m-danger--before--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-inline--m-warning__icon--Color: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-inline--m-warning--before--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-inline--m-info__icon--Color: var(--pf-global--info-color--100);
+  --pf-c-alert--m-inline--m-info--before--BackgroundColor: var(--pf-global--info-color--100);
 
   @include pf-t-light; // This component always needs to be light
 
+  position: relative;
   display: grid;
   grid-template-columns: var(--pf-c-alert--grid-template-columns);
   grid-template-rows: var(--pf-c-alert--grid-template-rows);
@@ -83,6 +91,18 @@
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
 
+  // left border treatment base
+  // color is transparent by default, then set by the state modifier classes and turned on by the inline modifier
+  &::before {
+    position: absolute;
+    top: var(--pf-c-alert--before--Top);
+    left: 0;
+    z-index: var(--pf-c-alert--before--ZIndex);
+    width: var(--pf-c-alert--before--Width);
+    height: var(--pf-c-alert--before--Height);
+    content: "";
+    background-color: var(--pf-c-alert--before--BackgroundColor);
+  }
 
   &.pf-m-success {
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);
@@ -90,7 +110,7 @@
     --pf-c-alert__title--Color: var(--pf-c-alert--m-success__title--Color);
 
     // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--BorderLeftColor: var(--pf-c-alert--m-success-inline--BorderLeftColor);
+    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-success--before--BackgroundColor);
   }
 
   &.pf-m-danger {
@@ -99,7 +119,7 @@
     --pf-c-alert__title--Color: var(--pf-c-alert--m-danger__title--Color);
 
     // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--BorderLeftColor: var(--pf-c-alert--m-danger-inline--BorderLeftColor);
+    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-danger--before--BackgroundColor);
   }
 
   &.pf-m-warning {
@@ -108,7 +128,7 @@
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
 
     // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--BorderLeftColor: var(--pf-c-alert--m-warning-inline--BorderLeftColor);
+    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--before--BackgroundColor);
 
     // Apply a custom size to the FA icon to ensure all icons are the same width
     .pf-c-alert__icon > i {
@@ -122,24 +142,28 @@
     --pf-c-alert__title--Color: var(--pf-c-alert--m-info__title--Color);
 
     // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--BorderLeftColor: var(--pf-c-alert--m-info-inline--BorderLeftColor);
+    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-info--before--BackgroundColor);
   }
 
   &.pf-m-inline {
     --pf-c-alert--BoxShadow: var(--pf-c-alert--m-inline--BoxShadow);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-inline__title--Color);
     --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--BackgroundColor);
-    --pf-c-alert--m-success__icon--Color: var(--pf-c-alert--m-success-inline__icon--Color);
-    --pf-c-alert--m-danger__icon--Color: var(--pf-c-alert--m-danger-inline__icon--Color);
-    --pf-c-alert--m-warning__icon--Color: var(--pf-c-alert--m-warning-inline__icon--Color);
-    --pf-c-alert--m-info__icon--Color: var(--pf-c-alert--m-info-inline__icon--Color);
+    --pf-c-alert--m-success__icon--Color: var(--pf-c-alert--m-inline--m-success__icon--Color);
+    --pf-c-alert--m-danger__icon--Color: var(--pf-c-alert--m-inline--m-danger__icon--Color);
+    --pf-c-alert--m-warning__icon--Color: var(--pf-c-alert--m-inline--m-warning__icon--Color);
+    --pf-c-alert--m-info__icon--Color: var(--pf-c-alert--m-inline--m-info__icon--Color);
+    --pf-c-alert--before--BackgroundColor: var(--pf-c-alert--m-inline--before--BackgroundColor);
 
-    border-color: var(--pf-c-alert--m-inline--BorderColor);
-    border-style: var(--pf-c-alert--m-inline--BorderStyle);
-    border-width: var(--pf-c-alert--m-inline--BorderWidth);
-    border-left-color: var(--pf-c-alert--m-inline--BorderLeftColor);
-    border-left-style: var(--pf-c-alert--m-inline--BorderLeftStyle);
-    border-left-width: var(--pf-c-alert--m-inline--BorderLeftWidth);
+    border-top: var(--pf-c-alert--m-inline--BorderTopWidth) solid var(--pf-c-alert--m-inline--BorderColor);
+    border-right: var(--pf-c-alert--m-inline--BorderRightWidth) solid var(--pf-c-alert--m-inline--BorderColor);
+    border-bottom: var(--pf-c-alert--m-inline--BorderBottomWidth) solid var(--pf-c-alert--m-inline--BorderColor);
+    border-left: var(--pf-c-alert--m-inline--BorderLeftWidth) solid var(--pf-c-alert--m-inline--BorderColor);
+
+    // left border treatment
+    &::before {
+      background-color: var(--pf-c-alert--m-inline--before--BackgroundColor);
+    }
 
     .pf-c-alert__icon {
       padding: var(--pf-c-alert__m-inline__icon--PaddingTop) var(--pf-c-alert__m-inline__icon--PaddingRight) var(--pf-c-alert__m-inline__icon--PaddingBottom) var(--pf-c-alert__m-inline__icon--PaddingLeft);
