@@ -7,14 +7,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const titleTemplate = TitleTemplate();
   const headingText = 'Title';
   const variablesRoot = 'pf-c-title';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Title Types" handlebars={TitleTemplateRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Title types" handlebars={TitleTemplateRaw}>
         {titleTemplate}
       </Example>
     </Documentation>

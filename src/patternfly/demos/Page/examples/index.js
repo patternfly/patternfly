@@ -18,46 +18,46 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const pageComponentDefaultNavHeaderExample = PageComponentDefaultNavHeaderExample();
   const pageComponentExpandableNavExample = PageComponentExpandableNavExample();
   const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
   const pageComponentTertiaryNavExample = PageComponentTertiaryNavExample();
   const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
-  const headingText = 'Page Component Demo';
+  const headingText = 'Page component demo';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
       <Example
-        heading="Page Component Default Nav Header Example"
+        heading="Page component default nav header example"
         fullPageOnly="true"
         handlebars={PageComponentDefaultNavHeaderExampleRaw}
       >
         {pageComponentDefaultNavHeaderExample}
       </Example>
       <Example
-        heading="Page Component Expandable Nav Example"
+        heading="Page component expandable nav example"
         fullPageOnly="true"
         handlebars={PageComponentExpandableNavExampleRaw}
       >
         {pageComponentExpandableNavExample}
       </Example>
       <Example
-        heading="Page Component Horizontal Nav Example"
+        heading="Page component horizontal nav example"
         fullPageOnly="true"
         handlebars={PageComponentHorizontalNavExampleRaw}
       >
         {pageComponentHorizontalNavExample}
       </Example>
       <Example
-        heading="Page Component Tertiary Nav Example"
+        heading="Page component tertiary nav example"
         fullPageOnly="true"
         handlebars={PageComponentTertiaryNavExampleRaw}
       >
         {pageComponentTertiaryNavExample}
       </Example>
       <Example
-        heading="Page Component Grouped Nav Example"
+        heading="Page component grouped nav example"
         fullPageOnly="true"
         handlebars={PageComponentGroupedNavExampleRaw}
       >

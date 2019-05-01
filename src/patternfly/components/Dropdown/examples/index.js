@@ -26,7 +26,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dropdownExpanded = DropdownExpanded();
   const dropdownPanel = DropdownPanel();
   const dropdownCollapsed = DropdownCollapsed();
@@ -45,7 +45,7 @@ export default () => {
   };
 
   return (
-    <Documentation style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example className="is-expanded-dropdown" heading="Dropdown (expanded)" handlebars={DropdownExpandedRaw}>
         {dropdownExpanded}
       </Example>
@@ -60,23 +60,23 @@ export default () => {
       </Example>
       <Example
         className="is-expanded-dropdown is-align-right"
-        heading="Kebab Align Right"
+        heading="Kebab align right"
         handlebars={DropdownKebabAlignRightRaw}>
         {dropdownKebabAlignRight}
       </Example>
-      <Example className="is-expanded-dropdown is-align-right" heading="Align Right" handlebars={DropdownAlignRightRaw}>
+      <Example className="is-expanded-dropdown is-align-right" heading="Align right" handlebars={DropdownAlignRightRaw}>
         {dropdownAlignRight}
       </Example>
       <Example className="is-expanded-top" heading="Top" handlebars={DropdownTopRaw}>
         {dropdownTop}
       </Example>
-      <Example className="is-expanded-dropdown" heading="Split Button" handlebars={DropdownSplitButtonRaw}>
+      <Example className="is-expanded-dropdown" heading="Split button" handlebars={DropdownSplitButtonRaw}>
         {dropdownSplitButton}
       </Example>
-      <Example minHeight="25em" heading="Dropdown with Groups" handlebars={DropdownGroupsRaw}>
+      <Example minHeight="25em" heading="Dropdown with groups" handlebars={DropdownGroupsRaw}>
         {dropdownGroups}
       </Example>
-      <Example className="is-expanded-dropdown" heading="Dropdown Panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
+      <Example className="is-expanded-dropdown" heading="Dropdown panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
         {dropdownPanel}
       </Example>
     </Documentation>

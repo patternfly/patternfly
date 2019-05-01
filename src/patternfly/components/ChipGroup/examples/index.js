@@ -18,25 +18,25 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const ChipGroupToolbarCollapsedExample = chipGroupToolbarCollapsedExample();
   const ChipGroupToolbarExpandedExample = chipGroupToolbarExpandedExample();
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
   const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
-  const headingText = 'Chip Group';
+  const headingText = 'Chip group';
   const variablesRoot = 'pf-c-chip-group';
 
   return (
-    <Documentation heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} heading={headingText} variablesRoot={variablesRoot}>
       <Example
-        heading="Chip Group Toolbar (Collapsed)"
+        heading="Chip group toolbar (collapsed)"
         handlebars={ChipGroupToolbarCollapsedExampleRaw}
         className="is-light-preview"
       >
         {ChipGroupToolbarCollapsedExample}
       </Example>
       <Example
-        heading="Chip Group Toolbar (Expanded)"
+        heading="Chip group toolbar (expanded)"
         handlebars={ChipGroupToolbarExpandedExampleRaw}
         className="is-light-preview"
         docs={chipGroupToolbarDoc}
@@ -44,14 +44,14 @@ export default () => {
         {ChipGroupToolbarExpandedExample}
       </Example>
       <Example
-        heading="Chip Group Multi-Select (Collapsed)"
+        heading="Chip group multi-select (collapsed)"
         handlebars={ChipGroupSelectCollapsedExampleRaw}
         className="is-light-preview"
       >
         {ChipGroupSelectCollapsedExample}
       </Example>
       <Example
-        heading="Chip Group Multi-Select (Expanded)"
+        heading="Chip group multi-select (expanded)"
         handlebars={ChipGroupSelectExpandedExampleRaw}
         className="is-light-preview"
         docs={chipGroupMultiSelectDoc}

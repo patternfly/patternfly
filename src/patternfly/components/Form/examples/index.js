@@ -13,7 +13,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const formVerticalAlignLabelsExample = FormVerticalAlignLabelsExample();
   const formHorizontalAlignLabelsExample = FormHorizontalAlignLabelsExample();
   const formHelpTextExample = FormHelpTextExample();
@@ -22,17 +22,17 @@ export default () => {
   const variablesRoot = 'pf-c-form';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Vertical aligned Labels" handlebars={FormVerticalAlignLabelsExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Vertical aligned labels" handlebars={FormVerticalAlignLabelsExampleRaw}>
         {formVerticalAlignLabelsExample}
       </Example>
-      <Example heading="Horizontal aligned Labels" handlebars={FormHorizontalAlignLabelsExampleRaw}>
+      <Example heading="Horizontal aligned labels" handlebars={FormHorizontalAlignLabelsExampleRaw}>
         {formHorizontalAlignLabelsExample}
       </Example>
       <Example heading="Help text" handlebars={FormHelpTextExampleRaw}>
         {formHelpTextExample}
       </Example>
-      <Example heading="Action Group" handlebars={FormActionGroupExampleRaw}>
+      <Example heading="Action group" handlebars={FormActionGroupExampleRaw}>
         {formActionGroupExample}
       </Example>
     </Documentation>

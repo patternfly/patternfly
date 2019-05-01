@@ -7,14 +7,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const backdropExample = BackdropExample();
   const headingText = 'Backdrop';
   const variablesRoot = 'pf-c-backdrop';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Backdrop Example" fullPageOnly="true" handlebars={BackdropExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Backdrop example" fullPageOnly="true" handlebars={BackdropExampleRaw}>
         {backdropExample}
       </Example>
     </Documentation>

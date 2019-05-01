@@ -21,7 +21,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const gridBase = GridBase();
   const gridGutter = GridGutter();
   const gridSmart = GridSmart();
@@ -34,7 +34,7 @@ export default () => {
   const variablesRoot = 'pf-l-grid';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Smart grid (responsive)" handlebars={GridSmartRaw}>
         {gridSmart}
       </Example>

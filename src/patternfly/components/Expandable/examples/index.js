@@ -9,18 +9,18 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const expandableExpandedExample = ExpandableExpandedExample();
   const expandableHiddenExample = ExpandableHiddenExample();
   const headingText = 'Expandable';
   const variablesRoot = 'pf-c-expandable';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Hidden Example" handlebars={expandableHiddenExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Hidden example" handlebars={expandableHiddenExampleRaw}>
         {expandableHiddenExample}
       </Example>
-      <Example heading="Expanded Example" handlebars={expandableExpandedExampleRaw}>
+      <Example heading="Expanded example" handlebars={expandableExpandedExampleRaw}>
         {expandableExpandedExample}
       </Example>
     </Documentation>

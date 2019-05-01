@@ -11,7 +11,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const listUnorderedExample = ListUnorderedExample();
   const listOrderedExample = ListOrderedExample();
   const listInlineExample = ListInlineExample();
@@ -19,14 +19,14 @@ export default () => {
   const variablesRoot = 'pf-c-list';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Unordered List" handlebars={listUnorderedExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Unordered list" handlebars={listUnorderedExampleRaw}>
         {listUnorderedExample}
       </Example>
-      <Example heading="Ordered List" handlebars={listOrderedExampleRaw}>
+      <Example heading="Ordered list" handlebars={listOrderedExampleRaw}>
         {listOrderedExample}
       </Example>
-      <Example heading="List Inline" handlebars={listInlineExampleRaw}>
+      <Example heading="List inline" handlebars={listInlineExampleRaw}>
         {listInlineExample}
       </Example>
     </Documentation>

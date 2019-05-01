@@ -20,34 +20,34 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dataListSimpleExample = DataListSimpleExample();
   const dataListCheckActionExample = DataListCheckActionExample();
   const dataListExpandableExample = DataListExpandableExample();
   const dataListWidthExample = DataListWidthExample();
-  const headingText = 'Data List';
+  const headingText = 'Data list';
   const variablesRoot = 'pf-c-data-list';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Data List Simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Data list simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
         {dataListSimpleExample}
       </Example>
       <Example
-        heading="Data List Checkboxes, Actions and Additional Cells"
+        heading="Data list checkboxes, actions and additional cells"
         handlebars={DataListCheckActionExampleRaw}
         docs={DataListCheckActionExampleDoc}
       >
         {dataListCheckActionExample}
       </Example>
       <Example
-        heading="Data List Expandable"
+        heading="Data list expandable"
         handlebars={DataListExpandableExampleRaw}
         docs={DataListExpandableExampleDoc}
       >
         {dataListExpandableExample}
       </Example>
-      <Example heading="Data List Width Modifiers" handlebars={DataListWidthExampleRaw} docs={DataListWidthExampleDoc}>
+      <Example heading="Data list width modifiers" handlebars={DataListWidthExampleRaw} docs={DataListWidthExampleDoc}>
         {dataListWidthExample}
       </Example>
     </Documentation>

@@ -17,43 +17,43 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const optionsMenuSingleExample = OptionsMenuSingleExample();
   const optionsMenuMultipleExample = OptionsMenuMultipleExample();
   const optionsMenuPlainExample = OptionsMenuPlainExample();
   const optionsMenuTopExample = OptionsMenuTopExample();
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
   const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
-  const headingText = 'Options Menu';
+  const headingText = 'Options menu';
   const variablesRoot = 'pf-c-options-menu';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
-        heading="Options Menu - Single option"
+        heading="Options menu - single option"
         className="is-expanded-dropdown"
         handlebars={OptionsMenuSingleExampleRaw}
       >
         {optionsMenuSingleExample}
       </Example>
-      <Example heading="Options Menu - Multiple options" minHeight="20em" handlebars={OptionsMenuMultipleExampleRaw}>
+      <Example heading="Options menu - multiple options" minHeight="20em" handlebars={OptionsMenuMultipleExampleRaw}>
         {optionsMenuMultipleExample}
       </Example>
-      <Example heading="Options Menu - Plain" minHeight="20em" handlebars={OptionsMenuPlainExampleRaw}>
+      <Example heading="Options menu - plain" minHeight="20em" handlebars={OptionsMenuPlainExampleRaw}>
         {optionsMenuPlainExample}
       </Example>
-      <Example heading="Options Menu - Top" className="is-expanded-top" handlebars={OptionsMenuTopExampleRaw}>
+      <Example heading="Options menu - top" className="is-expanded-top" handlebars={OptionsMenuTopExampleRaw}>
         {optionsMenuTopExample}
       </Example>
       <Example
-        heading="Options Menu - Align Right"
+        heading="Options menu - align right"
         className="is-align-right is-expanded-dropdown"
         handlebars={OptionsMenuAlignRightExampleRaw}
       >
         {optionsMenuAlignRightExample}
       </Example>
       <Example
-        heading="Options Menu - Plain with text"
+        heading="Options menu - plain with text"
         className="is-expanded-dropdown"
         handlebars={OptionsMenuPlainTextExampleRaw}
       >

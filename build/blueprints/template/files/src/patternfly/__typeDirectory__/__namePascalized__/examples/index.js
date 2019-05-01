@@ -10,14 +10,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const {{nameCamelized}}SimpleExample = {{moduleName}}SimpleExample();
   const {{nameCamelized}}ComplexExample = {{moduleName}}ComplexExample();
   const headingText = '{{nameTitleized}}';
   const variablesRoot = '{{bemName}}';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="{{nameTitleized}} Simple" handlebars={{simpleExampleRawReference}} minHeight="20em">
         {{simpleExampleReference}}
       </Example>

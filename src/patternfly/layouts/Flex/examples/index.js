@@ -31,7 +31,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const flexBasicExample = FlexBasicExample();
   const flexSpacingExample = FlexSpacingExample();
   const flexLayoutExample = FlexLayoutExample();
@@ -43,39 +43,39 @@ export default () => {
   const variablesRoot = 'pf-l-flex';
 
   return (
-    <Documentation
+    <Documentation data={props}
       docs={Docs}
       heading={headingText}
       variablesRoot={variablesRoot}
       className="flex-documentation is-layout-page"
     >
-      <Example intro={flexIntroDoc} heading="Flex Basics" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
+      <Example intro={flexIntroDoc} heading="Flex basics" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
         {flexBasicExample}
       </Example>
-      <Example heading="Flex Spacing" handlebars={flexSpacingExampleRaw} docs={flexSpacingExampleDoc}>
+      <Example heading="Flex spacing" handlebars={flexSpacingExampleRaw} docs={flexSpacingExampleDoc}>
         {flexSpacingExample}
       </Example>
-      <Example heading="Flex Layout Modifiers" handlebars={flexLayoutExampleRaw} docs={flexLayoutExampleDoc}>
+      <Example heading="Flex layout modifiers" handlebars={flexLayoutExampleRaw} docs={flexLayoutExampleDoc}>
         {flexLayoutExample}
       </Example>
       <Example
-        heading="Column Layout Modifiers"
+        heading="Column layout modifiers"
         handlebars={flexLayoutColumnExampleRaw}
         docs={flexLayoutColumnExampleDoc}
       >
         {flexLayoutColumnExample}
       </Example>
       <Example
-        heading="Responsive Layout Modifiers"
+        heading="Responsive layout modifiers"
         handlebars={flexLayoutResponsiveExampleRaw}
         docs={flexLayoutResponsiveExampleDoc}
       >
         {flexLayoutResponsiveExample}
       </Example>
-      <Example heading="Flex Alignment" handlebars={flexAlignmentExampleRaw} docs={flexAlignmentExampleDoc}>
+      <Example heading="Flex alignment" handlebars={flexAlignmentExampleRaw} docs={flexAlignmentExampleDoc}>
         {flexAlignmentExample}
       </Example>
-      <Example heading="Flex Justification" handlebars={flexJustificationExampleRaw} docs={flexJustificationExampleDoc}>
+      <Example heading="Flex justification" handlebars={flexJustificationExampleRaw} docs={flexJustificationExampleDoc}>
         {flexJustificationExample}
       </Example>
     </Documentation>

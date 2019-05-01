@@ -30,7 +30,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const navSimpleListExample = NavSimpleListExample();
   const navListGroupedExample = NavListGroupedExample();
   const navExample = NavExample();
@@ -45,43 +45,43 @@ export default () => {
   const variablesRoot = 'pf-c-nav';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Simple Nav" handlebars={navSimpleListExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Simple nav" handlebars={navSimpleListExampleRaw}>
         {navSimpleListExample}
       </Example>
-      <Example heading="Grouped Nav" handlebars={navListGroupedExampleRaw}>
+      <Example heading="Grouped nav" handlebars={navListGroupedExampleRaw}>
         {navListGroupedExample}
       </Example>
-      <Example heading="Default Nav" handlebars={navExampleRaw}>
+      <Example heading="Default nav" handlebars={navExampleRaw}>
         {navExample}
       </Example>
-      <Example heading="Expandable Nav" handlebars={navExpandableExampleRaw}>
+      <Example heading="Expandable nav" handlebars={navExpandableExampleRaw}>
         {navExpandableExample}
       </Example>
-      <Example heading="Expandable Nav (w/subnav titles)" handlebars={navExpandableSubnavTitlesExampleRaw}>
+      <Example heading="Expandable nav (w/subnav titles)" handlebars={navExpandableSubnavTitlesExampleRaw}>
         {navExpandableSubnavTitlesExample}
       </Example>
-      <Example heading="Nav Mixed" handlebars={navMixedExampleRaw}>
+      <Example heading="Nav mixed" handlebars={navMixedExampleRaw}>
         {navMixedExample}
       </Example>
       <Example
-        heading="Horizontal Nav (only in masthead)"
+        heading="Horizontal nav (only in masthead)"
         handlebars={navHorizontalListExampleRaw}
         className="is-dark-preview pf-t-dark"
       >
         {navHorizontalListExample}
       </Example>
       <Example
-        heading="Horizontal Nav Overflow (only in masthead)"
+        heading="Horizontal nav overflow (only in masthead)"
         handlebars={navHorizontalListOverflowExampleRaw}
         className="is-dark-preview pf-t-dark"
       >
         {navHorizontalListOverflowExample}
       </Example>
-      <Example heading="Tertiary Nav" handlebars={navListTertiaryExampleRaw}>
+      <Example heading="Tertiary nav" handlebars={navListTertiaryExampleRaw}>
         {navListTertiaryExample}
       </Example>
-      <Example heading="Tertiary Nav Overflow" handlebars={navListTertiaryOverflowExampleRaw}>
+      <Example heading="Tertiary nav overflow" handlebars={navListTertiaryOverflowExampleRaw}>
         {navListTertiaryOverflowExample}
       </Example>
     </Documentation>

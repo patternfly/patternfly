@@ -11,22 +11,22 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const formControlInputExample = FormControlInputExample();
   const formControlSelectExample = FormControlSelectExample();
   const formControlTextareaExample = FormControlTextareaExample();
-  const headingText = 'Form Control';
+  const headingText = 'Form control';
   const variablesRoot = 'pf-c-form-control';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Input Example" handlebars={FormControlInputExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Input example" handlebars={FormControlInputExampleRaw}>
         {formControlInputExample}
       </Example>
-      <Example heading="Select Example" handlebars={FormControlSelectExampleRaw}>
+      <Example heading="Select example" handlebars={FormControlSelectExampleRaw}>
         {formControlSelectExample}
       </Example>
-      <Example heading="Textarea Example" handlebars={FormControlTextareaExampleRaw}>
+      <Example heading="Textarea example" handlebars={FormControlTextareaExampleRaw}>
         {formControlTextareaExample}
       </Example>
     </Documentation>
