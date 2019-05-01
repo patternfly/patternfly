@@ -18,7 +18,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const pageComponentDefaultNavHeaderExample = PageComponentDefaultNavHeaderExample();
   const pageComponentExpandableNavExample = PageComponentExpandableNavExample();
   const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
@@ -27,7 +27,7 @@ export default () => {
   const headingText = 'Page Component Demo';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
       <Example
         heading="Page Component Default Nav Header Example"
         fullPageOnly="true"

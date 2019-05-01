@@ -13,7 +13,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const pageComponentNavVerticalExample = PageComponentNavVerticalExample();
   const pageComponentNavHorizontalExample = PageComponentNavHorizontalExample();
   const pageComponentFillExample = PageComponentFillExample();
@@ -22,7 +22,7 @@ export default () => {
   const variablesRoot = 'pf-c-page';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
       <Example heading="Page Component, Nav Vertical Example" handlebars={PageComponentNavVerticalExampleRaw}>
         {pageComponentNavVerticalExample}
       </Example>

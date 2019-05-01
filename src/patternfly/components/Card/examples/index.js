@@ -19,7 +19,7 @@ import CardHoverExample from './card-hover-example.hbs';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const cardBasicExample = CardBasicExample();
   const cardNoFooterExample = CardNoFooterExample();
   const cardNoHeaderExample = CardNoHeaderExample();
@@ -31,7 +31,7 @@ export default () => {
   const variablesRoot = 'pf-c-card';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
       </Example>

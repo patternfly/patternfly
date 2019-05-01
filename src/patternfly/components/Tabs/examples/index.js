@@ -43,7 +43,7 @@ import docs from '../docs/code.md';
 export const headingText = 'Tabs';
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const tabsPrimaryExample = TabsPrimaryExample();
   const tabsPrimaryOverflowExample = TabsPrimaryOverflowExample();
   const tabsSecondaryExample = TabsSecondaryExample();
@@ -54,7 +54,7 @@ export default () => {
   const variablesRoot = 'pf-c-tabs';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Primary Tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
         {tabsPrimaryExample}
       </Example>

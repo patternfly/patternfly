@@ -8,13 +8,13 @@ import '../skip-to-content.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const skipToContentExample = SkiptocontentExample();
   const headingText = 'Skip to content';
   const variablesRoot = 'pf-c-skip-to-content';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading="Skip to content" handlebars={skipToContentExampleRaw}>
         {skipToContentExample}
       </Example>

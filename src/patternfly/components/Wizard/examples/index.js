@@ -15,7 +15,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const wizardExample = WizardExample();
   const wizardExpandedExample = WizardExpandedExample();
   const wizardFinishedExample = WizardFinishedExample();
@@ -25,7 +25,7 @@ export default () => {
   const variablesRoot = 'pf-c-wizard';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Wizard" handlebars={wizardExampleRaw} fullPageOnly="true">
         {wizardExample}
       </Example>

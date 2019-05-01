@@ -17,7 +17,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const optionsMenuSingleExample = OptionsMenuSingleExample();
   const optionsMenuMultipleExample = OptionsMenuMultipleExample();
   const optionsMenuPlainExample = OptionsMenuPlainExample();
@@ -28,7 +28,7 @@ export default () => {
   const variablesRoot = 'pf-c-options-menu';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Options Menu - Single option"
         className="is-expanded-dropdown"

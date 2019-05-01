@@ -7,13 +7,13 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const ChipExample = chipExample();
   const headingText = 'Chip';
   const variablesRoot = 'pf-c-chip';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Chip" handlebars={ChipExampleRaw} className="is-light-preview">
         {ChipExample}
       </Example>

@@ -13,7 +13,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const paginationTopExample = PaginationTopExample();
   const paginationTopExpandedExample = PaginationTopExpandedExample();
   const paginationBottomExample = PaginationBottomExample();
@@ -21,7 +21,7 @@ export default () => {
   const variablesRoot = 'pf-c-pagination';
 
   return (
-    <Documentation docs={docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Pagination Top"
         handlebars={paginationTopExampleRaw}

@@ -34,7 +34,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const progressSimpleExample = ProgressSimpleExample();
   const progressSingleLineExample = ProgressSingleLineExample();
   const progressSmallExample = ProgressSmallExample();
@@ -53,7 +53,7 @@ export default () => {
   const variablesRoot = 'pf-c-progress';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Progress Simple" handlebars={progressSimpleExampleRaw}>
         {progressSimpleExample}
       </Example>

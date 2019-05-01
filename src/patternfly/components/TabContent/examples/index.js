@@ -7,13 +7,13 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const tabContentExample = TabcontentExample();
   const headingText = 'Tab Content';
   const variablesRoot = 'pf-c-tab-content';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Tab Content" handlebars={tabContentExampleRaw}>
         {tabContentExample}
       </Example>

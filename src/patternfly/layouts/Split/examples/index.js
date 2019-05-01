@@ -9,14 +9,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const split = Split();
   const splitGutters = SplitGutters();
   const headingText = 'Split';
   const variablesRoot = 'pf-l-split';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Split Example" handlebars={SplitRaw}>
         {split}
       </Example>

@@ -18,7 +18,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const ChipGroupToolbarCollapsedExample = chipGroupToolbarCollapsedExample();
   const ChipGroupToolbarExpandedExample = chipGroupToolbarExpandedExample();
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
@@ -27,7 +27,7 @@ export default () => {
   const variablesRoot = 'pf-c-chip-group';
 
   return (
-    <Documentation heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         heading="Chip Group Toolbar (Collapsed)"
         handlebars={ChipGroupToolbarCollapsedExampleRaw}

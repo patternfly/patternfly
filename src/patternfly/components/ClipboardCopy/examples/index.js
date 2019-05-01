@@ -9,14 +9,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const clipboardCopyNoExpansionExample = ClipboardCopyNoExpansionExample();
   const clipboardCopyExpansionExample = ClipboardCopyExpansionExample();
   const headingText = 'Copy to Clipboard';
   const variablesRoot = 'pf-c-clipboard-copy';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Copy to Clipboard No Expansion" handlebars={ClipboardCopyNoExpansionExampleRaw}>
         {clipboardCopyNoExpansionExample}
       </Example>

@@ -7,12 +7,12 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const brandSimpleExample = BrandSimpleExample();
   const headingText = 'Brand';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
       <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw}>
         {brandSimpleExample}
       </Example>

@@ -7,12 +7,12 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const floatSimpleExample = FloatSimpleExample();
   const headingText = 'Float';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
+    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Float Simple" handlebars={floatSimpleExampleRaw}>
         {floatSimpleExample}
       </Example>

@@ -26,7 +26,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dropdownExpanded = DropdownExpanded();
   const dropdownPanel = DropdownPanel();
   const dropdownCollapsed = DropdownCollapsed();
@@ -45,7 +45,7 @@ export default () => {
   };
 
   return (
-    <Documentation style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example className="is-expanded-dropdown" heading="Dropdown (expanded)" handlebars={DropdownExpandedRaw}>
         {dropdownExpanded}
       </Example>

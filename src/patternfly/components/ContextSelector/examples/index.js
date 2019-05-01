@@ -7,13 +7,13 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const contextselectorexample = ContextSelectorExample();
   const headingText = 'Context Selector';
   const variablesRoot = 'pf-c-context-selector';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Context Selector Example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
         {contextselectorexample}
       </Example>

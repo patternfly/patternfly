@@ -45,7 +45,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const tableSimpleExample = TableSimpleExample();
   const tableSortableExample = TableSortableExample();
   const tableExpandableExample = TableExpandableExample();
@@ -60,7 +60,7 @@ export default () => {
   const variablesRoot = 'pf-c-table';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Simple Table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
         {tableSimpleExample}
       </Example>

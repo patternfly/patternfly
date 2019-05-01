@@ -11,12 +11,12 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const simpleFormDemoExample = SimpleFormDemoExample();
   const horizontalFormDemoExample = HorizontalFormDemoExample();
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation data={props} docs={Docs}>
       <Example heading="Simple Form Demo" handlebars={simpleFormDemoExampleRaw}>
         {simpleFormDemoExample}
       </Example>

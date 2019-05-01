@@ -19,7 +19,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const toolbarSimpleExample = ToolbarSimpleExample();
   const toolbarExpandedExample = ToolbarExpandedExample();
   const toolbarPaginationExample = ToolbarPaginationExample();
@@ -31,7 +31,7 @@ export default () => {
   const variablesRoot = 'pf-c-toolbar';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading="Toolbar simple" handlebars={toolbarSimpleExampleRaw}>
         {toolbarSimpleExample}
       </Example>

@@ -14,14 +14,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dataListSimpleDemo = DataListSimpleDemo();
   const dataListActionableDemo = DataListActionableDemo();
   const dataListExpandableDemo = DataListExpandableDemo();
   const dataListSimpleWithoutPaginationDemo = DataListSimpleWithoutPaginationDemo();
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation data={props} docs={Docs}>
       <Example heading="Data List Simple Demo" fullPageOnly="true" handlebars={dataListSimpleDemoRaw}>
         {dataListSimpleDemo}
       </Example>

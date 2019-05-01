@@ -10,14 +10,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const alertTypes = AlertTypes();
   const alertVariations = AlertVariations();
   const headingText = 'Alert';
   const variablesRoot = 'pf-c-alert';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Alert Types" handlebars={AlertTypesRaw}>
         {alertTypes}
       </Example>

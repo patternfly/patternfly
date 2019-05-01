@@ -18,7 +18,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const popoverTopExample = PopoverTopExample();
   const popoverRightExample = PopoverRightExample();
   const popoverBottomExample = PopoverBottomExample();
@@ -28,7 +28,7 @@ export default () => {
   const variablesRoot = 'pf-c-popover';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Popover Top" handlebars={PopoverTopExampleRaw}>
         {popoverTopExample}
       </Example>

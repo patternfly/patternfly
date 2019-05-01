@@ -11,7 +11,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const levelTwo = LevelTwo();
   const levelThree = LevelThree();
   const levelGutters = LevelGutters();
@@ -19,7 +19,7 @@ export default () => {
   const variablesRoot = 'pf-l-level';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Level Example" description="(with 2 children)" handlebars={LevelTwoRaw}>
         {levelTwo}
       </Example>

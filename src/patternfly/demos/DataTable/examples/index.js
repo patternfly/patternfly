@@ -15,7 +15,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dataTableSimpleDemo = DataTableSimpleDemo();
   const dataTableSortableDemo = DataTableSortableDemo();
   const dataTableExpandableDemo = DataTableExpandableDemo();
@@ -25,7 +25,7 @@ export default () => {
   const headingText = 'Data Table Demo';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
       <Example heading="Data Table - Simple Demo" fullPageOnly="true" handlebars={DataTableSimpleDemoRaw}>
         {dataTableSimpleDemo}
       </Example>

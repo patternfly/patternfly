@@ -7,13 +7,13 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const bullseye = Bullseye();
   const headingText = 'Bullseye';
   const variablesRoot = 'pf-l-bullseye';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Bullseye Example" handlebars={BullseyeRaw}>
         {bullseye}
       </Example>

@@ -7,13 +7,13 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const labelExample = LabelExample();
   const headingText = 'Label';
   const variablesRoot = 'pf-c-label';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Label Component" handlebars={labelExampleRaw}>
         {labelExample}
       </Example>

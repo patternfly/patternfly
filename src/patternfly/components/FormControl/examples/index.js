@@ -11,7 +11,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const formControlInputExample = FormControlInputExample();
   const formControlSelectExample = FormControlSelectExample();
   const formControlTextareaExample = FormControlTextareaExample();
@@ -19,7 +19,7 @@ export default () => {
   const variablesRoot = 'pf-c-form-control';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Input Example" handlebars={FormControlInputExampleRaw}>
         {formControlInputExample}
       </Example>

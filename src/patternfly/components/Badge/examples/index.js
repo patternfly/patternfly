@@ -9,14 +9,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const badgeReadExample = BadgeReadExample();
   const badgeUnreadExample = BadgeUnreadExample();
   const headingText = 'Badge';
   const variablesRoot = 'pf-c-badge';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Read Badge" handlebars={BadgeReadExampleRaw}>
         {badgeReadExample}
       </Example>

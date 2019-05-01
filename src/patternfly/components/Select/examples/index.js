@@ -37,7 +37,7 @@ export const selectMultiTypeaheadExampleDoc = SelectMultiTypeaheadExampleDoc;
 export const selectCheckboxExampleDoc = SelectCheckboxExampleDoc;
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const selectSingleExample = SelectSingleExample();
   const selectSingleExpandedExample = SelectSingleExpandedExample();
   const selectSingleExpandedSelectedExample = SelectSingleExpandedSelectedExample();
@@ -54,7 +54,7 @@ export default () => {
   const variablesRoot = 'pf-c-select';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Select - Single" handlebars={SelectSingleExampleRaw}>
         {selectSingleExample}
       </Example>

@@ -31,7 +31,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const flexBasicExample = FlexBasicExample();
   const flexSpacingExample = FlexSpacingExample();
   const flexLayoutExample = FlexLayoutExample();
@@ -43,7 +43,7 @@ export default () => {
   const variablesRoot = 'pf-l-flex';
 
   return (
-    <Documentation
+    <Documentation data={props}
       docs={Docs}
       heading={headingText}
       variablesRoot={variablesRoot}

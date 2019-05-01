@@ -9,14 +9,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const gallery = Gallery();
   const galleryHasGutter = GalleryHasGutter();
   const headingText = 'Gallery';
   const variablesRoot = 'pf-l-gallery';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
       <Example heading="Gallery Example" handlebars={GalleryRaw}>
         {gallery}
       </Example>

@@ -25,14 +25,14 @@ import docs from '../docs/code.md';
 export const Docs = docs;
 export const headingText = 'Sizing';
 
-export default () => {
+export default (props) => {
   const sizingExampleWidthPercent = SizingExampleWidthPercent();
   const sizingExampleWidthViewport = SizingExampleWidthViewport();
   const sizingExampleHeightPercent = SizingExampleHeightPercent();
   const sizingExampleHeightViewport = SizingExampleHeightViewport();
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
+    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
       <Example
         heading="Width -  base and percentage units"
         handlebars={sizingExampleWidthPercentRaw}

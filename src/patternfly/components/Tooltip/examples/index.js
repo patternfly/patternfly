@@ -16,7 +16,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const tooltipTopExample = TooltipTopExample();
   const tooltipRightExample = TooltipRightExample();
   const tooltipBottomExample = TooltipBottomExample();
@@ -25,7 +25,7 @@ export default () => {
   const variablesRoot = 'pf-c-tooltip';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example className="is-tooltip" heading="Tooltip Top" handlebars={TooltipTopExampleRaw}>
         {tooltipTopExample}
       </Example>

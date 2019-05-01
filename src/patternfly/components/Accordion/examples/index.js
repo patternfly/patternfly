@@ -9,14 +9,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const accordionFluidExample = AccordionFluidExample();
   const accordionFixedExample = AccordionFixedExample();
   const headingText = 'Accordion';
   const variablesRoot = 'pf-c-accordion';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Accordion Fluid Example" handlebars={accordionFluidExampleRaw}>
         {accordionFluidExample}
       </Example>

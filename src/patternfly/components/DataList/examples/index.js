@@ -20,7 +20,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dataListSimpleExample = DataListSimpleExample();
   const dataListCheckActionExample = DataListCheckActionExample();
   const dataListExpandableExample = DataListExpandableExample();
@@ -29,7 +29,7 @@ export default () => {
   const variablesRoot = 'pf-c-data-list';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Data List Simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
         {dataListSimpleExample}
       </Example>

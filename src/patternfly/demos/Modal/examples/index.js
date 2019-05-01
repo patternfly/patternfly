@@ -11,14 +11,14 @@ import ModalLgExample from './modal-lg-example.hbs';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const modalExample = ModalExample();
   const modalScrollExample = ModalScrollExample();
   const modalLgExample = ModalLgExample();
   const headingText = 'Modal Demo';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
       <Example heading="Modal Demo" fullPageOnly="true" handlebars={ModalExampleRaw}>
         {modalExample}
       </Example>

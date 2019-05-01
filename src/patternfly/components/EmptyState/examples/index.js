@@ -11,7 +11,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const emptyStateSimpleExample = EmptystateSimpleExample();
   const emptyStateSmallExample = EmptystateSmallExample();
   const emptyStateLargeExample = EmptystateLargeExample();
@@ -19,7 +19,7 @@ export default () => {
   const variablesRoot = 'pf-c-empty-state';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Empty State" handlebars={emptyStateSimpleExampleRaw}>
         {emptyStateSimpleExample}
       </Example>
