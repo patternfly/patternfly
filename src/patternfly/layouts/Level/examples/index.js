@@ -20,13 +20,13 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Level Example" description="(with 2 children)" handlebars={LevelTwoRaw}>
+      <Example heading="Level example" description="(with 2 children)" handlebars={LevelTwoRaw}>
         {levelTwo}
       </Example>
-      <Example heading="Level Example" description="(with 3 children)" handlebars={LevelThreeRaw}>
+      <Example heading="Level example" description="(with 3 children)" handlebars={LevelThreeRaw}>
         {levelThree}
       </Example>
-      <Example heading="Level Example with Gutters" description="(with 3 children)" handlebars={LevelGuttersRaw}>
+      <Example heading="Level example with gutters" description="(with 3 children)" handlebars={LevelGuttersRaw}>
         {levelGutters}
       </Example>
     </Documentation>

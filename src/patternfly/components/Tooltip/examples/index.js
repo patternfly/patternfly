@@ -26,16 +26,16 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example className="is-tooltip" heading="Tooltip Top" handlebars={TooltipTopExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip top" handlebars={TooltipTopExampleRaw}>
         {tooltipTopExample}
       </Example>
-      <Example className="is-tooltip" heading="Tooltip Right" handlebars={TooltipRightExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip right" handlebars={TooltipRightExampleRaw}>
         {tooltipRightExample}
       </Example>
-      <Example className="is-tooltip" heading="Tooltip Bottom" handlebars={TooltipBottomExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip bottom" handlebars={TooltipBottomExampleRaw}>
         {tooltipBottomExample}
       </Example>
-      <Example className="is-tooltip" heading="Tooltip Left" handlebars={TooltipLeftExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip left" handlebars={TooltipLeftExampleRaw}>
         {tooltipLeftExample}
       </Example>
     </Documentation>

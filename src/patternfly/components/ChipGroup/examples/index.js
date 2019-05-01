@@ -29,14 +29,14 @@ export default (props) => {
   return (
     <Documentation data={props} heading={headingText} variablesRoot={variablesRoot}>
       <Example
-        heading="Chip Group Toolbar (Collapsed)"
+        heading="Chip group toolbar (collapsed)"
         handlebars={ChipGroupToolbarCollapsedExampleRaw}
         className="is-light-preview"
       >
         {ChipGroupToolbarCollapsedExample}
       </Example>
       <Example
-        heading="Chip Group Toolbar (Expanded)"
+        heading="Chip group toolbar (expanded)"
         handlebars={ChipGroupToolbarExpandedExampleRaw}
         className="is-light-preview"
         docs={chipGroupToolbarDoc}
@@ -44,14 +44,14 @@ export default (props) => {
         {ChipGroupToolbarExpandedExample}
       </Example>
       <Example
-        heading="Chip Group Multi-Select (Collapsed)"
+        heading="Chip group multi-select (collapsed)"
         handlebars={ChipGroupSelectCollapsedExampleRaw}
         className="is-light-preview"
       >
         {ChipGroupSelectCollapsedExample}
       </Example>
       <Example
-        heading="Chip Group Multi-Select (Expanded)"
+        heading="Chip group multi-select (expanded)"
         handlebars={ChipGroupSelectExpandedExampleRaw}
         className="is-light-preview"
         docs={chipGroupMultiSelectDoc}

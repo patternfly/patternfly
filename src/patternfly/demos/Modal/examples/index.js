@@ -19,17 +19,17 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="Modal Demo" fullPageOnly="true" handlebars={ModalExampleRaw}>
+      <Example heading="Modal demo" fullPageOnly="true" handlebars={ModalExampleRaw}>
         {modalExample}
       </Example>
       <Example
-        heading="Modal Demo - Content long enough to scroll"
+        heading="Modal demo - content long enough to scroll"
         fullPageOnly="true"
         handlebars={ModalScrollExampleRaw}
       >
         {modalScrollExample}
       </Example>
-      <Example heading="Modal Demo - Large" fullPageOnly="true" handlebars={ModalLgExampleRaw}>
+      <Example heading="Modal demo - large" fullPageOnly="true" handlebars={ModalLgExampleRaw}>
         {modalLgExample}
       </Example>
     </Documentation>

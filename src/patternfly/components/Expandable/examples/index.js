@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Hidden Example" handlebars={expandableHiddenExampleRaw}>
+      <Example heading="Hidden example" handlebars={expandableHiddenExampleRaw}>
         {expandableHiddenExample}
       </Example>
-      <Example heading="Expanded Example" handlebars={expandableExpandedExampleRaw}>
+      <Example heading="Expanded example" handlebars={expandableExpandedExampleRaw}>
         {expandableExpandedExample}
       </Example>
     </Documentation>

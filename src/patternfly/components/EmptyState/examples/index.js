@@ -20,13 +20,13 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Empty State" handlebars={emptyStateSimpleExampleRaw}>
+      <Example heading="Empty state" handlebars={emptyStateSimpleExampleRaw}>
         {emptyStateSimpleExample}
       </Example>
-      <Example heading="Empty State Small" handlebars={emptyStateSmallExampleRaw}>
+      <Example heading="Empty state small" handlebars={emptyStateSmallExampleRaw}>
         {emptyStateSmallExample}
       </Example>
-      <Example heading="Empty State Large" handlebars={emptyStateLargeExampleRaw}>
+      <Example heading="Empty state large" handlebars={emptyStateLargeExampleRaw}>
         {emptyStateLargeExample}
       </Example>
     </Documentation>

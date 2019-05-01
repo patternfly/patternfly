@@ -23,16 +23,16 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Button Types" handlebars={ButtonTypesTemplateRaw}>
+      <Example heading="Button types" handlebars={ButtonTypesTemplateRaw}>
         {buttonTypesTemplate}
       </Example>
-      <Example heading="Button States" handlebars={ButtonStatesTemplateRaw}>
+      <Example heading="Button states" handlebars={ButtonStatesTemplateRaw}>
         {buttonStatesTemplate}
       </Example>
-      <Example heading="Links as Buttons" handlebars={ButtonLinkExampleRaw}>
+      <Example heading="Links as buttons" handlebars={ButtonLinkExampleRaw}>
         {buttonLinkExample}
       </Example>
-      <Example heading="Button (Block Level)" handlebars={ButtonBlockTemplateRaw}>
+      <Example heading="Button (block level)" handlebars={ButtonBlockTemplateRaw}>
         {buttonBlockTemplate}
       </Example>
     </Documentation>

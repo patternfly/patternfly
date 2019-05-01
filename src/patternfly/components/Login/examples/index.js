@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Login Simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw}>
+      <Example heading="Login simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw}>
         {loginSimpleExample}
       </Example>
-      <Example heading="Login Invalid" fullPageOnly="true" handlebars={loginInvalidExampleRaw}>
+      <Example heading="Login invalid" fullPageOnly="true" handlebars={loginInvalidExampleRaw}>
         {loginInvalidExample}
       </Example>
     </Documentation>

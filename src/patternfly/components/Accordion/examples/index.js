@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Accordion Fluid Example" handlebars={accordionFluidExampleRaw}>
+      <Example heading="Accordion fluid example" handlebars={accordionFluidExampleRaw}>
         {accordionFluidExample}
       </Example>
-      <Example heading="Accordion Fixed Example" handlebars={accordionFixedExampleRaw}>
+      <Example heading="Accordion fixed example" handlebars={accordionFixedExampleRaw}>
         {accordionFixedExample}
       </Example>
     </Documentation>

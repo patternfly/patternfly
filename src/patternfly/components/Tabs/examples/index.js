@@ -55,27 +55,27 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Primary Tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
+      <Example heading="Primary tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
         {tabsPrimaryExample}
       </Example>
       <Example
-        heading="Primary Tabs Overflow"
+        heading="Primary tabs overflow"
         handlebars={tabsPrimaryOverflowExampleRaw}
         docs={tabsPrimaryOverflowDocs}
       >
         {tabsPrimaryOverflowExample}
       </Example>
-      <Example heading="Secondary Tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
+      <Example heading="Secondary tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
         {tabsSecondaryExample}
       </Example>
       <Example
-        heading="Secondary Tabs Overflow"
+        heading="Secondary tabs overflow"
         handlebars={tabsSecondaryOverflowExampleRaw}
         docs={tabsSecondaryOverflowDocs}
       >
         {tabsSecondaryOverflowExample}
       </Example>
-      <Example heading="Primary Tabs with Secondary Tabs" handlebars={tabsPrimarySecondaryExampleRaw}>
+      <Example heading="Primary tabs with secondary tabs" handlebars={tabsPrimarySecondaryExampleRaw}>
         {tabsPrimarySecondaryExample}
       </Example>
       <Example heading="Filled tabs" handlebars={tabsFilledExampleRaw} docs={tabsFilledDocs}>

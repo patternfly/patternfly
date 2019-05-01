@@ -60,23 +60,23 @@ export default (props) => {
       </Example>
       <Example
         className="is-expanded-dropdown is-align-right"
-        heading="Kebab Align Right"
+        heading="Kebab align right"
         handlebars={DropdownKebabAlignRightRaw}>
         {dropdownKebabAlignRight}
       </Example>
-      <Example className="is-expanded-dropdown is-align-right" heading="Align Right" handlebars={DropdownAlignRightRaw}>
+      <Example className="is-expanded-dropdown is-align-right" heading="Align right" handlebars={DropdownAlignRightRaw}>
         {dropdownAlignRight}
       </Example>
       <Example className="is-expanded-top" heading="Top" handlebars={DropdownTopRaw}>
         {dropdownTop}
       </Example>
-      <Example className="is-expanded-dropdown" heading="Split Button" handlebars={DropdownSplitButtonRaw}>
+      <Example className="is-expanded-dropdown" heading="Split button" handlebars={DropdownSplitButtonRaw}>
         {dropdownSplitButton}
       </Example>
-      <Example minHeight="25em" heading="Dropdown with Groups" handlebars={DropdownGroupsRaw}>
+      <Example minHeight="25em" heading="Dropdown with groups" handlebars={DropdownGroupsRaw}>
         {dropdownGroups}
       </Example>
-      <Example className="is-expanded-dropdown" heading="Dropdown Panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
+      <Example className="is-expanded-dropdown" heading="Dropdown panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
         {dropdownPanel}
       </Example>
     </Documentation>

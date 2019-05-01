@@ -13,7 +13,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Float Simple" handlebars={floatSimpleExampleRaw}>
+      <Example heading="Float simple" handlebars={floatSimpleExampleRaw}>
         {floatSimpleExample}
       </Example>
     </Documentation>

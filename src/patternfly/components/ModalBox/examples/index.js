@@ -23,16 +23,16 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="ModalBox Basic Example" handlebars={ModalBoxBasicExampleRaw}>
+      <Example heading="Modalbox basic example" handlebars={ModalBoxBasicExampleRaw}>
         {modalBoxBasicExample}
       </Example>
-      <Example heading="ModalBox Small Example" handlebars={ModalBoxSmExampleRaw}>
+      <Example heading="Modalbox small example" handlebars={ModalBoxSmExampleRaw}>
         {modalBoxSmExample}
       </Example>
-      <Example heading="ModalBox Large Example" handlebars={ModalBoxLgExampleRaw}>
+      <Example heading="Modalbox large example" handlebars={ModalBoxLgExampleRaw}>
         {modalBoxLgExample}
       </Example>
-      <Example heading="ModalBox No Header Example" handlebars={ModalBoxNoHeaderExampleRaw}>
+      <Example heading="Modalbox no header example" handlebars={ModalBoxNoHeaderExampleRaw}>
         {modalBoxNoHeaderExample}
       </Example>
     </Documentation>

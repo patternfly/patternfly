@@ -30,24 +30,24 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Data List Simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
+      <Example heading="Data list simple" handlebars={DataListSimpleExampleRaw} docs={DataListSimpleExampleDoc}>
         {dataListSimpleExample}
       </Example>
       <Example
-        heading="Data List Checkboxes, Actions and Additional Cells"
+        heading="Data list checkboxes, actions and additional cells"
         handlebars={DataListCheckActionExampleRaw}
         docs={DataListCheckActionExampleDoc}
       >
         {dataListCheckActionExample}
       </Example>
       <Example
-        heading="Data List Expandable"
+        heading="Data list expandable"
         handlebars={DataListExpandableExampleRaw}
         docs={DataListExpandableExampleDoc}
       >
         {dataListExpandableExample}
       </Example>
-      <Example heading="Data List Width Modifiers" handlebars={DataListWidthExampleRaw} docs={DataListWidthExampleDoc}>
+      <Example heading="Data list width modifiers" handlebars={DataListWidthExampleRaw} docs={DataListWidthExampleDoc}>
         {dataListWidthExample}
       </Example>
     </Documentation>

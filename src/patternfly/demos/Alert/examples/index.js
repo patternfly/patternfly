@@ -16,7 +16,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="Toast Alert Demo" fullPageOnly="true" handlebars={AlertToastExampleRaw}>
+      <Example heading="Toast alert demo" fullPageOnly="true" handlebars={AlertToastExampleRaw}>
         {alertToastExample}
       </Example>
     </Documentation>

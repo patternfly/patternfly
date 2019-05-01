@@ -26,10 +26,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Inline Alert Group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
+      <Example heading="Inline alert group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
         {alertGroupExample}
       </Example>
-      <Example heading="Toast Alert Group" fullPageOnly="true" handlebars={toastGroupExampleRaw} docs={toastGroupDocs}>
+      <Example heading="Toast alert group" fullPageOnly="true" handlebars={toastGroupExampleRaw} docs={toastGroupDocs}>
         {toastGroupExample}
       </Example>
     </Documentation>

@@ -24,11 +24,11 @@ export default (props) => {
       <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw}>
         {breadcrumbExample}
       </Example>
-      <Example heading="Breadcrumb without Home Link" handlebars={breadcrumbWithoutHomeLinkRaw}>
+      <Example heading="Breadcrumb without home link" handlebars={breadcrumbWithoutHomeLinkRaw}>
         {breadcrumbWithoutHomeLink}
       </Example>
       <Example
-        heading="Breadcrumb with Heading"
+        heading="Breadcrumb with heading"
         handlebars={breadcrumbWithTitleExampleRaw}
         docs={breadcrumbWithTitleExampleDoc}
       >

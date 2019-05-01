@@ -14,7 +14,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Inputgroup Example" handlebars={InputgroupExampleRaw}>
+      <Example heading="Inputgroup example" handlebars={InputgroupExampleRaw}>
         {inputGroupExample}
       </Example>
     </Documentation>

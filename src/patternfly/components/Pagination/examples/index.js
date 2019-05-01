@@ -23,18 +23,18 @@ export default (props) => {
   return (
     <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
-        heading="Pagination Top"
+        heading="Pagination top"
         handlebars={paginationTopExampleRaw}
         fullPageOnly="true"
         docs={paginationTopExampleDoc}
       >
         {paginationTopExample}
       </Example>
-      <Example heading="Pagination Top Expanded" handlebars={paginationTopExpandedExampleRaw} fullPageOnly="true">
+      <Example heading="Pagination top expanded" handlebars={paginationTopExpandedExampleRaw} fullPageOnly="true">
         {paginationTopExpandedExample}
       </Example>
       <Example
-        heading="Pagination Bottom"
+        heading="Pagination bottom"
         handlebars={paginationBottomExampleRaw}
         fullPageOnly="true"
         docs={paginationBottomExampleDoc}

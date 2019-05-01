@@ -23,10 +23,10 @@ export default (props) => {
       <Example heading="Switch" handlebars={SwitchExampleRaw}>
         {switchExample}
       </Example>
-      <Example heading="Switch No Label" handlebars={SwitchNoLabelExampleRaw}>
+      <Example heading="Switch no label" handlebars={SwitchNoLabelExampleRaw}>
         {switchNoLabelExample}
       </Example>
-      <Example heading="Switch Disabled" handlebars={SwitchDisabledExampleRaw}>
+      <Example heading="Switch disabled" handlebars={SwitchDisabledExampleRaw}>
         {switchDisabledExample}
       </Example>
     </Documentation>

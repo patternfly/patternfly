@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Gallery Example" handlebars={GalleryRaw}>
+      <Example heading="Gallery example" handlebars={GalleryRaw}>
         {gallery}
       </Example>
-      <Example heading="Gallery Example with gutter" handlebars={GalleryHasGutterRaw}>
+      <Example heading="Gallery example with gutter" handlebars={GalleryHasGutterRaw}>
         {galleryHasGutter}
       </Example>
     </Documentation>

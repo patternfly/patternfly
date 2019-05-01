@@ -23,21 +23,21 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
-      <Example heading="Page Component, Nav Vertical Example" handlebars={PageComponentNavVerticalExampleRaw}>
+      <Example heading="Page component, nav vertical example" handlebars={PageComponentNavVerticalExampleRaw}>
         {pageComponentNavVerticalExample}
       </Example>
-      <Example heading="Page Component, Nav Horizontal Example" handlebars={PageComponentNavHorizontalExampleRaw}>
+      <Example heading="Page component, nav horizontal example" handlebars={PageComponentNavHorizontalExampleRaw}>
         {pageComponentNavHorizontalExample}
       </Example>
       <Example
-        heading="Page Component, Fill/No Fill Example"
+        heading="Page component, fill/no fill example"
         handlebars={PageComponentFillExampleRaw}
         className="is-extra-tall-body"
       >
         {pageComponentFillExample}
       </Example>
       <Example
-        heading="Page Component Main Section Padding Modifiers"
+        heading="Page component main section padding modifiers"
         handlebars={PageComponentMainSectionModifiersRaw}
       >
         {pageComponentMainSectionModifiersExample}

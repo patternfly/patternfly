@@ -12,7 +12,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="About Modal Example" fullPageOnly="true">
+      <Example heading="About modal example" fullPageOnly="true">
         {aboutModalExample}
       </Example>
     </Documentation>

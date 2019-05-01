@@ -14,7 +14,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Context Selector Example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
+      <Example heading="Context selector example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
         {contextselectorexample}
       </Example>
     </Documentation>

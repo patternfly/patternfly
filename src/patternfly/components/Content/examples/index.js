@@ -14,7 +14,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Content Example" handlebars={ContentTemplateRaw}>
+      <Example heading="Content example" handlebars={ContentTemplateRaw}>
         {contentTemplate}
       </Example>
     </Documentation>

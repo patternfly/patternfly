@@ -15,7 +15,7 @@ export default (props) => {
     <Documentation data={props} docs={Docs} heading={headingText}>
       <Example
         className="box-shadow"
-        heading="Boxshadow Utility"
+        heading="Boxshadow utility"
         handlebars={boxShadowSimpleExampleRaw}
         minHeight="20em"
       >

@@ -17,11 +17,11 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Stack Example" handlebars={StackRaw} minHeight="30em" className="is-height-flex-column-grow">
+      <Example heading="Stack example" handlebars={StackRaw} minHeight="30em" className="is-height-flex-column-grow">
         {stack}
       </Example>
       <Example
-        heading="Stack Example with Gutter"
+        heading="Stack example with gutter"
         handlebars={StackHasGutterRaw}
         minHeight="30em"
         className="is-height-flex-column-grow"

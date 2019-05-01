@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Read Badge" handlebars={BadgeReadExampleRaw}>
+      <Example heading="Read badge" handlebars={BadgeReadExampleRaw}>
         {badgeReadExample}
       </Example>
-      <Example heading="Unread Badge" handlebars={BadgeUnreadExampleRaw}>
+      <Example heading="Unread badge" handlebars={BadgeUnreadExampleRaw}>
         {badgeUnreadExample}
       </Example>
     </Documentation>

@@ -40,7 +40,7 @@ export default (props) => {
       </Example>
       <Example
         fullPageOnly="true"
-        heading="Toolbar w/ Pagination and expanded menus for bulk selector, sort, action menu, and pagination"
+        heading="Toolbar w/ pagination and expanded menus for bulk selector, sort, action menu, and pagination"
         handlebars={toolbarExpandedExampleRaw}
       >
         {toolbarExpandedExample}

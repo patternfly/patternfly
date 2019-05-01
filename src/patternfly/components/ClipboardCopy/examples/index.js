@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Copy to Clipboard No Expansion" handlebars={ClipboardCopyNoExpansionExampleRaw}>
+      <Example heading="Copy to clipboard no expansion" handlebars={ClipboardCopyNoExpansionExampleRaw}>
         {clipboardCopyNoExpansionExample}
       </Example>
-      <Example heading="Copy to Clipboard Expansion" handlebars={ClipboardCopyExpansionExampleRaw} minHeight="20em">
+      <Example heading="Copy to clipboard expansion" handlebars={ClipboardCopyExpansionExampleRaw} minHeight="20em">
         {clipboardCopyExpansionExample}
       </Example>
     </Documentation>

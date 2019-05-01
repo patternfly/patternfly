@@ -14,7 +14,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Bullseye Example" handlebars={BullseyeRaw}>
+      <Example heading="Bullseye example" handlebars={BullseyeRaw}>
         {bullseye}
       </Example>
     </Documentation>

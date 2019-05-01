@@ -18,10 +18,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Alert Types" handlebars={AlertTypesRaw}>
+      <Example heading="Alert types" handlebars={AlertTypesRaw}>
         {alertTypes}
       </Example>
-      <Example heading="Alert Variations" handlebars={AlertVariationsRaw}>
+      <Example heading="Alert variations" handlebars={AlertVariationsRaw}>
         {alertVariations}
       </Example>
     </Documentation>

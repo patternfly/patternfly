@@ -13,7 +13,7 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw}>
+      <Example heading="Brand simple" handlebars={brandSimpleExampleRaw}>
         {brandSimpleExample}
       </Example>
     </Documentation>

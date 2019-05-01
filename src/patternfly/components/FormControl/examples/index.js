@@ -20,13 +20,13 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Input Example" handlebars={FormControlInputExampleRaw}>
+      <Example heading="Input example" handlebars={FormControlInputExampleRaw}>
         {formControlInputExample}
       </Example>
-      <Example heading="Select Example" handlebars={FormControlSelectExampleRaw}>
+      <Example heading="Select example" handlebars={FormControlSelectExampleRaw}>
         {formControlSelectExample}
       </Example>
-      <Example heading="Textarea Example" handlebars={FormControlTextareaExampleRaw}>
+      <Example heading="Textarea example" handlebars={FormControlTextareaExampleRaw}>
         {formControlTextareaExample}
       </Example>
     </Documentation>
