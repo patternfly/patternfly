@@ -83,7 +83,7 @@
     "gatsby-remark-prismjs": "^3.1.4",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-json": "^2.1.6",
-    "gatsby-transformer-remark": "^2.1.15",
+    "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.17",
     "gatsby-transformer-yaml": "^2.1.11",
     "glob": "^7.1.2",

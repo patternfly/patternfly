@@ -1,7 +1,7 @@
 
-<mark>**All simple table accessibility and usage requirements apply**</mark>
+**All simple table accessibility and usage requirements apply**
 <br>
-<mark>**All sortable table accessibility and usage requirements apply**</mark>
+**All sortable table accessibility and usage requirements apply**
 <br>
 
 Note: When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
