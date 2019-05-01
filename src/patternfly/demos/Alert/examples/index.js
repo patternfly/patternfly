@@ -12,7 +12,7 @@ export const Docs = docs;
 export default (props) => {
   const alertToastExample = AlertToastExample();
 
-  const headingText = 'Alert Component Demo';
+  const headingText = 'Alert component demo';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>

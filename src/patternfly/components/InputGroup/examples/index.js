@@ -9,7 +9,7 @@ export const Docs = docs;
 
 export default (props) => {
   const inputGroupExample = InputgroupExample();
-  const headingText = 'Input Group';
+  const headingText = 'Input group';
   const variablesRoot = 'pf-c-input-group';
 
   return (

@@ -9,7 +9,7 @@ export const Docs = docs;
 
 export default (props) => {
   const contextselectorexample = ContextSelectorExample();
-  const headingText = 'Context Selector';
+  const headingText = 'Context selector';
   const variablesRoot = 'pf-c-context-selector';
 
   return (

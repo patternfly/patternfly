@@ -23,7 +23,7 @@ export default (props) => {
   const ChipGroupToolbarExpandedExample = chipGroupToolbarExpandedExample();
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
   const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
-  const headingText = 'Chip Group';
+  const headingText = 'Chip group';
   const variablesRoot = 'pf-c-chip-group';
 
   return (

@@ -18,7 +18,7 @@ export default (props) => {
   const modalBoxSmExample = ModalBoxSmExample();
   const modalBoxLgExample = ModalBoxLgExample();
   const modalBoxNoHeaderExample = ModalBoxNoHeaderExample();
-  const headingText = 'Modal Box';
+  const headingText = 'Modal box';
   const variablesRoot = 'pf-c-modal-box';
 
   return (

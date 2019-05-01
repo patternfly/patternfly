@@ -9,7 +9,7 @@ export const Docs = docs;
 
 export default (props) => {
   const backgroundImage = BackgroundImage();
-  const headingText = 'Background Image';
+  const headingText = 'Background image';
   const variablesRoot = 'pf-c-background-image';
 
   return (

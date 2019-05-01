@@ -8,7 +8,7 @@ export const Docs = docs;
 
 export default (props) => {
   const aboutModalExample = AboutModalExample();
-  const headingText = 'About Modal Demo';
+  const headingText = 'About modal demo';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>

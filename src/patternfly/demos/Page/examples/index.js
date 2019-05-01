@@ -24,7 +24,7 @@ export default (props) => {
   const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
   const pageComponentTertiaryNavExample = PageComponentTertiaryNavExample();
   const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
-  const headingText = 'Page Component Demo';
+  const headingText = 'Page component demo';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>

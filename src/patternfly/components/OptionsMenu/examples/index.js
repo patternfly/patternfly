@@ -24,7 +24,7 @@ export default (props) => {
   const optionsMenuTopExample = OptionsMenuTopExample();
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
   const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
-  const headingText = 'Options Menu';
+  const headingText = 'Options menu';
   const variablesRoot = 'pf-c-options-menu';
 
   return (

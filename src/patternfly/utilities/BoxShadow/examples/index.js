@@ -9,7 +9,7 @@ export const Docs = docs;
 
 export default (props) => {
   const boxShadowSimpleExample = BoxshadowSimpleExample();
-  const headingText = 'Box Shadow';
+  const headingText = 'Box shadow';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>

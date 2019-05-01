@@ -22,7 +22,7 @@ export default (props) => {
   const dataTableCompactDemo = DataTableCompactDemo();
   const dataTableCompoundExpansionDemo = DataTableCompoundExpansionDemo();
 
-  const headingText = 'Data Table Demo';
+  const headingText = 'Data table demo';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>

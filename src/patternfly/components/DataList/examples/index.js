@@ -25,7 +25,7 @@ export default (props) => {
   const dataListCheckActionExample = DataListCheckActionExample();
   const dataListExpandableExample = DataListExpandableExample();
   const dataListWidthExample = DataListWidthExample();
-  const headingText = 'Data List';
+  const headingText = 'Data list';
   const variablesRoot = 'pf-c-data-list';
 
   return (

@@ -15,7 +15,7 @@ export default (props) => {
   const modalExample = ModalExample();
   const modalScrollExample = ModalScrollExample();
   const modalLgExample = ModalLgExample();
-  const headingText = 'Modal Demo';
+  const headingText = 'Modal demo';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>

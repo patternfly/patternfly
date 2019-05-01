@@ -15,7 +15,7 @@ export default (props) => {
   const emptyStateSimpleExample = EmptystateSimpleExample();
   const emptyStateSmallExample = EmptystateSmallExample();
   const emptyStateLargeExample = EmptystateLargeExample();
-  const headingText = 'Empty State';
+  const headingText = 'Empty state';
   const variablesRoot = 'pf-c-empty-state';
 
   return (

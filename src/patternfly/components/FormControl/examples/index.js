@@ -15,7 +15,7 @@ export default (props) => {
   const formControlInputExample = FormControlInputExample();
   const formControlSelectExample = FormControlSelectExample();
   const formControlTextareaExample = FormControlTextareaExample();
-  const headingText = 'Form Control';
+  const headingText = 'Form control';
   const variablesRoot = 'pf-c-form-control';
 
   return (

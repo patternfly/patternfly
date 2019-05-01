@@ -12,7 +12,7 @@ export const Docs = docs;
 export default (props) => {
   const AppLauncherCollapsedExample = ApplauncherCollapsedExample();
   const AppLauncherExpandedExample = ApplauncherExpandedExample();
-  const headingText = 'App Launcher';
+  const headingText = 'App launcher';
   const variablesRoot = 'pf-c-app-launcher';
 
   return (

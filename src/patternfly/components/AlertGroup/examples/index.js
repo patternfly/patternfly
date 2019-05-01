@@ -16,7 +16,7 @@ import toastGroupDocs from '../docs/toast-group.md';
 
 import docs from '../docs/code.md';
 
-export const headingText = 'Alert Group';
+export const headingText = 'Alert group';
 export const Docs = docs;
 
 export default (props) => {

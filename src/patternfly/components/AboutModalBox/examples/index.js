@@ -8,7 +8,7 @@ export const Docs = docs;
 
 export default (props) => {
   const aboutModalBoxExample = AboutModalBoxExample();
-  const headingText = 'About Modal Box';
+  const headingText = 'About modal box';
   const variablesRoot = 'pf-c-about-modal-box';
 
   return (
