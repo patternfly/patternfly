@@ -1,6 +1,6 @@
 ## Modifiers
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-flex{-on-[breakpoint]}` | `.pf-l-flex` | Initializes or resets display property to flex. |
 | `.pf-m-inline-flex{-on-[breakpoint]}` | `.pf-l-flex` | Modifies display property to inline-flex. |

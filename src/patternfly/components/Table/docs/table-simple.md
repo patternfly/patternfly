@@ -1,5 +1,5 @@
 ### Accessibility
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
 | `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
@@ -7,7 +7,7 @@
 
 ### Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |

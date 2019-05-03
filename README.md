@@ -29,7 +29,7 @@ To setup the PatternFly 4 development environment:
 
 After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
 
-## Set PatternFly 4 IP Address
+## Set PatternFly 4 IP address
 
 If Gatsby needs to run on local IP for testing on other machines or devices use `npm run dev:expose` which sets host to `0.0.0.0`.
 If you want to set host to a specific IP address for example `172.17.12.1` run `npm run dev -H 172.17.12.1`.
@@ -58,18 +58,18 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 *To view visit http://localhost:8000/demos/<name>*
 
-## Guidelines for CSS Development
+## Guidelines for CSS development
 
 - For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://pf4.patternfly.org, and information detailing the change.
 - If global variables are modified in Core, a React issue should be opened to address this.
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
-## Testing for Accessibility
+## Testing for accessibility
 
-PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility Guide](https://pf4.patternfly.org/accessibility-guide).
+PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility guide](https://pf4.patternfly.org/accessibility-guide).
 
-### How to Perform an Accessibility Audit with aXe
+### How to perform an accessibility audit with aXe
 aXe is available as either a browser extension or npm script.
 
 To run the a11y audit locally:
@@ -82,7 +82,7 @@ The tool is configured to return WCAG 2.0 AA violations for the full page render
 
 The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
-### Fixing Violations
+### Fixing violations
 
 Ignore the violations that aren’t related to your contribution.
 
@@ -98,7 +98,7 @@ If you have any suggestions about ways that we can improve how we use this tool,
 [How do I use CSS variables to customize
 the library?](https://pf4.patternfly.org/guidelines#variables)
 
-#### Browser Support
+#### Browser support
 PatternFly 4 is supported on the latest version of the following browsers:
 - Chrome
 - Firefox

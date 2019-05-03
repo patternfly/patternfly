@@ -1,5 +1,5 @@
 .pf-c-expandable {
-  // Expandable Toggle
+  // Expandable toggle
   --pf-c-expandable__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-expandable__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-expandable__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -11,11 +11,11 @@
   --pf-c-expandable__toggle--focus--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable__toggle--m-expanded--Color: var(--pf-global--link--Color--hover);
 
-  // Expandable Toggle Icon
+  // Expandable toggle icon
   --pf-c-expandable__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-expandable__toggle-icon--Color: var(--pf-global--Color--100);
 
-  // Expandable Expanded
+  // Expandable expanded
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--md);
 
   &.pf-m-expanded {

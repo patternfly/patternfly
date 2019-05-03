@@ -10,14 +10,14 @@ For example for buttons: Always add a modifier class to add color to the button.
  -->
 <!-- ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-u-accessibility` |  accessibility notes. | -->
 
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
 | `.pf-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-u-screen-reader` and `.pf-screen-reader` |

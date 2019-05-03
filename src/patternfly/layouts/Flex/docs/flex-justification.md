@@ -1,6 +1,6 @@
 # Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-justify-content-flex-end{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing. |
 | `.pf-m-justify-content-flex-space-between{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing. |

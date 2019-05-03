@@ -26,7 +26,7 @@ The Flex layout is designed to achieve simple, flexbox layouts by eliminating th
 - It contains multiple css declarations and does not use the !important tag.
 - Does not require wrapping elements in columns or rows.
 - Break dependency upon adding utility classes to each child.
-- It can be applied to container elements OR components.
+- It can be applied to container elements or components.
 
 <br>
 # The CSS approach, by keeping specificity low on base class properties and resetting css variable values at higher specificities, allows any spacer property to be overwritten with a single selector (specificity of 10 or greater).

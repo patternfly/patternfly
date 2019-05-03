@@ -1,16 +1,16 @@
-# Contribution Guidelines
+# Contribution guidelines
 
-[Component, Layout, Demo Creation](#component-layout-demo-creation)
+[Component, layout, demo creation](#component-layout-demo-creation)
 | [Modifiers](#modifiers)
-| [Pull Request Guidelines](#pull-request-guidelines)
+| [Pull request guidelines](#pull-request-guidelines)
 
-## Component, Layout, Demo Creation
-### Naming Blocks
+## Component, layout, demo creation
+### Naming blocks
 
 Components, layouts, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
 Example: `Button`, `SecondaryNav`
 
-### Component Example
+### Component example
 
 Examples require a parent javascript class in the component/examples folder (PatternFly uses React for building the example application). These files should be named index.js.
 
@@ -51,7 +51,7 @@ The main handlebars file for a block should be named using kebab case. For examp
 | ------------ | --------------------------------------------------- | -------------
 | `uniqueId`   | Creates a unique id | badge-{{uniqueId}}
 | `concat`   | Join multiple strings or variables together |  {{concat 'Hello' ' world' '!!!'}} results in Hello world!!!
-| `contains` | Tests to see if a string contains another string | {{#contains alert--modifier 'pf-m-amazingmodifier'}}<br>&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br>{{else}}<br>&nbsp;&nbsp;&lt;span&gt;Alternate Text&lt;/span&gt;<br>{{/contains}}
+| `contains` | Tests to see if a string contains another string | {{#contains alert--modifier 'pf-m-amazingmodifier'}}<br>&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br>{{else}}<br>&nbsp;&nbsp;&lt;span&gt;Alternate text&lt;/span&gt;<br>{{/contains}}
 
 ## Documentation
 For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
@@ -95,16 +95,16 @@ If there is a possibility of a block nested inside another block of the same typ
 {{/grid}}
 ```
 
-### Common Modifier Class Names
+### Common modifier class names
 
 Modifier classes help us to create variations of blocks. Reuse names as much as possible to avoid confusion.
 
-| Modifier Class Name | Outcome                                                             |
+| Modifier class name | Outcome                                                             |
 | ------------------- | ------------------------------------------------------------------- |
 | `pf-m-gutter`   | Adds vertical (if applicable) and horizontal gutters to the element |
 
 
-## Pull Request Guidelines
+## Pull request guidelines
 
 In order to streamline reviews and set expectations, the following should be expected when submitting a pull request:
 

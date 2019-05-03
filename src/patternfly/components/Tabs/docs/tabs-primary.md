@@ -1,12 +1,12 @@
 ### Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-controls=[ID of tab content element]` | `.pf-c-tabs__button` | Identifies the section controlled by the tab. **Required**       |
 
 ### Usage
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-tabs` | `<div>`, `<nav>` | Creates a tab component. **Required**     |
 | `.pf-c-tabs__scroll-button` | `<button>` | Creates a scroll button. **Required**     |
@@ -17,6 +17,6 @@
 
 ### Modifiers
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-current`| `.pf-c-tabs__item` | Highlights the current tab. |

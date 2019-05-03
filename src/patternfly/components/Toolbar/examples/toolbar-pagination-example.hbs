@@ -20,17 +20,17 @@
   {{/options-menu}}
   {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
-      action
+      Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      secondary
+      Secondary
     {{/button}}
   {{/toolbar-action-group}}
   {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
   {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
     {{#> pagination-total-items}}
-      37 Items
+      37 items
     {{/pagination-total-items}}
 
     {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}

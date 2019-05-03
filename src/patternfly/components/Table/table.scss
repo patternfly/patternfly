@@ -103,7 +103,7 @@
   // Modifiers
   // ============================================================ //
 
-  // Modifier - Compact table
+  // Modifier - compact table
   --pf-c-table--m-compact-th--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table--m-compact-th--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table--m-compact-cell--PaddingTop: var(--pf-global--spacer--sm);
@@ -118,7 +118,7 @@
   --pf-c-table--m-compact__expandable-row-content--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Modifier - Compound expansion toggle
+  // Modifier - compound expansion toggle
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-table__compound-expansion-toggle--BorderTop--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -128,11 +128,11 @@
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
 
-  // Modifier - Expandable row expanded
+  // Modifier - expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
   --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BackgroundColor--light-100);
 
-  // Modifier - Sort
+  // Modifier - sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
 
   /* stylelint-enable */

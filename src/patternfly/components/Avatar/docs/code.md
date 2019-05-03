@@ -4,13 +4,13 @@ The avatar component provides a default SVG icon. If an image is used it should 
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `alt` | `.pf-c-avatar` | The alt attribute specifies an alternate text for an image, if the image cannot be displayed. **Required** |
 
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |

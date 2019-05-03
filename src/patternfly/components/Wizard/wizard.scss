@@ -54,23 +54,23 @@
   --pf-c-wizard__toggle--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-wizard__toggle--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
 
-  // Toggle Number
+  // Toggle number
   --pf-c-wizard__toggle-num--before--Top: #{pf-size-prem(2px)};
 
-  // Toggle List
+  // Toggle list
   --pf-c-wizard__toggle-list--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-wizard__toggle-list--MarginBottom: calc(var(--pf-c-wizard__toggle-list-item--MarginBottom) * -1);
 
-  // Toggle List Item
+  // Toggle list item
   --pf-c-wizard__toggle-list-item--first-child--FontSize: var(--pf-global--FontSize--lg);
   --pf-c-wizard__toggle-list-item--not-last-child--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-wizard__toggle-list-item--MarginBottom: var(--pf-global--spacer--xs);
 
-  // Toggle Separator
+  // Toggle separator
   --pf-c-wizard__toggle-separator--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-wizard__toggle-separator--Color: var(--pf-global--BorderColor--200);
 
-  // Toggle Icon
+  // Toggle icon
   --pf-c-wizard__toggle-icon--MarginTop: #{pf-size-prem(6px)};
 
   // Nav
@@ -87,7 +87,7 @@
     --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
   }
 
-  // Nav List (nested)
+  // Nav list (nested)
   --pf-c-wizard__nav-list--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-wizard__nav-list--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-wizard__nav-list--PaddingBottom: var(--pf-global--spacer--xl);
@@ -103,10 +103,10 @@
   }
 
 
-  // Nav Item
+  // Nav item
   --pf-c-wizard__nav-item--MarginTop: var(--pf-global--spacer--md);
 
-  // Nav Link
+  // Nav link
   --pf-c-wizard__nav-link--Color: var(--pf-global--Color--100);
   --pf-c-wizard__nav-link--TextDecoration: var(--pf-global--link--TextDecoration);
   --pf-c-wizard__nav-link--hover--Color: var(--pf-global--link--Color);
@@ -114,7 +114,7 @@
   --pf-c-wizard__nav-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
 
-  // Nav Link Number
+  // Nav link number
   --pf-c-wizard__nav-link--before--Width: 1.5rem;
   --pf-c-wizard__nav-link--before--Height: 1.5rem;
   --pf-c-wizard__nav-link--before--Top: 0;
@@ -128,7 +128,7 @@
   --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor: transparent;
   --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--Color--dark-200);
 
-  // Outer Wrap
+  // Outer wrap
   --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-wizard__outer-wrap--lg--PaddingLeft: var(--pf-c-wizard__nav--lg--Width);
 

@@ -4,14 +4,14 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 
 <!-- ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-u-alignment` |  accessibility notes. |
  -->
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-text-align-left{-on-[breakpoint]}` | `*` |  Aligns text left |
 | `.pf-u-text-align-center{-on-[breakpoint]}` | `*` |  Aligns text center |

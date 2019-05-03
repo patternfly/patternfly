@@ -1,4 +1,4 @@
-# Component Name
+# Component name
 _Include a short (1-2 sentence) description of the component here and fill out the following sections as needed_
 
 ## Usage

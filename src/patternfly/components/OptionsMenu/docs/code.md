@@ -2,7 +2,7 @@
 
 *This section to be updated once the React implementation is complete.*
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-options-menu` |  accessibility notes. |
 *Note:* The attribute `aria-selected="true"` should be set programmatically to the selected item(s).
@@ -10,7 +10,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-options-menu` | `<div>` |  Initiates a custom options menu. |
 | `.pf-c-options-menu__toggle` | `<button>` |  Initiates a custom toggle. |

@@ -1,13 +1,13 @@
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-toolbar` |  accessibility notes. |
 
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-toolbar` | `<div>` |  Initiates the toolbar component. **Required** |
 | `.pf-c-toolbar__bulk-select` | `.pf-c-dropdown` |  Indicates the bulk select. |

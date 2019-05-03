@@ -3,8 +3,8 @@
 ICON_SRC='./src/icons/definitions/pf-icons.json'
 ICON_OUT='./src/site/pages/icons.md'
 
-echo "### PF Icons" > $ICON_OUT
-echo "| icon name | icon | code |" >> $ICON_OUT
+echo "### PF icons" > $ICON_OUT
+echo "| Icon name | Icon | Code |" >> $ICON_OUT
 echo "| --- | --- | --- |" >> $ICON_OUT
 
 grep ':' < $ICON_SRC | while read line; do

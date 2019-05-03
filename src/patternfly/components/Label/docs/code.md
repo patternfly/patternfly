@@ -4,7 +4,7 @@ Labels can be used in a variety of components and can adjust in font size to mat
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-label` | `<span>` | Iniates a label. |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for a compact table. |

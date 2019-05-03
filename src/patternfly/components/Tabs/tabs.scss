@@ -1,5 +1,5 @@
 .pf-c-tabs {
-  // Primary Tab items
+  // Primary tab items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-tabs__item--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -7,7 +7,7 @@
   --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
   --pf-c-tabs__item--m-current--BorderTopWidth: var(--pf-global--BorderWidth--md);
 
-  // Secondary Tab items
+  // Secondary tab items
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
 
   // Tab buttons
@@ -103,7 +103,7 @@
   }
 }
 
-// Tab List
+// Tab list
 .pf-c-tabs__list {
   @include pf-overflow-hide-scroll;
 

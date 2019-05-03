@@ -10,7 +10,7 @@ The chip group requires the [chip component](../../Chip/examples).
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-chip-group` | `<ul>` | Initiates the container used to group chips. **Required.** |
 | `.pf-c-chip-group__label` | `<li> <span>` | Initiates the label for a group of chips. |

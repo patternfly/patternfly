@@ -1,6 +1,6 @@
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-w-25vw{-on-[breakpoint]}` | `*` | Sets width: 25vw |
 | `.pf-u-w-33vw{-on-[breakpoint]}` | `*` | Sets width: calc(100vw / 3) |

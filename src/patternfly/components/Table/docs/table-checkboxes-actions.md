@@ -9,20 +9,20 @@ Note: When including interactive elements in a table, the primary, descriptive c
 Note: When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
 
 
-### Thead Accessibility
-| Attribute | Applied To | Outcome |
+### Thead accessibility
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[descriptive text]"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
 
-### Tbody Accessibility
-| Attribute | Applied To | Outcome |
+### Tbody accessibility
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
 | `id` | row header `<th>` > `*` | Provides an accessible description for the checkbox. **Required if using `aria-labelledby` for `.pf-c-table__check input[type="checkbox"]`** |
 
 
 ### Usage
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__check` | `<th>`, `<td>` | Initiates a check table cell. |
 | `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |

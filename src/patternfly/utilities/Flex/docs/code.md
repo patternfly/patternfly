@@ -4,14 +4,14 @@ For these utilities to have effect, the parent element must be set to `display: 
 
 <!-- ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-u-flex` |  accessibility notes. |
  -->
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-flex-direction-row{-on-[breakpoint]}`            | `*` |  Sets flex-direction: row |
 | `.pf-u-flex-direction-row-reverse{-on-[breakpoint]}`    | `*` |  Sets flex-direction: row-reverse |

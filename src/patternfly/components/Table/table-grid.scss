@@ -72,7 +72,7 @@
   --pf-c-table-cell--responsive--PaddingRight: 0;
   --pf-c-table-cell--responsive--PaddingLeft: 0;
 
-  // Compact Table
+  // Compact table
   --pf-c-table--m-compact-tr-td--responsive--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--sm);
 
@@ -237,12 +237,12 @@
   }
 
   tr > * {
-    // Remove First child padding left
+    // Remove first child padding left
     &:first-child {
       --pf-c-table-cell--PaddingLeft: 0;
     }
 
-    // Remove Last child padding right
+    // Remove last child padding right
     &:last-child {
       --pf-c-table-cell--PaddingRight: 0;
     }
@@ -300,7 +300,7 @@
     }
   }
 
-  // COMPOUND EXPANSION RESPONSIVE
+  // Compound expansion responsive
   // Tbody
   tbody {
     position: relative;
@@ -327,7 +327,7 @@
       background-color: transparent;
     }
   }
-  // COMPOUND EXPANSION RESPONSIVE END
+  // Compound expansion responsive end
 
 
   // Expandable row
@@ -351,7 +351,7 @@
       display: block;
     }
 
-    // Modifier - Expanded tr
+    // Modifier - expanded tr
     &.pf-m-expanded {
       border-top-color: var(--pf-c-table--BorderColor);
     }

@@ -4,7 +4,7 @@
 
 // `$pf-global--concept--PropiertyCamelCase--modifier--state`
 
-// Patternfly Options
+// Patternfly options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $pf-global--enable-reset: true !default;
@@ -114,7 +114,7 @@ $pf-global--font-path: "./assets/fonts" !default;
 // Iconpath
 $fa-font-path: "./assets/fonts/webfonts" !default;
 
-// FontIcon Path
+// FontIcon path
 $pf-global--fonticon-path: "./assets/pficon" !default;
 
 // Imagepath
@@ -129,7 +129,7 @@ $pf-global--spacer--xl: pf-size-prem(32px) !default;    // Light Blue
 $pf-global--spacer--2xl: pf-size-prem(48px) !default;   // Light Purple
 $pf-global--spacer--3xl: pf-size-prem(64px) !default;   // Dark Purple
 
-// Form Spacer - only used in forms
+// Form spacer - only used in forms
 $pf-global--spacer--form-element: pf-size-prem(6px) !default;
 
 // Gutter

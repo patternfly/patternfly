@@ -6,13 +6,13 @@ If you extend this component or modify the styles of this component, then make s
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `disabled` | `<input type="checkbox">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-check` | `<div>`, `<label>` |  Initiates the check component. **Required**  |
 | `.pf-c-check__input` | `<input type="checkbox">` |  Initiates a check input. **Required**  |

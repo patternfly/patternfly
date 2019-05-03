@@ -1,6 +1,6 @@
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-expandable__toggle` | Indicates that the expandable content is visible. **Required** |
 | `aria-expanded="false"` | `.pf-c-expandable__toggle` | Indicates the the expandable content is hidden. **Required** |
@@ -9,7 +9,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-expandable` | `<div>` | Initiates the expandable component. **Required** |
 | `.pf-c-expandable__toggle` | `<button>` | Initiates the expandable toggle. **Required** |

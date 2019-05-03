@@ -112,7 +112,7 @@ node-sass: "^4.9.0"
 
 _Code Snippets_
 
-- Import All `.scss` files
+- Import all `.scss` files
 
 ```js
 module.exports = {
@@ -184,7 +184,7 @@ Overpass can be utilized in two different ways:
 
 ## Icons
 
-### PatternFly Icons
+### PatternFly icons
 
 TBD
 
@@ -217,7 +217,7 @@ This replaces the bundled Font Awesome 5 files in PatternFly 4, so your configur
 $pf-global--disable-fontawesome: true !default;
 ```
 
-#### Font Awesome 5 Tree Shaking
+#### Font Awesome 5 tree shaking
 
 Additionally, Font Awesome 5 now provides the option for [tree shaking](https://fontawesome.com/how-to-use/use-with-node-js#tree-shaking). In order to utilize this option, you will need to build PatternFly 4 from source (`node_modules/@patternfly/patternfly/`), and update the `sass-utilities/scss-variables.scss` file accordingly.
 
