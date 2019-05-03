@@ -1,4 +1,4 @@
-### Table expandable Notes
+### Table expandable notes
 
 **All simple table accessibility and usage requirements apply.**
 <br>
