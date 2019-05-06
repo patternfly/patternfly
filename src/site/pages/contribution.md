@@ -41,7 +41,7 @@ There are several properties available on the Example component to help with sty
 <Example heading="Heading" minHeight="20em" docs={docReference} fullPageOnly="">{example}</Example>;
 ```
 
-If an ID is needed for an element, please use the Handlebars unique ID helper.  This can be used by appending `{{uniqueId}}` to the ID attribute so it looks like this:  `id="badge-{{uniqueId}}"`.
+If an ID is needed for an element, please use the handlebars unique ID helper.  This can be used by appending `{{uniqueId}}` to the ID attribute so it looks like this:  `id="badge-{{uniqueId}}"`.
 ### Handlebars names
 
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
@@ -79,7 +79,7 @@ For example:
 {{/grid}}
 ```
 
-When including a partial within a partial, by default, Handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
+When including a partial within a partial, by default, handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
 
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
