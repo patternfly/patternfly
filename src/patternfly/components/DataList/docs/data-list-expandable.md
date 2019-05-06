@@ -1,4 +1,4 @@
-### Data List Expandable Notes
+### Data list expandable notes
 
 **All simple data list accessibility and usage requirements apply.**
 <br>
