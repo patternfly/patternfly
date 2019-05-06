@@ -12,7 +12,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const alertTypes = AlertTypes();
   const alertVariations = AlertVariations();
   const alertInline = AlertInline();
@@ -27,7 +27,7 @@ export default (props) => {
       <Example heading="Alert variations" handlebars={AlertVariationsRaw}>
         {alertVariations}
       </Example>
-      <Example heading="Inline Alert Types" handlebars={AlertInlineRaw}>
+      <Example heading="Inline alert types" handlebars={AlertInlineRaw}>
         {alertInline}
       </Example>
     </Documentation>

@@ -141,7 +141,7 @@
     border: solid var(--pf-c-alert--m-inline--BorderColor);
     border-width: var(--pf-c-alert--m-inline--BorderTopWidth) var(--pf-c-alert--m-inline--BorderRightWidth) var(--pf-c-alert--m-inline--BorderBottomWidth) var(--pf-c-alert--m-inline--BorderLeftWidth);
 
-    // left border treatment
+    // Left border treatment
     &::before {
       position: absolute;
       top: var(--pf-c-alert--m-inline--before--Top);
