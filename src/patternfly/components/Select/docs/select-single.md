@@ -1,10 +1,10 @@
-The Single Select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and Aria tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.
+The single select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and ARIA tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.
 
 ## Accessibility
 
 *This section to be updated once the React implementation is complete.*
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-select` |  accessibility notes. |
 *Note:* The attribute `aria-pressed="true"` should be set programmatically to the active item.
@@ -12,7 +12,7 @@ The Single Select should be used when the user is selecting an option from a lis
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
 | `.pf-c-select__toggle` | `<button>` |  Initiates a custom toggle. |

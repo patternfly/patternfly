@@ -5,10 +5,10 @@ Buttons communicate and trigger actions a user can take throughout an experience
 ## Usage
 A button should represent an action a user can take, like submitting a form, cancelling a process, or creating a new object. When the user clicks the button, the associated action should be performed immediately.
 
-### Button Types
+### Button types
 Use different button types to build hierarchy in an application layout.
 
-![Buttons Grid](img/buttons.png)
+![Buttons grid](img/buttons.png)
 
 #### Primary
 Use primary buttons for the main action you want a user to take on a page. In general, try to limit primary buttons to one per page.
@@ -22,7 +22,7 @@ Use tertiary buttons for any action a user can take on a page that is not primar
 #### Destructive
 Use destructive buttons for actions a user can take that are potentially destructive or difficult/impossible to undo like deleting or removing user data.
 
-### Button States
+### Button states
 
 #### Focused
 Use the focused state when a button is in focus via hover, mouse-over, or keyboard navigation.
@@ -47,11 +47,11 @@ Use the disabled state when a button is inactive and a user cannot interact with
 
 ![Buttons on modals](img/button_on_modal.png)
 
-## Content Guidelines
+## Content guidelines
 * Button labels should tell the user what will happen with they click a button.
 * Always use verbs or verb phrases.
 * Use specific labels that clearly describe the user action.
 * Aim for short (1-3 words) labels wherever possible.
 * Do not use long button labels that might risk wrapping.
 
-See the [PatternFly Terminology and Wording Guidelines](http://www.patternfly.org/styles/terminology-and-wording/) for additional guidance.
+See the [PatternFly terminology and wording guidelines](http://www.patternfly.org/styles/terminology-and-wording/) for additional guidance.

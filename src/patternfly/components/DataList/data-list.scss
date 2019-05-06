@@ -26,7 +26,7 @@
   --pf-c-data-list__item-item--before--Top: calc(var(--pf-c-data-list__item-item--BorderTopWidth) * -1);
   --pf-c-data-list__item-item--before--Height: calc(100% + var(--pf-c-data-list__item-item--BorderTopWidth));
 
-  // Data List Item Row
+  // Data list item row
   --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-row--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item-row--PaddingLeft: var(--pf-global--spacer--lg);
@@ -37,7 +37,7 @@
     --pf-c-data-list__item-row--PaddingLeft: var(--pf-c-data-list__item-row--md--PaddingLeft);
   }
 
-  // Data List Item Content
+  // Data list item content
   --pf-c-data-list__item-content--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Cell

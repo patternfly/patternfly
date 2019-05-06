@@ -4,7 +4,7 @@
 
 Note: If this component is describing the loading progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="progressbar"` | `.pf-c-progress__bar` |  This role is used for an element that displays the progress status for a task that takes a long time or consists of several steps. |
 | `aria-valuenow=""` | `.pf-c-progress__bar` |  This value needs to be updated as progress continues. |
@@ -16,7 +16,7 @@ Note: If this component is describing the loading progress of a particular regio
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-progress` | `<div>` |  Initiates a progress component. |
 | `.pf-c-progress__description` | `<div>` |  The description for a progress bar. |

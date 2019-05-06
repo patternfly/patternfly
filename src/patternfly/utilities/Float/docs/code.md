@@ -4,7 +4,7 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-float-left{-on-[breakpoint]}` | `*` |  Float element left |
 | `.pf-u-float-right{-on-[breakpoint]}` | `*` |  Float element right |

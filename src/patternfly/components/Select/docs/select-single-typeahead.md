@@ -1,10 +1,10 @@
-The Single Select Typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
+The single select typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
 
 ## Accessibility
 
 *This section to be updated once the React implementation is complete.*
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-select` |  accessibility notes. |
 *Note:* The attribute `aria-pressed="true"` should be set programmatically to the active item.
@@ -12,7 +12,7 @@ The Single Select Typeahead should be used when the user is selecting one option
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates a custom toggle. |

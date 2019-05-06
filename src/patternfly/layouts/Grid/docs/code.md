@@ -4,7 +4,7 @@ A Grid layout framework including responsive columns, row spans and gutters. Bre
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-grid` | `<div>` | Initializes the grid layout. |
 | `.pf-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |

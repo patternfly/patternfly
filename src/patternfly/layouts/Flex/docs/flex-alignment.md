@@ -1,6 +1,6 @@
 # Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > *` | Modifies margin-left property to auto. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex > *` | Resets margin-left property 0. |

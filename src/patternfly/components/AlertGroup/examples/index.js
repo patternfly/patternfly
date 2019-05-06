@@ -6,11 +6,11 @@ import Example from '@siteComponents/Example';
 import alertGroupExampleRaw from '!raw!./alert-group-example.hbs';
 import toastGroupExampleRaw from '!raw!./toast-group-example.hbs';
 
-// Alert Group example
+// Alert group example
 import AlertGroupExample from './alert-group-example.hbs';
 import alertGroupDocs from '../docs/alert-group.md';
 
-// Toast Group example
+// Toast group example
 import ToastGroupExample from './toast-group-example.hbs';
 import toastGroupDocs from '../docs/toast-group.md';
 
@@ -19,7 +19,7 @@ import docs from '../docs/code.md';
 export const headingText = 'Alert group';
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const alertGroupExample = AlertGroupExample();
   const toastGroupExample = ToastGroupExample();
   const variablesRoot = 'pf-c-alert-group';

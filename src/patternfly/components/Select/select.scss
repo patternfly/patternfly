@@ -56,12 +56,12 @@
   // Select toggle badge
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--sm);
 
-  // Toggle Arrow
+  // Toggle arrow
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
 
-  // Toggle Button
+  // Toggle button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-clear--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-button--PaddingLeft: var(--pf-global--spacer--sm);
@@ -77,7 +77,7 @@
   --pf-c-select__menu--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-select__menu--m-top--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
-  // Menu Item
+  // Menu item
   --pf-c-select__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-select__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-select__menu-item--m-selected--PaddingRight: var(--pf-global--spacer--2xl);
@@ -101,7 +101,7 @@
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
 
-  // Menu Item Separator
+  // Menu Item separator
   --pf-c-select__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-select__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__separator--MarginTop: var(--pf-global--spacer--sm);

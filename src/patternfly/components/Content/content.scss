@@ -8,21 +8,21 @@
   // this ensures color is not overridden
   --pf-c-content--Color: var(--pf-global--Color--100);
 
-  // h1 - Main title
+  // h1 -main title
   --pf-c-content--h1--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h1--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-content--h1--FontSize: var(--pf-global--FontSize--2xl);
   --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--normal);
 
-  // h2 - Secondary title
+  // h2 - secondary title
   --pf-c-content--h2--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h2--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-content--h2--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--normal);
 
-  // h3 - Sub-title
+  // h3 - sub-title
   --pf-c-content--h3--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h3--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h3--LineHeight: var(--pf-global--LineHeight--md);

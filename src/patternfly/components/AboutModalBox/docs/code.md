@@ -16,7 +16,7 @@ About modal layout.
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-about-modal-box`               |  `<div>`, `<article>`  |  Initiates a modal box. |
 | `.pf-c-about-modal-box__brand`        |  `<div>`               |  Initiates a modal box brand cell. |

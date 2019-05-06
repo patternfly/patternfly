@@ -1,6 +1,6 @@
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-h-initial{-on-[breakpoint]}` | `*` | Sets height: initial (auto) |
 | `.pf-u-h-inherit{-on-[breakpoint]}` | `*` | Sets height: inherit |

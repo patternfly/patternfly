@@ -28,7 +28,7 @@ Components are modular and independent structures concerned with how a thing loo
 - A component always touches all four sides of its parent container.
 - The component itself never has backgrounds, widths, floats or margins.
 - Elements inside a component never use top margins. The first element touches the top of its component.
-- Components should include semantic markup and necessary Aria tags to implement the [accessibility guidelines](accessibility-guide.md).
+- Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](accessibility-guide.md).
 
 The parent container of a component is prefixed with `-c` (after the patterfly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
 
@@ -44,7 +44,7 @@ Repetition is better than the wrong abstraction.
 
 PatternFly is made up of isolated components that don't allow dependencies. Therefore, the use of helpers or utility classes is discouraged.
 
-However, from time to time it is recognized that an exception to the Patternfly styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
+However, from time to time it is recognized that an exception to the PatternFly styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
 
 A utility class is prefixed with `-u` (after the patterfly prefix `pf-`), for example: `.pf-u-align-content-center`.
 
@@ -178,7 +178,7 @@ PatternFly doesn't follow these rules:
 
 **Practicality over purity**. Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
 
-#### Comment and Organization
+#### Comment and organization
 
 Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.
 
@@ -191,9 +191,9 @@ Follow this comment structure:
 1. Line
 
 ```sass
-// Section level Comment
+// Section level comment
 .selector {
-  line-height: 1.5; // Line level Comment
+  line-height: 1.5; // Line level comment
   color: #333;
 }
 ```
@@ -300,7 +300,7 @@ Limit nesting to the following use cases:
 
 Component-specific media queries should be nested inside the component block. Remember that PatternFly is mobile first. **Do progressive enhancement, not gracefully degradation.**
 
-Patternfly has 5 breakpoints:
+PatternFly has 5 breakpoints:
 
 ```scss
   $pf-global-breakpoint--xs: 0;

@@ -3,7 +3,7 @@ The title component styles font-size, font-weight, and line-height to titles.
 
 The content component defines margin on headers. To regain the same spacing use, spacer utility classes:
 
-| Title | Margin Top | Margin Bottom |
+| Title | Margin top | Margin bottom |
 | -- | -- | -- |
 | 4xl | `.pf-u-mt-lg` | `.pf-u-mb-sm` |
 | 3xl | `.pf-u-mt-lg` | `.pf-u-mb-sm` |

@@ -6,13 +6,13 @@ If you extend this component or modify the styles of this component, then make s
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `disabled` | `<input type="radio">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |
 | `.pf-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |

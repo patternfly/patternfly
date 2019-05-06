@@ -1,3 +1,3 @@
-The top pagination displays an [Options Menu](/components/OptionsMenu/examples/) to select the number of items to show per page on a desktop screen, and on narrower viewports, the Options Menu is replaced with an element showing the currently visible items along with the total number of pages.
+The top pagination displays an [options menu](/components/OptionsMenu/examples/) to select the number of items to show per page on a desktop screen, and on narrower viewports, the options menu is replaced with an element showing the currently visible items along with the total number of pages.
 
 The examples are shown in a full page preview to demonstrate the responsive behavior at different breakpoints.

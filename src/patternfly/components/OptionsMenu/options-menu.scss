@@ -23,7 +23,7 @@
   --pf-c-options-menu__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-options-menu__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
-  // Toggle Arrow
+  // Toggle arrow
   --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
@@ -45,7 +45,7 @@
   --pf-c-options-menu--m-top__menu--Top: 0;
   --pf-c-options-menu--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
-  // Menu Item
+  // Menu item
   --pf-c-options-menu__menu-item--Background: transparent;
   --pf-c-options-menu__menu-item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-options-menu__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -61,7 +61,7 @@
   --pf-c-options-menu__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-options-menu__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Menu Item Separator
+  // Menu item separator
   --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);

@@ -61,12 +61,12 @@
     border-radius: var(--pf-c-chip--BorderRadius);
   }
 
-  // Chip Overflow Modifier
+  // Chip overflow modifier
   &.pf-m-overflow {
     --pf-c-chip--PaddingLeft: var(--pf-c-chip--m-overflow--PaddingLeft);
     --pf-c-chip--BackgroundColor: var(--pf-c-chip--m-overflow--BackgroundColor);
 
-    // Remove Chip border
+    // Remove chip border
     &::before {
       --pf-c-chip--BorderWidth: var(--pf-c-chip--m-overflow--BorderWidth);
     }
@@ -128,7 +128,7 @@
   }
 }
 
-// Text Element
+// Text element
 .pf-c-chip__text {
   @include pf-text-overflow;
 

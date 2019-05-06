@@ -21,10 +21,10 @@
   {{/options-menu}}
   {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
-      action
+      Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      secondary
+      Secondary
     {{/button}}
   {{/toolbar-action-group}}
   {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
@@ -57,7 +57,7 @@
           {{/chip}}
           {{#> chip}}
             {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip-three"')}}
-              Needs Maintenance
+              Needs maintenance
             {{/chip-text}}
             {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-three ' chip-group--id '-chip-three" aria-label="Remove" id="' chip-group--id '-remove-chip-three"')}}

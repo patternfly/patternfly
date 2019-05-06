@@ -1,6 +1,6 @@
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `for` | `<label>` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
 | `id` | `<input type="radio/checkbox/text">`, `<select>`, `<textarea>` |  Each `<form>` field must have an `id` attribute that matches its label's `for` value. **Required** |
@@ -12,7 +12,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-form` | `<form>` |  Initiates a standard form. **Required** |
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |

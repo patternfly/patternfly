@@ -4,7 +4,7 @@ Box shadow utility
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-box-shadow-sm` | `*` |  Applies box-shadow small. |
 | `.pf-u-box-shadow-sm-top` | `*` |  Applies box-shadow small top. |

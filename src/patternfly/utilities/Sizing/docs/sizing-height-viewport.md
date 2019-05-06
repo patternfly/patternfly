@@ -1,6 +1,6 @@
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-h-25vh{-on-[breakpoint]}` | `*` | Sets height: 25vh |
 | `.pf-u-h-33vh{-on-[breakpoint]}` | `*` | Sets height: calc(100vh / 3) |

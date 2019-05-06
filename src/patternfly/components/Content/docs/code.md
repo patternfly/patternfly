@@ -14,6 +14,6 @@ This component is an exception to the variable system since we style type select
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rythm and typographic treatment to html elements |

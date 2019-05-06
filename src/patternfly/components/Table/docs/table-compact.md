@@ -1,4 +1,4 @@
-### Table Expandable Notes
+### Table expandable notes
 
 **All simple table accessibility and usage requirements apply.**
 <br>
@@ -9,6 +9,6 @@
 
 ### Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |

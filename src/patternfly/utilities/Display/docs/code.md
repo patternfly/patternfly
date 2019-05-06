@@ -4,14 +4,14 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 
 <!-- ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-u-display` |  accessibility notes. |
  -->
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
 | `.pf-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |

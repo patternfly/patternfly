@@ -1,6 +1,6 @@
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is visible. **Required** |
 | `aria-expanded="false"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is hidden. **Required** |
@@ -13,7 +13,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-wizard` | `<div>` | Initiates the wizard component. **Required** |
 | `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** |
