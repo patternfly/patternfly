@@ -78,8 +78,9 @@
     --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-warning__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
 
-    .pf-c-alert__icon {
-      --pf-c-alert__icon--FontSize: var(--pf-c-alert--m-warning__icon--FontSize); // ensures icons are all same width.
+    // Apply a custom size to the FA icon to ensure all icons are the same width
+    .pf-c-alert__icon > i {
+      font-size: var(--pf-c-alert--m-warning__icon--FontSize);
     }
   }
 
