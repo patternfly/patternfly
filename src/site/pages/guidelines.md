@@ -97,7 +97,7 @@ For example a global variable setup would look like:
 
 The second layer is scoped to themeable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
 
-- They follow this general formula `--pf-c-block__element--modifier--state--breakpoint--pseudo-element--PropertyCamelCase`.
+- They follow this general formula `--pf-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element]--PropertyCamelCase`.
   - `pf-c-block` refers to the block, usually the component or layout name (i.e., `pf-c-alert`).
   - `__element` refers to the element inside of the block (i.e., `__title`).
   - `modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (i.e., `m-danger`).
@@ -106,7 +106,7 @@ The second layer is scoped to themeable component custom properties. This setup 
   - `pseudo-element` is one of either `before` or `after`.
 - The value of a component variable is **always** defined by a global variable.
 - It's possible to include multiple elements, modifiers, states, and breakpoints in a single component variable.
-- The order of elements, modifiers, sttates, and breakpoints in the variable name should match the selector order.
+- The order of elements, modifiers, states, and breakpoints in the variable name should match the selector order.
 
 For example:
 
