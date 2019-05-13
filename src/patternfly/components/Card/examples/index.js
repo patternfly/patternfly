@@ -38,7 +38,7 @@ export default () => {
       <Example heading="Card" handlebars={CardBasicExampleRaw}>
         {cardBasicExample}
       </Example>
-      <Example heading="Card with Logo and Action" handlebars={CardImgActionRaw}>
+      <Example heading="Card with Image and Action" handlebars={CardImgActionRaw}>
         {cardImgActionExample}
       </Example>
       <Example heading="Card with no footer" handlebars={CardNoFooterExampleRaw}>

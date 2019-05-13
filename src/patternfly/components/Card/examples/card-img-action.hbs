@@ -1,12 +1,12 @@
-Example with Image and Actions in Card Head
+Example with image and actions in card head
 {{#> card}}
   {{#> card-head}}
+    <span>img goes here</span>
     {{#> card-actions}}
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
       {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
     {{/card-actions}}
-    <span>img goes here</span>
   {{/card-head}}
   {{#> card-header}}
     Header
@@ -20,7 +20,7 @@ Example with Image and Actions in Card Head
 {{/card}}
 <br>
 <br>
-Example with Card Header in Card Head
+Example with card header in card head
 {{#> card}}
   {{#> card-head}}
     {{#> card-actions}}
@@ -41,7 +41,7 @@ Example with Card Header in Card Head
 {{/card}}
 <br>
 <br>
-Example with only Actions in Card Head (no header/footer)
+Example with only actions in card head (no header/footer)
 {{#> card}}
   {{#> card-head}}
     {{#> card-actions}}
@@ -56,7 +56,7 @@ Example with only Actions in Card Head (no header/footer)
 {{/card}}
 <br>
 <br>
-Example with only Card Body and Actions in the Card Head
+Example with only card body and actions in the card head
 {{#> card}}
   {{#> card-head}}
     {{#> card-actions}}
@@ -78,7 +78,7 @@ Example with only Card Body and Actions in the Card Head
 {{/card}}
 <br>
 <br>
-Example with only Image in the Card Head
+Example with only image in the card head
 {{#> card}}
   {{#> card-head}}
     <span>img goes here</span>
@@ -93,5 +93,3 @@ Example with only Image in the Card Head
     Footer
   {{/card-footer}}
 {{/card}}
-
-
