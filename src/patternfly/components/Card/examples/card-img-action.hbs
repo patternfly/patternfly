@@ -1,5 +1,5 @@
 Example with image and actions in card head
-{{#> card}}
+{{#> card card--id="card-action-example-1"}}
   {{#> card-head}}
     <span>img goes here</span>
     {{#> card-actions}}
@@ -21,7 +21,7 @@ Example with image and actions in card head
 <br>
 <br>
 Example with card header in card head
-{{#> card}}
+{{#> card card--id="card-action-example-2"}}
   {{#> card-head}}
     {{#> card-actions}}
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
@@ -42,7 +42,7 @@ Example with card header in card head
 <br>
 <br>
 Example with only actions in card head (no header/footer)
-{{#> card}}
+{{#> card card--id="card-action-example-3"}}
   {{#> card-head}}
     {{#> card-actions}}
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
@@ -57,7 +57,7 @@ Example with only actions in card head (no header/footer)
 <br>
 <br>
 Example with only card body and actions in the card head
-{{#> card}}
+{{#> card card--id="card-action-example-4"}}
   {{#> card-head}}
     {{#> card-actions}}
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
