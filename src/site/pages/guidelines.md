@@ -26,8 +26,8 @@ The classes are prefixed with `-l` (after the patterfly prefix `pf-`), for examp
 Components are modular and independent structures concerned with how a thing looks.
 
 - A component always touches all four sides of its parent container.
-- The component itself never has backgrounds, widths, floats or margins.
-- Elements inside a component never use top margins. The first element touches the top of its component.
+- The component itself never has widths, floats or margins.
+- The first element in a component should never use top margins and should touch the top of its component.
 - Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](accessibility-guide.md).
 
 The parent container of a component is prefixed with `-c` (after the patterfly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
