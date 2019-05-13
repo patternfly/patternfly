@@ -19,18 +19,18 @@ Layouts are the containers that allow for organizing and grouping its immediate 
 
 - A layout never imposes padding or element styles on its children.
 
-The classes are prefixed with `-l` (after the patterfly prefix `pf-`), for example: `.pf-l-split` or `.pf-l-stack`.
+The classes are prefixed with `-l` (after the PatternFly prefix `pf-`), for example: `.pf-l-split` or `.pf-l-stack`.
 
 ### Components
 
 Components are modular and independent structures concerned with how a thing looks.
 
 - A component always touches all four sides of its parent container.
-- The component itself never has backgrounds, widths, floats or margins.
-- Elements inside a component never use top margins. The first element touches the top of its component.
-- Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](accessibility-guide.md).
+- The component itself never has widths, floats or margins.
+- The first element in a component should never use top margins and should touch the top of its component.
+- Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](/accessibility-guide).
 
-The parent container of a component is prefixed with `-c` (after the patterfly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
+The parent container of a component is prefixed with `-c` (after the PatternFly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
 
 ### When to create a new component
 
@@ -46,7 +46,7 @@ PatternFly is made up of isolated components that don't allow dependencies. Ther
 
 However, from time to time it is recognized that an exception to the PatternFly styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
 
-A utility class is prefixed with `-u` (after the patterfly prefix `pf-`), for example: `.pf-u-align-content-center`.
+A utility class is prefixed with `-u` (after the PatternFly prefix `pf-`), for example: `.pf-u-align-content-center`.
 
 ### Demos
 
@@ -64,77 +64,76 @@ PatternFly follows a two-layer theming system where **global variables** always 
 The main reason to have global variables is to maintain consistency. They adhere to the following rules:
 
 - They are prefixed with the word `global` and follow the formula `--pf-global--concept--PropertyCamelCase--modifier--state`.
-  - a `concept` is something like a `spacer` or `main-title`;
+  - a `concept` is something like a `spacer` or `main-title`.
   - a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-  - a `modifier` is something like  `sm`, or `lg`;
-  - and a `state` is something like  `hover`, or `expanded`;
+  - a `modifier` is something like  `sm`, or `lg`.
+  - and a `state` is something like  `hover`, or `expanded`.
 - They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--3xl`.
 
 For example a global variable setup would look like:
 
 ```scss
-
-  /* --pf-global--concept--size */
+  // --pf-global--concept--size
   --pf-global--spacer--lg: .5rem;
   --pf-global--spacer--xl: 1rem;
   --pf-global--spacer--2xl: 2rem;
 
-  /* --pf-global--PropertyCamelCase--modifier */
+  // --pf-global--PropertyCamelCase--modifier
   --pf-global--FontSize--3xl: 2rem;
   --pf-global--FontSize--2xl: 1.8rem;
   --pf-global--FontSize--lg: 1rem;
 
-  /* --pf-global--PropertyCamelCase--state */
-  --pf-global--BackgroundColor--hover: #ccc;
+  // --pf-global--PropertyCamelCase--state
+  --pf-global--link--TextDecoration--hover: #ccc;
 
-  /* --pf-global--PropertyCamelCase--modifier */
+  // --pf-global--PropertyCamelCase--modifier
   --pf-global--Color--100: #000;
 
-  /* --pf-global--concept--modifier */
-  --pf-global--primary-color--100: blue;
+  // --pf-global--concept--modifier
+  --pf-global--primary-color--100: #00f;
 ```
 
 ### Component variables
 
 The second layer is scoped to themeable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
 
-- They follow this general formula `--pf-c-block__element--modifier--state--breakpoint--pseudo-element--PropertyCamelCase`.
-  - `pf-c-block` refers to the block, usually the component or layout name (i.e., `pf-c-alert`).
+- They follow this general formula `--pf-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element]--PropertyCamelCase`.
+  - `--pf-c-block` refers to the block, usually the component or layout name (i.e., `--pf-c-alert`).
   - `__element` refers to the element inside of the block (i.e., `__title`).
-  - `modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (i.e., `m-danger`)
-  - `state` is something like `hover` or `active`.
-  - `breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
-  - `pseudo-element` is one of either `before` or `after`.
+  - `--modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (i.e., `--m-danger`).
+  - `--state` is something like `hover` or `active`.
+  - `--breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
+  - `--pseudo-element` is one of either `before` or `after`.
 - The value of a component variable is **always** defined by a global variable.
 - It's possible to include multiple elements, modifiers, states, and breakpoints in a single component variable.
-- The order of elements, modifiers, sttates, and breakpoints in the variable name should match the selector order.
+- The order of elements, modifiers, states, and breakpoints in the variable name should match the selector order.
 
 For example:
 
 ```scss
-/* Component scoped variables are always defined by global variables */
-  --pf-c-alert--Padding: var(--pf-global--spacer--xl);
-  --pf-c-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-alert__title--FontSize: var(--pf-global--FontSize--2xl);
+// Component scoped variables are always defined by global variables
+--pf-c-alert--Padding: var(--pf-global--spacer--xl);
+--pf-c-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+--pf-c-alert__title--FontSize: var(--pf-global--FontSize--2xl);
 
-/* --block--PropertyCamelCase */
+// --block--PropertyCamelCase
 .pf-c-alert {
   padding: var(--pf-c-alert--Padding);
 }
 
-/* --block--state--PropertyCamelCase */
+// --block--state--PropertyCamelCase
 .pf-c-alert {
   &:hover {
     background-color: var(--pf-c-alert--hover--BackgroundColor);
   }
 }
 
-/* --block__element--PropertyCamelCase */
+// --block__element--PropertyCamelCase
 .pf-c-alert__title {
   font-size: var(--pf-c-alert__title--FontSize);
 }
 
-/* A more complex example */
+// A more complex example
 .pf-c-switch {
   @media (max-width: $pf-global--breakpoint--sm) {
     .pf-c-switch__input {
@@ -190,7 +189,7 @@ Follow this comment structure:
 1. Sections
 1. Line
 
-```sass
+```scss
 // Section level comment
 .selector {
   line-height: 1.5; // Line level comment
@@ -225,11 +224,11 @@ Limit the use of shorthand declarations to instances where you must explicitly s
 - `border`
 - `border-radius`
 
-```sass
+```scss
 // Bad
 .element {
   margin: 0 0 10px;
-  background: red;
+  background: #f00;
   background: url("image.jpg");
   border-radius: 3px 3px 0 0;
 }
@@ -237,7 +236,7 @@ Limit the use of shorthand declarations to instances where you must explicitly s
 // Good
 .element {
   margin-bottom: 10px;
-  background-color: red;
+  background-color: #f00;
   background-image: url("image.jpg");
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -265,34 +264,34 @@ Limit nesting to the following use cases:
 
 ##### 1. Modifiers and elements of a block
 
-* Do not use [Sass’s parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
+* Do not use [Sass's parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
 * Do use that method to create compound selectors with modifier classes.
 
-```sass
+```scss
 // Good
 .pf-nav {
-  ...
+  // styles
 
   &.pf-m-vertical {
-    ...
+    // styles
   }
 }
 
 .pf-nav__item {
-  ...
+  // styles
 }
 
 // Bad
 .pf-nav {
-  ...
+  // styles
 
   &__item {
-    ...
+    // styles
   }
 }
 
 .pf-m-nav.pf-m-vertical {
-  ...
+  // styles
 }
 ```
 
@@ -314,10 +313,12 @@ To make sure you are writing mobile first, always do `min-width`:
 
 ```scss
 .pf-nav {
-  ...
+  // mobile styles
 
   // Styles for small view ports and up
-  @media (min-width: $pf-global-breakpoint--xs) { ... }
+  @media (min-width: $pf-global-breakpoint--xs) {
+    // non-mobile styles
+  }
 }
 ```
 
@@ -325,12 +326,12 @@ To make sure you are writing mobile first, always do `min-width`:
 
 States of a component should be included as a nested element. This includes hover, focus, and active states:
 
-```sass
+```scss
 .pf-c-button {
   background: var(--pf-c-button--Background);
 
   .pf-m-hover,
-  :hover {
+  &:hover {
     background: var(--pf-c-button--hover--Background);
   }
 }
@@ -340,7 +341,7 @@ Classes that duplicate a state should be named with the prefix `pf-m-`. For exam
 
 #### Sass variables
 
-We create global Sass variables to keep a Bootstrap theme in sync. These values also inform our component level variables .
+We create global Sass variables to keep a Bootstrap theme in sync. These values also inform our component level variables.
 
 #### @mixin and @extend
 
