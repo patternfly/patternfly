@@ -536,8 +536,10 @@ html {
   .example-border {
     padding: .5rem;
   }
+}
 
-
+.grid-documentation,
+.flex-documentation {
   .example-title {
     margin-bottom: var(--pf-global--spacer--xl);
 

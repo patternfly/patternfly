@@ -47,13 +47,13 @@ export default () => {
       <Example heading="Base grid" handlebars={GridBaseRaw}>
         {gridBase}
       </Example>
-      <Example heading="Grid gutters" handlebars={GridGutterRaw}>
+      <Example heading="Grid gutters" handlebars={GridGutterRaw} className="grid-documentation">
         {gridGutter}
       </Example>
       <Example heading="Responsive grid" handlebars={GridResponsiveRaw}>
         {gridResponsive}
       </Example>
-      <Example heading="Responsive grid gutters" handlebars={GridResponsiveGuttersRaw}>
+      <Example heading="Responsive grid gutters" handlebars={GridResponsiveGuttersRaw} className="grid-documentation">
         {gridResponsiveGutters}
       </Example>
       <Example heading="Nested grids" handlebars={GridNestedRaw}>
