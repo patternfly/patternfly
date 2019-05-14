@@ -1,10 +1,10 @@
 ## Overview
 
-Tab Content should be used with the [Tabs component](/components/Tabs/examples/).
+Tab content should be used with the [tabs component](/components/Tabs/examples/).
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="tabpanel"` | `.pf-c-tab-content` | Indicates that the element serves as a container for a set of tabs. **Required** |
 | `aria-labelledby=[ID of tab element]` | `.pf-c-tab-content` | Provides an accessible name for the tab panel by referring to the tab element that controls it. **Required**
@@ -15,6 +15,6 @@ Tab Content should be used with the [Tabs component](/components/Tabs/examples/)
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-tab-content` | `<section>` |  Initiates the tab content component. **Required** |

@@ -1,6 +1,6 @@
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is visible. **Required** |
 | `aria-expanded="false"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is hidden. **Required** |
@@ -13,7 +13,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-wizard` | `<div>` | Initiates the wizard component. **Required** |
 | `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** |
@@ -39,6 +39,7 @@
 | `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
 | `.pf-m-full-width` | `.pf-c-wizard` | Modifies the wizard to expand the full width of the viewport. |
 | `.pf-m-full-height` | `.pf-c-wizard` | Modifies the wizard to expand the full height of the viewport. |
+| `.pf-m-compact-nav` | `.pf-c-wizard` | Modifies wizard nav for a compact width. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
 | `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container body to remove the padding. |

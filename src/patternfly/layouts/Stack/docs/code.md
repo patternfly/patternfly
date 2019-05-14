@@ -1,10 +1,10 @@
 ## Overview
 
-A stack layout is a layout that positions its items vertically. In a Stack layout there is one primary item that will expand vertically to fill the container if needed.
+A stack layout is a layout that positions its items vertically. In a stack layout there is one primary item that will expand vertically to fill the container if needed.
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-stack` | `<div>`, `<section>`, or `<article>` | Initiates the stack layout. |
 | `.pf-l-stack__item` | `<div>` | Initiates a stack item. **Required**  |

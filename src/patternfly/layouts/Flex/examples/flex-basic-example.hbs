@@ -1,32 +1,40 @@
 <h2 class="example-title">
-  Basic flex - <code>.pf-l-flex</code>
+  Basic flex - <code>.pf-l-flex</code>.
 </h2>
 {{#> l-flex}}
-  {{#> example}}1{{/example}}
-  {{#> example}}2{{/example}}
-  {{#> example}}3{{/example}}
-  {{#> example}}4{{/example}}
-  {{#> example}}5{{/example}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
 {{/l-flex}}
 
 <h2 class="example-title">
-  Flex with modified spacing - <code>.pf-l-flex.pf-m-space-items-xl</code>
+  Flex nesting - <code>.pf-l-flex > .pf-l-flex</code>.
 </h2>
-{{#> l-flex flex--modifier="pf-m-space-items-xl"}}
-  {{#> example example--modifier="blue"}}1{{/example}}
-  {{#> example example--modifier="blue"}}2{{/example}}
-  {{#> example example--modifier="blue"}}3{{/example}}
-  {{#> example example--modifier="blue"}}4{{/example}}
-  {{#> example example--modifier="blue"}}5{{/example}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
 {{/l-flex}}
 
 <h2 class="example-title">
-  Flex with modified spacing - <code>.pf-l-flex.pf-m-space-items-none</code>
+  Nested flex and items.
 </h2>
-{{#> l-flex flex--modifier="pf-m-space-items-none"}}
-  {{#> example example--modifier="hollow"}}1{{/example}}
-  {{#> example example--modifier="hollow"}}2{{/example}}
-  {{#> example example--modifier="hollow"}}3{{/example}}
-  {{#> example example--modifier="hollow"}}4{{/example}}
-  {{#> example example--modifier="hollow"}}5{{/example}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
 {{/l-flex}}

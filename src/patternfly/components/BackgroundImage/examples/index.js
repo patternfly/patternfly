@@ -7,14 +7,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const backgroundImage = BackgroundImage();
-  const headingText = 'Background Image';
+  const headingText = 'Background image';
   const variablesRoot = 'pf-c-background-image';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Background image Example" fullPageOnly="true" handlebars={BackgroundImageRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Background image example" fullPageOnly="true" handlebars={BackgroundImageRaw}>
         {backgroundImage}
       </Example>
     </Documentation>

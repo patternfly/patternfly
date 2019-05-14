@@ -7,14 +7,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const inputGroupExample = InputgroupExample();
-  const headingText = 'Input Group';
+  const headingText = 'Input group';
   const variablesRoot = 'pf-c-input-group';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Inputgroup Example" handlebars={InputgroupExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Inputgroup example" handlebars={InputgroupExampleRaw}>
         {inputGroupExample}
       </Example>
     </Documentation>

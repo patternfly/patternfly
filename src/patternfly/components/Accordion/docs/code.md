@@ -3,7 +3,7 @@
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is hidden. **Required**|
 | `aria-expanded="true"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is visible. **Required**|
@@ -13,7 +13,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-accordion` | `<dl>` | Initiates an accordion component. **Required**|
 | `.pf-c-accordion__toggle` | `<dt><h3><button>` | Initiates a toggle in the accordion. **Required** |

@@ -48,7 +48,7 @@ export default class Preview extends React.Component {
     const background = this.state.lights ? '' : 'pf-t-dark pf-m-opaque-200';
     const preview = this.props.fullPageOnly ? (
       <div className="Preview__body ">
-        This Preview can only be accessed in&nbsp;
+        This preview can only be accessed in&nbsp;
         <a href={withPrefix(this.state.fullPath)} target="_blank">
           full page mode
         </a>

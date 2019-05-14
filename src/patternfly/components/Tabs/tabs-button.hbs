@@ -1,6 +1,6 @@
-<button class="pf-c-tabs__button{{#if tabs-button--modifier}} {{tabs-button--modifier}}{{/if}}" 
+<{{#if tabs-button--type}}{{tabs-button--type}}{{else}}button{{/if}} class="pf-c-tabs__button{{#if tabs-button--modifier}} {{tabs-button--modifier}}{{/if}}"
   {{#if tabs-button--attribute}}
     {{{tabs-button--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</button>
+</{{#if tabs-button--type}}{{tabs-button--type}}{{else}}button{{/if}}>

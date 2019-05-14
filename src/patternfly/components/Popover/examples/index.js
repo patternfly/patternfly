@@ -18,7 +18,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const popoverTopExample = PopoverTopExample();
   const popoverRightExample = PopoverRightExample();
   const popoverBottomExample = PopoverBottomExample();
@@ -28,20 +28,20 @@ export default () => {
   const variablesRoot = 'pf-c-popover';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Popover Top" handlebars={PopoverTopExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Popover top" handlebars={PopoverTopExampleRaw}>
         {popoverTopExample}
       </Example>
-      <Example heading="Popover Right" handlebars={PopoverRightExampleRaw}>
+      <Example heading="Popover right" handlebars={PopoverRightExampleRaw}>
         {popoverRightExample}
       </Example>
-      <Example heading="Popover Bottom" handlebars={PopoverBottomExampleRaw}>
+      <Example heading="Popover bottom" handlebars={PopoverBottomExampleRaw}>
         {popoverBottomExample}
       </Example>
-      <Example heading="Popover Left" handlebars={PopoverLeftExampleRaw}>
+      <Example heading="Popover left" handlebars={PopoverLeftExampleRaw}>
         {popoverLeftExample}
       </Example>
-      <Example heading="Popover No Header/Footer" handlebars={PopoverNoHeaderExampleRaw}>
+      <Example heading="Popover no header/footer" handlebars={PopoverNoHeaderExampleRaw}>
         {popoverNoHeaderExample}
       </Example>
     </Documentation>

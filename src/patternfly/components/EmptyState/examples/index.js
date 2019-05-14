@@ -11,22 +11,22 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const emptyStateSimpleExample = EmptystateSimpleExample();
   const emptyStateSmallExample = EmptystateSmallExample();
   const emptyStateLargeExample = EmptystateLargeExample();
-  const headingText = 'Empty State';
+  const headingText = 'Empty state';
   const variablesRoot = 'pf-c-empty-state';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Empty State" handlebars={emptyStateSimpleExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Empty state" handlebars={emptyStateSimpleExampleRaw}>
         {emptyStateSimpleExample}
       </Example>
-      <Example heading="Empty State Small" handlebars={emptyStateSmallExampleRaw}>
+      <Example heading="Empty state small" handlebars={emptyStateSmallExampleRaw}>
         {emptyStateSmallExample}
       </Example>
-      <Example heading="Empty State Large" handlebars={emptyStateLargeExampleRaw}>
+      <Example heading="Empty state large" handlebars={emptyStateLargeExampleRaw}>
         {emptyStateLargeExample}
       </Example>
     </Documentation>

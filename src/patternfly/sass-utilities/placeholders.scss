@@ -40,3 +40,43 @@
     --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--Color--light-100);
   }
 }
+
+/* stylelint-disable */
+%pf-hidden-visible {
+  // base value for visible display property is set to 'block' by default and passed in to
+  // placeholder via `pf-hidden-visible` mixin
+  --pf-hidden-visible--visible--Visibility: visible;
+
+  // set hidden var values
+  --pf-hidden-visible--hidden--Display: none;
+  --pf-hidden-visible--hidden--Visibility: hidden;
+
+  // set visibile var values
+  --pf-hidden-visible--Display: var(--pf-hidden-visible--visible--Display);
+  --pf-hidden-visible--Visibility: var(--pf-hidden-visible--visible--Visibility);
+
+  // set default state to visible
+  display: var(--pf-hidden-visible--Display);
+  visibility: var(--pf-hidden-visible--Visibility);
+
+  // toggle values based on state
+  &.pf-m-hidden {
+    --pf-hidden-visible--Display: var(--pf-hidden-visible--hidden--Display);
+    --pf-hidden-visible--Visibility: var(--pf-hidden-visible--hidden--Visibility);
+  }
+
+  @each $size, $bp in $pf-global--breakpoint-name-map {
+    @media screen and (min-width: $bp) {
+      &.pf-m-hidden-on-#{$size} {
+        --pf-hidden-visible--Display: var(--pf-hidden-visible--hidden--Display);
+        --pf-hidden-visible--Visibility: var(--pf-hidden-visible--hidden--Visibility);
+      }
+
+      &.pf-m-visible-on-#{$size} {
+        --pf-hidden-visible--Display: var(--pf-hidden-visible--visible--Display);
+        --pf-hidden-visible--Visibility: var(--pf-hidden-visible--visible--Visibility);
+      }
+    }
+  }
+}
+/* stylelint-enable */

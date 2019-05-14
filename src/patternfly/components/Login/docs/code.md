@@ -1,6 +1,6 @@
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-login` | `<div>` |  Initializes the login component. **Required**|
 | `.pf-c-login__container` | `<div>` |  Positions the login component content. **Required**|

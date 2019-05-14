@@ -9,18 +9,18 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const loginSimpleExample = LoginSimpleExample();
   const loginInvalidExample = LoginInvalidExample();
   const headingText = 'Login';
   const variablesRoot = 'pf-c-login';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Login Simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Login simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw}>
         {loginSimpleExample}
       </Example>
-      <Example heading="Login Invalid" fullPageOnly="true" handlebars={loginInvalidExampleRaw}>
+      <Example heading="Login invalid" fullPageOnly="true" handlebars={loginInvalidExampleRaw}>
         {loginInvalidExample}
       </Example>
     </Documentation>

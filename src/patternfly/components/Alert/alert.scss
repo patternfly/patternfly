@@ -1,5 +1,5 @@
 .pf-c-alert {
-  // component variables
+  // Component variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert--grid-template-columns: max-content 1fr max-content;
@@ -18,13 +18,13 @@
   --pf-c-alert__title--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert__title--PaddingLeft: var(--pf-global--spacer--md);
 
-  // description
+  // Description
   --pf-c-alert__description--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-alert__description--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert__description--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-alert__description--MarginTop: calc(-1 * var(--pf-global--spacer--sm));
 
-  // action
+  // Action
   --pf-c-alert__action--PaddingTop: #{pf-size-prem(11px)}; // one off spacer to align properly.
   --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--xs);
 
@@ -78,8 +78,9 @@
     --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-warning__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
 
-    .pf-c-alert__icon {
-      --pf-c-alert__icon--FontSize: var(--pf-c-alert--m-warning__icon--FontSize); // ensures icons are all same width.
+    // Apply a custom size to the FA icon to ensure all icons are the same width
+    .pf-c-alert__icon > i {
+      font-size: var(--pf-c-alert--m-warning__icon--FontSize);
     }
   }
 

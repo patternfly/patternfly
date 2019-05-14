@@ -1,15 +1,15 @@
-### Table Expandable Notes
+### Table expandable notes
 
-<mark>**All simple table accessibility and usage requirements apply.**</mark>
+**All simple table accessibility and usage requirements apply.**
 <br>
-<mark>**All sortable table accessibility and usage requirements apply.**</mark>
+**All sortable table accessibility and usage requirements apply.**
 <br>
-<mark>**All checkbox/action button accessibility and usage requirements apply.**</mark>
+**All checkbox/action button accessibility and usage requirements apply.**
 
 Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
 
 ### Accessibility
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
 | `aria-expanded="true"` | `.pf-c-table__toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
@@ -21,7 +21,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
 | `.pf-c-table__expandable-row-content` | `.pf-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |

@@ -1,6 +1,6 @@
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-w-initial{-on-[breakpoint]}` | `*` | Sets width: initial (auto) |
 | `.pf-u-w-inherit{-on-[breakpoint]}` | `*` | Sets width: inherit |

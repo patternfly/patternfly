@@ -5,10 +5,10 @@
   // List link
   --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__list-link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__list-link--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__list-link--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__list-link--after--Width: #{pf-size-prem(50px)};
   --pf-c-nav__list-link--after--Height: #{pf-size-prem(3px)};
 
@@ -41,11 +41,11 @@
 
   // List simple link
   --pf-c-nav__simple-list-link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__simple-list-link--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__simple-list-link--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__simple-list-link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__simple-list-link--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__simple-list-link--nested--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__simple-list-link--nested--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--md));
+  --pf-c-nav__simple-list-link--nested--md--PaddingLeft: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--md));
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-nav__simple-list-link--nested--PaddingLeft: var(--pf-c-nav__simple-list-link--nested--md--PaddingLeft);
@@ -127,13 +127,14 @@
   --pf-c-nav__list-toggle--Transition: .1s ease-in-out;
 
   // Nav section
-  --pf-c-nav__section--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__section__section--MarginTop: var(--pf-global--spacer--xl);
 
   // Nav section title
   --pf-c-nav__section-title--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Nav section title fonts
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
@@ -173,7 +174,7 @@
   --pf-c-nav__tertiary-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__tertiary-list-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
-  // Scroll Button
+  // Scroll button
   --pf-c-nav__scroll-button--Top: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-nav__scroll-button--Width: var(--pf-global--spacer--xl);
@@ -578,8 +579,12 @@
   }
 }
 
-.pf-c-nav__section + .pf-c-nav__section {
+.pf-c-nav__section {
   margin-top: var(--pf-c-nav__section--MarginTop);
+
+  + .pf-c-nav__section {
+    --pf-c-nav__section--MarginTop: var(--pf-c-nav__section__section--MarginTop);
+  }
 }
 
 // Section

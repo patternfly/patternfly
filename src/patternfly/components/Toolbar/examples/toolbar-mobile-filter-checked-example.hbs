@@ -13,7 +13,7 @@
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options') options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu id=(concat toolbar--id '-options')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -21,10 +21,10 @@
   {{/options-menu}}
   {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
-      action
+      Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      secondary
+      Secondary
     {{/button}}
   {{/toolbar-action-group}}
   {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
@@ -57,7 +57,7 @@
           {{/chip}}
           {{#> chip}}
             {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip-three"')}}
-              Needs Maintenance
+              Needs maintenance
             {{/chip-text}}
             {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-three ' chip-group--id '-chip-three" aria-label="Remove" id="' chip-group--id '-remove-chip-three"')}}

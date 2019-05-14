@@ -6,13 +6,13 @@ import AboutModalBoxExample from './about-modal-box-example.hbs';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const aboutModalBoxExample = AboutModalBoxExample();
-  const headingText = 'About Modal Box';
+  const headingText = 'About modal box';
   const variablesRoot = 'pf-c-about-modal-box';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading={headingText}>
         {aboutModalBoxExample}
       </Example>

@@ -12,7 +12,7 @@
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu') options-menu--label-text="Sort methods" options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -20,20 +20,20 @@
   {{/options-menu}}
   {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
-      action
+      Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      secondary
+      Secondary
     {{/button}}
   {{/toolbar-action-group}}
   {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
   {{/dropdown}}
   {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
     {{#> pagination-total-items}}
-      37 Items
+      37 items
     {{/pagination-total-items}}
 
-    {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
+    {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
 
     {{#> pagination-nav}}
       {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}

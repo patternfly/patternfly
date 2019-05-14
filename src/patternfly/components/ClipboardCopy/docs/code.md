@@ -2,7 +2,7 @@
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="Show content"` | `.pf-c-clipboard-copy__group-toggle` |  Provides an accessible name for the button when an icon is used instead of text. **Required when an icon is used with no supporting text.** |
 | `aria-label="Copy to clipboard"` | `.pf-c-clipboard-copy__group-copy` |  Provides an accessible name for the button when an icon is used instead of text. **Required when an icon is used with no supporting text.** |
@@ -16,7 +16,7 @@
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-clipboard-copy` | `<div>` | Initiates a clipboard copy component. **Required** |
 | `.pf-c-clipboard-copy__group` | `<div>` | Initiates a wrapper for the clipboard copy group. **Required** |

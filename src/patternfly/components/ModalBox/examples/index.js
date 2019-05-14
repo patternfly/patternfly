@@ -13,26 +13,26 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const modalBoxBasicExample = ModalBoxBasicExample();
   const modalBoxSmExample = ModalBoxSmExample();
   const modalBoxLgExample = ModalBoxLgExample();
   const modalBoxNoHeaderExample = ModalBoxNoHeaderExample();
-  const headingText = 'Modal Box';
+  const headingText = 'Modal box';
   const variablesRoot = 'pf-c-modal-box';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="ModalBox Basic Example" handlebars={ModalBoxBasicExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Modalbox basic example" handlebars={ModalBoxBasicExampleRaw}>
         {modalBoxBasicExample}
       </Example>
-      <Example heading="ModalBox Small Example" handlebars={ModalBoxSmExampleRaw}>
+      <Example heading="Modalbox small example" handlebars={ModalBoxSmExampleRaw}>
         {modalBoxSmExample}
       </Example>
-      <Example heading="ModalBox Large Example" handlebars={ModalBoxLgExampleRaw}>
+      <Example heading="Modalbox large example" handlebars={ModalBoxLgExampleRaw}>
         {modalBoxLgExample}
       </Example>
-      <Example heading="ModalBox No Header Example" handlebars={ModalBoxNoHeaderExampleRaw}>
+      <Example heading="Modalbox no header example" handlebars={ModalBoxNoHeaderExampleRaw}>
         {modalBoxNoHeaderExample}
       </Example>
     </Documentation>

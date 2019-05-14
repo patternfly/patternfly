@@ -11,7 +11,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const switchExample = SwitchExample();
   const switchDisabledExample = SwitchDisabledExample();
   const switchNoLabelExample = SwitchNoLabelExample();
@@ -19,14 +19,14 @@ export default () => {
   const variablesRoot = 'pf-c-switch';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Switch" handlebars={SwitchExampleRaw}>
         {switchExample}
       </Example>
-      <Example heading="Switch No Label" handlebars={SwitchNoLabelExampleRaw}>
+      <Example heading="Switch no label" handlebars={SwitchNoLabelExampleRaw}>
         {switchNoLabelExample}
       </Example>
-      <Example heading="Switch Disabled" handlebars={SwitchDisabledExampleRaw}>
+      <Example heading="Switch disabled" handlebars={SwitchDisabledExampleRaw}>
         {switchDisabledExample}
       </Example>
     </Documentation>

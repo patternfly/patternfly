@@ -14,25 +14,25 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dataListSimpleDemo = DataListSimpleDemo();
   const dataListActionableDemo = DataListActionableDemo();
   const dataListExpandableDemo = DataListExpandableDemo();
   const dataListSimpleWithoutPaginationDemo = DataListSimpleWithoutPaginationDemo();
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="Data List Simple Demo" fullPageOnly="true" handlebars={dataListSimpleDemoRaw}>
+    <Documentation data={props} docs={Docs}>
+      <Example heading="Data list simple demo" fullPageOnly="true" handlebars={dataListSimpleDemoRaw}>
         {dataListSimpleDemo}
       </Example>
-      <Example heading="Data List Actionable Demo" fullPageOnly="true" handlebars={dataListActionableDemoRaw}>
+      <Example heading="Data list actionable demo" fullPageOnly="true" handlebars={dataListActionableDemoRaw}>
         {dataListActionableDemo}
       </Example>
-      <Example heading="Data List Expandable Demo" fullPageOnly="true" handlebars={dataListExpandableDemoRaw}>
+      <Example heading="Data list expandable demo" fullPageOnly="true" handlebars={dataListExpandableDemoRaw}>
         {dataListExpandableDemo}
       </Example>
       <Example
-        heading="Data List Simple without Pagination Demo"
+        heading="Data list simple without pagination demo"
         fullPageOnly="true"
         handlebars={dataListSimpleWithoutPaginationDemoRaw}
       >

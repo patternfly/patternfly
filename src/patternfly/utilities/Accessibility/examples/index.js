@@ -11,14 +11,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const srOnlyExample = SrOnlyExample();
   const visibleExample = VisibleExample();
   const hiddenExample = HiddenExample();
   const headingText = 'Accessibility';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
+    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Screen reader only" handlebars={srOnlyExampleRaw}>
         {srOnlyExample}
       </Example>

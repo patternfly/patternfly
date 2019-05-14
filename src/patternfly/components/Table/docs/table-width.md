@@ -1,15 +1,15 @@
-### Table Expandable Notes
+### Table expandable notes
 
-<mark>**All simple table accessibility and usage requirements apply.**</mark>
+**All simple table accessibility and usage requirements apply.**
 <br>
-<mark>**All sortable table accessibility and usage requirements apply.**</mark>
+**All sortable table accessibility and usage requirements apply.**
 <br>
-<mark>**All checkbox/action button accessibility and usage requirements apply.**</mark>
+**All checkbox/action button accessibility and usage requirements apply.**
 
 
 ### Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-width-[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, or 90]` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` widths. **Recommended for sortable title cell** |
 | `.pf-m-width-max` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` maximum width. |

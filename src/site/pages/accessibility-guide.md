@@ -1,4 +1,4 @@
-# Accessibility Guide
+# Accessibility guide
 
 *Please note, this guide is a work in progress and will be updated regularly. We welcome your comments and feedback.*
 
@@ -6,27 +6,26 @@ The goal of software accessibility is to remove barriers and create inclusive pr
 
 Since accessibility is best achieved when considered early in the design and development process, we ask everyone who contributes to or consumes PatternFly to understand accessibility needs and how they can be met. The following guide provides techniques and suggestions to help you design, develop, and test UIs to ensure that everyone has a good user experience.
 
-- [Understanding Users’ Needs](#understanding-users-needs)
-- [Designing and Developing for Accessibility](#designing-and-developing-for-accessibility)
+- [Understanding users’ needs](#understanding-users-needs)
+- [Designing and developing for accessibility](#designing-and-developing-for-accessibility)
 - [Checklists](#checklists)
-  - [What PatternFly Should Address](#what-patternfly-should-address)
-  - [What Products Should Address](#what-products-should-address)
-- [Guidelines and References](#guidelines-and-references)
+  - [What PatternFly should address](#what-patternfly-should-address)
+  - [What products should address](#what-products-should-address)
+- [Guidelines and references](#guidelines-and-references)
 - [Techniques](#techniques)
 - [Testing](#testing)
 
-## Understanding Users’ Needs
+## Understanding users’ needs
 
-Great user experiences don’t just happen; they’re designed, tested, and refined with the user in mind. To develop inclusive products, it’s important to understand the varying needs of a wide range of users and consider the assistive tools and methods they use. This section provides information to help you better understand and address the needs of these [different user groups]
-(https://a11yproject.com/posts/myth-accessibility-m-blind-people/).
+Great user experiences don’t just happen; they’re designed, tested, and refined with the user in mind. To develop inclusive products, it’s important to understand the varying needs of a wide range of users and consider the assistive tools and methods they use. This section provides information to help you better understand and address the needs of these [different user groups](https://a11yproject.com/posts/myth-accessibility-is-blind-people/).
 
 Note: It’s possible for a user to fall into more than one group, or to use tools and devices designed for a different user group. One of the greatest benefits of an inclusive design practice is that methods designed for a specific user group will often provide benefits to everyone.
 
-### No Vision
+### No vision
 
 Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements, like headers, links, or form elements. Use semantic elements and check that labels are meaningful when pulled out of context.
 
-### Low Vision
+### Low vision
 
 Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas. These needs mean that interfaces should not rely on color to communicate information, palettes need to have sufficient contrast, and layouts should be responsive when font sizes are increased.
 
@@ -38,13 +37,13 @@ Users with poor motor control can use a range of devices to access contents. Use
 
 Users who have difficulty processing information benefit from well-written content. Information should clear, concise, and easy to scan. Consider visual hierarchy, chunk content into short, related sections, and avoid long paragraphs.
 
-## Designing and Developing for Accessibility
+## Designing and developing for accessibility
 
 Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). To help you get started, the following sections break some of these down by area of focus.
 
 ## Checklists
 
-### What PatternFly Should Address
+### What PatternFly should address
 
 If you use PatternFly, or contribute to PatternFly as a designer or developer, these are the items that are expected to be covered in PatternFly:
 
@@ -69,31 +68,31 @@ If you use PatternFly, or contribute to PatternFly as a designer or developer, t
 
 *WCAG 2.5.5 is included for reference only. This guideline suggests a size that is larger than what PatternFly requires.
 
-### What Products Should Address
+### What products should address
 
 If you consume PatternFly in your product, these are the items that are outside the scope of PatternFly, and should be addressed by the product developers and designers:
 
 
 | Guideline  | Link  |  |  |
 | --- | --- | --- | --- |
-| Skip to Main links | [WCAG 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks) |  | `development` |
-| Page Titles | [WCAG 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled) |  | `development` |
+| Skip to main links | [WCAG 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks) |  | `development` |
+| Page titles | [WCAG 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled) |  | `development` |
 | Links — If more than one link has the same label, it should also have the same url. Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user. | [WCAG&nbsp;2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context) | `design`  | `development` |
 | Landmarks — Use landmark roles to clearly identify regions that communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements | [ARIA11](https://www.w3.org/TR/WCAG20-TECHS/ARIA11.html) | `design`  | `development` |
 | Headings — Heading text should be descriptive. Correct heading levels should be used to communicate the outline of the page. | [WCAG 2.4.10](https://www.w3.org/WAI/WCAG21/quickref/#section-headings) and [H42](https://www.w3.org/TR/WCAG20-TECHS/H42.html) | `design`  | `development` |
 | Contents — Should be meaningful, clear, and concise |  | `design` |  |
 
-## Guidelines and References
+## Guidelines and references
 
 - [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/)
 - [WebAIM's WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
 - [A11Y Project Checklist](https://a11yproject.com/checklist)
 
-### PatternFly Guidelines
+### PatternFly guidelines
 These are guidelines that we have defined for PatternFly.
 
-#### Experience Parity
-  - There should be parity between the screen reader contents and visibly rendered contents (refer to the [first Note for aria-hidden](https://www.w3.org/TR/wai-aria/#aria-hidden)).
+#### Experience parity
+  - There should be parity between the screen reader contents and visibly rendered contents (refer to the [first note for aria-hidden](https://www.w3.org/TR/wai-aria/#aria-hidden)).
   - There should be parity among all input types: touch, mouse, and keyboard.
       - Don’t optimize the experience for one input type at the expense of another.
       - Contents that a user can interact with using a mouse are also accessible using touch or keyboard.
@@ -105,14 +104,14 @@ These are guidelines that we have defined for PatternFly.
 
 The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. Any techniques that are adopted as standard within PatternFly for handling specific patterns are included below.
 
-### Labels and Accessible Names
+### Labels and accessible names
 
-- #### Form Fields
+- #### Form fields
   - Use explicit linking between `label` and form input elements (e.g. `input`, `textarea`, or `select`) when both elements are present. Aside from providing an accessible name to screen readers, this method also increases the clickable area of the form element by making the label clickable, too. ([H44](https://www.w3.org/TR/WCAG20-TECHS/H44.html))
   - When a `label` element cannot accompany a form input element:
       - Provide the label using `aria-label` or `aria-labelledby`. ([ARIA14](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html))
       - In a single-field form, the submit button label can serve as the field label for sighted users ([G167](https://www.w3.org/TR/WCAG20-TECHS/general.html#G167)) as well as assistive devices when using `aria-labelledby`
-- #### Landmark Roles
+- #### Landmark roles
   - Screen reader users can navigate to sections of a page when [landmark roles](https://www.w3.org/TR/wai-aria-1.1/#landmark_roles) are used. Whenever a landmark role is used more than once, provide a name using `aria-label` or `aria-labelledby` to provide context for that landmark. ([ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [ARIA16](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html))
   - While [`toolbar`](https://www.w3.org/TR/wai-aria-1.1/#toolbar) is not a landmark role, the same rule applies to this role.
 - #### Icons
@@ -122,13 +121,13 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
       - Add a label for the icon in tooltip text that displays on hover, and also on focus for focusable elements.
       - For interactive elements like `<a>` and `<button>` where an icon is used as the label instead of text, provide the label on the interactive element using `aria-label`. For example:
       ```html
-      <button class="..." aria-label="Close Dialog">
+      <button class="..." aria-label="Close dialog">
         <i class="..." aria-hidden="true"></i>
       </button>
       ```
-      - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the Alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
+      - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
       ```html
-      <div class="pf-c-alert pf-m-success" aria-label="Success Alert">
+      <div class="pf-c-alert pf-m-success" aria-label="Success alert">
         <div aria-hidden="true" class="pf-c-alert__icon">
           <i class="fas fa-check-circle"></i>
         </div>
@@ -141,8 +140,8 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
       ```
 
 
-### Trapping Focus
-The recommended interaction pattern for the modal components like the Modal or Popover is to trap focus within the modal element of the component when it becomes visible. For keyboard-only users that use the Tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the Tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. For screen reader users, the other contents on the page should be hidden from the screen reader. 
+### Trapping focus
+The recommended interaction pattern for the modal components like the modal or popover is to trap focus within the modal element of the component when it becomes visible. For keyboard-only users that use the tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. For screen reader users, the other contents on the page should be hidden from the screen reader. 
 
 The method we recommend <a href="#testing">based on the screen reader / browser combinations we use for testing</a> is to apply `aria-hidden="true"` to the parent wrapping element of the page contents. Note that the modal element of the component must not be a descendent of this element with `aria-hidden="true"` and should be included as a sibling to this element.
 

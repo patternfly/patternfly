@@ -26,10 +26,10 @@
   --pf-c-data-list__item-item--before--Top: calc(var(--pf-c-data-list__item-item--BorderTopWidth) * -1);
   --pf-c-data-list__item-item--before--Height: calc(100% + var(--pf-c-data-list__item-item--BorderTopWidth));
 
-  // Data List Item Row
-  --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--xl);
+  // Data list item row
+  --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-row--md--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-row--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-row--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-row--md--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -37,16 +37,16 @@
     --pf-c-data-list__item-row--PaddingLeft: var(--pf-c-data-list__item-row--md--PaddingLeft);
   }
 
-  // Data List Item Content
-  --pf-c-data-list__item-content--PaddingBottom: var(--pf-global--spacer--xl);
+  // Data list item content
+  --pf-c-data-list__item-content--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Cell
-  --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--md--PaddingBottom: 0;
   --pf-c-data-list__cell--m-icon--MarginRight: var(--pf-global--spacer--md);
   --pf-c-data-list__cell-cell--PaddingTop: 0;
-  --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-data-list__cell-cell--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell-cell--MarginRight: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -62,8 +62,8 @@
   --pf-c-data-list__item--m-expanded__toggle--c-button--Transform: rotate(90deg);
 
   // Controls
-  --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-control--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__item-control--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-control--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-control--md--MarginRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item-control--not-last-child--MarginRight: var(--pf-global--spacer--md);
@@ -73,8 +73,8 @@
   }
 
   // Actions
-  --pf-c-data-list__item-action--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__item-action--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-data-list__item-action--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__item-action--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-action--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-action--md--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item-action--not-last-child--MarginRight: var(--pf-global--spacer--md);
@@ -92,10 +92,10 @@
   --pf-c-data-list__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
   --pf-c-data-list__expandable-content--md--MaxHeight: #{pf-size-prem(600px)};
   --pf-c-data-list__item--m-expanded__expandable-content--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-data-list__expandable-content-body--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content-body--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content-body--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-data-list__expandable-content-body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-data-list__expandable-content-body--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__expandable-content-body--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-data-list__expandable-content-body--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-data-list__expandable-content-body--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-data-list__expandable-content-body--md--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-data-list__expandable-content-body--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-data-list__expandable-content-body--md--PaddingBottom: var(--pf-global--spacer--md);

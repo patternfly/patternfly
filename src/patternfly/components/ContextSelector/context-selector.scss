@@ -1,5 +1,5 @@
 .pf-c-context-selector {
-  // Context Selector
+  // Context selector
   --pf-c-context-selector--Width: #{pf-size-prem(250px)};
 
   // Toggle
@@ -19,12 +19,12 @@
   --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
 
-  // Toggle Text
+  // Toggle text
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-context-selector__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-context-selector__toggle-text--LineHeight: var(--pf-global--LineHeight--md);
 
-  // Toggle Icon Arrow
+  // Toggle icon arrow
   --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
@@ -36,7 +36,7 @@
   --pf-c-context-selector__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-context-selector__menu--BoxShadow: var(--pf-global--BoxShadow--md);
 
-  // Menu Input
+  // Menu input
   --pf-c-context-selector__menu-input--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-context-selector__menu-input--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-context-selector__menu-input--PaddingBottom: var(--pf-global--spacer--md);
@@ -44,10 +44,10 @@
   --pf-c-context-selector__menu-input--BottomBorderColor: var(--pf-global--BorderColor--100);
   --pf-c-context-selector__menu-input--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
 
-  // Menu Menu Item
+  // Menu menu item
   --pf-c-context-selector__menu-list--MaxHeight: #{pf-size-prem(200px)};
 
-  // Menu Item
+  // Menu item
   --pf-c-context-selector__menu-list-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-context-selector__menu-list-item--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-context-selector__menu-list-item--PaddingBottom: var(--pf-global--spacer--sm);

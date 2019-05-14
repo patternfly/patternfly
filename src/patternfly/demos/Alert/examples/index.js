@@ -9,14 +9,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const alertToastExample = AlertToastExample();
 
-  const headingText = 'Alert Component Demo';
+  const headingText = 'Alert component demo';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Toast Alert Demo" fullPageOnly="true" handlebars={AlertToastExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
+      <Example heading="Toast alert demo" fullPageOnly="true" handlebars={AlertToastExampleRaw}>
         {alertToastExample}
       </Example>
     </Documentation>

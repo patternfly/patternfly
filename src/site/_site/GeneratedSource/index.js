@@ -31,7 +31,7 @@ export default class GeneratedSource extends React.Component {
           <div className="GeneratedSource_title" />
           <span className="GeneratedSource__collapse">
             <button className="GeneratedSource__link" onClick={() => this.showView('source')}>
-              {this.state.hideSource ? 'Expand Code' : 'Collapse Code'}
+              {this.state.hideSource ? 'Expand code' : 'Collapse code'}
             </button>
           </span>
           <CodepenButton html={indentedOutput} />

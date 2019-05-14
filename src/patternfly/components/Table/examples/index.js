@@ -10,6 +10,7 @@ import tableCompactNoBorderRowsExampleRaw from '!raw!./table-compact-no-border-r
 import tableCompactExpandableExampleRaw from '!raw!./table-compact-expandable-example.hbs';
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
 import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
+import tableHiddenVisibleExampleRaw from '!raw!./table-hidden-visible-example.hbs';
 
 import TableSimpleExample from './table-simple-example.hbs';
 import tableSimpleDoc from '../docs/table-simple.md';
@@ -37,11 +38,14 @@ import tableWidthDoc from '../docs/table-width.md';
 import TableCompoundExpansionExample from './table-compound-expansion-example.hbs';
 import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
 
+import TableHiddenVisibleExample from './table-hidden-visible-example.hbs';
+import tableHiddenVisibleDoc from '../docs/table-hidden-visible.md';
+
 import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const tableSimpleExample = TableSimpleExample();
   const tableSortableExample = TableSortableExample();
   const tableExpandableExample = TableExpandableExample();
@@ -51,15 +55,16 @@ export default () => {
   const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
+  const tableHiddenVisibleExample = TableHiddenVisibleExample();
   const headingText = 'Table';
   const variablesRoot = 'pf-c-table';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Simple Table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Simple table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
         {tableSimpleExample}
       </Example>
-      <Example heading="Sortable Table" handlebars={tableSortableExampleRaw} docs={tableSortableDoc}>
+      <Example heading="Sortable table" handlebars={tableSortableExampleRaw} docs={tableSortableDoc}>
         {tableSortableExample}
       </Example>
       <Example
@@ -69,35 +74,42 @@ export default () => {
       >
         {tableSimpleWithCheckboxesExample}
       </Example>
-      <Example heading="Expandable Table" handlebars={tableExpandableExampleRaw} docs={tableExpandableDoc}>
+      <Example heading="Expandable table" handlebars={tableExpandableExampleRaw} docs={tableExpandableDoc}>
         {tableExpandableExample}
       </Example>
       <Example
-        heading="Table with Compound Expansion"
+        heading="Table with compound expansion"
         handlebars={tableCompoundExpansionExampleRaw}
         docs={tableCompoundExpansionDoc}
       >
         {tableCompoundExpansionExample}
       </Example>
-      <Example heading="Compact Table" handlebars={tableCompactExampleRaw} docs={tableCompactDoc}>
+      <Example heading="Compact table" handlebars={tableCompactExampleRaw} docs={tableCompactDoc}>
         {tableCompactExample}
       </Example>
       <Example
-        heading="Compact Table with no borders"
+        heading="Compact table with no borders"
         handlebars={tableCompactNoBorderRowsExampleRaw}
         docs={tableCompactNoBorderRowsDoc}
       >
         {tableCompactNoBorderRowsExample}
       </Example>
       <Example
-        heading="Compact Expandable Table"
+        heading="Compact expandable table"
         handlebars={tableCompactExpandableExampleRaw}
         docs={tableCompactExpandableDoc}
       >
         {tableCompactExpandableExample}
       </Example>
-      <Example heading="Table with Width Modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
+      <Example heading="Table with width modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
         {tableWidthExample}
+      </Example>
+      <Example
+        heading="Table with hidden/visible breakpoint modifiers"
+        handlebars={tableHiddenVisibleExampleRaw}
+        docs={tableHiddenVisibleDoc}
+      >
+        {tableHiddenVisibleExample}
       </Example>
     </Documentation>
   );

@@ -1,4 +1,4 @@
-# Component Name
+# Component name
 
 Alert Groups contain and align consecutive alerts.
 

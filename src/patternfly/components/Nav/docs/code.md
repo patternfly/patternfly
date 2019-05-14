@@ -2,14 +2,14 @@
 
 The navigation system relies on several different sub-components: 
 
-* `.pf-c-nav__list` - Default navigation list. It is the basis for both default and expandable, vertical navigation.
-* `.pf-c-nav__simple-list` - Nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
-* `.pf-c-nav__horizontal-list` - Nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
-* `.pf-c-nav__tertiary-list` - Nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
+* `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
+* `.pf-c-nav__simple-list` - nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
+* `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
+* `.pf-c-nav__tertiary-list` - nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark |
 | `aria-labelledby="[id value of link describing subnav]"` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title |
@@ -22,7 +22,7 @@ The navigation system relies on several different sub-components:
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element |
 | `.pf-c-nav__list` | `<ul>` | Initiates default nav list |

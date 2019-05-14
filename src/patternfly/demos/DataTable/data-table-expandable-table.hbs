@@ -15,10 +15,10 @@
         Pull requests
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
-        Work Spaces
+        Work spaces
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
-        Last Commit
+        Last commit
       {{/table-th}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td}}{{/table-td}}
@@ -26,12 +26,12 @@
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--expanded="true"}}
+    {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node1">Node 1</div>
           <a href="#">siemur/test-space</a>
@@ -40,17 +40,17 @@
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Pull Requests"}}
+      {{#> table-td table-td--data-label="Pull requests"}}
         <span><i class="fas fa-code"></i> 25</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Work Spaces"}}
+      {{#> table-td table-td--data-label="Work spaces"}}
         <span><i class="fas fa-cube"></i> 5</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Last Commit"}}
+      {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
+        <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
@@ -77,12 +77,12 @@
   {{/table-tbody}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
@@ -91,17 +91,17 @@
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Pull Requests"}}
+      {{#> table-td table-td--data-label="Pull requests"}}
         <span><i class="fas fa-code"></i> 5</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Work Spaces"}}
+      {{#> table-td table-td--data-label="Work spaces"}}
         <span><i class="fas fa-cube"></i> 8</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Last Commit"}}
+      {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
+        <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
@@ -116,7 +116,7 @@
         <div class="pf-c-table__expandable-row-content">
           {{#> content}}
             <p>Git URL: <small>http://github.com/mindreeper2420/rhuxd.git</small></p>
-            <p>Latest Commit SHA1 <small>64ae92893d7a98c71b3ef56835ed1c96354526be</small></p>
+            <p>Latest commit SHA1 <small>64ae92893d7a98c71b3ef56835ed1c96354526be</small></p>
             <p>Status <small>20 total files changed</small></p>
             <p>License <small>Apache License 2.9</small></p>
           {{/content}}
@@ -130,12 +130,12 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--expanded="true"}}
+    {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
@@ -144,17 +144,17 @@
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Pull Requests"}}
+      {{#> table-td table-td--data-label="Pull requests"}}
         <span><i class="fas fa-code"></i> 25</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Work Spaces"}}
+      {{#> table-td table-td--data-label="Work spaces"}}
         <span><i class="fas fa-cube"></i> 5</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Last Commit"}}
+      {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
+        <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
@@ -177,12 +177,12 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--expanded="true"}}
+    {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
@@ -191,17 +191,17 @@
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Pull Requests"}}
+      {{#> table-td table-td--data-label="Pull requests"}}
         <span><i class="fas fa-code"></i> 25</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Work Spaces"}}
+      {{#> table-td table-td--data-label="Work spaces"}}
         <span><i class="fas fa-cube"></i> 5</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Last Commit"}}
+      {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
+        <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-5") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
@@ -224,12 +224,12 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--expanded="true"}}
+    {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 expandable-toggle5" id="expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="checkrow5" aria-labelledby="{{table--id}}-node5">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository Name"}}
+      {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node5">Node 5</div>
           <a href="#">siemur/test-space</a>
@@ -238,17 +238,17 @@
       {{#> table-td table-td--data-label="Branches"}}
         <span><i class="fas fa-code-branch"></i> 10</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Pull Requests"}}
+      {{#> table-td table-td--data-label="Pull requests"}}
         <span><i class="fas fa-code"></i> 25</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Work Spaces"}}
+      {{#> table-td table-td--data-label="Work spaces"}}
         <span><i class="fas fa-cube"></i> 5</span>
       {{/table-td}}
-      {{#> table-td table-td--data-label="Last Commit"}}
+      {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
-        <a href="#">Action Link</a>
+        <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
         {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-6") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}

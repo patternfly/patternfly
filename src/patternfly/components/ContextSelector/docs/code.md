@@ -3,7 +3,7 @@
 Added after react implementation
 
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-context-selector` | `<div>` | Initiates a context selector.|
 | `.pf-c-context-selector__toggle` | `<button>` | Initiates a toggle. |

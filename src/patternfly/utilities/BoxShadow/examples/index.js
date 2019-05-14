@@ -7,15 +7,15 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const boxShadowSimpleExample = BoxshadowSimpleExample();
-  const headingText = 'Box Shadow';
+  const headingText = 'Box shadow';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
       <Example
         className="box-shadow"
-        heading="Boxshadow Utility"
+        heading="Boxshadow utility"
         handlebars={boxShadowSimpleExampleRaw}
         minHeight="20em"
       >

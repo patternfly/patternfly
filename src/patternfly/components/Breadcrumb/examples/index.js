@@ -12,7 +12,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const breadcrumbExample = BreadcrumbExample();
   const breadcrumbWithTitleExample = BreadcrumbWithTitleExample();
   const breadcrumbWithoutHomeLink = BreadcrumbWithoutHomeLink();
@@ -20,15 +20,15 @@ export default () => {
   const variablesRoot = 'pf-c-breadcrumb';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Breadcrumb" handlebars={breadcrumbExampleRaw}>
         {breadcrumbExample}
       </Example>
-      <Example heading="Breadcrumb without Home Link" handlebars={breadcrumbWithoutHomeLinkRaw}>
+      <Example heading="Breadcrumb without home link" handlebars={breadcrumbWithoutHomeLinkRaw}>
         {breadcrumbWithoutHomeLink}
       </Example>
       <Example
-        heading="Breadcrumb with Heading"
+        heading="Breadcrumb with heading"
         handlebars={breadcrumbWithTitleExampleRaw}
         docs={breadcrumbWithTitleExampleDoc}
       >

@@ -1,17 +1,17 @@
 ## Overview
 
-The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon <a href="https://pf4.patternfly.org/layouts/Toolbar/examples/">PatternFly layouts</a> to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the <a href="https://pf4.patternfly.org/components/Table/examples/">Table component</a>.
+The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](../../Table/examples).
 
 <!-- ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-hybrid-list` |  accessibility notes. |
 
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
 | Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |

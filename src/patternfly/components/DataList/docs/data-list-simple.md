@@ -1,5 +1,5 @@
 ### Accessibility
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="list"`       | `.pf-c-data-list` | Indicates that the data list is a list. **Required** |
 | `aria-label`        | `.pf-c-data-list`       | Provides an accessible name for the data list. **Required** |
@@ -8,7 +8,7 @@
 
 ### Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list` | `<ul>` | Initiates a data list. **Required** |
 | `.pf-c-data-list__item` | `<li>` | Initiates a data list item. **Required** |

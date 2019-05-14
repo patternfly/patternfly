@@ -13,7 +13,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const pageComponentNavVerticalExample = PageComponentNavVerticalExample();
   const pageComponentNavHorizontalExample = PageComponentNavHorizontalExample();
   const pageComponentFillExample = PageComponentFillExample();
@@ -22,22 +22,22 @@ export default () => {
   const variablesRoot = 'pf-c-page';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
-      <Example heading="Page Component, Nav Vertical Example" handlebars={PageComponentNavVerticalExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
+      <Example heading="Page component, nav vertical example" handlebars={PageComponentNavVerticalExampleRaw}>
         {pageComponentNavVerticalExample}
       </Example>
-      <Example heading="Page Component, Nav Horizontal Example" handlebars={PageComponentNavHorizontalExampleRaw}>
+      <Example heading="Page component, nav horizontal example" handlebars={PageComponentNavHorizontalExampleRaw}>
         {pageComponentNavHorizontalExample}
       </Example>
       <Example
-        heading="Page Component, Fill/No Fill Example"
+        heading="Page component, fill/no fill example"
         handlebars={PageComponentFillExampleRaw}
         className="is-extra-tall-body"
       >
         {pageComponentFillExample}
       </Example>
       <Example
-        heading="Page Component Main Section Padding Modifiers"
+        heading="Page component main section padding modifiers"
         handlebars={PageComponentMainSectionModifiersRaw}
       >
         {pageComponentMainSectionModifiersExample}

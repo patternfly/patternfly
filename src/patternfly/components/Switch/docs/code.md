@@ -1,6 +1,6 @@
 ## Overview
 
-A Switch is an alternative to the checkbox component.
+A switch is an alternative to the checkbox component.
 
 Use a switch when your user needs to perform instantaneous actions without confirmation.
 
@@ -8,7 +8,7 @@ Use checkbox if your user has to perform additional steps for changes to become 
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-labelledby="..."` or `aria-label="..."` | `.pf-c-switch__input` | Indicates the action triggered by the switch. If an additional text label is included with the switch besides `.pf-c-switch__label.pf-m-on`, then `aria-labelledby` can reference the `id` of this text, or this text can be used as the value for `aria-label`. If the text included for `.pf-c-switch__label.pf-m-on` provides additional meaning to the primary label that's referenced, then it can also be represented as part of the `aria-labelledby` or `aria-label` attribute. **Required** |
 | `for` | `<label>` | Each `<label>` must have a `for` attribute that matches its input id. **Required** |
@@ -20,7 +20,7 @@ Use checkbox if your user has to perform additional steps for changes to become 
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-switch` | `<label>` |  Initiates a switch. **Required**  |
 | `.pf-c-switch__input` | `<input type="checkbox">` |  Hide the checkbox inside the switch. **Required**  |

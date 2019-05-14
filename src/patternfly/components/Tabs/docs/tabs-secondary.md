@@ -6,6 +6,6 @@ If secondary tabs cannot be placed directly adjacent to primary tabs, `.pf-m-tab
 
 ### Modifiers
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-tabs-secondary` | `.pf-c-tabs` or `<div>` | Creates a secondary tabs component. **Required** |

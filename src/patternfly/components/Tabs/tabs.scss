@@ -1,5 +1,5 @@
 .pf-c-tabs {
-  // Primary Tab items
+  // Primary tab items
   --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-tabs__item--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -7,11 +7,14 @@
   --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
   --pf-c-tabs__item--m-current--BorderTopWidth: var(--pf-global--BorderWidth--md);
 
-  // Secondary Tab items
+  // Secondary tab items
   --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
 
   // Tab buttons
+  --pf-c-tabs__button--Color: var(--pf-global--Color--100);
+  --pf-c-tabs__button--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-tabs__button--Background: transparent;
+  --pf-c-tabs__button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
   --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingBottom: var(--pf-global--spacer--sm);
@@ -100,7 +103,7 @@
   }
 }
 
-// Tab List
+// Tab list
 .pf-c-tabs__list {
   @include pf-overflow-hide-scroll;
 
@@ -173,10 +176,14 @@
 // Tab button
 .pf-c-tabs__button {
   position: relative;
+  display: inline-block;
   padding: var(--pf-c-tabs__button--PaddingTop) var(--pf-c-tabs__button--PaddingRight) var(--pf-c-tabs__button--PaddingBottom) var(--pf-c-tabs__button--PaddingLeft);
+  font-weight: var(--pf-c-tabs__button--FontWeight);
+  color: var(--pf-c-tabs__button--Color);
   user-select: none;
   background: var(--pf-c-tabs__button--Background);
   border: 0;
+  outline-offset: var(--pf-c-tabs__button--OutlineOffset);
 
   // Tab button borders
   &::before {
@@ -188,6 +195,11 @@
     content: "";
     border: solid var(--pf-c-tabs__item--BorderColor);
     border-width: var(--pf-c-tabs__item--BorderWidth) 0 var(--pf-c-tabs__item--BorderWidth) var(--pf-c-tabs__item--BorderWidth);
+  }
+
+  &.pf-m-hover,
+  &:hover {
+    text-decoration: none;
   }
 }
 

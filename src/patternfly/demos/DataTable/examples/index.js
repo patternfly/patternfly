@@ -15,31 +15,31 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const dataTableSimpleDemo = DataTableSimpleDemo();
   const dataTableSortableDemo = DataTableSortableDemo();
   const dataTableExpandableDemo = DataTableExpandableDemo();
   const dataTableCompactDemo = DataTableCompactDemo();
   const dataTableCompoundExpansionDemo = DataTableCompoundExpansionDemo();
 
-  const headingText = 'Data Table Demo';
+  const headingText = 'Data table demo';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Data Table - Simple Demo" fullPageOnly="true" handlebars={DataTableSimpleDemoRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
+      <Example heading="Data table - simple demo" fullPageOnly="true" handlebars={DataTableSimpleDemoRaw}>
         {dataTableSimpleDemo}
       </Example>
-      <Example heading="Data Table - Sortable Demo" fullPageOnly="true" handlebars={DataTableSortableDemoRaw}>
+      <Example heading="Data table - sortable demo" fullPageOnly="true" handlebars={DataTableSortableDemoRaw}>
         {dataTableSortableDemo}
       </Example>
-      <Example heading="Data Table - Expandable Demo" fullPageOnly="true" handlebars={DataTableExpandableDemoRaw}>
+      <Example heading="Data table - expandable demo" fullPageOnly="true" handlebars={DataTableExpandableDemoRaw}>
         {dataTableExpandableDemo}
       </Example>
-      <Example heading="Data Table - Compact Demo" fullPageOnly="true" handlebars={DataTableCompactDemoRaw}>
+      <Example heading="Data table - compact demo" fullPageOnly="true" handlebars={DataTableCompactDemoRaw}>
         {dataTableCompactDemo}
       </Example>
       <Example
-        heading="Data Table - Compound Expansion Demo"
+        heading="Data table - compound expansion demo"
         fullPageOnly="true"
         handlebars={DataTableCompoundExpansionDemoRaw}
       >

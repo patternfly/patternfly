@@ -7,14 +7,14 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const avatarSimpleExample = AvatarSimpleExample();
   const headingText = 'Avatar';
   const variablesRoot = 'pf-c-avatar';
 
   return (
-    <Documentation docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Avatar Simple" handlebars={avatarSimpleExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Avatar simple" handlebars={avatarSimpleExampleRaw}>
         {avatarSimpleExample}
       </Example>
     </Documentation>

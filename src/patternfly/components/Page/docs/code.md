@@ -4,7 +4,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
 | `role="main"` | `.pf-c-page__main` | Identifies the element that serves as the main region. **Required** |
@@ -13,7 +13,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-page` | `<div>` |   Declares the page component. |
 | `.pf-c-page__header` | `<header>` |   Declares the page header. |

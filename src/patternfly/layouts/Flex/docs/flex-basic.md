@@ -1,6 +1,6 @@
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-l-flex` | `*` |  Initiates flex layout. |
-| `.pf-m-item-spacing-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies all direct children spacer value. |
+| `.pf-l-flex` | `*` |  Initiates flex layout. **Required** |
+| `.pf-l-flex__item` | `.pf-l-flex > *` |  Identifies a flex item. **Optional** |

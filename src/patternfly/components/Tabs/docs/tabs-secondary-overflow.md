@@ -4,7 +4,7 @@ Whenever a `.pf-m-current` tab is scrolled beyond the width of the container, th
 
 ## Modifiers
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-start` | `.pf-c-tabs` | Enables the first directional scroll button.     |
 | `.pf-m-start-current` | `.pf-c-tabs` | Highlights the first directional scroll button.  |

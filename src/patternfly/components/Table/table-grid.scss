@@ -1,6 +1,8 @@
 /* stylelint-disable */
 @mixin pf-mobile-layout {
-  .pf-m-grid.pf-c-table { @content; }
+  .pf-m-grid.pf-c-table {
+    @content;
+  }
 
   .pf-m-grid-md.pf-c-table {
     @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -43,10 +45,10 @@
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table-tr--responsive--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-table-tr--responsive--md--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
@@ -59,6 +61,9 @@
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
+  // Cell
+  --pf-c-table-cell--m-grid--hidden-visible--Display: grid;
+
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--md);
@@ -67,7 +72,7 @@
   --pf-c-table-cell--responsive--PaddingRight: 0;
   --pf-c-table-cell--responsive--PaddingLeft: 0;
 
-  // Compact Table
+  // Compact table
   --pf-c-table--m-compact-tr-td--responsive--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--sm);
 
@@ -194,11 +199,11 @@
   }
 
   // Standard td, in standard row (non-expandable)
-  // exclude specifically styled tds, as they are placed explicitly within grid
-  // :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort)
-  tr:not(.pf-c-table__expandable-row) > :not(.pf-c-table__toggle):not(.pf-c-table__check):not(.pf-c-table__action):not(.pf-c-table__sort) {
+  [data-label] {
+    // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
+    --pf-c-table-cell--hidden-visible--Display: var(--pf-c-table-cell--m-grid--hidden-visible--Display);
+
     // responsive layout, set td to two column grid
-    display: grid;
     grid-column: 1;
     grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
     align-items: start;
@@ -232,12 +237,12 @@
   }
 
   tr > * {
-    // Remove First child padding left
+    // Remove first child padding left
     &:first-child {
       --pf-c-table-cell--PaddingLeft: 0;
     }
 
-    // Remove Last child padding right
+    // Remove last child padding right
     &:last-child {
       --pf-c-table-cell--PaddingRight: 0;
     }
@@ -295,7 +300,7 @@
     }
   }
 
-  // COMPOUND EXPANSION RESPONSIVE
+  // Compound expansion responsive
   // Tbody
   tbody {
     position: relative;
@@ -322,7 +327,7 @@
       background-color: transparent;
     }
   }
-  // COMPOUND EXPANSION RESPONSIVE END
+  // Compound expansion responsive end
 
 
   // Expandable row
@@ -346,7 +351,7 @@
       display: block;
     }
 
-    // Modifier - Expanded tr
+    // Modifier - expanded tr
     &.pf-m-expanded {
       border-top-color: var(--pf-c-table--BorderColor);
     }
