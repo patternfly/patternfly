@@ -1,4 +1,3 @@
-// URL.com/guidelines#layout
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
 @mixin pf-smart-grid($suffix: null) {
@@ -76,13 +75,15 @@
     }
   }
 
-  $pf-u-spacing--spacer-map: (
-    "": "var(--pf-l-grid--m-gutter--GridGap)"
+  // Custom spacer values
+  $pf-l-grid--spacer-map: (
+    "": "var(--pf-l-grid--m-gutter--GridGap)",
+    "-none": "0"
   );
 
   // Loop through $pf-global--spacer-map to generate different gutter spacers
   @each $breakpoint, $value in $pf-global--breakpoint-map {
-    @each $spacer, $spacer-value in map-merge($pf-u-spacing--spacer-map, $pf-global--spacer-map) {
+    @each $spacer, $spacer-value in map-merge($pf-l-grid--spacer-map, $pf-global--spacer-map) {
       @include pf-media-query($breakpoint) {
         @include pf-grid-gutter-modifier($spacer, $spacer-value, $value);
       }
