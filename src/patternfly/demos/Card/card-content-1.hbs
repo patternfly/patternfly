@@ -1,15 +1,15 @@
+{{#> card-head}}
+  <img src="/assets/images/pf-logo-small.svg" alt="Logo">
+  {{#> card-actions}}
+    {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
+    <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+  {{/card-actions}}
+{{/card-head}}
 {{#> card-header card-header--modifier="pf-l-flex pf-m-space-items-none pf-m-align-center"}}
-  <img class="pf-m-align-left" src="/assets/images/pf-logo-small.svg" alt="Logo">
-  {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-  {{/dropdown}}
-  <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+  {{#> title title--modifier="pf-m-md" title--attribute=(concat 'id="' card--id '-check-label"')}}Patternfly{{/title}}
+  <small>Provided by Red Hat</small>
 {{/card-header}}
 {{#> card-body}}
-  {{#> l-flex flex--modifier="pf-m-column"}}
-      {{#> title title--modifier="pf-m-md" title--attribute=(concat 'id="' card--id '-check-label"')}}Patternfly{{/title}}
-        {{#> content}}
-          <small>Provided by Red Hat</small>
-          <p style="font-size:14px">PatternFly is a community project that promotes design commonality and improves user experience.</p>
-      {{/content}}
-  {{/l-flex}}
+    PatternFly is a community project that promotes design commonality and improves user experience.</p>
 {{/card-body}}
