@@ -1,16 +1,18 @@
-{{#> card-header card-header--modifier="pf-l-flex pf-m-space-items-none pf-m-align-center"}}
-  <img class="pf-m-align-left" src="/assets/images/FuseConnector_Icons_REST.png" width="60px" alt="Logo">
-  {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-  {{/dropdown}}
-  <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+{{#> card-head}}
+  <img src="/assets/images/FuseConnector_Icons_REST.png" width="60px" alt="Logo">
+  {{#> card-actions}}
+    {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
+    <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+  {{/card-actions}}
+{{/card-head}}
+{{#> card-header}}
+  <p id="{{card--id}}-check-label">REST</p>
+  {{#> content}}
+    <small class="pf-u-mb-0">Provided by Red Hat</small>
+  {{/content}}
 {{/card-header}}
 {{#> card-body}}
-  {{#> l-flex flex--modifier="pf-m-column"}}
-    {{#> title title--modifier="pf-m-md" title--attribute=(concat 'id="' card--id '-check-label"')}}REST{{/title}}
-    {{#> content}}
-      <small>Provided by Red Hat</small>
-      <p style="font-size:14px">The rest component allows to define REST endpoints (consumer) using the Rest DSL and plugin to other Camel components as the REST transport.
-        From Camel 2.18 onwards the rest component can also be used as a client (producer) to call REST services.</p>
-    {{/content}}
-  {{/l-flex}}
+  The rest component allows to define REST endpoints (consumer) using the Rest DSL and plugin to other Camel components as the REST transport.
+  From Camel 2.18 onwards the rest component can also be used as a client (producer) to call REST services.
 {{/card-body}}

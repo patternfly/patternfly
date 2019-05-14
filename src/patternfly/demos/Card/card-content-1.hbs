@@ -6,10 +6,12 @@
     <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
   {{/card-actions}}
 {{/card-head}}
-{{#> card-header card-header--modifier="pf-l-flex pf-m-space-items-none pf-m-align-center"}}
-  {{#> title title--modifier="pf-m-md" title--attribute=(concat 'id="' card--id '-check-label"')}}Patternfly{{/title}}
-  <small>Provided by Red Hat</small>
+{{#> card-header}}
+  <p id="{{card--id}}-check-label">Patternfly</p>
+  {{#> content}}
+    <small class="pf-u-mb-0">Provided by Red Hat</small>
+  {{/content}}
 {{/card-header}}
 {{#> card-body}}
-    PatternFly is a community project that promotes design commonality and improves user experience.</p>
+    PatternFly is a community project that promotes design commonality and improves user experience.
 {{/card-body}}

@@ -1,15 +1,17 @@
-{{#> card-header card-header--modifier="pf-l-flex pf-m-space-items-none pf-m-align-center"}}
-  <img class="pf-m-align-left" src="/assets/images/camel-infinispan_200x150.png" width="60px" alt="Logo">
-  {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-  {{/dropdown}}
-  <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+{{#> card-head}}
+  <img src="/assets/images/camel-infinispan_200x150.png" width="60px" alt="Logo">
+  {{#> card-actions}}
+    {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
+    <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+  {{/card-actions}}
+{{/card-head}}
+{{#> card-header}}
+  <p id="{{card--id}}-check-label">JBoss Data Grid</p>
+  {{#> content}}
+    <small class="pf-u-mb-0">Provided by Red Hat</small>
+  {{/content}}
 {{/card-header}}
 {{#> card-body}}
-  {{#> l-flex flex--modifier="pf-m-column"}}
-    {{#> title title--modifier="pf-m-md" title--attribute=(concat 'id="' card--id '-check-label"')}}JBoss Data Grid{{/title}}
-    {{#> content}}
-      <small>Provided by Red Hat</small>
-      <p style="font-size:14px">Read or write to a fully-supported distributed cache and data grid for faster integration services.</p>
-    {{/content}}
-  {{/l-flex}}
+  Read or write to a fully-supported distributed cache and data grid for faster integration services.
 {{/card-body}}

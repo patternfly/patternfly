@@ -1,15 +1,17 @@
-{{#> card-header card-header--modifier="pf-l-flex pf-m-space-items-none pf-m-align-center"}}
-  <img class="pf-m-align-left" src="/assets/images/camel-avro_200x150.png" width="60px" alt="Logo">
-  {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-  {{/dropdown}}
-  <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+{{#> card-head}}
+  <img src="/assets/images/camel-avro_200x150.png" width="60px" alt="Logo">
+  {{#> card-actions}}
+    {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
+    <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+  {{/card-actions}}
+{{/card-head}}
+{{#> card-header}}
+  <p id="{{card--id}}-check-label">Avro</p>
+  {{#> content}}
+    <small class="pf-u-mb-0">Provided by Red Hat</small>
+  {{/content}}
 {{/card-header}}
 {{#> card-body}}
-  {{#> l-flex flex--modifier="pf-m-column"}}
-  {{#> title title--modifier="pf-m-md" title--attribute=(concat 'id="' card--id '-check-label"')}}Avro{{/title}}
-  {{#> content}}
-    <small>Provided by Red Hat</small>
-    <p style="font-size:14px">This component provides a dataformat for avro, which allows serialization and deserialization of messages using Apache Avro’s binary dataformat. Moreover, it provides support for Apache Avro’s rpc, by providing producers and consumers endpoint for using avro over netty or http.</p>
-  {{/content}}
-{{/l-flex}}
+  This component provides a dataformat for avro, which allows serialization and deserialization of messages using Apache Avro’s binary dataformat. Moreover, it provides support for Apache Avro’s rpc, by providing producers and consumers endpoint for using avro over netty or http.
 {{/card-body}}
