@@ -1,0 +1,59 @@
+{{#> nav}}
+  {{#> nav-section nav-section--attribute=(concat 'aria-labelledby="' nav--id '-grouped-title1"')}}
+    {{#> nav-section-title nav-section-title--attribute=(concat 'id="' nav--id '-grouped-title1"')}}
+      OpenShift Console
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          {{#> mega-menu-menu-link-icon mega-menu-menu-link-icon--attribute='src="/assets/images/logo-facebook.svg"'}}{{/mega-menu-menu-link-icon}}
+          Multi-Cluster Manager
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          {{#> mega-menu-menu-link-icon mega-menu-menu-link-icon--attribute='src="/assets/images/logo-github.svg"'}}{{/mega-menu-menu-link-icon}}
+          Developer Console
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          {{#> mega-menu-menu-link-icon mega-menu-menu-link-icon--attribute='src="/assets/images/logo-dropbox.svg"'}}{{/mega-menu-menu-link-icon}}
+          Admin Console
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute=(concat 'aria-labelledby="' nav--id '-grouped-title2"')}}
+    {{#> nav-section-title nav-section-title--attribute=(concat 'id="' nav--id '-grouped-title2"')}}
+      Red Hat applications
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          {{#> mega-menu-menu-link-icon mega-menu-menu-link-icon--attribute='src="/assets/images/logo-google.svg"'}}{{/mega-menu-menu-link-icon}}
+          Code Ready Workspaces
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          {{#> mega-menu-menu-link-icon mega-menu-menu-link-icon--attribute='src="/assets/images/logo-github.svg"'}}{{/mega-menu-menu-link-icon}}
+          Red Hat Fuse
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute=(concat 'aria-labelledby="' nav--id '-grouped-title3"')}}
+    {{#> nav-section-title nav-section-title--attribute=(concat 'id="' nav--id '-grouped-title3"')}}
+      Third party applications
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          {{#> mega-menu-menu-link-icon mega-menu-menu-link-icon--attribute='src="/assets/images/logo-gitlab.svg"'}}{{/mega-menu-menu-link-icon}}
+          GitLab
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}

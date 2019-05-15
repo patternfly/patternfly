@@ -8,7 +8,7 @@
 | `aria-hidden="true"` | `.pf-c-wizard__toggle-icon`, `.pf-c-wizard__toggle-divider` | Hides the icon from assistive technologies. **Required** |
 | `aria-label="Steps"` | `.pf-c-wizard__nav` | Gives the steps nav element an accessible name. **Required** |
 | `aria-disabled="true"` | `.pf-c-wizard__nav-link` | Indicatese that the element is disabled. **Required for disabled links with `.pf-m-disabled`** |
-| `aria-current="page"` | `.pf-c-wizard__nav-link` | Indicates the current page link. Can only occur once on page. **Required for the current link** |
+| `aria-current="page"` | `.pf-c-wizard__nav-link` | Indicates the current page link. **Required for the current link** |
 | `tabindex="-1"` | `.pf-c-wizard__nav-link` | Removes a link from keyboard focus. **Required for disabled links with `.pf-m-disabled`** |
 
 ## Usage

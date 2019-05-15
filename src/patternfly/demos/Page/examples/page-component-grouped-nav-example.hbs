@@ -80,14 +80,12 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
+    {{#> page-template-breadcrumb}}
+    {{/page-template-breadcrumb}}
     <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
-    {{/page-main-section}}
-    {{#> page-main-section}}
-    {{/page-main-section}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
   {{/page-main}}
 {{/page}}

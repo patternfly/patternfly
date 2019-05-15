@@ -1,0 +1,105 @@
+{{#> page page--id="mega-menu-demo"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-grouped-nav"')}}
+          {{> button-icon button-icon--type="bars"}}
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
+      {{#> mega-menu}}
+        {{#> mega-menu-header}}
+          {{#> mega-menu-title}}
+            {{#> title title--modifier="pf-m-md"}}Admin Console{{/title}}
+            {{#> mega-menu-description}}Cluster: AWS-us-west-1{{/mega-menu-description}}
+          {{/mega-menu-title}}
+          {{#> mega-menu-toggle mega-menu-toggle--attribute='aria-label="All OpenShift services" onclick=\'(function(){ document.querySelector(".pf-c-mega-menu").classList.toggle("pf-m-expanded")})();\''}}{{/mega-menu-toggle}}
+        {{/mega-menu-header}}
+        {{#> mega-menu-menu}}
+          {{> mega-menu-menu-nav nav--attribute='aria-label="All OpenShift services"' nav--id=(concat page--id "-mega-menu")}}
+        {{/mega-menu-menu}}
+      {{/mega-menu}}
+      {{#> nav-list nav-list--attribute='aria-label="Admin Console"' nav-section--type="li"}}
+        {{#> nav-section nav-section--attribute=(concat 'aria-labelledby="' page--id '-grouped-title1"')}}
+          {{#> nav-section-title nav-section-title--attribute=(concat 'id="' page--id '-grouped-title1"')}}
+            System Panel
+          {{/nav-section-title}}
+          {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Overview
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Resource Usage
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                Hypervisors
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Instances
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Volumes
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Networks
+              {{/nav-link}}
+            {{/nav-item}}
+          {{/nav-list}}
+        {{/nav-section}}
+        {{#> nav-section nav-section--attribute=(concat 'aria-labelledby="' page--id '-grouped-title2"')}}
+          {{#> nav-section-title nav-section-title--attribute=(concat 'id="' page--id '-grouped-title2"')}}
+            Policy
+          {{/nav-section-title}}
+          {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Hosts
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Virtual Machines
+              {{/nav-link}}
+            {{/nav-item}}
+            {{#> nav-item newcontent}}
+              {{#> nav-link nav-link--href="#"}}
+                Storage
+              {{/nav-link}}
+            {{/nav-item}}
+          {{/nav-list}}
+        {{/nav-section}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-template-breadcrumb}}
+    {{/page-template-breadcrumb}}
+    <a id="main-content-{{page--id}}"></a>
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}

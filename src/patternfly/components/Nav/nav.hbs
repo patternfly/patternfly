@@ -1,4 +1,4 @@
-<nav class="pf-c-nav{{#if nav--modifier}} {{nav--modifier}}{{/if}}"
+<{{#if nav--type}}{{nav--type}}{{else}}nav{{/if}} class="pf-c-nav{{#if nav--modifier}} {{nav--modifier}}{{/if}}"
   {{#if aria-label}}
     aria-label="{{aria-label}}"
   {{/if}}
@@ -6,4 +6,4 @@
     {{{nav--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</nav>
+</{{#if nav--type}}{{nav--type}}{{else}}nav{{/if}}>

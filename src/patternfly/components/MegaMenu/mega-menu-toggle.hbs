@@ -1,0 +1,11 @@
+<button class="pf-c-mega-menu__toggle{{#if mega-menu-toggle--modifier}} {{mega-menu-toggle--modifier}}{{/if}}"
+  {{#if mega-menu--IsExpanded}}
+    aria-expanded="true"
+  {{else}}
+    aria-expanded="false"
+  {{/if}}
+  {{#if mega-menu-toggle--attribute}}
+    {{{mega-menu-toggle--attribute}}}
+  {{/if}}>
+  {{#> button-icon button-icon--type="th"}}{{/button-icon}}
+</button>

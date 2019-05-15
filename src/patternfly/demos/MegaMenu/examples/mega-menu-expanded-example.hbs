@@ -1,0 +1,71 @@
+{{#> page page--id="mega-menu-expanded-demo"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-grouped-nav"')}}
+          {{> button-icon button-icon--type="bars"}}
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
+      {{#> mega-menu mega-menu--IsExpanded="true"}}
+        {{#> mega-menu-header}}
+          {{#> mega-menu-title}}
+            {{#> title title--modifier="pf-m-md"}}Admin Console{{/title}}
+            {{#> mega-menu-description}}Cluster: AWS-us-west-1{{/mega-menu-description}}
+          {{/mega-menu-title}}
+          {{#> mega-menu-toggle mega-menu-toggle--attribute='aria-label="All OpenShift services"'}}{{/mega-menu-toggle}}
+        {{/mega-menu-header}}
+        {{#> mega-menu-menu}}
+          {{> mega-menu-menu-nav nav--attribute='aria-label="All OpenShift services"' nav--id=(concat page--id "-mega-menu")}}
+        {{/mega-menu-menu}}
+      {{/mega-menu}}
+      {{#> nav-list nav-list--attribute='aria-label="Admin Console"'}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            System Panel
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Policy
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Authentication
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Network Services
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Server
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-template-breadcrumb}}
+    {{/page-template-breadcrumb}}
+    <a id="main-content-{{page--id}}"></a>
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}

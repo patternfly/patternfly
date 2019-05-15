@@ -1,6 +1,6 @@
 ## Overview
 
-The navigation system relies on several different sub-components: 
+The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
 * `.pf-c-nav__simple-list` - nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
@@ -16,7 +16,7 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies |
-| `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
+| `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. |
 | `role="separator"` | `.pf-c-nav__separator` |  Indicates that the divider separates and distinguishes sections of links in the nav. |
 
 
