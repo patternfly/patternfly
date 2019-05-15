@@ -29,6 +29,8 @@
   --pf-c-title--m-md--FontSize: var(--pf-global--FontSize--md);
   --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
+  hyphens: auto;
+
   &.pf-m-4xl {
     font-size: var(--pf-c-title--m-4xl--FontSize);
     font-weight: var(--pf-c-title--m-4xl--FontWeight);
