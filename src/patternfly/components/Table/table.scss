@@ -250,9 +250,6 @@
 
     .pf-c-button {
       width: 100%;
-
-      // hack: use min-height instead of height as FireFox doesn't like height
-      min-height: 100%;
       padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
       font-size: inherit;
       font-weight: inherit;
