@@ -51,7 +51,6 @@
   --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Small text
-  --pf-c-content--small--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-content--small--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--small--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-content--small--Color: var(--pf-global--Color--200);
@@ -211,10 +210,6 @@
     font-size: var(--pf-c-content--small--FontSize);
     line-height: var(--pf-c-content--small--LineHeight);
     color: var(--pf-c-content--small--Color);
-
-    &:not(:last-child) {
-      margin-bottom: var(--pf-c-content--small--MarginBottom);
-    }
   }
 
   blockquote {
