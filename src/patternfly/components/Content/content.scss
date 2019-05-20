@@ -208,10 +208,13 @@
 
   small {
     display: block;
-    margin-bottom: var(--pf-c-content--small--MarginBottom);
     font-size: var(--pf-c-content--small--FontSize);
     line-height: var(--pf-c-content--small--LineHeight);
     color: var(--pf-c-content--small--Color);
+
+    &:not(:last-child) {
+      margin-bottom: var(--pf-c-content--small--MarginBottom);
+    }
   }
 
   blockquote {
