@@ -227,7 +227,7 @@ $pf-global--arrow--width-lg: pf-font-prem(25px);
 $pf-global--target-size--MinWidth: 44px !default;
 $pf-global--target-size--MinHeight: 44px !default;
 
-// Charts
+// Chart Colors
 $pf-global--chart-color--blue-100: $pf-color-blue-100;
 $pf-global--chart-color--blue-200: $pf-color-blue-200;
 $pf-global--chart-color--blue-300: $pf-color-blue-300;
@@ -258,25 +258,13 @@ $pf-global--chart-color--orange-200: $pf-color-orange-200;
 $pf-global--chart-color--orange-300: $pf-color-orange-300;
 $pf-global--chart-color--orange-400: $pf-color-orange-400;
 $pf-global--chart-color--orange-500: $pf-color-orange-500;
-$pf-global--chart-color--grey-200: $pf-color-black-200;
-$pf-global--chart-color--grey-300: $pf-color-black-300;
-$pf-global--chart-color--grey-400: $pf-color-black-400;
-$pf-global--chart-color--grey-500: $pf-color-black-500;
-$pf-global--chart-color--grey-600: $pf-color-black-600;
-$pf-global--chart-axis--Border: 1px solid $pf-color-black-300;
-$pf-global--chart-gridlines--Border: 1px solid $pf-color-black-200;
-$pf-global--chart-dashlines--Border: 1px dashed $pf-color-black-200;
-$pf-global--chart--Border: 1px solid $pf-color-black-200;
-$pf-global--chart-threshold-fill--light: $pf-color-black-200;
-$pf-global--chart-threshold-fill--medium: $pf-color-black-300;
-$pf-global--chart-threshold-fill--dark: $pf-color-black-400;
-$pf-global--chart-threshold--success: $pf-color-blue-300;
-$pf-global--chart-threshold--warning: $pf-color-yellow-400;
-$pf-global--chart-threshold--danger: $pf-color-red-100;
-$pf-global--chart-comparative-measuring-line--Border--warning: 1px solid $pf-color-orange-300;
-$pf-global--chart-comparative-measuring-line--Border--error: 1px solid $pf-color-red-100;
-$pf-global--chart-comparative-measuring-line--Border--zero: 1px solid $pf-color-black-700;
-$pf-global--chart-comparative-measuring-line--Border--negative: 1px solid $pf-color-red-100;
+$pf-global--chart-color--grey-100: $pf-color-black-200;
+$pf-global--chart-color--grey-200: $pf-color-black-300;
+$pf-global--chart-color--grey-300: $pf-color-black-400;
+$pf-global--chart-color--grey-400: $pf-color-black-500;
+$pf-global--chart-color--grey-500: $pf-color-black-600;
+$pf-global--chart-zero-line--Color: $pf-color-black-700;
+
 
 // filters
 // overlay
