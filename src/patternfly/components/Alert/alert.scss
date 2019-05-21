@@ -62,10 +62,11 @@
   --pf-c-alert--m-inline--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
   --pf-c-alert--m-inline--before--Height: calc(100% + var(--pf-c-alert--m-inline--BorderTopWidth) + var(--pf-c-alert--m-inline--BorderBottomWidth));
   --pf-c-alert--m-inline__icon--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-alert__m-inline__icon--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__m-inline__icon--PaddingTop: calc(var(--pf-c-alert__icon--Padding) + ((var(--pf-c-alert__icon--FontSize) - var(--pf-c-alert__m-inline__icon--FontSize)) / 2));
   --pf-c-alert__m-inline__icon--PaddingRight: 0;
   --pf-c-alert__m-inline__icon--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert__m-inline__icon--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-alert__m-inline__icon--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-alert--m-inline--m-success__icon--Color: var(--pf-global--success-color--100);
   --pf-c-alert--m-inline--m-success--before--BackgroundColor: var(--pf-global--success-color--100);
   --pf-c-alert--m-inline--m-danger__icon--Color: var(--pf-global--danger-color--100);
@@ -154,6 +155,7 @@
 
     .pf-c-alert__icon {
       padding: var(--pf-c-alert__m-inline__icon--PaddingTop) var(--pf-c-alert__m-inline__icon--PaddingRight) var(--pf-c-alert__m-inline__icon--PaddingBottom) var(--pf-c-alert__m-inline__icon--PaddingLeft);
+      font-size: var(--pf-c-alert__m-inline__icon--FontSize);
     }
   }
 }
