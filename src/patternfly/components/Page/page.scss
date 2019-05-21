@@ -34,20 +34,27 @@
 
   // Header nav
   --pf-c-page__header-nav--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__header-nav--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__header-nav--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__header-nav--lg--PaddingLeft: 0;
   --pf-c-page__header-nav--lg--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-page__header-nav--lg--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-c-page__header-nav--BackgroundColor: #242424; // Custom color for this element only
   --pf-c-page__header-nav--lg--BackgroundColor: transparent;
+  --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
+  --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
+  --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--lg--Left: 0;
+  --pf-c-page__header-nav--c-nav__scroll-button--lg--BackgroundColor: var(--pf-c-page__header-nav--BackgroundColor);
+  --pf-c-page__header-nav--c-nav__scroll-button--lg--Top: 0;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--md--PaddingLeft);
+    --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--md--Left);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--lg--PaddingLeft);
     --pf-c-page__header-nav--BackgroundColor: var(--pf-c-page__header-nav--lg--BackgroundColor);
+    --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--lg--Left);
   }
 
   // Header tools
@@ -176,6 +183,7 @@
   display: grid;
   grid-area: header;
   align-items: center;
+  min-width: 0;
   min-height: var(--pf-c-page__header--MinHeight);
 
   > * {
@@ -224,12 +232,23 @@
 .pf-c-page__header-nav {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
+  min-width: 0;
   padding-left: var(--pf-c-page__header-nav--PaddingLeft);
-  overflow: hidden;
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
 
   > .pf-c-nav {
-    overflow: auto;
+    min-width: 0;
+
+    .pf-c-nav__scroll-button {
+      @media screen and (max-width: $pf-global--breakpoint--lg) {
+        top: var(--pf-c-page__header-nav--c-nav__scroll-button--lg--Top);
+        background-color: var(--pf-c-page__header-nav--c-nav__scroll-button--lg--BackgroundColor);
+      }
+
+      &:nth-of-type(1) {
+        left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left);
+      }
+    }
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {

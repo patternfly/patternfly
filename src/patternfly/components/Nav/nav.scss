@@ -69,12 +69,14 @@
 
   // List horizontal link
   --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__horizontal-list-link--md--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__horizontal-list-link--lg--PaddingBottom: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-c-nav__horizontal-list-link--lg--PaddingBottom);
+    --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-c-nav__horizontal-list-link--md--PaddingTop);
   }
 
   // font
@@ -424,6 +426,8 @@
 
 // List horizontal, masthead
 .pf-c-nav__horizontal-list {
+  vertical-align: bottom;
+
   .pf-c-nav__item {
     margin-right: var(--pf-c-nav__horizontal-list-item--MarginRight);
   }
