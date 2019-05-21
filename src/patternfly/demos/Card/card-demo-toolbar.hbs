@@ -1,0 +1,67 @@
+{{#> toolbar toolbar--id="toolbar-card-example"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-simple-split-button-dropdown-simple-example-button"}}
+    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-simple-example-check') aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-simple-example-button')  aria-label="Select"}}
+  {{/dropdown}}
+  {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" aria-label="Filter results"}}
+    {{> button-icon button-icon--type="filter"}}
+  {{/button}}
+  {{#> toolbar-filter}}
+    {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
+      <i class="fas fa-filter" aria-hidden="true"></i>
+      Creator
+    {{/select}}
+  {{/toolbar-filter}}
+  {{#> toolbar-action-group}}
+    {{#> button button--modifier="pf-m-primary"}}
+      Create a project
+    {{/button}}
+  {{/toolbar-action-group}}
+  {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
+  {{/dropdown}}
+  {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+    {{#> pagination-total-items}}
+      20 Items
+    {{/pagination-total-items}}    
+    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
+      {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+        <span class="pf-c-options-menu__toggle-text">
+          <b>1 - 10</b> of <b>20</b>
+        </span>
+        {{> options-menu-toggle-button aria-label="Select"}}
+      {{/options-menu-toggle}}
+      {{#> options-menu-menu}}
+        {{#> options-menu-menu-item}}
+          5 <span class="pf-c-pagination__menu-text">per page</span>
+        {{/options-menu-menu-item}}
+        {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
+          10 <span class="pf-c-pagination__menu-text">per page</span>
+        {{/options-menu-menu-item}}
+        {{#> options-menu-menu-item}}
+          20 <span class="pf-c-pagination__menu-text">per page</span>
+        {{/options-menu-menu-item}}
+      {{/options-menu-menu}}
+    {{/options-menu}}
+
+
+    {{#> pagination-nav}}
+      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+        {{> button-icon button-icon--type="angle-double-left"}}
+      {{/button}}
+      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+        {{> button-icon button-icon--type="angle-left"}}
+      {{/button}}
+      {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 2"'}}
+        {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="2" value="1"'}}
+        <span aria-hidden="true">of 2</span>
+      {{/pagination-nav-page-select}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+        {{> button-icon button-icon--type="angle-right"}}
+      {{/button}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+        {{> button-icon button-icon--type="angle-double-right"}}
+      {{/button}}
+    {{/pagination-nav}}
+  {{/pagination}}
+  {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
+{{/toolbar}}
