@@ -155,6 +155,9 @@
 
     .pf-c-alert__icon {
       padding: var(--pf-c-alert__m-inline__icon--PaddingTop) var(--pf-c-alert__m-inline__icon--PaddingRight) var(--pf-c-alert__m-inline__icon--PaddingBottom) var(--pf-c-alert__m-inline__icon--PaddingLeft);
+    }
+
+    .pf-c-alert__icon > i {
       font-size: var(--pf-c-alert__m-inline__icon--FontSize);
     }
   }
