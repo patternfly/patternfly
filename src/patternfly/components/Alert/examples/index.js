@@ -5,6 +5,7 @@ import Example from '@siteComponents/Example';
 import AlertTypesRaw from '!raw!./alert-types-example.hbs';
 import AlertVariationsRaw from '!raw!./alert-variations-example.hbs';
 import AlertInlineRaw from '!raw!./alert-inline-example.hbs';
+import AlertInlineVariationsRaw from '!raw!./alert-inline-variations-example.hbs';
 import AlertTypes from './alert-types-example.hbs';
 import AlertVariations from './alert-variations-example.hbs';
 import AlertInline from './alert-inline-example.hbs';
@@ -32,7 +33,7 @@ export default props => {
       <Example heading="Inline alert types" handlebars={AlertInlineRaw}>
         {alertInline}
       </Example>
-      <Example heading="Inline alert variations" handlebars={AlertInlineRaw}>
+      <Example heading="Inline alert variations" handlebars={AlertInlineVariationsRaw}>
         {alertInlineVariations}
       </Example>
     </Documentation>

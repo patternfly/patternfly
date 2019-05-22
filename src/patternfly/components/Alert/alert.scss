@@ -50,7 +50,6 @@
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
   // Inline modification
-  --pf-c-alert--m-inline__title--Color: var(--pf-global--Color--100);
   --pf-c-alert--m-inline--BoxShadow: none;
   --pf-c-alert--m-inline--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-alert--m-inline--BorderStyle: solid;
@@ -60,7 +59,9 @@
   --pf-c-alert--m-inline--BorderLeftWidth: 0;
   --pf-c-alert--m-inline--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-alert--m-inline--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
-  --pf-c-alert--m-inline--before--Height: calc(100% + var(--pf-c-alert--m-inline--BorderTopWidth) + var(--pf-c-alert--m-inline--BorderBottomWidth));
+  --pf-c-alert--m-inline--before--Bottom: calc(-1 * var(--pf-c-alert--m-inline--BorderBottomWidth));
+
+  //  --pf-c-alert--m-inline__title--Color: var(--pf-global--Color--100);
   --pf-c-alert--m-inline__icon--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert__m-inline__icon--PaddingTop: calc(var(--pf-c-alert__icon--Padding) + ((var(--pf-c-alert__icon--FontSize) - var(--pf-c-alert__m-inline__icon--FontSize)) / 2));
   --pf-c-alert__m-inline__icon--PaddingRight: 0;
@@ -146,9 +147,9 @@
     &::before {
       position: absolute;
       top: var(--pf-c-alert--m-inline--before--Top);
+      bottom: var(--pf-c-alert--m-inline--before--Bottom);
       left: 0;
       width: var(--pf-c-alert--m-inline--before--Width);
-      height: var(--pf-c-alert--m-inline--before--Height);
       content: "";
       background-color: var(--pf-c-alert--m-inline--before--BackgroundColor);
     }
