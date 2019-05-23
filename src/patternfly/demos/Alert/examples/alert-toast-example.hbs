@@ -1,10 +1,10 @@
 {{> page-demo-default}}
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-success pf-m-live" alert--attribute='aria-label="Success alert" aria-atomic="false" aria-live="polite" aria-relevant="additions text"'}}
+    {{#> alert alert--modifier="pf-m-success pf-m-live" alert--attribute='aria-label="Success alert"'}}
       {{#> alert-icon alert-icon--type="check-circle"}}
       {{/alert-icon}}
-      {{#> alert-content}}
+      {{#> alert-content alert-content--attribute='aria-atomic="false" aria-live="polite" aria-relevant="additions text"'}}
         {{#> alert-title}}
           {{#> screen-reader}}Success alert:{{/screen-reader}}
           Newest notification
@@ -21,10 +21,10 @@
     {{/alert}}
   {{/alert-item}}
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-warning pf-m-live" alert--attribute='aria-label="Warning alert" aria-atomic="false" aria-live="polite" aria-relevant="additions text"'}}
+    {{#> alert alert--modifier="pf-m-warning pf-m-live" alert--attribute='aria-label="Warning alert"'}}
       {{#> alert-icon alert-icon--type="exclamation-triangle"}}
       {{/alert-icon}}
-      {{#> alert-content}}
+      {{#> alert-content alert-content--attribute='aria-atomic="false" aria-live="polite" aria-relevant="additions text"'}}
         {{#> alert-title}}
           {{#> screen-reader}}Info alert:{{/screen-reader}}
           Second newest notification
@@ -41,10 +41,10 @@
     {{/alert}}
   {{/alert-item}}
   {{#> alert-item}}
-    {{#> alert alert--modifier="pf-m-danger pf-m-live" alert--attribute='aria-label="Danger alert" aria-atomic="false" aria-live="polite" aria-relevant="additions text"'}}
+    {{#> alert alert--modifier="pf-m-danger pf-m-live" alert--attribute='aria-label="Danger alert"'}}
       {{#> alert-icon alert-icon--type="exclamation-circle"}}
       {{/alert-icon}}
-      {{#> alert-content}}
+      {{#> alert-content alert-content--attribute='aria-atomic="false" aria-live="polite" aria-relevant="additions text"'}}
         {{#> alert-title}}
           {{#> screen-reader}}Last notification{{/screen-reader}}
           Last notification
