@@ -76,6 +76,10 @@
   padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
   background-color: var(--pf-c-popover__content--BackgroundColor);
 
+  > .pf-c-title {
+    margin-bottom: var(--pf-c-popover--c-title--MarginBottom);
+  }
+
   // Close button
   > .pf-c-button {
     position: absolute;
@@ -96,11 +100,6 @@
   pointer-events: none;
   background-color: var(--pf-c-popover__arrow--BackgroundColor);
   box-shadow: var(--pf-c-popover__arrow--BoxShadow);
-}
-
-.pf-c-title {
-  margin-bottom: var(--pf-c-popover--c-title--MarginBottom);
-  line-height: 1;
 }
 
 // Body
