@@ -1,19 +1,17 @@
 ## Overview
 
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
+Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own.
 
 ## Accessibility
 
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-c-notification-badge` |  accessibility notes. |
+Be sure that the component associated with this indicator handles screenreader text indicating read or unread notifications.
 
 
 ## Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-notification-badge` | `<div>` |  Initiates a notification badge. **Always use it with a modifier class.** |
+| `.pf-c-read` | `.pf-c-notification-badge` |  Applies read notification badge styling. |
+| `.pf-c-unread` | `.pf-c-notification-badge` |  Applies unread notification badge styling. |
+

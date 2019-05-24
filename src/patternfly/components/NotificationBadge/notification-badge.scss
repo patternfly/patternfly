@@ -1,31 +1,35 @@
 .pf-c-notification-badge {
-  --pf-c-notification-badge--after--Width: #{pf-size-prem(10px)};
-  --pf-c-notification-badge--after--Height: #{pf-size-prem(10px)};
+  --pf-c-notification-badge--after--Top: 0;
+  --pf-c-notification-badge--after--Right: 0;
+  --pf-c-notification-badge--after--Width: var(--pf-global--spacer--sm);
+  --pf-c-notification-badge--after--Height: var(--pf-global--spacer--sm);
   --pf-c-notification-badge--after--BackgroundColor: var(--pf-global--active-color--400);
   --pf-c-notification-badge--after--BorderRadius: var(--pf-global--BorderRadius--lg);
-  --pf-c-notification-badge--pf-m-top-right--after--Top: var(--pf-global--spacer--form-element);
-  --pf-c-notification-badge--pf-m-top-right--after--Right: var(--pf-global--spacer--md);
+
+  // Modifiers
+  --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
+  --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--400);
 
   position: relative;
-  top: -2px;
-  display: inline-block;
-  vertical-align: middle;
 
   &::after {
+    position: absolute;
+    top: var(--pf-c-notification-badge--pf-m-top-right--after--Top);
+    right: var(--pf-c-notification-badge--pf-m-top-right--after--Right);
     display: inline-block;
     width: var(--pf-c-notification-badge--after--Width);
     height: var(--pf-c-notification-badge--after--Height);
     content: "";
     background-color: var(--pf-c-notification-badge--after--BackgroundColor);
     border-radius: var(--pf-c-notification-badge--after--BorderRadius);
+    transform: translate(-50%, 50%);
   }
 
-  &.pf-m-top-right {
-    &::after {
-      position: absolute;
-      top: var(--pf-c-notification-badge--pf-m-top-right--after--Top);
-      right: var(--pf-c-notification-badge--pf-m-top-right--after--Right);
-      transform: translate(50%, -50%);
-    }
+  &.pf-m-unread::after {
+    --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--after--BackgroundColor);
+  }
+
+  &.pf-m-read::after {
+    --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-read--after--BackgroundColor);
   }
 }
