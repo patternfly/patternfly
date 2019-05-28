@@ -14,7 +14,7 @@
 
   &::after {
     position: absolute;
-    top: var(--pf-c-notification-badge--pf-m-top-right--after--Top);
+    top: var(--pf-c-notification-badge--after--Top);
     right: var(--pf-c-notification-badge--pf-m-top-right--after--Right);
     display: inline-block;
     width: var(--pf-c-notification-badge--after--Width);
