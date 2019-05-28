@@ -13,5 +13,5 @@ Be sure that the component associated with this indicator handles screenreader t
 | -- | -- | -- |
 | `.pf-c-notification-badge` | `<div>` |  Initiates a notification badge. **Always use it with a modifier class.** |
 | `.pf-m-read` | `.pf-c-notification-badge` |  Applies read notification badge styling. |
-| `.pf-c-unread` | `.pf-c-notification-badge` |  Applies unread notification badge styling. |
+| `.pf-m-unread` | `.pf-c-notification-badge` |  Applies unread notification badge styling. |
 
