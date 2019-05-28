@@ -22,7 +22,7 @@
     content: "";
     background-color: var(--pf-c-notification-badge--after--BackgroundColor);
     border-radius: var(--pf-c-notification-badge--after--BorderRadius);
-    transform: translate(-50%, 50%);
+    transform: translate(25%, 25%);
   }
 
   &.pf-m-unread::after {
