@@ -1,4 +1,5 @@
 @import "./sass-utilities/colors.scss";
+@import "./sass-utilities/scss-variables.scss";
 
 // Chart colors
 
@@ -50,3 +51,89 @@ $pf-chart-color-black-200: $pf-color-black-400;
 $pf-chart-color-black-300: $pf-color-black-500;
 $pf-chart-color-black-400: $pf-color-black-600;
 $pf-chart-color-black-500: $pf-color-black-700;
+
+
+// typography
+$pf-chart-global--FontSize: $pf-global--FontSize--sm;
+
+// label
+$pf-chart-global-label--FontSize: $pf-chart-global--FontSize;
+$pf-chart-global-label--Padding: 10px;
+
+// Layout Props
+$pf-chart-global-layout--Padding: 50px;
+$pf-chart-global-layout--Height: 300px;
+$pf-chart-global-layout--Width: 450px;
+
+// Individual Charts
+
+// Area Chart
+$pf-chart-area--Opacity: .4;
+$pf-chart-area-stroke--Width: 2px;
+
+// Axis Chart
+$pf-chart-axis--stroke--Width: 1px;
+$pf-chart-axis--label--Padding: 100px;
+$pf-chart-axis--ticks--Width: 1px;  // this should be a var for size so not sure if width is appropriate
+
+// Bar Chart
+$pf-chart-bar--Width: 10px;
+
+// Box Plot Chart
+$pf-chart-boxplot--Padding: $pf-global--spacer--sm;
+$pf-chart-boxplot-stroke--Width: 1px;
+$pf-chart-boxplot-box--Width: 20px;
+
+// Bullet Chart
+$pf-chart-bullet--comparative-measure-line-warning--BorderColor: $pf-color-orange-300;
+$pf-chart-bullet--comparative-measure-line-warning--BorderWidth: 1px;
+$pf-chart-bullet--comparative-measure-line-error--BorderColor: $pf-color-red-100;
+$pf-chart-bullet--comparative-measure-line-error--BorderWidth: 1px;
+$pf-chart-bullet--zero-line--BorderColor: $pf-color-black-700;
+$pf-chart-bullet--zero-line--BorderWidth: 1px;
+$pf-chart-bullet--negative-primary-measure--BorderColor: $pf-color-red-100;
+$pf-chart-bullet--negative-primary-measure--BorderWidth: 2px;
+
+// Candlestick
+$pf-chart-candelstick-stroke--Width: 1px;
+
+// Chart
+$pf-chart-chart--BorderWidth: 1px;
+
+// Donut Chart
+$pf-chart-donut-color-threshold-large: $pf-color-black-200;
+$pf-chart-donut-color-threshold-medium: $pf-color-black-300;
+$pf-chart-donut-color-threshold-small: $pf-color-black-400;
+$pf-chart-donut-color-threshold-success: $pf-chart-color-blue-300;
+$pf-chart-donut-color-threshold-warning: $pf-chart-color-gold-400;
+$pf-chart-donut-color-threshold-danger: $pf-color-red-100;
+
+// Error Bar
+$pf-chart-errorbar--BorderWidth: $pf-global--spacer--sm;
+$pf-chart-errorbar-stroke--Width: 2px;
+
+// Legend
+$pf-chart-legend-gutter--Width: 20px;
+$pf-chart-legend-FontSize: $pf-chart-global--FontSize;
+$pf-chart-legend--Padding: 2px;
+
+// Line Chart
+$pf-chart-line-stroke--Width: 2px;
+
+// Pie Chart
+$pf-chart-pie--Padding: $pf-global--spacer--sm;
+$pf-chart-pie-stroke--Width: 1px;
+$pf-chart-pie--Height: 230px;
+$pf-chart-pie--Width: 230px;
+
+// Scatter Chart
+$pf-chart-stack-stroke--Width: 1px;
+
+// Tooltip
+$pf-chart-tooltip-pointer--Height: 10px; // Length
+$pf-chart-tooltip-pointer--Width: 20px;
+$pf-chart-tooltip--Padding: $pf-global--spacer--md;
+
+// Voronoi Chart
+$pf-chart-voronoi--Padding: $pf-global--spacer--sm;
+$pf-chart-voronoi-stroke--Width: 1px;
