@@ -72,16 +72,22 @@ $pf-chart-area--Opacity: .4;
 $pf-chart-area-stroke--Width: 2px;
 
 // Axis Chart
-$pf-chart-axis--stroke--Width: 1px;
-$pf-chart-axis--label--Padding: 100px;
+$pf-chart-axis-axis-stroke--Width: 1px;
+$pf-chart-axis-axis-label--Padding: 100px;
 $pf-chart-axis--ticks--Width: 1px;  // this should be a var for size so not sure if width is appropriate
 
 // Bar Chart
 $pf-chart-bar--Width: 10px;
 
 // Box Plot Chart
-$pf-chart-boxplot--Padding: $pf-global--spacer--sm;
-$pf-chart-boxplot-stroke--Width: 1px;
+$pf-chart-boxplot-max--Padding: $pf-global--spacer--sm;
+$pf-chart-boxplot-max-stroke--Width: 1px;
+$pf-chart-boxplot-median--Padding: $pf-global--spacer--sm;
+$pf-chart-boxplot-median-stroke--Width: 1px;
+$pf-chart-boxplot-min--Padding: $pf-global--spacer--sm;
+$pf-chart-boxplot-min-stroke--Width: 1px;
+$pf-chart-boxplot-q1--Padding: $pf-global--spacer--sm;
+$pf-chart-boxplot-q3--Padding: $pf-global--spacer--sm;
 $pf-chart-boxplot-box--Width: 20px;
 
 // Bullet Chart
@@ -95,7 +101,7 @@ $pf-chart-bullet--negative-primary-measure--BorderColor: $pf-color-red-100;
 $pf-chart-bullet--negative-primary-measure--BorderWidth: 2px;
 
 // Candlestick
-$pf-chart-candelstick-stroke--Width: 1px;
+$pf-chart-candelstick-data-stroke--Width: 1px;
 
 // Chart
 $pf-chart-chart--BorderWidth: 1px;
@@ -110,30 +116,32 @@ $pf-chart-donut-color-threshold-danger: $pf-color-red-100;
 
 // Error Bar
 $pf-chart-errorbar--BorderWidth: $pf-global--spacer--sm;
-$pf-chart-errorbar-stroke--Width: 2px;
+$pf-chart-errorbar-data-stroke--Width: 2px;
 
 // Legend
 $pf-chart-legend-gutter--Width: 20px;
-$pf-chart-legend-FontSize: $pf-chart-global--FontSize;
-$pf-chart-legend--Padding: 2px;
+$pf-chart-legend-title--FontSize: $pf-chart-global--FontSize;
+$pf-chart-legend-title--Padding: 2px;
 
 // Line Chart
 $pf-chart-line-stroke--Width: 2px;
 
 // Pie Chart
 $pf-chart-pie--Padding: $pf-global--spacer--sm;
-$pf-chart-pie-stroke--Width: 1px;
+$pf-chart-pie-data-Padding: $pf-global--spacer--sm;
+$pf-chart-pie-data-stroke--Width: 1px;
+$pf-chart-pie-labels--Padding: $pf-global--spacer--sm;
 $pf-chart-pie--Height: 230px;
 $pf-chart-pie--Width: 230px;
 
 // Scatter Chart
-$pf-chart-stack-stroke--Width: 1px;
+$pf-chart-stack-data-stroke--Width: 1px;
 
 // Tooltip
-$pf-chart-tooltip-pointer--Height: 10px; // Length
+$pf-chart-tooltip-pointer--Height: 10px; // this is equivalent to length
 $pf-chart-tooltip-pointer--Width: 20px;
 $pf-chart-tooltip--Padding: $pf-global--spacer--md;
 
 // Voronoi Chart
-$pf-chart-voronoi--Padding: $pf-global--spacer--sm;
-$pf-chart-voronoi-stroke--Width: 1px;
+$pf-chart-voronoi-label--Padding: $pf-global--spacer--sm;
+$pf-chart-voronoi-flyout-stroke--Width: 1px;
