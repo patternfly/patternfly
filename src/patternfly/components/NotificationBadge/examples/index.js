@@ -9,12 +9,12 @@ export const Docs = docs;
 
 export default props => {
   const notificationBadgeSimpleExample = NotificationbadgeSimpleExample();
-  const headingText = 'Notification Badge';
+  const headingText = 'Notification badge';
   const variablesRoot = 'pf-c-notification-badge';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Notification Badge" handlebars={notificationBadgeSimpleExampleRaw}>
+      <Example heading="Notification badge" handlebars={notificationBadgeSimpleExampleRaw}>
         {notificationBadgeSimpleExample}
       </Example>
     </Documentation>

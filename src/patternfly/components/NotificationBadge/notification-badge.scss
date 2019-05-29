@@ -3,11 +3,13 @@
   --pf-c-notification-badge--after--Right: 0;
   --pf-c-notification-badge--after--Width: var(--pf-global--spacer--sm);
   --pf-c-notification-badge--after--Height: var(--pf-global--spacer--sm);
-  --pf-c-notification-badge--after--BackgroundColor: var(--pf-global--active-color--400);
+  --pf-c-notification-badge--after--BackgroundColor: transparent;
+  --pf-c-notification-badge--after--BorderColor: var(--pf-global--BackgroundColor--100);
   --pf-c-notification-badge--after--BorderRadius: var(--pf-global--BorderRadius--lg);
 
   // Modifiers
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
+  --pf-c-notification-badge--m-read--after--BorderColor: transparent;
   --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--400);
 
   position: relative;
@@ -16,11 +18,11 @@
     position: absolute;
     top: var(--pf-c-notification-badge--after--Top);
     right: var(--pf-c-notification-badge--after--Right);
-    display: inline-block;
     width: var(--pf-c-notification-badge--after--Width);
     height: var(--pf-c-notification-badge--after--Height);
     content: "";
     background-color: var(--pf-c-notification-badge--after--BackgroundColor);
+    border: 1px solid var(--pf-c-notification-badge--after--BorderColor);
     border-radius: var(--pf-c-notification-badge--after--BorderRadius);
     transform: translate(25%, 25%);
   }
@@ -31,5 +33,6 @@
 
   &.pf-m-read::after {
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-read--after--BackgroundColor);
+    --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-read--after--BorderColor);
   }
 }
