@@ -54,7 +54,9 @@ $pf-chart-color-black-500: $pf-color-black-700;
 
 
 // typography
-$pf-chart-global--FontSize: $pf-global--FontSize--sm;
+$pf-chart-global--FontSize--xs: $pf-global--FontSize--xs; // Axis Labels
+$pf-chart-global--FontSize--sm: $pf-global--FontSize--sm; // For Legend
+$pf-chart-global--FontSize--2xl: $pf-global--FontSize--2xl; // For Large Numbers
 
 // label
 $pf-chart-global-label--FontSize: $pf-chart-global--FontSize;
@@ -107,9 +109,9 @@ $pf-chart-candelstick-data-stroke--Width: 1px;
 $pf-chart-chart--BorderWidth: 1px;
 
 // Donut Chart
-$pf-chart-donut-color-threshold-large: $pf-color-black-200;
-$pf-chart-donut-color-threshold-medium: $pf-color-black-300;
-$pf-chart-donut-color-threshold-small: $pf-color-black-400;
+$pf-chart-donut-color-threshold-first: $pf-color-black-200;
+$pf-chart-donut-color-threshold-second: $pf-color-black-300;
+$pf-chart-donut-color-threshold-third: $pf-color-black-400;
 $pf-chart-donut-color-threshold-success: $pf-chart-color-blue-300;
 $pf-chart-donut-color-threshold-warning: $pf-chart-color-gold-400;
 $pf-chart-donut-color-threshold-danger: $pf-color-red-100;
