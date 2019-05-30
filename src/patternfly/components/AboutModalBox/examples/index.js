@@ -6,7 +6,7 @@ import AboutModalBoxExample from './about-modal-box-example.hbs';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const aboutModalBoxExample = AboutModalBoxExample();
   const headingText = 'About modal box';
   const variablesRoot = 'pf-c-about-modal-box';

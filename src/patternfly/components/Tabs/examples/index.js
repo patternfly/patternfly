@@ -43,7 +43,7 @@ import docs from '../docs/code.md';
 export const headingText = 'Tabs';
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const tabsPrimaryExample = TabsPrimaryExample();
   const tabsPrimaryOverflowExample = TabsPrimaryOverflowExample();
   const tabsSecondaryExample = TabsSecondaryExample();
