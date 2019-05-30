@@ -45,6 +45,38 @@
   --pf-c-wizard__description--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-wizard__description--Color: var(--pf-global--Color--light-200);
 
+  // Nav Link Before
+  --pf-c-wizard__nav-link--before--Width: 1.5rem;
+  --pf-c-wizard__nav-link--before--Height: 1.5rem;
+  --pf-c-wizard__nav-link--before--Top: 0;
+
+  // Toggle
+  --pf-c-wizard__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-wizard__toggle--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-wizard__toggle--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
+  --pf-c-wizard__toggle--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-wizard__toggle--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-wizard__toggle--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-wizard__toggle--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+
+  // Toggle number
+  --pf-c-wizard__toggle-num--before--Top: #{pf-size-prem(2px)};
+
+  // Toggle list
+  --pf-c-wizard__toggle-list--MarginRight: var(--pf-global--spacer--sm);
+
+  // Toggle list item
+  --pf-c-wizard__toggle-list-item--first-child--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-wizard__toggle-list-item--not-last-child--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-wizard__toggle-list-item--MarginBottom: var(--pf-global--spacer--xs);
+
+  // Toggle separator
+  --pf-c-wizard__toggle-separator--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-wizard__toggle-separator--Color: var(--pf-global--BorderColor--200);
+
+  // Toggle icon
+  --pf-c-wizard__toggle-icon--MarginTop: #{pf-size-prem(6px)};
+
   // Nav
   --pf-c-wizard__nav--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-wizard__nav--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -54,9 +86,26 @@
   --pf-c-wizard__nav--lg--Width: #{pf-size-prem(300px)};
   --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
 
+
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
   }
+
+  // Nav list (nested)
+  --pf-c-wizard__nav-list--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard__nav-list--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-wizard__nav-list--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard__nav-list--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+  --pf-c-wizard__nav-list--lg--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard__nav-list--lg--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+  --pf-c-wizard__nav-list--nested--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-wizard__nav-list--nested--MarginTop: var(--pf-global--spacer--md);
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-wizard__nav-list--PaddingRight: var(--pf-c-wizard__nav-list--lg--PaddingRight);
+    --pf-c-wizard__nav-list--PaddingLeft: var(--pf-c-wizard__nav-list--lg--PaddingLeft);
+  }
+
 
   // Nav item
   --pf-c-wizard__nav-item--MarginTop: var(--pf-global--spacer--md);
@@ -70,9 +119,6 @@
   --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
 
   // Nav link number
-  --pf-c-wizard__nav-link--before--Width: 1.5rem;
-  --pf-c-wizard__nav-link--before--Height: 1.5rem;
-  --pf-c-wizard__nav-link--before--Top: 0;
   --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-wizard__nav-link--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-wizard__nav-link--before--Color: var(--pf-global--Color--100);
@@ -82,58 +128,6 @@
   --pf-c-wizard__nav-link--m-current--before--Color: var(--pf-global--Color--light-100);
   --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor: transparent;
   --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--Color--dark-200);
-
-  // Nav list (nested)
-  --pf-c-wizard__nav-list--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-wizard__nav-list--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-wizard__nav-list--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-wizard__nav-list--PaddingLeft:
-    calc(
-      var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm)
-    );
-  --pf-c-wizard__nav-list--lg--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-wizard__nav-list--lg--PaddingLeft:
-    calc(
-      var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm)
-    );
-  --pf-c-wizard__nav-list--nested--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-wizard__nav-list--nested--MarginTop: var(--pf-global--spacer--md);
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__nav-list--PaddingRight: var(--pf-c-wizard__nav-list--lg--PaddingRight);
-    --pf-c-wizard__nav-list--PaddingLeft: var(--pf-c-wizard__nav-list--lg--PaddingLeft);
-  }
-
-  // Toggle
-  --pf-c-wizard__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-wizard__toggle--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-wizard__toggle--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-wizard__toggle--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-wizard__toggle--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-wizard__toggle--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-wizard__toggle--PaddingLeft:
-    calc(
-      var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm)
-    );
-
-  // Toggle number
-  --pf-c-wizard__toggle-num--before--Top: #{pf-size-prem(2px)};
-
-  // Toggle list item
-  --pf-c-wizard__toggle-list-item--first-child--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-wizard__toggle-list-item--not-last-child--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-wizard__toggle-list-item--MarginBottom: var(--pf-global--spacer--xs);
-
-  // Toggle list
-  --pf-c-wizard__toggle-list--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-wizard__toggle-list--MarginBottom: calc(var(--pf-c-wizard__toggle-list-item--MarginBottom) * -1);
-
-  // Toggle separator
-  --pf-c-wizard__toggle-separator--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-wizard__toggle-separator--Color: var(--pf-global--BorderColor--200);
-
-  // Toggle icon
-  --pf-c-wizard__toggle-icon--MarginTop: #{pf-size-prem(6px)};
 
   // Outer wrap
   --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -219,9 +213,7 @@
   @include pf-t-dark;
 
   position: relative;
-  padding:
-    var(--pf-c-wizard__header--PaddingTop) var(--pf-c-wizard__header--PaddingRight)
-    var(--pf-c-wizard__header--PaddingBottom) var(--pf-c-wizard__header--PaddingLeft);
+  padding: var(--pf-c-wizard__header--PaddingTop) var(--pf-c-wizard__header--PaddingRight) var(--pf-c-wizard__header--PaddingBottom) var(--pf-c-wizard__header--PaddingLeft);
   background-color: var(--pf-c-wizard__header--BackgroundColor);
 
   // Nested selector to match button component color specificity
@@ -256,9 +248,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding:
-    var(--pf-c-wizard__toggle--PaddingTop) var(--pf-c-wizard__toggle--PaddingRight)
-    var(--pf-c-wizard__toggle--PaddingBottom) var(--pf-c-wizard__toggle--PaddingLeft);
+  padding: var(--pf-c-wizard__toggle--PaddingTop) var(--pf-c-wizard__toggle--PaddingRight) var(--pf-c-wizard__toggle--PaddingBottom) var(--pf-c-wizard__toggle--PaddingLeft);
   background-color: var(--pf-c-wizard__toggle--BackgroundColor);
   border: 0;
   box-shadow: var(--pf-c-wizard__toggle--BoxShadow);
@@ -281,7 +271,6 @@
   flex-wrap: wrap;
   align-items: baseline;
   margin-right: var(--pf-c-wizard__toggle-list--MarginRight);
-  margin-bottom: var(--pf-c-wizard__toggle-list--MarginBottom);
   list-style: none;
 }
 
@@ -446,10 +435,7 @@
 
     @at-root .pf-c-wizard__toggle-num,
     &::before {
-      --pf-c-wizard__nav-link--before--BackgroundColor:
-        var(
-          --pf-c-wizard__nav-link--m-current--before--BackgroundColor
-        );
+      --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-c-wizard__nav-link--m-current--before--BackgroundColor);
       --pf-c-wizard__nav-link--before--Color: var(--pf-c-wizard__nav-link--m-current--before--Color);
     }
   }
@@ -460,10 +446,7 @@
     pointer-events: none;
 
     &::before {
-      --pf-c-wizard__nav-link--before--BackgroundColor:
-        var(
-          --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor
-        );
+      --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-c-wizard__nav-link--m-disabled--before--BackgroundColor);
       --pf-c-wizard__nav-link--before--Color: var(--pf-c-wizard__nav-link--m-disabled--before--Color);
     }
   }
@@ -483,18 +466,14 @@
 }
 
 .pf-c-wizard__main-body {
-  padding:
-    var(--pf-c-wizard__main-body--PaddingTop) var(--pf-c-wizard__main-body--PaddingRight)
-    var(--pf-c-wizard__main-body--PaddingBottom) var(--pf-c-wizard__main-body--PaddingLeft);
+  padding: var(--pf-c-wizard__main-body--PaddingTop) var(--pf-c-wizard__main-body--PaddingRight) var(--pf-c-wizard__main-body--PaddingBottom) var(--pf-c-wizard__main-body--PaddingLeft);
 }
 
 .pf-c-wizard__footer {
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-  padding:
-    var(--pf-c-wizard__footer--PaddingTop) var(--pf-c-wizard__footer--PaddingRight)
-    var(--pf-c-wizard__footer--PaddingBottom) var(--pf-c-wizard__footer--PaddingLeft);
+  padding: var(--pf-c-wizard__footer--PaddingTop) var(--pf-c-wizard__footer--PaddingRight) var(--pf-c-wizard__footer--PaddingBottom) var(--pf-c-wizard__footer--PaddingLeft);
 
   > * {
     margin-bottom: var(--pf-c-wizard__footer--child--MarginBottom);
