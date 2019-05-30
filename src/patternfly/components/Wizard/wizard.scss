@@ -46,15 +46,26 @@
   --pf-c-wizard__description--Color: var(--pf-global--Color--light-200);
 
   // Nav link
-  --pf-c-wizard__nav-link--before--Width: 1.5rem;
-  --pf-c-wizard__nav-link--before--Height: 1.5rem;
-  --pf-c-wizard__nav-link--before--Top: 0;
   --pf-c-wizard__nav-link--Color: var(--pf-global--Color--100);
   --pf-c-wizard__nav-link--TextDecoration: var(--pf-global--link--TextDecoration);
   --pf-c-wizard__nav-link--hover--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--focus--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
+
+  // Nav link number
+  --pf-c-wizard__nav-link--before--Width: 1.5rem;
+  --pf-c-wizard__nav-link--before--Height: 1.5rem;
+  --pf-c-wizard__nav-link--before--Top: 0;
+  --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-wizard__nav-link--before--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-wizard__nav-link--before--Color: var(--pf-global--Color--100);
+  --pf-c-wizard__nav-link--before--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-wizard__nav-link--before--Transform: translateX(calc(-100% - var(--pf-global--spacer--sm)));
+  --pf-c-wizard__nav-link--m-current--before--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-wizard__nav-link--m-current--before--Color: var(--pf-global--Color--light-100);
+  --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor: transparent;
+  --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--Color--dark-200);
 
 
   // Toggle
@@ -113,20 +124,8 @@
     --pf-c-wizard__nav-list--PaddingLeft: var(--pf-c-wizard__nav-list--lg--PaddingLeft);
   }
 
-
   // Nav item
   --pf-c-wizard__nav-item--MarginTop: var(--pf-global--spacer--md);
-
-  // Nav link number
-  --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-wizard__nav-link--before--BorderRadius: var(--pf-global--BorderRadius--lg);
-  --pf-c-wizard__nav-link--before--Color: var(--pf-global--Color--100);
-  --pf-c-wizard__nav-link--before--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-wizard__nav-link--before--Transform: translateX(calc(-100% - var(--pf-global--spacer--sm)));
-  --pf-c-wizard__nav-link--m-current--before--BackgroundColor: var(--pf-global--active-color--100);
-  --pf-c-wizard__nav-link--m-current--before--Color: var(--pf-global--Color--light-100);
-  --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor: transparent;
-  --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--Color--dark-200);
 
   // Outer wrap
   --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--100);
