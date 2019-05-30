@@ -76,7 +76,6 @@
   --pf-c-login__main-footer-links--PaddingRight: var(--pf-global--spacer--3xl);
   --pf-c-login__main-footer-links--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-login__main-footer-links--PaddingLeft: var(--pf-global--spacer--3xl);
-  --pf-c-login__main-footer-links--MarginBottom: calc(var(--pf-c-login__main-footer-links--MarginBottom) * -1);
   --pf-c-login__main-footer-links-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-links-item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-links-item--MarginBottom: var(--pf-global--spacer--sm);
@@ -238,7 +237,6 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: var(--pf-c-login__main-footer-links--PaddingTop) var(--pf-c-login__main-footer-links--PaddingRight) var(--pf-c-login__main-footer-links--PaddingBottom) var(--pf-c-login__main-footer-links--PaddingLeft);
-  margin-bottom: var(--pf-c-login__main-footer-links--MarginBottom);
 }
 
 .pf-c-login__main-footer-links-item {
