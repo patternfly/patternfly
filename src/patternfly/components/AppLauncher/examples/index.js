@@ -9,7 +9,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default props => {
+export default (props) => {
   const AppLauncherCollapsedExample = ApplauncherCollapsedExample();
   const AppLauncherExpandedExample = ApplauncherExpandedExample();
   const headingText = 'App launcher';
