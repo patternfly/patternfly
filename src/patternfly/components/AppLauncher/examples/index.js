@@ -17,10 +17,10 @@ export default props => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Applauncher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
+      <Example heading="App launcher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
         {AppLauncherCollapsedExample}
       </Example>
-      <Example heading="Applauncher expanded" handlebars={AppLauncherExpandedExampleRaw} minHeight="20em">
+      <Example heading="App launcher expanded" handlebars={AppLauncherExpandedExampleRaw} minHeight="20em">
         {AppLauncherExpandedExample}
       </Example>
     </Documentation>
