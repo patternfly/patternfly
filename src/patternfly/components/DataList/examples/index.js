@@ -38,7 +38,7 @@ export default props => {
         {dataListSimpleExample}
       </Example>
       <Example
-        heading="Data list simple h2: screen reader accessible"
+        heading="Data list simple with headings"
         handlebars={DataListSimpleH2ExampleRaw}
         docs={DataListSimpleH2ExampleDoc}
       >
