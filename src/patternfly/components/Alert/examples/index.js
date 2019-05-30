@@ -10,7 +10,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default props => {
+export default (props) => {
   const alertTypes = AlertTypes();
   const alertVariations = AlertVariations();
   const headingText = 'Alert';
