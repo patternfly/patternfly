@@ -52,98 +52,171 @@ $pf-chart-color-black-300: $pf-color-black-500;
 $pf-chart-color-black-400: $pf-color-black-600;
 $pf-chart-color-black-500: $pf-color-black-700;
 
-
 // typography
-$pf-chart-global--FontSize--xs: $pf-global--FontSize--xs; // Axis Labels
-$pf-chart-global--FontSize--sm: $pf-global--FontSize--sm; // For Legend
-$pf-chart-global--FontSize--2xl: $pf-global--FontSize--2xl; // For Large Numbers
+$pf-chart-global--FontSize--xs: 12; // Axis Labels
+$pf-chart-global--FontSize--sm: 14;  // Legend
+$pf-chart-global--FontSize--2xl: 24; // Large Numbers
 
 // label
-$pf-chart-global-label--FontSize: $pf-chart-global--FontSize;
-$pf-chart-global-label--Padding: 10px;
+$pf-chart-global--label--Padding: 10;
+$pf-chart-global--label--stroke--Width: 0;
 
 // Layout Props
-$pf-chart-global-layout--Padding: 50px;
-$pf-chart-global-layout--Height: 300px;
-$pf-chart-global-layout--Width: 450px;
+$pf-chart-global--layout--Padding: 50;
+$pf-chart-global--layout--Height: 300;
+$pf-chart-global--layout--Width: 450;
+
+// Stroke
+$pf-chart-global--strokeLineCap: "round";
+$pf-chart-global--strokeLineJoin: "round";
+$pf-chart-global--strokeDasharray: "10, 5";
 
 // Individual Charts
 
 // Area Chart
 $pf-chart-area--Opacity: .4;
-$pf-chart-area-stroke--Width: 2px;
+$pf-chart-area--stroke--Width: 2;
+$pf-chart-area--data--BackgroundColor: "charcoal"; // Grayscale theme
 
 // Axis Chart
-$pf-chart-axis-axis-stroke--Width: 1px;
-$pf-chart-axis-axis-label--Padding: 100px;
-$pf-chart-axis--ticks--Width: 1px;  // this should be a var for size so not sure if width is appropriate
+$pf-chart-axis--axis--stroke--Width: 1;
+$pf-chart-axis--axis--stroke--Color: "charcoal"; // Grayscale theme
+$pf-chart-axis--axis--BackgroundColor: transparent; // Grayscale theme
+$pf-chart-axis--axis-label--Padding: 100; // I see 25px padding for this in the grayscale theme
+$pf-chart-axis--axis-label--stroke--Color: "transparent"; // material theme
+$pf-chart-axis--grid--BackgroundColor: transparent; // is transparent ok for none?
+$pf-chart-axis--grid--stroke--Color: "blueGrey50"; // material theme
+$pf-chart-axis--grid--BorderColor: transparent;
+$pf-chart-axis--grid--pointerEvents: "painted";
+$pf-chart-axis--tick--BackgroundColor: transparent;
+$pf-chart-axis--tick--Width: 1; // this is 5 in material
+$pf-chart-axis--tick--BorderColor: transparent;
+$pf-chart-axis--tick--stroke--Color: "blueGrey300";
+$pf-chart-axis--tick-label--BackgroundColor: "blueGrey700";
 
 // Bar Chart
-$pf-chart-bar--Width: 10px;
+$pf-chart-bar--Width: 10;
+$pf-chart-bar--data--stroke: none;
+$pf-chart-bar--data--BackgroundColor: "charcoal"; // Grayscale theme
+$pf-chart-bar--data--Padding: 8; // Grayscale theme
+$pf-chart-bar--data-stroke--Width: 0; // Grayscale theme
 
 // Box Plot Chart
-$pf-chart-boxplot-max--Padding: $pf-global--spacer--sm;
-$pf-chart-boxplot-max-stroke--Width: 1px;
-$pf-chart-boxplot-median--Padding: $pf-global--spacer--sm;
-$pf-chart-boxplot-median-stroke--Width: 1px;
-$pf-chart-boxplot-min--Padding: $pf-global--spacer--sm;
-$pf-chart-boxplot-min-stroke--Width: 1px;
-$pf-chart-boxplot-q1--Padding: $pf-global--spacer--sm;
-$pf-chart-boxplot-q3--Padding: $pf-global--spacer--sm;
-$pf-chart-boxplot-box--Width: 20px;
+$pf-chart-boxplot--max--Padding: 8;
+$pf-chart-boxplot--max--stroke--Color: "charcoal"; // grayscale theme
+$pf-chart-boxplot--max--stroke--Width: 1;
+$pf-chart-boxplot--median--Padding: 8;
+$pf-chart-boxplot--median--stroke--Color: "charcoal"; // grayscale theme
+$pf-chart-boxplot--median--stroke--Width: 1;
+$pf-chart-boxplot--min--Padding: 8;
+$pf-chart-boxplot--min--stroke--Width: 1;
+$pf-chart-boxplot--min--stroke--Color: "charcoal"; // grayscale theme
+$pf-chart-boxplot--q1--Padding: 8;
+$pf-chart-boxplot--q1--BackgroundColor: "grey"; // grayscale theme
+$pf-chart-boxplot--q3--Padding: 8;
+$pf-chart-boxplot--q3--BackgroundColor: "grey"; // grayscale theme
+$pf-chart-boxplot--box--Width: 20;
 
 // Bullet Chart
 $pf-chart-bullet--comparative-measure-line-warning--BorderColor: $pf-color-orange-300;
-$pf-chart-bullet--comparative-measure-line-warning--BorderWidth: 1px;
+$pf-chart-bullet--comparative-measure-line-warning--BorderWidth: 1;
 $pf-chart-bullet--comparative-measure-line-error--BorderColor: $pf-color-red-100;
-$pf-chart-bullet--comparative-measure-line-error--BorderWidth: 1px;
+$pf-chart-bullet--comparative-measure-line-error--BorderWidth: 1;
 $pf-chart-bullet--zero-line--BorderColor: $pf-color-black-700;
-$pf-chart-bullet--zero-line--BorderWidth: 1px;
+$pf-chart-bullet--zero-line--BorderWidth: 1;
 $pf-chart-bullet--negative-primary-measure--BorderColor: $pf-color-red-100;
-$pf-chart-bullet--negative-primary-measure--BorderWidth: 2px;
+$pf-chart-bullet--negative-primary-measure--BorderWidth: 2;
 
 // Candlestick
-$pf-chart-candelstick-data-stroke--Width: 1px;
+$pf-chart-candelstick--data--stroke--Width: 1;
+$pf-chart-candelstick--data--stroke--Color: "charcoal"; // grayscale theme
+$pf-chart-candelstick--candleColors--positive: #fff; // grayscale theme
+$pf-chart-candelstick--candleColors--negative: "charcoal"; // grayscale theme
 
 // Chart
-$pf-chart-chart--BorderWidth: 1px;
+$pf-chart-chart--BorderWidth: 1 solid;
 
 // Donut Chart
-$pf-chart-donut-color-threshold-first: $pf-color-black-200;
-$pf-chart-donut-color-threshold-second: $pf-color-black-300;
-$pf-chart-donut-color-threshold-third: $pf-color-black-400;
-$pf-chart-donut-color-threshold-success: $pf-chart-color-blue-300;
-$pf-chart-donut-color-threshold-warning: $pf-chart-color-gold-400;
-$pf-chart-donut-color-threshold-danger: $pf-color-red-100;
+$pf-chart-donut--color-threshold--first: $pf-color-black-200;
+$pf-chart-donut--color-threshold--second: $pf-color-black-300;
+$pf-chart-donut--color-threshold--third: $pf-color-black-400;
+$pf-chart-donut--color-threshold--success: $pf-chart-color-blue-300;
+$pf-chart-donut--color-threshold--warning: $pf-chart-color-gold-400;
+$pf-chart-donut--color-threshold--danger: $pf-color-red-100;
+$pf-chart-donut--label-subtitle--color: $pf-color-black-500;
 
 // Error Bar
-$pf-chart-errorbar--BorderWidth: $pf-global--spacer--sm;
-$pf-chart-errorbar-data-stroke--Width: 2px;
+$pf-chart-errorbar--BorderWidth: 8;
+$pf-chart-errorbar--data--BackgroundColor: transparent;
+$pf-chart-errorbar--data--Opacity: 1; // material theme
+$pf-chart-errorbar--data-stroke--Width: 2;
+$pf-chart-errorbar--data-stroke--Color: "charcoal"; // grayscale theme
+
+// Group
+$pf-chart-group--colorScale: "colors"; // grayscale theme
 
 // Legend
-$pf-chart-legend-gutter--Width: 20px;
-$pf-chart-legend-title--FontSize: $pf-chart-global--FontSize;
-$pf-chart-legend-title--Padding: 2px;
+$pf-chart-legend--gutter--Width: 20; // this is 10px in the grayscale theme
+$pf-chart-legend--orientation: "horizontal"; // this is vertical in material
+$pf-chart-legend--title--orientation: "top";
+$pf-chart-legend--data--type: "square"; // this is circle in the grayscale theme
+$pf-chart-legend--title--Padding: 2; // this is 5px in grayscale theme
+$pf-chart-legend--colorScale: "colors"; // grayscale theme
 
 // Line Chart
-$pf-chart-line-stroke--Width: 2px;
+$pf-chart-line--data--BackgroundColor: transparent;
+$pf-chart-line--data--Opacity: 1; // material theme
+$pf-chart-line--data--stroke--Width: 2;
+$pf-chart-line--data--stroke--Color: "charcoal"; // grayscale theme
 
 // Pie Chart
-$pf-chart-pie--Padding: $pf-global--spacer--sm;
-$pf-chart-pie-data-Padding: $pf-global--spacer--sm;
-$pf-chart-pie-data-stroke--Width: 1px;
-$pf-chart-pie-labels--Padding: $pf-global--spacer--sm;
-$pf-chart-pie--Height: 230px;
-$pf-chart-pie--Width: 230px;
+$pf-chart-pie--Padding: 8; // 50 in grayscale theme
+$pf-chart-pie--data--Padding: 8; // this is 10px in grayscale theme
+$pf-chart-pie--data--stroke--Width: 1;
+$pf-chart-pie--data--stroke--Color: transparent; // grayscale theme
+$pf-chart-pie--labels--Padding: 8; // this is 20 in grayscale theme
+$pf-chart-pie--static--Height: 230; // 400 in grayscale theme
+$pf-chart-pie--static--Width: 230; // 400 in grayscale theme
+$pf-chart-pie--dynamic--Height: 202;
+$pf-chart-pie--dynamic--Width: 202;
+$pf-chart-pie--padAngle: 1; // What does padAngle mean?
+$pf-chart-pie--colorScale: "colors";
+$pf-chart-pie--Height: 400; // grayscale theme --> whats the diff between dynamic/static and height
+$pf-chart-pie--Width: 400; // grayscale theme
 
 // Scatter Chart
-$pf-chart-stack-data-stroke--Width: 1px;
+$pf-chart-scatter--data--stroke--Color: transparent;
+$pf-chart-scatter--data--stroke--Width: 0;
+$pf-chart-scatter--data--Opacity: 1; // material theme
+$pf-chart-scatter--data--BackgroundColor: "charcoal"; // grayscale
+
+// Scatter Chart
+$pf-chart-stack--data--stroke--Width: 1;
+$pf-chart-stack--colorScale: "colors";
 
 // Tooltip
-$pf-chart-tooltip-pointer--Height: 10px; // this is equivalent to length
-$pf-chart-tooltip-pointer--Width: 20px;
-$pf-chart-tooltip--Padding: $pf-global--spacer--md;
+$pf-chart-tooltip--cornerRadius: 0; // this is 5 in grayscale theme
+$pf-chart-tooltip--pointerLength: 10; // grayscale theme
+$pf-chart-tooltip--flyoutStyle--cornerRadius: 0;
+$pf-chart-tooltip--flyoutStyle--stroke--Width: 0; // this is 1 in grayscale theme
+$pf-chart-tooltip--flyoutStyle--pointerEvents: "none";
+$pf-chart-tooltip--flyoutStyle--stroke--Color: "charcoal"; // grayscale theme
+$pf-chart-tooltip--flyoutStyle--BackgroundColor: #f0f0f0; // grayscale theme
+$pf-chart-tooltip--pointer--Height: 10; // this is equivalent to length
+$pf-chart-tooltip--pointer--Width: 20;
+$pf-chart-tooltip--Padding: 16;
+$pf-chart-tooltip--pointerEvents: "none";
+$pf-chart-tooltip--labels--Padding: 5; // grayscale theme
+$pf-chart-tooltip--labels--pointerEvents: "none"; // grayscale theme
 
 // Voronoi Chart
-$pf-chart-voronoi-label--Padding: $pf-global--spacer--sm;
-$pf-chart-voronoi-flyout-stroke--Width: 1px;
+$pf-chart-voronoi--data--BackgroundColor: transparent;
+$pf-chart-voronoi--data--stroke--Color: transparent;
+$pf-chart-voronoi--data--stroke--Width: 0;
+$pf-chart-voronoi--labels--Padding: 8; // this is 5 in grayscale theme
+$pf-chart-voronoi--labels--pointerEvents: "none";
+$pf-chart-voronoi--flyout--stroke--Width: 1;
+$pf-chart-voronoi--flyout--pointerEvents: "none";
+$pf-chart-voronoi--flyout--stroke--Color: "charcoal";
+$pf-chart-voronoi--flyout--stroke--BackgroundColor: #f0f0f0;
+$pf-chart-voronoi--flyout--pointerEvents: "none";
