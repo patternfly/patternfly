@@ -9,7 +9,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const AppLauncherCollapsedExample = ApplauncherCollapsedExample();
   const AppLauncherExpandedExample = ApplauncherExpandedExample();
   const headingText = 'App launcher';
@@ -17,10 +17,10 @@ export default (props) => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Applauncher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
+      <Example heading="App launcher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
         {AppLauncherCollapsedExample}
       </Example>
-      <Example heading="Applauncher expanded" handlebars={AppLauncherExpandedExampleRaw} minHeight="20em">
+      <Example heading="App launcher expanded" handlebars={AppLauncherExpandedExampleRaw} minHeight="20em">
         {AppLauncherExpandedExample}
       </Example>
     </Documentation>

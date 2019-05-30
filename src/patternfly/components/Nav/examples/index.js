@@ -30,7 +30,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const navSimpleListExample = NavSimpleListExample();
   const navListGroupedExample = NavListGroupedExample();
   const navExample = NavExample();
@@ -41,7 +41,7 @@ export default (props) => {
   const navListTertiaryExample = NavListTertiaryExample();
   const navListTertiaryOverflowExample = NavListTertiaryOverflowExample();
   const navMixedExample = NavMixedExample();
-  const headingText = 'Navigation';
+  const headingText = 'Nav';
   const variablesRoot = 'pf-c-nav';
 
   return (
