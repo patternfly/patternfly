@@ -45,10 +45,17 @@
   --pf-c-wizard__description--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-wizard__description--Color: var(--pf-global--Color--light-200);
 
-  // Nav Link Before
+  // Nav link
   --pf-c-wizard__nav-link--before--Width: 1.5rem;
   --pf-c-wizard__nav-link--before--Height: 1.5rem;
   --pf-c-wizard__nav-link--before--Top: 0;
+  --pf-c-wizard__nav-link--Color: var(--pf-global--Color--100);
+  --pf-c-wizard__nav-link--TextDecoration: var(--pf-global--link--TextDecoration);
+  --pf-c-wizard__nav-link--hover--Color: var(--pf-global--link--Color);
+  --pf-c-wizard__nav-link--focus--Color: var(--pf-global--link--Color);
+  --pf-c-wizard__nav-link--m-current--Color: var(--pf-global--link--Color);
+  --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
+
 
   // Toggle
   --pf-c-wizard__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -109,14 +116,6 @@
 
   // Nav item
   --pf-c-wizard__nav-item--MarginTop: var(--pf-global--spacer--md);
-
-  // Nav link
-  --pf-c-wizard__nav-link--Color: var(--pf-global--Color--100);
-  --pf-c-wizard__nav-link--TextDecoration: var(--pf-global--link--TextDecoration);
-  --pf-c-wizard__nav-link--hover--Color: var(--pf-global--link--Color);
-  --pf-c-wizard__nav-link--focus--Color: var(--pf-global--link--Color);
-  --pf-c-wizard__nav-link--m-current--Color: var(--pf-global--link--Color);
-  --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
 
   // Nav link number
   --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
