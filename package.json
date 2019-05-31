@@ -14,6 +14,7 @@
     "build:pficons": "node ./src/icons/generateIcons.js",
     "build:pficonfont": "gulp build-pficonfont",
     "build-ghpages": "gatsby build --prefix-paths",
+    "build:ie11": "node build/npm-scripts/ie-convert-all.js",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "dev": "gatsby develop",
     "dev:expose": "gatsby develop -H 0.0.0.0",

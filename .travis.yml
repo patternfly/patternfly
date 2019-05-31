@@ -29,6 +29,7 @@ script:
   - npm run lint:styles
   - npm run build-ghpages
   - npm run build-patternfly
+  - npm run build:ie11
 
 after_success:
   - ./build/deploy.sh
