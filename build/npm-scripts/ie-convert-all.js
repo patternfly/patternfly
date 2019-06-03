@@ -14,7 +14,12 @@ getStylesheetPaths(pfStylesheetsGlob, [], [])
     }, '')
   )
   .then(concatCss => transform(concatCss, patternflyBasePath))
-  .then(transformedCss => transformedCss.replace(/\.\.\/\.\.\/assets/gm, './assets'))
+  .then(transformedCss => {
+    if (transformedCss.indexOf('undefined') >= 0) {
+      throw new Error('Stylesheet contains undefined');
+    }
+    return transformedCss.replace(/\.\.\/\.\.\/assets/gm, './assets');
+  })
   .then(ie11ReadyStylesheet => fs.writeFileSync(outPath, ie11ReadyStylesheet))
   .catch(error => {
     throw new Error(error);
