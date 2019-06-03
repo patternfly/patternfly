@@ -10,8 +10,8 @@
 
   // This translation works for the Bell icon, although adjusted for a happy medium between FF and Chrome.
   // If other icons are used, a modifier may need to be created to allow for proper positioning on that icon.
-  --pf-c-notification-badge--after--TranslateX: 50%; // calc(var(--pf-global--spacer--xs) + var(--pf-c-notification-badge--after--BorderWidth));
-  --pf-c-notification-badge--after--TranslateY: calc(var(--pf-c-notification-badge--after--BorderWidth) + 1px);
+  --pf-c-notification-badge--after--TranslateX: 50%;
+  --pf-c-notification-badge--after--TranslateY: calc(var(--pf-c-notification-badge--after--BorderWidth) * -1);
 
   // The icon is normalized to be square in order to facilitate consistency in positioning
   --pf-c-notification-badge__i--Width: var(--pf-global--spacer--md);
@@ -24,6 +24,7 @@
 
   position: relative;
   display: inline-block;
+  line-height: 1;
 
   &::after {
     position: absolute;
