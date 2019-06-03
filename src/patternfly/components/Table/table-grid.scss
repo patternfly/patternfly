@@ -34,6 +34,9 @@
   // Responsive vars
   // ==================================================================
 
+  // Table
+  --pf-c-table--responsive--BorderColor: var(--pf-global--BorderColor--300);
+
   // Body
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-table-tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
@@ -107,10 +110,8 @@
   tbody {
     display: block;
 
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
-      &:first-of-type {
-        border-top: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
-      }
+    &:first-of-type {
+      border-top: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--responsive--BorderColor);
     }
   }
 
@@ -120,12 +121,8 @@
   }
 
   // Table row
-  tr {
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
-      &:not(.pf-c-table__expandable-row) {
-        border-bottom-width: var(--pf-c-table-tr--responsive--BorderWidth);
-      }
-    }
+  tr:not(.pf-c-table__expandable-row) {
+    border-bottom: var(--pf-c-table-tr--responsive--BorderWidth) solid var(--pf-c-table--responsive--BorderColor);
   }
 
   // The last tr should always have a border width of 1px
@@ -135,20 +132,12 @@
   }
 
   tbody.pf-m-expanded {
-    @media screen and (max-width: $pf-global--breakpoint--xl) {
-      border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
-    }
-
-    @media screen and (max-width: $pf-global--breakpoint--xl) {
-      tr:not(.pf-c-table__expandable-row) {
-        border-bottom: 0;
-      }
+    tr:not(.pf-c-table__expandable-row) {
+      border-bottom: 0;
     }
 
     &:not(:last-of-type) {
-      @media screen and (max-width: $pf-global--breakpoint--sm) {
-        border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--BorderColor);
-      }
+      border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--responsive--BorderColor);
     }
   }
 
