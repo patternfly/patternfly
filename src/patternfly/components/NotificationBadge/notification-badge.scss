@@ -13,8 +13,8 @@
   --pf-c-notification-badge--after--TranslateY: var(--pf-c-notification-badge--after--BorderWidth);
 
   // The icon is normalized to be square in order to facilitate consistency in positioning
-  --pf-c-notification-badge--after__i--Width: var(--pf-global--spacer--md);
-  --pf-c-notification-badge--after__i--Height: var(--pf-global--spacer--md);
+  --pf-c-notification-badge__i--Width: var(--pf-global--spacer--md);
+  --pf-c-notification-badge__i--Height: var(--pf-global--spacer--md);
 
   // Modifiers
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
@@ -22,6 +22,7 @@
   --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--400);
 
   position: relative;
+  display: inline-block;
 
   &::after {
     position: absolute;
@@ -37,8 +38,8 @@
   }
 
   & > i {
-    width: var(--pf-c-notification-badge--after__i--Width);
-    height: var(--pf-c-notification-badge--after__i--Height);
+    width: var(--pf-c-notification-badge__i--Width);
+    height: var(--pf-c-notification-badge__i--Height);
   }
 
   &.pf-m-unread::after {
