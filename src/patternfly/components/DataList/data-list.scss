@@ -73,6 +73,7 @@
   }
 
   // Actions
+  --pf-c-data-list__item-action--Display: flex;
   --pf-c-data-list__item-action--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-action--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-action--MarginLeft: var(--pf-global--spacer--xl);
@@ -80,7 +81,6 @@
   --pf-c-data-list__item-action--not-last-child--MarginRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item-action--not-last-child--lg--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-data-list__action--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-data-list__item-action--hidden-visible--Display: flex;
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
     --pf-c-data-list__item-action--MarginLeft: var(--pf-c-data-list__item-action--md--MarginLeft);
@@ -179,9 +179,9 @@
 }
 
 .pf-c-data-list__item-action {
-  @include pf-hidden-visible(var(--pf-c-data-list__item-action--hidden-visible--Display));
+  @include pf-hidden-visible(var(--pf-c-data-list__item-action--Display));
 
-  display: flex;
+  display: var(--pf-c-data-list__item-action--Display);
   flex-wrap: nowrap;
   align-items: flex-start;
   align-content: flex-start;
