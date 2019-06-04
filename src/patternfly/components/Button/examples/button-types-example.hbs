@@ -11,11 +11,13 @@
   Danger
 {{/button}}
 {{#> button button--modifier="pf-m-link"}}
-  {{> button-icon button-icon--type="plus-circle" button-icon--modifier="pf-c-button__icon"}}
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
   Link button
 {{/button}}
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-  {{> button-icon button-icon--type="times"}}
+  <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 {{#> button button--modifier="pf-m-inline pf-m-link"}}
   Inline link button

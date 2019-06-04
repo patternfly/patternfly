@@ -1,5 +1,6 @@
-<i class="fas{{#if button-icon--type}} fa-{{button-icon--type}}{{/if}}{{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
-  aria-hidden="true"
+<div class="pf-c-button__icon{{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
   {{#if button-icon--attribute}}
     {{{button-icon--attribute}}}
-  {{/if}}></i>
+  {{/if}}>
+  {{> @partial-block}}
+</div>
