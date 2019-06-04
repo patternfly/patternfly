@@ -1,6 +1,6 @@
 ## Overview
 
-Split layouts are meant for use in positioning items horizontally, with one of the items being the main content area.
+The Split Layout is designed to position items horizontally, with one item filling the available horizontal space.
 
 ## Usage
 

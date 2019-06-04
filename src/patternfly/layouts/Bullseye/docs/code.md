@@ -1,6 +1,6 @@
 ## Overview
 
-Use a bullseye layout when there is a single child element, and that child is centered both vertically and horizontally in the parent.
+The Bullseye Layout is designed to both horizontally and vertically center a single child element within its parent.
 
 ## Usage
 

@@ -1,6 +1,6 @@
 ## Overview
 
-A Grid layout framework including responsive columns, row spans and gutters. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-m-6-col-on-lg**
+The Grid Layout is based on CSS Grid’s two-dimensional system of columns and rows. This layout styles the parent element and its children to achieve responsive column and row spans as well as gutters.
 
 ## Usage
 
