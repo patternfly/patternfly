@@ -18,3 +18,5 @@
 | `.pf-c-data-list__item-action` | `<div>` | Initiates a container for the data list actions. For example, add `.pf-c-data-list__action` here. **Required** |
 | `.pf-c-data-list__check`  | `<div>` | Initiates a data list check cell. **Required** |
 | `.pf-c-data-list__action` | `<div>` | Initiates a data list action button cell. **Required** |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-data-list__item-action` | Hides an actions container at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-data-list__item-action` | Shows an actions container at a given breakpoint. |
