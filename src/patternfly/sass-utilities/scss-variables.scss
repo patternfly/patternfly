@@ -239,7 +239,8 @@ $pf-global--breakpoint-map: (
   "sm": "-on-sm",
   "md": "-on-md",
   "lg": "-on-lg",
-  "xl": "-on-xl"
+  "xl": "-on-xl",
+  "2xl": "-on-2xl"
 );
 
 // Global breakpoint list - used for @pf-utility-builder
@@ -247,7 +248,8 @@ $pf-global--breakpoint-list: (
   "sm",
   "md",
   "lg",
-  "xl"
+  "xl",
+  "2xl"
 );
 
 // Global breakpoint name map - used for %pf-hidden-visible
@@ -255,7 +257,8 @@ $pf-global--breakpoint-name-map: (
   "sm": $pf-global--breakpoint--sm,
   "md": $pf-global--breakpoint--md,
   "lg": $pf-global--breakpoint--lg,
-  "xl": $pf-global--breakpoint--xl
+  "xl": $pf-global--breakpoint--xl,
+  "2xl": $pf-global--breakpoint--2xl
 );
 
 // Spacer properties
