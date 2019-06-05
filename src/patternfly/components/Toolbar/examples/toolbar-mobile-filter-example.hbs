@@ -4,7 +4,7 @@
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" aria-label="Filter results"}}
-    {{> button-icon button-icon--type="filter"}}
+    <i class="fas fa-filter" aria-hidden="true"></i>
   {{/button}}
   {{#> toolbar-filter toolbar-filter--modifier="pf-m-expanded"}}
     {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
