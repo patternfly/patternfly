@@ -41,7 +41,7 @@ export default (props) => {
   const navListTertiaryExample = NavListTertiaryExample();
   const navListTertiaryOverflowExample = NavListTertiaryOverflowExample();
   const navMixedExample = NavMixedExample();
-  const headingText = 'Navigation';
+  const headingText = 'Nav';
   const variablesRoot = 'pf-c-nav';
 
   return (
