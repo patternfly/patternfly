@@ -102,7 +102,7 @@ function transform(stylesheet, globalsStylesheetPath, excludeBase) {
 /**
  * Constructs an array of stylesheets to be processed, in an optimal order for post-processing
  * @param basePfCssGlob: a fileGlob pattern that selects patternfly stylesheet we want to include
- * @example { 'myEndpoint': '/exployees/list/{role}/{name}' }
+ * @example { 'myEndpoint': '/Path/to/patternfly-next/dist/{components,layouts,utilities}/**.css' }
  * @param excludes: an array of stylesheets to exclude, use the Uppercase directory name
  * @example ['Table', 'Stack', 'BoxShadow']
  * @param appStylesheets: an array of paths to stylesheets to append, comes last in the cascade
