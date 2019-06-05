@@ -1,6 +1,6 @@
 ## Overview
 
-The Stack Layout is designed to position items vertically, with one item filling the available vertical space.
+The stack layout is designed to position items vertically, with one item filling the available vertical space.
 
 ## Usage
 

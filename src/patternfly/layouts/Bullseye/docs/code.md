@@ -1,6 +1,6 @@
 ## Overview
 
-The Bullseye Layout is designed to both horizontally and vertically center a single child element within its parent.
+The bullseye layout is designed to center a single child element horizontally and vertically within its parent.
 
 ## Usage
 
