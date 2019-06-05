@@ -182,7 +182,7 @@ $pf-chart-pie--dynamic--Height: 202;
 $pf-chart-pie--dynamic--Width: 202;
 $pf-chart-pie--angle--Padding: 1;
 $pf-chart-pie--grey-scale--color-scale: ($pf-color-black-900, $pf-chart-color-black-500, $pf-chart-color-black-400, $pf-chart-color-black-300, $pf-chart-color-black-200, $pf-chart-color-black-100);
-$pf-chart-pie--material--color-scale: ($pf-chart-color-blue-300, $pf-color-green-300, $pf-color-cyan-300, $pf-color-purple-300, #f5c12e, $pf-chart-color-orange-300);
+$pf-chart-pie--material--color-scale: ($pf-chart-color-blue-300, $pf-color-green-300, $pf-color-cyan-300, $pf-color-purple-300, #f0ab00, $pf-chart-color-orange-300);
 $pf-chart-pie--Height: 400; // grayscale theme --> whats the diff between dynamic/static and height
 $pf-chart-pie--Width: 400; // grayscale theme
 
@@ -195,7 +195,7 @@ $pf-chart-scatter--data--BackgroundColor: $pf-color-black-900; // grayscale
 // Scatter Chart
 $pf-chart-stack--data--stroke--Width: 1;
 $pf-chart-stack--grey-scale--color-scale: ($pf-color-black-900, $pf-chart-color-black-500, $pf-chart-color-black-400, $pf-chart-color-black-300, $pf-chart-color-black-200, $pf-chart-color-black-100); // grayscale theme
-$pf-chart-stack--material--color-scale: ($pf-chart-color-blue-300, $pf-color-green-300, $pf-color-cyan-300, $pf-color-purple-300, #f5c12e, $pf-chart-color-orange-300);
+$pf-chart-stack--material--color-scale: ($pf-chart-color-blue-300, $pf-color-green-300, $pf-color-cyan-300, $pf-color-purple-300, #f0ab00, $pf-chart-color-orange-300);
 
 // Tooltip
 $pf-chart-tooltip--corner-radius: 0; // this is 5 in grayscale theme
