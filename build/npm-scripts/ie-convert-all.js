@@ -26,8 +26,9 @@ getStylesheetPaths(pfStylesheetsGlob, [], [])
   })
   .then(transformedCss => {
     transformedCss.split('\n').forEach((line, index) => {
+      console.error(`\x1b[31m%s\x1b[0m`, `Problem in ${outPath}:${index + 1}\n`);
       if (line.indexOf('undefined') >= 0) {
-        throw new Error(`Stylesheet contains undefined at line ${index + 1}`);
+        throw new Error(`Stylesheet ${outPath} contains undefined at line ${index + 1}`);
       }
     });
     return transformedCss.replace(/\.\.\/\.\.\/assets/gm, './assets');
