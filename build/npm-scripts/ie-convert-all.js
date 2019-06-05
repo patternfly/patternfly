@@ -7,6 +7,12 @@ const patternflyBasePath = path.resolve(__dirname, '../../dist/patternfly-base.c
 const outPath = path.resolve(__dirname, '../../dist/patternfly-ie11.css');
 
 getStylesheetPaths(pfStylesheetsGlob, [], [])
+  .then(files => {
+    if (files.length === 0) {
+      throw new Error(`getStylesheetPaths didn't receive any stylesheets to parse`);
+    }
+    return files;
+  })
   .then(files =>
     files.reduce((acc, file) => {
       acc += `${fs.readFileSync(file, 'utf8')}\n`;
@@ -14,13 +20,18 @@ getStylesheetPaths(pfStylesheetsGlob, [], [])
     }, '')
   )
   .then(concatCss => transform(concatCss, patternflyBasePath))
+  .then(ie11ReadyStylesheet => {
+    fs.writeFileSync(outPath, ie11ReadyStylesheet);
+    return ie11ReadyStylesheet;
+  })
   .then(transformedCss => {
-    if (transformedCss.indexOf('undefined') >= 0) {
-      throw new Error('Stylesheet contains undefined');
-    }
+    transformedCss.split('\n').forEach((line, index) => {
+      if (line.indexOf('undefined') >= 0) {
+        throw new Error(`Stylesheet contains undefined at line ${index + 1}`);
+      }
+    });
     return transformedCss.replace(/\.\.\/\.\.\/assets/gm, './assets');
   })
-  .then(ie11ReadyStylesheet => fs.writeFileSync(outPath, ie11ReadyStylesheet))
   .catch(error => {
     throw new Error(error);
   });
