@@ -132,6 +132,8 @@
   }
 
   tbody.pf-m-expanded {
+    border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+
     tr:not(.pf-c-table__expandable-row) {
       border-bottom: 0;
     }
