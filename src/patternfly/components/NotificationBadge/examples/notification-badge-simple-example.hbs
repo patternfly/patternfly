@@ -1,0 +1,11 @@
+{{#> button button--modifier="pf-m-icon" button--attribute='aria-label="Unread notifications"'}}
+    {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
+      {{> button-icon button-icon--type="bell"}}
+    {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-icon" button--attribute='aria-label="Notifications"'}}
+    {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+      {{> button-icon button-icon--type="bell"}}
+    {{/notification-badge}}
+{{/button}}
