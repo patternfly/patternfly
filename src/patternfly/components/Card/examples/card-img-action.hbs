@@ -8,7 +8,7 @@ Example with image and actions in card head
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
   {{/card-head}}
-  {{#> card-header}}
+  {{#> card-header card-header--attribute=(concat 'id="' card--id '-check-label"')}}
     Header
   {{/card-header}}
   {{#> card-body}}
@@ -28,7 +28,7 @@ Example with card header in card head
       {{/dropdown}}
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
-    {{#> card-header}}
+    {{#> card-header card-header--attribute=(concat 'id="' card--id '-check-label"')}}
       This is a really really really really really really really really really really long header
     {{/card-header}}
   {{/card-head}}
@@ -50,7 +50,7 @@ Example with only actions in card head (no header/footer)
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
   {{/card-head}}
-  {{#> card-body}}
+  {{#> card-body card-body--attribute=(concat 'id="' card--id '-check-label"')}}
     This is the card body, there is only actions in the card head.
   {{/card-body}}
 {{/card}}
