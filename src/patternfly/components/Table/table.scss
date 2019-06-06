@@ -220,8 +220,6 @@
       top: var(--pf-c-table__expandable-row--before--Top);
       bottom: var(--pf-c-table__expandable-row--before--Bottom);
       left: 0;
-
-      // z-index: var(--pf-c-table__expandable-row--before--ZIndex);
       width: var(--pf-c-table__expandable-row--before--Width);
       content: "";
 
@@ -335,8 +333,6 @@
       top: calc(var(--pf-c-table--BorderWidth) * -1);
       right: 0;
       left: 0;
-
-      // z-index: 999;
       content: "";
       border-top: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
     }
