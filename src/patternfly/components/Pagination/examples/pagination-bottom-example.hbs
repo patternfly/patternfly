@@ -3,10 +3,10 @@
 
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
-      {{> button-icon button-icon--type="angle-double-left"}}
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
     {{/button}}
     {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
-      {{> button-icon button-icon--type="angle-left"}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
     {{/button}}
 
     {{#> pagination-nav-page-select}}
@@ -15,10 +15,10 @@
     {{/pagination-nav-page-select}}
 
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-      {{> button-icon button-icon--type="angle-right"}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
     {{/button}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
-      {{> button-icon button-icon--type="angle-double-right"}}
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
     {{/button}}
   {{/pagination-nav}}
 {{/pagination}}

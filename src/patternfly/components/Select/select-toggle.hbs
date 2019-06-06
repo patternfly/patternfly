@@ -50,7 +50,7 @@
   {{#if select--IsTypeahead}}
     {{#if select--ItemIsSelected}}
       {{#> button button--modifier="pf-m-plain pf-c-select__toggle-clear" button--attribute='aria-label="Clear all"'}}
-        {{> button-icon button-icon--type="times-circle"}}
+        <i class="fas fa-times-circle" aria-hidden="true"></i>
       {{/button}}
     {{/if}}
       {{> select-toggle-button}}
