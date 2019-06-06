@@ -54,6 +54,7 @@
 
   .pf-c-accordion__toggle {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: var(--pf-c-accordion__toggle--PaddingTop) var(--pf-c-accordion__toggle--PaddingRight) var(--pf-c-accordion__toggle--PaddingBottom) var(--pf-c-accordion__toggle--PaddingLeft);
