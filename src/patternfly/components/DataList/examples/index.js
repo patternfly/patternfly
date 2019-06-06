@@ -23,7 +23,7 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default props => {
+export default (props) => {
   const dataListSimpleExample = DataListSimpleExample();
   const dataListSimpleH2Example = DataListSimpleH2Example();
   const dataListCheckActionExample = DataListCheckActionExample();
