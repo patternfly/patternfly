@@ -3,9 +3,9 @@ Example with image and actions in card head
   {{#> card-head}}
     <span>img goes here</span>
     {{#> card-actions}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
       {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
   {{/card-head}}
   {{#> card-header}}
@@ -24,9 +24,9 @@ Example with card header in card head
 {{#> card card--id="card-action-example-2"}}
   {{#> card-head}}
     {{#> card-actions}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
       {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
     {{#> card-header}}
       This is a really really really really really really really really really really long header
@@ -45,36 +45,14 @@ Example with only actions in card head (no header/footer)
 {{#> card card--id="card-action-example-3"}}
   {{#> card-head}}
     {{#> card-actions}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
       {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
   {{/card-head}}
   {{#> card-body}}
     This is the card body, there is only actions in the card head.
   {{/card-body}}
-{{/card}}
-<br>
-<br>
-Example with only card body and actions in the card head
-{{#> card card--id="card-action-example-4"}}
-  {{#> card-head}}
-    {{#> card-actions}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-    {{/card-actions}}
-    {{#> card-body}}
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-      This is the card body, there is only actions in the card head.
-    {{/card-body}}
-  {{/card-head}}
 {{/card}}
 <br>
 <br>

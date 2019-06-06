@@ -153,6 +153,7 @@ $pf-global--breakpoint--sm: 576px !default;
 $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
+$pf-global--breakpoint--2xl: 1450px !default;
 
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
@@ -238,7 +239,8 @@ $pf-global--breakpoint-map: (
   "sm": "-on-sm",
   "md": "-on-md",
   "lg": "-on-lg",
-  "xl": "-on-xl"
+  "xl": "-on-xl",
+  "2xl": "-on-2xl"
 );
 
 // Global breakpoint list - used for @pf-utility-builder
@@ -246,7 +248,8 @@ $pf-global--breakpoint-list: (
   "sm",
   "md",
   "lg",
-  "xl"
+  "xl",
+  "2xl"
 );
 
 // Global breakpoint name map - used for %pf-hidden-visible
@@ -254,7 +257,8 @@ $pf-global--breakpoint-name-map: (
   "sm": $pf-global--breakpoint--sm,
   "md": $pf-global--breakpoint--md,
   "lg": $pf-global--breakpoint--lg,
-  "xl": $pf-global--breakpoint--xl
+  "xl": $pf-global--breakpoint--xl,
+  "2xl": $pf-global--breakpoint--2xl
 );
 
 // Spacer properties
