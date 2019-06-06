@@ -73,6 +73,7 @@
   }
 
   // Actions
+  --pf-c-data-list__item-action--Display: flex;
   --pf-c-data-list__item-action--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-action--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-action--MarginLeft: var(--pf-global--spacer--xl);
@@ -178,7 +179,9 @@
 }
 
 .pf-c-data-list__item-action {
-  display: flex;
+  @include pf-hidden-visible(var(--pf-c-data-list__item-action--Display));
+
+  display: var(--pf-c-data-list__item-action--Display);
   flex-wrap: nowrap;
   align-items: flex-start;
   align-content: flex-start;
