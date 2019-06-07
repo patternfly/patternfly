@@ -27,6 +27,12 @@
       @content;
     }
   }
+
+  @else if $point == "2xl" {
+    @media screen and (min-width: $pf-global--breakpoint--2xl) {
+      @content;
+    }
+  }
 }
 
 // Create single prop / value classes, optionally add responsive suffix

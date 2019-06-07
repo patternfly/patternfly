@@ -66,7 +66,8 @@ $grid-breakpoints: (
   sm: $pf-global--breakpoint--sm,
   md: $pf-global--breakpoint--md,
   lg: $pf-global--breakpoint--lg,
-  xl: $pf-global--breakpoint--xl
+  xl: $pf-global--breakpoint--xl,
+  2xl: $pf-global--breakpoint--2xl
 ) !default;
 
 // Grid columns

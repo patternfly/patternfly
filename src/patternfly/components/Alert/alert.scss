@@ -60,7 +60,6 @@
   --pf-c-alert--m-inline--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-alert--m-inline--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
   --pf-c-alert--m-inline--before--Bottom: calc(-1 * var(--pf-c-alert--m-inline--BorderBottomWidth));
-  --pf-c-alert--m-inline__title--Color: var(--pf-global--Color--100);
   --pf-c-alert--m-inline__icon--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert__m-inline__icon--PaddingTop: calc(var(--pf-c-alert__icon--Padding) + ((var(--pf-c-alert__icon--FontSize) - var(--pf-c-alert__m-inline__icon--FontSize)) / 2));
   --pf-c-alert__m-inline__icon--PaddingRight: 0;
@@ -132,7 +131,6 @@
 
   &.pf-m-inline {
     --pf-c-alert--BoxShadow: var(--pf-c-alert--m-inline--BoxShadow);
-    --pf-c-alert__title--Color: var(--pf-c-alert--m-inline__title--Color);
     --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--BackgroundColor);
     --pf-c-alert--m-success__icon--Color: var(--pf-c-alert--m-inline--m-success__icon--Color);
     --pf-c-alert--m-danger__icon--Color: var(--pf-c-alert--m-inline--m-danger__icon--Color);

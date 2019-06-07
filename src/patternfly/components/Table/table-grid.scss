@@ -21,6 +21,12 @@
       @content;
     }
   }
+
+  .pf-m-grid-2xl.pf-c-table {
+    @media screen and (max-width: $pf-global--breakpoint--2xl) {
+      @content;
+    }
+  }
 }
 
 .pf-c-table[class*="pf-m-grid"] {

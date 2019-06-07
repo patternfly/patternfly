@@ -48,6 +48,14 @@ $pf-flex-spacer-map: (
       }
     }
   }
+
+  @media screen and (min-width: $pf-global--breakpoint--2xl) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      &.pf-m-space-items-#{$prop}-on-2xl > * {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
 }
 
 @mixin pf-l-flex--spacer-builder {
@@ -84,6 +92,14 @@ $pf-flex-spacer-map: (
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     @each $prop, $value in $pf-flex-spacer-map {
       .pf-m-spacer-#{$prop}-on-xl {
+        --pf-l-flex--spacer: #{$value};
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--2xl) {
+    @each $prop, $value in $pf-flex-spacer-map {
+      .pf-m-spacer-#{$prop}-on-2xl {
         --pf-l-flex--spacer: #{$value};
       }
     }
@@ -148,7 +164,8 @@ $pf-flex-spacer-map: (
     ($pf-global--breakpoint--sm, "-on-sm"),
     ($pf-global--breakpoint--md,"-on-md"),
     ($pf-global--breakpoint--lg, "-on-lg"),
-    ($pf-global--breakpoint--xl, "-on-xl")
+    ($pf-global--breakpoint--xl, "-on-xl"),
+    ($pf-global--breakpoint--2xl, "-on-2xl")
   );
 
   // List of modifiers
