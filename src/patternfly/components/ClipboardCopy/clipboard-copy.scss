@@ -38,6 +38,7 @@
   --pf-c-clipboard-copy__expandable-content--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-clipboard-copy__expandable-content--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-clipboard-copy__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-clipboard-copy__expandable-content--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Toggle button expanded
   &.pf-m-expanded .pf-c-clipboard-copy__group-toggle {
@@ -154,5 +155,6 @@
   background-color: var(--pf-c-clipboard-copy__expandable-content--BackgroundColor);
   background-clip: padding-box;
   border: var(--pf-c-clipboard-copy__expandable-content--BorderWidth) solid transparent;
+  outline-offset: var(--pf-c-clipboard-copy__expandable-content--OutlineOffset);
   box-shadow: var(--pf-c-clipboard-copy__expandable-content--BoxShadow);
 }
