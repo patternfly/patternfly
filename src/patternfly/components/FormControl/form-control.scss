@@ -70,7 +70,6 @@ $pf-c-form-control__select--ViewBox: "320" !default;
   // This component always needs to be light
   @include pf-t-light;
 
-  position: relative;
   width: 100%;
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
