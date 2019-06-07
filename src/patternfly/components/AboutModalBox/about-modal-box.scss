@@ -188,6 +188,10 @@
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 
+  * {
+    word-break: break-all;
+  }
+
   @media screen and (min-width: $pf-global--breakpoint--sm) {
     overflow: visible;
     overscroll-behavior: auto;
