@@ -1,6 +1,6 @@
 ## Overview
 
-A Gallery layout makes all of the children a uniform size, the children are displayed horizontally, and they wrap as needed.
+The gallery layout is designed so that all of its children are of uniform size, display horizontally, and wrap responsively.
 
 ## Usage
 

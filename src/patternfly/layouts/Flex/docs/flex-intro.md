@@ -1,4 +1,4 @@
-The Flex layout is designed to achieve simple, flexbox layouts by eliminating the need for a rigid structure. The concept of width/height based rows and/or columns is negated and, rather, content dictates layout and elements wrap when necessary. The system relies on a default spacer value, that is applied to flex items. These spacers respond contextually.
+The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. The system relies on a default spacer value that is applied to flex items.
 
 <br>
 ### Default spacing for:

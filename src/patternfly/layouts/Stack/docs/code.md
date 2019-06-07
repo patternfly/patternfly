@@ -1,6 +1,6 @@
 ## Overview
 
-A stack layout is a layout that positions its items vertically. In a stack layout there is one primary item that will expand vertically to fill the container if needed.
+The stack layout is designed to position items vertically, with one item filling the available vertical space.
 
 ## Usage
 
