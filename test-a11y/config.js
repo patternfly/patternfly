@@ -1,5 +1,5 @@
 module.exports = {
-  toleranceThreshold: 6,
+  toleranceThreshold: 5,
   host: 'localhost',
   port: '8000',
   protocol: 'http',
