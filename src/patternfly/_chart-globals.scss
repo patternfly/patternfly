@@ -146,6 +146,12 @@ $pf-chart-candelstick--candle--negative--Color: $pf-color-black-900;
 // Chart
 $pf-chart-chart--BorderWidth: 1 solid;
 
+// Simple Donut Chart
+$pf-chart-donut--label--subtitle--fill: $pf-chart-color-black-200;
+$pf-chart-donut--pie--Height: 230;
+$pf-chart-donut--pie--angle--Padding: 1;
+$pf-chart-donut--pie--Width: 230;
+
 // Donut Threshold Chart
 $pf-chart-donut--threshold--first--Color: $pf-color-black-200;
 $pf-chart-donut--threshold--second--Color: $pf-color-black-300;
