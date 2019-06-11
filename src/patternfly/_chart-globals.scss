@@ -147,8 +147,12 @@ $pf-chart-candelstick--candle--negative--Color: $pf-color-black-900;
 $pf-chart-chart--BorderWidth: 1 solid;
 
 // Donut Threshold Chart
-$pf-chart-donut--threshold--background--color-scale: ($pf-color-black-200, $pf-color-black-300, $pf-color-black-400);
-$pf-chart-donut--threshold--indicator--color-scale: ($pf-chart-color-blue-300, $pf-chart-color-gold-400, $pf-color-red-100);
+$pf-chart-donut--threshold--first--Color: $pf-color-black-200;
+$pf-chart-donut--threshold--second--Color: $pf-color-black-300;
+$pf-chart-donut--threshold--third--Color: $pf-color-black-400;
+$pf-chart-donut--threshold--success--Color: $pf-chart-color-blue-300;
+$pf-chart-donut--threshold--warning--Color: $pf-chart-color-gold-400;
+$pf-chart-donut--threshold--danger--Color: $pf-color-red-100;
 $pf-chart-donut--threshold--dynamic--pie--Height: 202;
 $pf-chart-donut--threshold--dynamic--pie--Width: 202;
 $pf-chart-donut--threshold--static--pie--Height: 230;
