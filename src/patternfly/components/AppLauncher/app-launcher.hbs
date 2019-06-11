@@ -1,7 +1,7 @@
-<div class="pf-c-app-launcher{{#if app-launcher--IsExpanded}} pf-m-expanded{{/if}}{{#if app-launcher--modifier}} {{app-launcher--modifier}}{{/if}}"
+<{{#if app-launcher--IsNav}}nav{{else}}div{{/if}} class="pf-c-app-launcher{{#if app-launcher--IsExpanded}} pf-m-expanded{{/if}}{{#if app-launcher--modifier}} {{app-launcher--modifier}}{{/if}}"
   {{#if app-launcher--attribute}}
     {{{app-launcher--attribute}}}
   {{/if}}>
   {{> app-launcher-toggle}}
   {{> app-launcher-menu}}
-</div>
+</{{#if app-launcher--IsNav}}nav{{else}}div{{/if}}>

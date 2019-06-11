@@ -1,10 +1,14 @@
-<ul class="pf-c-app-launcher__menu{{#if app-launcher-menu--modifier}} {{app-launcher-menu--modifier}}{{/if}}"
+<{{#if app-launcher--IsNav}}div{{else}}ul{{/if}} class="pf-c-app-launcher__menu{{#if app-launcher-menu--modifier}} {{app-launcher-menu--modifier}}{{/if}}"
   aria-labelledby="{{id}}-button"
   {{#unless app-launcher--IsExpanded}}hidden{{/unless}}
   {{#if app-launcher-menu--attribute}}
 	  {{{app-launcher-menu--attribute}}}
   {{/if}}>
-  <li><a class="pf-c-app-launcher__menu-item" href="#">Link</a></li>
-  <li><a class="pf-c-app-launcher__menu-item" href="#">Link two</a></li>
-  <li><a class="pf-c-app-launcher__menu-item pf-m-disabled" aria-disabled="true" tabindex="-1" href="#">Disabled link</a></li>  
-</ul>
+  {{#if @partial-block}}
+  {{{@partial-block}}}
+  {{else}}
+  <li>{{#> app-launcher-menu-item}}Link{{/app-launcher-menu-item}}</li>
+  <li>{{#> app-launcher-menu-item}}Link two{{/app-launcher-menu-item}}</li>
+  <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/if}}
+</{{#if app-launcher--IsNav}}div{{else}}ul{{/if}}>
