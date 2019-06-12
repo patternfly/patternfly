@@ -10,6 +10,7 @@
 | `disabled` | `button.pf-c-app-launcher__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
 | `aria-disabled="true"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
 | `tabindex="-1"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-hidden="true"` | `.pf-c-app-launcher__menu-item-external-icon` | Hides the icon from assistive technologies. |
 
 ## Usage
 
