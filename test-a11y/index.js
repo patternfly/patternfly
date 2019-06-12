@@ -17,7 +17,7 @@ let chromeOptions = {};
 if (process.env.CI) {
   chromeOptions = { args: ['--headless'] };
 } else {
-  chromeOptions = { args: ['--start-maximized', '--incognito'] };
+  chromeOptions = { args: ['--incognito', '--window-size=768,1024'] };
 }
 
 const chromeCapabilities = selenium.Capabilities.chrome();

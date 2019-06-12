@@ -3,7 +3,7 @@
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
   {{/dropdown}}
-  {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" aria-label="Filter results"}}
+  {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
   {{/button}}
   {{#> toolbar-filter toolbar-filter--modifier="pf-m-expanded"}}
