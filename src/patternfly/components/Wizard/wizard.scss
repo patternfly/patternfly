@@ -16,6 +16,7 @@
 
   // Header
   --pf-c-wizard__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-wizard__header--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-wizard__header--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-wizard__header--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-wizard__header--PaddingBottom: var(--pf-global--spacer--lg);
@@ -214,6 +215,7 @@
   @include pf-t-dark;
 
   position: relative;
+  z-index: var(--pf-c-wizard__header--ZIndex);
   padding: var(--pf-c-wizard__header--PaddingTop) var(--pf-c-wizard__header--PaddingRight) var(--pf-c-wizard__header--PaddingBottom) var(--pf-c-wizard__header--PaddingLeft);
   background-color: var(--pf-c-wizard__header--BackgroundColor);
 
