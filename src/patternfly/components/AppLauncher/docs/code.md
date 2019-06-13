@@ -2,7 +2,7 @@
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `aria-label="global"` | `nav.pf-c-app-launcher` |  Gives the `<nav>` element an accessible name. Required when .pf-c-app-launcher is used with `<nav>`. |
+| `aria-label="Application launcher"` | `.pf-c-app-launcher` |  Gives the app launcher element an accessible name. **Required** |
 | `aria-expanded="false"` | `.pf-c-button` |  Indicates that the menu is hidden. |
 | `aria-expanded="true"` | `.pf-c-button` |  Indicates that the menu is visible. |
 | `aria-label="Actions"` | `.pf-c-button` | Provides an accessible name for the app launcher when an icon is used. **Required** |
@@ -16,8 +16,8 @@
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-app-launcher` | `<div>`, `<nav>` | Defines the parent wrapper of the app launcher. |
-| `.pf-c-app-launcher__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
+| `.pf-c-app-launcher` | `<nav>` | Defines the parent wrapper of the app launcher. |
+| `.pf-c-app-launcher__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. Use a `<div>` if your app launcher has groups. |
 | `.pf-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
 | `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
 | `.pf-c-app-launcher__menu-item` | `<a>` | Defines a menu item. |

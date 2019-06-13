@@ -23,13 +23,13 @@ export default props => {
       <Example heading="App launcher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
         {AppLauncherCollapsedExample}
       </Example>
-      <Example heading="App launcher expanded" handlebars={AppLauncherExpandedExampleRaw} minHeight="20em">
+      <Example heading="App launcher expanded" handlebars={AppLauncherExpandedExampleRaw} minHeight="28em">
         {AppLauncherExpandedExample}
       </Example>
       <Example
         heading="App launcher w/ sections and icons"
         handlebars={AppLauncherSectionsIconsExampleRaw}
-        minHeight="20em"
+        minHeight="30em"
       >
         {AppLauncherSectionsIconsExample}
       </Example>
