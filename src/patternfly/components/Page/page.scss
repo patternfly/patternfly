@@ -280,6 +280,11 @@
       display: block;
       visibility: visible;
     }
+
+    > .pf-c-button .pf-c-notification-badge {
+      display: block;
+      visibility: visible;
+    }
   }
 
   .pf-m-mobile {
@@ -295,14 +300,21 @@
     display: none;
     visibility: hidden;
 
-    @media screen and (min-width: $pf-global--breakpoint--md) {
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
       display: block;
       visibility: visible;
     }
   }
 
   .pf-c-avatar {
+    display: none;
     margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+    visibility: hidden;
+
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      display: block;
+      visibility: visible;
+    }
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -313,8 +325,10 @@
 .pf-c-page__header-tools-group {
   display: flex;
 
-  & + & {
-    margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
+  .pf-m-icons + & {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
+    }
   }
 }
 
