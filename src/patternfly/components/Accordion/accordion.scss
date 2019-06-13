@@ -31,6 +31,8 @@
 
   // accordion toggle icon
   --pf-c-accordion__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-accordion__toggle-icon--expanded--Transition: var(--pf-global--Transition);
+  --pf-c-accordion__toggle-icon--expanded--Transform: rotate(90deg);
 
   // accordion expanded content
   --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-global--spacer--sm);
@@ -80,7 +82,8 @@
       }
 
       .pf-c-accordion__toggle-icon {
-        transform: rotate(90deg);
+        transition: var(--pf-c-accordion__toggle-icon--expanded--Transition);
+        transform: var(--pf-c-accordion__toggle-icon--expanded--Transform);
       }
     }
 
