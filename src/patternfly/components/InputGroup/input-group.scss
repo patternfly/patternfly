@@ -42,12 +42,7 @@
   /* stylelint-enable */
 
   .pf-c-form-control {
-    position: static;
-
     &[aria-invalid="true"] {
-      position: relative;
-      z-index: var(--pf-c-input-group--c-form-control--invalid--ZIndex);
-
       &:not(:last-child) {
         margin-right: var(--pf-c-input-group--c-form-control--MarginRight);
       }

@@ -2,7 +2,7 @@
   // Component variables
   --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000}; // Modal uses a non-standard background color
   --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(255, 255, 255, .05);  // This is a special one-off glow for the about modal
-  --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--2xl);
+  --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-about-modal-box--Height: 100%;
   --pf-c-about-modal-box--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
   --pf-c-about-modal-box--lg--MaxHeight: calc(100% - var(--pf-global--spacer--xl)); // MaxHeight ensures that the modal will not go off the screen and instead the content will scroll
@@ -203,7 +203,6 @@
   grid-area: close;
   position: sticky;
   top: 0;
-  z-index: var(--pf-c-about-modal-box__close--ZIndex);
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
