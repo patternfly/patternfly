@@ -240,7 +240,7 @@
     min-width: 0;
 
     .pf-c-nav__scroll-button {
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: #{$pf-global--breakpoint--lg - 1}) {
         top: var(--pf-c-page__header-nav--c-nav__scroll-button--lg--Top);
         background-color: var(--pf-c-page__header-nav--c-nav__scroll-button--lg--BackgroundColor);
       }
