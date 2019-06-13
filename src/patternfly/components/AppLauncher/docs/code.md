@@ -21,7 +21,8 @@
 | `.pf-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
 | `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
 | `.pf-c-app-launcher__menu-item` | `<a>` | Defines a menu item. |
-| `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for a menu item icon. |
+| `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
+| `.pf-c-app-launcher__menu-item-text` | `<span>` | Defines the wrapper for the menu item text. |
 | `.pf-c-app-launcher__menu-item-external-icon` | `<i>` | Defines the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
 | `.pf-c-app-launcher__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). |
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
