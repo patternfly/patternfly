@@ -290,12 +290,14 @@
       }
     }
 
+    // By default, show the notifications and overflow-menu
     .pf-c-page__header-notifications,
     .pf-c-page__header-overflow-menu {
       display: inline-block;
       visibility: visible;
     }
 
+    // Hide overflow-menu @ large breakpoint
     .pf-c-page__header-overflow-menu {
       @media screen and (min-width: $pf-global--breakpoint--lg) {
         display: none;
@@ -304,7 +306,7 @@
     }
   }
 
-  // remove this later
+  // REMOVE ME
   .pf-m-mobile {
     margin-right: 0;
 
@@ -314,7 +316,7 @@
     }
   }
 
-  // end remove this later
+  // end REMOVE ME
 
   .pf-m-user {
     display: none;
