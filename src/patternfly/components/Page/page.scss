@@ -63,10 +63,17 @@
   --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
+  }
+
+  // Header tools group
+  --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-page__header-tools-group--xl--MarginLeft: var(--pf-global--spacer--xl);
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-page__header-tools-group--MarginLeft: var(--pf-c-page__header-tools-group--xl--MarginLeft);
   }
 
   // Sidebar
@@ -278,17 +285,28 @@
       visibility: hidden;
 
       @media screen and (min-width: $pf-global--breakpoint--lg) {
-        display: block;
+        display: inline-block;
         visibility: visible;
       }
     }
 
-    > .pf-c-button .pf-c-notification-badge {
-      display: block;
+    // By default, show the notifications and overflow-menu
+    .pf-c-page__header-notifications,
+    .pf-c-page__header-overflow-menu {
+      display: inline-block;
       visibility: visible;
+    }
+
+    // Hide overflow-menu @ large breakpoint
+    .pf-c-page__header-overflow-menu {
+      @media screen and (min-width: $pf-global--breakpoint--lg) {
+        display: none;
+        visibility: hidden;
+      }
     }
   }
 
+  // REMOVE ME
   .pf-m-mobile {
     margin-right: 0;
 
@@ -298,12 +316,14 @@
     }
   }
 
+  // end REMOVE ME
+
   .pf-m-user {
     display: none;
     visibility: hidden;
 
     @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: block;
+      display: inline-block;
       visibility: visible;
     }
   }
@@ -326,12 +346,7 @@
 
 .pf-c-page__header-tools-group {
   display: flex;
-
-  .pf-m-icons + & {
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
-    }
-  }
+  margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
 }
 
 // Sidebar
