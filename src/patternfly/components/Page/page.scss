@@ -70,10 +70,10 @@
 
   // Header tools group
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-page__header-tools-group--xl--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__header-tools-group--lg--MarginLeft: var(--pf-global--spacer--xl);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__header-tools-group--MarginLeft: var(--pf-c-page__header-tools-group--xl--MarginLeft);
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-page__header-tools-group--MarginLeft: var(--pf-c-page__header-tools-group--lg--MarginLeft);
   }
 
   // Sidebar
