@@ -31,8 +31,8 @@
 
   // Menu item icon
   --pf-c-app-launcher__menu-item-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-app-launcher__menu-item-icon--Width: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
-  --pf-c-app-launcher__menu-item-icon--Height: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
+  --pf-c-app-launcher__menu-item-icon--Width: var(--pf-global--icon--FontSize--lg);
+  --pf-c-app-launcher__menu-item-icon--Height: var(--pf-global--icon--FontSize--lg);
 
   // Menu item external icon
   --pf-c-app-launcher__menu-item-external-icon--Color: var(--pf-global--link--Color);
