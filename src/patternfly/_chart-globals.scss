@@ -62,6 +62,7 @@ $pf-chart-global--letter-spacing: "normal";
 
 // label
 $pf-chart-global--label--Padding: 10;
+$pf-chart-global--label--Margin: 8;
 $pf-chart-global--label--stroke: transparent;
 $pf-chart-global--label--text-anchor: "middle";
 $pf-chart-global--label--stroke--Width: 0;
@@ -199,6 +200,7 @@ $pf-chart-legend--orientation: "horizontal";
 $pf-chart-legend--title--orientation: "top";
 $pf-chart-legend--data--type: "square";
 $pf-chart-legend--title--Padding: 2;
+$pf-chart-legend--Margin: 16;
 
 // Line Chart
 $pf-chart-line--data--Fill: transparent;
