@@ -61,6 +61,8 @@
 
   // Table cell - toggle
   --pf-c-table__toggle--c-button--MarginTop: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table__toggle--c-button--m-expanded--Transition: .2s ease-in 0s;
+  --pf-c-table__toggle--c-button--m-expanded--Transform: rotate(360deg);
   --pf-c-table--m-compact__toggle--PaddingTop: 0;
   --pf-c-table--m-compact__toggle--PaddingBottom: 0;
 
@@ -282,10 +284,10 @@
       transform: rotate(270deg);
     }
 
-    &.pf-m-expanded {
+    &.pf-m-expanded:focus {
       > * {
-        transition: .2s ease-in 0s;
-        transform: rotate(0deg);
+        transition: var(--pf-c-table__toggle--c-button--m-expanded--Transition);
+        transform: var(--pf-c-table__toggle--c-button--m-expanded--Transform);
       }
     }
   }
