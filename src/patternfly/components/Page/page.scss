@@ -273,12 +273,14 @@
   margin-left: auto; // to push it to the right
 
   .pf-m-icons {
-    display: none;
-    visibility: hidden;
+    > * {
+      display: none;
+      visibility: hidden;
 
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: block;
-      visibility: visible;
+      @media screen and (min-width: $pf-global--breakpoint--lg) {
+        display: block;
+        visibility: visible;
+      }
     }
 
     > .pf-c-button .pf-c-notification-badge {
@@ -300,7 +302,7 @@
     display: none;
     visibility: hidden;
 
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
       display: block;
       visibility: visible;
     }
