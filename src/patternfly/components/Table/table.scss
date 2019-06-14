@@ -284,6 +284,7 @@
 
     &.pf-m-expanded {
       > * {
+        transition: .2s ease-in 0s;
         transform: rotate(0deg);
       }
     }
