@@ -31,8 +31,8 @@
 
   // accordion toggle icon
   --pf-c-accordion__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-accordion__toggle-icon--expanded--Transition: .2s ease-in 0s;
-  --pf-c-accordion__toggle-icon--expanded--Transform: rotate(90deg);
+  --pf-c-accordion__toggle-icon--m-expanded--Transition: .2s ease-in 0s;
+  --pf-c-accordion__toggle-icon--m-expanded--Transform: rotate(90deg);
 
   // accordion expanded content
   --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-global--spacer--sm);

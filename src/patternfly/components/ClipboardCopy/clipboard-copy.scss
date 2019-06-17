@@ -45,16 +45,18 @@
   --pf-c-clipboard-copy__expandable-content--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Toggle button expanded
-  &.pf-m-expanded .pf-c-clipboard-copy__group-toggle {
-    &::before {
-      --pf-c-clipboard-copy__group-toggle--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomColor);
+  &.pf-m-expanded {
+    .pf-c-clipboard-copy__group-toggle {
+      &::before {
+        --pf-c-clipboard-copy__group-toggle--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomColor);
 
-      border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomWidth);
-    }
+        border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--m-expanded--BorderBottomWidth);
+      }
 
-    &:focus .pf-c-clipboard-copy__group-toggle-icon {
-      transition: var(--pf-c-clipboard-copy__group-toggle-icon--m-expanded--Transition);
-      transform: var(--pf-c-clipboard-copy__group-toggle-icon--m-expanded--Transform);
+      &:focus .pf-c-clipboard-copy__group-toggle-icon {
+        transition: var(--pf-c-clipboard-copy__group-toggle-icon--m-expanded--Transition);
+        transform: var(--pf-c-clipboard-copy__group-toggle-icon--m-expanded--Transform);
+      }
     }
   }
 }

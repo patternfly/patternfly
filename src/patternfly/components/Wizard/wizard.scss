@@ -95,8 +95,9 @@
 
   // Toggle icon
   --pf-c-wizard__toggle-icon--MarginTop: #{pf-size-prem(6px)};
+  --pf-c-wizard__toggle-icon--Transform: rotate(180deg);
   --pf-c-wizard__toggle-icon--m-expanded--Transition: .2s ease-in 0s;
-  --pf-c-wizard__toggle-icon--m-expanded--Transform: rotate(1800deg);
+  --pf-c-wizard__toggle-icon--m-expanded--Transform: rotate(360deg);
 
   // Nav
   --pf-c-wizard__nav--ZIndex: var(--pf-global--ZIndex--xs);
@@ -258,7 +259,8 @@
     visibility: hidden;
   }
 
-  &.pf-m-expanded {
+  &.pf-m-expanded,
+  &:focus {
     .pf-c-wizard__toggle-icon {
       transition: var(--pf-c-wizard__toggle-icon--m-expanded--Transition);
       transform: var(--pf-c-wizard__toggle-icon--m-expanded--Transform);
@@ -301,6 +303,7 @@
 
 .pf-c-wizard__toggle-icon {
   margin-top: var(--pf-c-wizard__toggle-icon--MarginTop);
+  transform: var(--pf-c-wizard__toggle-icon--Transform);
 }
 
 .pf-c-wizard__outer-wrap {
