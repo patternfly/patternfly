@@ -279,59 +279,36 @@
   margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
-  .pf-m-icons {
-    > * {
-      display: none;
-      visibility: hidden;
-
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        display: inline-block;
-        visibility: visible;
-      }
-    }
-
-    // By default, show the notifications and overflow-menu
-    .pf-c-page__header-notifications,
-    .pf-c-page__header-overflow-menu {
-      display: inline-block;
-      visibility: visible;
-    }
-
-    // Hide overflow-menu @ large breakpoint
-    .pf-c-page__header-overflow-menu {
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        display: none;
-        visibility: hidden;
-      }
-    }
-  }
-
-  // REMOVE ME
-  .pf-m-mobile {
-    margin-right: 0;
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  // end REMOVE ME
-
-  .pf-m-user {
+  // Hides on mobile visible on desktop
+  .pf-m-desktop {
     display: none;
     visibility: hidden;
 
     @media screen and (min-width: $pf-global--breakpoint--lg) {
       display: inline-block;
       visibility: visible;
+    }
+  }
+
+  // Hides on desktop visible on mobile
+  .pf-m-mobile {
+    display: inline-block;
+    visibility: visible;
+
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      display: none;
+      visibility: hidden;
     }
   }
 
   .pf-c-avatar {
     display: none;
-    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+    margin-left: 0;
     visibility: hidden;
+
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+    }
 
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       display: block;
