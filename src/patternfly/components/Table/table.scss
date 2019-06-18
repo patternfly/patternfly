@@ -13,8 +13,6 @@
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
-  --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
 
   // Caption
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
@@ -33,13 +31,14 @@
 
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table-thead--FontWeight: var(--pf-global--FontWeight--bold);
+
+  // Thead cell
+  --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Cell
   --pf-c-table-cell--hidden-visible--Display: table-cell;
-
-  // Tr
-  --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Td
   --pf-c-table-tbody-cell--PaddingTop: var(--pf-global--spacer--lg);
@@ -200,6 +199,7 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingBottom);
     --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
+    --pf-c-table--FontWeight: var(--pf-c-table-thead--FontWeight);
 
     white-space: nowrap;
     vertical-align: top;
