@@ -258,8 +258,7 @@
     visibility: hidden;
   }
 
-  &.pf-m-expanded,
-  &:focus {
+  &.pf-m-expanded {
     .pf-c-wizard__toggle-icon {
       transform: var(--pf-c-wizard__toggle--m-expanded__toggle-icon--Transform);
     }
