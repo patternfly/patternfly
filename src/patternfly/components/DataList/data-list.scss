@@ -57,8 +57,7 @@
   // Toggle
   --pf-c-data-list__toggle--MarginLeft: calc(var(--pf-global--spacer--sm) * -1); // offset toggle to align left
   --pf-c-data-list__toggle--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-data-list__toggle-icon--m-expanded--Transition: .2s ease-in 0s;
-  --pf-c-data-list__toggle-icon--m-expanded--Transform: rotate(90deg);
+  --pf-c-data-list__toggle-icon--Transition: var(--pf-global--toggle--Transition);
   --pf-c-data-list__item--m-expanded__toggle--c-button--Transform: rotate(90deg);
 
   // Controls
@@ -213,12 +212,12 @@
   margin-left: var(--pf-c-data-list__toggle--MarginLeft);
 
   // rotate icon
-  .pf-c-button:focus > * {
+  .pf-c-button > * {
     pointer-events: none;
+    transition: var(--pf-c-data-list__toggle-icon--Transition);
 
     .pf-c-data-list__item.pf-m-expanded & {
-      transition: var(--pf-c-data-list__toggle-icon--m-expanded--Transition);
-      transform: var(--pf-c-data-list__toggle-icon--m-expanded--Transform);
+      transform: var(--pf-c-data-list__item--m-expanded__toggle--c-button--Transform);
     }
   }
 }

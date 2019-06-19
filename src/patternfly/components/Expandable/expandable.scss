@@ -10,8 +10,8 @@
   --pf-c-expandable__toggle--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable__toggle--focus--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable__toggle--m-expanded--Color: var(--pf-global--link--Color--hover);
-  --pf-c-expandable__toggle-icon--m-expanded--Transition: .2s ease-in 0s;
-  --pf-c-expandable__toggle-icon--m-expanded--Transform: rotate(90deg);
+  --pf-c-expandable__toggle-icon--Transition: var(--pf-global--toggle--Transition);
+  --pf-c-expandable--m-expanded__toggle-icon--Transform: rotate(90deg);
 
   // Expandable toggle icon
   --pf-c-expandable__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -20,21 +20,19 @@
   // Expandable expanded
   --pf-c-expandable__content--MarginTop: var(--pf-global--spacer--md);
 
+  &.pf-m-expanded {
+    --pf-c-expandable__toggle--Color: var(--pf-c-expandable__toggle--m-expanded--Color);
+
+    .pf-c-expandable__toggle-icon {
+      transform: var(--pf-c-expandable--m-expanded__toggle-icon--Transform);
+    }
+  }
+
   .pf-c-expandable__toggle {
     padding: var(--pf-c-expandable__toggle--PaddingTop) var(--pf-c-expandable__toggle--PaddingRight) var(--pf-c-expandable__toggle--PaddingBottom) var(--pf-c-expandable__toggle--PaddingLeft);
     font-weight: var(--pf-c-expandable__toggle--FontWeight);
     color: var(--pf-c-expandable__toggle--Color);
     border: none;
-
-    &:focus,
-    &.pf-m-expanded {
-      --pf-c-expandable__toggle--Color: var(--pf-c-expandable__toggle--m-expanded--Color);
-
-      .pf-c-expandable__toggle-icon {
-        transition: var(--pf-c-expandable__toggle-icon--m-expanded--Transition);
-        transform: var(--pf-c-expandable__toggle-icon--m-expanded--Transform);
-      }
-    }
 
     &:hover,
     &.pf-m-hover {
@@ -55,6 +53,7 @@
   .pf-c-expandable__toggle-icon {
     margin-right: var(--pf-c-expandable__toggle-icon--MarginRight);
     color: var(--pf-c-expandable__toggle-icon--Color);
+    transition: var(--pf-c-expandable__toggle-icon--Transition);
   }
 
   .pf-c-expandable__content {

@@ -61,8 +61,9 @@
 
   // Table cell - toggle
   --pf-c-table__toggle--c-button--MarginTop: calc(#{pf-size-prem(6px)} * -1);
-  --pf-c-table__toggle--c-button--m-expanded--Transition: .2s ease-in 0s;
-  --pf-c-table__toggle--c-button--m-expanded--Transform: rotate(360deg);
+  --pf-c-table__toggle--c-button--child--Transform: rotate(270deg);
+  --pf-c-table__toggle--c-button--child--Transition: var(--pf-global--toggle--Transition);
+  --pf-c-table__toggle--c-button--m-expanded__child--Transform: rotate(360deg);
   --pf-c-table--m-compact__toggle--PaddingTop: 0;
   --pf-c-table--m-compact__toggle--PaddingBottom: 0;
 
@@ -281,13 +282,13 @@
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
 
     > * {
-      transform: rotate(270deg);
+      transition: var(--pf-c-table__toggle--c-button--child--Transition);
+      transform: var(--pf-c-table__toggle--c-button--child--Transform);
     }
 
-    &.pf-m-expanded:focus {
+    &.pf-m-expanded {
       > * {
-        transition: var(--pf-c-table__toggle--c-button--m-expanded--Transition);
-        transform: var(--pf-c-table__toggle--c-button--m-expanded--Transform);
+        transform: var(--pf-c-table__toggle--c-button--m-expanded__child--Transform);
       }
     }
   }

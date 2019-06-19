@@ -31,8 +31,8 @@
 
   // accordion toggle icon
   --pf-c-accordion__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-accordion__toggle-icon--m-expanded--Transition: .2s ease-in 0s;
-  --pf-c-accordion__toggle-icon--m-expanded--Transform: rotate(90deg);
+  --pf-c-accordion__toggle-icon--Transition: var(--pf-global--toggle--Transition);
+  --pf-c-accordion__toggle--m-expanded__toggle-icon--Transform: rotate(90deg);
 
   // accordion expanded content
   --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-global--spacer--sm);
@@ -71,10 +71,10 @@
 
     .pf-c-accordion__toggle-icon {
       line-height: var(--pf-c-accordion__toggle-icon--LineHeight);
+      transition: var(--pf-c-accordion__toggle-icon--Transition);
     }
 
-    &.pf-m-expanded,
-    &:focus {
+    &.pf-m-expanded {
       --pf-c-accordion__toggle--BorderLeftColor: var(--pf-c-accordion__toggle--m-expanded--BorderLeftColor);
 
       .pf-c-accordion__toggle-text {
@@ -83,8 +83,7 @@
       }
 
       .pf-c-accordion__toggle-icon {
-        transition: var(--pf-c-accordion__toggle-icon--expanded--Transition);
-        transform: var(--pf-c-accordion__toggle-icon--expanded--Transform);
+        transform: var(--pf-c-accordion__toggle--m-expanded__toggle-icon--Transform);
       }
     }
 

@@ -1,6 +1,7 @@
 .pf-c-nav {
   --pf-c-nav--Width: #{pf-size-prem(290px)};
   --pf-c-nav--Transition: var(--pf-global--Transition);
+  --pf-c-nav__item--m-expanded__toggle--child--Transform: rotate(90deg);
 
   // List link
   --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
@@ -126,7 +127,7 @@
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__list-toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-nav__list-toggle--FontSize: #{pf-font-prem(16px)}; // set unique font size for dropdown caret based on design spec
-  --pf-c-nav__list-toggle--Transition: .1s ease-in-out;
+  --pf-c-nav__list-toggle--Transition: var(--pf-global--toggle--Transition);
 
   // Nav section
   --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
@@ -353,7 +354,7 @@
 
 // Rotate the icon
 .pf-c-nav__item.pf-m-expanded .pf-c-nav__toggle > * {
-  transform: rotate(90deg);
+  transform: var(--pf-c-nav__item--m-expanded__toggle--child--Transform);
 }
 
 
