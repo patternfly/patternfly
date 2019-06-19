@@ -34,6 +34,7 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section` | `<section>` | Initiates a nav section element |
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link` |
+| `.pf-c-nav__toggle-icon` | `<i>` | Initiates a nav toggle icon. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state |
 | `.pf-m-hover` | `.pf-c-nav__link` | Modifies to display the link as hovered |
