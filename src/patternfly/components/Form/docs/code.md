@@ -8,6 +8,7 @@
 | `id="{helper_text_id}"` | `.pf-c-form__helper-text` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<p class="pf-c-form__helper-text" id="{helper_text_id}">`.  |
 | `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}">`.  |
 | `aria-invalid="true" aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` |  When form validation fails `aria-describedby` is used to communicate the error to the user. These attributes need to be handled with Javascript so that `aria-describedby` only references help text that explains the error, and so that `aria-invalid="true"` is only present when validation fails. For proper styling of errors `aria-invalid="true"` is required. |
+| `aria-hidden="true"` | `.pf-c-form__label-required` |  Hides the required indicator from assistive technologies. |
 
 
 ## Usage
@@ -16,7 +17,9 @@
 | -- | -- | -- |
 | `.pf-c-form` | `<form>` |  Initiates a standard form. **Required** |
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
-| `.pf-c-form__helper-text` | `<p>` |  Initiates a form helper text block. |
+| `.pf-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
+| `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
+| `.pf-c-form__helper-text` | `<span>` |  Initiates a form helper text block. |
 | `.pf-c-form__group` | `<div>` |  Wraps form fields `<label>` + `<field>` + `.form-helper-text`. |
 | `.pf-c-form__horizontal-group` | `<div>`| Wraps `.pf-c-form-control` when using `.pf-m-horizontal` on `.pf-c-form` to provide proper spacing for longer labels. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
