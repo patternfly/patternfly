@@ -18,12 +18,13 @@ About modal layout.
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-about-modal-box`               |  `<div>`, `<article>`  |  Initiates a modal box. |
-| `.pf-c-about-modal-box__brand`        |  `<div>`               |  Initiates a modal box brand cell. |
-| `.pf-c-about-modal-box__brand-image`  |  `<img>`               |  Initiates a modal box brand image. |
-| `.pf-c-about-modal-box__close`        |  `<div>`               |  Initiates a modal box close cell. |
-| `.pf-c-about-modal-box__header`       |  `<div>`, `<header>`   |  Initiates a modal box header cell. |
-| `.pf-c-about-modal-box__hero`         |  `<div>`               |  Initiates a modal box hero cell. |
-| `.pf-c-about-modal-box__content`      |  `<div>`               |  Initiates a modal box content cell. |
-| `.pf-c-about-modal-box__body`         |  `<div>`               |  Initiates a modal box body cell. |
+| `.pf-c-about-modal-box` |  `<div>`, `<article>`  |  Initiates a modal box. |
+| `.pf-c-about-modal-box__brand` |  `<div>` |  Initiates a modal box brand cell. |
+| `.pf-c-about-modal-box__brand-image` |  `<img>` |  Initiates a modal box brand image. |
+| `.pf-c-about-modal-box__close` |  `<div>` |  Initiates a modal box close cell. |
+| `.pf-c-about-modal-box__header` |  `<div>`, `<header>` |  Initiates a modal box header cell. |
+| `.pf-c-about-modal-box__hero` |  `<div>` |  Initiates a modal box hero cell. |
+| `.pf-c-about-modal-box__content` |  `<div>` |  Initiates a modal box content cell. |
+| `.pf-c-about-modal-box__body` |  `<div>` |  Initiates a modal box body cell. |
+| `.pf-c-about-modal-box__strapline` |  `<p>` |  Initiates a modal box strapline cell. |
 | `.pf-m-hover` | `.pf-c-about-modal-box__close .pf-c-button.pf-m-action` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.
