@@ -10,8 +10,6 @@ This is a milestone release for PatternFly 4 - RC2 - it includes the following:
 - Removed flex from header (#1817)
 - Updated font sizes. Card body and footer text size were changed to be 14px by default and header was changed to16px. (#2103)
 - Card Demo: Added demo (#1716)
-### Charts
-- Added CSS Variables for Charts (#1846)
 ### Content
 - Changed margin bottom for small element (#1843)
 ### Form/login/wizard
@@ -28,10 +26,13 @@ This is a milestone release for PatternFly 4 - RC2 - it includes the following:
 ### Wizard
 - Fixed wizard closing tag (#1803)
 - Set pf-c-wizard__main to grow and fill available height (#1781)
+## Layouts
+### Gutter
+- Updated mobile gutter spacing in layouts that have gutters (#1829)
 ## Other
+### Charts
+- Added CSS Variables for Charts (#1846)
 ### Docs (global)
 - Updated docs and examples to use sentence case (#1796)
 ### Guidelines
 - Added punctuation, formatting (#1810)
-### Gutter
-- Updated mobile gutter spacing in layouts that have gutters (#1829)
