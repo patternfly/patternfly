@@ -143,6 +143,10 @@
   width: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
 
+  td {
+    word-break: break-word;
+  }
+
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
