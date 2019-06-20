@@ -102,7 +102,7 @@ $pf-chart-global--Fill--Color--white: $pf-color-white;
 
 // Area Chart
 $pf-chart-area--Opacity: .4;
-$pf-chart-area--stroke--Width: 2;
+$pf-chart-area--stroke--Width: $pf-chart-global--stroke--Width--sm;
 $pf-chart-area--data--Fill: $pf-chart-global--Fill--Color--900;
 
 // Axis Chart
