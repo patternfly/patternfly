@@ -26,6 +26,7 @@
   // Toggle arrow
   --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-options-menu--m-top--m-expanded__toggle-icon--Transform: rotate(180deg);
 
   // Text toggle button
   --pf-c-options-menu__toggle-button--Background: transparent;
@@ -178,7 +179,7 @@
   margin-left: var(--pf-c-options-menu__toggle-icon--MarginLeft);
 
   .pf-c-options-menu.pf-m-top.pf-m-expanded & {
-    transform: rotate(-180deg);
+    transform: var(--pf-c-options-menu--m-top--m-expanded__toggle-icon--Transform);
   }
 }
 
