@@ -91,6 +91,7 @@
 
   // Strapline
   --pf-c-about-modal-box__strapline--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-about-modal-box__strapline--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-about-modal-box__strapline--sm--PaddingTop: var(--pf-global--spacer--2xl);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
@@ -175,6 +176,7 @@
 .pf-c-about-modal-box__strapline {
   padding-top: var(--pf-c-about-modal-box__strapline--PaddingTop);
   margin-top: auto;
+  font-size: var(--pf-c-about-modal-box__strapline--FontSize);
 }
 
 // Content
