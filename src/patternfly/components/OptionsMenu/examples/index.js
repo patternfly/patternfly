@@ -2,12 +2,14 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import OptionsMenuSingleExampleRaw from '!raw!./options-menu-single-example.hbs';
+import OptionsMenuDisabledExampleRaw from '!raw!./options-menu-disabled-example.hbs';
 import OptionsMenuMultipleExampleRaw from '!raw!./options-menu-multiple-example.hbs';
 import OptionsMenuPlainExampleRaw from '!raw!./options-menu-plain-example.hbs';
 import OptionsMenuTopExampleRaw from '!raw!./options-menu-top-example.hbs';
 import OptionsMenuAlignRightExampleRaw from '!raw!./options-menu-align-right-example.hbs';
 import OptionsMenuPlainTextExampleRaw from '!raw!./options-menu-plain-text-example.hbs';
 import OptionsMenuSingleExample from './options-menu-single-example.hbs';
+import OptionsMenuDisabledExample from './options-menu-disabled-example.hbs';
 import OptionsMenuMultipleExample from './options-menu-multiple-example.hbs';
 import OptionsMenuPlainExample from './options-menu-plain-example.hbs';
 import OptionsMenuTopExample from './options-menu-top-example.hbs';
@@ -17,8 +19,9 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const optionsMenuSingleExample = OptionsMenuSingleExample();
+  const optionsMenuDisabledExample = OptionsMenuDisabledExample();
   const optionsMenuMultipleExample = OptionsMenuMultipleExample();
   const optionsMenuPlainExample = OptionsMenuPlainExample();
   const optionsMenuTopExample = OptionsMenuTopExample();
@@ -35,6 +38,9 @@ export default (props) => {
         handlebars={OptionsMenuSingleExampleRaw}
       >
         {optionsMenuSingleExample}
+      </Example>
+      <Example heading="Options menu - disabled" handlebars={OptionsMenuDisabledExampleRaw}>
+        {optionsMenuDisabledExample}
       </Example>
       <Example heading="Options menu - multiple options" minHeight="20em" handlebars={OptionsMenuMultipleExampleRaw}>
         {optionsMenuMultipleExample}
