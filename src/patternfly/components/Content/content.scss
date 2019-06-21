@@ -8,21 +8,24 @@
   // this ensures color is not overridden
   --pf-c-content--Color: var(--pf-global--Color--100);
 
-  // h1 -main title
+  // Headings
+  --pf-c-content--heading--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+
+  // h1
   --pf-c-content--h1--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h1--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-content--h1--FontSize: var(--pf-global--FontSize--2xl);
   --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--normal);
 
-  // h2 - secondary title
+  // h2
   --pf-c-content--h2--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h2--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-content--h2--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--normal);
 
-  // h3 - sub-title
+  // h3
   --pf-c-content--h3--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h3--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h3--LineHeight: var(--pf-global--LineHeight--md);
@@ -134,7 +137,11 @@
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    margin: 0;
+    font-family: var(--pf-c-content--heading--FontFamily);
+  }
+
   ol,
   ul {
     margin: 0;
@@ -294,5 +301,16 @@
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       grid-column: 2;
     }
+  }
+}
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-content {
+    --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--md);
+    --pf-c-content--blockquote--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--normal);
   }
 }

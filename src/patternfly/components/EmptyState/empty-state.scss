@@ -59,3 +59,12 @@
     margin-bottom: var(--pf-c-empty-state__secondary--c-button--MarginBottom);
   }
 }
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-empty-state {
+    > .pf-c-title {
+      font-size: var(--pf-global--FontSize--xl);
+    }
+  }
+}

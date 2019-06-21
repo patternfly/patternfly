@@ -5,7 +5,7 @@ export default ({ children }) => (
   <div>
     <Helmet>
       <title>PatternFly 4</title>
-      <html lang="en-US" />
+      <html lang="en-US" className="pf-m-redhat-font" />
     </Helmet>
     <div>{children}</div>
   </div>
