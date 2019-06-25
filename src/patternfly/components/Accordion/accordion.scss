@@ -74,8 +74,7 @@
       transition: var(--pf-c-accordion__toggle-icon--Transition);
     }
 
-    &.pf-m-expanded,
-    &:focus {
+    &.pf-m-expanded {
       --pf-c-accordion__toggle--BorderLeftColor: var(--pf-c-accordion__toggle--m-expanded--BorderLeftColor);
 
       .pf-c-accordion__toggle-text {
