@@ -4,6 +4,7 @@
   --pf-c-card--BoxShadow: var(--pf-global--BoxShadow--sm);
   --pf-c-card--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-card--m-compact__body--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-card--m-compact__footer--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-card--m-compact--first-child--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-card--m-compact--child--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-card--m-compact--child--PaddingBottom: var(--pf-global--spacer--md);
@@ -15,7 +16,7 @@
   --pf-c-card--child--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-card__header--not-last-child--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-card__footer--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-card__footer--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-card__actions--child--MarginLeft: var(--pf-global--spacer--sm);
 
@@ -32,10 +33,12 @@
 
   &.pf-m-compact {
     --pf-c-card__body--FontSize: var(--pf-c-card--m-compact__body--FontSize);
+    --pf-c-card__footer--FontSize: var(--pf-c-card--m-compact__footer--FontSize);
     --pf-c-card--first-child--PaddingTop: var(--pf-c-card--m-compact--first-child--PaddingTop);
     --pf-c-card--child--PaddingRight: var(--pf-c-card--m-compact--child--PaddingRight);
     --pf-c-card--child--PaddingBottom: var(--pf-c-card--m-compact--child--PaddingBottom);
     --pf-c-card--child--PaddingLeft: var(--pf-c-card--m-compact--child--PaddingLeft);
+    --pf-c-card__header--not-last-child--PaddingBottom: var(--pf-c-card--m-compact__header--not-last-child--PaddingBottom);
   }
 }
 
