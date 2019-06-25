@@ -218,18 +218,10 @@
       }
     }
 
-    // @mobile only
-    // set contents of ::before pseudo element to start at column one of td grid
     &::before {
       font-weight: bold;
       text-align: left;
       content: attr(data-label);
-
-      @media screen and (min-width: $pf-global--breakpoint--xs) {
-        font-weight: normal;
-        // set ::before to span all rows, up to 100
-        grid-row: 1;
-      }
     }
   }
 
@@ -307,7 +299,6 @@
       top: 0;
       bottom: 0;
       left: 0;
-      z-index: 10;
       width: var(--pf-c-table__expandable-row--before--Width);
       content: "";
     }

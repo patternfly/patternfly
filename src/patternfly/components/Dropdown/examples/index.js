@@ -73,7 +73,7 @@ export default (props) => {
       <Example className="is-expanded-dropdown" heading="Split button" handlebars={DropdownSplitButtonRaw}>
         {dropdownSplitButton}
       </Example>
-      <Example minHeight="25em" heading="Dropdown with groups" handlebars={DropdownGroupsRaw}>
+      <Example className="is-extra-tall-body" heading="Dropdown with groups" handlebars={DropdownGroupsRaw}>
         {dropdownGroups}
       </Example>
       <Example className="is-expanded-dropdown" heading="Dropdown panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>

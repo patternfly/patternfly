@@ -74,7 +74,7 @@
   --pf-c-select__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-select__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-select__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
-  --pf-c-select__menu--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-select__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-select__menu--m-top--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu item

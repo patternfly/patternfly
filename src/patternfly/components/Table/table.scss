@@ -13,8 +13,6 @@
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-table--FontFamily: var(--pf-global--FontFamily--sans-serif);
-  --pf-c-table--LineHeight: var(--pf-global--LineHeight--md);
 
   // Caption
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
@@ -33,13 +31,14 @@
 
   // Thead
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table-thead--FontWeight: var(--pf-global--FontWeight--bold);
+
+  // Thead cell
+  --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Cell
   --pf-c-table-cell--hidden-visible--Display: table-cell;
-
-  // Tr
-  --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Td
   --pf-c-table-tbody-cell--PaddingTop: var(--pf-global--spacer--lg);
@@ -146,6 +145,10 @@
   width: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
 
+  td {
+    word-break: break-word;
+  }
+
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
@@ -203,6 +206,7 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingBottom);
     --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
+    --pf-c-table--FontWeight: var(--pf-c-table-thead--FontWeight);
 
     white-space: nowrap;
     vertical-align: top;
@@ -223,7 +227,6 @@
       top: var(--pf-c-table__expandable-row--before--Top);
       bottom: var(--pf-c-table__expandable-row--before--Bottom);
       left: 0;
-      z-index: var(--pf-c-table__expandable-row--before--ZIndex);
       width: var(--pf-c-table__expandable-row--before--Width);
       content: "";
 
@@ -338,7 +341,6 @@
       top: calc(var(--pf-c-table--BorderWidth) * -1);
       right: 0;
       left: 0;
-      z-index: 999;
       content: "";
       border-top: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
     }
