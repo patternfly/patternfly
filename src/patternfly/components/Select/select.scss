@@ -60,6 +60,7 @@
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Transform: rotate(-180deg);
 
   // Toggle button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--sm);
@@ -243,7 +244,7 @@
   }
 
   .pf-m-top.pf-m-expanded > & {
-    transform: rotate(-180deg);
+    transform: var(--pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Transform);
   }
 }
 
