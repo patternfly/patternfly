@@ -18,6 +18,7 @@
 | `.pf-c-wizard` | `<div>` | Initiates the wizard component. **Required** |
 | `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** |
 | `.pf-c-wizard__close` | `.pf-c-button.pf-m-plain` | Initiates the close button. **Required** |
+| `.pf-c-wizard__cancel` | `.pf-c-button.pf-m-link` | Initiates the cancel button. **Required** |
 | `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
 | `.pf-c-wizard__description` | `<p>` | Initiates the description. |
 | `.pf-c-wizard__toggle` | `<button>` | Initiates the mobile steps menu toggle button. **Required** |

@@ -39,6 +39,13 @@
     --pf-c-wizard__close--Right: var(--pf-c-wizard__close--lg--Right);
   }
 
+  // Cancel
+  --pf-c-wizard__cancel--MarginLeft: var(--pf-global--spacer--lg);
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-wizard__cancel--MarginLeft: var(--pf-global--spacer--xl);
+  }
+
   // Title
   --pf-c-wizard__title--PaddingRight: var(--pf-global--spacer--2xl);
 
@@ -488,4 +495,8 @@
       margin-right: var(--pf-c-wizard__footer--child--MarginRight);
     }
   }
+}
+
+.pf-c-wizard__cancel {
+  margin-left: var(--pf-c-wizard__cancel--MarginLeft);
 }
