@@ -1,9 +1,19 @@
 .pf-l-stack {
   --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
+  --pf-l-stack--m-gutter--sm--MarginBottom: var(--pf-global--gutter--sm);
   --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter--md);
+  --pf-l-stack--m-gutter--lg--MarginBottom: var(--pf-global--gutter--lg);
+
+  @media screen and (max-width: $pf-global--breakpoint--sm) {
+    --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--sm--MarginBottom);
+  }
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
     --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--md--MarginBottom);
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--lg) {
+    --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--lg--MarginBottom);
   }
 
   display: flex;
@@ -17,4 +27,16 @@
 
 .pf-l-stack.pf-m-gutter > *:not(:last-child) {
   margin-bottom: var(--pf-l-stack--m-gutter--MarginBottom);
+}
+
+.pf-l-stack.pf-m-gutter-sm > *:not(:last-child) {
+  margin-bottom: var(--pf-l-stack--m-gutter--sm--MarginBottom);
+}
+
+.pf-l-stack.pf-m-gutter-md > *:not(:last-child) {
+  margin-bottom: var(--pf-l-stack--m-gutter--md--MarginBottom);
+}
+
+.pf-l-stack.pf-m-gutter-lg > *:not(:last-child) {
+  margin-bottom: var(--pf-l-stack--m-gutter--lg--MarginBottom);
 }

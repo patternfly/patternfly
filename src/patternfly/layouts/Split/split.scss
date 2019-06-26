@@ -1,9 +1,19 @@
 .pf-l-split {
   --pf-l-split--m-gutter--MarginRight: var(--pf-global--gutter);
+  --pf-l-split--m-gutter--sm--MarginRight: var(--pf-global--gutter--sm);
   --pf-l-split--m-gutter--md--MarginRight: var(--pf-global--gutter--md);
+  --pf-l-split--m-gutter--lg--MarginRight: var(--pf-global--gutter--lg);
+
+  @media screen and (max-width: $pf-global--breakpoint--sm) {
+    --pf-l-split--m-gutter--MarginRight: var(--pf-l-split--m-gutter--sm--MarginRight);
+  }
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
     --pf-l-split--m-gutter--MarginRight: var(--pf-l-split--m-gutter--md--MarginRight);
+  }
+
+  @media screen and (max-width: $pf-global--breakpoint--lg) {
+    --pf-l-split--m-gutter--MarginRight: var(--pf-l-split--m-gutter--lg--MarginRight);
   }
 
   display: flex;
@@ -18,4 +28,16 @@
 
 .pf-l-split.pf-m-gutter > *:not(:last-child) {
   margin-right: var(--pf-l-split--m-gutter--MarginRight);
+}
+
+.pf-l-split.pf-m-gutter-sm > *:not(:last-child) {
+  margin-right: var(--pf-l-split--m-gutter--sm--MarginRight);
+}
+
+.pf-l-split.pf-m-gutter-md > *:not(:last-child) {
+  margin-right: var(--pf-l-split--m-gutter--md--MarginRight);
+}
+
+.pf-l-split.pf-m-gutter-lg > *:not(:last-child) {
+  margin-right: var(--pf-l-split--m-gutter--lg--MarginRight);
 }

@@ -1,4 +1,37 @@
-{{#> split split--modifier="pf-m-gutter"}}
+<h2 class="example-title">
+  Small Gutters
+</h2>
+{{#> split split--modifier="pf-m-gutter-sm"}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item split-item--modifier="pf-m-fill"}}
+    pf-m-fill
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+{{/split}}
+
+<h2 class="example-title">
+  Medium Gutters
+</h2>
+{{#> split split--modifier="pf-m-gutter-md"}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item split-item--modifier="pf-m-fill"}}
+    pf-m-fill
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+{{/split}}
+
+<h2 class="example-title">
+  Large Gutters
+</h2>
+{{#> split split--modifier="pf-m-gutter-lg"}}
   {{#> split-item}}
     content
   {{/split-item}}
