@@ -98,7 +98,7 @@
   --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
 
   // Table toggle icons
-  --pf-c-table__toggle__icon--Transition: var(--pf-global--toggle--Transition);
+  --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
 
 

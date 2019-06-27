@@ -127,7 +127,7 @@
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__list-toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-nav__list-toggle--FontSize: #{pf-font-prem(16px)}; // set unique font size for dropdown caret based on design spec
-  --pf-c-nav__list-toggle--Transition: var(--pf-global--toggle--Transition);
+  --pf-c-nav__list-toggle--Transition: .2s ease-in 0s;
 
   // Nav section
   --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);

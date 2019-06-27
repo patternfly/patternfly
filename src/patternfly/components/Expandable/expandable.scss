@@ -10,7 +10,7 @@
   --pf-c-expandable__toggle--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable__toggle--focus--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable__toggle--m-expanded--Color: var(--pf-global--link--Color--hover);
-  --pf-c-expandable__toggle-icon--Transition: var(--pf-global--toggle--Transition);
+  --pf-c-expandable__toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-expandable--m-expanded__toggle-icon--Transform: rotate(90deg);
 
   // Expandable toggle icon
