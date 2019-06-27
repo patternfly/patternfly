@@ -1,6 +1,6 @@
-<dt><h3><button class="pf-c-accordion__toggle{{#if accordion-toggle--IsExpanded}} pf-m-expanded{{/if}}{{#if accordion-toggle--modifier}} {{accordion-toggle--modifier}}{{/if}}"
+<{{#if accordion--IsDefinitionList}}dt>{{else}}h3>{{/if}}<button class="pf-c-accordion__toggle{{#if accordion-toggle--IsExpanded}} pf-m-expanded{{/if}}{{#if accordion-toggle--modifier}} {{accordion-toggle--modifier}}{{/if}}"
  {{#if accordion-toggle--attribute}}
    {{{accordion-toggle--attribute}}}
  {{/if}}>
  {{> @partial-block}}
-</button></h3></dt>
+</button></{{#if accordion--IsDefinitionList}}dt{{else}}h3{{/if}}>
