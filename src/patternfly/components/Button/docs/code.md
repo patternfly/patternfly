@@ -5,6 +5,9 @@ Always add a modifier class to add color to the button.
 ## Button vs link
 Semantic buttons and links are important for usability as well as accessibility. Using an `a` instead of a `button` element to perform user initiated actions should be avoided, unless absolutely necessary.
 
+## Button Types
+The default type for a button is button, which must be set to avoid having a button in a form incorrectly default to type "submit". If a button is used in a submit form, the type should be set to "submit". If a button is used to reset a form, the type should be set to "reset".
+
 ## Accessibility
 
 | Attribute | Applied to | Outcome |
