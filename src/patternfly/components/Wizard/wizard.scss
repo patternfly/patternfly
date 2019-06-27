@@ -40,10 +40,10 @@
   }
 
   // Cancel
-  --pf-c-wizard__cancel--MarginLeft: var(--pf-global--spacer--lg);
+  --pf-c-wizard__footer__link--MarginLeft: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__cancel--MarginLeft: var(--pf-global--spacer--xl);
+    --pf-c-wizard__footer__link--MarginLeft: var(--pf-global--spacer--xl);
   }
 
   // Title
@@ -497,6 +497,6 @@
   }
 }
 
-.pf-c-wizard__cancel {
-  margin-left: var(--pf-c-wizard__cancel--MarginLeft);
+.pf-c-wizard__footer__link {
+  margin-left: var(--pf-c-wizard__footer__link--MarginLeft);
 }
