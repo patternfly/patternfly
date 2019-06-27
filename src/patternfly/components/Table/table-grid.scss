@@ -97,6 +97,11 @@
   // Table action
   --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
 
+  // Table toggle icons
+  --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
+  --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
+
+
   // End responsive vars
   // ==================================================================
 }
@@ -415,11 +420,11 @@
   // Toggles
   .pf-c-table__toggle {
     .pf-c-button > * {
-      transform: rotate(0deg);
+      transition: var(--pf-c-table__toggle__icon--Transition);
     }
 
     .pf-c-button.pf-m-expanded > * {
-      transform: rotate(180deg);
+      transform: var(--pf-c-table__toggle--m-expanded__icon--Transform);
     }
   }
 

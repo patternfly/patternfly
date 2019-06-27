@@ -60,6 +60,9 @@
 
   // Table cell - toggle
   --pf-c-table__toggle--c-button--MarginTop: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table__toggle--c-button__toggle-icon--Transform: rotate(270deg);
+  --pf-c-table__toggle--c-button__toggle-icon--Transition: .2s ease-in 0s;
+  --pf-c-table__toggle--c-button--m-expanded__toggle-icon--Transform: rotate(360deg);
   --pf-c-table--m-compact__toggle--PaddingTop: 0;
   --pf-c-table--m-compact__toggle--PaddingBottom: 0;
 
@@ -282,12 +285,13 @@
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
 
     > * {
-      transform: rotate(270deg);
+      transition: var(--pf-c-table__toggle--c-button__toggle-icon--Transition);
+      transform: var(--pf-c-table__toggle--c-button__toggle-icon--Transform);
     }
 
     &.pf-m-expanded {
       > * {
-        transform: rotate(0deg);
+        transform: var(--pf-c-table__toggle--c-button--m-expanded__toggle-icon--Transform);
       }
     }
   }
