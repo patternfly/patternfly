@@ -100,19 +100,21 @@
   --pf-c-nav__simple-list-link--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
   // List horizontal link
-  --pf-c-nav__horizontal-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__horizontal-list-link--md--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav__horizontal-list-link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav__horizontal-list-link--lg--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__horizontal-list-link--lg--PaddingBottom: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
+    --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-c-nav__horizontal-list-link--lg--PaddingTop);
     --pf-c-nav__horizontal-list-link--PaddingBottom: var(--pf-c-nav__horizontal-list-link--lg--PaddingBottom);
-    --pf-c-nav__horizontal-list-link--PaddingTop: var(--pf-c-nav__horizontal-list-link--md--PaddingTop);
   }
 
   // font
   --pf-c-nav__horizontal-list-link--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-nav__horizontal-list-link--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
   --pf-c-nav__horizontal-list-link--active--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-nav__horizontal-list-link--focus--FontWeight: var(--pf-global--FontWeight--bold);
 
@@ -123,6 +125,9 @@
   --pf-c-nav__horizontal-list-link--focus--Color: var(--pf-global--active-color--400);
 
   // after
+  --pf-c-nav__horizontal-list-link--after--Right: var(--pf-c-nav__horizontal-list-link--PaddingRight);
+  --pf-c-nav__horizontal-list-link--after--Bottom: 0;
+  --pf-c-nav__horizontal-list-link--after--Left: var(--pf-c-nav__horizontal-list-link--PaddingLeft);
   --pf-c-nav__horizontal-list-link--after--Height: #{pf-size-prem(3px)};
   --pf-c-nav__horizontal-list-link--hover--after--BackgroundColor: var(--pf-global--active-color--400);
   --pf-c-nav__horizontal-list-link--active--after--BackgroundColor: var(--pf-global--active-color--400);
@@ -520,16 +525,16 @@
 .pf-c-nav__horizontal-list {
   vertical-align: bottom;
 
-  .pf-c-nav__item {
-    margin-right: var(--pf-c-nav__horizontal-list-item--MarginRight);
-  }
-
   .pf-c-nav__link {
     padding-top: var(--pf-c-nav__horizontal-list-link--PaddingTop);
+    padding-right: var(--pf-c-nav__horizontal-list-link--PaddingRight);
     padding-bottom: var(--pf-c-nav__horizontal-list-link--PaddingBottom);
+    padding-left: var(--pf-c-nav__horizontal-list-link--PaddingLeft);
     font-weight: var(--pf-c-nav__horizontal-list-link--FontWeight);
     color: var(--pf-c-nav__horizontal-list-link--Color);
     white-space: nowrap;
+    outline-offset: var(--pf-c-nav__horizontal-list-link--OutlineOffset);
+
 
     // States
     &.pf-m-hover,
@@ -573,10 +578,10 @@
     // After - border bottom treatment
     &::after {
       position: absolute;
-      bottom: 0;
-      left: 0;
+      right: var(--pf-c-nav__horizontal-list-link--after--Right);
+      bottom: var(--pf-c-nav__horizontal-list-link--after--Bottom);
+      left: var(--pf-c-nav__horizontal-list-link--after--Left);
       display: block;
-      width: 100%;
       height: var(--pf-c-nav__horizontal-list-link--after--Height);
       content: "";
     }

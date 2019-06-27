@@ -33,12 +33,11 @@
   --pf-c-page__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
 
   // Header nav
-  --pf-c-page__header-nav--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__header-nav--md--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__header-nav--lg--PaddingLeft: 0;
-  --pf-c-page__header-nav--lg--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__header-nav--MarginRight: 0;
+  --pf-c-page__header-nav--MarginLeft: 0;
   --pf-c-page__header-nav--lg--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+  --pf-c-page__header-nav--lg--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-page__header-nav--BackgroundColor: #242424; // Custom color for this element only
   --pf-c-page__header-nav--lg--BackgroundColor: transparent;
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
@@ -47,12 +46,12 @@
   --pf-c-page__header-nav--c-nav__scroll-button--lg--Top: 0;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--md--PaddingLeft);
     --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--md--Left);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--lg--PaddingLeft);
+    --pf-c-page__header-nav--MarginRight: var(--pf-c-page__header-nav--lg--MarginRight);
+    --pf-c-page__header-nav--MarginLeft: var(--pf-c-page__header-nav--lg--MarginLeft);
     --pf-c-page__header-nav--BackgroundColor: var(--pf-c-page__header-nav--lg--BackgroundColor);
     --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--lg--Left);
   }
@@ -238,7 +237,8 @@
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   min-width: 0;
-  padding-left: var(--pf-c-page__header-nav--PaddingLeft);
+  margin-right: var(--pf-c-page__header-nav--MarginRight);
+  margin-left: var(--pf-c-page__header-nav--MarginLeft);
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
 
   > .pf-c-nav {
@@ -263,8 +263,6 @@
     align-self: flex-end;
     order: initial;
     width: auto;
-    margin-right: var(--pf-c-page__header-nav--lg--MarginRight);
-    margin-left: var(--pf-c-page__header-nav--lg--MarginLeft);
   }
 }
 
