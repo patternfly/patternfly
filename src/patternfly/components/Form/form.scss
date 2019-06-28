@@ -32,7 +32,7 @@
   --pf-c-form__actions--MarginRight: calc(var(--pf-c-form__actions--child--MarginRight) * -1);
   --pf-c-form__actions--MarginBottom: calc(var(--pf-c-form__actions--child--MarginBottom) * -1);
   --pf-c-form__actions--MarginLeft: calc(var(--pf-c-form__actions--child--MarginLeft) * -1);
-  --pf-c-form__actions__link--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-form__actions-link--MarginLeft: var(--pf-global--spacer--md);
 
   // Helpers
   --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
@@ -193,6 +193,6 @@
   }
 }
 
-.pf-c-form__actions__link {
-  margin-left: var(--pf-c-form__actions__link--MarginLeft);
+.pf-c-form__actions-link {
+  margin-left: var(--pf-c-form__actions-link--MarginLeft);
 }
