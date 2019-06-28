@@ -1,10 +1,13 @@
 .pf-l-bullseye {
-  --pf-l-bullseye--Padding: 0;
+  --pf-l-bullseye--PaddingTop: 0;
+  --pf-l-bullseye--PaddingRight: 0;
+  --pf-l-bullseye--PaddingBottom: 0;
+  --pf-l-bullseye--PaddingLeft: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: var(--pf-l-bullseye--Padding);
+  padding: var(--pf-l-bullseye--PaddingTop) var(--pf-l-bullseye--PaddingRight) var(--pf-l-bullseye--PaddingBottom) var(--pf-l-bullseye--PaddingLeft);
   margin: 0;
 }
