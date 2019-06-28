@@ -28,4 +28,5 @@
 | `.pf-m-active` | `.pf-c-options-menu__toggle` | Modifies for the active state. |
 | `.pf-m-focus` | `.pf-c-options-menu__toggle` | Modifies for the focus state. |
 | `.pf-m-plain` | `.pf-c-options-menu__toggle` |  Modifies to display the toggle with no border. |
+| `.pf-m-disabled` | `.pf-c-options-menu__toggle` | Modifies to display the options menu toggle as disabled. This applies to `pf-c-options-menu__toggle` and should not be used in lieu of the `disabled` attribute on `pf-c-options-menu__toggle`. When this is used, `disabled` should also be added to any form elements in `.pf-c-options-menu__toggle` |
 | `.pf-m-text` | `.pf-c-options-menu__toggle` |  For use when the `.pf-c-options-menu__toggle` is a `<div>` or some non-interactive elment, and you're using a custom `.pf-c-options-menu__toggle-button` to toggle the options menu. |
