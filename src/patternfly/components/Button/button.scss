@@ -82,7 +82,6 @@
   --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
 
-
   // Plain btn
   --pf-c-button--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-button--m-plain--hover--Color: var(--pf-global--Color--100);
@@ -90,6 +89,13 @@
   --pf-c-button--m-plain--active--Color: var(--pf-global--Color--100);
   --pf-c-button--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
+
+  // Masthead button
+  --pf-c-button--m-masthead--Width: 36px;
+  --pf-c-button--m-masthead--Height: 36px;
+  --pf-c-button--m-masthead--after--BorderRadius: var(pf-global--BorderRadius--lg);
+  --pf-c-button--m-masthead--active--after--BackgroundColor: var(--pf-global--Color--200);
+  --pf-c-button--m-masthead--active--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Styles for an icon in button
   --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
@@ -330,6 +336,7 @@
   }
 
   // Icon buttons
+  /* stylelint-disable */
   &.pf-m-plain {
     color: var(--pf-c-button--m-plain--Color);
 
@@ -341,11 +348,23 @@
     &:active,
     &.pf-m-active {
       --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--active--Color);
+
+      &.pf-m-masthead {
+        &::after {
+          background-color: var(--pf-c-button--m-masthead--active--after--BackgroundColor);
+        }
+      }
     }
 
     &:focus,
     &.pf-m-focus {
       --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--focus--Color);
+
+      &.pf-m-masthead {
+        &::after {
+          background-color: var(--pf-c-button--m-masthead--focus--after--BackgroundColor);
+        }
+      }
     }
 
     &:disabled,
@@ -354,5 +373,32 @@
 
       background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
     }
+
+    &.pf-m-masthead {
+      width: var(--pf-c-button--m-masthead--Width);
+      height: var(--pf-c-button--m-masthead--Height);
+      padding: unset;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        background-color: var(--pf-c-button--m-masthead--active--after--BackgroundColor);
+        border-radius: var(--pf-c-button--m-masthead--after--BorderRadius);
+      }
+
+      &:active {
+        &::after {
+          background-color: var(--pf-c-button--m-masthead--active--after--BackgroundColor);
+        }
+      }
+
+      &:focus {
+        &::after {
+          background-color: var(--pf-c-button--m-masthead--focus--after--BackgroundColor);
+        }
+      }
+    }
+    /* stylelint-enable */
   }
 }
