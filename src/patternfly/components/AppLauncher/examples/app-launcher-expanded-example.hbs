@@ -1,1 +1,8 @@
-{{#> app-launcher id="app-launcher-example-expanded" app-launcher--IsExpanded="true"}}{{/app-launcher}}
+{{#> app-launcher id="app-launcher-example-expanded" app-launcher--IsExpanded="true"}}
+  {{#> app-launcher-menu}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link one{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action two{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="div"}}Div three{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
