@@ -97,6 +97,7 @@
   --pf-c-button--m-input--BorderRightColor: var(--pf-global--BorderColor--300);
   --pf-c-button--m-input--BorderBottomColor: var(--pf-global--BorderColor--200);
   --pf-c-button--m-input--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-input--hover--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-button--m-input--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-button--m-input--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-button--m-input--active--BorderBottomColor: var(--pf-global--active-color--100);
@@ -347,6 +348,8 @@
     &.pf-m-hover {
       &::before {
         --pf-c-button--m-input--BorderBottomColor: var(--pf-c-button--m-input--hover--BorderBottomColor);
+
+        border-bottom-width: var(--pf-c-button--m-input--hover--BorderBottomWidth);
       }
     }
 
