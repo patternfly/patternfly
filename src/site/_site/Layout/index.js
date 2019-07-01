@@ -55,10 +55,10 @@ export default ({ children }) => (
       }, {});
 
       return (
-        <div className="layout pf-m-redhat-font">
+        <div className="layout">
           <Helmet>
             <title>PatternFly 4</title>
-            <html lang="en-US" className="pf-m-redhat-fon" />
+            <html lang="en-US" className="pf-m-redhat-font" />
           </Helmet>
           <header className="layout__header">
             <h1>
