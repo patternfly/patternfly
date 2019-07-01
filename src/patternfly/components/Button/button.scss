@@ -92,8 +92,6 @@
   --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
 
   // Input Button
-  --pf-c-button--m-input--PaddingRight: var(--pf-c-button--PaddingRight);
-  --pf-c-button--m-input--PaddingLeft: var(--pf-c-button--PaddingLeft);
   --pf-c-button--m-input--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-button--m-input--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-button--m-input--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -332,8 +330,6 @@
 
   &.pf-m-input {
     position: relative;
-    padding-right: var(--pf-c-button--m-input--PaddingRight);
-    padding-left: var(--pf-c-button--m-input--PaddingLeft);
     border: none;
 
     &::before {
@@ -413,4 +409,3 @@
     }
   }
 }
-
