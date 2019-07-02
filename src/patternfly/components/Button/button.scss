@@ -91,11 +91,13 @@
   --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
 
   // Masthead button
-  --pf-c-button--m-masthead--Width: 36px;
-  --pf-c-button--m-masthead--Height: 36px;
-  --pf-c-button--m-masthead--after--BorderRadius: var(pf-global--BorderRadius--lg);
-  --pf-c-button--m-masthead--active--after--BackgroundColor: var(--pf-global--Color--200);
-  --pf-c-button--m-masthead--active--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-button--m-masthead--Width: #{pf-size-prem(36px)};
+  --pf-c-button--m-masthead--Height: #{pf-size-prem(36px)};
+  --pf-c-button--m-masthead--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-button--m-masthead--BackgroundColor: transparent;
+  --pf-c-button--m-masthead--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-button--m-masthead--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-button--m-masthead--focus--OutlineOffset: var(--pf-global--spacer--xs);
 
   // Styles for an icon in button
   --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
@@ -336,7 +338,6 @@
   }
 
   // Icon buttons
-  /* stylelint-disable */
   &.pf-m-plain {
     color: var(--pf-c-button--m-plain--Color);
 
@@ -348,23 +349,11 @@
     &:active,
     &.pf-m-active {
       --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--active--Color);
-
-      &.pf-m-masthead {
-        &::after {
-          background-color: var(--pf-c-button--m-masthead--active--after--BackgroundColor);
-        }
-      }
     }
 
     &:focus,
     &.pf-m-focus {
       --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--focus--Color);
-
-      &.pf-m-masthead {
-        &::after {
-          background-color: var(--pf-c-button--m-masthead--focus--after--BackgroundColor);
-        }
-      }
     }
 
     &:disabled,
@@ -378,27 +367,20 @@
       width: var(--pf-c-button--m-masthead--Width);
       height: var(--pf-c-button--m-masthead--Height);
       padding: unset;
+      background-color: var(--pf-c-button--m-masthead--BackgroundColor);
+      border-radius: var(--pf-c-button--m-masthead--BorderRadius);
 
-      &::after {
-        position: absolute;
-        z-index: -1;
-        content: "";
-        background-color: var(--pf-c-button--m-masthead--active--after--BackgroundColor);
-        border-radius: var(--pf-c-button--m-masthead--after--BorderRadius);
+      &:active,
+      &.pf-m-active {
+        --pf-c-button--m-masthead--BackgroundColor: var(--pf-c-button--m-masthead--active--BackgroundColor);
       }
 
-      &:active {
-        &::after {
-          background-color: var(--pf-c-button--m-masthead--active--after--BackgroundColor);
-        }
-      }
+      &:focus,
+      &.pf-m-focus {
+        --pf-c-button--m-masthead--BackgroundColor: var(--pf-c-button--m-masthead--focus--BackgroundColor);
 
-      &:focus {
-        &::after {
-          background-color: var(--pf-c-button--m-masthead--focus--after--BackgroundColor);
-        }
+        outline-offset: var(--pf-c-button--m-masthead--focus--OutlineOffset);
       }
     }
-    /* stylelint-enable */
   }
 }
