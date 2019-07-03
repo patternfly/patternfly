@@ -23,7 +23,7 @@
 *   **Options menu:** Added disabled variation ([#1973](https://github.com/patternfly/patternfly-next/pull/1973))
 *   **Progress:** Changed the font weight on sm variation ([#1974](https://github.com/patternfly/patternfly-next/pull/1974))
 *   **Table**
-    *   Added an extra breakpoint. In the data table sortable demo the table needed a larger breakpoint, so that the rows don't overflow outside of their container ([#1871](https://github.com/patternfly/patternfly-next/pull/1880))
+    *   Added an extra breakpoint. In the data table sortable demo the table needed a larger breakpoint, so that the rows don't overflow outside of their container ([#1880](https://github.com/patternfly/patternfly-next/pull/1880))
     *   Added word-wrap to td's in table, now wraps when on mobile size. ([#1928](https://github.com/patternfly/patternfly-next/pull/1928))
     *   Made column headers bold ([#1949](https://github.com/patternfly/patternfly-next/pull/1949))
 
