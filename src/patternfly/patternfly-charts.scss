@@ -85,7 +85,6 @@
   // Stroke
   --pf-chart-global--stroke-line-cap: #{$pf-chart-global--stroke-line-cap};
   --pf-chart-global--stroke-line-join: #{$pf-chart-global--stroke-line-join};
-  --pf-chart-global--stroke-dash-array: #{$pf-chart-global--stroke-dash-array};
 
   // Fills and Strokes
   --pf-chart-global--danger--Color--100: #{$pf-chart-global--danger--Color--100};
@@ -167,11 +166,9 @@
   --pf-chart-candelstick--candle--positive--Color: #{$pf-chart-candelstick--candle--positive--Color};
   --pf-chart-candelstick--candle--negative--Color: #{$pf-chart-candelstick--candle--negative--Color};
 
-  // Chart
-  --pf-chart-chart--BorderWidth: #{$pf-chart-chart--BorderWidth};
-
   // Simple Donut Chart
   --pf-chart-donut--label--subtitle--Fill: #{$pf-chart-donut--label--subtitle--Fill};
+  --pf-chart-donut--label--subtitle--position: #{$pf-chart-donut--label--subtitle--position};
   --pf-chart-donut--pie--Height: #{$pf-chart-donut--pie--Height};
   --pf-chart-donut--pie--angle--Padding: #{$pf-chart-donut--pie--angle--Padding};
   --pf-chart-donut--pie--Width: #{$pf-chart-donut--pie--Width};
@@ -180,7 +177,6 @@
   --pf-chart-donut--threshold--first--Color: #{$pf-chart-donut--threshold--first--Color};
   --pf-chart-donut--threshold--second--Color: #{$pf-chart-donut--threshold--second--Color};
   --pf-chart-donut--threshold--third--Color: #{$pf-chart-donut--threshold--third--Color};
-  --pf-chart-donut--threshold--success--Color: #{$pf-chart-donut--threshold--success--Color};
   --pf-chart-donut--threshold--warning--Color: #{$pf-chart-donut--threshold--warning--Color};
   --pf-chart-donut--threshold--danger--Color: #{$pf-chart-donut--threshold--danger--Color};
   --pf-chart-donut--threshold--dynamic--pie--Height: #{$pf-chart-donut--threshold--dynamic--pie--Height};
@@ -190,8 +186,6 @@
   --pf-chart-donut--threshold--static--pie--Width: #{$pf-chart-donut--threshold--static--pie--Width};
 
   // Donut Utilization Chart
-  --pf-chart-donut--utilization--label--subtitle--Fill: #{$pf-chart-donut--utilization--label--subtitle--Fill};
-  --pf-chart-donut--utilization--label--orientation: #{$pf-chart-donut--utilization--label--orientation};
   --pf-chart-donut--utilization--dynamic--pie--Height: #{$pf-chart-donut--utilization--dynamic--pie--Height};
   --pf-chart-donut--utilization--dynamic--pie--angle--Padding: #{$pf-chart-donut--utilization--dynamic--pie--angle--Padding};
   --pf-chart-donut--utilization--dynamic--pie--Width: #{$pf-chart-donut--utilization--dynamic--pie--Width};
@@ -206,6 +200,7 @@
   // Legend
   --pf-chart-legend--gutter--Width: #{$pf-chart-legend--gutter--Width};
   --pf-chart-legend--orientation: #{$pf-chart-legend--orientation};
+  --pf-chart-legend--position: #{$pf-chart-legend--position};
   --pf-chart-legend--title--orientation: #{$pf-chart-legend--title--orientation};
   --pf-chart-legend--data--type: #{$pf-chart-legend--data--type};
   --pf-chart-legend--title--Padding: #{$pf-chart-legend--title--Padding};
@@ -223,11 +218,8 @@
   --pf-chart-pie--data--stroke--Width: #{$pf-chart-pie--data--stroke--Width};
   --pf-chart-pie--data--stroke--Color: #{$pf-chart-pie--data--stroke--Color};
   --pf-chart-pie--labels--Padding: #{$pf-chart-pie--labels--Padding};
-  --pf-chart-pie--angle--Padding: #{$pf-chart-pie--angle--Padding};
   --pf-chart-pie--Height: #{$pf-chart-pie--Height};
   --pf-chart-pie--Width: #{$pf-chart-pie--Width};
-  --pf-chart-pie--small--Height: #{$pf-chart-pie--small--Height};
-  --pf-chart-pie--small--Width: #{$pf-chart-pie--small--Width};
 
   // Scatter Chart
   --pf-chart-scatter--data--stroke--Color: #{$pf-chart-scatter--data--stroke--Color};
@@ -246,12 +238,9 @@
   --pf-chart-tooltip--flyoutStyle--PointerEvents: #{$pf-chart-tooltip--flyoutStyle--PointerEvents};
   --pf-chart-tooltip--flyoutStyle--stroke--Color: #{$pf-chart-tooltip--flyoutStyle--stroke--Color};
   --pf-chart-tooltip--flyoutStyle--Fill: #{$pf-chart-tooltip--flyoutStyle--Fill};
-  --pf-chart-tooltip--pointer--Height: #{$pf-chart-tooltip--pointer--Height};
   --pf-chart-tooltip--pointer--Width: #{$pf-chart-tooltip--pointer--Width};
   --pf-chart-tooltip--Padding: #{$pf-chart-tooltip--Padding};
   --pf-chart-tooltip--PointerEvents: #{$pf-chart-tooltip--PointerEvents};
-  --pf-chart-tooltip--labels--Padding: #{$pf-chart-tooltip--labels--Padding};
-  --pf-chart-tooltip--labels--PointerEvents: #{$pf-chart-tooltip--labels--PointerEvents};
 
   // Voronoi Chart
   --pf-chart-voronoi--data--Fill: #{$pf-chart-voronoi--data--Fill};
