@@ -2,9 +2,9 @@
 - @patternfly/patternfly@2.17.0
 
 **Components:**
-*   **About modal box**: Removed the title classes from the strapline paragraph. Changed strapline `font-size` to 14px. ([#1951](https://github.com/patternfly/patternfly-next/pull/1951))
+*   **About modal box:** Removed the title classes from the strapline paragraph. Changed strapline `font-size` to 14px. ([#1951](https://github.com/patternfly/patternfly-next/pull/1951))
 *   **About modal, app launcher, backdrop, context selector, datalist, dropdown, form control, input group, modal, nav, options menu, select, table, tabs, wizard:** Re-do z-index system so components overlap one another properly ([#1901](https://github.com/patternfly/patternfly-next/pull/1901))
-*   **Accordion, clipboard copy, data list, dropdown, expandable, nav, options menu, select, table, wizard**: Added expanded/collapsed arrow rotation in components ([#1932](https://github.com/patternfly/patternfly-next/pull/1932))
+*   **Accordion, clipboard copy, data list, dropdown, expandable, nav, options menu, select, table, wizard:** Added expanded/collapsed arrow rotation in components ([#1932](https://github.com/patternfly/patternfly-next/pull/1932))
 *   **Accordion:** Add variation of accordion that uses divs and headings instead of definition list [(#1990](https://github.com/patternfly/patternfly-next/pull/1990))
 *   **Alert group:** Renamed example and reworded docs [(#1930](https://github.com/patternfly/patternfly-next/pull/1930))
 *   **App launcher**
@@ -14,7 +14,7 @@
 *   **Card:** Added compact variation ([#1975](https://github.com/patternfly/patternfly-next/pull/1975))
 *   **Charts:** Added remaining variables ([#1863](https://github.com/patternfly/patternfly-next/pull/1863))
 *   **Copy to Clipboard:** fixed focus ring and add content editable to expanded ([#1896](https://github.com/patternfly/patternfly-next/pull/1896))
-*   **Datalist**: Added an example using a heading in the primary content section. ([#1870](https://github.com/patternfly/patternfly-next/pull/1870))
+*   **Datalist:** Added an example using a heading in the primary content section. ([#1870](https://github.com/patternfly/patternfly-next/pull/1870))
 *   **Dropdown:** Increased height of examples that overflow ([#1965](https://github.com/patternfly/patternfly-next/pull/1965))
 *   **Expandable:** Added type to the button ([#1982](https://github.com/patternfly/patternfly-next/pull/1982))
 *   **Form:** Added element for form label text, make it bold ([#1952](https://github.com/patternfly/patternfly-next/pull/1952))
@@ -41,10 +41,10 @@
 *   **Button:** added class around the icon to fix bug ([#1890](https://github.com/patternfly/patternfly-next/pull/1890))
 *   **Charts:** added css vars ([#1868](https://github.com/patternfly/patternfly-next/pull/1868))
 *   **Datalist:** added breakpoints for actions ([#1886](https://github.com/patternfly/patternfly-next/pull/1886))
-*   **Inline alert**: We had previously applied `font-size` to the inline alerts via `.pf-c-alert__icon > i`, which didn’t work in React since the icon is an svg. We applied `font-size` to `.pf-c-alert__icon` instead. Also, the inline warning icon was fixed because it was wider than the others ([#1909](https://github.com/patternfly/patternfly-next/pull/1909))
+*   **Inline alert:** We had previously applied `font-size` to the inline alerts via `.pf-c-alert__icon > i`, which didn’t work in React since the icon is an svg. We applied `font-size` to `.pf-c-alert__icon` instead. Also, the inline warning icon was fixed because it was wider than the others ([#1909](https://github.com/patternfly/patternfly-next/pull/1909))
 *   **Notification Badge:** added notification badge ([#1862](https://github.com/patternfly/patternfly-next/pull/1862))
 *   **Switch:** added focus indicator [(#1874](https://github.com/patternfly/patternfly-next/pull/1874))
-*   **Table**:
+*   **Table:**
     *   media query now matches border. Fixed the table so that when the table breaks to grid form, the border width changes to 8px, and the border color matches the background color. ([#1881](https://github.com/patternfly/patternfly-next/pull/1881))
     *   added an extra breakpoint [(#1880](https://github.com/patternfly/patternfly-next/pull/1880))
 
