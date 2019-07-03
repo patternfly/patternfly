@@ -1,6 +1,20 @@
 // URL.com/guidelines#layout
 .pf-c-page {
   --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-page--GridTemplateColumns: 1fr;
+  --pf-c-page--GridTemplateRows: max-content 1fr;
+  --pf-c-page--GridTemplateAreas:
+    "header"
+    "main";
+  --pf-c-page--md--GridTemplateColumns: max-content 1fr auto;
+  --pf-c-page--md--GridTemplateAreas:
+    "header header header"
+    "nav main drawer";
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    --pf-c-page--GridTemplateColumns: var(--pf-c-page--md--GridTemplateColumns);
+    --pf-c-page--GridTemplateAreas: var(--pf-c-page--md--GridTemplateAreas);
+  }
 
   // Header
   --pf-c-page__header--ZIndex: var(--pf-global--ZIndex--md);
@@ -102,6 +116,8 @@
   --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: 0;
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page__main--GridArea: main;
+  --pf-c-page__main--md--GridArea: main / main / main / drawer;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--md--PaddingTop);
@@ -155,22 +171,39 @@
   --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-c-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
+  // Drawer
+  --pf-c-page__drawer--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page__drawer--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-page__drawer--BoxShadow: var(--pf-global--BoxShadow--md-left);
+  --pf-c-page__drawer--GridArea: main;
+  --pf-c-page__drawer--md--GridArea: drawer;
+  --pf-c-page__drawer--Width: 100%;
+  --pf-c-page__drawer--md--Width: #{pf-size-prem(450px)};
+  --pf-c-page__drawer-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__drawer-body--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-page__drawer-body--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__drawer-body--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__drawer-body--md--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-page__drawer-body--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__drawer-body--md--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-page__drawer-body--md--PaddingLeft: var(--pf-global--spacer--lg);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-page__drawer--GridArea: var(--pf-c-page__drawer--md--GridArea);
+    --pf-c-page__drawer--Width: var(--pf-c-page__drawer--md--Width);
+    --pf-c-page__drawer-body--PaddingTop: var(--pf-c-page__drawer-body--md--PaddingTop);
+    --pf-c-page__drawer-body--PaddingRight: var(--pf-c-page__drawer-body--md--PaddingRight);
+    --pf-c-page__drawer-body--PaddingBottom: var(--pf-c-page__drawer-body--md--PaddingBottom);
+    --pf-c-page__drawer-body--PaddingLeft: var(--pf-c-page__drawer-body--md--PaddingLeft);
+  }
+
   // Base
   display: grid;
+  grid-template-columns: var(--pf-c-page--GridTemplateColumns);
+  grid-template-rows: var(--pf-c-page--GridTemplateRows);
+  grid-template-areas: var(--pf-c-page--GridTemplateAreas);
   height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr;
-  grid-template-areas:
-    "header"
-    "main";
   background-color: var(--pf-c-page--BackgroundColor);
-
-  @media (min-width: $pf-global--breakpoint--md) {
-    grid-template-columns: max-content 1fr;
-    grid-template-areas:
-      "header header"
-      "nav main";
-  }
 }
 
 
@@ -362,13 +395,17 @@
 
 // Main
 .pf-c-page__main {
-  grid-area: main;
   z-index: var(--pf-c-page__main--ZIndex);
+  grid-area: var(--pf-c-page__main--GridArea);
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-page__main--GridArea: var(--pf-c-page__main--md--GridArea);
+  }
 }
 
 .pf-c-page__main-nav {
@@ -438,5 +475,22 @@
       --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom);
       --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft);
     }
+  }
+}
+
+.pf-c-page__drawer {
+  z-index: var(--pf-c-page__drawer--ZIndex);
+  grid-area: var(--pf-c-page__drawer--GridArea);
+  width: var(--pf-c-page__drawer--Width);
+  overflow-y: auto;
+  background-color: var(--pf-c-page__drawer--BackgroundColor);
+  box-shadow: var(--pf-c-page__drawer--BoxShadow);
+}
+
+.pf-c-page__drawer-body {
+  padding: var(--pf-c-page__drawer-body--PaddingTop) var(--pf-c-page__drawer-body--PaddingRight) var(--pf-c-page__drawer-body--PaddingBottom) var(--pf-c-page__drawer-body--PaddingLeft);
+
+  &.pf-m-no-padding {
+    padding: 0;
   }
 }
