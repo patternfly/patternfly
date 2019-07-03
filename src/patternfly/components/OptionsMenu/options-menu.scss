@@ -174,9 +174,9 @@
   &:disabled {
     pointer-events: none;
 
-    &:not(.pf-m-plain) {
-      --pf-c-options-menu__toggle--Background: var(--pf-c-options-menu__toggle--disabled--BackgroundColor);
+    --pf-c-options-menu__toggle--Background: var(--pf-c-options-menu__toggle--disabled--BackgroundColor);
 
+    &:not(.pf-m-plain) {
       &::before {
         border: 0;
       }
