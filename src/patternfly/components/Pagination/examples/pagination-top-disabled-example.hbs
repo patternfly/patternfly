@@ -6,10 +6,10 @@
   {{> pagination-options-menu id="pagination-options-menu-top-disabled-example"  options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
 
   {{#> pagination-nav}}
-    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page" aria-disabled="true"'}}
       <i class="fas fa-angle-double-left" aria-hidden="true"></i>
     {{/button}}
-    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page" aria-disabled="true"'}}
       <i class="fas fa-angle-left" aria-hidden="true"></i>
     {{/button}}
 
@@ -18,10 +18,10 @@
       <span aria-hidden="true">of 4</span>
     {{/pagination-nav-page-select}}
 
-    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to next page"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to next page"'}}
       <i class="fas fa-angle-right" aria-hidden="true"></i>
     {{/button}}
-    {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to last page"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to last page"'}}
       <i class="fas fa-angle-double-right" aria-hidden="true"></i>
     {{/button}}
   {{/pagination-nav}}
