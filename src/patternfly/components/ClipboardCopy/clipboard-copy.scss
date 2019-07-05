@@ -12,8 +12,6 @@
   // --pf-c-clipboard-copy__group-toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   // --pf-c-clipboard-copy__group-toggle--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   // --pf-c-clipboard-copy__group-toggle--focus--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-clipboard-copy__group-toggle--c-button--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-clipboard-copy__group-toggle--c-button--m-expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-clipboard-copy__group-toggle--c-button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Icon
@@ -47,20 +45,10 @@
   --pf-c-clipboard-copy__expandable-content--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   /* stylelint-disable */
-  // Toggle button expanded
+  // Toggle icon expanded
   &.pf-m-expanded {
-    .pf-c-clipboard-copy__group {
-      .pf-c-clipboard-copy__group-toggle .pf-c-button {
-        &::before {
-          --pf-c-button--m-input--BorderBottomColor: var(--pf-c-clipboard-copy__group-toggle--c-button--m-expanded--BorderBottomColor);
-
-          border-bottom-width: var(--pf-c-clipboard-copy__group-toggle--c-button--m-expanded--BorderBottomWidth);
-        }
-
-        .pf-c-clipboard-copy__group-toggle-icon {
-          transform: var(--pf-c-clipboard-copy--m-expanded__group-toggle-icon--Transform);
-        }
-      }
+    .pf-c-clipboard-copy__group-toggle-icon {
+      transform: var(--pf-c-clipboard-copy--m-expanded__group-toggle-icon--Transform);
     }
   }
 }
