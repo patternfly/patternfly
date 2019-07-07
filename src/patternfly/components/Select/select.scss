@@ -261,8 +261,8 @@
     margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
     margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
   }
-
-  .pf-m-top.pf-m-expanded > & {
+  /* stylelint-disable-next-line */
+  .pf-c-select.pf-m-top.pf-m-expanded & {
     transform: var(--pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Transform);
   }
 }
