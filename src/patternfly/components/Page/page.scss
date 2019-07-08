@@ -65,6 +65,7 @@
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--Display: flex;
   --pf-c-page__header-tools-group--m-icons--c-button--Display: block;
+  --pf-c-page__header-tools-group--m-icons--c-dropdown--Display: block;
   --pf-c-page__header-tools-group--c-avatar--Display: inline-block;
 
 
@@ -289,7 +290,7 @@
     }
 
     .pf-c-dropdown {
-      @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
+      @include pf-hidden-visible(var(--pf-c-page__header-tools-group--m-icons--c-dropdown--Display));
     }
   }
 
