@@ -3,6 +3,9 @@
     id="{{id}}-toggle"
     aria-haspopup="listbox"
     aria-expanded="{{#if options-menu--IsExpanded}}true{{else}}false{{/if}}"
+    {{#if options-menu-toggle--IsDisabled}}
+      disabled
+    {{/if}}
   {{/unless}}
 	{{#if options-menu-toggle--attribute}}
 		{{{options-menu-toggle--attribute}}}
