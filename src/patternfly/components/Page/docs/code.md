@@ -45,3 +45,4 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-no-padding-mobile` | `.pf-c-page__main-section` | Modifies a main page section to have no padding on mobile. |
 | `.pf-m-fill` | `.pf-c-page__main-section` | Modifies a main page section to grow to fill the available vertical space. |
 | `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
+| `.pf-m-expanded` | `.pf-c-page__drawer` | Modifies the drawer for the expanded state. |
