@@ -36,7 +36,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-icons` | `.pf-c-page__header-tools div` | Modifier for responsive behavior of header icons list. |
 | `.pf-m-mobile` | `.pf-c-page__header-tools .pf-c-button` | Modifier for responsive behavior of mobile menu. |
 | `.pf-m-user` | `.pf-c-page__header-tools div` | Modifier for responsive behavior of user menu. |
-| `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
+| `.pf-m-expanded` | `.pf-c-page__sidebar`, `.pf-c-page__drawer` |  Modifies the sidebar or drawer for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
@@ -45,4 +45,3 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-no-padding-mobile` | `.pf-c-page__main-section` | Modifies a main page section to have no padding on mobile. |
 | `.pf-m-fill` | `.pf-c-page__main-section` | Modifies a main page section to grow to fill the available vertical space. |
 | `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
-| `.pf-m-expanded` | `.pf-c-page__drawer` | Modifies the drawer for the expanded state. |
