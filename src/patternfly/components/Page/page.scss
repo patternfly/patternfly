@@ -63,13 +63,17 @@
   --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-page__header-tools-group--Display: flex;
+  --pf-c-page__header-tools-group--m-icons--c-button--Display: block;
+  --pf-c-page__header-tools-group--c-avatar--Display: inline-block;
+
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
   }
 
   // Header tools group
-  --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--lg--MarginLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -279,41 +283,20 @@
   margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
-  // Hides on mobile visible on desktop
-  .pf-m-desktop {
-    display: none;
-    visibility: hidden;
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: inline-block;
-      visibility: visible;
+  .pf-m-icons {
+    .pf-c-button {
+      @include pf-hidden-visible(var(--pf-c-page__header-tools-group--m-icons--c-button--Display));
     }
-  }
 
-  // Hides on desktop visible on mobile
-  .pf-m-mobile {
-    display: inline-block;
-    visibility: visible;
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: none;
-      visibility: hidden;
+    .pf-c-dropdown {
+      @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
     }
   }
 
   .pf-c-avatar {
-    display: none;
-    margin-left: 0;
-    visibility: hidden;
+    @include pf-hidden-visible(var(--pf-c-page__header-tools-group--c-avatar--Display));
 
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
-    }
-
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
-      display: block;
-      visibility: visible;
-    }
+    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -322,7 +305,8 @@
 }
 
 .pf-c-page__header-tools-group {
-  display: flex;
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
+
   margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
 }
 
