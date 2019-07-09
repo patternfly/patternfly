@@ -65,6 +65,17 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
+## Experimental components
+
+When creating a brand new component, it should be released as experimental in order to get feedback.  This results in the css not being bundled into the full distribution (patternfly.css), but the component level css is still included in the npm package for usage.
+
+To make a component experimental - modify the experimental-features.js file in the root and add an entry that looks like the following:
+
+'`{
+   name: 'Alert',
+   path: 'components/Alert/'
+ },`
+     
 ## Testing for accessibility
 
 PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility guide](https://pf4.patternfly.org/accessibility-guide).
