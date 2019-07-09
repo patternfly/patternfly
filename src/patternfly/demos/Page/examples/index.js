@@ -9,6 +9,8 @@ import PageComponentTertiaryNavExampleRaw from '!raw!./page-component-tertiary-n
 import PageComponentGroupedNavExampleRaw from '!raw!./page-component-grouped-nav-example.hbs';
 import PageComponentSidebarExpandedExampleRaw from '!raw!./page-component-sidebar-expanded-example.hbs';
 import PageComponentSidebarCollapsedExampleRaw from '!raw!./page-component-sidebar-collapsed-example.hbs';
+import PageComponentDrawerCollapsedExampleRaw from '!raw!./page-component-drawer-collapsed-example.hbs';
+import PageComponentDrawerExpandedExampleRaw from '!raw!./page-component-drawer-expanded-example.hbs';
 
 import PageComponentDefaultNavHeaderExample from './page-component-default-nav-header-example.hbs';
 import PageComponentExpandableNavExample from './page-component-expandable-nav-example.hbs';
@@ -17,6 +19,8 @@ import PageComponentTertiaryNavExample from './page-component-tertiary-nav-examp
 import PageComponentGroupedNavExample from './page-component-grouped-nav-example.hbs';
 import PageComponentSidebarExpandedExample from './page-component-sidebar-expanded-example.hbs';
 import PageComponentSidebarCollapsedExample from './page-component-sidebar-collapsed-example.hbs';
+import PageComponentDrawerCollapsedExample from './page-component-drawer-collapsed-example.hbs';
+import PageComponentDrawerExpandedExample from './page-component-drawer-expanded-example.hbs';
 
 import docs from '../docs/code.md';
 
@@ -30,6 +34,8 @@ export default props => {
   const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
   const pageComponentSidebarExpandedExample = PageComponentSidebarExpandedExample();
   const pageComponentSidebarCollapsedExample = PageComponentSidebarCollapsedExample();
+  const pageComponentDrawerCollapsedExample = PageComponentDrawerCollapsedExample();
+  const pageComponentDrawerExpandedExample = PageComponentDrawerExpandedExample();
   const headingText = 'Page component demo';
 
   return (
@@ -70,18 +76,32 @@ export default props => {
         {pageComponentGroupedNavExample}
       </Example>
       <Example
-        heading="Page component - sidebar expanded on mobile"
+        heading="Page component sidebar expanded on mobile example"
         fullPageOnly="true"
         handlebars={PageComponentSidebarExpandedExampleRaw}
       >
         {pageComponentSidebarExpandedExample}
       </Example>
       <Example
-        heading="Page component - sidebar collapsed"
+        heading="Page component sidebar collapsed example"
         fullPageOnly="true"
         handlebars={PageComponentSidebarCollapsedExampleRaw}
       >
         {pageComponentSidebarCollapsedExample}
+      </Example>
+      <Example
+        heading="Page component drawer collapsed example"
+        fullPageOnly="true"
+        handlebars={PageComponentDrawerCollapsedExampleRaw}
+      >
+        {pageComponentDrawerCollapsedExample}
+      </Example>
+      <Example
+        heading="Page component drawer expanded example"
+        fullPageOnly="true"
+        handlebars={PageComponentDrawerExpandedExampleRaw}
+      >
+        {pageComponentDrawerExpandedExample}
       </Example>
     </Documentation>
   );
