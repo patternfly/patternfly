@@ -1,4 +1,4 @@
-<{{#if options-menu-toggle--type}}{{options-menu-toggle--type}}{{else}}button{{/if}} class="pf-c-options-menu__toggle{{#if options-menu--IsText}} pf-m-text{{/if}}{{#if options-menu-toggle--IsDisabled}} pf-m-disabled{{/if}}{{#if options-menu-toggle--modifier}} {{options-menu-toggle--modifier}}{{/if}}"
+<{{#if options-menu-toggle--type}}{{options-menu-toggle--type}}{{else}}button{{/if}} class="pf-c-options-menu__toggle{{#if options-menu--IsText}} pf-m-text{{#if options-menu-toggle--IsDisabled}} pf-m-disabled{{/if}}{{/if}}{{#if options-menu-toggle--modifier}} {{options-menu-toggle--modifier}}{{/if}}"
   {{#unless options-menu--IsText}}
     id="{{id}}-toggle"
     aria-haspopup="listbox"
