@@ -88,18 +88,18 @@
   }
 
   // Main section
-  --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--PaddingTop: 0;
+  --pf-c-page__main-section--PaddingRight: 0;
+  --pf-c-page__main-section--PaddingBottom: 0;
+  --pf-c-page__main-section--PaddingLeft: 0;
   --pf-c-page__main-section--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop: 0;
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight: 0;
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom: 0;
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: 0;
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
 
@@ -118,12 +118,12 @@
   --pf-c-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-nav--md--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--lg) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: calc(-1 * (var(--pf-global--spacer--lg) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--md--Right: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
+  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
+  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--lg) - var(--pf-global--spacer--xs)));
+  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the right
+  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--md--Right: calc(-1 * (var(--pf-global--spacer--lg) - var(--pf-global--spacer--xs)));
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--md--Left);
     --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--md--Right);
   }
@@ -432,7 +432,7 @@
   }
 
   &.pf-m-no-padding-mobile {
-    @media screen and (max-width: $pf-global--breakpoint--md) {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
       --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop);
       --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight);
       --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom);

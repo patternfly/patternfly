@@ -39,12 +39,12 @@
 
 // Grid base
 .pf-l-grid {
-  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
-  --pf-l-grid--m-gutter--md--GridGap: var(--pf-global--gutter--md);
+  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter--md);
+  --pf-l-grid--m-gutter--md--GridGap: var(--pf-global--gutter);
   --pf-l-grid__item--GridColumnStart: auto;
   --pf-l-grid__item--GridColumnEnd: span 12;
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-l-grid--m-gutter--GridGap: var(--pf-l-grid--m-gutter--md--GridGap);
   }
 

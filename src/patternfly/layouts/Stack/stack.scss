@@ -1,8 +1,8 @@
 .pf-l-stack {
-  --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
-  --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter--md);
+  --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter--md);
+  --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter);
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--md--MarginBottom);
   }
 

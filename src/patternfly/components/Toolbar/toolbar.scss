@@ -1,14 +1,14 @@
 // The value of component scoped variables is always defined by a global variable:
 .pf-c-toolbar {
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-toolbar--md--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-toolbar--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-toolbar--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-toolbar--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-toolbar--PaddingRight: var(--pf-c-toolbar--md--PaddingRight);
     --pf-c-toolbar--PaddingLeft: var(--pf-c-toolbar--md--PaddingLeft);
   }
@@ -88,19 +88,20 @@
 }
 
 .pf-c-toolbar__filter {
+  display: none;
   flex-basis: 100%;
   order: 1;
   width: auto;
   margin-top: var(--pf-c-toolbar__filter--MarginTop);
   margin-left: var(--pf-c-toolbar__filter--MarginLeft);
+  visibility: hidden;
 
-  @media screen and (max-width: $pf-global--breakpoint--lg) {
-    display: none;
-    visibility: hidden;
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    display: block;
+    visibility: visible;
 
     &.pf-m-expanded {
       display: flex;
-      visibility: visible;
     }
   }
 

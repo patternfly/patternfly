@@ -345,11 +345,9 @@
   background-color: var(--pf-c-wizard__nav--BackgroundColor);
   box-shadow: var(--pf-c-wizard__nav--BoxShadow);
 
-  @media screen and (max-width: $pf-global--breakpoint--lg) {
-    &.pf-m-expanded {
-      display: block;
-      visibility: visible;
-    }
+  &.pf-m-expanded {
+    display: block;
+    visibility: visible;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
