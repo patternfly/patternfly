@@ -178,8 +178,8 @@
   --pf-c-page__drawer--md--GridArea: drawer;
   --pf-c-page__drawer--TransitionProperty: transform;
   --pf-c-page__drawer--TransitionDuration: var(--pf-global--TransitionDuration);
-  --pf-c-page__drawer--TimingFunction: var(--pf-global--TimingFunction);
-  --pf-c-page__drawer--md--Transition: var(--pf-c-page__drawer--TransitionProperty) var(--pf-c-page__drawer--TransitionDuration) var(--pf-c-page__drawer--TimingFunction);
+  --pf-c-page__drawer--TransitionTimingFunction: var(--pf-global--TimingFunction);
+  --pf-c-page__drawer--md--Transition: var(--pf-c-page__drawer--TransitionProperty) var(--pf-c-page__drawer--TransitionDuration) var(--pf-c-page__drawer--TransitionTimingFunction);
   --pf-c-page__drawer--Transform: translateX(100%);
   --pf-c-page__drawer--m-expanded--Transform: translateX(0);
   --pf-c-page__drawer--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-left);
