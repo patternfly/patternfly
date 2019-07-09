@@ -67,7 +67,7 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 ## Experimental components
 
-When creating a brand new component, it should be released as experimental in order to get feedback.  This results in the css not being bundled into the full distribution (patternfly.css), but the component level css is still included in the npm package for usage.
+When creating a brand new component, it should be released as experimental in order to get feedback.  This results in the css not being bundled into the full distribution (`patternfly.css`), but the component level css is still included in the npm package for usage.
 
 To make a component experimental - modify the experimental-features.js file in the root and add an entry that looks like the following:
 
