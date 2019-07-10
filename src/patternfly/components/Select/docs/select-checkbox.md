@@ -29,4 +29,5 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-c-select__menu-group` | `<div>` |  Initiates a group within a custom select menu. |
 | `.pf-c-select__menu-group-title` | `<div>` |  Initiates a title for a group with a custom select menu. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
+| `.pf-m-plain` | `.pf-c-select__toggle` |  Modifies to display the toggle with no border. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
