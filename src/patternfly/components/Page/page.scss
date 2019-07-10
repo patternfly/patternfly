@@ -62,12 +62,8 @@
   --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--md);
   --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
-  --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-page__header-tools-group--Display: flex;
-  --pf-c-page__header-tools-group--m-icons--c-button--Display: block;
-  --pf-c-page__header-tools-group--m-icons--c-dropdown--Display: block;
-  --pf-c-page__header-tools-group--c-avatar--Display: inline-block;
-
+  --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md); // change this to m-avatar at breaking change
+  --pf-c-page__header-tools-group-item--Display: flex;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
@@ -284,31 +280,35 @@
   margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
-  .pf-m-icons {
-    .pf-c-button {
-      @include pf-hidden-visible(var(--pf-c-page__header-tools-group--m-icons--c-button--Display));
-    }
-
-    .pf-c-dropdown {
-      @include pf-hidden-visible(var(--pf-c-page__header-tools-group--m-icons--c-dropdown--Display));
-    }
-  }
-
-  .pf-c-avatar {
-    @include pf-hidden-visible(var(--pf-c-page__header-tools-group--c-avatar--Display));
-
-    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
-  }
-
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-column: 3 / 4;
+  }
+
+  .pf-m-icons {
+    // add focus styles for icon here in next PR
+  }
+
+  // Replace this in next breaking change period with modifier
+  .pf-c-avatar {
+    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
   }
 }
 
 .pf-c-page__header-tools-group {
-  @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
-
+  display: flex;
   margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
+}
+
+.pf-c-page__header-tools-group-item {
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-group-item--Display));
+
+  &.pf-m-user {
+    margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
+  }
+
+  // &.pf-m-avatar {
+  //   margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft); // change this var
+  // }
 }
 
 // Sidebar
