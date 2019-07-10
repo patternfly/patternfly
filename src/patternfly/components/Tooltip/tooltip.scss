@@ -61,7 +61,7 @@
   font-size: var(--pf-c-tooltip__content--FontSize);
   color: var(--pf-c-tooltip__content--Color);
   text-align: center;
-  word-break: break-all;
+  word-break: break-word;
   background-color: var(--pf-c-tooltip__content--BackgroundColor);
 }
 
