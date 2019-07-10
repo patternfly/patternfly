@@ -21,7 +21,6 @@
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
   --pf-c-notification-badge--m-read--after--BorderColor: transparent;
   --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--400);
-  --pf-c-notification-badge--m-unread--c-button--m-masthead--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
   position: relative;
   display: inline-block;
@@ -54,18 +53,3 @@
     --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-read--after--BorderColor);
   }
 }
-
-// When the notification badge in the masthead is focused, the pseudo element on the notification badge will have the same border color as the background color on the button.
-/* stylelint-disable */
-.pf-c-page__header-tools {
-  .pf-c-button:focus {
-    .pf-c-notification-badge {
-      &.pf-m-unread {
-        &::after {
-          --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-unread--c-button--m-masthead--after--BorderColor);
-        }
-      }
-    }
-  }
-}
-/* stylelint-enable */

@@ -73,6 +73,7 @@
   --pf-c-page__header-tools-group--m-icons--c-button--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__header-tools-group--m-icons--c-button--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__header-tools-group--m-icons--c-button--focus--OutlineOffset: var(--pf-global--spacer--xs);
+  --pf-c-page__header-tools-group--m-icons--c-button--focus__c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
@@ -307,6 +308,16 @@
         --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: var(--pf-c-page__header-tools-group--m-icons--c-button--focus--BackgroundColor);
 
         outline-offset: var(--pf-c-page__header-tools-group--m-icons--c-button--focus--OutlineOffset);
+
+        /* stylelint-disable */
+        .pf-c-notification-badge {
+          &.pf-m-unread {
+            &::after {
+              border-color: var(--pf-c-page__header-tools-group--m-icons--c-button--focus__c-notification-badge--m-unread--after--BorderColor);
+            }
+          }
+        }
+        /* stylelint-enable */
       }
     }
   }
