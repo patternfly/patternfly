@@ -282,6 +282,12 @@
   }
 
   .pf-c-list {
+    a {
+      @media screen and (min-width: $pf-global--breakpoint--xl) {
+        color: unset;
+      }
+    }
+
     &:not(:only-child) { // paragraph text might not always be included.
       padding-top: var(--pf-c-login__footer--c-list--PaddingTop);
     }
