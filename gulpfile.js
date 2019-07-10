@@ -10,6 +10,7 @@ const gulpStylelint = require('gulp-stylelint');
 const del = require('del');
 const iconfontCss = require('gulp-iconfont-css');
 const header = require('gulp-header');
+const experimentalFeatures = require('./experimental-features');
 
 const pficonRunTimestamp = Math.round(Date.now() / 1000);
 const pficonFontName = 'pficon';
@@ -64,16 +65,20 @@ gulp.task('copy-fa', () =>
     .pipe(gulp.dest('./dist/assets/icons'))
 );
 
-gulp.task('build-tmp', () =>
-  gulp
+gulp.task('build-tmp', () => {
+  const experiments = [];
+  experimentalFeatures.forEach(item => {
+    experiments.push(`**/${item.path}/*.scss`);
+  });
+  return gulp
     .src(['./src/patternfly/**/*.scss', '!./src/patternfly/**/examples/*.scss'])
     .pipe(
       sassGlob({
-        ignorePaths: ['**/examples/*.scss']
+        ignorePaths: ['**/examples/*.scss', ...experiments]
       })
     )
-    .pipe(gulp.dest('./tmp'))
-);
+    .pipe(gulp.dest('./tmp'));
+});
 
 gulp.task('build-library', ['build-tmp'], () =>
   gulp
