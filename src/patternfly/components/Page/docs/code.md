@@ -23,7 +23,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__header-selector` | `<div>` |   Creates a header container to nest the context selector component. |
 | `.pf-c-page__header-nav` | `<div>` |   Creates a container to nest the navigation component in the header. |
 | `.pf-c-page__header-tools` | `<div>` |   Creates a container to nest the icons and menus in header. |
-| `.pf-c-page__header-tools-group` | `<div>` |  Creates a container for grouping sets of icons and menus in header. |
+| `.pf-c-page__header-tools-group` | `<div>` |  Creates a container for grouping sets of items in the page header tools. |
+| `.pf-c-page__header-tools-item` | `<div>` |  Creates a container for items in the page header tools. |
 | `.pf-c-page__sidebar` | `<aside>` |   Declares the page sidebar. |
 | `.pf-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. |
 | `.pf-c-page__main` | `<main>` |   Declares the main page area. |

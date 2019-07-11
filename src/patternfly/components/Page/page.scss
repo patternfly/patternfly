@@ -63,7 +63,7 @@
   --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md); // change this to m-avatar at breaking change
-  --pf-c-page__header-tools-group-item--Display: flex;
+  --pf-c-page__header-tools-item--Display: flex;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
@@ -299,8 +299,8 @@
   margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
 }
 
-.pf-c-page__header-tools-group-item {
-  @include pf-hidden-visible(var(--pf-c-page__header-tools-group-item--Display));
+.pf-c-page__header-tools-item {
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
 
   &.pf-m-user {
     margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
