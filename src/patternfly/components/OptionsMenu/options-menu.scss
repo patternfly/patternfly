@@ -258,6 +258,7 @@
   margin-left: auto;
   font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
   color: var(--pf-c-options-menu__menu-item-icon--Color);
+  pointer-events: none;
 }
 
 .pf-c-options-menu__separator {
