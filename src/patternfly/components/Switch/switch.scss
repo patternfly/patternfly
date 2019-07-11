@@ -1,6 +1,6 @@
 .pf-c-switch {
   // Switch
-  --pf-c-switch--Height: calc(#{var(--pf-global--FontSize--md)} * #{var(--pf-global--LineHeight--md)});
+  --pf-c-switch--Height: calc(#{var(--pf-c-switch__label--FontSize)} * #{var(--pf-c-switch--LineHeight)});
   --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} * #{var(--pf-global--golden-ratio)});
   --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
 
@@ -21,7 +21,7 @@
   --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch--Height);
   --pf-c-switch__toggle--before--Top: calc(#{var(--pf-c-switch--Height)} / 2 * (1 - 1 / #{var(--pf-global--golden-ratio)}));
   --pf-c-switch__toggle--before--Left: var(--pf-c-switch__toggle--before--Top);
-  --pf-c-switch__toggle--before--Width: calc(#{var(--pf-c-switch--Height)} / #{var(--pf-global--golden-ratio)});
+  --pf-c-switch__toggle--before--Width: calc(#{var(--pf-c-switch--Height)} * .5);
   --pf-c-switch__toggle--before--Height: var(--pf-c-switch__toggle--before--Width);
   --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-switch__toggle--before--BorderRadius: var(--pf-global--BorderRadius--lg);
@@ -31,13 +31,14 @@
   --pf-c-switch__toggle-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-switch__toggle-icon--Color: var(--pf-global--Color--light-100);
   --pf-c-switch__toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-switch__toggle-icon--Top: #{pf-size-prem(7px)};
+  --pf-c-c-switch__toggle-icon--LineHeight: var(--pf-c-switch--Height);
+  --pf-c-switch__toggle-icon--Top: #{pf-size-prem(7px)};// remove this var at breaking change period
 
   // Switch label
   --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-switch__label--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-switch__label--FontSize: var(--pf-global--FontSize--2xl);
   --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-switch__label--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch__label--LineHeight: var(--pf-c-switch--LineHeight);
   --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
 
   position: relative;
@@ -139,9 +140,9 @@
 
   .pf-c-switch__toggle-icon {
     position: absolute;
-    top: var(--pf-c-switch__toggle-icon--Top);
     padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
     font-size: var(--pf-c-switch__toggle-icon--FontSize);
+    line-height: var(--pf-c-switch--Height);
     color: var(--pf-c-switch__toggle-icon--Color);
   }
 
