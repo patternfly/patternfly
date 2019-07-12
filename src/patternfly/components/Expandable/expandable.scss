@@ -60,3 +60,10 @@
     margin-top: var(--pf-c-expandable__content--MarginTop);
   }
 }
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-expandable__toggle {
+    --pf-c-expandable__toggle--FontWeight: var(--pf-global--FontWeight--normal);
+  }
+}

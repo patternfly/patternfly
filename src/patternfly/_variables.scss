@@ -142,7 +142,10 @@
 
   // Font family
   --pf-global--FontFamily--sans-serif: #{$pf-global--FontFamily--sans-serif};
+  --pf-global--FontFamily--heading--sans-serif: #{$pf-global--FontFamily--heading--sans-serif};
   --pf-global--FontFamily--monospace: #{$pf-global--FontFamily--monospace};
+  --pf-global--FontFamily--redhatfont--sans-serif: #{$pf-global--FontFamily--redhatfont--sans-serif};
+  --pf-global--FontFamily--redhatfont--heading--sans-serif: #{$pf-global--FontFamily--redhatfont--heading--sans-serif};
 
   // Font size
   --pf-global--FontSize--4xl: #{$pf-global--FontSize--4xl};
@@ -159,6 +162,7 @@
   --pf-global--FontWeight--normal: #{$pf-global--FontWeight--normal};
   --pf-global--FontWeight--semi-bold: #{$pf-global--FontWeight--semi-bold};
   --pf-global--FontWeight--bold: #{$pf-global--FontWeight--bold};
+  --pf-global--FontWeight--redhatfont--bold: #{$pf-global--FontWeight--redhatfont--bold};
 
   // Line height
   --pf-global--LineHeight--sm: #{$pf-global--LineHeight--sm};
@@ -177,4 +181,13 @@
   // A11y
   --pf-global--target-size--MinWidth: #{$pf-global--target-size--MinWidth};
   --pf-global--target-size--MinHeight: #{$pf-global--target-size--MinHeight};
+}
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhatfont--sans-serif);
+  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatfont--heading--sans-serif);
+  --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--redhatfont--bold);
+  --pf-global--FontWeight--bold: var(--pf-global--FontWeight--redhatfont--bold);
+  --pf-global--link--FontWeight: var(--pf-global--FontWeight--normal);
 }

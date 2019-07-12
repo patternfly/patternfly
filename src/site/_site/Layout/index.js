@@ -58,7 +58,7 @@ export default ({ children }) => (
         <div className="layout">
           <Helmet>
             <title>PatternFly 4</title>
-            <html lang="en-US" />
+            <html lang="en-US" className="pf-m-redhat-font" />
           </Helmet>
           <header className="layout__header">
             <h1>

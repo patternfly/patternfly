@@ -197,3 +197,10 @@
   padding-top: var(--pf-c-alert__action--PaddingTop);
   padding-right: var(--pf-c-alert__action--PaddingRight);
 }
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-alert__title {
+    font-weight: var(--pf-global--FontWeight--bold);
+  }
+}
