@@ -1,7 +1,7 @@
 .pf-c-switch {
   // Switch
   --pf-c-switch--Height: calc(#{var(--pf-c-switch__label--FontSize)} * #{var(--pf-c-switch--LineHeight)});
-  --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} * #{var(--pf-global--golden-ratio)});
+  --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} + #{var(--pf-c-switch__label--FontSize)});
   --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
 
   // Switch input
