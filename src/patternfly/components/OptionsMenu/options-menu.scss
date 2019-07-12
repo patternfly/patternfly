@@ -118,7 +118,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
   padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
