@@ -1,6 +1,4 @@
 .pf-c-select {
-  @include pf-t-light; // force the container follow the light theme
-
   // Toggle
   --pf-c-select__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-select__toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -10,7 +8,7 @@
   --pf-c-select__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-select__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__toggle--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-select__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-select__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -127,6 +125,11 @@
   width: 100%;
 }
 
+.pf-c-select__toggle:not(.pf-m-plain),
+.pf-c-select__menu {
+  @include pf-t-light; // other than a plain select toggle, the select component should be a light theme
+}
+
 .pf-c-select__toggle {
   position: relative;
   display: flex;
@@ -185,22 +188,8 @@
   }
 
   &.pf-m-plain {
-    --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--Color);
-
     &::before {
       border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
-    }
-
-    &:hover,
-    &.pf-m-hover,
-    &:active,
-    &.pf-m-active,
-    .pf-m-expanded > & {
-      --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--hover--Color);
-
-      &::before {
-        border-color: var(--pf-c-select__toggle--m-plain--BorderColor);
-      }
     }
   }
 
