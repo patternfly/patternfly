@@ -174,12 +174,13 @@
   &:disabled {
     pointer-events: none;
 
-    &:not(.pf-m-plain) {
+    &:not(.pf-m-plain),
+    &.pf-m-text {
       --pf-c-options-menu__toggle--Background: var(--pf-c-options-menu__toggle--disabled--BackgroundColor);
+    }
 
-      &::before {
-        border: 0;
-      }
+    &::before {
+      border: 0;
     }
   }
 }

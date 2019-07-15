@@ -5,6 +5,9 @@
   {{#if aria-label}}
     aria-label="{{aria-label}}"
   {{/if}}
+  {{#if options-menu-toggle--IsDisabled}}
+    disabled
+  {{/if}}
   {{#if options-menu-toggle-button--attribute}}
     {{{options-menu-toggle-button--attribute}}}
   {{/if}}>
