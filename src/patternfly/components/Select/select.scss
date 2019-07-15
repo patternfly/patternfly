@@ -21,8 +21,6 @@
   --pf-c-select__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--m-plain--BorderColor: transparent;
-  --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--200);
-  --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // When there is a typeahead (input box) adjust the top padding of the wrapper in case it wraps to the second line
   --pf-c-select__toggle-wrapper--m-typeahead--PaddingTop: var(--pf-global--spacer--xs);
