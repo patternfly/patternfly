@@ -109,6 +109,7 @@
   font-weight: var(--pf-c-app-launcher__menu-item--FontWeight);
   color: var(--pf-c-app-launcher__menu-item--Color);
   white-space: nowrap;
+  border: 0;
 
   &:hover,
   &.pf-m-hover,
