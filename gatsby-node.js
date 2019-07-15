@@ -3,6 +3,7 @@ const inflection = require('inflection');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const resolveAliases = require('./build/resolveAliases');
+const experimentalFeatures = require('./experimental-features');
 const glob = require('glob');
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -20,7 +21,19 @@ exports.onCreateNode = ({ node, actions }) => {
     const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
     const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
     const isUtility = node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
-    if (isPage) {
+    let isExperimental = false;
+    experimentalFeatures.forEach(item => {
+      if (node.fileAbsolutePath.includes(item.path)) {
+        isExperimental = true;
+      }
+    });
+    if (isExperimental) {
+      const componentName = path.basename(path.dirname(node.fileAbsolutePath));
+      const pagePath = `/components/${componentName}/docs`;
+      createNodeField({ node, name: 'path', value: pagePath });
+      createNodeField({ node, name: 'type', value: 'documentation' });
+      createNodeField({ node, name: 'contentType', value: 'experimental' });
+    } else if (isPage) {
       const relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath);
       const pagePath = `/${relativePath}`.replace(/\.md$/, '');
       createNodeField({ node, name: 'path', value: pagePath });
@@ -110,7 +123,12 @@ exports.onCreatePage = async ({ page, actions }) => {
       page.context.type = 'category';
       page.context.category = page.path.match(CATEGORY_PAGE_REGEX)[1];
     } else if (isCategoryChildPage) {
-      const pageCategory = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[1];
+      let pageCategory = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[1];
+      experimentalFeatures.forEach(item => {
+        if (page.path.includes(item.path)) {
+          pageCategory = 'experimental';
+        }
+      });
       const pageSlug = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[2];
       const pageName = pageSlug.replace('-', ' ');
       const pageTitle = inflection.titleize(pageName);

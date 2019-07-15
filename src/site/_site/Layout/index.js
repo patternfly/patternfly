@@ -58,7 +58,7 @@ export default ({ children }) => (
         <div className="layout">
           <Helmet>
             <title>PatternFly 4</title>
-            <html lang="en-US" />
+            <html lang="en-US" className="pf-m-redhat-font" />
           </Helmet>
           <header className="layout__header">
             <h1>
@@ -83,6 +83,10 @@ export default ({ children }) => (
               <div className="layout__sidebar__item">
                 <h3 className="layout__sidebar_heading">Demos</h3>
                 <Navigation links={allPages.demo} />
+              </div>
+              <div className="layout__sidebar__item">
+                <h3 className="layout__sidebar_heading">Experimental</h3>
+                <Navigation links={allPages.experimental} />
               </div>
             </div>
             <div className="layout__content">{children}</div>

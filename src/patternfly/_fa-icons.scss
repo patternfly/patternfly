@@ -29,7 +29,7 @@
     }
     /* stylelint-enable */
 
-    html {
+    * {
       @extend %pf-fa-local;
     }
   }

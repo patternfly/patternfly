@@ -63,7 +63,7 @@ $pf-chart-global--letter-spacing: "normal";
 // label
 $pf-chart-global--label--Padding: 10;
 $pf-chart-global--label--Margin: 8;
-$pf-chart-global--label--stroke: transparent;
+$pf-chart-global--label--stroke: "transparent";
 $pf-chart-global--label--text-anchor: "middle";
 $pf-chart-global--label--stroke--Width: 0;
 $pf-chart-global--label--Fill: $pf-color-black-900;
@@ -83,7 +83,6 @@ $pf-chart-global--BorderWidth--lg: 8;
 // Stroke
 $pf-chart-global--stroke-line-cap: "round";
 $pf-chart-global--stroke-line-join: "round";
-$pf-chart-global--stroke-dash-array: "10, 5";
 
 // Fills and Strokes
 $pf-chart-global--danger--Color--100: $pf-global--danger-color--100;
@@ -107,16 +106,17 @@ $pf-chart-area--data--Fill: $pf-chart-global--Fill--Color--900;
 
 // Axis Chart
 $pf-chart-axis--axis--stroke--Width: $pf-chart-global--stroke--Width--xs;
-$pf-chart-axis--axis--stroke--Color: $pf-chart-global--Fill--Color--900;
-$pf-chart-axis--axis--Fill: transparent;
+$pf-chart-axis--axis--stroke--Color: $pf-chart-global--Fill--Color--300;
+$pf-chart-axis--axis--Fill: "transparent";
 $pf-chart-axis--axis-label--Padding: 100;
-$pf-chart-axis--axis-label--stroke--Color: transparent;
-$pf-chart-axis--grid--Fill: transparent;
-$pf-chart-axis--grid--stroke--Color: transparent;
+$pf-chart-axis--axis-label--stroke--Color: "transparent";
+$pf-chart-axis--grid--Fill: "none";
+$pf-chart-axis--grid--stroke--Color: $pf-chart-global--Fill--Color--300;
 $pf-chart-axis--grid--PointerEvents: "painted";
-$pf-chart-axis--tick--Fill: transparent;
+$pf-chart-axis--tick--Fill: "transparent";
+$pf-chart-axis--tick--Size: 5;
 $pf-chart-axis--tick--Width: 1;
-$pf-chart-axis--tick--stroke--Color: transparent;
+$pf-chart-axis--tick--stroke--Color: $pf-chart-global--Fill--Color--300;
 $pf-chart-axis--tick-label--Fill: $pf-chart-global--Fill--Color--700;
 
 // Bar Chart
@@ -165,11 +165,9 @@ $pf-chart-candelstick--data--stroke--Color: $pf-chart-global--Fill--Color--900;
 $pf-chart-candelstick--candle--positive--Color: $pf-chart-global--Fill--Color--white;
 $pf-chart-candelstick--candle--negative--Color: $pf-chart-global--Fill--Color--900;
 
-// Chart
-$pf-chart-chart--BorderWidth: $pf-chart-global--BorderWidth--xs solid;
-
 // Simple Donut Chart
 $pf-chart-donut--label--subtitle--Fill: $pf-chart-global--Fill--Color--400;
+$pf-chart-donut--label--subtitle--position: "center";
 $pf-chart-donut--pie--Height: 230;
 $pf-chart-donut--pie--angle--Padding: 1;
 $pf-chart-donut--pie--Width: 230;
@@ -178,7 +176,6 @@ $pf-chart-donut--pie--Width: 230;
 $pf-chart-donut--threshold--first--Color: $pf-chart-global--Fill--Color--200;
 $pf-chart-donut--threshold--second--Color: $pf-chart-global--Fill--Color--300;
 $pf-chart-donut--threshold--third--Color: $pf-chart-global--Fill--Color--400;
-$pf-chart-donut--threshold--success--Color: $pf-chart-global--success--Color--100;
 $pf-chart-donut--threshold--warning--Color: $pf-chart-global--warning--Color--200;
 $pf-chart-donut--threshold--danger--Color: $pf-chart-global--danger--Color--100;
 $pf-chart-donut--threshold--dynamic--pie--Height: 202;
@@ -188,15 +185,13 @@ $pf-chart-donut--threshold--static--pie--angle--Padding: 1;
 $pf-chart-donut--threshold--static--pie--Width: 230;
 
 // Donut Utilization Chart
-$pf-chart-donut--utilization--label--subtitle--Fill: $pf-chart-global--Fill--Color--400;
-$pf-chart-donut--utilization--label--orientation: "vertical";
 $pf-chart-donut--utilization--dynamic--pie--Height: 230;
 $pf-chart-donut--utilization--dynamic--pie--angle--Padding: 1;
 $pf-chart-donut--utilization--dynamic--pie--Width: 230;
 
 // Error Bar
 $pf-chart-errorbar--BorderWidth: $pf-chart-global--BorderWidth--lg;
-$pf-chart-errorbar--data--Fill: transparent;
+$pf-chart-errorbar--data--Fill: "transparent";
 $pf-chart-errorbar--data--Opacity: 1;
 $pf-chart-errorbar--data-stroke--Width: $pf-chart-global--stroke--Width--sm;
 $pf-chart-errorbar--data-stroke--Color: $pf-chart-global--Fill--Color--900;
@@ -204,13 +199,14 @@ $pf-chart-errorbar--data-stroke--Color: $pf-chart-global--Fill--Color--900;
 // Legend
 $pf-chart-legend--gutter--Width: 20;
 $pf-chart-legend--orientation: "horizontal";
+$pf-chart-legend--position: "right";
 $pf-chart-legend--title--orientation: "top";
 $pf-chart-legend--data--type: "square";
 $pf-chart-legend--title--Padding: 2;
 $pf-chart-legend--Margin: 16;
 
 // Line Chart
-$pf-chart-line--data--Fill: transparent;
+$pf-chart-line--data--Fill: "transparent";
 $pf-chart-line--data--Opacity: 1;
 $pf-chart-line--data--stroke--Width: $pf-chart-global--stroke--Width--sm;
 $pf-chart-line--data--stroke--Color: $pf-chart-global--Fill--Color--900;
@@ -219,16 +215,13 @@ $pf-chart-line--data--stroke--Color: $pf-chart-global--Fill--Color--900;
 $pf-chart-pie--Padding: 8;
 $pf-chart-pie--data--Padding: 8;
 $pf-chart-pie--data--stroke--Width: $pf-chart-global--stroke--Width--xs;
-$pf-chart-pie--data--stroke--Color: transparent;
+$pf-chart-pie--data--stroke--Color: "transparent";
 $pf-chart-pie--labels--Padding: 8;
-$pf-chart-pie--angle--Padding: 1;
 $pf-chart-pie--Height: 230;
 $pf-chart-pie--Width: 230;
-$pf-chart-pie--small--Height: 150;
-$pf-chart-pie--small--Width: 150;
 
 // Scatter Chart
-$pf-chart-scatter--data--stroke--Color: transparent;
+$pf-chart-scatter--data--stroke--Color: "transparent";
 $pf-chart-scatter--data--stroke--Width: 0;
 $pf-chart-scatter--data--Opacity: 1;
 $pf-chart-scatter--data--Fill: $pf-chart-global--Fill--Color--900;
@@ -239,26 +232,25 @@ $pf-chart-stack--data--stroke--Width: $pf-chart-global--stroke--Width--xs;
 // Tooltip
 $pf-chart-tooltip--corner-radius: 0;
 $pf-chart-tooltip--pointer-length: 10;
+$pf-chart-tooltip--Fill: $pf-chart-global--Fill--Color--200;
 $pf-chart-tooltip--flyoutStyle--corner-radius: 0;
 $pf-chart-tooltip--flyoutStyle--stroke--Width: 0;
 $pf-chart-tooltip--flyoutStyle--PointerEvents: "none";
 $pf-chart-tooltip--flyoutStyle--stroke--Color: $pf-chart-global--Fill--Color--900;
-$pf-chart-tooltip--flyoutStyle--Fill: $pf-chart-global--Fill--Color--200;
-$pf-chart-tooltip--pointer--Height: 10;
+$pf-chart-tooltip--flyoutStyle--Fill: $pf-chart-global--Fill--Color--900;
 $pf-chart-tooltip--pointer--Width: 20;
 $pf-chart-tooltip--Padding: 16;
 $pf-chart-tooltip--PointerEvents: "none";
-$pf-chart-tooltip--labels--Padding: 5;
-$pf-chart-tooltip--labels--PointerEvents: "none";
 
 // Voronoi Chart
-$pf-chart-voronoi--data--Fill: transparent;
-$pf-chart-voronoi--data--stroke--Color: transparent;
+$pf-chart-voronoi--data--Fill: "transparent";
+$pf-chart-voronoi--data--stroke--Color: "transparent";
 $pf-chart-voronoi--data--stroke--Width: 0;
+$pf-chart-voronoi--labels--Fill: $pf-chart-global--Fill--Color--200;
 $pf-chart-voronoi--labels--Padding: 8;
 $pf-chart-voronoi--labels--PointerEvents: "none";
 $pf-chart-voronoi--flyout--stroke--Width: $pf-chart-global--stroke--Width--xs;
 $pf-chart-voronoi--flyout--PointerEvents: "none";
 $pf-chart-voronoi--flyout--stroke--Color: $pf-chart-global--Fill--Color--900;
-$pf-chart-voronoi--flyout--stroke--Fill: $pf-chart-global--Fill--Color--200;
+$pf-chart-voronoi--flyout--stroke--Fill: $pf-chart-global--Fill--Color--900;
 $pf-chart-voronoi--flyout--PointerEvents: "none";
