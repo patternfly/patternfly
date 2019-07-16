@@ -1,0 +1,27 @@
+{{#> page page--id="page-layout-table-compact"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    <a id="main-content-{{page--id}}"></a>
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> table-toolbar}}
+        {{> table-compact-table}}
+        {{> table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}

@@ -1,3 +1,10 @@
+{{#> options-menu id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
+  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
 {{#> options-menu id="options-menu-plain-example"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>

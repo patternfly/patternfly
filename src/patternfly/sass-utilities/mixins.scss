@@ -165,3 +165,9 @@
 
   @extend %pf-hidden-visible;
 }
+
+@mixin pf-m-redhat-font {
+  .pf-m-redhat-font {
+    @content;
+  }
+}

@@ -1,5 +1,12 @@
 ## Overview
 
+There are two variations to build the accordion component:
+One way uses `<div>` and `<h1 - h6>` tags to build the component. 
+In these examples `.pf-c-accordion` uses `<div>`, `.pf-c-accordion__toggle` uses `<h3><button>`, and `.pf-c-accordion__expanded-content` uses `<div>`. The heading level that you use should fit within the rest of the headings outlined on your page.
+
+Another variation is using the definition list:
+In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses `<dt><button>`, and `.pf-c-accordion__expanded-content` uses `<dd>`.
+
 
 ## Accessibility
 
@@ -15,11 +22,11 @@
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-accordion` | `<dl>` | Initiates an accordion component. **Required**|
-| `.pf-c-accordion__toggle` | `<dt><h3><button>` | Initiates a toggle in the accordion. **Required** |
+| `.pf-c-accordion` | `<div>`, `<dl>` | Initiates an accordion component. **Required**|
+| `.pf-c-accordion__toggle` | `<h1-h6><button>`, `<dt><button>` | Initiates a toggle in the accordion. **Required** |
 | `.pf-c-accordion__toggle-text` | `<span>` | Initiates the text inside the toggle. **Required** |
 | `.pf-c-accordion__toggle-icon` | `<i>` | Initiates the toggle icon. **Required** |
-| `.pf-c-accordion__expanded-content` | `<dd>` | Initiates expanded content. **Must be paired with a button** |
+| `.pf-c-accordion__expanded-content` | `<div>`, `<dd>` | Initiates expanded content. **Must be paired with a button** |
 | `.pf-c-accordion__expanded-content-body` | `<div>` | Initiates expanded content body. **Required** |
 | `.pf-m-expanded` | `.pf-c-accordion__toggle`, `.pf-c-accordion__expanded-content` | Modifies the accordion button and expanded content for the expanded state. |
 | `.pf-m-hover` | `.pf-c-accordion__toggle` | Modifies the accordion button for the hover state. |

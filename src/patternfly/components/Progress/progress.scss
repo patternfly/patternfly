@@ -23,6 +23,8 @@
   --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-outside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-sm__bar--Height: var(--pf-global--spacer--sm);
+  --pf-c-progress--m-sm__description--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-progress--m-sm__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-lg__bar--Height: var(--pf-global--spacer--lg);
 
   // Component styles
@@ -35,6 +37,14 @@
   // size modifiers
   &.pf-m-sm {
     --pf-c-progress__bar--Height: var(--pf-c-progress--m-sm__bar--Height); // set height to the small height
+
+    .pf-c-progress__description {
+      font-size: var(--pf-c-progress--m-sm__description--FontSize);
+    }
+
+    .pf-c-progress__measure {
+      font-size: var(--pf-c-progress--m-sm__measure--FontSize);
+    }
   }
 
   &.pf-m-lg {

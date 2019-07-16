@@ -20,12 +20,15 @@
   --pf-c-options-menu__toggle--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-options-menu__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-options-menu__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-options-menu__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-options-menu__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-options-menu__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
+  --pf-c-options-menu__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
 
   // Toggle arrow
   --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-options-menu--m-top--m-expanded__toggle-icon--Transform: rotate(180deg);
 
   // Text toggle button
   --pf-c-options-menu__toggle-button--Background: transparent;
@@ -115,7 +118,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
   padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
@@ -160,6 +163,25 @@
     .pf-c-options-menu.pf-m-expanded > & {
       --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--hover--Color);
     }
+
+    &.pf-m-disabled,
+    &:disabled {
+      --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--disabled--Color);
+    }
+  }
+
+  &.pf-m-disabled,
+  &:disabled {
+    pointer-events: none;
+
+    &:not(.pf-m-plain),
+    &.pf-m-text {
+      --pf-c-options-menu__toggle--Background: var(--pf-c-options-menu__toggle--disabled--BackgroundColor);
+    }
+
+    &::before {
+      border: 0;
+    }
   }
 }
 
@@ -178,7 +200,7 @@
   margin-left: var(--pf-c-options-menu__toggle-icon--MarginLeft);
 
   .pf-c-options-menu.pf-m-top.pf-m-expanded & {
-    transform: rotate(-180deg);
+    transform: var(--pf-c-options-menu--m-top--m-expanded__toggle-icon--Transform);
   }
 }
 

@@ -7,6 +7,7 @@ import CardNoHeaderExampleRaw from '!raw!./card-no-header-example.hbs';
 import CardContentOnlyExampleRaw from '!raw!./card-content-only-example.hbs';
 import CardMultipleBodyExampleRaw from '!raw!./card-multiple-body-example.hbs';
 import CardFillExampleRaw from '!raw!./card-no-fill-example.hbs';
+import CardCompactExampleRaw from '!raw!./card-compact-example.hbs';
 import CardHoverExampleRaw from '!raw!./card-hover-example.hbs';
 import CardImgActionRaw from '!raw!./card-img-action.hbs';
 import docs from '../docs/code.md';
@@ -16,18 +17,20 @@ import CardNoHeaderExample from './card-no-header-example.hbs';
 import CardContentOnlyExample from './card-content-only-example.hbs';
 import CardMultipleBodyExample from './card-multiple-body-example.hbs';
 import CardFillExample from './card-no-fill-example.hbs';
+import CardCompactExample from './card-compact-example.hbs';
 import CardHoverExample from './card-hover-example.hbs';
 import CardImgActionExample from './card-img-action.hbs';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const cardBasicExample = CardBasicExample();
   const cardNoFooterExample = CardNoFooterExample();
   const cardNoHeaderExample = CardNoHeaderExample();
   const cardContentOnlyExample = CardContentOnlyExample();
   const cardMultipleBodyExample = CardMultipleBodyExample();
   const cardFillExample = CardFillExample();
+  const cardCompactExample = CardCompactExample();
   const cardHoverExample = CardHoverExample();
   const cardImgActionExample = CardImgActionExample();
   const headingText = 'Card';
@@ -60,6 +63,9 @@ export default (props) => {
         className="is-height-flex-column-grow"
       >
         {cardFillExample}
+      </Example>
+      <Example heading="Card compact example" handlebars={CardCompactExampleRaw}>
+        {cardCompactExample}
       </Example>
       <Example heading="Card hover example" handlebars={CardHoverExampleRaw}>
         {cardHoverExample}
