@@ -393,11 +393,13 @@
 
   // Check table cell
   .pf-c-table__check {
-    margin-top: var(--pf-c-table__check--responsive--MarginTop);
+    align-self: center; // FIX #1577: Align the checkbox to be center in the grid cell
+    // FIX #1577: Remove margin-top - not needed. 
+    // margin-top: var(--pf-c-table__check--responsive--MarginTop);
     margin-left: var(--pf-c-table__check--responsive--MarginLeft);
     grid-row-start: 1;
     grid-column-start: 2;
-
+    // outline:1px solid blue;
     // if action is present, add margin left to accommodate checkbox
     & ~ .pf-c-table__action {
       margin-left: var(--pf-c-table__action--responsive--MarginLeft);
@@ -408,7 +410,7 @@
   .pf-c-table__action {
     grid-row-start: 1;
     grid-column-start: 2;
-
+    align-self: center; // FIX #1577: Align the table action button to be center in the grid
     // @smallest breakpoint
     @media screen and (max-width: $pf-global--breakpoint--sm) {
       grid-row-start: 1;
