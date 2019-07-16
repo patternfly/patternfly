@@ -6,5 +6,9 @@ module.exports = [
   {
     name: 'Divider',
     path: 'components/Divider/'
+  },
+  {
+    name: 'DataToolbar',
+    path: 'components/DataToolbar/'
   }
 ];

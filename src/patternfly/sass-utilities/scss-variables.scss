@@ -289,13 +289,13 @@ $pf-global--spacer-properties-map: (
 
 // Spacer values
 $pf-global--spacer-map: (
-  "-auto": "auto",
-  "-0": 0,
-  "-xs": "var(--pf-global--spacer--xs)",
-  "-sm": "var(--pf-global--spacer--sm)",
-  "-md": "var(--pf-global--spacer--md)",
-  "-lg": "var(--pf-global--spacer--lg)",
-  "-xl": "var(--pf-global--spacer--xl)",
-  "-2xl": "var(--pf-global--spacer--2xl)",
-  "-3xl": "var(--pf-global--spacer--3xl)"
+  "auto": "auto",
+  "0": 0,
+  "xs": "var(--pf-global--spacer--xs)",
+  "sm": "var(--pf-global--spacer--sm)",
+  "md": "var(--pf-global--spacer--md)",
+  "lg": "var(--pf-global--spacer--lg)",
+  "xl": "var(--pf-global--spacer--xl)",
+  "2xl": "var(--pf-global--spacer--2xl)",
+  "3xl": "var(--pf-global--spacer--3xl)"
 );
