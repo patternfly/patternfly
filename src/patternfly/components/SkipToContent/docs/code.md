@@ -2,7 +2,13 @@
 
 Skip to content allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
 
-When using `.pf-c-skip-to-content` you must also provide an anchor with the matching id that is applied to the `href` attribute of `.pf-c-skip-to-content`. You will typically place this just before the main content of the page. Ex: `<a id="main-content"></a>` For a demo of this see the [page demo](../../../demos/Page/examples).
+When using `.pf-c-skip-to-content` you must provide an `href` attribute who's value corresponds to the `id` attribute of the primary content container for your application. In most cases this is the `<main>` element. For a demo of this see the [page demo](../../../demos/Page/examples), and note the use of `tabindex="-1" which allows the element to receive focus programmatically.
+
+## Accessibility
+
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `href="[id of main container]"` | `.pf-c-skip-to-content` | Sends focus to the primary content container. **Required** |
 
 ## Usage
 
