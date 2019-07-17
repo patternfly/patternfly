@@ -1,15 +1,15 @@
 .pf-c-drawer {
   --pf-c-drawer__main--MarginRight: calc(var(--pf-c-drawer__panel--Width) * -1);
-  --pf-c-drawer--m-open__main--MarginRight: 0;
-  --pf-c-drawer__main--Transition: margin .25s ease;
+  --pf-c-drawer--m-expanded__main--MarginRight: 0;
+  --pf-c-drawer__main--Transition: margin-right .25s ease;
   --pf-c-drawer__panel--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-drawer__panel--Width: 100%;
   --pf-c-drawer__panel--md--Width: #{pf-size-prem(450px)};
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--Transition: transform .25s ease;
   --pf-c-drawer__panel--Transform: translateX(100%);
-  --pf-c-drawer--m-open__panel--Transform: translateX(0);
-  --pf-c-drawer--m-open__panel--BoxShadow: var(--pf-global--BoxShadow--md-left);
+  --pf-c-drawer--m-expanded__panel--Transform: translateX(0);
+  --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-global--BoxShadow--md-left);
   --pf-c-drawer__panel-body--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-drawer__panel-body--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-drawer__panel-body--PaddingBottom: var(--pf-global--spacer--md);
@@ -30,21 +30,24 @@
   display: flex;
   overflow-x: hidden;
 
-  &.pf-m-open {
-    --pf-c-drawer__panel--Transform: var(--pf-c-drawer--m-open__panel--Transform);
+  &.pf-m-expanded {
+    --pf-c-drawer__panel--Transform: var(--pf-c-drawer--m-expanded__panel--Transform);
 
-    &.pf-m-inline {
-      --pf-c-drawer__main--MarginRight: var(--pf-c-drawer--m-open__main--MarginRight);
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      &.pf-m-inline {
+        --pf-c-drawer__main--MarginRight: var(--pf-c-drawer--m-expanded__main--MarginRight);
+      }
     }
 
     .pf-c-drawer__panel {
-      box-shadow: var(--pf-c-drawer--m-open__panel--BoxShadow);
+      box-shadow: var(--pf-c-drawer--m-expanded__panel--BoxShadow);
     }
   }
 }
 
 .pf-c-drawer__main {
   flex-grow: 1;
+  min-width: 0;
   margin-right: var(--pf-c-drawer__main--MarginRight);
   transition: var(--pf-c-drawer__main--Transition);
 }
