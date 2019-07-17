@@ -121,7 +121,7 @@
 
   // Subnav links
   --pf-c-nav__subnav--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__subnav--MaxHeight: #{pf-size-prem(600px)};
+  --pf-c-nav__subnav--MaxHeight: 100%;
 
   // List toggle
   --pf-c-nav__list-toggle--PaddingRight: var(--pf-global--spacer--sm);
