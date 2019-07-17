@@ -11,6 +11,7 @@ import tableCompactExpandableExampleRaw from '!raw!./table-compact-expandable-ex
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
 import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
 import tableHiddenVisibleExampleRaw from '!raw!./table-hidden-visible-example.hbs';
+import tableHeadersWrapExampleRaw from '!raw!./table-headers-wrap-example.hbs';
 
 import TableSimpleExample from './table-simple-example.hbs';
 import tableSimpleDoc from '../docs/table-simple.md';
@@ -41,11 +42,14 @@ import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
 import TableHiddenVisibleExample from './table-hidden-visible-example.hbs';
 import tableHiddenVisibleDoc from '../docs/table-hidden-visible.md';
 
+import TableHeadersWrapExample from './table-headers-wrap-example.hbs';
+import tableHeadersWrapDoc from '../docs/table-headers-wrap.md';
+
 import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const tableSimpleExample = TableSimpleExample();
   const tableSortableExample = TableSortableExample();
   const tableExpandableExample = TableExpandableExample();
@@ -56,6 +60,7 @@ export default (props) => {
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
   const tableHiddenVisibleExample = TableHiddenVisibleExample();
+  const tableHeadersWrapExample = TableHeadersWrapExample();
   const headingText = 'Table';
   const variablesRoot = 'pf-c-table';
 
@@ -110,6 +115,13 @@ export default (props) => {
         docs={tableHiddenVisibleDoc}
       >
         {tableHiddenVisibleExample}
+      </Example>
+      <Example
+        heading="Table with headers that wrap"
+        handlebars={tableHeadersWrapExampleRaw}
+        docs={tableHeadersWrapDoc}
+      >
+        {tableHeadersWrapExample}
       </Example>
     </Documentation>
   );
