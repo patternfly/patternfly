@@ -147,6 +147,7 @@
 
   &.pf-m-plain {
     &:not(.pf-m-text) {
+      justify-content: center;
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 

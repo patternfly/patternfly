@@ -201,6 +201,7 @@
   }
 
   &.pf-m-plain {
+    justify-content: center;
     color: var(--pf-c-dropdown__toggle--m-plain--Color);
 
     > * {
