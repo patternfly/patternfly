@@ -1,6 +1,6 @@
 .pf-c-drawer {
   --pf-c-drawer__main--MarginRight: calc(var(--pf-c-drawer__panel--Width) * -1);
-  --pf-c-drawer--m-expanded__main--MarginRight: 0;
+  --pf-c-drawer--m-expanded--m-inline__main--MarginRight: 0;
   --pf-c-drawer__main--Transition: margin-right .25s ease;
   --pf-c-drawer__panel--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-drawer__panel--Width: 100%;
@@ -35,7 +35,7 @@
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
       &.pf-m-inline {
-        --pf-c-drawer__main--MarginRight: var(--pf-c-drawer--m-expanded__main--MarginRight);
+        --pf-c-drawer__main--MarginRight: var(--pf-c-drawer--m-expanded--m-inline__main--MarginRight);
       }
     }
 
