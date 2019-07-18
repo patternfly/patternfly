@@ -3,9 +3,9 @@
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-drawer` | `<div>` | Creates the drawer container. |
-| `.pf-c-drawer__main` | `<div>` | Creates the drawer main container. |
+| `.pf-c-drawer__content` | `<div>` | Creates the drawer content container. |
 | `.pf-c-drawer__panel` | `<aside>` | Creates the drawer panel container. |
 | `.pf-c-drawer__panel-body` | `<div>` | Creates the drawer panel body container. |
 | `.pf-m-open` | `.pf-c-drawer` | Modifies the drawer for the open state. |
-| `.pf-m-inline` | `.pf-c-drawer` | Modifies drawer so the main element and panel element are displayed side by side. |
+| `.pf-m-inline` | `.pf-c-drawer` | Modifies drawer so the content element and panel element are displayed side by side. **This variation is not supported at this time for use in the page component when the drawer is used with the content content area.** |
 | `.pf-m-no-padding` | `.pf-c-drawer__panel-body` | Modifies the panel body to remove the padding. |
