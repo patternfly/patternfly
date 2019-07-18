@@ -5,8 +5,6 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 | Title | Margin top | Margin bottom |
 | -- | -- | -- |
 | `role="separator"` | `.pf-c-divider.li`, `.pf-c-divider.div` | Indicates that the separator is a separator. |
-| `aria-orientation="vertical"` | `.pf-c-divider` | Indicates that the separator is oriented vertically. |
-
 
 ## Usage
 

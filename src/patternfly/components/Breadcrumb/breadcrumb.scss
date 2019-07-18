@@ -49,16 +49,6 @@
   color: var(--pf-c-breadcrumb__item-divider--Color);
 }
 
-.pf-c-divider {
-  height: unset;
-  margin-left: var(--pf-c-breadcrumb__item-divider--MarginLeft);
-  line-height: 1;
-
-  > * {
-    color: var(--pf-c-breadcrumb__item-divider--Color);
-  }
-}
-
 // Breadcrumb link
 .pf-c-breadcrumb__link {
   font-size: inherit;

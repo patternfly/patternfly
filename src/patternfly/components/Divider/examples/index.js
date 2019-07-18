@@ -4,11 +4,9 @@ import Example from '@siteComponents/Example';
 import DividerHrExampleRaw from '!raw!./divider-hr-example.hbs';
 import DividerLiExampleRaw from '!raw!./divider-li-example.hbs';
 import DividerDivExampleRaw from '!raw!./divider-div-example.hbs';
-import DividerOrientationExampleRaw from '!raw!./divider-orientation-example.hbs';
 import DividerHrExample from './divider-hr-example.hbs';
 import DividerLiExample from './divider-li-example.hbs';
 import DividerDivExample from './divider-div-example.hbs';
-import DividerOrientationExample from './divider-orientation-example.hbs';
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -17,7 +15,6 @@ export default props => {
   const dividerHrExample = DividerHrExample();
   const dividerLiExample = DividerLiExample();
   const dividerDivExample = DividerDivExample();
-  const dividerOrientationExample = DividerOrientationExample();
   const headingText = 'Divider';
   const variablesRoot = 'pf-c-divider';
 
@@ -31,9 +28,6 @@ export default props => {
       </Example>
       <Example heading="Divider <div>" handlebars={DividerDivExampleRaw}>
         {dividerDivExample}
-      </Example>
-      <Example heading="Divider vertical" handlebars={DividerOrientationExampleRaw}>
-        {dividerOrientationExample}
       </Example>
     </Documentation>
   );
