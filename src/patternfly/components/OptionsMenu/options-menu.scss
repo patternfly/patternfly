@@ -262,9 +262,15 @@
   color: var(--pf-c-options-menu__menu-item-icon--Color);
 }
 
+// remove this block at breaking change period
 .pf-c-options-menu__separator {
   height: var(--pf-c-options-menu__separator--Height);
   margin-top: var(--pf-c-options-menu__separator--MarginTop);
   margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
   background-color: var(--pf-c-options-menu__separator--BackgroundColor);
+}
+
+.pf-c-divider {
+  margin-top: var(--pf-c-options-menu__separator--MarginTop); // change name at breaking change
+  margin-bottom: var(--pf-c-options-menu__separator--MarginBottom); // change name at breaking change
 }

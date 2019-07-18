@@ -160,12 +160,18 @@
   transform: var(--pf-c-app-launcher__menu-item-external-icon--Transform); // move icon a bit to appear more visually centered
 }
 
+// remove this block at breaking change period
 .pf-c-app-launcher__separator {
   height: var(--pf-c-app-launcher__separator--Height);
   margin-top: var(--pf-c-app-launcher__separator--MarginTop);
   margin-bottom: var(--pf-c-app-launcher__separator--MarginBottom);
   background-color: var(--pf-c-app-launcher__separator--BackgroundColor);
   border: 0; // for use when separator is an <hr>
+}
+
+.pf-c-divider {
+  margin-top: var(--pf-c-app-launcher__separator--MarginTop); // change this var name at breaking change period
+  margin-bottom: var(--pf-c-app-launcher__separator--MarginBottom); // change this var name at breaking change period
 }
 
 .pf-c-app-launcher__group {
