@@ -2,7 +2,7 @@
 
 The divider renders as an `<hr>` by default. It is possible to make the divider render as an `li` or a `div` to match the HTML5 specification and context of the divider.
 
-| Title | Margin top | Margin bottom |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="separator"` | `.pf-c-divider.li`, `.pf-c-divider.div` | Indicates that the separator is a separator. |
 

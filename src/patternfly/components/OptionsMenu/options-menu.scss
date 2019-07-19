@@ -73,6 +73,11 @@
   position: relative;
   display: inline-block;
   max-width: 100%;
+
+  .pf-c-divider {
+    margin-top: var(--pf-c-options-menu__separator--MarginTop); // change name at breaking change
+    margin-bottom: var(--pf-c-options-menu__separator--MarginBottom); // change name at breaking change
+  }
 }
 
 .pf-c-options-menu__toggle:not(.pf-m-plain),
@@ -268,9 +273,4 @@
   margin-top: var(--pf-c-options-menu__separator--MarginTop);
   margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
   background-color: var(--pf-c-options-menu__separator--BackgroundColor);
-}
-
-.pf-c-divider {
-  margin-top: var(--pf-c-options-menu__separator--MarginTop); // change name at breaking change
-  margin-bottom: var(--pf-c-options-menu__separator--MarginBottom); // change name at breaking change
 }

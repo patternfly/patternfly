@@ -218,6 +218,21 @@
     display: block;
     visibility: visible;
   }
+
+  // Separator
+  .pf-c-divider {
+    margin-top: var(--pf-c-nav__separator--MarginTop); // change var name at breaking change
+    margin-bottom: var(--pf-c-nav__separator--MarginBottom); // change var name at breaking change
+    margin-left: var(--pf-c-nav__separator--MarginLeft); // change var name at breaking change
+
+    .pf-c-nav__simple-list & {
+      --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list__separator--MarginLeft); // change var name at breaking change
+    }
+
+    .pf-c-nav__item & {
+      --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list--nested__separator--MarginLeft); // change var name at breaking change
+    }
+  }
 }
 
 // Set width when nav is child of sidebar to prevent collapsing
@@ -332,21 +347,6 @@
 
   .pf-c-nav__item & {
     --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list--nested__separator--MarginLeft);
-  }
-}
-
-// Separator
-.pf-c-divider {
-  margin-top: var(--pf-c-nav__separator--MarginTop); // change var name at breaking change
-  margin-bottom: var(--pf-c-nav__separator--MarginBottom); // change var name at breaking change
-  margin-left: var(--pf-c-nav__separator--MarginLeft); // change var name at breaking change
-
-  .pf-c-nav__simple-list & {
-    --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list__separator--MarginLeft); // change var name at breaking change
-  }
-
-  .pf-c-nav__item & {
-    --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list--nested__separator--MarginLeft); // change var name at breaking change
   }
 }
 

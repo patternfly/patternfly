@@ -91,6 +91,11 @@
   position: relative;
   display: inline-block;
   max-width: 100%;
+
+  .pf-c-divider {
+    margin-top: var(--pf-c-dropdown__separator--MarginTop); // rename var at breaking change
+    margin-bottom: var(--pf-c-dropdown__separator--MarginBottom); // rename var at breaking change
+  }
 }
 
 .pf-c-dropdown__toggle {
@@ -309,11 +314,6 @@
   margin-top: var(--pf-c-dropdown__separator--MarginTop);
   margin-bottom: var(--pf-c-dropdown__separator--MarginBottom);
   background-color: var(--pf-c-dropdown__separator--BackgroundColor);
-}
-
-.pf-c-divider {
-  margin-top: var(--pf-c-dropdown__separator--MarginTop); // rename var at breaking change
-  margin-bottom: var(--pf-c-dropdown__separator--MarginBottom); // rename var at breaking change
 }
 
 .pf-c-dropdown__group {
