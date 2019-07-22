@@ -3,7 +3,7 @@
   --pf-c-switch--Height: calc(var(--pf-c-switch--FontSize) * var(--pf-c-switch--LineHeight));
   --pf-c-switch--Width: calc(var(--pf-c-switch--Height) + var(--pf-c-switch__toggle-icon--Offset) + var(--pf-c-switch__toggle--before--Width));
   --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-switch--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-c-switch--FontSize: var(--pf-global--FontSize--md);
 
   // Switch input
   --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
