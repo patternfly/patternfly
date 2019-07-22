@@ -211,8 +211,10 @@
 
     padding-top: var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop);
 
-    input {
+    .pf-c-form-control {
       @include pf-text-overflow;
+
+      position: relative;
     }
 
     // When the input is the first thing then use a negative left padding so it matches the toggle container
