@@ -3,7 +3,7 @@
   --pf-c-switch--Height: calc(var(--pf-c-switch--FontSize) * var(--pf-c-switch--LineHeight));
   --pf-c-switch--Width: calc(var(--pf-c-switch--Height) + var(--pf-c-switch__toggle-icon--Offset) + var(--pf-c-switch__toggle--before--Width));
   --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-switch--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-switch--FontSize: var(--pf-global--FontSize--2xl);
 
   // Switch input
   --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
@@ -27,7 +27,7 @@
   --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-switch__toggle--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-switch__toggle--before--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-switch__toggle--before--Transition: transform .25s ease 0s, width .25s ease 0s, left .25s ease 0s;
+  --pf-c-switch__toggle--before--Transition: transform .25s ease 0s;
 
   // Switch icon
   --pf-c-switch__toggle-icon--FontSize: calc(var(--pf-c-switch--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.
@@ -40,7 +40,7 @@
 
   // Switch label
   --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-switch__label--FontSize: var(--pf-global--FontSize--md); // remove at breaking change period
+  --pf-c-switch__label--FontSize: var(--pf-c-switch--FontSize); // remove at breaking change period
   --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal); // this can be removed at breaking change period
   --pf-c-switch__label--LineHeight: var(--pf-c-switch--LineHeight); // this can be removed at breaking change period
   --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
