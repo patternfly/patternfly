@@ -4,7 +4,7 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="separator"` | `.pf-c-divider.li`, `.pf-c-divider.div` | Indicates that the separator is a separator. |
+| `role="separator"` | `li.pf-c-divider`, `div.pf-c-divider` | Indicates that the separator is a separator. |
 
 ## Usage
 

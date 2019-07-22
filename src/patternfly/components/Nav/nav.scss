@@ -3,6 +3,13 @@
   --pf-c-nav--Transition: var(--pf-global--Transition);
   --pf-c-nav__item--m-expanded__toggle-icon--Transform: rotate(90deg);
 
+  // divider
+  --pf-c-nav__c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav__c-divider--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft);
+  --pf-c-nav__simple-list__c-divider--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
+  --pf-c-nav__simple-list--nested__c-divider--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
+
   // List link
   --pf-c-nav__list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__list-link--PaddingRight: var(--pf-global--spacer--md);
@@ -159,13 +166,13 @@
   --pf-c-nav__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
   // List item seperator
-  --pf-c-nav__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__separator--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft);
-  --pf-c-nav__simple-list__separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft);
-  --pf-c-nav__simple-list--nested__separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft);
+  --pf-c-nav__separator--Height: var(--pf-global--BorderWidth--sm); // remove at breaking change
+  --pf-c-nav__separator--BackgroundColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-nav__separator--MarginTop: var(--pf-global--spacer--sm); // remove at breaking change
+  --pf-c-nav__separator--MarginBottom: var(--pf-global--spacer--sm); // remove at breaking change
+  --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__list-link--PaddingLeft); // remove at breaking change
+  --pf-c-nav__simple-list__separator--MarginLeft: var(--pf-c-nav__simple-list-link--PaddingLeft); // remove at breaking change
+  --pf-c-nav__simple-list--nested__separator--MarginLeft: var(--pf-c-nav__simple-list-link--nested--PaddingLeft); // remove at breaking change
 
   // Modifier - current item
   --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--link--Color);
@@ -221,16 +228,16 @@
 
   // Separator
   .pf-c-divider {
-    margin-top: var(--pf-c-nav__separator--MarginTop); // change var name at breaking change
-    margin-bottom: var(--pf-c-nav__separator--MarginBottom); // change var name at breaking change
-    margin-left: var(--pf-c-nav__separator--MarginLeft); // change var name at breaking change
+    margin-top: var(--pf-c-nav__c-divider--MarginTop);
+    margin-bottom: var(--pf-c-nav__c-divider--MarginBottom);
+    margin-left: var(--pf-c-nav__c-divider--MarginLeft);
 
     .pf-c-nav__simple-list & {
-      --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list__separator--MarginLeft); // change var name at breaking change
+      --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__simple-list__c-divider--MarginLeft);
     }
 
     .pf-c-nav__item & {
-      --pf-c-nav__separator--MarginLeft: var(--pf-c-nav__simple-list--nested__separator--MarginLeft); // change var name at breaking change
+      --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__simple-list--nested__c-divider--MarginLeft);
     }
   }
 }
@@ -333,7 +340,7 @@
   }
 }
 
-// Separator --- remove this at breaking change
+// Separator --- remove this block at breaking change
 .pf-c-nav__separator {
   height: var(--pf-c-nav__separator--Height);
   margin-top: var(--pf-c-nav__separator--MarginTop);

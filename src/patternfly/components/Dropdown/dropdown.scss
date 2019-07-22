@@ -72,11 +72,15 @@
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
 
+  // Divider
+  --pf-c-dropdown__c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__c-divider--MarginBottom: var(--pf-global--spacer--sm);
+
   // Menu Item Separator
   --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm); // remove this var at breaking change
   --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BorderColor--100); // remove this var at breaking change
-  --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm); // remove at breaking change
+  --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm); // remove at breaking change
 
   // Groups
   --pf-c-dropdown__group--PaddingTop: var(--pf-global--spacer--md);
@@ -93,8 +97,8 @@
   max-width: 100%;
 
   .pf-c-divider {
-    margin-top: var(--pf-c-dropdown__separator--MarginTop); // rename var at breaking change
-    margin-bottom: var(--pf-c-dropdown__separator--MarginBottom); // rename var at breaking change
+    margin-top: var(--pf-c-dropdown__c-divider--MarginTop);
+    margin-bottom: var(--pf-c-dropdown__c-divider--MarginBottom);
   }
 }
 
