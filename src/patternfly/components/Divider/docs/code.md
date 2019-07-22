@@ -8,6 +8,6 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 
 ## Usage
 
-| Class | Applied | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |

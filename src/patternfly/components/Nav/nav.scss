@@ -226,19 +226,11 @@
     visibility: visible;
   }
 
-  // Separator
+  // Divider
   .pf-c-divider {
     margin-top: var(--pf-c-nav__c-divider--MarginTop);
     margin-bottom: var(--pf-c-nav__c-divider--MarginBottom);
     margin-left: var(--pf-c-nav__c-divider--MarginLeft);
-
-    .pf-c-nav__simple-list & {
-      --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__simple-list__c-divider--MarginLeft);
-    }
-
-    .pf-c-nav__item & {
-      --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__simple-list--nested__c-divider--MarginLeft);
-    }
   }
 }
 
@@ -269,6 +261,10 @@
   // Item
   > .pf-c-nav__item {
     position: relative;
+
+    .pf-c-divider {
+      --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__simple-list--nested__c-divider--MarginLeft);
+    }
   }
 
   > .pf-c-nav__item > .pf-c-nav__link {
@@ -379,10 +375,13 @@
   transform: var(--pf-c-nav__item--m-expanded__toggle-icon--Transform);
 }
 
-
 // List simple
 // no bottom border, no children. Used independently or as a subnav item of .pf-c-nav__list (default list component).
 .pf-c-nav__simple-list {
+  .pf-c-divider {
+    --pf-c-nav__c-divider--MarginLeft: var(--pf-c-nav__simple-list__c-divider--MarginLeft);
+  }
+
   // List simple link
   .pf-c-nav__link {
     display: block;
