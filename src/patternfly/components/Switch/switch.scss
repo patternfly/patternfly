@@ -1,12 +1,13 @@
 .pf-c-switch {
   // Switch
-  --pf-c-switch--Height: calc(#{var(--pf-global--FontSize--md)} * #{var(--pf-global--LineHeight--md)});
-  --pf-c-switch--Width: calc(#{var(--pf-c-switch--Height)} * #{var(--pf-global--golden-ratio)});
+  --pf-c-switch--Height: calc(var(--pf-c-switch--FontSize) * var(--pf-c-switch--LineHeight));
+  --pf-c-switch--Width: calc(var(--pf-c-switch--Height) + var(--pf-c-switch__toggle-icon--Offset) + var(--pf-c-switch__toggle--before--Width));
   --pf-c-switch--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch--FontSize: var(--pf-global--FontSize--md);
 
   // Switch input
   --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-switch__input--checked__toggle--before--Transform: translateX(calc(#{var(--pf-c-switch--Width)} - #{var(--pf-c-switch__toggle--before--Width)} - 2 * #{var(--pf-c-switch__toggle--before--Left)}));
+  --pf-c-switch__input--checked__toggle--before--Transform: translateX(calc(100% + var(--pf-c-switch__toggle-icon--Offset)));
   --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--dark-100);
   --pf-c-switch__input--not-checked__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
@@ -19,30 +20,35 @@
   // Switch toggle
   --pf-c-switch__toggle--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch--Height);
-  --pf-c-switch__toggle--before--Top: calc(#{var(--pf-c-switch--Height)} / 2 * (1 - 1 / #{var(--pf-global--golden-ratio)}));
+  --pf-c-switch__toggle--before--Top: calc((var(--pf-c-switch--Height) - var(--pf-c-switch__toggle--before--Height)) / 2);
   --pf-c-switch__toggle--before--Left: var(--pf-c-switch__toggle--before--Top);
-  --pf-c-switch__toggle--before--Width: calc(#{var(--pf-c-switch--Height)} / #{var(--pf-global--golden-ratio)});
+  --pf-c-switch__toggle--before--Width: calc(var(--pf-c-switch--FontSize) - var(--pf-c-switch__toggle-icon--Offset));
   --pf-c-switch__toggle--before--Height: var(--pf-c-switch__toggle--before--Width);
   --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-switch__toggle--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-switch__toggle--before--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-switch__toggle--before--Transition: transform .25s ease 0s;
 
   // Switch icon
-  --pf-c-switch__toggle-icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-switch__toggle-icon--FontSize: calc(var(--pf-c-switch--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.
   --pf-c-switch__toggle-icon--Color: var(--pf-global--Color--light-100);
-  --pf-c-switch__toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-switch__toggle-icon--Top: #{pf-size-prem(7px)};
+  --pf-c-switch__toggle-icon--PaddingLeft: calc(var(--pf-c-switch--FontSize) * .4); // during breaking change period, remove this and make it the value for `left`
+  --pf-c-switch__toggle-icon--Top: 50%;
+  --pf-c-switch__toggle-icon--Left: 0; // This var is sized relative to the switch's font size, so that it scales responsively.
+  --pf-c-switch__toggle-icon--Transform: translateY(-50%);
+  --pf-c-switch__toggle-icon--Offset: #{pf-size-prem(2px)}; // this value is created to handle sizing of the toggle and therefore the width of the toggle and its transform value.
 
   // Switch label
   --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-switch__label--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-switch__label--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-switch__label--FontSize: var(--pf-c-switch--FontSize); // remove at breaking change period
+  --pf-c-switch__label--FontWeight: var(--pf-global--FontWeight--normal); // this can be removed at breaking change period
+  --pf-c-switch__label--LineHeight: var(--pf-c-switch--LineHeight); // this can be removed at breaking change period
   --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
 
   position: relative;
   display: inline-block;
   height: var(--pf-c-switch--Height);
+  font-size: var(--pf-c-switch--FontSize);
   line-height: var(--pf-c-switch--LineHeight);
   vertical-align: middle;
   cursor: pointer;
@@ -132,25 +138,25 @@
       background-color: var(--pf-c-switch__toggle--before--BackgroundColor);
       border-radius: var(--pf-c-switch__toggle--before--BorderRadius);
       box-shadow: var(--pf-c-switch__toggle--before--BoxShadow);
-      transition: transform .25s ease 0s, width .25s ease 0s, left .25s ease 0s;
-      transform: translateX(0);
+      transition: var(--pf-c-switch__toggle--before--Transition);
     }
   }
 
   .pf-c-switch__toggle-icon {
     position: absolute;
     top: var(--pf-c-switch__toggle-icon--Top);
+    left: var(--pf-c-switch__toggle-icon--Left);
     padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
     font-size: var(--pf-c-switch__toggle-icon--FontSize);
     color: var(--pf-c-switch__toggle-icon--Color);
+    transform: var(--pf-c-switch__toggle-icon--Transform);
   }
 
   .pf-c-switch__label {
     display: inline-block;
     padding-left: var(--pf-c-switch__label--PaddingLeft);
-    font-size: var(--pf-c-switch__label--FontSize);
-    font-weight: var(--pf-c-switch__label--FontWeight);
-    line-height: var(--pf-c-switch__label--LineHeight);
+    font-weight: var(--pf-c-switch__label--FontWeight); // remove at breaking change
+    line-height: var(--pf-c-switch__label--LineHeight); // remove at breaking change
     color: var(--pf-c-switch__label--Color);
     vertical-align: top;
   }

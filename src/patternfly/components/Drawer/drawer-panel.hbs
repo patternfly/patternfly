@@ -1,0 +1,8 @@
+<aside class="pf-c-drawer__panel{{#if drawer-panel--modifier}} {{drawer-panel--modifier}}{{/if}}"
+  {{#if drawer-panel--attribute}}
+    {{{drawer-panel--attribute}}}
+  {{/if}}>
+  {{#> drawer-panel-body}}
+    {{> @partial-block}}
+  {{/drawer-panel-body}}
+</aside>
