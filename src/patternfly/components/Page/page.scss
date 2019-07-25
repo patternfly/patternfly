@@ -370,7 +370,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  &:target {
+  &:focus {
     outline: 0;
   }
 }
