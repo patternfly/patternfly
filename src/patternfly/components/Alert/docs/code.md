@@ -1,11 +1,12 @@
 ## Overview
 
-Always add a modifier class: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`. Do not use `.pf-c-alert` on its own.
+Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
 
 ## Accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
+| `aria-label="Default alert"` | `.pf-c-alert` |  Indicates the default alert. |
 | `aria-label="Success alert"` | `.pf-c-alert` |  Indicates the success alert. |
 | `aria-label="Danger alert"` | `.pf-c-alert` |  Indicates the danger alert. |
 | `aria-label="Warning alert"` | `.pf-c-alert` |  Indicates the warning alert. |

@@ -1,4 +1,13 @@
 
+{{#> alert alert--attribute='aria-label="Default alert"'}}
+  {{#> alert-icon alert-icon--type="bell"}}
+  {{/alert-icon}}
+    {{#> alert-title}}
+      {{#> screen-reader}}Default alert:{{/screen-reader}}
+      Default alert title
+    {{/alert-title}}
+{{/alert}}
+<br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}

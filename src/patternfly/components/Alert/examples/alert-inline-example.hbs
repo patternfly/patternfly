@@ -1,3 +1,12 @@
+{{#> alert alert--modifier="pf-m-inline" alert--attribute='aria-label="Inline default alert"'}}
+  {{#> alert-icon alert-icon--type="bell"}}
+  {{/alert-icon}}
+    {{#> alert-title}}
+      {{#> screen-reader}}Default inline alert:{{/screen-reader}}
+      Default inline alert title
+    {{/alert-title}}
+{{/alert}}
+<br>
 {{#> alert alert--modifier="pf-m-info pf-m-inline" alert--attribute='aria-label="Inline information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}
