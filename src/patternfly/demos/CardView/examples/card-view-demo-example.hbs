@@ -50,8 +50,7 @@
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#> page-main}}
-      <a id="main-content-{{page--id}}"></a>
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{#> content}}
         <h1>Projects</h1>
