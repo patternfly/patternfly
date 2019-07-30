@@ -22,7 +22,7 @@ Packages released:
 - **Options menu:** Centered plain button content ([#2071](https://github.com/patternfly/patternfly-next/pull/2071))
 - **Page:** Removed toggle from horizontal nav page demo ([#2004](https://github.com/patternfly/patternfly-next/pull/2004))
 - **Pagination:** Added disabled variation ([#2015](https://github.com/patternfly/patternfly-next/pull/2015))
-- **Select**
+- **Select:**
   - Added plain variation ([#2053](https://github.com/patternfly/patternfly-next/pull/2053))
   - Updated class selector, stacking context for typeahead input ([#2075](https://github.com/patternfly/patternfly-next/pull/2075))
 - **Switch:** Removed dependency on font-size for switch's height ([#2049](https://github.com/patternfly/patternfly-next/pull/2049))
@@ -84,7 +84,7 @@ Packages released:
 - Added ie11 to build ([#1876](https://github.com/patternfly/patternfly-next/pull/1876))
 - Updated the window size used for the browser that our a11y audit is run against ([#1911](https://github.com/patternfly/patternfly-next/pull/1911))
 
-## 2019.02 RC2.1 release notes (2019-06-11)
+# 2019.02 RC2.1 release notes (2019-06-11)
 Packages released:
 - @patternfly/patternfly@2.12.5
 ## Components
@@ -105,17 +105,7 @@ Packages released:
 - **Switch:**
   - Added focus indicator [(#1874](https://github.com/patternfly/patternfly-next/pull/1874))
 - **Table:**
-  - Media query now matches border. Fixed the table so that when the table breaks to grid form, the border width changes to 8px, and the border color matches the background color. ([#1Packages released:patternfly-next/pull/1881))
-  - Added an Packages released:ithub.com/patternfly/patternfly-next/pull/1880))
-## Docs
-- **App launcPackages released:
-  - ConsistenPackages released://github.com/patternfly/patternfly-next/pull/1873))
-- **Card:**
-  - Updated aPackages released: rename demo ([#1898](https://github.com/patternfly/patternfly-next/pull/1898))
-- **A11y:**
-  - Fixed a fPackages released:tps://github.com/patternfly/patternfly-next/pull/1905/files))
-- **Layout:**Packages released:
-  - Updated docs [(#1885](https://github.com/patternfly/patternfly-next/pull/1885))
+  - Media query now matches border. Fixed the table so that when the table breaks to grid form, the border width changes to 8px, and the border color matches the background color. ([#1881](https://github.com/patternfly/patternfly-next/pull/1881))
 
 # 2019.02 release notes (2019-05-28)
 Packages released:
@@ -127,7 +117,7 @@ Packages released:
 - **Card:**
   - Added a wrapper for the Actions in the top right, so that content wraps around it - similar to the Popover component. Added a logo/img wrapper that is always left aligned. ([#1745](https://github.com/patternfly/patternfly-next/pull/1745))
   - Removed flex from header ([#1817](https://github.com/patternfly/patternfly-next/pull/1817))
-  - Updated font sizes. Card body and footer text size were changed to be 14px by default and header was changed to16px. ([#2103](https://github.com/patternfly/patternfly-next/pull/2103))
+  - Updated font sizes. Card body and footer text size were changed to be 14px by default and header was changed to 16px. ([#2103](https://github.com/patternfly/patternfly-next/pull/2103))
   - Card Demo: Added demo ([#1716](https://github.com/patternfly/patternfly-next/pull/1716))
 - **Content:**
   - Changed margin bottom for small element ([#1843](https://github.com/patternfly/patternfly-next/pull/1843))
