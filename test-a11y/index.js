@@ -15,7 +15,7 @@ const violatingPages = [];
 let chromeOptions = {};
 
 if (process.env.CI) {
-  chromeOptions = { args: ['--headless'] };
+  chromeOptions = { args: ['--headless', '--no-sandbox'] };
 } else {
   chromeOptions = { args: ['--incognito', '--window-size=768,1024'] };
 }
