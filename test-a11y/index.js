@@ -17,7 +17,7 @@ let chromeOptions = {};
 if (process.env.CI) {
   chromeOptions = { args: ['--headless', '--no-sandbox'] };
 } else {
-  chromeOptions = { args: ['--incognito', '--window-size=768,1024'] };
+  chromeOptions = { args: ['--incognito', '--window-size=768,1024', '--disable-dev-shm-usage'] };
 }
 
 const chromeCapabilities = selenium.Capabilities.chrome();
