@@ -15,7 +15,9 @@ const violatingPages = [];
 let chromeOptions = {};
 
 if (process.env.CI) {
-  chromeOptions = { args: ['--headless'] };
+  chromeOptions = {
+    args: ['--headless', '--disable-gpu', '--no-sandbox', '--disable-extensions', '--disable-dev-shm-usage']
+  };
 } else {
   chromeOptions = { args: ['--incognito', '--window-size=768,1024'] };
 }

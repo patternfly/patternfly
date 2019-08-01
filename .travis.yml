@@ -18,13 +18,16 @@ deploy:
     branch: master
   local_dir: public
 
+# https://chromedriver.chromium.org/downloads/version-selection
 before_script:
-  - wget https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip
+  - export CHROME_DRIVER_VERSION=$(curl https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$(google-chrome-stable --version | grep -Po "\d+.\d+.\d+"))
+  - wget https://chromedriver.storage.googleapis.com/${CHROME_DRIVER_VERSION}/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /home/travis/bin/
-  - export CHROME_BIN=chromium-browser
   - npm install -g gulp-cli
 
 script:
+  - google-chrome-stable --version
+  - chromedriver --version
   - npm run test:ci
   - npm run lint:styles
   - npm run build-ghpages
