@@ -14,5 +14,9 @@ module.exports = [
   {
     name: 'Spinner',
     path: 'components/Spinner/'
+  },
+  {
+    name: 'OverflowMenu',
+    path: 'components/OverflowMenu/'
   }
 ];

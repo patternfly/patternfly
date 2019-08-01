@@ -1,0 +1,68 @@
+<h2 class="example-title">Persistent item - <code>.pf-c-overflow-menu__item.pf-m-persistent</code></h2>
+{{#> overflow-menu overflow-menu--id="overflow-menu-persistent-item-example" overflow-menu--modifier="pf-m-reveal-on-md" overflow-menu-button--aria-label="options"  overflow-menu-control--HasAdditionalOptions="true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item overflow-menu-item--modifier="pf-m-persistent"}}
+      {{#> example-text example-text--modifier="example-border"}}Item{{/example-text}}
+    {{/overflow-menu-item}}
+    {{#> overflow-menu-item}}
+      {{#> example-text example-text--modifier="example-border"}}Item{{/example-text}}
+    {{/overflow-menu-item}}
+    {{#> overflow-menu-item}}
+      {{#> example-text example-text--modifier="example-border"}}Item{{/example-text}}
+    {{/overflow-menu-item}}
+
+  {{/overflow-menu-content}}
+
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Primary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Secondary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Tertiary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item}}
+      Action 4
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+
+<h2 class="example-title">Persistent group - <code>.pf-c-overflow-menu__group.pf-m-persistent</code>, <code>.pf-c-overflow-menu__item.pf-m-persistent</code></h2>
+{{#> overflow-menu overflow-menu--id="overflow-menu-persistent-item-example" overflow-menu--modifier="pf-m-reveal-on-md" overflow-menu-button--aria-label="options"  overflow-menu-control--HasAdditionalOptions="true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group pf-m-persistent"}}
+      {{#> overflow-menu-item overflow-menu-item--modifier="pf-m-persistent"}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Primary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Secondary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-tertiary"}}
+          Tertiary
+        {{/button}}
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Primary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Secondary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Tertiary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item}}
+      Action 4
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
