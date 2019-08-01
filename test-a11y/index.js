@@ -1,5 +1,6 @@
 /* eslint no-console: 0 */
-const selenium = require('selenium-webdriver');
+const webdriver = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const AxeBuilder = require('axe-webdriverjs');
 
 const sitemap = require('../sitemap');
@@ -15,18 +16,22 @@ const violatingPages = [];
 let chromeOptions = {};
 
 if (process.env.CI) {
-  chromeOptions = {
-    args: ['--headless', '--disable-gpu', '--no-sandbox', '--disable-extensions', '--disable-dev-shm-usage']
-  };
+  chromeOptions = new chrome.Options()
+    .windowSize({ width: 768, height: 1024 })
+    .headless()
+    .addArguments('no-sandbox')
+    .addArguments('remote-debugging-port=9222')
+    .addArguments('disable-dev-shm-usage')
+    .addArguments('disable-extensions');
 } else {
-  chromeOptions = { args: ['--incognito', '--window-size=768,1024'] };
+  chromeOptions = new chrome.Options().windowSize({ width: 768, height: 1024 }).addArguments('incognito');
 }
 
-const chromeCapabilities = selenium.Capabilities.chrome();
-chromeCapabilities.set('chromeOptions', chromeOptions);
-const driver = new selenium.Builder()
+console.log('options', chromeOptions);
+
+const driver = new webdriver.Builder()
   .forBrowser('chrome')
-  .withCapabilities(chromeCapabilities)
+  .setChromeOptions(chromeOptions)
   .build();
 
 function runAxe(pagePath, res, rej) {
@@ -62,7 +67,7 @@ const testPageA11y = testPage =>
     return (
       driver
         // wait for JS to build the DOM
-        .wait(selenium.until.elementLocated(selenium.By.css('#___gatsby > div'), 10000))
+        .wait(webdriver.until.elementLocated(webdriver.By.css('#___gatsby > div'), 10000))
         // allow time for the repaint/relow so styles are applied before we analyze the page
         .then(() => domReflowBuffer(testPage, resolve, reject))
         .then(({ path, res, rej }) => runAxe(path, res, rej))
