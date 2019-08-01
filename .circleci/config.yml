@@ -33,7 +33,7 @@ workflows:
         - build
     - deploy:
         requires:
-        - build_pf4_docs
+        - build
         filters:
           branches:
             only: master
@@ -101,3 +101,14 @@ jobs:
     - run:
         name: a11y Tests
         command: npm run lint:styles
+  deploy:
+    docker:
+    - image: circleci/node:8.15
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: a11y Tests
+        command: npm run semantic-release
