@@ -20,9 +20,7 @@ if (process.env.CI) {
     .windowSize({ width: 768, height: 1024 })
     .headless()
     .addArguments('no-sandbox')
-    .addArguments('remote-debugging-port=9222')
-    .addArguments('disable-dev-shm-usage')
-    .addArguments('disable-extensions');
+    .addArguments('disable-dev-shm-usage');
 } else {
   chromeOptions = new chrome.Options().windowSize({ width: 768, height: 1024 }).addArguments('incognito');
 }
