@@ -1,0 +1,22 @@
+## Accessibility
+
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `hidden` | `.pf-c-overflow-menu__item`, `.pf-c-overflow-menu__group`, `.pf-c-overflow-menu__shared-item` |  Indicates that the overflow menu element is hidden. **Required** |
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-overflow-menu` | `<div>` |  Initiates the overflow menu component. **Required** |
+| `.pf-c-overflow-menu__item` | `<div>` | Initiates the overflow menu component item. **Required** |
+| `.pf-c-overflow-menu__group` | `<div>` | Initiates the overflow menu component group. |
+| `.pf-m-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--space-items)`. |
+| `.pf-m-icon-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--space-items)`. |
+| `.pf-m-action-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-action-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-action-group--space-items)`. |
+| `.pf-m-additional-options` | `.pf-c-overflow-menu__control` | Modifies overflow menu control visibility. |
+| `.pf-m-persistent` | `.pf-c-overflow-menu__item`, `.pf-c-overflow-menu__group` | Modifies overflow menu group/item visibility. |
+| `.pf-m-reveal-on-{md, lg, xl}` | `.pf-c-overflow-menu` |  Specifies at which breakpoint overflow menu items and groups are revealed. **Required** |
+
+<!-- | `.pf-m-spacer-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-overflow-menu__group`, `.pf-c-overflow-menu__item` | Modifies overflow menu group or item spacing. |
+| `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-overflow-menu__group` | Modifies overflow menu group child spacing. | -->

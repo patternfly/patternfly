@@ -1,0 +1,162 @@
+<h2 class="example-title">Simple overflow menu items</h2>
+{{#> overflow-menu overflow-menu--modifier="pf-m-reveal" overflow-menu--id="overflow-menu-simple-example" overflow-menu-button--aria-label="generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item}}
+      <div class="example-text example-border">Item</div>
+    {{/overflow-menu-item}}
+
+    {{#> overflow-menu-item}}
+      <div class="example-text example-border">Item</div>
+    {{/overflow-menu-item}}
+
+    {{#> overflow-menu-item}}
+      <div class="example-text example-border">Item</div>
+    {{/overflow-menu-item}}
+
+  {{/overflow-menu-content}}
+  {{#> overflow-menu-control overflow-menu-control--attribute="hidden"}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 3
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+
+<h2 class="example-title">Overflow menu items and groups</h2>
+{{#> overflow-menu overflow-menu--modifier="pf-m-reveal" overflow-menu--id="overflow-menu-simple-items-groups-example" overflow-menu-button--aria-label="generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-group overflow-menu-group--modifier="example-border"}}
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 1</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 2</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 3</div>
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+
+    {{#> overflow-menu-group overflow-menu-group--modifier="example-border"}}
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 4</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 5</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 6</div>
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+  {{#> overflow-menu-control overflow-menu-control--attribute="hidden"}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 3
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 4
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 5
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 6
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+
+<h2 class="example-title">Simple overflow menu items, hidden</h2>
+{{#> overflow-menu overflow-menu--id="overflow-menu-simple-example" overflow-menu-button--aria-label="generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item overflow-menu-item--attribute="hidden"}}
+      <div class="example-text example-border">Item</div>
+    {{/overflow-menu-item}}
+
+    {{#> overflow-menu-item overflow-menu-item--attribute="hidden"}}
+      <div class="example-text example-border">Item</div>
+    {{/overflow-menu-item}}
+
+    {{#> overflow-menu-item overflow-menu-item--attribute="hidden"}}
+      <div class="example-text example-border">Item</div>
+    {{/overflow-menu-item}}
+
+  {{/overflow-menu-content}}
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item}}
+      Item 3
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+
+<h2 class="example-title">Simple overflow menu groups, hidden</h2>
+{{#> overflow-menu overflow-menu--id="overflow-menu-simple-items-groups-hidden-example" overflow-menu-button--aria-label="generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-group overflow-menu-group--attribute="hidden" overflow-menu-group--modifier="example-border"}}
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 1</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 2</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 3</div>
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+    {{#> overflow-menu-group overflow-menu-group--attribute="hidden" overflow-menu-group--modifier="example-border"}}
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 4</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 5</div>
+      {{/overflow-menu-item}}
+
+      {{#> overflow-menu-item}}
+        <div class="example-text">Item 6</div>
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 3
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 4
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 5
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 6
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}

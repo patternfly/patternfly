@@ -1,0 +1,172 @@
+$pf-c-overflow-menu--breakpoint-map: build-breakpoint-map(base, md, lg, xl);
+$pf-c-overflow-menu--spacer-map: build-spacer-map(none, sm, md, lg);
+
+.pf-c-overflow-menu {
+  --pf-c-overflow-menu--Display: inline-flex;
+
+  // Base spacer - shared value
+  --pf-c-overflow-menu--spacer--base: var(--pf-global--spacer--md);
+
+  // Spacer values
+  --pf-c-overflow-menu__item--spacer: var(--pf-c-overflow-menu--spacer--base);
+  --pf-c-overflow-menu__group--spacer: var(--pf-c-overflow-menu--spacer--base);
+  --pf-c-overflow-menu__control--spacer: var(--pf-global--spacer--sm);
+
+  // Item
+  --pf-c-overflow-menu__item--Display: inline-block;
+
+  // Button group
+  --pf-c-overflow-menu__group--m-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
+  --pf-c-overflow-menu__group--m-button-group--space-items: var(--pf-global--spacer--sm);
+
+  // Icon button group
+  --pf-c-overflow-menu__group--m-icon-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
+  --pf-c-overflow-menu__group--m-icon-button-group--space-items: var(--pf-global--spacer--sm);
+
+  // Action group
+  --pf-c-overflow-menu__group--m-action-group--spacer: var(--pf-c-overflow-menu--spacer--base);
+  --pf-c-overflow-menu__group--m-action-group--space-items: var(--pf-global--spacer--sm);
+
+  // Toggle
+  --pf-c-overflow-menu__control--Display: flex;
+
+  // Persistent
+  --pf-c-overflow-menu--m-persistent--Display: inline-block;
+
+  display: var(--pf-c-overflow-menu--Display);
+  align-items: center;
+
+  // Button group
+  .pf-m-button-group {
+    --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-button-group--spacer);
+
+    > * {
+      --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-button-group--space-items);
+    }
+  }
+
+  // Icon button group
+  .pf-m-icon-button-group {
+    --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-icon-button-group--spacer);
+
+    > * {
+      --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-icon-button-group--space-items);
+    }
+  }
+
+  // Action group
+  .pf-m-action-group {
+    --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-action-group--spacer);
+
+    > * {
+      --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-action-group--space-items);
+    }
+  }
+
+  .pf-m-persistent {
+    display: var(--pf-c-overflow-menu__item--Display);
+    visibility: visible;
+  }
+}
+
+// Group
+.pf-c-overflow-menu__group {
+  --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--spacer);
+
+  align-items: center;
+}
+
+// Item
+.pf-c-overflow-menu__item {
+  // reset spacer
+  --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__item--spacer);
+}
+
+.pf-c-overflow-menu__group,
+.pf-c-overflow-menu__item {
+  display: none;
+  margin-right: var(--pf-c-overflow-menu--spacer);
+  visibility: hidden;
+
+  &:last-child:not([class*="pf-m-spacer"]) {
+    --pf-c-overflow-menu--spacer: 0;
+  }
+}
+
+// .pf-c-overflow-menu__group,
+// .pf-c-overflow-menu__item {
+//   display: none;
+//   visibility: hidden;
+// }
+
+// Control
+.pf-c-overflow-menu__control {
+  --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--spacer);
+
+  display: var(--pf-c-overflow-menu__dropdown--Display);
+  visibility: visible;
+}
+
+// Content
+.pf-c-overflow-menu__content {
+  display: flex;
+  align-items: center;
+}
+
+
+/* stylelint-disable max-nesting-depth, no-duplicate-selectors */
+.pf-c-overflow-menu {
+  @each $breakpoint, $breakpoint-value in $pf-c-overflow-menu--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-c-overflow-menu--breakpoint-map) {
+      &.pf-m-reveal#{$breakpoint-name} {
+        .pf-c-overflow-menu__group,
+        .pf-c-overflow-menu__item {
+          visibility: visible;
+        }
+
+        .pf-c-overflow-menu__group {
+          display: flex;
+        }
+
+        .pf-c-overflow-menu__item {
+          display: var(--pf-c-overflow-menu__item--Display);
+        }
+
+        .pf-c-overflow-menu__shared-item,
+        .pf-c-overflow-menu__control:not(.pf-m-additional-options) {
+          display: none;
+          visibility: hidden;
+        }
+
+        .pf-c-overflow-menu__content + .pf-c-overflow-menu__control {
+          --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--spacer);
+
+          margin-right: var(--pf-c-overflow-menu--spacer);
+          margin-left: var(--pf-c-overflow-menu--spacer);
+
+          &:last-child:not([class*="pf-m-spacer"]) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      // // Spacer and space-items
+      // @each $spacer, $spacer-value in $pf-c-overflow-menu--spacer-map {
+      //   // Space items modifier
+      //   .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
+      //     > * {
+      //       --pf-c-overflow-menu--spacer: #{$spacer-value};
+      //     }
+      //   }
+
+      //   // Spacer modifier
+      //   .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
+      //     --pf-c-overflow-menu--spacer: #{$spacer-value};
+      //   }
+      // }
+    }
+  }
+}
+/* stylelint-enable */

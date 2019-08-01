@@ -10,5 +10,9 @@ module.exports = [
   {
     name: 'DataToolbar',
     path: 'components/DataToolbar/'
+  },
+  {
+    name: 'OverflowMenu',
+    path: 'components/OverflowMenu/'
   }
 ];
