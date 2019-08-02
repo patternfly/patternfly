@@ -71,7 +71,7 @@ const violationsReporter = (testPages, reportType) => {
       case 'github-status-reporter': {
         if (errorsExceedThreshold(violations.length, config.toleranceThreshold)) {
           console.error('Too many Accessibility violations');
-          process.exit(-1);
+          process.exit(1);
         }
         console.log('A11y Checks Pass!');
         break;

@@ -3,8 +3,8 @@ const selenium = require('selenium-webdriver');
 const AxeBuilder = require('axe-webdriverjs');
 
 const sitemap = require('../sitemap');
-const { pfReporter } = require('./a11yViolationsReporter');
 const { errorsExceedThreshold } = require('./utils');
+const { pfReporter } = require('./a11yViolationsReporter');
 const config = require('./config');
 
 const { protocol } = config;
@@ -69,10 +69,6 @@ const testPageA11y = testPage =>
         })
     );
   });
-
-if (process.env.CI) {
-  pfReporter.updateStatus('pending', 'Running A11y Audit');
-}
 
 sitemap
   .reduce((prevPromise, nextPage) => prevPromise.then(() => testPageA11y(nextPage)), Promise.resolve())
