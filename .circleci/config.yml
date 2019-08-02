@@ -110,5 +110,5 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
-        name: a11y Tests
+        name: Release to NPM
         command: npm run semantic-release

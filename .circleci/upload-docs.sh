@@ -15,7 +15,7 @@ else
 fi
 
 DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
-npx surge --project docs --domain $DEPLOY_DOMAIN;
+npx surge --project public --domain $DEPLOY_DOMAIN;
 
 if [ -n "${PR_NUM}" ] && [ -z "${ALREADY_DEPLOYED}" ] # Leave a Github comment
 then
@@ -23,7 +23,7 @@ then
   # PR api requires comments be made on specific files of specific commits
   GITHUB_PR_COMMENTS="https://api.github.com/repos/${USERNAME}/${REPONAME}/issues/${PR_NUM}/comments"
   echo "Adding github PR comment ${GITHUB_PR_COMMENTS}"
-  curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST ${GITHUB_PR_COMMENTS} --data '{"body":"PatternFly-React preview: '${DEPLOY_DOMAIN}'"}'
+  curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST ${GITHUB_PR_COMMENTS} --data '{"body":"PatternFly-Next preview: '${DEPLOY_DOMAIN}'"}'
 else
   echo "Already deployed ${DEPLOY_DOMAIN}"
 fi
