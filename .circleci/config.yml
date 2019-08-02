@@ -84,9 +84,6 @@ jobs:
     - image: circleci/node:8.15
     steps:
     - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
     - run:
         name: Upload docs to surge.sh
         command: .circleci/upload-docs.sh
@@ -99,7 +96,7 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
-        name: a11y Tests
+        name: Lint SASS
         command: npm run lint:styles
   deploy:
     docker:
@@ -112,3 +109,6 @@ jobs:
     - run:
         name: Release to NPM
         command: npm run semantic-release
+    - run:
+        name: Upload to gh-pages
+        command: npm run publish:docs
