@@ -64,7 +64,7 @@ jobs:
         command: npm run build:ie11
     - run:
         name: Build Site
-        command: npm run build-ghpages
+        command: npm run build
     - persist_to_workspace:
         root: ~/project
         paths: *build_cache_paths
