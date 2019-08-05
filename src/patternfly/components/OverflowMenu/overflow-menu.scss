@@ -21,11 +21,7 @@ $pf-c-overflow-menu--spacer-map: build-spacer-map(none, sm, md, lg);
 
   // Icon button group
   --pf-c-overflow-menu__group--m-icon-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
-  --pf-c-overflow-menu__group--m-icon-button-group--space-items: var(--pf-global--spacer--sm);
-
-  // Action group
-  --pf-c-overflow-menu__group--m-action-group--spacer: var(--pf-c-overflow-menu--spacer--base);
-  --pf-c-overflow-menu__group--m-action-group--space-items: var(--pf-global--spacer--sm);
+  --pf-c-overflow-menu__group--m-icon-button-group--space-items: 0;
 
   // Toggle
   --pf-c-overflow-menu__control--Display: flex;
@@ -51,15 +47,6 @@ $pf-c-overflow-menu--spacer-map: build-spacer-map(none, sm, md, lg);
 
     > * {
       --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-icon-button-group--space-items);
-    }
-  }
-
-  // Action group
-  .pf-m-action-group {
-    --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-action-group--spacer);
-
-    > * {
-      --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-action-group--space-items);
     }
   }
 
@@ -92,12 +79,6 @@ $pf-c-overflow-menu--spacer-map: build-spacer-map(none, sm, md, lg);
     --pf-c-overflow-menu--spacer: 0;
   }
 }
-
-// .pf-c-overflow-menu__group,
-// .pf-c-overflow-menu__item {
-//   display: none;
-//   visibility: hidden;
-// }
 
 // Control
 .pf-c-overflow-menu__control {
