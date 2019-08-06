@@ -14,7 +14,7 @@ export const Docs = docs;
 export default props => {
   const simpleFormDemoExample = SimpleFormDemoExample();
   const horizontalFormDemoExample = HorizontalFormDemoExample();
-  const headingText = 'Basic Forms Demo';
+  const headingText = 'Basic forms demo';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>
