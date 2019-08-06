@@ -102,7 +102,6 @@
   --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: 0;
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-page__main--GridArea: main;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--md--PaddingTop);
@@ -364,7 +363,7 @@
 // Main & Drawer
 .pf-c-page__main,
 .pf-c-page__drawer {
-  grid-area: var(--pf-c-page__main--GridArea);
+  grid-area: main;
   z-index: var(--pf-c-page__main--ZIndex);
   display: flex;
   flex-direction: column;
@@ -457,8 +456,8 @@
 
       .pf-c-page__main {
         --pf-c-page__main--ZIndex: auto;
-        --pf-c-page__main--GridArea: auto;
 
+        grid-area: auto;
         flex: 1 0 auto;
       }
     }
