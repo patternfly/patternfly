@@ -1,4 +1,4 @@
-{{#> page page--id="page-layout-default-nav"}}
+{{#> page page--id="card-view"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
@@ -50,8 +50,7 @@
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#> page-main}}
-      <a id="main-content-{{page--id}}"></a>
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{#> content}}
         <h1>Projects</h1>
