@@ -371,6 +371,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .pf-c-page__main-nav {
