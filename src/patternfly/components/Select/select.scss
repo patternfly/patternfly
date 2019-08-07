@@ -22,6 +22,7 @@
   --pf-c-select__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-select__toggle--m-plain--BorderColor: transparent;
   --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
@@ -144,6 +145,17 @@
   background-color: var(--pf-c-select__toggle--BackgroundColor);
   border: none;
 
+  &.pf-m-disabled,
+  &:disabled {
+    --pf-c-select__toggle--BackgroundColor: var(--pf-c-select__toggle--disabled--BackgroundColor);
+
+    pointer-events: none;
+
+    &::before {
+      border: 0;
+    }
+  }
+
   & > * {
     color: var(--pf-c-select__toggle--Color);
   }
@@ -231,6 +243,8 @@
 
   .pf-c-select__toggle-button {
     color: var(--pf-c-select__toggle-button--Color);
+
+    &:disabled { background-color: transparent; }
   }
 
   .pf-c-select__toggle-clear + .pf-c-select__toggle-button {

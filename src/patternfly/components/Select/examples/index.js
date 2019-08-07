@@ -3,6 +3,7 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
 import SelectSingleExampleRaw from '!raw!./select-single-example.hbs';
+import SelectDisabledExampleRaw from '!raw!./select-disabled-example.hbs';
 import SelectSingleExpandedExampleRaw from '!raw!./select-single-expanded-example.hbs';
 import SelectSingleExpandedSelectedExampleRaw from '!raw!./select-single-expanded-selected-example.hbs';
 import SelectSingleTypeaheadExampleRaw from '!raw!./select-single-typeahead-example.hbs';
@@ -18,6 +19,7 @@ import SelectPlainExampleRaw from '!raw!./select-plain-example.hbs';
 import SelectPlainExpandedExampleRaw from '!raw!./select-plain-expanded-example.hbs';
 
 import SelectSingleExample from './select-single-example.hbs';
+import SelectDisabledExample from './select-disabled-example.hbs';
 import SelectSingleExpandedExample from './select-single-expanded-example.hbs';
 import SelectSingleExpandedSelectedExample from './select-single-expanded-selected-example.hbs';
 import SelectSingleTypeaheadExample from './select-single-typeahead-example.hbs';
@@ -48,6 +50,7 @@ export const Docs = docs;
 
 export default props => {
   const selectSingleExample = SelectSingleExample();
+  const selectDisabledExample = SelectDisabledExample();
   const selectSingleExpandedExample = SelectSingleExpandedExample();
   const selectSingleExpandedSelectedExample = SelectSingleExpandedSelectedExample();
   const selectSingleTypeaheadExample = SelectSingleTypeaheadExample();
@@ -68,6 +71,9 @@ export default props => {
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Select - single" handlebars={SelectSingleExampleRaw}>
         {selectSingleExample}
+      </Example>
+      <Example heading="Select - disabled" handlebars={SelectDisabledExampleRaw}>
+        {selectDisabledExample}
       </Example>
       <Example heading="Select - single (expanded)" handlebars={SelectSingleExpandedExampleRaw} minHeight="20em">
         {selectSingleExpandedExample}
