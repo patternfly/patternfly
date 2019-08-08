@@ -40,9 +40,10 @@ export default props => {
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
         intro={overflowMenuIntroDoc}
-        heading="Overflow menu simple (non-responsive)"
+        heading="Overflow menu simple (responsive)"
         handlebars={overflowMenuSimpleExampleRaw}
         docs={overflowMenuSimpleExampleDoc}
+        className="is-layout-page"
       >
         {overflowMenuSimpleExample}
       </Example>
@@ -57,6 +58,7 @@ export default props => {
         heading="Overflow menu group types"
         handlebars={overflowMenuGroupTypesExampleRaw}
         docs={overflowMenuGroupTypesExampleDoc}
+        className="is-layout-page"
       >
         {overflowMenuGroupTypesExample}
       </Example>
@@ -68,10 +70,11 @@ export default props => {
         {overflowMenuSimpleAdditionalOptionsExample}
       </Example>
       <Example
-        heading="Overflow menu persistent"
+        heading="Overflow menu persistent- additional options"
         handlebars={overflowMenuPersistentExampleRaw}
         minHeight=""
         docs={overflowMenuPersistentExampleDoc}
+        className="is-layout-page"
       >
         {overflowMenuPersistentExample}
       </Example>
