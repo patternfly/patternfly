@@ -1,38 +1,17 @@
-<h2 class="example-title">Default group - <code>.pf-c-overflow-menu__group</code></h2>
-{{#> overflow-menu overflow-menu--id="overflow-menu-button-group-example" overflow-menu--modifier="pf-m-reveal-on-md" overflow-menu-button--aria-label="options"  overflow-menu-control--HasAdditionalOptions="true"}}
+{{#> overflow-menu overflow-menu--id="overflow-menu-button-group-example" overflow-menu--modifier="pf-m-reveal-on-md" overflow-menu-button--aria-label="options"}}
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group}}
       {{#> overflow-menu-item}}
-        {{#> example-text example-text--modifier="example-border"}}Item{{/example-text}}
+        Item
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> example-text example-text--modifier="example-border"}}Item{{/example-text}}
+        Item
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> example-text example-text--modifier="example-border"}}Item{{/example-text}}
+        Item
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
-  {{/overflow-menu-content}}
 
-  {{#> overflow-menu-control}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Item 1
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Item 2
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Item 3
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Item 4
-    {{/overflow-menu-dropdown-item}}
-  {{/overflow-menu-control}}
-{{/overflow-menu}}
-
-<h2 class="example-title">Button group - <code>.pf-c-overflow-menu__group.pf-m-button-group</code></h2>
-{{#> overflow-menu overflow-menu--id="overflow-menu-button-group-example" overflow-menu--modifier="pf-m-reveal-on-md" overflow-menu-button--aria-label="options"  overflow-menu-control--HasAdditionalOptions="true"}}
-  {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
       {{#> overflow-menu-item}}
         {{#> button button--modifier="pf-m-primary"}}
@@ -50,27 +29,7 @@
         {{/button}}
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
-  {{/overflow-menu-content}}
 
-  {{#> overflow-menu-control}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Primary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Secondary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Tertiary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Action 4
-    {{/overflow-menu-dropdown-item}}
-  {{/overflow-menu-control}}
-{{/overflow-menu}}
-
-<h2 class="example-title">Icon button group - <code>.pf-c-overflow-menu__group.pf-m-icon-button-group</code></h2>
-{{#> overflow-menu overflow-menu--id="overflow-menu-icon-group-example" overflow-menu--modifier="pf-m-reveal-on-md" overflow-menu-button--aria-label="options" overflow-menu-control--HasAdditionalOptions="true"}}
-  {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
       {{#> overflow-menu-item}}
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align Left"'}}
@@ -88,23 +47,36 @@
         {{/button}}
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
+
   {{/overflow-menu-content}}
 
   {{#> overflow-menu-control}}
     {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Action 1
+      Item 1
     {{/overflow-menu-dropdown-item}}
     {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Action 2
+      Item 2
     {{/overflow-menu-dropdown-item}}
     {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Action 3
+      Item 3
     {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Action 4
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Primary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Secondary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Tertiary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Icon action 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Icon action 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Icon action 3
     {{/overflow-menu-dropdown-item}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
-
-<h2 class="example-title">Action group pattern</h2>
-{{> overflow-menu-action-group-example overflow-menu-control--HasAdditionalOptions="true"}}
