@@ -1,101 +1,85 @@
-/* stylelint-disable */
-
 // Spinner Component
 
 .pf-c-spinner {
-  // --pf-c-spinner--AnimationDuration: 11.5s;
+  --pf-c-spinner--AnimationDuration: 1.5s;
   --pf-c-spinner--AnimationTimingFunction: cubic-bezier(.77, .005, .315, 1);
-  // --pf-c-spinner--FontSize: 5.4px;//var(--pf-global--FontSize--xs);
-  --pf-c-spinner--Width: 100px; // 10em;
-  --pf-c-spinner--Height: 100px; // 10em;
 
-  // concept variables
+  // set the overall width and height of the spinner to be consistent with the icon size
+  --pf-c-spinner--Width: var(--pf-global--icon--FontSize--xl);
+  --pf-c-spinner--Height: var(--pf-global--icon--FontSize--xl);
+
+  // These variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
+  --pf-c-spinner--stroke-width-multiplier--wide: .14;
+  --pf-c-spinner--stroke-width-multiplier--narrow: .08;
+
+  // This variable is used to set the color for all the parts of the spinner
   --pf-c-spinner--Color: var(--pf-global--primary-color--100);
-  // Example element variable
-  --pf-c-spinner__element--AnimationTimingFunction: linear;
 
-  // clipper variables
+  // modifier variables for main spinner
+  --pf-c-spinner--m-sm--Width: var(--pf-global--icon--FontSize--sm);
+  --pf-c-spinner--m-sm--Height: var(--pf-global--icon--FontSize--sm);
+  --pf-c-spinner--m-md--Width: var(--pf-global--icon--FontSize--md);
+  --pf-c-spinner--m-md--Height: var(--pf-global--icon--FontSize--md);
+  --pf-c-spinner--m-lg--Width: var(--pf-global--icon--FontSize--lg);
+  --pf-c-spinner--m-lg--Height: var(--pf-global--icon--FontSize--lg);
+  --pf-c-spinner--m-xl--Width: var(--pf-global--icon--FontSize--xl);
+  --pf-c-spinner--m-xl--Height: var(--pf-global--icon--FontSize--xl);
+
+  // Clipper variables
   --pf-c-spinner__clipper--Width: var(--pf-c-spinner--Width);
   --pf-c-spinner__clipper--Height: var(--pf-c-spinner--Height);
 
-  // clipper:after (circle) values
-  --pf-c-spinner__clipper--after--GradientColor: var(--pf-global--primary-color--100);
+  // Clipper:after (circle) values
+  --pf-c-spinner__clipper--after--GradientColor: var(--pf-c-spinner--Color);
   --pf-c-spinner__clipper--after--Width: var(--pf-c-spinner--Width);
   --pf-c-spinner__clipper--after--Height: var(--pf-c-spinner--Height);
-  --pf-c-spinner__clipper--after--BoxShadowSize--wide: calc(var(--pf-c-spinner--Width) *.14); // 1.4em;
-  --pf-c-spinner__clipper--after--BoxShadowSize--narrow: calc(var(--pf-c-spinner--Width) *.08); // .8em;
 
-  // lead ball variables
-  --pf-c-spinner__lead-ball--after--BackgroundColor: var(--pf-global--primary-color--100);
+  // This creates the stroke and needs to match the spinner__ball:after Height and Width
+  --pf-c-spinner__clipper--after--BoxShadowSize--wide: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--wide));
+  --pf-c-spinner__clipper--after--BoxShadowSize--narrow: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--narrow));
+
+  // Lead ball variables
+  --pf-c-spinner__lead-ball--after--BackgroundColor: var(--pf-c-spinner--Color);
 
   // These sizes need to match the clipper:after BoxShadowSize
-  --pf-c-spinner__ball--after--Width--wide: calc(var(--pf-c-spinner--Width) *.14); // 1.4em;
-  --pf-c-spinner__ball--after--Width--narrow: calc(var(--pf-c-spinner--Width) *.08); // .8em;
-  --pf-c-spinner__ball--after--Height--wide: calc(var(--pf-c-spinner--Width) *.14); // 1.4em;
-  --pf-c-spinner__ball--after--Height--narrow: calc(var(--pf-c-spinner--Width) *.08); // .8em;
+  --pf-c-spinner__ball--after--Width--wide: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--wide));
+  --pf-c-spinner__ball--after--Width--narrow: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--narrow));
+  --pf-c-spinner__ball--after--Height--wide: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--wide));
+  --pf-c-spinner__ball--after--Height--narrow: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--narrow));
 
-  // tail ball variables
-  --pf-c-spinner__tail-ball--after--BackgroundColor: var(--pf-global--primary-color--100);
-
-  // Modifier
-  // &.pf-m-sm {
-  //   background-color: var(--pf-c-spinner--m-danger--BackgroundColor);
-  // }
-
-  // a circle, sets the overall size
-  // --ball-start-color: var(--pf-c-spinner--Color); // #39a5dc;
-  // --ball-end-color: var(--pf-c-spinner--Color); // #39a5dc;
-
-  //   --testcolor0: #fff;
-  //   --testcolor1: #bedee1;
-  //   --testcolor2: #fbdebf;
-  //   --ball-start-color: purple;
-  //   --ball-end-color: coral;
-
-  //  --testspeed: 1.5s;
-
-  // --spinner-color: #39a5dc;
-  // --spinner-diameter: 10em;
-  // --spinner-radius: calc(var(--spinner-diameter) / 2);
-
-  // --spinner-timing: linear;//
-  // --custom-spinner-timing: cubic-bezier(0.77, 0.005, 0.315, 1);
+  // Tail ball variables
+  --pf-c-spinner__tail-ball--after--BackgroundColor: var(--pf-c-spinner--Color);
 
   position: relative;
+  display: inline-block;
   width: var(--pf-c-spinner--Width);
   height: var(--pf-c-spinner--Height);
-  font-size: var(--pf-c-spinner--FontSize);
+  animation: pf-animation-spinner-parent calc(var(--pf-c-spinner--AnimationDuration) * 2) var(--pf-c-spinner--AnimationTimingFunction) infinite;
 
+  // Modifiers change the variables for size variations
+  &.pf-m-sm {
+    --pf-c-spinner--Width: var(--pf-c-spinner--m-sm--Width);
+    --pf-c-spinner--Height: var(--pf-c-spinner--m-sm--Height);
+  }
 
-  // Example modifier variable
-  // --pf-c-spinner--m-danger--BackgroundColor: var(--pf-global--danger-color);
+  &.pf-m-md {
+    --pf-c-spinner--Width: var(--pf-c-spinner--m-md--Width);
+    --pf-c-spinner--Height: var(--pf-c-spinner--m-md--Height);
+  }
 
-  color: var(--pf-c-spinner--Color);
-  animation: pf-animation-spinner-circle-parent calc(var(--pf-c-spinner--AnimationDuration) * 2) var(--pf-c-spinner--AnimationTimingFunction) infinite;
+  &.pf-m-lg {
+    --pf-c-spinner--Width: var(--pf-c-spinner--m-lg--Width);
+    --pf-c-spinner--Height: var(--pf-c-spinner--m-lg--Height);
+  }
+
+  &.pf-m-xl {
+    --pf-c-spinner--Width: var(--pf-c-spinner--m-xl--Width);
+    --pf-c-spinner--Height: var(--pf-c-spinner--m-xl--Height);
+  }
 }
 
-// Elements
-
-// rotating clip rectangle as half the size of the circle
-.pf-c-spinner__clipper {
-  position: absolute;
-  width: var(--pf-c-spinner__clipper--Width);
-  height: var(--pf-c-spinner__clipper--Height);
-  clip:
-    rect(
-      0,
-      var(--pf-c-spinner__clipper--Width),
-      calc(var(--pf-c-spinner__clipper--Height)/2),
-      calc(var(--pf-c-spinner__clipper--Width)/2)
-    );
-  animation:
-    pf-animation-spinner-circle-clipper var(--pf-c-spinner--AnimationDuration) linear
-    infinite;
-  // background-color: var(--testcolor1);
-}
-
-// rotate the parent 360 as the line animation happens, twice, and another time overall
-@keyframes pf-animation-spinner-circle-parent {
+// Rotate the parent 360deg as the basic line animation happens, repeat that twice, and another rotation overall. This adds up to 3 complete rotations.
+@keyframes pf-animation-spinner-parent {
   0% {
     transform: rotate(0deg);
   }
@@ -109,19 +93,37 @@
   }
 }
 
-@keyframes pf-animation-spinner-circle-clipper {
+
+// Elements
+
+// Clipper is a rotating rectangle clipped to one quarter the size of the spinner, starting in the upper right
+.pf-c-spinner__clipper {
+  position: absolute;
+  width: var(--pf-c-spinner__clipper--Width);
+  height: var(--pf-c-spinner__clipper--Height);
+  clip:
+    rect(
+      0,
+      var(--pf-c-spinner__clipper--Width),
+      calc(var(--pf-c-spinner__clipper--Height) / 2),
+      calc(var(--pf-c-spinner__clipper--Width) / 2)
+    );
+  animation:
+    pf-animation-spinner__clipper var(--pf-c-spinner--AnimationDuration) linear
+    infinite;
+}
+
+@keyframes pf-animation-spinner__clipper {
   0% {
-    transform: rotate(0deg); //0
-    // animation-timing-function: ease-out;
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(-270deg); //-270
-    // animation-timing-function: ease-in;
+    transform: rotate(-270deg);
   }
 }
 
-// rotating semicircle that has the part that you see that moves around (inset box shadow)
+// The :after of the Clipper is a rotating semicircle that has the part that you see moving around (inset box shadow), growing and shrinking because it is moving into and out of the Clipper box
 .pf-c-spinner__clipper::after {
   position: absolute;
   width: var(--pf-c-spinner__clipper--after--Width);
@@ -131,16 +133,16 @@
       0,
       var(--pf-c-spinner__clipper--after--Width),
       var(--pf-c-spinner__clipper--after--Height),
-      calc(var(--pf-c-spinner__clipper--after--Width)/2)
+      calc(var(--pf-c-spinner__clipper--after--Width) / 2)
     );
   content: "";
   border-radius: 50%;
   box-shadow: inset 0 0 0 var(--pf-c-spinner__clipper--after--BoxShadowSize--wide) var(--pf-c-spinner__clipper--after--GradientColor);
-  animation: pf-animation-spinner-circle var(--pf-c-spinner--AnimationDuration) linear infinite;
-  // background-color: var(--testcolor2);
+  animation: pf-animation-spinner__clipper-after var(--pf-c-spinner--AnimationDuration) linear infinite;
 }
 
-@keyframes pf-animation-spinner-circle {
+// The Clipper:after moves rotates 270deg in relation to its parent (so that it appears to grow and then shrink) while narrowing down through the middle of the animation
+@keyframes pf-animation-spinner__clipper-after {
   0% {
     box-shadow: inset 0 0 0 var(--pf-c-spinner__clipper--after--BoxShadowSize--wide) var(--pf-c-spinner__clipper--after--GradientColor);
     transform: rotate(90deg);
@@ -156,29 +158,30 @@
   }
 }
 
-// The lead ball is at the front of the stroke to round out the end
+// The Lead ball is at the front of the stroke to round out the leading end
 .pf-c-spinner__lead-ball {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  // border: 1px solid green;
-  // color: red;
-  // background-color: red;
-  animation: pf-animation-ball-lead var(--pf-c-spinner--AnimationDuration) linear infinite;
+  animation: pf-animation-spinner__lead-ball var(--pf-c-spinner--AnimationDuration) linear infinite;
 
   &::after {
     position: absolute;
-    top: calc(50% - (var(--pf-c-spinner__ball--after--Height--wide)/2));
+    top: calc(50% - (var(--pf-c-spinner__ball--after--Height--wide) / 2));
     right: 0;
     width: var(--pf-c-spinner__ball--after--Width--wide);
     height: var(--pf-c-spinner__ball--after--Height--wide);
     content: "";
     background-color: var(--pf-c-spinner__lead-ball--after--BackgroundColor);
     border-radius: 50%;
-    animation: pf-animation-ball-size var(--pf-c-spinner--AnimationDuration) linear infinite;
+    animation: pf-animation-spinner__ball-size var(--pf-c-spinner--AnimationDuration) linear infinite;
   }
 }
 
-@keyframes pf-animation-ball-lead {
+// The Lead ball rotates to match the line that grows and shrinks - first following the Clipper:after and then the Clipper itself.
+@keyframes pf-animation-spinner__lead-ball {
   0% {
     transform: rotate(0deg);
   }
@@ -192,31 +195,30 @@
   }
 }
 
-// The tail ball is at the end of the stroke to round out the end
+// The tail ball is at the end of the stroke to round out the tail end
 .pf-c-spinner__tail-ball {
-  // border: 1px solid green;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  // background-color: red;
-  animation: pf-animation-ball-tail var(--pf-c-spinner--AnimationDuration) linear infinite;
+  animation: pf-animation-spinner__tail-ball var(--pf-c-spinner--AnimationDuration) linear infinite;
 
   &::after {
     position: absolute;
-    top: calc(50% - (var(--pf-c-spinner__ball--after--Height--wide)/2)); // calc(50% - .7em);
+    top: calc(50% - (var(--pf-c-spinner__ball--after--Height--wide) / 2));
     right: 0;
     width: var(--pf-c-spinner__ball--after--Width--wide);
     height: var(--pf-c-spinner__ball--after--Height--wide);
     content: "";
     background-color: var(--pf-c-spinner__tail-ball--after--BackgroundColor);
     border-radius: 50%;
-    animation: pf-animation-ball-size var(--pf-c-spinner--AnimationDuration) linear infinite;
+    animation: pf-animation-spinner__ball-size var(--pf-c-spinner--AnimationDuration) linear infinite;
   }
 }
 
-@keyframes pf-animation-ball-tail {
+// The Tail ball rotates to match the tail end of the line that grows and shrinks - first following the Clipper and then the Clipper:after
+@keyframes pf-animation-spinner__tail-ball {
   0% {
     transform: rotate(0deg);
   }
@@ -230,8 +232,8 @@
   }
 }
 
-// This animates both the lead and tail balls to match the stroke width of the curved line
-@keyframes pf-animation-ball-size {
+// This animates the size of both the lead and tail balls to match the stroke width of the curved line
+@keyframes pf-animation-spinner__ball-size {
   0% {
     width: var(--pf-c-spinner__ball--after--Width--wide);
     height: var(--pf-c-spinner__ball--after--Height--wide);
@@ -248,4 +250,3 @@
   }
 }
 
-/* stylelint-enable */

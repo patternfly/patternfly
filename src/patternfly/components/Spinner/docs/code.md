@@ -1,19 +1,25 @@
-## Overview
-
-Only if needed write a short description with implementation notes. Design and interaction notes are already written on the design specs, don't repeat information.
-
-For example for buttons: Always add a modifier class to add color to the button. Never use the class `.btn` on its own.
-
 ## Accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-spinner` |  accessibility notes. |
+| `role="progressbar` | `pf-c-spinner` |  Applying a role of progressbar lets the reader know that this is an indeterminate progress indicator |
+| `aria-valuetext="Loading..."` | `pf-c-spinner` |  This text can be used to say what is loading |
 
+Note: If the spinner is showing the loading in progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
+
+Note: A live region must be present before changing its status in order for the change to be read. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 
 ## Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.class-name-here` | `<tags-here>` |  Outcome and remarks. |
-| Example: `.btn` | `<button>` |  Initiates a button. Always use it with a modifier class. |
+| `.pf-c-spinner` | `<span>` |  Creates a spinner component |
+| `.pf-c-spinner__clipper` | `<span>` |  Creates the spinning line |
+| `.pf-c-spinner__lead-ball` | `<span>` |  Rounds out the beginning of the spinning line |
+| `.pf-c-spinner__tail-ball` | `<span>` |  Rounds out the end of the spinning line |
+| `.pf-m-sm` | `.pf-c-spinner` |  Creates a small spinner |
+| `.pf-m-md` | `.pf-c-spinner` |  Creates a medium spinner |
+| `.pf-m-lg` | `.pf-c-spinner` |  Creates a large spinner |
+| `.pf-m-xl` | `.pf-c-spinner` |  Creates a extra large spinner |
+
