@@ -92,6 +92,7 @@
 
   // Table check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(6px)};
 
   // Table action
   --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);

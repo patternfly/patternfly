@@ -301,17 +301,6 @@
   }
 }
 
-// Check table cell
-// ==================================================================
-// FIX #1577: Remove this to fix the table checkbox alignment
-// .pf-c-table__check {
-//   vertical-align: top;
-//   > * {
-//     margin-top: var(--pf-c-table__check--input--MarginTop);
-//     vertical-align: top;
-//   }
-// }
-
 // Table action cell
 // ==================================================================
 .pf-c-table__action {
