@@ -21,5 +21,5 @@ Note: A live region must be present before changing its status in order for the 
 | `.pf-m-sm` | `.pf-c-spinner` |  Creates a small spinner |
 | `.pf-m-md` | `.pf-c-spinner` |  Creates a medium spinner |
 | `.pf-m-lg` | `.pf-c-spinner` |  Creates a large spinner |
-| `.pf-m-xl` | `.pf-c-spinner` |  Creates a extra large spinner |
+| `.pf-m-xl` | `.pf-c-spinner` |  Creates an extra large spinner |
 
