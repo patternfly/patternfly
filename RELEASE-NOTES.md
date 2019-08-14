@@ -20,8 +20,8 @@ Packages released:
   - Replaces .travis.yml with .circleci/config.yml and split up test steps to allow testing in parallel and nicer Github status checks
   - Fixes our our a11y Selenium script to not have Travis integrations
   - Uploads PR previews to https://surge.sh on every pushed commit (no need for Netlify to also build a preview)
-  - Still updates the Github Pages with a new npm run publish:docs target on merges to master ([#2121](https://github.com/patternfly/patternfly-next/pull/212))
-  - Temporarily disable problematic ci checks ([#2125](https://github.com/patternfly/patternfly-next/pull/2101))
+  - Still updates the Github Pages with a new npm run publish:docs target on merges to master ([#2121](https://github.com/patternfly/patternfly-next/pull/2121))
+  - Temporarily disable problematic ci checks ([#2125](https://github.com/patternfly/patternfly-next/pull/2125))
 - **Demos:** Use unique ID used in alert and cardview demos ([#2106](https://github.com/patternfly/patternfly-next/pull/2106))
 - **Notes:** Format release notes using uls
 - **Page:** Updated demo main section copy ([#2092](https://github.com/patternfly/patternfly-next/pull/2092))
