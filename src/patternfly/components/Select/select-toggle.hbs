@@ -11,7 +11,12 @@
   {{#if select-toggle--attribute}}
     {{{select-toggle--attribute}}}
   {{/if}}>
-  <div class="pf-c-select__toggle-wrapper">
+  {{#> select-toggle-wrapper}}
+    {{#if select-toggle--icon}}
+      {{#> select-toggle-icon}}
+        <i class="{{select-toggle--icon}}" aria-hidden="true"></i>
+      {{/select-toggle-icon}}
+    {{/if}}
     {{!-- First part, chips --}}
     {{#if select--IsMultiSelect}}
       {{#if select--ItemIsSelected}}
@@ -31,21 +36,23 @@
         {{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
       {{/if}}
     {{else if @partial-block}}
-      <span class="pf-c-select__toggle-text">{{> @partial-block}}</span>
+      {{#> select-toggle-text}}
+        {{> @partial-block}}
+      {{/select-toggle-text}}
     {{else}}
       <span>Select</span>
     {{/if}}
     {{!-- Third part, badge --}}
     {{#if select--IsCheckboxSelect}}
       {{#if select--ItemIsSelected}}
-        <div class="pf-c-select__toggle-badge">
+        {{#> select-toggle-badge}}
           {{#> badge badge--modifier="pf-m-read"}}
             3
           {{/badge}}
-        </div>
+        {{/select-toggle-badge}}
       {{/if}}
     {{/if}}
-  </div>
+  {{/select-toggle-wrapper}}
   {{!-- Clear button if it's typeahead and something has been typed --}}
   {{#if select--IsTypeahead}}
     {{#if select--ItemIsSelected}}
@@ -55,6 +62,6 @@
     {{/if}}
       {{> select-toggle-button}}
     {{else}}
-    {{> select-toggle-icon}}
+    {{> select-toggle-arrow}}
   {{/if}}
 </{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}}>
