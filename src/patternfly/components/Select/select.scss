@@ -54,8 +54,8 @@
   // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
   --pf-c-select__toggle-typeahead--active--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
 
-  //  Select toggle icon
-  --pf-c-select__toggle-icon--MarginLeft: var(--pf-global--spacer--xs);
+  //  Select toggle icon + toggle text
+  --pf-c-select__toggle-icon--toggle-text--MarginLeft: var(--pf-global--spacer--xs);
 
   // Select toggle badge
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--sm);
@@ -306,7 +306,7 @@
 }
 
 .pf-c-select__toggle-icon + .pf-c-select__toggle-text {
-  margin-left: var(--pf-c-select__toggle-icon--MarginLeft);
+  margin-left: var(--pf-c-select__toggle-icon--toggle-text--MarginLeft);
 }
 
 .pf-c-select__toggle-badge {
