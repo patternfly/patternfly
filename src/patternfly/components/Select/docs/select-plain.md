@@ -5,7 +5,7 @@ The plain select variation should be used when you do not want a border applied 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates a select toggle. |
+| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
 | `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
