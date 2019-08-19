@@ -47,6 +47,13 @@
   --pf-chart-color-orange-400: #{$pf-chart-color-orange-400};
   --pf-chart-color-orange-500: #{$pf-chart-color-orange-500};
 
+  // red
+  --pf-chart-color-red-100: #{$pf-chart-color-red-100};
+  --pf-chart-color-red-200: #{$pf-chart-color-red-200};
+  --pf-chart-color-red-300: #{$pf-chart-color-red-300};
+  --pf-chart-color-red-400: #{$pf-chart-color-red-400};
+  --pf-chart-color-red-500: #{$pf-chart-color-red-500};
+
   // black
   --pf-chart-color-black-100: #{$pf-chart-color-black-100};
   --pf-chart-color-black-200: #{$pf-chart-color-black-200};
@@ -145,21 +152,27 @@
   --pf-chart-boxplot--box--Width: #{$pf-chart-boxplot--box--Width};
 
   // Bullet Chart
+  --pf-chart-bullet--axis--tick--count: #{$pf-chart-bullet--axis--tick--count};
+  --pf-chart-bullet--comparative-measure--Fill--Color: #{$pf-chart-bullet--comparative-measure--Fill--Color};
+  --pf-chart-bullet--comparative-measure--stroke--Color: #{$pf-chart-bullet--comparative-measure--stroke--Color};
+  --pf-chart-bullet--comparative-measure--stroke--Width: #{$pf-chart-bullet--comparative-measure--stroke--Width};
+  --pf-chart-bullet--comparative-measure--error--Fill--Color: #{$pf-chart-bullet--comparative-measure--error--Fill--Color};
+  --pf-chart-bullet--comparative-measure--error--stroke--Color: #{$pf-chart-bullet--comparative-measure--error--stroke--Color};
+  --pf-chart-bullet--comparative-measure--error--stroke--Width: #{$pf-chart-bullet--comparative-measure--error--stroke--Width};
+  --pf-chart-bullet--comparative-measure--error--Width: #{$pf-chart-bullet--comparative-measure--error--Width};
+  --pf-chart-bullet--comparative-measure--warning--Fill--Color: #{$pf-chart-bullet--comparative-measure--warning--Fill--Color};
+  --pf-chart-bullet--comparative-measure--warning--stroke--Color: #{$pf-chart-bullet--comparative-measure--warning--stroke--Color};
+  --pf-chart-bullet--comparative-measure--warning--stroke--Width: #{$pf-chart-bullet--comparative-measure--warning--stroke--Width};
+  --pf-chart-bullet--comparative-measure--warning--Width: #{$pf-chart-bullet--comparative-measure--warning--Width};
+  --pf-chart-bullet--comparative-measure--Width: #{$pf-chart-bullet--comparative-measure--Width};
+  --pf-chart-bullet--group-title--divider--Fill--Color: #{$pf-chart-bullet--group-title--divider--Fill--Color};
+  --pf-chart-bullet--group-title--divider--stroke--Color: #{$pf-chart-bullet--group-title--divider--stroke--Color};
+  --pf-chart-bullet--group-title--divider--stroke--Width: #{$pf-chart-bullet--group-title--divider--stroke--Width};
   --pf-chart-bullet--Height: #{$pf-chart-bullet--Height};
-  --pf-chart-bullet--items-per-row: #{$pf-chart-bullet--items-per-row};
-  --pf-chart-bullet--legend--Height: #{$pf-chart-bullet--legend--Height};
-  --pf-chart-bullet--range--Width: #{$pf-chart-bullet--range--Width};
-  --pf-chart-bullet--threshold-error--Color: #{$pf-chart-bullet--threshold-error--Color};
-  --pf-chart-bullet--threshold-error--Width: #{$pf-chart-bullet--threshold-error--Width};
-  --pf-chart-bullet--value--Width: #{$pf-chart-bullet--value--Width};
-  --pf-chart-bullet--comparative-measure-line--warning--stroke--Color: #{$pf-chart-bullet--comparative-measure-line--warning--stroke--Color};
-  --pf-chart-bullet--comparative-measure-line--warning--BorderWidth: #{$pf-chart-bullet--comparative-measure-line--warning--BorderWidth};
-  --pf-chart-bullet--comparative-measure-line--error--stroke--Color: #{$pf-chart-bullet--comparative-measure-line--error--stroke--Color};
-  --pf-chart-bullet--comparative-measure-line--error--BorderWidth: #{$pf-chart-bullet--comparative-measure-line--error--BorderWidth};
-  --pf-chart-bullet--zero-line--stroke--Color: #{$pf-chart-bullet--zero-line--stroke--Color};
-  --pf-chart-bullet--zero-line--BorderWidth: #{$pf-chart-bullet--zero-line--BorderWidth};
-  --pf-chart-bullet--negative-primary-measure--stroke--Color: #{$pf-chart-bullet--negative-primary-measure--stroke--Color};
-  --pf-chart-bullet--negative-primary-measure--BorderWidth: #{$pf-chart-bullet--negative-primary-measure--BorderWidth};
+  --pf-chart-bullet--label--subtitle--Fill: #{$pf-chart-bullet--label--subtitle--Fill};
+  --pf-chart-bullet--primary-measure--dot--size: #{$pf-chart-bullet--primary-measure--dot--size};
+  --pf-chart-bullet--primary-measure--segmented--Width: #{$pf-chart-bullet--primary-measure--segmented--Width};
+  --pf-chart-bullet--qualitative-range--Width: #{$pf-chart-bullet--qualitative-range--Width};
 
   // Candlestick
   --pf-chart-candelstick--data--stroke--Width: #{$pf-chart-candelstick--data--stroke--Width};
