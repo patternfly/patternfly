@@ -1,6 +1,6 @@
 # 2019.06 release notes (2019-08-13)
 Packages released:
--
+- @patternfly/patternfly@2.26.1
 
 ## Components
 - **Alert:** Added default alert ([#2107](https://github.com/patternfly/patternfly-next/pull/2107))
