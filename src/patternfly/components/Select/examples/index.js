@@ -18,6 +18,7 @@ import SelectCheckboxExpandedSelectedExampleRaw from '!raw!./select-checkbox-exp
 import SelectPlainExampleRaw from '!raw!./select-plain-example.hbs';
 import SelectPlainExpandedExampleRaw from '!raw!./select-plain-expanded-example.hbs';
 import SelectIconExampleRaw from '!raw!./select-icon-example.hbs';
+import SelectTopExpandedExampleRaw from '!raw!./select-top-expanded-example.hbs';
 
 import SelectSingleExample from './select-single-example.hbs';
 import SelectDisabledExample from './select-disabled-example.hbs';
@@ -35,6 +36,7 @@ import SelectCheckboxExpandedSelectedExample from './select-checkbox-expanded-se
 import SelectPlainExample from './select-plain-example.hbs';
 import SelectPlainExpandedExample from './select-plain-expanded-example.hbs';
 import SelectIconExample from './select-icon-example.hbs';
+import SelectTopExpandedExample from './select-top-expanded-example.hbs';
 
 import SelectSingleExampleDoc from '../docs/select-single.md';
 import SelectSingleTypeaheadExampleDoc from '../docs/select-single-typeahead.md';
@@ -42,6 +44,7 @@ import SelectMultiTypeaheadExampleDoc from '../docs/select-multi-typeahead.md';
 import SelectCheckboxExampleDoc from '../docs/select-checkbox.md';
 import SelectPlainExampleDoc from '../docs/select-plain.md';
 import SelectIconExampleDoc from '../docs/select-icon.md';
+import SelectTopExampleDoc from '../docs/select-top.md';
 import docs from '../docs/code.md';
 
 export const selectSingleExampleDoc = SelectSingleExampleDoc;
@@ -50,6 +53,7 @@ export const selectMultiTypeaheadExampleDoc = SelectMultiTypeaheadExampleDoc;
 export const selectCheckboxExampleDoc = SelectCheckboxExampleDoc;
 export const selectPlainExampleDoc = SelectPlainExampleDoc;
 export const selectIconExampleDoc = SelectIconExampleDoc;
+export const selectTopExampleDoc = SelectTopExampleDoc;
 export const Docs = docs;
 
 export default props => {
@@ -69,6 +73,7 @@ export default props => {
   const selectPlainExample = SelectPlainExample();
   const selectPlainExpandedExample = SelectPlainExpandedExample();
   const selectIconExample = SelectIconExample();
+  const selectTopExpandedExample = SelectTopExpandedExample();
   const headingText = 'Select';
   const variablesRoot = 'pf-c-select';
 
@@ -154,6 +159,15 @@ export default props => {
       </Example>
       <Example heading="Select - icon" handlebars={SelectIconExampleRaw} docs={selectIconExampleDoc}>
         {selectIconExample}
+      </Example>
+      <Example
+        heading="Select - top (expanded)"
+        handlebars={SelectTopExpandedExampleRaw}
+        docs={selectPlainExampleDoc}
+        minHeight="20em"
+        className="is-expanded-top"
+      >
+        {selectTopExpandedExample}
       </Example>
     </Documentation>
   );
