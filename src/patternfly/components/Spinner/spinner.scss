@@ -54,6 +54,7 @@
   display: inline-block;
   width: var(--pf-c-spinner--Width);
   height: var(--pf-c-spinner--Height);
+  text-align: left;
   animation: pf-animation-spinner-parent calc(var(--pf-c-spinner--AnimationDuration) * 2) var(--pf-c-spinner--AnimationTimingFunction) infinite;
 
   // Modifiers change the variables for size variations
