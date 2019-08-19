@@ -52,7 +52,7 @@ jobs:
         - *js_deps_cache_key
     - run:
         name: Conditional install
-        command: if [ ! -d node_modules ]; then npm install; fi
+        command: if [ ! -d node_modules ]; then npm ci; fi
     - save_cache:
         paths: *js_deps_paths
         key: *js_deps_cache_key
