@@ -45,6 +45,13 @@ $pf-chart-color-orange-300: $pf-color-orange-300;
 $pf-chart-color-orange-400: $pf-color-orange-400;
 $pf-chart-color-orange-500: $pf-color-orange-500;
 
+// red
+$pf-chart-color-red-100: $pf-color-red-100;
+$pf-chart-color-red-200: $pf-color-red-200;
+$pf-chart-color-red-300: $pf-color-red-300;
+$pf-chart-color-red-400: $pf-color-red-400;
+$pf-chart-color-red-500: $pf-color-red-500;
+
 // black
 $pf-chart-color-black-100: $pf-color-black-200;
 $pf-chart-color-black-200: $pf-color-black-300;
@@ -144,21 +151,31 @@ $pf-chart-boxplot--upper-quartile--Fill: $pf-chart-global--Fill--Color--500;
 $pf-chart-boxplot--box--Width: 20;
 
 // Bullet Chart
-$pf-chart-bullet--Height: 55;
-$pf-chart-bullet--items-per-row: 2;
-$pf-chart-bullet--legend--Height: 30;
-$pf-chart-bullet--range--Width: 40;
-$pf-chart-bullet--threshold-error--Color: $pf-chart-global--danger--Color--100;
-$pf-chart-bullet--threshold-error--Width: 2;
-$pf-chart-bullet--value--Width: 9;
-$pf-chart-bullet--comparative-measure-line--warning--stroke--Color: $pf-chart-global--warning--Color--100;
-$pf-chart-bullet--comparative-measure-line--warning--BorderWidth: $pf-chart-global--BorderWidth--xs;
-$pf-chart-bullet--comparative-measure-line--error--stroke--Color: $pf-chart-global--danger--Color--100;
-$pf-chart-bullet--comparative-measure-line--error--BorderWidth: $pf-chart-global--BorderWidth--xs;
-$pf-chart-bullet--zero-line--stroke--Color: $pf-chart-global--Fill--Color--700;
-$pf-chart-bullet--zero-line--BorderWidth: $pf-chart-global--BorderWidth--xs;
-$pf-chart-bullet--negative-primary-measure--stroke--Color: $pf-chart-global--danger--Color--100;
-$pf-chart-bullet--negative-primary-measure--BorderWidth: $pf-chart-global--BorderWidth--sm;
+$pf-chart-bullet--axis--tick--count: 5;
+$pf-chart-bullet--comparative-measure--Fill--Color: $pf-chart-global--Fill--Color--700;
+$pf-chart-bullet--comparative-measure--stroke--Color: $pf-chart-global--Fill--Color--700;
+$pf-chart-bullet--comparative-measure--stroke--Width: $pf-chart-global--stroke--Width--xs;
+$pf-chart-bullet--comparative-measure--Width: 30;
+$pf-chart-bullet--comparative-measure--error--Fill--Color: $pf-chart-global--danger--Color--100;
+$pf-chart-bullet--comparative-measure--error--stroke--Color: $pf-chart-global--danger--Color--100;
+$pf-chart-bullet--comparative-measure--error--stroke--Width: $pf-chart-global--stroke--Width--sm;
+$pf-chart-bullet--comparative-measure--error--Width: 30;
+$pf-chart-bullet--comparative-measure--warning--Fill--Color: $pf-chart-global--warning--Color--100;
+$pf-chart-bullet--comparative-measure--warning--stroke--Color: $pf-chart-global--warning--Color--100;
+$pf-chart-bullet--comparative-measure--warning--stroke--Width: $pf-chart-global--stroke--Width--sm;
+$pf-chart-bullet--comparative-measure--warning--Width: 30;
+$pf-chart-bullet--comparative-measure--Fill--Color: $pf-chart-global--Fill--Color--700;
+$pf-chart-bullet--comparative-measure--stroke--Color: $pf-chart-global--Fill--Color--700;
+$pf-chart-bullet--comparative-measure--stroke--Width: $pf-chart-global--stroke--Width--xs;
+$pf-chart-bullet--comparative-measure--Width: 30;
+$pf-chart-bullet--group-title--divider--Fill--Color: $pf-color-black-200;
+$pf-chart-bullet--group-title--divider--stroke--Color: $pf-color-black-200;
+$pf-chart-bullet--group-title--divider--stroke--Width: $pf-chart-global--stroke--Width--sm;
+$pf-chart-bullet--Height: 140;
+$pf-chart-bullet--label--subtitle--Fill: $pf-chart-global--Fill--Color--400;
+$pf-chart-bullet--primary-measure--dot--size: 6;
+$pf-chart-bullet--primary-measure--segmented--Width: 9;
+$pf-chart-bullet--qualitative-range--Width: 30;
 
 // Candlestick
 $pf-chart-candelstick--data--stroke--Width: $pf-chart-global--stroke--Width--xs;
