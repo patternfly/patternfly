@@ -335,6 +335,8 @@ html {
   .pf-l-stack > *,
   .pf-l-toolbar__group,
   .pf-l-toolbar__item,
+  .pf-l-flex .pf-l-flex,
+  .pf-l-flex__item,
   [class*="pf-u-"],
   [class*="pf-u-"] > *:not(svg),
   .pf-c-data-toolbar,
@@ -524,35 +526,10 @@ html {
   --example--Color: #888;
   --example--BorderColor: rgba(0, 0, 0, .1);
 
-  padding: 40px;
-
   .example-border {
     background: none;
     border: 2px dashed #393f44;
     box-shadow: none;
-  }
-
-  .pf-l-grid .pf-l-grid__item {
-    padding: .5rem;
-  }
-
-  .pf-l-flex,
-  .pf-l-flex__item {
-    position: relative;
-  }
-
-  [data-label]::after {
-    position: absolute;
-    top: -24px;
-    left: 0;
-    z-index: 2;
-    padding: 0 4px;
-    white-space: nowrap;
-    background: #fff;
-  }
-
-  [data-label]::after {
-    content: attr(data-label);
   }
 
   .example-text,

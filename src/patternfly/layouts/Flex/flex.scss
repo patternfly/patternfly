@@ -1,110 +1,7 @@
-// Spacer values
-$pf-flex-spacer-map: (
-  "none": 0,
-  "xs": "var(--pf-l-flex--spacer--xs)",
-  "sm": "var(--pf-l-flex--spacer--sm)",
-  "md": "var(--pf-l-flex--spacer--md)",
-  "lg": "var(--pf-l-flex--spacer--lg)",
-  "xl": "var(--pf-l-flex--spacer--xl)",
-  "2xl": "var(--pf-l-flex--spacer--2xl)",
-  "3xl": "var(--pf-l-flex--spacer--3xl)"
-);
-
-@mixin pf-l-flex--space-items-builder {
-  @each $prop, $value in $pf-flex-spacer-map {
-    &.pf-m-space-items-#{$prop} > * {
-      --pf-l-flex--spacer: #{$value};
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--sm) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-on-sm > * {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-on-md > * {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-on-lg > * {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-on-xl > * {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--2xl) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      &.pf-m-space-items-#{$prop}-on-2xl > * {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-}
-
-@mixin pf-l-flex--spacer-builder {
-  @each $prop, $value in $pf-flex-spacer-map {
-    .pf-m-spacer-#{$prop} {
-      --pf-l-flex--spacer: #{$value};
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--sm) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-on-sm {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-on-md {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-on-lg {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-on-xl {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--2xl) {
-    @each $prop, $value in $pf-flex-spacer-map {
-      .pf-m-spacer-#{$prop}-on-2xl {
-        --pf-l-flex--spacer: #{$value};
-      }
-    }
-  }
-}
+// Always keep list of spacers and breakpoints up-to-date
+$pf-l-flex--breakpoint-map: build-breakpoint-map();
+$pf-l-flex--spacer-map: build-spacer-map();
+$pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--spacer-map);
 
 .pf-l-flex {
   --pf-l-flex--Display: flex;
@@ -118,274 +15,276 @@ $pf-flex-spacer-map: (
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
   --pf-l-flex--flex--spacer: var(--pf-global--spacer--lg);
 
-  // Flex spacer values
-  --pf-l-flex--spacer--none: 0;
-  --pf-l-flex--spacer--xs: var(--pf-global--spacer--xs);
-  --pf-l-flex--spacer--sm: var(--pf-global--spacer--sm);
-  --pf-l-flex--spacer--md: var(--pf-global--spacer--md);
-  --pf-l-flex--spacer--lg: var(--pf-global--spacer--lg);
-  --pf-l-flex--spacer--xl: var(--pf-global--spacer--xl);
-  --pf-l-flex--spacer--2xl: var(--pf-global--spacer--2xl);
-  --pf-l-flex--spacer--3xl: var(--pf-global--spacer--3xl);
+  // Emit spacer css variables that map to requested spacer values
+  @include pf-emit-properties($pf-l-flex--variable-map);
 
   display: var(--pf-l-flex--Display);
   flex-wrap: var(--pf-l-flex--FlexWrap);
   align-items: var(--pf-l-flex--AlignItems);
+}
 
-  // Establish default item spacing
-  > * {
-    margin-right: var(--pf-l-flex--spacer);
+/* stylelint-disable no-duplicate-selectors, max-nesting-depth */
 
-    &:last-child:not([class*="pf-m-spacer"]) {
-      --pf-l-flex--spacer: 0;
-    }
+// Flex
+.pf-l-flex {
+  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+
+  &:last-child {
+    --pf-l-flex--spacer: 0;
   }
+}
 
-  // Reset item spacing in nested flex layouts
-  & & {
-    --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+// Item
+.pf-l-flex > *,
+.pf-l-flex__item {
+  // reset spacer
+  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
 
-    > * {
-      --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
-    }
-
-    > :last-child:not([class*="pf-m-spacer"]),
-    &:last-child:not([class*="pf-m-spacer"]) {
-      --pf-l-flex--spacer: 0;
-    }
+  &:last-child {
+    --pf-l-flex--spacer: 0;
   }
+}
 
-  @include pf-l-flex--space-items-builder;
-  @include pf-l-flex--spacer-builder;
+// Use global selector to
+.pf-l-flex > *,
+.pf-l-flex__item {
+  margin-right: var(--pf-l-flex--spacer);
+}
 
-  // Breakpoints with responsive modifiers
-  $breakpoint-list: (
-    (null),
-    ($pf-global--breakpoint--sm, "-on-sm"),
-    ($pf-global--breakpoint--md,"-on-md"),
-    ($pf-global--breakpoint--lg, "-on-lg"),
-    ($pf-global--breakpoint--xl, "-on-xl"),
-    ($pf-global--breakpoint--2xl, "-on-2xl")
-  );
+.pf-l-flex {
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-  // List of modifiers
-  @mixin flex-modifiers($mod: null) {
-    // display
-    &.pf-m-flex#{$mod} {
-      display: var(--pf-l-flex--Display);
-    }
+    @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
+      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
+        &.pf-m-space-items-#{$spacer}#{$breakpoint-name} {
+          > * {
+            --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
+          }
 
-    &.pf-m-inline-flex#{$mod} {
-      --pf-l-flex--Display: inline-flex;
-    }
-
-    // flex-direction
-    &.pf-m-column#{$mod} {
-      flex-direction: column;
-      align-items: normal;
-
-      > * {
-        margin: 0 0 var(--pf-l-flex--spacer) 0;
+          > :last-child {
+            --pf-l-flex--spacer: 0;
+          }
+        }
       }
-    }
 
-    // flex-direction
-    &.pf-m-column-reverse#{$mod} {
-      flex-direction: column-reverse;
-      align-items: normal;
+      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
+        .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
+          --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
 
-      > * {
-        margin: var(--pf-l-flex--spacer) 0 0 0;
+          &:last-child {
+            --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
+          }
+        }
       }
-    }
 
-    &.pf-m-row#{$mod} {
-      flex-direction: row;
-      align-items: var(--pf-l-flex--m-row--AlignItems);
-
-      // unset styling set for .pf-m-column
-      > * {
-        margin: 0 var(--pf-l-flex--spacer) 0 0;
+      // display
+      &.pf-m-flex#{$breakpoint-name},
+      .pf-m-flex#{$breakpoint-name} {
+        display: var(--pf-l-flex--Display);
       }
-    }
 
-    &.pf-m-row-reverse#{$mod} {
-      flex-direction: row-reverse;
-      align-items: var(--pf-l-flex--m-row-reverse--AlignItems);
-
-      // unset styling set for .pf-m-column
-      > * {
-        margin: 0 0 0 var(--pf-l-flex--spacer);
+      &.pf-m-inline-flex#{$breakpoint-name},
+      .pf-m-inline-flex#{$breakpoint-name} {
+        --pf-l-flex--Display: inline-flex;
       }
-    }
 
-    // flex-wrap
-    &.pf-m-wrap#{$mod} {
-      flex-wrap: wrap;
-    }
+      // flex-direction
+      &.pf-m-column#{$breakpoint-name} {
+        flex-direction: column;
+        align-items: normal;
 
-    &.pf-m-wrap-reverse#{$mod} {
-      flex-wrap: wrap-reverse;
-    }
+        > * {
+          margin: 0 0 var(--pf-l-flex--spacer) 0;
+        }
+      }
 
-    &.pf-m-nowrap#{$mod} {
-      flex-wrap: nowrap;
-    }
+      // flex-direction
+      &.pf-m-column-reverse#{$breakpoint-name} {
+        flex-direction: column-reverse;
+        align-items: normal;
 
-    // justify-content
-    &.pf-m-justify-content-flex-start#{$mod} {
-      justify-content: flex-start;
-    }
+        > * {
+          margin: var(--pf-l-flex--spacer) 0 0 0;
+        }
+      }
 
-    &.pf-m-justify-content-flex-end#{$mod} {
-      justify-content: flex-end;
-    }
+      &.pf-m-row#{$breakpoint-name} {
+        flex-direction: row;
+        align-items: var(--pf-l-flex--m-row--AlignItems);
 
-    &.pf-m-justify-content-center#{$mod} {
-      justify-content: center;
-    }
+        // unset styling set for .pf-m-column
+        > * {
+          margin: 0 var(--pf-l-flex--spacer) 0 0;
+        }
+      }
 
-    &.pf-m-justify-content-space-between#{$mod} {
-      justify-content: space-between;
-    }
+      &.pf-m-row-reverse#{$breakpoint-name} {
+        flex-direction: row-reverse;
+        align-items: var(--pf-l-flex--m-row-reverse--AlignItems);
 
-    &.pf-m-justify-content-space-around#{$mod} {
-      justify-content: space-around;
-    }
+        // unset styling set for .pf-m-column
+        > * {
+          margin: 0 0 0 var(--pf-l-flex--spacer);
+        }
+      }
 
-    &.pf-m-justify-content-space-evenly#{$mod} {
-      justify-content: space-evenly;
-    }
+      // flex-wrap
+      &.pf-m-wrap#{$breakpoint-name} {
+        flex-wrap: wrap;
+      }
 
-    // align-items
-    &.pf-m-align-items-flex-start#{$mod} {
-      align-items: flex-start;
-    }
+      &.pf-m-wrap-reverse#{$breakpoint-name} {
+        flex-wrap: wrap-reverse;
+      }
 
-    &.pf-m-align-items-flex-end#{$mod} {
-      align-items: flex-end;
-    }
+      &.pf-m-nowrap#{$breakpoint-name} {
+        flex-wrap: nowrap;
+      }
 
-    &.pf-m-align-items-center#{$mod} {
-      align-items: center;
-    }
+      // justify-content
+      &.pf-m-justify-content-flex-start#{$breakpoint-name} {
+        justify-content: flex-start;
+      }
 
-    &.pf-m-align-items-stretch#{$mod} {
-      align-items: stretch;
-    }
+      &.pf-m-justify-content-flex-end#{$breakpoint-name} {
+        justify-content: flex-end;
+      }
 
-    &.pf-m-align-items-baseline#{$mod} {
-      align-items: baseline;
-    }
+      &.pf-m-justify-content-center#{$breakpoint-name} {
+        justify-content: center;
+      }
 
-    // align-content
-    &.pf-m-align-content-flex-start#{$mod} {
-      align-content: flex-start;
-    }
+      &.pf-m-justify-content-space-between#{$breakpoint-name} {
+        justify-content: space-between;
+      }
 
-    &.pf-m-align-content-flex-end#{$mod} {
-      align-content: flex-end;
-    }
+      &.pf-m-justify-content-space-around#{$breakpoint-name} {
+        justify-content: space-around;
+      }
 
-    &.pf-m-align-content-center#{$mod} {
-      align-content: center;
-    }
+      &.pf-m-justify-content-space-evenly#{$breakpoint-name} {
+        justify-content: space-evenly;
+      }
 
-    &.pf-m-align-content-stretch#{$mod} {
-      align-content: stretch;
-    }
+      // align-items
+      &.pf-m-align-items-flex-start#{$breakpoint-name} {
+        align-items: flex-start;
+      }
 
-    &.pf-m-align-content-space-between#{$mod} {
-      align-content: space-between;
+      &.pf-m-align-items-flex-end#{$breakpoint-name} {
+        align-items: flex-end;
+      }
 
-      > * {
-        margin-right: 0;
+      &.pf-m-align-items-center#{$breakpoint-name} {
+        align-items: center;
+      }
+
+      &.pf-m-align-items-stretch#{$breakpoint-name} {
+        align-items: stretch;
+      }
+
+      &.pf-m-align-items-baseline#{$breakpoint-name} {
+        align-items: baseline;
+      }
+
+      // align-content
+      &.pf-m-align-content-flex-start#{$breakpoint-name} {
+        align-content: flex-start;
+      }
+
+      &.pf-m-align-content-flex-end#{$breakpoint-name} {
+        align-content: flex-end;
+      }
+
+      &.pf-m-align-content-center#{$breakpoint-name} {
+        align-content: center;
+      }
+
+      &.pf-m-align-content-stretch#{$breakpoint-name} {
+        align-content: stretch;
+      }
+
+      &.pf-m-align-content-space-between#{$breakpoint-name} {
+        align-content: space-between;
+
+        > * {
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+
+      &.pf-m-align-content-space-around#{$breakpoint-name} {
+        align-content: space-around;
+      }
+
+      // alignment
+      &.pf-m-align-right#{$breakpoint-name},
+      .pf-m-align-right#{$breakpoint-name} {
+        margin-left: auto;
+      }
+
+      &.pf-m-align-left#{$breakpoint-name},
+      .pf-m-align-left#{$breakpoint-name} {
+        margin-right: var(--pf-l-flex--spacer);
         margin-left: 0;
       }
-    }
 
-    &.pf-m-align-content-space-around#{$mod} {
-      align-content: space-around;
-    }
-
-    // alignment
-    &.pf-m-align-right#{$mod},
-    .pf-m-align-right#{$mod} {
-      margin-left: auto;
-    }
-
-    &.pf-m-align-left#{$mod},
-    .pf-m-align-left#{$mod} {
-      margin-right: var(--pf-l-flex--spacer);
-      margin-left: 0;
-    }
-
-    // item properties
-    .pf-m-grow#{$mod} {
-      flex-grow: 1;
-    }
-
-    .pf-m-shrink#{$mod} {
-      flex-shrink: 1;
-    }
-
-    .pf-m-full-width#{$mod} {
-      width: 100%;
-      margin-right: 0;
-    }
-
-    .pf-m-flex-1#{$mod} {
-      flex: 1 0 0;
-    }
-
-    .pf-m-flex-2#{$mod} {
-      flex: 2 0 0;
-    }
-
-    .pf-m-flex-3#{$mod} {
-      flex: 3 0 0;
-    }
-
-    .pf-m-flex-default {
-      flex: 0 1 auto;
-    }
-
-    &.pf-m-flex-none#{$mod} {
-      flex: none;
-    }
-
-    // align-self
-    .pf-m-align-self-flex-start#{$mod} {
-      align-self: flex-start;
-    }
-
-    .pf-m-align-self-flex-end#{$mod} {
-      align-self: flex-end;
-    }
-
-    .pf-m-align-self-center#{$mod} {
-      align-self: center;
-    }
-
-    .pf-m-align-self-baseline#{$mod} {
-      align-self: baseline;
-    }
-
-    .pf-m-align-self-stretch#{$mod} {
-      align-self: stretch;
-    }
-  }
-
-  /* stylelint-disable */
-  // Build the base + responsive modifier selectors
-  @each $bp, $mod in $breakpoint-list {
-    @if $bp {
-      @media screen and (min-width: #{$bp}) {
-        @include flex-modifiers($mod);
+      // item properties
+      .pf-m-grow#{$breakpoint-name} {
+        flex-grow: 1;
       }
-    } @else {
-      @include flex-modifiers($mod);
+
+      .pf-m-shrink#{$breakpoint-name} {
+        flex-shrink: 1;
+      }
+
+      .pf-m-full-width#{$breakpoint-name} {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .pf-m-flex-1#{$breakpoint-name} {
+        flex: 1 0 0;
+      }
+
+      .pf-m-flex-2#{$breakpoint-name} {
+        flex: 2 0 0;
+      }
+
+      .pf-m-flex-3#{$breakpoint-name} {
+        flex: 3 0 0;
+      }
+
+      .pf-m-flex-default#{$breakpoint-name} {
+        flex: 0 1 auto;
+      }
+
+      .pf-m-flex-none#{$breakpoint-name} {
+        flex: none;
+      }
+
+      // align-self
+      .pf-m-align-self-flex-start#{$breakpoint-name} {
+        align-self: flex-start;
+      }
+
+      .pf-m-align-self-flex-end#{$breakpoint-name} {
+        align-self: flex-end;
+      }
+
+      .pf-m-align-self-center#{$breakpoint-name} {
+        align-self: center;
+      }
+
+      .pf-m-align-self-baseline#{$breakpoint-name} {
+        align-self: baseline;
+      }
+
+      .pf-m-align-self-stretch#{$breakpoint-name} {
+        align-self: stretch;
+      }
     }
   }
-  /* stylelint-enable */
 }
+/* stylelint-enable */

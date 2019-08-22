@@ -4,7 +4,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 ### Default spacing for:
 - Flex items (not last child): `margin-right: 16px`.
 - Nested `.pf-l-flex` containers (not last child): `margin-right: 16px`.
-- `.pf-m-column` direct descendants (not first child): `margin-bottom: 16px`.
+- `.pf-m-column` direct descendants (not last child): `margin-bottom: 16px`.
 - `.pf-m-column` nested `.pf-l-flex` containers (not last child): `margin-bottom: 16px`.
 
 <br>
@@ -14,7 +14,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 - `.pf-m-space-items-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to `.pf-l-flex` only and changes the spacing of direct children only. Responsive spacers can be used by appending `{-on-[breakpoint]}` to `.pf-m-space-items-{size}`. Example: `.pf-m-space-items-lg-on-xl`.
 
 <br>
-### Available breakpoints are: `-on-sm, -on-md, -on-lg, -on-xl`.
+### Available breakpoints are: `-on-sm, -on-md, -on-lg, -on-xl, -on-2xl`.
 
 <br>
 ### Use `.pf-l-flex` when:
@@ -24,8 +24,8 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 <br>
 ### `.pf-l-flex` is different than a utility class in that:
 - It contains multiple css declarations and does not use the !important tag.
-- Does not require wrapping elements in columns or rows.
-- Break dependency upon adding utility classes to each child.
+- It does not require wrapping elements in columns or rows.
+- It breaks the dependency upon adding utility classes to each child.
 - It can be applied to container elements or components.
 
 <br>
