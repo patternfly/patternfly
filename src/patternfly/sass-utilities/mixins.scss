@@ -171,3 +171,18 @@
     @content;
   }
 }
+
+// Apply media query if value is passed
+@mixin pf-apply-breakpoint($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map) {
+  @if ($breakpoint == "null" or $breakpoint == "base") {
+    @content;
+  }
+
+  @else {
+    $breakpoint: pf-breakpoint-value($breakpoint);
+
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}

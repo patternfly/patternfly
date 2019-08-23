@@ -336,7 +336,11 @@ html {
   .pf-l-toolbar__group,
   .pf-l-toolbar__item,
   [class*="pf-u-"],
-  [class*="pf-u-"] > *:not(svg) {
+  [class*="pf-u-"] > *:not(svg),
+  .pf-c-data-toolbar,
+  .pf-c-data-toolbar__content > .pf-c-data-toolbar__item:not(.pf-m-separator),
+  .pf-c-data-toolbar__content > .pf-c-data-toolbar__group:not([class*="pf-m-space-items"]),
+  .pf-c-data-toolbar__group[class*="pf-m-space-items"] .pf-c-data-toolbar__item {
     padding: .5rem;
     border: 2px dashed #393f44;
   }
@@ -370,12 +374,6 @@ html {
     list-style-position: outside;
     list-style-type: disc;
   }
-
-  // .Preview__body {
-  //   .pf-c-page__header-nav {
-  //     background: var(--pf-global--BackgroundColor--dark-100);
-  //   }
-  // }
 }
 
 .Documentation {
@@ -536,7 +534,6 @@ html {
   .example-border {
     padding: .5rem;
   }
-
 
   .example-title {
     margin-bottom: var(--pf-global--spacer--xl);

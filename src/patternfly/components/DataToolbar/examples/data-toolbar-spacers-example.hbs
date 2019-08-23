@@ -1,0 +1,26 @@
+{{#> data-toolbar data-toolbar--id="data-toolbar-spacer-example"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-sm"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-md"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-lg"}}
+      Item
+    {{/data-toolbar-item}}
+
+    {{!-- Separator --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none pf-m-spacer-sm-on-md pf-m-spacer-md-on-lg pf-m-spacer-lg-on-xl"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
