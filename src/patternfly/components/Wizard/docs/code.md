@@ -40,6 +40,7 @@
 | `.pf-m-full-width` | `.pf-c-wizard` | Modifies the wizard to expand the full width of the viewport. |
 | `.pf-m-full-height` | `.pf-c-wizard` | Modifies the wizard to expand the full height of the viewport. |
 | `.pf-m-compact-nav` | `.pf-c-wizard` | Modifies wizard nav for a compact width. |
+| `.pf-m-in-page` | `.pf-c-wizard` | Modifies wizard for use outside of a modal. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
 | `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container body to remove the padding. |

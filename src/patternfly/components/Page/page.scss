@@ -446,6 +446,17 @@
   }
 }
 
+.pf-c-page__main-wizard {
+  display: flex;
+  flex-direction: column;
+
+  &,
+  .pf-c-wizard {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+}
+
 .pf-c-page__drawer {
   > .pf-c-drawer {
     flex: 1 0 auto;

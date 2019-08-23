@@ -8,6 +8,13 @@
   --pf-c-wizard--lg--MaxHeight: calc(100% - (var(--pf-global--spacer--2xl) * 2));
   --pf-c-wizard--m-full-width--lg--MaxWidth: auto;
   --pf-c-wizard--m-full-height--lg--Height: 100%;
+  --pf-c-wizard--m-in-page--Height: auto;
+  --pf-c-wizard--m-in-page--BoxShadow: none;
+  --pf-c-wizard--m-in-page--Width: auto;
+  --pf-c-wizard--m-in-page--lg--Width: auto;
+  --pf-c-wizard--m-in-page--lg--MaxWidth: none;
+  --pf-c-wizard--m-in-page--lg--Height: auto;
+  --pf-c-wizard--m-in-page--lg--MaxHeight: none;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard--Width: var(--pf-c-wizard--lg--Width);
@@ -68,7 +75,6 @@
   --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor: transparent;
   --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--Color--dark-200);
 
-
   // Toggle
   --pf-c-wizard__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-wizard__toggle--ZIndex: var(--pf-global--ZIndex--md);
@@ -77,6 +83,7 @@
   --pf-c-wizard__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-wizard__toggle--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-wizard__toggle--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+  --pf-c-wizard--m-in-page__toggle--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
 
   // Toggle number
   --pf-c-wizard__toggle-num--before--Top: #{pf-size-prem(2px)};
@@ -106,6 +113,10 @@
   --pf-c-wizard__nav--Width: 100%;
   --pf-c-wizard__nav--lg--Width: #{pf-size-prem(300px)};
   --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
+  --pf-c-wizard--m-in-page__nav--lg--Width: #{pf-size-prem(250px)};
+  --pf-c-wizard--m-in-page__nav--lg--BoxShadow: none;
+  --pf-c-wizard--m-in-page__nav--lg--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-wizard--m-in-page__nav--lg--BorderRightColor: var(--pf-global--BorderColor--100);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
@@ -120,6 +131,7 @@
   --pf-c-wizard__nav-list--lg--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
   --pf-c-wizard__nav-list--nested--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-wizard__nav-list--nested--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-wizard--m-in-page__nav-list--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__nav-list--PaddingRight: var(--pf-c-wizard__nav-list--lg--PaddingRight);
@@ -145,6 +157,10 @@
   --pf-c-wizard__main-body--lg--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-wizard__main-body--lg--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-wizard__main-body--lg--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-wizard--m-in-page__main-body--md--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard--m-in-page__main-body--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard--m-in-page__main-body--md--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-wizard--m-in-page__main-body--md--PaddingLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__main-body--PaddingTop: var(--pf-c-wizard__main-body--lg--PaddingTop);
@@ -164,6 +180,10 @@
   --pf-c-wizard__footer--lg--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-wizard__footer--child--MarginRight: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--child--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-wizard--m-in-page__footer--md--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-wizard--m-in-page__footer--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-wizard--m-in-page__footer--md--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-wizard--m-in-page__footer--md--PaddingLeft: var(--pf-global--spacer--xl);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__footer--PaddingTop: var(--pf-c-wizard__footer--lg--PaddingTop);
@@ -208,6 +228,37 @@
     .pf-c-wizard__toggle {
       display: none;
       visibility: hidden;
+    }
+  }
+
+  &.pf-m-in-page {
+    --pf-c-wizard--Height: var(--pf-c-wizard--m-in-page--Height);
+    --pf-c-wizard--BoxShadow: var(--pf-c-wizard--m-in-page--BoxShadow);
+    --pf-c-wizard--Width: var(--pf-c-wizard--m-in-page--Width);
+    --pf-c-wizard--lg--Width: var(--pf-c-wizard--m-in-page--lg--Width);
+    --pf-c-wizard--lg--MaxWidth: var(--pf-c-wizard--m-in-page--lg--MaxWidth);
+    --pf-c-wizard--lg--Height: var(--pf-c-wizard--m-in-page--lg--Height);
+    --pf-c-wizard--lg--MaxHeight: var(--pf-c-wizard--m-in-page--lg--MaxHeight);
+    --pf-c-wizard__nav--lg--Width: var(--pf-c-wizard--m-in-page__nav--lg--Width);
+    --pf-c-wizard__nav--lg--BoxShadow: var(--pf-c-wizard--m-in-page__nav--lg--BoxShadow);
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      --pf-c-wizard__main-body--PaddingTop: var(--pf-c-wizard--m-in-page__main-body--md--PaddingTop);
+      --pf-c-wizard__main-body--PaddingRight: var(--pf-c-wizard--m-in-page__main-body--md--PaddingRight);
+      --pf-c-wizard__main-body--PaddingBottom: var(--pf-c-wizard--m-in-page__main-body--md--PaddingBottom);
+      --pf-c-wizard__main-body--PaddingLeft: var(--pf-c-wizard--m-in-page__main-body--md--PaddingLeft);
+      --pf-c-wizard__footer--PaddingTop: var(--pf-c-wizard--m-in-page__footer--md--PaddingTop);
+      --pf-c-wizard__footer--PaddingRight: var(--pf-c-wizard--m-in-page__footer--md--PaddingRight);
+      --pf-c-wizard__footer--PaddingBottom: var(--pf-c-wizard--m-in-page__footer--md--PaddingBottom);
+      --pf-c-wizard__footer--PaddingLeft: var(--pf-c-wizard--m-in-page__footer--md--PaddingLeft);
+      --pf-c-wizard__toggle--PaddingLeft: var(--pf-c-wizard--m-in-page__toggle--md--PaddingLeft);
+      --pf-c-wizard__nav-list--PaddingLeft: var(--pf-c-wizard--m-in-page__nav-list--md--PaddingLeft);
+    }
+
+    .pf-c-wizard__nav {
+      @media screen and (min-width: $pf-global--breakpoint--lg) {
+        border-right: var(--pf-c-wizard--m-in-page__nav--lg--BorderRightWidth) solid var(--pf-c-wizard--m-in-page__nav--lg--BorderRightColor);
+      }
     }
   }
 }
