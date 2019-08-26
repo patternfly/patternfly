@@ -109,9 +109,3 @@ jobs:
     - run:
         name: Release to NPM
         command: npm run semantic-release
-    - run:
-        name: Avoid Unknown Host for github.com
-        command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-    - run:
-        name: Upload to gh-pages
-        command: npm run publish:docs
