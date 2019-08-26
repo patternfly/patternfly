@@ -18,10 +18,6 @@ import overflowMenuSimpleAdditionalOptionsExampleDoc from '../docs/overflow-menu
 import overflowMenuPersistentExampleDoc from '../docs/overflow-menu-persistent.md';
 import overflowMenuIntroDoc from '../docs/overflow-menu-intro.md';
 
-// import overflowMenuSpacersExampleRaw from '!raw!./overflow-menu-spacers-example.hbs';
-// import OverflowMenuSpacersExample from './overflow-menu-spacers-example.hbs';
-// import overflowMenuSpacersExampleDoc from '../docs/overflow-menu-spacers.md';
-
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -34,8 +30,6 @@ export default props => {
   const headingText = 'Overflow Menu';
   const variablesRoot = 'pf-c-overflow-menu';
 
-  // const overflowMenuSpacersExample = OverflowMenuSpacersExample();
-
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example
@@ -47,13 +41,6 @@ export default props => {
       >
         {overflowMenuSimpleExample}
       </Example>
-      {/* <Example
-        heading="Overflow menu spacers"
-        handlebars={overflowMenuSpacersExampleRaw}
-        docs={overflowMenuSpacersExampleDoc}
-      >
-        {overflowMenuSpacersExample}
-      </Example> */}
       <Example
         heading="Overflow menu group types"
         handlebars={overflowMenuGroupTypesExampleRaw}

@@ -340,7 +340,7 @@ html {
   .pf-c-data-toolbar,
   .pf-c-data-toolbar__content > .pf-c-data-toolbar__item:not(.pf-m-separator),
   .pf-c-data-toolbar__content > .pf-c-data-toolbar__group:not([class*="pf-m-space-items"]),
-  .pf-c-data-toolbar__group[class*="pf-m-space-items"] .pf-c-data-toolbar__item {
+  .pf-c-data-toolbar__group[class*="pf-m-space-items"] .pf-c-data-toolbar__item,
   .pf-c-overflow-menu__item {
     padding: .5rem;
     border: 2px dashed #393f44;
