@@ -448,11 +448,11 @@
 
 .pf-c-page__main-wizard {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
 
   &,
   .pf-c-wizard {
-    flex: 1 1 auto;
     min-height: 0;
   }
 }

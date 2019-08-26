@@ -8,12 +8,10 @@
   --pf-c-wizard--lg--MaxHeight: calc(100% - (var(--pf-global--spacer--2xl) * 2));
   --pf-c-wizard--m-full-width--lg--MaxWidth: auto;
   --pf-c-wizard--m-full-height--lg--Height: 100%;
-  --pf-c-wizard--m-in-page--Height: auto;
   --pf-c-wizard--m-in-page--BoxShadow: none;
+  --pf-c-wizard--m-in-page--Height: 100%;
   --pf-c-wizard--m-in-page--Width: auto;
-  --pf-c-wizard--m-in-page--lg--Width: auto;
   --pf-c-wizard--m-in-page--lg--MaxWidth: none;
-  --pf-c-wizard--m-in-page--lg--Height: auto;
   --pf-c-wizard--m-in-page--lg--MaxHeight: none;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -235,12 +233,6 @@
     --pf-c-wizard--Height: var(--pf-c-wizard--m-in-page--Height);
     --pf-c-wizard--BoxShadow: var(--pf-c-wizard--m-in-page--BoxShadow);
     --pf-c-wizard--Width: var(--pf-c-wizard--m-in-page--Width);
-    --pf-c-wizard--lg--Width: var(--pf-c-wizard--m-in-page--lg--Width);
-    --pf-c-wizard--lg--MaxWidth: var(--pf-c-wizard--m-in-page--lg--MaxWidth);
-    --pf-c-wizard--lg--Height: var(--pf-c-wizard--m-in-page--lg--Height);
-    --pf-c-wizard--lg--MaxHeight: var(--pf-c-wizard--m-in-page--lg--MaxHeight);
-    --pf-c-wizard__nav--lg--Width: var(--pf-c-wizard--m-in-page__nav--lg--Width);
-    --pf-c-wizard__nav--lg--BoxShadow: var(--pf-c-wizard--m-in-page__nav--lg--BoxShadow);
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
       --pf-c-wizard__main-body--PaddingTop: var(--pf-c-wizard--m-in-page__main-body--md--PaddingTop);
@@ -253,6 +245,13 @@
       --pf-c-wizard__footer--PaddingLeft: var(--pf-c-wizard--m-in-page__footer--md--PaddingLeft);
       --pf-c-wizard__toggle--PaddingLeft: var(--pf-c-wizard--m-in-page__toggle--md--PaddingLeft);
       --pf-c-wizard__nav-list--PaddingLeft: var(--pf-c-wizard--m-in-page__nav-list--md--PaddingLeft);
+    }
+
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      --pf-c-wizard--lg--MaxWidth: var(--pf-c-wizard--m-in-page--lg--MaxWidth);
+      --pf-c-wizard--lg--MaxHeight: var(--pf-c-wizard--m-in-page--lg--MaxHeight);
+      --pf-c-wizard__nav--Width: var(--pf-c-wizard--m-in-page__nav--lg--Width);
+      --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard--m-in-page__nav--lg--BoxShadow);
     }
 
     .pf-c-wizard__nav {
@@ -436,8 +435,6 @@
 }
 
 .pf-c-wizard__nav-item {
-  cursor: not-allowed;
-
   & + & {
     margin-top: var(--pf-c-wizard__nav-item--MarginTop);
   }
