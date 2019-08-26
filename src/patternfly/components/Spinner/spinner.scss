@@ -45,9 +45,7 @@
 
   // These sizes need to match the clipper:after BoxShadowSize
   --pf-c-spinner__ball--after--Width--wide: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--wide));
-  --pf-c-spinner__ball--after--Width--narrow: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--narrow));
   --pf-c-spinner__ball--after--Height--wide: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--wide));
-  --pf-c-spinner__ball--after--Height--narrow: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier--narrow));
 
   // Tail ball variables
   --pf-c-spinner__tail-ball--after--BackgroundColor: var(--pf-c-spinner--Color);
@@ -182,6 +180,7 @@
     content: "";
     background-color: var(--pf-c-spinner__lead-ball--after--BackgroundColor);
     border-radius: 50%;
+    transform-origin: top right;
     animation: pf-animation-spinner__ball-size var(--pf-c-spinner--AnimationDuration) linear infinite;
   }
 }
@@ -219,6 +218,7 @@
     content: "";
     background-color: var(--pf-c-spinner__tail-ball--after--BackgroundColor);
     border-radius: 50%;
+    transform-origin: top right;
     animation: pf-animation-spinner__ball-size var(--pf-c-spinner--AnimationDuration) linear infinite;
   }
 }
@@ -229,7 +229,7 @@
     transform: rotate(0deg);
   }
 
-  68% {
+  67.5% {
     transform: rotate(-180deg);
   }
 
@@ -241,18 +241,15 @@
 // This animates the size of both the lead and tail balls to match the stroke width of the curved line
 @keyframes pf-animation-spinner__ball-size {
   0% {
-    width: var(--pf-c-spinner__ball--after--Width--wide);
-    height: var(--pf-c-spinner__ball--after--Height--wide);
+    transform: scale(1);
   }
 
   50% {
-    width: var(--pf-c-spinner__ball--after--Width--narrow);
-    height: var(--pf-c-spinner__ball--after--Height--narrow);
+    transform: scale(calc(var(--pf-c-spinner--stroke-width-multiplier--narrow) / var(--pf-c-spinner--stroke-width-multiplier--wide)));
   }
 
   100% {
-    width: var(--pf-c-spinner__ball--after--Width--wide);
-    height: var(--pf-c-spinner__ball--after--Height--wide);
+    transform: scale(1);
   }
 }
 
