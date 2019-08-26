@@ -92,7 +92,7 @@
 
   // Table check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(6px)};
+  --pf-c-table__check--responsive--MarginTop: 0;
 
   // Table action
   --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
@@ -394,6 +394,7 @@
   // Check table cell
   .pf-c-table__check {
     align-self: center; // Align the checkbox to be center in the grid cell
+    margin-top: var(--pf-c-table__check--responsive--MarginTop);
     margin-left: var(--pf-c-table__check--responsive--MarginLeft);
     grid-row-start: 1;
     grid-column-start: 2;
