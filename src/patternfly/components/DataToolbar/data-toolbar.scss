@@ -35,9 +35,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__item--spacer: var(--pf-c-data-toolbar--spacer--base);
   --pf-c-data-toolbar__group--spacer: var(--pf-c-data-toolbar--spacer--base);
 
-  // Focus state
-  --pf-c-data-toolbar__item--child--focus--ZIndex: var(--pf-global--ZIndex--xs);
-
   // Toggle group
   --pf-c-data-toolbar__group--m-toggle-group--spacer: var(--pf-global--spacer--sm);
   --pf-c-data-toolbar__group--m-toggle-group--m-reveal--spacer: var(--pf-c-data-toolbar__group--spacer);
@@ -322,10 +319,15 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
           visibility: hidden;
         }
       }
+    }
+  }
 
-      // Spacer and space-items
+  // .pf-m-space-items-{size}{-on-breakpoint}
+  @each $breakpoint, $breakpoint-value in $pf-c-data-toolbar--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map) {
       @each $spacer, $spacer-value in $pf-c-data-toolbar--spacer-map {
-        // Space items modifier
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
             --pf-c-data-toolbar--spacer: #{$spacer-value};
@@ -336,9 +338,15 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
           }
         }
       }
+    }
+  }
 
+  // .pf-m-spacer-{size}{-on-breakpoint}
+  @each $breakpoint, $breakpoint-value in $pf-c-data-toolbar--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map) {
       @each $spacer, $spacer-value in $pf-c-data-toolbar--spacer-map {
-        // Spacer modifier
         .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
           --pf-c-data-toolbar--spacer: #{$spacer-value};
 
