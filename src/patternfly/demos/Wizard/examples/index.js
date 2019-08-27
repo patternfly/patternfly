@@ -20,7 +20,7 @@ export default props => {
       <Example heading="Wizard - in page" handlebars={wizardInPageExampleRaw} fullPageOnly="true">
         {wizardInPageExample}
       </Example>
-      <Example heading="Wizard - in page (expanded)" handlebars={wizardInPageExpandedExampleRaw} fullPageOnly="true">
+      <Example heading="Wizard - nav expanded (mobile)" handlebars={wizardInPageExpandedExampleRaw} fullPageOnly="true">
         {wizardInPageExpandedExample}
       </Example>
     </Documentation>

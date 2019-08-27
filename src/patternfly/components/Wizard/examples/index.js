@@ -32,7 +32,7 @@ export default props => {
       <Example heading="Wizard" handlebars={wizardExampleRaw} fullPageOnly="true">
         {wizardExample}
       </Example>
-      <Example heading="Wizard - expanded (mobile)" handlebars={wizardExpandedExampleRaw} fullPageOnly="true">
+      <Example heading="Wizard - nav expanded (mobile)" handlebars={wizardExpandedExampleRaw} fullPageOnly="true">
         {wizardExpandedExample}
       </Example>
       <Example heading="Wizard - finished" handlebars={wizardFinishedExampleRaw} fullPageOnly="true">
