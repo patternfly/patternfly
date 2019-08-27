@@ -9,3 +9,18 @@
     {{/horizontal-form-group}}
   {{/form-group}}
 {{/form}}
+
+<br>
+
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels"}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"') form-label--modifier="pf-m-align-top"}}
+      Info (.pf-m-align-top)
+    {{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form--id '-horizontal-form-name-2" name="' form--id '-horizontal-form-name-2" aria-label="textarea example"')}}
+      {{/form-control}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+{{/form}}
+
