@@ -101,7 +101,7 @@
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#> page-main}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
       {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
         {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
@@ -139,7 +139,6 @@
     {{/page-main-nav}}
     {{#> page-template-breadcrumb}}
     {{/page-template-breadcrumb}}
-    <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

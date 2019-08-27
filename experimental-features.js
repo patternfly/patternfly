@@ -1,10 +1,10 @@
 module.exports = [
   {
-    name: 'ComponentName',
-    path: 'components/ComponentName/'
+    name: 'Drawer',
+    path: 'components/Drawer/'
   },
   {
-    name: 'ComponentNameTwo',
-    path: 'components/ComponentNameTwo/'
+    name: 'Divider',
+    path: 'components/Divider/'
   }
 ];

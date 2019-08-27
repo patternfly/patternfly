@@ -360,8 +360,9 @@
   padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
 }
 
-// Main
-.pf-c-page__main {
+// Main & Drawer
+.pf-c-page__main,
+.pf-c-page__drawer {
   grid-area: main;
   z-index: var(--pf-c-page__main--ZIndex);
   display: flex;
@@ -369,6 +370,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .pf-c-page__main-nav {
@@ -437,6 +442,24 @@
       --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight);
       --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom);
       --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft);
+    }
+  }
+}
+
+.pf-c-page__drawer {
+  > .pf-c-drawer {
+    flex: 1 0 auto;
+
+    > .pf-c-drawer__content {
+      display: flex;
+      flex-direction: column;
+
+      .pf-c-page__main {
+        --pf-c-page__main--ZIndex: auto;
+
+        grid-area: auto;
+        flex: 1 0 auto;
+      }
     }
   }
 }

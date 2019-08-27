@@ -172,6 +172,7 @@
   --pf-chart-donut--label--subtitle--position: #{$pf-chart-donut--label--subtitle--position};
   --pf-chart-donut--pie--Height: #{$pf-chart-donut--pie--Height};
   --pf-chart-donut--pie--angle--Padding: #{$pf-chart-donut--pie--angle--Padding};
+  --pf-chart-donut--pie--Padding: #{$pf-chart-donut--pie--Padding};
   --pf-chart-donut--pie--Width: #{$pf-chart-donut--pie--Width};
 
   // Donut Threshold Chart
@@ -181,15 +182,19 @@
   --pf-chart-donut--threshold--warning--Color: #{$pf-chart-donut--threshold--warning--Color};
   --pf-chart-donut--threshold--danger--Color: #{$pf-chart-donut--threshold--danger--Color};
   --pf-chart-donut--threshold--dynamic--pie--Height: #{$pf-chart-donut--threshold--dynamic--pie--Height};
+  --pf-chart-donut--threshold--dynamic--pie--Padding: #{$pf-chart-donut--threshold--dynamic--pie--Padding};
   --pf-chart-donut--threshold--dynamic--pie--Width: #{$pf-chart-donut--threshold--dynamic--pie--Width};
   --pf-chart-donut--threshold--static--pie--Height: #{$pf-chart-donut--threshold--static--pie--Height};
   --pf-chart-donut--threshold--static--pie--angle--Padding: #{$pf-chart-donut--threshold--static--pie--angle--Padding};
+  --pf-chart-donut--threshold--static--pie--Padding: #{$pf-chart-donut--threshold--static--pie--Padding};
   --pf-chart-donut--threshold--static--pie--Width: #{$pf-chart-donut--threshold--static--pie--Width};
 
   // Donut Utilization Chart
   --pf-chart-donut--utilization--dynamic--pie--Height: #{$pf-chart-donut--utilization--dynamic--pie--Height};
   --pf-chart-donut--utilization--dynamic--pie--angle--Padding: #{$pf-chart-donut--utilization--dynamic--pie--angle--Padding};
+  --pf-chart-donut--utilization--dynamic--pie--Padding: #{$pf-chart-donut--utilization--dynamic--pie--Padding};
   --pf-chart-donut--utilization--dynamic--pie--Width: #{$pf-chart-donut--utilization--dynamic--pie--Width};
+  --pf-chart-donut--utilization--static--pie--Padding: #{$pf-chart-donut--utilization--static--pie--Padding};
 
   // Error Bar
   --pf-chart-errorbar--BorderWidth: #{$pf-chart-errorbar--BorderWidth};

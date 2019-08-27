@@ -13,7 +13,6 @@
     "build": "gatsby build",
     "build:pficons": "node ./src/icons/generateIcons.js",
     "build:pficonfont": "gulp build-pficonfont",
-    "build-ghpages": "gatsby build --prefix-paths",
     "build:ie11": "node build/npm-scripts/ie-convert-all.js",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "dev": "gatsby develop",
@@ -34,7 +33,8 @@
     "a11y": "npm run gen:sitemap && npm run audit:a11y",
     "test:ci": "start-server-and-test dev \"http://localhost:8000\" a11y",
     "update-modifiers": "./build/extractModifiers.sh",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "publish:docs": "gh-pages --message 'Publishing [ci skip]' --dist public"
   },
   "lint-staged": {
     "*.js": [
@@ -87,8 +87,10 @@
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.17",
     "gatsby-transformer-yaml": "^2.1.11",
+    "gh-pages": "2.0.1",
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
+    "gulp-cli": "^2.2.0",
     "gulp-cssnano": "^2.1.3",
     "gulp-header": "^2.0.7",
     "gulp-iconfont": "^10.0.2",

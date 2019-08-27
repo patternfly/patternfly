@@ -3,6 +3,9 @@
   aria-label="Application launcher"
   {{#if app-launcher-toggle--attribute}}
     {{{app-launcher-toggle--attribute}}}
+  {{/if}}
+  {{#if app-launcher--IsDisabled}}
+    disabled
   {{/if}}>
     {{> app-launcher-toggle-icon}}
 </button>
