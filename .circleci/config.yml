@@ -70,7 +70,7 @@ jobs:
         paths: *build_cache_paths
   test_a11y:
     docker:
-    - image: circleci/node:10
+    - image: circleci/node:10-browsers
     steps:
     - *attach_workspace
     - restore_cache:
