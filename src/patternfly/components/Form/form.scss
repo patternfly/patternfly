@@ -1,7 +1,7 @@
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter);
 
-  // Labels
+  // Label
   --pf-c-form__label--Color: var(--pf-global--Color--100);
   --pf-c-form__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-form__label--FontSize: var(--pf-global--FontSize--sm);
@@ -73,6 +73,7 @@
       .pf-c-form__group .pf-c-form__label {
         display: flex;
         align-items: center;
+        padding-top: 0; // remove this after breaking change period
         padding-bottom: 0;
 
         &.pf-m-align-top {
