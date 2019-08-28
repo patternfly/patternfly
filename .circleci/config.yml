@@ -40,7 +40,7 @@ workflows:
 jobs:
   build:
     docker:
-    - image: circleci/node:8.15
+    - image: circleci/node:10-browsers
     steps:
     - checkout
     - persist_to_workspace:
@@ -70,7 +70,7 @@ jobs:
         paths: *build_cache_paths
   test_a11y:
     docker:
-    - image: circleci/node:8.15-browsers
+    - image: circleci/node:10
     steps:
     - *attach_workspace
     - restore_cache:
@@ -81,7 +81,7 @@ jobs:
         command: npm run test:ci
   upload_docs:
     docker:
-    - image: circleci/node:8.15
+    - image: circleci/node:10
     steps:
     - *attach_workspace
     - run:
@@ -89,7 +89,7 @@ jobs:
         command: .circleci/upload-docs.sh
   lint:
     docker:
-    - image: circleci/node:8.15
+    - image: circleci/node:10
     steps:
     - *attach_workspace
     - restore_cache:
@@ -100,7 +100,7 @@ jobs:
         command: npm run lint:styles
   deploy:
     docker:
-    - image: circleci/node:8.15
+    - image: circleci/node:10
     steps:
     - *attach_workspace
     - restore_cache:
