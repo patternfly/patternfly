@@ -26,4 +26,4 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
-| `.pf-m-align-left` | `.pf-c-modal-box__foter` | Modifies for buttons in footer to be left aligned. |
+| `.pf-m-align-left` | `.pf-c-modal-box__foter` | Modifies for buttons in footer to be left aligned. **Required** |
