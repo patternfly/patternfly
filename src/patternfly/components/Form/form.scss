@@ -24,7 +24,7 @@
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
 
   // actions
-  // --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginLeft: var(--pf-global--spacer--sm);
@@ -74,9 +74,8 @@
         display: flex;
         align-items: center;
         padding-bottom: 0;
-        // padding-top: var(--pf-c-form__label--PaddingTop);
 
-        .pf-m-align-top {
+        &.pf-m-align-top {
           align-items: flex-start;
         }
       }
@@ -152,7 +151,6 @@
 .pf-c-form__label-required {
   margin-left: var(--pf-c-form__label-required--MarginLeft);
   font-size: var(--pf-c-form__label-required--FontSize);
-  line-height: 0;
   color: var(--pf-c-form__label-required--Color);
 }
 
