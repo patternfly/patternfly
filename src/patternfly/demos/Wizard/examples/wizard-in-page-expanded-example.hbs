@@ -55,7 +55,6 @@
     {{/page-template-breadcrumb}}
     {{#> page-template-title}}
     {{/page-template-title}}
-    {{#> divider}}{{/divider}}
     {{#> page-main-wizard}}
       {{#> wizard wizard--modifier="pf-m-in-page" wizard--IsExpanded="true"}}
         {{#> wizard-toggle}}
@@ -114,7 +113,7 @@
                   {{/wizard-nav-item}}
                 {{/wizard-nav-list}}
               {{/wizard-nav}}
-            {{#> wizard-main}}
+            {{#> wizard-main wizard-main--type="div"}}
               <p>Wizard content goes here</p>
             {{/wizard-main}}
           {{/wizard-inner-wrap}}

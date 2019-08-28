@@ -1,8 +1,8 @@
-<main class="pf-c-wizard__main{{#if wizard-main--modifier}} {{wizard-main--modifier}}{{/if}}"
+<{{#if wizard-main--type}}{{wizard-main--type}}{{else}}main{{/if}} class="pf-c-wizard__main{{#if wizard-main--modifier}} {{wizard-main--modifier}}{{/if}}"
   {{#if wizard-main--attribute}}
     {{{wizard-main--attribute}}}
   {{/if}}>
   {{#> wizard-main-body}}
     {{> @partial-block}}
   {{/wizard-main-body}}
-</main>
+</{{#if wizard-main--type}}{{wizard-main--type}}{{else}}main{{/if}}>

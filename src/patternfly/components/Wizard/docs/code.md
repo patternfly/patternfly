@@ -32,7 +32,7 @@
 | `.pf-c-wizard__nav-list` | `<ol>` | Initiates a list of steps. **Required** |
 | `.pf-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
 | `.pf-c-wizard__nav-link` | `<a>` | Initiates a step link. **Required** |
-| `.pf-c-wizard__main` | `<main>` | Initiates the main container. **Required** |
+| `.pf-c-wizard__main` | `<main>`, `<div>` | Initiates the main container. **Required** Note: use the `<main>` element when when there are no other `<main>` elements on the page.|
 | `.pf-c-wizard__main-body` | `<div>` | Initiates the main container body section. **Required** |
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |

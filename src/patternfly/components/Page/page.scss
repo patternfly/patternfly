@@ -155,6 +155,10 @@
   --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-c-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
+  // Wizard main section
+  --pf-c-page__main-wizard--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+
   // Base
   display: grid;
   height: 100%;
@@ -447,14 +451,8 @@
 }
 
 .pf-c-page__main-wizard {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-
-  &,
-  .pf-c-wizard {
-    min-height: 0;
-  }
+  flex: 1 0 0;
+  border-top: var(--pf-c-page__main-wizard--BorderTopWidth) solid var(--pf-c-page__main-wizard--BorderTopColor);
 }
 
 .pf-c-page__drawer {
