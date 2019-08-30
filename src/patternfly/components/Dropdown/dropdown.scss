@@ -46,6 +46,7 @@
   --pf-c-dropdown__toggle--m-split-button--first-child--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--m-split-button--last-child--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--m-split-button__toggle-check__input--Transform: translateY(#{pf-size-prem(-1px)});
+  --pf-c-dropdown__toggle--m-split-button__toggle-text--MarginLeft: var(--pf-global--spacer--xs);
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -168,6 +169,10 @@
     .pf-c-dropdown__toggle-button {
       color: var(--pf-c-dropdown__toggle-button--Color);
       border: 0;
+    }
+
+    .pf-c-dropdown__toggle-text {
+      margin-left: var(--pf-c-dropdown__toggle--m-split-button__toggle-text--MarginLeft);
     }
   }
 
