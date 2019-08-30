@@ -1,4 +1,4 @@
-{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels"}}
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-center"}}
   {{#> form-group}}
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"') required="true"}}
       Name
@@ -7,12 +7,15 @@
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-horizontal-form-name" name="' form--id '-horizontal-form-name" required')}}
       {{/form-control}}
     {{/horizontal-form-group}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-name-helper" aria-live="polite"')}}
+      This is helper text for an invalid input
+    {{/form-helper-text}}
   {{/form-group}}
 {{/form}}
 
 <br>
 
-{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels"}}
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-top"}}
   {{#> form-group}}
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"') form-label--modifier="pf-m-align-top"}}
       Info (.pf-m-align-top)
@@ -21,6 +24,9 @@
       {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form--id '-horizontal-form-name-2" name="' form--id '-horizontal-form-name-2" aria-label="textarea example"')}}
       {{/form-control}}
     {{/horizontal-form-group}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-info-helper" aria-live="polite"')}}
+      This is helper text for an invalid input
+    {{/form-helper-text}}
   {{/form-group}}
 {{/form}}
 

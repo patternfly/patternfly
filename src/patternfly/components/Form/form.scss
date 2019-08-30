@@ -73,11 +73,11 @@
       .pf-c-form__group .pf-c-form__label {
         display: flex;
         align-items: center;
-        padding-top: 0; // remove this after breaking change period
         padding-bottom: 0;
 
         &.pf-m-align-top {
           align-items: flex-start;
+          padding-top: var(--pf-c-form__label--PaddingTop);
         }
       }
       /* stylelint-enable */
