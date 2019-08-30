@@ -12,10 +12,9 @@
 | `.pf-m-flex-1{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 1 0 0. |
 | `.pf-m-flex-2{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 2 0 0. |
 | `.pf-m-flex-3{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 3 0 0. |
+| `.pf-m-flex-4{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 4 0 0. |
 | `.pf-m-flex-default{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets a nested flex layout or flex item flex shorthand property to 0 1 auto. |
 | `.pf-m-flex-none{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to none. |
-
-
 | `.pf-m-column-reverse{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout flex-direction property to column-reverse. |
 | `.pf-m-row-reverse{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout flex-direction property to row-reverse. |
 | `.pf-m-wrap{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout flex-wrap property to wrap. |

@@ -56,34 +56,13 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
-      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
-        &.pf-m-space-items-#{$spacer}#{$breakpoint-name} {
-          > * {
-            --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
-          }
-
-          > :last-child {
-            --pf-l-flex--spacer: 0;
-          }
-        }
-      }
-
-      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
-        .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
-          --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
-
-          &:last-child {
-            --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
-          }
-        }
-      }
-
       // display
       &.pf-m-flex#{$breakpoint-name},
       .pf-m-flex#{$breakpoint-name} {
         display: var(--pf-l-flex--Display);
       }
 
+      // inline flex
       &.pf-m-inline-flex#{$breakpoint-name},
       .pf-m-inline-flex#{$breakpoint-name} {
         --pf-l-flex--Display: inline-flex;
@@ -99,7 +78,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
         }
       }
 
-      // flex-direction
+      // flex-direction column-reverse
       &.pf-m-column-reverse#{$breakpoint-name} {
         flex-direction: column-reverse;
         align-items: normal;
@@ -109,6 +88,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
         }
       }
 
+      // flex-direction row
       &.pf-m-row#{$breakpoint-name} {
         flex-direction: row;
         align-items: var(--pf-l-flex--m-row--AlignItems);
@@ -119,6 +99,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
         }
       }
 
+      // flex-direction row-reverse
       &.pf-m-row-reverse#{$breakpoint-name} {
         flex-direction: row-reverse;
         align-items: var(--pf-l-flex--m-row-reverse--AlignItems);
@@ -134,6 +115,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
         flex-wrap: wrap;
       }
 
+      // flex-wrap reverse
       &.pf-m-wrap-reverse#{$breakpoint-name} {
         flex-wrap: wrap-reverse;
       }
@@ -256,6 +238,10 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
         flex: 3 0 0;
       }
 
+      .pf-m-flex-4#{$breakpoint-name} {
+        flex: 4 0 0;
+      }
+
       .pf-m-flex-default#{$breakpoint-name} {
         flex: 0 1 auto;
       }
@@ -283,6 +269,42 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
       .pf-m-align-self-stretch#{$breakpoint-name} {
         align-self: stretch;
+      }
+    }
+  }
+
+  // .pf-m-space-items-{size}{-on-breakpoint}
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
+      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
+        &.pf-m-space-items-#{$spacer}#{$breakpoint-name} {
+          > * {
+            --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
+          }
+
+          > :last-child {
+            --pf-l-flex--spacer: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // .pf-m-spacer-{size}{-on-breakpoint}
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
+      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
+        .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
+          --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
+
+          &:last-child {
+            --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
+          }
+        }
       }
     }
   }
