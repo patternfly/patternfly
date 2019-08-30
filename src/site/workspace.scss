@@ -416,6 +416,15 @@ html {
 .is-extra-tall-body {
   .Preview__body {
     height: 30em;
+
+    @at-root .is-example-grow#{&} {
+      display: flex;
+      flex-direction: column;
+
+      > * {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
@@ -545,21 +554,6 @@ html {
 }
 
 .Example {
-  .pf-c-box {
-    padding: 30px;
-    margin: 10px;
-    border: 1px solid #ddd;
-  }
-
-  .pf-c-page-title {
-    border: 1px solid #ddd;
-
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
   .widget-section {
     padding: var(--pf-global--spacer--md);
     border: 1px dashed #ddd;

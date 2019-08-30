@@ -5,4 +5,5 @@
   height: var(--pf-c-divider--Height);
   background-color: var(--pf-c-divider--BackgroundColor);
   border: 0; // removes the default border styling on an hr
+  flex-shrink: 0;
 }
