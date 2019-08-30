@@ -4,46 +4,46 @@
   --pf-c-spinner--AnimationDuration: 1.5s;
   --pf-c-spinner--AnimationTimingFunction: cubic-bezier(.77, .005, .315, 1);
 
-  // set the overall width and height of the spinner to be consistent with the icon size
-  // Width and Height must be the same
-  --pf-c-spinner--Width: var(--pf-global--icon--FontSize--xl);
-  --pf-c-spinner--Height: var(--pf-global--icon--FontSize--xl);
+  // This conceptual variable is used to set other values all based on the diameter of the spinner
+  --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
 
-  // These variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
+  // These conceptual variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
   --pf-c-spinner--stroke-width-multiplier: .14;
+  --pf-c-spinner--stroke-width: calc(var(--pf-c-spinner--diameter) * var(--pf-c-spinner--stroke-width-multiplier));
+
+  // Set the overall width and height of the spinner to be consistent with the icon size
+  // Width and Height must be the same
+  --pf-c-spinner--Width: var(--pf-c-spinner--diameter);
+  --pf-c-spinner--Height: var(--pf-c-spinner--diameter);
 
   // This variable is used to set the color for all the parts of the spinner
   --pf-c-spinner--Color: var(--pf-global--primary-color--100);
 
-  // modifier variables for main spinner
+  // Modifier variables for main spinner
   // Width and Height must be the same
-  --pf-c-spinner--m-sm--Width: var(--pf-global--icon--FontSize--sm);
-  --pf-c-spinner--m-sm--Height: var(--pf-global--icon--FontSize--sm);
-  --pf-c-spinner--m-md--Width: var(--pf-global--icon--FontSize--md);
-  --pf-c-spinner--m-md--Height: var(--pf-global--icon--FontSize--md);
-  --pf-c-spinner--m-lg--Width: var(--pf-global--icon--FontSize--lg);
-  --pf-c-spinner--m-lg--Height: var(--pf-global--icon--FontSize--lg);
-  --pf-c-spinner--m-xl--Width: var(--pf-global--icon--FontSize--xl);
-  --pf-c-spinner--m-xl--Height: var(--pf-global--icon--FontSize--xl);
+  --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
+  --pf-c-spinner--m-md--diameter: var(--pf-global--icon--FontSize--md);
+  --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
+  --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
 
   // Clipper variables
-  --pf-c-spinner__clipper--Width: var(--pf-c-spinner--Width);
-  --pf-c-spinner__clipper--Height: var(--pf-c-spinner--Height);
+  --pf-c-spinner__clipper--Width: var(--pf-c-spinner--diameter);
+  --pf-c-spinner__clipper--Height: var(--pf-c-spinner--diameter);
 
   // Clipper:after (circle) values
   --pf-c-spinner__clipper--after--BoxShadowColor: var(--pf-c-spinner--Color);
-  --pf-c-spinner__clipper--after--Width: var(--pf-c-spinner--Width);
-  --pf-c-spinner__clipper--after--Height: var(--pf-c-spinner--Height);
+  --pf-c-spinner__clipper--after--Width: var(--pf-c-spinner--diameter);
+  --pf-c-spinner__clipper--after--Height: var(--pf-c-spinner--diameter);
 
   // This creates the stroke and needs to match the spinner__ball:after Height and Width
-  --pf-c-spinner__clipper--after--BoxShadowSize: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier));
+  --pf-c-spinner__clipper--after--BoxShadowSize: var(--pf-c-spinner--stroke-width);
 
   // Lead ball variables
   --pf-c-spinner__lead-ball--after--BackgroundColor: var(--pf-c-spinner--Color);
 
-  // These sizes need to match the clipper:after BoxShadowSize
-  --pf-c-spinner__ball--after--Width: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier));
-  --pf-c-spinner__ball--after--Height: calc(var(--pf-c-spinner--Width) * var(--pf-c-spinner--stroke-width-multiplier));
+  // These sizes need to match the stroke width, i.e. clipper:after BoxShadowSize
+  --pf-c-spinner__ball--after--Width: var(--pf-c-spinner--stroke-width);
+  --pf-c-spinner__ball--after--Height: var(--pf-c-spinner--stroke-width);
 
   // Tail ball variables
   --pf-c-spinner__tail-ball--after--BackgroundColor: var(--pf-c-spinner--Color);
@@ -57,23 +57,19 @@
 
   // Modifiers change the variables for size variations
   &.pf-m-sm {
-    --pf-c-spinner--Width: var(--pf-c-spinner--m-sm--Width);
-    --pf-c-spinner--Height: var(--pf-c-spinner--m-sm--Height);
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
   }
 
   &.pf-m-md {
-    --pf-c-spinner--Width: var(--pf-c-spinner--m-md--Width);
-    --pf-c-spinner--Height: var(--pf-c-spinner--m-md--Height);
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-md--diameter);
   }
 
   &.pf-m-lg {
-    --pf-c-spinner--Width: var(--pf-c-spinner--m-lg--Width);
-    --pf-c-spinner--Height: var(--pf-c-spinner--m-lg--Height);
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
   }
 
   &.pf-m-xl {
-    --pf-c-spinner--Width: var(--pf-c-spinner--m-xl--Width);
-    --pf-c-spinner--Height: var(--pf-c-spinner--m-xl--Height);
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
   }
 }
 
