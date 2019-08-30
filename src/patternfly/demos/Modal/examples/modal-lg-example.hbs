@@ -12,12 +12,12 @@
           <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
           <p>Form here</p>
         {{/modal-box-body}}
-        {{#> modal-box-footer}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
+        {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
           {{#> button button--modifier="pf-m-primary"}}
             Save
+          {{/button}}
+          {{#> button button--modifier="pf-m-link"}}
+            Cancel
           {{/button}}
         {{/modal-box-footer}}
       {{/modal-box}}

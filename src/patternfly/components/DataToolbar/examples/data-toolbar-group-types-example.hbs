@@ -1,0 +1,57 @@
+{{#> data-toolbar data-toolbar--id="data-toolbar-group-types-default-example" data-toolbar--modifier="example-border"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter1')}}
+          Filter 1
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter2')}}
+          Filter 2
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter3')}}
+          Filter 3
+        {{/select}}
+      {{/data-toolbar-item}}
+   {{/data-toolbar-group}}
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-icon-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
+          <i class="fas fa-edit" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
+          <i class="fas fa-clone" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
+          <i class="fas fa-sync" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Action
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Secondary
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-tertiary"}}
+          Tertiary
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}

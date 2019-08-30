@@ -4,7 +4,7 @@ import './styles.scss';
 
 // https://blog.codepen.io/documentation/api/prefill/
 export default ({
-  title = 'PatternFly 4pen',
+  title = 'PatternFly 4 pen',
   description = 'PatternFly 4 pen',
   tags = ['PatternFly', 'PatternFly 4'],
   html = '',

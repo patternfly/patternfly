@@ -8,6 +8,10 @@ module.exports = [
     path: 'components/Divider/'
   },
   {
+    name: 'DataToolbar',
+    path: 'components/DataToolbar/'
+  },
+  {
     name: 'Spinner',
     path: 'components/Spinner/'
   }

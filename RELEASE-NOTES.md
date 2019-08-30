@@ -1,4 +1,32 @@
-# 2019.04 release notes (2019-07-24)
+# 2019.06 release notes (2019-08-13)
+Packages released:
+- @patternfly/patternfly@2.26.1
+
+## Components
+- **Alert:** Added default alert ([#2107](https://github.com/patternfly/patternfly-next/pull/2107))
+- **Data list:** Gave Data List Demo a header ([#2083](https://github.com/patternfly/patternfly-next/pull/2083))
+- **Divider:** Updated example for the li example of the divider, set the type from div to li ([#2089](https://github.com/patternfly/patternfly-next/issues/2089))
+- **Drawer demo:** Removed drawer.scss. The drawer demo used to add a sass file. We removed this since demos should not have their own distributed css. ([#2138](https://github.com/patternfly/patternfly-next/issues/2138))
+- **Charts:** Added color to black range, shift vars ([#2094](https://github.com/patternfly/patternfly-next/pull/2094))
+- **Logo:** PF logo missing width attribute ([#2101](https://github.com/patternfly/patternfly-next/pull/2101))
+- **Page:** Took main elements grid-area value out of custom property ([#2137](https://github.com/patternfly/patternfly-next/pull/2137))
+- **Popover:** Ensure content does not overlap close button ([#2129](https://github.com/patternfly/patternfly-next/pull/2129))
+- **Radio:** Gave unique names to fix a11y ([#2088](https://github.com/patternfly/patternfly-next/pull/2088))
+- **Select:** Added a disable modifier ([#2028](https://github.com/patternfly/patternfly-next/pull/2028))
+
+## Chore
+- **A11y:** Ensure SkipToContent sends focus to page content ([#2058](https://github.com/patternfly/patternfly-next/pull/2125))
+- **Build:** Moved to circle ci
+  - Replaces .travis.yml with .circleci/config.yml and split up test steps to allow testing in parallel and nicer Github status checks
+  - Fixes our our a11y Selenium script to not have Travis integrations
+  - Uploads PR previews to https://surge.sh on every pushed commit (no need for Netlify to also build a preview)
+  - Still updates the Github Pages with a new npm run publish:docs target on merges to master ([#2121](https://github.com/patternfly/patternfly-next/pull/2121))
+  - Temporarily disable problematic ci checks ([#2125](https://github.com/patternfly/patternfly-next/pull/2125))
+- **Demos:** Use unique ID used in alert and cardview demos ([#2106](https://github.com/patternfly/patternfly-next/pull/2106))
+- **Notes:** Format release notes using uls
+- **Page:** Updated demo main section copy ([#2092](https://github.com/patternfly/patternfly-next/pull/2092))
+
+# 2019.05 release notes (2019-07-24)
 Packages released:
 - @patternfly/patternfly@2.23.0
 ## Components
@@ -36,7 +64,7 @@ Packages released:
 - **Red Hat font:** Added opt-in option to use Red Hat font ([#1813](https://github.com/patternfly/patternfly-next/pull/1813))
 - **Experimental features:** Added experimental feature support ([#2031](https://github.com/patternfly/patternfly-next/pull/2031))
 
-# 2019.03 release notes (2019-07-02)
+# 2019.04 release notes (2019-07-02)
 Packages released:
 - @patternfly/patternfly@2.17.0
 ## Components
@@ -84,7 +112,7 @@ Packages released:
 - Added ie11 to build ([#1876](https://github.com/patternfly/patternfly-next/pull/1876))
 - Updated the window size used for the browser that our a11y audit is run against ([#1911](https://github.com/patternfly/patternfly-next/pull/1911))
 
-# 2019.02 RC2.1 release notes (2019-06-11)
+# 2019.03 RC2.1 release notes (2019-06-11)
 Packages released:
 - @patternfly/patternfly@2.12.5
 ## Components
