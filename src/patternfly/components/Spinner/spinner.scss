@@ -8,7 +8,7 @@
   --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
 
   // These conceptual variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
-  --pf-c-spinner--stroke-width-multiplier: .14;
+  --pf-c-spinner--stroke-width-multiplier: .1;
   --pf-c-spinner--stroke-width: calc(var(--pf-c-spinner--diameter) * var(--pf-c-spinner--stroke-width-multiplier));
 
   // Set the overall width and height of the spinner to be consistent with the icon size
@@ -96,13 +96,7 @@
   position: absolute;
   width: var(--pf-c-spinner__clipper--Width);
   height: var(--pf-c-spinner__clipper--Height);
-  clip:
-    rect(
-      0,
-      var(--pf-c-spinner__clipper--Width),
-      calc(var(--pf-c-spinner__clipper--Height) / 2),
-      calc(var(--pf-c-spinner__clipper--Width) / 2)
-    );
+  clip-path: inset(0 0 50% 50%);
   animation:
     pf-animation-spinner__clipper var(--pf-c-spinner--AnimationDuration) linear
     infinite;
@@ -123,13 +117,7 @@
   position: absolute;
   width: var(--pf-c-spinner__clipper--after--Width);
   height: var(--pf-c-spinner__clipper--after--Height);
-  clip:
-    rect(
-      0,
-      var(--pf-c-spinner__clipper--after--Width),
-      var(--pf-c-spinner__clipper--after--Height),
-      calc(var(--pf-c-spinner__clipper--after--Width) / 2)
-    );
+  clip-path: inset(0 0 0 50%);
   content: "";
   border-radius: 50%;
   box-shadow: inset 0 0 0 var(--pf-c-spinner__clipper--after--BoxShadowSize) var(--pf-c-spinner__clipper--after--BoxShadowColor);

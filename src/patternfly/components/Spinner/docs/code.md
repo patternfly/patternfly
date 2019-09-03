@@ -2,8 +2,8 @@
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="progressbar"` | `pf-c-spinner` |  Indicates to assitive technologies that this is an indeterminate progress indicator. |
-| `aria-valuetext="Loading..."` | `pf-c-spinner` |  Describes content that is being loaded, while it is loading. |
+| `role="progressbar"` | `.pf-c-spinner` |  Indicates to assitive technologies that this is an indeterminate progress indicator. |
+| `aria-valuetext="Loading..."` | `.pf-c-spinner` |  Describes content that is being loaded, while it is loading. |
 
 Note: If the spinner is showing the loading in progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
 
