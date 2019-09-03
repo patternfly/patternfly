@@ -57,7 +57,7 @@ export default props => {
         {overflowMenuSimpleAdditionalOptionsExample}
       </Example>
       <Example
-        heading="Overflow menu persistent- additional options"
+        heading="Overflow menu persistent - additional options"
         handlebars={overflowMenuPersistentExampleRaw}
         docs={overflowMenuPersistentExampleDoc}
         className="is-layout-page"
