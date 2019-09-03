@@ -1,8 +1,6 @@
 $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl");
 
 .pf-c-overflow-menu {
-  --pf-c-overflow-menu--Display: inline-flex;
-
   // Base spacer - shared value
   --pf-c-overflow-menu--spacer--base: var(--pf-global--spacer--md);
 
@@ -31,7 +29,7 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
   --pf-c-overflow-menu__control--Display: inline-block;
   --pf-c-overflow-menu__control--Visibility: visible;
 
-  display: var(--pf-c-overflow-menu--Display);
+  display: inline-flex;
   align-items: center;
 }
 
