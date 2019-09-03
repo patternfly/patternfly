@@ -27,7 +27,7 @@ export default props => {
   const overflowMenuGroupTypesExample = OverflowMenuGroupTypesExample();
   const overflowMenuSimpleAdditionalOptionsExample = OverflowMenuSimpleAdditionalOptionsExample();
   const overflowMenuPersistentExample = OverflowMenuPersistentExample();
-  const headingText = 'Overflow Menu';
+  const headingText = 'Overflow menu';
   const variablesRoot = 'pf-c-overflow-menu';
 
   return (
