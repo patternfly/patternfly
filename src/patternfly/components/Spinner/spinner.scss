@@ -24,6 +24,7 @@
   --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
   --pf-c-spinner--m-md--diameter: var(--pf-global--icon--FontSize--md);
   --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
+  --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
 
   // Clipper variables
   --pf-c-spinner__clipper--Width: var(--pf-c-spinner--diameter);
@@ -65,6 +66,10 @@
 
   &.pf-m-lg {
     --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
+  }
+
+  &.pf-m-xl {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
   }
 }
 
