@@ -50,7 +50,7 @@ export default props => {
         {overflowMenuGroupTypesExample}
       </Example>
       <Example
-        heading="Overflow menu, multiple groups - additional options"
+        heading="Overflow menu multiple groups - additional options"
         handlebars={overflowMenuSimpleAdditionalOptionsExampleRaw}
         docs={overflowMenuSimpleAdditionalOptionsExampleDoc}
       >
