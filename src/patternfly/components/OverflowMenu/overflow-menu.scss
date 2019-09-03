@@ -108,7 +108,7 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-apply-breakpoint($breakpoint, $pf-c-overflow-menu--breakpoint-map) {
-      &.pf-m-reveal#{$breakpoint-name} {
+      &.pf-m-show#{$breakpoint-name} {
         --pf-c-overflow-menu__group--Display: flex;
         --pf-c-overflow-menu__group--Visibility: visible;
         --pf-c-overflow-menu__item--Display: inline-block;
