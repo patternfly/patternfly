@@ -1,4 +1,4 @@
-When an item is a member of an overflow menu, but needs to remain visible, the `.pf-m-persistent` tag is applied to the item and parent group, if applicable.
+When an item is a member of an overflow menu, but needs to remain visible, the `.pf-m-persistent` class is applied to the item and parent group, if applicable.
 
 ### Overflow menu has additional options
 
