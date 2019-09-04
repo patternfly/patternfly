@@ -4,7 +4,8 @@
   --pf-c-spinner--AnimationDuration: 1.5s;
   --pf-c-spinner--AnimationTimingFunction: cubic-bezier(.77, .005, .315, 1);
 
-  // This conceptual variable is used to set other values all based on the diameter of the spinner
+  // This conceptual variable is used to set other values all based on the diameter of the spinner.
+  // The default is the -xl modifier size.
   --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
 
   // These conceptual variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
@@ -97,9 +98,7 @@
   width: var(--pf-c-spinner__clipper--Width);
   height: var(--pf-c-spinner__clipper--Height);
   clip-path: inset(0 0 50% 50%);
-  animation:
-    pf-animation-spinner__clipper var(--pf-c-spinner--AnimationDuration) linear
-    infinite;
+  animation: pf-animation-spinner__clipper var(--pf-c-spinner--AnimationDuration) linear infinite;
 }
 
 @keyframes pf-animation-spinner__clipper {
