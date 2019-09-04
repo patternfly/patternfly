@@ -9,5 +9,16 @@
     {{/if}}
     {{#if aria-label}}
       aria-label="{{aria-label}}"
+    {{/if}}
+    {{#if dropdown--CheckboxIsChecked}}
+      checked
+    {{/if}}
+    {{#if dropdown--IsSplitButtonText}}
+      aria-labelledby="{{dropdown-toggle-check--id}} {{dropdown-toggle-check--id}}-text"
     {{/if}}>
+  {{#if dropdown--IsSplitButtonText}}
+    {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' dropdown-toggle-check--id '-text"')}}
+      {{{dropdown--IsSplitButtonText}}}
+    {{/dropdown-toggle-text}}
+  {{/if}}
 </label>
