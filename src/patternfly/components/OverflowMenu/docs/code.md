@@ -13,6 +13,7 @@
 | `.pf-c-overflow-menu__group` | `<div>` | Initiates an overflow menu group. |
 | `.pf-c-overflow-menu__content` | `<div>` | Initiates an overflow menu content container. |
 | `.pf-c-overflow-menu__control` | `<div>` | Initiates an overflow menu control element. |
+| `.pf-c-overflow-menu__shared-item` | `.pf-c-dropdown__menu > li` | Initiates a shared item element. This class controls when a member of the `.pf-c-overflow-menu__control` dropdown shows and hides the list item. |
 | `.pf-m-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--space-items)`. |
 | `.pf-m-icon-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--space-items)`. |
 | `.pf-m-additional-options` | `.pf-c-overflow-menu__control` | Modifies overflow menu control visibility. |
