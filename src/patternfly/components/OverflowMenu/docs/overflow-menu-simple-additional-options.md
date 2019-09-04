@@ -1,4 +1,4 @@
-When additional options in the overflow menu exist, the overflow dropdown persists. When the viewport expands beyond prescribed breakpoint, the overflow dropdown remains visible.
+When additional options in the overflow menu exist, the overflow dropdown persists. When the viewport expands beyond the prescribed breakpoint, the overflow dropdown remains visible.
 
 ### Overflow menu has additional options
 | Class | Applied to | Outcome |
