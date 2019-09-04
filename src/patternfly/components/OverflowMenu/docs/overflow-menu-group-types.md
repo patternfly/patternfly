@@ -1,4 +1,4 @@
-The action group consists a primary and secondary action. Any additional actions are part of the overflow control dropdown.
+The action group consists of a primary and secondary action. Any additional actions are part of the overflow control dropdown.
 
 ### Overflow menu group types
 | Class | Applied to | Outcome |
