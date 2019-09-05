@@ -28,5 +28,5 @@
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
-| `.pf-m-align-top` | `.pf-c-form__label` | Modifies form label to align to the top of its parent. |
+| `.pf-m-no-padding` | `.pf-c-form__label` | Removes top padding from the label element for labels adjacent to an element that isn't a form control. |
 | `.pf-m-inline` | `.pf-c-form__group` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
