@@ -74,8 +74,7 @@
         padding-top: var(--pf-c-form__label--PaddingTop);
         padding-bottom: 0;
 
-        &.pf-m-align-top {
-          align-items: flex-start;
+        &.pf-m-no-padding {
           padding-top: 0;
         }
       }
