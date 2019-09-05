@@ -18,8 +18,8 @@
     {{/page-template-header-tools-elements}}
   {{/page-header}}
 
-  {{#> page-sidebar}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
@@ -42,6 +42,7 @@
                   Hypervisors
                 {{/nav-link}}
               {{/nav-item}}
+              {{#> divider divider--type="li"}}{{/divider}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
                   Instances
@@ -79,6 +80,7 @@
             {{/nav-list}}
           {{/nav-subnav}}
         {{/nav-item}}
+        {{#> divider divider--type="li"}}{{/divider}}
         {{#> nav-item nav-item--expandable="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
             Authentication

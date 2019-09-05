@@ -35,6 +35,8 @@ $pf-global--BackgroundColor--light-300:     $pf-color-black-200 !default;
 // dark theme
 $pf-global--BackgroundColor--dark-100:      $pf-color-black-900 !default;
 $pf-global--BackgroundColor--dark-200:      $pf-color-black-800 !default;
+$pf-global--BackgroundColor--dark-300:      $pf-color-black-850 !default;
+$pf-global--BackgroundColor--dark-400:      $pf-color-black-700 !default;
 $pf-global--BackgroundColor--dark-transparent-100:  rgba($pf-color-black-1000, .62) !default;
 $pf-global--BackgroundColor--dark-transparent-200:  rgba($pf-color-black-1000, .32) !default;
 
@@ -48,6 +50,7 @@ $pf-global--Color--400: $pf-color-black-500 !default;
 // light theme
 $pf-global--Color--light-100:      $pf-color-white !default;
 $pf-global--Color--light-200:      $pf-color-black-200 !default;
+$pf-global--Color--light-300:      $pf-color-black-300 !default;
 
 // dark theme
 $pf-global--Color--dark-100:      $pf-color-black-900 !default;
