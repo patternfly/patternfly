@@ -18,8 +18,8 @@
     {{/page-template-header-tools-elements}}
   {{/page-header}}
 
-  {{#> page-sidebar}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}

@@ -38,7 +38,7 @@
   --pf-c-page__header-nav--lg--PaddingLeft: 0;
   --pf-c-page__header-nav--lg--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-page__header-nav--lg--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-nav--BackgroundColor: #242424; // Custom color for this element only
+  --pf-c-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__header-nav--lg--BackgroundColor: transparent;
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
@@ -79,6 +79,7 @@
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
   --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
+  --pf-c-page__sidebar--m-dark--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
 
@@ -356,6 +357,12 @@
       max-width: 0;
       overflow: hidden;
     }
+  }
+
+  &.pf-m-dark {
+    @include pf-t-dark;
+
+    --pf-c-page__sidebar--BackgroundColor: var(--pf-c-page__sidebar--m-dark--BackgroundColor);
   }
 }
 

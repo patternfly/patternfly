@@ -16,8 +16,8 @@
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
-  {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel

@@ -5,11 +5,11 @@
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+    {{#> page-main-nav}}
       {{> table-main-section-nav}}
     {{/page-main-nav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}

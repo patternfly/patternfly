@@ -7,23 +7,26 @@ import PageComponentExpandableNavExampleRaw from '!raw!./page-component-expandab
 import PageComponentHorizontalNavExampleRaw from '!raw!./page-component-horizontal-nav-example.hbs';
 import PageComponentTertiaryNavExampleRaw from '!raw!./page-component-tertiary-nav-example.hbs';
 import PageComponentGroupedNavExampleRaw from '!raw!./page-component-grouped-nav-example.hbs';
+import PageComponentLightSidebarNavExampleRaw from '!raw!./page-component-light-sidebar-nav-example.hbs';
 
 import PageComponentDefaultNavHeaderExample from './page-component-default-nav-header-example.hbs';
 import PageComponentExpandableNavExample from './page-component-expandable-nav-example.hbs';
 import PageComponentHorizontalNavExample from './page-component-horizontal-nav-example.hbs';
 import PageComponentTertiaryNavExample from './page-component-tertiary-nav-example.hbs';
 import PageComponentGroupedNavExample from './page-component-grouped-nav-example.hbs';
+import PageComponentLightSidebarNavExample from './page-component-light-sidebar-nav-example.hbs';
 
 import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const pageComponentDefaultNavHeaderExample = PageComponentDefaultNavHeaderExample();
   const pageComponentExpandableNavExample = PageComponentExpandableNavExample();
   const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
   const pageComponentTertiaryNavExample = PageComponentTertiaryNavExample();
   const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
+  const pageComponentLightSidebarNavExample = PageComponentLightSidebarNavExample();
   const headingText = 'Page component demo';
 
   return (
@@ -62,6 +65,13 @@ export default (props) => {
         handlebars={PageComponentGroupedNavExampleRaw}
       >
         {pageComponentGroupedNavExample}
+      </Example>
+      <Example
+        heading="Page component - legacy sidebar and nav (light themed)"
+        fullPageOnly="true"
+        handlebars={PageComponentLightSidebarNavExampleRaw}
+      >
+        {pageComponentLightSidebarNavExample}
       </Example>
     </Documentation>
   );

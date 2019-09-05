@@ -406,6 +406,12 @@ html {
   }
 }
 
+.is-dark-nav-preview {
+  .Preview__body {
+    background-color: var(--pf-global--BackgroundColor--dark-300);
+  }
+}
+
 .is-expanded-dropdown,
 .is-tall-body {
   .Preview__body {
