@@ -71,13 +71,12 @@
 
       /* stylelint-disable */
       .pf-c-form__group .pf-c-form__label {
-        display: flex;
-        align-items: center;
+        padding-top: var(--pf-c-form__label--PaddingTop);
         padding-bottom: 0;
 
         &.pf-m-align-top {
           align-items: flex-start;
-          padding-top: var(--pf-c-form__label--PaddingTop);
+          padding-top: 0;
         }
       }
       /* stylelint-enable */
