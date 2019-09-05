@@ -37,7 +37,7 @@
 | `.pf-m-align-content-stretch{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout align-content property to stretch. |
 | `.pf-m-align-content-space-between{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout align-content property to space-between. |
 | `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout align-content property to space-around. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > *` | Resets the flex layout element margin-left property to 0. |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets the flex layout element margin-left property to 0. |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > *` | Modifies the flex layout element margin-left property to auto. |
 
 
