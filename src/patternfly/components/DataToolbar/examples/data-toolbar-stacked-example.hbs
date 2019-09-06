@@ -75,20 +75,26 @@
   {{/data-toolbar-content}}
 
   {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl"}}
-    {{#> data-toolbar-item}}
-      {{#> select id=(concat data-toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true"}}
-        Pod
-      {{/select}}
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-        Running
-      {{/select}}
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      {{#> select id=(concat data-toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true"}}
-        Any
-      {{/select}}
-    {{/data-toolbar-item}}
+      {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item}}
+              {{#> select id=(concat data-toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+                  Pod
+              {{/select}}
+          {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item}}
+              {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+                  Running
+              {{/select}}
+          {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item}}
+              {{#> select id=(concat data-toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+                  Any
+              {{/select}}
+          {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
   {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
