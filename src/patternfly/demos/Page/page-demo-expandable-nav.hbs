@@ -22,10 +22,10 @@
     {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' page--id '-expandable-nav-link1"')}}
             System panel
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link1"'}}
+          {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-expandable-nav-link1"')}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -66,10 +66,10 @@
           {{/nav-subnav}}
         {{/nav-item}}
         {{#> nav-item nav-item--expandable="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link2"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' page--id '-expandable-nav-link2"')}}
             Policy
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link2"'}}
+          {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-expandable-nav-link2"')}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
@@ -90,10 +90,10 @@
           {{#> divider divider--type="li"}}{{/divider}}
         {{/if}}
         {{#> nav-item nav-item--expandable="true"}}
-          {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link3"'}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' page--id '-expandable-nav-link3"')}}
             Authentication
           {{/nav-link}}
-          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-nav-link3"'}}
+          {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-expandable-nav-link3"')}}
             {{#> nav-list nav-list--type="simple"}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
