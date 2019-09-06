@@ -7,14 +7,18 @@ import PageComponentExpandableNavExampleRaw from '!raw!./page-component-expandab
 import PageComponentHorizontalNavExampleRaw from '!raw!./page-component-horizontal-nav-example.hbs';
 import PageComponentTertiaryNavExampleRaw from '!raw!./page-component-tertiary-nav-example.hbs';
 import PageComponentGroupedNavExampleRaw from '!raw!./page-component-grouped-nav-example.hbs';
+import PageComponentLegacyNavSeparatorsExampleRaw from '!raw!./page-component-legacy-nav-separators-example.hbs';
 import PageComponentLightSidebarNavExampleRaw from '!raw!./page-component-light-sidebar-nav-example.hbs';
+import PageComponentLightSidebarNavLegacyNavSeparatorsExampleRaw from '!raw!./page-component-light-sidebar-nav-legacy-nav-separators-example.hbs';
 
 import PageComponentDefaultNavHeaderExample from './page-component-default-nav-header-example.hbs';
 import PageComponentExpandableNavExample from './page-component-expandable-nav-example.hbs';
 import PageComponentHorizontalNavExample from './page-component-horizontal-nav-example.hbs';
 import PageComponentTertiaryNavExample from './page-component-tertiary-nav-example.hbs';
 import PageComponentGroupedNavExample from './page-component-grouped-nav-example.hbs';
+import PageComponentLegacyNavSeparatorsExample from './page-component-legacy-nav-separators-example.hbs';
 import PageComponentLightSidebarNavExample from './page-component-light-sidebar-nav-example.hbs';
+import PageComponentLightSidebarNavLegacyNavSeparatorsExample from './page-component-light-sidebar-nav-legacy-nav-separators-example.hbs';
 
 import docs from '../docs/code.md';
 
@@ -26,7 +30,9 @@ export default props => {
   const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
   const pageComponentTertiaryNavExample = PageComponentTertiaryNavExample();
   const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
+  const pageComponentLegacyNavSeparatorsExample = PageComponentLegacyNavSeparatorsExample();
   const pageComponentLightSidebarNavExample = PageComponentLightSidebarNavExample();
+  const pageComponentLightSidebarNavLegacyNavSeparatorsExample = PageComponentLightSidebarNavLegacyNavSeparatorsExample();
   const headingText = 'Page component demo';
 
   return (
@@ -67,11 +73,25 @@ export default props => {
         {pageComponentGroupedNavExample}
       </Example>
       <Example
+        heading="Page component - legacy nav separators"
+        fullPageOnly="true"
+        handlebars={PageComponentLegacyNavSeparatorsExampleRaw}
+      >
+        {pageComponentLegacyNavSeparatorsExample}
+      </Example>
+      <Example
         heading="Page component - legacy sidebar and nav (light themed)"
         fullPageOnly="true"
         handlebars={PageComponentLightSidebarNavExampleRaw}
       >
         {pageComponentLightSidebarNavExample}
+      </Example>
+      <Example
+        heading="Page component - legacy sidebar and nav (light themed), and legacy nav separators"
+        fullPageOnly="true"
+        handlebars={PageComponentLightSidebarNavLegacyNavSeparatorsExampleRaw}
+      >
+        {pageComponentLightSidebarNavLegacyNavSeparatorsExample}
       </Example>
     </Documentation>
   );
