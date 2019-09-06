@@ -76,6 +76,9 @@
 
   {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl"}}
       {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label')}}
+              Resource
+          {{/data-toolbar-item}}
           {{#> data-toolbar-item}}
               {{#> select id=(concat data-toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
                   Pod
@@ -83,6 +86,9 @@
           {{/data-toolbar-item}}
       {{/data-toolbar-group}}
       {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label')}}
+              Status
+          {{/data-toolbar-item}}
           {{#> data-toolbar-item}}
               {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
                   Running
@@ -90,6 +96,9 @@
           {{/data-toolbar-item}}
       {{/data-toolbar-group}}
       {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label')}}
+              Type
+          {{/data-toolbar-item}}
           {{#> data-toolbar-item}}
               {{#> select id=(concat data-toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
                   Any
