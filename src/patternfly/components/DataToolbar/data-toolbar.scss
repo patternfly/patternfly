@@ -245,6 +245,11 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     margin: 0;
   }
 
+  .pf-c-data-toolbar__group {
+    display: grid;
+    grid-row-gap: var(--pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap);
+  }
+
   // If item is used within a group, add margin back
   .pf-c-data-toolbar__group .pf-c-data-toolbar__item {
     margin-right: var(--pf-c-data-toolbar--spacer);
@@ -331,6 +336,13 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
             --pf-c-data-toolbar--spacer: #{$spacer-value};
+          }
+
+          &.pf-c-data-toolbar__expandable-content {
+            .pf-c-data-toolbar__group,
+            .pf-c-data-toolbar__item {
+              margin-right: var(--pf-c-data-toolbar--spacer);
+            }
           }
 
           > :last-child {
