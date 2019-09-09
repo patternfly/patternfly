@@ -1,6 +1,6 @@
 # 2019.07 release notes (2019-09-10)
 Packages released:
-- @patternfly/patternfly@2.31.5
+- @patternfly/patternfly@2.31.6
 
 ## Components
 - **Charts:**
