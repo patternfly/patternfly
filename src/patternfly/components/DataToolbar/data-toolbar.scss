@@ -254,11 +254,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     display: none;
     visibility: hidden;
   }
-
-  // If item is used within a group, add margin back
-  .pf-c-data-toolbar__group .pf-c-data-toolbar__item {
-    margin-right: var(--pf-c-data-toolbar--spacer);
-  }
 }
 
 .pf-c-data-toolbar__toggle .pf-c-badge {

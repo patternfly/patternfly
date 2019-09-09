@@ -5,7 +5,7 @@
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl" data-toolbar-group--IsExpanded="false"}}
       {{> data-toolbar-toggle}}
 
-      {{#> data-toolbar-group newcontext}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
         {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label')}}
           Resource
         {{/data-toolbar-item}}
@@ -15,7 +15,7 @@
           {{/select}}
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-group newcontext}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
         {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label')}}
           Status
         {{/data-toolbar-item}}
@@ -25,7 +25,7 @@
           {{/select}}
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-group newcontext}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
         {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label')}}
           Type
         {{/data-toolbar-item}}
@@ -75,7 +75,7 @@
   {{/data-toolbar-content}}
 
   {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl"}}
-      {{#> data-toolbar-group newcontext}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
           {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label-expanded')}}
               Resource
           {{/data-toolbar-item}}
@@ -85,7 +85,7 @@
               {{/select}}
           {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-group newcontext}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
           {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label-expanded')}}
               Status
           {{/data-toolbar-item}}
@@ -95,7 +95,7 @@
               {{/select}}
           {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-group newcontext}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
           {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label-expanded')}}
               Type
           {{/data-toolbar-item}}
