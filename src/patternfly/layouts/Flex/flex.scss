@@ -13,7 +13,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   // Default values: these get reset based on modifier usage
   --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
-  --pf-l-flex--flex--spacer: var(--pf-global--spacer--lg);
 
   // Emit spacer css variables that map to requested spacer values
   @include pf-emit-properties($pf-l-flex--variable-map);
@@ -21,34 +20,24 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   display: var(--pf-l-flex--Display);
   flex-wrap: var(--pf-l-flex--FlexWrap);
   align-items: var(--pf-l-flex--AlignItems);
+
+  &:last-child {
+    --pf-l-flex--spacer: 0;
+  }
 }
 
 /* stylelint-disable no-duplicate-selectors, max-nesting-depth */
 
-// Flex
-.pf-l-flex {
-  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
-
-  &:last-child {
-    --pf-l-flex--spacer: 0;
-  }
-}
-
 // Item
-.pf-l-flex > *,
-.pf-l-flex__item {
+.pf-l-flex > * {
   // reset spacer
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
 
+  margin-right: var(--pf-l-flex--spacer);
+
   &:last-child {
     --pf-l-flex--spacer: 0;
   }
-}
-
-// Use global selector to
-.pf-l-flex > *,
-.pf-l-flex__item {
-  margin-right: var(--pf-l-flex--spacer);
 }
 
 .pf-l-flex {
@@ -57,14 +46,12 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
     @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
       // display
-      &.pf-m-flex#{$breakpoint-name},
-      .pf-m-flex#{$breakpoint-name} {
+      &.pf-m-flex#{$breakpoint-name} {
         display: var(--pf-l-flex--Display);
       }
 
       // inline flex
-      &.pf-m-inline-flex#{$breakpoint-name},
-      .pf-m-inline-flex#{$breakpoint-name} {
+      &.pf-m-inline-flex#{$breakpoint-name} {
         --pf-l-flex--Display: inline-flex;
       }
 
@@ -201,73 +188,71 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
       }
 
       // alignment
-      &.pf-m-align-right#{$breakpoint-name},
-      .pf-m-align-right#{$breakpoint-name} {
+      > .pf-m-align-right#{$breakpoint-name} {
         margin-left: auto;
       }
 
-      &.pf-m-align-left#{$breakpoint-name},
-      .pf-m-align-left#{$breakpoint-name} {
+      > .pf-m-align-left#{$breakpoint-name} {
         margin-right: var(--pf-l-flex--spacer);
         margin-left: 0;
       }
 
       // item properties
-      .pf-m-grow#{$breakpoint-name} {
+      > .pf-m-grow#{$breakpoint-name} {
         flex-grow: 1;
       }
 
-      .pf-m-shrink#{$breakpoint-name} {
+      > .pf-m-shrink#{$breakpoint-name} {
         flex-shrink: 1;
       }
 
-      .pf-m-full-width#{$breakpoint-name} {
+      > .pf-m-full-width#{$breakpoint-name} {
         width: 100%;
         margin-right: 0;
       }
 
-      .pf-m-flex-1#{$breakpoint-name} {
+      > .pf-m-flex-1#{$breakpoint-name} {
         flex: 1 0 0;
       }
 
-      .pf-m-flex-2#{$breakpoint-name} {
+      > .pf-m-flex-2#{$breakpoint-name} {
         flex: 2 0 0;
       }
 
-      .pf-m-flex-3#{$breakpoint-name} {
+      > .pf-m-flex-3#{$breakpoint-name} {
         flex: 3 0 0;
       }
 
-      .pf-m-flex-4#{$breakpoint-name} {
+      > .pf-m-flex-4#{$breakpoint-name} {
         flex: 4 0 0;
       }
 
-      .pf-m-flex-default#{$breakpoint-name} {
+      > .pf-m-flex-default#{$breakpoint-name} {
         flex: 0 1 auto;
       }
 
-      .pf-m-flex-none#{$breakpoint-name} {
+      > .pf-m-flex-none#{$breakpoint-name} {
         flex: none;
       }
 
       // align-self
-      .pf-m-align-self-flex-start#{$breakpoint-name} {
+      > .pf-m-align-self-flex-start#{$breakpoint-name} {
         align-self: flex-start;
       }
 
-      .pf-m-align-self-flex-end#{$breakpoint-name} {
+      > .pf-m-align-self-flex-end#{$breakpoint-name} {
         align-self: flex-end;
       }
 
-      .pf-m-align-self-center#{$breakpoint-name} {
+      > .pf-m-align-self-center#{$breakpoint-name} {
         align-self: center;
       }
 
-      .pf-m-align-self-baseline#{$breakpoint-name} {
+      > .pf-m-align-self-baseline#{$breakpoint-name} {
         align-self: baseline;
       }
 
-      .pf-m-align-self-stretch#{$breakpoint-name} {
+      > .pf-m-align-self-stretch#{$breakpoint-name} {
         align-self: stretch;
       }
     }
