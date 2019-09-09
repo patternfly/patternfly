@@ -1,3 +1,40 @@
+# 2019.07 release notes (2019-09-10)
+Packages released:
+- @patternfly/patternfly@2.31.6
+
+## Components
+- **Charts:**
+  - Refactor bullet chart vars. [#2159](https://github.com/patternfly/patternfly-next/pull/2159)
+  - Adjust chart axis label padding. [#2181](https://github.com/patternfly/patternfly-next/pull/2181)
+- **Select:** Add support for custom toggle icon. [#2154](https://github.com/patternfly/patternfly-next/pull/2154)
+- **Data Toolbar:**
+  - Add data toolbar component. [#2119](https://github.com/patternfly/patternfly-next/pull/2119)
+  - Refactor spacer SCSS. [#2189](https://github.com/patternfly/patternfly-next/pull/2189)
+  - Fix group formatting in expandable content. [#2229](https://github.com/patternfly/patternfly-next/pull/2229)
+- **Modal:** Add variation for left-aligned footer buttons. [#2182](https://github.com/patternfly/patternfly-next/pull/2182)
+- **Wizard:** Add in-page variation. [#2186](https://github.com/patternfly/patternfly-next/pull/2186)
+- **Dropdown:** Add variation for primary toggle. [#2210](https://github.com/patternfly/patternfly-next/pull/2210)
+- **Spinner:** Add spinner component. [#2142](https://github.com/patternfly/patternfly-next/pull/2142)
+- **Dropdown:**
+  - Add toggle text to split-button variation. [#2212](https://github.com/patternfly/patternfly-next/pull/2212)
+  - Fix split-button toggle text spacing. [#2224](https://github.com/patternfly/patternfly-next/pull/2224)
+- **Overflow Menu:** Add overflow menu component. [#2126](https://github.com/patternfly/patternfly-next/pull/2126)
+- **Nav & Page sidebar:**
+  - Add variation for dark theme. [#2197](https://github.com/patternfly/patternfly-next/pull/2197)
+  - Fix nav separator background in dark theme. [#2227](https://github.com/patternfly/patternfly-next/pull/2227)
+- **Form:** Update horizontal form label alignment. [#2200](https://github.com/patternfly/patternfly-next/pull/2200)
+
+
+## Other
+- **A11y:** Fix accessibility issues in basic forms demo. [#2086](https://github.com/patternfly/patternfly-next/pull/2086)
+- **Dependencies:**
+  - Update development dependencies. ([#2124](https://github.com/patternfly/patternfly-next/pull/2124))
+  - Update Gulp and bump dependencies. [#2201](https://github.com/patternfly/patternfly-next/pull/2201)
+- **Build:**
+  - Fix GitHub Pages deploy on master [#2160](https://github.com/patternfly/patternfly-next/pull/2160)
+  - Remove GitHub Pages deploy [#2166](https://github.com/patternfly/patternfly-next/pull/2166)
+- **Workspace:** Fix codepen button title. [#2151](https://github.com/patternfly/patternfly-next/pull/2151)
+
 # 2019.06 release notes (2019-08-13)
 Packages released:
 - @patternfly/patternfly@2.26.1
