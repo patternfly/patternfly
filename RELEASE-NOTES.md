@@ -1,6 +1,6 @@
-# 2019.07 release notes (2019-09-11)
+# 2019.07 release notes (2019-09-10)
 Packages released:
-- @patternfly/patternfly@2.3x.x
+- @patternfly/patternfly@2.31.5
 
 ## Components
 - **Charts:**
@@ -10,6 +10,7 @@ Packages released:
 - **Data Toolbar:**
   - Add data toolbar component. [#2119](https://github.com/patternfly/patternfly-next/pull/2119)
   - Refactor spacer SCSS. [#2189](https://github.com/patternfly/patternfly-next/pull/2189)
+  - Fix group formatting in expandable content. [#2229](https://github.com/patternfly/patternfly-next/pull/2229)
 - **Modal:** Add variation for left-aligned footer buttons. [#2182](https://github.com/patternfly/patternfly-next/pull/2182)
 - **Wizard:** Add in-page variation. [#2186](https://github.com/patternfly/patternfly-next/pull/2186)
 - **Dropdown:** Add variation for primary toggle. [#2210](https://github.com/patternfly/patternfly-next/pull/2210)
