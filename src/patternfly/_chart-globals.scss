@@ -188,7 +188,7 @@ $pf-chart-donut--label--subtitle--Fill: $pf-chart-global--Fill--Color--400;
 $pf-chart-donut--label--subtitle--position: "center";
 $pf-chart-donut--pie--Height: 230;
 $pf-chart-donut--pie--angle--Padding: 1;
-$pf-chart-donut--pie--Padding: 8;
+$pf-chart-donut--pie--Padding: 20;
 $pf-chart-donut--pie--Width: 230;
 
 // Donut Threshold Chart
@@ -199,18 +199,18 @@ $pf-chart-donut--threshold--warning--Color: $pf-chart-global--warning--Color--20
 $pf-chart-donut--threshold--danger--Color: $pf-chart-global--danger--Color--100;
 $pf-chart-donut--threshold--dynamic--pie--Height: 202;
 $pf-chart-donut--threshold--dynamic--pie--Width: 202;
-$pf-chart-donut--threshold--dynamic--pie--Padding: 8;
+$pf-chart-donut--threshold--dynamic--pie--Padding: 20;
 $pf-chart-donut--threshold--static--pie--Height: 230;
 $pf-chart-donut--threshold--static--pie--angle--Padding: 1;
-$pf-chart-donut--threshold--static--pie--Padding: 8;
+$pf-chart-donut--threshold--static--pie--Padding: 20;
 $pf-chart-donut--threshold--static--pie--Width: 230;
 
 // Donut Utilization Chart
 $pf-chart-donut--utilization--dynamic--pie--Height: 230;
 $pf-chart-donut--utilization--dynamic--pie--angle--Padding: 1;
-$pf-chart-donut--utilization--dynamic--pie--Padding: 8;
+$pf-chart-donut--utilization--dynamic--pie--Padding: 20;
 $pf-chart-donut--utilization--dynamic--pie--Width: 230;
-$pf-chart-donut--utilization--static--pie--Padding: 8;
+$pf-chart-donut--utilization--static--pie--Padding: 20;
 
 // Error Bar
 $pf-chart-errorbar--BorderWidth: $pf-chart-global--BorderWidth--lg;
@@ -235,7 +235,7 @@ $pf-chart-line--data--stroke--Width: $pf-chart-global--stroke--Width--sm;
 $pf-chart-line--data--stroke--Color: $pf-chart-global--Fill--Color--900;
 
 // Pie Chart
-$pf-chart-pie--Padding: 8;
+$pf-chart-pie--Padding: 20;
 $pf-chart-pie--data--Padding: 8;
 $pf-chart-pie--data--stroke--Width: $pf-chart-global--stroke--Width--xs;
 $pf-chart-pie--data--stroke--Color: "transparent";
