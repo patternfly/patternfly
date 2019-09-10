@@ -1,8 +1,9 @@
 // URL.com/guidelines#layout
 .pf-c-page {
-  --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   // Header
+  --pf-c-page__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
   --pf-c-page__header--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
@@ -190,6 +191,7 @@
   align-items: center;
   min-width: 0;
   min-height: var(--pf-c-page__header--MinHeight);
+  background-color: var(--pf-c-page__header--BackgroundColor);
 
   > * {
     display: flex;
