@@ -176,11 +176,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
       &.pf-m-align-content-space-between#{$breakpoint-name} {
         align-content: space-between;
-
-        > * {
-          margin-right: 0;
-          margin-left: 0;
-        }
       }
 
       &.pf-m-align-content-space-around#{$breakpoint-name} {
@@ -193,7 +188,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
       }
 
       > .pf-m-align-left#{$breakpoint-name} {
-        margin-right: var(--pf-l-flex--spacer);
         margin-left: 0;
       }
 
