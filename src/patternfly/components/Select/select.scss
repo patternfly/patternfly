@@ -27,8 +27,9 @@
   --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
+  // Remove during breaking change
   // When there is a typeahead (input box) adjust the top padding of the wrapper in case it wraps to the second line
-  --pf-c-select__toggle-wrapper--m-typeahead--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--m-typeahead--PaddingTop: 0;
 
   // Space for the children of the toggle
   --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
@@ -38,7 +39,8 @@
   --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
 
   // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: 0;
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: var(--pf-global--spacer--xs);
 
   // The button inside a chip must be adjusted to reduce the padding, which is driving the height of the chip, so it fits within the toggle
   --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop: var(--pf-global--spacer--xs);
@@ -50,6 +52,9 @@
   --pf-c-select__toggle-typeahead--BorderTop: none;
   --pf-c-select__toggle-typeahead--BorderRight: none;
   --pf-c-select__toggle-typeahead--BorderLeft: none;
+
+  // Typeahead form
+  --pf-c-select__toggle-typeahead-form--MinWidth: #{pf-size-prem(120px)};
 
   // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
   --pf-c-select__toggle-typeahead--active--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
@@ -230,11 +235,7 @@
       @include pf-text-overflow;
 
       position: relative;
-    }
-
-    // When the input is the first thing then use a negative left padding so it matches the toggle container
-    input:first-child {
-      margin-left: calc(-1 * var(--pf-c-select__toggle--PaddingLeft));
+      height: auto;
     }
   }
 
@@ -273,6 +274,7 @@
 
 .pf-c-select__toggle-wrapper {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
@@ -294,6 +296,7 @@
     padding-bottom: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom);
   }
 
+  // Remove during breaking change
   // if there is an input in the toggle-wrapper, then give it a negative top margin to match the typeahead top padding
   > .pf-c-form-control {
     margin-top: calc(-1 * var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop));
@@ -301,7 +304,14 @@
 
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
   .pf-c-chip-group {
+    margin-top: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginTop);
     margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
+  }
+
+  // When the input or form is the first thing then use a negative left padding so it matches the toggle container
+  > .pf-c-select__toggle-typeahead-form:first-child,
+  > .pf-c-select__toggle-typeahead:first-child {
+    margin-left: calc(-1 * var(--pf-c-select__toggle--PaddingLeft));
   }
 }
 
@@ -332,6 +342,13 @@
     // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
     padding-bottom: var(--pf-c-select__toggle-typeahead--active--PaddingBottom);
   }
+}
+
+// Support form with input and input alone
+.pf-c-select__toggle-typeahead-form,
+.pf-c-select__toggle-typeahead {
+  flex: 1;
+  min-width: var(--pf-c-select__toggle-typeahead-form--MinWidth);
 }
 
 .pf-c-select__menu {
