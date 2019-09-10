@@ -1,3 +1,45 @@
+---
+title: Accordion
+section: components
+---
+
+```js
+import React from 'react';
+import Documentation from '@siteComponents/Documentation';
+import Example from '@siteComponents/Example';
+import accordionFluidExampleRaw from '!raw!./accordion-fluid-example.hbs';
+import accordionFixedExampleRaw from '!raw!./accordion-fixed-example.hbs';
+import accordionDefinitionListExampleRaw from '!raw!./accordion-definition-list-example.hbs';
+import AccordionFluidExample from './accordion-fluid-example.hbs';
+import AccordionFixedExample from './accordion-fixed-example.hbs';
+import AccordionDefinitionListExample from './accordion-definition-list-example.hbs';
+import docs from '../docs/code.md';
+
+export const Docs = docs;
+
+export default props => {
+  const accordionFluidExample = AccordionFluidExample();
+  const accordionFixedExample = AccordionFixedExample();
+  const accordionDefinitionListExample = AccordionDefinitionListExample();
+  const headingText = 'Accordion';
+  const variablesRoot = 'pf-c-accordion';
+
+  return (
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Accordion fluid example" handlebars={accordionFluidExampleRaw}>
+        {accordionFluidExample}
+      </Example>
+      <Example heading="Accordion fixed example" handlebars={accordionFixedExampleRaw}>
+        {accordionFixedExample}
+      </Example>
+      <Example heading="Accordion definition list example" handlebars={accordionDefinitionListExampleRaw}>
+        {accordionDefinitionListExample}
+      </Example>
+    </Documentation>
+  );
+};
+```
+
 ## Overview
 
 There are two variations to build the accordion component:
@@ -33,3 +75,4 @@ In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses 
 | `.pf-m-active` | `.pf-c-accordion__toggle` | Modifies the accordion button for the active state. |
 | `.pf-m-focus` | `.pf-c-accordion__toggle` | Modifies the accordion button for the focus state. |
 | `.pf-m-fixed` | `.pf-c-accordion__expanded-content` | Modifies the expanded content for the fixed state. |
+
