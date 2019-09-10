@@ -1,89 +1,52 @@
 const path = require('path');
 const globImporter = require('node-sass-glob-importer');
 
-const PROJECT_ROOT = path.resolve(__dirname);
-
-const plugins = [
-  'gatsby-plugin-react-helmet',
-  'gatsby-plugin-sharp',
-  'gatsby-transformer-sharp',
-  'gatsby-transformer-json',
-  'gatsby-transformer-yaml',
-  {
-    resolve: `gatsby-plugin-sass`,
-    options: {
-      importer: globImporter(),
-      postCssPlugins: [],
-      precision: 5
-    }
-  },
-  {
-    resolve: `gatsby-plugin-page-creator`,
-    options: {
-      path: `${PROJECT_ROOT}/src/patternfly`
-    }
-  },
-  {
-    resolve: `gatsby-plugin-page-creator`,
-    options: {
-      path: `${PROJECT_ROOT}/src/site/pages`,
-      name: 'pages'
-    }
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      path: `${PROJECT_ROOT}/src/patternfly`,
-      name: 'patternfly'
-    }
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      path: `${PROJECT_ROOT}/src/site/pages`,
-      name: 'pages'
-    }
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      path: `${PROJECT_ROOT}/src/site/_site`,
-      name: 'site-components'
-    }
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      path: `${PROJECT_ROOT}/src/site/img`,
-      name: 'images'
-    }
-  },
-  {
-    resolve: 'gatsby-transformer-remark',
-    options: {
-      plugins: [
-        `gatsby-remark-autolink-headers`,
-        {
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: 'prism-language-'
-          }
-        }
-      ]
-    }
-  },
-  {
-    resolve: 'gatsby-remark-embed-snippet',
-    options: {
-      directory: `${__dirname}/src/patternfly`
-    }
-  }
-];
-
 module.exports = {
   siteMetadata: {
     title: 'PatternFly 4'
   },
   pathPrefix: '/patternfly-next',
-  plugins
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        importer: globImporter(),
+        postCssPlugins: [],
+        precision: 5
+      }
+    },
+    // Create static pages
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${path.resolve(__dirname)}/src/site/pages`
+      }
+    },
+    // Source dynamic per-component MDX files
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${path.resolve(__dirname)}/src/patternfly`
+      }
+    },
+    // Pipe MDX files through this plugin that spits out React components
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: [`.mdx`, `.md`],
+        remarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'prism-language-'
+            }
+          }
+        ]
+      }
+    }
+  ]
 };

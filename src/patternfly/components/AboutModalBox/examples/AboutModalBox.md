@@ -1,4 +1,11 @@
-import React from 'react';
+---
+title: About Modal Box
+section: components
+---
+
+Hello!
+
+```js
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
@@ -12,10 +19,11 @@ export default (props) => {
   const variablesRoot = 'pf-c-about-modal-box';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading={headingText}>
         {aboutModalBoxExample}
       </Example>
     </Documentation>
   );
 };
+```
