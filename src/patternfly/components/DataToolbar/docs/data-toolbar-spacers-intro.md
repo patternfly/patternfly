@@ -1,3 +1,0 @@
-<h3 class="Example_heading">Data toolbar spacers</h3>
-
-In some instances, it may be necessary to adjust spacing explicitly where items are being hidden/revealed. For example, if a `.pf-m-toggle-group` is adjacent to an element being hidden/shown or hidden/revealed, the spacing may appear to be inconsistent. If possible, rely on modifier values. Available spacer modifiers are `.pf-m-spacer-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}` and `.pf-m-space-items-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}`. These modifiers will overwrite existing modifiers provided by `.pf-c-data-toolbar`.
