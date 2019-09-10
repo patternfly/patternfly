@@ -1,3 +1,32 @@
+---
+title: Chip
+section: components
+---
+```js
+import React from 'react';
+import Documentation from '@siteComponents/Documentation';
+import Example from '@siteComponents/Example';
+import ChipExampleRaw from '!raw!./chip-example.hbs';
+import chipExample from './chip-example.hbs';
+import docs from '../docs/code.md';
+
+export const Docs = docs;
+
+export default (props) => {
+  const ChipExample = chipExample();
+  const headingText = 'Chip';
+  const variablesRoot = 'pf-c-chip';
+
+  return (
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Chip" handlebars={ChipExampleRaw} className="is-light-preview">
+        {ChipExample}
+      </Example>
+    </Documentation>
+  );
+};
+```
+
 ## Overview
 
 A Chip is used to display items that have been filtered or selected from a larger group. They comprise of a text element and a button component that is used to remove the chip from selection. When the text overflows it is truncated using ellipses. A chip can be grouped by using the "chip-group" layout. 

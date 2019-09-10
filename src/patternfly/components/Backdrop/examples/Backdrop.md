@@ -1,3 +1,8 @@
+---
+title: Backdrop
+section: components
+---
+```js
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
@@ -20,3 +25,15 @@ export default (props) => {
     </Documentation>
   );
 };
+```
+
+## Overview
+
+This component puts a backdrop over the entire viewport.
+
+## Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-backdrop` | `<div>` |  Initiates backdrop. **Required** |
+| `.pf-c-backdrop__open` | `<body>` |  Lock scrolling when backdrop is active. This class should be set on `<body>` while backdrop is active and removed while backdrop is inactive. **Required** |

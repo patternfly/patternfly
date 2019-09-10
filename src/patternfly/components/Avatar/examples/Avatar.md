@@ -1,3 +1,9 @@
+---
+title: Avatar
+section: components
+---
+
+```js
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
@@ -20,3 +26,21 @@ export default (props) => {
     </Documentation>
   );
 };
+```
+
+## Overview
+
+The avatar component provides a default SVG icon. If an image is used it should be 36px by 36px.
+
+## Accessibility
+
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `alt` | `.pf-c-avatar` | The alt attribute specifies an alternate text for an image, if the image cannot be displayed. **Required** |
+
+
+## Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |
