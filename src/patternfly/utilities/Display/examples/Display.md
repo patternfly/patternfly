@@ -1,3 +1,9 @@
+---
+title: Display
+section: utilities
+---
+
+```js
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
@@ -19,12 +25,6 @@ import DisplayInlineFlexExample from './display-inline-flex-example.hbs';
 import DisplayInlineExample from './display-inline-example.hbs';
 import DisplayTableExample from './display-table-example.hbs';
 import DisplayNoneExample from './display-none-example.hbs';
-
-// import displayInlineBlockExampleDoc from '../docs/display-inline-block.md';
-// import displayBlockExampleDoc from '../docs/display-block.md';
-// import displayInlineExampleDoc from '../docs/display-inline.md';
-// import displayTableExampleDoc from '../docs/display-table.md';
-// import displayNoneExampleDoc from '../docs/display-none.md';
 
 import docs from '../docs/code.md';
 
@@ -70,3 +70,29 @@ export default (props) => {
     </Documentation>
   );
 };
+```
+
+## Overview
+
+Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-display-inline-block-on-lg**
+
+<!-- ## Accessibility
+
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `role` or `aria` | `pf-u-display` |  accessibility notes. |
+ -->
+
+## Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
+| `.pf-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |
+| `.pf-u-display-inline{-on-[breakpoint]}` | `*` |  Sets display: inline |
+| `.pf-u-display-flex{-on-[breakpoint]}` | `*` |  Sets display: flex |
+| `.pf-u-display-inline-flex{-on-[breakpoint]}` | `*` |  Sets display: inline-flex |
+| `.pf-u-display-table{-on-[breakpoint]}` | `*` |  Sets display: table |
+| `.pf-u-display-table-row{-on-[breakpoint]}` | `*` |  Sets display: table-row |
+| `.pf-u-display-table-cell{-on-[breakpoint]}` | `*` |  Sets display: table-cell |
+| `.pf-u-display-none{-on-[breakpoint]}` | `*` |  Sets display: none |
