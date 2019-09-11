@@ -20,18 +20,17 @@ export default props => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="Modal demo" fullPageOnly="true" handlebars={ToolbarAttributeValueSearchFilterExampleRaw}>
+      <Example heading="Toolbar attribute-value search filter" handlebars={ToolbarAttributeValueSearchFilterExampleRaw}>
         {toolbarAttributeValueSearchFilterExample}
       </Example>
       <Example
-        heading="Modal demo - content long enough to scroll"
+        heading="Toolbar attribute-value single select filter"
         handlebars={ToolbarAttributeValueSingleSelectFilterExampleRaw}
       >
         {toolbarAttributeValueSingleSelectFilterExample}
       </Example>
       <Example
-        heading="Modal demo - large"
-        fullPageOnly="true"
+        heading="Toolbar attribute-value checkbox select filter"
         handlebars={ToolbarAttributeValueCheckboxSelectFilterExampleRaw}
       >
         {toolbarAttributeValueCheckboxSelectFilterExample}

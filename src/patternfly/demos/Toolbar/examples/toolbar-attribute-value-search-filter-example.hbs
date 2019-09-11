@@ -1,0 +1,74 @@
+{{#> data-toolbar data-toolbar--id="data-toolbar-simple-example"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item}}
+        {{#> select id="select-icon" select-toggle--icon="fas fa-filter"}}
+          Name
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> input-group}}
+          {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
+          {{/form-control}}
+          {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="search button for search input"'}}
+            <i class="fas fa-search" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Action
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Action
+        {{/button}}
+      {{/data-toolbar-item}}
+
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+  
+    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+      {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+        {{#> pagination-total-items}}
+          37 items
+        {{/pagination-total-items}}
+        {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
+        {{#> pagination-nav}}
+          {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+            <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+            <i class="fas fa-angle-left" aria-hidden="true"></i>
+          {{/button}}
+          {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+            {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+            <span aria-hidden="true">of 4</span>
+          {{/pagination-nav-page-select}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+            <i class="fas fa-angle-right" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+            <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+          {{/button}}
+        {{/pagination-nav}}
+      {{/pagination}}
+    {{/data-toolbar-item}}
+
+
+ 
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
+
+
+
+
