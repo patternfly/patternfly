@@ -126,7 +126,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Data list expandable notes
 
 **All simple data list accessibility and usage requirements apply.**
-<br>
+
 **All data list checkbox/action button accessibility and usage requirements apply.**
 
 ### Accessibility
@@ -156,9 +156,9 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Data list width notes
 
 **All simple data list accessibility and usage requirements apply.**
-<br>
+
 **All data list checkbox/action button accessibility and usage requirements apply.**
-<br>
+
 **All expandable data list accessibility and usage requirements apply.**
 
 ### Accessibility

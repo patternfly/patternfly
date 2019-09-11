@@ -199,10 +199,8 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 
 
 **All simple table accessibility and usage requirements apply**
-<br>
-**All sortable table accessibility and usage requirements apply**
-<br>
 
+**All sortable table accessibility and usage requirements apply**
 Note: When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
 
 Note: When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
@@ -229,9 +227,9 @@ Note: When header cells are empty or they contain interactive elements, `<th>` s
 ### Table expandable notes
 
 **All simple table accessibility and usage requirements apply.**
-<br>
+
 **All sortable table accessibility and usage requirements apply.**
-<br>
+
 **All checkbox/action button accessibility and usage requirements apply.**
 
 Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
@@ -260,9 +258,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ### Table expandable notes
 
 **All simple table accessibility and usage requirements apply.**
-<br>
+
 **All sortable table accessibility and usage requirements apply.**
-<br>
+
 **All checkbox/action button accessibility and usage requirements apply.**
 
 
@@ -285,7 +283,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ### Table expandable notes
 
 **All compact table accessibility and usage requirements apply.**
-<br>
+
 **All expandable table accessibility and usage requirements apply.**
 
 
@@ -296,9 +294,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ### Table expandable notes
 
 **All simple table accessibility and usage requirements apply.**
-<br>
+
 **All sortable table accessibility and usage requirements apply.**
-<br>
+
 **All checkbox/action button accessibility and usage requirements apply.**
 
 
@@ -313,9 +311,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ### Table compound expansion notes
 
 **All simple table accessibility and usage requirements apply.**
-<br>
+
 **All sortable table accessibility and usage requirements apply.**
-<br>
+
 **All checkbox/action button accessibility and usage requirements apply.**
 
 ### Accessibility
