@@ -1,0 +1,41 @@
+{{#> table table--id="empty-loading-demo" table--grid="true" table--modifier="pf-m-grid-xl" table--attribute='aria-label="This is a table showing a loading state"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--attribute='colspan="8"'}}
+        {{#> bullseye}}
+          {{#> stack stack--modifier="pf-m-gutter"}}
+            {{#> bullseye}}
+              {{#> spinner}}{{/spinner}}
+            {{/bullseye}}
+            {{#> title titleType="div" title--modifier="pf-m-xl"}}Loading data{{/title}}
+          {{/stack}}
+        {{/bullseye}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
