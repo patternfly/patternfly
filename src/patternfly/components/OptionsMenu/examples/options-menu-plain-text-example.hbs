@@ -1,3 +1,13 @@
+{{#> options-menu id="options-menu-disabled-text-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+    <span class="pf-c-options-menu__toggle-text">
+      Custom text
+    </span>
+    {{> options-menu-toggle-button aria-label="Options menu"}}
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
 {{#> options-menu id="options-menu-plain-text-example" options-menu--IsText="true"}}
   {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
     <span class="pf-c-options-menu__toggle-text">

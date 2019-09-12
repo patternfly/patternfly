@@ -35,6 +35,8 @@ $pf-global--BackgroundColor--light-300:     $pf-color-black-200 !default;
 // dark theme
 $pf-global--BackgroundColor--dark-100:      $pf-color-black-900 !default;
 $pf-global--BackgroundColor--dark-200:      $pf-color-black-800 !default;
+$pf-global--BackgroundColor--dark-300:      $pf-color-black-850 !default;
+$pf-global--BackgroundColor--dark-400:      $pf-color-black-700 !default;
 $pf-global--BackgroundColor--dark-transparent-100:  rgba($pf-color-black-1000, .62) !default;
 $pf-global--BackgroundColor--dark-transparent-200:  rgba($pf-color-black-1000, .32) !default;
 
@@ -48,6 +50,7 @@ $pf-global--Color--400: $pf-color-black-500 !default;
 // light theme
 $pf-global--Color--light-100:      $pf-color-white !default;
 $pf-global--Color--light-200:      $pf-color-black-200 !default;
+$pf-global--Color--light-300:      $pf-color-black-300 !default;
 
 // dark theme
 $pf-global--Color--dark-100:      $pf-color-black-900 !default;
@@ -69,6 +72,9 @@ $pf-global--disabled-color--300: $pf-color-black-200 !default;
 $pf-global--primary-color--100:         $pf-color-blue-400 !default;
 $pf-global--primary-color--200:         $pf-color-blue-500 !default;
 $pf-global--secondary-color--100:       $pf-color-black-600 !default;
+$pf-global--default-color--100:         $pf-color-cyan-200 !default;
+$pf-global--default-color--200:         $pf-color-cyan-300 !default;
+$pf-global--default-color--300:         $pf-color-cyan-500 !default;
 $pf-global--success-color--100:         $pf-color-light-green-400 !default;
 $pf-global--success-color--200:         $pf-color-light-green-600 !default;
 $pf-global--info-color--100:            $pf-color-blue-200 !default;
@@ -179,14 +185,17 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Font family
 // stylelint-disable value-keyword-case
 $pf-global--FontFamily--sans-serif: "overpass", overpass, "open sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global--FontFamily--heading--sans-serif: $pf-global--FontFamily--sans-serif;
 $pf-global--FontFamily--monospace: "overpass-mono", overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
+$pf-global--FontFamily--redhatfont--sans-serif: "RedHatText", "Overpass", overpass, helvetica, arial, sans-serif;
+$pf-global--FontFamily--redhatfont--heading--sans-serif: "RedHatDisplay", "Overpass", overpass, helvetica, arial, sans-serif;
 // stylelint-enable value-keyword-case
 
 // Font size
 $pf-global--FontSize--4xl: pf-font-prem(36px) !default;
 $pf-global--FontSize--3xl: pf-font-prem(28px) !default;
 $pf-global--FontSize--2xl: pf-font-prem(24px) !default;
-$pf-global--FontSize--xl: pf-font-prem(21px) !default;
+$pf-global--FontSize--xl: pf-font-prem(20px) !default;
 $pf-global--FontSize--lg: pf-font-prem(18px) !default;
 $pf-global--FontSize--md: pf-font-prem(16px) !default;
 $pf-global--FontSize--sm: pf-font-prem(14px) !default;
@@ -197,6 +206,8 @@ $pf-global--FontWeight--light: 300 !default;
 $pf-global--FontWeight--normal: 400 !default;
 $pf-global--FontWeight--semi-bold: 500 !default;
 $pf-global--FontWeight--bold: 600 !default;
+$pf-global--FontWeight--redhatfont--bold: 700 !default;
+
 
 // Line height
 $pf-global--LineHeight--sm: 1.3 !default;
@@ -281,13 +292,13 @@ $pf-global--spacer-properties-map: (
 
 // Spacer values
 $pf-global--spacer-map: (
-  "-auto": "auto",
-  "-0": 0,
-  "-xs": "var(--pf-global--spacer--xs)",
-  "-sm": "var(--pf-global--spacer--sm)",
-  "-md": "var(--pf-global--spacer--md)",
-  "-lg": "var(--pf-global--spacer--lg)",
-  "-xl": "var(--pf-global--spacer--xl)",
-  "-2xl": "var(--pf-global--spacer--2xl)",
-  "-3xl": "var(--pf-global--spacer--3xl)"
+  "auto": "auto",
+  "0": 0,
+  "xs": "var(--pf-global--spacer--xs)",
+  "sm": "var(--pf-global--spacer--sm)",
+  "md": "var(--pf-global--spacer--md)",
+  "lg": "var(--pf-global--spacer--lg)",
+  "xl": "var(--pf-global--spacer--xl)",
+  "2xl": "var(--pf-global--spacer--2xl)",
+  "3xl": "var(--pf-global--spacer--3xl)"
 );

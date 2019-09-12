@@ -1,0 +1,9 @@
+.pf-c-divider {
+  --pf-c-divider--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-divider--BackgroundColor: var(--pf-global--BorderColor--100);
+
+  height: var(--pf-c-divider--Height);
+  background-color: var(--pf-c-divider--BackgroundColor);
+  border: 0; // removes the default border styling on an hr
+  flex-shrink: 0;
+}

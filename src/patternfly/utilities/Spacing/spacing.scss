@@ -13,7 +13,7 @@
       @each $spacer, $spacer-value in $pf-global--spacer-map {
 
         // If breakpoint != null, append responsive value
-        .pf-u-#{$property}#{$spacer}#{$breakpoint-value} {
+        .pf-u-#{$property}-#{$spacer}#{$breakpoint-value} {
           @include pf-media-query($breakpoint) {
             $spacer-value: $spacer-value !important;
 

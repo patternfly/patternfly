@@ -1,0 +1,111 @@
+version: 2
+
+# Adapted from https://github.com/circleci/circleci-docs/blob/master/.circleci/config.yml
+# I'd love to find docs on this syntax.
+references:
+  js_deps_paths: &js_deps_paths
+  - node_modules/
+  build_cache_paths: &build_cache_paths
+  - .cache/
+  - dist/
+  - public/
+  - src/icons/PfIcons/
+  - tmp/
+  js_deps_cache_key: &js_deps_cache_key
+    js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "package-lock.json"}}
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/project
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+    - build
+    - test_a11y:
+        requires:
+        - build
+    - lint:
+        requires:
+        - build
+    - upload_docs:
+        requires:
+        - build
+    - deploy:
+        requires:
+        - build
+        filters:
+          branches:
+            only: master
+jobs:
+  build:
+    docker:
+    - image: circleci/node:10-browsers
+    steps:
+    - checkout
+    - persist_to_workspace:
+        root: ~/project
+        paths:
+          - "*"
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Conditional install
+        command: if [ ! -d node_modules ]; then npm ci; fi
+    - save_cache:
+        paths: *js_deps_paths
+        key: *js_deps_cache_key
+    - run:
+        name: Build Dist
+        command: npm run build-patternfly
+    - run:
+        name: Build IE11
+        command: npm run build:ie11
+    - run:
+        name: Build Site
+        command: npm run build
+    - persist_to_workspace:
+        root: ~/project
+        paths: *build_cache_paths
+  test_a11y:
+    docker:
+    - image: circleci/node:10-browsers
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: a11y Tests
+        command: npm run test:ci
+  upload_docs:
+    docker:
+    - image: circleci/node:10
+    steps:
+    - *attach_workspace
+    - run:
+        name: Upload docs to surge.sh
+        command: .circleci/upload-docs.sh
+  lint:
+    docker:
+    - image: circleci/node:10
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Lint SASS
+        command: npm run lint:styles
+  deploy:
+    docker:
+    - image: circleci/node:10
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Release to NPM
+        command: npm run semantic-release

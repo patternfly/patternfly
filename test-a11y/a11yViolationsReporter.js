@@ -1,9 +1,8 @@
 /* eslint no-console: 0 */
 const fs = require('fs');
 const path = require('path');
-const axios = require('axios');
 const config = require('./config');
-const { errorsExceedThreshold, dec } = require('./utils');
+const { errorsExceedThreshold } = require('./utils');
 
 const violatingPages = [];
 const violations = [];
@@ -55,25 +54,6 @@ const logOutput = testPages => {
   }
 };
 
-const updateStatus = (status, description) => {
-  const sha = process.env.TRAVIS_PULL_REQUEST_SHA || process.env.TRAVIS_COMMIT;
-  const repoSlug = process.env.TRAVIS_REPO_SLUG;
-  const githubToken = dec(process.env.GITHUB_A11Y_TOKEN);
-  const buildId = process.env.TRAVIS_BUILD_ID;
-  const url = `https://api.github.com/repos/${repoSlug}/statuses/${sha}?access_token=${githubToken}`;
-
-  return axios
-    .post(url, {
-      state: status,
-      context: 'Patternfly Accessibility Reporter',
-      description,
-      target_url: `https://travis-ci.com/${repoSlug}/builds/${buildId}`
-    })
-    .catch(error => {
-      console.log(error);
-    });
-};
-
 const violationsReporter = (testPages, reportType) => {
   const reportPromise = new Promise((resolve, reject) => {
     switch (reportType) {
@@ -89,16 +69,11 @@ const violationsReporter = (testPages, reportType) => {
         break;
       }
       case 'github-status-reporter': {
-        const overErrorLimit = errorsExceedThreshold(violations.length, config.toleranceThreshold);
-        const status = overErrorLimit ? 'failure' : 'success';
-        const description = overErrorLimit ? 'Too many accessibility violations' : 'A11y Checks Pass!';
-        updateStatus(status, description)
-          .then(() => {
-            resolve();
-          })
-          .catch(error => {
-            reject(error);
-          });
+        if (errorsExceedThreshold(violations.length, config.toleranceThreshold)) {
+          console.error('Too many Accessibility violations');
+          process.exit(1);
+        }
+        console.log('A11y Checks Pass!');
         break;
       }
       default: {
@@ -122,7 +97,6 @@ module.exports = {
           const finalReportType = !process.env.CI ? 'writefile' : 'github-status-reporter';
           return violationsReporter(errors, finalReportType);
         })
-        .then(() => violations),
-    updateStatus
+        .then(() => violations)
   }
 };

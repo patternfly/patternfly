@@ -282,6 +282,10 @@
   }
 
   .pf-c-list {
+    a {
+      color: unset; // fixes a11y issue
+    }
+
     &:not(:only-child) { // paragraph text might not always be included.
       padding-top: var(--pf-c-login__footer--c-list--PaddingTop);
     }

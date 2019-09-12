@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+const { src, dest, series } = require('gulp');
 const rename = require('gulp-rename');
 const replace = require('gulp-string-replace');
 const sass = require('gulp-sass');
@@ -7,9 +7,10 @@ const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const gulpStylelint = require('gulp-stylelint');
-const del = require('del');
 const iconfontCss = require('gulp-iconfont-css');
+const fs = require('fs-extra');
 const header = require('gulp-header');
+const experimentalFeatures = require('./experimental-features');
 
 const pficonRunTimestamp = Math.round(Date.now() / 1000);
 const pficonFontName = 'pficon';
@@ -33,9 +34,8 @@ const conf = {
   }
 };
 
-gulp.task('build-pficonfont', () => {
-  gulp
-    .src(['./src/icons/PfIcons/*.svg'])
+function pfIconFont() {
+  return src(['./src/icons/PfIcons/*.svg'])
     .pipe(
       iconfontCss({
         fontName: pficonFontName,
@@ -52,40 +52,38 @@ gulp.task('build-pficonfont', () => {
         timestamp: pficonRunTimestamp
       })
     )
-    .pipe(gulp.dest('./src/patternfly/assets/pficon/'));
-});
+    .pipe(dest('./src/patternfly/assets/pficon/'));
+}
 
-gulp.task('build', ['build-modules', 'build-library', 'copy-fa', 'copy-source', 'minify-css', 'lint-css']);
-
-gulp.task('copy-fa', () =>
-  gulp
-    .src('./node_modules/@fortawesome/fontawesome/styles.css')
+function copyFA() {
+  return src('./node_modules/@fortawesome/fontawesome/styles.css')
     .pipe(rename('fontawesome.css'))
-    .pipe(gulp.dest('./dist/assets/icons'))
-);
+    .pipe(dest('./dist/assets/icons'));
+}
 
-gulp.task('build-tmp', () =>
-  gulp
-    .src(['./src/patternfly/**/*.scss', '!./src/patternfly/**/examples/*.scss'])
+function tmp() {
+  const experiments = [];
+  experimentalFeatures.forEach(item => {
+    experiments.push(`**/${item.path}/*.scss`);
+  });
+  return src(['./src/patternfly/**/*.scss', '!./src/patternfly/**/examples/*.scss'])
     .pipe(
       sassGlob({
-        ignorePaths: ['**/examples/*.scss']
+        ignorePaths: ['**/examples/*.scss', ...experiments]
       })
     )
-    .pipe(gulp.dest('./tmp'))
-);
+    .pipe(dest('./tmp'));
+}
 
-gulp.task('build-library', ['build-tmp'], () =>
-  gulp
-    .src(['./tmp/patternfly*.scss', '!./tmp/patternfly-imports.scss'])
+function library() {
+  return src(['./tmp/patternfly*.scss', '!./tmp/patternfly-imports.scss'])
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist'))
-);
+    .pipe(dest('./dist'));
+}
 
-gulp.task('lint-css', ['minify-css'], () => {
+function lintCSS() {
   const options = { logs: false };
-  gulp
-    .src('./dist/patternfly.css')
+  return src('./dist/patternfly.css')
     .pipe(replace('stylelint-enable', '', options))
     .pipe(replace('stylelint-disable', '', options))
     .pipe(
@@ -96,44 +94,69 @@ gulp.task('lint-css', ['minify-css'], () => {
         reporters: [{ formatter: 'string', console: true }]
       })
     );
-});
+}
 
-gulp
-  .task('minify-css', ['build-library'], () => {
-    gulp
-      .src('./dist/patternfly.css')
+function minifyCSS() {
+  return src('./dist/patternfly.css')
+    .pipe(sourcemaps.init())
+    .pipe(cssnano())
+    .pipe(rename('patternfly.min.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('./dist'));
+}
 
-      .pipe(sourcemaps.init())
-      .pipe(cssnano())
-      .pipe(rename('patternfly.min.css'))
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('./dist'));
-  })
-  .task('build-modules', () =>
-    gulp
-      .src([
-        './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-        '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
-      ])
-      .pipe(header('@import "../../patternfly-imports";'))
-      .pipe(sass().on('error', sass.logError))
-      .pipe(replace('./assets/images', '../../assets/images'))
-      .pipe(gulp.dest('./dist'))
-  );
+function modules() {
+  return src([
+    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+    '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
+  ])
+    .pipe(header('@import "../../patternfly-imports";'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(replace('./assets/images', '../../assets/images'))
+    .pipe(dest('./dist'));
+}
 
-gulp.task('copy-source', ['copy-icons', 'build-tmp'], () => {
-  gulp.src('./README.md').pipe(gulp.dest('./dist'));
-  gulp.src('./package.json').pipe(gulp.dest('./dist'));
-  gulp.src('./tmp/**/*.scss').pipe(gulp.dest('./dist'));
-  gulp.src('./static/assets/images/**/*.*').pipe(gulp.dest('./dist/assets/images/'));
-  gulp.src('./src/patternfly/assets/**/*.*').pipe(gulp.dest('./dist/assets/'));
-  gulp.src('./build/npm-scripts/ie-conversion-utils.js').pipe(gulp.dest('./dist/scripts'));
-});
+function copySource() {
+  return Promise.all([
+    src('./README.md').pipe(dest('./dist')),
+    src('./package.json').pipe(dest('./dist')),
+    src('./tmp/**/*.scss').pipe(dest('./dist')),
+    src('./static/assets/images/**/*.*').pipe(dest('./dist/assets/images/')),
+    src('./src/patternfly/assets/**/*.*').pipe(dest('./dist/assets/')),
+    src('./build/npm-scripts/ie-conversion-utils.js').pipe(dest('./dist/scripts')),
+    // Icons
+    src('./src/icons/definitions/**/*.*').pipe(dest('./dist/icons/')),
+    src('./src/icons/PfIcons/**/*.*').pipe(dest('./dist/icons/PfIcons/'))
+  ]);
+}
 
-gulp.task('copy-icons', () => {
-  gulp.src('./src/icons/definitions/**/*.*').pipe(gulp.dest('./dist/icons/'));
-  gulp.src('./src/icons/PfIcons/**/*.*').pipe(gulp.dest('./dist/icons/PfIcons/'));
-});
+function preClean(cb) {
+  conf.dirs.build.forEach(dir => fs.removeSync(dir));
+  cb();
+}
 
-gulp.task('pre-clean', () => del(conf.dirs.build));
-gulp.task('post-clean', () => del(conf.files.tmpSrc));
+function postClean(cb) {
+  conf.files.tmpSrc.forEach(dir => fs.removeSync(dir));
+  cb();
+}
+
+function pfIcons(cb) {
+  // eslint-disable-next-line global-require
+  require('./src/icons/generateIcons.js');
+  cb();
+}
+
+function ie(cb) {
+  // eslint-disable-next-line global-require
+  require('./build/npm-scripts/ie-convert-all.js');
+  cb();
+}
+
+module.exports = {
+  build: series(preClean, pfIcons, modules, tmp, copyFA, copySource, library, minifyCSS, lintCSS, postClean),
+  preClean,
+  postClean,
+  pfIconFont,
+  pfIcons,
+  ie
+};

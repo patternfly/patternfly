@@ -10,7 +10,7 @@
   --pf-c-select__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-select__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__toggle--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-select__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-select__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -22,8 +22,9 @@
   --pf-c-select__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-select__toggle--m-plain--BorderColor: transparent;
-  --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--200);
+  --pf-c-select__toggle--m-plain--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
   // When there is a typeahead (input box) adjust the top padding of the wrapper in case it wraps to the second line
@@ -52,6 +53,9 @@
 
   // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
   --pf-c-select__toggle-typeahead--active--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+
+  //  Select toggle icon + toggle text
+  --pf-c-select__toggle-icon--toggle-text--MarginLeft: var(--pf-global--spacer--xs);
 
   // Select toggle badge
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--sm);
@@ -144,6 +148,17 @@
   background-color: var(--pf-c-select__toggle--BackgroundColor);
   border: none;
 
+  &.pf-m-disabled,
+  &:disabled {
+    --pf-c-select__toggle--BackgroundColor: var(--pf-c-select__toggle--disabled--BackgroundColor);
+
+    pointer-events: none;
+
+    &::before {
+      border: 0;
+    }
+  }
+
   & > * {
     color: var(--pf-c-select__toggle--Color);
   }
@@ -211,8 +226,10 @@
 
     padding-top: var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop);
 
-    input {
+    .pf-c-form-control {
       @include pf-text-overflow;
+
+      position: relative;
     }
 
     // When the input is the first thing then use a negative left padding so it matches the toggle container
@@ -229,6 +246,8 @@
 
   .pf-c-select__toggle-button {
     color: var(--pf-c-select__toggle-button--Color);
+
+    &:disabled { background-color: transparent; }
   }
 
   .pf-c-select__toggle-clear + .pf-c-select__toggle-button {
@@ -284,6 +303,10 @@
   .pf-c-chip-group {
     margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
   }
+}
+
+.pf-c-select__toggle-icon + .pf-c-select__toggle-text {
+  margin-left: var(--pf-c-select__toggle-icon--toggle-text--MarginLeft);
 }
 
 .pf-c-select__toggle-badge {

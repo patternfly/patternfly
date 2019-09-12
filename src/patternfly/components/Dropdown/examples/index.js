@@ -11,6 +11,7 @@ import DropdownTopRaw from '!raw!./dropdown-top-example.hbs';
 import DropdownSplitButtonRaw from '!raw!./dropdown-split-button-example.hbs';
 import DropdownGroupsRaw from '!raw!./dropdown-groups-example.hbs';
 import DropdownPanelRaw from '!raw!./dropdown-panel-example.hbs';
+import DropdownPrimaryRaw from '!raw!./dropdown-primary-example.hbs';
 import DropdownExpanded from './dropdown-expanded-example.hbs';
 import DropdownCollapsed from './dropdown-collapsed-example.hbs';
 import DropdownDisabled from './dropdown-disabled-example.hbs';
@@ -21,6 +22,8 @@ import DropdownTop from './dropdown-top-example.hbs';
 import DropdownSplitButton from './dropdown-split-button-example.hbs';
 import DropdownGroups from './dropdown-groups-example.hbs';
 import DropdownPanel from './dropdown-panel-example.hbs';
+import DropdownPrimary from './dropdown-primary-example.hbs';
+
 import DropdownPanelDoc from '../docs/dropdown-panel.md';
 import docs from '../docs/code.md';
 
@@ -28,7 +31,6 @@ export const Docs = docs;
 
 export default (props) => {
   const dropdownExpanded = DropdownExpanded();
-  const dropdownPanel = DropdownPanel();
   const dropdownCollapsed = DropdownCollapsed();
   const dropdownDisabled = DropdownDisabled();
   const dropdownKebab = DropdownKebab();
@@ -37,6 +39,8 @@ export default (props) => {
   const dropdownTop = DropdownTop();
   const dropdownSplitButton = DropdownSplitButton();
   const dropdownGroups = DropdownGroups();
+  const dropdownPanel = DropdownPanel();
+  const dropdownPrimary = DropdownPrimary();
   const headingText = 'Dropdown';
   const variablesRoot = 'pf-c-dropdown';
 
@@ -78,6 +82,9 @@ export default (props) => {
       </Example>
       <Example className="is-expanded-dropdown" heading="Dropdown panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
         {dropdownPanel}
+      </Example>
+      <Example className="is-expanded-dropdown" heading="Dropdown - primary toggle" handlebars={DropdownPrimaryRaw}>
+        {dropdownPrimary}
       </Example>
     </Documentation>
   );

@@ -1,4 +1,4 @@
-{{#> page page--id="page-layout-default-nav"}}
+{{#> page page--id=page-demo-default--id}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
@@ -11,7 +11,7 @@
         {{/button}}
       {{/page-header-brand-toggle}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="PatternFly logo"'}}{{/brand}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
 
@@ -50,10 +50,9 @@
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#> page-main}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-template-breadcrumb}}
     {{/page-template-breadcrumb}}
-    <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

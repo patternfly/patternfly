@@ -422,3 +422,10 @@
     }
   }
 }
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-button {
+    --pf-c-button--FontWeight: var(--pf-global--FontWeight--normal);
+  }
+}
