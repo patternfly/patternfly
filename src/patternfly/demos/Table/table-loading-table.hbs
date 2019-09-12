@@ -28,12 +28,14 @@
     {{#> table-tr}}
       {{#> table-td table-td--attribute='colspan="8"'}}
         {{#> bullseye}}
-          {{#> stack stack--modifier="pf-m-gutter"}}
-            {{#> bullseye}}
+          {{#> empty-state empty-state--modifier="pf-m-sm"}}
+            {{#> empty-state-icon}}
               {{#> spinner}}{{/spinner}}
-            {{/bullseye}}
-            {{#> title titleType="div" title--modifier="pf-m-xl"}}Loading data{{/title}}
-          {{/stack}}
+            {{/empty-state-icon}}
+            {{#> title titleType="h2" title--modifier="pf-m-lg"}}
+              No results found
+            {{/title}}
+          {{/empty-state}}
         {{/bullseye}}
       {{/table-td}}
     {{/table-tr}}
