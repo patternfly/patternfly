@@ -7,12 +7,13 @@ import docs from '../docs/code.md';
 
 export const Docs = docs;
 
-export default (props) => {
+export default props => {
   const brandSimpleExample = BrandSimpleExample();
   const headingText = 'Brand';
+  const variablesRoot = 'pf-c-brand';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Brand simple" handlebars={brandSimpleExampleRaw}>
         {brandSimpleExample}
       </Example>
