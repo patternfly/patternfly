@@ -1,32 +1,69 @@
 {{#> example-title}}Individually spaced items - <code>.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>.{{/example-title}}
 {{#> l-flex}}
-  {{#> example-text example-text--modifier="example-border pf-m-spacer-xs"}}Item - xs{{/example-text}}
-    {{#> example-text example-text--modifier="example-border pf-m-spacer-sm"}}Item - sm{{/example-text}}
-    {{#> example-text example-text--modifier="example-border pf-m-spacer-md"}}Item - md{{/example-text}}
-    {{#> example-text example-text--modifier="example-border pf-m-spacer-lg"}}Item - lg{{/example-text}}
-    {{#> example-text example-text--modifier="example-border pf-m-spacer-xl"}}Item - xl{{/example-text}}
-    {{#> example-text example-text--modifier="example-border pf-m-spacer-2xl"}}Item - 2xl{{/example-text}}
-    {{#> example-text example-text--modifier="example-border pf-m-spacer-3xl"}}Item - 3xl{{/example-text}}
-  {{/l-flex}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
+    Item - none
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xs"}}
+    Item - xs
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
+    Item - sm
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+    Item - md
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
+    Item - lg
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xl"}}
+    Item - xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-2xl"}}
+    Item - 2xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-3xl"}}
+    Item - 3xl
+  {{/l-flex-item}}
+{{/l-flex}}
 
 <h2 class="example-title">
   Flex with modified spacing - <code>.pf-m-space-items-xl</code>.
 </h2>
 {{#> l-flex l-flex--modifier="pf-m-space-items-xl"}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
 {{/l-flex}}
 
 <h2 class="example-title">
   Flex with modified spacing - <code>.pf-m-space-items-none</code>.
 </h2>
 {{#> l-flex l-flex--modifier="pf-m-space-items-none"}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
 {{/l-flex}}
