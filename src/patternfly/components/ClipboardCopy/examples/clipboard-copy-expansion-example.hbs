@@ -65,7 +65,7 @@ JSON Object (wrap code in pre)
 	{{#> clipboard-copy-group}}
     {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
     {{/clipboard-copy-group-toggle}}
-    {{#> form-control controlType="input" form-control--attribute=(concat 'readonly type="text" value="code here"')}}
+    {{#> form-control controlType="input" form-control--attribute=(concat 'readonly type="text" value="Code goes here" id="text-input-' clipboard-copy--id '" aria-label="Copyable input"')}}
 	  {{/form-control}}
 	  {{#> clipboard-copy-group-copy clipboard-copy-group-copy--attribute=(concat 'id="copy-button-' clipboard-copy--id '" aria-labelledby="copy-button-' clipboard-copy--id ' text-input-' clipboard-copy--id '"')}}
     {{/clipboard-copy-group-copy}}
