@@ -18,7 +18,8 @@
   padding: var(--pf-c-empty-state--Padding);
   text-align: center;
 
-  > .pf-c-button.pf-m-primary {
+  > .pf-c-button.pf-m-primary,
+  .pf-c-empty-state__primary {
     margin-top: var(--pf-c-empty-state--c-button--MarginTop);
 
     + .pf-c-empty-state__secondary {
