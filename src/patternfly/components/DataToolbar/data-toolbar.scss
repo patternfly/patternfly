@@ -192,11 +192,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     }
   }
 
-  // Clear button
-  &.pf-m-clear {
-    justify-self: end;
-  }
-
   // If pagination is sibling of align-right
   &.pf-m-align-right ~ * {
     margin-left: 0;
@@ -296,10 +291,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
           &:last-child {
             --pf-c-data-toolbar--spacer: 0;
           }
-        }
-
-        &.pf-c-data-toolbar__expandable-content .pf-m-clear {
-          justify-self: flex-start;
         }
 
         &.pf-c-data-toolbar__expandable-content.pf-m-expanded {

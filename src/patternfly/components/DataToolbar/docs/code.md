@@ -26,7 +26,6 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
 | `.pf-m-label` | `.pf-c-data-toolbar__item` | Modifies toolbar item to label. |
-| `.pf-m-clear` | `.pf-c-data-toolbar__expandable-content .pf-c-data-toolbar__item` | Positions clear all filters button. |
 
 ## Accessibility
 
