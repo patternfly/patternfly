@@ -30,13 +30,6 @@ export default (props) => {
 
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-text-left-on-lg**
 
-<!-- ## Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-u-alignment` |  accessibility notes. |
- -->
-
 ## Usage
 
 | Class | Applied to | Outcome |

@@ -79,13 +79,6 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 | `2xl` | var(--pf-global--spacer--2xl) |
 | `3xl` | var(--pf-global--spacer--3xl) |
 
-<!-- ## Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role` or `aria` | `pf-u-flex` |  accessibility notes. |
- -->
-
 ## Usage
 
 | Class | Applied to | Outcome |

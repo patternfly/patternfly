@@ -1,6 +1,6 @@
 ---
 title: Drawer
-section: expiremental
+section: experimental
 ---
 ```js
 import React from 'react';

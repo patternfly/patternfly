@@ -1,6 +1,6 @@
 ---
 title: Spinner
-section: expiremental
+section: experimental
 ---
 
 ```js

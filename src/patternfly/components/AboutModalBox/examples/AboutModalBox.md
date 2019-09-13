@@ -7,11 +7,13 @@ section: components
 
 About modal layout.
 
+import AboutModalBoxExample from './about-modal-box-example.hbs';
+
+
 ```js
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
-import AboutModalBoxExample from './about-modal-box-example.hbs';
 
 export const Docs = docs;
 
@@ -21,11 +23,9 @@ export default (props) => {
   const variablesRoot = 'pf-c-about-modal-box';
 
   return (
-    <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example fullPageOnly="true" heading={headingText}>
         {aboutModalBoxExample}
       </Example>
-    </Documentation>
   );
 };
 ```

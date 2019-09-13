@@ -9,10 +9,6 @@ const Navigation = ({ links, isHorizontal = false }) => {
   if (links) {
     navigationItems = links.map(navItem => {
       const { path, text, className } = navItem;
-      const isFullPage = path.endsWith('-full/');
-      if (isFullPage) {
-        return null;
-      }
       return (
         <li className={`Navigation__item ${className}`} key={`navigation-${path}`}>
           <Link className={`Navigation_link ${className}`} to={path}>

@@ -1,6 +1,6 @@
 ---
 title: Tooltip
-section: Components
+section: components
 ---
 
 ```js

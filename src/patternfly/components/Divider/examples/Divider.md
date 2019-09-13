@@ -1,6 +1,6 @@
 ---
 title: Divider
-section: expiremental
+section: experimental
 ---
 
 ```js
