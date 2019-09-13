@@ -2,6 +2,13 @@
 
 /* stylelint-disable */
 
+.pf-c-chart {
+  // Color blending mode
+  svg g[clip-path] {
+    mix-blend-mode: multiply;
+  }
+}
+
 :root {
   // Chart colors
 
