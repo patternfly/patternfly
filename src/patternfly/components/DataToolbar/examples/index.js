@@ -9,6 +9,8 @@ import dataToolbarSelectedFiltersExampleRaw from '!raw!./data-toolbar-selected-f
 import dataToolbarSpacersExampleRaw from '!raw!./data-toolbar-spacers-example.hbs';
 import dataToolbarGroupSpacersExampleRaw from '!raw!./data-toolbar-group-spacers-example.hbs';
 import dataToolbarStackedExampleRaw from '!raw!./data-toolbar-stacked-example.hbs';
+import dataToolbarExpandedExampleRaw from '!raw!./data-toolbar-expanded-example.hbs';
+import dataToolbarExpandedElementsExampleRaw from '!raw!./data-toolbar-expanded-elements-example.hbs';
 
 import DataToolbarItemsExample from './data-toolbar-items-example.hbs';
 import DataToolbarGroupTypesExample from './data-toolbar-group-types-example.hbs';
@@ -17,6 +19,8 @@ import DataToolbarSelectedFiltersExample from './data-toolbar-selected-filters-e
 import DataToolbarSpacersExample from './data-toolbar-spacers-example.hbs';
 import DataToolbarGroupSpacersExample from './data-toolbar-group-spacers-example.hbs';
 import DataToolbarStackedExample from './data-toolbar-stacked-example.hbs';
+import DataToolbarExpandedExample from './data-toolbar-expanded-example.hbs';
+import DataToolbarExpandedElementsExample from './data-toolbar-expanded-elements-example.hbs';
 
 import dataToolbarIntroExampleDoc from '../docs/data-toolbar-intro.md';
 import dataToolbarGroupTypesExampleDoc from '../docs/data-toolbar-group-types.md';
@@ -37,6 +41,8 @@ export default props => {
   const dataToolbarSpacersExample = DataToolbarSpacersExample();
   const dataToolbarGroupSpacersExample = DataToolbarGroupSpacersExample();
   const dataToolbarStackedExample = DataToolbarStackedExample();
+  const dataToolbarExpandedExample = DataToolbarExpandedExample();
+  const dataToolbarExpandedElementsExample = DataToolbarExpandedElementsExample();
 
   const headingText = 'Data toolbar';
   const variablesRoot = 'pf-c-data-toolbar';
@@ -99,6 +105,16 @@ export default props => {
       </Example>
       <Example heading="Data toolbar stacked" handlebars={dataToolbarStackedExampleRaw}>
         {dataToolbarStackedExample}
+      </Example>
+      <Example heading="Data toolbar expanded wrapper" handlebars={dataToolbarExpandedExampleRaw} minHeight="27rem">
+        {dataToolbarExpandedExample}
+      </Example>
+      <Example
+        heading="Data toolbar expanded elements"
+        handlebars={dataToolbarExpandedElementsExampleRaw}
+        minHeight="27rem"
+      >
+        {dataToolbarExpandedElementsExample}
       </Example>
     </Documentation>
   );

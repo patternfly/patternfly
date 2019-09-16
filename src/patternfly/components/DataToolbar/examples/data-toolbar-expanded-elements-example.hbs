@@ -1,0 +1,90 @@
+Not Expanded Toolbar
+<br>
+{{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-example"}}
+  {{#> data-toolbar-content}}
+    {{!-- Bulk select --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
+      {{#> dropdown dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat data-toolbar--id '-bulk-select')}}
+        {{> dropdown-toggle-check dropdown-toggle-check--id=(concat data-toolbar--id '-bulk-select-check') aria-label="Select all"}}
+        {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat data-toolbar--id '-button') aria-label="Select"}}
+      {{/dropdown}}
+    {{/data-toolbar-item}}
+    {{!-- Toggle group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl" data-toolbar-group--IsExpanded="true"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--SelectedFilters="6"}}
+      {{!-- Search filter --}}
+      {{> data-toolbar-item-search-filter button--id="content"}}
+      {{!-- Filter group --}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            Risk
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-group}}
+    {{#> data-toolbar-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+      {{/button}}
+    {{/data-toolbar-item}}
+    {{!-- Overflow menu --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
+      {{!-- Uncomment when overflow menu merges --}}
+      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}} --}}
+      {{!-- Remove when overflow menu merges --}}
+      Overflow menu
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
+<br>
+<br>
+Expanded Toolbar
+<br>
+{{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-example"}}
+  {{#> data-toolbar-content}}
+    {{!-- Bulk select --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
+      {{#> dropdown dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat data-toolbar--id '-bulk-select')}}
+        {{> dropdown-toggle-check dropdown-toggle-check--id=(concat data-toolbar--id '-bulk-select-check') aria-label="Select all"}}
+        {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat data-toolbar--id '-button') aria-label="Select"}}
+      {{/dropdown}}
+    {{/data-toolbar-item}}
+    {{!-- Toggle group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl" data-toolbar-group--IsExpanded="true"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--SelectedFilters="6"}}
+      {{!-- Search filter --}}
+      {{> data-toolbar-item-search-filter button--id="content"}}
+      {{!-- Filter group --}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+            Risk
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-group}}
+    {{#> data-toolbar-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+      {{/button}}
+    {{/data-toolbar-item}}
+    {{!-- Overflow menu --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
+      {{!-- Uncomment when overflow menu merges --}}
+      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}} --}}
+      {{!-- Remove when overflow menu merges --}}
+      Overflow menu
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
