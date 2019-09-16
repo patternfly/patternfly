@@ -33,13 +33,24 @@
 @function build-breakpoint-map($map-items...) {
   $map: ();
 
-  @each $breakpoint in $map-items {
-    @if $breakpoint == "base" {
-      $map: map-merge($map, ($breakpoint: null));
-    }
+  @if length($map-items) == 0 {
+    $map: ("base": null);
+    $map: map-merge($map, $pf-global--breakpoint-name-map);
+  }
 
-    @else {
-      $map: map-merge($map, ($breakpoint: map-get($pf-global--breakpoint-name-map, #{$breakpoint})));
+  @else {
+    @each $breakpoint in $map-items {
+      @if not map-has-key($pf-global--breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
+        $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
+      }
+
+      @else if $breakpoint == "base" {
+        $map: map-merge($map, ($breakpoint: null));
+      }
+
+      @else {
+        $map: map-merge($map, ($breakpoint: map-get($pf-global--breakpoint-name-map, #{$breakpoint})));
+      }
     }
   }
 
@@ -51,8 +62,18 @@
 @function build-spacer-map($map-items...) {
   $map: ();
 
+  @if length($map-items) == 0 {
+    $map: ("none": 0);
+    $map: map-merge($map, $pf-global--spacer-map);
+    $map: map-remove($map, "auto", "0");
+  }
+
   @each $spacer in $map-items {
-    @if $spacer == "none" {
+    @if not map-has-key($pf-global--spacer-map, $spacer) and $spacer != "none" {
+      $map: map-merge($map, ("invalid spacer #{$spacer}": null));
+    }
+
+    @else if $spacer == "none" {
       $map: map-merge($map, ($spacer: 0));
     }
 
@@ -62,4 +83,16 @@
   }
 
   @return $map;
+}
+
+// Build variable map
+// Based on custom map
+@function build-variable-map($namespace, $map: ()) {
+  $new-map: ();
+
+  @each $size, $value in $map {
+    $new-map: map-merge($new-map, (map-get($map, $size): --#{$namespace}--#{$size}));
+  }
+
+  @return $new-map;
 }

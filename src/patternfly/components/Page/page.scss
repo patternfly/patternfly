@@ -353,10 +353,8 @@
   // Desktop
   // Collapse nav
   &.pf-m-collapsed {
-    @media screen and (min-width: $pf-global--breakpoint--md) {
-      max-width: 0;
-      overflow: hidden;
-    }
+    max-width: 0;
+    overflow: hidden;
   }
 
   &.pf-m-dark {

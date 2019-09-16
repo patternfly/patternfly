@@ -1,4 +1,4 @@
-# Usage
+## Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
