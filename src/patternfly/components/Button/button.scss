@@ -92,19 +92,19 @@
   --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
 
   // Input Button
-  --pf-c-button--m-input--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-button--m-input--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-button--m-input--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-button--m-input--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-button--m-input--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-button--m-input--hover--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-button--m-input--hover--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-button--m-input--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-button--m-input--active--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-button--m-input--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-button--m-input--focus--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-button--m-input--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-button--m-input--m-expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-input--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-button--m-input--before--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-input--before--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-input--before--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-button--m-input--before--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-input--hover--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-input--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-input--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-input--active--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-input--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-input--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-input--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-input--m-expanded--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-button--m-input--disabled--BackgroundColor: transparent;
 
   // Styles for an icon in button
@@ -343,50 +343,52 @@
       bottom: 0;
       left: 0;
       content: "";
-      border: var(--pf-c-button--m-input--BorderWidth) solid;
-      border-color: var(--pf-c-button--m-input--BorderTopColor) var(--pf-c-button--m-input--BorderRightColor) var(--pf-c-button--m-input--BorderBottomColor) var(--pf-c-button--m-input--BorderLeftColor);
+      border: var(--pf-c-button--m-input--before--BorderWidth) solid;
+      border-color: var(--pf-c-button--m-input--before--BorderTopColor) var(--pf-c-button--m-input--before--BorderRightColor) var(--pf-c-button--m-input--before--BorderBottomColor) var(--pf-c-button--m-input--before--BorderLeftColor);
     }
 
     &:hover,
     &.pf-m-hover {
       &::before {
-        --pf-c-button--m-input--BorderBottomColor: var(--pf-c-button--m-input--hover--BorderBottomColor);
+        --pf-c-button--m-input--before--BorderBottomColor: var(--pf-c-button--m-input--hover--before--BorderBottomColor);
 
-        border-bottom-width: var(--pf-c-button--m-input--hover--BorderBottomWidth);
+        border-bottom-width: var(--pf-c-button--m-input--hover--before--BorderBottomWidth);
       }
     }
 
     &:active,
     &.pf-m-active {
       &::before {
-        --pf-c-button--m-input--BorderBottomColor: var(--pf-c-button--m-input--active--BorderBottomColor);
+        --pf-c-button--m-input--before--BorderBottomColor: var(--pf-c-button--m-input--active--before--BorderBottomColor);
 
-        border-bottom-width: var(--pf-c-button--m-input--active--BorderBottomWidth);
+        border-bottom-width: var(--pf-c-button--m-input--active--before--BorderBottomWidth);
       }
     }
 
     &:focus,
     &.pf-m-focus {
       &::before {
-        --pf-c-button--m-input--BorderBottomColor: var(--pf-c-button--m-input--focus--BorderBottomColor);
+        --pf-c-button--m-input--before--BorderBottomColor: var(--pf-c-button--m-input--focus--before--BorderBottomColor);
 
-        border-bottom-width: var(--pf-c-button--m-input--focus--BorderBottomWidth);
+        border-bottom-width: var(--pf-c-button--m-input--focus--before--BorderBottomWidth);
       }
     }
 
     &.pf-m-expanded {
       &::before {
-        --pf-c-button--m-input--BorderBottomColor: var(--pf-c-button--m-input--m-expanded--BorderBottomColor);
+        --pf-c-button--m-input--before--BorderBottomColor: var(--pf-c-button--m-input--m-expanded--before--BorderBottomColor);
 
-        border-bottom-width: var(--pf-c-button--m-input--m-expanded--BorderBottomWidth);
+        border-bottom-width: var(--pf-c-button--m-input--m-expanded--before--BorderBottomWidth);
       }
     }
 
     &:disabled,
     &.pf-m-disabled {
-      background-color: var(--pf-c-button--m-input--disabled--BackgroundColor);
+      background-color: var(--pf-c-button--m-input--disabled--before--BackgroundColor);
 
-      --pf-c-button--m-input--BorderBottomColor: var(--pf-c-button--m-input--BorderTopColor);
+      &::before {
+        --pf-c-button--m-input--before--BorderBottomColor: var(--pf-c-button--m-input--before--BorderTopColor);
+      }
     }
   }
 
