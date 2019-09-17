@@ -1,6 +1,7 @@
 ---
 title: Expandable
 section: components
+cssPrefix: pf-c-expandable
 ---
 ```js
 import React from 'react';
@@ -18,7 +19,6 @@ export default (props) => {
   const expandableExpandedExample = ExpandableExpandedExample();
   const expandableHiddenExample = ExpandableHiddenExample();
   const headingText = 'Expandable';
-  const variablesRoot = 'pf-c-expandable';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Tabs
 section: components
+cssPrefix: pf-c-tabs
 ---
 
 ```js
@@ -57,8 +58,7 @@ export default (props) => {
   const tabsPrimarySecondaryExample = TabsPrimarySecondaryExample();
   const tabsFilledExample = TabsFilledExample();
   const tabsNavExample = TabsNavExample();
-  const variablesRoot = 'pf-c-tabs';
-
+  
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
       <Example heading="Primary tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>

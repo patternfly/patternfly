@@ -1,6 +1,7 @@
 ---
 title: Login
 section: components
+cssPrefix: pf-c-login
 ---
 ```js
 import React from 'react';
@@ -18,7 +19,6 @@ export default (props) => {
   const loginSimpleExample = LoginSimpleExample();
   const loginInvalidExample = LoginInvalidExample();
   const headingText = 'Login';
-  const variablesRoot = 'pf-c-login';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

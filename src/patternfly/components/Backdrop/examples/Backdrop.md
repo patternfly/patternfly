@@ -1,6 +1,7 @@
 ---
 title: Backdrop
 section: components
+cssPrefix: pf-c-backdrop
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const backdropExample = BackdropExample();
   const headingText = 'Backdrop';
-  const variablesRoot = 'pf-c-backdrop';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

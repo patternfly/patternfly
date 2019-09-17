@@ -1,6 +1,7 @@
 ---
 title: Spinner
 section: experimental
+cssPrefix: pf-c-spinner
 ---
 
 ```js
@@ -19,7 +20,6 @@ export default props => {
   const spinnerSimpleExample = SpinnerSimpleExample();
   const spinnerSizeExample = SpinnerSizeExample();
   const headingText = 'Spinner';
-  const variablesRoot = 'pf-c-spinner';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

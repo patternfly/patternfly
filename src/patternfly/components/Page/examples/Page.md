@@ -1,6 +1,7 @@
 ---
 title: Page
 section: components
+cssPrefix: pf-c-page
 ---
 ```js
 import React from 'react';
@@ -24,7 +25,6 @@ export default (props) => {
   const pageComponentFillExample = PageComponentFillExample();
   const pageComponentMainSectionModifiersExample = PageComponentMainSectionModifiersExample();
   const headingText = 'Page';
-  const variablesRoot = 'pf-c-page';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>

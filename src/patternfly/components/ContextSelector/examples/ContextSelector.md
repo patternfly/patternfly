@@ -1,6 +1,7 @@
 ---
 title: Context Selector
 section: components
+cssPrefix: pf-c-context-selector
 ---
 
 ```js
@@ -16,7 +17,6 @@ export const Docs = docs;
 export default (props) => {
   const contextselectorexample = ContextSelectorExample();
   const headingText = 'Context selector';
-  const variablesRoot = 'pf-c-context-selector';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

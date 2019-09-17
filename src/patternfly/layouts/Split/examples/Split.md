@@ -1,6 +1,7 @@
 ---
 title: Split
 section: layouts
+cssPrefix: pf-l-split
 ---
 ```js
 import React from 'react';
@@ -18,7 +19,6 @@ export default (props) => {
   const split = Split();
   const splitGutters = SplitGutters();
   const headingText = 'Split';
-  const variablesRoot = 'pf-l-split';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">

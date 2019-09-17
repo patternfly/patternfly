@@ -1,6 +1,7 @@
 ---
 title: BackgroundImage
 section: components
+cssPrefix: pf-c-background-image
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const backgroundImage = BackgroundImage();
   const headingText = 'Background image';
-  const variablesRoot = 'pf-c-background-image';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

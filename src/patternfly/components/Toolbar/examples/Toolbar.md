@@ -1,6 +1,7 @@
 ---
 title: Toolbar
 section: components
+cssPrefix: pf-c-toolbar
 ---
 
 ```js
@@ -34,7 +35,6 @@ export default (props) => {
   const toolbarMobileFilterExample = ToolbarMobileFilterExample();
   const toolbarMobileFilterCheckedExample = ToolbarMobileFilterCheckedExample();
   const headingText = 'Toolbar';
-  const variablesRoot = 'pf-c-toolbar';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

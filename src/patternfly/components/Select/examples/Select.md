@@ -1,6 +1,7 @@
 ---
 title: Select
 section: components
+cssPrefix: pf-c-select
 ---
 ```js
 import React from 'react';
@@ -75,7 +76,6 @@ export default props => {
   const selectPlainExpandedExample = SelectPlainExpandedExample();
   const selectIconExample = SelectIconExample();
   const headingText = 'Select';
-  const variablesRoot = 'pf-c-select';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

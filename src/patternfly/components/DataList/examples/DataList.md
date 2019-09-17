@@ -1,6 +1,7 @@
 ---
 title: Data List
 section: components
+cssPrefix: pf-c-data-list
 ---
 ## Overview
 
@@ -39,7 +40,6 @@ export default (props) => {
   const dataListExpandableExample = DataListExpandableExample();
   const dataListWidthExample = DataListWidthExample();
   const headingText = 'Data list';
-  const variablesRoot = 'pf-c-data-list';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

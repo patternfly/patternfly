@@ -1,6 +1,7 @@
 ---
 title: Label
 section: components
+cssPrefix: pf-c-label
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const labelExample = LabelExample();
   const headingText = 'Label';
-  const variablesRoot = 'pf-c-label';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Radio
 section: components
+cssPrefix: pf-c-radio
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const radioExample = RadioExample();
   const headingText = 'Radio';
-  const variablesRoot = 'pf-c-radio';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

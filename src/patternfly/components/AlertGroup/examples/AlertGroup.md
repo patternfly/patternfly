@@ -1,6 +1,7 @@
 ---
 title: Alert Group
 section: components
+cssPrefix: pf-c-alert-group
 ---
 
 ## Overview
@@ -41,7 +42,6 @@ export const Docs = docs;
 export default props => {
   const alertGroupExample = AlertGroupExample();
   const toastGroupExample = ToastGroupExample();
-  const variablesRoot = 'pf-c-alert-group';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

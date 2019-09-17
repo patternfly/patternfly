@@ -1,6 +1,7 @@
 ---
 title: Nav
 section: components
+cssPrefix: pf-c-nav
 ---
 
 ```js
@@ -48,7 +49,6 @@ export default props => {
   const navListTertiaryOverflowExample = NavListTertiaryOverflowExample();
   const navMixedExample = NavMixedExample();
   const headingText = 'Nav';
-  const variablesRoot = 'pf-c-nav';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

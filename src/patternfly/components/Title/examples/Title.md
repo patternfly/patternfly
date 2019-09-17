@@ -1,6 +1,7 @@
 ---
 title: Title
 section: components
+cssPrefix: pf-c-title
 ---
 
 ```js
@@ -16,7 +17,6 @@ export const Docs = docs;
 export default (props) => {
   const titleTemplate = TitleTemplate();
   const headingText = 'Title';
-  const variablesRoot = 'pf-c-title';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

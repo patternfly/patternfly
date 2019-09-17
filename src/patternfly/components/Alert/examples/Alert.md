@@ -1,6 +1,7 @@
 ---
 title: Alert
 section: components
+cssPrefix: pf-c-alert
 ---
 ```js
 import React from 'react';
@@ -25,7 +26,6 @@ export default props => {
   const alertInline = AlertInline();
   const alertInlineVariations = AlertInlineVariations();
   const headingText = 'Alert';
-  const variablesRoot = 'pf-c-alert';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

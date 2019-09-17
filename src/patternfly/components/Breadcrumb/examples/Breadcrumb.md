@@ -1,6 +1,7 @@
 ---
 title: Breadcrumb
 section: components
+cssPrefix: pf-c-breadcrumb
 ---
 ```js
 import React from 'react';
@@ -22,7 +23,6 @@ export default (props) => {
   const breadcrumbWithTitleExample = BreadcrumbWithTitleExample();
   const breadcrumbWithoutHomeLink = BreadcrumbWithoutHomeLink();
   const headingText = 'Breadcrumb';
-  const variablesRoot = 'pf-c-breadcrumb';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Table
 section: components
+cssPrefix: pf-c-table
 ---
 
 ```js
@@ -68,7 +69,6 @@ export default props => {
   const tableHiddenVisibleExample = TableHiddenVisibleExample();
   const tableHeadersWrapExample = TableHeadersWrapExample();
   const headingText = 'Table';
-  const variablesRoot = 'pf-c-table';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

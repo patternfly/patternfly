@@ -1,6 +1,7 @@
 ---
 title: Data Toolbar
 section: components
+cssPrefix: pf-c-data-toolbar
 ---
 ## Overview
 
@@ -48,7 +49,6 @@ export default props => {
   const dataToolbarStackedExample = DataToolbarStackedExample();
 
   const headingText = 'Data toolbar';
-  const variablesRoot = 'pf-c-data-toolbar';
 
   return (
     <Documentation

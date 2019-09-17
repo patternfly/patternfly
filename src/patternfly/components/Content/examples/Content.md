@@ -1,6 +1,7 @@
 ---
 title: Content
 section: components
+cssPrefix: pf-c-content
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const contentTemplate = ContentTemplate();
   const headingText = 'Content';
-  const variablesRoot = 'pf-c-content';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Progress
 section: components
+cssPrefix: pf-c-progress
 ---
 ```js
 import React from 'react';
@@ -55,7 +56,6 @@ export default (props) => {
   const progressFiniteStepExample = ProgressFiniteStepExample();
   const progressStepInstructionExample = ProgressStepInstructionExample();
   const headingText = 'Progress';
-  const variablesRoot = 'pf-c-progress';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

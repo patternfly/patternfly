@@ -1,6 +1,7 @@
 ---
 title: Drawer
 section: experimental
+cssPrefix: pf-c-drawer
 ---
 ```js
 import React from 'react';
@@ -21,7 +22,6 @@ export default props => {
   const drawerExpandedExample = DrawerExpandedExample();
   const drawerExpandedInlineExample = DrawerExpandedInlineExample();
   const headingText = 'Drawer';
-  const variablesRoot = 'pf-c-drawer';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

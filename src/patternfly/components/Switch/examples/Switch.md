@@ -1,6 +1,7 @@
 ---
 title: Switch
 section: components
+cssPrefix: pf-c-switch
 ---
 
 # Component name
@@ -40,7 +41,6 @@ export default (props) => {
   const switchDisabledExample = SwitchDisabledExample();
   const switchNoLabelExample = SwitchNoLabelExample();
   const headingText = 'Switch';
-  const variablesRoot = 'pf-c-switch';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Check
 section: components
+cssPrefix: pf-c-check
 ---
 
 ```js
@@ -16,7 +17,6 @@ export const Docs = docs;
 export default (props) => {
   const checkExample = CheckExample();
   const headingText = 'Check';
-  const variablesRoot = 'pf-c-check';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Options Menu
 section: components
+cssPrefix: pf-c-options-menu
 ---
 
 ```js
@@ -34,7 +35,6 @@ export default props => {
   const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
   const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
   const headingText = 'Options menu';
-  const variablesRoot = 'pf-c-options-menu';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

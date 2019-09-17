@@ -1,6 +1,7 @@
 ---
 title: Form
 section: components
+cssPrefix: pf-c-form
 ---
 ```js
 import React from 'react';
@@ -24,7 +25,6 @@ export default (props) => {
   const formHelpTextExample = FormHelpTextExample();
   const formActionGroupExample = FormActionGroupExample();
   const headingText = 'Form';
-  const variablesRoot = 'pf-c-form';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

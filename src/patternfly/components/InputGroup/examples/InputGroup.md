@@ -1,6 +1,7 @@
 ---
 title: Input Group
 section: components
+cssPrefix: pf-c-input-group
 ---
 
 ```js
@@ -16,7 +17,6 @@ export const Docs = docs;
 export default (props) => {
   const inputGroupExample = InputgroupExample();
   const headingText = 'Input group';
-  const variablesRoot = 'pf-c-input-group';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

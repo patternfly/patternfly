@@ -1,6 +1,7 @@
 ---
 title: Overflow Menu
 section: components
+cssPrefix: pf-c-overflow-menu
 ---
 
 # Design
@@ -40,7 +41,6 @@ export default props => {
   const overflowMenuSimpleAdditionalOptionsExample = OverflowMenuSimpleAdditionalOptionsExample();
   const overflowMenuPersistentExample = OverflowMenuPersistentExample();
   const headingText = 'Overflow menu';
-  const variablesRoot = 'pf-c-overflow-menu';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

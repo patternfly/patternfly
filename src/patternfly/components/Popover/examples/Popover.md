@@ -1,6 +1,7 @@
 ---
 title: Popover
 section: components
+cssPrefix: pf-c-popover
 ---
 ```js
 import React from 'react';
@@ -30,7 +31,6 @@ export default (props) => {
   const popoverLeftExample = PopoverLeftExample();
   const popoverNoHeaderExample = PopoverNoHeaderExample();
   const headingText = 'Popover';
-  const variablesRoot = 'pf-c-popover';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

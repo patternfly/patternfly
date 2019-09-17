@@ -1,6 +1,7 @@
 ---
 title: Dropdown
 section: components
+cssPrefix: pf-c-dropdown
 ---
 ```js
 import React from 'react';
@@ -47,7 +48,6 @@ export default (props) => {
   const dropdownPanel = DropdownPanel();
   const dropdownPrimary = DropdownPrimary();
   const headingText = 'Dropdown';
-  const variablesRoot = 'pf-c-dropdown';
 
   const styles = {
     height: '13em',

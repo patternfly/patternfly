@@ -1,6 +1,7 @@
 ---
 title: Chip Group
 section: components
+cssPrefix: pf-c-chip-group
 ---
 ```js
 import React from 'react';
@@ -29,7 +30,6 @@ export default (props) => {
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
   const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
   const headingText = 'Chip group';
-  const variablesRoot = 'pf-c-chip-group';
 
   return (
     <Documentation data={props} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Chip
 section: components
+cssPrefix: pf-c-chip
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const ChipExample = chipExample();
   const headingText = 'Chip';
-  const variablesRoot = 'pf-c-chip';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

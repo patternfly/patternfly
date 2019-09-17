@@ -1,6 +1,7 @@
 ---
 title: Pagination
 section: components
+cssPrefix: pf-c-pagination
 ---
 
 ```js
@@ -27,7 +28,6 @@ export default props => {
   const paginationBottomExample = PaginationBottomExample();
   const paginationTopDisabledExample = PaginationTopDisabledExample();
   const headingText = 'Pagination';
-  const variablesRoot = 'pf-c-pagination';
 
   return (
     <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>

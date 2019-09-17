@@ -1,6 +1,7 @@
 ---
 title: Wizard
 section: components
+cssPrefix: pf-c-wizard
 ---
 
 ```js
@@ -31,7 +32,6 @@ export default props => {
   const wizardCompactNavExample = WizardCompactNavExample();
   const wizardInPageExample = WizardInPageExample();
   const headingText = 'Wizard';
-  const variablesRoot = 'pf-c-wizard';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

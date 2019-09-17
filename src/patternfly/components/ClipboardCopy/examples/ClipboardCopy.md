@@ -1,6 +1,7 @@
 ---
 title: ClipboardCopy
 section: components
+cssPrefix: pf-c-clipboard-copy
 ---
 
 ```js
@@ -19,7 +20,6 @@ export default (props) => {
   const clipboardCopyNoExpansionExample = ClipboardCopyNoExpansionExample();
   const clipboardCopyExpansionExample = ClipboardCopyExpansionExample();
   const headingText = 'Copy to clipboard';
-  const variablesRoot = 'pf-c-clipboard-copy';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

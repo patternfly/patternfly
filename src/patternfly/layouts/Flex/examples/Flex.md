@@ -1,6 +1,7 @@
 ---
 title: Flex
 section: layouts
+cssPrefix: pf-l-flex
 ---
 ```js
 import React from 'react';
@@ -45,7 +46,6 @@ export default (props) => {
   const flexAlignmentExample = FlexAlignmentExample();
   const flexJustificationExample = FlexJustificationExample();
   const headingText = 'Flex layout system';
-  const variablesRoot = 'pf-l-flex';
 
   return (
     <Documentation data={props}

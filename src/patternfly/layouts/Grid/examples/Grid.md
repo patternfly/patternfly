@@ -1,6 +1,7 @@
 ---
 title: Grid
 section: layouts
+cssPrefix: pf-l-grid
 ---
 ```js
 import React from 'react';
@@ -36,7 +37,6 @@ export default (props) => {
   const gridResponsive = GridResponsive();
   const gridRowspan = GridRowspan();
   const headingText = 'Grid';
-  const variablesRoot = 'pf-l-grid';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">

@@ -1,6 +1,7 @@
 ---
 title: Card
 section: components
+cssPrefix: pf-c-card
 ---
 ```js
 import React from 'react';
@@ -39,7 +40,6 @@ export default props => {
   const cardHoverExample = CardHoverExample();
   const cardImgActionExample = CardImgActionExample();
   const headingText = 'Card';
-  const variablesRoot = 'pf-c-card';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: Avatar
 section: components
+cssPrefix: pf-c-avatar
 ---
 
 ```js
@@ -16,7 +17,6 @@ export const Docs = docs;
 export default (props) => {
   const avatarSimpleExample = AvatarSimpleExample();
   const headingText = 'Avatar';
-  const variablesRoot = 'pf-c-avatar';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

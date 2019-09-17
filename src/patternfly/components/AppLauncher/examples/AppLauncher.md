@@ -1,6 +1,7 @@
 ---
 title: App Launcher
 section: components
+cssPrefix: pf-c-app-launcher
 ---
 ```js
 import React from 'react';
@@ -30,7 +31,6 @@ export default props => {
   const AppLauncherTopExample = ApplauncherTopExample();
   const AppLauncherSectionsIconsExample = ApplauncherSectionsIconsExample();
   const headingText = 'App launcher';
-  const variablesRoot = 'pf-c-app-launcher';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

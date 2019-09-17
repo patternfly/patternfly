@@ -1,6 +1,7 @@
 ---
 title: List
 section: components
+cssPrefix: pf-c-list
 ---
 
 ```js
@@ -22,7 +23,6 @@ export default (props) => {
   const listOrderedExample = ListOrderedExample();
   const listInlineExample = ListInlineExample();
   const headingText = 'List';
-  const variablesRoot = 'pf-c-list';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

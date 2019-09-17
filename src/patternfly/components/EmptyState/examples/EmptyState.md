@@ -1,6 +1,7 @@
 ---
 title: Empty State
 section: components
+cssPrefix: pf-c-empty-state
 ---
 ```js
 import React from 'react';
@@ -21,7 +22,6 @@ export default (props) => {
   const emptyStateSmallExample = EmptystateSmallExample();
   const emptyStateLargeExample = EmptystateLargeExample();
   const headingText = 'Empty state';
-  const variablesRoot = 'pf-c-empty-state';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

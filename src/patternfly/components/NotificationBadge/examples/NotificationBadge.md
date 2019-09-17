@@ -1,6 +1,7 @@
 ---
 title: Notification Badge
 section: components
+cssPrefix: pf-c-notification-badge
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default props => {
   const notificationBadgeSimpleExample = NotificationbadgeSimpleExample();
   const headingText = 'Notification badge';
-  const variablesRoot = 'pf-c-notification-badge';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

@@ -1,6 +1,7 @@
 ---
 title: SkiptoContent
 section: components
+cssPrefix: pf-c-skip-to-content
 ---
 
 ```js
@@ -17,7 +18,6 @@ export const Docs = docs;
 export default (props) => {
   const skipToContentExample = SkiptocontentExample();
   const headingText = 'Skip to content';
-  const variablesRoot = 'pf-c-skip-to-content';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

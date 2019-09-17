@@ -1,6 +1,7 @@
 ---
 title: Form Control
 section: components
+cssPrefix: pf-c-form-control
 ---
 ```js
 import React from 'react';
@@ -21,7 +22,6 @@ export default (props) => {
   const formControlSelectExample = FormControlSelectExample();
   const formControlTextareaExample = FormControlTextareaExample();
   const headingText = 'Form control';
-  const variablesRoot = 'pf-c-form-control';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

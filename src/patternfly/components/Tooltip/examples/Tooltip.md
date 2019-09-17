@@ -1,6 +1,7 @@
 ---
 title: Tooltip
 section: components
+cssPrefix: pf-c-tooltip
 ---
 
 ```js
@@ -28,7 +29,6 @@ export default (props) => {
   const tooltipBottomExample = TooltipBottomExample();
   const tooltipLeftExample = TooltipLeftExample();
   const headingText = 'Tooltip';
-  const variablesRoot = 'pf-c-tooltip';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

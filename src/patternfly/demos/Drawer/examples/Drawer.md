@@ -1,6 +1,7 @@
 ---
 title: Drawer
 section: demos
+cssPrefix: pf-d-drawer
 ---
 
 ## Overview
@@ -23,7 +24,6 @@ export default props => {
   const drawerCollapsedExample = DrawerCollapsedExample();
   const drawerExpandedExample = DrawerExpandedExample();
   const headingText = 'Drawer';
-  const variablesRoot = 'pf-d-drawer';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

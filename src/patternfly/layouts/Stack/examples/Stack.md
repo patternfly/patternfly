@@ -1,6 +1,7 @@
 ---
 title: Stack
 section: layouts
+cssPrefix: pf-l-stack
 ---
 ```js
 import React from 'react';
@@ -18,7 +19,6 @@ export default (props) => {
   const stack = Stack();
   const stackHasGutter = StackHasGutter();
   const headingText = 'Stack';
-  const variablesRoot = 'pf-l-stack';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">

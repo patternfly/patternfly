@@ -1,6 +1,7 @@
 ---
 title: Divider
 section: experimental
+cssPrefix: pf-c-divider
 ---
 
 ```js
@@ -22,7 +23,6 @@ export default props => {
   const dividerLiExample = DividerLiExample();
   const dividerDivExample = DividerDivExample();
   const headingText = 'Divider';
-  const variablesRoot = 'pf-c-divider';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

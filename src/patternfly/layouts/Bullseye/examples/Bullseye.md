@@ -1,6 +1,7 @@
 ---
 title: Bullseye
 section: components
+cssPrefix: pf-l-bullseye
 ---
 ```js
 import React from 'react';
@@ -15,7 +16,6 @@ export const Docs = docs;
 export default (props) => {
   const bullseye = Bullseye();
   const headingText = 'Bullseye';
-  const variablesRoot = 'pf-l-bullseye';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">

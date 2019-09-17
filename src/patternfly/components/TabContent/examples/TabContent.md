@@ -1,6 +1,7 @@
 ---
 title: TabContent
 section: components
+cssPrefix: pf-c-tab-content
 ---
 
 ```js
@@ -16,7 +17,6 @@ export const Docs = docs;
 export default (props) => {
   const tabContentExample = TabcontentExample();
   const headingText = 'Tab content';
-  const variablesRoot = 'pf-c-tab-content';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

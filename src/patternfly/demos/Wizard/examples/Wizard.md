@@ -1,6 +1,7 @@
 ---
 title: Wizard
 section: demos
+cssPrefix: pf-d-wizard
 ---
 
 ```js
@@ -19,7 +20,6 @@ export default props => {
   const wizardInPageExample = WizardInPageExample();
   const wizardInPageExpandedExample = WizardInPageExpandedExample();
   const headingText = 'Wizard';
-  const variablesRoot = 'pf-d-wizard';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

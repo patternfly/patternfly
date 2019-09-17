@@ -1,6 +1,7 @@
 ---
 title: Badge
 section: components
+cssPrefix: pf-c-badge
 ---
 ```js
 import React from 'react';
@@ -18,7 +19,6 @@ export default (props) => {
   const badgeReadExample = BadgeReadExample();
   const badgeUnreadExample = BadgeUnreadExample();
   const headingText = 'Badge';
-  const variablesRoot = 'pf-c-badge';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

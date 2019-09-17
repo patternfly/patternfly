@@ -1,6 +1,7 @@
 ---
 title: Button
 section: components
+cssPrefix: pf-c-button
 ---
 
 # Buttons
@@ -86,7 +87,6 @@ export default props => {
   const buttonBlockTemplate = ButtonBlockTemplate();
   const buttonTypesTemplate = ButtonTypesTemplate();
   const headingText = 'Button';
-  const variablesRoot = 'pf-c-button';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>

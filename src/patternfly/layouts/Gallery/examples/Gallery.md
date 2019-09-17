@@ -1,6 +1,7 @@
 ---
 title: Gallery
 section: layouts
+cssPrefix: pf-l-gallery
 ---
 ```js
 import React from 'react';
@@ -18,7 +19,6 @@ export default (props) => {
   const gallery = Gallery();
   const galleryHasGutter = GalleryHasGutter();
   const headingText = 'Gallery';
-  const variablesRoot = 'pf-l-gallery';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">

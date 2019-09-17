@@ -1,6 +1,7 @@
 ---
 title: Modal Box
 section: components
+cssPrefix: pf-c-modal-box
 ---
 ```js
 import React from 'react';
@@ -24,7 +25,6 @@ export default (props) => {
   const modalBoxLgExample = ModalBoxLgExample();
   const modalBoxNoHeaderExample = ModalBoxNoHeaderExample();
   const headingText = 'Modal box';
-  const variablesRoot = 'pf-c-modal-box';
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
