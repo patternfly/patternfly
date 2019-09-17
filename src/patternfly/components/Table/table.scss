@@ -136,6 +136,7 @@
 
   // Modifier - sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
+  --pf-c-table--m-text-overflow--MaxWidth: #{pf-size-prem(50px)};
 
   /* stylelint-enable */
 
@@ -144,10 +145,6 @@
   // Base
   width: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
-
-  td {
-    word-break: break-word;
-  }
 
   // Standard table row (non-expandable)
   // exclude expandable rows
@@ -472,8 +469,9 @@
 
   &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
-      --pf-c-table--BorderWidth: 0;
       --pf-c-table--BorderColor: transparent;
+
+      border: none;
 
       tr:first-child > * {
         --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
@@ -564,10 +562,31 @@
   white-space: nowrap;
 }
 
-// Modifier - Wrap
+// Modifier - wrap
 .pf-c-table .pf-m-wrap {
   white-space: normal;
 }
+
+// Modifier - nowrap
+.pf-c-table .pf-m-nowrap {
+  white-space: pre;
+}
+
+// Modifier - break word
+.pf-c-table .pf-m-break-word {
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+// Modifier - Wrap
+.pf-c-table td.pf-m-text-overflow,
+.pf-c-table th.pf-m-text-overflow {
+  @include pf-text-overflow;
+
+  max-width: var(--pf-c-table--m-text-overflow--MaxWidth);
+}
+/* stylelint-enable */
 
 // Modifier - Width
 /* stylelint-disable */

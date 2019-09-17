@@ -11,39 +11,28 @@ import tableCompactExpandableExampleRaw from '!raw!./table-compact-expandable-ex
 import tableWidthExampleRaw from '!raw!./table-width-example.hbs';
 import tableCompoundExpansionExampleRaw from '!raw!./table-compound-expansion-example.hbs';
 import tableHiddenVisibleExampleRaw from '!raw!./table-hidden-visible-example.hbs';
-import tableHeadersWrapExampleRaw from '!raw!./table-headers-wrap-example.hbs';
 
 import TableSimpleExample from './table-simple-example.hbs';
-import tableSimpleDoc from '../docs/table-simple.md';
-
 import TableSortableExample from './table-sortable-example.hbs';
-import tableSortableDoc from '../docs/table-sortable.md';
-
 import TableSimpleWithCheckboxesExample from './table-simple-with-checkboxes-example.hbs';
-import tableCheckboxesActionsDoc from '../docs/table-checkboxes-actions.md';
-
 import TableExpandableExample from './table-expandable-example.hbs';
-import tableExpandableDoc from '../docs/table-expandable.md';
-
 import TableCompactExample from './table-compact-example.hbs';
-import tableCompactDoc from '../docs/table-compact.md';
-
 import TableCompactNoBorderRowsExample from './table-compact-no-border-rows-example.hbs';
-import tableCompactNoBorderRowsDoc from '../docs/table-compact-no-border-rows.md';
 import TableCompactExpandableExample from './table-compact-expandable-example.hbs';
-import tableCompactExpandableDoc from '../docs/table-compact-expandable.md';
-
 import TableWidthExample from './table-width-example.hbs';
-import tableWidthDoc from '../docs/table-width.md';
-
 import TableCompoundExpansionExample from './table-compound-expansion-example.hbs';
-import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
-
 import TableHiddenVisibleExample from './table-hidden-visible-example.hbs';
-import tableHiddenVisibleDoc from '../docs/table-hidden-visible.md';
 
-import TableHeadersWrapExample from './table-headers-wrap-example.hbs';
-import tableHeadersWrapDoc from '../docs/table-headers-wrap.md';
+import tableSimpleDoc from '../docs/table-simple.md';
+import tableSortableDoc from '../docs/table-sortable.md';
+import tableCheckboxesActionsDoc from '../docs/table-checkboxes-actions.md';
+import tableExpandableDoc from '../docs/table-expandable.md';
+import tableCompactDoc from '../docs/table-compact.md';
+import tableCompactNoBorderRowsDoc from '../docs/table-compact-no-border-rows.md';
+import tableCompactExpandableDoc from '../docs/table-compact-expandable.md';
+import tableWidthDoc from '../docs/table-width.md';
+import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
+import tableHiddenVisibleDoc from '../docs/table-hidden-visible.md';
 
 import docs from '../docs/code.md';
 
@@ -60,7 +49,6 @@ export default props => {
   const tableWidthExample = TableWidthExample();
   const tableCompoundExpansionExample = TableCompoundExpansionExample();
   const tableHiddenVisibleExample = TableHiddenVisibleExample();
-  const tableHeadersWrapExample = TableHeadersWrapExample();
   const headingText = 'Table';
   const variablesRoot = 'pf-c-table';
 
@@ -115,13 +103,6 @@ export default props => {
         docs={tableHiddenVisibleDoc}
       >
         {tableHiddenVisibleExample}
-      </Example>
-      <Example
-        heading="Table with headers that wrap"
-        handlebars={tableHeadersWrapExampleRaw}
-        docs={tableHeadersWrapDoc}
-      >
-        {tableHeadersWrapExample}
       </Example>
     </Documentation>
   );

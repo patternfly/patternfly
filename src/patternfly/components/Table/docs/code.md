@@ -11,7 +11,7 @@ Applying `role="grid"` to tables enhances accessible interaction while in table 
 Table columns may shift when expanding/collapsing. To address this, set `.pf-m-fit-content`, or assign a width `.pf-m-width-[width]` to the corresponding `<th>` defining the column or `<td>` within the column. Width values are `[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]` or `max`.
 
 ## Table header cells
-By default, all table header cells are set to `white-space: nowrap`. If a `<th>`'s content needs to wrap, apply `.pf-m-wrap`.
+By default, all table header cells contents wrap. If a `<th>`'s content needs to not wrap, apply `.pf-m-nowrap`.
 
 ## Implementation support
 - One expandable toggle button, positioned in the first cell of a non-expandable row, preceding an expandable row.
@@ -27,3 +27,10 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 | `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
 | `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
 
+## Modifiers
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-break-word` | `.pf-c-table` | Modifies `.pf-c-table > th` and `.pf-c-table > td` to break long strings of text, such as a URL. |
+| `.pf-m-nowrap` | `.pf-c-table` | Modifies `.pf-c-table > th` and `.pf-c-table > td` to `white-space: pre`, forcing string not to wrap. |
+| `.pf-m-text-overflow` | `.pf-c-table` | Modifies `.pf-c-table > th` and `.pf-c-table > td` to show overflow as ellipsis on long strings of text, such as a URL. |
