@@ -31,14 +31,22 @@
 
 
   &.pf-m-toolbar {
-    & > li {
+    > li {
       display: inline-flex;
       flex-wrap: wrap;
       align-items: center;
       padding: var(--pf-c-chip-group--m-toolbar-PaddingTop) var(--pf-c-chip-group--m-toolbar-PaddingRight) var(--pf-c-chip-group--m-toolbar-PaddingBottom) var(--pf-c-chip-group--m-toolbar-PaddingLeft);
       margin-right: var(--pf-c-chip-group__li--m-toolbar--MarginRight);
-      background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
       border-radius: var(--pf-c-chip-group--m-toolbar-BorderRadius);
+    }
+
+    > li:not(.pf-m-overflow) {
+      background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
+    }
+
+    > .pf-c-chip.pf-m-overflow {
+      padding: 0;
+      margin: 0;
     }
   }
 
