@@ -1,34 +1,19 @@
 ---
 title: About Modal Box
 section: components
+cssPrefix: pf-c-about-modal-box
 ---
+import AboutModalExample from './about-modal-box-example.hbs';
+import AboutModalExampleRaw from '!!raw-loader!./about-modal-box-example.hbs';
 
 ## Overview
 
 About modal layout.
 
-import AboutModalBoxExample from './about-modal-box-example.hbs';
-
-
-```js
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const aboutModalBoxExample = AboutModalBoxExample();
-  const headingText = 'About modal box';
-  const variablesRoot = 'pf-c-about-modal-box';
-
-  return (
-      <Example fullPageOnly="true" heading={headingText}>
-        {aboutModalBoxExample}
-      </Example>
-  );
-};
-```
+<Example
+  id="about-modal-example"
+  html={AboutModalExample()}
+  handlebars={AboutModalExampleRaw} />
 
 ## Accessibility
 

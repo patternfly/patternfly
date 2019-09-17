@@ -1,46 +1,33 @@
 ---
 title: Accordion
 section: components
+cssPrefix: pf-c-accordion
 ---
+import Fluid from './accordion-fluid-example.hbs';
+import FluidRaw from '!!raw-loader!./accordion-fluid-example.hbs';
+import Fixed from './accordion-fixed-example.hbs';
+import FixedRaw from '!!raw-loader!./accordion-fixed-example.hbs';
+import DefinitionList from './accordion-definition-list-example.hbs';
+import DefinitionListRaw from '!!raw-loader!./accordion-definition-list-example.hbs';
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import accordionFluidExampleRaw from '!raw!./accordion-fluid-example.hbs';
-import accordionFixedExampleRaw from '!raw!./accordion-fixed-example.hbs';
-import accordionDefinitionListExampleRaw from '!raw!./accordion-definition-list-example.hbs';
-import AccordionFluidExample from './accordion-fluid-example.hbs';
-import AccordionFixedExample from './accordion-fixed-example.hbs';
-import AccordionDefinitionListExample from './accordion-definition-list-example.hbs';
-import docs from '../docs/code.md';
+## Examples
+<Example
+  title="Accordion fluid example"
+  html={Fluid()}
+  handlebars={FluidRaw} />
 
-export const Docs = docs;
+<Example
+  title="Accordion fixed example"
+  html={Fixed()}
+  handlebars={FixedRaw} />
 
-export default props => {
-  const accordionFluidExample = AccordionFluidExample();
-  const accordionFixedExample = AccordionFixedExample();
-  const accordionDefinitionListExample = AccordionDefinitionListExample();
-  const headingText = 'Accordion';
-  const variablesRoot = 'pf-c-accordion';
+<Example
+  title="Accordion definition list example"
+  html={DefinitionList()}
+  handlebars={DefinitionListRaw} />
 
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Accordion fluid example" handlebars={accordionFluidExampleRaw}>
-        {accordionFluidExample}
-      </Example>
-      <Example heading="Accordion fixed example" handlebars={accordionFixedExampleRaw}>
-        {accordionFixedExample}
-      </Example>
-      <Example heading="Accordion definition list example" handlebars={accordionDefinitionListExampleRaw}>
-        {accordionDefinitionListExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
-
-## Overview
+## Documentation
+### Overview
 
 There are two variations to build the accordion component:
 One way uses `<div>` and `<h1 - h6>` tags to build the component. 
@@ -49,8 +36,7 @@ In these examples `.pf-c-accordion` uses `<div>`, `.pf-c-accordion__toggle` uses
 Another variation is using the definition list:
 In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses `<dt><button>`, and `.pf-c-accordion__expanded-content` uses `<dd>`.
 
-
-## Accessibility
+### Accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -59,8 +45,7 @@ In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses 
 | `hidden` | `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-c-accordion__toggle-icon` | Hides the icon from assistive technologies.**Required** |
 
-
-## Usage
+### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -75,4 +60,3 @@ In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses 
 | `.pf-m-active` | `.pf-c-accordion__toggle` | Modifies the accordion button for the active state. |
 | `.pf-m-focus` | `.pf-c-accordion__toggle` | Modifies the accordion button for the focus state. |
 | `.pf-m-fixed` | `.pf-c-accordion__expanded-content` | Modifies the expanded content for the fixed state. |
-
