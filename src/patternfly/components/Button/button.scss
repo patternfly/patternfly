@@ -339,7 +339,7 @@
       --pf-c-button--BorderWidth: var(--pf-c-button--m-control--after--BorderWidth);
       --pf-c-button--BorderColor: var(--pf-c-button--m-control--after--BorderTopColor) var(--pf-c-button--m-control--after--BorderRightColor) var(--pf-c-button--m-control--after--BorderBottomColor) var(--pf-c-button--m-control--after--BorderLeftColor);
 
-      border-radius: unset;
+      border-radius: initial;
     }
 
     &:hover,
