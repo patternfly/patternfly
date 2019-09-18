@@ -7,8 +7,8 @@ cssPrefix: pf-c-expandable
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import expandableExpandedExampleRaw from '!raw!./expandable-expanded-example.hbs';
-import expandableHiddenExampleRaw from '!raw!./expandable-hidden-example.hbs';
+import expandableExpandedExampleRaw from '!!raw-loader!./expandable-expanded-example.hbs';
+import expandableHiddenExampleRaw from '!!raw-loader!./expandable-hidden-example.hbs';
 import ExpandableExpandedExample from './expandable-expanded-example.hbs';
 import ExpandableHiddenExample from './expandable-hidden-example.hbs';
 import docs from '../docs/code.md';

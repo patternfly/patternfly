@@ -3,29 +3,15 @@ title: Backdrop
 section: components
 cssPrefix: pf-c-backdrop
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import BackdropExampleRaw from '!raw!./backdrop-example.hbs';
-import BackdropExample from './backdrop-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
+import ExampleRaw from '!!raw-loader!./backdrop-example.hbs';
+import Example from './backdrop-example.hbs';
 
-export default (props) => {
-  const backdropExample = BackdropExample();
-  const headingText = 'Backdrop';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Backdrop example" fullPageOnly="true" handlebars={BackdropExampleRaw}>
-        {backdropExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example 
+  title="Backdrop example" 
+  fullPageOnly
+  handlebars={BackdropExampleRaw}>
+  html={Example()} />
 
 ## Overview
 

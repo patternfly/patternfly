@@ -9,10 +9,10 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import TooltipTopExampleRaw from '!raw!./tooltip-top-example.hbs';
-import TooltipRightExampleRaw from '!raw!./tooltip-right-example.hbs';
-import TooltipBottomExampleRaw from '!raw!./tooltip-bottom-example.hbs';
-import TooltipLeftExampleRaw from '!raw!./tooltip-left-example.hbs';
+import TooltipTopExampleRaw from '!!raw-loader!./tooltip-top-example.hbs';
+import TooltipRightExampleRaw from '!!raw-loader!./tooltip-right-example.hbs';
+import TooltipBottomExampleRaw from '!!raw-loader!./tooltip-bottom-example.hbs';
+import TooltipLeftExampleRaw from '!!raw-loader!./tooltip-left-example.hbs';
 
 import TooltipTopExample from './tooltip-top-example.hbs';
 import TooltipRightExample from './tooltip-right-example.hbs';

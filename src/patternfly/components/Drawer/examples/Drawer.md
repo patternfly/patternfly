@@ -7,9 +7,9 @@ cssPrefix: pf-c-drawer
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import drawerClosedExampleRaw from '!raw!./drawer-closed-example.hbs';
-import drawerExpandedExampleRaw from '!raw!./drawer-expanded-example.hbs';
-import drawerExpandedInlineExampleRaw from '!raw!./drawer-expanded-inline-example.hbs';
+import drawerClosedExampleRaw from '!!raw-loader!./drawer-closed-example.hbs';
+import drawerExpandedExampleRaw from '!!raw-loader!./drawer-expanded-example.hbs';
+import drawerExpandedInlineExampleRaw from '!!raw-loader!./drawer-expanded-inline-example.hbs';
 import DrawerClosedExample from './drawer-closed-example.hbs';
 import DrawerExpandedExample from './drawer-expanded-example.hbs';
 import DrawerExpandedInlineExample from './drawer-expanded-inline-example.hbs';

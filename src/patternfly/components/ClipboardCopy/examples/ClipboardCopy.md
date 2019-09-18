@@ -3,36 +3,21 @@ title: ClipboardCopy
 section: components
 cssPrefix: pf-c-clipboard-copy
 ---
+import NoExpansionExampleRaw from '!!raw-loader!./clipboard-copy-no-expansion-example.hbs';
+import ExpansionExampleRaw from '!!raw-loader!./clipboard-copy-expansion-example.hbs';
+import NoExpansionExample from './clipboard-copy-no-expansion-example.hbs';
+import ExpansionExample from './clipboard-copy-expansion-example.hbs';
+      
+<Example 
+  title="Copy to clipboard no expansion" 
+  handlebars={ClipboardCopyNoExpansionExampleRaw}>
+  html={NoExpansionExample()} />
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ClipboardCopyNoExpansionExampleRaw from '!raw!./clipboard-copy-no-expansion-example.hbs';
-import ClipboardCopyExpansionExampleRaw from '!raw!./clipboard-copy-expansion-example.hbs';
-import ClipboardCopyNoExpansionExample from './clipboard-copy-no-expansion-example.hbs';
-import ClipboardCopyExpansionExample from './clipboard-copy-expansion-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const clipboardCopyNoExpansionExample = ClipboardCopyNoExpansionExample();
-  const clipboardCopyExpansionExample = ClipboardCopyExpansionExample();
-  const headingText = 'Copy to clipboard';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Copy to clipboard no expansion" handlebars={ClipboardCopyNoExpansionExampleRaw}>
-        {clipboardCopyNoExpansionExample}
-      </Example>
-      <Example heading="Copy to clipboard expansion" handlebars={ClipboardCopyExpansionExampleRaw} minHeight="20em">
-        {clipboardCopyExpansionExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example 
+  title="Copy to clipboard expansion" 
+  handlebars={ExpansionExampleRaw} 
+  minHeight="20em">
+  html={ExpansionExample()} />
 
 ## Overview
 

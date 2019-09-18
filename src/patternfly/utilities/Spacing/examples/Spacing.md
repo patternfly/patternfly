@@ -7,9 +7,9 @@ section: utilities
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import spacingMarginExampleRaw from '!raw!./spacing-margin-example.hbs';
-import spacingPaddingExampleRaw from '!raw!./spacing-padding-example.hbs';
-import spacingCombinedExampleRaw from '!raw!./spacing-combined-example.hbs';
+import spacingMarginExampleRaw from '!!raw-loader!./spacing-margin-example.hbs';
+import spacingPaddingExampleRaw from '!!raw-loader!./spacing-padding-example.hbs';
+import spacingCombinedExampleRaw from '!!raw-loader!./spacing-combined-example.hbs';
 import SpacingMarginExample from './spacing-margin-example.hbs';
 import SpacingPaddingExample from './spacing-padding-example.hbs';
 import SpacingCombinedExample from './spacing-combined-example.hbs';

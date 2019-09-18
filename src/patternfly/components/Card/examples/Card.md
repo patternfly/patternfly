@@ -3,82 +3,73 @@ title: Card
 section: components
 cssPrefix: pf-c-card
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import CardBasicExampleRaw from '!raw!./card-basic-example.hbs';
-import CardNoFooterExampleRaw from '!raw!./card-no-footer-example.hbs';
-import CardNoHeaderExampleRaw from '!raw!./card-no-header-example.hbs';
-import CardContentOnlyExampleRaw from '!raw!./card-content-only-example.hbs';
-import CardMultipleBodyExampleRaw from '!raw!./card-multiple-body-example.hbs';
-import CardFillExampleRaw from '!raw!./card-no-fill-example.hbs';
-import CardCompactExampleRaw from '!raw!./card-compact-example.hbs';
-import CardHoverExampleRaw from '!raw!./card-hover-example.hbs';
-import CardImgActionRaw from '!raw!./card-img-action.hbs';
-import docs from '../docs/code.md';
-import CardBasicExample from './card-basic-example.hbs';
-import CardNoFooterExample from './card-no-footer-example.hbs';
-import CardNoHeaderExample from './card-no-header-example.hbs';
-import CardContentOnlyExample from './card-content-only-example.hbs';
-import CardMultipleBodyExample from './card-multiple-body-example.hbs';
-import CardFillExample from './card-no-fill-example.hbs';
-import CardCompactExample from './card-compact-example.hbs';
-import CardHoverExample from './card-hover-example.hbs';
-import CardImgActionExample from './card-img-action.hbs';
 
-export const Docs = docs;
+import BasicExampleRaw from '!!raw-loader!./card-basic-example.hbs';
+import NoFooterExampleRaw from '!!raw-loader!./card-no-footer-example.hbs';
+import NoHeaderExampleRaw from '!!raw-loader!./card-no-header-example.hbs';
+import ContentOnlyExampleRaw from '!!raw-loader!./card-content-only-example.hbs';
+import MultipleBodyExampleRaw from '!!raw-loader!./card-multiple-body-example.hbs';
+import FillExampleRaw from '!!raw-loader!./card-no-fill-example.hbs';
+import CompactExampleRaw from '!!raw-loader!./card-compact-example.hbs';
+import HoverExampleRaw from '!!raw-loader!./card-hover-example.hbs';
+import ImgActionRaw from '!!raw-loader!./card-img-action.hbs';
+import  from '../docs/code.md';
+import BasicExample from './card-basic-example.hbs';
+import NoFooterExample from './card-no-footer-example.hbs';
+import NoHeaderExample from './card-no-header-example.hbs';
+import ContentOnlyExample from './card-content-only-example.hbs';
+import MultipleBodyExample from './card-multiple-body-example.hbs';
+import FillExample from './card-no-fill-example.hbs';
+import CompactExample from './card-compact-example.hbs';
+import HoverExample from './card-hover-example.hbs';
+import ImgActionExample from './card-img-action.hbs';
 
-export default props => {
-  const cardBasicExample = CardBasicExample();
-  const cardNoFooterExample = CardNoFooterExample();
-  const cardNoHeaderExample = CardNoHeaderExample();
-  const cardContentOnlyExample = CardContentOnlyExample();
-  const cardMultipleBodyExample = CardMultipleBodyExample();
-  const cardFillExample = CardFillExample();
-  const cardCompactExample = CardCompactExample();
-  const cardHoverExample = CardHoverExample();
-  const cardImgActionExample = CardImgActionExample();
-  const headingText = 'Card';
+<Example 
+  title="Card" 
+  handlebars={BasicExampleRaw}>
+  html={BasicExample()} />
 
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Card" handlebars={CardBasicExampleRaw}>
-        {cardBasicExample}
-      </Example>
-      <Example heading="Card with image and action" handlebars={CardImgActionRaw}>
-        {cardImgActionExample}
-      </Example>
-      <Example heading="Card with no footer" handlebars={CardNoFooterExampleRaw}>
-        {cardNoFooterExample}
-      </Example>
-      <Example heading="Card with no header" handlebars={CardNoHeaderExampleRaw}>
-        {cardNoHeaderExample}
-      </Example>
-      <Example heading="Card with only a content section" handlebars={CardContentOnlyExampleRaw}>
-        {cardContentOnlyExample}
-      </Example>
-      <Example heading="Card with multiple body sections" handlebars={CardMultipleBodyExampleRaw}>
-        {cardMultipleBodyExample}
-      </Example>
-      <Example
-        heading="Card with only one body that fills"
-        handlebars={CardFillExampleRaw}
-        minHeight="30em"
-        className="is-height-flex-column-grow"
-      >
-        {cardFillExample}
-      </Example>
-      <Example heading="Card compact example" handlebars={CardCompactExampleRaw}>
-        {cardCompactExample}
-      </Example>
-      <Example heading="Card hover example" handlebars={CardHoverExampleRaw}>
-        {cardHoverExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example 
+  title="Card with image and action" 
+  handlebars={ImgActionRaw}>
+  html={ImgActionExample()}  />
+
+<Example 
+  title="Card with no footer" 
+  handlebars={NoFooterExampleRaw}>
+  html={NoFooterExample()} />
+
+<Example 
+  title="Card with no header" 
+  handlebars={NoHeaderExampleRaw}>
+  html={NoHeaderExample()} />
+
+<Example 
+  title="Card with only a content section" 
+  handlebars={ContentOnlyExampleRaw}>
+  html={ContentOnlyExample()} />
+
+<Example 
+  title="Card with multiple body sections" 
+  handlebars={MultipleBodyExampleRaw}>
+  html={MultipleBodyExample()} />
+
+<Example
+  title="Card with only one body that fills"
+  handlebars={FillExampleRaw}
+  minHeight="30em"
+  className="is-height-flex-column-grow"
+  html={FillExample()} />
+
+<Example 
+  title="Card compact example" 
+  handlebars={CompactExampleRaw}>
+  html={CompactExample()} />
+
+<Example 
+  title="Card hover example" 
+  handlebars={HoverExampleRaw}>
+  html={HoverExample()} />
 
 ## Overview
 

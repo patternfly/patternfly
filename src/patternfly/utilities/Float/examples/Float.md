@@ -6,7 +6,7 @@ section: utilities
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import floatSimpleExampleRaw from '!raw!./float-simple-example.hbs';
+import floatSimpleExampleRaw from '!!raw-loader!./float-simple-example.hbs';
 import FloatSimpleExample from './float-simple-example.hbs';
 import docs from '../docs/code.md';
 

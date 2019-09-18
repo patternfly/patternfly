@@ -7,10 +7,10 @@ cssPrefix: pf-c-form
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import FormVerticalAlignLabelsExampleRaw from '!raw!./form-vertical-align-labels-example.hbs';
-import FormHorizontalAlignLabelsExampleRaw from '!raw!./form-horizontal-align-labels-example.hbs';
-import FormHelpTextExampleRaw from '!raw!./form-help-text-example.hbs';
-import FormActionGroupExampleRaw from '!raw!./form-action-group-example.hbs';
+import FormVerticalAlignLabelsExampleRaw from '!!raw-loader!./form-vertical-align-labels-example.hbs';
+import FormHorizontalAlignLabelsExampleRaw from '!!raw-loader!./form-horizontal-align-labels-example.hbs';
+import FormHelpTextExampleRaw from '!!raw-loader!./form-help-text-example.hbs';
+import FormActionGroupExampleRaw from '!!raw-loader!./form-action-group-example.hbs';
 import FormVerticalAlignLabelsExample from './form-vertical-align-labels-example.hbs';
 import FormHorizontalAlignLabelsExample from './form-horizontal-align-labels-example.hbs';
 import FormHelpTextExample from './form-help-text-example.hbs';

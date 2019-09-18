@@ -7,10 +7,10 @@ cssPrefix: pf-c-modal-box
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import ModalBoxBasicExampleRaw from '!raw!./modal-box-basic-example.hbs';
-import ModalBoxSmExampleRaw from '!raw!./modal-box-sm-example.hbs';
-import ModalBoxLgExampleRaw from '!raw!./modal-box-lg-example.hbs';
-import ModalBoxNoHeaderExampleRaw from '!raw!./modal-box-no-header-example.hbs';
+import ModalBoxBasicExampleRaw from '!!raw-loader!./modal-box-basic-example.hbs';
+import ModalBoxSmExampleRaw from '!!raw-loader!./modal-box-sm-example.hbs';
+import ModalBoxLgExampleRaw from '!!raw-loader!./modal-box-lg-example.hbs';
+import ModalBoxNoHeaderExampleRaw from '!!raw-loader!./modal-box-no-header-example.hbs';
 import ModalBoxBasicExample from './modal-box-basic-example.hbs';
 import ModalBoxSmExample from './modal-box-sm-example.hbs';
 import ModalBoxLgExample from './modal-box-lg-example.hbs';

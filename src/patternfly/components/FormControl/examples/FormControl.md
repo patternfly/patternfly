@@ -7,9 +7,9 @@ cssPrefix: pf-c-form-control
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import FormControlInputExampleRaw from '!raw!./form-control-input-example.hbs';
-import FormControlSelectExampleRaw from '!raw!./form-control-select-example.hbs';
-import FormControlTextareaExampleRaw from '!raw!./form-control-textarea-example.hbs';
+import FormControlInputExampleRaw from '!!raw-loader!./form-control-input-example.hbs';
+import FormControlSelectExampleRaw from '!!raw-loader!./form-control-select-example.hbs';
+import FormControlTextareaExampleRaw from '!!raw-loader!./form-control-textarea-example.hbs';
 import FormControlInputExample from './form-control-input-example.hbs';
 import FormControlSelectExample from './form-control-select-example.hbs';
 import FormControlTextareaExample from './form-control-textarea-example.hbs';

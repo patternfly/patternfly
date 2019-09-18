@@ -4,6 +4,22 @@ section: components
 cssPrefix: pf-c-alert-group
 ---
 
+import AlertGroupExampleRaw from '!!raw-loader!./alert-group-example.hbs';
+import ToastGroupExampleRaw from '!!raw-loader!./toast-group-example.hbs';
+import AlertGroupExample from './alert-group-example.hbs';
+import ToastGroupExample from './toast-group-example.hbs';
+
+<Example 
+  title="Alert group" 
+  handlebars={AlertGroupExampleRaw} 
+  html={AlertGroupExample()} />
+        
+<Example 
+  title="Toast alert group" 
+  fullPageOnly
+  handlebars={ToastGroupExampleRaw} 
+  hmtl={ToastGroupExample()} />
+
 ## Overview
 
 Alert groups are used to contain and align consecutive alerts. Groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
@@ -16,45 +32,6 @@ Alert Groups contain and align consecutive alerts.
 ## Usage
 
 Alert Groups should be used wherever and whenever multiple alerts are displayed, either inline with a page's content or in the top-right corner as a group of toast alerts.
-
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-
-// Raw
-import alertGroupExampleRaw from '!raw!./alert-group-example.hbs';
-import toastGroupExampleRaw from '!raw!./toast-group-example.hbs';
-
-// Alert group example
-import AlertGroupExample from './alert-group-example.hbs';
-import alertGroupDocs from '../docs/alert-group.md';
-
-// Toast group example
-import ToastGroupExample from './toast-group-example.hbs';
-import toastGroupDocs from '../docs/toast-group.md';
-
-import docs from '../docs/code.md';
-
-export const headingText = 'Alert group';
-export const Docs = docs;
-
-export default props => {
-  const alertGroupExample = AlertGroupExample();
-  const toastGroupExample = ToastGroupExample();
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Alert group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
-        {alertGroupExample}
-      </Example>
-      <Example heading="Toast alert group" fullPageOnly="true" handlebars={toastGroupExampleRaw} docs={toastGroupDocs}>
-        {toastGroupExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
 
 ## Overview
 

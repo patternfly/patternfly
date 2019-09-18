@@ -7,8 +7,8 @@ cssPrefix: pf-l-stack
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import StackRaw from '!raw!./stack-example.hbs';
-import StackHasGutterRaw from '!raw!./stack-has-gutter-example.hbs';
+import StackRaw from '!!raw-loader!./stack-example.hbs';
+import StackHasGutterRaw from '!!raw-loader!./stack-has-gutter-example.hbs';
 import Stack from './stack-example.hbs';
 import StackHasGutter from './stack-has-gutter-example.hbs';
 import docs from '../docs/code.md';

@@ -8,11 +8,11 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import PopoverTopExampleRaw from '!raw!./popover-top-example.hbs';
-import PopoverRightExampleRaw from '!raw!./popover-right-example.hbs';
-import PopoverBottomExampleRaw from '!raw!./popover-bottom-example.hbs';
-import PopoverLeftExampleRaw from '!raw!./popover-left-example.hbs';
-import PopoverNoHeaderExampleRaw from '!raw!./popover-no-header-example.hbs';
+import PopoverTopExampleRaw from '!!raw-loader!./popover-top-example.hbs';
+import PopoverRightExampleRaw from '!!raw-loader!./popover-right-example.hbs';
+import PopoverBottomExampleRaw from '!!raw-loader!./popover-bottom-example.hbs';
+import PopoverLeftExampleRaw from '!!raw-loader!./popover-left-example.hbs';
+import PopoverNoHeaderExampleRaw from '!!raw-loader!./popover-no-header-example.hbs';
 
 import PopoverTopExample from './popover-top-example.hbs';
 import PopoverRightExample from './popover-right-example.hbs';

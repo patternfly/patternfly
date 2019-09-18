@@ -8,7 +8,7 @@ cssPrefix: pf-c-tab-content
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import tabContentExampleRaw from '!raw!./tab-content-example.hbs';
+import tabContentExampleRaw from '!!raw-loader!./tab-content-example.hbs';
 import TabcontentExample from './tab-content-example.hbs';
 import docs from '../docs/code.md';
 

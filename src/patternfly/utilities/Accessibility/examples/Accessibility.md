@@ -6,9 +6,9 @@ section: utilities
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import srOnlyExampleRaw from '!raw!./accessibility-screen-reader-example.hbs';
-import visibleExampleRaw from '!raw!./accessibility-visible-example.hbs';
-import hiddenExampleRaw from '!raw!./accessibility-hidden-example.hbs';
+import srOnlyExampleRaw from '!!raw-loader!./accessibility-screen-reader-example.hbs';
+import visibleExampleRaw from '!!raw-loader!./accessibility-visible-example.hbs';
+import hiddenExampleRaw from '!!raw-loader!./accessibility-hidden-example.hbs';
 import SrOnlyExample from './accessibility-screen-reader-example.hbs';
 import VisibleExample from './accessibility-visible-example.hbs';
 import HiddenExample from './accessibility-hidden-example.hbs';

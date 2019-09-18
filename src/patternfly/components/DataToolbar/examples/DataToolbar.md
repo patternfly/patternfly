@@ -3,116 +3,66 @@ title: Data Toolbar
 section: components
 cssPrefix: pf-c-data-toolbar
 ---
+
+import ItemsExampleRaw from '!!raw-loader!./data-toolbar-items-example.hbs';
+import GroupTypesExampleRaw from '!!raw-loader!./data-toolbar-group-types-example.hbs';
+import ToggleGroupExampleRaw from '!!raw-loader!./data-toolbar-toggle-group-example.hbs';
+import SelectedFiltersExampleRaw from '!!raw-loader!./data-toolbar-selected-filters-example.hbs';
+import SpacersExampleRaw from '!!raw-loader!./data-toolbar-spacers-example.hbs';
+import GroupSpacersExampleRaw from '!!raw-loader!./data-toolbar-group-spacers-example.hbs';
+import StackedExampleRaw from '!!raw-loader!./data-toolbar-stacked-example.hbs';
+
+import ItemsExample from './data-toolbar-items-example.hbs';
+import GroupTypesExample from './data-toolbar-group-types-example.hbs';
+import ToggleGroupExample from './data-toolbar-toggle-group-example.hbs';
+import SelectedFiltersExample from './data-toolbar-selected-filters-example.hbs';
+import SpacersExample from './data-toolbar-spacers-example.hbs';
+import GroupSpacersExample from './data-toolbar-group-spacers-example.hbs';
+import StackedExample from './data-toolbar-stacked-example.hbs';
+
+<Example
+  className="is-layout-page"
+  title="Data toolbar items"
+  handlebars={ItemsExampleRaw}
+  html={ItemsExample()} />
+
+<Example
+  className="is-layout-page"
+  title="Adjusting item spacers"
+  handlebars={SpacersExampleRaw}
+  html={SpacersExample()} />
+
+<Example
+  className="is-layout-page"
+  title="Adjusting group spacers"
+  handlebars={GroupSpacersExampleRaw}
+  html={GroupSpacersExample()} />
+
+<Example
+  title="Data toolbar group types"
+  handlebars={GroupTypesExampleRaw}
+  minHeight=""
+  html={GroupTypesExample()} />
+
+<Example
+  title="Data toolbar toggle group (responsive)"
+  handlebars={ToggleGroupExampleRaw}
+  html={ToggleGroupExample()} />
+
+<Example
+  title="Data toolbar selected filters"
+  handlebars={SelectedFiltersExampleRaw}
+  minHeight="27rem"
+  html={SelectedFiltersExample()} />
+
+<Example 
+  title="Data toolbar stacked" 
+  handlebars={StackedExampleRaw}>
+  html={StackedExample()} />
+
 ## Overview
 
 As the data toolbar component is a hybrid layout and component, some of its elements are presentational, while some require accessibility support.
-
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-
-import dataToolbarItemsExampleRaw from '!raw!./data-toolbar-items-example.hbs';
-import dataToolbarGroupTypesExampleRaw from '!raw!./data-toolbar-group-types-example.hbs';
-import dataToolbarToggleGroupExampleRaw from '!raw!./data-toolbar-toggle-group-example.hbs';
-import dataToolbarSelectedFiltersExampleRaw from '!raw!./data-toolbar-selected-filters-example.hbs';
-import dataToolbarSpacersExampleRaw from '!raw!./data-toolbar-spacers-example.hbs';
-import dataToolbarGroupSpacersExampleRaw from '!raw!./data-toolbar-group-spacers-example.hbs';
-import dataToolbarStackedExampleRaw from '!raw!./data-toolbar-stacked-example.hbs';
-
-import DataToolbarItemsExample from './data-toolbar-items-example.hbs';
-import DataToolbarGroupTypesExample from './data-toolbar-group-types-example.hbs';
-import DataToolbarToggleGroupExample from './data-toolbar-toggle-group-example.hbs';
-import DataToolbarSelectedFiltersExample from './data-toolbar-selected-filters-example.hbs';
-import DataToolbarSpacersExample from './data-toolbar-spacers-example.hbs';
-import DataToolbarGroupSpacersExample from './data-toolbar-group-spacers-example.hbs';
-import DataToolbarStackedExample from './data-toolbar-stacked-example.hbs';
-
-import dataToolbarIntroExampleDoc from '../docs/data-toolbar-intro.md';
-import dataToolbarGroupTypesExampleDoc from '../docs/data-toolbar-group-types.md';
-import dataToolbarChildTypesExampleDoc from '../docs/data-toolbar-child-types.md';
-import dataToolbarSpacersIntroExampleDoc from '../docs/data-toolbar-spacers-intro.md';
-import dataToolbarSpacersExampleDoc from '../docs/data-toolbar-spacers.md';
-import dataToolbarToggleGroupIntroExampleDoc from '../docs/data-toolbar-toggle-group-intro.md';
-import dataToolbarToggleGroupExampleDoc from '../docs/data-toolbar-toggle-group.md';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const dataToolbarItemsExample = DataToolbarItemsExample();
-  const dataToolbarGroupTypesExample = DataToolbarGroupTypesExample();
-  const dataToolbarToggleGroupExample = DataToolbarToggleGroupExample();
-  const dataToolbarSelectedFiltersExample = DataToolbarSelectedFiltersExample();
-  const dataToolbarSpacersExample = DataToolbarSpacersExample();
-  const dataToolbarGroupSpacersExample = DataToolbarGroupSpacersExample();
-  const dataToolbarStackedExample = DataToolbarStackedExample();
-
-  const headingText = 'Data toolbar';
-
-  return (
-    <Documentation
-      data={props}
-      docs={Docs}
-      heading={headingText}
-      variablesRoot={variablesRoot}
-      className="toolbar-documentation"
-    >
-      <Example
-        intro={dataToolbarIntroExampleDoc}
-        className="is-layout-page"
-        heading="Data toolbar items"
-        handlebars={dataToolbarItemsExampleRaw}
-        docs={dataToolbarChildTypesExampleDoc}
-      >
-        {dataToolbarItemsExample}
-      </Example>
-      <Example
-        intro={dataToolbarSpacersIntroExampleDoc}
-        className="is-layout-page"
-        heading="Adjusting item spacers"
-        handlebars={dataToolbarSpacersExampleRaw}
-      >
-        {dataToolbarSpacersExample}
-      </Example>
-      <Example
-        className="is-layout-page"
-        heading="Adjusting group spacers"
-        handlebars={dataToolbarGroupSpacersExampleRaw}
-        docs={dataToolbarSpacersExampleDoc}
-      >
-        {dataToolbarGroupSpacersExample}
-      </Example>
-      <Example
-        heading="Data toolbar group types"
-        handlebars={dataToolbarGroupTypesExampleRaw}
-        minHeight=""
-        docs={dataToolbarGroupTypesExampleDoc}
-      >
-        {dataToolbarGroupTypesExample}
-      </Example>
-      <Example
-        heading="Data toolbar toggle group (responsive)"
-        handlebars={dataToolbarToggleGroupExampleRaw}
-        intro={dataToolbarToggleGroupIntroExampleDoc}
-        docs={dataToolbarToggleGroupExampleDoc}
-      >
-        {dataToolbarToggleGroupExample}
-      </Example>
-      <Example
-        heading="Data toolbar selected filters"
-        handlebars={dataToolbarSelectedFiltersExampleRaw}
-        minHeight="27rem"
-      >
-        {dataToolbarSelectedFiltersExample}
-      </Example>
-      <Example heading="Data toolbar stacked" handlebars={dataToolbarStackedExampleRaw}>
-        {dataToolbarStackedExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
 
 Data toolbar relies on groups (`.pf-c-data-toolbar__group`) and items (`.pf-c-data-toolbar__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group or item. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-data-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
 

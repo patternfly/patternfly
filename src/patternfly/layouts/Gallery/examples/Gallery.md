@@ -7,8 +7,8 @@ cssPrefix: pf-l-gallery
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import GalleryRaw from '!raw!./gallery-example.hbs';
-import GalleryHasGutterRaw from '!raw!./gallery-has-gutter-example.hbs';
+import GalleryRaw from '!!raw-loader!./gallery-example.hbs';
+import GalleryHasGutterRaw from '!!raw-loader!./gallery-has-gutter-example.hbs';
 import Gallery from './gallery-example.hbs';
 import GalleryHasGutter from './gallery-has-gutter-example.hbs';
 import docs from '../docs/code.md';

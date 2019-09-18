@@ -8,8 +8,8 @@ cssPrefix: pf-d-wizard
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import wizardInPageExampleRaw from '!raw!./wizard-in-page-example.hbs';
-import wizardInPageExpandedExampleRaw from '!raw!./wizard-in-page-expanded-example.hbs';
+import wizardInPageExampleRaw from '!!raw-loader!./wizard-in-page-example.hbs';
+import wizardInPageExpandedExampleRaw from '!!raw-loader!./wizard-in-page-expanded-example.hbs';
 import WizardInPageExample from './wizard-in-page-example.hbs';
 import WizardInPageExpandedExample from './wizard-in-page-expanded-example.hbs';
 import docs from '../docs/code.md';

@@ -8,10 +8,10 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
 // Raw
-import sizingExampleWidthPercentRaw from '!raw!./sizing-width-percent.hbs';
-import sizingExampleWidthViewportRaw from '!raw!./sizing-width-viewport.hbs';
-import sizingExampleHeightPercentRaw from '!raw!./sizing-height-percent.hbs';
-import sizingExampleHeightViewportRaw from '!raw!./sizing-height-viewport.hbs';
+import sizingExampleWidthPercentRaw from '!!raw-loader!./sizing-width-percent.hbs';
+import sizingExampleWidthViewportRaw from '!!raw-loader!./sizing-width-viewport.hbs';
+import sizingExampleHeightPercentRaw from '!!raw-loader!./sizing-height-percent.hbs';
+import sizingExampleHeightViewportRaw from '!!raw-loader!./sizing-height-viewport.hbs';
 
 // Width
 import SizingExampleWidthPercent from './sizing-width-percent.hbs';

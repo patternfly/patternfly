@@ -8,9 +8,9 @@ cssPrefix: pf-c-divider
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import DividerHrExampleRaw from '!raw!./divider-hr-example.hbs';
-import DividerLiExampleRaw from '!raw!./divider-li-example.hbs';
-import DividerDivExampleRaw from '!raw!./divider-div-example.hbs';
+import DividerHrExampleRaw from '!!raw-loader!./divider-hr-example.hbs';
+import DividerLiExampleRaw from '!!raw-loader!./divider-li-example.hbs';
+import DividerDivExampleRaw from '!!raw-loader!./divider-div-example.hbs';
 import DividerHrExample from './divider-hr-example.hbs';
 import DividerLiExample from './divider-li-example.hbs';
 import DividerDivExample from './divider-div-example.hbs';

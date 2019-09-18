@@ -8,13 +8,13 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import flexBasicExampleRaw from '!raw!./flex-basic-example.hbs';
-import flexSpacingExampleRaw from '!raw!./flex-spacing-example.hbs';
-import flexLayoutExampleRaw from '!raw!./flex-layout-example.hbs';
-import flexLayoutColumnExampleRaw from '!raw!./flex-layout-column-example.hbs';
-import flexLayoutResponsiveExampleRaw from '!raw!./flex-layout-responsive-example.hbs';
-import flexAlignmentExampleRaw from '!raw!./flex-alignment-example.hbs';
-import flexJustificationExampleRaw from '!raw!./flex-justification-example.hbs';
+import flexBasicExampleRaw from '!!raw-loader!./flex-basic-example.hbs';
+import flexSpacingExampleRaw from '!!raw-loader!./flex-spacing-example.hbs';
+import flexLayoutExampleRaw from '!!raw-loader!./flex-layout-example.hbs';
+import flexLayoutColumnExampleRaw from '!!raw-loader!./flex-layout-column-example.hbs';
+import flexLayoutResponsiveExampleRaw from '!!raw-loader!./flex-layout-responsive-example.hbs';
+import flexAlignmentExampleRaw from '!!raw-loader!./flex-alignment-example.hbs';
+import flexJustificationExampleRaw from '!!raw-loader!./flex-justification-example.hbs';
 
 import FlexBasicExample from './flex-basic-example.hbs';
 import FlexSpacingExample from './flex-spacing-example.hbs';

@@ -23,10 +23,10 @@ This demo implements a basic modal, including the backdrop. Both the normal and 
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import ModalExampleRaw from '!raw!./modal-example.hbs';
-import ModalScrollExampleRaw from '!raw!./modal-scroll-example.hbs';
-import ModalLgExampleRaw from '!raw!./modal-right-aligned-footer-example.hbs';
-import ModalRightAlignedFooterExampleRaw from '!raw!./modal-lg-example.hbs';
+import ModalExampleRaw from '!!raw-loader!./modal-example.hbs';
+import ModalScrollExampleRaw from '!!raw-loader!./modal-scroll-example.hbs';
+import ModalLgExampleRaw from '!!raw-loader!./modal-right-aligned-footer-example.hbs';
+import ModalRightAlignedFooterExampleRaw from '!!raw-loader!./modal-lg-example.hbs';
 import docs from '../docs/code.md';
 import ModalExample from './modal-example.hbs';
 import ModalScrollExample from './modal-scroll-example.hbs';

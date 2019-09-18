@@ -8,9 +8,9 @@ cssPrefix: pf-c-list
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import listUnorderedExampleRaw from '!raw!./list-unordered-example.hbs';
-import listOrderedExampleRaw from '!raw!./list-ordered-example.hbs';
-import listInlineExampleRaw from '!raw!./list-inline-example.hbs';
+import listUnorderedExampleRaw from '!!raw-loader!./list-unordered-example.hbs';
+import listOrderedExampleRaw from '!!raw-loader!./list-ordered-example.hbs';
+import listInlineExampleRaw from '!!raw-loader!./list-inline-example.hbs';
 import ListUnorderedExample from './list-unordered-example.hbs';
 import ListOrderedExample from './list-ordered-example.hbs';
 import ListInlineExample from './list-inline-example.hbs';

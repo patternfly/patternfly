@@ -7,10 +7,10 @@ section: demos
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import dataListSimpleDemoRaw from '!raw!./data-list-simple-demo.hbs';
-import dataListActionableDemoRaw from '!raw!./data-list-actionable-demo.hbs';
-import dataListExpandableDemoRaw from '!raw!./data-list-expandable-demo.hbs';
-import dataListSimpleWithoutPaginationDemoRaw from '!raw!./data-list-simple-without-pagination-demo.hbs';
+import dataListSimpleDemoRaw from '!!raw-loader!./data-list-simple-demo.hbs';
+import dataListActionableDemoRaw from '!!raw-loader!./data-list-actionable-demo.hbs';
+import dataListExpandableDemoRaw from '!!raw-loader!./data-list-expandable-demo.hbs';
+import dataListSimpleWithoutPaginationDemoRaw from '!!raw-loader!./data-list-simple-without-pagination-demo.hbs';
 import DataListSimpleDemo from './data-list-simple-demo.hbs';
 import DataListActionableDemo from './data-list-actionable-demo.hbs';
 import DataListExpandableDemo from './data-list-expandable-demo.hbs';

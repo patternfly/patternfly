@@ -4,6 +4,42 @@ section: components
 cssPrefix: pf-c-button
 ---
 
+import VariationTemplateRaw from '!!raw-loader!./button-variations-example.hbs';
+import StatesTemplateRaw from '!!raw-loader!./button-states-example.hbs';
+import BlockTemplateRaw from '!!raw-loader!./button-block-example.hbs';
+import TypesTemplateRaw from '!!raw-loader!./button-types-example.hbs';
+import LinkExampleRaw from '!!raw-loader!./button-link-example.hbs';
+import VariationTemplate from './button-variations-example.hbs';
+import StatesTemplate from './button-states-example.hbs';
+import BlockTemplate from './button-block-example.hbs';
+import TypesTemplate from './button-types-example.hbs';
+import LinkExample from './button-link-example.hbs';
+
+<Example 
+  title="Button variations" 
+  handlebars={VariationTemplateRaw}>
+  html={VariationTemplate()} />
+
+<Example 
+  title="Button states" 
+  handlebars={StatesTemplateRaw}>
+  html={StatesTemplate()} />
+
+<Example 
+  title="Links as buttons" 
+  handlebars={LinkExampleRaw}>
+  html={LinkExample()} />
+
+<Example 
+  title="Button (block level)" 
+  handlebars={BlockTemplateRaw}>
+  html={BlockTemplate()} />
+
+<Example 
+  title="Button types" 
+  handlebars={TypesTemplateRaw}>
+  html={TypesTemplate()} />
+
 # Buttons
 Buttons communicate and trigger actions a user can take throughout an experience.
 
@@ -61,54 +97,6 @@ Use the disabled state when a button is inactive and a user cannot interact with
 * Do not use long button labels that might risk wrapping.
 
 See the [PatternFly terminology and wording guidelines](http://www.patternfly.org/styles/terminology-and-wording/) for additional guidance.
-
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ButtonVariationTemplateRaw from '!raw!./button-variations-example.hbs';
-import ButtonStatesTemplateRaw from '!raw!./button-states-example.hbs';
-import ButtonBlockTemplateRaw from '!raw!./button-block-example.hbs';
-import ButtonTypesTemplateRaw from '!raw!./button-types-example.hbs';
-import ButtonLinkExampleRaw from '!raw!./button-link-example.hbs';
-import ButtonVariationTemplate from './button-variations-example.hbs';
-import ButtonStatesTemplate from './button-states-example.hbs';
-import ButtonBlockTemplate from './button-block-example.hbs';
-import ButtonTypesTemplate from './button-types-example.hbs';
-import ButtonLinkExample from './button-link-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const buttonVariationTemplate = ButtonVariationTemplate();
-  const buttonStatesTemplate = ButtonStatesTemplate();
-  const buttonLinkExample = ButtonLinkExample();
-  const buttonBlockTemplate = ButtonBlockTemplate();
-  const buttonTypesTemplate = ButtonTypesTemplate();
-  const headingText = 'Button';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Button variations" handlebars={ButtonVariationTemplateRaw}>
-        {buttonVariationTemplate}
-      </Example>
-      <Example heading="Button states" handlebars={ButtonStatesTemplateRaw}>
-        {buttonStatesTemplate}
-      </Example>
-      <Example heading="Links as buttons" handlebars={ButtonLinkExampleRaw}>
-        {buttonLinkExample}
-      </Example>
-      <Example heading="Button (block level)" handlebars={ButtonBlockTemplateRaw}>
-        {buttonBlockTemplate}
-      </Example>
-      <Example heading="Button types" handlebars={ButtonTypesTemplateRaw}>
-        {buttonTypesTemplate}
-      </Example>
-    </Documentation>
-  );
-};
-```
 
 ## Overview
 

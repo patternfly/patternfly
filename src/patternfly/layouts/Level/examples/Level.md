@@ -7,9 +7,9 @@ cssPrefix: pf-l-level
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import LevelTwoRaw from '!raw!./level-two-example.hbs';
-import LevelThreeRaw from '!raw!./level-three-example.hbs';
-import LevelGuttersRaw from '!raw!./level-gutters-example.hbs';
+import LevelTwoRaw from '!!raw-loader!./level-two-example.hbs';
+import LevelThreeRaw from '!!raw-loader!./level-three-example.hbs';
+import LevelGuttersRaw from '!!raw-loader!./level-gutters-example.hbs';
 import LevelTwo from './level-two-example.hbs';
 import LevelThree from './level-three-example.hbs';
 import LevelGutters from './level-gutters-example.hbs';

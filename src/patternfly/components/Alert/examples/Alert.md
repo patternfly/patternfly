@@ -3,22 +3,22 @@ title: Alert
 section: components
 cssPrefix: pf-c-alert
 ---
-import TypesRaw from '!raw!./alert-types-example.hbs';
-import VariationsRaw from '!raw!./alert-variations-example.hbs';
-import InlineRaw from '!raw!./alert-inline-example.hbs';
-import InlineVariationsRaw from '!raw!./alert-inline-variations-example.hbs';
+import TypesRaw from '!!raw-loader!./alert-types-example.hbs';
+import VariationsRaw from '!!raw-loader!./alert-variations-example.hbs';
+import InlineRaw from '!!raw-loader!./alert-inline-example.hbs';
+import InlineVariationsRaw from '!!raw-loader!./alert-inline-variations-example.hbs';
 import Types from './alert-types-example.hbs';
 import Variations from './alert-variations-example.hbs';
 import Inline from './alert-inline-example.hbs';
 import InlineVariations from './alert-inline-variations-example.hbs';
 
-<Example heading="Alert types" handlebars={TypesRaw} html={Types()} />
+<Example title="Alert types" handlebars={TypesRaw} html={Types()} />
 
-<Example heading="Alert variations" handlebars={VariationsRaw} html={Variations()} />
+<Example title="Alert variations" handlebars={VariationsRaw} html={Variations()} />
 
-<Example heading="Inline alert types" handlebars={InlineRaw} html={Inline()} />
+<Example title="Inline alert types" handlebars={InlineRaw} html={Inline()} />
 
-<Example heading="Inline alert variations" handlebars={InlineVariationsRaw} html={AlertInlineVariations()} />
+<Example title="Inline alert variations" handlebars={InlineVariationsRaw} html={AlertInlineVariations()} />
 
 ## Overview
 

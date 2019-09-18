@@ -8,8 +8,8 @@ cssPrefix: pf-c-spinner
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import spinnerSimpleExampleRaw from '!raw!./spinner-simple-example.hbs';
-import spinnerSizeExampleRaw from '!raw!./spinner-size-example.hbs';
+import spinnerSimpleExampleRaw from '!!raw-loader!./spinner-simple-example.hbs';
+import spinnerSizeExampleRaw from '!!raw-loader!./spinner-size-example.hbs';
 import SpinnerSimpleExample from './spinner-simple-example.hbs';
 import SpinnerSizeExample from './spinner-size-example.hbs';
 import docs from '../docs/code.md';

@@ -8,10 +8,10 @@ cssPrefix: pf-c-pagination
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import paginationTopExampleRaw from '!raw!./pagination-top-example.hbs';
-import paginationTopExpandedExampleRaw from '!raw!./pagination-top-expanded-example.hbs';
-import paginationBottomExampleRaw from '!raw!./pagination-bottom-example.hbs';
-import paginationTopDisabledExampleRaw from '!raw!./pagination-top-disabled-example.hbs';
+import paginationTopExampleRaw from '!!raw-loader!./pagination-top-example.hbs';
+import paginationTopExpandedExampleRaw from '!!raw-loader!./pagination-top-expanded-example.hbs';
+import paginationBottomExampleRaw from '!!raw-loader!./pagination-bottom-example.hbs';
+import paginationTopDisabledExampleRaw from '!!raw-loader!./pagination-top-disabled-example.hbs';
 import PaginationTopExample from './pagination-top-example.hbs';
 import PaginationTopExpandedExample from './pagination-top-expanded-example.hbs';
 import PaginationBottomExample from './pagination-bottom-example.hbs';

@@ -7,7 +7,7 @@ cssPrefix: pf-c-notification-badge
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import notificationBadgeSimpleExampleRaw from '!raw!./notification-badge-simple-example.hbs';
+import notificationBadgeSimpleExampleRaw from '!!raw-loader!./notification-badge-simple-example.hbs';
 import NotificationbadgeSimpleExample from './notification-badge-simple-example.hbs';
 import docs from '../docs/code.md';
 

@@ -8,7 +8,7 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import AlertToastExampleRaw from '!raw!./alert-toast-example.hbs';
+import AlertToastExampleRaw from '!!raw-loader!./alert-toast-example.hbs';
 import AlertToastExample from './alert-toast-example.hbs';
 
 import docs from '../docs/code.md';

@@ -26,9 +26,9 @@ See the [PatternFly terminology and wording guidelines](http://www.patternfly.or
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import SwitchExampleRaw from '!raw!./switch-example.hbs';
-import SwitchDisabledExampleRaw from '!raw!./switch-disabled-example.hbs';
-import SwitchNoLabelExampleRaw from '!raw!./switch-no-label-example.hbs';
+import SwitchExampleRaw from '!!raw-loader!./switch-example.hbs';
+import SwitchDisabledExampleRaw from '!!raw-loader!./switch-disabled-example.hbs';
+import SwitchNoLabelExampleRaw from '!!raw-loader!./switch-no-label-example.hbs';
 import SwitchExample from './switch-example.hbs';
 import SwitchDisabledExample from './switch-disabled-example.hbs';
 import SwitchNoLabelExample from './switch-no-label-example.hbs';

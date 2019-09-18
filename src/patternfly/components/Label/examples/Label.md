@@ -7,7 +7,7 @@ cssPrefix: pf-c-label
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import labelExampleRaw from '!raw!./label-example.hbs';
+import labelExampleRaw from '!!raw-loader!./label-example.hbs';
 import LabelExample from './label-example.hbs';
 import docs from '../docs/code.md';
 

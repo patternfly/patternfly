@@ -8,7 +8,7 @@ cssPrefix: pf-c-input-group
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import InputgroupExampleRaw from '!raw!./input-group-example.hbs';
+import InputgroupExampleRaw from '!!raw-loader!./input-group-example.hbs';
 import InputgroupExample from './input-group-example.hbs';
 import docs from '../docs/code.md';
 

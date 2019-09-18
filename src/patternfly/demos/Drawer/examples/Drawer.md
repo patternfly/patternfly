@@ -12,8 +12,8 @@ This demo implements the drawer in context of the page component.
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import drawerCollapsedExampleRaw from '!raw!./drawer-collapsed-example.hbs';
-import drawerExpandedExampleRaw from '!raw!./drawer-expanded-example.hbs';
+import drawerCollapsedExampleRaw from '!!raw-loader!./drawer-collapsed-example.hbs';
+import drawerExpandedExampleRaw from '!!raw-loader!./drawer-expanded-example.hbs';
 import DrawerCollapsedExample from './drawer-collapsed-example.hbs';
 import DrawerExpandedExample from './drawer-expanded-example.hbs';
 import docs from '../docs/code.md';

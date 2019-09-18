@@ -7,9 +7,9 @@ cssPrefix: pf-c-empty-state
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import emptyStateSimpleExampleRaw from '!raw!./empty-state-simple-example.hbs';
-import emptyStateSmallExampleRaw from '!raw!./empty-state-small-example.hbs';
-import emptyStateLargeExampleRaw from '!raw!./empty-state-large-example.hbs';
+import emptyStateSimpleExampleRaw from '!!raw-loader!./empty-state-simple-example.hbs';
+import emptyStateSmallExampleRaw from '!!raw-loader!./empty-state-small-example.hbs';
+import emptyStateLargeExampleRaw from '!!raw-loader!./empty-state-large-example.hbs';
 import EmptystateSimpleExample from './empty-state-simple-example.hbs';
 import EmptystateSmallExample from './empty-state-small-example.hbs';
 import EmptystateLargeExample from './empty-state-large-example.hbs';

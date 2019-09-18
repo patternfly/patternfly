@@ -7,8 +7,8 @@ section: demos
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import simpleFormDemoExampleRaw from '!raw!./simple-form-demo-example.hbs';
-import horizontalFormDemoExampleRaw from '!raw!./horizontal-form-demo-example.hbs';
+import simpleFormDemoExampleRaw from '!!raw-loader!./simple-form-demo-example.hbs';
+import horizontalFormDemoExampleRaw from '!!raw-loader!./horizontal-form-demo-example.hbs';
 
 import SimpleFormDemoExample from './simple-form-demo-example.hbs';
 import HorizontalFormDemoExample from './horizontal-form-demo-example.hbs';

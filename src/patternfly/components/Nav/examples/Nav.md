@@ -10,16 +10,16 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
 // Raw files
-import navSimpleListExampleRaw from '!raw!./nav-simple-list-example.hbs';
-import navListGroupedExampleRaw from '!raw!./nav-list-grouped-example.hbs';
-import navExampleRaw from '!raw!./nav-example.hbs';
-import navExpandableExampleRaw from '!raw!./nav-expandable-example.hbs';
-import navExpandableSubnavTitlesExampleRaw from '!raw!./nav-expandable-subnav-titles-example.hbs';
-import navHorizontalListExampleRaw from '!raw!./nav-horizontal-list-example.hbs';
-import navHorizontalListOverflowExampleRaw from '!raw!./nav-horizontal-list-overflow-example.hbs';
-import navListTertiaryExampleRaw from '!raw!./nav-tertiary-list-example.hbs';
-import navListTertiaryOverflowExampleRaw from '!raw!./nav-tertiary-list-overflow-example.hbs';
-import navMixedExampleRaw from '!raw!./nav-mixed-example.hbs';
+import navSimpleListExampleRaw from '!!raw-loader!./nav-simple-list-example.hbs';
+import navListGroupedExampleRaw from '!!raw-loader!./nav-list-grouped-example.hbs';
+import navExampleRaw from '!!raw-loader!./nav-example.hbs';
+import navExpandableExampleRaw from '!!raw-loader!./nav-expandable-example.hbs';
+import navExpandableSubnavTitlesExampleRaw from '!!raw-loader!./nav-expandable-subnav-titles-example.hbs';
+import navHorizontalListExampleRaw from '!!raw-loader!./nav-horizontal-list-example.hbs';
+import navHorizontalListOverflowExampleRaw from '!!raw-loader!./nav-horizontal-list-overflow-example.hbs';
+import navListTertiaryExampleRaw from '!!raw-loader!./nav-tertiary-list-example.hbs';
+import navListTertiaryOverflowExampleRaw from '!!raw-loader!./nav-tertiary-list-overflow-example.hbs';
+import navMixedExampleRaw from '!!raw-loader!./nav-mixed-example.hbs';
 
 // Example files
 import NavSimpleListExample from './nav-simple-list-example.hbs';

@@ -10,17 +10,17 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
 // Raw
-import tabsPrimaryExampleRaw from '!raw!./tabs-primary.hbs';
-import tabsPrimaryOverflowExampleRaw from '!raw!./tabs-primary-overflow.hbs';
+import tabsPrimaryExampleRaw from '!!raw-loader!./tabs-primary.hbs';
+import tabsPrimaryOverflowExampleRaw from '!!raw-loader!./tabs-primary-overflow.hbs';
 
-import tabsSecondaryExampleRaw from '!raw!./tabs-secondary.hbs';
-import tabsSecondaryOverflowExampleRaw from '!raw!./tabs-secondary-overflow.hbs';
+import tabsSecondaryExampleRaw from '!!raw-loader!./tabs-secondary.hbs';
+import tabsSecondaryOverflowExampleRaw from '!!raw-loader!./tabs-secondary-overflow.hbs';
 
-import tabsPrimarySecondaryExampleRaw from '!raw!./tabs-primary-secondary.hbs';
+import tabsPrimarySecondaryExampleRaw from '!!raw-loader!./tabs-primary-secondary.hbs';
 
-import tabsFilledExampleRaw from '!raw!./tabs-filled.hbs';
+import tabsFilledExampleRaw from '!!raw-loader!./tabs-filled.hbs';
 
-import tabsNavExampleRaw from '!raw!./tabs-nav.hbs';
+import tabsNavExampleRaw from '!!raw-loader!./tabs-nav.hbs';
 
 // Primary tabs
 import TabsPrimaryExample from './tabs-primary.hbs';

@@ -7,11 +7,11 @@ section: demos
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import TableSimpleDemoRaw from '!raw!./table-simple-demo.hbs';
-import TableSortableDemoRaw from '!raw!./table-sortable-demo.hbs';
-import TableExpandableDemoRaw from '!raw!./table-expandable-demo.hbs';
-import TableCompactDemoRaw from '!raw!./table-compact-demo.hbs';
-import TableCompoundExpansionDemoRaw from '!raw!./table-compound-expansion-demo.hbs';
+import TableSimpleDemoRaw from '!!raw-loader!./table-simple-demo.hbs';
+import TableSortableDemoRaw from '!!raw-loader!./table-sortable-demo.hbs';
+import TableExpandableDemoRaw from '!!raw-loader!./table-expandable-demo.hbs';
+import TableCompactDemoRaw from '!!raw-loader!./table-compact-demo.hbs';
+import TableCompoundExpansionDemoRaw from '!!raw-loader!./table-compound-expansion-demo.hbs';
 import TableSimpleDemo from './table-simple-demo.hbs';
 import TableSortableDemo from './table-sortable-demo.hbs';
 import TableExpandableDemo from './table-expandable-demo.hbs';

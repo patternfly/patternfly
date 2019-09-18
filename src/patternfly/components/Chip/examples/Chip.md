@@ -3,29 +3,15 @@ title: Chip
 section: components
 cssPrefix: pf-c-chip
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ChipExampleRaw from '!raw!./chip-example.hbs';
-import chipExample from './chip-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
+import ExampleRaw from '!!raw-loader!./chip-example.hbs';
+import Example from './chip-example.hbs';
 
-export default (props) => {
-  const ChipExample = chipExample();
-  const headingText = 'Chip';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Chip" handlebars={ChipExampleRaw} className="is-light-preview">
-        {ChipExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example 
+  heading="Chip" 
+  handlebars={ExampleRaw} 
+  className="is-light-preview">
+  html={Example()} />
 
 ## Overview
 

@@ -3,29 +3,13 @@ title: Content
 section: components
 cssPrefix: pf-c-content
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ContentTemplateRaw from '!raw!./content-template-example.hbs';
-import ContentTemplate from './content-template-example.hbs';
-import docs from '../docs/code.md';
+import TemplateRaw from '!!raw-loader!./content-template-example.hbs';
+import Template from './content-template-example.hbs';
 
-export const Docs = docs;
-
-export default (props) => {
-  const contentTemplate = ContentTemplate();
-  const headingText = 'Content';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Content example" handlebars={ContentTemplateRaw}>
-        {contentTemplate}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example 
+  title="Content example" 
+  handlebars={TemplateRaw}>
+  html={Template()} />
 
 ## Overview
 

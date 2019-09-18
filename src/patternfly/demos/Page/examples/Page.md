@@ -12,14 +12,14 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import PageComponentDefaultNavHeaderExampleRaw from '!raw!./page-component-default-nav-header-example.hbs';
-import PageComponentExpandableNavExampleRaw from '!raw!./page-component-expandable-nav-example.hbs';
-import PageComponentHorizontalNavExampleRaw from '!raw!./page-component-horizontal-nav-example.hbs';
-import PageComponentTertiaryNavExampleRaw from '!raw!./page-component-tertiary-nav-example.hbs';
-import PageComponentGroupedNavExampleRaw from '!raw!./page-component-grouped-nav-example.hbs';
-import PageComponentLegacyNavSeparatorsExampleRaw from '!raw!./page-component-legacy-nav-separators-example.hbs';
-import PageComponentLightSidebarNavExampleRaw from '!raw!./page-component-light-sidebar-nav-example.hbs';
-import PageComponentLightSidebarNavLegacyNavSeparatorsExampleRaw from '!raw!./page-component-light-sidebar-nav-legacy-nav-separators-example.hbs';
+import PageComponentDefaultNavHeaderExampleRaw from '!!raw-loader!./page-component-default-nav-header-example.hbs';
+import PageComponentExpandableNavExampleRaw from '!!raw-loader!./page-component-expandable-nav-example.hbs';
+import PageComponentHorizontalNavExampleRaw from '!!raw-loader!./page-component-horizontal-nav-example.hbs';
+import PageComponentTertiaryNavExampleRaw from '!!raw-loader!./page-component-tertiary-nav-example.hbs';
+import PageComponentGroupedNavExampleRaw from '!!raw-loader!./page-component-grouped-nav-example.hbs';
+import PageComponentLegacyNavSeparatorsExampleRaw from '!!raw-loader!./page-component-legacy-nav-separators-example.hbs';
+import PageComponentLightSidebarNavExampleRaw from '!!raw-loader!./page-component-light-sidebar-nav-example.hbs';
+import PageComponentLightSidebarNavLegacyNavSeparatorsExampleRaw from '!!raw-loader!./page-component-light-sidebar-nav-legacy-nav-separators-example.hbs';
 
 import PageComponentDefaultNavHeaderExample from './page-component-default-nav-header-example.hbs';
 import PageComponentExpandableNavExample from './page-component-expandable-nav-example.hbs';

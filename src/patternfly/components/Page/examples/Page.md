@@ -7,10 +7,10 @@ cssPrefix: pf-c-page
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import PageComponentNavVerticalExampleRaw from '!raw!./page-component-nav-vertical-example.hbs';
-import PageComponentNavHorizontalExampleRaw from '!raw!./page-component-nav-horizontal-example.hbs';
-import PageComponentFillExampleRaw from '!raw!./page-component-fill-example.hbs';
-import PageComponentMainSectionModifiersRaw from '!raw!./page-component-main-section-modifiers.hbs';
+import PageComponentNavVerticalExampleRaw from '!!raw-loader!./page-component-nav-vertical-example.hbs';
+import PageComponentNavHorizontalExampleRaw from '!!raw-loader!./page-component-nav-horizontal-example.hbs';
+import PageComponentFillExampleRaw from '!!raw-loader!./page-component-fill-example.hbs';
+import PageComponentMainSectionModifiersRaw from '!!raw-loader!./page-component-main-section-modifiers.hbs';
 import PageComponentNavVerticalExample from './page-component-nav-vertical-example.hbs';
 import PageComponentNavHorizontalExample from './page-component-nav-horizontal-example.hbs';
 import PageComponentFillExample from './page-component-fill-example.hbs';

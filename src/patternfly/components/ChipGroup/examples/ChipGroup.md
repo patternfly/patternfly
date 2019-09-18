@@ -3,70 +3,39 @@ title: Chip Group
 section: components
 cssPrefix: pf-c-chip-group
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ChipGroupToolbarCollapsedExampleRaw from '!raw!./chip-group-toolbar-collapsed-example.hbs';
-import ChipGroupToolbarExpandedExampleRaw from '!raw!./chip-group-toolbar-expanded-example.hbs';
-import ChipGroupSelectExpandedExampleRaw from '!raw!./chip-group-select-expanded-example.hbs';
-import ChipGroupSelectCollapsedExampleRaw from '!raw!./chip-group-select-collapsed-example.hbs';
 
-import chipGroupToolbarCollapsedExample from './chip-group-toolbar-collapsed-example.hbs';
-import chipGroupToolbarExpandedExample from './chip-group-toolbar-expanded-example.hbs';
-import chipGroupToolbarDoc from '../docs/chip-group-toolbar.md';
+import ToolbarCollapsedExampleRaw from '!!raw-loader!./chip-group-toolbar-collapsed-example.hbs';
+import ToolbarExpandedExampleRaw from '!!raw-loader!./chip-group-toolbar-expanded-example.hbs';
+import SelectExpandedExampleRaw from '!!raw-loader!./chip-group-select-expanded-example.hbs';
+import SelectCollapsedExampleRaw from '!!raw-loader!./chip-group-select-collapsed-example.hbs';
+import ToolbarCollapsedExample from './chip-group-toolbar-collapsed-example.hbs';
+import ToolbarExpandedExample from './chip-group-toolbar-expanded-example.hbs';
+import SelectExpandedExample from './chip-group-select-expanded-example.hbs';
+import SelectCollapsedExample from './chip-group-select-collapsed-example.hbs';
 
-import chipGroupSelectExpandedExample from './chip-group-select-expanded-example.hbs';
-import chipGroupSelectCollapsedExample from './chip-group-select-collapsed-example.hbs';
-import chipGroupMultiSelectDoc from '../docs/chip-group-multi-select.md';
+<Example
+  title="Chip group toolbar (collapsed)"
+  handlebars={ToolbarCollapsedExampleRaw}
+  className="is-light-preview"
+  html={ToolbarCollapsedExample()} />
 
-import docs from '../docs/code.md';
+<Example
+  title="Chip group toolbar (expanded)"
+  handlebars={ToolbarExpandedExampleRaw}
+  className="is-light-preview"
+  html={ToolbarExpandedExample()} />
 
-export const Docs = docs;
+<Example
+  title="Chip group multi-select (collapsed)"
+  handlebars={SelectCollapsedExampleRaw}
+  className="is-light-preview"
+  html={SelectCollapsedExample()} />
 
-export default (props) => {
-  const ChipGroupToolbarCollapsedExample = chipGroupToolbarCollapsedExample();
-  const ChipGroupToolbarExpandedExample = chipGroupToolbarExpandedExample();
-  const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
-  const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
-  const headingText = 'Chip group';
-
-  return (
-    <Documentation data={props} heading={headingText} variablesRoot={variablesRoot}>
-      <Example
-        heading="Chip group toolbar (collapsed)"
-        handlebars={ChipGroupToolbarCollapsedExampleRaw}
-        className="is-light-preview"
-      >
-        {ChipGroupToolbarCollapsedExample}
-      </Example>
-      <Example
-        heading="Chip group toolbar (expanded)"
-        handlebars={ChipGroupToolbarExpandedExampleRaw}
-        className="is-light-preview"
-        docs={chipGroupToolbarDoc}
-      >
-        {ChipGroupToolbarExpandedExample}
-      </Example>
-      <Example
-        heading="Chip group multi-select (collapsed)"
-        handlebars={ChipGroupSelectCollapsedExampleRaw}
-        className="is-light-preview"
-      >
-        {ChipGroupSelectCollapsedExample}
-      </Example>
-      <Example
-        heading="Chip group multi-select (expanded)"
-        handlebars={ChipGroupSelectExpandedExampleRaw}
-        className="is-light-preview"
-        docs={chipGroupMultiSelectDoc}
-      >
-        {ChipGroupSelectExpandedExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example
+  title="Chip group multi-select (expanded)"
+  handlebars={SelectExpandedExampleRaw}
+  className="is-light-preview"
+  html={SelectExpandedExample()} />
 
 ## Overview 
 

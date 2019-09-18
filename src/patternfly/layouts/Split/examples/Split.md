@@ -7,8 +7,8 @@ cssPrefix: pf-l-split
 import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
-import SplitRaw from '!raw!./split-example.hbs';
-import SplitGuttersRaw from '!raw!./split-gutters-example.hbs';
+import SplitRaw from '!!raw-loader!./split-example.hbs';
+import SplitGuttersRaw from '!!raw-loader!./split-gutters-example.hbs';
 import Split from './split-example.hbs';
 import SplitGutters from './split-gutters-example.hbs';
 import docs from '../docs/code.md';

@@ -8,14 +8,14 @@ import React from 'react';
 import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 
-import displayInlineBlockExampleRaw from '!raw!./display-inline-block-example.hbs';
-import displayBlockExampleRaw from '!raw!./display-block-example.hbs';
-import displayFlexExampleRaw from '!raw!./display-flex-example.hbs';
-import displayGridExampleRaw from '!raw!./display-grid-example.hbs';
-import displayInlineFlexExampleRaw from '!raw!./display-inline-flex-example.hbs';
-import displayInlineExampleRaw from '!raw!./display-inline-example.hbs';
-import displayTableExampleRaw from '!raw!./display-table-example.hbs';
-import displayNoneExampleRaw from '!raw!./display-none-example.hbs';
+import displayInlineBlockExampleRaw from '!!raw-loader!./display-inline-block-example.hbs';
+import displayBlockExampleRaw from '!!raw-loader!./display-block-example.hbs';
+import displayFlexExampleRaw from '!!raw-loader!./display-flex-example.hbs';
+import displayGridExampleRaw from '!!raw-loader!./display-grid-example.hbs';
+import displayInlineFlexExampleRaw from '!!raw-loader!./display-inline-flex-example.hbs';
+import displayInlineExampleRaw from '!!raw-loader!./display-inline-example.hbs';
+import displayTableExampleRaw from '!!raw-loader!./display-table-example.hbs';
+import displayNoneExampleRaw from '!!raw-loader!./display-none-example.hbs';
 
 import DisplayInlineBlockExample from './display-inline-block-example.hbs';
 import DisplayBlockExample from './display-block-example.hbs';

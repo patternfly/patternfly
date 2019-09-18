@@ -3,30 +3,14 @@ title: Context Selector
 section: components
 cssPrefix: pf-c-context-selector
 ---
+import ExampleRaw from '!!raw-loader!./context-selector-example.hbs';
+import Example from './context-selector-example.hbs';
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ContextSelectorExampleRaw from '!raw!./context-selector-example.hbs';
-import ContextSelectorExample from './context-selector-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const contextselectorexample = ContextSelectorExample();
-  const headingText = 'Context selector';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Context selector example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
-        {contextselectorexample}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example 
+  title="Context selector example" 
+  handlebars={ExampleRaw} 
+  minHeight="20em">
+  html={example()} />
 
 ## Accessibility
 
