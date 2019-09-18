@@ -22,6 +22,8 @@
   --pf-c-nav--m-dark__simple-list-link--m-current--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav--m-dark__item--m-expanded--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-dark__item--m-expanded__list-link--after--Bottom: 0;
+  --pf-c-nav--m-dark__item--m-expanded__list-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav--m-dark__item--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__item--m-current__simple-list-link--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__item--m-current__list-link--Color: var(--pf-global--Color--light-100);
@@ -309,6 +311,12 @@
 
       &.pf-m-expanded {
         padding-bottom: var(--pf-c-nav--m-dark__item--m-expanded--PaddingBottom);
+
+        /* stylelint-disable-next-line */
+        > .pf-c-nav__link {
+          --pf-c-nav__list-link--after--Bottom: var(--pf-c-nav--m-dark__item--m-expanded__list-link--after--Bottom);
+          --pf-c-nav__list-link--PaddingBottom: var(--pf-c-nav--m-dark__item--m-expanded__list-link--PaddingBottom);
+        }
       }
     }
 
