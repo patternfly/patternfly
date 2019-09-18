@@ -3,48 +3,22 @@ title: Alert
 section: components
 cssPrefix: pf-c-alert
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
+import TypesRaw from '!raw!./alert-types-example.hbs';
+import VariationsRaw from '!raw!./alert-variations-example.hbs';
+import InlineRaw from '!raw!./alert-inline-example.hbs';
+import InlineVariationsRaw from '!raw!./alert-inline-variations-example.hbs';
+import Types from './alert-types-example.hbs';
+import Variations from './alert-variations-example.hbs';
+import Inline from './alert-inline-example.hbs';
+import InlineVariations from './alert-inline-variations-example.hbs';
 
-import AlertTypesRaw from '!raw!./alert-types-example.hbs';
-import AlertVariationsRaw from '!raw!./alert-variations-example.hbs';
-import AlertInlineRaw from '!raw!./alert-inline-example.hbs';
-import AlertInlineVariationsRaw from '!raw!./alert-inline-variations-example.hbs';
-import AlertTypes from './alert-types-example.hbs';
-import AlertVariations from './alert-variations-example.hbs';
-import AlertInline from './alert-inline-example.hbs';
-import AlertInlineVariations from './alert-inline-variations-example.hbs';
-import docs from '../docs/code.md';
+<Example heading="Alert types" handlebars={TypesRaw} html={Types()} />
 
-export const Docs = docs;
+<Example heading="Alert variations" handlebars={VariationsRaw} html={Variations()} />
 
-export default props => {
-  const alertTypes = AlertTypes();
-  const alertVariations = AlertVariations();
-  const alertInline = AlertInline();
-  const alertInlineVariations = AlertInlineVariations();
-  const headingText = 'Alert';
+<Example heading="Inline alert types" handlebars={InlineRaw} html={Inline()} />
 
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Alert types" handlebars={AlertTypesRaw}>
-        {alertTypes}
-      </Example>
-      <Example heading="Alert variations" handlebars={AlertVariationsRaw}>
-        {alertVariations}
-      </Example>
-      <Example heading="Inline alert types" handlebars={AlertInlineRaw}>
-        {alertInline}
-      </Example>
-      <Example heading="Inline alert variations" handlebars={AlertInlineVariationsRaw}>
-        {alertInlineVariations}
-      </Example>
-    </Documentation>
-  );
-};
-```
+<Example heading="Inline alert variations" handlebars={InlineVariationsRaw} html={AlertInlineVariations()} />
 
 ## Overview
 
