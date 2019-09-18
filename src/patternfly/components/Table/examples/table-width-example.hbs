@@ -2,7 +2,7 @@
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Check all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Check all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
         Repositories
@@ -25,7 +25,7 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-node1">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div id="{{table--id}}-node1">Node 1</div>
@@ -46,7 +46,7 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-node2">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -70,7 +70,7 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-node3">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -94,7 +94,7 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node4">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
