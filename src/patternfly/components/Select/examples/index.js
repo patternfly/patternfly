@@ -5,6 +5,7 @@ import Example from '@siteComponents/Example';
 import SelectSingleExampleRaw from '!raw!./select-single-example.hbs';
 import SelectDisabledExampleRaw from '!raw!./select-disabled-example.hbs';
 import SelectSingleExpandedExampleRaw from '!raw!./select-single-expanded-example.hbs';
+import SelectSingleTopExpandedExampleRaw from '!raw!./select-single-top-expanded-example.hbs';
 import SelectSingleExpandedSelectedExampleRaw from '!raw!./select-single-expanded-selected-example.hbs';
 import SelectSingleTypeaheadExampleRaw from '!raw!./select-single-typeahead-example.hbs';
 import SelectSingleTypeaheadExpandedExampleRaw from '!raw!./select-single-typeahead-expanded-example.hbs';
@@ -22,6 +23,7 @@ import SelectIconExampleRaw from '!raw!./select-icon-example.hbs';
 import SelectSingleExample from './select-single-example.hbs';
 import SelectDisabledExample from './select-disabled-example.hbs';
 import SelectSingleExpandedExample from './select-single-expanded-example.hbs';
+import SelectSingleTopExpandedExample from './select-single-top-expanded-example.hbs';
 import SelectSingleExpandedSelectedExample from './select-single-expanded-selected-example.hbs';
 import SelectSingleTypeaheadExample from './select-single-typeahead-example.hbs';
 import SelectSingleTypeaheadExpandedExample from './select-single-typeahead-expanded-example.hbs';
@@ -42,6 +44,7 @@ import SelectMultiTypeaheadExampleDoc from '../docs/select-multi-typeahead.md';
 import SelectCheckboxExampleDoc from '../docs/select-checkbox.md';
 import SelectPlainExampleDoc from '../docs/select-plain.md';
 import SelectIconExampleDoc from '../docs/select-icon.md';
+import SelectSingleTopExampleDoc from '../docs/select-single-top.md';
 import docs from '../docs/code.md';
 
 export const selectSingleExampleDoc = SelectSingleExampleDoc;
@@ -50,12 +53,14 @@ export const selectMultiTypeaheadExampleDoc = SelectMultiTypeaheadExampleDoc;
 export const selectCheckboxExampleDoc = SelectCheckboxExampleDoc;
 export const selectPlainExampleDoc = SelectPlainExampleDoc;
 export const selectIconExampleDoc = SelectIconExampleDoc;
+export const selectSingleTopExampleDoc = SelectSingleTopExampleDoc;
 export const Docs = docs;
 
 export default props => {
   const selectSingleExample = SelectSingleExample();
   const selectDisabledExample = SelectDisabledExample();
   const selectSingleExpandedExample = SelectSingleExpandedExample();
+  const selectSingleTopExpandedExample = SelectSingleTopExpandedExample();
   const selectSingleExpandedSelectedExample = SelectSingleExpandedSelectedExample();
   const selectSingleTypeaheadExample = SelectSingleTypeaheadExample();
   const selectSingleTypeaheadExpandedExample = SelectSingleTypeaheadExpandedExample();
@@ -82,6 +87,14 @@ export default props => {
       </Example>
       <Example heading="Select - single (expanded)" handlebars={SelectSingleExpandedExampleRaw} minHeight="20em">
         {selectSingleExpandedExample}
+      </Example>
+      <Example
+        className="is-expanded-top"
+        heading="Select - single (top expanded)"
+        docs={selectSingleTopExampleDoc}
+        handlebars={SelectSingleTopExpandedExampleRaw}
+      >
+        {selectSingleTopExpandedExample}
       </Example>
       <Example
         heading="Select - single (expanded and selected)"
