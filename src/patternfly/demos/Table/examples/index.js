@@ -6,11 +6,16 @@ import TableSortableDemoRaw from '!raw!./table-sortable-demo.hbs';
 import TableExpandableDemoRaw from '!raw!./table-expandable-demo.hbs';
 import TableCompactDemoRaw from '!raw!./table-compact-demo.hbs';
 import TableCompoundExpansionDemoRaw from '!raw!./table-compound-expansion-demo.hbs';
+import TableLoadingDemoRaw from '!raw!./table-loading-demo.hbs';
+import TableEmptyStateDemoRaw from '!raw!./table-empty-state-demo.hbs';
+
 import TableSimpleDemo from './table-simple-demo.hbs';
 import TableSortableDemo from './table-sortable-demo.hbs';
 import TableExpandableDemo from './table-expandable-demo.hbs';
 import TableCompactDemo from './table-compact-demo.hbs';
 import TableCompoundExpansionDemo from './table-compound-expansion-demo.hbs';
+import TableLoadingDemo from './table-loading-demo.hbs';
+import TableEmptyStateDemo from './table-empty-state-demo.hbs';
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -21,6 +26,8 @@ export default props => {
   const tableExpandableDemo = TableExpandableDemo();
   const tableCompactDemo = TableCompactDemo();
   const tableCompoundExpansionDemo = TableCompoundExpansionDemo();
+  const tableLoadingDemo = TableLoadingDemo();
+  const tableEmptyStateDemo = TableEmptyStateDemo();
 
   const headingText = 'Table demo';
 
@@ -40,6 +47,12 @@ export default props => {
       </Example>
       <Example heading="Table - compound expansion demo" fullPageOnly="true" handlebars={TableCompoundExpansionDemoRaw}>
         {tableCompoundExpansionDemo}
+      </Example>
+      <Example heading="Table - loading state demo" fullPageOnly="true" handlebars={TableLoadingDemoRaw}>
+        {tableLoadingDemo}
+      </Example>
+      <Example heading="Table - empty state demo" fullPageOnly="true" handlebars={TableEmptyStateDemoRaw}>
+        {tableEmptyStateDemo}
       </Example>
     </Documentation>
   );

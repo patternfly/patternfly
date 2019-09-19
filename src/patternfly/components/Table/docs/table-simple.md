@@ -10,5 +10,6 @@
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 | `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
+| `.pf-m-height-auto` | `<tr>` | Modifies a `<tr>` to have `height: auto`, which undoes the `height` declaration currently on `<tr>` elements. |
+| `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |

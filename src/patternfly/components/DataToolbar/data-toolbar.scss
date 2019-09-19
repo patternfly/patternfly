@@ -4,7 +4,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 // Data toolbar
 .pf-c-data-toolbar {
   --pf-c-data-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-data-toolbar--GridGap: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar--GridGap: var(--pf-global--gutter);
 
   // Expandable content
   --pf-c-data-toolbar__expandable-content--PaddingTop: var(--pf-global--spacer--md);
@@ -192,11 +192,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     }
   }
 
-  // Clear button
-  &.pf-m-clear {
-    justify-self: end;
-  }
-
   // If pagination is sibling of align-right
   &.pf-m-align-right ~ * {
     margin-left: 0;
@@ -245,9 +240,14 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     margin: 0;
   }
 
-  // If item is used within a group, add margin back
-  .pf-c-data-toolbar__group .pf-c-data-toolbar__item {
-    margin-right: var(--pf-c-data-toolbar--spacer);
+  .pf-c-data-toolbar__group {
+    display: grid;
+    grid-row-gap: var(--pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap);
+  }
+
+  .pf-m-label {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -293,10 +293,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
           }
         }
 
-        &.pf-c-data-toolbar__expandable-content .pf-m-clear {
-          justify-self: flex-start;
-        }
-
         &.pf-c-data-toolbar__expandable-content.pf-m-expanded {
           display: flex;
         }
@@ -331,6 +327,13 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
             --pf-c-data-toolbar--spacer: #{$spacer-value};
+          }
+
+          &.pf-c-data-toolbar__expandable-content {
+            .pf-c-data-toolbar__group,
+            .pf-c-data-toolbar__item {
+              margin-right: var(--pf-c-data-toolbar--spacer);
+            }
           }
 
           > :last-child {

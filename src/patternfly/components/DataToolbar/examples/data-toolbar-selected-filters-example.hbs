@@ -49,27 +49,29 @@
     {{!-- Search filter --}}
     {{> data-toolbar-item-search-filter button--id="expanded-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
 
-    {{!-- Filter --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-      {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
-        Status
-      {{/select}}
-    {{/data-toolbar-item}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
 
-    {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+        {{!-- Filter --}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
 
-    {{!-- Filter --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-      {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
-        Risk
-      {{/select}}
-    {{/data-toolbar-item}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
 
-    {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{!-- Filter --}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+            Risk
+          {{/select}}
+        {{/data-toolbar-item}}
+
+        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+
+    {{/data-toolbar-group}}
 
     {{!-- Clear all filters button --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-clear"}}
-      {{#> button button--modifier="pf-m-link"}}Clear all filters{{/button}}
-    {{/data-toolbar-item}}
+    {{> data-toolbar-item-clear}}
   {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}

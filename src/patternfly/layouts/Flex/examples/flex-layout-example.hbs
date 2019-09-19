@@ -1,61 +1,109 @@
 {{#> example-title}}Default layout <code>.pf-l-flex</code>.{{/example-title}}
 {{#> l-flex l-flex--modifier="example-border"}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
 {{/l-flex}}
 
 {{#> example-title}}Inline flex <code>.pf-m-inline-flex</code>.{{/example-title}}
 {{#> l-flex l-flex--modifier="pf-m-inline-flex example-border"}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
 {{/l-flex}}
 
 {{#> example-title}}Adjusting width with <code>.pf-m-grow</code>. In this example, the first group is set to <code>.pf-m-grow</code> and will occupy the remaining available space.{{/example-title}}
 {{#> l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-grow example-border" l-flex--attribute='data-label=".pf-m-grow"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-grow"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}
 
 {{#> example-title}}Adjusting width with <code>.pf-m-flex-1</code>. In this example, all groups are set to <code>.pf-m-flex-1</code>. They will share available space equally.{{/example-title}}
 {{#> l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}
 
 {{#> example-title}}Specifying column widths with <code>.pf-m-flex-{1,2,3}</code>.{{/example-title}}
 {{#> l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-flex-2 example-border" l-flex--attribute='data-label=".pf-m-flex-2"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-2"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-flex-3 example-border" l-flex--attribute='data-label=".pf-m-flex-3"'}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-3"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}

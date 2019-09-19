@@ -1,44 +1,68 @@
-{{#> example-title}}Switching between flex-direction column and row at breakpoints (-on-lg).{{/example-title}}
+{{#> example-title}}Switching between flex-direction column and row at breakpoints (<code>-on-lg</code>).{{/example-title}}
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
-  {{#> l-flex newcontext l-flex--modifier="example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex newcontext}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 
-  {{#> l-flex newcontext l-flex--modifier="example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex newcontext}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}
 
-{{#> example-title}}Switching between flex-direction column and row at breakpoints (-on-lg). If content is likely to wrap, modifiers will need to be used to control width. The example below wraps because the flex item expands in response to long paragraph text.{{/example-title}}
+{{#> example-title}}Switching between flex-direction column and row at breakpoints (<code>-on-lg</code>). If content is likely to wrap, modifiers will need to be used to control width. The example below wraps because the flex item expands in response to long paragraph text.{{/example-title}}
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
-  {{#> l-flex newcontext l-flex--modifier="example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}
+  {{#> l-flex newcontext}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
       <b>Because this text is long enough to wrap, this item's width will force the adjacent item to wrap.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi modi temporibus, alias qui obcaecati ullam dolor nam, nulla magni iste rem praesentium numquam provident amet ut nesciunt harum accusamus.
-    {{/example-text}}
+    {{/l-flex-item}}
   {{/l-flex}}
 
-  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}
 
-{{#> example-title}}Switching between flex-direction column and row at breakpoints (-on-lg). To control the width of the flex item, set <code>.pf-m-flex-1</code> on the flex group containing the long paragraph text.{{/example-title}}
+{{#> example-title}}Switching between flex-direction column and row at breakpoints (<code>-on-lg</code>). To control the width of the flex item, set <code>.pf-m-flex-1</code> on the flex group containing the long paragraph text.{{/example-title}}
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
-  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1 pf-m-align-items-flex-start example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="pf-m-flex-1 example-border"}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi modi temporibus, alias qui obcaecati ullam dolor nam, nulla magni iste rem praesentium numquam provident amet ut nesciunt harum accusamus.
-    {{/example-text}}
+    {{/l-flex-item}}
   {{/l-flex}}
 
-  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
-    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}
