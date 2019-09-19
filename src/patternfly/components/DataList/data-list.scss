@@ -3,8 +3,8 @@
   --pf-c-data-list--BorderTopColor: var(--pf-global--BorderColor--100);
   --pf-c-data-list--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list--sm--BorderTopWidth: var(--pf-global--spacer--sm);
-  --pf-c-data-list--BorderBottomColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list--BorderBottomColor: var(--pf-global--BorderColor--100); // Remove at breaking change
+  --pf-c-data-list--BorderBottomWidth: var(--pf-global--BorderWidth--sm); // Remove at breaking change
 
   @media screen and (max-width: $pf-global--breakpoint--sm) {
     --pf-c-data-list--BorderTopColor: var(--pf-c-data-list__item-item--sm--BorderTopColor);
@@ -13,10 +13,10 @@
 
   // Item
   --pf-c-data-list__item--m-expanded--before--BackgroundColor: var(--pf-global--active-color--100);
-  --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-data-list__item-item--sm--BorderTopWidth: #{pf-size-prem(8px)};
-  --pf-c-data-list__item-item--sm--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--BorderColor--100); // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm); // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item-item--sm--BorderTopWidth: #{pf-size-prem(8px)}; // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item-item--sm--BorderTopColor: var(--pf-global--BorderColor--300); // at breaking change switch var to BorderBottom
 
   // List item border left
   --pf-c-data-list__item--before--BackgroundColor: transparent;
@@ -115,7 +115,6 @@
   list-style-type: disc;
   background-color: var(--pf-c-data-list--BackgroundColor);
   border-top: var(--pf-c-data-list--BorderTopWidth) solid var(--pf-c-data-list--BorderTopColor);
-  border-bottom: var(--pf-c-data-list--BorderBottomWidth) solid var(--pf-c-data-list--BorderBottomColor);
 
   // updating
   .pf-c-data-list__item:last-child.pf-m-expanded & {
@@ -143,8 +142,8 @@
   }
 
   // add border top to subsequent li's
-  &:not(.pf-m-expanded) + & {
-    border-top: var(--pf-c-data-list__item-item--BorderTopWidth) solid var(--pf-c-data-list__item-item--BorderTopColor);
+  &:not(.pf-m-expanded) {
+    border-bottom: var(--pf-c-data-list__item-item--BorderTopWidth) solid var(--pf-c-data-list__item-item--BorderTopColor);
 
     @media screen and (max-width: $pf-global--breakpoint--sm) {
       --pf-c-data-list__item-item--BorderTopWidth: var(--pf-c-data-list__item-item--sm--BorderTopWidth);
