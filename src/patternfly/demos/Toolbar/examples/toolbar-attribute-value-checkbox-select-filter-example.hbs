@@ -1,8 +1,10 @@
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-checkbox-select-filter-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
+      {{> data-toolbar-toggle}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item}}
-        {{#> select id="select-1" select-toggle--icon="fas fa-filter"}}
+        {{#> select id="select-two" select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
@@ -11,50 +13,59 @@
           Filter by status
         {{/select}}
       {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
     {{/data-toolbar-group}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-primary"}}
-          Action
-        {{/button}}
+    {{#> overflow-menu overflow-menu--modifier="pf-m-show-on-xl" overflow-menu--id="overflow-menu-simple-example" overflow-menu-button--aria-label="Generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+        {{#> data-toolbar-item}}
+          {{#> button button--modifier="pf-m-primary"}}
+            Action
+          {{/button}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> button button--modifier="pf-m-link"}}
+            Action
+          {{/button}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+            <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+          {{/button}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{/overflow-menu-item}}
+      {{/overflow-menu-content}}
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item}}
+      Action
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+
+      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+        {{#> pagination pagination--modifier="pf-m-compact"}}
+          {{#> pagination-total-items}}
+            <b>1 - 10</b> of <b>37</b>
+          {{/pagination-total-items}}
+          {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example"  options-menu--IsText="true"}}
+          {{#> pagination-nav}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+              <i class="fas fa-angle-left" aria-hidden="true"></i>
+            {{/button}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+              <i class="fas fa-angle-right" aria-hidden="true"></i>
+            {{/button}}
+          {{/pagination-nav}}
+        {{/pagination}}
       {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-link"}}
-          Action
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
-          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-      {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
-        {{#> pagination-total-items}}
-          37 items
-        {{/pagination-total-items}}
-        {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
-        {{#> pagination-nav}}
-          {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
-            <i class="fas fa-angle-double-left" aria-hidden="true"></i>
-          {{/button}}
-          {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
-            <i class="fas fa-angle-left" aria-hidden="true"></i>
-          {{/button}}
-          {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
-            {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
-            <span aria-hidden="true">of 4</span>
-          {{/pagination-nav-page-select}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-            <i class="fas fa-angle-right" aria-hidden="true"></i>
-          {{/button}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
-            <i class="fas fa-angle-double-right" aria-hidden="true"></i>
-          {{/button}}
-        {{/pagination-nav}}
-      {{/pagination}}
-    {{/data-toolbar-item}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
