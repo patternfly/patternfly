@@ -1,6 +1,6 @@
 Not Expanded Toolbar
 <br>
-{{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-example"}}
+{{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-elements-example"}}
   {{#> data-toolbar-content}}
     {{!-- Bulk select --}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
@@ -46,7 +46,7 @@ Not Expanded Toolbar
 <br>
 Expanded Toolbar
 <br>
-{{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-example"}}
+{{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
   {{#> data-toolbar-content}}
     {{!-- Bulk select --}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
@@ -63,12 +63,12 @@ Expanded Toolbar
       {{!-- Filter group --}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
             Status
           {{/select}}
         {{/data-toolbar-item}}
         {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
             Risk
           {{/select}}
         {{/data-toolbar-item}}
