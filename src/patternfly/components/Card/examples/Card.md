@@ -13,7 +13,6 @@ import FillExampleRaw from '!!raw-loader!./card-no-fill-example.hbs';
 import CompactExampleRaw from '!!raw-loader!./card-compact-example.hbs';
 import HoverExampleRaw from '!!raw-loader!./card-hover-example.hbs';
 import ImgActionRaw from '!!raw-loader!./card-img-action.hbs';
-import  from '../docs/code.md';
 import BasicExample from './card-basic-example.hbs';
 import NoFooterExample from './card-no-footer-example.hbs';
 import NoHeaderExample from './card-no-header-example.hbs';
@@ -26,32 +25,32 @@ import ImgActionExample from './card-img-action.hbs';
 
 <Example 
   title="Card" 
-  handlebars={BasicExampleRaw}>
+  handlebars={BasicExampleRaw}
   html={BasicExample()} />
 
 <Example 
   title="Card with image and action" 
-  handlebars={ImgActionRaw}>
-  html={ImgActionExample()}  />
+  handlebars={ImgActionRaw}
+  html={ImgActionExample()} />
 
 <Example 
   title="Card with no footer" 
-  handlebars={NoFooterExampleRaw}>
+  handlebars={NoFooterExampleRaw}
   html={NoFooterExample()} />
 
 <Example 
   title="Card with no header" 
-  handlebars={NoHeaderExampleRaw}>
+  handlebars={NoHeaderExampleRaw}
   html={NoHeaderExample()} />
 
 <Example 
   title="Card with only a content section" 
-  handlebars={ContentOnlyExampleRaw}>
+  handlebars={ContentOnlyExampleRaw}
   html={ContentOnlyExample()} />
 
 <Example 
   title="Card with multiple body sections" 
-  handlebars={MultipleBodyExampleRaw}>
+  handlebars={MultipleBodyExampleRaw}
   html={MultipleBodyExample()} />
 
 <Example
@@ -63,12 +62,12 @@ import ImgActionExample from './card-img-action.hbs';
 
 <Example 
   title="Card compact example" 
-  handlebars={CompactExampleRaw}>
+  handlebars={CompactExampleRaw}
   html={CompactExample()} />
 
 <Example 
   title="Card hover example" 
-  handlebars={HoverExampleRaw}>
+  handlebars={HoverExampleRaw}
   html={HoverExample()} />
 
 ## Overview

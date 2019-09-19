@@ -8,8 +8,8 @@ import Template from './content-template-example.hbs';
 
 <Example 
   title="Content example" 
-  handlebars={TemplateRaw}>
-  html={Template()} />
+  handlebars={TemplateRaw}
+  html={Template()}/>
 
 ## Overview
 

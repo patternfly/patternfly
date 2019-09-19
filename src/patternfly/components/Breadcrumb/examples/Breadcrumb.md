@@ -9,16 +9,15 @@ import WithoutHomeLinkRaw from '!!raw-loader!./breadcrumb-without-home-link-exam
 import Example from './breadcrumb-example.hbs';
 import WithTitleExample from './breadcrumb-with-title-example.hbs';
 import WithoutHomeLink from './breadcrumb-without-home-link-example.hbs';
-import WithTitleExampleDoc from '../docs/breadcrumb-with-title.md';
 
 <Example 
   title="Breadcrumb" 
-  handlebars={ExampleRaw}>
+  handlebars={ExampleRaw}
   html={Example()} />
 
 <Example 
   title="Breadcrumb without home link" 
-  handlebars={WithoutHomeLinkRaw}>
+  handlebars={WithoutHomeLinkRaw}
   html={WithoutHomeLink()} />
 
 <Example

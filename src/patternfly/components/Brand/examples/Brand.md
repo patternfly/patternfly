@@ -8,7 +8,7 @@ import SimpleExample from './brand-simple-example.hbs';
 
 <Example 
   heading="Brand simple" 
-  handlebars={SimpleExampleRaw}>
+  handlebars={SimpleExampleRaw}
   html={SimpleExample()} />
 
 ## Overview

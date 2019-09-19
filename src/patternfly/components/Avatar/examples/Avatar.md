@@ -9,7 +9,7 @@ import SimpleExample from './avatar-simple-example.hbs';
 
 <Example 
   title="Avatar simple" 
-  handlebars={SimpleExampleRaw}>
+  handlebars={SimpleExampleRaw}
   html={SimpleExample()} />
 
 ## Overview

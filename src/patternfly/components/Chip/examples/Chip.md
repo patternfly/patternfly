@@ -10,7 +10,7 @@ import Example from './chip-example.hbs';
 <Example 
   heading="Chip" 
   handlebars={ExampleRaw} 
-  className="is-light-preview">
+  className="is-light-preview"
   html={Example()} />
 
 ## Overview

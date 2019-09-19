@@ -10,7 +10,7 @@ import Example from './backdrop-example.hbs';
 <Example 
   title="Backdrop example" 
   fullPageOnly
-  handlebars={BackdropExampleRaw}>
+  handlebars={BackdropExampleRaw}
   html={Example()} />
 
 ## Overview

@@ -10,12 +10,12 @@ import UnreadExample from './badge-unread-example.hbs';
 
 <Example 
   title="Read badge" 
-  handlebars={ReadExampleRaw}>
+  handlebars={ReadExampleRaw}
   html={ReadExample()} />
 
 <Example 
   title="Unread badge" 
-  handlebars={BadgeUnreadExampleRaw}>
+  handlebars={BadgeUnreadExampleRaw}
   html={UnreadExample()} />
 
 ## Overview

@@ -57,7 +57,7 @@ import StackedExample from './data-toolbar-stacked-example.hbs';
 
 <Example 
   title="Data toolbar stacked" 
-  handlebars={StackedExampleRaw}>
+  handlebars={StackedExampleRaw}
   html={StackedExample()} />
 
 ## Overview

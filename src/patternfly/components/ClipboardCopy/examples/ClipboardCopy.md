@@ -10,13 +10,13 @@ import ExpansionExample from './clipboard-copy-expansion-example.hbs';
       
 <Example 
   title="Copy to clipboard no expansion" 
-  handlebars={ClipboardCopyNoExpansionExampleRaw}>
+  handlebars={ClipboardCopyNoExpansionExampleRaw}
   html={NoExpansionExample()} />
 
 <Example 
   title="Copy to clipboard expansion" 
   handlebars={ExpansionExampleRaw} 
-  minHeight="20em">
+  minHeight="20em"
   html={ExpansionExample()} />
 
 ## Overview

@@ -17,27 +17,27 @@ import LinkExample from './button-link-example.hbs';
 
 <Example 
   title="Button variations" 
-  handlebars={VariationTemplateRaw}>
+  handlebars={VariationTemplateRaw}
   html={VariationTemplate()} />
 
 <Example 
   title="Button states" 
-  handlebars={StatesTemplateRaw}>
+  handlebars={StatesTemplateRaw}
   html={StatesTemplate()} />
 
 <Example 
   title="Links as buttons" 
-  handlebars={LinkExampleRaw}>
+  handlebars={LinkExampleRaw}
   html={LinkExample()} />
 
 <Example 
   title="Button (block level)" 
-  handlebars={BlockTemplateRaw}>
+  handlebars={BlockTemplateRaw}
   html={BlockTemplate()} />
 
 <Example 
   title="Button types" 
-  handlebars={TypesTemplateRaw}>
+  handlebars={TypesTemplateRaw}
   html={TypesTemplate()} />
 
 # Buttons

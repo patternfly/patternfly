@@ -8,8 +8,8 @@ import ExampleRaw from '!!raw-loader!./check-example.hbs';
 import Example from './check-example.hbs';
 
 <Example 
-  title="Check example" 
-  handlebars={ExampleRaw}>
+  title="Check example"
+  handlebars={ExampleRaw}
   html={Example()} />
 
 ## Overview

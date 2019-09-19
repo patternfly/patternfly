@@ -9,7 +9,7 @@ import Example from './context-selector-example.hbs';
 <Example 
   title="Context selector example" 
   handlebars={ExampleRaw} 
-  minHeight="20em">
+  minHeight="20em"
   html={example()} />
 
 ## Accessibility

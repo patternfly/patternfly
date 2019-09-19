@@ -9,7 +9,7 @@ import BackgroundImage from './background-image-example.hbs';
 <Example 
   title="Background image example" 
   fullPageOnly
-  handlebars={BackgroundImageRaw}>
+  handlebars={BackgroundImageRaw}
   html={backgroundImage()} />
 
 ## Overview
