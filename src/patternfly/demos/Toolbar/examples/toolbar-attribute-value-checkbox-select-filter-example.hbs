@@ -1,0 +1,96 @@
+{{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-single-select-filter-example"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item}}
+        {{#> select id="select-icon" select-toggle--icon="fas fa-filter"}}
+          Status
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> select id="select-checkbox" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
+          Filter by status
+        {{/select}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Action
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-link"}}
+          Action
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+      {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+        {{#> pagination-total-items}}
+          37 items
+        {{/pagination-total-items}}
+        {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
+        {{#> pagination-nav}}
+          {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+            <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+            <i class="fas fa-angle-left" aria-hidden="true"></i>
+          {{/button}}
+          {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+            {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+            <span aria-hidden="true">of 4</span>
+          {{/pagination-nav-page-select}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+            <i class="fas fa-angle-right" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+            <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+          {{/button}}
+        {{/pagination-nav}}
+      {{/pagination}}
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
+      {{#> chip-group chip-group--modifier="pf-m-toolbar"}}
+        {{#> chip-group-list-item}}
+          {{#> chip-group-label}}
+            Status
+          {{/chip-group-label}}
+          {{#> chip-group chip-group--modifier=""}}
+            {{#> chip}}
+              {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
+                Cancelled
+              {{/chip-text}}
+              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
+                <i class="fas fa-times-circle" aria-hidden="true"></i>
+              {{/button}}
+            {{/chip}}
+            {{#> chip}}
+              {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
+                Paused
+              {{/chip-text}}
+              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
+                <i class="fas fa-times-circle" aria-hidden="true"></i>
+              {{/button}}
+            {{/chip}}
+            {{#> chip}}
+              {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
+                Restarted
+              {{/chip-text}}
+              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three')}}
+                <i class="fas fa-times-circle" aria-hidden="true"></i>
+              {{/button}}
+            {{/chip}}
+          {{/chip-group}}
+        {{/chip-group-list-item}}
+      {{/chip-group}}
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}

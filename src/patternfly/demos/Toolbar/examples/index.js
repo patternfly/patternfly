@@ -26,11 +26,13 @@ export default props => {
       <Example
         heading="Toolbar attribute-value single select filter"
         handlebars={ToolbarAttributeValueSingleSelectFilterExampleRaw}
+        minHeight="20em"
       >
         {toolbarAttributeValueSingleSelectFilterExample}
       </Example>
       <Example
         heading="Toolbar attribute-value checkbox select filter"
+        minHeight="20em"
         handlebars={ToolbarAttributeValueCheckboxSelectFilterExampleRaw}
       >
         {toolbarAttributeValueCheckboxSelectFilterExample}

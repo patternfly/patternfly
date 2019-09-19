@@ -1,4 +1,4 @@
-{{#> data-toolbar data-toolbar--id="data-toolbar-simple-example"}}
+{{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item}}
@@ -16,8 +16,6 @@
         {{/input-group}}
       {{/data-toolbar-item}}
     {{/data-toolbar-group}}
-
-
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
       {{#> data-toolbar-item}}
         {{#> button button--modifier="pf-m-primary"}}
@@ -25,18 +23,16 @@
         {{/button}}
       {{/data-toolbar-item}}
       {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--modifier="pf-m-link"}}
           Action
         {{/button}}
       {{/data-toolbar-item}}
-
       {{#> data-toolbar-item}}
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
         {{/button}}
       {{/data-toolbar-item}}
     {{/data-toolbar-group}}
-  
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
       {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
         {{#> pagination-total-items}}
@@ -63,9 +59,6 @@
         {{/pagination-nav}}
       {{/pagination}}
     {{/data-toolbar-item}}
-
-
- 
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 
