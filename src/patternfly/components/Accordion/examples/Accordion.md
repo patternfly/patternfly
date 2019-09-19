@@ -3,28 +3,141 @@ title: Accordion
 section: components
 cssPrefix: pf-c-accordion
 ---
-import Fluid from './accordion-fluid-example.hbs';
-import FluidRaw from '!!raw-loader!./accordion-fluid-example.hbs';
-import Fixed from './accordion-fixed-example.hbs';
-import FixedRaw from '!!raw-loader!./accordion-fixed-example.hbs';
-import DefinitionList from './accordion-definition-list-example.hbs';
-import DefinitionListRaw from '!!raw-loader!./accordion-definition-list-example.hbs';
 
 ## Examples
-<Example
-  title="Accordion fluid example"
-  html={Fluid()}
-  handlebars={FluidRaw} />
+```hbs title="Accordion-fluid-example"
+{{#> accordion}}
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
 
-<Example
-  title="Accordion fixed example"
-  html={Fixed()}
-  handlebars={FixedRaw} />
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
 
-<Example
-  title="Accordion definition list example"
-  html={DefinitionList()}
-  handlebars={DefinitionListRaw} />
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
+    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+{{/accordion}}
+```
+
+```hbs title="Accordion-fixed-example"
+{{#> accordion}}
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
+    {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true" accordion-expanded-content--IsFixed="true"}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+{{/accordion}}
+```
+
+```hbs title="Accordion-definition-list-example"
+{{#> accordion accordion--IsDefinitionList="true"}}
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
+    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+{{/accordion}}
+```
 
 ## Documentation
 ### Overview

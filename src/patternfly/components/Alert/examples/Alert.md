@@ -3,23 +3,213 @@ title: Alert
 section: components
 cssPrefix: pf-c-alert
 ---
-import TypesRaw from '!!raw-loader!./alert-types-example.hbs';
-import VariationsRaw from '!!raw-loader!./alert-variations-example.hbs';
-import InlineRaw from '!!raw-loader!./alert-inline-example.hbs';
-import InlineVariationsRaw from '!!raw-loader!./alert-inline-variations-example.hbs';
-import Types from './alert-types-example.hbs';
-import Variations from './alert-variations-example.hbs';
-import Inline from './alert-inline-example.hbs';
-import InlineVariations from './alert-inline-variations-example.hbs';
 
-<Example title="Alert types" handlebars={TypesRaw} html={Types()} />
+```hbs title="Alert-types"
+{{#> alert alert--attribute='aria-label="Default alert"'}}
+  {{#> alert-icon alert-icon--type="bell"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Default alert:{{/screen-reader}}
+    Default alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
+  {{#> alert-icon alert-icon--type="info-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Info alert:{{/screen-reader}}
+    Info alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
+  {{#> alert-icon alert-icon--type="exclamation-triangle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Warning alert:{{/screen-reader}}
+    Warning alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
+  {{#> alert-icon alert-icon--type="exclamation-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Danger alert:{{/screen-reader}}
+    Danger alert title
+  {{/alert-title}}
+{{/alert}}
+```
 
-<Example title="Alert variations" handlebars={VariationsRaw} html={Variations()} />
+```hbs title="Alert-variations"
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
+  {{/alert-title}}
+  {{#> alert-description}}
+    Success alert description. <a href="#">This is a link.</a>
+  {{/alert-description}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action button
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+{{/alert}}
+```
 
-<Example title="Inline alert types" handlebars={InlineRaw} html={Inline()} />
+```hbs title="Inline-alert-types"
 
-<Example title="Inline alert variations" handlebars={InlineVariationsRaw} html={AlertInlineVariations()} />
+{{#> alert alert--attribute='aria-label="Default alert"'}}
+  {{#> alert-icon alert-icon--type="bell"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Default alert:{{/screen-reader}}
+    Default alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
+  {{#> alert-icon alert-icon--type="info-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Info alert:{{/screen-reader}}
+    Info alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
+  {{#> alert-icon alert-icon--type="exclamation-triangle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Warning alert:{{/screen-reader}}
+    Warning alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
+  {{#> alert-icon alert-icon--type="exclamation-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Danger alert:{{/screen-reader}}
+    Danger alert title
+  {{/alert-title}}
+{{/alert}}
+```
 
+```hbs title="Inline-alert-variations"
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
+  {{/alert-title}}
+  {{#> alert-description}}
+    Success alert description. <a href="#">This is a link.</a>
+  {{/alert-description}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action button
+    {{/button}}
+  {{/alert-action}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+{{/alert}}
+```
 ## Overview
 
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.

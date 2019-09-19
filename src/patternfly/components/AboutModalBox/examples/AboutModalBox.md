@@ -3,17 +3,36 @@ title: About Modal Box
 section: components
 cssPrefix: pf-c-about-modal-box
 ---
-import AboutModalExample from './about-modal-box-example.hbs';
-import AboutModalExampleRaw from '!!raw-loader!./about-modal-box-example.hbs';
-
 ## Overview
 
-About modal layout.
-
-<Example
-  id="about-modal-example"
-  html={AboutModalExample()}
-  handlebars={AboutModalExampleRaw} />
+```hbs title=About-modal-layout isFullscreen=true
+{{#> about-modal-box about-modal-box--attribute='aria-labelledby="about-modal-title"'}}
+  {{#> about-modal-box-brand}}
+    {{#> about-modal-box-brand-image about-modal-box-brand-image--attribute='src="/assets/images/pf_mini_logo_white.svg" alt="PatternFly brand logo"'}}
+    {{/about-modal-box-brand-image}}
+  {{/about-modal-box-brand}}
+  {{#> about-modal-box-close}}
+    {{#> button button--attribute='aria-label="Close dialog"' button--modifier="pf-m-plain"}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/about-modal-box-close}}
+  {{#> about-modal-box-header}}
+    {{#> title titleType="h1" title--modifier="pf-m-4xl" title--attribute='id="about-modal-title"'}}
+      Product name
+    {{/title}}
+  {{/about-modal-box-header}}
+  {{#> about-modal-box-hero}}
+  {{/about-modal-box-hero}}
+  {{#> about-modal-box-content}}
+    {{#> about-modal-box-body}}
+      content
+    {{/about-modal-box-body}}
+    {{#> about-modal-box-strapline}}
+      Trademark and copyright information here
+    {{/about-modal-box-strapline}}
+  {{/about-modal-box-content}}
+{{/about-modal-box}}
+```
 
 ## Accessibility
 
