@@ -91,6 +91,23 @@
   --pf-c-button--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-button--m-plain--disabled--BackgroundColor: transparent;
 
+  // Input Button
+  --pf-c-button--m-control--after--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-button--m-control--after--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-control--after--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-control--after--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-button--m-control--after--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-control--hover--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-control--hover--after--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-control--active--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-control--active--after--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-control--focus--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-control--focus--after--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-control--m-expanded--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-button--m-control--m-expanded--after--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-control--disabled--BackgroundColor: transparent;
+
   // Styles for an icon in button
   --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
 
@@ -118,7 +135,8 @@
     bottom: 0;
     left: 0;
     content: "";
-    border: var(--pf-c-button--BorderWidth) solid var(--pf-c-button--BorderColor);
+    border: var(--pf-c-button--BorderWidth) solid;
+    border-color: var(--pf-c-button--BorderColor);
     border-radius: var(--pf-c-button--BorderRadius);
   }
 
@@ -312,6 +330,59 @@
         --pf-c-button--m-link--Color: var(--pf-c-button--m-link--m-inline--hover--Color);
 
         text-decoration: var(--pf-c-button--m-link--m-inline--hover--TextDecoration);
+      }
+    }
+  }
+
+  &.pf-m-control {
+    &::after {
+      --pf-c-button--BorderWidth: var(--pf-c-button--m-control--after--BorderWidth);
+      --pf-c-button--BorderColor: var(--pf-c-button--m-control--after--BorderTopColor) var(--pf-c-button--m-control--after--BorderRightColor) var(--pf-c-button--m-control--after--BorderBottomColor) var(--pf-c-button--m-control--after--BorderLeftColor);
+
+      border-radius: initial;
+    }
+
+    &:hover,
+    &.pf-m-hover {
+      &::after {
+        --pf-c-button--m-control--after--BorderBottomColor: var(--pf-c-button--m-control--hover--after--BorderBottomColor);
+
+        border-bottom-width: var(--pf-c-button--m-control--hover--after--BorderBottomWidth);
+      }
+    }
+
+    &:active,
+    &.pf-m-active {
+      &::after {
+        --pf-c-button--m-control--after--BorderBottomColor: var(--pf-c-button--m-control--active--after--BorderBottomColor);
+
+        border-bottom-width: var(--pf-c-button--m-control--active--after--BorderBottomWidth);
+      }
+    }
+
+    &:focus,
+    &.pf-m-focus {
+      &::after {
+        --pf-c-button--m-control--after--BorderBottomColor: var(--pf-c-button--m-control--focus--after--BorderBottomColor);
+
+        border-bottom-width: var(--pf-c-button--m-control--focus--after--BorderBottomWidth);
+      }
+    }
+
+    &.pf-m-expanded {
+      &::after {
+        --pf-c-button--m-control--after--BorderBottomColor: var(--pf-c-button--m-control--m-expanded--after--BorderBottomColor);
+
+        border-bottom-width: var(--pf-c-button--m-control--m-expanded--after--BorderBottomWidth);
+      }
+    }
+
+    &:disabled,
+    &.pf-m-disabled {
+      background-color: var(--pf-c-button--m-control--disabled--BackgroundColor);
+
+      &::after {
+        --pf-c-button--m-control--after--BorderBottomColor: var(--pf-c-button--m-control--disabled--after--BorderBottomColor);
       }
     }
   }
