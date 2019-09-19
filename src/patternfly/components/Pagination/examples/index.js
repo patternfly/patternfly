@@ -5,10 +5,14 @@ import paginationTopExampleRaw from '!raw!./pagination-top-example.hbs';
 import paginationTopExpandedExampleRaw from '!raw!./pagination-top-expanded-example.hbs';
 import paginationBottomExampleRaw from '!raw!./pagination-bottom-example.hbs';
 import paginationTopDisabledExampleRaw from '!raw!./pagination-top-disabled-example.hbs';
+import paginationCompactExampleRaw from '!raw!./pagination-compact-example.hbs';
+
 import PaginationTopExample from './pagination-top-example.hbs';
 import PaginationTopExpandedExample from './pagination-top-expanded-example.hbs';
 import PaginationBottomExample from './pagination-bottom-example.hbs';
 import PaginationTopDisabledExample from './pagination-top-disabled-example.hbs';
+import PaginationCompactExample from './pagination-compact-example.hbs';
+
 import paginationTopExampleDoc from '../docs/pagination-top-example.md';
 import paginationBottomExampleDoc from '../docs/pagination-bottom-example.md';
 import docs from '../docs/code.md';
@@ -20,6 +24,7 @@ export default props => {
   const paginationTopExpandedExample = PaginationTopExpandedExample();
   const paginationBottomExample = PaginationBottomExample();
   const paginationTopDisabledExample = PaginationTopDisabledExample();
+  const paginationCompactExample = PaginationCompactExample();
   const headingText = 'Pagination';
   const variablesRoot = 'pf-c-pagination';
 
@@ -46,6 +51,9 @@ export default props => {
       </Example>
       <Example heading="Pagination top disabled" handlebars={paginationTopDisabledExampleRaw} fullPageOnly="true">
         {paginationTopDisabledExample}
+      </Example>
+      <Example heading="Pagination compact" handlebars={paginationCompactExampleRaw} fullPageOnly="true">
+        {paginationCompactExample}
       </Example>
     </Documentation>
   );

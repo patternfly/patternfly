@@ -8,6 +8,7 @@ import TableCompactDemoRaw from '!raw!./table-compact-demo.hbs';
 import TableCompoundExpansionDemoRaw from '!raw!./table-compound-expansion-demo.hbs';
 import TableLoadingDemoRaw from '!raw!./table-loading-demo.hbs';
 import TableEmptyStateDemoRaw from '!raw!./table-empty-state-demo.hbs';
+import TableSimpleCompactPaginationDemoRaw from '!raw!./table-simple-compact-pagination-demo.hbs';
 
 import TableSimpleDemo from './table-simple-demo.hbs';
 import TableSortableDemo from './table-sortable-demo.hbs';
@@ -16,6 +17,7 @@ import TableCompactDemo from './table-compact-demo.hbs';
 import TableCompoundExpansionDemo from './table-compound-expansion-demo.hbs';
 import TableLoadingDemo from './table-loading-demo.hbs';
 import TableEmptyStateDemo from './table-empty-state-demo.hbs';
+import TableSimpleCompactPaginationDemo from './table-simple-compact-pagination-demo.hbs';
 import docs from '../docs/code.md';
 
 export const Docs = docs;
@@ -28,6 +30,7 @@ export default props => {
   const tableCompoundExpansionDemo = TableCompoundExpansionDemo();
   const tableLoadingDemo = TableLoadingDemo();
   const tableEmptyStateDemo = TableEmptyStateDemo();
+  const tableSimpleCompactPaginationDemo = TableSimpleCompactPaginationDemo();
 
   const headingText = 'Table demo';
 
@@ -53,6 +56,13 @@ export default props => {
       </Example>
       <Example heading="Table - empty state demo" fullPageOnly="true" handlebars={TableEmptyStateDemoRaw}>
         {tableEmptyStateDemo}
+      </Example>
+      <Example
+        heading="Table - simple with compact pagination demo"
+        fullPageOnly="true"
+        handlebars={TableSimpleCompactPaginationDemoRaw}
+      >
+        {tableSimpleCompactPaginationDemo}
       </Example>
     </Documentation>
   );
