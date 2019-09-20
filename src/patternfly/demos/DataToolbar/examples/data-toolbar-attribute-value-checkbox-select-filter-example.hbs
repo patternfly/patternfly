@@ -3,59 +3,58 @@
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
       {{> data-toolbar-toggle}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item}}
-        {{#> select id="select-two" select-toggle--icon="fas fa-filter"}}
-          Status
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> select id="select-checkbox-1" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
-          Filter by status
-        {{/select}}
-      {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select select--attribute=(concat 'id="' data-toolbar--id '-select-status"') select-toggle--icon="fas fa-filter"}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select select--attribute=(concat 'id="' data-toolbar--id '-select-filter-status"') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
+            Filter by status
+          {{/select}}
+        {{/data-toolbar-item}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu--modifier="pf-m-show-on-xl" overflow-menu--id="overflow-menu-simple-example" overflow-menu-button--aria-label="Generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
-  {{#> overflow-menu-content}}
-    {{#> overflow-menu-item}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-        {{#> data-toolbar-item}}
-          {{#> button button--modifier="pf-m-primary"}}
-            Action
-          {{/button}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> button button--modifier="pf-m-link"}}
-            Action
-          {{/button}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
-            <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-          {{/button}}
-        {{/data-toolbar-item}}
-      {{/data-toolbar-group}}
-      {{/overflow-menu-item}}
+    {{#> overflow-menu overflow-menu--attribute=(concat 'id="' data-toolbar--id '-overflow-menu" aria-label="Generic options" aria-expanded="true"') overflow-menu--modifier="pf-m-show-on-xl"}}
+      {{#> overflow-menu-content}}
+        {{#> overflow-menu-item}}
+          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+            {{#> data-toolbar-item}}
+              {{#> button button--modifier="pf-m-primary"}}
+                Action
+              {{/button}}
+            {{/data-toolbar-item}}
+            {{#> data-toolbar-item}}
+              {{#> button button--modifier="pf-m-link"}}
+                Action
+              {{/button}}
+            {{/data-toolbar-item}}
+            {{#> data-toolbar-item}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+              {{/button}}
+            {{/data-toolbar-item}}
+          {{/data-toolbar-group}}
+        {{/overflow-menu-item}}
       {{/overflow-menu-content}}
-  {{#> overflow-menu-control}}
-    {{#> overflow-menu-dropdown-item}}
-      Action
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Item 1
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-      Item 2
-    {{/overflow-menu-dropdown-item}}
-  {{/overflow-menu-control}}
-{{/overflow-menu}}
-
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example"  options-menu--IsText="true"}}
+      {{#> overflow-menu-control}}
+        {{#> overflow-menu-dropdown-item}}
+          Action
+        {{/overflow-menu-dropdown-item}}
+        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+          Item 1
+        {{/overflow-menu-dropdown-item}}
+        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+          Item 2
+        {{/overflow-menu-dropdown-item}}
+      {{/overflow-menu-control}}
+    {{/overflow-menu}}
+    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+      {{#> pagination pagination--modifier="pf-m-compact"}}
+        {{#> pagination-total-items}}
+          <b>1 - 10</b> of <b>37</b>
+        {{/pagination-total-items}}
+        {{> pagination-options-menu options-menu--IsText="true"}}
           {{#> pagination-nav}}
             {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
               <i class="fas fa-angle-left" aria-hidden="true"></i>
@@ -66,15 +65,15 @@
           {{/pagination-nav}}
         {{/pagination}}
       {{/data-toolbar-item}}
-  {{/data-toolbar-content}}
+    {{/data-toolbar-content}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
-      {{#> chip-group chip-group--modifier="pf-m-toolbar"}}
+      {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
         {{#> chip-group-list-item}}
           {{#> chip-group-label}}
             Status
           {{/chip-group-label}}
-          {{#> chip-group chip-group--modifier=""}}
+          {{#> chip-group newcontext}}
             {{#> chip}}
               {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
                 Cancelled
