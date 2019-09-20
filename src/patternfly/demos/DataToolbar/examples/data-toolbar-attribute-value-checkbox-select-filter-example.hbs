@@ -37,7 +37,7 @@
           {{/data-toolbar-group}}
         {{/overflow-menu-item}}
       {{/overflow-menu-content}}
-      {{#> overflow-menu-control}}
+      {{#> overflow-menu-control overflow-menu-button--aria-label="Expand overflown menu" overflow-menu-control--attribute=(concat 'id="' data-toolbar--id '-overflow-menu-control"')}}
         {{#> overflow-menu-dropdown-item}}
           Action
         {{/overflow-menu-dropdown-item}}
@@ -66,7 +66,7 @@
         {{/pagination}}
       {{/data-toolbar-item}}
     {{/data-toolbar-content}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--IsExpanded="true"}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
       {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
         {{#> chip-group-list-item}}
@@ -102,5 +102,5 @@
         {{/chip-group-list-item}}
       {{/chip-group}}
     {{/data-toolbar-item}}
-  {{/data-toolbar-content}}
+  {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
