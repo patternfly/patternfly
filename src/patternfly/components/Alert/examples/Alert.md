@@ -4,7 +4,7 @@ section: components
 cssPrefix: pf-c-alert
 ---
 
-```hbs title="Alert-types"
+```hbs title=Alert-types
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -13,7 +13,7 @@ cssPrefix: pf-c-alert
     Default alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}
@@ -22,7 +22,7 @@ cssPrefix: pf-c-alert
     Info alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -31,7 +31,7 @@ cssPrefix: pf-c-alert
     Success alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-triangle"}}
   {{/alert-icon}}
@@ -40,7 +40,7 @@ cssPrefix: pf-c-alert
     Warning alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-circle"}}
   {{/alert-icon}}
@@ -51,7 +51,7 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title="Alert-variations"
+```hbs title=Alert-variations
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -68,7 +68,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -82,7 +82,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -96,7 +96,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -107,8 +107,7 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title="Inline-alert-types"
-
+```hbs title=Inline-alert-types
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -117,7 +116,7 @@ cssPrefix: pf-c-alert
     Default alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}
@@ -126,7 +125,7 @@ cssPrefix: pf-c-alert
     Info alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -135,7 +134,7 @@ cssPrefix: pf-c-alert
     Success alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-triangle"}}
   {{/alert-icon}}
@@ -144,7 +143,7 @@ cssPrefix: pf-c-alert
     Warning alert title
   {{/alert-title}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-circle"}}
   {{/alert-icon}}
@@ -172,7 +171,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -186,7 +185,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -200,7 +199,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br>
+<br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}

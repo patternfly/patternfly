@@ -34,6 +34,7 @@ cssPrefix: pf-c-about-modal-box
 {{/about-modal-box}}
 ```
 
+# Documentation
 ## Accessibility
 
 | Attribute | Applies to | Outcome |
