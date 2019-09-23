@@ -1,22 +1,49 @@
 const path = require('path');
-const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
   siteMetadata: {
-    title: 'PatternFly 4'
+    title: 'PatternFly 4 - HTML'
   },
   pathPrefix: '/patternfly-next',
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-transformer-json',
+    // Use our patternfly.org theme
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-theme-patternfly-org`,
       options: {
-        importer: globImporter(),
-        postCssPlugins: [],
-        precision: 5
+        topNavItems: [
+          {
+            text: 'Accessibility guide',
+            link: '/accessibility-guide'
+          },
+          {
+            text: 'Contribute',
+            link: '/contribution'
+          },
+          {
+            text: 'Icons',
+            link: '/icons'
+          },
+          {
+            text: 'Guidelines',
+            link: '/guidelines'
+          },
+          {
+            text: 'Modifiers',
+            link: '/modifiers'
+          },
+          {
+            text: 'Upgrade guide',
+            link: '/upgrade-guide'
+          },
+        ]
+      }
+    },
+    // Source component documentation
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core', // This goes in URLs
+        path: `${path.resolve(__dirname)}/src/patternfly`
       }
     },
     // Create static pages
@@ -26,27 +53,5 @@ module.exports = {
         path: `${path.resolve(__dirname)}/src/site/pages`
       }
     },
-    // Source dynamic per-component MDX files
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${path.resolve(__dirname)}/src/patternfly`
-      }
-    },
-    // Pipe MDX files through this plugin that spits out React components
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        extensions: [`.mdx`, `.md`],
-        remarkPlugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'prism-language-'
-            }
-          }
-        ]
-      }
-    }
   ]
 };
