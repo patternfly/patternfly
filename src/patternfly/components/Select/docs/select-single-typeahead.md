@@ -13,6 +13,7 @@ The single select typeahead should be used when the user is selecting one option
 | `.pf-c-select` | `<div>` |  Initiates the select component. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates the select toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-c-select__toggle-typeahead-form` | `<form>` |  Initiates the form for typeahead. |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
 | `.pf-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
 | `.pf-c-select__toggle-button` | `<button>` | Initiates a toggle button. |
