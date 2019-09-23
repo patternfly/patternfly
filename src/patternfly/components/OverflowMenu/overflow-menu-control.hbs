@@ -7,7 +7,7 @@
     {{#if dropdown--attribute}}
       {{dropdown--attribute}}
     {{/if}}>
-    {{#> button button--modifier="pf-c-dropdown__toggle pf-m-plain" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-dropdown-button-aria-expanded '"')}}
+    {{#> button button--modifier="pf-c-dropdown__toggle pf-m-plain" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" ' overflow-menu-dropdown-button-aria-expanded '')}}
       {{#if dropdown-icon}}
         <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
       {{else}}

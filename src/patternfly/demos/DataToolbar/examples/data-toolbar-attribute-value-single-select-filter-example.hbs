@@ -54,7 +54,7 @@
         {{#> pagination-total-items}}
           <b>1 - 10</b> of <b>37</b>
         {{/pagination-total-items}}
-        {{> pagination-options-menu options-menu--IsText="true"}}
+        {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
         {{#> pagination-nav}}
           {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
             <i class="fas fa-angle-left" aria-hidden="true"></i>
