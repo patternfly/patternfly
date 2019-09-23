@@ -31,7 +31,7 @@
 
 
   &.pf-m-toolbar {
-    & > li {
+    > li:not(.pf-m-overflow) {
       display: inline-flex;
       flex-wrap: wrap;
       align-items: center;
@@ -39,6 +39,10 @@
       margin-right: var(--pf-c-chip-group__li--m-toolbar--MarginRight);
       background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
       border-radius: var(--pf-c-chip-group--m-toolbar-BorderRadius);
+    }
+
+    > .pf-c-chip.pf-m-overflow {
+      margin: 0;
     }
   }
 
