@@ -33,14 +33,25 @@ Not Expanded Toolbar
         <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
       {{/button}}
     {{/data-toolbar-item}}
-    {{!-- Overflow menu --}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}} --}}
-      {{!-- Remove when overflow menu merges --}}
-      Overflow menu
+      {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}}
     {{/data-toolbar-item}}
   {{/data-toolbar-content}}
+  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--IsExpanded="true"}}
+    {{> data-toolbar-item-search-filter button--id="expanded-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
+          Status
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+          Risk
+        {{/select}}
+       {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+  {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
 <br>
 <br>
@@ -81,10 +92,22 @@ Expanded Toolbar
     {{/data-toolbar-item}}
     {{!-- Overflow menu --}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}} --}}
-      {{!-- Remove when overflow menu merges --}}
-      Overflow menu
+      {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}}
     {{/data-toolbar-item}}
   {{/data-toolbar-content}}
+  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--IsExpanded="true"}}
+    {{> data-toolbar-item-search-filter button--id="expanded-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
+          Status
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+          Risk
+        {{/select}}
+       {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+  {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
