@@ -106,7 +106,7 @@ export default props => {
       <Example
         heading="Data toolbar expanded elements"
         handlebars={dataToolbarExpandedElementsExampleRaw}
-        minHeight="27rem"
+        minHeight="40rem"
       >
         {dataToolbarExpandedElementsExample}
       </Example>
