@@ -3,41 +3,36 @@ title: Stack
 section: layouts
 cssPrefix: pf-l-stack
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import StackRaw from '!!raw-loader!./stack-example.hbs';
-import StackHasGutterRaw from '!!raw-loader!./stack-has-gutter-example.hbs';
-import Stack from './stack-example.hbs';
-import StackHasGutter from './stack-has-gutter-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const stack = Stack();
-  const stackHasGutter = StackHasGutter();
-  const headingText = 'Stack';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Stack example" handlebars={StackRaw} minHeight="30em" className="is-height-flex-column-grow">
-        {stack}
-      </Example>
-      <Example
-        heading="Stack example with gutter"
-        handlebars={StackHasGutterRaw}
-        minHeight="30em"
-        className="is-height-flex-column-grow"
-      >
-        {stackHasGutter}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Stack-example
+{{#> stack}}
+  {{#> stack-item}}
+    content
+  {{/stack-item}}
+  {{#> stack-item stack-item--modifier="pf-m-fill"}}
+    pf-m-fill
+  {{/stack-item}}
+  {{#> stack-item}}
+    content
+  {{/stack-item}}
+{{/stack}}
 ```
 
+```hbs title=Stack-example-with-gutter
+{{#> stack stack--modifier="pf-m-gutter"}}
+  {{#> stack-item}}
+    content
+  {{/stack-item}}
+  {{#> stack-item stack-item--modifier="pf-m-fill"}}
+    pf-m-fill
+  {{/stack-item}}
+  {{#> stack-item}}
+    content
+  {{/stack-item}}
+{{/stack}}
+```
+
+# Documentation
 ## Overview
 
 The stack layout is designed to position items vertically, with one item filling the available vertical space.

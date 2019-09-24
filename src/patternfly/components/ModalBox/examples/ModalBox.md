@@ -3,48 +3,79 @@ title: Modal Box
 section: components
 cssPrefix: pf-c-modal-box
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import ModalBoxBasicExampleRaw from '!!raw-loader!./modal-box-basic-example.hbs';
-import ModalBoxSmExampleRaw from '!!raw-loader!./modal-box-sm-example.hbs';
-import ModalBoxLgExampleRaw from '!!raw-loader!./modal-box-lg-example.hbs';
-import ModalBoxNoHeaderExampleRaw from '!!raw-loader!./modal-box-no-header-example.hbs';
-import ModalBoxBasicExample from './modal-box-basic-example.hbs';
-import ModalBoxSmExample from './modal-box-sm-example.hbs';
-import ModalBoxLgExample from './modal-box-lg-example.hbs';
-import ModalBoxNoHeaderExample from './modal-box-no-header-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const modalBoxBasicExample = ModalBoxBasicExample();
-  const modalBoxSmExample = ModalBoxSmExample();
-  const modalBoxLgExample = ModalBoxLgExample();
-  const modalBoxNoHeaderExample = ModalBoxNoHeaderExample();
-  const headingText = 'Modal box';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Modalbox basic example" handlebars={ModalBoxBasicExampleRaw}>
-        {modalBoxBasicExample}
-      </Example>
-      <Example heading="Modalbox small example" handlebars={ModalBoxSmExampleRaw}>
-        {modalBoxSmExample}
-      </Example>
-      <Example heading="Modalbox large example" handlebars={ModalBoxLgExampleRaw}>
-        {modalBoxLgExample}
-      </Example>
-      <Example heading="Modalbox no header example" handlebars={ModalBoxNoHeaderExampleRaw}>
-        {modalBoxNoHeaderExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Modalbox-basic-example
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+   <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
+    Modal header
+  {{/title}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
+    To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+  {{/modal-box-body}}
+  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
 ```
 
+```hbs title=Modalbox-small-example
+{{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-sm-title"'}}
+    Modal header
+  {{/title}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-sm-description"'}}
+    Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  {{/modal-box-body}}
+  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
+```hbs title=Modalbox-large-example
+{{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
+    Modal header
+  {{/title}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-lg-description"'}}
+    Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  {{/modal-box-body}}
+  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
+```hbs title=Modalbox-no-header-example
+{{#> modal-box modal-box--attribute='aria-label="Example of a modal without a header" aria-describedby="modal-no-header-description"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{#> modal-box-body}}
+    <span id="modal-no-header-description">When static text describing the modal is available, it can be wrapped with an ID referring to the modal's aria-describedby value. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  {{/modal-box-body}}
+  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
+# Documentation
 ## Overview
 
 A modal box is a generic rectangular container that can be used to build modals. A modal box can have three sections: header, body, and footer. Header or body is required. If no `.pf-c-title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.

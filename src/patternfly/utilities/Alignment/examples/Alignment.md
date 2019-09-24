@@ -2,30 +2,25 @@
 title: Alignment
 section: utilities
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import alignmentSimpleExampleRaw from '!!raw-loader!./alignment-simple-example.hbs';
-import AlignmentSimpleExample from './alignment-simple-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const alignmentSimpleExample = AlignmentSimpleExample();
-  const headingText = 'Alignment';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Alignment simple" handlebars={alignmentSimpleExampleRaw}>
-        {alignmentSimpleExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Alignment-simple
+{{#> alignment alignment--type="left"}}
+  Text left
+{{/alignment}}
+{{#> alignment alignment--type="center"}}
+  Text center
+{{/alignment}}
+{{#> alignment alignment--type="right"}}
+  Text right
+{{/alignment}}
+{{#> alignment alignment--type="justify"}}
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris.
+{{/alignment}}
 ```
 
+# Documentation
 ## Overview
 
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-text-left-on-lg**

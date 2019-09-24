@@ -3,30 +3,13 @@ title: Bullseye
 section: components
 cssPrefix: pf-l-bullseye
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import BullseyeRaw from '!!raw-loader!./bullseye-example.hbs';
-import Bullseye from './bullseye-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const bullseye = Bullseye();
-  const headingText = 'Bullseye';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Bullseye example" handlebars={BullseyeRaw}>
-        {bullseye}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Bullseye-example 
+{{#> bullseye}}
+  {{#> bullseye-item}}content{{/bullseye-item}}
+{{/bullseye}}
 ```
 
+# Documentation
 ## Overview
 
 The bullseye layout is designed to center a single child element horizontally and vertically within its parent.

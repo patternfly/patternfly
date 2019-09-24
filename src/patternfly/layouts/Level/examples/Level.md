@@ -3,43 +3,47 @@ title: Level
 section: layouts
 cssPrefix: pf-l-level
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import LevelTwoRaw from '!!raw-loader!./level-two-example.hbs';
-import LevelThreeRaw from '!!raw-loader!./level-three-example.hbs';
-import LevelGuttersRaw from '!!raw-loader!./level-gutters-example.hbs';
-import LevelTwo from './level-two-example.hbs';
-import LevelThree from './level-three-example.hbs';
-import LevelGutters from './level-gutters-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const levelTwo = LevelTwo();
-  const levelThree = LevelThree();
-  const levelGutters = LevelGutters();
-  const headingText = 'Level';
-  const variablesRoot = 'pf-l-level';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Level example" description="(with 2 children)" handlebars={LevelTwoRaw}>
-        {levelTwo}
-      </Example>
-      <Example heading="Level example" description="(with 3 children)" handlebars={LevelThreeRaw}>
-        {levelThree}
-      </Example>
-      <Example heading="Level example with gutters" description="(with 3 children)" handlebars={LevelGuttersRaw}>
-        {levelGutters}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Level-two-example
+{{#> level}}
+  {{#> level-item}}
+    content
+  {{/level-item}}
+  {{#> level-item}}
+    content
+  {{/level-item}}
+{{/level}}
 ```
 
+```hbs title=Level-three-example
+{{#> level}}
+  {{#> level-item}}
+    content
+  {{/level-item}}
+  {{#> level-item}}
+    content
+  {{/level-item}}
+  {{#> level-item}}
+    content
+  {{/level-item}}
+{{/level}}
+```
+
+```hbs title=Level-example-with-gutters
+{{#> level level--modifier="pf-m-gutter"}}
+  {{#> level-item}}
+    content with gutter
+  {{/level-item}}
+  {{#> level-item}}
+    content with gutter
+  {{/level-item}}
+  {{#> level-item}}
+    content with gutter
+  {{/level-item}}
+{{/level}}
+```
+
+# Documentation
 ## Overview
 
 The level layout is designed to distribute space between children evenly and center them on the x-axis. By default the children are placed horizontally and wrap responsively.

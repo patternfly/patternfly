@@ -3,30 +3,31 @@ title: Radio
 section: components
 cssPrefix: pf-c-radio
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import RadioExampleRaw from '!!raw-loader!./radio-example.hbs';
-import RadioExample from './radio-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const radioExample = RadioExample();
-  const headingText = 'Radio';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Radio example" handlebars={RadioExampleRaw}>
-        {radioExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Radio-example
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio1" name="exampleRadio1"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio1"'}}Radio 1{{/radio-label}}
+{{/radio}}
+{{#> radio}}
+  {{#> radio-label radio-label--attribute='for="radio1-rev"'}}Radio 1 reversed{{/radio-label}}
+  {{#> radio-input radio-input--attribute='id="radio1-rev" name="exampleRadio2"'}}{{/radio-input}}
+{{/radio}}
+{{#> radio radio--type="label" radio--attribute='for="radio2"'}}
+  {{#> radio-input radio-input--attribute='id="radio2" name="exampleRadio3"'}}{{/radio-input}}
+  {{#> radio-label radio-label--type="span"}}Radio 2 label wraps input{{/radio-label}}
+{{/radio}}
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio3" name="exampleRadio4" checked'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio3"'}}Radio 3 checked{{/radio-label}}
+{{/radio}}
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio4" name="exampleRadio5" disabled'}}{{/radio-input}}
+  {{#> radio-label radio-label--modifier="pf-m-disabled" radio-label--attribute='for="radio4"'}}Radio 4 disabled{{/radio-label}}
+{{/radio}}
 ```
 
+# Documentation
 ## Overview
 
 The Radio component is provided for use cases outside of forms. If it is used without label text ensure some sort of label for assistive technologies. (for example: `aria-label`)

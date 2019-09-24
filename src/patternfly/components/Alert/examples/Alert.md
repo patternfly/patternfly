@@ -209,6 +209,7 @@ cssPrefix: pf-c-alert
   {{/alert-title}}
 {{/alert}}
 ```
+# Documentation
 ## Overview
 
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.

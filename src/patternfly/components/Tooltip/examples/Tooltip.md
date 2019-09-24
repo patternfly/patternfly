@@ -4,51 +4,39 @@ section: components
 cssPrefix: pf-c-tooltip
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-
-import TooltipTopExampleRaw from '!!raw-loader!./tooltip-top-example.hbs';
-import TooltipRightExampleRaw from '!!raw-loader!./tooltip-right-example.hbs';
-import TooltipBottomExampleRaw from '!!raw-loader!./tooltip-bottom-example.hbs';
-import TooltipLeftExampleRaw from '!!raw-loader!./tooltip-left-example.hbs';
-
-import TooltipTopExample from './tooltip-top-example.hbs';
-import TooltipRightExample from './tooltip-right-example.hbs';
-import TooltipBottomExample from './tooltip-bottom-example.hbs';
-import TooltipLeftExample from './tooltip-left-example.hbs';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const tooltipTopExample = TooltipTopExample();
-  const tooltipRightExample = TooltipRightExample();
-  const tooltipBottomExample = TooltipBottomExample();
-  const tooltipLeftExample = TooltipLeftExample();
-  const headingText = 'Tooltip';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example className="is-tooltip" heading="Tooltip top" handlebars={TooltipTopExampleRaw}>
-        {tooltipTopExample}
-      </Example>
-      <Example className="is-tooltip" heading="Tooltip right" handlebars={TooltipRightExampleRaw}>
-        {tooltipRightExample}
-      </Example>
-      <Example className="is-tooltip" heading="Tooltip bottom" handlebars={TooltipBottomExampleRaw}>
-        {tooltipBottomExample}
-      </Example>
-      <Example className="is-tooltip" heading="Tooltip left" handlebars={TooltipLeftExampleRaw}>
-        {tooltipLeftExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Tooltip-top
+{{#> tooltip tooltip--modifier="pf-m-top"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-top-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
 ```
 
+```hbs title=Tooltip-right
+{{#> tooltip tooltip--modifier="pf-m-right"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-right-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+```
+
+```hbs title=Tooltip-bottom
+{{#> tooltip tooltip--modifier="pf-m-bottom"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-bottom-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+```
+
+```hbs title=Tooltip-left
+{{#> tooltip tooltip--modifier="pf-m-left"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+```
+
+# Documentation
 ## Overview
 
 A tooltip is used to provide contextual information for another component on hover.  The tooltip itself is made up of two elements: arrow and content. One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the tooltip component.

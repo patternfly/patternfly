@@ -4,97 +4,449 @@ section: components
 cssPrefix: pf-c-tabs
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-
-// Raw
-import tabsPrimaryExampleRaw from '!!raw-loader!./tabs-primary.hbs';
-import tabsPrimaryOverflowExampleRaw from '!!raw-loader!./tabs-primary-overflow.hbs';
-
-import tabsSecondaryExampleRaw from '!!raw-loader!./tabs-secondary.hbs';
-import tabsSecondaryOverflowExampleRaw from '!!raw-loader!./tabs-secondary-overflow.hbs';
-
-import tabsPrimarySecondaryExampleRaw from '!!raw-loader!./tabs-primary-secondary.hbs';
-
-import tabsFilledExampleRaw from '!!raw-loader!./tabs-filled.hbs';
-
-import tabsNavExampleRaw from '!!raw-loader!./tabs-nav.hbs';
-
-// Primary tabs
-import TabsPrimaryExample from './tabs-primary.hbs';
-import TabsPrimaryOverflowExample from './tabs-primary-overflow.hbs';
-import tabsPrimaryDocs from '../docs/tabs-primary.md';
-import tabsPrimaryOverflowDocs from '../docs/tabs-primary-overflow.md';
-
-// Secondary tabs
-import TabsSecondaryExample from './tabs-secondary.hbs';
-import TabsSecondaryOverflowExample from './tabs-secondary-overflow.hbs';
-import tabsSecondaryDocs from '../docs/tabs-secondary.md';
-import tabsSecondaryOverflowDocs from '../docs/tabs-secondary-overflow.md';
-
-// Primary and Secondary
-import TabsPrimarySecondaryExample from './tabs-primary-secondary.hbs';
-
-// Filled tabs
-import TabsFilledExample from './tabs-filled.hbs';
-import tabsFilledDocs from '../docs/tabs-filled.md';
-
-// Nav example
-import TabsNavExample from './tabs-nav.hbs';
-import tabsNavDocs from '../docs/tabs-nav.md';
-
-import docs from '../docs/code.md';
-
-export const headingText = 'Tabs';
-export const Docs = docs;
-
-export default (props) => {
-  const tabsPrimaryExample = TabsPrimaryExample();
-  const tabsPrimaryOverflowExample = TabsPrimaryOverflowExample();
-  const tabsSecondaryExample = TabsSecondaryExample();
-  const tabsSecondaryOverflowExample = TabsSecondaryOverflowExample();
-  const tabsPrimarySecondaryExample = TabsPrimarySecondaryExample();
-  const tabsFilledExample = TabsFilledExample();
-  const tabsNavExample = TabsNavExample();
-  
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Primary tabs" handlebars={tabsPrimaryExampleRaw} docs={tabsPrimaryDocs}>
-        {tabsPrimaryExample}
-      </Example>
-      <Example
-        heading="Primary tabs overflow"
-        handlebars={tabsPrimaryOverflowExampleRaw}
-        docs={tabsPrimaryOverflowDocs}
-      >
-        {tabsPrimaryOverflowExample}
-      </Example>
-      <Example heading="Secondary tabs" handlebars={tabsSecondaryExampleRaw} docs={tabsSecondaryDocs}>
-        {tabsSecondaryExample}
-      </Example>
-      <Example
-        heading="Secondary tabs overflow"
-        handlebars={tabsSecondaryOverflowExampleRaw}
-        docs={tabsSecondaryOverflowDocs}
-      >
-        {tabsSecondaryOverflowExample}
-      </Example>
-      <Example heading="Primary tabs with secondary tabs" handlebars={tabsPrimarySecondaryExampleRaw}>
-        {tabsPrimarySecondaryExample}
-      </Example>
-      <Example heading="Filled tabs" handlebars={tabsFilledExampleRaw} docs={tabsFilledDocs}>
-        {tabsFilledExample}
-      </Example>
-      <Example heading="Tabs using the nav element" handlebars={tabsNavExampleRaw} docs={tabsNavDocs}>
-        {tabsNavExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Primary-tabs
+{{#> tabs tabs--id="primary"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--attribute='' tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
 ```
 
+```hbs title=Primary-tabs-overflow
+{{#> tabs tabs--id="primary-overflow" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab6"')}}
+        Tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7"')}}
+        Tab item 7
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab8"')}}
+        Tab item 8
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab9"')}}
+        Tab item 9
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab10"')}}
+        Tab item 10
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+```
+
+```hbs title=Secondary-tabs
+{{#> tabs tabs--id="secondary" tabs--IsSecondary="true"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+```
+
+```hbs title=Secondary-tabs-overflow
+{{#> tabs tabs--id="secondary-overflow-end" tabs--IsSecondary="true" tabs--modifier="pf-m-start pf-m-end-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Secondary tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Secondary tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+     {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab6"')}}
+        Secondary tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+```
+
+```hbs title=Primary-tabs-with-secondary-tabs
+{{#> tabs tabs--id="primary-with-secondary"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--attribute='' tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+{{#> tabs tabs--id="secondary-with-primary" tabs--IsSecondary="true"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+<br>
+<br>
+
+{{#> tabs tabs--id="primary-with-secondary-scroll" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab6"')}}
+        Tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7"')}}
+        Tab item 7
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab8"')}}
+        Tab item 8
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab9"')}}
+        Tab item 9
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab10"')}}
+        Tab item 10
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+{{#> tabs tabs--id="secondary-with-primary-scroll" tabs--IsSecondary="true" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4"')}}
+        Secondary tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5"')}}
+        Secondary tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+     {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7"')}}
+        Secondary tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+```
+
+```hbs title=Filled-tabs
+{{#> tabs tabs--id="primary-filled" tabs--modifier="pf-m-fill"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+```
+
+```hbs title=Tabs-using-the-nav-element
+{{#> tabs tabs--id="primary-scroll-nav" tabs--type="nav" tabs--modifier="pf-m-start pf-m-start-current pf-m-end" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1" href="#"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2" href="#"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3" href="#"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab4" href="#"')}}
+        Tab item 4
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab5" href="#"')}}
+        Tab item 5
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab6" href="#"')}}
+        Tab item 6
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab7" href="#"')}}
+        Tab item 7
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab8" href="#"')}}
+        Tab item 8
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab9" href="#"')}}
+        Tab item 9
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab10" href="#"')}}
+        Tab item 10
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+<br><br>
+
+{{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1" href="#"')}}
+        Tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2" href="#"')}}
+        Tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3" href="#"')}}
+        Tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+
+{{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsSecondary="true" tabs--attribute='aria-label="Local secondary"' tabs-button--type="a"}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
+  {{/tabs-scroll-button}}
+  {{#> tabs-list}}
+    {{#> tabs-item tabs-item--current="true"}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1" href="#"')}}
+        Secondary tab item 1
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2" href="#"')}}
+        Secondary tab item 2
+      {{/tabs-button}}
+    {{/tabs-item}}
+    {{#> tabs-item}}
+      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab3" href="#"')}}
+        Secondary tab item 3
+      {{/tabs-button}}
+    {{/tabs-item}}
+  {{/tabs-list}}
+  {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsRight="true"}}
+  {{/tabs-scroll-button}}
+{{/tabs}}
+```
+
+# Documentation
 ## Overview
 
 The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](https://pf4.patternfly.org/components/Nav/examples/) is available for general navigation use cases.

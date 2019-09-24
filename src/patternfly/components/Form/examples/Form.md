@@ -3,48 +3,108 @@ title: Form
 section: components
 cssPrefix: pf-c-form
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import FormVerticalAlignLabelsExampleRaw from '!!raw-loader!./form-vertical-align-labels-example.hbs';
-import FormHorizontalAlignLabelsExampleRaw from '!!raw-loader!./form-horizontal-align-labels-example.hbs';
-import FormHelpTextExampleRaw from '!!raw-loader!./form-help-text-example.hbs';
-import FormActionGroupExampleRaw from '!!raw-loader!./form-action-group-example.hbs';
-import FormVerticalAlignLabelsExample from './form-vertical-align-labels-example.hbs';
-import FormHorizontalAlignLabelsExample from './form-horizontal-align-labels-example.hbs';
-import FormHelpTextExample from './form-help-text-example.hbs';
-import FormActionGroupExample from './form-action-group-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const formVerticalAlignLabelsExample = FormVerticalAlignLabelsExample();
-  const formHorizontalAlignLabelsExample = FormHorizontalAlignLabelsExample();
-  const formHelpTextExample = FormHelpTextExample();
-  const formActionGroupExample = FormActionGroupExample();
-  const headingText = 'Form';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Vertical aligned labels" handlebars={FormVerticalAlignLabelsExampleRaw}>
-        {formVerticalAlignLabelsExample}
-      </Example>
-      <Example heading="Horizontal aligned labels" handlebars={FormHorizontalAlignLabelsExampleRaw}>
-        {formHorizontalAlignLabelsExample}
-      </Example>
-      <Example heading="Help text" handlebars={FormHelpTextExampleRaw}>
-        {formHelpTextExample}
-      </Example>
-      <Example heading="Action group" handlebars={FormActionGroupExampleRaw}>
-        {formActionGroupExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Vertical-aligned-labels
+{{#> form form--id="vertical-align-labels"}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"') required="true"}}
+      Name
+    {{/form-label}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-vertical-form-name" name="' form--id '-vertical-form-name" required')}}
+    {{/form-control}}
+  {{/form-group}}
+{{/form}}
 ```
 
+```hbs title=Horizontal-aligned-labels
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"') required="true"}}
+      Name
+    {{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-horizontal-form-name" name="' form--id '-horizontal-form-name" required')}}
+      {{/form-control}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+{{/form}}
+
+<br />
+
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-2"}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"')}}
+      Information
+    {{/form-label}}
+    {{#> horizontal-form-group}}
+      {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form--id '-horizontal-form-name-2" name="' form--id '-horizontal-form-name-2" aria-label="textarea example"')}}
+      {{/form-control}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+{{/form}}
+
+<br />
+
+{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-top"}}
+  {{#> form-group}}
+    {{#> form-label form-label--modifier="pf-m-no-padding-top" form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"')}}
+      Label (no top padding)
+    {{/form-label}}
+    {{#> horizontal-form-group}}
+    {{#> check}}
+      {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox1" name="alt-form-checkbox1"'}}{{/check-input}}
+      {{#> check-label check-label--attribute='for="alt-form-checkbox1"'}}Option 1{{/check-label}}
+    {{/check}}
+      {{#> check}}
+        {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox2"'}}{{/check-input}}
+        {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Option 2{{/check-label}}
+      {{/check}}
+    {{/horizontal-form-group}}
+  {{/form-group}}
+{{/form}}
+```
+
+```hbs title=Help-text
+{{#> form form--id="help-text"}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-name"') required='true'}}
+      Name
+    {{/form-label}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-simple-form-name" name="' form--id '-simple-form-name" aria-describedby="' form--id '-simple-form-name-helper"')}}
+    {{/form-control}}
+    {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id '-simple-form-name-helper" aria-live="polite"')}}
+      This is helper text
+    {{/form-helper-text}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-address"') required='true'}}
+      Address
+    {{/form-label}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-simple-form-address" name="' form--id '-simple-form-address" aria-invalid="true" aria-describedby="' form--id '-simple-form-address-helper"')}}
+    {{/form-control}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-address-helper" aria-live="polite"')}}
+      This is helper text for an invalid input
+    {{/form-helper-text}}
+  {{/form-group}}
+{{/form}}
+```
+
+```hbs title=Action-group
+{{#> form}}
+  {{#> form-group form-group--modifier="pf-m-action"}}
+    {{#> form-actions}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Submit form
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary" button--IsReset="true"}}
+        Reset form
+      {{/button}}
+    {{/form-actions}}
+  {{/form-group}}
+{{/form}}
+```
+
+# Documentation
 ## Accessibility
 
 | Attribute | Applied to | Outcome |

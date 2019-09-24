@@ -3,15 +3,13 @@ title: BackgroundImage
 section: components
 cssPrefix: pf-c-background-image
 ---
-import BackgroundImageRaw from '!!raw-loader!./background-image-example.hbs';
-import BackgroundImage from './background-image-example.hbs';
 
-<Example 
-  title="Background image example" 
-  fullPageOnly
-  handlebars={BackgroundImageRaw}
-  html={backgroundImage()} />
+```hbs title=Background-image-example isFullscreen=true
+{{#> background-image}}
+{{/background-image}}
+```
 
+# Documentation
 ## Overview
 
 This component puts an image on the background with an svg filter applied to it. The svg must be inline on the page for the filter to work in all browsers.

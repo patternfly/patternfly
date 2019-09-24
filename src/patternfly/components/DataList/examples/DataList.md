@@ -7,42 +7,361 @@ cssPrefix: pf-c-data-list
 
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](../../Table/examples).
 
-import DataListSimpleExampleRaw from '!!raw-loader!./data-list-simple-example.hbs';
-import DataListSimpleH2ExampleRaw from '!!raw-loader!./data-list-simple-h2-example.hbs';
-import DataListCheckActionExampleRaw from '!!raw-loader!./data-list-check-action-example.hbs';
-import DataListExpandableExampleRaw from '!!raw-loader!./data-list-expandable-example.hbs';
-import DataListWidthExampleRaw from '!!raw-loader!./data-list-width-example.hbs';
+```hbs title=Data-list-simple
+{{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="simple-item1">Primary content</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
 
-import SimpleExample from './data-list-simple-example.hbs';
-import SimpleH2Example from './data-list-simple-h2-example.hbs';
-import CheckActionExample from './data-list-check-action-example.hbs';
-import ExpandableExample from './data-list-expandable-example.hbs';
-import WidthExample from './data-list-width-example.hbs';
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
+          <span id="simple-item2">Secondary content (pf-m-no-fill)</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+          Secondary content (pf-m-align-right pf-m-no-fill)
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
 
-<Example 
-  title="Data list simple" 
-  handlebars={SimpleExampleRaw}
-  html={SimpleExample()} />
+```hbs title=Data-list-simple-with-headings
+{{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
+    {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-h2-item1"'}}
+        {{#> data-list-item-row}}
+            {{#> data-list-item-content}}
+                {{#> data-list-cell}}
+                    <h2 id="simple-h2-item1">Primary content</h2>
+                {{/data-list-cell}}
+                {{#> data-list-cell}}
+                    Secondary content
+                {{/data-list-cell}}
+            {{/data-list-item-content}}
+        {{/data-list-item-row}}
+    {{/data-list-item}}
 
-<Example
-  title="Data list simple with headings"
-  handlebars={SimpleH2ExampleRaw}
-  html={SimpleH2Example()} />
+    {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-h2-item2"'}}
+        {{#> data-list-item-row}}
+            {{#> data-list-item-content}}
+                {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
+                    <h2 id="simple-h2-item2">Secondary content (pf-m-no-fill)</h2>
+                {{/data-list-cell}}
+                {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+                    Secondary content (pf-m-align-right pf-m-no-fill)
+                {{/data-list-cell}}
+            {{/data-list-item-content}}
+        {{/data-list-item-row}}
+    {{/data-list-item}}
+{{/data-list}}
+```
 
-<Example
-  title="Data list checkboxes, actions and additional cells"
-  handlebars={CheckActionExampleRaw}
-  html={CheckActionExample()} />
+```hbs title=Data-list-checkboxes-actions-and-additional-cells
+{{#> data-list data-list--attribute='aria-label="Checkbox and action data list example"'}}
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="check-action-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute='name="check-action-check1" aria-labelledby="check-action-item1"'}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id='check-action-item1'>Primary content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Tertiary Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+          {{#> data-list-cell}}
+          <span>More Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+          {{#> data-list-cell}}
+          <span>More Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id="check-action-dropdown-kebab-right-action-1"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
 
-<Example
-  title="Data list expandable"
-  handlebars={ExpandableExampleRaw}
-  html={ExpandableExample()} />
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="check-action-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute='name="check-action-check2" aria-labelledby="check-action-item2"'}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id='check-action-item2'>Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
+        {{#> data-list-action id="check-action-dropdown-kebab-right-action-2"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+        {{#> button button--modifier="pf-m-primary"}}
+            Primary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
 
-<Example 
-  title="Data list width modifiers" 
-  handlebars={WidthExampleRaw} 
-  html={WidthExample()} />
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="check-action-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute='name="check-action-check3" aria-labelledby="check-action-item2"'}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id='check-action-item3'>Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
+        {{#> data-list-action id="check-action-dropdown-kebab-right-action-3"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
+        {{#> button button--modifier="pf-m-primary"}}
+            Primary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}{{/data-list}}
+```
+
+```hbs title=Data-list-expandable
+{{#> data-list data-list--attribute='aria-label="Expandable data list example"'}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-1"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <div id="ex-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <a href="#">link</a>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id="dropdown-kebab-right-action-3"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-1" aria-label="Primary content details"'}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="ex-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-2"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+        {{/data-list-cell}}        
+        {{#> data-list-cell}}
+          <div id="ex-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id="dropdown-kebab-right-action-4"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Secondary content details"'}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}    
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item3"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle3 ex-item3" id="ex-toggle3" aria-label="Toggle details for" aria-expanded="false" aria-controls="content-3"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+        {{/data-list-cell}}        
+        {{#> data-list-cell}}
+          <div id="ex-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id="dropdown-kebab-right-action-5"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-3" aria-label="Tertiary content details"'}}
+      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
+        This expanded section has no padding.
+      {{/data-list-expandable-content-body}}    
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+```hbs title=Data-list-with-modifiers
+{{!-- Example 1 --}}
+<h2 class="Preview__section-title">Default fitting - example 1</h2>
+{{#> data-list data-list--attribute='aria-label="Width modifier data list example 1"'}}
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="width-ex1-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute='name="width-ex1-check1" aria-labelledby="width-ex1-item1"'}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <div class="Preview__placeholder">
+            <b id="width-ex1-item1">default</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <div class="Preview__placeholder">
+            <b>default</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+
+{{!-- Example 2 --}}
+<h2 class="Preview__section-title">Flex modifiers - example 2</h2>
+{{#> data-list data-list--attribute='aria-label="Width modifier data list example 2"'}}
+  {{#> data-list-item data-list-item--attribute='aria-labelledby="width-ex2-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute='name="width-ex2-check1" aria-labelledby="width-ex2-item1"'}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-2"}}
+          <div class="Preview__placeholder">
+            <b id="width-ex2-item1">.pf-m-flex-2</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-4"}}
+          <div class="Preview__placeholder">
+            <b>.pf-m-flex-4</b>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-6"}}
+          <div class="Preview__placeholder">
+            <b>.pf-m-flex-6</b>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id="dropdown-kebab-right-action-6"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+
+{{!-- Example 3 --}}
+<h2 class="Preview__section-title">Flex modifiers - example 3</h2>
+{{#> data-list data-list--attribute='aria-label="Width modifier data list example 3"'}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="width-ex3-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="width-ex3-toggle1 width-ex3-item1" id="width-ex3-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-4"'}}{{/data-list-toggle}}
+        {{#> data-list-check checkbox--attribute='name="width-ex3-check1" aria-labelledby="width-ex3-item1"'}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-5"}}
+          <div class="Preview__placeholder">
+            <b id="width-ex3-item1">.pf-m-flex-5</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-2"}}
+          <div class="Preview__placeholder">
+            <b>.pf-m-flex-2</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-3"}}
+          <div class="Preview__placeholder">
+            <b>.pf-m-flex-3</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-3"}}
+          <div class="Preview__placeholder">
+            <b>.pf-m-flex-3</b>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id="dropdown-kebab-right-action-7"}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-4" aria-label="Primary content details"'}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+{{/data-list}}
+```
 
 ### Accessibility
 | Attribute | Applied to | Outcome |

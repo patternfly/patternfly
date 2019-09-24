@@ -3,75 +3,76 @@ title: Display
 section: utilities
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-
-import displayInlineBlockExampleRaw from '!!raw-loader!./display-inline-block-example.hbs';
-import displayBlockExampleRaw from '!!raw-loader!./display-block-example.hbs';
-import displayFlexExampleRaw from '!!raw-loader!./display-flex-example.hbs';
-import displayGridExampleRaw from '!!raw-loader!./display-grid-example.hbs';
-import displayInlineFlexExampleRaw from '!!raw-loader!./display-inline-flex-example.hbs';
-import displayInlineExampleRaw from '!!raw-loader!./display-inline-example.hbs';
-import displayTableExampleRaw from '!!raw-loader!./display-table-example.hbs';
-import displayNoneExampleRaw from '!!raw-loader!./display-none-example.hbs';
-
-import DisplayInlineBlockExample from './display-inline-block-example.hbs';
-import DisplayBlockExample from './display-block-example.hbs';
-import DisplayFlexExample from './display-flex-example.hbs';
-import DisplayGridExample from './display-grid-example.hbs';
-import DisplayInlineFlexExample from './display-inline-flex-example.hbs';
-import DisplayInlineExample from './display-inline-example.hbs';
-import DisplayTableExample from './display-table-example.hbs';
-import DisplayNoneExample from './display-none-example.hbs';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const displayInlineBlockExample = DisplayInlineBlockExample();
-  const displayBlockExample = DisplayBlockExample();
-  const displayFlexExample = DisplayFlexExample();
-  const displayGridExample = DisplayGridExample();
-  const displayInlineFlexExample = DisplayInlineFlexExample();
-  const displayInlineExample = DisplayInlineExample();
-  const displayTableExample = DisplayTableExample();
-  const displayNoneExample = DisplayNoneExample();
-  const headingText = 'Display';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Display inline-block" handlebars={displayInlineBlockExampleRaw}>
-        {displayInlineBlockExample}
-      </Example>
-      <Example heading="Display block" handlebars={displayBlockExampleRaw}>
-        {displayBlockExample}
-      </Example>
-      <Example heading="Display flex" handlebars={displayFlexExampleRaw}>
-        {displayFlexExample}
-      </Example>
-      <Example heading="Display inline flex" handlebars={displayInlineFlexExampleRaw}>
-        {displayInlineFlexExample}
-      </Example>
-      <Example heading="Display grid" handlebars={displayGridExampleRaw}>
-        {displayGridExample}
-      </Example>
-      <Example heading="Display inline" handlebars={displayInlineExampleRaw}>
-        {displayInlineExample}
-      </Example>
-      <Example heading="Display table" handlebars={displayTableExampleRaw}>
-        {displayTableExample}
-      </Example>
-      <Example heading="Display none" handlebars={displayNoneExampleRaw}>
-        {displayNoneExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Display-inline-block
+{{#> display display--type="inline-block"}}
+  .pf-u-display-inline-block
+{{/display}}
 ```
 
+```hbs title=Display-block
+{{#> display display--type="block"}}
+  .pf-u-display-block
+{{/display}}
+```
+
+```hbs title=Display-flex
+{{#> display display--type="flex"}}
+  .pf-u-display-flex
+{{/display}}
+```
+
+```hbs title=Display-inline-flex
+{{#> display display--type="inline-flex"}}
+  .pf-u-display-inline-flex
+{{/display}}
+```
+
+```hbs title=Display-grid
+{{#> display display--type="grid"}}
+  .pf-u-display-grid
+{{/display}}
+```
+
+```hbs title=Display-inline
+{{#> display display--type="inline"}}
+  .pf-u-display-inline
+{{/display}}
+```
+
+```hbs title=Display-table
+{{#> display display--type="table"}}
+  {{#> display display--type="table-row"}}
+    {{#> display display--type="table-cell"}}
+      table-cell
+    {{/display}}
+    {{#> display display--type="table-cell"}}
+      table-cell
+    {{/display}}
+    {{#> display display--type="table-cell"}}
+      table-cell
+    {{/display}}
+  {{/display}}
+  {{#> display display--type="table-row"}}
+    {{#> display display--type="table-cell"}}
+      table-cell
+    {{/display}}
+    {{#> display display--type="table-cell"}}
+      table-cell
+    {{/display}}
+    {{#> display display--type="table-cell"}}
+      table-cell
+    {{/display}}
+  {{/display}}
+{{/display}}
+```
+
+```hbs title=Display-none
+{{#> display display--type="none-on-sm"}}
+  Hidden on sm breakpoint
+{{/display}}
+```
+
+# Documentation
 ## Overview
 
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-display-inline-block-on-lg**

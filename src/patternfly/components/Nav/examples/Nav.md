@@ -4,101 +4,440 @@ section: components
 cssPrefix: pf-c-nav
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-
-// Raw files
-import navSimpleListExampleRaw from '!!raw-loader!./nav-simple-list-example.hbs';
-import navListGroupedExampleRaw from '!!raw-loader!./nav-list-grouped-example.hbs';
-import navExampleRaw from '!!raw-loader!./nav-example.hbs';
-import navExpandableExampleRaw from '!!raw-loader!./nav-expandable-example.hbs';
-import navExpandableSubnavTitlesExampleRaw from '!!raw-loader!./nav-expandable-subnav-titles-example.hbs';
-import navHorizontalListExampleRaw from '!!raw-loader!./nav-horizontal-list-example.hbs';
-import navHorizontalListOverflowExampleRaw from '!!raw-loader!./nav-horizontal-list-overflow-example.hbs';
-import navListTertiaryExampleRaw from '!!raw-loader!./nav-tertiary-list-example.hbs';
-import navListTertiaryOverflowExampleRaw from '!!raw-loader!./nav-tertiary-list-overflow-example.hbs';
-import navMixedExampleRaw from '!!raw-loader!./nav-mixed-example.hbs';
-
-// Example files
-import NavSimpleListExample from './nav-simple-list-example.hbs';
-import NavListGroupedExample from './nav-list-grouped-example.hbs';
-import NavExample from './nav-example.hbs';
-import NavExpandableExample from './nav-expandable-example.hbs';
-import NavExpandableSubnavTitlesExample from './nav-expandable-subnav-titles-example.hbs';
-import NavHorizontalListExample from './nav-horizontal-list-example.hbs';
-import NavHorizontalListOverflowExample from './nav-horizontal-list-overflow-example.hbs';
-import NavListTertiaryExample from './nav-tertiary-list-example.hbs';
-import NavListTertiaryOverflowExample from './nav-tertiary-list-overflow-example.hbs';
-import NavMixedExample from './nav-mixed-example.hbs';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const navSimpleListExample = NavSimpleListExample();
-  const navListGroupedExample = NavListGroupedExample();
-  const navExample = NavExample();
-  const navExpandableExample = NavExpandableExample();
-  const navExpandableSubnavTitlesExample = NavExpandableSubnavTitlesExample();
-  const navHorizontalListExample = NavHorizontalListExample();
-  const navHorizontalListOverflowExample = NavHorizontalListOverflowExample();
-  const navListTertiaryExample = NavListTertiaryExample();
-  const navListTertiaryOverflowExample = NavListTertiaryOverflowExample();
-  const navMixedExample = NavMixedExample();
-  const headingText = 'Nav';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Simple nav" handlebars={navSimpleListExampleRaw} className="is-dark-nav-preview pf-t-dark">
-        {navSimpleListExample}
-      </Example>
-      <Example heading="Grouped nav" handlebars={navListGroupedExampleRaw} className="is-dark-nav-preview pf-t-dark">
-        {navListGroupedExample}
-      </Example>
-      <Example heading="Default nav" handlebars={navExampleRaw} className="is-dark-nav-preview pf-t-dark">
-        {navExample}
-      </Example>
-      <Example heading="Expandable nav" handlebars={navExpandableExampleRaw} className="is-dark-nav-preview pf-t-dark">
-        {navExpandableExample}
-      </Example>
-      <Example
-        heading="Expandable nav (w/subnav titles)"
-        handlebars={navExpandableSubnavTitlesExampleRaw}
-        className="is-dark-nav-preview pf-t-dark"
-      >
-        {navExpandableSubnavTitlesExample}
-      </Example>
-      <Example heading="Nav mixed" handlebars={navMixedExampleRaw} className="is-dark-nav-preview pf-t-dark">
-        {navMixedExample}
-      </Example>
-      <Example
-        heading="Horizontal nav (only in masthead)"
-        handlebars={navHorizontalListExampleRaw}
-        className="is-dark-preview pf-t-dark"
-      >
-        {navHorizontalListExample}
-      </Example>
-      <Example
-        heading="Horizontal nav overflow (only in masthead)"
-        handlebars={navHorizontalListOverflowExampleRaw}
-        className="is-dark-preview pf-t-dark"
-      >
-        {navHorizontalListOverflowExample}
-      </Example>
-      <Example heading="Tertiary nav" handlebars={navListTertiaryExampleRaw}>
-        {navListTertiaryExample}
-      </Example>
-      <Example heading="Tertiary nav overflow" handlebars={navListTertiaryOverflowExampleRaw}>
-        {navListTertiaryOverflowExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Simple-nav
+{{#> nav nav--attribute='id="nav-primary-simple" aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-list nav-list--type="simple"}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Current link
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> divider divider--type="li"}}{{/divider}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 4
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
 ```
 
+```hbs title=Grouped-nav
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+      Section title 1
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Disabled link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+      Section title 2
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--type="simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 2
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
+```
+
+```hbs title=Default-nav
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Current link
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> divider divider--type="li"}}{{/divider}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 4
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+```hbs title=Expanded-nav
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-list}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
+        Link 1 (current and expanded example)
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
+        {{!--
+        {{#> nav-subnav-title}}
+          Current and expanded example sub-navigation
+        {{/nav-subnav-title}}
+        --}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Current link
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> divider divider--type="li"}}{{/divider}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
+        Link 2 (expanded, but not current example)
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
+        {{!--
+        {{#> nav-subnav-title}}
+          Expanded, but not current example sub-navigation
+        {{/nav-subnav-title}}
+        --}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3"'}}
+        Link 3
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
+        {{!--
+        {{#> nav-subnav-title}}
+          Link 3 sub-navigation
+        {{/nav-subnav-title}}
+        --}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+```hbs title=Expanded-nav-(w/subnav-titles)
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-list}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 1
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title1"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title1"'}}
+          Current and expanded example sub-navigation
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Current link
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 2
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title2"'}}
+        {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title2"'}}
+          Expanded, but not current example sub-navigation
+        {{/nav-subnav-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+```hbs title=Nav-mixed
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 1 (not expandable)
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2"'}}
+        Link 2 (expanded, but not current example)
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link2"'}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
+        Link 4 (current, but not expanded example)
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+```hbs title=Horizontal-nav-(only-in-masthead)
+<div class="pf-c-page__header">
+  <div class="pf-c-page__header-nav">
+    {{#> nav nav--attribute='aria-label="Global"'}}
+      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+      {{/nav-scroll-button}}
+      {{#> nav-list nav-list--type="horizontal"}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            Item 1
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Item 2
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Item 3
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+      {{/nav-scroll-button}}
+    {{/nav}}
+  </div>
+</div>
+```
+
+```hbs title=Horizontal-nav-overflow-(only-in-masthead)
+<div class="pf-c-page__header">
+  <div class="pf-c-page__header-nav">
+    {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Global"'}}
+      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+      {{/nav-scroll-button}}
+      {{#> nav-list nav-list--type="horizontal"}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 1
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 2
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 3
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 4
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            Horizontal nav item 5
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+      {{/nav-scroll-button}}
+    {{/nav}}
+  </div>
+</div>
+```
+
+```hbs title=Tertiary-nav
+{{#> nav nav--attribute='aria-label="Local"'}}
+  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+  {{/nav-scroll-button}}
+  {{#> nav-list nav-list--type="tertiary"}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 3
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+  {{/nav-scroll-button}}
+{{/nav}}
+```
+
+```hbs title=Tertiary-nav-overflow
+{{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
+  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+  {{/nav-scroll-button}}
+  {{#> nav-list nav-list--type="tertiary"}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Tertiary nav item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 4
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 5
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+  {{/nav-scroll-button}}
+{{/nav}}
+```
+
+# Documentation
 ## Overview
 
 The navigation system relies on several different sub-components:

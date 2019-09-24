@@ -3,42 +3,113 @@ title: Empty State
 section: components
 cssPrefix: pf-c-empty-state
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import emptyStateSimpleExampleRaw from '!!raw-loader!./empty-state-simple-example.hbs';
-import emptyStateSmallExampleRaw from '!!raw-loader!./empty-state-small-example.hbs';
-import emptyStateLargeExampleRaw from '!!raw-loader!./empty-state-large-example.hbs';
-import EmptystateSimpleExample from './empty-state-simple-example.hbs';
-import EmptystateSmallExample from './empty-state-small-example.hbs';
-import EmptystateLargeExample from './empty-state-large-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const emptyStateSimpleExample = EmptystateSimpleExample();
-  const emptyStateSmallExample = EmptystateSmallExample();
-  const emptyStateLargeExample = EmptystateLargeExample();
-  const headingText = 'Empty state';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Empty state" handlebars={emptyStateSimpleExampleRaw}>
-        {emptyStateSimpleExample}
-      </Example>
-      <Example heading="Empty state small" handlebars={emptyStateSmallExampleRaw}>
-        {emptyStateSmallExample}
-      </Example>
-      <Example heading="Empty state large" handlebars={emptyStateLargeExampleRaw}>
-        {emptyStateLargeExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Empty-state
+{{#> empty-state}}
+  {{#> empty-state-icon}}{{/empty-state-icon}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty state
+  {{/title}}
+  {{#> empty-state-body}}
+    This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+  {{/empty-state-body}}
+  {{#> button button--modifier="pf-m-primary"}}
+    Primary action
+  {{/button}}
+  {{#> empty-state-secondary}}
+    {{#> button button--modifier="pf-m-link"}}
+      Multiple
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action buttons
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Can
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Go here
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      In the secondary
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action area
+    {{/button}}
+  {{/empty-state-secondary}}
+{{/empty-state}}
 ```
 
+```hbs title=Empty-state-small
+{{#> empty-state empty-state--modifier="pf-m-sm"}}
+  {{#> empty-state-icon}}{{/empty-state-icon}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty State
+  {{/title}}
+  {{#> empty-state-body}}
+    This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+  {{/empty-state-body}}
+  {{#> button button--modifier="pf-m-primary"}}
+    Primary action
+  {{/button}}
+  {{#> empty-state-secondary}}
+    {{#> button button--modifier="pf-m-link"}}
+      Multiple
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action buttons
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Can
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Go here
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      In the secondary
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action area
+    {{/button}}
+  {{/empty-state-secondary}}
+{{/empty-state}}
+```
+
+```hbs title=Empty-state-large
+{{#> empty-state empty-state--modifier="pf-m-lg"}}
+  {{#> empty-state-icon}}{{/empty-state-icon}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty state
+  {{/title}}
+  {{#> empty-state-body}}
+    This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+  {{/empty-state-body}}
+  {{#> button button--modifier="pf-m-primary"}}
+    Primary action
+  {{/button}}
+  {{#> empty-state-secondary}}
+    {{#> button button--modifier="pf-m-link"}}
+      Multiple
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action buttons
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Can
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Go here
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      In the secondary
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action area
+    {{/button}}
+  {{/empty-state-secondary}}
+{{/empty-state}}
+```
+
+# Documentation
 ## Accessibility
 
 | Attribute | Applied to | Outcome |

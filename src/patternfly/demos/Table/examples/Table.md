@@ -3,51 +3,147 @@ title: Table
 section: demos
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import TableSimpleDemoRaw from '!!raw-loader!./table-simple-demo.hbs';
-import TableSortableDemoRaw from '!!raw-loader!./table-sortable-demo.hbs';
-import TableExpandableDemoRaw from '!!raw-loader!./table-expandable-demo.hbs';
-import TableCompactDemoRaw from '!!raw-loader!./table-compact-demo.hbs';
-import TableCompoundExpansionDemoRaw from '!!raw-loader!./table-compound-expansion-demo.hbs';
-import TableSimpleDemo from './table-simple-demo.hbs';
-import TableSortableDemo from './table-sortable-demo.hbs';
-import TableExpandableDemo from './table-expandable-demo.hbs';
-import TableCompactDemo from './table-compact-demo.hbs';
-import TableCompoundExpansionDemo from './table-compound-expansion-demo.hbs';
-import docs from '../docs/code.md';
+```hbs title=Table-simple-demo isFullscreen
+{{#> page page--id="page-layout-table-simple"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> table-toolbar}}
+        {{> table-simple-table}}
+        {{> table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-export const Docs = docs;
+```hbs title=table-sortable-demo isFullscreen
+{{#> page page--id="page-layout-table-sortable"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> table-toolbar-no-sort}}
+        {{> table-sortable-table}}
+        {{> table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-export default props => {
-  const tableSimpleDemo = TableSimpleDemo();
-  const tableSortableDemo = TableSortableDemo();
-  const tableExpandableDemo = TableExpandableDemo();
-  const tableCompactDemo = TableCompactDemo();
-  const tableCompoundExpansionDemo = TableCompoundExpansionDemo();
+```hbs title=Table-expandable-demo isFullscreen
+{{#> page page--id="page-layout-table-expandable"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> table-toolbar}}
+        {{> table-expandable-table}}
+        {{> table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-  const headingText = 'Table demo';
+```hbs title=Table-compact-demo isFullscreen
+{{#> page page--id="page-layout-table-compact"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> table-toolbar}}
+        {{> table-compact-table}}
+        {{> table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="Table - simple demo" fullPageOnly="true" handlebars={TableSimpleDemoRaw}>
-        {tableSimpleDemo}
-      </Example>
-      <Example heading="Table - sortable demo" fullPageOnly="true" handlebars={TableSortableDemoRaw}>
-        {tableSortableDemo}
-      </Example>
-      <Example heading="Table - expandable demo" fullPageOnly="true" handlebars={TableExpandableDemoRaw}>
-        {tableExpandableDemo}
-      </Example>
-      <Example heading="Table - compact demo" fullPageOnly="true" handlebars={TableCompactDemoRaw}>
-        {tableCompactDemo}
-      </Example>
-      <Example heading="Table - compound expansion demo" fullPageOnly="true" handlebars={TableCompoundExpansionDemoRaw}>
-        {tableCompoundExpansionDemo}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Table-compound-expansion-demo isFullscreen
+{{#> page page--id="page-layout-table-compound-expansion"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> table-toolbar-no-sort}}
+        {{> table-compound-expansion-table}}
+        {{> table-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
 ```

@@ -4,78 +4,134 @@ section: components
 cssPrefix: pf-c-options-menu
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import OptionsMenuSingleExampleRaw from '!!raw-loader!./options-menu-single-example.hbs';
-import OptionsMenuDisabledExampleRaw from '!!raw-loader!./options-menu-disabled-example.hbs';
-import OptionsMenuMultipleExampleRaw from '!!raw-loader!./options-menu-multiple-example.hbs';
-import OptionsMenuPlainExampleRaw from '!!raw-loader!./options-menu-plain-example.hbs';
-import OptionsMenuTopExampleRaw from '!!raw-loader!./options-menu-top-example.hbs';
-import OptionsMenuAlignRightExampleRaw from '!!raw-loader!./options-menu-align-right-example.hbs';
-import OptionsMenuPlainTextExampleRaw from '!!raw-loader!./options-menu-plain-text-example.hbs';
-import OptionsMenuSingleExample from './options-menu-single-example.hbs';
-import OptionsMenuDisabledExample from './options-menu-disabled-example.hbs';
-import OptionsMenuMultipleExample from './options-menu-multiple-example.hbs';
-import OptionsMenuPlainExample from './options-menu-plain-example.hbs';
-import OptionsMenuTopExample from './options-menu-top-example.hbs';
-import OptionsMenuAlignRightExample from './options-menu-align-right-example.hbs';
-import OptionsMenuPlainTextExample from './options-menu-plain-text-example.hbs';
-import docs from '../docs/code.md';
+```hbs title=Options-menu-single-option
+{{#> options-menu id="options-menu-single-example" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Options menu
+    </span>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
 
-export const Docs = docs;
-
-export default props => {
-  const optionsMenuSingleExample = OptionsMenuSingleExample();
-  const optionsMenuDisabledExample = OptionsMenuDisabledExample();
-  const optionsMenuMultipleExample = OptionsMenuMultipleExample();
-  const optionsMenuPlainExample = OptionsMenuPlainExample();
-  const optionsMenuTopExample = OptionsMenuTopExample();
-  const optionsMenuAlignRightExample = OptionsMenuAlignRightExample();
-  const optionsMenuPlainTextExample = OptionsMenuPlainTextExample();
-  const headingText = 'Options menu';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example
-        heading="Options menu - single option"
-        className="is-expanded-dropdown"
-        handlebars={OptionsMenuSingleExampleRaw}
-      >
-        {optionsMenuSingleExample}
-      </Example>
-      <Example heading="Options menu - disabled" handlebars={OptionsMenuDisabledExampleRaw}>
-        {optionsMenuDisabledExample}
-      </Example>
-      <Example heading="Options menu - multiple options" minHeight="20em" handlebars={OptionsMenuMultipleExampleRaw}>
-        {optionsMenuMultipleExample}
-      </Example>
-      <Example heading="Options menu - plain" minHeight="20em" handlebars={OptionsMenuPlainExampleRaw}>
-        {optionsMenuPlainExample}
-      </Example>
-      <Example heading="Options menu - top" className="is-expanded-top" handlebars={OptionsMenuTopExampleRaw}>
-        {optionsMenuTopExample}
-      </Example>
-      <Example
-        heading="Options menu - align right"
-        className="is-align-right is-expanded-dropdown"
-        handlebars={OptionsMenuAlignRightExampleRaw}
-      >
-        {optionsMenuAlignRightExample}
-      </Example>
-      <Example
-        heading="Options menu - plain with text"
-        className="is-expanded-dropdown"
-        handlebars={OptionsMenuPlainTextExampleRaw}
-      >
-        {optionsMenuPlainTextExample}
-      </Example>
-    </Documentation>
-  );
-};
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-single-expanded-example" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Options menu
+    </span>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
 ```
 
+```hbs title=Options-menu-disabled
+{{#> options-menu id="options-menu-single-disabled-example" options-menu--HasToggleIcon="true" options-menu-toggle--IsDisabled="true"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Disabled options menu
+    </span>
+  {{/options-menu-toggle}}
+{{/options-menu}}
+```
+
+```hbs title=Options-menu-multiple-options
+{{#> options-menu id="options-menu-multiple-example" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Sort by
+    </span>
+  {{/options-menu-toggle}}
+  {{> options-menu-multiple}}
+{{/options-menu}}
+
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-multiple-expanded-example" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Sort by
+    </span>
+  {{/options-menu-toggle}}
+  {{> options-menu-multiple}}
+{{/options-menu}}
+```
+     
+```hbs title=Options-menu-plain
+{{#> options-menu id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
+  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
+{{#> options-menu id="options-menu-plain-example"}}
+  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-plain-expanded-example"}}
+  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+```
+
+```hbs title=Options-menu-top
+{{#> options-menu options-menu--IsExpanded="true" options-menu--modifier="pf-m-top" id="options-menu-top-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Options menu
+    </span>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+```
+
+```hbs title=Options-menu-align-right
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-align-right-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
+  {{#> options-menu-toggle}}
+    <span class="pf-c-options-menu__toggle-text">
+      Options menu
+    </span>
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+```
+
+```hbs title=Options-menu-plain-with-text
+{{#> options-menu id="options-menu-disabled-text-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+    <span class="pf-c-options-menu__toggle-text">
+      Custom text
+    </span>
+    {{> options-menu-toggle-button aria-label="Options menu"}}
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
+{{#> options-menu id="options-menu-plain-text-example" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+    <span class="pf-c-options-menu__toggle-text">
+      Custom text
+    </span>
+    {{> options-menu-toggle-button aria-label="Options menu"}}
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+
+{{#> options-menu options-menu--IsExpanded="true" id="options-menu-plain-text-expanded-example" options-menu--IsText="true"}}
+  {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
+    <span class="pf-c-options-menu__toggle-text">
+      Custom text
+    </span>
+    {{> options-menu-toggle-button aria-label="Options menu"}}
+  {{/options-menu-toggle}}
+  {{> options-menu-single}}
+{{/options-menu}}
+```
+
+# Documentation
 ## Accessibility
 
 *This section to be updated once the React implementation is complete.*

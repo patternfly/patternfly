@@ -4,68 +4,532 @@ section: components
 cssPrefix: pf-c-wizard
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import wizardExampleRaw from '!!raw-loader!./wizard-example.hbs';
-import wizardExpandedExampleRaw from '!!raw-loader!./wizard-expanded-example.hbs';
-import wizardFinishedExampleRaw from '!!raw-loader!./wizard-finished-example.hbs';
-import wizardFullWidthFullHeightExampleRaw from '!!raw-loader!./wizard-full-width-full-height-example.hbs';
-import wizardCompactNavExampleRaw from '!!raw-loader!./wizard-compact-nav-example.hbs';
-import wizardInPageExampleRaw from '!!raw-loader!./wizard-in-page-example.hbs';
-import WizardExample from './wizard-example.hbs';
-import WizardExpandedExample from './wizard-expanded-example.hbs';
-import WizardFinishedExample from './wizard-finished-example.hbs';
-import WizardFullWidthFullHeightExample from './wizard-full-width-full-height-example.hbs';
-import WizardCompactNavExample from './wizard-compact-nav-example.hbs';
-import WizardInPageExample from './wizard-in-page-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const wizardExample = WizardExample();
-  const wizardExpandedExample = WizardExpandedExample();
-  const wizardFinishedExample = WizardFinishedExample();
-  const wizardFullWidthFullHeightExample = WizardFullWidthFullHeightExample();
-  const wizardCompactNavExample = WizardCompactNavExample();
-  const wizardInPageExample = WizardInPageExample();
-  const headingText = 'Wizard';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Wizard" handlebars={wizardExampleRaw} fullPageOnly="true">
-        {wizardExample}
-      </Example>
-      <Example heading="Wizard - nav expanded (mobile)" handlebars={wizardExpandedExampleRaw} fullPageOnly="true">
-        {wizardExpandedExample}
-      </Example>
-      <Example heading="Wizard - finished" handlebars={wizardFinishedExampleRaw} fullPageOnly="true">
-        {wizardFinishedExample}
-      </Example>
-      <Example
-        heading="Wizard - full width/height"
-        handlebars={wizardFullWidthFullHeightExampleRaw}
-        fullPageOnly="true"
-      >
-        {wizardFullWidthFullHeightExample}
-      </Example>
-      <Example heading="Wizard - compact nav" handlebars={wizardCompactNavExampleRaw} fullPageOnly="true">
-        {wizardCompactNavExample}
-      </Example>
-      <Example
-        heading="Wizard - in page"
-        handlebars={wizardInPageExampleRaw}
-        className="is-extra-tall-body is-example-grow"
-      >
-        {wizardInPageExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Wizard isFullscreen
+{{#> wizard}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        <p>Wizard content goes here</p>
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{#> wizard-footer}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
 ```
 
+```hbs title=Wizard-nav-expanded-(mobile) isFullscreen
+{{#> wizard wizard--IsExpanded="true"}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+      {{#> wizard-toggle-list-item}}
+        {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+        Configuration
+        {{> wizard-toggle-separator}}
+      {{/wizard-toggle-list-item}}
+      {{#> wizard-toggle-list-item}}
+        Substep B
+      {{/wizard-toggle-list-item}}
+    {{/wizard-toggle-list}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{#> wizard-nav}}
+        {{#> wizard-nav-list}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Information
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+              Configuration
+            {{/wizard-nav-link}}
+            {{#> wizard-nav-list}}
+              {{#> wizard-nav-item}}
+                {{#> wizard-nav-link}}
+                  Substep A
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item}}
+                {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                  Substep B
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item}}
+                {{#> wizard-nav-link}}
+                  Substep C
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+            {{/wizard-nav-list}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Additional
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+              Review
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+        {{/wizard-nav-list}}
+      {{/wizard-nav}}
+      {{#> wizard-main}}
+        <p>Wizard content goes here</p>
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{#> wizard-footer}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+```hbs title=Wizard-finished isFullscreen
+{{#> wizard wizard--modifier="pf-m-finished"}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+      {{#> wizard-toggle-list-item}}
+        {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+        Configuration
+        {{> wizard-toggle-separator}}
+      {{/wizard-toggle-list-item}}
+      {{#> wizard-toggle-list-item}}
+        Substep B
+      {{/wizard-toggle-list-item}}
+    {{/wizard-toggle-list}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{#> wizard-nav}}
+        {{#> wizard-nav-list}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Information
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Configuration
+            {{/wizard-nav-link}}
+            {{#> wizard-nav-list}}
+              {{#> wizard-nav-item}}
+                {{#> wizard-nav-link}}
+                  Substep A
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item}}
+                {{#> wizard-nav-link}}
+                  Substep B
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item}}
+                {{#> wizard-nav-link}}
+                  Substep C
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+            {{/wizard-nav-list}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Additional
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Review
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+        {{/wizard-nav-list}}
+      {{/wizard-nav}}
+      {{#> wizard-main}}
+        {{#> bullseye}}
+          {{#> empty-state empty-state--modifier="pf-m-lg"}}
+            {{#> empty-state-icon empty-state-icon--type="cogs"}}{{/empty-state-icon}}
+            {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+              Configuration in progress
+            {{/title}}
+            {{#> empty-state-body}}
+              {{#> progress progress__value="33" progress--modifier="pf-m-singleline" progress__id="progress-singleline-example"}}{{/progress}}
+            {{/empty-state-body}}
+            {{#> empty-state-body}}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non pulvinar tortor. Maecenas sit amet pellentesque velit, eu eleifend mauris.
+            {{/empty-state-body}}
+            {{#> empty-state-secondary}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/empty-state-secondary}}
+          {{/empty-state}}
+        {{/bullseye}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{#> wizard-footer}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+```hbs title=Wizard-full-width/height isFullscreen
+{{#> wizard wizard--modifier="pf-m-full-width pf-m-full-height"}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        <p>Wizard content goes here</p>
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{#> wizard-footer}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+```hbs title=Wizard-compact-nav isFullscreen
+{{#> wizard wizard--modifier="pf-m-compact-nav"}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        <p>Wizard content goes here</p>
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{#> wizard-footer}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+```hbs title=Wizard-in-page isFullscreen
+{{#> wizard wizard--modifier="pf-m-in-page"}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        <p>Wizard content goes here</p>
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{#> wizard-footer}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+# Documentation
 ## Accessibility
 
 | Attribute | Applied to | Outcome |

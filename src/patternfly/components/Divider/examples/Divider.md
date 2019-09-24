@@ -4,42 +4,23 @@ section: experimental
 cssPrefix: pf-c-divider
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import DividerHrExampleRaw from '!!raw-loader!./divider-hr-example.hbs';
-import DividerLiExampleRaw from '!!raw-loader!./divider-li-example.hbs';
-import DividerDivExampleRaw from '!!raw-loader!./divider-div-example.hbs';
-import DividerHrExample from './divider-hr-example.hbs';
-import DividerLiExample from './divider-li-example.hbs';
-import DividerDivExample from './divider-div-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const dividerHrExample = DividerHrExample();
-  const dividerLiExample = DividerLiExample();
-  const dividerDivExample = DividerDivExample();
-  const headingText = 'Divider';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Divider <hr>" handlebars={DividerHrExampleRaw}>
-        {dividerHrExample}
-      </Example>
-      <Example heading="Divider <li>" handlebars={DividerLiExampleRaw}>
-        {dividerLiExample}
-      </Example>
-      <Example heading="Divider <div>" handlebars={DividerDivExampleRaw}>
-        {dividerDivExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Divider-<hr>
+{{#> divider}}{{/divider}}
 ```
 
+```hbs title=Divider-<li>
+<ul>
+  <li>List item one</li>
+  {{#> divider divider--type="li"}}{{/divider}}
+  <li>List item two</li>
+</ul>
+```
+
+```hbs title=Divider-<div>
+{{#> divider divider--type="div"}}{{/divider}}
+```
+
+# Documentation
 ## Overview
 
 The divider renders as an `<hr>` by default. It is possible to make the divider render as an `li` or a `div` to match the HTML5 specification and context of the divider.

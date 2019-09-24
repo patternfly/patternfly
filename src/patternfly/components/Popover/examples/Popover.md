@@ -3,57 +3,97 @@ title: Popover
 section: components
 cssPrefix: pf-c-popover
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
 
-import PopoverTopExampleRaw from '!!raw-loader!./popover-top-example.hbs';
-import PopoverRightExampleRaw from '!!raw-loader!./popover-right-example.hbs';
-import PopoverBottomExampleRaw from '!!raw-loader!./popover-bottom-example.hbs';
-import PopoverLeftExampleRaw from '!!raw-loader!./popover-left-example.hbs';
-import PopoverNoHeaderExampleRaw from '!!raw-loader!./popover-no-header-example.hbs';
-
-import PopoverTopExample from './popover-top-example.hbs';
-import PopoverRightExample from './popover-right-example.hbs';
-import PopoverBottomExample from './popover-bottom-example.hbs';
-import PopoverLeftExample from './popover-left-example.hbs';
-import PopoverNoHeaderExample from './popover-no-header-example.hbs';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const popoverTopExample = PopoverTopExample();
-  const popoverRightExample = PopoverRightExample();
-  const popoverBottomExample = PopoverBottomExample();
-  const popoverLeftExample = PopoverLeftExample();
-  const popoverNoHeaderExample = PopoverNoHeaderExample();
-  const headingText = 'Popover';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Popover top" handlebars={PopoverTopExampleRaw}>
-        {popoverTopExample}
-      </Example>
-      <Example heading="Popover right" handlebars={PopoverRightExampleRaw}>
-        {popoverRightExample}
-      </Example>
-      <Example heading="Popover bottom" handlebars={PopoverBottomExampleRaw}>
-        {popoverBottomExample}
-      </Example>
-      <Example heading="Popover left" handlebars={PopoverLeftExampleRaw}>
-        {popoverLeftExample}
-      </Example>
-      <Example heading="Popover no header/footer" handlebars={PopoverNoHeaderExampleRaw}>
-        {popoverNoHeaderExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Popover-top
+{{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-top-header"'}}
+      Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
 ```
 
+```hbs title=Popover-right
+{{#> popover popover--modifier="pf-m-right" popover--attribute='aria-labelledby="popover-right-header" aria-describedby="popover-right-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-right-header"'}}
+      Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-right-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+```hbs title=Popover-bottom
+{{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
+  {{#> popover-content}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+      {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-bottom-header"'}}
+        Popover header
+      {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-bottom-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+```hbs title=Popover-left
+{{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-left-header"'}}
+        Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-left-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+```hbs title=Popover-no-header/footer
+{{#> popover popover--modifier="pf-m-right" popover--attribute='aria-label="Popover with no header example" aria-describedby="popover-no-header-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-body popover-body--attribute='id="popover-no-header-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+  {{/popover-content}}
+{{/popover}}
+```
+      
+# Documentation
 ## Overview
 
 A popover is used to provide contextual information for another component on click.  The popover itself is made up of two main elements: arrow and content. The content element follows the pattern of the popover box component, with a close icon in the top right corner, as well as a header and body.  One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the popover component

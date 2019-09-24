@@ -3,28 +3,116 @@ title: Breadcrumb
 section: components
 cssPrefix: pf-c-breadcrumb
 ---
-import ExampleRaw from '!!raw-loader!./breadcrumb-example.hbs';
-import WithTitleExampleRaw from '!!raw-loader!./breadcrumb-with-title-example.hbs';
-import WithoutHomeLinkRaw from '!!raw-loader!./breadcrumb-without-home-link-example.hbs';
-import Example from './breadcrumb-example.hbs';
-import WithTitleExample from './breadcrumb-with-title-example.hbs';
-import WithoutHomeLink from './breadcrumb-without-home-link-example.hbs';
 
-<Example 
-  title="Breadcrumb" 
-  handlebars={ExampleRaw}
-  html={Example()} />
+```hbs title=Breadcrumb
+{{#> breadcrumb}}
+  {{#> breadcrumb-list}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section home
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link breadcrumb-link--current="true"}}
+        Section landing
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+  {{/breadcrumb-list}}
+{{/breadcrumb}}
+```
 
-<Example 
-  title="Breadcrumb without home link" 
-  handlebars={WithoutHomeLinkRaw}
-  html={WithoutHomeLink()} />
+```hbs title=Breadcrumb-without-home-link
+{{#> breadcrumb}}
+  {{#> breadcrumb-list}}
+    {{#> breadcrumb-item}}
+        Section home
+        {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link breadcrumb-link--current="true"}}
+        Section landing
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+  {{/breadcrumb-list}}
+{{/breadcrumb}}
+```
 
-<Example
-  title="Breadcrumb with heading"
-  handlebars={WithTitleExampleRaw}
-  html={WithTitleExample()} />
+```hbs title=Breadcrumb-with-heading
+{{#> breadcrumb}}
+  {{#> breadcrumb-list}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section home
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{#> breadcrumb-heading}}
+        {{#> breadcrumb-link breadcrumb-link--current="true"}}
+          Section title
+        {{/breadcrumb-link}}
+      {{/breadcrumb-heading}}
+    {{/breadcrumb-item}}
+  {{/breadcrumb-list}}
+{{/breadcrumb}}
+```
 
+# Documentation
 ## Overview
 A breadcrumb is a list of links to display a user's navigational hierarchy. The last item of the breadcrumb list indicates the current page's location.
 

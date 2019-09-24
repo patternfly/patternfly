@@ -4,136 +4,1562 @@ section: components
 cssPrefix: pf-c-table
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import tableSimpleExampleRaw from '!!raw-loader!./table-simple-example.hbs';
-import tableSortableExampleRaw from '!!raw-loader!./table-sortable-example.hbs';
-import tableSimpleWithCheckboxesExampleRaw from '!!raw-loader!./table-simple-with-checkboxes-example.hbs';
-import tableExpandableExampleRaw from '!!raw-loader!./table-expandable-example.hbs';
-import tableCompactExampleRaw from '!!raw-loader!./table-compact-example.hbs';
-import tableCompactNoBorderRowsExampleRaw from '!!raw-loader!./table-compact-no-border-rows-example.hbs';
-import tableCompactExpandableExampleRaw from '!!raw-loader!./table-compact-expandable-example.hbs';
-import tableWidthExampleRaw from '!!raw-loader!./table-width-example.hbs';
-import tableCompoundExpansionExampleRaw from '!!raw-loader!./table-compound-expansion-example.hbs';
-import tableHiddenVisibleExampleRaw from '!!raw-loader!./table-hidden-visible-example.hbs';
-import tableHeadersWrapExampleRaw from '!!raw-loader!./table-headers-wrap-example.hbs';
+```hbs title=Simple-table
+{{#> table table--id="simple-table" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-caption}}
+    This is the table caption
+  {{/table-caption}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th}}
+        Branches
+      {{/table-th}}
+      {{#> table-th}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
 
-import TableSimpleExample from './table-simple-example.hbs';
-import tableSimpleDoc from '../docs/table-simple.md';
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
 
-import TableSortableExample from './table-sortable-example.hbs';
-import tableSortableDoc from '../docs/table-sortable.md';
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
 
-import TableSimpleWithCheckboxesExample from './table-simple-with-checkboxes-example.hbs';
-import tableCheckboxesActionsDoc from '../docs/table-checkboxes-actions.md';
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
 
-import TableExpandableExample from './table-expandable-example.hbs';
-import tableExpandableDoc from '../docs/table-expandable.md';
-
-import TableCompactExample from './table-compact-example.hbs';
-import tableCompactDoc from '../docs/table-compact.md';
-
-import TableCompactNoBorderRowsExample from './table-compact-no-border-rows-example.hbs';
-import tableCompactNoBorderRowsDoc from '../docs/table-compact-no-border-rows.md';
-import TableCompactExpandableExample from './table-compact-expandable-example.hbs';
-import tableCompactExpandableDoc from '../docs/table-compact-expandable.md';
-
-import TableWidthExample from './table-width-example.hbs';
-import tableWidthDoc from '../docs/table-width.md';
-
-import TableCompoundExpansionExample from './table-compound-expansion-example.hbs';
-import tableCompoundExpansionDoc from '../docs/table-compound-expansion.md';
-
-import TableHiddenVisibleExample from './table-hidden-visible-example.hbs';
-import tableHiddenVisibleDoc from '../docs/table-hidden-visible.md';
-
-import TableHeadersWrapExample from './table-headers-wrap-example.hbs';
-import tableHeadersWrapDoc from '../docs/table-headers-wrap.md';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const tableSimpleExample = TableSimpleExample();
-  const tableSortableExample = TableSortableExample();
-  const tableExpandableExample = TableExpandableExample();
-  const tableCompactExample = TableCompactExample();
-  const tableCompactNoBorderRowsExample = TableCompactNoBorderRowsExample();
-  const tableCompactExpandableExample = TableCompactExpandableExample();
-  const tableSimpleWithCheckboxesExample = TableSimpleWithCheckboxesExample();
-  const tableWidthExample = TableWidthExample();
-  const tableCompoundExpansionExample = TableCompoundExpansionExample();
-  const tableHiddenVisibleExample = TableHiddenVisibleExample();
-  const tableHeadersWrapExample = TableHeadersWrapExample();
-  const headingText = 'Table';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Simple table" handlebars={tableSimpleExampleRaw} docs={tableSimpleDoc} minHeight="2em">
-        {tableSimpleExample}
-      </Example>
-      <Example heading="Sortable table" handlebars={tableSortableExampleRaw} docs={tableSortableDoc}>
-        {tableSortableExample}
-      </Example>
-      <Example
-        heading="Table with checkboxes and actions"
-        handlebars={tableSimpleWithCheckboxesExampleRaw}
-        docs={tableCheckboxesActionsDoc}
-      >
-        {tableSimpleWithCheckboxesExample}
-      </Example>
-      <Example heading="Expandable table" handlebars={tableExpandableExampleRaw} docs={tableExpandableDoc}>
-        {tableExpandableExample}
-      </Example>
-      <Example
-        heading="Table with compound expansion"
-        handlebars={tableCompoundExpansionExampleRaw}
-        docs={tableCompoundExpansionDoc}
-      >
-        {tableCompoundExpansionExample}
-      </Example>
-      <Example heading="Compact table" handlebars={tableCompactExampleRaw} docs={tableCompactDoc}>
-        {tableCompactExample}
-      </Example>
-      <Example
-        heading="Compact table with no borders"
-        handlebars={tableCompactNoBorderRowsExampleRaw}
-        docs={tableCompactNoBorderRowsDoc}
-      >
-        {tableCompactNoBorderRowsExample}
-      </Example>
-      <Example
-        heading="Compact expandable table"
-        handlebars={tableCompactExpandableExampleRaw}
-        docs={tableCompactExpandableDoc}
-      >
-        {tableCompactExpandableExample}
-      </Example>
-      <Example heading="Table with width modifiers" handlebars={tableWidthExampleRaw} docs={tableWidthDoc}>
-        {tableWidthExample}
-      </Example>
-      <Example
-        heading="Table with hidden/visible breakpoint modifiers"
-        handlebars={tableHiddenVisibleExampleRaw}
-        docs={tableHiddenVisibleDoc}
-      >
-        {tableHiddenVisibleExample}
-      </Example>
-      <Example
-        heading="Table with headers that wrap"
-        handlebars={tableHeadersWrapExampleRaw}
-        docs={tableHeadersWrapDoc}
-      >
-        {tableHeadersWrapExample}
-      </Example>
-    </Documentation>
-  );
-};
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
 ```
 
+```hbs title=Sortable-table
+{{#> table table--id="sortable-table" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Table-with-checkboxes-and-actions
+{{#> table table--id="simple-table-with-checkboxes" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div id="{{table--id}}-node1">Node 1</div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node2">Node 2</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node3">Node 3</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node4">Node 4</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Expandable-table
+{{#> table table--id="expandable-table" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--desc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node1">Node 1</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 1</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node2">Node 2</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 2</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node3">Node 3</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 3</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content3"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node4">Node 4</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 4</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content4"')}}
+        {{#> table-expandable-row-content}}
+          Expandable row content has no padding.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Table-with-compound-expansion
+{{#> table table--id="compound-expansion-table" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Last commit
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+          {{#> button-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/button-icon}}
+          10
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
+          {{#> button-icon}}
+            <i class="fas fa-code" aria-hidden="true"></i>
+          {{/button-icon}}
+          4
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
+          {{#> button-icon}}
+            <i class="fas fa-cube" aria-hidden="true"></i>
+          {{/button-icon}}
+          4
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>20 minutes</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-1')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-2')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-3')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
+          {{#> button-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/button-icon}}
+          3
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
+          {{#> button-icon}}
+            <i class="fas fa-code" aria-hidden="true"></i>
+          {{/button-icon}}
+          4
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
+          {{#> button-icon}}
+            <i class="fas fa-cube" aria-hidden="true"></i>
+          {{/button-icon}}
+          2
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>1 day ago</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-4')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-5')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-6')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+       {{#> table-th table-th--data-label="Repository name"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
+          {{#> button-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/button-icon}}
+          70
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
+          {{#> button-icon}}
+            <i class="fas fa-code" aria-hidden="true"></i>
+          {{/button-icon}}
+          15
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
+        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
+          {{#> button-icon}}
+            <i class="fas fa-cube" aria-hidden="true"></i>
+          {{/button-icon}}
+          12
+        {{/button}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>2 days ago</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-7')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-8')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-nested table--id=(concat table--id '-nested-table-9')}}
+        {{/table-nested}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Compact-table
+{{#> table table--id="compact-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Contributor
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Position
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Location
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last seen
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Numbers
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
+        Icons
+      {{/table-th}}
+      {{#> table-th}}{{/table-th}}
+      {{#> table-th}}{{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor"}}
+        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        CSS guru
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Not too sure
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last seen"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Numbers"}}
+        0556
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor"}}
+        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual design
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Raleigh
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last seen"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Numbers"}}
+        9492
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor"}}
+        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual design lead
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last seen"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Numbers"}}
+        9929
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor name"}}
+        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Interaction design
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2217
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Compact-table-with-no-borders
+{{#> table table--id="compact-no-border-rows-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Contributor
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Position
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Location
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last seen
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Numbers
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
+        Icons
+      {{/table-th}}
+      {{#> table-th}}{{/table-th}}
+      {{#> table-th}}{{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor"}}
+        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        CSS guru
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Not too sure
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last seen"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Numbers"}}
+        0556
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor"}}
+        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual design
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Raleigh
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last seen"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Numbers"}}
+        9492
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor"}}
+        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Visual design lead
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last seen"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Numbers"}}
+        9929
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Contributor name"}}
+        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Position"}}
+        Interaction design
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Location"}}
+        Westford
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        May 9, 2018
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2217
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+        <i class="fas fa-check"></i>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Action link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Compact-expandable-table
+{{#> table table--id="compact-expandable-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node1">Node 1</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
+        <div class="pf-c-table__expandable-row-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      {{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node2">Node 2</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node3'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node3">Node 3</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content3"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node4'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node4">Node 4</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content4"')}}
+        {{#> table-expandable-row-content}}
+          This content has no padding.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 ' table--id '-expandable-toggle5" id="' table--id '-expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node5'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node5">Node 5</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-5") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content5"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+
+```hbs title=Table-with-width-modifiers
+{{#> table table--id="width-table" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Check all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-node1">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div id="{{table--id}}-node1">Node 1</div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-node2">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node2">Node 2</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-node3">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node3">Node 3</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node4">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node4">Node 4</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Table-with-hiddne/visible-breakpoint-modifiers
+{{#> table table--modifier="pf-m-grid-lg" table--id="simple-table-hidden-visible" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-hidden-on-md pf-m-visible-on-lg"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-hidden pf-m-visible-on-sm"}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg" table-td--data-label="Repository name"}}
+        Visible only on md breakpoint
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden-on-md pf-m-visible-on-lg" table-td--data-label="Pull requests"}}
+        Hidden only on md breakpoint
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-sm" table-td--data-label="Last commit"}}
+        Hidden on xs breakpoint
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg" table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden-on-md pf-m-visible-on-lg" table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-sm" table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg" table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden-on-md pf-m-visible-on-lg" table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-sm" table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg" table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden-on-md pf-m-visible-on-lg" table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-hidden pf-m-visible-on-sm" table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+```hbs title=Table-with-headers-that-wrap
+{{#> table table--id="headers-wrap-table" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is an example of the table that has headers that wrap"'}}
+  {{#> table-caption}}
+    This is the table caption
+  {{/table-caption}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--modifier="pf-m-wrap"}}
+        This is a really long table header that goes on for a long time.
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-wrap"}}
+        This is a really long table header that goes on for a long time.
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-wrap"}}
+        This is a really long table header that goes on for a long time.
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-wrap"}}
+        This is a really long table header that goes on for a long time.
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-wrap"}}
+        This is a really long table header that goes on for a long time.
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+# Documentation
 ## Overview
 
 Because the table component is not used for layout and presents tabular data only, it requires the use of `role="grid"`. Expandable table content (`.pf-c-table__expandable-content`) is placed within a singular `<td>` per expandable row, that can span multiple columns.

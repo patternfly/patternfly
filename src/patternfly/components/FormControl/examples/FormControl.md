@@ -3,42 +3,65 @@ title: Form Control
 section: components
 cssPrefix: pf-c-form-control
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import FormControlInputExampleRaw from '!!raw-loader!./form-control-input-example.hbs';
-import FormControlSelectExampleRaw from '!!raw-loader!./form-control-select-example.hbs';
-import FormControlTextareaExampleRaw from '!!raw-loader!./form-control-textarea-example.hbs';
-import FormControlInputExample from './form-control-input-example.hbs';
-import FormControlSelectExample from './form-control-select-example.hbs';
-import FormControlTextareaExample from './form-control-textarea-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const formControlInputExample = FormControlInputExample();
-  const formControlSelectExample = FormControlSelectExample();
-  const formControlTextareaExample = FormControlTextareaExample();
-  const headingText = 'Form control';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Input example" handlebars={FormControlInputExampleRaw}>
-        {formControlInputExample}
-      </Example>
-      <Example heading="Select example" handlebars={FormControlSelectExampleRaw}>
-        {formControlSelectExample}
-      </Example>
-      <Example heading="Textarea example" handlebars={FormControlTextareaExampleRaw}>
-        {formControlTextareaExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Input-example
+{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="disabled" id="textInput1" aria-label="disabled input example"'}}
+{{/form-control}}
+<br />
+{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="standard" id="textInput2" aria-label="standard input example"'}}
+{{/form-control}}
+<br />
+{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="readonly" id="textInput3" aria-label="readonly input example"'}}
+{{/form-control}}
+<br />
+{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="error" id="textInput4" aria-invalid="true" aria-label="Error state input example"'}}
+{{/form-control}}
 ```
 
+```hbs title=Select-example
+{{#> form-control controlType="select" form-control--attribute='id="selectExample1" name="selectExample1" aria-label="select example"'}}
+  <option value="" selected>Please choose</option>
+  <option value="Mr">Mr</option>
+  <option value="Miss">Miss</option>
+  <option value="Mrs">Mrs</option>
+  <option value="Ms">Ms</option>
+  <option value="Dr">Dr</option>
+  <option value="Other">Other</option>
+{{/form-control}}
+<br />
+{{#> form-control controlType="select" form-control--attribute='id="selectExample2" name="selectExample2" aria-label="select group example"'}}
+  <optgroup label="Group 1">
+    <option value="Option 1">The first option</option>
+    <option value="Option 2" selected>The second option is selected by default</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option value="Option 3">The third option</option>
+    <option value="Option 4">The fourth option</option>
+  </optgroup>
+{{/form-control}}
+<br />
+{{#> form-control controlType="select" form-control--attribute='required aria-invalid="true" id="selectExample3" name="selectExample3" aria-label="error state select group example"'}}
+  <option value="">Make selection</option>
+  <optgroup label="Group 1">
+    <option value="Option 1">The first option</option>
+    <option value="Option 2">The second option</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option value="Option 3">The third option</option>
+    <option value="Option 4">The fourth option</option>
+  </optgroup>
+{{/form-control}}
+```
+
+```hbs title=Textarea-example
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea1" aria-label="textarea example"'}}
+{{/form-control}}
+<br />
+{{#> form-control controlType="textarea" form-control--attribute='required name="textarea" id="textarea2" aria-label="Error state textarea example" aria-invalid="true"'}}
+{{/form-control}}
+```
+
+# Documentation
 ## Overview
 
 Input, textarea, and select are provided in the form controls component for use cases outside of forms. If they are used without label text ensure some sort of label for assistive technologies. (for example: `aria-label`)

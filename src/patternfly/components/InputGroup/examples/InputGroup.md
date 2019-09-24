@@ -4,30 +4,103 @@ section: components
 cssPrefix: pf-c-input-group
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import InputgroupExampleRaw from '!!raw-loader!./input-group-example.hbs';
-import InputgroupExample from './input-group-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const inputGroupExample = InputgroupExample();
-  const headingText = 'Input group';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Inputgroup example" handlebars={InputgroupExampleRaw}>
-        {inputGroupExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Inputgroup-example
+{{#> input-group}}
+ {{#> button button--modifier="pf-m-secondary" button--attribute='id="textAreaButton1"'}}
+    Button
+  {{/button}}
+  {{#> form-control controlType="textarea" form-control--attribute='name="textarea1" id="textarea1" aria-label="textarea with buttons" aria-describedby="textAreaButton1"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-tertiary"}}
+    Button
+  {{/button}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+ {{#> form-control controlType="textarea" form-control--attribute='name="textarea2" id="textarea2" aria-label="textarea with button" aria-describedby="textAreaButton2"'}}
+{{/form-control}}
+   {{#> button button--modifier="pf-m-tertiary" button--attribute='id="textAreaButton2"'}}
+      Button
+    {{/button}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+  {{#> button button--modifier="pf-m-primary" button--attribute='id="textAreaButton3"'}}
+    Button
+  {{/button}}
+  {{#> button button--modifier="pf-m-secondary"}}
+    Button
+  {{/button}}
+  {{#> form-control controlType="textarea" form-control--attribute='name="textarea3" id="textarea3" aria-label="textarea with buttons" aria-describedby="textAreaButton3"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-tertiary"}}
+    Button
+  {{/button}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+  {{#> dropdown id="dropdown-example-collapsed1" dropdown--HasToggleIcon="true"}}
+    {{#> dropdown-toggle-text}}
+      Dropdown
+    {{/dropdown-toggle-text}}
+  {{/dropdown}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-secondary" button--attribute='id="inputDropdownButton1"'}}
+    Button
+  {{/button}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+ {{#> input-group-text inputGroupTextType="span" input-group-text--HasDollarSignIcon="true"}}
+ {{/input-group-text}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
+ {{/form-control}}
+{{#> input-group-text inputGroupTextType="span"}}
+   .00
+ {{/input-group-text}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example"'}}
+  {{/form-control}}
+ {{#> input-group-text inputGroupTextType="span" input-group-text--attribute='id="email-example"'}}
+   @example.com
+ {{/input-group-text}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+ {{#> input-group-text inputGroupTextType="span" input-group-text--HasAtIcon="true"  input-group-text--attribute='id="username"' aria-label="@"}}
+ {{/input-group-text}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
+{{/form-control}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+ {{#> input-group-text inputGroupTextType="label" input-group-text--HasCalendarIcon="true" input-group-text--attribute='for="textInput9"'}}
+ {{/input-group-text}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='type="date" id="textInput9" name="textInput9" aria-label="Date input example"'}}
+{{/form-control}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="search button for search input"'}}
+    <i class="fas fa-search" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
+<br />
+{{#> input-group}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput10" name="textInput10" aria-label="input example with popover"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="popover for input"'}}
+    <i class="fas fa-question-circle" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
 ```
 
+# Documentation
 ## Overview
 Use the input group to extend form controls by adding text, buttons, dropdowns, etc.
 

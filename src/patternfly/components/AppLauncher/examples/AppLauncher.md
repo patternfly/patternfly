@@ -4,55 +4,137 @@ section: components
 cssPrefix: pf-c-app-launcher
 ---
 
-import CollapsedExampleRaw from '!!raw-loader!./app-launcher-collapsed-example.hbs';
-import DisabledExampleRaw from '!!raw-loader!./app-launcher-disabled-example.hbs';
-import ExpandedExampleRaw from '!!raw-loader!./app-launcher-expanded-example.hbs';
-import AlignRightExampleRaw from '!!raw-loader!./app-launcher-align-right-example.hbs';
-import TopExampleRaw from '!!raw-loader!./app-launcher-top-example.hbs';
-import SectionsIconsExampleRaw from '!!raw-loader!./app-launcher-sections-icons-example.hbs';
-import CollapsedExample from './app-launcher-collapsed-example.hbs';
-import DisabledExample from './app-launcher-disabled-example.hbs';
-import ExpandedExample from './app-launcher-expanded-example.hbs';
-import AlignRightExample from './app-launcher-align-right-example.hbs';
-import TopExample from './app-launcher-top-example.hbs';
-import SectionsIconsExample from './app-launcher-sections-icons-example.hbs';
+```hbs title=App-launcher-collapsed
+{{#> app-launcher id="app-launcher-example"}}
+  {{#> app-launcher-menu}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
 
-<Example 
-  title="App launcher collapsed" 
-  handlebars={CollapsedExampleRaw} 
-  html={CollapsedExample()} />
-        
-<Example 
-  title="App launcher disabled" 
-  handlebars={DisabledExampleRaw} 
-  html={DisabledExample()} />
-  
-<Example 
-  title="App launcher expanded" 
-  handlebars={ExpandedExampleRaw} 
-  minHeight="15em" 
-  html={ExpandedExample()} />
-  
-<Example
-  className="is-align-right"
-  title="App launcher align right"
-  handlebars={AlignRightExampleRaw}
-  minHeight="15em"
-  html={AlignRightExample()}
-/>
-  
-<Example 
-  className="is-expanded-top" 
-  title="App launcher top" 
-  handlebars={TopExampleRaw}
-  html={TopExample()} />
-  
-<Example
-  title="App launcher w/ sections and icons"
-  handlebars={AppLauncherSectionsIconsExampleRaw}
-  minHeight="30em"
-  html={SectionsIconsExample()}
-/>
+```hbs title=App-launcher-disabled 
+{{#> app-launcher id="app-launcher-example-disabled" app-launcher--IsDisabled="true"}}
+  {{#> app-launcher-menu}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
+```hbs title=App-launcher-expanded
+{{#> app-launcher id="app-launcher-example-expanded" app-launcher--IsExpanded="true"}}
+  {{#> app-launcher-menu}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+
+```hbs title=App-launcher-align-right
+{{#> app-launcher id="app-launcher-example-align-right" app-launcher--IsExpanded="true"}}
+  {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
+```hbs title=App-launcher-top
+{{#> app-launcher id="app-launcher-example-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
+  {{#> app-launcher-menu}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
+```hbs title=App-launcher-w/-sections and icons
+{{#> app-launcher id="app-launcher-example-sections-icons" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+  {{#> app-launcher-menu}}
+    {{#> app-launcher-group}}
+      <ul>
+        <li>
+          {{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}
+            {{#> app-launcher-menu-item-icon}}
+              <img src="/assets/images/pf-logo-small.svg" alt="">
+            {{/app-launcher-menu-item-icon}}
+            {{#> app-launcher-menu-item-text}}
+              Link not in group
+            {{/app-launcher-menu-item-text}}
+          {{/app-launcher-menu-item}}
+        </li>
+      </ul>
+    {{/app-launcher-group}}
+    {{#> divider}}{{/divider}}
+    {{#> app-launcher-group}}
+      {{#> app-launcher-group-title}}
+        Group 1
+      {{/app-launcher-group-title}}
+      <ul>
+        <li>
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
+            {{#> app-launcher-menu-item-icon}}
+              <img src="/assets/images/pf-logo-small.svg" alt="">
+            {{/app-launcher-menu-item-icon}}
+            {{#> app-launcher-menu-item-text}}
+              Group 1 link
+            {{/app-launcher-menu-item-text}}
+            {{> app-launcher-menu-item-external-icon}}
+          {{/app-launcher-menu-item}}
+        </li>
+        <li>
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
+            {{#> app-launcher-menu-item-icon}}
+              <img src="/assets/images/pf-logo-small.svg" alt="">
+            {{/app-launcher-menu-item-icon}}
+            {{#> app-launcher-menu-item-text}}
+              Group 1 link
+            {{/app-launcher-menu-item-text}}
+            {{> app-launcher-menu-item-external-icon}}
+          {{/app-launcher-menu-item}}
+        </li>
+      </ul>
+    {{/app-launcher-group}}
+    {{#> divider}}{{/divider}}
+    {{#> app-launcher-group}}
+      {{#> app-launcher-group-title}}
+        Group 2
+      {{/app-launcher-group-title}}
+      <ul>
+        <li>
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
+            {{#> app-launcher-menu-item-icon}}
+              <img src="/assets/images/pf-logo-small.svg" alt="">
+            {{/app-launcher-menu-item-icon}}
+            {{#> app-launcher-menu-item-text}}
+              Group 2 link
+            {{/app-launcher-menu-item-text}}
+            {{> app-launcher-menu-item-external-icon}}
+          {{/app-launcher-menu-item}}
+        </li>
+        <li>
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
+            {{#> app-launcher-menu-item-icon}}
+              <img src="/assets/images/pf-logo-small.svg" alt="">
+            {{/app-launcher-menu-item-icon}}
+            {{#> app-launcher-menu-item-text}}
+              Group 2 link
+            {{/app-launcher-menu-item-text}}
+            {{> app-launcher-menu-item-external-icon}}
+          {{/app-launcher-menu-item}}
+        </li>
+      </ul>
+    {{/app-launcher-group}}
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
+# Documentation
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |

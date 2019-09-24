@@ -4,42 +4,60 @@ section: components
 cssPrefix: pf-c-list
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import listUnorderedExampleRaw from '!!raw-loader!./list-unordered-example.hbs';
-import listOrderedExampleRaw from '!!raw-loader!./list-ordered-example.hbs';
-import listInlineExampleRaw from '!!raw-loader!./list-inline-example.hbs';
-import ListUnorderedExample from './list-unordered-example.hbs';
-import ListOrderedExample from './list-ordered-example.hbs';
-import ListInlineExample from './list-inline-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const listUnorderedExample = ListUnorderedExample();
-  const listOrderedExample = ListOrderedExample();
-  const listInlineExample = ListInlineExample();
-  const headingText = 'List';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Unordered list" handlebars={listUnorderedExampleRaw}>
-        {listUnorderedExample}
-      </Example>
-      <Example heading="Ordered list" handlebars={listOrderedExampleRaw}>
-        {listOrderedExample}
-      </Example>
-      <Example heading="List inline" handlebars={listInlineExampleRaw}>
-        {listInlineExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Unordered-list
+{{#> list}}
+  <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+  <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+  <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.
+    {{#> list}}
+    <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+    <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+    <li>Ut venenatis, nisl scelerisque.
+      {{#> list list--type="ol"}}
+      <li>Donec blandit a lorem id convallis.</li>
+      <li>Cras gravida arcu at diam gravida gravida.</li>
+      <li>Integer in volutpat libero.</li>
+      {{/list}}
+    </li>
+    {{/list}}
+  </li>
+  <li>Ut non enim metus.</li>
+{{/list}}
 ```
 
+```hbs title=Ordered-list
+{{#> list list--type="ol"}}
+  <li>Donec blandit a lorem id convallis.</li>
+  <li>Cras gravida arcu at diam gravida gravida.</li>
+  <li>Integer in volutpat libero.</li>
+  <li>Donec a diam tellus.</li>
+  <li>Etiam auctor nisl et.
+    {{#> list newcontext}}
+    <li>Donec blandit a lorem id convallis.</li>
+    <li>Cras gravida arcu at diam gravida gravida.</li>
+    <li>Integer in volutpat libero.
+      {{#> list list--type="ol"}}
+      <li>Donec blandit a lorem id convallis.</li>
+      <li>Cras gravida arcu at diam gravida gravida.</li>
+      {{/list}}
+    </li>
+    </li>
+    {{/list}}
+  <li>Aenean nec tortor orci.</li>
+  <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+  <li>Vivamus maximus ultricies pulvinar.</li>
+{{/list}}
+```
+
+```hbs title=List-inline
+{{#> list list--modifier="pf-m-inline"}}
+  <li>Inline list item 1</li>
+  <li>Inline list item 2</li>
+  <li>Inline list item 3</li>
+{{/list}}
+```
+
+# Documentation
 ## Overview
 
 Non-inline lists can be nested up to any level.

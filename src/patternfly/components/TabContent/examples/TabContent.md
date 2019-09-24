@@ -4,30 +4,22 @@ section: components
 cssPrefix: pf-c-tab-content
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import tabContentExampleRaw from '!!raw-loader!./tab-content-example.hbs';
-import TabcontentExample from './tab-content-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const tabContentExample = TabcontentExample();
-  const headingText = 'Tab content';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Tab content" handlebars={tabContentExampleRaw}>
-        {tabContentExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Tab-content
+{{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tab1-panel"'}}
+  Panel 1
+{{/tab-content}}
+{{#> tab-content tab-content--attribute='id="tab2-panel"'}}
+  Panel 2
+{{/tab-content}}
+{{#> tab-content tab-content--attribute='id="tab3-panel"'}}
+  Panel 3
+{{/tab-content}}
+{{#> tab-content tab-content--attribute='id="tab4-panel"'}}
+  Panel 4
+{{/tab-content}}
 ```
 
+# Documentation
 ## Overview
 
 Tab content should be used with the [tabs component](/components/Tabs/examples/).

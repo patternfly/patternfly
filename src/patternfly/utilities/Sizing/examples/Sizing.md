@@ -2,78 +2,98 @@
 title: Sizing
 section: components
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
 
-// Raw
-import sizingExampleWidthPercentRaw from '!!raw-loader!./sizing-width-percent.hbs';
-import sizingExampleWidthViewportRaw from '!!raw-loader!./sizing-width-viewport.hbs';
-import sizingExampleHeightPercentRaw from '!!raw-loader!./sizing-height-percent.hbs';
-import sizingExampleHeightViewportRaw from '!!raw-loader!./sizing-height-viewport.hbs';
-
-// Width
-import SizingExampleWidthPercent from './sizing-width-percent.hbs';
-import SizingExampleWidthViewport from './sizing-width-viewport.hbs';
-import sizingWidthPercentDocs from '../docs/sizing-width-percent.md';
-import sizingWidthViewportDocs from '../docs/sizing-width-viewport.md';
-
-// Height
-import SizingExampleHeightPercent from './sizing-height-percent.hbs';
-import SizingExampleHeightViewport from './sizing-height-viewport.hbs';
-import sizingHeightPercentDocs from '../docs/sizing-height-percent.md';
-import sizingHeightViewportDocs from '../docs/sizing-height-viewport.md';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-export const headingText = 'Sizing';
-
-export default (props) => {
-  const sizingExampleWidthPercent = SizingExampleWidthPercent();
-  const sizingExampleWidthViewport = SizingExampleWidthViewport();
-  const sizingExampleHeightPercent = SizingExampleHeightPercent();
-  const sizingExampleHeightViewport = SizingExampleHeightViewport();
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example
-        heading="Width -  base and percentage units"
-        handlebars={sizingExampleWidthPercentRaw}
-        docs={sizingWidthPercentDocs}
-      >
-        {sizingExampleWidthPercent}
-      </Example>
-      <Example
-        heading="Width - viewport units"
-        fullPageOnly="true"
-        handlebars={sizingExampleWidthViewportRaw}
-        docs={sizingWidthViewportDocs}
-      >
-        {sizingExampleWidthViewport}
-      </Example>
-      <Example
-        heading="Height -  base and percentage units"
-        handlebars={sizingExampleHeightPercentRaw}
-        docs={sizingHeightPercentDocs}
-        className="is-tall-body"
-      >
-        {sizingExampleHeightPercent}
-      </Example>
-      <Example
-        heading="Height - viewport units"
-        fullPageOnly="true"
-        handlebars={sizingExampleHeightViewportRaw}
-        docs={sizingHeightViewportDocs}
-      >
-        {sizingExampleHeightViewport}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Width-base-and-percentage-units
+{{#> sizing sizing--modifier="pf-u-w-0"}}
+  .pf-u-w-0
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-25"}}
+  .pf-u-w-25
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-50"}}
+  .pf-u-w-50
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-75"}}
+  .pf-u-w-75
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-100"}}
+  .pf-u-w-100
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-initial"}}
+  .pf-u-w-initial (auto)
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-inherit"}}
+  .pf-u-w-inherit
+{{/sizing}}
 ```
 
+```hbs title=Width-viewport-units isFullscreen
+{{#> sizing sizing--modifier="pf-u-w-25vw"}}
+  .pf-u-w-25vw
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-33vw"}}
+  .pf-u-w-33vw
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-50vw"}}
+  .pf-u-w-50vw
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-66vw"}}
+  .pf-u-w-66vw
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-75vw"}}
+  .pf-u-w-75vw
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-w-100vw"}}
+  .pf-u-w-100vw
+{{/sizing}}
+```
+
+```hbs title=Height-base-and-percentage-units
+{{#> sizing sizing--modifier="pf-u-h-0 pf-u-display-inline-block"}}
+  .pf-u-h-0
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-25 pf-u-display-inline-block"}}
+  .pf-u-h-25
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-50 pf-u-display-inline-block"}}
+  .pf-u-h-50
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-75 pf-u-display-inline-block"}}
+  .pf-u-h-75
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-100 pf-u-display-inline-block"}}
+  .pf-u-h-100
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-initial pf-u-display-inline-block"}}
+  .pf-u-h-initial (auto)
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-inherit pf-u-display-inline-block"}}
+  .pf-u-h-inherit
+{{/sizing}}
+```
+
+```hbs title=Height-viewport-units isFullscreen
+{{#> sizing sizing--modifier="pf-u-h-25vh pf-u-display-inline-block"}}
+  .pf-u-h-25vh
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-33vh pf-u-display-inline-block"}}
+  .pf-u-h-33vh
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-50vh pf-u-display-inline-block"}}
+  .pf-u-h-50vh
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-66vh pf-u-display-inline-block"}}
+  .pf-u-h-66vh
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-75vh pf-u-display-inline-block"}}
+  .pf-u-h-75vh
+{{/sizing}}
+{{#> sizing sizing--modifier="pf-u-h-100vh pf-u-display-inline-block"}}
+  .pf-u-h-100vh
+{{/sizing}}
+```
+
+# Documentation
 ## Usage note
 
 These utilities are not recommended for general layout purposes. They should primarily be used to enable responsive behaviors of certain components through breakpoints.

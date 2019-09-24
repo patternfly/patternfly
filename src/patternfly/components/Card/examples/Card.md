@@ -4,72 +4,195 @@ section: components
 cssPrefix: pf-c-card
 ---
 
-import BasicExampleRaw from '!!raw-loader!./card-basic-example.hbs';
-import NoFooterExampleRaw from '!!raw-loader!./card-no-footer-example.hbs';
-import NoHeaderExampleRaw from '!!raw-loader!./card-no-header-example.hbs';
-import ContentOnlyExampleRaw from '!!raw-loader!./card-content-only-example.hbs';
-import MultipleBodyExampleRaw from '!!raw-loader!./card-multiple-body-example.hbs';
-import FillExampleRaw from '!!raw-loader!./card-no-fill-example.hbs';
-import CompactExampleRaw from '!!raw-loader!./card-compact-example.hbs';
-import HoverExampleRaw from '!!raw-loader!./card-hover-example.hbs';
-import ImgActionRaw from '!!raw-loader!./card-img-action.hbs';
-import BasicExample from './card-basic-example.hbs';
-import NoFooterExample from './card-no-footer-example.hbs';
-import NoHeaderExample from './card-no-header-example.hbs';
-import ContentOnlyExample from './card-content-only-example.hbs';
-import MultipleBodyExample from './card-multiple-body-example.hbs';
-import FillExample from './card-no-fill-example.hbs';
-import CompactExample from './card-compact-example.hbs';
-import HoverExample from './card-hover-example.hbs';
-import ImgActionExample from './card-img-action.hbs';
+```hbs title=Card
+{{#> card}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example 
-  title="Card" 
-  handlebars={BasicExampleRaw}
-  html={BasicExample()} />
+```hbs title=Card-with-image-and-action
+Example with image and actions in card head
+{{#> card card--id="card-action-example-1"}}
+  {{#> card-head}}
+    <span>img goes here</span>
+    {{#> card-actions}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+    {{/card-actions}}
+  {{/card-head}}
+  {{#> card-header card-header--attribute=(concat 'id="' card--id '-check-label"')}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+<br>
+<br>
+Example with card header in card head
+{{#> card card--id="card-action-example-2"}}
+  {{#> card-head}}
+    {{#> card-actions}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+    {{/card-actions}}
+    {{#> card-header card-header--attribute=(concat 'id="' card--id '-check-label"')}}
+      This is a really really really really really really really really really really long header
+    {{/card-header}}
+  {{/card-head}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+<br>
+<br>
+Example with only actions in card head (no header/footer)
+{{#> card card--id="card-action-example-3"}}
+  {{#> card-head}}
+    {{#> card-actions}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+    {{/card-actions}}
+  {{/card-head}}
+  {{#> card-body card-body--attribute=(concat 'id="' card--id '-check-label"')}}
+    This is the card body, there is only actions in the card head.
+  {{/card-body}}
+{{/card}}
+<br>
+<br>
+Example with only image in the card head
+{{#> card}}
+  {{#> card-head}}
+    <span>img goes here</span>
+  {{/card-head}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example 
-  title="Card with image and action" 
-  handlebars={ImgActionRaw}
-  html={ImgActionExample()} />
+```hbs title=Card-with-no-footer
+{{#> card}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    This card has no footer
+  {{/card-body}}
+{{/card}}
+```
 
-<Example 
-  title="Card with no footer" 
-  handlebars={NoFooterExampleRaw}
-  html={NoFooterExample()} />
+```hbs title=Card-with-no-header
+{{#> card}}
+  {{#> card-body}}
+    This card has no header
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example 
-  title="Card with no header" 
-  handlebars={NoHeaderExampleRaw}
-  html={NoHeaderExample()} />
+```hbs title=Card-with-only-a-content-section
+{{#> card}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+{{/card}}
+```
 
-<Example 
-  title="Card with only a content section" 
-  handlebars={ContentOnlyExampleRaw}
-  html={ContentOnlyExample()} />
+```hbs title=Card-with-multiple-body-sections
+{{#> card}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example 
-  title="Card with multiple body sections" 
-  handlebars={MultipleBodyExampleRaw}
-  html={MultipleBodyExample()} />
+```hbs title=Card-with-only-one-body-that-fills
+{{#> card}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body card-body--modifier="pf-m-no-fill"}}
+    Body pf-m-no-fill
+  {{/card-body}}
+  {{#> card-body card-body--modifier="pf-m-no-fill"}}
+    Body pf-m-no-fill
+  {{/card-body}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example
-  title="Card with only one body that fills"
-  handlebars={FillExampleRaw}
-  minHeight="30em"
-  className="is-height-flex-column-grow"
-  html={FillExample()} />
+```hbs title=Card-compact-example
+{{#> card card--modifier="pf-m-compact"}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example 
-  title="Card compact example" 
-  handlebars={CompactExampleRaw}
-  html={CompactExample()} />
+```hbs title=Card-hover-example
+{{#> card card--modifier="pf-m-hoverable"}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
 
-<Example 
-  title="Card hover example" 
-  handlebars={HoverExampleRaw}
-  html={HoverExample()} />
-
+# Documentation
 ## Overview
 
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.

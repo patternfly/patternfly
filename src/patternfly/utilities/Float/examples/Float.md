@@ -2,30 +2,19 @@
 title: Float
 section: utilities
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import floatSimpleExampleRaw from '!!raw-loader!./float-simple-example.hbs';
-import FloatSimpleExample from './float-simple-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const floatSimpleExample = FloatSimpleExample();
-  const headingText = 'Float';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Float simple" handlebars={floatSimpleExampleRaw}>
-        {floatSimpleExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Float-simple
+{{#> float float--type="left"}}
+  Float left
+{{/float}}
+{{#> float float--type="right"}}
+  Float right
+{{/float}}
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, odit fugit eaque ad assumenda fuga alias aut ipsum repudiandae enim pariatur ullam distinctio omnis dolorem at voluptatum saepe, beatae officiis?
+</p>
 ```
 
+# Documentation
 ## Overview
 
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-text-left-on-lg**

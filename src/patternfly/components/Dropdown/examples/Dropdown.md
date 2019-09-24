@@ -3,99 +3,116 @@ title: Dropdown
 section: components
 cssPrefix: pf-c-dropdown
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import DropdownExpandedRaw from '!!raw-loader!./dropdown-expanded-example.hbs';
-import DropdownCollapsedRaw from '!!raw-loader!./dropdown-collapsed-example.hbs';
-import DropdownDisabledRaw from '!!raw-loader!./dropdown-disabled-example.hbs';
-import DropdownKebabRaw from '!!raw-loader!./dropdown-kebab-example.hbs';
-import DropdownKebabAlignRightRaw from '!!raw-loader!./dropdown-kebab-align-right-example.hbs';
-import DropdownAlignRightRaw from '!!raw-loader!./dropdown-align-right-example.hbs';
-import DropdownTopRaw from '!!raw-loader!./dropdown-top-example.hbs';
-import DropdownSplitButtonRaw from '!!raw-loader!./dropdown-split-button-example.hbs';
-import DropdownGroupsRaw from '!!raw-loader!./dropdown-groups-example.hbs';
-import DropdownPanelRaw from '!!raw-loader!./dropdown-panel-example.hbs';
-import DropdownPrimaryRaw from '!!raw-loader!./dropdown-primary-example.hbs';
-import DropdownExpanded from './dropdown-expanded-example.hbs';
-import DropdownCollapsed from './dropdown-collapsed-example.hbs';
-import DropdownDisabled from './dropdown-disabled-example.hbs';
-import DropdownKebab from './dropdown-kebab-example.hbs';
-import DropdownKebabAlignRight from './dropdown-kebab-align-right-example.hbs';
-import DropdownAlignRight from './dropdown-align-right-example.hbs';
-import DropdownTop from './dropdown-top-example.hbs';
-import DropdownSplitButton from './dropdown-split-button-example.hbs';
-import DropdownGroups from './dropdown-groups-example.hbs';
-import DropdownPanel from './dropdown-panel-example.hbs';
-import DropdownPrimary from './dropdown-primary-example.hbs';
 
-import DropdownPanelDoc from '../docs/dropdown-panel.md';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const dropdownExpanded = DropdownExpanded();
-  const dropdownCollapsed = DropdownCollapsed();
-  const dropdownDisabled = DropdownDisabled();
-  const dropdownKebab = DropdownKebab();
-  const dropdownKebabAlignRight = DropdownKebabAlignRight();
-  const dropdownAlignRight = DropdownAlignRight();
-  const dropdownTop = DropdownTop();
-  const dropdownSplitButton = DropdownSplitButton();
-  const dropdownGroups = DropdownGroups();
-  const dropdownPanel = DropdownPanel();
-  const dropdownPrimary = DropdownPrimary();
-  const headingText = 'Dropdown';
-
-  const styles = {
-    height: '13em',
-  };
-
-  return (
-    <Documentation data={props} style={styles} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example className="is-expanded-dropdown" heading="Dropdown (expanded)" handlebars={DropdownExpandedRaw}>
-        {dropdownExpanded}
-      </Example>
-      <Example heading="Dropdown (collapsed)" handlebars={DropdownCollapsedRaw}>
-        {dropdownCollapsed}
-      </Example>
-      <Example heading="Dropdown (disabled)" handlebars={DropdownDisabledRaw}>
-        {dropdownDisabled}
-      </Example>
-      <Example className="is-expanded-dropdown" heading="Kebab" handlebars={DropdownKebabRaw}>
-        {dropdownKebab}
-      </Example>
-      <Example
-        className="is-expanded-dropdown is-align-right"
-        heading="Kebab align right"
-        handlebars={DropdownKebabAlignRightRaw}>
-        {dropdownKebabAlignRight}
-      </Example>
-      <Example className="is-expanded-dropdown is-align-right" heading="Align right" handlebars={DropdownAlignRightRaw}>
-        {dropdownAlignRight}
-      </Example>
-      <Example className="is-expanded-top" heading="Top" handlebars={DropdownTopRaw}>
-        {dropdownTop}
-      </Example>
-      <Example className="is-expanded-dropdown" heading="Split button" handlebars={DropdownSplitButtonRaw}>
-        {dropdownSplitButton}
-      </Example>
-      <Example className="is-extra-tall-body" heading="Dropdown with groups" handlebars={DropdownGroupsRaw}>
-        {dropdownGroups}
-      </Example>
-      <Example className="is-expanded-dropdown" heading="Dropdown panel" handlebars={DropdownPanelRaw} docs={DropdownPanelDoc}>
-        {dropdownPanel}
-      </Example>
-      <Example className="is-expanded-dropdown" heading="Dropdown - primary toggle" handlebars={DropdownPrimaryRaw}>
-        {dropdownPrimary}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Dropdown-(expanded)
+{{#> dropdown id="dropdown-example-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Expanded dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
 ```
 
+```hbs title=Dropdown-(collapsed)
+{{#> dropdown id="dropdown-example-collapsed"  dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Collapsed dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+```hbs title=Dropdown-(disabled)
+{{#> dropdown id="dropdown-example-disabled" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true" dropdown-toggle--IsDisabled="true"}}
+  {{#> dropdown-toggle-text}}
+    Disabled dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+```hbs title=Kebab
+{{#> dropdown id="dropdown-example-kebab-disabled" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions" dropdown-toggle--IsDisabled="true"}}{{/dropdown}}
+{{#> dropdown id="dropdown-example-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+{{#> dropdown id="dropdown-example-kebab-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+```
+
+```hbs title=Kebab-align-right
+{{#> dropdown id="dropdown-example-kebab-right-aligned" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+{{/dropdown}}
+```
+
+```hbs title=Align-right
+{{#> dropdown id="dropdown-example-rightAligned" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown-menu--modifier="pf-m-align-right"}}
+  {{#> dropdown-toggle-text}}
+    Right
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+```hbs title=Top
+{{#> dropdown id="dropdown-example-top-collapsed" dropdown--IsActionMenu="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Top
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+{{#> dropdown id="dropdown-example-top-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Top
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+```hbs title=Split-button
+{{#> dropdown dropdown--IsSplitButton="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-disabled-example-button"}}
+  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-disabled-example-check" aria-label="Select all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-disabled-example-button" aria-label="Select"}}
+{{/dropdown}}
+
+{{#> dropdown dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-example-button"}}
+  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-example-check" aria-label="Select all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-example-button" aria-label="Select"}}
+{{/dropdown}}
+
+{{#> dropdown dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-expanded-example-button"}}
+  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-expanded-example-check" aria-label="Select all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-expanded-example-button"  aria-label="Select"}}
+{{/dropdown}}
+
+{{#> dropdown dropdown--IsSplitButton="true" dropdown--IsSplitButtonText="10 selected" dropdown--CheckboxIsChecked="true" dropdown--IsBulkSelect="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-with-text-example-button"}}
+  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-with-text-example-check" aria-label="Unselect all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-with-text-example-button"  aria-label="Select"}}
+{{/dropdown}}
+```
+
+```hbs title=Dropdown-with-groups
+{{#> dropdown id="dropdown-groups-example-expanded" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown--IsGroupsMenu="true"}}
+  {{#> dropdown-toggle-text}}
+    Groups
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+```hbs title=Dropdown-panel
+{{#> dropdown id="dropdown-basic-example-expanded" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Expanded dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+```hbs title=Dropdown-primary-toggle
+{{#> dropdown id="dropdown-primary-example" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Collapsed dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+
+{{#> dropdown id="dropdown-primary-expanded-example" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Expanded dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
+# Documentation
 ## Overview
 
 The dropdown menu can contain either links or buttons, depending on the expected behavior when clicking the menu item. If you are using the menu item to navigate to another page, then menu item is a link. Otherwise, use a button for the menu item.

@@ -2,35 +2,59 @@
 title: Box Shadow
 section: utilities
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import boxShadowSimpleExampleRaw from '!!raw-loader!./box-shadow-simple-example.hbs';
-import BoxshadowSimpleExample from './box-shadow-simple-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const boxShadowSimpleExample = BoxshadowSimpleExample();
-  const headingText = 'Box shadow';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example
-        className="box-shadow"
-        heading="Boxshadow utility"
-        handlebars={boxShadowSimpleExampleRaw}
-        minHeight="20em"
-      >
-        {boxShadowSimpleExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Boxshadow-utility
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}
+  Box shadow small
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-top"}}
+  Box shadow small, top
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-right"}}
+  Box shadow small, right
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-bottom"}}
+  Box shadow small, bottom
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-left"}}
+  Box shadow small, left
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md"}}
+  Box shadow medium
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-top"}}
+  Box shadow medium, top
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-right"}}
+  Box shadow medium, right
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-bottom"}}
+  Box shadow medium, bottom
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-left"}}
+  Box shadow medium, left
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg"}}
+  Box shadow large
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-top"}}
+  Box shadow large, top
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-right"}}
+  Box shadow large, right
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-bottom"}}
+  Box shadow large, bottom
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-left"}}
+  Box shadow large, left
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-inset"}}
+  Box shadow inset
+{{/box-shadow}}
 ```
 
+# Documentation
 ## Overview
 
 Box shadow utility

@@ -3,49 +3,117 @@ title: Data List
 section: demos
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import dataListSimpleDemoRaw from '!!raw-loader!./data-list-simple-demo.hbs';
-import dataListActionableDemoRaw from '!!raw-loader!./data-list-actionable-demo.hbs';
-import dataListExpandableDemoRaw from '!!raw-loader!./data-list-expandable-demo.hbs';
-import dataListSimpleWithoutPaginationDemoRaw from '!!raw-loader!./data-list-simple-without-pagination-demo.hbs';
-import DataListSimpleDemo from './data-list-simple-demo.hbs';
-import DataListActionableDemo from './data-list-actionable-demo.hbs';
-import DataListExpandableDemo from './data-list-expandable-demo.hbs';
-import DataListSimpleWithoutPaginationDemo from './data-list-simple-without-pagination-demo.hbs';
+```hbs title=Data-list-simple-demo isFullscreen
+{{#> page page--id="page-layout-data-list-simple"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> data-list-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> data-list-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+      {{> data-list-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> data-list-toolbar}}
+        {{> data-list-simple-data-list}}
+        {{> data-list-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-import docs from '../docs/code.md';
+```hbs title=Data-list-actionable-demo isFullscreen
+{{#> page page--id="page-layout-data-list-actionable"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> data-list-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> data-list-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+      {{> data-list-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> data-list-toolbar}}
+        {{> data-list-actionable-data-list}}
+        {{> data-list-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-export const Docs = docs;
+```hbs title=Data-list-expandable-demo isFullscreen
+{{#> page page--id="page-layout-data-list-expandable"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> data-list-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> data-list-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+      {{> data-list-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> data-list-toolbar}}
+        {{> data-list-expandable-data-list}}
+        {{> data-list-pagination}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-export default props => {
-  const dataListSimpleDemo = DataListSimpleDemo();
-  const dataListActionableDemo = DataListActionableDemo();
-  const dataListExpandableDemo = DataListExpandableDemo();
-  const dataListSimpleWithoutPaginationDemo = DataListSimpleWithoutPaginationDemo();
-  const headingText = 'Data list demo';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="Data list simple demo" fullPageOnly="true" handlebars={dataListSimpleDemoRaw}>
-        {dataListSimpleDemo}
-      </Example>
-      <Example heading="Data list actionable demo" fullPageOnly="true" handlebars={dataListActionableDemoRaw}>
-        {dataListActionableDemo}
-      </Example>
-      <Example heading="Data list expandable demo" fullPageOnly="true" handlebars={dataListExpandableDemoRaw}>
-        {dataListExpandableDemo}
-      </Example>
-      <Example
-        heading="Data list simple without pagination demo"
-        fullPageOnly="true"
-        handlebars={dataListSimpleWithoutPaginationDemoRaw}
-      >
-        {dataListSimpleWithoutPaginationDemo}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Data-list-simple-without-pagination-demo isFullscreen
+{{#> page page--id="page-layout-data-list-simple-without-pagination"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> data-list-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{> data-list-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+      {{> data-list-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> data-list-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      {{#> card}}
+        {{> data-list-without-pagination-toolbar}}
+        {{> data-list-simple-no-pagination-data-list}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
 ```

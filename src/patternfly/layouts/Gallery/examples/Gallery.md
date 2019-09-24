@@ -3,36 +3,27 @@ title: Gallery
 section: layouts
 cssPrefix: pf-l-gallery
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import GalleryRaw from '!!raw-loader!./gallery-example.hbs';
-import GalleryHasGutterRaw from '!!raw-loader!./gallery-has-gutter-example.hbs';
-import Gallery from './gallery-example.hbs';
-import GalleryHasGutter from './gallery-has-gutter-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const gallery = Gallery();
-  const galleryHasGutter = GalleryHasGutter();
-  const headingText = 'Gallery';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Gallery example" handlebars={GalleryRaw}>
-        {gallery}
-      </Example>
-      <Example heading="Gallery example with gutter" handlebars={GalleryHasGutterRaw}>
-        {galleryHasGutter}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Gallery-example
+{{#> gallery}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+{{/gallery}}
 ```
 
+```hbs title=Gallery-example-with-gutter
+{{#> gallery gallery--modifier="pf-m-gutter"}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+{{/gallery}}
+```
+
+# Documentation
 ## Overview
 
 The gallery layout is designed so that all of its children are of uniform size, display horizontally, and wrap responsively.

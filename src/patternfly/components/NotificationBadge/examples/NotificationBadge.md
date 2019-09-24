@@ -3,30 +3,22 @@ title: Notification Badge
 section: components
 cssPrefix: pf-c-notification-badge
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import notificationBadgeSimpleExampleRaw from '!!raw-loader!./notification-badge-simple-example.hbs';
-import NotificationbadgeSimpleExample from './notification-badge-simple-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
+```hbs title=Notification-badge
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
+    {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/notification-badge}}
+{{/button}}
 
-export default props => {
-  const notificationBadgeSimpleExample = NotificationbadgeSimpleExample();
-  const headingText = 'Notification badge';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Notification badge" handlebars={notificationBadgeSimpleExampleRaw}>
-        {notificationBadgeSimpleExample}
-      </Example>
-    </Documentation>
-  );
-};
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
+    {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/notification-badge}}
+{{/button}}
 ```
 
+# Documentation
 ## Overview
 
 Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own.

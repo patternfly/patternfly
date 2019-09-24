@@ -3,90 +3,418 @@ title: Flex
 section: layouts
 cssPrefix: pf-l-flex
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
 
-import flexBasicExampleRaw from '!!raw-loader!./flex-basic-example.hbs';
-import flexSpacingExampleRaw from '!!raw-loader!./flex-spacing-example.hbs';
-import flexLayoutExampleRaw from '!!raw-loader!./flex-layout-example.hbs';
-import flexLayoutColumnExampleRaw from '!!raw-loader!./flex-layout-column-example.hbs';
-import flexLayoutResponsiveExampleRaw from '!!raw-loader!./flex-layout-responsive-example.hbs';
-import flexAlignmentExampleRaw from '!!raw-loader!./flex-alignment-example.hbs';
-import flexJustificationExampleRaw from '!!raw-loader!./flex-justification-example.hbs';
+```hbs title=Flex-basics
+<h2 class="example-title">
+  Basic flex - <code>.pf-l-flex</code>.
+</h2>
+{{#> l-flex}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
 
-import FlexBasicExample from './flex-basic-example.hbs';
-import FlexSpacingExample from './flex-spacing-example.hbs';
-import FlexLayoutExample from './flex-layout-example.hbs';
-import FlexLayoutColumnExample from './flex-layout-column-example.hbs';
-import FlexLayoutResponsiveExample from './flex-layout-responsive-example.hbs';
-import FlexAlignmentExample from './flex-alignment-example.hbs';
-import FlexJustificationExample from './flex-justification-example.hbs';
+<h2 class="example-title">
+  Flex nesting - <code>.pf-l-flex > .pf-l-flex</code>.
+</h2>
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
 
-import flexIntroDoc from '../docs/flex-intro.md';
-import flexBasicExampleDoc from '../docs/flex-basic.md';
-import flexSpacingExampleDoc from '../docs/flex-spacing.md';
-import flexLayoutExampleDoc from '../docs/flex-layout.md';
-import flexLayoutColumnExampleDoc from '../docs/flex-layout-column.md';
-import flexLayoutResponsiveExampleDoc from '../docs/flex-layout-responsive.md';
-import flexAlignmentExampleDoc from '../docs/flex-alignment.md';
-import flexJustificationExampleDoc from '../docs/flex-justification.md';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const flexBasicExample = FlexBasicExample();
-  const flexSpacingExample = FlexSpacingExample();
-  const flexLayoutExample = FlexLayoutExample();
-  const flexLayoutColumnExample = FlexLayoutColumnExample();
-  const flexLayoutResponsiveExample = FlexLayoutResponsiveExample();
-  const flexAlignmentExample = FlexAlignmentExample();
-  const flexJustificationExample = FlexJustificationExample();
-  const headingText = 'Flex layout system';
-
-  return (
-    <Documentation data={props}
-      docs={Docs}
-      heading={headingText}
-      variablesRoot={variablesRoot}
-      className="flex-documentation is-layout-page"
-    >
-      <Example intro={flexIntroDoc} heading="Flex basics" handlebars={flexBasicExampleRaw} docs={flexBasicExampleDoc}>
-        {flexBasicExample}
-      </Example>
-      <Example heading="Flex spacing" handlebars={flexSpacingExampleRaw} docs={flexSpacingExampleDoc}>
-        {flexSpacingExample}
-      </Example>
-      <Example heading="Flex layout modifiers" handlebars={flexLayoutExampleRaw} docs={flexLayoutExampleDoc}>
-        {flexLayoutExample}
-      </Example>
-      <Example
-        heading="Column layout modifiers"
-        handlebars={flexLayoutColumnExampleRaw}
-        docs={flexLayoutColumnExampleDoc}
-      >
-        {flexLayoutColumnExample}
-      </Example>
-      <Example
-        heading="Responsive layout modifiers"
-        handlebars={flexLayoutResponsiveExampleRaw}
-        docs={flexLayoutResponsiveExampleDoc}
-      >
-        {flexLayoutResponsiveExample}
-      </Example>
-      <Example heading="Flex alignment" handlebars={flexAlignmentExampleRaw} docs={flexAlignmentExampleDoc}>
-        {flexAlignmentExample}
-      </Example>
-      <Example heading="Flex justification" handlebars={flexJustificationExampleRaw} docs={flexJustificationExampleDoc}>
-        {flexJustificationExample}
-      </Example>
-    </Documentation>
-  );
-};
+<h2 class="example-title">
+  Nested flex and items.
+</h2>
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
 ```
+
+```hbs title=Flex-spacing
+{{#> example-title}}Individually spaced items - <code>.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> example-text example-text--modifier="example-border pf-m-spacer-xs"}}Item - xs{{/example-text}}
+    {{#> example-text example-text--modifier="example-border pf-m-spacer-sm"}}Item - sm{{/example-text}}
+    {{#> example-text example-text--modifier="example-border pf-m-spacer-md"}}Item - md{{/example-text}}
+    {{#> example-text example-text--modifier="example-border pf-m-spacer-lg"}}Item - lg{{/example-text}}
+    {{#> example-text example-text--modifier="example-border pf-m-spacer-xl"}}Item - xl{{/example-text}}
+    {{#> example-text example-text--modifier="example-border pf-m-spacer-2xl"}}Item - 2xl{{/example-text}}
+    {{#> example-text example-text--modifier="example-border pf-m-spacer-3xl"}}Item - 3xl{{/example-text}}
+  {{/l-flex}}
+
+<h2 class="example-title">
+  Flex with modified spacing - <code>.pf-m-space-items-xl</code>.
+</h2>
+{{#> l-flex l-flex--modifier="pf-m-space-items-xl"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+<h2 class="example-title">
+  Flex with modified spacing - <code>.pf-m-space-items-none</code>.
+</h2>
+{{#> l-flex l-flex--modifier="pf-m-space-items-none"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+```
+
+```hbs title=Flex-layout-modifiers
+{{#> example-title}}Default layout <code>.pf-l-flex</code>.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Inline flex <code>.pf-m-inline-flex</code>.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-inline-flex example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Adjusting width with <code>.pf-m-grow</code>. In this example, the first group is set to <code>.pf-m-grow</code> and will occupy the remaining available space.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-grow example-border" l-flex--attribute='data-label=".pf-m-grow"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Adjusting width with <code>.pf-m-flex-1</code>. In this example, all groups are set to <code>.pf-m-flex-1</code>. They will share available space equally.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Specifying column widths with <code>.pf-m-flex-{1,2,3}</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-2 example-border" l-flex--attribute='data-label=".pf-m-flex-2"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-3 example-border" l-flex--attribute='data-label=".pf-m-flex-3"'}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
+```hbs title=Column-layout-modifiers
+{{#> example-title}}Flex column layout. When <code>.pf-m-column</code> is applied to <code>.pf-l-flex</code>, spacing will be applied to margin-bottom for direct descendants.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-column example-border" l-flex--attribute='data-label=".pf-m-column"'}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Stacking <code>.pf-l-flex</code> elements.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-column example-border" l-flex--attribute='data-label=".pf-m-column"'}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Nesting <code>.pf-l-flex</code> elements and setting to <code>.pf-m-column</code>.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> l-flex l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Adjusting width with <code>.pf-m-grow</code>. In this example, the second item is set to <code>.pf-m-grow</code> and will occupy the remaining available space.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-grow example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Adjusting width with <code>.pf-m-flex-1</code>. In this example, all direct descendants are set to <code>.pf-m-flex-1</code>. They will share available space equally.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Specifying column widths with <code>.pf-m-flex-{1,2,3}</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-2 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-flex-3 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
+```hbs title=Responsive-layout-modifiers
+{{#> example-title}}Switching between flex-direction column and row at breakpoints (-on-lg).{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Switching between flex-direction column and row at breakpoints (-on-lg). If content is likely to wrap, modifiers will need to be used to control width. The example below wraps because the flex item expands in response to long paragraph text.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}
+      <b>Because this text is long enough to wrap, this item's width will force the adjacent item to wrap.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi modi temporibus, alias qui obcaecati ullam dolor nam, nulla magni iste rem praesentium numquam provident amet ut nesciunt harum accusamus.
+    {{/example-text}}
+  {{/l-flex}}
+
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Switching between flex-direction column and row at breakpoints (-on-lg). To control the width of the flex item, set <code>.pf-m-flex-1</code> on the flex group containing the long paragraph text.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1 pf-m-align-items-flex-start example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="pf-m-flex-1 example-border"}}
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi modi temporibus, alias qui obcaecati ullam dolor nam, nulla magni iste rem praesentium numquam provident amet ut nesciunt harum accusamus.
+    {{/example-text}}
+  {{/l-flex}}
+
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
+```hbs title=Flex-alignment
+{{#> example-title}}Aligning right with <code>.pf-m-align-right</code>. This solution will always align element right by setting margin-left: auto, including when wrapped.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="pf-m-align-right example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Align right on single item.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> example-text example-text--modifier="pf-m-align-right example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Align right on multiple groups.{{/example-title}}
+{{#> l-flex l-flex--modifier="example-border"}}
+  {{#> l-flex newcontext}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-align-right"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-align-right"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Using <code>.pf-m-flex-1</code> to align adjacent content.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Using <code>.pf-m-flex-1</code> to align adjacent content.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1 example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Aligning nested columns with <code>.pf-m-align-self-flex-end</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-flex-end example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Aligning nested columns with <code>.pf-m-align-self-center</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-center example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Aligning nested columns with <code>.pf-m-align-self-baseline</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-baseline example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+
+{{#> example-title}}Aligning nested columns with <code>.pf-m-align-self-stretch</code>.{{/example-title}}
+{{#> l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+  {{#> l-flex newcontext l-flex--modifier="pf-m-column pf-m-align-self-stretch example-border"}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+    {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
+```hbs title=Flex-justification
+{{#> example-title}}Justify content with <code>.pf-m-justify-content-flex-end</code>.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-justify-content-flex-end example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Justify content with <code>.pf-m-justify-content-space-between</code>.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-justify-content-space-between example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+
+{{#> example-title}}Justify content with <code>.pf-m-justify-content-flex-start</code>.{{/example-title}}
+{{#> l-flex l-flex--modifier="pf-m-justify-content-flex-start example-border"}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+  {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
+{{/l-flex}}
+```
+
+# Documentation
 
 The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. The system relies on a default spacer value that is applied to flex items.
 

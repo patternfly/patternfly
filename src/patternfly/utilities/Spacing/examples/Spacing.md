@@ -3,43 +3,148 @@ title: Spacing
 section: utilities
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import spacingMarginExampleRaw from '!!raw-loader!./spacing-margin-example.hbs';
-import spacingPaddingExampleRaw from '!!raw-loader!./spacing-padding-example.hbs';
-import spacingCombinedExampleRaw from '!!raw-loader!./spacing-combined-example.hbs';
-import SpacingMarginExample from './spacing-margin-example.hbs';
-import SpacingPaddingExample from './spacing-padding-example.hbs';
-import SpacingCombinedExample from './spacing-combined-example.hbs';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const spacingMarginExample = SpacingMarginExample();
-  const spacingPaddingExample = SpacingPaddingExample();
-  const spacingCombinedExample = SpacingCombinedExample();
-  const headingText = 'Spacing';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Spacer margin" handlebars={spacingMarginExampleRaw}>
-        {spacingMarginExample}
-      </Example>
-      <Example heading="Spacer padding" handlebars={spacingPaddingExampleRaw}>
-        {spacingPaddingExample}
-      </Example>
-      <Example heading="Spacers combined" handlebars={spacingCombinedExampleRaw}>
-        {spacingCombinedExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Spacer-margin
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Margin, marginX, marginY
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-m-xl"}}
+    Margin - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mx-xl"}}
+    Margin x axis - pf-u-mx-xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-my-xl"}}
+    Margin y axis - pf-u-my-xl
+  {{/flex-item}}
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Margin top, margin right, margin bottom, margin left
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-mt-xl"}}
+    Margin-top - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mr-xl"}}
+    Margin-right - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mb-xl"}}
+    Margin-bottom - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-ml-xl"}}
+    Margin-left - xl
+  {{/flex-item}}
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Responsive margin
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-column pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-mt-xl"}}
+    Margin-top - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mt-xl-on-sm"}}
+    Margin-top - xl on-sm
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mt-xl-on-md"}}
+    Margin-top - xl on-md
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mt-xl-on-lg"}}
+    Margin-top - xl on-lg
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-mt-xl-on-xl"}}
+    Margin-top - xl on-xl
+  {{/flex-item}}
+{{/display}}
 ```
 
+```hbs title=Spacer-padding
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Padding, paddingX, paddingY
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-p-xl"}}
+    Padding - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-px-xl"}}
+    Padding x axis - pf-u-px-xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-py-xl"}}
+    Padding y axis - pf-u-py-xl
+  {{/flex-item}}
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Padding top, padding right, padding bottom, padding left
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-pt-xl"}}
+    Padding-top - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pr-xl"}}
+    Padding-right - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pb-xl"}}
+    Padding-bottom - xl
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pl-xl"}}
+    Padding-left - xl
+  {{/flex-item}}
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Responsive padding
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-column pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-pt-xl"}}
+    Padding-top
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pt-xl-on-sm"}}
+    Padding-top - xl on-sm
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pt-xl-on-md"}}
+    Padding-top - xl on-md
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pt-xl-on-lg"}}
+    Padding-top - xl on-lg
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-pt-xl-on-xl"}}
+    Padding-top - xl on-xl
+  {{/flex-item}}
+{{/display}}
+```
+
+```hbs title=Spacers-combined
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Combined spacers
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-p-lg pf-u-m-lg"}}
+    Padding lg, margin lg
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-p-lg-on-lg pf-u-m-lg"}}
+    Padding lg on-lg, margin lg
+  {{/flex-item}}
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Combined spacers (responsive)
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start pf-u-flex-wrap"}}
+  {{#> flex-item flex-item--modifier="pf-u-p-sm pf-u-p-lg-on-md pf-u-mr-lg"}}
+    Item 1
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-p-sm pf-u-p-lg-on-md pf-u-mr-lg"}}
+    Item 2
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-p-sm pf-u-p-lg-on-md pf-u-ml-auto-on-xl"}}
+    Item 3
+  {{/flex-item}}
+{{/display}}
+```
+
+# Documentation
 ## Overview
 
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-m-sm-on-lg**

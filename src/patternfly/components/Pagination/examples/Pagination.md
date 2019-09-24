@@ -4,59 +4,116 @@ section: components
 cssPrefix: pf-c-pagination
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import paginationTopExampleRaw from '!!raw-loader!./pagination-top-example.hbs';
-import paginationTopExpandedExampleRaw from '!!raw-loader!./pagination-top-expanded-example.hbs';
-import paginationBottomExampleRaw from '!!raw-loader!./pagination-bottom-example.hbs';
-import paginationTopDisabledExampleRaw from '!!raw-loader!./pagination-top-disabled-example.hbs';
-import PaginationTopExample from './pagination-top-example.hbs';
-import PaginationTopExpandedExample from './pagination-top-expanded-example.hbs';
-import PaginationBottomExample from './pagination-bottom-example.hbs';
-import PaginationTopDisabledExample from './pagination-top-disabled-example.hbs';
-import paginationTopExampleDoc from '../docs/pagination-top-example.md';
-import paginationBottomExampleDoc from '../docs/pagination-bottom-example.md';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default props => {
-  const paginationTopExample = PaginationTopExample();
-  const paginationTopExpandedExample = PaginationTopExpandedExample();
-  const paginationBottomExample = PaginationBottomExample();
-  const paginationTopDisabledExample = PaginationTopDisabledExample();
-  const headingText = 'Pagination';
-
-  return (
-    <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example
-        heading="Pagination top"
-        handlebars={paginationTopExampleRaw}
-        fullPageOnly="true"
-        docs={paginationTopExampleDoc}
-      >
-        {paginationTopExample}
-      </Example>
-      <Example heading="Pagination top expanded" handlebars={paginationTopExpandedExampleRaw} fullPageOnly="true">
-        {paginationTopExpandedExample}
-      </Example>
-      <Example
-        heading="Pagination bottom"
-        handlebars={paginationBottomExampleRaw}
-        fullPageOnly="true"
-        docs={paginationBottomExampleDoc}
-      >
-        {paginationBottomExample}
-      </Example>
-      <Example heading="Pagination top disabled" handlebars={paginationTopDisabledExampleRaw} fullPageOnly="true">
-        {paginationTopDisabledExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Pagination-top
+{{#> pagination}}
+  {{#> pagination-total-items}}
+    <b>1 - 10</b> of <b>37</b>
+  {{/pagination-total-items}}
+  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example"  options-menu--IsText="true"}}
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page"'}}
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> pagination-nav-page-select}}
+      {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+      <span aria-hidden="true">of 4</span>
+    {{/pagination-nav-page-select}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}
 ```
+
+```hbs title=Pagination-top-expanded
+{{#> pagination}}
+  {{#> pagination-total-items}}
+    <b>1 - 10</b> of <b>37</b>
+  {{/pagination-total-items}}
+  {{> pagination-options-menu options-menu--IsExpanded="true" id="pagination-options-menu-top-expanded-example" options-menu--IsText="true"}}
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page"'}}
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> pagination-nav-page-select}}
+      {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+      <span aria-hidden="true">of 4</span>
+    {{/pagination-nav-page-select}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}
+```
+
+```hbs title=Pagination-bottom
+{{#> pagination pagination--modifier="pf-m-footer"}}
+  {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page"'}}
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> pagination-nav-page-select}}
+      {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+      <span aria-hidden="true">of 4</span>
+    {{/pagination-nav-page-select}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}
+```
+
+```hbs title=Pagination-top-disabled
+{{#> pagination}}
+  {{#> pagination-total-items}}
+    <b>1 - 10</b> of <b>37</b>
+  {{/pagination-total-items}}
+
+  {{> pagination-options-menu id="pagination-options-menu-top-disabled-example"  options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
+
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page" aria-disabled="true"'}}
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page" aria-disabled="true"'}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{/button}}
+
+    {{#> pagination-nav-page-select}}
+      {{> form-control input="true" controlType="input" form-control--attribute='disabled aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+      <span aria-hidden="true">of 4</span>
+    {{/pagination-nav-page-select}}
+
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to next page"'}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to last page"'}}
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}
+```
+
+# Documentation
 
 The top pagination displays an [options menu](/components/OptionsMenu/examples/) to select the number of items to show per page on a desktop screen, and on narrower viewports, the options menu is replaced with an element showing the currently visible items along with the total number of pages.
 

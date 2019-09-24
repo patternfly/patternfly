@@ -4,15 +4,12 @@ section: components
 cssPrefix: pf-c-backdrop
 ---
 
-import ExampleRaw from '!!raw-loader!./backdrop-example.hbs';
-import Example from './backdrop-example.hbs';
+```hbs title=Backdrop-example isFullscreen=true
+{{#> backdrop}}
+{{/backdrop}}
+```
 
-<Example 
-  title="Backdrop example" 
-  fullPageOnly
-  handlebars={BackdropExampleRaw}
-  html={Example()} />
-
+# Documentation
 ## Overview
 
 This component puts a backdrop over the entire viewport.

@@ -3,117 +3,157 @@ title: Progress
 section: components
 cssPrefix: pf-c-progress
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import progressSimpleExampleRaw from '!!raw-loader!./progress-simple-example.hbs';
-import progressSingleLineExampleRaw from '!!raw-loader!./progress-single-line-example.hbs';
-import progressSmallExampleRaw from '!!raw-loader!./progress-small-example.hbs';
-import progressLargeExampleRaw from '!!raw-loader!./progress-large-example.hbs';
-import progressOutsideExampleRaw from '!!raw-loader!./progress-outside-example.hbs';
-import progressInsideExampleRaw from '!!raw-loader!./progress-inside-example.hbs';
-import progressSuccessExampleRaw from '!!raw-loader!./progress-success-example.hbs';
-import progressFailureExampleRaw from '!!raw-loader!./progress-failure-example.hbs';
-import progressInsideSuccessExampleRaw from '!!raw-loader!./progress-inside-success-example.hbs';
-import progressOutsideFailureExampleRaw from '!!raw-loader!./progress-outside-failure-example.hbs';
-import progressNoMeasureExampleRaw from '!!raw-loader!./progress-no-measure-example.hbs';
-import progressNoMeasureFailureExampleRaw from '!!raw-loader!./progress-no-measure-failure-example.hbs';
-import progressFiniteStepExampleRaw from '!!raw-loader!./progress-finite-step-example.hbs';
-import progressStepInstructionExampleRaw from '!!raw-loader!./progress-step-instruction-example.hbs';
-import ProgressSimpleExample from './progress-simple-example.hbs';
-import ProgressSingleLineExample from './progress-single-line-example.hbs';
-import ProgressSmallExample from './progress-small-example.hbs';
-import ProgressLargeExample from './progress-large-example.hbs';
-import ProgressOutsideExample from './progress-outside-example.hbs';
-import ProgressInsideExample from './progress-inside-example.hbs';
-import ProgressSuccessExample from './progress-success-example.hbs';
-import ProgressFailureExample from './progress-failure-example.hbs';
-import ProgressInsideSuccessExample from './progress-inside-success-example.hbs';
-import ProgressOutsideFailureExample from './progress-outside-failure-example.hbs';
-import ProgressNoMeasureExample from './progress-no-measure-example.hbs';
-import ProgressNoMeasureFailureExample from './progress-no-measure-failure-example.hbs';
-import ProgressFiniteStepExample from './progress-finite-step-example.hbs';
-import ProgressStepInstructionExample from './progress-step-instruction-example.hbs';
-import progressDynamicExampleDoc from '../docs/progress-dynamic.md';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const progressSimpleExample = ProgressSimpleExample();
-  const progressSingleLineExample = ProgressSingleLineExample();
-  const progressSmallExample = ProgressSmallExample();
-  const progressLargeExample = ProgressLargeExample();
-  const progressOutsideExample = ProgressOutsideExample();
-  const progressInsideExample = ProgressInsideExample();
-  const progressSuccessExample = ProgressSuccessExample();
-  const progressFailureExample = ProgressFailureExample();
-  const progressInsideSuccessExample = ProgressInsideSuccessExample();
-  const progressOutsideFailureExample = ProgressOutsideFailureExample();
-  const progressNoMeasureExample = ProgressNoMeasureExample();
-  const progressNoMeasureFailureExample = ProgressNoMeasureFailureExample();
-  const progressFiniteStepExample = ProgressFiniteStepExample();
-  const progressStepInstructionExample = ProgressStepInstructionExample();
-  const headingText = 'Progress';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Progress simple" handlebars={progressSimpleExampleRaw}>
-        {progressSimpleExample}
-      </Example>
-      <Example heading="Progress small" handlebars={progressSmallExampleRaw}>
-        {progressSmallExample}
-      </Example>
-      <Example heading="Progress large" handlebars={progressLargeExampleRaw}>
-        {progressLargeExample}
-      </Example>
-      <Example heading="Progress outside" handlebars={progressOutsideExampleRaw}>
-        {progressOutsideExample}
-      </Example>
-      <Example heading="Progress inside" handlebars={progressInsideExampleRaw}>
-        {progressInsideExample}
-      </Example>
-      <Example heading="Progress success" handlebars={progressSuccessExampleRaw}>
-        {progressSuccessExample}
-      </Example>
-      <Example heading="Progress failure" handlebars={progressFailureExampleRaw}>
-        {progressFailureExample}
-      </Example>
-      <Example heading="Progress inside success" handlebars={progressInsideSuccessExampleRaw}>
-        {progressInsideSuccessExample}
-      </Example>
-      <Example heading="Progress outside failure" handlebars={progressOutsideFailureExampleRaw}>
-        {progressOutsideFailureExample}
-      </Example>
-      <Example heading="Progress on single line" handlebars={progressSingleLineExampleRaw}>
-        {progressSingleLineExample}
-      </Example>
-      <Example heading="Progress without measure" handlebars={progressNoMeasureExampleRaw}>
-        {progressNoMeasureExample}
-      </Example>
-      <Example heading="Progress failure without measure" handlebars={progressNoMeasureFailureExampleRaw}>
-        {progressNoMeasureFailureExample}
-      </Example>
-      <Example
-        heading="Progress finite step"
-        handlebars={progressFiniteStepExampleRaw}
-        docs={progressDynamicExampleDoc}
-      >
-        {progressFiniteStepExample}
-      </Example>
-      <Example
-        heading="Progress step instruction"
-        handlebars={progressStepInstructionExampleRaw}
-        docs={progressDynamicExampleDoc}
-      >
-        {progressStepInstructionExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Progress-simple
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress__id="progress-simple-example"
+}}
+{{/progress}}
 ```
 
+```hbs title=Progress-small
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--modifier="pf-m-sm"
+  progress__id="progress-sm-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-large
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--modifier="pf-m-lg"
+  progress__id="progress-lg-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-outside
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-inside
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--modifier="pf-m-lg"
+  progress--inside="inside"
+  progress__id="progress-inside-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-success
+{{#> progress 
+  progress__value="100" 
+  progress__description="Title" 
+  progress--success="success"
+  progress__id="progress-success-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-failure
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--danger="true"
+  progress__id="progress-failure-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-inside-success
+{{#> progress 
+  progress__value="100" 
+  progress__description="Title" 
+  progress--modifier="pf-m-lg"
+  progress--inside="inside"
+  progress--success="success"
+  progress__id="progress-inside-success-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-outside-failure
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress--danger="danger"
+  progress__id="progress-outside-failure-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-on-single-line
+{{#> progress 
+  progress__value="33"
+  progress--modifier="pf-m-singleline"
+  progress__id="progress-singleline-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-without-measure
+{{#> progress 
+  progress__value="33" 
+  progress__description="Title" 
+  progress--no-measure="true"
+  progress__id="progress-no-measure-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-failure-without-measure
+{{#> progress 
+  progress__value="33" 
+  progress--no-measure="true"
+  progress__description="Title" 
+  progress--danger="true"
+  progress__id="progress-no-measure-failure-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-finite-step
+{{#> progress 
+  progress__value="2"
+  progress__valuemax="5" 
+  progress__width="40"
+  progress__valuetext="2 of 5 units"
+  progress__description="Title"
+  progress--dynamic="true"
+  progress__id="progress-finite-step-example"
+}}
+{{/progress}}
+```
+
+```hbs title=Progress-step-instruction
+{{#> progress 
+  progress__value="2"
+  progress__valuemax="5" 
+  progress__width="40"
+  progress__valuetext="Step 2: Copying files"
+  progress__description="Title"
+  progress--dynamic="true"
+  progress__id="progress-step-instruction-example"
+}}
+{{/progress}}
+```
+
+# Documentation
 ## Overview
 
 ## Accessibility

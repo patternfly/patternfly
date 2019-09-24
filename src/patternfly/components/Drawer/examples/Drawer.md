@@ -3,42 +3,41 @@ title: Drawer
 section: experimental
 cssPrefix: pf-c-drawer
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import drawerClosedExampleRaw from '!!raw-loader!./drawer-closed-example.hbs';
-import drawerExpandedExampleRaw from '!!raw-loader!./drawer-expanded-example.hbs';
-import drawerExpandedInlineExampleRaw from '!!raw-loader!./drawer-expanded-inline-example.hbs';
-import DrawerClosedExample from './drawer-closed-example.hbs';
-import DrawerExpandedExample from './drawer-expanded-example.hbs';
-import DrawerExpandedInlineExample from './drawer-expanded-inline-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default props => {
-  const drawerClosedExample = DrawerClosedExample();
-  const drawerExpandedExample = DrawerExpandedExample();
-  const drawerExpandedInlineExample = DrawerExpandedInlineExample();
-  const headingText = 'Drawer';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Drawer closed" handlebars={drawerClosedExampleRaw}>
-        {drawerClosedExample}
-      </Example>
-      <Example heading="Drawer expanded" handlebars={drawerExpandedExampleRaw}>
-        {drawerExpandedExample}
-      </Example>
-      <Example heading="Drawer expanded inline" handlebars={drawerExpandedInlineExampleRaw}>
-        {drawerExpandedInlineExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Drawer-closed
+{{#> drawer}}
+  {{#> drawer-content}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+  {{/drawer-content}}
+  {{#> drawer-panel}}
+    drawer-panel
+  {{/drawer-panel}}
+{{/drawer}}
 ```
 
+```hbs title=Drawer-expanded
+{{#> drawer drawer--modifier="pf-m-expanded"}}
+  {{#> drawer-content}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+  {{/drawer-content}}
+  {{#> drawer-panel}}
+    drawer-panel
+  {{/drawer-panel}}
+{{/drawer}}
+```
+
+```hbs title=Drawer-expanded-inline
+{{#> drawer drawer--modifier="pf-m-expanded pf-m-inline"}}
+  {{#> drawer-content}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+  {{/drawer-content}}
+  {{#> drawer-panel}}
+    drawer-panel
+  {{/drawer-panel}}
+{{/drawer}}
+```
+
+# Documentation
 ## Usage
 
 | Class | Applied to | Outcome |

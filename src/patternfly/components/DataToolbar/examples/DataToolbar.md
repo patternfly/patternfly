@@ -4,62 +4,422 @@ section: components
 cssPrefix: pf-c-data-toolbar
 ---
 
-import ItemsExampleRaw from '!!raw-loader!./data-toolbar-items-example.hbs';
-import GroupTypesExampleRaw from '!!raw-loader!./data-toolbar-group-types-example.hbs';
-import ToggleGroupExampleRaw from '!!raw-loader!./data-toolbar-toggle-group-example.hbs';
-import SelectedFiltersExampleRaw from '!!raw-loader!./data-toolbar-selected-filters-example.hbs';
-import SpacersExampleRaw from '!!raw-loader!./data-toolbar-spacers-example.hbs';
-import GroupSpacersExampleRaw from '!!raw-loader!./data-toolbar-group-spacers-example.hbs';
-import StackedExampleRaw from '!!raw-loader!./data-toolbar-stacked-example.hbs';
+```hbs title=Data-toolbar-items
+{{#> data-toolbar data-toolbar--id="data-toolbar-simple-example"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
 
-import ItemsExample from './data-toolbar-items-example.hbs';
-import GroupTypesExample from './data-toolbar-group-types-example.hbs';
-import ToggleGroupExample from './data-toolbar-toggle-group-example.hbs';
-import SelectedFiltersExample from './data-toolbar-selected-filters-example.hbs';
-import SpacersExample from './data-toolbar-spacers-example.hbs';
-import GroupSpacersExample from './data-toolbar-group-spacers-example.hbs';
-import StackedExample from './data-toolbar-stacked-example.hbs';
+    {{!-- Separator --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
 
-<Example
-  className="is-layout-page"
-  title="Data toolbar items"
-  handlebars={ItemsExampleRaw}
-  html={ItemsExample()} />
+    {{#> data-toolbar-group}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
 
-<Example
-  className="is-layout-page"
-  title="Adjusting item spacers"
-  handlebars={SpacersExampleRaw}
-  html={SpacersExample()} />
+    {{!-- Separator --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
 
-<Example
-  className="is-layout-page"
-  title="Adjusting group spacers"
-  handlebars={GroupSpacersExampleRaw}
-  html={GroupSpacersExample()} />
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
+```
 
-<Example
-  title="Data toolbar group types"
-  handlebars={GroupTypesExampleRaw}
-  minHeight=""
-  html={GroupTypesExample()} />
+```hbs title=Adjusting-item-spacers
+{{#> data-toolbar data-toolbar--id="data-toolbar-spacer-example"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-sm"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-md"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-lg"}}
+      Item
+    {{/data-toolbar-item}}
 
-<Example
-  title="Data toolbar toggle group (responsive)"
-  handlebars={ToggleGroupExampleRaw}
-  html={ToggleGroupExample()} />
+    {{!-- Separator --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
 
-<Example
-  title="Data toolbar selected filters"
-  handlebars={SelectedFiltersExampleRaw}
-  minHeight="27rem"
-  html={SelectedFiltersExample()} />
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none pf-m-spacer-sm-on-md pf-m-spacer-md-on-lg pf-m-spacer-lg-on-xl"}}
+      Item
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      Item
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
+```
 
-<Example 
-  title="Data toolbar stacked" 
-  handlebars={StackedExampleRaw}
-  html={StackedExample()} />
+```hbs title=Adjusting-group-spacers
+{{#> data-toolbar data-toolbar--id="data-toolbar-group-spacer-example"}}
+  {{#> data-toolbar-content}}
 
+    {{!-- Group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-lg"}}
+
+      {{!-- Item --}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+
+      {{!-- Item --}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+
+    {{/data-toolbar-group}}
+
+    {{!-- Separator --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+
+    {{!-- Group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-none pf-m-space-items-sm-on-md pf-m-space-items-md-on-lg pf-m-space-items-lg-on-xl"}}
+
+      {{!-- Item --}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+
+      {{!-- Item --}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+
+    {{/data-toolbar-group}}
+
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
+```
+
+```hbs title=Data-toolbar-group-types
+{{#> data-toolbar data-toolbar--id="data-toolbar-group-types-default-example" data-toolbar--modifier="example-border"}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter1')}}
+          Filter 1
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter2')}}
+          Filter 2
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter3')}}
+          Filter 3
+        {{/select}}
+      {{/data-toolbar-item}}
+   {{/data-toolbar-group}}
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-icon-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
+          <i class="fas fa-edit" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
+          <i class="fas fa-clone" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
+          <i class="fas fa-sync" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Action
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Secondary
+        {{/button}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-tertiary"}}
+          Tertiary
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
+```
+
+```hbs title=Data-toolbar-toggle-group-(responsive)
+{{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-example"}}
+  {{#> data-toolbar-content}}
+
+    {{!-- Toggle group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl" data-toolbar-group--IsExpanded="false"}}
+      {{> data-toolbar-toggle}}
+
+      {{!-- Search filter --}}
+      {{> data-toolbar-item-search-filter button--id="content"}}
+
+      {{!-- Filter group --}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
+            Risk
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-group}}
+  {{/data-toolbar-content}}
+
+  {{#> data-toolbar-expandable-content}}
+    {{> data-toolbar-item-search-filter button--id="expandable-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
+
+    {{!-- Filter group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
+                Status
+            {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+                Risk
+            {{/select}}
+        {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+  {{/data-toolbar-expandable-content}}
+{{/data-toolbar}}
+```
+
+```hbs title=Data-toolbar-selected-filters
+{{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-expanded"}}
+  {{#> data-toolbar-content}}
+
+    {{!-- Bulk select --}}
+    {{> data-toolbar-item-bulk-select}}
+
+    {{!-- Toggle group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl" data-toolbar-group--IsExpanded="true"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--SelectedFilters="6"}}
+
+      {{!-- Search filter --}}
+      {{> data-toolbar-item-search-filter button--id="content"}}
+
+      {{!-- Filter group --}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            Risk
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-group}}
+
+    {{#> data-toolbar-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+      {{/button}}
+    {{/data-toolbar-item}}
+
+    {{!-- Overflow menu --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
+      {{!-- Uncomment when overflow menu merges --}}
+      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--RevealOn="xl" overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id}} --}}
+
+
+      {{!-- Remove when overflow menu merges --}}
+      Overflow menu
+    {{/data-toolbar-item}}
+  {{/data-toolbar-content}}
+
+  {{!-- Expanded content --}}
+  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--IsExpanded="true"}}
+
+    {{!-- Search filter --}}
+    {{> data-toolbar-item-search-filter button--id="expanded-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+
+        {{!-- Filter --}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+
+        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+
+        {{!-- Filter --}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+            Risk
+          {{/select}}
+        {{/data-toolbar-item}}
+
+        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+
+    {{/data-toolbar-group}}
+
+    {{!-- Clear all filters button --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-clear"}}
+      {{#> button button--modifier="pf-m-link"}}Clear all filters{{/button}}
+    {{/data-toolbar-item}}
+  {{/data-toolbar-expandable-content}}
+{{/data-toolbar}}
+```
+
+```hbs title=Data-toolbar-stacked
+{{#> data-toolbar data-toolbar--id="data-toolbar-stacked-example"}}
+  {{#> data-toolbar-content}}
+
+    {{!-- Toggle group --}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl" data-toolbar-group--IsExpanded="false"}}
+      {{> data-toolbar-toggle}}
+
+      {{#> data-toolbar-group newcontext}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label')}}
+          Resource
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+            Pod
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-group newcontext}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label')}}
+          Status
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+            Running
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-group newcontext}}
+        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label')}}
+          Type
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+            Any
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-group}}
+
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-icon-button-group"}}
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+          <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+
+      {{#> data-toolbar-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        {{/button}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
+
+    {{!-- Overflow menu --}}
+    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu pf-m-align-right"}}
+      {{!-- Uncomment when overflow menu merges --}}
+      {{!-- {{> overflow-menu-action-group-example overflow-menu-control--HasAdditionalOptions="true" overflow-menu--id=data-toolbar--id overflow-menu--RevealOn="lg"}} --}}
+
+      {{!-- Remove when overflow menu merges --}}
+      {{#> example-text example-text--modifier="example-border"}}Overflow menu{{/example-text}}
+    {{/data-toolbar-item}}
+
+  {{/data-toolbar-content}}
+
+  {{!-- Divider --}}
+  {{#> divider}}{{/divider}}
+
+  {{#> data-toolbar-content}}
+
+    {{!-- Bulk select --}}
+    {{> data-toolbar-item-bulk-select}}
+
+    {{!-- Pagination --}}
+    {{> data-toolbar-item-pagination}}
+  {{/data-toolbar-content}}
+
+  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl"}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label-expanded')}}
+              Resource
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+              {{#> select id=(concat data-toolbar--id '-select-checkbox-resource-expanded') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+                  Pod
+              {{/select}}
+          {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label-expanded')}}
+              Status
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+              {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+                  Running
+              {{/select}}
+          {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-group newcontext data-toolbar-group--modifier="pf-m-shared-item"}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label-expanded')}}
+              Type
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+              {{#> select id=(concat data-toolbar--id '-select-checkbox-type-expanded') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+                  Any
+              {{/select}}
+          {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+  {{/data-toolbar-expandable-content}}
+{{/data-toolbar}}
+```
+
+# Documentation
 ## Overview
 
 As the data toolbar component is a hybrid layout and component, some of its elements are presentational, while some require accessibility support.

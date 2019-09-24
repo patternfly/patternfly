@@ -4,6 +4,58 @@ section: components
 cssPrefix: pf-c-switch
 ---
 
+```hbs title=Switch
+{{#> switch switch--attribute='for="switch-with-label-1"'}}
+  {{#> switch-input id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" switch-input--attribute='name="switchExample1" checked'}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label id="switch-with-label-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-with-label-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-with-label-2"'}}
+  {{#> switch-input id="switch-with-label-2" aria-labelledby="switch-with-label-2-on" switch-input--attribute='name="switchExample2"'}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label id="switch-with-label-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-with-label-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+```
+
+```hbs title=Switch-no-label
+{{#> switch switch--attribute='for="switch-with-icon-1"'}}
+  {{#> switch-input id="switch-with-icon-1" switch-input--attribute='name="switchExample3" checked'}}{{/switch-input}}
+  {{#> switch-toggle}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
+  {{/switch-toggle}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-with-icon-2"'}}
+  {{#> switch-input id="switch-with-icon-2" switch-input--attribute='name="switchExample4"'}}{{/switch-input}}
+  {{#> switch-toggle}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
+  {{/switch-toggle}}
+{{/switch}}
+```
+
+```hbs title=Switch-disabled
+{{#> switch switch--attribute='for="switch-disabled-1"'}}
+  {{#> switch-input id="switch-disabled-1" aria-labelledby="switch-disabled-1-on" switch-input--attribute='name="switchExample5" disabled checked'}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label id="switch-disabled-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-disabled-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-disabled-2"'}}
+  {{#> switch-input id="switch-disabled-2" aria-labelledby="switch-disabled-2-on" switch-input--attribute='name="switchExample6" disabled'}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label id="switch-disabled-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-disabled-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+```
+
+# Documentation
 # Component name
 switch trigger instant actions a user can take
 
@@ -22,42 +74,7 @@ Just like radio buttons and checkboxes, switches can be used to enable or disabl
 
 See the [PatternFly terminology and wording guidelines](http://www.patternfly.org/styles/terminology-and-wording/) for additional guidance.
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import SwitchExampleRaw from '!!raw-loader!./switch-example.hbs';
-import SwitchDisabledExampleRaw from '!!raw-loader!./switch-disabled-example.hbs';
-import SwitchNoLabelExampleRaw from '!!raw-loader!./switch-no-label-example.hbs';
-import SwitchExample from './switch-example.hbs';
-import SwitchDisabledExample from './switch-disabled-example.hbs';
-import SwitchNoLabelExample from './switch-no-label-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const switchExample = SwitchExample();
-  const switchDisabledExample = SwitchDisabledExample();
-  const switchNoLabelExample = SwitchNoLabelExample();
-  const headingText = 'Switch';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Switch" handlebars={SwitchExampleRaw}>
-        {switchExample}
-      </Example>
-      <Example heading="Switch no label" handlebars={SwitchNoLabelExampleRaw}>
-        {switchNoLabelExample}
-      </Example>
-      <Example heading="Switch disabled" handlebars={SwitchDisabledExampleRaw}>
-        {switchDisabledExample}
-      </Example>
-    </Documentation>
-  );
-};
-```
-
+# Documentation
 ## Overview
 
 A switch is an alternative to the checkbox component.

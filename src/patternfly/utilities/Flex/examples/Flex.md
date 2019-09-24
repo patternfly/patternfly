@@ -2,92 +2,480 @@
 title: Flex
 section: utilities
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import flexEnableExampleRaw from '!!raw-loader!./flex-enable-example.hbs';
-import flexDirectionExampleRaw from '!!raw-loader!./flex-direction-example.hbs';
-import flexJustifyContentExampleRaw from '!!raw-loader!./flex-justify-content-example.hbs';
-import flexAlignItemsExampleRaw from '!!raw-loader!./flex-align-items-example.hbs';
-import flexAlignSelfExampleRaw from '!!raw-loader!./flex-align-self-example.hbs';
-import flexAlignContentExampleRaw from '!!raw-loader!./flex-align-content-example.hbs';
-import flexShrinkExampleRaw from '!!raw-loader!./flex-shrink-example.hbs';
-import flexGrowExampleRaw from '!!raw-loader!./flex-grow-example.hbs';
-import flexBasisNoneExampleRaw from '!!raw-loader!./flex-basis-none-example.hbs';
-import flexFillExampleRaw from '!!raw-loader!./flex-fill-example.hbs';
-import flexWrapExampleRaw from '!!raw-loader!./flex-wrap-example.hbs';
 
-import FlexEnableExample from './flex-enable-example.hbs';
-import FlexDirectionExample from './flex-direction-example.hbs';
-import FlexJustifyContentExample from './flex-justify-content-example.hbs';
-import FlexAlignItemsExample from './flex-align-items-example.hbs';
-import FlexAlignSelfExample from './flex-align-self-example.hbs';
-import FlexAlignContentExample from './flex-align-content-example.hbs';
-import FlexShrinkExample from './flex-shrink-example.hbs';
-import FlexGrowExample from './flex-grow-example.hbs';
-import FlexBasisNoneExample from './flex-basis-none-example.hbs';
-import FlexFillExample from './flex-fill-example.hbs';
-import FlexWrapExample from './flex-wrap-example.hbs';
-
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const flexEnableExample = FlexEnableExample();
-  const flexDirectionExample = FlexDirectionExample();
-  const flexJustifyContentExample = FlexJustifyContentExample();
-  const flexAlignItemsExample = FlexAlignItemsExample();
-  const flexAlignSelfExample = FlexAlignSelfExample();
-  const flexAlignContentExample = FlexAlignContentExample();
-  const flexShrinkExample = FlexShrinkExample();
-  const flexGrowExample = FlexGrowExample();
-  const flexBasisNoneExample = FlexBasisNoneExample();
-  const flexFillExample = FlexFillExample();
-  const flexWrapExample = FlexWrapExample();
-  const headingText = 'Flex';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="flex-examples is-utility-page">
-      <Example heading="Enable flex" handlebars={flexEnableExampleRaw}>
-        {flexEnableExample}
-      </Example>
-      <Example heading="Flex direction" handlebars={flexDirectionExampleRaw}>
-        {flexDirectionExample}
-      </Example>
-      <Example heading="Flex justify content" handlebars={flexJustifyContentExampleRaw}>
-        {flexJustifyContentExample}
-      </Example>
-      <Example heading="Flex align items" handlebars={flexAlignItemsExampleRaw}>
-        {flexAlignItemsExample}
-      </Example>
-      <Example heading="Flex align self" handlebars={flexAlignSelfExampleRaw}>
-        {flexAlignSelfExample}
-      </Example>
-      <Example heading="Flex align content" handlebars={flexAlignContentExampleRaw}>
-        {flexAlignContentExample}
-      </Example>
-      <Example heading="Flex shrink" handlebars={flexShrinkExampleRaw}>
-        {flexShrinkExample}
-      </Example>
-      <Example heading="Flex grow" handlebars={flexGrowExampleRaw}>
-        {flexGrowExample}
-      </Example>
-      <Example heading="Flex basis and flex none" handlebars={flexBasisNoneExampleRaw}>
-        {flexBasisNoneExample}
-      </Example>
-      <Example heading="Flex fill" handlebars={flexFillExampleRaw}>
-        {flexFillExample}
-      </Example>
-      <Example heading="Flex wrap" handlebars={flexWrapExampleRaw}>
-        {flexWrapExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Enable-flex
+{{#> display display--type="flex"}}
+  Display flex
+{{/display}}
+{{#> display display--type="inline-flex"}}
+  Display inline flex
+{{/display}}
 ```
 
+```hbs title=Flex-direction
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex row
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-direction-row"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex row-reverse
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-direction-row-reverse"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex column
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-direction-column"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex column-reverse
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-direction-column-reverse"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+```
+
+```hbs title=Flex-justify-content
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Justify content flex-start
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-justify-content-flex-start"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Justify content flex-end
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-justify-content-flex-end"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Justify content center
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-justify-content-center"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Justify content space-around
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-justify-content-space-around"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Justify content space-between
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-justify-content-space-between"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+```
+
+```hbs title=Flex-align-items
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align items flex-start
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start Documentation-container-tall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align items flex-end
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-end Documentation-container-tall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align items center
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-center Documentation-container-tall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align items baseline
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-baseline Documentation-container-tall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align items stretch
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-items-stretch Documentation-container-tall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+```
+
+```hbs title=Flex-align-self
+{{#> display display--type="flex" display--modifier="Documentation-container-tall"}}
+  <div class="pf-u-align-self-flex-start">
+    flex-start
+  </div>
+  <div class="pf-u-align-self-center">
+    center
+  </div>
+  <div class="pf-u-align-self-flex-end">
+    flex end
+  </div>
+  <div class="pf-u-align-self-baseline">
+    baseline
+  </div>
+  <div class="pf-u-align-self-stretch">
+    stretch
+  </div>
+{{/display}}
+```
+
+```hbs title=Flex-align-content
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align content flex-start
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-content-flex-start Documentation-container-xtall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+  <div>
+    Flex item 4
+  </div>
+  <div>
+    Flex item 5
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align content flex-end
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-content-flex-end Documentation-container-xtall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+  <div>
+    Flex item 4
+  </div>
+  <div>
+    Flex item 5
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align content center
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-content-center Documentation-container-xtall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+  <div>
+    Flex item 4
+  </div>
+  <div>
+    Flex item 5
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align content space-around
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-content-space-around Documentation-container-xtall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+  <div>
+    Flex item 4
+  </div>
+  <div>
+    Flex item 5
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align content space-between
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-content-space-between Documentation-container-xtall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+  <div>
+    Flex item 4
+  </div>
+  <div>
+    Flex item 5
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Align content stretch
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-align-content-stretch Documentation-container-xtall"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+  <div>
+    Flex item 4
+  </div>
+  <div>
+    Flex item 5
+  </div>
+{{/display}}
+```
+
+```hbs title=Flex-shrink
+{{#> display display--type="flex"}}
+  <div class="pf-u-flex-shrink-0">
+    Flex shrink 0
+  </div> 
+  <div class="pf-u-flex-shrink-1">
+    Flex shrink 1
+  </div> 
+{{/display}}
+```
+
+```hbs title=Flex-grow
+{{#> display display--type="flex"}}
+  <div class="pf-u-flex-grow-0">
+    Flex grow 0
+  </div> 
+  <br>
+  <div class="pf-u-flex-grow-1">
+    Flex grow 1
+  </div> 
+{{/display}}
+```
+
+```hbs title=Flex-basis-and-flex-none
+{{#> display display--type="flex"}}
+  <div class="pf-u-flex-basis-0">
+    Flex basis 0
+  </div> 
+  <div class="pf-u-flex-basis-auto">
+    Flex basis auto
+  </div> 
+  <div class="pf-u-flex-none">
+    Flex none
+  </div> 
+  <div class="pf-u-flex-1">
+    Flex 1
+  </div> 
+{{/display}}
+```
+
+```hbs title=Flex-fill
+{{#> display display--type="flex"}}
+  <div class="pf-u-flex-none">
+    Flex none
+  </div> 
+  <div class="pf-u-flex-fill">
+    Flex fill
+  </div> 
+{{/display}}
+```
+
+```hbs title=Flex-wrap
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex wrap
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-wrap"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex no wrap
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-nowrap"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+{{#> title titleType="h2" title--modifier="pf-m-lg"}}
+  Flex wrap reverse
+{{/title}}
+{{#> display display--type="flex" display--modifier="pf-u-flex-wrap-reverse"}}
+  <div>
+    Flex item 1
+  </div>
+  <div>
+    Flex item 2
+  </div>
+  <div>
+    Flex item 3
+  </div>
+{{/display}}
+<br>
+```
+
+# Documentation
 ## Overview
 
 For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-flex-row-on-lg**

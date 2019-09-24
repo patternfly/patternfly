@@ -3,14 +3,12 @@ title: Brand
 section: components
 ---
 
-import SimpleExampleRaw from '!!raw-loader!./brand-simple-example.hbs';
-import SimpleExample from './brand-simple-example.hbs';
+```hbs title=Brand-simple
+{{#> brand brand--attribute='src="/assets/images/pf_logo.svg" alt="PatternFly logo"'}} 
+{{/brand}}
+```
 
-<Example 
-  heading="Brand simple" 
-  handlebars={SimpleExampleRaw}
-  html={SimpleExample()} />
-
+# Documentation
 ## Overview
 
 Simple brand component.

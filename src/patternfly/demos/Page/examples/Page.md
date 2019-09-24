@@ -7,103 +7,327 @@ section: demos
 
 This demo implements all variations of the nav component in the page component.
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
+```hbs title=Page-component-default-nav-header-example isFullscreen
+{{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
+```
 
-import PageComponentDefaultNavHeaderExampleRaw from '!!raw-loader!./page-component-default-nav-header-example.hbs';
-import PageComponentExpandableNavExampleRaw from '!!raw-loader!./page-component-expandable-nav-example.hbs';
-import PageComponentHorizontalNavExampleRaw from '!!raw-loader!./page-component-horizontal-nav-example.hbs';
-import PageComponentTertiaryNavExampleRaw from '!!raw-loader!./page-component-tertiary-nav-example.hbs';
-import PageComponentGroupedNavExampleRaw from '!!raw-loader!./page-component-grouped-nav-example.hbs';
-import PageComponentLegacyNavSeparatorsExampleRaw from '!!raw-loader!./page-component-legacy-nav-separators-example.hbs';
-import PageComponentLightSidebarNavExampleRaw from '!!raw-loader!./page-component-light-sidebar-nav-example.hbs';
-import PageComponentLightSidebarNavLegacyNavSeparatorsExampleRaw from '!!raw-loader!./page-component-light-sidebar-nav-legacy-nav-separators-example.hbs';
+```hbs title=Page-component-expandable-nav-example isFullscreen
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
+```
 
-import PageComponentDefaultNavHeaderExample from './page-component-default-nav-header-example.hbs';
-import PageComponentExpandableNavExample from './page-component-expandable-nav-example.hbs';
-import PageComponentHorizontalNavExample from './page-component-horizontal-nav-example.hbs';
-import PageComponentTertiaryNavExample from './page-component-tertiary-nav-example.hbs';
-import PageComponentGroupedNavExample from './page-component-grouped-nav-example.hbs';
-import PageComponentLegacyNavSeparatorsExample from './page-component-legacy-nav-separators-example.hbs';
-import PageComponentLightSidebarNavExample from './page-component-light-sidebar-nav-example.hbs';
-import PageComponentLightSidebarNavLegacyNavSeparatorsExample from './page-component-light-sidebar-nav-legacy-nav-separators-example.hbs';
+```hbs title=Page-component-horizontal-nav-example
+{{#> page page--id="page-layout-horizontal-nav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-nav}}
+    {{#> nav nav--modifier="pf-m-end" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+      {{/nav-scroll-button}}
+      {{#> nav-list nav-list--type="horizontal"}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 1
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 2
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 3
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal nav item 4
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            Horizontal nav item 5
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+      {{/nav-scroll-button}}
+    {{/nav}}
+    {{/page-header-nav}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-template-breadcrumb}}
+    {{/page-template-breadcrumb}}
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}
+```
 
-import docs from '../docs/code.md';
+```hbs title=Page-component-tertiary-nav-example
+{{#> page page--id="page-layout-tertiary-nav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-tertiary-nav"')}}
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
 
-export const Docs = docs;
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
+      {{#> nav-list}}
+        {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
+            System panel
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link1"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Overview
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                  Resource usage
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Hypervisors
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
+                  Instances
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Volumes
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Networks
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link2"'}}
+            Policy
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link2"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link3"'}}
+            Authentication
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link3"'}}
+            {{#> nav-list nav-list--type="simple"}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
+        {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
+        {{/nav-scroll-button}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Tertiary nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+        {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
+        {{/nav-scroll-button}}
+      {{/nav}}
+    {{/page-main-nav}}
+    {{#> page-template-breadcrumb}}
+    {{/page-template-breadcrumb}}
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-template-gallery}}
+    {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}
+```
 
-export default props => {
-  const pageComponentDefaultNavHeaderExample = PageComponentDefaultNavHeaderExample();
-  const pageComponentExpandableNavExample = PageComponentExpandableNavExample();
-  const pageComponentHorizontalNavExample = PageComponentHorizontalNavExample();
-  const pageComponentTertiaryNavExample = PageComponentTertiaryNavExample();
-  const pageComponentGroupedNavExample = PageComponentGroupedNavExample();
-  const pageComponentLegacyNavSeparatorsExample = PageComponentLegacyNavSeparatorsExample();
-  const pageComponentLightSidebarNavExample = PageComponentLightSidebarNavExample();
-  const pageComponentLightSidebarNavLegacyNavSeparatorsExample = PageComponentLightSidebarNavLegacyNavSeparatorsExample();
-  const headingText = 'Page component demo';
+```hbs title=Page-component-grouped-nav-example
+{{#> page page--id="page-layout-grouped-nav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-grouped-nav"')}}
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
+      {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+        {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+          System panel
+        {{/nav-section-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Overview
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Resource usage
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Hypervisors
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Instances
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Volumes
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Networks
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-section}}
+      {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+        {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+          Policy
+        {{/nav-section-title}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Hosts
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Virtual machines
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Storage
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-section}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-template-title}}
+    {{/page-template-title}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
 
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example
-        heading="Page component default nav header example"
-        fullPageOnly="true"
-        handlebars={PageComponentDefaultNavHeaderExampleRaw}
-      >
-        {pageComponentDefaultNavHeaderExample}
-      </Example>
-      <Example
-        heading="Page component expandable nav example"
-        fullPageOnly="true"
-        handlebars={PageComponentExpandableNavExampleRaw}
-      >
-        {pageComponentExpandableNavExample}
-      </Example>
-      <Example
-        heading="Page component horizontal nav example"
-        fullPageOnly="true"
-        handlebars={PageComponentHorizontalNavExampleRaw}
-      >
-        {pageComponentHorizontalNavExample}
-      </Example>
-      <Example
-        heading="Page component tertiary nav example"
-        fullPageOnly="true"
-        handlebars={PageComponentTertiaryNavExampleRaw}
-      >
-        {pageComponentTertiaryNavExample}
-      </Example>
-      <Example
-        heading="Page component grouped nav example"
-        fullPageOnly="true"
-        handlebars={PageComponentGroupedNavExampleRaw}
-      >
-        {pageComponentGroupedNavExample}
-      </Example>
-      <Example
-        heading="Page component - legacy nav separators"
-        fullPageOnly="true"
-        handlebars={PageComponentLegacyNavSeparatorsExampleRaw}
-      >
-        {pageComponentLegacyNavSeparatorsExample}
-      </Example>
-      <Example
-        heading="Page component - legacy sidebar and nav (light themed)"
-        fullPageOnly="true"
-        handlebars={PageComponentLightSidebarNavExampleRaw}
-      >
-        {pageComponentLightSidebarNavExample}
-      </Example>
-      <Example
-        heading="Page component - legacy sidebar and nav (light themed), and legacy nav separators"
-        fullPageOnly="true"
-        handlebars={PageComponentLightSidebarNavLegacyNavSeparatorsExampleRaw}
-      >
-        {pageComponentLightSidebarNavLegacyNavSeparatorsExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Page-component-legacy-nav-separators isFullscreen
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-legacy-nav-separators-example" page--IsLegacySeparators="true" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
+```
+
+```hbs title=Page-component-legacy-sidebar-andnav-(light-themed) isFullscreen
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
+```
+
+```hbs title=Page-component-legacy-sidebar-and-nav-(light-themed)-and-legacy-nav-separators isFullscreen
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
 ```

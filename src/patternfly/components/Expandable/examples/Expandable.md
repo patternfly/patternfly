@@ -3,36 +3,28 @@ title: Expandable
 section: components
 cssPrefix: pf-c-expandable
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import expandableExpandedExampleRaw from '!!raw-loader!./expandable-expanded-example.hbs';
-import expandableHiddenExampleRaw from '!!raw-loader!./expandable-hidden-example.hbs';
-import ExpandableExpandedExample from './expandable-expanded-example.hbs';
-import ExpandableHiddenExample from './expandable-hidden-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const expandableExpandedExample = ExpandableExpandedExample();
-  const expandableHiddenExample = ExpandableHiddenExample();
-  const headingText = 'Expandable';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Hidden example" handlebars={expandableHiddenExampleRaw}>
-        {expandableHiddenExample}
-      </Example>
-      <Example heading="Expanded example" handlebars={expandableExpandedExampleRaw}>
-        {expandableExpandedExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Hidden-example
+{{#> expandable}}
+  {{#> expandable-toggle}}
+  {{/expandable-toggle}}
+  {{#> expandable-content}}
+    This content is visible only when the component is expanded.
+  {{/expandable-content}}
+{{/expandable}}
 ```
 
+```hbs title=Expanded-example
+{{#> expandable expandable--IsExpanded="true"}}
+  {{#> expandable-toggle}}
+  {{/expandable-toggle}}
+  {{#> expandable-content}}
+    This content is visible only when the component is expanded.
+  {{/expandable-content}}
+{{/expandable}}
+```
+
+# Documentation
 ## Accessibility
 
 | Attribute | Applied to | Outcome |

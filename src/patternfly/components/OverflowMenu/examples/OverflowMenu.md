@@ -10,77 +10,252 @@ The overflow menu component condenses actions inside `.pf-c-overflow-menu__conte
 The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.pf-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-data-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
 
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
+```hbs title=Overflow-menu-simple-(responsive)
+{{#> overflow-menu overflow-menu--modifier="pf-m-show-on-lg" overflow-menu--id="overflow-menu-simple-example" overflow-menu-button--aria-label="Generic options" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item}}
+      Item
+    {{/overflow-menu-item}}
 
-import overflowMenuSimpleExampleRaw from '!!raw-loader!./overflow-menu-simple-example.hbs';
-import overflowMenuGroupTypesExampleRaw from '!!raw-loader!./overflow-menu-group-types-example.hbs';
-import overflowMenuSimpleAdditionalOptionsExampleRaw from '!!raw-loader!./overflow-menu-simple-additional-options-example.hbs';
-import overflowMenuPersistentExampleRaw from '!!raw-loader!./overflow-menu-persistent-example.hbs';
+    {{#> overflow-menu-item}}
+      Item
+    {{/overflow-menu-item}}
 
-import OverflowMenuSimpleExample from './overflow-menu-simple-example.hbs';
-import OverflowMenuGroupTypesExample from './overflow-menu-group-types-example.hbs';
-import OverflowMenuSimpleAdditionalOptionsExample from './overflow-menu-simple-additional-options-example.hbs';
-import OverflowMenuPersistentExample from './overflow-menu-persistent-example.hbs';
+    {{#> overflow-menu-group}}
+      {{#> overflow-menu-item}}
+        Item
+      {{/overflow-menu-item}}
 
-import overflowMenuSimpleExampleDoc from '../docs/overflow-menu-simple.md';
-import overflowMenuGroupTypesExampleDoc from '../docs/overflow-menu-group-types.md';
-import overflowMenuSimpleAdditionalOptionsExampleDoc from '../docs/overflow-menu-simple-additional-options.md';
-import overflowMenuPersistentExampleDoc from '../docs/overflow-menu-persistent.md';
-import overflowMenuIntroDoc from '../docs/overflow-menu-intro.md';
+      {{#> overflow-menu-item}}
+        Item
+      {{/overflow-menu-item}}
 
-import docs from '../docs/code.md';
+      {{#> overflow-menu-item}}
+        Item
+      {{/overflow-menu-item}}
 
-export const Docs = docs;
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
 
-export default props => {
-  const overflowMenuSimpleExample = OverflowMenuSimpleExample();
-  const overflowMenuGroupTypesExample = OverflowMenuGroupTypesExample();
-  const overflowMenuSimpleAdditionalOptionsExample = OverflowMenuSimpleAdditionalOptionsExample();
-  const overflowMenuPersistentExample = OverflowMenuPersistentExample();
-  const headingText = 'Overflow menu';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example
-        intro={overflowMenuIntroDoc}
-        heading="Overflow menu simple (responsive)"
-        handlebars={overflowMenuSimpleExampleRaw}
-        docs={overflowMenuSimpleExampleDoc}
-        className="is-layout-page"
-      >
-        {overflowMenuSimpleExample}
-      </Example>
-      <Example
-        heading="Overflow menu group types"
-        handlebars={overflowMenuGroupTypesExampleRaw}
-        docs={overflowMenuGroupTypesExampleDoc}
-        className="is-layout-page"
-      >
-        {overflowMenuGroupTypesExample}
-      </Example>
-      <Example
-        heading="Overflow menu multiple groups - additional options"
-        handlebars={overflowMenuSimpleAdditionalOptionsExampleRaw}
-        docs={overflowMenuSimpleAdditionalOptionsExampleDoc}
-      >
-        {overflowMenuSimpleAdditionalOptionsExample}
-      </Example>
-      <Example
-        heading="Overflow menu persistent - additional options"
-        handlebars={overflowMenuPersistentExampleRaw}
-        docs={overflowMenuPersistentExampleDoc}
-        className="is-layout-page"
-      >
-        {overflowMenuPersistentExample}
-      </Example>
-    </Documentation>
-  );
-};
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item}}
+      Action
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 3
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 4
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 5
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
 ```
 
+```hbs title=Overflow-menu-group-types
+{{#> overflow-menu overflow-menu--id="overflow-menu-button-group-example" overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-button--aria-label="Options"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-group}}
+      {{#> overflow-menu-item}}
+        Item
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        Item
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        Item
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+
+    {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Primary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Secondary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-tertiary"}}
+          Tertiary
+        {{/button}}
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+
+    {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align left"'}}
+          <i class="fas fa-align-left" aria-hidden="true"></i>
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align center"'}}
+          <i class="fas fa-align-center" aria-hidden="true"></i>
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align right"'}}
+          <i class="fas fa-align-right" aria-hidden="true"></i>
+        {{/button}}
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+
+  {{/overflow-menu-content}}
+
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Item 3
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Primary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Secondary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Tertiary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Icon action 1
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Icon action 2
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Icon action 3
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+```
+
+```hbs title=Overflow-menu-multiple-groups-additional-options
+{{#> overflow-menu dropdown--IsExpanded="false" overflow-menu--id="overflow-menu-simple-additional-options-example" overflow-menu-button--aria-label="Options" overflow-menu--showOn="lg" overflow-menu-dropdown-button-aria-expanded="aria-expanded=true"}}
+
+  {{!-- Menu content --}}
+  {{#> overflow-menu-content}}
+
+    {{!-- Button group --}}
+    {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Primary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Secondary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-tertiary"}}
+          Tertiary
+        {{/button}}
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+
+    {{!-- Button group --}}
+    {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align left"'}}
+          <i class="fas fa-align-left" aria-hidden="true"></i>
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align center"'}}
+          <i class="fas fa-align-center" aria-hidden="true"></i>
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align right"'}}
+          <i class="fas fa-align-right" aria-hidden="true"></i>
+        {{/button}}
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+
+  {{#> overflow-menu-control overflow-menu-control--HasAdditionalOptions="true"}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Primary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Secondary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Tertiary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Action 4
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Action 5
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Action 6
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item}}
+      Action 7
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+```
+
+```hbs title=Overflow-menu-persistent-additional-options
+{{#> overflow-menu overflow-menu--id="overflow-menu-persistent-example" overflow-menu--modifier="pf-m-show-on-md" overflow-menu-button--aria-label="Options"  overflow-menu-control--HasAdditionalOptions="true"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group pf-m-persistent"}}
+      {{#> overflow-menu-item overflow-menu-item--modifier="pf-m-persistent"}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Primary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Secondary
+        {{/button}}
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        {{#> button button--modifier="pf-m-tertiary"}}
+          Tertiary
+        {{/button}}
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+
+  {{#> overflow-menu-control}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Primary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Secondary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+      Tertiary
+    {{/overflow-menu-dropdown-item}}
+    {{#> overflow-menu-dropdown-item}}
+      Action 4
+    {{/overflow-menu-dropdown-item}}
+  {{/overflow-menu-control}}
+{{/overflow-menu}}
+```
+
+# Documentation
 ### Default spacing for items and groups:
 
 | Class | CSS Variable | Computed Value |

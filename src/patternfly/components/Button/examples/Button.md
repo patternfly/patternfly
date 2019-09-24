@@ -4,42 +4,171 @@ section: components
 cssPrefix: pf-c-button
 ---
 
-import VariationTemplateRaw from '!!raw-loader!./button-variations-example.hbs';
-import StatesTemplateRaw from '!!raw-loader!./button-states-example.hbs';
-import BlockTemplateRaw from '!!raw-loader!./button-block-example.hbs';
-import TypesTemplateRaw from '!!raw-loader!./button-types-example.hbs';
-import LinkExampleRaw from '!!raw-loader!./button-link-example.hbs';
-import VariationTemplate from './button-variations-example.hbs';
-import StatesTemplate from './button-states-example.hbs';
-import BlockTemplate from './button-block-example.hbs';
-import TypesTemplate from './button-types-example.hbs';
-import LinkExample from './button-link-example.hbs';
+```hbs title=Button-variations
+{{#> button button--modifier="pf-m-primary"}}
+  Primary
+{{/button}}
+{{#> button button--modifier="pf-m-secondary"}}
+  Secondary
+{{/button}}
+{{#> button button--modifier="pf-m-tertiary"}}
+  Tertiary
+{{/button}}
+{{#> button button--modifier="pf-m-danger"}}
+  Danger
+{{/button}}
+{{#> button button--modifier="pf-m-link"}}
+  {{#> button-icon}}
+      <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link button
+{{/button}}
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+{{#> button button--modifier="pf-m-inline pf-m-link"}}
+  Inline link button
+{{/button}}
+```
 
-<Example 
-  title="Button variations" 
-  handlebars={VariationTemplateRaw}
-  html={VariationTemplate()} />
+```hbs title=Button-states
+{{#> button button--modifier="pf-m-primary"}}
+  Primary
+{{/button}}
+{{#> button button--modifier="pf-m-primary pf-m-focus"}}
+  Primary focus
+{{/button}}
+{{#> button button--modifier="pf-m-primary pf-m-active"}}
+  Primary active
+{{/button}}
+{{#> button button--modifier="pf-m-primary" button--attribute="disabled"}}
+  Primary disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-secondary"}}
+  Secondary
+{{/button}}
+{{#> button button--modifier="pf-m-secondary pf-m-focus"}}
+  Secondary focus
+{{/button}}
+{{#> button button--modifier="pf-m-secondary pf-m-active"}}
+  Secondary active
+{{/button}}
+{{#> button button--modifier="pf-m-secondary" button--attribute="disabled"}}
+  Secondary disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-tertiary"}}
+  Tertiary
+{{/button}}
+{{#> button button--modifier="pf-m-tertiary pf-m-focus"}}
+  Tertiary focus
+{{/button}}
+{{#> button button--modifier="pf-m-tertiary pf-m-active"}}
+  Tertiary active
+{{/button}}
+{{#> button button--modifier="pf-m-tertiary" button--attribute="disabled"}}
+  Tertiary disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-danger"}}
+  Danger
+{{/button}}
+{{#> button button--modifier="pf-m-danger pf-m-focus"}}
+  Danger focus
+{{/button}}
+{{#> button button--modifier="pf-m-danger pf-m-active"}}
+  Danger active
+{{/button}}
+{{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
+  Danger disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-link"}}
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link button
+{{/button}}
+{{#> button button--modifier="pf-m-link pf-m-focus"}}
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link button
+{{/button}}
+{{#> button button--modifier="pf-m-link pf-m-active"}}
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link button
+{{/button}}
+{{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link button
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+{{#> button button--modifier="pf-m-plain pf-m-focus" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+{{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+{{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-link pf-m-inline pf-m-inline"}}
+  Inline link button
+{{/button}}
+{{#> button button--modifier="pf-m-link pf-m-focus pf-m-inline"}}
+  Inline link button
+{{/button}}
+{{#> button button--modifier="pf-m-link pf-m-active pf-m-inline"}}
+  Inline link button
+{{/button}}
+{{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
+  Inline link button
+{{/button}}
+```
 
-<Example 
-  title="Button states" 
-  handlebars={StatesTemplateRaw}
-  html={StatesTemplate()} />
+```hbs title=Links-as-buttons
+{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-primary"}}
+  Primary link to W3.org
+{{/button-link}}
+{{#> button-link button-link--attribute='href="#overview" aria-label="Read more about button documentation"' button-link--modifier="pf-m-secondary"}}
+  Secondary link to anchor
+{{/button-link}}
+{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" aria-disabled="true" tabindex="-1"' button-link--modifier="pf-m-tertiary pf-m-disabled"}}
+  Tertiary link to W3.org
+{{/button-link}}
+```
 
-<Example 
-  title="Links as buttons" 
-  handlebars={LinkExampleRaw}
-  html={LinkExample()} />
+```hbs title=Button-block-level
+{{#> button button--modifier="pf-m-primary pf-m-block"}}
+  Block level button
+{{/button}}
+```
 
-<Example 
-  title="Button (block level)" 
-  handlebars={BlockTemplateRaw}
-  html={BlockTemplate()} />
+```hbs title=Button-types
+{{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+  Submit Button
+{{/button}}
 
-<Example 
-  title="Button types" 
-  handlebars={TypesTemplateRaw}
-  html={TypesTemplate()} />
+{{#> button button--modifier="pf-m-primary" button--IsReset="true"}}
+  Reset Button
+{{/button}}
 
+{{#> button button--modifier="pf-m-primary"}}
+  Default Button
+{{/button}}
+```
+
+# Documentation
 # Buttons
 Buttons communicate and trigger actions a user can take throughout an experience.
 

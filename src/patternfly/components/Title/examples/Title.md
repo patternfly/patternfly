@@ -4,30 +4,28 @@ section: components
 cssPrefix: pf-c-title
 ---
 
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import TitleTemplateRaw from '!!raw-loader!./title-types-example.hbs';
-import TitleTemplate from './title-types-example.hbs';
-import docs from '../docs/code.md';
-
-export const Docs = docs;
-
-export default (props) => {
-  const titleTemplate = TitleTemplate();
-  const headingText = 'Title';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Title types" handlebars={TitleTemplateRaw}>
-        {titleTemplate}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Title-types
+{{#> title titleType="h1" title--modifier="pf-m-4xl"}}
+    4xl title
+{{/title}}
+{{#> title titleType="h1" title--modifier="pf-m-3xl"}}
+    3xl title
+{{/title}}
+{{#> title titleType="h1" title--modifier="pf-m-2xl"}}
+    2xl title
+{{/title}}
+{{#> title titleType="h1" title--modifier="pf-m-xl"}}
+    xl title
+{{/title}}
+{{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    lg title
+{{/title}}
+{{#> title titleType="h1" title--modifier="pf-m-md"}}
+    md title
+{{/title}}
 ```
 
+# Documentation
 ## Overview
 The title component styles font-size, font-weight, and line-height to titles.
 

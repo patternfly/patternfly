@@ -3,9 +3,8 @@ title: About Modal Box
 section: components
 cssPrefix: pf-c-about-modal-box
 ---
-## Overview
 
-```hbs title=About-modal-layout isFullscreen=true
+```hbs title=About-modal-layout isFullscreen
 {{#> about-modal-box about-modal-box--attribute='aria-labelledby="about-modal-title"'}}
   {{#> about-modal-box-brand}}
     {{#> about-modal-box-brand-image about-modal-box-brand-image--attribute='src="/assets/images/pf_mini_logo_white.svg" alt="PatternFly brand logo"'}}

@@ -4,14 +4,12 @@ section: components
 cssPrefix: pf-c-avatar
 ---
 
-import SimpleExampleRaw from '!!raw-loader!./avatar-simple-example.hbs';
-import SimpleExample from './avatar-simple-example.hbs';
+```hbs title=Avatar-simple
+{{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+{{/avatar}}
+```
 
-<Example 
-  title="Avatar simple" 
-  handlebars={SimpleExampleRaw}
-  html={SimpleExample()} />
-
+# Documentation
 ## Overview
 
 The avatar component provides a default SVG icon. If an image is used it should be 36px by 36px.

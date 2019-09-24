@@ -3,21 +3,38 @@ title: Badge
 section: components
 cssPrefix: pf-c-badge
 ---
-import ReadExampleRaw from '!!raw-loader!./badge-read-example.hbs';
-import UnreadExampleRaw from '!!raw-loader!./badge-unread-example.hbs';
-import ReadExample from './badge-read-example.hbs';
-import UnreadExample from './badge-unread-example.hbs';
 
-<Example 
-  title="Read badge" 
-  handlebars={ReadExampleRaw}
-  html={ReadExample()} />
+```hbs title=Read-badge
+{{#> badge badge--modifier="pf-m-read"}}
+  7
+{{/badge}}
+{{#> badge badge--modifier="pf-m-read"}}
+  24
+{{/badge}}
+{{#> badge badge--modifier="pf-m-read"}}
+  240
+{{/badge}}
+{{#> badge badge--modifier="pf-m-read"}}
+  999+
+{{/badge}}
+```
 
-<Example 
-  title="Unread badge" 
-  handlebars={BadgeUnreadExampleRaw}
-  html={UnreadExample()} />
+```hbs title=Unread-badge
+{{#> badge badge--modifier="pf-m-unread"}}
+  7
+{{/badge}}
+{{#> badge badge--modifier="pf-m-unread"}}
+  24
+{{/badge}}
+{{#> badge badge--modifier="pf-m-unread"}}
+  240
+{{/badge}}
+{{#> badge badge--modifier="pf-m-unread"}}
+  999+
+{{/badge}}
+```
 
+# Documentation
 ## Overview
 
 Always add a modifier class. Never use the class `.pf-c-badge` on its own.

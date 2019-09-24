@@ -3,72 +3,281 @@ title: Grid
 section: layouts
 cssPrefix: pf-l-grid
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import GridBaseRaw from '!!raw-loader!./grid-base-example.hbs';
-import GridGutterRaw from '!!raw-loader!./grid-gutter-example.hbs';
-import GridSmartRaw from '!!raw-loader!./grid-smart-grid-example.hbs';
-import GridSmartOverridesRaw from '!!raw-loader!./grid-smart-grid-overrides-example.hbs';
-import GridNestedRaw from '!!raw-loader!./grid-nested-example.hbs';
-import GridOffsetsRaw from '!!raw-loader!./grid-offsets-example.hbs';
-import GridResponsiveRaw from '!!raw-loader!./grid-responsive-example.hbs';
-import GridRowspanRaw from '!!raw-loader!./grid-rowspan-example.hbs';
-import GridBase from './grid-base-example.hbs';
-import GridGutter from './grid-gutter-example.hbs';
-import GridSmart from './grid-smart-grid-example.hbs';
-import GridSmartOverrides from './grid-smart-grid-overrides-example.hbs';
-import GridNested from './grid-nested-example.hbs';
-import GridOffsets from './grid-offsets-example.hbs';
-import GridResponsive from './grid-responsive-example.hbs';
-import GridRowspan from './grid-rowspan-example.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const gridBase = GridBase();
-  const gridGutter = GridGutter();
-  const gridSmart = GridSmart();
-  const gridSmartOverrides = GridSmartOverrides();
-  const gridNested = GridNested();
-  const gridOffsets = GridOffsets();
-  const gridResponsive = GridResponsive();
-  const gridRowspan = GridRowspan();
-  const headingText = 'Grid';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Smart grid (responsive)" handlebars={GridSmartRaw}>
-        {gridSmart}
-      </Example>
-      <Example heading="Smart grid with overrides (responsive)" handlebars={GridSmartOverridesRaw}>
-        {gridSmartOverrides}
-      </Example>
-      <Example heading="Base grid" handlebars={GridBaseRaw}>
-        {gridBase}
-      </Example>
-      <Example heading="Grid gutter" handlebars={GridGutterRaw}>
-        {gridGutter}
-      </Example>
-      <Example heading="Responsive grid" handlebars={GridResponsiveRaw}>
-        {gridResponsive}
-      </Example>
-      <Example heading="Nested grids" handlebars={GridNestedRaw}>
-        {gridNested}
-      </Example>
-      <Example heading="Offsets" handlebars={GridOffsetsRaw}>
-        {gridOffsets}
-      </Example>
-      <Example heading="Row spans" handlebars={GridRowspanRaw}>
-        {gridRowspan}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Smart-grid-(responsive)
+{{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
+  {{#> grid-item}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 6
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 7
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 8
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 9
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 10
+  {{/grid-item}}  
+  {{#> grid-item}}
+    item 11
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 12
+  {{/grid-item}}
+{{/grid}}
 ```
 
+```hbs title=Smart-grid-with-overrides-(responsive)
+{{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
+  {{#> grid-item grid-item--modifier="pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col-on-sm pf-m-8-col-on-lg pf-m-6-col-on-xl"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 6
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 7
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 8
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 9
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 10
+  {{/grid-item}}  
+  {{#> grid-item}}
+    item 11
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 12
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 13
+  {{/grid-item}}  
+  {{#> grid-item}}
+    item 14
+  {{/grid-item}}  
+{{/grid}}
+```
+
+```hbs title=Base-grid 
+{{#> grid}}
+  {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+      12 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-11-col"}}
+      11 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+      1 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+      10 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+      2 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-9-col"}}
+      9 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-3-col"}}
+      3 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-8-col"}}
+      8 col
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+      4 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-7-col"}}
+      7 col
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-5-col"}}
+      5 col
+  {{/grid-item}}  
+{{/grid}}
+```
+
+```hbs title=Grid-gutter
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+      12 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-11-col"}}
+      11 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+      1 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+      10 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+      2 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-9-col"}}
+      9 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-3-col"}}
+      3 col 
+  {{/grid-item}}    
+{{/grid}}
+```
+
+```hbs title=Responsive-grid
+{{#> grid}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col pf-m-6-col-on-md pf-m-11-col-on-xl"}}
+      1 / 6 / 11 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-11-col pf-m-6-col-on-md pf-m-1-col-on-xl"}}
+      11 / 6 / 1 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-2-col pf-m-6-col-on-md pf-m-10-col-on-xl"}}
+      2 / 6 / 10 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col pf-m-6-col-on-md pf-m-2-col-on-xl"}}
+      10 / 6 / 2 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-3-col pf-m-6-col-on-md pf-m-9-col-on-xl"}}
+      3 / 6 / 9 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-9-col pf-m-6-col-on-md pf-m-3-col-on-xl"}}
+      9 / 6 / 3 col 
+  {{/grid-item}}   
+  {{#> grid-item grid-item--modifier="pf-m-4-col pf-m-6-col-on-md pf-m-8-col-on-xl"}}
+      4 / 6 / 8 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-8-col pf-m-6-col-on-md pf-m-4-col-on-xl"}}
+      8 / 6 / 4 col 
+  {{/grid-item}}   
+  {{#> grid-item grid-item--modifier="pf-m-5-col pf-m-6-col-on-md pf-m-7-col-on-xl"}}
+      5 / 6 / 7 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-7-col pf-m-6-col-on-md pf-m-5-col-on-xl"}}
+      7 / 6 / 5 col 
+  {{/grid-item}} 
+{{/grid}}
+```
+
+```hbs title=Nested-grids
+{{#> grid}}
+  {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+    12 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+    10 col 
+      {{#> grid grid--modifier="pf-m-gutter"}}
+        {{#> grid-item grid-item--modifier="pf-m-6-col"}}
+            6 col 
+        {{/grid-item}}    
+        {{#> grid-item grid-item--modifier="pf-m-6-col"}}
+            6 col 
+        {{/grid-item}}    
+        {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+            4 col 
+        {{/grid-item}}    
+        {{#> grid-item grid-item--modifier="pf-m-8-col"}}
+            8 col 
+        {{/grid-item}}    
+      {{/grid}}      
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+      2 col 
+  {{/grid-item}}   
+{{/grid}}
+```
+
+```hbs title=Offsets
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-11-col pf-m-offset-1-col"}}
+      11 col, offset 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col pf-m-offset-2-col"}}
+      10 col, offset 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-9-col pf-m-offset-3-col"}}
+      9 col, offset 3
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-8-col pf-m-offset-4-col"}}
+      8 col, offset 4
+  {{/grid-item}}  
+{{/grid}}
+```
+
+```hbs title=Row-spans
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-8-col"}}
+    8 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col pf-m-2-row"}}
+    4 col, 2 row
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-2-col pf-m-3-row"}}
+    2 col, 3 row
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+    2 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    4 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+    2 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+    2 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+    2 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    4 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+    2 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    4 col 
+  {{/grid-item}}  
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    4 col 
+  {{/grid-item}}  
+{{/grid}}
+```
+
+# Documentation
 ## Overview
 
 The grid layout is based on CSS Grid’s two-dimensional system of columns and rows. This layout styles the parent element and its children to achieve responsive column and row spans as well as gutters.

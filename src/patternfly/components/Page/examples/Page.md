@@ -3,55 +3,133 @@ title: Page
 section: components
 cssPrefix: pf-c-page
 ---
-```js
-import React from 'react';
-import Documentation from '@siteComponents/Documentation';
-import Example from '@siteComponents/Example';
-import PageComponentNavVerticalExampleRaw from '!!raw-loader!./page-component-nav-vertical-example.hbs';
-import PageComponentNavHorizontalExampleRaw from '!!raw-loader!./page-component-nav-horizontal-example.hbs';
-import PageComponentFillExampleRaw from '!!raw-loader!./page-component-fill-example.hbs';
-import PageComponentMainSectionModifiersRaw from '!!raw-loader!./page-component-main-section-modifiers.hbs';
-import PageComponentNavVerticalExample from './page-component-nav-vertical-example.hbs';
-import PageComponentNavHorizontalExample from './page-component-nav-horizontal-example.hbs';
-import PageComponentFillExample from './page-component-fill-example.hbs';
-import PageComponentMainSectionModifiersExample from './page-component-main-section-modifiers.hbs';
-import docs from '../docs/code.md';
 
-export const Docs = docs;
-
-export default (props) => {
-  const pageComponentNavVerticalExample = PageComponentNavVerticalExample();
-  const pageComponentNavHorizontalExample = PageComponentNavHorizontalExample();
-  const pageComponentFillExample = PageComponentFillExample();
-  const pageComponentMainSectionModifiersExample = PageComponentMainSectionModifiersExample();
-  const headingText = 'Page';
-
-  return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-component-page" variablesRoot={variablesRoot}>
-      <Example heading="Page component, nav vertical example" handlebars={PageComponentNavVerticalExampleRaw}>
-        {pageComponentNavVerticalExample}
-      </Example>
-      <Example heading="Page component, nav horizontal example" handlebars={PageComponentNavHorizontalExampleRaw}>
-        {pageComponentNavHorizontalExample}
-      </Example>
-      <Example
-        heading="Page component, fill/no fill example"
-        handlebars={PageComponentFillExampleRaw}
-        className="is-extra-tall-body"
-      >
-        {pageComponentFillExample}
-      </Example>
-      <Example
-        heading="Page component main section padding modifiers"
-        handlebars={PageComponentMainSectionModifiersRaw}
-      >
-        {pageComponentMainSectionModifiersExample}
-      </Example>
-    </Documentation>
-  );
-};
+```hbs title=Page-component-nav-vertical-example
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        toggle
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link}}
+        Logo
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-tools}}
+      header-tools
+    {{/page-header-tools}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    pf-c-nav
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark-100"}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
 ```
 
+```hbs title=Page-component-nav-horizontal-example
+{{#> page page--nav-direction="vertical"}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-link}}
+        Logo
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{!-- Horizontal nav --}}
+    {{#> page-header-nav}}
+      pf-c-nav
+    {{/page-header-nav}}
+    {{!-- Toolbar --}}
+    {{#> page-header-tools}}
+      header-tools
+    {{/page-header-tools}}
+  {{/page-header}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark-100"}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{/page-main-section}}
+    {{#> page-main-section}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
+```hbs title=Page-component-fill/no-fill-example
+{{#> page page--nav-direction="vertical"}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-link}}
+        Logo
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{!-- Horizontal nav --}}
+    {{#> page-header-nav}}
+      pf-c-nav
+    {{/page-header-nav}}
+    {{!-- Toolbar --}}
+    {{#> page-header-tools}}
+      header-tools
+    {{/page-header-tools}}
+  {{/page-header}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
+      This section uses pf-m-fill to fill the available space.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-fill"}}
+      This section uses pf-m-no-fill to not fill the available space.
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
+```hbs title=Page-component-main-section-padding-modifiers
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        toggle
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link}}
+        Logo
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-tools}}
+      header-tools
+    {{/page-header-tools}}
+  {{/page-header}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    pf-c-nav
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section}}
+      This `.pf-c-page__main-section` has default padding.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
+      This `.pf-c-page__main-section` uses `.pf-m-no-padding` to remove all padding.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+      This `.pf-c-page__main-section` uses `.pf-m-no-padding-mobile` to remove padding on mobile only.
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+      
+# Documentation
 ## Overview
 
 This component provides the basic chrome for a page, including sidebar, header, and main areas.
