@@ -1,4 +1,4 @@
-Not Expanded Toolbar
+Toolbar not expanded
 <br>
 {{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-elements-example"}}
   {{#> data-toolbar-content}}
@@ -58,7 +58,7 @@ Not Expanded Toolbar
 {{/data-toolbar}}
 <br>
 <br>
-Expanded Toolbar
+Toolbar expanded
 <br>
 {{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
   {{#> data-toolbar-content}}
@@ -105,7 +105,7 @@ Expanded Toolbar
     {{> data-toolbar-item-search-filter button--id="expanded-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
+        {{#> select select--IsExpanded="true" id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
