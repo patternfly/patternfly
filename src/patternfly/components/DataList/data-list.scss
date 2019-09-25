@@ -157,7 +157,10 @@
   &.pf-m-expanded {
     &::before {
       --pf-c-data-list__item--before--BackgroundColor: var(--pf-c-data-list__item--m-expanded--before--BackgroundColor);
-      --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
+
+      @media screen and (min-width: $pf-global--breakpoint--sm) {
+        --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
+      }
     }
   }
 }
