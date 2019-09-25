@@ -25,9 +25,9 @@
   --pf-c-data-list__item--before--Transition: var(--pf-global--Transition);
   --pf-c-data-list__item--before--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-data-list__item--before--Top: 0;
-  --pf-c-data-list__item--before--Height: 100%;
+  --pf-c-data-list__item--before--Height: initial; // remove after breaking change
   --pf-c-data-list__item-item--before--Top: calc(var(--pf-c-data-list__item-item--BorderTopWidth) * -1);
-  --pf-c-data-list__item-item--before--Height: calc(100% + var(--pf-c-data-list__item-item--BorderTopWidth));
+  --pf-c-data-list__item-item--before--Height: initial; // remove after breaking change
 
   // Data list item row
   --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--lg);
@@ -130,9 +130,10 @@
   &::before {
     position: absolute;
     top: var(--pf-c-data-list__item--before--Top);
+    bottom: 0;
     left: 0;
     width: var(--pf-c-data-list__item--before--Width);
-    height: var(--pf-c-data-list__item--before--Height);
+    height: var(--pf-c-data-list__item--before--Height); // remove after breaking change period
     content: "";
     background-color: var(--pf-c-data-list__item--before--BackgroundColor);
     transition: var(--pf-c-data-list__item--before--Transition);
@@ -148,8 +149,7 @@
     }
 
     &::before {
-      --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
-      --pf-c-data-list__item--before--Height: var(--pf-c-data-list__item-item--before--Height);
+      --pf-c-data-list__item--before--Height: var(--pf-c-data-list__item-item--before--Height); // remove after breaking change
     }
   }
 
@@ -157,6 +157,7 @@
   &.pf-m-expanded {
     &::before {
       --pf-c-data-list__item--before--BackgroundColor: var(--pf-c-data-list__item--m-expanded--before--BackgroundColor);
+      --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
     }
   }
 }
