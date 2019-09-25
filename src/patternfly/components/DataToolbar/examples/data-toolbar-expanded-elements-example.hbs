@@ -105,12 +105,12 @@ Toolbar expanded
     {{> data-toolbar-item-search-filter button--id="expanded-content" data-toolbar-item-search-filter--modifier="pf-m-shared-item"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select select--IsExpanded="true" id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded')}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select select--IsExpanded="true" id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+        {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
           Risk
         {{/select}}
        {{/data-toolbar-item}}
