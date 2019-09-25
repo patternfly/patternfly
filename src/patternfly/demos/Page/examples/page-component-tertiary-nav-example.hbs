@@ -11,15 +11,15 @@
         {{/button}}
       {{/page-header-brand-toggle}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="PatternFly logo"'}}{{/brand}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
 
-  {{#> page-sidebar}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
@@ -101,7 +101,7 @@
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#> page-main}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
       {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
         {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
@@ -139,7 +139,6 @@
     {{/page-main-nav}}
     {{#> page-template-breadcrumb}}
     {{/page-template-breadcrumb}}
-    <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

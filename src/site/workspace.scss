@@ -335,8 +335,15 @@ html {
   .pf-l-stack > *,
   .pf-l-toolbar__group,
   .pf-l-toolbar__item,
+  .pf-l-flex .pf-l-flex,
+  .pf-l-flex__item,
   [class*="pf-u-"],
-  [class*="pf-u-"] > *:not(svg) {
+  [class*="pf-u-"] > *:not(svg),
+  .pf-c-data-toolbar,
+  .pf-c-data-toolbar__content > .pf-c-data-toolbar__item:not(.pf-m-separator),
+  .pf-c-data-toolbar__content > .pf-c-data-toolbar__group:not([class*="pf-m-space-items"]),
+  .pf-c-data-toolbar__group[class*="pf-m-space-items"] .pf-c-data-toolbar__item,
+  .pf-c-overflow-menu__item {
     padding: .5rem;
     border: 2px dashed #393f44;
   }
@@ -346,8 +353,17 @@ html {
   }
 
   .pf-c-page > *,
-  .pf-c-page__header > * {
+  .pf-c-page__header > *,
+  .pf-c-overflow-menu__group:not([class*="-group"]) {
     border: 2px dashed #393f44;
+  }
+
+  .pf-c-overflow-menu__group > .pf-c-overflow-menu__item {
+    border: none;
+  }
+
+  .pf-c-overflow-menu [class*="-group"] .pf-c-overflow-menu__item {
+    padding: 0;
   }
 
   .pf-l-grid > * {
@@ -370,12 +386,6 @@ html {
     list-style-position: outside;
     list-style-type: disc;
   }
-
-  // .Preview__body {
-  //   .pf-c-page__header-nav {
-  //     background: var(--pf-global--BackgroundColor--dark-100);
-  //   }
-  // }
 }
 
 .Documentation {
@@ -408,6 +418,12 @@ html {
   }
 }
 
+.is-dark-nav-preview {
+  .Preview__body {
+    background-color: var(--pf-global--BackgroundColor--dark-300);
+  }
+}
+
 .is-expanded-dropdown,
 .is-tall-body {
   .Preview__body {
@@ -418,6 +434,15 @@ html {
 .is-extra-tall-body {
   .Preview__body {
     height: 30em;
+
+    @at-root .is-example-grow#{&} {
+      display: flex;
+      flex-direction: column;
+
+      > * {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
@@ -501,42 +526,16 @@ html {
   --example--Color: #888;
   --example--BorderColor: rgba(0, 0, 0, .1);
 
-  padding: 40px;
-
   .example-border {
     background: none;
     border: 2px dashed #393f44;
     box-shadow: none;
   }
 
-  .pf-l-grid .pf-l-grid__item {
-    padding: .5rem;
-  }
-
-  .pf-l-flex,
-  .pf-l-flex__item {
-    position: relative;
-  }
-
-  [data-label]::after {
-    position: absolute;
-    top: -24px;
-    left: 0;
-    z-index: 2;
-    padding: 0 4px;
-    white-space: nowrap;
-    background: #fff;
-  }
-
-  [data-label]::after {
-    content: attr(data-label);
-  }
-
   .example-text,
   .example-border {
     padding: .5rem;
   }
-
 
   .example-title {
     margin-bottom: var(--pf-global--spacer--xl);
@@ -548,21 +547,6 @@ html {
 }
 
 .Example {
-  .pf-c-box {
-    padding: 30px;
-    margin: 10px;
-    border: 1px solid #ddd;
-  }
-
-  .pf-c-page-title {
-    border: 1px solid #ddd;
-
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
   .widget-section {
     padding: var(--pf-global--spacer--md);
     border: 1px dashed #ddd;

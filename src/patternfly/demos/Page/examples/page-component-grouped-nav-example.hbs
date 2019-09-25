@@ -10,14 +10,14 @@
         {{/button}}
       {{/page-header-brand-toggle}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="PatternFly logo"'}}{{/brand}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
-  {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel
@@ -79,8 +79,7 @@
       {{/nav-section}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#> page-main}}
-    <a id="main-content-{{page--id}}"></a>
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}

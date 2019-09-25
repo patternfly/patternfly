@@ -8,6 +8,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | -- | -- | -- |
 | `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
 | `role="main"` | `.pf-c-page__main` | Identifies the element that serves as the main region. **Required** |
+| `tabindex="-1"` | `.pf-c-page__main` | Allows the main region to receive programmatic focus. **Required** |
+| `id="[id]"` | `.pf-c-page__main` | Provides a hook for sending focus to new content. **Required** |
 | `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
 | `aria-controls="[id of nav]"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Identifies the element controlled by the toggle. **Required**
 
@@ -30,11 +32,13 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
 | `.pf-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
+| `.pf-c-page__drawer` | `<div>` |  Creates a container for the drawer component when placing the main page element in the drawer body. |
 | `.pf-m-icons` | `.pf-c-page__header-tools div` | Modifier for responsive behavior of header icons list. |
 | `.pf-m-mobile` | `.pf-c-page__header-tools .pf-c-button` | Modifier for responsive behavior of mobile menu. |
 | `.pf-m-user` | `.pf-c-page__header-tools div` | Modifier for responsive behavior of user menu. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
+| `.pf-m-dark` | `.pf-c-page__sidebar` |  Modifies the sidebar the dark variation. **Note: for use with a dark themed nav component** |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |

@@ -1,0 +1,69 @@
+{{#> toolbar toolbar--id=(concat page--id '-toolbar-top')}}
+  {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
+    <i class="fas fa-filter" aria-hidden="true"></i>
+  {{/button}}
+  {{#> toolbar-filter}}
+    {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
+      <i class="fas fa-filter" aria-hidden="true"></i>
+      Name
+    {{/select}}
+  {{/toolbar-filter}}
+  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
+    {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+      <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    {{/options-menu-toggle}}
+    {{> options-menu-multiple}}
+  {{/options-menu}}
+  {{#> toolbar-action-group}}
+    {{#> button button--modifier="pf-m-primary"}}
+      Action
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action
+    {{/button}}
+  {{/toolbar-action-group}}
+  {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
+  {{/dropdown}}
+  {{#if table-toolbar--IsCompactPagination}}
+    {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-m-compact"}}
+      {{#> pagination-total-items}}
+        <b>1 - 5</b> of <b>10</b>
+      {{/pagination-total-items}}
+      {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
+      {{#> pagination-nav}}
+        {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+          <i class="fas fa-angle-left" aria-hidden="true"></i>
+        {{/button}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+          <i class="fas fa-angle-right" aria-hidden="true"></i>
+        {{/button}}
+      {{/pagination-nav}}
+    {{/pagination}}
+  {{else}}
+    {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
+      {{#> pagination-total-items}}
+        <b>1 - 5</b> of <b>10</b>
+      {{/pagination-total-items}}
+      {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
+      {{#> pagination-nav}}
+        {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
+          <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+        {{/button}}
+        {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
+          <i class="fas fa-angle-left" aria-hidden="true"></i>
+        {{/button}}
+        {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
+          {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+          <span aria-hidden="true">of 4</span>
+        {{/pagination-nav-page-select}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+          <i class="fas fa-angle-right" aria-hidden="true"></i>
+        {{/button}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
+          <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+        {{/button}}
+      {{/pagination-nav}}
+    {{/pagination}}
+  {{/if}}
+  {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
+{{/toolbar}}

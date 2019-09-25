@@ -2,6 +2,13 @@
 
 /* stylelint-disable */
 
+.pf-c-chart {
+  // Color blending mode
+  svg g[clip-path] {
+    mix-blend-mode: multiply;
+  }
+}
+
 :root {
   // Chart colors
 
@@ -47,6 +54,13 @@
   --pf-chart-color-orange-400: #{$pf-chart-color-orange-400};
   --pf-chart-color-orange-500: #{$pf-chart-color-orange-500};
 
+  // red
+  --pf-chart-color-red-100: #{$pf-chart-color-red-100};
+  --pf-chart-color-red-200: #{$pf-chart-color-red-200};
+  --pf-chart-color-red-300: #{$pf-chart-color-red-300};
+  --pf-chart-color-red-400: #{$pf-chart-color-red-400};
+  --pf-chart-color-red-500: #{$pf-chart-color-red-500};
+
   // black
   --pf-chart-color-black-100: #{$pf-chart-color-black-100};
   --pf-chart-color-black-200: #{$pf-chart-color-black-200};
@@ -85,7 +99,6 @@
   // Stroke
   --pf-chart-global--stroke-line-cap: #{$pf-chart-global--stroke-line-cap};
   --pf-chart-global--stroke-line-join: #{$pf-chart-global--stroke-line-join};
-  --pf-chart-global--stroke-dash-array: #{$pf-chart-global--stroke-dash-array};
 
   // Fills and Strokes
   --pf-chart-global--danger--Color--100: #{$pf-chart-global--danger--Color--100};
@@ -117,6 +130,7 @@
   --pf-chart-axis--grid--stroke--Color: #{$pf-chart-axis--grid--stroke--Color};
   --pf-chart-axis--grid--PointerEvents: #{$pf-chart-axis--grid--PointerEvents};
   --pf-chart-axis--tick--Fill: #{$pf-chart-axis--tick--Fill};
+  --pf-chart-axis--tick--Size: #{$pf-chart-axis--tick--Size};
   --pf-chart-axis--tick--Width: #{$pf-chart-axis--tick--Width};
   --pf-chart-axis--tick--stroke--Color: #{$pf-chart-axis--tick--stroke--Color};
   --pf-chart-axis--tick-label--Fill: #{$pf-chart-axis--tick-label--Fill};
@@ -145,21 +159,27 @@
   --pf-chart-boxplot--box--Width: #{$pf-chart-boxplot--box--Width};
 
   // Bullet Chart
+  --pf-chart-bullet--axis--tick--count: #{$pf-chart-bullet--axis--tick--count};
+  --pf-chart-bullet--comparative-measure--Fill--Color: #{$pf-chart-bullet--comparative-measure--Fill--Color};
+  --pf-chart-bullet--comparative-measure--stroke--Color: #{$pf-chart-bullet--comparative-measure--stroke--Color};
+  --pf-chart-bullet--comparative-measure--stroke--Width: #{$pf-chart-bullet--comparative-measure--stroke--Width};
+  --pf-chart-bullet--comparative-measure--error--Fill--Color: #{$pf-chart-bullet--comparative-measure--error--Fill--Color};
+  --pf-chart-bullet--comparative-measure--error--stroke--Color: #{$pf-chart-bullet--comparative-measure--error--stroke--Color};
+  --pf-chart-bullet--comparative-measure--error--stroke--Width: #{$pf-chart-bullet--comparative-measure--error--stroke--Width};
+  --pf-chart-bullet--comparative-measure--error--Width: #{$pf-chart-bullet--comparative-measure--error--Width};
+  --pf-chart-bullet--comparative-measure--warning--Fill--Color: #{$pf-chart-bullet--comparative-measure--warning--Fill--Color};
+  --pf-chart-bullet--comparative-measure--warning--stroke--Color: #{$pf-chart-bullet--comparative-measure--warning--stroke--Color};
+  --pf-chart-bullet--comparative-measure--warning--stroke--Width: #{$pf-chart-bullet--comparative-measure--warning--stroke--Width};
+  --pf-chart-bullet--comparative-measure--warning--Width: #{$pf-chart-bullet--comparative-measure--warning--Width};
+  --pf-chart-bullet--comparative-measure--Width: #{$pf-chart-bullet--comparative-measure--Width};
+  --pf-chart-bullet--group-title--divider--Fill--Color: #{$pf-chart-bullet--group-title--divider--Fill--Color};
+  --pf-chart-bullet--group-title--divider--stroke--Color: #{$pf-chart-bullet--group-title--divider--stroke--Color};
+  --pf-chart-bullet--group-title--divider--stroke--Width: #{$pf-chart-bullet--group-title--divider--stroke--Width};
   --pf-chart-bullet--Height: #{$pf-chart-bullet--Height};
-  --pf-chart-bullet--items-per-row: #{$pf-chart-bullet--items-per-row};
-  --pf-chart-bullet--legend--Height: #{$pf-chart-bullet--legend--Height};
-  --pf-chart-bullet--range--Width: #{$pf-chart-bullet--range--Width};
-  --pf-chart-bullet--threshold-error--Color: #{$pf-chart-bullet--threshold-error--Color};
-  --pf-chart-bullet--threshold-error--Width: #{$pf-chart-bullet--threshold-error--Width};
-  --pf-chart-bullet--value--Width: #{$pf-chart-bullet--value--Width};
-  --pf-chart-bullet--comparative-measure-line--warning--stroke--Color: #{$pf-chart-bullet--comparative-measure-line--warning--stroke--Color};
-  --pf-chart-bullet--comparative-measure-line--warning--BorderWidth: #{$pf-chart-bullet--comparative-measure-line--warning--BorderWidth};
-  --pf-chart-bullet--comparative-measure-line--error--stroke--Color: #{$pf-chart-bullet--comparative-measure-line--error--stroke--Color};
-  --pf-chart-bullet--comparative-measure-line--error--BorderWidth: #{$pf-chart-bullet--comparative-measure-line--error--BorderWidth};
-  --pf-chart-bullet--zero-line--stroke--Color: #{$pf-chart-bullet--zero-line--stroke--Color};
-  --pf-chart-bullet--zero-line--BorderWidth: #{$pf-chart-bullet--zero-line--BorderWidth};
-  --pf-chart-bullet--negative-primary-measure--stroke--Color: #{$pf-chart-bullet--negative-primary-measure--stroke--Color};
-  --pf-chart-bullet--negative-primary-measure--BorderWidth: #{$pf-chart-bullet--negative-primary-measure--BorderWidth};
+  --pf-chart-bullet--label--subtitle--Fill: #{$pf-chart-bullet--label--subtitle--Fill};
+  --pf-chart-bullet--primary-measure--dot--size: #{$pf-chart-bullet--primary-measure--dot--size};
+  --pf-chart-bullet--primary-measure--segmented--Width: #{$pf-chart-bullet--primary-measure--segmented--Width};
+  --pf-chart-bullet--qualitative-range--Width: #{$pf-chart-bullet--qualitative-range--Width};
 
   // Candlestick
   --pf-chart-candelstick--data--stroke--Width: #{$pf-chart-candelstick--data--stroke--Width};
@@ -167,34 +187,34 @@
   --pf-chart-candelstick--candle--positive--Color: #{$pf-chart-candelstick--candle--positive--Color};
   --pf-chart-candelstick--candle--negative--Color: #{$pf-chart-candelstick--candle--negative--Color};
 
-  // Chart
-  --pf-chart-chart--BorderWidth: #{$pf-chart-chart--BorderWidth};
-
   // Simple Donut Chart
   --pf-chart-donut--label--subtitle--Fill: #{$pf-chart-donut--label--subtitle--Fill};
+  --pf-chart-donut--label--subtitle--position: #{$pf-chart-donut--label--subtitle--position};
   --pf-chart-donut--pie--Height: #{$pf-chart-donut--pie--Height};
   --pf-chart-donut--pie--angle--Padding: #{$pf-chart-donut--pie--angle--Padding};
+  --pf-chart-donut--pie--Padding: #{$pf-chart-donut--pie--Padding};
   --pf-chart-donut--pie--Width: #{$pf-chart-donut--pie--Width};
 
   // Donut Threshold Chart
   --pf-chart-donut--threshold--first--Color: #{$pf-chart-donut--threshold--first--Color};
   --pf-chart-donut--threshold--second--Color: #{$pf-chart-donut--threshold--second--Color};
   --pf-chart-donut--threshold--third--Color: #{$pf-chart-donut--threshold--third--Color};
-  --pf-chart-donut--threshold--success--Color: #{$pf-chart-donut--threshold--success--Color};
   --pf-chart-donut--threshold--warning--Color: #{$pf-chart-donut--threshold--warning--Color};
   --pf-chart-donut--threshold--danger--Color: #{$pf-chart-donut--threshold--danger--Color};
   --pf-chart-donut--threshold--dynamic--pie--Height: #{$pf-chart-donut--threshold--dynamic--pie--Height};
+  --pf-chart-donut--threshold--dynamic--pie--Padding: #{$pf-chart-donut--threshold--dynamic--pie--Padding};
   --pf-chart-donut--threshold--dynamic--pie--Width: #{$pf-chart-donut--threshold--dynamic--pie--Width};
   --pf-chart-donut--threshold--static--pie--Height: #{$pf-chart-donut--threshold--static--pie--Height};
   --pf-chart-donut--threshold--static--pie--angle--Padding: #{$pf-chart-donut--threshold--static--pie--angle--Padding};
+  --pf-chart-donut--threshold--static--pie--Padding: #{$pf-chart-donut--threshold--static--pie--Padding};
   --pf-chart-donut--threshold--static--pie--Width: #{$pf-chart-donut--threshold--static--pie--Width};
 
   // Donut Utilization Chart
-  --pf-chart-donut--utilization--label--subtitle--Fill: #{$pf-chart-donut--utilization--label--subtitle--Fill};
-  --pf-chart-donut--utilization--label--orientation: #{$pf-chart-donut--utilization--label--orientation};
   --pf-chart-donut--utilization--dynamic--pie--Height: #{$pf-chart-donut--utilization--dynamic--pie--Height};
   --pf-chart-donut--utilization--dynamic--pie--angle--Padding: #{$pf-chart-donut--utilization--dynamic--pie--angle--Padding};
+  --pf-chart-donut--utilization--dynamic--pie--Padding: #{$pf-chart-donut--utilization--dynamic--pie--Padding};
   --pf-chart-donut--utilization--dynamic--pie--Width: #{$pf-chart-donut--utilization--dynamic--pie--Width};
+  --pf-chart-donut--utilization--static--pie--Padding: #{$pf-chart-donut--utilization--static--pie--Padding};
 
   // Error Bar
   --pf-chart-errorbar--BorderWidth: #{$pf-chart-errorbar--BorderWidth};
@@ -206,6 +226,7 @@
   // Legend
   --pf-chart-legend--gutter--Width: #{$pf-chart-legend--gutter--Width};
   --pf-chart-legend--orientation: #{$pf-chart-legend--orientation};
+  --pf-chart-legend--position: #{$pf-chart-legend--position};
   --pf-chart-legend--title--orientation: #{$pf-chart-legend--title--orientation};
   --pf-chart-legend--data--type: #{$pf-chart-legend--data--type};
   --pf-chart-legend--title--Padding: #{$pf-chart-legend--title--Padding};
@@ -223,11 +244,8 @@
   --pf-chart-pie--data--stroke--Width: #{$pf-chart-pie--data--stroke--Width};
   --pf-chart-pie--data--stroke--Color: #{$pf-chart-pie--data--stroke--Color};
   --pf-chart-pie--labels--Padding: #{$pf-chart-pie--labels--Padding};
-  --pf-chart-pie--angle--Padding: #{$pf-chart-pie--angle--Padding};
   --pf-chart-pie--Height: #{$pf-chart-pie--Height};
   --pf-chart-pie--Width: #{$pf-chart-pie--Width};
-  --pf-chart-pie--small--Height: #{$pf-chart-pie--small--Height};
-  --pf-chart-pie--small--Width: #{$pf-chart-pie--small--Width};
 
   // Scatter Chart
   --pf-chart-scatter--data--stroke--Color: #{$pf-chart-scatter--data--stroke--Color};
@@ -241,23 +259,22 @@
   // Tooltip
   --pf-chart-tooltip--corner-radius: #{$pf-chart-tooltip--corner-radius};
   --pf-chart-tooltip--pointer-length: #{$pf-chart-tooltip--pointer-length};
+  --pf-chart-tooltip--Fill: #{$pf-chart-tooltip--Fill};
   --pf-chart-tooltip--flyoutStyle--corner-radius: #{$pf-chart-tooltip--flyoutStyle--corner-radius};
   --pf-chart-tooltip--flyoutStyle--stroke--Width: #{$pf-chart-tooltip--flyoutStyle--stroke--Width};
   --pf-chart-tooltip--flyoutStyle--PointerEvents: #{$pf-chart-tooltip--flyoutStyle--PointerEvents};
   --pf-chart-tooltip--flyoutStyle--stroke--Color: #{$pf-chart-tooltip--flyoutStyle--stroke--Color};
   --pf-chart-tooltip--flyoutStyle--Fill: #{$pf-chart-tooltip--flyoutStyle--Fill};
-  --pf-chart-tooltip--pointer--Height: #{$pf-chart-tooltip--pointer--Height};
   --pf-chart-tooltip--pointer--Width: #{$pf-chart-tooltip--pointer--Width};
   --pf-chart-tooltip--Padding: #{$pf-chart-tooltip--Padding};
   --pf-chart-tooltip--PointerEvents: #{$pf-chart-tooltip--PointerEvents};
-  --pf-chart-tooltip--labels--Padding: #{$pf-chart-tooltip--labels--Padding};
-  --pf-chart-tooltip--labels--PointerEvents: #{$pf-chart-tooltip--labels--PointerEvents};
 
   // Voronoi Chart
   --pf-chart-voronoi--data--Fill: #{$pf-chart-voronoi--data--Fill};
   --pf-chart-voronoi--data--stroke--Color: #{$pf-chart-voronoi--data--stroke--Color};
   --pf-chart-voronoi--data--stroke--Width: #{$pf-chart-voronoi--data--stroke--Width};
   --pf-chart-voronoi--labels--Padding: #{$pf-chart-voronoi--labels--Padding};
+  --pf-chart-voronoi--labels--Fill: #{$pf-chart-voronoi--labels--Fill};
   --pf-chart-voronoi--labels--PointerEvents: #{$pf-chart-voronoi--labels--PointerEvents};
   --pf-chart-voronoi--flyout--stroke--Width: #{$pf-chart-voronoi--flyout--stroke--Width};
   --pf-chart-voronoi--flyout--PointerEvents: #{$pf-chart-voronoi--flyout--PointerEvents};

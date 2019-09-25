@@ -10,6 +10,8 @@
   --pf-global--BackgroundColor--light-300: #{$pf-global--BackgroundColor--light-300};
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
   --pf-global--BackgroundColor--dark-200: #{$pf-global--BackgroundColor--dark-200};
+  --pf-global--BackgroundColor--dark-300: #{$pf-global--BackgroundColor--dark-300};
+  --pf-global--BackgroundColor--dark-400: #{$pf-global--BackgroundColor--dark-400};
   --pf-global--BackgroundColor--dark-transparent-100: #{$pf-global--BackgroundColor--dark-transparent-100};
   --pf-global--BackgroundColor--dark-transparent-200: #{$pf-global--BackgroundColor--dark-transparent-200};
 
@@ -20,6 +22,7 @@
   --pf-global--Color--400: #{$pf-global--Color--400};
   --pf-global--Color--light-100: #{$pf-global--Color--light-100};
   --pf-global--Color--light-200: #{$pf-global--Color--light-200};
+  --pf-global--Color--light-300: #{$pf-global--Color--light-300};
   --pf-global--Color--dark-100: #{$pf-global--Color--dark-100};
   --pf-global--Color--dark-200: #{$pf-global--Color--dark-200};
 
@@ -38,6 +41,9 @@
   --pf-global--primary-color--light-100: #{$pf-global--primary-color--light-100};
   --pf-global--primary-color--dark-100: #{$pf-global--primary-color--dark-100};
   --pf-global--secondary-color--100: #{$pf-global--secondary-color--100};
+  --pf-global--default-color--100: #{$pf-global--default-color--100};
+  --pf-global--default-color--200: #{$pf-global--default-color--200};
+  --pf-global--default-color--300: #{$pf-global--default-color--300};
   --pf-global--success-color--100: #{$pf-global--success-color--100};
   --pf-global--success-color--200: #{$pf-global--success-color--200};
   --pf-global--info-color--100: #{$pf-global--info-color--100};
@@ -142,7 +148,10 @@
 
   // Font family
   --pf-global--FontFamily--sans-serif: #{$pf-global--FontFamily--sans-serif};
+  --pf-global--FontFamily--heading--sans-serif: #{$pf-global--FontFamily--heading--sans-serif};
   --pf-global--FontFamily--monospace: #{$pf-global--FontFamily--monospace};
+  --pf-global--FontFamily--redhatfont--sans-serif: #{$pf-global--FontFamily--redhatfont--sans-serif};
+  --pf-global--FontFamily--redhatfont--heading--sans-serif: #{$pf-global--FontFamily--redhatfont--heading--sans-serif};
 
   // Font size
   --pf-global--FontSize--4xl: #{$pf-global--FontSize--4xl};
@@ -159,6 +168,7 @@
   --pf-global--FontWeight--normal: #{$pf-global--FontWeight--normal};
   --pf-global--FontWeight--semi-bold: #{$pf-global--FontWeight--semi-bold};
   --pf-global--FontWeight--bold: #{$pf-global--FontWeight--bold};
+  --pf-global--FontWeight--redhatfont--bold: #{$pf-global--FontWeight--redhatfont--bold};
 
   // Line height
   --pf-global--LineHeight--sm: #{$pf-global--LineHeight--sm};
@@ -177,4 +187,13 @@
   // A11y
   --pf-global--target-size--MinWidth: #{$pf-global--target-size--MinWidth};
   --pf-global--target-size--MinHeight: #{$pf-global--target-size--MinHeight};
+}
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhatfont--sans-serif);
+  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatfont--heading--sans-serif);
+  --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--redhatfont--bold);
+  --pf-global--FontWeight--bold: var(--pf-global--FontWeight--redhatfont--bold);
+  --pf-global--link--FontWeight: var(--pf-global--FontWeight--normal);
 }

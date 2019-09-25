@@ -69,10 +69,16 @@
         grid-template-columns: var(--pf-c-form--m-horizontal--md__group--GridTemplateColumns);
       }
 
+      /* stylelint-disable */
       .pf-c-form__group .pf-c-form__label {
         padding-top: var(--pf-c-form__label--PaddingTop);
         padding-bottom: 0;
+
+        &.pf-m-no-padding-top {
+          --pf-c-form__label--PaddingTop: 0;
+        }
       }
+      /* stylelint-enable */
 
       .pf-c-form-control,
       .pf-c-form__horizontal-group,
@@ -144,7 +150,6 @@
 .pf-c-form__label-required {
   margin-left: var(--pf-c-form__label-required--MarginLeft);
   font-size: var(--pf-c-form__label-required--FontSize);
-  line-height: 0;
   color: var(--pf-c-form__label-required--Color);
 }
 

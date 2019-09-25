@@ -165,3 +165,30 @@
 
   @extend %pf-hidden-visible;
 }
+
+@mixin pf-m-redhat-font {
+  .pf-m-redhat-font {
+    @content;
+  }
+}
+
+// Apply media query if value is passed
+@mixin pf-apply-breakpoint($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map) {
+  @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {
+    @content;
+  }
+
+  @else {
+    $breakpoint: pf-breakpoint-value($breakpoint);
+
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin pf-emit-properties($map) {
+  @each $prop, $value in $map {
+    #{$value}: #{$prop};
+  }
+}

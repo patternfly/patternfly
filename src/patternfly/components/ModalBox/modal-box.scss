@@ -29,6 +29,7 @@
   // Footer buttons
   --pf-c-modal-box__footer--c-button--MarginRight: var(--pf-global--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
   --pf-c-modal-box__footer--c-button--sm--MarginRight: calc(var(--pf-c-modal-box__footer--c-button--MarginRight) / 2);
+  --pf-c-modal-box__footer__c-button--first-of-type--MarginLeft: auto;
 
   @include pf-t-light; // This component always needs to be light
 
@@ -101,7 +102,7 @@
   // Using margin-left instead of justify: flex-end; as there may be other elements in the footer that align left
   // Limit scope to direct child buttons, allows use of layouts if needed
   > .pf-c-button:first-of-type {
-    margin-left: auto;
+    margin-left: var(--pf-c-modal-box__footer__c-button--first-of-type--MarginLeft);
   }
 
   // Base margin left and right equal for buttons when wrapped
@@ -111,6 +112,10 @@
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       --pf-c-modal-box__footer--c-button--MarginRight: var(--pf-c-modal-box__footer--c-button--sm--MarginRight);
     }
+  }
+
+  &.pf-m-align-left {
+    --pf-c-modal-box__footer__c-button--first-of-type--MarginLeft: 0;
   }
 }
 

@@ -46,22 +46,26 @@ export default props => {
 
   return (
     <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Simple nav" handlebars={navSimpleListExampleRaw}>
+      <Example heading="Simple nav" handlebars={navSimpleListExampleRaw} className="is-dark-nav-preview pf-t-dark">
         {navSimpleListExample}
       </Example>
-      <Example heading="Grouped nav" handlebars={navListGroupedExampleRaw}>
+      <Example heading="Grouped nav" handlebars={navListGroupedExampleRaw} className="is-dark-nav-preview pf-t-dark">
         {navListGroupedExample}
       </Example>
-      <Example heading="Default nav" handlebars={navExampleRaw}>
+      <Example heading="Default nav" handlebars={navExampleRaw} className="is-dark-nav-preview pf-t-dark">
         {navExample}
       </Example>
-      <Example heading="Expandable nav" handlebars={navExpandableExampleRaw}>
+      <Example heading="Expandable nav" handlebars={navExpandableExampleRaw} className="is-dark-nav-preview pf-t-dark">
         {navExpandableExample}
       </Example>
-      <Example heading="Expandable nav (w/subnav titles)" handlebars={navExpandableSubnavTitlesExampleRaw}>
+      <Example
+        heading="Expandable nav (w/subnav titles)"
+        handlebars={navExpandableSubnavTitlesExampleRaw}
+        className="is-dark-nav-preview pf-t-dark"
+      >
         {navExpandableSubnavTitlesExample}
       </Example>
-      <Example heading="Nav mixed" handlebars={navMixedExampleRaw}>
+      <Example heading="Nav mixed" handlebars={navMixedExampleRaw} className="is-dark-nav-preview pf-t-dark">
         {navMixedExample}
       </Example>
       <Example

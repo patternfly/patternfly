@@ -1,20 +1,23 @@
 .pf-c-data-list {
   --pf-c-data-list--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-data-list--BorderTopColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list--BorderTopWidth: var(--pf-global--spacer--sm);
-  --pf-c-data-list--sm--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-data-list--BorderBottomColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list--sm--BorderTopWidth: var(--pf-global--spacer--sm);
+  --pf-c-data-list--sm--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-data-list--BorderBottomColor: var(--pf-global--BorderColor--100); // Remove at breaking change
+  --pf-c-data-list--BorderBottomWidth: 0; // Remove at breaking change
 
-  @media screen and (min-width: $pf-global--breakpoint--sm) {
+  @media screen and (max-width: $pf-global--breakpoint--sm) {
+    --pf-c-data-list--BorderTopColor: var(--pf-c-data-list--sm--BorderTopColor);
     --pf-c-data-list--BorderTopWidth: var(--pf-c-data-list--sm--BorderTopWidth);
   }
 
   // Item
   --pf-c-data-list__item--m-expanded--before--BackgroundColor: var(--pf-global--active-color--100);
-  --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list__item-item--BorderTopWidth: #{pf-size-prem(8px)};
-  --pf-c-data-list__item-item--sm--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--BorderColor--100); // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm); // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item-item--sm--BorderTopWidth: #{pf-size-prem(8px)}; // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item-item--sm--BorderTopColor: var(--pf-global--BorderColor--300); // at breaking change switch var to BorderBottom
 
   // List item border left
   --pf-c-data-list__item--before--BackgroundColor: transparent;
@@ -22,9 +25,9 @@
   --pf-c-data-list__item--before--Transition: var(--pf-global--Transition);
   --pf-c-data-list__item--before--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-data-list__item--before--Top: 0;
-  --pf-c-data-list__item--before--Height: 100%;
-  --pf-c-data-list__item-item--before--Top: calc(var(--pf-c-data-list__item-item--sm--BorderTopWidth) * -1);
-  --pf-c-data-list__item-item--before--Height: calc(100% + var(--pf-c-data-list__item-item--sm--BorderTopWidth));
+  --pf-c-data-list__item--before--Height: initial; // remove after breaking change
+  --pf-c-data-list__item-item--before--Top: calc(var(--pf-c-data-list__item-item--BorderTopWidth) * -1);
+  --pf-c-data-list__item-item--before--Height: initial; // remove after breaking change
 
   // Data list item row
   --pf-c-data-list__item-row--PaddingRight: var(--pf-global--spacer--md);
@@ -88,7 +91,7 @@
   }
 
   // Expandable content
-  --pf-c-data-list__expandable-content--BorderTopColor: var(--pf-global--Color--light-200);
+  --pf-c-data-list__expandable-content--BorderTopColor: var(--pf-global--BorderColor--100);
   --pf-c-data-list__expandable-content--MarginRight: calc(var(--pf-c-data-list__expandable-content-body--PaddingRight) * -1);
   --pf-c-data-list__expandable-content--MarginLeft: calc(var(--pf-c-data-list__expandable-content-body--PaddingLeft) * -1);
   --pf-c-data-list__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
@@ -130,25 +133,26 @@
   &::before {
     position: absolute;
     top: var(--pf-c-data-list__item--before--Top);
+    bottom: 0;
     left: 0;
     width: var(--pf-c-data-list__item--before--Width);
-    height: var(--pf-c-data-list__item--before--Height);
+    height: var(--pf-c-data-list__item--before--Height); // remove after breaking change period
     content: "";
     background-color: var(--pf-c-data-list__item--before--BackgroundColor);
     transition: var(--pf-c-data-list__item--before--Transition);
   }
 
   // add border top to subsequent li's
-  & + & {
-    border-top: var(--pf-c-data-list__item-item--sm--BorderTopWidth) solid var(--pf-c-data-list__item-item--BorderTopColor);
+  &:not(.pf-m-expanded) {
+    border-bottom: var(--pf-c-data-list__item-item--BorderTopWidth) solid var(--pf-c-data-list__item-item--BorderTopColor);
 
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       --pf-c-data-list__item-item--BorderTopWidth: var(--pf-c-data-list__item-item--sm--BorderTopWidth);
+      --pf-c-data-list__item-item--BorderTopColor: var(--pf-c-data-list__item-item--sm--BorderTopColor);
     }
 
     &::before {
-      --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
-      --pf-c-data-list__item--before--Height: var(--pf-c-data-list__item-item--before--Height);
+      --pf-c-data-list__item--before--Height: var(--pf-c-data-list__item-item--before--Height); // remove after breaking change
     }
   }
 
@@ -156,6 +160,10 @@
   &.pf-m-expanded {
     &::before {
       --pf-c-data-list__item--before--BackgroundColor: var(--pf-c-data-list__item--m-expanded--before--BackgroundColor);
+
+      @media screen and (min-width: $pf-global--breakpoint--sm) {
+        --pf-c-data-list__item--before--Top: var(--pf-c-data-list__item-item--before--Top);
+      }
     }
   }
 }

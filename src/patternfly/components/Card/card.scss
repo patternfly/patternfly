@@ -98,3 +98,11 @@
 .pf-c-card__footer {
   font-size: var(--pf-c-card__footer--FontSize);
 }
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-card__header {
+    font-family: var(--pf-global--FontFamily--sans-serif);
+    font-weight: var(--pf-global--FontWeight--bold);
+  }
+}

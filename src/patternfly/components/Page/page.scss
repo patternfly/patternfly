@@ -38,7 +38,7 @@
   --pf-c-page__header-nav--lg--PaddingLeft: 0;
   --pf-c-page__header-nav--lg--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-page__header-nav--lg--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-nav--BackgroundColor: #242424; // Custom color for this element only
+  --pf-c-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__header-nav--lg--BackgroundColor: transparent;
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--md--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
@@ -79,6 +79,7 @@
   --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
   --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
   --pf-c-page__sidebar--md--Transform: translate3d(0, 0, 0);
+  --pf-c-page__sidebar--m-dark--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
 
@@ -154,6 +155,10 @@
   --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-c-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+
+  // Wizard main section
+  --pf-c-page__main-wizard--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
   // Base
   display: grid;
@@ -348,10 +353,14 @@
   // Desktop
   // Collapse nav
   &.pf-m-collapsed {
-    @media screen and (min-width: $pf-global--breakpoint--md) {
-      max-width: 0;
-      overflow: hidden;
-    }
+    max-width: 0;
+    overflow: hidden;
+  }
+
+  &.pf-m-dark {
+    @include pf-t-dark;
+
+    --pf-c-page__sidebar--BackgroundColor: var(--pf-c-page__sidebar--m-dark--BackgroundColor);
   }
 }
 
@@ -360,8 +369,9 @@
   padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
 }
 
-// Main
-.pf-c-page__main {
+// Main & Drawer
+.pf-c-page__main,
+.pf-c-page__drawer {
   grid-area: main;
   z-index: var(--pf-c-page__main--ZIndex);
   display: flex;
@@ -369,6 +379,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .pf-c-page__main-nav {
@@ -437,6 +451,29 @@
       --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight);
       --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom);
       --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft);
+    }
+  }
+}
+
+.pf-c-page__main-wizard {
+  flex: 1 0 0;
+  border-top: var(--pf-c-page__main-wizard--BorderTopWidth) solid var(--pf-c-page__main-wizard--BorderTopColor);
+}
+
+.pf-c-page__drawer {
+  > .pf-c-drawer {
+    flex: 1 0 auto;
+
+    > .pf-c-drawer__content {
+      display: flex;
+      flex-direction: column;
+
+      .pf-c-page__main {
+        --pf-c-page__main--ZIndex: auto;
+
+        grid-area: auto;
+        flex: 1 0 auto;
+      }
     }
   }
 }

@@ -1,4 +1,6 @@
 .pf-c-title {
+  --pf-c-title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+
   // 4xl
   --pf-c-title--m-4xl--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-title--m-4xl--FontSize: var(--pf-global--FontSize--4xl);
@@ -28,6 +30,8 @@
   --pf-c-title--m-md--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-title--m-md--FontSize: var(--pf-global--FontSize--md);
   --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
+
+  font-family: var(--pf-c-title--FontFamily);
 
   &.pf-m-4xl {
     font-size: var(--pf-c-title--m-4xl--FontSize);
@@ -63,5 +67,13 @@
     font-size: var(--pf-c-title--m-md--FontSize);
     font-weight: var(--pf-c-title--m-md--FontWeight);
     line-height: var(--pf-c-title--m-md--LineHeight);
+  }
+}
+
+// RedHat Font overrides
+@include pf-m-redhat-font {
+  .pf-c-title {
+    --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--normal);
   }
 }

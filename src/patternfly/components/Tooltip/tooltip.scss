@@ -61,7 +61,12 @@
   font-size: var(--pf-c-tooltip__content--FontSize);
   color: var(--pf-c-tooltip__content--Color);
   text-align: center;
+  word-break: break-word;
   background-color: var(--pf-c-tooltip__content--BackgroundColor);
+
+  &.pf-m-text-align-left {
+    text-align: left;
+  }
 }
 
 .pf-c-tooltip__arrow {

@@ -21,3 +21,4 @@ A tooltip is used to provide contextual information for another component on hov
 | `.pf-m-right` | `.pf-c-tooltip` | Positions the tooltip to the right of the element. |
 | `.pf-m-top` | `.pf-c-tooltip` | Positions the tooltip to the top of the element. |
 | `.pf-m-bottom` | `.pf-c-tooltip` | Positions the tooltip to the bottom of the element. |
+| `.pf-m-text-align-left` | `.pf-c-tooltip__content` | Modifies tooltip content to text align left. |

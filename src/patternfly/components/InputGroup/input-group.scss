@@ -49,7 +49,7 @@
     }
   }
 
-  .pf-c-button {
+  .pf-c-button:not(.pf-m-control) {
     position: relative;
 
     &,
