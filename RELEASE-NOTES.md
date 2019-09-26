@@ -1,3 +1,9 @@
+---
+title: Release Notes
+section: root
+showTOC: false
+---
+
 # 2019.07 release notes (2019-09-10)
 Packages released:
 - @patternfly/patternfly@2.31.6

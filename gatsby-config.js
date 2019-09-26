@@ -10,6 +10,14 @@ module.exports = {
     {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
+        sideNavItems: [
+          { section: 'components' },
+          { section: 'layouts' },
+          { section: 'utilities' },
+          { section: 'demos' },
+          { section: 'experimental' },
+          { title: 'Release Notes' },
+        ],
         topNavItems: [
           {
             text: 'Accessibility',
@@ -44,6 +52,14 @@ module.exports = {
       options: {
         name: 'core', // This goes in URLs
         path: `${path.resolve(__dirname)}/src/patternfly`
+      }
+    },
+    // Source release notes
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core', // This goes in URLs
+        path: `${path.resolve(__dirname)}/RELEASE-NOTES.md`
       }
     },
     // Create static pages
