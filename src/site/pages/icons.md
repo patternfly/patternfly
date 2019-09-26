@@ -1,5 +1,4 @@
 ### PF icons
-{/*
 | icon name | icon | code |
 | --- | --- | --- |
 | screen | <i class="pf-icon pf-icon-screen"></i> | &lt;i class=&quot;pf-icon pf-icon-screen&quot;&gt;&lt;/i&gt;
@@ -110,4 +109,3 @@
 | pficon-sort-common-asc | <i class="pf-icon pf-icon-pficon-sort-common-asc"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-sort-common-asc&quot;&gt;&lt;/i&gt;
 | pficon-sort-common-desc | <i class="pf-icon pf-icon-pficon-sort-common-desc"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-sort-common-desc&quot;&gt;&lt;/i&gt;
 | pficon-dragdrop | <i class="pf-icon pf-icon-pficon-dragdrop"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-dragdrop&quot;&gt;&lt;/i&gt;
-*/}

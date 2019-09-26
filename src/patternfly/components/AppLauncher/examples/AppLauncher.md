@@ -32,6 +32,7 @@ cssPrefix: pf-c-app-launcher
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
+```
 
 ```hbs title=App-launcher-align-right
 {{#> app-launcher id="app-launcher-example-align-right" app-launcher--IsExpanded="true"}}
@@ -43,6 +44,7 @@ cssPrefix: pf-c-app-launcher
 {{/app-launcher}}
 ```
 
+TODO: Align this example to the right
 ```hbs title=App-launcher-top
 {{#> app-launcher id="app-launcher-example-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
@@ -169,9 +171,6 @@ cssPrefix: pf-c-app-launcher
 | `.pf-m-focus` | `.pf-c-app-launcher__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. |
 | `.pf-m-external` | `.pf-c-app-launcher__menu-item` | Modifies to display the menu item as having an external link icon on hover/focus. |
-
-};
-```
 
 ## Accessibility
 

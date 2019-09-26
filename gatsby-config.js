@@ -12,7 +12,7 @@ module.exports = {
       options: {
         topNavItems: [
           {
-            text: 'Accessibility guide',
+            text: 'Accessibility',
             link: '/accessibility-guide'
           },
           {
@@ -35,7 +35,7 @@ module.exports = {
             text: 'Upgrade guide',
             link: '/upgrade-guide'
           },
-        ]
+        ],
       }
     },
     // Source component documentation
