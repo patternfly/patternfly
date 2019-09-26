@@ -4,7 +4,7 @@
       {{> data-toolbar-toggle}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
             Status
           {{/select}}
         {{/data-toolbar-item}}
@@ -67,6 +67,16 @@
       {{/data-toolbar-item}}
     {{/data-toolbar-content}}
   {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl" data-toolbar-expandable-content--IsExpanded="true"}}
+    {{#> data-toolbar-item}}
+      {{#> select id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+        Status
+      {{/select}}
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      {{#> select id=(concat data-toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+        Filter by status
+      {{/select}}
+    {{/data-toolbar-item}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
       {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
         {{#> chip-group-list-item}}

@@ -4,12 +4,12 @@
       {{> data-toolbar-toggle}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
             Status
           {{/select}}
         {{/data-toolbar-item}}
         {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-status-two') select--IsExpanded="true"}}
+          {{#> select select--attribute="style='width: 200px'" id=(concat data-toolbar--id '-select-status-two') select--IsExpanded="true"}}
             Stopped
           {{/select}}
         {{/data-toolbar-item}}
