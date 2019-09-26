@@ -17,8 +17,10 @@
 
   // header
   --pf-c-login__header--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-login__header--sm--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-login__header--sm--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__header--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__header--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__header--sm--PaddingLeft: 0;
+  --pf-c-login__header--sm--PaddingRight: 0;
   --pf-c-login__header--xl--MarginBottom: var(--pf-global--spacer--2xl);
   --pf-c-login__header--xl--MarginTop: var(--pf-global--spacer--3xl);
   --pf-c-login__header--c-brand--MarginBottom: var(--pf-global--spacer--lg);
@@ -31,7 +33,8 @@
 
   // main
   --pf-c-login__main--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-login__main--xl--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-c-login__main--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-c-login__main--xl--MarginBottom: 0;
 
   // main header
   --pf-c-login__main-header--PaddingTop: var(--pf-global--spacer--2xl);
@@ -91,8 +94,10 @@
   --pf-c-login__main-footer-band-item--PaddingTop: var(--pf-global--spacer--md);
 
   // footer
-  --pf-c-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__footer--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-login__footer--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-login__footer--sm--PaddingLeft: 0;
+  --pf-c-login__footer--sm--PaddingRight: 0;
   --pf-c-login__footer--c-list--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-login__footer--c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
 
@@ -136,11 +141,13 @@
 .pf-c-login__header {
   @include pf-t-dark;
 
+  padding-right: var(--pf-c-login__header--PaddingRight);
+  padding-left: var(--pf-c-login__header--PaddingLeft);
   grid-area: header;
 
-  @media (max-width: $pf-global--breakpoint--sm) {
-    padding-right: var(--pf-c-login__header--sm--PaddingRight);
-    padding-left: var(--pf-c-login__header--sm--PaddingLeft);
+  @media (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-login__header--PaddingRight: var(--pf-c-login__header--PaddingRight);
+    --pf-c-login__header--PaddingLeft: var(--pf-c-login__header--PaddingLeft);
   }
 
   @media (min-width: $pf-global--breakpoint--xl) {
@@ -154,6 +161,7 @@
 
 .pf-c-login__main {
   grid-area: main;
+  margin-bottom: var(--pf-c-login__main--MarginBottom);
   background-color: var(--pf-c-login__main--BackgroundColor);
 
   // If the first child isn't a header, then we need to put the header's top padding there
@@ -166,31 +174,30 @@
     padding-bottom: var(--pf-c-login__main-footer--PaddingBottom);
   }
 
-  // This is not mobile first but avoids removing the margin for larger devices
-  @media (max-width: $pf-global--breakpoint--xl) {
-    margin-bottom: var(--pf-c-login__main--xl--MarginBottom);
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__main--MarginBottom: var(--pf-c-login__main--xl--MarginBottom);
   }
 }
 
 .pf-c-login__main-header {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 100%;
   column-gap: var(--pf-c-login__main-header--ColumnGap);
   row-gap: var(--pf-c-login__main-header--RowGap);
   align-items: center;
   padding: var(--pf-c-login__main-header--PaddingTop) var(--pf-c-login__main-header--PaddingRight) var(--pf-c-login__main-header--PaddingBottom) var(--pf-c-login__main-header--PaddingLeft);
 
-  @media (max-width: $pf-global--breakpoint--md) {
-    grid-template-columns: 100%;
+  @media (min-width: $pf-global--breakpoint--md) {
+    grid-template-columns: 1fr auto;
   }
 
   .pf-c-dropdown {
-    grid-column: 2 / 3;
-    grid-row: 1;
+    grid-column: auto;
+    grid-row: auto;
 
-    @media (max-width: $pf-global--breakpoint--md) {
-      grid-column: auto;
-      grid-row: auto;
+    @media (min-width: $pf-global--breakpoint--md) {
+      grid-column: 2 / 3;
+      grid-row: 1;
     }
   }
 }
@@ -275,10 +282,12 @@
   @include pf-t-dark;
 
   grid-area: footer;
+  padding-right: var(--pf-c-login__footer--PaddingRight);
+  padding-left: var(--pf-c-login__footer--PaddingLeft);
 
-  @media (max-width: $pf-global--breakpoint--sm) {
-    padding-right: var(--pf-c-login__footer--sm--PaddingRight);
-    padding-left: var(--pf-c-login__footer--sm--PaddingLeft);
+  @media (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-login__footer--PaddingRight: var(--pf-c-login__footer--sm--PaddingRight);
+    --pf-c-login__footer--PaddingLeft: var(--pf-c-login__footer--sm--PaddingLeft);
   }
 
   .pf-c-list {
