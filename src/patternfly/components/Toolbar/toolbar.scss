@@ -97,17 +97,15 @@
   visibility: hidden;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    display: block;
-    visibility: visible;
-
-    &.pf-m-expanded {
-      display: flex;
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    display: flex;
     flex-basis: auto;
     order: 0;
+    visibility: visible;
+  }
+
+  &.pf-m-expanded {
+    display: flex;
+    visibility: visible;
   }
 
   + .pf-c-toolbar__action-group {
