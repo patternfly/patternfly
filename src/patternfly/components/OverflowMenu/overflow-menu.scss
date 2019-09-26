@@ -9,15 +9,8 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
   // Spacer values
   --pf-c-overflow-menu__group--spacer: var(--pf-c-overflow-menu--spacer--base);
   --pf-c-overflow-menu__item--spacer: var(--pf-c-overflow-menu--spacer--base);
-  --pf-c-overflow-menu__control--spacer: var(--pf-global--spacer--sm);
-
-  // Display variables
-  --pf-c-overflow-menu__group--Display: none;
-  --pf-c-overflow-menu__item--Display: none;
-
-  // Visibility variables
-  --pf-c-overflow-menu__group--Visibility: hidden;
-  --pf-c-overflow-menu__item--Visibility: hidden;
+  --pf-c-overflow-menu__control--spacer: 0;
+  --pf-c-overflow-menu__control--show--spacer: var(--pf-global--spacer--sm);
 
   // Button group
   --pf-c-overflow-menu__group--m-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
@@ -27,10 +20,6 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
   --pf-c-overflow-menu__group--m-icon-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
   --pf-c-overflow-menu__group--m-icon-button-group--space-items: 0;
 
-  // Controller
-  --pf-c-overflow-menu__control--Display: inline-block;
-  --pf-c-overflow-menu__control--Visibility: visible;
-
   display: inline-flex;
   align-items: center;
 }
@@ -39,9 +28,8 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
 .pf-c-overflow-menu__group {
   --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--spacer);
 
-  display: var(--pf-c-overflow-menu__group--Display);
+  display: flex;
   align-items: center;
-  visibility: var(--pf-c-overflow-menu__group--Visibility);
 
   // Button group
   &.pf-m-button-group {
@@ -60,25 +48,12 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
       --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__group--m-icon-button-group--space-items);
     }
   }
-
-  &.pf-m-persistent {
-    --pf-c-overflow-menu__group--Display: flex;
-    --pf-c-overflow-menu__group--Visibility: visible;
-  }
 }
 
 // Item
 .pf-c-overflow-menu__item {
   // reset spacer
   --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__item--spacer);
-
-  display: var(--pf-c-overflow-menu__item--Display);
-  visibility: var(--pf-c-overflow-menu__item--Visibility);
-
-  &.pf-m-persistent {
-    --pf-c-overflow-menu__item--Display: inline-block;
-    --pf-c-overflow-menu__item--Visibility: visible;
-  }
 }
 
 .pf-c-overflow-menu__group,
@@ -99,9 +74,6 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
 // Control
 .pf-c-overflow-menu__control {
   --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--spacer);
-
-  display: var(--pf-c-overflow-menu__control--Display);
-  visibility: var(--pf-c-overflow-menu__control--Visibility);
 }
 
 /* stylelint-disable max-nesting-depth, no-duplicate-selectors */
@@ -111,23 +83,8 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
 
     @include pf-apply-breakpoint($breakpoint, $pf-c-overflow-menu--breakpoint-map) {
       &.pf-m-show#{$breakpoint-name} {
-        --pf-c-overflow-menu__group--Display: flex;
-        --pf-c-overflow-menu__group--Visibility: visible;
-        --pf-c-overflow-menu__item--Display: inline-block;
-        --pf-c-overflow-menu__item--Visibility: visible;
-
-        .pf-c-overflow-menu__control:not(.pf-m-additional-options) {
-          --pf-c-overflow-menu__control--Display: none;
-          --pf-c-overflow-menu__control--Visibility: hidden;
-        }
-
-        .pf-c-overflow-menu__shared-item {
-          display: none;
-          visibility: hidden;
-        }
-
         .pf-c-overflow-menu__content + .pf-c-overflow-menu__control {
-          --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--spacer);
+          --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--show--spacer);
 
           margin-right: var(--pf-c-overflow-menu--spacer);
           margin-left: var(--pf-c-overflow-menu--spacer);
