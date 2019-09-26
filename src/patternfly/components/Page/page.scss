@@ -89,18 +89,18 @@
   }
 
   // Main section
-  --pf-c-page__main-section--PaddingTop: 0;
-  --pf-c-page__main-section--PaddingRight: 0;
-  --pf-c-page__main-section--PaddingBottom: 0;
-  --pf-c-page__main-section--PaddingLeft: 0;
+  --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__main-section--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--md--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--m-no-padding-mobile--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
 
@@ -441,8 +441,12 @@
     --pf-c-page__main-section--BackgroundColor: var(--pf-c-page__main-section--m-dark-200--BackgroundColor);
   }
 
-  &.pf-m-no-padding {
-    padding: 0;
+  &.pf-m-no-padding,
+  &.pf-m-no-padding-mobile {
+    --pf-c-page__main-section--PaddingTop: 0;
+    --pf-c-page__main-section--PaddingRight: 0;
+    --pf-c-page__main-section--PaddingBottom: 0;
+    --pf-c-page__main-section--PaddingLeft: 0;
   }
 
   &.pf-m-no-padding-mobile {
