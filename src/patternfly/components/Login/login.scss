@@ -26,6 +26,11 @@
   --pf-c-login__header--c-brand--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-login__header--c-brand--xl--MarginBottom: var(--pf-global--spacer--2xl);
 
+  @media (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-login__header--PaddingRight: var(--pf-c-login__header--sm--PaddingRight);
+    --pf-c-login__header--PaddingLeft: var(--pf-c-login__header--sm--PaddingLeft);
+  }
+
   @media (min-width: $pf-global--breakpoint--xl) {
     --pf-c-login__header--MarginBottom: var(--pf-c-login__header--xl--MarginBottom);
     --pf-c-login__header--c-brand--MarginBottom: var(--pf-c-login__header--c-brand--xl--MarginBottom);
@@ -35,6 +40,10 @@
   --pf-c-login__main--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-login__main--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-login__main--xl--MarginBottom: 0;
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__main--MarginBottom: var(--pf-c-login__main--xl--MarginBottom);
+  }
 
   // main header
   --pf-c-login__main-header--PaddingTop: var(--pf-global--spacer--2xl);
@@ -101,6 +110,11 @@
   --pf-c-login__footer--c-list--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-login__footer--c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
 
+  @media (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-login__footer--PaddingRight: var(--pf-c-login__footer--sm--PaddingRight);
+    --pf-c-login__footer--PaddingLeft: var(--pf-c-login__footer--sm--PaddingLeft);
+  }
+
   @media (min-width: $pf-global--breakpoint--xl) {
     --pf-c-login__footer--c-list--PaddingTop: var(--pf-c-login__footer--c-list--xl--PaddingTop);
   }
@@ -145,11 +159,6 @@
   padding-left: var(--pf-c-login__header--PaddingLeft);
   grid-area: header;
 
-  @media (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-login__header--PaddingRight: var(--pf-c-login__header--PaddingRight);
-    --pf-c-login__header--PaddingLeft: var(--pf-c-login__header--PaddingLeft);
-  }
-
   @media (min-width: $pf-global--breakpoint--xl) {
     margin-top: var(--pf-c-login__header--xl--MarginTop);
   }
@@ -172,10 +181,6 @@
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child:not(.pf-c-login__main-footer) {
     padding-bottom: var(--pf-c-login__main-footer--PaddingBottom);
-  }
-
-  @media (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-login__main--MarginBottom: var(--pf-c-login__main--xl--MarginBottom);
   }
 }
 
@@ -284,11 +289,6 @@
   grid-area: footer;
   padding-right: var(--pf-c-login__footer--PaddingRight);
   padding-left: var(--pf-c-login__footer--PaddingLeft);
-
-  @media (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-login__footer--PaddingRight: var(--pf-c-login__footer--sm--PaddingRight);
-    --pf-c-login__footer--PaddingLeft: var(--pf-c-login__footer--sm--PaddingLeft);
-  }
 
   .pf-c-list {
     a {
