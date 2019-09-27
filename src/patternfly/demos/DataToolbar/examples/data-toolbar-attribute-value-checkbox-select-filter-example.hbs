@@ -69,12 +69,12 @@
   {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+        {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+        {{#> select id=(concat data-toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
           Filter by status
         {{/select}}
       {{/data-toolbar-item}}
