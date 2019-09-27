@@ -252,6 +252,9 @@ $pf-chart-scatter--data--Fill: $pf-chart-global--Fill--Color--900;
 // Scatter Chart
 $pf-chart-stack--data--stroke--Width: $pf-chart-global--stroke--Width--xs;
 
+// Threshold
+$pf-chart-threshold--stroke-dash-array: "6,6";
+
 // Tooltip
 $pf-chart-tooltip--corner-radius: 0;
 $pf-chart-tooltip--pointer-length: 10;
