@@ -1,41 +1,35 @@
 # 2019.08 release notes (2019-10-01)
-
 Packages released:
--
+- @patternfly/patternfly@2.x
 
 ## Components
-
 - **Charts:** 
-	- Adjust padding for pie and donut charts ([#2247] (https://github.com/patternfly/patternfly-next/pull/2247))
-	- Set mix-blend-mode for better color contrast ([#2239] (https://github.com/patternfly/patternfly-next/pull/2239))
-	- Update area chart opacity ([#2233] (https://github.com/patternfly/patternfly-next/pull/2233))	
-- **Copy to clipboard:** Wrapped code in pre which allows the code to preserve line-breaks and spaces and also applies styling such as the monospace font. ([#2260] (https://github.com/patternfly/patternfly-next/pull/2260))
-- **Data-list:** Make data list consistent with table ([#2289] (https://github.com/patternfly/patternfly-next/pull/2289))
--  **Data-toolbar:** 
-	-  Updated clear button mods ([#2248] (https://github.com/patternfly/patternfly-next/pull/2248))
-	-  Added in examples for expandable  ([#2273] (https://github.com/patternfly/patternfly-next/pull/2273))
-- **Flex-layout:** Wrapped flex items, update css ([#2214] (https://github.com/patternfly/patternfly-next/pull/2214))
-- **In-page wizard:** Added in-page wizard to wizard examples ([#262] (https://github.com/openshift/openshift-origin-design/pull/262))
-- **Navigation:** Added styling updates to dark nav ([#2283] (https://github.com/patternfly/patternfly-next/pull/2283))
-- **Page:** Added ability to keep sidebar collapsed between sizes ([#2264] (https://github.com/patternfly/patternfly-next/pull/2264))
-- **Pagination:** Added compact variation ([#2275] (https://github.com/patternfly/patternfly-next/pull/2275))
+  - Adjust padding for pie and donut charts ([#2247](https://github.com/patternfly/patternfly-next/pull/2247))
+  - Set mix-blend-mode for better color contrast ([#2239](https://github.com/patternfly/patternfly-next/pull/2239))
+  - Update area chart opacity ([#2233](https://github.com/patternfly/patternfly-next/pull/2233))
+- **Copy to clipboard:** Wrapped code in pre which allows the code to preserve line-breaks and spaces and also applies styling such as the monospace font. ([#2260](https://github.com/patternfly/patternfly-next/pull/2260))
+- **Data list:** Make data list borders consistent with table ([#2289](https://github.com/patternfly/patternfly-next/pull/2289))
+- **Data toolbar:** 
+  - Updated clear button mods ([#2248](https://github.com/patternfly/patternfly-next/pull/2248))
+  - Added in examples for expandable ([#2273](https://github.com/patternfly/patternfly-next/pull/2273))
+- **Flex layout:** Wrapped flex items, update css ([#2214](https://github.com/patternfly/patternfly-next/pull/2214))
+- **Wizard:**
+  - Re-enabled wizard modal demos ([#2259](https://github.com/patternfly/patternfly-next/pull/2259))
+  - Updated in page wizard demos to use dark sidebar/nav ([#2296](https://github.com/patternfly/patternfly-next/pull/2296))
+- **Navigation:** Added styling updates to dark nav ([#2283](https://github.com/patternfly/patternfly-next/pull/2283))
+- **Page:** Added ability to keep sidebar collapsed between sizes ([#2264](https://github.com/patternfly/patternfly-next/pull/2264))
+- **Pagination:** Added compact variation ([#2275](https://github.com/patternfly/patternfly-next/pull/2275))
 - **Radio:** Updated the radio component example to single components ([#2231](https://github.com/patternfly/patternfly-next/pull/2231))
-- **Shield:** Added missing components, missing var to brand docs js ([#2263] (https://github.com/patternfly/patternfly-next/pull/2263))
--  **Table:** Fixed a11y issues in org documentation/html/table ([#2278] (https://github.com/patternfly/patternfly-next/pull/2278))
--  **Tooltip:** Added text align left ([#2284] (https://github.com/patternfly/patternfly-next/pull/2284))
-- **Typeahead-select:** Added form wrapper, udpated css ([#2255] (https://github.com/patternfly/patternfly-next/pull/2255))
+- **Table:**
+  - Fixed a11y issues in org documentation/html/table ([#2282](https://github.com/patternfly/patternfly-next/pull/2282))
+  - Added empty and loading state table demos ([#2254](https://github.com/patternfly/patternfly-next/pull/2254))
+- **Tooltip:** Added text align left modifier ([#2284](https://github.com/patternfly/patternfly-next/pull/2284))
+- **Select:**
+  - Added typeahead form wrapper, udpated css ([#2255](https://github.com/patternfly/patternfly-next/pull/2255))
+  - Add top expanded example ([#2026](https://github.com/patternfly/patternfly-next/pull/2026))
+- **Chip group:** Add overflow to group ([#2278](https://github.com/patternfly/patternfly-next/pull/2278))
+- **Button:** Add control modifier ([#2005](https://github.com/patternfly/patternfly-next/pull/2005))
 
-
-## Chore
-
-- **Demos**
- - **Empty and loading state:** Added empty and loading state table demos ([#2254] (https://github.com/patternfly/patternfly-next/pull/2254))
-	- **Table:** Added empty and loading state table demos ([#2254] (https://github.com/patternfly/patternfly-next/pull/2254))
-	- **Wizard:** 
-		- Re-enabled wizard modal demos ([#2259] (https://github.com/patternfly/patternfly-next/pull/2259))
-		- Updated in page wizard demos to use dark sidebar/nav ([#2296] (https://github.com/patternfly/patternfly-next/pull/2296))
-
-
-- **Docs** 
-	- **Radio:** Updated the radio component example to single components ([#2231] (https://github.com/patternfly/patternfly-next/pull/2231))
+## Other
+- **Shield:** Added missing components, missing var to brand docs js ([#2263](https://github.com/patternfly/patternfly-next/pull/2263))
 
