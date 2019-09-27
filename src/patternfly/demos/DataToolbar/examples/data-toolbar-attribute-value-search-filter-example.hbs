@@ -1,8 +1,8 @@
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
-      {{> data-toolbar-toggle}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-xl"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="true"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--SelectedFilters="6"}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
           {{#> input-group}}
             {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
@@ -68,18 +68,20 @@
       {{/pagination}}
     {{/data-toolbar-item}}
   {{/data-toolbar-content}}
-  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-xl"}}
-    {{#> data-toolbar-item}}
-      {{#> input-group}}
-        {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
-          Name
-        {{/select}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput11" name="textInput11" type="search" aria-label="search input example"')}}
-        {{/form-control}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
-          <i class="fas fa-search" aria-hidden="true"></i>
-        {{/button}}
-      {{/input-group}}
-    {{/data-toolbar-item}}
+  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+        {{#> input-group}}
+          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
+            Name
+          {{/select}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput11" name="textInput11" type="search" aria-label="search input example"')}}
+          {{/form-control}}
+          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
+            <i class="fas fa-search" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-group}}
   {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
