@@ -22,8 +22,7 @@
     background-size: cover;
 
     /* stylelint-disable */
-    @media (max-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
-      (max-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage-2x);
     }
 

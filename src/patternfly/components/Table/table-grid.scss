@@ -54,13 +54,13 @@
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table-tr--responsive--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table-tr--responsive--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table-tr--responsive--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table-tr--responsive--md--PaddingLeft: var(--pf-global--spacer--lg);
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--md--PaddingRight);
     --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--md--PaddingLeft);
   }
@@ -410,10 +410,9 @@
     grid-column-start: 2;
 
     // @smallest breakpoint
-    @media screen and (max-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
       grid-row-start: 1;
       grid-column-start: 2;
-      margin-left: 0;
     }
   }
 
