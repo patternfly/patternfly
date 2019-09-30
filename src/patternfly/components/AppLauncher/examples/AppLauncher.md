@@ -44,7 +44,7 @@ cssPrefix: pf-c-app-launcher
 {{/app-launcher}}
 ```
 
-TODO: Align this example to the rig
+TODO: Align this example to the right
 ```hbs title=App-launcher-top
 {{#> app-launcher id="app-launcher-example-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
