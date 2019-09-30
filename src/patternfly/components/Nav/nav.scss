@@ -32,8 +32,8 @@
   --pf-c-nav--m-dark__section-title--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav--m-dark__separator--BackgroundColor: var(--pf-global--BackgroundColor--dark-400); // remove at breaking change
-  --pf-c-nav--m-dark__item__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
-  --pf-c-nav--m-dark__item__separator--BackgroundColor: var(--pf-global--BackgroundColor--dark-300); // remove at breaking change
+  --pf-c-nav--m-dark__item--m-current__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+  --pf-c-nav--m-dark__item--m-current__separator--BackgroundColor: var(--pf-global--BackgroundColor--dark-300); // remove at breaking change
   --pf-c-nav--m-dark__subnav--MarginTop: 0;
   --pf-c-nav--m-dark__list-link--after--Width: #{pf-size-prem(40px)};
 
@@ -300,15 +300,15 @@
     }
 
     .pf-c-nav__item {
-      --pf-c-nav__separator--BackgroundColor: var(--pf-c-nav--m-dark__item__separator--BackgroundColor);
-
-      .pf-c-divider {
-        background-color: var(--pf-c-nav--m-dark__item__c-divider--BackgroundColor);
-      }
-
       &.pf-m-current {
         --pf-c-nav__simple-list-link--Color: var(--pf-c-nav--m-dark__item--m-current__simple-list-link--Color);
         --pf-c-nav__list-link--Color: var(--pf-c-nav--m-dark__item--m-current__list-link--Color);
+        --pf-c-nav__separator--BackgroundColor: var(--pf-c-nav--m-dark__item--m-current__separator--BackgroundColor);
+
+        /* stylelint-disable-next-line */
+        .pf-c-divider {
+          background-color: var(--pf-c-nav--m-dark__item--m-current__c-divider--BackgroundColor);
+        }
       }
 
       &.pf-m-expanded {
