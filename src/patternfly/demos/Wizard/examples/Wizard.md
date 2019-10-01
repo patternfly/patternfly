@@ -184,7 +184,7 @@ cssPrefix: pf-d-wizard
 {{/backdrop}}
 ```
 
-```hbs title=Wizard-in-page isFullscreen
+```hbs title=Wizard-in-page
 {{#> page page--id="wizard-in-page"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -206,8 +206,8 @@ cssPrefix: pf-d-wizard
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{!-- Nav --}}
-  {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
       {{#> nav-list}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -322,7 +322,7 @@ cssPrefix: pf-d-wizard
 {{/page}}
 ```
 
-```hbs title=Wizard-in-page-nav-expanded-(mobile) isFullscreen
+```hbs title=Wizard-in-page-nav-expanded-(mobile)
 {{#> page page--id="wizard-in-page-expanded"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -344,8 +344,8 @@ cssPrefix: pf-d-wizard
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{!-- Nav --}}
-  {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
+  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
       {{#> nav-list}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true"}}

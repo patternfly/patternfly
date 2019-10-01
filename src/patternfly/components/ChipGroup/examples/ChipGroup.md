@@ -45,14 +45,14 @@ cssPrefix: pf-c-chip-group
       {{/chip}}
     {{/chip-group}}
   {{/chip-group-list-item}}
+  {{#> chip chip--modifier="pf-m-overflow"}}
+    {{#> button button--modifier="pf-m-plain"}}
+      {{#> chip-text}}
+        3 more
+      {{/chip-text}}
+    {{/button}}
+  {{/chip}}
 {{/chip-group}}
-{{#> chip chip--type="div" chip--modifier="pf-m-overflow"}}
-  {{#> button button--modifier="pf-m-plain"}}
-    {{#> chip-text}}
-      3 more
-    {{/chip-text}}
-  {{/button}}
-{{/chip}}
 ```
 
 ```hbs title=Chip-group-toolbar-(expanded)

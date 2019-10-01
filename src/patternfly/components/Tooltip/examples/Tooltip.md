@@ -36,6 +36,14 @@ cssPrefix: pf-c-tooltip
 {{/tooltip}}
 ```
 
+```hbs title=Tooltip-left-align-text
+{{#> tooltip tooltip--modifier="pf-m-top"}}
+  {{#> tooltip-content tooltip-content--modifier="pf-m-text-align-left" tooltip-content--attribute='id="tooltip-text-align-left-example"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+```
+
 # Documentation
 ## Overview
 
@@ -60,3 +68,4 @@ A tooltip is used to provide contextual information for another component on hov
 | `.pf-m-right` | `.pf-c-tooltip` | Positions the tooltip to the right of the element. |
 | `.pf-m-top` | `.pf-c-tooltip` | Positions the tooltip to the top of the element. |
 | `.pf-m-bottom` | `.pf-c-tooltip` | Positions the tooltip to the bottom of the element. |
+| `.pf-m-text-align-left` | `.pf-c-tooltip__content` | Modifies tooltip content to text align left. |

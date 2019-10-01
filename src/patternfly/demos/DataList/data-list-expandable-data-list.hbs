@@ -1,4 +1,4 @@
-{{#> data-list data-list--id="data-list-expandable" data-list--attribute='aria-label="Data list expandable demo"'}}
+{{#> data-list data-list--id=(concat page--id '-data-list') data-list--attribute='aria-label="Data list expandable demo"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}

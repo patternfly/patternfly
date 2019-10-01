@@ -174,7 +174,7 @@
 
 // Apply media query if value is passed
 @mixin pf-apply-breakpoint($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map) {
-  @if ($breakpoint == "null" or $breakpoint == "base") {
+  @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {
     @content;
   }
 
@@ -184,5 +184,11 @@
     @media (min-width: $breakpoint) {
       @content;
     }
+  }
+}
+
+@mixin pf-emit-properties($map) {
+  @each $prop, $value in $map {
+    #{$value}: #{$prop};
   }
 }

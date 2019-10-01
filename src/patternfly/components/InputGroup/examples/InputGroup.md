@@ -6,34 +6,34 @@ cssPrefix: pf-c-input-group
 
 ```hbs title=Inputgroup-example
 {{#> input-group}}
- {{#> button button--modifier="pf-m-secondary" button--attribute='id="textAreaButton1"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='id="textAreaButton1"'}}
     Button
   {{/button}}
-  {{#> form-control controlType="textarea" form-control--attribute='name="textarea1" id="textarea1" aria-label="textarea with buttons" aria-describedby="textAreaButton1"'}}
+  {{#> form-control controlType="textarea" form-control--attribute='name="textarea1" id="textarea1" aria-label="Textarea with buttons" aria-describedby="textAreaButton1"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-tertiary"}}
+  {{#> button button--modifier="pf-m-control"}}
     Button
   {{/button}}
 {{/input-group}}
 <br />
 {{#> input-group}}
- {{#> form-control controlType="textarea" form-control--attribute='name="textarea2" id="textarea2" aria-label="textarea with button" aria-describedby="textAreaButton2"'}}
-{{/form-control}}
-   {{#> button button--modifier="pf-m-tertiary" button--attribute='id="textAreaButton2"'}}
-      Button
-    {{/button}}
+  {{#> form-control controlType="textarea" form-control--attribute='name="textarea2" id="textarea2" aria-label="Textarea with button" aria-describedby="textAreaButton2"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-control" button--attribute='id="textAreaButton2"'}}
+    Button
+  {{/button}}
 {{/input-group}}
 <br />
 {{#> input-group}}
-  {{#> button button--modifier="pf-m-primary" button--attribute='id="textAreaButton3"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='id="textAreaButton3"'}}
     Button
   {{/button}}
-  {{#> button button--modifier="pf-m-secondary"}}
+  {{#> button button--modifier="pf-m-control"}}
     Button
   {{/button}}
-  {{#> form-control controlType="textarea" form-control--attribute='name="textarea3" id="textarea3" aria-label="textarea with buttons" aria-describedby="textAreaButton3"'}}
+  {{#> form-control controlType="textarea" form-control--attribute='name="textarea3" id="textarea3" aria-label="Textarea with buttons" aria-describedby="textAreaButton3"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-tertiary"}}
+  {{#> button button--modifier="pf-m-control"}}
     Button
   {{/button}}
 {{/input-group}}
@@ -44,9 +44,9 @@ cssPrefix: pf-c-input-group
       Dropdown
     {{/dropdown-toggle-text}}
   {{/dropdown}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput3" name="textInput3" aria-label="input with dropdown and button" aria-describedby="inputDropdownButton1"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput3" name="textInput3" aria-label="Input with dropdown and button" aria-describedby="inputDropdownButton1"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-secondary" button--attribute='id="inputDropdownButton1"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='id="inputDropdownButton1"'}}
     Button
   {{/button}}
 {{/input-group}}
@@ -62,7 +62,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br />
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="email input field" aria-describedby="email-example"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="Email input field" aria-describedby="email-example"'}}
   {{/form-control}}
  {{#> input-group-text inputGroupTextType="span" input-group-text--attribute='id="email-example"'}}
    @example.com
@@ -84,17 +84,17 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br />
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="search input example"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="Search input example"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="search button for search input"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
     <i class="fas fa-search" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}
 <br />
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput10" name="textInput10" aria-label="input example with popover"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput10" name="textInput10" aria-label="Input example with popover"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-tertiary" button--attribute='aria-label="popover for input"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="popover for input"'}}
     <i class="fas fa-question-circle" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}

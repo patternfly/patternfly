@@ -113,15 +113,24 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
+```hbs title=Pagination-compact
+{{#> pagination pagination--modifier="pf-m-compact"}}
+  {{#> pagination-total-items}}
+    <b>1 - 10</b> of <b>37</b>
+  {{/pagination-total-items}}
+  {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example"  options-menu--IsText="true"}}
+  {{#> pagination-nav}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/pagination-nav}}
+{{/pagination}}
+```
+
 # Documentation
-
-The top pagination displays an [options menu](/components/OptionsMenu/examples/) to select the number of items to show per page on a desktop screen, and on narrower viewports, the options menu is replaced with an element showing the currently visible items along with the total number of pages.
-
-The examples are shown in a full page preview to demonstrate the responsive behavior at different breakpoints.
-
-
-Unlike the top pagination, the bottom pagination does not change in a responsive view and the options menu persists on all viewports.
-
 Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-select`.
 
 ## Accessibility
@@ -150,3 +159,4 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
 | `.pf-c-pagination__menu-text` | `<span>` | Indicates text in menu dropdown. |
 | `.pf-m-footer` | `.pf-c-pagination` | Modifies for bottom/footer pagination component styles. |
+| `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |

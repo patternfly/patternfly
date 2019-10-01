@@ -4,10 +4,13 @@
   --pf-c-nav__item--m-expanded__toggle-icon--Transform: rotate(90deg);
 
   // dark modifier
+  --pf-c-nav--m-dark__list-link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-dark__list-link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav--m-dark__list-link--Color: var(--pf-global--Color--light-300);
   --pf-c-nav--m-dark__list-link--m-current--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__list-link--hover--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__list-link--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav--m-dark__list-link--after--Bottom: var(--pf-global--spacer--sm);
   --pf-c-nav--m-dark__list-link--active--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__simple-list-link--Color: var(--pf-global--Color--light-300);
   --pf-c-nav--m-dark__simple-list-link--hover--Color: var(--pf-global--Color--light-100);
@@ -18,14 +21,19 @@
   --pf-c-nav--m-dark__simple-list-link--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav--m-dark__simple-list-link--m-current--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__simple-list-link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
+  --pf-c-nav--m-dark__item--m-expanded--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-dark__item--m-expanded__list-link--after--Bottom: 0;
+  --pf-c-nav--m-dark__item--m-expanded__list-link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-dark__item--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__item--m-current__simple-list-link--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__item--m-current__list-link--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__item--m-current--m-expanded--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__section-title--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav--m-dark__separator--BackgroundColor: var(--pf-global--BackgroundColor--dark-400); // remove at breaking change
   --pf-c-nav--m-dark__item__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-nav--m-dark__item__separator--BackgroundColor: var(--pf-global--BackgroundColor--dark-300); // remove at breaking change
+  --pf-c-nav--m-dark__subnav--MarginTop: 0;
+  --pf-c-nav--m-dark__list-link--after--Width: #{pf-size-prem(40px)};
 
   // divider
   --pf-c-nav__c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -61,6 +69,7 @@
   --pf-c-nav__list-link--focus--Color: var(--pf-global--link--Color);
 
   // after
+  --pf-c-nav__list-link--after--Bottom: 0;
   --pf-c-nav__list-link--after--Left: var(--pf-c-nav__list-link--PaddingLeft);
   --pf-c-nav__list-link--after--md--Left: var(--pf-c-nav__list-link--md--PaddingLeft);
   --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--link--Color);
@@ -258,6 +267,8 @@
   }
 
   &.pf-m-dark {
+    --pf-c-nav__list-link--PaddingTop: var(--pf-c-nav--m-dark__list-link--PaddingTop);
+    --pf-c-nav__list-link--PaddingBottom: var(--pf-c-nav--m-dark__list-link--PaddingBottom);
     --pf-c-nav__list-link--Color: var(--pf-c-nav--m-dark__list-link--Color);
     --pf-c-nav__list-link--hover--Color: var(--pf-c-nav--m-dark__list-link--hover--Color);
     --pf-c-nav__list-link--focus--Color: var(--pf-c-nav--m-dark__list-link--focus--Color);
@@ -266,6 +277,7 @@
     --pf-c-nav__list-link--hover--after--BackgroundColor: var(--pf-global--active-color--400);
     --pf-c-nav__list-link--active--after--BackgroundColor: var(--pf-global--active-color--400);
     --pf-c-nav__list-link--focus--after--BackgroundColor: var(--pf-global--active-color--400);
+    --pf-c-nav__list-link--after--Bottom: var(--pf-c-nav--m-dark__list-link--after--Bottom);
     --pf-c-nav__list-link--m-current--after--BackgroundColor: var(--pf-global--active-color--400);
     --pf-c-nav__simple-list-link--Color: var(--pf-c-nav--m-dark__simple-list-link--Color);
     --pf-c-nav__simple-list-link--hover--Color: var(--pf-c-nav--m-dark__simple-list-link--hover--Color);
@@ -278,6 +290,8 @@
     --pf-c-nav__simple-list-link--m-current--BackgroundColor: var(--pf-c-nav--m-dark__simple-list-link--m-current--BackgroundColor);
     --pf-c-nav__section-title--Color: var(--pf-c-nav--m-dark__section-title--Color);
     --pf-c-nav__separator--BackgroundColor: var(--pf-c-nav--m-dark__separator--BackgroundColor);
+    --pf-c-nav__subnav--MarginTop: var(--pf-c-nav--m-dark__subnav--MarginTop);
+    --pf-c-nav__list-link--after--Width: var(--pf-c-nav--m-dark__list-link--after--Width);
 
     .pf-c-divider {
       background-color: var(--pf-c-nav--m-dark__c-divider--BackgroundColor);
@@ -293,11 +307,24 @@
       &.pf-m-current {
         --pf-c-nav__simple-list-link--Color: var(--pf-c-nav--m-dark__item--m-current__simple-list-link--Color);
         --pf-c-nav__list-link--Color: var(--pf-c-nav--m-dark__item--m-current__list-link--Color);
+      }
+
+      &.pf-m-expanded {
+        padding-bottom: var(--pf-c-nav--m-dark__item--m-expanded--PaddingBottom);
 
         /* stylelint-disable-next-line */
-        &.pf-m-expanded {
-          background-color: var(--pf-c-nav--m-dark__item--m-current--m-expanded--BackgroundColor);
+        > .pf-c-nav__link {
+          --pf-c-nav__list-link--after--Bottom: var(--pf-c-nav--m-dark__item--m-expanded__list-link--after--Bottom);
+          --pf-c-nav__list-link--PaddingBottom: var(--pf-c-nav--m-dark__item--m-expanded__list-link--PaddingBottom);
         }
+      }
+    }
+
+    .pf-c-nav__list > .pf-c-nav__item {
+      /* stylelint-disable-next-line */
+      &.pf-m-current,
+      > .pf-c-nav__link.pf-m-current {
+        background-color: var(--pf-c-nav--m-dark__item--m-current--BackgroundColor);
       }
     }
   }
@@ -340,7 +367,7 @@
     // After - border bottom treatment for top level links
     &::after {
       position: absolute;
-      bottom: 0;
+      bottom: var(--pf-c-nav__list-link--after--Bottom);
       left: var(--pf-c-nav__list-link--after--Left);
       width: var(--pf-c-nav__list-link--after--Width);
       height: var(--pf-c-nav__list-link--after--Height);

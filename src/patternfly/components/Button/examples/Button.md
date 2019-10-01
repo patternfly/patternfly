@@ -17,22 +17,35 @@ cssPrefix: pf-c-button
 {{#> button button--modifier="pf-m-danger"}}
   Danger
 {{/button}}
+
+<br>
+<br>
+
 {{#> button button--modifier="pf-m-link"}}
   {{#> button-icon}}
-      <i class="fas fa-plus-circle" aria-hidden="true"></i>
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link button
+  Link
 {{/button}}
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 {{#> button button--modifier="pf-m-inline pf-m-link"}}
-  Inline link button
+  Inline link
+{{/button}}
+
+<br>
+<br>
+
+{{#> button button--modifier="pf-m-control"}}
+  Control
+{{/button}}
+{{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy input"'}}
+  <i class="fas fa-copy" aria-hidden="true"></i>
 {{/button}}
 ```
 
-```hbs title=Button-states
-{{#> button button--modifier="pf-m-primary"}}
+```hbs title=Button-states{{#> button button--modifier="pf-m-primary"}}
   Primary
 {{/button}}
 {{#> button button--modifier="pf-m-primary pf-m-focus"}}
@@ -88,25 +101,25 @@ cssPrefix: pf-c-button
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link button
+  Link
 {{/button}}
 {{#> button button--modifier="pf-m-link pf-m-focus"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link button
+  Link focus
 {{/button}}
 {{#> button button--modifier="pf-m-link pf-m-active"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link button
+  Link active
 {{/button}}
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link button
+  Link disabled
 {{/button}}
 <br><br>
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
@@ -123,16 +136,32 @@ cssPrefix: pf-c-button
 {{/button}}
 <br><br>
 {{#> button button--modifier="pf-m-link pf-m-inline pf-m-inline"}}
-  Inline link button
+  Inline link
 {{/button}}
 {{#> button button--modifier="pf-m-link pf-m-focus pf-m-inline"}}
-  Inline link button
+  Inline link focus
 {{/button}}
 {{#> button button--modifier="pf-m-link pf-m-active pf-m-inline"}}
-  Inline link button
+  Inline link active
 {{/button}}
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
-  Inline link button
+  Inline link disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-control"}}
+  Control
+{{/button}}
+{{#> button button--modifier="pf-m-control pf-m-focus"}}
+  Control focus
+{{/button}}
+{{#> button button--modifier="pf-m-control pf-m-active"}}
+  Control active
+{{/button}}
+{{#> button button--modifier="pf-m-control pf-m-expanded"}}
+  Control expanded
+{{/button}}
+{{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
+  Control disabled
 {{/button}}
 ```
 
@@ -156,15 +185,15 @@ cssPrefix: pf-c-button
 
 ```hbs title=Button-types
 {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-  Submit Button
+  Submit
 {{/button}}
 
 {{#> button button--modifier="pf-m-primary" button--IsReset="true"}}
-  Reset Button
+  Reset
 {{/button}}
 
 {{#> button button--modifier="pf-m-primary"}}
-  Default Button
+  Default
 {{/button}}
 ```
 
@@ -259,6 +288,8 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
 | `.pf-m-inline` | `.pf-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link, has no padding, and is displayed inline with other inline content. |
 | `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
+| `.pf-m-control` | `.pf-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
+| `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies a control button for the expanded state. |
 | `.pf-m-hover` | `.pf-c-button` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.  |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class.  |
 | `.pf-m-focus` | `.pf-c-button` | Forces display of the focus state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class.  |

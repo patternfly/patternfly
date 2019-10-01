@@ -1,6 +1,7 @@
 ---
 title: Brand
 section: components
+cssPrefix: pf-c-brand
 ---
 
 ```hbs title=Brand-simple

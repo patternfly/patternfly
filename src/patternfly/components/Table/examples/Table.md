@@ -208,7 +208,7 @@ cssPrefix: pf-c-table
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
@@ -232,7 +232,7 @@ cssPrefix: pf-c-table
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div id="{{table--id}}-node1">Node 1</div>
@@ -257,7 +257,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -285,7 +285,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -313,7 +313,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -348,7 +348,7 @@ cssPrefix: pf-c-table
     {{#> table-tr}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--desc="true"}}
         Repositories
@@ -368,7 +368,7 @@ cssPrefix: pf-c-table
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -407,7 +407,7 @@ cssPrefix: pf-c-table
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -444,7 +444,7 @@ cssPrefix: pf-c-table
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -480,7 +480,7 @@ cssPrefix: pf-c-table
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -734,7 +734,7 @@ cssPrefix: pf-c-table
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
@@ -762,7 +762,7 @@ cssPrefix: pf-c-table
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name1"}}">Sam Jones</span>
@@ -793,7 +793,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name2"}}">Amy Miller</span>
@@ -824,7 +824,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
@@ -855,7 +855,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor name"}}
         <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
@@ -892,7 +892,7 @@ cssPrefix: pf-c-table
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
@@ -920,7 +920,7 @@ cssPrefix: pf-c-table
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name1"}}">Sam Jones</span>
@@ -951,7 +951,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name2"}}">Amy Miller</span>
@@ -982,7 +982,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
@@ -1013,7 +1013,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor name"}}
         <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
@@ -1051,7 +1051,7 @@ cssPrefix: pf-c-table
     {{#> table-tr}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
@@ -1071,7 +1071,7 @@ cssPrefix: pf-c-table
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node1">Node 1</p>
@@ -1107,7 +1107,7 @@ cssPrefix: pf-c-table
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node2">Node 2</p>
@@ -1140,7 +1140,7 @@ cssPrefix: pf-c-table
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node3">Node 3</p>
@@ -1173,7 +1173,7 @@ cssPrefix: pf-c-table
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node4">Node 4</p>
@@ -1206,7 +1206,7 @@ cssPrefix: pf-c-table
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 ' table--id '-expandable-toggle5" id="' table--id '-expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{concat table--id '-node5'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow5" aria-labelledby="{{concat table--id '-node5'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node5">Node 5</p>
@@ -1237,13 +1237,12 @@ cssPrefix: pf-c-table
 {{/table}}
 ```
 
-
 ```hbs title=Table-with-width-modifiers
 {{#> table table--id="width-table" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Check all rows">
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Check all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
         Repositories
@@ -1266,7 +1265,7 @@ cssPrefix: pf-c-table
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-node1">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div id="{{table--id}}-node1">Node 1</div>
@@ -1287,7 +1286,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-node2">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1311,7 +1310,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-node3">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1335,7 +1334,7 @@ cssPrefix: pf-c-table
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node4">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1360,7 +1359,7 @@ cssPrefix: pf-c-table
 {{/table}}
 ```
 
-```hbs title=Table-with-hiddne/visible-breakpoint-modifiers
+```hbs title=Table-with-hidden/visible-breakpoint-modifiers
 {{#> table table--modifier="pf-m-grid-lg" table--id="simple-table-hidden-visible" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1771,3 +1770,19 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-wrap` | `<th>`, `<td>` | Modifies content to wrap. |
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
+| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
+| `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
+| `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
+| `.pf-m-height-auto` | `<tr>` | Modifies a `<tr>` to have `height: auto`, which undoes the `height` declaration currently on `<tr>` elements. |
+| `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
