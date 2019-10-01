@@ -16,7 +16,7 @@ module.exports = {
           { section: 'utilities' },
           { section: 'demos' },
           { section: 'experimental' },
-          { title: 'Release Notes' },
+          { title: 'Release notes' },
         ],
         topNavItems: [
           {
