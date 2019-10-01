@@ -13,5 +13,5 @@ When using the `.pf-c-input-group` always ensure labels are used outside the inp
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-input-group` | `<div>` |  Iniaties the input group. **Required** |
-| `.pf-c-input-group__text` | `<span>` |  Iniaties the input group text. This can be used to show text, radio, icons, or check boxes. |
+| `.pf-c-input-group` | `<div>` |  Initiates the input group. **Required** |
+| `.pf-c-input-group__text` | `<span>` |  Initiates the input group text. This can be used to show text, radio, icons, or check boxes. |
