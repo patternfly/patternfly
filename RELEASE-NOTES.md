@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Release notes
 section: root
 showTOC: false
 ---

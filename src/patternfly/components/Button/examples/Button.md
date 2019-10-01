@@ -45,7 +45,8 @@ cssPrefix: pf-c-button
 {{/button}}
 ```
 
-```hbs title=Button-states{{#> button button--modifier="pf-m-primary"}}
+```hbs title=Button-states
+{{#> button button--modifier="pf-m-primary"}}
   Primary
 {{/button}}
 {{#> button button--modifier="pf-m-primary pf-m-focus"}}
