@@ -3,7 +3,8 @@ title: Data List
 section: demos
 ---
 
-```hbs title=Data-list-simple-demo isFullscreen
+## Demos
+```hbs title=Simple isFullscreen
 {{#> page page--id="page-layout-data-list-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -32,7 +33,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Data-list-actionable-demo isFullscreen
+```hbs title=Actionable isFullscreen
 {{#> page page--id="page-layout-data-list-actionable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -61,7 +62,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Data-list-expandable-demo isFullscreen
+```hbs title=Expandable-demo isFullscreen
 {{#> page page--id="page-layout-data-list-expandable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -90,7 +91,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Data-list-simple-without-pagination-demo isFullscreen
+```hbs title=Without-pagination isFullscreen
 {{#> page page--id="page-layout-data-list-simple-without-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -118,7 +119,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Data-list-simple-with-compact-pagination-demo isFullscreen
+```hbs title=With-compact-pagination isFullscreen
 {{#> page page--id="page-layout-data-list-simple-compact-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

@@ -3,8 +3,8 @@ title: Alert
 section: demos
 ---
 
-## Examples
-```hbs title=Toast-alert-demo isFullscreen
+## Demos
+```hbs title=Toast isFullscreen
 {{> page-demo-default page-demo-default--id="alert-toast-example"}}
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}

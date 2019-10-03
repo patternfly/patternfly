@@ -5,7 +5,7 @@ cssPrefix: pf-c-expandable
 ---
 
 ## Examples
-```hbs title=Hidden-example
+```hbs title=Hidden
 {{#> expandable}}
   {{#> expandable-toggle}}
   {{/expandable-toggle}}
@@ -15,7 +15,7 @@ cssPrefix: pf-c-expandable
 {{/expandable}}
 ```
 
-```hbs title=Expanded-example
+```hbs title=Expanded
 {{#> expandable expandable--IsExpanded="true"}}
   {{#> expandable-toggle}}
   {{/expandable-toggle}}

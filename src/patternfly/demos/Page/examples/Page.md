@@ -3,15 +3,16 @@ title: Page
 section: demos
 ---
 
-```hbs title=Page-component-default-nav-header-example isFullscreen
+## Demos
+```hbs title=Default-nav-header isFullscreen
 {{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
 ```
 
-```hbs title=Page-component-expandable-nav-example isFullscreen
+```hbs title=Expandable-nav isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Page-component-horizontal-nav-example isFullscreen
+```hbs title=Horizontal-nav isFullscreen
 {{#> page page--id="page-layout-horizontal-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -71,7 +72,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Page-component-tertiary-nav-example isFullscreen
+```hbs title=Tertiary-nav isFullscreen
 {{#> page page--id="page-layout-tertiary-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -221,7 +222,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Page-component-grouped-nav-example isFullscreen
+```hbs title=Grouped-nav isFullscreen
 {{#> page page--id="page-layout-grouped-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -316,15 +317,15 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Page-component-legacy-nav-separators isFullscreen
+```hbs title=Legacy-nav-separators isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-legacy-nav-separators-example" page--IsLegacySeparators="true" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Page-component-legacy-sidebar-andnav-(light-themed) isFullscreen
+```hbs title=Legacy-sidebar-nav-(light-themed) isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Page-component-legacy-sidebar-and-nav-(light-themed)-and-legacy-nav-separators isFullscreen
+```hbs title=Legacy-sidebar-and-nav-(light-themed)-and-legacy-nav-separators isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
 ```
 

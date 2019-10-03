@@ -5,7 +5,7 @@ cssPrefix: pf-c-backdrop
 ---
 
 ## Examples
-```hbs title=Backdrop-example isFullscreen=true
+```hbs title=Basic isFullscreen
 {{#> backdrop}}
 {{/backdrop}}
 ```

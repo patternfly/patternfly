@@ -3,12 +3,12 @@ title: Drawer
 section: demos
 ---
 
-## Examples
-```hbs title=Drawer-collapsed isFullscreen
+## Demos
+```hbs title=Collapsed isFullscreen
 {{> drawer-demo-default id="drawer-collapsed"}}
 ```
 
-```hbs title=Drawer-expanded isFullscreen
+```hbs title=Expanded isFullscreen
 {{> drawer-demo-default id="drawer-expanded" drawer--modifier="pf-m-expanded"}}
 ```
 

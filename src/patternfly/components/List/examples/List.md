@@ -5,7 +5,7 @@ cssPrefix: pf-c-list
 ---
 
 ## Examples
-```hbs title=Unordered-list
+```hbs title=Unordered
 {{#> list}}
   <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
   <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
@@ -26,7 +26,7 @@ cssPrefix: pf-c-list
 {{/list}}
 ```
 
-```hbs title=Ordered-list
+```hbs title=Ordered
 {{#> list list--type="ol"}}
   <li>Donec blandit a lorem id convallis.</li>
   <li>Cras gravida arcu at diam gravida gravida.</li>
@@ -50,7 +50,7 @@ cssPrefix: pf-c-list
 {{/list}}
 ```
 
-```hbs title=List-inline
+```hbs title=Inline
 {{#> list list--modifier="pf-m-inline"}}
   <li>Inline list item 1</li>
   <li>Inline list item 2</li>

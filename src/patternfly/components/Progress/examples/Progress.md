@@ -5,7 +5,7 @@ cssPrefix: pf-c-progress
 ---
 
 ## Examples
-```hbs title=Progress-simple
+```hbs title=Simple
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -14,7 +14,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-small
+```hbs title=Small
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -24,7 +24,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-large
+```hbs title=Large
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -34,7 +34,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-outside
+```hbs title=Outside
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -44,7 +44,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-inside
+```hbs title=Inside
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -55,7 +55,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-success
+```hbs title=Success
 {{#> progress 
   progress__value="100" 
   progress__description="Title" 
@@ -65,7 +65,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-failure
+```hbs title=Failure
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -75,7 +75,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-inside-success
+```hbs title=Inside-success
 {{#> progress 
   progress__value="100" 
   progress__description="Title" 
@@ -87,7 +87,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-outside-failure
+```hbs title=Outside-failure
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -98,7 +98,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-on-single-line
+```hbs title=On-single-line
 {{#> progress 
   progress__value="33"
   progress--modifier="pf-m-singleline"
@@ -107,7 +107,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-without-measure
+```hbs title=Without-measure
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -117,7 +117,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-failure-without-measure
+```hbs title=Failure-without-measure
 {{#> progress 
   progress__value="33" 
   progress--no-measure="true"
@@ -128,7 +128,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Progress-finite-step
+```hbs title=Finite-step
 {{#> progress 
   progress__value="2"
   progress__valuemax="5" 

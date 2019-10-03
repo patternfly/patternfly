@@ -5,7 +5,7 @@ cssPrefix: pf-c-nav
 ---
 
 ## Examples
-```hbs title=Simple-nav
+```hbs title=Basic
 {{#> nav nav--attribute='id="nav-primary-simple" aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list nav-list--type="simple"}}
     {{#> nav-item}}
@@ -33,7 +33,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Grouped-nav
+```hbs title=Grouped
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
@@ -82,7 +82,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Default-nav
+```hbs title=Default
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -110,7 +110,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Expanded-nav
+```hbs title=Expanded
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
@@ -195,7 +195,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Expanded-nav-(w/subnav-titles)
+```hbs title=Expanded-with-subnav-titles
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
@@ -251,7 +251,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Nav-mixed
+```hbs title=Mixed
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -306,7 +306,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Horizontal-nav-(only-in-masthead)
+```hbs title=Horizontal-in-masthead
 <div class="pf-c-page__header">
   <div class="pf-c-page__header-nav">
     {{#> nav nav--attribute='aria-label="Global"'}}
@@ -336,7 +336,7 @@ cssPrefix: pf-c-nav
 </div>
 ```
 
-```hbs title=Horizontal-nav-overflow-(only-in-masthead)
+```hbs title=Horizontal-overflow-in-masthead
 <div class="pf-c-page__header">
   <div class="pf-c-page__header-nav">
     {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Global"'}}
@@ -376,7 +376,7 @@ cssPrefix: pf-c-nav
 </div>
 ```
 
-```hbs title=Tertiary-nav
+```hbs title=Tertiary
 {{#> nav nav--attribute='aria-label="Local"'}}
   {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
   {{/nav-scroll-button}}
@@ -402,7 +402,7 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-```hbs title=Tertiary-nav-overflow
+```hbs title=Tertiary-overflow
 {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
   {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
   {{/nav-scroll-button}}

@@ -5,7 +5,7 @@ cssPrefix: pf-c-background-image
 ---
 
 ## Examples
-```hbs title=Background-image-example isFullscreen=true
+```hbs title=Basic isFullscreen
 {{#> background-image}}
 {{/background-image}}
 ```

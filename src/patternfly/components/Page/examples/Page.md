@@ -5,7 +5,7 @@ cssPrefix: pf-c-page
 ---
 
 ## Examples
-```hbs title=Page-component-nav-vertical-example
+```hbs title=Vertiacal-nav
 {{#> page}}
   {{#> page-header}}
     {{#> page-header-brand}}
@@ -36,7 +36,7 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
 
-```hbs title=Page-component-nav-horizontal-example
+```hbs title=Horizontal-nav
 {{#> page page--nav-direction="vertical"}}
   {{#> page-header}}
     {{!-- Brand --}}
@@ -67,7 +67,7 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
 
-```hbs title=Page-component-fill/no-fill-example
+```hbs title=With-or-without-fill
 {{#> page page--nav-direction="vertical"}}
   {{#> page-header}}
     {{!-- Brand --}}
@@ -98,7 +98,7 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
 
-```hbs title=Page-component-main-section-padding-modifiers
+```hbs title=Main-section-padding
 {{#> page}}
   {{#> page-header}}
     {{#> page-header-brand}}

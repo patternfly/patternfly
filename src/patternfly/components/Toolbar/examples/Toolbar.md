@@ -5,8 +5,8 @@ cssPrefix: pf-c-toolbar
 ---
 
 ## Examples
-```hbs title=Toolbar-simple isFullscreen
-{{#> toolbar toolbar--id="toolbar-simple-example"}}
+```hbs title=Basic isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-simple-split-button-dropdown-simple-example-button"}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-simple-example-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-simple-example-button')  aria-label="Select"}}
@@ -41,8 +41,8 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-w/-pagination isFullscreen
-{{#> toolbar toolbar--id="toolbar-pagination-example"}}
+```hbs title=With-pagination isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button')  aria-label="Select"}}
@@ -104,8 +104,8 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-w/-pagination-and-expanded-menus-for-bulk-selector-sort-action-menu-and-pagination isFullscreen
-{{#> toolbar toolbar--id="toolbar-expanded-example"}}
+```hbs title=With-pagination-and-expanded-menus isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsExpanded="true" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
@@ -167,8 +167,8 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-w/-filter-menu-expanded isFullscreen
-{{#> toolbar toolbar--id="toolbar-filter-expanded-example"}}
+```hbs title=With-filter-menu-expanded isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-dropdown-button')}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-dropdown-button')  aria-label="Select"}}
@@ -203,8 +203,8 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-w/-filter-menu-expanded-(checked) isFullscreen
-{{#> toolbar toolbar--id="toolbar-filter-expanded-checked-example"}}
+```hbs title=With-filter-menu-expanded+checked isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
@@ -280,8 +280,8 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-w/-filter-group-expanded-on-mobile-(responsive) isFullscreen
-{{#> toolbar toolbar--id="toolbar-mobile-filter-example"}}
+```hbs title=With-filter-group-expanded-on-mobile-(responsive) isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
@@ -316,8 +316,8 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-w/-filter-group-expanded-(checked)-on-mobile-(responsive) isFullscreen
-{{#> toolbar toolbar--id="toolbar-mobile-filter-checked-example"}}
+```hbs title=With-filter-group-expanded+checked-on-mobile-(responsive) isFullscreen
+{{#> toolbar}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
     {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}

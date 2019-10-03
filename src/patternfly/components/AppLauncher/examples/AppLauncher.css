@@ -1,0 +1,20 @@
+#ws-example-applauncher-align-right,
+#ws-example-applauncher-align-top,
+#ws-example-applauncher-expanded {
+  min-height: 216px;
+}
+
+
+#ws-example-applauncher-align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ws-example-applauncher-align-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-example-applauncher-with-sections-and-icons {
+  min-height: 424px;
+}

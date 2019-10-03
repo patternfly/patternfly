@@ -5,7 +5,7 @@ cssPrefix: pf-c-label
 ---
 
 ## Examples
-```hbs title=Label-component
+```hbs title=Basic
 {{#> label}}
   Default label
 {{/label}}

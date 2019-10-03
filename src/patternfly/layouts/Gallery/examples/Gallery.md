@@ -5,7 +5,7 @@ cssPrefix: pf-l-gallery
 ---
 
 ## Examples
-```hbs title=Gallery-example
+```hbs title=Basic
 {{#> gallery}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -15,7 +15,7 @@ cssPrefix: pf-l-gallery
 {{/gallery}}
 ```
 
-```hbs title=Gallery-example-with-gutter
+```hbs title=With-gutter
 {{#> gallery gallery--modifier="pf-m-gutter"}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}

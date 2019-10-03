@@ -5,7 +5,7 @@ cssPrefix: pf-c-pagination
 ---
 
 ## Examples
-```hbs title=Pagination-top
+```hbs title=Top
 {{#> pagination}}
   {{#> pagination-total-items}}
     <b>1 - 10</b> of <b>37</b>
@@ -32,7 +32,7 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Pagination-top-expanded
+```hbs title=Top-expanded
 {{#> pagination}}
   {{#> pagination-total-items}}
     <b>1 - 10</b> of <b>37</b>
@@ -59,7 +59,7 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Pagination-bottom
+```hbs title=Bottom
 {{#> pagination pagination--modifier="pf-m-footer"}}
   {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
   {{#> pagination-nav}}
@@ -83,7 +83,7 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Pagination-top-disabled
+```hbs title=Top-disabled
 {{#> pagination}}
   {{#> pagination-total-items}}
     <b>1 - 10</b> of <b>37</b>
@@ -114,7 +114,7 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Pagination-compact
+```hbs title=Compact
 {{#> pagination pagination--modifier="pf-m-compact"}}
   {{#> pagination-total-items}}
     <b>1 - 10</b> of <b>37</b>

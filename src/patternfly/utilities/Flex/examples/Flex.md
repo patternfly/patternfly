@@ -4,7 +4,7 @@ section: utilities
 ---
 
 ## Examples
-```hbs title=Enable-flex
+```hbs title=Basic
 {{#> display display--type="flex"}}
   Display flex
 {{/display}}
@@ -13,7 +13,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-direction
+```hbs title=Direction
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex row
 {{/title}}
@@ -75,7 +75,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-justify-content
+```hbs title=Justified-content
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content flex-start
 {{/title}}
@@ -152,7 +152,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-align-items
+```hbs title=Aligned-items
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items flex-start
 {{/title}}
@@ -229,7 +229,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-align-self
+```hbs title=Aligned-self
 {{#> display display--type="flex" display--modifier="Documentation-container-tall"}}
   <div class="pf-u-align-self-flex-start">
     flex-start
@@ -249,7 +249,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-align-content
+```hbs title=Aligned-content
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content flex-start
 {{/title}}
@@ -377,7 +377,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-shrink
+```hbs title=Shrink
 {{#> display display--type="flex"}}
   <div class="pf-u-flex-shrink-0">
     Flex shrink 0
@@ -388,7 +388,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-grow
+```hbs title=Grow
 {{#> display display--type="flex"}}
   <div class="pf-u-flex-grow-0">
     Flex grow 0
@@ -400,7 +400,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-basis-and-flex-none
+```hbs title=Basis-and-flex-none
 {{#> display display--type="flex"}}
   <div class="pf-u-flex-basis-0">
     Flex basis 0
@@ -417,7 +417,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-fill
+```hbs title=Fill
 {{#> display display--type="flex"}}
   <div class="pf-u-flex-none">
     Flex none
@@ -428,7 +428,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Flex-wrap
+```hbs title=Wrap
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex wrap
 {{/title}}

@@ -5,11 +5,11 @@ cssPrefix: pf-c-divider
 ---
 
 ## Examples
-```hbs title=Divider-<hr>
+```hbs title=<hr>
 {{#> divider}}{{/divider}}
 ```
 
-```hbs title=Divider-<li>
+```hbs title=<li>
 <ul>
   <li>List item one</li>
   {{#> divider divider--type="li"}}{{/divider}}
@@ -17,7 +17,7 @@ cssPrefix: pf-c-divider
 </ul>
 ```
 
-```hbs title=Divider-<div>
+```hbs title=<div>
 {{#> divider divider--type="div"}}{{/divider}}
 ```
 

@@ -5,7 +5,7 @@ cssPrefix: pf-c-badge
 ---
 
 ## Examples
-```hbs title=Read-badge
+```hbs title=Read
 {{#> badge badge--modifier="pf-m-read"}}
   7
 {{/badge}}
@@ -20,7 +20,7 @@ cssPrefix: pf-c-badge
 {{/badge}}
 ```
 
-```hbs title=Unread-badge
+```hbs title=Unread
 {{#> badge badge--modifier="pf-m-unread"}}
   7
 {{/badge}}

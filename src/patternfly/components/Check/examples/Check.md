@@ -5,7 +5,7 @@ cssPrefix: pf-c-check
 ---
 
 ## Examples
-```hbs title=Check-example
+```hbs title=Basic
 {{#> check}}
   {{#> check-input check-input--attribute='id="check1" name="exampleCheck1"'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="check1"'}}Check 1{{/check-label}}

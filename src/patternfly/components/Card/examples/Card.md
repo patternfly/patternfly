@@ -5,7 +5,7 @@ cssPrefix: pf-c-card
 ---
 
 ## Examples
-```hbs title=Card
+```hbs title=Basic
 {{#> card}}
   {{#> card-header}}
     Header
@@ -19,7 +19,7 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=Card-with-image-and-action
+```hbs title=With-image-and-action
 Example with image and actions in card head
 {{#> card card--id="card-action-example-1"}}
   {{#> card-head}}
@@ -95,7 +95,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-with-no-footer
+```hbs title=With-no-footer
 {{#> card}}
   {{#> card-header}}
     Header
@@ -106,7 +106,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-with-no-header
+```hbs title=With-no-header
 {{#> card}}
   {{#> card-body}}
     This card has no header
@@ -117,7 +117,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-with-only-a-content-section
+```hbs title=With-only-a-content-section
 {{#> card}}
   {{#> card-body}}
     Body
@@ -125,7 +125,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-with-multiple-body-sections
+```hbs title=With-multiple-body-sections
 {{#> card}}
   {{#> card-header}}
     Header
@@ -145,7 +145,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-with-only-one-body-that-fills
+```hbs title=With-only-one-body-that-fills
 {{#> card}}
   {{#> card-header}}
     Header
@@ -165,7 +165,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-compact-example
+```hbs title=Compact
 {{#> card card--modifier="pf-m-compact"}}
   {{#> card-header}}
     Header
@@ -179,7 +179,7 @@ Example with only image in the card head
 {{/card}}
 ```
 
-```hbs title=Card-hover-example
+```hbs title=Hover
 {{#> card card--modifier="pf-m-hoverable"}}
   {{#> card-header}}
     Header

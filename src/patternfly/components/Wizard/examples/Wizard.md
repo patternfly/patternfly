@@ -5,7 +5,7 @@ cssPrefix: pf-c-wizard
 ---
 
 ## Examples
-```hbs title=Wizard isFullscreen
+```hbs title=Basic isFullscreen
 {{#> wizard}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -91,7 +91,7 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-```hbs title=Wizard-nav-expanded-(mobile) isFullscreen
+```hbs title=Nav-expanded-(mobile) isFullscreen
 {{#> wizard wizard--IsExpanded="true"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -177,7 +177,7 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-```hbs title=Wizard-finished isFullscreen
+```hbs title=Finished isFullscreen
 {{#> wizard wizard--modifier="pf-m-finished"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -281,7 +281,7 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-```hbs title=Wizard-full-width/height isFullscreen
+```hbs title=Full-width/height isFullscreen
 {{#> wizard wizard--modifier="pf-m-full-width pf-m-full-height"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -367,7 +367,7 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-```hbs title=Wizard-compact-nav isFullscreen
+```hbs title=Compact-nav isFullscreen
 {{#> wizard wizard--modifier="pf-m-compact-nav"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -453,7 +453,7 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-```hbs title=Wizard-in-page
+```hbs title=In-page
 {{#> wizard wizard--modifier="pf-m-in-page"}}
   {{#> wizard-toggle}}
     {{#> wizard-toggle-list}}

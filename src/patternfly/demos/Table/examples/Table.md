@@ -3,8 +3,8 @@ title: Table
 section: demos
 ---
 
-## Examples
-```hbs title=Table-simple-demo isFullscreen
+## Demos
+```hbs title=Basic isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -33,7 +33,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-sortable-demo isFullscreen
+```hbs title=Sortable isFullscreen
 {{#> page page--id="page-layout-table-sortable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -62,7 +62,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-expandable-demo isFullscreen
+```hbs title=Expandable isFullscreen
 {{#> page page--id="page-layout-table-expandable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -91,7 +91,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-compact-demo isFullscreen
+```hbs title=Compact isFullscreen
 {{#> page page--id="page-layout-table-compact"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -120,7 +120,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-compound-expansion-demo isFullscreen
+```hbs title=Compound-expansion isFullscreen
 {{#> page page--id="page-layout-table-compound-expansion"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -149,7 +149,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-loading-state-demo isFullscreen
+```hbs title=Loading-state-demo isFullscreen
 {{#> page page--id="table-loading-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -178,7 +178,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-empty-state-demo isFullscreen
+```hbs title=Empty-state isFullscreen
 {{#> page page--id="table-empty-state-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -207,7 +207,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-simple-with-compact-pagination-demo isFullscreen
+```hbs title=Compact-pagination-demo isFullscreen
 {{#> page page--id="page-layout-table-simple-compact-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

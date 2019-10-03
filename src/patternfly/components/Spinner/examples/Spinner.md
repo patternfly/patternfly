@@ -5,11 +5,11 @@ cssPrefix: pf-c-spinner
 ---
 
 ## Examples
-```hbs title=Spinner
+```hbs title=Basic
 {{#> spinner}}Loading...{{/spinner}}
 ```
 
-```hbs title=Spinner-size-variations
+```hbs title=Multiple-sizes
 {{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
 
 {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}

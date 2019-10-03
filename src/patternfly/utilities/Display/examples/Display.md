@@ -4,43 +4,43 @@ section: utilities
 ---
 
 ## Examples
-```hbs title=Display-inline-block
+```hbs title=Inline-block
 {{#> display display--type="inline-block"}}
   .pf-u-display-inline-block
 {{/display}}
 ```
 
-```hbs title=Display-block
+```hbs title=Block
 {{#> display display--type="block"}}
   .pf-u-display-block
 {{/display}}
 ```
 
-```hbs title=Display-flex
+```hbs title=Flex
 {{#> display display--type="flex"}}
   .pf-u-display-flex
 {{/display}}
 ```
 
-```hbs title=Display-inline-flex
+```hbs title=Inline-flex
 {{#> display display--type="inline-flex"}}
   .pf-u-display-inline-flex
 {{/display}}
 ```
 
-```hbs title=Display-grid
+```hbs title=Grid
 {{#> display display--type="grid"}}
   .pf-u-display-grid
 {{/display}}
 ```
 
-```hbs title=Display-inline
+```hbs title=Inline
 {{#> display display--type="inline"}}
   .pf-u-display-inline
 {{/display}}
 ```
 
-```hbs title=Display-table
+```hbs title=Table
 {{#> display display--type="table"}}
   {{#> display display--type="table-row"}}
     {{#> display display--type="table-cell"}}
@@ -67,7 +67,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Display-none
+```hbs title=None
 {{#> display display--type="none-on-sm"}}
   Hidden on sm breakpoint
 {{/display}}

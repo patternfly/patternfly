@@ -5,7 +5,7 @@ cssPrefix: pf-c-empty-state
 ---
 
 ## Examples
-```hbs title=Empty-state
+```hbs title=Basic
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
@@ -40,7 +40,7 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Empty-state-small
+```hbs title=Small
 {{#> empty-state empty-state--modifier="pf-m-sm"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
@@ -75,7 +75,7 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Empty-state-large
+```hbs title=Large
 {{#> empty-state empty-state--modifier="pf-m-lg"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
@@ -110,7 +110,7 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Empty-state-w/-primary-element
+```hbs title=With-primary-element
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}

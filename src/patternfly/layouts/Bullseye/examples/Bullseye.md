@@ -5,7 +5,7 @@ cssPrefix: pf-l-bullseye
 ---
 
 ## Examples
-```hbs title=Bullseye-example 
+```hbs title=Basic 
 {{#> bullseye}}
   {{#> bullseye-item}}content{{/bullseye-item}}
 {{/bullseye}}

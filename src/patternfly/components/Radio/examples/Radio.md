@@ -5,35 +5,35 @@ cssPrefix: pf-c-radio
 ---
 
 ## Examples
-```hbs title=Radio-example
+```hbs title=Basic
 {{#> radio}}
   {{#> radio-input radio-input--attribute='id="radio-simple" name="exampleRadioSimple"'}}{{/radio-input}}
   {{#> radio-label radio-label--attribute='for="radio-simple"'}}Radio{{/radio-label}}
 {{/radio}}
 ```
 
-```hbs title=Radio-checked-example
+```hbs title=Checked
 {{#> radio}}
   {{#> radio-input radio-input--attribute='id="radio-checked" name="exampleRadioChecked" checked'}}{{/radio-input}}
   {{#> radio-label radio-label--attribute='for="radio-checked"'}}Radio checked{{/radio-label}}
 {{/radio}}
 ```
 
-```hbs title=Radio-label-wraps-input-example
+```hbs title=Label-wrapping-input
 {{#> radio radio--type="label" radio--attribute='for="radio-wrap"'}}
   {{#> radio-input radio-input--attribute='id="radio-wrap" name="exampleRadioWrap"'}}{{/radio-input}}
   {{#> radio-label radio-label--type="span"}}Radio label wraps input{{/radio-label}}
 {{/radio}}
 ```
 
-```hbs title=Radio-reversed-example
+```hbs title=Reversed
 {{#> radio}}
   {{#> radio-label radio-label--attribute='for="radio-rev"'}}Radio reversed{{/radio-label}}
   {{#> radio-input radio-input--attribute='id="radio-rev" name="exampleRadioReversed"'}}{{/radio-input}}
 {{/radio}}
 ```
 
-```hbs title=Radio-disabled-example
+```hbs title=Disabled
 {{#> radio}}
   {{#> radio-input radio-input--attribute='id="radio-disabled" name="exampleRadioDisabled" disabled'}}{{/radio-input}}
   {{#> radio-label radio-label--modifier="pf-m-disabled" radio-label--attribute='for="radio-disabled"'}}Radio disabled{{/radio-label}}

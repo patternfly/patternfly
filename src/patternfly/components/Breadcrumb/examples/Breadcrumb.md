@@ -5,7 +5,7 @@ cssPrefix: pf-c-breadcrumb
 ---
 
 ## Examples
-```hbs title=Breadcrumb
+```hbs title=Basic
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
@@ -35,7 +35,7 @@ cssPrefix: pf-c-breadcrumb
 {{/breadcrumb}}
 ```
 
-```hbs title=Breadcrumb-without-home-link
+```hbs title=Without-home-link
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
@@ -75,7 +75,7 @@ cssPrefix: pf-c-breadcrumb
 {{/breadcrumb}}
 ```
 
-```hbs title=Breadcrumb-with-heading
+```hbs title=With-heading
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}

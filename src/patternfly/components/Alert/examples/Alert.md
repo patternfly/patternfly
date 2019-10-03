@@ -5,7 +5,7 @@ cssPrefix: pf-c-alert
 ---
 
 ## Examples
-```hbs title=Alert-types
+```hbs title=Types
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -52,7 +52,7 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Alert-variations
+```hbs title=Variations
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -108,7 +108,7 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Inline-alert-types
+```hbs title=Inline-types
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -155,7 +155,7 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title="Inline-alert-variations"
+```hbs title=Inline-variations
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}

@@ -4,7 +4,7 @@ section: utilities
 ---
 
 ## Examples
-```hbs title=Alignment-simple
+```hbs title=Basic
 {{#> alignment alignment--type="left"}}
   Text left
 {{/alignment}}

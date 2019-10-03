@@ -3,8 +3,8 @@ title: Card View
 section: demos
 ---
 
-## Examples
-```hbs title=Card-view-demo isFullscreen
+## Demos
+```hbs title=Basic isFullscreen
 {{#> page page--id="card-view"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

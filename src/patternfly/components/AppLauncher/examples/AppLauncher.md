@@ -4,9 +4,11 @@ section: components
 cssPrefix: pf-c-app-launcher
 ---
 
+import './AppLauncher.css'
+
 ## Examples
-```hbs title=App-launcher-collapsed
-{{#> app-launcher id="app-launcher-example"}}
+```hbs title=Collapsed
+{{#> app-launcher }}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -15,8 +17,8 @@ cssPrefix: pf-c-app-launcher
 {{/app-launcher}}
 ```
 
-```hbs title=App-launcher-disabled 
-{{#> app-launcher id="app-launcher-example-disabled" app-launcher--IsDisabled="true"}}
+```hbs title=Disabled 
+{{#> app-launcher app-launcher--IsDisabled="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -25,8 +27,8 @@ cssPrefix: pf-c-app-launcher
 {{/app-launcher}}
 ```
 
-```hbs title=App-launcher-expanded
-{{#> app-launcher id="app-launcher-example-expanded" app-launcher--IsExpanded="true"}}
+```hbs title=Expanded
+{{#> app-launcher app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -35,8 +37,8 @@ cssPrefix: pf-c-app-launcher
 {{/app-launcher}}
 ```
 
-```hbs title=App-launcher-align-right
-{{#> app-launcher id="app-launcher-example-align-right" app-launcher--IsExpanded="true"}}
+```hbs title=Align-right
+{{#> app-launcher app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -45,9 +47,8 @@ cssPrefix: pf-c-app-launcher
 {{/app-launcher}}
 ```
 
-TODO: Align this example to the right
-```hbs title=App-launcher-top
-{{#> app-launcher id="app-launcher-example-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
+```hbs title=Align-top
+{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -56,8 +57,8 @@ TODO: Align this example to the right
 {{/app-launcher}}
 ```
 
-```hbs title=App-launcher-w/-sections and icons
-{{#> app-launcher id="app-launcher-example-sections-icons" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+```hbs title=With-sections-and-icons
+{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
       <ul>

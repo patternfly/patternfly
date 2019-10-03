@@ -4,7 +4,7 @@ section: utilities
 ---
 
 ## Examples
-```hbs title=Boxshadow-utility
+```hbs title=Basic
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}
   Box shadow small
 {{/box-shadow}}

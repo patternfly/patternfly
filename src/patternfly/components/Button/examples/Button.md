@@ -5,7 +5,7 @@ cssPrefix: pf-c-button
 ---
 
 ## Examples
-```hbs title=Button-variations
+```hbs title=Variations
 {{#> button button--modifier="pf-m-primary"}}
   Primary
 {{/button}}
@@ -46,7 +46,7 @@ cssPrefix: pf-c-button
 {{/button}}
 ```
 
-```hbs title=Button-states
+```hbs title=States
 {{#> button button--modifier="pf-m-primary"}}
   Primary
 {{/button}}
@@ -179,13 +179,13 @@ cssPrefix: pf-c-button
 {{/button-link}}
 ```
 
-```hbs title=Button-block-level
+```hbs title=Block-level
 {{#> button button--modifier="pf-m-primary pf-m-block"}}
   Block level button
 {{/button}}
 ```
 
-```hbs title=Button-types
+```hbs title=Types
 {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
   Submit
 {{/button}}

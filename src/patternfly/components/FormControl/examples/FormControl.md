@@ -5,7 +5,7 @@ cssPrefix: pf-c-form-control
 ---
 
 ## Examples
-```hbs title=Input-example
+```hbs title=Input
 {{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="disabled" id="textInput1" aria-label="disabled input example"'}}
 {{/form-control}}
 <br />
@@ -19,7 +19,7 @@ cssPrefix: pf-c-form-control
 {{/form-control}}
 ```
 
-```hbs title=Select-example
+```hbs title=Select
 {{#> form-control controlType="select" form-control--attribute='id="selectExample1" name="selectExample1" aria-label="select example"'}}
   <option value="" selected>Please choose</option>
   <option value="Mr">Mr</option>
@@ -54,7 +54,7 @@ cssPrefix: pf-c-form-control
 {{/form-control}}
 ```
 
-```hbs title=Textarea-example
+```hbs title=Textarea
 {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea1" aria-label="textarea example"'}}
 {{/form-control}}
 <br />

@@ -5,7 +5,7 @@ cssPrefix: pf-l-level
 ---
 
 ## Examples
-```hbs title=Level-two-example
+```hbs title=Two-items
 {{#> level}}
   {{#> level-item}}
     content
@@ -16,7 +16,7 @@ cssPrefix: pf-l-level
 {{/level}}
 ```
 
-```hbs title=Level-three-example
+```hbs title=Three-items
 {{#> level}}
   {{#> level-item}}
     content
@@ -30,7 +30,7 @@ cssPrefix: pf-l-level
 {{/level}}
 ```
 
-```hbs title=Level-example-with-gutters
+```hbs title=With-gutters
 {{#> level level--modifier="pf-m-gutter"}}
   {{#> level-item}}
     content with gutter

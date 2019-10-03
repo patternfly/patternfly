@@ -5,7 +5,7 @@ cssPrefix: pf-l-stack
 ---
 
 ## Examples
-```hbs title=Stack-example
+```hbs title=Basic
 {{#> stack}}
   {{#> stack-item}}
     content
@@ -19,7 +19,7 @@ cssPrefix: pf-l-stack
 {{/stack}}
 ```
 
-```hbs title=Stack-example-with-gutter
+```hbs title=With-gutter
 {{#> stack stack--modifier="pf-m-gutter"}}
   {{#> stack-item}}
     content

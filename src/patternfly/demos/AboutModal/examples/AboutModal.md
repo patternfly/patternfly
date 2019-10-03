@@ -3,8 +3,8 @@ title: About Modal
 section: demos
 ---
 
-## Examples
-```hbs title=About-modal-example isFullscreen
+## Demos
+```hbs title=Basic isFullscreen
 {{#> about-modal}}
   {{#> backdrop}}
     {{#> bullseye}}

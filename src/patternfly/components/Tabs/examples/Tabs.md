@@ -5,7 +5,7 @@ cssPrefix: pf-c-tabs
 ---
 
 ## Examples
-```hbs title=Primary-tabs
+```hbs title=Primary
 {{#> tabs tabs--id="primary"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
@@ -31,7 +31,7 @@ cssPrefix: pf-c-tabs
 {{/tabs}}
 ```
 
-```hbs title=Primary-tabs-overflow
+```hbs title=Primary-overflow
 {{#> tabs tabs--id="primary-overflow" tabs--modifier="pf-m-start pf-m-start-current pf-m-end"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
@@ -100,7 +100,7 @@ Whenever a `.pf-m-current` tab is scrolled beyond the width of the container, th
 | `.pf-m-end`            | `.pf-c-tabs` | Enables the second directional scroll button.    |
 | `.pf-m-end-current`    | `.pf-c-tabs` | Highlights the second directional scroll button. |
 
-```hbs title=Secondary-tabs
+```hbs title=Secondary
 {{#> tabs tabs--id="secondary" tabs--IsSecondary="true"}}
   {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
@@ -133,7 +133,7 @@ If secondary tabs cannot be placed directly adjacent to primary tabs, `.pf-m-tab
 | -- | -- | -- |
 | `.pf-m-tabs-secondary` | `.pf-c-tabs` or `<div>` | Creates a secondary tabs component. **Required** |
 
-```hbs title=Secondary-tabs-overflow
+```hbs title=Secondary-overflow
 {{#> tabs tabs--id="secondary-overflow-end" tabs--IsSecondary="true" tabs--modifier="pf-m-start pf-m-end-current pf-m-end"}}
   {{#> tabs-scroll-button tabs-scroll-button--modifier="pf-m-secondary" tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
@@ -186,7 +186,7 @@ Whenever a `.pf-m-current` tab is scrolled beyond the width of the container, th
 | `.pf-m-focus` | `.pf-c-tabs__button` | Adds the focus style to the tabs button. |
 | `.pf-m-secondary` | `.pf-c-tabs__button` | Adds the secondary styles to the button. |
 
-```hbs title=Primary-tabs-with-secondary-tabs
+```hbs title=Primary-with-secondary
 {{#> tabs tabs--id="primary-with-secondary"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
@@ -337,7 +337,7 @@ Whenever a `.pf-m-current` tab is scrolled beyond the width of the container, th
 {{/tabs}}
 ```
 
-```hbs title=Filled-tabs
+```hbs title=Filled
 {{#> tabs tabs--id="primary-filled" tabs--modifier="pf-m-fill"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}
@@ -367,7 +367,7 @@ Whenever a `.pf-m-current` tab is scrolled beyond the width of the container, th
 | -- | -- | -- |
 | `.pf-m-fill`  | `.pf-c-tabs` | Enables the filled tab list layout. **Required** |
 
-```hbs title=Tabs-using-the-nav-element
+```hbs title=Using-the-nav-element
 {{#> tabs tabs--id="primary-scroll-nav" tabs--type="nav" tabs--modifier="pf-m-start pf-m-start-current pf-m-end" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
   {{/tabs-scroll-button}}

@@ -3,8 +3,8 @@ title: Wizard
 section: demos
 ---
 
-## Examples
-```hbs title=Wizard isFullscreen
+## Demos
+```hbs title=Basic isFullscreen
 {{#> backdrop}}
   {{#> bullseye}}
     {{#> wizard}}
@@ -94,7 +94,7 @@ section: demos
 {{/backdrop}}
 ```
 
-```hbs title=Wizard-nav-expanded-(mobile) isFullscreen
+```hbs title=Nav-expanded-(mobile) isFullscreen
 {{#> backdrop}}
   {{#> bullseye}}
     {{#> wizard wizard--IsExpanded="true"}}
@@ -184,7 +184,7 @@ section: demos
 {{/backdrop}}
 ```
 
-```hbs title=Wizard-in-page isFullscreen
+```hbs title=In-page isFullscreen
 {{#> page page--id="wizard-in-page"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -322,7 +322,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Wizard-in-page-nav-expanded-(mobile) isFullscreen
+```hbs title=In-page-nav-expanded-(mobile) isFullscreen
 {{#> page page--id="wizard-in-page-expanded"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

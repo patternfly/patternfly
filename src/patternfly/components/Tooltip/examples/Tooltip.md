@@ -5,7 +5,7 @@ cssPrefix: pf-c-tooltip
 ---
 
 ## Examples
-```hbs title=Tooltip-top
+```hbs title=Top
 {{#> tooltip tooltip--modifier="pf-m-top"}}
   {{#> tooltip-content tooltip-content--attribute='id="tooltip-top-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
@@ -13,7 +13,7 @@ cssPrefix: pf-c-tooltip
 {{/tooltip}}
 ```
 
-```hbs title=Tooltip-right
+```hbs title=Right
 {{#> tooltip tooltip--modifier="pf-m-right"}}
   {{#> tooltip-content tooltip-content--attribute='id="tooltip-right-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
@@ -21,7 +21,7 @@ cssPrefix: pf-c-tooltip
 {{/tooltip}}
 ```
 
-```hbs title=Tooltip-bottom
+```hbs title=Bottom
 {{#> tooltip tooltip--modifier="pf-m-bottom"}}
   {{#> tooltip-content tooltip-content--attribute='id="tooltip-bottom-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
@@ -29,7 +29,7 @@ cssPrefix: pf-c-tooltip
 {{/tooltip}}
 ```
 
-```hbs title=Tooltip-left
+```hbs title=Left
 {{#> tooltip tooltip--modifier="pf-m-left"}}
   {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
@@ -37,7 +37,7 @@ cssPrefix: pf-c-tooltip
 {{/tooltip}}
 ```
 
-```hbs title=Tooltip-left-align-text
+```hbs title=Left-aligned-text
 {{#> tooltip tooltip--modifier="pf-m-top"}}
   {{#> tooltip-content tooltip-content--modifier="pf-m-text-align-left" tooltip-content--attribute='id="tooltip-text-align-left-example"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.

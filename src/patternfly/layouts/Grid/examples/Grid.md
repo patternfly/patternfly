@@ -5,7 +5,7 @@ cssPrefix: pf-l-grid
 ---
 
 ## Examples
-```hbs title=Smart-grid-(responsive)
+```hbs title=Smart-(responsive)
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item}}
     item 1
@@ -46,7 +46,7 @@ cssPrefix: pf-l-grid
 {{/grid}}
 ```
 
-```hbs title=Smart-grid-with-overrides-(responsive)
+```hbs title=Smart-with-overrides-(responsive)
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item grid-item--modifier="pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl"}}
     item 1
@@ -93,7 +93,7 @@ cssPrefix: pf-l-grid
 {{/grid}}
 ```
 
-```hbs title=Base-grid 
+```hbs title=Base 
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
@@ -131,7 +131,7 @@ cssPrefix: pf-l-grid
 {{/grid}}
 ```
 
-```hbs title=Grid-gutter
+```hbs title=Gutter
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
@@ -157,7 +157,7 @@ cssPrefix: pf-l-grid
 {{/grid}}
 ```
 
-```hbs title=Responsive-grid
+```hbs title=Responsive
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-1-col pf-m-6-col-on-md pf-m-11-col-on-xl"}}
       1 / 6 / 11 col
@@ -192,7 +192,7 @@ cssPrefix: pf-l-grid
 {{/grid}}
 ```
 
-```hbs title=Nested-grids
+```hbs title=Nested
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
     12 col

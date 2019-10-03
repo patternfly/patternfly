@@ -4,7 +4,7 @@ section: components
 ---
 
 ## Examples
-```hbs title=Brand-simple
+```hbs title=Basic
 {{#> brand brand--attribute='src="/assets/images/pf_logo.svg" alt="PatternFly logo"'}} 
 {{/brand}}
 ```

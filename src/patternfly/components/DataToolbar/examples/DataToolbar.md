@@ -4,6 +4,8 @@ section: experimental
 cssPrefix: pf-c-data-toolbar
 ---
 
+import './DataToolbar.css'
+
 ## Introduction
 Data toolbar relies on groups (`.pf-c-data-toolbar__group`) and items (`.pf-c-data-toolbar__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group or item. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-data-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
 
@@ -35,8 +37,8 @@ Several components in the following examples do not include functional and/or ac
 **Available breakpoints are: `-on-md, -on-lg, -on-xl, -on-2xl`.**
 
 ## Examples
-```hbs title=Data-toolbar-items
-{{#> data-toolbar data-toolbar--id="data-toolbar-simple-example"}}
+```hbs title=Simple
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item}}
       Item
@@ -78,15 +80,15 @@ Several components in the following examples do not include functional and/or ac
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
-### Data toolbar item types
+### Item types
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-toolbar__item` | `<div>` | Initiates the toolbar component item. **Required** |
 | `.pf-c-data-toolbar__group` | `<div>` | Initiates the toolbar component group. |
 | `.pf-m-separator` | `.pf-c-data-toolbar__item` | Modifies item to a separator. |
 
-```hbs title=Adjusting-item-spacers
-{{#> data-toolbar data-toolbar--id="data-toolbar-spacer-example"}}
+```hbs title=Adjusted-spacers
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none"}}
       Item
@@ -113,11 +115,11 @@ Several components in the following examples do not include functional and/or ac
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
-### Data toolbar spacers
+### Spacers
 In some instances, it may be necessary to adjust spacing explicitly where items are being hidden/revealed. For example, if a `.pf-m-toggle-group` is adjacent to an element being hidden/shown or hidden/revealed, the spacing may appear to be inconsistent. If possible, rely on modifier values. Available spacer modifiers are `.pf-m-spacer-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}` and `.pf-m-space-items-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}`. These modifiers will overwrite existing modifiers provided by `.pf-c-data-toolbar`.
 
-```hbs title=Adjusting-group-spacers
-{{#> data-toolbar data-toolbar--id="data-toolbar-group-spacer-example"}}
+```hbs title=Adjusted-group-spacers
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
 
     {{!-- Group --}}
@@ -162,8 +164,8 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-spacer-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-data-toolbar__group`, `.pf-c-data-toolbar__item` | Modifies toolbar group or item spacing. |
 | `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-data-toolbar__group` | Modifies toolbar group child spacing. |
 
-```hbs title=Data-toolbar-group-types
-{{#> data-toolbar data-toolbar--id="data-toolbar-group-types-default-example" data-toolbar--modifier="example-border"}}
+```hbs title=Group-types
+{{#> data-toolbar data-toolbar--modifier="example-border"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item}}
@@ -228,9 +230,9 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-icon-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-icon-button-group--space-items)`. |
 | `.pf-m-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-button-group--space-items)`. |
 
-```hbs title=Data-toolbar-toggle-group-(responsive)
+```hbs title=Responsive-toggle-group
 Toolbar not expanded
-{{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-example"}}
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
 
     {{!-- Toggle group --}}
@@ -277,7 +279,7 @@ Toolbar not expanded
 <br>
 <br>
 Toolbar expanded
-{{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-expanded-example"}}
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
 
     {{!-- Toggle group --}}
@@ -343,9 +345,9 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 | `.pf-m-shared-item` | `.pf-c-data-toolbar__item`, `.pf-c-data-toolbar__group` | Identifies a toolbar item or group that appear both within `pf-m-toggle-group` and `pf-c-data-toolbar__expandable-content`. At smaller viewports, filters within `.pf-m-toggle-group` are hidden in `.pf-c-toolbar__content` and visible in `.pf-c-toolbar__expandable-content`. As the viewport scales, filters are visible in `.pf-c-toolbar__content` and hidden in `.pf-c-toolbar__expandable-content`. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content` | Modifies the component for the expanded state. |
 
-```hbs title=Data-toolbar-selected-filters
+```hbs title=Selected-filters
 Toolbar not expanded
-{{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-not-expanded-example"}}
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
 
     {{!-- Bulk select --}}
@@ -425,7 +427,7 @@ Toolbar not expanded
 <br>
 <br>
 Toolbar expanded
-{{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-expanded-example"}}
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
 
     {{!-- Bulk select --}}
@@ -504,8 +506,8 @@ Toolbar expanded
 {{/data-toolbar}}
 ```
 
-```hbs title=Data-toolbar-stacked
-{{#> data-toolbar data-toolbar--id="data-toolbar-stacked-example"}}
+```hbs title=Stacked
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
 
     {{!-- Toggle group --}}
@@ -616,10 +618,10 @@ Toolbar expanded
 {{/data-toolbar}}
 ```
 
-```hbs title=Data-toolbar-expanded-elements
+```hbs title=Expanded-elements
 Toolbar not expanded
 <br>
-{{#> data-toolbar data-toolbar--id="data-toolbar-not-expanded-elements-example"}}
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
     {{!-- Bulk select --}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
@@ -679,7 +681,7 @@ Toolbar not expanded
 <br>
 Toolbar expanded
 <br>
-{{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
+{{#> data-toolbar}}
   {{#> data-toolbar-content}}
     {{!-- Bulk select --}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}

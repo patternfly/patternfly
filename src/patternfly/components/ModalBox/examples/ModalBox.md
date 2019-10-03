@@ -5,7 +5,7 @@ cssPrefix: pf-c-modal-box
 ---
 
 ## Examples
-```hbs title=Modalbox-basic-example
+```hbs title=Basic
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -22,7 +22,7 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Modalbox-small-example
+```hbs title=Small
 {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -42,7 +42,7 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Modalbox-large-example
+```hbs title=Large
 {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -62,7 +62,7 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Modalbox-no-header-example
+```hbs title=Without-header
 {{#> modal-box modal-box--attribute='aria-label="Example of a modal without a header" aria-describedby="modal-no-header-description"'}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>

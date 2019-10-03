@@ -5,7 +5,7 @@ cssPrefix: pf-l-split
 ---
 
 ## Examples
-```hbs title=Split-example
+```hbs title=Basic
 {{#> split}}
   {{#> split-item}}
     content
@@ -19,7 +19,7 @@ cssPrefix: pf-l-split
 {{/split}}
 ```
 
-```hbs title=Split-example-with-gutter
+```hbs title=With-gutter
 {{#> split split--modifier="pf-m-gutter"}}
   {{#> split-item}}
     content

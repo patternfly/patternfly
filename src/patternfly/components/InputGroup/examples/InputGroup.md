@@ -5,7 +5,7 @@ cssPrefix: pf-c-input-group
 ---
 
 ## Examples
-```hbs title=Inputgroup-example
+```hbs title=Inputgroup
 {{#> input-group}}
   {{#> button button--modifier="pf-m-control" button--attribute='id="textAreaButton1"'}}
     Button

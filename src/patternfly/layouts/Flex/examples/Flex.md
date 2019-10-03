@@ -34,7 +34,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 
 ## Examples
 
-```hbs title=Flex-basics
+```hbs title=Basic
 <h2 class="example-title">
   Basic flex - <code>.pf-l-flex</code>.
 </h2>
@@ -112,7 +112,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
 | `.pf-l-flex__item` | `.pf-l-flex > *` | Initiates a flex item. **Required** |
 
-```hbs title=Flex-spacing
+```hbs title=Spacing
 {{#> example-title}}Individually spaced items - <code>.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>.{{/example-title}}
 {{#> l-flex}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
@@ -192,7 +192,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
 | `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
 
-```hbs title=Flex-layout-modifiers
+```hbs title=Layout-modifiers
 {{#> example-title}}Default layout <code>.pf-l-flex</code>.{{/example-title}}
 {{#> l-flex l-flex--modifier="example-border"}}
   {{#> example-text example-text--modifier="example-border"}}Flex item{{/example-text}}
@@ -461,7 +461,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-column{-on-[breakpoint]}` | `.pf-l-flex`  |  Modifies flex-direction property to column. |
 | `.pf-m-row{-on-[breakpoint]}` | `.pf-l-flex`  |  Modifies flex-direction property to row. |
 
-```hbs title=Flex-alignment
+```hbs title=Alignment
 {{#> example-title}}Aligning right with <code>.pf-m-align-right</code>. This solution will always align element right by setting margin-left: auto, including when wrapped.{{/example-title}}
 {{#> l-flex l-flex--modifier="example-border"}}
   {{#> l-flex-item}}
@@ -649,7 +649,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-align-self-flex-stretch{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to stretch. |
 
 
-```hbs title=Flex-justification
+```hbs title=Justification
 {{#> example-title}}Justify content with <code>.pf-m-justify-content-flex-end</code>.{{/example-title}}
 {{#> l-flex l-flex--modifier="pf-m-justify-content-flex-end example-border"}}
   {{#> l-flex-item}}

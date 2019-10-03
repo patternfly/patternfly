@@ -5,7 +5,7 @@ cssPrefix: pf-c-options-menu
 ---
 
 ## Examples
-```hbs title=Options-menu-single-option
+```hbs title=Single-option
 {{#> options-menu id="options-menu-single-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     <span class="pf-c-options-menu__toggle-text">
@@ -25,7 +25,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-```hbs title=Options-menu-disabled
+```hbs title=Disabled
 {{#> options-menu id="options-menu-single-disabled-example" options-menu--HasToggleIcon="true" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle}}
     <span class="pf-c-options-menu__toggle-text">
@@ -35,7 +35,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-```hbs title=Options-menu-multiple-options
+```hbs title=Multiple-options
 {{#> options-menu id="options-menu-multiple-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     <span class="pf-c-options-menu__toggle-text">
@@ -55,7 +55,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
      
-```hbs title=Options-menu-plain
+```hbs title=Plain
 {{#> options-menu id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
@@ -78,7 +78,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-```hbs title=Options-menu-top
+```hbs title=Top
 {{#> options-menu options-menu--IsExpanded="true" options-menu--modifier="pf-m-top" id="options-menu-top-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
     <span class="pf-c-options-menu__toggle-text">
@@ -89,7 +89,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-```hbs title=Options-menu-align-right
+```hbs title=Align-right
 {{#> options-menu options-menu--IsExpanded="true" id="options-menu-align-right-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
     <span class="pf-c-options-menu__toggle-text">
@@ -100,7 +100,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-```hbs title=Options-menu-plain-with-text
+```hbs title=Plain-with-text
 {{#> options-menu id="options-menu-disabled-text-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
     <span class="pf-c-options-menu__toggle-text">

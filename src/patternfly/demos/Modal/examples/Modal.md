@@ -3,8 +3,8 @@ title: Modal
 section: demos
 ---
 
-
-```hbs title=Modal-demo isFullscreen
+## Demos
+```hbs title=Basic isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -33,7 +33,7 @@ section: demos
 {{/modal}}
 ```
 
-```hbs title=Modal-demo-content-long-enought-to-scroll isFullscreen
+```hbs title=Scrollable-content isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -68,7 +68,7 @@ section: demos
 {{/modal}}
 ```
 
-```hbs title=Modal-demo-large isFullscreen
+```hbs title=Large isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -97,7 +97,7 @@ section: demos
 {{/modal}}
 ```
 
-```hbs title=Modal-demo-legacy-footer-button-alignment-(right-aligned) isFullscreen
+```hbs title=Right-aligned-footer-button-(legacy) isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -125,6 +125,3 @@ section: demos
   {{/backdrop}}
 {{/modal}}
 ```
-
-## Documentation
-This demo implements a basic modal, including the backdrop. Both the normal and large variations of the modal are shown.

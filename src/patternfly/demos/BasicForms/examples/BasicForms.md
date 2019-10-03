@@ -3,8 +3,8 @@ title: Basic Forms
 section: demos
 ---
 
-## Examples
-```hbs title=Simple-form-demo
+## Demos
+```hbs title=Basic
 {{#> form}}
   {{#> form-group}}
     {{#> form-label form-label--attribute='for="simple-form-name"' required="true"}}Name{{/form-label}}
@@ -56,7 +56,7 @@ section: demos
 {{/form}}
 ```
 
-```hbs title=Horizontal-form-demo 
+```hbs title=Horizontal 
 {{#> form form--modifier="pf-m-horizontal"}}
   {{#> form-group}}
     {{#> form-label form-label--attribute='for="horizontal-form-name"' required="true"}}Name{{/form-label}}

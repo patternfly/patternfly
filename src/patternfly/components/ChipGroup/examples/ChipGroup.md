@@ -5,7 +5,7 @@ cssPrefix: pf-c-chip-group
 ---
 
 ## Examples
-```hbs title=Chip-group-toolbar-(collapsed)
+```hbs title=Collapsed
 {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-collapsed"}}
   {{#> chip-group-list-item }}
     {{#> chip-group-label}}
@@ -56,7 +56,7 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-toolbar-(expanded)
+```hbs title=Expanded
 {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-expanded"}}
 {{#> chip-group-list-item}}
   {{#> chip-group-label}}
@@ -146,7 +146,7 @@ The chip group requires the [chip component](../../Chip/examples).
 
 The chip group requires the [chip component](../../Chip/examples).
 
-```hbs title=Chip-group-multi-select-(collapsed)
+```hbs title=Multi-select-collapsed
 {{#> chip-group chip-group--id="select-collapsed"}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
@@ -182,7 +182,7 @@ The chip group requires the [chip component](../../Chip/examples).
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-multi-select-(expanded)
+```hbs title=Multi-select-expanded
 {{#> chip-group chip-group--id="select-expanded"}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select"')}}

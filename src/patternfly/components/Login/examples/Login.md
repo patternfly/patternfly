@@ -5,7 +5,7 @@ cssPrefix: pf-c-login
 ---
 
 ## Examples
-```hbs title=Login-simple isFullscreen
+```hbs title=Basic isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
   {{#> login-container}}
@@ -115,7 +115,7 @@ cssPrefix: pf-c-login
 {{/login}}
 ```
 
-```hbs title=Login-invalid isFullscreen
+```hbs title=Invalid isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
   {{#> login-container}}

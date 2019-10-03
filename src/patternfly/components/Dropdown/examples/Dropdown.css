@@ -1,0 +1,13 @@
+.ws-example-dropdown-expanded,
+.ws-example-kebab,
+.ws-example-kebab-align-right,
+.ws-example-align-right,
+.ws-example-top {
+  min-height: 310px;
+}
+
+.ws-example-kebab-align-right,
+.ws-example-align-right {
+  display: flex;
+  justify-content: flex-end;
+}

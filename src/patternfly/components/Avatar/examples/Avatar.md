@@ -5,7 +5,7 @@ cssPrefix: pf-c-avatar
 ---
 
 ## Examples
-```hbs title=Avatar-simple
+```hbs title=Basic
 {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
 {{/avatar}}
 ```

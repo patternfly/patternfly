@@ -5,7 +5,7 @@ cssPrefix: pf-c-form
 ---
 
 ## Examples
-```hbs title=Vertical-aligned-labels
+```hbs title=Vertically-aligned-labels
 {{#> form form--id="vertical-align-labels"}}
   {{#> form-group}}
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-vertical-form-name"') required="true"}}
@@ -17,7 +17,7 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Horizontal-aligned-labels
+```hbs title=Horizontally-aligned-labels
 {{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
   {{#> form-group}}
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-horizontal-form-name"') required="true"}}

@@ -4,7 +4,7 @@ section: utilities
 ---
 
 ## Examples
-```hbs title=Spacer-margin
+```hbs title=Margin
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Margin, marginX, marginY
 {{/title}}
@@ -60,7 +60,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Spacer-padding
+```hbs title=Padding
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Padding, paddingX, paddingY
 {{/title}}
@@ -116,7 +116,7 @@ section: utilities
 {{/display}}
 ```
 
-```hbs title=Spacers-combined
+```hbs title=Combined
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Combined spacers
 {{/title}}

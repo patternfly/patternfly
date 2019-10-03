@@ -4,7 +4,7 @@ section: utilities
 ---
 
 ## Examples
-```hbs title=Float-simple
+```hbs title=Basic
 {{#> float float--type="left"}}
   Float left
 {{/float}}

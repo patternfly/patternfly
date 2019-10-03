@@ -5,7 +5,7 @@ cssPrefix: pf-c-alert-group
 ---
 
 ## Examples
-```hbs title=Alert-group
+```hbs title=Basic
 {{#> alert-group}}
   {{#> alert-item}}  
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}

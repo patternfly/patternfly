@@ -5,7 +5,7 @@ cssPrefix: pf-c-title
 ---
 
 ## Examples
-```hbs title=Title-types
+```hbs title=Size-modifiers
 {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
     4xl title
 {{/title}}

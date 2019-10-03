@@ -4,25 +4,27 @@ section: components
 cssPrefix: pf-c-dropdown
 ---
 
+import './Dropdown.css'
+
 ## Examples
-```hbs title=Dropdown-(expanded)
-{{#> dropdown id="dropdown-example-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+```hbs title=Expanded
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Expanded dropdown
   {{/dropdown-toggle-text}}
 {{/dropdown}}
 ```
 
-```hbs title=Dropdown-(collapsed)
-{{#> dropdown id="dropdown-example-collapsed"  dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
+```hbs title=Collapsed
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Collapsed dropdown
   {{/dropdown-toggle-text}}
 {{/dropdown}}
 ```
 
-```hbs title=Dropdown-(disabled)
-{{#> dropdown id="dropdown-example-disabled" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true" dropdown-toggle--IsDisabled="true"}}
+```hbs title=Disabled
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true" dropdown-toggle--IsDisabled="true"}}
   {{#> dropdown-toggle-text}}
     Disabled dropdown
   {{/dropdown-toggle-text}}
@@ -30,31 +32,31 @@ cssPrefix: pf-c-dropdown
 ```
 
 ```hbs title=Kebab
-{{#> dropdown id="dropdown-example-kebab-disabled" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions" dropdown-toggle--IsDisabled="true"}}{{/dropdown}}
-{{#> dropdown id="dropdown-example-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-{{#> dropdown id="dropdown-example-kebab-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+{{#> dropdown dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions" dropdown-toggle--IsDisabled="true"}}{{/dropdown}}
+{{#> dropdown dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
 ```
 
 ```hbs title=Kebab-align-right
-{{#> dropdown id="dropdown-example-kebab-right-aligned" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
 {{/dropdown}}
 ```
 
 ```hbs title=Align-right
-{{#> dropdown id="dropdown-example-rightAligned" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown-menu--modifier="pf-m-align-right"}}
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown-menu--modifier="pf-m-align-right"}}
   {{#> dropdown-toggle-text}}
     Right
   {{/dropdown-toggle-text}}
 {{/dropdown}}
 ```
 
-```hbs title=Top
-{{#> dropdown id="dropdown-example-top-collapsed" dropdown--IsActionMenu="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
+```hbs title=Align-top
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Top
   {{/dropdown-toggle-text}}
 {{/dropdown}}
-{{#> dropdown id="dropdown-example-top-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
+{{#> dropdown dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Top
   {{/dropdown-toggle-text}}
@@ -83,16 +85,16 @@ cssPrefix: pf-c-dropdown
 {{/dropdown}}
 ```
 
-```hbs title=Dropdown-with-groups
-{{#> dropdown id="dropdown-groups-example-expanded" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown--IsGroupsMenu="true"}}
+```hbs title=With-groups
+{{#> dropdown dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown--IsGroupsMenu="true"}}
   {{#> dropdown-toggle-text}}
     Groups
   {{/dropdown-toggle-text}}
 {{/dropdown}}
 ```
 
-```hbs title=Dropdown-panel
-{{#> dropdown id="dropdown-basic-example-expanded" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+```hbs title=Panel
+{{#> dropdown dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Expanded dropdown
   {{/dropdown-toggle-text}}
@@ -101,14 +103,14 @@ cssPrefix: pf-c-dropdown
 
 The dropdown panel is provided for flexibility in allowing various content within a dropdown.
 
-```hbs title=Dropdown-primary-toggle
-{{#> dropdown id="dropdown-primary-example" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
+```hbs title=Primary-toggle
+{{#> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Collapsed dropdown
   {{/dropdown-toggle-text}}
 {{/dropdown}}
 
-{{#> dropdown id="dropdown-primary-expanded-example" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+{{#> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Expanded dropdown
   {{/dropdown-toggle-text}}

@@ -5,7 +5,7 @@ cssPrefix: pf-c-data-list
 ---
 
 ## Examples
-```hbs title=Data-list-simple
+```hbs title=Basic
 {{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
   {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-item1"'}}
     {{#> data-list-item-row}}
@@ -53,7 +53,7 @@ cssPrefix: pf-c-data-list
 | `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
 
-```hbs title=Data-list-simple-with-headings
+```hbs title=With-headings
 {{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
     {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-h2-item1"'}}
         {{#> data-list-item-row}}
@@ -85,7 +85,7 @@ cssPrefix: pf-c-data-list
 ### Usage
 When a list item includes more than one block of content, it can be difficult for some screen reader users to discern where one list item ends and the next one begins. A simple way to provide better separation of list items is to define the primary content section as a heading. Headings are useful for indicating a new section of contents, but also provide an easy way for screen reader users to navigate to specific sections on the page. The heading level should be based on the context in which the DataList component is being used. For example, if the heading for the section that contains the DataList is a level 3, then `h4` elements should be used in the DataList list items.
 
-```hbs title=Data-list-checkboxes-actions-and-additional-cells
+```hbs title=Checkboxes,-actions,-and-additional-cells
 {{#> data-list data-list--attribute='aria-label="Checkbox and action data list example"'}}
   {{#> data-list-item data-list-item--attribute='aria-labelledby="check-action-item1"'}}
     {{#> data-list-item-row}}
@@ -192,7 +192,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-data-list__item-action` | Hides an actions container at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-data-list__item-action` | Shows an actions container at a given breakpoint. |
 
-```hbs title=Data-list-expandable
+```hbs title=Expandable
 {{#> data-list data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item1"'}}
     {{#> data-list-item-row}}
@@ -308,7 +308,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-no-padding` | `.pf-c-data-list__expandable-content-body` | Removes padding for the expandable content body. |
 | `.pf-m-icon` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. Use `.pf-c-data-list__icon`. |
 
-```hbs title=Data-list-with-modifiers
+```hbs title=Modifiers
 {{!-- Example 1 --}}
 <h2 class="Preview__section-title">Default fitting - example 1</h2>
 {{#> data-list data-list--attribute='aria-label="Width modifier data list example 1"'}}
