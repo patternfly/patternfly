@@ -493,7 +493,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 
 ## Documentation
 ### Overview
+The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](./nav) is available for general navigation use cases.
 
-The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](https://pf4.patternfly.org/components/Nav/examples/) is available for general navigation use cases.
-
-Tabs should be used with the [tab content component](/components/TabContent/examples/).
+Tabs should be used with the [tab content component](./tabcontent).

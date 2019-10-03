@@ -738,7 +738,7 @@ Toolbar expanded
 {{/data-toolbar}}
 ```
 ## Documentation
-###Overview
+### Overview
 As the data toolbar component is a hybrid layout and component, some of its elements are presentational, while some require accessibility support.
 
 ### Usage

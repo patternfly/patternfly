@@ -16,7 +16,8 @@ module.exports = {
           { section: 'utilities' },
           { section: 'demos' },
           { section: 'experimental' },
-          { title: 'Release notes' },
+          { text: 'Release notes', link: '/documentation/core/release-notes' },
+          { text: 'Global CSS Variables', link: '/documentation/global-css-variables' },
         ],
         topNavItems: [
           {
