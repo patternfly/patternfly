@@ -141,7 +141,6 @@ cssPrefix: pf-c-accordion
 
 ## Documentation
 ### Overview
-
 There are two variations to build the accordion component:
 One way uses `<div>` and `<h1 - h6>` tags to build the component. 
 In these examples `.pf-c-accordion` uses `<div>`, `.pf-c-accordion__toggle` uses `<h3><button>`, and `.pf-c-accordion__expanded-content` uses `<div>`. The heading level that you use should fit within the rest of the headings outlined on your page.
@@ -150,7 +149,6 @@ Another variation is using the definition list:
 In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses `<dt><button>`, and `.pf-c-accordion__expanded-content` uses `<dd>`.
 
 ### Accessibility
-
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is hidden. **Required**|
@@ -159,7 +157,6 @@ In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses 
 | `aria-hidden="true"` | `.pf-c-accordion__toggle-icon` | Hides the icon from assistive technologies.**Required** |
 
 ### Usage
-
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-accordion` | `<div>`, `<dl>` | Initiates an accordion component. **Required**|

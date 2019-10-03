@@ -1,21 +1,21 @@
 ---
 title: Bullseye
-section: components
+section: layouts
 cssPrefix: pf-l-bullseye
 ---
+
+## Examples
 ```hbs title=Bullseye-example 
 {{#> bullseye}}
   {{#> bullseye-item}}content{{/bullseye-item}}
 {{/bullseye}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The bullseye layout is designed to center a single child element horizontally and vertically within its parent.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-bullseye` | `<div>` | Initializes the bullseye layout. A bullseye can only have one child. |

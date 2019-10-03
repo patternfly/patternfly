@@ -3,6 +3,8 @@ title: Gallery
 section: layouts
 cssPrefix: pf-l-gallery
 ---
+
+## Examples
 ```hbs title=Gallery-example
 {{#> gallery}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -23,13 +25,11 @@ cssPrefix: pf-l-gallery
 {{/gallery}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The gallery layout is designed so that all of its children are of uniform size, display horizontally, and wrap responsively.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-gallery` |  `<div>` |  Initializes a Gallery layout |

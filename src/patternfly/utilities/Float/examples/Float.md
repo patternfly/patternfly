@@ -3,6 +3,7 @@ title: Float
 section: utilities
 ---
 
+## Examples
 ```hbs title=Float-simple
 {{#> float float--type="left"}}
   Float left
@@ -14,13 +15,11 @@ section: utilities
 </p>
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-text-left-on-lg**
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-float-left{-on-[breakpoint]}` | `*` |  Float element left |

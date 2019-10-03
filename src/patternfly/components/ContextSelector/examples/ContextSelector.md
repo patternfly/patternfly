@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-context-selector
 ---
 
+## Examples
 ```hbs title=Context-selector-example
 {{#> context-selector context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project"}}
   {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
@@ -152,11 +153,9 @@ cssPrefix: pf-c-context-selector
 {{/context-selector}}
 ```
 
-# Documentation
-## Accessibility
-
-Added after react implementation
-
+## Documentation
+### Accessibility
+Added after React implementation.
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |

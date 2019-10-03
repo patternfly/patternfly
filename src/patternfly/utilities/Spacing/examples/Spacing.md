@@ -3,6 +3,7 @@ title: Spacing
 section: utilities
 ---
 
+## Examples
 ```hbs title=Spacer-margin
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Margin, marginX, marginY
@@ -144,9 +145,8 @@ section: utilities
 {{/display}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-m-sm-on-lg**
 
 ## Margin properties:
@@ -184,8 +184,7 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 | `2xl` | var(--pf-global--spacer--2xl) |
 | `3xl` | var(--pf-global--spacer--3xl) |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-{m, mt, mr, mb, ml, mx, my}-{size}{-on-[breakpoint]}`  | `*` |  Sets margin top, right, bottom, left, margin-left & right, margin-top & bottom to spacer value |

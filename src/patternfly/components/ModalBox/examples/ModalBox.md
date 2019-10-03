@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-modal-box
 ---
 
+## Examples
 ```hbs title=Modalbox-basic-example
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -75,14 +76,12 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 A modal box is a generic rectangular container that can be used to build modals. A modal box can have three sections: header, body, and footer. Header or body is required. If no `.pf-c-title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
 
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required**|
@@ -93,8 +92,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `aria-label="Close"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 | `aria-hidden="true"` | Parent element containing the page contents when modal is open | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](../../../../accessibility-guide#trapping-focus). **Required** |
 
-## Usage
-
+### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-modal-box` | `<div>` | Initiates a modal box. **Required** |

@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-empty-state
 ---
 
+## Examples
 ```hbs title=Empty-state
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
@@ -126,16 +127,13 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-hidden="true"` | `.pf-c-empty-state__icon` |  Hides icon for assistive technologies. **Required** |
 
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-empty-state` | `<div>` |  Initiates an empty state component. **Required** |

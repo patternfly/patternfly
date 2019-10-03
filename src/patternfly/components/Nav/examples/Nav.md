@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-nav
 ---
 
+## Examples
 ```hbs title=Simple-nav
 {{#> nav nav--attribute='id="nav-primary-simple" aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list nav-list--type="simple"}}
@@ -437,9 +438,8 @@ cssPrefix: pf-c-nav
 {{/nav}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
@@ -447,8 +447,7 @@ The navigation system relies on several different sub-components:
 * `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
 * `.pf-c-nav__tertiary-list` - nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
@@ -459,9 +458,7 @@ The navigation system relies on several different sub-components:
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
 | `role="separator"` | `.pf-c-nav__separator` |  Indicates that the divider separates and distinguishes sections of links in the nav. |
 
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element. |

@@ -4,6 +4,7 @@ section: layouts
 cssPrefix: pf-l-stack
 ---
 
+## Examples
 ```hbs title=Stack-example
 {{#> stack}}
   {{#> stack-item}}
@@ -32,13 +33,11 @@ cssPrefix: pf-l-stack
 {{/stack}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The stack layout is designed to position items vertically, with one item filling the available vertical space.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-stack` | `<div>`, `<section>`, or `<article>` | Initiates the stack layout. |

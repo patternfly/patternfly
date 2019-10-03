@@ -118,7 +118,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Data-list-simple-with-compact-pagination-demo
+```hbs title=Data-list-simple-with-compact-pagination-demo isFullscreen
 {{#> page page--id="page-layout-data-list-simple-compact-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

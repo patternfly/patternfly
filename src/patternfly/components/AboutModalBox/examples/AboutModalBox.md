@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-about-modal-box
 ---
 
+## Examples
 ```hbs title=About-modal-layout isFullscreen
 {{#> about-modal-box about-modal-box--attribute='aria-labelledby="about-modal-title"'}}
   {{#> about-modal-box-brand}}
@@ -33,9 +34,8 @@ cssPrefix: pf-c-about-modal-box
 {{/about-modal-box}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-about-modal-box` | Identifies the element that serves as the modal container. **Required** |
@@ -46,8 +46,7 @@ cssPrefix: pf-c-about-modal-box
 | `aria-label="Close Dialog"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
 | `aria-hidden="true"` | Parent element containing the page contents when the modal is open. | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](../../../../accessibility-guide#trapping-focus) **Required** |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-about-modal-box` |  `<div>`, `<article>`  |  Initiates a modal box. |

@@ -4,36 +4,35 @@ section: layouts
 cssPrefix: pf-l-flex
 ---
 
+## Introduction
 The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. The system relies on a default spacer value `--pf-l-flex--spacer--base`, whose value is `--pf-global--spacer--md` or `16px` that is applied to flex items. By default, `flex-wrap` is set to `wrap` and `align-items` is set to `baseline`.
 
-### Default spacing for:
-
+### Default spacing
 - Flex items (not last child): `margin-right: 16px`.
 - Nested `.pf-l-flex` containers (not last child): `margin-right: 16px`.
 - `.pf-m-column` direct descendants (not last child): `margin-bottom: 16px`.
 - `.pf-m-column` nested `.pf-l-flex` containers (not last child): `margin-bottom: 16px`.
 
-### Features:
+## Features
 
 - `.pf-l-flex` is infinitely nestable and can be used to group items within.
 - `.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to parent or direct children and changes the spacer value for only the element to which it is applied. Responsive spacers can be used by appending `{-on-[breakpoint]}` to `.pf-m-spacer-{size}`. Example: `.pf-m-spacer-lg-on-xl`.
 - `.pf-m-space-items-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to `.pf-l-flex` only and changes the spacing of direct children only. Responsive spacers can be used by appending `{-on-[breakpoint]}` to `.pf-m-space-items-{size}`. Example: `.pf-m-space-items-lg-on-xl`.
 
-### Available breakpoints are: `-on-sm, -on-md, -on-lg, -on-xl, -on-2xl`.
+### Breakpoints
+  - `-on-sm, -on-md, -on-lg, -on-xl, -on-2xl`.
 
-### Use `.pf-l-flex` when:
+### Usefulness
+- Use when content dictates layout and elements wrap when necessary.
+- Use when a rigid grid is not necessary/wanted.
 
-- Content dictates layout and elements wrap when necessary.
-- A rigid grid is not necessary/wanted.
-
-### `.pf-l-flex` is different than a utility class in that:
-
+### Differences from utility class
 - It contains multiple css declarations and does not use the !important tag.
 - It does not require wrapping elements in columns or rows.
 - It breaks the dependency upon adding utility classes to each child.
 - It can be applied to container elements or components.
 
-### The CSS approach, by keeping specificity low on base class properties and resetting css variable values at higher specificities, allows any spacer property to be overwritten with a single selector (specificity of 10 or greater).
+## Examples
 
 ```hbs title=Flex-basics
 <h2 class="example-title">
@@ -106,14 +105,12 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{/l-flex}}
 {{/l-flex}}
 ```
-
-## Usage
-
+The CSS approach, by keeping specificity low on base class properties and resetting css variable values at higher specificities, allows any spacer property to be overwritten with a single selector (specificity of 10 or greater).
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
 | `.pf-l-flex__item` | `.pf-l-flex > *` | Initiates a flex item. **Required** |
-
 
 ```hbs title=Flex-spacing
 {{#> example-title}}Individually spaced items - <code>.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>.{{/example-title}}
@@ -186,6 +183,14 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{/l-flex-item}}
 {{/l-flex}}
 ```
+**Applying `.pf-m-spacer-{size}` to direct descendants of `.pf-l-flex` will override css variable value.**
+
+**Applying `.pf-m-space-items-{size}` to `.pf-l-flex` will override css variable values for direct descendants, excluding last child. This spacing can be overridden for direct descendant with `.pf-m-spacer-{size}`.**
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
+| `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
 
 ```hbs title=Flex-layout-modifiers
 {{#> example-title}}Default layout <code>.pf-l-flex</code>.{{/example-title}}
@@ -250,9 +255,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{/l-flex}}
 {{/l-flex}}
 ```
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-inline-flex{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout display property to inline-flex. |
@@ -374,9 +377,13 @@ The flex layout is based on the CSS Flex properties where the layout determines 
     {{#> l-flex-item}}
       Flex item
     {{/l-flex-item}}
-  {{/l-flex}}
+  {{/l-flex}}The CSS approach, by keeping specificity low on base class properties and resetting css variable values at higher specificities, allows any spacer property to be overwritten with a single selector (specificity of 10 or greater).
 {{/l-flex}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-column{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies flex-direction property to column. |
 
 ```hbs title=Responsive-layout-modifiers
 {{#> example-title}}Switching between flex-direction column and row at breakpoints (<code>-on-lg</code>).{{/example-title}}
@@ -448,9 +455,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{/l-flex}}
 {{/l-flex}}
 ```
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-column{-on-[breakpoint]}` | `.pf-l-flex`  |  Modifies flex-direction property to column. |
@@ -632,9 +637,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{/l-flex}}
 {{/l-flex}}
 ```
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies margin-left property to auto. |
@@ -644,6 +647,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 | `.pf-m-align-self-flex-center{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to center. |
 | `.pf-m-align-self-flex-baseline{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to baseline. |
 | `.pf-m-align-self-flex-stretch{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to stretch. |
+
 
 ```hbs title=Flex-justification
 {{#> example-title}}Justify content with <code>.pf-m-justify-content-flex-end</code>.{{/example-title}}
@@ -688,21 +692,15 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{/l-flex-item}}
 {{/l-flex}}
 ```
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-justify-content-flex-end{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing. |
 | `.pf-m-justify-content-flex-space-between{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing. |
 | `.pf-m-justify-content-flex-start{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing, used primarily to reset spacing to default. |
 
-# Documentation
-
-The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. The system relies on a default spacer value that is applied to flex items.
-
-## Usage
-
+## Documentation
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
@@ -744,10 +742,8 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element margin-left property to auto. |
 
 
-## Spacer system
-
+### Spacer system
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > .pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
 | `.pf-m-item-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
-

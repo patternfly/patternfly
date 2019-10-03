@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-list
 ---
 
+## Examples
 ```hbs title=Unordered-list
 {{#> list}}
   <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
@@ -57,13 +58,11 @@ cssPrefix: pf-c-list
 {{/list}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Non-inline lists can be nested up to any level.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |

@@ -3,6 +3,7 @@ title: Flex
 section: utilities
 ---
 
+## Examples
 ```hbs title=Enable-flex
 {{#> display display--type="flex"}}
   Display flex
@@ -475,9 +476,8 @@ section: utilities
 <br>
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-flex-row-on-lg**
 
 <!-- ## Accessibility
@@ -487,8 +487,7 @@ For these utilities to have effect, the parent element must be set to `display: 
 | `role` or `aria` | `pf-u-flex` |  accessibility notes. |
  -->
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-flex-direction-row{-on-[breakpoint]}`            | `*` |  Sets flex-direction: row |

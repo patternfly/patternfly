@@ -3,6 +3,7 @@ title: Basic Forms
 section: demos
 ---
 
+## Examples
 ```hbs title=Simple-form-demo
 {{#> form}}
   {{#> form-group}}

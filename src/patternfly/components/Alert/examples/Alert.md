@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-alert
 ---
 
+## Examples
 ```hbs title=Alert-types
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
@@ -209,13 +210,11 @@ cssPrefix: pf-c-alert
   {{/alert-title}}
 {{/alert}}
 ```
-# Documentation
-## Overview
-
+## Documentation
+### Overview
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="Default alert"` | `.pf-c-alert` |  Indicates the default alert. |
@@ -230,8 +229,7 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | -- | -- | -- |
 | `.pf-screen-reader` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert.  ** Required**|
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class. ** Required**|

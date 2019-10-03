@@ -4,6 +4,7 @@ section: experimental
 cssPrefix: pf-c-drawer
 ---
 
+## Examples
 ```hbs title=Drawer-closed
 {{#> drawer}}
   {{#> drawer-content}}
@@ -37,9 +38,8 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-# Documentation
-## Usage
-
+## Documentation
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-drawer` | `<div>` | Creates the drawer container. |

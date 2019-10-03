@@ -3,6 +3,7 @@ title: About Modal
 section: demos
 ---
 
+## Examples
 ```hbs title=About-modal-example isFullscreen
 {{#> about-modal}}
   {{#> backdrop}}
@@ -54,3 +55,6 @@ section: demos
   {{/backdrop}}
 {{/about-modal}}
 ```
+
+## Documentation
+This demo implements the about modal, including the backdrop.

@@ -3,6 +3,7 @@ title: Display
 section: utilities
 ---
 
+## Examples
 ```hbs title=Display-inline-block
 {{#> display display--type="inline-block"}}
   .pf-u-display-inline-block
@@ -72,14 +73,11 @@ section: utilities
 {{/display}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-display-inline-block-on-lg**
 
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |

@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-form
 ---
 
+## Examples
 ```hbs title=Vertical-aligned-labels
 {{#> form form--id="vertical-align-labels"}}
   {{#> form-group}}
@@ -104,9 +105,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `for` | `<label>` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
@@ -117,9 +117,7 @@ cssPrefix: pf-c-form
 | `aria-invalid="true" aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` |  When form validation fails `aria-describedby` is used to communicate the error to the user. These attributes need to be handled with Javascript so that `aria-describedby` only references help text that explains the error, and so that `aria-invalid="true"` is only present when validation fails. For proper styling of errors `aria-invalid="true"` is required. |
 | `aria-hidden="true"` | `.pf-c-form__label-required` |  Hides the required indicator from assistive technologies. |
 
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-form` | `<form>` |  Initiates a standard form. **Required** |

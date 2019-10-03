@@ -4,6 +4,7 @@ section: layouts
 cssPrefix: pf-l-grid
 ---
 
+## Examples
 ```hbs title=Smart-grid-(responsive)
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item}}
@@ -277,13 +278,11 @@ cssPrefix: pf-l-grid
 {{/grid}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The grid layout is based on CSS Grid’s two-dimensional system of columns and rows. This layout styles the parent element and its children to achieve responsive column and row spans as well as gutters.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-grid` | `<div>` | Initializes the grid layout. |

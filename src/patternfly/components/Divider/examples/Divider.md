@@ -4,6 +4,7 @@ section: experimental
 cssPrefix: pf-c-divider
 ---
 
+## Examples
 ```hbs title=Divider-<hr>
 {{#> divider}}{{/divider}}
 ```
@@ -20,17 +21,15 @@ cssPrefix: pf-c-divider
 {{#> divider divider--type="div"}}{{/divider}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The divider renders as an `<hr>` by default. It is possible to make the divider render as an `li` or a `div` to match the HTML5 specification and context of the divider.
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="separator"` | `li.pf-c-divider`, `div.pf-c-divider` | Indicates that the separator is a separator. |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |

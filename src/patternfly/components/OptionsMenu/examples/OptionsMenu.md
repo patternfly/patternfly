@@ -1,9 +1,10 @@
 ---
 title: Options Menu
-section: components
+section: experimental
 cssPrefix: pf-c-options-menu
 ---
 
+## Examples
 ```hbs title=Options-menu-single-option
 {{#> options-menu id="options-menu-single-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
@@ -131,9 +132,8 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 *This section to be updated once the React implementation is complete.*
 
 | Attribute | Applied to | Outcome |
@@ -142,8 +142,7 @@ cssPrefix: pf-c-options-menu
 | `disabled` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle-button` | Disables the options menu toggle and toggle button and removes it from keyboard focus. |
 *Note:* The attribute `aria-selected="true"` should be set programmatically to the selected item(s).
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-options-menu` | `<div>` |  Initiates a custom options menu. |

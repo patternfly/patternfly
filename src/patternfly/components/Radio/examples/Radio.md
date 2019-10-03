@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-radio
 ---
 
+## Examples
 ```hbs title=Radio-example
 {{#> radio}}
   {{#> radio-input radio-input--attribute='id="radio-simple" name="exampleRadioSimple"'}}{{/radio-input}}
@@ -11,28 +12,28 @@ cssPrefix: pf-c-radio
 {{/radio}}
 ```
 
-```hbs title=Radio checked example
+```hbs title=Radio-checked-example
 {{#> radio}}
   {{#> radio-input radio-input--attribute='id="radio-checked" name="exampleRadioChecked" checked'}}{{/radio-input}}
   {{#> radio-label radio-label--attribute='for="radio-checked"'}}Radio checked{{/radio-label}}
 {{/radio}}
 ```
 
-```hbs title=Radio label wraps input example
+```hbs title=Radio-label-wraps-input-example
 {{#> radio radio--type="label" radio--attribute='for="radio-wrap"'}}
   {{#> radio-input radio-input--attribute='id="radio-wrap" name="exampleRadioWrap"'}}{{/radio-input}}
   {{#> radio-label radio-label--type="span"}}Radio label wraps input{{/radio-label}}
 {{/radio}}
 ```
 
-```hbs title=Radio reversed example
+```hbs title=Radio-reversed-example
 {{#> radio}}
   {{#> radio-label radio-label--attribute='for="radio-rev"'}}Radio reversed{{/radio-label}}
   {{#> radio-input radio-input--attribute='id="radio-rev" name="exampleRadioReversed"'}}{{/radio-input}}
 {{/radio}}
 ```
 
-```hbs title=Radio disabled example
+```hbs title=Radio-disabled-example
 {{#> radio}}
   {{#> radio-input radio-input--attribute='id="radio-disabled" name="exampleRadioDisabled" disabled'}}{{/radio-input}}
   {{#> radio-label radio-label--modifier="pf-m-disabled" radio-label--attribute='for="radio-disabled"'}}Radio disabled{{/radio-label}}
@@ -44,21 +45,18 @@ cssPrefix: pf-c-radio
 {{/radio}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The Radio component is provided for use cases outside of forms. If it is used without label text ensure some sort of label for assistive technologies. (for example: `aria-label`)
 
 If you extend this component or modify the styles of this component, then make sure any hover styles defined are applied to the clickable elements, like `<input>` or `<label>` since hover styles are used to convey the clickable target area of an element. To maximize the target area, use the example html where the `<label>` is the wrapping element.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `disabled` | `<input type="radio">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |

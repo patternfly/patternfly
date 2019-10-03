@@ -4,6 +4,7 @@ section: layouts
 cssPrefix: pf-l-level
 ---
 
+## Examples
 ```hbs title=Level-two-example
 {{#> level}}
   {{#> level-item}}
@@ -43,13 +44,11 @@ cssPrefix: pf-l-level
 {{/level}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The level layout is designed to distribute space between children evenly and center them on the x-axis. By default the children are placed horizontally and wrap responsively.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-level` | `<div>`, `<section>`, or `<article>` | Initializes the level layout |

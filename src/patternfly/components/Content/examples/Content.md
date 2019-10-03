@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-content
 ---
 
+## Examples
 ```hbs title=Content-example
 {{#> content}}
 <h1>Hello world</h1>
@@ -97,9 +98,8 @@ cssPrefix: pf-c-content
 {{/content}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-c-content` as container. It can handle almost any HTML tag:
 
 - `<p>` paragraphs
@@ -112,8 +112,7 @@ This `pf-c-content` class can be used in any context where you just want to (or 
 
 This component is an exception to the variable system since we style type selectors.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rythm and typographic treatment to html elements |

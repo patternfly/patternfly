@@ -4,6 +4,7 @@ section: layouts
 cssPrefix: pf-l-split
 ---
 
+## Examples
 ```hbs title=Split-example
 {{#> split}}
   {{#> split-item}}
@@ -32,13 +33,11 @@ cssPrefix: pf-l-split
 {{/split}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The split layout is designed to position items horizontally, with one item filling the available horizontal space.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-split` | `<div>`, `<section>`, or `<article>` | Initiates the split layout. |

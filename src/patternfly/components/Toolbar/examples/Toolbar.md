@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-toolbar
 ---
 
+## Examples
 ```hbs title=Toolbar-simple isFullscreen
 {{#> toolbar toolbar--id="toolbar-simple-example"}}
   {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-simple-split-button-dropdown-simple-example-button"}}
@@ -392,16 +393,13 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-toolbar` |  accessibility notes. |
 
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-toolbar` | `<div>` |  Initiates the toolbar component. **Required** |

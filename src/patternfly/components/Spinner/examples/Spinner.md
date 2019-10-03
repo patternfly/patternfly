@@ -4,6 +4,7 @@ section: experimental
 cssPrefix: pf-c-spinner
 ---
 
+## Examples
 ```hbs title=Spinner
 {{#> spinner}}Loading...{{/spinner}}
 ```
@@ -18,9 +19,8 @@ cssPrefix: pf-c-spinner
 {{#> spinner spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
 ```
     
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="progressbar"` | `.pf-c-spinner` |  Indicates to assistive technologies that this is an indeterminate progress indicator. |
@@ -30,8 +30,7 @@ Note: If the spinner is showing that loading of a particular region of a page is
 
 Note: A live region must be present before changing its status in order for the change to be read. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-spinner` | `<span>` |  Creates a spinner component. The default is an extra large spinner. **Required**|

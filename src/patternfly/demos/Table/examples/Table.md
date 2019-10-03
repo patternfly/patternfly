@@ -3,6 +3,7 @@ title: Table
 section: demos
 ---
 
+## Examples
 ```hbs title=Table-simple-demo isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -32,7 +33,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=table-sortable-demo isFullscreen
+```hbs title=Table-sortable-demo isFullscreen
 {{#> page page--id="page-layout-table-sortable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -148,7 +149,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-loading-state-demo
+```hbs title=Table-loading-state-demo isFullscreen
 {{#> page page--id="table-loading-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -177,7 +178,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-empty-state-demo
+```hbs title=Table-empty-state-demo isFullscreen
 {{#> page page--id="table-empty-state-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -206,7 +207,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Table-simple-with-compact-pagination-demo
+```hbs title=Table-simple-with-compact-pagination-demo isFullscreen
 {{#> page page--id="page-layout-table-simple-compact-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

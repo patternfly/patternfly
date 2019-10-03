@@ -28,10 +28,6 @@ module.exports = {
             link: '/contribution'
           },
           {
-            text: 'Icons',
-            link: '/icons'
-          },
-          {
             text: 'Guidelines',
             link: '/guidelines'
           },
@@ -42,6 +38,10 @@ module.exports = {
           {
             text: 'Upgrade guide',
             link: '/upgrade-guide'
+          },
+          {
+            text: 'Icons',
+            link: '/icons'
           },
         ],
       }

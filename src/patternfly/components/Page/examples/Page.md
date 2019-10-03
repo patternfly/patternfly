@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-page
 ---
 
+## Examples
 ```hbs title=Page-component-nav-vertical-example
 {{#> page}}
   {{#> page-header}}
@@ -129,13 +130,11 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
       
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 This component provides the basic chrome for a page, including sidebar, header, and main areas.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
@@ -145,8 +144,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
 | `aria-controls="[id of nav]"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Identifies the element controlled by the toggle. **Required**
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-page` | `<div>` |   Declares the page component. |

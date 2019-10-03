@@ -4,7 +4,8 @@ section: components
 cssPrefix: pf-c-login
 ---
 
-```hbs title=Login-simple
+## Examples
+```hbs title=Login-simple isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
   {{#> login-container}}
@@ -114,7 +115,7 @@ cssPrefix: pf-c-login
 {{/login}}
 ```
 
-```hbs title=Login-invalid
+```hbs title=Login-invalid isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
   {{#> login-container}}
@@ -224,9 +225,8 @@ cssPrefix: pf-c-login
 {{/login}}
 ```
 
-# Documentation
-## Usage
-
+## Documentation
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-login` | `<div>` |  Initializes the login component. **Required**|

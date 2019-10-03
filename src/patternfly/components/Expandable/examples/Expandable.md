@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-expandable
 ---
 
+## Examples
 ```hbs title=Hidden-example
 {{#> expandable}}
   {{#> expandable-toggle}}
@@ -24,9 +25,8 @@ cssPrefix: pf-c-expandable
 {{/expandable}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-expandable__toggle` | Indicates that the expandable content is visible. **Required** |
@@ -34,8 +34,7 @@ cssPrefix: pf-c-expandable
 | `hidden` | `.pf-c-expandable__content` | Indicates that the expandable content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-c-expandable__toggle-icon` | Hides the icon from screen readers. **Required** |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-expandable` | `<div>` | Initiates the expandable component. **Required** |

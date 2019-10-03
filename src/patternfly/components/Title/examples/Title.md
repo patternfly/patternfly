@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-title
 ---
 
+## Examples
 ```hbs title=Title-types
 {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
     4xl title
@@ -25,8 +26,8 @@ cssPrefix: pf-c-title
 {{/title}}
 ```
 
-# Documentation
-## Overview
+## Documentation
+### Overiew
 The title component styles font-size, font-weight, and line-height to titles.
 
 The content component defines margin on headers. To regain the same spacing use, spacer utility classes:
@@ -40,8 +41,7 @@ The content component defines margin on headers. To regain the same spacing use,
 | lg | `.pf-u-mt-lg` | `.pf-u-mb-sm` |
 | md | `.pf-u-mt-lg` | `.pf-u-mb-sm` |
 
-## Usage
-
+### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-title` | `*` |  Initiates a title. Always use it with a modifier class. |

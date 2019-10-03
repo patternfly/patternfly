@@ -3,6 +3,7 @@ title: Accessibility
 section: utilities
 ---
 
+## Examples
 ```hbs title=Screen-reader-only
 Content available only to screen reader, open inspector to investigate
 {{#> accessibility accessibility--type="screen-reader"}}
@@ -23,13 +24,11 @@ The text underneath is hidden.
 {{/accessibility}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-screen-reader-on-lg**
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |

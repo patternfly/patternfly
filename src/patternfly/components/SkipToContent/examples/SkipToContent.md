@@ -4,27 +4,25 @@ section: components
 cssPrefix: pf-c-skip-to-content
 ---
 
+## Examples
 ```hbs title=Skip-to-content isFullscreen
 {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
   Skip to content
 {{/skip-to-content}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Skip to content allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
 
 When using `.pf-c-skip-to-content` you must provide an `href` attribute whose value corresponds to the `id` attribute of the primary content container for your application. In most cases this is the `<main>` element. For a demo of this see the [page demo](../../../demos/Page/examples), and note the use of `tabindex="-1"` which allows the element to receive focus programmatically.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `href="[id of main container]"` | `.pf-c-skip-to-content` | Sends focus to the primary content container. **Required** |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-skip-to-content` | `<a>` |  initiates the skip to content link. |

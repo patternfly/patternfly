@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-label
 ---
 
+## Examples
 ```hbs title=Label-component
 {{#> label}}
   Default label
@@ -13,13 +14,11 @@ cssPrefix: pf-c-label
 {{/label}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Labels can be used in a variety of components and can adjust in font size to match that of the component it lives in. For example, labels can be used in tables. Specifically, the compact table has a modifier that adjusts its font size, so when using a label in this table, it's important to also add its respective modifier.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-label` | `<span>` | Iniates a label. |

@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-wizard
 ---
 
+## Examples
 ```hbs title=Wizard isFullscreen
 {{#> wizard}}
   {{#> wizard-header}}
@@ -452,7 +453,7 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-```hbs title=Wizard-in-page isFullscreen
+```hbs title=Wizard-in-page
 {{#> wizard wizard--modifier="pf-m-in-page"}}
   {{#> wizard-toggle}}
     {{#> wizard-toggle-list}}
@@ -529,9 +530,8 @@ cssPrefix: pf-c-wizard
 {{/wizard}}
 ```
 
-# Documentation
-## Accessibility
-
+## Documentation
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is visible. **Required** |
@@ -543,8 +543,7 @@ cssPrefix: pf-c-wizard
 | `aria-current="page"` | `.pf-c-wizard__nav-link` | Indicates the current page link. Can only occur once on page. **Required for the current link** |
 | `tabindex="-1"` | `.pf-c-wizard__nav-link` | Removes a link from keyboard focus. **Required for disabled links with `.pf-m-disabled`** |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-wizard` | `<div>` | Initiates the wizard component. **Required** |

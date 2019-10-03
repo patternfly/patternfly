@@ -1,7 +1,7 @@
 ---
 title: Release notes
 section: root
-showTOC: false
+hideTOC: true
 ---
 
 # 2019.08 release notes (2019-10-01)

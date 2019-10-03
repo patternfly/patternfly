@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-card
 ---
 
+## Examples
 ```hbs title=Card
 {{#> card}}
   {{#> card-header}}
@@ -192,13 +193,11 @@ Example with only image in the card head
 {{/card}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
 
-## Usage
-
+### Usage
 | Class | Applied | Outcome |
 | ---- | ---- | ---- |
 | `.pf-c-card` | `<div>` | Creates a card containing content. **Required** |

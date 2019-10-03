@@ -3,6 +3,7 @@ title: Box Shadow
 section: utilities
 ---
 
+## Examples
 ```hbs title=Boxshadow-utility
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}
   Box shadow small
@@ -54,13 +55,11 @@ section: utilities
 {{/box-shadow}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 Box shadow utility
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-box-shadow-sm` | `*` |  Applies box-shadow small. |

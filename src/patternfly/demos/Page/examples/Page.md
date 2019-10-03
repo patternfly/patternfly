@@ -3,10 +3,6 @@ title: Page
 section: demos
 ---
 
-## Overview
-
-This demo implements all variations of the nav component in the page component.
-
 ```hbs title=Page-component-default-nav-header-example isFullscreen
 {{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
 ```
@@ -15,7 +11,7 @@ This demo implements all variations of the nav component in the page component.
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Page-component-horizontal-nav-example
+```hbs title=Page-component-horizontal-nav-example isFullscreen
 {{#> page page--id="page-layout-horizontal-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -75,7 +71,7 @@ This demo implements all variations of the nav component in the page component.
 {{/page}}
 ```
 
-```hbs title=Page-component-tertiary-nav-example
+```hbs title=Page-component-tertiary-nav-example isFullscreen
 {{#> page page--id="page-layout-tertiary-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -225,7 +221,7 @@ This demo implements all variations of the nav component in the page component.
 {{/page}}
 ```
 
-```hbs title=Page-component-grouped-nav-example
+```hbs title=Page-component-grouped-nav-example isFullscreen
 {{#> page page--id="page-layout-grouped-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -331,3 +327,6 @@ This demo implements all variations of the nav component in the page component.
 ```hbs title=Page-component-legacy-sidebar-and-nav-(light-themed)-and-legacy-nav-separators isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
 ```
+
+## Documentation
+This demo implements all variations of the nav component in the page component.

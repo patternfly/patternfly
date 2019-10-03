@@ -4,18 +4,17 @@ section: components
 cssPrefix: pf-c-backdrop
 ---
 
+## Examples
 ```hbs title=Backdrop-example isFullscreen=true
 {{#> backdrop}}
 {{/backdrop}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overview
 This component puts a backdrop over the entire viewport.
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-backdrop` | `<div>` |  Initiates backdrop. **Required** |

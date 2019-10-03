@@ -1,9 +1,9 @@
 ---
 title: Wizard
 section: demos
-cssPrefix: pf-d-wizard
 ---
 
+## Examples
 ```hbs title=Wizard isFullscreen
 {{#> backdrop}}
   {{#> bullseye}}
@@ -184,7 +184,7 @@ cssPrefix: pf-d-wizard
 {{/backdrop}}
 ```
 
-```hbs title=Wizard-in-page
+```hbs title=Wizard-in-page isFullscreen
 {{#> page page--id="wizard-in-page"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -322,7 +322,7 @@ cssPrefix: pf-d-wizard
 {{/page}}
 ```
 
-```hbs title=Wizard-in-page-nav-expanded-(mobile)
+```hbs title=Wizard-in-page-nav-expanded-(mobile) isFullscreen
 {{#> page page--id="wizard-in-page-expanded"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

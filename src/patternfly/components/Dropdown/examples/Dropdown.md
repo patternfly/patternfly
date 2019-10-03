@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-dropdown
 ---
 
+## Examples
 ```hbs title=Dropdown-(expanded)
 {{#> dropdown id="dropdown-example-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
@@ -98,6 +99,8 @@ cssPrefix: pf-c-dropdown
 {{/dropdown}}
 ```
 
+The dropdown panel is provided for flexibility in allowing various content within a dropdown.
+
 ```hbs title=Dropdown-primary-toggle
 {{#> dropdown id="dropdown-primary-example" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
@@ -112,13 +115,11 @@ cssPrefix: pf-c-dropdown
 {{/dropdown}}
 ```
 
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 The dropdown menu can contain either links or buttons, depending on the expected behavior when clicking the menu item. If you are using the menu item to navigate to another page, then menu item is a link. Otherwise, use a button for the menu item.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden. |
@@ -134,8 +135,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
 
-## Usage
-
+### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |

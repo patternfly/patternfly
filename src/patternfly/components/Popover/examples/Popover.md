@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-popover
 ---
 
+## Examples
 ```hbs title=Popover-top
 {{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
@@ -93,13 +94,11 @@ cssPrefix: pf-c-popover
 {{/popover}}
 ```
       
-# Documentation
-## Overview
-
+## Documentation
+### Overiew
 A popover is used to provide contextual information for another component on click.  The popover itself is made up of two main elements: arrow and content. The content element follows the pattern of the popover box component, with a close icon in the top right corner, as well as a header and body.  One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the popover component
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required**|
@@ -110,9 +109,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 | `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](../../../../accessibility-guide#trapping-focus). **Required** |
 
-
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-popover` | `<div>` |  Creates a popover. Always use it with a modifier class that positions the popover relative to the element that triggered it. **Required** |

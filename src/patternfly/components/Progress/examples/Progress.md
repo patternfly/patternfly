@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-progress
 ---
 
+## Examples
 ```hbs title=Progress-simple
 {{#> progress 
   progress__value="33" 
@@ -139,6 +140,8 @@ cssPrefix: pf-c-progress
 }}
 {{/progress}}
 ```
+### Non-percantage progress
+If the status that displays with the bar is not a percentage, then the ARIA tag `aria-valuetext` should be used to provide this status to screen reader users. This is the only case when setting the `aria-valuemax` to a value other than "100" is recommended, given how different screen readers handle these attributes.
 
 ```hbs title=Progress-step-instruction
 {{#> progress 
@@ -153,12 +156,10 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-# Documentation
-## Overview
-
-## Accessibility
-
-Note: If this component is describing the loading progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
+## Documentation
+### Overiew
+### Accessibility
+If this component is describing the loading progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -170,8 +171,7 @@ Note: If this component is describing the loading progress of a particular regio
 | `aria-valuetext="[loading state]"` | `.pf-c-progress__bar` |  Provide a text string that communicates current status. Only use if the important information about status is included in the text string. Do not use if percentage is the most important value to communicate. Some screen readers will ignore the percentage value determined from `aria-valuenow` when `aria-valuetext` is used. |
 | `aria-hidden="true"` | `.pf-c-progress__status` |  Hides the visible progress bar status from screen readers. This information is communicated by the aria attributes defined on the `.pf-c-progress__bar` element. |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-progress` | `<div>` |  Initiates a progress component. |
@@ -188,6 +188,3 @@ Note: If this component is describing the loading progress of a particular regio
 | `.pf-m-singleline` | `.pf-c-progress` | Modifies the progress component to exist on one row. If a measure is needed, use with `.pf-m-inside` or `.pf-m-outside`|
 | `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
 | `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
-
-
-If the status that displays with the bar is not a percentage, then the ARIA tag `aria-valuetext` should be used to provide this status to screen reader users. This is the only case when setting the `aria-valuemax` to a value other than "100" is recommended, given how different screen readers handle these attributes.

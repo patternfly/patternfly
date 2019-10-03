@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-table
 ---
 
+## Examples
 ```hbs title=Simple-table
 {{#> table table--id="simple-table" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
@@ -104,6 +105,21 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
+| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
+| `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
+| `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
+| `.pf-m-height-auto` | `<tr>` | Modifies a `<tr>` to have `height: auto`, which undoes the `height` declaration currently on `<tr>` elements. |
+| `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
 ```hbs title=Sortable-table
 {{#> table table--id="sortable-table" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
@@ -202,6 +218,19 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-sort=[ascending or descending]` | `.pf-c-table__sort` | Indicates if columns in a table are sorted in ascending or descending order. For each table, authors __SHOULD__ apply aria-sort to only one header at a time. **Required** |
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table__sort` | `<th>` | Initiates a sort table cell. **Required for sortable table columns** |
+| `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
+| `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span` | Initiates a sort indicator. **Required for sortable table columns** |
+| `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
+| `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
+| `.fa-long-arrow-alt-down` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
 ```hbs title=Table-with-checkboxes-and-actions
 {{#> table table--id="simple-table-with-checkboxes" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
@@ -341,6 +370,23 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
+
+When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
+### Thead accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-label="[descriptive text]"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
+### Tbody accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
+| `id` | row header `<th>` > `*` | Provides an accessible description for the checkbox. **Required if using `aria-labelledby` for `.pf-c-table__check input[type="checkbox"]`** |
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table__check` | `<th>`, `<td>` | Initiates a check table cell. |
+| `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 
 ```hbs title=Expandable-table
 {{#> table table--id="expandable-table" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
@@ -513,6 +559,26 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-c-table__toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
+| `aria-label="[descriptive text]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible name for toggle button. **Required**|
+| `aria-labelledby="[title_cell_id] [button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible description for toggle button. **Required** |
+| `id="[button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
+| `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table__toggle-icon` | `<i>` | Initiates a table toggle icon. |
+| `.pf-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
+| `.pf-c-table__expandable-row-content` | `.pf-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
+| `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |
+| `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
 
 ```hbs title=Table-with-compound-expansion
 {{#> table table--id="compound-expansion-table" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
@@ -728,6 +794,17 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
+| `aria-controls="[id of element the button controls]"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
+| `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 
 ```hbs title=Compact-table
 {{#> table table--id="compact-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
@@ -886,6 +963,10 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
 ```hbs title=Compact-table-with-no-borders
 {{#> table table--id="compact-no-border-rows-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
@@ -1044,6 +1125,10 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Can not be used with `.pf-m-expandable`.** |
 
 ```hbs title=Compact-expandable-table
 {{#> table table--id="compact-expandable-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
@@ -1236,6 +1321,10 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. **Note: Can not be used with `.pf-m-no-border-rows`.** |
 
 ```hbs title=Table-with-width-modifiers
 {{#> table table--id="width-table" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
@@ -1358,6 +1447,12 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-width-[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, or 90]` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` widths. **Recommended for sortable title cell** |
+| `.pf-m-width-max` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` maximum width. |
+| `.pf-m-fit-content` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` minimum width with no text wrapping. |
 
 ```hbs title=Table-with-hidden/visible-breakpoint-modifiers
 {{#> table table--modifier="pf-m-grid-lg" table--id="simple-table-hidden-visible" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
@@ -1456,6 +1551,11 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
 
 ```hbs title=Table-with-headers-that-wrap
 {{#> table table--id="headers-wrap-table" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is an example of the table that has headers that wrap"'}}
@@ -1557,232 +1657,36 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-wrap` | `<th>`, `<td>` | Modifies content to wrap. |
 
-# Documentation
-## Overview
+## Documentation
+### Overview
 
 Because the table component is not used for layout and presents tabular data only, it requires the use of `role="grid"`. Expandable table content (`.pf-c-table__expandable-content`) is placed within a singular `<td>` per expandable row, that can span multiple columns.
 
-## Role="grid"
+### Role="grid"
 
 Applying `role="grid"` to tables enhances accessible interaction while in table layout, however the responsive, css grid based layout can cause unexpected interactions. Therefore, for css grid layout, it is recommended that `role="grid"` be removed.
 
-## Sortable tables
+### Sortable tables
 
 Table columns may shift when expanding/collapsing. To address this, set `.pf-m-fit-content`, or assign a width `.pf-m-width-[width]` to the corresponding `<th>` defining the column or `<td>` within the column. Width values are `[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]` or `max`.
 
-## Table header cells
+### Table header cells
 By default, all table header cells are set to `white-space: nowrap`. If a `<th>`'s content needs to wrap, apply `.pf-m-wrap`.
 
-## Implementation support
+### Implementation support
 - One expandable toggle button, positioned in the first cell of a non-expandable row, preceding an expandable row.
 - One checkbox, positioned in the first or second cell of a non-expandable row.
 - One action button, positioned in the last cell of a non-expandable row.
 - Tabular data.
 - Compact presentation modifier (not compatible with expandable table).
 
-## Responsive layout modifiers
-
+### Responsive layout modifiers
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
 | `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
-
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
-| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
-| `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
-| `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
-
-**All simple table accessibility and usage requirements apply.**
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-sort=[ascending or descending]` | `.pf-c-table__sort` | Indicates if columns in a table are sorted in ascending or descending order. For each table, authors __SHOULD__ apply aria-sort to only one header at a time. **Required** |
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-table__sort` | `<th>` | Initiates a sort table cell. **Required for sortable table columns** |
-| `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
-| `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span` | Initiates a sort indicator. **Required for sortable table columns** |
-| `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
-| `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
-| `.fa-long-arrow-alt-down` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
-
-
-**All simple table accessibility and usage requirements apply**
-
-**All sortable table accessibility and usage requirements apply**
-Note: When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
-
-Note: When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
-
-
-### Thead accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="[descriptive text]"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
-
-### Tbody accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
-| `id` | row header `<th>` > `*` | Provides an accessible description for the checkbox. **Required if using `aria-labelledby` for `.pf-c-table__check input[type="checkbox"]`** |
-
-
-### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-table__check` | `<th>`, `<td>` | Initiates a check table cell. |
-| `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
-
-### Table expandable notes
-
-**All simple table accessibility and usage requirements apply.**
-
-**All sortable table accessibility and usage requirements apply.**
-
-**All checkbox/action button accessibility and usage requirements apply.**
-
-Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
-
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
-| `aria-expanded="true"` | `.pf-c-table__toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
-| `aria-label="[descriptive text]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible name for toggle button. **Required**|
-| `aria-labelledby="[title_cell_id] [button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible description for toggle button. **Required** |
-| `id="[button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
-| `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
-
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-table__toggle-icon` | `<i>` | Initiates a table toggle icon. |
-| `.pf-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
-| `.pf-c-table__expandable-row-content` | `.pf-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
-| `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |
-| `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
-
-### Table expandable notes
-
-**All simple table accessibility and usage requirements apply.**
-
-**All sortable table accessibility and usage requirements apply.**
-
-**All checkbox/action button accessibility and usage requirements apply.**
-
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
-
-### Table expandable notes
-
-**All compact table accessibility and usage requirements apply.**
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Can not be used with `.pf-m-expandable`.** |
-
-### Table expandable notes
-
-**All compact table accessibility and usage requirements apply.**
-
-**All expandable table accessibility and usage requirements apply.**
-
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. **Note: Can not be used with `.pf-m-no-border-rows`.** |
-
-### Table expandable notes
-
-**All simple table accessibility and usage requirements apply.**
-
-**All sortable table accessibility and usage requirements apply.**
-
-**All checkbox/action button accessibility and usage requirements apply.**
-
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-width-[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, or 90]` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` widths. **Recommended for sortable title cell** |
-| `.pf-m-width-max` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` maximum width. |
-| `.pf-m-fit-content` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` minimum width with no text wrapping. |
-
-### Table compound expansion notes
-
-**All simple table accessibility and usage requirements apply.**
-
-**All sortable table accessibility and usage requirements apply.**
-
-**All checkbox/action button accessibility and usage requirements apply.**
-
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
-| `aria-expanded="true"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
-| `aria-controls="[id of element the button controls]"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
-| `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
-
-### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
-
-### Table expandable notes
-
-**All simple table accessibility and usage requirements apply.**
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-wrap` | `<th>`, `<td>` | Modifies content to wrap. |
-
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
-| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
-| `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
-| `.pf-m-height-auto` | `<tr>` | Modifies a `<tr>` to have `height: auto`, which undoes the `height` declaration currently on `<tr>` elements. |
-| `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |

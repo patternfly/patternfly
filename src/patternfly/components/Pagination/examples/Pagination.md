@@ -4,6 +4,7 @@ section: components
 cssPrefix: pf-c-pagination
 ---
 
+## Examples
 ```hbs title=Pagination-top
 {{#> pagination}}
   {{#> pagination-total-items}}
@@ -130,11 +131,10 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-# Documentation
+## Documentation
 Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-select`.
 
-## Accessibility
-
+### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label`  | `.pf-c-pagination__nav` |  Provides an accessible name for pagination navigation element. **Required** |
@@ -148,8 +148,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `min` | `.pf-c-pagination__nav-page-select` > `.pf-c-form-control` | Provides minimum integer value. **Required** |
 | `max` | `.pf-c-pagination__nav-page-select` > `.pf-c-form-control` | Provides max integer value. **Required** |
 
-## Usage
-
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-pagination` | `<div>` |  Initiates pagination. |
