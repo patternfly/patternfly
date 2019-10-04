@@ -36,9 +36,6 @@
     margin-left: -1px;
   }
 
-  label.pf-c-input-group__text {
-    cursor: pointer;
-  }
   /* stylelint-enable */
 
   .pf-c-form-control {
@@ -87,17 +84,21 @@
   textarea {
     min-height: var(--pf-c-input-group__textarea--MinHeight);
   }
+}
 
-  .pf-c-input-group__text {
-    display: flex;
-    align-items: center;
-    padding-right: var(--pf-c-input-group__text--PaddingRight);
-    padding-left: var(--pf-c-input-group__text--PaddingLeft);
-    font-size: var(--pf-c-input-group__text--FontSize);
-    color: var(--pf-c-input-group__text--Color);
-    text-align: center;
-    background-color: var(--pf-c-input-group__text--BackgroundColor);
-    border: var(--pf-c-input-group__text--BorderWidth) solid;
-    border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
+.pf-c-input-group__text {
+  display: flex;
+  align-items: center;
+  padding-right: var(--pf-c-input-group__text--PaddingRight);
+  padding-left: var(--pf-c-input-group__text--PaddingLeft);
+  font-size: var(--pf-c-input-group__text--FontSize);
+  color: var(--pf-c-input-group__text--Color);
+  text-align: center;
+  background-color: var(--pf-c-input-group__text--BackgroundColor);
+  border: var(--pf-c-input-group__text--BorderWidth) solid;
+  border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
+
+  @at-root label#{&} {
+    cursor: pointer;
   }
 }
