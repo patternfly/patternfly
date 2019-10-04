@@ -25,6 +25,9 @@
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--c-chip--MarginBottom: var(--pf-global--spacer--xs);
 
+  // Close
+  --pf-c-chip-group--button--MarginLeft: var(--pf-global--spacer--xs);
+
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
@@ -45,6 +48,10 @@
 
     > .pf-c-chip.pf-m-overflow {
       margin: 0;
+    }
+
+    .pf-c-chip-group + .pf-c-button {
+      margin-left: var(--pf-c-chip-group--button--MarginLeft);
     }
   }
 
