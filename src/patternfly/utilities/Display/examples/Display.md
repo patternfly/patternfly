@@ -3,6 +3,8 @@ title: Display
 section: utilities
 ---
 
+import './Display.css'
+
 ## Examples
 ```hbs title=Inline-block
 {{#> display display--type="inline-block"}}

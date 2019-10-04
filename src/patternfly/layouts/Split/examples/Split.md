@@ -4,6 +4,8 @@ section: layouts
 cssPrefix: pf-l-split
 ---
 
+import './Split.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> split}}

@@ -1,8 +1,10 @@
 ---
 title: Options Menu
-section: experimental
+section: components
 cssPrefix: pf-c-options-menu
 ---
+
+import './OptionsMenu.css'
 
 ## Examples
 ```hbs title=Single-option
@@ -78,7 +80,7 @@ cssPrefix: pf-c-options-menu
 {{/options-menu}}
 ```
 
-```hbs title=Top
+```hbs title=Align-top
 {{#> options-menu options-menu--IsExpanded="true" options-menu--modifier="pf-m-top" id="options-menu-top-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
     <span class="pf-c-options-menu__toggle-text">

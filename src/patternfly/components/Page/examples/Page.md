@@ -4,8 +4,10 @@ section: components
 cssPrefix: pf-c-page
 ---
 
+import './Page.css'
+
 ## Examples
-```hbs title=Vertiacal-nav
+```hbs title=Vertical-nav
 {{#> page}}
   {{#> page-header}}
     {{#> page-header-brand}}

@@ -3,6 +3,8 @@ title: Flex
 section: utilities
 ---
 
+import './Flex.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> display display--type="flex"}}
@@ -18,44 +20,27 @@ section: utilities
   Flex row
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-direction-row"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex row-reverse
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-direction-row-reverse"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex column
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-direction-column"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
   </div>
 {{/display}}
 <br>
@@ -63,15 +48,9 @@ section: utilities
   Flex column-reverse
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-direction-column-reverse"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 ```
 
@@ -80,75 +59,45 @@ section: utilities
   Justify content flex-start
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-justify-content-flex-start"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content flex-end
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-justify-content-flex-end"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content center
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-justify-content-center"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content space-around
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-justify-content-space-around"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content space-between
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-justify-content-space-between"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 ```
 
@@ -156,96 +105,66 @@ section: utilities
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items flex-start
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start Documentation-container-tall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-start"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items flex-end
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-end Documentation-container-tall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-items-flex-end"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items center
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-items-center Documentation-container-tall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-items-center"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items baseline
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-items-baseline Documentation-container-tall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-items-baseline"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
+  {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items stretch
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-items-stretch Documentation-container-tall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-items-stretch"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 ```
 
 ```hbs title=Aligned-self
-{{#> display display--type="flex" display--modifier="Documentation-container-tall"}}
-  <div class="pf-u-align-self-flex-start">
+{{#> display display--type="flex"}}
+  {{#> flex-item flex-item--modifier="pf-u-align-self-flex-start"}}
     flex-start
-  </div>
-  <div class="pf-u-align-self-center">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-align-self-center"}}
     center
-  </div>
-  <div class="pf-u-align-self-flex-end">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-align-self-flex-end"}}
     flex end
-  </div>
-  <div class="pf-u-align-self-baseline">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-align-self-baseline"}}
     baseline
-  </div>
-  <div class="pf-u-align-self-stretch">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-align-self-stretch"}}
     stretch
-  </div>
+  {{/flex-item}}
 {{/display}}
 ```
 
@@ -253,178 +172,117 @@ section: utilities
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content flex-start
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-content-flex-start Documentation-container-xtall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
-  <div>
-    Flex item 4
-  </div>
-  <div>
-    Flex item 5
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-content-flex-start"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content flex-end
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-content-flex-end Documentation-container-xtall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
-  <div>
-    Flex item 4
-  </div>
-  <div>
-    Flex item 5
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-content-flex-end"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content center
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-content-center Documentation-container-xtall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
-  <div>
-    Flex item 4
-  </div>
-  <div>
-    Flex item 5
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-content-center"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content space-around
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-content-space-around Documentation-container-xtall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
-  <div>
-    Flex item 4
-  </div>
-  <div>
-    Flex item 5
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-content-space-around"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content space-between
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-content-space-between Documentation-container-xtall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
-  <div>
-    Flex item 4
-  </div>
-  <div>
-    Flex item 5
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-content-space-between"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content stretch
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-u-align-content-stretch Documentation-container-xtall"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
-  <div>
-    Flex item 4
-  </div>
-  <div>
-    Flex item 5
-  </div>
+{{#> display display--type="flex" display--modifier="pf-u-align-content-stretch"}}
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
 {{/display}}
 ```
 
 ```hbs title=Shrink
 {{#> display display--type="flex"}}
-  <div class="pf-u-flex-shrink-0">
+  {{#> flex-item flex-item--modifier="pf-u-flex-shrink-0"}}
     Flex shrink 0
-  </div> 
-  <div class="pf-u-flex-shrink-1">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-flex-shrink-1"}}
     Flex shrink 1
-  </div> 
+  {{/flex-item}}
 {{/display}}
 ```
 
 ```hbs title=Grow
 {{#> display display--type="flex"}}
-  <div class="pf-u-flex-grow-0">
+  {{#> flex-item flex-item--modifier="pf-u-flex-grow-0"}}
     Flex grow 0
-  </div> 
-  <br>
-  <div class="pf-u-flex-grow-1">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-flex-grow-1"}}
     Flex grow 1
-  </div> 
+  {{/flex-item}}
 {{/display}}
 ```
 
-```hbs title=Basis-and-flex-none
+```hbs title=Basis-and-none
 {{#> display display--type="flex"}}
-  <div class="pf-u-flex-basis-0">
+  {{#> flex-item flex-item--modifier="pf-u-flex-basis-0"}}
     Flex basis 0
-  </div> 
-  <div class="pf-u-flex-basis-auto">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-flex-basis-auto"}}
     Flex basis auto
-  </div> 
-  <div class="pf-u-flex-none">
-    Flex none
-  </div> 
-  <div class="pf-u-flex-1">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-flex-basis-none"}}
+    Flex basis none
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-flex-1"}}
     Flex 1
-  </div> 
+  {{/flex-item}}
 {{/display}}
 ```
 
 ```hbs title=Fill
 {{#> display display--type="flex"}}
-  <div class="pf-u-flex-none">
+  {{#> flex-item flex-item--modifier="pf-u-flex-none"}}
     Flex none
-  </div> 
-  <div class="pf-u-flex-fill">
+  {{/flex-item}}
+  {{#> flex-item flex-item--modifier="pf-u-flex-fill"}}
     Flex fill
-  </div> 
+  {{/flex-item}}
 {{/display}}
 ```
 
@@ -433,47 +291,28 @@ section: utilities
   Flex wrap
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-wrap"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex no wrap
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-nowrap"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex wrap reverse
 {{/title}}
 {{#> display display--type="flex" display--modifier="pf-u-flex-wrap-reverse"}}
-  <div>
-    Flex item 1
-  </div>
-  <div>
-    Flex item 2
-  </div>
-  <div>
-    Flex item 3
-  </div>
+  {{#> flex-item}}Flex item 1{{/flex-item}}
+  {{#> flex-item}}Flex item 2{{/flex-item}}
+  {{#> flex-item}}Flex item 3{{/flex-item}}
 {{/display}}
-<br>
 ```
 
 ## Documentation

@@ -3,6 +3,8 @@ title: Alignment
 section: utilities
 ---
 
+import './Alignment.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> alignment alignment--type="left"}}

@@ -4,6 +4,8 @@ section: layouts
 cssPrefix: pf-l-bullseye
 ---
 
+import './Bullseye.css'
+
 ## Examples
 ```hbs title=Basic 
 {{#> bullseye}}

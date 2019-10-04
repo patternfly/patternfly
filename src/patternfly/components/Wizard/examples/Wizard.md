@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-wizard
 ---
 
+import './Wizard.css'
+
 ## Examples
 ```hbs title=Basic isFullscreen
 {{#> wizard}}

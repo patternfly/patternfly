@@ -4,11 +4,14 @@ section: components
 cssPrefix: pf-c-label
 ---
 
+import './Label.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> label}}
   Default label
 {{/label}}
+
 {{#> label label--modifier="pf-m-compact"}}
   Compact label
 {{/label}}

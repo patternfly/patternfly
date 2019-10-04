@@ -4,6 +4,8 @@ section: layouts
 cssPrefix: pf-l-grid
 ---
 
+import './Grid.css'
+
 ## Examples
 ```hbs title=Smart-(responsive)
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}

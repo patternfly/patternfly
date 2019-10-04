@@ -3,6 +3,8 @@ title: Sizing
 section: utilities
 ---
 
+import './Sizing.css'
+
 ## Examples
 ```hbs title=Width-base-and-percentage-units
 {{#> sizing sizing--modifier="pf-u-w-0"}}

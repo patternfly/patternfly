@@ -3,6 +3,8 @@ title: Box Shadow
 section: utilities
 ---
 
+import './BoxShadow.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}

@@ -230,7 +230,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-icon-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-icon-button-group--space-items)`. |
 | `.pf-m-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-button-group--space-items)`. |
 
-```hbs title=Responsive-toggle-group
+```hbs title=Toggle-group-(responsive)
 Toolbar not expanded
 {{#> data-toolbar}}
   {{#> data-toolbar-content}}
@@ -618,7 +618,7 @@ Toolbar expanded
 {{/data-toolbar}}
 ```
 
-```hbs title=Expanded-elements
+```hbs title=Expanded-elements-(responsive)
 Toolbar not expanded
 <br>
 {{#> data-toolbar}}

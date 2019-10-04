@@ -1,13 +1,31 @@
-.ws-example-dropdown-expanded,
-.ws-example-kebab,
-.ws-example-kebab-align-right,
-.ws-example-align-right,
-.ws-example-top {
+#ws-example-c-dropdown-expanded,
+#ws-example-c-dropdown-kebab,
+#ws-example-c-dropdown-kebab-align-right,
+#ws-example-c-dropdown-align-right,
+#ws-example-c-dropdown-align-top,
+#ws-example-c-dropdown-primary-toggle {
   min-height: 310px;
 }
 
-.ws-example-kebab-align-right,
-.ws-example-align-right {
+#ws-example-c-dropdown-kebab-align-right,
+#ws-example-c-dropdown-align-right {
   display: flex;
   justify-content: flex-end;
+}
+
+#ws-example-c-dropdown-align-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-example-c-dropdown-with-groups {
+  min-height: 440px;
+}
+
+#ws-example-c-dropdown-split-button {
+  min-height: 210px;
+}
+
+#ws-example-c-dropdown-panel {
+  min-height: 130px;
 }

@@ -109,7 +109,7 @@ The dropdown panel is provided for flexibility in allowing various content withi
     Collapsed dropdown
   {{/dropdown-toggle-text}}
 {{/dropdown}}
-
+&nbsp;
 {{#> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Expanded dropdown

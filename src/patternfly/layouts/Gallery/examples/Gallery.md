@@ -4,6 +4,8 @@ section: layouts
 cssPrefix: pf-l-gallery
 ---
 
+import './Gallery.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> gallery}}

@@ -37,7 +37,7 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Align-right
+```hbs title=Aligned-right
 {{#> app-launcher app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
@@ -47,7 +47,7 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Align-top
+```hbs title=Aligned-top
 {{#> app-launcher app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>

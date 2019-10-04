@@ -4,6 +4,8 @@ section: layouts
 cssPrefix: pf-l-stack
 ---
 
+import './Stack.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> stack}}

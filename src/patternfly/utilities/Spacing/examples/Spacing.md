@@ -3,6 +3,8 @@ title: Spacing
 section: utilities
 ---
 
+import './Spacing.css'
+
 ## Examples
 ```hbs title=Margin
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
@@ -149,7 +151,7 @@ section: utilities
 ### Overiew
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-m-sm-on-lg**
 
-## Margin properties:
+### Margin properties
 | Abbreviation | Property |
 | -- | -- |
 | `m` |  margin |
@@ -160,7 +162,7 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 | `mx` | margin-left & margin-right |
 | `my` | margin-top & margin-bottom |
 
-## Padding properties:
+### Padding properties
 | Abbreviation | Property |
 | -- | -- |
 | `p` |  padding |
@@ -171,7 +173,7 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 | `px` | padding-left & padding-right |
 | `py` | padding-top & padding-bottom |
 
-## Size values:
+### Size values
 | Abbreviation | Property |
 | -- | -- |
 | `auto` |  auto |

@@ -4,43 +4,47 @@ section: components
 cssPrefix: pf-c-button
 ---
 
+import './Button.css'
+
 ## Examples
 ```hbs title=Variations
 {{#> button button--modifier="pf-m-primary"}}
   Primary
 {{/button}}
+
 {{#> button button--modifier="pf-m-secondary"}}
   Secondary
 {{/button}}
+
 {{#> button button--modifier="pf-m-tertiary"}}
   Tertiary
 {{/button}}
+
 {{#> button button--modifier="pf-m-danger"}}
   Danger
 {{/button}}
-
 <br>
 <br>
-
 {{#> button button--modifier="pf-m-link"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link
 {{/button}}
+
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
+
 {{#> button button--modifier="pf-m-inline pf-m-link"}}
   Inline link
 {{/button}}
-
 <br>
 <br>
-
 {{#> button button--modifier="pf-m-control"}}
   Control
 {{/button}}
+
 {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy input"'}}
   <i class="fas fa-copy" aria-hidden="true"></i>
 {{/button}}
@@ -50,12 +54,15 @@ cssPrefix: pf-c-button
 {{#> button button--modifier="pf-m-primary"}}
   Primary
 {{/button}}
+
 {{#> button button--modifier="pf-m-primary pf-m-focus"}}
   Primary focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-primary pf-m-active"}}
   Primary active
 {{/button}}
+
 {{#> button button--modifier="pf-m-primary" button--attribute="disabled"}}
   Primary disabled
 {{/button}}
@@ -63,12 +70,15 @@ cssPrefix: pf-c-button
 {{#> button button--modifier="pf-m-secondary"}}
   Secondary
 {{/button}}
+
 {{#> button button--modifier="pf-m-secondary pf-m-focus"}}
   Secondary focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-secondary pf-m-active"}}
   Secondary active
 {{/button}}
+
 {{#> button button--modifier="pf-m-secondary" button--attribute="disabled"}}
   Secondary disabled
 {{/button}}
@@ -76,12 +86,15 @@ cssPrefix: pf-c-button
 {{#> button button--modifier="pf-m-tertiary"}}
   Tertiary
 {{/button}}
+
 {{#> button button--modifier="pf-m-tertiary pf-m-focus"}}
   Tertiary focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-tertiary pf-m-active"}}
   Tertiary active
 {{/button}}
+
 {{#> button button--modifier="pf-m-tertiary" button--attribute="disabled"}}
   Tertiary disabled
 {{/button}}
@@ -89,12 +102,15 @@ cssPrefix: pf-c-button
 {{#> button button--modifier="pf-m-danger"}}
   Danger
 {{/button}}
+
 {{#> button button--modifier="pf-m-danger pf-m-focus"}}
   Danger focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-danger pf-m-active"}}
   Danger active
 {{/button}}
+
 {{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
   Danger disabled
 {{/button}}
@@ -105,63 +121,79 @@ cssPrefix: pf-c-button
   {{/button-icon}}
   Link
 {{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-focus"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-active"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link active
 {{/button}}
+
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link disabled
 {{/button}}
-<br><br>
+<br>
+<br>
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
+
 {{#> button button--modifier="pf-m-plain pf-m-focus" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
+
 {{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
+
 {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
-<br><br>
+<br>
+<br>
 {{#> button button--modifier="pf-m-link pf-m-inline pf-m-inline"}}
   Inline link
 {{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-focus pf-m-inline"}}
   Inline link focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-active pf-m-inline"}}
   Inline link active
 {{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
   Inline link disabled
 {{/button}}
-<br><br>
+<br>
+<br>
 {{#> button button--modifier="pf-m-control"}}
   Control
 {{/button}}
+
 {{#> button button--modifier="pf-m-control pf-m-focus"}}
   Control focus
 {{/button}}
+
 {{#> button button--modifier="pf-m-control pf-m-active"}}
   Control active
 {{/button}}
+
 {{#> button button--modifier="pf-m-control pf-m-expanded"}}
   Control expanded
 {{/button}}
+
 {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
   Control disabled
 {{/button}}
@@ -171,9 +203,11 @@ cssPrefix: pf-c-button
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-primary"}}
   Primary link to W3.org
 {{/button-link}}
+
 {{#> button-link button-link--attribute='href="#overview" aria-label="Read more about button documentation"' button-link--modifier="pf-m-secondary"}}
   Secondary link to anchor
 {{/button-link}}
+
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" aria-disabled="true" tabindex="-1"' button-link--modifier="pf-m-tertiary pf-m-disabled"}}
   Tertiary link to W3.org
 {{/button-link}}

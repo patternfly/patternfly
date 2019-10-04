@@ -1,11 +1,21 @@
-.ws-example-data-toolbar-toggle-group-responsive {
+#ws-example-e-datatoolbar-toggle-group-responsive {
   min-height: 400px;
 }
 
-.ws-example-data-toolbar-selected-filters {
+#ws-example-e-datatoolbar-selected-filters {
   min-height: 564px;
 }
 
-.ws-example-data-toolbar-expanded-elements {
+#ws-example-e-datatoolbar-expanded-elements-responsive {
   min-height: 580px;
+}
+
+#ws-example-e-datatoolbar-simple .pf-c-data-toolbar__content,
+#ws-example-e-datatoolbar-simple .pf-c-data-toolbar__item:not(.pf-m-separator),
+#ws-example-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar__content,
+#ws-example-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar__item:not(.pf-m-separator),
+#ws-example-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__content,
+#ws-example-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__item:not(.pf-m-separator) {
+  padding: .5rem;
+  border: 2px dashed #393f44;
 }

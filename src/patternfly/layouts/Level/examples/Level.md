@@ -4,6 +4,8 @@ section: layouts
 cssPrefix: pf-l-level
 ---
 
+import './Level.css'
+
 ## Examples
 ```hbs title=Two-items
 {{#> level}}

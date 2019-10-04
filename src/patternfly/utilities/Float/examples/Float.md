@@ -3,6 +3,8 @@ title: Float
 section: utilities
 ---
 
+import './Float.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> float float--type="left"}}

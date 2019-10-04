@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-nav
 ---
 
+import './Nav.css'
+
 ## Examples
 ```hbs title=Basic
 {{#> nav nav--attribute='id="nav-primary-simple" aria-label="Global"' nav--modifier="pf-m-dark"}}
