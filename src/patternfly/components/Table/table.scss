@@ -146,7 +146,7 @@
   background-color: var(--pf-c-table--BackgroundColor);
 
   td {
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   // Standard table row (non-expandable)
