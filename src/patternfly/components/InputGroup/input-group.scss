@@ -86,12 +86,6 @@
   }
 }
 
-/* stylelint-disable */
-label.pf-c-input-group__text {
-  cursor: pointer;
-}
-/* stylelint-enable */
-
 .pf-c-input-group__text {
   display: flex;
   align-items: center;
@@ -103,4 +97,8 @@ label.pf-c-input-group__text {
   background-color: var(--pf-c-input-group__text--BackgroundColor);
   border: var(--pf-c-input-group__text--BorderWidth) solid;
   border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
+
+  @at-root label#{&} {
+    cursor: pointer;
+  }
 }
