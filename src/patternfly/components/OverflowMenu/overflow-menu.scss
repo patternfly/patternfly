@@ -7,10 +7,9 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
   --pf-c-overflow-menu--spacer--base: var(--pf-global--spacer--md);
 
   // Spacer values
+  --pf-c-overflow-menu__content--spacer: var(--pf-global--spacer--sm);
   --pf-c-overflow-menu__group--spacer: var(--pf-c-overflow-menu--spacer--base);
   --pf-c-overflow-menu__item--spacer: var(--pf-c-overflow-menu--spacer--base);
-  --pf-c-overflow-menu__control--spacer: 0;
-  --pf-c-overflow-menu__control--show--spacer: var(--pf-global--spacer--sm);
 
   // Button group
   --pf-c-overflow-menu__group--m-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
@@ -21,6 +20,15 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
   --pf-c-overflow-menu__group--m-icon-button-group--space-items: 0;
 
   display: inline-flex;
+  align-items: center;
+}
+
+// Content
+.pf-c-overflow-menu__content {
+  // reset spacer
+  --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__content--spacer);
+
+  display: flex;
   align-items: center;
 }
 
@@ -56,6 +64,12 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
   --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__item--spacer);
 }
 
+// Control
+.pf-c-overflow-menu__control {
+  --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--spacer);
+}
+
+.pf-c-overflow-menu__content,
 .pf-c-overflow-menu__group,
 .pf-c-overflow-menu__item {
   margin-right: var(--pf-c-overflow-menu--spacer);
@@ -64,37 +78,3 @@ $pf-c-overflow-menu--breakpoint-map: build-breakpoint-map("base", "md", "lg", "x
     --pf-c-overflow-menu--spacer: 0;
   }
 }
-
-// Content
-.pf-c-overflow-menu__content {
-  display: flex;
-  align-items: center;
-}
-
-// Control
-.pf-c-overflow-menu__control {
-  --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--spacer);
-}
-
-/* stylelint-disable max-nesting-depth, no-duplicate-selectors */
-.pf-c-overflow-menu {
-  @each $breakpoint, $breakpoint-value in $pf-c-overflow-menu--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint, $pf-c-overflow-menu--breakpoint-map) {
-      &.pf-m-show#{$breakpoint-name} {
-        .pf-c-overflow-menu__content + .pf-c-overflow-menu__control {
-          --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu__control--show--spacer);
-
-          margin-right: var(--pf-c-overflow-menu--spacer);
-          margin-left: var(--pf-c-overflow-menu--spacer);
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-  }
-}
-/* stylelint-enable */
