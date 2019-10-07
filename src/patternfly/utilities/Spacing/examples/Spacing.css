@@ -1,0 +1,5 @@
+.ws-example-u-spacing .ws-example-flex-item,
+.ws-example-u-spacing .pf-u-display-flex {
+  padding: .5rem;
+  border: 2px dashed #393f44;
+}

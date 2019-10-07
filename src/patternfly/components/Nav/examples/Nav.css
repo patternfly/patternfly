@@ -1,0 +1,10 @@
+#ws-example-c-nav-basic,
+#ws-example-c-nav-grouped,
+#ws-example-c-nav-default,
+#ws-example-c-nav-expanded,
+#ws-example-c-nav-expanded-with-subnav-titles,
+#ws-example-c-nav-mixed,
+#ws-example-c-nav-horizontal-in-masthead,
+#ws-example-c-nav-horizontal-overflow-in-masthead {
+  background-color: var(--pf-global--BackgroundColor--dark-300);
+}

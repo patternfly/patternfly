@@ -1,0 +1,5 @@
+.ws-example-l-gallery .pf-l-gallery,
+.ws-example-l-gallery .pf-l-gallery__item {
+  padding: .5rem !important;
+  border: 2px dashed #393f44;
+}

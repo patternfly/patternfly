@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '@siteComponents/Layout';
+import { PageSection } from '@patternfly/react-core';
+import SideNavLayout from 'gatsby-theme-patternfly-org/layouts/sideNavLayout';
 import quickRefPdf from './reference-docs/PF-quick-ref.pdf';
 
-export default () => (
-  <Layout>
-    <div>
-      <h1 className="layout__content_heading">Patternfly workspace</h1>
+export default ({ location }) => (
+  <SideNavLayout location={location}>
+    <PageSection className="ws-section-main">
       <p>
         Just getting started? Take a look at the <a href="/contribution">Contribution guide</a> and{' '}
         <a href="/guidelines">Coding guidelines.</a>
@@ -16,6 +16,6 @@ export default () => (
       <p>
         Download a <a href={quickRefPdf}>quick reference sheet.</a>
       </p>
-    </div>
-  </Layout>
+    </PageSection>
+  </SideNavLayout>
 );
