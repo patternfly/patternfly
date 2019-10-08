@@ -1,4 +1,4 @@
-const { src, dest, series } = require('gulp');
+const { src, dest, series, watch } = require('gulp');
 const rename = require('gulp-rename');
 const replace = require('gulp-string-replace');
 const sass = require('gulp-sass');
@@ -152,8 +152,22 @@ function ie(cb) {
   cb();
 }
 
+function start() {
+  return watch(['./src/patternfly/**/*.scss', '!./src/patternfly/**/examples/*.scss'], { ignoreInitial: false }, cb => {
+    pfIcons(cb);
+    modules(cb);
+    tmp(cb);
+    copyFA(cb);
+    copySource(cb);
+    library(cb);
+    // body omitted
+    cb();
+  });
+}
+
 module.exports = {
   build: series(preClean, pfIcons, modules, tmp, copyFA, copySource, library, minifyCSS, lintCSS, postClean),
+  start,
   preClean,
   postClean,
   pfIconFont,

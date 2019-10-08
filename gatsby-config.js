@@ -17,7 +17,7 @@ module.exports = {
           { section: 'demos' },
           { section: 'experimental' },
           { text: 'Release notes', link: '/documentation/core/release-notes' },
-          { text: 'Global CSS Variables', link: '/documentation/global-css-variables' },
+          { text: 'Global CSS Variables', link: '/documentation/global-css-variables' }
         ],
         topNavItems: [
           {
@@ -43,8 +43,8 @@ module.exports = {
           {
             text: 'Icons',
             link: '/icons'
-          },
-        ],
+          }
+        ]
       }
     },
     // Source component documentation
@@ -69,6 +69,6 @@ module.exports = {
       options: {
         path: `${path.resolve(__dirname)}/src/site/pages`
       }
-    },
+    }
   ]
 };

@@ -27,6 +27,7 @@ getStylesheetPaths(pfStylesheetsGlob, [], [])
   .then(transformedCss => {
     transformedCss.split('\n').forEach((line, index) => {
       if (line.indexOf('undefined') >= 0) {
+        // eslint-disable-next-line
         console.error(`\x1b[31m%s\x1b[0m`, `Problem in ${outPath}:${index + 1}\n`);
         throw new Error(`Stylesheet ${outPath} contains undefined at line ${index + 1}`);
       }
