@@ -5,10 +5,13 @@ const plop = nodePlop(path.resolve(__dirname, './generatorConfig.js'));
 const pascalCase = plop.getHelper('pascalCase');
 const pfIcons = require('./definitions/pf-icons.json');
 
-plop
-  .getGenerator('svgs')
-  .runActions({ icons: [...Object.keys(pfIcons).map(getPfIcon)] })
-  .catch(console.log); // eslint-disable-line
+module.exports = new Promise((resolve, reject) => {
+  plop
+    .getGenerator('svgs')
+    .runActions({ icons: [...Object.keys(pfIcons).map(getPfIcon)] })
+  .catch(reject) // eslint-disable-line
+    .then(resolve);
+});
 
 function getPfIcon(iconName) {
   const currentIcon = pfIcons[iconName];

@@ -1,3 +1,5 @@
+@import "../../sass-utilities/all";
+
 // Always keep list of spacers and breakpoints up-to-date
 $pf-l-flex--breakpoint-map: build-breakpoint-map();
 $pf-l-flex--spacer-map: build-spacer-map();
