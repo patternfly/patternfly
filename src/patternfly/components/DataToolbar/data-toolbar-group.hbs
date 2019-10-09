@@ -1,6 +1,9 @@
-<div class="pf-c-data-toolbar__group{{#if data-toolbar-group--modifier}} {{data-toolbar-group--modifier}}{{/if}}"
+<div class="pf-c-data-toolbar__group{{#if data-toolbar-group--modifier}} {{data-toolbar-group--modifier}}{{/if}}{{#if data-toolbar-group--IsHidden}} pf-m-hidden{{/if}}"
   {{#if data-toolbar-group--attribute}}
     {{{data-toolbar-group--attribute}}}
+  {{/if}}
+  {{#if data-toolbar-group--IsHidden}}
+    hidden
   {{/if}}>
   {{> @partial-block}}
 </div>

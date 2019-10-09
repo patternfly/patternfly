@@ -1,13 +1,18 @@
-<div class="pf-c-data-toolbar__toggle{{#if data-toolbar-toggle--modifier}} {{data-toolbar-toggle--modifier}}{{/if}}"
+<div class="pf-c-data-toolbar__toggle{{#if data-toolbar-toggle--modifier}} {{data-toolbar-toggle--modifier}}{{/if}}{{#if data-toolbar-toggle--IsExpanded}} pf-m-expanded{{/if}}{{#if data-toolbar-toggle--IsHidden}} pf-m-hidden{{/if}}"
   {{#if data-toolbar-toggle--attribute}}
     {{{data-toolbar-toggle--attribute}}}
+  {{/if}}
+  {{#if data-toolbar-toggle--IsHidden}}
+    hidden
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Reveal filters" aria-expanded="' data-toolbar-group--IsExpanded '" aria-controls="' data-toolbar--id '-expandable-content"')}}
-    <i class="fas fa-filter" aria-hidden="true"></i>
-    {{#if data-toolbar-toggle--SelectedFilters}}
-      {{#> badge badge--modifier="pf-m-read"}}
-        {{{data-toolbar-toggle--SelectedFilters}}}
-      {{/badge}}
-    {{/if}}
-  {{/button}}
+
+  {{#if data-toolbar-toggle--IsExpanded}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Show filters" aria-expanded="true" aria-controls="' data-toolbar--id '-expandable-content"')}}
+      <i class="fas fa-filter" aria-hidden="true"></i>
+    {{/button}}
+  {{else}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Show filters" aria-controls="' data-toolbar--id '-expandable-content"')}}
+      <i class="fas fa-filter" aria-hidden="true"></i>
+    {{/button}}
+  {{/if}}
 </div>
