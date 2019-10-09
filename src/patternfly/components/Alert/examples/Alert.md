@@ -109,54 +109,54 @@ cssPrefix: pf-c-alert
 ```
 
 ```hbs title=Inline-types
-{{#> alert alert--attribute='aria-label="Default alert"'}}
+{{#> alert alert--modifier="pf-m-inline" alert--attribute='aria-label="Inline default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
   {{#> alert-title}}
-    {{#> screen-reader}}Default alert:{{/screen-reader}}
-    Default alert title
+    {{#> screen-reader}}Default inline alert:{{/screen-reader}}
+    Default inline alert title
   {{/alert-title}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
+{{#> alert alert--modifier="pf-m-info pf-m-inline" alert--attribute='aria-label="Inline information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Info alert:{{/screen-reader}}
-    Info alert title
+    Info inline alert title
   {{/alert-title}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Inline success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
-    Success alert title
+    Success inline alert title
   {{/alert-title}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
+{{#> alert alert--modifier="pf-m-warning pf-m-inline" alert--attribute='aria-label="Inline warning alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-triangle"}}
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Warning alert:{{/screen-reader}}
-    Warning alert title
+    Warning inline alert title
   {{/alert-title}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
+{{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Danger alert:{{/screen-reader}}
-    Danger alert title
+    Danger inline alert title
   {{/alert-title}}
 {{/alert}}
 ```
 
 ```hbs title=Inline-variations
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
@@ -173,7 +173,7 @@ cssPrefix: pf-c-alert
   {{/alert-action}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
@@ -187,7 +187,7 @@ cssPrefix: pf-c-alert
   {{/alert-action}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
@@ -201,7 +201,7 @@ cssPrefix: pf-c-alert
   {{/alert-action}}
 {{/alert}}
 <br />
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
   {{#> alert-title}}
