@@ -303,7 +303,7 @@
       &.pf-m-current {
         --pf-c-nav__simple-list-link--Color: var(--pf-c-nav--m-dark__item--m-current__simple-list-link--Color);
         --pf-c-nav__list-link--Color: var(--pf-c-nav--m-dark__item--m-current__list-link--Color);
-        --pf-c-nav__separator--BackgroundColor: var(--pf-c-nav--m-dark__item--m-current__separator--BackgroundColor);
+        --pf-c-nav__separator--BackgroundColor: var(--pf-c-nav--m-dark__item--m-current__separator--BackgroundColor); // remove at breaking change
 
         /* stylelint-disable-next-line */
         .pf-c-divider {
