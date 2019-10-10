@@ -6,16 +6,16 @@ cssPrefix: pf-c-form-control
 
 ## Examples
 ```hbs title=Input
-{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="disabled" id="textInput1" aria-label="disabled input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="textInput2" aria-label="Standard input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="standard" id="textInput2" aria-label="standard input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="textInput3" aria-label="Readonly input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="readonly" id="textInput3" aria-label="readonly input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="textInput4" aria-invalid="true" aria-label="Error state input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="error" id="textInput4" aria-invalid="true" aria-label="Error state input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="textInput1" aria-label="Disabled input example"'}}
 {{/form-control}}
 ```
 
@@ -55,17 +55,23 @@ cssPrefix: pf-c-form-control
 ```
 
 ```hbs title=Textarea
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea1" aria-label="textarea example"'}}
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea1" aria-label="Standard textarea example"'}}
+Standard
+{{/form-control}}
+<br /><br />
+{{#> form-control controlType="textarea" form-control--attribute='readonly name="textarea" id="textarea2" aria-label="Readonly textarea example"'}}
+Readonly
 {{/form-control}}
 <br /><br />
 {{#> form-control controlType="textarea" form-control--attribute='required name="textarea" id="textarea2" aria-label="Error state textarea example" aria-invalid="true"'}}
+Error
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea3" aria-label="textarea resize vertical example"' form-control--modifier="pf-m-resize-vertical"}}
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea3" aria-label="Resize vertical textarea example"' form-control--modifier="pf-m-resize-vertical"}}
 Resizes vertically
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea4" aria-label="textarea resize horizontal example"' form-control--modifier="pf-m-resize-horizontal"}}
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea4" aria-label="Resize horizontal textarea example"' form-control--modifier="pf-m-resize-horizontal"}}
 Resizes horizontally
 {{/form-control}}
 ```
