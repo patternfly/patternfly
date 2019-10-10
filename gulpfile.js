@@ -1,15 +1,17 @@
+const path = require('path');
 const { src, dest, series, watch } = require('gulp');
 const rename = require('gulp-rename');
-const replace = require('gulp-string-replace');
+// const replace = require('gulp-string-replace');
+// const gulpStylelint = require('gulp-stylelint');
 const sass = require('node-sass');
 const through2 = require('through2');
-const cssnano = require('gulp-cssnano');
+const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
-const gulpStylelint = require('gulp-stylelint');
 const iconfontCss = require('gulp-iconfont-css');
 const fs = require('fs-extra');
 const generateIcons = require('./src/icons/generateIcons.js');
+const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
 
 const pficonFontName = 'pficon';
 
@@ -40,43 +42,45 @@ function copyFA() {
     .pipe(dest('./dist/assets/icons'));
 }
 
-function lintCSS() {
-  const options = { logs: false };
-  return src('./dist/patternfly.css')
-    .pipe(replace('stylelint-enable', '', options))
-    .pipe(replace('stylelint-disable', '', options))
-    .pipe(
-      gulpStylelint({
-        failAfterError: true,
-        configFile: './.cssstylelint',
-        defaultSeverity: 'error',
-        reporters: [{ formatter: 'string', console: true }]
-      })
-    );
-}
+// function lintCSS() {
+//   const options = { logs: false };
+//   return src('./dist/patternfly.css')
+//     .pipe(replace('stylelint-enable', '', options))
+//     .pipe(replace('stylelint-disable', '', options))
+//     .pipe(
+//       gulpStylelint({
+//         failAfterError: true,
+//         configFile: './.cssstylelint',
+//         defaultSeverity: 'error',
+//         reporters: [{ formatter: 'string', console: true }]
+//       })
+//     );
+// }
 
 function minifyCSS() {
   return src('./dist/patternfly.css')
     .pipe(sourcemaps.init())
-    .pipe(cssnano())
+    .pipe(cleanCSS())
     .pipe(rename('patternfly.min.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('./dist'));
+    .pipe(dest('dist'));
 }
 
-function build() {
+function compileCSS() {
   return src([
     './src/patternfly/patternfly*.scss',
-    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'
+    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+    '!./src/patternfly/components/_all.scss'
   ])
     .pipe(
       through2.obj((chunk, _, cb2) => {
+        process.stdout.write(`Compiling ${path.relative(__dirname, chunk.history[0])}...`);
         const css = sass.renderSync({
           file: chunk.history[0] // Pass filename for import resolution
           // outputStyle: 'compressed',
         });
         // eslint-disable-next-line
-        console.log('Compiled', css.stats.entry, `(${css.stats.includedFiles.length} files included)`);
+        console.log(`done. (${css.stats.includedFiles.length} files included)`);
         chunk.contents = Buffer.from(css.css);
 
         chunk.history.push(chunk.history[0].replace(/.scss$/, '.css'));
@@ -87,12 +91,12 @@ function build() {
 }
 
 function watchCSS() {
-  series(build, lintCSS, pfIcons, copyFA, copySource)();
+  module.exports.build();
   // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
   watch(
     ['./src/patternfly/patternfly*.scss', './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'],
     {},
-    build
+    compileCSS
   );
 }
 
@@ -115,22 +119,19 @@ function clean(cb) {
   cb();
 }
 
-function pfIcons(cb) {
-  // eslint-disable-next-line global-require
-  generateIcons.then(res => cb());
-  // .then(cb);
+function pfIcons() {
+  return generateIcons();
 }
 
-function buildIE(cb) {
-  // eslint-disable-next-line global-require
-  require('./build/npm-scripts/ie-convert-all.js');
-  cb();
+function buildIE() {
+  return convertForIE();
 }
 
-//
 module.exports = {
-  build: series(clean, build, buildIE, minifyCSS, lintCSS, pfIcons, copyFA, copySource),
-  buildCSS: build,
+  build: series(clean, compileCSS, minifyCSS, pfIcons, copyFA, copySource),
+  compileCSS,
+  minifyCSS,
+  buildIE,
   watchCSS,
   clean,
   copy: copySource,
