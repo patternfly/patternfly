@@ -1,5 +1,5 @@
-.ws-example-u-float .pf-u-float-left,
-.ws-example-u-float .pf-u-float-right {
+.ws-core-u-float .pf-u-float-left,
+.ws-core-u-float .pf-u-float-right {
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
