@@ -1,5 +1,5 @@
 ---
-title: App Launcher
+title: Application Launcher
 section: components
 cssPrefix: pf-c-app-launcher
 ---
