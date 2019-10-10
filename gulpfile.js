@@ -12,6 +12,7 @@ const iconfontCss = require('gulp-iconfont-css');
 const fs = require('fs-extra');
 const generateIcons = require('./src/icons/generateIcons.js');
 const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
+const stylelint = require('stylelint');
 
 const pficonFontName = 'pficon';
 
@@ -66,22 +67,41 @@ function minifyCSS() {
     .pipe(dest('dist'));
 }
 
-function compileCSS() {
+function compileSASS() {
   return src([
     './src/patternfly/patternfly*.scss',
     './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-    '!./src/patternfly/components/_all.scss'
+    '!./src/patternfly/**/_all.scss'
   ])
     .pipe(
       through2.obj((chunk, _, cb2) => {
-        process.stdout.write(`Compiling ${path.relative(__dirname, chunk.history[0])}...`);
-        const css = sass.renderSync({
-          file: chunk.history[0] // Pass filename for import resolution
-          // outputStyle: 'compressed',
-        });
-        // eslint-disable-next-line
-        console.log(`done. (${css.stats.includedFiles.length} files included)`);
-        chunk.contents = Buffer.from(css.css);
+        const scss = chunk.contents.toString();
+        try {
+          const css = sass.renderSync({
+            // Pass filename for import resolution. Contents are not compiled.
+            file: chunk.history[0],
+            // This hack is to not include sass-utilities/placeholders.scss CSS more than once
+            // in our production patternfly.css BUT still be able to compile individual SCSS files.
+            // As soon as node-sass is updated to a libsass version that supports @use rule, we should
+            // change `// @import "../../sass-utilities/all";` to `@use "../../sass-utilities/all";`
+            data: scss.replace('// @import "../../sass-utilities/all";', '@import "../../sass-utilities/all";')
+          });
+          chunk.contents = Buffer.from(css.css);
+
+          stylelint
+            .lint({
+              files: chunk.history[0],
+              formatter: 'string'
+            })
+            .then(data => {
+              if (data.errored) {
+                console.error(data.output);
+                // console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}:${}:${} ${error}`);
+              }
+            });
+        } catch (error) {
+          console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}: ${error}`);
+        }
 
         chunk.history.push(chunk.history[0].replace(/.scss$/, '.css'));
         cb2(null, chunk);
@@ -90,13 +110,13 @@ function compileCSS() {
     .pipe(dest('./dist'));
 }
 
-function watchCSS() {
+function watchSASS() {
   module.exports.build();
   // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
   watch(
     ['./src/patternfly/patternfly*.scss', './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'],
     {},
-    compileCSS
+    compileSASS
   );
 }
 
@@ -128,11 +148,11 @@ function buildIE() {
 }
 
 module.exports = {
-  build: series(clean, compileCSS, minifyCSS, pfIcons, copyFA, copySource),
-  compileCSS,
+  build: series(clean, compileSASS, minifyCSS, pfIcons, copyFA, copySource),
+  compileSASS,
   minifyCSS,
   buildIE,
-  watchCSS,
+  watchSASS,
   clean,
   copy: copySource,
   pfIconFont,

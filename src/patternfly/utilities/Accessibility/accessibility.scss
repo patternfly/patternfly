@@ -1,4 +1,4 @@
-@import "../../sass-utilities/all";
+// @import "../../sass-utilities/all";
 
 // screen-reader - visually hide, but expose to screen readers
 @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
