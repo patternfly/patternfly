@@ -151,4 +151,12 @@ $pf-c-form-control__select--ViewBox: "320" !default;
       --pf-c-form-control--invalid--Background: var(--pf-c-form-control__select--invalid--Background);
     }
   }
+
+  &.pf-m-resize-vertical {
+    resize: vertical;
+  }
+
+  &.pf-m-resize-horizontal {
+    resize: horizontal;
+  }
 }
