@@ -161,6 +161,7 @@ import './Nav.css'
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
+          {{#> divider divider--type="li"}}{{/divider}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
