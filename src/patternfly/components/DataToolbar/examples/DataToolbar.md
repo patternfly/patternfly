@@ -277,7 +277,6 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-hidden` | `.pf-c-data-toolbar__toggle` | Modifies the toggle for the hidden state. |
 
 ```hbs title=Selected-filters-(filters-collapsed,-selected-filters-summary-visible)
-**not rendering css for toggle group correctly**
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{> data-toolbar-item-bulk-select}}
@@ -326,7 +325,6 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 ```
 
 ```hbs title=Selected-filters-(filters-collapsed,-expandable-content-expanded)
-**not rendering css for toggle group correctly**
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-expanded-example"}}
   {{#> data-toolbar-content}}
     {{> data-toolbar-item-bulk-select}}
@@ -369,7 +367,6 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 ```
 
 ```hbs title=Selected-filters
-**not rendering css for toggle group correctly**
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-example"}}
   {{#> data-toolbar-content}}
     {{> data-toolbar-item-bulk-select}}
@@ -404,10 +401,8 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
     {{/data-toolbar-item}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
-    {{#> data-toolbar-group}}
-      {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
-      {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
-    {{/data-toolbar-group}}
+    {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+    {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
     {{> data-toolbar-item-clear}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}

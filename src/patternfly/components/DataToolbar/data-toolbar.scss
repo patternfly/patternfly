@@ -36,6 +36,10 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   // Expanded
   --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter);
 
+  // Chip container
+  --pf-c-data-toolbar--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-data-toolbar--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
+
   // Base spacer - shared value
   --pf-c-data-toolbar--spacer--base: var(--pf-global--spacer--md);
 
@@ -227,12 +231,11 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   padding-left: var(--pf-c-data-toolbar__content--PaddingLeft);
 
   &.pf-m-chip-container {
-    flex-wrap: nowrap;
-    align-items: baseline;
+    margin-top: var(--pf-c-data-toolbar--m-chip-container--MarginTop);
   }
 
-  &.pf-m-chip-container .pf-c-data-toolbar__group {
-    flex-wrap: wrap;
+  &.pf-m-chip-container .pf-c-data-toolbar__item {
+    margin-top: var(--pf-c-data-toolbar--m-chip-container__item--MarginTop);
   }
 }
 
