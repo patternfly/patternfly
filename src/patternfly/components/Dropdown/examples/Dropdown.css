@@ -1,31 +1,31 @@
-#ws-example-c-dropdown-expanded,
-#ws-example-c-dropdown-kebab,
-#ws-example-c-dropdown-kebab-align-right,
-#ws-example-c-dropdown-align-right,
-#ws-example-c-dropdown-align-top,
-#ws-example-c-dropdown-primary-toggle {
+#ws-core-c-dropdown-expanded,
+#ws-core-c-dropdown-kebab,
+#ws-core-c-dropdown-kebab-align-right,
+#ws-core-c-dropdown-align-right,
+#ws-core-c-dropdown-align-top,
+#ws-core-c-dropdown-primary-toggle {
   min-height: 310px;
 }
 
-#ws-example-c-dropdown-kebab-align-right,
-#ws-example-c-dropdown-align-right {
+#ws-core-c-dropdown-kebab-align-right,
+#ws-core-c-dropdown-align-right {
   display: flex;
   justify-content: flex-end;
 }
 
-#ws-example-c-dropdown-align-top {
+#ws-core-c-dropdown-align-top {
   display: flex;
   align-items: flex-end;
 }
 
-#ws-example-c-dropdown-with-groups {
+#ws-core-c-dropdown-with-groups {
   min-height: 440px;
 }
 
-#ws-example-c-dropdown-split-button {
+#ws-core-c-dropdown-split-button {
   min-height: 210px;
 }
 
-#ws-example-c-dropdown-panel {
+#ws-core-c-dropdown-panel {
   min-height: 130px;
 }
