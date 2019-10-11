@@ -1,8 +1,6 @@
 const path = require('path');
 const { src, dest, series, watch } = require('gulp');
 const rename = require('gulp-rename');
-// const replace = require('gulp-string-replace');
-// const gulpStylelint = require('gulp-stylelint');
 const sass = require('node-sass');
 const through2 = require('through2');
 const cleanCSS = require('gulp-clean-css');
@@ -42,21 +40,6 @@ function copyFA() {
     .pipe(rename('fontawesome.css'))
     .pipe(dest('./dist/assets/icons'));
 }
-
-// function lintCSS() {
-//   const options = { logs: false };
-//   return src('./dist/patternfly.css')
-//     .pipe(replace('stylelint-enable', '', options))
-//     .pipe(replace('stylelint-disable', '', options))
-//     .pipe(
-//       gulpStylelint({
-//         failAfterError: true,
-//         configFile: './.cssstylelint',
-//         defaultSeverity: 'error',
-//         reporters: [{ formatter: 'string', console: true }]
-//       })
-//     );
-// }
 
 function minifyCSS() {
   return src('./dist/patternfly.css')
