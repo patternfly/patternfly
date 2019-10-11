@@ -79,7 +79,6 @@ function compileSASS() {
             .then(data => {
               if (data.errored) {
                 console.error(data.output);
-                // console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}:${}:${} ${error}`);
               }
             });
         } catch (error) {
