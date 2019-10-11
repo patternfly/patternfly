@@ -37,7 +37,7 @@ function pfIconFont() {
 }
 
 function copyFA() {
-  return src('./node_modules/@fortawesome/fontawesome/styles.css')
+  return src(require.resolve('@fortawesome/fontawesome/styles.css'))
     .pipe(rename('fontawesome.css'))
     .pipe(dest('./dist/assets/icons'));
 }
