@@ -256,6 +256,9 @@
   // Scatter Chart
   --pf-chart-stack--data--stroke--Width: #{$pf-chart-stack--data--stroke--Width};
 
+  // Threshold
+  --pf-chart-threshold--stroke-dash-array: #{$pf-chart-threshold--stroke-dash-array};
+
   // Tooltip
   --pf-chart-tooltip--corner-radius: #{$pf-chart-tooltip--corner-radius};
   --pf-chart-tooltip--pointer-length: #{$pf-chart-tooltip--pointer-length};

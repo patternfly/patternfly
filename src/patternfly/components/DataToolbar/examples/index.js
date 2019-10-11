@@ -9,6 +9,7 @@ import dataToolbarSelectedFiltersExampleRaw from '!raw!./data-toolbar-selected-f
 import dataToolbarSpacersExampleRaw from '!raw!./data-toolbar-spacers-example.hbs';
 import dataToolbarGroupSpacersExampleRaw from '!raw!./data-toolbar-group-spacers-example.hbs';
 import dataToolbarStackedExampleRaw from '!raw!./data-toolbar-stacked-example.hbs';
+import dataToolbarExpandedElementsExampleRaw from '!raw!./data-toolbar-expanded-elements-example.hbs';
 
 import DataToolbarItemsExample from './data-toolbar-items-example.hbs';
 import DataToolbarGroupTypesExample from './data-toolbar-group-types-example.hbs';
@@ -17,6 +18,7 @@ import DataToolbarSelectedFiltersExample from './data-toolbar-selected-filters-e
 import DataToolbarSpacersExample from './data-toolbar-spacers-example.hbs';
 import DataToolbarGroupSpacersExample from './data-toolbar-group-spacers-example.hbs';
 import DataToolbarStackedExample from './data-toolbar-stacked-example.hbs';
+import DataToolbarExpandedElementsExample from './data-toolbar-expanded-elements-example.hbs';
 
 import dataToolbarIntroExampleDoc from '../docs/data-toolbar-intro.md';
 import dataToolbarGroupTypesExampleDoc from '../docs/data-toolbar-group-types.md';
@@ -37,6 +39,7 @@ export default props => {
   const dataToolbarSpacersExample = DataToolbarSpacersExample();
   const dataToolbarGroupSpacersExample = DataToolbarGroupSpacersExample();
   const dataToolbarStackedExample = DataToolbarStackedExample();
+  const dataToolbarExpandedElementsExample = DataToolbarExpandedElementsExample();
 
   const headingText = 'Data toolbar';
   const variablesRoot = 'pf-c-data-toolbar';
@@ -99,6 +102,13 @@ export default props => {
       </Example>
       <Example heading="Data toolbar stacked" handlebars={dataToolbarStackedExampleRaw}>
         {dataToolbarStackedExample}
+      </Example>
+      <Example
+        heading="Data toolbar expanded elements"
+        handlebars={dataToolbarExpandedElementsExampleRaw}
+        minHeight="40rem"
+      >
+        {dataToolbarExpandedElementsExample}
       </Example>
     </Documentation>
   );
