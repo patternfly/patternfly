@@ -17,3 +17,20 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     }
   });
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const typeDefs = `
+    type MdxFrontmatter @infer {
+      title: String!
+      section: String
+      cssPrefix: String
+      hideTOC: Boolean
+      optIn: String
+      experimentalStage: String
+    }
+    type Mdx implements Node @infer {
+      frontmatter: MdxFrontmatter
+    }
+  `;
+  actions.createTypes(typeDefs);
+}
