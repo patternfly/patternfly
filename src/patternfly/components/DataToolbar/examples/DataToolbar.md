@@ -32,7 +32,8 @@ Data toolbar relies on groups (`.pf-c-data-toolbar__group`) and items (`.pf-c-da
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
 
 ### Special notes
-Several components in the following examples do not include functional and/or accessibility specifications (for example `pf-c-select`, `pf-c-options-menu`). Rather, `pf-c-data-toolbar` focuses on functionality and accessibility specifications that apply to it only.
+- All examples are static.
+- Several components in the following examples do not include functional and/or accessibility specifications (for example `pf-c-select`, `pf-c-options-menu`). Rather, `pf-c-data-toolbar` focuses on functionality and accessibility specifications that apply to it only.
 
 **Available breakpoints are: `-on-md, -on-lg, -on-xl, -on-2xl`.**
 
@@ -84,7 +85,7 @@ Several components in the following examples do not include functional and/or ac
 | `.pf-m-separator` | `.pf-c-data-toolbar__item` | Modifies item to a separator. |
 
 ### Spacers
-In some instances, it may be necessary to adjust spacing explicitly where items are being hidden/revealed. For example, if a `.pf-m-toggle-group` is adjacent to an element being hidden/shown or hidden/revealed, the spacing may appear to be inconsistent. If possible, rely on modifier values. Available spacer modifiers are `.pf-m-spacer-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}` and `.pf-m-space-items-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}`. These modifiers will overwrite existing modifiers provided by `.pf-c-data-toolbar`.
+In some instances, it may be necessary to adjust spacing explicitly where items are hidden/shown. For example, if a `.pf-m-toggle-group` is adjacent to an element being hidden/shown, the spacing may appear to be inconsistent. If possible, rely on modifier values. Available spacer modifiers are `.pf-m-spacer-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}` and `.pf-m-space-items-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}`. These modifiers will overwrite existing modifiers provided by `.pf-c-data-toolbar`.
 
 ```hbs title=Adjusted-spacers
 {{#> data-toolbar data-toolbar--id="data-toolbar-spacer-example"}}
@@ -207,7 +208,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-icon-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-icon-button-group--space-items)`. |
 | `.pf-m-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-button-group--space-items)`. |
 
-```hbs title=Toggle-group
+```hbs title=Toggle-group-on-desktop
 {{#> toolbar data-toolbar--id="data-toolbar-toggle-group-shown-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
@@ -230,7 +231,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/toolbar}}
 ```
 
-```hbs title=Toggle-group-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Toggle-group-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
@@ -276,7 +277,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 | `.pf-m-hidden` | `.pf-c-data-toolbar__toggle` | Modifies the toggle for the hidden state. |
 
-```hbs title=Selected-filters-(filters-collapsed,-selected-filters-summary-visible)
+```hbs title=Selected-filters-on-mobile-(filters-collapsed,-selected-filters-summary-visible)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{> data-toolbar-item-bulk-select}}
@@ -324,7 +325,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Selected-filters-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Selected-filters-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-expanded-example"}}
   {{#> data-toolbar-content}}
     {{> data-toolbar-item-bulk-select}}
@@ -366,7 +367,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Selected-filters
+```hbs title=Selected-filters-on-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-example"}}
   {{#> data-toolbar-content}}
     {{> data-toolbar-item-bulk-select}}
@@ -408,7 +409,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Stacked
+```hbs title=Stacked-on-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
@@ -473,7 +474,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Data-toolbar-stacked-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Data-toolbar-stacked-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
@@ -540,7 +541,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Expanded-elements
+```hbs title=Expanded-elements-on-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
