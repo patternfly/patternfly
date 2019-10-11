@@ -1,5 +1,5 @@
-@import "../../sass-utilities/all";
-
+// Don't remove this magic comment. See gulpfile.js.
+// @import "../../sass-utilities/all";
 $pf-c-data-toolbar--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl", "2xl");
 $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 
