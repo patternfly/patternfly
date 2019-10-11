@@ -211,7 +211,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 ```hbs title=Toggle-group-on-desktop
 {{#> toolbar data-toolbar--id="data-toolbar-toggle-group-shown-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsHidden="true"}}
       {{> data-toolbar-item-search-filter button--id="content"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
@@ -474,7 +474,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Data-toolbar-stacked-on-mobile-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Stacked-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}

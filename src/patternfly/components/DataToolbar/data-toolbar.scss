@@ -6,7 +6,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 // Data toolbar
 .pf-c-data-toolbar {
   --pf-c-data-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-data-toolbar--Gap: var(--pf-global--gutter);
+  --pf-c-data-toolbar--RowGap: var(--pf-global--spacer--lg);
   --pf-c-data-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-data-toolbar--PaddingBottom: var(--pf-global--spacer--md);
 
@@ -15,7 +15,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__content--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Expandable content
-  --pf-c-data-toolbar__expandable-content--PaddingTop: var(--pf-c-data-toolbar--Gap);
+  --pf-c-data-toolbar__expandable-content--PaddingTop: var(--pf-c-data-toolbar--RowGap);
   --pf-c-data-toolbar__expandable-content--PaddingRight: var(--pf-c-data-toolbar__content--PaddingRight);
   --pf-c-data-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-data-toolbar__expandable-content--PaddingLeft: var(--pf-c-data-toolbar__content--PaddingLeft);
@@ -37,8 +37,8 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter);
 
   // Chip container
-  --pf-c-data-toolbar--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
-  --pf-c-data-toolbar--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar__content--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-data-toolbar__content--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
 
   // Base spacer - shared value
   --pf-c-data-toolbar--spacer--base: var(--pf-global--spacer--md);
@@ -50,6 +50,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 
   // Toggle group
   --pf-c-data-toolbar__group--m-toggle-group--spacer: var(--pf-global--spacer--sm);
+  --pf-c-data-toolbar__group--m-toggle-group--m-reveal--spacer: var(--pf-c-data-toolbar__group--spacer);
   --pf-c-data-toolbar__toggle--c-badge--MarginLeft: var(--pf-global--spacer--sm);
 
   // Icon button group
@@ -87,14 +88,18 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__item--m-label--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Toggle
-  --pf-c-data-toolbar__toggle--expanded--button--Color: var(--pf-global--Color--100);
+  --pf-c-data-toolbar__toggle--m-expanded__c-button--m-plain--Color: var(--pf-global--Color--100);
 
   position: relative;
-  gap: var(--pf-c-data-toolbar--Gap);
+  row-gap: var(--pf-c-data-toolbar--RowGap);
   display: grid;
   padding-top: var(--pf-c-data-toolbar--PaddingTop);
   padding-bottom: var(--pf-c-data-toolbar--PaddingBottom);
   background-color: var(--pf-c-data-toolbar--BackgroundColor);
+
+  .pf-m-reveal {
+    background: #000;
+  }
 }
 
 // Group
@@ -139,6 +144,16 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   // Toggle group
   &.pf-m-toggle-group {
     --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__group--m-toggle-group--spacer);
+
+    > * {
+      display: none;
+      visibility: hidden;
+    }
+
+    .pf-c-data-toolbar__toggle {
+      display: inline-block;
+      visibility: visible;
+    }
   }
 
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
@@ -231,22 +246,11 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   padding-left: var(--pf-c-data-toolbar__content--PaddingLeft);
 
   &.pf-m-chip-container {
-    margin-top: var(--pf-c-data-toolbar--m-chip-container--MarginTop);
+    margin-top: var(--pf-c-data-toolbar__content--m-chip-container--MarginTop);
   }
 
   &.pf-m-chip-container .pf-c-data-toolbar__item {
-    margin-top: var(--pf-c-data-toolbar--m-chip-container__item--MarginTop);
-  }
-}
-
-.pf-c-data-toolbar__content,
-.pf-c-data-toolbar__expandable-content,
-.pf-c-data-toolbar__group,
-.pf-c-data-toolbar__item,
-.pf-c-data-toolbar__toggle {
-  &.pf-m-hidden {
-    display: none;
-    visibility: hidden;
+    margin-top: var(--pf-c-data-toolbar__content--m-chip-container__item--MarginTop);
   }
 }
 
@@ -292,8 +296,8 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 }
 
-.pf-c-data-toolbar__toggle.pf-m-expanded .pf-c-button {
-  color: var(--pf-c-data-toolbar__toggle--expanded--button--Color);
+.pf-c-data-toolbar__toggle.pf-m-expanded .pf-c-button.pf-m-plain {
+  color: var(--pf-c-data-toolbar__toggle--m-expanded__c-button--m-plain--Color);
 }
 
 .pf-c-data-toolbar__toggle .pf-c-badge {
@@ -305,6 +309,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   // Build spacing modifiers
   @each $breakpoint, $breakpoint-value in $pf-c-data-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
 
     @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map) {
       // Align right
@@ -327,6 +332,41 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
       .pf-m-visible#{$breakpoint-name} {
         display: flex;
         visibility: visible;
+      }
+
+      // Reveal modifier
+      .pf-m-reveal {
+        --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__group--m-toggle-group--m-reveal--spacer);
+
+        &:last-child {
+          --pf-c-data-toolbar--spacer: 0;
+        }
+
+        > * {
+          display: flex;
+        }
+
+        // &.pf-c-data-toolbar__expandable-content.pf-m-expanded {
+        //   display: flex;
+        // }
+
+        .pf-c-data-toolbar__group,
+        .pf-c-data-toolbar__item {
+          display: flex;
+          flex: 0 1 auto;
+          margin-right: var(--pf-c-data-toolbar--spacer);
+          visibility: visible;
+        }
+
+        // .pf-m-shared-item {
+        //   display: none;
+        //   visibility: hidden;
+        // }
+
+        .pf-c-data-toolbar__toggle {
+          display: none;
+          visibility: hidden;
+        }
       }
     }
   }
