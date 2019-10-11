@@ -1,0 +1,19 @@
+#ws-example-c-optionsmenu-single-option,
+#ws-example-c-optionsmenu-plain,
+#ws-example-c-optionsmenu-align-right,
+#ws-example-c-optionsmenu-align-top {
+  min-height: 215px;
+}
+
+#ws-example-c-optionsmenu-multiple-options {
+  min-height: 350px;
+}
+
+#ws-example-c-optionsmenu-plain-with-text {
+  min-height: 280px;
+}
+
+#ws-example-c-optionsmenu-align-top {
+  display: flex;
+  align-items: flex-end;
+}

@@ -13,15 +13,9 @@ module.exports = {
       const scenarios = [];
 
       cliArguments.forEach(currentScenario => {
-        const scenarioPath = path.join(
-          __dirname,
-          '../config/scenarios',
-          `${currentScenario}.js`
-        );
+        const scenarioPath = path.join(__dirname, '../config/scenarios', `${currentScenario}.js`);
         let scenarioConfigs = require(scenarioPath);
-        scenarioConfigs = scenarioConfigs.filter(
-          scenarioConfig => !scenarioConfig.disabled
-        );
+        scenarioConfigs = scenarioConfigs.filter(scenarioConfig => !scenarioConfig.disabled);
         scenarios.push(...scenarioConfigs);
       });
 

@@ -1,3 +1,6 @@
+// Don't remove this magic comment. See gulpfile.js.
+// @import "../../sass-utilities/all";
+
 // The value of component scoped variables is always defined by a global variable:
 .pf-c-toolbar {
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
