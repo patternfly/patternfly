@@ -250,8 +250,6 @@
 
   .pf-c-select__toggle-button {
     color: var(--pf-c-select__toggle-button--Color);
-
-    &:disabled { background-color: transparent; }
   }
 
   .pf-c-select__toggle-clear + .pf-c-select__toggle-button {
