@@ -1,1 +1,0 @@
-Unlike the top pagination, the bottom pagination does not change in a responsive view and the options menu persists on all viewports.

@@ -1,7 +1,7 @@
 # Component name
 _Include a short (1-2 sentence) description of the component here and fill out the following sections as needed_
 
-## Usage
+### Usage
 _(Required)
 Inform readers about when and how this component or pattern should be used, including any variations or related best practices._
 * What problem does this solve?

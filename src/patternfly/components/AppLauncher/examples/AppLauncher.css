@@ -1,0 +1,19 @@
+#ws-example-c-applauncher-aligned-right,
+#ws-example-c-applauncher-aligned-top,
+#ws-example-c-applauncher-expanded {
+  min-height: 216px;
+}
+
+#ws-example-c-applauncher-aligned-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ws-example-c-applauncher-aligned-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-example-c-applauncher-with-sections-and-icons {
+  min-height: 424px;
+}

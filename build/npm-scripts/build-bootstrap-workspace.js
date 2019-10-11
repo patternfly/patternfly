@@ -27,14 +27,7 @@ const componentPages = [
   'scrollspy',
   'tooltips'
 ];
-const contentPages = [
-  'reboot',
-  'typography',
-  'code',
-  'images',
-  'tables',
-  'figures'
-];
+const contentPages = ['reboot', 'typography', 'code', 'images', 'tables', 'figures'];
 const baseUrl = 'https://getbootstrap.com/docs/4.0/';
 const baseBuildDir = path.resolve(__dirname, '../src/site/bs-content');
 
@@ -54,10 +47,7 @@ componentPages.forEach(component => {
         `);
         return accum;
       }, '');
-      fs.outputFile(
-        `${baseBuildDir}/components/${component}.html`,
-        examplesContent
-      );
+      fs.outputFile(`${baseBuildDir}/components/${component}.html`, examplesContent);
     })
     .catch(err => {
       console.log(err);
@@ -80,10 +70,7 @@ contentPages.forEach(contentPage => {
         `);
         return accum;
       }, '');
-      fs.outputFile(
-        `${baseBuildDir}/content/${contentPage}.html`,
-        examplesContent
-      );
+      fs.outputFile(`${baseBuildDir}/content/${contentPage}.html`, examplesContent);
     })
     .catch(err => {
       console.log(err);
