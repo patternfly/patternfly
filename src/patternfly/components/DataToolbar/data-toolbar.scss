@@ -26,7 +26,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
   --pf-c-data-toolbar__expandable-content--BackgroundColor: var(--pf-c-data-toolbar--BackgroundColor);
 
-
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-data-toolbar__expandable-content--PaddingRight: var(--pf-c-data-toolbar__expandable-content--lg--PaddingRight);
     --pf-c-data-toolbar__expandable-content--PaddingBottom: var(--pf-c-data-toolbar__expandable-content--lg--PaddingBottom);
@@ -46,12 +45,12 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   // Spacer values
   --pf-c-data-toolbar__item--spacer: var(--pf-c-data-toolbar--spacer--base);
   --pf-c-data-toolbar__group--spacer: var(--pf-c-data-toolbar--spacer--base);
-  --pf-c-data-toolbar__toggle--spacer: var(--pf-global--spacer--sm);
 
   // Toggle group
   --pf-c-data-toolbar__group--m-toggle-group--spacer: var(--pf-global--spacer--sm);
-  --pf-c-data-toolbar__group--m-toggle-group--m-reveal--spacer: var(--pf-c-data-toolbar__group--spacer);
-  --pf-c-data-toolbar__toggle--c-badge--MarginLeft: var(--pf-global--spacer--sm);
+
+  // update
+  --pf-c-data-toolbar__group--m-toggle-group--m-show--spacer: var(--pf-c-data-toolbar__group--spacer);
 
   // Icon button group
   --pf-c-data-toolbar__group--m-icon-button-group--spacer: var(--pf-c-data-toolbar__group--spacer);
@@ -96,10 +95,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   padding-top: var(--pf-c-data-toolbar--PaddingTop);
   padding-bottom: var(--pf-c-data-toolbar--PaddingBottom);
   background-color: var(--pf-c-data-toolbar--BackgroundColor);
-
-  .pf-m-reveal {
-    background: #000;
-  }
 }
 
 // Group
@@ -145,7 +140,8 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   &.pf-m-toggle-group {
     --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__group--m-toggle-group--spacer);
 
-    > * {
+    .pf-c-data-toolbar__group,
+    .pf-c-data-toolbar__item {
       display: none;
       visibility: hidden;
     }
@@ -225,17 +221,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 }
 
-// Toggle
-.pf-c-data-toolbar__toggle {
-  --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__toggle--spacer);
-
-  margin-right: var(--pf-c-data-toolbar--spacer);
-
-  &:last-child {
-    --pf-c-data-toolbar--spacer: 0;
-  }
-}
-
 // Content
 .pf-c-data-toolbar__content {
   position: relative;
@@ -251,6 +236,18 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 
   &.pf-m-chip-container .pf-c-data-toolbar__item {
     margin-top: var(--pf-c-data-toolbar__content--m-chip-container__item--MarginTop);
+  }
+}
+
+// Hidden modifier
+.pf-c-data-toolbar__content,
+.pf-c-data-toolbar__expandable-content,
+.pf-c-data-toolbar__group,
+.pf-c-data-toolbar__item,
+.pf-c-data-toolbar__toggle {
+  &.pf-m-hidden {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -300,8 +297,27 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   color: var(--pf-c-data-toolbar__toggle--m-expanded__c-button--m-plain--Color);
 }
 
-.pf-c-data-toolbar__toggle .pf-c-badge {
-  margin-left: var(--pf-c-data-toolbar__toggle--c-badge--MarginLeft);
+// Toggle group modifiers
+@each $breakpoint, $breakpoint-value in $pf-c-data-toolbar--breakpoint-map {
+  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+  @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map) {
+    .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
+      --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__group--m-toggle-group--m-show--spacer);
+
+      .pf-c-data-toolbar__group,
+      .pf-c-data-toolbar__item {
+        display: flex;
+        flex: 0 1 auto;
+        visibility: visible;
+      }
+
+      .pf-c-data-toolbar__toggle {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
 }
 
 /* stylelint-disable max-nesting-depth, no-duplicate-selectors */
@@ -332,41 +348,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
       .pf-m-visible#{$breakpoint-name} {
         display: flex;
         visibility: visible;
-      }
-
-      // Reveal modifier
-      .pf-m-reveal {
-        --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__group--m-toggle-group--m-reveal--spacer);
-
-        &:last-child {
-          --pf-c-data-toolbar--spacer: 0;
-        }
-
-        > * {
-          display: flex;
-        }
-
-        // &.pf-c-data-toolbar__expandable-content.pf-m-expanded {
-        //   display: flex;
-        // }
-
-        .pf-c-data-toolbar__group,
-        .pf-c-data-toolbar__item {
-          display: flex;
-          flex: 0 1 auto;
-          margin-right: var(--pf-c-data-toolbar--spacer);
-          visibility: visible;
-        }
-
-        // .pf-m-shared-item {
-        //   display: none;
-        //   visibility: hidden;
-        // }
-
-        .pf-c-data-toolbar__toggle {
-          display: none;
-          visibility: hidden;
-        }
       }
     }
   }
