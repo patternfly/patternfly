@@ -237,6 +237,12 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   &.pf-m-chip-container .pf-c-data-toolbar__item {
     margin-top: var(--pf-c-data-toolbar__content--m-chip-container__item--MarginTop);
   }
+
+  &.pf-m-toggle-group-container {
+    > :nth-last-of-type(2) {
+      --pf-c-data-toolbar--spacer: 0;
+    }
+  }
 }
 
 // Hidden modifier
@@ -361,13 +367,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
             --pf-c-data-toolbar--spacer: #{$spacer-value};
-          }
-
-          &.pf-c-data-toolbar__expandable-content {
-            .pf-c-data-toolbar__group,
-            .pf-c-data-toolbar__item {
-              margin-right: var(--pf-c-data-toolbar--spacer);
-            }
           }
 
           > :last-child {

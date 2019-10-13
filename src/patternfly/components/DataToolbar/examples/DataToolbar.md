@@ -37,7 +37,7 @@ Data toolbar relies on groups (`.pf-c-data-toolbar__group`) and items (`.pf-c-da
 
 ### Special notes
 
-Several components in the following examples do not include functional and/or accessibility specifications (for example `pf-c-select`, `pf-c-options-menu`). Rather, `pf-c-data-toolbar` focuses on functionality and accessibility specifications that apply to it only.
+Several components in the following examples do not include functional and/or accessibility specifications (for example `.pf-c-select`, `.pf-c-options-menu`). Rather, `.pf-c-data-toolbar` focuses on functionality and accessibility specifications that apply to it only.
 
 **Available breakpoints are: `-on-md, -on-lg, -on-xl, -on-2xl`.**
 
@@ -218,7 +218,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 
 ```hbs title=Toggle-group
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{> data-toolbar-item-search-filter button--id="content"}}
@@ -235,13 +235,14 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
 
 ```hbs title=Toggle-group-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-collapsed-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
@@ -289,6 +290,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-show{-on-[breakpoint]}` | `.pf-c-data-toolbar__group.pf-m-toggle-group`, `.pf-c-data-toolbar__expandable-content` | Modifies toolbar element visibility at breakpoint. This selector must be applied consistently to toggle group and expandable content. |
+| `.pf-m-toggle-group-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for toggle group, expandable content layout. |
 | `.pf-m-chip-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for selected filters applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 
@@ -296,7 +298,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Selected-filters-on-mobile-(filters-collapsed,-selected-filters-summary-visible)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-collapsed-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{> data-toolbar-item-bulk-select}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
@@ -327,13 +329,14 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       Overflow menu
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item}}
       6 filters applied
     {{/data-toolbar-item}}
     {{#> data-toolbar-item}}
-      <button class="pf-c-button pf-m-link pf-m-inline">Clear filters</button>
+      {{> data-toolbar-item-clear}}
     {{/data-toolbar-item}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
@@ -341,7 +344,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Selected-filters-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-expanded-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{> data-toolbar-item-bulk-select}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
@@ -383,7 +386,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Selected-filters-on-desktop-(not-responsive)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{> data-toolbar-item-bulk-select}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
@@ -414,6 +417,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       Overflow menu
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
     {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
@@ -427,7 +431,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Stacked-on-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group}}
@@ -481,6 +485,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       {{#> example-text example-text--modifier="example-border"}}Overflow menu{{/example-text}}
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> divider}}{{/divider}}
   {{#> data-toolbar-content}}
@@ -492,7 +497,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Stacked-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-collapsed-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
@@ -561,7 +566,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Expanded-elements
 {{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
-  {{#> data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
       {{#> dropdown dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat data-toolbar--id '-button')}}
         {{> dropdown-toggle-check dropdown-toggle-check--id=(concat data-toolbar--id '-bulk-select-check') aria-label="Select all"}}
@@ -597,6 +602,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       Overflow menu
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -631,6 +637,7 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
 | `.pf-m-label` | `.pf-c-data-toolbar__item` | Modifies toolbar item to label. |
+| `.pf-m-toggle-group-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for toggle group, expandable content layout. |
 | `.pf-m-chip-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for selected filters applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 
