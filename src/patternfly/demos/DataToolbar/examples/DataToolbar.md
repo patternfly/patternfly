@@ -303,10 +303,10 @@ import './DataToolbar.css'
 ```
 
 ```hbs title=Data-toolbar-attribute-value-checkbox-select-filter-desktop
-{{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-single-select-filter-desktop"}}
+{{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-checkbox-select-filter-desktop"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
-      {{> data-toolbar-toggle}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
           {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
@@ -314,8 +314,8 @@ import './DataToolbar.css'
           {{/select}}
         {{/data-toolbar-item}}
         {{#> data-toolbar-item}}
-          {{#> select select--attribute="style='width: 200px'" id=(concat data-toolbar--id '-select-status-two') select--IsExpanded="true"}}
-            Stopped
+          {{#> select id=(concat data-toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
+            Filter by status
           {{/select}}
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
@@ -370,41 +370,54 @@ import './DataToolbar.css'
         {{/pagination-nav}}
       {{/pagination}}
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
-  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
+  {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
+    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
+    {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id=(concat data-toolbar--id '-group1-')}}
+      {{#> chip-group-list-item}}
+        {{#> chip-group-label}}
           Status
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
-          Stopped
-        {{/select}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-  {{/data-toolbar-expandable-content}}
+        {{/chip-group-label}}
+        {{#> chip-group chip-group--modifier=""}}
+          {{#> chip}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
+              Cancelled
+            {{/chip-text}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
+              <i class="fas fa-times-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip}}
+          {{#> chip}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
+              Paused
+            {{/chip-text}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
+              <i class="fas fa-times-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip}}
+          {{#> chip}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
+              Restarted
+            {{/chip-text}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
+              <i class="fas fa-times-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip}}
+        {{/chip-group}}
+      {{/chip-group-list-item}}
+    {{/chip-group}}
+  {{/data-toolbar-item}}
+  {{> data-toolbar-item-clear}}
+  {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
 
 ```hbs title=Data-toolbar-attribute-value-checkbox-select-filter-mobile
-{{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-single-select-filter-mobile"}}
-  {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
-      {{> data-toolbar-toggle}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> data-toolbar-item}}
-          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
-            Status
-          {{/select}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select select--attribute="style='width: 200px'" id=(concat data-toolbar--id '-select-status-two') select--IsExpanded="true"}}
-            Stopped
-          {{/select}}
-        {{/data-toolbar-item}}
-      {{/data-toolbar-group}}
+{{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-checkbox-select-filter-mobile"}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
     {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
       {{#> overflow-menu-content}}
@@ -456,20 +469,56 @@ import './DataToolbar.css'
         {{/pagination-nav}}
       {{/pagination}}
     {{/data-toolbar-item}}
-  {{/data-toolbar-content}}
-  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+    {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
         {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
-          Stopped
+        {{#> select id=(concat data-toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+          Filter by status
         {{/select}}
       {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-  {{/data-toolbar-expandable-content}}
+      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
+        {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
+          {{#> chip-group-list-item}}
+            {{#> chip-group-label}}
+              Status
+            {{/chip-group-label}}
+            {{#> chip-group newcontext}}
+              {{#> chip}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
+                  Cancelled
+                {{/chip-text}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                {{/button}}
+              {{/chip}}
+              {{#> chip}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
+                  Paused
+                {{/chip-text}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                {{/button}}
+              {{/chip}}
+              {{#> chip}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
+                  Restarted
+                {{/chip-text}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                {{/button}}
+              {{/chip}}
+            {{/chip-group}}
+          {{/chip-group-list-item}}
+        {{/chip-group}}
+      {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{> data-toolbar-item-clear}}
+    {{/data-toolbar-expandable-content}}
+  {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
