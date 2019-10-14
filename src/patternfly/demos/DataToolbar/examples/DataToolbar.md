@@ -3,6 +3,8 @@ title: Data Toolbar
 section: demos
 ---
 
+import './DataToolbar.css'
+
 ## Demos
 ```hbs title=Data-toolbar-attribute-value-search-filter-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-desktop"}}
@@ -15,7 +17,7 @@ section: demos
             {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
               Name
             {{/select}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput11" name="textInput11" type="search" aria-label="search input example"')}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput11" name="textInput11" type="search" placeholder="Filter by name..." aria-label="search input example"')}}
             {{/form-control}}
             {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
               <i class="fas fa-search" aria-hidden="true"></i>
@@ -81,15 +83,67 @@ section: demos
 ```hbs title=Data-toolbar-attribute-value-search-filter-mobile
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-mobile"}}
   {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group" data-toolbar-group--IsExpanded="true"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--SelectedFilters="6"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
+    {{/data-toolbar-group}}
+    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+      {{#> overflow-menu-content}}
+        {{#> overflow-menu-item}}
+          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+            {{#> data-toolbar-item}}
+              {{#> button button--modifier="pf-m-primary"}}
+                Action
+              {{/button}}
+            {{/data-toolbar-item}}
+            {{#> data-toolbar-item}}
+              {{#> button button--modifier="pf-m-link"}}
+                Action
+              {{/button}}
+            {{/data-toolbar-item}}
+            {{#> data-toolbar-item}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+              {{/button}}
+            {{/data-toolbar-item}}
+          {{/data-toolbar-group}}
+        {{/overflow-menu-item}}
+      {{/overflow-menu-content}}
+      {{#> overflow-menu-control}}
+        {{#> overflow-menu-dropdown-item}}
+          Action
+        {{/overflow-menu-dropdown-item}}
+        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+          Item 1
+        {{/overflow-menu-dropdown-item}}
+        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+          Item 2
+        {{/overflow-menu-dropdown-item}}
+      {{/overflow-menu-control}}
+    {{/overflow-menu}}
+    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+      {{#> pagination pagination--modifier="pf-m-compact"}}
+        {{#> pagination-total-items}}
+          <b>1 - 10</b> of <b>37</b>
+        {{/pagination-total-items}}
+        {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
+        {{#> pagination-nav}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+            <i class="fas fa-angle-left" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+            <i class="fas fa-angle-right" aria-hidden="true"></i>
+          {{/button}}
+        {{/pagination-nav}}
+      {{/pagination}}
+    {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
           {{#> input-group}}
-            {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
               Name
             {{/select}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput11" name="textInput11" type="search" aria-label="search input example"')}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput12" name="textInput11" type="search" placeholder="Filter by name..." aria-label="search input example"')}}
             {{/form-control}}
             {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
               <i class="fas fa-search" aria-hidden="true"></i>
@@ -97,82 +151,16 @@ section: demos
           {{/input-group}}
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-    {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
-      {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-primary"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-link"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
-                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-              {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
-      {{/overflow-menu-content}}
-      {{#> overflow-menu-control}}
-        {{#> overflow-menu-dropdown-item}}
-          Action
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 1
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 2
-        {{/overflow-menu-dropdown-item}}
-      {{/overflow-menu-control}}
-    {{/overflow-menu}}
-    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-      {{#> pagination pagination--modifier="pf-m-compact"}}
-        {{#> pagination-total-items}}
-          <b>1 - 10</b> of <b>37</b>
-        {{/pagination-total-items}}
-        {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-        {{#> pagination-nav}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-            <i class="fas fa-angle-left" aria-hidden="true"></i>
-          {{/button}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-            <i class="fas fa-angle-right" aria-hidden="true"></i>
-          {{/button}}
-        {{/pagination-nav}}
-      {{/pagination}}
-    {{/data-toolbar-item}}
+    {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
-  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> input-group}}
-          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
-            Name
-          {{/select}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' data-toolbar--id '-textInput12" name="textInput11" type="search" aria-label="search input example"')}}
-          {{/form-control}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
-            <i class="fas fa-search" aria-hidden="true"></i>
-          {{/button}}
-        {{/input-group}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-  {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
 ```
 
 ```hbs title=Data-toolbar-attribute-value-single-select-filter-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-single-select-filter-desktop"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
-      {{> data-toolbar-toggle}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
           {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
@@ -237,40 +225,14 @@ section: demos
       {{/pagination}}
     {{/data-toolbar-item}}
   {{/data-toolbar-content}}
-  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
-          Status
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
-        {{#> select id=(concat data-toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
-          Stopped
-        {{/select}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-  {{/data-toolbar-expandable-content}}
 {{/data-toolbar}}
 ```
 
 ```hbs title=Data-toolbar-attribute-value-single-select-filter-mobile
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-single-select-filter-mobile"}}
-  {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="false"}}
-      {{> data-toolbar-toggle}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> data-toolbar-item}}
-          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
-            Status
-          {{/select}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select select--attribute="style='width: 200px'" id=(concat data-toolbar--id '-select-status-two') select--IsExpanded="true"}}
-            Stopped
-          {{/select}}
-        {{/data-toolbar-item}}
-      {{/data-toolbar-group}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
     {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
       {{#> overflow-menu-content}}
@@ -322,9 +284,8 @@ section: demos
         {{/pagination-nav}}
       {{/pagination}}
     {{/data-toolbar-item}}
-  {{/data-toolbar-content}}
-  {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+    {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
         {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
@@ -336,7 +297,8 @@ section: demos
         {{/select}}
       {{/data-toolbar-item}}
     {{/data-toolbar-group}}
-  {{/data-toolbar-expandable-content}}
+    {{/data-toolbar-expandable-content}}
+  {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
 
