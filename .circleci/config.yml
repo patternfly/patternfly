@@ -10,7 +10,6 @@ references:
   - dist/
   - public/
   - src/icons/PfIcons/
-  - tmp/
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "package-lock.json"}}
   attach_workspace: &attach_workspace
