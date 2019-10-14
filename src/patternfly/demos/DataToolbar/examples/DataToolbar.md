@@ -7,8 +7,8 @@ section: demos
 ```hbs title=Data-toolbar-attribute-value-search-filter-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-desktop"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--IsHidden="true"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
           {{#> input-group}}
@@ -80,8 +80,8 @@ section: demos
 
 ```hbs title=Data-toolbar-attribute-value-search-filter-mobile
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-mobile"}}
-  {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-reveal-on-lg" data-toolbar-group--IsExpanded="true"}}
+  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group" data-toolbar-group--IsExpanded="true"}}
       {{> data-toolbar-toggle data-toolbar-toggle--SelectedFilters="6"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
