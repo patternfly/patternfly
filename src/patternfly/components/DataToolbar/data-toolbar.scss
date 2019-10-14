@@ -238,6 +238,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     margin-top: var(--pf-c-data-toolbar__content--m-chip-container__item--MarginTop);
   }
 
+  // remove the spacer from last item/group that isn’t the expandable content
   &.pf-m-toggle-group-container {
     > :nth-last-of-type(2) {
       --pf-c-data-toolbar--spacer: 0;
