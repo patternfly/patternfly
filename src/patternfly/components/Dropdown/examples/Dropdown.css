@@ -26,6 +26,10 @@
   min-height: 210px;
 }
 
+#ws-core-c-dropdown-split-button .pf-c-dropdown:not(:last-child) {
+  margin-right: 4px;
+}
+
 #ws-core-c-dropdown-panel {
   min-height: 130px;
 }
