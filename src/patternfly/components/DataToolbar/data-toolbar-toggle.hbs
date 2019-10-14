@@ -2,12 +2,7 @@
   {{#if data-toolbar-toggle--attribute}}
     {{{data-toolbar-toggle--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Reveal filters" aria-expanded="' data-toolbar-group--IsExpanded '" aria-controls="' data-toolbar--id '-expandable-content"')}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Show filters" aria-expanded="' data-toolbar-toggle--IsExpanded '" aria-controls="' data-toolbar--id '-expandable-content"')}}
     <i class="fas fa-filter" aria-hidden="true"></i>
-    {{#if data-toolbar-toggle--SelectedFilters}}
-      {{#> badge badge--modifier="pf-m-read"}}
-        {{{data-toolbar-toggle--SelectedFilters}}}
-      {{/badge}}
-    {{/if}}
   {{/button}}
 </div>
