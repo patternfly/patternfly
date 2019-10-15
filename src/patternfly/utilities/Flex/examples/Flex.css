@@ -1,25 +1,25 @@
-.ws-example-u-flex .pf-u-display-flex,
-.ws-example-u-flex .ws-example-flex-item,
-.ws-example-u-flex .pf-u-display-inline-flex {
+.ws-core-u-flex .pf-u-display-flex,
+.ws-core-u-flex .ws-core-flex-item,
+.ws-core-u-flex .pf-u-display-inline-flex {
   flex-wrap: wrap;
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
 
-#ws-example-u-flex-aligned-items .pf-u-display-flex,
-#ws-example-u-flex-aligned-self .pf-u-display-flex,
-#ws-example-u-flex-aligned-content .pf-u-display-flex {
+#ws-core-u-flex-aligned-items .pf-u-display-flex,
+#ws-core-u-flex-aligned-self .pf-u-display-flex,
+#ws-core-u-flex-aligned-content .pf-u-display-flex {
   min-height: 160px;
 }
 
-#ws-example-u-flex-aligned-content .ws-example-flex-item {
+#ws-core-u-flex-aligned-content .ws-core-flex-item {
   height: 40px;
 }
 
-.ws-example-u-flex-md {
+.ws-core-u-flex-md {
   height: 60px;
 }
 
-.ws-example-u-flex-lg {
+.ws-core-u-flex-lg {
   height: 80px;
 }

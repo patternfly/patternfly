@@ -20,7 +20,6 @@ cssPrefix: pf-c-card
 ```
 
 ```hbs title=With-image-and-action
-Example with image and actions in card head
 {{#> card card--id="card-action-example-1"}}
   {{#> card-head}}
     <span>img goes here</span>
@@ -40,9 +39,9 @@ Example with image and actions in card head
     Footer
   {{/card-footer}}
 {{/card}}
-<br>
-<br>
-Example with card header in card head
+```
+
+```hbs title=With-header-in-head
 {{#> card card--id="card-action-example-2"}}
   {{#> card-head}}
     {{#> card-actions}}
@@ -61,9 +60,9 @@ Example with card header in card head
     Footer
   {{/card-footer}}
 {{/card}}
-<br>
-<br>
-Example with only actions in card head (no header/footer)
+```
+
+```hbs title=With-only-actions-in-head-(no-header/footer)
 {{#> card card--id="card-action-example-3"}}
   {{#> card-head}}
     {{#> card-actions}}
@@ -76,9 +75,8 @@ Example with only actions in card head (no header/footer)
     This is the card body, there is only actions in the card head.
   {{/card-body}}
 {{/card}}
-<br>
-<br>
-Example with only image in the card head
+```
+```hbs title=With-only-image-in-head
 {{#> card}}
   {{#> card-head}}
     <span>img goes here</span>
