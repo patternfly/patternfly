@@ -1,10 +1,10 @@
-#ws-example-c-nav-basic,
-#ws-example-c-nav-grouped,
-#ws-example-c-nav-default,
-#ws-example-c-nav-expanded,
-#ws-example-c-nav-expanded-with-subnav-titles,
-#ws-example-c-nav-mixed,
-#ws-example-c-nav-horizontal-in-masthead,
-#ws-example-c-nav-horizontal-overflow-in-masthead {
+#ws-core-c-nav-basic,
+#ws-core-c-nav-grouped,
+#ws-core-c-nav-default,
+#ws-core-c-nav-expanded,
+#ws-core-c-nav-expanded-with-subnav-titles,
+#ws-core-c-nav-mixed,
+#ws-core-c-nav-horizontal-in-masthead,
+#ws-core-c-nav-horizontal-overflow-in-masthead {
   background-color: var(--pf-global--BackgroundColor--dark-300);
 }

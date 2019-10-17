@@ -1,13 +1,13 @@
-.ws-example-l-level .ws-preview-html {
+.ws-core-l-level .ws-preview-html {
   display: flex;
   flex-wrap: wrap;
   min-height: 160px;
 }
-.ws-example-l-level .pf-l-level__item,
-.ws-example-l-level .pf-l-level {
+.ws-core-l-level .pf-l-level__item,
+.ws-core-l-level .pf-l-level {
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
-.ws-example-l-level .pf-l-level {
+.ws-core-l-level .pf-l-level {
   width: 100%;
 }

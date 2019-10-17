@@ -3,7 +3,8 @@ const { src, dest, series, watch } = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('node-sass');
 const through2 = require('through2');
-const cleanCSS = require('gulp-clean-css');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
@@ -13,6 +14,13 @@ const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
 const stylelint = require('stylelint');
 
 const pficonFontName = 'pficon';
+const config = {
+  sourceFiles: [
+    './src/patternfly/patternfly*.scss',
+    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+    '!./src/patternfly/**/_all.scss'
+  ]
+};
 
 function pfIconFont() {
   return src(['./src/icons/PfIcons/*.svg'])
@@ -43,19 +51,15 @@ function copyFA() {
 
 function minifyCSS() {
   return src('./dist/patternfly.css')
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS())
     .pipe(rename('patternfly.min.css'))
+    .pipe(sourcemaps.init())
+    .pipe(postcss([cssnano()]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist'));
+    .pipe(dest('./dist'));
 }
 
 function compileSASS() {
-  return src([
-    './src/patternfly/patternfly*.scss',
-    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-    '!./src/patternfly/**/_all.scss'
-  ])
+  return src(config.sourceFiles)
     .pipe(
       through2.obj((chunk, _, cb2) => {
         const scss = chunk.contents.toString();
@@ -104,15 +108,19 @@ function watchSASS() {
 
 function copySource() {
   return Promise.all([
-    src('./README.md').pipe(dest('./dist')),
-    src('./package.json').pipe(dest('./dist')),
-    src('./tmp/**/*.scss').pipe(dest('./dist')),
+    // Copy source files
+    src(config.sourceFiles).pipe(dest('./dist')),
+    src('./src/patternfly/_*.scss').pipe(dest('./dist')),
+    src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
+    // Assets
     src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
     src('./src/patternfly/assets/**/*').pipe(dest('./dist/assets/')),
-    src('./build/npm-scripts/ie-conversion-utils.js').pipe(dest('./dist/scripts')),
     // Icons
     src('./src/icons/definitions/*').pipe(dest('./dist/icons/')),
-    src('./src/icons/PfIcons/*').pipe(dest('./dist/icons/PfIcons/'))
+    src('./src/icons/PfIcons/*').pipe(dest('./dist/icons/PfIcons/')),
+    // For NPM
+    src('./README.md').pipe(dest('./dist')),
+    src('./package.json').pipe(dest('./dist'))
   ]);
 }
 
@@ -136,7 +144,8 @@ module.exports = {
   buildIE,
   watchSASS,
   clean,
-  copy: copySource,
   pfIconFont,
-  pfIcons
+  pfIcons,
+  copyFA,
+  copySource
 };
