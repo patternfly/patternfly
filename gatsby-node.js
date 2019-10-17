@@ -27,9 +27,32 @@ exports.createSchemaCustomization = ({ actions }) => {
       hideTOC: Boolean
       optIn: String
       experimentalStage: String
+      propComponents: [String]
     }
     type Mdx implements Node @infer {
       frontmatter: MdxFrontmatter
+    }
+    type TypeType @infer {
+      name: String!
+    }
+    type TsType @infer {
+      name: String!
+      raw: String
+    }
+    type defaultValue @infer {
+      value: String!
+    }
+    type PropsType @infer {
+      name: String
+      description: String
+      required: Boolean
+      type: TypeType
+      tsType: TsType
+      defaultValue: defaultValue
+    }
+    type ComponentMetadata implements Node @infer {
+      name: String!
+      props: PropsType
     }
   `;
   actions.createTypes(typeDefs);
