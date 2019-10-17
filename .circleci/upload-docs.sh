@@ -2,13 +2,18 @@
 USERNAME=${CIRCLE_PROJECT_USERNAME}
 REPONAME=${CIRCLE_PROJECT_REPONAME}
 PR_NUM=${CIRCLE_PR_NUMBER}
+PR_BRANCH=${CIRCLE_BRANCH}
 
 if [ -n "${PR_NUM}" ] # If build is a PR
 then
   # Domain names follow the RFC1123 spec [a-Z] [0-9] [-] limited to 253 characters
   # https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax
   # So, just replace "/" or "." with "-"
-  DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-$PR_NUM" | tr '[\/|\.]' '-' | cut -c1-253`
+  DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${PR_NUM}" | tr '[\/|\.]' '-' | cut -c1-253`
+  ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
+elif [ "${PR_BRANCH}" = "master" ]
+then
+  DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${PR_BRANCH}" | tr '[\/|\.]' '-' | cut -c1-253`
   ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
 else
   DEPLOY_SUBDOMAIN=${REPONAME}
