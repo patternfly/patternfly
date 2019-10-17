@@ -28,6 +28,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       optIn: String
       experimentalStage: String
       propComponents: [String]
+      hideDarkMode: Boolean
     }
     type Mdx implements Node @infer {
       frontmatter: MdxFrontmatter
