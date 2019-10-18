@@ -9,7 +9,7 @@ import './DataToolbar.css'
 ```hbs title=Data-toolbar-attribute-value-search-filter-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-search-filter-desktop"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
@@ -26,40 +26,40 @@ import './DataToolbar.css'
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
-      {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-primary"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-link"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
-                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-              {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
-      {{/overflow-menu-content}}
-      {{#> overflow-menu-control}}
-        {{#> overflow-menu-dropdown-item}}
-          Action
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 1
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 2
-        {{/overflow-menu-dropdown-item}}
-      {{/overflow-menu-control}}
-    {{/overflow-menu}}
+    {{#> data-toolbar-item}}
+      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show" overflow-menu-dropdown-button-aria-expanded="true"}}
+        {{#> overflow-menu-content}}
+            {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+              {{#> overflow-menu-item}}
+                {{#> button button--modifier="pf-m-primary"}}
+                  Action
+                {{/button}}
+              {{/overflow-menu-item}}
+              {{#> overflow-menu-item}}
+                {{#> button button--modifier="pf-m-link"}}
+                  Action
+                {{/button}}
+              {{/overflow-menu-item}}
+              {{#> overflow-menu-item}}
+                {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                {{/button}}
+              {{/overflow-menu-item}}
+            {{/overflow-menu-group}}
+        {{/overflow-menu-content}}
+        {{#> overflow-menu-control}}
+          {{#> overflow-menu-dropdown-item}}
+            Action
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 1
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 2
+          {{/overflow-menu-dropdown-item}}
+        {{/overflow-menu-control}}
+      {{/overflow-menu}}
+    {{/data-toolbar-item}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
       {{#> pagination pagination--modifier="pf-m-compact"}}
         {{#> pagination-total-items}}
@@ -76,6 +76,7 @@ import './DataToolbar.css'
         {{/pagination-nav}}
       {{/pagination}}
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -86,40 +87,40 @@ import './DataToolbar.css'
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
-      {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+        {{#> overflow-menu-content}}
+          {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-primary"}}
                 Action
               {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
+            {{/overflow-menu-item}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-link"}}
                 Action
               {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
+            {{/overflow-menu-item}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
                 <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
               {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
-      {{/overflow-menu-content}}
-      {{#> overflow-menu-control}}
-        {{#> overflow-menu-dropdown-item}}
-          Action
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 1
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 2
-        {{/overflow-menu-dropdown-item}}
-      {{/overflow-menu-control}}
-    {{/overflow-menu}}
+            {{/overflow-menu-item}}
+          {{/overflow-menu-group}}
+        {{/overflow-menu-content}}
+        {{#> overflow-menu-control}}
+          {{#> overflow-menu-dropdown-item}}
+            Action
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 1
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 2
+          {{/overflow-menu-dropdown-item}}
+        {{/overflow-menu-control}}
+      {{/overflow-menu}}
+    {{/data-toolbar-item}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
       {{#> pagination pagination--modifier="pf-m-compact"}}
         {{#> pagination-total-items}}
@@ -159,7 +160,7 @@ import './DataToolbar.css'
 ```hbs title=Data-toolbar-attribute-value-single-select-filter-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-single-select-filter-desktop"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
@@ -174,40 +175,40 @@ import './DataToolbar.css'
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
-      {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show" overflow-menu-dropdown-button-aria-expanded="true"}}
+        {{#> overflow-menu-content}}
+          {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-primary"}}
                 Action
               {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
+            {{/overflow-menu-item}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-link"}}
                 Action
               {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
+            {{/overflow-menu-item}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
                 <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
               {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
-      {{/overflow-menu-content}}
-      {{#> overflow-menu-control}}
-        {{#> overflow-menu-dropdown-item}}
-          Action
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 1
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 2
-        {{/overflow-menu-dropdown-item}}
-      {{/overflow-menu-control}}
-    {{/overflow-menu}}
+            {{/overflow-menu-item}}
+          {{/overflow-menu-group}}
+        {{/overflow-menu-content}}
+        {{#> overflow-menu-control}}
+          {{#> overflow-menu-dropdown-item}}
+            Action
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 1
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 2
+          {{/overflow-menu-dropdown-item}}
+        {{/overflow-menu-control}}
+      {{/overflow-menu}}
+    {{/data-toolbar-item}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
       {{#> pagination pagination--modifier="pf-m-compact"}}
         {{#> pagination-total-items}}
@@ -224,6 +225,7 @@ import './DataToolbar.css'
         {{/pagination-nav}}
       {{/pagination}}
     {{/data-toolbar-item}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -234,40 +236,40 @@ import './DataToolbar.css'
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
-      {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
+    {{#> data-toolbar-item}}
+      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+        {{#> overflow-menu-content}}
+          {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-primary"}}
                 Action
               {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
+            {{/overflow-menu-item}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-link"}}
                 Action
               {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
+            {{/overflow-menu-item}}
+            {{#> overflow-menu-item}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
                 <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
               {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
-      {{/overflow-menu-content}}
-      {{#> overflow-menu-control}}
-        {{#> overflow-menu-dropdown-item}}
-          Action
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 1
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
-          Item 2
-        {{/overflow-menu-dropdown-item}}
-      {{/overflow-menu-control}}
-    {{/overflow-menu}}
+            {{/overflow-menu-item}}
+          {{/overflow-menu-group}}
+        {{/overflow-menu-content}}
+        {{#> overflow-menu-control}}
+          {{#> overflow-menu-dropdown-item}}
+            Action
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 1
+          {{/overflow-menu-dropdown-item}}
+          {{#> overflow-menu-dropdown-item}}
+            Item 2
+          {{/overflow-menu-dropdown-item}}
+        {{/overflow-menu-control}}
+      {{/overflow-menu}}
+    {{/data-toolbar-item}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
       {{#> pagination pagination--modifier="pf-m-compact"}}
         {{#> pagination-total-items}}
@@ -305,7 +307,7 @@ import './DataToolbar.css'
 ```hbs title=Data-toolbar-attribute-value-checkbox-select-filter-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-attribute-value-checkbox-select-filter-desktop"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
       {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
@@ -322,34 +324,32 @@ import './DataToolbar.css'
     {{/data-toolbar-group}}
     {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
       {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-primary"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-link"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
-                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-              {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
+        {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+          {{#> overflow-menu-item}}
+            {{#> button button--modifier="pf-m-primary"}}
+              Action
+            {{/button}}
+          {{/overflow-menu-item}}
+          {{#> overflow-menu-item}}
+            {{#> button button--modifier="pf-m-link"}}
+              Action
+            {{/button}}
+          {{/overflow-menu-item}}
+          {{#> overflow-menu-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+              <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+            {{/button}}
+          {{/overflow-menu-item}}
+        {{/overflow-menu-group}}
       {{/overflow-menu-content}}
       {{#> overflow-menu-control}}
         {{#> overflow-menu-dropdown-item}}
           Action
         {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+        {{#> overflow-menu-dropdown-item}}
           Item 1
         {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+        {{#> overflow-menu-dropdown-item}}
           Item 2
         {{/overflow-menu-dropdown-item}}
       {{/overflow-menu-control}}
@@ -421,34 +421,32 @@ import './DataToolbar.css'
     {{/data-toolbar-group}}
     {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
       {{#> overflow-menu-content}}
-        {{#> overflow-menu-item}}
-          {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-primary"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-link"}}
-                Action
-              {{/button}}
-            {{/data-toolbar-item}}
-            {{#> data-toolbar-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
-                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-              {{/button}}
-            {{/data-toolbar-item}}
-          {{/data-toolbar-group}}
-        {{/overflow-menu-item}}
+        {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+          {{#> overflow-menu-item}}
+            {{#> button button--modifier="pf-m-primary"}}
+              Action
+            {{/button}}
+          {{/overflow-menu-item}}
+          {{#> overflow-menu-item}}
+            {{#> button button--modifier="pf-m-link"}}
+              Action
+            {{/button}}
+          {{/overflow-menu-item}}
+          {{#> overflow-menu-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+              <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+            {{/button}}
+          {{/overflow-menu-item}}
+        {{/overflow-menu-group}}
       {{/overflow-menu-content}}
       {{#> overflow-menu-control}}
         {{#> overflow-menu-dropdown-item}}
           Action
         {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+        {{#> overflow-menu-dropdown-item}}
           Item 1
         {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item overflow-menu-dropdown-item--IsShared="true"}}
+        {{#> overflow-menu-dropdown-item}}
           Item 2
         {{/overflow-menu-dropdown-item}}
       {{/overflow-menu-control}}
