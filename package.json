@@ -83,7 +83,7 @@
     "fs-extra": "^5.0.0",
     "gatsby": "^2.16.5",
     "gatsby-source-filesystem": "^2.1.22",
-    "gatsby-theme-patternfly-org": "^0.0.15",
+    "gatsby-theme-patternfly-org": "^0.0.16",
     "glob": "^7.1.2",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
