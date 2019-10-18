@@ -440,7 +440,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td}}{{/table-td}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
+      {{#> table-td table-td--attribute=(concat 'colSpan="4" id="' table--id '-content1"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -477,7 +477,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
+      {{#> table-td table-td--attribute=(concat 'colSpan="7" id="' table--id '-content2"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -514,7 +514,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content3"')}}
+      {{#> table-td table-td--attribute=(concat 'colSpan="7" id="' table--id '-content3"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -550,7 +550,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content4"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colSpan="7" id="' table--id '-content4"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
         {{/table-expandable-row-content}}
@@ -646,21 +646,21 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-1')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-2')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-3')}}
         {{/table-nested}}
       {{/table-td}}
@@ -709,21 +709,21 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-4')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-5')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-6')}}
         {{/table-nested}}
       {{/table-td}}
@@ -772,21 +772,21 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-7')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-8')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colSpan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-9')}}
         {{/table-nested}}
       {{/table-td}}
@@ -1179,7 +1179,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td}}{{/table-td}}
       {{#> table-td}}{{/table-td}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
+      {{#> table-td table-td--attribute=(concat 'colSpan="4" id="' table--id '-content1"')}}
         <div class="pf-c-table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
@@ -1213,7 +1213,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colSpan="7" id="' table--id '-content2"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1246,7 +1246,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content3"')}}
+      {{#> table-td table-td--attribute=(concat 'colSpan="7" id="' table--id '-content3"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1279,7 +1279,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content4"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colSpan="7" id="' table--id '-content4"')}}
         {{#> table-expandable-row-content}}
           This content has no padding.
         {{/table-expandable-row-content}}
@@ -1312,7 +1312,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content5"')}}
+      {{#> table-td table-td--attribute=(concat 'colSpan="7" id="' table--id '-content5"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
