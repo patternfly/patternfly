@@ -28,3 +28,7 @@
 #ws-core-c-select-checkbox-expanded-and-selected-with-groups {
   min-height: 460px;
 }
+
+#ws-core-c-select-panel {
+  min-height: 120px;
+}
