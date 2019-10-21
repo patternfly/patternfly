@@ -62,8 +62,6 @@ _This example uses the following configuration:_
 ```json
   "gulp": "^3.9.1",
   "gulp-insert": "^0.5.0",
-  "gulp-sass": "^3.1.0",
-  "gulp-sass-glob": "^1.0.8"
 ```
 
 _Code Snippet_

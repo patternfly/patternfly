@@ -1,0 +1,35 @@
+#ws-core-c-dropdown-expanded,
+#ws-core-c-dropdown-kebab,
+#ws-core-c-dropdown-kebab-align-right,
+#ws-core-c-dropdown-align-right,
+#ws-core-c-dropdown-align-top,
+#ws-core-c-dropdown-primary-toggle {
+  min-height: 310px;
+}
+
+#ws-core-c-dropdown-kebab-align-right,
+#ws-core-c-dropdown-align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ws-core-c-dropdown-align-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-core-c-dropdown-with-groups {
+  min-height: 440px;
+}
+
+#ws-core-c-dropdown-split-button {
+  min-height: 210px;
+}
+
+#ws-core-c-dropdown-split-button .pf-c-dropdown:not(:last-child) {
+  margin-right: 4px;
+}
+
+#ws-core-c-dropdown-panel {
+  min-height: 130px;
+}

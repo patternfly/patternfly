@@ -2,6 +2,7 @@
 const selenium = require('selenium-webdriver');
 const AxeBuilder = require('axe-webdriverjs');
 
+// eslint-disable-next-line
 const sitemap = require('../sitemap');
 const { errorsExceedThreshold } = require('./utils');
 const { pfReporter } = require('./a11yViolationsReporter');

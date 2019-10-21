@@ -1,3 +1,6 @@
+// Don't remove this magic comment. See gulpfile.js.
+// @import "../../sass-utilities/all";
+
 .pf-c-select {
   @include pf-t-light; // force the container follow the light theme
 
@@ -247,8 +250,6 @@
 
   .pf-c-select__toggle-button {
     color: var(--pf-c-select__toggle-button--Color);
-
-    &:disabled { background-color: transparent; }
   }
 
   .pf-c-select__toggle-clear + .pf-c-select__toggle-button {

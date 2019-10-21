@@ -10,7 +10,6 @@ references:
   - dist/
   - public/
   - src/icons/PfIcons/
-  - tmp/
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "package-lock.json"}}
   attach_workspace: &attach_workspace
@@ -64,7 +63,7 @@ jobs:
         command: npm run build:ie11
     - run:
         name: Build Site
-        command: npm run build
+        command: npm run build:site
     - persist_to_workspace:
         root: ~/project
         paths: *build_cache_paths

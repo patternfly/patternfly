@@ -1,37 +1,25 @@
-const { src, dest, series } = require('gulp');
+const path = require('path');
+const { src, dest, series, watch } = require('gulp');
 const rename = require('gulp-rename');
-const replace = require('gulp-string-replace');
-const sass = require('gulp-sass');
-const sassGlob = require('gulp-sass-glob');
-const cssnano = require('gulp-cssnano');
+const sass = require('node-sass');
+const through2 = require('through2');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
-const gulpStylelint = require('gulp-stylelint');
 const iconfontCss = require('gulp-iconfont-css');
 const fs = require('fs-extra');
-const header = require('gulp-header');
-const experimentalFeatures = require('./experimental-features');
+const generateIcons = require('./src/icons/generateIcons.js');
+const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
+const stylelint = require('stylelint');
 
-const pficonRunTimestamp = Math.round(Date.now() / 1000);
 const pficonFontName = 'pficon';
-const conf = {
-  dirs: {
-    build: ['./dist', './tmp', './src/icons/PfIcons']
-  },
-  files: {
-    tmpSrc: [
-      './dist/patternfly-variables.scss',
-      './dist/patternfly-themes.scss',
-      './dist/patternfly-shield-noninheritable.scss',
-      './dist/patternfly-shield-inheritable.scss',
-      './dist/patternfly-pf-icons.scss',
-      './dist/patternfly-icons.scss',
-      './dist/patternfly-globals.scss',
-      './dist/patternfly-fonts.scss',
-      './dist/patternfly-fa-icons.scss',
-      './dist/patternfly-common.scss'
-    ]
-  }
+const config = {
+  sourceFiles: [
+    './src/patternfly/patternfly*.scss',
+    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+    '!./src/patternfly/**/_all.scss'
+  ]
 };
 
 function pfIconFont() {
@@ -49,114 +37,115 @@ function pfIconFont() {
       iconfont({
         fontName: pficonFontName,
         formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
-        timestamp: pficonRunTimestamp
+        timestamp: Math.round(Date.now() / 1000)
       })
     )
     .pipe(dest('./src/patternfly/assets/pficon/'));
 }
 
 function copyFA() {
-  return src('./node_modules/@fortawesome/fontawesome/styles.css')
+  return src(require.resolve('@fortawesome/fontawesome/styles.css'))
     .pipe(rename('fontawesome.css'))
     .pipe(dest('./dist/assets/icons'));
 }
 
-function tmp() {
-  const experiments = [];
-  experimentalFeatures.forEach(item => {
-    experiments.push(`**/${item.path}/*.scss`);
-  });
-  return src(['./src/patternfly/**/*.scss', '!./src/patternfly/**/examples/*.scss'])
-    .pipe(
-      sassGlob({
-        ignorePaths: ['**/examples/*.scss', ...experiments]
-      })
-    )
-    .pipe(dest('./tmp'));
-}
-
-function library() {
-  return src(['./tmp/patternfly*.scss', '!./tmp/patternfly-imports.scss'])
-    .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./dist'));
-}
-
-function lintCSS() {
-  const options = { logs: false };
-  return src('./dist/patternfly.css')
-    .pipe(replace('stylelint-enable', '', options))
-    .pipe(replace('stylelint-disable', '', options))
-    .pipe(
-      gulpStylelint({
-        failAfterError: true,
-        configFile: './.cssstylelint',
-        defaultSeverity: 'error',
-        reporters: [{ formatter: 'string', console: true }]
-      })
-    );
-}
-
 function minifyCSS() {
   return src('./dist/patternfly.css')
-    .pipe(sourcemaps.init())
-    .pipe(cssnano())
     .pipe(rename('patternfly.min.css'))
+    .pipe(sourcemaps.init())
+    .pipe(postcss([cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./dist'));
 }
 
-function modules() {
-  return src([
-    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-    '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
-  ])
-    .pipe(header('@import "../../patternfly-imports";'))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(replace('./assets/images', '../../assets/images'))
+function compileSASS() {
+  return src(config.sourceFiles)
+    .pipe(
+      through2.obj((chunk, _, cb2) => {
+        const scss = chunk.contents.toString();
+        try {
+          const css = sass.renderSync({
+            // Pass filename for import resolution. Contents are not compiled.
+            file: chunk.history[0],
+            // This hack is to not include sass-utilities/placeholders.scss CSS more than once
+            // in our production patternfly.css BUT still be able to compile individual SCSS files.
+            // As soon as node-sass is updated to a libsass version that supports @use rule, we should
+            // change `// @import "../../sass-utilities/all";` to `@use "../../sass-utilities/all";`
+            data: scss.replace('// @import "../../sass-utilities/all";', '@import "../../sass-utilities/all";')
+          });
+          chunk.contents = Buffer.from(css.css);
+
+          stylelint
+            .lint({
+              files: chunk.history[0],
+              formatter: 'string'
+            })
+            .then(data => {
+              if (data.errored) {
+                console.error(data.output);
+              }
+            });
+        } catch (error) {
+          console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}: ${error}`);
+        }
+
+        chunk.history.push(chunk.history[0].replace(/.scss$/, '.css'));
+        cb2(null, chunk);
+      })
+    )
     .pipe(dest('./dist'));
+}
+
+function watchSASS() {
+  module.exports.build();
+  // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
+  watch(
+    ['./src/patternfly/patternfly*.scss', './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'],
+    {},
+    compileSASS
+  );
 }
 
 function copySource() {
   return Promise.all([
-    src('./README.md').pipe(dest('./dist')),
-    src('./package.json').pipe(dest('./dist')),
-    src('./tmp/**/*.scss').pipe(dest('./dist')),
-    src('./static/assets/images/**/*.*').pipe(dest('./dist/assets/images/')),
-    src('./src/patternfly/assets/**/*.*').pipe(dest('./dist/assets/')),
-    src('./build/npm-scripts/ie-conversion-utils.js').pipe(dest('./dist/scripts')),
+    // Copy source files
+    src(config.sourceFiles).pipe(dest('./dist')),
+    src('./src/patternfly/_*.scss').pipe(dest('./dist')),
+    src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
+    // Assets
+    src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
+    src('./src/patternfly/assets/**/*').pipe(dest('./dist/assets/')),
     // Icons
-    src('./src/icons/definitions/**/*.*').pipe(dest('./dist/icons/')),
-    src('./src/icons/PfIcons/**/*.*').pipe(dest('./dist/icons/PfIcons/'))
+    src('./src/icons/definitions/*').pipe(dest('./dist/icons/')),
+    src('./src/icons/PfIcons/*').pipe(dest('./dist/icons/PfIcons/')),
+    // For NPM
+    src('./README.md').pipe(dest('./dist')),
+    src('./package.json').pipe(dest('./dist'))
   ]);
 }
 
-function preClean(cb) {
-  conf.dirs.build.forEach(dir => fs.removeSync(dir));
+function clean(cb) {
+  ['./dist', './src/icons/PfIcons'].forEach(dir => fs.removeSync(dir));
   cb();
 }
 
-function postClean(cb) {
-  conf.files.tmpSrc.forEach(dir => fs.removeSync(dir));
-  cb();
+function pfIcons() {
+  return generateIcons();
 }
 
-function pfIcons(cb) {
-  // eslint-disable-next-line global-require
-  require('./src/icons/generateIcons.js');
-  cb();
-}
-
-function ie(cb) {
-  // eslint-disable-next-line global-require
-  require('./build/npm-scripts/ie-convert-all.js');
-  cb();
+function buildIE() {
+  return convertForIE();
 }
 
 module.exports = {
-  build: series(preClean, pfIcons, modules, tmp, copyFA, copySource, library, minifyCSS, lintCSS, postClean),
-  preClean,
-  postClean,
+  build: series(clean, compileSASS, minifyCSS, pfIcons, copyFA, copySource),
+  compileSASS,
+  minifyCSS,
+  buildIE,
+  watchSASS,
+  clean,
   pfIconFont,
   pfIcons,
-  ie
+  copyFA,
+  copySource
 };
