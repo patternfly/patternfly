@@ -4,3 +4,7 @@
 #ws-core-d-datatoolbar-data-toolbar-attribute-value-checkbox-select-filter-mobile {
   min-height: 400px;
 }
+
+#ws-core-d-datatoolbar-data-toolbar-attribute-value-search-filter-mobile {
+  min-height: 175px;
+}
