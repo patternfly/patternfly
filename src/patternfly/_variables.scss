@@ -152,6 +152,7 @@
   --pf-global--FontFamily--monospace: #{$pf-global--FontFamily--monospace};
   --pf-global--FontFamily--redhatfont--sans-serif: #{$pf-global--FontFamily--redhatfont--sans-serif};
   --pf-global--FontFamily--redhatfont--heading--sans-serif: #{$pf-global--FontFamily--redhatfont--heading--sans-serif};
+  --pf-global--FontFamily--redhatfont--monospace: #{$pf-global--FontFamily--redhatfont--monospace};
 
   // Font size
   --pf-global--FontSize--4xl: #{$pf-global--FontSize--4xl};
@@ -193,6 +194,7 @@
 @include pf-m-redhat-font {
   --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhatfont--sans-serif);
   --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatfont--heading--sans-serif);
+  --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhatfont--monospace);
   --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--redhatfont--bold);
   --pf-global--FontWeight--bold: var(--pf-global--FontWeight--redhatfont--bold);
   --pf-global--link--FontWeight: var(--pf-global--FontWeight--normal);
