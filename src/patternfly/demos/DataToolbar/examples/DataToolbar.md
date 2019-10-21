@@ -88,7 +88,7 @@ import './DataToolbar.css'
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
     {{#> data-toolbar-item}}
-      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu-dropdown-button-aria-expanded="true"}}
         {{#> overflow-menu-content}}
           {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
             {{#> overflow-menu-item}}
@@ -288,12 +288,12 @@ import './DataToolbar.css'
     {{/data-toolbar-item}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+      {{#> data-toolbar-item}}
         {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+      {{#> data-toolbar-item}}
         {{#> select id=(concat data-toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
           Stopped
         {{/select}}
@@ -469,12 +469,12 @@ import './DataToolbar.css'
     {{/data-toolbar-item}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--modifier="pf-m-reveal-on-lg" data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+      {{#> data-toolbar-item}}
         {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-shared-item"}}
+      {{#> data-toolbar-item}}
         {{#> select id=(concat data-toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
           Filter by status
         {{/select}}
