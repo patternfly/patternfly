@@ -268,6 +268,7 @@
 
 .pf-c-options-menu__menu-item-icon {
   align-self: center;
+  width: auto; // this allows the padding to apply when this class is used with an svg element
   padding-left: var(--pf-c-options-menu__menu-item-icon--PaddingLeft);
   margin-left: auto;
   font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
@@ -276,7 +277,6 @@
 
 // remove this block at breaking change period
 .pf-c-options-menu__separator {
-  width: auto; // this allows the padding to apply when this class is used with an svg element
   height: var(--pf-c-options-menu__separator--Height);
   margin-top: var(--pf-c-options-menu__separator--MarginTop);
   margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
