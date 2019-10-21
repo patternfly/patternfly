@@ -237,7 +237,7 @@ import './DataToolbar.css'
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
     {{#> data-toolbar-item}}
-      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+      {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu-dropdown-button-aria-expanded="true"}}
         {{#> overflow-menu-content}}
           {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
             {{#> overflow-menu-item}}
@@ -322,7 +322,7 @@ import './DataToolbar.css'
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show" overflow-menu-dropdown-button-aria-expanded="true"}}
       {{#> overflow-menu-content}}
         {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
           {{#> overflow-menu-item}}
@@ -419,7 +419,7 @@ import './DataToolbar.css'
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
       {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
     {{/data-toolbar-group}}
-    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu--modifier="pf-m-show-on-xl" overflow-menu-dropdown-button-aria-expanded="true"}}
+    {{#> overflow-menu overflow-menu-button--aria-label="Expand overflown menu" overflow-menu--id=(concat data-toolbar--id '-overflow-menu') overflow-menu-dropdown-button-aria-expanded="true"}}
       {{#> overflow-menu-content}}
         {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
           {{#> overflow-menu-item}}
