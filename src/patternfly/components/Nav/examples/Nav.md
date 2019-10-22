@@ -7,82 +7,6 @@ cssPrefix: pf-c-nav
 import './Nav.css'
 
 ## Examples
-```hbs title=Basic
-{{#> nav nav--attribute='id="nav-primary-simple" aria-label="Global"' nav--modifier="pf-m-dark"}}
-  {{#> nav-list nav-list--type="simple"}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Current link
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> divider divider--type="li"}}{{/divider}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 4
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
-```
-
-```hbs title=Grouped
-{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
-  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
-    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
-      Section title 1
-    {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple"}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 1
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Disabled link
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 3
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav-section}}
-  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
-    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
-      Section title 2
-    {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple"}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-          Current link
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 2
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 3
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav-section}}
-{{/nav}}
-```
 
 ```hbs title=Default
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
@@ -109,6 +33,55 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
+{{/nav}}
+```
+
+```hbs title=Grouped
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+      Section title 1
+    {{/nav-section-title}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Disabled link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+      Section title 2
+    {{/nav-section-title}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 2
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
 {{/nav}}
 ```
 
@@ -150,11 +123,6 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
-        {{!--
-        {{#> nav-subnav-title}}
-          Expanded, but not current example sub-navigation
-        {{/nav-subnav-title}}
-        --}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
@@ -175,11 +143,6 @@ import './Nav.css'
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
-        {{!--
-        {{#> nav-subnav-title}}
-          Link 3 sub-navigation
-        {{/nav-subnav-title}}
-        --}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
@@ -446,7 +409,7 @@ import './Nav.css'
 The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
-* `.pf-c-nav__simple-list` - nav list simple is a shareable component this is used with grouped navigation and as secondary navigation.
+* `.pf-c-nav__simple-list` - nav list simple is used within `.pf-c-nav__subnav` in expandable navigation.
 * `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
 * `.pf-c-nav__tertiary-list` - nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
 
@@ -465,6 +428,7 @@ The navigation system relies on several different sub-components:
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element. |
+| `.pf-c-nav__subnav` | `<section>` | Initiates a subnav section. |
 | `.pf-c-nav__list` | `<ul>` | Initiates default nav list. |
 | `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list. |
 | `.pf-c-nav__item` | `<li>` | Initiates default nav list item. |

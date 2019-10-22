@@ -4,7 +4,7 @@ section: demos
 ---
 
 ## Demos
-```hbs title=Default-nav-header isFullscreen
+```hbs title=Default-nav isFullscreen
 {{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
 ```
 
@@ -247,7 +247,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel
         {{/nav-section-title}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Overview
@@ -284,7 +284,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
           Policy
         {{/nav-section-title}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Hosts
@@ -321,11 +321,11 @@ section: demos
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-legacy-nav-separators-example" page--IsLegacySeparators="true" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Legacy-sidebar-nav-(light-themed) isFullscreen
+```hbs title=Light-theme-sidebar-and-nav isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Legacy-sidebar-and-nav-(light-themed)-and-legacy-nav-separators isFullscreen
+```hbs title=Light-theme-sidebar-and-nav-and-legacy-nav-separators isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
 ```
 
