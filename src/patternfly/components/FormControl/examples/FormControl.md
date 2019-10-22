@@ -15,7 +15,7 @@ cssPrefix: pf-c-form-control
 {{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="textInput4" aria-invalid="true" aria-label="Error state input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-validated" form-control--attribute='type="text" value="Validated" id="textInput4" aria-label="Validated state input example"'}}
+{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="textInput4" aria-label="Success state input example"'}}
 {{/form-control}}
 <br /><br />
 {{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="textInput1" aria-label="Disabled input example"'}}
@@ -56,7 +56,7 @@ cssPrefix: pf-c-form-control
   </optgroup>
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="select" form-control--modifier="pf-m-validated" form-control--attribute='id="selectExample3" name="selectExample3" aria-label="Validated state select group example"'}}
+{{#> form-control controlType="select" form-control--modifier="pf-m-success" form-control--attribute='id="selectExample3" name="selectExample3" aria-label="Success state select group example"'}}
   <option value="">Valid option</option>
   <optgroup label="Group 1">
     <option value="Option 1">Valid option</option>
@@ -82,8 +82,8 @@ Readonly
 Error
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="textarea" form-control--modifier="pf-m-validated" form-control--attribute='name="textarea" id="textareavalidated" aria-label="Validated state textarea example"'}}
-Validated
+{{#> form-control controlType="textarea" form-control--modifier="pf-m-success" form-control--attribute='name="textarea" id="textareasuccess" aria-label="Success state textarea example"'}}
+Success
 {{/form-control}}
 <br /><br />
 {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea3" aria-label="Resize vertical textarea example"' form-control--modifier="pf-m-resize-vertical"}}
@@ -105,4 +105,4 @@ Input, textarea, and select are provided in the form controls component for use 
 | `.pf-c-form-control` | `<input>`,`<textarea>`, `<select>` |  Initiates an input, textarea or select. For styling of checkboxes or radios see the [check component](../../Check/examples/). **Required**  |
 | `.pf-m-resize-vertical` | `textarea.pf-c-form-control` | Modifies a `<textarea>` element to resize vertically. |
 | `.pf-m-resize-horizontal` | `textarea.pf-c-form-control` | Modifies a `<textarea>` element to resize horizontally. |
-| `.pf-m-validated` | `.pf-c-form-control` | Modifies a form control for the validated state. |
+| `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. |
