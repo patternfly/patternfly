@@ -4,6 +4,7 @@
 .pf-c-accordion {
   // accordion
   --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-accordion--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-accordion--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-accordion--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-accordion--PaddingBottom: var(--pf-global--spacer--xl);
