@@ -18,7 +18,8 @@
   align-items: flex-end;
 }
 
-#ws-core-c-dropdown-with-groups {
+#ws-core-c-dropdown-with-groups,
+#ws-core-c-dropdown-with-groups-and-separators {
   min-height: 440px;
 }
 

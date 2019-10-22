@@ -93,8 +93,10 @@
   --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm); // remove at breaking change
 
   // Groups
-  --pf-c-dropdown__group--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-dropdown__group--first-child--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__group--PaddingTop: 0; // remove at breaking change
+  --pf-c-dropdown__group--group--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__group--first-child--PaddingTop: 0; // remove at breaking change
+  --pf-c-dropdown__group-title--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__group-title--PaddingRight: var(--pf-c-dropdown__menu-item--PaddingRight);
   --pf-c-dropdown__group-title--PaddingBottom: var(--pf-c-dropdown__menu-item--PaddingBottom);
   --pf-c-dropdown__group-title--PaddingLeft: var(--pf-c-dropdown__menu-item--PaddingLeft);
@@ -362,17 +364,27 @@
   margin-top: var(--pf-c-dropdown__separator--MarginTop);
   margin-bottom: var(--pf-c-dropdown__separator--MarginBottom);
   background-color: var(--pf-c-dropdown__separator--BackgroundColor);
+  border: 0; // for use when separator is an <hr>
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .pf-c-dropdown__group {
-  padding-top: var(--pf-c-dropdown__group--PaddingTop);
+  padding-top: var(--pf-c-dropdown__group--PaddingTop); // remove at breaking change
 
   &:first-child {
-    --pf-c-dropdown__group--PaddingTop: var(--pf-c-dropdown__group--first-child--PaddingTop);
+    --pf-c-dropdown__group--PaddingTop: var(--pf-c-dropdown__group--first-child--PaddingTop); // remove at breaking change
+  }
+
+  & + & {
+    --pf-c-dropdown__group--PaddingTop: var(--pf-c-dropdown__group--group--PaddingTop);
   }
 }
 
 .pf-c-dropdown__group-title {
+  padding-top: var(--pf-c-dropdown__group-title--PaddingTop);
   padding-right: var(--pf-c-dropdown__group-title--PaddingRight);
   padding-bottom: var(--pf-c-dropdown__group-title--PaddingBottom);
   padding-left: var(--pf-c-dropdown__group-title--PaddingLeft);

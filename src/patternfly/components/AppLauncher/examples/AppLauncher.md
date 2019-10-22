@@ -12,16 +12,18 @@ import './AppLauncher.css'
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    {{#> app-launcher-separator}}{{/app-launcher-separator}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
 ```
 
-```hbs title=Disabled 
+```hbs title=Disabled
 {{#> app-launcher app-launcher--IsDisabled="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    {{#> app-launcher-separator}}{{/app-launcher-separator}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
@@ -32,6 +34,7 @@ import './AppLauncher.css'
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    {{#> app-launcher-separator}}{{/app-launcher-separator}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
@@ -42,6 +45,7 @@ import './AppLauncher.css'
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    {{#> app-launcher-separator}}{{/app-launcher-separator}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
@@ -52,6 +56,7 @@ import './AppLauncher.css'
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    {{#> app-launcher-separator}}{{/app-launcher-separator}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
@@ -74,7 +79,7 @@ import './AppLauncher.css'
         </li>
       </ul>
     {{/app-launcher-group}}
-    {{#> divider}}{{/divider}}
+    {{#> app-launcher-separator app-launcher-separator--IsHr="true"}}{{/app-launcher-separator}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}
         Group 1
@@ -102,9 +107,9 @@ import './AppLauncher.css'
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
+        {{#> app-launcher-separator}}{{/app-launcher-separator}}
       </ul>
     {{/app-launcher-group}}
-    {{#> divider}}{{/divider}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}
         Group 2

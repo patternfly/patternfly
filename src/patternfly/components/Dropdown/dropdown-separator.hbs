@@ -1,0 +1,10 @@
+<{{#if dropdown-separator--IsHr}}hr{{else}}li{{/if}} class="pf-c-dropdown__separator{{#if dropdown-separator--modifier}} {{dropdown-separator--modifier}}{{/if}}"
+  {{#if dropdown-separator--attribute}}
+	  {{{dropdown-separator--attribute}}}
+  {{/if}}
+  {{#unless dropdown-separator--IsHr}}
+    role="separator"
+  {{/unless}}>
+{{#unless dropdown-separator--IsHr}}
+</li>
+{{/unless}}
