@@ -4,9 +4,7 @@
   {{#if select--attribute}}
     {{{select--attribute}}}
   {{/if}}>
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">January</button></li>
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">February</button></li>
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">March</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Running</button></li>
   <li>
     <button class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
       {{#if select--ItemIsSelected}}
@@ -14,12 +12,13 @@
       {{else}}
         aria-pressed="false"
       {{/if}}>
-      April
+      Stopped
       {{#if select--ItemIsSelected}}
         {{#> select-menu-item-icon}}{{/select-menu-item-icon}}
       {{/if}}
     </button>
   </li>
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">May</button></li>
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">June</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Down</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Degraded</button></li>
+  <li><button class="pf-c-select__menu-item" aria-pressed="false">Needs Maintenance</button></li>
 </ul>
