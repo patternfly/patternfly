@@ -91,10 +91,10 @@ cssPrefix: pf-c-form
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-comment"')}}
       Comment
     {{/form-label}}
-    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-validated" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id '-simple-form-comment" name="' form--id '-simple-form-comment" aria-describedby="' form--id '-simple-form-comment-help"')}}
+    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id '-simple-form-comment" name="' form--id '-simple-form-comment" aria-describedby="' form--id '-simple-form-comment-help"')}}
     {{/form-control}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-validated" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-comment-help" aria-live="polite"')}}
-      This is helper text for validated input
+    {{#> form-helper-text form-helper-text--modifier="pf-m-success" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-comment-help" aria-live="polite"')}}
+      This is helper text for success input
     {{/form-helper-text}}
   {{/form-group}}
 {{/form}}
@@ -140,7 +140,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text. |
-| `.pf-m-validated` | `.pf-c-form__helper-text` | Modifies text color of helper text. |
+| `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text. |
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
