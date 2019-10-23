@@ -87,10 +87,10 @@
   --pf-c-dropdown__c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // Menu Item Separator
-  --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm); // remove this var at breaking change
-  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BorderColor--100); // remove this var at breaking change
-  --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm); // remove at breaking change
-  --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm); // remove at breaking change
+  --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BorderColor--100);
+  --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm);
 
   // Groups
   --pf-c-dropdown__group--PaddingTop: 0; // remove at breaking change
@@ -358,7 +358,6 @@
   }
 }
 
-// remove this block at breaking change period
 .pf-c-dropdown__separator {
   height: var(--pf-c-dropdown__separator--Height);
   margin-top: var(--pf-c-dropdown__separator--MarginTop);
