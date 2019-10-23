@@ -136,9 +136,22 @@
 }
 
 .pf-c-accordion__expanded-content {
-  position: relative;
   font-size: var(--pf-c-accordion__expanded-content--FontSize);
   color: var(--pf-c-accordion__expanded-content--Color);
+
+  &.pf-m-fixed {
+    max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
+    overflow-y: auto;
+  }
+
+  &.pf-m-expanded {
+    --pf-c-accordion__expanded-content--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
+  }
+}
+
+.pf-c-accordion__expanded-content-body {
+  position: relative;
+  padding: var(--pf-c-accordion__expanded-content-body--PaddingTop) var(--pf-c-accordion__expanded-content-body--PaddingRight) var(--pf-c-accordion__expanded-content-body--PaddingBottom) var(--pf-c-accordion__expanded-content-body--PaddingLeft);
 
   &::before {
     position: absolute;
@@ -148,18 +161,5 @@
     width: var(--pf-c-accordion__expanded-content--m-expanded--BorderWidth);
     content: "";
     background-color: var(--pf-c-accordion__expanded-content--BorderLeftColor);
-  }
-
-  .pf-c-accordion__expanded-content-body {
-    padding: var(--pf-c-accordion__expanded-content-body--PaddingTop) var(--pf-c-accordion__expanded-content-body--PaddingRight) var(--pf-c-accordion__expanded-content-body--PaddingBottom) var(--pf-c-accordion__expanded-content-body--PaddingLeft);
-  }
-
-  &.pf-m-fixed {
-    max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
-    overflow-y: auto;
-  }
-
-  &.pf-m-expanded {
-    --pf-c-accordion__expanded-content--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
   }
 }
