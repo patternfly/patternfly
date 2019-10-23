@@ -157,7 +157,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
-| `.pf-c-dropdown__separator` | `<li>`, `<h4>` | Defines a separator within the menu. |
+| `.pf-c-dropdown__separator` | `<li>`, `<hr>` | Defines a separator within the menu. |
 | `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
 | `.pf-c-dropdown__group-title` | `<h1>` | Defines the title for a group of items in the dropdown menu. |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state. |
