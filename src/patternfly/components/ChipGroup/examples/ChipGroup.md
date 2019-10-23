@@ -155,9 +155,7 @@ cssPrefix: pf-c-chip-group
         {{/button}}
       {{/chip}}
     {{/chip-group}}
-    {{#> chip-group-action chip-group-action--text="Close" chip-group-action--attribute=(concat 'aria-labelledby="' chip-group--id '-remove_chip_five_select ' chip-group--id 'chip_five_select" aria-label="Remove" id="' chip-group--id '-remove_chip_five_select"')}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/chip-group-action}}
+    {{> chip-group-close}}
   {{/chip-group-list-item}}
 {{/chip-group}}
 ```
@@ -171,10 +169,15 @@ The chip group requires the [chip component](../../Chip/examples).
 
 ## Accessibility
 
-| Attributes for closable group action | Applied to | Outcome |
+| Attributes for closable chip group button | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-c-chip-group__action` |  Provides an accessible name for a chip group action when an icon is used instead of text. Required when an icon is used with no supporting text. |
-| `aria-labelledby="[id value of .pf-c-chip-group__label] [id value of .pf-c-chip-group__action]"` | `.pf-c-chip-group__action` | Gives the action an accessible name by referring to the element that provides the position of the. |
+| `aria-label="[button label text]"` | `.pf-c-chip-group__close > button` |  Provides an accessible name for a chip group close when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
+| `aria-labelledby="[id value of .pf-c-chip-group__close > button] [id value of .pf-c-chip-group__label]"` | `.pf-c-chip-group__close > button` | Provides an accessible name for the button. **Required** |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-chip-group__close` | `<div>` | Initiates the container used to close chip group. **Required.** |
 
 The chip group requires the [chip component](../../Chip/examples).
 
