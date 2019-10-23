@@ -46,6 +46,7 @@
 
   // States
   --pf-c-form--m-error--Color: var(--pf-global--danger-color--100);
+  --pf-c-form--m-success--Color: var(--pf-global--success-color--200);
 
 
   display: grid;
@@ -158,13 +159,14 @@
 
 .pf-c-form__helper-text {
   font-size: var(--pf-c-form__helper-text--FontSize);
-
-  &:not(.pf-m-error) {
-    color: var(--pf-c-form__helper-text--Color);
-  }
+  color: var(--pf-c-form__helper-text--Color);
 
   &.pf-m-error {
-    color: var(--pf-c-form--m-error--Color);
+    --pf-c-form__helper-text--Color: var(--pf-c-form--m-error--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-form__helper-text--Color: var(--pf-c-form--m-success--Color);
   }
 
   &.pf-m-inactive {
