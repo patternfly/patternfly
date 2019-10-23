@@ -5,7 +5,7 @@ cssPrefix: pf-c-chip-group
 ---
 
 ## Examples
-```hbs title=Toolbar-collapsed
+```hbs title=Collapsed
 {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-collapsed"}}
   {{#> chip-group-list-item }}
     {{#> chip-group-label}}
@@ -56,7 +56,7 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Toolbar-expanded
+```hbs title=Expanded
 {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="toolbar-expanded"}}
 {{#> chip-group-list-item}}
   {{#> chip-group-label}}
@@ -131,7 +131,7 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Toolbar-closable
+```hbs title=Closable
 {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id="chip-group-toolbar-closable"}}
   {{#> chip-group-list-item}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
@@ -155,9 +155,9 @@ cssPrefix: pf-c-chip-group
         {{/button}}
       {{/chip}}
     {{/chip-group}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-label remove_all_chips" aria-label="Remove all chips" id="remove_all_chips"')}}
+    {{#> chip-group-action chip-group-action--text="Close" chip-group-action--attribute=(concat 'aria-labelledby="' chip-group--id '-remove_chip_five_select ' chip-group--id 'chip_five_select" aria-label="Remove" id="' chip-group--id '-remove_chip_five_select"')}}
       <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{/chip-group-action}}
   {{/chip-group-list-item}}
 {{/chip-group}}
 ```
@@ -171,10 +171,10 @@ The chip group requires the [chip component](../../Chip/examples).
 
 ## Accessibility
 
-| Attributes for closable group button  | Applied to | Outcome |
+| Attributes for closable group action | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
-| `aria-labelledby="[id value of .pf-c-chip-group__label] [id value of .pf-c-button]"` | `.pf-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. |
+| `aria-label="[button label text]"` | `.pf-c-chip-group__action` |  Provides an accessible name for a chip group action when an icon is used instead of text. Required when an icon is used with no supporting text. |
+| `aria-labelledby="[id value of .pf-c-chip-group__label] [id value of .pf-c-chip-group__action]"` | `.pf-c-chip-group__action` | Gives the action an accessible name by referring to the element that provides the position of the. |
 
 The chip group requires the [chip component](../../Chip/examples).
 

@@ -3,10 +3,10 @@
 .pf-c-chip-group {
   @include pf-t-light; // force the container follow the light theme
 
-  --pf-c-chip-group--MarginRight: calc(var(--pf-c-chip-group--c-chip--MarginRight) * -1);
+  --pf-c-chip-group--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
   --pf-c-chip-group--m-toolbar-PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-toolbar-PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-toolbar-PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip-group--m-toolbar-BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -25,8 +25,20 @@
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--c-chip--MarginBottom: var(--pf-global--spacer--xs);
 
-  // Close
-  --pf-c-chip-group--button--MarginLeft: var(--pf-global--spacer--xs);
+  // Action
+  // --pf-c-chip-group--button--MarginLeft: var(--pf-global--spacer--xs);
+  // --pf-c-chip-group__action--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-chip-group__action--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-chip-group__action--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-chip-group__action--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-chip-group__action--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-chip-group__action--Color: var(--pf-global--Color--200);
+  --pf-c-chip-group__action--hover--Color: var(--pf-global--Color--100);
+  --pf-c-chip-group__action--focus--Color: var(--pf-global--Color--100);
+  --pf-c-chip-group__action--active--Color: var(--pf-global--Color--100);
+  --pf-c-chip-group__action--disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-chip-group__action--disabled--BackgroundColor: transparent;
+
 
   display: inline-flex;
   flex-wrap: wrap;
@@ -49,9 +61,9 @@
       margin: 0;
     }
 
-    .pf-c-chip-group + .pf-c-button {
-      margin-left: var(--pf-c-chip-group--button--MarginLeft);
-    }
+    // .pf-c-chip-group + .pf-c-button {
+    //   margin-left: var(--pf-c-chip-group--button--MarginLeft);
+    // }
   }
 
   .pf-c-chip-group__label {
@@ -66,5 +78,37 @@
   > .pf-c-chip {
     margin-right: var(--pf-c-chip-group--c-chip--MarginRight);
     margin-bottom: var(--pf-c-chip-group--c-chip--MarginBottom);
+
+    &:last-child {
+      --pf-c-chip-group--c-chip--MarginRight: 0;
+    }
+  }
+}
+
+.pf-c-chip-group__action {
+  padding: var(--pf-c-chip-group__action--PaddingTop) var(--pf-c-chip-group__action--PaddingRight) var(--pf-c-chip-group__action--PaddingBottom) var(--pf-c-chip-group__action--PaddingLeft);
+  color: var(--pf-c-chip-group__action--Color);
+  border: none;
+
+  &:hover,
+  &.pf-m-hover {
+    --pf-c-chip-group__action--Color: var(--pf-c-chip-group__action--hover--Color);
+  }
+
+  &:active,
+  &.pf-m-active {
+    --pf-c-chip-group__action--Color: var(--pf-c-chip-group__action--active--Color);
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    --pf-c-chip-group__action--Color: var(--pf-c-chip-group__action--focus--Color);
+  }
+
+  &:disabled,
+  &.pf-m-disabled {
+    --pf-c-chip-group__action--Color: var(--pf-c-chip-group__action--disabled--Color);
+
+    background-color: var(--pf-c-chip-group__action--disabled--BackgroundColor);
   }
 }
