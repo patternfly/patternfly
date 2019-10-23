@@ -127,12 +127,12 @@ The single select typeahead should be used when the user is selecting one option
 ```
 
 ```hbs title=Multi-with-typeahead-(chip-group-expanded)
-{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--HasToggleIcon="true" select--IsTypeahead="true" select--ItemIsSelected="true" select-typeahead--Placeholder="Choose states"}}
+{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 
 ```hbs title=Multi-with-typeahead-(chip-group-collapsed)
-{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--HasToggleIcon="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
 The Dropdown Multi Select should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
@@ -239,6 +239,19 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
 | `.pf-c-select__toggle-icon` | `<span>` |  Initiates the icon in the dropdown toggle. |
 | `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
+
+```hbs title=Panel
+{{#> select id="select-panel" select--IsExpanded="true" select-menu--type="div" select--IsEmptyMenu="true"}}Filter by birth month{{/select}}
+```
+
+## Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
+| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
+| `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 
 ## Documentation
 ### Overiew
