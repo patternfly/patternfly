@@ -4,20 +4,64 @@ section: root
 hideTOC: true
 ---
 
+# 2019.09 release notes (2019-10-29)
+Packages released:
+- @patternfly/patternfly@v2.40.2
+
+## Components
+- **Charts:**
+  - Added strokeDasharray variable for ChartThreshold ([#2314](https://github.com/patternfly/patternfly-next/pull/2314))
+  - Added size variables for scatter chart ([#2340](https://github.com/patternfly/patternfly-next/pull/2340))
+- **Input group:** Unnested text class ([#2318](https://github.com/patternfly/patternfly-next/pull/2318))
+- **Alert:** Fixed inline alert examples ([#2354](https://github.com/patternfly/patternfly-next/pull/2354))
+- **Nav:**
+  - Updated nav separator color in dark theme ([#2317](https://github.com/patternfly/patternfly-next/pull/2317))
+  - Updated examples so simple-list is only used in expandable nav ([#2387](https://github.com/patternfly/patternfly-next/pull/2387))
+- **Form control:**
+  - Added horizontal and vertical resize variants for `<textarea>` ([#2331](https://github.com/patternfly/patternfly-next/pull/2331))
+  - Updated horizontal and vertical resize variant descriptions ([#2386](https://github.com/patternfly/patternfly-next/pull/2386))
+- **Select:**
+  - Added plain modifier to button ([#2364](https://github.com/patternfly/patternfly-next/pull/2364))
+  - Added example of empty menu with a div ([#2337](https://github.com/patternfly/patternfly-next/pull/2337))
+- **Data toolbar:**
+  - Refactored examples to match react implementation ([#2342](https://github.com/patternfly/patternfly-next/pull/2342))
+  - Added attribute-value filter toolbar demo ([#2287](https://github.com/patternfly/patternfly-next/pull/2287))
+- **Options menu:** Made class work for svg ([#2341](https://github.com/patternfly/patternfly-next/pull/2341))
+- **Popover:** Reduced space below title ([#2381](https://github.com/patternfly/patternfly-next/pull/2381))
+- **Overflow menu:** Updated examples to match react integration ([#2328](https://github.com/patternfly/patternfly-next/pull/2328))
+- **Form:** Added success form modifier ([#2338](https://github.com/patternfly/patternfly-next/pull/2338))
+- **Chip group:** Added closable chip-group ([#2334](https://github.com/patternfly/patternfly-next/pull/2334))
+- **Accordion:** Added no-box-shadow variation, refactored expanded border ([#2385](https://github.com/patternfly/patternfly-next/pull/2385))
+- **Dropdown, options menu, app launcher:** Fixed menu group and separator spacing ([#2384](https://github.com/patternfly/patternfly-next/pull/2384))
+
+## Other
+- **Font:** Added monospace stack for opt in redhat font ([#2382](https://github.com/patternfly/patternfly-next/pull/2382))
+- **Build:**
+  - Hot-reload styles, fixed trailing slashes ([#2349](https://github.com/patternfly/patternfly-next/pull/2349))
+  - Fixed duplicated placeholders and linting ([#2360](https://github.com/patternfly/patternfly-next/pull/2360))
+  - Properly copy source SASS files to dist ([#2367](https://github.com/patternfly/patternfly-next/pull/2367))
+  - Use cssnano for minification ([#2368](https://github.com/patternfly/patternfly-next/pull/2368))
+  - Refactor/mdx followup ([#2369](https://github.com/patternfly/patternfly-next/pull/2369))
+- **Docs:**
+  - Use gatsby-theme-patternfly-org ([#2242](https://github.com/patternfly/patternfly-next/pull/2242))
+  - Fixed component titles for Navigation and Application Launcher ([#2356](https://github.com/patternfly/patternfly-next/pull/2356))
+  - Added HTML formatting ([#2363](https://github.com/patternfly/patternfly-next/pull/2363))
+  - Bump gatsby-theme-patternfly-org ([#2372](https://github.com/patternfly/patternfly-next/pull/2372))
+
 # 2019.08 release notes (2019-10-01)
 Packages released:
 - @patternfly/patternfly@2.33.5
 
 ## Components
 - **Button:** Add control modifier ([#2005](https://github.com/patternfly/patternfly-next/pull/2005))
-- **Charts:** 
+- **Charts:**
   - Adjust padding for pie and donut charts ([#2247](https://github.com/patternfly/patternfly-next/pull/2247))
   - Set mix-blend-mode for better color contrast ([#2239](https://github.com/patternfly/patternfly-next/pull/2239))
   - Update area chart opacity ([#2233](https://github.com/patternfly/patternfly-next/pull/2233))
 - **Chip group:** Add overflow to group ([#2278](https://github.com/patternfly/patternfly-next/pull/2278))
 - **Copy to clipboard:** Wrapped code in pre which allows the code to preserve line-breaks and spaces and also applies styling such as the monospace font. ([#2260](https://github.com/patternfly/patternfly-next/pull/2260))
 - **Data list:** Make data list borders consistent with table ([#2289](https://github.com/patternfly/patternfly-next/pull/2289))
-- **Data toolbar:** 
+- **Data toolbar:**
   - Updated clear button mods ([#2248](https://github.com/patternfly/patternfly-next/pull/2248))
   - Added in examples for expandable ([#2273](https://github.com/patternfly/patternfly-next/pull/2273))
 - **Flex layout:** Wrapped flex items, update css ([#2214](https://github.com/patternfly/patternfly-next/pull/2214))
