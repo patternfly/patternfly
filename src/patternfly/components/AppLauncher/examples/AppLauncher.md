@@ -8,7 +8,7 @@ import './AppLauncher.css'
 
 ## Examples
 ```hbs title=Collapsed
-{{#> app-launcher }}
+{{#> app-launcher id="app-launcher-collapsed"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -19,7 +19,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=Disabled
-{{#> app-launcher app-launcher--IsDisabled="true"}}
+{{#> app-launcher id="app-launcher-disabled" app-launcher--IsDisabled="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -30,7 +30,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=Expanded
-{{#> app-launcher app-launcher--IsExpanded="true"}}
+{{#> app-launcher id="app-launcher-expanded"  app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -41,7 +41,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=Aligned-right
-{{#> app-launcher app-launcher--IsExpanded="true"}}
+{{#> app-launcher id="app-launcher-aligned-right" app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -52,7 +52,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=Aligned-top
-{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
+{{#> app-launcher id="app-launcher-aligned-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
@@ -63,7 +63,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=With-sections-and-dividers-between-sections
-{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+{{#> app-launcher id="app-launcher-sections-and-dividers-between-sections" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
       <ul>
@@ -95,7 +95,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=With-sections-and-dividers-between-items
-{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+{{#> app-launcher id="app-launcher-sections-and-dividers-between-items" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
       <ul>
@@ -127,7 +127,7 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=With-sections,-dividers,-icons,-and-external-links
-{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+{{#> app-launcher id="app-launcher-sections-dividers-icons-and-external-links" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
       <ul>
