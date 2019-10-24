@@ -1,9 +1,6 @@
-# Contribution guidelines
-
-[Component, layout, demo creation](#component-layout-demo-creation)
-| [Modifiers](#modifiers)
-| [Pull request guidelines](#pull-request-guidelines)
-
+---
+title: Contribution guidelines
+---
 ## Component, layout, demo creation
 ### Naming blocks
 
@@ -56,7 +53,7 @@ The main handlebars file for a block should be named using kebab case. For examp
 ## Documentation
 For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
 
-A good example of this approach is the [table component](./components/Table/examples).
+A good example of this approach is the [table component](/documentation/core/components/table).
 
 ## Modifiers
 ### Modifier parameter

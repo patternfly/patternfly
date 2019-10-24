@@ -22,7 +22,7 @@ cssPrefix: pf-c-tab-content
 
 ## Documentation
 ### Overiew
-Tab content should be used with the [tabs component](/components/Tabs/examples/).
+Tab content should be used with the [tabs component](/documentation/core/components/tabs).
 
 ### Accessibility
 | Attribute | Applied to | Outcome |

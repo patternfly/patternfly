@@ -1,24 +1,3 @@
-const path = require('path');
-const { customizeDownstreamSchema } = require('gatsby-theme-patternfly-org/gatsby-node');
-
-// Don't include CSS from JS
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          include: [
-            path.resolve(__dirname, 'node_modules/@patternfly/patternfly'),
-            path.resolve(__dirname, 'node_modules/@patternfly/react-styles/css')
-          ],
-          loader: 'null-loader'
-        }
-      ]
-    }
-  });
-};
-
 // Add types that are present in React
 exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `

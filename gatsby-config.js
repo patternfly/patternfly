@@ -57,20 +57,20 @@ module.exports = {
         path: `${path.resolve(__dirname)}/src/patternfly`
       }
     },
+    // Source static pages
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages-core', // Don't add /documentation/core to url, but use Core sideNav items
+        path: `${path.resolve(__dirname)}/src/site/pages`
+      }
+    },
     // Source release notes
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs and determines sideNav items
         path: `${path.resolve(__dirname)}/RELEASE-NOTES.md`
-      }
-    },
-    // Source static pages
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages-core', // This determines sideNav context
-        path: `${path.resolve(__dirname)}/src/site/pages`
       }
     },
     // Pipe MDX files through this plugin that spits out React components

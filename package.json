@@ -102,7 +102,6 @@
     "minimist": "^1.2.0",
     "node-plop": "^0.18.0",
     "node-sass": "^4.11.0",
-    "null-loader": "^3.0.0",
     "postcss": "^7.0.18",
     "postcss-css-variables": "^0.13.0",
     "postcss-preset-env": "^6.7.0",
