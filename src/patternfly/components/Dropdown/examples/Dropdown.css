@@ -19,7 +19,8 @@
 }
 
 #ws-core-c-dropdown-with-groups,
-#ws-core-c-dropdown-with-groups-and-separators {
+#ws-core-c-dropdown-with-groups-and-separators-between-groups,
+#ws-core-c-dropdown-with-groups-and-separators-between-items {
   min-height: 440px;
 }
 

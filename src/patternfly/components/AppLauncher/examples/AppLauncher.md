@@ -62,7 +62,71 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=With-sections-and-icons
+```hbs title=With-sections-and-dividers-between-sections
+{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+  {{#> app-launcher-menu}}
+    {{#> app-launcher-group}}
+      <ul>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link not in group{{/app-launcher-menu-item}}</li>
+      </ul>
+    {{/app-launcher-group}}
+    {{#> app-launcher-separator app-launcher-separator--IsHr="true"}}{{/app-launcher-separator}}
+    {{#> app-launcher-group}}
+      {{#> app-launcher-group-title}}
+        Group 1
+      {{/app-launcher-group-title}}
+      <ul>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+      </ul>
+    {{/app-launcher-group}}
+    {{#> app-launcher-separator app-launcher-separator--IsHr="true"}}{{/app-launcher-separator}}
+    {{#> app-launcher-group}}
+      {{#> app-launcher-group-title}}
+        Group 2
+      {{/app-launcher-group-title}}
+      <ul>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+      </ul>
+    {{/app-launcher-group}}
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
+```hbs title=With-sections-and-dividers-between-items
+{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+  {{#> app-launcher-menu}}
+    {{#> app-launcher-group}}
+      <ul>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link not in group{{/app-launcher-menu-item}}</li>
+        {{#> app-launcher-separator}}{{/app-launcher-separator}}
+      </ul>
+    {{/app-launcher-group}}
+    {{#> app-launcher-group}}
+      {{#> app-launcher-group-title}}
+        Group 1
+      {{/app-launcher-group-title}}
+      <ul>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+        {{#> app-launcher-separator}}{{/app-launcher-separator}}
+      </ul>
+    {{/app-launcher-group}}
+    {{#> app-launcher-group}}
+      {{#> app-launcher-group-title}}
+        Group 2
+      {{/app-launcher-group-title}}
+      <ul>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+      </ul>
+    {{/app-launcher-group}}
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
+```hbs title=With-sections,-dividers,-icons,-and-external-links
 {{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
@@ -72,9 +136,7 @@ import './AppLauncher.css'
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
-            {{#> app-launcher-menu-item-text}}
-              Link not in group
-            {{/app-launcher-menu-item-text}}
+            Link not in group
           {{/app-launcher-menu-item}}
         </li>
       </ul>
@@ -90,9 +152,7 @@ import './AppLauncher.css'
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
-            {{#> app-launcher-menu-item-text}}
-              Group 1 link
-            {{/app-launcher-menu-item-text}}
+            Group 1 link
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
@@ -101,9 +161,7 @@ import './AppLauncher.css'
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
-            {{#> app-launcher-menu-item-text}}
-              Group 1 link
-            {{/app-launcher-menu-item-text}}
+            Group 1 link
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
@@ -120,9 +178,7 @@ import './AppLauncher.css'
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
-            {{#> app-launcher-menu-item-text}}
-              Group 2 link
-            {{/app-launcher-menu-item-text}}
+            Group 2 link
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
@@ -131,9 +187,7 @@ import './AppLauncher.css'
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
-            {{#> app-launcher-menu-item-text}}
-              Group 2 link
-            {{/app-launcher-menu-item-text}}
+            Group 2 link
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
@@ -167,7 +221,6 @@ import './AppLauncher.css'
 | `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
 | `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
 | `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
-| `.pf-c-app-launcher__menu-item-text` | `<span>` | Defines the wrapper for the menu item text. |
 | `.pf-c-app-launcher__menu-item-external-icon` | `<i>` | Defines the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
 | `.pf-c-app-launcher__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). |
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
