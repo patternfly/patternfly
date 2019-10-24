@@ -57,85 +57,109 @@
   background-color: var(--pf-c-accordion--BackgroundColor);
   box-shadow: var(--pf-c-accordion--BoxShadow);
 
-  .pf-c-accordion__toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: var(--pf-c-accordion__toggle--PaddingTop) var(--pf-c-accordion__toggle--PaddingRight) var(--pf-c-accordion__toggle--PaddingBottom) var(--pf-c-accordion__toggle--PaddingLeft);
-    border: 0;
-    border-left: var(--pf-c-accordion__toggle--m-expanded--BorderWidth) solid var(--pf-c-accordion__toggle--BorderLeftColor);
+  &.pf-m-no-box-shadow {
+    --pf-c-accordion--BoxShadow: none;
+  }
+}
+
+.pf-c-accordion__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--pf-c-accordion__toggle--PaddingTop) var(--pf-c-accordion__toggle--PaddingRight) var(--pf-c-accordion__toggle--PaddingBottom) var(--pf-c-accordion__toggle--PaddingLeft);
+  border: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--pf-c-accordion__toggle--m-expanded--BorderWidth);
+    content: "";
+    background-color: var(--pf-c-accordion__toggle--BorderLeftColor);
+  }
+
+  &.pf-m-expanded {
+    --pf-c-accordion__toggle--BorderLeftColor: var(--pf-c-accordion__toggle--m-expanded--BorderLeftColor);
 
     .pf-c-accordion__toggle-text {
-      @include pf-text-overflow;
-
-      max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
+      font-weight: var(--pf-c-accordion__toggle-text--expanded--FontWeight);
+      color: var(--pf-c-accordion__toggle-text--expanded--Color);
     }
 
     .pf-c-accordion__toggle-icon {
-      line-height: var(--pf-c-accordion__toggle-icon--LineHeight);
-      transition: var(--pf-c-accordion__toggle-icon--Transition);
-    }
-
-    &.pf-m-expanded {
-      --pf-c-accordion__toggle--BorderLeftColor: var(--pf-c-accordion__toggle--m-expanded--BorderLeftColor);
-
-      .pf-c-accordion__toggle-text {
-        font-weight: var(--pf-c-accordion__toggle-text--expanded--FontWeight);
-        color: var(--pf-c-accordion__toggle-text--expanded--Color);
-      }
-
-      .pf-c-accordion__toggle-icon {
-        transform: var(--pf-c-accordion__toggle--m-expanded__toggle-icon--Transform);
-      }
-    }
-
-    &.pf-m-hover,
-    &:hover {
-      background-color: var(--pf-c-accordion__toggle--hover--BackgroundColor);
-
-      .pf-c-accordion__toggle-text {
-        color: var(--pf-c-accordion__toggle-text--hover--Color);
-      }
-    }
-
-    &.pf-m-active,
-    &:active {
-      background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
-
-      .pf-c-accordion__toggle-text {
-        font-weight: var(--pf-c-accordion__toggle-text--active--FontWeight);
-        color: var(--pf-c-accordion__toggle-text--active--Color);
-      }
-    }
-
-    &.pf-m-focus,
-    &:focus {
-      background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
-
-      .pf-c-accordion__toggle-text {
-        font-weight: var(--pf-c-accordion__toggle-text--focus--FontWeight);
-        color: var(--pf-c-accordion__toggle-text--focus--Color);
-      }
+      transform: var(--pf-c-accordion__toggle--m-expanded__toggle-icon--Transform);
     }
   }
 
-  .pf-c-accordion__expanded-content {
-    font-size: var(--pf-c-accordion__expanded-content--FontSize);
-    color: var(--pf-c-accordion__expanded-content--Color);
-    border-left: var(--pf-c-accordion__expanded-content--m-expanded--BorderWidth) solid var(--pf-c-accordion__expanded-content--BorderLeftColor);
+  &.pf-m-hover,
+  &:hover {
+    background-color: var(--pf-c-accordion__toggle--hover--BackgroundColor);
 
-    .pf-c-accordion__expanded-content-body {
-      padding: var(--pf-c-accordion__expanded-content-body--PaddingTop) var(--pf-c-accordion__expanded-content-body--PaddingRight) var(--pf-c-accordion__expanded-content-body--PaddingBottom) var(--pf-c-accordion__expanded-content-body--PaddingLeft);
+    .pf-c-accordion__toggle-text {
+      color: var(--pf-c-accordion__toggle-text--hover--Color);
     }
+  }
 
-    &.pf-m-fixed {
-      max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
-      overflow-y: auto;
-    }
+  &.pf-m-active,
+  &:active {
+    background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
 
-    &.pf-m-expanded {
-      --pf-c-accordion__expanded-content--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
+    .pf-c-accordion__toggle-text {
+      font-weight: var(--pf-c-accordion__toggle-text--active--FontWeight);
+      color: var(--pf-c-accordion__toggle-text--active--Color);
     }
+  }
+
+  &.pf-m-focus,
+  &:focus {
+    background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
+
+    .pf-c-accordion__toggle-text {
+      font-weight: var(--pf-c-accordion__toggle-text--focus--FontWeight);
+      color: var(--pf-c-accordion__toggle-text--focus--Color);
+    }
+  }
+}
+
+.pf-c-accordion__toggle-text {
+  @include pf-text-overflow;
+
+  max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
+}
+
+.pf-c-accordion__toggle-icon {
+  line-height: var(--pf-c-accordion__toggle-icon--LineHeight);
+  transition: var(--pf-c-accordion__toggle-icon--Transition);
+}
+
+.pf-c-accordion__expanded-content {
+  font-size: var(--pf-c-accordion__expanded-content--FontSize);
+  color: var(--pf-c-accordion__expanded-content--Color);
+
+  &.pf-m-fixed {
+    max-height: var(--pf-c-accordion__expanded-content--m-fixed--MaxHeight);
+    overflow-y: auto;
+  }
+
+  &.pf-m-expanded {
+    --pf-c-accordion__expanded-content--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
+  }
+}
+
+.pf-c-accordion__expanded-content-body {
+  position: relative;
+  padding: var(--pf-c-accordion__expanded-content-body--PaddingTop) var(--pf-c-accordion__expanded-content-body--PaddingRight) var(--pf-c-accordion__expanded-content-body--PaddingBottom) var(--pf-c-accordion__expanded-content-body--PaddingLeft);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--pf-c-accordion__expanded-content--m-expanded--BorderWidth);
+    content: "";
+    background-color: var(--pf-c-accordion__expanded-content--BorderLeftColor);
   }
 }

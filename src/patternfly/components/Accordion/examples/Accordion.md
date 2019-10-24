@@ -126,6 +126,50 @@ cssPrefix: pf-c-accordion
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
   {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+{{/accordion}}
+```
+
+```hbs title=No-box-shadow
+{{#> accordion accordion--modifier="pf-m-no-box-shadow"}}
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+    {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    This text is hidden
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
+    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   {{/accordion-expanded-content}}
 
@@ -142,7 +186,7 @@ cssPrefix: pf-c-accordion
 ## Documentation
 ### Overview
 There are two variations to build the accordion component:
-One way uses `<div>` and `<h1 - h6>` tags to build the component. 
+One way uses `<div>` and `<h1 - h6>` tags to build the component.
 In these examples `.pf-c-accordion` uses `<div>`, `.pf-c-accordion__toggle` uses `<h3><button>`, and `.pf-c-accordion__expanded-content` uses `<div>`. The heading level that you use should fit within the rest of the headings outlined on your page.
 
 Another variation is using the definition list:
@@ -165,6 +209,7 @@ In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses 
 | `.pf-c-accordion__toggle-icon` | `<i>` | Initiates the toggle icon. **Required** |
 | `.pf-c-accordion__expanded-content` | `<div>`, `<dd>` | Initiates expanded content. **Must be paired with a button** |
 | `.pf-c-accordion__expanded-content-body` | `<div>` | Initiates expanded content body. **Required** |
+| `.pf-m-no-box-shadow` | `.pf-c-accordion` | Modifies the accordion to remove the box shadow. |
 | `.pf-m-expanded` | `.pf-c-accordion__toggle`, `.pf-c-accordion__expanded-content` | Modifies the accordion button and expanded content for the expanded state. |
 | `.pf-m-hover` | `.pf-c-accordion__toggle` | Modifies the accordion button for the hover state. |
 | `.pf-m-active` | `.pf-c-accordion__toggle` | Modifies the accordion button for the active state. |
