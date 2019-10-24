@@ -222,7 +222,7 @@ import './AppLauncher.css'
 | `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
 | `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
 | `.pf-c-app-launcher__menu-item-external-icon` | `<i>` | Defines the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
-| `.pf-c-app-launcher__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). |
+| `.pf-c-app-launcher__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
 | `.pf-m-top` | `.pf-c-app-launcher` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
