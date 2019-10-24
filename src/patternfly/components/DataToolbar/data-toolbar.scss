@@ -298,6 +298,13 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     display: none;
     visibility: hidden;
   }
+
+  .pf-c-data-toolbar__content.pf-m-chip-container {
+    --pf-c-data-toolbar__content--PaddingRight: 0;
+    --pf-c-data-toolbar__content--PaddingLeft: 0;
+
+    margin-left: 0;
+  }
 }
 
 .pf-c-data-toolbar__toggle.pf-m-expanded .pf-c-button.pf-m-plain {

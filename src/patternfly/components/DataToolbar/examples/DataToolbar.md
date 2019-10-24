@@ -309,13 +309,15 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
             Status
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
         {{#> data-toolbar-item}}
           {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
             Risk
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{#> data-toolbar-content new-context data-toolbar-content--modifier="pf-m-chip-container"}}
+          {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+          {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{/data-toolbar-content}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
     {{#> data-toolbar-item}}
@@ -370,13 +372,15 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
             Status
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
         {{#> data-toolbar-item}}
           {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
             Risk
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{#> data-toolbar-content new-context data-toolbar-content--modifier="pf-m-chip-container"}}
+          {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+          {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{/data-toolbar-content}}
       {{/data-toolbar-group}}
       {{> data-toolbar-item-clear}}
     {{/data-toolbar-expandable-content}}
