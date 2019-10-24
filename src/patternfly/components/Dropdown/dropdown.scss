@@ -366,7 +366,7 @@
   border: 0; // for use when separator is an <hr>
 
   &:last-child {
-    margin-bottom: 0;
+    --pf-c-dropdown__separator--MarginBottom: 0;
   }
 }
 
