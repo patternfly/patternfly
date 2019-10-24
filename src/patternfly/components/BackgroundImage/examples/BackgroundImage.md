@@ -1,5 +1,5 @@
 ---
-title: BackgroundImage
+title: Background image
 section: components
 cssPrefix: pf-c-background-image
 ---

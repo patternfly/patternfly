@@ -1,5 +1,5 @@
 ---
-title: Input Group
+title: Input group
 section: components
 cssPrefix: pf-c-input-group
 ---

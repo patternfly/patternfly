@@ -1,5 +1,5 @@
 ---
-title: ClipboardCopy
+title: Clipboard copy
 section: components
 cssPrefix: pf-c-clipboard-copy
 ---

@@ -1,5 +1,5 @@
 ---
-title: Options Menu
+title: Options menu
 section: components
 cssPrefix: pf-c-options-menu
 ---

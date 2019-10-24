@@ -3,8 +3,9 @@ import { PageSection } from '@patternfly/react-core';
 import SideNavLayout from 'gatsby-theme-patternfly-org/layouts/sideNavLayout';
 import quickRefPdf from './reference-docs/PF-quick-ref.pdf';
 
-export default ({ location }) => (
-  <SideNavLayout location={location}>
+export default ({ location, pageContext }) => (
+  // Trust pageContext.source = "core"
+  <SideNavLayout location={location} context={pageContext.source}>
     <PageSection className="ws-section-main">
       <p>
         Just getting started? Take a look at the <a href="/contribution">Contribution guide</a> and{' '}

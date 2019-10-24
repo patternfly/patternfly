@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'PatternFly 4 - HTML'
+    title: 'PatternFly 4 - HTML',
   },
   pathPrefix: '/patternfly-next',
   plugins: [
@@ -10,39 +10,41 @@ module.exports = {
     {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
-        sideNavItems: [
-          { section: 'components' },
-          { section: 'layouts' },
-          { section: 'utilities' },
-          { section: 'demos' },
-          { section: 'experimental' },
-          { text: 'Release notes', link: '/documentation/core/release-notes' },
-          { text: 'Global CSS Variables', link: '/documentation/global-css-variables' }
-        ],
+        context: 'core', // For global items that need sideNav
+        sideNav: {
+          core: [
+            { section: 'overview' },
+            { section: 'components' },
+            { section: 'layouts' },
+            { section: 'utilities' },
+            { section: 'demos' },
+            { section: 'experimental' },
+          ]
+        },
         topNavItems: [
           {
             text: 'Accessibility',
-            link: '/accessibility-guide'
+            path: '/accessibility-guide'
           },
           {
             text: 'Contribute',
-            link: '/contribution'
+            path: '/contribution'
           },
           {
             text: 'Guidelines',
-            link: '/guidelines'
+            path: '/guidelines'
           },
           {
             text: 'Modifiers',
-            link: '/modifiers'
+            path: '/modifiers'
           },
           {
             text: 'Upgrade guide',
-            link: '/upgrade-guide'
+            path: '/upgrade-guide'
           },
           {
             text: 'Icons',
-            link: '/icons'
+            path: '/icons'
           }
         ]
       }
@@ -51,7 +53,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'core', // This goes in URLs
+        name: 'core', // This goes in URLs and determines sideNav items
         path: `${path.resolve(__dirname)}/src/patternfly`
       }
     },
@@ -59,15 +61,23 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'core', // This goes in URLs
+        name: 'core', // This goes in URLs and determines sideNav items
         path: `${path.resolve(__dirname)}/RELEASE-NOTES.md`
       }
     },
-    // Create static pages
+    // Source static pages
     {
-      resolve: `gatsby-plugin-page-creator`,
+      resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'pages-core', // This determines sideNav context
         path: `${path.resolve(__dirname)}/src/site/pages`
+      }
+    },
+    // Pipe MDX files through this plugin that spits out React components
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
       }
     }
   ]

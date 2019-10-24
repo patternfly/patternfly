@@ -1,4 +1,5 @@
 const path = require('path');
+const { customizeDownstreamSchema } = require('gatsby-theme-patternfly-org/gatsby-node');
 
 // Don't include CSS from JS
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -18,6 +19,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
+// Add types that are present in React
 exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type MdxFrontmatter @infer {
