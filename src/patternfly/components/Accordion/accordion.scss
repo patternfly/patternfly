@@ -81,17 +81,6 @@
     background-color: var(--pf-c-accordion__toggle--BorderLeftColor);
   }
 
-  .pf-c-accordion__toggle-text {
-    @include pf-text-overflow;
-
-    max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
-  }
-
-  .pf-c-accordion__toggle-icon {
-    line-height: var(--pf-c-accordion__toggle-icon--LineHeight);
-    transition: var(--pf-c-accordion__toggle-icon--Transition);
-  }
-
   &.pf-m-expanded {
     --pf-c-accordion__toggle--BorderLeftColor: var(--pf-c-accordion__toggle--m-expanded--BorderLeftColor);
 
@@ -133,6 +122,17 @@
       color: var(--pf-c-accordion__toggle-text--focus--Color);
     }
   }
+}
+
+.pf-c-accordion__toggle-text {
+  @include pf-text-overflow;
+
+  max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
+}
+
+.pf-c-accordion__toggle-icon {
+  line-height: var(--pf-c-accordion__toggle-icon--LineHeight);
+  transition: var(--pf-c-accordion__toggle-icon--Transition);
 }
 
 .pf-c-accordion__expanded-content {
