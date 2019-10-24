@@ -4,10 +4,10 @@
 .pf-c-chip-group {
   @include pf-t-light; // force the container follow the light theme
 
-  --pf-c-chip-group--MarginRight: calc(var(--pf-c-chip-group--c-chip--MarginRight) * -1);
+  --pf-c-chip-group--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
   --pf-c-chip-group--m-toolbar-PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-toolbar-PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-toolbar-PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip-group--m-toolbar-BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -31,7 +31,6 @@
   align-items: center;
   margin-right: var(--pf-c-chip-group--MarginRight);
   margin-bottom: var(--pf-c-chip-group--MarginBottom);
-
 
   &.pf-m-toolbar {
     > li:not(.pf-m-overflow) {
@@ -61,5 +60,9 @@
   > .pf-c-chip {
     margin-right: var(--pf-c-chip-group--c-chip--MarginRight);
     margin-bottom: var(--pf-c-chip-group--c-chip--MarginBottom);
+
+    &:last-child {
+      --pf-c-chip-group--c-chip--MarginRight: 0;
+    }
   }
 }
