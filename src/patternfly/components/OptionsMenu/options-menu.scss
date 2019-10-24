@@ -72,10 +72,10 @@
   --pf-c-options-menu__c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // Menu item separator
-  --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm); // remove at breaking change
-  --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300); // remove at breaking change
-  --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm); // remove at breaking change
-  --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm); // remove at breaking change
+  --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BorderColor--100);
+  --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm);
 
   position: relative;
   display: inline-block;
@@ -275,7 +275,6 @@
   color: var(--pf-c-options-menu__menu-item-icon--Color);
 }
 
-// remove this block at breaking change period
 .pf-c-options-menu__separator {
   height: var(--pf-c-options-menu__separator--Height);
   margin-top: var(--pf-c-options-menu__separator--MarginTop);

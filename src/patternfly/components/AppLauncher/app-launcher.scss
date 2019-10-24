@@ -54,8 +54,10 @@
   --pf-c-app-launcher__separator--MarginBottom: var(--pf-global--spacer--sm);
 
   // Groups
-  --pf-c-app-launcher__group--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-app-launcher__group--first-child--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-app-launcher__group--PaddingTop: 0; // remove at breaking change
+  --pf-c-app-launcher__group--group--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-app-launcher__group--first-child--PaddingTop: 0; // remove at breaking change
+  --pf-c-app-launcher__group-title--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-app-launcher__group-title--PaddingRight: var(--pf-c-app-launcher__menu-item--PaddingRight);
   --pf-c-app-launcher__group-title--PaddingBottom: var(--pf-c-app-launcher__menu-item--PaddingBottom);
   --pf-c-app-launcher__group-title--PaddingLeft: var(--pf-c-app-launcher__menu-item--PaddingLeft);
@@ -189,24 +191,32 @@
   transform: var(--pf-c-app-launcher__menu-item-external-icon--Transform); // move icon a bit to appear more visually centered
 }
 
-// remove this block at breaking change period
 .pf-c-app-launcher__separator {
   height: var(--pf-c-app-launcher__separator--Height);
   margin-top: var(--pf-c-app-launcher__separator--MarginTop);
   margin-bottom: var(--pf-c-app-launcher__separator--MarginBottom);
   background-color: var(--pf-c-app-launcher__separator--BackgroundColor);
   border: 0; // for use when separator is an <hr>
+
+  &:last-child {
+    --pf-c-app-launcher__separator--MarginBottom: 0;
+  }
 }
 
 .pf-c-app-launcher__group {
-  padding-top: var(--pf-c-app-launcher__group--PaddingTop);
+  padding-top: var(--pf-c-app-launcher__group--PaddingTop); // remove at breaking change
 
   &:first-child {
-    --pf-c-app-launcher__group--PaddingTop: var(--pf-c-app-launcher__group--first-child--PaddingTop);
+    --pf-c-app-launcher__group--PaddingTop: var(--pf-c-app-launcher__group--first-child--PaddingTop); // remove at breaking change
+  }
+
+  & + & {
+    --pf-c-app-launcher__group--PaddingTop: var(--pf-c-app-launcher__group--group--PaddingTop);
   }
 }
 
 .pf-c-app-launcher__group-title {
+  padding-top: var(--pf-c-app-launcher__group-title--PaddingTop);
   padding-right: var(--pf-c-app-launcher__group-title--PaddingRight);
   padding-bottom: var(--pf-c-app-launcher__group-title--PaddingBottom);
   padding-left: var(--pf-c-app-launcher__group-title--PaddingLeft);

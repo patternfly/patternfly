@@ -1,7 +1,10 @@
 <{{#if app-launcher-separator--IsHr}}hr{{else}}li{{/if}} class="pf-c-app-launcher__separator{{#if app-launcher-separator--modifier}} {{app-launcher-separator--modifier}}{{/if}}"
   {{#if app-launcher-separator--attribute}}
 	  {{{app-launcher-separator--attribute}}}
-  {{/if}}>
+  {{/if}}
+  {{#unless app-launcher-separator--IsHr}}
+    role="separator"
+  {{/unless}}>
 {{#unless app-launcher-separator--IsHr}}
 </li>
 {{/unless}}
