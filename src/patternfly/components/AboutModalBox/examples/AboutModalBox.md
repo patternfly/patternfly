@@ -1,5 +1,5 @@
 ---
-title: About Modal Box
+title: About modal box
 section: components
 cssPrefix: pf-c-about-modal-box
 ---

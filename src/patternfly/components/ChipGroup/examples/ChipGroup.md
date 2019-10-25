@@ -1,5 +1,5 @@
 ---
-title: Chip Group
+title: Chip group
 section: components
 cssPrefix: pf-c-chip-group
 ---

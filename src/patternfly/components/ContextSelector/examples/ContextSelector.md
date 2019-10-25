@@ -1,5 +1,5 @@
 ---
-title: Context Selector
+title: Context selector
 section: components
 cssPrefix: pf-c-context-selector
 ---

@@ -1,5 +1,5 @@
 ---
-title: Data List
+title: Data list
 section: demos
 ---
 
