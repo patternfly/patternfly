@@ -1,8 +1,8 @@
-<ul class="pf-c-options-menu__menu{{#if options-menu--modifier}} {{options-menu--modifier}}{{/if}}"
+<{{#if options-menu-menu--type}}{{options-menu-menu--type}}{{else}}ul{{/if}} class="pf-c-options-menu__menu{{#if options-menu--modifier}} {{options-menu--modifier}}{{/if}}"
   aria-labelledby="{{id}}-toggle"
   {{#unless options-menu--IsExpanded}}hidden{{/unless}}
   {{#if options-menu--attribute}}
     {{{options-menu--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</ul>
+</{{#if options-menu-menu--type}}{{options-menu-menu--type}}{{else}}ul{{/if}}>
