@@ -112,6 +112,8 @@ function copySource() {
     src(config.sourceFiles).pipe(dest('./dist')),
     src('./src/patternfly/_*.scss').pipe(dest('./dist')),
     src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
+    src('./src/patternfly/components/_all.scss').pipe(dest('./dist/components')),
+    src('./src/patternfly/layouts/_all.scss').pipe(dest('./dist/layouts')),
     // Assets
     src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
     src('./src/patternfly/assets/**/*').pipe(dest('./dist/assets/')),
