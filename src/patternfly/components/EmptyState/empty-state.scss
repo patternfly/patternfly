@@ -2,7 +2,10 @@
 // @import "../../sass-utilities/all";
 
 .pf-c-empty-state {
-  --pf-c-empty-state--Padding: var(--pf-global--spacer--xl);
+  --pf-c-empty-state--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-empty-state--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-empty-state--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-empty-state--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
   --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
@@ -18,7 +21,7 @@
   --pf-c-empty-state--m-sm--MaxWidth: #{pf-size-prem(400px)};
   --pf-c-empty-state--m-lg--MaxWidth: #{pf-size-prem(600px)};
 
-  padding: var(--pf-c-empty-state--Padding);
+  padding: var(--pf-c-empty-state--PaddingTop) var(--pf-c-empty-state--PaddingRight) var(--pf-c-empty-state--PaddingBottom) var(--pf-c-empty-state--PaddingLeft);
   text-align: center;
 
   > .pf-c-button.pf-m-primary,
