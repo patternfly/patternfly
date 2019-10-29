@@ -183,7 +183,7 @@ import './Grid.css'
   {{/grid-item}}    
 {{/grid}}
 ```
-```hbs title=Column-Gutter
+```hbs title=Column-gutter
 {{#> grid grid--modifier="pf-m-gutter-columns"}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
