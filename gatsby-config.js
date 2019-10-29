@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'PatternFly 4 - HTML',
+    siteUrl: 'https://pf4.patternfly.org/'
   },
   pathPrefix: '/patternfly-next',
   plugins: [
