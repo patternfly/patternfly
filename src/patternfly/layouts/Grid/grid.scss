@@ -83,7 +83,7 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
     grid-gap: var(--pf-l-grid--m-gutter--GridGap);
   }
 
-  &.pf-m-gutter-row {
+  &.pf-m-gutter-rows {
     grid-row-gap: var(--pf-l-grid--m-gutter--GridGap);
   }
 
