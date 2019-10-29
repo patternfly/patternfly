@@ -511,7 +511,7 @@ import './Grid.css'
 {{/grid}}
 ```
 #### Justify content
-#### For all `justify-content` grids `grid-template-columns` is set to initial to allow customization over the column count.
+#### For all `justify-content` grids, `grid-template-columns` is set to `initial` to allow customization over the column count.
 ```hbs title=Justify-content-start
 {{#> grid grid--modifier="pf-m-justify-content-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
