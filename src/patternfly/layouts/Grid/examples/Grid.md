@@ -444,7 +444,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ``` 
-```hbs title=align-items-center
+```hbs title=Align-items-center
 {{#> grid grid--modifier="pf-m-align-items-center pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
