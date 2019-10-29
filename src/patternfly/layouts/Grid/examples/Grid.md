@@ -511,6 +511,7 @@ import './Grid.css'
 {{/grid}}
 ```
 #### Justify content
+#### For all `justify-content` grids `grid-template-columns` is set to initial to allow customization over the column count.
 ```hbs title=justify-content-start
 {{#> grid grid--modifier="pf-m-justify-content-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
@@ -600,7 +601,7 @@ import './Grid.css'
 {{/grid}}
 ```
 ```hbs title=justify-content-space-around
-{{#> grid grid--modifier="pf-m-justify-content-space-around pf-m-gutter"}}
+{{#> grid grid--modifier="pf-m-justify-content-space-around pf-m-grid-auto-flow-column pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
   {{/grid-item}}
@@ -622,7 +623,7 @@ import './Grid.css'
 {{/grid}}
 ```
 ```hbs title=justify-content-space-between
-{{#> grid grid--modifier="pf-m-justify-content-space-between pf-m-gutter"}}
+{{#> grid grid--modifier="pf-m-justify-content-space-between pf-m-grid-auto-flow-column pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
   {{/grid-item}}
@@ -644,7 +645,7 @@ import './Grid.css'
 {{/grid}}
 ```
 ```hbs title=justify-content-space-evenly
-{{#> grid grid--modifier="pf-m-justify-content-space-evenly pf-m-gutter"}}
+{{#> grid grid--modifier="pf-m-justify-content-space-evenly pf-m-grid-auto-flow-column pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
   {{/grid-item}}
@@ -661,6 +662,72 @@ import './Grid.css'
     item 5
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=grid-auto-flow-column
+{{#> grid grid--modifier="pf-m-grid-auto-flow-column pf-m-justify-content-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=grid-auto-flow-row
+{{#> grid grid--modifier="pf-m-grid-auto-flow-row pf-m-justify-content-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=grid-auto-flow-dense
+{{#> grid grid--modifier="pf-m-grid-auto-flow-dense pf-m-justify-content-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-3-col"}}
     item 6
   {{/grid-item}}
 {{/grid}}
@@ -916,6 +983,9 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 | `.pf-m-align-content-space-around` | `.pf-l-grid` | Modifies align-content property to space-around. |
 | `.pf-m-align-content-space-between` | `.pf-l-grid` | Modifies align-content property to space-between. |
 | `.pf-m-align-content-space-evenly` | `.pf-l-grid` | Modifies align-content property to space-evenly. |
+| `.pf-m-grid-auto-flow-column` | `.pf-l-grid` | Modifies grid-auto-flow property to column. |
+| `.pf-m-grid-auto-flow-row` | `.pf-l-grid` | Modifies grid-auto-flow property to row. |
+| `.pf-m-grid-auto-flow-dense` | `.pf-l-grid` | Modifies grid-auto-flow property to dense. |
 | `.pf-m-justify-self-start` | `.pf-l-grid__item` | Modifies justify-self property to start. |
 | `.pf-m-justify-self-center` | `.pf-l-grid__item` | Modifies justify-self property to center. |
 | `.pf-m-justify-self-end` | `.pf-l-grid__item` | Modifies justify-self property to end. |

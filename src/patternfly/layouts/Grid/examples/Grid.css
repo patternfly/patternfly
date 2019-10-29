@@ -7,7 +7,3 @@
 .ws-core-l-grid .pf-l-grid[class*="pf-m-align-"], div[id*="ws-core-l-grid-align-self-"] .pf-l-grid{
   min-height: 260px; /* gives the grid a height to show the alignment */
 }
-
-.ws-core-l-grid div[class*="pf-m-justify-content-"]:not(.pf-m-justify-content-stretch) {
-  grid-template-columns: repeat(3, max-content); /*shows placement of items*/ 
-}

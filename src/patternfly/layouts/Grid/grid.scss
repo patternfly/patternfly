@@ -57,6 +57,10 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
+  &[class*="pf-m-justify-content"] {
+    grid-template-columns: initial;
+  }
+
   > *,
   .pf-l-grid__item {
     grid-column-start: var(--pf-l-grid__item--GridColumnStart);
@@ -185,6 +189,18 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
 
       &.pf-m-align-content-space-evenly#{$breakpoint-name} {
         align-content: space-evenly;
+      }
+
+      &.pf-m-grid-auto-flow-column#{$breakpoint-name} {
+        grid-auto-flow: column;
+      }
+
+      &.pf-m-grid-auto-flow-row#{$breakpoint-name} {
+        grid-auto-flow: row;
+      }
+
+      &.pf-m-grid-auto-flow-dense#{$breakpoint-name} {
+        grid-auto-flow: dense;
       }
 
       // justify-self
