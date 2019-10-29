@@ -466,7 +466,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-items-end
+```hbs title=Align-items-end
 {{#> grid grid--modifier="pf-m-align-items-end pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
