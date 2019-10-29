@@ -377,7 +377,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-items-end
+```hbs title=Justify-items-end
 {{#> grid grid--modifier="pf-m-justify-items-end pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
