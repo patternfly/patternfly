@@ -422,7 +422,7 @@ import './Grid.css'
 {{/grid}}
 ```
 #### Align items
-```hbs title=align-items-start
+```hbs title=Align-items-start
 {{#> grid grid--modifier="pf-m-align-items-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
