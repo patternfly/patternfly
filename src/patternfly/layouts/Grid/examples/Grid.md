@@ -534,7 +534,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-content-center
+```hbs title=Justify-content-center
 {{#> grid grid--modifier="pf-m-justify-content-center pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
