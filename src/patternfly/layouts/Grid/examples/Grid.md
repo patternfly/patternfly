@@ -158,6 +158,56 @@ import './Grid.css'
   {{/grid-item}}    
 {{/grid}}
 ```
+```hbs title=Row-Gutter
+{{#> grid grid--modifier="pf-m-gutter-row"}}
+  {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+      12 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-11-col"}}
+      11 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+      1 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+      10 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+      2 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-9-col"}}
+      9 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-3-col"}}
+      3 col 
+  {{/grid-item}}    
+{{/grid}}
+```
+```hbs title=Column-Gutter
+{{#> grid grid--modifier="pf-m-gutter-column"}}
+  {{#> grid-item grid-item--modifier="pf-m-12-col"}}
+      12 col
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-11-col"}}
+      11 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+      1 col 
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+      10 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+      2 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-9-col"}}
+      9 col 
+  {{/grid-item}}    
+  {{#> grid-item grid-item--modifier="pf-m-3-col"}}
+      3 col 
+  {{/grid-item}}    
+{{/grid}}
+```
 
 ```hbs title=Responsive
 {{#> grid}}
@@ -279,6 +329,555 @@ import './Grid.css'
   {{/grid-item}}  
 {{/grid}}
 ```
+### Aligning and justifying
+
+#### Justify-items
+
+```hbs title=justify-items-start
+{{#> grid grid--modifier="pf-m-justify-items-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-items-center
+{{#> grid grid--modifier="pf-m-justify-items-center pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-items-end
+{{#> grid grid--modifier="pf-m-justify-items-end pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-items-stretch
+{{#> grid grid--modifier="pf-m-justify-items-stretch pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+#### Align items
+```hbs title=align-items-start
+{{#> grid grid--modifier="pf-m-align-items-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+``` 
+```hbs title=align-items-center
+{{#> grid grid--modifier="pf-m-align-items-center pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-items-end
+{{#> grid grid--modifier="pf-m-align-items-end pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-items-stretch
+{{#> grid grid--modifier="pf-m-align-items-stretch pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+#### Justify content
+```hbs title=justify-content-start
+{{#> grid grid--modifier="pf-m-justify-content-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-content-center
+{{#> grid grid--modifier="pf-m-justify-content-center pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-content-end
+{{#> grid grid--modifier="pf-m-justify-content-end pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-content-stretch
+{{#> grid grid--modifier="pf-m-justify-content-stretch pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-content-space-around
+{{#> grid grid--modifier="pf-m-justify-content-space-around pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-content-space-between
+{{#> grid grid--modifier="pf-m-justify-content-space-between pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-content-space-evenly
+{{#> grid grid--modifier="pf-m-justify-content-space-evenly pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+#### Align content
+```hbs title=align-content-start
+{{#> grid grid--modifier="pf-m-align-content-start pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+``` 
+```hbs title=align-content-center
+{{#> grid grid--modifier="pf-m-align-content-center pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-content-end
+{{#> grid grid--modifier="pf-m-align-content-end pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-content-stretch
+{{#> grid grid--modifier="pf-m-align-content-stretch pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-content-space-around
+{{#> grid grid--modifier="pf-m-align-content-space-around pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-content-space-between
+{{#> grid grid--modifier="pf-m-align-content-space-between pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-content-space-evenly
+{{#> grid grid--modifier="pf-m-align-content-space-evenly pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
+    item 6
+  {{/grid-item}}
+{{/grid}}
+```
+#### Justify self
+```hbs title=justify-self-start
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-justify-self-start"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-self-center
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-justify-self-center"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-self-end
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-justify-self-end"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=justify-self-stretch
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-justify-self-stretch"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+#### Align self
+```hbs title=align-self-start
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-align-self-start pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-self-center
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-align-self-center pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-self-end
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-align-self-end pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
+```hbs title=align-self-stretch
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item grid-item--modifier="pf-m-align-self-stretch pf-m-4-col"}}
+    item 1
+  {{/grid-item}}
+{{/grid}}
+```
 
 ## Documentation
 ### Overiew
@@ -290,6 +889,38 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 | `.pf-l-grid` | `<div>` | Initializes the grid layout. |
 | `.pf-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
 | `.pf-m-gutter` | `.pf-l-grid` | Adds space between children by using the globally defined gutter value. |
+| `.pf-m-gutter-rows` | `.pf-l-grid` | Adds space between children rows by using the globally defined gutter value. |
+| `.pf-m-gutter-columns` | `.pf-l-grid` | Adds space between children columns by using the globally defined gutter value. |
 | `.pf-m-all-{1-12}-col{-on-[breakpoint]}` | `.pf-l-grid` | Defines grid item size on grid container. |
 | `.pf-m-{1-12}-col{-on-[breakpoint]}` | `.pf-l-grid__item` | Defines grid item size.  Although not required, they are strongly suggested. If not used, grid item will default to 12 col. |
 | `.pf-m-{2-x}-row{-on-[breakpoint]}` | `.pf-l-grid__item` | Defines grid item row span.  For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
+| `.pf-m-justify-items-start` | `.pf-l-grid` | Modifies justify-items property to start. |
+| `.pf-m-justify-items-center` | `.pf-l-grid` | Modifies justify-items property to center. |
+| `.pf-m-justify-items-end` | `.pf-l-grid` | Modifies justify-items property to end. |
+| `.pf-m-justify-items-stretch` | `.pf-l-grid` | Modifies justify-items property to stretch. |
+| `.pf-m-align-items-start` | `.pf-l-grid` | Modifies align-items property to start. |
+| `.pf-m-align-items-center` | `.pf-l-grid` | Modifies align-items property to center. |
+| `.pf-m-align-items-end` | `.pf-l-grid` | Modifies align-items property to end. |
+| `.pf-m-align-items-stretch` | `.pf-l-grid` | Modifies align-items property to stretch. |
+| `.pf-m-justify-content-start` | `.pf-l-grid` | Modifies justify-content property to start. |
+| `.pf-m-justify-content-center` | `.pf-l-grid` | Modifies justify-content property to center. |
+| `.pf-m-justify-content-end` | `.pf-l-grid` | Modifies justify-content property to end. |
+| `.pf-m-justify-content-stretch` | `.pf-l-grid` | Modifies justify-content property to stretch. |
+| `.pf-m-justify-content-space-around` | `.pf-l-grid` | Modifies justify-content property to space-around. |
+| `.pf-m-justify-content-space-between` | `.pf-l-grid` | Modifies justify-content property to space-between. |
+| `.pf-m-justify-content-space-evenly` | `.pf-l-grid` | Modifies justify-content property to space-evenly. |
+| `.pf-m-align-content-start` | `.pf-l-grid` | Modifies align-content property to start. |
+| `.pf-m-align-content-center` | `.pf-l-grid` | Modifies align-content property to center. |
+| `.pf-m-align-content-end` | `.pf-l-grid` | Modifies align-content property to end. |
+| `.pf-m-align-content-stretch` | `.pf-l-grid` | Modifies align-content property to stretch. |
+| `.pf-m-align-content-space-around` | `.pf-l-grid` | Modifies align-content property to space-around. |
+| `.pf-m-align-content-space-between` | `.pf-l-grid` | Modifies align-content property to space-between. |
+| `.pf-m-align-content-space-evenly` | `.pf-l-grid` | Modifies align-content property to space-evenly. |
+| `.pf-m-justify-self-start` | `.pf-l-grid__item` | Modifies justify-self property to start. |
+| `.pf-m-justify-self-center` | `.pf-l-grid__item` | Modifies justify-self property to center. |
+| `.pf-m-justify-self-end` | `.pf-l-grid__item` | Modifies justify-self property to end. |
+| `.pf-m-justify-self-stretch` | `.pf-l-grid__item` | Modifies justify-self property to stretch. |
+| `.pf-m-align-self-start` | `.pf-l-grid__item` | Modifies align-self property to start. |
+| `.pf-m-align-self-center` | `.pf-l-grid__item` | Modifies align-self property to center. |
+| `.pf-m-align-self-end` | `.pf-l-grid__item` | Modifies align-self property to end. |
+| `.pf-m-align-self-stretch` | `.pf-l-grid__item` | Modifies align-self property to stretch. |

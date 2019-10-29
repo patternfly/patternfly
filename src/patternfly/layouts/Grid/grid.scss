@@ -1,6 +1,9 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
 
+// Always keep list of spacers and breakpoints up-to-date
+$pf-l-grid--breakpoint-map: build-breakpoint-map();
+
 // URL.com/guidelines#layout
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
@@ -78,5 +81,145 @@
 
   &.pf-m-gutter {
     grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+  }
+
+  &.pf-m-gutter-row {
+    grid-row-gap: var(--pf-l-grid--m-gutter--GridGap);
+  }
+
+  &.pf-m-gutter-column {
+    grid-column-gap: var(--pf-l-grid--m-gutter--GridGap);
+  }
+
+  @each $breakpoint, $breakpoint-value in $pf-l-grid--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-l-grid--breakpoint-map) {
+      // justify-items
+      &.pf-m-justify-items-start#{$breakpoint-name} {
+        justify-items: start;
+      }
+
+      &.pf-m-justify-items-center#{$breakpoint-name} {
+        justify-items: center;
+      }
+
+      &.pf-m-justify-items-end#{$breakpoint-name} {
+        justify-items: end;
+      }
+
+      &.pf-m-justify-items-stretch#{$breakpoint-name} {
+        justify-items: stretch;
+      }
+
+      // align-items
+      &.pf-m-align-items-start#{$breakpoint-name} {
+        align-items: start;
+      }
+
+      &.pf-m-align-items-center#{$breakpoint-name} {
+        align-items: center;
+      }
+
+      &.pf-m-align-items-end#{$breakpoint-name} {
+        align-items: end;
+      }
+
+      &.pf-m-align-items-stretch#{$breakpoint-name} {
+        align-items: stretch;
+      }
+
+      // justify-content
+      &.pf-m-justify-content-start#{$breakpoint-name} {
+        justify-content: start;
+      }
+
+      &.pf-m-justify-content-center#{$breakpoint-name} {
+        justify-content: center;
+      }
+
+      &.pf-m-justify-content-end#{$breakpoint-name} {
+        justify-content: end;
+      }
+
+      &.pf-m-justify-content-stretch#{$breakpoint-name} {
+        justify-content: stretch;
+      }
+
+      &.pf-m-justify-content-space-around#{$breakpoint-name} {
+        justify-content: space-around;
+      }
+
+      &.pf-m-justify-content-space-between#{$breakpoint-name} {
+        justify-content: space-between;
+      }
+
+      &.pf-m-justify-content-space-evenly#{$breakpoint-name} {
+        justify-content: space-evenly;
+      }
+
+      // align-content
+      &.pf-m-align-content-start#{$breakpoint-name} {
+        align-content: start;
+      }
+
+      &.pf-m-align-content-center#{$breakpoint-name} {
+        align-content: center;
+      }
+
+      &.pf-m-align-content-end#{$breakpoint-name} {
+        align-content: end;
+      }
+
+      &.pf-m-align-content-stretch#{$breakpoint-name} {
+        align-content: stretch;
+      }
+
+      &.pf-m-align-content-space-around#{$breakpoint-name} {
+        align-content: space-around;
+      }
+
+      &.pf-m-align-content-space-between#{$breakpoint-name} {
+        align-content: space-between;
+      }
+
+      &.pf-m-align-content-space-evenly#{$breakpoint-name} {
+        align-content: space-evenly;
+      }
+
+      // justify-self
+      .pf-m-justify-self-start#{$breakpoint-name} {
+        justify-self: start;
+      }
+
+      .pf-m-justify-self-center#{$breakpoint-name} {
+        justify-self: center;
+      }
+
+      .pf-m-justify-self-end#{$breakpoint-name} {
+        justify-self: end;
+      }
+
+      .pf-m-justify-self-stretch#{$breakpoint-name} {
+        justify-self: stretch;
+      }
+
+      // align-self
+      .pf-m-align-self-start#{$breakpoint-name} {
+        align-self: start;
+      }
+
+      .pf-m-align-self-end#{$breakpoint-name} {
+        align-self: end;
+      }
+
+      .pf-m-align-self-center#{$breakpoint-name} {
+        align-self: center;
+      }
+
+      .pf-m-align-self-stretch#{$breakpoint-name} {
+        align-self: stretch;
+      }
+    }
   }
 }
