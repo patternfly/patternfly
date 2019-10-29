@@ -666,7 +666,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=grid-auto-flow-column
+```hbs title=Grid-auto-flow-column
 {{#> grid grid--modifier="pf-m-grid-auto-flow-column pf-m-justify-content-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
