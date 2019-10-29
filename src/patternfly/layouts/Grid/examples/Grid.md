@@ -688,7 +688,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=grid-auto-flow-row
+```hbs title=Grid-auto-flow-row
 {{#> grid grid--modifier="pf-m-grid-auto-flow-row pf-m-justify-content-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
