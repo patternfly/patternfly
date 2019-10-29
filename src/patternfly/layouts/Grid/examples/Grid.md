@@ -644,7 +644,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-content-space-evenly
+```hbs title=Justify-content-space-evenly
 {{#> grid grid--modifier="pf-m-justify-content-space-evenly pf-m-grid-auto-flow-column pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
