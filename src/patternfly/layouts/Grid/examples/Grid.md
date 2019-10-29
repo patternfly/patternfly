@@ -159,7 +159,7 @@ import './Grid.css'
 {{/grid}}
 ```
 ```hbs title=Row-Gutter
-{{#> grid grid--modifier="pf-m-gutter-row"}}
+{{#> grid grid--modifier="pf-m-gutter-rows"}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
   {{/grid-item}}
@@ -184,7 +184,7 @@ import './Grid.css'
 {{/grid}}
 ```
 ```hbs title=Column-Gutter
-{{#> grid grid--modifier="pf-m-gutter-column"}}
+{{#> grid grid--modifier="pf-m-gutter-columns"}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
   {{/grid-item}}
