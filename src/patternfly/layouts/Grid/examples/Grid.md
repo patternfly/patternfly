@@ -600,7 +600,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-content-space-around
+```hbs title=Justify-content-space-around
 {{#> grid grid--modifier="pf-m-justify-content-space-around pf-m-grid-auto-flow-column pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
     item 1
