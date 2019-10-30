@@ -133,35 +133,6 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
         align-items: stretch;
       }
 
-      // justify-content
-      &.pf-m-justify-content-start#{$breakpoint-name} {
-        justify-content: start;
-      }
-
-      &.pf-m-justify-content-center#{$breakpoint-name} {
-        justify-content: center;
-      }
-
-      &.pf-m-justify-content-end#{$breakpoint-name} {
-        justify-content: end;
-      }
-
-      &.pf-m-justify-content-stretch#{$breakpoint-name} {
-        justify-content: stretch;
-      }
-
-      &.pf-m-justify-content-space-around#{$breakpoint-name} {
-        justify-content: space-around;
-      }
-
-      &.pf-m-justify-content-space-between#{$breakpoint-name} {
-        justify-content: space-between;
-      }
-
-      &.pf-m-justify-content-space-evenly#{$breakpoint-name} {
-        justify-content: space-evenly;
-      }
-
       // align-content
       &.pf-m-align-content-start#{$breakpoint-name} {
         align-content: start;
@@ -191,49 +162,37 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
         align-content: space-evenly;
       }
 
-      &.pf-m-grid-auto-flow-column#{$breakpoint-name} {
-        grid-auto-flow: column;
-      }
-
-      &.pf-m-grid-auto-flow-row#{$breakpoint-name} {
-        grid-auto-flow: row;
-      }
-
-      &.pf-m-grid-auto-flow-dense#{$breakpoint-name} {
-        grid-auto-flow: dense;
-      }
-
       // justify-self
-      .pf-m-justify-self-start#{$breakpoint-name} {
+      > .pf-m-justify-self-start#{$breakpoint-name} {
         justify-self: start;
       }
 
-      .pf-m-justify-self-center#{$breakpoint-name} {
+      > .pf-m-justify-self-center#{$breakpoint-name} {
         justify-self: center;
       }
 
-      .pf-m-justify-self-end#{$breakpoint-name} {
+      > .pf-m-justify-self-end#{$breakpoint-name} {
         justify-self: end;
       }
 
-      .pf-m-justify-self-stretch#{$breakpoint-name} {
+      > .pf-m-justify-self-stretch#{$breakpoint-name} {
         justify-self: stretch;
       }
 
       // align-self
-      .pf-m-align-self-start#{$breakpoint-name} {
+      > .pf-m-align-self-start#{$breakpoint-name} {
         align-self: start;
       }
 
-      .pf-m-align-self-end#{$breakpoint-name} {
-        align-self: end;
-      }
-
-      .pf-m-align-self-center#{$breakpoint-name} {
+      > .pf-m-align-self-center#{$breakpoint-name} {
         align-self: center;
       }
 
-      .pf-m-align-self-stretch#{$breakpoint-name} {
+      > .pf-m-align-self-end#{$breakpoint-name} {
+        align-self: end;
+      }
+
+      > .pf-m-align-self-stretch#{$breakpoint-name} {
         align-self: stretch;
       }
     }

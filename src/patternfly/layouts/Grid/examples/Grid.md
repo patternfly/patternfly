@@ -510,230 +510,8 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-#### Justify content
-#### For all `justify-content` grids, `grid-template-columns` is set to `initial` to allow customization over the column count.
-```hbs title=Justify-content-start
-{{#> grid grid--modifier="pf-m-justify-content-start pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Justify-content-center
-{{#> grid grid--modifier="pf-m-justify-content-center pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Justify-content-end
-{{#> grid grid--modifier="pf-m-justify-content-end pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Justify-content-stretch
-{{#> grid grid--modifier="pf-m-justify-content-stretch pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Justify-content-space-around
-{{#> grid grid--modifier="pf-m-justify-content-space-around pf-m-grid-auto-flow-column pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Justify-content-space-between
-{{#> grid grid--modifier="pf-m-justify-content-space-between pf-m-grid-auto-flow-column pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Justify-content-space-evenly
-{{#> grid grid--modifier="pf-m-justify-content-space-evenly pf-m-grid-auto-flow-column pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Grid-auto-flow-column
-{{#> grid grid--modifier="pf-m-grid-auto-flow-column pf-m-justify-content-start pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=Grid-auto-flow-row
-{{#> grid grid--modifier="pf-m-grid-auto-flow-row pf-m-justify-content-start pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
-```hbs title=grid-auto-flow-dense
-{{#> grid grid--modifier="pf-m-grid-auto-flow-dense pf-m-justify-content-start pf-m-gutter"}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 1
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    item 2
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-    item 3
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 4
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-    item 5
-  {{/grid-item}}
-  {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-    item 6
-  {{/grid-item}}
-{{/grid}}
-```
 #### Align content
-```hbs title=align-content-start
+```hbs title=Align-content-start
 {{#> grid grid--modifier="pf-m-align-content-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -755,7 +533,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ``` 
-```hbs title=align-content-center
+```hbs title=Align-content-center
 {{#> grid grid--modifier="pf-m-align-content-center pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -777,7 +555,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-content-end
+```hbs title=Align-content-end
 {{#> grid grid--modifier="pf-m-align-content-end pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -799,7 +577,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-content-stretch
+```hbs title=Align-content-stretch
 {{#> grid grid--modifier="pf-m-align-content-stretch pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -821,7 +599,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-content-space-around
+```hbs title=Align-content-space-around
 {{#> grid grid--modifier="pf-m-align-content-space-around pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -843,7 +621,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-content-space-between
+```hbs title=Align-content-space-between
 {{#> grid grid--modifier="pf-m-align-content-space-between pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -865,7 +643,7 @@ import './Grid.css'
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-content-space-evenly
+```hbs title=Align-content-space-evenly
 {{#> grid grid--modifier="pf-m-align-content-space-evenly pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
     item 1
@@ -888,28 +666,28 @@ import './Grid.css'
 {{/grid}}
 ```
 #### Justify self
-```hbs title=justify-self-start
+```hbs title=Justify-self-start
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-justify-self-start"}}
     item 1
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-self-center
+```hbs title=Justify-self-center
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-justify-self-center"}}
     item 1
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-self-end
+```hbs title=Justify-self-end
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-justify-self-end"}}
     item 1
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=justify-self-stretch
+```hbs title=Justify-self-stretch
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-justify-self-stretch"}}
     item 1
@@ -917,28 +695,28 @@ import './Grid.css'
 {{/grid}}
 ```
 #### Align self
-```hbs title=align-self-start
+```hbs title=Align-self-start
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-align-self-start pf-m-4-col"}}
     item 1
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-self-center
+```hbs title=Align-self-center
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-align-self-center pf-m-4-col"}}
     item 1
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-self-end
+```hbs title=Align-self-end
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-align-self-end pf-m-4-col"}}
     item 1
   {{/grid-item}}
 {{/grid}}
 ```
-```hbs title=align-self-stretch
+```hbs title=Align-self-stretch
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-align-self-stretch pf-m-4-col"}}
     item 1
@@ -947,7 +725,7 @@ import './Grid.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The grid layout is based on CSS Grid’s two-dimensional system of columns and rows. This layout styles the parent element and its children to achieve responsive column and row spans as well as gutters.
 
 ### Usage
@@ -969,13 +747,6 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 | `.pf-m-align-items-center` | `.pf-l-grid` | Modifies align-items property to center. |
 | `.pf-m-align-items-end` | `.pf-l-grid` | Modifies align-items property to end. |
 | `.pf-m-align-items-stretch` | `.pf-l-grid` | Modifies align-items property to stretch. |
-| `.pf-m-justify-content-start` | `.pf-l-grid` | Modifies justify-content property to start. |
-| `.pf-m-justify-content-center` | `.pf-l-grid` | Modifies justify-content property to center. |
-| `.pf-m-justify-content-end` | `.pf-l-grid` | Modifies justify-content property to end. |
-| `.pf-m-justify-content-stretch` | `.pf-l-grid` | Modifies justify-content property to stretch. |
-| `.pf-m-justify-content-space-around` | `.pf-l-grid` | Modifies justify-content property to space-around. |
-| `.pf-m-justify-content-space-between` | `.pf-l-grid` | Modifies justify-content property to space-between. |
-| `.pf-m-justify-content-space-evenly` | `.pf-l-grid` | Modifies justify-content property to space-evenly. |
 | `.pf-m-align-content-start` | `.pf-l-grid` | Modifies align-content property to start. |
 | `.pf-m-align-content-center` | `.pf-l-grid` | Modifies align-content property to center. |
 | `.pf-m-align-content-end` | `.pf-l-grid` | Modifies align-content property to end. |
@@ -983,9 +754,6 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 | `.pf-m-align-content-space-around` | `.pf-l-grid` | Modifies align-content property to space-around. |
 | `.pf-m-align-content-space-between` | `.pf-l-grid` | Modifies align-content property to space-between. |
 | `.pf-m-align-content-space-evenly` | `.pf-l-grid` | Modifies align-content property to space-evenly. |
-| `.pf-m-grid-auto-flow-column` | `.pf-l-grid` | Modifies grid-auto-flow property to column. |
-| `.pf-m-grid-auto-flow-row` | `.pf-l-grid` | Modifies grid-auto-flow property to row. |
-| `.pf-m-grid-auto-flow-dense` | `.pf-l-grid` | Modifies grid-auto-flow property to dense. |
 | `.pf-m-justify-self-start` | `.pf-l-grid__item` | Modifies justify-self property to start. |
 | `.pf-m-justify-self-center` | `.pf-l-grid__item` | Modifies justify-self property to center. |
 | `.pf-m-justify-self-end` | `.pf-l-grid__item` | Modifies justify-self property to end. |
