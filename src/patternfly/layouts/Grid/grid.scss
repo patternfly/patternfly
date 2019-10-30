@@ -95,104 +95,102 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
     grid-column-gap: var(--pf-l-grid--m-gutter--GridGap);
   }
 
-  @each $breakpoint, $breakpoint-value in $pf-l-grid--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint, $pf-l-grid--breakpoint-map) {
+  @each $breakpoint, $value in $pf-global--breakpoint-map {
+    @include pf-media-query($breakpoint) {
       // justify-items
-      &.pf-m-justify-items-start#{$breakpoint-name} {
+      &.pf-m-justify-items-start#{$value} {
         justify-items: start;
       }
 
-      &.pf-m-justify-items-center#{$breakpoint-name} {
+      &.pf-m-justify-items-center#{$value} {
         justify-items: center;
       }
 
-      &.pf-m-justify-items-end#{$breakpoint-name} {
+      &.pf-m-justify-items-end#{$value} {
         justify-items: end;
       }
 
-      &.pf-m-justify-items-stretch#{$breakpoint-name} {
+      &.pf-m-justify-items-stretch#{$value} {
         justify-items: stretch;
       }
 
       // align-items
-      &.pf-m-align-items-start#{$breakpoint-name} {
+      &.pf-m-align-items-start#{$value} {
         align-items: start;
       }
 
-      &.pf-m-align-items-center#{$breakpoint-name} {
+      &.pf-m-align-items-center#{$value} {
         align-items: center;
       }
 
-      &.pf-m-align-items-end#{$breakpoint-name} {
+      &.pf-m-align-items-end#{$value} {
         align-items: end;
       }
 
-      &.pf-m-align-items-stretch#{$breakpoint-name} {
+      &.pf-m-align-items-stretch#{$value} {
         align-items: stretch;
       }
 
       // align-content
-      &.pf-m-align-content-start#{$breakpoint-name} {
+      &.pf-m-align-content-start#{$value} {
         align-content: start;
       }
 
-      &.pf-m-align-content-center#{$breakpoint-name} {
+      &.pf-m-align-content-center#{$value} {
         align-content: center;
       }
 
-      &.pf-m-align-content-end#{$breakpoint-name} {
+      &.pf-m-align-content-end#{$value} {
         align-content: end;
       }
 
-      &.pf-m-align-content-stretch#{$breakpoint-name} {
+      &.pf-m-align-content-stretch#{$value} {
         align-content: stretch;
       }
 
-      &.pf-m-align-content-space-around#{$breakpoint-name} {
+      &.pf-m-align-content-space-around#{$value} {
         align-content: space-around;
       }
 
-      &.pf-m-align-content-space-between#{$breakpoint-name} {
+      &.pf-m-align-content-space-between#{$value} {
         align-content: space-between;
       }
 
-      &.pf-m-align-content-space-evenly#{$breakpoint-name} {
+      &.pf-m-align-content-space-evenly#{$value} {
         align-content: space-evenly;
       }
 
       // justify-self
-      > .pf-m-justify-self-start#{$breakpoint-name} {
+      > .pf-m-justify-self-start#{$value} {
         justify-self: start;
       }
 
-      > .pf-m-justify-self-center#{$breakpoint-name} {
+      > .pf-m-justify-self-center#{$value} {
         justify-self: center;
       }
 
-      > .pf-m-justify-self-end#{$breakpoint-name} {
+      > .pf-m-justify-self-end#{$value} {
         justify-self: end;
       }
 
-      > .pf-m-justify-self-stretch#{$breakpoint-name} {
+      > .pf-m-justify-self-stretch#{$value} {
         justify-self: stretch;
       }
 
       // align-self
-      > .pf-m-align-self-start#{$breakpoint-name} {
+      > .pf-m-align-self-start#{$value} {
         align-self: start;
       }
 
-      > .pf-m-align-self-center#{$breakpoint-name} {
+      > .pf-m-align-self-center#{$value} {
         align-self: center;
       }
 
-      > .pf-m-align-self-end#{$breakpoint-name} {
+      > .pf-m-align-self-end#{$value} {
         align-self: end;
       }
 
-      > .pf-m-align-self-stretch#{$breakpoint-name} {
+      > .pf-m-align-self-stretch#{$value} {
         align-self: stretch;
       }
     }
