@@ -1,0 +1,19 @@
+dl.pf-c-list {
+  --pf-c-list--PaddingLeft: var(--pf-c-list--dl--PaddingLeft);
+  --pf-c-list--dl--PaddingLeft: 0;
+  --pf-c-list--dt--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-list--dt--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-list--dd--MarginTop: var(--pf-global--spacer--xs);
+}
+
+.pf-c-list dt {
+  font-weight: var(--pf-c-list--dt--FontWeight);
+}
+
+.pf-c-list dd + dt {
+  margin-top: var(--pf-c-list--dt--MarginTop);
+}
+
+.pf-c-list dt + dd {
+  margin-top: var(--pf-c-list--dd--MarginTop);
+}

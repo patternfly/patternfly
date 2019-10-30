@@ -1,0 +1,215 @@
+// Don't remove this magic comment. See gulpfile.js.
+// @import "../../sass-utilities/all";
+
+.pf-c-inline-edit {
+  // Value group
+  --pf-c-inline-edit__value-group--item--MarginRight: var(--pf-global--spacer--sm);
+
+  // Input group
+  --pf-c-inline-edit__input-group--item--MarginRight: var(--pf-global--spacer--sm);
+
+  // Toggle group
+  --pf-c-inline-edit__title-group--item--MarginRight: var(--pf-global--spacer--sm);
+
+  // Action
+  --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-global--spacer--md);
+
+  // Toggle
+  --pf-c-inline-edit--m-active__toggle--Color: var(--pf-global--Color--100);
+
+  // Save button
+  --pf-c-inline-edit__action--m-save--c-button--m-plain--hover--Color: var(--pf-global--link--Color);
+  --pf-c-inline-edit__action--m-save--c-button--m-plain--focus--Color: var(--pf-global--link--Color);
+  --pf-c-inline-edit__action--m-save--c-button--m-plain--active--Color: var(--pf-global--link--Color);
+
+  // Hidden
+  .pf-m-hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+  // Align right
+  .pf-m-align-right {
+    margin-left: auto;
+  }
+
+  // Overrides
+  table {
+    table-layout: fixed;
+  }
+
+  td {
+    word-break: normal;
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  [class*="pf-m-grid"] [data-label] {
+    .pf-c-check,
+    .pf-c-radio {
+      input {
+        grid-column: 1;
+      }
+    }
+  }
+  /* stylelint-enable */
+}
+
+// Value group
+.pf-c-inline-edit__value-group {
+  display: flex;
+
+  > * {
+    margin-right: var(--pf-c-inline-edit__value-group--item--MarginRight);
+  }
+
+  > :last-child {
+    --pf-c-inline-edit__value-group--item--MarginRight: 0;
+  }
+}
+
+// Input group
+.pf-c-inline-edit__input-group {
+  > * {
+    margin-right: var(--pf-c-inline-edit__input-group--item--MarginRight);
+  }
+
+  > :last-child {
+    --pf-c-inline-edit__input-group--item--MarginRight: 0;
+  }
+
+  // Remove margin for actions within input groups. ie 'Save' 'Cancel'
+  .pf-c-inline-edit__action {
+    --pf-c-inline-edit__input-group--item--MarginRight: 0;
+  }
+
+  .pf-c-inline-edit__action-group {
+    --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-c-inline-edit__input-group--m-action-group--item--MarginRight);
+  }
+}
+
+.pf-c-inline-edit__input,
+.pf-c-inline-edit__input-group {
+  display: none;
+  flex: 1;
+  visibility: hidden;
+}
+
+
+// Action group
+.pf-c-inline-edit__action-group {
+  display: flex;
+
+  > * {
+    margin-right: var(--pf-c-inline-edit__action-group--item--MarginRight);
+  }
+
+  > :last-child {
+    --pf-c-inline-edit__action-group--item--MarginRight: 0;
+  }
+}
+
+// Toggle group
+.pf-c-inline-edit__title-group {
+  display: inline-flex;
+
+  > * {
+    margin-right: var(--pf-c-inline-edit__title-group--item--MarginRight);
+  }
+
+  > :last-child {
+    --pf-c-inline-edit__title-group--item--MarginRight: 0;
+  }
+}
+
+.pf-m-column {
+  &.pf-c-inline-edit__value-group,
+  &.pf-c-inline-edit__input-group,
+  &.pf-c-inline-edit__action-group,
+  &.pf-c-inline-edit__title-group {
+    flex-direction: column;
+  }
+
+  &.pf-c-inline-edit__value-group {
+    --pf-c-inline-edit__value-group--item--MarginRight: 0;
+  }
+
+  &.pf-c-inline-edit__input-group {
+    --pf-c-inline-edit__input-group--item--MarginRight: 0;
+  }
+
+  &.pf-c-inline-edit__action-group {
+    --pf-c-inline-edit__action-group--item--MarginRight: 0;
+  }
+
+  &.pf-c-inline-edit__title-group {
+    --pf-c-inline-edit__value-group--item--MarginRight: 0;
+  }
+}
+
+.pf-c-inline-edit [class*="group"] {
+  align-items: baseline;
+}
+
+// Active
+.pf-c-inline-edit.pf-m-inline-edit-active,
+.pf-c-inline-edit .pf-m-inline-edit-active {
+  .pf-c-inline-edit__value,
+  .pf-c-inline-edit__value-group {
+    display: none;
+    visibility: hidden;
+  }
+
+  .pf-c-inline-edit__input,
+  .pf-c-inline-edit__input-group {
+    display: flex;
+    visibility: visible;
+  }
+
+  /* stylelint-disable selector-max-class */
+  .pf-c-inline-edit__toggle .pf-c-button.pf-m-plain {
+    color: var(--pf-c-inline-edit--m-active__toggle--Color);
+  }
+  /* stylelint-enable */
+}
+
+/* stylelint-disable selector-max-class */
+.pf-c-inline-edit__action.pf-m-save .pf-c-button.pf-m-plain {
+  &:hover,
+  &.pf-m-hover {
+    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--c-button--m-plain--hover--Color);
+  }
+
+  &:active,
+  &.pf-m-active {
+    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--c-button--m-plain--active--Color);
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--c-button--m-plain--focus--Color);
+  }
+}
+/* stylelint-enable */
+
+// .pf-c-list {
+//   --pf-c-list--dl--PaddingLeft: 0;
+//   --pf-c-list--dt--FontWeight: var(--pf-global--FontWeight--bold);
+//   --pf-c-list--dt--MarginTop: var(--pf-global--spacer--md);
+//   --pf-c-list--dd--MarginTop: var(--pf-global--spacer--xs);
+
+//   @at-root dl#{&} {
+//     --pf-c-list--PaddingLeft: var(--pf-c-list--dl--PaddingLeft);
+
+//     dt {
+//       font-weight: var(--pf-c-list--dt--FontWeight);
+//     }
+
+//     dd + dt {
+//       margin-top: var(--pf-c-list--dt--MarginTop);
+//     }
+
+//     dt + dd {
+//       margin-top: var(--pf-c-list--dd--MarginTop);
+//     }
+//   }
+// }
