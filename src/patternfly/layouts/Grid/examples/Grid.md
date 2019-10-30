@@ -332,7 +332,6 @@ import './Grid.css'
 ### Aligning and justifying
 
 #### Justify-items
-
 ```hbs title=Justify-items-start
 {{#> grid grid--modifier="pf-m-justify-items-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
