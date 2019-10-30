@@ -6,7 +6,7 @@ hideTOC: true
 
 # 2019.09 release notes (2019-10-29)
 Packages released:
-- @patternfly/patternfly@v2.40.2
+- @patternfly/patternfly@v2.40.3
 
 ## Components
 - **Charts:**
