@@ -18,7 +18,8 @@ const config = {
   sourceFiles: [
     './src/patternfly/patternfly*.scss',
     './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-    '!./src/patternfly/**/_all.scss'
+    '!./src/patternfly/**/_all.scss',
+    '!./src/patternfly/patternfly-imports.scss'
   ]
 };
 
@@ -110,9 +111,11 @@ function copySource() {
   return Promise.all([
     // Copy source files
     src(config.sourceFiles).pipe(dest('./dist')),
-    src('./src/patternfly/_*.scss').pipe(dest('./dist')),
+    // Copy excluded source files
+    src(['./src/patternfly/_*.scss', './src/patternfly/**/_all.scss', './src/patternfly/patternfly-imports.scss']).pipe(
+      dest('./dist')
+    ),
     src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
-    src('./src/patternfly/**/_all.scss').pipe(dest('./dist')),
     // Assets
     src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
     src('./src/patternfly/assets/**/*').pipe(dest('./dist/assets/')),
