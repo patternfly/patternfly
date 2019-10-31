@@ -78,15 +78,15 @@
 
   @each $breakpoint, $value in $pf-global--breakpoint-map {
     @include pf-media-query($breakpoint) {
-      &.pf-m-gutter {
+      &.pf-m-gutter#{$value} {
         grid-gap: var(--pf-l-grid--m-gutter--GridGap);
       }
 
-      &.pf-m-gutter-rows {
+      &.pf-m-gutter-rows#{$value} {
         grid-row-gap: var(--pf-l-grid--m-gutter--GridGap);
       }
 
-      &.pf-m-gutter-columns {
+      &.pf-m-gutter-columns#{$value} {
         grid-column-gap: var(--pf-l-grid--m-gutter--GridGap);
       }
 
