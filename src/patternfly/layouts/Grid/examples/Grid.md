@@ -732,7 +732,7 @@ Currently the grid layout does not offer `justify-content` or `grid-auto-flow` o
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-l-grid` | `<div>` | Initializes the grid layout. |
+| `.pf-l-grid` | `<div>` | Initializes the grid layout. **Required** |
 | `.pf-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
 | `.pf-m-gutter{-on-[breakpoint]}` | `.pf-l-grid` | Adds space between children by using the globally defined gutter value. |
 | `.pf-m-gutter-rows{-on-[breakpoint]}` | `.pf-l-grid` | Adds space between children rows by using the globally defined gutter value. |
