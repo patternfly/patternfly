@@ -331,7 +331,7 @@ import './Grid.css'
 ```
 ### Aligning and justifying
 
-#### Justify-items
+#### Justify items
 ```hbs title=Justify-items-start
 {{#> grid grid--modifier="pf-m-justify-items-start pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
@@ -727,37 +727,39 @@ import './Grid.css'
 ### Overview
 The grid layout is based on CSS Grid’s two-dimensional system of columns and rows. This layout styles the parent element and its children to achieve responsive column and row spans as well as gutters.
 
+Currently the grid layout does not offer `justify-content` or `grid-auto-flow` options due to the strict 12 column layout. This may change in the future if a more customizable grid is offered.
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-grid` | `<div>` | Initializes the grid layout. |
 | `.pf-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
-| `.pf-m-gutter` | `.pf-l-grid` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-gutter-rows` | `.pf-l-grid` | Adds space between children rows by using the globally defined gutter value. |
-| `.pf-m-gutter-columns` | `.pf-l-grid` | Adds space between children columns by using the globally defined gutter value. |
+| `.pf-m-gutter{-on-[breakpoint]}` | `.pf-l-grid` | Adds space between children by using the globally defined gutter value. |
+| `.pf-m-gutter-rows{-on-[breakpoint]}` | `.pf-l-grid` | Adds space between children rows by using the globally defined gutter value. |
+| `.pf-m-gutter-columns{-on-[breakpoint]}` | `.pf-l-grid` | Adds space between children columns by using the globally defined gutter value. |
 | `.pf-m-all-{1-12}-col{-on-[breakpoint]}` | `.pf-l-grid` | Defines grid item size on grid container. |
 | `.pf-m-{1-12}-col{-on-[breakpoint]}` | `.pf-l-grid__item` | Defines grid item size.  Although not required, they are strongly suggested. If not used, grid item will default to 12 col. |
 | `.pf-m-{2-x}-row{-on-[breakpoint]}` | `.pf-l-grid__item` | Defines grid item row span.  For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
-| `.pf-m-justify-items-start` | `.pf-l-grid` | Modifies justify-items property to start. |
-| `.pf-m-justify-items-center` | `.pf-l-grid` | Modifies justify-items property to center. |
-| `.pf-m-justify-items-end` | `.pf-l-grid` | Modifies justify-items property to end. |
-| `.pf-m-justify-items-stretch` | `.pf-l-grid` | Modifies justify-items property to stretch. |
-| `.pf-m-align-items-start` | `.pf-l-grid` | Modifies align-items property to start. |
-| `.pf-m-align-items-center` | `.pf-l-grid` | Modifies align-items property to center. |
-| `.pf-m-align-items-end` | `.pf-l-grid` | Modifies align-items property to end. |
-| `.pf-m-align-items-stretch` | `.pf-l-grid` | Modifies align-items property to stretch. |
-| `.pf-m-align-content-start` | `.pf-l-grid` | Modifies align-content property to start. |
-| `.pf-m-align-content-center` | `.pf-l-grid` | Modifies align-content property to center. |
-| `.pf-m-align-content-end` | `.pf-l-grid` | Modifies align-content property to end. |
-| `.pf-m-align-content-stretch` | `.pf-l-grid` | Modifies align-content property to stretch. |
-| `.pf-m-align-content-space-around` | `.pf-l-grid` | Modifies align-content property to space-around. |
-| `.pf-m-align-content-space-between` | `.pf-l-grid` | Modifies align-content property to space-between. |
-| `.pf-m-align-content-space-evenly` | `.pf-l-grid` | Modifies align-content property to space-evenly. |
-| `.pf-m-justify-self-start` | `.pf-l-grid__item` | Modifies justify-self property to start. |
-| `.pf-m-justify-self-center` | `.pf-l-grid__item` | Modifies justify-self property to center. |
-| `.pf-m-justify-self-end` | `.pf-l-grid__item` | Modifies justify-self property to end. |
-| `.pf-m-justify-self-stretch` | `.pf-l-grid__item` | Modifies justify-self property to stretch. |
-| `.pf-m-align-self-start` | `.pf-l-grid__item` | Modifies align-self property to start. |
-| `.pf-m-align-self-center` | `.pf-l-grid__item` | Modifies align-self property to center. |
-| `.pf-m-align-self-end` | `.pf-l-grid__item` | Modifies align-self property to end. |
-| `.pf-m-align-self-stretch` | `.pf-l-grid__item` | Modifies align-self property to stretch. |
+| `.pf-m-justify-items-start{-on-[breakpoint]}` | `.pf-l-grid` | Modifies justify-items property to start. |
+| `.pf-m-justify-items-center{-on-[breakpoint]}` | `.pf-l-grid` | Modifies justify-items property to center. |
+| `.pf-m-justify-items-end{-on-[breakpoint]}` | `.pf-l-grid` | Modifies justify-items property to end. |
+| `.pf-m-justify-items-stretch{-on-[breakpoint]}` | `.pf-l-grid` | Modifies justify-items property to stretch. |
+| `.pf-m-align-items-start{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-items property to start. |
+| `.pf-m-align-items-center{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-items property to center. |
+| `.pf-m-align-items-end{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-items property to end. |
+| `.pf-m-align-items-stretch{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-items property to stretch. |
+| `.pf-m-align-content-start{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to start. |
+| `.pf-m-align-content-center{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to center. |
+| `.pf-m-align-content-end{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to end. |
+| `.pf-m-align-content-stretch{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to stretch. |
+| `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to space-around. |
+| `.pf-m-align-content-space-between{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to space-between. |
+| `.pf-m-align-content-space-evenly{-on-[breakpoint]}` | `.pf-l-grid` | Modifies align-content property to space-evenly. |
+| `.pf-m-justify-self-start{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies justify-self property to start. |
+| `.pf-m-justify-self-center{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies justify-self property to center. |
+| `.pf-m-justify-self-end{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies justify-self property to end. |
+| `.pf-m-justify-self-stretch{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies justify-self property to stretch. |
+| `.pf-m-align-self-start{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies align-self property to start. |
+| `.pf-m-align-self-center{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies align-self property to center. |
+| `.pf-m-align-self-end{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies align-self property to end. |
+| `.pf-m-align-self-stretch{-on-[breakpoint]}` | `.pf-l-grid__item` | Modifies align-self property to stretch. |

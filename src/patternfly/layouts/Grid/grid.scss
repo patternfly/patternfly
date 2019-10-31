@@ -1,9 +1,6 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
 
-// Always keep list of spacers and breakpoints up-to-date
-$pf-l-grid--breakpoint-map: build-breakpoint-map();
-
 // URL.com/guidelines#layout
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
@@ -57,10 +54,6 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
-  &[class*="pf-m-justify-content"] {
-    grid-template-columns: initial;
-  }
-
   > *,
   .pf-l-grid__item {
     grid-column-start: var(--pf-l-grid__item--GridColumnStart);
@@ -83,20 +76,20 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
     }
   }
 
-  &.pf-m-gutter {
-    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
-  }
-
-  &.pf-m-gutter-rows {
-    grid-row-gap: var(--pf-l-grid--m-gutter--GridGap);
-  }
-
-  &.pf-m-gutter-columns {
-    grid-column-gap: var(--pf-l-grid--m-gutter--GridGap);
-  }
-
   @each $breakpoint, $value in $pf-global--breakpoint-map {
     @include pf-media-query($breakpoint) {
+      &.pf-m-gutter {
+        grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+      }
+
+      &.pf-m-gutter-rows {
+        grid-row-gap: var(--pf-l-grid--m-gutter--GridGap);
+      }
+
+      &.pf-m-gutter-columns {
+        grid-column-gap: var(--pf-l-grid--m-gutter--GridGap);
+      }
+
       // justify-items
       &.pf-m-justify-items-start#{$value} {
         justify-items: start;
