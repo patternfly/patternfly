@@ -1,9 +1,16 @@
 // TODO: Have Gatsby use our compiled CSS rather than our SASS.
-// Utilities + Variables
+// Variables + Utilities
 @import "../patternfly/patternfly-addons.scss";
+
+// Patternfly overrides for Gatsby site
+$fa-font-path: "/assets/fonts/webfonts";
+$pf-global--fonticon-path: "/assets/pficon";
+$pf-global--font-path: "/assets/fonts";
+$pf-global--image-path: "/assets/images";
 
 // Patternfly CSS
 @import "../patternfly/patternfly.scss";
+
 // Experimental components
 @import "../patternfly/components/DataToolbar/data-toolbar.scss";
 @import "../patternfly/components/Divider/divider.scss";

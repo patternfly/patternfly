@@ -69,6 +69,8 @@ module.exports = {
       options: {
         path: `${path.resolve(__dirname)}/src/site/pages`
       }
-    }
+    },
+    // Compile source SASS files
+    'gatsby-plugin-sass'
   ]
 };
