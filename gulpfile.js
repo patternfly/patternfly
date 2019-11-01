@@ -50,6 +50,10 @@ function copyFA() {
     .pipe(dest('./dist/assets/icons'));
 }
 
+function copyAssets() {
+  return src('./src/patternfly/assets/**').pipe(dest('./public/assets'));
+}
+
 function minifyCSS() {
   return src('./dist/patternfly.css')
     .pipe(rename('patternfly.min.css'))
@@ -74,7 +78,14 @@ function compileSASS() {
             // change `// @import "../../sass-utilities/all";` to `@use "../../sass-utilities/all";`
             data: scss.replace('// @import "../../sass-utilities/all";', '@import "../../sass-utilities/all";')
           });
-          chunk.contents = Buffer.from(css.css);
+          let cssString = css.css.toString();
+          // TODO: Cleaner way to to do relative image assets in component CSS
+          const relativePath = chunk.history[0].replace(chunk._base, '');
+          const numDirectories = relativePath.match(/\//g).length - 1;
+          if (numDirectories > 0) {
+            cssString = cssString.replace('./assets/images', `${'../'.repeat(numDirectories)}assets/images`);
+          }
+          chunk.contents = Buffer.from(cssString);
 
           stylelint
             .lint({
@@ -100,11 +111,7 @@ function compileSASS() {
 function watchSASS() {
   module.exports.build();
   // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
-  watch(
-    ['./src/patternfly/patternfly*.scss', './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'],
-    {},
-    compileSASS
-  );
+  watch(config.sourceFiles, {}, compileSASS);
 }
 
 function copySource() {
@@ -115,6 +122,7 @@ function copySource() {
     src(['./src/patternfly/_*.scss', './src/patternfly/**/_all.scss', './src/patternfly/patternfly-imports.scss']).pipe(
       dest('./dist')
     ),
+    src('./src/patternfly/{components,layouts,patterns,utilities}/**/*.scss').pipe(dest('./dist')),
     src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
     // Assets
     src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
@@ -151,5 +159,6 @@ module.exports = {
   pfIconFont,
   pfIcons,
   copyFA,
-  copySource
+  copySource,
+  copyAssets
 };
