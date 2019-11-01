@@ -83,7 +83,7 @@ function compileSASS() {
           const relativePath = chunk.history[0].replace(chunk._base, '');
           const numDirectories = relativePath.match(/\//g).length - 1;
           if (numDirectories > 0) {
-            cssString = cssString.replace('./assets/images', `${'../'.repeat(numDirectories)}assets/images`);
+            cssString = cssString.replace(/.\/assets\/images/g, `${'../'.repeat(numDirectories)}assets/images`);
           }
           chunk.contents = Buffer.from(cssString);
 
