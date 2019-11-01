@@ -81,6 +81,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "fs-extra": "^5.0.0",
     "gatsby": "~2.15.14",
+    "gatsby-plugin-sass": "^2.1.20",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-theme-patternfly-org": "^0.0.15",
     "glob": "^7.1.2",
@@ -160,8 +161,5 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "dependencies": {
-    "gatsby-plugin-sass": "^2.1.20"
   }
 }
