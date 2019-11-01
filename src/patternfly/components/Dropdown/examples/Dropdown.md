@@ -63,25 +63,43 @@ import './Dropdown.css'
 {{/dropdown}}
 ```
 
-```hbs title=Split-button
-{{#> dropdown id="dropdown-split-button-disabled" dropdown--IsSplitButton="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-disabled-example-button"}}
-  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-disabled-example-check" aria-label="Select all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-disabled-example-button" aria-label="Select"}}
+```hbs title=Split-button-(checkbox)
+{{#> dropdown id="dropdown-split-button-disabled" dropdown--IsSplitButton="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
+  {{> dropdown-toggle-check aria-label="Select all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
 
-{{#> dropdown id="dropdown-split-button" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-example-button"}}
-  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-example-check" aria-label="Select all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-example-button" aria-label="Select"}}
+{{#> dropdown id="dropdown-split-button" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
+  {{> dropdown-toggle-check aria-label="Select all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
 
-{{#> dropdown id="dropdown-split-button-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-expanded-example-button"}}
-  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-expanded-example-check" aria-label="Select all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-expanded-example-button"  aria-label="Select"}}
+{{#> dropdown id="dropdown-split-button-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
+  {{> dropdown-toggle-check aria-label="Select all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
+{{/dropdown}}
+```
+
+```hbs title=Split-button-(checkbox-with-toggle-text)
+{{#> dropdown id="dropdown-split-button-text" dropdown--IsSplitButton="true" dropdown--IsSplitButtonText="10 selected" dropdown--CheckboxIsChecked="true" dropdown--IsBulkSelect="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
+  {{> dropdown-toggle-check aria-label="Unselect all"}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
+{{/dropdown}}
+```
+
+```hbs title=Split-button-(action)
+{{#> dropdown id="dropdown-split-button-action" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
+  {{#> dropdown-toggle-button dropdown-toggle-button--modifier="pf-m-action"}}
+    Action
+  {{/dropdown-toggle-button}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
 
-{{#> dropdown id="dropdown-split-button-text" dropdown--IsSplitButton="true" dropdown--IsSplitButtonText="10 selected" dropdown--CheckboxIsChecked="true" dropdown--IsBulkSelect="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="split-button-dropdown-with-text-example-button"}}
-  {{> dropdown-toggle-check dropdown-toggle-check--id="split-button-dropdown-with-text-example-check" aria-label="Unselect all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id="split-button-dropdown-with-text-example-button"  aria-label="Select"}}
+{{#> dropdown id="dropdown-split-button-action-icon" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
+  {{#> dropdown-toggle-button dropdown-toggle-button--modifier="pf-m-action" aria-label="Settings"}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/dropdown-toggle-button}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
 ```
 
@@ -142,7 +160,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden. |
 | `aria-expanded="true"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is visible. |
-| `aria-label="Actions"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text**. |
+| `aria-label="Actions"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button`, `.pf-c-dropdown__toggle-action` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text**. |
 | `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon`, `<i>`, `.pf-c-dropdown__toggle-check .pf-c-dropdown__toggle-text` | Hides the icon from assistive technologies. |
 | `hidden` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
 | `aria-labelledby="{toggle button id}"` | `.pf-c-dropdown__menu` | Gives the menu an accessible name by referring to the element that toggles the menu. |
@@ -161,7 +179,8 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__toggle-icon` | `<i>` | Defines the dropdown toggle icon. |
 | `.pf-c-dropdown__toggle-text` | `<span>` | Defines the dropdown toggle text. **Required when text is present, adds truncation**. |
 | `.pf-c-dropdown__toggle-check` | `<label>` | Defines a checkbox in the toggle area of a split button dropdown. |
-| `.pf-c-dropdown__toggle-button` | `<button>` | Defines a button in the toggle area of a split button dropdown. |
+| `.pf-c-dropdown__toggle-button` | `<button>` | Defines the toggle button for a split button dropdown. |
+| `.pf-c-dropdown__toggle-action` | `<button>` | Defines an action in the toggle area of a split button dropdown. |
 | `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
@@ -179,5 +198,3 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`. |
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
-
-The dropdown panel is provided for flexibility in allowing various content within a dropdown.

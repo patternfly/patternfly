@@ -24,11 +24,11 @@
   min-height: 440px;
 }
 
-#ws-core-c-dropdown-split-button {
+#ws-core-c-dropdown-split-button-checkbox {
   min-height: 210px;
 }
 
-#ws-core-c-dropdown-split-button .pf-c-dropdown:not(:last-child) {
+[id^="ws-core-c-dropdown-split-button"] .pf-c-dropdown:not(:last-child) {
   margin-right: 4px;
 }
 
