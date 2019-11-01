@@ -14,7 +14,7 @@
     "build:pficons": "gulp pfIcons",
     "build:pficonfont": "gulp pfIconFont",
     "build:ie11": "gulp buildIE",
-    "build:site": "gatsby build",
+    "build:site": "gatsby build && npm run copy-assets",
     "clean": "gatsby clean",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "copy-assets": "gulp copyAssets",
