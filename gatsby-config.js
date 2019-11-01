@@ -80,6 +80,8 @@ module.exports = {
       options: {
         extensions: ['.md']
       }
-    }
+    },
+    // Compile source SASS files
+    'gatsby-plugin-sass'
   ]
 };
