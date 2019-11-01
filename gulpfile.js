@@ -50,6 +50,10 @@ function copyFA() {
     .pipe(dest('./dist/assets/icons'));
 }
 
+function copyAssets() {
+  return src('./src/patternfly/assets/**').pipe(dest('./public/assets'));
+}
+
 function minifyCSS() {
   return src('./dist/patternfly.css')
     .pipe(rename('patternfly.min.css'))
@@ -155,5 +159,6 @@ module.exports = {
   pfIconFont,
   pfIcons,
   copyFA,
-  copySource
+  copySource,
+  copyAssets
 };
