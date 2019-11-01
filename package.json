@@ -17,8 +17,8 @@
     "build:site": "gatsby build",
     "clean": "gatsby clean",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
-    "dev": "concurrently \"gulp watchSASS\" \"gatsby develop\"",
-    "dev:expose": "concurrently \"gulp watchSASS\" \"gatsby develop -H 0.0.0.0\"",
+    "dev": "gatsby develop",
+    "dev:expose": "gatsby develop -H 0.0.0.0",
     "develop": "npm run dev",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
     "lint": "npm run lint:styles && npm run lint:js",
@@ -64,7 +64,6 @@
     "backstopjs": "^4.1.12",
     "clean-css": "^4.2.1",
     "commander": "^2.13.0",
-    "concurrently": "^5.0.0",
     "cssnano": "^4.1.10",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -87,14 +86,11 @@
     "glob": "^7.1.2",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
-    "gulp-header": "^2.0.9",
     "gulp-iconfont": "^10.0.3",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-string-replace": "^1.1.2",
     "handlebars-loader": "^1.7.0",
     "handlebars-utils": "^1.0.6",
     "husky": "^1.3.1",
@@ -164,5 +160,8 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "gatsby-plugin-sass": "^2.1.20"
   }
 }

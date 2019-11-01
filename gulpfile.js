@@ -8,9 +8,6 @@ const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
-const header = require('gulp-header');
-const replace = require('gulp-string-replace');
-const gulpsass = require('gulp-sass');
 const fs = require('fs-extra');
 const generateIcons = require('./src/icons/generateIcons.js');
 const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
@@ -20,6 +17,7 @@ const pficonFontName = 'pficon';
 const config = {
   sourceFiles: [
     './src/patternfly/patternfly*.scss',
+    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
     '!./src/patternfly/**/_all.scss',
     '!./src/patternfly/patternfly-imports.scss'
   ]
@@ -76,7 +74,14 @@ function compileSASS() {
             // change `// @import "../../sass-utilities/all";` to `@use "../../sass-utilities/all";`
             data: scss.replace('// @import "../../sass-utilities/all";', '@import "../../sass-utilities/all";')
           });
-          chunk.contents = Buffer.from(css.css);
+          let cssString = css.css.toString();
+          // TODO: Cleaner way to to do relative image assets in component CSS
+          const relativePath = chunk.history[0].replace(chunk._base, '');
+          const numDirectories = relativePath.match(/\//g).length - 1;
+          if (numDirectories > 0) {
+            cssString = cssString.replace('./assets/images', `${'../'.repeat(numDirectories)}assets/images`);
+          }
+          chunk.contents = Buffer.from(cssString);
 
           stylelint
             .lint({
@@ -102,22 +107,7 @@ function compileSASS() {
 function watchSASS() {
   module.exports.build();
   // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
-  watch(
-    ['./src/patternfly/patternfly*.scss', './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'],
-    {},
-    compileSASS
-  );
-}
-
-function modules() {
-  return src([
-    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-    '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
-  ])
-    .pipe(header('@import "../../patternfly-imports";'))
-    .pipe(gulpsass().on('error', gulpsass.logError))
-    .pipe(replace('./assets/images', '../../assets/images'))
-    .pipe(dest('./dist'));
+  watch(config.sourceFiles, {}, compileSASS);
 }
 
 function copySource() {
@@ -156,12 +146,11 @@ function buildIE() {
 }
 
 module.exports = {
-  build: series(clean, compileSASS, minifyCSS, modules, pfIcons, copyFA, copySource),
+  build: series(clean, compileSASS, minifyCSS, pfIcons, copyFA, copySource),
   compileSASS,
   minifyCSS,
   buildIE,
   watchSASS,
-  modules,
   clean,
   pfIconFont,
   pfIcons,
