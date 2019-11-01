@@ -8,6 +8,9 @@ const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
+const header = require('gulp-header');
+const replace = require('gulp-string-replace');
+const gulpsass = require('gulp-sass');
 const fs = require('fs-extra');
 const generateIcons = require('./src/icons/generateIcons.js');
 const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
@@ -17,7 +20,6 @@ const pficonFontName = 'pficon';
 const config = {
   sourceFiles: [
     './src/patternfly/patternfly*.scss',
-    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
     '!./src/patternfly/**/_all.scss',
     '!./src/patternfly/patternfly-imports.scss'
   ]
@@ -107,6 +109,17 @@ function watchSASS() {
   );
 }
 
+function modules() {
+  return src([
+    './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+    '!./src/patternfly/{components,layouts,patterns,utilities}/**/examples/*.scss'
+  ])
+    .pipe(header('@import "../../patternfly-imports";'))
+    .pipe(gulpsass().on('error', gulpsass.logError))
+    .pipe(replace('./assets/images', '../../assets/images'))
+    .pipe(dest('./dist'));
+}
+
 function copySource() {
   return Promise.all([
     // Copy source files
@@ -115,6 +128,7 @@ function copySource() {
     src(['./src/patternfly/_*.scss', './src/patternfly/**/_all.scss', './src/patternfly/patternfly-imports.scss']).pipe(
       dest('./dist')
     ),
+    src('./src/patternfly/{components,layouts,patterns,utilities}/**/*.scss').pipe(dest('./dist')),
     src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
     // Assets
     src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
@@ -142,11 +156,12 @@ function buildIE() {
 }
 
 module.exports = {
-  build: series(clean, compileSASS, minifyCSS, pfIcons, copyFA, copySource),
+  build: series(clean, compileSASS, minifyCSS, modules, pfIcons, copyFA, copySource),
   compileSASS,
   minifyCSS,
   buildIE,
   watchSASS,
+  modules,
   clean,
   pfIconFont,
   pfIcons,
