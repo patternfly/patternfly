@@ -36,8 +36,8 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter);
 
   // Chip container
-  --pf-c-data-toolbar__content--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
-  --pf-c-data-toolbar__content--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-data-toolbar--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
 
   // Base spacer - shared value
   --pf-c-data-toolbar--spacer--base: var(--pf-global--spacer--md);
@@ -230,14 +230,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   padding-right: var(--pf-c-data-toolbar__content--PaddingRight);
   padding-left: var(--pf-c-data-toolbar__content--PaddingLeft);
 
-  &.pf-m-chip-container {
-    margin-top: var(--pf-c-data-toolbar__content--m-chip-container--MarginTop);
-  }
-
-  &.pf-m-chip-container .pf-c-data-toolbar__item {
-    margin-top: var(--pf-c-data-toolbar__content--m-chip-container__item--MarginTop);
-  }
-
   // remove the spacer from last item/group that isn’t the expandable content
   &.pf-m-toggle-group-container {
     > :nth-last-of-type(2) {
@@ -299,11 +291,20 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     visibility: hidden;
   }
 
-  .pf-c-data-toolbar__content.pf-m-chip-container {
-    --pf-c-data-toolbar__content--PaddingRight: 0;
-    --pf-c-data-toolbar__content--PaddingLeft: 0;
-
+  .pf-m-chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--pf-c-data-toolbar--m-chip-container--MarginTop);
     margin-left: 0;
+
+    .pf-c-data-toolbar__item,
+    .pf-c-data-toolbar__group {
+      margin-right: var(--pf-c-data-toolbar--spacer);
+    }
+
+    .pf-c-data-toolbar__item {
+      margin-top: var(--pf-c-data-toolbar--m-chip-container__item--MarginTop);
+    }
   }
 }
 
