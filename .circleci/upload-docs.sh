@@ -11,6 +11,7 @@ then
   # So, just replace "/" or "." with "-"
   DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${PR_NUM}" | tr '[\/|\.]' '-' | cut -c1-253`
   ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
+  DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
   npx surge --project public --domain $DEPLOY_DOMAIN
 elif [ "${PR_BRANCH}" = "master" ]
 then
@@ -19,10 +20,11 @@ then
 else
   DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${PR_BRANCH}" | tr '[\/|\.]' '-' | cut -c1-253`
   ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
+  DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
   npx surge --project public --domain $DEPLOY_DOMAIN
 fi
 
-if [ -n "${PR_NUM}" ] && [ -z "${ALREADY_DEPLOYED}" ] # Leave a Github comment
+if [ -n "${PR_NUM}" ] # && [ -z "${ALREADY_DEPLOYED}" ] # Leave a Github comment
 then
   # Use Issues api instead of PR api because
   # PR api requires comments be made on specific files of specific commits
