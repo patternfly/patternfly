@@ -11,16 +11,18 @@ then
   # So, just replace "/" or "." with "-"
   DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${PR_NUM}" | tr '[\/|\.]' '-' | cut -c1-253`
   ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
+  DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
+  npx surge --project public --domain $DEPLOY_DOMAIN
 elif [ "${PR_BRANCH}" = "master" ]
 then
-  DEPLOY_SUBDOMAIN=${REPONAME}
+  # Use CNAME
+  npx surge --project public
 else
   DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${PR_BRANCH}" | tr '[\/|\.]' '-' | cut -c1-253`
   ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
+  DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
+  npx surge --project public --domain $DEPLOY_DOMAIN
 fi
-
-DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
-npx surge --project public --domain $DEPLOY_DOMAIN;
 
 if [ -n "${PR_NUM}" ] && [ -z "${ALREADY_DEPLOYED}" ] # Leave a Github comment
 then
