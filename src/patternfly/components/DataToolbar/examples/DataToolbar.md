@@ -1,5 +1,5 @@
 ---
-title: Data Toolbar
+title: Data toolbar
 section: experimental
 cssPrefix: pf-c-data-toolbar
 ---

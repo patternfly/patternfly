@@ -1,5 +1,5 @@
 ---
-title: Box Shadow
+title: Box shadow
 section: utilities
 ---
 

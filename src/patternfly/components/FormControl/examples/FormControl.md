@@ -1,5 +1,5 @@
 ---
-title: Form Control
+title: Form control
 section: components
 cssPrefix: pf-c-form-control
 ---

@@ -1,5 +1,5 @@
 ---
-title: Card View
+title: Card view
 section: demos
 ---
 
