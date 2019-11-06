@@ -176,7 +176,7 @@ import './OptionsMenu.css'
 | `role` or `aria` | `pf-c-options-menu` |  accessibility notes. |
 | `disabled` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle-button` | Disables the options menu toggle and toggle button and removes it from keyboard focus. |
 *Note:* The attribute `aria-selected="true"` should be set programmatically to the selected item(s).
-| `role="separator"` | `li.pf-c-options-menu__separator` | Indicates that the separator is a separator. |
+| `role="separator"` | `li.pf-c-options-menu__separator` | Indicates that the list item is a separator. |
 
 ### Usage
 | Class | Applied to | Outcome |
