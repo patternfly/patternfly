@@ -187,7 +187,7 @@ import './OptionsMenu.css'
 | `.pf-c-options-menu__toggle-icon` | `<i>` | Initiates the up/down arrow beside toggle text. |
 | `.pf-c-options-menu__toggle-button` | `<button>` | Initiates a custom toggle button for use when `.pf-c-options-menu__toggle` is a `<div>` or non-interactive element. |
 | `.pf-c-options-menu__menu` | `<ul>` |  Initiates the custom options-menu menu. |
-| `.pf-c-options-menu__menu-item` | `<li>` |  Initiates the items in the custom options-menu options-menu menu. |
+| `.pf-c-options-menu__menu-item` | `<li>` |  Initiates the items in the custom options-menu menu. |
 | `.pf-c-options-menu__menu-item-icon` | `<i>` |  Initiates the icon to indicate selected menu items. |
 | `.pf-c-options-menu__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-c-options-menu__group` | `<section>` | Defines a group of items in an options menu. **Required when there is more than one group in an options menu**. |
