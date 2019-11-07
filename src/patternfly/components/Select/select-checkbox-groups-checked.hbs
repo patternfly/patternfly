@@ -3,8 +3,10 @@
   {{#if select-multi--attribute}}
     {{{select-multi-attribute}}}
   {{/if}}>
-  <div class="pf-c-select__menu-group">
-    <div aria-hidden="true" id="{{id}}-group-status" class="pf-c-select__menu-group-title">Status</div>
+  {{#> select-menu-group}}
+    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-status"')}}
+      Status
+    {{/select-menu-group-title}}
     {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat id '-group-status')}}
       {{#> check check--type="label" check--attribute=(concat 'for="' id '-running"') check--modifier="pf-c-select__menu-item"}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="running"')}}{{/check-input}}
@@ -27,9 +29,11 @@
         {{#> check-label check-label--type="span"}}Needs maintenance{{/check-label}}
       {{/check}}
     {{/select-menu-fieldset}}
-  </div>
-  <div class="pf-c-select__menu-group">
-    <div aria-hidden="true" id="{{id}}-group-vendor" class="pf-c-select__menu-group-title">Vendor</div>
+  {{/select-menu-group}}
+  {{#> select-menu-group}}
+    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-status"')}}
+      Vendor
+    {{/select-menu-group-title}}
     {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat id '-group-vendor')}}
       {{#> check check--type="label" check--attribute=(concat 'for="' id '-dell"') check--modifier="pf-c-select__menu-item"}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-dell" name="dell"')}}{{/check-input}}
@@ -44,5 +48,5 @@
         {{#> check-label check-label--type="span"}}Hewlett-Packard{{/check-label}}
       {{/check}}
     {{/select-menu-fieldset}}
-  </div>
+  {{/select-menu-group}}
 </div>
