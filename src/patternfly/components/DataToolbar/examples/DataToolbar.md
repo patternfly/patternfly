@@ -314,10 +314,6 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
             Risk
           {{/select}}
         {{/data-toolbar-item}}
-        {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
-          {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
-          {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
-        {{/data-toolbar-group}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
     {{#> data-toolbar-item}}
@@ -331,7 +327,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       Overflow menu
     {{/data-toolbar-item}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+    {{#> data-toolbar-expandable-content}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item}}
