@@ -309,7 +309,7 @@
     margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
   }
 
-  // Remove 'form:first-child' during breaking change
+  // Remove 'form:first-child' and '.pf-c-select__toggle-typeahead-form:first-child,' during breaking change - <form> shouldn't exist in this component
   // When the input or form is the first thing then use a negative left padding so it matches the toggle container
   > form:first-child,
   > .pf-c-select__toggle-typeahead-form:first-child,
@@ -347,9 +347,11 @@
   }
 }
 
+// remove '.pf-c-select__toggle-typeahead-form' and '.pf-c-select__toggle-wrapper > form' at breaking change release - <form> shouldn't exist in this component
 // Support form with input and input alone
 .pf-c-select__toggle-typeahead-form,
-.pf-c-select__toggle-typeahead {
+.pf-c-select__toggle-typeahead,
+.pf-c-select__toggle-wrapper > form {
   flex: 1;
   min-width: var(--pf-c-select__toggle-typeahead-form--MinWidth);
 }
@@ -374,6 +376,10 @@
     top: 0;
     transform: var(--pf-c-select__menu--m-top--Transform);
   }
+}
+
+.pf-c-select__menu-fieldset {
+  border: 0;
 }
 
 .pf-c-select__menu-item {

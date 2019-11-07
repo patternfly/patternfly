@@ -111,7 +111,6 @@ The single select typeahead should be used when the user is selecting one option
 | `.pf-c-select` | `<div>` |  Initiates the select component. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates the select toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-typeahead-form` | `<form>` |  Initiates the form for typeahead. |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
 | `.pf-c-select__toggle-clear` | `button.pf-c-button.pf-m-plain` |  Initiates a clear button in the toggle. |
 | `.pf-c-select__toggle-button` | `button.pf-c-button.pf-m-plain` | Initiates a toggle button. |
@@ -146,7 +145,6 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 | `.pf-c-select` | `<div>` |  Initiates the select component. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates the select toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-select__toggle-typeahead-form` | `<form>` |  Initiates the form for typeahead. |
 | `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/Check/examples/) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
 | `.pf-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
@@ -189,8 +187,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 | `.pf-c-select__menu-item` | `div.pf-c-check` |  Initiates the items in the select dropdown menu. |
-| `.pf-c-form` | `<form>` |  Initiates a form for the items in a checkbox select. |
-| `.pf-c-form__fieldset` | `<fieldset>` |  Initiates a fieldset for the items in a checkbox select. |
+| `.pf-c-select__menu-fieldset` | `<fieldset>` |  Initiates a fieldset for the items in a checkbox select. |
 | `.pf-c-select__menu-group` | `<div>` |  Initiates a group within a select menu. |
 | `.pf-c-select__menu-group-title` | `<div>` |  Initiates a title for a group with a select menu. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
