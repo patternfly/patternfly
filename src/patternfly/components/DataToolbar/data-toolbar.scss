@@ -36,8 +36,8 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter);
 
   // Chip container
-  --pf-c-data-toolbar__group--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
-  --pf-c-data-toolbar__group--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar__content--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-data-toolbar__content--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
 
   // Base spacer - shared value
   --pf-c-data-toolbar--spacer--base: var(--pf-global--spacer--md);
@@ -230,6 +230,14 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   padding-right: var(--pf-c-data-toolbar__content--PaddingRight);
   padding-left: var(--pf-c-data-toolbar__content--PaddingLeft);
 
+  &.pf-m-chip-container {
+    margin-top: var(--pf-c-data-toolbar__content--m-chip-container--MarginTop);
+  }
+
+  &.pf-m-chip-container .pf-c-data-toolbar__item {
+    margin-top: var(--pf-c-data-toolbar__content--m-chip-container__item--MarginTop);
+  }
+
   // remove the spacer from last item/group that isn’t the expandable content
   &.pf-m-toggle-group-container {
     > :nth-last-of-type(2) {
@@ -238,16 +246,15 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 }
 
-// Chip container
-// extend chip container layout access to __content to allow custom configurations
-.pf-c-data-toolbar__content.pf-m-chip-container,
-.pf-c-data-toolbar__group.pf-m-chip-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--pf-c-data-toolbar__group--m-chip-container--MarginTop);
-
-  .pf-c-data-toolbar__item {
-    margin-top: var(--pf-c-data-toolbar__group--m-chip-container__item--MarginTop);
+// Hidden modifier
+.pf-c-data-toolbar__content,
+.pf-c-data-toolbar__expandable-content,
+.pf-c-data-toolbar__group,
+.pf-c-data-toolbar__item,
+.pf-c-data-toolbar__toggle {
+  &.pf-m-hidden {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -276,12 +283,13 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     visibility: visible;
   }
 
-  > .pf-c-data-toolbar__item,
-  .pf-c-data-toolbar__group:not(.pf-m-chip-container) {
+  // If item is used outside of a group, remove margin
+  .pf-c-data-toolbar__item,
+  .pf-c-data-toolbar__group {
     margin: 0;
   }
 
-  .pf-c-data-toolbar__group:not(.pf-m-chip-container) {
+  .pf-c-data-toolbar__group {
     display: grid;
     grid-row-gap: var(--pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap);
   }
@@ -328,14 +336,12 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 
     @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map) {
       // Align right
-      .pf-c-data-toolbar__item.pf-m-align-right#{$breakpoint-name},
-      .pf-c-data-toolbar__group.pf-m-align-right#{$breakpoint-name} {
+      .pf-m-align-right#{$breakpoint-name} {
         margin-left: auto;
       }
 
       // Align left
-      .pf-c-data-toolbar__item.pf-m-align-left#{$breakpoint-name},
-      .pf-c-data-toolbar__group.pf-m-align-left#{$breakpoint-name} {
+      .pf-m-align-left#{$breakpoint-name} {
         margin-left: 0;
       }
 
