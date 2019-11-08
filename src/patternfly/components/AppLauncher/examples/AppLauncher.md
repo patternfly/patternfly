@@ -200,17 +200,17 @@ import './AppLauncher.css'
 ```hbs title=Favorites
 {{#> app-launcher id="app-launcher-sections-dividers-icons-and-external-links" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
-    {{#> app-launcher-menu-input}}
+    {{#> app-launcher-menu-search}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Filter by name..." id="' id '-text-input" name="textInput1"')}}
         {{/form-control}}
-    {{/app-launcher-menu-input}}
+    {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}
         Favorites
       {{/app-launcher-group-title}}
       <ul>
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite" app-launcher-menu-item--attribute='href="#"'}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item-favorite-link--attribute='href="#" target="_blank"'}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
@@ -218,11 +218,11 @@ import './AppLauncher.css'
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
           {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-item}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite" app-launcher-menu-item--attribute='href="#"'}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item-favorite-link--attribute='href="#" target="_blank"'}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
@@ -230,7 +230,7 @@ import './AppLauncher.css'
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
           {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-item}}
       </ul>
@@ -241,8 +241,8 @@ import './AppLauncher.css'
         Group 1
       {{/app-launcher-group-title}}
       <ul>
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external" app-launcher-menu-item--attribute='href="#"'}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item-favorite-link--attribute='href="#" target="_blank"'}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
@@ -250,11 +250,11 @@ import './AppLauncher.css'
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
           {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-item}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite" app-launcher-menu-item--attribute='href="#"'}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item-favorite-link--attribute='href="#" target="_blank"'}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
@@ -262,7 +262,7 @@ import './AppLauncher.css'
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
           {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-item}}
       </ul>
@@ -273,8 +273,8 @@ import './AppLauncher.css'
         Group 2
       {{/app-launcher-group-title}}
       <ul>
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite" app-launcher-menu-item--attribute='href="#"'}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item-favorite-link--attribute='href="#" target="_blank"'}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external pf-m-favorite"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
@@ -282,11 +282,11 @@ import './AppLauncher.css'
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
           {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-item}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external" app-launcher-menu-item--attribute='href="#"'}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item-favorite-link--attribute='href="#" target="_blank"'}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="li" app-launcher-menu-item--modifier="pf-m-wrapper pf-m-external"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="">
             {{/app-launcher-menu-item-icon}}
@@ -294,7 +294,7 @@ import './AppLauncher.css'
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
           {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-item}}
       </ul>
@@ -323,7 +323,7 @@ import './AppLauncher.css'
 | -- | -- | -- |
 | `.pf-c-app-launcher` | `<nav>` | Defines the parent wrapper of the app launcher. |
 | `.pf-c-app-launcher__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. Use a `<div>` if your app launcher has groups. |
-| `.pf-c-app-launcher__menu-input` | `<div>` | Defines the wrapper for the search input. |
+| `.pf-c-app-launcher__menu-search` | `<div>` | Defines the wrapper for the search input. |
 | `.pf-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
 | `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
 | `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
