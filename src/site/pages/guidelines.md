@@ -1,4 +1,6 @@
-# Guidelines
+---
+title: Guidelines
+---
 
 Please enforce these guidelines at all times. Small or large, call out what's incorrect.
 

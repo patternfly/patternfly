@@ -1,12 +1,12 @@
 ---
 title: Release notes
-section: root
+section: overview
 hideTOC: true
 ---
 
-# 2019.09 release notes (2019-10-29)
+# 2019.09 release notes (2019-11-01)
 Packages released:
-- @patternfly/patternfly@v2.40.3
+- @patternfly/patternfly@v2.40.6
 
 ## Components
 - **Charts:**

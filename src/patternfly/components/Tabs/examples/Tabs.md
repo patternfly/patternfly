@@ -493,6 +493,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 
 ## Documentation
 ### Overview
-The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](./nav) is available for general navigation use cases.
+The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](/documentation/core/components/nav) is available for general navigation use cases.
 
-Tabs should be used with the [tab content component](./tabcontent).
+Tabs should be used with the [tab content component](/documentation/core/components/tabcontent).

@@ -1,23 +1,4 @@
-const path = require('path');
-
-// Don't include CSS from JS
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          include: [
-            path.resolve(__dirname, 'node_modules/@patternfly/patternfly'),
-            path.resolve(__dirname, 'node_modules/@patternfly/react-styles/css')
-          ],
-          loader: 'null-loader'
-        }
-      ]
-    }
-  });
-};
-
+// Add types that are present in React
 exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type MdxFrontmatter @infer {
@@ -29,31 +10,34 @@ exports.createSchemaCustomization = ({ actions }) => {
       experimentalStage: String
       propComponents: [String]
       hideDarkMode: Boolean
+      reactComponentName: String
+      coreComponentName: String
+      showTitle: Boolean
     }
     type Mdx implements Node @infer {
       frontmatter: MdxFrontmatter
     }
-    type TypeType @infer {
-      name: String!
+    type TypeType @noInfer {
+      name: String
     }
-    type TsType @infer {
-      name: String!
+    type TsType @noInfer {
+      name: String
       raw: String
     }
-    type defaultValue @infer {
-      value: String!
+    type defaultValue @noInfer {
+      value: String
     }
-    type PropsType @infer {
-      name: String
+    type PropsType @noInfer {
+      name: String!
       description: String
       required: Boolean
       type: TypeType
       tsType: TsType
       defaultValue: defaultValue
     }
-    type ComponentMetadata implements Node @infer {
+    type ComponentMetadata implements Node @noInfer {
       name: String!
-      props: PropsType
+      props: [PropsType]
     }
   `;
   actions.createTypes(typeDefs);

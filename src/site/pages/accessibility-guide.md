@@ -1,19 +1,12 @@
-# Accessibility guide
+---
+title: Accessibility guide
+---
 
 *Please note, this guide is a work in progress and will be updated regularly. We welcome your comments and feedback.*
 
 The goal of software accessibility is to remove barriers and create inclusive product experiences that work for everyone, regardless of physical ability.
 
 Since accessibility is best achieved when considered early in the design and development process, we ask everyone who contributes to or consumes PatternFly to understand accessibility needs and how they can be met. The following guide provides techniques and suggestions to help you design, develop, and test UIs to ensure that everyone has a good user experience.
-
-- [Understanding users’ needs](#understanding-users-needs)
-- [Designing and developing for accessibility](#designing-and-developing-for-accessibility)
-- [Checklists](#checklists)
-  - [What PatternFly should address](#what-patternfly-should-address)
-  - [What products should address](#what-products-should-address)
-- [Guidelines and references](#guidelines-and-references)
-- [Techniques](#techniques)
-- [Testing](#testing)
 
 ## Understanding users’ needs
 
