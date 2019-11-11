@@ -67,21 +67,25 @@ function compileSASS() {
   return src(config.sourceFiles)
     .pipe(
       through2.obj((chunk, _, cb2) => {
-        const scss = chunk.contents.toString();
+        let scss = chunk.contents.toString();
+        const relativePath = chunk.history[0].replace(chunk._base, '');
+        const numDirectories = relativePath.match(/\//g).length - 1;
+        // This hack is to not include sass-utilities/placeholders.scss CSS more than once
+        // in our production patternfly.css BUT still be able to compile individual SCSS files.
+        // As soon as node-sass is updated to a libsass version that supports @use rule, we should
+        // `@use "../../sass-utilities/all";`
+        if (numDirectories > 0) {
+          scss = `@import "${'../'.repeat(numDirectories)}sass-utilities/all";\n${scss}`;
+        }
+
         try {
           const css = sass.renderSync({
             // Pass filename for import resolution. Contents are not compiled.
             file: chunk.history[0],
-            // This hack is to not include sass-utilities/placeholders.scss CSS more than once
-            // in our production patternfly.css BUT still be able to compile individual SCSS files.
-            // As soon as node-sass is updated to a libsass version that supports @use rule, we should
-            // change `// @import "../../sass-utilities/all";` to `@use "../../sass-utilities/all";`
-            data: scss.replace('// @import "../../sass-utilities/all";', '@import "../../sass-utilities/all";')
+            data: scss
           });
           let cssString = css.css.toString();
           // TODO: Cleaner way to to do relative image assets in component CSS
-          const relativePath = chunk.history[0].replace(chunk._base, '');
-          const numDirectories = relativePath.match(/\//g).length - 1;
           if (numDirectories > 0) {
             cssString = cssString.replace(/.\/assets\/images/g, `${'../'.repeat(numDirectories)}assets/images`);
           }
