@@ -12,7 +12,6 @@ module.exports = {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
         context: 'core', // For global items that need sideNav
-        hideBanner: true, // PF3 banner on org
         sideNav: {
           core: [
             { section: 'overview' },
