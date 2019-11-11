@@ -17,7 +17,7 @@
       aria-labelledby="{{id}}-toggle-check {{id}}-toggle-check-text"
     {{/if}}>
   {{#if dropdown--IsSplitButtonText}}
-    {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' id 'toggle-check-text"')}}
+    {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' id '-toggle-check-text"')}}
       {{{dropdown--IsSplitButtonText}}}
     {{/dropdown-toggle-text}}
   {{/if}}

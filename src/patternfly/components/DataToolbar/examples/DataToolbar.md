@@ -568,9 +568,9 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
   {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
     {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
-      {{#> dropdown dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat data-toolbar--id '-button')}}
-        {{> dropdown-toggle-check dropdown-toggle-check--id=(concat data-toolbar--id '-bulk-select-check') aria-label="Select all"}}
-        {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat data-toolbar--id '-button') aria-label="Select"}}
+      {{#> dropdown id=(concat data-toolbar--id '-dropdown') dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
+        {{> dropdown-toggle-check aria-label="Select all"}}
+        {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
       {{/dropdown}}
     {{/data-toolbar-item}}
     {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
