@@ -291,7 +291,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 | -- | -- | -- |
 | `.pf-m-show{-on-[breakpoint]}` | `.pf-c-data-toolbar__group.pf-m-toggle-group`, `.pf-c-data-toolbar__expandable-content` | Modifies toolbar element visibility at breakpoint. This selector must be applied consistently to toggle group and expandable content. |
 | `.pf-m-toggle-group-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for toggle group, expandable content layout. |
-| `.pf-m-chip-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for selected filters applied filters layout. |
+| `.pf-m-chip-container` | `.pf-c-data-toolbar__content`, `.pf-c-data-toolbar__group` | Modifies the data toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Selected
@@ -305,17 +305,15 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{> data-toolbar-item-search-filter button--id="content"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
         {{#> data-toolbar-item}}
-           {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
             Status
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
         {{#> data-toolbar-item}}
           {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
             Risk
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
       {{/data-toolbar-group}}
     {{/data-toolbar-group}}
     {{#> data-toolbar-item}}
@@ -329,7 +327,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       Overflow menu
     {{/data-toolbar-item}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+    {{#> data-toolbar-expandable-content}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-item}}
@@ -370,15 +373,17 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
             Status
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
         {{#> data-toolbar-item}}
           {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
             Risk
           {{/select}}
         {{/data-toolbar-item}}
-        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-item-clear}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{> data-toolbar-item-clear}}
+      {{/data-toolbar-group}}
     {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
@@ -417,12 +422,13 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{!-- Remove when overflow menu merges --}}
       Overflow menu
     {{/data-toolbar-item}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
-  {{/data-toolbar-content}}
-  {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
-    {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
-    {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
-    {{> data-toolbar-item-clear}}
+    {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
+        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{> data-toolbar-item-clear}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -638,7 +644,7 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
 | `.pf-m-label` | `.pf-c-data-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-toggle-group-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for toggle group, expandable content layout. |
-| `.pf-m-chip-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for selected filters applied filters layout. |
+| `.pf-m-chip-container` | `.pf-c-data-toolbar__content`, `.pf-c-data-toolbar__group` | Modifies the data toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Accessibility
