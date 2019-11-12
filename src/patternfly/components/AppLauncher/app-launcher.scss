@@ -71,7 +71,7 @@
 
   // Menu item external icon
   --pf-c-app-launcher__menu-item-external-icon--Color: var(--pf-global--link--Color);
-  --pf-c-app-launcher__menu-item-external-icon--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-app-launcher__menu-item-external-icon--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-app-launcher__menu-item-external-icon--Transform: translateY(#{pf-size-prem(-1px)});
   --pf-c-app-launcher__menu-item-external-icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
@@ -171,7 +171,6 @@
 
 .pf-c-app-launcher__menu-item-wrapper {
   display: flex;
-
 
   &.pf-m-favorite {
     --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color);

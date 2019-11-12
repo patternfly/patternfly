@@ -198,10 +198,10 @@ import './AppLauncher.css'
 ```
 
 ```hbs title=Favorites
-{{#> app-launcher id="app-launcher-sections-dividers-icons-and-external-links" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+{{#> app-launcher id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Filter by name..." id="' id '-text-input" name="textInput1"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" aria-label="Type to filter" placeholder="Filter by name..." id="' id '-text-input" name="textInput1"')}}
         {{/form-control}}
     {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
