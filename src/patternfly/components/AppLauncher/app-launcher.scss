@@ -169,7 +169,7 @@
   border-bottom: var(--pf-c-app-launcher__menu-search--BottomBorderWidth) solid var(--pf-c-app-launcher__menu-search--BottomBorderColor);
 }
 
-.pf-c-app-launcher__menu-item-wrapper {
+.pf-c-app-launcher__menu-wrapper {
   display: flex;
 
   &.pf-m-favorite {
@@ -196,7 +196,7 @@
     text-decoration: none;
   }
 
-  @at-root .pf-c-app-launcher__menu-item-wrapper,
+  @at-root .pf-c-app-launcher__menu-wrapper,
   & {
     &:hover,
     &.pf-m-hover,
@@ -213,7 +213,7 @@
     pointer-events: none;
   }
 
-  @at-root .pf-c-app-launcher__menu-item-wrapper,
+  @at-root .pf-c-app-launcher__menu-wrapper,
   & {
     &:disabled,
     &.pf-m-disabled {
@@ -221,7 +221,7 @@
     }
   }
 
-  @at-root .pf-c-app-launcher__menu-item-wrapper,
+  @at-root .pf-c-app-launcher__menu-wrapper,
   & {
     &.pf-m-external {
       &:hover,
