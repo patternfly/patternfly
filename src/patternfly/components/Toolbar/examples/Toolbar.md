@@ -6,10 +6,10 @@ cssPrefix: pf-c-toolbar
 
 ## Examples
 ```hbs title=Basic isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id="toolbar-simple-split-button-dropdown-simple-example-button"}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-simple-example-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-simple-example-button')  aria-label="Select"}}
+{{#> toolbar toolbar--id="basic"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
@@ -42,10 +42,10 @@ cssPrefix: pf-c-toolbar
 ```
 
 ```hbs title=With-pagination isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button')  aria-label="Select"}}
+{{#> toolbar toolbar--id="pagination"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
@@ -105,10 +105,10 @@ cssPrefix: pf-c-toolbar
 ```
 
 ```hbs title=With-pagination-and-expanded-menus isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsExpanded="true" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
+{{#> toolbar toolbar--id="pagination-expanded-menus"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsExpanded="true" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
@@ -168,10 +168,10 @@ cssPrefix: pf-c-toolbar
 ```
 
 ```hbs title=With-filter-menu-expanded isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-dropdown-button')}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-dropdown-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-dropdown-button')  aria-label="Select"}}
+{{#> toolbar toolbar--id="filter-menu-expanded"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
@@ -203,11 +203,11 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=With-filter-menu-expanded+checked isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
+```hbs title=With-filter-menu-expanded-and-checked isFullscreen
+{{#> toolbar toolbar--id="filter-menu-expanded-checked"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
@@ -280,11 +280,11 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=With-filter-group-expanded-on-mobile-(responsive) isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
+```hbs title=With-filter-group-expanded-on-mobile-responsive isFullscreen
+{{#> toolbar toolbar--id="filter-group-expanded-on-mobile"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
@@ -316,11 +316,11 @@ cssPrefix: pf-c-toolbar
 {{/toolbar}}
 ```
 
-```hbs title=With-filter-group-expanded+checked-on-mobile-(responsive) isFullscreen
-{{#> toolbar}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" dropdown-menu--toggle-id=(concat toolbar--id '-split-button-dropdown-button')}}
-    {{> dropdown-toggle-check dropdown-toggle-check--id=(concat toolbar--id '-split-button-dropdown-check') aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
+```hbs title=With-filter-group-expanded-and-checked-on-mobile-responsive isFullscreen
+{{#> toolbar toolbar--id="filter-group-expanded-checked-mobile"}}
+  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id '-dropdown-bulk-select')}}
+    {{> dropdown-toggle-check aria-label="Select all"}}
+    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" button--attribute='aria-label="Filter results"'}}
     <i class="fas fa-filter" aria-hidden="true"></i>
