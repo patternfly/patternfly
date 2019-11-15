@@ -287,6 +287,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   flex-wrap: wrap;
   align-items: baseline;
   margin-top: var(--pf-c-data-toolbar__group--m-chip-container--MarginTop);
+  grid-row-gap: 0;
 
   .pf-c-data-toolbar__item {
     margin-top: var(--pf-c-data-toolbar__group--m-chip-container__item--MarginTop);
@@ -295,6 +296,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   .pf-c-data-toolbar__group {
     display: flex;
     flex-wrap: wrap;
+    grid-row-gap: 0;
   }
 }
 
