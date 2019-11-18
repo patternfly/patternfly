@@ -6,8 +6,8 @@
   {{/if}}>
   <section class="pf-c-dropdown__group">
     <ul>
-      <li><a class="pf-c-dropdown__menu-item" href="#">Link</a></li>
-      <li><button class="pf-c-dropdown__menu-item">Action</button></li>
+      <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Link{{/dropdown-menu-item}}</li>
+      <li>{{#> dropdown-menu-item}}Action{{/dropdown-menu-item}}</li>
       {{#if dropdown--HasSeparatorsItems}}
         {{#> dropdown-separator}}{{/dropdown-separator}}
       {{/if}}
@@ -19,8 +19,8 @@
   <section class="pf-c-dropdown__group">
     <h1 class="pf-c-dropdown__group-title">Group 2</h1>
     <ul>
-      <li><a class="pf-c-dropdown__menu-item" href="#">Group 2 link</a></li>
-      <li><button class="pf-c-dropdown__menu-item">Group 2 action</button></li>
+      <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Group 2 link{{/dropdown-menu-item}}</li>
+      <li>{{#> dropdown-menu-item}}Group 2 action{{/dropdown-menu-item}}</li>
       {{#if dropdown--HasSeparatorsItems}}
         {{#> dropdown-separator}}{{/dropdown-separator}}
       {{/if}}
@@ -32,8 +32,8 @@
   <section class="pf-c-dropdown__group">
     <h1 class="pf-c-dropdown__group-title">Group 3</h1>
     <ul>
-      <li><a class="pf-c-dropdown__menu-item" href="#">Group 3 link</a></li>
-      <li><button class="pf-c-dropdown__menu-item">Group 3 action</button></li>
+      <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Group 3 link{{/dropdown-menu-item}}</li>
+      <li>{{#> dropdown-menu-item}}Group 3 action{{/dropdown-menu-item}}</li>
     </ul>
   </section>
 </div>

@@ -3,7 +3,8 @@
 #ws-core-c-dropdown-kebab-align-right,
 #ws-core-c-dropdown-align-right,
 #ws-core-c-dropdown-align-top,
-#ws-core-c-dropdown-primary-toggle {
+#ws-core-c-dropdown-primary-toggle,
+#ws-core-c-dropdown-menu-item-icons {
   min-height: 310px;
 }
 
