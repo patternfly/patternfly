@@ -101,6 +101,13 @@ import './Dropdown.css'
   {{/dropdown-toggle-button}}
   {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
+
+{{#> dropdown id="dropdown-split-button-action-icon-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
+  {{#> dropdown-toggle-button aria-label="Settings"}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/dropdown-toggle-button}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
+{{/dropdown}}
 ```
 
 ```hbs title=With-groups
