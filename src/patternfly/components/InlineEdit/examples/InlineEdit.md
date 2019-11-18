@@ -10,6 +10,8 @@ import './InlineEdit.css'
 
 **Inline edit** is a utilitarian component that has two core elements, `.pf-c-inline-edit__value` and `.pf-c-inline-edit__input` and is based on a simple concept. When **value** is visible, **input** is hidden, and vice versa. This behavior extends to `.pf-c-inline-edit__value-group` and `.pf-c-inline-edit__input-group`. Elements added to these groups will be inversely visible and activated with the `.pf-m-inline-edit-active` modifier.
 
+The **Inline edit action group** hides `.pf-c-inline-edit__action.pf-m-save` and `.pf-c-inline-edit__action.pf-m-cancel` by default and exposes them when a region of `.pf-c-inline-edit` becomes active. All other `.pf-c-inline-edit__action`s are visible by default and hidden when a region of `.pf-c-inline-edit` becomes active.
+
 ## Examples
 
 ```hbs title=Single-inline-edit-(default)
@@ -53,7 +55,7 @@ import './InlineEdit.css'
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
     {{#> inline-edit-action-group}}
-      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--modifier="pf-m-valid"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-action-group}}
   {{/inline-edit-input-group}}
