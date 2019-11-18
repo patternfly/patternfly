@@ -88,12 +88,17 @@
 }
 
 .pf-c-inline-edit__input,
-.pf-c-inline-edit__input-group {
+.pf-c-inline-edit__input-group,
+.pf-c-inline-edit__action,
+.pf-c-inline-edit__action-group {
   display: none;
-  flex: 1;
   visibility: hidden;
 }
 
+.pf-c-inline-edit__input,
+.pf-c-inline-edit__input-group {
+  flex: 1;
+}
 
 // Action group
 .pf-c-inline-edit__action-group {
@@ -160,9 +165,23 @@
   }
 
   .pf-c-inline-edit__input,
-  .pf-c-inline-edit__input-group {
-    display: flex;
+  .pf-c-inline-edit__input-group,
+  .pf-c-inline-edit__action,
+  .pf-c-inline-edit__action-group {
     visibility: visible;
+  }
+
+  .pf-c-inline-edit__input-group,
+  .pf-c-inline-edit__action-group {
+    display: flex;
+  }
+
+  .pf-c-inline-edit__input {
+    display: block;
+  }
+
+  .pf-c-inline-edit__action {
+    display: inline-block;
   }
 
   /* stylelint-disable selector-max-class */
@@ -190,26 +209,3 @@
   }
 }
 /* stylelint-enable */
-
-// .pf-c-list {
-//   --pf-c-list--dl--PaddingLeft: 0;
-//   --pf-c-list--dt--FontWeight: var(--pf-global--FontWeight--bold);
-//   --pf-c-list--dt--MarginTop: var(--pf-global--spacer--md);
-//   --pf-c-list--dd--MarginTop: var(--pf-global--spacer--xs);
-
-//   @at-root dl#{&} {
-//     --pf-c-list--PaddingLeft: var(--pf-c-list--dl--PaddingLeft);
-
-//     dt {
-//       font-weight: var(--pf-c-list--dt--FontWeight);
-//     }
-
-//     dd + dt {
-//       margin-top: var(--pf-c-list--dt--MarginTop);
-//     }
-
-//     dt + dd {
-//       margin-top: var(--pf-c-list--dd--MarginTop);
-//     }
-//   }
-// }

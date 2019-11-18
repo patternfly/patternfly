@@ -17,3 +17,26 @@ dl.pf-c-list {
 .pf-c-list dt + dd {
   margin-top: var(--pf-c-list--dd--MarginTop);
 }
+
+/* .pf-c-list {
+  --pf-c-list--dl--PaddingLeft: 0;
+  --pf-c-list--dt--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-list--dt--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-list--dd--MarginTop: var(--pf-global--spacer--xs);
+
+  @at-root dl#{&} {
+    --pf-c-list--PaddingLeft: var(--pf-c-list--dl--PaddingLeft);
+
+    dt {
+      font-weight: var(--pf-c-list--dt--FontWeight);
+    }
+
+    dd + dt {
+      margin-top: var(--pf-c-list--dt--MarginTop);
+    }
+
+    dt + dd {
+      margin-top: var(--pf-c-list--dd--MarginTop);
+    }
+  }
+} */
