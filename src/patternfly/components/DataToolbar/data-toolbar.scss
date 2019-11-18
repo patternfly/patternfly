@@ -238,19 +238,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 }
 
-// Chip container
-// extend chip container layout access to __content to allow custom configurations
-.pf-c-data-toolbar__content.pf-m-chip-container,
-.pf-c-data-toolbar__group.pf-m-chip-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--pf-c-data-toolbar__group--m-chip-container--MarginTop);
-
-  .pf-c-data-toolbar__item {
-    margin-top: var(--pf-c-data-toolbar__group--m-chip-container__item--MarginTop);
-  }
-}
-
 // Expandable content
 .pf-c-data-toolbar__expandable-content {
   position: absolute;
@@ -277,11 +264,11 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 
   > .pf-c-data-toolbar__item,
-  .pf-c-data-toolbar__group:not(.pf-m-chip-container) {
+  > .pf-c-data-toolbar__group {
     margin: 0;
   }
 
-  .pf-c-data-toolbar__group:not(.pf-m-chip-container) {
+  .pf-c-data-toolbar__group {
     display: grid;
     grid-row-gap: var(--pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap);
   }
@@ -289,6 +276,27 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   .pf-m-label {
     display: none;
     visibility: hidden;
+  }
+}
+
+// Chip container
+// extend chip container layout access to __content to allow custom configurations
+.pf-c-data-toolbar__content.pf-m-chip-container,
+.pf-c-data-toolbar__group.pf-m-chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: var(--pf-c-data-toolbar__group--m-chip-container--MarginTop);
+  grid-row-gap: 0;
+
+  .pf-c-data-toolbar__item {
+    margin-top: var(--pf-c-data-toolbar__group--m-chip-container__item--MarginTop);
+  }
+
+  .pf-c-data-toolbar__group {
+    display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 0;
   }
 }
 
