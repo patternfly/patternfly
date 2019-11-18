@@ -241,7 +241,8 @@
     }
   }
 
-  .pf-m-expanded > & {
+  .pf-m-expanded > &:not(.pf-m-action),
+  .pf-m-expanded > &.pf-m-action .pf-c-dropdown__toggle-button {
     &::before {
       --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--expanded--BorderBottomColor);
 
