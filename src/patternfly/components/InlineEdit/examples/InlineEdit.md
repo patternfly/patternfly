@@ -28,7 +28,10 @@ import './InlineEdit.css'
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
-    {{> inline-edit-action-group inline-edit-action-group--IsInline="true"}}
+    {{#> inline-edit-action-group}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+    {{/inline-edit-action-group}}
   {{/inline-edit-input-group}}
 {{/inline-edit}}
 ```
@@ -46,8 +49,13 @@ import './InlineEdit.css'
     {{/inline-edit-toggle}}
   {{/inline-edit-value-group}}
   {{#> inline-edit-input-group}}
-    {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
-    {{> inline-edit-action-group inline-edit-action-group--IsInline="true"}}
+    {{#> inline-edit-input}}
+      {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
+    {{/inline-edit-input}}
+    {{#> inline-edit-action-group}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+    {{/inline-edit-action-group}}
   {{/inline-edit-input-group}}
 {{/inline-edit}}
 ```
@@ -68,8 +76,13 @@ import './InlineEdit.css'
     Input static value
   {{/inline-edit-value}}
   {{#> inline-edit-input-group}}
-    {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
-    {{> inline-edit-action-group inline-edit-action-group--IsInline="true"}}
+    {{#> inline-edit-input}}
+      {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
+    {{/inline-edit-input}}
+    {{#> inline-edit-action-group}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+    {{/inline-edit-action-group}}
   {{/inline-edit-input-group}}
 {{/inline-edit}}
 ```
@@ -90,8 +103,13 @@ import './InlineEdit.css'
     Input static value
   {{/inline-edit-value}}
   {{#> inline-edit-input-group}}
-    {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
-    {{> inline-edit-action-group inline-edit-action-group--IsInline="true"}}
+    {{#> inline-edit-input}}
+      {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Input static value" aria-label="Editable text input"'}}
+    {{/inline-edit-input}}
+    {{#> inline-edit-action-group}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--modifier="pf-m-valid"}}
+      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+    {{/inline-edit-action-group}}
   {{/inline-edit-input-group}}
 {{/inline-edit}}
 ```
@@ -131,6 +149,7 @@ import './InlineEdit.css'
         {{#> table-th}}
           Number
         {{/table-th}}
+        {{#> table-td}}{{/table-td}}
       {{/table-tr}}
     {{/table-thead}}
 
@@ -190,6 +209,23 @@ import './InlineEdit.css'
             {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input"')}}
           {{/inline-edit-input}}
         {{/table-td}}
+        {{#> table-td table-td--action="true"}}
+          {{#> inline-edit-action-group inline-edit-action-group--IsInline="true"}}
+            {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--modifier="pf-m-valid"}}
+            {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+            {{#> inline-edit-action}}
+              {{#> inline-edit-toggle}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+                  <i class="fas fa-pencil-alt" aria-hidden="true" />
+                {{/button}}
+              {{/inline-edit-toggle}}
+            {{/inline-edit-action}}
+            {{#> inline-edit-action}}
+              {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+              {{/dropdown}}
+            {{/inline-edit-action}}
+          {{/inline-edit-action-group}}
+        {{/table-td}}
       {{/table-tr}}
 
       {{#> table-tr inline-edit--row="-row-2-"}}
@@ -247,6 +283,23 @@ import './InlineEdit.css'
             {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input"')}}
           {{/inline-edit-input}}
         {{/table-td}}
+        {{#> table-td table-td--action="true"}}
+          {{#> inline-edit-action-group inline-edit-action-group--IsInline="true"}}
+            {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+            {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+            {{#> inline-edit-action}}
+              {{#> inline-edit-toggle}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+                  <i class="fas fa-pencil-alt" aria-hidden="true" />
+                {{/button}}
+              {{/inline-edit-toggle}}
+            {{/inline-edit-action}}
+            {{#> inline-edit-action}}
+              {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+              {{/dropdown}}
+            {{/inline-edit-action}}
+          {{/inline-edit-action-group}}
+        {{/table-td}}
       {{/table-tr}}
     {{/table-tbody}}
   {{/table}}
@@ -276,3 +329,5 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-c-inline-edit__action-group` | `<div>`, `*` | Initiates an inline edit action group that wraps action buttons within active, inline edit regions. |
 | `.pf-c-inline-edit__title-group` | `<div>`, `*` | Initiates an inline edit title group. This container is generic and typically used for a title plus toggle button. |
 | `.pf-m-inline-edit-active` | `.pf-c-inline-edit`, `.pf-c-inline-edit > *` | Modifies an inline edit region for editable state. |
+| `.pf-m-valid` | `.pf-c-inline-edit__action.pf-m-save` | Modifies the save button state. |
+| `.pf-m-inline` | `.pf-c-inline-edit__action-group` | Modifies an inline edit action group item spacing. |

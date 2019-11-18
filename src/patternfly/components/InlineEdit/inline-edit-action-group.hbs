@@ -1,25 +1,9 @@
-{{#if inline-edit-action-group--IsInline}}
-  {{#> inline-edit-action inline-edit-action--modifier="pf-m-save"}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Save edits"'}}
-      <i class="fas fa-check" aria-hidden="true" />
-    {{/button}}
-  {{/inline-edit-action}}
-  {{#> inline-edit-action inline-edit-action--modifier="pf-m-cancel"}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Cancel edits"'}}
-      <i class="fas fa-times" aria-hidden="true" />
-    {{/button}}
-  {{/inline-edit-action}}
-{{else}}
-  <div class="pf-c-inline-edit__action-group">
-    {{#> inline-edit-action inline-edit-action--modifier="pf-m-save"}}
-      {{#> button button--modifier="pf-m-primary" button--attribute='aria-label="Save edits"'}}
-        Save
-      {{/button}}
-    {{/inline-edit-action}}
-    {{#> inline-edit-action inline-edit-action--modifier="pf-m-cancel"}}
-      {{#> button button--modifier="pf-m-secondary" button--attribute='aria-label="Cancel edits"'}}
-        Cancel
-      {{/button}}
-    {{/inline-edit-action}}
-  </div>
-{{/if}}
+<div class="pf-c-inline-edit__action-group{{#if inline-edit-action-group--modifier}} {{inline-edit-action-group--modifier}}{{/if}}{{#if inline-edit-action-group--IsInline}} pf-m-inline{{/if}}"
+  {{#if inline-edit-action-group--id}}
+    id="{{inline-edit-action-group--id}}"
+  {{/if}}
+  {{#if inline-edit-action-group--attribute}}
+    {{{inline-edit-action-group--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</div>

@@ -13,14 +13,13 @@
 
   // Action
   --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-inline-edit__action-group--m-inline--item--MarginRight: 0;
 
   // Toggle
   --pf-c-inline-edit--m-active__toggle--Color: var(--pf-global--Color--100);
 
   // Save button
-  --pf-c-inline-edit__action--m-save--c-button--m-plain--hover--Color: var(--pf-global--link--Color);
-  --pf-c-inline-edit__action--m-save--c-button--m-plain--focus--Color: var(--pf-global--link--Color);
-  --pf-c-inline-edit__action--m-save--c-button--m-plain--active--Color: var(--pf-global--link--Color);
+  --pf-c-inline-edit__action--m-save--m-valid--c-button--m-plain--Color: var(--pf-global--link--Color);
 
   // Hidden
   .pf-m-hidden {
@@ -34,9 +33,9 @@
   }
 
   // Overrides
-  table {
-    table-layout: fixed;
-  }
+  // table {
+  //   table-layout: fixed;
+  // }
 
   td {
     word-break: normal;
@@ -89,8 +88,8 @@
 
 .pf-c-inline-edit__input,
 .pf-c-inline-edit__input-group,
-.pf-c-inline-edit__action,
-.pf-c-inline-edit__action-group {
+.pf-c-inline-edit__action.pf-m-save,
+.pf-c-inline-edit__action.pf-m-cancel {
   display: none;
   visibility: hidden;
 }
@@ -102,7 +101,7 @@
 
 // Action group
 .pf-c-inline-edit__action-group {
-  display: flex;
+  display: inline-flex;
 
   > * {
     margin-right: var(--pf-c-inline-edit__action-group--item--MarginRight);
@@ -110,6 +109,10 @@
 
   > :last-child {
     --pf-c-inline-edit__action-group--item--MarginRight: 0;
+  }
+
+  &.pf-m-inline {
+    --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-c-inline-edit__action-group--m-inline--item--MarginRight);
   }
 }
 
@@ -159,28 +162,29 @@
 .pf-c-inline-edit.pf-m-inline-edit-active,
 .pf-c-inline-edit .pf-m-inline-edit-active {
   .pf-c-inline-edit__value,
-  .pf-c-inline-edit__value-group {
+  .pf-c-inline-edit__value-group,
+  .pf-c-inline-edit__action-group > * {
     display: none;
     visibility: hidden;
   }
 
   .pf-c-inline-edit__input,
   .pf-c-inline-edit__input-group,
-  .pf-c-inline-edit__action,
-  .pf-c-inline-edit__action-group {
+  .pf-c-inline-edit__action.pf-m-save,
+  .pf-c-inline-edit__action.pf-m-cancel {
     visibility: visible;
-  }
-
-  .pf-c-inline-edit__input-group,
-  .pf-c-inline-edit__action-group {
-    display: flex;
   }
 
   .pf-c-inline-edit__input {
     display: block;
   }
 
-  .pf-c-inline-edit__action {
+  .pf-c-inline-edit__input-group {
+    display: flex;
+  }
+
+  .pf-c-inline-edit__action.pf-m-save,
+  .pf-c-inline-edit__action.pf-m-cancel {
     display: inline-block;
   }
 
@@ -192,20 +196,7 @@
 }
 
 /* stylelint-disable selector-max-class */
-.pf-c-inline-edit__action.pf-m-save .pf-c-button.pf-m-plain {
-  &:hover,
-  &.pf-m-hover {
-    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--c-button--m-plain--hover--Color);
-  }
-
-  &:active,
-  &.pf-m-active {
-    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--c-button--m-plain--active--Color);
-  }
-
-  &:focus,
-  &.pf-m-focus {
-    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--c-button--m-plain--focus--Color);
-  }
+.pf-c-inline-edit__action.pf-m-save.pf-m-valid .pf-c-button.pf-m-plain {
+  --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--m-valid--c-button--m-plain--Color);
 }
 /* stylelint-enable */
