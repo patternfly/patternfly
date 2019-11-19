@@ -83,6 +83,14 @@ module.exports = {
         path: `${path.resolve(__dirname)}/RELEASE-NOTES.md`
       }
     },
+    // Source training page
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core', // This goes in URLs and determines sideNav items
+        path: `${path.resolve(__dirname)}/src/site/training.md`
+      }
+    },
     // Pipe MDX files through this plugin that spits out React components
     {
       resolve: 'gatsby-plugin-mdx',
