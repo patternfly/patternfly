@@ -64,7 +64,7 @@ import './Dropdown.css'
 ```
 
 ```hbs title=Menu-item-icons
-{{#> dropdown id="dropdown-align-top-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasItemIcons="true" dropdown--HasToggleIcon="true"}}
+{{#> dropdown id="dropdown-menu-item-icons" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasItemIcons="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
     Expanded dropdown
   {{/dropdown-toggle-text}}
