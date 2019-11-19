@@ -254,7 +254,7 @@
 }
 
 .pf-c-app-launcher__menu-item-icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: var(--pf-c-app-launcher__menu-item-icon--Width);

@@ -63,6 +63,14 @@ import './Dropdown.css'
 {{/dropdown}}
 ```
 
+```hbs title=Menu-item-icons
+{{#> dropdown id="dropdown-menu-item-icons" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasItemIcons="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Expanded dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
 ```hbs title=Split-button-(checkbox)
 {{#> dropdown id="dropdown-split-button-disabled" dropdown--IsSplitButton="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
   {{> dropdown-toggle-check aria-label="Select all"}}
@@ -95,6 +103,13 @@ import './Dropdown.css'
   {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
 
+{{#> dropdown id="dropdown-split-button-action-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
+  {{#> dropdown-toggle-button}}
+    Action
+  {{/dropdown-toggle-button}}
+  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
+{{/dropdown}}
+
 {{#> dropdown id="dropdown-split-button-action-icon" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
   {{#> dropdown-toggle-button aria-label="Settings"}}
     <i class="fas fa-cog" aria-hidden="true"></i>
@@ -102,7 +117,7 @@ import './Dropdown.css'
   {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
 {{/dropdown}}
 
-{{#> dropdown id="dropdown-split-button-action-icon-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
+{{#> dropdown id="dropdown-split-button-action-icon-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown--HasItemIcons="true" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
   {{#> dropdown-toggle-button aria-label="Settings"}}
     <i class="fas fa-cog" aria-hidden="true"></i>
   {{/dropdown-toggle-button}}
@@ -189,6 +204,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__toggle-button` | `<button>` | Defines the toggle button for a split button dropdown. |
 | `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
+| `.pf-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
 | `.pf-c-dropdown__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
@@ -205,3 +221,4 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`. |
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
+| `.pf-m-icon` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding an icon. |

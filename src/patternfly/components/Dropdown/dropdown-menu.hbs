@@ -4,10 +4,48 @@
   {{#if dropdown-menu--attribute}}
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
-  <li><a class="pf-c-dropdown__menu-item" href="#">Link</a></li>
-  <li><button class="pf-c-dropdown__menu-item">Action</button></li>
-  <li><a class="pf-c-dropdown__menu-item pf-m-disabled" aria-disabled="true" tabindex="-1" href="#">Disabled link</a></li>
-  <li><button class="pf-c-dropdown__menu-item" disabled>Disabled action</button></li>
+  <li>
+    {{#if dropdown--HasItemIcons}}
+      {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-icon" dropdown-menu-item--attribute='href="#"'}}
+        {{#> dropdown-menu-item-icon}}
+          <img src="/assets/images/pf-logo-small.svg" alt="">
+        {{/dropdown-menu-item-icon}}
+        Link
+      {{/dropdown-menu-item}}
+    {{else}}
+      {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
+        Link
+      {{/dropdown-menu-item}}
+    {{/if}}
+  </li>
+  <li>
+    {{#if dropdown--HasItemIcons}}
+      {{#> dropdown-menu-item dropdown-menu-item--modifier="pf-m-icon"}}
+        {{#> dropdown-menu-item-icon}}
+          <i class="fas fa-cog" aria-hidden="true"></i>
+        {{/dropdown-menu-item-icon}}
+        Action
+      {{/dropdown-menu-item}}
+    {{else}}
+      {{#> dropdown-menu-item}}
+        Action
+      {{/dropdown-menu-item}}
+    {{/if}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-disabled" dropdown-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
+      Disabled link
+    {{/dropdown-menu-item}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled'}}
+      Disabled action
+    {{/dropdown-menu-item}}
+  </li>
   {{#> dropdown-separator}}{{/dropdown-separator}}
-  <li><a class="pf-c-dropdown__menu-item" href="#">Separated link</a></li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
+      Separated link
+    {{/dropdown-menu-item}}
+  </li>
 </ul>
