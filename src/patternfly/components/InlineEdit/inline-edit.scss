@@ -1,19 +1,20 @@
-// Don't remove this magic comment. See gulpfile.js.
-// @import "../../sass-utilities/all";
-
 .pf-c-inline-edit {
+  // Group
+  --pf-c-inline-edit__group--item--MarginRight: var(--pf-global--spacer--sm);
+
   // Value group
-  --pf-c-inline-edit__value-group--item--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-inline-edit__group--m-value-group--item--MarginRight: var(--pf-global--spacer--sm);
 
   // Input group
-  --pf-c-inline-edit__input-group--item--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-inline-edit__group--m-input-group--item--MarginRight: var(--pf-global--spacer--sm);
 
-  // Toggle group
-  --pf-c-inline-edit__title-group--item--MarginRight: var(--pf-global--spacer--sm);
+  // Action group
+  --pf-c-inline-edit__action-group--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-inline-edit__group--m-action-group--item--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-inline-edit__group--m-input-group--m-action-group--item--MarginRight: 0;
 
-  // Action
-  --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-inline-edit__action-group--m-inline--item--MarginRight: 0;
+  // Icon group
+  --pf-c-inline-edit__group--m-icon-group--item--MarginRight: 0;
 
   // Toggle
   --pf-c-inline-edit--m-active__toggle--Color: var(--pf-global--Color--100);
@@ -27,18 +28,13 @@
     visibility: hidden;
   }
 
+  .pf-m-display-inline-flex {
+    display: inline-flex;
+  }
+
   // Align right
   .pf-m-align-right {
     margin-left: auto;
-  }
-
-  // Overrides
-  // table {
-  //   table-layout: fixed;
-  // }
-
-  td {
-    word-break: normal;
   }
 
   /* stylelint-disable selector-max-compound-selectors */
@@ -53,41 +49,70 @@
   /* stylelint-enable */
 }
 
-// Value group
-.pf-c-inline-edit__value-group {
+.pf-c-inline-edit__group {
   display: flex;
 
   > * {
-    margin-right: var(--pf-c-inline-edit__value-group--item--MarginRight);
+    margin-right: var(--pf-c-inline-edit__group--item--MarginRight);
+  }
+
+  // Value group
+  &.pf-m-value-group {
+    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-value-group--item--MarginRight);
+  }
+
+  // Action group
+  &.pf-m-action-group {
+    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-action-group--item--MarginRight);
+
+    display: none;
+    margin-top: var(--pf-c-inline-edit__action-group--MarginTop);
+  }
+
+  // Icon group
+  &.pf-m-icon-group {
+    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-icon-group--item--MarginRight);
+  }
+
+  // Enable action group
+  &.pf-m-enable {
+    display: inline-flex;
+  }
+
+  // Enable action group
+  &.pf-m-confirm {
+    display: none;
+  }
+
+  &.pf-m-inline {
+    --pf-c-inline-edit__action-group--MarginTop: 0;
+  }
+
+  // Input group
+  &.pf-m-input-group {
+    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-input-group--item--MarginRight);
+
+    .pf-m-action-group {
+      --pf-c-inline-edit__input-group--item--MarginRight: var(--pf-c-inline-edit__group--m-input-group--m-action-group--item--MarginRight);
+      --pf-c-inline-edit__action-group--MarginTop: 0;
+    }
   }
 
   > :last-child {
-    --pf-c-inline-edit__value-group--item--MarginRight: 0;
+    --pf-c-inline-edit__group--item--MarginRight: 0;
   }
 }
 
-// Input group
-.pf-c-inline-edit__input-group {
-  > * {
-    margin-right: var(--pf-c-inline-edit__input-group--item--MarginRight);
-  }
-
-  > :last-child {
-    --pf-c-inline-edit__input-group--item--MarginRight: 0;
-  }
-
-  // Remove margin for actions within input groups. ie 'Save' 'Cancel'
-  .pf-c-inline-edit__action {
-    --pf-c-inline-edit__input-group--item--MarginRight: 0;
-  }
-
-  .pf-c-inline-edit__action-group {
-    --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-c-inline-edit__input-group--m-action-group--item--MarginRight);
+.pf-c-table__action,
+.pf-c-inline-edit__group.pf-m-input-group {
+  .pf-c-inline-edit__group.pf-m-action-group {
+    --pf-c-inline-edit__group--m-action-group--item--MarginRight: 0;
+    --pf-c-inline-edit__action-group--MarginTop: 0;
   }
 }
 
 .pf-c-inline-edit__input,
-.pf-c-inline-edit__input-group,
+.pf-c-inline-edit__group.pf-m-input-group,
 .pf-c-inline-edit__action.pf-m-save,
 .pf-c-inline-edit__action.pf-m-cancel {
   display: none;
@@ -95,63 +120,14 @@
 }
 
 .pf-c-inline-edit__input,
-.pf-c-inline-edit__input-group {
+.pf-c-inline-edit__group.pf-m-input-group {
   flex: 1;
 }
 
-// Action group
-.pf-c-inline-edit__action-group {
-  display: inline-flex;
+.pf-c-inline-edit__group.pf-m-column {
+  --pf-c-inline-edit__group--item--MarginRight: 0;
 
-  > * {
-    margin-right: var(--pf-c-inline-edit__action-group--item--MarginRight);
-  }
-
-  > :last-child {
-    --pf-c-inline-edit__action-group--item--MarginRight: 0;
-  }
-
-  &.pf-m-inline {
-    --pf-c-inline-edit__action-group--item--MarginRight: var(--pf-c-inline-edit__action-group--m-inline--item--MarginRight);
-  }
-}
-
-// Toggle group
-.pf-c-inline-edit__title-group {
-  display: inline-flex;
-
-  > * {
-    margin-right: var(--pf-c-inline-edit__title-group--item--MarginRight);
-  }
-
-  > :last-child {
-    --pf-c-inline-edit__title-group--item--MarginRight: 0;
-  }
-}
-
-.pf-m-column {
-  &.pf-c-inline-edit__value-group,
-  &.pf-c-inline-edit__input-group,
-  &.pf-c-inline-edit__action-group,
-  &.pf-c-inline-edit__title-group {
-    flex-direction: column;
-  }
-
-  &.pf-c-inline-edit__value-group {
-    --pf-c-inline-edit__value-group--item--MarginRight: 0;
-  }
-
-  &.pf-c-inline-edit__input-group {
-    --pf-c-inline-edit__input-group--item--MarginRight: 0;
-  }
-
-  &.pf-c-inline-edit__action-group {
-    --pf-c-inline-edit__action-group--item--MarginRight: 0;
-  }
-
-  &.pf-c-inline-edit__title-group {
-    --pf-c-inline-edit__title-group--item--MarginRight: 0;
-  }
+  flex-direction: column;
 }
 
 .pf-c-inline-edit [class*="group"] {
@@ -159,17 +135,18 @@
 }
 
 // Active
-.pf-c-inline-edit.pf-m-inline-edit-active,
-.pf-c-inline-edit .pf-m-inline-edit-active {
+.pf-c-inline-edit.pf-m-editable,
+.pf-c-inline-edit .pf-m-editable {
   .pf-c-inline-edit__value,
-  .pf-c-inline-edit__value-group,
-  .pf-c-inline-edit__action-group > * {
+  .pf-c-inline-edit__action.pf-m-edit,
+  .pf-c-inline-edit__group.pf-m-value-group,
+  .pf-c-inline-edit__group.pf-m-action-group > * {
     display: none;
     visibility: hidden;
   }
 
   .pf-c-inline-edit__input,
-  .pf-c-inline-edit__input-group,
+  .pf-c-inline-edit__group.pf-m-input-group,
   .pf-c-inline-edit__action.pf-m-save,
   .pf-c-inline-edit__action.pf-m-cancel {
     visibility: visible;
@@ -179,13 +156,28 @@
     display: block;
   }
 
-  .pf-c-inline-edit__input-group {
+  .pf-c-inline-edit__group.pf-m-input-group {
     display: flex;
   }
 
   .pf-c-inline-edit__action.pf-m-save,
   .pf-c-inline-edit__action.pf-m-cancel {
     display: inline-block;
+  }
+
+  // Action group
+  .pf-c-inline-edit__group.pf-m-action-group {
+    display: inline-flex;
+
+    // margin-top: var(--pf-c-inline-edit__action-group--MarginTop);
+  }
+
+  .pf-c-inline-edit__group.pf-m-enable {
+    display: none;
+  }
+
+  .pf-c-inline-edit__group.pf-m-confirm {
+    display: inline-flex;
   }
 
   /* stylelint-disable selector-max-class */
@@ -199,4 +191,3 @@
 .pf-c-inline-edit__action.pf-m-save.pf-m-valid .pf-c-button.pf-m-plain {
   --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--m-valid--c-button--m-plain--Color);
 }
-/* stylelint-enable */
