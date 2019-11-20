@@ -16,6 +16,7 @@ import TrainingCard from 'gatsby-theme-patternfly-org/components/trainingCard';
       level="Beginner"
       time="20 minutes"
       description="This module will cover the guiding principles behind the three major parts of PatternFly Core—components, layout and demos."
+      katacodaId="html-css/module-1"
     />
   </GalleryItem>
   <GalleryItem>
@@ -25,6 +26,7 @@ import TrainingCard from 'gatsby-theme-patternfly-org/components/trainingCard';
       level="Intermediate"
       time="20 minutes"
       description="This module will utilize BEM to create component and global variables and also override them."
+      katacodaId="html-css/module-2"
     />
   </GalleryItem>
   <GalleryItem>
@@ -34,6 +36,7 @@ import TrainingCard from 'gatsby-theme-patternfly-org/components/trainingCard';
       level="Beginner"
       time="20 minutes"
       description="Deep dive into modifiers."
+      katacodaId="html-css/module-3"
     />
   </GalleryItem>
   <GalleryItem>
@@ -43,6 +46,7 @@ import TrainingCard from 'gatsby-theme-patternfly-org/components/trainingCard';
       level="Beginner"
       time="20 minutes"
       description="This module will cover the seven different PatternFly layouts."
+      katacodaId="html-css/module-4"
     />
   </GalleryItem>
   <GalleryItem>
@@ -52,6 +56,7 @@ import TrainingCard from 'gatsby-theme-patternfly-org/components/trainingCard';
       level="Advanced"
       time="20 minutes"
       description="Practice overriding and extending PatternFly variables to make new designs."
+      katacodaId="html-css/module-5"
     />
   </GalleryItem>
 </Gallery>
