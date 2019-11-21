@@ -1,10 +1,10 @@
 {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
   {{#> chip-group chip-group--modifier="pf-m-toolbar"}}
-    {{#> chip-group-list-item }}
+    {{#> chip-group-list-item}}
       {{#> chip-group-label}}
         {{chip-group--label}}
       {{/chip-group-label}}
-      {{#> chip-group chip-group--modifier=""}}
+      {{#> chip-group chip-group--modifier="" chip-group--id=(concat data-toolbar--id '-' chip-group--label '-')}}
         {{#> chip}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
             Chip one

@@ -46,17 +46,7 @@ Several components in the following examples do not include functional and/or ac
 ```hbs title=Simple
 {{#> data-toolbar data-toolbar--id="data-toolbar-simple-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
-    {{#> data-toolbar-group}}
+    {{#> data-toolbar-content-section}}
       {{#> data-toolbar-item}}
         Item
       {{/data-toolbar-item}}
@@ -66,17 +56,29 @@ Several components in the following examples do not include functional and/or ac
       {{#> data-toolbar-item}}
         Item
       {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{#> data-toolbar-group}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -96,25 +98,27 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 ```hbs title=Adjusted-spacers
 {{#> data-toolbar data-toolbar--id="data-toolbar-spacer-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none"}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-sm"}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-md"}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-lg"}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none pf-m-spacer-sm-on-md pf-m-spacer-md-on-lg pf-m-spacer-lg-on-xl"}}
-      Item
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      Item
-    {{/data-toolbar-item}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none"}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-sm"}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-md"}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-lg"}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none pf-m-spacer-sm-on-md pf-m-spacer-md-on-lg pf-m-spacer-lg-on-xl"}}
+        Item
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item}}
+        Item
+      {{/data-toolbar-item}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -122,23 +126,25 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 ```hbs title=Adjusted-group-spacers
 {{#> data-toolbar data-toolbar--id="data-toolbar-group-spacer-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-lg"}}
-      {{#> data-toolbar-item}}
-        Item
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        Item
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-none pf-m-space-items-sm-on-md pf-m-space-items-md-on-lg pf-m-space-items-lg-on-xl"}}
-      {{#> data-toolbar-item}}
-        Item
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        Item
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-lg"}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-none pf-m-space-items-sm-on-md pf-m-space-items-md-on-lg pf-m-space-items-lg-on-xl"}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          Item
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -153,57 +159,43 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 ```hbs title=Group-types
 {{#> data-toolbar data-toolbar--id="data-toolbar-group-types-example"}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item}}
-        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter1')}}
-          Filter 1
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter2')}}
-          Filter 2
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> select id=(concat data-toolbar--id '-select-checkbox-filter3')}}
-          Filter 3
-        {{/select}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-icon-button-group"}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
-          <i class="fas fa-edit" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
-          <i class="fas fa-clone" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
-          <i class="fas fa-sync" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-primary"}}
-          Action
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Secondary
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-tertiary"}}
-          Tertiary
-        {{/button}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-filter1')}}
+            Filter 1
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-filter2')}}
+            Filter 2
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-checkbox-filter3')}}
+            Filter 3
+          {{/select}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-button-group"}}
+        {{#> data-toolbar-item}}
+          {{#> button button--modifier="pf-m-primary"}}
+            Action
+          {{/button}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+          {{/button}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> button button--modifier="pf-m-tertiary"}}
+            Tertiary
+          {{/button}}
+        {{/data-toolbar-item}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -218,23 +210,25 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 
 ```hbs title=Toggle-group
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
-      {{> data-toolbar-item-search-filter button--id="content"}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-            Status
-          {{/select}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
-            Risk
-          {{/select}}
-        {{/data-toolbar-item}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
+        {{> data-toolbar-item-search-filter button--id="content"}}
+        {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
+              Status
+            {{/select}}
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
+              Risk
+            {{/select}}
+          {{/data-toolbar-item}}
+        {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-    {{/data-toolbar-group}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
@@ -242,10 +236,12 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 
 ```hbs title=Toggle-group-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-collapsed-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
-    {{/data-toolbar-group}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
+      {{/data-toolbar-group}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{> data-toolbar-item-search-filter button--id="expandable-content"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
@@ -290,47 +286,39 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-show{-on-[breakpoint]}` | `.pf-c-data-toolbar__group.pf-m-toggle-group`, `.pf-c-data-toolbar__expandable-content` | Modifies toolbar element visibility at breakpoint. This selector must be applied consistently to toggle group and expandable content. |
-| `.pf-m-toggle-group-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for toggle group, expandable content layout. |
-| `.pf-m-chip-container` | `.pf-c-data-toolbar__content`, `.pf-c-data-toolbar__group` | Modifies the data toolbar element for applied filters layout. |
+| `.pf-m-chip-container` | `.pf-c-data-toolbar__content-section`, `.pf-c-data-toolbar__group` | Modifies the data toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Selected
 
 ```hbs title=Selected-filters-on-mobile-(filters-collapsed,-selected-filters-summary-visible)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-collapsed-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{> data-toolbar-item-bulk-select}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
-      {{> data-toolbar-item-search-filter button--id="content"}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
-            Status
-          {{/select}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
-            Risk
-          {{/select}}
-        {{/data-toolbar-item}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{> data-toolbar-item-bulk-select}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
+        {{> data-toolbar-item-search-filter button--id="content"}}
+        {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+              Status
+            {{/select}}
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+              Risk
+            {{/select}}
+          {{/data-toolbar-item}}
+        {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-      {{/button}}
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--id=data-toolbar--id}} --}}
-      {{!-- Remove when overflow menu merges --}}
-      Overflow menu
-    {{/data-toolbar-item}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--control="true"}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
-        {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
-        {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status"}}
+        {{> data-toolbar-item-chip-group chip-group--label="Risk"}}
       {{/data-toolbar-group}}
     {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
@@ -338,33 +326,22 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> data-toolbar-item}}
       6 filters applied
     {{/data-toolbar-item}}
-    {{#> data-toolbar-item}}
-      {{> data-toolbar-item-clear}}
-    {{/data-toolbar-item}}
+    {{> data-toolbar-item-clear}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
 
 ```hbs title=Selected-filters-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-expanded-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{> data-toolbar-item-bulk-select}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-      {{/button}}
-    {{/data-toolbar-item}}
-
-    {{!-- Overflow menu --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--id=data-toolbar--id}} --}}
-      {{!-- Remove when overflow menu merges --}}
-      Overflow menu
-    {{/data-toolbar-item}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{> data-toolbar-item-bulk-select}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
+      {{/data-toolbar-group}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--control="true"}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{> data-toolbar-item-search-filter button--id="expanded-content"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
@@ -380,9 +357,9 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
-        {{#> data-toolbar-group newcontext}}
-          {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
-          {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+        {{#> data-toolbar-group data-toolbar-group--modifier=""}}
+          {{> data-toolbar-item-chip-group chip-group--label="Status"}}
+          {{> data-toolbar-item-chip-group chip-group--label="Risk"}}
         {{/data-toolbar-group}}
         {{> data-toolbar-item-clear}}
       {{/data-toolbar-group}}
@@ -393,46 +370,34 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Selected-filters-on-desktop-(not-responsive)
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{> data-toolbar-item-bulk-select}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
-      {{> data-toolbar-item-search-filter button--id="content"}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
-            Status
-          {{/select}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
-            Risk
-          {{/select}}
-        {{/data-toolbar-item}}
-      {{/data-toolbar-group}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-      {{/button}}
-    {{/data-toolbar-item}}
-
-    {{!-- Overflow menu --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--id=data-toolbar--id}} --}}
-      {{!-- Remove when overflow menu merges --}}
-      Overflow menu
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
-        {{#> data-toolbar-group newcontext}}
-          {{> data-toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat data-toolbar--id '-group1-')}}
-          {{> data-toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat data-toolbar--id '-group2-')}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{> data-toolbar-item-bulk-select}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
+        {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+              Status
+            {{/select}}
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+              Risk
+            {{/select}}
+          {{/data-toolbar-item}}
         {{/data-toolbar-group}}
-        {{> data-toolbar-item-clear}}
       {{/data-toolbar-group}}
-    {{/data-toolbar-expandable-content}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
+    {{/data-toolbar-content-section}}
+  {{/data-toolbar-content}}
+  {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
+    {{#> data-toolbar-group data-toolbar-group--modifier=""}}
+      {{> data-toolbar-item-chip-group chip-group--label="Status"}}
+      {{> data-toolbar-item-chip-group chip-group--label="Risk"}}
+    {{/data-toolbar-group}}
+    {{> data-toolbar-item-clear}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -441,96 +406,66 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Stacked-on-desktop
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
-      {{#> data-toolbar-group}}
-        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label')}}
-          Resource
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-            Pod
-          {{/select}}
-        {{/data-toolbar-item}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
+        {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-label')}}
+            Resource
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+              Pod
+            {{/select}}
+          {{/data-toolbar-item}}
+        {{/data-toolbar-group}}
+        {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label')}}
+            Status
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+              Running
+            {{/select}}
+          {{/data-toolbar-item}}
+        {{/data-toolbar-group}}
+        {{#> data-toolbar-group newcontext}}
+          {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label')}}
+            Type
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
+              Any
+            {{/select}}
+          {{/data-toolbar-item}}
+        {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-group}}
-        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-status-label')}}
-          Status
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-            Running
-          {{/select}}
-        {{/data-toolbar-item}}
-      {{/data-toolbar-group}}
-      {{#> data-toolbar-group}}
-        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--attribute='aria-hidden="true"' data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-type-label')}}
-          Type
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-            Any
-          {{/select}}
-        {{/data-toolbar-item}}
-      {{/data-toolbar-group}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-icon-button-group"}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-          <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-
-    {{!-- Overflow menu --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu pf-m-align-right"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--id=data-toolbar--id} --}}
-      {{!-- Remove when overflow menu merges --}}
-      {{#> example-text example-text--modifier="example-border"}}Overflow menu{{/example-text}}
-    {{/data-toolbar-item}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> divider}}{{/divider}}
   {{#> data-toolbar-content}}
-    {{> data-toolbar-item-bulk-select}}
-    {{> data-toolbar-item-pagination}}
+    {{#> data-toolbar-content-section}}
+      {{> data-toolbar-item-bulk-select}}
+      {{> data-toolbar-item-pagination}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
 
 ```hbs title=Stacked-on-mobile-(filters-collapsed,-expandable-content-expanded)
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-collapsed-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-icon-button-group"}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-          <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-        {{/button}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-group}}
-
-    {{!-- Overflow menu --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu pf-m-align-right"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--id=data-toolbar--id} --}}
-      {{!-- Remove when overflow menu merges --}}
-      {{#> example-text example-text--modifier="example-border"}}Overflow menu{{/example-text}}
-    {{/data-toolbar-item}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
+      {{/data-toolbar-group}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--control="true"}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group}}
         {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-label" data-toolbar-item--id=(concat data-toolbar--id '-select-checkbox-resource-expanded-label')}}
@@ -566,8 +501,10 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{/data-toolbar-content}}
   {{#> divider}}{{/divider}}
   {{#> data-toolbar-content}}
-    {{> data-toolbar-item-bulk-select}}
-    {{> data-toolbar-item-pagination}}
+    {{#> data-toolbar-content-section}}
+      {{> data-toolbar-item-bulk-select}}
+      {{> data-toolbar-item-pagination}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -576,42 +513,33 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ```hbs title=Expanded-elements
 {{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
-  {{#> data-toolbar-content data-toolbar-content--HasToggleGroup="true"}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
-      {{#> dropdown id=(concat data-toolbar--id '-dropdown') dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
-        {{> dropdown-toggle-check aria-label="Select all"}}
-        {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-      {{/dropdown}}
-    {{/data-toolbar-item}}
-    {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
-      {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
-      {{> data-toolbar-item-search-filter button--id="content"}}
-      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
-            Status
-          {{/select}}
-        {{/data-toolbar-item}}
-        {{#> data-toolbar-item}}
-          {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
-            Risk
-          {{/select}}
-        {{/data-toolbar-item}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
+        {{#> dropdown id=(concat data-toolbar--id '-dropdown') dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
+          {{> dropdown-toggle-check aria-label="Select all"}}
+          {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
+        {{/dropdown}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
+        {{> data-toolbar-toggle data-toolbar-toggle--IsExpanded="false"}}
+        {{> data-toolbar-item-search-filter button--id="content"}}
+        {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+              Status
+            {{/select}}
+          {{/data-toolbar-item}}
+          {{#> data-toolbar-item}}
+            {{#> select id=(concat data-toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+              Risk
+            {{/select}}
+          {{/data-toolbar-item}}
+        {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-    {{/data-toolbar-group}}
-    {{#> data-toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-      {{/button}}
-    {{/data-toolbar-item}}
-
-    {{!-- Overflow menu --}}
-    {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-overflow-menu"}}
-      {{!-- Uncomment when overflow menu merges --}}
-      {{!-- {{> overflow-menu-action-group-example overflow-menu--IsSingle="true" overflow-menu--id=data-toolbar--id}} --}}
-      {{!-- Remove when overflow menu merges --}}
-      Overflow menu
-    {{/data-toolbar-item}}
+      {{> data-toolbar-icon-button-group-example}}
+      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true" data-toolbar-overflow-menu-example--IsExpanded="true"}}
+    {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
@@ -630,7 +558,8 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-c-data-toolbar` | `<div>` | Initiates the toolbar component. **Required** |
 | `.pf-c-data-toolbar__item` | `<div>` | Initiates a toolbar item. **Required** |
 | `.pf-c-data-toolbar__group` | `<div>` | Initiates a toolbar group. |
-| `.pf-c-data-toolbar__content` | `<div>` | Initiates a toolbar content section. **Required** |
+| `.pf-c-data-toolbar__content` | `<div>` | Initiates a toolbar content container. **Required** |
+| `.pf-c-data-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-c-data-toolbar__content-section` per `.pf-c-data-toolbar__content` **Required** |
 | `.pf-c-data-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-separator` | `.pf-c-data-toolbar__item` | Initiates separator border. |
@@ -647,7 +576,6 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
 | `.pf-m-label` | `.pf-c-data-toolbar__item` | Modifies toolbar item to label. |
-| `.pf-m-toggle-group-container` | `.pf-c-data-toolbar__content` | Modifies the data toolbar content for toggle group, expandable content layout. |
 | `.pf-m-chip-container` | `.pf-c-data-toolbar__content`, `.pf-c-data-toolbar__group` | Modifies the data toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
 
