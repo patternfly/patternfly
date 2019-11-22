@@ -1,6 +1,3 @@
-<div class="pf-c-inline-edit__toggle{{#if inline-edit-toggle--modifier}} {{inline-edit-toggle--modifier}}{{/if}}"
-  {{#if inline-edit-toggle--attribute}}
-    {{{inline-edit-toggle--attribute}}}
-  {{/if}}>
+{{#> inline-edit-action inline-edit-action--modifier=(concat 'pf-m-enable ' inline-edit-toggle--modifier)}}
   {{> @partial-block}}
-</div>
+{{/inline-edit-action}}

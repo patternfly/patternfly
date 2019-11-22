@@ -1,14 +1,14 @@
 {{#> title title--modifier="pf-m-xl" titleType="h3" title--attribute=(concat 'id="' inline-edit--id '-label" aria-hidden="true"')}}
   Bulk edit description list
 {{/title}}
-{{#> inline-edit-action inline-edit-action--modifier="pf-m-edit"}}
+{{#> inline-edit-toggle}}
   {{#> button button--modifier="pf-m-link" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
     {{#> button-icon}}
       <i class="fas fa-pencil-alt" aria-hidden="true"></i>
     {{/button-icon}}
     Edit
   {{/button}}
-{{/inline-edit-action}}
+{{/inline-edit-toggle}}
 
 {{#> list list--type="dl" list--attribute=(concat 'aria-labelledby="' inline-edit--id '-label"')}}
   <dt>
@@ -58,13 +58,13 @@
     {{#> inline-edit-value}}
       True
     {{/inline-edit-value}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
+    {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
       {{#> radio}}
-        {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-example-radio1"')}}{{/radio-input}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-example-radio"')}}{{/radio-input}}
         {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
       {{/radio}}
       {{#> radio}}
-        {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-example-radio2"')}}{{/radio-input}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-example-radio"')}}{{/radio-input}}
         {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
       {{/radio}}
     {{/inline-edit-group}}
@@ -79,7 +79,7 @@
     {{/inline-edit-input}}
   </dd>
 {{/list}}
-{{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+{{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-footer"}}
   {{> inline-edit-action-save}}
   {{> inline-edit-action-cancel}}
 {{/inline-edit-group}}

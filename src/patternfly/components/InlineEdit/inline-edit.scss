@@ -9,7 +9,6 @@
   --pf-c-inline-edit__group--m-input-group--item--MarginRight: var(--pf-global--spacer--sm);
 
   // Action group
-  --pf-c-inline-edit__action-group--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-inline-edit__group--m-action-group--item--MarginRight: var(--pf-global--spacer--md);
   --pf-c-inline-edit__group--m-input-group--m-action-group--item--MarginRight: 0;
 
@@ -20,7 +19,10 @@
   --pf-c-inline-edit--m-active__toggle--Color: var(--pf-global--Color--100);
 
   // Save button
-  --pf-c-inline-edit__action--m-save--m-valid--c-button--m-plain--Color: var(--pf-global--link--Color);
+  --pf-c-inline-edit__action--m-valid--c-button--m-plain--Color: var(--pf-global--link--Color);
+
+  // Footer group
+  --pf-c-inline-edit__group--m-footer--MarginTop: var(--pf-global--spacer--xl);
 
   // Hidden
   .pf-m-hidden {
@@ -49,6 +51,7 @@
   /* stylelint-enable */
 }
 
+// Group
 .pf-c-inline-edit__group {
   display: flex;
 
@@ -61,12 +64,25 @@
     --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-value-group--item--MarginRight);
   }
 
+
+  // Input group
+  &.pf-m-input-group {
+    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-input-group--item--MarginRight);
+
+    .pf-m-action-group {
+      --pf-c-inline-edit__group--m-input-group--item--MarginRight: var(--pf-c-inline-edit__group--m-input-group--m-action-group--item--MarginRight);
+      --pf-c-inline-edit__group--m-action-group--MarginTop: 0;
+    }
+  }
+
   // Action group
   &.pf-m-action-group {
     --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-action-group--item--MarginRight);
+  }
 
+  &.pf-m-input-group,
+  &.pf-m-action-group {
     display: none;
-    margin-top: var(--pf-c-inline-edit__action-group--MarginTop);
   }
 
   // Icon group
@@ -74,27 +90,29 @@
     --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-icon-group--item--MarginRight);
   }
 
-  // Enable action group
+  // Inline group
+  &.pf-m-inline {
+    --pf-c-inline-edit__group--m-action-group--MarginTop: 0;
+  }
+
+  // Footer
+  &.pf-m-footer {
+    margin-top: var(--pf-c-inline-edit__group--m-footer--MarginTop);
+  }
+
+  // Column
+  &.pf-m-column {
+    --pf-c-inline-edit__group--item--MarginRight: 0;
+
+    flex-direction: column;
+  }
+
+  // Enable groups
   &.pf-m-enable {
     display: inline-flex;
-  }
 
-  // Enable action group
-  &.pf-m-confirm {
-    display: none;
-  }
-
-  &.pf-m-inline {
-    --pf-c-inline-edit__action-group--MarginTop: 0;
-  }
-
-  // Input group
-  &.pf-m-input-group {
-    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__group--m-input-group--item--MarginRight);
-
-    .pf-m-action-group {
-      --pf-c-inline-edit__input-group--item--MarginRight: var(--pf-c-inline-edit__group--m-input-group--m-action-group--item--MarginRight);
-      --pf-c-inline-edit__action-group--MarginTop: 0;
+    .pf-c-inline-edit__action {
+      display: inline-block;
     }
   }
 
@@ -103,91 +121,78 @@
   }
 }
 
-.pf-c-table__action,
+// Table action cells and action groups inside input groups
+.pf-c-inline-edit .pf-c-table__action,
 .pf-c-inline-edit__group.pf-m-input-group {
   .pf-c-inline-edit__group.pf-m-action-group {
     --pf-c-inline-edit__group--m-action-group--item--MarginRight: 0;
-    --pf-c-inline-edit__action-group--MarginTop: 0;
+    --pf-c-inline-edit__group--m-action-group--MarginTop: 0;
   }
 }
 
+// Input and input group
 .pf-c-inline-edit__input,
-.pf-c-inline-edit__group.pf-m-input-group,
-.pf-c-inline-edit__action.pf-m-save,
-.pf-c-inline-edit__action.pf-m-cancel {
+.pf-c-inline-edit__group.pf-m-input-group {
   display: none;
+  flex: 1;
   visibility: hidden;
 }
 
-.pf-c-inline-edit__input,
-.pf-c-inline-edit__group.pf-m-input-group {
-  flex: 1;
+// Action
+.pf-c-inline-edit__action {
+  display: none;
+
+  &.pf-m-enable {
+    display: inline-block;
+  }
+
+  &.pf-m-valid {
+    color: var(--pf-c-inline-edit__action--m-valid--Color);
+  }
 }
 
-.pf-c-inline-edit__group.pf-m-column {
-  --pf-c-inline-edit__group--item--MarginRight: 0;
-
-  flex-direction: column;
-}
-
+// Groups
 .pf-c-inline-edit [class*="group"] {
   align-items: baseline;
 }
 
-// Active
+// Editable
 .pf-c-inline-edit.pf-m-editable,
 .pf-c-inline-edit .pf-m-editable {
-  .pf-c-inline-edit__value,
-  .pf-c-inline-edit__action.pf-m-edit,
-  .pf-c-inline-edit__group.pf-m-value-group,
-  .pf-c-inline-edit__group.pf-m-action-group > * {
-    display: none;
-    visibility: hidden;
-  }
-
+  // Expose inputs, input groups, actions and action groups
   .pf-c-inline-edit__input,
-  .pf-c-inline-edit__group.pf-m-input-group,
-  .pf-c-inline-edit__action.pf-m-save,
-  .pf-c-inline-edit__action.pf-m-cancel {
+  .pf-c-inline-edit__action,
+  .pf-c-inline-edit__group.pf-m-action-group,
+  .pf-c-inline-edit__group.pf-m-input-group {
     visibility: visible;
   }
 
+  // Input
   .pf-c-inline-edit__input {
     display: block;
   }
 
-  .pf-c-inline-edit__group.pf-m-input-group {
-    display: flex;
-  }
-
-  .pf-c-inline-edit__action.pf-m-save,
-  .pf-c-inline-edit__action.pf-m-cancel {
+  // Action
+  .pf-c-inline-edit__action {
     display: inline-block;
   }
 
   // Action group
   .pf-c-inline-edit__group.pf-m-action-group {
     display: inline-flex;
-
-    // margin-top: var(--pf-c-inline-edit__action-group--MarginTop);
   }
 
+  // Input group
+  .pf-c-inline-edit__group.pf-m-input-group {
+    display: flex;
+  }
+
+  // Hide value, value group and enable actions
+  .pf-c-inline-edit__value,
+  .pf-c-inline-edit__action.pf-m-enable,
+  .pf-c-inline-edit__group.pf-m-value-group,
   .pf-c-inline-edit__group.pf-m-enable {
     display: none;
+    visibility: hidden;
   }
-
-  .pf-c-inline-edit__group.pf-m-confirm {
-    display: inline-flex;
-  }
-
-  /* stylelint-disable selector-max-class */
-  .pf-c-inline-edit__toggle .pf-c-button.pf-m-plain {
-    color: var(--pf-c-inline-edit--m-active__toggle--Color);
-  }
-  /* stylelint-enable */
-}
-
-/* stylelint-disable selector-max-class */
-.pf-c-inline-edit__action.pf-m-save.pf-m-valid .pf-c-button.pf-m-plain {
-  --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--m-save--m-valid--c-button--m-plain--Color);
 }
