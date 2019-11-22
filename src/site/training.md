@@ -11,52 +11,52 @@ import TrainingCard from 'gatsby-theme-patternfly-org/components/trainingCard';
 <Gallery gutter="md">
   <GalleryItem>
     <TrainingCard
-      trainingType="htmlcss"
-      title="The building blocks for PatternFly Core"
+      trainingType="html-css"
+      title="The building blocks of PatternFly"
       level="Beginner"
       time="20 minutes"
-      description="This module will cover the guiding principles behind the three major parts of PatternFly Core—components, layout and demos."
-      katacodaId="html-css/module-1"
+      description="Learn about components, layouts, and demos."
+      katacodaId="building-blocks"
     />
   </GalleryItem>
   <GalleryItem>
     <TrainingCard
-      trainingType="htmlcss"
-      title="BEM naming principles"
+      trainingType="html-css"
+      title="Variable naming principles"
       level="Intermediate"
       time="20 minutes"
-      description="This module will utilize BEM to create component and global variables and also override them."
-      katacodaId="html-css/module-2"
+      description="Create and override component and global variables by following BEM naming principles."
+      katacodaId="variable-naming-principles"
     />
   </GalleryItem>
   <GalleryItem>
     <TrainingCard
-      trainingType="htmlcss"
-      title="Modifier and Utility Classes"
+      trainingType="html-css"
+      title="Modifiers and utilities"
       level="Beginner"
-      time="20 minutes"
-      description="Deep dive into modifiers."
-      katacodaId="html-css/module-3"
+      time="15 minutes"
+      description="Apply modifier and utility classes to create new variations."
+      katacodaId="modifier-utilities"
     />
   </GalleryItem>
   <GalleryItem>
     <TrainingCard
-      trainingType="htmlcss"
-      title="PatternFly Layouts"
+      trainingType="html-css"
+      title="Layouts"
       level="Beginner"
-      time="20 minutes"
-      description="This module will cover the seven different PatternFly layouts."
-      katacodaId="html-css/module-4"
+      time="25 minutes"
+      description="Learn how to use all seven of PatternFly's layouts."
+      katacodaId="layouts"
     />
   </GalleryItem>
   <GalleryItem>
     <TrainingCard
-      trainingType="htmlcss"
-      title="Overriding and Extending Variables"
+      trainingType="html-css"
+      title="Override and extend variables"
       level="Advanced"
-      time="20 minutes"
-      description="Practice overriding and extending PatternFly variables to make new designs."
-      katacodaId="html-css/module-5"
+      time="25 minutes"
+      description="Practice overriding and extending variables to create new designs."
+      katacodaId="override-extend-variables"
     />
   </GalleryItem>
 </Gallery>
