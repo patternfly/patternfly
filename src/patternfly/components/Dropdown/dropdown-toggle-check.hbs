@@ -1,9 +1,9 @@
 <label class="pf-c-dropdown__toggle-check{{#if dropdown-toggle-check--modifier}} {{dropdown-toggle-check--modifier}}{{/if}}"
-  for="{{dropdown-toggle-check--id}}"
+  for="{{id}}-toggle-check"
   {{#if dropdown-toggle-check--attribute}}
 	  {{{dropdown-toggle-check--attribute}}}
   {{/if}}>
-  <input type="checkbox" id="{{dropdown-toggle-check--id}}"
+  <input type="checkbox" id="{{id}}-toggle-check"
     {{#if dropdown-toggle--IsDisabled}}
       disabled
     {{/if}}
@@ -14,10 +14,10 @@
       checked
     {{/if}}
     {{#if dropdown--IsSplitButtonText}}
-      aria-labelledby="{{dropdown-toggle-check--id}} {{dropdown-toggle-check--id}}-text"
+      aria-labelledby="{{id}}-toggle-check {{id}}-toggle-check-text"
     {{/if}}>
   {{#if dropdown--IsSplitButtonText}}
-    {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' dropdown-toggle-check--id '-text"')}}
+    {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' id '-toggle-check-text"')}}
       {{{dropdown--IsSplitButtonText}}}
     {{/dropdown-toggle-text}}
   {{/if}}

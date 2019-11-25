@@ -5,6 +5,33 @@ hideTOC: true
 releaseNoteTOC: true
 ---
 
+## 2019.10 release notes (2019-11-25)
+Packages released:
+- @patternfly/patternfly@v2.43.1
+
+### Components
+- **App launcher:**  Added support for search input, favorites ([#2428](https://github.com/patternfly/patternfly-next/pull/2428))
+- **Data toolbar:**
+  - Moved and wrapped chips ([#2397](https://github.com/patternfly/patternfly-next/pull/2397))
+  - Reverted changes from refactor-data-toolbar branch ([#2434](https://github.com/patternfly/patternfly-next/pull/2434))
+  - Unreverted changes from refactor-data-toolbar branch ([#2440](https://github.com/patternfly/patternfly-next/pull/2440))
+  - Updated chip-group structure ([#2445](https://github.com/patternfly/patternfly-next/pull/2445))
+- **Dropdown:**
+  - Added regular action support in split button dropdown ([#2418](https://github.com/patternfly/patternfly-next/pull/2418))
+  - Fixed bottom border for split button w/ action expanded ([#2449](https://github.com/patternfly/patternfly-next/pull/2449))
+  - Added support for menu item icons ([#2451](https://github.com/patternfly/patternfly-next/pull/2451))
+- **Page:** Fixed hamburger alignment on mobile ([#2402](https://github.com/patternfly/patternfly-next/pull/2402))
+- **Select:** Removed use of form element in toggle and menu ([#2430](https://github.com/patternfly/patternfly-next/pull/2430))
+
+### Other
+- **Build:**
+  - Bumped gatsby-theme-patternfly-org ([#2377](https://github.com/patternfly/patternfly-next/pull/2377))
+  - Moved build back to separate component build for correct dist ([#2421](https://github.com/patternfly/patternfly-next/pull/2421))
+  - Added /g to regex ([#2423](https://github.com/patternfly/patternfly-next/pull/2423))
+  - Used surge to host pf4.patternfly.org ([#2429](https://github.com/patternfly/patternfly-next/pull/2429))
+  - Updated to always auto-import patternfly-utilities.sass ([#2433](https://github.com/patternfly/patternfly-next/pull/2433))
+- **Workspace:** Updated component titles to be sentence case ([#2401](https://github.com/patternfly/patternfly-next/pull/2401))
+
 ## 2019.09 release notes (2019-11-01)
 Packages released:
 - @patternfly/patternfly@v2.40.6
