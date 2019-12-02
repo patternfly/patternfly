@@ -13,6 +13,7 @@
   --pf-c-modal-box--m-sm--sm--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
   --pf-c-modal-box--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
+  --pf-c-modal-box--m-disable-overflow-scroll--MaxHeight: initial;
 
   // Body
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
@@ -57,6 +58,10 @@
     @media screen and (min-width: $pf-global--breakpoint--xl) {
       --pf-c-modal-box--MaxWidth: var(--pf-c-modal-box--m-lg--lg--MaxWidth);
     }
+  }
+
+  &.pf-m-disable-overflow-scroll {
+    --pf-c-modal-box--MaxHeight: var(--pf-c-modal-box--m-disable-overflow-scroll--MaxHeight);
   }
 
   // Close button

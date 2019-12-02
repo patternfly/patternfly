@@ -76,6 +76,26 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
+```hbs title=No-overflow-scroll-on-body
+{{#> modal-box modal-box--modifier="pf-m-disable-overflow-scroll" modal-box--attribute='aria-label="Example of a modal with overflow scroll disabled on the body" aria-describedby="modal-no-overflow-scroll-on-body"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
+    Modal header
+  {{/title}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-description-without-scroll"'}}
+    Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  {{/modal-box-body}}
+  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
 ## Documentation
 ### Overiew
 A modal box is a generic rectangular container that can be used to build modals. A modal box can have three sections: header, body, and footer. Header or body is required. If no `.pf-c-title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
@@ -103,3 +123,4 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-left` | `.pf-c-modal-box__foter` | Modifies for buttons in footer to be left aligned. **Required** |
+| `.pf-m-disable-overflow-scroll` | `.pf-c-modal-box__body` | Modifies the modal box body to disable the overflow scroll. |
