@@ -76,8 +76,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=No-overflow-scroll-on-body
-{{#> modal-box modal-box--modifier="pf-m-disable-overflow-scroll" modal-box--attribute='aria-label="Example of a modal with overflow scroll disabled on the body" aria-describedby="modal-no-overflow-scroll-on-body"'}}
+```hbs title=Without-overflow-scroll-on-body
+{{#> modal-box modal-box--modifier="pf-m-disable-overflow-scroll" modal-box--attribute='aria-label="Example of a modal with overflow scroll disabled on the body" aria-describedby="modal-overflow-scroll-disabled-on-body"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
@@ -123,4 +123,4 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-left` | `.pf-c-modal-box__foter` | Modifies for buttons in footer to be left aligned. **Required** |
-| `.pf-m-disable-overflow-scroll` | `.pf-c-modal-box__body` | Modifies the modal box body to disable the overflow scroll. |
+| `.pf-m-disable-overflow-scroll` | `.pf-c-modal-box` | Modifies the modal box to disable the overflow scroll. |
