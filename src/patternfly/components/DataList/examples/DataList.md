@@ -5,124 +5,6 @@ cssPrefix: pf-c-data-list
 ---
 
 ## Examples
-```hbs title=Selectable-rows
-{{#> data-list id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item1">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item2">Primary content (selected)</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item3">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item4"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item4">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-{{/data-list}}
-```
-
-```hbs title=Selectable-expandable-rows
-{{#> data-list id="data-list-selectable-expandable-rows" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item1">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content1" aria-label="Primary content details"')}}
-      {{#> data-list-expandable-content-body}}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      {{/data-list-expandable-content-body}}
-    {{/data-list-expandable-content}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item2">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content2" aria-label="Primary content details"')}}
-      {{#> data-list-expandable-content-body}}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      {{/data-list-expandable-content-body}}
-    {{/data-list-expandable-content}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
-      {{/data-list-item-control}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item3">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content3" aria-label="Primary content details"')}}
-      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
-        This expanded section has no padding.
-      {{/data-list-expandable-content-body}}
-    {{/data-list-expandable-content}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item4"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle4 ' id '-item4" id="' id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content4"')}}{{/data-list-toggle}}
-      {{/data-list-item-control}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item4">Primary content</span>
-        {{/data-list-cell}}
-
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content4" aria-label="Primary content details"')}}
-      {{#> data-list-expandable-content-body}}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      {{/data-list-expandable-content-body}}
-    {{/data-list-expandable-content}}
-  {{/data-list-item}}
-{{/data-list}}
-```
 
 ```hbs title=Basic
 {{#> data-list id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
@@ -545,6 +427,132 @@ When a list item includes more than one block of content, it can be difficult fo
 | -- | -- | -- |
 | `.pf-m-flex-{1, 2, 3, 4, 5}` | `.pf-c-data-list__cell` | Percentage based modifier for `.pf-c-data-list__cell` widths. |
 
+```hbs title=Selectable-rows
+{{#> data-list id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item1">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item2">Primary content (selected)</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item3">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item4"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item4">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-selectable` | `.pf-c-data-list__item` | Modifies a data list item so that it is selectable. |
+| `.pf-m-selected` | `.pf-c-data-list__item` | Modifies a data list item for the selected state. |
+
+```hbs title=Selectable-expandable-rows
+{{#> data-list id="data-list-selectable-expandable-rows" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item1">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content1" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item2">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content2" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item3">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content3" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
+        This expanded section has no padding.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item4"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle4 ' id '-item4" id="' id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content4"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item4">Primary content</span>
+        {{/data-list-cell}}
+
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content4" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
 ## Documentation
 ### Overiew
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/documentation/core/components/table).
+
