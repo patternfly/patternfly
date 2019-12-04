@@ -51,7 +51,7 @@ function copyFA() {
 }
 
 function copyAssets() {
-  return src('./src/patternfly/assets/**').pipe(dest('./public/assets'));
+  return src('./src/patternfly/assets/**').pipe(dest('./static/assets'));
 }
 
 function minifyCSS() {
