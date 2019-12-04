@@ -5,6 +5,127 @@ cssPrefix: pf-c-data-list
 ---
 
 ## Examples
+```hbs title=Selectable-rows
+{{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute='aria-labelledby="simple-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="simple-item1">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute='aria-labelledby="simple-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="simple-item2">Primary content (selected)</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute='aria-labelledby="simple-item3"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="simple-item3">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute='aria-labelledby="simple-item4"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="simple-item4">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+```hbs title=Selectable-expandable-rows
+{{#> data-list data-list--attribute='aria-label="Expandable data list example"'}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute='aria-labelledby="ex-item1"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle1 ex-item1" id="ex-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-1"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="ex-item1">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-1" aria-label="Primary content details"'}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute='aria-labelledby="ex-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-2"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="ex-item2">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Secondary content details"'}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute='aria-labelledby="ex-item3"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle3 ex-item3" id="ex-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-3"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="ex-item3">Primary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-3" aria-label="Tertiary content details"'}}
+      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
+        This expanded section has no padding.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute='aria-labelledby="ex-item2"'}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute='aria-labelledby="ex-toggle4 ex-item4" id="ex-toggle4" aria-label="Toggle details for" aria-expanded="true" aria-controls="content-4"'}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="ex-item4">Primary content</span>
+        {{/data-list-cell}}
+
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-4" aria-label="Secondary content details"'}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
 ```hbs title=Basic
 {{#> data-list data-list--attribute='aria-label="Simple data list example"'}}
   {{#> data-list-item data-list-item--attribute='aria-labelledby="simple-item1"'}}
@@ -233,7 +354,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
           {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
-        {{/data-list-cell}}        
+        {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="ex-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
@@ -251,7 +372,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-2" aria-label="Secondary content details"'}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      {{/data-list-expandable-content-body}}    
+      {{/data-list-expandable-content-body}}
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
@@ -263,7 +384,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
           {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
-        {{/data-list-cell}}        
+        {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="ex-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
@@ -281,7 +402,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-expandable-content data-list-expandable-content--attribute='id="content-3" aria-label="Tertiary content details"'}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
-      {{/data-list-expandable-content-body}}    
+      {{/data-list-expandable-content-body}}
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 {{/data-list}}
