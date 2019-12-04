@@ -8,7 +8,7 @@ cssPrefix: pf-c-data-list
 
 ```hbs title=Basic
 {{#> data-list id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -21,7 +21,7 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
@@ -56,7 +56,7 @@ cssPrefix: pf-c-data-list
 
 ```hbs title=With-headings
 {{#> data-list id="data-list-with-headings" data-list--attribute='aria-label="With headings data list example"'}}
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -69,7 +69,7 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
@@ -88,10 +88,10 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ```hbs title=Checkboxes,-actions,-and-additional-cells
 {{#> data-list id="data-list-checkboxes-actions-addl-cells" data-list--attribute='aria-label="Checkbox and action data list example"'}}
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=concat('name="' id '-check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' id '-check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -116,10 +116,10 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=concat('name="' id '-check-action-check2" aria-labelledby="' id '-item2"')}}{{/data-list-check}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' id '-check-action-check2" aria-labelledby="' id '-item2"')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -143,10 +143,10 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=concat('name="' id '-check-action-check3" aria-labelledby="' id '-item3"')}}{{/data-list-check}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' id '-check-action-check3" aria-labelledby="' id '-item3"')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -195,10 +195,10 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ```hbs title=Expandable
 {{#> data-list id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -219,17 +219,17 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id="{{id}}-action1"}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content1" aria-label="Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -249,17 +249,17 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id="{{id}}-action2"}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content2" aria-label="Secondary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content2" aria-label="Secondary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -279,7 +279,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id="{{id}}-action3"}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content3" aria-label="Tertiary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content3" aria-label="Tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
@@ -313,10 +313,10 @@ When a list item includes more than one block of content, it can be difficult fo
 {{!-- Example 1 --}}
 <h2 class="Preview__section-title">Default fitting - example 1</h2>
 {{#> data-list id="data-list-default-fitting" data-list--attribute='aria-label="Width modifier data list example 1"'}}
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=concat('name="' id 'check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' id 'check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -339,10 +339,10 @@ When a list item includes more than one block of content, it can be difficult fo
 {{!-- Example 2 --}}
 <h2 class="Preview__section-title">Flex modifiers - example 2</h2>
 {{#> data-list id="data-list-flex-modifiers" data-list--attribute='aria-label="Width modifier data list example 2"'}}
-  {{#> data-list-item data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=concat('name="' id 'check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' id 'check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-flex-2"}}
@@ -374,11 +374,11 @@ When a list item includes more than one block of content, it can be difficult fo
 {{!-- Example 3 --}}
 <h2 class="Preview__section-title">Flex modifiers - example 3</h2>
 {{#> data-list id="data-list-flex-modifiers-2" data-list--attribute='aria-label="Width modifier data list example 3"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
-        {{#> data-list-check checkbox--attribute=concat('name="' id 'check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' id 'check-action-check1" aria-labelledby="' id '-item1"')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-flex-5"}}
@@ -410,7 +410,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id="{{id}}-action1"}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content1" aria-label="Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -429,7 +429,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ```hbs title=Selectable-rows
 {{#> data-list id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -439,31 +439,21 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{id}}-item2">Primary content (selected)</span>
+          <span id="{{id}}-item2">Secondary content (selected)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{id}}-item3">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item4"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item4">Primary content</span>
+          <span id="{{id}}-item3">Tertiary content</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -479,71 +469,73 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ```hbs title=Selectable-expandable-rows
 {{#> data-list id="data-list-selectable-expandable-rows" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item1">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content1" aria-label="Primary content details"')}}
-      {{#> data-list-expandable-content-body}}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      {{/data-list-expandable-content-body}}
-    {{/data-list-expandable-content}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=concat('aria-labelledby="' id '-item2"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{id}}-item2">Primary content</span>
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content2" aria-label="Primary content details"')}}
-      {{#> data-list-expandable-content-body}}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      {{/data-list-expandable-content-body}}
-    {{/data-list-expandable-content}}
-  {{/data-list-item}}
-
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=concat('aria-labelledby="' id '-item3"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{id}}-item3">Primary content</span>
+          <span id="{{id}}-item1">Primary content (selected, expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content3" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content1" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item2">Secondary content</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content2" aria-label="Secondary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{id}}-item3">Tertiary content (not selected, expanded)</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content3" aria-label="Tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=concat('aria-labelledby="' id '-item4"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item4"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=concat('aria-labelledby="' id '-toggle4 ' id '-item4" id="' id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content4"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle4 ' id '-item4" id="' id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content4"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{id}}-item4">Primary content</span>
+          <span id="{{id}}-item4">Quaternary content (selected)</span>
         {{/data-list-cell}}
 
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=concat('id="' id '-content4" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' id '-content4" aria-label="Quaternary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
