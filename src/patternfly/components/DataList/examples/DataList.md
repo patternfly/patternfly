@@ -429,7 +429,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ```hbs title=Selectable-rows
 {{#> data-list id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -439,7 +439,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item2" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -449,7 +449,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -461,6 +461,10 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `.pf-c-data-list__item.pf-m-selectable` | Inserts the selectable row into the tab order of the page so that it is focusable. **Required** |
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -469,7 +473,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ```hbs title=Selectable-expandable-rows
 {{#> data-list id="data-list-selectable-expandable-rows" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item1" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle1 ' id '-item1" id="' id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content1"')}}{{/data-list-toggle}}
@@ -487,7 +491,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item2"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item2" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle2 ' id '-item2" id="' id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content2"')}}{{/data-list-toggle}}
@@ -505,7 +509,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' id '-item3" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle3 ' id '-item3" id="' id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' id '-content3"')}}{{/data-list-toggle}}
@@ -523,7 +527,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item4"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item4" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle4 ' id '-item4" id="' id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content4"')}}{{/data-list-toggle}}
