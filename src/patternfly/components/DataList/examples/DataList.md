@@ -527,7 +527,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' id '-item4" tabindex="0"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' id '-item4" tabindex="0"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' id '-toggle4 ' id '-item4" id="' id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' id '-content4"')}}{{/data-list-toggle}}
