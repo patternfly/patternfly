@@ -16,6 +16,7 @@
   --pf-c-data-list__item--m-expanded--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-data-list__item--m-selected--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-data-list__item--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-data-list__item--m-selectable--OutlineOffset: #{pf-size-prem(-4px)};
   --pf-c-data-list__item--m-selectable--hover--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-data-list__item--m-selectable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-data-list__item--m-expanded--m-selectable--before--BackgroundColor: var(--pf-global--active-color--300);
@@ -156,6 +157,8 @@
   }
 
   &.pf-m-selectable {
+    outline-offset: var(--pf-c-data-list__item--m-selectable--OutlineOffset);
+
     &:hover {
       cursor: pointer;
     }
