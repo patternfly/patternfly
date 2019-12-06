@@ -182,14 +182,18 @@ import './InlineEdit.css'
             Check 1, Check 2
           {{/inline-edit-value}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-1"')}}Check 1{{/check-label}}
-            {{/check}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-2" name="' inline-edit--id inline-edit--row 'example-check-2"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-2"')}}Check 2{{/check-label}}
-            {{/check}}
+            {{#> inline-edit-input}}
+              {{#> check}}
+                {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
+                {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-1"')}}Check 1{{/check-label}}
+              {{/check}}
+            {{/inline-edit-input}}
+            {{#> inline-edit-input}}
+              {{#> check}}
+                {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-2" name="' inline-edit--id inline-edit--row 'example-check-2"')}}{{/check-input}}
+                {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-2"')}}Check 2{{/check-label}}
+              {{/check}}
+            {{/inline-edit-input}}
           {{/inline-edit-group}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Radios"}}
@@ -197,14 +201,18 @@ import './InlineEdit.css'
             Radio 1, Radio 2
           {{/inline-edit-value}}
           {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
-            {{#> radio}}
-              {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
-              {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-1"')}}Radio 1{{/radio-label}}
-            {{/radio}}
-            {{#> radio}}
-              {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-2" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
-              {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-2"')}}Radio 2{{/radio-label}}
-            {{/radio}}
+            {{#> inline-edit-input}}
+              {{#> radio}}
+                {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
+                {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-1"')}}Radio 1{{/radio-label}}
+              {{/radio}}
+            {{/inline-edit-input}}
+            {{#> inline-edit-input}}
+              {{#> radio}}
+                {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-2" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
+                {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-2"')}}Radio 2{{/radio-label}}
+              {{/radio}}
+            {{/inline-edit-input}}
           {{/inline-edit-group}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Number"}}
@@ -258,14 +266,18 @@ import './InlineEdit.css'
             Check 1, Check 2
           {{/inline-edit-value}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-1"')}}Check 1{{/check-label}}
-            {{/check}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-2" name="' inline-edit--id inline-edit--row 'example-check-2"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-2"')}}Check 2{{/check-label}}
-            {{/check}}
+            {{#> inline-edit-input}}
+              {{#> check}}
+                {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
+                {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-1"')}}Check 1{{/check-label}}
+              {{/check}}
+            {{/inline-edit-input}}
+            {{#> inline-edit-input}}
+              {{#> check}}
+                {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-2" name="' inline-edit--id inline-edit--row 'example-check-2"')}}{{/check-input}}
+                {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'check-2"')}}Check 2{{/check-label}}
+              {{/check}}
+            {{/inline-edit-input}}
           {{/inline-edit-group}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Radios"}}
@@ -273,14 +285,18 @@ import './InlineEdit.css'
             Radio 1, Radio 2
           {{/inline-edit-value}}
           {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
-            {{#> radio}}
-              {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio-1"')}}{{/radio-input}}
-              {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-1"')}}Radio 1{{/radio-label}}
-            {{/radio}}
-            {{#> radio}}
-              {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-2" name="' inline-edit--id inline-edit--row 'example-radio-2"')}}{{/radio-input}}
-              {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-2"')}}Radio 2{{/radio-label}}
-            {{/radio}}
+            {{#> inline-edit-input}}
+              {{#> radio}}
+                {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio-1"')}}{{/radio-input}}
+                {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-1"')}}Radio 1{{/radio-label}}
+              {{/radio}}
+            {{/inline-edit-input}}
+            {{#> inline-edit-input}}
+              {{#> radio}}
+                {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-2" name="' inline-edit--id inline-edit--row 'example-radio-2"')}}{{/radio-input}}
+                {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-2"')}}Radio 2{{/radio-label}}
+              {{/radio}}
+            {{/inline-edit-input}}
           {{/inline-edit-group}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Number"}}

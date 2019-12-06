@@ -43,14 +43,18 @@
       Check 1, Check 2
     {{/inline-edit-value}}
     {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
-      {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id '-check1" name="' inline-edit--id '-example-check"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id '-check1"')}}Check 1{{/check-label}}
-      {{/check}}
-      {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id '-check2" name="' inline-edit--id '-example-check2"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id '-check2"')}}Check 2{{/check-label}}
-      {{/check}}
+      {{#> inline-edit-input}}
+        {{#> check}}
+          {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id '-check1" name="' inline-edit--id '-example-check"')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id '-check1"')}}Check 1{{/check-label}}
+        {{/check}}
+      {{/inline-edit-input}}
+      {{#> inline-edit-input}}
+        {{#> check}}
+          {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id '-check2" name="' inline-edit--id '-example-check2"')}}{{/check-input}}
+          {{#> check-label check-label--attribute=(concat 'for="' inline-edit--id '-check2"')}}Check 2{{/check-label}}
+        {{/check}}
+      {{/inline-edit-input}}
     {{/inline-edit-group}}
   </dd>
   <dt>Radios</dt>
@@ -59,14 +63,18 @@
       True
     {{/inline-edit-value}}
     {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
-      {{#> radio}}
-        {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-example-radio"')}}{{/radio-input}}
-        {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
-      {{/radio}}
-      {{#> radio}}
-        {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-example-radio"')}}{{/radio-input}}
-        {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
-      {{/radio}}
+      {{#> inline-edit-input}}
+        {{#> radio}}
+          {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-example-radio"')}}{{/radio-input}}
+          {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
+        {{/radio}}
+      {{/inline-edit-input}}
+      {{#> inline-edit-input}}
+        {{#> radio}}
+          {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-example-radio"')}}{{/radio-input}}
+          {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
+        {{/radio}}
+      {{/inline-edit-input}}
     {{/inline-edit-group}}
   </dd>
   <dt>Number</dt>
