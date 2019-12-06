@@ -169,8 +169,9 @@ function watchSASS() {
     const graphNode = graph[fullPath];
     const dependents = visit(graphNode, [fullPath]);
     const toCompile = gatsbyCSSFiles.filter(file => dependents.includes(file));
+    toCompile.push(fullPath);
 
-    console.log(toCompile);
+    console.log('Compiling', toCompile.join(' '));
     compileSASS0(src(toCompile))
   }
 
