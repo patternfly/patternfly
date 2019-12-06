@@ -65,7 +65,10 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs and determines sideNav items
-        path: `${path.resolve(__dirname)}/src/patternfly`
+        path: `${path.resolve(__dirname)}/src/patternfly`,
+        ignore: [
+          '**/*.scss'
+        ]
       }
     },
     // Source static pages
@@ -99,7 +102,5 @@ module.exports = {
         extensions: ['.md']
       }
     },
-    // Compile source SASS files
-    'gatsby-plugin-sass'
   ]
 };

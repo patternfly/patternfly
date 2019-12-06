@@ -12,6 +12,7 @@ const fs = require('fs-extra');
 const generateIcons = require('./src/icons/generateIcons.js');
 const convertForIE = require('./build/npm-scripts/ie-convert-all.js');
 const stylelint = require('stylelint');
+const sassGraph = require('sass-graph');
 
 const pficonFontName = 'pficon';
 const config = {
@@ -24,7 +25,7 @@ const config = {
 };
 
 function pfIconFont() {
-  return src(['./src/icons/PfIcons/*.svg'])
+  return src('./src/icons/PfIcons/*.svg')
     .pipe(
       iconfontCss({
         fontName: pficonFontName,
@@ -60,16 +61,22 @@ function minifyCSS() {
     .pipe(sourcemaps.init())
     .pipe(postcss([cssnano()]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('./dist'));
+    .pipe(dest('dist'));
 }
 
-function compileSASS() {
-  return src(config.sourceFiles)
+function compileSASS0(srcFiles) {
+  return srcFiles
     .pipe(
       through2.obj((chunk, _, cb2) => {
+        let cssString
         let scss = chunk.contents.toString();
-        const relativePath = chunk.history[0].replace(chunk._base, '');
-        const numDirectories = relativePath.match(/\//g).length - 1;
+        const relativePath = path.relative(
+          path.join(chunk._cwd, '/src/patternfly'),
+          chunk.history[0]
+        );
+        const numDirectories = relativePath.includes('/')
+          ? relativePath.match(/\//g).length
+          : 0;
         // This hack is to not include sass-utilities/placeholders.scss CSS more than once
         // in our production patternfly.css BUT still be able to compile individual SCSS files.
         // As soon as node-sass is updated to a libsass version that supports @use rule, we should
@@ -82,14 +89,14 @@ function compileSASS() {
           const css = sass.renderSync({
             // Pass filename for import resolution. Contents are not compiled.
             file: chunk.history[0],
+            // Contents to compile
             data: scss
           });
-          let cssString = css.css.toString();
+          cssString = css.css.toString();
           // TODO: Cleaner way to to do relative image assets in component CSS
           if (numDirectories > 0) {
             cssString = cssString.replace(/.\/assets\/images/g, `${'../'.repeat(numDirectories)}assets/images`);
           }
-          chunk.contents = Buffer.from(cssString);
 
           stylelint
             .lint({
@@ -105,28 +112,79 @@ function compileSASS() {
           console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}: ${error}`);
         }
 
-        chunk.history.push(chunk.history[0].replace(/.scss$/, '.css'));
+        // Not kosher, but prevents path problems with watchSASS
+        const outPath = path.join(
+          chunk._cwd,
+          'dist',
+          relativePath.replace(/\.scss$/, '.css')
+        );
+        fs.ensureFileSync(outPath);
+        fs.writeFileSync(outPath, cssString);
         cb2(null, chunk);
       })
     )
-    .pipe(dest('./dist'));
+}
+
+function compileSASS() {
+  return compileSASS0(src(config.sourceFiles));
 }
 
 function watchSASS() {
+  // Initial build
   module.exports.build();
-  // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
-  watch(config.sourceFiles, {}, compileSASS);
+
+  const fileContents = fs.readFileSync('./gatsby-browser.js', 'utf8');
+  const regex = /import ['"](.*\/dist\/.*)['"];/g;
+  const gatsbyCSSFiles = [];
+  const graph = sassGraph.parseDir('./src/patternfly').index;
+
+  let result;
+  while(result = regex.exec(fileContents)) {
+    // Map CSS require to its SASS source file
+    const srcFile = result[1]
+      .replace('./dist/', path.join(__dirname, '/src/patternfly/'))
+      .replace(/.css$/, '.scss');
+    gatsbyCSSFiles.push(srcFile);
+  }
+
+  const watcher = watch(config.sourceFiles, { delay: 0 });
+
+  function visit(graphNode, acc) {
+    if (!graphNode) {
+      return acc;
+    }
+    graphNode.importedBy
+      .forEach(file => {
+        acc.push(file);
+        visit(graph[file], acc);
+      });
+    
+    return acc;
+  }
+
+  function compileGatsbySASS(file) {
+    // Now find files this file is imported by
+    const fullPath = path.join(__dirname, file);
+    const graphNode = graph[fullPath];
+    const dependents = visit(graphNode, [fullPath]);
+    const toCompile = gatsbyCSSFiles.filter(file => dependents.includes(file));
+    compileSASS0(src(toCompile))
+    console.log('Compiled', toCompile.map(file => path.relative(__dirname, file)).join(' '));
+  }
+
+  watcher.on('change', compileGatsbySASS);
+  watcher.on('add', compileGatsbySASS);
 }
 
 function copySource() {
   return Promise.all([
     // Copy source files
-    src(config.sourceFiles).pipe(dest('./dist')),
+    src(config.sourceFiles).pipe(dest('dist')),
     // Copy excluded source files
     src(['./src/patternfly/_*.scss', './src/patternfly/**/_all.scss', './src/patternfly/patternfly-imports.scss']).pipe(
-      dest('./dist')
+      dest('dist')
     ),
-    src('./src/patternfly/{components,layouts,patterns,utilities}/**/*.scss').pipe(dest('./dist')),
+    src('./src/patternfly/{components,layouts,patterns,utilities}/**/*.scss').pipe(dest('dist')),
     src('./src/patternfly/sass-utilities/*').pipe(dest('./dist/sass-utilities')),
     // Assets
     src('./static/assets/images/**/*').pipe(dest('./dist/assets/images/')),
@@ -135,8 +193,8 @@ function copySource() {
     src('./src/icons/definitions/*').pipe(dest('./dist/icons/')),
     src('./src/icons/PfIcons/*').pipe(dest('./dist/icons/PfIcons/')),
     // For NPM
-    src('./README.md').pipe(dest('./dist')),
-    src('./package.json').pipe(dest('./dist'))
+    src('./README.md').pipe(dest('dist')),
+    src('./package.json').pipe(dest('dist'))
   ]);
 }
 
