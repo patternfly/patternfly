@@ -112,7 +112,7 @@ function compileSASS0(srcFiles) {
           console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}: ${error}`);
         }
 
-        // Not kosher, but prevents path problems with watch/compile
+        // Not kosher, but prevents path problems with watchSASS
         const outPath = path.join(
           chunk._cwd,
           'dist',
@@ -131,7 +131,7 @@ function compileSASS() {
 
 function watchSASS() {
   // Initial build
-  // module.exports.build();
+  module.exports.build();
 
   const fileContents = fs.readFileSync('./gatsby-browser.js', 'utf8');
   const regex = /import ['"](.*\/dist\/.*)['"];/g;
@@ -144,10 +144,9 @@ function watchSASS() {
     const srcFile = result[1]
       .replace('./dist/', path.join(__dirname, '/src/patternfly/'))
       .replace(/.css$/, '.scss');
-    gatsbyCSSFiles.push(srcFile.replace(__dirname, '.'));
+    gatsbyCSSFiles.push(srcFile);
   }
 
-  // TODO: track files and only rebuild what's changed. Requires tracking `css.stats.includedFiles`.
   const watcher = watch(config.sourceFiles, { delay: 0 });
 
   function visit(graphNode, acc) {
@@ -165,14 +164,12 @@ function watchSASS() {
 
   function compileGatsbySASS(file) {
     // Now find files this file is imported by
-    const fullPath = './' + file;
+    const fullPath = path.join(__dirname, file);
     const graphNode = graph[fullPath];
     const dependents = visit(graphNode, [fullPath]);
     const toCompile = gatsbyCSSFiles.filter(file => dependents.includes(file));
-    toCompile.push(fullPath);
-
-    console.log('Compiling', toCompile.join(' '));
     compileSASS0(src(toCompile))
+    console.log('Compiled', toCompile.map(file => path.relative(__dirname, file)).join(' '));
   }
 
   watcher.on('change', compileGatsbySASS);
