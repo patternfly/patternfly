@@ -122,8 +122,6 @@
 
   // font
   --pf-c-nav__horizontal-list-link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__horizontal-list-link--active--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-nav__horizontal-list-link--focus--FontWeight: var(--pf-global--FontWeight--bold);
 
   // color
   --pf-c-nav__horizontal-list-link--Color: var(--pf-global--Color--light-300);
@@ -144,8 +142,6 @@
 
   // font
   --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__tertiary-list-link--active--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-nav__tertiary-list-link--focus--FontWeight: var(--pf-global--FontWeight--bold);
 
   // color
   --pf-c-nav__tertiary-list-link--Color: var(--pf-global--Color--dark-100);
@@ -209,12 +205,10 @@
 
   // Modifier - current item
   --pf-c-nav__horizontal-list-link--m-current--Color: var(--pf-global--active-color--400);
-  --pf-c-nav__horizontal-list-link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-nav__horizontal-list-link--m-current--after--BackgroundColor: var(--pf-global--active-color--400);
 
   // Modifier - current item
   --pf-c-nav__tertiary-list-link--m-current--Color: var(--pf-global--link--Color);
-  --pf-c-nav__tertiary-list-link--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-nav__tertiary-list-link--m-current--after--BackgroundColor: var(--pf-global--link--Color);
 
   // Scroll button
@@ -570,7 +564,6 @@
 
     &.pf-m-focus,
     &:focus {
-      --pf-c-nav__horizontal-list-link--FontWeight: var(--pf-c-nav__horizontal-list-link--focus--FontWeight);
       --pf-c-nav__horizontal-list-link--Color: var(--pf-c-nav__horizontal-list-link--focus--Color);
 
       &::after {
@@ -580,7 +573,6 @@
 
     &.pf-m-active,
     &:active {
-      --pf-c-nav__horizontal-list-link--FontWeight: var(--pf-c-nav__horizontal-list-link--active--FontWeight);
       --pf-c-nav__horizontal-list-link--Color: var(--pf-c-nav__horizontal-list-link--active--Color);
 
       &::after {
@@ -589,7 +581,6 @@
     }
 
     &.pf-m-current {
-      --pf-c-nav__horizontal-list-link--FontWeight: var(--pf-c-nav__horizontal-list-link--m-current--FontWeight);
       --pf-c-nav__horizontal-list-link--Color: var(--pf-c-nav__horizontal-list-link--m-current--Color);
 
       &::after {
@@ -636,7 +627,6 @@
 
     &.pf-m-focus,
     &:focus {
-      --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-c-nav__tertiary-list-link--focus--FontWeight);
       --pf-c-nav__tertiary-list-link--Color: var(--pf-c-nav__tertiary-list-link--focus--Color);
 
       &::after {
@@ -646,7 +636,6 @@
 
     &.pf-m-active,
     &:active {
-      --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-c-nav__tertiary-list-link--active--FontWeight);
       --pf-c-nav__tertiary-list-link--Color: var(--pf-c-nav__tertiary-list-link--active--Color);
 
       &::after {
@@ -655,7 +644,6 @@
     }
 
     &.pf-m-current {
-      --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-c-nav__tertiary-list-link--m-current--FontWeight);
       --pf-c-nav__tertiary-list-link--Color: var(--pf-c-nav__tertiary-list-link--m-current--Color);
 
       &::after {
