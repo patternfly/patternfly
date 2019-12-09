@@ -191,9 +191,28 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+```hbs title=Selectable
+{{#> card card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ## Documentation
 ### Overiew
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `.pf-c-card.pf-m-selectable` | Inserts the selectable card into the tab order of the page so that it is focusable. **Required** |
 
 ### Usage
 | Class | Applied | Outcome |
@@ -207,3 +226,5 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
+| `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
+| `.pf-m-selected` | `.pf-c-card` | Modifies a selectable card for the selected state. |
