@@ -192,6 +192,20 @@ cssPrefix: pf-c-card
 ```
 
 ```hbs title=Selectable
+{{#> card card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+```hbs title=Selected
 {{#> card card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
   {{#> card-header}}
     Header
