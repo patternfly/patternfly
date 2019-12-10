@@ -294,6 +294,10 @@
   & + & {
     padding-top: var(--pf-c-options-menu__group--group--PaddingTop);
   }
+
+  .pf-c-options-menu__separator:last-child {
+    --pf-c-options-menu__separator--MarginBottom: 0;
+  }
 }
 
 .pf-c-options-menu__group-title {
