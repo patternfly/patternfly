@@ -19,6 +19,9 @@
   --pf-c-data-list__item--m-selectable--OutlineOffset: #{pf-size-prem(-4px)};
   --pf-c-data-list__item--m-selectable--hover--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-data-list__item--m-selectable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-data-list__item--m-selectable--focus--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-data-list__item--m-selectable--active--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-data-list__item--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-data-list__item--m-expanded--m-selectable--before--BackgroundColor: var(--pf-global--active-color--300);
   --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--BorderColor--100); // at breaking change switch var to BorderBottom
   --pf-c-data-list__item-item--BorderTopWidth: var(--pf-global--BorderWidth--sm); // at breaking change switch var to BorderBottom
@@ -157,17 +160,25 @@
   }
 
   &.pf-m-selectable {
+    cursor: pointer;
     outline-offset: var(--pf-c-data-list__item--m-selectable--OutlineOffset);
-
-    &:hover {
-      cursor: pointer;
-    }
 
     &:hover,
     &:focus {
       position: relative;
       z-index: var(--pf-c-data-list__item--m-selectable--hover--ZIndex);
+    }
+
+    &:hover {
       box-shadow: var(--pf-c-data-list__item--m-selectable--hover--BoxShadow);
+    }
+
+    &:focus {
+      box-shadow: var(--pf-c-data-list__item--m-selectable--focus--BoxShadow);
+    }
+
+    &:active {
+      box-shadow: var(--pf-c-data-list__item--m-selectable--active--BoxShadow);
     }
   }
 
