@@ -10,7 +10,7 @@ cssPrefix: pf-c-empty-state
 {{#> empty-state empty-state--modifier="pf-m-sm"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-    Empty State
+    Empty state
   {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
