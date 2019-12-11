@@ -1,14 +1,14 @@
 ---
 title: Release notes
 section: overview
-hideTOC: true
+releaseNoteTOC: true
 ---
 
-# 2019.10 release notes (2019-11-25)
+## 2019.10 release notes (2019-11-25)
 Packages released:
 - @patternfly/patternfly@v2.43.1
 
-## Components
+### Components
 - **App launcher:**  Added support for search input, favorites ([#2428](https://github.com/patternfly/patternfly-next/pull/2428))
 - **Data toolbar:**
   - Moved and wrapped chips ([#2397](https://github.com/patternfly/patternfly-next/pull/2397))
@@ -22,7 +22,7 @@ Packages released:
 - **Page:** Fixed hamburger alignment on mobile ([#2402](https://github.com/patternfly/patternfly-next/pull/2402))
 - **Select:** Removed use of form element in toggle and menu ([#2430](https://github.com/patternfly/patternfly-next/pull/2430))
 
-## Other
+### Other
 - **Build:**
   - Bumped gatsby-theme-patternfly-org ([#2377](https://github.com/patternfly/patternfly-next/pull/2377))
   - Moved build back to separate component build for correct dist ([#2421](https://github.com/patternfly/patternfly-next/pull/2421))
@@ -31,11 +31,11 @@ Packages released:
   - Updated to always auto-import patternfly-utilities.sass ([#2433](https://github.com/patternfly/patternfly-next/pull/2433))
 - **Workspace:** Updated component titles to be sentence case ([#2401](https://github.com/patternfly/patternfly-next/pull/2401))
 
-# 2019.09 release notes (2019-11-01)
+## 2019.09 release notes (2019-11-01)
 Packages released:
 - @patternfly/patternfly@v2.40.6
 
-## Components
+### Components
 - **Charts:**
   - Added strokeDasharray variable for ChartThreshold ([#2314](https://github.com/patternfly/patternfly-next/pull/2314))
   - Added size variables for scatter chart ([#2340](https://github.com/patternfly/patternfly-next/pull/2340))
@@ -61,7 +61,7 @@ Packages released:
 - **Accordion:** Added no-box-shadow variation, refactored expanded border ([#2385](https://github.com/patternfly/patternfly-next/pull/2385))
 - **Dropdown, options menu, app launcher:** Fixed menu group and separator spacing ([#2384](https://github.com/patternfly/patternfly-next/pull/2384))
 
-## Other
+### Other
 - **Font:** Added monospace stack for opt in redhat font ([#2382](https://github.com/patternfly/patternfly-next/pull/2382))
 - **Build:**
   - Hot-reload styles, fixed trailing slashes ([#2349](https://github.com/patternfly/patternfly-next/pull/2349))
@@ -75,11 +75,11 @@ Packages released:
   - Added HTML formatting ([#2363](https://github.com/patternfly/patternfly-next/pull/2363))
   - Bump gatsby-theme-patternfly-org ([#2372](https://github.com/patternfly/patternfly-next/pull/2372))
 
-# 2019.08 release notes (2019-10-01)
+## 2019.08 release notes (2019-10-01)
 Packages released:
 - @patternfly/patternfly@2.33.5
 
-## Components
+### Components
 - **Button:** Add control modifier ([#2005](https://github.com/patternfly/patternfly-next/pull/2005))
 - **Charts:**
   - Adjust padding for pie and donut charts ([#2247](https://github.com/patternfly/patternfly-next/pull/2247))
@@ -107,14 +107,14 @@ Packages released:
   - Re-enabled wizard modal demos ([#2259](https://github.com/patternfly/patternfly-next/pull/2259))
   - Updated in page wizard demos to use dark sidebar/nav ([#2296](https://github.com/patternfly/patternfly-next/pull/2296))
 
-## Other
+### Other
 - **Shield:** Added missing components, missing var to brand docs js ([#2263](https://github.com/patternfly/patternfly-next/pull/2263))
 
-# 2019.07 release notes (2019-09-10)
+## 2019.07 release notes (2019-09-10)
 Packages released:
 - @patternfly/patternfly@2.31.6
 
-## Components
+### Components
 - **Charts:**
   - Refactor bullet chart vars. [#2159](https://github.com/patternfly/patternfly-next/pull/2159)
   - Adjust chart axis label padding. [#2181](https://github.com/patternfly/patternfly-next/pull/2181)
@@ -137,7 +137,7 @@ Packages released:
 - **Form:** Update horizontal form label alignment. [#2200](https://github.com/patternfly/patternfly-next/pull/2200)
 
 
-## Other
+### Other
 - **A11y:** Fix accessibility issues in basic forms demo. [#2086](https://github.com/patternfly/patternfly-next/pull/2086)
 - **Dependencies:**
   - Update development dependencies. ([#2124](https://github.com/patternfly/patternfly-next/pull/2124))
@@ -147,11 +147,11 @@ Packages released:
   - Remove GitHub Pages deploy [#2166](https://github.com/patternfly/patternfly-next/pull/2166)
 - **Workspace:** Fix codepen button title. [#2151](https://github.com/patternfly/patternfly-next/pull/2151)
 
-# 2019.06 release notes (2019-08-13)
+## 2019.06 release notes (2019-08-13)
 Packages released:
 - @patternfly/patternfly@2.26.1
 
-## Components
+### Components
 - **Alert:** Added default alert ([#2107](https://github.com/patternfly/patternfly-next/pull/2107))
 - **Data list:** Gave Data List Demo a header ([#2083](https://github.com/patternfly/patternfly-next/pull/2083))
 - **Divider:** Updated example for the li example of the divider, set the type from div to li ([#2089](https://github.com/patternfly/patternfly-next/issues/2089))
@@ -163,7 +163,7 @@ Packages released:
 - **Radio:** Gave unique names to fix a11y ([#2088](https://github.com/patternfly/patternfly-next/pull/2088))
 - **Select:** Added a disable modifier ([#2028](https://github.com/patternfly/patternfly-next/pull/2028))
 
-## Chore
+### Chore
 - **A11y:** Ensure SkipToContent sends focus to page content ([#2058](https://github.com/patternfly/patternfly-next/pull/2125))
 - **Build:** Moved to circle ci
   - Replaces .travis.yml with .circleci/config.yml and split up test steps to allow testing in parallel and nicer Github status checks
@@ -175,10 +175,10 @@ Packages released:
 - **Notes:** Format release notes using uls
 - **Page:** Updated demo main section copy ([#2092](https://github.com/patternfly/patternfly-next/pull/2092))
 
-# 2019.05 release notes (2019-07-24)
+## 2019.05 release notes (2019-07-24)
 Packages released:
 - @patternfly/patternfly@2.23.0
-## Components
+### Components
 - **About modal:** Updated break-word on content area instead of break-all ([#2035](https://github.com/patternfly/patternfly-next/pull/2035))
 - **App launcher:**
   - Added button example to menu item ([#2006](https://github.com/patternfly/patternfly-next/pull/2006))
@@ -209,14 +209,14 @@ Packages released:
   - Fixed data-label attr in table demos ([#2060](https://github.com/patternfly/patternfly-next/pull/2060))
   - Added example of pf-m-wrap modifier for use in thead cells ([#2065](https://github.com/patternfly/patternfly-next/pull/2065))
 - **Tooltip:** Broke words in a place to fit in tooltip ([#2033](https://github.com/patternfly/patternfly-next/pull/2033))
-## Other
+### Other
 - **Red Hat font:** Added opt-in option to use Red Hat font ([#1813](https://github.com/patternfly/patternfly-next/pull/1813))
 - **Experimental features:** Added experimental feature support ([#2031](https://github.com/patternfly/patternfly-next/pull/2031))
 
-# 2019.04 release notes (2019-07-02)
+## 2019.04 release notes (2019-07-02)
 Packages released:
 - @patternfly/patternfly@2.17.0
-## Components
+### Components
 - **About modal box:** Removed the title classes from the strapline paragraph. Changed strapline `font-size` to 14px. ([#1951](https://github.com/patternfly/patternfly-next/pull/1951))
 - **About modal, app launcher, backdrop, context selector, datalist, dropdown, form control, input group, modal, nav, options menu, select, table, tabs, wizard:**
   - Re-do z-index system so components overlap one another properly ([#1901](https://github.com/patternfly/patternfly-next/pull/1901))
@@ -257,14 +257,14 @@ Packages released:
   - Added an extra breakpoint. In the data table sortable demo the table needed a larger breakpoint, so that the rows don't overflow outside of their container ([#1880](https://github.com/patternfly/patternfly-next/pull/1880))
   - Added word-wrap to td's in table, now wraps when on mobile size. ([#1928](https://github.com/patternfly/patternfly-next/pull/1928))
   - Made column headers bold ([#1949](https://github.com/patternfly/patternfly-next/pull/1949))
-## Other
+### Other
 - Added ie11 to build ([#1876](https://github.com/patternfly/patternfly-next/pull/1876))
 - Updated the window size used for the browser that our a11y audit is run against ([#1911](https://github.com/patternfly/patternfly-next/pull/1911))
 
-# 2019.03 RC2.1 release notes (2019-06-11)
+## 2019.03 RC2.1 release notes (2019-06-11)
 Packages released:
 - @patternfly/patternfly@2.12.5
-## Components
+### Components
 - **About Modal Box:**
   - Addressed overflow of about modal [(#1902)](https://github.com/patternfly/patternfly-next/pull/1902)
 - **Accordion:**
@@ -284,10 +284,10 @@ Packages released:
 - **Table:**
   - Media query now matches border. Fixed the table so that when the table breaks to grid form, the border width changes to 8px, and the border color matches the background color. ([#1881](https://github.com/patternfly/patternfly-next/pull/1881))
 
-# 2019.02 release notes (2019-05-28)
+## 2019.02 release notes (2019-05-28)
 Packages released:
 - @patternfly/patternfly@2.8.2
-## Components
+### Components
 - **Alert:**
   - Adjusted warning alert webfont icon font-size ([#1805](https://github.com/patternfly/patternfly-next/pull/1805))
   - Added in-line modifier ([#1775](https://github.com/patternfly/patternfly-next/pull/1775))
@@ -312,10 +312,10 @@ Packages released:
 - **Wizard:**
   - Fixed wizard closing tag ([#1803](https://github.com/patternfly/patternfly-next/pull/1803))
   - Set pf-c-wizard__main to grow and fill available height ([#1781](https://github.com/patternfly/patternfly-next/pull/1781))
-## Layouts
+### Layouts
 - **Gutter:**
   - Updated mobile gutter spacing in layouts that have gutters ([#1829](https://github.com/patternfly/patternfly-next/pull/1829))
-## Other
+### Other
 - **Charts:**
   - Added CSS Variables for Charts ([#1846](https://github.com/patternfly/patternfly-next/pull/1846))
 - **Docs (global):**
