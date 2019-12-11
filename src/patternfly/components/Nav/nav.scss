@@ -492,8 +492,10 @@
       background-color: var(--pf-c-nav__simple-list-link--hover--BackgroundColor);
     }
 
-    &.pf-m-focus,
-    &:focus {
+    // fix Chrome bug where nav items retain focus after navigation
+    &.pf-m-focus:hover,
+    &:focus:hover,
+    &.pf-m-current:focus {
       --pf-c-nav__simple-list-link--FontWeight: var(--pf-c-nav__simple-list-link--focus--FontWeight);
       --pf-c-nav__simple-list-link--Color: var(--pf-c-nav__simple-list-link--focus--Color);
 
