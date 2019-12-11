@@ -5,8 +5,9 @@ cssPrefix: pf-c-empty-state
 ---
 
 ## Examples
-```hbs title=Basic
-{{#> empty-state}}
+
+```hbs title=Small
+{{#> empty-state empty-state--modifier="pf-m-sm"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
     Empty state
@@ -40,11 +41,11 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Small
-{{#> empty-state empty-state--modifier="pf-m-sm"}}
+```hbs title=Large
+{{#> empty-state empty-state--modifier="pf-m-lg"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-    Empty State
+    Empty state
   {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
@@ -75,8 +76,8 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Large
-{{#> empty-state empty-state--modifier="pf-m-lg"}}
+```hbs title=Basic
+{{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
     Empty state

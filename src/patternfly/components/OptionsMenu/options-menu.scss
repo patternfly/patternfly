@@ -288,6 +288,10 @@
   margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
   background-color: var(--pf-c-options-menu__separator--BackgroundColor);
   border: 0; // for use when separator is an <hr>
+
+  &:last-child {
+    --pf-c-options-menu__separator--MarginBottom: 0;
+  }
 }
 
 .pf-c-options-menu__group {

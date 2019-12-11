@@ -77,7 +77,9 @@ jobs:
         - *js_deps_cache_key
     - run:
         name: a11y Tests
-        command: npm run test:ci
+        command: npm run test:a11y:ci || true
+    - store_artifacts:
+        path: coverage/
   upload_docs:
     docker:
     - image: circleci/node:10
