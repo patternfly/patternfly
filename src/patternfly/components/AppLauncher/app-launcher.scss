@@ -32,6 +32,7 @@
   --pf-c-app-launcher__menu-search--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-app-launcher__menu-search--BottomBorderColor: var(--pf-global--BorderColor--100);
   --pf-c-app-launcher__menu-search--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-app-launcher__menu-search--MarginBottom: var(--pf-global--spacer--sm);
 
   // Menu item
   --pf-c-app-launcher__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -155,6 +156,7 @@
 
 .pf-c-app-launcher__menu-search {
   padding: var(--pf-c-app-launcher__menu-search--PaddingTop) var(--pf-c-app-launcher__menu-search--PaddingRight) var(--pf-c-app-launcher__menu-search--PaddingBottom) var(--pf-c-app-launcher__menu-search--PaddingLeft);
+  margin-bottom: var(--pf-c-app-launcher__menu-search--MarginBottom);
   border-bottom: var(--pf-c-app-launcher__menu-search--BottomBorderWidth) solid var(--pf-c-app-launcher__menu-search--BottomBorderColor);
 }
 
