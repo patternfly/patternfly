@@ -18,5 +18,9 @@ module.exports = [
   {
     name: 'OverflowMenu',
     path: 'components/OverflowMenu/'
+  },
+  {
+    name: 'NotificationDrawer',
+    path: 'components/NotificationDrawer/'
   }
 ];

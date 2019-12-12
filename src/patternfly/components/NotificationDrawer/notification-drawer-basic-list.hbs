@@ -1,0 +1,70 @@
+{{#> notification-drawer-list}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsInfo="true"}}
+    {{#> notification-drawer-list-item-header}}
+      {{> notification-drawer-list-item-header-icon}}
+      {{#> notification-drawer-list-item-header-title}}
+        Unread info notification title
+      {{/notification-drawer-list-item-header-title}}
+    {{/notification-drawer-list-item-header}}
+    {{#> notification-drawer-list-item-action}}
+      {{#> dropdown id=(concat notification-drawer--id "-action1") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{/notification-drawer-list-item-action}}
+    {{#> notification-drawer-list-item-description}}
+      This is an info notification description.
+    {{/notification-drawer-list-item-description}}
+    {{#> notification-drawer-list-item-timestamp}}
+      5 minutes ago
+    {{/notification-drawer-list-item-timestamp}}
+  {{/notification-drawer-list-item}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsDanger="true"}}
+    {{#> notification-drawer-list-item-header}}
+      {{> notification-drawer-list-item-header-icon}}
+      {{#> notification-drawer-list-item-header-title}}
+        Unread danger notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
+      {{/notification-drawer-list-item-header-title}}
+    {{/notification-drawer-list-item-header}}
+    {{#> notification-drawer-list-item-action}}
+      {{#> dropdown id=(concat notification-drawer--id "-action2") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{/notification-drawer-list-item-action}}
+    {{#> notification-drawer-list-item-description}}
+      This is a danger notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
+    {{/notification-drawer-list-item-description}}
+    {{#> notification-drawer-list-item-timestamp}}
+      10 minutes ago
+    {{/notification-drawer-list-item-timestamp}}
+  {{/notification-drawer-list-item}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsWarning="true" notification-drawer-list-item--IsRead="true"}}
+    {{#> notification-drawer-list-item-header}}
+      {{> notification-drawer-list-item-header-icon}}
+      {{#> notification-drawer-list-item-header-title}}
+        Unread warning notification title
+      {{/notification-drawer-list-item-header-title}}
+    {{/notification-drawer-list-item-header}}
+    {{#> notification-drawer-list-item-action}}
+      {{#> dropdown id=(concat notification-drawer--id "-action3") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{/notification-drawer-list-item-action}}
+    {{#> notification-drawer-list-item-description}}
+      This is a warning notification description.
+    {{/notification-drawer-list-item-description}}
+    {{#> notification-drawer-list-item-timestamp}}
+      20 minutes ago
+    {{/notification-drawer-list-item-timestamp}}
+  {{/notification-drawer-list-item}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsSuccess="true" notification-drawer-list-item--IsRead="true"}}
+    {{#> notification-drawer-list-item-header}}
+      {{> notification-drawer-list-item-header-icon}}
+      {{#> notification-drawer-list-item-header-title}}
+        Unread success notification title
+      {{/notification-drawer-list-item-header-title}}
+    {{/notification-drawer-list-item-header}}
+    {{#> notification-drawer-list-item-action}}
+      {{#> dropdown id=(concat notification-drawer--id "-action1") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{/notification-drawer-list-item-action}}
+    {{#> notification-drawer-list-item-description}}
+      This is a success notification description.
+    {{/notification-drawer-list-item-description}}
+    {{#> notification-drawer-list-item-timestamp}}
+      30 minutes ago
+    {{/notification-drawer-list-item-timestamp}}
+  {{/notification-drawer-list-item}}
+{{/notification-drawer-list}}
