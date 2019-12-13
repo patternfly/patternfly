@@ -45,6 +45,8 @@
   --pf-c-notification-drawer__list-item--m-read--before--BackgroundColor: transparent;
   --pf-c-notification-drawer__list-item--list-item--m-read--before--Top: 0;
   --pf-c-notification-drawer__list-item--list-item--m-read--BoxShadow: inset var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-notification-drawer__list-item--m-hoverable--hover--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-notification-drawer__list-item--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--md-top), var(--pf-global--BoxShadow--md-bottom);
 
   // List item header
   --pf-c-notification-drawer__list-item-header--MarginBottom: var(--pf-global--spacer--xs);
@@ -191,8 +193,8 @@
     cursor: pointer;
 
     &:hover {
-      z-index: 100;
-      box-shadow: var(--pf-global--BoxShadow--md-top), var(--pf-global--BoxShadow--md-bottom);
+      z-index: var(--pf-c-notification-drawer__list-item--m-hoverable--hover--ZIndex);
+      box-shadow: var(--pf-c-notification-drawer__list-item--m-hoverable--hover--BoxShadow);
     }
   }
 }
