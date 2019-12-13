@@ -38,62 +38,64 @@ cssPrefix: pf-c-notification-drawer
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
   {{#> notification-drawer-body}}
-    {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group1')}}
-      <h1>
-        {{#> notification-drawer-group-toggle}}
-          {{#> notification-drawer-group-toggle-title}}
-            First notification group
-          {{/notification-drawer-group-toggle-title}}
-          {{#> notification-drawer-group-toggle-count}}
-            {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
-          {{/notification-drawer-group-toggle-count}}
-          {{> notification-drawer-group-toggle-icon}}
-        {{/notification-drawer-group-toggle}}
-      </h1>
-      {{> notification-drawer-basic-list}}
-    {{/notification-drawer-group}}
-    {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group2') notification-drawer-group--IsExpanded="true"}}
-      <h1>
-        {{#> notification-drawer-group-toggle}}
-          {{#> notification-drawer-group-toggle-title}}
-            Second notification group
-          {{/notification-drawer-group-toggle-title}}
-          {{#> notification-drawer-group-toggle-count}}
-            {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
-          {{/notification-drawer-group-toggle-count}}
-          {{> notification-drawer-group-toggle-icon}}
-        {{/notification-drawer-group-toggle}}
-      </h1>
-      {{> notification-drawer-basic-list}}
-    {{/notification-drawer-group}}
-    {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group3')}}
-      <h1>
-        {{#> notification-drawer-group-toggle}}
-          {{#> notification-drawer-group-toggle-title}}
-            Third notification group
-          {{/notification-drawer-group-toggle-title}}
-          {{#> notification-drawer-group-toggle-count}}
-            {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
-          {{/notification-drawer-group-toggle-count}}
-          {{> notification-drawer-group-toggle-icon}}
-        {{/notification-drawer-group-toggle}}
-      </h1>
-      {{> notification-drawer-basic-list}}
-    {{/notification-drawer-group}}
-    {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group4')}}
-      <h1>
-        {{#> notification-drawer-group-toggle}}
-          {{#> notification-drawer-group-toggle-title}}
-            Fourth notification group
-          {{/notification-drawer-group-toggle-title}}
-          {{#> notification-drawer-group-toggle-count}}
-            {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
-          {{/notification-drawer-group-toggle-count}}
-          {{> notification-drawer-group-toggle-icon}}
-        {{/notification-drawer-group-toggle}}
-      </h1>
-      {{> notification-drawer-basic-list}}
-    {{/notification-drawer-group}}
+    {{#> notification-drawer-group-list}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group1')}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              First notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group2') notification-drawer-group--IsExpanded="true"}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              Second notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group3')}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              Third notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group4')}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              Fourth notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+    {{/notification-drawer-group-list}}
   {{/notification-drawer-body}}
 {{/notification-drawer}}
 ```
@@ -110,25 +112,26 @@ cssPrefix: pf-c-notification-drawer
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-notification-drawer` | `<div>` | Initiates the notification drawer. |
-| `.pf-c-notification-drawer__header` | `<div>` | Initiates the notification drawer header. |
-| `.pf-c-notification-drawer__header-title` | `<h1>` | Initiates the notification drawer header title. |
+| `.pf-c-notification-drawer` | `<div>` | Initiates the notification drawer. **Required** |
+| `.pf-c-notification-drawer__header` | `<div>` | Initiates the notification drawer header. **Required** |
+| `.pf-c-notification-drawer__header-title` | `<h1>` | Initiates the notification drawer header title. **Required** |
 | `.pf-c-notification-drawer__header-status` | `<span>` | Initiates the notification drawer header status. |
 | `.pf-c-notification-drawer__header-action` | `<div>` | Initiates the notification drawer header action. |
-| `.pf-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. |
-| `.pf-c-notification-drawer__list` | `<ul>` | Initiates a notification list. |
-| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. |
-| `.pf-c-notification-drawer__list-item-header` | `<div>` | Initiates a notification list item header. |
-| `.pf-c-notification-drawer__list-item-header-icon` | `<span>` | Initiates a notification list item header icon. |
-| `.pf-c-notification-drawer__list-item-header-title` | `<h2>` | Initiates a notification list item header title. |
+| `.pf-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. **Required** |
+| `.pf-c-notification-drawer__list` | `<ul>` | Initiates a notification list. **Required** |
+| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. **Always use with a state modifier - one of `.pf-m-info`, `.pf-m-warning`, `.pf-m-danger`, `.pf-m-success`.** **Required** |
+| `.pf-c-notification-drawer__list-item-header` | `<div>` | Initiates a notification list item header. **Required** |
+| `.pf-c-notification-drawer__list-item-header-icon` | `<span>` | Initiates a notification list item header icon. **Required** |
+| `.pf-c-notification-drawer__list-item-header-title` | `<h2>` | Initiates a notification list item header title. **Required** |
 | `.pf-c-notification-drawer__list-item-action` | `<div>` | Initiates a notification list item action. |
-| `.pf-c-notification-drawer__list-item-description` | `<div>` | Initiates a notification list item description. |
-| `.pf-c-notification-drawer__list-item-timestamp` | `<div>` | Initiates a notification list item timestamp. |
-| `.pf-c-notification-drawer__group` | `<section>` | Initiates a notification group. |
-| `.pf-c-notification-drawer__group-toggle` | `<button>` | Initiates a notification group toggle. |
-| `.pf-c-notification-drawer__group-title` | `<div>` | Initiates a notification group toggle title. |
+| `.pf-c-notification-drawer__list-item-description` | `<div>` | Initiates a notification list item description. **Required** |
+| `.pf-c-notification-drawer__list-item-timestamp` | `<div>` | Initiates a notification list item timestamp. **Required** |
+| `.pf-c-notification-drawer__group-list` | `<div>` | Initiates a notification group list. **Required when notifications are grouped** |
+| `.pf-c-notification-drawer__group` | `<section>` | Initiates a notification group. **Required** |
+| `.pf-c-notification-drawer__group-toggle` | `<button>` | Initiates a notification group toggle. **Required** |
+| `.pf-c-notification-drawer__group-title` | `<div>` | Initiates a notification group toggle title. **Required** |
 | `.pf-c-notification-drawer__group-count` | `<div>` | Initiates a notification group toggle count. |
-| `.pf-c-notification-drawer__group-icon` | `<span>` | Initiates a notification group toggle icon. |
+| `.pf-c-notification-drawer__group-icon` | `<span>` | Initiates a notification group toggle icon. **Required** |
 | `.pf-m-info` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the info state. |
 | `.pf-m-warning` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the warning state. |
 | `.pf-m-danger` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |
