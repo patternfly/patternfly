@@ -104,7 +104,7 @@ cssPrefix: pf-c-notification-drawer
 | `aria-expanded="false"` | `.pf-c-notification-drawer__group-toggle` | Indicates that the group notification list is hidden. |
 | `aria-expanded="true"` | `.pf-c-notification-drawer__group-toggle` | Indicates that the group notification list is visible. |
 | `hidden` | `.pf-c-notification-drawer__list` | Indicates that the group notification list is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
-| `tabindex="0"` | `.pf-c-notification-drawer__list-item.pf-m-clickable` | Inserts the clickable list item into the tab order of the page so that it is focusable. |
+| `tabindex="0"` | `.pf-c-notification-drawer__list-item.pf-m-hoverable` | Inserts the hoverable list item into the tab order of the page so that it is focusable. |
 | `aria-hidden="true"` | `.pf-c-notification-drawer__group-toggle-icon > *`, `.pf-c-notification-drawer__list-item-header-icon > *` | Hides icon for assistive technologies. |
 
 ### Usage
@@ -134,5 +134,5 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-m-danger` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |
 | `.pf-m-success` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the success state. |
 | `.pf-m-read` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the read state. |
-| `.pf-m-clickable` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item to indicate that it is clickable. |
+| `.pf-m-hoverable` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item hover states to inidicate it is clickable. |
 | `.pf-m-expanded` | `.pf-c-notification-drawer__group` | Modifies a notification group for the expanded state. |
