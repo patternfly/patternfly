@@ -201,6 +201,7 @@
 
 .pf-c-notification-drawer__list-item-header {
   display: flex;
+  align-items: baseline;
   grid-row: 1 / 2;
   margin-bottom: var(--pf-c-notification-drawer__list-item-header--MarginBottom);
 }
