@@ -131,7 +131,6 @@
   grid-template-columns: 1fr max-content;
   grid-template-rows: repeat(3, auto);
   padding: var(--pf-c-notification-drawer__list-item--PaddingTop) var(--pf-c-notification-drawer__list-item--PaddingRight) var(--pf-c-notification-drawer__list-item--PaddingBottom) var(--pf-c-notification-drawer__list-item--PaddingLeft);
-  cursor: pointer;
   background-color: var(--pf-c-notification-drawer__list-item--BackgroundColor);
   border-bottom: var(--pf-c-notification-drawer__list-item--BorderBottomWidth) solid var(--pf-c-notification-drawer__list-item--BorderBottomColor);
   outline-offset: var(--pf-c-notification-drawer__list-item--OutlineOffset);
@@ -185,7 +184,10 @@
     --pf-c-notification-drawer__list-item-header-title--FontWeight: var(--pf-c-notification-drawer__list-item--m-read__list-item-header-title--FontWeight);
 
     position: relative;
-    cursor: auto;
+  }
+
+  &.pf-m-clickable {
+    cursor: pointer;
   }
 }
 

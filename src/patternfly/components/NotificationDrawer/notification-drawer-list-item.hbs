@@ -1,4 +1,9 @@
-<li class="pf-c-notification-drawer__list-item{{#if notification-drawer-list-item--IsRead}} pf-m-read{{/if}}
+<li class="pf-c-notification-drawer__list-item
+  {{#if notification-drawer-list-item--IsRead}}
+    pf-m-read
+  {{else}}
+    pf-m-clickable
+  {{/if}}
   {{#if notification-drawer-list-item--IsInfo}}
     pf-m-info
   {{else if notification-drawer-list-item--IsWarning}}
