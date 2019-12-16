@@ -5,13 +5,10 @@ const path = require('path');
 
 const allSitePagesQuery = {
   query: `
-    query AllComponents {
-      examples: allSitePage(filter: { path: {regex: "/(components|demos|layouts|utilities).*examples-full/" } }) {
-        edges {
-          node {
-            id,
-            path
-          }
+    {
+      allSitePage(filter: {context: {isFullscreen: {eq: true}}}) {
+        nodes {
+          path
         }
       }
     }
@@ -23,7 +20,7 @@ axios
   .post('http://localhost:8000/___graphql?', allSitePagesQuery)
   .then(response => {
     // gather page objects from response data
-    const pages = response.data.data.examples.edges.map(edge => edge.node);
+    const pages = response.data.data.allSitePage.nodes.map(node => `http://localhost:8000${node.path}`);
     // write a nicely formatted array of pages to a file
     fs.writeFileSync(path.resolve(__dirname, 'sitemap.json'), JSON.stringify(pages, null, 2));
   })

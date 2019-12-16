@@ -255,7 +255,8 @@ $pf-chart-scatter--size: 3;
 $pf-chart-stack--data--stroke--Width: $pf-chart-global--stroke--Width--xs;
 
 // Threshold
-$pf-chart-threshold--stroke-dash-array: "6,6";
+$pf-chart-threshold--stroke-dash-array: "4,2";
+$pf-chart-threshold--stroke--Width: 1.5;
 
 // Tooltip
 $pf-chart-tooltip--corner-radius: 0;

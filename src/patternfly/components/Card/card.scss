@@ -3,6 +3,12 @@
   --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-card--BoxShadow: var(--pf-global--BoxShadow--sm);
   --pf-c-card--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-card--m-selectable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-card--m-selectable--focus--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-card--m-selectable--active--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-card--m-selectable--m-selected--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-card--m-selectable--m-selected--before--Height: var(--pf-global--BorderWidth--lg);
+  --pf-c-card--m-selectable--m-selected--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-card--m-compact__body--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-card--m-compact__footer--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-card--m-compact--first-child--PaddingTop: var(--pf-global--spacer--md);
@@ -28,6 +34,37 @@
   &.pf-m-hoverable {
     &:hover {
       box-shadow: var(--pf-c-card--m-hoverable--hover--BoxShadow);
+    }
+  }
+
+  &.pf-m-selectable {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
+    }
+
+    &:focus {
+      box-shadow: var(--pf-c-card--m-selectable--focus--BoxShadow);
+    }
+
+    &:active {
+      box-shadow: var(--pf-c-card--m-selectable--active--BoxShadow);
+    }
+
+    &.pf-m-selected {
+      box-shadow: var(--pf-c-card--m-selectable--m-selected--BoxShadow);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: var(--pf-c-card--m-selectable--m-selected--before--Height);
+        content: "";
+        background-color: var(--pf-c-card--m-selectable--m-selected--before--BackgroundColor);
+      }
     }
   }
 

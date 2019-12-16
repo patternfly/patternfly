@@ -74,6 +74,16 @@
   --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm);
 
+  // Groups
+  --pf-c-options-menu__group--group--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__group-title--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__group-title--PaddingRight: var(--pf-c-options-menu__menu-item--PaddingRight);
+  --pf-c-options-menu__group-title--PaddingBottom: var(--pf-c-options-menu__menu-item--PaddingBottom);
+  --pf-c-options-menu__group-title--PaddingLeft: var(--pf-c-options-menu__menu-item--PaddingLeft);
+  --pf-c-options-menu__group-title--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-options-menu__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-options-menu__group-title--Color: var(--pf-global--Color--dark-200);
+
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -277,4 +287,25 @@
   margin-top: var(--pf-c-options-menu__separator--MarginTop);
   margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
   background-color: var(--pf-c-options-menu__separator--BackgroundColor);
+  border: 0; // for use when separator is an <hr>
+
+  &:last-child {
+    --pf-c-options-menu__separator--MarginBottom: 0;
+  }
+}
+
+.pf-c-options-menu__group {
+  & + & {
+    padding-top: var(--pf-c-options-menu__group--group--PaddingTop);
+  }
+}
+
+.pf-c-options-menu__group-title {
+  padding-top: var(--pf-c-options-menu__group-title--PaddingTop);
+  padding-right: var(--pf-c-options-menu__group-title--PaddingRight);
+  padding-bottom: var(--pf-c-options-menu__group-title--PaddingBottom);
+  padding-left: var(--pf-c-options-menu__group-title--PaddingLeft);
+  font-size: var(--pf-c-options-menu__group-title--FontSize);
+  font-weight: var(--pf-c-options-menu__group-title--FontWeight);
+  color: var(--pf-c-options-menu__group-title--Color);
 }

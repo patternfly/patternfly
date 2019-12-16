@@ -17,3 +17,9 @@
   display: flex;
   align-items: flex-end;
 }
+
+#ws-core-c-optionsmenu-with-groups,
+#ws-core-c-optionsmenu-with-groups-and-separators-between-groups,
+#ws-core-c-optionsmenu-with-groups-and-separators-between-items {
+  min-height: 450px;
+}

@@ -10,18 +10,18 @@ import './OptionsMenu.css'
 ```hbs title=Single-option
 {{#> options-menu id="options-menu-single-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Options menu
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
 
 {{#> options-menu options-menu--IsExpanded="true" id="options-menu-single-expanded-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Options menu
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
@@ -30,9 +30,9 @@ import './OptionsMenu.css'
 ```hbs title=Disabled
 {{#> options-menu id="options-menu-single-disabled-example" options-menu--HasToggleIcon="true" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Disabled options menu
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
 {{/options-menu}}
 ```
@@ -40,23 +40,23 @@ import './OptionsMenu.css'
 ```hbs title=Multiple-options
 {{#> options-menu id="options-menu-multiple-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Sort by
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
   {{> options-menu-multiple}}
 {{/options-menu}}
 
 {{#> options-menu options-menu--IsExpanded="true" id="options-menu-multiple-expanded-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Sort by
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
   {{> options-menu-multiple}}
 {{/options-menu}}
 ```
-     
+
 ```hbs title=Plain
 {{#> options-menu id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
@@ -83,9 +83,9 @@ import './OptionsMenu.css'
 ```hbs title=Align-top
 {{#> options-menu options-menu--IsExpanded="true" options-menu--modifier="pf-m-top" id="options-menu-top-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Options menu
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
@@ -94,9 +94,9 @@ import './OptionsMenu.css'
 ```hbs title=Align-right
 {{#> options-menu options-menu--IsExpanded="true" id="options-menu-align-right-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Options menu
-    </span>
+    {{/options-menu-toggle-text}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
@@ -105,9 +105,9 @@ import './OptionsMenu.css'
 ```hbs title=Plain-with-text
 {{#> options-menu id="options-menu-disabled-text-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Custom text
-    </span>
+    {{/options-menu-toggle-text}}
     {{> options-menu-toggle-button aria-label="Options menu"}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
@@ -115,9 +115,9 @@ import './OptionsMenu.css'
 
 {{#> options-menu id="options-menu-plain-text-example" options-menu--IsText="true"}}
   {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Custom text
-    </span>
+    {{/options-menu-toggle-text}}
     {{> options-menu-toggle-button aria-label="Options menu"}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
@@ -125,12 +125,45 @@ import './OptionsMenu.css'
 
 {{#> options-menu options-menu--IsExpanded="true" id="options-menu-plain-text-expanded-example" options-menu--IsText="true"}}
   {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
-    <span class="pf-c-options-menu__toggle-text">
+    {{#> options-menu-toggle-text}}
       Custom text
-    </span>
+    {{/options-menu-toggle-text}}
     {{> options-menu-toggle-button aria-label="Options menu"}}
   {{/options-menu-toggle}}
   {{> options-menu-single}}
+{{/options-menu}}
+```
+
+```hbs title=With-groups
+{{#> options-menu id="options-menu-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
+    {{#> options-menu-toggle-text}}
+      Options menu
+    {{/options-menu-toggle-text}}
+  {{/options-menu-toggle}}
+  {{> options-menu-groups}}
+{{/options-menu}}
+```
+
+```hbs title=With-groups-and-separators-between-groups
+{{#> options-menu id="options-menu-groups-and-separators-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasSeparatorsGroups="true"}}
+  {{#> options-menu-toggle}}
+    {{#> options-menu-toggle-text}}
+      Options menu
+    {{/options-menu-toggle-text}}
+  {{/options-menu-toggle}}
+  {{> options-menu-groups}}
+{{/options-menu}}
+```
+
+```hbs title=With-groups-and-separators-between-items
+{{#> options-menu id="options-menu-groups-and-separators-between-items" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasSeparatorsItems="true"}}
+  {{#> options-menu-toggle}}
+    {{#> options-menu-toggle-text}}
+      Options menu
+    {{/options-menu-toggle-text}}
+  {{/options-menu-toggle}}
+  {{> options-menu-groups}}
 {{/options-menu}}
 ```
 
@@ -143,6 +176,7 @@ import './OptionsMenu.css'
 | `role` or `aria` | `pf-c-options-menu` |  accessibility notes. |
 | `disabled` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle-button` | Disables the options menu toggle and toggle button and removes it from keyboard focus. |
 *Note:* The attribute `aria-selected="true"` should be set programmatically to the selected item(s).
+| `role="separator"` | `li.pf-c-options-menu__separator` | Indicates that the list item is a separator. |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -152,10 +186,12 @@ import './OptionsMenu.css'
 | `.pf-c-options-menu__toggle-text` | `<span>` | Initiates a wrapper for toggle text.
 | `.pf-c-options-menu__toggle-icon` | `<i>` | Initiates the up/down arrow beside toggle text. |
 | `.pf-c-options-menu__toggle-button` | `<button>` | Initiates a custom toggle button for use when `.pf-c-options-menu__toggle` is a `<div>` or non-interactive element. |
-| `.pf-c-options-menu__menu` | `<ul>` |  Initiates the custom options-menu dropdown menu. |
-| `.pf-c-options-menu__menu-item` | `<li>` |  Initiates the items in the custom options-menu dropdown menu. |
+| `.pf-c-options-menu__menu` | `<ul>` |  Initiates the custom options-menu menu. |
+| `.pf-c-options-menu__menu-item` | `<li>` |  Initiates the items in the custom options-menu menu. |
 | `.pf-c-options-menu__menu-item-icon` | `<i>` |  Initiates the icon to indicate selected menu items. |
-| `.pf-c-options-menu__separator` | `<li>` | Initiates a separator in the menu list. |
+| `.pf-c-options-menu__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
+| `.pf-c-options-menu__group` | `<section>` | Defines a group of items in an options menu. **Required when there is more than one group in an options menu**. |
+| `.pf-c-options-menu__group-title` | `<h1>` | Defines the title for a group of items in an options menu. |
 | `.pf-m-top` | `.pf-c-options-menu` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-options-menu__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-expanded` | `.pf-c-options-menu` |  Modifies for the expanded state. |
