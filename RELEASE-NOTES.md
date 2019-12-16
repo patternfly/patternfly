@@ -12,7 +12,7 @@ Packages released:
 - **App launcher:**
   - Removed unused vars ([#2459](https://github.com/patternfly/patternfly-next/pull/2459))
   - Fixed spacing between favorites search and next item ([#2515](https://github.com/patternfly/patternfly-next/pull/2515))
-- **Card*:** Added selectable card ([#2497](https://github.com/patternfly/patternfly-next/pull/2497))
+- **Card:** Added selectable card ([#2497](https://github.com/patternfly/patternfly-next/pull/2497))
 - **Charts:** Updated threshold properties ([#2486](https://github.com/patternfly/patternfly-next/pull/2486))
 - **Data list:**
   - Added selectable/hoverable row variations ([#2491](https://github.com/patternfly/patternfly-next/pull/2491))
