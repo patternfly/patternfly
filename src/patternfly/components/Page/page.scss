@@ -304,7 +304,7 @@
       border-radius: var(--pf-c-page__header-tools-group--m-icons--c-button--BorderRadius);
 
       > i {
-        vertical-align: -.75px;
+        vertical-align: #{pf-size-prem(-.75px)};
       }
 
       &:active,
