@@ -14,6 +14,7 @@
   --pf-c-empty-state__secondary--c-button--MarginBottom: var(--pf-global--spacer--xs);
   --pf-c-empty-state--m-sm--MaxWidth: #{pf-size-prem(400px)};
   --pf-c-empty-state--m-lg--MaxWidth: #{pf-size-prem(600px)};
+  --pf-c-empty-state--m-xl--FontSize: var(--pf-global--FontSize--xl);
 
   padding: var(--pf-c-empty-state--Padding);
   text-align: center;
@@ -33,6 +34,10 @@
 
   &.pf-m-lg {
     max-width: var(--pf-c-empty-state--m-lg--MaxWidth);
+  }
+
+  &.pf-m-xl {
+    font-size: var(--pf-c-empty-state--m-xl--FontSize);
   }
 }
 
