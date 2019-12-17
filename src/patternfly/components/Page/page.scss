@@ -65,6 +65,16 @@
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
+  // Header tools group button
+  --pf-c-page__header-tools-group--m-icons--c-button--Width: #{pf-size-prem(36px)};
+  --pf-c-page__header-tools-group--m-icons--c-button--Height: #{pf-size-prem(36px)};
+  --pf-c-page__header-tools-group--m-icons--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: transparent;
+  --pf-c-page__header-tools-group--m-icons--c-button--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools-group--m-icons--c-button--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools-group--m-icons--c-button--focus--OutlineOffset: var(--pf-global--spacer--xs);
+  --pf-c-page__header-tools-group--m-icons--c-button--focus__c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
   }
@@ -284,6 +294,40 @@
     @media screen and (min-width: $pf-global--breakpoint--lg) {
       display: block;
       visibility: visible;
+    }
+
+    > .pf-c-button {
+      width: var(--pf-c-page__header-tools-group--m-icons--c-button--Width);
+      height: var(--pf-c-page__header-tools-group--m-icons--c-button--Height);
+      padding: unset;
+      background-color: var(--pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor);
+      border-radius: var(--pf-c-page__header-tools-group--m-icons--c-button--BorderRadius);
+
+      > i {
+        vertical-align: -.75px;
+      }
+
+      &:active,
+      &.pf-m-active {
+        --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: var(--pf-c-page__header-tools-group--m-icons--c-button--active--BackgroundColor);
+      }
+
+      &:focus,
+      &.pf-m-focus {
+        --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: var(--pf-c-page__header-tools-group--m-icons--c-button--focus--BackgroundColor);
+
+        outline-offset: var(--pf-c-page__header-tools-group--m-icons--c-button--focus--OutlineOffset);
+
+        /* stylelint-disable */
+        .pf-c-notification-badge {
+          &.pf-m-unread {
+            &::after {
+              border-color: var(--pf-c-page__header-tools-group--m-icons--c-button--focus__c-notification-badge--m-unread--after--BorderColor);
+            }
+          }
+        }
+        /* stylelint-enable */
+      }
     }
   }
 
