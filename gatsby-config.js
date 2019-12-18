@@ -12,6 +12,7 @@ module.exports = {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
         context: 'core', // For global items that need sideNav
+        hiddenPages: ['Training'], // By title
         sideNav: {
           core: [
             { section: 'overview' },

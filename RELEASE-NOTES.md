@@ -4,12 +4,44 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2019.11 release notes (2019-12-18)
+Packages released:
+- @patternfly/patternfly@v2.46.1
+
+### Components
+- **App launcher:**
+  - Removed unused vars ([#2459](https://github.com/patternfly/patternfly-next/pull/2459))
+  - Fixed spacing between favorites search and next item ([#2515](https://github.com/patternfly/patternfly-next/pull/2515))
+- **Card:** Added selectable card ([#2497](https://github.com/patternfly/patternfly-next/pull/2497))
+- **Charts:** Updated threshold properties ([#2486](https://github.com/patternfly/patternfly-next/pull/2486))
+- **Data list:**
+  - Added selectable/hoverable row variations ([#2491](https://github.com/patternfly/patternfly-next/pull/2491))
+  - Split out selected row state vars ([#2502](https://github.com/patternfly/patternfly-next/pull/2502))
+- **Data toolbar:** Added content wrapper, updated margins ([#2460](https://github.com/patternfly/patternfly-next/pull/2460))
+- **Empty state:** Moved basic example ([#2499](https://github.com/patternfly/patternfly-next/pull/2499))
+- **Global vars:**
+  - Updated pf-color-black-200 and pf-color-black-600 ([#2477](https://github.com/patternfly/patternfly-next/pull/2477))
+  - Updated success-color--100, success-color--200, green-500 ([#2480](https://github.com/patternfly/patternfly-next/pull/2480))
+  - Reverted global color changes from #2477 and #2480 ([#2505](https://github.com/patternfly/patternfly-next/pull/2505))
+- **Nav:**
+  - Removed bold for tertiary link current, active, focus ([#2487](https://github.com/patternfly/patternfly-next/pull/2487))
+  - Updated horizontal overflow arrow colors ([#2510](https://github.com/patternfly/patternfly-next/pull/2510))
+- **Notification drawer:** Added notification drawer component ([#2511](https://github.com/patternfly/patternfly-next/pull/2511))
+- **Options menu:**
+  - Added support for groups and titles ([#2403](https://github.com/patternfly/patternfly-next/pull/2403))
+  - Fixed spacing if separator is last item in group ([#2500](https://github.com/patternfly/patternfly-next/pull/2500))
+
+### Other
+- **Build:**
+  - Enabled patternfly-a11y ([#2453](https://github.com/patternfly/patternfly-next/pull/2453))
+  - Upgraded gatsby and org theme ([#2496](https://github.com/patternfly/patternfly-next/pull/2496))
+
 ## 2019.10 release notes (2019-11-25)
 Packages released:
 - @patternfly/patternfly@v2.43.1
 
 ### Components
-- **App launcher:**  Added support for search input, favorites ([#2428](https://github.com/patternfly/patternfly-next/pull/2428))
+- **App launcher:** Added support for search input, favorites ([#2428](https://github.com/patternfly/patternfly-next/pull/2428))
 - **Data toolbar:**
   - Moved and wrapped chips ([#2397](https://github.com/patternfly/patternfly-next/pull/2397))
   - Reverted changes from refactor-data-toolbar branch ([#2434](https://github.com/patternfly/patternfly-next/pull/2434))

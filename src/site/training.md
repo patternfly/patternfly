@@ -13,8 +13,8 @@ import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
     <TrainingCard
       trainingType="html-css"
       title="The building blocks of PatternFly"
-      level="beginner"
-      time="15 minutes"
+      level="Beginner"
+      time="20 minutes"
       description="Learn about components, layouts, and demos."
       katacodaId="building-blocks"
     />
@@ -23,7 +23,7 @@ import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
     <TrainingCard
       trainingType="html-css"
       title="Variable naming principles"
-      level="intermediate"
+      level="Intermediate"
       time="20 minutes"
       description="Create and override component and global variables by following BEM naming principles."
       katacodaId="variable-naming-principles"
@@ -33,7 +33,7 @@ import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
     <TrainingCard
       trainingType="html-css"
       title="Modifiers and utilities"
-      level="beginner"
+      level="Beginner"
       time="15 minutes"
       description="Apply modifier and utility classes to create new variations."
       katacodaId="modifier-utilities"
@@ -43,7 +43,7 @@ import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
     <TrainingCard
       trainingType="html-css"
       title="Layouts"
-      level="beginner"
+      level="Beginner"
       time="25 minutes"
       description="Learn how to use all seven of PatternFly's layouts."
       katacodaId="layouts"
@@ -53,8 +53,8 @@ import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
     <TrainingCard
       trainingType="html-css"
       title="Override and extend variables"
-      level="advanced"
-      time="20 minutes"
+      level="Advanced"
+      time="25 minutes"
       description="Practice overriding and extending variables to create new designs."
       katacodaId="override-extend-variables"
     />
