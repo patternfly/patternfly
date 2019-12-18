@@ -123,26 +123,6 @@ cssPrefix: pf-c-empty-state
   {{#> button button--modifier="pf-m-primary"}}
     Primary action
   {{/button}}
-  {{#> empty-state-secondary}}
-    {{#> button button--modifier="pf-m-link"}}
-      Multiple
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action buttons
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Can
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Go here
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      In the secondary
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action area
-    {{/button}}
-  {{/empty-state-secondary}}
 {{/empty-state}}
 ```
 
