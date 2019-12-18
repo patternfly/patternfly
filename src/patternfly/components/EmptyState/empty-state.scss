@@ -42,22 +42,19 @@
   }
 
   &.pf-m-xl {
+    --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xl__body--MarginTop);
+    --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
+    --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
+
+    .pf-c-empty-state__body {
+      font-size: var(--pf-c-empty-state--m-xl__body--FontSize);
+    }
+
     > .pf-c-button.pf-m-primary,
     .pf-c-empty-state__primary {
       + .pf-c-empty-state__secondary {
         --pf-c-empty-state--c-button__secondary--MarginTop: var(--pf-c-empty-state--m-xl--c-button__secondary--MarginTop);
       }
-    }
-
-    .pf-c-empty-state__body {
-      font-size: var(--pf-c-empty-state--m-xl__body--FontSize);
-
-      --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xl__body--MarginTop);
-    }
-
-    .pf-c-empty-state__icon {
-      --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
-      --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
     }
   }
 }
