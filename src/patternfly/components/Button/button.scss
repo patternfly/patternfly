@@ -110,6 +110,7 @@
 
   // Styles for an icon in button
   --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-button__icon--MarginLeft: var(--pf-global--spacer--xs);
 
   position: relative;
   display: inline-block;
@@ -124,7 +125,13 @@
   border-radius: var(--pf-c-button--BorderRadius);
 
   .pf-c-button__icon {
-    margin-right: var(--pf-c-button__icon--MarginRight);
+    &:first-child {
+      margin-right: var(--pf-c-button__icon--MarginRight);
+    }
+
+    &:last-child {
+      margin-left: var(--pf-c-button__icon--MarginLeft);
+    }
   }
 
 

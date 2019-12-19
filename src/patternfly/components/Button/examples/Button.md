@@ -29,7 +29,14 @@ import './Button.css'
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link
+  <span>Link</span>
+{{/button}}
+
+{{#> button button--modifier="pf-m-link"}}
+  <span>Link</span>
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
