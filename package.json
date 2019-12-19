@@ -1,10 +1,9 @@
 {
-  "name": "@patternfly/patternfly",
+  "name": "dd-patternfly",
   "description": "Assets, source, tooling, and content for PatternFly 4",
   "version": "0.0.0-development",
   "keywords": [],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "backstop:approve": "node test/approve-conflicts.js",
     "backstop:init": "node test/create-references.js",
