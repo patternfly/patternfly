@@ -1,5 +1,5 @@
 {
-  "name": "dd-patternfly",
+  "name": "@patternfly/patternfly",
   "description": "Assets, source, tooling, and content for PatternFly 4",
   "version": "0.0.0-development",
   "keywords": [],
