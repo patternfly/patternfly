@@ -29,11 +29,15 @@ import './Button.css'
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  <span>Link</span>
+  {{#> button-text}}
+    Link
+  {{/button-text}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link"}}
-  <span>Link</span>
+  {{#> button-text}}
+    Link
+  {{/button-text}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}

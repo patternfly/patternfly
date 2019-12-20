@@ -124,16 +124,13 @@
   border: 0;
   border-radius: var(--pf-c-button--BorderRadius);
 
-  .pf-c-button__icon {
-    &:first-child {
-      margin-right: var(--pf-c-button__icon--MarginRight);
-    }
-
-    &:last-child {
-      margin-left: var(--pf-c-button__icon--MarginLeft);
-    }
+  .pf-c-button__text + .pf-c-button__icon {
+    margin-left: var(--pf-c-button__icon--MarginLeft);
   }
 
+  .pf-c-button__icon:first-child:not(:only-child) {
+    margin-right: var(--pf-c-button__icon--MarginRight);
+  }
 
   &::after {
     position: absolute;
