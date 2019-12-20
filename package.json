@@ -4,7 +4,6 @@
   "version": "0.0.0-development",
   "keywords": [],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "backstop:approve": "node test/approve-conflicts.js",
     "backstop:init": "node test/create-references.js",
