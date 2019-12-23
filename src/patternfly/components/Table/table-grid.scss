@@ -101,7 +101,6 @@
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
 
-
   // End responsive vars
   // ==================================================================
 }
@@ -332,7 +331,6 @@
     --pf-c-table-cell--PaddingRight: 0;
     --pf-c-table-cell--PaddingLeft: 0;
 
-    display: block;
     max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
     overflow-y: auto;
     border-bottom: none;
