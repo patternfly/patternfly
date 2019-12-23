@@ -331,6 +331,7 @@
     --pf-c-table-cell--PaddingRight: 0;
     --pf-c-table-cell--PaddingLeft: 0;
 
+    display: initial;
     max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
     overflow-y: auto;
     border-bottom: none;
