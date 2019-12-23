@@ -132,7 +132,7 @@
 
   // Modifier - expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-c-table--BorderColor);
 
   // Modifier - sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
