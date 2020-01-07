@@ -58,6 +58,7 @@
   --pf-c-wizard__nav-link--focus--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-wizard__nav-list__nav-list__nav-link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Nav link number
   --pf-c-wizard__nav-link--before--Width: 1.5rem;
@@ -426,6 +427,10 @@
     .pf-c-wizard__nav-link {
       &::before {
         content: none;
+      }
+
+      &.pf-m-current {
+        font-weight: var(--pf-c-wizard__nav-list__nav-list__nav-link--m-current--FontWeight);
       }
     }
   }
