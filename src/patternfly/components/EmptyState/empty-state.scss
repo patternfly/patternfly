@@ -88,7 +88,7 @@
 // RedHat Font overrides
 @include pf-m-redhat-font {
   .pf-c-empty-state {
-    > .pf-c-title:not(.pf-m-4xl) {
+    > .pf-c-title.pf-m-lg {
       font-size: var(--pf-global--FontSize--xl);
     }
   }
