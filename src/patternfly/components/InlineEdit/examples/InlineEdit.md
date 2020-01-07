@@ -18,19 +18,61 @@ import './InlineEdit.css'
 
 ## Examples
 
+Inline edit **toggle** can be placed anywhere within `.pf-c-inline-edit`. It initiates the editability of elements. When an element becomes editable, **toggle** is hidden.
+
+```hbs title=Inline-edit-toggle
+{{#> inline-edit inline-edit--id="inline-edit-toggle-example"}}
+  {{#> inline-edit-toggle}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
+      <i class="fas fa-pencil-alt" aria-hidden="true" />
+    {{/button}}
+  {{/inline-edit-toggle}}
+{{/inline-edit}}
+```
+
+Inline edit **value** can be placed anywhere within `.pf-c-inline-edit`. It is visible by default and hidden when inline edit becomes **editable**.
+
+```hbs title=Inline-edit-value
+{{#> inline-edit inline-edit--id="inline-edit-value-example"}}
+  {{#> inline-edit-value}}
+    Static value
+  {{/inline-edit-value}}
+{{/inline-edit}}
+```
+
+Inline edit **action-group** contains save and cancel actions and is only visible when inline edit is **editable**.
+
+```hbs title=Inline-edit-action-group
+{{#> inline-edit inline-edit--id="inline-edit-action-group-example" inline-edit--modifier="pf-m-editable"}}
+  {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{> inline-edit-action-save}}
+    {{> inline-edit-action-cancel}}
+  {{/inline-edit-group}}
+{{/inline-edit}}
+```
+
+```hbs title=Inline-edit-action-group-icon-buttons
+{{#> inline-edit inline-edit--id="inline-edit-action-group-icon-buttons-example" inline-edit--modifier="pf-m-editable"}}
+  {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+    {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+  {{/inline-edit-group}}
+{{/inline-edit}}
+```
+
 ```hbs title=Single-inline-edit-(default)
 {{#> inline-edit inline-edit--id="single-inline-edit-example" inline-edit--type="form"}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-value-group"}}
+  {{#> inline-edit-group}}
     {{#> inline-edit-value inline-edit-value--IsLabel="true"}}
       Static value
     {{/inline-edit-value}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
         <i class="fas fa-pencil-alt" aria-hidden="true" />
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group"}}
+  {{#> inline-edit-group}}
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
@@ -44,48 +86,21 @@ import './InlineEdit.css'
 
 ```hbs title=Single-inline-edit-(active)
 {{#> inline-edit inline-edit--id="single-editable-example" inline-edit--type="form" inline-edit--modifier="pf-m-editable"}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-value-group"}}
+  {{#> inline-edit-group}}
     {{#> inline-edit-value inline-edit-value--IsLabel="true"}}
       Static value
     {{/inline-edit-value}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
         <i class="fas fa-pencil-alt" aria-hidden="true" />
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group"}}
+  {{#> inline-edit-group}}
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
     {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
-      {{> inline-edit-action-save inline-edit-action-save--modifier="pf-m-valid" inline-edit-action-save--IsIcon="true"}}
-      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
-    {{/inline-edit-group}}
-  {{/inline-edit-group}}
-{{/inline-edit}}
-```
-
-```hbs title=Single-inline-edit-with-title-(default)
-{{#> inline-edit inline-edit--type="form" inline-edit--id="single-inline-edit-with-title-example"}}
-  {{#> inline-edit-group}}
-    {{#> title title--modifier="pf-m-xl" titleType="h2" title--attribute=(concat 'id="' inline-edit--id '-label"')}}
-      Single inline edit group
-    {{/title}}
-    {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true" />
-      {{/button}}
-    {{/inline-edit-toggle}}
-  {{/inline-edit-group}}
-  {{#> inline-edit-value}}
-    Static value
-  {{/inline-edit-value}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group"}}
-    {{#> inline-edit-input}}
-      {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
-    {{/inline-edit-input}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action"}}
       {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
@@ -93,14 +108,14 @@ import './InlineEdit.css'
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-with-title-(active)
-{{#> inline-edit inline-edit--type="form" inline-edit--id="single-inline-edit-with-title-active-example" inline-edit--modifier="pf-m-editable"}}
+```hbs title=Single-inline-edit-with-label-(default)
+{{#> inline-edit inline-edit--type="form" inline-edit--id="single-inline-edit-with-label-example"}}
   {{#> inline-edit-group}}
-    {{#> title title--modifier="pf-m-xl" titleType="h2" title--attribute=(concat 'id="' inline-edit--id '-label"')}}
+    {{#> inline-edit-label}}
       Single inline edit group
-    {{/title}}
+    {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
         <i class="fas fa-pencil-alt" aria-hidden="true" />
       {{/button}}
     {{/inline-edit-toggle}}
@@ -108,33 +123,222 @@ import './InlineEdit.css'
   {{#> inline-edit-value}}
     Static value
   {{/inline-edit-value}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group"}}
+  {{#> inline-edit-group}}
     {{#> inline-edit-input}}
-      {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' inline-edit--id '-input" value="Static value" aria-label="Editable text input"')}}
     {{/inline-edit-input}}
     {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
-      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--modifier="pf-m-valid"}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
   {{/inline-edit-group}}
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-dl-example-(default)
+```hbs title=State-valid
+{{#> inline-edit inline-edit--id="inline-edit-state-valid" inline-edit--modifier="pf-m-editable"}}
+  {{#> inline-edit-group}}
+    {{#> inline-edit-label}}
+      Valid example
+    {{/inline-edit-label}}
+    {{#> inline-edit-toggle}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+        <i class="fas fa-pencil-alt" aria-hidden="true" />
+      {{/button}}
+    {{/inline-edit-toggle}}
+  {{/inline-edit-group}}
+  {{#> inline-edit-value}}
+    Static value
+  {{/inline-edit-value}}
+  {{#> inline-edit-group}}
+    {{#> inline-edit-input}}
+      {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
+    {{/inline-edit-input}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
+      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+    {{/inline-edit-group}}
+  {{/inline-edit-group}}
+{{/inline-edit}}
+```
+
+```hbs title=State-invalid
+{{#> inline-edit inline-edit--id="inline-edit-state-invalid" inline-edit--modifier="pf-m-editable"}}
+  {{#> inline-edit-group}}
+    {{#> inline-edit-label}}
+      Invalid example
+    {{/inline-edit-label}}
+    {{#> inline-edit-toggle}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+        <i class="fas fa-pencil-alt" aria-hidden="true" />
+      {{/button}}
+    {{/inline-edit-toggle}}
+  {{/inline-edit-group}}
+  {{#> inline-edit-value}}
+    Static value
+  {{/inline-edit-value}}
+  {{#> inline-edit-group}}
+    {{#> inline-edit-input}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required value="Invalid state" aria-invalid="true" aria-label="Error state input example"')}}
+      {{/form-control}}
+    {{/inline-edit-input}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+      {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--IsInvalid="true"}}
+      {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+    {{/inline-edit-group}}
+  {{/inline-edit-group}}
+{{/inline-edit}}
+```
+
+```hbs title=Bulk-edit-dl-example-(default)
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-default"}}
   {{#> inline-edit-dl}}{{/inline-edit-dl}}
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-dl-example-(active)
+```hbs title=Bulk-edit-dl-example-(active)
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-active" inline-edit--modifier="pf-m-editable"}}
   {{#> inline-edit-dl}}{{/inline-edit-dl}}
 {{/inline-edit}}
 ```
 
+```hbs title=Inline-edit-dl-example
+{{#> list list--type="dl" list--modifier="pf-m-2-col" list--attribute=(concat 'aria-label="Inline edit description list example"')}}
+  <div>
+    <dt>Name</dt>
+    <dd>main</dd>
+  </div>
+  {{#> inline-edit inline-edit--id="inline-edit-dl-example-1"}}
+    <dt>
+      {{#> inline-edit-group}}
+        {{#> inline-edit-label}}
+          Description
+        {{/inline-edit-label}}
+        {{#> inline-edit-toggle}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button"')}}
+            <i class="fas fa-pencil-alt" aria-hidden="true" />
+          {{/button}}
+        {{/inline-edit-toggle}}
+      {{/inline-edit-group}}
+    </dt>
+    <dd>
+      {{#> inline-edit-value}}
+        test cluster
+      {{/inline-edit-value}}
+      {{#> inline-edit-input}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id '-input"')}}
+      {{/inline-edit-input}}
+    </dd>
+  {{/inline-edit}}
+
+  {{#> inline-edit inline-edit--id="inline-edit-dl-example-2" inline-edit--modifier="pf-m-editable"}}
+    <dt>
+      {{#> inline-edit-group}}
+        {{#> inline-edit-label}}
+          Description (editable)
+        {{/inline-edit-label}}
+        {{#> inline-edit-toggle}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+            <i class="fas fa-pencil-alt" aria-hidden="true" />
+          {{/button}}
+        {{/inline-edit-toggle}}
+      {{/inline-edit-group}}
+    </dt>
+    <dd>
+      {{#> inline-edit-value}}
+        Text input description content
+      {{/inline-edit-value}}
+      {{#> inline-edit-input}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id '-input"')}}
+      {{/inline-edit-input}}
+    </dd>
+  {{/inline-edit}}
+
+  <div>
+    <dt>Tags</dt>
+    <dd>
+      {{#> chip chip--type="div" chip--modifier="pf-m-read-only"}}
+        {{#> chip-text}}
+          alertmanager=main
+        {{/chip-text}}
+      {{/chip}}
+    </dd>
+  </div>
+
+  {{#> inline-edit inline-edit--id="inline-edit-dl-example-3"}}
+    <dt>
+      {{#> inline-edit-group}}
+        {{#> inline-edit-label}}
+          Value
+        {{/inline-edit-label}}
+        {{#> inline-edit-toggle}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+            <i class="fas fa-pencil-alt" aria-hidden="true" />
+          {{/button}}
+        {{/inline-edit-toggle}}
+      {{/inline-edit-group}}
+    </dt>
+    <dd>
+      {{#> inline-edit-value}}
+        True
+      {{/inline-edit-value}}
+      {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
+        {{#> inline-edit-input}}
+          {{#> radio}}
+            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-input"')}}{{/radio-input}}
+            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
+          {{/radio}}
+        {{/inline-edit-input}}
+        {{#> inline-edit-input}}
+          {{#> radio}}
+            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-input"')}}{{/radio-input}}
+            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
+          {{/radio}}
+        {{/inline-edit-input}}
+      {{/inline-edit-group}}
+    </dd>
+  {{/inline-edit}}
+
+  {{#> inline-edit inline-edit--id="inline-edit-dl-example-4" inline-edit--modifier="pf-m-editable"}}
+    <dt>
+      {{#> inline-edit-group}}
+        {{#> inline-edit-label}}
+          Value
+        {{/inline-edit-label}}
+        {{#> inline-edit-toggle}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
+            <i class="fas fa-pencil-alt" aria-hidden="true" />
+          {{/button}}
+        {{/inline-edit-toggle}}
+      {{/inline-edit-group}}
+    </dt>
+    <dd>
+      {{#> inline-edit-value}}
+        True
+      {{/inline-edit-value}}
+      {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
+        {{#> inline-edit-input}}
+          {{#> radio}}
+            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-input"')}}{{/radio-input}}
+            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
+          {{/radio}}
+        {{/inline-edit-input}}
+        {{#> inline-edit-input}}
+          {{#> radio}}
+            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-input"')}}{{/radio-input}}
+            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
+          {{/radio}}
+        {{/inline-edit-input}}
+      {{/inline-edit-group}}
+    </dd>
+  {{/inline-edit}}
+  <!-- tags, pods, value -->
+{{/list}}
+```
+
 ```hbs title=Inline-edit-table-row
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
-  {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
     {{#> table-caption}}
       This is the table caption
     {{/table-caption}}
@@ -155,6 +359,7 @@ import './InlineEdit.css'
         {{#> table-th}}
           Number
         {{/table-th}}
+        {{#> table-td}}{{/table-td}}
         {{#> table-td}}{{/table-td}}
       {{/table-tr}}
     {{/table-thead}}
@@ -209,7 +414,7 @@ import './InlineEdit.css'
             {{/inline-edit-input}}
             {{#> inline-edit-input}}
               {{#> radio}}
-                {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-2" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
+                {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-2" name="' inline-edit--id inline-edit--row 'example-radio"' selected)}}{{/radio-input}}
                 {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id inline-edit--row 'radio-2"')}}Radio 2{{/radio-label}}
               {{/radio}}
             {{/inline-edit-input}}
@@ -223,24 +428,22 @@ import './InlineEdit.css'
             {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input"')}}
           {{/inline-edit-input}}
         {{/table-td}}
-        {{#> table-td table-td--action="true"}}
+        {{#> table-td table-td--modifier="pf-c-table__inline-edit-action"}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
-            {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--modifier="pf-m-valid"}}
+            {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-enable"}}
             {{#> inline-edit-action}}
-              {{#> inline-edit-action}}
-                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-                  <i class="fas fa-pencil-alt" aria-hidden="true" />
-                {{/button}}
-              {{/inline-edit-action}}
-            {{/inline-edit-action}}
-            {{#> inline-edit-action}}
-              {{#> dropdown id=(concat table--id inline-edit--row "-dropdown-kebab") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-              {{/dropdown}}
+              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
+                <i class="fas fa-pencil-alt" aria-hidden="true" />
+              {{/button}}
             {{/inline-edit-action}}
           {{/inline-edit-group}}
+        {{/table-td}}
+        {{#> table-td table-td--action="true"}}
+          {{#> dropdown id=(concat table--id inline-edit--row "-dropdown-kebab") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+          {{/dropdown}}
         {{/table-td}}
       {{/table-tr}}
 
@@ -307,22 +510,22 @@ import './InlineEdit.css'
             {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input"')}}
           {{/inline-edit-input}}
         {{/table-td}}
-        {{#> table-td table-td--action="true"}}
+        {{#> table-td table-td--modifier="pf-c-table__inline-edit-action"}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
             {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-enable"}}
             {{#> inline-edit-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
+              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
                 <i class="fas fa-pencil-alt" aria-hidden="true" />
               {{/button}}
             {{/inline-edit-action}}
-            {{#> inline-edit-action}}
-              {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-              {{/dropdown}}
-            {{/inline-edit-action}}
           {{/inline-edit-group}}
+        {{/table-td}}
+        {{#> table-td table-td--action="true"}}
+          {{#> dropdown id=(concat table--id inline-edit--row "-dropdown-kebab") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+          {{/dropdown}}
         {{/table-td}}
       {{/table-tr}}
     {{/table-tbody}}
@@ -350,7 +553,9 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-m-editable` | `.pf-c-inline-edit`, `.pf-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |
 | `.pf-c-inline-edit__value` | `*` | Initiates an inline edit value. **Required** |
 | `.pf-c-inline-edit__input` | `*` | Initiates an inline edit input. **Required** |
+| `.pf-c-inline-edit__label` | `*` | Initiates an inline edit label. |
 | `.pf-c-inline-edit__action` | `*` | Initiates an inline edit action (visible when inline edit region is active). **Required** |
+| `.pf-m-icon-button` | `.pf-c-inline-edit__action` | Modifies the action button spacing. |
 | `.pf-m-valid` | `.pf-c-inline-edit__action` | Modifies the action button state. |
 | `.pf-m-value-group` | `.pf-c-inline-edit__group` | Modifies group for value group. |
 | `.pf-m-input-group` | `.pf-c-inline-edit__group` | Modifies group for input group. |
@@ -359,4 +564,4 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-m-column` | `.pf-c-inline-edit__group` | Modifies an action group flex direction. |
 | `.pf-m-footer` | `.pf-c-inline-edit__group` | Modifies an inline edit group margin-top. |
 | `.pf-m-enable` | `.pf-c-inline-edit__group.pf-m-action-group`, `.pf-c-inline-edit__action` | Exposes an inline edit action group or action by default. |
-| `.pf-m-hidden` | `pf-c-inline-edit > *` | Modifies an inline edit element to hidden. |
+| `.pf-m-hidden` | `.pf-c-inline-edit > *` | Modifies an inline edit element to hidden. |

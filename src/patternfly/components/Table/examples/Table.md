@@ -387,6 +387,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 | -- | -- | -- |
 | `.pf-c-table__check` | `<th>`, `<td>` | Initiates a check table cell. |
 | `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
+| `.pf-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
 
 ```hbs title=Expandable
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}

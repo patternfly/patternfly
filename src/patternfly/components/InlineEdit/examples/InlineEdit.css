@@ -18,6 +18,21 @@ dl.pf-c-list {
   margin-top: var(--pf-c-list--dd--MarginTop);
 }
 
+.pf-c-list.pf-m-2-col {
+  display: grid;
+  grid-gap: var(--pf-global--spacer--md);
+}
+
+@media (min-width: 768px) {
+  .pf-c-list.pf-m-2-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ws-page-sidebar {
+  /* display: none; */
+}
+
 /* .pf-c-list {
   --pf-c-list--dl--PaddingLeft: 0;
   --pf-c-list--dt--FontWeight: var(--pf-global--FontWeight--bold);
