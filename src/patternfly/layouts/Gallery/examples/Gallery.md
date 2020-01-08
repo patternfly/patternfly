@@ -28,7 +28,7 @@ import './Gallery.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The gallery layout is designed so that all of its children are of uniform size, display horizontally, and wrap responsively.
 
 ### Usage

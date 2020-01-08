@@ -251,7 +251,7 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 
 ## Documentation
-### Overiew
+### Overview
 There are 4 variants of the select component: single select, single select with typeahead, multiple select with typeahead, and a multiple checkbox select. See the examples for more details about each variation.
 
 The single select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and ARIA tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.

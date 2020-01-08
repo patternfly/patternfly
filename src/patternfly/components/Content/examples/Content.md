@@ -99,7 +99,7 @@ cssPrefix: pf-c-content
 ```
 
 ## Documentation
-### Overiew
+### Overview
 When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-c-content` as container. It can handle almost any HTML tag:
 
 - `<p>` paragraphs

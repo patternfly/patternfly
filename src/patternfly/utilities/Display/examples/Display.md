@@ -76,7 +76,7 @@ import './Display.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-display-inline-block-on-lg**
 
 ### Usage

@@ -14,7 +14,7 @@ import './Bullseye.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The bullseye layout is designed to center a single child element horizontally and vertically within its parent.
 
 ### Usage

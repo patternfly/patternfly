@@ -77,7 +77,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ## Documentation
-### Overiew
+### Overview
 A modal box is a generic rectangular container that can be used to build modals. A modal box can have three sections: header, body, and footer. Header or body is required. If no `.pf-c-title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
 
 
