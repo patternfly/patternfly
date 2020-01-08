@@ -48,7 +48,6 @@
   .pf-c-chip-group__label {
     @include pf-text-overflow;
 
-    display: inline-flex;
     max-width: var(--pf-c-chip-group__label--Maxwidth);
     padding: var(--pf-c-chip-group__label--PaddingTop) var(--pf-c-chip-group__label--PaddingRight) var(--pf-c-chip-group__label--PaddingBottom) var(--pf-c-chip-group__label--PaddingLeft);
     font-size: var(--pf-c-chip-group__label--FontSize);
