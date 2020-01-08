@@ -6,7 +6,7 @@ cssPrefix: pf-c-table
 
 ## Examples
 ```hbs title=Basic
-{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
@@ -122,7 +122,7 @@ cssPrefix: pf-c-table
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
 ```hbs title=Sortable
-{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
+{{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
@@ -233,7 +233,7 @@ cssPrefix: pf-c-table
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
 ```hbs title=With-checkboxes-and-actions
-{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
+{{#> table table--id="table-checkboxes-and-actions" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
@@ -389,7 +389,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 | `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 
 ```hbs title=Expandable
-{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td}}{{/table-td}}
@@ -581,7 +581,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
 
 ```hbs title=With-compound-expansion
-{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
+{{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
@@ -807,7 +807,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 
 ```hbs title=Compact
-{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
+{{#> table table--id="table-compact" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
@@ -969,7 +969,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
 ```hbs title=Compact-with-no-borders
-{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
+{{#> table table--id="table-compact-no-borders" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
@@ -1131,7 +1131,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Can not be used with `.pf-m-expandable`.** |
 
 ```hbs title=Compact-expandable
-{{#> table table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
+{{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td}}{{/table-td}}
@@ -1327,7 +1327,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. **Note: Can not be used with `.pf-m-no-border-rows`.** |
 
 ```hbs title=With-width-modifiers
-{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
+{{#> table table--id="table-width-modifiers" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
@@ -1455,7 +1455,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-fit-content` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` minimum width with no text wrapping. |
 
 ```hbs title=With-hidden/visible-breakpoint-modifiers
-{{#> table table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
+{{#> table table--id="table-hidden-visible" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg"}}
@@ -1558,7 +1558,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
 
 ```hbs title=With-headers-that-wrap
-{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is an example of the table that has headers that wrap"'}}
+{{#> table table--id="table-headers-wrap" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is an example of the table that has headers that wrap"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
