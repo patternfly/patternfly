@@ -133,7 +133,7 @@ import './Page.css'
 ```
       
 ## Documentation
-### Overiew
+### Overview
 This component provides the basic chrome for a page, including sidebar, header, and main areas.
 
 ### Accessibility

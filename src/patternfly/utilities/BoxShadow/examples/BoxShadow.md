@@ -58,7 +58,7 @@ import './BoxShadow.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Box shadow utility
 
 ### Usage

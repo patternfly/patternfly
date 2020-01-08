@@ -114,7 +114,7 @@ cssPrefix: pf-c-breadcrumb
 ```
 
 ## Documentation
-### Overiew
+### Overview
 A breadcrumb is a list of links to display a user's navigational hierarchy. The last item of the breadcrumb list indicates the current page's location.
 
 * `.pf-c-breadcrumb__list` is the default breadcrumb navigation. It provides links to previous navigation pages and also shows the current page's location.

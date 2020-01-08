@@ -21,7 +21,7 @@ cssPrefix: pf-c-tab-content
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Tab content should be used with the [tabs component](/documentation/core/components/tabs).
 
 ### Accessibility

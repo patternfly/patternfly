@@ -36,7 +36,7 @@ import './Stack.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The stack layout is designed to position items vertically, with one item filling the available vertical space.
 
 ### Usage

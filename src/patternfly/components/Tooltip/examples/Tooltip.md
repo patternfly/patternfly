@@ -46,7 +46,7 @@ cssPrefix: pf-c-tooltip
 ```
 
 ## Documentation
-### Overiew
+### Overview
 A tooltip is used to provide contextual information for another component on hover.  The tooltip itself is made up of two elements: arrow and content. One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the tooltip component.
 
 ### Accessibility

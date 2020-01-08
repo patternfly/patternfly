@@ -57,7 +57,7 @@ cssPrefix: pf-c-switch
 ```
 
 ## Documentation
-### Overiew
+### Overview
 A switch is an alternative to the checkbox component.
 
 Use a switch when your user needs to perform instantaneous actions without confirmation.

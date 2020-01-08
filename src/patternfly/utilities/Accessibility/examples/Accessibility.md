@@ -25,7 +25,7 @@ The text underneath is hidden.
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-screen-reader-on-lg**
 
 ### Usage

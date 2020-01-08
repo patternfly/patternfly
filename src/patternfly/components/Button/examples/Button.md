@@ -234,7 +234,7 @@ import './Button.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Always add a modifier class to add color to the button.
 
 ### Button vs link

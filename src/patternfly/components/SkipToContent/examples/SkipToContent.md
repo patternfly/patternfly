@@ -104,7 +104,7 @@ Press tab to skip to content at the bottom of the page.
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Skip to content allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
 
 When using `.pf-c-skip-to-content` you must provide an `href` attribute whose value corresponds to the `id` attribute of the primary content container for your application. In most cases this is the `<main>` element. For a demo of this see the [page demo](/documentation/core/demos/page), and note the use of `tabindex="-1"` which allows the element to receive focus programmatically.

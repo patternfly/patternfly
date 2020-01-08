@@ -157,7 +157,7 @@ If the status that displays with the bar is not a percentage, then the ARIA tag 
 ```
 
 ## Documentation
-### Overiew
+### Overview
 ### Accessibility
 If this component is describing the loading progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
 

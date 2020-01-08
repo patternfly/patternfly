@@ -18,7 +18,7 @@ import './Float.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-text-left-on-lg**
 
 ### Usage

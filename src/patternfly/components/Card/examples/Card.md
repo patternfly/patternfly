@@ -220,7 +220,7 @@ cssPrefix: pf-c-card
 ```
 
 ## Documentation
-### Overiew
+### Overview
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
 
 ### Accessibility

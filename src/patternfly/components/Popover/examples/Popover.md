@@ -95,7 +95,7 @@ cssPrefix: pf-c-popover
 ```
       
 ## Documentation
-### Overiew
+### Overview
 A popover is used to provide contextual information for another component on click.  The popover itself is made up of two main elements: arrow and content. The content element follows the pattern of the popover box component, with a close icon in the top right corner, as well as a header and body.  One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the popover component
 
 ### Accessibility
