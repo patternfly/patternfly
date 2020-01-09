@@ -217,7 +217,7 @@
     }
 
     // set contents of td to start at column two of td grid
-    * {
+    > * {
       @media screen and (min-width: $pf-global--breakpoint--xs) {
         grid-column: 2;
       }
