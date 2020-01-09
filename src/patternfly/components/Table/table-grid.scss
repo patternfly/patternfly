@@ -298,7 +298,7 @@
   tbody {
     position: relative;
 
-    &::before {
+    &::after {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -308,7 +308,7 @@
     }
 
     &.pf-m-expanded {
-      &::before {
+      &::after {
         background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
       }
     }
@@ -331,7 +331,7 @@
     --pf-c-table-cell--PaddingRight: 0;
     --pf-c-table-cell--PaddingLeft: 0;
 
-    display: initial;
+    display: block;
     max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
     overflow-y: auto;
     border-bottom: none;
