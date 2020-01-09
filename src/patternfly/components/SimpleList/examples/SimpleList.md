@@ -9,6 +9,19 @@ cssPrefix: pf-c-simple-list
 {{#> simple-list}}
   {{#> simple-list-list}}
     {{#> simple-list-item}}
+      {{#> simple-list-item-button}}
+        List item 1
+      {{/simple-list-item-button}}
+    {{/simple-list-item}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-button}}
+        List item 2
+      {{/simple-list-item-button}}
+    {{/simple-list-item}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-button}}
+        List item 3
+      {{/simple-list-item-button}}
     {{/simple-list-item}}
   {{/simple-list-list}}
 {{/simple-list}}
@@ -16,10 +29,56 @@ cssPrefix: pf-c-simple-list
 ```hbs title=Grouped-list
 {{#> simple-list}}
   {{#> simple-list-section}}
-    {{#> simple-list-section-title}}
-    {{/simple-list-section-title}}
+    {{#> simple-list-title}}
+       Title
+    {{/simple-list-title}}
     {{#> simple-list-list}}
       {{#> simple-list-item}}
+        {{#> simple-list-item-button}}
+          List item 1
+        {{/simple-list-item-button}}
+      {{/simple-list-item}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 2
+      {{/simple-list-item-button}}
+      {{/simple-list-item}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 3
+      {{/simple-list-item-button}}
+      {{/simple-list-item}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 4
+      {{/simple-list-item-button}}
+      {{/simple-list-item}}
+    {{/simple-list-list}}
+  {{/simple-list-section}}
+  {{#> simple-list-section}}
+    {{#> simple-list-title}}
+      Title
+    {{/simple-list-title}}
+    {{#> simple-list-list}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 1
+      {{/simple-list-item-button}}
+      {{/simple-list-item}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 2
+      {{/simple-list-item-button}}
+      {{/simple-list-item}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 3
+      {{/simple-list-item-button}}
+      {{/simple-list-item}}
+      {{#> simple-list-item}}
+              {{#> simple-list-item-button}}
+        List item 4
+      {{/simple-list-item-button}}
       {{/simple-list-item}}
     {{/simple-list-list}}
   {{/simple-list-section}}

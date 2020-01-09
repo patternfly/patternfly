@@ -23,3 +23,4 @@ import './dist/components/Drawer/drawer.css';
 import './dist/components/OverflowMenu/overflow-menu.css';
 import './dist/components/NotificationDrawer/notification-drawer.css';
 import './dist/components/Spinner/spinner.css';
+import './dist/components/SimpleList/simple-list.css';
