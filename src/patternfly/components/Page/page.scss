@@ -73,6 +73,7 @@
   --pf-c-page__header-tools-group--m-icons--c-button--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__header-tools-group--m-icons--c-button--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__header-tools-group--m-icons--c-button--focus__c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools-group--m-icons--c-button--active__c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
@@ -306,11 +307,6 @@
     background-color: var(--pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor);
     border-radius: var(--pf-c-page__header-tools-group--m-icons--c-button--BorderRadius);
 
-    &:active,
-    &.pf-m-active {
-      --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: var(--pf-c-page__header-tools-group--m-icons--c-button--active--BackgroundColor);
-    }
-
     &:focus,
     &.pf-m-focus {
       --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: var(--pf-c-page__header-tools-group--m-icons--c-button--focus--BackgroundColor);
@@ -320,6 +316,21 @@
         &.pf-m-unread {
           &::after {
             border-color: var(--pf-c-page__header-tools-group--m-icons--c-button--focus__c-notification-badge--m-unread--after--BorderColor);
+          }
+        }
+      }
+      /* stylelint-enable */
+    }
+
+    &:active,
+    &.pf-m-active {
+      --pf-c-page__header-tools-group--m-icons--c-button--BackgroundColor: var(--pf-c-page__header-tools-group--m-icons--c-button--active--BackgroundColor);
+
+      /* stylelint-disable */
+      .pf-c-notification-badge {
+        &.pf-m-unread {
+          &::after {
+            border-color: var(--pf-c-page__header-tools-group--m-icons--c-button--active__c-notification-badge--m-unread--after--BorderColor);
           }
         }
       }
