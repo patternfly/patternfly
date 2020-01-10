@@ -1,14 +1,14 @@
 <button class="pf-c-clipboard-copy__group-toggle{{#if clipboard-copy-group-toggle--modifier}} {{clipboard-copy-group-toggle--modifier}}{{/if}}"
-  {{#if clipboard-copy-group-toggle--attribute}}
-    {{{clipboard-copy-group-toggle--attribute}}}
-  {{/if}}
+  aria-label="Show content"
+  type="button"
   {{#if clipboard-copy--IsExpanded}}
     aria-expanded="true"
   {{else}}
     aria-expanded="false"
   {{/if}}
-    aria-label="Show content"
-  >
+  {{#if clipboard-copy-group-toggle--attribute}}
+    {{{clipboard-copy-group-toggle--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
-    <i class="fas fa-angle-right pf-c-clipboard-copy__group-toggle-icon" aria-hidden="true"></i>
+  <i class="fas fa-angle-right pf-c-clipboard-copy__group-toggle-icon" aria-hidden="true"></i>
 </button>

@@ -7,9 +7,9 @@
   {{#if select--IsEmptyMenu}}
     [Panel contents here]
   {{else}}
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">Running</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Running</button></li>
     <li>
-      <button class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
+      <button type="button" class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
         {{#if select--ItemIsSelected}}
           aria-pressed="true"
         {{else}}
@@ -21,8 +21,8 @@
         {{/if}}
       </button>
     </li>
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">Down</button></li>
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">Degraded</button></li>
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">Needs Maintenance</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Down</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Degraded</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Needs Maintenance</button></li>
   {{/if}}
 </{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}}>
