@@ -1,16 +1,18 @@
 .pf-c-simple-list {
   // Simple list item
-  --pf-c-simple-list__item--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-simple-list__item--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-simple-list__item--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-simple-list__item--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-simple-list__item--hover--Color: var(--pf-global--link--Color);
-  --pf-c-simple-list__item--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
-  --pf-c-simple-list__item--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-simple-list__item--active--Color: var(--pf-global--link--Color);
-  --pf-c-simple-list__item--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
-  --pf-c-simple-list__item--focus--Color: var(--pf-global--link--Color);
-  --pf-c-simple-list__item--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-simple-list__item-button--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-simple-list__item-button--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-simple-list__item-button--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-simple-list__item-button--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-simple-list__item-button--hover--Color: var(--pf-global--link--Color);
+  --pf-c-simple-list__item-button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-simple-list__item-button--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-simple-list__item-button--focus--Color: var(--pf-global--link--Color);
+  --pf-c-simple-list__item-button--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-simple-list__item-button--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-simple-list__item-button--active--Color: var(--pf-global--link--Color);
+  --pf-c-simple-list__item-button--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-simple-list__item-button--active--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Simple list title
   --pf-c-simple-list__title--PaddingTop: var(--pf-global--spacer--sm);
@@ -25,26 +27,31 @@
   --pf-c-simple-list__section-section--MarginTop: var(--pf-global--spacer--md); // what is this value?
 }
 
-.pf-c-simple-list__item {
-  padding: var(--pf-c-simple-list__item--PaddingTop) var(--pf-c-simple-list__item--PaddingRight) var(--pf-c-simple-list__item--PaddingBottom) var(--pf-c-simple-list__item--PaddingLeft);
+.pf-c-simple-list__item-button {
+  width: 100%;
+  padding: var(--pf-c-simple-list__item-button--PaddingTop) var(--pf-c-simple-list__item-button--PaddingRight) var(--pf-c-simple-list__item-button--PaddingBottom) var(--pf-c-simple-list__item-button--PaddingLeft);
+  text-align: left;
+  border: none;
 
   &.pf-m-hover,
   &:hover {
-    font-weight: var(--pf-c-simple-list__item--hover--FontWeight);
-    color: var(--pf-c-simple-list__item--hover--Color);
-    background-color: var(--pf-c-simple-list__item--hover--BackgroundColor);
-  }
-
-  &.pf-m-active,
-  &:active {
-    color: var(--pf-c-simple-list__item--active--Color);
-    background-color: var(--pf-c-simple-list__item--active--BackgroundColor);
+    font-weight: var(--pf-c-simple-list__item-button--hover--FontWeight);
+    color: var(--pf-c-simple-list__item-button--hover--Color);
+    background-color: var(--pf-c-simple-list__item-button--hover--BackgroundColor);
   }
 
   &.pf-m-focus,
   &:focus {
-    color: var(--pf-c-simple-list__item--focus--Color);
-    background-color: var(--pf-c-simple-list__item--focus--BackgroundColor);
+    font-weight: var(--pf-c-simple-list__item-button--focus--FontWeight);
+    color: var(--pf-c-simple-list__item-button--focus--Color);
+    background-color: var(--pf-c-simple-list__item-button--focus--BackgroundColor);
+  }
+
+  &.pf-m-active,
+  &:active {
+    font-weight: var(--pf-c-simple-list__item-button--active--FontWeight);
+    color: var(--pf-c-simple-list__item-button--active--Color);
+    background-color: var(--pf-c-simple-list__item-button--active--BackgroundColor);
   }
 }
 
