@@ -4,6 +4,9 @@
   --pf-c-simple-list__item-button--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-simple-list__item-button--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-simple-list__item-button--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-simple-list__item-button--Color: var(--pf-global--Color--100);
+  --pf-c-simple-list__item-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-simple-list__item-button--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-simple-list__item-button--hover--Color: var(--pf-global--link--Color);
   --pf-c-simple-list__item-button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-simple-list__item-button--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
@@ -30,28 +33,31 @@
 .pf-c-simple-list__item-button {
   width: 100%;
   padding: var(--pf-c-simple-list__item-button--PaddingTop) var(--pf-c-simple-list__item-button--PaddingRight) var(--pf-c-simple-list__item-button--PaddingBottom) var(--pf-c-simple-list__item-button--PaddingLeft);
+  font-weight: var(--pf-c-simple-list__item-button--FontWeight);
+  color: var(--pf-c-simple-list__item-button--Color);
   text-align: left;
+  background-color: var(--pf-c-simple-list__item-button--BackgroundColor);
   border: none;
 
   &.pf-m-hover,
   &:hover {
-    font-weight: var(--pf-c-simple-list__item-button--hover--FontWeight);
-    color: var(--pf-c-simple-list__item-button--hover--Color);
-    background-color: var(--pf-c-simple-list__item-button--hover--BackgroundColor);
+    --pf-c-simple-list__item-button--FontWeight: var(--pf-c-simple-list__item-button--hover--FontWeight);
+    --pf-c-simple-list__item-button--BackgroundColor: var(--pf-c-simple-list__item-button--hover--BackgroundColor);
+    --pf-c-simple-list__item-button--Color: var(--pf-c-simple-list__item-button--hover--Color);
   }
 
   &.pf-m-focus,
   &:focus {
-    font-weight: var(--pf-c-simple-list__item-button--focus--FontWeight);
-    color: var(--pf-c-simple-list__item-button--focus--Color);
-    background-color: var(--pf-c-simple-list__item-button--focus--BackgroundColor);
+    --pf-c-simple-list__item-button--FontWeight: var(--pf-c-simple-list__item-button--focus--FontWeight);
+    --pf-c-simple-list__item-button--BackgroundColor: var(--pf-c-simple-list__item-button--focus--BackgroundColor);
+    --pf-c-simple-list__item-button--Color: var(--pf-c-simple-list__item-button--focus--Color);
   }
 
   &.pf-m-active,
   &:active {
-    font-weight: var(--pf-c-simple-list__item-button--active--FontWeight);
-    color: var(--pf-c-simple-list__item-button--active--Color);
-    background-color: var(--pf-c-simple-list__item-button--active--BackgroundColor);
+    --pf-c-simple-list__item-button--FontWeight: var(--pf-c-simple-list__item-button--active--FontWeight);
+    --pf-c-simple-list__item-button--BackgroundColor: var(--pf-c-simple-list__item-button--active--BackgroundColor);
+    --pf-c-simple-list__item-button--Color: var(--pf-c-simple-list__item-button--active--Color);
   }
 }
 
