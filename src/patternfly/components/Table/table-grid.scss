@@ -101,7 +101,6 @@
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
 
-
   // End responsive vars
   // ==================================================================
 }
@@ -299,7 +298,7 @@
   tbody {
     position: relative;
 
-    &::before {
+    &::after {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -309,7 +308,7 @@
     }
 
     &.pf-m-expanded {
-      &::before {
+      &::after {
         background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
       }
     }
