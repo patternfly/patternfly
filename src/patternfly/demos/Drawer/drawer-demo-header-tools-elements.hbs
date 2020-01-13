@@ -1,0 +1,24 @@
+{{#> page-header-tools}}
+  {{#> page-header-tools-group page-header-tools-group--modifier="pf-m-icons"}}
+    {{#> button button--modifier="pf-m-plain pf-m-opened" button--attribute='aria-label="Unread notifications"'}}
+        {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
+          <i class="fas fa-bell" aria-hidden="true"></i>
+        {{/notification-badge}}
+    {{/button}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
+        <i class="fas fa-cog" aria-hidden="true"></i>
+    {{/button}}
+  {{/page-header-tools-group}}
+  {{#> page-header-tools-group}}
+    {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-mobile pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{/dropdown}}
+    <div class="pf-m-user">
+      {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
+        {{#> dropdown-toggle-text}}
+          John Smith
+        {{/dropdown-toggle-text}}
+      {{/dropdown}}
+    </div>
+  {{/page-header-tools-group}}
+  {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}{{/avatar}}
+{{/page-header-tools}}
