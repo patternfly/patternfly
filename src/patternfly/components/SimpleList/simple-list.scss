@@ -1,11 +1,12 @@
 .pf-c-simple-list {
-  // Simple list item
-  --pf-c-simple-list__item-button--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-simple-list__item-button--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-simple-list__item-button--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-simple-list__item-button--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-simple-list__item-button--Color: var(--pf-global--Color--100);
+  // Simple list item button
+  --pf-c-simple-list__item-button--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-simple-list__item-button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-simple-list__item-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-simple-list__item-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-simple-list__item-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-simple-list__item-button--Color: var(--pf-global--Color--100);
+  --pf-c-simple-list__item-button--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-simple-list__item-button--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-simple-list__item-button--hover--Color: var(--pf-global--link--Color);
   --pf-c-simple-list__item-button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
@@ -19,20 +20,22 @@
 
   // Simple list title
   --pf-c-simple-list__title--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-simple-list__title--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-simple-list__title--PaddingBottom: var(--pf-global--spacer--sm); // what is this value?
-  --pf-c-simple-list__title--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-simple-list__title--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-simple-list__title--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-simple-list__title--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-simple-list__title--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-simple-list__title--Color: var(--pf-global--Color--dark-200);
   --pf-c-simple-list__title--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Simple list section
-  --pf-c-simple-list__section-section--MarginTop: var(--pf-global--spacer--md); // what is this value?
+  --pf-c-simple-list__section-section--MarginTop: var(--pf-global--spacer--sm);
 }
 
 .pf-c-simple-list__item-button {
+  display: block;
   width: 100%;
   padding: var(--pf-c-simple-list__item-button--PaddingTop) var(--pf-c-simple-list__item-button--PaddingRight) var(--pf-c-simple-list__item-button--PaddingBottom) var(--pf-c-simple-list__item-button--PaddingLeft);
+  font-size: var(--pf-c-simple-list__item-button--FontSize);
   font-weight: var(--pf-c-simple-list__item-button--FontWeight);
   color: var(--pf-c-simple-list__item-button--Color);
   text-align: left;
