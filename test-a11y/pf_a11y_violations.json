@@ -1,0 +1,2016 @@
+[
+  {
+    "page": "/components/AboutModalBox/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Alert/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Avatar/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Backdrop/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/BackgroundImage/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Badge/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Brand/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Breadcrumb/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Button/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Card/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Check/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Content/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/DataList/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Dropdown/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Form/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/FormControl/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/InputGroup/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Label/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/List/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/LoginBox/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/ModalBox/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Nav/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Popover/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Progress/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Switch/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Table/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Title/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/components/Tooltip/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/demos/AboutModal/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/demos/BasicForms/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/demos/LoginPage/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/demos/Modal/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/demos/PageLayout/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/demos/Toolbar/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Bullseye/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Gallery/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Grid/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Level/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Login/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Page/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Split/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Stack/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/layouts/Toolbar/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/upgrade-examples/AlertUpgradeExamples/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/upgrade-examples/BadgeUpgradeExamples/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/upgrade-examples/CardUpgradeExamples/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/Accessibility/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/Alignment/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/BoxShadow/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/Display/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/Flex/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/Sizing/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "/utilities/Spacing/examples-full/",
+    "violations": [
+      {
+        "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.0/meta-viewport?application=webdriverjs",
+        "id": "meta-viewport",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "meta-viewport",
+                "impact": "critical",
+                "message": "<meta> tag disables zooming on mobile devices",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  <meta> tag disables zooming on mobile devices",
+            "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,\n                                 maximum-scale=1.0, user-scalable=no\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144"
+        ]
+      }
+    ]
+  }
+]
