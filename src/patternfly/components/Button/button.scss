@@ -130,7 +130,7 @@
 
   .pf-c-button__text + .pf-c-button__icon {
     margin-right: 0;
-    margin-left: var(--pf-c-button__icon--MarginLeft);
+    margin-left: var(--pf-c-button__text--icon--MarginLeft);
   }
 
   &::after {
