@@ -17,4 +17,5 @@ import './dist/patternfly.css';
 import './dist/patternfly-addons.css';
 
 // Experimental components
+import './dist/components/Drawer/drawer.css';
 import './dist/components/NotificationDrawer/notification-drawer.css';
