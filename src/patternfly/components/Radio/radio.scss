@@ -8,6 +8,7 @@
   --pf-c-radio__input--MarginTop: #{pf-size-prem(-3px)};
   --pf-c-radio__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-radio__description--Color: var(--pf-global--Color--200);
+  --pf-c-radio--m-horizontal__description--PaddingLeft: var(--pf-global--spacer--md);
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -17,10 +18,15 @@
 
   &.pf-m-description-horizontal {
     grid-template-columns: auto auto 1fr;
-    grid-gap: 4px 24px;
+    align-items: start;
+
+    .pf-c-radio__input {
+      --pf-c-radio__input--MarginTop: 0;
+    }
 
     .pf-c-radio__description {
-      grid-column: 1;
+      grid-column: initial;
+      padding-left: var(--pf-c-radio--m-horizontal__description--PaddingLeft);
     }
   }
 }
