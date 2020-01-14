@@ -68,6 +68,7 @@
 
   // Table cell - check
   --pf-c-table__check--input--MarginTop: #{pf-size-prem(3px)};
+  --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
   // Table cell - action
   --pf-c-table__action--PaddingTop: 0;
@@ -313,6 +314,7 @@
 
   > * {
     margin-top: var(--pf-c-table__check--input--MarginTop);
+    font-size: var(--pf-c-table__check--input--FontSize);
     vertical-align: top;
   }
 }
