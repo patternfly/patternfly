@@ -45,6 +45,26 @@ cssPrefix: pf-c-radio
 {{/radio}}
 ```
 
+```hbs title=With-vertical-description
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio-description-vertical" name="exampleRadioDescriptionVertical"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio-description-vertical"'}}Radio label{{/radio-label}}
+  {{#> radio-description}}
+    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
+  {{/radio-description}}
+{{/radio}}
+```
+
+```hbs title=With-horizontal-description
+{{#> radio radio--modifier="pf-m-description-horizontal"}}
+  {{#> radio-input radio-input--attribute='id="radio-horizontal-vertical" name="exampleRadioDescriptionHorizontal"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio-description-horizontal"'}}Radio label{{/radio-label}}
+  {{#> radio-description}}
+    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
+  {{/radio-description}}
+{{/radio}}
+```
+
 ## Documentation
 ### Overview
 The Radio component is provided for use cases outside of forms. If it is used without label text ensure some sort of label for assistive technologies. (for example: `aria-label`)
