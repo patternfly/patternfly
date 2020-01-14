@@ -22,7 +22,9 @@ cssPrefix: pf-c-card
 ```hbs title=With-image-and-action
 {{#> card card--id="card-action-example-1"}}
   {{#> card-head}}
-    <span>img goes here</span>
+    {{#> card-image}}
+      <img src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
+    {{/card-image}}
     {{#> card-actions}}
       {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
@@ -79,7 +81,9 @@ cssPrefix: pf-c-card
 ```hbs title=With-only-image-in-head
 {{#> card}}
   {{#> card-head}}
-    <span>img goes here</span>
+    {{#> card-image}}
+      <img src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
+    {{/card-image}}
   {{/card-head}}
   {{#> card-header}}
     Header
