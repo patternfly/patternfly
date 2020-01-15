@@ -12,19 +12,19 @@ cssPrefix: pf-c-table
   {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Branches
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Workspaces
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
     {{/table-tr}}
