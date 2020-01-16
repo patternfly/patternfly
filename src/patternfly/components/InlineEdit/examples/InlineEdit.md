@@ -190,13 +190,13 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Bulk-edit-dl-example-(default)
+```hbs title=Bulk-edit-dl-(default)
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-default"}}
   {{#> inline-edit-dl}}{{/inline-edit-dl}}
 {{/inline-edit}}
 ```
 
-```hbs title=Bulk-edit-dl-example-(active)
+```hbs title=Bulk-edit-dl-(active)
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-active" inline-edit--modifier="pf-m-editable"}}
   {{#> inline-edit-dl}}{{/inline-edit-dl}}
 {{/inline-edit}}
@@ -338,7 +338,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 
 ```hbs title=Inline-edit-table-row
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
-  {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
+  {{#> table table--grid="true" table--modifier="pf-m-grid" table--attribute='aria-label="Inline edit table row example"'}}
     {{#> table-caption}}
       This is the table caption
     {{/table-caption}}
@@ -366,14 +366,14 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 
     {{#> table-tbody}}
       {{#> table-tr inline-edit--row="-row-1-" table-tr--modifier="pf-m-editable"}}
-        {{#> table-td table-td--data-label="Text input"}}
+        {{#> table-th table-th--data-label="Text input"}}
           {{#> inline-edit-value}}
             Text input description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
             {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id inline-edit--row 'text-input"  aria-label="Text input"')}}
           {{/inline-edit-input}}
-        {{/table-td}}
+        {{/table-th}}
         {{#> table-td table-td--data-label="Disabled text input"}}
           {{#> inline-edit-value}}
             Text input disabled, description content
@@ -433,13 +433,11 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-enable"}}
-            {{#> inline-edit-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-                <i class="fas fa-pencil-alt" aria-hidden="true" />
-              {{/button}}
-            {{/inline-edit-action}}
-          {{/inline-edit-group}}
+          {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable"}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
+              <i class="fas fa-pencil-alt" aria-hidden="true" />
+            {{/button}}
+          {{/inline-edit-action}}
         {{/table-td}}
         {{#> table-td table-td--action="true"}}
           {{#> dropdown id=(concat table--id inline-edit--row "-dropdown-kebab") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
@@ -448,14 +446,14 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       {{/table-tr}}
 
       {{#> table-tr inline-edit--row="-row-2-"}}
-        {{#> table-td table-td--data-label="Text input"}}
+        {{#> table-th table-th--data-label="Text input"}}
           {{#> inline-edit-value}}
             Text input description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
             {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id inline-edit--row 'text-input"  aria-label="Text input"')}}
           {{/inline-edit-input}}
-        {{/table-td}}
+        {{/table-th}}
         {{#> table-td table-td--data-label="Disabled text input"}}
           {{#> inline-edit-value}}
             Text input disabled, description content
@@ -515,13 +513,11 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-enable"}}
-            {{#> inline-edit-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-                <i class="fas fa-pencil-alt" aria-hidden="true" />
-              {{/button}}
-            {{/inline-edit-action}}
-          {{/inline-edit-group}}
+          {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable"}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
+              <i class="fas fa-pencil-alt" aria-hidden="true" />
+            {{/button}}
+          {{/inline-edit-action}}
         {{/table-td}}
         {{#> table-td table-td--action="true"}}
           {{#> dropdown id=(concat table--id inline-edit--row "-dropdown-kebab") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
@@ -563,5 +559,4 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-m-icon-group` | `.pf-c-inline-edit__group` | Modifies an action group item spacing. |
 | `.pf-m-column` | `.pf-c-inline-edit__group` | Modifies an action group flex direction. |
 | `.pf-m-footer` | `.pf-c-inline-edit__group` | Modifies an inline edit group margin-top. |
-| `.pf-m-enable` | `.pf-c-inline-edit__group.pf-m-action-group`, `.pf-c-inline-edit__action` | Exposes an inline edit action group or action by default. |
-| `.pf-m-hidden` | `.pf-c-inline-edit > *` | Modifies an inline edit element to hidden. |
+| `.pf-m-enable` | `.pf-c-inline-edit__action` | Exposes an inline edit action by default. |

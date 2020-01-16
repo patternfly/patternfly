@@ -18,10 +18,6 @@ import './dist/patternfly-addons.css';
 
 // Experimental components
 import './dist/components/Drawer/drawer.css';
-<<<<<<< HEAD
-=======
 import './dist/components/InlineEdit/inline-edit.css';
-import './dist/components/OverflowMenu/overflow-menu.css';
->>>>>>> feat(inline-edit): wrapped inputs
 import './dist/components/NotificationDrawer/notification-drawer.css';
 import './dist/components/SimpleList/simple-list.css';
