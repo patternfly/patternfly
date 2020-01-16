@@ -51,7 +51,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@mdx-js/mdx": "^1.1.5",
     "@mdx-js/react": "^1.1.5",
-    "@patternfly/patternfly-a11y": "0.0.14",
+    "@patternfly/patternfly-a11y": "0.0.15",
     "@patternfly/react-core": "3.120.8",
     "@patternfly/react-icons": "3.14.19",
     "@patternfly/react-table": "2.24.22",
