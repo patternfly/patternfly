@@ -80,6 +80,10 @@ jobs:
         command: npm run test:a11y:ci
     - store_artifacts:
         path: coverage/
+    - persist_to_workspace:
+        root: ~/project
+        paths:
+          - coverage/
   upload_docs:
     docker:
     - image: circleci/node:10
