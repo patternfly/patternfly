@@ -134,7 +134,7 @@ import './AppLauncher.css'
         <li>
           {{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link not in group
           {{/app-launcher-menu-item}}
@@ -150,7 +150,7 @@ import './AppLauncher.css'
         <li>
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Group 1 link
             {{> app-launcher-menu-item-external-icon}}
@@ -159,7 +159,7 @@ import './AppLauncher.css'
         <li>
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Group 1 link
             {{> app-launcher-menu-item-external-icon}}
@@ -176,7 +176,7 @@ import './AppLauncher.css'
         <li>
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Group 2 link
             {{> app-launcher-menu-item-external-icon}}
@@ -185,7 +185,7 @@ import './AppLauncher.css'
         <li>
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Group 2 link
             {{> app-launcher-menu-item-external-icon}}
@@ -212,7 +212,7 @@ import './AppLauncher.css'
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external pf-m-favorite"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link 2
           {{> app-launcher-menu-item-external-icon}}
@@ -224,7 +224,7 @@ import './AppLauncher.css'
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external pf-m-favorite"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link 3
           {{> app-launcher-menu-item-external-icon}}
@@ -244,7 +244,7 @@ import './AppLauncher.css'
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link 1
           {{> app-launcher-menu-item-external-icon}}
@@ -256,7 +256,7 @@ import './AppLauncher.css'
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external pf-m-favorite"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link 2
           {{> app-launcher-menu-item-external-icon}}
@@ -276,7 +276,7 @@ import './AppLauncher.css'
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external pf-m-favorite"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link 3
             {{> app-launcher-menu-item-external-icon}}
@@ -288,7 +288,7 @@ import './AppLauncher.css'
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="">
+              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
             {{/app-launcher-menu-item-icon}}
             Link 4
             {{> app-launcher-menu-item-external-icon}}
