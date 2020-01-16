@@ -30,7 +30,7 @@
     "serve": "gatsby serve",
     "start": "npm run dev",
     "test": "node test/test.js",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000 --aggregate --noIncomplete",
+    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000 --aggregate --noIncomplete --ignore color-contrast,focusable-content,scrollable-region-focusable",
     "test:a11y:ci": "start-server-and-test serve http://localhost:9000 test:a11y",
     "update-modifiers": "./build/extractModifiers.sh",
     "semantic-release": "semantic-release"
@@ -51,7 +51,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@mdx-js/mdx": "^1.1.5",
     "@mdx-js/react": "^1.1.5",
-    "@patternfly/patternfly-a11y": "^0.0.11",
+    "@patternfly/patternfly-a11y": "0.0.15",
     "@patternfly/react-core": "3.120.8",
     "@patternfly/react-icons": "3.14.19",
     "@patternfly/react-table": "2.24.22",

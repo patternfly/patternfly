@@ -4,6 +4,10 @@ REPONAME=${CIRCLE_PROJECT_REPONAME}
 PR_NUM=${CIRCLE_PR_NUMBER}
 PR_BRANCH=${CIRCLE_BRANCH}
 
+if [ -f "./coverage/report.html" ]; then
+  cp coverage/report.html public/a11y-report.html
+fi
+
 if [ -n "${PR_NUM}" ] # If build is a PR
 then
   # Domain names follow the RFC1123 spec [a-Z] [0-9] [-] limited to 253 characters
