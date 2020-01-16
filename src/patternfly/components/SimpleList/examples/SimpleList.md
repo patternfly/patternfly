@@ -97,6 +97,6 @@ cssPrefix: pf-c-simple-list
 | `.pf-c-simple-list__list` | `<ul>` | Initiates a simple list unordered list. |
 | `.pf-c-simple-list__item` | `<li>` | Initiates a simple list item. |
 | `.pf-c-simple-list__item-button` | `<button>` | Initiates a simple list item button. |
-| `.pf-m-hover` | `.pf-c-simple-list__item-button` | Modifies the simple list item button for the hovered state. |
+| `.pf-m-hover` | `.pf-c-simple-list__item-button` | Modifies the simple list item button for the hover state. |
 | `.pf-m-active` | `.pf-c-simple-list__item-button` | Modifies the simple list item button for the active state. |
-| `.pf-m-focus` | `.pf-c-simple-list__item-button` | Modifies the simple list item button for the focussed state. |
+| `.pf-m-focus` | `.pf-c-simple-list__item-button` | Modifies the simple list item button for the focus state. |

@@ -10,7 +10,6 @@
   --pf-c-simple-list__item-button--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-simple-list__item-button--hover--Color: var(--pf-global--link--Color);
   --pf-c-simple-list__item-button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
-  --pf-c-simple-list__item-button--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-simple-list__item-button--focus--Color: var(--pf-global--link--Color);
   --pf-c-simple-list__item-button--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-simple-list__item-button--focus--FontWeight: var(--pf-global--FontWeight--semi-bold);
@@ -44,7 +43,6 @@
 
   &.pf-m-hover,
   &:hover {
-    --pf-c-simple-list__item-button--FontWeight: var(--pf-c-simple-list__item-button--hover--FontWeight);
     --pf-c-simple-list__item-button--BackgroundColor: var(--pf-c-simple-list__item-button--hover--BackgroundColor);
     --pf-c-simple-list__item-button--Color: var(--pf-c-simple-list__item-button--hover--Color);
   }
