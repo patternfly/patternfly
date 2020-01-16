@@ -34,6 +34,7 @@ workflows:
     - deploy:
         requires:
         - build
+        - test_a11y
         filters:
           branches:
             only: master
