@@ -44,26 +44,15 @@ cssPrefix: pf-c-check
 {{/check}}
 ```
 
-```hbs title=With-vertical-description
+```hbs title=With-description
 {{#> check}}
   {{#> check-input check-input--attribute='id="check7" name="exampleCheck7"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check7"'}}Check{{/check-label}}
+  {{#> check-label check-label--attribute='for="check7"'}}Check with description{{/check-label}}
   {{#> check-description}}
     Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
   {{/check-description}}
 {{/check}}
 ```
-
-```hbs title=With-horizontal-description
-{{#> check check--modifier="pf-m-horizontal"}}
-  {{#> check-input check-input--attribute='id="check8" name="exampleCheck8"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check8"'}}Check{{/check-label}}
-  {{#> check-description}}
-    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
-  {{/check-description}}
-{{/check}}
-```
-
 
 ## Documentation
 ### Overview
@@ -84,4 +73,3 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-check__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
 | `.pf-c-check__description` | `<p>` |  Initiates a check description. It is displayed vertically by default. |
 | `.pf-m-disabled` | `.pf-c-check__label` |  Initiates a disabled style for labels. **Required when input is disabled** |
-| `.pf-m-horizontal` | `.pf-c-check` | Modifies the check so that its description is displayed horizontally. |

@@ -8,27 +8,12 @@
   --pf-c-check__input--MarginTop: #{pf-size-prem(-3px)};
   --pf-c-check__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-check__description--Color: var(--pf-global--Color--200);
-  --pf-c-check--m-horizontal__description--PaddingLeft: var(--pf-global--spacer--md);
 
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--pf-c-check--GridGap);
   align-items: center;
   justify-items: start;
-
-  &.pf-m-horizontal {
-    grid-template-columns: auto auto 1fr;
-    align-items: start;
-
-    .pf-c-check__input {
-      --pf-c-check__input--MarginTop: 0;
-    }
-
-    .pf-c-check__description {
-      grid-column: initial;
-      padding-left: var(--pf-c-check--m-horizontal__description--PaddingLeft);
-    }
-  }
 }
 
 .pf-c-check__label {
