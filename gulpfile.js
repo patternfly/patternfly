@@ -309,10 +309,12 @@ function lintCSSSize(cb) {
   const patternflyMinSize = fs.statSync(patternflyMinPath).size;
   const errors = [];
   // At time of writing is 609013
+  console.log(`patternfly.css is ${patternflySize / 1000}KB`);
   if (patternflySize > 650000) {
     errors.push(`patternfly.css is ${patternflySize / 1000}KB > 650KB`);
   }
   // At time of writing is 532807
+  console.log(`patternfly.min.css is ${patternflyMinSize / 1000}KB`);
   if (patternflyMinSize > 600000) {
     errors.push(`patternfly.min.css is ${patternflyMinSize / 1000}KB > 600KB`);
   }
