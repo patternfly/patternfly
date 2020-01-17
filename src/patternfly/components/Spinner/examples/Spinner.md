@@ -1,6 +1,6 @@
 ---
 title: Spinner
-section: experimental
+section: components
 cssPrefix: pf-c-spinner
 ---
 

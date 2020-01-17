@@ -1,6 +1,6 @@
 ---
 title: Overflow menu
-section: experimental
+section: components
 cssPrefix: pf-c-overflow-menu
 ---
 
