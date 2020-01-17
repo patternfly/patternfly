@@ -1,4 +1,4 @@
-/* stylelint-disable */
+// stylelint-disable
 
 // Display options
 $pf-u-display-options: (
@@ -15,4 +15,4 @@ $pf-u-display-options: (
 
 @include pf-utility-builder($pf-u-display-options, $pf-global--breakpoint-list);
 
-/* stylelint-enable */
+// stylelint-enable

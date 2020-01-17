@@ -217,7 +217,7 @@
     &.pf-m-external {
       &:hover,
       &:focus {
-        /* stylelint-disable-next-line */
+        // stylelint-disable-next-line
         .pf-c-app-launcher__menu-item-external-icon {
           opacity: 1;
         }

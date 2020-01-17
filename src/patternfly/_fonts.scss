@@ -4,7 +4,7 @@
 // PatternFly uses Overpass and Overpass mono http://overpassfont.org/
 //
 
-/* stylelint-disable font-family-name-quotes */
+// stylelint-disable font-family-name-quotes
 @font-face {
   font-family: "RedHatDisplay";
   src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Regular.eot");
@@ -295,4 +295,4 @@
       url("#{$pf-global--font-path}/overpass-mono-webfont/overpass-mono-bold.ttf")  format("truetype");
   }
 }
-/* stylelint-enable */
+// stylelint-enable

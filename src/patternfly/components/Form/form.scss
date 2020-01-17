@@ -70,7 +70,7 @@
         grid-template-columns: var(--pf-c-form--m-horizontal--md__group--GridTemplateColumns);
       }
 
-      /* stylelint-disable */
+      // stylelint-disable
       .pf-c-form__group .pf-c-form__label {
         padding-top: var(--pf-c-form__label--PaddingTop);
         padding-bottom: 0;
@@ -79,7 +79,7 @@
           --pf-c-form__label--PaddingTop: 0;
         }
       }
-      /* stylelint-enable */
+      // stylelint-enable
 
       .pf-c-form-control,
       .pf-c-form__horizontal-group,

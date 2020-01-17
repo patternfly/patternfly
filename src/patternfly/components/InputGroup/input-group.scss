@@ -31,12 +31,12 @@
   background-color: var(--pf-c-input-group--BackgroundColor);
   border-radius: var(--pf-c-input-group--BorderRadius); // This adds a default border radius to make sure the input group wont display if a button with a border radius is used.
 
-  /* stylelint-disable */
+  // stylelint-disable
   > * + * {
     margin-left: -1px;
   }
 
-  /* stylelint-enable */
+  // stylelint-enable
 
   .pf-c-form-control {
     &[aria-invalid="true"] {

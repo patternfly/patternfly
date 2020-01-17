@@ -1,4 +1,4 @@
-/* stylelint-disable */
+// stylelint-disable
 
 // Build spacing values
 @mixin pf-spacer-builder() {
@@ -51,7 +51,7 @@
   }
 }
 
-/* stylelint-enable */
+// stylelint-enable
 
 // Build spacing values
 @include pf-spacer-builder();

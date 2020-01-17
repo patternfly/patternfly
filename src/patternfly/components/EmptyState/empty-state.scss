@@ -23,7 +23,7 @@
   padding: var(--pf-c-empty-state--Padding);
   text-align: center;
 
-  /* stylelint-disable */
+  // stylelint-disable
   > .pf-c-button.pf-m-primary,
   .pf-c-empty-state__primary {
     margin-top: var(--pf-c-empty-state--c-button--MarginTop);
@@ -58,7 +58,7 @@
     }
   }
 }
-/* stylelint-enable */
+// stylelint-enable
 
 .pf-c-empty-state__icon {
   margin-bottom: var(--pf-c-empty-state__icon--MarginBottom);

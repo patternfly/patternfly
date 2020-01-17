@@ -1,4 +1,4 @@
-/* stylelint-disable */
+// stylelint-disable
 @mixin pf-mobile-layout {
   .pf-m-grid.pf-c-table {
     @content;
@@ -434,4 +434,4 @@
   }
 }
 
-/* stylelint-enable */
+// stylelint-enable

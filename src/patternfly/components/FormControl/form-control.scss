@@ -95,10 +95,10 @@ $pf-c-form-control--success--Coordinates: "M504 256c0 136.967-111.033 248-248 24
   border: var(--pf-c-form-control--BorderWidth) solid;
   border-color: var(--pf-c-form-control--BorderTopColor) var(--pf-c-form-control--BorderRightColor) var(--pf-c-form-control--BorderBottomColor) var(--pf-c-form-control--BorderLeftColor);
   border-radius: var(--pf-c-form-control--BorderRadius);
-  /* stylelint-disable */
+  // stylelint-disable
   -moz-appearance: none;
   -webkit-appearance: none;
-  /* stylelint-enable */
+  // stylelint-enable
 
   &::placeholder {
     --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color);

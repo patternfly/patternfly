@@ -66,9 +66,7 @@ module.exports = {
       options: {
         name: 'core', // This goes in URLs and determines sideNav items
         path: `${path.resolve(__dirname)}/src/patternfly`,
-        ignore: [
-          '**/*.scss'
-        ]
+        ignore: ['**/*.scss']
       }
     },
     // Source static pages
@@ -101,6 +99,6 @@ module.exports = {
       options: {
         extensions: ['.md']
       }
-    },
+    }
   ]
 };
