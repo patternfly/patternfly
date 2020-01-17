@@ -5,7 +5,7 @@
 
   position: absolute;
   top: var(--pf-c-skip-to-content--Top);
-  left: -300%; /* moves off screen */
+  left: -300%; // moves off screen
   z-index: var(--pf-c-skip-to-content--ZIndex);
 
   &.pf-m-focus,

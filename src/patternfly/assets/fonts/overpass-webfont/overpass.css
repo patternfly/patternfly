@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'overpass';
-  src: url('overpass-thin.eot'); /* IE9 Compat Modes */
-  src: url('overpass-thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('overpass-thin.woff2') format('woff2'), /* Super Modern Browsers */
-       url('overpass-thin.woff') format('woff'), /* Pretty Modern Browsers */
-       url('overpass-thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('overpass-thin.eot');
+  src: url('overpass-thin.eot?#iefix') format('embedded-opentype'),
+       url('overpass-thin.woff2') format('woff2'),
+       url('overpass-thin.woff') format('woff'),
+       url('overpass-thin.ttf')  format('truetype');
        font-weight: 200;
        font-style: normal;
 }

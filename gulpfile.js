@@ -1,6 +1,6 @@
 // eslint-disable no-console
 const path = require('path');
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('node-sass');
 const through2 = require('through2');
@@ -71,6 +71,7 @@ function compileSASS0(srcFiles) {
       let cssString;
       let scss = chunk.contents.toString();
       const relativePath = path.relative(path.join(chunk._cwd, '/src/patternfly'), chunk.history[0]);
+      const loggedPath = path.relative(__dirname, chunk.history[0]);
       const numDirectories = relativePath.includes('/') ? relativePath.match(/\//g).length : 0;
       // This hack is to not include sass-utilities/placeholders.scss CSS more than once
       // in our production patternfly.css BUT still be able to compile individual SCSS files.
@@ -104,7 +105,7 @@ function compileSASS0(srcFiles) {
             }
           });
       } catch (error) {
-        console.error(`Problem in ${path.relative(__dirname, chunk.history[0])}: ${error}`);
+        console.error(`Problem in ${loggedPath}: ${error}`);
       }
 
       // Not kosher, but prevents path problems with watchSASS
@@ -250,28 +251,50 @@ function lintCSSFunctions() {
     'url'
   ];
   const regex = /:\s+(\w[\w\d]+)\(.*\)/g;
+  let failed = false;
 
   return src('./dist/**/*.css').pipe(
     through2.obj((chunk, _, cb2) => {
       const css = chunk.contents.toString();
 
       let result;
-      let failed = false;
       // eslint-disable-next-line no-cond-assign
       while ((result = regex.exec(css))) {
         if (!validCSSFunctions.includes(result[1])) {
-          console.error(chunk.history[0], result[1]);
+          console.error(`Error: Invalid css function ${result[1]} in ${chunk.history[0]}`);
           failed = true;
         }
       }
 
-      if (failed) {
-        cb2('Invalid CSS functions present in dist');
-      } else {
-        cb2();
-      }
+      cb2();
     })
-  );
+  ).on('end', () => {
+    if (failed) {
+      throw new Error('Invalid CSS functions present in dist');
+    }
+  });
+}
+
+function lintCSSComments(cb) {
+  let failed = false;
+
+  return src('./dist/**/*.css').pipe(
+    through2.obj((chunk, _, cb2) => {
+      const loggedPath = path.relative(__dirname, chunk.history[0]);
+      const css = chunk.contents.toString();
+
+      if (css.includes('/*') && !(/\/*[!#]/.test(css))) {
+        console.error(`Error: block comment in ${loggedPath}`);
+        failed = true;
+      }
+
+      cb2();
+    })
+  ).on('end', () => {
+    if (failed) {
+      throw new Error('Block comments present in dist');
+    }
+  });
 }
 
 module.exports = {
@@ -287,5 +310,6 @@ module.exports = {
   copySource,
   copyAssets,
   lintCSSFunctions,
-  lintCSS: lintCSSFunctions
+  lintCSSComments,
+  lintCSS: parallel(lintCSSFunctions, lintCSSComments)
 };
