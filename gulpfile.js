@@ -253,48 +253,52 @@ function lintCSSFunctions() {
   const regex = /:\s+(\w[\w\d]+)\(.*\)/g;
   let failed = false;
 
-  return src('./dist/**/*.css').pipe(
-    through2.obj((chunk, _, cb2) => {
-      const css = chunk.contents.toString();
+  return src('./dist/**/*.css')
+    .pipe(
+      through2.obj((chunk, _, cb2) => {
+        const css = chunk.contents.toString();
 
-      let result;
-      // eslint-disable-next-line no-cond-assign
-      while ((result = regex.exec(css))) {
-        if (!validCSSFunctions.includes(result[1])) {
-          console.error(`Error: Invalid css function ${result[1]} in ${chunk.history[0]}`);
-          failed = true;
+        let result;
+        // eslint-disable-next-line no-cond-assign
+        while ((result = regex.exec(css))) {
+          if (!validCSSFunctions.includes(result[1])) {
+            console.error(`Error: Invalid css function ${result[1]} in ${chunk.history[0]}`);
+            failed = true;
+          }
         }
-      }
 
-      cb2();
-    })
-  ).on('end', () => {
-    if (failed) {
-      throw new Error('Invalid CSS functions present in dist');
-    }
-  });
+        cb2();
+      })
+    )
+    .on('end', () => {
+      if (failed) {
+        throw new Error('Invalid CSS functions present in dist');
+      }
+    });
 }
 
 function lintCSSComments(cb) {
   let failed = false;
 
-  return src('./dist/**/*.css').pipe(
-    through2.obj((chunk, _, cb2) => {
-      const loggedPath = path.relative(__dirname, chunk.history[0]);
-      const css = chunk.contents.toString();
+  return src('./dist/**/*.css')
+    .pipe(
+      through2.obj((chunk, _, cb2) => {
+        const loggedPath = path.relative(__dirname, chunk.history[0]);
+        const css = chunk.contents.toString();
 
-      if (css.includes('/*') && !(/\/*[!#]/.test(css))) {
-        console.error(`Error: block comment in ${loggedPath}`);
-        failed = true;
+        if (css.includes('/*') && !/\/*[!#]/.test(css)) {
+          console.error(`Error: block comment in ${loggedPath}`);
+          failed = true;
+        }
+
+        cb2();
+      })
+    )
+    .on('end', () => {
+      if (failed) {
+        throw new Error('Block comments present in dist');
       }
-
-      cb2();
-    })
-  ).on('end', () => {
-    if (failed) {
-      throw new Error('Block comments present in dist');
-    }
-  });
+    });
 }
 
 module.exports = {
