@@ -22,6 +22,7 @@
     "develop": "npm run dev",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
     "lint": "npm run lint:css && npm run lint:styles && npm run lint:js",
+    "lint:size": "gulp lintCSSSize",
     "lint:css": "gulp lintCSS",
     "lint:fix": "npm run lint:js --fix && npm run lint:styles --fix",
     "lint:sass": "stylelint 'src/**/*.scss'",
