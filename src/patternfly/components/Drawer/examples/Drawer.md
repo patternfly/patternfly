@@ -4,8 +4,6 @@ section: experimental
 cssPrefix: pf-c-drawer
 ---
 
-import './Drawer.css'
-
 ## Examples
 
 ```hbs title=Closed
