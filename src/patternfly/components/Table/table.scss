@@ -312,9 +312,10 @@
 .pf-c-table__check {
   vertical-align: top;
 
+  --pf-c-table-cell--FontSize: var(--pf-c-table__check--input--FontSize);
+
   > * {
     margin-top: var(--pf-c-table__check--input--MarginTop);
-    font-size: var(--pf-c-table__check--input--FontSize);
     vertical-align: top;
   }
 }
