@@ -7,47 +7,47 @@ cssPrefix: pf-c-check
 ## Examples
 ```hbs title=Basic
 {{#> check}}
-  {{#> check-input check-input--attribute='id="check1" name="exampleCheck1"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check1"'}}Check{{/check-label}}
+  {{#> check-input check-input--attribute='id="check-basic" name="check-basic"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-basic"'}}Check{{/check-label}}
 {{/check}}
 ```
 
 ```hbs title=Checked
 {{#> check}}
-  {{#> check-input check-input--attribute='id="check2" name="exampleCheck2" checked'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check2"'}}Check checked{{/check-label}}
+  {{#> check-input check-input--attribute='id="check-checked" name="check-checked" checked'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-checked"'}}Check checked{{/check-label}}
 {{/check}}
 ```
 
 ```hbs title=Label-wrapping-input
-{{#> check check--type="label" check--attribute='for="check3"'}}
-  {{#> check-input check-input--attribute='id="check3" name="exampleCheck3"'}}{{/check-input}}
+{{#> check check--type="label" check--attribute='for="check-label-wrapping-input"'}}
+  {{#> check-input check-input--attribute='id="check-label-wrapping-input" name="check-label-wrapping-input"'}}{{/check-input}}
   {{#> check-label check-label--type="span"}}Check label wraps input{{/check-label}}
 {{/check}}
 ```
 
 ```hbs title=Reversed
 {{#> check}}
-  {{#> check-label check-label--attribute='for="check4"'}}Check reversed{{/check-label}}
-  {{#> check-input check-input--attribute='id="check4" name="exampleCheck4"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-reversed"'}}Check reversed{{/check-label}}
+  {{#> check-input check-input--attribute='id="check-reversed" name="check-reversed"'}}{{/check-input}}
 {{/check}}
 ```
 
 ```hbs title=Disabled
 {{#> check}}
-  {{#> check-input check-input--attribute='id="check5" name="exampleCheck5" disabled'}}{{/check-input}}
-  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check5"'}}Check disabled{{/check-label}}
+  {{#> check-input check-input--attribute='id="check-disabled" name="check-disabled" disabled'}}{{/check-input}}
+  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check-disabled"'}}Check disabled{{/check-label}}
 {{/check}}
 {{#> check}}
-  {{#> check-input check-input--attribute='id="check6" name="exampleCheck6" checked disabled'}}{{/check-input}}
-  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check6"'}}Check disabled checked{{/check-label}}
+  {{#> check-input check-input--attribute='id="check-disabled-2" name="check-disabled-2" checked disabled'}}{{/check-input}}
+  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check-disabled-2"'}}Check disabled checked{{/check-label}}
 {{/check}}
 ```
 
 ```hbs title=With-description
 {{#> check}}
-  {{#> check-input check-input--attribute='id="check7" name="exampleCheck7"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check7"'}}Check with description{{/check-label}}
+  {{#> check-input check-input--attribute='id="check-with-description" name="check-with-description"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-with-description"'}}Check with description{{/check-label}}
   {{#> check-description}}
     Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
   {{/check-description}}
@@ -71,5 +71,5 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-check` | `<div>`, `<label>` |  Initiates the check component. **Required**  |
 | `.pf-c-check__input` | `<input type="checkbox">` |  Initiates a check input. **Required**  |
 | `.pf-c-check__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
-| `.pf-c-check__description` | `<p>` |  Initiates a check description. It is displayed vertically by default. |
+| `.pf-c-check__description` | `<div>` |  Initiates a check description. |
 | `.pf-m-disabled` | `.pf-c-check__label` |  Initiates a disabled style for labels. **Required when input is disabled** |

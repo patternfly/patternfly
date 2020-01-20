@@ -47,8 +47,8 @@ cssPrefix: pf-c-radio
 
 ```hbs title=With-description
 {{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-description-vertical" name="exampleRadioDescriptionVertical"'}}{{/radio-input}}
-  {{#> radio-label radio-label--attribute='for="radio-description-vertical"'}}Radio with description{{/radio-label}}
+  {{#> radio-input radio-input--attribute='id="radio-description" name="exampleRadioDescription"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio-description"'}}Radio with description{{/radio-label}}
   {{#> radio-description}}
     Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
   {{/radio-description}}
@@ -72,5 +72,5 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |
 | `.pf-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |
 | `.pf-c-radio__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
-| `.pf-c-radio__description` | `<p>` | Initiates a radio description. It is displayed vertically by default. |
+| `.pf-c-radio__description` | `<div>` | Initiates a radio description. |
 | `.pf-m-disabled` | `.pf-c-radio__label` |  Initiates a disabled style for labels. **Required when input is disabled** |
