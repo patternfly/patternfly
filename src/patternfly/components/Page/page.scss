@@ -465,13 +465,13 @@
     flex: 1 0 auto;
   }
 
-  > .pf-c-drawer__content {
+  > .pf-c-drawer > .pf-c-drawer__content {
     display: flex;
     flex-direction: column;
   }
 
-  /* stylelint-disable max-nesting-depth */
-  > .pf-c-drawer__content > .pf-c-drawer__content-body {
+  /* stylelint-disable max-nesting-depth, selector-max-class, selector-max-compound-selectors */
+  > .pf-c-drawer > .pf-c-drawer__content > .pf-c-drawer__content-body {
     display: flex;
     flex: 1 0;
 
