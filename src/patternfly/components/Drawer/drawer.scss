@@ -108,57 +108,56 @@ $pf-c-drawer__panel--width-list: (25, 33, 50, 66, 75);
   }
 
   .pf-c-drawer {
+    .pf-c-drawer__content {
+      order: 0;
+    }
+
     .pf-c-drawer__panel {
       order: 1;
       transform: translateX(0);
     }
 
-    .pf-c-drawer__content {
-      order: 0;
-    }
-  }
+    // Expanded
+    &.pf-m-expanded {
+      .pf-c-drawer__panel {
+        --pf-c-drawer__panel--BoxShadow: var(--pf-c-drawer--m-expanded__panel--BoxShadow);
 
-  // Expanded
-  .pf-c-drawer.pf-m-expanded {
-    .pf-c-drawer__panel {
-      --pf-c-drawer__panel--BoxShadow: var(--pf-c-drawer--m-expanded__panel--BoxShadow);
-
-      transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
     }
   }
 
   // Panel left
   .pf-c-drawer.pf-m-panel-left {
+    .pf-c-drawer__content {
+      order: 1;
+    }
+
     .pf-c-drawer__panel {
       order: 0;
       margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
       transform: translateX(-100%);
     }
 
-    .pf-c-drawer__content {
-      order: 1;
+    // Expanded, panel left
+    &.pf-m-expanded .pf-c-drawer__panel {
+      --pf-c-drawer__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
+
+      transform: translateX(0);
     }
-  }
-
-  // Expanded, panel left
-  .pf-c-drawer.pf-m-panel-left.pf-m-expanded .pf-c-drawer__panel {
-    --pf-c-drawer__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
-
-    transform: translateX(0);
   }
 }
 
 // Drawer inline
 @media screen and (min-width: $pf-global--breakpoint--md) {
   .pf-c-drawer.pf-m-inline {
-    // Inline
+    .pf-c-drawer__content {
+      flex-shrink: 1;
+    }
+
     .pf-c-drawer__panel {
       margin-left: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
       transform: translateX(100%);
-    }
-
-    .pf-c-drawer__content {
-      flex-shrink: 1;
     }
 
     // Inline, expanded
@@ -166,17 +165,19 @@ $pf-c-drawer__panel--width-list: (25, 33, 50, 66, 75);
       margin-left: 0;
       transform: translateX(0);
     }
+  }
 
-    // Inline, panel left
-    &.pf-m-panel-left .pf-c-drawer__panel {
+  // Inline, panel left
+  .pf-c-drawer.pf-m-inline.pf-m-panel-left {
+    .pf-c-drawer__panel {
       margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
-      margin-left: initial;
+      margin-left: 0;
       transform: translateX(-100%);
     }
 
     // Inline, expanded, panel left
     /* stylelint-disable selector-max-class */
-    &.pf-m-panel-left.pf-m-expanded .pf-c-drawer__panel {
+    &.pf-m-expanded .pf-c-drawer__panel {
       margin-right: 0;
       transform: translateX(0);
     }
