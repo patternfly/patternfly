@@ -17,10 +17,6 @@ import './dist/patternfly.css';
 import './dist/patternfly-addons.css';
 
 // Experimental components
-import './dist/components/DataToolbar/data-toolbar.css';
-import './dist/components/Divider/divider.css';
 import './dist/components/Drawer/drawer.css';
-import './dist/components/OverflowMenu/overflow-menu.css';
 import './dist/components/NotificationDrawer/notification-drawer.css';
-import './dist/components/Spinner/spinner.css';
 import './dist/components/SimpleList/simple-list.css';

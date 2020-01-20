@@ -6,19 +6,19 @@ cssPrefix: pf-c-form-control
 
 ## Examples
 ```hbs title=Input
-{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="textInput2" aria-label="Standard input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="textInput1" aria-label="Standard input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="textInput3" aria-label="Readonly input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="textInput2" aria-label="Readonly input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="textInput4" aria-invalid="true" aria-label="Error state input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="textInput3" aria-invalid="true" aria-label="Error state input example"'}}
 {{/form-control}}
 <br /><br />
 {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="textInput4" aria-label="Success state input example"'}}
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="textInput1" aria-label="Disabled input example"'}}
+{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="textInput5" aria-label="Disabled input example"'}}
 {{/form-control}}
 ```
 
@@ -56,7 +56,7 @@ cssPrefix: pf-c-form-control
   </optgroup>
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="select" form-control--modifier="pf-m-success" form-control--attribute='id="selectExample3" name="selectExample3" aria-label="Success state select group example"'}}
+{{#> form-control controlType="select" form-control--modifier="pf-m-success" form-control--attribute='id="selectExample4" name="selectExample4" aria-label="Success state select group example"'}}
   <option value="">Valid option</option>
   <optgroup label="Group 1">
     <option value="Option 1">Valid option</option>
@@ -78,7 +78,7 @@ Standard
 Readonly
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="textarea" form-control--attribute='required name="textarea" id="textarea2" aria-label="Error state textarea example" aria-invalid="true"'}}
+{{#> form-control controlType="textarea" form-control--attribute='required name="textarea" id="textarea3" aria-label="Error state textarea example" aria-invalid="true"'}}
 Error
 {{/form-control}}
 <br /><br />
@@ -86,11 +86,11 @@ Error
 Success
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea3" aria-label="Resize vertical textarea example"' form-control--modifier="pf-m-resize-vertical"}}
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea4" aria-label="Resize vertical textarea example"' form-control--modifier="pf-m-resize-vertical"}}
 Resizes vertically
 {{/form-control}}
 <br /><br />
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea4" aria-label="Resize horizontal textarea example"' form-control--modifier="pf-m-resize-horizontal"}}
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="textarea5" aria-label="Resize horizontal textarea example"' form-control--modifier="pf-m-resize-horizontal"}}
 Resizes horizontally
 {{/form-control}}
 ```

@@ -1,6 +1,6 @@
 ---
 title: Divider
-section: experimental
+section: components
 cssPrefix: pf-c-divider
 ---
 
