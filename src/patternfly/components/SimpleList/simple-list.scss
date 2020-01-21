@@ -8,6 +8,9 @@
   --pf-c-simple-list__item-button--Color: var(--pf-global--Color--100);
   --pf-c-simple-list__item-button--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-simple-list__item-button--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-simple-list__item-button--m-current--Color: var(--pf-global--link--Color);
+  --pf-c-simple-list__item-button--m-current--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-simple-list__item-button--m-current--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-simple-list__item-button--hover--Color: var(--pf-global--link--Color);
   --pf-c-simple-list__item-button--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-simple-list__item-button--focus--Color: var(--pf-global--link--Color);
@@ -40,6 +43,12 @@
   text-align: left;
   background-color: var(--pf-c-simple-list__item-button--BackgroundColor);
   border: none;
+
+  &.pf-m-current {
+    --pf-c-simple-list__item-button--FontWeight: var(--pf-c-simple-list__item-button--m-current--FontWeight);
+    --pf-c-simple-list__item-button--BackgroundColor: var(--pf-c-simple-list__item-button--m-current--BackgroundColor);
+    --pf-c-simple-list__item-button--Color: var(--pf-c-simple-list__item-button--m-current--Color);
+  }
 
   &.pf-m-hover,
   &:hover {
