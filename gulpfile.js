@@ -250,7 +250,7 @@ function lintCSSFunctions() {
     'minmax',
     'url'
   ];
-  const regex = /:\s+(\w[\w\d]+)\(.*\)/g;
+  const regex = /:\s+(\w[\w\d]+)\(.*\)/gi;
   let failed = false;
 
   return src('./dist/**/*.css')
