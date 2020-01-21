@@ -1,15 +1,17 @@
 {{#if inline-edit-action-save--IsIcon}}
-  {{#> inline-edit-action inline-edit-action--modifier="pf-m-icon-button"}}
-    {{#if inline-edit-action-save--IsInvalid}}
+  {{#if inline-edit-action-save--IsInvalid}}
+    {{#> inline-edit-action inline-edit-action--modifier="pf-m-valid"}}
       {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Save edits"'}}
         <i class="fas fa-check" aria-hidden="true" />
       {{/button}}
-    {{else}}
+    {{/inline-edit-action}}
+  {{else}}
+    {{#> inline-edit-action}}
       {{#> button button--modifier="pf-m-plain pf-m-valid" button--attribute='aria-label="Save edits"'}}
         <i class="fas fa-check" aria-hidden="true" />
       {{/button}}
-    {{/if}}
-  {{/inline-edit-action}}
+    {{/inline-edit-action}}
+  {{/if}}
 {{else}}
   {{#> inline-edit-action}}
     {{#if inline-edit-action-save--IsInvalid}}

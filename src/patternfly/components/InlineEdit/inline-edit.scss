@@ -7,16 +7,10 @@
   --pf-c-inline-edit__action--c-button--m-valid--m-plain--hover--Color: var(--pf-global--link--Color--hover);
 
   // Icon button
-  --pf-c-inline-edit__action--m-icon-button--MarginRight: 0;
-
-  // Toggle
-  --pf-c-inline-edit--m-active__toggle--Color: var(--pf-global--Color--100);
+  --pf-c-inline-edit__action--m-icon-group--item--MarginRight: 0;
 
   // Footer group
   --pf-c-inline-edit__group--m-footer--MarginTop: var(--pf-global--spacer--xl);
-
-  // Action group spacing
-  --pf-c-table__action--pf-c-inline-edit__group--m-action-group--MarginTop: var(--pf-global--spacer--md);
 
   // Label
   --pf-c-inline-edit__label--m-bold--FontWeight: var(--pf-global--FontWeight--semi-bold);
@@ -29,6 +23,10 @@
 
   > * {
     margin-right: var(--pf-c-inline-edit__group--item--MarginRight);
+  }
+
+  &.pf-m-icon-group {
+    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__action--m-icon-group--item--MarginRight);
   }
 
   // Footer
@@ -44,7 +42,7 @@
   }
 
   // Enable groups
-  &.pf-m-enable {
+  &.pf-m-enable-editable {
     display: inline-flex;
     visibility: visible;
 
@@ -59,31 +57,16 @@
   }
 }
 
-// Table action cells and action groups inside input groups
-.pf-c-inline-edit .pf-c-table__action,
-.pf-c-inline-edit__group.pf-m-input-group {
-  .pf-c-inline-edit__group.pf-m-action-group {
-    --pf-c-inline-edit__group--m-action-group--item--MarginRight: 0;
-    --pf-c-inline-edit__group--m-action-group--MarginTop: 0;
-  }
-}
-
 // Input and input group
 .pf-c-inline-edit__input,
 .pf-c-inline-edit__group.pf-m-input-group {
   flex: 1;
 }
 
-// Action
-.pf-c-inline-edit__action {
-  &.pf-m-icon-button {
-    --pf-c-inline-edit__group--item--MarginRight: var(--pf-c-inline-edit__action--m-icon-button--MarginRight);
-  }
-
-  .pf-c-button.pf-m-plain.pf-m-valid {
-    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--Color);
-    --pf-c-button--m-plain--hover--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--hover--Color);
-  }
+// Valid icon action button
+.pf-c-inline-edit__action.pf-m-valid .pf-c-button.pf-m-plain {
+  --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--Color);
+  --pf-c-button--m-plain--hover--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--hover--Color);
 }
 
 // Input and input group
@@ -128,8 +111,7 @@
 
   // Hide value, value group and enable actions
   .pf-c-inline-edit__value,
-  .pf-c-inline-edit__action.pf-m-enable,
-  .pf-c-inline-edit__group.pf-m-enable {
+  .pf-c-inline-edit__action.pf-m-enable-editable {
     display: none;
     visibility: hidden;
   }
@@ -137,7 +119,7 @@
 
 .pf-c-inline-edit__action,
 .pf-c-inline-edit__group {
-  &.pf-m-enable {
+  &.pf-m-enable-editable {
     display: inline-block;
     visibility: visible;
   }

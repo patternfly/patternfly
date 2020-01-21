@@ -11,9 +11,11 @@ import './InlineEdit.css'
 **Inline edit** is a utilitarian component that has two core elements, `.pf-c-inline-edit__value` and `.pf-c-inline-edit__input` and is based on a simple concept. When **value** is visible, **input** is hidden, and vice versa.
 
 ### Generic groups
+
 `.pf-c-inline-edit__group`s provide basic layout support and have several available modifiers. The base behavior of `.pf-c-inline-edit__value` and `.pf-c-inline-edit__input` extends to `.pf-c-inline-edit__group.pf-m-value-group` and `.pf-c-inline-edit__group.pf-m-input-group`. Elements added to these groups will be inversely visible and activated with the `.pf-m-inline-editable` modifier.
 
 ### Actions
+
 **Actions** (`.pf-c-inline-edit__action`) and **action groups** (`.pf-c-inline-edit__group.pf-m-action-group`) are hidden by default and exposed when a region of `.pf-c-inline-edit` becomes active. The default visibility of an **action** or **action group** can be inversed by adding `.pf-m-enable`. `.pf-m-enable` flags an element or group of elements as the controlling agents for enabling editable content and therefore is visible by default and hidden when inline editing is enabled.
 
 ## Examples
@@ -53,7 +55,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 
 ```hbs title=Inline-edit-action-group-icon-buttons
 {{#> inline-edit inline-edit--id="inline-edit-action-group-icon-buttons-example" inline-edit--modifier="pf-m-inline-editable"}}
-  {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+  {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
     {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
     {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
   {{/inline-edit-group}}
@@ -76,7 +78,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
       {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
@@ -100,7 +102,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
       {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
@@ -127,7 +129,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' inline-edit--id '-input" value="Static value" aria-label="Editable text input"')}}
     {{/inline-edit-input}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
       {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
@@ -154,7 +156,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{#> inline-edit-input}}
       {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Static value" aria-label="Editable text input"'}}
     {{/inline-edit-input}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
       {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
@@ -182,7 +184,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required value="Invalid state" aria-invalid="true" aria-label="Error state input example"')}}
       {{/form-control}}
     {{/inline-edit-input}}
-    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+    {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
       {{> inline-edit-action-save inline-edit-action-save--IsIcon="true" inline-edit-action-save--IsInvalid="true"}}
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
@@ -429,11 +431,11 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--modifier="pf-c-table__inline-edit-action"}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+          {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
             {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
-          {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable"}}
+          {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
               <i class="fas fa-pencil-alt" aria-hidden="true" />
             {{/button}}
@@ -509,11 +511,11 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--modifier="pf-c-table__inline-edit-action"}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
+          {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
             {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
-          {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable"}}
+          {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
               <i class="fas fa-pencil-alt" aria-hidden="true" />
             {{/button}}
@@ -546,17 +548,16 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-inline-edit` | `<form>`, `<div>` | Initiates the inline edit component. **Required** |
-| `.pf-m-inline-editable` | `.pf-c-inline-edit`, `.pf-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |
 | `.pf-c-inline-edit__value` | `*` | Initiates an inline edit value. **Required** |
 | `.pf-c-inline-edit__input` | `*` | Initiates an inline edit input. **Required** |
 | `.pf-c-inline-edit__label` | `*` | Initiates an inline edit label. |
 | `.pf-c-inline-edit__action` | `*` | Initiates an inline edit action (visible when inline edit region is active). **Required** |
-| `.pf-m-icon-button` | `.pf-c-inline-edit__action` | Modifies the action button spacing. |
+| `.pf-m-inline-editable` | `.pf-c-inline-edit`, `.pf-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |
 | `.pf-m-valid` | `.pf-c-inline-edit__action` | Modifies the action button state. |
-| `.pf-m-value-group` | `.pf-c-inline-edit__group` | Modifies group for value group. |
 | `.pf-m-input-group` | `.pf-c-inline-edit__group` | Modifies group for input group. |
 | `.pf-m-action-group` | `.pf-c-inline-edit__group` | Modifies group for action group. |
 | `.pf-m-icon-group` | `.pf-c-inline-edit__group` | Modifies an action group item spacing. |
+| `.pf-m-bold` | `.pf-c-inline-edit__label` | Modifies an inline edit label's `font-weight`. |
 | `.pf-m-column` | `.pf-c-inline-edit__group` | Modifies an action group flex direction. |
 | `.pf-m-footer` | `.pf-c-inline-edit__group` | Modifies an inline edit group margin-top. |
-| `.pf-m-enable` | `.pf-c-inline-edit__action` | Exposes an inline edit action by default. |
+| `.pf-m-enable-editable` | `.pf-c-inline-edit__action` | Exposes an inline edit action by default. |

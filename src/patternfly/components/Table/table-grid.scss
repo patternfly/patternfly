@@ -101,13 +101,6 @@
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
 
-  // // Inline edit
-  // --pf-c-table__action--pf-c-inline-edit__group--m-action-group--MarginTop: var(--pf-global--spacer--md);
-
-  // .pf-c-table__action .pf-m-action-group {
-  //   margin-top: var(--pf-c-table__action--pf-c-inline-edit__group--m-action-group--MarginTop);
-  // }
-
   // End responsive vars
   // ==================================================================
 }
@@ -427,10 +420,6 @@
   .pf-c-table__inline-edit-action {
     grid-column: 2;
     grid-row: 2;
-
-    // .pf-c-inline-edit__action {
-    //   transform: translateY(34px);
-    // }
   }
 
   // Toggles
