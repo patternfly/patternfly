@@ -338,7 +338,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 
 ```hbs title=Inline-edit-table-row
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
-  {{#> table table--grid="true" table--modifier="pf-m-grid" table--attribute='aria-label="Inline edit table row example"'}}
+  {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
     {{#> table-caption}}
       This is the table caption
     {{/table-caption}}
