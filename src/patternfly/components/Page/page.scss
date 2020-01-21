@@ -68,9 +68,9 @@
   // Header tools group button
   --pf-c-page__header-tools--c-button--Width: #{pf-size-prem(36px)};
   --pf-c-page__header-tools--c-button--Height: #{pf-size-prem(36px)};
-  --pf-c-page__header-tools--c-button--m-opened--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__header-tools--c-button--m-opened--BorderRadius: var(--pf-global--BorderRadius--lg);
-  --pf-c-page__header-tools--c-button--m-opened--c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools--c-button--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools--c-button--m-selected--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
@@ -295,7 +295,7 @@
   }
 
   .pf-c-button {
-    &.pf-m-opened {
+    &.pf-m-selected {
       &::before {
         position: absolute;
         top: 0;
@@ -304,15 +304,15 @@
         width: var(--pf-c-page__header-tools--c-button--Width);
         height: var(--pf-c-page__header-tools--c-button--Height);
         content: "";
-        background-color: var(--pf-c-page__header-tools--c-button--m-opened--BackgroundColor);
-        border-radius: var(--pf-c-page__header-tools--c-button--m-opened--BorderRadius);
+        background-color: var(--pf-c-page__header-tools--c-button--m-selected--BackgroundColor);
+        border-radius: var(--pf-c-page__header-tools--c-button--m-selected--BorderRadius);
       }
 
       /* stylelint-disable */
       .pf-c-notification-badge {
         &.pf-m-unread {
           &::after {
-            border-color: var(--pf-c-page__header-tools--c-button--m-opened--c-notification-badge--m-unread--after--BorderColor);
+            border-color: var(--pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor);
           }
         }
       }
