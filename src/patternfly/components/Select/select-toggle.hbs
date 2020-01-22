@@ -1,4 +1,7 @@
 <{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
+  {{#unless select-toggle--type}}
+    type="button"
+  {{/unless}}
   {{#unless select--IsTypeahead}}
     id="{{id}}-toggle"
     aria-haspopup="true"

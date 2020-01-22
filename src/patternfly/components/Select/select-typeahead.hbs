@@ -5,13 +5,13 @@
     {{{select--attribute}}}
   {{/if}}>
   {{#unless select--IsCurrentlyTyping}}
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">Alabama</button></li>
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">Florida</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Alabama</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Florida</button></li>
   {{/unless}}
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} Jersey</button></li>
+  <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} Jersey</button type="button"></li>
   {{#unless select--IsMultiSelect}}
     <li>
-      <button class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
+      <button type="button" class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
         {{#if select--ItemIsSelected}}
           aria-pressed="true"
         {{else}}
@@ -24,8 +24,8 @@
       </button>
     </li>
   {{/unless}}
-  <li><button class="pf-c-select__menu-item" aria-pressed="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} York</button></li>
+  <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} York</button></li>
   {{#unless select--IsCurrentlyTyping}}
-    <li><button class="pf-c-select__menu-item" aria-pressed="false">North Carolina</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">North Carolina</button></li>
   {{/unless}}
 </ul>
