@@ -6,6 +6,9 @@
     {{else if table-th--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle {{table-th--modifier}}"
     {{else if table-th--modifier}} class="{{table-th--modifier}}"
   {{/if}}
+  {{#if table--grid}}
+    role="columnheader"
+  {{/if}}
   {{#if table-th--sortable}}
     {{#if table-th--asc}}
       aria-sort="ascending"
