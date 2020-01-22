@@ -30,7 +30,7 @@ cssPrefix: pf-c-simple-list
 {{#> simple-list}}
   {{#> simple-list-section}}
     {{#> simple-list-title}}
-       Title
+      Title
     {{/simple-list-title}}
     {{#> simple-list-list}}
       {{#> simple-list-item}}
@@ -40,18 +40,18 @@ cssPrefix: pf-c-simple-list
       {{/simple-list-item}}
       {{#> simple-list-item}}
         {{#> simple-list-item-link}}
-        List item 2
-      {{/simple-list-item-link}}
+          List item 2
+        {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-              {{#> simple-list-item-link}}
-        List item 3
-      {{/simple-list-item-button}}
+        {{#> simple-list-item-link}}
+          List item 3
+        {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-              {{#> simple-list-item-link}}
-        List item 4
-      {{/simple-list-item-link}}
+        {{#> simple-list-item-link}}
+          List item 4
+        {{/simple-list-item-link}}
       {{/simple-list-item}}
     {{/simple-list-list}}
   {{/simple-list-section}}
@@ -61,23 +61,23 @@ cssPrefix: pf-c-simple-list
     {{/simple-list-title}}
     {{#> simple-list-list}}
       {{#> simple-list-item}}
-              {{#> simple-list-item-link}}
-        List item 1
-      {{/simple-list-item-link}}
+        {{#> simple-list-item-link}}
+          List item 1
+        {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-              {{#> simple-list-item-link}}
-        List item 2
-      {{/simple-list-item-link}}
+        {{#> simple-list-item-link}}
+          List item 2
+        {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-              {{#> simple-list-item-link}}
-        List item 3
-      {{/simple-list-item-link}}
+        {{#> simple-list-item-link}}
+          List item 3
+        {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-              {{#> simple-list-item-link}}
-        List item 4
+        {{#> simple-list-item-link}}
+          List item 4
       {{/simple-list-item-link}}
       {{/simple-list-item}}
     {{/simple-list-list}}
