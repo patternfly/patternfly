@@ -13,7 +13,7 @@ $pf-c-drawer__panel--width-list: (25, 33, 50, 66, 75);
 
   // Panel
   --pf-c-drawer__panel--FlexBasis: 100%;
-  --pf-c-drawer__panel--md--FlexBasis: 50%;
+  --pf-c-drawer__panel--md--FlexBasis: #{pf-size-prem(450px)};
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--TransitionDuration: .25s;
   --pf-c-drawer__panel--TransitionProperty: margin, transform;
