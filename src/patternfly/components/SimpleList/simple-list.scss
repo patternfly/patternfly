@@ -30,7 +30,7 @@
   --pf-c-simple-list__title--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // Simple list section
-  --pf-c-simple-list__section-section--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-simple-list__section--section--MarginTop: var(--pf-global--spacer--sm);
 }
 
 .pf-c-simple-list__item-link {
@@ -79,5 +79,5 @@
 }
 
 .pf-c-simple-list__section + .pf-c-simple-list__section {
-  margin-top: var(--pf-c-simple-list__section-section--MarginTop);
+  margin-top: var(--pf-c-simple-list__section--section--MarginTop);
 }
