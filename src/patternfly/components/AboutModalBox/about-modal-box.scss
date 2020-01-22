@@ -1,6 +1,6 @@
 .pf-c-about-modal-box {
   // Component variables
-  --pf-c-about-modal-box--BackgroundColor: #{$pf-color-black-1000}; // Modal uses a non-standard background color
+  --pf-c-about-modal-box--BackgroundColor: var(--pf-global--palette--black-1000); // Modal uses a non-standard background color
   --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(255, 255, 255, .05);  // This is a special one-off glow for the about modal
   --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-about-modal-box--Height: 100%;
@@ -66,7 +66,7 @@
   --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-about-modal-box__close--c-button--Width: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2); // Height and width are 2x font-size
   --pf-c-about-modal-box__close--c-button--Height: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
-  --pf-c-about-modal-box__close--c-button--BackgroundColor: #{$pf-color-black-1000}; // Close button uses a non-standard background color
+  --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-global--palette--black-1000); // Close button uses a non-standard background color
   --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: #{rgba($pf-color-black-1000, .4)};
 
   // hero image

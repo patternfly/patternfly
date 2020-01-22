@@ -52,7 +52,7 @@
   --pf-c-app-launcher__menu-item--m-action--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-app-launcher__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200);
   --pf-c-app-launcher__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
-  --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: #{$pf-color-gold-400};
+  --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-400);
 
   // Menu item icon
   --pf-c-app-launcher__menu-item-icon--MarginRight: var(--pf-global--spacer--sm);
