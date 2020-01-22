@@ -254,7 +254,7 @@ cssPrefix: pf-c-table
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -392,7 +392,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
@@ -405,8 +405,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Pull requests
       {{/table-th}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -438,14 +438,14 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
 
@@ -599,8 +599,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"'}}
        Last commit
       {{/table-th}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -831,8 +831,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
         Icons
       {{/table-th}}
-      {{#> table-th}}{{/table-th}}
-      {{#> table-th}}{{/table-th}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -993,8 +993,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
         Icons
       {{/table-th}}
-      {{#> table-th}}{{/table-th}}
-      {{#> table-th}}{{/table-th}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -1147,8 +1147,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -1177,14 +1177,14 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
         <div class="pf-c-table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       {{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
 
@@ -1455,22 +1455,22 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-fit-content` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` minimum width with no text wrapping. |
 
 ```hbs title=With-hidden/visible-breakpoint-modifiers
-{{#> table table--id="table-hidden-visible" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
+{{#> table table--id="table-hidden-visible" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg"}}
         Repositories
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--modifier="pf-m-hidden-on-md pf-m-visible-on-lg"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-hidden-on-md pf-m-visible-on-lg"}}
         Pull requests
       {{/table-th}}
-      {{#> table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
         Workspaces
       {{/table-th}}
-      {{#> table-th table-th--modifier="pf-m-hidden pf-m-visible-on-sm"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-hidden pf-m-visible-on-sm"}}
         Last commit
       {{/table-th}}
     {{/table-tr}}
@@ -1564,19 +1564,19 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--modifier="pf-m-wrap"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
         This is a really long table header that goes on for a long time.
       {{/table-th}}
-      {{#> table-th table-th--modifier="pf-m-wrap"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
         This is a really long table header that goes on for a long time.
       {{/table-th}}
-      {{#> table-th table-th--modifier="pf-m-wrap"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
         This is a really long table header that goes on for a long time.
       {{/table-th}}
-      {{#> table-th table-th--modifier="pf-m-wrap"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
         This is a really long table header that goes on for a long time.
       {{/table-th}}
-      {{#> table-th table-th--modifier="pf-m-wrap"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
         This is a really long table header that goes on for a long time.
       {{/table-th}}
     {{/table-tr}}
