@@ -20,3 +20,8 @@ yarn.lock
 .idea
 coverage/
 *.swp
+
+logs/
+.tmp/
+allure-report/
+allure-results/

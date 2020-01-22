@@ -8,6 +8,10 @@ if [ -f "./coverage/report.html" ]; then
   cp coverage/report.html public/a11y-report.html
 fi
 
+if [ -d "./allure-report" ]; then
+  cp -r allure-report public/allure-report
+fi
+
 if [ -n "${PR_NUM}" ] # If build is a PR
 then
   # Domain names follow the RFC1123 spec [a-Z] [0-9] [-] limited to 253 characters

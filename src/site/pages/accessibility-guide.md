@@ -2,7 +2,7 @@
 title: Accessibility guide
 ---
 
-<a href="/a11y-report.html">Current a11y status</a>
+<a href="/a11y-report.html" target="_blank">Current a11y status</a>
 
 *Please note, this guide is a work in progress and will be updated regularly. We welcome your comments and feedback.*
 
