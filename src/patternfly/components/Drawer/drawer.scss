@@ -176,12 +176,12 @@ $pf-c-drawer__panel--width-list: (25, 33, 50, 66, 75);
     }
 
     // Inline, expanded, panel left
-    /* stylelint-disable selector-max-class */
+    // stylelint-disable selector-max-class
     &.pf-m-expanded .pf-c-drawer__panel {
       margin-right: 0;
       transform: translateX(0);
     }
-    /* stylelint-enable */
+    // stylelint-enable
   }
 }
 
@@ -201,12 +201,12 @@ $pf-c-drawer__panel--width-list: (25, 33, 50, 66, 75);
     background-color: var(--pf-c-drawer--m-divider--m-expanded__panel--after--BackgroundColor);
   }
 
-  /* stylelint-disable selector-max-class */
+  // stylelint-disable selector-max-class
   .pf-c-drawer.pf-m-divider.pf-m-panel-left.pf-m-expanded .pf-c-drawer__panel::after {
     right: 0;
     left: auto;
   }
-  /* stylelint-enable */
+  // stylelint-enable
 }
 
 // Responsive width modifiers
