@@ -72,9 +72,15 @@
 
   // Table cell - action
   --pf-c-table__action--PaddingTop: 0;
-  --pf-c-table__action--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-table__action--PaddingRight: 0;
   --pf-c-table__action--PaddingBottom: 0;
-  --pf-c-table__action--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-table__action--PaddingLeft: 0;
+
+  // Table cell - action
+  --pf-c-table__inline-edit-action--PaddingTop: 0;
+  --pf-c-table__inline-edit-action--PaddingRight: 0;
+  --pf-c-table__inline-edit-action--PaddingBottom: 0;
+  --pf-c-table__inline-edit-action--PaddingLeft: 0;
 
   // Expandable row
   // hardcoding to match design spec
@@ -273,7 +279,8 @@
 // Toggle, check, action - minimize width and padding.
 .pf-c-table .pf-c-table__toggle,
 .pf-c-table .pf-c-table__check,
-.pf-c-table .pf-c-table__action {
+.pf-c-table .pf-c-table__action,
+.pf-c-table .pf-c-table__inline-edit-action {
   --pf-c-table-cell--PaddingBottom: 0;
 
   width: 1%;
@@ -322,14 +329,23 @@
 
 // Table action cell
 // ==================================================================
-.pf-c-table__action {
+.pf-c-table__action,
+.pf-c-table__inline-edit-action {
   --pf-c-table-cell--PaddingTop: 0;
+  --pf-c-table-cell--PaddingRight: var(--pf-c-table__action--PaddingRight);
   --pf-c-table-cell--PaddingBottom: 0;
   --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
 
   padding-top: 0;
   padding-bottom: 0;
   vertical-align: middle;
+}
+
+.pf-c-table__inline-edit-action {
+  --pf-c-table-cell--PaddingLeft: 0;
+  --pf-c-table-cell--PaddingRight: 0;
+
+  text-align: right;
 }
 
 // Table toggle compount expansion

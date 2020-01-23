@@ -407,6 +407,7 @@
   .pf-c-table__action {
     grid-row-start: 1;
     grid-column-start: 2;
+    text-align: right;
 
     // @smallest breakpoint
     @media screen and (max-width: $pf-global--breakpoint--sm) {
@@ -414,6 +415,11 @@
       grid-column-start: 2;
       margin-left: 0;
     }
+  }
+
+  .pf-c-table__inline-edit-action {
+    grid-column: 2;
+    grid-row: 2;
   }
 
   // Toggles
