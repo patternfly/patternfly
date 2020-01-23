@@ -553,11 +553,11 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-c-inline-edit__label` | `*` | Initiates an inline edit label. |
 | `.pf-c-inline-edit__action` | `*` | Initiates an inline edit action (visible when inline edit region is active). **Required** |
 | `.pf-m-inline-editable` | `.pf-c-inline-edit`, `.pf-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |
-| `.pf-m-valid` | `.pf-c-inline-edit__action` | Modifies the action button state. |
 | `.pf-m-input-group` | `.pf-c-inline-edit__group` | Modifies group for input group. |
 | `.pf-m-action-group` | `.pf-c-inline-edit__group` | Modifies group for action group. |
 | `.pf-m-icon-group` | `.pf-c-inline-edit__group` | Modifies an action group item spacing. |
-| `.pf-m-bold` | `.pf-c-inline-edit__label` | Modifies an inline edit label's `font-weight`. |
 | `.pf-m-column` | `.pf-c-inline-edit__group` | Modifies an action group flex direction. |
 | `.pf-m-footer` | `.pf-c-inline-edit__group` | Modifies an inline edit group margin-top. |
+| `.pf-m-bold` | `.pf-c-inline-edit__label` | Modifies an inline edit label's `font-weight`. |
+| `.pf-m-valid` | `.pf-c-inline-edit__action` | Modifies the action button state. |
 | `.pf-m-enable-editable` | `.pf-c-inline-edit__action` | Exposes an inline edit action by default. |
