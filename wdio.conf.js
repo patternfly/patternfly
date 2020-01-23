@@ -7,21 +7,21 @@ exports.config = {
     user: process.env.WDIO_USER,
     key: process.env.WDIO_KEY,
     // Code to start browserstack local before start of test
-    onPrepare: function (config, capabilities) {
+    onPrepare(config, capabilities) {
       console.log('Connecting local');
-      return new Promise(function(resolve, reject){
+      return new Promise((resolve, reject) => {
         exports.bs_local = new browserstack.Local();
-        exports.bs_local.start({'key': exports.config.key }, function(error) {
+        exports.bs_local.start({ key: exports.config.key }, error => {
           if (error) return reject(error);
           console.log('Connected. Now testing...');
-          resolve();
+          return resolve();
         });
       });
     },
     // Code to stop browserstack local after end of test
-    onComplete: function (capabilties, specs) {
-      exports.bs_local.stop(function() {});
-    },
+    onComplete(capabilties, specs) {
+      exports.bs_local.stop(() => {});
+    }
   }),
   runner: 'local',
   specs: ['./src/**/*.spec.js'],
@@ -40,7 +40,7 @@ exports.config = {
   ],
   // logLevel: 'warn',
   logLevels: {
-    webdriver: 'warn',
+    webdriver: 'warn'
   },
   baseUrl: 'http://localhost:9000',
   waitforTimeout: 10000,
@@ -62,7 +62,7 @@ exports.config = {
         hideScrollBars: true,
         ignoreAntialiasing: true,
         ignoreColors: true,
-        returnAllCompareData: true,
+        returnAllCompareData: true
       }
     ]
   ],
