@@ -1,0 +1,13 @@
+{{#> l-flex l-flex--modifier="pf-m-column"}}
+  {{#> l-flex-item}}
+    {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' master-detail-template--id '-drawer-label"')}}
+      {{#unless drawer--IsStatic}}
+        {{> drawer-action drawer-action--type="span"}}
+      {{/unless}}
+      {{{master-detail-content-header--title}}}
+    {{/title}}
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    {{{master-detail-content-header--sub-title}}}
+  {{/l-flex-item}}
+{{/l-flex}}

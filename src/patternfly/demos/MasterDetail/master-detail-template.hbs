@@ -1,4 +1,4 @@
-{{#> page page--id=id}}
+{{#> page page--id=master-detail-template--id}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
@@ -14,13 +14,9 @@
         {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
-    {{#unless drawer-panel--IsOpen}}
-      {{#> page-template-header-tools-elements}}
-      {{/page-template-header-tools-elements}}
-    {{else}}
-      {{#> drawer-demo-header-tools-elements}}
-      {{/drawer-demo-header-tools-elements}}
-    {{/unless}}
+
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{!-- Nav --}}
   {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
@@ -54,11 +50,14 @@
       {{/nav-list}}
     {{/nav}}
   {{/page-sidebar}}
-  {{#if drawer-demo-default--NoPageWrapper}}
-    {{> drawer-demo-content}}
-  {{else}}
-    {{#> page-drawer}}
-      {{> drawer-demo-content}}
-    {{/page-drawer}}
-  {{/if}}
+  {{#> page-main}}
+    {{#> page-template-breadcrumb}}{{/page-template-breadcrumb}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{#> content}}
+        <h1>{{{master-detail-template--title}}}</h1>
+        <p>{{{master-detail-template--description}}}</p>
+      {{/content}}
+    {{/page-main-section}}
+    {{> @partial-block}}
+  {{/page-main}}
 {{/page}}

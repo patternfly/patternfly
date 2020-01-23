@@ -1,0 +1,19 @@
+{{#> drawer}}
+  {{#> drawer-main}}
+    {{#> drawer-content}}
+      {{#> page-main}}
+        {{#> page-template-breadcrumb}}
+        {{/page-template-breadcrumb}}
+        <a id="main-content-{{page--id}}"></a>
+        {{#> page-template-title}}
+        {{/page-template-title}}
+        {{#> page-template-gallery}}
+        {{/page-template-gallery}}
+      {{/page-main}}
+    {{/drawer-content}}
+    {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+      {{> drawer-action}}
+      <p>drawer panel</p>
+    {{/drawer-panel}}
+  {{/drawer-main}}
+{{/drawer}}
