@@ -1,4 +1,4 @@
-dl.pf-c-list {
+/* dl.pf-c-list {
   --pf-c-list--PaddingLeft: var(--pf-c-list--dl--PaddingLeft);
   --pf-c-list--dl--PaddingLeft: 0;
   --pf-c-list--dt--FontWeight: var(--pf-global--FontWeight--bold);
@@ -28,4 +28,4 @@ dl.pf-c-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+ */
