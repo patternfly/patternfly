@@ -277,7 +277,7 @@ function lintCSSFunctions() {
     });
 }
 
-function lintCSSComments(cb) {
+function lintCSSComments() {
   let failed = false;
 
   return src('./dist/**/*.css')
@@ -301,6 +301,29 @@ function lintCSSComments(cb) {
     });
 }
 
+function lintCSSSize(cb) {
+  const patternflyPath = path.resolve(__dirname, './dist/patternfly.css');
+  const patternflyMinPath = path.resolve(__dirname, './dist/patternfly.min.css');
+
+  const patternflySize = fs.statSync(patternflyPath).size;
+  const patternflyMinSize = fs.statSync(patternflyMinPath).size;
+  const errors = [];
+  // At time of writing is 609013
+  console.log(`patternfly.css is ${patternflySize / 1000}KB`);
+  if (patternflySize > 650000) {
+    errors.push(`patternfly.css is ${patternflySize / 1000}KB > 650KB`);
+  }
+  // At time of writing is 532807
+  console.log(`patternfly.min.css is ${patternflyMinSize / 1000}KB`);
+  if (patternflyMinSize > 600000) {
+    errors.push(`patternfly.min.css is ${patternflyMinSize / 1000}KB > 600KB`);
+  }
+  if (errors.length > 0) {
+    cb(errors.join('\n'));
+  }
+  cb();
+}
+
 module.exports = {
   build: series(clean, compileSASS, minifyCSS, pfIcons, copyFA, copySource),
   compileSASS,
@@ -315,5 +338,6 @@ module.exports = {
   copyAssets,
   lintCSSFunctions,
   lintCSSComments,
-  lintCSS: parallel(lintCSSFunctions, lintCSSComments)
+  lintCSSSize,
+  lintCSS: parallel(lintCSSFunctions, lintCSSComments, lintCSSSize)
 };

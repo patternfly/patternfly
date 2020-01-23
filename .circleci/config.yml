@@ -106,11 +106,14 @@ jobs:
         name: Lint SASS
         command: npm run lint:sass
     - run:
-        name: Lint CSS
-        command: npm run lint:css
-    - run:
         name: Lint JS
         command: npm run lint:js
+    - run:
+        name: Lint CSS Size
+        command: npm run lint:size
+    - run:
+        name: Lint CSS
+        command: npm run lint:css
   deploy:
     docker:
     - image: circleci/node:10
