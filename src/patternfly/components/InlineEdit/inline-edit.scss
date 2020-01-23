@@ -41,12 +41,6 @@
     flex-direction: column;
   }
 
-  // Enable groups
-  .pf-c-inline-edit__action.pf-m-enable-editable {
-    display: inline-block;
-    visibility: visible;
-  }
-
   > :last-child {
     --pf-c-inline-edit__group--item--MarginRight: 0;
   }
@@ -68,6 +62,12 @@
 .pf-c-inline-edit__action {
   display: none;
   visibility: hidden;
+}
+
+// Enable groups
+.pf-c-inline-edit__action.pf-m-enable-editable {
+  display: inline-block;
+  visibility: visible;
 }
 
 // Editable
