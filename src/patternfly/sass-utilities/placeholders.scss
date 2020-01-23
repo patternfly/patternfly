@@ -41,7 +41,7 @@
   }
 }
 
-/* stylelint-disable */
+// stylelint-disable
 %pf-hidden-visible {
   // base value for visible display property is set to 'block' by default and passed in to
   // placeholder via `pf-hidden-visible` mixin
@@ -79,4 +79,4 @@
     }
   }
 }
-/* stylelint-enable */
+// stylelint-enable

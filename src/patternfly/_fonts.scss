@@ -4,7 +4,7 @@
 // PatternFly uses Overpass and Overpass mono http://overpassfont.org/
 //
 
-/* stylelint-disable font-family-name-quotes */
+// stylelint-disable font-family-name-quotes
 @font-face {
   font-family: "RedHatDisplay";
   src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Regular.eot");
@@ -57,12 +57,12 @@
     font-family: "overpass";
     font-style: normal;
     font-weight: 200;
-    src: url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.eot"); /* IE9 Compat Modes */
+    src: url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.eot"); // IE9 Compat Modes
     src:
       url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.eot?#iefix") format("embedded-opentype"),
       url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.woff2") format("woff2"),
       url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.woff") format("woff"),
-      url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.ttf")  format("truetype"); /* Safari, Android, iOS */
+      url("#{$pf-global--font-path}/overpass-webfont/overpass-thin.ttf")  format("truetype"); // Safari, Android, iOS
   }
 
   @font-face {
@@ -295,4 +295,4 @@
       url("#{$pf-global--font-path}/overpass-mono-webfont/overpass-mono-bold.ttf")  format("truetype");
   }
 }
-/* stylelint-enable */
+// stylelint-enable

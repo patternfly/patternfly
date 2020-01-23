@@ -346,7 +346,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 }
 
-/* stylelint-disable max-nesting-depth, no-duplicate-selectors */
+// stylelint-disable max-nesting-depth, no-duplicate-selectors
 .pf-c-data-toolbar {
   // Build spacing modifiers
   @each $breakpoint, $breakpoint-value in $pf-c-data-toolbar--breakpoint-map {

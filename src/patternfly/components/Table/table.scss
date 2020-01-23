@@ -1,6 +1,6 @@
 .pf-c-table {
 
-  /* stylelint-disable */
+  // stylelint-disable
   // ============================================================ //
   // Start non-conformant variables
   //
@@ -138,7 +138,7 @@
   // Modifier - sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
 
-  /* stylelint-enable */
+  // stylelint-enable
 
   @include pf-t-light; // This component always needs to be light
 
@@ -159,7 +159,7 @@
     height: 1px;
     border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
 
-    /* stylelint-disable-next-line */
+    // stylelint-disable-next-line
     &.pf-m-height-auto {
       height: auto;
     }
@@ -219,7 +219,7 @@
   }
 
   // Table body cell
-  /* stylelint-disable */
+  // stylelint-disable
   tbody {
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingBottom);
@@ -245,7 +245,7 @@
       background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
     }
   }
-  /* stylelint-enable */
+  // stylelint-enable
 
   // REMOVE PADDING FOR SPECIAL CELLS THAT CONTAIN BUTTONS
   // ==================================================================
@@ -421,7 +421,7 @@
     transition: var(--pf-c-table__expandable-row--Transition);
   }
 
-  /* stylelint-disable */
+  // stylelint-disable
   td {
     &.pf-m-no-padding {
       padding: 0 0 0 var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
@@ -431,7 +431,7 @@
       }
     }
   }
-  /* stylelint-enable */
+  // stylelint-enable
 
   .pf-c-table__expandable-row-content {
     padding-top: var(--pf-c-table__expandable-row-content--PaddingTop);
@@ -497,7 +497,7 @@
       --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
       --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
 
-      /* stylelint-disable */
+      // stylelint-disable
       > * {
         &:first-child {
           --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
@@ -507,7 +507,7 @@
           --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
         }
       }
-      /* stylelint-enable */
+      // stylelint-enable
     }
   }
 
@@ -573,7 +573,7 @@
 }
 
 // Modifier - Width
-/* stylelint-disable */
+// stylelint-disable
 .pf-c-table [class*="pf-m-width-"] {
   table-layout: fixed;
 }

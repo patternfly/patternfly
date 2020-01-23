@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* stylelint-disable */
+    // stylelint-disable
     @media (max-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
       (max-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
       --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage-2x);
@@ -39,7 +39,7 @@
     @media (min-width: $pf-global--breakpoint--lg) {
       --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage--lg);
     }
-    /* stylelint-enable */
+    // stylelint-enable
   }
 }
 
