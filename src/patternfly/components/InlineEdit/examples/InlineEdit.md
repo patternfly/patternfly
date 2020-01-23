@@ -559,6 +559,6 @@ All accessibility requirements for inputs apply to elements within inline edit.
       {{/inline-edit-group}}
     </dd>
   {{/inline-edit}}
-  <!-- tags, pods, value -->
 {{/list}}
-``` -->
+```
+-->
