@@ -27,11 +27,11 @@ fi
 if [ "${PR_BRANCH}" = "master" ]
 then
   # Use CNAME
-  npm run surge --project public
+  node node_modules/.bin/surge --project public
 else
-  ALREADY_DEPLOYED=`npx surge list | grep ${DEPLOY_SUBDOMAIN}`
+  ALREADY_DEPLOYED=`node node_modules/.bin/surge list | grep ${DEPLOY_SUBDOMAIN}`
   DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
-  npm run surge --project public --domain $DEPLOY_DOMAIN
+  node node_modules/.bin/surge --project public --domain $DEPLOY_DOMAIN
 fi
 
 

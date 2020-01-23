@@ -30,7 +30,6 @@
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
     "serve": "gatsby serve",
     "start": "npm run dev",
-    "surge": "surge",
     "test": "node test/test.js",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000 --aggregate --noIncomplete --ignore color-contrast,focusable-content,scrollable-region-focusable",
     "update-modifiers": "./build/extractModifiers.sh",
@@ -107,6 +106,7 @@
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.5.0",
     "stylelint-value-no-unknown-custom-properties": "^2.0.0",
+    "surge": "^0.21.3",
     "wdio-image-comparison-service": "^1.9.0",
     "webdriverio": "^5.18.6"
   },
