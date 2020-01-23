@@ -312,7 +312,7 @@
         border-radius: var(--pf-c-page__header-tools--c-button--m-selected--before--BorderRadius);
       }
 
-      /* stylelint-disable */
+      // stylelint-disable
       .pf-c-notification-badge {
         &.pf-m-unread {
           &::after {
@@ -320,7 +320,7 @@
           }
         }
       }
-      /* stylelint-enable */
+      // stylelint-enable
     }
 
     > * {
