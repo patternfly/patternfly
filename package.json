@@ -69,6 +69,7 @@
     "axe-webdriverjs": "^2.2.0",
     "axios": "^0.18.1",
     "babel-eslint": "^8.2.3",
+    "chai": "^4.2.0",
     "clean-css": "^4.2.1",
     "commander": "^2.13.0",
     "concurrently": "^5.0.0",

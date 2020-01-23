@@ -57,7 +57,7 @@ module.exports = {
     'react/jsx-uses-vars': 'error',
     'react/no-danger': 'off',
     'import/no-webpack-loader-syntax': 'off',
-    "import/no-unresolved": "error",
+    'import/no-unresolved': 'error',
     'no-ignore': 'off'
   },
   extends: [

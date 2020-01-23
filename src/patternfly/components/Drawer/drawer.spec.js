@@ -1,4 +1,4 @@
-const assert = require('assert');
+const { expect } = require('chai');
 const fsPages = require('../../../../.cache/fullscreenPages.json');
 
 const component = __dirname
@@ -12,10 +12,10 @@ describe(`core-experimental-${component}`, () => {
     .sort()
     .forEach(url => {
       it(`${url.split('/').pop()} snapshot`, function() {
-        browser.url(`http://localhost:9000${url}`);
-        const { path, fileName } = browser.saveElement($('#___gatsby'), url);
-        this.test.ctx.screenshotPath = `${path}/${fileName}`; // For error report
-        assert(browser.checkElement($('#___gatsby'), url) === 0);
+        browser.url(url);
+        const { folders, misMatchPercentage } = browser.checkElement($('#___gatsby'), url);
+        this.test.ctx.screenshotPath = folders.actual; // For error report
+        expect(misMatchPercentage).to.be.below(0.05);
       });
     });
 });

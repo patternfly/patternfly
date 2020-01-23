@@ -119,6 +119,10 @@ jobs:
         name: Generate Report
         command: node node_modules/.bin/allure generate
     - store_artifacts:
+        path: snapshots/
+    - store_artifacts:
+        path: allure-results/
+    - store_artifacts:
         path: allure-report/
     - persist_to_workspace:
         root: ~/project
