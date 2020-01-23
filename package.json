@@ -68,6 +68,7 @@
     "eslint-config-standard-jsx": "^5.0.0",
     "eslint-config-standard-react": "^6.0.0",
     "eslint-import-resolver-alias": "^1.0.3",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "fs-extra": "^5.0.0",
