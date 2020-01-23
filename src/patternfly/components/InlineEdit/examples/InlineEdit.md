@@ -12,11 +12,11 @@ import './InlineEdit.css'
 
 ### Generic groups
 
-`.pf-c-inline-edit__group`s provide basic layout support and have several available modifiers. The base behavior of `.pf-c-inline-edit__value` and `.pf-c-inline-edit__input` extends to `.pf-c-inline-edit__group.pf-m-value-group` and `.pf-c-inline-edit__group.pf-m-input-group`. Elements added to these groups will be inversely visible and activated with the `.pf-m-inline-editable` modifier.
+`.pf-c-inline-edit__group`s provide basic layout support and have several available modifiers (`.pf-m-action-group`, `.pf-m-icon-group`).
 
 ### Actions
 
-**Actions** (`.pf-c-inline-edit__action`) and **action groups** (`.pf-c-inline-edit__group.pf-m-action-group`) are hidden by default and exposed when a region of `.pf-c-inline-edit` becomes active. The default visibility of an **action** or **action group** can be inversed by adding `.pf-m-enable`. `.pf-m-enable` flags an element or group of elements as the controlling agents for enabling editable content and therefore is visible by default and hidden when inline editing is enabled.
+**Actions** (`.pf-c-inline-edit__action`) are hidden by default and exposed when a region of `.pf-c-inline-edit` becomes active. The default visibility of an **action** or **action group** can be inversed by adding `.pf-m-enable-editable`. `.pf-m-enable-editable` flags an element or group of elements as the controlling agents for enabling editable content and therefore is visible by default and hidden when inline editing is enabled.
 
 ## Examples
 
@@ -361,8 +361,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
         {{#> table-th}}
           Number
         {{/table-th}}
-        {{#> table-td}}{{/table-td}}
-        {{#> table-td}}{{/table-td}}
+        {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+        {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{/table-tr}}
     {{/table-thead}}
 
@@ -388,7 +388,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{#> inline-edit-value}}
             Check 1, Check 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> check}}
                 {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
@@ -407,7 +407,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{#> inline-edit-value}}
             Radio 1, Radio 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> radio}}
                 {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
@@ -468,7 +468,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{#> inline-edit-value}}
             Check 1, Check 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> check}}
                 {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
@@ -487,7 +487,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{#> inline-edit-value}}
             Radio 1, Radio 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-input-group pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> radio}}
                 {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio-1"')}}{{/radio-input}}
@@ -553,7 +553,6 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-c-inline-edit__label` | `*` | Initiates an inline edit label. |
 | `.pf-c-inline-edit__action` | `*` | Initiates an inline edit action (visible when inline edit region is active). **Required** |
 | `.pf-m-inline-editable` | `.pf-c-inline-edit`, `.pf-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |
-| `.pf-m-input-group` | `.pf-c-inline-edit__group` | Modifies group for input group. |
 | `.pf-m-action-group` | `.pf-c-inline-edit__group` | Modifies group for action group. |
 | `.pf-m-icon-group` | `.pf-c-inline-edit__group` | Modifies an action group item spacing. |
 | `.pf-m-column` | `.pf-c-inline-edit__group` | Modifies an action group flex direction. |

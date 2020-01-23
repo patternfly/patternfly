@@ -42,14 +42,9 @@
   }
 
   // Enable groups
-  &.pf-m-enable-editable {
-    display: inline-flex;
+  .pf-c-inline-edit__action.pf-m-enable-editable {
+    display: inline-block;
     visibility: visible;
-
-    .pf-c-inline-edit__action {
-      display: inline-block;
-      visibility: visible;
-    }
   }
 
   > :last-child {
@@ -58,8 +53,7 @@
 }
 
 // Input and input group
-.pf-c-inline-edit__input,
-.pf-c-inline-edit__group.pf-m-input-group {
+.pf-c-inline-edit__input {
   flex: 1;
 }
 
@@ -71,9 +65,7 @@
 
 // Input and input group
 .pf-c-inline-edit__input,
-.pf-c-inline-edit__action,
-.pf-c-inline-edit__group.pf-m-input-group,
-.pf-c-inline-edit__group.pf-m-action-group {
+.pf-c-inline-edit__action {
   display: none;
   visibility: hidden;
 }
@@ -83,9 +75,7 @@
 .pf-c-inline-edit .pf-m-inline-editable {
   // Expose inputs, input groups, actions and action groups
   .pf-c-inline-edit__input,
-  .pf-c-inline-edit__action,
-  .pf-c-inline-edit__group.pf-m-action-group,
-  .pf-c-inline-edit__group.pf-m-input-group {
+  .pf-c-inline-edit__action {
     visibility: visible;
   }
 
@@ -99,29 +89,11 @@
     display: inline-block;
   }
 
-  // Action group
-  .pf-c-inline-edit__group.pf-m-action-group {
-    display: inline-flex;
-  }
-
-  // Input group
-  .pf-c-inline-edit__group.pf-m-input-group {
-    display: flex;
-  }
-
   // Hide value, value group and enable actions
   .pf-c-inline-edit__value,
   .pf-c-inline-edit__action.pf-m-enable-editable {
     display: none;
     visibility: hidden;
-  }
-}
-
-.pf-c-inline-edit__action,
-.pf-c-inline-edit__group {
-  &.pf-m-enable-editable {
-    display: inline-block;
-    visibility: visible;
   }
 }
 
