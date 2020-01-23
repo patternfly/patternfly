@@ -54,7 +54,10 @@
 // Valid icon action button
 .pf-c-inline-edit__action.pf-m-valid .pf-c-button.pf-m-plain {
   --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--Color);
-  --pf-c-button--m-plain--hover--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--hover--Color);
+
+  &:hover {
+    --pf-c-button--m-plain--Color: var(--pf-c-inline-edit__action--c-button--m-valid--m-plain--hover--Color);
+  }
 }
 
 // Input and input group
