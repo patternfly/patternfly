@@ -29,8 +29,13 @@ exports.config = {
   capabilities: [
     {
       maxInstances: 10,
-      browserName: 'firefox',
-      ...(process.env.CI && { 'browserstack.local': true })
+      browserName: 'Chrome',
+      ...(process.env.CI && {
+        os: 'Windows',
+        os_version: '10',
+        resolution: '1280x800',
+        'browserstack.local': true
+      })
     }
   ],
   // logLevel: 'warn',
@@ -93,7 +98,7 @@ exports.config = {
   },
   before(capabilities, specs) {
     // eslint-disable-next-line no-undef
-    browser.setWindowSize(1040, 784);
+    browser.setWindowSize(1024, 768);
   },
   afterTest(test) {
     // Save screenshot diff to last part of Test body

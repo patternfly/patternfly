@@ -25,3 +25,5 @@ logs/
 .tmp/
 allure-report/
 allure-results/
+browserstack.err
+local.log

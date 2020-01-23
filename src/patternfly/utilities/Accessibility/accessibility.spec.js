@@ -15,7 +15,7 @@ describe(`core-utilities-${component}`, () => {
         browser.url(url);
         const { folders, misMatchPercentage } = browser.checkElement($('#___gatsby'), url);
         this.test.ctx.screenshotPath = folders.actual; // For error report
-        expect(misMatchPercentage).to.be.below(0.05);
+        expect(misMatchPercentage).to.be.below(2);
       });
     });
 });

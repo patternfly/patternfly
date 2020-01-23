@@ -102,13 +102,6 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
-        name: Download Selenium
-        command: node node_modules/.bin/selenium-standalone install
-    - run:
-        name: Start Selenium
-        command: node node_modules/.bin/selenium-standalone start
-        background: true
-    - run:
         name: Start dev server
         command: npm run serve
         background: true
