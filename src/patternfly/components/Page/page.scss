@@ -66,10 +66,11 @@
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
   // Header tools group button
-  --pf-c-page__header-tools--c-button--Width: #{pf-size-prem(36px)};
-  --pf-c-page__header-tools--c-button--Height: #{pf-size-prem(36px)};
-  --pf-c-page__header-tools--c-button--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__header-tools--c-button--m-selected--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-page__header-tools--c-button--MinWidth: #{pf-size-prem(36px)};
+  --pf-c-page__header-tools--c-button--PaddingRight: #{pf-size-prem(10px)};
+  --pf-c-page__header-tools--c-button--PaddingLeft: #{pf-size-prem(10px)};
+  --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -295,8 +296,9 @@
   }
 
   .pf-c-button {
-    padding-right: 10px; // test
-    padding-left: 10px; // test
+    min-width: var(--pf-c-page__header-tools--c-button--MinWidth);
+    padding-right: var(--pf-c-page__header-tools--c-button--PaddingRight);
+    padding-left: var(--pf-c-page__header-tools--c-button--PaddingLeft);
 
     &.pf-m-selected {
       &::before {
@@ -305,12 +307,9 @@
         right: 0;
         bottom: 0;
         left: 0;
-
-        // width: var(--pf-c-page__header-tools--c-button--Width);
-        // height: var(--pf-c-page__header-tools--c-button--Height);
         content: "";
-        background-color: var(--pf-c-page__header-tools--c-button--m-selected--BackgroundColor);
-        border-radius: var(--pf-c-page__header-tools--c-button--m-selected--BorderRadius);
+        background-color: var(--pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor);
+        border-radius: var(--pf-c-page__header-tools--c-button--m-selected--before--BorderRadius);
       }
 
       /* stylelint-disable */
