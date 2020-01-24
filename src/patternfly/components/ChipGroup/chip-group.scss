@@ -16,9 +16,6 @@
   --pf-c-chip-group--m-toolbar-BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--300);
 
-  // add top and bottom margin of chip as these values contribute to vertical padding; horizontal padding should match
-  --pf-c-chip-group--m-toolbar-PaddingRight: calc(var(--pf-global--spacer--xs) + var(--pf-c-chip-group--c-chip--MarginTop) + var(--pf-c-chip-group--c-chip--MarginBottom));
-
   // Li
   --pf-c-chip-group__li--m-toolbar--MarginTop: calc(var(--pf-global--spacer--xs) / 2);
   --pf-c-chip-group__li--m-toolbar--MarginRight: var(--pf-global--spacer--sm);
@@ -36,6 +33,9 @@
   --pf-c-chip-group--c-chip--MarginTop: #{pf-size-prem(1px)};
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--c-chip--MarginBottom: #{pf-size-prem(1px)};
+
+  // add top and bottom margin of chip as these values contribute to vertical padding; horizontal padding should match
+  --pf-c-chip-group--m-toolbar-PaddingRight: #{calc(var(--pf-global--spacer--xs) + var(--pf-c-chip-group--c-chip--MarginTop) + var(--pf-c-chip-group--c-chip--MarginBottom))};
 
   display: inline-flex;
   flex-wrap: wrap;
