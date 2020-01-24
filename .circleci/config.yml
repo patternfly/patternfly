@@ -29,12 +29,15 @@ workflows:
     - test_a11y:
         requires:
         - build
+        - build_docs
     - test_integration:
         requires:
         - build
+        - build_docs
     - deploy:
         requires:
         - build
+        - build_docs
         - lint
         - test_a11y
         - test_integration
