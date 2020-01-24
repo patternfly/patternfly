@@ -52,112 +52,110 @@
   line-height: var(--pf-c-switch--LineHeight);
   vertical-align: middle;
   cursor: pointer;
+}
 
-  .pf-c-switch__input {
-    position: absolute;
-    cursor: pointer;
-    opacity: 0;
+.pf-c-switch__input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
 
-    &:focus ~ .pf-c-switch__toggle {
-      outline: var(--pf-c-switch__input--focus__toggle--OutlineWidth) solid var(--pf-c-switch__input--focus__toggle--OutlineColor);
-      outline-offset: var(--pf-c-switch__input--focus__toggle--OutlineOffset);
+  &:focus ~ .pf-c-switch__toggle {
+    outline: var(--pf-c-switch__input--focus__toggle--OutlineWidth) solid var(--pf-c-switch__input--focus__toggle--OutlineColor);
+    outline-offset: var(--pf-c-switch__input--focus__toggle--OutlineOffset);
+  }
+
+  &:checked {
+    ~ .pf-c-switch__label {
+      color: var(--pf-c-switch__input--checked__label--Color);
     }
 
-    // stylelint-disable
-    &:checked {
-      ~ .pf-c-switch__label {
-        color: var(--pf-c-switch__input--checked__label--Color);
+    ~ .pf-c-switch__toggle {
+      background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
+
+      &::before {
+        transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
       }
+    }
 
-      ~ .pf-c-switch__toggle {
-        background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
+    ~ .pf-m-off {
+      display: none;
+    }
+  }
 
-        &::before {
-          transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
-        }
-      }
+  &:not(:checked) {
+    ~ .pf-c-switch__label {
+      color: var(--pf-c-switch__input--not-checked__label--Color);
+    }
 
-      ~ .pf-m-off {
+    ~ .pf-c-switch__toggle {
+      .pf-c-switch__toggle-icon {
         display: none;
+        visibility: hidden;
       }
     }
 
-    &:not(:checked) {
-      ~ .pf-c-switch__label {
-        color: var(--pf-c-switch__input--not-checked__label--Color);
-      }
-
-      ~ .pf-c-switch__toggle {
-        .pf-c-switch__toggle-icon {
-          display: none;
-          visibility: hidden;
-        }
-      }
-
-      ~ .pf-m-on {
-        display: none;
-      }
+    ~ .pf-m-on {
+      display: none;
     }
+  }
 
-    &:disabled {
+  &:disabled {
+    cursor: not-allowed;
+
+    ~ .pf-c-switch__label {
+      color: var(--pf-c-switch__input--disabled__label--Color);
       cursor: not-allowed;
+    }
 
-      ~ .pf-c-switch__label {
-        color: var(--pf-c-switch__input--disabled__label--Color);
-        cursor: not-allowed;
-      }
+    ~ .pf-c-switch__toggle {
+      cursor: not-allowed;
+      background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
 
-      ~ .pf-c-switch__toggle {
-        cursor: not-allowed;
-        background-color: var(--pf-c-switch__input--disabled__toggle--BackgroundColor);
-
-        &::before {
-          background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
-        }
+      &::before {
+        background-color: var(--pf-c-switch__input--disabled__toggle--before--BackgroundColor);
       }
     }
   }
-  // stylelint-enable
+}
 
-  .pf-c-switch__toggle {
-    position: relative;
-    display: inline-block;
-    width: var(--pf-c-switch--Width);
-    height: var(--pf-c-switch--Height);
-    background-color: var(--pf-c-switch__toggle--BackgroundColor);
-    border-radius: var(--pf-c-switch__toggle--BorderRadius);
+.pf-c-switch__toggle {
+  position: relative;
+  display: inline-block;
+  width: var(--pf-c-switch--Width);
+  height: var(--pf-c-switch--Height);
+  background-color: var(--pf-c-switch__toggle--BackgroundColor);
+  border-radius: var(--pf-c-switch__toggle--BorderRadius);
 
-    &::before {
-      position: absolute;
-      top: var(--pf-c-switch__toggle--before--Top);
-      left: var(--pf-c-switch__toggle--before--Left);
-      display: block;
-      width: var(--pf-c-switch__toggle--before--Width);
-      height: var(--pf-c-switch__toggle--before--Height);
-      content: "";
-      background-color: var(--pf-c-switch__toggle--before--BackgroundColor);
-      border-radius: var(--pf-c-switch__toggle--before--BorderRadius);
-      box-shadow: var(--pf-c-switch__toggle--before--BoxShadow);
-      transition: var(--pf-c-switch__toggle--before--Transition);
-    }
-  }
-
-  .pf-c-switch__toggle-icon {
+  &::before {
     position: absolute;
-    top: var(--pf-c-switch__toggle-icon--Top);
-    left: var(--pf-c-switch__toggle-icon--Left);
-    padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
-    font-size: var(--pf-c-switch__toggle-icon--FontSize);
-    color: var(--pf-c-switch__toggle-icon--Color);
-    transform: var(--pf-c-switch__toggle-icon--Transform);
+    top: var(--pf-c-switch__toggle--before--Top);
+    left: var(--pf-c-switch__toggle--before--Left);
+    display: block;
+    width: var(--pf-c-switch__toggle--before--Width);
+    height: var(--pf-c-switch__toggle--before--Height);
+    content: "";
+    background-color: var(--pf-c-switch__toggle--before--BackgroundColor);
+    border-radius: var(--pf-c-switch__toggle--before--BorderRadius);
+    box-shadow: var(--pf-c-switch__toggle--before--BoxShadow);
+    transition: var(--pf-c-switch__toggle--before--Transition);
   }
+}
 
-  .pf-c-switch__label {
-    display: inline-block;
-    padding-left: var(--pf-c-switch__label--PaddingLeft);
-    font-weight: var(--pf-c-switch__label--FontWeight); // remove at breaking change
-    line-height: var(--pf-c-switch__label--LineHeight); // remove at breaking change
-    color: var(--pf-c-switch__label--Color);
-    vertical-align: top;
-  }
+.pf-c-switch__toggle-icon {
+  position: absolute;
+  top: var(--pf-c-switch__toggle-icon--Top);
+  left: var(--pf-c-switch__toggle-icon--Left);
+  padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
+  font-size: var(--pf-c-switch__toggle-icon--FontSize);
+  color: var(--pf-c-switch__toggle-icon--Color);
+  transform: var(--pf-c-switch__toggle-icon--Transform);
+}
+
+.pf-c-switch__label {
+  display: inline-block;
+  padding-left: var(--pf-c-switch__label--PaddingLeft);
+  font-weight: var(--pf-c-switch__label--FontWeight); // remove at breaking change
+  line-height: var(--pf-c-switch__label--LineHeight); // remove at breaking change
+  color: var(--pf-c-switch__label--Color);
+  vertical-align: top;
 }
