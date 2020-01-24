@@ -61,7 +61,7 @@ All of PatternFly 4's layouts are kept under `@patternfly/patternfly/layouts/`.
 
 _This example uses the following configuration:_
 
-```json
+```json noLive
   "gulp": "^3.9.1",
   "gulp-insert": "^0.5.0",
 ```
@@ -70,7 +70,7 @@ _Code Snippet_
 
 - Import all modules
 
-```js
+```js noLive
 gulp.task('compile-scss', () =>
   gulp
     .src('./@node_modules/@patternfly/patternfly/**/*.scss')
@@ -84,7 +84,7 @@ gulp.task('compile-scss', () =>
 
 - Import all specific modules
 
-```js
+```js noLive
 gulp.task('compile-scss', () =>
   gulp
     .src('./@node_modules/@patternfly/patternfly/**/*.scss')
@@ -102,7 +102,7 @@ gulp.task('compile-scss', () =>
 
 _This example uses the following configuration:_
 
-```json
+```json noLive
 webpack: "3.8.1",
 sass-loader: "7.0.0",
 css-loader: "^0.28.11",
@@ -114,7 +114,7 @@ _Code Snippets_
 
 - Import all `.scss` files
 
-```js
+```js noLive
 module.exports = {
   module: {
     rules: [{
@@ -138,7 +138,7 @@ module.exports = {
 
 - Import select modules
 
-```js
+```js noLive
 module.exports = {
   module: {
     rules: [{

@@ -28,14 +28,15 @@ exports.config = {
   specFileRetries: 5,
   capabilities: [
     {
-      maxInstances: 10,
+      maxInstances: 10, // BrowserStack gives individual devs 10 instances
       browserName: 'Chrome',
       ...(process.env.CI && {
         os: 'Windows',
         os_version: '10',
         resolution: '1280x800',
         'browserstack.local': true
-      })
+      }),
+      disableAnimations: true
     }
   ],
   // logLevel: 'warn',
@@ -87,7 +88,7 @@ exports.config = {
       'allure',
       {
         outputDir: 'allure-results',
-        disableWebdriverStepsReporting: false,
+        disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false
       }
     ]
