@@ -5,10 +5,6 @@ version: 2
 references:
   js_deps_paths: &js_deps_paths
   - node_modules/
-  build_cache_paths: &build_cache_paths
-  - .cache/
-  - dist/
-  - src/icons/PfIcons/
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "package-lock.json"}}
   attach_workspace: &attach_workspace
@@ -71,7 +67,9 @@ jobs:
         command: npm run build:ie11
     - persist_to_workspace:
         root: ~/project
-        paths: *build_cache_paths
+        paths:
+          - dist/
+          - src/icons/PfIcons/
   build_docs:
     docker:
     - image: circleci/node:10-browsers
@@ -89,6 +87,7 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths:
+          - .cache/
           - public/
   test_a11y:
     docker:
