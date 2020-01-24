@@ -10,5 +10,9 @@ module.exports = [
   {
     name: 'NotificationDrawer',
     path: 'components/NotificationDrawer/'
+  },
+  {
+    name: 'DataToolbar',
+    path: 'components/DataToolbar/'
   }
 ];
