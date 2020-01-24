@@ -77,6 +77,9 @@ jobs:
     - image: circleci/node:10-browsers
     steps:
     - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
     - run:
         name: Build Site
         command: npm run build:site
