@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2020.01 release notes (2020-01-28)
 Packages released:
-- @patternfly/patternfly@v2.55.1
+- @patternfly/patternfly@v2.56.3
 
 ### Components
 - **Button:** Added ability to have icon on left or ride side of text ([#2548](https://github.com/patternfly/patternfly-next/pull/2548))
@@ -37,6 +37,7 @@ Packages released:
   - Enabled linting css ([#2586](https://github.com/patternfly/patternfly-next/pull/2586))
   - Enabled linting css size ([#2587](https://github.com/patternfly/patternfly-next/pull/2587))
   - Updated gatsby theme verion ([#2605](https://github.com/patternfly/patternfly-next/pull/2605))
+  - Made data-toolbar experimental ([#2611](https://github.com/patternfly/patternfly-next/pull/2611))
 - **Docs:** Fixed misspelling of "Overview" in multiple places ([#2566](https://github.com/patternfly/patternfly-next/pull/2566))
 - **Global vars:** Added CSS vars for color palette SCSS vars ([#2551](https://github.com/patternfly/patternfly-next/pull/2551))
 
