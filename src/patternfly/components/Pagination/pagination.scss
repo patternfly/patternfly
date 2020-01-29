@@ -77,7 +77,7 @@
     font-size: var(--pf-c-pagination__nav--c-button--FontSize);
 
     .pf-c-pagination.pf-m-compact & {
-      /* stylelint-disable-next-line */
+      // stylelint-disable-next-line
       + .pf-c-button {
         margin-left: var(--pf-c-pagination--m-compact__nav--c-button--MarginLeft);
       }

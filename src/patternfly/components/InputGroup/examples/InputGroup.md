@@ -93,9 +93,17 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput10" name="textInput10" aria-label="Input example with popover"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput13" name="textInput13" aria-label="Input example with popover"'}}
   {{/form-control}}
   {{#> button button--modifier="pf-m-control" button--attribute='aria-label="popover for input"'}}
+    <i class="fas fa-question-circle" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
+<br>
+{{#> input-group}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput12" name="textInput12" aria-label="Search input plain example"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="plain search button for search input"'}}
     <i class="fas fa-question-circle" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}

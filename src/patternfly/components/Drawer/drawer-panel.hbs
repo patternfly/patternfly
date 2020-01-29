@@ -1,4 +1,7 @@
 <aside class="pf-c-drawer__panel{{#if drawer-panel--modifier}} {{drawer-panel--modifier}}{{/if}}"
+  {{#unless drawer-panel--IsOpen}}
+    aria-hidden="true"
+  {{/unless}}
   {{#if drawer-panel--attribute}}
     {{{drawer-panel--attribute}}}
   {{/if}}>

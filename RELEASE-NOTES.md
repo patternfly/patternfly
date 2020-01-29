@@ -4,6 +4,43 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.01 release notes (2020-01-28)
+Packages released:
+- @patternfly/patternfly@v2.56.3
+
+### Components
+- **Button:** Added ability to have icon on left or ride side of text ([#2548](https://github.com/patternfly/patternfly-next/pull/2548))
+- **Card:** Added __head-main elements to contain images, icons, etc ([#2578](https://github.com/patternfly/patternfly-next/pull/2578))
+- **Chip group:** Fixed chip label overflow ellipsis ([#2552](https://github.com/patternfly/patternfly-next/pull/2552))
+- **Clipboard copy:** Assigned type to button to prevent form submit ([#2561](https://github.com/patternfly/patternfly-next/pull/2561))
+- **Empty state:** Added xl variation ([#2545](https://github.com/patternfly/patternfly-next/pull/2545))
+- **Inline edit:** Added inline-edit component ([#2446](https://github.com/patternfly/patternfly-next/pull/2446))
+- **Input:** Added new example ([#2563](https://github.com/patternfly/patternfly-next/pull/2563))
+- **Login:** Prevented login container from shrinking based on content ([#2604](https://github.com/patternfly/patternfly-next/pull/2604))
+- **Master detail:** Added master-detail layout updates to drawer ([#2520](https://github.com/patternfly/patternfly-next/pull/2520))
+- **Notification drawer:** Fixed flex shorthand bug resulting in 0 height ([#2571](https://github.com/patternfly/patternfly-next/pull/2571))
+- **Page:** Added selected state to header icons, updated drawer demo ([#2541](https://github.com/patternfly/patternfly-next/pull/2541))
+- **Radio and check:** Added optional description ([#2579](https://github.com/patternfly/patternfly-next/pull/2579))
+- **Simple list:** Introduced simple list component ([#2573](https://github.com/patternfly/patternfly-next/pull/2573))
+- **Table:**
+  - Fixed missing expanded content border on mobile ([#2553](https://github.com/patternfly/patternfly-next/pull/2553))
+  - Fixed bug with mobile inheritable grid-column property ([#2558](https://github.com/patternfly/patternfly-next/pull/2558))
+  - Updated font-size for checks ([#2577](https://github.com/patternfly/patternfly-next/pull/2577))
+  - Fixed accessibility issues on mobile ([#2582](https://github.com/patternfly/patternfly-next/pull/2582))
+- **Wizard:** Bolded current sub-step link ([#2542](https://github.com/patternfly/patternfly-next/pull/2542))
+
+### Other
+- **Build:**
+  - Removed "main" property from package.json ([#2549](https://github.com/patternfly/patternfly-next/pull/2549))
+  - Promoted data-toolbar, divider, overflowmenu and spinner ([#2576](https://github.com/patternfly/patternfly-next/pull/2576))
+  - Turned a11y checker back on ([#2585](https://github.com/patternfly/patternfly-next/pull/2585))
+  - Enabled linting css ([#2586](https://github.com/patternfly/patternfly-next/pull/2586))
+  - Enabled linting css size ([#2587](https://github.com/patternfly/patternfly-next/pull/2587))
+  - Updated gatsby theme verion ([#2605](https://github.com/patternfly/patternfly-next/pull/2605))
+  - Made data-toolbar experimental ([#2611](https://github.com/patternfly/patternfly-next/pull/2611))
+- **Docs:** Fixed misspelling of "Overview" in multiple places ([#2566](https://github.com/patternfly/patternfly-next/pull/2566))
+- **Global vars:** Added CSS vars for color palette SCSS vars ([#2551](https://github.com/patternfly/patternfly-next/pull/2551))
+
 ## 2019.11 release notes (2019-12-18)
 Packages released:
 - @patternfly/patternfly@v2.46.1

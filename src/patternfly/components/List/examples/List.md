@@ -59,7 +59,7 @@ cssPrefix: pf-c-list
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Non-inline lists can be nested up to any level.
 
 ### Usage

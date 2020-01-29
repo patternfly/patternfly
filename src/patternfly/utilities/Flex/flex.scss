@@ -1,4 +1,4 @@
-/* stylelint-disable */
+// stylelint-disable
 
 // Flex direction options
 $pf-u-flex-direction-options: (
@@ -94,4 +94,4 @@ $pf-u-flex-options: (
 // Flex fill
 @include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
 
-/* stylelint-enable */
+// stylelint-enable

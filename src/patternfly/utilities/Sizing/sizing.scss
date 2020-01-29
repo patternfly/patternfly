@@ -1,4 +1,4 @@
-/* stylelint-disable */
+// stylelint-disable
 
 // Width options
 $pf-u-width-options: (
@@ -43,4 +43,4 @@ $pf-u-height-options: (
 @include pf-utility-builder($pf-u-width-options, $pf-global--breakpoint-list);
 @include pf-utility-builder($pf-u-height-options, $pf-global--breakpoint-list);
 
-/* stylelint-enable */
+// stylelint-enable

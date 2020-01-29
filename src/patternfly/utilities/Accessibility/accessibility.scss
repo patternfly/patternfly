@@ -14,9 +14,9 @@
 
   .pf-u-hidden#{$breakpoint-value} {
     @include pf-media-query($breakpoint) {
-      /* stylelint-disable */
+      // stylelint-disable
       display: none !important;
-      /* stylelint-enable */
+      // stylelint-enable
     }
   }
 }

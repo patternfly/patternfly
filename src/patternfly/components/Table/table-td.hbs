@@ -6,6 +6,9 @@
     {{else if table-td--action}} class="pf-c-table__action"
     {{else if table-td--modifier}} class="{{table-td--modifier}}"
     {{/if}}
+    {{#unless table-td--IsEmpty}}
+      role="cell"
+    {{/unless}}
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
   {{/if}}

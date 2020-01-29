@@ -1,4 +1,4 @@
-/* stylelint-disable */
+// stylelint-disable
 
 $pf-u-box-shadow-options: (
   /* small*/
@@ -28,4 +28,4 @@ $pf-u-box-shadow-options: (
 // Text utilities
 @include pf-utility-builder($pf-u-box-shadow-options);
 
-/* stylelint-enable */
+// stylelint-enable

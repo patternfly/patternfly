@@ -65,6 +65,13 @@
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
+  // Header tools group button
+  --pf-c-page__header-tools--c-button--m-selected--before--Width: #{pf-size-prem(36px)};
+  --pf-c-page__header-tools--c-button--m-selected--before--Height: #{pf-size-prem(36px)};
+  --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--md--MarginRight);
   }
@@ -287,6 +294,36 @@
     }
   }
 
+  .pf-c-button {
+    &.pf-m-selected {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: var(--pf-c-page__header-tools--c-button--m-selected--before--Width);
+        height: var(--pf-c-page__header-tools--c-button--m-selected--before--Height);
+        content: "";
+        background-color: var(--pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor);
+        border-radius: var(--pf-c-page__header-tools--c-button--m-selected--before--BorderRadius);
+        transform: translateX(-50%);
+      }
+
+      // stylelint-disable
+      .pf-c-notification-badge {
+        &.pf-m-unread {
+          &::after {
+            border-color: var(--pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor);
+          }
+        }
+      }
+      // stylelint-enable
+    }
+
+    > * {
+      position: relative;
+    }
+  }
+
   .pf-m-mobile {
     margin-right: 0;
 
@@ -463,17 +500,24 @@
 .pf-c-page__drawer {
   > .pf-c-drawer {
     flex: 1 0 auto;
+  }
 
-    > .pf-c-drawer__content {
-      display: flex;
-      flex-direction: column;
+  > .pf-c-drawer > .pf-c-drawer__content {
+    display: flex;
+    flex-direction: column;
+  }
 
-      .pf-c-page__main {
-        --pf-c-page__main--ZIndex: auto;
+  // stylelint-disable max-nesting-depth, selector-max-class, selector-max-compound-selectors
+  > .pf-c-drawer > .pf-c-drawer__content > .pf-c-drawer__content-body {
+    display: flex;
+    flex: 1 0;
 
-        grid-area: auto;
-        flex: 1 0 auto;
-      }
+    .pf-c-page__main {
+      --pf-c-page__main--ZIndex: auto;
+
+      grid-area: auto;
+      flex: 1 0 auto;
     }
   }
+  // stylelint-enable
 }

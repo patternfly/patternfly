@@ -36,7 +36,7 @@ import './Split.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The split layout is designed to position items horizontally, with one item filling the available horizontal space.
 
 ### Usage

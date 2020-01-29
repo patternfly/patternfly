@@ -29,7 +29,18 @@ import './Button.css'
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link
+  {{#> button-text}}
+    Link
+  {{/button-text}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-link"}}
+  {{#> button-text}}
+    Link
+  {{/button-text}}
+  {{#> button-icon}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
@@ -234,7 +245,7 @@ import './Button.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Always add a modifier class to add color to the button.
 
 ### Button vs link
@@ -254,7 +265,8 @@ Semantic buttons and links are important for usability as well as accessibility.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
-| `.pf-c-button__icon` | `<span>` |  Applies spacing to an icon inside of the button when the icon is followed by text. |
+| `.pf-c-button__icon` | `<span>` | Applies right spacing to an icon inside of the button when the icon is followed by text. |
+| `.pf-c-button__text` | `<span>` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |

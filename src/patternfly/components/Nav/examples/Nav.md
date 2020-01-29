@@ -405,7 +405,7 @@ import './Nav.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.

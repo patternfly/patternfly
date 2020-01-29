@@ -10,7 +10,7 @@ section: components
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Simple brand component.
 
 ### Accessibility

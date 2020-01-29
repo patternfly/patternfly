@@ -549,6 +549,6 @@ When a list item includes more than one block of content, it can be difficult fo
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/documentation/core/components/table).
 

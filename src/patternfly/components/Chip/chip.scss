@@ -82,7 +82,7 @@
 
       &.pf-m-hover,
       &:hover {
-        /* stylelint-disable-next-line */
+        // stylelint-disable-next-line
         &::after {
           --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--hover--BorderWidth);
           --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--hover--BorderColor);
@@ -91,7 +91,7 @@
 
       &.pf-m-active,
       &:active {
-        /* stylelint-disable-next-line */
+        // stylelint-disable-next-line
         &::after {
           --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth);
           --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--active--BorderColor);
@@ -100,7 +100,7 @@
 
       &.pf-m-focus,
       &:focus {
-        /* stylelint-disable-next-line */
+        // stylelint-disable-next-line
         &::after {
           --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--focus--BorderWidth);
           --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--focus--BorderColor);

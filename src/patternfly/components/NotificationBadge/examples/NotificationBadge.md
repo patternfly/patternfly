@@ -20,7 +20,7 @@ cssPrefix: pf-c-notification-badge
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own.
 
 ### Accessibility

@@ -174,7 +174,7 @@ The dropdown panel is provided for flexibility in allowing various content withi
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The dropdown menu can contain either links or buttons, depending on the expected behavior when clicking the menu item. If you are using the menu item to navigate to another page, then menu item is a link. Otherwise, use a button for the menu item.
 
 ### Accessibility

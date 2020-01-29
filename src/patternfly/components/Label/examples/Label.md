@@ -18,7 +18,7 @@ import './Label.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 Labels can be used in a variety of components and can adjust in font size to match that of the component it lives in. For example, labels can be used in tables. Specifically, the compact table has a modifier that adjusts its font size, so when using a label in this table, it's important to also add its respective modifier.
 
 ### Usage

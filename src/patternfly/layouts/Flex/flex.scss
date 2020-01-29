@@ -26,7 +26,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   }
 }
 
-/* stylelint-disable no-duplicate-selectors, max-nesting-depth */
+// stylelint-disable no-duplicate-selectors, max-nesting-depth
 
 // Item
 .pf-l-flex > * {
@@ -288,4 +288,4 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
     }
   }
 }
-/* stylelint-enable */
+// stylelint-enable

@@ -27,7 +27,7 @@ cssPrefix: pf-c-title
 ```
 
 ## Documentation
-### Overiew
+### Overview
 The title component styles font-size, font-weight, and line-height to titles.
 
 The content component defines margin on headers. To regain the same spacing use, spacer utility classes:

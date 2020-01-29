@@ -14,6 +14,7 @@ module.exports = {
       }
     ],
     'no-alert': 'off',
+    'no-console': 'off',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
     'no-prototype-builtins': 'off',

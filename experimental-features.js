@@ -4,23 +4,15 @@ module.exports = [
     path: 'components/Drawer/'
   },
   {
-    name: 'Divider',
-    path: 'components/Divider/'
-  },
-  {
-    name: 'DataToolbar',
-    path: 'components/DataToolbar/'
-  },
-  {
-    name: 'Spinner',
-    path: 'components/Spinner/'
-  },
-  {
-    name: 'OverflowMenu',
-    path: 'components/OverflowMenu/'
+    name: 'InlineEdit',
+    path: 'components/InlineEdit/'
   },
   {
     name: 'NotificationDrawer',
     path: 'components/NotificationDrawer/'
+  },
+  {
+    name: 'DataToolbar',
+    path: 'components/DataToolbar/'
   }
 ];

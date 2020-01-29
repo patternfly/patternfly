@@ -62,7 +62,7 @@
 @mixin pf-utility-builder($props, $breakpoints: null) {
   // if $class-name is a map
 
-  /* stylelint-disable */
+  // stylelint-disable
   @if type-of($props) == map {
     @each $class, $val in $props {
       $property: nth($val, 1);
@@ -114,7 +114,7 @@
     }
   }
 }
-/* stylelint-enable */
+// stylelint-enable
 
 @mixin pf-u-screen-reader {
   position: fixed;
@@ -160,7 +160,7 @@
 }
 
 @mixin pf-hidden-visible($val: "block") {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line
   --pf-hidden-visible--visible--Display: #{$val};
 
   @extend %pf-hidden-visible;

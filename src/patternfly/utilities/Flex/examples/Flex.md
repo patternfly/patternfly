@@ -316,7 +316,7 @@ import './Flex.css'
 ```
 
 ## Documentation
-### Overiew
+### Overview
 For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-flex-row-on-lg**
 
 <!-- ## Accessibility

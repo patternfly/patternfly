@@ -6,6 +6,41 @@ cssPrefix: pf-c-empty-state
 
 ## Examples
 
+```hbs title=Basic
+{{#> empty-state}}
+  {{#> empty-state-icon}}{{/empty-state-icon}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty state
+  {{/title}}
+  {{#> empty-state-body}}
+    This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+  {{/empty-state-body}}
+  {{#> button button--modifier="pf-m-primary"}}
+    Primary action
+  {{/button}}
+  {{#> empty-state-secondary}}
+    {{#> button button--modifier="pf-m-link"}}
+      Multiple
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action buttons
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Can
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Go here
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      In the secondary
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action area
+    {{/button}}
+  {{/empty-state-secondary}}
+{{/empty-state}}
+```
+
 ```hbs title=Small
 {{#> empty-state empty-state--modifier="pf-m-sm"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
@@ -76,10 +111,10 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Basic
-{{#> empty-state}}
+```hbs title=Extra-large
+{{#> empty-state empty-state--modifier="pf-m-xl"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
-  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+  {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
     Empty state
   {{/title}}
   {{#> empty-state-body}}
@@ -88,26 +123,6 @@ cssPrefix: pf-c-empty-state
   {{#> button button--modifier="pf-m-primary"}}
     Primary action
   {{/button}}
-  {{#> empty-state-secondary}}
-    {{#> button button--modifier="pf-m-link"}}
-      Multiple
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action buttons
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Can
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Go here
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      In the secondary
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action area
-    {{/button}}
-  {{/empty-state-secondary}}
 {{/empty-state}}
 ```
 
