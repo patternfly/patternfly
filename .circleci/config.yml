@@ -12,6 +12,12 @@ references:
   - src/icons/PfIcons/
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "package-lock.json"}}
+  size_report_paths: &size_report_paths
+  - dist/size-report.json
+  size_report_cache_key: &size_report_cache_key
+    size-report-v{{.Environment.CACHE_VERSION}}-{{ .Branch }}
+  size_report_master_cache_key: &size_report_master_cache_key
+    size-report-v{{.Environment.CACHE_VERSION}}-master
   attach_workspace: &attach_workspace
     attach_workspace:
       at: ~/project
@@ -108,9 +114,18 @@ jobs:
     - run:
         name: Lint JS
         command: npm run lint:js
+    - restore_cache:
+        keys:
+        - *size_report_master_cache_key
     - run:
         name: Lint CSS Size
-        command: npm run lint:size
+        command: node build/sizeReport.js
+    - persist_to_workspace:
+        root: ~/project
+        paths: *size_report_paths
+    - save_cache:
+        paths: *size_report_paths
+        key: *size_report_cache_key
     - run:
         name: Lint CSS
         command: npm run lint:css
