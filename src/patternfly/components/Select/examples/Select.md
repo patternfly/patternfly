@@ -162,7 +162,6 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 ```
 
 ```hbs title=Checkbox-expanded
-{{!-- Checkbox select with groups, items selected --}}
 {{#> select id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
   Filter
 {{/select}}
@@ -173,7 +172,14 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
   Filter by status
 {{/select}}
 ```
-The checkbox select can select multiple items using checkboxes. The number of items selected is reflected in a badge in the dropdown toggle. The user may clear items by unchecking or using the clear button. Optionally, items may be grouped.
+
+```hbs title=Checkbox-expanded-without-badge
+{{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--IsNoBadge="true"}}
+  Filter
+{{/select}}
+```
+
+The checkbox select can select multiple items using checkboxes. The number of items selected is reflected in an optional badge in the dropdown toggle. The user may clear items by unchecking or using the clear button. Optionally, items may be grouped.
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
