@@ -26,15 +26,19 @@ module.exports = () =>
       return ie11ReadyStylesheet;
     })
     .then(transformedCss => {
-      transformedCss.split('\n').forEach((line, index) => {
-        if (line.indexOf('undefined') >= 0) {
+      let includesUndefined = false;
+      const split = transformedCss.split('\n');
+      for (let i = 0; i < split.length; i++) {
+        if (split[i].indexOf('undefined') >= 0) {
+          const context = split.slice(i - 2, i + 2).join('\n');
           // eslint-disable-next-line
-        console.error(`\x1b[31m%s\x1b[0m`, `Problem in ${outPath}:${index + 1}\n`);
-          throw new Error(`Stylesheet ${outPath} contains undefined at line ${index + 1}`);
+          console.error(`\x1b[31m%s\x1b[0m`, `Problem in ${outPath}:${i + 1}:\n${context}`);
+          includesUndefined = true;
         }
-      });
-      return transformedCss.replace(/\.\.\/\.\.\/assets/gm, './assets');
-    })
-    .catch(error => {
-      throw new Error(error);
+      }
+      if (includesUndefined) {
+        throw new Error(
+          `Stylesheet ${outPath} contains undefined. This is usually due to a CSS variable being referenced before it is defined. Try rearranging the order of your CSS variables.`
+        );
+      }
     });
