@@ -315,6 +315,5 @@ module.exports = {
   copyAssets,
   lintCSSFunctions,
   lintCSSComments,
-  lintCSSSize,
-  lintCSS: parallel(lintCSSFunctions, lintCSSComments, lintCSSSize)
+  lintCSS: parallel(lintCSSFunctions, lintCSSComments)
 };
