@@ -14,8 +14,12 @@
   --pf-c-modal-box--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
+  // Description
+  --pf-c-modal-box__c-title--description--MarginTop: var(--pf-global--spacer--sm);
+
   // Body
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
+  --pf-c-modal-box__description--body--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-modal-box--c-title--body--MarginTop: var(--pf-global--spacer--lg);
 
   // Close
@@ -70,14 +74,24 @@
     }
   }
 
-  .pf-c-title {
+  > .pf-c-title {
     @include pf-text-overflow;
 
     flex: 0 0 auto;
 
+    + .pf-c-modal-box__description {
+      margin-top: var(--pf-c-modal-box__c-title--description--MarginTop);
+    }
+
     + .pf-c-modal-box__body {
       margin-top: var(--pf-c-modal-box--c-title--body--MarginTop);
     }
+  }
+}
+
+.pf-c-modal-box__description {
+  + .pf-c-modal-box__body {
+    margin-top: var(--pf-c-modal-box__description--body--MarginTop);
   }
 }
 

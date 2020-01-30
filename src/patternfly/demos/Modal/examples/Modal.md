@@ -42,8 +42,12 @@ section: demos
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
         {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-scroll-title"'}}
-          This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.        {{/title}}
-        {{#> modal-box-body modal-box-body--attribute='id="modal-scroll-description"'}}
+          This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
+        {{/title}}
+        {{#> modal-box-description modal-box-description--attribute='id="modal-scroll-description"'}}
+          This is a modal description. The description will not scroll with the body contents.
+        {{/modal-box-description}}
+        {{#> modal-box-body}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
           <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Integer tincidunt. Integer tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
