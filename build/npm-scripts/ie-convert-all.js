@@ -37,6 +37,6 @@ module.exports = () =>
         }
       }
       if (includesUndefined) {
-        throw new Error(`Stylesheet ${outPath} contains undefined. Try rearranging the order of your CSS variables.`);
+        throw new Error(`Stylesheet ${outPath} contains undefined. This is usually due to a CSS variable being referenced before it is defined. Try rearranging the order of your CSS variables.`);
       }
     });
