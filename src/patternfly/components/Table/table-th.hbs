@@ -25,8 +25,14 @@
     {{{table-th--attribute}}}
   {{/if}}>
   {{#if table-th--sortable}}
-    {{#> button button--modifier="pf-m-plain"}}
-      {{> @partial-block}}
+    <button class="pf-c-button pf-m-pain{{#if table-th--sortable-wrap}} pf-m-sort-wrap{{/if}}">
+      {{#if table-th--sortable-wrap}}
+        <span>
+          {{> @partial-block}}
+        </span>
+        {{else}}
+        {{> @partial-block}}
+      {{/if}}
       <span class="pf-c-table__sort-indicator">
         {{#if table-th--selected}}
           {{#if table-th--asc}}
@@ -38,7 +44,7 @@
           <i class="fas fa-arrows-alt-v"></i>
         {{/if}}
       </span>
-    {{/button}}
+    </button>
   {{else}}
     {{> @partial-block}}
   {{/if}}
