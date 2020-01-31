@@ -10,8 +10,15 @@ const repo = process.env.CIRCLE_PROJECT_REPONAME;
 const prnum = process.env.CIRCLE_PR_NUMBER;
 
 const exitCode = 0;
+const results = {};
+// size of the previous version cee file being tested
 let prevResult;
+// percentage difference of css files
 let diff;
+// the number of files that have changed
+let totalFiles = 0;
+// the color of the result size value.
+let sizeCol = 'green';
 
 let html = '<table>';
 html += '<tr>';
@@ -20,9 +27,6 @@ html += `<td>Current(kb)</td>`;
 html += `<td>Previous(kb)</td>`;
 html += `<td>Diff %</td>`;
 html += '</tr>';
-
-const results = {};
-let sizeCol = 'green';
 
 // @todo add: 'dist/patternfly.css', 'dist/patternfly.min.css'
 glob
@@ -44,22 +48,29 @@ glob
 
     diff = size !== 0 ? Math.abs(((size - prevResult) / size) * 100).toPrecision(2) : 0;
 
-    // if ( diff !== 0 ) {
-    html += '<tr>';
-    html += `<td>${path.basename(file)}</td>`; // Name
-    html += `<td><font color=${sizeCol}>${size}</font></td>`; // Current
-    html += `<td>${prevResult}</td>`; // Previous
-    if (diff > 0) {
-      html += `<td><font color='#E74C3C'>${diff}</font></td>`;
-    } else if (diff < 0) {
-      html += `<td><font color='#229954'>${diff}</font></td>`;
-    } else {
-      html += `<td>${diff}</td>`;
+    if ( parseFloat(diff) !== parseFloat('0') ) {
+      totalFiles++;
+      html += '<tr>';
+      html += `<td>${path.basename(file)}</td>`; // Name
+      html += `<td><font color=${sizeCol}>${size}</font></td>`; // Current
+      html += `<td>${prevResult}</td>`; // Previous
+      if (diff > 0) {
+        html += `<td><font color='#E74C3C'>${diff}</font></td>`;
+      } else if (diff < 0) {
+        html += `<td><font color='#229954'>${diff}</font></td>`;
+      } else {
+        html += `<td>${diff}</td>`;
+      }
+      html += '<tr>';
+      results[file] = size;
     }
-    html += '<tr>';
-    results[file] = size;
-    // }
   });
+
+if ( totalFiles == 0) {
+  html += '<tr>';
+  html += `<td colspan="4">There are no changes in CSS file sizes</td>`
+  html += '<tr>';
+}
 
 html += '</table>';
 console.log(html);
