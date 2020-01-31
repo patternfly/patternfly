@@ -1,7 +1,9 @@
 #!/bin/bash
-
-# A simple script that will check to see if the previous patternfly has been installed to .circleci/css-size-report/nodemodules.
-# this installtion is used to calculate size changes in css files..
+#
+# A simple script that will do the following:
+#   - install previous version of patternfly to .circleci/css-size-report/nodemodules.
+#   - run nodeJS script that will compare current changed css file sizes to the previous version.
+#
 
 cd $(dirname $0)
 
