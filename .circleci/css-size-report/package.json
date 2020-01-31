@@ -9,7 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "",
-  "devDependencies": {
-    "@patternfly/patternfly": "^2.56.3"
-  }
+  "devDependencies": {}
 }
