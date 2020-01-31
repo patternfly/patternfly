@@ -13,17 +13,6 @@ const exitCode = 0;
 let prevResult;
 let diff;
 
-// if report file does not exist create empty file.
-// if (!fs.existsSync(reportFile)) {
-//   try {
-//     fs.utimesSync(reportFile, time, time);
-//     // prevResults = require(reportFile);
-//   } catch (err) {
-//     fs.closeSync(fs.openSync(reportFile, 'w'));
-//     throw new Error(`File creation failed:' + reportFile`);
-//   }
-// }
-
 let html = '<table>';
 html += '<tr>';
 html += `<td>Name</td>`;
@@ -37,7 +26,7 @@ let sizeCol = 'green';
 
 // @todo add: 'dist/patternfly.css', 'dist/patternfly.min.css'
 glob
-  .sync('dist/components/**/*.css')
+  .sync('../../dist/components/**/*.css')
   // .filter(file => prevResults[file])
   .map(file => ({ file, size: fs.statSync(file).size }))
   // .sort(by size)
@@ -50,7 +39,7 @@ glob
       sizeCol = '#229954';
     }
     prevResult = glob
-      .sync(`.circleci/tmp/node_modules/@patternfly/patternfly/**/${path.basename(file)}`)
+      .sync(`node_modules/@patternfly/patternfly/**/${path.basename(file)}`)
       .map(file => ({ file, size: fs.statSync(file).size }.size));
 
     diff = size !== 0 ? Math.abs(((size - prevResult) / size) * 100).toPrecision(2) : 0;
