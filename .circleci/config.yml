@@ -98,14 +98,14 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
-        name: Start dev server
+        name: Serve docs
         command: npm run serve
         background: true
     - run:
         name: a11y Tests
         command: npm run test:a11y
     - run:
-        name: Upload preview
+        name: Upload a11y report
         command: node .circleci/upload-preview.js coverage
         when: always
     - persist_to_workspace:
