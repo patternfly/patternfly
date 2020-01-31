@@ -124,7 +124,7 @@ jobs:
         - *size_report_master_cache_key
     - run:
         name: Lint CSS Size
-        command: node build/sizeReport.js
+        command: .circleci/css-size-report/css-size-report.sh
         when: always
     - persist_to_workspace:
         root: ~/project
