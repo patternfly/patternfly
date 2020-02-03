@@ -16,7 +16,7 @@ function compileSASS0(srcFiles) {
       let cssString;
       let scss = chunk.contents.toString();
       const relativePath = path.relative(path.join(chunk._cwd, '/src/patternfly'), chunk.history[0]);
-      const loggedPath = path.relative(__dirname, chunk.history[0]);
+      const loggedPath = path.relative(process.cwd(), chunk.history[0]);
       const numDirectories = relativePath.includes('/') ? relativePath.match(/\//g).length : 0;
       // This hack is to not include sass-utilities/placeholders.scss CSS more than once
       // in our production patternfly.css BUT still be able to compile individual SCSS files.
@@ -66,23 +66,26 @@ function compileSASS(sassFiles) {
   return compileSASS0(src(sassFiles));
 }
 
-function watchSASS() {
-  // Initial build
-  module.exports.build();
-
+// Helper
+function getGatsbyCSSFiles() {
+  const res = [];
   const fileContents = fs.readFileSync('./gatsby-browser.js', 'utf8');
-  const regex = /import ['"](.*\/dist\/.*)['"];/g;
-  const gatsbyCSSFiles = [];
-  const graph = sassGraph.parseDir('./src/patternfly').index;
+  const regex = /import ['"](.*\/dist\/.*)['"];?/g;
 
   let result;
   // eslint-disable-next-line no-cond-assign
   while ((result = regex.exec(fileContents))) {
     // Map CSS require to its SASS source file
-    const srcFile = result[1].replace('./dist/', path.join(__dirname, '/src/patternfly/')).replace(/.css$/, '.scss');
-    gatsbyCSSFiles.push(srcFile);
+    const srcFile = result[1].replace('./dist/', path.join(process.cwd(), '/src/patternfly/')).replace(/.css$/, '.scss');
+    res.push(srcFile);
   }
 
+  return res;
+}
+
+function watchSASS(sassFiles) {
+  const gatsbyCSSFiles = getGatsbyCSSFiles();
+  const graph = sassGraph.parseDir('./src/patternfly').index;
   const watcher = watch(sassFiles, { delay: 0 });
 
   function visit(graphNode, acc) {
@@ -99,12 +102,12 @@ function watchSASS() {
 
   function compileGatsbySASS(sassFile) {
     // Now find files this file is imported by
-    const fullPath = path.join(__dirname, sassFile);
+    const fullPath = path.join(process.cwd(), sassFile);
     const graphNode = graph[fullPath];
     const dependents = visit(graphNode, [fullPath]);
     const toCompile = gatsbyCSSFiles.filter(file => dependents.includes(file));
     compileSASS0(src(toCompile));
-    console.log('Compiled', toCompile.map(file => path.relative(__dirname, file)).join(' '));
+    console.log('Compiled', toCompile.map(file => path.relative(process.cwd(), file)).join(' '));
   }
 
   watcher.on('change', compileGatsbySASS);

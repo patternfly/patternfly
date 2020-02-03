@@ -55,6 +55,7 @@
     "axe-webdriverjs": "^2.2.0",
     "axios": "^0.18.1",
     "babel-eslint": "^8.2.3",
+    "browser-sync": "^2.26.7",
     "browserstack-local": "^1.4.4",
     "chai": "^4.2.0",
     "commander": "^2.13.0",
