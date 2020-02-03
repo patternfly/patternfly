@@ -67,7 +67,7 @@ function startWorkspaceServer() {
   });
 }
 
-const buildWorkspace = series(compileSrcSASS, compileSrcHBS, compileSrcMD, copyWorkspaceAssets);
+const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
 
 module.exports = {
   build: series(clean, compileSrcSASS, minifyCSS, pfIcons, copyFA, copySourceFiles),
