@@ -7,7 +7,7 @@ const unified = require('unified');
 const toMDAST = require('remark-parse');
 const remark2rehype = require('remark-rehype');
 const stringify = require('rehype-stringify');
-const raw = require('rehype-raw')
+const raw = require('rehype-raw');
 const Handlebars = require('handlebars');
 const { extractExamples } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
 const { codeTransformer } = require('./codeTransformer');
@@ -96,10 +96,7 @@ function compileMD0(srcFiles) {
       fs.writeFileSync(indexFilePath, getHTMLWithStyles(cssPaths, indexHtml));
       Object.entries(examples).forEach(([example, html]) => {
         const htmlPath = path.join(process.cwd(), `/workspace/${lastPath}/${example}.html`);
-        fs.writeFileSync(
-          htmlPath,
-          getHTMLWithStyles(cssPaths, html)
-        );
+        fs.writeFileSync(htmlPath, getHTMLWithStyles(cssPaths, html));
       });
       cb2(null, chunk);
     })

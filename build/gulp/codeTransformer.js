@@ -20,7 +20,7 @@ function codeTransformer(config) {
     visit(tree, 'code', visitor);
   }
 
-  return transformer
+  return transformer;
 }
 
-module.exports = { codeTransformer }
+module.exports = { codeTransformer };
