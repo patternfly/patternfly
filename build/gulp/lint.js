@@ -86,7 +86,7 @@ function lintCSSComments() {
   return src('./dist/**/*.css')
     .pipe(
       through2.obj((chunk, _, cb2) => {
-        const loggedPath = path.relative(__dirname, chunk.history[0]);
+        const loggedPath = path.relative(process.cwd(), chunk.history[0]);
         const css = chunk.contents.toString();
 
         if (css.includes('/*') && !/\/*[!#]/.test(css)) {
@@ -105,8 +105,8 @@ function lintCSSComments() {
 }
 
 function lintCSSSize(cb) {
-  const patternflyPath = path.resolve(__dirname, './dist/patternfly.css');
-  const patternflyMinPath = path.resolve(__dirname, './dist/patternfly.min.css');
+  const patternflyPath = path.resolve(process.cwd(), './dist/patternfly.css');
+  const patternflyMinPath = path.resolve(process.cwd(), './dist/patternfly.min.css');
 
   const patternflySize = fs.statSync(patternflyPath).size;
   const patternflyMinSize = fs.statSync(patternflyMinPath).size;
