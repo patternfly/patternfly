@@ -110,16 +110,6 @@
     "stylelint-scss": "^2.5.0",
     "stylelint-value-no-unknown-custom-properties": "^2.0.0"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.0.0"
@@ -155,5 +145,15 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
   }
 }
