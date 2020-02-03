@@ -1,4 +1,8 @@
 const path = require('path');
+const fs = require('fs');
+const { src } = require('gulp');
+const through2 = require('through2');
+
 const validCSSFunctions = [
   // https://www.w3schools.com/cssref/css_functions.asp
   'attr',
@@ -127,4 +131,4 @@ module.exports = {
   lintCSSComments,
   lintCSSFunctions,
   lintCSSSize
-}
+};

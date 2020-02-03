@@ -76,7 +76,9 @@ function getGatsbyCSSFiles() {
   // eslint-disable-next-line no-cond-assign
   while ((result = regex.exec(fileContents))) {
     // Map CSS require to its SASS source file
-    const srcFile = result[1].replace('./dist/', path.join(process.cwd(), '/src/patternfly/')).replace(/.css$/, '.scss');
+    const srcFile = result[1]
+      .replace('./dist/', path.join(process.cwd(), '/src/patternfly/'))
+      .replace(/.css$/, '.scss');
     res.push(srcFile);
   }
 
@@ -127,4 +129,4 @@ module.exports = {
   compileSASS,
   minifyCSS,
   watchSASS
-}
+};

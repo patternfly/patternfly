@@ -24,7 +24,7 @@ function compileHBS0(srcFiles) {
         path.basename(chunk.history[0], '.hbs'), // Partial name
         chunk.contents.toString() // Partial template
       );
-      
+
       cb2(null, chunk);
     })
   );
@@ -42,7 +42,7 @@ function getCSSPaths() {
   let result;
   // eslint-disable-next-line no-cond-assign
   while ((result = regex.exec(fileContents))) {
-    const srcFile = require.resolve(result[1], { paths: [ path.resolve(__dirname, '../..') ] });
+    const srcFile = require.resolve(result[1], { paths: [path.resolve(__dirname, '../..')] });
     // Create symlink so our server can serve the symlink instead of the entire root dir
     res.push(path.relative(process.cwd(), srcFile));
   }
@@ -54,7 +54,9 @@ function compileMD0(srcFiles) {
   const cssPaths = getCSSPaths();
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
-      const mdAST = unified().use(toMDAST).parse(chunk.contents.toString());
+      const mdAST = unified()
+        .use(toMDAST)
+        .parse(chunk.contents.toString());
       const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
       const split = chunk.history[0].split('/');
       const lastPath = split
@@ -67,15 +69,18 @@ function compileMD0(srcFiles) {
       Object.entries(examples).forEach(([example, html]) => {
         const htmlPath = path.join(process.cwd(), `/workspace/${lastPath}/${example}.html`);
         fs.ensureFileSync(htmlPath);
-        fs.writeFileSync(htmlPath, `<!doctype html>
+        fs.writeFileSync(
+          htmlPath,
+          `<!doctype html>
 <html>
   <head>
-    ${cssPaths.map(path => `<link rel="stylesheet" href="../../../${path}">`).join('\n    ')}
+    ${cssPaths.map(cssPath => `<link rel="stylesheet" href="../../../${cssPath}">`).join('\n    ')}
   </head>
   <body>
     ${html.replace(/\n/g, '    \n')}
   </body>
-</html>`);
+</html>`
+        );
       });
       cb2(null, chunk);
     })
@@ -121,4 +126,4 @@ module.exports = {
   compileMD,
   watchHBS,
   watchMD
-}
+};

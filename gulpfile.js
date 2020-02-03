@@ -15,13 +15,9 @@ const sassFiles = [
   '!./src/patternfly/patternfly-imports.scss'
 ];
 
-const hbsFiles = [
-  './src/patternfly/{components,layouts,patterns,utilities}/**/*.hbs'
-];
+const hbsFiles = ['./src/patternfly/{components,layouts,patterns,utilities}/**/*.hbs'];
 
-const mdFiles = [
-  './src/patternfly/{components,layouts,patterns,utilities}/**/*.md'
-];
+const mdFiles = ['./src/patternfly/{components,layouts,patterns,utilities}/**/*.md'];
 
 function clean(cb) {
   ['./dist', './src/icons/PfIcons'].forEach(dir => removeSync(dir));
@@ -64,7 +60,7 @@ function startWorkspaceServer() {
   browserSync.init({
     server: {
       baseDir: './',
-      directory: true,
+      directory: true
     },
     files: ['workspace/**/*.html', 'dist/**/*.css'],
     startPath: 'workspace'

@@ -37,4 +37,4 @@ module.exports = {
   copyAssets,
   copyFA,
   copySource
-}
+};

@@ -2,6 +2,7 @@ const { src, dest } = require('gulp');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const generateIcons = require('../../src/icons/generateIcons.js');
+
 const pficonFontName = 'pficon';
 
 function pfIcons() {
@@ -32,4 +33,4 @@ function pfIconFont() {
 module.exports = {
   pfIcons,
   pfIconFont
-}
+};
