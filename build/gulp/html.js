@@ -21,6 +21,7 @@ hbsInstance.registerHelper('concat', (...params) => {
   }
   return params.join('');
 });
+const cssPaths = getCSSPaths();
 
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
@@ -45,25 +46,24 @@ function getCSSPaths() {
   const fileContents = fs.readFileSync('./gatsby-browser.js', 'utf8');
   const regex = /import ['"](.*)['"];?/g;
   let result;
+
+  // Include styles from gatsby-browser.js
   // eslint-disable-next-line no-cond-assign
   while ((result = regex.exec(fileContents))) {
     const srcFile = require.resolve(result[1], { paths: [path.resolve(__dirname, '../..')] });
-    // Create symlink so our server can serve the symlink instead of the entire root dir
-    res.push(path.relative(process.cwd(), srcFile));
+    res.push(srcFile);
   }
 
   // Include all workspace styles
-  glob
-    .sync('src/patternfly/**/*.css')
-    .map(file => path.relative(process.cwd(), file))
-    .filter(file => !file.includes('assets'))
-    .forEach(file => res.push(file));
+  glob.sync('src/patternfly/**/*.css').forEach(file => res.push(file));
 
-  return res;
+  // Include ws-lite.css
+  res.push(path.join(__dirname, 'ws-lite.css'));
+  return res.map(file => path.relative(process.cwd(), file)).filter(file => !file.includes('assets'));
 }
 
 // Helper
-function getHTMLWithStyles(cssPaths, html) {
+function getHTMLWithStyles(html) {
   return `<!doctype html>
 <html>
   <head>
@@ -81,7 +81,6 @@ function getHTMLFilePath(lastPath, exampleName) {
 }
 
 function compileMD0(srcFiles) {
-  const cssPaths = getCSSPaths();
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
       const split = chunk.history[0].split('/');
@@ -111,11 +110,11 @@ function compileMD0(srcFiles) {
         fs.ensureFileSync(htmlPath);
         if (exampleName !== 'index') {
           // .ws-core-l-flex .pf-l-flex .pf-l-flex
-          html = `<div class="${getClasses(section, title, exampleName)}"
+          html = `<div class="ws-lite-full-example ${getClasses(section, title, exampleName)}">
 ${html}
 </div>`;
         }
-        fs.writeFileSync(htmlPath, getHTMLWithStyles(cssPaths, html));
+        fs.writeFileSync(htmlPath, getHTMLWithStyles(html));
       });
       cb2(null, chunk);
     })

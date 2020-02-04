@@ -62,7 +62,7 @@ function startWorkspaceServer() {
       baseDir: './',
       directory: true
     },
-    files: ['workspace/**/*.html', 'dist/**/*.css'],
+    files: ['workspace/**/*.html', 'dist/**/*.css', 'build/gulp/ws-lite.css'],
     startPath: 'workspace'
   });
 }
