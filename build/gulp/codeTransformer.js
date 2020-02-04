@@ -3,8 +3,12 @@ const { getId } = require('gatsby-theme-patternfly-org/helpers/getId');
 const { getExampleClassName, getExampleId } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
 
 // Helper
-function getClasses(section, title, exampleName) {
-  return `${getExampleClassName('core', section, title)} ${getExampleId('core', section, title, exampleName)}`;
+function getWrapperDiv(section, title, exampleName, toWrap, classNames) {
+  return `<div
+    id="${getExampleId('core', section, title, exampleName)}"
+    class="${classNames} ${getExampleClassName(section, title, exampleName)}">
+  ${toWrap}
+</div>`;
 }
 
 // https://github.com/unifiedjs/unified#plugin
@@ -15,9 +19,13 @@ function codeTransformer(config) {
       const id = getId(match[1]);
       if (config.examples[id]) {
         node.type = 'html';
-        node.value = `<div class="ws-lite-example ${getClasses(config.section, config.title, id.toLowerCase())}">${
-          config.examples[id]
-        }</div>`;
+        node.value = getWrapperDiv(
+          config.section,
+          config.title,
+          id.toLowerCase(),
+          config.examples[id],
+          'ws-lite-example'
+        );
         delete node.meta;
         delete node.language;
       }
@@ -31,4 +39,4 @@ function codeTransformer(config) {
   return transformer;
 }
 
-module.exports = { codeTransformer, getClasses };
+module.exports = { codeTransformer, getWrapperDiv };

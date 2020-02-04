@@ -11,7 +11,7 @@ const raw = require('rehype-raw');
 const graymatter = require('gray-matter');
 const Handlebars = require('handlebars');
 const { extractExamples } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
-const { codeTransformer, getClasses } = require('./codeTransformer');
+const { codeTransformer, getWrapperDiv } = require('./codeTransformer');
 
 const hbsInstance = Handlebars.create();
 hbsInstance.registerHelper('concat', (...params) => {
@@ -111,9 +111,7 @@ function compileMD0(srcFiles) {
         fs.ensureFileSync(htmlPath);
         if (exampleName !== 'index') {
           // .ws-core-l-flex .pf-l-flex .pf-l-flex
-          html = `<div class="ws-lite-full-example ${getClasses(section, title, exampleName)}">
-${html}
-</div>`;
+          html = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
         }
         fs.writeFileSync(htmlPath, getHTMLWithStyles(cssPaths, html));
       });
