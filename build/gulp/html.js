@@ -21,7 +21,6 @@ hbsInstance.registerHelper('concat', (...params) => {
   }
   return params.join('');
 });
-const cssPaths = getCSSPaths();
 
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
@@ -63,7 +62,7 @@ function getCSSPaths() {
 }
 
 // Helper
-function getHTMLWithStyles(html) {
+function getHTMLWithStyles(cssPaths, html) {
   return `<!doctype html>
 <html>
   <head>
@@ -81,6 +80,8 @@ function getHTMLFilePath(lastPath, exampleName) {
 }
 
 function compileMD0(srcFiles) {
+  const cssPaths = getCSSPaths();
+
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
       const split = chunk.history[0].split('/');
@@ -114,7 +115,7 @@ function compileMD0(srcFiles) {
 ${html}
 </div>`;
         }
-        fs.writeFileSync(htmlPath, getHTMLWithStyles(html));
+        fs.writeFileSync(htmlPath, getHTMLWithStyles(cssPaths, html));
       });
       cb2(null, chunk);
     })
