@@ -15,9 +15,9 @@ const sassFiles = [
   '!./src/patternfly/patternfly-imports.scss'
 ];
 
-const hbsFiles = ['./src/patternfly/{components,layouts,patterns,utilities}/**/*.hbs'];
+const hbsFiles = ['./src/patternfly/**/*.hbs'];
 
-const mdFiles = ['./src/patternfly/{components,layouts,patterns,utilities}/**/*.md'];
+const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
   ['./dist', './src/icons/PfIcons'].forEach(dir => removeSync(dir));

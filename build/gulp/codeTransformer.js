@@ -1,5 +1,11 @@
 const visit = require('unist-util-visit');
 const { getId } = require('gatsby-theme-patternfly-org/helpers/getId');
+const { getExampleClassName, getExampleId } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
+
+// Helper
+function getClasses(section, title, exampleName) {
+  return `${getExampleClassName('core', section, title)} ${getExampleId('core', section, title, exampleName)}`;
+}
 
 // https://github.com/unifiedjs/unified#plugin
 function codeTransformer(config) {
@@ -9,7 +15,7 @@ function codeTransformer(config) {
       const id = getId(match[1]);
       if (config.examples[id]) {
         node.type = 'html';
-        node.value = `<div>${config.examples[id]}</div><hr style="margin:2rem">`;
+        node.value = `<hr style="margin:2rem"><div class="${getClasses(config.section, config.title, id.toLowerCase())}">${config.examples[id]}</div><hr style="margin:2rem">`;
         delete node.meta;
         delete node.language;
       }
@@ -23,4 +29,4 @@ function codeTransformer(config) {
   return transformer;
 }
 
-module.exports = { codeTransformer };
+module.exports = { codeTransformer, getClasses };

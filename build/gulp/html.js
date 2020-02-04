@@ -8,9 +8,10 @@ const toMDAST = require('remark-parse');
 const remark2rehype = require('remark-rehype');
 const stringify = require('rehype-stringify');
 const raw = require('rehype-raw');
+const graymatter = require('gray-matter');
 const Handlebars = require('handlebars');
 const { extractExamples } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
-const { codeTransformer } = require('./codeTransformer');
+const { codeTransformer, getClasses } = require('./codeTransformer');
 
 const hbsInstance = Handlebars.create();
 hbsInstance.registerHelper('concat', (...params) => {
@@ -51,6 +52,12 @@ function getCSSPaths() {
     res.push(path.relative(process.cwd(), srcFile));
   }
 
+  // Include all workspace styles
+  glob.sync('src/patternfly/**/*.css')
+    .map(file => path.relative(process.cwd(), file))
+    .filter(file => !file.includes('assets'))
+    .forEach(file => res.push(file));
+
   return res;
 }
 
@@ -61,28 +68,21 @@ function getHTMLWithStyles(cssPaths, html) {
   <head>
     ${cssPaths.map(cssPath => `<link rel="stylesheet" href="../../../${cssPath}">`).join('\n    ')}
   </head>
-  <body>
-    ${html.replace(/\n/g, '    \n')}
+  <body class="pf-m-redhat-font">
+    ${html.replace(/\s*\n/g, '\n    ')}
   </body>
 </html>`;
+}
+
+// Helper
+function getHTMLFilePath(lastPath, exampleName) {
+  return `workspace/${lastPath}/${exampleName}.html`;
 }
 
 function compileMD0(srcFiles) {
   const cssPaths = getCSSPaths();
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
-      const fileString = chunk.contents.toString();
-      const mdAST = unified()
-        .use(toMDAST)
-        .parse(fileString);
-      const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
-      const indexHtml = unified()
-        .use(toMDAST)
-        .use(codeTransformer, { examples })
-        .use(remark2rehype, { allowDangerousHTML: true })
-        .use(raw)
-        .use(stringify)
-        .processSync(fileString).contents;
       const split = chunk.history[0].split('/');
       const lastPath = split
         .slice(split.length - 4, split.length - 1)
@@ -90,12 +90,30 @@ function compileMD0(srcFiles) {
         .replace(/\/examples/, '')
         .replace(/.mdx?$/, '')
         .toLowerCase();
+      const { data, content } = graymatter(chunk.contents.toString());
+      const mdAST = unified()
+        .use(toMDAST)
+        .parse(content);
+      const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
+      const section = data.section[0].toLowerCase();
+      const title = data.title.toLowerCase();
+      examples['index'] = unified()
+        .use(toMDAST)
+        .use(codeTransformer, { examples, section, title })
+        .use(remark2rehype, { allowDangerousHTML: true })
+        .use(raw)
+        .use(stringify)
+        .processSync(content).contents;
 
-      const indexFilePath = path.join(process.cwd(), `/workspace/${lastPath}/index.html`);
-      fs.ensureFileSync(indexFilePath);
-      fs.writeFileSync(indexFilePath, getHTMLWithStyles(cssPaths, indexHtml));
-      Object.entries(examples).forEach(([example, html]) => {
-        const htmlPath = path.join(process.cwd(), `/workspace/${lastPath}/${example}.html`);
+      Object.entries(examples).forEach(([exampleName, html]) => {
+        const htmlPath = path.join(process.cwd(), getHTMLFilePath(lastPath, exampleName));
+        fs.ensureFileSync(htmlPath);
+        if (exampleName !== 'index') {
+        // .ws-core-l-flex .pf-l-flex .pf-l-flex
+        html = `<div class="${getClasses(section, title, exampleName)}"
+${html}
+</div>`;
+        }
         fs.writeFileSync(htmlPath, getHTMLWithStyles(cssPaths, html));
       });
       cb2(null, chunk);
