@@ -393,14 +393,15 @@
   .pf-c-button {
     display: flex;
 
+    // stylelint-disable
     &.pf-m-plain {
       color: var(--pf-c-table__sort--c-button--Color);
-      // stylelint-disable
     }
-    // stylelint-enable
+
     &.pf-m-sort-wrap > span:first-child {
       white-space: normal;
     }
+    // stylelint-enable
   }
 
   &.pf-m-selected {
