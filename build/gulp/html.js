@@ -53,7 +53,8 @@ function getCSSPaths() {
   }
 
   // Include all workspace styles
-  glob.sync('src/patternfly/**/*.css')
+  glob
+    .sync('src/patternfly/**/*.css')
     .map(file => path.relative(process.cwd(), file))
     .filter(file => !file.includes('assets'))
     .forEach(file => res.push(file));
@@ -97,7 +98,7 @@ function compileMD0(srcFiles) {
       const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
       const section = data.section[0].toLowerCase();
       const title = data.title.toLowerCase();
-      examples['index'] = unified()
+      examples.index = unified()
         .use(toMDAST)
         .use(codeTransformer, { examples, section, title })
         .use(remark2rehype, { allowDangerousHTML: true })
@@ -109,8 +110,8 @@ function compileMD0(srcFiles) {
         const htmlPath = path.join(process.cwd(), getHTMLFilePath(lastPath, exampleName));
         fs.ensureFileSync(htmlPath);
         if (exampleName !== 'index') {
-        // .ws-core-l-flex .pf-l-flex .pf-l-flex
-        html = `<div class="${getClasses(section, title, exampleName)}"
+          // .ws-core-l-flex .pf-l-flex .pf-l-flex
+          html = `<div class="${getClasses(section, title, exampleName)}"
 ${html}
 </div>`;
         }

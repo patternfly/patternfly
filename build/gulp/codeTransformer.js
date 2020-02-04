@@ -15,7 +15,11 @@ function codeTransformer(config) {
       const id = getId(match[1]);
       if (config.examples[id]) {
         node.type = 'html';
-        node.value = `<hr style="margin:2rem"><div class="${getClasses(config.section, config.title, id.toLowerCase())}">${config.examples[id]}</div><hr style="margin:2rem">`;
+        node.value = `<hr style="margin:2rem"><div class="${getClasses(
+          config.section,
+          config.title,
+          id.toLowerCase()
+        )}">${config.examples[id]}</div><hr style="margin:2rem">`;
         delete node.meta;
         delete node.language;
       }
