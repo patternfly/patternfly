@@ -100,6 +100,7 @@
   --pf-c-table__sort-indicator--Color: var(--pf-global--disabled-color--200);
   --pf-c-table__sort-indicator--hover--Color: var(--pf-global--Color--100);
   --pf-c-table__sort--c-button--Color: var(--pf-global--Color--100);
+  --pf-c-table__sort-indicator--LineHeight: var(--pf-c-button--LineHeight);
 
   // Icon inline
   --pf-c-table__icon-inline--MarginRight: var(--pf-global--spacer--sm);
@@ -398,8 +399,6 @@
     }
     // stylelint-enable
     &.pf-m-sort-wrap > span:first-child {
-      overflow: hidden;
-      text-overflow: ellipsis;
       white-space: normal;
     }
   }
@@ -423,10 +422,9 @@
 
 // Sort indicator
 .pf-c-table__sort-indicator {
+  align-self: flex-start;
   margin-left: var(--pf-c-table__sort-indicator--MarginLeft);
-
-  // set line-height to 1 so it does not adjust height of button
-  line-height: 1;
+  line-height: var(--pf-c-table__sort-indicator--LineHeight);
   color: var(--pf-c-table__sort-indicator--Color);
   pointer-events: none;
 }

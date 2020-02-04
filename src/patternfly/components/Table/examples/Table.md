@@ -125,20 +125,20 @@ cssPrefix: pf-c-table
 {{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true" table-th--selected="true" table-th--asc="true"}}
-        This is a really long table header that truncates if its too long.
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+        Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
-        This is a really long table header that truncates if its too long.
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
-        This is a really long table header that truncates if its too long.
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable-wrap="true"}}
-        This is a really long table header that truncates if its too long.
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable-wrap="true"}}
-        This is a really long table header that truncates if its too long.
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
       {{/table-th}}
     {{/table-tr}}
   {{/table-thead}}
@@ -218,6 +218,51 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+
+```hbs title=Sortable-with-headers-that-wrap
+{{#> table table--id="table-sortable-wrap" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example with headers that wrap"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true" table-th--selected="true" table-th--asc="true"}}
+        This is a really long sortable table header.
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
+        This is a really long sortable table header.
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
+        This is a really long sortable table header.
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
+        This is a really long table header.
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
+        This is a really long table header.
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -226,8 +271,9 @@ cssPrefix: pf-c-table
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__sort` | `<th>` | Initiates a sort table cell. **Required for sortable table columns** |
-| `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span` | Initiates a sort indicator. **Required for sortable table columns** |
+| `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
+| `.pf-m-sort-wrap` | `.pf-c-table__sort > .pf-c-button`| Modifies the sortable table header to wrap. |
 | `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
