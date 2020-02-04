@@ -37,3 +37,8 @@
 #ws-core-c-dropdown-panel {
   min-height: 130px;
 }
+
+#ws-core-c-dropdown-multi-level,
+#ws-core-c-dropdown-multi-multi-level {
+  min-height: 320px;
+}

@@ -1,0 +1,32 @@
+<ul class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
+  aria-labelledby="{{id}}-button"
+  {{#unless dropdown--IsExpanded}}hidden{{/unless}}
+  {{#if dropdown-menu--attribute}}
+	  {{{dropdown-menu--attribute}}}
+  {{/if}}>
+  {{#> dropdown-menu-wrapper id=(concat id "-menu1")}}
+    {{#> dropdown-menu-item dropdown-menu-item--attribute=(concat 'id="' id '-button"') dropdown-menu-item--IsSubmenuToggle="true" dropdown-menu-item--IsExpanded="true"}}
+      Submenu 1
+    {{/dropdown-menu-item}}
+    {{#if dropdown--IsMultiMultiLevel}}
+      {{#> dropdown-menu-multi-level newcontext id=id dropdown--IsExpanded="true"}}{{/dropdown-menu-multi-level}}
+    {{else}}
+      {{#> dropdown-menu newcontext id=id dropdown--IsExpanded="true"}}{{/dropdown-menu}}
+    {{/if}}
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper}}
+    {{#> dropdown-menu-item}}Action 1{{/dropdown-menu-item}}
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper}}
+    {{#> dropdown-menu-item}}Action 2{{/dropdown-menu-item}}
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper id=(concat id "-menu2")}}
+    {{#> dropdown-menu-item dropdown-menu-item--attribute=(concat 'id="' id '-button"') dropdown-menu-item--IsSubmenuToggle="true"}}
+      Submenu 2
+    {{/dropdown-menu-item}}
+    {{#> dropdown-menu newcontext id=id}}{{/dropdown-menu}}
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper}}
+    {{#> dropdown-menu-item}}Action 3{{/dropdown-menu-item}}
+  {{/dropdown-menu-wrapper}}
+</ul>

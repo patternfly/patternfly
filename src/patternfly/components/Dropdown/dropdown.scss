@@ -63,6 +63,9 @@
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --pf-c-dropdown__menu--Left: 0;
+  --pf-c-dropdown__menu__menu--Top: calc(var(--pf-c-dropdown__menu--PaddingTop) * -1);
+  --pf-c-dropdown__menu__menu--Left: 100%;
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-dropdown--m-top__menu--Top: 0;
   --pf-c-dropdown--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
@@ -78,14 +81,19 @@
   --pf-c-dropdown__menu-item--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-dropdown__menu-item--hover--Color: var(--pf-global--Color--dark-100);
-  --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-dropdown__menu-item--m-expanded--Color: var(--pf-global--Color--dark-100);
+  --pf-c-dropdown__menu-item--m-expanded--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
 
   // Menu item icon
   --pf-c-dropdown__menu-item-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu-item-icon--Width: var(--pf-global--icon--FontSize--lg);
   --pf-c-dropdown__menu-item-icon--Height: var(--pf-global--icon--FontSize--lg);
+
+  // Submenu item icon
+  --pf-c-dropdown__submenu-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Divider
   --pf-c-dropdown__c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -334,6 +342,7 @@
 .pf-c-dropdown__menu {
   position: absolute;
   top: var(--pf-c-dropdown__menu--Top);
+  left: var(--pf-c-dropdown__menu--Left);
   z-index: var(--pf-c-dropdown__menu--ZIndex);
   min-width: 100%;
   padding-top: var(--pf-c-dropdown__menu--PaddingTop);
@@ -352,6 +361,16 @@
 
     transform: var(--pf-c-dropdown--m-top__menu--Transform);
   }
+
+  // multi-level
+  & & {
+    --pf-c-dropdown__menu--Top: var(--pf-c-dropdown__menu__menu--Top);
+    --pf-c-dropdown__menu--Left: var(--pf-c-dropdown__menu__menu--Left);
+  }
+}
+
+.pf-c-dropdown__menu-wrapper {
+  position: relative;
 }
 
 .pf-c-dropdown__menu-item {
@@ -385,9 +404,15 @@
     pointer-events: none;
   }
 
-  &.pf-m-icon {
+  &.pf-m-icon,
+  &.pf-m-submenu-toggle {
     display: flex;
     align-items: center;
+  }
+
+  &.pf-m-expanded {
+    --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--m-expanded--Color);
+    --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--m-expanded--BackgroundColor);
   }
 }
 
@@ -403,6 +428,11 @@
     max-width: 100%;
     max-height: 100%;
   }
+}
+
+.pf-c-dropdown__submenu-toggle-icon {
+  padding-left: var(--pf-c-dropdown__submenu-toggle-icon--PaddingLeft);
+  margin-left: auto;
 }
 
 .pf-c-dropdown__separator {

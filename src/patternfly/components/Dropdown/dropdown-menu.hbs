@@ -4,7 +4,7 @@
   {{#if dropdown-menu--attribute}}
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
-  <li>
+  {{#> dropdown-menu-wrapper}}
     {{#if dropdown--HasItemIcons}}
       {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-icon" dropdown-menu-item--attribute='href="#"'}}
         {{#> dropdown-menu-item-icon}}
@@ -17,8 +17,8 @@
         Link
       {{/dropdown-menu-item}}
     {{/if}}
-  </li>
-  <li>
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper}}
     {{#if dropdown--HasItemIcons}}
       {{#> dropdown-menu-item dropdown-menu-item--modifier="pf-m-icon"}}
         {{#> dropdown-menu-item-icon}}
@@ -31,21 +31,21 @@
         Action
       {{/dropdown-menu-item}}
     {{/if}}
-  </li>
-  <li>
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper}}
     {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-disabled" dropdown-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
       Disabled link
     {{/dropdown-menu-item}}
-  </li>
-  <li>
+  {{/dropdown-menu-wrapper}}
+  {{#> dropdown-menu-wrapper}}
     {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled'}}
       Disabled action
     {{/dropdown-menu-item}}
-  </li>
+  {{/dropdown-menu-wrapper}}
   {{#> dropdown-separator}}{{/dropdown-separator}}
-  <li>
+  {{#> dropdown-menu-wrapper}}
     {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
       Separated link
     {{/dropdown-menu-item}}
-  </li>
+  {{/dropdown-menu-wrapper}}
 </ul>

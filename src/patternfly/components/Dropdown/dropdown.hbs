@@ -13,6 +13,8 @@
     {{> dropdown-menu-split-button}}
   {{else if dropdown--IsGroupsMenu}}
     {{> dropdown-menu-groups}}
+  {{else if dropdown--IsMultiLevel}}
+    {{> dropdown-menu-multi-level}}
   {{else}}
     {{> dropdown-menu-basic}}
   {{/if}}
