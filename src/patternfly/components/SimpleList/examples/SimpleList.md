@@ -15,7 +15,7 @@ cssPrefix: pf-c-simple-list
       {{/simple-list-item-link}}
     {{/simple-list-item}}
     {{#> simple-list-item}}
-      {{#> simple-list-item-link}}
+      {{#> simple-list-item-link simple-list-item-link--type="a"}}
         List item 2
       {{/simple-list-item-link}}
     {{/simple-list-item}}
@@ -35,7 +35,7 @@ cssPrefix: pf-c-simple-list
     {{/simple-list-title}}
     {{#> simple-list-list}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--modifier="pf-m-current"}}
+        {{#> simple-list-item-link simple-list-item-link--type="a" simple-list-item-link--modifier="pf-m-current"}}
           List item 1
         {{/simple-list-item-link}}
       {{/simple-list-item}}
@@ -50,7 +50,7 @@ cssPrefix: pf-c-simple-list
         {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link}}
+        {{#> simple-list-item-link simple-list-item-link--type="a"}}
           List item 4
         {{/simple-list-item-link}}
       {{/simple-list-item}}
@@ -72,7 +72,7 @@ cssPrefix: pf-c-simple-list
         {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link}}
+        {{#> simple-list-item-link simple-list-item-link--type="a"}}
           List item 3
         {{/simple-list-item-link}}
       {{/simple-list-item}}
@@ -87,7 +87,11 @@ cssPrefix: pf-c-simple-list
 ```
 
 ## Documentation
-### Overview
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `a.pf-c-simple-list__item-link` | Inserts the link into the tab order of the page so that it is focusable. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
