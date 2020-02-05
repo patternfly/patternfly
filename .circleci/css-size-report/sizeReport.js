@@ -31,15 +31,18 @@ glob
   .sync('node_modules/' + package + '/**/*.css')
   .forEach(file => {
     const split = file.split('/');
-    const normalized = split.slice(split.length - 3, split.length).join('/');
+    let normalized = split.slice(split.length - 3, split.length).join('/');
+
+    if (normalized.startsWith(package)) {
+      normalized = file.split("/").pop();
+    }
+
     prevMap.set(normalized, fs.statSync(file).size);
   });
 
-// @todo add: 'dist/patternfly.css', 'dist/patternfly.min.css'
 glob
   .sync('../../dist/**/**/*.css')
   .map(file => ({ file, size: fs.statSync(file).size }))
-  // .sort(by size)
   .forEach(({ file, size }) => {
     if (size >= 10000) {
       sizeCol = '#E74C3C';
@@ -49,9 +52,11 @@ glob
       sizeCol = '#229954';
     }
 
-    console.log(prevMap.entries())
     const split = file.split('/');
-    const normalized = split.slice(split.length - 3, split.length).join('/');
+    let normalized = split.slice(split.length - 3, split.length).join('/');
+    if (normalized.startsWith("../dist")) {
+      normalized = file.split("/").pop();
+    }
 
     let psize;
     let diff;
