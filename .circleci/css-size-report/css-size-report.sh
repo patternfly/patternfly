@@ -81,6 +81,8 @@ if [ "${CMD}" == "run" ]; then
   run
 elif [ "${CMD}" == "clean" ]; then
   clean
+else
+  usage
 fi
 
 
