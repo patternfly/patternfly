@@ -126,12 +126,6 @@ jobs:
         name: Lint CSS Size
         command: .circleci/css-size-report/css-size-report.sh
         when: always
-    - persist_to_workspace:
-        root: ~/project
-        paths: *size_report_paths
-    - save_cache:
-        paths: *size_report_paths
-        key: *size_report_cache_key
   deploy:
     docker:
     - image: circleci/node:10

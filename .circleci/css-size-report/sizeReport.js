@@ -1,6 +1,5 @@
 const fs = require('fs');
 const glob = require('glob');
-const path = require('path');
 const Octokit = require('@octokit/rest');
 
 const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
@@ -11,27 +10,34 @@ const prnum = process.env.CIRCLE_PR_NUMBER;
 
 const exitCode = 0;
 const results = {};
-// size of the previous version cee file being tested
-let prevResult;
-// percentage difference of css files
-let diff;
+
 // the number of files that have changed
 let totalFiles = 0;
 // the color of the result size value.
 let sizeCol = 'green';
+// the package we will be testing against
+let package = '@patternfly/patternfly'
 
 let html = '<table>';
 html += '<tr>';
 html += `<td>Name</td>`;
-html += `<td>Current(kb)</td>`;
-html += `<td>Previous(kb)</td>`;
-html += `<td>Diff %</td>`;
+html += `<td style="text-align:center;">Current(kb)</td>`;
+html += `<td style="text-align:center;">Previous(kb)</td>`;
+html += `<td style="text-align:center;">Diff %</td>`;
 html += '</tr>';
+
+const prevMap = new Map();
+glob
+  .sync('node_modules/' + package + '/**/*.css')
+  .forEach(file => {
+    const split = file.split('/');
+    const normalized = split.slice(split.length - 3, split.length).join('/');
+    prevMap.set(normalized, fs.statSync(file).size);
+  });
 
 // @todo add: 'dist/patternfly.css', 'dist/patternfly.min.css'
 glob
-  .sync('../../dist/components/**/*.css')
-  // .filter(file => prevResults[file])
+  .sync('../../dist/**/**/*.css')
   .map(file => ({ file, size: fs.statSync(file).size }))
   // .sort(by size)
   .forEach(({ file, size }) => {
@@ -42,33 +48,42 @@ glob
     } else {
       sizeCol = '#229954';
     }
-    prevResult = glob
-      .sync(`node_modules/@patternfly/patternfly/**/${path.basename(file)}`)
-      .map(file => ({ file, size: fs.statSync(file).size }.size));
 
-    diff = size !== 0 ? Math.abs(((size - prevResult) / size) * 100).toPrecision(2) : 0;
+    console.log(prevMap.entries())
+    const split = file.split('/');
+    const normalized = split.slice(split.length - 3, split.length).join('/');
+
+    let psize;
+    let diff;
+    if ( typeof prevMap.get(normalized) !== 'undefined' ) {
+      psize = prevMap.get(normalized)
+      diff = size !== 0 ? Math.abs(((size - psize) / size) * 100).toPrecision(2) : 0;
+    } else {
+      psize = "-";
+      diff = "-";
+    }
 
     if ( parseFloat(diff) !== parseFloat('0') ) {
       totalFiles++;
       html += '<tr>';
-      html += `<td>${path.basename(file)}</td>`; // Name
-      html += `<td><font color=${sizeCol}>${size}</font></td>`; // Current
-      html += `<td>${prevResult}</td>`; // Previous
+      html += `<td>${normalized}</td>`; // Name
+      html += `<td style="text-align:center;"><font color=${sizeCol}>${size}</font></td>`; // Current
+      html += `<td style="text-align:center;">${psize}</td>`; // Previous
       if (diff > 0) {
-        html += `<td><font color='#E74C3C'>${diff}</font></td>`;
+        html += `<td style="text-align:center;"><font color='#E74C3C'>${diff}</font></td>`;
       } else if (diff < 0) {
-        html += `<td><font color='#229954'>${diff}</font></td>`;
+        html += `<td style="text-align:center;"><font color='#229954'>${diff}</font></td>`;
       } else {
-        html += `<td>${diff}</td>`;
+        html += `<td style="text-align:center;">${diff}</td>`;
       }
       html += '<tr>';
       results[file] = size;
     }
   });
 
-if ( totalFiles == 0) {
+if ( totalFiles == 0 ) {
   html += '<tr>';
-  html += `<td colspan="4">There are no changes in CSS file sizes</td>`
+  html += `<td colspan="4" style="text-align:center;">There are no changes in CSS file sizes</td>`
   html += '<tr>';
 }
 
