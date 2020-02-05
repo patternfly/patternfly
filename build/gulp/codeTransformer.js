@@ -7,8 +7,8 @@ function getWrapperDiv(section, title, exampleName, toWrap, classNames) {
   return `<div
     id="${getExampleId('core', section, title, exampleName)}"
     class="${classNames} ${getExampleClassName(section, title, exampleName)}">
-  ${toWrap}
-</div>`;
+      <div class="ws-preview-html">${toWrap}</div>
+  </div>`;
 }
 
 // https://github.com/unifiedjs/unified#plugin
