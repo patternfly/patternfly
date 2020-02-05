@@ -92,9 +92,51 @@ cssPrefix: pf-c-file-upload
     {{/button}}
   {{/file-upload-control}}
   {{#> file-upload-text-area}}
+      Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-text-area}}
 {{/file-upload}}
 ```
+
+```hbs title=File-upload-error
+{{#> file-upload}}
+  {{#> file-upload-control}}
+    {{#> file-upload-label}}
+      Sample.png
+    {{/file-upload-label}}
+    {{#> button button--modifier="pf-m-control"}}
+      Browse...
+    {{/button}}
+    {{#> button button--modifier="pf-m-control"}}
+      Clear
+    {{/button}}
+  {{/file-upload-control}}
+  {{#> file-upload-text-area}}
+  {{/file-upload-text-area}}
+  {{#> file-upload-helper-text}}
+    We don't support this file type. Try again with a different file type.
+  {{/file-upload-helper-text}}
+{{/file-upload}}
+```
+
+```hbs title=File-upload-loading
+{{#> file-upload}}
+  {{#> file-upload-control}}
+    {{#> file-upload-label}}
+      Sample.png
+    {{/file-upload-label}}
+    {{#> button button--modifier="pf-m-control"}}
+      Browse...
+    {{/button}}
+    {{#> button button--modifier="pf-m-control"}}
+      Clear
+    {{/button}}
+  {{/file-upload-control}}
+  {{#> file-upload-text-area file-upload-text-area--type="div" file-upload-text-area--modifier="pf-m-loading"}}
+    {{#> spinner}}Loading...{{/spinner}}
+  {{/file-upload-text-area}}
+{{/file-upload}}
+```
+
 
 ## Documentation
 ### Overview

@@ -1,6 +1,6 @@
-<textarea class="pf-c-file-upload__text-area{{#if file-upload-text-area--modifier}} {{file-upload-text-area--modifier}}{{/if}}"
+<{{# if file-upload-text-area--type}}{{file-upload-text-area--type}}{{else}}textarea{{/if}} class="pf-c-file-upload__text-area{{#if file-upload-text-area--modifier}} {{file-upload-text-area--modifier}}{{/if}}"
   {{#if file-upload-text-area--attribute}}
     {{{file-upload-text-area--attribute}}} 
   {{/if}}>
   {{> @partial-block}}
-</textarea>
+</{{# if file-upload-text-area--type}}{{file-upload-text-area--type}}{{else}}textarea{{/if}}>
