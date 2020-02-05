@@ -1,3 +1,6 @@
+const myArgs = process.argv.slice(2);
+const package = myArgs[0];
+
 const fs = require('fs');
 const glob = require('glob');
 const Octokit = require('@octokit/rest');
@@ -15,8 +18,6 @@ const results = {};
 let totalFiles = 0;
 // the color of the result size value.
 let sizeCol = 'green';
-// the package we will be testing against
-let package = '@patternfly/patternfly'
 
 let html = '<table>';
 html += '<tr>';

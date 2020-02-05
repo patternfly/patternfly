@@ -61,7 +61,7 @@ setup() {
 
 run() {
   logMsg "generating css report differences"
-  if node sizeReport.js; then
+  if node sizeReport.js ${PACKAGE} ; then
     logMsg "report ran successfully"
   else
     logErr "report failed"
