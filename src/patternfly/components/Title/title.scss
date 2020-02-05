@@ -32,6 +32,7 @@
   --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   font-family: var(--pf-c-title--FontFamily);
+  word-break: break-word;
 
   &.pf-m-4xl {
     font-size: var(--pf-c-title--m-4xl--FontSize);
