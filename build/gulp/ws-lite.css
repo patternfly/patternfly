@@ -3,7 +3,6 @@ body {
   background-color: var(--pf-global--BackgroundColor--300);
 }
 
-/* Typography */
 body > h1 {
   font-size: 2rem;
 }
@@ -59,3 +58,15 @@ body .ws-lite-example {
   background-color: var(--pf-global--BackgroundColor--100);
 }
 
+:not(.ws-lite-example) table code {
+  background: var(--pf-global--BackgroundColor--300);
+}
+
+:not(.ws-lite-example) code {
+  background: var(--pf-global--BackgroundColor--100);
+  padding: 0 .5em;
+}
+
+:not(.ws-lite-example) h1, :not(.ws-lite-example) h2, :not(.ws-lite-example) h3, :not(.ws-lite-example) h4, :not(.ws-lite-example) h5, :not(.ws-lite-example) h6 {
+  font-family: var(--pf-global--FontFamily--heading--sans-serif);
+}
