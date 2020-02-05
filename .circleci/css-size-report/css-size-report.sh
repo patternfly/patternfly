@@ -45,32 +45,20 @@ logErr() {
 }
 
 setup() {
-  if ! npm ls ${PACKAGE} > /dev/null 2>&1; then
-    logMsg "installing previous version of patternfly for css comparisons"
-    if npm i -D ${PACKAGE}; then
-      logMsg "setup ran successfully"
-    else
-      logErr "setup failed"
-      exit 1
-    fi
-
-  else
-    logMsg "setup already done"
+  if ! npm ls ${PACKAGE} > /dev/null 2>&1 && ! npm i -D ${PACKAGE}; then
+    logErr "setup failed"
+    exit 1
   fi
 }
 
 run() {
-  logMsg "generating css report differences"
-  if node sizeReport.js ${PACKAGE} ; then
-    logMsg "report ran successfully"
-  else
+  if ! node sizeReport.js ${PACKAGE} ; then
     logErr "report failed"
     exit 1
   fi
 }
 
 clean() {
-  logMsg "cleaning .circleci/css-size-report/node_modules"
   npm uninstall -D ${PACKAGE}
   rm -rf node_modules
 }

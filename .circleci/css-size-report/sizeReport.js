@@ -19,7 +19,18 @@ let totalFiles = 0;
 // the color of the result size value.
 let sizeCol = 'green';
 
-let html = '<table>';
+let html = '<!DOCTYPE html>';
+
+html += '<head>';
+html += '<style>'
+html += `table, th, td { border: 1px solid black; border-collapse: collapse; }`
+html += '</style>';
+html += '</head>';
+
+html += '<html>';
+html += '<body>';
+
+html += '<table style="width:100%">';
 html += '<tr>';
 html += `<td>Name</td>`;
 html += `<td style="text-align:center;">Current(kb)</td>`;
@@ -94,6 +105,9 @@ if ( totalFiles == 0 ) {
 }
 
 html += '</table>';
+html += '</body>';
+html += '</html>';
+
 console.log(html);
 
 if (prnum) {
