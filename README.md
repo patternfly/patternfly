@@ -69,15 +69,6 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 When creating a brand new component, it should be released as beta in order to get feedback.  This results in the css not being bundled into the full distribution (`patternfly.css`), but the component level css is still included in the npm package for usage.
 
-To make a component beta - modify the `beta-features.js` file in the root and add an entry that looks like the following:
-
-```javascript
-{
-  name: 'Alert',
-  path: 'components/Alert/'
-},
-```
-
 ## Testing for accessibility
 
 PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility guide](https://pf4.patternfly.org/accessibility-guide).
