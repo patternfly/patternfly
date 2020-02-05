@@ -1,4 +1,9 @@
 .pf-c-file-upload {
+  --pf-c-file-upload--m-draganddrop--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-draganddrop--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-draganddrop--after--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-draganddrop--after--Opacity: .1;
+
   // Label
   --pf-c-file-upload__label--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-file-upload__label--PaddingRight: var(--pf-global--spacer--sm);
@@ -6,12 +11,16 @@
   --pf-c-file-upload__label--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-file-upload__label--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload__label--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__label--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload__label--BorderRightColor: transparent;
   --pf-c-file-upload__label--BorderBottomColor: var(--pf-global--BorderColor--200);
   --pf-c-file-upload__label--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload__label--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-file-upload__label--Color: var(--pf-global--disabled-color--100);
+  --pf-c-file-upload__label--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload__label--disabled--Color: var(--pf-global--Color--100);
 
   // Text area
+  --pf-c-file-upload__text-area--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
   --pf-c-file-upload__text-area--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload__text-area--BorderTopColor: transparent;
   --pf-c-file-upload__text-area--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -23,9 +32,36 @@
   --pf-c-file-upload__text-area--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-file-upload__text-area--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-file-upload__text-area--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-file-upload__text-area--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+
+  // Button
+  --pf-c-file-upload--c-button--m-control--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-file-upload--c-button--m-control--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload--c-button--m-control--disabled--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-file-upload--c-button--m-control--disabled--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   display: flex;
   flex-direction: column;
+
+  &.pf-m-draganddrop {
+    position: relative;
+    border: var(--pf-c-file-upload--m-draganddrop--BorderWidth) solid var(--pf-c-file-upload--m-draganddrop--BorderColor);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background-color: var(--pf-global--primary-color--100);
+      opacity: var(--pf-c-file-upload--m-draganddrop--after--Opacity);
+    }
+  }
 }
 
 .pf-c-file-upload__label {
@@ -33,11 +69,18 @@
   max-width: 100%;
   padding: var(--pf-c-file-upload__label--PaddingTop) var(--pf-c-file-upload__label--PaddingRight) var(--pf-c-file-upload__label--PaddingBottom) var(--pf-c-file-upload__label--PaddingLeft);
   overflow: hidden;
+  color: var(--pf-c-file-upload__label--Color);
   text-overflow: ellipsis;
   white-space: nowrap;
   background-color: var(--pf-c-file-upload__label--BackgroundColor);
   border: var(--pf-c-file-upload__label--BorderWidth) solid;
   border-color: var(--pf-c-file-upload__label--BorderTopColor) var(--pf-c-file-upload__label--BorderRightColor) var(--pf-c-file-upload__label--BorderBottomColor) var(--pf-c-file-upload__label--BorderLeftColor);
+
+  &.pf-m-disabled,
+  &:disabled {
+    --pf-c-file-upload__label--Color: var(--pf-c-file-upload__label--disabled--Color);
+    --pf-c-file-upload__label--BackgroundColor: var(--pf-c-file-upload__label--disabled--BackgroundColor);
+  }
 }
 
 .pf-c-file-upload__control {
@@ -46,6 +89,8 @@
 }
 
 .pf-c-file-upload__text-area {
+  min-height: var(--pf-c-file-upload__text-area--MinHeight);
+  resize: vertical;
   background-color: var(--pf-c-file-upload__text-area--BackgroundColor);
   border: var(--pf-c-file-upload__text-area--BorderWidth) solid;
   border-color: var(--pf-c-file-upload__text-area--BorderTopColor) var(--pf-c-file-upload__text-area--BorderRightColor) var(--pf-c-file-upload__text-area--BorderBottomColor) var(--pf-c-file-upload__text-area--BorderLeftColor);
@@ -67,5 +112,25 @@
     --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--focus--BorderBottomColor);
 
     border-bottom-width: var(--pf-c-file-upload__text-area--focus--BorderBottomWidth);
+  }
+
+  &:disabled,
+  &.pf-m-disabled {
+    --pf-c-file-upload__text-area--BackgroundColor: var(--pf-c-file-upload__text-area--disabled--BackgroundColor);
+  }
+}
+
+.pf-c-button.pf-m-control {
+  --pf-c-button--PaddingRight: var(--pf-c-file-upload--c-button--m-control--PaddingRight);
+  --pf-c-button--PaddingLeft: var(--pf-c-file-upload--c-button--m-control--PaddingLeft);
+
+  &:disabled,
+  &.pf-m-disabled {
+    color: initial;
+    border: var(--pf-c-file-upload--c-button--m-control--disabled--BorderWidth) solid;
+    border-color: var(--pf-c-file-upload--c-button--m-control--disabled--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--BorderLeftColor);
+    border-radius: initial;
+
+    --pf-c-button--m-control--disabled--BackgroundColor: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
   }
 }
