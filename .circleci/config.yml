@@ -98,27 +98,28 @@ jobs:
     docker:
     - image: circleci/node:10
     steps:
-    - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
-    - run:
-        name: Lint SASS
-        command: npm run lint:sass
-    - run:
-        name: Lint JS
-        command: npm run lint:js
-        when: always
-    - run:
-        name: Lint CSS
-        command: npm run lint:css
-        when: always
-    - run:
-        name: Lint CSS Size
-        command: .circleci/css-size-report/css-size-report.sh -c run -p @patternfly/patternfly > /tmp/lint-size.html;
-        when: always
-    - store_artifacts:
-      path: /tmp/lint-size.html
+      - *attach_workspace
+      - restore_cache:
+          keys:
+          - *js_deps_cache_key
+      - run:
+          name: Lint SASS
+          command: npm run lint:sass
+      - run:
+          name: Lint JS
+          command: npm run lint:js
+          when: always
+      - run:
+          name: Lint CSS
+          command: npm run lint:css
+          when: always
+      - run:
+          name: Lint CSS Size
+          command: .circleci/css-size-report/css-size-report.sh -c run -p @patternfly/patternfly > /tmp/lint-size.html;
+          when: always
+      - store_artifacts:
+        path: /tmp/lint-size.html
+        destination: linting
   deploy:
     docker:
     - image: circleci/node:10
