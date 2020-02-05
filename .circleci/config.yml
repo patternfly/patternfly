@@ -115,7 +115,7 @@ jobs:
         when: always
     - run:
         name: Lint CSS Size
-        command: .circleci/css-size-report/css-size-report.sh
+        command: .circleci/css-size-report/css-size-report.sh -c run -p @patternfly/patternfly
         when: always
   deploy:
     docker:
