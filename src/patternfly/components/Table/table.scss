@@ -391,18 +391,20 @@
 .pf-c-table__sort {
   // override pf-m-plain color
   .pf-c-button {
-    display: flex;
-
     // stylelint-disable
     &.pf-m-plain {
       color: var(--pf-c-table__sort--c-button--Color);
     }
 
-    &.pf-m-sort-wrap > span:first-child {
-      white-space: normal;
+    &.pf-m-sort-wrap {
+      display: flex;
+
+      .pf-c-table__sort--c-button-text {
+        white-space: normal;
+      }
     }
-    // stylelint-enable
   }
+  // stylelint-enable
 
   &.pf-m-selected {
     // set button and indicator color
@@ -594,6 +596,7 @@
 // Modifier - Wrap
 .pf-c-table .pf-m-wrap {
   white-space: normal;
+  vertical-align: top;
 }
 
 // Modifier - Width
