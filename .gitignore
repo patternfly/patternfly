@@ -20,3 +20,5 @@ yarn.lock
 .idea
 coverage/
 *.swp
+workspace/
+assets/

@@ -1,0 +1,72 @@
+body {
+  padding: 3rem 3rem 5rem 3rem;
+  background-color: var(--pf-global--BackgroundColor--300);
+}
+
+body > h1 {
+  font-size: 2rem;
+}
+
+body > * {
+  margin-bottom: var(--pf-global--spacer--md);
+}
+
+body > h1:not(:last-child) {
+  margin-bottom: var(--pf-global--spacer--2xl);
+}
+
+body > h2:not(:last-child) {
+  margin-bottom: var(--pf-global--spacer--xl);
+}
+
+body > h3:not(:last-child) {
+  margin-bottom: var(--pf-global--spacer--lg);
+}
+
+body > h2 {
+  font-size: 1.75rem;
+}
+
+body > h3 {
+  font-size: 1.5rem;
+}
+
+body > h5 {
+  font-size: 1.25rem;
+}
+
+body > h6 {
+  font-size: 1.125rem;
+}
+
+body > table {
+  width: 100%;
+  margin-bottom: var(--pf-global--spacer--2xl);
+  border: 1px solid var(--pf-global--BorderColor--200);
+}
+
+body > table tr th,
+body > table tr td {
+  padding: var(--pf-global--spacer--md);
+  background-color: var(--pf-global--BackgroundColor--100);
+  border: 1px solid var(--pf-global--BorderColor--100);
+}
+
+body .ws-lite-example {
+  margin: 3rem 0;
+  padding: 1rem;
+  background-color: var(--pf-global--BackgroundColor--100);
+}
+
+:not(.ws-lite-example) table code {
+  background: var(--pf-global--BackgroundColor--300);
+}
+
+:not(.ws-lite-example) code {
+  background: var(--pf-global--BackgroundColor--100);
+  padding: 0 .5em;
+}
+
+:not(.ws-lite-example) h1, :not(.ws-lite-example) h2, :not(.ws-lite-example) h3, :not(.ws-lite-example) h4, :not(.ws-lite-example) h5, :not(.ws-lite-example) h6 {
+  font-family: var(--pf-global--FontFamily--heading--sans-serif);
+}
