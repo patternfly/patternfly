@@ -1,6 +1,6 @@
 ---
 title: Drawer
-section: experimental
+section: beta
 cssPrefix: pf-c-drawer
 ---
 

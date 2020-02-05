@@ -1,6 +1,6 @@
 ---
 title: Inline edit
-section: experimental
+section: beta
 cssPrefix: pf-c-inline-edit
 ---
 

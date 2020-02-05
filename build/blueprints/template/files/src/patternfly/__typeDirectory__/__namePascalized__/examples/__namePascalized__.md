@@ -1,6 +1,6 @@
 ---
 title: '{{nameCapitalized}}'
-section: experimental
+section: beta
 cssPrefix: pf-c-{{nameCapitalized}}
 ---
 

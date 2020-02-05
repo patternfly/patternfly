@@ -1,6 +1,6 @@
 ---
 title: Simple list
-section: experimental
+section: beta
 cssPrefix: pf-c-simple-list
 ---
 

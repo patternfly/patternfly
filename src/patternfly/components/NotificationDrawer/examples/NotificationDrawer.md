@@ -1,6 +1,6 @@
 ---
 title: Notification drawer
-section: experimental
+section: beta
 cssPrefix: pf-c-notification-drawer
 ---
 

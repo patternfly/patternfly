@@ -65,11 +65,11 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
-## Experimental components
+## Beta components
 
-When creating a brand new component, it should be released as experimental in order to get feedback.  This results in the css not being bundled into the full distribution (`patternfly.css`), but the component level css is still included in the npm package for usage.
+When creating a brand new component, it should be released as beta in order to get feedback.  This results in the css not being bundled into the full distribution (`patternfly.css`), but the component level css is still included in the npm package for usage.
 
-To make a component experimental - modify the `experimental-features.js` file in the root and add an entry that looks like the following:
+To make a component beta - modify the `beta-features.js` file in the root and add an entry that looks like the following:
 
 ```javascript
 {
@@ -118,4 +118,4 @@ PatternFly 4 is supported on the latest version of the following browsers:
 - Safari
 - Edge
 
-We also provide documentation for how to enable IE11 support in our [wiki](https://github.com/patternfly/patternfly-next/wiki/IE11-Support). 
+We also provide documentation for how to enable IE11 support in our [wiki](https://github.com/patternfly/patternfly-next/wiki/IE11-Support).
