@@ -80,7 +80,7 @@ function compareMaps(currValues, prevValues) {
       diff = "-";
     }
 
-    // if ( parseFloat(diff) !== parseFloat('0') ) {
+    if ( parseFloat(diff) !== parseFloat('0') ) {
       totalFiles++;
       html += '<tr>';
       html += `<td>${file}</td>`; // Name
@@ -95,7 +95,7 @@ function compareMaps(currValues, prevValues) {
       }
       html += '<tr>';
       results[file] = size;
-    // }
+    }
   });
 
   if ( totalFiles == 0 ) {
