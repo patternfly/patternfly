@@ -4,25 +4,19 @@
   --pf-c-file-upload--m-draganddrop--after--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-file-upload--m-draganddrop--after--Opacity: .1;
 
-  // Label
-  --pf-c-file-upload__label--PaddingTop: var(--pf-global--spacer--form-element);
-  --pf-c-file-upload__label--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-file-upload__label--PaddingBottom: var(--pf-global--spacer--form-element);
-  --pf-c-file-upload__label--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-file-upload__label--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload__label--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__label--BorderRightColor: transparent;
-  --pf-c-file-upload__label--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload__label--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__label--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-file-upload__label--Color: var(--pf-global--disabled-color--100);
-  --pf-c-file-upload__label--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-file-upload__label--disabled--Color: var(--pf-global--Color--100);
+  // Input
+  --pf-c-file-upload--c-input-group--c-form-control--Color: var(--pf-global--disabled-color--100);
+  --pf-c-file-upload__input--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload__input--disabled--Color: var(--pf-global--Color--100);
 
   // Text area
+  --pf-c-file-upload__text-area--PaddingTop: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+  --pf-c-file-upload__text-area--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-file-upload__text-area--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
+  --pf-c-file-upload__text-area--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-file-upload__text-area--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
   --pf-c-file-upload__text-area--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload__text-area--BorderTopColor: transparent;
+  --pf-c-file-upload__text-area--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload__text-area--BorderRightColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-global--BorderColor--200);
   --pf-c-file-upload__text-area--BorderLeftColor: var(--pf-global--BorderColor--300);
@@ -34,15 +28,16 @@
   --pf-c-file-upload__text-area--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-file-upload__text-area--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
 
-  // Button
+  // Button overrides
   --pf-c-file-upload--c-button--m-control--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-file-upload--c-button--m-control--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-file-upload--c-button--m-control--disabled--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--c-button--m-control--disabled--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--c-button--m-control--disabled--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload--c-button--m-control--disabled--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--c-button--m-control--disabled--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Helper Text
   --pf-c-file-upload__helper-text--Color: var(--pf-global--danger-color--100);
@@ -69,33 +64,16 @@
   }
 }
 
-.pf-c-file-upload__label {
-  flex-grow: 1;
-  max-width: 100%;
-  padding: var(--pf-c-file-upload__label--PaddingTop) var(--pf-c-file-upload__label--PaddingRight) var(--pf-c-file-upload__label--PaddingBottom) var(--pf-c-file-upload__label--PaddingLeft);
-  overflow: hidden;
-  color: var(--pf-c-file-upload__label--Color);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--pf-c-file-upload__label--BackgroundColor);
-  border: var(--pf-c-file-upload__label--BorderWidth) solid;
-  border-color: var(--pf-c-file-upload__label--BorderTopColor) var(--pf-c-file-upload__label--BorderRightColor) var(--pf-c-file-upload__label--BorderBottomColor) var(--pf-c-file-upload__label--BorderLeftColor);
-
-  &.pf-m-disabled,
-  &:disabled {
-    --pf-c-file-upload__label--Color: var(--pf-c-file-upload__label--disabled--Color);
-    --pf-c-file-upload__label--BackgroundColor: var(--pf-c-file-upload__label--disabled--BackgroundColor);
+.pf-c-input-group > .pf-c-form-control {
+  &::placeholder {
+    color: var(--pf-c-file-upload--c-input-group--c-form-control--Color);
   }
-}
-
-.pf-c-file-upload__control {
-  display: flex;
-  flex-direction: row;
 }
 
 .pf-c-file-upload__text-area {
   position: relative;
   min-height: var(--pf-c-file-upload__text-area--MinHeight);
+  padding: var(--pf-c-file-upload__text-area--PaddingTop) var(--pf-c-file-upload__text-area--PaddingRight) var(--pf-c-file-upload__text-area--PaddingBottom) var(--pf-c-file-upload__text-area--PaddingLeft);
   resize: vertical;
   background-color: var(--pf-c-file-upload__text-area--BackgroundColor);
   border: var(--pf-c-file-upload__text-area--BorderWidth) solid;
@@ -135,14 +113,19 @@
   --pf-c-button--PaddingRight: var(--pf-c-file-upload--c-button--m-control--PaddingRight);
   --pf-c-button--PaddingLeft: var(--pf-c-file-upload--c-button--m-control--PaddingLeft);
 
+  outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
+
   &:disabled,
   &.pf-m-disabled {
     color: initial;
-    border: var(--pf-c-file-upload--c-button--m-control--disabled--BorderWidth) solid;
-    border-color: var(--pf-c-file-upload--c-button--m-control--disabled--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--BorderLeftColor);
-    border-radius: initial;
+    background-color: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
 
-    --pf-c-button--m-control--disabled--BackgroundColor: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
+    &::after {
+      content: "";
+      border: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth) solid;
+      border-color: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor);
+      border-radius: initial;
+    }
   }
 }
 
@@ -156,5 +139,4 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 4;
 }
