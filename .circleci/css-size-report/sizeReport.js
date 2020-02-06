@@ -23,6 +23,7 @@ let html = '<!DOCTYPE html>';
 
 html += '<head>';
 html += '<style>'
+html += `th { font-weight:bold; background-color: #e6e6e6; }`
 html += `table, th, td { border: 1px solid black; border-collapse: collapse; }`
 html += '</style>';
 html += '</head>';
@@ -32,10 +33,10 @@ html += '<body>';
 
 html += '<table style="width:100%">';
 html += '<tr>';
-html += `<td>Name</td>`;
-html += `<td style="text-align:center;">Current(kb)</td>`;
-html += `<td style="text-align:center;">Previous(kb)</td>`;
-html += `<td style="text-align:center;">Diff %</td>`;
+html += `<th>Name</th>`;
+html += `<th>Current(kb)</th>`;
+html += `<th>Previous(kb)</th>`;
+html += `<th>Diff %</th>`;
 html += '</tr>';
 
 const prevMap = new Map();
