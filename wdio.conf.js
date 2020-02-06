@@ -29,14 +29,16 @@ exports.config = {
   capabilities: [
     {
       maxInstances: 10, // BrowserStack gives individual devs 10 instances
-      browserName: 'Chrome',
+      browserName: 'Android',
       ...(process.env.CI && {
-        os: 'Windows',
-        os_version: '10',
-        resolution: '1280x800',
-        'browserstack.local': true
+        device: 'Samsung Galaxy S8',
+        os_version: '7.0',
+        real_mobile: true,
+        // resolution: '1280x1024',
+        'browserstack.local': true,
+        'browserstack.appium_version': '1.15.0',
+        disableAnimations: true
       }),
-      disableAnimations: true
     }
   ],
   // logLevel: 'warn',
