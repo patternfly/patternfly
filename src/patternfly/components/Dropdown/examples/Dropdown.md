@@ -190,7 +190,7 @@ The dropdown panel is provided for flexibility in allowing various content withi
 ```
 
 ```hbs title=Multi-level-align-right
-{{#> dropdown id="dropdown-multi-level" dropdown-menu--modifier="pf-m-align-right" dropdown--IsMultiLevel="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+{{#> dropdown id="dropdown-multi-level-align-right" dropdown-menu--modifier="pf-m-align-right" dropdown--IsMultiLevel="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
   {{#> dropdown-toggle-text}}
   {{/dropdown-toggle-text}}
 {{/dropdown}}
