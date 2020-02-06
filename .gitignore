@@ -27,3 +27,5 @@ allure-report/
 allure-results/
 browserstack.err
 local.log
+workspace/
+assets/
