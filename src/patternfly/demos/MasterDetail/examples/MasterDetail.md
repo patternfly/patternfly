@@ -7,9 +7,7 @@ import './MasterDetail.css'
 
 ## Demos
 
-### isFullscreen
-
-```hbs title=Master-detail-table-expanded
+```hbs title=Master-detail-table-expanded isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-table-expanded-example"
   master-detail-template--title="Master detail expanded, with table and .pf-m-inline modifier demo"
@@ -70,7 +68,7 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-table-collapsed
+```hbs title=Master-detail-table-collapsed isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-table-collapsed-example"
   master-detail-template--title="Master detail collapsed, with table demo"
@@ -130,7 +128,7 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-data-list-expanded
+```hbs title=Master-detail-data-list-expanded isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-data-list-expanded-example"
   master-detail-template--title="Expanded data list demo"
@@ -185,7 +183,7 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-view-expanded
+```hbs title=Master-detail-card-view-expanded isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-view-expanded-example"
   master-detail-template--title="Main title"
@@ -240,7 +238,7 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-simple-list
+```hbs title=Master-detail-card-simple-list isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-simple-list-example"
   master-detail-template--title="Master detail, in card, simple list"
@@ -290,7 +288,7 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-data-list
+```hbs title=Master-detail-card-data-list isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-data-list-example"
   master-detail-template--title="Master detail and simple list, in card"
@@ -343,7 +341,7 @@ import './MasterDetail.css'
 
 To initiate independently scrollable content and panel sections simply omit `.pf-c-page__section` or other height managed parent element.
 
-```hbs title=Independently-scrollable-content-and-panel
+```hbs title=Independently-scrollable-content-and-panel isFullscreen
 {{#> master-detail-template
   master-detail-template--id="independent-scroll-example"
   master-detail-template--title="Master detail expanded, with table and .pf-m-inline modifier demo"
