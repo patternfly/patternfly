@@ -61,11 +61,7 @@ function buildValueMap(searchPattern, topLvlPattern) {
 
 // compare value maps.
 function compareMaps(currValues, prevValues) {
-  console.log(currValues);
-  console.log(prevValues);
-
   currValues.forEach((size, file) => {
-    console.log(file + ': ' + size);
     if (size >= 10000) {
       sizeCol = '#E74C3C';
     } else if (size > 8000 && size < 10000) {
@@ -85,20 +81,20 @@ function compareMaps(currValues, prevValues) {
     }
 
     // if ( parseFloat(diff) !== parseFloat('0') ) {
-    totalFiles++;
-    html += '<tr>';
-    html += `<td>${file}</td>`; // Name
-    html += `<td style="text-align:center;"><font color=${sizeCol}>${size}</font></td>`; // Current
-    html += `<td style="text-align:center;">${psize}</td>`; // Previous
-    if (diff > 0) {
-      html += `<td style="text-align:center;"><font color='#E74C3C'>${diff}</font></td>`;
-    } else if (diff < 0) {
-      html += `<td style="text-align:center;"><font color='#229954'>${diff}</font></td>`;
-    } else {
-      html += `<td style="text-align:center;">${diff}</td>`;
-    }
-    html += '<tr>';
-    results[file] = size;
+      totalFiles++;
+      html += '<tr>';
+      html += `<td>${file}</td>`; // Name
+      html += `<td style="text-align:center;"><font color=${sizeCol}>${size}</font></td>`; // Current
+      html += `<td style="text-align:center;">${psize}</td>`; // Previous
+      if (diff > 0) {
+        html += `<td style="text-align:center;"><font color='#E74C3C'>${diff}</font></td>`;
+      } else if (diff < 0) {
+        html += `<td style="text-align:center;"><font color='#229954'>${diff}</font></td>`;
+      } else {
+        html += `<td style="text-align:center;">${diff}</td>`;
+      }
+      html += '<tr>';
+      results[file] = size;
     // }
   });
 
