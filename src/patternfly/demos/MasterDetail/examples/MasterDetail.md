@@ -268,7 +268,7 @@ import './MasterDetail.css'
           {{#> drawer-panel
             drawer-panel--type="div"
             drawer-panel--attribute=(concat 'id="' master-detail-template--id '-panel" aria-label="Panel"')
-            drawer-panel--modifier="pf-m-width-75"
+            drawer-panel--modifier="pf-m-width-75-on-xl"
             drawer-panel--NoBody="true"
             }}
 
@@ -319,7 +319,7 @@ import './MasterDetail.css'
           {{#> drawer-panel
             drawer-panel--type="div"
             drawer-panel--attribute=(concat 'id="' master-detail-template--id '-panel" aria-label="Panel"')
-            drawer-panel--modifier="pf-m-width-75"
+            drawer-panel--modifier="pf-m-width-75-on-2xl"
             drawer-panel--NoBody="true"
             }}
 
