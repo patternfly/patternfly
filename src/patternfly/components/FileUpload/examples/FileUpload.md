@@ -17,7 +17,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty"'}}
   {{/file-upload-text-area}}
 {{/file-upload}}
 ```
@@ -34,7 +34,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty"'}}
   {{/file-upload-text-area}}
 {{/file-upload}}
 ```
@@ -51,7 +51,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area file-upload-text-area--attribute="disabled"}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty" disabled'}}
     Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-text-area}}
 {{/file-upload}}
@@ -70,7 +70,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty"'}}
   {{/file-upload-text-area}}
 {{/file-upload}}
 ```
@@ -87,7 +87,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty"'}}
     Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-text-area}}
 {{/file-upload}}
@@ -105,9 +105,9 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty"'}}
   {{/file-upload-text-area}}
-  {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="file-upload-error" aria-live="polite"'}}
+  {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="file-upload-error-helper-text" aria-live="polite"'}}
     We don't support this file type. Try again with a different file type.
   {{/form-helper-text}}
 {{/file-upload}}
@@ -125,7 +125,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area file-upload-text-area--type="div" file-upload-text-area--modifier="pf-m-loading"}}
+  {{#> file-upload-text-area file-upload-text-area--type="div" file-upload-text-area--modifier="pf-m-loading" file-upload-text-area--attribute='aria-label="text-area-empty"'}}
     {{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
   {{/file-upload-text-area}}
 {{/file-upload}}
@@ -135,10 +135,8 @@ cssPrefix: pf-c-file-upload
 ## Documentation
 ### Overview
 
-
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-
 
 ### Usage
 | Class | Applied to | Outcome |
