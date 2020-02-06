@@ -50,7 +50,7 @@ cssPrefix: pf-c-simple-list
         {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--type="a"}}
+        {{#> simple-list-item-link simple-list-item-link--IsLink="true"}}
           List item 4
         {{/simple-list-item-link}}
       {{/simple-list-item}}
