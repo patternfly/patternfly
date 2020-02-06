@@ -22,3 +22,4 @@ import './dist/components/InlineEdit/inline-edit.css';
 import './dist/components/NotificationDrawer/notification-drawer.css';
 import './dist/components/SimpleList/simple-list.css';
 import './dist/components/DataToolbar/data-toolbar.css';
+import './dist/components/FileUpload/file-upload.css';
