@@ -115,10 +115,11 @@ jobs:
           when: always
       - run:
           name: Lint CSS Size
-          command: .circleci/css-size-report/css-size-report.sh -c run -p @patternfly/patternfly > linting/lint-size.html
+          command: .circleci/css-size-report/css-size-report.sh -c run -p @patternfly/patternfly > /tmp/linting/lint-size.html
           when: always
       - store_artifacts:
-          path: linting/
+          path: /tmp/linting/lint-size.html
+          destination: linting/
   deploy:
     docker:
     - image: circleci/node:10
