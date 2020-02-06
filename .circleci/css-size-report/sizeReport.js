@@ -80,7 +80,7 @@ glob
       diff = "-";
     }
 
-    if ( parseFloat(diff) !== parseFloat('0') ) {
+    // if ( parseFloat(diff) !== parseFloat('0') ) {
       totalFiles++;
       html += '<tr>';
       html += `<td>${normalized}</td>`; // Name
@@ -95,7 +95,7 @@ glob
       }
       html += '<tr>';
       results[file] = size;
-    }
+    // }
   });
 
 if ( totalFiles == 0 ) {
