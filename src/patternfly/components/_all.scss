@@ -1,4 +1,3 @@
-// Don't include experimental components
 @import "./AboutModalBox/about-modal-box.scss";
 @import "./Accordion/accordion.scss";
 @import "./Alert/alert.scss";
@@ -19,18 +18,15 @@
 @import "./Content/content.scss";
 @import "./ContextSelector/context-selector.scss";
 @import "./DataList/data-list.scss";
-
-// @import "./DataToolbar/data-toolbar.scss";
+@import "./DataToolbar/data-toolbar.scss";
 @import "./Divider/divider.scss";
-
-// @import "./Drawer/drawer.scss";
+@import "./Drawer/drawer.scss";
 @import "./Dropdown/dropdown.scss";
 @import "./EmptyState/empty-state.scss";
 @import "./Expandable/expandable.scss";
 @import "./FormControl/form-control.scss";
 @import "./Form/form.scss";
-
-// @import "./InlineEdit/inline-edit.scss";
+@import "./InlineEdit/inline-edit.scss";
 @import "./InputGroup/input-group.scss";
 @import "./Label/label.scss";
 @import "./List/list.scss";
