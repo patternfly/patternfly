@@ -390,8 +390,17 @@
 .pf-c-table__sort {
   // override pf-m-plain color
   .pf-c-button {
+    display: flex;
+
     &.pf-m-plain {
       color: var(--pf-c-table__sort--c-button--Color);
+      // stylelint-disable
+    }
+    // stylelint-enable
+    &.pf-m-sort-wrap > span:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
     }
   }
 

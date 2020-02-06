@@ -125,20 +125,20 @@ cssPrefix: pf-c-table
 {{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
-        Repositories
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true" table-th--selected="true" table-th--asc="true"}}
+        This is a really long table header that truncates if its too long.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
-        Branches
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
+        This is a really long table header that truncates if its too long.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
-        Pull requests
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
+        This is a really long table header that truncates if its too long.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Workspaces
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable-wrap="true"}}
+        This is a really long table header that truncates if its too long.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Last commit
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable-wrap="true"}}
+        This is a really long table header that truncates if its too long.
       {{/table-th}}
     {{/table-tr}}
   {{/table-thead}}
