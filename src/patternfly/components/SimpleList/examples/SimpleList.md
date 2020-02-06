@@ -35,7 +35,7 @@ cssPrefix: pf-c-simple-list
     {{/simple-list-title}}
     {{#> simple-list-list}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--type="a" simple-list-item-link--modifier="pf-m-current"}}
+        {{#> simple-list-item-link simple-list-item-link--IsLink="true" simple-list-item-link--modifier="pf-m-current"}}
           List item 1
         {{/simple-list-item-link}}
       {{/simple-list-item}}
