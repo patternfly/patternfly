@@ -1,6 +1,7 @@
 ---
 title: Data toolbar
 section: beta
+beta: true
 cssPrefix: pf-c-data-toolbar
 ---
 
