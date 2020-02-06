@@ -39,24 +39,33 @@ html += `<th>Previous(kb)</th>`;
 html += `<th>Diff %</th>`;
 html += '</tr>';
 
-const prevMap = new Map();
-glob
-  .sync('node_modules/' + package + '/**/*.css')
-  .forEach(file => {
-    const split = file.split('/');
-    let normalized = split.slice(split.length - 3, split.length).join('/');
+// build a Map object(<key> = file, <value> = size in kb), sorting highest to lowest.
+function buildValueMap(searchPattern, topLvlPattern) {
+  const m = new Map();
+  glob
+    .sync(searchPattern)
+    .forEach(file => {
+      const split = file.split('/');
+      let normalized = split.slice(split.length - 3, split.length).join('/');
 
-    if (normalized.startsWith(package)) {
-      normalized = file.split("/").pop();
-    }
+      if (normalized.startsWith(topLvlPattern)) {
+        normalized = file.split('/').pop();
+      }
 
-    prevMap.set(normalized, fs.statSync(file).size);
-  });
+      m.set(normalized, fs.statSync(file).size);
+    });
 
-glob
-  .sync('../../dist/**/**/*.css')
-  .map(file => ({ file, size: fs.statSync(file).size }))
-  .forEach(({ file, size }) => {
+    // return sorted map(decending order)
+  return new Map([...m.entries()].sort((file, size) => size[1] - file[1]));
+}
+
+// compare value maps.
+function compareMaps(currValues, prevValues) {
+  console.log(currValues);
+  console.log(prevValues);
+
+  currValues.forEach((size, file) => {
+    console.log(file + ': ' + size);
     if (size >= 10000) {
       sizeCol = '#E74C3C';
     } else if (size > 8000 && size < 10000) {
@@ -65,16 +74,10 @@ glob
       sizeCol = '#229954';
     }
 
-    const split = file.split('/');
-    let normalized = split.slice(split.length - 3, split.length).join('/');
-    if (normalized.startsWith("../dist")) {
-      normalized = file.split("/").pop();
-    }
-
     let psize;
     let diff;
-    if ( typeof prevMap.get(normalized) !== 'undefined' ) {
-      psize = prevMap.get(normalized)
+    if ( typeof prevValues.get(file) !== 'undefined' ) {
+      psize = prevValues.get(file)
       diff = size !== 0 ? Math.abs(((size - psize) / size) * 100).toPrecision(2) : 0;
     } else {
       psize = "-";
@@ -82,34 +85,42 @@ glob
     }
 
     // if ( parseFloat(diff) !== parseFloat('0') ) {
-      totalFiles++;
-      html += '<tr>';
-      html += `<td>${normalized}</td>`; // Name
-      html += `<td style="text-align:center;"><font color=${sizeCol}>${size}</font></td>`; // Current
-      html += `<td style="text-align:center;">${psize}</td>`; // Previous
-      if (diff > 0) {
-        html += `<td style="text-align:center;"><font color='#E74C3C'>${diff}</font></td>`;
-      } else if (diff < 0) {
-        html += `<td style="text-align:center;"><font color='#229954'>${diff}</font></td>`;
-      } else {
-        html += `<td style="text-align:center;">${diff}</td>`;
-      }
-      html += '<tr>';
-      results[file] = size;
+    totalFiles++;
+    html += '<tr>';
+    html += `<td>${file}</td>`; // Name
+    html += `<td style="text-align:center;"><font color=${sizeCol}>${size}</font></td>`; // Current
+    html += `<td style="text-align:center;">${psize}</td>`; // Previous
+    if (diff > 0) {
+      html += `<td style="text-align:center;"><font color='#E74C3C'>${diff}</font></td>`;
+    } else if (diff < 0) {
+      html += `<td style="text-align:center;"><font color='#229954'>${diff}</font></td>`;
+    } else {
+      html += `<td style="text-align:center;">${diff}</td>`;
+    }
+    html += '<tr>';
+    results[file] = size;
     // }
   });
 
-if ( totalFiles == 0 ) {
-  html += '<tr>';
-  html += `<td colspan="4" style="text-align:center;">There are no changes in CSS file sizes</td>`
-  html += '<tr>';
+  if ( totalFiles == 0 ) {
+    html += '<tr>';
+    html += `<td colspan="4" style="text-align:center;">There are no changes in CSS file sizes</td>`
+    html += '<tr>';
+  }
+
+  html += '</table>';
+  html += '</body>';
+  html += '</html>';
+
+  console.log(html);
 }
 
-html += '</table>';
-html += '</body>';
-html += '</html>';
+// build previous values
+const prevMap = buildValueMap('node_modules/' + package + '/**/*.css', package);
+const currMap = buildValueMap('../../dist/**/**/*.css', '../dist');
 
-console.log(html);
+// compare Maps
+compareMaps(currMap, prevMap);
 
 if (prnum) {
   octokit.issues
