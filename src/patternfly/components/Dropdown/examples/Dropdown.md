@@ -189,6 +189,13 @@ The dropdown panel is provided for flexibility in allowing various content withi
 {{/dropdown}}
 ```
 
+```hbs title=Multi-level-align-right
+{{#> dropdown id="dropdown-multi-level" dropdown-menu--modifier="pf-m-align-right" dropdown--IsMultiLevel="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+  {{#> dropdown-toggle-text}}
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
 ## Documentation
 ### Overview
 The dropdown menu can contain either links or buttons, depending on the expected behavior when clicking the menu item. If you are using the menu item to navigate to another page, then menu item is a link. Otherwise, use a button for the menu item.

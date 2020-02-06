@@ -63,8 +63,11 @@
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --pf-c-dropdown__menu--Right: auto;
   --pf-c-dropdown__menu--Left: 0;
-  --pf-c-dropdown__menu__menu--Top: calc(var(--pf-c-dropdown__menu--PaddingTop) * -1);
+  --pf-c-dropdown__menu__menu--Top: calc(var(--pf-c-dropdown__menu--PaddingTop) * -1 - var(--pf-c-dropdown__menu--BorderWidth));
+  --pf-c-dropdown__menu--m-align-right--Right: 0;
+  --pf-c-dropdown__menu--m-align-right__menu--Right: 100%;
   --pf-c-dropdown__menu__menu--Left: 100%;
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-dropdown--m-top__menu--Top: 0;
@@ -93,7 +96,7 @@
   --pf-c-dropdown__menu-item-icon--Height: var(--pf-global--icon--FontSize--lg);
 
   // Submenu item icon
-  --pf-c-dropdown__submenu-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__submenu-toggle-icon--PaddingLeft: var(--pf-global--spacer--md);
 
   // Divider
   --pf-c-dropdown__c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -342,6 +345,7 @@
 .pf-c-dropdown__menu {
   position: absolute;
   top: var(--pf-c-dropdown__menu--Top);
+  right: var(--pf-c-dropdown__menu--Right);
   left: var(--pf-c-dropdown__menu--Left);
   z-index: var(--pf-c-dropdown__menu--ZIndex);
   min-width: 100%;
@@ -353,7 +357,8 @@
   box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
   &.pf-m-align-right {
-    right: 0;
+    --pf-c-dropdown__menu--Right: var(--pf-c-dropdown__menu--m-align-right--Right);
+    --pf-c-dropdown__menu--Left: auto;
   }
 
   .pf-c-dropdown.pf-m-top & {
@@ -366,6 +371,11 @@
   & & {
     --pf-c-dropdown__menu--Top: var(--pf-c-dropdown__menu__menu--Top);
     --pf-c-dropdown__menu--Left: var(--pf-c-dropdown__menu__menu--Left);
+  }
+
+  &.pf-m-align-right & {
+    --pf-c-dropdown__menu--Left: auto;
+    --pf-c-dropdown__menu--Right: var(--pf-c-dropdown__menu--m-align-right__menu--Right);
   }
 }
 

@@ -9,7 +9,8 @@
 }
 
 #ws-core-c-dropdown-kebab-align-right,
-#ws-core-c-dropdown-align-right {
+#ws-core-c-dropdown-align-right,
+#ws-core-c-dropdown-multi-level-align-right {
   display: flex;
   justify-content: flex-end;
 }
@@ -39,6 +40,7 @@
 }
 
 #ws-core-c-dropdown-multi-level,
+#ws-core-c-dropdown-multi-level-align-right,
 #ws-core-c-dropdown-multi-multi-level {
   min-height: 320px;
 }
