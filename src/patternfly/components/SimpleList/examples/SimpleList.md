@@ -72,7 +72,7 @@ cssPrefix: pf-c-simple-list
         {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--type="a"}}
+        {{#> simple-list-item-link simple-list-item-link--IsLInk="true"}}
           List item 3
         {{/simple-list-item-link}}
       {{/simple-list-item}}
