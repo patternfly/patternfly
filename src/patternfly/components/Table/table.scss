@@ -395,16 +395,18 @@
     &.pf-m-plain {
       color: var(--pf-c-table__sort--c-button--Color);
     }
-
-    &.pf-m-sort-wrap {
-      display: flex;
-
-      .pf-c-table__sort--c-button-text {
-        white-space: normal;
-      }
-    }
   }
   // stylelint-enable
+
+  &.pf-m-wrap {
+    .pf-c-button {
+      display: flex;
+    }
+
+    .pf-c-table__sort--c-button-text {
+      white-space: normal;
+    }
+  }
 
   &.pf-m-selected {
     // set button and indicator color
