@@ -2,8 +2,13 @@
 
 const fs = require('fs');
 const glob = require('glob');
-const { Octokit }  = require('@octokit/rest');
 const path = require('path');
+const { Octokit }  = require('@octokit/rest');
+
+const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
+const owner = process.env.CIRCLE_PROJECT_USERNAME; // patternfly
+const repo = process.env.CIRCLE_PROJECT_REPONAME;
+const prnum = process.env.CIRCLE_PR_NUMBER;
 
 let exitCode = 0;
 
@@ -22,6 +27,7 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help').argv
 
+// download previous package to do the compares against
 function setUp(package) {
   try{
     if (! fs.existsSync(__dirname + '/node_modules')) {
@@ -130,11 +136,6 @@ function compareMaps(currValues, prevValues) {
 
   console.log(html);
 
-  const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
-  const owner = process.env.CIRCLE_PROJECT_USERNAME; // patternfly
-  const repo = process.env.CIRCLE_PROJECT_REPONAME;
-  const prnum = process.env.CIRCLE_PR_NUMBER;
-
   if (prnum) {
     octokit.issues
       .listComments({
@@ -177,9 +178,19 @@ function compareMaps(currValues, prevValues) {
 }
 
 function run(package) {
+  // check if we are running in dev or CI env
+  let repoPrefix;
+  if (repo) {
+    // circleCI repo
+    repoPrefix = `project/dist`
+  } else {
+    // dev repo
+    repoPrefix = 'patternfly-next/dist'
+  }
+
   setUp(package);
   const prevMap = buildValueMap(__dirname + '/node_modules/' + package + '/**/*.css', package);
-  const currMap = buildValueMap(__dirname + '/../../dist/**/**/*.css', 'patternfly-next/dist');
+  const currMap = buildValueMap(__dirname + '/../../dist/**/**/*.css', repoPrefix);
   compareMaps(currMap, prevMap);
 }
 
