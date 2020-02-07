@@ -4,7 +4,6 @@ const fs = require('fs');
 const glob = require('glob');
 const { Octokit }  = require('@octokit/rest');
 const path = require('path');
-const CWD =  process.cwd();
 
 let exitCode = 0;
 
@@ -25,9 +24,10 @@ const argv = require('yargs')
 
 function setUp(package) {
   try{
-    if (! fs.existsSync('./node_modules')) {
+    if (! fs.existsSync(__dirname + '/node_modules')) {
+      console.log(__dirname + '/node_modules');
       const execSync = require('child_process').execSync;
-      execSync('npm i -D ' + package + "> /dev/null 2>&1", { cwd: CWD, encoding: 'utf-8' });
+      execSync('npm i -D ' + package + "> /dev/null 2>&1", { cwd: __dirname, encoding: 'utf-8' });
     }
   } catch (err) {
     console.log(err.message);
@@ -198,7 +198,7 @@ function clean() {
     }
   };
 
-  deleteFolderRecursive('./node_modules');
+  deleteFolderRecursive(__dirname + '/node_modules');
 }
 
 process.exit(exitCode);
