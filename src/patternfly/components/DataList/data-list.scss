@@ -132,21 +132,20 @@
   --pf-c-data-list--m-compact__cell--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__cell--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__cell--md--PaddingBottom: 0;
+  --pf-c-data-list--m-compact__cell-cell--PaddingTop: 0;
+  --pf-c-data-list--m-compact__cell-cell--md--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__cell-cell--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-data-list--m-compact__cell-cell--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-data-list--m-compact__cell-cell--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-data-list--m-compact__cell-cell--md--PaddingBottom: 0;
-  --pf-c-data-list--m-compact__item-action--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-data-list--m-compact__item-action--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-data-list--m-compact__item-action--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-data-list--m-compact__item-control--MarginRight: var(--pf-global--spacer--md);
   --pf-c-data-list--m-compact__item-control--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__item-control--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-data-list--m-compact__item-control--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-data-list--m-compact__item-action--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-data-list--m-compact__item-action--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-data-list--m-compact__item-action--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list--m-compact__item-content--PaddingBottom: var(--pf-global--spacer--sm);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-data-list--m-compact__cell--PaddingBottom: var(--pf-c-data-list--m-compact__cell--md--PaddingBottom);
-    --pf-c-data-list--m-compact__cell-cell--PaddingBottom: var(--pf-c-data-list--m-compact__cell-cell--md--PaddingBottom);
+    --pf-c-data-list--m-compact__cell-cell--PaddingTop: var(--pf-c-data-list--m-compact__cell-cell--md--PaddingTop);
   }
 
   @include pf-t-light;
@@ -393,7 +392,6 @@
   --pf-c-data-list__cell--PaddingBottom: var(--pf-c-data-list--m-compact__cell--PaddingBottom);
   --pf-c-data-list__cell-cell--MarginRight: var(--pf-c-data-list--m-compact__cell-cell--MarginRight);
   --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list--m-compact__cell-cell--PaddingTop);
-  --pf-c-data-list__cell-cell--PaddingTop: var(--pf-c-data-list--m-compact__cell--PaddingBottom);
   --pf-c-data-list__item-action--MarginLeft: var(--pf-c-data-list--m-compact__item-action--MarginLeft);
   --pf-c-data-list__item-action--PaddingTop: var(--pf-c-data-list--m-compact__item-action--PaddingTop);
   --pf-c-data-list__item-action--PaddingBottom: var(--pf-c-data-list--m-compact__item-action--PaddingBottom);
