@@ -505,23 +505,4 @@
   > .pf-c-drawer {
     flex: 1 0 auto;
   }
-
-  // // stylelint-disable max-nesting-depth, selector-max-class, selector-max-compound-selectors
-  // > .pf-c-drawer > .pf-c-drawer__main > .pf-c-drawer__content {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
-  // > .pf-c-drawer > .pf-c-drawer__main > .pf-c-drawer__content > .pf-c-drawer__content-body {
-  //   display: flex;
-  //   flex: 1 0;
-
-  //   .pf-c-page__main {
-  //     --pf-c-page__main--ZIndex: auto;
-
-  //     grid-area: auto;
-  //     flex: 1 0 auto;
-  //   }
-  // }
-  // // stylelint-enable
 }
