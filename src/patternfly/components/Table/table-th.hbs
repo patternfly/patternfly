@@ -2,7 +2,7 @@
     {{else if table-th--check}} class="pf-c-table__check {{table-th--modifier}}"
     {{else if table-th--action}} class="pf-c-table__action {{table-th--modifier}}"
     {{else if table-th--icon}} class="pf-c-table__icon {{table-th--modifier}}"
-    {{else if table-th--sortable}} class="pf-c-table__sort {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}{{#if table-th--selected}} pf-m-selected{{/if}} {{table-th--modifier}}"
+    {{else if table-th--sortable}} class="pf-c-table__sort {{#if table-th--selected}} pf-m-selected{{/if}} {{table-th--modifier}}"
     {{else if table-th--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle {{table-th--modifier}}"
     {{else if table-th--modifier}} class="{{table-th--modifier}}"
   {{/if}}
@@ -25,8 +25,8 @@
     {{{table-th--attribute}}}
   {{/if}}>
   {{#if table-th--sortable}}
-    <button class="pf-c-button pf-m-plain">
-      {{#if table-th--sortable-wrap}}
+    {{#> button button--modifier="pf-m-plain"}}
+      {{#if table-th--modifier="pf-m-wrap"}}
         <span class="pf-c-table__sort--c-button-text">
           {{> @partial-block}}
         </span>
@@ -44,7 +44,7 @@
           <i class="fas fa-arrows-alt-v"></i>
         {{/if}}
       </span>
-    </button>
+    {{/button}}
   {{else}}
     {{> @partial-block}}
   {{/if}}

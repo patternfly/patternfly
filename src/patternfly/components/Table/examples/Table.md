@@ -223,13 +223,13 @@ cssPrefix: pf-c-table
 {{#> table table--id="table-sortable-wrap" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example with headers that wrap"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true" table-th--selected="true" table-th--asc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-wrap" table-th--selected="true" table-th--asc="true"}}
         This is a really long sortable table header.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-wrap"}}
         This is a really long sortable table header.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-wrap"}}
         This is a really long sortable table header.
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
