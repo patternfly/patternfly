@@ -199,10 +199,10 @@ import './MasterDetail.css'
       drawer-panel--IsOpen="true"
       }}
 
-      {{#> drawer-header}}
+      {{#> drawer-section}}
         {{> master-detail-toolbar master-detail-toolbar--HasViewToggle="true"}}
         {{#> divider divider--type="div"}}{{/divider}}
-      {{/drawer-header}}
+      {{/drawer-section}}
 
       {{#> drawer-main}}
         {{#> drawer-content
@@ -339,8 +339,6 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-To initiate independently scrollable content and panel sections simply omit `.pf-c-page__section` or other height managed parent element.
-
 ```hbs title=Independently-scrollable-content-and-panel isFullscreen
 {{#> master-detail-template
   master-detail-template--id="independent-scroll-example"
@@ -348,7 +346,6 @@ To initiate independently scrollable content and panel sections simply omit `.pf
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   master-detail-template--modifier="pf-m-light"
   }}
-
   {{#> divider divider--type="div"}}{{/divider}}
   <!-- Drawer -->
   {{#> drawer

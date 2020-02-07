@@ -9,9 +9,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Closed-panel-on-right-(default)
 {{#> drawer drawer--id="closed-panel-right-example"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -26,9 +26,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Expanded-panel-on-right
 {{#> drawer drawer--id="expanded-panel-right-example" drawer-panel--IsOpen="true"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -43,9 +43,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Panel-on-left
 {{#> drawer drawer--id="closed-panel-left-example" drawer--modifier="pf-m-panel-left"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -60,9 +60,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Expanded-panel-on-left
 {{#> drawer drawer--id="expanded-panel-right-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-panel-left"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -77,9 +77,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Expanded-inline-panel
 {{#> drawer drawer--id="expanded-inline-panel-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -94,9 +94,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Expanded-inline-panel-on-left
 {{#> drawer drawer--id="expanded-inline-panel-left-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline pf-m-panel-left"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -141,9 +141,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Modified-content-padding
 {{#> drawer drawer--id="modified-content-example" drawer-panel--IsOpen="true"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content drawer-content-body--modifier="pf-m-padding"}}
       **Drawer content padding.** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -158,9 +158,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Modified-panel-padding
 {{#> drawer drawer--id="modified-panel-padding-example" drawer-panel--IsOpen="true"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -175,9 +175,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Modified-panel-width
 {{#> drawer drawer--id="modified-panel-width-example" drawer-panel--IsOpen="true"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -192,9 +192,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Modified-panel-border
 {{#> drawer drawer--id="panel-border-example" drawer-panel--IsOpen="true"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -209,9 +209,9 @@ cssPrefix: pf-c-drawer
 
 ```hbs title=Static
 {{#> drawer drawer--id="static-example" drawer-panel--IsOpen="true" drawer--IsStatic="true"}}
-  {{#> drawer-header}}
-    drawer-header
-  {{/drawer-header}}
+  {{#> drawer-section}}
+    drawer-section
+  {{/drawer-section}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Static drawers don't have interactive elements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -238,7 +238,7 @@ cssPrefix: pf-c-drawer
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-drawer` | `<div>` | Initiates the drawer container. **Required** |
-| `.pf-c-drawer__header` | `<div>` | Initiates the drawer header area. |
+| `.pf-c-drawer__section` | `<div>` | Initiates a drawer section area. This element can be used above or below `.pf-c-drawer__main` for titles, toolbars, footers, etc. |
 | `.pf-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
 | `.pf-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
 | `.pf-c-drawer__content-body` | `<div>` | Initiates the drawer content body container. **Required** |
@@ -246,11 +246,11 @@ cssPrefix: pf-c-drawer
 | `.pf-c-drawer__panel-body` | `<div>` | Initiates the drawer panel body container. **Required** |
 | `.pf-c-drawer__action` | `<div>` | Initiates the drawer close button. |
 | `.pf-m-expanded` | `.pf-c-drawer` | Modifies the drawer panel for the expanded state. |
-| `.pf-m-static` | `.pf-c-drawer` | Modifies the drawer panel state to always show both content and panel. |
+| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer panel state to always show both content and panel. |
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a breakpoint will default to the `md` breakpoint. |
 | `.pf-m-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable box-shadow and enable solid border. |
 | `.pf-m-no-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-c-drawer__content-body` | Modifies the drawer content to add padding. |
 | `.pf-m-no-padding` | `.pf-c-drawer__panel-body` | Modifies the drawer panel to remove padding. |
-| `.pf-m-no-background` | `.pf-c-drawer__body`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
+| `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__body`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
