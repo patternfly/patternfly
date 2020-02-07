@@ -12,8 +12,14 @@
       {{/page-main}}
     {{/drawer-content}}
     {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
-      {{> drawer-action}}
-      <p>drawer panel</p>
+      {{#> l-flex}}
+        {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+          <p>drawer panel</p>
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> drawer-action}}
+        {{/l-flex-item}}
+      {{/l-flex}}
     {{/drawer-panel}}
   {{/drawer-main}}
 {{/drawer}}

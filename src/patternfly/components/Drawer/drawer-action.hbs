@@ -2,7 +2,7 @@
   {{#if drawer-action--attribute}}
     {{{drawer-action--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--id=(concat drawer--id '-close-button') button--attribute=(concat 'id="'  drawer--id '-close-button" aria-labelledby="' drawer--id '-close-button ' drawer--id '-label" aria-label="Close drawer panel"')}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close drawer panel"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
 </{{#if drawer-action--type}}{{{drawer-action--type}}}{{else}}div{{/if}}>
