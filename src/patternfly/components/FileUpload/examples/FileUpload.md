@@ -51,7 +51,7 @@ cssPrefix: pf-c-file-upload
       Clear
     {{/button}}
   {{/input-group}}
-  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty" disabled'}}
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="text-area-empty" readonly'}}
     Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-text-area}}
 {{/file-upload}}

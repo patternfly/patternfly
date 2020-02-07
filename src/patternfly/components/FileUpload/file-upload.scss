@@ -24,7 +24,7 @@
   --pf-c-file-upload__text-area--focus--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-file-upload__text-area--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-file-upload__text-area--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-file-upload__text-area--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload__text-area--readonly--BackgroundColor: var(--pf-global--disabled-color--300);
 
   // Button overrides
   --pf-c-file-upload--c-button--m-control--PaddingRight: var(--pf-global--spacer--sm);
@@ -36,11 +36,6 @@
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
-
-  // Helper Text
-  --pf-c-file-upload__helper-text--Color: var(--pf-global--danger-color--100);
-  --pf-c-file-upload__helper-text--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-file-upload__helper-text--MarginTop: var(--pf-global--spacer--xs);
 
   display: flex;
   flex-direction: column;
@@ -77,28 +72,30 @@
   border: var(--pf-c-file-upload__text-area--BorderWidth) solid;
   border-color: var(--pf-c-file-upload__text-area--BorderTopColor) var(--pf-c-file-upload__text-area--BorderRightColor) var(--pf-c-file-upload__text-area--BorderBottomColor) var(--pf-c-file-upload__text-area--BorderLeftColor);
 
-  &.pf-m-hover,
-  &:hover {
-    --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--hover--BorderBottomColor);
+  &:not(:read-only) {
+    &.pf-m-hover,
+    &:hover {
+      --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--hover--BorderBottomColor);
+    }
+
+    &.pf-m-active,
+    &:active {
+      --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--active--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-file-upload__text-area--active--BorderBottomWidth);
+    }
+
+    &.pf-m-focus,
+    &:focus {
+      --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--focus--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-file-upload__text-area--focus--BorderBottomWidth);
+    }
   }
 
-  &.pf-m-active,
-  &:active {
-    --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--active--BorderBottomColor);
-
-    border-bottom-width: var(--pf-c-file-upload__text-area--active--BorderBottomWidth);
-  }
-
-  &.pf-m-focus,
-  &:focus {
-    --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--focus--BorderBottomColor);
-
-    border-bottom-width: var(--pf-c-file-upload__text-area--focus--BorderBottomWidth);
-  }
-
-  &:disabled,
-  &.pf-m-disabled {
-    --pf-c-file-upload__text-area--BackgroundColor: var(--pf-c-file-upload__text-area--disabled--BackgroundColor);
+  &:read-only,
+  &.pf-m-readonly {
+    --pf-c-file-upload__text-area--BackgroundColor: var(--pf-c-file-upload__text-area--readonly--BackgroundColor);
   }
 
   &.pf-m-loading {
@@ -125,12 +122,6 @@
       border-radius: initial;
     }
   }
-}
-
-.pf-c-file-upload__helper-text {
-  margin-top: var(--pf-c-file-upload__helper-text--MarginTop);
-  font-size: var(--pf-c-file-upload__helper-text--FontSize);
-  color: var(--pf-c-file-upload__helper-text--Color);
 }
 
 .pf-c-spinner {
