@@ -271,6 +271,7 @@ cssPrefix: pf-c-table
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__sort` | `<th>` | Initiates a sort table cell. **Required for sortable table columns** |
+| `.pf-c-table__sort-text` | `<span>` | Initiates the text wrapper inside of a sort table cell. **Required for sortable table columns** |
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span` | Initiates a sort indicator. **Required for sortable table columns** |
 | `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
 | `.pf-m-wrap` | `.pf-c-table__sort`| Modifies the sortable table header to wrap. |
