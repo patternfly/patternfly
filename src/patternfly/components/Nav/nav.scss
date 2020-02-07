@@ -171,14 +171,19 @@
 
   // Nav section title
   --pf-c-nav__section-title--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-nav__section-title--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--lg);
-
-  // Nav section title fonts
+  --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav__section-title--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__section-title--Color: var(--pf-global--Color--dark-200);
   --pf-c-nav__section-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-nav__section-title--PaddingRight: var(--pf-c-nav__section-title--md--PaddingRight);
+    --pf-c-nav__section-title--PaddingLeft: var(--pf-c-nav__section-title--md--PaddingLeft);
+  }
 
   // ============================================================ //
   // Modifiers
