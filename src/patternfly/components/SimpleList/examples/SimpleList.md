@@ -15,7 +15,7 @@ cssPrefix: pf-c-simple-list
       {{/simple-list-item-link}}
     {{/simple-list-item}}
     {{#> simple-list-item}}
-      {{#> simple-list-item-link simple-list-item-link--IsLink="true"}}
+      {{#> simple-list-item-link}}
         List item 2
       {{/simple-list-item-link}}
     {{/simple-list-item}}
@@ -27,6 +27,29 @@ cssPrefix: pf-c-simple-list
   {{/simple-list-list}}
 {{/simple-list}}
 ```
+
+```hbs title=Simple-list-with-links
+{{#> simple-list simple-list-item-link--IsLink="true"}}
+  {{#> simple-list-list}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-link simple-list-item-link--modifier="pf-m-current"}}
+        List item 1
+      {{/simple-list-item-link}}
+    {{/simple-list-item}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-link}}
+        List item 2
+      {{/simple-list-item-link}}
+    {{/simple-list-item}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-link}}
+        List item 3
+      {{/simple-list-item-link}}
+    {{/simple-list-item}}
+  {{/simple-list-list}}
+{{/simple-list}}
+```
+
 ```hbs title=Grouped-list
 {{#> simple-list}}
   {{#> simple-list-section}}
@@ -35,7 +58,7 @@ cssPrefix: pf-c-simple-list
     {{/simple-list-title}}
     {{#> simple-list-list}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--IsLink="true" simple-list-item-link--modifier="pf-m-current"}}
+        {{#> simple-list-item-link simple-list-item-link--modifier="pf-m-current"}}
           List item 1
         {{/simple-list-item-link}}
       {{/simple-list-item}}
@@ -50,7 +73,7 @@ cssPrefix: pf-c-simple-list
         {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--IsLink="true"}}
+        {{#> simple-list-item-link}}
           List item 4
         {{/simple-list-item-link}}
       {{/simple-list-item}}
@@ -72,7 +95,7 @@ cssPrefix: pf-c-simple-list
         {{/simple-list-item-link}}
       {{/simple-list-item}}
       {{#> simple-list-item}}
-        {{#> simple-list-item-link simple-list-item-link--IsLInk="true"}}
+        {{#> simple-list-item-link}}
           List item 3
         {{/simple-list-item-link}}
       {{/simple-list-item}}
