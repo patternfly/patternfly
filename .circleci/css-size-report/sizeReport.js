@@ -140,11 +140,6 @@ function compareMaps(currValues, prevValues) {
 }
 
 function postToPR(html) {
-  console.log('REPO: ' + repo);
-  console.log('OWNER: ' + owner);
-  console.log('PRNUM: ' + prnum);
-  console.log("TOKEN: " + octokit)
-
   octokit.issues
     .listComments({
       owner,
@@ -158,7 +153,6 @@ function postToPR(html) {
       if (existingComment) {
         commentBody += existingComment.body;
       }
-      console.log('EXISTING COMMENT: ' + existingComment);
 
       commentBody += '\n';
       commentBody += html;
@@ -170,7 +164,7 @@ function postToPR(html) {
             repo,
             comment_id: existingComment.id,
             body: commentBody
-          }).then(() => console.log('Updated comment!'));
+          }).then();
       } else {
         octokit.issues
           .createComment({
@@ -178,7 +172,7 @@ function postToPR(html) {
             repo,
             issue_number: prnum,
             body: commentBody
-          }).then(() => console.log('Created comment!'));
+          }).then();
       }
     });
 }
@@ -201,7 +195,6 @@ function run(package) {
 
   // post report to PR, if running in circleCI
   if (prnum) {
-    console.log("Add PR Comment")
     postToPR(htmlReport);
   }
 }
