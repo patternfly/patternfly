@@ -422,10 +422,6 @@
   }
 }
 
-.pf-c-page__sidebar + .pf-c-drawer {
-  grid-area: main;
-}
-
 .pf-c-page__main-nav {
   padding: var(--pf-c-page__main-nav--PaddingTop) var(--pf-c-page__main-nav--PaddingRight) var(--pf-c-page__main-nav--PaddingBottom) var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
@@ -502,6 +498,8 @@
 }
 
 .pf-c-page__drawer {
+  grid-area: main;
+
   > .pf-c-drawer {
     flex: 1 0 auto;
   }
