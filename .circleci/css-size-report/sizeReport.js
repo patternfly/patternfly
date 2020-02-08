@@ -136,45 +136,45 @@ function compareMaps(currValues, prevValues) {
 
   console.log(html);
 
-  if (prnum) {
-    octokit.issues
-      .listComments({
-        owner,
-        repo,
-        issue_number: prnum
-      })
-      .then(res => res.data)
-      .then(comments => {
-        let commentBody = '';
-        const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
-        if (existingComment) {
-          commentBody += existingComment.body;
-        }
+  return html;
+}
 
-        commentBody += '\n';
-        commentBody += html;
+function postToPR(html) {
+  octokit.issues
+    .listComments({
+      owner,
+      repo,
+      issue_number: prnum
+    })
+    .then(res => res.data)
+    .then(comments => {
+      let commentBody = '';
+      const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
+      if (existingComment) {
+        commentBody += existingComment.body;
+      }
 
-        if (existingComment) {
-          octokit.issues
-            .updateComment({
-              owner,
-              repo,
-              comment_id: existingComment.id,
-              body: commentBody
-            })
-            .then(() => console.log('Updated comment!'));
-        } else {
-          octokit.issues
-            .createComment({
-              owner,
-              repo,
-              issue_number: prnum,
-              body: commentBody
-            })
-            .then(() => console.log('Created comment!'));
-        }
-      });
-  }
+      commentBody += '\n';
+      commentBody += html;
+
+      if (existingComment) {
+        octokit.issues
+          .updateComment({
+            owner,
+            repo,
+            comment_id: existingComment.id,
+            body: commentBody
+          }).then(() => console.log('Updated comment!'));
+      } else {
+        octokit.issues
+          .createComment({
+            owner,
+            repo,
+            issue_number: prnum,
+            body: commentBody
+          }).then(() => console.log('Created comment!'));
+      }
+    });
 }
 
 function run(package) {
@@ -189,9 +189,15 @@ function run(package) {
   }
 
   setUp(package);
-  const prevMap = buildValueMap(__dirname + '/node_modules/' + package + '/**/*.css', package);
-  const currMap = buildValueMap(__dirname + '/../../dist/**/**/*.css', repoPrefix);
-  compareMaps(currMap, prevMap);
+  const htmlReport = compareMaps(
+    buildValueMap(__dirname + '/../../dist/**/**/*.css', repoPrefix),
+    buildValueMap(__dirname + '/node_modules/' + package + '/**/*.css', package));
+
+  // post report to PR, if running in circleCI
+  if (prnum) {
+    console.log("Add PR Comment")
+    postToPR(htmlReport);
+  }
 }
 
 function clean() {
