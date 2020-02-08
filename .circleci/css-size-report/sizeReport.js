@@ -143,6 +143,7 @@ function postToPR(html) {
   console.log('REPO: ' + repo);
   console.log('OWNER: ' + owner);
   console.log('PRNUM: ' + prnum);
+  console.log("TOKEN: " + octokit)
 
   octokit.issues
     .listComments({
