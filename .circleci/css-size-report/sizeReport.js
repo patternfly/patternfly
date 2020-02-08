@@ -140,6 +140,10 @@ function compareMaps(currValues, prevValues) {
 }
 
 function postToPR(html) {
+  console.log('REPO: ' + repo);
+  console.log('OWNER: ' + owner);
+  console.log('PRNUM: ' + prnum);
+
   octokit.issues
     .listComments({
       owner,
@@ -153,6 +157,7 @@ function postToPR(html) {
       if (existingComment) {
         commentBody += existingComment.body;
       }
+      console.log('EXISTING COMMENT: ' + existingComment);
 
       commentBody += '\n';
       commentBody += html;
