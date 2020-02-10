@@ -1,15 +1,15 @@
 .pf-c-file-upload {
-  --pf-c-file-upload--m-drag-over--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload--m-drag-over--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-file-upload--m-drag-over--after--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-file-upload--m-drag-over--after--Opacity: .1;
+  --pf-c-file-upload--m-drag-hover--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-drag-hover--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
 
   // Input group form control
   --pf-c-file-upload--c-input-group--c-form-control--placeholder--Color: var(--pf-global--disabled-color--100);
   --pf-c-file-upload--m-loading--c-input-group--c-form-control--Color: var(--pf-global--disabled-color--100);
 
   // Text area
-  --pf-c-file-upload__text-area--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
+  --pf-c-file-upload__textarea--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
 
   // Button overrides
   --pf-c-file-upload--c-button--m-control--PaddingRight: var(--pf-global--spacer--sm);
@@ -30,13 +30,13 @@
   display: flex;
   flex-direction: column;
 
-  .pf-c-file-upload__input-group + .pf-c-file-upload__text-area > .pf-c-form-control {
+  .pf-c-file-upload__input-group + .pf-c-file-upload__textarea > .pf-c-form-control {
     border-top: 0;
   }
 
-  &.pf-m-drag-over {
+  &.pf-m-drag-hover {
     position: relative;
-    border: var(--pf-c-file-upload--m-drag-over--BorderWidth) solid var(--pf-c-file-upload--m-drag-over--BorderColor);
+    border: var(--pf-c-file-upload--m-drag-hover--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--BorderColor);
 
     &::after {
       position: absolute;
@@ -45,8 +45,8 @@
       bottom: 0;
       left: 0;
       content: "";
-      background-color: var(--pf-c-file-upload--m-drag-over--after--BackgroundColor);
-      opacity: var(--pf-c-file-upload--m-drag-over--after--Opacity);
+      background-color: var(--pf-c-file-upload--m-drag-hover--after--BackgroundColor);
+      opacity: var(--pf-c-file-upload--m-drag-hover--after--Opacity);
     }
   }
 
@@ -58,7 +58,7 @@
       }
     }
 
-    .pf-c-file-upload__text-area {
+    .pf-c-file-upload__textarea {
       background-color: var(--pf-global--disabled-color--300);
 
       .pf-c-form-control {
@@ -97,16 +97,16 @@
   }
 }
 
-.pf-c-file-upload__text-area {
+.pf-c-file-upload__textarea {
   position: relative;
   display: flex;
-  min-height: var(--pf-c-file-upload__text-area--MinHeight);
+  min-height: var(--pf-c-file-upload__textarea--MinHeight);
 
   .pf-c-form-control {
     flex: 1 1 auto;
   }
 
-  .pf-c-file-upload__text-area-spinner {
+  .pf-c-file-upload__textarea-spinner {
     position: absolute;
     top: 50%;
     left: 50%;
