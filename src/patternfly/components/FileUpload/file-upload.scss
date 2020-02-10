@@ -8,23 +8,7 @@
   --pf-c-file-upload--c-input-group--c-form-control--placeholder--Color: var(--pf-global--disabled-color--100);
 
   // Text area
-  --pf-c-file-upload__text-area--PaddingTop: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
-  --pf-c-file-upload__text-area--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-file-upload__text-area--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
-  --pf-c-file-upload__text-area--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-file-upload__text-area--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
-  --pf-c-file-upload__text-area--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload__text-area--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__text-area--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload__text-area--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__text-area--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-file-upload__text-area--hover--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-file-upload__text-area--active--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-file-upload__text-area--focus--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-file-upload__text-area--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-file-upload__text-area--focus--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-file-upload__text-area--readonly--BackgroundColor: var(--pf-global--disabled-color--300);
 
   // Button overrides
   --pf-c-file-upload--c-button--m-control--PaddingRight: var(--pf-global--spacer--sm);
@@ -36,11 +20,13 @@
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+  --pf-c-file-upload__message--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-file-upload__message--m-error--Color: var(--pf-global--danger-color--100);
 
   display: flex;
   flex-direction: column;
 
-  &.pf-m-draganddrop {
+  &.pf-m-drag-over {
     position: relative;
     border: var(--pf-c-file-upload--m-draganddrop--BorderWidth) solid var(--pf-c-file-upload--m-draganddrop--BorderColor);
 
@@ -57,76 +43,60 @@
   }
 }
 
-.pf-c-input-group > .pf-c-form-control {
-  &::placeholder {
-    color: var(--pf-c-file-upload--c-input-group--c-form-control--placeholder--Color);
+.pf-c-file-upload__input-group {
+  .pf-c-input-group > .pf-c-form-control {
+    &::placeholder {
+      color: var(--pf-c-file-upload--c-input-group--c-form-control--placeholder--Color);
+    }
+  }
+
+  .pf-c-button.pf-m-control {
+    --pf-c-button--PaddingRight: var(--pf-c-file-upload--c-button--m-control--PaddingRight);
+    --pf-c-button--PaddingLeft: var(--pf-c-file-upload--c-button--m-control--PaddingLeft);
+
+    outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
+
+    &:disabled,
+    &.pf-m-disabled {
+      color: initial;
+      background-color: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
+
+      &::after {
+        content: "";
+        border: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth) solid;
+        border-color: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor);
+        border-radius: initial;
+      }
+    }
   }
 }
 
 .pf-c-file-upload__text-area {
   position: relative;
   min-height: var(--pf-c-file-upload__text-area--MinHeight);
-  padding: var(--pf-c-file-upload__text-area--PaddingTop) var(--pf-c-file-upload__text-area--PaddingRight) var(--pf-c-file-upload__text-area--PaddingBottom) var(--pf-c-file-upload__text-area--PaddingLeft);
-  resize: vertical;
-  background-color: var(--pf-c-file-upload__text-area--BackgroundColor);
-  border: var(--pf-c-file-upload__text-area--BorderWidth) solid;
-  border-color: var(--pf-c-file-upload__text-area--BorderTopColor) var(--pf-c-file-upload__text-area--BorderRightColor) var(--pf-c-file-upload__text-area--BorderBottomColor) var(--pf-c-file-upload__text-area--BorderLeftColor);
 
-  &:not(:read-only) {
-    &.pf-m-hover,
-    &:hover {
-      --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--hover--BorderBottomColor);
-    }
-
-    &.pf-m-active,
-    &:active {
-      --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--active--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-file-upload__text-area--active--BorderBottomWidth);
-    }
-
-    &.pf-m-focus,
-    &:focus {
-      --pf-c-file-upload__text-area--BorderBottomColor: var(--pf-c-file-upload__text-area--focus--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-file-upload__text-area--focus--BorderBottomWidth);
-    }
-  }
-
-  &:read-only,
-  &.pf-m-readonly {
-    --pf-c-file-upload__text-area--BackgroundColor: var(--pf-c-file-upload__text-area--readonly--BackgroundColor);
+  .pf-c-form-control {
+    min-height: var(--pf-c-file-upload__text-area--MinHeight);
   }
 
   &.pf-m-loading {
     background-color: var(--pf-global--disabled-color--300);
     border: 0;
-  }
-}
 
-.pf-c-button.pf-m-control {
-  --pf-c-button--PaddingRight: var(--pf-c-file-upload--c-button--m-control--PaddingRight);
-  --pf-c-button--PaddingLeft: var(--pf-c-file-upload--c-button--m-control--PaddingLeft);
-
-  outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
-
-  &:disabled,
-  &.pf-m-disabled {
-    color: initial;
-    background-color: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
-
-    &::after {
-      content: "";
-      border: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth) solid;
-      border-color: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor);
-      border-radius: initial;
+    .pf-c-form-control {
+      opacity: 0;
     }
   }
+
+  .pf-c-file-upload__text-area-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.pf-c-spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.pf-c-file-upload__message {
+  font-size: var(--pf-c-file-upload__message--FontSize);
+  color: var(--pf-c-file-upload__message--m-error--Color);
 }
