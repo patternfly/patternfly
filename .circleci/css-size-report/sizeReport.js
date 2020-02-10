@@ -93,7 +93,7 @@ function compareMaps(currValues, prevValues) {
   html += '</body>';
   html += '</html>';
 
-  fs.writeFileSync(path.resolve(__dirname, '../../tmp/lint-size.html'), html);
+  fs.writeFileSync(path.resolve(__dirname, '/tmp/lint-size.html'), html);
 
   return html;
 }
