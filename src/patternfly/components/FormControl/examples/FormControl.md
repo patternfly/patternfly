@@ -18,6 +18,9 @@ cssPrefix: pf-c-form-control
 {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="textInput4" aria-label="Success state input example"'}}
 {{/form-control}}
 <br /><br />
+{{#> form-control controlType="input" form-control--modifier="pf-m-search" form-control--attribute='type="search" id="search-input" name="search-input" aria-label="Search"'}}
+{{/form-control}}
+<br /><br />
 {{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="textInput5" aria-label="Disabled input example"'}}
 {{/form-control}}
 ```
@@ -106,3 +109,4 @@ Input, textarea, and select are provided in the form controls component for use 
 | `.pf-m-resize-vertical` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized vertically along the y-axis. |
 | `.pf-m-resize-horizontal` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized horizontally along the x-axis. |
 | `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. |
+| `.pf-m-search` | `.pf-c-form-control` | Modifies a form control for the search state. |

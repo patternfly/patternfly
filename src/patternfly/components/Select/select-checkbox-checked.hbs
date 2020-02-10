@@ -3,7 +3,11 @@
   {{#if select-multi--attribute}}
     {{{select-multi-attribute}}}
   {{/if}}>
-  {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat id '-label')}}
+  {{#if select--IsFilterable}}
+    {{> select-menu-filter}}
+    {{#> divider}}{{/divider}}
+  {{/if}}
+  {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'id=""' id '-label"')}}
     {{#> check check--type="label" check--attribute=(concat 'for="' id '-active"') check--modifier="pf-c-select__menu-item"}}
       {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-active" name="' id '-active"')}}{{/check-input}}
       {{#> check-label check-label--type="span"}}Active{{/check-label}}

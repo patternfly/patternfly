@@ -134,6 +134,7 @@ The single select typeahead should be used when the user is selecting one option
 {{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
+
 The Dropdown Multi Select should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -173,6 +174,12 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 {{/select}}
 ```
 
+```hbs title=Checkbox-expanded-and-selected-with-groups-and-filter
+{{#> select id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true" select--IsFilterable="true"}}
+  Filter by status
+{{/select}}
+```
+
 ```hbs title=Checkbox-expanded-without-badge
 {{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--IsNoBadge="true"}}
   Filter
@@ -196,6 +203,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-c-select__menu-fieldset` | `<fieldset>` |  Initiates a fieldset for the items in a checkbox select. |
 | `.pf-c-select__menu-group` | `<div>` |  Initiates a group within a select menu. |
 | `.pf-c-select__menu-group-title` | `<div>` |  Initiates a title for a group with a select menu. |
+| `.pf-m-padding` | `.pf-c-select__menu-group` |  Adds padding to group. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
 
