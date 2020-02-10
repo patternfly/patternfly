@@ -62,8 +62,7 @@ cssPrefix: pf-c-file-upload
     {{/input-group}}
   {{/file-upload-input-group}}
   {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='readonly name="textarea" id="text-area-3" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-      Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+    {{#> form-control controlType="textarea" form-control--attribute='readonly name="textarea" id="text-area-3" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
     {{/form-control}}
   {{/file-upload-text-area}}
 {{/file-upload}}
@@ -106,8 +105,7 @@ cssPrefix: pf-c-file-upload
     {{/input-group}}
   {{/file-upload-input-group}}
   {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-5" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-      Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-5" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
     {{/form-control}}
   {{/file-upload-text-area}}
 {{/file-upload}}
@@ -131,7 +129,7 @@ cssPrefix: pf-c-file-upload
     {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-6" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
     {{/form-control}}
   {{/file-upload-text-area}}
-  {{#> file-upload-message}}
+  {{#> file-upload-message file-upload-message--modifier="pf-m-error"}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="file-upload-error-helper-text" aria-live="polite"'}}
       We don't support this file type. Try again with a different file type.
     {{/form-helper-text}}
@@ -140,7 +138,7 @@ cssPrefix: pf-c-file-upload
 ```
 
 ```hbs title=File-upload-loading
-{{#> file-upload file-upload--type="form"}}
+{{#> file-upload file-upload--type="form" file-upload--modifier="pf-m-loading"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
       {{#> form-control controlType="input" input="true" form-control--attribute='id="file-upload-loading" name="file-upload-loading" value="Sample.png" aria-label="File upload loading"'}}
@@ -153,9 +151,8 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-text-area file-upload-text-area--modifier="pf-m-loading" file-upload-text-area--attribute='aria-label="Text area empty"'}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-7" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-      adofhaskdjfhaskdfhaksjdfhaksjdhfaksdhfa 
+  {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="Text area empty"'}}
+    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-7" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
       {{/form-control}}
     {{#> file-upload-text-area-spinner}}
       {{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
@@ -163,7 +160,6 @@ cssPrefix: pf-c-file-upload
   {{/file-upload-text-area}}
 {{/file-upload}}
 ```
-
 
 ## Documentation
 ### Overview
@@ -179,5 +175,5 @@ cssPrefix: pf-c-file-upload
 | `.pf-c-file-upload__text-area` | `<textarea>`, `<div>` | Initiates the text area element. **Required** |
 | `.pf-c-file-upload__message` | `<div>` | Initiates the file upload message. |
 | `.pf-m-drag-over` | `.pf-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
-| `.pf-m-loading` | `.pf-c-file-upload__text-area` | Modifies text area for the loading state. |
-| `.pf-m-error` | `.pf-c-file-upload__message`| ...
+| `.pf-m-loading` | `.pf-c-file-upload` | Modifies file upload for the loading state. |
+| `.pf-m-error` | `.pf-c-file-upload__message`| Modifies the file upload message for the error state. |
