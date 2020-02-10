@@ -175,7 +175,7 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 ```
 
 ```hbs title=Checkbox-expanded-and-selected-with-groups-and-filter
-{{#> select id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true" select--IsFilterable="true"}}
+{{#> select id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true" select--IsFilterable="true"}}
   Filter by status
 {{/select}}
 ```
