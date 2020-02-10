@@ -6,7 +6,6 @@
 
   // Input group form control
   --pf-c-file-upload--c-input-group--c-form-control--placeholder--Color: var(--pf-global--disabled-color--100);
-  --pf-c-file-upload--m-loading--c-input-group--c-form-control--Color: var(--pf-global--disabled-color--100);
 
   // Text area
   --pf-c-file-upload__text-area--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
@@ -23,6 +22,7 @@
   --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Message
+  --pf-c-file-upload__message--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-file-upload__message--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-file-upload__message--Color: var(--pf-global--Color--100);
   --pf-c-file-upload__message--m-error--Color: var(--pf-global--danger-color--100);
@@ -52,12 +52,6 @@
 
   // stylelint-disable
   &.pf-m-loading {
-    .pf-c-file-upload__input-group {
-      .pf-c-input-group > .pf-c-form-control {
-        color: var(--pf-c-file-upload--m-loading--c-input-group--c-form-control--Color);
-      }
-    }
-
     .pf-c-file-upload__text-area {
       background-color: var(--pf-global--disabled-color--300);
 
@@ -115,6 +109,7 @@
 }
 
 .pf-c-file-upload__message {
+  margin-top: var(--pf-c-file-upload__message--MarginTop);
   font-size: var(--pf-c-file-upload__message--FontSize);
   color: var(--pf-c-file-upload__message--Color);
 

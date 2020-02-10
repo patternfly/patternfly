@@ -26,28 +26,7 @@ cssPrefix: pf-c-file-upload
 {{/file-upload}}
 ```
 
-```hbs title=Browse-to-upload-file
-{{#> file-upload file-upload--type="form"}}
-  {{#> file-upload-input-group}}
-    {{#> input-group}}
-      {{#> form-control controlType="input" input="true" form-control--attribute='id="basic-file-upload-browse" name="basic-file-upload-browse" placeholder="Drag a file here or browse to upload" aria-label="Select browse button to upload file"'}}
-      {{/form-control}}
-      {{#> button button--modifier="pf-m-control pf-m-expanded"}}
-        Browse...
-      {{/button}}
-      {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
-        Clear
-      {{/button}}
-    {{/input-group}}
-  {{/file-upload-input-group}}
-  {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-2" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-    {{/form-control}}
-  {{/file-upload-text-area}}
-{{/file-upload}}
-```
-
-```hbs title=Browsed-file-upload-complete
+```hbs title=Upload-complete-non-editable
 {{#> file-upload file-upload--type="form"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
@@ -66,7 +45,27 @@ cssPrefix: pf-c-file-upload
     {{/form-control}}
   {{/file-upload-text-area}}
 {{/file-upload}}
+```
 
+```hbs title=Upload-complete-editable
+{{#> file-upload file-upload--type="form"}}
+  {{#> file-upload-input-group}}
+    {{#> input-group}}
+      {{#> form-control controlType="input" input="true" form-control--attribute='id="file-drag-drop-complete" name="file-drag-drop-complete" value="Sample.txt" aria-label="Filename" readonly'}}
+      {{/form-control}}
+      {{#> button button--modifier="pf-m-control"}}
+        Browse...
+      {{/button}}
+      {{#> button button--modifier="pf-m-control"}}
+        Clear
+      {{/button}}
+    {{/input-group}}
+  {{/file-upload-input-group}}
+  {{#> file-upload-text-area}}
+    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-5" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+    {{/form-control}}
+  {{/file-upload-text-area}}
+{{/file-upload}}
 ```
 
 ```hbs title=Drag-file-over-component
@@ -85,27 +84,6 @@ cssPrefix: pf-c-file-upload
   {{/file-upload-input-group}}
   {{#> file-upload-text-area}}
     {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-4" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-    {{/form-control}}
-  {{/file-upload-text-area}}
-{{/file-upload}}
-```
-
-```hbs title=Drop-file
-{{#> file-upload file-upload--type="form"}}
-  {{#> file-upload-input-group}}
-    {{#> input-group}}
-      {{#> form-control controlType="input" input="true" form-control--attribute='id="file-drag-drop-complete" name="file-drag-drop-complete" value="Sample.txt" aria-label="Filename" readonly'}}
-      {{/form-control}}
-      {{#> button button--modifier="pf-m-control"}}
-        Browse...
-      {{/button}}
-      {{#> button button--modifier="pf-m-control"}}
-        Clear
-      {{/button}}
-    {{/input-group}}
-  {{/file-upload-input-group}}
-  {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-5" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
     {{/form-control}}
   {{/file-upload-text-area}}
 {{/file-upload}}
@@ -141,7 +119,7 @@ cssPrefix: pf-c-file-upload
 {{#> file-upload file-upload--type="form" file-upload--modifier="pf-m-loading"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
-      {{#> form-control controlType="input" input="true" form-control--attribute='id="file-upload-loading" name="file-upload-loading" value="Sample.png" aria-label="File upload loading"'}}
+      {{#> form-control controlType="input" input="true" form-control--attribute='readonly id="file-upload-loading" name="file-upload-loading" value="Sample.png" aria-label="File upload loading"'}}
       {{/form-control}}
       {{#> button button--modifier="pf-m-control"}}
         Browse...
