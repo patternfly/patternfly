@@ -1,11 +1,12 @@
 .pf-c-file-upload {
-  --pf-c-file-upload--m-draganddrop--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload--m-draganddrop--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-file-upload--m-draganddrop--after--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-file-upload--m-draganddrop--after--Opacity: .1;
+  --pf-c-file-upload--m-drag-over--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-drag-over--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-over--after--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-over--after--Opacity: .1;
 
   // Input group form control
   --pf-c-file-upload--c-input-group--c-form-control--placeholder--Color: var(--pf-global--disabled-color--100);
+  --pf-c-file-upload--m-loading--c-input-group--c-form-control--Color: var(--pf-global--disabled-color--100);
 
   // Text area
   --pf-c-file-upload__text-area--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
@@ -20,15 +21,22 @@
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+
+  // Message
   --pf-c-file-upload__message--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-file-upload__message--Color: var(--pf-global--Color--100);
   --pf-c-file-upload__message--m-error--Color: var(--pf-global--danger-color--100);
 
   display: flex;
   flex-direction: column;
 
+  .pf-c-file-upload__input-group + .pf-c-file-upload__text-area > .pf-c-form-control {
+    border-top: 0;
+  }
+
   &.pf-m-drag-over {
     position: relative;
-    border: var(--pf-c-file-upload--m-draganddrop--BorderWidth) solid var(--pf-c-file-upload--m-draganddrop--BorderColor);
+    border: var(--pf-c-file-upload--m-drag-over--BorderWidth) solid var(--pf-c-file-upload--m-drag-over--BorderColor);
 
     &::after {
       position: absolute;
@@ -37,10 +45,28 @@
       bottom: 0;
       left: 0;
       content: "";
-      background-color: var(--pf-c-file-upload--m-draganddrop--after--BackgroundColor);
-      opacity: var(--pf-c-file-upload--m-draganddrop--after--Opacity);
+      background-color: var(--pf-c-file-upload--m-drag-over--after--BackgroundColor);
+      opacity: var(--pf-c-file-upload--m-drag-over--after--Opacity);
     }
   }
+
+  // stylelint-disable
+  &.pf-m-loading {
+    .pf-c-file-upload__input-group {
+      .pf-c-input-group > .pf-c-form-control {
+        color: var(--pf-c-file-upload--m-loading--c-input-group--c-form-control--Color);
+      }
+    }
+
+    .pf-c-file-upload__text-area {
+      background-color: var(--pf-global--disabled-color--300);
+
+      .pf-c-form-control {
+        opacity: 0;
+      }
+    }
+  }
+  // stylelint-enable
 }
 
 .pf-c-file-upload__input-group {
@@ -73,19 +99,11 @@
 
 .pf-c-file-upload__text-area {
   position: relative;
+  display: flex;
   min-height: var(--pf-c-file-upload__text-area--MinHeight);
 
   .pf-c-form-control {
-    min-height: var(--pf-c-file-upload__text-area--MinHeight);
-  }
-
-  &.pf-m-loading {
-    background-color: var(--pf-global--disabled-color--300);
-    border: 0;
-
-    .pf-c-form-control {
-      opacity: 0;
-    }
+    flex: 1 1 auto;
   }
 
   .pf-c-file-upload__text-area-spinner {
@@ -98,5 +116,9 @@
 
 .pf-c-file-upload__message {
   font-size: var(--pf-c-file-upload__message--FontSize);
-  color: var(--pf-c-file-upload__message--m-error--Color);
+  color: var(--pf-c-file-upload__message--Color);
+
+  &.pf-m-error {
+    --pf-c-file-upload__message--Color: var(--pf-c-file-upload__message--m-error--Color);
+  }
 }
