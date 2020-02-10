@@ -115,7 +115,7 @@ jobs:
           when: always
       - run:
           name: Lint CSS Size
-          command: .circleci/css-size-report/sizeReport.js run > /tmp/lint-size.html
+          command: .circleci/css-size-report/sizeReport.js run
           when: always
       - store_artifacts:
           path: /tmp/lint-size.html

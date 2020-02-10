@@ -14,7 +14,7 @@
     "build:pficonfont": "gulp pfIconFont",
     "build:ie11": "gulp buildIE11",
     "build:site": "npm run copy-assets && gatsby build",
-    "clean": "gatsby clean && ./.circleci/css-size-report/sizeReport.js clean",
+    "clean": "gatsby clean && shx -rf tmp",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "copy-assets": "gulp copyAssets",
     "dev": "concurrently \"npm run copy-assets\" \"gulp watchSASS\" \"gatsby develop\"",
@@ -110,8 +110,7 @@
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.5.0",
-    "stylelint-value-no-unknown-custom-properties": "^2.0.0",
-    "yargs": "^15.1.0"
+    "stylelint-value-no-unknown-custom-properties": "^2.0.0"
   },
   "engines": {
     "node": ">=8.0.0",

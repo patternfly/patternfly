@@ -13,7 +13,7 @@ const prnum = process.env.CIRCLE_PR_NUMBER;
 let exitCode = 0;
 
 // download previous package to do the compares against
-const setUp = (package) => {
+function setUp(package) {
   try{
     if (! fs.existsSync(__dirname + '/node_modules')) {
       console.log(__dirname + '/node_modules');
@@ -26,7 +26,7 @@ const setUp = (package) => {
 }
 
 // build a Map object(<key> = file, <value> = size in kb), sorting highest to lowest.
-const buildValueMap = (searchPattern, topLvlPattern) => {
+function buildValueMap(searchPattern, topLvlPattern) {
   const m = new Map();
   glob
     .sync(searchPattern)
@@ -45,7 +45,7 @@ const buildValueMap = (searchPattern, topLvlPattern) => {
 }
 
 // compare value maps.
-const compareMaps = (currValues, prevValues) => {
+function compareMaps(currValues, prevValues) {
   const results = {};
   // the number of files that have changed
   let totalFiles = 0;
@@ -93,61 +93,63 @@ const compareMaps = (currValues, prevValues) => {
   html += '</body>';
   html += '</html>';
 
-  console.log(html);
+  fs.writeFileSync(path.resolve(__dirname, '../../tmp/lint-size.html'), html);
 
   return html;
 }
 
-const postToPR = (html) => {
+function postToPR(html) {
   console.log("Owner: " + owner);
   console.log("repo: " + repo);
+  console.log("prnum: " + prnum);
+  console.log('table', html)
 
-  try {
-    octokit.issues
-      .listComments({
-        owner,
-        repo,
-        issue_number: prnum
-      })
-      .then(res => res.data)
-      .then(comments => {
-        let commentBody = '';
-        const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
-        if (existingComment) {
-          console.log("Grab existing comment data \n");
-          commentBody += existingComment.body;
-        }
+  return new Promise((res, rej) => octokit.issues
+    .listComments({
+      owner,
+      repo,
+      issue_number: prnum
+    })
+    .then(res => res.data)
+    .then(comments => {
+      let commentBody = '';
+      const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
+      if (existingComment) {
+        console.log("Grab existing comment data \n");
+        commentBody += existingComment.body;
+      }
 
-        console.log("Added report to data \n");
-        commentBody += '\n';
-        commentBody += html;
+      console.log("Added report to data \n");
+      commentBody += '\n';
+      commentBody += html;
 
-        if (existingComment) {
-          octokit.issues
-            .updateComment({
-              owner,
-              repo,
-              comment_id: existingComment.id,
-              body: commentBody
-            })
-            .then(() => console.log('Updated comment'));
-        } else {
-          octokit.issues
-            .createComment({
-              owner,
-              repo,
-              issue_number: prnum,
-              body: commentBody
-            })
-            .then(() => console.log('Created comment'));
-        }
-      });
-  } catch(err) {
-    console.log(err.message())
-  }
+      if (existingComment) {
+        octokit.issues
+          .updateComment({
+            owner,
+            repo,
+            comment_id: existingComment.id,
+            body: commentBody
+          })
+          .then(() => console.log('Updated comment'))
+          .then(res);
+      } else {
+        octokit.issues
+          .createComment({
+            owner,
+            repo,
+            issue_number: prnum,
+            body: commentBody
+          })
+          .then(() => console.log('Created comment'))
+          .then(res);
+      }
+    })
+    .catch(rej)
+  );
 }
 
-const run = (package) => {
+async function run(package) {
   // check if we are running in dev or CI env
   let repoPrefix;
   if (repo) {
@@ -166,41 +168,9 @@ const run = (package) => {
   // post report to PR, if running in circleCI
   if (prnum) {
     console.log("Posting comment to PR")
-    postToPR(htmlReport);
+    await postToPR(htmlReport);
+    process.exit(exitCode);
   }
 }
 
-const clean = () => {
-  const deleteFolderRecursive = (dir_path) => {
-    if (fs.existsSync(dir_path)) {
-      fs.readdirSync(dir_path).forEach((file, index) => {
-        const curPath = path.join(dir_path, file);
-        if (fs.lstatSync(curPath).isDirectory()) { // recurse
-          deleteFolderRecursive(curPath);
-        } else { // delete file
-          fs.unlinkSync(curPath);
-        }
-      });
-      fs.rmdirSync(dir_path);
-    }
-  };
-
-  deleteFolderRecursive(__dirname + '/node_modules');
-}
-
-// process command line args
-const argv = require('yargs')
-  .usage(`Usage:  ${path.basename(__filename)} <command> [options]`)
-  .command('run', 'Run the report', () => {}, (argv) => {
-    run('@patternfly/patternfly');
-  })
-  .command('clean', 'Clean up anything the report tool as built out',  () => {}, (argv) => {
-    clean();
-  })
-  .showHelpOnFail(true)
-  .strict()
-  .demandCommand(1, '')
-  .help('h')
-  .alias('h', 'help').argv
-
-process.exit(exitCode);
+run('@patternfly/patternfly');
