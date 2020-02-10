@@ -64,21 +64,9 @@ function compareMaps(currValues, prevValues) {
   const results = {};
   // the number of files that have changed
   let totalFiles = 0;
-  // the color of the result size value.
-  let sizeCol = 'green';
 
   let html = '<!DOCTYPE html>';
-
-  html += '<head>';
-  html += '<style>'
-  html += `th { font-weight:bold; background-color: #e6e6e6; }`
-  html += `table, th, td { border: 1px solid black; border-collapse: collapse; }`
-  html += '</style>';
-  html += '</head>';
-
-  html += '<html>';
   html += '<body>';
-
   html += '<table style="width:100%">';
   html += '<tr>';
   html += `<th>Name</th>`;
@@ -88,14 +76,6 @@ function compareMaps(currValues, prevValues) {
   html += '</tr>';
 
   currValues.forEach((size, file) => {
-    if (size >= 10000) {
-      sizeCol = '#E74C3C';
-    } else if (size > 8000 && size < 10000) {
-      sizeCol = '#F1C40F';
-    } else {
-      sizeCol = '#229954';
-    }
-
     let psize;
     let diff;
     if ( typeof prevValues.get(file) !== 'undefined' ) {
@@ -110,15 +90,9 @@ function compareMaps(currValues, prevValues) {
       totalFiles++;
       html += '<tr>';
       html += `<td>${file}</td>`; // Name
-      html += `<td style="text-align:center;"><font color=${sizeCol}>${size}</font></td>`; // Current
-      html += `<td style="text-align:center;">${psize}</td>`; // Previous
-      if (diff > 0) {
-        html += `<td style="text-align:center;"><font color='#E74C3C'>${diff}</font></td>`;
-      } else if (diff < 0) {
-        html += `<td style="text-align:center;"><font color='#229954'>${diff}</font></td>`;
-      } else {
-        html += `<td style="text-align:center;">${diff}</td>`;
-      }
+      html += `<td>${size}</td>`; // Current
+      html += `<td>${psize}</td>`; // Previous
+      html += `<td>${diff}</td>`;
       html += '<tr>';
       results[file] = size;
     }
@@ -126,7 +100,7 @@ function compareMaps(currValues, prevValues) {
 
   if ( totalFiles == 0 ) {
     html += '<tr>';
-    html += `<td colspan="4" style="text-align:center;">There are no changes in CSS file sizes</td>`
+    html += `<td>There are no changes in CSS file sizes</td>`
     html += '<tr>';
   }
 
@@ -164,7 +138,8 @@ function postToPR(html) {
             repo,
             comment_id: existingComment.id,
             body: commentBody
-          }).then();
+          })
+          .then(() => console.log('Updated comment'));
       } else {
         octokit.issues
           .createComment({
@@ -172,7 +147,8 @@ function postToPR(html) {
             repo,
             issue_number: prnum,
             body: commentBody
-          }).then();
+          })
+          .then(() => console.log('Created comment'));
       }
     });
 }
@@ -195,6 +171,7 @@ function run(package) {
 
   // post report to PR, if running in circleCI
   if (prnum) {
+    console.log("Posting comment to PR")
     postToPR(htmlReport);
   }
 }
