@@ -20,7 +20,7 @@ module.exports = {
             { section: 'layouts' },
             { section: 'utilities' },
             { section: 'demos' },
-            { section: 'experimental' }
+            { section: 'beta' }
           ]
         },
         topNavItems: [

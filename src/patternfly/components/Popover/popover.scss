@@ -1,6 +1,6 @@
 .pf-c-popover {
   // Component
-  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(100px)});
+  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 

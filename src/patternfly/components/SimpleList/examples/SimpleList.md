@@ -1,6 +1,7 @@
 ---
 title: Simple list
-section: experimental
+section: beta
+beta: true
 cssPrefix: pf-c-simple-list
 ---
 
@@ -26,6 +27,29 @@ cssPrefix: pf-c-simple-list
   {{/simple-list-list}}
 {{/simple-list}}
 ```
+
+```hbs title=Simple-list-with-links
+{{#> simple-list simple-list-item-link--IsLink="true"}}
+  {{#> simple-list-list}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-link simple-list-item-link--modifier="pf-m-current"}}
+        List item 1
+      {{/simple-list-item-link}}
+    {{/simple-list-item}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-link}}
+        List item 2
+      {{/simple-list-item-link}}
+    {{/simple-list-item}}
+    {{#> simple-list-item}}
+      {{#> simple-list-item-link}}
+        List item 3
+      {{/simple-list-item-link}}
+    {{/simple-list-item}}
+  {{/simple-list-list}}
+{{/simple-list}}
+```
+
 ```hbs title=Grouped-list
 {{#> simple-list}}
   {{#> simple-list-section}}
@@ -86,7 +110,11 @@ cssPrefix: pf-c-simple-list
 ```
 
 ## Documentation
-### Overview
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `a.pf-c-simple-list__item-link` | Inserts the link into the tab order of the page so that it is focusable. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
