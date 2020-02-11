@@ -23,7 +23,6 @@ function clean(cb) {
   const cleanDirs = [
     './dist',
     './src/icons/PfIcons',
-    'cache',
     '.circleci/css-size-report/node_modules',
     '.circleci/css-size-report/package-lock.json',
     '.circleci/css-size-report/report.html',
