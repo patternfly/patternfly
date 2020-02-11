@@ -215,10 +215,9 @@ cssPrefix: pf-c-drawer
 | `.pf-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
 | `.pf-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
 | `.pf-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
-| `.pf-c-drawer__head` | `<div>` | Initiates a drawer head container. **Required with close button** |
-| `.pf-c-drawer__header` | `<div>` | Initiates a drawer header container. This element can be a sibling of `.pf-c-drawer__head` and/or `.pf-c-drawer__body` or nested within them. |
-| `.pf-c-drawer__body` | `<div>` | Initiates a drawer body container. **Required** |
-
+| `.pf-c-drawer__head` | `<div>` | Initiates a drawer head container and can be a child of `.pf-c-drawer__content` or `.pf-c-drawer__panel`. `.pf-c-drawer__head` positions `.pf-c-drawer__actions`. |
+| `.pf-c-drawer__header` | `<div>` | Initiates a drawer header container and can be a child of `.pf-c-drawer__content` or `.pf-c-drawer__panel`, as well as `.pf-c-drawer__head`. |
+| `.pf-c-drawer__body` | `<div>` | Initiates a drawer body container and can be a child of `.pf-c-drawer__content` or `.pf-c-drawer__panel`. |
 | `.pf-c-drawer__actions` | `<div>` | Identifies the drawer close button. |
 | `.pf-c-drawer__close` | `<div>` | Identifies the drawer close button. |
 | `.pf-m-expanded` | `.pf-c-drawer` | Modifies the drawer panel for the expanded state. |
@@ -226,7 +225,7 @@ cssPrefix: pf-c-drawer
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a breakpoint will default to the `md` breakpoint. |
 | `.pf-m-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable box-shadow and enable solid border. |
 | `.pf-m-no-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
-| `.pf-m-padding` | `.pf-c-drawer__content-body` | Modifies the drawer content to add padding. |
-| `.pf-m-no-padding` | `.pf-c-drawer__panel-body` | Modifies the drawer panel to remove padding. |
-| `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__body`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
+| `.pf-m-padding` | `.pf-c-drawer__head`, `.pf-c-drawer__header`, `.pf-c-drawer__body` | Modifies the element to add padding. |
+| `.pf-m-no-padding` | `.pf-c-drawer__head`, `.pf-c-drawer__header`, `.pf-c-drawer__body` | Modifies the element to remove padding. |
+| `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
