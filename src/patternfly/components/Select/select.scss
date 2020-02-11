@@ -112,12 +112,10 @@
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Menu group padding
-  --pf-c-select__menu-group--m-padding--PaddingTop: var(--pf-c-select__menu--PaddingBottom);
-  --pf-c-select__menu-group--m-padding--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
-  --pf-c-select__menu-group--m-padding--PaddingBottom: var(--pf-c-select__menu--PaddingBottom);
-  --pf-c-select__menu-group--m-padding--PaddingLeft: var(--pf-c-select__menu-item--PaddingLeft);
-  --pf-c-select__menu-group--m-padding--not--first-of-type--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-select__menu-group--m-padding--not--last-of-type--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-select__menu-input--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-input--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
+  --pf-c-select__menu-input--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-select__menu-input--PaddingLeft: var(--pf-c-select__menu-item--PaddingLeft);
 
   // Menu Item separator
   --pf-c-select__separator--Height: var(--pf-global--BorderWidth--sm);
@@ -451,21 +449,11 @@
   padding-top: var(--pf-c-select__menu-group--not--first-of-type--PaddingTop);
 }
 
-.pf-c-select__menu-group {
-  &.pf-m-padding {
-    padding-top: var(--pf-c-select__menu-group--m-padding--PaddingTop);
-    padding-right: var(--pf-c-select__menu-group--m-padding--PaddingRight);
-    padding-bottom: var(--pf-c-select__menu-group--m-padding--PaddingBottom);
-    padding-left: var(--pf-c-select__menu-group--m-padding--PaddingLeft);
-  }
-
-  &:not(:first-of-type).pf-m-padding {
-    --pf-c-select__menu-group--m-padding--PaddingTop: var(--pf-c-select__menu-group--m-padding--not--first-of-type--PaddingTop);
-  }
-
-  &:not(:last-of-type).pf-m-padding {
-    --pf-c-select__menu-group--m-padding--PaddingBottom: var(--pf-c-select__menu-group--m-padding--not--last-of-type--PaddingBottom);
-  }
+.pf-c-select__menu-input {
+  padding-top: var(--pf-c-select__menu-input--PaddingTop);
+  padding-right: var(--pf-c-select__menu-input--PaddingRight);
+  padding-bottom: var(--pf-c-select__menu-input--PaddingBottom);
+  padding-left: var(--pf-c-select__menu-input--PaddingLeft);
 }
 
 .pf-c-select__menu-group-title {

@@ -1,4 +1,4 @@
-{{#> select-menu-group select-menu-group--modifier="pf-m-padding"}}
+<div class="pf-c-select__menu-input{{#if select-menu-input--modifier}} {{select-menu-input--modifier}}{{/if}}">
   {{#> form-control controlType="input" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
   {{/form-control}}
-{{/select-menu-group}}
+</div>
