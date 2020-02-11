@@ -6,7 +6,7 @@ const { compileSASS, minifyCSS, watchSASS } = require('./build/gulp/sass');
 const { pfIconFont, pfIcons } = require('./build/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./build/gulp/html');
 const { buildIE11 } = require('./build/gulp/ie11');
-const { lintCSSComments, lintCSSFunctions, lintCSSSize } = require('./build/gulp/lint');
+const { lintCSSComments, lintCSSFunctions } = require('./build/gulp/lint');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -87,6 +87,5 @@ module.exports = {
   copyAssets,
   lintCSSFunctions,
   lintCSSComments,
-  lintCSSSize,
-  lintCSS: parallel(lintCSSFunctions, lintCSSComments, lintCSSSize)
+  lintCSS: parallel(lintCSSFunctions, lintCSSComments)
 };
