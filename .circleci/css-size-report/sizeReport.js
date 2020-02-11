@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const execSync = require('child_process').execSync;
+const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
-const path = require('path');
 const { Octokit }  = require('@octokit/rest');
 
 const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
@@ -13,29 +13,21 @@ const prnum = process.env.CIRCLE_PR_NUMBER;
 let exitCode = 0;
 
 // download previous package to do the compares against
-function setUp(package) {
-  if (!fs.existsSync(__dirname + '/node_modules')) {
-    let lastTag = execSync('git describe --match "v*" --tags --abbrev=0').toString();
-    lastTag = lastTag.substr(1, lastTag.length).trim();
-    console.log(`npm i -D ${package}@${lastTag}`)
-    execSync(`npm i -D ${package}@${lastTag}`, { cwd: __dirname, encoding: 'utf-8' });
-  }
+function npmInstall(package) {
+  let lastTag = execSync('git describe --match "v*" --tags --abbrev=0').toString();
+  lastTag = lastTag.substr(1, lastTag.length).trim();
+  console.log(`npm i -D ${package}@${lastTag}`)
+  execSync(`npm i -D ${package}@${lastTag}`, { cwd: __dirname, encoding: 'utf-8' });
 }
 
 // build a Map object(<key> = file, <value> = size in kb)
-function buildValueMap(searchPattern, topLvlPattern) {
+function buildValueMap(distDir) {
   const res = {};
   glob
-    .sync(searchPattern)
-    .forEach(file => {
-      const split = file.split('/');
-      let normalized = split.slice(split.length - 3, split.length).join('/');
-
-      if (normalized.startsWith(topLvlPattern)) {
-        normalized = file.split('/').pop();
-      }
-      res[normalized] = fs.statSync(file).size;
-    });
+    .sync(`${distDir}/**/*.css`)
+    .forEach(file =>
+      res[file.replace(distDir, '').substr(1)] = fs.statSync(file).size
+    );
 
   return res;
 }
@@ -47,8 +39,8 @@ function compareMaps(curMap, prevMap) {
   let html = '<table id="css-lint-size">';
   html += '<tr>';
   html += `<th>Name</th>`;
-  html += `<th>Current(kb)</th>`;
-  html += `<th>Previous(kb)</th>`;
+  html += `<th>Current</th>`;
+  html += `<th>Previous</th>`;
   html += `<th>Diff %</th>`;
   html += '</tr>';
 
@@ -81,65 +73,84 @@ function compareMaps(curMap, prevMap) {
     html += '<tr>';
   } else {
     differences
-      .sort((diff1, diff2) => diff1.diff > diff2.diff)
+      .sort((diff1, diff2) => diff1.diff < diff2.diff)
       .forEach(diff => {
-        html += '<tr>';
+        let style = '';
+        console.log(diff.file, 'diff', diff.diff);
+        // Styles don't show up on github :(
+        if (diff.diff > 10) {
+          style += 'background-color: lightsalmon;';
+        } else if (diff.diff > 5) {
+          style += 'background-color: goldenrodyellow;';
+        } else if (diff.diff < 0) {
+          style += 'background-color: lightgreen;';
+        }
+        html += `<tr style="${style}">`;
         html += `<td>${diff.file}</td>`; // Name
-        html += `<td>${diff.size}</td>`; // Current
-        html += `<td>${diff.psize}</td>`; // Previous
-        html += `<td>${diff.diff}</td>`;
+        html += `<td>${humanFileSize(diff.size, true)}</td>`; // Current
+        html += `<td>${humanFileSize(diff.psize, true)}</td>`; // Previous
+        html += `<td>${parseFloat(diff.diff).toFixed(2)}</td>`;
         html += '</tr>';
       });
   }
 
   html += '</table>';
 
-  fs.writeFileSync(__dirname + '/report.html', html);
+  fs.writeFileSync(path.join(__dirname, './report.html'), html);
   return html;
 }
 
-function postToPR(html) {
-  return new Promise((res, rej) => octokit.issues
+function humanFileSize(bytes, si) {
+  const thresh = si ? 1000 : 1024;
+  if (Math.abs(bytes) < thresh) {
+    return `${bytes} B`;
+  }
+  const units = si
+    ? ['kB','MB','GB','TB','PB','EB','ZB','YB']
+    : ['KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB'];
+  var u = -1;
+  do {
+    bytes /= thresh;
+    ++u;
+  } while(Math.abs(bytes) >= thresh && u < units.length - 1);
+  return `${bytes.toFixed(1)} ${units[u]}`;
+}
+
+async function postToPR(html) {
+  let commentBody = '';
+  const { data } = await octokit.issues
     .listComments({
       owner,
       repo,
       issue_number: prnum
-    })
-    .then(res => res.data)
-    .then(comments => {
-      let commentBody = '';
-      const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
-      if (existingComment) {
-        commentBody = existingComment.body.replace(/<table id="css-lint-size">(.*)<\/table>/, '');
-      }
+    });
+  const existingComment = data.find(comment => comment.user.login === 'patternfly-build');
+  if (existingComment) {
+    commentBody = existingComment.body.replace(/<table id="css-lint-size">(.*)<\/table>/, '').trim();
+  }
 
-      commentBody += '\n';
-      commentBody += html;
+  commentBody += '\n';
+  commentBody += html;
 
-      if (existingComment) {
-        octokit.issues
-          .updateComment({
-            owner,
-            repo,
-            comment_id: existingComment.id,
-            body: commentBody
-          })
-          .then(() => console.log('Updated comment'))
-          .then(res);
-      } else {
-        octokit.issues
-          .createComment({
-            owner,
-            repo,
-            issue_number: prnum,
-            body: commentBody
-          })
-          .then(() => console.log('Created comment'))
-          .then(res);
-      }
-    })
-    .catch(rej)
-  );
+  if (existingComment) {
+    await octokit.issues
+      .updateComment({
+        owner,
+        repo,
+        comment_id: existingComment.id,
+        body: commentBody
+      });
+    console.log('Updated comment');
+  } else {
+    await octokit.issues
+      .createComment({
+        owner,
+        repo,
+        issue_number: prnum,
+        body: commentBody
+      });
+    console.log('Created comment');
+  }
 }
 
 async function run(package) {
@@ -153,10 +164,10 @@ async function run(package) {
     repoPrefix = 'patternfly-next/dist';
   }
 
-  setUp(package);
+  npmInstall(package);
   const htmlReport = compareMaps(
-    buildValueMap(__dirname + '/../../dist/**/**/*.css', repoPrefix),
-    buildValueMap(__dirname + '/node_modules/' + package + '/**/*.css', package)
+    buildValueMap(path.join(__dirname, '../../dist'), repoPrefix),
+    buildValueMap(path.join(__dirname, './node_modules/', package), package)
   );
 
   // post report to PR, if running in circleCI

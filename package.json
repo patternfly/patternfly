@@ -110,7 +110,8 @@
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.5.0",
-    "stylelint-value-no-unknown-custom-properties": "^2.0.0"
+    "stylelint-value-no-unknown-custom-properties": "^2.0.0",
+    "surge": "^0.21.3"
   },
   "engines": {
     "node": ">=8.0.0",
