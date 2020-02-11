@@ -20,7 +20,22 @@ const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
-  ['./dist', './src/icons/PfIcons'].forEach(dir => removeSync(dir));
+  const cleanDirs = [
+    './dist',
+    './src/icons/PfIcons',
+    'cache',
+    '.circleci/css-size-report/node_modules',
+    '.circleci/css-size-report/package-lock.json',
+    '.circleci/css-size-report/report.html',
+    'build/patternfly-cli/node_modules/',
+    'src/icons/PfIcons/',
+    'static/assets/fontawesome/',
+    'static/assets/fonts/',
+    'static/assets/pficon/',
+    'test/results/',
+    'test/scenario_tests/'
+  ];
+  cleanDirs.forEach(dir => removeSync(dir));
   cb();
 }
 
