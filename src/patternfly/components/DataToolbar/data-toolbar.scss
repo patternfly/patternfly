@@ -210,16 +210,15 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     }
   }
 
+  // If pagination is sibling of align-right
+  &.pf-m-align-right ~ * {
+    margin-left: 0;
+  }
+
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
   &:last-child {
     --pf-c-data-toolbar--spacer: 0;
   }
-}
-
-// If pagination is sibling of align-right
-.pf-c-data-toolbar__item.pf-m-align-right ~ *,
-.pf-c-data-toolbar__group.pf-m-align-right ~ * {
-  margin-left: 0;
 }
 
 .pf-c-data-toolbar__content,
