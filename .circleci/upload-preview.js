@@ -63,7 +63,7 @@ if (prnum) {
       }
 
       if (uploadFolderName === 'public') {
-        commentBody += tryAddComment(`Doc preview: https://${uploadURL}`, commentBody);
+        commentBody += tryAddComment(`Preview: https://${uploadURL}`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {
         commentBody += tryAddComment(`A11y report: https://${uploadURL}`, commentBody);

@@ -37,6 +37,7 @@ function compareMaps(curMap, prevMap) {
   const differences = [];
 
   let html = '<table id="css-lint-size">';
+  html += '<caption>CSS Size Report</caption>';
   html += '<tr>';
   html += `<th>Name</th>`;
   html += `<th>Current</th>`;
@@ -77,6 +78,12 @@ function compareMaps(curMap, prevMap) {
       .forEach(diff => {
         let style = '';
         console.log(diff.file, 'diff', diff.diff);
+        if (
+          diff.diff > 50 || // component file
+          diff.diff > 10 && !diff.file.includes('/') // Root patternfly.css file
+        ) {
+          exitCode = -1;
+        }
         // Styles don't show up on github :(
         if (diff.diff > 10) {
           style += 'background-color: lightsalmon;';
