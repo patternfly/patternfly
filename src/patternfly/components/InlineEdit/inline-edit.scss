@@ -74,6 +74,16 @@
 }
 
 // Editable
+.pf-c-inline-edit__group.pf-m-action-group {
+  display: none;
+  visibility: hidden;
+}
+
+.pf-m-inline-editable .pf-c-inline-edit__group {
+  display: flex;
+  visibility: visible;
+}
+
 .pf-c-inline-edit.pf-m-inline-editable,
 .pf-c-inline-edit .pf-m-inline-editable {
   // Expose inputs, input groups, actions and action groups
