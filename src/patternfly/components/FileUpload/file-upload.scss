@@ -23,6 +23,7 @@
   --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Message
+  --pf-c-file-upload__message--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-file-upload__message--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-file-upload__message--Color: var(--pf-global--Color--100);
   --pf-c-file-upload__message--m-error--Color: var(--pf-global--danger-color--100);
