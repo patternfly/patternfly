@@ -333,7 +333,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
           }
         }
       }
-      /* stylelint-enable */
+      // stylelint-enable
     }
   }
 
@@ -349,7 +349,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       // Inline, expanded, panel left
-      // stylelint-disable selector-max-class
+      // stylelint-disable selector-max-class, max-nesting-depth
       &.pf-m-expanded .pf-c-drawer__panel {
         margin-right: 0;
         transform: translateX(0);
