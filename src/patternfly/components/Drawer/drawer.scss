@@ -320,7 +320,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         transform: translateX(0);
       }
 
-      /* stylelint-disable max-nesting-depth */
+      // stylelint-disable max-nesting-depth
       &.pf-m-panel-left {
         .pf-c-drawer__panel {
           margin-right: 0;
