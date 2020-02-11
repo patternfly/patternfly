@@ -118,8 +118,7 @@ jobs:
           command: .circleci/css-size-report/sizeReport.js run
           when: always
       - store_artifacts:
-          path: /tmp/lint-size.html
-          destination: linting/
+          path: /.circleci/css-size-report/report.html
   deploy:
     docker:
     - image: circleci/node:10
