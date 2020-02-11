@@ -161,20 +161,10 @@ async function postToPR(html) {
 }
 
 async function run(package) {
-  // check if we are running in dev or CI env
-  let repoPrefix;
-  if (repo) {
-    // circleCI repo
-    repoPrefix = 'project/dist';
-  } else {
-    // dev repo
-    repoPrefix = 'patternfly-next/dist';
-  }
-
   npmInstall(package);
   const htmlReport = compareMaps(
-    buildValueMap(path.join(__dirname, '../../dist'), repoPrefix),
-    buildValueMap(path.join(__dirname, './node_modules/', package), package)
+    buildValueMap(path.join(__dirname, '../../dist')),
+    buildValueMap(path.join(__dirname, './node_modules/', package))
   );
 
   // post report to PR, if running in circleCI
