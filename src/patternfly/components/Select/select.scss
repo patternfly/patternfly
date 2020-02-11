@@ -127,7 +127,7 @@
 
   // Menu group
   // add a little space if it's not the first group because the first one also has the menu padding
-  --pf-c-select__menu-group--not-first--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-group--not--first-of-type--PaddingTop: var(--pf-global--spacer--sm);
 
   // Menu section heading
   // Paddings are set to always line up with the other menu items
@@ -448,7 +448,7 @@
 }
 
 .pf-c-select__menu-group:not(:first-of-type) {
-  padding-top: var(--pf-c-select__menu-group--not-first--PaddingTop);
+  padding-top: var(--pf-c-select__menu-group--not--first-of-type--PaddingTop);
 }
 
 .pf-c-select__menu-group {
