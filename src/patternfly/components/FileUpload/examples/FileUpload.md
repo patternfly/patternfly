@@ -14,8 +14,6 @@ cssPrefix: pf-c-file-upload
         file-upload-text-input--aria-label="Upload a file"
         file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload"'
         }}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="basic-file-upload-input" name="basic-file-upload" placeholder="Drag a file here or browse to upload" aria-label="Upload a file"'}}
-      {{/form-control}} -->
       {{#> button button--modifier="pf-m-control"}}
         Browse...
       {{/button}}
@@ -24,41 +22,12 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}{{/file-upload-textarea}}
-  <!-- {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-1" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-    {{/form-control}}
-  {{/file-upload-text-area}} -->
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}
+  {{/file-upload-textarea}}
 {{/file-upload}}
 ```
 
-```hbs title=Browse-to-upload-file
-{{#> file-upload file-upload--id="browse-to-upload-file"}}
-  {{#> file-upload-input-group}}
-    {{#> input-group}}
-      {{> file-upload-text-input
-        file-upload-text-input--aria-label="Select browse button to upload file"
-        file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload"'
-        }}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="basic-file-upload-browse-input" name="basic-file-upload-browse" placeholder="Drag a file here or browse to upload" aria-label="Select browse button to upload file"'}}
-      {{/form-control}} -->
-      {{#> button button--modifier="pf-m-control pf-m-expanded"}}
-        Browse...
-      {{/button}}
-      {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
-        Clear
-      {{/button}}
-    {{/input-group}}
-  {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}{{/file-upload-textarea}}
-  <!-- {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-2" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-    {{/form-control}}
-  {{/file-upload-text-area}} -->
-{{/file-upload}}
-```
-
-```hbs title=Browsed-file-upload-complete
+```hbs title=Upload-complete-non-editable
 {{#> file-upload file-upload--id="browsed-file-upload-complete"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
@@ -66,8 +35,6 @@ cssPrefix: pf-c-file-upload
         file-upload-text-input--aria-label="Read only"
         file-upload-text-input--attribute='readonly value="Read only title"'
         }}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="file-upload-browse-complete-input" name="file-upload-browse-complete" value="Read only title" aria-label="Read only" readonly'}}
-      {{/form-control}} -->
       {{#> button button--modifier="pf-m-control"}}
         Browse...
       {{/button}}
@@ -78,39 +45,10 @@ cssPrefix: pf-c-file-upload
   {{/file-upload-input-group}}
   {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--attribute='readonly'}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-textarea}}
-  <!-- {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='readonly name="textarea" id="text-area-3" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
-    {{/form-control}}
-  {{/file-upload-text-area}} -->
-{{/file-upload}}
-
-```
-
-```hbs title=Drag-file-hover-component
-{{#> file-upload file-upload--id="drag-file-hover-component" file-upload--modifier="pf-m-drag-hover"}}
-  {{#> file-upload-input-group}}
-    {{#> input-group}}
-      {{> file-upload-text-input file-upload-text-input--aria-label="Drag or drop a file" file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload"'}}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="drag-or-drop-file-input" name="drag-or-drop-file" placeholder="Drag a file here or browse to upload" aria-label="Drag or drop a file"'}}
-      {{/form-control}} -->
-      {{#> button button--modifier="pf-m-control"}}
-        Browse...
-      {{/button}}
-      {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
-        Clear
-      {{/button}}
-    {{/input-group}}
-  {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--attribute='readonly'}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
-  {{/file-upload-textarea}}
-  <!-- {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-4" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-    {{/form-control}}
-  {{/file-upload-text-area}} -->
 {{/file-upload}}
 ```
 
-```hbs title=Drop-file
+```hbs title=Upload-complete-editable
 {{#> file-upload file-upload--id="drop-file"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
@@ -118,8 +56,6 @@ cssPrefix: pf-c-file-upload
         file-upload-text-input--aria-label="Filename"
         file-upload-text-input--attribute='readonly value="Sample.txt"'
         }}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="file-drag-drop-complete-input" name="file-drag-drop-complete" value="Sample.txt" aria-label="Filename" readonly'}}
-      {{/form-control}} -->
       {{#> button button--modifier="pf-m-control"}}
         Browse...
       {{/button}}
@@ -130,10 +66,24 @@ cssPrefix: pf-c-file-upload
   {{/file-upload-input-group}}
   {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-textarea}}
-  <!-- {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-5" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
-    {{/form-control}}
-  {{/file-upload-text-area}} -->
+{{/file-upload}}
+```
+
+```hbs title=Drag-file-hover-component
+{{#> file-upload file-upload--id="drag-file-hover-component" file-upload--modifier="pf-m-drag-hover"}}
+  {{#> file-upload-input-group}}
+    {{#> input-group}}
+      {{> file-upload-text-input file-upload-text-input--aria-label="Drag or drop a file" file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload"'}}
+      {{#> button button--modifier="pf-m-control"}}
+        Browse...
+      {{/button}}
+      {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
+        Clear
+      {{/button}}
+    {{/input-group}}
+  {{/file-upload-input-group}}
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--attribute='readonly'}}
+  {{/file-upload-textarea}}
 {{/file-upload}}
 ```
 
@@ -143,10 +93,8 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="File upload error"
-        file-upload-text-input--attribute='readonly value="Sample.png"'
+        file-upload-text-input--attribute='required value="Sample.png" aria-invalid="true"'
         }}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="file-upload-error-input" name="file-upload-error" value="Sample.png" aria-label="File upload error" aria-invalid="true" required'}}
-      {{/form-control}} -->
       {{#> button button--modifier="pf-m-control"}}
         Browse...
       {{/button}}
@@ -156,10 +104,6 @@ cssPrefix: pf-c-file-upload
     {{/input-group}}
   {{/file-upload-input-group}}
   {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}{{/file-upload-textarea}}
-  <!-- {{#> file-upload-text-area}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-6" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}
-    {{/form-control}}
-  {{/file-upload-text-area}} -->
   {{#> file-upload-message file-upload-message--modifier="pf-m-error"}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="file-upload-error-helper-text" aria-live="polite"'}}
       We don't support this file type. Try again with a different file type.
@@ -173,11 +117,9 @@ cssPrefix: pf-c-file-upload
   {{#> file-upload-input-group}}
     {{#> input-group}}
       {{> file-upload-text-input
-        file-upload-text-input--aria-label="File upload loading"
-        file-upload-text-input--attribute='name="file-upload-loading" value="Sample.png"'
-        }}
-      <!-- {{#> form-control controlType="input" input="true" form-control--attribute='id="file-upload-loading-input" name="file-upload-loading" value="Sample.png" aria-label="File upload loading"'}}
-      {{/form-control}} -->
+        file-upload-text-input--aria-label="Read only"
+        file-upload-text-input--attribute='readonly name="file-upload-loading" value="Sample.png"'
+      }}
       {{#> button button--modifier="pf-m-control"}}
         Browse...
       {{/button}}
@@ -188,23 +130,12 @@ cssPrefix: pf-c-file-upload
   {{/file-upload-input-group}}
   {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--HasSpinner="true"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-textarea}}
-
-  <!-- {{#> file-upload-text-area file-upload-text-area--attribute='aria-label="Text area empty"'}}
-    {{#> form-control controlType="textarea" form-control--attribute='name="textarea" id="text-area-7" aria-label="Text area empty"' form-control--modifier="pf-m-resize-vertical"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
-      {{/form-control}}
-    {{#> file-upload-text-area-spinner}}
-      {{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
-    {{/file-upload-text-area-spinner}}
-  {{/file-upload-text-area}} -->
 {{/file-upload}}
 ```
 
 ## Documentation
 
 ### Overview
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
 
 ### Usage
 

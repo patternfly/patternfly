@@ -4,12 +4,9 @@
   --pf-c-file-upload--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
 
-  // Input group form control
-  --pf-c-file-upload--c-input-group--c-form-control--placeholder--Color: var(--pf-global--disabled-color--100);
-  --pf-c-file-upload--m-loading--c-input-group--c-form-control--Color: var(--pf-global--disabled-color--100);
-
   // Text area
   --pf-c-file-upload__textarea--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
+  --pf-c-file-upload__textarea--c-form-control--MinHeight: var(--pf-c-file-upload__textarea--MinHeight);
 
   // Button overrides
   --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
@@ -51,12 +48,6 @@
 
   // stylelint-disable
   &.pf-m-loading {
-    .pf-c-file-upload__input-group {
-      .pf-c-input-group > .pf-c-form-control {
-        color: var(--pf-c-file-upload--m-loading--c-input-group--c-form-control--Color);
-      }
-    }
-
     .pf-c-file-upload__textarea {
       background-color: var(--pf-global--disabled-color--300);
 
@@ -69,12 +60,6 @@
 }
 
 .pf-c-file-upload__input-group {
-  .pf-c-input-group > .pf-c-form-control {
-    &::placeholder {
-      color: var(--pf-c-file-upload--c-input-group--c-form-control--placeholder--Color);
-    }
-  }
-
   .pf-c-button.pf-m-control {
     outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
 
@@ -100,6 +85,7 @@
 
   .pf-c-form-control {
     flex: 1 1 auto;
+    min-height: var(--pf-c-file-upload__textarea--c-form-control--MinHeight);
   }
 }
 
