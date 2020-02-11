@@ -50,9 +50,7 @@ function compareMaps(currValues, prevValues) {
   // the number of files that have changed
   let totalFiles = 0;
 
-  let html = '<!DOCTYPE html>';
-  html += '<body>';
-  html += '<table style="width:100%">';
+  let html = "<table id='css-lint-size'>";
   html += '<tr>';
   html += `<th>Name</th>`;
   html += `<th>Current(kb)</th>`;
@@ -78,7 +76,7 @@ function compareMaps(currValues, prevValues) {
       html += `<td>${size}</td>`; // Current
       html += `<td>${psize}</td>`; // Previous
       html += `<td>${diff}</td>`;
-      html += '<tr>';
+      html += '</tr>';
       results[file] = size;
     }
   });
@@ -90,8 +88,6 @@ function compareMaps(currValues, prevValues) {
   }
 
   html += '</table>';
-  html += '</body>';
-  html += '</html>';
 
   fs.writeFileSync(path.resolve(__dirname, '/tmp/lint-size.html'), html);
 
@@ -115,11 +111,9 @@ function postToPR(html) {
       let commentBody = '';
       const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
       if (existingComment) {
-        console.log("Grab existing comment data \n");
-        commentBody += existingComment.body;
+        commentBody = existingComment.body.replace(/<table id='css-lint-size'>(.*)<\/table>/, html);
       }
 
-      console.log("Added report to data \n");
       commentBody += '\n';
       commentBody += html;
 
