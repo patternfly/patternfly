@@ -12,8 +12,6 @@
   --pf-c-file-upload__textarea--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
 
   // Button overrides
-  --pf-c-file-upload--c-button--m-control--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-file-upload--c-button--m-control--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -78,9 +76,6 @@
   }
 
   .pf-c-button.pf-m-control {
-    --pf-c-button--PaddingRight: var(--pf-c-file-upload--c-button--m-control--PaddingRight);
-    --pf-c-button--PaddingLeft: var(--pf-c-file-upload--c-button--m-control--PaddingLeft);
-
     outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
 
     &:disabled,
