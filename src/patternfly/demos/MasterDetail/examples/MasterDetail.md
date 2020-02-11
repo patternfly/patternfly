@@ -29,37 +29,31 @@ import './MasterDetail.css'
 
         <!-- Content -->
         {{#> drawer-content}}
-
           {{> master-detail-toolbar}}
-
-          <!-- Data list -->
           {{> master-detail-data-list}}
         {{/drawer-content}}
 
         <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--type="div"
           drawer-panel--NoBody="true"
           progress--modifier="pf-m-sm"
           }}
 
-          <!-- Content header -->
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-header
-              master-detail-content-header--title="Node 2"
-              master-detail-content-header--sub-title='<a href="#">siemur/test-space</a>'
-              }}
-          {{/drawer-panel-body}}
+          <!-- Panel header -->
+          {{> master-detail-panel-header
+            master-detail-panel-header--title="Node 2"
+            master-detail-panel-header--sub-title='<a href="#">siemur/test-space</a>'
+            }}
 
           <!-- Tabs -->
-          {{#> drawer-panel-body drawer-panel-body--modifier="pf-m-no-padding"}}
-            {{> master-detail-content-tabs}}
-          {{/drawer-panel-body}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{> master-detail-panel-tabs}}
+          {{/drawer-body}}
 
           <!-- Tab content -->
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-tab-content}}
-          {{/drawer-panel-body}}
+          {{#> drawer-body}}
+            {{> master-detail-panel-tab-content}}
+          {{/drawer-body}}
         {{/drawer-panel}}
       {{/drawer-main}}
     {{/drawer}}
@@ -85,40 +79,35 @@ import './MasterDetail.css'
       }}
 
       {{#> drawer-main}}
+
         <!-- Content -->
         {{#> drawer-content}}
-
           {{> master-detail-toolbar}}
-
-          <!-- Data list -->
           {{> master-detail-data-list}}
         {{/drawer-content}}
 
 
         <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--type="div"
           drawer-panel--NoBody="true"
           progress--modifier="pf-m-sm"
           }}
 
           <!-- Content header -->
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-header
-              master-detail-content-header--title="Node 2"
-              master-detail-content-header--sub-title='<a href="#">siemur/test-space</a>'
-              }}
-          {{/drawer-panel-body}}
+          {{> master-detail-panel-header
+            master-detail-panel-header--title="Node 2"
+            master-detail-panel-header--sub-title='<a href="#">siemur/test-space</a>'
+            }}
 
           <!-- Tabs -->
-          {{#> drawer-panel-body drawer-panel-body--modifier="pf-m-no-padding"}}
-            {{> master-detail-content-tabs}}
-          {{/drawer-panel-body}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{> master-detail-panel-tabs}}
+          {{/drawer-body}}
 
           <!-- Tab content -->
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-tab-content}}
-          {{/drawer-panel-body}}
+          {{#> drawer-body}}
+            {{> master-detail-panel-tab-content}}
+          {{/drawer-body}}
         {{/drawer-panel}}
       {{/drawer-main}}
     {{/drawer}}
@@ -128,7 +117,7 @@ import './MasterDetail.css'
 
 ```hbs title=Master-detail-content-body-padding isFullscreen
 {{#> master-detail-template
-  master-detail-template--id="master-detail-content-body-padding"
+  master-detail-template--id="master-detail-panel-body-padding"
   master-detail-template--title="Padded content example"
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   }}
@@ -144,35 +133,29 @@ import './MasterDetail.css'
       }}
 
       {{#> drawer-main}}
-        {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-content-body--modifier="pf-m-padding"}}
 
-          <!-- Toolbar -->
+        <!-- Content -->
+        {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
           {{> master-detail-toolbar}}
-
-          <!-- Data list -->
           {{> master-detail-data-list}}
         {{/drawer-content}}
 
         <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--type="div"
-          drawer-panel--attribute=(concat 'id="' master-detail-template--id '-panel" aria-label="Panel"')
           drawer-panel--NoBody="true"
           progress--modifier="pf-m-sm"
           }}
 
-          <!-- Content header -->
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-header
-              master-detail-content-header--title="Patternfly-elements"
-              master-detail-content-header--sub-title="PatternFly elements"
-              }}
-          {{/drawer-panel-body}}
+          <!-- Panel header -->
+          {{> master-detail-panel-header
+            master-detail-panel-header--title="Patternfly-elements"
+            master-detail-panel-header--sub-title="PatternFly elements"
+            }}
 
           <!-- Tab content -->
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-body}}
-          {{/drawer-panel-body}}
+          {{#> drawer-body}}
+            {{> master-detail-panel-body}}
+          {{/drawer-body}}
         {{/drawer-panel}}
 
       {{/drawer-main}}
@@ -203,31 +186,27 @@ import './MasterDetail.css'
       {{/drawer-section}}
 
       {{#> drawer-main}}
-        {{#> drawer-content
-          drawer-content--modifier="pf-m-no-background"
-          drawer-content-body--modifier="pf-m-padding"
-          }}
 
+        <!-- Content -->
+        {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
           {{> master-detail-card-view}}
         {{/drawer-content}}
 
+        <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--type="div"
-          drawer-panel--attribute=(concat 'id="' master-detail-template--id '-panel" aria-label="Panel"')
           drawer-panel--modifier=""
           drawer-panel--NoBody="true"
           }}
 
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-header
-              master-detail-content-header--title="Patternfly"
-              master-detail-content-header--sub-title="PatternFly elements"
-              }}
-          {{/drawer-panel-body}}
+          <!-- Panel header -->
+          {{> master-detail-panel-header
+            master-detail-panel-header--title="Patternfly"
+            master-detail-panel-header--sub-title="PatternFly elements"
+            }}
 
-          {{#> drawer-panel-body}}
-            {{> master-detail-content-body}}
-          {{/drawer-panel-body}}
+          {{#> drawer-body}}
+            {{> master-detail-panel-body}}
+          {{/drawer-body}}
 
         {{/drawer-panel}}
       {{/drawer-main}}
@@ -268,16 +247,14 @@ import './MasterDetail.css'
             drawer-panel--NoBody="true"
             }}
 
-            <!-- Panel  -->
-            {{#> drawer-panel-body}}
-              {{> master-detail-content-header
-                master-detail-content-header--title="Patternfly-elements"
-                master-detail-content-header--sub-title="PatternFly elements"
-                }}
-            {{/drawer-panel-body}}
-            {{#> drawer-panel-body}}
-              {{> master-detail-content-body}}
-            {{/drawer-panel-body}}
+            <!-- Panel header -->
+            {{> master-detail-panel-header
+              master-detail-panel-header--title="Patternfly-elements"
+              }}
+
+            {{#> drawer-body}}
+              {{> master-detail-panel-body}}
+            {{/drawer-body}}
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
@@ -303,12 +280,13 @@ import './MasterDetail.css'
         }}
 
         {{#> drawer-main}}
+
           <!-- Content -->
-          {{#> drawer-content drawer-content--NoBody="true"}}
-            {{#> drawer-content-body drawer-content-body--modifier="pf-m-no-padding"}}
+          {{#> drawer-content}}
+            {{#> drawer-body}}
               {{> master-detail-card-toolbar}}
               {{> master-detail-card-data-list}}
-            {{/drawer-content-body}}
+            {{/drawer-body}}
           {{/drawer-content}}
 
           <!-- Panel -->
@@ -319,16 +297,14 @@ import './MasterDetail.css'
             drawer-panel--NoBody="true"
             }}
 
-            <!-- Panel  -->
-            {{#> drawer-panel-body}}
-              {{> master-detail-content-header
-                master-detail-content-header--title="Patternfly-elements"
-                master-detail-content-header--sub-title="PatternFly elements"
-                }}
-            {{/drawer-panel-body}}
-            {{#> drawer-panel-body}}
-              {{> master-detail-content-body}}
-            {{/drawer-panel-body}}
+            <!-- Panel header -->
+            {{> master-detail-panel-header
+              master-detail-panel-header--title="Patternfly-elements"
+              }}
+
+            {{#> drawer-body}}
+              {{> master-detail-panel-body}}
+            {{/drawer-body}}
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
@@ -356,12 +332,10 @@ import './MasterDetail.css'
 
       <!-- Content -->
       {{#> drawer-content}}
-
-        {{> master-detail-toolbar}}
-        {{#> divider divider--type="div"}}{{/divider}}
-
-        <!-- Data list -->
-        {{> master-detail-data-list}}
+        {{#> drawer-body}}
+          {{> master-detail-toolbar}}
+          {{> master-detail-data-list}}
+        {{/drawer-body}}
       {{/drawer-content}}
 
       <!-- Panel -->
@@ -371,23 +345,21 @@ import './MasterDetail.css'
         progress--modifier="pf-m-sm"
         }}
 
-        <!-- Content header -->
-        {{#> drawer-panel-body}}
-          {{> master-detail-content-header
-            master-detail-content-header--title="Node 2"
-            master-detail-content-header--sub-title='<a href="#">siemur/test-space</a>'
-            }}
-        {{/drawer-panel-body}}
+        <!-- Panel header -->
+        {{> master-detail-panel-header
+          master-detail-panel-header--title="Node 2"
+          master-detail-panel-header--sub-title='<a href="#">siemur/test-space</a>'
+          }}
 
         <!-- Tabs -->
-        {{#> drawer-panel-body drawer-panel-body--modifier="pf-m-no-padding"}}
-          {{> master-detail-content-tabs}}
-        {{/drawer-panel-body}}
+        {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+          {{> master-detail-panel-tabs}}
+        {{/drawer-body}}
 
         <!-- Tab content -->
-        {{#> drawer-panel-body}}
-          {{> master-detail-content-tab-content}}
-        {{/drawer-panel-body}}
+        {{#> drawer-body}}
+          {{> master-detail-panel-tab-content}}
+        {{/drawer-body}}
       {{/drawer-panel}}
     {{/drawer-main}}
   {{/drawer}}

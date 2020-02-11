@@ -1,0 +1,15 @@
+{{#> drawer-head}}
+  {{#> drawer-actions}}
+    {{#unless drawer-panel--NoCloseButton}}
+      {{> drawer-close}}
+    {{/unless}}
+  {{/drawer-actions}}
+  {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' master-detail-template--id '-drawer-label"')}}
+    {{{master-detail-panel-header--title}}}
+  {{/title}}
+{{/drawer-head}}
+{{#if master-detail-panel-header--sub-title}}
+  {{#> drawer-header}}
+    {{{master-detail-panel-header--sub-title}}}
+  {{/drawer-header}}
+{{/if}}
