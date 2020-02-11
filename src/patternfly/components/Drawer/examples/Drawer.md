@@ -233,7 +233,6 @@ cssPrefix: pf-c-drawer
 | `.pf-c-drawer__content-body` | `<div>` | Initiates the drawer content body container. **Required** |
 | `.pf-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
 | `.pf-c-drawer__panel-body` | `<div>` | Initiates the drawer panel body container. **Required** |
-| `.pf-c-drawer__action` | `<div>` | Initiates the drawer close button. |
 | `.pf-m-expanded` | `.pf-c-drawer` | Modifies the drawer panel for the expanded state. |
 | `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer panel state to always show both content and panel. |
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a breakpoint will default to the `md` breakpoint. |

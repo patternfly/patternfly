@@ -1,24 +1,9 @@
 {{#> l-flex l-flex--modifier="pf-m-column"}}
-  {{#if drawer--IsStatic}}
-    {{#> l-flex-item}}
-      {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' master-detail-template--id '-drawer-label"')}}
-        {{{master-detail-content-header--title}}}
-      {{/title}}
-    {{/l-flex-item}}
-  {{else}}
-    {{#> l-flex l-flex--modifier=''}}
-      {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-        {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' master-detail-template--id '-drawer-label"')}}
-          {{{master-detail-content-header--title}}}
-        {{/title}}
-      {{/l-flex-item}}
-      {{#unless drawer--IsStatic}}
-        {{#> l-flex-item}}
-          {{> drawer-action drawer-action--type="span"}}
-        {{/l-flex-item}}
-      {{/unless}}
-    {{/l-flex}}
-  {{/if}}
+  {{#> l-flex-item}}
+    {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' master-detail-template--id '-drawer-label"')}}
+      {{{master-detail-content-header--title}}}
+    {{/title}}
+  {{/l-flex-item}}
   {{#if master-detail-content-header--sub-title}}
     {{#> l-flex-item}}
       {{{master-detail-content-header--sub-title}}}
