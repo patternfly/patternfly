@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const execSync = require('child_process').execSync;
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
@@ -14,20 +14,17 @@ let exitCode = 0;
 
 // download previous package to do the compares against
 function setUp(package) {
-  try{
-    if (! fs.existsSync(__dirname + '/node_modules')) {
-      console.log(__dirname + '/node_modules');
-      const execSync = require('child_process').execSync;
-      execSync('npm i -D ' + package + "> /dev/null 2>&1", { cwd: __dirname, encoding: 'utf-8' });
-    }
-  } catch (err) {
-    console.log(err.message);
+  if (!fs.existsSync(__dirname + '/node_modules')) {
+    let lastTag = execSync('git describe --match "v*" --tags --abbrev=0').toString();
+    lastTag = lastTag.substr(1, lastTag.length).trim();
+    console.log(`npm i -D ${package}@${lastTag}`)
+    execSync(`npm i -D ${package}@${lastTag}`, { cwd: __dirname, encoding: 'utf-8' });
   }
 }
 
-// build a Map object(<key> = file, <value> = size in kb), sorting highest to lowest.
+// build a Map object(<key> = file, <value> = size in kb)
 function buildValueMap(searchPattern, topLvlPattern) {
-  const m = new Map();
+  const res = {};
   glob
     .sync(searchPattern)
     .forEach(file => {
@@ -37,20 +34,17 @@ function buildValueMap(searchPattern, topLvlPattern) {
       if (normalized.startsWith(topLvlPattern)) {
         normalized = file.split('/').pop();
       }
-      m.set(normalized, fs.statSync(file).size);
+      res[normalized] = fs.statSync(file).size;
     });
 
-    // return sorted map(decending order)
-  return new Map([...m.entries()].sort((file, size) => size[1] - file[1]));
+  return res;
 }
 
 // compare value maps.
-function compareMaps(currValues, prevValues) {
-  const results = {};
-  // the number of files that have changed
-  let totalFiles = 0;
+function compareMaps(curMap, prevMap) {
+  const differences = [];
 
-  let html = "<table id='css-lint-size'>";
+  let html = '<table id="css-lint-size">';
   html += '<tr>';
   html += `<th>Name</th>`;
   html += `<th>Current(kb)</th>`;
@@ -58,48 +52,53 @@ function compareMaps(currValues, prevValues) {
   html += `<th>Diff %</th>`;
   html += '</tr>';
 
-  currValues.forEach((size, file) => {
-    let psize;
-    let diff;
-    if ( typeof prevValues.get(file) !== 'undefined' ) {
-      psize = prevValues.get(file)
-      diff = size !== 0 ? Math.round((size - psize) / size * 100) : 0;
-    } else {
-      psize = "-";
-      diff = "-";
-    }
+  Object.entries(curMap)
+    .filter(([_file, size]) => size !== 0)
+    .forEach(([file, size]) => {
+      let psize;
+      let diff;
+      if (prevMap[file] !== undefined) {
+        psize = prevMap[file];
+        diff = (size - psize) / size * 100;
+      } else {
+        psize = "-";
+        diff = "-";
+      }
 
-    if ( parseFloat(diff) !== parseFloat('0') ) {
-      totalFiles++;
-      html += '<tr>';
-      html += `<td>${file}</td>`; // Name
-      html += `<td>${size}</td>`; // Current
-      html += `<td>${psize}</td>`; // Previous
-      html += `<td>${diff}</td>`;
-      html += '</tr>';
-      results[file] = size;
-    }
-  });
+      if (parseFloat(diff) !== parseFloat('0')) {
+        differences.push({
+          file,
+          size,
+          psize,
+          diff
+        });
+      }
+    });
 
-  if ( totalFiles == 0 ) {
+  if (differences.length == 0) {
     html += '<tr>';
     html += `<td>There are no changes in CSS file sizes</td>`
     html += '<tr>';
+  } else {
+    differences
+      .sort((diff1, diff2) => diff1.diff > diff2.diff)
+      .forEach(diff => {
+        html += '<tr>';
+        html += `<td>${diff.file}</td>`; // Name
+        html += `<td>${diff.size}</td>`; // Current
+        html += `<td>${diff.psize}</td>`; // Previous
+        html += `<td>${diff.diff}</td>`;
+        html += '</tr>';
+      });
   }
 
   html += '</table>';
 
-  fs.writeFileSync(path.resolve(__dirname, '/tmp/lint-size.html'), html);
-
+  fs.writeFileSync(__dirname + '/report.html', html);
   return html;
 }
 
 function postToPR(html) {
-  console.log("Owner: " + owner);
-  console.log("repo: " + repo);
-  console.log("prnum: " + prnum);
-  console.log('table', html)
-
   return new Promise((res, rej) => octokit.issues
     .listComments({
       owner,
@@ -111,7 +110,7 @@ function postToPR(html) {
       let commentBody = '';
       const existingComment = comments.find(comment => comment.user.login === 'patternfly-build');
       if (existingComment) {
-        commentBody = existingComment.body.replace(/<table id='css-lint-size'>(.*)<\/table>/, html);
+        commentBody = existingComment.body.replace(/<table id="css-lint-size">(.*)<\/table>/, '');
       }
 
       commentBody += '\n';
@@ -148,20 +147,20 @@ async function run(package) {
   let repoPrefix;
   if (repo) {
     // circleCI repo
-    repoPrefix = `project/dist`
+    repoPrefix = 'project/dist';
   } else {
     // dev repo
-    repoPrefix = 'patternfly-next/dist'
+    repoPrefix = 'patternfly-next/dist';
   }
 
   setUp(package);
   const htmlReport = compareMaps(
     buildValueMap(__dirname + '/../../dist/**/**/*.css', repoPrefix),
-    buildValueMap(__dirname + '/node_modules/' + package + '/**/*.css', package));
+    buildValueMap(__dirname + '/node_modules/' + package + '/**/*.css', package)
+  );
 
   // post report to PR, if running in circleCI
   if (prnum) {
-    console.log("Posting comment to PR")
     await postToPR(htmlReport);
     process.exit(exitCode);
   }
