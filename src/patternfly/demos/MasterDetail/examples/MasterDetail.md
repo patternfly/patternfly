@@ -7,10 +7,10 @@ import './MasterDetail.css'
 
 ## Demos
 
-```hbs title=Master-detail-table-expanded isFullscreen
+```hbs title=Master-detail-expanded isFullscreen
 {{#> master-detail-template
-  master-detail-template--id="master-detail-table-expanded-example"
-  master-detail-template--title="Master detail expanded, with table and .pf-m-inline modifier demo"
+  master-detail-template--id="master-detail-expanded-example"
+  master-detail-template--title="Master detail expanded"
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   master-detail-template--modifier="pf-m-light"
   }}
@@ -31,10 +31,9 @@ import './MasterDetail.css'
         {{#> drawer-content}}
 
           {{> master-detail-toolbar}}
-          {{#> divider divider--type="div"}}{{/divider}}
 
-          <!-- Table -->
-          {{> master-detail-table}}
+          <!-- Data list -->
+          {{> master-detail-data-list}}
         {{/drawer-content}}
 
         <!-- Panel -->
@@ -68,10 +67,10 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-table-collapsed isFullscreen
+```hbs title=Master-detail-collapsed isFullscreen
 {{#> master-detail-template
-  master-detail-template--id="master-detail-table-collapsed-example"
-  master-detail-template--title="Master detail collapsed, with table demo"
+  master-detail-template--id="master-detail-collapsed-example"
+  master-detail-template--title="Master detail collapsed"
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   master-detail-template--modifier="pf-m-light"
   }}
@@ -90,10 +89,9 @@ import './MasterDetail.css'
         {{#> drawer-content}}
 
           {{> master-detail-toolbar}}
-          {{#> divider divider--type="div"}}{{/divider}}
 
-          <!-- Table -->
-          {{> master-detail-table}}
+          <!-- Data list -->
+          {{> master-detail-data-list}}
         {{/drawer-content}}
 
 
@@ -128,10 +126,10 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-data-list-expanded isFullscreen
+```hbs title=Master-detail-content-body-padding isFullscreen
 {{#> master-detail-template
-  master-detail-template--id="master-detail-data-list-expanded-example"
-  master-detail-template--title="Expanded data list demo"
+  master-detail-template--id="master-detail-content-body-padding"
+  master-detail-template--title="Padded content example"
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   }}
 
@@ -148,7 +146,7 @@ import './MasterDetail.css'
       {{#> drawer-main}}
         {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-content-body--modifier="pf-m-padding"}}
 
-            <!-- Toolbar -->
+          <!-- Toolbar -->
           {{> master-detail-toolbar}}
 
           <!-- Data list -->
@@ -339,12 +337,12 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Independently-scrollable-content-and-panel isFullscreen
+```hbs title=Inline-modifier isFullscreen
 {{#> master-detail-template
   master-detail-template--id="independent-scroll-example"
-  master-detail-template--title="Master detail expanded, with table and .pf-m-inline modifier demo"
+  master-detail-template--title="Master detail expanded, with data-list and .pf-m-inline modifier demo"
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
-  master-detail-template--modifier="pf-m-light"
+  master-detail-template--modifier="pf-m-light pf-m-inline"
   }}
   {{#> divider divider--type="div"}}{{/divider}}
   <!-- Drawer -->
@@ -362,8 +360,8 @@ import './MasterDetail.css'
         {{> master-detail-toolbar}}
         {{#> divider divider--type="div"}}{{/divider}}
 
-        <!-- Table -->
-        {{> master-detail-table}}
+        <!-- Data list -->
+        {{> master-detail-data-list}}
       {{/drawer-content}}
 
       <!-- Panel -->
