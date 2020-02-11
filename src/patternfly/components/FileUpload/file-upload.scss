@@ -105,13 +105,13 @@
   .pf-c-form-control {
     flex: 1 1 auto;
   }
+}
 
-  .pf-c-file-upload__textarea-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.pf-c-file-upload__textarea-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pf-c-file-upload__message {
