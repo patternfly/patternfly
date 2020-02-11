@@ -18,7 +18,7 @@
 
 // Group
 .pf-c-inline-edit__group {
-  display: flex;
+  display: none;
   align-items: baseline;
 
   > * {
@@ -74,6 +74,10 @@
 }
 
 // Editable
+.pf-m-inline-editable .pf-c-inline-edit__group {
+  display: flex;
+}
+
 .pf-c-inline-edit.pf-m-inline-editable,
 .pf-c-inline-edit .pf-m-inline-editable {
   // Expose inputs, input groups, actions and action groups
