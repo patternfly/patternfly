@@ -414,7 +414,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-c-data-list__expandable-content` | `<div>` | Initiates an expandable content container. |
 | `.pf-c-data-list__expandable-content-body` | `<div>` | Initiates an expandable content container body. **Required** when `.pf-c-data-list__expandable-content` is used. |
 | `.pf-m-expanded` | `.pf-c-data-list__item` | Modifies for expanded state. |
-| `.pf-m-compact` | `.pf-c-data-list` | Modifies for compact state. |
+| `.pf-m-compact` | `.pf-c-data-list` | Modifies for compact variation. |
 | `.pf-m-no-padding` | `.pf-c-data-list__expandable-content-body` | Removes padding for the expandable content body. |
 | `.pf-m-icon` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. Use `.pf-c-data-list__icon`. |
 
