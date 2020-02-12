@@ -450,10 +450,7 @@
 }
 
 .pf-c-select__menu-input {
-  padding-top: var(--pf-c-select__menu-input--PaddingTop);
-  padding-right: var(--pf-c-select__menu-input--PaddingRight);
-  padding-bottom: var(--pf-c-select__menu-input--PaddingBottom);
-  padding-left: var(--pf-c-select__menu-input--PaddingLeft);
+  padding: var(--pf-c-select__menu-input--PaddingTop) var(--pf-c-select__menu-input--PaddingRight) var(--pf-c-select__menu-input--PaddingBottom) var(--pf-c-select__menu-input--PaddingLeft);
 }
 
 .pf-c-select__menu-group-title {

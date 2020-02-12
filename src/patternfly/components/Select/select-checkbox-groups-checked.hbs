@@ -4,7 +4,9 @@
     {{{select-multi-attribute}}}
   {{/if}}>
   {{#if select--IsFilterable}}
-    {{> select-menu-input}}
+    {{#> select-menu-input}}
+      {{> select-menu-search-input}}
+    {{/select-menu-input}}
     {{#> divider}}{{/divider}}
   {{/if}}
   {{#> select-menu-group}}
