@@ -215,7 +215,7 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-simple-list isFullscreen
+```hbs title=Master-detail-card-simple-list-expanded-on-mobile isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-simple-list-example"
   master-detail-template--title="Master detail, in card, simple list"
@@ -229,6 +229,7 @@ import './MasterDetail.css'
       {{#> drawer
         drawer--id=(concat master-detail-template--id '-drawer')
         drawer--IsStatic="true"
+        drawer-panel--IsOpen="true"
         }}
 
         {{#> drawer-main}}
@@ -263,10 +264,10 @@ import './MasterDetail.css'
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-data-list isFullscreen
+```hbs title=Master-detail-card-data-list-expanded-on-mobile isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-data-list-example"
-  master-detail-template--title="Master detail and simple list, in card"
+  master-detail-template--title="Master detail, in card, data list"
   master-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   }}
 
@@ -277,6 +278,7 @@ import './MasterDetail.css'
       {{#> drawer
         drawer--id=(concat master-detail-template--id '-drawer')
         drawer--IsStatic="true"
+        drawer-panel--IsOpen="true"
         }}
 
         {{#> drawer-main}}
