@@ -7,7 +7,6 @@ cssPrefix: pf-c-drawer
 
 ## Examples
 
-## Closed-panel-on-right-(default)
 ```hbs title=Closed-panel-on-right-(default)
 {{#> drawer drawer--id="closed-panel-right-example"}}
   {{#> drawer-main}}
@@ -19,7 +18,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Expanded-panel-on-right
 ```hbs title=Expanded-panel-on-right
 {{#> drawer drawer--id="expanded-panel-right-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -31,7 +29,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Panel-on-left
 ```hbs title=Closed-panel-on-left
 {{#> drawer drawer--id="closed-panel-left-example" drawer--modifier="pf-m-panel-left"}}
   {{#> drawer-main}}
@@ -43,7 +40,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Expanded-panel-on-left
 ```hbs title=Expanded-panel-on-left
 {{#> drawer drawer--id="expanded-panel-right-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-panel-left"}}
   {{#> drawer-main}}
@@ -55,7 +51,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Expanded-inline-panel
 ```hbs title=Expanded-inline-panel
 {{#> drawer drawer--id="expanded-inline-panel-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline"}}
   {{#> drawer-main}}
@@ -67,7 +62,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Expanded-inline-panel-on-left
 ```hbs title=Expanded-inline-panel-on-left
 {{#> drawer drawer--id="expanded-inline-panel-left-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline pf-m-panel-left"}}
   {{#> drawer-main}}
@@ -79,7 +73,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Stacked-content-body-elements
 ```hbs title=Stacked-content-body-elements
 {{#> drawer drawer--id="stacked-content-body-elements-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -117,7 +110,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Modified-content-padding
 ```hbs title=Modified-content-padding
 {{#> drawer drawer--id="modified-content-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -129,7 +121,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Modified-panel-padding
 ```hbs title=Modified-panel-padding
 {{#> drawer drawer--id="modified-panel-padding-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -141,7 +132,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Modified-panel-width
 ```hbs title=Modified-panel-width
 {{#> drawer drawer--id="modified-panel-width-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -153,7 +143,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Modified-panel-border
 ```hbs title=Modified-panel-border
 {{#> drawer drawer--id="panel-border-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -165,7 +154,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Additional-section-above-main
 ```hbs title=Additional-section-above-main
 {{#> drawer drawer--id="additional-section-above-main" drawer-panel--IsOpen="true"}}
   {{#> drawer-section}}
@@ -180,7 +168,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-## Static
 ```hbs title=Static
 {{#> drawer drawer--id="static-example" drawer-panel--IsOpen="true" drawer--IsStatic="true"}}
   {{#> drawer-main}}

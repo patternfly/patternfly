@@ -39,23 +39,43 @@
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-align-left"}}
-          {{> data-list-content-2}}
-        {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-align-right pf-m-no-fill"}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Secondary
-          {{/button}}
-          {{#> button button--modifier="pf-m-link"}}
-            Link button
-          {{/button}}
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
+  {{#if drawer-panel--IsOpen}}
+    {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+      {{#> data-list-item-row}}
+        {{#> data-list-item-content}}
+          {{#> data-list-cell data-list-cell--modifier="pf-m-align-left"}}
+            {{> data-list-content-2}}
+          {{/data-list-cell}}
+          {{#> data-list-cell data-list-cell--modifier="pf-m-align-right pf-m-no-fill"}}
+            {{#> button button--modifier="pf-m-secondary"}}
+              Secondary
+            {{/button}}
+            {{#> button button--modifier="pf-m-link"}}
+              Link button
+            {{/button}}
+          {{/data-list-cell}}
+        {{/data-list-item-content}}
+      {{/data-list-item-row}}
+    {{/data-list-item}}
+  {{else}}
+    {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+      {{#> data-list-item-row}}
+        {{#> data-list-item-content}}
+          {{#> data-list-cell data-list-cell--modifier="pf-m-align-left"}}
+            {{> data-list-content-2}}
+          {{/data-list-cell}}
+          {{#> data-list-cell data-list-cell--modifier="pf-m-align-right pf-m-no-fill"}}
+            {{#> button button--modifier="pf-m-secondary"}}
+              Secondary
+            {{/button}}
+            {{#> button button--modifier="pf-m-link"}}
+              Link button
+            {{/button}}
+          {{/data-list-cell}}
+        {{/data-list-item-content}}
+      {{/data-list-item-row}}
+    {{/data-list-item}}
+  {{/if}}
 
   {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
