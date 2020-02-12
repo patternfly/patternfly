@@ -34,15 +34,20 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
+
 ```
+
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="list"`       | `.pf-c-data-list` | Indicates that the data list is a list. **Required** |
 | `aria-label`        | `.pf-c-data-list`       | Provides an accessible name for the data list. **Required** |
 | `aria-labelledby`   | `.pf-c-data-list__item` | Provides an accessible description for data list item. **Required** |
 | `id`                | `.pf-c-data-list__cell`, `.pf-c-data-list__cell *`  | Provides a reference for data list item description. **Required** |
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list` | `<ul>` | Initiates a data list. **Required** |
@@ -82,8 +87,11 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
+
 ```
+
 ### Usage
+
 When a list item includes more than one block of content, it can be difficult for some screen reader users to discern where one list item ends and the next one begins. A simple way to provide better separation of list items is to define the primary content section as a heading. Headings are useful for indicating a new section of contents, but also provide an easy way for screen reader users to navigate to specific sections on the page. The heading level should be based on the context in which the DataList component is being used. For example, if the heading for the section that contains the DataList is a level 3, then `h4` elements should be used in the DataList list items.
 
 ```hbs title=Checkboxes,-actions,-and-additional-cells
@@ -174,16 +182,21 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/button}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-  {{/data-list-item}}{{/data-list}}
+  {{/data-list-item}}
+{{/data-list}}
 ```
+
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[descriptive text]"`  | `.pf-c-data-list__action` > `.pf-c-button`  | Provides an accessible label buttons. **Required** |
 | `aria-labelledby="{title_cell_id}"`  | `.pf-c-data-list__check` > `.pf-c-check__input`   | Creates an accessible label for the checkbox based on the title cell. **Required** |
 | `aria-labelledby="{title_cell_id} {data_list_action_id}"`  | `.pf-c-data-list__action` > `.pf-c-button`   | Creates an accessible label for the action button using the title cell and button label **Required** |
 | `id`  | `.pf-c-data-list__cell > *`, `.pf-c-data-list__check` > `.pf-c-check__input`, `.pf-c-data-list__action` > `.pf-c-button` | Provides a reference for interactive elements. **Required** |
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list__item-control` | `<div>` | Initiates a container for data list controls. For example, add `.pf-c-data-list__check` here. **Required** |
@@ -287,7 +300,100 @@ When a list item includes more than one block of content, it can be difficult fo
   {{/data-list-item}}
 {{/data-list}}
 ```
+
+```hbs title=Compact
+{{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier="pf-m-compact"}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item1">Primary content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Tertiary Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+          {{#> data-list-cell}}
+          <span>More Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+          {{#> data-list-cell}}
+          <span>More Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2"')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item2">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
+        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+        {{#> button button--modifier="pf-m-primary"}}
+            Primary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3"')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item3">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
+        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
+        {{#> button button--modifier="pf-m-primary"}}
+            Primary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+            Secondary
+        {{/button}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}{{/data-list}}
+```
+
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-data-list__toggle` > `.pf-c-button` | Indicates that the expandable content is visible. **Required**|
@@ -296,7 +402,9 @@ When a list item includes more than one block of content, it can be difficult fo
 | `aria-labelledby="{title_cell_id} {button_id}"` | `.pf-c-data-list__toggle` > `.pf-c-button` | Establishes relationship between aria-label text and toggle button. **Required**
 | `id="{button_id}"` | `.pf-c-data-list__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
 | `aria-controls="[id of element controlled]"` | `.pf-c-data-list__toggle` > `.pf-c-button`    | Identifies the section controlled by the toggle button. **Required** |
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list__item-control` | `<div>` | Initiates a container for data list controls. For example, add `.pf-c-data-list__toggle` here. **Required** |
@@ -305,7 +413,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-c-data-list__icon`  | `<i>` | Initiates a data list icon. |
 | `.pf-c-data-list__expandable-content` | `<div>` | Initiates an expandable content container. |
 | `.pf-c-data-list__expandable-content-body` | `<div>` | Initiates an expandable content container body. **Required** when `.pf-c-data-list__expandable-content` is used. |
-| `.pf-m-expanded` | `.pf-c-table__item` | Modifies for expanded state. |
+| `.pf-m-expanded` | `.pf-c-data-list__item` | Modifies for expanded state. |
+| `.pf-m-compact` | `.pf-c-data-list` | Modifies for compact variation. |
 | `.pf-m-no-padding` | `.pf-c-data-list__expandable-content-body` | Removes padding for the expandable content body. |
 | `.pf-m-icon` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. Use `.pf-c-data-list__icon`. |
 
@@ -417,7 +526,9 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 {{/data-list}}
+
 ```
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
