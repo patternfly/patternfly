@@ -143,7 +143,7 @@ cssPrefix: pf-c-file-upload
 | -- | -- | -- |
 | `.pf-c-file-upload` | `<form>`, `<div>` | Initiates the file upload component. **Required**. |
 | `.pf-c-file-upload__input-group` | `<div>` | Initiates the file upload input group. **Required** |
-| `.pf-c-file-upload__text-area` | `<textarea>`, `<div>` | Initiates the text area element. **Required** |
+| `.pf-c-file-upload__text-area` | `<div>` | Initiates the text area element. **Required** |
 | `.pf-c-file-upload__message` | `<div>` | Initiates the file upload message. |
 | `.pf-m-drag-hover` | `.pf-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
 | `.pf-m-loading` | `.pf-c-file-upload` | Modifies file upload for the loading state. |
