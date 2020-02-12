@@ -22,7 +22,7 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Empty text area"}}
   {{/file-upload-textarea}}
 {{/file-upload}}
 ```
@@ -43,7 +43,7 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--attribute='readonly'}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area" file-upload-textarea--attribute='readonly'}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-textarea}}
 {{/file-upload}}
 ```
@@ -64,7 +64,7 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-textarea}}
 {{/file-upload}}
 ```
@@ -82,7 +82,7 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--attribute='readonly'}}
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Empty text area"}}
   {{/file-upload-textarea}}
 {{/file-upload}}
 ```
@@ -103,7 +103,7 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty"}}{{/file-upload-textarea}}
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Empty text area"}}{{/file-upload-textarea}}
   {{#> file-upload-message file-upload-message--modifier="pf-m-error"}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="file-upload-error-helper-text" aria-live="polite"'}}
       We don't support this file type. Try again with a different file type.
@@ -128,7 +128,7 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area empty" file-upload-textarea--HasSpinner="true"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+  {{#> file-upload-textarea file-upload-textarea--aria-label="Text area" file-upload-textarea--HasSpinner="true"}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-textarea}}
 {{/file-upload}}
 ```
