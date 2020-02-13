@@ -140,6 +140,7 @@
   --pf-c-nav__tertiary-list-item--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-nav__tertiary-list-link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__tertiary-list-link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav__tertiary-list-link--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // font
   --pf-c-nav__tertiary-list-link--FontWeight: var(--pf-global--FontWeight--normal);
@@ -621,6 +622,7 @@
     font-weight: var(--pf-c-nav__tertiary-list-link--FontWeight);
     color: var(--pf-c-nav__tertiary-list-link--Color);
     white-space: nowrap;
+    outline-offset: var(--pf-c-nav__tertiary-list-link--OutlineOffset);
 
     // Hover
     &.pf-m-hover,
