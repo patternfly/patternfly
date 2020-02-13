@@ -11,10 +11,10 @@ cssPrefix: pf-c-file-upload
   {{#> file-upload-input-group}}
     {{#> input-group}}
       {{> file-upload-text-input
-        file-upload-text-input--aria-label="Upload a file"
-        file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload"'
+        file-upload-text-input--aria-label="Drag a file here or browse to upload"
+        file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload" aria-describedby="inputButton1"'
         }}
-      {{#> button button--modifier="pf-m-control"}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton1"'}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
@@ -32,10 +32,10 @@ cssPrefix: pf-c-file-upload
   {{#> file-upload-input-group}}
     {{#> input-group}}
       {{> file-upload-text-input
-        file-upload-text-input--aria-label="Read only"
-        file-upload-text-input--attribute='readonly value="Read only title"'
+        file-upload-text-input--aria-label="Read only filename"
+        file-upload-text-input--attribute='readonly value="Read only filename" aria-describedby="inputButton2"'
         }}
-      {{#> button button--modifier="pf-m-control"}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton2"'}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
@@ -53,10 +53,10 @@ cssPrefix: pf-c-file-upload
   {{#> file-upload-input-group}}
     {{#> input-group}}
       {{> file-upload-text-input
-        file-upload-text-input--aria-label="Filename"
-        file-upload-text-input--attribute='readonly value="Sample.txt"'
+        file-upload-text-input--aria-label="Read only filename"
+        file-upload-text-input--attribute='readonly value="Sample.txt" aria-describedby="inputButton3"'
         }}
-      {{#> button button--modifier="pf-m-control"}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton3"'}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
@@ -73,8 +73,8 @@ cssPrefix: pf-c-file-upload
 {{#> file-upload file-upload--id="drag-file-hover-component" file-upload--modifier="pf-m-drag-hover"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
-      {{> file-upload-text-input file-upload-text-input--aria-label="Drag or drop a file" file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload"'}}
-      {{#> button button--modifier="pf-m-control"}}
+      {{> file-upload-text-input file-upload-text-input--aria-label="Drag a file here or browse to upload" file-upload-text-input--attribute='placeholder="Drag a file here or browse to upload" aria-describedby="inputButton4"'}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton4"'}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
@@ -93,9 +93,9 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="File upload error"
-        file-upload-text-input--attribute='required value="Sample.png" aria-invalid="true"'
+        file-upload-text-input--attribute='required value="Sample.png" aria-invalid="true" aria-describedby="inputButton5"'
         }}
-      {{#> button button--modifier="pf-m-control"}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton5"'}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
@@ -103,9 +103,9 @@ cssPrefix: pf-c-file-upload
       {{/button}}
     {{/input-group}}
   {{/file-upload-input-group}}
-  {{#> file-upload-textarea file-upload-textarea--aria-label="Empty text area"}}{{/file-upload-textarea}}
+  {{#> file-upload-textarea file-upload-textarea--attribute='aria-describedby="textAreaHelperText1"' file-upload-textarea--aria-label="Empty text area"}}{{/file-upload-textarea}}
   {{#> file-upload-message file-upload-message--modifier="pf-m-error"}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="file-upload-error-helper-text" aria-live="polite"'}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="textAreaHelperText1" aria-live="polite"'}}
       We don't support this file type. Try again with a different file type.
     {{/form-helper-text}}
   {{/file-upload-message}}
@@ -117,10 +117,10 @@ cssPrefix: pf-c-file-upload
   {{#> file-upload-input-group}}
     {{#> input-group}}
       {{> file-upload-text-input
-        file-upload-text-input--aria-label="Read only"
-        file-upload-text-input--attribute='readonly name="file-upload-loading" value="Sample.png"'
+        file-upload-text-input--aria-label="Read only filename"
+        file-upload-text-input--attribute='readonly name="file-upload-loading" value="Sample.png" aria-describedby="inputButton6"'
       }}
-      {{#> button button--modifier="pf-m-control"}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton6"'}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
