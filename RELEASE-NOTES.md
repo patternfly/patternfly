@@ -5,15 +5,17 @@ releaseNoteTOC: true
 ---
 
 ## 2020.02 release notes (2020-02-18)
-Packages released:
+Packages released: @patternfly/patternfly@v2.63.0
 
 ### Components
-- **Data list:** Enabled hidden/visible feature to update display ([#2691](https://github.com/patternfly/patternfly-next/pull/2691))
-- **Data list, compact example:** Added compact version of data list ([#2686](https://github.com/patternfly/patternfly-next/pull/2686))
+- **Data list:** 
+  - Enabled hidden/visible feature to update display ([#2691](https://github.com/patternfly/patternfly-next/pull/2691))
+  - Added compact version of data list ([#2686](https://github.com/patternfly/patternfly-next/pull/2686))
 - **Data toolbar:** 
   - Updated input type to search ([#2648](https://github.com/patternfly/patternfly-next/pull/2648))
   - Made Data toolbar experimental ([#2611](https://github.com/patternfly/patternfly-next/pull/2611))
 - **File upload:** Added File upload component ([#2681](https://github.com/patternfly/patternfly-next/pull/2681))
+- **Inline edit:** Fixed Firefox bug that caused alignment issue ([#2706](https://github.com/patternfly/patternfly-next/pull/2706))
 - **Master detail:** Added Master detail demo ([#2645](https://github.com/patternfly/patternfly-next/pull/2645))
 - **Modal box:** Added modal description element ([#2646](https://github.com/patternfly/patternfly-next/pull/2646))
 - **Navigation:** 
