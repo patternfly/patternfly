@@ -12,9 +12,9 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="Drag a file here or browse to upload"
-        file-upload-text-input--attribute='readonly placeholder="Drag a file here or browse to upload" aria-describedby="inputButton1"'
+        file-upload-text-input--attribute=(concat 'readonly placeholder="Drag a file here or browse to upload" aria-describedby="' file-upload--id '-browse"')
         }}
-      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton1"'}}
+      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
@@ -33,9 +33,9 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="Read only filename"
-        file-upload-text-input--attribute='readonly value="Read only filename" aria-describedby="inputButton2"'
+        file-upload-text-input--attribute=(concat 'readonly value="Read only filename" aria-describedby="' file-upload--id '-browse"')
         }}
-      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton2"'}}
+      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
@@ -54,9 +54,9 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="Read only filename"
-        file-upload-text-input--attribute='readonly value="Sample.txt" aria-describedby="inputButton3"'
+        file-upload-text-input--attribute=(concat 'readonly value="Sample.txt" aria-describedby="' file-upload--id '-browse"')
         }}
-      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton3"'}}
+      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
@@ -73,8 +73,8 @@ cssPrefix: pf-c-file-upload
 {{#> file-upload file-upload--id="drag-file-hover-component" file-upload--modifier="pf-m-drag-hover"}}
   {{#> file-upload-input-group}}
     {{#> input-group}}
-      {{> file-upload-text-input file-upload-text-input--aria-label="Drag a file here or browse to upload" file-upload-text-input--attribute='readonly placeholder="Drag a file here or browse to upload" aria-describedby="inputButton4"'}}
-      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton4"'}}
+      {{> file-upload-text-input file-upload-text-input--aria-label="Drag a file here or browse to upload" file-upload-text-input--attribute=(concat 'readonly placeholder="Drag a file here or browse to upload" aria-describedby="' file-upload--id '-browse"')}}
+      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
@@ -93,9 +93,9 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="File upload error"
-        file-upload-text-input--attribute='required value="Sample.png" aria-invalid="true" aria-describedby="inputButton5"'
+        file-upload-text-input--attribute=(concat 'required value="Sample.png" aria-invalid="true" aria-describedby="' file-upload--id '-browse"')
         }}
-      {{#> button button--modifier="pf-m-control" button--attribute='id="inputButton5"'}}
+      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
@@ -118,9 +118,9 @@ cssPrefix: pf-c-file-upload
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="Read only filename"
-        file-upload-text-input--attribute='readonly name="file-upload-loading" value="Sample.png" aria-describedby="inputButton6"'
+        file-upload-text-input--attribute=(concat 'readonly name="file-upload-loading" value="Sample.png" aria-describedby="' file-upload--id '-browse"')
       }}
-      {{#> button button--modifier="pf-m-control" button--attribute="disabled" button--attribute='id="inputButton6"'}}
+      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'disabled id="' file-upload--id '-browse"')}}
         Browse...
       {{/button}}
       {{#> button button--modifier="pf-m-control"}}
