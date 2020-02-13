@@ -5,7 +5,8 @@ releaseNoteTOC: true
 ---
 
 ## 2020.02 release notes (2020-02-18)
-Packages released: @patternfly/patternfly@v2.63.0
+Packages released: 
+- @patternfly/patternfly@v2.63.0
 
 ### Components
 - **Data list:** 
