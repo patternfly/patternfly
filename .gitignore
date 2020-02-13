@@ -22,3 +22,5 @@ coverage/
 *.swp
 workspace/
 assets/
+.circleci/css-size-report/package-lock.json
+.circleci/css-size-report/report.html

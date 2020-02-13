@@ -2,7 +2,11 @@
   {{#if drawer-content--attribute}}
     {{{drawer-content--attribute}}}
   {{/if}}>
-  {{#> drawer-content-body}}
+  {{#if drawer-content--NoBody}}
     {{> @partial-block}}
-  {{/drawer-content-body}}
+  {{else}}
+    {{#> drawer-body}}
+      {{> @partial-block}}
+    {{/drawer-body}}
+  {{/if}}
 </div>

@@ -6,7 +6,7 @@ const { compileSASS, minifyCSS, watchSASS } = require('./build/gulp/sass');
 const { pfIconFont, pfIcons } = require('./build/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./build/gulp/html');
 const { buildIE11 } = require('./build/gulp/ie11');
-const { lintCSSComments, lintCSSFunctions, lintCSSSize } = require('./build/gulp/lint');
+const { lintCSSComments, lintCSSFunctions } = require('./build/gulp/lint');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -20,7 +20,21 @@ const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
-  ['./dist', './src/icons/PfIcons'].forEach(dir => removeSync(dir));
+  const cleanDirs = [
+    './dist',
+    './src/icons/PfIcons',
+    '.circleci/css-size-report/node_modules',
+    '.circleci/css-size-report/package-lock.json',
+    '.circleci/css-size-report/report.html',
+    'build/patternfly-cli/node_modules/',
+    'src/icons/PfIcons/',
+    'static/assets/fontawesome/',
+    'static/assets/fonts/',
+    'static/assets/pficon/',
+    'test/results/',
+    'test/scenario_tests/'
+  ];
+  cleanDirs.forEach(dir => removeSync(dir));
   cb();
 }
 
@@ -87,6 +101,5 @@ module.exports = {
   copyAssets,
   lintCSSFunctions,
   lintCSSComments,
-  lintCSSSize,
-  lintCSS: parallel(lintCSSFunctions, lintCSSComments, lintCSSSize)
+  lintCSS: parallel(lintCSSFunctions, lintCSSComments)
 };

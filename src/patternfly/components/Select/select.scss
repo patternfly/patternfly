@@ -111,6 +111,12 @@
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
 
+  // Menu group padding
+  --pf-c-select__menu-input--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-input--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
+  --pf-c-select__menu-input--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-select__menu-input--PaddingLeft: var(--pf-c-select__menu-item--PaddingLeft);
+
   // Menu Item separator
   --pf-c-select__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-select__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
@@ -119,7 +125,7 @@
 
   // Menu group
   // add a little space if it's not the first group because the first one also has the menu padding
-  --pf-c-select__menu-group--not-first--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-group--not--first-of-type--PaddingTop: var(--pf-global--spacer--sm);
 
   // Menu section heading
   // Paddings are set to always line up with the other menu items
@@ -440,7 +446,11 @@
 }
 
 .pf-c-select__menu-group:not(:first-of-type) {
-  padding-top: var(--pf-c-select__menu-group--not-first--PaddingTop);
+  padding-top: var(--pf-c-select__menu-group--not--first-of-type--PaddingTop);
+}
+
+.pf-c-select__menu-input {
+  padding: var(--pf-c-select__menu-input--PaddingTop) var(--pf-c-select__menu-input--PaddingRight) var(--pf-c-select__menu-input--PaddingBottom) var(--pf-c-select__menu-input--PaddingLeft);
 }
 
 .pf-c-select__menu-group-title {
