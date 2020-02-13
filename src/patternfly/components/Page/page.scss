@@ -455,7 +455,7 @@
   &:last-of-type,
   &:only-child,
   &.pf-m-fill {
-    flex: 1 0 auto;
+    flex: 1;
   }
 
   &.pf-m-no-fill {
@@ -498,26 +498,9 @@
 }
 
 .pf-c-page__drawer {
+  grid-area: main;
+
   > .pf-c-drawer {
     flex: 1 0 auto;
   }
-
-  > .pf-c-drawer > .pf-c-drawer__content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  // stylelint-disable max-nesting-depth, selector-max-class, selector-max-compound-selectors
-  > .pf-c-drawer > .pf-c-drawer__content > .pf-c-drawer__content-body {
-    display: flex;
-    flex: 1 0;
-
-    .pf-c-page__main {
-      --pf-c-page__main--ZIndex: auto;
-
-      grid-area: auto;
-      flex: 1 0 auto;
-    }
-  }
-  // stylelint-enable
 }
