@@ -4,6 +4,38 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.02 release notes (2020-02-18)
+Packages released:
+
+### Components
+- **Data list:** Enabled hidden/visible feature to update display ([#2691](https://github.com/patternfly/patternfly-next/pull/2691))
+- **Data list, compact example:** Added compact version of data list ([#2686](https://github.com/patternfly/patternfly-next/pull/2686))
+- **Data toolbar:** 
+  - Updated input type to search ([#2648](https://github.com/patternfly/patternfly-next/pull/2648))
+  - Made Data toolbar experimental ([#2611](https://github.com/patternfly/patternfly-next/pull/2611))
+- **File upload:** Added File upload component ([#2681](https://github.com/patternfly/patternfly-next/pull/2681))
+- **Master detail:** Added Master detail demo ([#2645](https://github.com/patternfly/patternfly-next/pull/2645))
+- **Modal box:** Added modal description element ([#2646](https://github.com/patternfly/patternfly-next/pull/2646))
+- **Navigation:** 
+  - Updated group title spacing so it changes responsively ([#2641](https://github.com/patternfly/patternfly-next/pull/2641))
+  - Added outline-offset to horizontal navigation focus ([#2709](https://github.com/patternfly/patternfly-next/pull/2709))
+- **Pagination:** Allowed updating input width with CSS vars ([#2664](https://github.com/patternfly/patternfly-next/pull/2664))
+- **Popover:** Matched min/max-width so popover has consistent width ([#2660](https://github.com/patternfly/patternfly-next/pull/2660))
+- **Select:** Made badge optional in checkbox select toggle ([#2642](https://github.com/patternfly/patternfly-next/pull/2642))
+- **Select checkbox:** Added filter and search input ([#2693](https://github.com/patternfly/patternfly-next/pull/2693))
+- **Simple list:** Added tabindex, button type, removed hover underline ([#2679](https://github.com/patternfly/patternfly-next/pull/2679))
+- **Switch:** Moved nested element rules to the root ([#2610](https://github.com/patternfly/patternfly-next/pull/2610))
+- **Table:** Allowed sortable table headers to wrap ([#2668](https://github.com/patternfly/patternfly-next/pull/2668))
+- **Toolbar:** Added toolbar layout CSS ([#2689](https://github.com/patternfly/patternfly-next/pull/2689))
+- **Title:** Enabled long strings to wrap ([#2662](https://github.com/patternfly/patternfly-next/pull/2662))
+
+### Other
+- **Build:**
+  - Added files/dirs to cleanup ([#2699](https://github.com/patternfly/patternfly-next/pull/2699))
+  - No longer include "Main" property in package.json ([#2549](https://github.com/patternfly/patternfly-next/pull/2549))
+  - Added proper size report check ([#2638](https://github.com/patternfly/patternfly-next/pull/2638))
+  - Updated _all.scss with missing components([#2684](https://github.com/patternfly/patternfly-next/pull/2684))
+
 ## 2020.01 release notes (2020-01-28)
 Packages released:
 - @patternfly/patternfly@v2.56.3
