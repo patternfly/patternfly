@@ -1,6 +1,6 @@
 .pf-c-file-upload {
   // pf-m-loading
-  --pf-c-file-upload--m-loading__textarea--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload--m-loading__textarea--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // pf-m-drag-hover
   --pf-c-file-upload--m-drag-hover--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -101,6 +101,7 @@
 }
 
 .pf-c-file-upload__message {
+  margin-top: var(--pf-c-file-upload__message--MarginTop);
   font-size: var(--pf-c-file-upload__message--FontSize);
   color: var(--pf-c-file-upload__message--Color);
 
