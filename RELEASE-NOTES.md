@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2020.02 release notes (2020-02-18)
 Packages released:
-- @patternfly/patternfly@v2.65.0
+- @patternfly/patternfly@v2.65.2
 
 ### Components
 - **Data list:**
@@ -15,7 +15,9 @@ Packages released:
 - **Data toolbar:** Updated input type to search ([#2648](https://github.com/patternfly/patternfly-next/pull/2648))
 - **File upload:** Added file upload component ([#2681](https://github.com/patternfly/patternfly-next/pull/2681))
 - **Inline edit:** Fixed firefox bug causes alignment issue ([#2706](https://github.com/patternfly/patternfly-next/pull/2706))
-- **Master detail:** Added master detail demo ([#2645](https://github.com/patternfly/patternfly-next/pull/2645))
+- **Master detail:**
+  - Added master detail demo ([#2645](https://github.com/patternfly/patternfly-next/pull/2645))
+  - Reverted master detail demo ([#2721](https://github.com/patternfly/patternfly-next/pull/2721))
 - **Modal box:** Added modal description element ([#2646](https://github.com/patternfly/patternfly-next/pull/2646))
 - **Nav:** Updated group title spacing so it changes responsively ([#2641](https://github.com/patternfly/patternfly-next/pull/2641))
 - **Pagination:** Allowed updating input width with CSS vars ([#2664](https://github.com/patternfly/patternfly-next/pull/2664))
