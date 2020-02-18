@@ -1,21 +1,11 @@
-<{{#if drawer-panel--type}}{{{drawer-panel--type}}}{{else}}div{{/if}} class="pf-c-drawer__panel{{#if drawer-panel--modifier}} {{drawer-panel--modifier}}{{/if}}"
-  {{#unless drawer-IsStatic}}
-    {{#unless drawer-panel--IsOpen}}
-      hidden
-      aria-expanded="false"
-    {{/unless}}
-    {{#if drawer-panel--IsOpen}}
-      aria-expanded="true"
-    {{/if}}
+<aside class="pf-c-drawer__panel{{#if drawer-panel--modifier}} {{drawer-panel--modifier}}{{/if}}"
+  {{#unless drawer-panel--IsOpen}}
+    aria-hidden="true"
   {{/unless}}
   {{#if drawer-panel--attribute}}
     {{{drawer-panel--attribute}}}
   {{/if}}>
-  {{#if drawer-panel--NoBody}}
+  {{#> drawer-panel-body}}
     {{> @partial-block}}
-  {{else}}
-    {{#> drawer-body}}
-      {{> @partial-block}}
-    {{/drawer-body}}
-  {{/if}}
-</{{#if drawer-panel--type}}{{{drawer-panel--type}}}{{else}}div{{/if}}>
+  {{/drawer-panel-body}}
+</aside>
