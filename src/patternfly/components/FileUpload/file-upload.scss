@@ -1,0 +1,118 @@
+.pf-c-file-upload {
+  // pf-m-loading
+  --pf-c-file-upload--m-loading__textarea--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-file-upload--m-loading__textarea--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--m-loading__textarea--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--m-loading__textarea--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-file-upload--m-loading__textarea--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--m-loading__textarea--BorderWidth: var(--pf-global--BorderWidth--sm);
+
+  // pf-m-drag-hover
+  --pf-c-file-upload--m-drag-hover--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-drag-hover--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
+
+  // Text area
+  --pf-c-file-upload__textarea--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
+  --pf-c-file-upload__textarea--c-form-control--MinHeight: var(--pf-c-file-upload__textarea--MinHeight);
+
+  // Button overrides
+  --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+
+  // Message
+  --pf-c-file-upload__message--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-file-upload__message--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-file-upload__message--Color: var(--pf-global--Color--100);
+  --pf-c-file-upload__message--m-error--Color: var(--pf-global--danger-color--100);
+
+  display: flex;
+  flex-direction: column;
+
+  .pf-c-file-upload__input-group + .pf-c-file-upload__textarea > .pf-c-form-control {
+    border-top: 0;
+  }
+
+  &.pf-m-drag-hover {
+    position: relative;
+    border: var(--pf-c-file-upload--m-drag-hover--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--BorderColor);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background-color: var(--pf-c-file-upload--m-drag-hover--after--BackgroundColor);
+      opacity: var(--pf-c-file-upload--m-drag-hover--after--Opacity);
+    }
+  }
+
+  // stylelint-disable
+  &.pf-m-loading {
+    .pf-c-file-upload__textarea {
+      background-color: var(--pf-c-file-upload--m-loading__textarea--BackgroundColor);
+      border: var(--pf-c-file-upload--m-loading__textarea--BorderWidth) solid;
+      border-color: var(--pf-c-file-upload--m-loading__textarea--BorderTopColor) var(--pf-c-file-upload--m-loading__textarea--BorderRightColor) var(--pf-c-file-upload--m-loading__textarea--BorderBottomColor) var(--pf-c-file-upload--m-loading__textarea--BorderLeftColor);
+
+      .pf-c-form-control {
+        opacity: 0;
+      }
+    }
+  }
+  // stylelint-enable
+}
+
+.pf-c-file-upload__input-group {
+  .pf-c-button.pf-m-control {
+    outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
+
+    &:disabled,
+    &.pf-m-disabled {
+      color: initial;
+      background-color: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
+
+      &::after {
+        content: "";
+        border: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth) solid;
+        border-color: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor);
+        border-radius: initial;
+      }
+    }
+  }
+}
+
+.pf-c-file-upload__textarea {
+  position: relative;
+  display: flex;
+  min-height: var(--pf-c-file-upload__textarea--MinHeight);
+
+  .pf-c-form-control {
+    flex: 1 1 auto;
+    min-height: var(--pf-c-file-upload__textarea--c-form-control--MinHeight);
+  }
+}
+
+.pf-c-file-upload__textarea-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pf-c-file-upload__message {
+  margin-top: var(--pf-c-file-upload__message--MarginTop);
+  font-size: var(--pf-c-file-upload__message--FontSize);
+  color: var(--pf-c-file-upload__message--Color);
+
+  &.pf-m-error {
+    --pf-c-file-upload__message--Color: var(--pf-c-file-upload__message--m-error--Color);
+  }
+}

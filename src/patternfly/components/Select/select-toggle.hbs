@@ -48,11 +48,13 @@
     {{!-- Third part, badge --}}
     {{#if select--IsCheckboxSelect}}
       {{#if select--ItemIsSelected}}
-        {{#> select-toggle-badge}}
-          {{#> badge badge--modifier="pf-m-read"}}
-            3
-          {{/badge}}
-        {{/select-toggle-badge}}
+        {{#unless select--IsNoBadge}}
+          {{#> select-toggle-badge}}
+            {{#> badge badge--modifier="pf-m-read"}}
+              3
+            {{/badge}}
+          {{/select-toggle-badge}}
+        {{/unless}}
       {{/if}}
     {{/if}}
   {{/select-toggle-wrapper}}

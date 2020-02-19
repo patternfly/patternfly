@@ -134,6 +134,7 @@ The single select typeahead should be used when the user is selecting one option
 {{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
+
 The Dropdown Multi Select should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -162,7 +163,6 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 ```
 
 ```hbs title=Checkbox-expanded
-{{!-- Checkbox select with groups, items selected --}}
 {{#> select id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
   Filter
 {{/select}}
@@ -173,25 +173,39 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
   Filter by status
 {{/select}}
 ```
-The checkbox select can select multiple items using checkboxes. The number of items selected is reflected in a badge in the dropdown toggle. The user may clear items by unchecking or using the clear button. Optionally, items may be grouped.
+
+```hbs title=Checkbox-expanded-and-selected-with-groups-and-filter
+{{#> select id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true" select--IsFilterable="true"}}
+  Filter by status
+{{/select}}
+```
+
+```hbs title=Checkbox-expanded-without-badge
+{{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--IsNoBadge="true"}}
+  Filter
+{{/select}}
+```
+
+The checkbox select can select multiple items using checkboxes. The number of items selected is reflected in an optional badge in the dropdown toggle. The user may clear items by unchecking or using the clear button. Optionally, items may be grouped.
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/documentation/core/components/chip) for more details) |
+| `.pf-c-select` | `<div>` | Initiates the select component. |
+| `.pf-c-select__toggle` | `<button>` | Initiates the select toggle. |
+| `.pf-c-select__toggle-wrapper` | `<div>` | Initiates the select toggle wrapper so that chips and input field can wrap together. |
+| `.pf-c-chip` | `<div>` | Initiates a chip. (See [chip component](/documentation/core/components/chip) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
-| `.pf-c-select__toggle-badge` | `<div>` |  Initiates a container for a badge to indicate the number of items checked. * note: This should contain an unread badge * |
-| `.pf-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
-| `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `div.pf-c-check` |  Initiates the items in the select dropdown menu. |
-| `.pf-c-select__menu-fieldset` | `<fieldset>` |  Initiates a fieldset for the items in a checkbox select. |
-| `.pf-c-select__menu-group` | `<div>` |  Initiates a group within a select menu. |
-| `.pf-c-select__menu-group-title` | `<div>` |  Initiates a title for a group with a select menu. |
-| `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
-| `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
+| `.pf-c-select__toggle-badge` | `<div>` | Initiates a container for a badge to indicate the number of items checked. * note: This should contain an unread badge * |
+| `.pf-c-select__toggle-clear` | `button.pf-m-plain` | Initiates a clear button in the toggle. |
+| `.pf-c-select__toggle-arrow` | `<i>` | Initiates the caret to toggle the dropdown. |
+| `.pf-c-select__menu` | `<div>` | Initiates the select dropdown menu. |
+| `.pf-c-select__menu-item` | `div.pf-c-check` | Initiates the items in the select dropdown menu. |
+| `.pf-c-select__menu-fieldset` | `<fieldset>` | Initiates a fieldset for the items in a checkbox select. |
+| `.pf-c-select__menu-group` | `<div>` | Initiates a group within a select menu. |
+| `.pf-c-select__menu-group-title` | `<div>` | Initiates a title for a group with a select menu. |
+| `.pf-c-select__menu-input` | `<div>` | Initiates a container for an input group. |
+| `.pf-m-expanded` | `.pf-c-select` | Indicates the select is expanded. |
+| `.pf-m-typeahead` | `.pf-c-select__toggle` | Indicates the select has a typeahead. |
 
 ```hbs title=Plain
 {{#> select id="select-plain" select-toggle--modifier="pf-m-plain"}}

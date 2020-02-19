@@ -20,7 +20,9 @@
   --pf-c-pagination__nav-page-select--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--child--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-pagination__nav-page-select--c-form-control--Width: #{pf-size-prem(48px)}; // custom value to show 2 numbers
+  --pf-c-pagination__nav-page-select--c-form-control--width-base: 3.5ch;
+  --pf-c-pagination__nav-page-select--c-form-control--width-chars: 2;
+  --pf-c-pagination__nav-page-select--c-form-control--Width: calc(var(--pf-c-pagination__nav-page-select--c-form-control--width-base) + (var(--pf-c-pagination__nav-page-select--c-form-control--width-chars) * 1ch));
 
   display: flex;
   flex-wrap: wrap;

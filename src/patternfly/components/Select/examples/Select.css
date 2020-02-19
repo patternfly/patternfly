@@ -17,7 +17,8 @@
   min-height: 210px;
 }
 
-#ws-core-c-select-checkbox-expanded {
+#ws-core-c-select-checkbox-expanded,
+#ws-core-c-select-checkbox-expanded-without-badge {
   min-height: 270px;
 }
 
@@ -27,6 +28,10 @@
 
 #ws-core-c-select-checkbox-expanded-and-selected-with-groups {
   min-height: 460px;
+}
+
+#ws-core-c-select-checkbox-expanded-and-selected-with-groups-and-filter {
+  min-height: 530px;
 }
 
 #ws-core-c-select-panel {
