@@ -1,13 +1,13 @@
 ---
 title: Drawer
-section: beta
+section: components
 beta: true
 cssPrefix: pf-c-drawer
 ---
 
 ## Examples
 
-```hbs title=Closed-panel-on-right-(default)
+```hbs title=Closed-panel-on-right-(default) isBeta
 {{#> drawer}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -18,7 +18,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Expanded-panel-on-right
+```hbs title=Expanded-panel-on-right isBeta
 {{#> drawer drawer-panel--IsOpen="true"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -29,7 +29,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Panel-on-left
+```hbs title=Panel-on-left isBeta
 {{#> drawer drawer--modifier="pf-m-panel-left"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -40,7 +40,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Expanded-panel-on-left
+```hbs title=Expanded-panel-on-left isBeta
 {{#> drawer drawer-panel--IsOpen="true" drawer--modifier="pf-m-panel-left"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -51,7 +51,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Expanded-inline-panel-on-right
+```hbs title=Expanded-inline-panel-on-right isBeta
 {{#> drawer drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -62,7 +62,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Expanded-inline-panel-on-left
+```hbs title=Expanded-inline-panel-on-left isBeta
 {{#> drawer drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline pf-m-panel-left"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -73,7 +73,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Modified-content-padding
+```hbs title=Modified-content-padding isBeta
 {{#> drawer drawer-panel--IsOpen="true"}}
   {{#> drawer-content drawer-content-body--modifier="pf-m-padding"}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -84,7 +84,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Modified-panel-padding
+```hbs title=Modified-panel-padding isBeta
 {{#> drawer drawer-panel--IsOpen="true"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -95,7 +95,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Modified-panel-width
+```hbs title=Modified-panel-width isBeta
 {{#> drawer drawer-panel--IsOpen="true"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -106,7 +106,7 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Modified-panel-border
+```hbs title=Modified-panel-border isBeta
 {{#> drawer drawer-panel--IsOpen="true" drawer--modifier="pf-m-divider"}}
   {{#> drawer-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.

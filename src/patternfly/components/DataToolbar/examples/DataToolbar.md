@@ -1,6 +1,6 @@
 ---
 title: Data toolbar
-section: beta
+section: components
 beta: true
 cssPrefix: pf-c-data-toolbar
 ---
@@ -44,7 +44,7 @@ Several components in the following examples do not include functional and/or ac
 
 ## Examples
 
-```hbs title=Simple
+```hbs title=Simple isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-simple-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -96,7 +96,7 @@ Several components in the following examples do not include functional and/or ac
 
 In some instances, it may be necessary to adjust spacing explicitly where items are hidden/shown. For example, if a `.pf-m-toggle-group` is adjacent to an element being hidden/shown, the spacing may appear to be inconsistent. If possible, rely on modifier values. Available spacer modifiers are `.pf-m-spacer-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}` and `.pf-m-space-items-{none, sm, md, lg}{-on-md, -on-lg, -on-xl}`. These modifiers will overwrite existing modifiers provided by `.pf-c-data-toolbar`.
 
-```hbs title=Adjusted-spacers
+```hbs title=Adjusted-spacers isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-spacer-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -124,7 +124,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Adjusted-group-spacers
+```hbs title=Adjusted-group-spacers isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-group-spacer-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -157,7 +157,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-spacer-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-data-toolbar__group`, `.pf-c-data-toolbar__item` | Modifies toolbar group or item spacing. |
 | `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-data-toolbar__group` | Modifies toolbar group child spacing. |
 
-```hbs title=Group-types
+```hbs title=Group-types isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-group-types-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -209,7 +209,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-icon-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-icon-button-group--space-items)`. |
 | `.pf-m-button-group` | `.pf-c-data-toolbar__group` | Modifies toolbar group spacing. Spacer value is set to `var(--pf-c-data-toolbar__group--m-toggle-group--spacer)`. Child spacer value is set to `var(--pf-c-data-toolbar__group--m-button-group--space-items)`. |
 
-```hbs title=Toggle-group
+```hbs title=Toggle-group isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -235,7 +235,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/data-toolbar}}
 ```
 
-```hbs title=Toggle-group-on-mobile-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Toggle-group-on-mobile-(filters-collapsed,-expandable-content-expanded) isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-toggle-group-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -292,7 +292,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Selected
 
-```hbs title=Selected-filters-on-mobile-(filters-collapsed,-selected-filters-summary-visible)
+```hbs title=Selected-filters-on-mobile-(filters-collapsed,-selected-filters-summary-visible) isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -332,7 +332,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{/data-toolbar}}
 ```
 
-```hbs title=Selected-filters-on-mobile-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Selected-filters-on-mobile-(filters-collapsed,-expandable-content-expanded) isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-toggle-group-expanded-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -369,7 +369,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{/data-toolbar}}
 ```
 
-```hbs title=Selected-filters-on-desktop-(not-responsive)
+```hbs title=Selected-filters-on-desktop-(not-responsive) isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-selected-filters-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -405,7 +405,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Stacked
 
-```hbs title=Stacked-on-desktop
+```hbs title=Stacked-on-desktop isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -457,7 +457,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{/data-toolbar}}
 ```
 
-```hbs title=Stacked-on-mobile-(filters-collapsed,-expandable-content-expanded)
+```hbs title=Stacked-on-mobile-(filters-collapsed,-expandable-content-expanded) isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-stacked-collapsed-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
@@ -512,7 +512,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Expanded elements
 
-```hbs title=Expanded-elements
+```hbs title=Expanded-elements isBeta
 {{#> data-toolbar data-toolbar--id="data-toolbar-expanded-elements-example"}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
