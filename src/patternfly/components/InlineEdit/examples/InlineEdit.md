@@ -23,7 +23,7 @@ import './InlineEdit.css'
 
 Inline edit **toggle** can be placed anywhere within `.pf-c-inline-edit`. It initiates the editability of elements. When an element becomes editable, **toggle** is hidden.
 
-```hbs title=Inline-edit-toggle isBeta
+```hbs title=Inline-edit-toggle
 {{#> inline-edit inline-edit--id="inline-edit-toggle-example"}}
   {{#> inline-edit-toggle}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
@@ -35,7 +35,7 @@ Inline edit **toggle** can be placed anywhere within `.pf-c-inline-edit`. It ini
 
 Inline edit **value** can be placed anywhere within `.pf-c-inline-edit`. It is visible by default and hidden when inline edit becomes **editable**.
 
-```hbs title=Inline-edit-value isBeta
+```hbs title=Inline-edit-value
 {{#> inline-edit inline-edit--id="inline-edit-value-example"}}
   {{#> inline-edit-value}}
     Static value
@@ -45,7 +45,7 @@ Inline edit **value** can be placed anywhere within `.pf-c-inline-edit`. It is v
 
 Inline edit **action-group** contains save and cancel actions and is only visible when inline edit is **editable**.
 
-```hbs title=Inline-edit-action-group isBeta
+```hbs title=Inline-edit-action-group
 {{#> inline-edit inline-edit--id="inline-edit-action-group-example" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
     {{> inline-edit-action-save}}
@@ -54,7 +54,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-action-group-icon-buttons isBeta
+```hbs title=Inline-edit-action-group-icon-buttons
 {{#> inline-edit inline-edit--id="inline-edit-action-group-icon-buttons-example" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
     {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
@@ -63,7 +63,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-(default) isBeta
+```hbs title=Single-inline-edit-(default)
 {{#> inline-edit inline-edit--id="single-inline-edit-example" inline-edit--type="form"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-value inline-edit-value--IsLabel="true"}}
@@ -87,7 +87,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-(active) isBeta
+```hbs title=Single-inline-edit-(active)
 {{#> inline-edit inline-edit--id="single-editable-example" inline-edit--type="form" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-value inline-edit-value--IsLabel="true"}}
@@ -111,7 +111,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-with-label-(default) isBeta
+```hbs title=Single-inline-edit-with-label-(default)
 {{#> inline-edit inline-edit--type="form" inline-edit--id="single-inline-edit-with-label-example"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-label}}
@@ -138,7 +138,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=State-valid isBeta
+```hbs title=State-valid
 {{#> inline-edit inline-edit--id="inline-edit-state-valid" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-label}}
@@ -165,7 +165,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=State-invalid isBeta
+```hbs title=State-invalid
 {{#> inline-edit inline-edit--id="inline-edit-state-invalid" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-label}}
@@ -193,7 +193,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-table-row isBeta
+```hbs title=Inline-edit-table-row
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
   {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
     {{#> table-caption}}

@@ -6,7 +6,7 @@ cssPrefix: pf-c-notification-drawer
 ---
 
 ## Examples
-```hbs title=Basic isBeta
+```hbs title=Basic
 {{#> notification-drawer notification-drawer--id="notification-drawer-basic"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
@@ -25,7 +25,7 @@ cssPrefix: pf-c-notification-drawer
 {{/notification-drawer}}
 ```
 
-```hbs title=Groups isBeta
+```hbs title=Groups
 {{#> notification-drawer notification-drawer--id="notification-drawer-groups"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
