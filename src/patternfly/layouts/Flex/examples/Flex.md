@@ -46,6 +46,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
   {{#> l-flex-item}}
     Flex item
   {{/l-flex-item}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> l-flex-item}}
     Flex item
   {{/l-flex-item}}

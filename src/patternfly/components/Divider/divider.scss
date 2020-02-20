@@ -1,9 +1,21 @@
 .pf-c-divider {
   --pf-c-divider--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-divider--BackgroundColor: var(--pf-global--BorderColor--100);
+  --pf-c-divider--m-vertical--Width: var(--pf-global--BorderWidth--md);
 
   height: var(--pf-c-divider--Height);
   background-color: var(--pf-c-divider--BackgroundColor);
   border: 0; // removes the default border styling on an hr
   flex-shrink: 0;
+
+  &.pf-m-vertical {
+    align-self: center;
+    width: var(--pf-c-divider--m-vertical--Width);
+    height: 100%;
+
+    &.pf-m-stretch {
+      align-self: stretch;
+      height: auto;
+    }
+  }
 }
