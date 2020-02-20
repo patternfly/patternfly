@@ -1,11 +1,9 @@
 .pf-c-file-upload {
   // pf-m-loading
-  --pf-c-file-upload--m-loading__file-details--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-file-upload--m-loading__file-details--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--m-loading__file-details--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--m-loading__file-details--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload--m-loading__file-details--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--m-loading__file-details--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-loading__file-details--before--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-file-upload--m-loading__file-details--before--Left: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-loading__file-details--before--Right: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-loading__file-details--before--Bottom: var(--pf-global--BorderWidth--sm);
 
   // pf-m-drag-hover
   --pf-c-file-upload--m-drag-hover--after--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -14,17 +12,16 @@
   --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
 
   // Text area
-  --pf-c-file-upload__file-details--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
-  --pf-c-file-upload__file-details--c-form-control--MinHeight: var(--pf-c-file-upload__file-details--MinHeight);
+  --pf-c-file-upload__file-details__c-form-control--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
 
   // Button overrides
-  --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload--c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+  --pf-c-file-upload__file-select__c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload__file-select__c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Message
   --pf-c-file-upload__message--MarginTop: var(--pf-global--spacer--xs);
@@ -34,10 +31,6 @@
 
   display: flex;
   flex-direction: column;
-
-  .pf-c-file-upload__file-select + .pf-c-file-upload__file-details > .pf-c-form-control {
-    border-top: 0;
-  }
 
   &.pf-m-drag-hover {
     position: relative;
@@ -55,34 +48,36 @@
     }
   }
 
-  // stylelint-disable
   &.pf-m-loading {
     .pf-c-file-upload__file-details {
-      background-color: var(--pf-c-file-upload--m-loading__file-details--BackgroundColor);
-      border: var(--pf-c-file-upload--m-loading__file-details--BorderWidth) solid;
-      border-color: var(--pf-c-file-upload--m-loading__file-details--BorderTopColor) var(--pf-c-file-upload--m-loading__file-details--BorderRightColor) var(--pf-c-file-upload--m-loading__file-details--BorderBottomColor) var(--pf-c-file-upload--m-loading__file-details--BorderLeftColor);
+      position: relative;
 
-      .pf-c-form-control {
-        opacity: 0;
+      &::before {
+        position: absolute;
+        top: 0;
+        right: var(--pf-c-file-upload--m-loading__file-details--before--Left);
+        bottom: var(--pf-c-file-upload--m-loading__file-details--before--Left);
+        left: var(--pf-c-file-upload--m-loading__file-details--before--Left);
+        content: "";
+        background-color: var(--pf-c-file-upload--m-loading__file-details--before--BackgroundColor);
       }
     }
   }
-  // stylelint-enable
 }
 
 .pf-c-file-upload__file-select {
   .pf-c-button.pf-m-control {
-    outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
+    outline-offset: var(--pf-c-file-upload__file-select__c-button--m-control--OutlineOffset);
 
     &:disabled,
     &.pf-m-disabled {
       color: initial;
-      background-color: var(--pf-c-file-upload--c-button--m-control--disabled--BackgroundColor);
+      background-color: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--BackgroundColor);
 
       &::after {
         content: "";
-        border: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderWidth) solid;
-        border-color: var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload--c-button--m-control--disabled--after--BorderLeftColor);
+        border: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderWidth) solid;
+        border-color: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderLeftColor);
         border-radius: initial;
       }
     }
@@ -92,11 +87,11 @@
 .pf-c-file-upload__file-details {
   position: relative;
   display: flex;
-  min-height: var(--pf-c-file-upload__file-details--MinHeight);
 
   .pf-c-form-control {
     flex: 1 1 auto;
-    min-height: var(--pf-c-file-upload__file-details--c-form-control--MinHeight);
+    min-height: var(--pf-c-file-upload__file-details__c-form-control--MinHeight);
+    border-top: 0;
   }
 }
 
