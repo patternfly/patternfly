@@ -1,21 +1,21 @@
 .pf-c-file-upload {
   // pf-m-loading
-  --pf-c-file-upload--m-loading__textarea--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-file-upload--m-loading__textarea--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--m-loading__textarea--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--m-loading__textarea--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload--m-loading__textarea--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload--m-loading__textarea--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-loading__file-details--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-file-upload--m-loading__file-details--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--m-loading__file-details--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--m-loading__file-details--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-file-upload--m-loading__file-details--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-file-upload--m-loading__file-details--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // pf-m-drag-hover
-  --pf-c-file-upload--m-drag-hover--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload--m-drag-hover--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--after--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-drag-hover--after--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-file-upload--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
 
   // Text area
-  --pf-c-file-upload__textarea--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
-  --pf-c-file-upload__textarea--c-form-control--MinHeight: var(--pf-c-file-upload__textarea--MinHeight);
+  --pf-c-file-upload__file-details--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
+  --pf-c-file-upload__file-details--c-form-control--MinHeight: var(--pf-c-file-upload__file-details--MinHeight);
 
   // Button overrides
   --pf-c-file-upload--c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
@@ -35,13 +35,12 @@
   display: flex;
   flex-direction: column;
 
-  .pf-c-file-upload__input-group + .pf-c-file-upload__textarea > .pf-c-form-control {
+  .pf-c-file-upload__file-select + .pf-c-file-upload__file-details > .pf-c-form-control {
     border-top: 0;
   }
 
   &.pf-m-drag-hover {
     position: relative;
-    border: var(--pf-c-file-upload--m-drag-hover--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--BorderColor);
 
     &::after {
       position: absolute;
@@ -51,16 +50,17 @@
       left: 0;
       content: "";
       background-color: var(--pf-c-file-upload--m-drag-hover--after--BackgroundColor);
+      border: var(--pf-c-file-upload--m-drag-hover--after--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--after--BorderColor);
       opacity: var(--pf-c-file-upload--m-drag-hover--after--Opacity);
     }
   }
 
   // stylelint-disable
   &.pf-m-loading {
-    .pf-c-file-upload__textarea {
-      background-color: var(--pf-c-file-upload--m-loading__textarea--BackgroundColor);
-      border: var(--pf-c-file-upload--m-loading__textarea--BorderWidth) solid;
-      border-color: var(--pf-c-file-upload--m-loading__textarea--BorderTopColor) var(--pf-c-file-upload--m-loading__textarea--BorderRightColor) var(--pf-c-file-upload--m-loading__textarea--BorderBottomColor) var(--pf-c-file-upload--m-loading__textarea--BorderLeftColor);
+    .pf-c-file-upload__file-details {
+      background-color: var(--pf-c-file-upload--m-loading__file-details--BackgroundColor);
+      border: var(--pf-c-file-upload--m-loading__file-details--BorderWidth) solid;
+      border-color: var(--pf-c-file-upload--m-loading__file-details--BorderTopColor) var(--pf-c-file-upload--m-loading__file-details--BorderRightColor) var(--pf-c-file-upload--m-loading__file-details--BorderBottomColor) var(--pf-c-file-upload--m-loading__file-details--BorderLeftColor);
 
       .pf-c-form-control {
         opacity: 0;
@@ -70,7 +70,7 @@
   // stylelint-enable
 }
 
-.pf-c-file-upload__input-group {
+.pf-c-file-upload__file-select {
   .pf-c-button.pf-m-control {
     outline-offset: var(--pf-c-file-upload--c-button--m-control--OutlineOffset);
 
@@ -89,18 +89,18 @@
   }
 }
 
-.pf-c-file-upload__textarea {
+.pf-c-file-upload__file-details {
   position: relative;
   display: flex;
-  min-height: var(--pf-c-file-upload__textarea--MinHeight);
+  min-height: var(--pf-c-file-upload__file-details--MinHeight);
 
   .pf-c-form-control {
     flex: 1 1 auto;
-    min-height: var(--pf-c-file-upload__textarea--c-form-control--MinHeight);
+    min-height: var(--pf-c-file-upload__file-details--c-form-control--MinHeight);
   }
 }
 
-.pf-c-file-upload__textarea-spinner {
+.pf-c-file-upload__file-details-spinner {
   position: absolute;
   top: 50%;
   left: 50%;
