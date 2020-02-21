@@ -1,13 +1,9 @@
-body {
+body:not(.ws-lite-full-page-example) {
   padding: 3rem 3rem 5rem 3rem;
   background-color: var(--pf-global--BackgroundColor--300);
 }
 
-body > h1 {
-  font-size: 2rem;
-}
-
-body > * {
+body:not(.ws-lite-full-page-example) > * {
   margin-bottom: var(--pf-global--spacer--md);
 }
 
@@ -21,6 +17,10 @@ body > h2:not(:last-child) {
 
 body > h3:not(:last-child) {
   margin-bottom: var(--pf-global--spacer--lg);
+}
+
+body > h1 {
+  font-size: 2rem;
 }
 
 body > h2 {
