@@ -62,13 +62,13 @@ function getCSSPaths() {
 }
 
 // Helper
-function getHTMLWithStyles(cssPaths, html) {
+function getHTMLWithStyles(cssPaths, html, bodyClassNames) {
   return `<!doctype html>
 <html>
   <head>
     ${cssPaths.map(cssPath => `<link rel="stylesheet" href="../../../${cssPath}">`).join('\n    ')}
   </head>
-  <body class="pf-m-redhat-font">
+  <body class="pf-m-redhat-font${bodyClassNames ? ` ${bodyClassNames}` : ''}">
     ${html.replace(/\s*\n/g, '\n    ')}
   </body>
 </html>`;
@@ -108,12 +108,15 @@ function compileMD0(srcFiles) {
 
       Object.entries(examples).forEach(([exampleName, html]) => {
         const htmlPath = path.join(process.cwd(), getHTMLFilePath(lastPath, exampleName));
-        fs.ensureFileSync(htmlPath);
         if (exampleName !== 'index') {
           // .ws-core-l-flex .pf-l-flex .pf-l-flex
-          html = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
+          const exampleDiv = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
+          html = getHTMLWithStyles(cssPaths, exampleDiv, 'ws-lite-full-page-example');
+        } else {
+          html = getHTMLWithStyles(cssPaths, html);
         }
-        fs.writeFileSync(htmlPath, getHTMLWithStyles(cssPaths, html));
+        fs.ensureFileSync(htmlPath);
+        fs.writeFileSync(htmlPath, html);
       });
       cb2(null, chunk);
     })
