@@ -4,11 +4,12 @@ const { getExampleClassName, getExampleId } = require('gatsby-theme-patternfly-o
 
 // Helper
 function getWrapperDiv(section, title, exampleName, toWrap, classNames) {
-  return `<div
-    id="${getExampleId('core', section, title, exampleName)}"
-    class="${classNames} ${getExampleClassName(section, title, exampleName)}">
-      <div class="ws-preview-html">${toWrap}</div>
-  </div>`;
+  return `<h3>${exampleName}</h3>
+    <div
+      id="${getExampleId('core', section, title, exampleName)}"
+      class="${classNames} ${getExampleClassName(section, title, exampleName)}">
+        <div class="ws-preview-html">${toWrap}</div>
+    </div>`;
 }
 
 // https://github.com/unifiedjs/unified#plugin
