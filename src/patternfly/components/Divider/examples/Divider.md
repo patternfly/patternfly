@@ -14,7 +14,7 @@ import './Divider.css'
 ```hbs title=<li>
 <ul>
   <li>List item one</li>
-  {{> divider divider--type="li"}}
+  {{> divider divider--type="li" divider--modifier="pf-m-inset-2xl"}}
   <li>List item two</li>
 </ul>
 ```
@@ -24,7 +24,9 @@ import './Divider.css'
 ```
 
 ```hbs title=Vertical
+{{#> button}}testing{{/button}}
 {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+{{#> button}}testing{{/button}}
 ```
 
 ## Documentation

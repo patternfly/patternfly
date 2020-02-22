@@ -1,21 +1,67 @@
 .pf-c-divider {
+  // update during breaking change
   --pf-c-divider--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-divider--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-divider--m-vertical--Width: var(--pf-global--BorderWidth--md);
+  --pf-c-divider--after--Height: var(--pf-c-divider--Height);
+  --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--BackgroundColor);
 
-  height: var(--pf-c-divider--Height);
-  background-color: var(--pf-c-divider--BackgroundColor);
+  // end - update during breaking change
+
+  --pf-c-divider--m-vertical--Width: var(--pf-global--BorderWidth--sm);
+
+  // After
+  --pf-c-divider--after--FlexBasis--base: 100%;
+  --pf-c-divider--after--Inset: 0;
+  --pf-c-divider--after--FlexBasis: calc(var(--pf-c-divider--after--FlexBasis--base) - (var(--pf-c-divider--after--Inset) * 2));
+
+  display: flex;
+  align-items: center;
+
+  // Set height to zero to divide sections that have backgrounds so background of parent doesn't show
+  // height: 0;
+  justify-content: center;
+  width: 100%;
   border: 0; // removes the default border styling on an hr
-  flex-shrink: 0;
+
+  &::after {
+    flex-basis: calc(var(--pf-c-divider--after--FlexBasis--base) - var(--pf-c-divider--after--Inset));
+    align-self: stretch;
+    height: var(--pf-c-divider--Height);
+    content: "";
+    background-color: var(--pf-c-divider--BackgroundColor);
+    justify-self: center;
+  }
 
   &.pf-m-vertical {
-    align-self: center;
+    display: inline-flex;
+    flex-direction: column;
     width: var(--pf-c-divider--m-vertical--Width);
-    height: 100%;
+    height: inherit;
+    min-height: 100%;
+    max-height: 100%;
+  }
 
-    &.pf-m-stretch {
-      align-self: stretch;
-      height: auto;
-    }
+  &.pf-m-inset-sm {
+    --pf-c-divider--after--Inset: var(--pf-global--spacer--sm);
+  }
+
+  &.pf-m-inset-md {
+    --pf-c-divider--after--Inset: var(--pf-global--spacer--md);
+  }
+
+  &.pf-m-inset-lg {
+    --pf-c-divider--after--Inset: var(--pf-global--spacer--lg);
+  }
+
+  &.pf-m-inset-xl {
+    --pf-c-divider--after--Inset: var(--pf-global--spacer--xl);
+  }
+
+  &.pf-m-inset-2xl {
+    --pf-c-divider--after--Inset: var(--pf-global--spacer--2xl);
+  }
+
+  &.pf-m-inset-3xl {
+    --pf-c-divider--after--Inset: var(--pf-global--spacer--3xl);
   }
 }
