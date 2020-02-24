@@ -1,0 +1,20 @@
+{{#> data-toolbar data-toolbar--id=(concat master-detail-template--id "-toolbar")}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-item}}
+        {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-dropdown')}}
+          Dropdown
+        {{/select}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+        {{#> pagination}}
+          {{#> pagination-total-items}}
+            <b>1 - 10</b> of <b>37</b>
+          {{/pagination-total-items}}
+          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
+        {{/pagination}}
+      {{/data-toolbar-item}}
+    {{/data-toolbar-content-section}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}
