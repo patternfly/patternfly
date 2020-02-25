@@ -14,7 +14,7 @@ import './Divider.css'
 ```hbs title=<li>
 <ul>
   <li>List item one</li>
-  {{> divider divider--type="li" divider--modifier="pf-m-inset-2xl"}}
+  {{> divider divider--type="li"}}
   <li>List item two</li>
 </ul>
 ```
@@ -23,13 +23,27 @@ import './Divider.css'
 {{> divider divider--type="div"}}
 ```
 
+```hbs title=Insets
+{{> divider divider--type="div" divider--modifier="pf-m-inset-md pf-m-inset-lg-on-lg pf-m-inset-xl-on-xl"}}
+```
+
 ```hbs title=Vertical
-{{#> button}}testing{{/button}}
 {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
-{{#> button}}testing{{/button}}
+```
+
+```hbs title=Vertical-insets
+<div>No inset</div>
+{{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+<div>Small inset on sm</div>
+{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm"}}
+<div>Medium inset on md</div>
+{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm pf-m-inset-md-on-md"}}
+<div>Large inset on lg</div>
+{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm pf-m-inset-md-on-md pf-m-inset-lg-on-lg"}}
 ```
 
 ## Documentation
+
 ### Overview
 The divider renders as an `<hr>` by default. It is possible to make the divider render as an `li` or a `div` to match the HTML5 specification and context of the divider.
 
@@ -42,4 +56,4 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 | -- | -- | -- |
 | `.pf-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |
 | `.pf-m-vertical` | `.pf-c-divider` | Modifies the divider component from horizontal to vertical. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. |
-| `.pf-m-stretch` | `.pf-m-vertical` | Modifies the vertical divider to stretch to full height. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-divider` | Modifies a divider inset to match spacer system. |
