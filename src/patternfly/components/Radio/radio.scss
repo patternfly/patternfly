@@ -1,3 +1,4 @@
+/* stylelint-disable */
 .pf-c-radio {
   --pf-c-radio--GridGap: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm);
   --pf-c-radio__label--disabled--Color: var(--pf-global--disabled-color--100);
@@ -24,7 +25,107 @@
 }
 
 .pf-c-radio__input {
-  margin-top: var(--pf-c-radio__input--MarginTop);
+  --active: var(--pf-global--primary-color--100);
+  --active-inner: #fff;
+  --focus: 2px rgba(39, 94, 254, .3);
+  --border: var(--pf-global--BorderColor--100);
+  --border-hover: var(--pf-glocbal--Color--100);
+  --background: #fff;
+  --disabled: var(--pf-global--disabled-color--300);
+  --disabled-inner: var(--pf-global--disabled-color--300);
+
+  position: relative;
+  display: inline-block;
+  height: 21px;
+  margin: 0;
+  vertical-align: top;
+  cursor: pointer;
+  background: var(--b, var(--background));
+  border: 1px solid var(--bc, var(--border));
+  border-radius: 50%;
+  outline: none;
+  transition: background .3s, border-color .3s, box-shadow .2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+  }
+
+  &:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+
+  &:disabled {
+    --b: var(--disabled);
+
+    cursor: not-allowed;
+    opacity: .9;
+
+    &:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+
+    & + label {
+      cursor: not-allowed;
+    }
+  }
+
+  &:hover {
+    &:not(:checked) {
+      &:not(:disabled) {
+        --bc: var(--border-hover);
+      }
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+
+  &:not(.switch) {
+    width: 21px;
+
+    &::after {
+      opacity: var(--o, 0);
+    }
+
+    &:checked {
+      --o: 1;
+    }
+  }
+
+  &::after {
+    width: 19px;
+    height: 19px;
+    background: var(--active-inner);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(var(--s, .7));
+  }
+
+  &:checked {
+    --s: .5;
+  }
+}
+
+.pf-c-radio__label {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: top;
+  cursor: pointer;
 }
 
 .pf-c-radio__description {
