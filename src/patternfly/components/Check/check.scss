@@ -48,13 +48,17 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  --d-t: .3s;
+  --d-t-e: ease;
+  --d-o: .2s;
+
   &::after {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     content: "";
-    transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    transition: transform var(--d-t) var(--d-t-e), opacity var(--d-o);
   }
 
   &:checked {
