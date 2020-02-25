@@ -3,8 +3,6 @@ title: Master Detail
 section: demos
 ---
 
-import './MasterDetail.css'
-
 ## Demos
 
 ```hbs title=Master-detail-expanded isFullscreen
