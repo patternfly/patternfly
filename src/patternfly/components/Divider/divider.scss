@@ -15,7 +15,6 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // After
   --pf-c-divider--after--FlexBasis--base: 100%;
   --pf-c-divider--after--Inset: 0;
-  --pf-c-divider--after--FlexBasis: calc(var(--pf-c-divider--after--FlexBasis--base) - var(--pf-c-divider--after--Inset) - var(--pf-c-divider--after--Inset));
 
   display: flex;
   align-items: center;
