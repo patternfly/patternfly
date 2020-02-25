@@ -98,16 +98,20 @@
   }
 
   &:not(.switch) {
+    --o: 0;
+
     width: 21px;
 
     &::after {
-      opacity: var(--o, 0);
+      opacity: var(--o);
     }
 
     &:checked {
       --o: 1;
     }
   }
+
+  --r: 20deg;
 
   &::after {
     top: 4px;
@@ -117,7 +121,7 @@
     border: 2px solid var(--active-inner);
     border-top: 0;
     border-left: 0;
-    transform: rotate(var(--r, 20deg));
+    transform: rotate(var(--r));
   }
 
   &:checked {

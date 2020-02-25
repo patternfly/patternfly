@@ -100,8 +100,10 @@
   &:not(.switch) {
     width: 21px;
 
+    --o: 0;
+
     &::after {
-      opacity: var(--o, 0);
+      opacity: var(--o);
     }
 
     &:checked {
@@ -109,13 +111,15 @@
     }
   }
 
+  --s: .7;
+
   &::after {
     width: 19px;
     height: 19px;
     background: var(--active-inner);
     border-radius: 50%;
     opacity: 0;
-    transform: scale(var(--s, .7));
+    transform: scale(var(--s));
   }
 
   &:checked {
