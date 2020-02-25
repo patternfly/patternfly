@@ -1,7 +1,8 @@
 ---
 title: File upload
-section: beta
+section: components
 cssPrefix: pf-c-file-upload
+beta: true
 ---
 
 ## Examples

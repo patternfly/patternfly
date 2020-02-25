@@ -19,8 +19,7 @@ module.exports = {
             { section: 'components' },
             { section: 'layouts' },
             { section: 'utilities' },
-            { section: 'demos' },
-            { section: 'beta' }
+            { section: 'demos' }
           ]
         },
         topNavItems: [

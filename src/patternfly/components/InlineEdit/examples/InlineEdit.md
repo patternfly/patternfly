@@ -1,6 +1,6 @@
 ---
 title: Inline edit
-section: beta
+section: components
 beta: true
 cssPrefix: pf-c-inline-edit
 ---
