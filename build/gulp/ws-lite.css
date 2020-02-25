@@ -53,7 +53,7 @@ body > table tr td {
 }
 
 body .ws-lite-example {
-  margin: 3rem 0;
+  margin: 0 0 6rem;
   padding: 1rem;
   background-color: var(--pf-global--BackgroundColor--100);
 }
