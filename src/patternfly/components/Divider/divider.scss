@@ -13,20 +13,17 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-divider--m-vertical--Width: var(--pf-global--BorderWidth--sm);
 
   // After
-  --pf-c-divider--after--FlexBasis--base: 100%;
-  --pf-c-divider--after--Inset: 0;
+  --pf-c-divider--after--FlexBasis: 100%;
+  --pf-c-divider--after--Inset: 0%;
 
   display: flex;
   align-items: center;
-
-  // Set height to zero to divide sections that have backgrounds so background of parent doesn't show
-  // height: 0;
   justify-content: center;
   width: 100%;
   border: 0; // removes the default border styling on an hr
 
   &::after {
-    flex-basis: calc(var(--pf-c-divider--after--FlexBasis--base) - var(--pf-c-divider--after--Inset) - var(--pf-c-divider--after--Inset));
+    flex-basis: calc(var(--pf-c-divider--after--FlexBasis) - var(--pf-c-divider--after--Inset) - var(--pf-c-divider--after--Inset));
     align-self: stretch;
     height: var(--pf-c-divider--after--Height);
     content: "";
@@ -43,7 +40,6 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     max-height: 100%;
 
     &::after {
-      flex-basis: calc(var(--pf-c-divider--after--FlexBasis--base) - var(--pf-c-divider--after--Inset));
       width: var(--pf-c-divider--m-vertical--Width);
     }
   }

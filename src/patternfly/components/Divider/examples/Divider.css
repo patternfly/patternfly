@@ -9,3 +9,7 @@
 #ws-core-c-divider-vertical-insets .ws-preview-html > * {
   margin-right: var(--pf-global--spacer--lg);
 }
+
+#ws-core-c-divider-insets .ws-preview-html > :not(:last-child) {
+  margin-bottom: var(--pf-global--spacer--lg);
+}

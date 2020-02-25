@@ -24,7 +24,14 @@ import './Divider.css'
 ```
 
 ```hbs title=Insets
-{{> divider divider--type="div" divider--modifier="pf-m-inset-md pf-m-inset-lg-on-lg pf-m-inset-xl-on-xl"}}
+<div>No inset</div>
+{{> divider divider--type="div"}}
+<div>Small inset on sm</div>
+{{> divider divider--type="div" divider--modifier="pf-m-inset-sm-on-sm"}}
+<div>Large inset on md</div>
+{{> divider divider--type="div" divider--modifier="pf-m-inset-sm-on-sm pf-m-inset-lg-on-md"}}
+<div>2xl inset on lg</div>
+{{> divider divider--type="div" divider--modifier="pf-m-inset-sm-on-sm pf-m-inset-xl-on-md pf-m-inset-2xl-on-lg"}}
 ```
 
 ```hbs title=Vertical
@@ -38,8 +45,6 @@ import './Divider.css'
 {{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm"}}
 <div>Medium inset on md</div>
 {{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm pf-m-inset-md-on-md"}}
-<div>Large inset on lg</div>
-{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm pf-m-inset-md-on-md pf-m-inset-lg-on-lg"}}
 ```
 
 ## Documentation
