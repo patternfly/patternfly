@@ -24,7 +24,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   border: 0; // removes the default border styling on an hr
 
   &::after {
-    flex-basis: calc(var(--pf-c-divider--after--FlexBasis) - var(--pf-c-divider--after--Inset) - var(--pf-c-divider--after--Inset));
+    flex-basis: calc(var(--pf-c-divider--after--FlexBasis) - calc(var(--pf-c-divider--after--Inset) * 2));
     align-self: stretch;
     height: var(--pf-c-divider--after--Height);
     content: "";
@@ -41,6 +41,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     max-height: 100%;
 
     &::after {
+      flex-basis: calc(var(--pf-c-divider--after--FlexBasis) - var(--pf-c-divider--after--Inset));
       width: var(--pf-c-divider--m-vertical--Width);
     }
   }
