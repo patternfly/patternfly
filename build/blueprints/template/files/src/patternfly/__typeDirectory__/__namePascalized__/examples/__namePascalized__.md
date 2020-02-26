@@ -31,14 +31,12 @@ Optional introduction for `{{nameDasherized}}`.
 | -- | -- | -- |
 | `hidden` | `.{{nameDasherized}}__item` |  Indicates that the `.{{nameDasherized}}__item` is hidden. |
 | `aria-hidden` | `.{{nameDasherized}}__item` |  Indicates that the `.{{nameDasherized}}__item` is hidden from and unfocusable to screen readers, but remains visible for sighted users. |
-| `aria-label` | `.{{nameDasherized}}__item` | Provides an accessible name for a test element. **Required** |
-| `aria-expanded="true"` | `.{{nameDasherized}}__item` | Indicates that the expandable content is visible. **Required** |
-| `aria-expanded="true"` | `.{{nameDasherized}}__item` | Indicates that the expandable content is hidden. **Required** |
+| `aria-label="[descriptive text]"` | `.{{nameDasherized}}__item` | Provides an accessible name for a test element. **Required** |
 
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.{{nameDasherized}}` | `<div>` | Initiates the {{nameDasherized}} component. **Required** |
-| `.{{nameDasherized}}__item` | `<div>` | Initiates a {{nameDasherized}} item. **Required** |
-| `.pf-m-selected` | `.{{nameDasherized}}__item` | Modifies a {{nameDasherized}} item for the selected state. **Required** |
+| `.{{nameDasherized}}` | `<div>` | Initiates the {{nameSimple}} component. **Required** |
+| `.{{nameDasherized}}__item` | `<div>` | Initiates a {{nameSimple}} item. **Required** |
+| `.pf-m-selected` | `.{{nameDasherized}}__item` | Modifies a {{nameSimple}} item for the selected state. **Required** |

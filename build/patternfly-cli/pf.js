@@ -64,22 +64,21 @@ program
       namePascalized: inflection.camelize(name),
       nameTableized: inflection.tableize(name),
       nameCapitalized: inflection.capitalize(name),
+      nameSimple: inflection.transform(name, ['underscore', 'titleize']).toLowerCase(),
       bemName: `${bemName}`,
       bemModifierBlock: `{{#if ${bemEntity}--modifier}} {{${bemEntity}--modifier}}{{/if}}`,
       bemItemModifierBlock: `{{#if ${bemEntity}-item--modifier}} {{${bemEntity}-item--modifier}}{{/if}}`,
       moduleName,
       partialBlock: '{{> @partial-block}}',
-      attributeBlock: `
-  {{#if ${bemEntity}--attribute}}
+      attributeBlock: `{{#if ${bemEntity}--attribute}}
     {{{${bemEntity}--attribute}}}
   {{/if}}`,
-      attributeItemBlock: `id="{{${dasherizedName}-id}}-{{${dasherizedName}-item--id}}"
-  {{#if ${bemEntity}-item--attribute}}
+      attributeItemBlock: `{{#if ${bemEntity}-item--attribute}}
     {{{${bemEntity}-item--attribute}}}
   {{/if}}`,
       moduleHbOpen: `{{#> ${dasherizedName} ${dasherizedName}--id="${dasherizedName}--basic-example"}}`,
       moduleHbClose: `{{/${dasherizedName}}}`,
-      moduleHbIdConcatenationOpen: `{{#> ${dasherizedName}-item ${dasherizedName}--id="item"}}`,
+      moduleHbIdConcatenationOpen: `{{#> ${dasherizedName}-item ${dasherizedName}-item--id=(concat ${dasherizedName}--id '-item')}}`,
       moduleHbIdConcatenationClose: `{{/${dasherizedName}-item}}`,
       simpleExampleReference: `{${camelizedName}SimpleExample}`,
       complexExampleReference: `{${camelizedName}ComplexExample}`,
