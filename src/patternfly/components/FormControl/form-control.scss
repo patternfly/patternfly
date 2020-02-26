@@ -74,8 +74,6 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   --pf-c-form-control--success--BackgroundPosition: calc(100% - var(--pf-c-form-control--PaddingLeft)) var(--pf-c-form-control--PaddingLeft);
   --pf-c-form-control--success--BackgroundSize: var(--pf-c-form-control--FontSize) var(--pf-c-form-control--FontSize);
   --pf-c-form-control--success--BackgroundUrl: #{pf-bg-svg($pf-c-form-control--success--Coordinates, $svg-color: $pf-c-form-control--success--Color)};
-  --pf-c-form-control--success--check--Background: var(--pf-c-form-control--success--BackgroundUrl) var(--pf-c-form-control--success--BackgroundPosition) / var(--pf-c-form-control--success--BackgroundSize) no-repeat;
-  --pf-c-form-control--success--Background: var(--pf-c-form-control--BackgroundColor) var(--pf-c-form-control--success--check--Background);
 
   // Input m-search
   --pf-c-form-control--m-search--PaddingLeft: var(--pf-global--spacer--xl);
@@ -89,11 +87,7 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox)};
   --pf-c-form-control__select--BackgroundSize: #{pf-size-prem(14px)};
   --pf-c-form-control__select--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm)) center;
-  --pf-c-form-control__select--arrow--Background: var(--pf-c-form-control--BackgroundColor) var(--pf-c-form-control__select--BackgroundUrl) var(--pf-c-form-control__select--BackgroundPosition) / var(--pf-c-form-control__select--BackgroundSize) no-repeat;
-  --pf-c-form-control__select--Background: var(--pf-c-form-control__select--arrow--Background);
-  --pf-c-form-control__select--invalid--Background: var(--pf-c-form-control--invalid--exclamation--Background), var(--pf-c-form-control__select--arrow--Background);
   --pf-c-form-control__select--invalid--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
-  --pf-c-form-control__select--success--Background: var(--pf-c-form-control--success--check--Background), var(--pf-c-form-control__select--arrow--Background);
   --pf-c-form-control__select--success--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
 
   // This component always needs to be light
@@ -126,9 +120,9 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   &[readonly] {
     &,
     &.pf-m-hover,
-    &:hover,
+    &:hover:not(.pf-m-success):not([aria-invalid="true"]),
     &.pf-m-focus,
-    &:focus {
+    &:focus:not(.pf-m-success):not([aria-invalid="true"]) {
       --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
 
       padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
@@ -163,7 +157,10 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
     --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--invalid--BorderBottomColor);
 
     padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-    background: var(--pf-c-form-control--invalid--Background);
+    background-image: var(--pf-c-form-control--invalid--BackgroundUrl);
+    background-repeat: no-repeat;
+    background-position: var(--pf-c-form-control--invalid--BackgroundPosition);
+    background-size: var(--pf-c-form-control--invalid--BackgroundSize);
     border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
   }
 
@@ -172,7 +169,10 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
     --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--success--BorderBottomColor);
 
     padding-bottom: var(--pf-c-form-control--success--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-    background: var(--pf-c-form-control--success--Background);
+    background-image: var(--pf-c-form-control--success--BackgroundUrl);
+    background-repeat: no-repeat;
+    background-position: var(--pf-c-form-control--success--BackgroundPosition);
+    background-size: var(--pf-c-form-control--success--BackgroundSize);
     border-bottom-width: var(--pf-c-form-control--success--BorderBottomWidth);
   }
 
@@ -184,18 +184,27 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   @at-root select#{&} {
     --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
 
-    background: var(--pf-c-form-control__select--Background);
+    background-image: var(--pf-c-form-control__select--BackgroundUrl);
+    background-repeat: no-repeat;
+    background-position: var(--pf-c-form-control__select--BackgroundPosition);
+    background-size: var(--pf-c-form-control__select--BackgroundSize);
 
     &[aria-invalid="true"] {
       --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--invalid--PaddingRight);
       --pf-c-form-control--invalid--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm) - var(--pf-global--spacer--lg));
-      --pf-c-form-control--invalid--Background: var(--pf-c-form-control__select--invalid--Background);
+
+      background-image: var(--pf-c-form-control__select--BackgroundUrl), var(--pf-c-form-control--invalid--BackgroundUrl);
+      background-position: var(--pf-c-form-control__select--BackgroundPosition), var(--pf-c-form-control--invalid--BackgroundPosition);
+      background-size: var(--pf-c-form-control__select--BackgroundSize), var(--pf-c-form-control--invalid--BackgroundSize);
     }
 
     &.pf-m-success {
       --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--success--PaddingRight);
       --pf-c-form-control--success--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm) - var(--pf-global--spacer--lg));
-      --pf-c-form-control--success--Background: var(--pf-c-form-control__select--success--Background);
+
+      background-image: var(--pf-c-form-control__select--BackgroundUrl), var(--pf-c-form-control--success--BackgroundUrl);
+      background-position: var(--pf-c-form-control__select--BackgroundPosition), var(--pf-c-form-control--success--BackgroundPosition);
+      background-size: var(--pf-c-form-control__select--BackgroundSize), var(--pf-c-form-control--success--BackgroundSize);
     }
   }
 
