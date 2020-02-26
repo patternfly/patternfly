@@ -113,7 +113,7 @@ function compileMD0(srcFiles) {
           const exampleDiv = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
           html = getHTMLWithStyles(cssPaths, exampleDiv, 'ws-lite-full-page-example');
         } else {
-          html = getHTMLWithStyles(cssPaths, html);
+          html = getHTMLWithStyles(cssPaths, html, 'ws-lite-index-example');
         }
         fs.ensureFileSync(htmlPath);
         fs.writeFileSync(htmlPath, html);
