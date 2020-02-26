@@ -66,13 +66,21 @@ program
       nameCapitalized: inflection.capitalize(name),
       bemName: `${bemName}`,
       bemModifierBlock: `{{#if ${bemEntity}--modifier}} {{${bemEntity}--modifier}}{{/if}}`,
+      bemItemModifierBlock: `{{#if ${bemEntity}-item--modifier}} {{${bemEntity}-item--modifier}}{{/if}}`,
       moduleName,
       partialBlock: '{{> @partial-block}}',
-      attributeBlock: `{{#if ${bemEntity}--attribute}}
+      attributeBlock: `
+  {{#if ${bemEntity}--attribute}}
     {{{${bemEntity}--attribute}}}
   {{/if}}`,
-      moduleHbOpen: `{{#> ${dasherizedName}}}`,
+      attributeItemBlock: `id="{{${dasherizedName}-id}}-{{${dasherizedName}-item--id}}"
+  {{#if ${bemEntity}-item--attribute}}
+    {{{${bemEntity}-item--attribute}}}
+  {{/if}}`,
+      moduleHbOpen: `{{#> ${dasherizedName} ${dasherizedName}--id="${dasherizedName}--basic-example"}}`,
       moduleHbClose: `{{/${dasherizedName}}}`,
+      moduleHbIdConcatenationOpen: `{{#> ${dasherizedName}-item ${dasherizedName}--id="item"}}`,
+      moduleHbIdConcatenationClose: `{{/${dasherizedName}-item}}`,
       simpleExampleReference: `{${camelizedName}SimpleExample}`,
       complexExampleReference: `{${camelizedName}ComplexExample}`,
       complexExampleDocReference: `{${camelizedName}ComplexExampleDoc}`,

@@ -3,24 +3,21 @@
 
 // The value of component scoped variables is always defined by a global variable:
 .{{bemName}} {
-  // Example block variable
   --{{bemName}}--Color: var(--pf-global--Color--dark);
 
-  // Example element variable
-  --{{bemName}}__element--FontSize: var(--pf-global--FontSize--2xl);
-
-  // Example modifier variable
-  --{{bemName}}--m-danger--BackgroundColor: var(--pf-global--danger-color);
+  // Item
+  --{{bemName}}__item--FontSize: var(--pf-global--FontSize--2xl);
+  --{{bemName}}__item--m-selected--BackgroundColor: var(--pf-global--selected-color);
 
   color: var(--{{bemName}}--Color);
-
-  // Modifier
-  &.pf-m-danger {
-    background-color: var(--{{bemName}}--m-danger--BackgroundColor);
-  }
 }
 
-// Element
-.{{bemName}}__element {
-  font-size: var(--{{bemName}}__element--FontSize);
+// Item
+.{{bemName}}__item {
+  font-size: var(--{{bemName}}__item--FontSize);
+
+  // Selected
+  &.pf-m-selected {
+    background-color: var(--{{bemName}}__item--m-selected--BackgroundColor);
+  }
 }
