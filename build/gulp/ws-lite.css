@@ -1,58 +1,63 @@
-body:not(.ws-lite-full-page-example) {
+.ws-lite-index-example {
   padding: 3rem 3rem 5rem 3rem;
   background-color: var(--pf-global--BackgroundColor--300);
 }
 
-body:not(.ws-lite-full-page-example) > * {
+.ws-lite-index-example > * {
   margin-bottom: var(--pf-global--spacer--md);
 }
 
-body > h1:not(:last-child) {
+.ws-lite-index-example > h1 {
   margin-bottom: var(--pf-global--spacer--2xl);
 }
 
-body > h2:not(:last-child) {
+.ws-lite-index-example > h2 {
   margin-bottom: var(--pf-global--spacer--xl);
 }
 
-body > h3:not(:last-child) {
-  margin-bottom: var(--pf-global--spacer--lg);
-}
-
-body > h1 {
+.ws-lite-index-example > h1 {
   font-size: 2rem;
 }
 
-body > h2 {
+.ws-lite-index-example > h2 {
   font-size: 1.75rem;
 }
 
-body > h3 {
+.ws-lite-index-example > h3 {
   font-size: 1.5rem;
 }
 
-body > h5 {
+.ws-lite-index-example > h5 {
   font-size: 1.25rem;
 }
 
-body > h6 {
+.ws-lite-index-example > h6 {
   font-size: 1.125rem;
 }
 
-body > table {
+.ws-lite-index-example > h1,
+.ws-lite-index-example > h2,
+.ws-lite-index-example > h3,
+.ws-lite-index-example > h4,
+.ws-lite-index-example > h5,
+.ws-lite-index-example > h6 {
+  font-family: var(--pf-global--FontFamily--heading--sans-serif);
+}
+
+.ws-lite-index-example > table {
   width: 100%;
   margin-bottom: var(--pf-global--spacer--2xl);
   border: 1px solid var(--pf-global--BorderColor--200);
 }
 
-body > table tr th,
-body > table tr td {
+.ws-lite-index-example > table tr th,
+.ws-lite-index-example > table tr td {
   padding: var(--pf-global--spacer--md);
   background-color: var(--pf-global--BackgroundColor--100);
   border: 1px solid var(--pf-global--BorderColor--100);
 }
 
-body .ws-lite-example {
+.ws-lite-example {
   margin: 0 0 6rem;
   padding: 1rem;
   background-color: var(--pf-global--BackgroundColor--100);
@@ -67,6 +72,29 @@ body .ws-lite-example {
   padding: 0 .5em;
 }
 
-:not(.ws-lite-example) h1, :not(.ws-lite-example) h2, :not(.ws-lite-example) h3, :not(.ws-lite-example) h4, :not(.ws-lite-example) h5, :not(.ws-lite-example) h6 {
-  font-family: var(--pf-global--FontFamily--heading--sans-serif);
+.ws-lite-index-example .ws-lite-example-title {
+  font-size: var(--pf-global--FontSize--lg);
+  margin-top: var(--pf-global--spacer--lg);
+  margin-bottom: var(--pf-global--spacer--sm);
+}
+
+.ws-lite-example-title {
+  display: inline-block;
+  padding: var(--pf-global--spacer--sm) var(--pf-global--spacer--lg);
+  font-size: var(--pf-global--FontSize--md);
+  color: var(--pf-global--Color--light-100);
+  background: var(--pf-global--palette--blue-400);
+}
+
+.ws-lite-full-page-example .ws-lite-example-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: .7;
+  z-index: var(--pf-global--ZIndex--lg);
+}
+
+.ws-lite-full-page-example .ws-lite-full-example,
+.ws-lite-full-page-example .ws-preview-html {
+  height: 100%;
 }

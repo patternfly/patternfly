@@ -5,7 +5,7 @@ const { getExampleClassName, getExampleId } = require('gatsby-theme-patternfly-o
 // Helper
 function getWrapperDiv(section, title, exampleName, toWrap, classNames) {
   title = title.replace(/ /g, '-').trim();
-  return `<h3>${exampleName}</h3>
+  return `<h3 class="ws-lite-example-title">${exampleName}</h3>
     <div
       id="${getExampleId('core', section, title, exampleName)}"
       class="${classNames} ${getExampleClassName('core', section, title)}">
