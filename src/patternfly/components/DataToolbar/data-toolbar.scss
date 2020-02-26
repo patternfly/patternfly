@@ -6,34 +6,34 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 // Data toolbar
 .pf-c-data-toolbar {
   --pf-c-data-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-data-toolbar--RowGap: var(--pf-global--spacer--lg);
-  --pf-c-data-toolbar--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-data-toolbar--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar--RowGap: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar--md--RowGap: var(--pf-global--spacer--lg);
+
+  // --pf-c-data-toolbar--PaddingTop: var(--pf-global--spacer--md);
+  // --pf-c-data-toolbar--PaddingBottom: var(--pf-global--spacer--md);
 
   // Content
+  --pf-c-data-toolbar__content--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-data-toolbar__content--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar__content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-data-toolbar__content--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar__content--md--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-toolbar__content--md--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-data-toolbar__content--md--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-data-toolbar__content--md--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Expandable content
   --pf-c-data-toolbar__expandable-content--PaddingTop: var(--pf-c-data-toolbar--RowGap);
   --pf-c-data-toolbar__expandable-content--PaddingRight: var(--pf-c-data-toolbar__content--PaddingRight);
   --pf-c-data-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-data-toolbar__expandable-content--PaddingLeft: var(--pf-c-data-toolbar__content--PaddingLeft);
-  --pf-c-data-toolbar__expandable-content--lg--PaddingRight: 0;
-  --pf-c-data-toolbar__expandable-content--lg--PaddingBottom: 0;
-  --pf-c-data-toolbar__expandable-content--lg--PaddingLeft: 0;
   --pf-c-data-toolbar__expandable-content--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-data-toolbar__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
   --pf-c-data-toolbar__expandable-content--BackgroundColor: var(--pf-c-data-toolbar--BackgroundColor);
 
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-data-toolbar__expandable-content--PaddingRight: var(--pf-c-data-toolbar__expandable-content--lg--PaddingRight);
-    --pf-c-data-toolbar__expandable-content--PaddingBottom: var(--pf-c-data-toolbar__expandable-content--lg--PaddingBottom);
-    --pf-c-data-toolbar__expandable-content--PaddingLeft: var(--pf-c-data-toolbar__expandable-content--lg--PaddingLeft);
-  }
-
   // Expanded
-  --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter);
+  --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--spacer--md);
+  --pf-c-data-toolbar__expandable-content--m-expanded--md--GridRowGap: var(--pf-global--spacer--lg);
 
   // Chip container
   --pf-c-data-toolbar__group--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
@@ -89,11 +89,24 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   // Toggle
   --pf-c-data-toolbar__toggle--m-expanded__c-button--m-plain--Color: var(--pf-global--Color--100);
 
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-data-toolbar__content--PaddingTop: var(--pf-c-data-toolbar__content--md--PaddingTop);
+    --pf-c-data-toolbar__content--PaddingRight: var(--pf-c-data-toolbar__content--md--PaddingRight);
+    --pf-c-data-toolbar__content--PaddingBottom: var(--pf-c-data-toolbar__content--md--PaddingBottom);
+    --pf-c-data-toolbar__content--PaddingLeft: var(--pf-c-data-toolbar__content--md--PaddingLeft);
+    --pf-c-data-toolbar--RowGap: var(--pf-c-data-toolbar--md--RowGap);
+    --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-c-data-toolbar__expandable-content--m-expanded--md--GridRowGap);
+    --pf-c-data-toolbar__expandable-content--PaddingRight: 0;
+    --pf-c-data-toolbar__expandable-content--PaddingLeft: 0;
+  }
+
   position: relative;
-  row-gap: var(--pf-c-data-toolbar--RowGap);
+
+  // row-gap: var(--pf-c-data-toolbar--RowGap);
   display: grid;
-  padding-top: var(--pf-c-data-toolbar--PaddingTop);
-  padding-bottom: var(--pf-c-data-toolbar--PaddingBottom);
+
+  // padding-top: var(--pf-c-data-toolbar--PaddingTop);
+  // padding-bottom: var(--pf-c-data-toolbar--PaddingBottom);
   background-color: var(--pf-c-data-toolbar--BackgroundColor);
 }
 
@@ -240,8 +253,14 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 // Content
 .pf-c-data-toolbar__content {
   position: relative;
+  padding-top: var(--pf-c-data-toolbar__content--PaddingTop);
   padding-right: var(--pf-c-data-toolbar__content--PaddingRight);
+  padding-bottom: var(--pf-c-data-toolbar__content--PaddingBottom);
   padding-left: var(--pf-c-data-toolbar__content--PaddingLeft);
+
+  &.pf-m-no-padding {
+    padding: 0;
+  }
 }
 
 // Content section
@@ -258,12 +277,12 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   z-index: var(--pf-c-data-toolbar__expandable-content--ZIndex);
   display: none;
   width: 100%;
-  padding: var(--pf-c-data-toolbar__expandable-content--PaddingTop) var(--pf-c-data-toolbar__expandable-content--PaddingRight) var(--pf-c-data-toolbar__expandable-content--PaddingBottom) var(--pf-c-data-toolbar__expandable-content--PaddingLeft);
+  padding: var(--pf-c-data-toolbar__expandable-content--PaddingTop) var(--pf-c-data-toolbar__expandable-content--PaddingRight) 0 var(--pf-c-data-toolbar__expandable-content--PaddingLeft);
   visibility: hidden;
   background-color: var(--pf-c-data-toolbar__expandable-content--BackgroundColor);
   box-shadow: var(--pf-c-data-toolbar__expandable-content--BoxShadow);
 
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     position: static;
     box-shadow: none;
   }
@@ -288,6 +307,10 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     display: none;
     visibility: hidden;
   }
+}
+
+.pf-c-data-toolbar__content + .pf-c-data-toolbar__content {
+  --pf-c-data-toolbar__content--PaddingTop: 0;
 }
 
 // Chip container
