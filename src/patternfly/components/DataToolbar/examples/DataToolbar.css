@@ -13,8 +13,7 @@
 #ws-core-c-datatoolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded {
   min-height: 28rem;
 }
-#ws-core-c-data toolbar-simple
-#ws-core-c-datatoolbar-simple .pf-c-data-toolbar,
+
 #ws-core-c-datatoolbar-simple .pf-c-data-toolbar__group,
 #ws-core-c-datatoolbar-simple .pf-c-data-toolbar__item:not(.pf-m-separator),
 #ws-core-c-datatoolbar-adjusted-spacers .pf-c-data-toolbar,
@@ -32,4 +31,13 @@
 #ws-core-c-datatoolbar-adjusted-spacers .pf-c-data-toolbar__item:not(.pf-m-separator),
 #ws-core-c-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__item:not(.pf-m-separator) {
   padding: .5rem;
+}
+
+#data-toolbar-simple-example .pf-c-data-toolbar__item:not(.pf-m-separator) {
+  border: 2px dashed #393f44;
+  padding: .5rem;
+}
+
+body div.ws-lite-example {
+  padding: 0;
 }
