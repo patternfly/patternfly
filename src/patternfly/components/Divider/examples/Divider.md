@@ -23,28 +23,24 @@ import './Divider.css'
 {{> divider divider--type="div"}}
 ```
 
-```hbs title=Insets
-<div>No inset</div>
-{{> divider divider--type="div"}}
-<div>Small inset on sm</div>
-{{> divider divider--type="div" divider--modifier="pf-m-inset-sm-on-sm"}}
-<div>Large inset on md</div>
-{{> divider divider--type="div" divider--modifier="pf-m-inset-sm-on-sm pf-m-inset-lg-on-md"}}
-<div>2xl inset on lg</div>
-{{> divider divider--type="div" divider--modifier="pf-m-inset-sm-on-sm pf-m-inset-xl-on-md pf-m-inset-2xl-on-lg"}}
+```hbs title=Inset-medium
+{{> divider divider--type="div" divider--modifier="pf-m-inset-md"}}
+```
+
+```hbs title=Md-inset,-no-inset-on-md,-3xl-inset-on-lg,-lg-inset-on-xl
+{{> divider divider--type="div" divider--modifier="pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-3xl-on-lg pf-m-inset-lg-on-xl"}}
 ```
 
 ```hbs title=Vertical
-{{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md"}}
 ```
 
-```hbs title=Vertical-insets
-<div>No inset</div>
-{{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
-<div>Small inset on sm</div>
-{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm"}}
-<div>Medium inset on md</div>
-{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-sm-on-sm pf-m-inset-md-on-md"}}
+```hbs title=Vertical,-inset-medium
+{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md"}}
+```
+
+```hbs title=Vertical,-md-inset,-no-inset-on-md,-lg-inset-on-lg,-sm-inset-on-xl
+{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-lg-on-lg pf-m-inset-sm-on-xl"}}
 ```
 
 ## Documentation
@@ -61,4 +57,4 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 | -- | -- | -- |
 | `.pf-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |
 | `.pf-m-vertical` | `.pf-c-divider` | Modifies the divider component from horizontal to vertical. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-divider` | Modifies a divider inset to match spacer system. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-divider` | Modifies a divider inset to match spacer system. |
