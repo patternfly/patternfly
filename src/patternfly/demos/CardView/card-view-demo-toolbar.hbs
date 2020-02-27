@@ -1,67 +1,42 @@
-{{#> toolbar toolbar--id="toolbar-card-example"}}
-  {{#> dropdown dropdown--modifier="pf-c-toolbar__bulk-select" dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id "-dropdown-bulk-select")}}
-    {{> dropdown-toggle-check aria-label="Select all"}}
-    {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-  {{/dropdown}}
-  {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle" button--attribute='aria-label="Filter results"'}}
-    <i class="fas fa-filter" aria-hidden="true"></i>
-  {{/button}}
-  {{#> toolbar-filter}}
-    {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
-      <i class="fas fa-filter" aria-hidden="true"></i>
-      Creator
-    {{/select}}
-  {{/toolbar-filter}}
-  {{#> toolbar-action-group}}
-    {{#> button button--modifier="pf-m-primary"}}
-      Create a project
-    {{/button}}
-  {{/toolbar-action-group}}
-  {{#> dropdown id=(concat toolbar--id '-dropdown-simple') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
-  {{/dropdown}}
-  {{#> pagination pagination--attribute='aria-label="Element pagination"'}}
-    {{#> pagination-total-items}}
-      20 Items
-    {{/pagination-total-items}}
-    {{#> options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--label-text="Items per page" options-menu--IsText="true"}}
-      {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
-        <span class="pf-c-options-menu__toggle-text">
-          <b>1 - 10</b> of <b>20</b>
-        </span>
-        {{> options-menu-toggle-button aria-label="Select"}}
-      {{/options-menu-toggle}}
-      {{#> options-menu-menu}}
-        {{#> options-menu-menu-item}}
-          5 <span class="pf-c-pagination__menu-text">per page</span>
-        {{/options-menu-menu-item}}
-        {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
-          10 <span class="pf-c-pagination__menu-text">per page</span>
-        {{/options-menu-menu-item}}
-        {{#> options-menu-menu-item}}
-          20 <span class="pf-c-pagination__menu-text">per page</span>
-        {{/options-menu-menu-item}}
-      {{/options-menu-menu}}
-    {{/options-menu}}
-
-
-    {{#> pagination-nav}}
-      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
-        <i class="fas fa-angle-double-left" aria-hidden="true"></i>
-      {{/button}}
-      {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
-        <i class="fas fa-angle-left" aria-hidden="true"></i>
-      {{/button}}
-      {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 2"'}}
-        {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="2" value="1"'}}
-        <span aria-hidden="true">of 2</span>
-      {{/pagination-nav-page-select}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-      {{/button}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
-        <i class="fas fa-angle-double-right" aria-hidden="true"></i>
-      {{/button}}
-    {{/pagination-nav}}
-  {{/pagination}}
-  {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
-{{/toolbar}}
+{{#> data-toolbar data-toolbar--id=(concat page--id '-data-toolbar')}}
+  {{#> data-toolbar-content}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
+        {{#> dropdown dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id "-dropdown-bulk-select")}}
+          {{> dropdown-toggle-check aria-label="Select all"}}
+          {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
+        {{/dropdown}}
+      {{/data-toolbar-item}}
+      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-search-filter"}}
+        {{#> input-group}}
+          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+            Creator
+          {{/select}}
+        {{/input-group}}
+      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--control="true"
+        data-toolbar-overflow-menu-example--persistent="true"
+        data-toolbar-overflow-menu-example--primary-text="Create a project"}}
+      {{#unless data-toolbar--NoPagination}}
+        {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+          {{#> pagination pagination--modifier="pf-m-compact"}}
+            {{#> pagination-total-items}}
+              <b>1 - 10</b> of <b>37</b>
+            {{/pagination-total-items}}
+            {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
+            {{#> pagination-nav}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
+                <i class="fas fa-angle-left" aria-hidden="true"></i>
+              {{/button}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+              {{/button}}
+            {{/pagination-nav}}
+          {{/pagination}}
+        {{/data-toolbar-item}}
+      {{/unless}}
+    {{/data-toolbar-content-section}}
+    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+  {{/data-toolbar-content}}
+{{/data-toolbar}}

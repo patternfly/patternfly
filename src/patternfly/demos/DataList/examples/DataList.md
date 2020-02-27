@@ -111,7 +111,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
-        {{> data-list-without-pagination-toolbar}}
+        {{> data-list-toolbar data-list-toolbar--NoPagination="true"}}
         {{> data-list-simple-no-pagination-data-list}}
       {{/card}}
     {{/page-main-section}}
@@ -139,7 +139,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
-        {{> data-list-toolbar data-list-toolbar--IsCompactPagination="true"}}
+        {{> data-list-toolbar}}
         {{> data-list-simple-data-list}}
         {{> data-list-pagination}}
       {{/card}}

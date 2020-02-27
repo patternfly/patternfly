@@ -221,42 +221,44 @@ import './DataToolbar.css'
     {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
-    {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
-      {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id=(concat data-toolbar--id '-group1-')}}
-        {{#> chip-group-list-item}}
-          {{#> chip-group-label}}
-            Status
-          {{/chip-group-label}}
-          {{#> chip-group chip-group--modifier=""}}
-            {{#> chip}}
-              {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
-                Cancelled
-              {{/chip-text}}
-              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
-                <i class="fas fa-times-circle" aria-hidden="true"></i>
-              {{/button}}
-            {{/chip}}
-            {{#> chip}}
-              {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
-                Paused
-              {{/chip-text}}
-              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
-                <i class="fas fa-times-circle" aria-hidden="true"></i>
-              {{/button}}
-            {{/chip}}
-            {{#> chip}}
-              {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
-                Restarted
-              {{/chip-text}}
-              {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
-                <i class="fas fa-times-circle" aria-hidden="true"></i>
-              {{/button}}
-            {{/chip}}
-          {{/chip-group}}
-        {{/chip-group-list-item}}
-      {{/chip-group}}
-    {{/data-toolbar-item}}
-    {{> data-toolbar-item-clear}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
+        {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id=(concat data-toolbar--id '-group1-')}}
+          {{#> chip-group-list-item}}
+            {{#> chip-group-label}}
+              Status
+            {{/chip-group-label}}
+            {{#> chip-group chip-group--modifier=""}}
+              {{#> chip}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
+                  Cancelled
+                {{/chip-text}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                {{/button}}
+              {{/chip}}
+              {{#> chip}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
+                  Paused
+                {{/chip-text}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                {{/button}}
+              {{/chip}}
+              {{#> chip}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
+                  Restarted
+                {{/chip-text}}
+                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                {{/button}}
+              {{/chip}}
+            {{/chip-group}}
+          {{/chip-group-list-item}}
+        {{/chip-group}}
+      {{/data-toolbar-item}}
+      {{> data-toolbar-item-clear}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -288,53 +290,55 @@ import './DataToolbar.css'
     {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
-      {{#> data-toolbar-item}}
-        {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
-          Status
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item}}
-        {{#> select id=(concat data-toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
-          Filter by status
-        {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
-        {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
-          {{#> chip-group-list-item}}
-            {{#> chip-group-label}}
-              Status
-            {{/chip-group-label}}
-            {{#> chip-group newcontext}}
-              {{#> chip}}
-                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
-                  Cancelled
-                {{/chip-text}}
-                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
-                  <i class="fas fa-times-circle" aria-hidden="true"></i>
-                {{/button}}
-              {{/chip}}
-              {{#> chip}}
-                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
-                  Paused
-                {{/chip-text}}
-                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
-                  <i class="fas fa-times-circle" aria-hidden="true"></i>
-                {{/button}}
-              {{/chip}}
-              {{#> chip}}
-                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
-                  Restarted
-                {{/chip-text}}
-                {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
-                  <i class="fas fa-times-circle" aria-hidden="true"></i>
-                {{/button}}
-              {{/chip}}
-            {{/chip-group}}
-          {{/chip-group-list-item}}
-        {{/chip-group}}
-      {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
+            Status
+          {{/select}}
+        {{/data-toolbar-item}}
+        {{#> data-toolbar-item}}
+          {{#> select id=(concat data-toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            Filter by status
+          {{/select}}
+        {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-item-clear}}
+      {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-chip-container"}}
+        {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
+          {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
+            {{#> chip-group-list-item}}
+              {{#> chip-group-label}}
+                Status
+              {{/chip-group-label}}
+              {{#> chip-group newcontext}}
+                {{#> chip}}
+                  {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
+                    Cancelled
+                  {{/chip-text}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  {{/button}}
+                {{/chip}}
+                {{#> chip}}
+                  {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
+                    Paused
+                  {{/chip-text}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  {{/button}}
+                {{/chip}}
+                {{#> chip}}
+                  {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
+                    Restarted
+                  {{/chip-text}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  {{/button}}
+                {{/chip}}
+              {{/chip-group}}
+            {{/chip-group-list-item}}
+          {{/chip-group}}
+        {{/data-toolbar-item}}
+        {{> data-toolbar-item-clear}}
+      {{/data-toolbar-group}}
     {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}

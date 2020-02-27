@@ -6,7 +6,11 @@
         {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
           {{#> overflow-menu-item}}
             {{#> button button--modifier="pf-m-primary"}}
-              Primary
+              {{#if data-toolbar-overflow-menu-example--primary-text}}
+                {{{data-toolbar-overflow-menu-example--primary-text}}}
+              {{else}}
+                Primary
+              {{/if}}
             {{/button}}
           {{/overflow-menu-item}}
           {{#> overflow-menu-item}}
@@ -23,7 +27,11 @@
         {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
           {{#> overflow-menu-item}}
             {{#> button button--modifier="pf-m-primary"}}
-              Primary
+              {{#if data-toolbar-overflow-menu-example--primary-text}}
+                {{{data-toolbar-overflow-menu-example--primary-text}}}
+              {{else}}
+                Primary
+              {{/if}}
             {{/button}}
           {{/overflow-menu-item}}
         {{/overflow-menu-group}}
@@ -34,7 +42,11 @@
       {{#> overflow-menu-control overflow-menu-button--aria-label="Overflow menu"}}
         {{#unless data-toolbar-overflow-menu-example--content}}
           {{#> overflow-menu-dropdown-item}}
-            Primary
+            {{#if data-toolbar-overflow-menu-example--primary-text}}
+              {{{data-toolbar-overflow-menu-example--primary-text}}}
+            {{else}}
+              Primary
+            {{/if}}
           {{/overflow-menu-dropdown-item}}
           {{#> overflow-menu-dropdown-item}}
             Secondary

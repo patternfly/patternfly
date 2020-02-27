@@ -25,6 +25,7 @@ Data toolbar relies on groups (`.pf-c-data-toolbar__group`) and items (`.pf-c-da
 | `.pf-m-bulk-select` | `.pf-c-data-toolbar__item` | Initiates bulk select spacing. Spacer value is set to `var(--pf-c-data-toolbar--m-bulk-select--spacer)`. |
 | `.pf-m-overflow-menu` | `.pf-c-data-toolbar__item` | Initiates overflow menu spacing. Spacer value is set to `var(--pf-c-data-toolbar--m-overflow-menu--spacer)`. |
 | `.pf-m-pagination` | `.pf-c-data-toolbar__item` | Initiates pagination spacing and margin. Spacer value is set to `var(--pf-c-data-toolbar--m-pagination--spacer)`. |
+| `.pf-m-icon-button` | `.pf-c-data-toolbar__item` | Initiates icon button spacing. | Spacer value is set to `var(--pf-c-data-toolbar--m-icon-button--spacer)`. |
 | `.pf-m-search-filter` | `.pf-c-data-toolbar__item` | Initiates search filter spacing. Spacer value is set to `var(--pf-c-data-toolbar--m-search-filter--spacer)`. |
 
 ### Modifiers
@@ -324,10 +325,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{/data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content}}
-    {{#> data-toolbar-item}}
-      6 filters applied
-    {{/data-toolbar-item}}
-    {{> data-toolbar-item-clear}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-item}}
+        6 filters applied
+      {{/data-toolbar-item}}
+      {{> data-toolbar-item-clear}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -394,11 +397,13 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
-    {{#> data-toolbar-group data-toolbar-group--modifier=""}}
-      {{> data-toolbar-item-chip-group chip-group--label="Status"}}
-      {{> data-toolbar-item-chip-group chip-group--label="Risk"}}
-    {{/data-toolbar-group}}
-    {{> data-toolbar-item-clear}}
+    {{#> data-toolbar-content-section}}
+      {{#> data-toolbar-group data-toolbar-group--modifier=""}}
+        {{> data-toolbar-item-chip-group chip-group--label="Status"}}
+        {{> data-toolbar-item-chip-group chip-group--label="Risk"}}
+      {{/data-toolbar-group}}
+      {{> data-toolbar-item-clear}}
+    {{/data-toolbar-content-section}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -556,29 +561,31 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-data-toolbar` | `<div>` | Initiates the toolbar component. **Required** |
-| `.pf-c-data-toolbar__item` | `<div>` | Initiates a toolbar item. **Required** |
-| `.pf-c-data-toolbar__group` | `<div>` | Initiates a toolbar group. |
-| `.pf-c-data-toolbar__content` | `<div>` | Initiates a toolbar content container. **Required** |
-| `.pf-c-data-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-c-data-toolbar__content-section` per `.pf-c-data-toolbar__content` **Required** |
-| `.pf-c-data-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
-| `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
-| `.pf-m-separator` | `.pf-c-data-toolbar__item` | Initiates separator border. |
+| `.pf-c-data-toolbar` | `<div>` | Initiates the data toolbar component. **Required** |
+| `.pf-c-data-toolbar__item` | `<div>` | Initiates a data toolbar item. **Required** |
+| `.pf-c-data-toolbar__group` | `<div>` | Initiates a data toolbar group. |
+| `.pf-c-data-toolbar__content` | `<div>` | Initiates a data toolbar content container. **Required** |
+| `.pf-c-data-toolbar__content-section` | `<div>` | Initiates a data toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-c-data-toolbar__content-section` per `.pf-c-data-toolbar__content` **Required** |
+| `.pf-c-data-toolbar__expandable-content` | `<div>` | Initiates a data toolbar expandable content section. |
+| `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content` | Modifies an expandable content section for the expanded state. |
+| `.pf-m-separator` | `.pf-c-data-toolbar__item` | Initiates a separator border. |
 | `.pf-m-bulk-select` | `.pf-c-data-toolbar__item` | Initiates bulk select spacing. |
 | `.pf-m-overflow-menu` | `.pf-c-data-toolbar__item` | Initiates overflow menu spacing. |
 | `.pf-m-pagination` | `.pf-c-data-toolbar__item` | Initiates pagination spacing and margin. |
+| `.pf-m-icon-button` | `.pf-c-data-toolbar__item` | Initiates icon button spacing. |
 | `.pf-m-search-filter` | `.pf-c-data-toolbar__item` | Initiates search filter spacing. |
 | `.pf-m-chip-group` | `.pf-c-data-toolbar__item` | Initiates chip group spacing. |
 | `.pf-m-button-group` | `.pf-c-data-toolbar__group` | Initiates button group spacing. |
 | `.pf-m-icon-button-group` | `.pf-c-data-toolbar__group` | Initiates icon button group spacing. |
 | `.pf-m-filter-group` | `.pf-c-data-toolbar__group` | Initiates filter group spacing. |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to be hidden, at optional breakpoint. |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to be shown, at optional breakpoint. |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
-| `.pf-m-label` | `.pf-c-data-toolbar__item` | Modifies toolbar item to label. |
-| `.pf-m-chip-container` | `.pf-c-data-toolbar__content`, `.pf-c-data-toolbar__group` | Modifies the data toolbar element for applied filters layout. |
-| `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies the component for the expanded state. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies a data toolbar element to be hidden, at optional breakpoint. |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies a data toolbar element to be shown, at optional breakpoint. |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies a data toolbar element to align right, at optional breakpoint. |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-data-toolbar > *` | Modifies a data toolbar element to align left, at optional breakpoint. |
+| `.pf-m-label` | `.pf-c-data-toolbar__item` | Modifies data toolbar item to label. |
+| `.pf-m-chip-container` | `.pf-c-data-toolbar__content`, `.pf-c-data-toolbar__group` | Modifies a data toolbar element for applied filters layout. |
+| `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content`, `.pf-c-data-toolbar__toggle` | Modifies a data toolbar element for the expanded state. |
+| `.pf-m-no-padding` | `.pf-c-data-toolbar` | Modifies the data toolbar padding to 0. |
 
 ### Accessibility
 

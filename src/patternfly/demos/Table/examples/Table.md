@@ -53,7 +53,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
-        {{> table-toolbar-no-sort}}
+        {{> table-toolbar table-toolbar--NoSort="true"}}
         {{> table-sortable-table}}
         {{> table-pagination}}
       {{/card}}
@@ -140,7 +140,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
-        {{> table-toolbar-no-sort}}
+        {{> table-toolbar table-toolbar--NoSort="true"}}
         {{> table-compound-expansion-table}}
         {{> table-pagination}}
       {{/card}}
