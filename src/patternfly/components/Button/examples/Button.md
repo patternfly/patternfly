@@ -43,12 +43,17 @@ import './Button.css'
   {{/button-icon}}
 {{/button}}
 
+{{#> button button--modifier="pf-m-inline pf-m-link"}}
+  Inline link
+{{/button}}
+<br>
+<br>
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 
-{{#> button button--modifier="pf-m-inline pf-m-link"}}
-  Inline link
+{{#> button button--modifier="pf-m-inline pf-m-plain" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br>
 <br>
@@ -172,7 +177,7 @@ import './Button.css'
 {{/button}}
 <br>
 <br>
-{{#> button button--modifier="pf-m-link pf-m-inline pf-m-inline"}}
+{{#> button button--modifier="pf-m-link pf-m-inline"}}
   Inline link
 {{/button}}
 
@@ -186,6 +191,23 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
   Inline link disabled
+{{/button}}
+<br>
+<br>
+{{#> button button--modifier="pf-m-plain pf-m-inline" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain pf-m-inline pf-m-focus" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain pf-m-inline pf-m-active" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain pf-m-inline" button--attribute='disabled aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br>
 <br>
@@ -272,8 +294,8 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
 | `.pf-m-danger` | `.pf-c-button` | Modifies for danger styles. |
 | `.pf-m-link` | `.pf-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
-| `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
-| `.pf-m-inline` | `.pf-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link, has no padding, and is displayed inline with other inline content. |
+| `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for icon buttons such as close, expand, kebab, etc. |
+| `.pf-m-inline` | `.pf-c-button.pf-m-link`, `.pf-c-button.pf-m-plain` | Modifies for inline styles. This button has no padding and is displayed inline with other inline content. |
 | `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
 | `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies a control button for the expanded state. |
