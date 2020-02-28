@@ -2,13 +2,7 @@
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
       {{> data-toolbar-item-bulk-select}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-search-filter"}}
-        {{#> input-group}}
-          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
-            Creator
-          {{/select}}
-        {{/input-group}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-item-search-filter data-toolbar-item-search-filter--label="Creator"}}
       {{> data-toolbar-overflow-menu-example
         data-toolbar-overflow-menu-example--control="true"
         data-toolbar-overflow-menu-example--persistent="true"

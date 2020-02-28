@@ -572,6 +572,7 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-m-bulk-select` | `.pf-c-data-toolbar__item` | Initiates bulk select spacing. |
 | `.pf-m-overflow-menu` | `.pf-c-data-toolbar__item` | Initiates overflow menu spacing. |
 | `.pf-m-pagination` | `.pf-c-data-toolbar__item` | Initiates pagination spacing and margin. |
+| `.pf-m-icon-button` | `.pf-c-data-toolbar__item` | Initiates icon button spacing. |
 | `.pf-m-search-filter` | `.pf-c-data-toolbar__item` | Initiates search filter spacing. |
 | `.pf-m-chip-group` | `.pf-c-data-toolbar__item` | Initiates chip group spacing. |
 | `.pf-m-button-group` | `.pf-c-data-toolbar__group` | Initiates button group spacing. |

@@ -1,4 +1,4 @@
-{{#> data-toolbar-item data-toolbar-item--modifier=data-toolbar-item-search-filter--modifier}}
+{{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-search-filter ' data-toolbar-item-search-filter--modifier)}}
   {{#if data-toolbar-item-search-filter--HasTextInput}}
     {{#> input-group input-group--attribute=(concat 'aria-label="Search filter" role="group"')}}
       {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
