@@ -1,10 +1,8 @@
 <button class="pf-c-options-menu__toggle-button{{#if options-menu-toggle-button--modifier}} {{options-menu-toggle-button--modifier}}{{/if}}"
-  id="{{id}}-toggle"
+  id="{{options-menu--id}}-toggle"
   aria-haspopup="listbox"
+  aria-label="Items per page"
   aria-expanded="{{#if options-menu--IsExpanded}}true{{else}}false{{/if}}"
-  {{#if aria-label}}
-    aria-label="{{aria-label}}"
-  {{/if}}
   {{#if options-menu-toggle--IsDisabled}}
     disabled
   {{/if}}

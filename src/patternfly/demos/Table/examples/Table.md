@@ -26,7 +26,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar}}
         {{> table-simple-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -55,7 +55,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar table-toolbar--NoSort="true"}}
         {{> table-sortable-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -84,7 +84,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar}}
         {{> table-expandable-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -113,7 +113,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar}}
         {{> table-compact-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -142,7 +142,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar table-toolbar--NoSort="true"}}
         {{> table-compound-expansion-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -171,7 +171,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar}}
         {{> table-loading-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -200,7 +200,7 @@ section: demos
       {{#> card}}
         {{> table-toolbar}}
         {{> table-empty-state-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -227,9 +227,9 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
       {{#> card}}
-        {{> table-toolbar table-toolbar--IsCompactPagination="true"}}
+        {{> table-toolbar}}
         {{> table-simple-table}}
-        {{> table-pagination}}
+        {{> table-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}

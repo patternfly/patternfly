@@ -20,7 +20,7 @@ cssPrefix: pf-c-toolbar
       Filter
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -56,7 +56,7 @@ cssPrefix: pf-c-toolbar
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -77,7 +77,7 @@ cssPrefix: pf-c-toolbar
       37 items
     {{/pagination-total-items}}
 
-    {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
+    {{> pagination-options-menu options-menu--id=(concat toolbar--id '-pagination-options-menu')  options-menu--IsText="true"}}
 
     {{#> pagination-nav}}
       {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
@@ -119,7 +119,7 @@ cssPrefix: pf-c-toolbar
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort" options-menu--IsExpanded="true"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort" options-menu--IsExpanded="true"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -140,7 +140,7 @@ cssPrefix: pf-c-toolbar
       37 items
     {{/pagination-total-items}}
 
-    {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--IsExpanded="true"  options-menu--IsText="true"}}
+    {{> pagination-options-menu options-menu--id=(concat toolbar--id '-pagination-options-menu') options-menu--IsExpanded="true"  options-menu--IsText="true"}}
 
     {{#> pagination-nav}}
       {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
@@ -182,7 +182,7 @@ cssPrefix: pf-c-toolbar
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -219,7 +219,7 @@ cssPrefix: pf-c-toolbar
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -295,7 +295,7 @@ cssPrefix: pf-c-toolbar
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options-menu')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}
@@ -332,7 +332,7 @@ cssPrefix: pf-c-toolbar
       Status
     {{/select}}
   {{/toolbar-filter}}
-  {{#> options-menu id=(concat toolbar--id '-options')  options-menu--modifier="pf-c-toolbar__sort"}}
+  {{#> options-menu options-menu--id=(concat toolbar--id '-options')  options-menu--modifier="pf-c-toolbar__sort"}}
     {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
       <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
     {{/options-menu-toggle}}

@@ -1,52 +1,19 @@
 {{#> data-toolbar data-toolbar--id=(concat page--id '-data-toolbar')}}
   {{#> data-toolbar-content}}
     {{#> data-toolbar-content-section}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-bulk-select"}}
-        {{#> dropdown dropdown--IsBulkSelect="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button" id=(concat toolbar--id "-dropdown-bulk-select")}}
-          {{> dropdown-toggle-check aria-label="Select all"}}
-          {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-        {{/dropdown}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-search-filter"}}
-        {{#> input-group}}
-          {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
-            Name
-          {{/select}}
-        {{/input-group}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-item-bulk-select}}
+      {{> data-toolbar-item-search-filter}}
       {{#unless data-toolbar--NoSort}}
-        {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-icon-button"}}
-          {{#> options-menu id=(concat toolbar--id '-options-menu')}}
-            {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
-              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-            {{/options-menu-toggle}}
-            {{> options-menu-multiple}}
-          {{/options-menu}}
-        {{/data-toolbar-item}}
+        {{> data-toolbar-item-sort}}
       {{/unless}}
       {{> data-toolbar-overflow-menu-example
         data-toolbar-overflow-menu-example--content="true"
         data-toolbar-overflow-menu-example--control="true"
         }}
       {{#unless data-toolbar--NoPagination}}
-        {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-          {{#> pagination pagination--modifier="pf-m-compact"}}
-            {{#> pagination-total-items}}
-              <b>1 - 10</b> of <b>37</b>
-            {{/pagination-total-items}}
-            {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-            {{#> pagination-nav}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-                <i class="fas fa-angle-left" aria-hidden="true"></i>
-              {{/button}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-                <i class="fas fa-angle-right" aria-hidden="true"></i>
-              {{/button}}
-            {{/pagination-nav}}
-          {{/pagination}}
-        {{/data-toolbar-item}}
+        {{> data-toolbar-item-pagination}}
       {{/unless}}
     {{/data-toolbar-content-section}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+    {{> data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}

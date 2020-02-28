@@ -28,25 +28,13 @@ import './DataToolbar.css'
           {{/data-toolbar-item}}
         {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-          {{#> pagination-nav}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            {{/button}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/pagination-nav}}
-        {{/pagination}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--content="true"
+        data-toolbar-overflow-menu-example--control="true"
+        }}
+      {{> data-toolbar-item-pagination-compact}}
     {{/data-toolbar-content-section}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+    {{> data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -58,23 +46,11 @@ import './DataToolbar.css'
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
         {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-          {{#> pagination-nav}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            {{/button}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/pagination-nav}}
-        {{/pagination}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--content="true"
+        data-toolbar-overflow-menu-example--control="true"
+        }}
+      {{> data-toolbar-item-pagination-compact}}
     {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
@@ -115,25 +91,13 @@ import './DataToolbar.css'
           {{/data-toolbar-item}}
         {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-          {{#> pagination-nav}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            {{/button}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/pagination-nav}}
-        {{/pagination}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--content="true"
+        data-toolbar-overflow-menu-example--control="true"
+        }}
+      {{> data-toolbar-item-pagination-compact}}
     {{/data-toolbar-content-section}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+    {{> data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
 {{/data-toolbar}}
 ```
@@ -145,23 +109,11 @@ import './DataToolbar.css'
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
         {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-          {{#> pagination-nav}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            {{/button}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/pagination-nav}}
-        {{/pagination}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--content="true"
+        data-toolbar-overflow-menu-example--control="true"
+        }}
+      {{> data-toolbar-item-pagination-compact}}
     {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}
@@ -200,25 +152,13 @@ import './DataToolbar.css'
           {{/data-toolbar-item}}
         {{/data-toolbar-group}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-          {{#> pagination-nav}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            {{/button}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/pagination-nav}}
-        {{/pagination}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--content="true"
+        data-toolbar-overflow-menu-example--control="true"
+        }}
+      {{> data-toolbar-item-pagination-compact}}
     {{/data-toolbar-content-section}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
+    {{> data-toolbar-expandable-content}}
   {{/data-toolbar-content}}
   {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
     {{#> data-toolbar-content-section}}
@@ -270,23 +210,11 @@ import './DataToolbar.css'
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-toggle-group"}}
         {{> data-toolbar-toggle data-toolbar-toggle--modifier="pf-m-expanded" data-toolbar-toggle--IsExpanded="true"}}
       {{/data-toolbar-group}}
-      {{> data-toolbar-overflow-menu-example data-toolbar-overflow-menu-example--content="true" data-toolbar-overflow-menu-example--control="true"}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
-        {{#> pagination pagination--modifier="pf-m-compact"}}
-          {{#> pagination-total-items}}
-            <b>1 - 10</b> of <b>37</b>
-          {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
-          {{#> pagination-nav}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            {{/button}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/pagination-nav}}
-        {{/pagination}}
-      {{/data-toolbar-item}}
+      {{> data-toolbar-overflow-menu-example
+        data-toolbar-overflow-menu-example--content="true"
+        data-toolbar-overflow-menu-example--control="true"
+        }}
+      {{> data-toolbar-item-pagination-compact}}
     {{/data-toolbar-content-section}}
     {{#> data-toolbar-expandable-content data-toolbar-expandable-content--IsExpanded="true"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-filter-group"}}

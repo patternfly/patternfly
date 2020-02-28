@@ -14,7 +14,6 @@
   min-height: 22rem;
 }
 
-#ws-core-c-data-toolbar-simple .pf-c-data-toolbar__group,
 #ws-core-c-data-toolbar-simple .pf-c-data-toolbar__item:not(.pf-m-separator),
 #ws-core-c-data-toolbar-adjusted-spacers .pf-c-data-toolbar__item:not(.pf-m-separator),
 #ws-core-c-data-toolbar-adjusted-group-spacers .pf-c-data-toolbar__item:not(.pf-m-separator) {

@@ -6,11 +6,8 @@ cssPrefix: pf-c-pagination
 
 ## Examples
 ```hbs title=Top isFullscreen
-{{#> pagination}}
-  {{#> pagination-total-items}}
-    <b>1 - 10</b> of <b>37</b>
-  {{/pagination-total-items}}
-  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example"  options-menu--IsText="true"}}
+{{#> pagination pagination--id="top-example"}}
+  {{> pagination-options-menu options-menu--IsText="true"}}
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page"'}}
       <i class="fas fa-angle-double-left" aria-hidden="true"></i>
@@ -33,11 +30,8 @@ cssPrefix: pf-c-pagination
 ```
 
 ```hbs title=Top-expanded isFullscreen
-{{#> pagination}}
-  {{#> pagination-total-items}}
-    <b>1 - 10</b> of <b>37</b>
-  {{/pagination-total-items}}
-  {{> pagination-options-menu options-menu--IsExpanded="true" id="pagination-options-menu-top-expanded-example" options-menu--IsText="true"}}
+{{#> pagination pagination--id="top-expanded-example"}}
+  {{> pagination-options-menu options-menu--IsExpanded="true" options-menu--IsText="true"}}
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page"'}}
       <i class="fas fa-angle-double-left" aria-hidden="true"></i>
@@ -60,8 +54,8 @@ cssPrefix: pf-c-pagination
 ```
 
 ```hbs title=Bottom isFullscreen
-{{#> pagination pagination--modifier="pf-m-footer"}}
-  {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
+{{#> pagination pagination--id="bottom-example" pagination--modifier="pf-m-footer"}}
+  {{> pagination-options-menu options-menu--IsText="true"}}
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page"'}}
       <i class="fas fa-angle-double-left" aria-hidden="true"></i>
@@ -84,13 +78,8 @@ cssPrefix: pf-c-pagination
 ```
 
 ```hbs title=Top-disabled isFullscreen
-{{#> pagination}}
-  {{#> pagination-total-items}}
-    <b>1 - 10</b> of <b>37</b>
-  {{/pagination-total-items}}
-
-  {{> pagination-options-menu id="pagination-options-menu-top-disabled-example"  options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
-
+{{#> pagination pagination--id="top-disabled-example"}}
+  {{> pagination-options-menu  options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to first page" aria-disabled="true"'}}
       <i class="fas fa-angle-double-left" aria-hidden="true"></i>
@@ -115,11 +104,11 @@ cssPrefix: pf-c-pagination
 ```
 
 ```hbs title=Compact isFullscreen
-{{#> pagination pagination--modifier="pf-m-compact"}}
+{{#> pagination pagination--id="compact-example" pagination--modifier="pf-m-compact"}}
   {{#> pagination-total-items}}
     <b>1 - 10</b> of <b>37</b>
   {{/pagination-total-items}}
-  {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example"  options-menu--IsText="true"}}
+  {{> pagination-options-menu options-menu--IsText="true"}}
   {{#> pagination-nav}}
     {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Go to previous page"'}}
       <i class="fas fa-angle-left" aria-hidden="true"></i>

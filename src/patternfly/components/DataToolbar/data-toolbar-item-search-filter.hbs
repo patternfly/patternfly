@@ -1,11 +1,23 @@
-{{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-search-filter ' data-toolbar-item-search-filter--modifier)}}
-  {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
-    {{#> dropdown id=(concat data-toolbar--id '-' button--id) dropdown--HasToggleIcon="true"}}
-      {{#> dropdown-toggle-text}}
+{{#> data-toolbar-item data-toolbar-item--modifier=data-toolbar-item-search-filter--modifier}}
+  {{#if data-toolbar-item-search-filter--HasTextInput}}
+    {{#> input-group input-group--attribute=(concat 'aria-label="Search filter" role="group"')}}
+      {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+        {{#if data-toolbar-item-search-filter--label}}
+          {{{data-toolbar-item-search-filter--label}}}
+        {{else}}
+          Name
+        {{/if}}
+      {{/select}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" id="' data-toolbar--id '-' button--id '-search-filter-input" name="' data-toolbar--id '-search-filter-input" aria-label="input with dropdown and button" aria-describedby="' data-toolbar--id '-' button--id '-button"')}}
+      {{/form-control}}
+    {{/input-group}}
+  {{else}}
+    {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+      {{#if data-toolbar-item-search-filter--label}}
+        {{{data-toolbar-item-search-filter--label}}}
+      {{else}}
         Name
-      {{/dropdown-toggle-text}}
-    {{/dropdown}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" id="' data-toolbar--id '-' button--id '-search-filter-input" name="' data-toolbar--id '-search-filter-input" aria-label="input with dropdown and button" aria-describedby="' data-toolbar--id '-' button--id '-button"')}}
-    {{/form-control}}
-  {{/input-group}}
+      {{/if}}
+    {{/select}}
+  {{/if}}
 {{/data-toolbar-item}}

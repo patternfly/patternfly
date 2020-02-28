@@ -1,0 +1,8 @@
+{{#> data-toolbar-item data-toolbar-item--modifier=data-toolbar-item-search-filter--modifier}}
+  {{#> options-menu options-menu--id=(concat data-toolbar--id '-options-menu')}}
+    {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+      <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    {{/options-menu-toggle}}
+    {{> options-menu-multiple}}
+  {{/options-menu}}
+{{/data-toolbar-item}}

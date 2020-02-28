@@ -26,7 +26,7 @@ section: demos
       {{#> card}}
         {{> data-list-toolbar}}
         {{> data-list-simple-data-list}}
-        {{> data-list-pagination}}
+        {{> data-list-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -55,7 +55,7 @@ section: demos
       {{#> card}}
         {{> data-list-toolbar}}
         {{> data-list-actionable-data-list}}
-        {{> data-list-pagination}}
+        {{> data-list-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -84,7 +84,7 @@ section: demos
       {{#> card}}
         {{> data-list-toolbar}}
         {{> data-list-expandable-data-list}}
-        {{> data-list-pagination}}
+        {{> data-list-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -141,7 +141,7 @@ section: demos
       {{#> card}}
         {{> data-list-toolbar}}
         {{> data-list-simple-data-list}}
-        {{> data-list-pagination}}
+        {{> data-list-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
