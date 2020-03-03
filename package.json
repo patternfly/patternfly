@@ -131,7 +131,8 @@
         "path": "@semantic-release/npm",
         "pkgRoot": "dist"
       }
-    ]
+    ],
+    "tag": "prerelease-v${version}"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
