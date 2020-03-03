@@ -121,9 +121,9 @@ jobs:
     - image: circleci/node:10
     steps:
     - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
+    - run:
+        name: Avoid Unknown Host for github.com
+        command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Release to NPM
-        command: npm run semantic-release
+        command: npx semantic-release
