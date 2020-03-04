@@ -183,8 +183,21 @@
       "header header"
       "nav main";
   }
-}
 
+  // Header label
+  --pf-c-page__header-label--FontSize: var(--pf-global--FontSize--sm);
+
+  // Dropdown
+  --pf-c-page__header-c-dropdown__toggle--BorderWidth: 0;
+
+  .pf-c-dropdown {
+    --pf-c-dropdown__toggle--BorderWidth: var(--pf-c-page__header-c-dropdown__toggle--BorderWidth);
+
+    .pf-c-avatar:first-child {
+      margin-left: 0;
+    }
+  }
+}
 
 // Header
 .pf-c-page__header {
@@ -358,6 +371,11 @@
   & + & {
     margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
   }
+}
+
+// Header label
+.pf-c-page__header-label {
+  font-size: var(--pf-c-page__header-label--FontSize);
 }
 
 // Sidebar

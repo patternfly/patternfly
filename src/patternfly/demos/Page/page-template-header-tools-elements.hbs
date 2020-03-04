@@ -10,15 +10,12 @@
     {{/button}}
   {{/page-header-tools-group}}
   {{#> page-header-tools-group}}
-    {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-mobile pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+    {{#> dropdown id=(concat page--id '-dropdown') dropdown--IsAvatarInfo="true"}}
+      {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+      {{#> dropdown-toggle-text}}
+        Ned Username
+      {{/dropdown-toggle-text}}
+      {{> dropdown-toggle-icon}}
     {{/dropdown}}
-    <div class="pf-m-user">
-      {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
-        {{#> dropdown-toggle-text}}
-          John Smith
-        {{/dropdown-toggle-text}}
-      {{/dropdown}}
-    </div>
   {{/page-header-tools-group}}
-  {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}{{/avatar}}
 {{/page-header-tools}}

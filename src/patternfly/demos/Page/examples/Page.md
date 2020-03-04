@@ -9,7 +9,7 @@ section: demos
 ```
 
 ```hbs title=Expandable-nav isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark" dropdown--IsExpanded="true"}}{{/page-demo-expandable-nav}}
 ```
 
 ```hbs title=Horizontal-nav isFullscreen

@@ -81,6 +81,7 @@
   --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
+  --pf-c-dropdown__menu-item--m-text--Color: var(--pf-global--Color--400);
 
   // Menu item icon
   --pf-c-dropdown__menu-item-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -109,6 +110,18 @@
   --pf-c-dropdown__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-dropdown__group-title--Color: var(--pf-global--Color--dark-200);
 
+  // Avatar
+  --pf-c-dropdown--c-avatar--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-dropdown--c-avatar--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-dropdown--c-avatar--not--first-child--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown--c-avatar--first-child--MarginRight: var(--pf-global--spacer--md);
+
+  // Dark
+  // stylelint-disable custom-property-pattern
+  --pf-t-dark--c-dropdown__toggle--Color: var(--pf-global--Color--light-300);
+  --pf-t-dark--c-dropdown__toggle--BorderWidth: 0;
+  // stylelint-enable
+
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -116,6 +129,19 @@
   .pf-c-divider {
     margin-top: var(--pf-c-dropdown__c-divider--MarginTop);
     margin-bottom: var(--pf-c-dropdown__c-divider--MarginBottom);
+  }
+
+  .pf-c-avatar {
+    margin-top: var(--pf-c-dropdown--c-avatar--MarginTop);
+    margin-bottom: var(--pf-c-dropdown--c-avatar--MarginBottom);
+
+    &:not(:first-child) {
+      margin-left: var(--pf-c-dropdown--c-avatar--not--first-child--MarginLeft);
+    }
+
+    &:first-child {
+      margin-right: var(--pf-c-dropdown--c-avatar--first-child--MarginRight);
+    }
   }
 }
 
@@ -389,6 +415,18 @@
     display: flex;
     align-items: center;
   }
+
+  &.pf-m-text {
+    color: var(--pf-c-dropdown__menu-item--m-text--Color);
+    user-select: none;
+
+    &:hover,
+    &.pf-m-hover,
+    &:focus,
+    &.pf-m-focus {
+      background-color: transparent;
+    }
+  }
 }
 
 .pf-c-dropdown__menu-item-icon {
@@ -437,4 +475,12 @@
   font-size: var(--pf-c-dropdown__group-title--FontSize);
   font-weight: var(--pf-c-dropdown__group-title--FontWeight);
   color: var(--pf-c-dropdown__group-title--Color);
+}
+
+// Dark
+.pf-t-dark {
+  .pf-c-dropdown__toggle {
+    --pf-c-dropdown__toggle--Color: var(--pf-t-dark--c-dropdown__toggle--Color);
+    --pf-c-dropdown__toggle--BorderWidth: var(--pf-t-dark--c-dropdown__toggle--BorderWidth);
+  }
 }

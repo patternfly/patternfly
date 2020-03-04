@@ -13,6 +13,8 @@
     {{> dropdown-menu-split-button}}
   {{else if dropdown--IsGroupsMenu}}
     {{> dropdown-menu-groups}}
+  {{else if dropdown--IsAvatarInfo}}
+    {{> dropdown-menu-avatar-info}}
   {{else}}
     {{> dropdown-menu-basic}}
   {{/if}}
