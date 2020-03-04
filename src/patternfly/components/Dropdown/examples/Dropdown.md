@@ -194,7 +194,7 @@ The dropdown panel is provided for flexibility in allowing various content withi
 
 ```hbs title=Dropdown-with-avatar-and-info-dark-theme
 <div class="pf-t-dark">
-{{#> dropdown id="dropdown-with-avatar-and-info-dark-theme" dropdown--IsAvatarInfo="true" dropdown--IsExpanded="true"}}
+{{#> dropdown id="dropdown-with-avatar-and-info-dark-theme-example" dropdown--IsAvatarInfo="true" dropdown--IsExpanded="true"}}
   {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
   {{#> dropdown-toggle-text}}
     Ned Username
@@ -205,10 +205,13 @@ The dropdown panel is provided for flexibility in allowing various content withi
 ```
 
 ## Documentation
+
 ### Overview
+
 The dropdown menu can contain either links or buttons, depending on the expected behavior when clicking the menu item. If you are using the menu item to navigate to another page, then menu item is a link. Otherwise, use a button for the menu item.
 
 ### Accessibility
+
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden. |
@@ -225,6 +228,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
 
 ### Usage
+
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |

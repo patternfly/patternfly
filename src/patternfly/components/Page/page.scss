@@ -371,6 +371,20 @@
   & + & {
     margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
   }
+
+  &.pf-m-user-dropdown {
+    .pf-c-avatar {
+      display: none;
+      visibility: hidden;
+    }
+
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      .pf-c-avatar {
+        display: inline-block;
+        visibility: visible;
+      }
+    }
+  }
 }
 
 // Header label

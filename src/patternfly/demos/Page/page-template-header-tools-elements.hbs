@@ -9,7 +9,7 @@
         <i class="fas fa-cog" aria-hidden="true"></i>
     {{/button}}
   {{/page-header-tools-group}}
-  {{#> page-header-tools-group}}
+  {{#> page-header-tools-group page-header-tools-group--modifier="pf-m-user-dropdown"}}
     {{#> dropdown id=(concat page--id '-dropdown') dropdown--IsAvatarInfo="true"}}
       {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
       {{#> dropdown-toggle-text}}

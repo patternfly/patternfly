@@ -4,6 +4,7 @@ section: demos
 ---
 
 ## Demos
+
 ```hbs title=Default-nav isFullscreen
 {{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
 ```
@@ -330,4 +331,5 @@ section: demos
 ```
 
 ## Documentation
+
 This demo implements all variations of the nav component in the page component.
