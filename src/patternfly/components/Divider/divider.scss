@@ -10,11 +10,13 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   // end - update during breaking change
 
-  --pf-c-divider--m-vertical--after--Width: var(--pf-global--BorderWidth--sm);
-
   // After
   --pf-c-divider--after--FlexBasis: 100%;
   --pf-c-divider--after--Inset: 0%;
+
+  // Vertical
+  --pf-c-divider--m-vertical--after--FlexBasis: 100%;
+  --pf-c-divider--m-vertical--after--Width: var(--pf-global--BorderWidth--sm);
 
   display: flex;
   align-items: center;
@@ -41,7 +43,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     max-height: 100%;
 
     &::after {
-      flex-basis: calc(var(--pf-c-divider--after--FlexBasis) - var(--pf-c-divider--after--Inset));
+      flex-basis: calc(var(--pf-c-divider--m-vertical--after--FlexBasis) - var(--pf-c-divider--after--Inset));
       width: var(--pf-c-divider--m-vertical--after--Width);
     }
   }
