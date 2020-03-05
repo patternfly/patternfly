@@ -19,11 +19,20 @@
       Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      Action
+      {{#if table-toolbar--IsColumnManagementAction}}
+        Manage columns
+      {{else}}
+        Action
+      {{/if}}
     {{/button}}
   {{/toolbar-action-group}}
-  {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
-  {{/dropdown}}
+  {{#unless table-toolbar--IsColumnManagementAction}}
+    {{#if table-toolbar--IsColumnManagementDropdown}}
+      {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--IsExpanded="true" dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions" dropdown--MenuActionText="Manage columns"}}{{/dropdown}}
+    {{else}}
+      {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}{{/dropdown}}
+    {{/if}}
+  {{/unless}}
   {{#if table-toolbar--IsCompactPagination}}
     {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-m-compact"}}
       {{#> pagination-total-items}}
