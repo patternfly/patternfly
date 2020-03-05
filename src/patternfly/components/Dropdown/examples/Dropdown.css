@@ -25,12 +25,11 @@
   min-height: 440px;
 }
 
-#ws-core-c-dropdown-dropdown-with-avatar-on-left-and-info .ws-preview-html,
 #ws-core-c-dropdown-dropdown-with-avatar-and-info-dark-theme .ws-preview-html {
   min-height: 21rem;
 }
 
-#ws-core-c-dropdown-dropdown-with-avatar-and-info .ws-preview-html {
+#ws-core-c-dropdown-dropdown-with-avatar-and-text .ws-preview-html {
   min-height: 22rem;
 }
 

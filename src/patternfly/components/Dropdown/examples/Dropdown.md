@@ -174,8 +174,8 @@ The dropdown panel is provided for flexibility in allowing various content withi
 {{/dropdown}}
 ```
 
-```hbs title=Dropdown-with-avatar-and-info
-{{#> dropdown id="dropdown-with-avatar-and-info-example" dropdown--IsMenuToggleImageInfo="true" dropdown--IsExpanded="true"}}
+```hbs title=Dropdown-with-avatar-and-text
+{{#> dropdown id="dropdown-with-avatar-and-info-example" dropdown--IsMenuToggleImageText="true" dropdown--IsExpanded="true"}}
   {{#> dropdown-toggle-image}}
     {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
   {{/dropdown-toggle-image}}
