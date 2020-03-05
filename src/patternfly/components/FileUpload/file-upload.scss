@@ -8,6 +8,7 @@
   // pf-m-drag-hover
   --pf-c-file-upload--m-drag-hover--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload--m-drag-hover--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--before--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-file-upload--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
 
@@ -40,7 +41,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: 1;
+      z-index: var(--pf-c-file-upload--m-drag-hover--before--ZIndex);
       content: "";
       border: var(--pf-c-file-upload--m-drag-hover--before--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--before--BorderColor);
     }
