@@ -159,6 +159,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-c-tabs__button` | `<div>` | Initiates a tabs component button. **Required** |
 | `.pf-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button. |
 | `.pf-m-secondary` | `.pf-c-tabs` | Applies secondary styling to the tab component. |
+| `.pf-m-no-border` | `.pf-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-c-tabs` | Applies filled styling to the tabs component. |
