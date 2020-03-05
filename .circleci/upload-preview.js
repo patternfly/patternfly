@@ -6,7 +6,7 @@ const surge = require('surge');
 const publishFn = surge().publish();
 
 const owner = process.env.CIRCLE_PROJECT_USERNAME; // patternfly
-const repo = process.env.CIRCLE_PROJECT_REPONAME;
+const repo = process.env.CIRCLE_PROJECT_REPONAME; // patternfly-next
 const prnum = process.env.CIRCLE_PR_NUMBER;
 const prbranch = process.env.CIRCLE_BRANCH;
 
