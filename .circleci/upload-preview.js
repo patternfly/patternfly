@@ -39,6 +39,7 @@ switch(uploadFolderName) {
   default:
     uploadURL += `-${uploadFolderName}`;
     uploadURL += '.surge.sh';
+    break;
 }
 
 publishFn({
