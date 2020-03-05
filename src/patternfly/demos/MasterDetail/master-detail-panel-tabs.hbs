@@ -1,16 +1,17 @@
-{{#> tabs tabs--id=(concat master-detail-template--id '-tabs') tabs--modifier="pf-m-fill"}}
+{{#> tabs tabs--id=(concat master-detail-template--id '-tabs') tabs--modifier="pf-m-box pf-m-fill"}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}{{/tabs-scroll-button}}
   {{#> tabs-list}}
-    {{#> tabs-item tabs-item--current="true"}}
-      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab1"')}}
-        Overview
-      {{/tabs-button}}
-    {{/tabs-item}}
-    {{#> tabs-item}}
-      {{#> tabs-button tabs-button--attribute=(concat 'id="' tabs--id '-tab2"')}}
-        Activity
-      {{/tabs-button}}
-    {{/tabs-item}}
+    {{> tabs-item-content
+      tabs-item--IsCurrent="true"
+      tabs-item-content--id="overview"
+      tabs-item-content--aria-label="Overview"
+      tabs-item-content--text="Overview"
+      }}
+    {{> tabs-item-content
+      tabs-item-content--id="activity"
+      tabs-item-content--aria-label="Activity"
+      tabs-item-content--text="Activity"
+      }}
   {{/tabs-list}}
   {{#> tabs-scroll-button tabs-scroll-button--IsRight="true"}}{{/tabs-scroll-button}}
 {{/tabs}}

@@ -83,7 +83,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   &::before {
     position: absolute;
+    right: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
     content: "";
     border-bottom: var(--pf-c-tabs--before--BorderWidth) solid var(--pf-c-tabs--before--BorderColor);
@@ -285,6 +287,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     border-bottom-color: transparent;
     border-bottom-width: 0;
   }
+
+  .pf-c-tabs__item:first-child .pf-c-tabs__button::before {
+    border-left-width: 0;
+  }
 }
 
 // Box
@@ -317,10 +323,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   .pf-c-tabs__item:not(.pf-m-current):first-child .pf-c-tabs__button::before {
     border-left-width: 0;
-  }
-
-  .pf-c-tabs__item.pf-m-current:first-child .pf-c-tabs__button::before {
-    border-left-width: var(--pf-c-tabs__button--before--BorderWidth);
   }
 
   .pf-c-tabs__item.pf-m-current:last-child .pf-c-tabs__button::before {
