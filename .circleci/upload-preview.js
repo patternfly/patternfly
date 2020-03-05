@@ -24,12 +24,16 @@ if (uploadFolderName === 'coverage') {
     path.join(uploadFolder, 'report.html'),
     path.join(uploadFolder, 'index.html')
   );
+  uploadURL += '.surge.sh';
 }
 if (uploadFolderName !== 'public') {
   uploadURL += `-${uploadFolderName}`;
+  uploadURL += '.surge.sh';
 }
-
-uploadURL += '.surge.sh';
+else if (!prnum && prbranch === 'master') {
+  uploadURL = 'pf4.patternfly.org';
+  fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
+}
 
 publishFn({
   project: uploadFolder,
