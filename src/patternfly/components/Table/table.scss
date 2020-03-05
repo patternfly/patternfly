@@ -114,8 +114,8 @@
   // ============================================================ //
 
   // Modifier - compact table
-  --pf-c-table--m-compact-th--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-compact-th--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--m-compact-th--PaddingTop: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--xs));
+  --pf-c-table--m-compact-th--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-global--spacer--sm);
@@ -502,14 +502,6 @@
     tbody {
       --pf-c-table--BorderWidth: 0;
       --pf-c-table--BorderColor: transparent;
-
-      tr:first-child > * {
-        --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
-      }
-
-      tr:last-child > * {
-        --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
-      }
     }
   }
 
