@@ -1,5 +1,6 @@
 .pf-c-popover {
   // Component
+  --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -23,7 +24,7 @@
 
   // Close
   --pf-c-popover--c-button--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
+  --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element)); // align top of button with top of text
   --pf-c-popover--c-button--Right: var(--pf-global--spacer--md);
   --pf-c-popover--c-button--sibling--PaddingRight: var(--pf-global--spacer--2xl);
 
@@ -36,6 +37,7 @@
   position: relative;
   min-width: var(--pf-c-popover--MinWidth);
   max-width: var(--pf-c-popover--MaxWidth);
+  font-size: var(--pf-c-popover--FontSize);
   box-shadow: var(--pf-c-popover--BoxShadow);
 
   &.pf-m-top {
