@@ -32,14 +32,6 @@ import './Dropdown.css'
 {{/dropdown}}
 ```
 
-```hbs title=Disabled
-{{#> dropdown id="dropdown-disabled" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true" dropdown-toggle--IsDisabled="true"}}
-  {{#> dropdown-toggle-text}}
-    Disabled dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
-```
-
 ```hbs title=Kebab
 {{#> dropdown id="dropdown-kebab-disabled" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions" dropdown-toggle--IsDisabled="true"}}{{/dropdown}}
 {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
@@ -183,8 +175,10 @@ The dropdown panel is provided for flexibility in allowing various content withi
 ```
 
 ```hbs title=Dropdown-with-avatar-and-info
-{{#> dropdown id="dropdown-with-avatar-and-info-example" dropdown--IsAvatarInfo="true" dropdown--IsExpanded="true"}}
-  {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+{{#> dropdown id="dropdown-with-avatar-and-info-example" dropdown--IsMenuToggleImageInfo="true" dropdown--IsExpanded="true"}}
+  {{#> dropdown-toggle-image}}
+    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+  {{/dropdown-toggle-image}}
   {{#> dropdown-toggle-text}}
     Ned Username
   {{/dropdown-toggle-text}}
@@ -228,6 +222,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
 | `.pf-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
+| `.pf-c-dropdown__toggle-image` | `<span>` | Defines the wrapper for the dropdown toggle button image. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
 | `.pf-c-dropdown__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |

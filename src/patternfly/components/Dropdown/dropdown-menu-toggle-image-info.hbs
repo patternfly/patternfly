@@ -7,19 +7,19 @@
 
   {{#> dropdown-group}}
     <dl>
-      {{#> dropdown-menu-item dropdown-menu-item--attribute=(concat 'aria-hidden="true" id="' id '-username"') dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-        <dt class="pf-c-page__header-label">Username:</dt>
-        <dd class="pf-c-page__header-text">mshaksho@redhat.com</dd>
+      {{#> dropdown-menu-item dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
+        <dt class="{{dropdown-menu--dt-modifier}}">Username:</dt>
+        <dd class="{{dropdown-menu--dd-modifier}}">mshaksho@redhat.com</dd>
       {{/dropdown-menu-item}}
-      {{#> dropdown-menu-item dropdown-menu-item--attribute=(concat 'aria-hidden="true" id="' id '-account"') dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-        <dt class="pf-c-page__header-label">Account number:</dt>
-        <dd class="pf-c-page__header-text">123456789</dd>
+      {{#> dropdown-menu-item dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
+        <dt class="{{dropdown-menu--dt-modifier}}">Account number:</dt>
+        <dd class="{{dropdown-menu--dd-modifier}}">123456789</dd>
       {{/dropdown-menu-item}}
     </dl>
   {{/dropdown-group}}
   {{#> dropdown-separator dropdown-separator--IsHr="true"}}{{/dropdown-separator}}
   {{#> dropdown-group}}
-    <ul aria-describedby="{{id}}-username {{id}}-account">
+    <ul>
       <li>
         {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
           My profile
@@ -35,6 +35,6 @@
           Logout
         {{/dropdown-menu-item}}
       </li>
-    </ul>
+    </u>
   {{/dropdown-group}}
 </div>
