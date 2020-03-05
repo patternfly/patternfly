@@ -54,10 +54,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__scroll-button--before--BorderColor: var(--pf-c-tabs__button--before--BorderColor);
   --pf-c-tabs__scroll-button--before--BorderWidth: var(--pf-c-tabs__button--before--BorderWidth);
 
-  // --pf-c-tabs__scroll-button--m-secondary-right--m-start-current--Color: var(--pf-global--active-color--100);
-  // --pf-c-tabs__scroll-button--m-secondary--nth-of-type-1--BoxShadow: var(--pf-global--BoxShadow--lg-right);
-  // --pf-c-tabs__scroll-button--m-secondary--nth-of-type-2--BoxShadow: var(--pf-global--BoxShadow--lg-left);
-
   // Box
   --pf-c-tabs--m-box--Background: var(--pf-global--BackgroundColor--300);
   --pf-c-tabs__item--m-current--c-tabs__button--Background: var(--pf-global--BackgroundColor--100);
@@ -230,8 +226,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     margin-right: calc(var(--pf-c-tabs__scroll-button--Width) * -1);
     transform: translateX(-100%);
 
-    // box-shadow: var(--pf-c-tabs__scroll-button--m-secondary--nth-of-type-1--BoxShadow);
-
     &::before {
       border-right-color: var(--pf-c-tabs__scroll-button--before--BorderColor);
       border-right-width: var(--pf-c-tabs__scroll-button--before--BorderWidth);
@@ -241,8 +235,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &:nth-of-type(2) {
     margin-left: calc(var(--pf-c-tabs__scroll-button--Width) * -1);
     transform: translateX(100%);
-
-    // box-shadow: var(--pf-c-tabs__scroll-button--m-secondary--nth-of-type-2--BoxShadow);
 
     &::before {
       border-left-color: var(--pf-c-tabs__scroll-button--before--BorderColor);
@@ -383,17 +375,14 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   .pf-c-tabs__item.pf-m-current .pf-c-tabs__button::before {
-    border-right-color: var(--pf-c-tabs__button--Background);
     border-right-width: var(--pf-c-tabs__button--before--BorderWidth);
   }
 
   .pf-c-tabs__item.pf-m-current:first-child .pf-c-tabs__button::before {
-    border-top-color: var(--pf-c-tabs__button--before--BorderColor);
     border-top-width: var(--pf-c-tabs__button--before--BorderWidth);
   }
 
   .pf-c-tabs__item.pf-m-current:last-child .pf-c-tabs__button::before {
-    border-bottom-color: var(--pf-c-tabs__button--before--BorderColor);
     border-bottom-width: var(--pf-c-tabs__button--before--BorderWidth);
   }
   // stylelint-enable
