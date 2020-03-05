@@ -19,20 +19,26 @@ if (!uploadFolder) {
 const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}${prnum ? `-pr-${prnum || prbranch}` : ''}`.replace(/[\/|\.]/g, '-');
 
-if (uploadFolderName === 'coverage') {
-  fs.copyFileSync(
-    path.join(uploadFolder, 'report.html'),
-    path.join(uploadFolder, 'index.html')
-  );
-  uploadURL += '.surge.sh';
-}
-if (uploadFolderName !== 'public') {
-  uploadURL += `-${uploadFolderName}`;
-  uploadURL += '.surge.sh';
-}
-else if (!prnum && prbranch === 'master') {
-  uploadURL = 'pf4.patternfly.org';
-  fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
+switch(uploadFolderName) {
+  case 'coverage':
+    fs.copyFileSync(
+      path.join(uploadFolder, 'report.html'),
+      path.join(uploadFolder, 'index.html')
+    );
+    uploadURL += '.surge.sh';
+    break;
+  case 'public':
+    if (!prnum && prbranch === 'master') {
+      uploadURL = 'pf4.patternfly.org';
+      fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
+    }
+    else {
+      uploadURL += '.surge.sh';
+    }
+    break;
+  default:
+    uploadURL += `-${uploadFolderName}`;
+    uploadURL += '.surge.sh';
 }
 
 publishFn({
