@@ -6,6 +6,7 @@
   --pf-c-overflow-menu--spacer: var(--pf-global--spacer--sm);
   --pf-c-overflow-menu__group--spacer: var(--pf-c-overflow-menu--spacer--base);
   --pf-c-overflow-menu__item--spacer: var(--pf-c-overflow-menu--spacer--base);
+  --pf-c-overflow-menu--c-divider--m-vertical--spacer: var(--pf-c-overflow-menu--spacer--base);
 
   // Button group
   --pf-c-overflow-menu__group--m-button-group--spacer: var(--pf-c-overflow-menu--spacer--base);
@@ -65,5 +66,22 @@
 
   &:last-child {
     --pf-c-overflow-menu--spacer: 0;
+  }
+}
+
+// Divider
+.pf-c-overflow-menu,
+.pf-c-overflow-menu__group {
+  // set this var here so specificity is 20
+  > .pf-c-divider {
+    --pf-c-overflow-menu--spacer: var(--pf-c-overflow-menu--c-divider--m-vertical--spacer);
+  }
+
+  > .pf-c-divider.pf-m-vertical {
+    margin-right: var(--pf-c-overflow-menu--spacer);
+
+    &:last-child {
+      --pf-c-overflow-menu--spacer: 0;
+    }
   }
 }
