@@ -14,7 +14,11 @@
       {{/dropdown-menu-item}}
     {{else}}
       {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-        Link
+        {{# if dropdown--MenuLinkText}}
+          {{dropdown--MenuLinkText}}
+        {{else}}
+          Link
+        {{/if}}
       {{/dropdown-menu-item}}
     {{/if}}
   </li>
@@ -28,7 +32,11 @@
       {{/dropdown-menu-item}}
     {{else}}
       {{#> dropdown-menu-item}}
-        Action
+        {{# if dropdown--MenuActionText}}
+          {{dropdown--MenuActionText}}
+        {{else}}
+          Action
+        {{/if}}
       {{/dropdown-menu-item}}
     {{/if}}
   </li>
