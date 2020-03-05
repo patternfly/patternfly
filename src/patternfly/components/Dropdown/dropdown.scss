@@ -116,6 +116,12 @@
   --pf-c-dropdown--c-avatar--not--first-child--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown--c-avatar--first-child--MarginRight: var(--pf-global--spacer--md);
 
+  // Dark
+  // stylelint-disable custom-property-pattern
+  --pf-t-dark--c-dropdown__toggle--Color: var(--pf-global--Color--light-300);
+  --pf-t-dark--c-dropdown__toggle--BorderWidth: 0;
+  // stylelint-enable
+
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -469,4 +475,12 @@
   font-size: var(--pf-c-dropdown__group-title--FontSize);
   font-weight: var(--pf-c-dropdown__group-title--FontWeight);
   color: var(--pf-c-dropdown__group-title--Color);
+}
+
+// Dark
+.pf-t-dark {
+  .pf-c-dropdown__toggle {
+    --pf-c-dropdown__toggle--Color: var(--pf-t-dark--c-dropdown__toggle--Color);
+    --pf-c-dropdown__toggle--BorderWidth: var(--pf-t-dark--c-dropdown__toggle--BorderWidth);
+  }
 }
