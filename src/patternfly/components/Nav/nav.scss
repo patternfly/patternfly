@@ -260,9 +260,13 @@
 
   // Divider
   .pf-c-divider {
+    // Update during breaking change
+    padding-left: var(--pf-c-nav__c-divider--MarginLeft);
+
+    // end - Update during breaking change
     margin-top: var(--pf-c-nav__c-divider--MarginTop);
     margin-bottom: var(--pf-c-nav__c-divider--MarginBottom);
-    margin-left: var(--pf-c-nav__c-divider--MarginLeft);
+    margin-left: 0;
   }
 
   &.pf-m-dark {
@@ -293,7 +297,7 @@
     --pf-c-nav__list-link--after--Width: var(--pf-c-nav--m-dark__list-link--after--Width);
 
     .pf-c-divider {
-      background-color: var(--pf-c-nav--m-dark__c-divider--BackgroundColor);
+      --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark__c-divider--BackgroundColor);
     }
 
     .pf-c-nav__item {
@@ -304,7 +308,7 @@
 
         // stylelint-disable-next-line
         .pf-c-divider {
-          background-color: var(--pf-c-nav--m-dark__item--m-current__c-divider--BackgroundColor);
+          --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark__item--m-current__c-divider--BackgroundColor);
         }
       }
 
