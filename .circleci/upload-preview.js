@@ -25,7 +25,7 @@ switch(uploadFolderName) {
       path.join(uploadFolder, 'report.html'),
       path.join(uploadFolder, 'index.html')
     );
-    uploadURL += '.surge.sh';
+    uploadURL += '-coverage.surge.sh';
     break;
   case 'public':
     if (!prnum && prbranch === 'master') {
