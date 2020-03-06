@@ -12,7 +12,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Tab buttons
   --pf-c-tabs__button--Color: var(--pf-global--Color--200);
-  --pf-c-tabs__button--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-tabs__button--Background: transparent;
   --pf-c-tabs__button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
   --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
