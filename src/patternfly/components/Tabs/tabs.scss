@@ -20,16 +20,20 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs__button--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tabs__button--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-tabs__button--BorderStyle: solid;
   --pf-c-tabs__button--md--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-tabs__button--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-tabs__button--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs__button--md--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-tabs__button--md--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-tabs__button--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tabs__button--BorderStyle: solid;
   --pf-c-tabs--m-vertical--c-tabs__button--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical--c-tabs__button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical--c-tabs__button--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical--c-tabs__button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tabs__button--child--MarginRight: var(--pf-global--spacer--md);
+
+  // Roomy
+  --pf-c-tabs--m-roomy__button--md--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-tabs--m-roomy__button--md--PaddingLeft: var(--pf-global--spacer--xl);
 
   // Button before
   --pf-c-tabs__button--before--BorderColor: var(--pf-global--BorderColor--dark-100);
@@ -200,6 +204,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     &:last-child {
       --pf-c-tabs__button--child--MarginRight: 0;
     }
+  }
+
+  .pf-c-tabs.pf-m-roomy & {
+    --pf-c-tabs__button--PaddingRight: var(--pf-c-tabs--m-roomy__button--md--PaddingRight);
+    --pf-c-tabs__button--PaddingLeft: var(--pf-c-tabs--m-roomy__button--md--PaddingLeft);
   }
 }
 
