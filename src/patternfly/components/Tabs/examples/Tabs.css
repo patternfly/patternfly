@@ -4,10 +4,6 @@
   align-items: stretch;
 }
 
-#ws-core-c-tabs-box-vertical .ws-preview-html {
-  min-height: 26rem;
-}
-
 .ws-lite-index-example .ws-lite-example,
 .ws-preview-html {
   position: relative;

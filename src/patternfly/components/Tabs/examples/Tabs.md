@@ -125,6 +125,18 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+```hbs title=Filled-box
+{{#> tabs tabs--id="filled-box-example" tabs--modifier="pf-m-fill pf-m-box"}}
+  {{> tabs-list-content tabs-list-content--IsShort="true"}}
+{{/tabs}}
+```
+
+```hbs title=Filled-box-with-icons
+{{#> tabs tabs--id="filled-box-with-icons-example" tabs--modifier="pf-m-fill pf-m-box"}}
+  {{> tabs-list-content tabs-list-content--HasIcons="true" tabs-list-content--IsShort="true"}}
+{{/tabs}}
+```
+
 ## Usage
 
 | Class | Applied to | Outcome |
