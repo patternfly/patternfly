@@ -6,8 +6,9 @@
   --pf-c-file-upload--m-loading__file-details--before--Bottom: var(--pf-global--BorderWidth--sm);
 
   // pf-m-drag-hover
-  --pf-c-file-upload--m-drag-hover--after--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-file-upload--m-drag-hover--after--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-file-upload--m-drag-hover--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-file-upload--m-drag-hover--before--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-file-upload--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-file-upload--m-drag-hover--after--Opacity: .1;
 
@@ -29,11 +30,21 @@
   --pf-c-file-upload__message--Color: var(--pf-global--Color--100);
   --pf-c-file-upload__message--m-error--Color: var(--pf-global--danger-color--100);
 
+  position: relative;
   display: flex;
   flex-direction: column;
 
   &.pf-m-drag-hover {
-    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: var(--pf-c-file-upload--m-drag-hover--before--ZIndex);
+      content: "";
+      border: var(--pf-c-file-upload--m-drag-hover--before--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--before--BorderColor);
+    }
 
     &::after {
       position: absolute;
@@ -43,7 +54,6 @@
       left: 0;
       content: "";
       background-color: var(--pf-c-file-upload--m-drag-hover--after--BackgroundColor);
-      border: var(--pf-c-file-upload--m-drag-hover--after--BorderWidth) solid var(--pf-c-file-upload--m-drag-hover--after--BorderColor);
       opacity: var(--pf-c-file-upload--m-drag-hover--after--Opacity);
     }
   }

@@ -94,7 +94,7 @@ beta: true
     {{#> input-group}}
       {{> file-upload-text-input
         file-upload-text-input--aria-label="File upload error"
-        file-upload-text-input--attribute=(concat 'required value="Sample.png" aria-invalid="true" aria-describedby="' file-upload--id '-browse"')
+        file-upload-text-input--attribute=(concat 'required value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
         }}
       {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
         Browse...
@@ -104,7 +104,7 @@ beta: true
       {{/button}}
     {{/input-group}}
   {{/file-upload-file-select}}
-  {{#> file-upload-file-details file-upload-file-details--attribute='aria-describedby="textAreaHelperText1"' file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
+  {{#> file-upload-file-details file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
   {{#> file-upload-message file-upload-message--modifier="pf-m-error" file-upload-message--attribute='id="textAreaHelperText1" aria-live="polite"'}}
     We don't support this file type. Try again with a different file type.
   {{/file-upload-message}}
