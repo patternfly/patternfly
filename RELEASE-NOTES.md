@@ -7,10 +7,14 @@ releaseNoteTOC: true
 ## 2020.03 release notes (2020-03-10)
 Packages released:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - @patternfly/patternfly@v2.68.3
 =======
 - @patternfly/patternfly@v2.67.1
 >>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2785)
+=======
+- @patternfly/patternfly@v2.68.3
+>>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2789)
 
 ### Components
 - **Background image:** Removed empty width attribute ([#2739](https://github.com/patternfly/patternfly-next/pull/2739))
@@ -21,9 +25,13 @@ Packages released:
 - **Login:** Centered login on larger viewports ([#2754](https://github.com/patternfly/patternfly-next/pull/2754))
 - **Master detail:** Added master detail demo ([#2742](https://github.com/patternfly/patternfly-next/pull/2742))
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Nav:** Adjusted divider positioning and color declarations([#2788](https://github.com/patternfly/patternfly-next/pull/2788))
 =======
 >>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2785)
+=======
+- **Nav:** Adjusted divider positioning and color declarations([#2788](https://github.com/patternfly/patternfly-next/pull/2788))
+>>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2789)
 - **Notification drawer:** Updated demo dropdowns so they dont overflow parent ([#2767](https://github.com/patternfly/patternfly-next/pull/2767))
 - **Table:** Added table column management demo ([#2756](https://github.com/patternfly/patternfly-next/pull/2756))
 
@@ -35,18 +43,26 @@ Packages released:
   - Added breaking change lint ([#2772](https://github.com/patternfly/patternfly-next/pull/2772))
   - Fixed upload for master ([#2780](https://github.com/patternfly/patternfly-next/pull/2780))
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Testing a minor version bump ([#2784](https://github.com/patternfly/patternfly-next/pull/2784))
 =======
 >>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2785)
+=======
+  - Testing a minor version bump ([#2784](https://github.com/patternfly/patternfly-next/pull/2784))
+>>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2789)
 - **Workspace:**
   - Added class to body of fullscreen examples ([#2735](https://github.com/patternfly/patternfly-next/pull/2735))
   - Added example titles to index page ([#2741](https://github.com/patternfly/patternfly-next/pull/2741))
   - Updated example ids / classes ([#2749](https://github.com/patternfly/patternfly-next/pull/2749))
   - Added class to index, update styles ([#2750](https://github.com/patternfly/patternfly-next/pull/2750))
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Scoped flex layout workspace styles to layout examples ([#2787](https://github.com/patternfly/patternfly-next/pull/2787))
 =======
 >>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2785)
+=======
+  - Scoped flex layout workspace styles to layout examples ([#2787](https://github.com/patternfly/patternfly-next/pull/2787))
+>>>>>>> fix(release-notes): updated release notes for 2020.03 release (#2789)
 
 ## 2020.02 release notes (2020-02-18)
 Packages released:
