@@ -6,6 +6,7 @@
   --pf-c-radio__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-radio__label--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-radio__input--MarginTop: #{pf-size-prem(-3px)};
+  --pf-c-radio__input--MarginLeft: #{pf-size-prem(1px)};
   --pf-c-radio__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-radio__description--Color: var(--pf-global--Color--200);
 
@@ -25,6 +26,7 @@
 
 .pf-c-radio__input {
   margin-top: var(--pf-c-radio__input--MarginTop);
+  margin-left: var(--pf-c-radio__input--MarginLeft);
 }
 
 .pf-c-radio__description {
@@ -36,7 +38,7 @@
 .pf-c-radio__label,
 .pf-c-radio__input {
   @at-root label.pf-c-radio,
-  &, {
+  & {
     cursor: pointer;
   }
 
