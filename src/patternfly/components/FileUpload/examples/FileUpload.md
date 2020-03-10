@@ -88,27 +88,31 @@ beta: true
 {{/file-upload}}
 ```
 
-```hbs title=File-upload-error
-{{#> file-upload file-upload--id="file-upload-error"}}
-  {{#> file-upload-file-select}}
-    {{#> input-group}}
-      {{> file-upload-text-input
-        file-upload-text-input--aria-label="File upload error"
-        file-upload-text-input--attribute=(concat 'required value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
-        }}
-      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
-        Browse...
-      {{/button}}
-      {{#> button button--modifier="pf-m-control"}}
-        Clear
-      {{/button}}
-    {{/input-group}}
-  {{/file-upload-file-select}}
-  {{#> file-upload-file-details file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
-  {{#> file-upload-message file-upload-message--modifier="pf-m-error" file-upload-message--attribute='id="textAreaHelperText1" aria-live="polite"'}}
-    We don't support this file type. Try again with a different file type.
-  {{/file-upload-message}}
-{{/file-upload}}
+```hbs title=File-upload-in-form-with-error
+{{#> form}}
+  {{#> form-group}}
+    {{#> file-upload file-upload--id="file-upload-error" file-upload--type="div"}}
+      {{#> file-upload-file-select}}
+        {{#> input-group}}
+          {{> file-upload-text-input
+            file-upload-text-input--aria-label="File upload error"
+            file-upload-text-input--attribute=(concat 'required value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
+            }}
+          {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+            Browse...
+          {{/button}}
+          {{#> button button--modifier="pf-m-control"}}
+            Clear
+          {{/button}}
+        {{/input-group}}
+      {{/file-upload-file-select}}
+      {{#> file-upload-file-details file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
+    {{/file-upload}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="textAreaHelperText1" aria-live="polite"'}}
+      We don't support this file type. Try again with a different file type.
+    {{/form-helper-text}}
+  {{/form-group}}
+{{/form}}
 ```
 
 ```hbs title=File-upload-loading
@@ -144,7 +148,5 @@ beta: true
 | `.pf-c-file-upload__file-select` | `<div>` | Initiates the file select element. **Required** |
 | `.pf-c-file-upload__file-details` | `<div>` | Initiates the file details element. **Required** |
 | `.pf-c-file-upload__file-details-spinner` | `<div>` | Initiates the file details element. **Required** |
-| `.pf-c-file-upload__message` | `<div>` | Initiates the file upload message. |
 | `.pf-m-drag-hover` | `.pf-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
 | `.pf-m-loading` | `.pf-c-file-upload` | Modifies file upload for the loading state. |
-| `.pf-m-error` | `.pf-c-file-upload__message`| Modifies the file upload message for the error state. |
