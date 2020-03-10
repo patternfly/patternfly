@@ -57,9 +57,6 @@ jobs:
         name: Build Dist
         command: npm run build-patternfly
     - run:
-        name: Build IE11
-        command: npm run build:ie11
-    - run:
         name: Build Site
         command: npm run build:site
     - run:
