@@ -9,16 +9,21 @@
         <i class="fas fa-cog" aria-hidden="true"></i>
     {{/button}}
   {{/page-header-tools-group}}
-  {{#> page-header-tools-group}}
-    {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-mobile pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+  {{#> page-header-tools-group page-header-tools-group--modifier="pf-m-user-dropdown"}}
+    {{#> dropdown
+      id=(concat page--id '-dropdown')
+      dropdown--IsMenuToggleImageText="true"
+      dropdown-menu--modifier="pf-m-align-right"
+      dropdown-menu--dt-modifier="pf-c-page__header-label"
+      dropdown-menu--dd-modifier="pf-c-page__header-text"
+      }}
+      {{#> dropdown-toggle-image}}
+        {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+      {{/dropdown-toggle-image}}
+      {{#> dropdown-toggle-text}}
+        Ned Username
+      {{/dropdown-toggle-text}}
+      {{> dropdown-toggle-icon}}
     {{/dropdown}}
-    <div class="pf-m-user">
-      {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
-        {{#> dropdown-toggle-text}}
-          John Smith
-        {{/dropdown-toggle-text}}
-      {{/dropdown}}
-    </div>
   {{/page-header-tools-group}}
-  {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}{{/avatar}}
 {{/page-header-tools}}

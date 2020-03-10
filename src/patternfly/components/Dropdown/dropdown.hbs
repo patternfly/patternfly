@@ -13,6 +13,8 @@
     {{> dropdown-menu-split-button}}
   {{else if dropdown--IsGroupsMenu}}
     {{> dropdown-menu-groups}}
+  {{else if dropdown--IsMenuToggleImageText}}
+    {{> dropdown-menu-toggle-image-text}}
   {{else}}
     {{> dropdown-menu-basic}}
   {{/if}}

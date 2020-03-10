@@ -1,7 +1,8 @@
 <{{#if dropdown-separator--IsHr}}hr{{else}}li{{/if}} class="pf-c-dropdown__separator{{#if dropdown-separator--modifier}} {{dropdown-separator--modifier}}{{/if}}"
   {{#if dropdown-separator--attribute}}
-	  {{{dropdown-separator--attribute}}}
+    {{{dropdown-separator--attribute}}}
   {{/if}}
+  aria-hidden="true"
   {{#unless dropdown-separator--IsHr}}
     role="separator"
   {{/unless}}>
