@@ -58,8 +58,11 @@
   }
 
   // Header tools
+  --pf-c-page__header-tools--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
 
   // Header tools group button
@@ -164,6 +167,11 @@
   --pf-c-page__main-wizard--BorderTopColor: var(--pf-global--BorderColor--100);
   --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
+  // Dropdown
+  --pf-c-page__header--c-dropdown__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-page__header--c-dropdown__toggle--before--hover--BorderBottomColor: var(--pf-global--active-color--400);
+
+
   // Base
   display: grid;
   height: 100%;
@@ -180,15 +188,8 @@
       "header header"
       "nav main";
   }
-
-  // Header label
-  --pf-c-page__header-label--FontSize: var(--pf-global--FontSize--sm);
-
-  // Dropdown
-  --pf-c-page__header-c-dropdown__toggle--before--BorderWidth: 0;
-  --pf-c-page__header-c-dropdown__toggle--before--expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-page__header-c-dropdown__toggle--before--expanded--BorderColor: var(--pf-global--active-color--400);
 }
+
 
 // Header
 .pf-c-page__header {
@@ -209,6 +210,24 @@
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .pf-c-dropdown {
+    .pf-c-avatar {
+      --pf-c-page__header-tools--c-avatar--MarginLeft: 0;
+    }
+  }
+
+  .pf-c-dropdown__toggle {
+    --pf-c-dropdown__toggle--BorderTopColor: transparent;
+    --pf-c-dropdown__toggle--BorderRightColor: transparent;
+    --pf-c-dropdown__toggle--BorderBottomColor: transparent;
+    --pf-c-dropdown__toggle--BorderLeftColor: transparent;
+    --pf-c-dropdown__toggle--hover--BorderBottomColor: var(--pf-c-page__header--c-dropdown__toggle--before--hover--BorderBottomColor);
+
+    &::before {
+      border-bottom-width: var(--pf-c-page__header--c-dropdown--c-dropdown__toggle--before--BorderBottomWidth);
+    }
   }
 }
 
@@ -281,11 +300,12 @@
 
 // Header tools
 .pf-c-page__header-tools {
-  align-items: center;
-  align-self: stretch;
-  margin-right: var(--pf-c-page__header-tools--MarginRight);
-  margin-left: auto; // to push it to the right
   grid-column: 2 / 3;
+  align-items: center;
+  margin-top: var(--pf-c-page__header-tools--MarginTop);
+  margin-right: var(--pf-c-page__header-tools--MarginRight);
+  margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
+  margin-left: auto; // to push it to the right
 
   .pf-m-icons {
     display: none;
@@ -346,6 +366,10 @@
     }
   }
 
+  .pf-c-avatar {
+    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+  }
+
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-column: 3 / 4;
   }
@@ -357,45 +381,6 @@
   & + & {
     margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
   }
-
-  &.pf-m-user-dropdown {
-    align-self: stretch;
-
-    .pf-c-dropdown__toggle::before {
-      border-width: var(--pf-c-page__header-c-dropdown__toggle--before--BorderWidth);
-    }
-
-    .pf-c-dropdown {
-      display: flex;
-
-      // stylelint-disable selector-max-class
-      &.pf-m-expanded .pf-c-dropdown__toggle::before {
-        border-bottom-color: var(--pf-c-page__header-c-dropdown__toggle--before--expanded--BorderColor);
-        border-bottom-width: var(--pf-c-page__header-c-dropdown__toggle--before--expanded--BorderWidth);
-      }
-      // stylelint-enable
-    }
-
-    .pf-c-dropdown,
-    .pf-c-dropdown__toggle {
-      align-self: stretch;
-    }
-
-    .pf-c-dropdown__toggle-image {
-      display: none;
-      visibility: hidden;
-
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        display: inline-block;
-        visibility: visible;
-      }
-    }
-  }
-}
-
-// Header label
-.pf-c-page__header-label {
-  font-size: var(--pf-c-page__header-label--FontSize);
 }
 
 // Sidebar
