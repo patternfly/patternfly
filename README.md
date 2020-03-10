@@ -12,7 +12,8 @@ When you install PatternFly 4, the package includes:
 - a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly/patternfly.scss`
 - individual files for each component's source (SASS): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
 
-Any of the files above are meant for use in consuming the library. The recommended consumption approach will vary from project to project.
+Any of the files above are meant for use in consuming the library. The recommended
+consumption approach will vary from project to project.
 
 ## Development
 
