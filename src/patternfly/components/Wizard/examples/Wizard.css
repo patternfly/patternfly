@@ -1,4 +1,3 @@
-#ws-core-c-wizard-in-page {
-  display: flex;
-  min-height: 400px;
+#ws-core-c-wizard-in-page .ws-preview-html {
+  height: 400px;
 }
