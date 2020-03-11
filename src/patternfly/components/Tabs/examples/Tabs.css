@@ -3,24 +3,3 @@
   display: flex;
   align-items: stretch;
 }
-
-.ws-lite-index-example .ws-lite-example,
-.ws-preview-html {
-  position: relative;
-}
-
-.class-toggle,
-.class-toggle-group {
-  position: absolute;
-  right: 0;
-  bottom: 106%;
-}
-
-.class-toggle-group {
-  display: flex;
-}
-
-.class-toggle-group .class-toggle {
-  position: static;
-  margin-left: var(--pf-global--spacer--md);
-}

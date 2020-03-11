@@ -10,19 +10,19 @@ import './Tabs.css'
 
 ```hbs title=Default
 {{#> tabs tabs--id="default-example"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
 ```hbs title=Default-overflow-beginning-of-list
 {{#> tabs tabs--id="default-overflow-beginning-of-list-example" tabs--modifier="pf-m-scrollable"}}
-  {{> tabs-list-content tabs-list-content--DisabledFirstScrollButton="true"}}
+  {{> tabs-list--content tabs-list--content--DisabledFirstScrollButton="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Roomy
 {{#> tabs tabs--id="roomy-example" tabs--modifier="pf-m-roomy"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
@@ -41,43 +41,43 @@ import './Tabs.css'
 
 ```hbs title=Vertical
 {{#> tabs tabs--id="vertical-example" tabs--modifier="pf-m-vertical"}}
-  {{> tabs-list-content tabs-list-content--NoScrollButtons="true"}}
+  {{> tabs-list--content tabs-list--content--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Box
 {{#> tabs tabs--id="box-example" tabs--modifier="pf-m-box"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
 ```hbs title=Box-overflow
-{{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" tabs-list-content--DisabledFirstScrollButton="true"}}
-  {{> tabs-list-content}}
+{{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" tabs-list--content--DisabledFirstScrollButton="true"}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
 ```hbs title=Box-roomy
 {{#> tabs tabs--id="box-roomy-example" tabs--modifier="pf-m-box pf-m-roomy"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
 ```hbs title=Box-vertical
 {{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
-  {{> tabs-list-content tabs-list-content--NoScrollButtons="true"}}
+  {{> tabs-list--content tabs-list--content--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Inset
 {{#> tabs tabs--id="inset-example" tabs--modifier="pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
 ```hbs title=Inset-box
 {{#> tabs tabs--id="inset-box-example" tabs--modifier="pf-m-box pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
@@ -89,51 +89,51 @@ import './Tabs.css'
 
 ```hbs title=Icons-and-text
 {{#> tabs tabs--id="icons-example"}}
-  {{> tabs-list-content tabs-list-content--HasIcons="true"}}
+  {{> tabs-list--content tabs-list--content--HasIcons="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Tabs-with-sub-tabs
 {{#> tabs tabs--id="default-parent-example" tabs--modifier="pf-m-sortable"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 
 {{#> tabs tabs--id="default-child-example" tabs--IsSecondary="true"}}
-  {{> tabs-list-content-secondary}}
+  {{> tabs-list--content-secondary}}
 {{/tabs}}
 ```
 
 ```hbs title=Box-tabs-with-sub-tabs
 {{#> tabs tabs--id="box-parent-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 
 {{#> tabs tabs--id="box-child-example" tabs--IsSecondary="true"}}
-  {{> tabs-list-content-secondary}}
+  {{> tabs-list--content-secondary}}
 {{/tabs}}
 ```
 
 ```hbs title=Filled
 {{#> tabs tabs--id="filled-example" tabs--modifier="pf-m-fill"}}
-  {{> tabs-list-content tabs-list-content--IsShort="true"}}
+  {{> tabs-list--content tabs-list--content--IsShort="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Filled-with-icons
 {{#> tabs tabs--id="filled-with-icons-example" tabs--modifier="pf-m-fill"}}
-  {{> tabs-list-content tabs-list-content--HasIcons="true" tabs-list-content--IsShort="true"}}
+  {{> tabs-list--content tabs-list--content--HasIcons="true" tabs-list--content--IsShort="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Filled-box
 {{#> tabs tabs--id="filled-box-example" tabs--modifier="pf-m-fill pf-m-box"}}
-  {{> tabs-list-content tabs-list-content--IsShort="true"}}
+  {{> tabs-list--content tabs-list--content--IsShort="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Filled-box-with-icons
 {{#> tabs tabs--id="filled-box-with-icons-example" tabs--modifier="pf-m-fill pf-m-box"}}
-  {{> tabs-list-content tabs-list-content--HasIcons="true" tabs-list-content--IsShort="true"}}
+  {{> tabs-list--content tabs-list--content--HasIcons="true" tabs-list--content--IsShort="true"}}
 {{/tabs}}
 ```
 
@@ -145,17 +145,17 @@ import './Tabs.css'
 
 ```hbs title=Using-the-nav-element
 {{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 ```
 
 ```hbs title=Sub-nav-using-the-nav-element
 {{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
-  {{> tabs-list-content}}
+  {{> tabs-list--content}}
 {{/tabs}}
 
 {{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-button--type="a" tabs--modifier="pf-m-secondary"}}
-  {{> tabs-list-content-secondary}}
+  {{> tabs-list--content-secondary}}
 {{/tabs}}
 ```
 
