@@ -168,8 +168,13 @@
   --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
   // Dropdown
-  --pf-c-page__header--c-dropdown__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-page__header--c-dropdown__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__header--c-dropdown__toggle--before--hover--BorderBottomColor: var(--pf-global--active-color--400);
+
+  // Toggle
+  --pf-c-header--c-dropdown__toggle--before--BorderColor: transparent;
+  --pf-c-header--c-dropdown__toggle--before--BorderWidth: 0;
+  --pf-c-header--c-dropdown__toggle--before--BorderBottomColor: transparent;
 
   // Label
   --pf-c-page__header-label--FontSize: var(--pf-global--FontSize--sm);
@@ -220,11 +225,9 @@
   }
 
   .pf-c-dropdown__toggle {
-    --pf-c-dropdown__toggle--BorderTopColor: transparent;
-    --pf-c-dropdown__toggle--BorderRightColor: transparent;
-    --pf-c-dropdown__toggle--BorderBottomColor: transparent;
-    --pf-c-dropdown__toggle--BorderLeftColor: transparent;
-    --pf-c-dropdown__toggle--hover--BorderBottomColor: var(--pf-c-page__header--c-dropdown__toggle--before--hover--BorderBottomColor);
+    --pf-c-dropdown__toggle--BorderColor: var(--pf-c-header--c-dropdown__toggle--before--BorderColor);
+    --pf-c-dropdown__toggle--BorderWidth: var(--pf-c-header--c-dropdown__toggle--before--BorderWidth);
+    --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-header--c-dropdown__toggle--before--BorderBottomColor);
 
     &::before {
       border-bottom-width: var(--pf-c-page__header--c-dropdown__toggle--before--BorderBottomWidth);
