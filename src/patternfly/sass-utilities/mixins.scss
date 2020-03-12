@@ -192,3 +192,20 @@
     #{$value}: #{$prop};
   }
 }
+
+@mixin pf-hide-tab-focus($element: &, $duration: ".3s") {
+  $element: #{$element}#{"[hidden]"};
+
+  @keyframes out {
+    to {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  #{$element} {
+    animation-name: out;
+    animation-delay: #{$duration};
+    animation-fill-mode: forwards;
+  }
+}

@@ -415,3 +415,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
   }
 }
+
+// Include this at EOF to overwrite any previous
+@include pf-hide-tab-focus(".pf-c-drawer__panel");
