@@ -185,8 +185,8 @@ cssPrefix: pf-c-drawer
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-c-drawer__panel` | Indicates that the expandable content is visible. **Required** |
-| `aria-expanded="false"` | `.pf-c-drawer__panel` | Indicates that the expandable content is hidden. **Required** |
+| `aria-expanded="true"` | `action that opens drawer` | Indicates that the expandable content is visible. **Required** |
+| `aria-expanded="false"` | `action that opens drawer` | Indicates that the expandable content is hidden. **Required** |
 | `hidden` | `.pf-c-drawer__panel` | Hides the drawer panel from assistive technologies. **Required** |
 
 ### Usage

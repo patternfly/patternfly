@@ -280,7 +280,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   // stylelint-disable selector-max-class
-  .pf-c-drawer.pf-m-panel-left.pf-m-expanded .pf-c-drawer__panel::after {
+  .pf-c-drawer.pf-m-panel-left .pf-c-drawer__panel::after {
     right: 0;
     left: auto;
   }
