@@ -348,7 +348,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   &::after {
-    border-bottom-color: var(--pf-c-tabs__button--after--BorderColor);
+    border-color: var(--pf-c-tabs__button--after--BorderColor);
     border-bottom-width: var(--pf-c-tabs__button--after--BorderWidth);
   }
 
@@ -415,8 +415,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     }
   }
 
-  &:disabled,
-  &:disabled:hover {
+  &:disabled {
     --pf-c-tabs__scroll-button--Color: var(--pf-c-tabs__scroll-button--disabled--Color);
 
     pointer-events: none;

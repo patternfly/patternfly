@@ -10,8 +10,14 @@ __tabs-item--NoText: bool
 ------------------------------------
 --}}
 
-{{#unless __tabs-list--NoScrollButtons}}
-  {{> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+{{#unless __tabs-list-secondary--NoScrollButtons}}
+  {{#if __tabs-list-secondary--DisabledFirstScrollButton}}
+    {{> tabs-scroll-button tabs-scroll-button--IsLeft="true" tabs-scroll-button--IsDisabled="true"}}
+  {{else if __tabs-list-secondary--IsScrollable}}
+    {{> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+  {{else}}
+    {{> tabs-scroll-button tabs-scroll-button--IsLeft="true" tabs-scroll-button--IsDisabled="true"}}
+  {{/if}}
 {{/unless}}
 
 {{#> tabs-list}}
@@ -78,6 +84,12 @@ __tabs-item--NoText: bool
   {{/unless}}
 {{/tabs-list}}
 
-{{#unless __tabs-list--NoScrollButtons}}
-  {{> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+{{#unless __tabs-list-secondary--NoScrollButtons}}
+  {{#if __tabs-list-secondary--DisabledLastScrollButton}}
+    {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true"}}
+  {{else if __tabs-list-secondary--IsScrollable}}
+    {{> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+  {{else}}
+    {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true"}}
+  {{/if}}
 {{/unless}}

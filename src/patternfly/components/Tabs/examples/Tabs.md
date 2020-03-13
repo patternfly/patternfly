@@ -16,7 +16,7 @@ import './Tabs.css'
 
 ```hbs title=Default-overflow-beginning-of-list
 {{#> tabs tabs--id="default-overflow-beginning-of-list-example" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true"}}
+  {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 ```
 
@@ -53,7 +53,7 @@ import './Tabs.css'
 
 ```hbs title=Box-overflow
 {{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
-  {{> __tabs-list}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 ```
 
@@ -94,22 +94,22 @@ import './Tabs.css'
 ```
 
 ```hbs title=Tabs-with-sub-tabs
-{{#> tabs tabs--id="default-parent-example" tabs--modifier="pf-m-sortable"}}
-  {{> __tabs-list}}
+{{#> tabs tabs--id="default-parent-example" tabs--modifier="pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
 {{#> tabs tabs--id="default-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list-secondary}}
+  {{> __tabs-list-secondary __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Box-tabs-with-sub-tabs
 {{#> tabs tabs--id="box-parent-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> __tabs-list}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
 {{#> tabs tabs--id="box-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list-secondary}}
+  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
@@ -145,7 +145,7 @@ import './Tabs.css'
 
 ```hbs title=Using-the-nav-element
 {{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
-  {{> __tabs-list}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 ```
 
@@ -171,7 +171,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | -- | -- | -- |
 | `aria-label="Descriptive text"` | `nav.pf-c-tabs`, `nav.pf-c-tabs.pf-m-secondary` | Gives the `<nav>` an accessible label. **Required when `.pf-c-tabs` is used with `<nav>`**
 | `aria-label="Descriptive text"` | `.pf-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required**
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disable, typically when at the first or last item of a list. **Required** |
+| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disable, typically when at the first or last item of a list or scroll buttons are hidden. **Required** |
 
 ### Usage
 
