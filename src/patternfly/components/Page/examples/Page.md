@@ -123,8 +123,8 @@ cssPrefix: pf-c-page
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
       This `.pf-c-page__main-section` uses `.pf-m-no-padding` to remove all padding.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
-      This `.pf-c-page__main-section` uses `.pf-m-no-padding-mobile` to remove padding on mobile only.
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-on-md"}}
+      This `.pf-c-page__main-section` uses `.pf-m-no-padding-on-md` to remove padding on mobile only.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
