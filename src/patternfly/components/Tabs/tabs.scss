@@ -332,6 +332,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   .pf-c-tabs__item.pf-m-current .pf-c-tabs__button::before {
+    border-right-width: var(--pf-c-tabs__button--before--BorderWidth);
     border-bottom-color: var(--pf-c-tabs__button--Background);
   }
 
@@ -339,14 +340,19 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     border-left-width: 0;
   }
 
+  .pf-c-tabs__item.pf-m-current + .pf-c-tabs__item .pf-c-tabs__button::before {
+    border-left-width: 0;
+  }
+
   .pf-c-tabs__item.pf-m-current:last-child .pf-c-tabs__button::before {
-    border-right-width: var(--pf-c-tabs__button--before--BorderWidth);
+    border-right-width: 0;
   }
   // stylelint-enable
 }
 
 // Vertical
 .pf-c-tabs.pf-m-vertical {
+  --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --pf-c-tabs--Inset: var(--pf-c-tabs--m-vertical--Inset);
 
   padding: var(--pf-c-tabs--Inset) 0 var(--pf-c-tabs--Inset) 0;
@@ -361,6 +367,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   .pf-c-tabs__list {
     flex-direction: column;
+    max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
     border: 0;
   }
 
@@ -368,6 +375,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__button--PaddingTop: var(--pf-c-tabs--m-vertical--c-tabs__button--PaddingTop);
     --pf-c-tabs__button--PaddingBottom: var(--pf-c-tabs--m-vertical--c-tabs__button--PaddingBottom);
 
+    max-width: 100%;
     text-align: left;
 
     &::after {
@@ -377,6 +385,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       border-left-width: var(--pf-c-tabs__button--after--BorderWidth);
     }
   }
+
+  .pf-c-tabs__item-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 // Box, vertical
@@ -385,6 +398,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   &::before {
     left: calc(100% - var(--pf-c-tabs--before--BorderWidth));
+  }
+
+  // offset left border by top border
+  .pf-c-tabs__button::after {
+    top: calc(var(--pf-c-tabs__button--before--BorderWidth) * -1);
   }
 
   // stylelint-disable selector-max-class

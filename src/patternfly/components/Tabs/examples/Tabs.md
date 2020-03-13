@@ -98,7 +98,7 @@ import './Tabs.css'
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="default-child-example" tabs--IsSecondary="true"}}
+{{#> tabs tabs--id="default-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list-secondary}}
 {{/tabs}}
 ```
@@ -108,7 +108,7 @@ import './Tabs.css'
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="box-child-example" tabs--IsSecondary="true"}}
+{{#> tabs tabs--id="box-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list-secondary}}
 {{/tabs}}
 ```
