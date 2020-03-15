@@ -99,7 +99,7 @@ import './Tabs.css'
 {{/tabs}}
 
 {{#> tabs tabs--id="default-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list-secondary __tabs-list--IsScrollable="true"}}
+  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
