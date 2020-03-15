@@ -99,10 +99,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &::before {
     border-color: var(--pf-c-tabs--before--BorderColor);
     border-style: var(--pf-c-tabs--before--BorderStyle);
-    border-top-width: var(--pf-c-tabs--before--BorderTopWidth);
-    border-right-width: var(--pf-c-tabs--before--BorderRightWidth);
-    border-bottom-width: var(--pf-c-tabs--before--BorderBottomWidth);
-    border-left-width: var(--pf-c-tabs--before--BorderLeftWidth);
+    border-width: var(--pf-c-tabs--before--BorderTopWidth) var(--pf-c-tabs--before--BorderRightWidth) var(--pf-c-tabs--before--BorderBottomWidth) var(--pf-c-tabs--before--BorderLeftWidth);
   }
 
   // Filled style
@@ -152,14 +149,23 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__button--PaddingLeft: var(--pf-c-tabs--m-roomy__button--PaddingLeft);
   }
 
+  // Remove bottom border for variants
+  &.pf-m-box,
+  &.pf-m-vertical,
+  &.pf-m-box.pf-m-vertical {
+    .pf-c-tabs__button {
+      --pf-c-tabs__button--after--BorderBottomWidth: 0;
+    }
+  }
+
   // Box
   &.pf-m-box {
     --pf-c-tabs__button--BackgroundColor: var(--pf-c-tabs--m-box__button--BackgroundColor);
     --pf-c-tabs__button--before--BorderBottomWidth: var(--pf-c-tabs__button--before--BorderWidth);
     --pf-c-tabs__button--before--BorderRightWidth: var(--pf-c-tabs__button--before--BorderWidth);
 
+    // Set hover on top border
     .pf-c-tabs__button {
-      --pf-c-tabs__button--after--BorderBottomWidth: 0;
       --pf-c-tabs__button--after--BorderTopWidth: var(--pf-c-tabs__button--after--BorderWidth);
     }
 
@@ -192,12 +198,17 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs--Inset: var(--pf-c-tabs--m-vertical--Inset);
     --pf-c-tabs--before--BorderBottomWidth: 0;
     --pf-c-tabs--before--BorderLeftWidth: var(--pf-c-tabs--before--BorderWidth);
+    --pf-c-tabs__button--before--Left: 0;
     --pf-c-tabs__button--PaddingTop: var(--pf-c-tabs--m-vertical__button--PaddingTop);
     --pf-c-tabs__button--PaddingBottom: var(--pf-c-tabs--m-vertical__button--PaddingBottom);
-    --pf-c-tabs__button--before--Left: 0;
 
     // Because vertical variant has no scroll buttons, reset padding
     padding: 0;
+
+    .pf-c-tabs__list {
+      flex-direction: column;
+      max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
+    }
 
     // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent odd scrolling behavior
     .pf-c-tabs__item:first-child {
@@ -208,14 +219,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       margin-bottom: var(--pf-c-tabs--Inset);
     }
 
-    .pf-c-tabs__list {
-      flex-direction: column;
-      max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
-    }
-
+    // Set hover on left border
     .pf-c-tabs__button {
       --pf-c-tabs__button--after--BorderTopWidth: 0;
-      --pf-c-tabs__button--after--BorderBottomWidth: 0;
       --pf-c-tabs__button--after--BorderLeftWidth: var(--pf-c-tabs__button--after--BorderWidth);
 
       max-width: 100%;
@@ -371,10 +377,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &::before {
     border-color: var(--pf-c-tabs__scroll-button--before--BorderColor);
     border-style: var(--pf-c-tabs__scroll-button--BorderStyle);
-    border-width: 0;
-    border-right-width: var(--pf-c-tabs__scroll-button--before--BorderRightWidth);
-    border-bottom-width: var(--pf-c-tabs__scroll-button--before--BorderBottomWidth);
-    border-left-width: var(--pf-c-tabs__scroll-button--before--BorderLeftWidth);
+    border-width: 0 var(--pf-c-tabs__scroll-button--before--BorderRightWidth) var(--pf-c-tabs__scroll-button--before--BorderBottomWidth) var(--pf-c-tabs__scroll-button--before--BorderLeftWidth);
   }
 
   &:nth-of-type(1) {
