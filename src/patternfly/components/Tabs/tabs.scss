@@ -240,11 +240,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs__button--child--MarginRight: 0;
     }
   }
-
-  .pf-c-tabs.pf-m-roomy & {
-    --pf-c-tabs__button--PaddingRight: var(--pf-c-tabs--m-roomy__button--PaddingRight);
-    --pf-c-tabs__button--PaddingLeft: var(--pf-c-tabs--m-roomy__button--PaddingLeft);
-  }
 }
 
 // Scroll buttons
@@ -297,13 +292,19 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 }
 
+// Roomy
+.pf-c-tabs.pf-m-roomy {
+  --pf-c-tabs__button--PaddingRight: var(--pf-c-tabs--m-roomy__button--PaddingRight);
+  --pf-c-tabs__button--PaddingLeft: var(--pf-c-tabs--m-roomy__button--PaddingLeft);
+}
+
 // Box
 .pf-c-tabs.pf-m-box {
   --pf-c-tabs__button--BackgroundColor: var(--pf-c-tabs--m-box--BackgroundColor);
+  --pf-c-tabs__button--before--BorderBottomWidth: var(--pf-c-tabs__button--before--BorderWidth);
+  --pf-c-tabs__button--before--BorderRightWidth: var(--pf-c-tabs__button--before--BorderWidth);
 
   .pf-c-tabs__button {
-    --pf-c-tabs__button--before--BorderBottomWidth: var(--pf-c-tabs__button--before--BorderWidth);
-    --pf-c-tabs__button--before--BorderRightWidth: var(--pf-c-tabs__button--before--BorderWidth);
     --pf-c-tabs__button--after--BorderBottomWidth: 0;
     --pf-c-tabs__button--after--BorderTopWidth: var(--pf-c-tabs__button--after--BorderWidth);
   }
@@ -337,6 +338,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--Inset: var(--pf-c-tabs--m-vertical--Inset);
   --pf-c-tabs--before--BorderBottomWidth: 0;
   --pf-c-tabs--before--BorderLeftWidth: var(--pf-c-tabs--before--BorderWidth);
+  --pf-c-tabs__button--PaddingTop: var(--pf-c-tabs--m-vertical__button--PaddingTop);
+  --pf-c-tabs__button--PaddingBottom: var(--pf-c-tabs--m-vertical__button--PaddingBottom);
+  --pf-c-tabs__button--before--Left: 0;
 
   padding: var(--pf-c-tabs--Inset) 0;
 
@@ -346,9 +350,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   .pf-c-tabs__button {
-    --pf-c-tabs__button--PaddingTop: var(--pf-c-tabs--m-vertical__button--PaddingTop);
-    --pf-c-tabs__button--PaddingBottom: var(--pf-c-tabs--m-vertical__button--PaddingBottom);
-    --pf-c-tabs__button--before--Left: 0;
     --pf-c-tabs__button--after--BorderTopWidth: 0;
     --pf-c-tabs__button--after--BorderBottomWidth: 0;
     --pf-c-tabs__button--after--BorderLeftWidth: var(--pf-c-tabs__button--after--BorderWidth);
