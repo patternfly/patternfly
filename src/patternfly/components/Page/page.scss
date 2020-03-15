@@ -279,9 +279,7 @@
 .pf-c-page__header-tools {
   grid-column: 2 / 3;
   align-items: center;
-  margin-top: var(--pf-c-page__header-tools--MarginTop);
   margin-right: var(--pf-c-page__header-tools--MarginRight);
-  margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
   .pf-m-icons {
