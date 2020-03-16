@@ -20,12 +20,6 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-```hbs title=Roomy
-{{#> tabs tabs--id="roomy-example" tabs--modifier="pf-m-roomy"}}
-  {{> __tabs-list}}
-{{/tabs}}
-```
-
 ### Accessibility
 
 | Attribute | Applied to | Outcome |
@@ -54,12 +48,6 @@ import './Tabs.css'
 ```hbs title=Box-overflow
 {{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
-{{/tabs}}
-```
-
-```hbs title=Box-roomy
-{{#> tabs tabs--id="box-roomy-example" tabs--modifier="pf-m-box pf-m-roomy"}}
-  {{> __tabs-list}}
 {{/tabs}}
 ```
 
@@ -138,7 +126,6 @@ import './Tabs.css'
 ```
 
 ## Usage
-
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-fill`  | `.pf-c-tabs` | Enables the filled tab list layout. **Required** |
@@ -187,7 +174,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-secondary` | `.pf-c-tabs` | Applies secondary styling to the tab component. |
 | `.pf-m-no-border` | `.pf-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
-| `.pf-m-roomy` | `.pf-c-tabs` | Applies roomy styling to the tab component. |
 | `.pf-m-vertical` | `.pf-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-c-tabs` | Applies filled styling to the tabs component. |
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |

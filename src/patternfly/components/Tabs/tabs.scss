@@ -76,17 +76,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__scroll-button--before--BorderBottomWidth: var(--pf-c-tabs__scroll-button--before--BorderWidth);
   --pf-c-tabs__scroll-button--before--BorderLeftWidth: 0;
 
-  // Roomy
-  --pf-c-tabs--m-roomy__button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-tabs--m-roomy__button--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-tabs--m-roomy__button--md--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-tabs--m-roomy__button--md--PaddingLeft: var(--pf-global--spacer--xl);
-
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-tabs__button--PaddingTop: var(--pf-c-tabs__button--md--PaddingTop);
     --pf-c-tabs__button--PaddingBottom: var(--pf-c-tabs__button--md--PaddingBottom);
-    --pf-c-tabs--m-roomy__button--PaddingRight: var(--pf-c-tabs--m-roomy__button--md--PaddingRight);
-    --pf-c-tabs--m-roomy__button--PaddingLeft: var(--pf-c-tabs--m-roomy__button--md--PaddingLeft);
     --pf-c-tabs__scroll-button--Width: var(--pf-c-tabs__scroll-button--md--Width);
   }
 
@@ -141,12 +133,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     &.pf-m-no-border {
       --pf-c-tabs--before--BorderWidth: 0;
     }
-  }
-
-  // Roomy
-  &.pf-m-roomy {
-    --pf-c-tabs__button--PaddingRight: var(--pf-c-tabs--m-roomy__button--PaddingRight);
-    --pf-c-tabs__button--PaddingLeft: var(--pf-c-tabs--m-roomy__button--PaddingLeft);
   }
 
   // Remove bottom border for variants
