@@ -91,7 +91,7 @@ beta: true
 ```hbs title=File-upload-in-form-with-error
 {{#> form}}
   {{#> form-group}}
-    {{#> file-upload file-upload--id="file-upload-error" file-upload--type="div"}}
+    {{#> file-upload file-upload--id="file-upload-error"}}
       {{#> file-upload-file-select}}
         {{#> input-group}}
           {{> file-upload-text-input
@@ -144,7 +144,7 @@ beta: true
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-file-upload` | `<form>`, `<div>` | Initiates the file upload component. **Required**. |
+| `.pf-c-file-upload` | `<div>`, `<form>` | Initiates the file upload component. **Required**. |
 | `.pf-c-file-upload__file-select` | `<div>` | Initiates the file select element. **Required** |
 | `.pf-c-file-upload__file-details` | `<div>` | Initiates the file details element. **Required** |
 | `.pf-c-file-upload__file-details-spinner` | `<div>` | Initiates the file details element. **Required** |
