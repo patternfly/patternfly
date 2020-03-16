@@ -100,6 +100,12 @@ The single select should be used when the user is selecting an option from a lis
 {{#> select select-toggle--type="div" id="select-single-typeahead-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select-typeahead--Placeholder="New Mexico"}}
 {{/select}}
 ```
+
+```hbs title=Disabled-with-typeahead
+{{#> select id="select-single-typeahead-disabled" select-toggle--type="div" select-toggle--attribute="disabled" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
+{{/select}}
+```
+
 The single select typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
 ### Accessibility
 | Attribute | Applied to | Outcome |
