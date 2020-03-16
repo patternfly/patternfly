@@ -4,9 +4,9 @@
     {{{select-multi-attribute}}}
   {{/if}}>
   {{#if select--IsFilterable}}
-    {{#> select-menu-input}}
+    {{#> select-menu-search}}
       {{> select-menu-search-input}}
-    {{/select-menu-input}}
+    {{/select-menu-search}}
     {{#> divider}}{{/divider}}
   {{/if}}
   {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'id=""' id '-label"')}}

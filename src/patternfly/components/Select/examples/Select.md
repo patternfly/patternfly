@@ -203,7 +203,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-c-select__menu-fieldset` | `<fieldset>` | Initiates a fieldset for the items in a checkbox select. |
 | `.pf-c-select__menu-group` | `<div>` | Initiates a group within a select menu. |
 | `.pf-c-select__menu-group-title` | `<div>` | Initiates a title for a group with a select menu. |
-| `.pf-c-select__menu-input` | `<div>` | Initiates a container for an input group. |
+| `.pf-c-select__menu-search` | `<div>` | Initiates a container for the search input group. |
 | `.pf-m-expanded` | `.pf-c-select` | Indicates the select is expanded. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` | Indicates the select has a typeahead. |
 
