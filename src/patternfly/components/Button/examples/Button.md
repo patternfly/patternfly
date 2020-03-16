@@ -130,28 +130,36 @@ import './Button.css'
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link
+  {{#> button-text}}
+    Link
+  {{/button-text}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-focus"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link focus
+  {{#> button-text}}
+    Link focus
+  {{/button-text}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-active"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link active
+  {{#> button-text}}
+    Link active
+  {{/button-text}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
   {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  Link disabled
+  {{#> button-text}}
+    Link disabled
+  {{/button-text}}
 {{/button}}
 <br>
 <br>
@@ -266,7 +274,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-c-button__icon` | `<span>` | Applies right spacing to an icon inside of the button when the icon is followed by text. |
-| `.pf-c-button__text` | `<span>` | Applies left spacing to an icon inside of a button when the icon comes after text. |
+| `.pf-c-button__text` | `<span>` | Applies left spacing to an icon inside of a button when the icon comes after text. **Required when using `pf-c-button__icon`** |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |

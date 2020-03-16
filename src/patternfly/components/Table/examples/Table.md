@@ -662,7 +662,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-code-branch" aria-hidden="true"></i>
           {{/button-icon}}
-          10
+          {{#> button-text}}
+            10
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
@@ -670,7 +672,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-code" aria-hidden="true"></i>
           {{/button-icon}}
-          4
+          {{#> button-text}}
+            4
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
@@ -678,7 +682,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-cube" aria-hidden="true"></i>
           {{/button-icon}}
-          4
+          {{#> button-text}}
+            4
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
@@ -725,7 +731,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-code-branch" aria-hidden="true"></i>
           {{/button-icon}}
-          3
+          {{#> button-text}}
+            3
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
@@ -733,7 +741,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-code" aria-hidden="true"></i>
           {{/button-icon}}
-          4
+          {{#> button-text}}
+            4
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
@@ -741,7 +751,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-cube" aria-hidden="true"></i>
           {{/button-icon}}
-          2
+          {{#> button-text}}
+            2
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
@@ -788,7 +800,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-code-branch" aria-hidden="true"></i>
           {{/button-icon}}
-          70
+          {{#> button-text}}
+            70
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
@@ -796,7 +810,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-code" aria-hidden="true"></i>
           {{/button-icon}}
-          15
+          {{#> button-text}}
+            15
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
@@ -804,7 +820,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           {{#> button-icon}}
             <i class="fas fa-cube" aria-hidden="true"></i>
           {{/button-icon}}
-          12
+          {{#> button-text}}
+            12
+          {{/button-text}}
         {{/button}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
