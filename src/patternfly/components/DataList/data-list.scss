@@ -22,10 +22,10 @@
   --pf-c-data-list__item--m-selectable--focus--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-data-list__item--m-selectable--active--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-data-list__item--m-expanded--m-selectable--before--BackgroundColor: var(--pf-global--active-color--300);
-  --pf-c-data-list__item--hover--item--BorderTopColor: var(--pf-c-data-list__item-item--BorderTopColor);
-  --pf-c-data-list__item--hover--item--BorderTopWidth: var(--pf-c-data-list__item-item--BorderTopWidth);
   --pf-c-data-list__item-item--BorderTopColor: var(--pf-global--BorderColor--300); // at breaking change switch var to BorderBottom
   --pf-c-data-list__item-item--BorderTopWidth: #{pf-size-prem(8px)}; // at breaking change switch var to BorderBottom
+  --pf-c-data-list__item--hover--item--BorderTopColor: var(--pf-c-data-list__item-item--BorderTopColor);
+  --pf-c-data-list__item--hover--item--BorderTopWidth: var(--pf-c-data-list__item-item--BorderTopWidth);
   --pf-c-data-list__item-item--sm--BorderTopWidth: var(--pf-global--BorderWidth--sm); // at breaking change switch var to BorderBottom
   --pf-c-data-list__item-item--sm--BorderTopColor: var(--pf-global--BorderColor--100); // at breaking change switch var to BorderBottom
 
