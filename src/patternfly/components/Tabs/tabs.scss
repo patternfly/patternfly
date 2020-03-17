@@ -113,8 +113,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Scroll buttons enabled
   &.pf-m-scrollable {
     .pf-c-tabs__scroll-button {
-      z-index: auto;
-      visibility: visible;
       opacity: 1;
     }
 
@@ -137,8 +135,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Remove bottom border for variants
   &.pf-m-box,
-  &.pf-m-vertical,
-  &.pf-m-box.pf-m-vertical {
+  &.pf-m-vertical {
     .pf-c-tabs__button {
       --pf-c-tabs__button--after--BorderBottomWidth: 0;
     }
@@ -215,8 +212,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     }
 
     .pf-c-tabs__item-text {
-      overflow: hidden;
-      text-overflow: ellipsis;
+      max-width: 100%;
+      overflow-wrap: break-word;
     }
   }
 
@@ -348,7 +345,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   width: var(--pf-c-tabs__scroll-button--Width);
   line-height: 1;
   color: var(--pf-c-tabs__scroll-button--Color);
-  visibility: hidden;
   background-color: var(--pf-c-tabs__scroll-button--BackgroundColor);
   outline-offset: var(--pf-c-tabs__scroll-button--OutlineOffset);
   opacity: 0;
@@ -380,8 +376,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     transform: translateX(100%);
   }
 
-  &:disabled,
-  &:disabled:hover {
+  &:disabled {
     --pf-c-tabs__scroll-button--Color: var(--pf-c-tabs__scroll-button--disabled--Color);
 
     pointer-events: none;
