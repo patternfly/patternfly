@@ -111,7 +111,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Scroll buttons enabled
   &.pf-m-scrollable {
     .pf-c-tabs__scroll-button {
-      visibility: visible;
       opacity: 1;
     }
 
@@ -344,9 +343,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   width: var(--pf-c-tabs__scroll-button--Width);
   line-height: 1;
   color: var(--pf-c-tabs__scroll-button--Color);
-
-  // set visibility hidden to hide button from VoiceOver
-  visibility: hidden;
   background-color: var(--pf-c-tabs__scroll-button--BackgroundColor);
   outline-offset: var(--pf-c-tabs__scroll-button--OutlineOffset);
   opacity: 0;
