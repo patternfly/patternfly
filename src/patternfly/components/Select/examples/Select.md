@@ -102,7 +102,7 @@ The single select should be used when the user is selecting an option from a lis
 ```
 
 ```hbs title=Disabled-with-typeahead
-{{#> select id="select-single-typeahead-disabled" select-toggle--type="div" select-toggle--attribute="disabled" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
+{{#> select select-toggle--type="div" id="select-single-typeahead-disabled" select-toggle--attribute="disabled" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
 {{/select}}
 ```
 
