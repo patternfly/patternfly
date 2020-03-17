@@ -14,7 +14,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --pf-c-tabs--m-vertical--m-box--Inset: var(--pf-global--spacer--xl);
 
-
   // Tab buttons
   --pf-c-tabs__button--Color: var(--pf-global--Color--200);
   --pf-c-tabs__button--BackgroundColor: transparent;
@@ -30,7 +29,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical__button--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical__button--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__button--BackgroundColor: var(--pf-global--BackgroundColor--200);
-
 
   // Button before
   --pf-c-tabs__button--before--BorderStyle: solid;

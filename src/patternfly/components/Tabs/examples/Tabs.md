@@ -31,7 +31,7 @@ import './Tabs.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-scrollable` | `.pf-c-tabs` | Enables the directional scroll buttons. |
-| `.pf-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button. |
+| `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 
 ```hbs title=Vertical
 {{#> tabs tabs--id="vertical-example" tabs--modifier="pf-m-vertical"}}
@@ -128,7 +128,7 @@ import './Tabs.css'
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-fill`  | `.pf-c-tabs` | Enables the filled tab list layout. **Required** |
+| `.pf-m-fill`  | `.pf-c-tabs` | Modifies the tabs to fill the available space. **Required** |
 
 ```hbs title=Using-the-nav-element
 {{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
@@ -175,6 +175,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-no-border` | `.pf-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-c-tabs` | Applies vertical styling to the tab component. |
-| `.pf-m-fill` | `.pf-c-tabs` | Applies filled styling to the tabs component. |
+| `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
