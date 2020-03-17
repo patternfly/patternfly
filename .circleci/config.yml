@@ -133,4 +133,4 @@ jobs:
         command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Release to NPM
-        command: npx semantic-release@17.0.4
+        command: if [[ -z $CIRCLE_PULL_REQUEST ]]; then npx semantic-release@17.0.4; fi;
