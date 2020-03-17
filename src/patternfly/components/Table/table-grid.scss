@@ -270,39 +270,19 @@
 
   .pf-c-table__compound-expansion-toggle {
     // Compound expansion toggle
-    // reset compound expansion toggle::before
-    &::before {
-      position: static;
-      border: 0;
-    }
 
-    // reset compound expansion toggle::after
-    &::after {
-      top: auto;
-      right: 0;
-      left: 0;
-    }
-
-    // add bottom border to expansion toggle::after
-    &.pf-m-expanded::after {
-      border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
+    .pf-c-button:hover,
+    &.pf-m-expanded {
+      --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+      --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
+      --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+      --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: 0;
+      --pf-c-table__compound-expansion-toggle__button--after--BorderBottomWidth: var(--pf-c-table__compound-expansion-toggle__button--after--BorderWidth);
     }
 
     // reset button padding
     .pf-c-button {
       padding: 0;
-    }
-
-    &.pf-m-expanded .pf-c-button::after,
-    &:hover .pf-c-button::after {
-      border-right: 0;
-      border-left: 0;
-    }
-
-    &.pf-m-expanded .pf-c-button::before,
-    &:hover .pf-c-button::before {
-      top: auto;
-      bottom: 0;
     }
   }
 

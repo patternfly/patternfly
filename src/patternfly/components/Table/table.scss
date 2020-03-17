@@ -33,6 +33,30 @@
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table-thead--FontWeight: var(--pf-global--FontWeight--bold);
 
+  // Thead row
+  --pf-c-table__control-row--Height: 100%;
+
+  // Chrome ≥ 29
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    & {
+      --pf-c-table__control-row--Height: var(--pf-global--spacer--lg);
+    }
+  }
+
+  // Target Firefor≥4
+  @media screen and (min--moz-device-pixel-ratio: 0) {
+    --pf-c-table__control-row--Height: 100%;
+  }
+
+  // Safari
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    _::-webkit-full-page-media,
+    _:future,
+    :root {
+      --pf-c-table__control-row--Height: 100%;
+    }
+  }
+
   // Thead cell
   --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
@@ -71,7 +95,7 @@
   --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
   // Table cell - action
-  --pf-c-table__action--PaddingTop: 0;
+  --pf-c-table__action--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table__action--PaddingRight: 0;
   --pf-c-table__action--PaddingBottom: 0;
   --pf-c-table__action--PaddingLeft: 0;
@@ -151,10 +175,15 @@
 
   // Base
   width: 100%;
+
+  // set height 100% for full height td > buttons
+  height: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
 
-  td {
-    word-break: break-word;
+  td,
+  th,
+  .pf-c-table__sort .pf-c-button {
+    overflow-wrap: break-word;
   }
 
   // Standard table row (non-expandable)
@@ -163,7 +192,6 @@
     // hack: buttons inside table cells will not occupy full height of parent when adjacent cells'
     // content wraps. for those special cases, there must be an explicit height set on tr and table cell
     // for button height: 100% to work
-    height: 1px;
     border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
 
     // stylelint-disable-next-line
@@ -178,15 +206,9 @@
 
     // set position relative for ::before borders
     position: relative;
-
-    // hack: set table cell height to inherit, then buttons within to height: 100%
-    height: inherit;
-
-    // each value must be set individually as each of these values may be reset contextually
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
     font-weight: var(--pf-c-table-cell--FontWeight);
-    vertical-align: baseline;
 
     // First child padding left
     &:first-child {
@@ -221,8 +243,13 @@
     --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
     --pf-c-table-cell--FontWeight: var(--pf-c-table-thead--FontWeight);
 
-    white-space: nowrap;
-    vertical-align: top;
+    vertical-align: bottom;
+
+    .pf-c-table__check input {
+      --pf-c-table__check--input--MarginTop: 0;
+
+      vertical-align: baseline;
+    }
   }
 
   // Table body cell
@@ -230,6 +257,8 @@
   tbody {
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingBottom);
+
+    vertical-align: baseline;
 
     // Border treatment
     // using first child as row does not calculate height appropriately
@@ -268,23 +297,30 @@
     }
 
     .pf-c-button {
+      position: static;
+      display: flex;
+      flex-direction: column;
       width: 100%;
+      height: 100%;
       padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
       font-size: inherit;
       font-weight: inherit;
       text-align: left;
+      white-space: normal;
     }
   }
 }
 
 // Toggle, check, action - minimize width and padding.
-.pf-c-table .pf-c-table__toggle,
-.pf-c-table .pf-c-table__check,
-.pf-c-table .pf-c-table__action,
-.pf-c-table .pf-c-table__inline-edit-action {
-  --pf-c-table-cell--PaddingBottom: 0;
-
+.pf-c-table__toggle,
+.pf-c-table__check,
+.pf-c-table__action,
+.pf-c-table__inline-edit-action {
   width: 1%;
+
+  tbody & {
+    --pf-c-table-cell--PaddingBottom: 0;
+  }
 }
 
 // Toggle table cell
@@ -292,8 +328,6 @@
 .pf-c-table__toggle {
   --pf-c-table-cell--PaddingRight: 0;
   --pf-c-table-cell--PaddingLeft: 0;
-
-  vertical-align: top;
 
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
@@ -318,11 +352,9 @@
 // Check table cell
 // ==================================================================
 .pf-c-table__check {
-  vertical-align: top;
-
   --pf-c-table-cell--FontSize: var(--pf-c-table__check--input--FontSize);
 
-  > * {
+  input {
     margin-top: var(--pf-c-table__check--input--MarginTop);
     vertical-align: top;
   }
@@ -332,14 +364,10 @@
 // ==================================================================
 .pf-c-table__action,
 .pf-c-table__inline-edit-action {
-  --pf-c-table-cell--PaddingTop: 0;
+  --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
   --pf-c-table-cell--PaddingRight: var(--pf-c-table__action--PaddingRight);
-  --pf-c-table-cell--PaddingBottom: 0;
+  --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
   --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
-
-  padding-top: 0;
-  padding-bottom: 0;
-  vertical-align: middle;
 }
 
 .pf-c-table__inline-edit-action {
@@ -349,40 +377,82 @@
   text-align: right;
 }
 
-// Table toggle compount expansion
-// using this method because the button may not always be full height of the parent cell if siblings wrap
+// Table toggle compound expansion
 // ==================================================================
 .pf-c-table__compound-expansion-toggle {
+  --pf-c-table__compound-expansion-toggle__button--before--BorderStyle: solid;
+  --pf-c-table__compound-expansion-toggle__button--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderBottomColor: var(--pf-c-table--BackgroundColor);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--before--BorderBottomWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--after--BorderStyle: solid;
+  --pf-c-table__compound-expansion-toggle__button--after--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-table__compound-expansion-toggle__button--after--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--after--BorderBottomWidth: 0;
+
   position: relative;
 
+  .pf-c-button,
+  .pf-c-button::before,
+  .pf-c-button::after {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .pf-c-button::before,
+  .pf-c-button::after {
+    position: absolute;
+    content: "";
+  }
+
+  .pf-c-button::before {
+    top: 0;
+    right: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
+    bottom: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
+    left: 0;
+    border-color: var(--pf-c-table__compound-expansion-toggle__button--before--BorderColor);
+    border-style: var(--pf-c-table__compound-expansion-toggle__button--before--BorderStyle);
+    border-right-width: var(--pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth);
+    border-bottom-color: var(--pf-c-table__compound-expansion-toggle__button--before--BorderBottomColor);
+    border-bottom-width: var(--pf-c-table__compound-expansion-toggle__button--before--BorderBottomWidth);
+    border-left-width: var(--pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth);
+  }
+
+  .pf-c-button::after {
+    top: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
+    right: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
+    bottom: 0;
+    left: 0;
+    border-color: var(--pf-c-table__compound-expansion-toggle__button--after--BorderColor);
+    border-style: var(--pf-c-table__compound-expansion-toggle__button--after--BorderStyle);
+    border-top-width: var(--pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth);
+    border-bottom-width: var(--pf-c-table__compound-expansion-toggle__button--after--BorderBottomWidth);
+  }
+
+  .pf-c-button:hover,
   &.pf-m-expanded {
-    border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor);
+    --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
+    --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
+    --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: var(--pf-c-table__compound-expansion-toggle__button--after--BorderWidth);
   }
 
-  &.pf-m-expanded,
-  &:hover {
-    .pf-c-button::before {
-      position: absolute;
-      top: calc(var(--pf-c-table--BorderWidth) * -1);
-      right: 0;
-      left: 0;
-      content: "";
-      border-top: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
-    }
-
-    .pf-c-button::after {
-      bottom: calc(var(--pf-c-table--BorderWidth) * -1);
-      border-right: var(--pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderRight--BorderColor);
-      border-left: var(--pf-c-table__compound-expansion-toggle--BorderLeft--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor);
-    }
+  &.pf-m-expanded {
+    --pf-c-table__compound-expansion-toggle__button--before--BorderBottomWidth: var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
   }
+}
 
-  .pf-c-button {
-    --pf-c-button--BorderRadius: 0;
+// Sort content
+// this container is necessary for nested button to fill vertical height of parent th
+.pf-c-table__button-content {
+  align-self: flex-start;
 
-    // hack: firefox doesn't respect height: 100%. borders are set with ::before & ::after which are
-    // relative to the parent when setting button position: static
-    position: static;
+  .pf-c-table__sort & {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }
 
@@ -391,19 +461,19 @@
 .pf-c-table__sort {
   // override pf-m-plain color
   .pf-c-button {
+    justify-content: flex-end;
+
+    &:active,
+    &:focus {
+      border: inset 1px solid;
+    }
+
     // stylelint-disable
     &.pf-m-plain {
       color: var(--pf-c-table__sort--c-button--Color);
     }
   }
   // stylelint-enable
-
-  &.pf-m-wrap {
-    .pf-c-button {
-      display: flex;
-      white-space: normal;
-    }
-  }
 
   &.pf-m-selected {
     // set button and indicator color
@@ -424,7 +494,6 @@
 
 // Sort indicator
 .pf-c-table__sort-indicator {
-  align-self: flex-start;
   margin-left: var(--pf-c-table__sort-indicator--MarginLeft);
   line-height: var(--pf-c-table__sort-indicator--LineHeight);
   color: var(--pf-c-table__sort-indicator--Color);
@@ -493,10 +562,21 @@
   }
 }
 
+// &.pf-m-compact {
+//   tbody {
+//     --pf-c-table__check--input--MarginTop: 0;
+//     --pf-c-table__action--PaddingTop: 0;
+
+//     vertical-align: middle;
+//   }
+// }
+
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
   --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+  --pf-c-table__check--input--MarginTop: 0;
+  --pf-c-table__action--PaddingTop: 0;
 
   &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
@@ -532,6 +612,10 @@
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
+  }
+
+  tbody {
+    vertical-align: middle;
   }
 
   .pf-c-table__action {
@@ -578,16 +662,16 @@
 }
 
 // Modifier - fit-content
-.pf-c-table .pf-m-fit-content {
+.pf-c-table .pf-m-fit-content,
+.pf-c-table .pf-m-fit-content .pf-c-table__button-content {
   // limit width and padding, fit contents of cell
   width: 1%;
   white-space: nowrap;
 }
 
-// Modifier - Wrap
-.pf-c-table .pf-m-wrap {
-  white-space: normal;
-  vertical-align: top;
+.pf-c-table .pf-m-no-wrap,
+.pf-c-table .pf-m-no-wrap .pf-c-table__button-content {
+  white-space: nowrap;
 }
 
 // Modifier - Width
