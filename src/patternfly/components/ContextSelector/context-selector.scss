@@ -41,8 +41,8 @@
   --pf-c-context-selector__menu-search--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-context-selector__menu-search--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-context-selector__menu-search--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-context-selector__menu-search--BottomBorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-context-selector__menu-search--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-context-selector__menu-search--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --pf-c-context-selector__menu-search--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
   // Menu menu item
   --pf-c-context-selector__menu-list--MaxHeight: #{pf-size-prem(200px)};
@@ -144,7 +144,7 @@
 .pf-c-context-selector__menu-search {
   position: relative;
   padding: var(--pf-c-context-selector__menu-search--PaddingTop) var(--pf-c-context-selector__menu-search--PaddingRight) var(--pf-c-context-selector__menu-search--PaddingBottom) var(--pf-c-context-selector__menu-search--PaddingLeft);
-  border-bottom: var(--pf-c-context-selector__menu-search--BottomBorderWidth) solid var(--pf-c-context-selector__menu-search--BottomBorderColor);
+  border-bottom: var(--pf-c-context-selector__menu-search--BorderBottomWidth) solid var(--pf-c-context-selector__menu-search--BorderBottomColor);
 }
 
 .pf-c-context-selector__menu-list {
