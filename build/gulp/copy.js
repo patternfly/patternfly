@@ -36,7 +36,7 @@ function copySource(sassFiles) {
 function copyDocs() {
   return Promise.all([
     src('src/site/**').pipe(dest('dist/site')),
-    src('src/patternfly/**/*.{md,hbs}').pipe(dest('dist/site/docs')),
+    src('src/patternfly/**/*.{md,hbs,css}').pipe(dest('dist/site/docs')),
     src('RELEASE-NOTES.md').pipe(dest('dist'))
   ]);
 }
