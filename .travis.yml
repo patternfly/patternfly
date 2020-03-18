@@ -1,0 +1,52 @@
+language: node_js
+node_js:
+  - '8'
+
+cache: false
+
+addons:
+  chrome: stable
+
+notifications:
+  email: false
+
+env:
+  global:
+  - PF_PAGE_BUILDER: jekyll
+  - secure: KFSt/cOAh8+v9Mz9AroDg+YYGwkuXyC96ZtOMbcWxVAQzplrrpCD9zI0ZuOtKYg/YHu5mscLWbnXOzBug2J162/V9MyicETmXCdFx5ovu/5rTtbxQ6maoRWQQfcKmQVWNdUDF5rJJ7PU9H/gyXWKvbEpkfNRk6Wr7Oc3D8mYtgI=
+  - secure: SBD8QHLUy1/kCZiLV2OYpqdFTQUWUfkWLx1bdtKFQhWt+aUYBTBdbbb/A7otm+LbBNe5NWWOX1lkciubEs9XlRUdQfS/WqId3c99+457NXeEPtIX6fC92/hrQITFb6vvv7T71ltUs3Q1X2CL82nCas+2LNYlB1/WxKgB8Tr7qPQ=
+
+before_install:
+  - rvm install 2.4.1
+  - npm install -g npm@5.4.0
+  - npm install -g bower grunt-cli
+  - npm install patternfly-eng-release
+
+install: true
+
+script:
+  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
+
+after_success:
+  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master-dist" ]]; then
+       npm prune;
+       npm run semantic-release;
+       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
+       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
+     fi'
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+
+# Automated RubyGems.org deployment
+before_deploy: "sh -x ./scripts/gem_release.sh"
+deploy:
+  skip_cleanup: true
+  provider: rubygems
+  api_key:
+    secure: RP2UsRAyz1+D5e/Mt4C8c3kfq9nzPunQ3QGSTFMkhCmH0dcyBNqGLaIWbrOtRPIeYXpcneoj4SfBvgdmixhi06NMkjw5Vcn213VUZAdafMthAkB3RaQexuzqyz8F8NVTdtXm15zBz/XDZtm42AkOlotoctNUeChFhyhzq3WG9uw=
+  gem: patternfly-sass
+  on:
+    branch: master-dist
+    repo: patternfly/patternfly
