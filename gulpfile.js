@@ -84,7 +84,7 @@ function startWorkspaceServer() {
 const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
 
 module.exports = {
-  build: series(clean, compileSrcSASS, minifyCSS, pfIcons, copyFA, copySourceFiles, copyDocs),
+  build: series(clean, compileSrcSASS, minifyCSS, pfIcons, copyFA, copyDocs, copySourceFiles),
   buildWorkspace,
   develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
   compileSASS: compileSrcSASS,
