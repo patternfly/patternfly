@@ -129,6 +129,8 @@
   }
 
   // Compact
+  --pf-c-data-list--m-compact--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-data-list--m-compact__check--FontSize: var(--pf-global--FontSize--md);
   --pf-c-data-list--m-compact__cell--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__cell--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__cell--md--PaddingBottom: 0;
@@ -155,6 +157,8 @@
   border-bottom: var(--pf-c-data-list--BorderBottomWidth) solid var(--pf-c-data-list--BorderBottomColor);
 
   &.pf-m-compact {
+    font-size: var(--pf-c-data-list--m-compact--FontSize);
+
     --pf-c-data-list__cell--PaddingTop: var(--pf-c-data-list--m-compact__cell--PaddingTop);
     --pf-c-data-list__cell--PaddingBottom: var(--pf-c-data-list--m-compact__cell--PaddingBottom);
     --pf-c-data-list__cell-cell--MarginRight: var(--pf-c-data-list--m-compact__cell-cell--MarginRight);
@@ -166,6 +170,10 @@
     --pf-c-data-list__item-control--PaddingTop: var(--pf-c-data-list--m-compact__item-control--PaddingTop);
     --pf-c-data-list__item-control--PaddingBottom: var(--pf-c-data-list--m-compact__item-control--PaddingBottom);
     --pf-c-data-list__item-content--PaddingBottom: var(--pf-c-data-list--m-compact__item-content--PaddingBottom);
+
+    .pf-c-data-list__check {
+      font-size: var(--pf-c-data-list--m-compact__check--FontSize);
+    }
   }
 }
 
