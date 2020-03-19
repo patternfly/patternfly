@@ -1,0 +1,5 @@
+#ws-core-c-tabs-vertical .ws-preview-html,
+#ws-core-c-tabs-box-vertical .ws-preview-html {
+  display: flex;
+  align-items: stretch;
+}
