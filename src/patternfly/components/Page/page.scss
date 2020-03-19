@@ -58,9 +58,7 @@
   }
 
   // Header tools
-  --pf-c-page__header-tools--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
@@ -279,9 +277,7 @@
 .pf-c-page__header-tools {
   grid-column: 2 / 3;
   align-items: center;
-  margin-top: var(--pf-c-page__header-tools--MarginTop);
   margin-right: var(--pf-c-page__header-tools--MarginRight);
-  margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
   .pf-m-icons {
