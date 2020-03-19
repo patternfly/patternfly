@@ -6,54 +6,81 @@ section: utilities
 import './BoxShadow.css'
 
 ## Examples
-```hbs title=Basic
+```hbs title=Small
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}
-  Box shadow small
+  Regular
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-top"}}
-  Box shadow small, top
+  Top
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-right"}}
-  Box shadow small, right
+  Right
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-bottom"}}
-  Box shadow small, bottom
+  Bottom
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-left"}}
-  Box shadow small, left
+  Left
 {{/box-shadow}}
+```
+
+```hbs title=Medium
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md"}}
-  Box shadow medium
+  Regular
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-top"}}
-  Box shadow medium, top
+  Top
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-right"}}
-  Box shadow medium, right
+  Right
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-bottom"}}
-  Box shadow medium, bottom
+  Bottom
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-left"}}
-  Box shadow medium, left
+  Left
 {{/box-shadow}}
+```
+
+```hbs title=Large
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg"}}
-  Box shadow large
+  Regular
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-top"}}
-  Box shadow large, top
+  Top
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-right"}}
-  Box shadow large, right
+  Right
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-bottom"}}
-  Box shadow large, bottom
+  Bottom
 {{/box-shadow}}
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-left"}}
-  Box shadow large, left
+  Left
 {{/box-shadow}}
+```
+
+```hbs title=Extra-large
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl"}}
+  Regular
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-top"}}
+  Top
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-right"}}
+  Right
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-bottom"}}
+  Bottom
+{{/box-shadow}}
+{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-left"}}
+  Left
+{{/box-shadow}}
+```
+
+```hbs title=Inset
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-inset"}}
-  Box shadow inset
+  Regular
 {{/box-shadow}}
 ```
 
@@ -79,3 +106,8 @@ Box shadow utility
 | `.pf-u-box-shadow-lg-right` | `*` |  Applies box-shadow large right. |
 | `.pf-u-box-shadow-lg-bottom` | `*` |  Applies box-shadow large bottom. |
 | `.pf-u-box-shadow-lg-left` | `*` |  Applies box-shadow large left. |
+| `.pf-u-box-shadow-xl` | `*` |  Applies box-shadow x-large. |
+| `.pf-u-box-shadow-xl-top` | `*` |  Applies box-shadow x-large top. |
+| `.pf-u-box-shadow-xl-right` | `*` |  Applies box-shadow x-large right. |
+| `.pf-u-box-shadow-xl-bottom` | `*` |  Applies box-shadow x-large bottom. |
+| `.pf-u-box-shadow-xl-left` | `*` |  Applies box-shadow x-large left. |
