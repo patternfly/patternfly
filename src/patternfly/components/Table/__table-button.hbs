@@ -1,0 +1,33 @@
+{{#if __table-button--IsCompoundExpand}}
+  {{#> button button--modifier="pf-m-link" button--attribute=__table-button--attribute}}
+    {{#> table-button-content}}
+      {{#if __table-button--icon}}
+        {{#> button-icon}}
+          <i class="fas fa-{{__table-button--icon}}" aria-hidden="true"></i>
+        {{/button-icon}}
+      {{/if}}
+      {{__table-button--text}}
+    {{/table-button-content}}
+  {{/button}}
+{{else if __table-button--IsSort}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=__table-button--attribute}}
+    {{#> table-button-content}}
+      {{#> table-button-text}}
+        {{> @partial-block}}
+      {{/table-button-text}}
+      {{#> table-sort-indicator}}
+        {{#if table-th--selected}}
+          {{#if table-th--asc}}
+            <i class="fas fa-long-arrow-alt-up"></i>
+          {{else}}
+            <i class="fas fa-long-arrow-alt-down"></i>
+          {{/if}}
+        {{else}}
+          <i class="fas fa-arrows-alt-v"></i>
+        {{/if}}
+      {{/table-sort-indicator}}
+    {{/table-button-content}}
+  {{/button}}
+{{else}}
+  {{> @partial-block}}
+{{/if}}

@@ -125,9 +125,9 @@ cssPrefix: pf-c-table
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
 ```hbs title=Sortable-alt-demo-purposes-to-be-removed
-{{#> table table--id="sortable-alt-example" table--grid="true" table--modifier="pf-m-grid-lgs" table--attribute='aria-label="This is a sortable table example"'}}
+{{#> table table--id="sortable-alt-example" table--grid="true" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
@@ -225,7 +225,7 @@ cssPrefix: pf-c-table
 ```hbs title=Sortable
 {{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
@@ -331,9 +331,9 @@ cssPrefix: pf-c-table
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__sort` | `<th>` | Initiates a sort table cell. **Required for sortable table columns** |
-| `.pf-c-table__sort-content` | `.pf-c-table__sort > button > div` | Initiates a sort content wrapper. This element allows sort  **Required for sortable table columns** |
-| `.pf-c-table__sort-text` | `.pf-c-table__sort > button > .pf-c-table__sort-content > span` | Initiates the text wrapper inside of a sortable table cell. **Required for sortable table columns** |
-| `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > .pf-c-table__sort-content > span` | Initiates a sort indicator. **Required for sortable table columns** |
+| `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > .pf-c-table__button-content > span` | Initiates a sort indicator. **Required for sortable table columns** |
+| `.pf-c-table__button-text` | `.pf-c-table__sort > button > .pf-c-table__button-content > span` | Initiates the text wrapper inside of a sortable table cell. **Required for sortable table columns** |
+| `.pf-c-table__button-content` | `.pf-c-table__sort > button > div` | Initiates a button content wrapper. This element allows sort button to place content.  **Required for sortable table columns** |
 | `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
 | `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
@@ -506,7 +506,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 ```hbs title=Expandable
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
@@ -701,7 +701,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ```hbs title=With-compound-expansion
 {{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
@@ -723,7 +723,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-thead}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true" table-tr--IsControlRow="true"}}
+    {{#> table-tr table-tr--expanded="true"}}
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -786,7 +786,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -849,7 +849,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
        {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -1457,7 +1457,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ```hbs title=With-width-modifiers
 {{#> table table--id="table-width-modifiers" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Check all rows">
       {{/table-td}}
@@ -1696,7 +1696,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     This is the table caption
   {{/table-caption}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--IsControlRow="true"}}
+    {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}

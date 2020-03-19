@@ -12,7 +12,7 @@
   --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table-cell--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-table--cell--FontWeight: var(--pf-global--FontWeight--normal);
 
   // Caption
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
@@ -33,50 +33,26 @@
   --pf-c-table-thead--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table-thead--FontWeight: var(--pf-global--FontWeight--bold);
 
-  // Thead row
-  --pf-c-table__control-row--Height: 100%;
-
-  // Chrome ≥ 29
-  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-    & {
-      --pf-c-table__control-row--Height: var(--pf-global--spacer--lg);
-    }
-  }
-
-  // Target Firefor≥4
-  @media screen and (min--moz-device-pixel-ratio: 0) {
-    --pf-c-table__control-row--Height: 100%;
-  }
-
-  // Safari
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    _::-webkit-full-page-media,
-    _:future,
-    :root {
-      --pf-c-table__control-row--Height: 100%;
-    }
-  }
-
   // Thead cell
   --pf-c-table-thead-cell--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table-thead-cell--PaddingBottom: var(--pf-global--spacer--md);
 
   // Cell
-  --pf-c-table-cell--hidden-visible--Display: table-cell;
+  --pf-c-table--cell--hidden-visible--Display: table-cell;
 
   // Td
-  --pf-c-table-tbody-cell--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-table-tbody-cell--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-table--tbody-cell--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-table--tbody-cell--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Th / td shared variables
   // Padding vars must be individual as they are contextually reset
-  --pf-c-table-cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-cell--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table-cell--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table-cell--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-table-cell--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-table-cell--first-last-child--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table-cell--first-last-child--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--cell--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table--cell--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--cell--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table--cell--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-global--spacer--lg);
 
   // ============================================================ //
   // End non-conformant variables
@@ -95,7 +71,7 @@
   --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
   // Table cell - action
-  --pf-c-table__action--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table__action--PaddingTop: 0;
   --pf-c-table__action--PaddingRight: 0;
   --pf-c-table__action--PaddingBottom: 0;
   --pf-c-table__action--PaddingLeft: 0;
@@ -153,14 +129,18 @@
   --pf-c-table--m-compact__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Modifier - compound expansion toggle
-  --pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-table__compound-expansion-toggle--BorderTop--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-table__compound-expansion-toggle--BorderRight--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle--BorderRight--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__compound-expansion-toggle--BorderLeft--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__compound-expansion-toggle--BorderBottom--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderStyle: solid;
+  --pf-c-table__compound-expansion-toggle__button--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderBottomColor: var(--pf-c-table--BackgroundColor);
+  --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--before--BorderBottomWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--after--BorderStyle: solid;
+  --pf-c-table__compound-expansion-toggle__button--after--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-table__compound-expansion-toggle__button--after--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: 0;
+  --pf-c-table__compound-expansion-toggle__button--after--BorderBottomWidth: 0;
 
   // Modifier - expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
@@ -189,9 +169,6 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
-    // hack: buttons inside table cells will not occupy full height of parent when adjacent cells'
-    // content wraps. for those special cases, there must be an explicit height set on tr and table cell
-    // for button height: 100% to work
     border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
 
     // stylelint-disable-next-line
@@ -202,22 +179,22 @@
 
   // Table row
   tr > * {
-    @include pf-hidden-visible(var(--pf-c-table-cell--hidden-visible--Display));
+    @include pf-hidden-visible(var(--pf-c-table--cell--hidden-visible--Display));
 
     // set position relative for ::before borders
     position: relative;
-    padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
-    font-size: var(--pf-c-table-cell--FontSize);
-    font-weight: var(--pf-c-table-cell--FontWeight);
+    padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table--cell--PaddingRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table--cell--PaddingLeft);
+    font-size: var(--pf-c-table--cell--FontSize);
+    font-weight: var(--pf-c-table--cell--FontWeight);
 
     // First child padding left
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table-cell--first-last-child--PaddingLeft);
+      --pf-c-table--cell--PaddingLeft: var(--pf-c-table--cell--first-last-child--PaddingLeft);
     }
 
     // Last child padding right
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table-cell--first-last-child--PaddingRight);
+      --pf-c-table--cell--PaddingRight: var(--pf-c-table--cell--first-last-child--PaddingRight);
     }
 
     &.pf-m-center {
@@ -238,25 +215,19 @@
 
   // Table header cell
   thead {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingTop);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingBottom);
-    --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
-    --pf-c-table-cell--FontWeight: var(--pf-c-table-thead--FontWeight);
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingTop);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingBottom);
+    --pf-c-table--cell--FontSize: var(--pf-c-table-thead--FontSize);
+    --pf-c-table--cell--FontWeight: var(--pf-c-table-thead--FontWeight);
 
     vertical-align: bottom;
-
-    .pf-c-table__check input {
-      --pf-c-table__check--input--MarginTop: 0;
-
-      vertical-align: baseline;
-    }
   }
 
   // Table body cell
   // stylelint-disable
   tbody {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table-tbody-cell--PaddingTop);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table-tbody-cell--PaddingBottom);
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table--tbody-cell--PaddingTop);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table--tbody-cell--PaddingBottom);
 
     vertical-align: baseline;
 
@@ -274,6 +245,14 @@
 
       // add border left
       background-color: transparent;
+    }
+
+    tr {
+      height: inherit;
+    }
+
+    .pf-c-table__check input {
+
     }
 
     // add background color when active
@@ -302,7 +281,7 @@
       flex-direction: column;
       width: 100%;
       height: 100%;
-      padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
+      padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table--cell--PaddingRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table--cell--PaddingLeft);
       font-size: inherit;
       font-weight: inherit;
       text-align: left;
@@ -319,15 +298,27 @@
   width: 1%;
 
   tbody & {
-    --pf-c-table-cell--PaddingBottom: 0;
+    --pf-c-table--cell--PaddingBottom: 0;
+  }
+}
+
+.pf-c-table__check,
+.pf-c-table__action,
+.pf-c-table__inline-edit-action {
+  width: 1%;
+
+  tbody & {
+    --pf-c-table--cell--PaddingTop: 0;
   }
 }
 
 // Toggle table cell
 // ==================================================================
 .pf-c-table__toggle {
-  --pf-c-table-cell--PaddingRight: 0;
-  --pf-c-table-cell--PaddingLeft: 0;
+  --pf-c-table--cell--PaddingRight: 0;
+  --pf-c-table--cell--PaddingLeft: 0;
+
+  vertical-align: top;
 
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
@@ -352,11 +343,12 @@
 // Check table cell
 // ==================================================================
 .pf-c-table__check {
-  --pf-c-table-cell--FontSize: var(--pf-c-table__check--input--FontSize);
+  --pf-c-table--cell--FontSize: var(--pf-c-table__check--input--FontSize);
 
   input {
     margin-top: var(--pf-c-table__check--input--MarginTop);
-    vertical-align: top;
+
+    // vertical-align: top;
   }
 }
 
@@ -364,15 +356,15 @@
 // ==================================================================
 .pf-c-table__action,
 .pf-c-table__inline-edit-action {
-  --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
-  --pf-c-table-cell--PaddingRight: var(--pf-c-table__action--PaddingRight);
-  --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
-  --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+  --pf-c-table--cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
+  --pf-c-table--cell--PaddingRight: var(--pf-c-table__action--PaddingRight);
+  --pf-c-table--cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
+  --pf-c-table--cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
 }
 
 .pf-c-table__inline-edit-action {
-  --pf-c-table-cell--PaddingLeft: 0;
-  --pf-c-table-cell--PaddingRight: 0;
+  --pf-c-table--cell--PaddingLeft: 0;
+  --pf-c-table--cell--PaddingRight: 0;
 
   text-align: right;
 }
@@ -380,19 +372,6 @@
 // Table toggle compound expansion
 // ==================================================================
 .pf-c-table__compound-expansion-toggle {
-  --pf-c-table__compound-expansion-toggle__button--before--BorderStyle: solid;
-  --pf-c-table__compound-expansion-toggle__button--before--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__compound-expansion-toggle__button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__compound-expansion-toggle__button--before--BorderBottomColor: var(--pf-c-table--BackgroundColor);
-  --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
-  --pf-c-table__compound-expansion-toggle__button--before--BorderBottomWidth: 0;
-  --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-  --pf-c-table__compound-expansion-toggle__button--after--BorderStyle: solid;
-  --pf-c-table__compound-expansion-toggle__button--after--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-table__compound-expansion-toggle__button--after--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: 0;
-  --pf-c-table__compound-expansion-toggle__button--after--BorderBottomWidth: 0;
-
   position: relative;
 
   .pf-c-button,
@@ -459,14 +438,8 @@
 // Table sort
 // ==================================================================
 .pf-c-table__sort {
-  // override pf-m-plain color
   .pf-c-button {
     justify-content: flex-end;
-
-    &:active,
-    &:focus {
-      border: inset 1px solid;
-    }
 
     // stylelint-disable
     &.pf-m-plain {
@@ -503,8 +476,8 @@
 // Expandable row
 // ==================================================================
 .pf-c-table__expandable-row {
-  --pf-c-table-cell--PaddingTop: 0;
-  --pf-c-table-cell--PaddingBottom: 0;
+  --pf-c-table--cell--PaddingTop: 0;
+  --pf-c-table--cell--PaddingBottom: 0;
 
   position: relative;
   border-bottom: 0 solid transparent;
@@ -552,12 +525,12 @@
   tr > * {
     // First child padding left
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
+      --pf-c-table--cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
     }
 
     // Last child padding right
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
+      --pf-c-table--cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
     }
   }
 }
@@ -574,9 +547,8 @@
 // Compact table
 // ==================================================================
 .pf-c-table.pf-m-compact {
-  --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+  --pf-c-table--cell--FontSize: var(--pf-c-table--m-compact--FontSize);
   --pf-c-table__check--input--MarginTop: 0;
-  --pf-c-table__action--PaddingTop: 0;
 
   &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
@@ -586,29 +558,28 @@
   }
 
   tr {
-    --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
-    --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
+    --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-compact-cell--PaddingLeft);
+    --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-compact-cell--PaddingRight);
 
     &:not(.pf-c-table__expandable-row) {
-      --pf-c-table-cell--FontSize: var(--pf-c-table--m-compact--FontSize);
-      --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
-      --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
+      --pf-c-table--cell--FontSize: var(--pf-c-table--m-compact--FontSize);
+      --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-compact-cell--PaddingTop);
+      --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-compact-cell--PaddingBottom);
 
       // stylelint-disable
       > * {
         &:first-child {
-          --pf-c-table-cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
+          --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-compact-cell--first-last-child--PaddingLeft);
         }
 
         &:last-child {
-          --pf-c-table-cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
+          --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-compact-cell--first-last-child--PaddingRight);
         }
       }
       // stylelint-enable
     }
   }
 
-  // Thead only
   thead {
     --pf-c-table--m-compact-cell--PaddingTop: var(--pf-c-table--m-compact-th--PaddingTop);
     --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-c-table--m-compact-th--PaddingBottom);
@@ -619,14 +590,14 @@
   }
 
   .pf-c-table__action {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
-    --pf-c-table-cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
+    --pf-c-table--cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
   }
 
   .pf-c-table__toggle {
-    --pf-c-table-cell--PaddingTop: var(--pf-c-table--m-compact__toggle--PaddingTop);
-    --pf-c-table-cell--PaddingBottom: var(--pf-c-table--m-compact__toggle--PaddingBottom);
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-compact__toggle--PaddingTop);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-compact__toggle--PaddingBottom);
   }
 
   .pf-c-table__icon {
@@ -636,11 +607,11 @@
   // nested tables
   .pf-c-table & tr > * {
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
+      --pf-c-table--cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
     }
 
     &:last-child {
-      --pf-c-table-cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
+      --pf-c-table--cell--PaddingRight: var(--pf-c-table--nested--first-last-child--PaddingRight);
     }
   }
 
