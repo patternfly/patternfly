@@ -55,7 +55,7 @@ const functionRegex = /:\s+(\w[\w\d]+)\(.*\)/gi;
 function lintCSSFunctions() {
   let failed = false;
 
-  return src('./dist/**/*.css')
+  return src('dist/**/*.css')
     .pipe(
       through2.obj((chunk, _, cb2) => {
         const css = chunk.contents.toString();
@@ -82,7 +82,7 @@ function lintCSSFunctions() {
 function lintCSSComments() {
   let failed = false;
 
-  return src('./dist/**/*.css')
+  return src(['dist/**/*.css', '!dist/site/**'])
     .pipe(
       through2.obj((chunk, _, cb2) => {
         const loggedPath = path.relative(process.cwd(), chunk.history[0]);
