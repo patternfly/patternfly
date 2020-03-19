@@ -16,10 +16,12 @@ function copySource(sassFiles) {
     // Copy source files
     src(sassFiles).pipe(dest('dist')),
     // Copy excluded source files
-    src(['src/patternfly/_*.scss', 'src/patternfly/**/_all.scss', 'src/patternfly/patternfly-imports.scss']).pipe(
-      dest('dist')
-    ),
-    src('src/patternfly/{components,layouts,patterns,utilities}/**/*.scss').pipe(dest('dist')),
+    src([
+      'src/patternfly/_*.scss',
+      'src/patternfly/**/_all.scss',
+      'src/patternfly/patternfly-imports.scss',
+      'src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'
+    ]).pipe(dest('dist')),
     src('src/patternfly/sass-utilities/*').pipe(dest('dist/sass-utilities')),
     // Assets
     src('static/assets/images/**/*').pipe(dest('dist/assets/images/')),
@@ -36,7 +38,7 @@ function copySource(sassFiles) {
 function copyDocs() {
   return Promise.all([
     src('src/site/**').pipe(dest('dist/site')),
-    src('src/patternfly/**/*.{md,hbs,css}').pipe(dest('dist/site/docs')),
+    src('src/patternfly/{components,layouts,patterns,utilities}/**/*.{md,hbs,css}').pipe(dest('dist/site/docs')),
     src('RELEASE-NOTES.md').pipe(dest('dist'))
   ]);
 }

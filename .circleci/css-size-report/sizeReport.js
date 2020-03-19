@@ -24,7 +24,7 @@ function npmInstall(package) {
 function buildValueMap(distDir) {
   const res = {};
   glob
-    .sync(`${distDir}/**/*.css`)
+    .sync([`${distDir}/**/*.css`, `!${distDir}/site`])
     .forEach(file =>
       res[file.replace(distDir, '').substr(1)] = fs.statSync(file).size
     );
