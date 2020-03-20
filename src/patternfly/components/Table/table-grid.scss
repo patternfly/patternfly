@@ -35,8 +35,8 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Body
   --pf-c-table--m-grid--tbody--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-table--m-grid--tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--tbody--BorderWidth: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
 
   // Row
   --pf-c-table--m-grid--tr--BorderWidth: var(--pf-global--spacer--sm);
@@ -65,19 +65,20 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Td
   --pf-c-table--m-grid--td--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--th--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--cell--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--cell--PaddingRight: 0;
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
-  --pf-c-table--m-grid--cell-th--PaddingTop: var(--pf-global--spacer--sm);
 
   // Compact table
-  --pf-c-table--m-grid--m-compact-tr--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--m-compact-tr--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--m-compact-tr-td--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-table--m-grid--m-compact-tr-td--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--m-compact--tr--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact--tr--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact--td--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--m-compact--td--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-table--m-grid--m-compact__action--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table--m-grid--m-compact__check--input--MarginTop: 0;
 
   // Expandable row content
   --pf-c-table--m-grid__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
@@ -85,8 +86,8 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   --pf-c-table--m-grid__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Table check
-  --pf-c-table--m-grid__check--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid__check--MarginTop: #{pf-size-prem(6px)};
+  --pf-c-table--m-grid__check--MarginLeft: var(--pf-global--spacer--sm);
 
   // Table action
   --pf-c-table--m-grid__action--MarginLeft: var(--pf-global--spacer--xl);
@@ -168,7 +169,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
     // remove padding from first th to align with kebab
     th {
-      padding-top: var(--pf-c-table--m-grid--cell-th--PaddingTop);
+      padding-top: var(--pf-c-table--m-grid--th--PaddingTop);
     }
   }
 
@@ -181,11 +182,12 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   }
 
   &.pf-m-compact {
-    --pf-c-table--m-grid--tr--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr--PaddingTop);
-    --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr--PaddingBottom);
-    --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingTop);
-    --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingBottom);
-    --pf-c-table__check--input--MarginTop: 0;
+    --pf-c-table--m-grid--tr--PaddingTop: var(--pf-c-table--m-grid--m-compact--tr--PaddingTop);
+    --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-c-table--m-grid--m-compact--tr--PaddingBottom);
+    --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--m-compact--td--PaddingTop);
+    --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-c-table--m-grid--m-compact--td--PaddingBottom);
+    --pf-c-table__check--input--MarginTop: var(--pf-c-table--m-grid--m-compact__check--input--MarginTop);
+
 
     .pf-c-table__action {
       margin-top: var(--pf-c-table--m-grid--m-compact__action--MarginTop);
