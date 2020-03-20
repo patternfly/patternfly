@@ -7,13 +7,13 @@
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-no-wrap"}}
         Pull requests
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-no-wrap"}}
        Work spaces
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-no-wrap"}}
        Last commit
       {{/table-th}}
       {{#> table-td}}{{/table-td}}
@@ -26,30 +26,31 @@
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          10
-        {{/button}}
+      {{#> table-td
+        table-td--data-label="Branches"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--IsExpanded="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-1"
+        }}
+        {{> button-icon button-icon--name="fas fa-code-branch"}} 10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Pull requests"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-2"
+        }}
+        {{> button-icon button-icon--name="fas fa-code"}} 4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work spaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
-          {{#> button-icon}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Workspaces"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-3"
+        }}
+        {{> button-icon button-icon--name="fas fa-cube"}} 8
       {{/table-td}}
+
       {{#> table-td table-td--data-label="Last commit"}}
         <span>20 minutes</span>
       {{/table-td}}
@@ -89,29 +90,28 @@
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          3
-        {{/button}}
+      {{#> table-td
+        table-td--data-label="Branches"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-4"
+        }}
+        {{> button-icon button-icon--name="fas fa-code-branch"}} 3
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Pull requests"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-5"
+        }}
+        {{> button-icon button-icon--name="fas fa-code"}} 44
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work spaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
-          {{#> button-icon}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          2
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Workspaces"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-6"
+        }}
+        {{> button-icon button-icon--name="fas fa-cube"}} 1
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>1 day ago</span>
@@ -152,30 +152,31 @@
        {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          70
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Branches"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-7"
+        }}
+        {{> button-icon button-icon--name="fas fa-code-branch"}} 70
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          15
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Pull requests"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-8"
+        }}
+        {{> button-icon button-icon--name="fas fa-code"}} 15
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Work spaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
-          {{#> button-icon}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          12
-        {{/button}}
+
+      {{#> table-td
+        table-td--data-label="Workspaces"
+        table-td--compound-expansion-toggle="true"
+        table-td--compound-expansion-toggle--button--aria-controls="nested-table-9"
+        }}
+        {{> button-icon button-icon--name="fas fa-cube"}} 12
       {{/table-td}}
+
       {{#> table-td table-td--data-label="Last commit"}}
         <span>2 days ago</span>
       {{/table-td}}
