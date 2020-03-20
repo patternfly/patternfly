@@ -399,13 +399,6 @@
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    &.pf-m-expanded {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-wizard__nav--Width: var(--pf-c-wizard__nav--lg--Width);
 
     display: block;
