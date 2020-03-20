@@ -173,15 +173,17 @@
 }
 
 // Apply media query if value is passed
-@mixin pf-apply-breakpoint($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map) {
+@mixin pf-apply-breakpoint($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map, $max-width: "false") {
+  $media-query-type: if($max-width != "false", "max-width", "min-width");
+
   @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {
     @content;
   }
 
   @else {
-    $breakpoint: pf-breakpoint-value($breakpoint);
+    $breakpoint-value: if($max-width != "false", pf-breakpoint-value($breakpoint) - 1, pf-breakpoint-value($breakpoint));
 
-    @media (min-width: $breakpoint) {
+    @media screen and ($media-query-type: $breakpoint-value) {
       @content;
     }
   }

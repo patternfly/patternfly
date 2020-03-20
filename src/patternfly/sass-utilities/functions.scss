@@ -25,7 +25,7 @@
 @function pf-breakpoint-value($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map) {
   $breakpoint-value: if(map-has-key($breakpoint-map, #{$breakpoint}), map-get($breakpoint-map, #{$breakpoint}), false);
 
-  @return #{$breakpoint-value};
+  @return $breakpoint-value;
 }
 
 // Build breakpoint map
