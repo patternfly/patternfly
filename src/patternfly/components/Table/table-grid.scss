@@ -34,15 +34,12 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Body
-  --pf-c-table--m-grid--tbody--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-table--m-grid--tbody--BorderWidth: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
 
   // Row
   --pf-c-table--m-grid--tr--BorderWidth: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--tr--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table--m-grid--tr--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--tr--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--tr--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table--m-grid--tr--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table--m-grid--tr--md--PaddingRight: var(--pf-global--spacer--md);
