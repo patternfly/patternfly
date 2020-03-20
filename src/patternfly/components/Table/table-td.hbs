@@ -2,7 +2,7 @@
     {{else if table-td--check}} class="pf-c-table__check"
     {{else if table-td--action}} class="pf-c-table__action"
     {{else if table-td--icon}} class="pf-c-table__icon"
-    {{else if table-td--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle {{table-td--modifier}}"
+    {{else if table-td--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle{{#if table-td--compound-expansion-toggle--IsExpanded}} pf-m-expanded{{/if}}{{table-td--modifier}}"
     {{else if table-td--action}} class="pf-c-table__action"
     {{else if table-td--modifier}} class="{{table-td--modifier}}"
     {{/if}}
@@ -19,6 +19,21 @@
     <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
       {{#> table-toggle-icon}}{{/table-toggle-icon}}
     </button>
+  {{else if table-td--compound-expansion-toggle}}
+    {{#if table-td--compound-expansion-toggle--IsExpanded}}
+      {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-' table-td--compound-expansion-toggle--button--aria-controls '"' table-td--compound-expansion-toggle--button--attribute)}}
+        {{#> table-button-content}}
+          {{> @partial-block}}
+        {{/table-button-content}}
+      {{/button}}
+    {{else}}
+      {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-' table-td--compound-expansion-toggle--button--aria-controls '"' table-td--compound-expansion-toggle--button--attribute)}}
+        {{#> table-button-content}}
+          {{> @partial-block}}
+        {{/table-button-content}}
+      {{/button}}
+    {{/if}}
+  {{else}}
+    {{> @partial-block}}
   {{/if}}
-  {{> @partial-block}}
 </td>

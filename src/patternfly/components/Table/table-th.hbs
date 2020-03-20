@@ -25,7 +25,24 @@
     {{{table-th--attribute}}}
   {{/if}}>
   {{#if table-th--sortable}}
-    {{> __table-button __table-button--IsSort="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=table-th--sortable--button--attribute}}
+      {{#> table-button-content}}
+        {{#> table-button-text}}
+          {{> @partial-block}}
+        {{/table-button-text}}
+        {{#> table-sort-indicator}}
+          {{#if table-th--selected}}
+            {{#if table-th--asc}}
+              <i class="fas fa-long-arrow-alt-up"></i>
+            {{else}}
+              <i class="fas fa-long-arrow-alt-down"></i>
+            {{/if}}
+          {{else}}
+            <i class="fas fa-arrows-alt-v"></i>
+          {{/if}}
+        {{/table-sort-indicator}}
+      {{/table-button-content}}
+    {{/button}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
