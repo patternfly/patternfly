@@ -1811,7 +1811,7 @@ Table columns may shift when expanding/collapsing. To address this, set `.pf-m-f
 
 ### Table header cells
 
-By default, all table header cells are set to wrap. If a `<th>`'s content needs to not wrap, apply `.pf-m-fit-content`.
+By default, all table header cells are set to wrap. If a `<th>`'s content needs to not wrap, apply `.pf-m-no-wrap` or `.pf-m-fit-content`.
 
 ### Implementation support
 
