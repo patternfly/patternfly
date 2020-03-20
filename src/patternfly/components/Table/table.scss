@@ -253,10 +253,6 @@
       background-color: transparent;
     }
 
-    tr {
-      height: inherit;
-    }
-
     // add background color when active
     &.pf-m-expanded > tr > :not(th):first-child::before {
       background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
