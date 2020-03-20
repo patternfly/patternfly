@@ -5,7 +5,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   @each $breakpoint, $breakpoint-value in $pf-c-table-grid--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map, "max-width-test") {
+    @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map, $max-width: "true") {
       .pf-c-table.pf-m-grid#{$breakpoint-name} {
         @content;
       }
