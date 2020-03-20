@@ -25,7 +25,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   // ==================================================================
 
   // Table
-  --pf-c-table--grid--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-table--m-grid--BorderColor: var(--pf-global--BorderColor--300);
 
   // Cell
   --pf-c-table--m-grid--cell--PaddingTop: 0;
@@ -34,67 +34,66 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Body
-  --pf-c-table--tbody--grid--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-table--tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
-  --pf-c-table--tbody--grid--BorderWidth: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tbody--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tbody--BorderWidth: var(--pf-global--spacer--sm);
 
   // Row
-  --pf-c-table--tr--grid--BorderWidth: var(--pf-global--spacer--sm);
-  --pf-c-table--tr--grid--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table--tr--grid--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--tr--grid--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-table--tr--grid--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--tr--grid--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table--tr--grid--md--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table--tr--grid--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table--tr--grid--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table--tr--grid--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--BorderWidth: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tr--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table--m-grid--tr--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tr--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--md--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--md) {
-    --pf-c-table--tr--grid--PaddingRight: var(--pf-c-table--tr--grid--md--PaddingRight);
-    --pf-c-table--tr--grid--PaddingLeft: var(--pf-c-table--tr--grid--md--PaddingLeft);
+    --pf-c-table--m-grid--tr--PaddingRight: var(--pf-c-table--m-grid--tr--md--PaddingRight);
+    --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-c-table--m-grid--tr--md--PaddingLeft);
   }
 
-  --pf-c-table--tr--grid--nested-table--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table--tr--grid--nested-table--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table--tr--grid--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-table--tr--grid--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--nested-table--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid--tr--nested-table--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid--tr--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Cell
-  --pf-c-table--cell--m-grid--hidden-visible--Display: grid;
+  --pf-c-table--m-grid--cell--hidden-visible--Display: grid;
 
   // Td
-  --pf-c-table--td--grid--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--cell--grid--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--cell--grid--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--cell-th--grid--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--cell--grid--PaddingRight: 0;
-  --pf-c-table--cell--grid--PaddingLeft: 0;
+  --pf-c-table--m-grid--td--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--cell--PaddingRight: 0;
+  --pf-c-table--m-grid--cell--PaddingLeft: 0;
+  --pf-c-table--m-grid--cell-th--PaddingTop: var(--pf-global--spacer--sm);
 
   // Compact table
-  --pf-c-table--m-compact-tr--grid--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact-tr--grid--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact-tr-td--grid--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-table--m-compact-tr-td--grid--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-table--m-compact__action--grid--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-table--m-compact__action--grid--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-table--m-compact__toggle--c-button--grid--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table--m-grid--m-compact-tr--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact-tr--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact-tr-td--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--m-compact-tr-td--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--m-compact__action--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   // Expandable row content
-  --pf-c-table__expandable-row-content--grid--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table__expandable-row-content--grid--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-table--m-grid__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Table check
-  --pf-c-table__check--grid--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__check--grid--MarginTop: #{pf-size-prem(6px)};
+  --pf-c-table--m-grid__check--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid__check--MarginTop: #{pf-size-prem(6px)};
 
   // Table action
-  --pf-c-table__action--grid--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid__action--MarginLeft: var(--pf-global--spacer--xl);
 
   // Table toggle icons
-  --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
-  --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
+  --pf-c-table--m-grid__toggle__icon--Transition: .2s ease-in 0s;
+  --pf-c-table--m-grid__toggle--m-expanded__icon--Transform: rotate(180deg);
 
   // End grid vars
   // ==================================================================
@@ -116,7 +115,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     display: block;
 
     &:first-of-type {
-      border-top: var(--pf-c-table--tbody--grid--BorderWidth) solid var(--pf-c-table--grid--BorderColor);
+      border-top: var(--pf-c-table--m-grid--tbody--BorderWidth) solid var(--pf-c-table--m-grid--BorderColor);
     }
   }
 
@@ -127,24 +126,24 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Table row
   tr:not(.pf-c-table__expandable-row) {
-    border-bottom: var(--pf-c-table--tr--grid--BorderWidth) solid var(--pf-c-table--grid--BorderColor);
+    border-bottom: var(--pf-c-table--m-grid--tr--BorderWidth) solid var(--pf-c-table--m-grid--BorderColor);
   }
 
   // The last tr should always have a border width of 1px
   tr:last-child,
   tbody:last-of-type:not(:only-of-type) > tr {
-    border-bottom-width: var(--pf-c-table--tr--grid--last-child--BorderWidth);
+    border-bottom-width: var(--pf-c-table--m-grid--tr--last-child--BorderWidth);
   }
 
   tbody.pf-m-expanded {
-    border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+    border-bottom: var(--pf-c-table--m-grid--BorderWidth) solid var(--pf-c-table--BorderColor);
 
     tr:not(.pf-c-table__expandable-row) {
       border-bottom: 0;
     }
 
     &:not(:last-of-type) {
-      border-bottom: var(--pf-c-table--tbody--grid--BorderWidth) solid var(--pf-c-table--grid--BorderColor);
+      border-bottom: var(--pf-c-table--m-grid--tbody--BorderWidth) solid var(--pf-c-table--m-grid--BorderColor);
     }
   }
 
@@ -157,19 +156,19 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
     // set subsequent auto column width to max-content
     grid-auto-columns: max-content;
-    grid-column-gap: var(--pf-c-table--tr--grid--GridColumnGap);
+    grid-column-gap: var(--pf-c-table--m-grid--tr--GridColumnGap);
 
     // set base variables to reset later
-    padding: var(--pf-c-table--tr--grid--PaddingTop) var(--pf-c-table--tr--grid--PaddingRight) var(--pf-c-table--tr--grid--PaddingBottom) var(--pf-c-table--tr--grid--PaddingLeft);
+    padding: var(--pf-c-table--m-grid--tr--PaddingTop) var(--pf-c-table--m-grid--tr--PaddingRight) var(--pf-c-table--m-grid--tr--PaddingBottom) var(--pf-c-table--m-grid--tr--PaddingLeft);
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table--cell--grid--PaddingTop) var(--pf-c-table--cell--grid--PaddingRight) var(--pf-c-table--cell--grid--PaddingBottom) var(--pf-c-table--cell--grid--PaddingLeft);
+      padding: var(--pf-c-table--m-grid--cell--PaddingTop) var(--pf-c-table--m-grid--cell--PaddingRight) var(--pf-c-table--m-grid--cell--PaddingBottom) var(--pf-c-table--m-grid--cell--PaddingLeft);
     }
 
     // remove padding from first th to align with kebab
     th {
-      padding-top: var(--pf-c-table--cell-th--grid--PaddingTop);
+      padding-top: var(--pf-c-table--m-grid--cell-th--PaddingTop);
     }
   }
 
@@ -182,19 +181,19 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   }
 
   &.pf-m-compact {
-    --pf-c-table--tr--grid--PaddingTop: var(--pf-c-table--m-compact-tr--grid--PaddingTop);
-    --pf-c-table--tr--grid--PaddingBottom: var(--pf-c-table--m-compact-tr--grid--PaddingBottom);
-    --pf-c-table--cell--grid--PaddingTop: var(--pf-c-table--m-compact-tr-td--grid--PaddingTop);
-    --pf-c-table--cell--grid--PaddingBottom: var(--pf-c-table--m-compact-tr-td--grid--PaddingBottom);
+    --pf-c-table--m-grid--tr--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr--PaddingTop);
+    --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr--PaddingBottom);
+    --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingTop);
+    --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingBottom);
     --pf-c-table__check--input--MarginTop: 0;
 
     .pf-c-table__action {
-      margin-top: var(--pf-c-table--m-compact__action--grid--MarginTop);
-      margin-bottom: var(--pf-c-table--m-compact__action--grid--MarginTop);
+      margin-top: var(--pf-c-table--m-grid--m-compact__action--MarginTop);
+      margin-bottom: var(--pf-c-table--m-grid--m-compact__action--MarginTop);
     }
 
     .pf-c-table__toggle .pf-c-button {
-      margin-bottom: var(--pf-c-table--m-compact__toggle--c-button--grid--MarginBottom);
+      margin-bottom: var(--pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom);
     }
   }
 
@@ -205,11 +204,11 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   // Standard td, in standard row (non-expandable)
   [data-label] {
     // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
-    --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--cell--m-grid--hidden-visible--Display);
+    --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     // grid layout, set td to two column grid
     grid-column: 1;
-    grid-column-gap: var(--pf-c-table--td--grid--GridColumnGap);
+    grid-column-gap: var(--pf-c-table--m-grid--td--GridColumnGap);
     align-items: start;
 
     // @mobile, breakpoint small
@@ -233,7 +232,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   }
 
   tr > * {
-    display: var(--pf-c-table--cell--m-grid--hidden-visible--Display);
+    display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     // Remove first child padding left
     &:first-child {
@@ -248,15 +247,15 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // nested tables
   .pf-c-table {
-    --pf-c-table--tr--grid--PaddingTop: var(--pf-c-table--tr--grid--nested-table--PaddingTop);
-    --pf-c-table--tr--grid--PaddingRight: var(--pf-c-table--tr--grid--nested-table--PaddingRight);
-    --pf-c-table--tr--grid--PaddingBottom: var(--pf-c-table--tr--grid--nested-table--PaddingBottom);
-    --pf-c-table--tr--grid--PaddingLeft: var(--pf-c-table--tr--grid--nested-table--PaddingLeft);
+    --pf-c-table--m-grid--tr--PaddingTop: var(--pf-c-table--m-grid--tr--nested-table--PaddingTop);
+    --pf-c-table--m-grid--tr--PaddingRight: var(--pf-c-table--m-grid--tr--nested-table--PaddingRight);
+    --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-c-table--m-grid--tr--nested-table--PaddingBottom);
+    --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-c-table--m-grid--tr--nested-table--PaddingLeft);
 
     border: 0;
 
     tr:not(.pf-c-table__expandable-row) + tr:not(.pf-c-table__expandable-row) {
-      --pf-c-table--tr--grid--PaddingTop: 0;
+      --pf-c-table--m-grid--tr--PaddingTop: 0;
     }
   }
 
@@ -312,10 +311,10 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Expandable row
   .pf-c-table__expandable-row {
-    --pf-c-table--cell--grid--PaddingTop: 0;
-    --pf-c-table--cell--grid--PaddingRight: 0;
-    --pf-c-table--cell--grid--PaddingBottom: 0;
-    --pf-c-table--cell--grid--PaddingLeft: 0;
+    --pf-c-table--m-grid--cell--PaddingTop: 0;
+    --pf-c-table--m-grid--cell--PaddingRight: 0;
+    --pf-c-table--m-grid--cell--PaddingBottom: 0;
+    --pf-c-table--m-grid--cell--PaddingLeft: 0;
     --pf-c-table--cell--PaddingRight: 0;
     --pf-c-table--cell--PaddingLeft: 0;
 
@@ -356,8 +355,8 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     }
 
     .pf-c-table__expandable-row-content {
-      padding-right: var(--pf-c-table__expandable-row-content--grid--PaddingRight);
-      padding-left: var(--pf-c-table__expandable-row-content--grid--PaddingLeft);
+      padding-right: var(--pf-c-table--m-grid__expandable-row-content--PaddingRight);
+      padding-left: var(--pf-c-table--m-grid__expandable-row-content--PaddingLeft);
     }
   }
 
@@ -380,14 +379,14 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Check table cell
   .pf-c-table__check {
-    margin-top: var(--pf-c-table__check--grid--MarginTop);
-    margin-left: var(--pf-c-table__check--grid--MarginLeft);
+    margin-top: var(--pf-c-table--m-grid__check--MarginTop);
+    margin-left: var(--pf-c-table--m-grid__check--MarginLeft);
     grid-row-start: 1;
     grid-column-start: 2;
 
     // if action is present, add margin left to accommodate checkbox
     & ~ .pf-c-table__action {
-      margin-left: var(--pf-c-table__action--grid--MarginLeft);
+      margin-left: var(--pf-c-table--m-grid__action--MarginLeft);
     }
   }
 
@@ -413,11 +412,11 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   // Toggles
   .pf-c-table__toggle {
     .pf-c-button > * {
-      transition: var(--pf-c-table__toggle__icon--Transition);
+      transition: var(--pf-c-table--m-grid__toggle__icon--Transition);
     }
 
     .pf-c-button.pf-m-expanded > * {
-      transform: var(--pf-c-table__toggle--m-expanded__icon--Transform);
+      transform: var(--pf-c-table--m-grid__toggle--m-expanded__icon--Transform);
     }
   }
 
