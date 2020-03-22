@@ -161,15 +161,11 @@
   // Base
   width: 100%;
 
+  // table-layout: fixed;
+
   // set height 100% for full height td > buttons
   height: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
-
-  td,
-  th,
-  .pf-c-table__sort .pf-c-button {
-    overflow-wrap: break-word;
-  }
 
   // Standard table row (non-expandable)
   // exclude expandable rows
@@ -181,6 +177,10 @@
       height: auto;
     }
   }
+
+  // &.pf-m-fixed {
+  //   table-layout: fixed;
+  // }
 
   // Table row
   tr > * {
@@ -226,7 +226,13 @@
     --pf-c-table--cell--FontWeight: var(--pf-c-table--thead--FontWeight);
     --pf-c-table__check--input--MarginTop: var(--pf-c-table--thead__check--input--MarginTop);
 
+    white-space: nowrap;
     vertical-align: bottom;
+
+    th,
+    td {
+      min-width: 16ch;
+    }
   }
 
   // Table body cell
@@ -427,14 +433,72 @@
   }
 }
 
+.pf-c-table__cell-content,
+.pf-c-table__text {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+// Text
+.pf-c-table__text {
+  overflow-wrap: break-word;
+
+  thead & {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.pf-m-truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// Truncate
+// stylelint-disable selector-no-qualifying-type
+.pf-c-table th.pf-m-truncate,
+.pf-c-table td.pf-m-truncate {
+  &,
+  .pf-c-table__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    // white-space: nowrap;
+  }
+}
+// stylelint-enable
+
+// Wrap
+// stylelint-disable selector-no-qualifying-type
+.pf-c-table th.pf-m-wrap,
+.pf-c-table td.pf-m-wrap {
+  &,
+  .pf-c-table__text {
+    text-overflow: initial;
+    white-space: normal;
+  }
+}
+// stylelint-enable
+
 // Sort content
 // this container is necessary for nested button to fill vertical height of parent th
-.pf-c-table__button-content {
+.pf-c-table__cell-content {
+  display: inline-grid;
+  grid-template-columns: auto max-content;
   align-self: flex-start;
 
+  .pf-c-table__text {
+    grid-column: 1;
+  }
+
+  .pf-c-table__sort-indicator {
+    grid-column: 2;
+  }
+
   .pf-c-table__sort & {
-    display: flex;
     align-items: flex-end;
+    max-width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -625,16 +689,15 @@
 }
 
 // Modifier - fit-content
-.pf-c-table .pf-m-fit-content,
-.pf-c-table .pf-m-fit-content .pf-c-table__button-content {
+.pf-c-table .pf-m-fit-content {
   // limit width and padding, fit contents of cell
   width: 1%;
+  min-width: 0;
   white-space: nowrap;
-}
 
-.pf-c-table .pf-m-no-wrap,
-.pf-c-table .pf-m-no-wrap .pf-c-table__button-content {
-  white-space: nowrap;
+  .pf-c-table__text {
+    overflow: visible;
+  }
 }
 
 // Modifier - Width

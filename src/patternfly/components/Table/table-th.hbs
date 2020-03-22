@@ -26,10 +26,10 @@
   {{/if}}>
   {{#if table-th--sortable}}
     {{#> button button--modifier="pf-m-plain" button--attribute=table-th--sortable--button--attribute}}
-      {{#> table-button-content}}
-        {{#> table-button-text}}
+      {{#> table-cell-content}}
+        {{#> table-text}}
           {{> @partial-block}}
-        {{/table-button-text}}
+        {{/table-text}}
         {{#> table-sort-indicator}}
           {{#if table-th--selected}}
             {{#if table-th--asc}}
@@ -41,9 +41,13 @@
             <i class="fas fa-arrows-alt-v"></i>
           {{/if}}
         {{/table-sort-indicator}}
-      {{/table-button-content}}
+      {{/table-cell-content}}
     {{/button}}
   {{else}}
-    {{> @partial-block}}
+    {{#> table-cell-content}}
+      {{#> table-text}}
+        {{> @partial-block}}
+      {{/table-text}}
+    {{/table-cell-content}}
   {{/if}}
 </th>

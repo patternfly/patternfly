@@ -22,18 +22,24 @@
   {{else if table-td--compound-expansion-toggle}}
     {{#if table-td--compound-expansion-toggle--IsExpanded}}
       {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-' table-td--compound-expansion-toggle--button--aria-controls '"' table-td--compound-expansion-toggle--button--attribute)}}
-        {{#> table-button-content}}
-          {{> @partial-block}}
-        {{/table-button-content}}
+        {{#> table-cell-content}}
+          {{#> table-text}}
+            {{> @partial-block}}
+          {{/table-text}}
+        {{/table-cell-content}}
       {{/button}}
     {{else}}
       {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-' table-td--compound-expansion-toggle--button--aria-controls '"' table-td--compound-expansion-toggle--button--attribute)}}
-        {{#> table-button-content}}
-          {{> @partial-block}}
-        {{/table-button-content}}
+        {{#> table-cell-content}}
+          {{#> table-text}}
+            {{> @partial-block}}
+          {{/table-text}}
+        {{/table-cell-content}}
       {{/button}}
     {{/if}}
   {{else}}
-    {{> @partial-block}}
+    {{#> table-text}}
+      {{> @partial-block}}
+    {{/table-text}}
   {{/if}}
 </td>

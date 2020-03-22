@@ -34,6 +34,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Body
+  --pf-c-table--m-grid--tbody--BorderWidth: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
 
   // Row

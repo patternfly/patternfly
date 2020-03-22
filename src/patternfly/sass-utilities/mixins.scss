@@ -181,7 +181,7 @@
   }
 
   @else {
-    $breakpoint-value: if($max-width != "false", pf-breakpoint-value($breakpoint) - 1, pf-breakpoint-value($breakpoint));
+    $breakpoint-value: pf-breakpoint-value($breakpoint);
 
     @media screen and ($media-query-type: $breakpoint-value) {
       @content;

@@ -124,6 +124,38 @@ cssPrefix: pf-c-table
 | `.pf-m-height-auto` | `<tr>` | Modifies a `<tr>` to have `height: auto`, which undoes the `height` declaration currently on `<tr>` elements. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
+```hbs title=Sortable-alt-simple-demo-purposes-to-be-removed
+{{#> table table--id="sortable-simple-alt-example" table--grid="true" table--attribute='aria-label="This is a sortable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus leo leo, vehicula a pretium at, malesuada finibus purus.
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-no-wrap"}}
+        Pull requests
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        I'm baby keytar tattooed flannel biodiesel shaman quinoa, hexagon ennui jianbing.
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 ```hbs title=Sortable-alt-demo-purposes-to-be-removed
 {{#> table table--id="sortable-alt-example" table--grid="true" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
@@ -149,7 +181,7 @@ cssPrefix: pf-c-table
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 1
+        I'm baby keytar tattooed flannel biodiesel shaman quinoa, hexagon ennui jianbing retro pug brooklyn hot chicken asymmetrical. Ugh pour-over kale chips dreamcatcher literally shaman. Irony edison bulb sustainable 8-bit sriracha cray polaroid. Butcher normcore copper mug 3 wolf moon pour-over activated charcoal cred, disrupt actually humblebrag flannel. Irony humblebrag occupy ramps la croix fingerstache. Put a bird on it squid jean shorts hashtag vinyl pinterest tumeric tofu wolf chartreuse taxidermy la croix next level. Salvia neutra roof party, fanny pack letterpress jianbing health goth gluten-free mumblecore XOXO waistcoat.
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -334,6 +366,7 @@ cssPrefix: pf-c-table
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > .pf-c-table__button-content > span` | Initiates a sort indicator. **Required for sortable table columns** |
 | `.pf-c-table__button-text` | `.pf-c-table__sort > button > .pf-c-table__button-content > span` | Initiates the text wrapper inside of a sortable table cell. **Required for sortable table columns** |
 | `.pf-c-table__button-content` | `.pf-c-table__sort > button > div` | Initiates a button content wrapper. This element allows sort button to place content.  **Required for sortable table columns** |
+| `.pf-m-wrap` | `.pf-c-table__sort`| Modifies the sortable table header to wrap. |
 | `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
 | `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
