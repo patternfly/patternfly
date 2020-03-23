@@ -9,7 +9,7 @@
     {{/select-menu-input}}
     {{#> divider}}{{/divider}}
   {{/if}}
-  {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'id=""' id '-label"')}}
+  {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'id="' id '-label"')}}
     {{#> check check--type="label" check--attribute=(concat 'for="' id '-active"') check--modifier="pf-c-select__menu-item"}}
       {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-active" name="' id '-active"')}}{{/check-input}}
       {{#> check-label check-label--type="span"}}Active{{/check-label}}

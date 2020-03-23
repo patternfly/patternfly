@@ -41,7 +41,6 @@ import './Flex.css'
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
-  </div>
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
