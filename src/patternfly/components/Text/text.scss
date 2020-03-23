@@ -52,7 +52,7 @@
 
 // By default, pf-c-text will wrap
 .pf-c-text {
-  display: inherit;
+  display: block;
   max-width: var(--pf-c-text--MaxWidth);
   overflow: var(--pf-c-text--Overflow);
   font-size: var(--pf-c-text--FontSize);
