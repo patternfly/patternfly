@@ -153,11 +153,6 @@
   width: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
 
-  th,
-  td {
-    overflow-wrap: break-word;
-  }
-
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
@@ -187,6 +182,7 @@
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
     font-weight: var(--pf-c-table-cell--FontWeight);
+    overflow-wrap: break-word;
     vertical-align: baseline;
 
     // First child padding left
