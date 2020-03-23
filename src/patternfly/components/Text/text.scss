@@ -1,39 +1,54 @@
+:root {
+  // Don't change or use these elseshwere
+  --pf-global--text--FontSize: var(--pf-global--FontSize--md);
+  --pf-global--text--FontWeight: var(--pf-global--FontWeight-normal);
+  --pf-global--text--Color: inherit;
+  --pf-global--text--MaxWidth: none;
+  --pf-global--text--Overflow: hidden;
+  --pf-global--text--OverflowWrap: break-word;
+  --pf-global--text--WhiteSpace: normal;
+  --pf-c-text--FontSize: var(--pf-global--text--FontSize);
+  --pf-c-text--FontWeight: var(--pf-global--text--FontWeight);
+  --pf-c-text--Color: var(--pf-global--text--Color);
+  --pf-c-text--MaxWidth: var(--pf-global--text--MaxWidth);
+  --pf-c-text--Overflow: var(--pf-global--text--Overflow);
+  --pf-c-text--OverflowWrap: --pf-global--text--overflowwrap;
+  --pf-c-text--WhiteSpace: var(--pf-global--text--WhiteSpace);
+}
+
 // Add to mixins
-@mixin pf-truncate() {
-  --pf-c-text--MaxWidth: var(--pf-c-text--m-truncate--MaxWidth);
-  --pf-c-text--Overflow: var(--pf-c-text--m-truncate--Overflow);
-  --pf-c-text--TextOverflow: var(--pf-c-text--m-truncate--TextOverflow);
-  --pf-c-text--WhiteSpace: var(--pf-c-text--m-truncate--WhiteSpace);
-}
-
-@mixin pf-wrap() {
-  max-width: 100%;
-  overflow: visible;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-
-@mixin pf-no-wrap() {
-  white-space: nowrap;
+@mixin pf-text-truncate() {
+  --pf-c-text--MaxWidth: 100%;
+  --pf-c-text--Overflow: hidden;
+  --pf-c-text--TextOverflow: ellipsis;
+  --pf-c-text--WhiteSpace: nowrap;
 }
 
 
-.pf-c-text {
-  --pf-c-text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-text--FontWeight: var(--pf-global--FontWeight-normal);
-  --pf-c-text--Color: var(--pf-global--Color--400);
-  --pf-c-text--MaxWidth: none;
-  --pf-c-text--Overflow: visible;
-  --pf-c-text--OverflowWrap: break-word;
+@mixin pf-text-wrap() {
   --pf-c-text--WhiteSpace: normal;
+}
 
-  // Color
-  --pf-c-text--primary-color--100--Color: var(--pf-global--primary-color--100);
-  --pf-c-text--m-truncate--MaxWidth: 100%;
-  --pf-c-text--m-truncate--Overflow: hidden;
-  --pf-c-text--m-truncate--TextOverflow: ellipsis;
-  --pf-c-text--m-truncate--WhiteSpace: nowrap;
+@mixin pf-text-no-wrap() {
+  --pf-c-text--WhiteSpace: nowrap;
+  --pf-c-text--Overflow: visible;
+}
 
+%pf-text-truncate {
+  @include pf-text-truncate();
+}
+
+%pf-text-wrap {
+  @include pf-text-wrap();
+}
+
+%pf-text-no-wrap {
+  @include pf-text-wrap();
+}
+
+
+// By default, pf-c-text will wrap
+.pf-c-text {
   max-width: var(--pf-c-text--MaxWidth);
   overflow: var(--pf-c-text--Overflow);
   font-size: var(--pf-c-text--FontSize);
@@ -44,15 +59,23 @@
   white-space: var(--pf-c-text--WhiteSpace);
 
   &.pf-m-truncate {
-    @include pf-truncate;
+    @include pf-text-truncate();
   }
 
   &.pf-m-wrap {
-    @include pf-wrap();
+    @include pf-text-wrap();
   }
 
   &.pf-m-no-wrap {
-    @include pf-no-wrap();
+    @include pf-text-no-wrap();
+  }
+
+  &.pf-m-primary-color--100 {
+    --pf-c-text--Color: var(--pf-c-text--primary-color--100--Color);
+  }
+
+  &.pf-m-danger--100 {
+    --pf-c-text--Color: var(--pf-global--danger-color--100);
   }
 
   // // Colors

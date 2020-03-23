@@ -231,6 +231,11 @@
     --pf-c-table--cell--FontWeight: var(--pf-c-table--thead--FontWeight);
     --pf-c-table__check--input--MarginTop: var(--pf-c-table--thead__check--input--MarginTop);
 
+    // Update -text vars here
+    --pf-c-text--FontSize: var(--pf-c-table--cell--FontSize);
+
+    @extend %pf-text-truncate;
+
     white-space: nowrap;
 
     th {
@@ -488,33 +493,33 @@
 //   // }
 // }
 
-@mixin pf-text-truncate {
-  --pf-c-table__text--TextOverflow: ellipsis;
-  --pf-c-table__text--WhiteSpace: nowrap;
-}
+// @mixin pf-text-truncate {
+//   --pf-c-table__text--TextOverflow: ellipsis;
+//   --pf-c-table__text--WhiteSpace: nowrap;
+// }
 
-%pf-text-truncate {
-  @include pf-text-truncate();
-}
+// %pf-text-truncate {
+//   @include pf-text-truncate();
+// }
 
-@mixin pf-text-wrap {
-  --pf-c-table__text--TextOverflow: visible;
-  --pf-c-table__text--WhiteSpace: normal;
-}
+// @mixin pf-text-wrap {
+//   --pf-c-table__text--TextOverflow: visible;
+//   --pf-c-table__text--WhiteSpace: normal;
+// }
 
-%pf-text-pf-text-wrap {
-  @include pf-text-wrap();
-}
+// %pf-text-pf-text-wrap {
+//   @include pf-text-wrap();
+// }
 
-@mixin pf-text-no-wrap {
-  --pf-c-table__text--TextOverflow: visible;
-  --pf-c-table__text--Overflow: visible;
-  --pf-c-table__text--WhiteSpace: nowrap;
-}
+// @mixin pf-text-no-wrap {
+//   --pf-c-table__text--TextOverflow: visible;
+//   --pf-c-table__text--Overflow: visible;
+//   --pf-c-table__text--WhiteSpace: nowrap;
+// }
 
-%pf-text-pf-text-no-wrap {
-  @include pf-text-no-wrap();
-}
+// %pf-text-no-wrap {
+//   @include pf-text-no-wrap();
+// }
 
 // :root {
 //   --pf-c-table__text--OverflowWrap: break-word;
@@ -529,31 +534,31 @@
 
 // Text
 .pf-c-table__text {
-  --pf-c-table__text--OverflowWrap: break-word;
-  --pf-c-table__text--Overflow: hidden;
-  --pf-c-table__text--TextOverflow: initial;
-  --pf-c-table__text--WhiteSpace: normal;
+  // --pf-c-table__text--OverflowWrap: break-word;
+  // --pf-c-table__text--Overflow: hidden;
+  // --pf-c-table__text--TextOverflow: initial;
+  // --pf-c-table__text--WhiteSpace: normal;
 
-  overflow: var(--pf-c-table__text--Overflow);
-  text-overflow: var(--pf-c-table__text--TextOverflow);
-  overflow-wrap: var(--pf-c-table__text--OverflowWrap);
-  white-space: var(--pf-c-table__text--WhiteSpace);
+  // overflow: var(--pf-c-table__text--Overflow);
+  // text-overflow: var(--pf-c-table__text--TextOverflow);
+  // overflow-wrap: var(--pf-c-table__text--OverflowWrap);
+  // white-space: var(--pf-c-table__text--WhiteSpace);
 
-  &.pf-m-truncate {
-    @include pf-text-truncate();
-  }
+  // &.pf-m-truncate {
+  //   @include pf-text-truncate();
+  // }
 
-  &.pf-m-wrap {
-    @include pf-text-wrap();
-  }
+  // &.pf-m-wrap {
+  //   @include pf-text-wrap();
+  // }
 
-  &.pf-m-no-wrap {
-    @include pf-text-no-wrap();
-  }
+  // &.pf-m-no-wrap {
+  //   @include pf-text-no-wrap();
+  // }
 
-  thead & {
-    @include pf-text-truncate();
-  }
+  // thead & {
+  //   @include pf-text-truncate();
+  // }
 
   // &.pf-m-truncate {
   //   text-overflow: ellipsis;
