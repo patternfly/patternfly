@@ -150,15 +150,14 @@
 
   // Base
   width: 100%;
+
+  // Table requires a height to calculate
+  height: 100%;
   background-color: var(--pf-c-table--BackgroundColor);
 
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
-    // hack: buttons inside table cells will not occupy full height of parent when adjacent cells'
-    // content wraps. for those special cases, there must be an explicit height set on tr and table cell
-    // for button height: 100% to work
-    height: 1px;
     border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
 
     // stylelint-disable-next-line
@@ -387,6 +386,8 @@
 .pf-c-table__sort {
   // override pf-m-plain color
   .pf-c-button {
+    height: 100%;
+
     // stylelint-disable
     &.pf-m-plain {
       color: var(--pf-c-table__sort--c-button--Color);
