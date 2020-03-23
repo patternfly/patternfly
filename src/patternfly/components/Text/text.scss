@@ -3,6 +3,7 @@
   --pf-global--text--FontSize: var(--pf-global--FontSize--md);
   --pf-global--text--FontWeight: var(--pf-global--FontWeight-normal);
   --pf-global--text--Color: inherit;
+  --pf-global--text--Display: initial;
   --pf-global--text--MaxWidth: none;
   --pf-global--text--Overflow: hidden;
   --pf-global--text--OverflowWrap: break-word;
@@ -14,16 +15,20 @@
   --pf-c-text--Overflow: var(--pf-global--text--Overflow);
   --pf-c-text--OverflowWrap: var(--pf-global--text--OverflowWrap);
   --pf-c-text--WhiteSpace: var(--pf-global--text--WhiteSpace);
+  --pf-c-text--Display: var(--pf-global--text--Display);
+  --pf-c-text--VerticalAlign: top;
 }
 
 // Add to mixins
 @mixin pf-text-truncate() {
+  --pf-c-text--Display: inline-block;
   --pf-c-text--MaxWidth: 100%;
   --pf-c-text--Overflow: hidden;
   --pf-c-text--TextOverflow: ellipsis;
   --pf-c-text--WhiteSpace: nowrap;
-}
 
+  vertical-align: text-top;
+}
 
 @mixin pf-text-wrap() {
   --pf-c-text--WhiteSpace: normal;
@@ -52,7 +57,7 @@
 
 // By default, pf-c-text will wrap
 .pf-c-text {
-  display: block;
+  display: var(--pf-c-text--Display);
   max-width: var(--pf-c-text--MaxWidth);
   overflow: var(--pf-c-text--Overflow);
   font-size: var(--pf-c-text--FontSize);
@@ -61,17 +66,14 @@
   text-overflow: var(--pf-c-text--TextOverflow);
   overflow-wrap: var(--pf-c-text--OverflowWrap);
   white-space: var(--pf-c-text--WhiteSpace);
+  vertical-align: var(--pf-c-text--VerticalAlign);
 
-  &.pf-m-truncate {
-    @include pf-text-truncate();
+  &.pf-m-inline {
+    --pf-c-text--Display: inline;
   }
 
-  &.pf-m-wrap {
-    @include pf-text-wrap();
-  }
-
-  &.pf-m-no-wrap {
-    @include pf-text-no-wrap();
+  &.pf-m-inline-block {
+    --pf-c-text--Display: inline-block;
   }
 
   &.pf-m-primary-color--100 {
@@ -84,6 +86,22 @@
 
   &.pf-m-active-color--100 {
     --pf-c-text--Color: var(--pf-global--active-color--100);
+  }
+
+  &.pf-m-truncate {
+    @include pf-text-truncate();
+
+    &.pf-m-inline {
+      --pf-c-text--Display: inline-block;
+    }
+  }
+
+  &.pf-m-wrap {
+    @include pf-text-wrap();
+  }
+
+  &.pf-m-no-wrap {
+    @include pf-text-no-wrap();
   }
 
   // // Colors

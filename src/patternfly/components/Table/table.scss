@@ -440,6 +440,11 @@
   }
 }
 
+.pf-c-table__icon {
+  width: 1%;
+  text-align: center;
+}
+
 // Cell content - necessary for controlling width for text truncate/wrap
 .pf-c-table__cell-content {
   max-width: 100%;
