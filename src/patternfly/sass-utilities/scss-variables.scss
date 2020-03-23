@@ -90,10 +90,10 @@ $pf-global--primary-color--dark-100:    $pf-color-blue-400 !default;
 // Shadows
 // small
 $pf-global--BoxShadow--sm: 0 pf-size-prem(1px) pf-size-prem(2px) 0 rgba($pf-color-black-1000, .12), 0 0 pf-size-prem(2px) 0 rgba($pf-color-black-1000, .06) !default;
-$pf-global--BoxShadow--sm-top: 0 pf-size-prem(-2px) pf-size-prem(3px) pf-size-prem(-1px) rgba($pf-color-black-1000, .12) !default;
-$pf-global--BoxShadow--sm-right: pf-size-prem(2px) 0 pf-size-prem(3px) pf-size-prem(-1px) rgba($pf-color-black-1000, .12) !default;
-$pf-global--BoxShadow--sm-bottom: 0 pf-size-prem(2px) pf-size-prem(3px) pf-size-prem(-1px) rgba($pf-color-black-1000, .12) !default;
-$pf-global--BoxShadow--sm-left: pf-size-prem(-2px) 0 pf-size-prem(3px) pf-size-prem(-1px) rgba($pf-color-black-1000, .12) !default;
+$pf-global--BoxShadow--sm-top: 0 pf-size-prem(-2px) pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-color-black-1000, .16) !default;
+$pf-global--BoxShadow--sm-right: pf-size-prem(2px) 0 pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-color-black-1000, .16) !default;
+$pf-global--BoxShadow--sm-bottom: 0 pf-size-prem(2px) pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-color-black-1000, .16) !default;
+$pf-global--BoxShadow--sm-left: pf-size-prem(-2px) 0 pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-color-black-1000, .16) !default;
 
 // medium
 $pf-global--BoxShadow--md: 0 pf-size-prem(4px) pf-size-prem(8px) pf-size-prem(0) rgba($pf-color-black-1000, .12), 0 0 pf-size-prem(4px) 0 rgba($pf-color-black-1000, .06) !default;
