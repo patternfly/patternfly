@@ -6,11 +6,5 @@
 
 @import "./shield-inheritable";
 @import "./shield-noninheritable";
-
-@if $pf-global--enable-shield {
-  @include shield-inheritable;
-  @include shield-noninheritable;
-}
-
 @import "./common";
 @import "./globals";
