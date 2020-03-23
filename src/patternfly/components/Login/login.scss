@@ -19,6 +19,12 @@
   --pf-c-login__header--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-login__header--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__header--PaddingRight: var(--pf-global--spacer--md);
+
+  @media (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-login__header--PaddingRight: 0;
+    --pf-c-login__header--PaddingLeft: 0;
+  }
+
   --pf-c-login__header--xl--MarginBottom: var(--pf-global--spacer--2xl);
   --pf-c-login__header--xl--MarginTop: var(--pf-global--spacer--3xl);
   --pf-c-login__header--c-brand--MarginBottom: var(--pf-global--spacer--lg);
@@ -32,6 +38,10 @@
   // main
   --pf-c-login__main--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-login__main--MarginBottom: var(--pf-global--spacer--lg);
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-login__main--MarginBottom: 0;
+  }
 
   // main header
   --pf-c-login__main-header--PaddingTop: var(--pf-global--spacer--2xl);
@@ -93,6 +103,12 @@
   // footer
   --pf-c-login__footer--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__footer--PaddingRight: var(--pf-global--spacer--md);
+
+  @media (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-login__footer--PaddingRight: 0;
+    --pf-c-login__footer--PaddingLeft: 0;
+  }
+
   --pf-c-login__footer--c-list--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-login__footer--c-list--xl--PaddingTop: var(--pf-global--spacer--2xl);
 
@@ -139,11 +155,6 @@
   padding-right: var(--pf-c-login__header--PaddingRight);
   padding-left: var(--pf-c-login__header--PaddingLeft);
 
-  @media (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-login__header--PaddingRight: 0;
-    --pf-c-login__header--PaddingLeft: 0;
-  }
-
   @media (min-width: $pf-global--breakpoint--xl) {
     margin-top: var(--pf-c-login__header--xl--MarginTop);
   }
@@ -166,10 +177,6 @@
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child:not(.pf-c-login__main-footer) {
     padding-bottom: var(--pf-c-login__main-footer--PaddingBottom);
-  }
-
-  @media (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-login__main--MarginBottom: 0;
   }
 }
 
@@ -278,11 +285,6 @@
   grid-area: footer;
   padding-right: var(--pf-c-login__footer--PaddingRight);
   padding-left: var(--pf-c-login__footer--PaddingLeft);
-
-  @media (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-login__footer--PaddingRight: 0;
-    --pf-c-login__footer--PaddingLeft: 0;
-  }
 
   .pf-c-list {
     a {
