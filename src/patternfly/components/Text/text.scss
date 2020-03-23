@@ -12,7 +12,7 @@
   --pf-c-text--Color: var(--pf-global--text--Color);
   --pf-c-text--MaxWidth: var(--pf-global--text--MaxWidth);
   --pf-c-text--Overflow: var(--pf-global--text--Overflow);
-  --pf-c-text--OverflowWrap: --pf-global--text--overflowwrap;
+  --pf-c-text--OverflowWrap: var(--pf-global--text--OverflowWrap);
   --pf-c-text--WhiteSpace: var(--pf-global--text--WhiteSpace);
 }
 
@@ -43,12 +43,16 @@
 }
 
 %pf-text-no-wrap {
-  @include pf-text-wrap();
+  @include pf-text-no-wrap();
 }
 
+.pf-c-button {
+  max-width: 100%;
+}
 
 // By default, pf-c-text will wrap
 .pf-c-text {
+  display: inherit;
   max-width: var(--pf-c-text--MaxWidth);
   overflow: var(--pf-c-text--Overflow);
   font-size: var(--pf-c-text--FontSize);
@@ -74,8 +78,12 @@
     --pf-c-text--Color: var(--pf-c-text--primary-color--100--Color);
   }
 
-  &.pf-m-danger--100 {
+  &.pf-m-danger-color--100 {
     --pf-c-text--Color: var(--pf-global--danger-color--100);
+  }
+
+  &.pf-m-active-color--100 {
+    --pf-c-text--Color: var(--pf-global--active-color--100);
   }
 
   // // Colors
