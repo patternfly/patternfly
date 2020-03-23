@@ -181,8 +181,11 @@ cssPrefix: pf-c-table
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        I'm baby keytar tattooed flannel biodiesel shaman quinoa, hexagon ennui jianbing retro pug brooklyn hot chicken asymmetrical. Ugh pour-over kale chips dreamcatcher literally shaman. Irony edison bulb sustainable 8-bit sriracha cray polaroid. Butcher normcore copper mug 3 wolf moon pour-over activated charcoal cred, disrupt actually humblebrag flannel. Irony humblebrag occupy ramps la croix fingerstache. Put a bird on it squid jean shorts hashtag vinyl pinterest tumeric tofu wolf chartreuse taxidermy la croix next level. Salvia neutra roof party, fanny pack letterpress jianbing health goth gluten-free mumblecore XOXO waistcoat.
+        Flannel biodiesel shaman quinoa.
       {{/table-td}}
+      <!-- {{#> table-td table-td--data-label="Repository name"}}
+        I'm baby keytar tattooed flannel biodiesel shaman quinoa, hexagon ennui jianbing retro pug brooklyn hot chicken asymmetrical. Ugh pour-over kale chips dreamcatcher literally shaman. Irony edison bulb sustainable 8-bit sriracha cray polaroid. Butcher normcore copper mug 3 wolf moon pour-over activated charcoal cred, disrupt actually humblebrag flannel. Irony humblebrag occupy ramps la croix fingerstache. Put a bird on it squid jean shorts hashtag vinyl pinterest tumeric tofu wolf chartreuse taxidermy la croix next level. Salvia neutra roof party, fanny pack letterpress jianbing health goth gluten-free mumblecore XOXO waistcoat.
+      {{/table-td}} -->
       {{#> table-td table-td--data-label="Branches"}}
         10
       {{/table-td}}
@@ -429,10 +432,8 @@ cssPrefix: pf-c-table
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node2">Node 2</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node2">Node 2</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -457,10 +458,8 @@ cssPrefix: pf-c-table
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node3">Node 3</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node3">Node 3</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -485,10 +484,8 @@ cssPrefix: pf-c-table
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node4">Node 4</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node4">Node 4</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -565,10 +562,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node1">Node 1</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node1">Node 1</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -589,9 +584,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
-        {{#> table-expandable-row-content}}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        {{/table-expandable-row-content}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       {{/table-td}}
       {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
@@ -604,10 +597,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node2">Node 2</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node2">Node 2</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -626,9 +617,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
     {{#> table-tr table-tr--expandable="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content2"')}}
-        {{#> table-expandable-row-content}}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        {{/table-expandable-row-content}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -641,10 +630,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node3">Node 3</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node3">Node 3</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -663,9 +650,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content3"')}}
-        {{#> table-expandable-row-content}}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        {{/table-expandable-row-content}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -677,10 +662,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node4">Node 4</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node4">Node 4</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -699,9 +682,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content4"')}}
-        {{#> table-expandable-row-content}}
-          Expandable row content has no padding.
-        {{/table-expandable-row-content}}
+        Expandable row content has no padding.
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -767,7 +748,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle--IsExpanded="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-1"
         }}
-        {{> button-icon button-icon--name="fas fa-code-branch"}} 10
+        {{#> button-icon}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/button-icon}}
+         10
       {{/table-td}}
 
       {{#> table-td
@@ -775,7 +759,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-2"
         }}
-        {{> button-icon button-icon--name="fas fa-code"}} 4
+        {{#> button-icon}}
+          <i class="fas fa-code" aria-hidden="true"></i>
+        {{/button-icon}}
+         4
       {{/table-td}}
 
       {{#> table-td
@@ -783,7 +770,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-3"
         }}
-        {{> button-icon button-icon--name="fas fa-cube"}} 8
+        {{#> button-icon}}
+          <i class="fas fa-cube" aria-hidden="true"></i>
+        {{/button-icon}}
+         8
       {{/table-td}}
 
       {{#> table-td table-td--data-label="Last commit"}}
@@ -831,7 +821,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-4"
         }}
-        {{> button-icon button-icon--name="fas fa-code-branch"}} 3
+        {{#> button-icon}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/button-icon}}
+         3
       {{/table-td}}
 
       {{#> table-td
@@ -839,7 +832,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-5"
         }}
-        {{> button-icon button-icon--name="fas fa-code"}} 44
+        {{#> button-icon}}
+          <i class="fas fa-code" aria-hidden="true"></i>
+        {{/button-icon}}
+         44
       {{/table-td}}
 
       {{#> table-td
@@ -847,7 +843,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-6"
         }}
-        {{> button-icon button-icon--name="fas fa-cube"}} 1
+        {{#> button-icon}}
+          <i class="fas fa-cube" aria-hidden="true"></i>
+        {{/button-icon}}
+         1
       {{/table-td}}
 
       {{#> table-td table-td--data-label="Last commit"}}
@@ -895,7 +894,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-7"
         }}
-        {{> button-icon button-icon--name="fas fa-code-branch"}} 70
+        {{#> button-icon}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/button-icon}}
+         70
       {{/table-td}}
 
       {{#> table-td
@@ -903,7 +905,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-8"
         }}
-        {{> button-icon button-icon--name="fas fa-code"}} 15
+        {{#> button-icon}}
+          <i class="fas fa-code" aria-hidden="true"></i>
+        {{/button-icon}}
+         15
       {{/table-td}}
 
       {{#> table-td
@@ -911,7 +916,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         table-td--compound-expansion-toggle="true"
         table-td--compound-expansion-toggle--button--aria-controls="nested-table-9"
         }}
-        {{> button-icon button-icon--name="fas fa-cube"}} 12
+        {{#> button-icon}}
+          <i class="fas fa-cube" aria-hidden="true"></i>
+        {{/button-icon}}
+         12
       {{/table-td}}
 
       {{#> table-td table-td--data-label="Last commit"}}
@@ -1343,9 +1351,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
-        <div class="pf-c-table__expandable-row-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       {{/table-td}}
       {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
     {{/table-tr}}
@@ -1543,10 +1549,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node2">Node 2</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node2">Node 2</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1567,10 +1571,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node3">Node 3</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node3">Node 3</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1591,10 +1593,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node4">Node 4</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+        <div id="{{table--id}}-node4">Node 4</div>
+        <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10

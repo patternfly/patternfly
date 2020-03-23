@@ -37,9 +37,27 @@
         {{/table-cell-content}}
       {{/button}}
     {{/if}}
-  {{else}}
-    {{#> table-text}}
+  {{else if table-tr--expandable}}
+    {{#> table-expandable-row-content}}
       {{> @partial-block}}
-    {{/table-text}}
+    {{/table-expandable-row-content}}
+  {{else if table-td--check}}
+    {{> @partial-block}}
+  {{else if table-td--action}}
+    {{> @partial-block}}
+  {{else if table-td--icon}}
+    {{> @partial-block}}
+  {{else if table-td--action}}
+    {{> @partial-block}}
+  {{else if table-td--IsCustom}}
+    {{> @partial-block}}
+  {{else if table-td--IsEmpty}}
+    {{> @partial-block}}
+  {{else}}
+    {{#> table-cell-content}}
+      {{#> table-text}}
+        {{> @partial-block}}
+      {{/table-text}}
+    {{/table-cell-content}}
   {{/if}}
 </td>

@@ -37,6 +37,7 @@
   // Thead cell
   --pf-c-table--thead--cell--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table--thead--cell--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--thead--th--MinWidth: 16ch;
 
   // Cell
   --pf-c-table--cell--hidden-visible--Display: table-cell;
@@ -54,6 +55,7 @@
   --pf-c-table--cell--FontSize: var(--pf-global--FontSize--md);
   --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--cell--MinWidth: 0;
 
   // ============================================================ //
   // End non-conformant variables
@@ -72,7 +74,7 @@
   --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
   // Table cell - action
-  --pf-c-table__action--PaddingTop: 0;
+  --pf-c-table__action--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table__action--PaddingRight: 0;
   --pf-c-table__action--PaddingBottom: 0;
   --pf-c-table__action--PaddingLeft: 0;
@@ -128,9 +130,10 @@
   --pf-c-table--m-compact__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact__expandable-row-content--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table--m-compact__check--input--MarginTop: #{pf-size-prem(4)};
+  --pf-c-table--m-compact__check--input--MarginTop: #{pf-size-prem(2)};
   --pf-c-table--m-compact--thead__check--input--MarginTop: #{pf-size-prem(6)};
   --pf-c-table--m-compact__toggle--c-button--MarginTop: #{pf-size-prem(2px)};
+  --pf-c-table--m-compact__action--PaddingTop: 0;
 
 
   // Modifier - compound expansion toggle
@@ -178,16 +181,15 @@
     }
   }
 
-  // &.pf-m-fixed {
-  //   table-layout: fixed;
-  // }
-
-  // Table row
-  tr > * {
+  // Table cell
+  // stylelint-disable selector-no-qualifying-type
+  th,
+  td {
     @include pf-hidden-visible(var(--pf-c-table--cell--hidden-visible--Display));
 
     // set position relative for ::before borders
     position: relative;
+    min-width: var(--pf-c-table--cell--MinWidth);
     padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table--cell--PaddingRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table--cell--PaddingLeft);
     font-size: var(--pf-c-table--cell--FontSize);
     font-weight: var(--pf-c-table--cell--FontWeight);
@@ -206,6 +208,7 @@
       text-align: center;
     }
   }
+  // stylelint-enable
 
   // Table caption
   caption {
@@ -227,11 +230,13 @@
     --pf-c-table__check--input--MarginTop: var(--pf-c-table--thead__check--input--MarginTop);
 
     white-space: nowrap;
-    vertical-align: bottom;
 
-    th,
-    td {
-      min-width: 16ch;
+    th {
+      --pf-c-table--cell--MinWidth: var(--pf-c-table--thead--th--MinWidth);
+    }
+
+    tr > * {
+      vertical-align: bottom;
     }
   }
 
@@ -241,7 +246,9 @@
     --pf-c-table--cell--PaddingTop: var(--pf-c-table--tbody--cell--PaddingTop);
     --pf-c-table--cell--PaddingBottom: var(--pf-c-table--tbody--cell--PaddingBottom);
 
-    vertical-align: baseline;
+    > tr > * {
+      vertical-align: top;
+    }
 
     // Border treatment
     // using first child as row does not calculate height appropriately
@@ -290,13 +297,6 @@
       font-weight: inherit;
       text-align: left;
       white-space: normal;
-
-      // Firefox: doesn't respect vertical alignment + display: flex
-      // stylelint-disable
-      @media screen and (min--moz-device-pixel-ratio: 0) {
-        display: table-cell;
-      }
-      // stylelint-enable
     }
   }
 }
@@ -306,20 +306,12 @@
 .pf-c-table__check,
 .pf-c-table__action,
 .pf-c-table__inline-edit-action {
+  --pf-c-table--thead--th--MinWidth: 0;
+
   width: 1%;
 
   tbody & {
     --pf-c-table--cell--PaddingBottom: 0;
-  }
-}
-
-.pf-c-table__check,
-.pf-c-table__action,
-.pf-c-table__inline-edit-action {
-  width: 1%;
-
-  tbody & {
-    --pf-c-table--cell--PaddingTop: 0;
   }
 }
 
@@ -433,10 +425,40 @@
   }
 }
 
+// Cell content, text
 .pf-c-table__cell-content,
 .pf-c-table__text {
   max-width: 100%;
   overflow: hidden;
+}
+
+// Cell content - necessary for controlling width for text truncate/wrap
+.pf-c-table__cell-content {
+  // tbody
+  thead &,
+  tbody &,
+  .pf-c-table__compound-expansion-toggle & {
+    display: grid;
+  }
+
+  // thead
+  thead & {
+    display: inline-grid;
+    align-items: flex-end;
+    justify-content: start;
+    max-width: 100%;
+    overflow: hidden;
+    grid-template-columns: auto max-content;
+
+    .pf-c-table__text {
+      align-self: baseline;
+      grid-column: 1;
+    }
+
+    .pf-c-table__sort-indicator {
+      grid-column: 2;
+    }
+  }
 }
 
 // Text
@@ -452,53 +474,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-}
 
-// Truncate
-// stylelint-disable selector-no-qualifying-type
-.pf-c-table th.pf-m-truncate,
-.pf-c-table td.pf-m-truncate {
-  &,
-  .pf-c-table__text {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    // white-space: nowrap;
-  }
-}
-// stylelint-enable
-
-// Wrap
-// stylelint-disable selector-no-qualifying-type
-.pf-c-table th.pf-m-wrap,
-.pf-c-table td.pf-m-wrap {
-  &,
-  .pf-c-table__text {
+  &.pf-m-wrap {
     text-overflow: initial;
     white-space: normal;
-  }
-}
-// stylelint-enable
-
-// Sort content
-// this container is necessary for nested button to fill vertical height of parent th
-.pf-c-table__cell-content {
-  display: inline-grid;
-  grid-template-columns: auto max-content;
-  align-self: flex-start;
-
-  .pf-c-table__text {
-    grid-column: 1;
-  }
-
-  .pf-c-table__sort-indicator {
-    grid-column: 2;
-  }
-
-  .pf-c-table__sort & {
-    align-items: flex-end;
-    max-width: 100%;
-    overflow: hidden;
   }
 }
 
@@ -608,6 +587,8 @@
   --pf-c-table--cell--FontSize: var(--pf-c-table--m-compact--FontSize);
   --pf-c-table__toggle--c-button--MarginTop: var(--pf-c-table--m-compact__toggle--c-button--MarginTop);
   --pf-c-table__check--input--MarginTop: var(--pf-c-table--m-compact__check--input--MarginTop);
+  --pf-c-table__action--PaddingTop: var(--pf-c-table--m-compact__action--PaddingTop);
+
 
   &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
@@ -656,10 +637,6 @@
     --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-compact__toggle--PaddingBottom);
   }
 
-  .pf-c-table__icon {
-    text-align: center;
-  }
-
   // nested tables
   .pf-c-table & tr > * {
     &:first-child {
@@ -687,6 +664,29 @@
     margin-right: var(--pf-c-table__icon-inline--MarginRight);
   }
 }
+
+// Truncate
+// stylelint-disable selector-no-qualifying-type
+.pf-c-table th.pf-m-truncate,
+.pf-c-table td.pf-m-truncate {
+  .pf-c-table__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+// stylelint-enable
+
+// Wrap
+// stylelint-disable selector-no-qualifying-type
+.pf-c-table th.pf-m-wrap,
+.pf-c-table td.pf-m-wrap {
+  &,
+  .pf-c-table__text {
+    text-overflow: initial;
+    white-space: normal;
+  }
+}
+// stylelint-enable
 
 // Modifier - fit-content
 .pf-c-table .pf-m-fit-content {

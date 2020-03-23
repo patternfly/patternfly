@@ -6,7 +6,7 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     $breakpoint-name: if($breakpoint != "base", -#{$breakpoint}, "");
 
     @include pf-apply-breakpoint($breakpoint, $pf-c-data-toolbar--breakpoint-map, $max-width: "true") {
-      .pf-c-table.pf-m-grid#{$breakpoint-name} {
+      .pf-m-grid#{$breakpoint-name}.pf-c-table {
         @content;
       }
     }
@@ -71,7 +71,9 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Compact table
   --pf-c-table--m-grid--m-compact--tr--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact--tr--PaddingRight: 0;
   --pf-c-table--m-grid--m-compact--tr--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact--tr--PaddingLeft: 0;
   --pf-c-table--m-grid--m-compact--td--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-table--m-grid--m-compact--td--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-table--m-grid--m-compact__action--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
@@ -83,16 +85,22 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   --pf-c-table--m-grid__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-table--m-grid__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
-  // Table check
-  --pf-c-table--m-grid__check--MarginTop: #{pf-size-prem(6px)};
-  --pf-c-table--m-grid__check--MarginLeft: var(--pf-global--spacer--sm);
+  // Compound expansion toggle
+  --pf-c-table--m-grid__compound-expansion-toggle__button--PaddingTop: 0;
+  --pf-c-table--m-grid__compound-expansion-toggle__button--PaddingRight: 0;
+  --pf-c-table--m-grid__compound-expansion-toggle__button--PaddingBottom: 0;
+  --pf-c-table--m-grid__compound-expansion-toggle__button--PaddingLeft: 0;
 
   // Table action
-  --pf-c-table--m-grid__action--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid__action--MarginLeft: var(--pf-global--spacer--lg);
 
   // Table toggle icons
   --pf-c-table--m-grid__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table--m-grid__toggle--m-expanded__icon--Transform: rotate(180deg);
+
+  // Nested tables
+  --pf-c-table--m-grid--table--cell--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--table--cell--PaddingBottom: var(--pf-global--spacer--sm);
 
   // End grid vars
   // ==================================================================
@@ -100,6 +108,14 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
 // Check table cell
 @include pf-mobile-layout {
+  // Row grid
+  --pf-c-table--tr--MaxGridRows: 20;
+
+  // Table check
+  --pf-c-table--m-grid__check--MarginTop: #{pf-size-prem(6px)};
+  --pf-c-table__check--input--MarginTop: 0;
+
+
   display: grid;
   border: none;
 
@@ -150,24 +166,27 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
     display: grid;
-    grid-template-columns: 1fr;
+    align-items: baseline;
     height: auto;
+
+    // set base variables to reset later
+    padding: var(--pf-c-table--m-grid--tr--PaddingTop) var(--pf-c-table--m-grid--tr--PaddingRight) var(--pf-c-table--m-grid--tr--PaddingBottom) var(--pf-c-table--m-grid--tr--PaddingLeft);
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--pf-c-table--tr--not__expandable-row);
 
     // set subsequent auto column width to max-content
     grid-auto-columns: max-content;
     grid-column-gap: var(--pf-c-table--m-grid--tr--GridColumnGap);
 
-    // set base variables to reset later
-    padding: var(--pf-c-table--m-grid--tr--PaddingTop) var(--pf-c-table--m-grid--tr--PaddingRight) var(--pf-c-table--m-grid--tr--PaddingBottom) var(--pf-c-table--m-grid--tr--PaddingLeft);
-
     // Reset td padding
-    & > * {
+    th,
+    td {
       padding: var(--pf-c-table--m-grid--cell--PaddingTop) var(--pf-c-table--m-grid--cell--PaddingRight) var(--pf-c-table--m-grid--cell--PaddingBottom) var(--pf-c-table--m-grid--cell--PaddingLeft);
     }
 
     // remove padding from first th to align with kebab
     th {
-      padding-top: var(--pf-c-table--m-grid--th--PaddingTop);
+      --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--th--PaddingTop);
     }
   }
 
@@ -175,6 +194,11 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   td.pf-c-table__compound-expansion-toggle,
   th.pf-c-table__compound-expansion-toggle {
     .pf-c-button {
+      --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid__compound-expansion-toggle__button--PaddingTop);
+      --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-grid__compound-expansion-toggle__button--PaddingRight);
+      --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-grid__compound-expansion-toggle__button--PaddingBottom);
+      --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-grid__compound-expansion-toggle__button--PaddingLeft);
+
       min-height: 0;
     }
   }
@@ -245,12 +269,14 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     }
   }
 
-  // nested tables
+  // Nested tables
   .pf-c-table {
     --pf-c-table--m-grid--tr--PaddingTop: var(--pf-c-table--m-grid--tr--nested-table--PaddingTop);
     --pf-c-table--m-grid--tr--PaddingRight: var(--pf-c-table--m-grid--tr--nested-table--PaddingRight);
     --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-c-table--m-grid--tr--nested-table--PaddingBottom);
     --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-c-table--m-grid--tr--nested-table--PaddingLeft);
+    --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--table--cell--PaddingTop);
+    --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-c-table--m-grid--table--cell--PaddingBottom);
 
     border: 0;
 
@@ -259,9 +285,8 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     }
   }
 
+  // Compound expansion toggle
   .pf-c-table__compound-expansion-toggle {
-    // Compound expansion toggle
-
     .pf-c-button:hover,
     &.pf-m-expanded {
       --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
@@ -308,6 +333,9 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
   }
   // Compound expansion grid end
 
+  .pf-c-table__cell-content {
+
+  }
 
   // Expandable row
   .pf-c-table__expandable-row {
@@ -317,6 +345,9 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     --pf-c-table--m-grid--cell--PaddingLeft: 0;
     --pf-c-table--cell--PaddingRight: 0;
     --pf-c-table--cell--PaddingLeft: 0;
+    --pf-c-table--cell--PaddingTop: 0;
+    --pf-c-table--cell--PaddingBottom: 0;
+
 
     display: block;
     max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on grid
@@ -367,20 +398,31 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
     .pf-c-table__action {
       width: auto;
       padding: 0;
+      grid-column: 2;
     }
   }
 
+  .pf-c-table__toggle,
+  .pf-c-table__check,
+  .pf-c-table__action {
+    grid-column: 2;
+  }
+
+  .pf-c-table__check,
+  .pf-c-table__action {
+    grid-row: 1 / var(--pf-c-table--tr--MaxGridRows);
+  }
+
   .pf-c-table__toggle {
-    grid-row-start: 20;
-    grid-column: -1;
+    grid-row-start: var(--pf-c-table--tr--MaxGridRows);
+    // grid-column: -1;
     justify-self: end;
     padding-right: 0;
   }
 
   // Check table cell
   .pf-c-table__check {
-    margin-top: var(--pf-c-table--m-grid__check--MarginTop);
-    margin-left: var(--pf-c-table--m-grid__check--MarginLeft);
+    // margin-top: var(--pf-c-table--m-grid__check--MarginTop);
     grid-row-start: 1;
     grid-column-start: 2;
 
@@ -392,14 +434,15 @@ $pf-c-table-grid--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl",
 
   // Action cell
   .pf-c-table__action {
-    grid-row-start: 1;
-    grid-column-start: 2;
+    margin-top: var(--pf-global--spacer--sm);
+    // grid-column-start: 2;
     text-align: right;
+    grid-row-start: 1;
 
     // @smallest breakpoint
     @media screen and (max-width: $pf-global--breakpoint--sm) {
-      grid-row-start: 1;
-      grid-column-start: 2;
+      // grid-row-start: 1;
+      // grid-column-start: 2;
       margin-left: 0;
     }
   }
