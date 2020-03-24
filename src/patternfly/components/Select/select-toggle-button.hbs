@@ -5,7 +5,7 @@
 {{else}}
   {{#if select--IsDisabled}}
     {{#> button button--modifier="pf-m-plain pf-c-select__toggle-button pf-m-disabled" 
-      button--attribute="disabled"}}
+      button--attribute=(concat 'id="' id '-toggle" aria-haspopup="true" aria-expanded="false" aria-labelledby="' id '-label ' id '-toggle" aria-label="Select"')}}
         <i class="fas fa-caret-down pf-c-select__toggle-arrow" aria-hidden="true"></i>
     {{/button}}
   {{else}}
