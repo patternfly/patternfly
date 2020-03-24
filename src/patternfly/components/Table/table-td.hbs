@@ -15,10 +15,31 @@
   {{#if table-td--data-label}}
     data-label="{{table-td--data-label}}"
   {{/if}}>
-  {{#if table-td--toggle}}
-    <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
-      {{#> table-toggle-icon}}{{/table-toggle-icon}}
-    </button>
-  {{/if}}
-  {{> @partial-block}}
+  {{#unless table-td--IsEmpty}}
+    {{#if table-td--no-wrapper}}
+      {{> @partial-block}}
+    {{else if table-td--toggle}}
+      <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
+        {{#> table-toggle-icon}}{{/table-toggle-icon}}
+      </button>
+    {{else if table-td--compound-expansion-toggle}}
+      <button class="pf-c-button pf-m-link{{#if table-td--compound-expansion-toggle--button--modifier}} {{table-td--compound-expansion-toggle--button--modifier}}{{/if}}" {{#if table-td--compound-expansion-toggle--button--attribute}}{{{table-td--compound-expansion-toggle--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
+        {{> @partial-block}}
+      </button>
+    {{else if table-td--check}}
+      {{> @partial-block}}
+    {{else if table-td--action}}
+      {{> @partial-block}}
+    {{else if table-td--icon}}
+      {{> @partial-block}}
+    {{else if table-tr--expandable}}
+      {{> @partial-block}}
+    {{else}}
+      {{#> table-flexible-wrapper}}
+        {{#> table-text}}
+          {{> @partial-block}}
+        {{/table-text}}
+      {{/table-flexible-wrapper}}
+    {{/if}}
+  {{/unless}}
 </td>

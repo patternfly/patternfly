@@ -310,8 +310,8 @@ cssPrefix: pf-c-table
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div id="{{table--id}}-node1">Node 1</div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 1" table-flexible-wrapper--example--id="node1"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -335,11 +335,8 @@ cssPrefix: pf-c-table
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node2">Node 2</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 2" table-flexible-wrapper--example--id="node2" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -363,11 +360,8 @@ cssPrefix: pf-c-table
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node3">Node 3</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 3" table-flexible-wrapper--example--id="node3" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -391,11 +385,8 @@ cssPrefix: pf-c-table
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node4">Node 4</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 4" table-flexible-wrapper--example--id="node4" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -464,11 +455,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node1">Node 1</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 1" table-flexible-wrapper--example--id="node1" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -503,11 +491,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node2">Node 2</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 2" table-flexible-wrapper--example--id="node2" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -540,11 +525,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node3">Node 3</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 3" table-flexible-wrapper--example--id="node3" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -576,11 +558,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node4">Node 4</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 4" table-flexible-wrapper--example--id="node4" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -632,7 +611,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
@@ -654,32 +633,20 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <a href="#">siemur/test-space</a>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--HasLink="true" table-flexible-wrapper--example--no-text="true"}}
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          10
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+        {{> button-icon button-icon--name="fas fa-code-branch"}}
+        10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
+        {{> button-icon button-icon--name="fas fa-code-branch"}}
+        4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
-          {{#> button-icon}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
+        {{> button-icon button-icon--name="fas fa-cube"}}
+        4
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>20 minutes</span>
@@ -694,21 +661,21 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-1')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-2')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-3')}}
         {{/table-nested}}
       {{/table-td}}
@@ -717,32 +684,20 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <a href="#">siemur/test-space</a>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--HasLink="true" table-flexible-wrapper--example--no-text="true"}}
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          3
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
+        {{> button-icon button-icon--name="fas fa-code-branch"}}
+        3
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
+        {{> button-icon button-icon--name="fas fa-code-branch"}}
+        4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
-          {{#> button-icon}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          2
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
+        {{> button-icon button-icon--name="fas fa-cube"}}
+        2
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>1 day ago</span>
@@ -757,21 +712,21 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-4')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-5')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-6')}}
         {{/table-nested}}
       {{/table-td}}
@@ -780,32 +735,20 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-       {{#> table-th table-th--data-label="Repository name"}}
-        <a href="#">siemur/test-space</a>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--HasLink="true" table-flexible-wrapper--example--no-text="true"}}
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          70
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
+        {{> button-icon button-icon--name="fas fa-code-branch"}}
+        70
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
-          {{#> button-icon}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          15
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
+        {{> button-icon button-icon--name="fas fa-code-branch"}}
+        15
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
-          {{#> button-icon}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          12
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--compound-expansion-toggle--button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
+        {{> button-icon button-icon--name="fas fa-cube"}}
+        12
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>2 days ago</span>
@@ -820,21 +763,21 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-7')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-8')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding" table-td--no-wrapper="true"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-9')}}
         {{/table-nested}}
       {{/table-td}}
@@ -889,8 +832,12 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
+      {{#> table-th table-th--data-label="Contributor" table-th--no-wrapper="true"}}
+        {{#> table-flexible-wrapper}}
+          {{#> table-text table-text--attribute=(concat 'id="' table--id '-name1"')}}
+            Sam Jones
+          {{/table-text}}
+        {{/table-flexible-wrapper}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -920,8 +867,12 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
+      {{#> table-th table-th--data-label="Contributor" table-th--no-wrapper="true"}}
+        {{#> table-flexible-wrapper}}
+          {{#> table-text table-text--attribute=(concat 'id="' table--id '-name2"')}}
+            Amy Miller
+          {{/table-text}}
+        {{/table-flexible-wrapper}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
@@ -951,8 +902,12 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
+      {{#> table-th table-th--data-label="Contributor" table-th--no-wrapper="true"}}
+        {{#> table-flexible-wrapper}}
+          {{#> table-text table-text--attribute=(concat 'id="' table--id '-name3"')}}
+            Steve Wilson
+          {{/table-text}}
+        {{/table-flexible-wrapper}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -982,8 +937,12 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Contributor name"}}
-        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
+      {{#> table-th table-th--data-label="Contributor" table-th--no-wrapper="true"}}
+        {{#> table-flexible-wrapper}}
+          {{#> table-text table-text--attribute=(concat 'id="' table--id '-name4"')}}
+            Emma Jackson
+          {{/table-text}}
+        {{/table-flexible-wrapper}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -1054,6 +1013,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name1"}}">Sam Jones</span>
       {{/table-th}}
+
+
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
       {{/table-td}}
@@ -1182,7 +1143,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
+      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
@@ -1404,8 +1365,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div id="{{table--id}}-node1">Node 1</div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 1" table-flexible-wrapper--example--id="node1"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1425,11 +1386,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node2">Node 2</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 12" table-flexible-wrapper--example--id="node2" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1449,11 +1407,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node3">Node 3</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 3" table-flexible-wrapper--example--id="node3" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1473,11 +1428,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <div>
-          <div id="{{table--id}}-node4">Node 4</div>
-          <a href="#">siemur/test-space</a>
-        </div>
+      {{#> table-th table-th--data-label="Repository name" table-th--no-wrapper="true"}}
+        {{> table-flexible-wrapper table-flexible-wrapper--example="true" table-flexible-wrapper--example--text="Node 4" table-flexible-wrapper--example--id="node4" table-flexible-wrapper--example--HasLink="true"}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1612,94 +1564,79 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
+      {{#> table-th table-th--sortable="true" table-th--attribute='scope="col"'}}
+        This is a normal table header that truncates by default.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
+      {{#> table-th table-th--sortable="true" table-th--attribute='scope="col"' table-text--modifier="pf-m-wrap"}}
+        This is a really long table header that goes on for a long time, that is set to wrap.
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
+      {{#> table-th table-th--sortable="true" table-th--attribute='scope="col"' table-text--modifier="pf-m-wrap"}}
+        Thisisalongstring-thathassomespecialcharacters-andissettowrap
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
+      {{#> table-th table-th--attribute='scope="col"' table-text--modifier="pf-m-no-wrap"}}
+        No wrapping, be careful!
       {{/table-th}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a normal table header that truncates by default."}}
         Repository 1
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time, that is set to wrap."}}
         10
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="Consider a custom label."}}
         25
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="No wrapping, be careful!"}}
         5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a normal table header that truncates by default."}}
         Repository 2
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time, that is set to wrap."}}
         10
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="Consider a custom label."}}
         25
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="No wrapping, be careful!"}}
         5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a normal table header that truncates by default."}}
         Repository 3
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time, that is set to wrap."}}
         10
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="Consider a custom label."}}
         25
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="No wrapping, be careful!"}}
         5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a normal table header that truncates by default."}}
         Repository 4
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time, that is set to wrap."}}
         10
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="Consider a custom label."}}
         25
       {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
+      {{#> table-td table-td--data-label="No wrapping, be careful!"}}
         5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

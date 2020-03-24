@@ -1,0 +1,19 @@
+<div class="pf-c-table__flexible-wrapper{{#if table-flexible-wrapper--modifier}} {{table-flexible-wrapper--modifier}}{{/if}}"
+  {{#if table-flexible-wrapper--attribute}}
+    {{{table-flexible-wrapper--attribute}}}
+  {{/if}}>
+  {{#if table-flexible-wrapper--example}}
+    {{#unless table-flexible-wrapper--example--no-text}}
+      {{#> table-text table-text--type="div" table-text--attribute=(concat 'id="' table--id '-' table-flexible-wrapper--example--id '"')}}
+        {{table-flexible-wrapper--example--text}}
+      {{/table-text}}
+    {{/unless}}
+    {{#if table-flexible-wrapper--example--HasLink}}
+      {{#> table-text table-text--type="a" table-text--attribute='href="#"'}}
+        siemur/test-space
+      {{/table-text}}
+    {{/if}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
+</div>
