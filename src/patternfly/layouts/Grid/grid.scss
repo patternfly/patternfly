@@ -39,8 +39,8 @@
 
 // Grid base
 .pf-l-grid {
-  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter--md);
-  --pf-l-grid--m-gutter--md--GridGap: var(--pf-global--gutter);
+  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
+  --pf-l-grid--m-gutter--md--GridGap: var(--pf-global--gutter--md);
   --pf-l-grid__item--GridColumnStart: auto;
   --pf-l-grid__item--GridColumnEnd: span 12;
 
