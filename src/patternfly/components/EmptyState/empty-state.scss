@@ -10,9 +10,9 @@
   --pf-c-empty-state__primary--secondary--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-empty-state__secondary--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-empty-state__secondary--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-empty-state__secondary__c-button--MarginRight: calc(var(--pf-global--spacer--xs) / 2);
-  --pf-c-empty-state__secondary__c-button--MarginBottom: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__secondary__c-button--MarginLeft: calc(var(--pf-global--spacer--xs) / 2);
+  --pf-c-empty-state__secondary--child--MarginRight: calc(var(--pf-global--spacer--xs) / 2);
+  --pf-c-empty-state__secondary--child--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-empty-state__secondary--child--MarginLeft: calc(var(--pf-global--spacer--xs) / 2);
   --pf-c-empty-state--m-sm__content--MaxWidth: #{pf-size-prem(400px)};
   --pf-c-empty-state--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
   --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
@@ -77,10 +77,10 @@
   margin-top: var(--pf-c-empty-state__secondary--MarginTop);
   margin-bottom: var(--pf-c-empty-state__secondary--MarginBottom);
 
-  > .pf-c-button {
-    margin-right: var(--pf-c-empty-state__secondary__c-button--MarginRight);
-    margin-bottom: var(--pf-c-empty-state__secondary__c-button--MarginBottom);
-    margin-left: var(--pf-c-empty-state__secondary__c-button--MarginLeft);
+  > * {
+    margin-right: var(--pf-c-empty-state__secondary--child--MarginRight);
+    margin-bottom: var(--pf-c-empty-state__secondary--child--MarginBottom);
+    margin-left: var(--pf-c-empty-state__secondary--child--MarginLeft);
   }
 }
 
