@@ -333,8 +333,8 @@ section: demos
       {{/title}}
       {{#> modal-box-description}}
         {{#> content}}
-          <p>Checked categories will be displayed in the table.</p>
-          {{#> button button--modifier="pf-m-link pf-m-inline"}}Select all columns{{/button}}
+          <p>Selected categories will be displayed in the table.</p>
+          {{#> button button--modifier="pf-m-link pf-m-inline"}}Select all{{/button}}
         {{/content}}
       {{/modal-box-description}}
       {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
