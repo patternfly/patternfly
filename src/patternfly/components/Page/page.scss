@@ -471,10 +471,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__main-section--BackgroundColor: var(--pf-c-page__main-section--m-dark-200--BackgroundColor);
   }
 
-  &.pf-m-no-padding {
-    padding: 0;
-  }
-
   @each $breakpoint, $breakpoint-value in $pf-c-page--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
