@@ -42,7 +42,6 @@ cssPrefix: pf-c-list
       <li>Cras gravida arcu at diam gravida gravida.</li>
       {{/list}}
     </li>
-    </li>
     {{/list}}
   <li>Aenean nec tortor orci.</li>
   <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>

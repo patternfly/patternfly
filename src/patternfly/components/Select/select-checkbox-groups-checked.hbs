@@ -10,10 +10,10 @@
     {{#> divider}}{{/divider}}
   {{/if}}
   {{#> select-menu-group}}
-    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-label"')}}
+    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-status"')}}
       Status
     {{/select-menu-group-title}}
-    {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'id="' id '-group-status"')}}
+    {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'aria-labelledby="' id '-group-status"')}}
       {{#> check check--type="label" check--attribute=(concat 'for="' id '-running"') check--modifier="pf-c-select__menu-item"}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-running" name="running"')}}{{/check-input}}
         {{#> check-label check-label--type="span"}}Running{{/check-label}}
@@ -40,7 +40,7 @@
     {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-vendor"')}}
       Vendor
     {{/select-menu-group-title}}
-    {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat id '-group-vendor')}}
+    {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'aria-labelledby="' id '-group-vendor"')}}
       {{#> check check--type="label" check--attribute=(concat 'for="' id '-dell"') check--modifier="pf-c-select__menu-item"}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-dell" name="dell"')}}{{/check-input}}
         {{#> check-label check-label--type="span"}}Dell{{/check-label}}
