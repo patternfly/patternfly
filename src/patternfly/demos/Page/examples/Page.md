@@ -247,7 +247,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel
         {{/nav-section-title}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Overview
@@ -284,7 +284,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
           Policy
         {{/nav-section-title}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Hosts

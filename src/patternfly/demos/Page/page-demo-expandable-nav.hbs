@@ -84,11 +84,6 @@
             {{/nav-list}}
           {{/nav-subnav}}
         {{/nav-item}}
-        {{#if page--IsLegacySeparators}}
-          {{#> nav-separator}}{{/nav-separator}}
-        {{else}}
-          {{#> divider divider--type="li"}}{{/divider}}
-        {{/if}}
         {{#> nav-item nav-item--expandable="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' page--id '-expandable-nav-link3"')}}
             Authentication
