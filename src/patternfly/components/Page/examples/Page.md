@@ -173,7 +173,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
-| `.pf-m-no-padding`, `.pf-m-no-padding-{-on-[breakpoint]}` | `.pf-c-page__main-section` | Removes padding from the main page section at an optional breakpoint |
-| `.pf-m-padding-{-on-[breakpoint]}` | `.pf-c-page__main-section` | Modifies the main page section to have padding at an optional breakpoint. |
+| `.pf-m-no-padding`, `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Removes padding from the main page section at an optional breakpoint |
+| `.pf-m-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Modifies the main page section to add padding back in at a specified breakpoint. Should be used with pf-m-no-padding. |
 | `.pf-m-fill` | `.pf-c-page__main-section` | Modifies a main page section to grow to fill the available vertical space. |
 | `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
