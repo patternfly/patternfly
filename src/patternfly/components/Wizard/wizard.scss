@@ -1,5 +1,5 @@
 .pf-c-wizard {
-  --pf-c-wizard--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --pf-c-wizard--BoxShadow: var(--pf-global--BoxShadow--xl);
   --pf-c-wizard--Height: 100%;
   --pf-c-wizard--Width: 100vw;
   --pf-c-wizard--lg--Width: calc(100% - (var(--pf-global--spacer--2xl) * 2));
@@ -83,6 +83,8 @@
   --pf-c-wizard__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-wizard__toggle--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-wizard__toggle--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
+  --pf-c-wizard__toggle--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-wizard__toggle--m-expanded--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-wizard--m-in-page__toggle--md--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-c-wizard__nav-link--before--Width) + var(--pf-global--spacer--sm));
 
   // Toggle number
@@ -109,17 +111,16 @@
   --pf-c-wizard__nav--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-wizard__nav--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-wizard__nav--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-wizard__nav--lg--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-wizard__nav--Width: 100%;
   --pf-c-wizard__nav--lg--Width: #{pf-size-prem(300px)};
+  --pf-c-wizard__nav--lg--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-wizard__nav--lg--BorderRightColor: var(--pf-global--BorderColor--100);
   --pf-c-wizard--m-compact-nav__nav--lg--Width: #{pf-size-prem(250px)};
   --pf-c-wizard--m-in-page__nav--lg--Width: #{pf-size-prem(250px)};
-  --pf-c-wizard--m-in-page__nav--lg--BoxShadow: none;
-  --pf-c-wizard--m-in-page__nav--lg--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-wizard--m-in-page__nav--lg--BorderRightColor: var(--pf-global--BorderColor--100);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard__nav--lg--BoxShadow);
+    --pf-c-wizard__nav--Width: var(--pf-c-wizard__nav--lg--Width);
+    --pf-c-wizard__nav--BoxShadow: none;
   }
 
   // Nav list (nested)
@@ -253,13 +254,6 @@
       --pf-c-wizard--lg--MaxWidth: var(--pf-c-wizard--m-in-page--lg--MaxWidth);
       --pf-c-wizard--lg--MaxHeight: var(--pf-c-wizard--m-in-page--lg--MaxHeight);
       --pf-c-wizard__nav--Width: var(--pf-c-wizard--m-in-page__nav--lg--Width);
-      --pf-c-wizard__nav--BoxShadow: var(--pf-c-wizard--m-in-page__nav--lg--BoxShadow);
-    }
-
-    .pf-c-wizard__nav {
-      @media screen and (min-width: $pf-global--breakpoint--lg) {
-        border-right: var(--pf-c-wizard--m-in-page__nav--lg--BorderRightWidth) solid var(--pf-c-wizard--m-in-page__nav--lg--BorderRightColor);
-      }
     }
   }
 }
@@ -315,6 +309,10 @@
   }
 
   &.pf-m-expanded {
+    --pf-c-wizard__toggle--BoxShadow: none;
+
+    border-bottom: var(--pf-c-wizard__toggle--m-expanded--BorderBottomWidth) solid var(--pf-c-wizard__toggle--m-expanded--BorderBottomColor);
+
     .pf-c-wizard__toggle-icon {
       transform: var(--pf-c-wizard__toggle--m-expanded__toggle-icon--Transform);
     }
@@ -394,19 +392,16 @@
   background-color: var(--pf-c-wizard__nav--BackgroundColor);
   box-shadow: var(--pf-c-wizard__nav--BoxShadow);
 
-  @media screen and (max-width: $pf-global--breakpoint--lg) {
-    &.pf-m-expanded {
-      display: block;
-      visibility: visible;
-    }
+  &.pf-m-expanded {
+    display: block;
+    visibility: visible;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-wizard__nav--Width: var(--pf-c-wizard__nav--lg--Width);
-
     display: block;
     height: 100%;
     visibility: visible;
+    border-right: var(--pf-c-wizard__nav--lg--BorderRightWidth) solid var(--pf-c-wizard__nav--lg--BorderRightColor);
   }
 }
 
