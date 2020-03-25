@@ -1,15 +1,16 @@
 .pf-c-popover {
   // Component
-  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(300px)});
-  --pf-c-popover--MaxWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + #{pf-size-prem(300px)});
+  --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
+  --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-popover__content--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-popover__content--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-popover__content--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-popover__content--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-popover__content--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-popover__content--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-popover__content--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-popover__content--PaddingLeft: var(--pf-global--spacer--md);
 
   // Arrow
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
@@ -23,19 +24,20 @@
 
   // Close
   --pf-c-popover--c-button--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
+  --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element)); // align top of button with top of text
   --pf-c-popover--c-button--Right: var(--pf-global--spacer--md);
-  --pf-c-popover--c-button--sibling--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-popover--c-button--sibling--PaddingRight: var(--pf-global--spacer--2xl);
 
   // Header
-  --pf-c-popover--c-title--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-popover--c-title--MarginBottom: var(--pf-global--spacer--sm);
 
   // Footer
-  --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--md);
 
   position: relative;
   min-width: var(--pf-c-popover--MinWidth);
   max-width: var(--pf-c-popover--MaxWidth);
+  font-size: var(--pf-c-popover--FontSize);
   box-shadow: var(--pf-c-popover--BoxShadow);
 
   &.pf-m-top {

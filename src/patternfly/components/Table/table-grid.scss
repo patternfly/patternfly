@@ -82,8 +82,13 @@
   --pf-c-table-cell--responsive--PaddingLeft: 0;
 
   // Compact table
-  --pf-c-table--m-compact-tr-td--responsive--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-tr--responsive--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-tr--responsive--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-compact-tr-td--responsive--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-table--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-table--m-compact__action--responsive--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-table--m-compact__action--responsive--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-table--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   // Expandable row content
   --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--lg);
@@ -186,12 +191,20 @@
     }
   }
 
-  .pf-c-table.pf-m-compact {
-    tr {
-      & > * {
-        padding-top: var(--pf-c-table--m-compact-tr-td--responsive--PaddingTop);
-        padding-bottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingBottom);
-      }
+  &.pf-m-compact {
+    --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table--m-compact-tr--responsive--PaddingTop);
+    --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr--responsive--PaddingBottom);
+    --pf-c-table-cell--responsive--PaddingTop: var(--pf-c-table--m-compact-tr-td--responsive--PaddingTop);
+    --pf-c-table-cell--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingBottom);
+    --pf-c-table__check--input--MarginTop: 0;
+
+    .pf-c-table__action {
+      margin-top: var(--pf-c-table--m-compact__action--responsive--MarginTop);
+      margin-bottom: var(--pf-c-table--m-compact__action--responsive--MarginTop);
+    }
+
+    .pf-c-table__toggle .pf-c-button {
+      margin-bottom: var(--pf-c-table--m-compact__toggle--c-button--responsive--MarginBottom);
     }
   }
 

@@ -12,7 +12,7 @@
   --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-table-cell--FontWeight: var(--pf-global--FontWeight--normal);
 
   // Caption
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
@@ -114,8 +114,8 @@
   // ============================================================ //
 
   // Modifier - compact table
-  --pf-c-table--m-compact-th--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-compact-th--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--m-compact-th--PaddingTop: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--xs));
+  --pf-c-table--m-compact-th--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact-cell--PaddingBottom: var(--pf-global--spacer--sm);
@@ -139,8 +139,7 @@
   --pf-c-table__compound-expansion-toggle--BorderBottom--BorderColor: var(--pf-global--BackgroundColor--light-100);
 
   // Modifier - expandable row expanded
-  --pf-c-table__expandable-row--m-expanded--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BorderColor--100);
 
   // Modifier - sort
   --pf-c-table__sort--sorted--Color: var(--pf-global--active-color--100);
@@ -185,7 +184,7 @@
     // each value must be set individually as each of these values may be reset contextually
     padding: var(--pf-c-table-cell--PaddingTop) var(--pf-c-table-cell--PaddingRight) var(--pf-c-table-cell--PaddingBottom) var(--pf-c-table-cell--PaddingLeft);
     font-size: var(--pf-c-table-cell--FontSize);
-    font-weight: var(--pf-c-table--FontWeight);
+    font-weight: var(--pf-c-table-cell--FontWeight);
     vertical-align: baseline;
 
     // First child padding left
@@ -219,7 +218,7 @@
     --pf-c-table-cell--PaddingTop: var(--pf-c-table-thead-cell--PaddingTop);
     --pf-c-table-cell--PaddingBottom: var(--pf-c-table-thead-cell--PaddingBottom);
     --pf-c-table-cell--FontSize: var(--pf-c-table-thead--FontSize);
-    --pf-c-table--FontWeight: var(--pf-c-table-thead--FontWeight);
+    --pf-c-table-cell--FontWeight: var(--pf-c-table-thead--FontWeight);
 
     white-space: nowrap;
     vertical-align: top;
@@ -502,14 +501,6 @@
     tbody {
       --pf-c-table--BorderWidth: 0;
       --pf-c-table--BorderColor: transparent;
-
-      tr:first-child > * {
-        --pf-c-table-cell--PaddingTop: calc(var(--pf-c-table--m-compact-cell--PaddingTop) * 2);
-      }
-
-      tr:last-child > * {
-        --pf-c-table-cell--PaddingBottom: calc(var(--pf-c-table--m-compact-cell--PaddingBottom) * 2);
-      }
     }
   }
 

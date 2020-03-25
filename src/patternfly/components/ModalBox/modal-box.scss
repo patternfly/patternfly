@@ -1,10 +1,10 @@
 .pf-c-modal-box {
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-modal-box--BorderColor: transparent;
-  --pf-c-modal-box--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-modal-box--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-modal-box--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-modal-box--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-modal-box--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-modal-box--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-modal-box--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-modal-box--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-modal-box--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--xl);
@@ -15,12 +15,12 @@
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
   // Description
-  --pf-c-modal-box__c-title--description--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-modal-box__c-title--description--MarginTop: var(--pf-global--spacer--xs);
 
   // Body
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
-  --pf-c-modal-box__description--body--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-modal-box--c-title--body--MarginTop: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__description--body--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-modal-box--c-title--body--MarginTop: var(--pf-global--spacer--md);
 
   // Close
   --pf-c-modal-box--c-button--Top: calc(var(--pf-c-modal-box--PaddingTop) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
@@ -28,7 +28,7 @@
   --pf-c-modal-box--c-button--sibling--MarginRight: var(--pf-global--spacer--xl);
 
   // Footer
-  --pf-c-modal-box__footer--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-modal-box__footer--MarginTop: var(--pf-global--spacer--lg);
 
   // Footer buttons
   --pf-c-modal-box__footer--c-button--MarginRight: var(--pf-global--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.

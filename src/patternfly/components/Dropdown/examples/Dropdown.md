@@ -7,6 +7,7 @@ cssPrefix: pf-c-dropdown
 import './Dropdown.css'
 
 ## Examples
+
 ```hbs title=Expanded
 {{#> dropdown id="dropdown-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
   {{#> dropdown-toggle-text}}
@@ -173,11 +174,26 @@ The dropdown panel is provided for flexibility in allowing various content withi
 {{/dropdown}}
 ```
 
+```hbs title=Dropdown-with-image-and-text
+{{#> dropdown id="dropdown-with-image-and-text-example" dropdown--IsMenuToggleImageText="true" dropdown--IsExpanded="true"}}
+  {{#> dropdown-toggle-image}}
+    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+  {{/dropdown-toggle-image}}
+  {{#> dropdown-toggle-text}}
+    Ned Username
+  {{/dropdown-toggle-text}}
+  {{> dropdown-toggle-icon}}
+{{/dropdown}}
+```
+
 ## Documentation
+
 ### Overview
+
 The dropdown menu can contain either links or buttons, depending on the expected behavior when clicking the menu item. If you are using the menu item to navigate to another page, then menu item is a link. Otherwise, use a button for the menu item.
 
 ### Accessibility
+
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden. |
@@ -194,6 +210,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
 
 ### Usage
+
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |
@@ -205,6 +222,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
 | `.pf-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
+| `.pf-c-dropdown__toggle-image` | `<span>` | Defines the wrapper for the dropdown toggle button image. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
 | `.pf-c-dropdown__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
@@ -216,6 +234,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-action` | `.pf-c-dropdown__toggle.pf-m-split-button` | Modifies the dropdown toggle for when an action is placed beside a toggle button in a split button dropdown. |
 | `.pf-m-hover` | `.pf-c-dropdown__menu-item`, `.pf-c-dropdown__toggle` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-dropdown__menu-item`, `.pf-c-dropdown__toggle` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
+| `.pf-m-text` | `.pf-c-dropdown__menu-item` | Modifies a menu item to be non-interactive text. |
 | `.pf-m-plain` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with no border. |
 | `.pf-m-primary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with primary styles. |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |

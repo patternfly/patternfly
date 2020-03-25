@@ -57,9 +57,6 @@ jobs:
         name: Build Dist
         command: npm run build-patternfly
     - run:
-        name: Build IE11
-        command: npm run build:ie11
-    - run:
         name: Build Site
         command: npm run build:site
     - run:
@@ -136,4 +133,4 @@ jobs:
         command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Release to NPM
-        command: npx semantic-release@17.0.4
+        command: if [[ -z $CIRCLE_PULL_REQUEST ]]; then npx semantic-release@17.0.4; fi;

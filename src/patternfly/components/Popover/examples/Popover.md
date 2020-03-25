@@ -11,7 +11,7 @@ cssPrefix: pf-c-popover
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-top-header"'}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-top-header"'}}
       Popover header
     {{/title}}
     {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
@@ -30,7 +30,7 @@ cssPrefix: pf-c-popover
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-right-header"'}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-right-header"'}}
       Popover header
     {{/title}}
     {{#> popover-body popover-body--attribute='id="popover-right-body"'}}
@@ -49,7 +49,7 @@ cssPrefix: pf-c-popover
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
         <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
-      {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-bottom-header"'}}
+      {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-header"'}}
         Popover header
       {{/title}}
     {{#> popover-body popover-body--attribute='id="popover-bottom-body"'}}
@@ -68,7 +68,7 @@ cssPrefix: pf-c-popover
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-xl" title--attribute='id="popover-left-header"'}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-left-header"'}}
         Popover header
     {{/title}}
     {{#> popover-body popover-body--attribute='id="popover-left-body"'}}
@@ -93,7 +93,7 @@ cssPrefix: pf-c-popover
   {{/popover-content}}
 {{/popover}}
 ```
-      
+
 ## Documentation
 ### Overview
 A popover is used to provide contextual information for another component on click.  The popover itself is made up of two main elements: arrow and content. The content element follows the pattern of the popover box component, with a close icon in the top right corner, as well as a header and body.  One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the popover component
@@ -122,4 +122,4 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-m-left` | `.pf-c-popover` | Positions the popover to the left of the element. |
 | `.pf-m-right` | `.pf-c-popover` | Positions the popover to the right of the element. |
 | `.pf-m-top` | `.pf-c-popover` | Positions the popover to the top of the element. |
-| `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. | 
+| `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. |

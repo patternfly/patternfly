@@ -2,18 +2,24 @@
   {{#if dropdown--attribute}}
     {{dropdown--attribute}}
   {{/if}}>
-  {{#> dropdown-toggle}}
+  {{#if dropdown--IsCustom}}
     {{> @partial-block}}
-  {{/dropdown-toggle}}
-  {{#if dropdown--IsActionMenu}}
-    {{> dropdown-menu}}
-  {{else if dropdown--IsBasicActionMenu}}
-    {{> dropdown-menu-basic-action}}
-  {{else if dropdown--IsSplitButton}}
-    {{> dropdown-menu-split-button}}
-  {{else if dropdown--IsGroupsMenu}}
-    {{> dropdown-menu-groups}}
   {{else}}
-    {{> dropdown-menu-basic}}
+    {{#> dropdown-toggle}}
+      {{> @partial-block}}
+    {{/dropdown-toggle}}
+    {{#if dropdown--IsActionMenu}}
+      {{> dropdown-menu}}
+    {{else if dropdown--IsBasicActionMenu}}
+      {{> dropdown-menu-basic-action}}
+    {{else if dropdown--IsSplitButton}}
+      {{> dropdown-menu-split-button}}
+    {{else if dropdown--IsGroupsMenu}}
+      {{> dropdown-menu-groups}}
+    {{else if dropdown--IsMenuToggleImageText}}
+      {{> dropdown-menu-toggle-image-text}}
+    {{else}}
+      {{> dropdown-menu-basic}}
+    {{/if}}
   {{/if}}
 </div>

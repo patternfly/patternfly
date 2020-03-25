@@ -74,7 +74,7 @@ cssPrefix: pf-c-card
     {{/card-actions}}
   {{/card-head}}
   {{#> card-body card-body--attribute=(concat 'id="' card--id '-check-label"')}}
-    This is the card body, there is only actions in the card head.
+    This is the card body, there are only actions in the card head.
   {{/card-body}}
 {{/card}}
 ```
@@ -235,14 +235,14 @@ A card is a generic rectangular container that can be used to build other compon
 ### Usage
 | Class | Applied | Outcome |
 | ---- | ---- | ---- |
-| `.pf-c-card` | `<div>` | Creates a card containing content. **Required** |
+| `.pf-c-card` | `<div>` | Creates a card component.  **Required** |
 | `.pf-c-card__header` | `<div>` | Creates the header of a card. |
 | `.pf-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-c-card__body` elements. |
 | `.pf-c-card__footer` | `<div>` | Creates the footer of a card. |
 | `.pf-c-card__head` | `<div>` | Creates the head of the card where images or actions can go. |
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card head. |
 | `.pf-c-card__head-main` | `<div>` | Creates a wrapper element to be used in the card head when using an image, logo or text. |
-| `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. |
+| `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |

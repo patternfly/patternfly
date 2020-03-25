@@ -60,9 +60,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 
   // Header tools
-  --pf-c-page__header-tools--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-page__header-tools--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-tools--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
@@ -108,6 +106,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-section--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page__main-breadcrumb--main-section--PaddingTop: var(--pf-global--spacer--md);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--md--PaddingTop);
@@ -120,7 +119,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__main-nav--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-page__main-nav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-nav--md--PaddingLeft: var(--pf-global--spacer--lg);
@@ -145,13 +143,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-breadcrumb--PaddingBottom: 0;
   --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-breadcrumb--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-page__main-breadcrumb--md--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-breadcrumb--md--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__main-nav--main-breadcrumb--PaddingTop: 0;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-page__main-breadcrumb--PaddingTop: var(--pf-c-page__main-breadcrumb--md--PaddingTop);
     --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-c-page__main-breadcrumb--md--PaddingRight);
     --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-c-page__main-breadcrumb--md--PaddingLeft);
   }
@@ -277,9 +272,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__header-tools {
   grid-column: 2 / 3;
   align-items: center;
-  margin-top: var(--pf-c-page__header-tools--MarginTop);
   margin-right: var(--pf-c-page__header-tools--MarginRight);
-  margin-bottom: var(--pf-c-page__header-tools--MarginBottom);
   margin-left: auto; // to push it to the right
 
   .pf-m-icons {
@@ -421,7 +414,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 .pf-c-page__main-nav {
-  padding: var(--pf-c-page__main-nav--PaddingTop) var(--pf-c-page__main-nav--PaddingRight) var(--pf-c-page__main-nav--PaddingBottom) var(--pf-c-page__main-nav--PaddingLeft);
+  padding-top: var(--pf-c-page__main-nav--PaddingTop);
+  padding-right: var(--pf-c-page__main-nav--PaddingRight);
+  padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
 
   .pf-c-nav {
@@ -441,8 +436,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding: var(--pf-c-page__main-breadcrumb--PaddingTop) var(--pf-c-page__main-breadcrumb--PaddingRight) var(--pf-c-page__main-breadcrumb--PaddingBottom) var(--pf-c-page__main-breadcrumb--PaddingLeft);
   background-color: var(--pf-c-page__main-breadcrumb--BackgroundColor);
 
-  .pf-c-page__main-nav + & {
-    --pf-c-page__main-breadcrumb--PaddingTop: var(--pf-c-page__main-nav--main-breadcrumb--PaddingTop);
+  + .pf-c-page__main-section {
+    --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-breadcrumb--main-section--PaddingTop);
   }
 }
 

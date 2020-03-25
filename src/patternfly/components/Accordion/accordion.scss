@@ -1,20 +1,16 @@
 .pf-c-accordion {
   // accordion
   --pf-c-accordion--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-accordion--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-accordion--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-accordion--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-accordion--PaddingBottom: var(--pf-global--spacer--xl);
 
   // accordion toggle
   --pf-c-accordion__toggle--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-accordion__toggle--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-accordion__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-accordion__toggle--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-accordion__toggle--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-accordion__toggle--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-accordion__toggle--BorderLeftColor: transparent;
-  --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--150);
-  --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--150);
-  --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--150);
+  --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-accordion__toggle--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__toggle--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
 
@@ -36,9 +32,9 @@
 
   // accordion expanded content
   --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-accordion__expanded-content-body--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-accordion__expanded-content-body--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-accordion__expanded-content-body--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-accordion__expanded-content-body--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-accordion__expanded-content-body--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-accordion__expanded-content--Color: var(--pf-global--secondary-color--100);
   --pf-c-accordion__expanded-content--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-accordion__expanded-content--BorderLeftColor: transparent;
@@ -49,14 +45,7 @@
   // This component always needs to be light
   @include pf-t-light;
 
-  padding-top: var(--pf-c-accordion--PaddingTop);
-  padding-bottom: var(--pf-c-accordion--PaddingBottom);
   background-color: var(--pf-c-accordion--BackgroundColor);
-  box-shadow: var(--pf-c-accordion--BoxShadow);
-
-  &.pf-m-no-box-shadow {
-    --pf-c-accordion--BoxShadow: none;
-  }
 }
 
 .pf-c-accordion__toggle {

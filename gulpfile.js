@@ -1,11 +1,10 @@
 const { removeSync } = require('fs-extra');
 const { series, parallel, src, dest } = require('gulp');
 const browserSync = require('browser-sync').create();
-const { copyFA, copySource, copyAssets } = require('./build/gulp/copy');
+const { copyFA, copySource, copyAssets, copyDocs } = require('./build/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./build/gulp/sass');
 const { pfIconFont, pfIcons } = require('./build/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./build/gulp/html');
-const { buildIE11 } = require('./build/gulp/ie11');
 const { lintCSSComments, lintCSSFunctions } = require('./build/gulp/lint');
 
 const sassFiles = [
@@ -84,12 +83,11 @@ function startWorkspaceServer() {
 const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
 
 module.exports = {
-  build: series(clean, compileSrcSASS, minifyCSS, pfIcons, copyFA, copySourceFiles),
+  build: series(clean, compileSrcSASS, minifyCSS, pfIcons, copyFA, copyDocs, copySourceFiles),
   buildWorkspace,
   develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
   compileSASS: compileSrcSASS,
   minifyCSS,
-  buildIE11,
   watchSASS: watchSrcSASS,
   watchHBS: watchSrcHBS,
   watchMD: watchSrcMD,
@@ -99,6 +97,7 @@ module.exports = {
   copyFA,
   copySource: copySourceFiles,
   copyAssets,
+  copyDocs,
   lintCSSFunctions,
   lintCSSComments,
   lintCSS: parallel(lintCSSFunctions, lintCSSComments)
