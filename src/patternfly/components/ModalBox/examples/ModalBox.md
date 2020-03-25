@@ -16,7 +16,7 @@ cssPrefix: pf-c-modal-box
   {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
     To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
   {{/modal-box-body}}
-  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+  {{#> modal-box-footer}}
     Modal footer
   {{/modal-box-footer}}
 {{/modal-box}}
@@ -36,7 +36,7 @@ cssPrefix: pf-c-modal-box
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat.
   {{/modal-box-body}}
-  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+  {{#> modal-box-footer}}
     Modal footer
   {{/modal-box-footer}}
 {{/modal-box}}
@@ -56,7 +56,7 @@ cssPrefix: pf-c-modal-box
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat.
   {{/modal-box-body}}
-  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+  {{#> modal-box-footer}}
     Modal footer
   {{/modal-box-footer}}
 {{/modal-box}}
@@ -70,7 +70,7 @@ cssPrefix: pf-c-modal-box
   {{#> modal-box-body}}
     <span id="modal-no-header-description">When static text describing the modal is available, it can be wrapped with an ID referring to the modal's aria-describedby value. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   {{/modal-box-body}}
-  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+  {{#> modal-box-footer}}
     Modal footer
   {{/modal-box-footer}}
 {{/modal-box}}
@@ -90,7 +90,7 @@ cssPrefix: pf-c-modal-box
   {{#> modal-box-body}}
     To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
   {{/modal-box-body}}
-  {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+  {{#> modal-box-footer}}
     Modal footer
   {{/modal-box-footer}}
 {{/modal-box}}
@@ -123,4 +123,3 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
-| `.pf-m-align-left` | `.pf-c-modal-box__foter` | Modifies for buttons in footer to be left aligned. **Required** |

@@ -401,7 +401,7 @@ section: demos
           {{/data-list-item}}
         {{/data-list}}
       {{/modal-box-body}}
-      {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+      {{#> modal-box-footer}}
         {{#> button button--modifier="pf-m-primary"}}
           Save
         {{/button}}
