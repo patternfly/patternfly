@@ -5,7 +5,6 @@ module.exports = {
     title: 'PatternFly 4 - HTML',
     siteUrl: 'https://pf4.patternfly.org/'
   },
-  pathPrefix: '/patternfly-next',
   plugins: [
     // Use our patternfly.org theme
     {
