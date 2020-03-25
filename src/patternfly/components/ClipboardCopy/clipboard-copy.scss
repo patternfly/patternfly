@@ -40,8 +40,11 @@
   --pf-c-clipboard-copy__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-clipboard-copy__expandable-content--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-clipboard-copy__expandable-content--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-clipboard-copy__expandable-content--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-clipboard-copy__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-clipboard-copy__expandable-content--BorderTopWidth: 0;
+  --pf-c-clipboard-copy__expandable-content--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-clipboard-copy__expandable-content--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-clipboard-copy__expandable-content--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-clipboard-copy__expandable-content--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-clipboard-copy__expandable-content--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Toggle button expanded
@@ -164,8 +167,8 @@
   word-wrap: break-word;
   background-color: var(--pf-c-clipboard-copy__expandable-content--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-clipboard-copy__expandable-content--BorderWidth) solid transparent;
-  outline-offset: var(--pf-c-clipboard-copy__expandable-content--OutlineOffset);
+  border: solid var(--pf-c-clipboard-copy__expandable-content--BorderColor);
+  border-width: var(--pf-c-clipboard-copy__expandable-content--BorderTopWidth) var(--pf-c-clipboard-copy__expandable-content--BorderRightWidth) var(--pf-c-clipboard-copy__expandable-content--BorderBottomWidth) var(--pf-c-clipboard-copy__expandable-content--BorderLeftWidth);
   box-shadow: var(--pf-c-clipboard-copy__expandable-content--BoxShadow);
 
   pre {
