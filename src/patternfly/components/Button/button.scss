@@ -129,8 +129,8 @@
   --pf-c-button--m-control--disabled--BackgroundColor: transparent;
 
   // Styles for an icon in button
-  --pf-c-button__icon--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-button__text--icon--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-button__icon--m-start--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-button__icon--m-end--MarginLeft: var(--pf-global--spacer--xs);
 
   position: relative;
   display: inline-block;
@@ -143,15 +143,6 @@
   user-select: none;
   border: 0;
   border-radius: var(--pf-c-button--BorderRadius);
-
-  .pf-c-button__icon {
-    margin-right: var(--pf-c-button__icon--MarginRight);
-  }
-
-  .pf-c-button__text + .pf-c-button__icon {
-    margin-right: 0;
-    margin-left: var(--pf-c-button__text--icon--MarginLeft);
-  }
 
   &::after {
     position: absolute;
@@ -469,6 +460,16 @@
     &::after {
       --pf-c-button--BorderColor: var(--pf-c-button--disabled--BorderColor);
     }
+  }
+}
+
+.pf-c-button__icon {
+  &.pf-m-start {
+    margin-right: var(--pf-c-button__icon--m-start--MarginRight);
+  }
+
+  &.pf-m-end {
+    margin-left: var(--pf-c-button__icon--m-end--MarginLeft);
   }
 }
 

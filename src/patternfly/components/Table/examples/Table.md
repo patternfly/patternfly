@@ -659,7 +659,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-code-branch" aria-hidden="true"></i>
           {{/button-icon}}
           10
@@ -667,7 +667,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-code" aria-hidden="true"></i>
           {{/button-icon}}
           4
@@ -675,7 +675,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-cube" aria-hidden="true"></i>
           {{/button-icon}}
           4
@@ -722,7 +722,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-code-branch" aria-hidden="true"></i>
           {{/button-icon}}
           3
@@ -730,7 +730,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-code" aria-hidden="true"></i>
           {{/button-icon}}
           4
@@ -738,7 +738,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-cube" aria-hidden="true"></i>
           {{/button-icon}}
           2
@@ -785,7 +785,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-code-branch" aria-hidden="true"></i>
           {{/button-icon}}
           70
@@ -793,7 +793,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-code" aria-hidden="true"></i>
           {{/button-icon}}
           15
@@ -801,7 +801,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
         {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
-          {{#> button-icon}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
             <i class="fas fa-cube" aria-hidden="true"></i>
           {{/button-icon}}
           12
