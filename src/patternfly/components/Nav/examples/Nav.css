@@ -1,19 +1,19 @@
-#ws-core-c-nav-basic,
-#ws-core-c-nav-grouped,
-#ws-core-c-nav-default,
-#ws-core-c-nav-expanded,
-#ws-core-c-nav-expanded-with-subnav-titles,
-#ws-core-c-nav-mixed {
+#ws-core-c-navigation-basic,
+#ws-core-c-navigation-grouped,
+#ws-core-c-navigation-default,
+#ws-core-c-navigation-expanded,
+#ws-core-c-navigation-expanded-with-subnav-titles,
+#ws-core-c-navigation-mixed {
   background-color: var(--pf-global--BackgroundColor--dark-300);
 }
 
-#ws-core-c-nav-horizontal-in-masthead,
-#ws-core-c-nav-horizontal-overflow-in-masthead {
+#ws-core-c-navigation-horizontal-in-masthead,
+#ws-core-c-navigation-horizontal-overflow-in-masthead {
   background-color: var(--pf-global--BackgroundColor--dark-100);
 }
 
-#ws-core-c-nav-horizontal-in-masthead .pf-c-page__header-nav,
-#ws-core-c-nav-horizontal-overflow-in-masthead .pf-c-page__header-nav {
+#ws-core-c-navigation-horizontal-in-masthead .pf-c-page__header-navigation,
+#ws-core-c-navigation-horizontal-overflow-in-masthead .pf-c-page__header-navigation {
   grid-row: 1 / 2;
   background-color: rgba(0,0,0,0);
   margin-left: 32px;
@@ -22,19 +22,19 @@
   align-self: flex-end;
 }
 
-#ws-core-c-nav-horizontal-in-masthead .pf-c-nav__link,
-#ws-core-c-nav-horizontal-overflow-in-masthead .pf-c-nav__link {
+#ws-core-c-navigation-horizontal-in-masthead .pf-c-navigation__link,
+#ws-core-c-navigation-horizontal-overflow-in-masthead .pf-c-navigation__link {
   padding-top: 16px;
   padding-bottom: 24px;
 }
 
-#ws-core-c-nav-horizontal-in-masthead .pf-c-nav__scroll-button,
-#ws-core-c-nav-horizontal-overflow-in-masthead .pf-c-nav__scroll-button {
+#ws-core-c-navigation-horizontal-in-masthead .pf-c-navigation__scroll-button,
+#ws-core-c-navigation-horizontal-overflow-in-masthead .pf-c-navigation__scroll-button {
   background-color: var(--pf-global--BackgroundColor--100);
   top: 8px;
 }
 
-#ws-core-c-nav-horizontal-in-masthead .pf-c-nav__scroll-button:nth-of-type(1),
-#ws-core-c-nav-horizontal-overflow-in-masthead .pf-c-nav__scroll-button:nth-of-type(1) {
+#ws-core-c-navigation-horizontal-in-masthead .pf-c-navigation__scroll-button:nth-of-type(1),
+#ws-core-c-navigation-horizontal-overflow-in-masthead .pf-c-navigation__scroll-button:nth-of-type(1) {
   left: 0;
 }

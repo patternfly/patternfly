@@ -21,7 +21,6 @@ import './Nav.css'
         Link 2
       {{/nav-link}}
     {{/nav-item}}
-    {{#> divider divider--type="li"}}{{/divider}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
         Link 3
@@ -42,7 +41,7 @@ import './Nav.css'
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
       Section title 1
     {{/nav-section-title}}
-    {{#> nav-list}}
+    {{#> nav-list nav-list--type="simple"}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -64,7 +63,7 @@ import './Nav.css'
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
       Section title 2
     {{/nav-section-title}}
-    {{#> nav-list}}
+    {{#> nav-list nav-list--type="simple"}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#" nav-link--current="true"}}
           Current link
@@ -93,18 +92,12 @@ import './Nav.css'
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{!--
-        {{#> nav-subnav-title}}
-          Current and expanded example sub-navigation
-        {{/nav-subnav-title}}
-        --}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
-          {{#> divider divider--type="li"}}{{/divider}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
@@ -129,7 +122,6 @@ import './Nav.css'
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
-          {{#> divider divider--type="li"}}{{/divider}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
