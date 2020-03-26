@@ -143,17 +143,6 @@ cssPrefix: pf-c-drawer
 {{/drawer}}
 ```
 
-```hbs title=Modified-panel-border
-{{#> drawer drawer--id="panel-border-example" drawer-panel--IsOpen="true"}}
-  {{#> drawer-main}}
-    {{#> drawer-content}}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
-    {{/drawer-content}}
-    {{> drawer-example-panel drawer-panel--modifier="pf-m-border"}}
-  {{/drawer-main}}
-{{/drawer}}
-```
-
 ```hbs title=Additional-section-above-main
 {{#> drawer drawer--id="additional-section-above-main" drawer-panel--IsOpen="true"}}
   {{#> drawer-section}}
@@ -163,7 +152,7 @@ cssPrefix: pf-c-drawer
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
     {{/drawer-content}}
-    {{> drawer-example-panel drawer-panel--modifier="pf-m-border"}}
+    {{> drawer-example-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -205,7 +194,6 @@ cssPrefix: pf-c-drawer
 | `.pf-m-expanded` | `.pf-c-drawer` | Modifies the drawer panel for the expanded state. |
 | `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer panel state to always show both content and panel. |
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a breakpoint will default to the `md` breakpoint. |
-| `.pf-m-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable box-shadow and enable solid border. |
 | `.pf-m-no-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-c-drawer__body` | Modifies the element to remove padding. |

@@ -287,15 +287,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // stylelint-enable
 
   // Border
-  .pf-c-drawer .pf-c-drawer__panel.pf-m-border,
-  .pf-c-drawer.pf-m-panel-left .pf-c-drawer__panel.pf-m-border,
   .pf-c-drawer .pf-c-drawer__panel.pf-m-no-border,
   .pf-c-drawer.pf-m-panel-left .pf-c-drawer__panel.pf-m-no-border {
     --pf-c-drawer__panel--BoxShadow: transparent;
-  }
-
-  .pf-c-drawer.pf-m-expanded .pf-c-drawer__panel.pf-m-border::after {
-    --pf-c-drawer__panel--after--BackgroundColor: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
   }
 }
 
@@ -335,7 +329,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       .pf-c-drawer__panel {
         --pf-c-drawer__panel--BoxShadow: transparent;
 
-        &::after {
+        &:not(.pf-m-no-border)::after {
           --pf-c-drawer__panel--after--BackgroundColor: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
         }
       }
