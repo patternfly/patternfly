@@ -92,7 +92,7 @@ Ignore the violations that aren’t related to your contribution.
 
 Fix violations related to your contribution.
 
-If there are violations that are not obvious how to fix, then [create an issue](https://github.com/patternfly/patternfly-next/issues/new) with information about the violation that was found. For example, some violations might require further discussion before they can be addressed. And some violations may not be valid and require changes to the workspace or tooling to stop flagging the violation.
+If there are violations that are not obvious how to fix, then [create an issue](https://github.com/patternfly/patternfly/issues/new) with information about the violation that was found. For example, some violations might require further discussion before they can be addressed. And some violations may not be valid and require changes to the workspace or tooling to stop flagging the violation.
 
 If you have any suggestions about ways that we can improve how we use this tool, please let us know by opening an issue.
 
@@ -109,4 +109,4 @@ PatternFly 4 is supported on the latest two major versions of the following brow
 - Safari
 - Edge
 
-We also provide documentation for how to enable IE11 support in our [wiki](https://github.com/patternfly/patternfly-next/wiki/IE11-Support).
+We also provide documentation for how to enable IE11 support in our [wiki](https://github.com/patternfly/patternfly/wiki/IE11-Support).
