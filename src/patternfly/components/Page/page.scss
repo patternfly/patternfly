@@ -118,7 +118,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   // Main section horizontal nav
   --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--md--PaddingRight: var(--pf-global--spacer--lg);
