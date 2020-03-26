@@ -102,7 +102,7 @@
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    display: block;
+    display: flex;
     flex-basis: auto;
     order: 0;
     visibility: visible;
