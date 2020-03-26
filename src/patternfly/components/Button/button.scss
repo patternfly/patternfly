@@ -124,16 +124,6 @@
   border: 0;
   border-radius: var(--pf-c-button--BorderRadius);
 
-  .pf-c-button__icon {
-    &.pf-m-start {
-      margin-right: var(--pf-c-button__icon--m-start--MarginRight);
-    }
-
-    &.pf-m-end {
-      margin-left: var(--pf-c-button__icon--m-end--MarginLeft);
-    }
-  }
-
   &::after {
     position: absolute;
     top: 0;
@@ -431,6 +421,16 @@
 
       background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
     }
+  }
+}
+
+.pf-c-button__icon {
+  &.pf-m-start {
+    margin-right: var(--pf-c-button__icon--m-start--MarginRight);
+  }
+
+  &.pf-m-end {
+    margin-left: var(--pf-c-button__icon--m-end--MarginLeft);
   }
 }
 
