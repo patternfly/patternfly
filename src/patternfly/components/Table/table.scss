@@ -153,6 +153,9 @@
   --pf-c-table--nested--first-last-child--PaddingRight: var(--pf-global--spacer--3xl);
   --pf-c-table--nested--first-last-child--PaddingLeft: var(--pf-global--spacer--3xl);
 
+  // Outline offset
+  --pf-c-table--button--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
+
   // ============================================================ //
   // Modifiers
   // ============================================================ //
@@ -373,9 +376,14 @@
 .pf-c-table__compound-expansion-toggle {
   &:active,
   &:focus-within {
-    // background-color: red;
-    outline: -webkit-focus-ring-color auto 5px;
-    outline-offset: -5px;
+    outline-offset: var(--pf-c-table--button--OutlineOffset);
+
+    // stylelint-disable media-feature-name-no-vendor-prefix
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-style: auto;
+      outline-color: -webkit-focus-ring-color;
+    }
+    // stylelint-enable
   }
 
   .pf-c-button {
