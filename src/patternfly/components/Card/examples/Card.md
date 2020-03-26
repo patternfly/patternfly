@@ -223,6 +223,20 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+```hbs title=Flat
+{{#> card card--modifier="pf-m-flat"}}
+  {{#> card-header}}
+    Header
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ## Documentation
 ### Overview
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
@@ -247,3 +261,4 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
+| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background.

@@ -16,6 +16,8 @@
   --pf-c-card--m-compact--child--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-card--m-compact--child--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-card--m-compact__header--not--last-child--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-card--m-flat--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-card--m-flat--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-card--first-child--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingBottom: var(--pf-global--spacer--lg);
@@ -76,6 +78,12 @@
     --pf-c-card--child--PaddingBottom: var(--pf-c-card--m-compact--child--PaddingBottom);
     --pf-c-card--child--PaddingLeft: var(--pf-c-card--m-compact--child--PaddingLeft);
     --pf-c-card__header--not--last-child--PaddingBottom: var(--pf-c-card--m-compact__header--not--last-child--PaddingBottom);
+  }
+
+  &.pf-m-flat {
+    --pf-c-card--BoxShadow: none;
+
+    border: var(--pf-c-card--m-flat--BorderWidth) solid var(--pf-c-card--m-flat--BorderColor);
   }
 }
 
