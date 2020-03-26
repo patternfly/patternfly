@@ -2,5 +2,7 @@
   {{#if empty-state--attribute}}
     {{{empty-state--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> empty-state-content}}
+    {{> @partial-block}}
+  {{/empty-state-content}}
 </div>
