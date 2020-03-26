@@ -152,7 +152,7 @@ cssPrefix: pf-c-empty-state
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-empty-state` | `<div>` |  Initiates an empty state component. **Required** |
+| `.pf-c-empty-state` | `<div>` |  Initiates an empty state component. The empty state centers its content (`.pf-c-empty-state__content`) vertically and horizontally. **Required** |
 | `.pf-c-empty-state__content` | `<div>` |  Creates the content container. **Required** |
 | `.pf-c-empty-state__icon` | `<i>`, `<div>` |  Creates the empty state icon or icon container when used as a `<div>`. |
 | `.pf-c-title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Creates the empty state title. **Required** |
@@ -163,3 +163,4 @@ cssPrefix: pf-c-empty-state
 | `.pf-m-sm` | `.pf-c-empty-state` | Modifies the empty state for a small max-width. |
 | `.pf-m-lg` | `.pf-c-empty-state` | Modifies the empty state for a large max-width. |
 | `.pf-m-xl` | `.pf-c-empty-state` | Modifies the empty state for a x-large max-width. |
+| `.pf-m-full-height` | `.pf-c-empty-state` | Modifies the empty state to be `height: 100%`. If you need the empty state content to be centered vertically, you can use this modifier to make the empty state fill the height of its container, and center `.pf-c-empty-state__content`. **Note:** this modifier requires the parent of `.pf-c-empty-state` have an implicit or explicit `height` defined.  |
