@@ -45,9 +45,7 @@ section: demos
           </dl>
           {{/content}}
           {{#> about-modal-box-strapline}}
-            {{#> title titleType="p" title--modifier="pf-m-md"}}
-              Trademark and copyright information here
-            {{/title}}
+            Trademark and copyright information here
           {{/about-modal-box-strapline}}
         {{/about-modal-box-content}}
       {{/about-modal-box}}

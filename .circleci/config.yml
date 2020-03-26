@@ -99,6 +99,10 @@ jobs:
           name: Lint SASS
           command: npm run lint:sass
       - run:
+          name: Lint HBS
+          command: npm run lint:hbs
+          when: always
+      - run:
           name: Lint JS
           command: npm run lint:js
           when: always

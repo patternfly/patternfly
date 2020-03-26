@@ -353,7 +353,7 @@ Since our components are isolated and modular try to avoid `@mixin` and `@extend
 
 There is currently a bug in cssnano ([issue #64 on postcss-calc](https://github.com/postcss/postcss-calc/issues/64)) that causes nested `calc()` CSS functions to be removed. So a function like `calc(5 * calc(3 - 1))` becomes `calc(5 * 3 - 1)`. It's worth noting that this problem only impacts our distribution package. Nested `calc()` functions work fine in the development environment.
 
-PatternFly developers should avoid nested `calc()` CSS functions until this bug is resolved and the package is updated in the [patternfly-next repository](https://github.com/patternfly/patternfly-next). If you're interested in following this issue, you can do so in [issue #1295 on patternfly-next](https://github.com/patternfly/patternfly-next/issues/1295).
+PatternFly developers should avoid nested `calc()` CSS functions until this bug is resolved and the package is updated in the [patternfly repository](https://github.com/patternfly/patternfly). If you're interested in following this issue, you can do so in [issue #1295 on patternfly](https://github.com/patternfly/patternfly/issues/1295).
 
 ## References
 
