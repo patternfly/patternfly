@@ -33,7 +33,7 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   }
 
   // Expanded
-  --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter);
+  --pf-c-data-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter--md);
 
   // Chip container
   --pf-c-data-toolbar__group--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);

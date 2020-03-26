@@ -2,7 +2,7 @@
   --pf-l-split--m-gutter--MarginRight: var(--pf-global--gutter);
   --pf-l-split--m-gutter--md--MarginRight: var(--pf-global--gutter--md);
 
-  @media screen and (max-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-l-split--m-gutter--MarginRight: var(--pf-l-split--m-gutter--md--MarginRight);
   }
 
