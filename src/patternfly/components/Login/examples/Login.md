@@ -34,11 +34,11 @@ cssPrefix: pf-c-login
           {{/form-helper-text}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
-            {{#> form-control controlType="input" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
-            {{#> form-control controlType="input" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
           {{#> check}}

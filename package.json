@@ -27,6 +27,7 @@
     "lint:fix": "npm run lint:js --fix && npm run lint:styles --fix",
     "lint:sass": "stylelint 'src/**/*.scss'",
     "lint:js": "eslint .",
+    "lint:hbs": "node ./parseHbs --lint",
     "precommit": "lint-staged",
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
     "serve": "gatsby serve",
@@ -118,7 +119,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/patternfly/patternfly-next.git"
+    "url": "https://github.com/patternfly/patternfly.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
