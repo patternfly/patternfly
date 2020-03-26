@@ -37,9 +37,6 @@
   // this is purposeful and necessary to avoid adding selectors to each td/th
   // ============================================================ //
 
-  // Responsive vars
-  // ==================================================================
-
   // Table
   --pf-c-table--responsive--BorderColor: var(--pf-global--BorderColor--300);
 
@@ -47,6 +44,9 @@
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-table-tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
   --pf-c-table-tbody--responsive--BorderWidth: var(--pf-global--spacer--sm);
+  --pf-c-table--tbody--after--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-table--tbody--after--BorderLeftWidth: 0;
+  --pf-c-table--tbody--after--BorderColor: var(--pf-global--active-color--100);
 
   // Row
   --pf-c-table-tr--responsive--BorderWidth: var(--pf-global--spacer--sm);
@@ -70,8 +70,14 @@
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Cell
+  // Cell display
   --pf-c-table-cell--m-grid--hidden-visible--Display: grid;
+
+  // Cell
+  --pf-c-table--m-grid--cell--PaddingTop: 0;
+  --pf-c-table--m-grid--cell--PaddingRight: 0;
+  --pf-c-table--m-grid--cell--PaddingBottom: 0;
+  --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
@@ -112,15 +118,39 @@
   // Table toggle icons
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
-
-  // End responsive vars
-  // ==================================================================
 }
 
 // Check table cell
 @include pf-mobile-layout {
+  --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--cell--PaddingTop);
+  --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-grid--cell--PaddingRight);
+  --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-grid--cell--PaddingBottom);
+  --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-grid--cell--PaddingLeft);
+
   display: grid;
   border: none;
+
+  // reset cell modifications
+  &.pf-c-table tr > * {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  // apply modifications to text
+  .pf-c-table__text {
+    position: relative;
+    display: block;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    overflow: var(--pf-c-table--cell--Overflow);
+    text-overflow: var(--pf-c-table--cell--TextOverflow);
+    white-space: var(--pf-c-table--cell--WhiteSpace);
+  }
 
   // Thead
   thead {
@@ -222,7 +252,7 @@
   // Standard td, in standard row (non-expandable)
   [data-label] {
     // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
-    --pf-c-table-cell--hidden-visible--Display: var(--pf-c-table-cell--m-grid--hidden-visible--Display);
+    --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table-cell--m-grid--hidden-visible--Display);
 
     // responsive layout, set td to two column grid
     grid-column: 1;
@@ -252,12 +282,12 @@
   tr > * {
     // Remove first child padding left
     &:first-child {
-      --pf-c-table-cell--PaddingLeft: 0;
+      --pf-c-table--cell--PaddingLeft: 0;
     }
 
     // Remove last child padding right
     &:last-child {
-      --pf-c-table-cell--PaddingRight: 0;
+      --pf-c-table--cell--PaddingRight: 0;
     }
   }
 
@@ -276,41 +306,9 @@
   }
 
   .pf-c-table__compound-expansion-toggle {
-    // Compound expansion toggle
-    // reset compound expansion toggle::before
-    &::before {
-      position: static;
-      border: 0;
-    }
-
-    // reset compound expansion toggle::after
-    &::after {
-      top: auto;
-      right: 0;
-      left: 0;
-    }
-
-    // add bottom border to expansion toggle::after
-    &.pf-m-expanded::after {
-      border-bottom: var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderWidth) solid var(--pf-c-table__compound-expansion-toggle--BorderTop--BorderColor);
-    }
-
-    // reset button padding
-    .pf-c-button {
-      padding: 0;
-    }
-
-    &.pf-m-expanded .pf-c-button::after,
-    &:hover .pf-c-button::after {
-      border-right: 0;
-      border-left: 0;
-    }
-
-    &.pf-m-expanded .pf-c-button::before,
-    &:hover .pf-c-button::before {
-      top: auto;
-      bottom: 0;
-    }
+    --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
+    --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+    --pf-c-table__compound-expansion-toggle__button--after--Top: 100%;
   }
 
   // Compound expansion responsive
@@ -323,24 +321,27 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: var(--pf-c-table__expandable-row--before--Width);
       content: "";
+      border: 0;
+      border-left: var(--pf-c-table--tbody--after--BorderColor) solid var(--pf-c-table--tbody--after--BorderLeftWidth);
     }
 
     &.pf-m-expanded {
-      &::after {
-        background-color: var(--pf-c-table__expandable-row--before--BackgroundColor);
-      }
+      --pf-c-table--tbody--after--BorderLeftWidth: var(--pf-c-table--tbody--after--BorderWidth);
+    }
+
+    > tr > * {
+      overflow: hidden;
     }
 
     > tr > :first-child:not(.pf-c-table__check)::before {
+      --pf-c-table__expandable-row--before--BorderLeftWidth: 0;
+
       position: static;
       width: auto;
       background-color: transparent;
     }
   }
-  // Compound expansion responsive end
-
 
   // Expandable row
   .pf-c-table__expandable-row {
@@ -348,8 +349,8 @@
     --pf-c-table-cell--responsive--PaddingRight: 0;
     --pf-c-table-cell--responsive--PaddingBottom: 0;
     --pf-c-table-cell--responsive--PaddingLeft: 0;
-    --pf-c-table-cell--PaddingRight: 0;
-    --pf-c-table-cell--PaddingLeft: 0;
+    --pf-c-table--cell--PaddingRight: 0;
+    --pf-c-table--cell--PaddingLeft: 0;
 
     display: block;
     max-height: var(--pf-c-table__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
@@ -410,6 +411,13 @@
     padding-right: 0;
   }
 
+  .pf-c-table__button {
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--cell--PaddingTop);
+    --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-grid--cell--PaddingRight);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-grid--cell--PaddingBottom);
+    --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-grid--cell--PaddingLeft);
+  }
+
   // Check table cell
   .pf-c-table__check {
     margin-top: var(--pf-c-table__check--responsive--MarginTop);
@@ -450,10 +458,23 @@
     }
   }
 
+  // No wrap
+  .pf-m-no-wrap {
+    --pf-c-table--cell--Overflow: auto;
+  }
+
   // Fit content
   .pf-m-fit-content {
     width: auto;
     white-space: normal;
+  }
+
+  .pf-m-truncate {
+    --pf-c-table--cell--MaxWidth: 100%;
+  }
+
+  [class*="pf-m-width"] {
+    --pf-c-table--cell--Width: auto;
   }
 }
 

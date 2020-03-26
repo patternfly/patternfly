@@ -15,10 +15,17 @@
   {{#if table-td--data-label}}
     data-label="{{table-td--data-label}}"
   {{/if}}>
-  {{#if table-td--toggle}}
-    <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
-      {{#> table-toggle-icon}}{{/table-toggle-icon}}
-    </button>
-  {{/if}}
-  {{> @partial-block}}
+  {{#unless table-td--IsEmpty}}
+    {{#if table-td--toggle}}
+      <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
+        {{#> table-toggle-icon}}{{/table-toggle-icon}}
+      </button>
+    {{else if table-td--compound-expansion-toggle}}
+      {{#> table-button table-button--attribute=table-th--button--attribute}}
+        {{> @partial-block}}
+      {{/table-button}}
+    {{else}}
+      {{> @partial-block}}
+    {{/if}}
+  {{/unless}}
 </td>

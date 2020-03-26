@@ -4,8 +4,11 @@ section: components
 cssPrefix: pf-c-table
 ---
 
+import './Table.css'
+
 ## Examples
-```hbs title=Basic
+
+```hbs title=Basic-table
 {{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
     This is the table caption
@@ -105,7 +108,9 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
@@ -118,7 +123,6 @@ cssPrefix: pf-c-table
 | -- | -- | -- |
 | `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
 | `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
-| `.pf-m-height-auto` | `<tr>` | Modifies a `<tr>` to have `height: auto`, which undoes the `height` declaration currently on `<tr>` elements. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
 ```hbs title=Sortable
@@ -219,62 +223,21 @@ cssPrefix: pf-c-table
 {{/table}}
 ```
 
-```hbs title=Sortable-with-headers-that-wrap
-{{#> table table--id="table-sortable-wrap" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example with headers that wrap"'}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true" table-th--selected="true" table-th--asc="true"}}
-        This is a really long sortable table header.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
-        This is a really long sortable table header.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--sortable-wrap="true"}}
-        This is a really long sortable table header.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header.
-      {{/table-th}}
-    {{/table-tr}}
-  {{/table-thead}}
-
-  {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="Repository name"}}
-        Repository 1
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Pull requests"}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Workspaces"}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last commit"}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-  {{/table-tbody}}
-{{/table}}
-```
-
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-sort=[ascending or descending]` | `.pf-c-table__sort` | Indicates if columns in a table are sorted in ascending or descending order. For each table, authors __SHOULD__ apply aria-sort to only one header at a time. **Required** |
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__sort` | `<th>` | Initiates a sort table cell. **Required for sortable table columns** |
-| `.pf-c-table__sort-text` | `.pf-c-table__sort > button > span` | Initiates the text wrapper inside of a sortable table cell. **Required for sortable table columns** |
+| `.pf-c-table__sort` | `<th>` | Initiates a table header sort cell. **Required for sortable table columns** |
+| `.pf-c-table__button` | `<button>` | Initiates a table header sort cell button. **Required for sortable table columns** |
+| `.pf-c-table__button-content` | `.pf-c-table__button` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span` | Initiates a sort indicator. **Required for sortable table columns** |
 | `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
-| `.pf-m-wrap` | `.pf-c-table__sort`| Modifies the sortable table header to wrap. |
 | `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
@@ -301,7 +264,7 @@ cssPrefix: pf-c-table
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -336,10 +299,10 @@ cssPrefix: pf-c-table
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -364,10 +327,10 @@ cssPrefix: pf-c-table
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -392,10 +355,10 @@ cssPrefix: pf-c-table
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -417,19 +380,26 @@ cssPrefix: pf-c-table
   {{/table-tbody}}
 {{/table}}
 ```
+
 When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
 
 When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
+
 ### Thead accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[descriptive text]"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
+
 ### Tbody accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
 | `id` | row header `<th>` > `*` | Provides an accessible description for the checkbox. **Required if using `aria-labelledby` for `.pf-c-table__check input[type="checkbox"]`** |
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__check` | `<th>`, `<td>` | Initiates a check table cell. |
@@ -440,7 +410,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
@@ -453,8 +423,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Pull requests
       {{/table-th}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -465,10 +435,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node1">Node 1</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -486,14 +456,14 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-tbody}}
 
@@ -504,10 +474,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -541,10 +511,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -577,10 +547,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -607,9 +577,11 @@ When header cells are empty or they contain interactive elements, `<th>` should 
   {{/table-tbody}}
 {{/table}}
 ```
+
 Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
 
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
@@ -620,6 +592,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__toggle-icon` | `<span>` | Initiates the table toggle icon wrapper. |
@@ -632,7 +605,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
@@ -647,8 +620,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"'}}
        Last commit
       {{/table-th}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -657,29 +630,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          10
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-2"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        234
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-3"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        4
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>20 minutes</span>
@@ -720,29 +680,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-4"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          3
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        2
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-5"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          4
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        82
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-6"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          2
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        1
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>1 day ago</span>
@@ -780,32 +728,20 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-       {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-7"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-code-branch" aria-hidden="true"></i>
-          {{/button-icon}}
-          70
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-8"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-code" aria-hidden="true"></i>
-          {{/button-icon}}
-          15
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces"}}
-        {{#> button button--modifier="pf-m-link" button--attribute=(concat 'aria-expanded="false" aria-controls="' table--id '-nested-table-9"')}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-cube" aria-hidden="true"></i>
-          {{/button-icon}}
-          12
-        {{/button}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        1
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>2 days ago</span>
@@ -842,13 +778,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
 | `aria-expanded="true"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
 | `aria-controls="[id of element the button controls]"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
@@ -879,8 +819,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
         Icons
       {{/table-th}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -1011,7 +951,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
@@ -1041,8 +983,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
         Icons
       {{/table-th}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -1173,7 +1115,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Can not be used with `.pf-m-expandable`.** |
@@ -1182,7 +1126,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
@@ -1195,8 +1139,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -1232,7 +1176,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       {{/table-td}}
-      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-tbody}}
 
@@ -1369,7 +1313,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. **Note: Can not be used with `.pf-m-no-border-rows`.** |
@@ -1381,7 +1327,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Check all rows">
       {{/table-td}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-40"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
@@ -1426,10 +1372,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1450,10 +1396,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1474,10 +1420,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        <div>
+        {{#> table-cell-content}}
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
-        </div>
+        {{/table-cell-content}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1495,7 +1441,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-width-[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, or 90]` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` widths. **Recommended for sortable title cell** |
@@ -1599,7 +1547,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
@@ -1705,12 +1655,293 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 {{/table}}
 ```
+
+## Controlling text
+
+To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text`].
+
+<ul>
+  <li>
+    <b>pf-m-wrap:</b> Sets text to wrap. This is the default behavior for <code>tbody</code> cells.
+  </li>
+  <li>
+    <b>pf-m-truncate:</b> Sets text to truncate based on a minimum width and available space adjacent table cells. This is the default behavior for <code>thead</code> cells.
+  </li>
+  <li>
+    <b>pf-m-no-wrap:</b> Unsets min/max width and sets whitespace to nowrap. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents.
+  </li>
+  <li>
+    <b>pf-m-fit-content:</b> Fit column width to cell content.
+  </li>
+  <li>
+    <b>pf-m-break-word:</b> Breaks long strings wherever necessary as defined by the table layout.
+  </li>
+</ul>
+
+```hbs title=Modifiers-without-text-wrapper
+{{#> table table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20"}}
+        Truncate (width 20%)
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Break word
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
+        Wrapping table header text. This <code>th</code> text will wrap instead of truncate.
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
+        Fit content
+      {{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Truncating text"}}
+        This text will truncate instead of wrap.
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-break-word" table-td--data-label="Break word"}}
+        <a href="#">http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org</a>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Wrapping"}}
+        <p>By default, <code>thead</code> cells will truncate and <code>tbody</code> cells will wrap. Use <code>.pf-m-wrap</code> on a <code>th</code> to change its behavior.</p>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Fit content"}}
+        This cell's content will adjust itself to the parent th width. This modifier only affects table layouts.
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-no-wrap" table-td--data-label="No wrap"}}
+        <a href="#">No wrap</a>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+## `.pf-c-table__text`: Table text element. For `.pf-m-truncate` and `.pf-m-no-wrap` modifiers to apply to the grid layout, `td` content must be wrapped with `.pf-c-table__text`.
+
+```hbs title=Modifiers-with-text-wrapper
+{{#> table table--id="modifiers-with-text-wrapper-example" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
+        Truncating text
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
+        Wrapping table header text. This <code>th</code> text will wrap instead of truncate.
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Truncating text"}}
+        {{#> table-text}}
+          This text will truncate instead of wrap.
+        {{/table-text}}
+      {{/table-td}}
+      {{#> table-td table-td--modifier="pf-m-no-wrap" table-td--data-label="No wrap"}}
+        {{#> table-text}}
+          <a href="#">This is a link that needs to be on one line and fully readable.</a>
+        {{/table-text}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 ### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table__text` | `th > *`, `td > *`, `.pf-c-table__text-content > *` | Initiates a table text element. |
+| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to truncate. |
+| `.pf-m-no-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to not wrap. |
+| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to wrap. |
+| `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
+| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text strings to break. |
+
+```hbs title=th-truncation
+{{#> tooltip tooltip--modifier="pf-m-top"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-top-content"'}}
+    Pull Requests
+  {{/tooltip-content}}
+{{/tooltip}}
+{{#> table table--id="th-truncation-example" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier=""}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Long lines of text will shrink adjacent column widths.
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        This example is not responsive. Adjacent <code>tbody</code> cells will shrink as a result of this text being a longer string and adjacent text being shorter in length. Truncation can be overridden in <code>th</code> cells with the addition of <code>.pf-m-wrap</code>, <code>.pf-m-no-wrap</code> or <code>.pf-m-fit-content</code>.
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+## Long strings in table cells will push content. Add a width modifier to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
+
+```hbs title=Width-constrained
+{{#> table table--id="width-constrained-example" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-40"}}
+        Width 40
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--modifier="pf-m-fit-content" table-th--attribute='scope="col"'}}
+        Fit content th
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Since this is a long string of text and the other cells contain short strings (narrower than their table header), we'll need to control width this table header's width. Let's set width to 40%.
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Repository name"}}
+        This string will truncate in table mode only. Since this is a long string of text and the other cells contain short strings (narrower than their table header), we'll need to control width this table header's width. Let's set width to 40%.
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+## Custom text control `.pf-c-table__cell-content`
+
+For granular control over text elements, `.pf-c-table__cell-content` is available. The `.pf-c-table__cell-content` element breaks content text out of the table flow and allows content to respond to `.pf-m-width-` modifiers set on parent elements. It also allows for content customization and individual `.pf-c-table__text` modifications. Modifiers can be applied to the parent `cell` or individual `.pf-c-table__text` elements.
+
+```hbs title=Controlling-text-elements-individually
+{{#> table table--id="controlling-text-elements-individually" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with custom text wrappers example."'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Custom text cells
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="No wrapping"}}
+        {{#> table-cell-content}}
+          {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
+            This cell's contents will truncate. Here's some more text to demonstrate how.
+          {{/table-text}}
+          {{#> table-text table-text--type="div" table-text--modifier="pf-m-no-wrap"}}
+            <a href="#">No wrap link example</a>
+          {{/table-text}}
+          {{#> table-text table-text--type="div"}}
+            This cell's contents will wrap. Here's some more text to demonstrate how.
+          {{/table-text}}
+        {{/table-cell-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-wrap` | `<th>`, `<td>` | Modifies content to wrap. |
+| `.pf-c-table__text-content` | `div` | Initiates a table text content element. |
+
 
 ## Documentation
+
 ### Overview
 
 Because the table component is not used for layout and presents tabular data only, it requires the use of `role="grid"`. Expandable table content (`.pf-c-table__expandable-content`) is placed within a singular `<td>` per expandable row, that can span multiple columns.
@@ -1724,9 +1955,11 @@ Applying `role="grid"` to tables enhances accessible interaction while in table 
 Table columns may shift when expanding/collapsing. To address this, set `.pf-m-fit-content`, or assign a width `.pf-m-width-[width]` to the corresponding `<th>` defining the column or `<td>` within the column. Width values are `[10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90]` or `max`.
 
 ### Table header cells
+
 By default, all table header cells are set to `white-space: nowrap`. If a `<th>`'s content needs to wrap, apply `.pf-m-wrap`.
 
 ### Implementation support
+
 - One expandable toggle button, positioned in the first cell of a non-expandable row, preceding an expandable row.
 - One checkbox, positioned in the first or second cell of a non-expandable row.
 - One action button, positioned in the last cell of a non-expandable row.
@@ -1734,6 +1967,7 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 - Compact presentation modifier (not compatible with expandable table).
 
 ### Responsive layout modifiers
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
