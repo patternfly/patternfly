@@ -4,6 +4,26 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.04 release notes (2020-03-31)
+Packages released:
+- @patternfly/patternfly@v2.71.1
+
+### Components
+- **File upload:** Removed message container, added form to error example ([#2807](https://github.com/patternfly/patternfly/pull/2807))
+- **Table:** Updated text in column management demo modal ([#2875](https://github.com/patternfly/patternfly/pull/2875))
+
+## Other
+- **Global:**
+  - Made shield styles optional by default ([#2769](https://github.com/patternfly/patternfly/pull/2769))
+  - Replaced 288 occurences of patternfly-next with patternfly ([#2880](https://github.com/patternfly/patternfly/pull/2880))
+  - Reverted "made shield styles optional by default (#2769)" ([#2867](https://github.com/patternfly/patternfly/pull/2867))
+- **Build:**
+  - Fixed a11y upload report ([#2790](https://github.com/patternfly/patternfly/pull/2790))
+  - Published docs to NPM ([#2839](https://github.com/patternfly/patternfly/pull/2839))
+  - Added example css to dist ([#2840](https://github.com/patternfly/patternfly/pull/2840))
+  - Disabled lint of example CSS ([#2841](https://github.com/patternfly/patternfly/pull/2841))
+  - Parsed hbs files ([#2865](https://github.com/patternfly/patternfly/pull/2865))
+
 ## 2020.03 release notes (2020-03-10)
 Packages released:
 - @patternfly/patternfly@v2.68.3
