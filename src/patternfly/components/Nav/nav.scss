@@ -257,6 +257,7 @@
   font-size: var(--pf-c-nav__link--FontSize);
   font-weight: var(--pf-c-nav__link--FontWeight);
   color: var(--pf-c-nav__link--Color);
+  user-select: text;
   background-color: var(--pf-c-nav__link--BackgroundColor);
 
   &::before,
