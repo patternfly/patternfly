@@ -138,6 +138,8 @@
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
 
   // Scroll button
+  --pf-c-nav__scroll-button--Display: none;
+  --pf-c-nav__scroll-button--Visibility: hidden;
   --pf-c-nav__scroll-button--Top: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-nav__scroll-button--Width: var(--pf-global--spacer--xl);
@@ -204,26 +206,10 @@
     }
   }
 
-  // Disable underline
-  [class*="list"] [class*="link"] {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
-    }
-  }
-
-  // Scroll button
-  .pf-c-nav__scroll-button {
-    display: none;
-    visibility: hidden;
-  }
-
   &.pf-m-start .pf-c-nav__scroll-button:nth-of-type(1),
   &.pf-m-end .pf-c-nav__scroll-button:nth-of-type(2) {
-    display: flex;
-    visibility: visible;
+    --pf-c-nav__scroll-button--Display: flex;
+    --pf-c-nav__scroll-button--Visibility: visible;
   }
 
   // Divider
@@ -279,6 +265,9 @@
     top: 0;
     bottom: 0;
     left: 0;
+
+    // set pointer events so text is selectable
+    pointer-events: none;
     content: "";
     border-width: 0;
   }
@@ -324,6 +313,13 @@
     color: var(--pf-c-nav__link--disabled--Color);
     pointer-events: none;
     background-color: var(--pf-c-nav__link--disabled--BackgroundColor);
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
   }
 }
 
@@ -515,11 +511,14 @@
   top: 0;
   bottom: 0;
   z-index: var(--pf-c-nav__scroll-button--ZIndex);
+  display: var(--pf-c-nav__scroll-button--Display);
+  align-items: center;
   justify-content: center;
   width: var(--pf-c-nav__scroll-button--Width);
   height: 100%;
   padding-right: var(--pf-c-nav__scroll-button--PaddingRight);
   padding-left: var(--pf-c-nav__scroll-button--PaddingLeft);
+  visibility: var(--pf-c-nav__scroll-button--Visibility);
   background-color: var(--pf-c-nav__scroll-button--BackgroundColor);
   border: 0;
 
