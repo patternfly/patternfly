@@ -27,8 +27,8 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 4
+      {{#> nav-link nav-link--modifier="pf-m-disabled" nav-link--href="#"}}
+        Disabled
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
