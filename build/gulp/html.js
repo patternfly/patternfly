@@ -74,17 +74,12 @@ function getHTMLWithStyles(cssPaths, html, bodyClassNames) {
 </html>`;
 }
 
-// Helper
-function getHTMLFilePath(lastPath, exampleName) {
-  return `workspace/${lastPath}/${exampleName}.html`;
-}
-
 function compileMD0(srcFiles) {
   const cssPaths = getCSSPaths();
 
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
-      const split = chunk.history[0].split('/');
+      const split = path.relative(process.cwd(), chunk.history[0]).split('/');
       const lastPath = split
         .slice(split.length - 4, split.length - 1)
         .join('/')
@@ -97,7 +92,7 @@ function compileMD0(srcFiles) {
         .parse(content);
       const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
       const section = data.section[0].toLowerCase();
-      const title = data.title.toLowerCase();
+      const title = lastPath.split('/').pop();
       examples.index = unified()
         .use(toMDAST)
         .use(codeTransformer, { examples, section, title })
@@ -107,7 +102,7 @@ function compileMD0(srcFiles) {
         .processSync(content).contents;
 
       Object.entries(examples).forEach(([exampleName, html]) => {
-        const htmlPath = path.join(process.cwd(), getHTMLFilePath(lastPath, exampleName));
+        const htmlPath = path.join(process.cwd(), `workspace/${lastPath}/${exampleName}.html`);
         if (exampleName !== 'index') {
           // .ws-core-l-flex .pf-l-flex .pf-l-flex
           const exampleDiv = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
