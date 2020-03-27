@@ -106,6 +106,5 @@ module.exports = {
   lintCSSFunctions,
   lintCSSComments,
   lintCSS: parallel(lintCSSFunctions, lintCSSComments),
-  // compileSrcMD,
-  snippets: series(compileSrcHBS, generateWorkspaceSnippets)
+  snippets: series(compileSrcHBS, compileSrcMD, generateWorkspaceSnippets)
 };

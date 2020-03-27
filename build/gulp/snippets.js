@@ -37,12 +37,12 @@ function generateSnippets(htmlIndexFiles) {
         PLACEHOLDER: '$PLACEHOLDER',
         ...fileDefaults[partialName]
       };
+      let placeholderNum = 0;
       const compiledPartial = template(templateContext, {
         partials: { '@partial-block': '{{PLACEHOLDER}}' }
       })
         .replace(/"-[a-zA-Z]/g, match => `"\${${++placeholderNum}}${match.slice(1)}`)
         .replace(/\$PLACEHOLDER/g, () => `\${${++placeholderNum}}`);
-      let placeholderNum = 0;
       // partialName is always prefixed with component name
       const snippetKey = `${section[0]}-${partialName}`;
       const snippetValue = prettyHTML(compiledPartial);
