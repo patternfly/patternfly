@@ -13,6 +13,7 @@ const Handlebars = require('handlebars');
 const { extractExamples } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
 const { codeTransformer, getWrapperDiv } = require('./codeTransformer');
 
+const hbsFileMap = {};
 const hbsInstance = Handlebars.create();
 hbsInstance.registerHelper('concat', (...params) => {
   // Ignore the object appended by handlebars.
@@ -25,8 +26,10 @@ hbsInstance.registerHelper('concat', (...params) => {
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
+      const partialName = path.basename(chunk.history[0], '.hbs');
+      hbsFileMap[partialName] = chunk.history[0];
       hbsInstance.registerPartial(
-        path.basename(chunk.history[0], '.hbs'), // Partial name
+        partialName, // Partial name
         chunk.contents.toString() // Partial template
       );
 
@@ -158,6 +161,8 @@ function watchMD(mdFiles) {
 }
 
 module.exports = {
+  hbsInstance,
+  hbsFileMap,
   compileHBS,
   compileMD,
   watchHBS,
