@@ -137,8 +137,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
-| `role="main"` | `.pf-c-page__main` | Identifies the element that serves as the main region. **Required** |
+| `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. |
+| `role="main"` | `.pf-c-page__main` | Identifies the element that serves as the main region. |
 | `tabindex="-1"` | `.pf-c-page__main` | Allows the main region to receive programmatic focus. **Required** |
 | `id="[id]"` | `.pf-c-page__main` | Provides a hook for sending focus to new content. **Required** |
 | `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
