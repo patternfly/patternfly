@@ -316,7 +316,7 @@ import './AppLauncher.css'
 | `disabled` | `button.pf-c-app-launcher__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
 | `aria-disabled="true"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
 | `tabindex="-1"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
-| `aria-hidden="true"` | `.pf-c-app-launcher__menu-item-external-icon` | Hides the icon from assistive technologies. |
+| `aria-hidden="true"` | `.pf-c-app-launcher__menu-item-external-icon > *` | Hides the icon from assistive technologies. |
 
 ### Usage
 | Class | Applied | Outcome |
@@ -328,7 +328,7 @@ import './AppLauncher.css'
 | `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
 | `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
 | `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
-| `.pf-c-app-launcher__menu-item-external-icon` | `<span>` | Defines the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
+| `.pf-c-app-launcher__menu-item-external-icon` | `<span>` | Defines the wrapper for the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
 | `.pf-c-app-launcher__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
 | `.pf-m-top` | `.pf-c-app-launcher` | Modifies to display the menu above the toggle. |

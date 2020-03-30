@@ -1,8 +1,13 @@
-<span class="pf-c-app-launcher__menu-item-external-icon">
-  <i class="fas fa-external-link-alt{{#if app-launcher-menu-item-external-icon--modifier}} {{app-launcher-menu-item-external-icon--modifier}}{{/if}}"
-    aria-hidden="true"
-    {{#if app-launcher-menu-item-external-icon--attribute}}
+<span class="pf-c-app-launcher__menu-item-external-icon
+  {{#if app-launcher-menu-item-external-icon--modifier}} 
+    {{app-launcher-menu-item-external-icon--modifier}}
+  {{/if}}
+  {{#if app-launcher-menu-item-external-icon--attribute}}
 	    {{{app-launcher-menu-item-external-icon--attribute}}}
-    {{/if}}></i>
+  {{/if}}"
+>
+  <i class="fas fa-external-link-alt"
+    aria-hidden="true"
+    ></i>
 </span>
 <span class="pf-screen-reader">(opens new window)</span>
