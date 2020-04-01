@@ -29,11 +29,10 @@
 
 // Breadcrumb list item
 .pf-c-breadcrumb__item {
-  display: flex;
-  align-items: center;
   font-size: var(--pf-c-breadcrumb__item--FontSize);
   font-weight: var(--pf-c-breadcrumb__item--FontWeight);
   line-height: var(--pf-c-breadcrumb__item--LineHeight);
+  list-style: none;
   cursor: default;
 
   &:not(:last-child) {
@@ -54,6 +53,7 @@
   font-size: inherit;
   font-weight: var(--pf-c-breadcrumb__link--FontWeight);
   line-height: inherit;
+  word-break: break-word;
 
   // current item
   &.pf-m-current {
