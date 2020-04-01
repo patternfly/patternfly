@@ -9,17 +9,17 @@
   --pf-c-nav--m-dark__link--focus--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__link--active--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__link--m-current--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--before--BorderColor: var(--pf-c-nav--m-dark__link--hover--BackgroundColor);
   --pf-c-nav--m-dark__link--after--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav--m-dark__link--BackgroundColor: transparent;
   --pf-c-nav--m-dark__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav--m-dark__section-title--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__section-title--BorderBottomColor: var(--pf-c-nav__link--before--BorderColor);
-  --pf-c-nav--m-dark__c-divider--BackgroundColor: var(--pf-c-nav__link--before--BorderColor);
+  --pf-c-nav--m-dark__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__subnav__link--not--m-current--hover--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-nav--m-dark__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-nav--m-dark__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav--m-dark__item--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav--m-dark__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Link
   --pf-c-nav__link--FontSize: var(--pf-global--FontSize--md);
@@ -44,20 +44,11 @@
   --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
 
-  // Link ::before borders
-  --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__link--hover--BackgroundColor);
-  --pf-c-nav__link--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__link--before--BorderTopWidth: 0;
-  --pf-c-nav__link--before--BorderBottomWidth: 0;
-
   // Link ::after borders
   --pf-c-nav__link--after--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav__link--after--BorderWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-nav__link--after--BorderBottomWidth: 0;
   --pf-c-nav__link--after--BorderLeftWidth: 0;
-
-  // Nav list
-  --pf-c-nav__list__link--before--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Simple list
   --pf-c-nav__simple-list__link--MarginTop: var(--pf-global--spacer--sm);
@@ -73,8 +64,6 @@
   --pf-c-nav__subnav__link--not--m-current--hover--BorderColor: var(--pf-global--BorderColor--dark-100);
 
   // Horizontal list
-  // --pf-c-nav__horizontal-list__item--MarginRight: var(--pf-global--spacer--xl);
-
   --pf-c-nav__horizontal-list__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-nav__horizontal-list__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav__horizontal-list__link--PaddingBottom: var(--pf-global--spacer--sm);
@@ -108,7 +97,7 @@
   --pf-c-nav__tertiary-list__link--after--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav__tertiary-list__link--after--BorderColor: var(--pf-global--active-color--100);
 
-  // Horizonta/tertiary list offsets
+  // Horizontal/tertiary list offsets
   --pf-c-nav__link--offset: calc(var(--pf-global--spacer--xs) * -1);
 
   // Sub nav
@@ -116,8 +105,6 @@
   --pf-c-nav__subnav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__subnav--md--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
   --pf-c-nav__subnav__link--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-nav__subnav__link--before--BorderTopWidth: 0;
-  --pf-c-nav__subnav__link--before--BorderBottomWidth: 0;
   --pf-c-nav--subnav__simple-list__link--MarginTop: 0;
   --pf-c-nav--subnav__simple-list__link--MarginBottom: 0;
 
@@ -136,6 +123,10 @@
   --pf-c-nav__section-title--Color: var(--pf-global--Color--dark-200);
   --pf-c-nav__section-title--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
+
+  // Nav item
+  --pf-c-nav__item--before--Height: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__item--before--BackgroundColor: var(--pf-global--BorderColor--300);
 
   // Scroll button
   --pf-c-nav__scroll-button--Display: none;
@@ -165,6 +156,7 @@
   --pf-c-nav__c-divider--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-nav--c-divider--PaddingRight: 0;
   --pf-c-nav--c-divider--PaddingLeft: 0;
+  --pf-c-nav__c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--md--PaddingRight);
@@ -200,6 +192,7 @@
     --pf-c-nav__subnav__link--not--m-current--hover--BorderColor: var(--pf-c-nav--m-dark__subnav__link--not--m-current--hover--BorderColor);
     --pf-c-nav__link--disabled--Color: var(--pf-c-nav--m-dark__link--disabled--Color);
     --pf-c-nav__link--disabled--BackgroundColor: var(--pf-c-nav--m-dark__link--disabled--BackgroundColor);
+    --pf-c-nav__item--before--BackgroundColor: var(--pf-c-nav--m-dark__item--before--BackgroundColor);
 
     .pf-c-divider {
       --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark__c-divider--BackgroundColor);
@@ -214,7 +207,7 @@
 
   // Divider
   .pf-c-divider {
-    --pf-c-divider--after--BackgroundColor: var(--pf-c-nav__link--before--BorderColor);
+    --pf-c-divider--after--BackgroundColor: var(--pf-c-nav__c-divider--BackgroundColor);
 
     padding-right: var(--pf-c-nav--c-divider--PaddingRight);
     padding-left: var(--pf-c-nav--c-divider--PaddingLeft);
@@ -248,6 +241,20 @@
   transform: var(--pf-c-nav__item--m-expanded__toggle--i--Transform);
 }
 
+.pf-c-nav__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--pf-c-nav__item--before--Height);
+    content: "";
+    background-color: var(--pf-c-nav__item--before--BackgroundColor);
+  }
+}
+
 // Nav link
 .pf-c-nav__link {
   position: relative;
@@ -260,32 +267,15 @@
   user-select: text;
   background-color: var(--pf-c-nav__link--BackgroundColor);
 
-  &::before,
   &::after {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-
-    // set pointer events so text is selectable
-    pointer-events: none;
     content: "";
-    border-width: 0;
-  }
-
-  &::before {
-    right: 0;
-    border-color: var(--pf-c-nav__link--before--BorderColor);
-    border-style: solid;
-    border-top-width: var(--pf-c-nav__link--before--BorderTopWidth);
-    border-bottom-width: var(--pf-c-nav__link--before--BorderBottomWidth);
-  }
-
-  &::after {
     border-color: var(--pf-c-nav__link--after--BorderColor);
     border-style: solid;
-    border-bottom-width: var(--pf-c-nav__link--after--BorderBottomWidth);
-    border-left-width: var(--pf-c-nav__link--after--BorderLeftWidth);
+    border-width: 0 0 var(--pf-c-nav__link--after--BorderBottomWidth) var(--pf-c-nav__link--after--BorderLeftWidth);
   }
 
   // States
@@ -324,17 +314,6 @@
   }
 }
 
-// List default
-.pf-c-nav__list {
-  --pf-c-nav__link--before--BorderTopWidth: var(--pf-c-nav__link--before--BorderWidth);
-
-  border-bottom: var(--pf-c-nav__link--before--BorderWidth) solid var(--pf-c-nav__link--before--BorderColor);
-
-  .pf-c-nav__item:first-child {
-    --pf-c-nav__link--before--BorderTopWidth: 0;
-  }
-}
-
 // Active border treatment
 .pf-c-nav__list,
 .pf-c-nav__simple-list {
@@ -354,6 +333,10 @@
   --pf-c-nav--c-divider--PaddingRight: var(--pf-c-nav__simple-list__link--PaddingRight);
   --pf-c-nav--c-divider--PaddingLeft: var(--pf-c-nav__simple-list__link--PaddingLeft);
 
+  .pf-c-nav__item {
+    --pf-c-nav__item--before--BackgroundColor: transparent;
+  }
+
   .pf-c-nav__link {
     margin-top: var(--pf-c-nav__simple-list__link--MarginTop);
     margin-bottom: var(--pf-c-nav__simple-list__link--MarginBottom);
@@ -365,6 +348,10 @@
 .pf-c-nav__tertiary-list {
   --pf-c-nav__link--Right: var(--pf-c-nav__link--PaddingRight);
   --pf-c-nav__link--Left: var(--pf-c-nav__link--PaddingLeft);
+
+  .pf-c-nav__item {
+    --pf-c-nav__item--before--BackgroundColor: transparent;
+  }
 
   @include pf-overflow-hide-scroll;
 
@@ -441,8 +428,6 @@
 
 // Subnav
 .pf-c-nav__subnav {
-  --pf-c-nav__link--before--BorderTopWidth: var(--pf-c-nav__subnav__link--before--BorderTopWidth);
-  --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__subnav__link--before--BorderBottomWidth);
   --pf-c-nav__link--FontSize: var(--pf-c-nav__subnav__link--FontSize);
   --pf-c-nav__simple-list__link--MarginTop: var(--pf-c-nav--subnav__simple-list__link--MarginTop);
   --pf-c-nav__simple-list__link--MarginBottom: var(--pf-c-nav--subnav__simple-list__link--MarginBottom);
@@ -452,10 +437,6 @@
   padding-bottom: var(--pf-c-nav__subnav--PaddingBottom);
   padding-left: var(--pf-c-nav__subnav--PaddingLeft);
   transition: var(--pf-c-nav--Transition);
-
-  .pf-c-nav__item:last-child {
-    --pf-c-nav__link--before--BorderBottomWidth: 0;
-  }
 
   .pf-c-nav__item.pf-m-expanded & {
     max-height: var(--pf-c-nav__subnav--MaxHeight);

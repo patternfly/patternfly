@@ -98,6 +98,7 @@ import './Nav.css'
               Current link
             {{/nav-link}}
           {{/nav-item}}
+          {{> divider divider--type="li"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
@@ -437,6 +438,7 @@ import './Nav.css'
               Current link
             {{/nav-link}}
           {{/nav-item}}
+          {{> divider divider--type="li"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
@@ -510,7 +512,6 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
-| `role="separator"` | `.pf-c-nav__separator` |  Indicates that the divider separates and distinguishes sections of links in the nav. |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -520,7 +521,6 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__list` | `<ul>` | Initiates default nav list. |
 | `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list. |
 | `.pf-c-nav__item` | `<li>` | Initiates default nav list item. |
-| `.pf-c-nav__separator` | `<li>` | Initiates list separator. |
 | `.pf-c-nav__scroll-button` | `<button>` | Intitiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-c-nav__link` | `<a>` | Initiates default nav list link. |
 | `.pf-c-nav__section` | `<section>` | Initiates a nav section element. |
