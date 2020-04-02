@@ -132,11 +132,13 @@
 }
 
 .pf-c-login__container {
+  width: 100%; // This keeps the login container from shrinking based on its content
   max-width: var(--pf-c-login__container--MaxWidth);
 
   // Large viewports
   @media (min-width: $pf-global--breakpoint--xl) {
     display: grid;
+    justify-content: center;
     grid-column-gap: var(--pf-c-login__container--xl--GridColumnGap);
     grid-template-columns: var(--pf-c-login__container--xl--GridTemplateColumns);
     grid-template-areas:
