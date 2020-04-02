@@ -4,12 +4,15 @@
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert--grid-template-columns: max-content 1fr max-content;
   --pf-c-alert--grid-template-rows: 1fr auto;
+  --pf-c-alert--before--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-alert--before--BorderTopColor: var(--pf-global--default-color--200);
 
   // Icon
   --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
-  --pf-c-alert__icon--Color: var(--pf-global--default-color--300);
-  --pf-c-alert__icon--BackgroundColor: var(--pf-global--default-color--100);
-  --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--lg);
+  --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
+
+  // --pf-c-alert__icon--BackgroundColor: var(--pf-global--default-color--100);
+  --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
@@ -30,54 +33,72 @@
   --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--xs);
 
   // Success
-  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
-  --pf-c-alert--m-success__icon--BackgroundColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-success--before--BorderTopColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--100);
+
+  // --pf-c-alert--m-success__icon--BackgroundColor: var(--pf-global--success-color--100);
   --pf-c-alert--m-success__title--Color: var(--pf-global--success-color--200);
 
   // Danger
-  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--300);
-  --pf-c-alert--m-danger__icon--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-danger--before--BorderTopColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--100);
+
+  // --pf-c-alert--m-danger__icon--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-alert--m-danger__title--Color: var(--pf-global--danger-color--200);
 
   // Warning
-  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--200);
-  --pf-c-alert--m-warning__icon--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-warning--before--BorderTopColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--100);
+
+  // --pf-c-alert--m-warning__icon--BackgroundColor: var(--pf-global--warning-color--100);
   --pf-c-alert--m-warning__icon--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
 
   // Info
-  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--200);
-  --pf-c-alert--m-info__icon--BackgroundColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-info--before--BorderTopColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--100);
+
+  // --pf-c-alert--m-info__icon--BackgroundColor: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
   // Inline modification
   --pf-c-alert--m-inline--BoxShadow: none;
-  --pf-c-alert--m-inline--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-alert--m-inline--BorderStyle: solid;
-  --pf-c-alert--m-inline--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderLeftWidth: 0;
-  --pf-c-alert--m-inline--before--Width: var(--pf-global--BorderWidth--lg);
-  --pf-c-alert--m-inline--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
-  --pf-c-alert--m-inline--before--Bottom: calc(-1 * var(--pf-c-alert--m-inline--BorderBottomWidth));
   --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-global--default-color--200);
-  --pf-c-alert--m-inline__icon--FontSize: var(--pf-global--icon--FontSize--md);
-  --pf-c-alert--m-inline__icon--Color: var(--pf-global--default-color--200);
-  --pf-c-alert--m-inline__icon--BackgroundColor: transparent;
+  --pf-c-alert--m-inline--BackgroundColor: #f2f9f9;
+
+  // --pf-c-alert--m-inline--BorderColor: var(--pf-global--BorderColor--300);
+  // --pf-c-alert--m-inline--BorderStyle: solid;
+  // --pf-c-alert--m-inline--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  // --pf-c-alert--m-inline--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  // --pf-c-alert--m-inline--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  // --pf-c-alert--m-inline--BorderLeftWidth: 0;
+  // --pf-c-alert--m-inline--before--Width: var(--pf-global--BorderWidth--lg);
+  // --pf-c-alert--m-inline--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
+  // --pf-c-alert--m-inline--before--Bottom: calc(-1 * var(--pf-c-alert--m-inline--BorderBottomWidth));
+  // --pf-c-alert--m-inline__icon--FontSize: var(--pf-global--icon--FontSize--md);
+  // --pf-c-alert--m-inline__icon--Color: var(--pf-global--default-color--200);
+  // --pf-c-alert--m-inline__icon--BackgroundColor: transparent;
   --pf-c-alert--m-inline__icon--PaddingTop: calc(var(--pf-c-alert__icon--Padding) + ((var(--pf-c-alert__icon--FontSize) - var(--pf-c-alert--m-inline__icon--FontSize)) / 2));
   --pf-c-alert--m-inline__icon--PaddingRight: 0;
   --pf-c-alert--m-inline__icon--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert--m-inline__icon--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-alert--m-inline--m-warning__icon--FontSize: #{pf-font-prem(17px)}; // Apply a custom size to the FA icon to ensure all icons are the same width
-  --pf-c-alert--m-inline--m-success__icon--Color: var(--pf-global--success-color--100);
-  --pf-c-alert--m-inline--m-success--before--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-alert--m-inline--m-danger__icon--Color: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-inline--m-danger--before--BackgroundColor: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-inline--m-warning__icon--Color: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-inline--m-warning--before--BackgroundColor: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-inline--m-info__icon--Color: var(--pf-global--info-color--100);
-  --pf-c-alert--m-inline--m-info--before--BackgroundColor: var(--pf-global--info-color--100);
+
+  // Inline success
+  // --pf-c-alert--m-inline--m-success--before--BackgroundColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-inline--m-success--BackgroundColor: #bde5b8;
+
+  // Inline danger
+  // --pf-c-alert--m-inline--m-danger--before--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-inline--m-danger--BackgroundColor: #faeae8;
+
+  // Inline warning
+  // --pf-c-alert--m-inline--m-warning--before--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-inline--m-warning--BackgroundColor: #fdf7e7;
+
+  // Inline info
+  // --pf-c-alert--m-inline--m-info--before--BackgroundColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-inline--m-info--BackgroundColor: #e7f1fa;
 
   @include pf-t-light; // This component always needs to be light
 
@@ -91,40 +112,35 @@
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
 
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    content: "";
+    border: var(--pf-c-alert--before--BorderTopWidth) solid;
+    border-color: var(--pf-c-alert--before--BorderTopColor);
+  }
 
   &.pf-m-success {
+    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-success--before--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-success__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-success__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-success--before--BackgroundColor);
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-success__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-success--BackgroundColor);
   }
 
   &.pf-m-danger {
+    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-danger--before--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-danger__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-danger__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-danger__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-danger--before--BackgroundColor);
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-danger__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-danger--BackgroundColor);
   }
 
   &.pf-m-warning {
+    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-warning--before--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-warning__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-warning__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--before--BackgroundColor);
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--BackgroundColor);
 
     // Apply a custom size to the FA icon to ensure all icons are the same width
     .pf-c-alert__icon > i {
@@ -135,49 +151,39 @@
     &.pf-m-inline .pf-c-alert__icon > i {
       font-size: var(--pf-c-alert--m-inline--m-warning__icon--FontSize);
     }
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-warning__icon--Color);
-    }
   }
 
   &.pf-m-info {
+    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-info--before--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-info__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-info__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-info__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-info--before--BackgroundColor);
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-info__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-info--BackgroundColor);
   }
 
   &.pf-m-inline {
     --pf-c-alert--BoxShadow: var(--pf-c-alert--m-inline--BoxShadow);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-inline__icon--BackgroundColor);
-    --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline__icon--Color);
+    --pf-c-alert--BackgroundColor: var(--pf-c-alert--m-inline--BackgroundColor);
 
-    border: solid var(--pf-c-alert--m-inline--BorderColor);
-    border-width: var(--pf-c-alert--m-inline--BorderTopWidth) var(--pf-c-alert--m-inline--BorderRightWidth) var(--pf-c-alert--m-inline--BorderBottomWidth) var(--pf-c-alert--m-inline--BorderLeftWidth);
+    // --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-inline__icon--BackgroundColor);
+    // --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline__icon--Color);
+
+    // border: solid var(--pf-c-alert--m-inline--BorderColor);
+    // border-width: var(--pf-c-alert--m-inline--BorderTopWidth) var(--pf-c-alert--m-inline--BorderRightWidth) var(--pf-c-alert--m-inline--BorderBottomWidth) var(--pf-c-alert--m-inline--BorderLeftWidth);
 
     // Left border treatment
-    &::before {
-      position: absolute;
-      top: var(--pf-c-alert--m-inline--before--Top);
-      bottom: var(--pf-c-alert--m-inline--before--Bottom);
-      left: 0;
-      width: var(--pf-c-alert--m-inline--before--Width);
-      content: "";
-      background-color: var(--pf-c-alert--m-inline--before--BackgroundColor);
-    }
+    // &::before {
+    //   position: absolute;
+    //   top: var(--pf-c-alert--m-inline--before--Top);
+    //   bottom: var(--pf-c-alert--m-inline--before--Bottom);
+    //   left: 0;
+    //   width: var(--pf-c-alert--m-inline--before--Width);
+    //   content: "";
+    //   background-color: var(--pf-c-alert--m-inline--before--BackgroundColor);
+    // }
 
-    .pf-c-alert__icon {
-      --pf-c-alert__icon--FontSize: var(--pf-c-alert--m-inline__icon--FontSize);
-
-      padding: var(--pf-c-alert--m-inline__icon--PaddingTop) var(--pf-c-alert--m-inline__icon--PaddingRight) var(--pf-c-alert--m-inline__icon--PaddingBottom) var(--pf-c-alert--m-inline__icon--PaddingLeft);
-    }
+    // .pf-c-alert__icon {
+    //   padding: var(--pf-c-alert--m-inline__icon--PaddingTop) var(--pf-c-alert--m-inline__icon--PaddingRight) var(--pf-c-alert--m-inline__icon--PaddingBottom) var(--pf-c-alert--m-inline__icon--PaddingLeft);
+    // }
   }
 }
 
