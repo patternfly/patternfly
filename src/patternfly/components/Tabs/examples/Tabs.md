@@ -132,17 +132,17 @@ import './Tabs.css'
 | `.pf-m-fill`  | `.pf-c-tabs` | Modifies the tabs to fill the available space. **Required** |
 
 ```hbs title=Using-the-nav-element
-{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
+{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-link--type="a"}}
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Sub-nav-using-the-nav-element
-{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-button--type="a"}}
+{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-link--type="a"}}
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-button--type="a" tabs--modifier="pf-m-secondary"}}
+{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-link--type="a" tabs--modifier="pf-m-secondary"}}
   {{> __tabs-list-secondary}}
 {{/tabs}}
 ```
@@ -170,7 +170,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-c-tabs__item` | `<div>` | Initiates a tabs component item. **Required** |
 | `.pf-c-tabs__item-text` | `<span>` | Initiates a tabs component item icon. **Required** |
 | `.pf-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
-| `.pf-c-tabs__button` | `<button>` | Initiates a tabs component button. **Required** |
+| `.pf-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 | `.pf-m-secondary` | `.pf-c-tabs` | Applies secondary styling to the tab component. |
 | `.pf-m-no-border` | `.pf-c-tabs` | Removes bottom border from a tab component. |
