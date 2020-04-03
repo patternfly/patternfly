@@ -164,11 +164,11 @@
   --pf-c-nav__toggle--Transition: var(--pf-global--TransitionDuration);
 
   // Divider
-  --pf-c-nav__c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__c-divider--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav--c-divider--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-nav--c-divider--PaddingRight: 0;
   --pf-c-nav--c-divider--PaddingLeft: 0;
-  --pf-c-nav__c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--md--PaddingRight);
@@ -220,12 +220,12 @@
 
   // Divider
   .pf-c-divider {
-    --pf-c-divider--after--BackgroundColor: var(--pf-c-nav__c-divider--BackgroundColor);
+    --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--c-divider--BackgroundColor);
 
     padding-right: var(--pf-c-nav--c-divider--PaddingRight);
     padding-left: var(--pf-c-nav--c-divider--PaddingLeft);
-    margin-top: var(--pf-c-nav__c-divider--MarginTop);
-    margin-bottom: var(--pf-c-nav__c-divider--MarginBottom);
+    margin-top: var(--pf-c-nav--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-nav--c-divider--MarginBottom);
   }
 }
 
