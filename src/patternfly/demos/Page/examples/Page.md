@@ -317,16 +317,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Legacy-nav-separators isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-legacy-nav-separators-example" page--IsLegacySeparators="true" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
-```
-
 ```hbs title=Light-theme-sidebar-and-nav isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
-```
-
-```hbs title=Light-theme-sidebar-and-nav-and-legacy-nav-separators isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
 ```
 
 ## Documentation
