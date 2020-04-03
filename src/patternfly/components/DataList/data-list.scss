@@ -99,7 +99,6 @@
   --pf-c-data-list__item-action--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item-action--md--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-data-list__item-action--not-last-child--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-action--not-last-child--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-data-list__action--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -277,24 +276,14 @@
 .pf-c-data-list__item-action {
   @include pf-hidden-visible(var(--pf-c-data-list__item-action--Display));
 
-  flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
   padding-top: var(--pf-c-data-list__item-action--PaddingTop);
   padding-bottom: var(--pf-c-data-list__item-action--PaddingBottom);
   margin-left: var(--pf-c-data-list__item-action--MarginLeft);
 
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    flex-wrap: nowrap;
-  }
-
   > *:not(:last-child) {
     margin-right: var(--pf-c-data-list__item-action--not-last-child--MarginRight);
-    margin-bottom: var(--pf-c-data-list__item-action--not-last-child--MarginBottom);
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      margin-bottom: 0;
-    }
   }
 
   // Offset action button
