@@ -45,6 +45,7 @@
   --pf-c-nav__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-nav__link--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
 
 
   // Link ::before borders
@@ -108,9 +109,6 @@
   --pf-c-nav__tertiary-list__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav__tertiary-list__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav__tertiary-list__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-
-  // Horizontal/tertiary list offsets
-  --pf-c-nav__link--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
 
   // Sub nav
   --pf-c-nav__subnav--MaxHeight: 100%;
