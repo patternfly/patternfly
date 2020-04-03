@@ -21,7 +21,7 @@
   --pf-c-nav--m-dark__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-nav--m-dark__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav--m-dark--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Link
   --pf-c-nav__link--FontSize: var(--pf-global--FontSize--md);
@@ -208,7 +208,7 @@
     --pf-c-nav__item--before--BorderColor: var(--pf-c-nav--m-dark__item--before--BorderColor);
 
     .pf-c-divider {
-      --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark__c-divider--BackgroundColor);
+      --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark--c-divider--BackgroundColor);
     }
   }
 
