@@ -3,7 +3,7 @@
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert--grid-template-columns: max-content 1fr max-content;
-  --pf-c-alert--grid-template-rows: 1fr auto;
+  --pf-c-alert--grid-template-rows: var(--pf-global--spacer--lg) auto auto;
   --pf-c-alert--before--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-alert--before--BorderTopColor: var(--pf-global--default-color--200);
   --pf-c-alert--PaddingTop: var(--pf-global--spacer--md);
@@ -14,17 +14,25 @@
   // Icon
   --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
   --pf-c-alert__icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-alert__icon--MarginTop: calc((var(--pf-global--spacer--xs) / 2));
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
   --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-alert__title--Color: var(--pf-global--default-color--300);
 
-  // Alert Description
-  --pf-c-alert__description--MarginTop: var(--pf-global--spacer--xs);
+  // Alert description
+  --pf-c-alert__description--PaddingTop: var(--pf-global--spacer--xs);
 
   // Action
   --pf-c-alert__action--MarginTop: #{pf-size-prem(-6px)};
+  --pf-c-alert__action--MarginRight: #{pf-size-prem(-8px)};
+
+  // Alert action group
+  --pf-c-alert__action-group--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-alert__description--action-group--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__action-group--c-button--not-last-child--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-alert__action-group--c-button--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Success
   --pf-c-alert--m-success--before--BorderTopColor: var(--pf-global--success-color--100);
@@ -39,7 +47,6 @@
   // Warning
   --pf-c-alert--m-warning--before--BorderTopColor: var(--pf-global--warning-color--100);
   --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-warning__icon--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
 
   // Info
@@ -50,7 +57,6 @@
   // Inline modification
   --pf-c-alert--m-inline--BoxShadow: none;
   --pf-c-alert--m-inline--BackgroundColor: var(--pf-global--palette--cyan-50);
-  --pf-c-alert--m-inline--m-warning__icon--FontSize: #{pf-font-prem(17px)}; // Apply a custom size to the FA icon to ensure all icons are the same width
 
   // Inline success
   --pf-c-alert--m-inline--m-success--BackgroundColor: var(--pf-global--palette--green-50);
@@ -75,7 +81,8 @@
   grid-template-rows: var(--pf-c-alert--grid-template-rows);
   grid-template-areas:
     "icon title action"
-    "icon content content";
+    "icon content content"
+    "icon actiongroup actiongroup";
 
   &::before {
     position: absolute;
@@ -106,16 +113,6 @@
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-warning__icon--Color);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
     --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--BackgroundColor);
-
-    // Apply a custom size to the FA icon to ensure all icons are the same width
-    .pf-c-alert__icon > i {
-      font-size: var(--pf-c-alert--m-warning__icon--FontSize);
-    }
-
-    // Apply a custom size to the FA icon to ensure all icons are the same width
-    &.pf-m-inline .pf-c-alert__icon > i {
-      font-size: var(--pf-c-alert--m-inline--m-warning__icon--FontSize);
-    }
   }
 
   &.pf-m-info {
@@ -133,18 +130,16 @@
 
 .pf-c-alert__icon {
   display: flex;
-  align-items: center;
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
+  margin-top: var(--pf-c-alert__icon--MarginTop);
   margin-right: var(--pf-c-alert__icon--MarginRight);
   font-size: var(--pf-c-alert__icon--FontSize);
   color: var(--pf-c-alert__icon--Color);
-  background-color: var(--pf-c-alert__icon--BackgroundColor);
 }
 
 .pf-c-alert__title {
   display: flex;
-  align-items: center;
   grid-area: title;
   font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
@@ -152,12 +147,30 @@
 
 .pf-c-alert__description {
   grid-area: content;
-  margin-top: var(--pf-c-alert__description--MarginTop);
+  padding-top: var(--pf-c-alert__description--PaddingTop);
+
+  + .pf-c-alert__action-group {
+    padding-top: var(--pf-c-alert__description--action-group--PaddingTop);
+  }
 }
 
 .pf-c-alert__action {
   grid-area: action;
   margin-top: var(--pf-c-alert__action--MarginTop);
+  margin-right: var(--pf-c-alert__action--MarginRight);
+}
+
+.pf-c-alert__action-group {
+  grid-area: actiongroup;
+  padding-top: var(--pf-c-alert__action-group--PaddingTop);
+
+  > .pf-c-button {
+    font-weight: var(--pf-c-alert__action-group--c-button--FontWeight);
+
+    &:not(:last-child) {
+      margin-right: var(--pf-c-alert__action-group--c-button--not-last-child--MarginRight);
+    }
+  }
 }
 
 // RedHat Font overrides
