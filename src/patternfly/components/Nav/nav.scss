@@ -115,6 +115,8 @@
   --pf-c-nav__subnav__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav--subnav__simple-list__link--MarginTop: 0;
   --pf-c-nav--subnav__simple-list__link--MarginBottom: 0;
+  --pf-c-nav__subnav__link--not--m-current--hover--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__subnav__link--not--m-current--hover--BorderColor: var(--pf-global--BorderColor--dark-100);
 
   // Nav section
   --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
@@ -453,6 +455,12 @@
     max-height: var(--pf-c-nav__subnav--MaxHeight);
     overflow-y: auto;
     opacity: 1;
+  }
+
+  .pf-c-nav__link:not(.pf-m-current):hover {
+    --pf-c-nav__link--before--BorderLeftWidth: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderLeftWidth);
+    --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderColor);
+    --pf-c-nav__link--before--BorderTopWidth: 0;
   }
 
   &::-webkit-scrollbar {
