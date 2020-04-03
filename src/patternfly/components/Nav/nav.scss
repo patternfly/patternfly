@@ -6,8 +6,8 @@
   // Dark theme
   --pf-c-nav--m-dark__link--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__link--hover--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--focus--Color: var(--pf-c-nav--m-dark__link--hover--Color);
-  --pf-c-nav--m-dark__link--active--Color: var(--pf-c-nav--m-dark__link--hover--Color);
+  --pf-c-nav--m-dark__link--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav--m-dark__link--active--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__link--m-current--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__link--before--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav--m-dark__link--BackgroundColor: transparent;
@@ -18,7 +18,7 @@
   --pf-c-nav--m-dark__subnav__link--not--m-current--hover--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-nav--m-dark__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-nav--m-dark__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__item--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav--m-dark__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Link
@@ -32,8 +32,8 @@
   --pf-c-nav__link--md--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__link--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__link--hover--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__link--active--Color: var(--pf-c-nav__link--hover--Color);
-  --pf-c-nav__link--focus--Color: var(--pf-c-nav__link--hover--Color);
+  --pf-c-nav__link--active--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__link--focus--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-nav__link--m-current--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__link--BackgroundColor: transparent;
@@ -130,12 +130,10 @@
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
 
   // Nav item
-  --pf-c-nav__item--before--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__item--before--BackgroundColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav__item--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__item--before--BorderColor: var(--pf-global--BorderColor--300);
 
   // Scroll button
-  --pf-c-nav__scroll-button--Display: none;
-  --pf-c-nav__scroll-button--Visibility: hidden;
   --pf-c-nav__scroll-button--Top: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-nav__scroll-button--Width: var(--pf-global--spacer--xl);
@@ -143,8 +141,8 @@
   --pf-c-nav__scroll-button--lg--Height: pf-size-prem(40px);
   --pf-c-nav__scroll-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-nav__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-nav__scroll-button--hover--Color: var(--pf-global--active-color--400);
+  --pf-c-nav__scroll-button--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-nav__scroll-button--nth-of-type-1--BoxShadow: 20px 0 10px -4px rgba(255, 255, 255, .7); // This is a special one-off shadow for nav
   --pf-c-nav__scroll-button--nth-of-type-2--BoxShadow: -20px 0 10px -4px rgba(255, 255, 255, .7); // This is a special one-off shadow for nav
   --pf-c-nav__scroll-button--m-dark--nth-of-type-1--BoxShadow: 20px 0 10px -4px rgba(21, 21, 21, .7); // This is a special one-off shadow for nav
@@ -196,7 +194,7 @@
     --pf-c-nav__subnav__link--not--m-current--hover--BorderColor: var(--pf-c-nav--m-dark__subnav__link--not--m-current--hover--BorderColor);
     --pf-c-nav__link--disabled--Color: var(--pf-c-nav--m-dark__link--disabled--Color);
     --pf-c-nav__link--disabled--BackgroundColor: var(--pf-c-nav--m-dark__link--disabled--BackgroundColor);
-    --pf-c-nav__item--before--BackgroundColor: var(--pf-c-nav--m-dark__item--before--BackgroundColor);
+    --pf-c-nav__item--before--BorderColor: var(--pf-c-nav--m-dark__item--before--BorderColor);
 
     .pf-c-divider {
       --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark__c-divider--BackgroundColor);
@@ -227,6 +225,7 @@
   }
 }
 
+// Header nav
 .pf-c-page__header-nav {
   .pf-c-nav__scroll-button {
     background-color: var(--pf-global--BackgroundColor--100);
@@ -245,7 +244,9 @@
   transform: var(--pf-c-nav__item--m-expanded__toggle--i--Transform);
 }
 
-.pf-c-nav__item {
+// Borders
+.pf-c-nav__item,
+.pf-c-nav__link {
   position: relative;
 
   &::before {
@@ -253,13 +254,19 @@
     right: 0;
     bottom: 0;
     left: 0;
-    height: var(--pf-c-nav__item--before--Height);
     content: "";
-    background-color: var(--pf-c-nav__item--before--BackgroundColor);
+    border: 0;
+    border-style: solid;
   }
 }
 
-// Nav link
+// Item
+.pf-c-nav__item::before {
+  border-color: var(--pf-c-nav__item--before--BorderColor);
+  border-bottom-width: var(--pf-c-nav__item--before--BorderWidth);
+}
+
+// Link
 .pf-c-nav__link {
   position: relative;
   display: flex;
@@ -271,13 +278,6 @@
   background-color: var(--pf-c-nav__link--BackgroundColor);
 
   &::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    border-color: var(--pf-c-nav__link--before--BorderColor);
-    border-style: solid;
     border-width: 0 0 var(--pf-c-nav__link--before--BorderBottomWidth) var(--pf-c-nav__link--before--BorderLeftWidth);
   }
 
@@ -332,7 +332,7 @@
   --pf-c-nav--c-divider--PaddingLeft: var(--pf-c-nav__simple-list__link--PaddingLeft);
 
   .pf-c-nav__item {
-    --pf-c-nav__item--before--BackgroundColor: transparent;
+    --pf-c-nav__item--before--BorderColor: transparent;
   }
 
   .pf-c-nav__link {
@@ -341,14 +341,14 @@
   }
 }
 
-// Horizontal and tertiary nav
+// Horizontal and tertiary list
 .pf-c-nav__horizontal-list,
 .pf-c-nav__tertiary-list {
   --pf-c-nav__link--Right: var(--pf-c-nav__link--PaddingRight);
   --pf-c-nav__link--Left: var(--pf-c-nav__link--PaddingLeft);
 
   .pf-c-nav__item {
-    --pf-c-nav__item--before--BackgroundColor: transparent;
+    --pf-c-nav__item--before--BorderColor: transparent;
   }
 
   @include pf-overflow-hide-scroll;
@@ -371,7 +371,7 @@
   }
 }
 
-// List horizontal, masthead
+// Horizontal list, masthead
 .pf-c-nav__horizontal-list {
   --pf-c-nav__link--PaddingTop: var(--pf-c-nav__horizontal-list__link--PaddingTop);
   --pf-c-nav__link--PaddingRight: var(--pf-c-nav__horizontal-list__link--PaddingRight);
@@ -400,7 +400,7 @@
   }
 }
 
-// List tertiary
+// Tertiary list
 .pf-c-nav__tertiary-list {
   --pf-c-nav__link--PaddingTop: var(--pf-c-nav__tertiary-list__link--PaddingTop);
   --pf-c-nav__link--PaddingRight: var(--pf-c-nav__tertiary-list__link--PaddingRight);
