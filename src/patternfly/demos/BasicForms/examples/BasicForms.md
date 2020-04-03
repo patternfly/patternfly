@@ -73,8 +73,8 @@ section: demos
 
 ```hbs title=Grid
 {{#> form}}
-  {{#> grid grid--modifier="pf-m-gutter"}}
-    {{#> grid-item grid-item--modifier="pf-m-6-col-on-md"}}
+  {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
+    {{#> grid-item}}
       {{#> form-group}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute='for="simple-form-first-name"' required="true"}}First name{{/form-label}}
@@ -84,7 +84,7 @@ section: demos
         {{/form-group-control}}
       {{/form-group}}
     {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-6-col-on-md"}}
+    {{#> grid-item}}
        {{#> form-group}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute='for="simple-form-last-name"' required="true"}}Last name{{/form-label}}
@@ -94,7 +94,7 @@ section: demos
         {{/form-group-control}}
       {{/form-group}}
     {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-6-col-on-md"}}
+    {{#> grid-item}}
       {{#> form-group}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute='for="simple-form-phone"' required="true"}}Phone number{{/form-label}}
@@ -104,7 +104,7 @@ section: demos
         {{/form-group-control}}
       {{/form-group}}
     {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-6-col-on-md"}}
+    {{#> grid-item}}
       {{#> form-group}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute='for="simple-form-email"' required="true"}}Email{{/form-label}}
@@ -114,7 +114,7 @@ section: demos
         {{/form-group-control}}
       {{/form-group}}
     {{/grid-item}}
-    {{#> grid-item grid-item--modifier="pf-m-6-col-on-md"}}
+    {{#> grid-item}}
       {{#> form-group}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute='for="simple-form-address"' required="true"}}Address{{/form-label}}
