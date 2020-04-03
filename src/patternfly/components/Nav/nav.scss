@@ -83,6 +83,8 @@
   --pf-c-nav__horizontal-list__link--m-active--BackgroundColor: transparent;
   --pf-c-nav__horizontal-list__link--before--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav__horizontal-list__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav__horizontal-list__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav__horizontal-list__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav__horizontal-list__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
 
   // Tertiary list
@@ -103,6 +105,8 @@
   --pf-c-nav__tertiary-list__link--m-current--BackgroundColor: transparent;
   --pf-c-nav__tertiary-list__link--before--BorderColor: var(--pf-global--active-color--100);
   --pf-c-nav__tertiary-list__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav__tertiary-list__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav__tertiary-list__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav__tertiary-list__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
 
   // Horizontal/tertiary list offsets
@@ -285,6 +289,7 @@
   font-weight: var(--pf-c-nav__link--FontWeight);
   color: var(--pf-c-nav__link--Color);
   background-color: var(--pf-c-nav__link--BackgroundColor);
+  outline-offset: var(--pf-c-nav__link--offset);
 
   &::before {
     top: 0;
@@ -372,7 +377,6 @@
   .pf-c-nav__link {
     position: relative;
     display: inline-block;
-    outline-offset: var(--pf-c-nav__link--offset);
   }
 
   .pf-c-nav__link::before {
@@ -400,10 +404,16 @@
   --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav__horizontal-list__link--m-current--BackgroundColor);
   --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__horizontal-list__link--before--BorderColor);
 
-  .pf-c-nav__link:hover,
-  .pf-c-nav__link:focus,
-  .pf-c-nav__link:active {
+  .pf-c-nav__link:hover {
     --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--hover--before--BorderWidth);
+  }
+
+  .pf-c-nav__link:focus {
+    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--focus--before--BorderWidth);
+  }
+
+  .pf-c-nav__link:active {
+    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--active--before--BorderWidth);
   }
 
   .pf-c-nav__link.pf-m-current {
@@ -430,10 +440,16 @@
   --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav__tertiary-list__link--m-current--BackgroundColor);
   --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__tertiary-list__link--before--BorderColor);
 
-  .pf-c-nav__link:hover,
-  .pf-c-nav__link:focus,
-  .pf-c-nav__link:active {
+  .pf-c-nav__link:hover {
     --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--hover--before--BorderWidth);
+  }
+
+  .pf-c-nav__link:focus {
+    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--focus--before--BorderWidth);
+  }
+
+  .pf-c-nav__link:active {
+    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--active--before--BorderWidth);
   }
 
   .pf-c-nav__link.pf-m-current {
