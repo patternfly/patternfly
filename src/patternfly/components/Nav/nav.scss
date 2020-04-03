@@ -251,7 +251,6 @@
 
   &::before {
     position: absolute;
-    right: 0;
     bottom: 0;
     left: 0;
     content: "";
@@ -262,6 +261,7 @@
 
 // Item
 .pf-c-nav__item::before {
+  right: 0;
   border-color: var(--pf-c-nav__item--before--BorderColor);
   border-bottom-width: var(--pf-c-nav__item--before--BorderWidth);
 }
@@ -279,7 +279,6 @@
 
   &::before {
     top: 0;
-    right: auto;
     border-color: var(--pf-c-nav__link--before--BorderColor);
     border-width: 0 0 var(--pf-c-nav__link--before--BorderBottomWidth) var(--pf-c-nav__link--before--BorderLeftWidth);
   }
