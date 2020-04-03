@@ -17,7 +17,7 @@
   --pf-c-nav--m-dark__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav--m-dark__section-title--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-dark__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__subnav__link--not--m-current--hover--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-nav--m-dark__subnav__link--hover--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-nav--m-dark__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-nav--m-dark__link--disabled--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--m-dark__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
@@ -111,18 +111,18 @@
   --pf-c-nav__tertiary-list__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
 
   // Sub nav
-  --pf-c-nav__subnav--MaxHeight: 100%;
   --pf-c-nav__subnav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__subnav--md--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
   --pf-c-nav__subnav__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav--subnav__simple-list__link--MarginTop: 0;
   --pf-c-nav--subnav__simple-list__link--MarginBottom: 0;
-  --pf-c-nav__subnav__link--not--m-current--hover--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__subnav__link--not--m-current--hover--BorderColor: var(--pf-global--BorderColor--dark-100);
+  --pf-c-nav__subnav__link--hover--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-nav__subnav__link--hover--BorderColor: var(--pf-global--BorderColor--dark-100);
+  --pf-c-nav__item--m-expanded__subnav--MaxHeight: 100%;
 
   // Nav section
   --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__section__section--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-nav__section--section--MarginTop: var(--pf-global--spacer--xl);
 
   // Nav section title
   --pf-c-nav__section-title--PaddingTop: var(--pf-global--spacer--sm);
@@ -202,7 +202,7 @@
     --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav--m-dark__link--active--BackgroundColor);
     --pf-c-nav__section-title--Color: var(--pf-c-nav--m-dark__section-title--Color);
     --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav--m-dark__section-title--BorderBottomColor);
-    --pf-c-nav__subnav__link--not--m-current--hover--BorderColor: var(--pf-c-nav--m-dark__subnav__link--not--m-current--hover--BorderColor);
+    --pf-c-nav__subnav__link--hover--BorderColor: var(--pf-c-nav--m-dark__subnav__link--hover--BorderColor);
     --pf-c-nav__link--disabled--Color: var(--pf-c-nav--m-dark__link--disabled--Color);
     --pf-c-nav__link--disabled--BackgroundColor: var(--pf-c-nav--m-dark__link--disabled--BackgroundColor);
     --pf-c-nav__item--before--BorderColor: var(--pf-c-nav--m-dark__item--before--BorderColor);
@@ -462,20 +462,21 @@
   --pf-c-nav__simple-list__link--MarginBottom: var(--pf-c-nav--subnav__simple-list__link--MarginBottom);
   --pf-c-nav__simple-list__link--FontSize: var(--pf-c-nav__subnav__link--FontSize);
 
-  max-height: 0;
+  max-height: var(--pf-c-nav__subnav--MaxHeight);
   padding-bottom: var(--pf-c-nav__subnav--PaddingBottom);
   padding-left: var(--pf-c-nav__subnav--PaddingLeft);
   transition: var(--pf-c-nav--Transition);
 
   .pf-c-nav__item.pf-m-expanded & {
-    max-height: var(--pf-c-nav__subnav--MaxHeight);
+    --pf-c-nav__subnav--MaxHeight: var(--pf-c-nav__item--m-expanded__subnav--MaxHeight);
+
     overflow-y: auto;
     opacity: 1;
   }
 
   .pf-c-nav__link:not(.pf-m-current):hover {
-    --pf-c-nav__link--before--BorderLeftWidth: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderLeftWidth);
-    --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderColor);
+    --pf-c-nav__link--before--BorderLeftWidth: var(--pf-c-nav__subnav__link--hover--BorderLeftWidth);
+    --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__subnav__link--hover--BorderColor);
   }
 
   &::-webkit-scrollbar {
@@ -489,7 +490,7 @@
   margin-top: var(--pf-c-nav__section--MarginTop);
 
   + & {
-    --pf-c-nav__section--MarginTop: var(--pf-c-nav__section__section--MarginTop);
+    --pf-c-nav__section--MarginTop: var(--pf-c-nav__section--section--MarginTop);
   }
 }
 
