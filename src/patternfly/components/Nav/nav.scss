@@ -278,6 +278,9 @@
   background-color: var(--pf-c-nav__link--BackgroundColor);
 
   &::before {
+    top: 0;
+    right: auto;
+    border-color: var(--pf-c-nav__link--before--BorderColor);
     border-width: 0 0 var(--pf-c-nav__link--before--BorderBottomWidth) var(--pf-c-nav__link--before--BorderLeftWidth);
   }
 
@@ -446,12 +449,6 @@
     max-height: var(--pf-c-nav__subnav--MaxHeight);
     overflow-y: auto;
     opacity: 1;
-  }
-
-  .pf-c-nav__link:not(.pf-m-current):hover {
-    --pf-c-nav__link--before--BorderLeftWidth: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderLeftWidth);
-    --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderColor);
-    --pf-c-nav__link--before--BorderTopWidth: 0;
   }
 
   &::-webkit-scrollbar {
