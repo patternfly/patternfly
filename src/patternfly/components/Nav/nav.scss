@@ -139,6 +139,8 @@
   --pf-c-nav__item--before--BorderColor: var(--pf-global--BorderColor--300);
 
   // Scroll button
+  --pf-c-nav__scroll-button--Display: none;
+  --pf-c-nav__scroll-button--Visibility: hidden;
   --pf-c-nav__scroll-button--Top: var(--pf-global--spacer--sm);
   --pf-c-nav__scroll-button--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-nav__scroll-button--Width: var(--pf-global--spacer--xl);
@@ -460,7 +462,6 @@
   .pf-c-nav__link:not(.pf-m-current):hover {
     --pf-c-nav__link--before--BorderLeftWidth: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderLeftWidth);
     --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__subnav__link--not--m-current--hover--BorderColor);
-    --pf-c-nav__link--before--BorderTopWidth: 0;
   }
 
   &::-webkit-scrollbar {
