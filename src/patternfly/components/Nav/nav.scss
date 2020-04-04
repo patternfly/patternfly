@@ -1,7 +1,7 @@
 .pf-c-nav {
   --pf-c-nav--Width: #{pf-size-prem(290px)};
   --pf-c-nav--Transition: var(--pf-global--Transition);
-  --pf-c-nav__item--m-expanded__toggle--i--Transform: rotate(90deg);
+  --pf-c-nav__item--m-expanded__toggle-icon--Transform: rotate(90deg);
 
   // Dark theme
   --pf-c-nav--m-dark__link--Color: var(--pf-global--Color--light-100);
@@ -165,11 +165,14 @@
   --pf-c-nav__scroll-button--m-dark--nth-of-type-1--BoxShadow: 20px 0 10px -4px rgba(21, 21, 21, .7); // This is a special one-off shadow for nav
   --pf-c-nav__scroll-button--m-dark--nth-of-type-2--BoxShadow: -20px 0 10px -4px rgba(21, 21, 21, .7); // This is a special one-off shadow for nav
 
-  // List toggle
+  // Toggle
   --pf-c-nav__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-nav__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-nav__toggle--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-nav__toggle--Transition: var(--pf-global--TransitionDuration);
+
+  // Toggle icon
+  --pf-c-nav__toggle-icon--Transform: none;
 
   // Divider
   --pf-c-nav--c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -261,8 +264,14 @@
   }
 }
 
-.pf-c-nav__item.pf-m-expanded .pf-c-nav__toggle > i {
-  transform: var(--pf-c-nav__item--m-expanded__toggle--i--Transform);
+// Toggle icon
+.pf-c-nav__toggle-icon {
+  display: inline-block;
+  transform: var(--pf-c-nav__toggle-icon--Transform);
+
+  .pf-c-nav__item.pf-m-expanded & {
+    --pf-c-nav__toggle-icon--Transform: var(--pf-c-nav__item--m-expanded__toggle-icon--Transform);
+  }
 }
 
 // Borders
