@@ -39,7 +39,8 @@ cssPrefix: pf-c-expandable
 | -- | -- | -- |
 | `.pf-c-expandable` | `<div>` | Initiates the expandable component. **Required** |
 | `.pf-c-expandable__toggle` | `<button>` | Initiates the expandable toggle. **Required** |
-| `.pf-c-expandable__toggle-icon` | `<i>` | Initiates the expandable toggle icon. **Required** |
+| `.pf-c-expandable__toggle-text` | `<button>` | Initiates the expandable toggle text. **Required** |
+| `.pf-c-expandable__toggle-icon` | `<span>` | Initiates the expandable toggle icon. **Required** |
 | `.pf-c-expandable__content` | `<div>` | Initiates the expandable content section. **Required** |
 | `.pf-m-expanded` | `.pf-c-expandable` | Modifies the component for the expanded state. |
 | `.pf-m-hover` | `.pf-c-expandable__toggle` | Modifies the expandable toggle for the hoverable state. |

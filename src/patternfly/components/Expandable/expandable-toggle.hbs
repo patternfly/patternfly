@@ -9,10 +9,14 @@
   {{/if}}
   >
   {{> @partial-block}}
-  <i class="fas fa-angle-right pf-c-expandable__toggle-icon" aria-hidden="true"></i>
+  {{#> expandable-toggle-icon}}{{/expandable-toggle-icon}}
   {{#if expandable--IsExpanded}}
-    <span>Show less</span>
+    {{#> expandable-toggle-text}}
+      Show less
+    {{/expandable-toggle-text}}
   {{else}}
-    <span>Show more</span>
+    {{#> expandable-toggle-text}}
+      Show more
+    {{/expandable-toggle-text}}
   {{/if}}
 </button>
