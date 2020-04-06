@@ -83,6 +83,23 @@ cssPrefix: pf-c-alert
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+  {{#> alert-description}}
+    Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
+  {{/alert-description}}
+{{/alert}}
+<br />
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
@@ -98,23 +115,6 @@ cssPrefix: pf-c-alert
       Ignore
     {{/button}}
   {{/alert-action-group}}
-{{/alert}}
-<br />
-{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{#> alert-icon alert-icon--type="check-circle"}}
-  {{/alert-icon}}
-  {{#> alert-title}}
-    {{#> screen-reader}}Success alert:{{/screen-reader}}
-      Success alert title
-  {{/alert-title}}
-  {{#> alert-action}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action button
-    {{/button}}
-  {{/alert-action}}
-  {{#> alert-description}}
-    Success alert description. This should tell the user more information about the alert.
-  {{/alert-description}}
 {{/alert}}
 <br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
@@ -205,6 +205,23 @@ cssPrefix: pf-c-alert
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+  {{#> alert-description}}
+    Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
+  {{/alert-description}}
+{{/alert}}
+<br />
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
@@ -220,23 +237,6 @@ cssPrefix: pf-c-alert
       Ignore
     {{/button}}
   {{/alert-action-group}}
-{{/alert}}
-<br />
-{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{#> alert-icon alert-icon--type="check-circle"}}
-  {{/alert-icon}}
-  {{#> alert-title}}
-    {{#> screen-reader}}Success alert:{{/screen-reader}}
-      Success alert title
-  {{/alert-title}}
-  {{#> alert-action}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action button
-    {{/button}}
-  {{/alert-action}}
-  {{#> alert-description}}
-    Success alert description. This should tell the user more information about the alert.
-  {{/alert-description}}
 {{/alert}}
 <br />
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
