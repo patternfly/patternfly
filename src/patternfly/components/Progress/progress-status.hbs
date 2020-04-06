@@ -5,8 +5,14 @@
   aria-hidden="true">
   {{#unless progress--inside}}
     {{#unless progress--no-measure}}
-      {{>progress__measure}}
+      {{>progress-measure}}
       {{/unless}}
     {{/unless}}
-  {{> progress__status-icon}}
+  {{!-- This provides the success or danger icon --}}
+  {{#if progress--success}}
+    {{#> progress-status-icon progress-status-icon--type="check-circle"}}{{/progress-status-icon}}
+  {{/if}}
+  {{#if progress--danger}}
+    {{#> progress-status-icon progress-status-icon--type="times-circle"}}{{/progress-status-icon}}
+  {{/if}}
 </div>

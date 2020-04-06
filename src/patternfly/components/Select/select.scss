@@ -170,10 +170,6 @@
     }
   }
 
-  & > * {
-    color: var(--pf-c-select__toggle--Color);
-  }
-
   &::before {
     position: absolute;
     top: 0;
