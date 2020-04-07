@@ -6,6 +6,9 @@
   {{else}}
     type="button"
   {{/if}}
+  {{#if button--IsExpanded}}
+    aria-expanded="true"
+  {{/if}}
   {{#if button--attribute}}
     {{{button--attribute}}}
   {{/if}}>

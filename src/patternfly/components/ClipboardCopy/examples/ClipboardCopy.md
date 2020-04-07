@@ -31,8 +31,9 @@ cssPrefix: pf-c-clipboard-copy
 <h4>Editable</h4>
 {{#> clipboard-copy clipboard-copy--id="3"}}
   {{#> clipboard-copy-group}}
-    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
-    {{/clipboard-copy-group-toggle}}
+    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
+      {{> clipboard-copy-toggle-icon}}
+    {{/button}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the Copy to Clipboard Component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="text-input-' clipboard-copy--id '" aria-label="Copyable input"')}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="copy-button-' clipboard-copy--id '" aria-labelledby="copy-button-' clipboard-copy--id ' text-input-' clipboard-copy--id '"')}}
@@ -46,8 +47,9 @@ cssPrefix: pf-c-clipboard-copy
 <br>
 {{#> clipboard-copy clipboard-copy--id="4" clipboard-copy--IsExpanded="true"}}
   {{#> clipboard-copy-group}}
-    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
-    {{/clipboard-copy-group-toggle}}
+    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
+      {{> clipboard-copy-toggle-icon}}
+    {{/button}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'readonly type="text" value="This is an editable version of the Copy to Clipboard Component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="text-input-' clipboard-copy--id '" aria-label="Copyable input"')}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="copy-button-' clipboard-copy--id '" aria-labelledby="copy-button-' clipboard-copy--id ' text-input-' clipboard-copy--id '"')}}
@@ -62,8 +64,9 @@ cssPrefix: pf-c-clipboard-copy
 <h4>Read-only</h4>
 {{#> clipboard-copy clipboard-copy--id="5"}}
   {{#> clipboard-copy-group}}
-    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
-    {{/clipboard-copy-group-toggle}}
+    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
+      {{> clipboard-copy-toggle-icon}}
+    {{/button}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'readonly type="text" value="This is an editable version of the Copy to Clipboard Component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="text-input-' clipboard-copy--id '" aria-label="Copyable input"')}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="copy-button-' clipboard-copy--id '" aria-labelledby="copy-button-' clipboard-copy--id ' text-input-' clipboard-copy--id '"')}}
@@ -77,8 +80,9 @@ cssPrefix: pf-c-clipboard-copy
 <br>
 {{#> clipboard-copy clipboard-copy--id="6" clipboard-copy--IsExpanded="true"}}
   {{#> clipboard-copy-group}}
-    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
-    {{/clipboard-copy-group-toggle}}
+    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
+      {{> clipboard-copy-toggle-icon}}
+    {{/button}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'readonly type="text" value="This is an editable version of the Copy to Clipboard Component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="text-input-' clipboard-copy--id '" aria-label="Copyable input"')}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="copy-button-' clipboard-copy--id '" aria-labelledby="copy-button-' clipboard-copy--id ' text-input-' clipboard-copy--id '"')}}
@@ -111,10 +115,5 @@ cssPrefix: pf-c-clipboard-copy
 | -- | -- | -- |
 | `.pf-c-clipboard-copy` | `<div>` | Initiates a clipboard copy component. **Required** |
 | `.pf-c-clipboard-copy__group` | `<div>` | Initiates a wrapper for the clipboard copy group. **Required** |
-| `.pf-c-clipboard-copy__group-toggle` | `<button>` | Initiates a toggle button that expands content. |
-| `.pf-c-clipboard-copy__group-toggle-icon` | `<i>` | Initiates a toggle button icon. |
+| `.pf-c-clipboard-copy__toggle-icon` | `<span>` | Initiates a toggle button icon. |
 | `.pf-c-clipboard-copy__expandable-content` | `<div>` | Initiates an expandable element. |
-| `.pf-m-hover` | `.pf-c-clipboard-copy__group-toggle`| Modifies toggle button for the hover state. |
-| `.pf-m-active` | `.pf-c-clipboard-copy__group-toggle`| Modifies toggle button for the active state. |
-| `.pf-m-focus` | `.pf-c-clipboard-copy__group-toggle`| Modifies toggle button for the focus state. |
-| `.pf-m-expanded` | `.pf-c-clipboard-copy__group-toggle` | Modifies toggle button for the expanded state. |
