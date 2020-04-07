@@ -77,9 +77,9 @@
   grid-template-columns: var(--pf-c-alert--grid-template-columns);
   grid-template-rows: var(--pf-c-alert--grid-template-rows);
   grid-template-areas:
-    "icon title action"
-    "icon content content"
-    "icon actiongroup actiongroup";
+    "icon title"
+    "icon content"
+    "icon actiongroup";
   grid-column-gap: var(--pf-c-alert--grid-column-gap);
 
   &::before {
@@ -147,7 +147,7 @@
 }
 
 .pf-c-alert__action {
-  grid-area: action;
+  float: right;
   margin-top: var(--pf-c-alert__action--MarginTop);
   margin-right: var(--pf-c-alert__action--MarginRight);
 }
