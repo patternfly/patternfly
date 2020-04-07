@@ -30,7 +30,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
-  // Button before
+  // Link before
   --pf-c-tabs__link--before--BorderStyle: solid;
   --pf-c-tabs__link--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
   --pf-c-tabs__link--before--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -43,7 +43,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--before--Left: calc(var(--pf-c-tabs__link--before--BorderWidth) * -1);
   --pf-c-tabs__item--m-current__link--after--BorderColor: var(--pf-global--active-color--100);
 
-  // Button after
+  // Link after
   --pf-c-tabs__link--after--BorderStyle: solid;
   --pf-c-tabs__link--after--BorderColor: var(--pf-global--BorderColor--light-100);
   --pf-c-tabs__link--after--BorderWidth: 0;
@@ -273,7 +273,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 }
 
-// Buttons
 .pf-c-tabs__link,
 .pf-c-tabs__scroll-button {
   border: 0;
@@ -291,7 +290,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   content: "";
 }
 
-// Tab button
+// Tab link
 .pf-c-tabs__link {
   // Set default border target
   --pf-c-tabs__link--after--BorderBottomWidth: var(--pf-c-tabs__link--after--BorderWidth);
