@@ -7,7 +7,7 @@
 
   // Breadcrumb divider
   --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--200);
-  --pf-c-breadcrumb__item-divider--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-breadcrumb__item-divider--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
   // Breadcrumb link
@@ -32,8 +32,8 @@
   font-size: var(--pf-c-breadcrumb__item--FontSize);
   font-weight: var(--pf-c-breadcrumb__item--FontWeight);
   line-height: var(--pf-c-breadcrumb__item--LineHeight);
+  white-space: nowrap; // Keeps the item-divider and __link text on the same line
   list-style: none;
-  cursor: default;
 
   &:not(:last-child) {
     margin-right: var(--pf-c-breadcrumb__item--MarginRight);
@@ -42,7 +42,7 @@
 
 // Breadcrumb divider
 .pf-c-breadcrumb__item-divider {
-  margin-left: var(--pf-c-breadcrumb__item-divider--MarginLeft);
+  margin-right: var(--pf-c-breadcrumb__item-divider--MarginRight);
   font-size: var(--pf-c-breadcrumb__item-divider--FontSize);
   line-height: 1;
   color: var(--pf-c-breadcrumb__item-divider--Color);
@@ -69,7 +69,13 @@
 }
 
 .pf-c-breadcrumb__heading {
+  display: inline;
   font-size: var(--pf-c-breadcrumb__heading--FontSize);
+}
+
+.pf-c-breadcrumb__link,
+.pf-c-breadcrumb__heading {
+  white-space: normal;
 }
 
 // RedHat Font overrides
