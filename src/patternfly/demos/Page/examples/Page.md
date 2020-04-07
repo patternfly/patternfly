@@ -247,7 +247,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel
         {{/nav-section-title}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Overview
@@ -284,7 +284,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
           Policy
         {{/nav-section-title}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Hosts
@@ -317,16 +317,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Legacy-nav-separators isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-legacy-nav-separators-example" page--IsLegacySeparators="true" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
-```
-
 ```hbs title=Light-theme-sidebar-and-nav isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
-```
-
-```hbs title=Light-theme-sidebar-and-nav-and-legacy-nav-separators isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
 ```
 
 ## Documentation
