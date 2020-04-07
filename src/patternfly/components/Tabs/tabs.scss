@@ -14,7 +14,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --pf-c-tabs--m-vertical--m-box--Inset: var(--pf-global--spacer--xl);
 
-  // Tab buttons
+  // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
   --pf-c-tabs__link--BackgroundColor: transparent;
   --pf-c-tabs__link--OutlineOffset: calc(-1 * #{pf-size-prem(6px)});
