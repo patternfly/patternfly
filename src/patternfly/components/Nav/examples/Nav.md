@@ -31,11 +31,6 @@ import './Nav.css'
         Link 4
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--modifier="pf-m-disabled" nav-link--href="#"}}
-        Disabled
-      {{/nav-link}}
-    {{/nav-item}}
   {{/nav-list}}
 {{/nav}}
 ```
@@ -406,12 +401,12 @@ import './Nav.css'
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#"}}
         Current link
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Link 2
       {{/nav-link}}
     {{/nav-item}}
@@ -421,8 +416,8 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--modifier="pf-m-disabled" nav-link--href="#"}}
-        Disabled
+      {{#> nav-link nav-link--href="#"}}
+        Link 4
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
@@ -439,7 +434,7 @@ import './Nav.css'
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#"}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
@@ -450,7 +445,7 @@ import './Nav.css'
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}

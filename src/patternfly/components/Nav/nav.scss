@@ -47,7 +47,7 @@
   --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-nav__link--disabled--BackgroundColor: transparent;
   --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav__link--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
 
@@ -294,7 +294,7 @@
     &::before {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: calc(var(--pf-c-nav__item--before--BorderWidth) * -1);
       left: 0;
       content: "";
       border-bottom: var(--pf-c-nav__item--before--BorderWidth) solid var(--pf-c-nav__item--before--BorderColor);
