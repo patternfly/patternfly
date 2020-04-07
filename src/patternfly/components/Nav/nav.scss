@@ -165,7 +165,7 @@
   --pf-c-nav__list-toggle--FontSize: #{pf-font-prem(16px)}; // set unique font size for dropdown caret based on design spec
 
   // List toggle icon
-  --pf-c-nav__list-toggle--icon--Transition: .2s ease-in 0s;
+  --pf-c-nav__list-toggle-icon--Transition: .2s ease-in 0s;
 
   // Nav section
   --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
@@ -468,12 +468,12 @@
 
   // Add transition to base
   > .pf-c-nav__toggle-icon {
-    transition: var(--pf-c-nav__list-toggle--icon--Transition);
+    transition: var(--pf-c-nav__list-toggle-icon--Transition);
   }
 }
 
 // Rotate the icon
-.pf-c-nav__item.pf-m-expanded .pf-c-nav__toggle > .pf-c-nav__toggle-icon {
+.pf-c-nav__item.pf-m-expanded .pf-c-nav__toggle-icon {
   transform: var(--pf-c-nav__item--m-expanded__toggle-icon--Transform);
 }
 

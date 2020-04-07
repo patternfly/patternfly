@@ -2,5 +2,9 @@
   {{#if input-group-icon--attribute}}
     {{{input-group-icon--attribute}}}
   {{/if}}>
-  <i class="fas{{#if input-group-icon--type}} fa-{{input-group-icon--type}}{{/if}}" aria-hidden="true"></i>
+  {{#if input-group-icon--type}}
+    <i class="fas fa-{{input-group-icon--type}}" aria-hidden="true"></i>
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

@@ -2,5 +2,9 @@
   {{#if progress-status-icon--attribute}}
     {{{progress-status-icon--attribute}}}
   {{/if}}>
-  <i class="fas{{#if progress-status-icon--type}} fa-{{progress-status-icon--type}}{{/if}}" aria-hidden="true"></i>
+  {{#if progress-status-icon--type}}
+    <i class="fas fa-{{progress-status-icon--type}}" aria-hidden="true"></i>
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

@@ -1,18 +1,18 @@
 <{{inputGroupTextType}} class="pf-c-input-group__text{{#if input-group-text--modifier}} {{input-group-text--modifier}}{{/if}}"
   {{#if aria-label}}
-  	aria-label="{{aria-label}}"
-	{{/if}}
-	{{#if input-group-text--attribute}}
-    	{{{input-group-text--attribute}}}
-	{{/if}}>
+    aria-label="{{aria-label}}"
+  {{/if}}
+  {{#if input-group-text--attribute}}
+    {{{input-group-text--attribute}}}
+  {{/if}}>
 	{{> @partial-block}}
 	{{#if input-group-text--HasDollarSignIcon}}
-		{{#> input-group-icon input-group-icon--type="dollar-sign"}}{{/input-group-icon}}
+	  {{#> input-group-icon input-group-icon--type="dollar-sign"}}{{/input-group-icon}}
 	{{/if}}
 	{{#if input-group-text--HasAtIcon}}
-		{{#> input-group-icon input-group-icon--type="at"}}{{/input-group-icon}}
-	{{/if}}
-	{{#if input-group-text--HasCalendarIcon}}
-		{{#> input-group-icon input-group-icon--type="calendar-alt"}}{{/input-group-icon}}
-	{{/if}}
+	  {{#> input-group-icon input-group-icon--type="at"}}{{/input-group-icon}}
+  {{/if}}
+  {{#if input-group-text--HasCalendarIcon}}
+	  {{#> input-group-icon input-group-icon--type="calendar-alt"}}{{/input-group-icon}}
+  {{/if}}
 </{{inputGroupTextType}}>
