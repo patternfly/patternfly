@@ -12,18 +12,23 @@ import './Nav.css'
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list}}
     {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Current link
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
-        Link 2
+        Link 3
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
-        Link 3
+        Link 4
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
@@ -49,7 +54,7 @@ import './Nav.css'
       {{/nav-item}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
-          Disabled link
+          Link 2
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
@@ -65,13 +70,13 @@ import './Nav.css'
     {{/nav-section-title}}
     {{#> nav-list nav-list--type="simple"}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-          Current link
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 2
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
@@ -94,7 +99,7 @@ import './Nav.css'
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#"}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
@@ -105,7 +110,7 @@ import './Nav.css'
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}
@@ -167,12 +172,12 @@ import './Nav.css'
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#"}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -239,7 +244,7 @@ import './Nav.css'
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
-        Link 4 (current, but not expanded example)
+        Link 3 (current, but not expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
         {{#> nav-list nav-list--type="simple"}}
