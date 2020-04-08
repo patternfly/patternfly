@@ -113,3 +113,5 @@ cssPrefix: pf-c-clipboard-copy
 | `.pf-c-clipboard-copy__group` | `<div>` | Initiates a wrapper for the clipboard copy group. **Required** |
 | `.pf-c-clipboard-copy__toggle-icon` | `<div>` | Initiates a toggle button icon. |
 | `.pf-c-clipboard-copy__expandable-content` | `<div>` | Initiates an expandable element. |
+| `.pf-m-expanded` | `.pf-c-clipboard-copy` | Modifies the clipboard copy component for the expanded state. |
+| `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies the control toggle button for the expanded state. |
