@@ -197,7 +197,7 @@ import './Button.css'
   Control active
 {{/button}}
 
-{{#> button button--modifier="pf-m-control pf-m-expanded"}}
+{{#> button button--IsExpanded="true" button--modifier="pf-m-control"}}
   Control expanded
 {{/button}}
 
@@ -255,6 +255,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `aria-label="[link description]"` | `a.pf-c-button` | The link text should adequately describe the link's purpose. If it does not, aria-label can provide more detailed interaction information. |
 | `disabled` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
 | `aria-disabled="true"` | `a.pf-c-button` | When a link element is used, indicates that it is unavailable. **Required when link is disabled** |
+| `aria-expanded="true"` | `.pf-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required**|
 | `tabindex="-1"` | `a.pf-c-button` | When a link element is used, removes it from keyboard focus. **Required when link is disabled** |
 
 ### Usage
