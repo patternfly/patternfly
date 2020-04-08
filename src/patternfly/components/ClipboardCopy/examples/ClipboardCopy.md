@@ -80,16 +80,10 @@ cssPrefix: pf-c-clipboard-copy
 <br>
 {{#> clipboard-copy clipboard-copy--id="expandable-expanded-readonly" clipboard-copy--IsExpanded="true"}}
   {{#> clipboard-copy-group}}
-<<<<<<< HEAD
     {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-labelledby="' clipboard-copy--id '-toggle ' clipboard-copy--id '-text-input" aria-controls="' clipboard-copy--id '-content"')}}
       {{> clipboard-copy-toggle-icon}}
     {{/button}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'readonly type="text" value="This is an editable version of the Copy to Clipboard Component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
-=======
-    {{#> clipboard-copy-group-toggle clipboard-copy-group-toggle--attribute=(concat 'id="toggle-' clipboard-copy--id '" aria-labelledby="toggle-' clipboard-copy--id ' text-input-' clipboard-copy--id '" aria-controls="content-' clipboard-copy--id '"')}}
-    {{/clipboard-copy-group-toggle}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'readonly type="text" value="This is an editable version of the Copy to Clipboard Component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="text-input-' clipboard-copy--id '" aria-label="Copyable input"')}}
->>>>>>> master
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="' clipboard-copy--id '-copy-button" aria-labelledby="' clipboard-copy--id '-copy-button ' clipboard-copy--id '-text-input"')}}
       <i class="fas fa-copy" aria-hidden="true"></i>
