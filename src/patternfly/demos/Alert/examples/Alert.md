@@ -11,26 +11,18 @@ section: demos
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
       {{#> alert-icon alert-icon--type="check-circle"}}
       {{/alert-icon}}
-        {{#> alert-title}}
-          {{#> screen-reader}}Success alert:{{/screen-reader}}
-          Newest notification
-        {{/alert-title}}
-        {{#> alert-action}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Newest notification"'}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
-        {{/alert-action}}
-        {{#> alert-description}}
-          This is a description of the notification content.
-        {{/alert-description}}
-      {{#> alert-action-group}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          View details
+      {{#> alert-title}}
+        {{#> screen-reader}}Success alert:{{/screen-reader}}
+        Newest notification
+      {{/alert-title}}
+      {{#> alert-action}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Newest notification"'}}
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          Ignore
-        {{/button}}
-      {{/alert-action-group}}
+      {{/alert-action}}
+      {{#> alert-description}}
+        This is a description of the notification content.
+      {{/alert-description}}
     {{/alert}}
   {{/alert-item}}
   {{#> alert-item}}
@@ -49,14 +41,6 @@ section: demos
       {{#> alert-description}}
         This is a description of the notification content.
       {{/alert-description}}
-      {{#> alert-action-group}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          View details
-        {{/button}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          Ignore
-        {{/button}}
-      {{/alert-action-group}}
     {{/alert}}
   {{/alert-item}}
   {{#> alert-item}}
@@ -75,14 +59,6 @@ section: demos
       {{#> alert-description}}
         This is a description of the notification content.
       {{/alert-description}}
-      {{#> alert-action-group}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          View details
-        {{/button}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          Ignore
-        {{/button}}
-      {{/alert-action-group}}
     {{/alert}}
   {{/alert-item}}
 {{/alert-group}}
