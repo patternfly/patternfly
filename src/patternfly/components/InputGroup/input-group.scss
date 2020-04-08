@@ -84,6 +84,10 @@
   textarea {
     min-height: var(--pf-c-input-group__textarea--MinHeight);
   }
+
+  .pf-c-select {
+    width: auto;
+  }
 }
 
 .pf-c-input-group__text {
