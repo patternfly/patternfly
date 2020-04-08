@@ -12,6 +12,7 @@
     "build": "npm run build-patternfly && npm run build:site",
     "build:pficons": "gulp pfIcons",
     "build:pficonfont": "gulp pfIconFont",
+    "build:ie11": "gulp buildIE11",
     "build:site": "npm run copy-assets && gatsby build",
     "clean": "gatsby clean && gulp clean",
     "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
@@ -27,7 +28,7 @@
     "lint:fix": "npm run lint:js --fix && npm run lint:styles --fix",
     "lint:sass": "stylelint 'src/**/*.scss'",
     "lint:js": "eslint .",
-    "lint:hbs": "node ./parseHbs --lint",
+    "lint:hbs": "true",
     "precommit": "lint-staged",
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
     "serve": "gatsby serve",
@@ -56,6 +57,7 @@
     "babel-eslint": "^8.2.3",
     "backstopjs": "^4.1.12",
     "browser-sync": "^2.26.7",
+    "cheerio": "^1.0.0-rc.3",
     "commander": "^2.13.0",
     "concurrently": "^5.0.0",
     "cssnano": "^4.1.10",
@@ -86,6 +88,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "husky": "^1.3.1",
     "inflection": "^1.12.0",
+    "js-beautify": "^1.10.3",
     "jsdom": "^11.8.0",
     "lint-staged": "^9.2.5",
     "minimist": "^1.2.0",
@@ -103,7 +106,7 @@
     "sass-graph": "^3.0.4",
     "scaffold-helper": "^1.0.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
-    "semantic-release": "17.0.4",
+    "semantic-release": "^15.13.19",
     "start-server-and-test": "^1.5.0",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended-scss": "^3.0.0",
@@ -121,9 +124,28 @@
     "type": "git",
     "url": "https://github.com/patternfly/patternfly.git"
   },
+  "release": {
+    "branch": "master",
+    "analyzeCommits": {
+      "preset": "angular"
+    },
+    "prepare": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      }
+    ],
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      },
+      "@semantic-release/github"
+    ]
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "prerelease-v4"
+    "tag": "latest"
   },
   "husky": {
     "hooks": {
