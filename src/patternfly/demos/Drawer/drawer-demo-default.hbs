@@ -14,13 +14,11 @@
         {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
-    {{#unless drawer-panel--IsOpen}}
-      {{#> page-template-header-tools-elements}}
-      {{/page-template-header-tools-elements}}
+    {{#if drawer-panel--IsOpen}}
+      {{> page-template-header-tools-elements page-template-header-tools-elements--button--modifier='pf-m-selected' page-template-header-tools-elements--button--attribute='aria-expanded="true"'}}
     {{else}}
-      {{#> drawer-demo-header-tools-elements}}
-      {{/drawer-demo-header-tools-elements}}
-    {{/unless}}
+      {{> page-template-header-tools-elements page-template-header-tools-elements--button--attribute='aria-expanded="false"'}}
+    {{/if}}
   {{/page-header}}
   {{!-- Nav --}}
   {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
