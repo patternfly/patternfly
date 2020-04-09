@@ -2,8 +2,7 @@
   // Component variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-alert--grid-template-columns: max-content 1fr max-content;
-  --pf-c-alert--grid-column-gap: var(--pf-global--spacer--xs);
+  --pf-c-alert--GridTemplateColumns: max-content 1fr max-content;
   --pf-c-alert--before--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-alert--before--BorderTopColor: var(--pf-global--default-color--200);
   --pf-c-alert--PaddingTop: var(--pf-global--spacer--md);
@@ -14,6 +13,7 @@
   // Icon
   --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
   --pf-c-alert__icon--MarginTop: calc(var(--pf-global--spacer--xs) / 2);
+  --pf-c-alert__icon--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
@@ -77,12 +77,11 @@
   padding: var(--pf-c-alert--PaddingTop) var(--pf-c-alert--PaddingRight) var(--pf-c-alert--PaddingBottom) var(--pf-c-alert--PaddingLeft);
   background-color: var(--pf-c-alert--BackgroundColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
-  grid-template-columns: var(--pf-c-alert--grid-template-columns);
+  grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   grid-template-areas:
     "icon title action"
     "icon description description"
     "icon actiongroup actiongroup";
-  grid-column-gap: var(--pf-c-alert--grid-column-gap);
 
   &::before {
     position: absolute;
@@ -131,6 +130,7 @@
   grid-area: icon;
   display: flex;
   margin-top: var(--pf-c-alert__icon--MarginTop);
+  margin-right: var(--pf-c-alert__icon--MarginRight);
   font-size: var(--pf-c-alert__icon--FontSize);
   color: var(--pf-c-alert__icon--Color);
 }
