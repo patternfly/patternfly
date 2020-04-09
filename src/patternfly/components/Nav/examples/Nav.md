@@ -511,7 +511,8 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon. |
-| `.pf-m-dark` | `.pf-c-nav` | Modifies the nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
+| `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
+| `.pf-m-dark` | `.pf-c-nav` | Modifies nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-hover` | `.pf-c-nav__link` | Modifies to display the link as hovered. |

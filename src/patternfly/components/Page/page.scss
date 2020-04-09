@@ -36,19 +36,20 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
 
   // Header nav
-  --pf-c-page__header-nav--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__header-nav--lg--PaddingLeft: 0;
-  --pf-c-page__header-nav--lg--MarginRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-nav--lg--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__header-nav--lg--BackgroundColor: transparent;
-  --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs))); // This sets the the button to the edge of its container with 4px clearance on the left
-  --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--xl--Left: var(--pf-global--spacer--xl);
-  --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--lg--Left: 0;
-  --pf-c-page__header-nav--c-nav__scroll-button--lg--BackgroundColor: var(--pf-c-page__header-nav--BackgroundColor);
-  --pf-c-page__header-nav--c-nav__scroll-button--lg--Top: 0;
+  --pf-c-page__header-nav--BorderTop: 1px solid var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-nav--lg--BorderTop: 0;
+  --pf-c-page__header-nav--PaddingRight: 0;
+  --pf-c-page__header-nav--PaddingLeft: 0;
+  --pf-c-page__header-nav--md--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-page__header-nav--md--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-page__header-nav--xl--PaddingRight: 0;
+  --pf-c-page__header-nav--xl--PaddingLeft: 0;
   --pf-c-page__header__nav-scroll-button--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-page__header__nav-scroll-button--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+
+  // --pf-c-page__header__nav-scroll-button--disabled--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__header__nav-scroll-button--disabled--before--BorderColor: transparent;
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
@@ -57,9 +58,15 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--lg--PaddingLeft);
     --pf-c-page__header-nav--BackgroundColor: var(--pf-c-page__header-nav--lg--BackgroundColor);
-    --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--lg--Left);
+    --pf-c-page__header-nav--BorderTop: var(--pf-c-page__header-nav--lg--BorderTop);
+    --pf-c-page__header-nav--PaddingRight: var(--pf-c-page__header-nav--lg--PaddingRight);
+    --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--lg--PaddingLeft);
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-page__header-nav--PaddingRight: var(--pf-c-page__header-nav--xl--PaddingRight);
+    --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--xl--PaddingLeft);
   }
 
   // Header tools
@@ -120,19 +127,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   // Main section horizontal nav
   --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__main-nav--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-page__main-nav--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-nav--xl--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-page__main-nav--xl--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--xl--Left: calc(-1 * var(--pf-global--spacer--xs)); // This sets the the button to the edge of its container with 4px clearance on the left
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: calc(-1 * (var(--pf-global--spacer--md) - var(--pf-global--spacer--xs)));
-  --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--xl--Right: calc(-1 * var(--pf-global--spacer--xs)); // This sets the the button to the edge of its container with 4px clearance on the right
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--xl--Left);
-    --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--xl--Right);
-  }
+  --pf-c-page__main-nav--PaddingRight: 0;
+  --pf-c-page__main-nav--PaddingLeft: 0;
+  --pf-c-page__main-nav--md--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-page__main-nav--md--PaddingLeft: var(--pf-global--spacer--sm);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__main-nav--PaddingRight: var(--pf-c-page__main-nav--xl--PaddingRight);
@@ -238,26 +236,29 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
 // Header navigation
 .pf-c-page__header-nav {
+  align-self: stretch;
+  min-width: 0;
+  padding-right: var(--pf-c-page__header-nav--PaddingRight);
+  padding-left: var(--pf-c-page__header-nav--PaddingLeft);
+  background-color: var(--pf-c-page__header-nav--BackgroundColor);
+  border-top: var(--pf-c-page__header-nav--BorderTop);
   grid-column: 1 / -1;
   grid-row: 2 / 3;
-  min-width: 0;
-
-  .pf-c-nav {
-    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-page__header__nav-scroll-button--before--BorderColor);
-    --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-page__header__nav-scroll-button--disabled--Color);
-    --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-page__header__nav-scroll-button--disabled--before--BorderColor);
-
-    align-self: stretch;
-  }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
     flex: 1;
     order: initial;
     width: auto;
-    margin-right: var(--pf-c-page__header-nav--lg--MarginRight);
-    margin-left: var(--pf-c-page__header-nav--lg--MarginLeft);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .pf-c-nav {
+    --pf-c-nav__scroll-button--m-disabled--Color: var(--pf-c-page__header__nav-scroll-button--disabled--Color);
+    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-page__header__nav-scroll-button--before--BorderColor);
+    --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-page__header__nav-scroll-button--disabled--before--BorderColor);
+
+    align-self: stretch;
   }
 }
 
