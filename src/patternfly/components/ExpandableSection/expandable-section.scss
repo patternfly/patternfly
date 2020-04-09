@@ -32,6 +32,7 @@
     padding: var(--pf-c-expandable-section__toggle--PaddingTop) var(--pf-c-expandable-section__toggle--PaddingRight) var(--pf-c-expandable-section__toggle--PaddingBottom) var(--pf-c-expandable-section__toggle--PaddingLeft);
     font-weight: var(--pf-c-expandable-section__toggle--FontWeight);
     color: var(--pf-c-expandable-section__toggle--Color);
+    background: transparent;
     border: none;
 
     &:hover,
