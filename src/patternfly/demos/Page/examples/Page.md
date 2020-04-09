@@ -24,9 +24,7 @@ section: demos
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-    {{#> nav nav--modifier="pf-m-end" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
+    {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
       {{#> nav-list nav-list--type="horizontal"}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#"}}
@@ -54,8 +52,6 @@ section: demos
           {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
     {{/nav}}
     {{/page-header-nav}}
     {{#> page-template-header-tools-elements}}
@@ -94,7 +90,7 @@ section: demos
   {{/page-header}}
 
   {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
@@ -178,9 +174,7 @@ section: demos
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
-      {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
-        {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-        {{/nav-scroll-button}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
         {{#> nav-list nav-list--type="tertiary"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -208,8 +202,6 @@ section: demos
             {{/nav-link}}
           {{/nav-item}}
         {{/nav-list}}
-        {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-        {{/nav-scroll-button}}
       {{/nav}}
     {{/page-main-nav}}
     {{#> page-template-breadcrumb}}

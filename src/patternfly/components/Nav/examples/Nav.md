@@ -268,9 +268,7 @@ import './Nav.css'
 ```hbs title=Horizontal-in-masthead
 <div class="pf-c-page__header">
   <div class="pf-c-page__header-nav">
-    {{#> nav nav--attribute='aria-label="Global"'}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
+    {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
       {{#> nav-list nav-list--type="horizontal"}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -288,8 +286,6 @@ import './Nav.css'
           {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
     {{/nav}}
   </div>
 </div>
@@ -298,9 +294,7 @@ import './Nav.css'
 ```hbs title=Horizontal-overflow-in-masthead
 <div class="pf-c-page__header">
   <div class="pf-c-page__header-nav">
-    {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Global"'}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
+    {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
       {{#> nav-list nav-list--type="horizontal"}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#"}}
@@ -328,17 +322,13 @@ import './Nav.css'
           {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
     {{/nav}}
   </div>
 </div>
 ```
 
 ```hbs title=Tertiary
-{{#> nav nav--attribute='aria-label="Local"'}}
-  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-  {{/nav-scroll-button}}
+{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list nav-list--type="tertiary"}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -356,15 +346,11 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
-  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-  {{/nav-scroll-button}}
 {{/nav}}
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
-  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-  {{/nav-scroll-button}}
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list nav-list--type="tertiary"}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -392,8 +378,6 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
-  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-  {{/nav-scroll-button}}
 {{/nav}}
 ```
 

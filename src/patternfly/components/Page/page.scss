@@ -47,6 +47,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--lg--Left: 0;
   --pf-c-page__header-nav--c-nav__scroll-button--lg--BackgroundColor: var(--pf-c-page__header-nav--BackgroundColor);
   --pf-c-page__header-nav--c-nav__scroll-button--lg--Top: 0;
+  --pf-c-page__header__nav-scroll-button--disabled--Color: var(--pf-global--disabled-color--100);
+  --pf-c-page__header__nav-scroll-button--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header__nav-scroll-button--disabled--before--BorderColor: transparent;
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--xl--PaddingLeft);
@@ -238,28 +241,19 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   min-width: 0;
-  background-color: var(--pf-c-page__header-nav--BackgroundColor);
 
-  > .pf-c-nav {
-    min-width: 0;
+  .pf-c-nav {
+    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-page__header__nav-scroll-button--before--BorderColor);
+    --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-page__header__nav-scroll-button--disabled--Color);
+    --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-page__header__nav-scroll-button--disabled--before--BorderColor);
 
-    .pf-c-nav__scroll-button {
-      @media screen and (max-width: #{$pf-global--breakpoint--lg - 1}) {
-        top: var(--pf-c-page__header-nav--c-nav__scroll-button--lg--Top);
-        background-color: var(--pf-c-page__header-nav--c-nav__scroll-button--lg--BackgroundColor);
-      }
-
-      &:nth-of-type(1) {
-        left: var(--pf-c-page__header-nav--c-nav__scroll-button--nth-of-type-1--Left);
-      }
-    }
+    align-self: stretch;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     flex: 1;
-    align-self: flex-end;
     order: initial;
     width: auto;
     margin-right: var(--pf-c-page__header-nav--lg--MarginRight);
@@ -416,30 +410,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-right: var(--pf-c-page__main-nav--PaddingRight);
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
-
-  .pf-c-nav {
-    // stylelint-disable max-nesting-depth
-    .pf-c-nav__item:first-child {
-      .pf-c-nav__link {
-        padding-left: 0;
-
-        @media screen and (min-width: $pf-global--breakpoint--xl) {
-          padding-left: var(--pf-c-nav__link--PaddingLeft);
-        }
-      }
-    }
-    // stylelint-enable
-
-    .pf-c-nav__scroll-button {
-      &:nth-of-type(1) {
-        left: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left);
-      }
-
-      &:nth-of-type(2) {
-        right: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right);
-      }
-    }
-  }
 }
 
 .pf-c-page__main-breadcrumb {
