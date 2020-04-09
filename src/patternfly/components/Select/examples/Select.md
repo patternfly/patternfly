@@ -8,9 +8,7 @@ import './Select.css'
 
 ## Examples
 ```hbs title=Single
-{{#> select id="select-single"}}
-  Filter by birth month
-{{/select}}
+{{#> select id="select-single"}}Filter by birth month{{/select}}
 ```
 
 ```hbs title=Disabled
@@ -26,10 +24,7 @@ import './Select.css'
 ```
 
 ```hbs title=Single-with-top-expanded
-{{#> select
-  id="select-single-top-expanded"
-  select--modifier="pf-m-top"
-  select--IsExpanded="true"}}
+{{#> select id="select-single-top-expanded" select--modifier="pf-m-top" select--IsExpanded="true"}}
   Filter by birth month
 {{/select}}
 ```
@@ -47,10 +42,7 @@ The top select variation should be used when you want the menu to display above 
 | `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
 
 ```hbs title=Single-expanded-and-selected
-{{#> select
-  id="select-single-expanded-selected"
-  select--ItemIsSelected="true"
-  select--IsExpanded="true"}}
+{{#> select id="select-single-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true"}}
   April
 {{/select}}
 ```
@@ -95,47 +87,22 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|
 
 ```hbs title=Single-with-typeahead
-{{#> select
-  select-toggle--type="div"
-  id="select-single-typeahead"
-  select--IsTypeahead="true"
-  select-typeahead--Placeholder="Choose a state"}}
+{{#> select select-toggle--type="div" id="select-single-typeahead" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
 {{/select}}
 ```
 
 ```hbs title=Single-with-typeahead-expanded
-{{#> select
-  select-toggle--type="div"
-  id="select-single-typeahead-expanded"
-  select--IsExpanded="true"
-  select--IsTypeahead="true"
-  select-toggle--type="div"
-  select--IsCurrentlyTyping="true"
-  select--ItemIsSelected="true"
-  select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" id="select-single-typeahead-expanded" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select--IsCurrentlyTyping="true" select--ItemIsSelected="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
 
 ```hbs title=Single-with-typeahead-expanded-and-selected
-{{#> select
-  select-toggle--type="div"
-  id="select-single-typeahead-expanded-selected"
-  select--ItemIsSelected="true"
-  select--IsExpanded="true"
-  select--IsTypeahead="true"
-  select-toggle--type="div"
-  select-typeahead--Placeholder="New Mexico"}}
+{{#> select select-toggle--type="div" id="select-single-typeahead-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select-typeahead--Placeholder="New Mexico"}}
 {{/select}}
 ```
 
 ```hbs title=Disabled-with-typeahead
-{{#> select
-  select-toggle--type="div"
-  id="select-single-typeahead-disabled"
-  select--IsTypeahead="true"
-  select--IsDisabled="true"
-  select-toggle--modifier="pf-m-disabled"
-  select-typeahead--Placeholder="Choose a state"}}
+{{#> select select-toggle--type="div" id="select-single-typeahead-disabled" select--IsTypeahead="true" select--IsDisabled="true" select-toggle--modifier="pf-m-disabled" select-typeahead--Placeholder="Choose a state"}}
 {{/select}}
 ```
 
@@ -160,38 +127,17 @@ The single select typeahead should be used when the user is selecting one option
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
 
 ```hbs title=Select-multi-with-typeahead
-{{#> select
-  select-toggle--type="div"
-  id="select-multi-typeahead"
-  select--IsMultiSelect="true"
-  select--IsTypeahead="true"
-  select-typeahead--Placeholder="Choose states"}}
+{{#> select select-toggle--type="div" id="select-multi-typeahead" select--IsMultiSelect="true" select--IsTypeahead="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 
 ```hbs title=Multi-with-typeahead-(chip-group-expanded)
-{{#> select
-  select-toggle--type="div"
-  id="select-multi-typeahead-expanded"
-  select--IsExpandedChips="true"
-  select--IsMultiSelect="true"
-  select--IsExpanded="true"
-  select--IsTypeahead="true"
-  select--ItemIsSelected="true"
-  select-typeahead--Placeholder="Choose states"}}
+{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 
 ```hbs title=Multi-with-typeahead-(chip-group-collapsed)
-{{#> select
-  select-toggle--type="div"
-  id="select-multi-typeahead-expanded-selected"
-  select--IsMultiSelect="true"
-  select--IsExpanded="true"
-  select--IsTypeahead="true"
-  select--ItemIsSelected="true"
-  select--IsCurrentlyTyping="true"
-  select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
 
@@ -223,49 +169,25 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 ```
 
 ```hbs title=Checkbox-expanded
-{{#> select
-  id="select-checkbox-expanded"
-  select--IsChecked="true"
-  select--IsCheckboxSelect="true"
-  select--IsExpanded="true"
-  select--ItemIsSelected="true"}}
+{{#> select id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
   Filter
 {{/select}}
 ```
 
 ```hbs title=Checkbox-expanded-and-selected-with-groups
-{{#> select
-  id="select-checkbox-expanded-selected"
-  select--IsCheckboxSelect="true"
-  select--IsChecked="true"
-  select--IsExpanded="true"
-  select--ItemIsSelected="true"
-  select--HasGroups="true"}}
+{{#> select id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true"}}
   Filter by status
 {{/select}}
 ```
 
 ```hbs title=Checkbox-expanded-and-selected-with-groups-and-filter
-{{#> select
-  id="select-checkbox-expanded-selected-filter-example"
-  select--IsCheckboxSelect="true"
-  select--IsChecked="true"
-  select--IsExpanded="true"
-  select--ItemIsSelected="true"
-  select--HasGroups="true"
-  select--IsFilterable="true"}}
+{{#> select id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true" select--IsFilterable="true"}}
   Filter by status
 {{/select}}
 ```
 
 ```hbs title=Checkbox-expanded-without-badge
-{{#> select
-  id="select-checkbox-without-badge"
-  select--IsChecked="true"
-  select--IsCheckboxSelect="true"
-  select--IsExpanded="true"
-  select--ItemIsSelected="true"
-  select--IsNoBadge="true"}}
+{{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--IsNoBadge="true"}}
   Filter
 {{/select}}
 ```
@@ -298,10 +220,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 ```
 
 ```hbs title=Plain-expanded
-{{#> select
-  id="select-plain-expanded"
-  select--IsExpanded="true"
-  select-toggle--modifier="pf-m-plain"}}
+{{#> select id="select-plain-expanded" select--IsExpanded="true" select-toggle--modifier="pf-m-plain"}}
   Filter by birth month
 {{/select}}
 ```
@@ -339,11 +258,7 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__toggle-arrow` | `<i>` |  Initiates the caret to toggle the dropdown. |
 
 ```hbs title=Panel
-{{#> select
-  id="select-panel"
-  select--IsExpanded="true"
-  select-menu--type="div"
-  select--IsEmptyMenu="true"}}
+{{#> select id="select-panel" select--IsExpanded="true" select-menu--type="div" select--IsEmptyMenu="true"}}
   Filter by birth month
 {{/select}}
 ```
