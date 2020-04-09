@@ -24,7 +24,7 @@ import './Tabs.css'
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disable, typically when at the first or last item of a list. **Required when disabled** |
+| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
 | `aria-hidden="true"` | `.pf-c-tabs__scroll-button` | Hides the icon from assistive technologies.**Required when not scrollable** |
 
 ### Usage

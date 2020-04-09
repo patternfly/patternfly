@@ -495,6 +495,7 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
+| `disabled` | `.pf-c-nav__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
 
 ### Usage
