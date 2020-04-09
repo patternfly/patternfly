@@ -40,7 +40,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> select id="select-example-collapsed1" select--HasToggleIcon="true" select--attribute='style="width: 100px;"'}}
+  {{#> select id="select-example-collapsed1" select--attribute='style="width: 100px;"'}}
     {{#> select-toggle-text}}
       Select
     {{/select-toggle-text}}
