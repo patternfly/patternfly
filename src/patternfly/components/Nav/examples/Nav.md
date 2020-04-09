@@ -12,16 +12,15 @@ import './Nav.css'
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
   {{#> nav-list}}
     {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Current link
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> divider divider--type="li"}}{{/divider}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
         Link 3
@@ -42,7 +41,7 @@ import './Nav.css'
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
       Section title 1
     {{/nav-section-title}}
-    {{#> nav-list}}
+    {{#> nav-list nav-list--type="simple"}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -50,7 +49,7 @@ import './Nav.css'
       {{/nav-item}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
-          Disabled link
+          Link 2
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
@@ -64,15 +63,15 @@ import './Nav.css'
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
       Section title 2
     {{/nav-section-title}}
-    {{#> nav-list}}
+    {{#> nav-list nav-list--type="simple"}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-          Current link
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 2
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
@@ -93,25 +92,20 @@ import './Nav.css'
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{!--
-        {{#> nav-subnav-title}}
-          Current and expanded example sub-navigation
-        {{/nav-subnav-title}}
-        --}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#"}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
-          {{#> divider divider--type="li"}}{{/divider}}
+          {{> divider divider--type="li"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}
@@ -129,7 +123,6 @@ import './Nav.css'
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
-          {{#> divider divider--type="li"}}{{/divider}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 2
@@ -174,12 +167,12 @@ import './Nav.css'
         {{/nav-subnav-title}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#"}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -246,7 +239,7 @@ import './Nav.css'
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
-        Link 4 (current, but not expanded example)
+        Link 3 (current, but not expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
         {{#> nav-list nav-list--type="simple"}}
@@ -404,6 +397,103 @@ import './Nav.css'
 {{/nav}}
 ```
 
+```hbs title=Default-light-mode
+{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Current link
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Link 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Link 4
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+```hbs title=Expanded-in-light-mode
+{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
+        Link 1 (current and expanded example)
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Current link
+            {{/nav-link}}
+          {{/nav-item}}
+          {{> divider divider--type="li"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Subnav link 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
+        Link 2 (expanded, but not current example)
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3"'}}
+        Link 3
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
+        {{#> nav-list nav-list--type="simple"}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item newcontent}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ## Documentation
 ### Overview
 The navigation system relies on several different sub-components:
@@ -422,7 +512,6 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
-| `role="separator"` | `.pf-c-nav__separator` |  Indicates that the divider separates and distinguishes sections of links in the nav. |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -432,13 +521,12 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__list` | `<ul>` | Initiates default nav list. |
 | `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list. |
 | `.pf-c-nav__item` | `<li>` | Initiates default nav list item. |
-| `.pf-c-nav__separator` | `<li>` | Initiates list separator. |
 | `.pf-c-nav__scroll-button` | `<button>` | Intitiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-c-nav__link` | `<a>` | Initiates default nav list link. |
 | `.pf-c-nav__section` | `<section>` | Initiates a nav section element. |
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
-| `.pf-c-nav__toggle-icon` | `<i>` | Initiates a nav toggle icon. |
+| `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon. |
 | `.pf-m-dark` | `.pf-c-nav` | Modifies the nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
@@ -446,6 +534,5 @@ The navigation system relies on several different sub-components:
 | `.pf-m-focus` | `.pf-c-nav__link` | Modifies to display the link as focussed. |
 | `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state. |
 | `.pf-m-active` | `.pf-c-nav__link` | Modifies to display the link as active. |
-| `.pf-m-disabled` | `.pf-c-nav__link` | Modifies to display the link as disabled. |
 | `.pf-m-start` | `.pf-c-nav` | Modifiers the nav to show the overflow at the start. |
 | `.pf-m-end` | `.pf-c-nav` | Modifiers the nav to show the overflow at the end. |

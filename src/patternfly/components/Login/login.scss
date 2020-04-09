@@ -71,8 +71,6 @@
   --pf-c-login__main-body--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-login__main-body--md--PaddingRight: var(--pf-global--spacer--2xl);
   --pf-c-login__main-body--md--PaddingLeft: var(--pf-global--spacer--2xl);
-  --pf-c-login__main-body--c-form__helper-text-icon--FontSize: var(--pf-global--icon--FontSize--md);
-  --pf-c-login__main-body--c-form__helper-text-icon--MarginRight: var(--pf-global--spacer--sm);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-login__main-body--PaddingRight: var(--pf-c-login__main-body--md--PaddingRight);
@@ -132,11 +130,13 @@
 }
 
 .pf-c-login__container {
+  width: 100%; // This keeps the login container from shrinking based on its content
   max-width: var(--pf-c-login__container--MaxWidth);
 
   // Large viewports
   @media (min-width: $pf-global--breakpoint--xl) {
     display: grid;
+    justify-content: center;
     grid-column-gap: var(--pf-c-login__container--xl--GridColumnGap);
     grid-template-columns: var(--pf-c-login__container--xl--GridTemplateColumns);
     grid-template-areas:
@@ -213,17 +213,6 @@
   padding-right: var(--pf-c-login__main-body--PaddingRight);
   padding-bottom: var(--pf-c-login__main-body--PaddingBottom);
   padding-left: var(--pf-c-login__main-body--PaddingLeft);
-
-  // the form helper text is always present but visually hidden to provide proper spacing if the error is shown.
-  .pf-c-form__helper-text {
-    display: flex;
-    align-items: center;
-
-    .pf-c-form__helper-text-icon {
-      margin-right: var(--pf-c-login__main-body--c-form__helper-text-icon--MarginRight);
-      font-size: var(--pf-c-login__main-body--c-form__helper-text-icon--FontSize);
-    }
-  }
 }
 
 .pf-c-login__main-footer {

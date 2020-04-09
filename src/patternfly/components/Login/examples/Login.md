@@ -29,7 +29,9 @@ cssPrefix: pf-c-login
       {{#> login-main-body}}
         {{#> form}}
           {{#> form-helper-text form-helper-text--modifier="pf-m-error pf-m-hidden"}}
-            <i class="fas fa-exclamation-circle pf-c-form__helper-text-icon" aria-hidden="true"></i>
+            {{#> form-helper-text-icon}}
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+            {{/form-helper-text-icon}}
             Invalid login credentials.
           {{/form-helper-text}}
           {{#> form-group}}
@@ -139,7 +141,9 @@ cssPrefix: pf-c-login
       {{#> login-main-body}}
         {{#> form}}
           {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='aria-live="polite"'}}
-            <i class="fas fa-exclamation-circle pf-c-form__helper-text-icon" aria-hidden="true"></i>
+            {{#> form-helper-text-icon}}
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+            {{/form-helper-text-icon}}
             Invalid login credentials.
           {{/form-helper-text}}
           {{#> form-group}}

@@ -33,10 +33,14 @@
   --pf-c-form__actions--MarginBottom: calc(var(--pf-c-form__actions--child--MarginBottom) * -1);
   --pf-c-form__actions--MarginLeft: calc(var(--pf-c-form__actions--child--MarginLeft) * -1);
 
-  // Helpers
+  // Helper text
   --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
   --pf-c-form__helper-text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__helper-text--Color: var(--pf-global--Color--100);
+
+  // Helper text icon
+  --pf-c-form__helper-text-icon--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-form__helper-text-icon--MarginRight: var(--pf-global--spacer--xs);
 
   // Inline
   --pf-c-form--m-inline--MarginRight: var(--pf-global--spacer--lg);
@@ -175,6 +179,11 @@
     visibility: hidden;
     opacity: 0;
   }
+}
+
+.pf-c-form__helper-text-icon {
+  margin-right: var(--pf-c-form__helper-text-icon--MarginRight);
+  font-size: var(--pf-c-form__helper-text-icon--FontSize);
 }
 
 // Fieldset
