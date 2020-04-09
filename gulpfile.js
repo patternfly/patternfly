@@ -6,6 +6,7 @@ const { compileSASS, minifyCSS, watchSASS } = require('./build/gulp/sass');
 const { pfIconFont, pfIcons } = require('./build/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./build/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./build/gulp/lint');
+const { generateSnippets } = require('./build/gulp/snippets');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -13,9 +14,7 @@ const sassFiles = [
   '!./src/patternfly/**/_all.scss',
   '!./src/patternfly/patternfly-imports.scss'
 ];
-
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
-
 const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
@@ -69,6 +68,10 @@ function copyWorkspaceAssets() {
   return src('dist/assets/**/*').pipe(dest('assets'));
 }
 
+function generateWorkspaceSnippets() {
+  return generateSnippets('workspace/**/index.html');
+}
+
 function startWorkspaceServer() {
   browserSync.init({
     server: {
@@ -100,5 +103,6 @@ module.exports = {
   copyDocs,
   lintCSSFunctions,
   lintCSSComments,
-  lintCSS: parallel(lintCSSFunctions, lintCSSComments)
+  lintCSS: parallel(lintCSSFunctions, lintCSSComments),
+  snippets: series(compileSrcHBS, compileSrcMD, generateWorkspaceSnippets)
 };
