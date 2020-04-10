@@ -118,7 +118,7 @@ section: demos
                 {{/nav-link}}
               {{/nav-item}}
               {{#> nav-item newcontent}}
-                {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
+                {{#> nav-link nav-link--href="#"}}
                   Instances
                 {{/nav-link}}
               {{/nav-item}}

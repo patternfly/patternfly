@@ -19,7 +19,7 @@
 }
 
 #ws-core-c-optionsmenu-with-groups,
-#ws-core-c-optionsmenu-with-groups-and-separators-between-groups,
-#ws-core-c-optionsmenu-with-groups-and-separators-between-items {
+#ws-core-c-optionsmenu-with-groups-and-dividers-between-groups,
+#ws-core-c-optionsmenu-with-groups-and-dividers-between-items {
   min-height: 450px;
 }

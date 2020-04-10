@@ -117,12 +117,6 @@
   --pf-c-select__menu-search--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-select__menu-search--PaddingLeft: var(--pf-c-select__menu-item--PaddingLeft);
 
-  // Menu Item separator
-  --pf-c-select__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-select__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-select__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-select__separator--MarginBottom: var(--pf-global--spacer--sm);
-
   // Menu group
   // add a little space if it's not the first group because the first one also has the menu padding
   --pf-c-select__menu-group--not--first-of-type--PaddingTop: var(--pf-global--spacer--sm);
@@ -436,13 +430,6 @@
 .pf-c-select__menu-item--match {
   font-weight: var(--pf-c-select__menu-item--match--FontWeight);
   background-color: inherit;
-}
-
-.pf-c-select__separator {
-  height: var(--pf-c-select__separator--Height);
-  margin-top: var(--pf-c-select__separator--MarginTop);
-  margin-bottom: var(--pf-c-select__separator--MarginBottom);
-  background-color: var(--pf-c-select__separator--BackgroundColor);
 }
 
 .pf-c-select__menu-group:not(:first-of-type) {

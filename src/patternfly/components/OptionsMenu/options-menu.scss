@@ -66,14 +66,8 @@
   --pf-c-options-menu__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Divider
-  --pf-c-options-menu__c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__c-divider--MarginBottom: var(--pf-global--spacer--sm);
-
-  // Menu item separator
-  --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-options-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // Groups
   --pf-c-options-menu__group--group--PaddingTop: var(--pf-global--spacer--sm);
@@ -90,8 +84,8 @@
   max-width: 100%;
 
   .pf-c-divider {
-    margin-top: var(--pf-c-options-menu__c-divider--MarginTop);
-    margin-bottom: var(--pf-c-options-menu__c-divider--MarginBottom);
+    margin-top: var(--pf-c-options-menu--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-options-menu--c-divider--MarginBottom);
   }
 }
 
@@ -282,18 +276,6 @@
   margin-left: auto;
   font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
   color: var(--pf-c-options-menu__menu-item-icon--Color);
-}
-
-.pf-c-options-menu__separator {
-  height: var(--pf-c-options-menu__separator--Height);
-  margin-top: var(--pf-c-options-menu__separator--MarginTop);
-  margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
-  background-color: var(--pf-c-options-menu__separator--BackgroundColor);
-  border: 0; // for use when separator is an <hr>
-
-  &:last-child {
-    --pf-c-options-menu__separator--MarginBottom: 0;
-  }
 }
 
 .pf-c-options-menu__group {

@@ -66,14 +66,8 @@
   --pf-c-app-launcher__menu-item-external-icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
   // Divider
-  --pf-c-app-launcher__c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-app-launcher__c-divider--MarginBottom: var(--pf-global--spacer--sm);
-
-  // Menu Separator
-  --pf-c-app-launcher__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-app-launcher__separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-app-launcher__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-app-launcher__separator--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-app-launcher--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-app-launcher--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // Groups
   --pf-c-app-launcher__group--PaddingTop: 0; // remove at breaking change
@@ -98,8 +92,8 @@
   }
 
   .pf-c-divider {
-    margin-top: var(--pf-c-app-launcher__c-divider--MarginTop);
-    margin-bottom: var(--pf-c-app-launcher__c-divider--MarginBottom);
+    margin-top: var(--pf-c-app-launcher--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-app-launcher--c-divider--MarginBottom);
   }
 }
 
@@ -265,18 +259,6 @@
   color: var(--pf-c-app-launcher__menu-item-external-icon--Color);
   opacity: 0;
   transform: var(--pf-c-app-launcher__menu-item-external-icon--Transform); // move icon a bit to appear more visually centered
-}
-
-.pf-c-app-launcher__separator {
-  height: var(--pf-c-app-launcher__separator--Height);
-  margin-top: var(--pf-c-app-launcher__separator--MarginTop);
-  margin-bottom: var(--pf-c-app-launcher__separator--MarginBottom);
-  background-color: var(--pf-c-app-launcher__separator--BackgroundColor);
-  border: 0; // for use when separator is an <hr>
-
-  &:last-child {
-    --pf-c-app-launcher__separator--MarginBottom: 0;
-  }
 }
 
 .pf-c-app-launcher__group {

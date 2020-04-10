@@ -89,14 +89,8 @@
   --pf-c-dropdown__menu-item-icon--Height: var(--pf-global--icon--FontSize--lg);
 
   // Divider
-  --pf-c-dropdown__c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__c-divider--MarginBottom: var(--pf-global--spacer--sm);
-
-  // Menu Item Separator
-  --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-dropdown--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // Groups
   --pf-c-dropdown__group--PaddingTop: 0; // remove at breaking change
@@ -120,8 +114,8 @@
   max-width: 100%;
 
   .pf-c-divider {
-    margin-top: var(--pf-c-dropdown__c-divider--MarginTop);
-    margin-bottom: var(--pf-c-dropdown__c-divider--MarginBottom);
+    margin-top: var(--pf-c-dropdown--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-dropdown--c-divider--MarginBottom);
   }
 }
 
@@ -431,18 +425,6 @@
   > * {
     max-width: 100%;
     max-height: 100%;
-  }
-}
-
-.pf-c-dropdown__separator {
-  height: var(--pf-c-dropdown__separator--Height);
-  margin-top: var(--pf-c-dropdown__separator--MarginTop);
-  margin-bottom: var(--pf-c-dropdown__separator--MarginBottom);
-  background-color: var(--pf-c-dropdown__separator--BackgroundColor);
-  border: 0; // for use when separator is an <hr>
-
-  &:last-child {
-    --pf-c-dropdown__separator--MarginBottom: 0;
   }
 }
 
