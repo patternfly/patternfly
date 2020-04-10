@@ -3,4 +3,10 @@
     {{{label--attribute}}}
   {{/if}}>
   {{> @partial-block}}
+  {{#if label--IsClosable}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' label--id '-button"
+  aria-label="Remove" aria-labelledby="' label--id '-text ' label--id '-button"')}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/if}}
 </span>

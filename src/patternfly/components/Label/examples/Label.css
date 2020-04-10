@@ -1,3 +1,7 @@
-.ws-core-c-label .pf-c-label {
-  margin-right: 6px;
+.ws-core-c-label .ws-preview-html {
+  margin: -4px;
+}
+
+.pf-c-label {
+  margin: 4px;
 }

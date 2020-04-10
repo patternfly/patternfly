@@ -1,31 +1,258 @@
 .pf-c-label {
   // Component
   --pf-c-label--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-label--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-label--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-label--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-label--BorderRadius: var(--pf-global--BorderRadius--sm);
-
-  // Color
-  --pf-c-label--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-label--Color: var(--pf-global--Color--light-100);
-
-  // Font
+  --pf-c-label--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-label--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-label--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-label--Color: var(--pf-global--Color--100);
   --pf-c-label--FontSize: var(--pf-global--FontSize--sm);
 
-  // Modifiers
+  // Border base styles
+  --pf-c-label--before--BorderWidth: 0;
+  --pf-c-label--before--BorderColor: transparent;
+
+  // Compact
   --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
-  display: inline-block;
+  // Hoverable
+  --pf-c-label--m-hoverable--hover--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label--m-hoverable--focus--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-global--BorderColor--200);
+
+  // Outline
+  --pf-c-label--m-outline--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-label--m-outline--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label--m-outline--before--BorderColor: var(--pf-global--BorderColor--100);
+
+  // Hoverable + Outline
+  --pf-c-label--m-outline--m-hoverable--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label--m-outline--m-hoverable--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-global--BorderColor--100);
+
+  // Blue
+  --pf-c-label--m-blue--BackgroundColor: var(--pf-global--palette--blue-50);
+  --pf-c-label--m-blue__text--Color: var(--pf-global--info-color--200);
+  --pf-c-label--m-blue__icon--Color: var(--pf-global--primary-color--100);
+  --pf-c-label--m-hoverable--m-blue--hover--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-label--m-hoverable--m-blue--focus--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-label--m-outline--m-blue--before--BorderColor: var(--pf-global--active-color--200);
+  --pf-c-label--m-outline--m-hoverable--m-blue--hover--before--BorderColor: var(--pf-global--active-color--200);
+  --pf-c-label--m-outline--m-hoverable--m-blue--focus--before--BorderColor: var(--pf-global--active-color--200);
+
+  // Green
+  --pf-c-label--m-green--BackgroundColor: var(--pf-global--palette--green-100);
+  --pf-c-label--m-green__text--Color: var(--pf-global--success-color--200);
+  --pf-c-label--m-green__icon--Color: var(--pf-global--success-color--100);
+  --pf-c-label--m-hoverable--m-green--hover--before--BorderColor: var(--pf-global--success-color--100);
+  --pf-c-label--m-hoverable--m-green--focus--before--BorderColor: var(--pf-global--success-color--100);
+  --pf-c-label--m-outline--m-green--before--BorderColor: var(--pf-global--palette--green-100);
+  --pf-c-label--m-outline--m-hoverable--m-green--hover--before--BorderColor: var(--pf-global--palette--green-100);
+  --pf-c-label--m-outline--m-hoverable--m-green--focus--before--BorderColor: var(--pf-global--palette--green-100);
+
+  // Orange
+  --pf-c-label--m-orange--BackgroundColor: var(--pf-global--palette--gold-50);
+  --pf-c-label--m-orange__text--Color: var(--pf-global--palette--gold-700);
+  --pf-c-label--m-orange__icon--Color: var(--pf-global--palette--orange-300);
+  --pf-c-label--m-hoverable--m-orange--hover--before--BorderColor: var(--pf-global--palette--orange-300);
+  --pf-c-label--m-hoverable--m-orange--focus--before--BorderColor: var(--pf-global--palette--orange-300);
+  --pf-c-label--m-outline--m-orange--before--BorderColor: var(--pf-global--palette--gold-100);
+  --pf-c-label--m-outline--m-hoverable--m-orange--hover--before--BorderColor: var(--pf-global--palette--gold-100);
+  --pf-c-label--m-outline--m-hoverable--m-orange--focus--before--BorderColor: var(--pf-global--palette--gold-100);
+
+  // Red
+  --pf-c-label--m-red--BackgroundColor: var(--pf-global--palette--red-50);
+  --pf-c-label--m-red__text--Color: var(--pf-global--palette--red-300);
+  --pf-c-label--m-red__icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-label--m-hoverable--m-red--hover--before--BorderColor: var(--pf-global--danger-color--100);
+  --pf-c-label--m-hoverable--m-red--focus--before--BorderColor: var(--pf-global--danger-color--100);
+  --pf-c-label--m-outline--m-red--before--BorderColor: var(--pf-global--danger-color--100);
+  --pf-c-label--m-outline--m-hoverable--m-red--hover--before--BorderColor: var(--pf-global--danger-color--100);
+  --pf-c-label--m-outline--m-hoverable--m-red--focus--before--BorderColor: var(--pf-global--danger-color--100);
+
+  // Purple
+  --pf-c-label--m-purple--BackgroundColor: var(--pf-global--palette--purple-100);
+  --pf-c-label--m-purple__text--Color: var(--pf-global--palette--purple-700);
+  --pf-c-label--m-purple__icon--Color: var(--pf-global--palette--purple-500);
+  --pf-c-label--m-hoverable--m-purple--hover--before--BorderColor: var(--pf-global--palette--purple-500);
+  --pf-c-label--m-hoverable--m-purple--focus--before--BorderColor: var(--pf-global--palette--purple-500);
+  --pf-c-label--m-outline--m-purple--before--BorderColor: var(--pf-global--palette--purple-100);
+  --pf-c-label--m-outline--m-hoverable--m-purple--hover--before--BorderColor: var(--pf-global--palette--purple-100);
+  --pf-c-label--m-outline--m-hoverable--m-purple--focus--before--BorderColor: var(--pf-global--palette--purple-100);
+
+  // Cyan
+  --pf-c-label--m-cyan--BackgroundColor: var(--pf-global--palette--cyan-50);
+  --pf-c-label--m-cyan__text--Color: var(--pf-global--default-color--300);
+  --pf-c-label--m-cyan__icon--Color: var(--pf-global--default-color--200);
+  --pf-c-label--m-hoverable--m-cyan--hover--before--BorderColor: var(--pf-global--default-color--200);
+  --pf-c-label--m-hoverable--m-cyan--focus--before--BorderColor: var(--pf-global--default-color--200);
+  --pf-c-label--m-outline--m-cyan--before--BorderColor: var(--pf-global--palette--cyan-100);
+  --pf-c-label--m-outline--m-hoverable--m-cyan--hover--before--BorderColor: var(--pf-global--palette--cyan-100);
+  --pf-c-label--m-outline--m-hoverable--m-cyan--focus--before--BorderColor: var(--pf-global--palette--cyan-100);
+
+  // Icon
+  --pf-c-label__icon--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-label--m-compact__icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-label__icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-label__icon--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
+
+  // Close button
+  --pf-c-label__c-button--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-label__c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label__c-button--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label__c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label__c-button--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-label__c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   padding: var(--pf-c-label--PaddingTop) var(--pf-c-label--PaddingRight) var(--pf-c-label--PaddingBottom) var(--pf-c-label--PaddingLeft);
   font-size: var(--pf-c-label--FontSize);
   color: var(--pf-c-label--Color);
-  text-align: center;
   white-space: nowrap;
   background-color: var(--pf-c-label--BackgroundColor);
   border-radius: var(--pf-c-label--BorderRadius);
 
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: var(--pf-c-label--before--BorderWidth) solid var(--pf-c-label--before--BorderColor);
+    border-radius: var(--pf-c-label--BorderRadius);
+  }
+
   &.pf-m-compact {
     --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
+    --pf-c-label__icon--FontSize: var(--pf-c-label--m-compact__icon--FontSize);
   }
+
+  &.pf-m-blue {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-blue--BackgroundColor);
+    --pf-c-label__text--Color: var(--pf-c-label--m-blue__text--Color);
+    --pf-c-label__icon--Color: var(--pf-c-label--m-blue__icon--Color);
+    --pf-c-label--m-outline--before--BorderColor: var(--pf-c-label--m-outline--m-blue--before--BorderColor);
+    --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-hoverable--m-blue--hover--before--BorderColor);
+    --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-hoverable--m-blue--focus--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-blue--hover--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-blue--focus--before--BorderColor);
+  }
+
+  &.pf-m-green {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-green--BackgroundColor);
+    --pf-c-label__text--Color: var(--pf-c-label--m-green__text--Color);
+    --pf-c-label__icon--Color: var(--pf-c-label--m-green__icon--Color);
+    --pf-c-label--m-outline--before--BorderColor: var(--pf-c-label--m-outline--m-green--before--BorderColor);
+    --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-hoverable--m-green--hover--before--BorderColor);
+    --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-hoverable--m-green--focus--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-green--hover--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-green--focus--before--BorderColor);
+  }
+
+  &.pf-m-orange {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-orange--BackgroundColor);
+    --pf-c-label__text--Color: var(--pf-c-label--m-orange__text--Color);
+    --pf-c-label__icon--Color: var(--pf-c-label--m-orange__icon--Color);
+    --pf-c-label--m-outline--before--BorderColor: var(--pf-c-label--m-outline--m-orange--before--BorderColor);
+    --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-hoverable--m-orange--hover--before--BorderColor);
+    --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-hoverable--m-orange--focus--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-orange--hover--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-orange--focus--before--BorderColor);
+  }
+
+  &.pf-m-red {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-red--BackgroundColor);
+    --pf-c-label__text--Color: var(--pf-c-label--m-red__text--Color);
+    --pf-c-label__icon--Color: var(--pf-c-label--m-red__icon--Color);
+    --pf-c-label--m-outline--before--BorderColor: var(--pf-c-label--m-outline--m-red--before--BorderColor);
+    --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-hoverable--m-red--hover--before--BorderColor);
+    --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-hoverable--m-red--focus--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-red--hover--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-red--focus--before--BorderColor);
+  }
+
+  &.pf-m-purple {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-purple--BackgroundColor);
+    --pf-c-label__text--Color: var(--pf-c-label--m-purple__text--Color);
+    --pf-c-label__icon--Color: var(--pf-c-label--m-purple__icon--Color);
+    --pf-c-label--m-outline--before--BorderColor: var(--pf-c-label--m-outline--m-purple--before--BorderColor);
+    --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-hoverable--m-purple--hover--before--BorderColor);
+    --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-hoverable--m-purple--focus--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-purple--hover--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-purple--focus--before--BorderColor);
+  }
+
+  &.pf-m-cyan {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-cyan--BackgroundColor);
+    --pf-c-label__text--Color: var(--pf-c-label--m-cyan__text--Color);
+    --pf-c-label__icon--Color: var(--pf-c-label--m-cyan__icon--Color);
+    --pf-c-label--m-outline--before--BorderColor: var(--pf-c-label--m-outline--m-cyan--before--BorderColor);
+    --pf-c-label--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-hoverable--m-cyan--hover--before--BorderColor);
+    --pf-c-label--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-hoverable--m-cyan--focus--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--hover--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-cyan--hover--before--BorderColor);
+    --pf-c-label--m-outline--m-hoverable--focus--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--m-cyan--focus--before--BorderColor);
+  }
+
+  &.pf-m-outline {
+    --pf-c-label--before--BorderWidth: var(--pf-c-label--m-outline--before--BorderWidth);
+    --pf-c-label--before--BorderColor: var(--pf-c-label--m-outline--before--BorderColor);
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-outline--BackgroundColor);
+
+    &.pf-m-hoverable {
+      &:hover {
+        --pf-c-label--before--BorderWidth: var(--pf-c-label--m-outline--m-hoverable--hover--before--BorderWidth);
+        --pf-c-label--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--hover--before--BorderColor);
+      }
+
+      &:focus {
+        --pf-c-label--before--BorderWidth: var(--pf-c-label--m-outline--m-hoverable--focus--before--BorderWidth);
+        --pf-c-label--before--BorderColor: var(--pf-c-label--m-outline--m-hoverable--focus--before--BorderColor);
+      }
+    }
+  }
+
+  &.pf-m-hoverable {
+    cursor: pointer;
+
+    &:hover {
+      --pf-c-label--before--BorderWidth: var(--pf-c-label--m-hoverable--hover--before--BorderWidth);
+      --pf-c-label--before--BorderColor: var(--pf-c-label--m-hoverable--hover--before--BorderColor);
+    }
+
+    &:focus {
+      --pf-c-label--before--BorderWidth: var(--pf-c-label--m-hoverable--focus--before--BorderWidth);
+      --pf-c-label--before--BorderColor: var(--pf-c-label--m-hoverable--focus--before--BorderColor);
+    }
+  }
+
+  .pf-c-button {
+    --pf-c-button--FontSize: var(--pf-c-label__c-button--FontSize);
+    --pf-c-button--PaddingRight: var(--pf-c-label__c-button--PaddingRight);
+    --pf-c-button--PaddingLeft: var(--pf-c-label__c-button--PaddingLeft);
+
+    margin-top: var(--pf-c-label__c-button--MarginTop);
+    margin-right: var(--pf-c-label__c-button--MarginRight);
+    margin-bottom: var(--pf-c-label__c-button--MarginBottom);
+    margin-left: var(--pf-c-label__c-button--MarginLeft);
+  }
+}
+
+.pf-c-label__icon {
+  margin-right: var(--pf-c-label__icon--MarginRight);
+  margin-left: var(--pf-c-label__icon--MarginLeft);
+  font-size: var(--pf-c-label__icon--FontSize);
+  line-height: 1;
+  color: var(--pf-c-label__icon--Color);
+}
+
+.pf-c-label__text {
+  position: relative;
+  color: var(--pf-c-label__text--Color);
 }
