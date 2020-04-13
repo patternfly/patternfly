@@ -9,9 +9,9 @@
   --pf-c-chip--before--BorderRadius: var(--pf-global--BorderRadius--sm);
 
   // overflow chip button
-  --pf-c-chip--m-overflow--hover--before--BorderColor: var(--pf-global--secondary-color--100);
-  --pf-c-chip--m-overflow--active--before--BorderColor: var(--pf-global--secondary-color--100);
-  --pf-c-chip--m-overflow--focus--before--BorderColor: var(--pf-global--secondary-color--100);
+  --pf-c-chip--m-overflow--hover--before--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-chip--m-overflow--active--before--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-chip--m-overflow--focus--before--BorderColor: var(--pf-global--BorderColor--200);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -37,7 +37,6 @@
   padding: var(--pf-c-chip--PaddingTop) var(--pf-c-chip--PaddingRight) var(--pf-c-chip--PaddingBottom) var(--pf-c-chip--PaddingLeft);
   list-style: none;
   background-color: var(--pf-c-chip--BackgroundColor);
-  border-radius: var(--pf-c-chip--BorderRadius);
 
   &::before {
     position: absolute;
@@ -57,21 +56,21 @@
     &.pf-m-hover,
     &:hover {
       &::before {
-        --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--hover--before--BorderColor);
+        --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--hover--before--BorderColor);
       }
     }
 
     &.pf-m-focus,
     &:focus {
       &::before {
-        --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--focus--before--BorderColor);
+        --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--focus--before--BorderColor);
       }
     }
 
     &.pf-m-active,
     &:active {
       &::after {
-        --pf-c-chip--BorderColor: var(--pf-c-chip--m-overflow--active--before--BorderColor);
+        --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--active--before--BorderColor);
       }
     }
   }
