@@ -23,7 +23,15 @@ To setup the PatternFly 4 development environment:
 
 - clone the project
 - run `npm install` from the project root
-- run `npm run dev:lite`
+- run `npm run build-patternfly`
+- run `npm run dev`
+- open your browser to `http://localhost:8000`
+
+As an alternative development environment:
+- clone the project
+- run `npm install` from the project root
+- run `npm dev:lite`
+
 
 After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
 
