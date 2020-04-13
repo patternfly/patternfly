@@ -10,7 +10,7 @@ import './Label.css'
 ```hbs title=Filled
 {{#> label label--id="default-grey"}}
   {{#> label-text}}
-    grey label
+    Grey
   {{/label-text}}
 {{/label}}
 
@@ -19,28 +19,49 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    grey label
+    Grey icon
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-close" label--IsClosable="true"}}
+{{#> label label--id="default-grey-close" label--isRemovable="true"}}
   {{#> label-text}}
-    grey label
+    Grey removable
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-icon-close" label--IsClosable="true"}}
+{{#> label label--id="default-grey-icon-close" label--isRemovable="true"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    grey label
+    Grey icon and removable
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey" label--modifier="pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-grey-compact" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
   {{#> label-text}}
-    grey hoverable label
+    Grey compact
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-link" label--type="a"}}
+  {{#> label-text}}
+    Grey link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-button" label--type="button"}}
+  {{#> label-text}}
+    Grey button
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-clickable-removable" label--modifier="pf-m-clickable" label--attribute='tabindex="0"' label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey clickable removable
   {{/label-text}}
 {{/label}}
 
@@ -48,7 +69,7 @@ import './Label.css'
 
 {{#> label label--id="default-blue" label--modifier="pf-m-blue"}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
@@ -57,28 +78,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-blue-close" label--IsClosable="true" label--modifier="pf-m-blue"}}
+{{#> label label--id="default-blue-close" label--isRemovable="true" label--modifier="pf-m-blue"}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-blue-icon-close" label--IsClosable="true" label--modifier="pf-m-blue"}}
+{{#> label label--id="default-blue-icon-close" label--isRemovable="true" label--modifier="pf-m-blue"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-blue" label--modifier="pf-m-blue pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-blue" label--modifier="pf-m-blue pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    blue hoverable label
+    Blue clickable label
   {{/label-text}}
 {{/label}}
 
@@ -86,7 +107,7 @@ import './Label.css'
 
 {{#> label label--id="default-green" label--modifier="pf-m-green"}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
@@ -95,28 +116,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-green-close" label--IsClosable="true" label--modifier="pf-m-green"}}
+{{#> label label--id="default-green-close" label--isRemovable="true" label--modifier="pf-m-green"}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-green-icon-close" label--IsClosable="true" label--modifier="pf-m-green"}}
+{{#> label label--id="default-green-icon-close" label--isRemovable="true" label--modifier="pf-m-green"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-green" label--modifier="pf-m-green pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-green" label--modifier="pf-m-green pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    green hoverable label
+    Green clickable label
   {{/label-text}}
 {{/label}}
 
@@ -124,7 +145,7 @@ import './Label.css'
 
 {{#> label label--id="default-orange" label--modifier="pf-m-orange"}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
@@ -133,28 +154,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-orange-close" label--IsClosable="true" label--modifier="pf-m-orange"}}
+{{#> label label--id="default-orange-close" label--isRemovable="true" label--modifier="pf-m-orange"}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-orange-icon-close" label--IsClosable="true" label--modifier="pf-m-orange"}}
+{{#> label label--id="default-orange-icon-close" label--isRemovable="true" label--modifier="pf-m-orange"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-orange" label--modifier="pf-m-orange pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-orange" label--modifier="pf-m-orange pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    orange hoverable label
+    Orange clickable label
   {{/label-text}}
 {{/label}}
 
@@ -162,7 +183,7 @@ import './Label.css'
 
 {{#> label label--id="default-red" label--modifier="pf-m-red"}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
@@ -171,28 +192,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-red-close" label--IsClosable="true" label--modifier="pf-m-red"}}
+{{#> label label--id="default-red-close" label--isRemovable="true" label--modifier="pf-m-red"}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-red-icon-close" label--IsClosable="true" label--modifier="pf-m-red"}}
+{{#> label label--id="default-red-icon-close" label--isRemovable="true" label--modifier="pf-m-red"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-red" label--modifier="pf-m-red pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-red" label--modifier="pf-m-red pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    red hoverable label
+    Red clickable label
   {{/label-text}}
 {{/label}}
 
@@ -200,7 +221,7 @@ import './Label.css'
 
 {{#> label label--id="default-purple" label--modifier="pf-m-purple"}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
@@ -209,28 +230,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-purple-close" label--IsClosable="true" label--modifier="pf-m-purple"}}
+{{#> label label--id="default-purple-close" label--isRemovable="true" label--modifier="pf-m-purple"}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-purple-icon-close" label--IsClosable="true" label--modifier="pf-m-purple"}}
+{{#> label label--id="default-purple-icon-close" label--isRemovable="true" label--modifier="pf-m-purple"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-purple" label--modifier="pf-m-purple pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-purple" label--modifier="pf-m-purple pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    purple hoverable label
+    Purple clickable label
   {{/label-text}}
 {{/label}}
 
@@ -238,7 +259,7 @@ import './Label.css'
 
 {{#> label label--id="default-cyan" label--modifier="pf-m-cyan"}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
@@ -247,28 +268,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-cyan-close" label--IsClosable="true" label--modifier="pf-m-cyan"}}
+{{#> label label--id="default-cyan-close" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-cyan-icon-close" label--IsClosable="true" label--modifier="pf-m-cyan"}}
+{{#> label label--id="default-cyan-icon-close" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-cyan-hoverable" label--modifier="pf-m-cyan pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="default-cyan-clickable" label--modifier="pf-m-cyan pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    cyan hoverable label
+    Cyan clickable label
   {{/label-text}}
 {{/label}}
 ```
@@ -277,7 +298,7 @@ import './Label.css'
 ```hbs title=Outline
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
   {{#> label-text}}
-    grey label
+    Grey label
   {{/label-text}}
 {{/label}}
 
@@ -286,28 +307,49 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    grey label
+    Grey label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey-close" label--IsClosable="true" label--modifier="pf-m-outline"}}
+{{#> label label--id="outline-grey-close" label--isRemovable="true" label--modifier="pf-m-outline"}}
   {{#> label-text}}
-    grey label
+    Grey label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey-icon-close" label--IsClosable="true" label--modifier="pf-m-outline"}}
+{{#> label label--id="outline-grey-icon-close" label--isRemovable="true" label--modifier="pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    grey label
+    Grey label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey" label--modifier="pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-grey-compact" label--modifier="pf-m-outline pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
   {{#> label-text}}
-    grey hoverable label
+    Grey compact
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-link" label--type="a" label--modifier="pf-m-outline"}}
+  {{#> label-text}}
+    Grey link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-button" label--type="button" label--modifier="pf-m-outline"}}
+  {{#> label-text}}
+    Grey button
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-clickable-removable" label--modifier="pf-m-outline pf-m-clickable" label--attribute='tabindex="0"' label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey clickable removable
   {{/label-text}}
 {{/label}}
 
@@ -315,7 +357,7 @@ import './Label.css'
 
 {{#> label label--id="outline-blue" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
@@ -324,28 +366,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-blue-close" label--IsClosable="true" label--modifier="pf-m-blue pf-m-outline"}}
+{{#> label label--id="outline-blue-close" label--isRemovable="true" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-blue-icon-close" label--IsClosable="true" label--modifier="pf-m-blue pf-m-outline"}}
+{{#> label label--id="outline-blue-icon-close" label--isRemovable="true" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    blue label
+    Blue label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-blue" label--modifier="pf-m-blue pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-blue" label--modifier="pf-m-blue pf-m-outline pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    blue hoverable label
+    Blue clickable label
   {{/label-text}}
 {{/label}}
 
@@ -353,7 +395,7 @@ import './Label.css'
 
 {{#> label label--id="outline-green" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
@@ -362,28 +404,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-green-close" label--IsClosable="true" label--modifier="pf-m-green pf-m-outline"}}
+{{#> label label--id="outline-green-close" label--isRemovable="true" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-green-icon-close" label--IsClosable="true" label--modifier="pf-m-green pf-m-outline"}}
+{{#> label label--id="outline-green-icon-close" label--isRemovable="true" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    green label
+    Green label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-green" label--modifier="pf-m-green pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-green" label--modifier="pf-m-green pf-m-outline pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    green hoverable label
+    Green clickable label
   {{/label-text}}
 {{/label}}
 
@@ -391,7 +433,7 @@ import './Label.css'
 
 {{#> label label--id="outline-orange" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
@@ -400,28 +442,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-orange-close" label--IsClosable="true" label--modifier="pf-m-orange pf-m-outline"}}
+{{#> label label--id="outline-orange-close" label--isRemovable="true" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-orange-icon-close" label--IsClosable="true" label--modifier="pf-m-orange pf-m-outline"}}
+{{#> label label--id="outline-orange-icon-close" label--isRemovable="true" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    orange label
+    Orange label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-orange" label--modifier="pf-m-orange pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-orange" label--modifier="pf-m-orange pf-m-outline pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    orange hoverable label
+    Orange clickable label
   {{/label-text}}
 {{/label}}
 
@@ -429,7 +471,7 @@ import './Label.css'
 
 {{#> label label--id="outline-red" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
@@ -438,28 +480,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-red-close" label--IsClosable="true" label--modifier="pf-m-red pf-m-outline"}}
+{{#> label label--id="outline-red-close" label--isRemovable="true" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-red-icon-close" label--IsClosable="true" label--modifier="pf-m-red pf-m-outline"}}
+{{#> label label--id="outline-red-icon-close" label--isRemovable="true" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    red label
+    Red label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-red" label--modifier="pf-m-red pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-red" label--modifier="pf-m-red pf-m-outline pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    red hoverable label
+    Red clickable label
   {{/label-text}}
 {{/label}}
 
@@ -467,7 +509,7 @@ import './Label.css'
 
 {{#> label label--id="outline-purple" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
@@ -476,28 +518,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-purple-close" label--IsClosable="true" label--modifier="pf-m-purple pf-m-outline"}}
+{{#> label label--id="outline-purple-close" label--isRemovable="true" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-purple-icon-close" label--IsClosable="true" label--modifier="pf-m-purple pf-m-outline"}}
+{{#> label label--id="outline-purple-icon-close" label--isRemovable="true" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    purple label
+    Purple label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-purple" label--modifier="pf-m-purple pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-purple" label--modifier="pf-m-purple pf-m-outline pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    purple hoverable label
+    Purple clickable label
   {{/label-text}}
 {{/label}}
 
@@ -505,7 +547,7 @@ import './Label.css'
 
 {{#> label label--id="outline-cyan" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
@@ -514,28 +556,28 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-cyan-close" label--IsClosable="true" label--modifier="pf-m-cyan pf-m-outline"}}
+{{#> label label--id="outline-cyan-close" label--isRemovable="true" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-cyan-icon-close" label--IsClosable="true" label--modifier="pf-m-cyan pf-m-outline"}}
+{{#> label label--id="outline-cyan-icon-close" label--isRemovable="true" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    cyan label
+    Cyan label
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-cyan" label--modifier="pf-m-cyan pf-m-outline pf-m-hoverable" label--attribute='tabindex="0"'}}
+{{#> label label--id="outline-cyan" label--modifier="pf-m-cyan pf-m-outline pf-m-clickable" label--attribute='tabindex="0"'}}
   {{#> label-text}}
-    cyan hoverable label
+    Cyan clickable label
   {{/label-text}}
 {{/label}}
 ```
@@ -547,13 +589,13 @@ Labels can be used in a variety of components and can adjust in font size to mat
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-label` | `<span>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color.  |
+| `.pf-c-label` | `<span>`, `<a>`, `<button>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color.  |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
-| `.pf-m-hoverable` | `.pf-c-label` | Modifies label for a hoverable styles. |
-| `.pf-m-blue` | `.pf-c-label` | Modifies label for a blue styles. |
-| `.pf-m-green` | `.pf-c-label` | Modifies label for a green styles. |
-| `.pf-m-orange` | `.pf-c-label` | Modifies label for a orange styles. |
-| `.pf-m-red` | `.pf-c-label` | Modifies label for a red styles. |
-| `.pf-m-purple` | `.pf-c-label` | Modifies label for a purple styles. |
-| `.pf-m-cyan` | `.pf-c-label` | Modifies label for a cyan styles. |
+| `.pf-m-clickable` | `span.pf-c-label` | Modifies the label to have clickable styles. This is used with removable labels that also serve as a link or button. |
+| `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
+| `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |
+| `.pf-m-orange` | `.pf-c-label` | Modifies the label to have orange colored styling. |
+| `.pf-m-red` | `.pf-c-label` | Modifies the label to have red colored styling. |
+| `.pf-m-purple` | `.pf-c-label` | Modifies the label to have purple colored styling. |
+| `.pf-m-cyan` | `.pf-c-label` | Modifies the label to have cyan colored styling. |
