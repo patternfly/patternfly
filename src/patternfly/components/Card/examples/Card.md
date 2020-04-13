@@ -7,9 +7,9 @@ cssPrefix: pf-c-card
 ## Examples
 ```hbs title=Basic
 {{#> card}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -31,9 +31,9 @@ cssPrefix: pf-c-card
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
   {{/card-head}}
-  {{#> card-header card-header--attribute=(concat 'id="' card--id '-check-label"')}}
+  {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -51,9 +51,9 @@ cssPrefix: pf-c-card
       {{/dropdown}}
       <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
     {{/card-actions}}
-    {{#> card-header card-header--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
       This is a really really really really really really really really really really long header
-    {{/card-header}}
+    {{/card-title}}
   {{/card-head}}
   {{#> card-body}}
     Body
@@ -85,9 +85,9 @@ cssPrefix: pf-c-card
       <img src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
     {{/card-head-main}}
   {{/card-head}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -99,9 +99,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=With-no-footer
 {{#> card}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     This card has no footer
   {{/card-body}}
@@ -129,9 +129,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=With-multiple-body-sections
 {{#> card}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -149,9 +149,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=With-only-one-body-that-fills
 {{#> card}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body card-body--modifier="pf-m-no-fill"}}
     Body pf-m-no-fill
   {{/card-body}}
@@ -169,9 +169,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=Compact
 {{#> card card--modifier="pf-m-compact"}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -183,9 +183,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=Hover
 {{#> card card--modifier="pf-m-hoverable"}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -197,9 +197,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=Selectable
 {{#> card card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -211,9 +211,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=Selected
 {{#> card card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -225,9 +225,9 @@ cssPrefix: pf-c-card
 
 ```hbs title=Flat
 {{#> card card--modifier="pf-m-flat"}}
-  {{#> card-header}}
+  {{#> card-title}}
     Header
-  {{/card-header}}
+  {{/card-title}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -250,7 +250,7 @@ A card is a generic rectangular container that can be used to build other compon
 | Class | Applied | Outcome |
 | ---- | ---- | ---- |
 | `.pf-c-card` | `<div>` | Creates a card component.  **Required** |
-| `.pf-c-card__header` | `<div>` | Creates the header of a card. |
+| `.pf-c-card__title` | `<div>` | Creates the header of a card. |
 | `.pf-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-c-card__body` elements. |
 | `.pf-c-card__footer` | `<div>` | Creates the footer of a card. |
 | `.pf-c-card__head` | `<div>` | Creates the head of the card where images or actions can go. |

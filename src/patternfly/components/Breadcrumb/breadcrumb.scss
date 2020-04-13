@@ -1,7 +1,6 @@
 .pf-c-breadcrumb {
   // Breadcrumb item
   --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
 
@@ -11,7 +10,6 @@
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
   // Breadcrumb link
-  --pf-c-breadcrumb__link--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-breadcrumb__link--m-current--Color: var(--pf-global--Color--100);
 
   // Heading
@@ -80,9 +78,10 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
-  .pf-c-breadcrumb {
-    --pf-c-breadcrumb__link--FontWeight: var(--pf-global--FontWeight--normal);
-    --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--normal);
+@include pf-m-overpass-font {
+  .pf-c-breadcrumb__link,
+  .pf-c-breadcrumb__item {
+    font-weight: var(--pf-global--FontWeight--semi-bold);
+    font-weight: var(--pf-global--FontWeight--semi-bold);
   }
 }

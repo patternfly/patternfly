@@ -17,6 +17,7 @@
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
+  --pf-c-alert__title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-alert__title--Color: var(--pf-global--default-color--300);
 
   // Action
@@ -127,6 +128,7 @@
 
 .pf-c-alert__title {
   grid-area: title;
+  font-weight: var(--pf-c-alert__title--FontWeight);
   color: var(--pf-c-alert__title--Color);
 }
 
@@ -160,8 +162,8 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
+@include pf-m-overpass-font {
   .pf-c-alert__title {
-    font-weight: var(--pf-global--FontWeight--bold);
+    --pf-c-alert__title--FontWeight: var(--pf-global--FontWeight--normal);
   }
 }

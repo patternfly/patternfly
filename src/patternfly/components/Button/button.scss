@@ -5,7 +5,7 @@
   --pf-c-button--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-button--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-button--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-button--FontSize: var(--pf-global--FontSize--md);
   --pf-c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-button--BorderColor: transparent;
@@ -458,8 +458,8 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
+@include pf-m-overpass-font {
   .pf-c-button {
-    --pf-c-button--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
   }
 }
