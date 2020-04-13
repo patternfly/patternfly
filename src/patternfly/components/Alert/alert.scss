@@ -17,8 +17,6 @@
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
-  --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-alert__title--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-alert__title--Color: var(--pf-global--default-color--300);
 
   // Action
@@ -137,7 +135,6 @@
 
 .pf-c-alert__title {
   grid-area: title;
-  font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
 }
 
