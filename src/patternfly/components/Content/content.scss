@@ -78,12 +78,10 @@
 
   // Lists
   --pf-c-content--ol--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ol--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--ol--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ol--nested--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-content--ol--nested--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
   --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-content--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
@@ -259,10 +257,6 @@
     padding-left: var(--pf-c-content--ol--PaddingLeft);
     margin-left: var(--pf-c-content--ol--MarginLeft);
 
-    &:not(:first-child) {
-      margin-top: var(--pf-c-content--ol--MarginTop);
-    }
-
     ul {
       margin-top: var(--pf-c-content--ul--nested--MarginTop);
 
@@ -280,10 +274,6 @@
     padding-left: var(--pf-c-content--ul--PaddingLeft);
     margin-left: var(--pf-c-content--ul--MarginLeft);
     list-style: var(--pf-c-content--ul--ListStyle);
-
-    &:not(:first-child) {
-      margin-top: var(--pf-c-content--ul--MarginTop);
-    }
 
     ul {
       margin-top: var(--pf-c-content--ul--nested--MarginTop);
