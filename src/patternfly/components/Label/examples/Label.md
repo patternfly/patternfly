@@ -44,6 +44,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="default-grey-link-close" label-content--IsLink="true" label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-blue" label--modifier="pf-m-blue"}}
@@ -79,6 +85,12 @@ import './Label.css'
 {{#> label label--id="default-blue-link" label-content--IsLink="true" label--modifier="pf-m-blue"}}
   {{#> label-text}}
     Blue link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-blue-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-blue"}}
+  {{#> label-text}}
+    Blue removable link
   {{/label-text}}
 {{/label}}
 
@@ -120,6 +132,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="default-green-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-gren"}}
+  {{#> label-text}}
+    Green removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-orange" label--modifier="pf-m-orange"}}
@@ -155,6 +173,12 @@ import './Label.css'
 {{#> label label--id="default-orange-link" label-content--IsLink="true" label--modifier="pf-m-orange"}}
   {{#> label-text}}
     Orange link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-orange-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-orange"}}
+  {{#> label-text}}
+    Orange removable link
   {{/label-text}}
 {{/label}}
 
@@ -196,6 +220,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="default-red-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-red"}}
+  {{#> label-text}}
+    Red removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-purple" label--modifier="pf-m-purple"}}
@@ -234,6 +264,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="default-purple-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-purple"}}
+  {{#> label-text}}
+    Purple removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-cyan" label--modifier="pf-m-cyan"}}
@@ -269,6 +305,12 @@ import './Label.css'
 {{#> label label--id="default-cyan-link" label-content--IsLink="true" label--modifier="pf-m-cyan"}}
   {{#> label-text}}
     Cyan link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-cyan-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-cyan"}}
+  {{#> label-text}}
+    Cyan removable link
   {{/label-text}}
 {{/label}}
 ```
@@ -311,6 +353,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="outline-grey-link-close" label-content--IsLink="true" label--modifier="pf-m-outline" label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="outline-blue" label--modifier="pf-m-blue pf-m-outline"}}
@@ -346,6 +394,12 @@ import './Label.css'
 {{#> label label--id="outline-blue-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-blue"}}
   {{#> label-text}}
     Blue link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-blue-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-blue" label--isRemovable="true"}}
+  {{#> label-text}}
+    Blue removable link
   {{/label-text}}
 {{/label}}
 
@@ -387,6 +441,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="outline-green-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-green" label--isRemovable="true"}}
+  {{#> label-text}}
+    Green removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="outline-orange" label--modifier="pf-m-orange pf-m-outline"}}
@@ -422,6 +482,12 @@ import './Label.css'
 {{#> label label--id="outline-orange-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-orange"}}
   {{#> label-text}}
     Orange link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-orange-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-orange" label--isRemovable="true"}}
+  {{#> label-text}}
+    Orange removable link
   {{/label-text}}
 {{/label}}
 
@@ -463,6 +529,12 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
+{{#> label label--id="outline-red-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-red" label--isRemovable="true"}}
+  {{#> label-text}}
+    Red removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="outline-purple" label--modifier="pf-m-purple pf-m-outline"}}
@@ -500,6 +572,13 @@ import './Label.css'
     Purple link
   {{/label-text}}
 {{/label}}
+
+{{#> label label--id="outline-purple-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-purple" label--isRemovable="true"}}
+  {{#> label-text}}
+    Purple removable link
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="outline-cyan" label--modifier="pf-m-cyan pf-m-outline"}}
@@ -535,6 +614,12 @@ import './Label.css'
 {{#> label label--id="outline-cyan-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-cyan"}}
   {{#> label-text}}
     Cyan link
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-cyan-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-cyan" label--isRemovable="true"}}
+  {{#> label-text}}
+    Cyan removable link
   {{/label-text}}
 {{/label}}
 ```
