@@ -691,7 +691,10 @@ Labels can be used in a variety of components and can adjust in font size to mat
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-label` | `<span>`, `<a>`, `<button>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color.  |
+| `.pf-c-label` | `<span>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
+| `.pf-c-label__content` | `<span>`, `<a>`, `<button>` | Iniates a label content. Use an `<a>` or `<button>` instead of a `<span>` for interactive label content. **Required** |
+| `.pf-c-label__icon` | `<span>` | Iniates a label icon. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color.  |
+| `.pf-c-label__text` | `<span>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
