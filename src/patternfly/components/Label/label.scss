@@ -200,10 +200,10 @@
     --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-outline--before--BorderColor);
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-outline--BackgroundColor);
 
-    /* stylelint-disable selector-no-qualifying-type */
+    // stylelint-disable selector-no-qualifying-type
     a.pf-c-label__content,
     button.pf-c-label__content,
-    /* stylelint-enable selector-no-qualifying-type */
+    // stylelint-enable selector-no-qualifying-type
     .pf-c-label__content.pf-m-clickable {
       &:hover {
         --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-outline--m-clickable--hover--before--BorderWidth);
