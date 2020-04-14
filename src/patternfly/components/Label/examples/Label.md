@@ -40,38 +40,6 @@ import './Label.css'
 
 <br><br>
 
-{{#> label label--id="default-grey-compact" label--modifier="pf-m-compact"}}
-  {{#> label-text}}
-    Grey compact
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="default-grey-compact-icon" label--modifier="pf-m-compact"}}
-  {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
-  {{/label-icon}}
-  {{#> label-text}}
-    Grey compact icon
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="default-grey-compact-removable" label--modifier="pf-m-compact" label--isRemovable="true"}}
-  {{#> label-text}}
-    Grey compact removable
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="default-grey-compact-icon-removable" label--modifier="pf-m-compact" label--isRemovable="true"}}
-  {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
-  {{/label-icon}}
-  {{#> label-text}}
-    Grey compact icon removable
-  {{/label-text}}
-{{/label}}
-
-<br><br>
-
 {{#> label label--id="default-grey-link" label-content--type="a" label-content--attribute='href="#"'}}
   {{#> label-text}}
     Grey link
@@ -356,38 +324,6 @@ import './Label.css'
   {{/label-icon}}
   {{#> label-text}}
     Grey icon and removable
-  {{/label-text}}
-{{/label}}
-
-<br><br>
-
-{{#> label label--id="outline-grey-compact" label--modifier="pf-m-outline pf-m-compact"}}
-  {{#> label-text}}
-    Grey compact
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="outline-grey-compact-icon" label--modifier="pf-m-outline pf-m-compact"}}
-  {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
-  {{/label-icon}}
-  {{#> label-text}}
-    Grey compact icon
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="outline-grey-compact-removable" label--modifier="pf-m-outline pf-m-compact" label--isRemovable="true"}}
-  {{#> label-text}}
-    Grey compact removable
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="outline-grey-compact-icon-removable" label--modifier="pf-m-outline pf-m-compact" label--isRemovable="true"}}
-  {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
-  {{/label-icon}}
-  {{#> label-text}}
-    Grey compact icon removable
   {{/label-text}}
 {{/label}}
 
@@ -685,8 +621,6 @@ import './Label.css'
 ```
 
 ## Documentation
-### Overview
-Labels can be used in a variety of components and can adjust in font size to match that of the component it lives in. For example, labels can be used in tables. Specifically, the compact table has a modifier that adjusts its font size, so when using a label in this table, it's important to also add its respective `.pf-c-compact` modifier.
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -695,7 +629,6 @@ Labels can be used in a variety of components and can adjust in font size to mat
 | `.pf-c-label__content` | `<span>`, `<a>`, `<button>` | Iniates a label content. Use an `<a>` or `<button>` instead of a `<span>` for interactive label content. **Required** |
 | `.pf-c-label__icon` | `<span>` | Iniates a label icon. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color.  |
 | `.pf-c-label__text` | `<span>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
-| `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
 | `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |

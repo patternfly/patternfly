@@ -13,10 +13,6 @@
   --pf-c-label__content--before--BorderWidth: 0;
   --pf-c-label__content--before--BorderColor: transparent;
 
-  // Compact
-  --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-label--m-compact__c-button--FontSize: var(--pf-global--icon--FontSize--sm);
-
   // Hoverable
   --pf-c-label--m-clickable--hover--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-label--m-clickable--focus--before--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -95,9 +91,8 @@
   --pf-c-label--m-outline--m-clickable--m-cyan--focus--before--BorderColor: var(--pf-global--palette--cyan-100);
 
   // Icon
-  --pf-c-label__icon--Color: var(--pf-global--primary-color--100);
+  --pf-c-label__icon--Color: var(--pf-global--Color--100);
   --pf-c-label__icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-label--m-compact__icon--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-label__icon--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
 
   // Text
@@ -121,13 +116,6 @@
   white-space: nowrap;
   background-color: var(--pf-c-label--BackgroundColor);
   border-radius: var(--pf-c-label--BorderRadius);
-
-  &.pf-m-compact {
-    --pf-c-button--FontSize: var(--pf-c-label--m-compact__c-button--FontSize);
-    --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
-    --pf-c-label__icon--MarginRight: var(--pf-c-label--m-compact__icon--MarginRight);
-    --pf-c-label__c-button--MarginLeft: 0;
-  }
 
   &.pf-m-blue {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-blue--BackgroundColor);
