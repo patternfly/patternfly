@@ -150,13 +150,11 @@ cssPrefix: pf-c-chip-group
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/chip}}
-  {{#> chip-group-overflow}}
-    {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-      {{#> chip-text}}
-        3 more
-      {{/chip-text}}
-    {{/chip}}
-  {{/chip-group-overflow}}
+  {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
+    {{#> chip-text}}
+      2 more
+    {{/chip-text}}
+  {{/chip}}
 {{/chip-group}}
 ```
 
@@ -205,13 +203,11 @@ cssPrefix: pf-c-chip-group
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/chip}}
-  {{#> chip-group-overflow}}
-    {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-      {{#> chip-text}}
-        3 more
-      {{/chip-text}}
-    {{/chip}}
-  {{/chip-group-overflow}}
+  {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
+    {{#> chip-text}}
+      Show less
+    {{/chip-text}}
+  {{/chip}}
 {{/chip-group}}
 ```
 
@@ -267,6 +263,6 @@ The chip group requires the [chip component](/documentation/core/components/chip
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-chip-group` | `<ul>` | Initiates the container used to group chips. **Required.** |
-| `.pf-c-button` | `<button>` | Initiates the button used to expand overflown chips. |
-| `.pf-c-chip-group__close` | `<div>` | Initiates the container used to close chip group. **Required.** |
+| `.pf-c-chip-group__label` | `<h4>` | Initiates the label to be used in the chip group. |
+| `.pf-c-chip-group__close` | `<div>` | Initiates the container used to remove button in the chip group. **Required.** |
 | `.pf-m-category` | `.pf-c-chip-group` | Modifies the chip group to support category styling. |
