@@ -3,13 +3,13 @@
 
   --pf-c-chip-group--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
-  --pf-c-chip-group--m-toolbar-PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-toolbar-PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-toolbar-PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-toolbar-PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--m-toolbar-BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-chip-group--m-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-chip-group__li--m-toolbar--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-category-PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--m-category-PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--m-category-PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--m-category-PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--m-category-BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-chip-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-chip-group__li--m-category--MarginRight: var(--pf-global--spacer--sm);
 
   // Label in group
   --pf-c-chip-group__label--PaddingTop: var(--pf-global--spacer--xs);
@@ -18,6 +18,16 @@
   --pf-c-chip-group__label--PaddingLeft: 0;
   --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-chip-group__label--Maxwidth: #{pf-size-prem(160px)};
+
+  // Chip group overflow
+  --pf-c-chip-group__overflow--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-chip-group__overflow--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-chip-group__overflow--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-chip-group__overflow--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-chip-group__overflow--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-chip-group__overflow--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-chip-group__overflow--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-chip-group__overflow--MarginBottom: calc(var(--pf-global--spacer--sm) * -1);
 
   // Chip
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
@@ -29,20 +39,15 @@
   margin-right: var(--pf-c-chip-group--MarginRight);
   margin-bottom: var(--pf-c-chip-group--MarginBottom);
 
-  &.pf-m-toolbar {
-    > li:not(.pf-m-overflow) {
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: var(--pf-c-chip-group--m-toolbar-PaddingTop) var(--pf-c-chip-group--m-toolbar-PaddingRight) var(--pf-c-chip-group--m-toolbar-PaddingBottom) var(--pf-c-chip-group--m-toolbar-PaddingLeft);
-      margin-right: var(--pf-c-chip-group__li--m-toolbar--MarginRight);
-      background-color: var(--pf-c-chip-group--m-toolbar--BackgroundColor);
-      border-radius: var(--pf-c-chip-group--m-toolbar-BorderRadius);
-    }
+  &.pf-m-category {
+    padding: var(--pf-c-chip-group--m-category-PaddingTop) var(--pf-c-chip-group--m-category-PaddingRight) var(--pf-c-chip-group--m-category-PaddingBottom) var(--pf-c-chip-group--m-category-PaddingLeft);
+    margin-right: var(--pf-c-chip-group__li--m-category--MarginRight);
+    background-color: var(--pf-c-chip-group--m-category--BackgroundColor);
+    border-radius: var(--pf-c-chip-group--m-category-BorderRadius);
 
-    > .pf-c-chip.pf-m-overflow {
-      margin: 0;
-    }
+    // > .pf-c-chip.pf-m-overflow {
+    //   margin: 0;
+    // }
   }
 
   .pf-c-chip-group__label {
@@ -51,6 +56,14 @@
     max-width: var(--pf-c-chip-group__label--Maxwidth);
     padding: var(--pf-c-chip-group__label--PaddingTop) var(--pf-c-chip-group__label--PaddingRight) var(--pf-c-chip-group__label--PaddingBottom) var(--pf-c-chip-group__label--PaddingLeft);
     font-size: var(--pf-c-chip-group__label--FontSize);
+  }
+
+  .pf-c-chip-group__overflow {
+    padding: var(--pf-c-chip-group__overflow--PaddingTop) var(--pf-c-chip-group__overflow--PaddingRight) var(--pf-c-chip-group__overflow--PaddingBottom) var(--pf-c-chip-group__overflow--PaddingLeft);
+    margin-top: var(--pf-c-chip-group__overflow--MarginTop);
+    margin-right: var(--pf-c-chip-group__overflow--MarginRight);
+    margin-bottom: var(--pf-c-chip-group__overflow--MarginBottom);
+    background-color: var(--pf-c-chip-group__overflow--BackgroundColor);
   }
 
   > .pf-c-chip {
