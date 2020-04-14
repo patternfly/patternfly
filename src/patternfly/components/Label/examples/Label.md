@@ -38,30 +38,99 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-compact" label--modifier="pf-m-compact" label--isRemovable="true"}}
-  {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
-  {{/label-icon}}
+<br><br>
+
+{{#> label label--id="default-grey-compact" label--modifier="pf-m-compact"}}
   {{#> label-text}}
     Grey compact
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-link" label--type="a"}}
+{{#> label label--id="default-grey-compact-icon" label--modifier="pf-m-compact"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey compact icon
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-compact-removable" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey compact removable
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-compact-icon-removable" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey compact icon removable
+  {{/label-text}}
+{{/label}}
+
+<br><br>
+
+{{#> label label--id="default-grey-link" label-content--type="a" label-content--attribute='href="#"'}}
   {{#> label-text}}
     Grey link
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-button" label--type="button"}}
+{{#> label label--id="default-grey-link-icon" label-content--type="a" label-content--attribute='href="#"'}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey link icon
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-link-close" label-content--type="a" label-content--attribute='href="#"'  label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey link removable
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-link-icon-close" label-content--type="a" label-content--attribute='href="#"' label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey link icon and removable
+  {{/label-text}}
+{{/label}}
+
+<br><br>
+
+{{#> label label--id="default-grey-button" label-content--type="button"}}
   {{#> label-text}}
     Grey button
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-clickable-removable" label--modifier="pf-m-clickable" label--attribute='tabindex="0"' label--isRemovable="true"}}
+{{#> label label--id="default-grey-button-icon" label-content--type="button"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
   {{#> label-text}}
-    Grey clickable removable
+    Grey button icon
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-button-removable" label-content--type="button" label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey button removable
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="default-grey-button-icon-removable" label-content--type="button" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey button icon and removable
   {{/label-text}}
 {{/label}}
 
@@ -97,12 +166,6 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-blue" label--modifier="pf-m-blue pf-m-clickable" label--attribute='tabindex="0"'}}
-  {{#> label-text}}
-    Blue clickable label
-  {{/label-text}}
-{{/label}}
-
 <br><br>
 
 {{#> label label--id="default-green" label--modifier="pf-m-green"}}
@@ -132,12 +195,6 @@ import './Label.css'
   {{/label-icon}}
   {{#> label-text}}
     Green label
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="default-green" label--modifier="pf-m-green pf-m-clickable" label--attribute='tabindex="0"'}}
-  {{#> label-text}}
-    Green clickable label
   {{/label-text}}
 {{/label}}
 
@@ -173,12 +230,6 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-orange" label--modifier="pf-m-orange pf-m-clickable" label--attribute='tabindex="0"'}}
-  {{#> label-text}}
-    Orange clickable label
-  {{/label-text}}
-{{/label}}
-
 <br><br>
 
 {{#> label label--id="default-red" label--modifier="pf-m-red"}}
@@ -208,12 +259,6 @@ import './Label.css'
   {{/label-icon}}
   {{#> label-text}}
     Red label
-  {{/label-text}}
-{{/label}}
-
-{{#> label label--id="default-red" label--modifier="pf-m-red pf-m-clickable" label--attribute='tabindex="0"'}}
-  {{#> label-text}}
-    Red clickable label
   {{/label-text}}
 {{/label}}
 
@@ -249,12 +294,6 @@ import './Label.css'
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-purple" label--modifier="pf-m-purple pf-m-clickable" label--attribute='tabindex="0"'}}
-  {{#> label-text}}
-    Purple clickable label
-  {{/label-text}}
-{{/label}}
-
 <br><br>
 
 {{#> label label--id="default-cyan" label--modifier="pf-m-cyan"}}
@@ -286,19 +325,13 @@ import './Label.css'
     Cyan label
   {{/label-text}}
 {{/label}}
-
-{{#> label label--id="default-cyan-clickable" label--modifier="pf-m-cyan pf-m-clickable" label--attribute='tabindex="0"'}}
-  {{#> label-text}}
-    Cyan clickable label
-  {{/label-text}}
-{{/label}}
 ```
 
 
 ```hbs title=Outline
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
   {{#> label-text}}
-    Grey label
+    Grey
   {{/label-text}}
 {{/label}}
 
@@ -307,13 +340,13 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Grey label
+    Grey icon
   {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-grey-close" label--isRemovable="true" label--modifier="pf-m-outline"}}
   {{#> label-text}}
-    Grey label
+    Grey removable
   {{/label-text}}
 {{/label}}
 
@@ -322,34 +355,103 @@ import './Label.css'
     <i class="fas fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Grey label
+    Grey icon and removable
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey-compact" label--modifier="pf-m-outline pf-m-compact" label--isRemovable="true"}}
-  {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
-  {{/label-icon}}
+<br><br>
+
+{{#> label label--id="outline-grey-compact" label--modifier="pf-m-outline pf-m-compact"}}
   {{#> label-text}}
     Grey compact
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey-link" label--type="a" label--modifier="pf-m-outline"}}
+{{#> label label--id="outline-grey-compact-icon" label--modifier="pf-m-outline pf-m-compact"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey compact icon
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-compact-removable" label--modifier="pf-m-outline pf-m-compact" label--isRemovable="true"}}
+  {{#> label-text}}
+    Grey compact removable
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-compact-icon-removable" label--modifier="pf-m-outline pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey compact icon removable
+  {{/label-text}}
+{{/label}}
+
+<br><br>
+
+{{#> label label--id="outline-grey-link" label-content--type="a" label-content--attribute='href="#"' label--modifier="pf-m-outline"}}
   {{#> label-text}}
     Grey link
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey-button" label--type="button" label--modifier="pf-m-outline"}}
+{{#> label label--id="outline-grey-link-icon" label-content--type="a" label-content--attribute='href="#"' label--modifier="pf-m-outline"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey link icon
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-link-close" label-content--type="a" label-content--attribute='href="#"'  label--isRemovable="true" label--modifier="pf-m-outline"}}
+  {{#> label-text}}
+    Grey link removable
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-link-icon-close" label-content--type="a" label-content--attribute='href="#"' label--isRemovable="true" label--modifier="pf-m-outline"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey link icon and removable
+  {{/label-text}}
+{{/label}}
+
+<br><br>
+
+{{#> label label--id="outline-grey-button" label-content--type="button" label--modifier="pf-m-outline"}}
   {{#> label-text}}
     Grey button
   {{/label-text}}
 {{/label}}
 
-{{#> label label--id="outline-grey-clickable-removable" label--modifier="pf-m-outline pf-m-clickable" label--attribute='tabindex="0"' label--isRemovable="true"}}
+{{#> label label--id="outline-grey-button-icon" label-content--type="button" label--modifier="pf-m-outline"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
   {{#> label-text}}
-    Grey clickable removable
+    Grey button icon
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-button-removable" label-content--type="button" label--isRemovable="true" label--modifier="pf-m-outline"}}
+  {{#> label-text}}
+    Grey button removable
+  {{/label-text}}
+{{/label}}
+
+{{#> label label--id="outline-grey-button-icon-removable" label-content--type="button" label--isRemovable="true" label--modifier="pf-m-outline"}}
+  {{#> label-icon}}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey button icon and removable
   {{/label-text}}
 {{/label}}
 
@@ -592,7 +694,6 @@ Labels can be used in a variety of components and can adjust in font size to mat
 | `.pf-c-label` | `<span>`, `<a>`, `<button>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color.  |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
-| `.pf-m-clickable` | `span.pf-c-label` | Modifies the label to have clickable styles. This is used with removable labels that also serve as a link or button. |
 | `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
 | `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |
 | `.pf-m-orange` | `.pf-c-label` | Modifies the label to have orange colored styling. |

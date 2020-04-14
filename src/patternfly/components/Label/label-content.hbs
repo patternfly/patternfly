@@ -1,0 +1,6 @@
+<{{# if label-content--type}}{{label-content--type}}{{else}}span{{/if}} class="pf-c-label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
+  {{#if label-content--attribute}}
+    {{{label-content--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</{{# if label-content--type}}{{label-content--type}}{{else}}span{{/if}}>
