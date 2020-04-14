@@ -437,11 +437,11 @@
 
   // Toggles
   .pf-c-table__toggle {
-    .pf-c-button > .pf-c-table__toggle-icon {
+    .pf-c-button .pf-c-table__toggle-icon {
       transition: var(--pf-c-table__toggle__icon--Transition);
     }
 
-    .pf-c-button.pf-m-expanded > .pf-c-table__toggle-icon {
+    .pf-c-button.pf-m-expanded .pf-c-table__toggle-icon {
       transform: var(--pf-c-table__toggle--m-expanded__icon--Transform);
     }
   }

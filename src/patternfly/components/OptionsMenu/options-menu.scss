@@ -146,7 +146,7 @@
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
-  > .pf-c-options-menu__toggle-button-icon {
+  .pf-c-options-menu__toggle-button-icon {
     position: relative;
   }
 
@@ -170,7 +170,7 @@
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 
-    > .pf-c-options-menu__toggle-button-icon {
+    .pf-c-options-menu__toggle-button-icon {
       line-height: var(--pf-c-options-menu__toggle--LineHeight);
     }
 

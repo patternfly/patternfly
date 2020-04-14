@@ -294,13 +294,13 @@
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
 
-    > .pf-c-table__toggle-icon {
+    .pf-c-table__toggle-icon {
       transition: var(--pf-c-table__toggle--c-button__toggle-icon--Transition);
       transform: var(--pf-c-table__toggle--c-button__toggle-icon--Transform);
     }
 
     &.pf-m-expanded {
-      > .pf-c-table__toggle-icon {
+      .pf-c-table__toggle-icon {
         transform: var(--pf-c-table__toggle--c-button--m-expanded__toggle-icon--Transform);
       }
     }

@@ -298,7 +298,7 @@
   margin-left: var(--pf-c-data-list__toggle--MarginLeft);
 
   // rotate icon
-  .pf-c-button > .pf-c-data-list__toggle-icon {
+  .pf-c-button .pf-c-data-list__toggle-icon {
     pointer-events: none;
     transition: var(--pf-c-data-list__toggle-icon--Transition);
 
