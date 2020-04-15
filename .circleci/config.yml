@@ -111,6 +111,10 @@ jobs:
           command: npm run lint:css
           when: always
       - run:
+          name: Confirm consumers can compile SASS
+          command: yarn run node-sass dist/patternfly.scss
+          when: always
+      - run:
           name: Lint CSS Size
           command: .circleci/css-size-report/sizeReport.js run
           when: always

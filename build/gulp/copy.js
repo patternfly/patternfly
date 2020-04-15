@@ -18,6 +18,7 @@ function copySource(sassFiles) {
       dest('dist')
     ),
     // Copy source files
+    src('src/patternfly/*.scss').pipe(dest('dist')),
     src('src/patternfly/sass-utilities/*').pipe(dest('dist/sass-utilities')),
     // base
     src('src/patternfly/base/*').pipe(dest('dist/base')),
