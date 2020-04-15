@@ -38,8 +38,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   // Header nav
   --pf-c-page__header-nav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__header-nav--lg--BackgroundColor: transparent;
-  --pf-c-page__header-nav--BorderTop: 1px solid var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__header-nav--lg--BorderTop: 0;
   --pf-c-page__header-nav--PaddingRight: 0;
   --pf-c-page__header-nav--PaddingLeft: 0;
   --pf-c-page__header-nav--md--PaddingRight: var(--pf-global--spacer--sm);
@@ -59,7 +57,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-page__header-nav--BackgroundColor: var(--pf-c-page__header-nav--lg--BackgroundColor);
-    --pf-c-page__header-nav--BorderTop: var(--pf-c-page__header-nav--lg--BorderTop);
     --pf-c-page__header-nav--PaddingRight: var(--pf-c-page__header-nav--lg--PaddingRight);
     --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--lg--PaddingLeft);
   }
@@ -241,20 +238,16 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-right: var(--pf-c-page__header-nav--PaddingRight);
   padding-left: var(--pf-c-page__header-nav--PaddingLeft);
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
-  border-top: var(--pf-c-page__header-nav--BorderTop);
   grid-column: 1 / -1;
   grid-row: 2 / 3;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    flex: 1;
-    order: initial;
-    width: auto;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
   .pf-c-nav {
-    --pf-c-nav__scroll-button--m-disabled--Color: var(--pf-c-page__header--c-nav__scroll-button--disabled--Color);
+    --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-page__header--c-nav__scroll-button--disabled--Color);
     --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-page__header--c-nav__scroll-button--before--BorderColor);
     --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-page__header--c-nav__scroll-button--disabled--before--BorderColor);
 
