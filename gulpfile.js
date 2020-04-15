@@ -10,7 +10,6 @@ const { generateSnippets } = require('./build/gulp/snippets');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
-  './src/patternfly/addons/patternfly*.scss',
   './src/patternfly/base/patternfly*.scss',
   './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
   '!./src/patternfly/**/_all.scss'
