@@ -14,4 +14,4 @@ import 'gatsby-theme-patternfly-org/global.css';
 import './dist/patternfly.css';
 
 // Utilities
-import './dist/addons/patternfly-addons.css';
+import './dist/patternfly-addons.css';
