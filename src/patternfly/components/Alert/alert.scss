@@ -3,8 +3,8 @@
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert--GridTemplateColumns: max-content 1fr max-content;
-  --pf-c-alert--before--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--before--BorderTopColor: var(--pf-global--default-color--200);
+  --pf-c-alert--BorderTopWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-alert--BorderTopColor: var(--pf-global--default-color--200);
   --pf-c-alert--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-alert--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-alert--PaddingBottom: var(--pf-global--spacer--md);
@@ -33,22 +33,22 @@
   --pf-c-alert__action-group__c-button--not-last-child--MarginRight: var(--pf-global--spacer--lg);
 
   // Success
-  --pf-c-alert--m-success--before--BorderTopColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-success--BorderTopColor: var(--pf-global--success-color--100);
   --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--100);
   --pf-c-alert--m-success__title--Color: var(--pf-global--success-color--200);
 
   // Danger
-  --pf-c-alert--m-danger--before--BorderTopColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-danger--BorderTopColor: var(--pf-global--danger-color--100);
   --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--100);
   --pf-c-alert--m-danger__title--Color: var(--pf-global--danger-color--200);
 
   // Warning
-  --pf-c-alert--m-warning--before--BorderTopColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-warning--BorderTopColor: var(--pf-global--warning-color--100);
   --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--100);
   --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
 
   // Info
-  --pf-c-alert--m-info--before--BorderTopColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-info--BorderTopColor: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
@@ -74,6 +74,7 @@
   display: grid;
   padding: var(--pf-c-alert--PaddingTop) var(--pf-c-alert--PaddingRight) var(--pf-c-alert--PaddingBottom) var(--pf-c-alert--PaddingLeft);
   background-color: var(--pf-c-alert--BackgroundColor);
+  border-top: var(--pf-c-alert--BorderTopWidth) solid var(--pf-c-alert--BorderTopColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
   grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   grid-template-areas:
@@ -81,38 +82,29 @@
     "icon description description"
     "icon actiongroup actiongroup";
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    content: "";
-    border: var(--pf-c-alert--before--BorderTopWidth) solid var(--pf-c-alert--before--BorderTopColor);
-  }
-
   &.pf-m-success {
-    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-success--before--BorderTopColor);
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-success__title--Color);
     --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-success--BackgroundColor);
   }
 
   &.pf-m-danger {
-    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-danger--before--BorderTopColor);
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-danger--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-danger__icon--Color);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-danger__title--Color);
     --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-danger--BackgroundColor);
   }
 
   &.pf-m-warning {
-    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-warning--before--BorderTopColor);
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-warning--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-warning__icon--Color);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
     --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--BackgroundColor);
   }
 
   &.pf-m-info {
-    --pf-c-alert--before--BorderTopColor: var(--pf-c-alert--m-info--before--BorderTopColor);
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-info--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-info__icon--Color);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-info__title--Color);
     --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-info--BackgroundColor);
