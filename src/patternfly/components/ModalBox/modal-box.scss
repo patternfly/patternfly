@@ -1,10 +1,6 @@
 .pf-c-modal-box {
   --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-modal-box--BorderColor: transparent;
-  --pf-c-modal-box--child--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-modal-box--child--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-modal-box--child--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-modal-box--last-child--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-modal-box--BorderSize: var(--pf-global--BorderWidth--sm);
   --pf-c-modal-box--BoxShadow: var(--pf-global--BoxShadow--xl);
   --pf-c-modal-box--ZIndex: var(--pf-global--ZIndex--xl);
@@ -14,13 +10,26 @@
   --pf-c-modal-box--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
+  // Header
+  --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__header--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__header--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__header--last-child--PaddingBottom: var(--pf-global--spacer--lg);
+
   // Description
-  --pf-c-modal-box__header--description--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-modal-box__description--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-modal-box__description--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__description--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__description--last-child--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Body
   --pf-c-modal-box__body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)); // Allow for at least 1 line of content in the body
-  --pf-c-modal-box__description--body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-modal-box__body--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__body--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__body--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__body--last-child--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-modal-box__header--body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-modal-box__description--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
   --pf-c-modal-box--c-button--Top: calc(var(--pf-global--spacer--lg) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
@@ -29,6 +38,9 @@
 
   // Footer
   --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__footer--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__footer--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__footer--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Footer buttons
   --pf-c-modal-box__footer--c-button--MarginRight: var(--pf-global--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
@@ -74,28 +86,22 @@
   }
 }
 
-.pf-c-modal-box__header,
-.pf-c-modal-box__description,
-.pf-c-modal-box__body,
-.pf-c-modal-box__footer {
-  padding-top: var(--pf-c-modal-box--child--PaddingTop);
-  padding-right: var(--pf-c-modal-box--child--PaddingRight);
-  padding-left: var(--pf-c-modal-box--child--PaddingLeft);
-
-  &:last-child {
-    padding-bottom: var(--pf-c-modal-box--last-child--PaddingBottom);
-  }
-}
-
 .pf-c-modal-box__header {
   flex: 0 0 auto;
+  padding-top: var(--pf-c-modal-box__header--PaddingTop);
+  padding-right: var(--pf-c-modal-box__header--PaddingRight);
+  padding-left: var(--pf-c-modal-box__header--PaddingLeft);
+
+  &:last-child {
+    padding-bottom: var(--pf-c-modal-box__header--last-child--PaddingBottom);
+  }
 
   + .pf-c-modal-box__description {
-    --pf-c-modal-box--child--PaddingTop: var(--pf-c-modal-box__header--description--PaddingTop);
+    --pf-c-modal-box__description--PaddingTop: var(--pf-c-modal-box__header--description--PaddingTop);
   }
 
   + .pf-c-modal-box__body {
-    --pf-c-modal-box--child--PaddingTop: var(--pf-c-modal-box__header--body--PaddingTop);
+    --pf-c-modal-box__body--PaddingTop: var(--pf-c-modal-box__header--body--PaddingTop);
   }
 
   > .pf-c-title {
@@ -104,8 +110,16 @@
 }
 
 .pf-c-modal-box__description {
+  padding-top: var(--pf-c-modal-box__description--PaddingTop);
+  padding-right: var(--pf-c-modal-box__description--PaddingRight);
+  padding-left: var(--pf-c-modal-box__description--PaddingLeft);
+
+  &:last-child {
+    padding-bottom: var(--pf-c-modal-box__description--last-child--PaddingBottom);
+  }
+
   + .pf-c-modal-box__body {
-    --pf-c-modal-box--child--PaddingTop: var(--pf-c-modal-box__description--body--PaddingTop);
+    --pf-c-modal-box__body--PaddingTop: var(--pf-c-modal-box__description--body--PaddingTop);
   }
 }
 
@@ -113,20 +127,29 @@
 .pf-c-modal-box__body {
   flex: 1 1 auto;
   min-height: var(--pf-c-modal-box__body--MinHeight);
+  padding-top: var(--pf-c-modal-box__body--PaddingTop);
+  padding-right: var(--pf-c-modal-box__body--PaddingRight);
+  padding-left: var(--pf-c-modal-box__body--PaddingLeft);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   word-break: break-word;
   -webkit-overflow-scrolling: touch;
+
+  &:last-child {
+    padding-bottom: var(--pf-c-modal-box__body--last-child--PaddingBottom);
+  }
 }
 
 // Footer
 .pf-c-modal-box__footer {
-  --pf-c-modal-box--child--PaddingTop: var(--pf-c-modal-box__footer--PaddingTop);
-
   display: flex;
   flex: 0 0 auto;
   align-items: center;
+  padding-top: var(--pf-c-modal-box__footer--PaddingTop);
+  padding-right: var(--pf-c-modal-box__footer--PaddingRight);
+  padding-bottom: var(--pf-c-modal-box__footer--PaddingBottom);
+  padding-left: var(--pf-c-modal-box__footer--PaddingLeft);
 
   // Base margin left and right equal for buttons when wrapped
   > .pf-c-button:not(:last-child) {
