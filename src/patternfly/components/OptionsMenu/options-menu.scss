@@ -65,10 +65,6 @@
   --pf-c-options-menu__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-options-menu__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Divider
-  --pf-c-options-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu--c-divider--MarginBottom: var(--pf-global--spacer--sm);
-
   // Groups
   --pf-c-options-menu__group--group--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__group-title--PaddingTop: var(--pf-global--spacer--sm);
@@ -79,6 +75,10 @@
   --pf-c-options-menu__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-options-menu__group-title--Color: var(--pf-global--Color--dark-200);
 
+  // Divider
+  --pf-c-options-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu--c-divider--MarginBottom: var(--pf-global--spacer--sm);
+
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -86,6 +86,11 @@
   .pf-c-divider {
     margin-top: var(--pf-c-options-menu--c-divider--MarginTop);
     margin-bottom: var(--pf-c-options-menu--c-divider--MarginBottom);
+
+    // Support divider as last item in group to separate groups
+    &:last-child {
+      --pf-c-options-menu--c-divider--MarginBottom: 0;
+    }
   }
 }
 
