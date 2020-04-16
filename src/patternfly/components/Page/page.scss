@@ -127,8 +127,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--xl--Right: calc(-1 * var(--pf-global--spacer--xs)); // This sets the the button to the edge of its container with 4px clearance on the right
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--md--Left);
-    --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--md--Right);
+    --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--Left: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-1--xl--Left);
+    --pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--Right: var(--pf-c-page__main-nav--c-nav__scroll-button--nth-of-type-2--xl--Right);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
