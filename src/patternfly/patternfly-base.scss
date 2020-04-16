@@ -1,6 +1,6 @@
 @import "./sass-utilities/all";
-@import "./variables";
-@import "./fonts";
-@import "./base";
-@import "./themes";
-@import "./icons";
+@import "base/variables";
+@import "base/fonts";
+@import "base/base";
+@import "base/themes";
+@import "base/icons";

@@ -4,13 +4,13 @@
   @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
 }
 
-@import "./shield-inheritable";
-@import "./shield-noninheritable";
+@import "shield-inheritable";
+@import "shield-noninheritable";
 
 @if $pf-global--enable-shield {
   @include shield-inheritable;
   @include shield-noninheritable;
 }
 
-@import "./common";
-@import "./globals";
+@import "common";
+@import "globals";
