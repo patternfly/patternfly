@@ -196,15 +196,13 @@
     border-color: var(--pf-c-select__toggle--BorderTopColor) var(--pf-c-select__toggle--BorderRightColor) var(--pf-c-select__toggle--BorderBottomColor) var(--pf-c-select__toggle--BorderLeftColor);
   }
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     &::before {
       --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--hover--BorderBottomColor);
     }
   }
 
   &:active,
-  &.pf-m-active,
   &:focus-within {
     &::before {
       --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--active--BorderBottomColor);
@@ -229,9 +227,7 @@
     }
 
     &:hover,
-    &.pf-m-hover,
     &:active,
-    &.pf-m-active,
     .pf-m-expanded > & {
       --pf-c-select__toggle--Color: var(--pf-c-select__toggle--m-plain--hover--Color);
 
@@ -352,8 +348,7 @@
   border-bottom-width: inherit;
   border-left: var(--pf-c-select__toggle-typeahead--BorderLeft);
 
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     // Set the bottom padding to allow for the bottom border width of the containing toggle
     // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
     padding-bottom: var(--pf-c-select__toggle-typeahead--active--PaddingBottom);
@@ -408,16 +403,13 @@
   border: none;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     color: var(--pf-c-select__menu-item--Color);
     text-decoration: none;
     background-color: var(--pf-c-select__menu-item--hover--BackgroundColor);
   }
 
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     position: relative;
   }
 

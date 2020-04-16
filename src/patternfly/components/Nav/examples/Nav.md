@@ -530,9 +530,6 @@ The navigation system relies on several different sub-components:
 | `.pf-m-dark` | `.pf-c-nav` | Modifies the nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
-| `.pf-m-hover` | `.pf-c-nav__link` | Modifies to display the link as hovered. |
-| `.pf-m-focus` | `.pf-c-nav__link` | Modifies to display the link as focussed. |
 | `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state. |
-| `.pf-m-active` | `.pf-c-nav__link` | Modifies to display the link as active. |
 | `.pf-m-start` | `.pf-c-nav` | Modifiers the nav to show the overflow at the start. |
 | `.pf-m-end` | `.pf-c-nav` | Modifiers the nav to show the overflow at the end. |

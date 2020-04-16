@@ -53,21 +53,18 @@
   &.pf-m-overflow {
     border: 0;
 
-    &.pf-m-hover,
     &:hover {
       &::before {
         --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--hover--before--BorderColor);
       }
     }
 
-    &.pf-m-focus,
     &:focus {
       &::before {
         --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--focus--before--BorderColor);
       }
     }
 
-    &.pf-m-active,
     &:active {
       &::after {
         --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--active--before--BorderColor);

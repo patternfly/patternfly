@@ -106,23 +106,19 @@
   color: var(--pf-c-app-launcher__toggle--Color);
   border: none;
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--hover--Color);
   }
 
-  &:active,
-  &.pf-m-active {
+  &:active {
     --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--active--Color);
   }
 
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--focus--Color);
   }
 
-  &:disabled,
-  &.pf-m-disabled {
+  &:disabled {
     --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--disabled--Color);
 
     pointer-events: none;
@@ -176,9 +172,7 @@
   border: 0;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-c-app-launcher__menu-item--hover__menu-item--m-action--Color);
 
     text-decoration: none;
@@ -187,9 +181,7 @@
   @at-root .pf-c-app-launcher__menu-wrapper,
   & {
     &:hover,
-    &.pf-m-hover,
-    &:focus,
-    &.pf-m-focus {
+    &:focus {
       background-color: var(--pf-c-app-launcher__menu-item--hover--BackgroundColor);
     }
   }

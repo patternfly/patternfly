@@ -80,7 +80,6 @@
     }
   }
 
-  &.pf-m-hover,
   &:hover {
     background-color: var(--pf-c-accordion__toggle--hover--BackgroundColor);
 
@@ -89,7 +88,6 @@
     }
   }
 
-  &.pf-m-active,
   &:active {
     background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
 
@@ -99,7 +97,6 @@
     }
   }
 
-  &.pf-m-focus,
   &:focus {
     background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
 

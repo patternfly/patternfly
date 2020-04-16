@@ -223,7 +223,6 @@
   }
 
   &:not(.pf-m-action):hover,
-  &:not(.pf-m-action).pf-m-hover,
   &.pf-m-action .pf-c-dropdown__toggle-button:hover {
     &::before {
       --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--hover--BorderBottomColor);
@@ -231,7 +230,6 @@
   }
 
   &:not(.pf-m-action):active,
-  &:not(.pf-m-action).pf-m-active,
   &.pf-m-action .pf-c-dropdown__toggle-button:active {
     &::before {
       --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--active--BorderBottomColor);
@@ -241,7 +239,6 @@
   }
 
   &:not(.pf-m-action):focus,
-  &:not(.pf-m-action).pf-m-focus,
   &.pf-m-action .pf-c-dropdown__toggle-button:focus {
     &::before {
       --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--focus--BorderBottomColor);
@@ -272,11 +269,8 @@
     }
 
     &:hover,
-    &.pf-m-hover,
     &:active,
-    &.pf-m-active,
     &:focus,
-    &.pf-m-focus,
     .pf-m-expanded > & {
       --pf-c-dropdown__toggle--m-plain--Color: var(--pf-c-dropdown__toggle--m-plain--hover--Color);
 
@@ -299,18 +293,15 @@
       border: 0;
     }
 
-    &:hover,
-    &.pf-m-hover {
+    &:hover {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--hover--BackgroundColor);
     }
 
-    &:active,
-    &.pf-m-active {
+    &:active {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--active--BackgroundColor);
     }
 
-    &:focus,
-    &.pf-m-focus {
+    &:focus {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--focus--BackgroundColor);
     }
 
@@ -383,9 +374,7 @@
   border: none;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--hover--Color);
     --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
 
@@ -409,9 +398,7 @@
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--m-text--Color);
 
     &:hover,
-    &.pf-m-hover,
-    &:focus,
-    &.pf-m-focus {
+    &:focus {
       --pf-c-dropdown__menu-item--BackgroundColor: transparent;
     }
   }

@@ -58,4 +58,3 @@ cssPrefix: pf-c-about-modal-box
 | `.pf-c-about-modal-box__content` |  `<div>` |  Initiates a modal box content cell. |
 | `.pf-c-about-modal-box__body` |  `<div>` |  Initiates a modal box body cell. |
 | `.pf-c-about-modal-box__strapline` |  `<p>` |  Initiates a modal box strapline cell. |
-| `.pf-m-hover` | `.pf-c-about-modal-box__close .pf-c-button.pf-m-action` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.

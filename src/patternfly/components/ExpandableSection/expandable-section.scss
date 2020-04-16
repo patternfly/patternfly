@@ -35,18 +35,15 @@
     background: transparent;
     border: none;
 
-    &:hover,
-    &.pf-m-hover {
+    &:hover {
       --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--hover--Color);
     }
 
-    &:active,
-    &.pf-m-active {
+    &:active {
       --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--active--Color);
     }
 
-    &:focus,
-    &.pf-m-focus {
+    &:focus {
       --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--focus--Color);
     }
   }
