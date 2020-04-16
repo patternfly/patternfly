@@ -4,7 +4,7 @@
   {{#if dropdown-menu--attribute}}
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
-  {{#> dropdown-menu-group}}
+  {{#> dropdown-group}}
     <ul>
       <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Link{{/dropdown-menu-item}}</li>
       <li>{{#> dropdown-menu-item}}Action{{/dropdown-menu-item}}</li>
@@ -12,11 +12,11 @@
         {{> divider divider--type="li"}}
       {{/if}}
     </ul>
-  {{/dropdown-menu-group}}
+  {{/dropdown-group}}
   {{#if dropdown--HasDividersGroups}}
     {{> divider}}
   {{/if}}
-  {{#> dropdown-menu-group}}
+  {{#> dropdown-group}}
     <h1 class="pf-c-dropdown__group-title">Group 2</h1>
     <ul>
       <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Group 2 link{{/dropdown-menu-item}}</li>
@@ -25,15 +25,15 @@
         {{> divider divider--type="li"}}
       {{/if}}
     </ul>
-  {{/dropdown-menu-group}}
+  {{/dropdown-group}}
   {{#if dropdown--HasDividersGroups}}
     {{> divider}}
   {{/if}}
-  {{#> dropdown-menu-group}}
+  {{#> dropdown-group}}
     <h1 class="pf-c-dropdown__group-title">Group 3</h1>
     <ul>
       <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Group 3 link{{/dropdown-menu-item}}</li>
       <li>{{#> dropdown-menu-item}}Group 3 action{{/dropdown-menu-item}}</li>
     </ul>
-  {{/dropdown-menu-group}}
+  {{/dropdown-group}}
 </div>

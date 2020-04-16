@@ -119,7 +119,7 @@
 
   // Menu group
   // add a little space if it's not the first group because the first one also has the menu padding
-  --pf-c-select__menu-group--not--first-of-type--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-select__menu-group--menu-group--PaddingTop: var(--pf-global--spacer--sm);
 
   // Menu section heading
   // Paddings are set to always line up with the other menu items
@@ -148,6 +148,10 @@
       --pf-c-select-menu--c-divider--MarginBottom: 0;
     }
   }
+}
+
+.pf-c-select__menu-search + .pf-c-divider {
+  --pf-c-select-menu--c-divider--MarginTop: 0;
 }
 
 .pf-c-select__toggle {
@@ -267,7 +271,6 @@
     padding-left: var(--pf-c-select__toggle-button--PaddingLeft);
   }
 }
-
 
 .pf-c-select__toggle-arrow {
   * + & {
@@ -446,8 +449,8 @@
   background-color: inherit;
 }
 
-.pf-c-select__menu-group:not(:first-of-type) {
-  padding-top: var(--pf-c-select__menu-group--not--first-of-type--PaddingTop);
+.pf-c-select__menu-group + .pf-c-select__menu-group {
+  padding-top: var(--pf-c-select__menu-group--menu-group--PaddingTop);
 }
 
 .pf-c-select__menu-search {
