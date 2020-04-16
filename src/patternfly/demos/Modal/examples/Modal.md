@@ -12,10 +12,8 @@ section: demos
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> modal-box-header}}
-          {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
-            Overwrite existing file?
-          {{/title}}
+        {{#> modal-box-header modal-box-header--attribute='id="modal-title"'}}
+          Overwrite existing file?
         {{/modal-box-header}}
         {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
@@ -43,10 +41,8 @@ section: demos
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> modal-box-header}}
-          {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-scroll-title"'}}
-            This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
-          {{/title}}
+        {{#> modal-box-header  modal-box-header--attribute='id="modal-scroll-title"'}}
+          This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
         {{/modal-box-header}}
         {{#> modal-box-description modal-box-description--attribute='id="modal-scroll-description"'}}
           This is a modal description. The description will not scroll with the body contents.
@@ -84,10 +80,8 @@ section: demos
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> modal-box-header}}
-          {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
-            This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
-          {{/title}}
+        {{#> modal-box-header modal-box-header--attribute='id="modal-lg-title"'}}
+          This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
         {{/modal-box-header}}
         {{#> modal-box-body}}
           <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>

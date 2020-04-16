@@ -328,10 +328,8 @@ section: demos
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
-      {{#> modal-box-header}}
-        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
-          Manage columns
-        {{/title}}
+      {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
+        Manage columns
       {{/modal-box-header}}
       {{#> modal-box-description}}
         {{#> content}}

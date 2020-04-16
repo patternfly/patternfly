@@ -9,10 +9,12 @@
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
 
   // Header
-  --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-modal-box__header--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-modal-box__header--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-modal-box__header--last-child--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__title--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-modal-box__title--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-c-modal-box__title--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__title--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__title--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-modal-box__title--last-child--PaddingBottom: var(--pf-global--spacer--lg);
 
   // Description
   --pf-c-modal-box__description--PaddingTop: var(--pf-global--spacer--xs);
@@ -26,7 +28,7 @@
   --pf-c-modal-box__body--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-modal-box__body--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-modal-box__body--last-child--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-modal-box__header--body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-modal-box__title--body--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-modal-box__description--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
@@ -83,22 +85,23 @@
   }
 }
 
-.pf-c-modal-box__header {
+.pf-c-modal-box__title {
+  @include pf-text-overflow;
+
   flex: 0 0 auto;
-  padding-top: var(--pf-c-modal-box__header--PaddingTop);
-  padding-right: var(--pf-c-modal-box__header--PaddingRight);
-  padding-left: var(--pf-c-modal-box__header--PaddingLeft);
+  padding-top: var(--pf-c-modal-box__title--PaddingTop);
+  padding-right: var(--pf-c-modal-box__title--PaddingRight);
+  padding-left: var(--pf-c-modal-box__title--PaddingLeft);
+  font-family: var(--pf-global--FontFamily--heading--sans-serif);
+  font-size: var(--pf-c-modal-box__title--FontSize);
+  line-height: var(--pf-c-modal-box__title--LineHeight);
 
   &:last-child {
-    padding-bottom: var(--pf-c-modal-box__header--last-child--PaddingBottom);
+    padding-bottom: var(--pf-c-modal-box__title--last-child--PaddingBottom);
   }
 
   + .pf-c-modal-box__body {
-    --pf-c-modal-box__body--PaddingTop: var(--pf-c-modal-box__header--body--PaddingTop);
-  }
-
-  > .pf-c-title {
-    @include pf-text-overflow;
+    --pf-c-modal-box__body--PaddingTop: var(--pf-c-modal-box__title--body--PaddingTop);
   }
 }
 
