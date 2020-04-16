@@ -127,7 +127,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. **Required** |
 | `.pf-c-modal-box__header` | `<div>` | Initiates a modal box header. |
 | `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. The title goes in the `.pf-c-modal-box__header` element. |
-| `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. A modal title and modal body are **required** if using a modal description. |
+| `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. A modal header, title and modal body are **required** if using a modal description. |
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. A modal box body is **required** if there is no modal box title. |
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
