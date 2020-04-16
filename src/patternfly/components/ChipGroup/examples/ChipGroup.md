@@ -6,7 +6,7 @@ cssPrefix: pf-c-chip-group
 
 ## Examples
 ```hbs title=Simple-inline-chip-group-overflow
-{{#> chip-group chip-group--id="select-collapsed"}}
+{{#> chip-group chip-group--id="simple-inline-chip-group-overflow"}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
       Chip one
@@ -40,7 +40,7 @@ cssPrefix: pf-c-chip-group
 ```
 
 ```hbs title=Simple-inline-chip-group-expanded
-{{#> chip-group chip-group--id="select-expanded"}}
+{{#> chip-group chip-group--id="simple-inline-chip-group-expanded"}}
   {{#> chip}}
     {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select"')}}
       Chip one
@@ -90,7 +90,7 @@ cssPrefix: pf-c-chip-group
 ```
 
 ```hbs title=Chip-group-with-categories
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-collapsed"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories"}}
   {{#> chip-group-label}}
     Category one
   {{/chip-group-label}}
@@ -122,7 +122,7 @@ cssPrefix: pf-c-chip-group
 ```
 
 ```hbs title=Chip-group-with-categories-overflow
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-collapsed"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow"}}
   {{#> chip-group-label}}
     Category one
   {{/chip-group-label}}
@@ -159,7 +159,7 @@ cssPrefix: pf-c-chip-group
 ```
 
 ```hbs title=Chip-group-with-categories-overflow-expanded
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-expanded"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded"}}
   {{#> chip-group-label}}
     Category one
   {{/chip-group-label}}
@@ -212,7 +212,7 @@ cssPrefix: pf-c-chip-group
 ```
 
 ```hbs title=Chip-group-with-categories-removable
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-toolbar-closable"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
   {{/chip-group-label}}
@@ -247,7 +247,7 @@ cssPrefix: pf-c-chip-group
 ### Overview
 A chip group is constrained to the width of its container and will wrap when it exceeds that width. An overflow value can be set and when the number of chips exceeds that value, additional chips will be hidden by default. The default overflow value will be set to 3 chips but this can be adjusted per application needs. The toggle button after the last chip allows the group to be expanded (or collapsed).
 
-If you want to create sub-groupings of chips to represent multiple values applied against the same category, chips can be grouped by category. This can be useful in filtering use cases, for example, where you want all items the match more than one value of the same attribute, e.g., ‘status = down OR needs maintenance’.
+If you want to create sub-groupings of chips to represent multiple values applied against the same category, chips can be grouped by category. This can be useful in filtering use cases, for example, where you want all items that match more than one value of the same attribute, e.g., ‘status = down OR needs maintenance’.
 
 The chip group requires the [chip component](/documentation/core/components/chip).
 

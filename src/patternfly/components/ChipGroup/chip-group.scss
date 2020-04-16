@@ -1,10 +1,11 @@
 .pf-c-chip-group {
   @include pf-t-light; // force the container follow the light theme
 
+  --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
   --pf-c-chip-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-category--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--m-category-BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-chip-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
   // Label in group
@@ -23,13 +24,14 @@
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: var(--pf-c-chip-group--MarginBottom);
 
   &.pf-m-category {
     padding-top: var(--pf-c-chip-group--m-category--PaddingTop);
     padding-right: var(--pf-c-chip-group--m-category--PaddingRight);
     padding-left: var(--pf-c-chip-group--m-category--PaddingLeft);
     background-color: var(--pf-c-chip-group--m-category--BackgroundColor);
-    border-radius: var(--pf-c-chip-group--m-category-BorderRadius);
+    border-radius: var(--pf-c-chip-group--m-category--BorderRadius);
   }
 
   .pf-c-chip-group__label {
