@@ -64,15 +64,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar__group--m-filter-group--spacer: var(--pf-c-data-toolbar__group--spacer);
   --pf-c-data-toolbar__group--m-filter-group--space-items: 0;
 
-  // remove during breaking change
-  // Separator
-  --pf-c-data-toolbar__item--m-separator--spacer: var(--pf-c-data-toolbar__item--spacer);
-  --pf-c-data-toolbar__item--m-separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-toolbar__item--m-separator--Width: var(--pf-global--BorderWidth--md);
-  --pf-c-data-toolbar__item--m-separator--Height: var(--pf-global--FontSize--lg);
-
-  // end - remove during breaking change
-
   // Overflow menu item
   --pf-c-data-toolbar__item--m-overflow-menu--spacer: var(--pf-c-data-toolbar__item--spacer);
 
@@ -193,19 +184,6 @@ $pf-c-data-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
   --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__item--spacer);
 
   margin-right: var(--pf-c-data-toolbar--spacer);
-
-  // remove during breaking change
-  // Separator
-  &.pf-m-separator {
-    --pf-c-data-toolbar--spacer: var(--pf-c-data-toolbar__item--m-separator--spacer);
-
-    align-self: center;
-    width: var(--pf-c-data-toolbar__item--m-separator--Width);
-    height: var(--pf-c-data-toolbar__item--m-separator--Height);
-    background-color: var(--pf-c-data-toolbar__item--m-separator--BackgroundColor);
-  }
-
-  // end - remove during breaking change
 
   // Overflow menu
   &.pf-m-overflow-menu {

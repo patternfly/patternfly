@@ -57,7 +57,7 @@ Several components in the following examples do not include functional and/or ac
       {{#> data-toolbar-item}}
         Item
       {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{> divider divider--modifier="pf-m-vertical"}}
       {{#> data-toolbar-group}}
         {{#> data-toolbar-item}}
           Item
@@ -69,7 +69,7 @@ Several components in the following examples do not include functional and/or ac
           Item
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{> divider divider--modifier="pf-m-vertical"}}
       {{#> data-toolbar-item}}
         Item
       {{/data-toolbar-item}}
@@ -90,7 +90,6 @@ Several components in the following examples do not include functional and/or ac
 | -- | -- | -- |
 | `.pf-c-data-toolbar__item` | `<div>` | Initiates the toolbar component item. **Required** |
 | `.pf-c-data-toolbar__group` | `<div>` | Initiates the toolbar component group. |
-| `.pf-m-separator` | `.pf-c-data-toolbar__item` | Modifies item to a separator. |
 
 ### Spacers
 
@@ -112,7 +111,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-lg"}}
         Item
       {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{> divider divider--modifier="pf-m-vertical"}}
       {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-spacer-none pf-m-spacer-sm-on-md pf-m-spacer-md-on-lg pf-m-spacer-lg-on-xl"}}
         Item
       {{/data-toolbar-item}}
@@ -136,7 +135,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
           Item
         {{/data-toolbar-item}}
       {{/data-toolbar-group}}
-      {{#> data-toolbar-item data-toolbar-item--modifier="pf-m-separator"}}{{/data-toolbar-item}}
+      {{> divider divider--modifier="pf-m-vertical"}}
       {{#> data-toolbar-group data-toolbar-group--modifier="pf-m-space-items-none pf-m-space-items-sm-on-md pf-m-space-items-md-on-lg pf-m-space-items-lg-on-xl"}}
         {{#> data-toolbar-item}}
           Item
@@ -563,7 +562,6 @@ As the data toolbar component is a hybrid layout and component, some of its elem
 | `.pf-c-data-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-c-data-toolbar__content-section` per `.pf-c-data-toolbar__content` **Required** |
 | `.pf-c-data-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
 | `.pf-m-expanded` | `.pf-c-data-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
-| `.pf-m-separator` | `.pf-c-data-toolbar__item` | Initiates separator border. |
 | `.pf-m-bulk-select` | `.pf-c-data-toolbar__item` | Initiates bulk select spacing. |
 | `.pf-m-overflow-menu` | `.pf-c-data-toolbar__item` | Initiates overflow menu spacing. |
 | `.pf-m-pagination` | `.pf-c-data-toolbar__item` | Initiates pagination spacing and margin. |
