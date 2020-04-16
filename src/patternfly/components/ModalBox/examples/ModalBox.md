@@ -10,9 +10,11 @@ cssPrefix: pf-c-modal-box
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
-  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
-    Modal header
-  {{/title}}
+  {{#> modal-box-header}}
+    {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title-basic"'}}
+      Modal header
+    {{/title}}
+  {{/modal-box-header}}
   {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
     To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
   {{/modal-box-body}}
@@ -27,9 +29,11 @@ cssPrefix: pf-c-modal-box
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
-  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-sm-title"'}}
-    Modal header
-  {{/title}}
+  {{#> modal-box-header}}
+    {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title-small"'}}
+      Modal header
+    {{/title}}
+  {{/modal-box-header}}
   {{#> modal-box-body modal-box-body--attribute='id="modal-sm-description"'}}
     Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -47,9 +51,11 @@ cssPrefix: pf-c-modal-box
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
-  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
-    Modal header
-  {{/title}}
+  {{#> modal-box-header}}
+    {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title-large"'}}
+      Modal header
+    {{/title}}
+  {{/modal-box-header}}
   {{#> modal-box-body modal-box-body--attribute='id="modal-lg-description"'}}
     Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -81,9 +87,11 @@ cssPrefix: pf-c-modal-box
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
-  {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-with-description-title"'}}
-    Modal header
-  {{/title}}
+  {{#> modal-box-header}}
+    {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title-description"'}}
+      Modal header
+    {{/title}}
+  {{/modal-box-header}}
   {{#> modal-box-description modal-box-description--attribute='id="modal-with-description-description"'}}
     A description is used when you want to provide more info about the modal than the title is able to describe. The content in the description is static and will not scroll with the rest of the modal body.
   {{/modal-box-description}}
@@ -117,7 +125,8 @@ A modal box is a generic rectangular container that can be used to build modals.
 | -- | -- | -- |
 | `.pf-c-modal-box` | `<div>` | Initiates a modal box. **Required** |
 | `.pf-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. **Required** |
-| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. |
+| `.pf-c-modal-box__header` | `<div>` | Initiates a modal box header. |
+| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. The title goes in the `.pf-c-modal-box__header` element. |
 | `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. A modal title and modal body are **required** if using a modal description. |
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. A modal box body is **required** if there is no modal box title. |
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
