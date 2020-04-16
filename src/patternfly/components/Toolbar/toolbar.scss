@@ -4,13 +4,13 @@
   --pf-c-toolbar--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-toolbar--md--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-toolbar--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-toolbar--xl--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-toolbar--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-toolbar--child--MarginLeft: var(--pf-global--spacer--md);
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-toolbar--PaddingRight: var(--pf-c-toolbar--md--PaddingRight);
-    --pf-c-toolbar--PaddingLeft: var(--pf-c-toolbar--md--PaddingLeft);
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-toolbar--PaddingRight: var(--pf-c-toolbar--xl--PaddingRight);
+    --pf-c-toolbar--PaddingLeft: var(--pf-c-toolbar--xl--PaddingLeft);
   }
 
   // Bulk select

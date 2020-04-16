@@ -1,5 +1,4 @@
 .pf-c-nav {
-  --pf-c-nav--Width: #{pf-size-prem(290px)};
   --pf-c-nav--Transition: var(--pf-global--Transition);
   --pf-c-nav__item--m-expanded__toggle-icon--Transform: rotate(90deg);
   --pf-c-nav__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
@@ -33,8 +32,8 @@
   --pf-c-nav__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__link--md--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-nav__link--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-nav__link--xl--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-nav__link--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__link--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__link--hover--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__link--focus--Color: var(--pf-global--Color--dark-100);
@@ -123,7 +122,7 @@
 
   // Sub nav
   --pf-c-nav__subnav--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-nav__subnav--md--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
+  --pf-c-nav__subnav--xl--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
   --pf-c-nav__subnav__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-global--BorderColor--dark-100);
   --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-global--BorderColor--dark-100);
@@ -147,8 +146,8 @@
   --pf-c-nav__section-title--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav__section-title--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__section-title--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__section-title--md--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-nav__section-title--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-nav__section-title--xl--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-nav__section-title--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__section-title--Color: var(--pf-global--Color--dark-200);
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
@@ -186,14 +185,14 @@
   --pf-c-nav--c-divider--PaddingLeft: 0;
   --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--md--PaddingRight);
-    --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__link--md--PaddingLeft);
-    --pf-c-nav__list__link--PaddingRight: var(--pf-c-nav__list__link--md--PaddingRight);
-    --pf-c-nav__list__link--PaddingLeft: var(--pf-c-nav__list__link--md--PaddingLeft);
-    --pf-c-nav__section-title--PaddingRight: var(--pf-c-nav__section-title--md--PaddingRight);
-    --pf-c-nav__section-title--PaddingLeft: var(--pf-c-nav__section-title--md--PaddingLeft);
-    --pf-c-nav__subnav--PaddingLeft: var(--pf-c-nav__subnav--md--PaddingLeft);
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
+    --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__link--xl--PaddingLeft);
+    --pf-c-nav__list__link--PaddingRight: var(--pf-c-nav__list__link--xl--PaddingRight);
+    --pf-c-nav__list__link--PaddingLeft: var(--pf-c-nav__list__link--xl--PaddingLeft);
+    --pf-c-nav__section-title--PaddingRight: var(--pf-c-nav__section-title--xl--PaddingRight);
+    --pf-c-nav__section-title--PaddingLeft: var(--pf-c-nav__section-title--xl--PaddingLeft);
+    --pf-c-nav__subnav--PaddingLeft: var(--pf-c-nav__subnav--xl--PaddingLeft);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -243,13 +242,6 @@
     padding-left: var(--pf-c-nav--c-divider--PaddingLeft);
     margin-top: var(--pf-c-nav--c-divider--MarginTop);
     margin-bottom: var(--pf-c-nav--c-divider--MarginBottom);
-  }
-}
-
-// Set width when nav is child of sidebar to prevent collapsing
-.pf-c-page__sidebar .pf-c-nav {
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    width: var(--pf-c-nav--Width);
   }
 }
 
