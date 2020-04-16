@@ -268,9 +268,7 @@ import './Nav.css'
 ```hbs title=Horizontal-in-masthead
 <div class="pf-c-page__header">
   <div class="pf-c-page__header-nav">
-    {{#> nav nav--attribute='aria-label="Global"'}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
+    {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
       {{#> nav-list nav-list--type="horizontal"}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -288,8 +286,6 @@ import './Nav.css'
           {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
     {{/nav}}
   </div>
 </div>
@@ -298,9 +294,7 @@ import './Nav.css'
 ```hbs title=Horizontal-overflow-in-masthead
 <div class="pf-c-page__header">
   <div class="pf-c-page__header-nav">
-    {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Global"'}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
+    {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
       {{#> nav-list nav-list--type="horizontal"}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#"}}
@@ -328,17 +322,13 @@ import './Nav.css'
           {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
     {{/nav}}
   </div>
 </div>
 ```
 
 ```hbs title=Tertiary
-{{#> nav nav--attribute='aria-label="Local"'}}
-  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-  {{/nav-scroll-button}}
+{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list nav-list--type="tertiary"}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -356,15 +346,11 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
-  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-  {{/nav-scroll-button}}
 {{/nav}}
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
-  {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-  {{/nav-scroll-button}}
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list nav-list--type="tertiary"}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -392,8 +378,6 @@ import './Nav.css'
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
-  {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-  {{/nav-scroll-button}}
 {{/nav}}
 ```
 
@@ -511,6 +495,7 @@ The navigation system relies on several different sub-components:
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
+| `disabled` | `.pf-c-nav__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
 
 ### Usage
@@ -527,7 +512,8 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon. |
-| `.pf-m-dark` | `.pf-c-nav` | Modifies the nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
+| `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
+| `.pf-m-dark` | `.pf-c-nav` | Modifies nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-hover` | `.pf-c-nav__link` | Modifies to display the link as hovered. |
