@@ -306,16 +306,16 @@
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
 
-    > * {
-      transition: var(--pf-c-table__toggle--c-button__toggle-icon--Transition);
-      transform: var(--pf-c-table__toggle--c-button__toggle-icon--Transform);
-    }
-
     &.pf-m-expanded {
-      > * {
+      .pf-c-table__toggle-icon {
         transform: var(--pf-c-table__toggle--c-button--m-expanded__toggle-icon--Transform);
       }
     }
+  }
+
+  .pf-c-table__toggle-icon {
+    transition: var(--pf-c-table__toggle--c-button__toggle-icon--Transition);
+    transform: var(--pf-c-table__toggle--c-button__toggle-icon--Transform);
   }
 
   svg {
@@ -330,7 +330,7 @@
 
   --pf-c-table-cell--FontSize: var(--pf-c-table__check--input--FontSize);
 
-  > * {
+  > input {
     margin-top: var(--pf-c-table__check--input--MarginTop);
     vertical-align: top;
   }

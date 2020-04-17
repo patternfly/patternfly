@@ -472,7 +472,7 @@ import './Wizard.css'
 | `.pf-c-wizard__toggle-list-item` | `<li>` | Initiates a toggle list item. **Required** |
 | `.pf-c-wizard__toggle-num` | `<span>` | Initiates the step number. **Required** |
 | `.pf-c-wizard__toggle-separator` | `<i>` | Initiates the separator between steps. |
-| `.pf-c-wizard__toggle-icon` | `<i>` | Initiates the toggle icon. **Required** |
+| `.pf-c-wizard__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
 | `.pf-c-wizard__outer-wrap` | `<div>` | Initiates the outer wrapper. **Required** |
 | `.pf-c-wizard__inner-wrap` | `<div>` | Initiates the inner wrapper. **Required** |
 | `.pf-c-wizard__nav` | `<nav>` | Initiates the steps nav. **Required** |

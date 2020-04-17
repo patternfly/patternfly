@@ -142,10 +142,6 @@
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
-  > * {
-    position: relative;
-  }
-
   &:not(.pf-m-text) {
     padding-top: var(--pf-c-options-menu__toggle--PaddingTop);
     padding-right: var(--pf-c-options-menu__toggle--PaddingRight);
@@ -166,7 +162,7 @@
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 
-    > * {
+    .pf-c-options-menu__toggle-button-icon {
       line-height: var(--pf-c-options-menu__toggle--LineHeight);
     }
 
@@ -196,6 +192,10 @@
       border: 0;
     }
   }
+}
+
+.pf-c-options-menu__toggle-button-icon {
+  position: relative;
 }
 
 .pf-c-options-menu__toggle-button {

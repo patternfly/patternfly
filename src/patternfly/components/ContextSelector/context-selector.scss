@@ -72,10 +72,6 @@
   cursor: pointer;
   border: none;
 
-  & > * {
-    color: var(--pf-c-context-selector__toggle--Color);
-  }
-
   &::before {
     position: absolute;
     top: 0;

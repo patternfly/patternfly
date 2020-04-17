@@ -622,7 +622,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__toggle-icon` | `<i>` | Initiates a table toggle icon. |
+| `.pf-c-table__toggle-icon` | `<span>` | Initiates the table toggle icon wrapper. |
 | `.pf-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
 | `.pf-c-table__expandable-row-content` | `.pf-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
 | `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |

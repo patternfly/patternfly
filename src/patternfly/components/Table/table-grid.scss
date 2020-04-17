@@ -442,13 +442,10 @@
     grid-row: 2;
   }
 
-  // Toggles
-  .pf-c-table__toggle {
-    .pf-c-button > * {
-      transition: var(--pf-c-table__toggle__icon--Transition);
-    }
+  .pf-c-table__toggle-icon {
+    transition: var(--pf-c-table__toggle__icon--Transition);
 
-    .pf-c-button.pf-m-expanded > * {
+    .pf-c-button.pf-m-expanded > & {
       transform: var(--pf-c-table__toggle--m-expanded__icon--Transform);
     }
   }

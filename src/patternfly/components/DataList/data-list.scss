@@ -299,15 +299,15 @@
 .pf-c-data-list__toggle {
   margin-top: var(--pf-c-data-list__toggle--MarginTop);
   margin-left: var(--pf-c-data-list__toggle--MarginLeft);
+}
 
-  // rotate icon
-  .pf-c-button > * {
-    pointer-events: none;
-    transition: var(--pf-c-data-list__toggle-icon--Transition);
+// Toggle icon rotate
+.pf-c-data-list__toggle-icon {
+  pointer-events: none;
+  transition: var(--pf-c-data-list__toggle-icon--Transition);
 
-    .pf-c-data-list__item.pf-m-expanded & {
-      transform: var(--pf-c-data-list__item--m-expanded__toggle--c-button-icon--Transform);
-    }
+  .pf-c-data-list__item.pf-m-expanded & {
+    transform: var(--pf-c-data-list__item--m-expanded__toggle--c-button-icon--Transform);
   }
 }
 
