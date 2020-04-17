@@ -421,7 +421,8 @@
       --pf-c-button--m-plain--BackgroundColor: var(--pf-c-button--m-plain--hover--BackgroundColor);
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-button--m-plain--Color: var(--pf-c-button--m-plain--active--Color);
       --pf-c-button--m-plain--BackgroundColor: var(--pf-c-button--m-plain--active--BackgroundColor);
     }
