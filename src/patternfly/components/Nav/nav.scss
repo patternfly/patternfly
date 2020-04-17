@@ -1,29 +1,128 @@
+%pf-c-nav--m-light {
+  --pf-c-nav__item--before--BorderColor: var(--pf-c-nav--m-light__item--before--BorderColor);
+  --pf-c-nav__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-c-nav--m-light__item--m-current--not--m-expanded__link--BackgroundColor);
+  --pf-c-nav__link--Color: var(--pf-c-nav--m-light__link--Color);
+  --pf-c-nav__link--hover--Color: var(--pf-c-nav--m-light__link--hover--Color);
+  --pf-c-nav__link--focus--Color: var(--pf-c-nav--m-light__link--focus--Color);
+  --pf-c-nav__link--active--Color: var(--pf-c-nav--m-light__link--active--Color);
+  --pf-c-nav__link--m-current--Color: var(--pf-c-nav--m-light__link--m-current--Color);
+  --pf-c-nav__link--hover--BackgroundColor: var(--pf-c-nav--m-light__link--hover--BackgroundColor);
+  --pf-c-nav__link--focus--BackgroundColor: var(--pf-c-nav--m-light__link--focus--BackgroundColor);
+  --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav--m-light__link--active--BackgroundColor);
+  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav--m-light__link--m-current--BackgroundColor);
+  --pf-c-nav__link--before--BorderColor: var(--pf-c-nav--m-light__link--before--BorderColor);
+  --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--hover--after--BorderColor);
+  --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--focus--after--BorderColor);
+  --pf-c-nav__subnav__link--active--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--active--after--BorderColor);
+  --pf-c-nav__section-title--Color: var(--pf-c-nav--m-light__section-title--Color);
+  --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav--m-light__section-title--BorderBottomColor);
+
+  // Scroll
+  --pf-c-nav__scroll-button--Color: var(--pf-c-nav--m-light__scroll-button--Color);
+  --pf-c-nav__scroll-button--hover--Color: var(--pf-c-nav--m-light__scroll-button--hover--Color);
+  --pf-c-nav__scroll-button--focus--Color: var(--pf-c-nav--m-light__scroll-button--focus--Color);
+  --pf-c-nav__scroll-button--active--Color: var(--pf-c-nav--m-light__scroll-button--active--Color);
+  --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-nav--m-light__scroll-button--disabled--Color);
+
+  // Scroll buttons before
+  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav--m-light__scroll-button--before--BorderColor);
+  --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-nav--m-light__scroll-button--disabled--before--BorderColor);
+
+  // Horizontal
+  --pf-c-nav--m-horizontal__link--Color: var(--pf-c-nav--m-light--m-horizontal__link--Color);
+  --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-c-nav--m-light--m-horizontal__link--hover--Color);
+  --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-c-nav--m-light--m-horizontal__link--focus--Color);
+  --pf-c-nav--m-horizontal__link--active--Color: var(--pf-c-nav--m-light--m-horizontal__link--active--Color);
+  --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-c-nav--m-light--m-horizontal__link--m-current--Color);
+  --pf-c-nav--m-horizontal__link--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--BackgroundColor);
+  --pf-c-nav--m-horizontal__link--hover--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--hover--BackgroundColor);
+  --pf-c-nav--m-horizontal__link--focus--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--focus--BackgroundColor);
+  --pf-c-nav--m-horizontal__link--active--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--active--BackgroundColor);
+  --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--m-current--BackgroundColor);
+  --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-c-nav--m-light--m-horizontal__link--before--BorderColor);
+
+  .pf-c-divider {
+    --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-light--c-divider--BackgroundColor);
+  }
+}
+
 .pf-c-nav {
   --pf-c-nav--Transition: var(--pf-global--Transition);
+
+  // Light theme
+  --pf-c-nav--m-light__item--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-light__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light__link--hover--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light__link--focus--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light__link--active--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light__link--m-current--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__link--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-light__section-title--Color: var(--pf-global--Color--dark-200);
+  --pf-c-nav--m-light__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-light__subnav__link--hover--after--BorderColor: var(--pf-global--BorderColor--dark-100);
+  --pf-c-nav--m-light__subnav__link--focus--after--BorderColor: var(--pf-global--BorderColor--dark-100);
+  --pf-c-nav--m-light__subnav__link--active--after--BorderColor: var(--pf-global--BorderColor--dark-100);
+  --pf-c-nav--m-light--c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
+
+  // Light scroll buttons
+  --pf-c-nav--m-light__scroll-button--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light__scroll-button--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light__scroll-button--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light__scroll-button--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
+
+  // Scroll buttons before
+  --pf-c-nav--m-light__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-light__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
+
+  // Horizontal nav
+  --pf-c-nav--m-horizontal__link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-horizontal__link--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-horizontal__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--Color: var(--pf-global--Color--light-300);
+  --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--active--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--hover--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--focus--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--active--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--before--BorderWidth: 0;
+  --pf-c-nav--m-horizontal__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-horizontal__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-horizontal__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-horizontal__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+
+  // Light horizontal
+  --pf-c-nav--m-light--m-horizontal__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-light--m-horizontal__link--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light--m-horizontal__link--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light--m-horizontal__link--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light--m-horizontal__link--m-current--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light--m-horizontal__link--BackgroundColor: transparent;
+  --pf-c-nav--m-light--m-horizontal__link--hover--BackgroundColor: transparent;
+  --pf-c-nav--m-light--m-horizontal__link--focus--BackgroundColor: transparent;
+  --pf-c-nav--m-light--m-horizontal__link--active--BackgroundColor: transparent;
+  --pf-c-nav--m-light--m-horizontal__link--m-current--BackgroundColor: transparent;
+  --pf-c-nav--m-light--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--100);
+
+  // Item
   --pf-c-nav__item--m-expanded__toggle-icon--Transform: rotate(90deg);
-  --pf-c-nav__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav__link--m-current--not--m-expanded__link--after--BorderWidth: var(--pf-global--BorderWidth--xl);
 
-  // Dark theme
-  --pf-c-nav--m-dark__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__item--m-current--not--m-expandable__link--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
-  --pf-c-nav--m-dark__link--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--hover--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--focus--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--active--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--m-current--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__link--BackgroundColor: transparent;
-  --pf-c-nav--m-dark__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__link--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
-  --pf-c-nav--m-dark__link--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__section-title--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav--m-dark__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--m-dark__subnav__link--hover--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-nav--m-dark__subnav__link--focus--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-nav--m-dark__subnav__link--active--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-nav--m-dark--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  // Item ::before borders
+  --pf-c-nav__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__item--before--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Link
   --pf-c-nav__link--FontSize: var(--pf-global--FontSize--md);
@@ -34,20 +133,20 @@
   --pf-c-nav__link--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-nav__link--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__link--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__link--hover--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__link--focus--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__link--active--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__link--m-current--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__link--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__link--hover--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__link--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__link--active--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__link--m-current--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__link--BackgroundColor: transparent;
-  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
   --pf-c-nav__link--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
 
   // Link ::before borders
-  --pf-c-nav__link--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav__link--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav__link--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__link--m-current--before--BorderWidth: 0;
 
@@ -57,10 +156,6 @@
   --pf-c-nav__link--after--BorderBottomWidth: 0;
   --pf-c-nav__link--after--BorderLeftWidth: 0;
   --pf-c-nav__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
-
-  // Item ::before borders
-  --pf-c-nav__item--before--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-nav__item--before--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Simple list
   --pf-c-nav__simple-list__link--MarginTop: var(--pf-global--spacer--sm);
@@ -72,63 +167,13 @@
   --pf-c-nav__simple-list__link--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__simple-list__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
 
-  // Horizontal list
-  --pf-c-nav__horizontal-list__link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__horizontal-list__link--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-nav__horizontal-list__link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__horizontal-list__link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__horizontal-list__link--lg--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-nav__horizontal-list__link--lg--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-nav__horizontal-list__link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__horizontal-list__link--Color: var(--pf-global--Color--light-300);
-  --pf-c-nav__horizontal-list__link--hover--Color: var(--pf-global--active-color--400);
-  --pf-c-nav__horizontal-list__link--focus--Color: var(--pf-global--active-color--400);
-  --pf-c-nav__horizontal-list__link--active--Color: var(--pf-global--active-color--400);
-  --pf-c-nav__horizontal-list__link--m-current--Color: var(--pf-global--active-color--400);
-  --pf-c-nav__horizontal-list__link--BackgroundColor: transparent;
-  --pf-c-nav__horizontal-list__link--hover--BackgroundColor: transparent;
-  --pf-c-nav__horizontal-list__link--focus--BackgroundColor: transparent;
-  --pf-c-nav__horizontal-list__link--active--BackgroundColor: transparent;
-  --pf-c-nav__horizontal-list__link--m-current--BackgroundColor: transparent;
-  --pf-c-nav__horizontal-list__link--before--BorderColor: var(--pf-global--active-color--400);
-  --pf-c-nav__horizontal-list__link--before--BorderWidth: 0;
-  --pf-c-nav__horizontal-list__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__horizontal-list__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__horizontal-list__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__horizontal-list__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-
-  // Tertiary list
-  --pf-c-nav__tertiary-list__link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav__tertiary-list__link--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-nav__tertiary-list__link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__tertiary-list__link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav__tertiary-list__link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__tertiary-list__link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__tertiary-list__link--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__tertiary-list__link--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__tertiary-list__link--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__tertiary-list__link--m-current--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__tertiary-list__link--BackgroundColor: transparent;
-  --pf-c-nav__tertiary-list__link--hover--BackgroundColor: transparent;
-  --pf-c-nav__tertiary-list__link--focus--BackgroundColor: transparent;
-  --pf-c-nav__tertiary-list__link--active--BackgroundColor: transparent;
-  --pf-c-nav__tertiary-list__link--m-current--BackgroundColor: transparent;
-  --pf-c-nav__tertiary-list__link--before--BorderColor: var(--pf-global--active-color--100);
-  --pf-c-nav__tertiary-list__link--before--BorderWidth: 0;
-  --pf-c-nav__tertiary-list__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__tertiary-list__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__tertiary-list__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__tertiary-list__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav__tertiary-list__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-nav__tertiary-list__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
-
   // Sub nav
   --pf-c-nav__subnav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__subnav--xl--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
   --pf-c-nav__subnav__link--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-global--BorderColor--dark-100);
-  --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-global--BorderColor--dark-100);
-  --pf-c-nav__subnav__link--active--after--BorderColor: var(--pf-global--BorderColor--dark-100);
+  --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-nav__subnav__link--active--after--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-nav__subnav__link--m-current--after--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav__subnav__link--hover--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__subnav__link--focus--after--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -151,27 +196,27 @@
   --pf-c-nav__section-title--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-nav__section-title--Color: var(--pf-global--Color--dark-200);
-  --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav__section-title--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav__section-title--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
   // Scroll buttons
-  --pf-c-nav__scroll-button--Color: var(--pf-global--Color--100);
+  --pf-c-nav__scroll-button--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__scroll-button--hover--Color: var(--pf-global--active-color--400);
   --pf-c-nav__scroll-button--focus--Color: var(--pf-global--active-color--400);
   --pf-c-nav__scroll-button--active--Color: var(--pf-global--active-color--400);
-  --pf-c-nav__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-nav__scroll-button--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-nav__scroll-button--BackgroundColor: transparent;
   --pf-c-nav__scroll-button--Width: var(--pf-global--target-size--MinWidth);
   --pf-c-nav__scroll-button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
   --pf-c-nav__scroll-button--Transition: margin .125s, transform .125s, opacity .125s;
 
   // Scroll buttons before
-  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav__scroll-button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__scroll-button--before--BorderRightWidth: 0;
   --pf-c-nav__scroll-button--before--BorderLeftWidth: 0;
-  --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
+  --pf-c-nav__scroll-button--disabled--before--BorderColor: transparent;
 
   // Toggle
   --pf-c-nav__toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -187,7 +232,7 @@
   --pf-c-nav--c-divider--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-nav--c-divider--PaddingRight: 0;
   --pf-c-nav--c-divider--PaddingLeft: 0;
-  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
@@ -199,9 +244,9 @@
     --pf-c-nav__subnav--PaddingLeft: var(--pf-c-nav__subnav--xl--PaddingLeft);
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-c-nav__horizontal-list__link--PaddingTop: var(--pf-c-nav__horizontal-list__link--lg--PaddingTop);
-    --pf-c-nav__horizontal-list__link--PaddingBottom: var(--pf-c-nav__horizontal-list__link--lg--PaddingBottom);
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-nav__horizontal-list__link--PaddingTop: var(--pf-c-nav__horizontal-list__link--xl--PaddingTop);
+    --pf-c-nav__horizontal-list__link--PaddingBottom: var(--pf-c-nav__horizontal-list__link--xl--PaddingBottom);
     --pf-c-nav__scroll-button--Height: var(--pf-c-nav__scroll-button--lg--Height);
   }
 
@@ -210,54 +255,8 @@
   flex-wrap: wrap;
   overflow: hidden;
 
-  &.pf-m-scrollable {
-    .pf-c-nav__scroll-button {
-      opacity: 1;
-    }
-
-    // Scroll buttons
-    .pf-c-nav__scroll-button:nth-of-type(1) {
-      margin-right: 0;
-      transform: translateX(0);
-
-      &::before {
-        right: 0;
-      }
-    }
-
-    .pf-c-nav__scroll-button:nth-of-type(2) {
-      margin-left: 0;
-      transform: translateX(0);
-
-      &::before {
-        left: 0;
-      }
-    }
-  }
-
-  &.pf-m-dark {
-    --pf-c-nav__item--before--BorderColor: var(--pf-c-nav--m-dark__item--before--BorderColor);
-    --pf-c-nav__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-c-nav--m-dark__item--m-current--not--m-expandable__link--BackgroundColor);
-    --pf-c-nav__link--Color: var(--pf-c-nav--m-dark__link--Color);
-    --pf-c-nav__link--hover--Color: var(--pf-c-nav--m-dark__link--hover--Color);
-    --pf-c-nav__link--focus--Color: var(--pf-c-nav--m-dark__link--focus--Color);
-    --pf-c-nav__link--active--Color: var(--pf-c-nav--m-dark__link--active--Color);
-    --pf-c-nav__link--m-current--Color: var(--pf-c-nav--m-dark__link--m-current--Color);
-    --pf-c-nav__link--BackgroundColor: var(--pf-c-nav--m-dark__link--BackgroundColor);
-    --pf-c-nav__link--hover--BackgroundColor: var(--pf-c-nav--m-dark__link--hover--BackgroundColor);
-    --pf-c-nav__link--focus--BackgroundColor: var(--pf-c-nav--m-dark__link--focus--BackgroundColor);
-    --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav--m-dark__link--active--BackgroundColor);
-    --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav--m-dark__link--m-current--BackgroundColor);
-    --pf-c-nav__link--before--BorderColor: var(--pf-c-nav--m-dark__link--before--BorderColor);
-    --pf-c-nav__section-title--Color: var(--pf-c-nav--m-dark__section-title--Color);
-    --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav--m-dark__section-title--BorderBottomColor);
-    --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-c-nav--m-dark__subnav__link--hover--before--BorderColor);
-    --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-c-nav--m-dark__subnav__link--active--before--BorderColor);
-    --pf-c-nav__subnav__link--active--after--BorderColor: var(--pf-c-nav--m-dark__subnav__link--focus--before--BorderColor);
-
-    .pf-c-divider {
-      --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-dark--c-divider--BackgroundColor);
-    }
+  &.pf-m-light {
+    @extend %pf-c-nav--m-light;
   }
 
   // Divider
@@ -268,6 +267,58 @@
     padding-left: var(--pf-c-nav--c-divider--PaddingLeft);
     margin-top: var(--pf-c-nav--c-divider--MarginTop);
     margin-bottom: var(--pf-c-nav--c-divider--MarginBottom);
+  }
+
+  &.pf-m-horizontal {
+    --pf-c-nav__link--PaddingTop: var(--pf-c-nav--m-horizontal__link--PaddingTop);
+    --pf-c-nav__link--PaddingRight: var(--pf-c-nav--m-horizontal__link--PaddingRight);
+    --pf-c-nav__link--PaddingBottom: var(--pf-c-nav--m-horizontal__link--PaddingBottom);
+    --pf-c-nav__link--PaddingLeft: var(--pf-c-nav--m-horizontal__link--PaddingLeft);
+    --pf-c-nav__link--Color: var(--pf-c-nav--m-horizontal__link--Color);
+    --pf-c-nav__link--hover--Color: var(--pf-c-nav--m-horizontal__link--hover--Color);
+    --pf-c-nav__link--active--Color: var(--pf-c-nav--m-horizontal__link--active--Color);
+    --pf-c-nav__link--focus--Color: var(--pf-c-nav--m-horizontal__link--focus--Color);
+    --pf-c-nav__link--m-current--Color: var(--pf-c-nav--m-horizontal__link--m-current--Color);
+    --pf-c-nav__link--BackgroundColor: var(--pf-c-nav--m-horizontal__link--BackgroundColor);
+    --pf-c-nav__link--hover--BackgroundColor: var(--pf-c-nav--m-horizontal__link--hover--BackgroundColor);
+    --pf-c-nav__link--focus--BackgroundColor: var(--pf-c-nav--m-horizontal__link--focus--BackgroundColor);
+    --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav--m-horizontal__link--active--BackgroundColor);
+    --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav--m-horizontal__link--m-current--BackgroundColor);
+    --pf-c-nav__link--before--BorderColor: var(--pf-c-nav--m-horizontal__link--before--BorderColor);
+    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--before--BorderWidth);
+
+    .pf-c-nav__link:hover {
+      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--hover--before--BorderWidth);
+    }
+
+    .pf-c-nav__link:focus {
+      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--focus--before--BorderWidth);
+    }
+
+    .pf-c-nav__link:active {
+      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--active--before--BorderWidth);
+    }
+
+    .pf-c-nav__link.pf-m-current {
+      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--m-current--before--BorderWidth);
+    }
+  }
+
+  &.pf-m-scrollable {
+    .pf-c-nav__scroll-button {
+      opacity: 1;
+    }
+
+    // Scroll buttons
+    .pf-c-nav__scroll-button:nth-of-type(1) {
+      margin-right: 0;
+      transform: translateX(0);
+    }
+
+    .pf-c-nav__scroll-button:nth-of-type(2) {
+      margin-left: 0;
+      transform: translateX(0);
+    }
   }
 }
 
@@ -319,8 +370,7 @@
   &::before {
     position: absolute;
     content: "";
-    border: 0;
-    border-style: solid;
+    border: 0 solid;
   }
 
   &::before {
@@ -429,81 +479,6 @@
   }
 }
 
-// Horizontal list, masthead
-.pf-c-nav__horizontal-list {
-  --pf-c-nav__link--PaddingTop: var(--pf-c-nav__horizontal-list__link--PaddingTop);
-  --pf-c-nav__link--PaddingRight: var(--pf-c-nav__horizontal-list__link--PaddingRight);
-  --pf-c-nav__link--PaddingBottom: var(--pf-c-nav__horizontal-list__link--PaddingBottom);
-  --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__horizontal-list__link--PaddingLeft);
-  --pf-c-nav__link--Color: var(--pf-c-nav__horizontal-list__link--Color);
-  --pf-c-nav__link--hover--Color: var(--pf-c-nav__horizontal-list__link--hover--Color);
-  --pf-c-nav__link--active--Color: var(--pf-c-nav__horizontal-list__link--active--Color);
-  --pf-c-nav__link--focus--Color: var(--pf-c-nav__horizontal-list__link--focus--Color);
-  --pf-c-nav__link--m-current--Color: var(--pf-c-nav__horizontal-list__link--m-current--Color);
-  --pf-c-nav__link--BackgroundColor: var(--pf-c-nav__horizontal-list__link--BackgroundColor);
-  --pf-c-nav__link--hover--BackgroundColor: var(--pf-c-nav__horizontal-list__link--hover--BackgroundColor);
-  --pf-c-nav__link--focus--BackgroundColor: var(--pf-c-nav__horizontal-list__link--focus--BackgroundColor);
-  --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav__horizontal-list__link--active--BackgroundColor);
-  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav__horizontal-list__link--m-current--BackgroundColor);
-  --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__horizontal-list__link--before--BorderColor);
-  --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--before--BorderWidth);
-
-  .pf-c-nav__link:hover {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--hover--before--BorderWidth);
-  }
-
-  .pf-c-nav__link:focus {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--focus--before--BorderWidth);
-  }
-
-  .pf-c-nav__link:active {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--active--before--BorderWidth);
-  }
-
-  .pf-c-nav__link.pf-m-current {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__horizontal-list__link--m-current--before--BorderWidth);
-  }
-}
-
-// Tertiary list
-.pf-c-nav__tertiary-list {
-  --pf-c-nav__link--PaddingTop: var(--pf-c-nav__tertiary-list__link--PaddingTop);
-  --pf-c-nav__link--PaddingRight: var(--pf-c-nav__tertiary-list__link--PaddingRight);
-  --pf-c-nav__link--PaddingBottom: var(--pf-c-nav__tertiary-list__link--PaddingBottom);
-  --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__tertiary-list__link--PaddingLeft);
-  --pf-c-nav__link--FontWeight: var(--pf-c-nav__tertiary-list__link--FontWeight);
-  --pf-c-nav__link--Color: var(--pf-c-nav__tertiary-list__link--Color);
-  --pf-c-nav__link--hover--Color: var(--pf-c-nav__tertiary-list__link--hover--Color);
-  --pf-c-nav__link--active--Color: var(--pf-c-nav__tertiary-list__link--active--Color);
-  --pf-c-nav__link--focus--Color: var(--pf-c-nav__tertiary-list__link--focus--Color);
-  --pf-c-nav__link--m-current--Color: var(--pf-c-nav__tertiary-list__link--m-current--Color);
-  --pf-c-nav__link--BackgroundColor: var(--pf-c-nav__tertiary-list__link--BackgroundColor);
-  --pf-c-nav__link--hover--BackgroundColor: var(--pf-c-nav__tertiary-list__link--hover--BackgroundColor);
-  --pf-c-nav__link--focus--BackgroundColor: var(--pf-c-nav__tertiary-list__link--focus--BackgroundColor);
-  --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav__tertiary-list__link--active--BackgroundColor);
-  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav__tertiary-list__link--m-current--BackgroundColor);
-  --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__tertiary-list__link--before--BorderColor);
-  --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--before--BorderWidth);
-  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav__tertiary-list__scroll-button--before--BorderColor);
-  --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-nav__tertiary-list__scroll-button--disabled--before--BorderColor);
-
-  .pf-c-nav__link:hover {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--hover--before--BorderWidth);
-  }
-
-  .pf-c-nav__link:focus {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--focus--before--BorderWidth);
-  }
-
-  .pf-c-nav__link:active {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--active--before--BorderWidth);
-  }
-
-  .pf-c-nav__link.pf-m-current {
-    --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__tertiary-list__link--m-current--before--BorderWidth);
-  }
-}
-
 // Subnav
 .pf-c-nav__subnav {
   --pf-c-nav__link--FontSize: var(--pf-c-nav__subnav__link--FontSize);
@@ -602,8 +577,7 @@
     top: 0;
     bottom: 0;
     content: "";
-    border-color: var(--pf-c-nav__scroll-button--before--BorderColor);
-    border-style: solid;
+    border: var(--pf-c-nav__scroll-button--before--BorderColor) solid;
     border-width: 0 var(--pf-c-nav__scroll-button--before--BorderRightWidth) 0 var(--pf-c-nav__scroll-button--before--BorderLeftWidth);
   }
 
@@ -631,6 +605,10 @@
 
     margin-right: calc(var(--pf-c-nav__scroll-button--Width) * -1);
     transform: translateX(-100%);
+
+    &::before {
+      right: 0;
+    }
   }
 
   &:nth-of-type(2) {
@@ -638,5 +616,9 @@
 
     margin-left: calc(var(--pf-c-nav__scroll-button--Width) * -1);
     transform: translateX(100%);
+
+    &::before {
+      left: 0;
+    }
   }
 }

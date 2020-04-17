@@ -5,11 +5,11 @@ section: demos
 
 ## Demos
 ```hbs title=Default-nav isFullscreen
-{{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
+{{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark"}}
 ```
 
 ```hbs title=Expandable-nav isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
 ```
 
 ```hbs title=Horizontal-nav isFullscreen
@@ -90,7 +90,7 @@ section: demos
   {{/page-header}}
 
   {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
@@ -234,7 +234,7 @@ section: demos
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel
@@ -310,7 +310,7 @@ section: demos
 ```
 
 ```hbs title=Light-theme-sidebar-and-nav isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"  page-sidebar--modifier="pf-m-light" nav--modifier="pf-m-light"}}{{/page-demo-expandable-nav}}
 ```
 
 ## Documentation

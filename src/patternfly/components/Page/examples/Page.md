@@ -5,6 +5,7 @@ cssPrefix: pf-c-page
 ---
 
 ## Examples
+
 ```hbs title=Vertical-nav
 {{#> page}}
   {{#> page-header}}
@@ -129,7 +130,7 @@ cssPrefix: pf-c-page
   {{/page-main}}
 {{/page}}
 ```
-      
+
 ## Documentation
 ### Overview
 This component provides the basic chrome for a page, including sidebar, header, and main areas.
@@ -169,7 +170,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-user` | `.pf-c-page__header-tools div` | Modifier for responsive behavior of user menu. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
-| `.pf-m-dark` | `.pf-c-page__sidebar` |  Modifies the sidebar the dark variation. **Note: for use with a dark themed nav component** |
+| `.pf-m-light` | `.pf-c-page__sidebar` |  Modifies the sidebar the light variation. **Note: for use with a dark themed nav component** |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
