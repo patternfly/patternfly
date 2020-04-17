@@ -14,7 +14,7 @@ import './Label.css'
 
 {{#> label label--id="default-grey-icon"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Grey icon
 {{/label}}
@@ -25,7 +25,7 @@ import './Label.css'
 
 {{#> label label--id="default-grey-icon-close" label--isRemovable="true"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Grey icon removable
 {{/label}}
@@ -46,7 +46,7 @@ import './Label.css'
 
 {{#> label label--id="default-blue-icon" label--modifier="pf-m-blue"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Blue icon
 {{/label}}
@@ -57,7 +57,7 @@ import './Label.css'
 
 {{#> label label--id="default-blue-icon-close" label--isRemovable="true" label--modifier="pf-m-blue"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Blue icon removable
 {{/label}}
@@ -78,7 +78,7 @@ import './Label.css'
 
 {{#> label label--id="default-green-icon" label--modifier="pf-m-green"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Green icon
 {{/label}}
@@ -89,7 +89,7 @@ import './Label.css'
 
 {{#> label label--id="default-green-icon-close" label--isRemovable="true" label--modifier="pf-m-green"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Green icon removable
 {{/label}}
@@ -110,7 +110,7 @@ import './Label.css'
 
 {{#> label label--id="default-orange-icon" label--modifier="pf-m-orange"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Orange icon
 {{/label}}
@@ -121,7 +121,7 @@ import './Label.css'
 
 {{#> label label--id="default-orange-icon-close" label--isRemovable="true" label--modifier="pf-m-orange"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Orange icon removable
 {{/label}}
@@ -142,7 +142,7 @@ import './Label.css'
 
 {{#> label label--id="default-red-icon" label--modifier="pf-m-red"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Red icon
 {{/label}}
@@ -153,7 +153,7 @@ import './Label.css'
 
 {{#> label label--id="default-red-icon-close" label--isRemovable="true" label--modifier="pf-m-red"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Red icon removable
 {{/label}}
@@ -174,7 +174,7 @@ import './Label.css'
 
 {{#> label label--id="default-purple-icon" label--modifier="pf-m-purple"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Purple icon
 {{/label}}
@@ -185,7 +185,7 @@ import './Label.css'
 
 {{#> label label--id="default-purple-icon-close" label--isRemovable="true" label--modifier="pf-m-purple"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Purple icon removable
 {{/label}}
@@ -206,7 +206,7 @@ import './Label.css'
 
 {{#> label label--id="default-cyan-icon" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Cyan icon
 {{/label}}
@@ -217,7 +217,7 @@ import './Label.css'
 
 {{#> label label--id="default-cyan-icon-close" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Cyan icon removable
 {{/label}}
@@ -239,7 +239,7 @@ import './Label.css'
 
 {{#> label label--id="outline-grey-icon" label--modifier="pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Grey icon
 {{/label}}
@@ -250,7 +250,7 @@ import './Label.css'
 
 {{#> label label--id="outline-grey-icon-close" label--isRemovable="true" label--modifier="pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Grey icon removable
 {{/label}}
@@ -271,7 +271,7 @@ import './Label.css'
 
 {{#> label label--id="outline-blue-icon" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Blue icon
 {{/label}}
@@ -282,7 +282,7 @@ import './Label.css'
 
 {{#> label label--id="outline-blue-icon-close" label--isRemovable="true" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Blue icon removable
 {{/label}}
@@ -303,7 +303,7 @@ import './Label.css'
 
 {{#> label label--id="outline-green-icon" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Green icon
 {{/label}}
@@ -314,7 +314,7 @@ import './Label.css'
 
 {{#> label label--id="outline-green-icon-close" label--isRemovable="true" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Green icon removable
 {{/label}}
@@ -335,7 +335,7 @@ import './Label.css'
 
 {{#> label label--id="outline-orange-icon" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Orange icon
 {{/label}}
@@ -346,7 +346,7 @@ import './Label.css'
 
 {{#> label label--id="outline-orange-icon-close" label--isRemovable="true" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Orange icon removable
 {{/label}}
@@ -367,7 +367,7 @@ import './Label.css'
 
 {{#> label label--id="outline-red-icon" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Red icon
 {{/label}}
@@ -378,7 +378,7 @@ import './Label.css'
 
 {{#> label label--id="outline-red-icon-close" label--isRemovable="true" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Red icon removable
 {{/label}}
@@ -399,7 +399,7 @@ import './Label.css'
 
 {{#> label label--id="outline-purple-icon" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Purple icon
 {{/label}}
@@ -410,7 +410,7 @@ import './Label.css'
 
 {{#> label label--id="outline-purple-icon-close" label--isRemovable="true" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Purple icon removable
 {{/label}}
@@ -431,7 +431,7 @@ import './Label.css'
 
 {{#> label label--id="outline-cyan-icon" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Cyan icon
 {{/label}}
@@ -442,7 +442,7 @@ import './Label.css'
 
 {{#> label label--id="outline-cyan-icon-close" label--isRemovable="true" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-icon}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   Cyan icon removable
 {{/label}}
