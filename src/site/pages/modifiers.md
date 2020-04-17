@@ -5,6 +5,7 @@ title: Modifiers
 - pf-m-3xl
 - pf-m-4xl
 - pf-m-action
+- pf-m-active
 - pf-m-align-right
 - pf-m-all
 - pf-m-block
