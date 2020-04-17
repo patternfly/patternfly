@@ -230,6 +230,7 @@
   }
 
   &:not(.pf-m-action):active,
+  &:not(.pf-m-action).pf-m-active,
   &.pf-m-action .pf-c-dropdown__toggle-button:active {
     &::before {
       --pf-c-dropdown__toggle--BorderBottomColor: var(--pf-c-dropdown__toggle--active--BorderBottomColor);
@@ -270,6 +271,7 @@
 
     &:hover,
     &:active,
+    &.pf-m-active,
     &:focus,
     .pf-m-expanded > & {
       --pf-c-dropdown__toggle--m-plain--Color: var(--pf-c-dropdown__toggle--m-plain--hover--Color);
@@ -297,7 +299,8 @@
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--hover--BackgroundColor);
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--active--BackgroundColor);
     }
 

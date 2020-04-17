@@ -170,7 +170,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &.pf-m-active {
     &::after {
       --pf-c-button--BorderWidth: var(--pf-c-button--active--BorderWidth);
     }
@@ -196,7 +197,8 @@
       --pf-c-button--m-primary--BackgroundColor: var(--pf-c-button--m-primary--focus--BackgroundColor);
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-button--m-primary--Color: var(--pf-c-button--m-primary--active--Color);
       --pf-c-button--m-primary--BackgroundColor: var(--pf-c-button--m-primary--active--BackgroundColor);
     }
@@ -229,6 +231,7 @@
       }
     }
 
+    &.pf-m-active,
     &:active {
       --pf-c-button--m-secondary--Color: var(--pf-c-button--m-secondary--active--Color);
       --pf-c-button--m-secondary--BackgroundColor: var(--pf-c-button--m-secondary--active--BackgroundColor);
@@ -266,7 +269,8 @@
       }
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-button--m-tertiary--Color: var(--pf-c-button--m-tertiary--active--Color);
       --pf-c-button--m-tertiary--BackgroundColor: var(--pf-c-button--m-tertiary--active--BackgroundColor);
 
@@ -291,7 +295,8 @@
       --pf-c-button--m-danger--BackgroundColor: var(--pf-c-button--m-danger--focus--BackgroundColor);
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-button--m-danger--Color: var(--pf-c-button--m-danger--active--Color);
       --pf-c-button--m-danger--BackgroundColor: var(--pf-c-button--m-danger--active--BackgroundColor);
     }
@@ -315,7 +320,8 @@
         --pf-c-button--m-link--BackgroundColor: var(--pf-c-button--m-link--focus--BackgroundColor);
       }
 
-      &:active {
+      &:active,
+      &.pf-m-active {
         --pf-c-button--m-link--Color: var(--pf-c-button--m-link--active--Color);
         --pf-c-button--m-link--BackgroundColor: var(--pf-c-button--m-link--active--BackgroundColor);
       }
@@ -357,7 +363,8 @@
       }
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-button--m-control--Color: var(--pf-c-button--m-control--active--Color);
       --pf-c-button--m-control--BackgroundColor: var(--pf-c-button--m-control--active--BackgroundColor);
 
