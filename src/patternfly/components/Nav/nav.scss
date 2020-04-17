@@ -236,8 +236,6 @@
   }
 
   &.pf-m-horizontal {
-    --pf-c-nav__link--Right: var(--pf-c-nav__link--PaddingRight);
-    --pf-c-nav__link--Left: var(--pf-c-nav__link--PaddingLeft);
     --pf-c-nav__link--PaddingTop: var(--pf-c-nav--m-horizontal__link--PaddingTop);
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav--m-horizontal__link--PaddingRight);
     --pf-c-nav__link--PaddingBottom: var(--pf-c-nav--m-horizontal__link--PaddingBottom);
