@@ -91,10 +91,23 @@ cssPrefix: pf-c-form
     {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-comment"')}}
       Comment
     {{/form-label}}
-    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id '-simple-form-comment" name="' form--id '-simple-form-comment" aria-describedby="' form--id '-simple-form-comment-help"')}}
+    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment" type="text" id="' form--id '-simple-form-comment" name="' form--id '-simple-form-comment" aria-describedby="' form--id '-simple-form-comment-help"')}}
     {{/form-control}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-success" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-comment-help" aria-live="polite"')}}
       This is helper text for success input
+    {{/form-helper-text}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-info"')}}
+      Information
+    {{/form-label}}
+    {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form--id '-simple-form-info" name="' form--id '-simple-form-info" aria-invalid="true" aria-describedby="' form--id '-simple-form-info-helper"')}}
+    {{/form-control}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-info-helper" aria-live="polite"')}}
+      {{#> form-helper-text-icon}}
+        <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+      {{/form-helper-text-icon}}
+      This is helper text with an icon.
     {{/form-helper-text}}
   {{/form-group}}
 {{/form}}
@@ -134,7 +147,8 @@ cssPrefix: pf-c-form
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
 | `.pf-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
-| `.pf-c-form__helper-text` | `<span>` |  Initiates a form helper text block. |
+| `.pf-c-form__helper-text` | `<p>` |  Initiates a form helper text block. |
+| `.pf-c-form__helper-text-icon` | `<span>` |  Initiates a form helper text icon. |
 | `.pf-c-form__group` | `<div>` |  Wraps form fields `<label>` + `<field>` + `.form-helper-text`. |
 | `.pf-c-form__horizontal-group` | `<div>`| Wraps `.pf-c-form-control` when using `.pf-m-horizontal` on `.pf-c-form` to provide proper spacing for longer labels. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |

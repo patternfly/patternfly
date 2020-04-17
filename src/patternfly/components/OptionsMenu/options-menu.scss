@@ -39,7 +39,6 @@
 
   // Menu
   --pf-c-options-menu__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-options-menu__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-options-menu__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -50,6 +49,7 @@
 
   // Menu item
   --pf-c-options-menu__menu-item--Background: transparent;
+  --pf-c-options-menu__menu-item--Color: var(--pf-global--Color--100);
   --pf-c-options-menu__menu-item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-options-menu__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__menu-item--PaddingRight: var(--pf-global--spacer--md);
@@ -64,16 +64,6 @@
   --pf-c-options-menu__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-options-menu__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Divider
-  --pf-c-options-menu__c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__c-divider--MarginBottom: var(--pf-global--spacer--sm);
-
-  // Menu item separator
-  --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm);
-
   // Groups
   --pf-c-options-menu__group--group--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__group-title--PaddingTop: var(--pf-global--spacer--sm);
@@ -84,13 +74,22 @@
   --pf-c-options-menu__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-options-menu__group-title--Color: var(--pf-global--Color--dark-200);
 
+  // Divider
+  --pf-c-options-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu--c-divider--MarginBottom: var(--pf-global--spacer--sm);
+
   position: relative;
   display: inline-block;
   max-width: 100%;
 
   .pf-c-divider {
-    margin-top: var(--pf-c-options-menu__c-divider--MarginTop);
-    margin-bottom: var(--pf-c-options-menu__c-divider--MarginBottom);
+    margin-top: var(--pf-c-options-menu--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-options-menu--c-divider--MarginBottom);
+
+    // Support divider as last item in group to separate groups
+    &:last-child {
+      --pf-c-options-menu--c-divider--MarginBottom: 0;
+    }
   }
 }
 
@@ -233,7 +232,6 @@
   padding-bottom: var(--pf-c-options-menu__menu--PaddingBottom);
   background-color: var(--pf-c-options-menu__menu--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-options-menu__menu--BorderWidth) solid transparent; // this is for high contrast mode in windows
   box-shadow: var(--pf-c-options-menu__menu--BoxShadow);
 
   &.pf-m-align-right {
@@ -253,6 +251,7 @@
   width: 100%;
   padding: var(--pf-c-options-menu__menu-item--PaddingTop) var(--pf-c-options-menu__menu-item--PaddingRight) var(--pf-c-options-menu__menu-item--PaddingBottom) var(--pf-c-options-menu__menu-item--PaddingLeft);
   font-size: var(--pf-c-options-menu__menu-item--FontSize);
+  color: var(--pf-c-options-menu__menu-item--Color);
   white-space: nowrap;
   background: var(--pf-c-options-menu__menu-item--Background);
   border: none;
@@ -280,18 +279,6 @@
   margin-left: auto;
   font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
   color: var(--pf-c-options-menu__menu-item-icon--Color);
-}
-
-.pf-c-options-menu__separator {
-  height: var(--pf-c-options-menu__separator--Height);
-  margin-top: var(--pf-c-options-menu__separator--MarginTop);
-  margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
-  background-color: var(--pf-c-options-menu__separator--BackgroundColor);
-  border: 0; // for use when separator is an <hr>
-
-  &:last-child {
-    --pf-c-options-menu__separator--MarginBottom: 0;
-  }
 }
 
 .pf-c-options-menu__group {

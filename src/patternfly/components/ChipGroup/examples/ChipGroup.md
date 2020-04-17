@@ -17,7 +17,7 @@ cssPrefix: pf-c-chip-group
           Chip one
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar_collapsed ' chip-group--id 'chip_one_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar_collapsed"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -25,7 +25,7 @@ cssPrefix: pf-c-chip-group
           Chip two
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar_collapsed ' chip-group--id 'chip_two_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar_collapsed"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -33,7 +33,7 @@ cssPrefix: pf-c-chip-group
           Chip three
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar_collapsed ' chip-group--id 'chip_three_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar_collapsed"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -41,17 +41,15 @@ cssPrefix: pf-c-chip-group
           Chip four
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar_collapsed ' chip-group--id 'chip_four_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar_collapsed"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
     {{/chip-group}}
   {{/chip-group-list-item}}
-  {{#> chip chip--modifier="pf-m-overflow"}}
-    {{#> button button--modifier="pf-m-plain"}}
+  {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
       {{#> chip-text}}
         3 more
       {{/chip-text}}
-    {{/button}}
   {{/chip}}
 {{/chip-group}}
 ```
@@ -68,7 +66,7 @@ cssPrefix: pf-c-chip-group
         Chip one
       {{/chip-text}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
-        <i class="fas fa-times-circle" aria-hidden="true"></i>
+        <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -76,7 +74,7 @@ cssPrefix: pf-c-chip-group
           Chip two
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -84,7 +82,7 @@ cssPrefix: pf-c-chip-group
           Chip three
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar ' chip-group--id 'chip_three_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -92,7 +90,7 @@ cssPrefix: pf-c-chip-group
           Chip four
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
     {{/chip-group}}
@@ -107,7 +105,7 @@ cssPrefix: pf-c-chip-group
       Chip one
     {{/chip-text}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_toolbar ' chip-group--id 'chip_five_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_five_toolbar"')}}
-      <i class="fas fa-times-circle" aria-hidden="true"></i>
+      <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/chip}}
   {{#> chip}}
@@ -115,7 +113,7 @@ cssPrefix: pf-c-chip-group
       Chip two
     {{/chip-text}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_six_toolbar ' chip-group--id 'chip_six_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_six_toolbar"')}}
-      <i class="fas fa-times-circle" aria-hidden="true"></i>
+      <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/chip}}
   {{#> chip}}
@@ -123,7 +121,7 @@ cssPrefix: pf-c-chip-group
       Chip three
     {{/chip-text}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_seven_toolbar ' chip-group--id 'chip_seven_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_seven_toolbar"')}}
-      <i class="fas fa-times-circle" aria-hidden="true"></i>
+      <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/chip}}
 {{/chip-group}}
@@ -143,7 +141,7 @@ cssPrefix: pf-c-chip-group
           Chip one
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
       {{#> chip}}
@@ -151,7 +149,7 @@ cssPrefix: pf-c-chip-group
           Chip two
         {{/chip-text}}
         {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
-          <i class="fas fa-times-circle" aria-hidden="true"></i>
+          <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
       {{/chip}}
     {{/chip-group}}

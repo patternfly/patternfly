@@ -2,216 +2,161 @@
   // Component variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-alert--grid-template-columns: max-content 1fr max-content;
-  --pf-c-alert--grid-template-rows: 1fr auto;
+  --pf-c-alert--GridTemplateColumns: max-content 1fr max-content;
+  --pf-c-alert--BorderTopWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-alert--BorderTopColor: var(--pf-global--default-color--200);
+  --pf-c-alert--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-alert--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-alert--PaddingLeft: var(--pf-global--spacer--md);
 
   // Icon
-  --pf-c-alert__icon--Padding: var(--pf-global--spacer--md);
-  --pf-c-alert__icon--Color: var(--pf-global--default-color--300);
-  --pf-c-alert__icon--BackgroundColor: var(--pf-global--default-color--100);
-  --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--lg);
+  --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
+  --pf-c-alert__icon--MarginTop: calc(var(--pf-global--spacer--xs) / 2);
+  --pf-c-alert__icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
-  --pf-c-alert__title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-alert__title--Color: var(--pf-global--default-color--300);
-  --pf-c-alert__title--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-alert__title--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-alert__title--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-alert__title--PaddingLeft: var(--pf-global--spacer--md);
-
-  // Description
-  --pf-c-alert__description--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-alert__description--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-alert__description--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-alert__description--MarginTop: calc(-1 * var(--pf-global--spacer--sm));
 
   // Action
-  --pf-c-alert__action--PaddingTop: #{pf-size-prem(11px)}; // one off spacer to align properly.
-  --pf-c-alert__action--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-alert__action--MarginTop: calc(var(--pf-global--spacer--form-element) * 2 * -1);
+  --pf-c-alert__action--Transform: translateY(var(--pf-global--spacer--form-element));
+  --pf-c-alert__action--MarginRight: #{pf-size-prem(-8px)};
+
+  // Action Description
+  --pf-c-alert__description--PaddingTop: var(--pf-global--spacer--sm);
+
+  // Alert action group
+  --pf-c-alert__action-group--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-alert__description--action-group--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-alert__action-group__c-button--not-last-child--MarginRight: var(--pf-global--spacer--lg);
 
   // Success
-  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--200);
-  --pf-c-alert--m-success__icon--BackgroundColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-success--BorderTopColor: var(--pf-global--success-color--100);
+  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--100);
   --pf-c-alert--m-success__title--Color: var(--pf-global--success-color--200);
 
   // Danger
-  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--300);
-  --pf-c-alert--m-danger__icon--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-danger--BorderTopColor: var(--pf-global--danger-color--100);
+  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--100);
   --pf-c-alert--m-danger__title--Color: var(--pf-global--danger-color--200);
 
   // Warning
-  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--200);
-  --pf-c-alert--m-warning__icon--BackgroundColor: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-warning__icon--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-alert--m-warning--BorderTopColor: var(--pf-global--warning-color--100);
+  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--100);
   --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
 
   // Info
-  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--200);
-  --pf-c-alert--m-info__icon--BackgroundColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-info--BorderTopColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
   // Inline modification
   --pf-c-alert--m-inline--BoxShadow: none;
-  --pf-c-alert--m-inline--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-alert--m-inline--BorderStyle: solid;
-  --pf-c-alert--m-inline--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-alert--m-inline--BorderLeftWidth: 0;
-  --pf-c-alert--m-inline--before--Width: var(--pf-global--BorderWidth--lg);
-  --pf-c-alert--m-inline--before--Top: calc(-1 * var(--pf-c-alert--m-inline--BorderTopWidth));
-  --pf-c-alert--m-inline--before--Bottom: calc(-1 * var(--pf-c-alert--m-inline--BorderBottomWidth));
-  --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-global--default-color--200);
-  --pf-c-alert--m-inline__icon--FontSize: var(--pf-global--icon--FontSize--md);
-  --pf-c-alert--m-inline__icon--Color: var(--pf-global--default-color--200);
-  --pf-c-alert--m-inline__icon--BackgroundColor: transparent;
-  --pf-c-alert--m-inline__icon--PaddingTop: calc(var(--pf-c-alert__icon--Padding) + ((var(--pf-c-alert__icon--FontSize) - var(--pf-c-alert--m-inline__icon--FontSize)) / 2));
-  --pf-c-alert--m-inline__icon--PaddingRight: 0;
-  --pf-c-alert--m-inline__icon--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-alert--m-inline__icon--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-alert--m-inline--m-warning__icon--FontSize: #{pf-font-prem(17px)}; // Apply a custom size to the FA icon to ensure all icons are the same width
-  --pf-c-alert--m-inline--m-success__icon--Color: var(--pf-global--success-color--100);
-  --pf-c-alert--m-inline--m-success--before--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-alert--m-inline--m-danger__icon--Color: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-inline--m-danger--before--BackgroundColor: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-inline--m-warning__icon--Color: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-inline--m-warning--before--BackgroundColor: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-inline--m-info__icon--Color: var(--pf-global--info-color--100);
-  --pf-c-alert--m-inline--m-info--before--BackgroundColor: var(--pf-global--info-color--100);
+  --pf-c-alert--m-inline--BackgroundColor: var(--pf-global--palette--cyan-50);
+
+  // Inline success
+  --pf-c-alert--m-inline--m-success--BackgroundColor: var(--pf-global--palette--green-50);
+
+  // Inline danger
+  --pf-c-alert--m-inline--m-danger--BackgroundColor: var(--pf-global--palette--red-50);
+
+  // Inline warning
+  --pf-c-alert--m-inline--m-warning--BackgroundColor: var(--pf-global--palette--gold-50);
+
+  // Inline info
+  --pf-c-alert--m-inline--m-info--BackgroundColor: var(--pf-global--palette--blue-50);
 
   @include pf-t-light; // This component always needs to be light
 
   position: relative;
   display: grid;
-  grid-template-columns: var(--pf-c-alert--grid-template-columns);
-  grid-template-rows: var(--pf-c-alert--grid-template-rows);
+  padding: var(--pf-c-alert--PaddingTop) var(--pf-c-alert--PaddingRight) var(--pf-c-alert--PaddingBottom) var(--pf-c-alert--PaddingLeft);
+  background-color: var(--pf-c-alert--BackgroundColor);
+  border-top: var(--pf-c-alert--BorderTopWidth) solid var(--pf-c-alert--BorderTopColor);
+  box-shadow: var(--pf-c-alert--BoxShadow);
+  grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   grid-template-areas:
     "icon title action"
-    "icon content content";
-  background-color: var(--pf-c-alert--BackgroundColor);
-  box-shadow: var(--pf-c-alert--BoxShadow);
-
+    "icon description description"
+    "icon actiongroup actiongroup";
 
   &.pf-m-success {
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-success__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-success__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-success--before--BackgroundColor);
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-success__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-success--BackgroundColor);
   }
 
   &.pf-m-danger {
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-danger--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-danger__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-danger__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-danger__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-danger--before--BackgroundColor);
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-danger__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-danger--BackgroundColor);
   }
 
   &.pf-m-warning {
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-warning--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-warning__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-warning__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-warning__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--before--BackgroundColor);
-
-    // Apply a custom size to the FA icon to ensure all icons are the same width
-    .pf-c-alert__icon > i {
-      font-size: var(--pf-c-alert--m-warning__icon--FontSize);
-    }
-
-    // Apply a custom size to the FA icon to ensure all icons are the same width
-    &.pf-m-inline .pf-c-alert__icon > i {
-      font-size: var(--pf-c-alert--m-inline--m-warning__icon--FontSize);
-    }
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-warning__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-warning--BackgroundColor);
   }
 
   &.pf-m-info {
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-info--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-info__icon--Color);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-info__icon--BackgroundColor);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-info__title--Color);
-
-    // Set border left color in case it is also an inline alert
-    --pf-c-alert--m-inline--before--BackgroundColor: var(--pf-c-alert--m-inline--m-info--before--BackgroundColor);
-
-    &.pf-m-inline {
-      --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline--m-info__icon--Color);
-    }
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-info--BackgroundColor);
   }
 
   &.pf-m-inline {
     --pf-c-alert--BoxShadow: var(--pf-c-alert--m-inline--BoxShadow);
-    --pf-c-alert__icon--BackgroundColor: var(--pf-c-alert--m-inline__icon--BackgroundColor);
-    --pf-c-alert__icon--Color: var(--pf-c-alert--m-inline__icon--Color);
-
-    border: solid var(--pf-c-alert--m-inline--BorderColor);
-    border-width: var(--pf-c-alert--m-inline--BorderTopWidth) var(--pf-c-alert--m-inline--BorderRightWidth) var(--pf-c-alert--m-inline--BorderBottomWidth) var(--pf-c-alert--m-inline--BorderLeftWidth);
-
-    // Left border treatment
-    &::before {
-      position: absolute;
-      top: var(--pf-c-alert--m-inline--before--Top);
-      bottom: var(--pf-c-alert--m-inline--before--Bottom);
-      left: 0;
-      width: var(--pf-c-alert--m-inline--before--Width);
-      content: "";
-      background-color: var(--pf-c-alert--m-inline--before--BackgroundColor);
-    }
-
-    .pf-c-alert__icon {
-      --pf-c-alert__icon--FontSize: var(--pf-c-alert--m-inline__icon--FontSize);
-
-      padding: var(--pf-c-alert--m-inline__icon--PaddingTop) var(--pf-c-alert--m-inline__icon--PaddingRight) var(--pf-c-alert--m-inline__icon--PaddingBottom) var(--pf-c-alert--m-inline__icon--PaddingLeft);
-    }
+    --pf-c-alert--BackgroundColor: var(--pf-c-alert--m-inline--BackgroundColor);
   }
 }
 
 .pf-c-alert__icon {
-  display: flex;
   grid-area: icon;
-  padding: var(--pf-c-alert__icon--Padding);
+  display: flex;
+  margin-top: var(--pf-c-alert__icon--MarginTop);
+  margin-right: var(--pf-c-alert__icon--MarginRight);
   font-size: var(--pf-c-alert__icon--FontSize);
   color: var(--pf-c-alert__icon--Color);
-  background-color: var(--pf-c-alert__icon--BackgroundColor);
 }
 
 .pf-c-alert__title {
   grid-area: title;
-  padding: var(--pf-c-alert__title--PaddingTop) var(--pf-c-alert__title--PaddingRight) var(--pf-c-alert__title--PaddingBottom)  var(--pf-c-alert__title--PaddingLeft);
-  font-size: var(--pf-c-alert__title--FontSize);
   color: var(--pf-c-alert__title--Color);
-
-  & + .pf-c-alert__description {
-    margin-top: var(--pf-c-alert__description--MarginTop);
-  }
 }
 
 .pf-c-alert__description {
-  grid-area: content;
-  padding-right: var(--pf-c-alert__description--PaddingRight);
-  padding-bottom: var(--pf-c-alert__description--PaddingBottom);
-  padding-left: var(--pf-c-alert__description--PaddingLeft);
+  grid-area: description;
+  padding-top: var(--pf-c-alert__description--PaddingTop);
+
+  + .pf-c-alert__action-group {
+    --pf-c-alert__action-group--PaddingTop: var(--pf-c-alert__description--action-group--PaddingTop);
+  }
 }
 
 .pf-c-alert__action {
   grid-area: action;
-  padding-top: var(--pf-c-alert__action--PaddingTop);
-  padding-right: var(--pf-c-alert__action--PaddingRight);
+  margin-top: var(--pf-c-alert__action--MarginTop);
+  margin-right: var(--pf-c-alert__action--MarginRight);
+  transform: var(--pf-c-alert__action--Transform);
+}
+
+.pf-c-alert__action-group {
+  grid-area: actiongroup;
+  padding-top: var(--pf-c-alert__action-group--PaddingTop);
+
+  > .pf-c-button {
+    --pf-c-button--m-link--m-inline--hover--TextDecoration: none;
+
+    &:not(:last-child) {
+      margin-right: var(--pf-c-alert__action-group__c-button--not-last-child--MarginRight);
+    }
+  }
 }
 
 // RedHat Font overrides
