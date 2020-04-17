@@ -1,13 +1,19 @@
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter--md);
 
+  // Group
+  --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-form--m-horizontal__group-label--md--GridColumnWidth: #{pf-size-prem(150px)};
+  --pf-c-form--m-horizontal__group-label--md--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-form--m-horizontal__group-control--md--GridColumnWidth: 1fr;
+
+  // Group label
+  --pf-c-form--m-horizontal__group-label--md--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-form__group-label--PaddingBottom: var(--pf-global--spacer--sm);
+
   // Label
-  --pf-c-form__label--Color: var(--pf-global--Color--100);
-  --pf-c-form__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-form__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__label--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-form__label--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-form__label--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-form__label--m-disabled--Color: var(--pf-global--disabled-color--100);
 
   // Label text
@@ -18,12 +24,22 @@
   --pf-c-form__label-required--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__label-required--Color: var(--pf-global--danger-color--100);
 
-  // Form group
-  --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-form--m-horizontal--md__group--GridTemplateColumns: 150px 1fr;
-  --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
+  // Field level help
+  --pf-c-form__group-label-help--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-form__group-label-help--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-form__group-label-help--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-form__group-label-help--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-form__group-label-help--MarginTop: calc(var(--pf-c-form__group-label-help--PaddingTop) * -1);
+  --pf-c-form__group-label-help--MarginRight: calc(var(--pf-c-form__group-label-help--PaddingRight) * -1);
+  --pf-c-form__group-label-help--MarginBottom: calc(var(--pf-c-form__group-label-help--PaddingBottom) * -1);
+  --pf-c-form__group-label-help--MarginLeft: calc(var(--pf-c-form__group-label-help--PaddingLeft) * -1 + var(--pf-global--spacer--xs));
+  --pf-c-form__group-label-help--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-form__group-label-help--TranslateY: #{pf-size-prem(2px)};
 
-  // actions
+  // Group control
+  --pf-c-form__group-control--m-inline--child--MarginRight: var(--pf-global--spacer--lg);
+
+  // Actions
   --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginBottom: var(--pf-global--spacer--sm);
@@ -38,58 +54,45 @@
   --pf-c-form__helper-text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__helper-text--Color: var(--pf-global--Color--100);
 
+  // here
   // Helper text icon
   --pf-c-form__helper-text-icon--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form__helper-text-icon--MarginRight: var(--pf-global--spacer--xs);
 
-  // Inline
-  --pf-c-form--m-inline--MarginRight: var(--pf-global--spacer--lg);
-
   // States
-  --pf-c-form--m-error--Color: var(--pf-global--danger-color--100);
-  --pf-c-form--m-success--Color: var(--pf-global--success-color--200);
-
+  --pf-c-form__helper-text--m-error--Color: var(--pf-global--danger-color--100);
+  --pf-c-form__helper-text--m-success--Color: var(--pf-global--success-color--200);
 
   display: grid;
   grid-gap: var(--pf-c-form--GridGap);
 
   &.pf-m-horizontal {
+    --pf-c-form__group-label--PaddingBottom: 0;
+
     &.pf-m-align-right {
       .pf-c-form__label {
         text-align: right;
       }
     }
 
-    .pf-c-form__group {
-      display: grid;
-      grid-column-gap: var(--pf-c-form--GridGap);
-
-      .pf-c-form-control {
-        align-self: start;
-      }
-    }
-
     @media (min-width: $pf-global--breakpoint--md) {
       .pf-c-form__group {
-        grid-template-columns: var(--pf-c-form--m-horizontal--md__group--GridTemplateColumns);
+        display: grid;
+        grid-column-gap: var(--pf-c-form--m-horizontal__group-label--md--GridColumnGap);
+        grid-template-columns: var(--pf-c-form--m-horizontal__group-label--md--GridColumnWidth) var(--pf-c-form--m-horizontal__group-control--md--GridColumnWidth);
       }
 
-      // stylelint-disable
-      .pf-c-form__group .pf-c-form__label {
-        padding-top: var(--pf-c-form__label--PaddingTop);
-        padding-bottom: 0;
+      .pf-c-form__group-label {
+        padding-top: var(--pf-c-form--m-horizontal__group-label--md--PaddingTop);
 
+        // stylelint-disable-next-line
         &.pf-m-no-padding-top {
-          --pf-c-form__label--PaddingTop: 0;
+          --pf-c-form--m-horizontal__group-label--md--PaddingTop: 0;
         }
       }
-      // stylelint-enable
 
-      .pf-c-form-control,
-      .pf-c-form__horizontal-group,
-      .pf-c-form__helper-text,
-      .pf-c-check {
-        grid-column-start: 2;
+      .pf-c-form__group-control {
+        grid-column: 2;
       }
     }
   }
@@ -99,37 +102,15 @@
   &.pf-m-action {
     margin-top: var(--pf-c-form__group--m-action--MarginTop);
   }
+}
 
-  &.pf-m-inline {
-    display: flex;
-    flex-flow: row wrap;
-
-    .pf-c-form__label {
-      flex-basis: 100%;
-    }
-
-    // Purpose: larger margin-right than the default value for '--group.'
-    > *:not(.pf-c-form__label) {
-      flex: auto 0;
-      margin-right: var(--pf-c-form--m-inline--MarginRight);
-    }
-  }
-
-  .pf-c-form__label {
-    padding-bottom: var(--pf-c-form__label--PaddingBottom);
-  }
-
-  .pf-c-form__helper-text {
-    margin-top: var(--pf-c-form__helper-text--MarginTop);
-  }
+.pf-c-form__group-label {
+  padding-bottom: var(--pf-c-form__group-label--PaddingBottom);
 }
 
 .pf-c-form__label {
-  display: inline-block;
   font-size: var(--pf-c-form__label--FontSize);
-  font-weight: var(--pf-c-form__label--FontWeight);
   line-height: var(--pf-c-form__label--LineHeight);
-  color: var(--pf-c-form__label--Color);
 
   &::selection {
     background-color: none;
@@ -140,7 +121,7 @@
   }
 
   &.pf-m-disabled {
-    --pf-c-form__label--Color: var(--pf-c-form__label--m-disabled--Color);
+    color: var(--pf-c-form__label--m-disabled--Color);
   }
 
   &.pf-m-disabled:hover {
@@ -158,16 +139,45 @@
   color: var(--pf-c-form__label-required--Color);
 }
 
+.pf-c-form__group-label-help {
+  padding-top: var(--pf-c-form__group-label-help--PaddingTop);
+  padding-right: var(--pf-c-form__group-label-help--PaddingRight);
+  padding-bottom: var(--pf-c-form__group-label-help--PaddingBottom);
+  padding-left: var(--pf-c-form__group-label-help--PaddingLeft);
+  margin-top: var(--pf-c-form__group-label-help--MarginTop);
+  margin-right: var(--pf-c-form__group-label-help--MarginRight);
+  margin-bottom: var(--pf-c-form__group-label-help--MarginBottom);
+  margin-left: var(--pf-c-form__group-label-help--MarginLeft);
+  font-size: var(--pf-c-form__group-label-help--FontSize);
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  transform: translateY(var(--pf-c-form__group-label-help--TranslateY));
+}
+
+
+.pf-c-form__group-control {
+  &.pf-m-inline {
+    display: flex;
+    flex-flow: row wrap;
+
+    > * {
+      margin-right: var(--pf-c-form__group-control--m-inline--child--MarginRight);
+    }
+  }
+}
+
 .pf-c-form__helper-text {
+  margin-top: var(--pf-c-form__helper-text--MarginTop);
   font-size: var(--pf-c-form__helper-text--FontSize);
   color: var(--pf-c-form__helper-text--Color);
 
   &.pf-m-error {
-    --pf-c-form__helper-text--Color: var(--pf-c-form--m-error--Color);
+    --pf-c-form__helper-text--Color: var(--pf-c-form__helper-text--m-error--Color);
   }
 
   &.pf-m-success {
-    --pf-c-form__helper-text--Color: var(--pf-c-form--m-success--Color);
+    --pf-c-form__helper-text--Color: var(--pf-c-form__helper-text--m-success--Color);
   }
 
   &.pf-m-inactive {
