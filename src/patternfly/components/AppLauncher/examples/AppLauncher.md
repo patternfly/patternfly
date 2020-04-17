@@ -332,8 +332,6 @@ import './AppLauncher.css'
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
 | `.pf-m-top` | `.pf-c-app-launcher` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
-| `.pf-m-hover` | `.pf-c-app-launcher__menu-item` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
-| `.pf-m-focus` | `.pf-c-app-launcher__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. |
 | `.pf-m-external` | `.pf-c-app-launcher__menu-item` | Modifies to display the menu item as having an external link icon on hover/focus. |
 | `.pf-m-favorite` | `.pf-c-app-launcher__menu-item` | Modifies item to be a favorited item. |

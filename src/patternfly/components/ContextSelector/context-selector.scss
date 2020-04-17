@@ -87,15 +87,13 @@
     border-color: var(--pf-c-context-selector__toggle--BorderTopColor) var(--pf-c-context-selector__toggle--BorderRightColor) var(--pf-c-context-selector__toggle--BorderBottomColor) var(--pf-c-context-selector__toggle--BorderLeftColor);
   }
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     &::before {
       --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor);
     }
   }
 
   &:active,
-  &.pf-m-active,
   &:focus-within {
     &::before {
       --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--active--BorderBottomColor);
@@ -159,15 +157,12 @@
   border: none;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     text-decoration: none;
     background-color: var(--pf-c-context-selector__menu-list-item--hover--BackgroundColor);
   }
 
-  &:disabled,
-  &.pf-m-disabled {
+  &:disabled {
     color: var(--pf-c-context-selector__menu-list-item--disabled--Color);
     pointer-events: none;
   }

@@ -477,13 +477,11 @@
     counter-increment: wizard-nav-count;
   }
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--hover--Color);
   }
 
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--focus--Color);
   }
 

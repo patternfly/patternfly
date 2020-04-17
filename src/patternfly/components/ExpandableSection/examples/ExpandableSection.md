@@ -42,6 +42,3 @@ cssPrefix: pf-c-expandable-section
 | `.pf-c-expandable-section__toggle-icon` | `<i>` | Initiates the expandable section toggle icon. **Required** |
 | `.pf-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
 | `.pf-m-expanded` | `.pf-c-expandable-section` | Modifies the component for the expanded state. |
-| `.pf-m-hover` | `.pf-c-expandable-section__toggle` | Modifies the toggle for the hover state. |
-| `.pf-m-active` | `.pf-c-expandable-section__toggle` | Modifies the toggle for the active state. |
-| `.pf-m-focus` | `.pf-c-expandable-section__toggle` | Modifies the toggle for the focus state. |

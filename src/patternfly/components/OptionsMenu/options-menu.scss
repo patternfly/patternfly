@@ -106,15 +106,13 @@
     border-color: var(--pf-c-options-menu__toggle--BorderTopColor) var(--pf-c-options-menu__toggle--BorderRightColor) var(--pf-c-options-menu__toggle--BorderBottomColor) var(--pf-c-options-menu__toggle--BorderLeftColor);
   }
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--hover--BorderBottomColor);
     }
   }
 
-  &:active,
-  &.pf-m-active {
+  &:active {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--active--BorderBottomColor);
 
@@ -122,8 +120,7 @@
     }
   }
 
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--focus--BorderBottomColor);
 
@@ -174,10 +171,7 @@
     }
 
     &:hover,
-    &.pf-m-hover,
     &:active,
-    &.pf-m-active,
-    &.pf-m-focus,
     &:focus,
     .pf-c-options-menu.pf-m-expanded > & {
       --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--hover--Color);
@@ -257,9 +251,7 @@
   border: none;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     text-decoration: none;
     background-color: var(--pf-c-options-menu__menu-item--hover--BackgroundColor);
   }

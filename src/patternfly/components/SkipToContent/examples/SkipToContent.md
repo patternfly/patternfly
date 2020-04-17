@@ -118,4 +118,3 @@ When using `.pf-c-skip-to-content` you must provide an `href` attribute whose va
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-skip-to-content` | `<a>` |  initiates the skip to content link. |
-| `.pf-m-focus` | `.pf-c-skip-to-content` |  Forces display of the focus state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
