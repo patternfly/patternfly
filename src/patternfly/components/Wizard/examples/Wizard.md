@@ -283,169 +283,6 @@ import './Wizard.css'
 {{/wizard}}
 ```
 
-```hbs title=Full-width/height isFullscreen
-{{#> wizard wizard--modifier="pf-m-full-width pf-m-full-height"}}
-  {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
-    {{#> wizard-description}}
-      Here is where the description goes
-    {{/wizard-description}}
-  {{/wizard-header}}
-  {{#> wizard-toggle}}
-    {{#> wizard-toggle-list}}
-        {{#> wizard-toggle-list-item}}
-          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
-          Configuration
-          {{> wizard-toggle-separator}}
-        {{/wizard-toggle-list-item}}
-        {{#> wizard-toggle-list-item}}
-          Substep B
-        {{/wizard-toggle-list-item}}
-      {{/wizard-toggle-list}}
-      {{> wizard-toggle-icon}}
-    {{/wizard-toggle}}
-    {{#> wizard-outer-wrap}}
-      {{#> wizard-inner-wrap}}
-        {{#> wizard-nav}}
-          {{#> wizard-nav-list}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Information
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
-                Configuration
-              {{/wizard-nav-link}}
-              {{#> wizard-nav-list}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link}}
-                    Substep A
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
-                    Substep B
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link}}
-                    Substep C
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-              {{/wizard-nav-list}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Additional
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
-                Review
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-          {{/wizard-nav-list}}
-        {{/wizard-nav}}
-      {{#> wizard-main}}
-        <p>Wizard content goes here</p>
-      {{/wizard-main}}
-    {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
-      {{#> button button--modifier="pf-m-secondary"}}
-        Back
-      {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
-    {{/wizard-footer}}
-  {{/wizard-outer-wrap}}
-{{/wizard}}
-```
-
-```hbs title=In-page
-{{#> wizard wizard--modifier="pf-m-in-page"}}
-  {{#> wizard-toggle}}
-    {{#> wizard-toggle-list}}
-        {{#> wizard-toggle-list-item}}
-          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
-          Configuration
-          {{> wizard-toggle-separator}}
-        {{/wizard-toggle-list-item}}
-        {{#> wizard-toggle-list-item}}
-          Substep B
-        {{/wizard-toggle-list-item}}
-      {{/wizard-toggle-list}}
-      {{> wizard-toggle-icon}}
-    {{/wizard-toggle}}
-    {{#> wizard-outer-wrap}}
-      {{#> wizard-inner-wrap}}
-        {{#> wizard-nav}}
-          {{#> wizard-nav-list}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Information
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
-                Configuration
-              {{/wizard-nav-link}}
-              {{#> wizard-nav-list}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link}}
-                    Substep A
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
-                    Substep B
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link}}
-                    Substep C
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-              {{/wizard-nav-list}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Additional
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
-                Review
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-          {{/wizard-nav-list}}
-        {{/wizard-nav}}
-      {{#> wizard-main}}
-        <p>Wizard content goes here</p>
-      {{/wizard-main}}
-    {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
-      {{#> button button--modifier="pf-m-secondary"}}
-        Back
-      {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
-    {{/wizard-footer}}
-  {{/wizard-outer-wrap}}
-{{/wizard}}
-```
-
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -463,7 +300,7 @@ import './Wizard.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-wizard` | `<div>` | Initiates the wizard component. **Required** |
-| `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** |
+| `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** when the wizard is in a modal. Not recommended to use when the wizard is placed on a page. |
 | `.pf-c-wizard__close` | `.pf-c-button.pf-m-plain` | Initiates the close button. **Required** |
 | `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
 | `.pf-c-wizard__description` | `<p>` | Initiates the description. |
@@ -484,9 +321,6 @@ import './Wizard.css'
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
-| `.pf-m-full-width` | `.pf-c-wizard` | Modifies the wizard to expand the full width of the viewport. |
-| `.pf-m-full-height` | `.pf-c-wizard` | Modifies the wizard to expand the full height of the viewport. |
-| `.pf-m-in-page` | `.pf-c-wizard` | Modifies wizard for use outside of a modal. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-c-wizard__nav-link` | Modifies a step link for the disabled state. |
 | `.pf-m-no-padding` | `.pf-c-wizard__main-body` | Modifies the main container body to remove the padding. |
