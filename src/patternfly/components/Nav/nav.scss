@@ -68,12 +68,12 @@
   --pf-c-nav--m-horizontal__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
 
   // Tertiary horizontal
-  --pf-c-nav--m-tertiary--m-horizontal__link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav--m-tertiary--m-horizontal__link--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary--m-horizontal__link--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary--m-horizontal__link--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary--m-horizontal__link--m-current--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-tertiary__link--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--m-current--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--before--BorderColor: var(--pf-global--active-color--100);
 
   // Light scroll buttons
   --pf-c-nav--m-tertiary__scroll-button--Color: var(--pf-global--Color--dark-100);
@@ -314,17 +314,17 @@
   }
 
   &.pf-m-tertiary {
-    --pf-c-nav--m-horizontal__link--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--Color);
-    --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--hover--Color);
-    --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--focus--Color);
-    --pf-c-nav--m-horizontal__link--active--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--active--Color);
-    --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--m-current--Color);
-    --pf-c-nav--m-horizontal__link--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--BackgroundColor);
-    --pf-c-nav--m-horizontal__link--hover--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--hover--BackgroundColor);
-    --pf-c-nav--m-horizontal__link--focus--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--focus--BackgroundColor);
-    --pf-c-nav--m-horizontal__link--active--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--active--BackgroundColor);
-    --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--m-current--BackgroundColor);
-    --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--before--BorderColor);
+    --pf-c-nav--m-horizontal__link--Color: var(--pf-c-nav--m-tertiary__link--Color);
+    --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-c-nav--m-tertiary__link--hover--Color);
+    --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-c-nav--m-tertiary__link--focus--Color);
+    --pf-c-nav--m-horizontal__link--active--Color: var(--pf-c-nav--m-tertiary__link--active--Color);
+    --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-c-nav--m-tertiary__link--m-current--Color);
+    --pf-c-nav--m-horizontal__link--BackgroundColor: var(--pf-c-nav--m-tertiary__link--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--hover--BackgroundColor: var(--pf-c-nav--m-tertiary__link--hover--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--focus--BackgroundColor: var(--pf-c-nav--m-tertiary__link--focus--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--active--BackgroundColor: var(--pf-c-nav--m-tertiary__link--active--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: var(--pf-c-nav--m-tertiary__link--m-current--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-c-nav--m-tertiary__link--before--BorderColor);
 
     // Scroll
     --pf-c-nav__scroll-button--hover--Color: var(--pf-c-nav--m-tertiary__scroll-button--hover--Color);
