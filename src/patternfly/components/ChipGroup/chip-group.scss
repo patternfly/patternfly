@@ -1,9 +1,9 @@
 .pf-c-chip-group {
   @include pf-t-light; // force the container follow the light theme
 
-  --pf-c-chip-group--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
   --pf-c-chip-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-chip-group--m-category--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-category--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -21,17 +21,23 @@
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--c-chip--MarginBottom: var(--pf-global--spacer--xs);
 
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: var(--pf-c-chip-group--MarginBottom);
+  // Chip list item
+  --pf-c-chip-group__list-item--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
 
   &.pf-m-category {
     padding-top: var(--pf-c-chip-group--m-category--PaddingTop);
     padding-right: var(--pf-c-chip-group--m-category--PaddingRight);
+    padding-bottom: var(--pf-c-chip-group--m-category--PaddingBottom);
     padding-left: var(--pf-c-chip-group--m-category--PaddingLeft);
     background-color: var(--pf-c-chip-group--m-category--BackgroundColor);
     border-radius: var(--pf-c-chip-group--m-category--BorderRadius);
+  }
+
+  .pf-c-chip-group__list-item {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: var(--pf-c-chip-group__list-item--MarginBottom);
   }
 
   .pf-c-chip-group__label {
@@ -47,7 +53,7 @@
     margin-top: var(--pf-c-chip-group__close--MarginTop);
   }
 
-  > .pf-c-chip {
+  .pf-c-chip {
     margin-right: var(--pf-c-chip-group--c-chip--MarginRight);
     margin-bottom: var(--pf-c-chip-group--c-chip--MarginBottom);
 
