@@ -17,30 +17,6 @@
   --pf-c-nav__section-title--Color: var(--pf-c-nav--m-light__section-title--Color);
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav--m-light__section-title--BorderBottomColor);
 
-  // Scroll
-  --pf-c-nav__scroll-button--Color: var(--pf-c-nav--m-light__scroll-button--Color);
-  --pf-c-nav__scroll-button--hover--Color: var(--pf-c-nav--m-light__scroll-button--hover--Color);
-  --pf-c-nav__scroll-button--focus--Color: var(--pf-c-nav--m-light__scroll-button--focus--Color);
-  --pf-c-nav__scroll-button--active--Color: var(--pf-c-nav--m-light__scroll-button--active--Color);
-  --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-nav--m-light__scroll-button--disabled--Color);
-
-  // Scroll buttons before
-  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav--m-light__scroll-button--before--BorderColor);
-  --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-nav--m-light__scroll-button--disabled--before--BorderColor);
-
-  // Horizontal
-  --pf-c-nav--m-horizontal__link--Color: var(--pf-c-nav--m-light--m-horizontal__link--Color);
-  --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-c-nav--m-light--m-horizontal__link--hover--Color);
-  --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-c-nav--m-light--m-horizontal__link--focus--Color);
-  --pf-c-nav--m-horizontal__link--active--Color: var(--pf-c-nav--m-light--m-horizontal__link--active--Color);
-  --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-c-nav--m-light--m-horizontal__link--m-current--Color);
-  --pf-c-nav--m-horizontal__link--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--BackgroundColor);
-  --pf-c-nav--m-horizontal__link--hover--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--hover--BackgroundColor);
-  --pf-c-nav--m-horizontal__link--focus--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--focus--BackgroundColor);
-  --pf-c-nav--m-horizontal__link--active--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--active--BackgroundColor);
-  --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: var(--pf-c-nav--m-light--m-horizontal__link--m-current--BackgroundColor);
-  --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-c-nav--m-light--m-horizontal__link--before--BorderColor);
-
   .pf-c-divider {
     --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-light--c-divider--BackgroundColor);
   }
@@ -69,17 +45,6 @@
   --pf-c-nav--m-light__subnav__link--active--after--BorderColor: var(--pf-global--BorderColor--dark-100);
   --pf-c-nav--m-light--c-divider--BackgroundColor: var(--pf-global--BorderColor--300);
 
-  // Light scroll buttons
-  --pf-c-nav--m-light__scroll-button--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav--m-light__scroll-button--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light__scroll-button--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light__scroll-button--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
-
-  // Scroll buttons before
-  --pf-c-nav--m-light__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-nav--m-light__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
-
   // Horizontal nav
   --pf-c-nav--m-horizontal__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-nav--m-horizontal__link--PaddingRight: var(--pf-global--spacer--md);
@@ -102,18 +67,24 @@
   --pf-c-nav--m-horizontal__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav--m-horizontal__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
 
-  // Light horizontal
-  --pf-c-nav--m-light--m-horizontal__link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav--m-light--m-horizontal__link--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light--m-horizontal__link--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light--m-horizontal__link--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light--m-horizontal__link--m-current--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-light--m-horizontal__link--BackgroundColor: transparent;
-  --pf-c-nav--m-light--m-horizontal__link--hover--BackgroundColor: transparent;
-  --pf-c-nav--m-light--m-horizontal__link--focus--BackgroundColor: transparent;
-  --pf-c-nav--m-light--m-horizontal__link--active--BackgroundColor: transparent;
-  --pf-c-nav--m-light--m-horizontal__link--m-current--BackgroundColor: transparent;
-  --pf-c-nav--m-light--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--100);
+  // Tertiary horizontal
+  --pf-c-nav--m-tertiary--m-horizontal__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-tertiary--m-horizontal__link--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary--m-horizontal__link--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary--m-horizontal__link--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary--m-horizontal__link--m-current--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--100);
+
+  // Light scroll buttons
+  --pf-c-nav--m-tertiary__scroll-button--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-tertiary__scroll-button--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__scroll-button--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__scroll-button--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
+
+  // Scroll buttons before
+  --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-tertiary__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
 
   // Item
   --pf-c-nav__item--m-expanded__toggle-icon--Transform: rotate(90deg);
@@ -250,11 +221,6 @@
     --pf-c-nav__scroll-button--Height: var(--pf-c-nav__scroll-button--lg--Height);
   }
 
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-
   &.pf-m-light {
     @extend %pf-c-nav--m-light;
   }
@@ -270,6 +236,8 @@
   }
 
   &.pf-m-horizontal {
+    --pf-c-nav__link--Right: var(--pf-c-nav__link--PaddingRight);
+    --pf-c-nav__link--Left: var(--pf-c-nav__link--PaddingLeft);
     --pf-c-nav__link--PaddingTop: var(--pf-c-nav--m-horizontal__link--PaddingTop);
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav--m-horizontal__link--PaddingRight);
     --pf-c-nav__link--PaddingBottom: var(--pf-c-nav--m-horizontal__link--PaddingBottom);
@@ -287,6 +255,11 @@
     --pf-c-nav__link--before--BorderColor: var(--pf-c-nav--m-horizontal__link--before--BorderColor);
     --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--before--BorderWidth);
 
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
     .pf-c-nav__link:hover {
       --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--hover--before--BorderWidth);
     }
@@ -302,6 +275,67 @@
     .pf-c-nav__link.pf-m-current {
       --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--m-current--before--BorderWidth);
     }
+
+    // Support old list structure
+    .pf-c-nav__list,
+    .pf-c-nav__horizontal-list,
+    .pf-c-nav__tertiary-list {
+      @include pf-overflow-hide-scroll;
+
+      position: relative;
+      display: flex;
+      flex: 1;
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .pf-c-nav__item {
+      display: flex;
+    }
+
+    .pf-c-nav__link {
+      align-items: center;
+      align-self: stretch;
+    }
+
+    .pf-c-nav__link::before {
+      top: auto;
+      right: var(--pf-c-nav__link--Right);
+      bottom: 0;
+      left: var(--pf-c-nav__link--Left);
+      border-bottom-width: var(--pf-c-nav__link--before--BorderBottomWidth);
+    }
+
+    .pf-c-nav__link::after {
+      content: none;
+    }
+  }
+
+  &.pf-m-tertiary {
+    --pf-c-nav--m-horizontal__link--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--Color);
+    --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--hover--Color);
+    --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--focus--Color);
+    --pf-c-nav--m-horizontal__link--active--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--active--Color);
+    --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-c-nav--m-tertiary--m-horizontal__link--m-current--Color);
+    --pf-c-nav--m-horizontal__link--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--hover--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--hover--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--focus--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--focus--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--active--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--active--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--m-current--BackgroundColor);
+    --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-c-nav--m-tertiary--m-horizontal__link--before--BorderColor);
+
+    // Scroll
+    --pf-c-nav__scroll-button--hover--Color: var(--pf-c-nav--m-tertiary__scroll-button--hover--Color);
+    --pf-c-nav__scroll-button--Color: var(--pf-c-nav--m-tertiary__scroll-button--Color);
+    --pf-c-nav__scroll-button--focus--Color: var(--pf-c-nav--m-tertiary__scroll-button--focus--Color);
+    --pf-c-nav__scroll-button--active--Color: var(--pf-c-nav--m-tertiary__scroll-button--active--Color);
+    --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-nav--m-tertiary__scroll-button--disabled--Color);
+
+    // Scroll buttons before
+    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav--m-tertiary__scroll-button--before--BorderColor);
+    --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-nav--m-tertiary__scroll-button--disabled--before--BorderColor);
   }
 
   &.pf-m-scrollable {
@@ -438,44 +472,6 @@
   .pf-c-nav__link {
     margin-top: var(--pf-c-nav__simple-list__link--MarginTop);
     margin-bottom: var(--pf-c-nav__simple-list__link--MarginBottom);
-  }
-}
-
-// Horizontal and tertiary list
-.pf-c-nav__horizontal-list,
-.pf-c-nav__tertiary-list {
-  --pf-c-nav__link--Right: var(--pf-c-nav__link--PaddingRight);
-  --pf-c-nav__link--Left: var(--pf-c-nav__link--PaddingLeft);
-
-  @include pf-overflow-hide-scroll;
-
-  position: relative;
-  display: flex;
-  flex: 1;
-  max-width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-
-  .pf-c-nav__item {
-    display: flex;
-  }
-
-  .pf-c-nav__link {
-    align-items: center;
-    align-self: stretch;
-  }
-
-  .pf-c-nav__link::before {
-    top: auto;
-    right: var(--pf-c-nav__link--Right);
-    bottom: 0;
-    left: var(--pf-c-nav__link--Left);
-    border-bottom-width: var(--pf-c-nav__link--before--BorderBottomWidth);
-  }
-
-  .pf-c-nav__link::after {
-    content: none;
   }
 }
 

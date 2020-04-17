@@ -5,11 +5,11 @@ section: demos
 
 ## Demos
 ```hbs title=Default-nav isFullscreen
-{{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark"}}
+{{> page-demo-default page-demo-default--id="page-default-nav-example"}}
 ```
 
 ```hbs title=Expandable-nav isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}{{/page-demo-expandable-nav}}
 ```
 
 ```hbs title=Horizontal-nav isFullscreen
@@ -25,7 +25,7 @@ section: demos
     {{/page-header-brand}}
     {{#> page-header-nav}}
     {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-      {{#> nav-list nav-list--type="horizontal"}}
+      {{#> nav-list}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#"}}
             Horizontal nav item 1
@@ -89,8 +89,8 @@ section: demos
     {{/page-template-header-tools-elements}}
   {{/page-header}}
 
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
+  {{#> page-sidebar}}
+    {{#> nav nav--modifier="pf-m-tertiary" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
@@ -174,8 +174,8 @@ section: demos
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-        {{#> nav-list nav-list--type="tertiary"}}
+      {{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Tertiary nav item 1
@@ -233,7 +233,7 @@ section: demos
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}

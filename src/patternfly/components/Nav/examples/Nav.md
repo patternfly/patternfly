@@ -265,9 +265,9 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Horizontal
+```hbs title=Horizontal-in-masthead
 {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Item 1
@@ -287,41 +287,9 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Horizontal-overflow
+```hbs title=Horizontal-in-masthead-overflow
 {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list nav-list--type="horizontal"}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 4
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Horizontal nav item 5
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
-```
-
-```hbs title=Horizontal-overflow-light
-{{#> nav nav--modifier="pf-m-light" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
         Horizontal nav item 1
@@ -352,8 +320,8 @@ import './Nav.css'
 ```
 
 ```hbs title=Tertiary
-{{#> nav nav--modifier="pf-m-light" nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
-  {{#> nav-list nav-list--type="tertiary"}}
+{{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Item 1
@@ -374,8 +342,8 @@ import './Nav.css'
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> nav nav--modifier="pf-m-light" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-  {{#> nav-list nav-list--type="tertiary"}}
+{{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Tertiary nav item 1
@@ -508,10 +476,6 @@ The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
 * `.pf-c-nav__simple-list` - nav list simple is used within `.pf-c-nav__subnav` in expandable navigation.
-* `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
-* `.pf-c-nav__tertiary-list` - nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
-
-<!-- Remove .pf-c-nav__horizontal-list and .pf-c-nav__tertiary-list with the addition of .pf-m-horizontal and .pf-m-light -->
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -539,6 +503,7 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
 | `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal layout. |
+| `.pf-m-tertiary` | `.pf-c-nav` | Modifies nav for the tertiary state. |
 | `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
