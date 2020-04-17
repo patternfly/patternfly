@@ -61,7 +61,7 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
-| `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
+| `.pf-c-select__menu-item-icon` | `<span>` |  Initiates the selected item icon wrapper. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
 | `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|

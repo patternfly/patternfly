@@ -7,12 +7,12 @@
   {{/if}}>
 	{{> @partial-block}}
 	{{#if input-group-text--HasDollarSignIcon}}
-	  {{#> input-group-icon input-group-icon--type="dollar-sign"}}{{/input-group-icon}}
+    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
 	{{/if}}
 	{{#if input-group-text--HasAtIcon}}
-	  {{#> input-group-icon input-group-icon--type="at"}}{{/input-group-icon}}
+    <i class="fas fa-at" aria-hidden="true"></i>
   {{/if}}
   {{#if input-group-text--HasCalendarIcon}}
-	  {{#> input-group-icon input-group-icon--type="calendar-alt"}}{{/input-group-icon}}
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
   {{/if}}
 </{{inputGroupTextType}}>
