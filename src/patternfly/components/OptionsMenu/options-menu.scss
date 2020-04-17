@@ -145,10 +145,6 @@
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
-  .pf-c-options-menu__toggle-button-icon {
-    position: relative;
-  }
-
   &:not(.pf-m-text) {
     padding-top: var(--pf-c-options-menu__toggle--PaddingTop);
     padding-right: var(--pf-c-options-menu__toggle--PaddingRight);
@@ -202,6 +198,10 @@
       border: 0;
     }
   }
+}
+
+.pf-c-options-menu__toggle-button-icon {
+  position: relative;
 }
 
 .pf-c-options-menu__toggle-button {
