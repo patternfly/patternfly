@@ -1,6 +1,10 @@
 .pf-c-chip-group {
   @include pf-t-light; // force the container follow the light theme
 
+  // Chip group
+  --pf-c-chip-group--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+
+  // Category
   --pf-c-chip-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--m-category--PaddingBottom: var(--pf-global--spacer--xs);
@@ -21,8 +25,7 @@
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group--c-chip--MarginBottom: var(--pf-global--spacer--xs);
 
-  // Chip list item
-  --pf-c-chip-group__list-item--MarginBottom: calc(var(--pf-c-chip-group--c-chip--MarginBottom) * -1);
+  margin-bottom: var(--pf-c-chip-group--MarginBottom);
 
   &.pf-m-category {
     padding-top: var(--pf-c-chip-group--m-category--PaddingTop);
@@ -33,26 +36,6 @@
     border-radius: var(--pf-c-chip-group--m-category--BorderRadius);
   }
 
-  .pf-c-chip-group__list-item {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: var(--pf-c-chip-group__list-item--MarginBottom);
-  }
-
-  .pf-c-chip-group__label {
-    @include pf-text-overflow;
-
-    max-width: var(--pf-c-chip-group__label--Maxwidth);
-    padding-right: var(--pf-c-chip-group__label--PaddingRight);
-    padding-bottom: var(--pf-c-chip-group__label--PaddingBottom);
-    font-size: var(--pf-c-chip-group__label--FontSize);
-  }
-
-  .pf-c-chip-group__close {
-    margin-top: var(--pf-c-chip-group__close--MarginTop);
-  }
-
   .pf-c-chip {
     margin-right: var(--pf-c-chip-group--c-chip--MarginRight);
     margin-bottom: var(--pf-c-chip-group--c-chip--MarginBottom);
@@ -61,4 +44,28 @@
       --pf-c-chip-group--c-chip--MarginRight: 0;
     }
   }
+}
+
+.pf-c-chip-group,
+.pf-c-chip-group__list-item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pf-c-chip-group__list-item {
+  margin-bottom: var(--pf-c-chip-group__list-item--MarginBottom);
+}
+
+.pf-c-chip-group__label {
+  @include pf-text-overflow;
+
+  max-width: var(--pf-c-chip-group__label--Maxwidth);
+  padding-right: var(--pf-c-chip-group__label--PaddingRight);
+  padding-bottom: var(--pf-c-chip-group__label--PaddingBottom);
+  font-size: var(--pf-c-chip-group__label--FontSize);
+}
+
+.pf-c-chip-group__close {
+  margin-top: var(--pf-c-chip-group__close--MarginTop);
 }
