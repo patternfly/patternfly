@@ -50,6 +50,8 @@
   --pf-c-nav--m-horizontal__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav--m-horizontal__link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav--m-horizontal__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--Right: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--Left: var(--pf-global--spacer--md);
   --pf-c-nav--m-horizontal__link--Color: var(--pf-global--Color--light-300);
   --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-global--active-color--400);
   --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-global--active-color--400);
@@ -300,9 +302,9 @@
 
     .pf-c-nav__link::before {
       top: auto;
-      right: var(--pf-c-nav__link--Right);
+      right: var(--pf-c-nav--m-horizontal__link--Right);
       bottom: 0;
-      left: var(--pf-c-nav__link--Left);
+      left: var(--pf-c-nav--m-horizontal__link--Left);
       border-bottom-width: var(--pf-c-nav__link--before--BorderBottomWidth);
     }
 
