@@ -62,8 +62,7 @@
     cursor: default;
 
     &,
-    &:hover,
-    &.pf-m-hover {
+    &:hover {
       color: var(--pf-c-breadcrumb__link--m-current--Color);
       text-decoration: none;
     }

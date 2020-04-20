@@ -16,11 +16,11 @@
 
 #ws-core-e-datatoolbar-simple .pf-c-data-toolbar,
 #ws-core-e-datatoolbar-simple .pf-c-data-toolbar__group,
-#ws-core-e-datatoolbar-simple .pf-c-data-toolbar__item:not(.pf-m-separator),
+#ws-core-e-datatoolbar-simple .pf-c-data-toolbar__item,
 #ws-core-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar,
-#ws-core-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar__item:not(.pf-m-separator),
+#ws-core-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar__item,
 #ws-core-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar,
-#ws-core-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__item:not(.pf-m-separator) {
+#ws-core-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__item {
   border: 2px dashed #393f44;
 }
 
@@ -28,8 +28,8 @@
   border: none;
 }
 
-#ws-core-e-datatoolbar-simple .pf-c-data-toolbar__item:not(.pf-m-separator),
-#ws-core-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar__item:not(.pf-m-separator),
-#ws-core-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__item:not(.pf-m-separator) {
+#ws-core-e-datatoolbar-simple .pf-c-data-toolbar__item,
+#ws-core-e-datatoolbar-adjusted-spacers .pf-c-data-toolbar__item,
+#ws-core-e-datatoolbar-adjusted-group-spacers .pf-c-data-toolbar__item {
   padding: .5rem;
 }

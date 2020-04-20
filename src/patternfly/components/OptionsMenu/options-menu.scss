@@ -39,7 +39,6 @@
 
   // Menu
   --pf-c-options-menu__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-options-menu__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-options-menu__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -65,16 +64,6 @@
   --pf-c-options-menu__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-options-menu__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Divider
-  --pf-c-options-menu__c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__c-divider--MarginBottom: var(--pf-global--spacer--sm);
-
-  // Menu item separator
-  --pf-c-options-menu__separator--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-options-menu__separator--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-options-menu__separator--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__separator--MarginBottom: var(--pf-global--spacer--sm);
-
   // Groups
   --pf-c-options-menu__group--group--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-options-menu__group-title--PaddingTop: var(--pf-global--spacer--sm);
@@ -85,13 +74,22 @@
   --pf-c-options-menu__group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-options-menu__group-title--Color: var(--pf-global--Color--dark-200);
 
+  // Divider
+  --pf-c-options-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-options-menu--c-divider--MarginBottom: var(--pf-global--spacer--sm);
+
   position: relative;
   display: inline-block;
   max-width: 100%;
 
   .pf-c-divider {
-    margin-top: var(--pf-c-options-menu__c-divider--MarginTop);
-    margin-bottom: var(--pf-c-options-menu__c-divider--MarginBottom);
+    margin-top: var(--pf-c-options-menu--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-options-menu--c-divider--MarginBottom);
+
+    // Support divider as last item in group to separate groups
+    &:last-child {
+      --pf-c-options-menu--c-divider--MarginBottom: 0;
+    }
   }
 }
 
@@ -108,15 +106,13 @@
     border-color: var(--pf-c-options-menu__toggle--BorderTopColor) var(--pf-c-options-menu__toggle--BorderRightColor) var(--pf-c-options-menu__toggle--BorderBottomColor) var(--pf-c-options-menu__toggle--BorderLeftColor);
   }
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--hover--BorderBottomColor);
     }
   }
 
-  &:active,
-  &.pf-m-active {
+  &:active {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--active--BorderBottomColor);
 
@@ -124,8 +120,7 @@
     }
   }
 
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--focus--BorderBottomColor);
 
@@ -147,10 +142,6 @@
   background: var(--pf-c-options-menu__toggle--Background);
   border: none;
 
-  > * {
-    position: relative;
-  }
-
   &:not(.pf-m-text) {
     padding-top: var(--pf-c-options-menu__toggle--PaddingTop);
     padding-right: var(--pf-c-options-menu__toggle--PaddingRight);
@@ -171,15 +162,12 @@
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
     }
 
-    > * {
+    .pf-c-options-menu__toggle-button-icon {
       line-height: var(--pf-c-options-menu__toggle--LineHeight);
     }
 
     &:hover,
-    &.pf-m-hover,
     &:active,
-    &.pf-m-active,
-    &.pf-m-focus,
     &:focus,
     .pf-c-options-menu.pf-m-expanded > & {
       --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--hover--Color);
@@ -204,6 +192,10 @@
       border: 0;
     }
   }
+}
+
+.pf-c-options-menu__toggle-button-icon {
+  position: relative;
 }
 
 .pf-c-options-menu__toggle-button {
@@ -234,7 +226,6 @@
   padding-bottom: var(--pf-c-options-menu__menu--PaddingBottom);
   background-color: var(--pf-c-options-menu__menu--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-options-menu__menu--BorderWidth) solid transparent; // this is for high contrast mode in windows
   box-shadow: var(--pf-c-options-menu__menu--BoxShadow);
 
   &.pf-m-align-right {
@@ -260,9 +251,7 @@
   border: none;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     text-decoration: none;
     background-color: var(--pf-c-options-menu__menu-item--hover--BackgroundColor);
   }
@@ -282,18 +271,6 @@
   margin-left: auto;
   font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
   color: var(--pf-c-options-menu__menu-item-icon--Color);
-}
-
-.pf-c-options-menu__separator {
-  height: var(--pf-c-options-menu__separator--Height);
-  margin-top: var(--pf-c-options-menu__separator--MarginTop);
-  margin-bottom: var(--pf-c-options-menu__separator--MarginBottom);
-  background-color: var(--pf-c-options-menu__separator--BackgroundColor);
-  border: 0; // for use when separator is an <hr>
-
-  &:last-child {
-    --pf-c-options-menu__separator--MarginBottom: 0;
-  }
 }
 
 .pf-c-options-menu__group {

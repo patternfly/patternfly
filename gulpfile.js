@@ -10,9 +10,9 @@ const { generateSnippets } = require('./build/gulp/snippets');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
+  './src/patternfly/base/patternfly*.scss',
   './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-  '!./src/patternfly/**/_all.scss',
-  '!./src/patternfly/patternfly-imports.scss'
+  '!./src/patternfly/**/_all.scss'
 ];
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];

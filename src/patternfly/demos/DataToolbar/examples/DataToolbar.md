@@ -222,7 +222,7 @@ import './DataToolbar.css'
   {{/data-toolbar-content}}
   {{#> data-toolbar-content data-toolbar-content--modifier="pf-m-chip-container"}}
     {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
-      {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id=(concat data-toolbar--id '-group1-')}}
+      {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id=(concat data-toolbar--id '-group1-')}}
         {{#> chip-group-list-item}}
           {{#> chip-group-label}}
             Status
@@ -233,7 +233,7 @@ import './DataToolbar.css'
                 Cancelled
               {{/chip-text}}
               {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
-                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                <i class="fas fa-times" aria-hidden="true"></i>
               {{/button}}
             {{/chip}}
             {{#> chip}}
@@ -241,7 +241,7 @@ import './DataToolbar.css'
                 Paused
               {{/chip-text}}
               {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
-                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                <i class="fas fa-times" aria-hidden="true"></i>
               {{/button}}
             {{/chip}}
             {{#> chip}}
@@ -249,7 +249,7 @@ import './DataToolbar.css'
                 Restarted
               {{/chip-text}}
               {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
-                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                <i class="fas fa-times" aria-hidden="true"></i>
               {{/button}}
             {{/chip}}
           {{/chip-group}}
@@ -299,7 +299,7 @@ import './DataToolbar.css'
         {{/select}}
       {{/data-toolbar-item}}
       {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-chip-group ' data-toolbar-item-chip-group--modifier)}}
-        {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-toolbar"}}
+        {{#> chip-group chip-group--id="data-toolbar-chip-group-one" chip-group--modifier="pf-m-category"}}
           {{#> chip-group-list-item}}
             {{#> chip-group-label}}
               Status
@@ -310,7 +310,7 @@ import './DataToolbar.css'
                   Cancelled
                 {{/chip-text}}
                 {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
-                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  <i class="fas fa-times" aria-hidden="true"></i>
                 {{/button}}
               {{/chip}}
               {{#> chip}}
@@ -318,7 +318,7 @@ import './DataToolbar.css'
                   Paused
                 {{/chip-text}}
                 {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-two ' chip-group--id 'chip-two" aria-label="Remove" id="' chip-group--id 'remove-chip-two"')}}
-                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  <i class="fas fa-times" aria-hidden="true"></i>
                 {{/button}}
               {{/chip}}
               {{#> chip}}
@@ -326,7 +326,7 @@ import './DataToolbar.css'
                   Restarted
                 {{/chip-text}}
                 {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-three ' chip-group--id 'chip-three" aria-label="Remove" id="' chip-group--id 'remove-chip-three"')}}
-                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  <i class="fas fa-times" aria-hidden="true"></i>
                 {{/button}}
               {{/chip}}
             {{/chip-group}}

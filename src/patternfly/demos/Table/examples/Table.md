@@ -328,9 +328,9 @@ section: demos
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
-      {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
+      {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
         Manage columns
-      {{/title}}
+      {{/modal-box-header}}
       {{#> modal-box-description}}
         {{#> content}}
           <p>Selected categories will be displayed in the table.</p>

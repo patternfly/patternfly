@@ -50,7 +50,6 @@
     --pf-c-simple-list__item-link--Color: var(--pf-c-simple-list__item-link--m-current--Color);
   }
 
-  &.pf-m-hover,
   &:hover {
     text-decoration: none;
 
@@ -58,14 +57,12 @@
     --pf-c-simple-list__item-link--Color: var(--pf-c-simple-list__item-link--hover--Color);
   }
 
-  &.pf-m-focus,
   &:focus {
     --pf-c-simple-list__item-link--FontWeight: var(--pf-c-simple-list__item-link--focus--FontWeight);
     --pf-c-simple-list__item-link--BackgroundColor: var(--pf-c-simple-list__item-link--focus--BackgroundColor);
     --pf-c-simple-list__item-link--Color: var(--pf-c-simple-list__item-link--focus--Color);
   }
 
-  &.pf-m-active,
   &:active {
     --pf-c-simple-list__item-link--FontWeight: var(--pf-c-simple-list__item-link--active--FontWeight);
     --pf-c-simple-list__item-link--BackgroundColor: var(--pf-c-simple-list__item-link--active--BackgroundColor);

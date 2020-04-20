@@ -145,8 +145,8 @@ import './OptionsMenu.css'
 {{/options-menu}}
 ```
 
-```hbs title=With-groups-and-separators-between-groups
-{{#> options-menu id="options-menu-groups-and-separators-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasSeparatorsGroups="true"}}
+```hbs title=With-groups-and-dividers-between-groups
+{{#> options-menu id="options-menu-groups-and-dividers-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasDividersGroups="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -156,8 +156,8 @@ import './OptionsMenu.css'
 {{/options-menu}}
 ```
 
-```hbs title=With-groups-and-separators-between-items
-{{#> options-menu id="options-menu-groups-and-separators-between-items" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasSeparatorsItems="true"}}
+```hbs title=With-groups-and-dividers-between-items
+{{#> options-menu id="options-menu-groups-and-dividers-between-items" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasDividersItems="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -176,7 +176,6 @@ import './OptionsMenu.css'
 | `role` or `aria` | `pf-c-options-menu` |  accessibility notes. |
 | `disabled` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle-button` | Disables the options menu toggle and toggle button and removes it from keyboard focus. |
 *Note:* The attribute `aria-selected="true"` should be set programmatically to the selected item(s).
-| `role="separator"` | `li.pf-c-options-menu__separator` | Indicates that the list item is a separator. |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -189,15 +188,11 @@ import './OptionsMenu.css'
 | `.pf-c-options-menu__menu` | `<ul>` |  Initiates the custom options-menu menu. |
 | `.pf-c-options-menu__menu-item` | `<li>` |  Initiates the items in the custom options-menu menu. |
 | `.pf-c-options-menu__menu-item-icon` | `<i>` |  Initiates the icon to indicate selected menu items. |
-| `.pf-c-options-menu__separator` | `<li>`, `<hr>` | Defines a separator within the menu. Can be used between items (`<li>`) or  between groups (`<hr>`). There are no visual differences between the types of elements used as a separator. The different elements allowed are only to support valid markup depending on where you place the separator. |
 | `.pf-c-options-menu__group` | `<section>` | Defines a group of items in an options menu. **Required when there is more than one group in an options menu**. |
 | `.pf-c-options-menu__group-title` | `<h1>` | Defines the title for a group of items in an options menu. |
 | `.pf-m-top` | `.pf-c-options-menu` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-options-menu__menu` | Modifies to display the menu aligned to the right edge of the toggle |
 | `.pf-m-expanded` | `.pf-c-options-menu` |  Modifies for the expanded state. |
-| `.pf-m-hover` | `.pf-c-options-menu__toggle` | Modifies for the hover state. |
-| `.pf-m-active` | `.pf-c-options-menu__toggle` | Modifies for the active state. |
-| `.pf-m-focus` | `.pf-c-options-menu__toggle` | Modifies for the focus state. |
 | `.pf-m-plain` | `.pf-c-options-menu__toggle` |  Modifies to display the toggle with no border. |
 | `.pf-m-disabled` | `.pf-c-options-menu__toggle` | Modifies to display the options menu toggle as disabled. This applies to `pf-c-options-menu__toggle` and should not be used in lieu of the `disabled` attribute on `pf-c-options-menu__toggle`. When this is used, `disabled` should also be added to any form elements in `.pf-c-options-menu__toggle` |
 | `.pf-m-text` | `.pf-c-options-menu__toggle` |  For use when the `.pf-c-options-menu__toggle` is a `<div>` or some non-interactive elment, and you're using a custom `.pf-c-options-menu__toggle-button` to toggle the options menu. |

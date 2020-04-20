@@ -73,8 +73,7 @@
   .pf-c-button.pf-m-control {
     outline-offset: var(--pf-c-file-upload__file-select__c-button--m-control--OutlineOffset);
 
-    &:disabled,
-    &.pf-m-disabled {
+    &:disabled {
       color: initial;
       background-color: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--BackgroundColor);
 

@@ -13,6 +13,6 @@
 	{{/if}}>
   {{> @partial-block}}
   {{#if options-menu--HasToggleIcon}}
-    <i class="fas fa-caret-down pf-c-options-menu__toggle-icon" aria-hidden="true"></i>
+    {{> options-menu-toggle-icon}}
   {{/if}}
 </{{#if options-menu-toggle--type}}{{options-menu-toggle--type}}{{else}}button{{/if}}>

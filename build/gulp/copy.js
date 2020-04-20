@@ -13,16 +13,15 @@ function copyAssets() {
 
 function copySource(sassFiles) {
   return Promise.all([
-    // Copy source files
-    src(sassFiles).pipe(dest('dist')),
     // Copy excluded source files
-    src([
-      'src/patternfly/_*.scss',
-      'src/patternfly/**/_all.scss',
-      'src/patternfly/patternfly-imports.scss',
-      'src/patternfly/{components,layouts,patterns,utilities}/**/*.scss'
-    ]).pipe(dest('dist')),
+    src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities}/**/*.scss']).pipe(
+      dest('dist')
+    ),
+    // Copy source files
+    src('src/patternfly/*.scss').pipe(dest('dist')),
     src('src/patternfly/sass-utilities/*').pipe(dest('dist/sass-utilities')),
+    // base
+    src('src/patternfly/base/*').pipe(dest('dist/base')),
     // Assets
     src('static/assets/images/**/*').pipe(dest('dist/assets/images/')),
     src('src/patternfly/assets/**/*').pipe(dest('dist/assets/')),

@@ -232,8 +232,7 @@
     background-color: var(--pf-c-about-modal-box__close--c-button--BackgroundColor);
     border-radius: var(--pf-c-about-modal-box__close--c-button--BorderRadius);
 
-    &:hover,
-    &.pf-m-hover {
+    &:hover {
       --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-c-about-modal-box__close--c-button--hover--BackgroundColor);
     }
   }

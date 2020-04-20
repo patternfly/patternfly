@@ -332,14 +332,12 @@ States of a component should be included as a nested element. This includes hove
 .pf-c-button {
   background: var(--pf-c-button--Background);
 
-  .pf-m-hover,
   &:hover {
     background: var(--pf-c-button--hover--Background);
   }
 }
 ```
 
-Classes that duplicate a state should be named with the prefix `pf-m-`. For example, a class `.pf-m-active` can be used to apply the `:active` styling.
 
 #### Sass variables
 
