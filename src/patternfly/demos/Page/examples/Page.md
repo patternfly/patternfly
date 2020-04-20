@@ -25,7 +25,7 @@ section: demos
     {{/page-header-brand}}
     {{#> page-header-nav}}
       {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--modifier="pf-c-nav__horizontal-list"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Horizontal nav item 1
@@ -174,8 +174,8 @@ section: demos
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
-      {{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-        {{#> nav-list}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list nav-list--modifier="pf-c-nav__tertiary-list"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Tertiary nav item 1

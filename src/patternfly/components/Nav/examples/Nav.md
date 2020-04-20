@@ -270,7 +270,7 @@ import './Nav.css'
   {{#> page-header}}
     {{#> page-header-nav}}
       {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="horizontal"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Item 1
@@ -298,7 +298,7 @@ import './Nav.css'
   {{#> page-header}}
     {{#> page-header-nav}}
       {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="horizontal"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Horizontal nav item 1
@@ -332,57 +332,69 @@ import './Nav.css'
 ```
 
 ```hbs title=Tertiary
-{{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
-  {{#> nav-list}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Item 3
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
+{{#> page}}
+  {{#> page-main}}
+    {{#> page-main-nav}}
+      {{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-main-nav}}
+  {{/page-main}}
+{{/page}}
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-  {{#> nav-list}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Tertiary nav item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 4
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 5
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
+{{#> page}}
+  {{#> page-main}}
+    {{#> page-main-nav}}
+      {{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Tertiary nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-main-nav}}
+  {{/page-main}}
+{{/page}}
 ```
 
 ```hbs title=Default-light-mode

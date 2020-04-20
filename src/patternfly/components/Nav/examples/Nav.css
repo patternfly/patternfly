@@ -29,3 +29,8 @@
 #ws-core-c-nav-horizontal-in-masthead-overflow .pf-c-page__header-nav {
   grid-row: 1;
 }
+
+#ws-core-c-nav-tertiary,
+#ws-core-c-nav-tertiary-overflow {
+  padding-top: 0;
+}
