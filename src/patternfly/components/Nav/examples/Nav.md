@@ -266,57 +266,69 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal-in-masthead
-{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Item 3
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-nav}}
+      {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
+        {{#> nav-list}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-header-nav}}
+  {{/page-header}}
+{{/page}}
 ```
 
 ```hbs title=Horizontal-in-masthead-overflow
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 4
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Horizontal nav item 5
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-nav}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+        {{#> nav-list}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Horizontal nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-header-nav}}
+  {{/page-header}}
+{{/page}}
 ```
 
 ```hbs title=Tertiary
