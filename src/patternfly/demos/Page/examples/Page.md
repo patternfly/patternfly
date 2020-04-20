@@ -24,35 +24,35 @@ section: demos
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-    {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-      {{#> nav-list}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 1
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 2
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 3
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 4
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Horizontal nav item 5
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+        {{#> nav-list}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Horizontal nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
     {{/page-header-nav}}
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
@@ -90,7 +90,7 @@ section: demos
   {{/page-header}}
 
   {{#> page-sidebar}}
-    {{#> nav nav--modifier="pf-m-tertiary" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}

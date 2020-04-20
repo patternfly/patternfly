@@ -21,7 +21,7 @@ cssPrefix: pf-c-page
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     pf-c-nav
   {{/page-sidebar}}
   {{#> page-main}}
@@ -114,7 +114,7 @@ cssPrefix: pf-c-page
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     pf-c-nav
   {{/page-sidebar}}
   {{#> page-main}}

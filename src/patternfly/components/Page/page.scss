@@ -379,10 +379,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-right: var(--pf-c-page__main-nav--PaddingRight);
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
-
-  .pf-c-nav {
-    @extend %pf-c-nav--m-light;
-  }
 }
 
 .pf-c-page__main-breadcrumb {
