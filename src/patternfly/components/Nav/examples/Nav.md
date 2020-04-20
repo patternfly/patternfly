@@ -500,6 +500,8 @@ The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
 * `.pf-c-nav__simple-list` - nav list simple is used within `.pf-c-nav__subnav` in expandable navigation.
+* `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
+* `.pf-c-nav__tertiary-list` - nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -526,8 +528,6 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
-| `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal layout. |
-| `.pf-m-tertiary` | `.pf-c-nav` | Modifies nav for the tertiary state. |
 | `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
