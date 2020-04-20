@@ -1,6 +1,6 @@
 .pf-c-wizard {
   --pf-c-wizard--Height: 100%;
-  --pf-c-modal-box--c-wizard--Height: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal
+  --pf-c-modal-box--c-wizard--FlexBasis: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal
 
   // Header
   --pf-c-wizard__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
@@ -192,9 +192,7 @@
 
   // When the wizard is used in a modal
   .pf-c-modal-box & {
-    --pf-c-wizard--Height: var(--pf-c-modal-box--c-wizard--Height);
-
-    max-height: var(--pf-c-modal-box--c-wizard--MaxHeight, inherit);
+    flex: 1 1 var(--pf-c-modal-box--c-wizard--FlexBasis);
   }
 
   > *:not(.pf-c-wizard__outer-wrap) {
