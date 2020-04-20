@@ -335,7 +335,7 @@ import './Nav.css'
 {{#> page}}
   {{#> page-main}}
     {{#> page-main-nav}}
-      {{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
+      {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
         {{#> nav-list nav-list--type="tertiary"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -363,7 +363,7 @@ import './Nav.css'
 {{#> page}}
   {{#> page-main}}
     {{#> page-main-nav}}
-      {{#> nav nav--modifier="pf-m-tertiary" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
         {{#> nav-list nav-list--type="tertiary"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
