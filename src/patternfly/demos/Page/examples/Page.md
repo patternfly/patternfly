@@ -25,7 +25,7 @@ section: demos
     {{/page-header-brand}}
     {{#> page-header-nav}}
       {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-        {{#> nav-list nav-list--type=="horizontal"}}
+        {{#> nav-list nav-list--type="horizontal"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Horizontal nav item 1
