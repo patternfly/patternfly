@@ -287,11 +287,6 @@
       background-color: transparent;
       border-left: var(--pf-c-table__expandable-row--before--BorderLeftWidth) solid var(--pf-c-table__expandable-row--before--BorderColor);
     }
-
-    // add background color when active
-    &.pf-m-expanded > tr > :first-child::before {
-      --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
-    }
   }
   // stylelint-enable
 
@@ -668,7 +663,12 @@
     border-bottom-color: var(--pf-c-table__expandable-row--m-expanded--BorderBottomColor);
     border-bottom-width: var(--pf-c-table--BorderWidth);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
+
+    :first-child::before {
+      --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
+    }
   }
+
 
   &:not(.pf-m-expanded) {
     display: none;

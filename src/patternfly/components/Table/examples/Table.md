@@ -235,7 +235,7 @@ import './Table.css'
 | -- | -- | -- |
 | `.pf-c-table__sort` | `<th>` | Initiates a table header sort cell. **Required for sortable table columns** |
 | `.pf-c-table__button` | `<button>` | Initiates a table header sort cell button. **Required for sortable table columns** |
-| `.pf-c-table__button-content` | `.pf-c-table__button` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
+| `.pf-c-table__button-content` | `<div>` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > button > span` | Initiates a sort indicator. **Required for sortable table columns** |
 | `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
 | `.fa-arrows-alt-v` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
@@ -1555,128 +1555,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
 
-```hbs title=With-headers-that-wrap
-{{#> table table--id="table-headers-wrap" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is an example of the table that has headers that wrap"'}}
-  {{#> table-caption}}
-    This is the table caption
-  {{/table-caption}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        This is a really long table header that goes on for a long time.
-      {{/table-th}}
-    {{/table-tr}}
-  {{/table-thead}}
-
-  {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        Repository 1
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        Repository 2
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        Repository 3
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        Repository 4
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="This is a really long table header that goes on for a long time."}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-  {{/table-tbody}}
-{{/table}}
-```
-
 ## Controlling text
 
 To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text`].
 
-<ul>
-  <li>
-    <b>pf-m-wrap:</b> Sets text to wrap. This is the default behavior for <code>tbody</code> cells.
-  </li>
-  <li>
-    <b>pf-m-truncate:</b> Sets text to truncate based on a minimum width and available space adjacent table cells. This is the default behavior for <code>thead</code> cells.
-  </li>
-  <li>
-    <b>pf-m-no-wrap:</b> Unsets min/max width and sets whitespace to nowrap. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents.
-  </li>
-  <li>
-    <b>pf-m-fit-content:</b> Fit column width to cell content.
-  </li>
-  <li>
-    <b>pf-m-break-word:</b> Breaks long strings wherever necessary as defined by the table layout.
-  </li>
-</ul>
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets table cell content to wrap. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>tbody</code> cells. |
+| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets text to truncate based on a minimum width and available space adjacent table cells.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>thead</code> cells. |
+| `.pf-m-no-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
+| `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
+| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
 ```hbs title=Modifiers-without-text-wrapper
 {{#> table table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
@@ -1714,6 +1603,40 @@ To better control table cell behavior, PatternFly provides a series of modifiers
       {{/table-td}}
       {{#> table-td table-td--modifier="pf-m-no-wrap" table-td--data-label="No wrap"}}
         <a href="#">No wrap</a>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+## Custom text control `.pf-c-table__cell-content`
+
+For granular control over text elements, `.pf-c-table__cell-content` is available. The `.pf-c-table__cell-content` element breaks content text out of the table flow and allows content to respond to `.pf-m-width-` modifiers set on parent elements. It also allows for content customization and individual `.pf-c-table__text` modifications. Modifiers can be applied to the parent `cell` or individual `.pf-c-table__text` elements.
+
+```hbs title=Controlling-text-elements-individually
+{{#> table table--id="controlling-text-elements-individually" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with custom text wrappers example."'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Custom text cells
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="No wrapping"}}
+        {{#> table-cell-content}}
+          {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
+            This cell's contents will truncate. Here's some more text to demonstrate how.
+          {{/table-text}}
+          {{#> table-text table-text--type="div" table-text--modifier="pf-m-no-wrap"}}
+            <a href="#">No wrap link example</a>
+          {{/table-text}}
+          {{#> table-text table-text--type="div"}}
+            This cell's contents will wrap. Here's some more text to demonstrate how.
+          {{/table-text}}
+        {{/table-cell-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1892,40 +1815,6 @@ To better control table cell behavior, PatternFly provides a series of modifiers
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-  {{/table-tbody}}
-{{/table}}
-```
-
-## Custom text control `.pf-c-table__cell-content`
-
-For granular control over text elements, `.pf-c-table__cell-content` is available. The `.pf-c-table__cell-content` element breaks content text out of the table flow and allows content to respond to `.pf-m-width-` modifiers set on parent elements. It also allows for content customization and individual `.pf-c-table__text` modifications. Modifiers can be applied to the parent `cell` or individual `.pf-c-table__text` elements.
-
-```hbs title=Controlling-text-elements-individually
-{{#> table table--id="controlling-text-elements-individually" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with custom text wrappers example."'}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Custom text cells
-      {{/table-th}}
-    {{/table-tr}}
-  {{/table-thead}}
-
-  {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="No wrapping"}}
-        {{#> table-cell-content}}
-          {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
-            This cell's contents will truncate. Here's some more text to demonstrate how.
-          {{/table-text}}
-          {{#> table-text table-text--type="div" table-text--modifier="pf-m-no-wrap"}}
-            <a href="#">No wrap link example</a>
-          {{/table-text}}
-          {{#> table-text table-text--type="div"}}
-            This cell's contents will wrap. Here's some more text to demonstrate how.
-          {{/table-text}}
-        {{/table-cell-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
