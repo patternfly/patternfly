@@ -237,7 +237,7 @@ cssPrefix: pf-c-toolbar
   {{/dropdown}}
   {{#> toolbar-total-items}}36 of 37 Items{{/toolbar-total-items}}
   {{#> toolbar-filter-list toolbar-filter-list--modifier="pf-m-expanded"}}
-    {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id=(concat toolbar--id '-filter')}}
+    {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id=(concat toolbar--id '-filter')}}
       {{#> chip-group-list-item}}
         {{#> chip-group-label}}
             Status
@@ -249,7 +249,7 @@ cssPrefix: pf-c-toolbar
           {{/chip-text}}
           {{#> badge badge--modifier="pf-m-read"}}18{{/badge}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-one ' chip-group--id '-chip-one" aria-label="Remove" id="' chip-group--id '-remove-chip-one"')}}
-            <i class="fas fa-times-circle" aria-hidden="true"></i>
+            <i class="fas fa-times" aria-hidden="true"></i>
           {{/button}}
           {{/chip}}
           {{#> chip}}
@@ -258,7 +258,7 @@ cssPrefix: pf-c-toolbar
             {{/chip-text}}
             {{#> badge badge--modifier="pf-m-read"}}12{{/badge}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-two ' chip-group--id '-chip-two" aria-label="Remove" id="' chip-group--id '-remove-chip-two"')}}
-              <i class="fas fa-times-circle" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
             {{/button}}
           {{/chip}}
           {{#> chip}}
@@ -267,7 +267,7 @@ cssPrefix: pf-c-toolbar
             {{/chip-text}}
             {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-three ' chip-group--id '-chip-three" aria-label="Remove" id="' chip-group--id '-remove-chip-three"')}}
-              <i class="fas fa-times-circle" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
             {{/button}}
           {{/chip}}
         {{/chip-group}}
@@ -350,7 +350,7 @@ cssPrefix: pf-c-toolbar
   {{/dropdown}}
   {{#> toolbar-total-items}}36 of 37 Items{{/toolbar-total-items}}
   {{#> toolbar-filter-list toolbar-filter-list--modifier="pf-m-expanded"}}
-    {{#> chip-group chip-group--modifier="pf-m-toolbar" chip-group--id=(concat toolbar--id '-chip-group')}}
+    {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id=(concat toolbar--id '-chip-group')}}
       {{#> chip-group-list-item}}
         {{#> chip-group-label}}
             Status
@@ -362,7 +362,7 @@ cssPrefix: pf-c-toolbar
           {{/chip-text}}
           {{#> badge badge--modifier="pf-m-read"}}18{{/badge}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-one ' chip-group--id '-chip-one" aria-label="Remove" id="' chip-group--id '-remove-chip-one"')}}
-            <i class="fas fa-times-circle" aria-hidden="true"></i>
+            <i class="fas fa-times" aria-hidden="true"></i>
           {{/button}}
           {{/chip}}
           {{#> chip}}
@@ -371,7 +371,7 @@ cssPrefix: pf-c-toolbar
             {{/chip-text}}
             {{#> badge badge--modifier="pf-m-read"}}12{{/badge}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-two ' chip-group--id '-chip-two" aria-label="Remove" id="' chip-group--id '-remove-chip-two"')}}
-              <i class="fas fa-times-circle" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
             {{/button}}
           {{/chip}}
           {{#> chip}}
@@ -380,7 +380,7 @@ cssPrefix: pf-c-toolbar
             {{/chip-text}}
             {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id '-remove-chip-three ' chip-group--id '-chip-three" aria-label="Remove" id="' chip-group--id '-remove-chip-three"')}}
-              <i class="fas fa-times-circle" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
             {{/button}}
           {{/chip}}
         {{/chip-group}}

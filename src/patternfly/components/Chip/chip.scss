@@ -4,14 +4,13 @@
   --pf-c-chip--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
+  --pf-c-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip--before--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-chip--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-chip--before--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-chip--before--BorderRadius: var(--pf-c-chip--BorderRadius);
 
   // overflow chip button
-  --pf-c-chip--m-overflow--hover--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-chip--m-overflow--active--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-chip--m-overflow--focus--before--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-chip--m-overflow__text--Color: var(--pf-global--primary-color--100);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -37,6 +36,7 @@
   padding: var(--pf-c-chip--PaddingTop) var(--pf-c-chip--PaddingRight) var(--pf-c-chip--PaddingBottom) var(--pf-c-chip--PaddingLeft);
   list-style: none;
   background-color: var(--pf-c-chip--BackgroundColor);
+  border-radius: var(--pf-c-chip--BorderRadius);
 
   &::before {
     position: absolute;
@@ -53,22 +53,8 @@
   &.pf-m-overflow {
     border: 0;
 
-    &:hover {
-      &::before {
-        --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--hover--before--BorderColor);
-      }
-    }
-
-    &:focus {
-      &::before {
-        --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--focus--before--BorderColor);
-      }
-    }
-
-    &:active {
-      &::after {
-        --pf-c-chip--before--BorderColor: var(--pf-c-chip--m-overflow--active--before--BorderColor);
-      }
+    .pf-c-chip__text {
+      color: var(--pf-c-chip--m-overflow__text--Color);
     }
   }
 
