@@ -12,7 +12,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -41,7 +41,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -70,7 +70,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -99,7 +99,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -128,7 +128,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -157,7 +157,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -186,7 +186,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -215,7 +215,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -244,7 +244,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -273,7 +273,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -302,7 +302,7 @@ section: demos
   {{#> page-header}}
     {{> table-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}

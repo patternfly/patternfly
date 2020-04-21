@@ -9,7 +9,7 @@ import './Nav.css'
 ## Examples
 
 ```hbs title=Default
-{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+{{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -36,7 +36,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Grouped
-{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+{{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
       Section title 1
@@ -85,7 +85,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Expanded
-{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+{{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
@@ -155,7 +155,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Expanded-with-subnav-titles
-{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+{{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#"}}
@@ -211,7 +211,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Mixed
-{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-dark"}}
+{{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -266,123 +266,139 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal-in-masthead
-<div class="pf-c-page__header">
-  <div class="pf-c-page__header-nav">
-    {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
-      {{#> nav-list nav-list--type="horizontal"}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Item 1
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Item 2
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Item 3
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
-  </div>
-</div>
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-nav}}
+      {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
+        {{#> nav-list nav-list--type="horizontal"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-header-nav}}
+  {{/page-header}}
+{{/page}}
 ```
 
-```hbs title=Horizontal-overflow-in-masthead
-<div class="pf-c-page__header">
-  <div class="pf-c-page__header-nav">
-    {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-      {{#> nav-list nav-list--type="horizontal"}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 1
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 2
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 3
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 4
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Horizontal nav item 5
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
-  </div>
-</div>
+```hbs title=Horizontal-in-masthead-overflow
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-nav}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+        {{#> nav-list nav-list--type="horizontal"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Horizontal nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-header-nav}}
+  {{/page-header}}
+{{/page}}
 ```
 
 ```hbs title=Tertiary
-{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
-  {{#> nav-list nav-list--type="tertiary"}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Item 3
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
+{{#> page}}
+  {{#> page-main}}
+    {{#> page-main-nav}}
+      {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-main-nav}}
+  {{/page-main}}
+{{/page}}
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-  {{#> nav-list nav-list--type="tertiary"}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Tertiary nav item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 4
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Tertiary nav item 5
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
+{{#> page}}
+  {{#> page-main}}
+    {{#> page-main-nav}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Tertiary nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Tertiary nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-main-nav}}
+  {{/page-main}}
+{{/page}}
 ```
 
 ```hbs title=Default-light-mode
-{{#> nav nav--attribute='aria-label="Global"'}}
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -409,7 +425,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Expanded-in-light-mode
-{{#> nav nav--attribute='aria-label="Global"'}}
+{{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
@@ -513,7 +529,7 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
 | `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
-| `.pf-m-dark` | `.pf-c-nav` | Modifies nav for the dark variation. **Note: only for use with vertical navs, and requires `.pf-m-dark` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
+| `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state. |
