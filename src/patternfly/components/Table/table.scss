@@ -44,8 +44,10 @@
   --pf-c-table--cell--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table--cell--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table--cell--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table--cell--first-last-child--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--cell--first-last-child--xl--PaddingRight: var(--pf-global--spacer--lg);
 
   // Default cell variables
   --pf-c-table--cell--MinWidth: 0;
@@ -57,8 +59,8 @@
   --pf-c-table--cell--WordBreak: normal;
 
   // Truncate
-  --pf-c-table--m-truncate--cell--MinWidth: 10ch;
   --pf-c-table--m-truncate--cell--MaxWidth: 1px;
+  --pf-c-table--m-truncate--cell--MinWidth: 10ch;
 
   // Hidden visible
   --pf-c-table--cell--hidden-visible--Display: table-cell;
@@ -180,6 +182,11 @@
 
   // Modifier - expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BorderColor--100);
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-c-table--cell--first-last-child--xl--PaddingRight);
+    --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-c-table--cell--first-last-child--xl--PaddingLeft);
+  }
 
   @include pf-t-light; // This component always needs to be light
 
@@ -329,6 +336,8 @@
   .pf-m-no-wrap {
     --pf-c-table--cell--MinWidth: 0;
     --pf-c-table--cell--MaxWidth: none;
+    --pf-c-table--cell--Overflow: visible;
+    --pf-c-table--cell--TextOverflow: clip;
     --pf-c-table--cell--WhiteSpace: nowrap;
   }
 
