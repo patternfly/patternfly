@@ -15,6 +15,8 @@
   --pf-c-nav--m-light__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav--m-light__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-nav--m-light__link--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-light__link--after--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-nav--m-light__subnav__link--m-current--after--BorderColor: var(--pf-global--active-color--100);
   --pf-c-nav--m-light__section-title--Color: var(--pf-global--Color--dark-200);
   --pf-c-nav--m-light__section-title--BorderBottomColor: var(--pf-global--BorderColor--300);
   --pf-c-nav--m-light__subnav__link--hover--after--BorderColor: var(--pf-global--BorderColor--dark-100);
@@ -215,9 +217,11 @@
     --pf-c-nav__link--active--BackgroundColor: var(--pf-c-nav--m-light__link--active--BackgroundColor);
     --pf-c-nav__link--m-current--BackgroundColor: var(--pf-c-nav--m-light__link--m-current--BackgroundColor);
     --pf-c-nav__link--before--BorderColor: var(--pf-c-nav--m-light__link--before--BorderColor);
+    --pf-c-nav__link--after--BorderColor: var(--pf-c-nav--m-light__link--after--BorderColor);
     --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--hover--after--BorderColor);
     --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--focus--after--BorderColor);
     --pf-c-nav__subnav__link--active--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--active--after--BorderColor);
+    --pf-c-nav__subnav__link--m-current--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--m-current--after--BorderColor);
     --pf-c-nav__section-title--Color: var(--pf-c-nav--m-light__section-title--Color);
     --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav--m-light__section-title--BorderBottomColor);
 
