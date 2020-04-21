@@ -107,10 +107,12 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingRight: 0;
   --pf-c-page__main-nav--PaddingLeft: 0;
+  --pf-c-page__main-nav--xl--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-page__main-nav--xl--PaddingLeft: var(--pf-global--spacer--sm);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__main-nav--PaddingRight: var(--pf-c-page__main--c-nav--xl--PaddingRight);
-    --pf-c-page__main-nav--PaddingLeft: var(--pf-c-page__main--c-nav--xl--PaddingLeft);
+    --pf-c-page__main-nav--PaddingRight: var(--pf-c-page__main-nav--xl--PaddingRight);
+    --pf-c-page__main-nav--PaddingLeft: var(--pf-c-page__main-nav--xl--PaddingLeft);
   }
 
   // Light scroll buttons
