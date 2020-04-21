@@ -1563,7 +1563,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 | -- | -- | -- |
 | `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets table cell content to wrap. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>tbody</code> cells. |
 | `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets text to truncate based on a minimum width and available space adjacent table cells.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>thead</code> cells. |
-| `.pf-m-no-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
+| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
 | `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
@@ -1601,7 +1601,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
       {{#> table-td table-td--data-label="Fit content"}}
         This cell's content will adjust itself to the parent th width. This modifier only affects table layouts.
       {{/table-td}}
-      {{#> table-td table-td--modifier="pf-m-no-wrap" table-td--data-label="No wrap"}}
+      {{#> table-td table-td--modifier="pf-m-nowrap" table-td--data-label="No wrap"}}
         <a href="#">No wrap</a>
       {{/table-td}}
     {{/table-tr}}
@@ -1630,7 +1630,7 @@ For granular control over text elements, `.pf-c-table__cell-content` is availabl
           {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
             This cell's contents will truncate. Here's some more text to demonstrate how.
           {{/table-text}}
-          {{#> table-text table-text--type="div" table-text--modifier="pf-m-no-wrap"}}
+          {{#> table-text table-text--type="div" table-text--modifier="pf-m-nowrap"}}
             <a href="#">No wrap link example</a>
           {{/table-text}}
           {{#> table-text table-text--type="div"}}
@@ -1643,7 +1643,7 @@ For granular control over text elements, `.pf-c-table__cell-content` is availabl
 {{/table}}
 ```
 
-## `.pf-c-table__text`: Table text element. For `.pf-m-truncate` and `.pf-m-no-wrap` modifiers to apply to the grid layout, `td` content must be wrapped with `.pf-c-table__text`.
+## `.pf-c-table__text`: Table text element. For `.pf-m-truncate` and `.pf-m-nowrap` modifiers to apply to the grid layout, `td` content must be wrapped with `.pf-c-table__text`.
 
 ```hbs title=Modifiers-with-text-wrapper
 {{#> table table--id="modifiers-with-text-wrapper-example" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a simple table example"'}}
@@ -1665,7 +1665,7 @@ For granular control over text elements, `.pf-c-table__cell-content` is availabl
           This text will truncate instead of wrap.
         {{/table-text}}
       {{/table-td}}
-      {{#> table-td table-td--modifier="pf-m-no-wrap" table-td--data-label="No wrap"}}
+      {{#> table-td table-td--modifier="pf-m-nowrap" table-td--data-label="No wrap"}}
         {{#> table-text}}
           <a href="#">This is a link that needs to be on one line and fully readable.</a>
         {{/table-text}}
@@ -1681,7 +1681,7 @@ For granular control over text elements, `.pf-c-table__cell-content` is availabl
 | -- | -- | -- |
 | `.pf-c-table__text` | `th > *`, `td > *`, `.pf-c-table__text-content > *` | Initiates a table text element. |
 | `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to truncate. |
-| `.pf-m-no-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to not wrap. |
+| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to not wrap. |
 | `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to wrap. |
 | `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text strings to break. |
@@ -1736,7 +1736,7 @@ For granular control over text elements, `.pf-c-table__cell-content` is availabl
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        This example is not responsive. Adjacent <code>tbody</code> cells will shrink as a result of this text being a longer string and adjacent text being shorter in length. Truncation can be overridden in <code>th</code> cells with the addition of <code>.pf-m-wrap</code>, <code>.pf-m-no-wrap</code> or <code>.pf-m-fit-content</code>.
+        This example is not responsive. Adjacent <code>tbody</code> cells will shrink as a result of this text being a longer string and adjacent text being shorter in length. Truncation can be overridden in <code>th</code> cells with the addition of <code>.pf-m-wrap</code>, <code>.pf-m-nowrap</code> or <code>.pf-m-fit-content</code>.
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10

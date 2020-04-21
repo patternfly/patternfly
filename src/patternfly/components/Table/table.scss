@@ -333,7 +333,7 @@
     --pf-c-table--cell--WhiteSpace: normal;
   }
 
-  .pf-m-no-wrap {
+  .pf-m-nowrap {
     --pf-c-table--cell--MinWidth: 0;
     --pf-c-table--cell--MaxWidth: none;
     --pf-c-table--cell--Overflow: visible;
@@ -359,7 +359,7 @@
   // Only apply these settings if specifically modified
   &.pf-m-truncate,
   &.pf-m-wrap,
-  &.pf-m-no-wrap,
+  &.pf-m-nowrap,
   &.pf-m-fit-content,
   &.pf-m-break-word {
     --pf-c-table--m-truncate--cell--MinWidth: 100%;
