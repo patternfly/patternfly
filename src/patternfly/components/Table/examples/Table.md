@@ -299,10 +299,10 @@ import './Table.css'
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -327,10 +327,10 @@ import './Table.css'
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -355,10 +355,10 @@ import './Table.css'
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -435,10 +435,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node1">Node 1</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -474,10 +474,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -511,10 +511,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -547,10 +547,10 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1372,10 +1372,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1396,10 +1396,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1420,10 +1420,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
-        {{#> table-cell-content}}
+        <div>
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
-        {{/table-cell-content}}
+        </div>
       {{/table-th}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1603,40 +1603,6 @@ To better control table cell behavior, PatternFly provides a series of modifiers
       {{/table-td}}
       {{#> table-td table-td--modifier="pf-m-nowrap" table-td--data-label="No wrap"}}
         <a href="#">No wrap</a>
-      {{/table-td}}
-    {{/table-tr}}
-  {{/table-tbody}}
-{{/table}}
-```
-
-## Custom text control `.pf-c-table__cell-content`
-
-For granular control over text elements, `.pf-c-table__cell-content` is available. The `.pf-c-table__cell-content` element breaks content text out of the table flow and allows content to respond to `.pf-m-width-` modifiers set on parent elements. It also allows for content customization and individual `.pf-c-table__text` modifications. Modifiers can be applied to the parent `cell` or individual `.pf-c-table__text` elements.
-
-```hbs title=Controlling-text-elements-individually
-{{#> table table--id="controlling-text-elements-individually" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with custom text wrappers example."'}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Custom text cells
-      {{/table-th}}
-    {{/table-tr}}
-  {{/table-thead}}
-
-  {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="No wrapping"}}
-        {{#> table-cell-content}}
-          {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
-            This cell's contents will truncate. Here's some more text to demonstrate how.
-          {{/table-text}}
-          {{#> table-text table-text--type="div" table-text--modifier="pf-m-nowrap"}}
-            <a href="#">No wrap link example</a>
-          {{/table-text}}
-          {{#> table-text table-text--type="div"}}
-            This cell's contents will wrap. Here's some more text to demonstrate how.
-          {{/table-text}}
-        {{/table-cell-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
