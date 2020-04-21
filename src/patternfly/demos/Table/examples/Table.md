@@ -330,7 +330,7 @@ section: demos
       {{/button}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
         Manage columns
-      {{/modal-box-header}}
+      {{/modal-box-title}}
       {{#> modal-box-description}}
         {{#> content}}
           <p>Selected categories will be displayed in the table.</p>
