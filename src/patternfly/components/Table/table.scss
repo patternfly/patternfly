@@ -32,7 +32,6 @@
   --pf-c-table--thead--cell--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table--thead--cell--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-table--m-no-wrap--thead--cell--Overflow: visible;
-  --pf-c-table--thead__button-content--AlignItems: end;
 
   // Tbody cell
   --pf-c-table--tbody--cell--PaddingTop: var(--pf-global--spacer--lg);
@@ -288,9 +287,6 @@
     --pf-c-table--cell--TextOverflow: var(--pf-c-table--m-truncate--cell--TextOverflow);
     --pf-c-table--cell--WhiteSpace: var(--pf-c-table--m-truncate--cell--WhiteSpace);
 
-    // Align content to bottom
-    --pf-c-table__button-content--AlignItems: var(--pf-c-table--thead__button-content--AlignItems);
-
     // show overflow for thead cells
     --pf-c-table--m-no-wrap--cell--Overflow: var(--pf-c-table--m-no-wrap--thead--cell--Overflow);
 
@@ -385,6 +381,7 @@
 
   .pf-m-break-word {
     --pf-c-table--cell--WordBreak: break-word;
+    --pf-c-table--cell--WhiteSpace: normal;
   }
 }
 
@@ -490,7 +487,7 @@
 // display grid for buttons is not supported
 .pf-c-table__button-content {
   display: inline-grid;
-  align-items: var(--pf-c-table__button-content--AlignItems);
+  align-items: end;
   justify-content: start;
   grid-template-columns: auto;
   grid-auto-columns: max-content;

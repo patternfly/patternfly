@@ -323,7 +323,7 @@
       left: 0;
       content: "";
       border: 0;
-      border-left: var(--pf-c-table--tbody--after--BorderColor) solid var(--pf-c-table--tbody--after--BorderLeftWidth);
+      border-left: var(--pf-c-table--tbody--after--BorderLeftWidth) solid var(--pf-c-table--tbody--after--BorderColor);
     }
 
     &.pf-m-expanded {
