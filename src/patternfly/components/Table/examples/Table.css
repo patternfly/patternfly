@@ -1,0 +1,10 @@
+#ws-core-c-table-th-truncation {
+  position: relative;
+  width: 800px;
+}
+
+#ws-core-c-table-th-truncation .pf-c-tooltip {
+  position: absolute;
+  left: 458px;
+  top: -20px;
+}

@@ -1,11 +1,12 @@
-<th{{#if table-th--toggle}} class="pf-c-table__toggle {{table-th--modifier}}"
-    {{else if table-th--check}} class="pf-c-table__check {{table-th--modifier}}"
-    {{else if table-th--action}} class="pf-c-table__action {{table-th--modifier}}"
-    {{else if table-th--icon}} class="pf-c-table__icon {{table-th--modifier}}"
-    {{else if table-th--sortable}} class="pf-c-table__sort {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}{{#if table-th--selected}} pf-m-selected{{/if}} {{table-th--modifier}}"
-    {{else if table-th--compound-expansion-toggle}} class="pf-c-table__compound-expansion-toggle {{table-th--modifier}}"
-    {{else if table-th--modifier}} class="{{table-th--modifier}}"
-  {{/if}}
+<th class="{{#if table-th--modifier}} {{table-th--modifier}}{{/if}}
+  {{#if table-th--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{/if}}
+  {{#if table-th--sortable}} pf-c-table__sort{{/if}}
+  {{#if table-th--toggle}} pf-c-table__toggle{{/if}}
+  {{#if table-th--check}} pf-c-table__check{{/if}}
+  {{#if table-th--action}} pf-c-table__action{{/if}}
+  {{#if table-th--icon}} pf-c-table__icon{{/if}}
+  {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
+  {{#if table-th--selected}} pf-m-selected{{/if}}"
   {{#if table--grid}}
     role="columnheader"
   {{/if}}
@@ -25,26 +26,30 @@
     {{{table-th--attribute}}}
   {{/if}}>
   {{#if table-th--sortable}}
-    {{#> button button--modifier="pf-m-plain"}}
-      {{#if table-th--sortable-wrap}}
-        <span class="pf-c-table__sort-text">
+    {{#> table-button}}
+      {{#> table-button-content}}
+        {{#> table-text}}
           {{> @partial-block}}
-        </span>
-      {{else}}
-        {{> @partial-block}}
-      {{/if}}
-      <span class="pf-c-table__sort-indicator">
-        {{#if table-th--selected}}
-          {{#if table-th--asc}}
-            <i class="fas fa-long-arrow-alt-up"></i>
+        {{/table-text}}
+        {{#> table-sort-indicator}}
+          {{#if table-th--selected}}
+            {{#if table-th--asc}}
+              <i class="fas fa-long-arrow-alt-up"></i>
+            {{else}}
+              <i class="fas fa-long-arrow-alt-down"></i>
+            {{/if}}
           {{else}}
-            <i class="fas fa-long-arrow-alt-down"></i>
+            <i class="fas fa-arrows-alt-v"></i>
           {{/if}}
-        {{else}}
-          <i class="fas fa-arrows-alt-v"></i>
-        {{/if}}
-      </span>
-    {{/button}}
+        {{/table-sort-indicator}}
+      {{/table-button-content}}
+    {{/table-button}}
+  {{else if table-th--compound-expansion-toggle}}
+    {{#> table-button table-button--attribute=table-th--button--attribute}}
+      {{#> table-text}}
+        {{> @partial-block}}
+      {{/table-text}}
+    {{/table-button}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
