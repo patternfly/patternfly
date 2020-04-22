@@ -71,7 +71,7 @@
   --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Cell display
-  --pf-c-table-cell--m-grid--hidden-visible--Display: grid;
+  --pf-c-table--m-grid--cell--hidden-visible--Display: grid;
 
   // Cell
   --pf-c-table--m-grid--cell--PaddingTop: 0;
@@ -81,11 +81,11 @@
 
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table-cell--responsive--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--cell--responsive--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table-cell-th--responsive--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table-cell--responsive--PaddingRight: 0;
-  --pf-c-table-cell--responsive--PaddingLeft: 0;
+  --pf-c-table--cell--responsive--PaddingRight: 0;
+  --pf-c-table--cell--responsive--PaddingLeft: 0;
 
   // Compact table
   --pf-c-table--m-compact-tr--responsive--PaddingTop: var(--pf-global--spacer--sm);
@@ -211,7 +211,7 @@
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table-cell--responsive--PaddingTop) var(--pf-c-table-cell--responsive--PaddingRight) var(--pf-c-table-cell--responsive--PaddingBottom) var(--pf-c-table-cell--responsive--PaddingLeft);
+      padding: var(--pf-c-table--cell--responsive--PaddingTop) var(--pf-c-table--cell--responsive--PaddingRight) var(--pf-c-table--cell--responsive--PaddingBottom) var(--pf-c-table--cell--responsive--PaddingLeft);
     }
 
     // remove padding from first th to align with kebab
@@ -231,8 +231,8 @@
   &.pf-m-compact {
     --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table--m-compact-tr--responsive--PaddingTop);
     --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr--responsive--PaddingBottom);
-    --pf-c-table-cell--responsive--PaddingTop: var(--pf-c-table--m-compact-tr-td--responsive--PaddingTop);
-    --pf-c-table-cell--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingBottom);
+    --pf-c-table--cell--responsive--PaddingTop: var(--pf-c-table--m-compact-tr-td--responsive--PaddingTop);
+    --pf-c-table--cell--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr-td--responsive--PaddingBottom);
     --pf-c-table__check--input--MarginTop: 0;
 
     .pf-c-table__action {
@@ -252,7 +252,7 @@
   // Standard td, in standard row (non-expandable)
   [data-label] {
     // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
-    --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table-cell--m-grid--hidden-visible--Display);
+    --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     // responsive layout, set td to two column grid
     grid-column: 1;
@@ -345,10 +345,10 @@
 
   // Expandable row
   .pf-c-table__expandable-row {
-    --pf-c-table-cell--responsive--PaddingTop: 0;
-    --pf-c-table-cell--responsive--PaddingRight: 0;
-    --pf-c-table-cell--responsive--PaddingBottom: 0;
-    --pf-c-table-cell--responsive--PaddingLeft: 0;
+    --pf-c-table--cell--responsive--PaddingTop: 0;
+    --pf-c-table--cell--responsive--PaddingRight: 0;
+    --pf-c-table--cell--responsive--PaddingBottom: 0;
+    --pf-c-table--cell--responsive--PaddingLeft: 0;
     --pf-c-table--cell--PaddingRight: 0;
     --pf-c-table--cell--PaddingLeft: 0;
 
