@@ -22,7 +22,9 @@
       </button>
     {{else if table-td--compound-expansion-toggle}}
       {{#> table-button table-button--attribute=table-th--button--attribute}}
-        {{> @partial-block}}
+        {{#> table-text}}
+          {{> @partial-block}}
+        {{/table-text}}
       {{/table-button}}
     {{else}}
       {{> @partial-block}}

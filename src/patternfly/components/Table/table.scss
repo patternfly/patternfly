@@ -60,7 +60,7 @@
 
   // Truncate
   --pf-c-table--m-truncate--cell--MaxWidth: 1px;
-  --pf-c-table--m-truncate--cell--MinWidth: 10ch;
+  --pf-c-table--m-truncate--cell--MinWidth: 9ch;
 
   // Hidden visible
   --pf-c-table--cell--hidden-visible--Display: table-cell;
@@ -239,7 +239,7 @@
     }
 
     &:empty {
-      width: 0;
+      width: auto;
       min-width: 0;
       padding: 0;
     }
@@ -341,10 +341,13 @@
     --pf-c-table--cell--WhiteSpace: nowrap;
   }
 
+  .pf-c-table__icon,
   .pf-m-fit-content {
     --pf-c-table--cell--MinWidth: fit-content;
     --pf-c-table--cell--MaxWidth: fit-content;
     --pf-c-table--cell--Width: 1%;
+    --pf-c-table--cell--Overflow: visible;
+    --pf-c-table--cell--TextOverflow: clip;
     --pf-c-table--cell--WhiteSpace: nowrap;
   }
 
@@ -541,6 +544,10 @@
 
   position: relative;
 
+  &.pf-m-truncate {
+    overflow: visible;
+  }
+
   // Apply borders to button to avoid conflicts with expanded states
   .pf-c-table__button::before,
   .pf-c-table__button::after {
@@ -578,16 +585,16 @@
   }
 
   &:first-child {
+    --pf-c-table__compound-expansion-toggle__button--before--Left: 0;
     --pf-c-table__compound-expansion-toggle__button--after--Left: 0;
-    --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-  }
-
-  &:last-child {
-    --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
   }
 
   &.pf-m-expanded {
     border-bottom: var(--pf-c-table--BackgroundColor) solid var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
+
+    &:first-child {
+      --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+    }
   }
 
   // set text to respond to content
@@ -597,6 +604,14 @@
     --pf-c-table--cell--Width: auto;
   }
 }
+
+// stylelint-disable selector-no-qualifying-type
+.pf-c-table tbody.pf-m-expanded,
+.pf-c-table__expandable-row.pf-m-expanded,
+.pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child {
+  --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
+}
+// stylelint-enable
 
 // Table sort
 // ==================================================================
@@ -666,10 +681,6 @@
     border-bottom-color: var(--pf-c-table__expandable-row--m-expanded--BorderBottomColor);
     border-bottom-width: var(--pf-c-table--BorderWidth);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
-
-    :first-child::before {
-      --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
-    }
   }
 
 
@@ -748,6 +759,8 @@
   }
 
   .pf-c-table__icon {
+    width: auto;
+    min-width: 0;
     text-align: center;
   }
 

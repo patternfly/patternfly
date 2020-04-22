@@ -625,11 +625,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+  {{#> table-tbody}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <a href="#">siemur/test-space</a>
-      {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
@@ -641,6 +638,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>20 minutes</span>
       {{/table-td}}
@@ -677,9 +677,6 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <a href="#">siemur/test-space</a>
-      {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         2
@@ -692,6 +689,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>1 day ago</span>
       {{/table-td}}
@@ -728,9 +728,6 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Repository name"}}
-        <a href="#">siemur/test-space</a>
-      {{/table-th}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         4
@@ -743,6 +740,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
       {{#> table-td table-td--data-label="Last commit"}}
         <span>2 days ago</span>
       {{/table-td}}
