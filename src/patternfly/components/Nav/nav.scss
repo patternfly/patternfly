@@ -314,7 +314,6 @@
 .pf-c-nav__link {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   padding: var(--pf-c-nav__link--PaddingTop) var(--pf-c-nav__link--PaddingRight) var(--pf-c-nav__link--PaddingBottom) var(--pf-c-nav__link--PaddingLeft);
   font-size: var(--pf-c-nav__link--FontSize);
   font-weight: var(--pf-c-nav__link--FontWeight);
@@ -375,6 +374,10 @@
   &:focus,
   &:active {
     text-decoration: none;
+  }
+
+  .pf-c-nav__item.pf-m-expandable > & {
+    justify-content: space-between;
   }
 }
 
