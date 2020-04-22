@@ -77,25 +77,31 @@ function getHTMLWithStyles(cssPaths, html, bodyClassNames) {
 </html>`;
 }
 
+// Helper
+function getExampleDir(fullPath) {
+  const split = fullPath.split('/');
+  const lastPath = split
+    .slice(split.length - 4, split.length - 1)
+    .join('/')
+    .replace(/\/examples/, '')
+    .replace(/.mdx?$/, '')
+    .toLowerCase();
+
+  return path.join(process.cwd(), `workspace/${lastPath}`);
+}
+
 function compileMD0(srcFiles) {
   const cssPaths = getCSSPaths();
 
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
-      const split = path.relative(process.cwd(), chunk.history[0]).split('/');
-      const lastPath = split
-        .slice(split.length - 4, split.length - 1)
-        .join('/')
-        .replace(/\/examples/, '')
-        .replace(/.mdx?$/, '')
-        .toLowerCase();
       const { data, content } = graymatter(chunk.contents.toString());
       const mdAST = unified()
         .use(toMDAST)
         .parse(content);
       const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
       const section = data.section[0].toLowerCase();
-      const title = lastPath.split('/').pop();
+      const title = data.title.toLowerCase();
       examples.index = unified()
         .use(toMDAST)
         .use(codeTransformer, { examples, section, title })
@@ -104,8 +110,10 @@ function compileMD0(srcFiles) {
         .use(stringify)
         .processSync(content).contents;
 
+      const exampleDir = getExampleDir(chunk.history[0]);
+      // Write new examples
       Object.entries(examples).forEach(([exampleName, html]) => {
-        const htmlPath = path.join(process.cwd(), `workspace/${lastPath}/${exampleName}.html`);
+        const htmlPath = path.join(exampleDir, `${exampleName}.html`);
         if (exampleName !== 'index') {
           // .ws-core-l-flex .pf-l-flex .pf-l-flex
           const exampleDiv = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
@@ -113,9 +121,14 @@ function compileMD0(srcFiles) {
         } else {
           html = getHTMLWithStyles(cssPaths, html, 'ws-lite-index-example');
         }
-        fs.ensureFileSync(htmlPath);
-        fs.writeFileSync(htmlPath, html);
+        fs.outputFileSync(htmlPath, html);
       });
+      // Delete old examples
+      const newExamples = Object.keys(examples).map(exampleName => `${exampleName}.html`);
+      fs.readdirSync(exampleDir)
+        .filter(file => !newExamples.includes(file))
+        .forEach(file => fs.removeSync(path.join(exampleDir, file)));
+
       cb2(null, chunk);
     })
   );
@@ -153,6 +166,8 @@ function watchMD(mdFiles) {
 
   watcher.on('change', onMDChange);
   watcher.on('add', onMDChange);
+  // Delete all component examples
+  watcher.on('unlink', file => fs.removeSync(getExampleDir(file)));
 }
 
 module.exports = {
