@@ -314,6 +314,7 @@
 .pf-c-nav__link {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   padding: var(--pf-c-nav__link--PaddingTop) var(--pf-c-nav__link--PaddingRight) var(--pf-c-nav__link--PaddingBottom) var(--pf-c-nav__link--PaddingLeft);
   font-size: var(--pf-c-nav__link--FontSize);
   font-weight: var(--pf-c-nav__link--FontWeight);
@@ -557,11 +558,8 @@
 
 // Toggle caret
 .pf-c-nav__toggle {
-  display: inline-block;
-  flex: none;
   padding-right: var(--pf-c-nav__toggle--PaddingRight);
   padding-left: var(--pf-c-nav__toggle--PaddingLeft);
-  margin-left: auto;
   font-size: var(--pf-c-nav__toggle--FontSize);
   line-height: 1;
   transition: var(--pf-c-nav__toggle--Transition);
