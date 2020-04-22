@@ -608,14 +608,6 @@
   }
 }
 
-// stylelint-disable selector-no-qualifying-type
-.pf-c-table tbody.pf-m-expanded,
-.pf-c-table__expandable-row.pf-m-expanded,
-.pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child {
-  --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
-}
-// stylelint-enable
-
 // Table sort
 // ==================================================================
 .pf-c-table__sort {
@@ -665,7 +657,7 @@
   // stylelint-disable
   td {
     &.pf-m-no-padding {
-      padding: 0 0 0 var(--pf-c-table__expandable-row--before--Width); // set padding-left to adjust for left border.
+      padding: 0 0 0 var(--pf-c-table__expandable-row--before--BorderWidth); // set padding-left to adjust for left border.
 
       .pf-c-table__expandable-row-content {
         padding: 0;
@@ -692,6 +684,14 @@
     visibility: hidden;
   }
 }
+
+// stylelint-disable selector-no-qualifying-type
+.pf-c-table tbody.pf-m-expanded,
+.pf-c-table__expandable-row.pf-m-expanded,
+.pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child {
+  --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
+}
+// stylelint-enable
 
 // Nested table
 // ==================================================================
