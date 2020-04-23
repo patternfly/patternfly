@@ -22,9 +22,9 @@
   --pf-c-card--child--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-card__title--not--last-child--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-card__title--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-card__title--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-card__header--FontFamily: var(--pf-global--FontWeight--bold);
+  --pf-c-card__header--FontWeight: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-card__header--not--last-child--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__footer--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
@@ -79,7 +79,7 @@
     --pf-c-card--child--PaddingRight: var(--pf-c-card--m-compact--child--PaddingRight);
     --pf-c-card--child--PaddingBottom: var(--pf-c-card--m-compact--child--PaddingBottom);
     --pf-c-card--child--PaddingLeft: var(--pf-c-card--m-compact--child--PaddingLeft);
-    --pf-c-card__title--not--last-child--PaddingBottom: var(--pf-c-card--m-compact__header--not--last-child--PaddingBottom);
+    --pf-c-card__header--not--last-child--PaddingBottom: var(--pf-c-card--m-compact__header--not--last-child--PaddingBottom);
   }
 
   &.pf-m-flat {
@@ -95,6 +95,11 @@
   align-items: center;
 }
 
+.pf-c-card__header {
+  font-family: var(--pf-c-card__header--FontFamily);
+  font-weight: var(--pf-c-card__header--FontWeight);
+}
+
 .pf-c-card__actions {
   display: flex;
   align-items: center;
@@ -107,7 +112,7 @@
     margin-left: var(--pf-c-card__actions--child--MarginLeft);
   }
 
-  + .pf-c-card__title,
+  + .pf-c-card__header,
   + .pf-c-card__body,
   + .pf-c-card__footer {
     padding: 0;
@@ -115,7 +120,7 @@
 }
 
 .pf-c-card__head,
-.pf-c-card__title,
+.pf-c-card__header,
 .pf-c-card__body,
 .pf-c-card__footer {
   padding-right: var(--pf-c-card--child--PaddingRight);
@@ -128,15 +133,10 @@
 }
 
 .pf-c-card__head,
-.pf-c-card__title {
+.pf-c-card__header {
   &:not(:last-child) {
-    padding-bottom: var(--pf-c-card__title--not--last-child--PaddingBottom);
+    padding-bottom: var(--pf-c-card__header--not--last-child--PaddingBottom);
   }
-}
-
-.pf-c-card__title {
-  font-size: var(--pf-c-card__title--FontSize);
-  font-weight: var(--pf-c-card__title--FontWeight);
 }
 
 .pf-c-card__body:not(.pf-m-no-fill) {
@@ -153,7 +153,7 @@
 
 // RedHat Font overrides
 @include pf-m-overpass-font {
-  .pf-c-card__title {
-    --pf-c-card__title--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  .pf-c-card .pf-c-card__header {
+    font-weight: var(--pf-global--FontWeight--normal);
   }
 }
