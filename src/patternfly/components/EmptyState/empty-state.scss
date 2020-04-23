@@ -4,6 +4,7 @@
   --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
   --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
+  --pf-c-empty-state__content--c-title--m-lg--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
   --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
   --pf-c-empty-state__primary--MarginTop: var(--pf-global--spacer--xl);
@@ -53,6 +54,10 @@
 
 .pf-c-empty-state__content {
   max-width: var(--pf-c-empty-state__content--MaxWidth);
+
+  > .pf-c-title.pf-m-lg {
+    font-size: var(--pf-c-empty-state__content--c-title--m-lg--FontSize);
+  }
 }
 
 .pf-c-empty-state__icon {
@@ -90,10 +95,10 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
+@include pf-m-overpass-font {
   .pf-c-empty-state {
-    > .pf-c-title.pf-m-lg {
-      font-size: var(--pf-global--FontSize--xl);
+    .pf-c-empty-state__content > .pf-c-title.pf-m-lg {
+      font-size: var(--pf-global--FontSize--lg);
     }
   }
 }

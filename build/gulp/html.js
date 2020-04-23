@@ -71,7 +71,7 @@ function getHTMLWithStyles(cssPaths, html, bodyClassNames) {
   <head>
     ${cssPaths.map(cssPath => `<link rel="stylesheet" href="../../../${cssPath}">`).join('\n    ')}
   </head>
-  <body class="pf-m-redhat-font${bodyClassNames ? ` ${bodyClassNames}` : ''}">
+  <body class="${bodyClassNames ? `${bodyClassNames}` : ''}">
     ${html.replace(/\s*\n/g, '\n    ')}
   </body>
 </html>`;

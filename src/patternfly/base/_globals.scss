@@ -142,4 +142,10 @@
       outline: 1px dotted ButtonText;
     }
   }
-} // ends if
+
+  @include pf-m-overpass-font {
+    a {
+      font-weight: var(--pf-global--FontWeight--semi-bold);
+    }
+  }
+}

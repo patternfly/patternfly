@@ -24,12 +24,12 @@
   // lg
   --pf-c-title--m-lg--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-title--m-lg--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--normal);
 
   // md
   --pf-c-title--m-md--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-title--m-md--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--normal);
 
   font-family: var(--pf-c-title--FontFamily);
   word-break: break-word;
@@ -72,9 +72,9 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
+@include pf-m-overpass-font {
   .pf-c-title {
-    --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--normal);
-    --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
+    --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--semi-bold);
   }
 }

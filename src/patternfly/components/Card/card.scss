@@ -22,6 +22,8 @@
   --pf-c-card--child--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-card__header--FontFamily: var(--pf-global--FontFamily--sans-serif);
+  --pf-c-card__header--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-card__header--not--last-child--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__footer--FontSize: var(--pf-global--FontSize--md);
@@ -93,6 +95,11 @@
   align-items: center;
 }
 
+.pf-c-card__header.pf-c-title.pf-m-md {
+  font-family: var(--pf-c-card__header--FontFamily);
+  font-weight: var(--pf-c-card__header--FontWeight);
+}
+
 .pf-c-card__actions {
   display: flex;
   align-items: center;
@@ -145,9 +152,8 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
-  .pf-c-card__header {
-    font-family: var(--pf-global--FontFamily--sans-serif);
-    font-weight: var(--pf-global--FontWeight--bold);
+@include pf-m-overpass-font {
+  .pf-c-card .pf-c-card__header {
+    font-weight: var(--pf-global--FontWeight--normal);
   }
 }
