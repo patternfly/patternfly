@@ -1568,7 +1568,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
 ```hbs title=Modifiers-without-text-wrapper
-{{#> table table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20"}}
@@ -1590,7 +1590,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Truncating text"}}
-        This text will truncate instead of wrap.
+        This text will truncate instead of wrap in table layout and wrap gracefully in grid layout.
       {{/table-td}}
       {{#> table-td table-td--modifier="pf-m-break-word" table-td--data-label="Break word"}}
         <a href="#">http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org</a>
@@ -1609,31 +1609,72 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 {{/table}}
 ```
 
-## `.pf-c-table__text`: Table text element. For `.pf-m-truncate` and `.pf-m-nowrap` modifiers to apply to the grid layout, `td` content must be wrapped with `.pf-c-table__text`.
+## The table-text element
 
-```hbs title=Modifiers-with-text-wrapper
-{{#> table table--id="modifiers-with-text-wrapper-example" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a simple table example"'}}
+By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. `.pf-c-table__text` can be added individually and/or nested.
+
+```hbs title=Table-text-element
+{{#> table table--grid="true" table--modifier="pf-m-grid-md pf-m-fixeds" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-caption}}
+    Note: The table is set to <code>table-layout: fixed</code>&nbsp;by applying <code>.pf-m-fixed</code> to <code>.pf-c-table</code>.
+  {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
-        Truncating text
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Usage
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-wrap"}}
-        Wrapping table header text. This <code>th</code> text will wrap instead of truncate.
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Result
       {{/table-th}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr}}
+      {{#> table-th table-th--modifier="pf-m-fit-content"  table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        <b><code>th.pf-m-truncate</code></b>
+      {{/table-th}}
       {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Truncating text"}}
         {{#> table-text}}
-          This text will truncate instead of wrap.
+          This table cell contains a single <code>`.pf-c-table__text`</code>&nbsp; wrapper with the parent table cell applying <code>`.pf-m-truncate`</code>. The child <code>`.pf-c-table__text`</code>&nbsp; element will inherit the modifier settings and apply to the grid layout.
         {{/table-text}}
       {{/table-td}}
-      {{#> table-td table-td--modifier="pf-m-nowrap" table-td--data-label="No wrap"}}
-        {{#> table-text}}
-          <a href="#">This is a link that needs to be on one line and fully readable.</a>
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-th table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        {{#> table-text table-text--modifier="pf-m-nowrap"}}
+          <b><code>.pf-c-table__text.pf-m-truncate</code></b>
+        {{/table-text}}
+        {{#> table-text table-text--modifier="pf-m-nowrap"}}
+          <b><code>.pf-c-table__text.pf-m-wrap</code></b>
+        {{/table-text}}
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Mixed table text modifiers"}}
+        {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
+          This <code>`.pf-c-table__text`</code> element is set to <code>`.pf-m-truncate`</code>, while its sibling is set to wrap.
+        {{/table-text}}
+        {{#> table-text table-text--type="div"}}
+          This approach allows for multiple text modifiers on separate <code>`.pf-c-table__text`</code>&nbsp; elements. This <code>`.pf-c-table__text`</code>&nbsp; wrapper has no modifier and will wrap normally, while the former sibling will truncate.
+        {{/table-text}}
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-th table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        Using <b><code>.pf-c-table__text</code></b> for layout
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Truncating text"}}
+        {{#> table-text table-text--modifier="pf-m-stack pf-m-gutter" table-text--type="div"}}
+          <span>
+            Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-c-table</code>, inline elements will stack in the grid layout. To prevent this, wrap multiple elements with <code>.pf-c-table__text</code>.
+          </span>
+          <p>
+            The <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; can additionally be nested, like in this example. The next <code>.pf-c-table__text</code> element has a very long url whose width needs be constrained.
+          </p>
+          {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-truncate"}}
+            <a href="#">http://thisisaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+          {{/table-text}}
+
+          <p>This <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; applies its own built in grid layout <b><code>.pf-m-stack</code></b>&nbsp;as well as a gutter <b><code>.pf-m-gutter</code></b>.
         {{/table-text}}
       {{/table-td}}
     {{/table-tr}}
@@ -1645,12 +1686,14 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__text` | `th > *`, `td > *`, `.pf-c-table__text-content > *` | Initiates a table text element. |
-| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to truncate. |
-| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to not wrap. |
-| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text to wrap. |
+| `.pf-c-table__text` | `th > *`, `td > *` | Initiates a table text element. |
+| `.pf-m-stack` | `.pf-c-table__text` | Modifies a table text element to stacked, grid layout. |
+| `.pf-m-gutter` | `.pf-c-table__text` | Modifies a table text element to have a row gutter. |
+| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to truncate. |
+| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to not wrap. |
+| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to wrap. |
 | `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
-| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text-content`, `.pf-c-table__text` | Modifies text strings to break. |
+| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text strings to break. |
 
 ```hbs title=th-truncation
 {{#> tooltip tooltip--modifier="pf-m-top"}}
@@ -1792,7 +1835,6 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-wrap` | `<th>`, `<td>` | Modifies content to wrap. |
-| `.pf-c-table__text-content` | `div` | Initiates a table text content element. |
 
 
 ## Documentation

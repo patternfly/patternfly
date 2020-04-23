@@ -131,7 +131,7 @@
   border: none;
 
   // reset cell modifications
-  &.pf-c-table tr > * {
+  tr > * {
     width: auto;
     min-width: 0;
     max-width: none;
@@ -143,7 +143,6 @@
   // apply modifications to text
   .pf-c-table__text {
     position: relative;
-    display: block;
     width: auto;
     min-width: 0;
     max-width: none;
@@ -221,8 +220,8 @@
   }
 
   // Remove min-height on buttons
-  td.pf-c-table__compound-expansion-toggle,
-  th.pf-c-table__compound-expansion-toggle {
+  th.pf-c-table__compound-expansion-toggle,
+  td.pf-c-table__compound-expansion-toggle {
     .pf-c-button {
       min-height: 0;
     }
@@ -249,25 +248,30 @@
     text-align: left;
   }
 
+  th:not([data-label]) {
+    display: none;
+    visibility: hidden;
+  }
+
   // Standard td, in standard row (non-expandable)
   [data-label] {
     // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
     --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
-    // responsive layout, set td to two column grid
     grid-column: 1;
     grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
     align-items: start;
 
+    // responsive layout, set td to two column grid
     // @mobile, breakpoint small
-    @media screen and (min-width: $pf-global--breakpoint--xs) {
-      grid-template-columns: 1fr 1.5fr;
+    @media screen and (min-width: $pf-global--breakpoint--sm) {
+      grid-template-columns: 1fr minmax(0, 1.5fr);
       grid-column: 1;
     }
 
-    // set contents of td to start at column two of td grid
+    // set contents of td to start at column two of td grids
     > * {
-      @media screen and (min-width: $pf-global--breakpoint--xs) {
+      @media screen and (min-width: $pf-global--breakpoint--sm) {
         grid-column: 2;
       }
     }
@@ -328,10 +332,6 @@
 
     &.pf-m-expanded {
       --pf-c-table--tbody--after--BorderLeftWidth: var(--pf-c-table--tbody--after--BorderWidth);
-    }
-
-    > tr > * {
-      overflow: hidden;
     }
 
     > tr > :first-child:not(.pf-c-table__check)::before {

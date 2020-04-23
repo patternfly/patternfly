@@ -84,6 +84,9 @@
   --pf-c-table__button--active--Color: var(--pf-global--Color--100);
   --pf-c-table__button--OutlineOffset: calc(var(--pf-global--BorderWidth--lg) * -1);
 
+  // Text
+  --pf-c-table--m-gutter__text--RowGap: var(--pf-global--gutter);
+
   // Compact
   --pf-c-table--m-compact__toggle--PaddingTop: 0;
   --pf-c-table--m-compact__toggle--PaddingBottom: 0;
@@ -264,10 +267,7 @@
     --pf-c-table--cell--FontWeight: var(--pf-c-table--thead--cell--FontWeight);
     --pf-c-table--cell--Width: var(--pf-c-table--thead--cell--Width);
 
-    th,
-    td {
-      vertical-align: bottom;
-    }
+    vertical-align: bottom;
   }
 
   // Table body cell
@@ -369,23 +369,31 @@
 
 // Text
 .pf-c-table__text {
+  // Allow __text child to inherit th/td modifier settings
+  width: var(--pf-c-table--cell--Width);
+  min-width: var(--pf-c-table--cell--MinWidth);
+  max-width: var(--pf-c-table--cell--MaxWidth);
+  overflow: var(--pf-c-table--cell--Overflow);
+  text-overflow: var(--pf-c-table--cell--TextOverflow);
+  word-break: var(--pf-c-table--cell--WordBreak);
+  white-space: var(--pf-c-table--cell--WhiteSpace);
+
   // Only apply these settings if specifically modified
   &.pf-m-truncate,
   &.pf-m-wrap,
   &.pf-m-nowrap,
   &.pf-m-fit-content,
   &.pf-m-break-word {
-    --pf-c-table--m-truncate--cell--MinWidth: 100%;
-
     position: relative;
     display: block;
-    width: var(--pf-c-table--cell--Width);
-    min-width: var(--pf-c-table--cell--MinWidth);
-    max-width: var(--pf-c-table--cell--MaxWidth);
-    overflow: var(--pf-c-table--cell--Overflow);
-    text-overflow: var(--pf-c-table--cell--TextOverflow);
-    word-break: var(--pf-c-table--cell--WordBreak);
-    white-space: var(--pf-c-table--cell--WhiteSpace);
+  }
+
+  &.pf-m-stack {
+    display: grid;
+  }
+
+  &.pf-m-gutter {
+    row-gap: var(--pf-c-table--m-gutter__text--RowGap);
   }
 }
 
@@ -547,8 +555,14 @@
 
   position: relative;
 
+  // show left border, use __text to truncate content
   &.pf-m-truncate {
     overflow: visible;
+  }
+
+  .pf-c-table__button {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   // Apply borders to button to avoid conflicts with expanded states
@@ -599,13 +613,6 @@
       --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
     }
   }
-
-  // set text to respond to content
-  .pf-c-table__text {
-    --pf-c-table--cell--MinWidth: 0;
-    --pf-c-table--cell--MaxWidth: none;
-    --pf-c-table--cell--Width: auto;
-  }
 }
 
 // Table sort
@@ -621,6 +628,11 @@
 
   .pf-c-table__button:active {
     --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--active__sort-indicator--Color);
+  }
+
+  // Prevent FF misalignment bug
+  .pf-c-table__button {
+    display: flex;
   }
 
   &.pf-m-selected .pf-c-table__button {
