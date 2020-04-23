@@ -9,9 +9,9 @@ cssPrefix: pf-c-empty-state
 ```hbs title=Basic
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
-  {{#> empty-state-title}}
-    Empty State
-  {{/empty-state-title}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty state
+  {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
@@ -44,9 +44,9 @@ cssPrefix: pf-c-empty-state
 ```hbs title=Small
 {{#> empty-state empty-state--modifier="pf-m-sm"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
-  {{#> empty-state-title}}
-    Empty State
-  {{/empty-state-title}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty state
+  {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
@@ -79,9 +79,9 @@ cssPrefix: pf-c-empty-state
 ```hbs title=Large
 {{#> empty-state empty-state--modifier="pf-m-lg"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
-  {{#> empty-state-title}}
-    Empty State
-  {{/empty-state-title}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
+    Empty state
+  {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
@@ -114,9 +114,9 @@ cssPrefix: pf-c-empty-state
 ```hbs title=Extra-large
 {{#> empty-state empty-state--modifier="pf-m-xl"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
-  {{#> empty-state-title}}
-    Empty State
-  {{/empty-state-title}}
+  {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
+    Empty state
+  {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
@@ -129,9 +129,9 @@ cssPrefix: pf-c-empty-state
 ```hbs title=With-primary-element
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
-  {{#> empty-state-title}}
+  {{#> title titleType="h1" title--modifier="pf-m-lg"}}
     Empty State
-  {{/empty-state-title}}
+  {{/title}}
   {{#> empty-state-body}}
     This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
@@ -155,7 +155,7 @@ cssPrefix: pf-c-empty-state
 | `.pf-c-empty-state` | `<div>` |  Initiates an empty state component. The empty state centers its content (`.pf-c-empty-state__content`) vertically and horizontally. **Required** |
 | `.pf-c-empty-state__content` | `<div>` |  Creates the content container. **Required** |
 | `.pf-c-empty-state__icon` | `<i>`, `<div>` |  Creates the empty state icon or icon container when used as a `<div>`. |
-| `.pf-c-empty-state__title` | `<div>`, `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` |  Creates the empty state title. **Required** |
+| `.pf-c-title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Creates the empty state title. **Required** |
 | `.pf-c-empty-state__body` | `<div>` |  Creates the empty state body content. You can have more than one `.pf-c-empty-state__body` elements. |
 | `.pf-c-button.pf-m-primary` | `<button>` |  Creates the primary action button. |
 | `.pf-c-empty-state__primary` | `<div>` |  Container for primary actions. Can be used in lieu of using `.pf-c-button.pf-m-primary`. |

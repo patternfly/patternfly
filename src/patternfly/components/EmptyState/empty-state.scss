@@ -4,8 +4,7 @@
   --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
   --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
   --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
-  --pf-c-empty-state__title--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-empty-state--m-xl__title--FontSize: var(--pf-global--FontSize--4xl);
+  --pf-c-empty-state__content--c-title--m-lg--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
   --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
   --pf-c-empty-state__primary--MarginTop: var(--pf-global--spacer--xl);
@@ -38,7 +37,6 @@
   }
 
   &.pf-m-xl {
-    --pf-c-empty-state__title--FontSize: var(--pf-c-empty-state--m-xl__title--FontSize);
     --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xl__body--MarginTop);
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
     --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
@@ -56,16 +54,16 @@
 
 .pf-c-empty-state__content {
   max-width: var(--pf-c-empty-state__content--MaxWidth);
+
+  > .pf-c-title.pf-m-lg {
+    font-size: var(--pf-c-empty-state__content--c-title--m-lg--FontSize);
+  }
 }
 
 .pf-c-empty-state__icon {
   margin-bottom: var(--pf-c-empty-state__icon--MarginBottom);
   font-size: var(--pf-c-empty-state__icon--FontSize);
   color: var(--pf-c-empty-state__icon--Color);
-}
-
-.pf-c-empty-state__title {
-  font-size: var(--pf-c-empty-state__title--FontSize);
 }
 
 .pf-c-empty-state__body {
@@ -98,8 +96,9 @@
 
 // RedHat Font overrides
 @include pf-m-overpass-font {
-  .pf-c-empty-state__title {
-    font-size: var(--pf-global--FontSize--lg);
-    font-weight: var(--pf-global--FontWeight--semi-bold);
+  .pf-c-empty-state {
+    .pf-c-empty-state__content > .pf-c-title.pf-m-lg {
+      font-size: var(--pf-global--FontSize--lg);
+    }
   }
 }
