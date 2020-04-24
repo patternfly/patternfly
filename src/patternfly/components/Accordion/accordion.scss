@@ -7,22 +7,22 @@
   --pf-c-accordion__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-accordion__toggle--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-accordion__toggle--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-accordion__toggle--before--BorderLeftColor: transparent;
+  --pf-c-accordion__toggle--before--BackgroundColor: transparent;
   --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-accordion__toggle--before--m-expanded--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-accordion__toggle--before--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__toggle--before--Width: var(--pf-global--BorderWidth--lg);
+  --pf-c-accordion__toggle--m-expanded--before--BackgroundColor: var(--pf-global--primary-color--100);
 
   // accordion toggle text
   --pf-c-accordion__toggle-text--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
-  --pf-c-accordion__toggle--hover-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--active-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--active-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-accordion__toggle--focus-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--focus-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  --pf-c-accordion__toggle--m-expanded-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--m-expanded-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle--hover__toggle-text--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle--active__toggle-text--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle--active__toggle-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle--focus__toggle-text--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle--focus__toggle-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle--m-expanded__toggle-text--Color: var(--pf-global--link--Color);
+  --pf-c-accordion__toggle--m-expanded__toggle-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
 
   // accordion toggle icon
   --pf-c-accordion__toggle-icon--Transition: .2s ease-in 0s;
@@ -35,9 +35,9 @@
   --pf-c-accordion__expanded-content-body--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-accordion__expanded-content--Color: var(--pf-global--secondary-color--100);
   --pf-c-accordion__expanded-content--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-accordion__expanded-content--before--BorderLeftColor: transparent;
-  --pf-c-accordion__expanded-content--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-accordion__expanded-content--m-expanded--BorderLeftColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__expanded-content-body--before--BackgroundColor: transparent;
+  --pf-c-accordion__expanded-content-body--before--Width: var(--pf-global--BorderWidth--lg);
+  --pf-c-accordion__expanded-content-body--m-expanded--before--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-accordion__expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   // This component always needs to be light
@@ -60,17 +60,17 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: var(--pf-c-accordion__toggle--before--m-expanded--BorderWidth);
+    width: var(--pf-c-accordion__toggle--before--Width);
     content: "";
-    background-color: var(--pf-c-accordion__toggle--before--BorderLeftColor);
+    background-color: var(--pf-c-accordion__toggle--before--BackgroundColor);
   }
 
   &.pf-m-expanded {
-    --pf-c-accordion__toggle--before--BorderLeftColor: var(--pf-c-accordion__toggle--before--m-expanded--BorderLeftColor);
+    --pf-c-accordion__toggle--before--BackgroundColor: var(--pf-c-accordion__toggle--m-expanded--before--BackgroundColor);
 
     .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--m-expanded-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--m-expanded-text--Color);
+      font-weight: var(--pf-c-accordion__toggle--m-expanded__toggle-text--FontWeight);
+      color: var(--pf-c-accordion__toggle--m-expanded__toggle-text--Color);
     }
 
     .pf-c-accordion__toggle-icon {
@@ -82,7 +82,7 @@
     background-color: var(--pf-c-accordion__toggle--hover--BackgroundColor);
 
     .pf-c-accordion__toggle-text {
-      color: var(--pf-c-accordion__toggle--hover-text--Color);
+      color: var(--pf-c-accordion__toggle--hover__toggle-text--Color);
     }
   }
 
@@ -90,8 +90,8 @@
     background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
 
     .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--active-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--active-text--Color);
+      font-weight: var(--pf-c-accordion__toggle--active__toggle-text--FontWeight);
+      color: var(--pf-c-accordion__toggle--active__toggle-text--Color);
     }
   }
 
@@ -99,8 +99,8 @@
     background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
 
     .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--focus-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--focus-text--Color);
+      font-weight: var(--pf-c-accordion__toggle--focus__toggle-text--FontWeight);
+      color: var(--pf-c-accordion__toggle--focus__toggle-text--Color);
     }
   }
 }
@@ -125,7 +125,7 @@
   }
 
   &.pf-m-expanded {
-    --pf-c-accordion__expanded-content--before--BorderLeftColor: var(--pf-c-accordion__expanded-content--m-expanded--BorderLeftColor);
+    --pf-c-accordion__expanded-content-body--before--BackgroundColor: var(--pf-c-accordion__expanded-content-body--m-expanded--before--BackgroundColor);
   }
 }
 
@@ -138,8 +138,8 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: var(--pf-c-accordion__expanded-content--before--BorderWidth);
+    width: var(--pf-c-accordion__expanded-content-body--before--Width);
     content: "";
-    background-color: var(--pf-c-accordion__expanded-content--before--BorderLeftColor);
+    background-color: var(--pf-c-accordion__expanded-content-body--before--BackgroundColor);
   }
 }
