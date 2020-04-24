@@ -24,7 +24,7 @@ To setup the PatternFly 4 development environment:
 - run `npm install` from the project root
 - run `npm run build-patternfly`
 - run `npm run cli:setup` (only needed if doing development)
-- run `npm run dev`
+- run `npm start`
 - open your browser to `http://localhost:8000`
 
 After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
