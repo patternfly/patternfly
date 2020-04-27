@@ -37,7 +37,7 @@
   --pf-c-accordion__expanded-content--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-accordion__expanded-content-body--before--BackgroundColor: transparent;
   --pf-c-accordion__expanded-content-body--before--Width: var(--pf-global--BorderWidth--lg);
-  --pf-c-accordion__expanded-content-body--m-expanded--before--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__expanded-content--m-expanded__expanded-content-body--before--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-accordion__expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   // This component always needs to be light
@@ -125,7 +125,7 @@
   }
 
   &.pf-m-expanded {
-    --pf-c-accordion__expanded-content-body--before--BackgroundColor: var(--pf-c-accordion__expanded-content-body--m-expanded--before--BackgroundColor);
+    --pf-c-accordion__expanded-content-body--before--BackgroundColor: var(--pf-c-accordion__expanded-content--m-expanded__expanded-content-body--before--BackgroundColor);
   }
 }
 
