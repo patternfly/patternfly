@@ -405,7 +405,7 @@ section: demos
         {{#> button button--modifier="pf-m-primary"}}
           Save
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--modifier="pf-m-link"}}
           Cancel
         {{/button}}
       {{/modal-box-footer}}
