@@ -15,10 +15,14 @@
   // Arrow variables
   --pf-c-tooltip__arrow--Width: var(--pf-global--arrow--width);
   --pf-c-tooltip__arrow--Height: var(--pf-global--arrow--width);
-  --pf-c-tooltip__arrow--m-top--Transform: translate(-50%, 50%) rotate(45deg);
-  --pf-c-tooltip__arrow--m-right--Transform: translate(-50%, -50%) rotate(45deg);
-  --pf-c-tooltip__arrow--m-bottom--Transform: translate(-50%, -50%) rotate(45deg);
-  --pf-c-tooltip__arrow--m-left--Transform: translate(50%, -50%) rotate(45deg);
+  --pf-c-tooltip__arrow--m-top--Translate: translate(-50%, 50%);
+  --pf-c-tooltip__arrow--m-top--Rotate: rotate(45deg);
+  --pf-c-tooltip__arrow--m-right--Translate: translate(-50%, -50%);
+  --pf-c-tooltip__arrow--m-right--Rotate: rotate(45deg);
+  --pf-c-tooltip__arrow--m-bottom--Translate: translate(-50%, -50%);
+  --pf-c-tooltip__arrow--m-bottom--Rotate: rotate(45deg);
+  --pf-c-tooltip__arrow--m-left--Translate: translate(50%, -50%);
+  --pf-c-tooltip__arrow--m-left--Rotate: rotate(45deg);
 
   position: relative;
   max-width: var(--pf-c-tooltip--MaxWidth);
@@ -28,7 +32,7 @@
     .pf-c-tooltip__arrow {
       bottom: 0;
       left: 50%;
-      transform: var(--pf-c-tooltip__arrow--m-top--Transform);
+      transform: var(--pf-c-tooltip__arrow--m-top--Translate) var(--pf-c-tooltip__arrow--m-top--Rotate);
     }
   }
 
@@ -36,7 +40,7 @@
     .pf-c-tooltip__arrow {
       top: 0;
       left: 50%;
-      transform: var(--pf-c-tooltip__arrow--m-bottom--Transform);
+      transform: var(--pf-c-tooltip__arrow--m-bottom--Translate) var(--pf-c-tooltip__arrow--m-bottom--Rotate);
     }
   }
 
@@ -44,7 +48,7 @@
     .pf-c-tooltip__arrow {
       top: 50%;
       right: 0;
-      transform: var(--pf-c-tooltip__arrow--m-left--Transform);
+      transform: var(--pf-c-tooltip__arrow--m-left--Translate) var(--pf-c-tooltip__arrow--m-left--Rotate);
     }
   }
 
@@ -52,7 +56,7 @@
     .pf-c-tooltip__arrow {
       top: 50%;
       left: 0;
-      transform: var(--pf-c-tooltip__arrow--m-right--Transform);
+      transform: var(--pf-c-tooltip__arrow--m-right--Translate) var(--pf-c-tooltip__arrow--m-right--Rotate);
     }
   }
 }
