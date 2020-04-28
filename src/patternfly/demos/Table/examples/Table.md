@@ -24,9 +24,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -53,9 +51,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar-no-sort}}
         {{> table-sortable-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -82,9 +78,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-expandable-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -111,9 +105,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-compact-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -140,9 +132,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar-no-sort}}
         {{> table-compound-expansion-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -169,9 +159,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-loading-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -198,9 +186,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-empty-state-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -227,9 +213,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar table-toolbar--IsCompactPagination="true"}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -256,9 +240,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar table-toolbar--IsColumnManagementDropdown="true"}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -285,9 +267,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar table-toolbar--IsColumnManagementAction="true"}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -314,9 +294,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}

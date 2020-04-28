@@ -24,9 +24,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> data-list-toolbar}}
         {{> data-list-simple-data-list}}
-        {{> data-list-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -53,9 +51,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> data-list-toolbar}}
         {{> data-list-actionable-data-list}}
-        {{> data-list-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -82,9 +78,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> data-list-toolbar}}
         {{> data-list-expandable-data-list}}
-        {{> data-list-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -111,7 +105,6 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> data-list-without-pagination-toolbar}}
         {{> data-list-simple-no-pagination-data-list}}
       {{/card}}
     {{/page-main-section}}
@@ -139,9 +132,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> data-list-toolbar data-list-toolbar--IsCompactPagination="true"}}
         {{> data-list-simple-data-list}}
-        {{> data-list-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
