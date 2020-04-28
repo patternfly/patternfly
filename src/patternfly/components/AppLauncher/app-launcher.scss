@@ -110,7 +110,8 @@
     --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--hover--Color);
   }
 
-  &:active {
+  &:active,
+  &.pf-m-active {
     --pf-c-app-launcher__toggle--Color: var(--pf-c-app-launcher__toggle--active--Color);
   }
 
