@@ -112,7 +112,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &.pf-m-active {
     &::before {
       --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-c-options-menu__toggle--active--BorderBottomColor);
 
@@ -168,6 +169,7 @@
 
     &:hover,
     &:active,
+    &.pf-m-active,
     &:focus,
     .pf-c-options-menu.pf-m-expanded > & {
       --pf-c-options-menu__toggle--m-plain--Color: var(--pf-c-options-menu__toggle--m-plain--hover--Color);

@@ -169,3 +169,4 @@ Added after React implementation.
 | `.pf-c-context-selector__menu-list` | `<ul>` | Initiaties an unordered list of menu items that sits under the input container. |
 | `.pf-c-context-selector__menu-list-item` | `<li>` | Initiaties a menu item. |
 | `.pf-m-expanded` | `.pf-c-context-selector` | Modifies for the expanded state. |
+| `.pf-m-active` | `.pf-c-context-selector__toggle` | Forces display of the active state of the toggle. |
