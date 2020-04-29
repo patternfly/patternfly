@@ -39,15 +39,15 @@ import './Button.css'
   {{/button-icon}}
 {{/button}}
 
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
-
 {{#> button button--modifier="pf-m-inline pf-m-link"}}
   Inline link
 {{/button}}
 <br>
 <br>
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+<br><br>
 {{#> button button--modifier="pf-m-control"}}
   Control
 {{/button}}
@@ -84,6 +84,10 @@ import './Button.css'
 <br>
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
   Inline link disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove" disabled'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br>
 <br>
