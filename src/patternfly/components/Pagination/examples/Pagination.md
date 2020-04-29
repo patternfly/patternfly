@@ -158,3 +158,4 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
 | `.pf-m-footer` | `.pf-c-pagination` | Modifies for bottom/footer pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
+| `.pf-m-no-sticky` | `.pf-c-pagination.pf-m-footer` | Modifies bottom/footer pagination to not be positioned sticky on mobile. |

@@ -25,6 +25,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> data-list-simple-data-list}}
+        {{> data-list-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -52,6 +53,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> data-list-actionable-data-list}}
+        {{> data-list-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -79,6 +81,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> data-list-expandable-data-list}}
+        {{> data-list-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}

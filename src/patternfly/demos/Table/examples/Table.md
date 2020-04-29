@@ -25,6 +25,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> table-simple-table}}
+        {{> table-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -52,6 +53,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> table-sortable-table}}
+        {{> table-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -79,6 +81,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> table-expandable-table}}
+        {{> table-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -106,6 +109,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> table-compact-table}}
+        {{> table-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -133,6 +137,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> table-compound-expansion-table}}
+        {{> table-pagination-footer}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
