@@ -151,6 +151,11 @@
     white-space: var(--pf-c-table--cell--WhiteSpace);
   }
 
+  [class*="pf-l"],
+  [class*="pf-l"] > * {
+    max-width: 100%;
+  }
+
   // Thead
   thead {
     display: none;
@@ -219,14 +224,6 @@
     }
   }
 
-  // Remove min-height on buttons
-  th.pf-c-table__compound-expansion-toggle,
-  td.pf-c-table__compound-expansion-toggle {
-    .pf-c-button {
-      min-height: 0;
-    }
-  }
-
   &.pf-m-compact {
     --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table--m-compact-tr--responsive--PaddingTop);
     --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr--responsive--PaddingBottom);
@@ -248,11 +245,6 @@
     text-align: left;
   }
 
-  th:not([data-label]) {
-    display: none;
-    visibility: hidden;
-  }
-
   // Standard td, in standard row (non-expandable)
   [data-label] {
     // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
@@ -269,7 +261,7 @@
       grid-column: 1;
     }
 
-    // set contents of td to start at column two of td grids
+    // set contents of td to start at column two of td grid
     > * {
       @media screen and (min-width: $pf-global--breakpoint--sm) {
         grid-column: 2;

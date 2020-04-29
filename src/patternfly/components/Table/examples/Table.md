@@ -1611,17 +1611,17 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 
 ## The table-text element
 
-By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. `.pf-c-table__text` can be added individually and/or nested.
+By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. In addition to `.pf-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
 
 ```hbs title=Table-text-element
-{{#> table table--grid="true" table--modifier="pf-m-grid-md pf-m-fixeds" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
-    Note: The table is set to <code>table-layout: fixed</code>&nbsp;by applying <code>.pf-m-fixed</code> to <code>.pf-c-table</code>.
+    This table contains <code>.pf-c-table__text</code>&nbsp; examples. The <code>.pf-c-table__text</code>&nbsp; element can be using alone or in a nested configuration.
   {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
-        Usage
+        Selector/element
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Result
@@ -1631,8 +1631,10 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-th table-th--modifier="pf-m-fit-content"  table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
-        <b><code>th.pf-m-truncate</code></b>
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content"  table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        {{#> table-text table-text--type="div"}}
+          <b><code>th.pf-m-truncate</code></b>
+        {{/table-text}}
       {{/table-th}}
       {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Truncating text"}}
         {{#> table-text}}
@@ -1641,41 +1643,112 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-th table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
-        {{#> table-text table-text--modifier="pf-m-nowrap"}}
-          <b><code>.pf-c-table__text.pf-m-truncate</code></b>
-        {{/table-text}}
-        {{#> table-text table-text--modifier="pf-m-nowrap"}}
-          <b><code>.pf-c-table__text.pf-m-wrap</code></b>
-        {{/table-text}}
-      {{/table-th}}
-      {{#> table-td table-td--data-label="Mixed table text modifiers"}}
-        {{#> table-text table-text--type="div" table-text--modifier="pf-m-truncate"}}
-          This <code>`.pf-c-table__text`</code> element is set to <code>`.pf-m-truncate`</code>, while its sibling is set to wrap.
-        {{/table-text}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
-          This approach allows for multiple text modifiers on separate <code>`.pf-c-table__text`</code>&nbsp; elements. This <code>`.pf-c-table__text`</code>&nbsp; wrapper has no modifier and will wrap normally, while the former sibling will truncate.
+          <b><code>.pf-l-stack</code></b>
         {{/table-text}}
-      {{/table-td}}
-    {{/table-tr}}
-    {{#> table-tr}}
-      {{#> table-th table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
-        Using <b><code>.pf-c-table__text</code></b> for layout
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
-        {{#> table-text table-text--modifier="pf-m-stack pf-m-gutter" table-text--type="div"}}
-          <span>
-            Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-c-table</code>, inline elements will stack in the grid layout. To prevent this, wrap multiple elements with <code>.pf-c-table__text</code>.
-          </span>
+        {{#> stack stack--modifier="pf-m-gutter"}}
+          {{#> table-text table-text--modifier="" table-text--type="div"}}
+              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with <code>.pf-c-table__text</code>.
+          {{/table-text}}
           <p>
             The <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; can additionally be nested, like in this example. The next <code>.pf-c-table__text</code> element has a very long url whose width needs be constrained.
           </p>
           {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-truncate"}}
-            <a href="#">http://thisisaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            <a href="#">http://truncatemodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
           {{/table-text}}
-
           <p>This <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; applies its own built in grid layout <b><code>.pf-m-stack</code></b>&nbsp;as well as a gutter <b><code>.pf-m-gutter</code></b>.
+        {{/stack}}
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        {{#> table-text table-text--type="div"}}
+          <b><code>.pf-l-flex</code></b>
         {{/table-text}}
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Truncating text"}}
+        {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-xl"}}
+          {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+            {{#> table-text table-text--modifier="" table-text--type="div"}}
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            {{/table-text}}
+          {{/l-flex-item}}
+          {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+            {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-break-word"}}
+              <a href="#">http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            {{/table-text}}
+          {{/l-flex-item}}
+        {{/l-flex}}
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        {{#> table-text table-text--type="div"}}
+          <b><code>.pf-l-flex</code></b>
+        {{/table-text}}
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Truncating text"}}
+        {{#> l-flex l-flex--modifier="pf-m-column"}}
+          {{#> l-flex newconxt}}
+            {{#> l-flex-item}}
+              <i class="fas fa-code-branch" aria-hidden="true"></i>
+              &nbsp;5
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <i class="fas fa-code" aria-hidden="true"></i>
+              &nbsp;9
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <i class="fas fa-cube" aria-hidden="true"></i>
+              &nbsp;2
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              &nbsp;11
+            {{/l-flex-item}}
+          {{/l-flex}}
+          {{#> l-flex-item}}
+            {{#> table-text newcontext table-text--type="div"}}
+              <p>This is paragraph that we want to wrap. It doesn't need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
+            {{/table-text}}
+          {{/l-flex-item}}
+          {{#> l-flex-item}}
+            {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-break-word"}}
+              <a href="#">http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            {{/table-text}}
+          {{/l-flex-item}}
+        {{/l-flex}}
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+        {{#> table-text table-text--type="div"}}
+          <b><code>.pf-l-grid</code></b>
+        {{/table-text}}
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Truncating text"}}
+        {{#> grid grid--modifier="pf-m-gutter"}}
+          {{#> grid-item grid-item--modifier="pf-m-6-col pf-m-3-col-on-md"}}
+            Item 1
+          {{/grid-item}}
+          {{#> grid-item grid-item--modifier="pf-m-6-col pf-m-3-col-on-md"}}
+            Item 2
+          {{/grid-item}}
+          {{#> grid-item grid-item--modifier="pf-m-6-col pf-m-3-col-on-md"}}
+            Item 3
+          {{/grid-item}}
+          {{#> grid-item grid-item--modifier="pf-m-6-col pf-m-3-col-on-md"}}
+            Item 4
+          {{/grid-item}}
+          {{#> grid-item}}
+            {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-truncate"}}
+              <a href="#">http://truncatemodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            {{/table-text}}
+          {{/grid-item}}
+        {{/grid}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
