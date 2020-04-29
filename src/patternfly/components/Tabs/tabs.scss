@@ -231,6 +231,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--BorderWidth);
     }
 
+    // Add border right color and weight
+    .pf-c-tabs__item:first-child.pf-m-current {
+      --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--BorderWidth);
+    }
+
     // Offset vertical border to overlap horizontal border
     .pf-c-tabs__link::after {
       top: calc(var(--pf-c-tabs__link--before--BorderWidth) * -1);
