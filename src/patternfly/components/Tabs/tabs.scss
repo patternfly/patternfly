@@ -179,16 +179,21 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
     --pf-c-tabs__link--PaddingBottom: var(--pf-c-tabs--m-vertical__link--PaddingBottom);
 
-    max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
+    display: inline-flex;
+    flex-direction: column;
+
+    // If not a flex child, set height
+    height: 100%;
 
     // Because vertical variant has no scroll buttons, reset padding
     padding: 0;
 
     .pf-c-tabs__list {
       flex-direction: column;
+      max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
     }
 
-    // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent odd scrolling behavior
+    // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
     .pf-c-tabs__item:first-child {
       margin-top: var(--pf-c-tabs--Inset);
     }
