@@ -79,6 +79,11 @@
   }
 
   &.pf-m-footer {
+    --pf-c-pagination__nav--c-button--PaddingTop: var(--pf-c-pagination--m-footer__nav--c-button--PaddingTop);
+    --pf-c-pagination__nav--c-button--PaddingRight: var(--pf-c-pagination--m-footer__nav--c-button--PaddingRight);
+    --pf-c-pagination__nav--c-button--PaddingBottom: var(--pf-c-pagination--m-footer__nav--c-button--PaddingBottom);
+    --pf-c-pagination__nav--c-button--PaddingLeft: var(--pf-c-pagination--m-footer__nav--c-button--PaddingLeft);
+
     position: sticky;
     bottom: 0;
     justify-content: center;
@@ -95,13 +100,6 @@
       --pf-c-pagination--m-footer--BorderTopWidth: 0;
 
       position: relative;
-    }
-
-    .pf-c-button {
-      --pf-c-pagination__nav--c-button--PaddingTop: var(--pf-c-pagination--m-footer__nav--c-button--PaddingTop);
-      --pf-c-pagination__nav--c-button--PaddingRight: var(--pf-c-pagination--m-footer__nav--c-button--PaddingRight);
-      --pf-c-pagination__nav--c-button--PaddingBottom: var(--pf-c-pagination--m-footer__nav--c-button--PaddingBottom);
-      --pf-c-pagination__nav--c-button--PaddingLeft: var(--pf-c-pagination--m-footer__nav--c-button--PaddingLeft);
     }
 
     .pf-c-button:first-of-type,
