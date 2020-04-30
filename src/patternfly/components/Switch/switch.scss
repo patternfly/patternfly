@@ -5,9 +5,7 @@
   // Switch icon
   --pf-c-switch__toggle-icon--FontSize: calc(var(--pf-c-switch--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.
   --pf-c-switch__toggle-icon--Color: var(--pf-global--Color--light-100);
-  --pf-c-switch__toggle-icon--Top: 50%;
   --pf-c-switch__toggle-icon--Left: calc(var(--pf-c-switch--FontSize) * .4);
-  --pf-c-switch__toggle-icon--Transform: translateY(-50%);
   --pf-c-switch__toggle-icon--Offset: #{pf-size-prem(2px)}; // this value is created to handle sizing of the toggle and therefore the width of the toggle and its transform value.
 
   // Switch
@@ -27,7 +25,7 @@
   --pf-c-switch__input--focus__toggle--OutlineColor: var(--pf-global--primary-color--100);
 
   // Switch toggle
-  --pf-c-switch__toggle--Height: var(--pf-c-switch--Height);
+  --pf-c-switch__toggle--Height: calc(var(--pf-c-switch--FontSize) * var(--pf-c-switch--LineHeight));
   --pf-c-switch__toggle--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch--Height);
   --pf-c-switch__toggle--before--Width: calc(var(--pf-c-switch--FontSize) - var(--pf-c-switch__toggle-icon--Offset));
@@ -142,11 +140,14 @@
 
 .pf-c-switch__toggle-icon {
   position: absolute;
-  top: var(--pf-c-switch__toggle-icon--Top);
+  top: 0;
+  bottom: 0;
   left: var(--pf-c-switch__toggle-icon--Left);
+  display: flex;
+  align-items: center;
+  padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
   font-size: var(--pf-c-switch__toggle-icon--FontSize);
   color: var(--pf-c-switch__toggle-icon--Color);
-  transform: var(--pf-c-switch__toggle-icon--Transform);
 }
 
 .pf-c-switch__label {
