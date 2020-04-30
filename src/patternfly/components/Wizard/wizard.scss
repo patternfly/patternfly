@@ -414,7 +414,7 @@
     color: var(--pf-c-wizard__nav-link--before--Color);
     background-color: var(--pf-c-wizard__nav-link--before--BackgroundColor);
     border-radius: var(--pf-c-wizard__nav-link--before--BorderRadius);
-    transform: var(--pf-c-wizard__nav-link--before--TranslateX);
+    translate: var(--pf-c-wizard__nav-link--before--TranslateX) 0;
   }
 
   // Nav step number

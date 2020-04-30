@@ -17,13 +17,17 @@
   --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-popover__arrow--m-top--Translate: translate(-50%, 50%);
+  --pf-c-popover__arrow--m-top--TranslateX: translateX(-50%);
+  --pf-c-popover__arrow--m-top--TranslateY: translateY(50%);
   --pf-c-popover__arrow--m-top--Rotate: rotate(45deg);
-  --pf-c-popover__arrow--m-right--Translate: translate(-50%, -50%);
+  --pf-c-popover__arrow--m-right--TranslateX: translateX(-50%);
+  --pf-c-popover__arrow--m-right--TranslateY: translateY(-50%);
   --pf-c-popover__arrow--m-right--Rotate: rotate(45deg);
-  --pf-c-popover__arrow--m-bottom--Translate: translate(-50%, -50%);
+  --pf-c-popover__arrow--m-bottom--TranslateX: translateX(-50%);
+  --pf-c-popover__arrow--m-bottom--TranslateY: translateY(-50%);
   --pf-c-popover__arrow--m-bottom--Rotate: rotate(45deg);
-  --pf-c-popover__arrow--m-left--Translate: translate(50%, -50%);
+  --pf-c-popover__arrow--m-left--TranslateX: translateX(50%);
+  --pf-c-popover__arrow--m-left--TranslateY: translateY(-50%);
   --pf-c-popover__arrow--m-left--Rotate: rotate(45deg);
 
   // Close
@@ -48,7 +52,8 @@
     .pf-c-popover__arrow {
       bottom: 0;
       left: 50%;
-      transform: var(--pf-c-popover__arrow--m-top--Translate) var(--pf-c-popover__arrow--m-top--Rotate);
+      translate: var(--pf-c-popover__arrow--m-top--TranslateX) var(--pf-c-popover__arrow--m-top--TranslateY);
+      rotate: var(--pf-c-popover__arrow--m-top--Rotate);
     }
   }
 
@@ -56,7 +61,8 @@
     .pf-c-popover__arrow {
       top: 0;
       left: 50%;
-      transform: var(--pf-c-popover__arrow--m-bottom--Translate) var(--pf-c-popover__arrow--m-bottom--Rotate);
+      translate: var(--pf-c-popover__arrow--m-bottom--TranslateX) var(--pf-c-popover__arrow--m-bottom--TranslateY);
+      rotate: var(--pf-c-popover__arrow--m-bottom--Rotate);
     }
   }
 
@@ -64,7 +70,8 @@
     .pf-c-popover__arrow {
       top: 50%;
       right: 0;
-      transform: var(--pf-c-popover__arrow--m-left--Translate) var(--pf-c-popover__arrow--m-left--Rotate);
+      translate: var(--pf-c-popover__arrow--m-left--TranslateX) var(--pf-c-popover__arrow--m-left--TranslateY);
+      rotate: var(--pf-c-popover__arrow--m-left--Rotate);
     }
   }
 
@@ -72,7 +79,8 @@
     .pf-c-popover__arrow {
       top: 50%;
       left: 0;
-      transform: var(--pf-c-popover__arrow--m-right--Translate) var(--pf-c-popover__arrow--m-right--Rotate);
+      translate: var(--pf-c-popover__arrow--m-right--TranslateX) var(--pf-c-popover__arrow--m-right--TranslateY);
+      rotate: var(--pf-c-popover__arrow--m-right--Rotate);
     }
   }
 }

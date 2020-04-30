@@ -235,7 +235,7 @@
   .pf-c-options-menu.pf-m-top & {
     --pf-c-options-menu__menu--Top: var(--pf-c-options-menu--m-top__menu--Top);
 
-    transform: var(--pf-c-options-menu--m-top__menu--TranslateY);
+    translate: 0 var(--pf-c-options-menu--m-top__menu--TranslateY);
   }
 }
 

@@ -377,7 +377,7 @@
 
   .pf-c-select.pf-m-top & {
     top: 0;
-    transform: var(--pf-c-select__menu--m-top--TranslateY);
+    translate: 0 var(--pf-c-select__menu--m-top--TranslateY);
   }
 }
 
@@ -427,7 +427,7 @@
   right: var(--pf-c-select__menu-item-icon--Right);
   font-size: var(--pf-c-select__menu-item-icon--FontSize);
   color: var(--pf-c-select__menu-item-icon--Color);
-  transform: var(--pf-c-select__menu-item-icon--TranslateY);
+  translate: 0 var(--pf-c-select__menu-item-icon--TranslateY);
 }
 
 .pf-c-select__menu-item--match {

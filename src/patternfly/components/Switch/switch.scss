@@ -77,7 +77,7 @@
       background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
 
       &::before {
-        transform: var(--pf-c-switch__input--checked__toggle--before--TranslateX);
+        translate: var(--pf-c-switch__input--checked__toggle--before--TranslateX) 0;
       }
     }
 
@@ -152,7 +152,7 @@
   padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
   font-size: var(--pf-c-switch__toggle-icon--FontSize);
   color: var(--pf-c-switch__toggle-icon--Color);
-  transform: var(--pf-c-switch__toggle-icon--TranslateY);
+  translate: 0 var(--pf-c-switch__toggle-icon--TranslateY);
 }
 
 .pf-c-switch__label {

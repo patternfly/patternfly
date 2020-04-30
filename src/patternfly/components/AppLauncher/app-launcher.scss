@@ -143,7 +143,7 @@
   .pf-c-app-launcher.pf-m-top & {
     --pf-c-app-launcher__menu--Top: var(--pf-c-app-launcher--m-top__menu--Top);
 
-    transform: var(--pf-c-app-launcher--m-top__menu--TranslateY);
+    translate: 0 var(--pf-c-app-launcher--m-top__menu--TranslateY);
   }
 }
 
@@ -253,7 +253,7 @@
   font-size: var(--pf-c-app-launcher__menu-item-external-icon--FontSize);
   color: var(--pf-c-app-launcher__menu-item-external-icon--Color);
   opacity: 0;
-  transform: var(--pf-c-app-launcher__menu-item-external-icon--TranslateY); // move icon a bit to appear more visually centered
+  translate: 0 var(--pf-c-app-launcher__menu-item-external-icon--TranslateY); // move icon a bit to appear more visually centered
 }
 
 .pf-c-app-launcher__group {
