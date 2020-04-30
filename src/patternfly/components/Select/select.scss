@@ -18,10 +18,12 @@
   --pf-c-select__toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--active--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-select__toggle--expanded--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--m-expanded--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-select__toggle--m-plain--before--BorderColor: transparent;
 
@@ -193,8 +195,16 @@
     }
   }
 
-  &:active,
+  &:focus,
   &:focus-within {
+    &::before {
+      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--focus--before--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-select__toggle--focus--before--BorderBottomWidth);
+    }
+  }
+
+  &:active {
     &::before {
       --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--active--before--BorderBottomColor);
 
@@ -204,9 +214,9 @@
 
   .pf-m-expanded > & {
     &::before {
-      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--expanded--before--BorderBottomColor);
+      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--m-expanded--before--BorderBottomColor);
 
-      border-bottom-width: var(--pf-c-select__toggle--expanded--before--BorderBottomWidth);
+      border-bottom-width: var(--pf-c-select__toggle--m-expanded--before--BorderBottomWidth);
     }
   }
 
@@ -359,6 +369,7 @@
   color: var(--pf-c-select__menu-item--Color);
   text-align: left;
   white-space: nowrap;
+  background-color: transparent;
   border: none;
 
   &:hover,
