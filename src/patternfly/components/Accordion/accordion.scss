@@ -86,21 +86,21 @@
     }
   }
 
-  &:active {
-    background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
-
-    .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--active__toggle-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--active__toggle-text--Color);
-    }
-  }
-
   &:focus {
     background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
 
     .pf-c-accordion__toggle-text {
       font-weight: var(--pf-c-accordion__toggle--focus__toggle-text--FontWeight);
       color: var(--pf-c-accordion__toggle--focus__toggle-text--Color);
+    }
+  }
+
+  &:active {
+    background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
+
+    .pf-c-accordion__toggle-text {
+      font-weight: var(--pf-c-accordion__toggle--active__toggle-text--FontWeight);
+      color: var(--pf-c-accordion__toggle--active__toggle-text--Color);
     }
   }
 }
