@@ -93,7 +93,6 @@
   --pf-c-wizard__toggle-separator--Color: var(--pf-global--BorderColor--200);
 
   // Toggle icon
-  --pf-c-wizard__toggle-icon--MarginTop: 0;
   --pf-c-wizard__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-wizard__toggle--m-expanded__toggle-icon--Transform: rotate(180deg);
 
@@ -302,7 +301,6 @@
 }
 
 .pf-c-wizard__toggle-icon {
-  margin-top: var(--pf-c-wizard__toggle-icon--MarginTop);
   line-height: var(--pf-c-wizard__toggle-icon--LineHeight);
 }
 
