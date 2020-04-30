@@ -140,6 +140,7 @@ $pf-global--spacer--lg: pf-size-prem(24px) !default;    // Dark Blue
 $pf-global--spacer--xl: pf-size-prem(32px) !default;    // Light Blue
 $pf-global--spacer--2xl: pf-size-prem(48px) !default;   // Light Purple
 $pf-global--spacer--3xl: pf-size-prem(64px) !default;   // Dark Purple
+$pf-global--spacer--4xl: pf-size-prem(80px) !default;   // Dark magenta
 
 // Form spacer - only used in forms
 $pf-global--spacer--form-element: pf-size-prem(6px) !default;
@@ -302,5 +303,6 @@ $pf-global--spacer-map: (
   "lg": "var(--pf-global--spacer--lg)",
   "xl": "var(--pf-global--spacer--xl)",
   "2xl": "var(--pf-global--spacer--2xl)",
-  "3xl": "var(--pf-global--spacer--3xl)"
+  "3xl": "var(--pf-global--spacer--3xl)",
+  "4xl": "var(--pf-global--spacer--4xl)"
 );
