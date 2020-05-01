@@ -40,6 +40,7 @@ The top select variation should be used when you want the menu to display above 
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |
 | `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
 | `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
+| `.pf-m-active` | `.pf-c-select__toggle` | Forces display of the active state of the toggle. |
 
 ```hbs title=Single-expanded-and-selected
 {{#> select id="select-single-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true"}}

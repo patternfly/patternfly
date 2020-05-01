@@ -24,9 +24,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -53,9 +51,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar-no-sort}}
         {{> table-sortable-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -82,9 +78,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-expandable-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -111,9 +105,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-compact-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -140,9 +132,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar-no-sort}}
         {{> table-compound-expansion-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -169,9 +159,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-loading-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -198,101 +186,13 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-empty-state-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
-```hbs title=Compact-pagination-demo isFullscreen
-{{#> page page--id="page-layout-table-simple-compact-pagination"}}
-  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
-    Skip to content
-  {{/skip-to-content}}
-  {{#> page-header}}
-    {{> table-page-header}}
-  {{/page-header}}
-  {{#> page-sidebar}}
-    {{> table-page-nav}}
-  {{/page-sidebar}}
-  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
-      {{> table-main-section-nav}}
-    {{/page-main-nav}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      {{> table-main-section-content}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
-      {{#> card}}
-        {{> table-toolbar table-toolbar--IsCompactPagination="true"}}
-        {{> table-simple-table}}
-        {{> table-pagination}}
-      {{/card}}
-    {{/page-main-section}}
-  {{/page-main}}
-{{/page}}
-```
-
-```hbs title=Column-management-dropdown isFullscreen
-{{#> page page--id="page-layout-table-column-management-dropdown"}}
-  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
-    Skip to content
-  {{/skip-to-content}}
-  {{#> page-header}}
-    {{> table-page-header}}
-  {{/page-header}}
-  {{#> page-sidebar}}
-    {{> table-page-nav}}
-  {{/page-sidebar}}
-  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
-      {{> table-main-section-nav}}
-    {{/page-main-nav}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      {{> table-main-section-content}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
-      {{#> card}}
-        {{> table-toolbar table-toolbar--IsColumnManagementDropdown="true"}}
-        {{> table-simple-table}}
-        {{> table-pagination}}
-      {{/card}}
-    {{/page-main-section}}
-  {{/page-main}}
-{{/page}}
-```
-
-```hbs title=Column-management-action isFullscreen
-{{#> page page--id="page-layout-table-column-management-action"}}
-  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
-    Skip to content
-  {{/skip-to-content}}
-  {{#> page-header}}
-    {{> table-page-header}}
-  {{/page-header}}
-  {{#> page-sidebar}}
-    {{> table-page-nav}}
-  {{/page-sidebar}}
-  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
-      {{> table-main-section-nav}}
-    {{/page-main-nav}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      {{> table-main-section-content}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
-      {{#> card}}
-        {{> table-toolbar table-toolbar--IsColumnManagementAction="true"}}
-        {{> table-simple-table}}
-        {{> table-pagination}}
-      {{/card}}
-    {{/page-main-section}}
-  {{/page-main}}
-{{/page}}
-```
 
 ```hbs title=Column-management-modal isFullscreen
 {{#> page page--id="page-layout-table-simple-compact-pagination-modal-open"}}
@@ -314,9 +214,7 @@ section: demos
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
-        {{> table-toolbar}}
         {{> table-simple-table}}
-        {{> table-pagination}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
@@ -405,7 +303,7 @@ section: demos
         {{#> button button--modifier="pf-m-primary"}}
           Save
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--modifier="pf-m-link"}}
           Cancel
         {{/button}}
       {{/modal-box-footer}}

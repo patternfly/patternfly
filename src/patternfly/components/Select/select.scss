@@ -199,6 +199,7 @@
   }
 
   &:active,
+  &.pf-m-active,
   &:focus-within {
     &::before {
       --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--active--BorderBottomColor);
