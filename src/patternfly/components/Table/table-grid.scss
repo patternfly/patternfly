@@ -151,6 +151,10 @@
     white-space: var(--pf-c-table--cell--WhiteSpace);
   }
 
+  // [class*="pf-l"] {
+  //   width: 100%;
+  // }
+
   [class*="pf-l"],
   [class*="pf-l"] > * {
     max-width: 100%;

@@ -1650,16 +1650,26 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
         {{#> stack stack--modifier="pf-m-gutter"}}
-          {{#> table-text table-text--modifier="" table-text--type="div"}}
-              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with <code>.pf-c-table__text</code>.
-          {{/table-text}}
-          <p>
-            The <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; can additionally be nested, like in this example. The next <code>.pf-c-table__text</code> element has a very long url whose width needs be constrained.
-          </p>
-          {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-truncate"}}
-            <a href="#">http://truncatemodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
-          {{/table-text}}
-          <p>This <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; applies its own built in grid layout <b><code>.pf-m-stack</code></b>&nbsp;as well as a gutter <b><code>.pf-m-gutter</code></b>.
+          {{#> stack-item}}
+            {{#> table-text table-text--modifier="" table-text--type="div"}}
+              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with a div or use a PatternFly layout.
+            {{/table-text}}
+          {{/stack-item}}
+          {{#> stack-item}}
+            {{#> table-text table-text--modifier="" table-text--type="p"}}
+              The <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; can additionally be nested, like in this example. The next <code>.pf-c-table__text</code> element has a very long url whose width needs be constrained.
+            {{/table-text}}
+          {{/stack-item}}
+          {{#> stack-item}}
+            {{#> table-text table-text--type="a" table-text--attribute='href="#"' table-text--modifier="pf-m-truncate"}}
+              http://truncatemodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com
+            {{/table-text}}
+          {{/stack-item}}
+          {{#> stack-item}}
+            {{#> table-text table-text--modifier="" table-text--type="p"}}
+              This <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; applies its own built in grid layout <b><code>.pf-m-stack</code></b>&nbsp;as well as a gutter <b><code>.pf-m-gutter</code></b>.
+            {{/table-text}}
+          {{/stack-item}}
         {{/stack}}
       {{/table-td}}
     {{/table-tr}}
@@ -1672,13 +1682,13 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--data-label="Truncating text"}}
         {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-xl"}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-            {{#> table-text table-text--modifier="" table-text--type="div"}}
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            {{#> table-text table-text--modifier="" table-text--type="p"}}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
             {{/table-text}}
           {{/l-flex-item}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-            {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-break-word"}}
-              <a href="#">http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            {{#> table-text newcontext table-text--type="a" table-text--attribute='href="#"' table-text--modifier="pf-m-break-word"}}
+              http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com
             {{/table-text}}
           {{/l-flex-item}}
         {{/l-flex}}
@@ -1711,13 +1721,13 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
             {{/l-flex-item}}
           {{/l-flex}}
           {{#> l-flex-item}}
-            {{#> table-text newcontext table-text--type="div"}}
-              <p>This is paragraph that we want to wrap. It doesn't need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
+            {{#> table-text newcontext table-text--type="p"}}
+              This is paragraph that we want to wrap. It doesn't need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
             {{/table-text}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
-            {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-break-word"}}
-              <a href="#">http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            {{#> table-text newcontext table-text--type="a" table-text--attribute='href="#"' table-text--modifier="pf-m-break-word"}}
+              http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com
             {{/table-text}}
           {{/l-flex-item}}
         {{/l-flex}}
@@ -1744,8 +1754,13 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
             Item 4
           {{/grid-item}}
           {{#> grid-item}}
-            {{#> table-text newcontext table-text--type="div" table-text--modifier="pf-m-truncate"}}
-              <a href="#">http://truncatemodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com</a>
+            {{#> table-text table-text--modifier="" table-text--type="p"}}
+              This is paragraph that we want to wrap. It doesn't need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
+            {{/table-text}}
+          {{/grid-item}}
+          {{#> grid-item}}
+            {{#> table-text newcontext table-text--type="a" table-text--attribute='href="#"' table-text--modifier="pf-m-truncate"}}
+              http://breakwordmodifierappliedtoaverylongurlthatwillforcethetabletobreakluckilywehavethepfctabletextelement.com
             {{/table-text}}
           {{/grid-item}}
         {{/grid}}
@@ -1760,8 +1775,6 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__text` | `th > *`, `td > *` | Initiates a table text element. |
-| `.pf-m-stack` | `.pf-c-table__text` | Modifies a table text element to stacked, grid layout. |
-| `.pf-m-gutter` | `.pf-c-table__text` | Modifies a table text element to have a row gutter. |
 | `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to truncate. |
 | `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to not wrap. |
 | `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to wrap. |
