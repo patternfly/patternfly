@@ -602,7 +602,9 @@
   }
 
   &.pf-m-expanded {
-    border-bottom: var(--pf-c-table--BackgroundColor) solid var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
+    .pf-c-table__button::before {
+      border-bottom: var(--pf-c-table--BackgroundColor) solid var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
+    }
 
     &:first-child {
       --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
