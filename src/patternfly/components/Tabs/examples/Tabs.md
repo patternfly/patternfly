@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-c-tabs
 ---
 
-import './Tabs.css'
-
 ## Examples
 
 ```hbs title=Default
