@@ -174,8 +174,8 @@ section: demos
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-        {{#> nav-list nav-list--type="tertiary"}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
+        {{#> nav-list nav-list--type="horizontal"}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Tertiary nav item 1
