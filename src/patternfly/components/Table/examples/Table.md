@@ -1702,7 +1702,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
         {{#> l-flex l-flex--modifier="pf-m-column"}}
-          {{#> l-flex newconxt}}
+          {{#> l-flex newcontext}}
             {{#> l-flex-item}}
               <i class="fas fa-code-branch" aria-hidden="true"></i>
               &nbsp;5
