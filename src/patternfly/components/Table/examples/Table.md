@@ -625,7 +625,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody}}
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10

@@ -151,10 +151,6 @@
     white-space: var(--pf-c-table--cell--WhiteSpace);
   }
 
-  // [class*="pf-l"] {
-  //   width: 100%;
-  // }
-
   [class*="pf-l"],
   [class*="pf-l"] > * {
     max-width: 100%;
@@ -328,6 +324,10 @@
 
     &.pf-m-expanded {
       --pf-c-table--tbody--after--BorderLeftWidth: var(--pf-c-table--tbody--after--BorderWidth);
+
+      & tbody {
+        --pf-c-table--tbody--after--BorderLeftWidth: 0;
+      }
     }
 
     > tr > :first-child:not(.pf-c-table__check)::before {
