@@ -19,6 +19,7 @@
 
   // Chip group close
   --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-chip-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
 
   // Chip
   --pf-c-chip-group--c-chip--MarginRight: var(--pf-global--spacer--xs);
@@ -66,4 +67,5 @@
 
 .pf-c-chip-group__close {
   margin-top: var(--pf-c-chip-group__close--MarginTop);
+  margin-bottom: var(--pf-c-chip-group__close--MarginBottom);
 }
