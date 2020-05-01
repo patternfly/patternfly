@@ -204,7 +204,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &.pf-m-active {
     &::before {
       --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--active--before--BorderBottomColor);
 

@@ -179,6 +179,12 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
     --pf-c-tabs__link--PaddingBottom: var(--pf-c-tabs--m-vertical__link--PaddingBottom);
 
+    display: inline-flex;
+    flex-direction: column;
+
+    // If not a flex child, set height
+    height: 100%;
+
     // Because vertical variant has no scroll buttons, reset padding
     padding: 0;
 
@@ -187,7 +193,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
     }
 
-    // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent odd scrolling behavior
+    // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
     .pf-c-tabs__item:first-child {
       margin-top: var(--pf-c-tabs--Inset);
     }
@@ -229,6 +235,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__item--m-current__link--Background);
       --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--BorderColor);
       --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--BorderWidth);
+    }
+
+    // Add border right color and weight
+    .pf-c-tabs__item:first-child.pf-m-current {
+      --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--BorderWidth);
     }
 
     // Offset vertical border to overlap horizontal border

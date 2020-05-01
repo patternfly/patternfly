@@ -11,6 +11,7 @@
   // Header
   --pf-c-modal-box__title--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-modal-box__title--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-c-modal-box__title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-modal-box__title--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-modal-box__title--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-modal-box__title--PaddingLeft: var(--pf-global--spacer--lg);
@@ -89,8 +90,8 @@
   padding-top: var(--pf-c-modal-box__title--PaddingTop);
   padding-right: var(--pf-c-modal-box__title--PaddingRight);
   padding-left: var(--pf-c-modal-box__title--PaddingLeft);
-  font-family: var(--pf-global--FontFamily--heading--sans-serif);
   font-size: var(--pf-c-modal-box__title--FontSize);
+  font-weight: var(--pf-c-modal-box__title--FontWeight);
   line-height: var(--pf-c-modal-box__title--LineHeight);
 
   &:last-child {

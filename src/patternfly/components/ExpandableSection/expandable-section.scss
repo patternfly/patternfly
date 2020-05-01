@@ -4,7 +4,6 @@
   --pf-c-expandable-section__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-expandable-section__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-expandable-section__toggle--PaddingLeft: 0;
-  --pf-c-expandable-section__toggle--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-expandable-section__toggle--Color: var(--pf-global--link--Color);
   --pf-c-expandable-section__toggle--hover--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable-section__toggle--active--Color: var(--pf-global--link--Color--hover);
@@ -33,7 +32,6 @@
   .pf-c-expandable-section__toggle {
     display: flex;
     padding: var(--pf-c-expandable-section__toggle--PaddingTop) var(--pf-c-expandable-section__toggle--PaddingRight) var(--pf-c-expandable-section__toggle--PaddingBottom) var(--pf-c-expandable-section__toggle--PaddingLeft);
-    font-weight: var(--pf-c-expandable-section__toggle--FontWeight);
     color: var(--pf-c-expandable-section__toggle--Color);
     background: transparent;
     border: none;
@@ -42,7 +40,8 @@
       --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--hover--Color);
     }
 
-    &:active {
+    &:active,
+    &.pf-m-active {
       --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--active--Color);
     }
 
@@ -66,8 +65,8 @@
 }
 
 // RedHat Font overrides
-@include pf-m-redhat-font {
+@include pf-m-overpass-font {
   .pf-c-expandable-section__toggle {
-    --pf-c-expandable-section__toggle--FontWeight: var(--pf-global--FontWeight--normal);
+    font-weight: var(--pf-global--FontWeight--semi-bold);
   }
 }

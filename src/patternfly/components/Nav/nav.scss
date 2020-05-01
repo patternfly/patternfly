@@ -195,8 +195,6 @@
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
     --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__link--xl--PaddingLeft);
-    --pf-c-nav__list__link--PaddingRight: var(--pf-c-nav__list__link--xl--PaddingRight);
-    --pf-c-nav__list__link--PaddingLeft: var(--pf-c-nav__list__link--xl--PaddingLeft);
     --pf-c-nav__simple-list__link--PaddingRight: var(--pf-c-nav__simple-list__link--xl--PaddingRight);
     --pf-c-nav__simple-list__link--PaddingLeft: var(--pf-c-nav__simple-list__link--xl--PaddingLeft);
     --pf-c-nav__section-title--PaddingRight: var(--pf-c-nav__section-title--xl--PaddingRight);
@@ -280,6 +278,11 @@
       transform: translateX(0);
     }
   }
+}
+
+.pf-c-nav__list {
+  display: flex;
+  flex-direction: column;
 }
 
 // Borders

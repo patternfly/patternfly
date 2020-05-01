@@ -273,9 +273,9 @@
   {{/table-tbody}}
 {{/table}}
 
-{{#> data-toolbar data-toolbar--id=(concat master-detail-template--id '-footer-pagination')}}
-  {{#> data-toolbar-content}}
-    {{#> data-toolbar-content-section}}
+{{#> toolbar toolbar--id=(concat master-detail-template--id '-footer-pagination')}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
       {{#> pagination pagination--attribute='aria-label="Element pagination"' pagination--modifier="pf-m-footer"}}
         {{#> pagination-nav}}
           {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
@@ -296,7 +296,7 @@
           {{/button}}
         {{/pagination-nav}}
       {{/pagination}}
-    {{/data-toolbar-content-section}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
-  {{/data-toolbar-content}}
-{{/data-toolbar}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content}}{{/toolbar-expandable-content}}
+  {{/toolbar-content}}
+{{/toolbar}}

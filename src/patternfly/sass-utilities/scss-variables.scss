@@ -140,6 +140,7 @@ $pf-global--spacer--lg: pf-size-prem(24px) !default;    // Dark Blue
 $pf-global--spacer--xl: pf-size-prem(32px) !default;    // Light Blue
 $pf-global--spacer--2xl: pf-size-prem(48px) !default;   // Light Purple
 $pf-global--spacer--3xl: pf-size-prem(64px) !default;   // Dark Purple
+$pf-global--spacer--4xl: pf-size-prem(80px) !default;   // Dark magenta
 
 // Form spacer - only used in forms
 $pf-global--spacer--form-element: pf-size-prem(6px) !default;
@@ -147,9 +148,6 @@ $pf-global--spacer--form-element: pf-size-prem(6px) !default;
 // Gutter
 $pf-global--gutter: $pf-global--spacer--md !default;
 $pf-global--gutter--md: $pf-global--spacer--lg !default;
-
-// Ratio
-$pf-global--golden-ratio: 1.681 !default;
 
 // Z-Index
 $pf-global--ZIndex--xs: 100;
@@ -191,12 +189,10 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
-$pf-global--FontFamily--sans-serif: "overpass", overpass, "open sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$pf-global--FontFamily--heading--sans-serif: $pf-global--FontFamily--sans-serif;
-$pf-global--FontFamily--monospace: "overpass-mono", overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
-$pf-global--FontFamily--redhatfont--sans-serif: "RedHatText", "Overpass", overpass, helvetica, arial, sans-serif;
-$pf-global--FontFamily--redhatfont--heading--sans-serif: "RedHatDisplay", "Overpass", overpass, helvetica, arial, sans-serif;
-$pf-global--FontFamily--redhatfont--monospace: "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace;
+$pf-global--FontFamily--sans-serif: "RedHatText", "Overpass", overpass, helvetica, arial, sans-serif;
+$pf-global--FontFamily--monospace: "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace;
+$pf-global--FontFamily--overpass--sans-serif: "overpass", overpass, "open sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$pf-global--FontFamily--overpass--monospace: "overpass-mono", overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 // Font size
@@ -212,10 +208,10 @@ $pf-global--FontSize--xs: pf-font-prem(12px) !default;
 // Font weight
 $pf-global--FontWeight--light: 300 !default;
 $pf-global--FontWeight--normal: 400 !default;
-$pf-global--FontWeight--semi-bold: 500 !default;
-$pf-global--FontWeight--bold: 600 !default;
-$pf-global--FontWeight--redhatfont--bold: 700 !default;
-
+$pf-global--FontWeight--bold: 700 !default;
+$pf-global--FontWeight--semi-bold: $pf-global--FontWeight--bold !default; // Just for legacy support while supporting Overpass
+$pf-global--FontWeight--overpass--semi-bold: 500 !default;
+$pf-global--FontWeight--overpass--bold: 600 !default;
 
 // Line height
 $pf-global--LineHeight--sm: 1.3 !default;
@@ -228,7 +224,6 @@ $pf-global--link--Color--light:           $pf-global--active-color--300 !default
 $pf-global--link--Color--light--hover:    $pf-global--active-color--400 !default;
 $pf-global--link--Color--dark:            $pf-global--primary-color--100 !default;
 $pf-global--link--Color--dark--hover:     $pf-global--primary-color--200 !default;
-$pf-global--link--FontWeight:             $pf-global--FontWeight--semi-bold !default;
 $pf-global--link--TextDecoration:         none !default;
 $pf-global--link--TextDecoration--hover:  underline !default;
 
@@ -308,5 +303,6 @@ $pf-global--spacer-map: (
   "lg": "var(--pf-global--spacer--lg)",
   "xl": "var(--pf-global--spacer--xl)",
   "2xl": "var(--pf-global--spacer--2xl)",
-  "3xl": "var(--pf-global--spacer--3xl)"
+  "3xl": "var(--pf-global--spacer--3xl)",
+  "4xl": "var(--pf-global--spacer--4xl)"
 );
