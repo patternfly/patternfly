@@ -43,3 +43,4 @@ cssPrefix: pf-c-expandable-section
 | `.pf-c-expandable-section__toggle-icon` | `<span>` | Initiates the expandable toggle icon. **Required** |
 | `.pf-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
 | `.pf-m-expanded` | `.pf-c-expandable-section` | Modifies the component for the expanded state. |
+| `.pf-m-active` | `.pf-c-expandable-section__toggle` | Forces display of the active state of the toggle. |

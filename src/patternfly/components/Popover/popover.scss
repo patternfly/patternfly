@@ -52,8 +52,7 @@
     .pf-c-popover__arrow {
       bottom: 0;
       left: 50%;
-      translate: var(--pf-c-popover__arrow--m-top--TranslateX) var(--pf-c-popover__arrow--m-top--TranslateY);
-      rotate: var(--pf-c-popover__arrow--m-top--Rotate);
+      transform: var(--pf-c-popover__arrow--m-top--TranslateX) var(--pf-c-popover__arrow--m-top--TranslateY) var(--pf-c-popover__arrow--m-top--Rotate);
     }
   }
 
@@ -61,8 +60,7 @@
     .pf-c-popover__arrow {
       top: 0;
       left: 50%;
-      translate: var(--pf-c-popover__arrow--m-bottom--TranslateX) var(--pf-c-popover__arrow--m-bottom--TranslateY);
-      rotate: var(--pf-c-popover__arrow--m-bottom--Rotate);
+      transform: var(--pf-c-popover__arrow--m-bottom--TranslateX) var(--pf-c-popover__arrow--m-bottom--TranslateY) var(--pf-c-popover__arrow--m-bottom--Rotate);
     }
   }
 
@@ -70,8 +68,7 @@
     .pf-c-popover__arrow {
       top: 50%;
       right: 0;
-      translate: var(--pf-c-popover__arrow--m-left--TranslateX) var(--pf-c-popover__arrow--m-left--TranslateY);
-      rotate: var(--pf-c-popover__arrow--m-left--Rotate);
+      transform: var(--pf-c-popover__arrow--m-left--TranslateX) var(--pf-c-popover__arrow--m-left--TranslateY) var(--pf-c-popover__arrow--m-left--Rotate);
     }
   }
 
@@ -79,8 +76,7 @@
     .pf-c-popover__arrow {
       top: 50%;
       left: 0;
-      translate: var(--pf-c-popover__arrow--m-right--TranslateX) var(--pf-c-popover__arrow--m-right--TranslateY);
-      rotate: var(--pf-c-popover__arrow--m-right--Rotate);
+      transform: var(--pf-c-popover__arrow--m-right--TranslateX) var(--pf-c-popover__arrow--m-right--TranslateY) var(--pf-c-popover__arrow--m-right--Rotate);
     }
   }
 }

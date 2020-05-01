@@ -1,20 +1,20 @@
-{{#> data-toolbar data-toolbar--id=(concat master-detail-template--id "-toolbar")}}
-  {{#> data-toolbar-content}}
-    {{#> data-toolbar-content-section}}
-      {{#> data-toolbar-item}}
-        {{#> select select--attribute="style='width: 150px'" id=(concat data-toolbar--id '-select-dropdown')}}
+{{#> toolbar toolbar--id=(concat master-detail-template--id "-toolbar")}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-dropdown')}}
           Dropdown
         {{/select}}
-      {{/data-toolbar-item}}
-      {{#> data-toolbar-item data-toolbar-item--modifier=(concat 'pf-m-pagination ' data-toolbar-item-pagination--modifier)}}
+      {{/toolbar-item}}
+      {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination}}
           {{#> pagination-total-items}}
             <b>1 - 10</b> of <b>37</b>
           {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat data-toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
+          {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu') options-menu--IsText="true"}}
         {{/pagination}}
-      {{/data-toolbar-item}}
-    {{/data-toolbar-content-section}}
-    {{#> data-toolbar-expandable-content}}{{/data-toolbar-expandable-content}}
-  {{/data-toolbar-content}}
-{{/data-toolbar}}
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content}}{{/toolbar-expandable-content}}
+  {{/toolbar-content}}
+{{/toolbar}}

@@ -145,7 +145,7 @@
   grid-area: action;
   margin-top: var(--pf-c-alert__action--MarginTop);
   margin-right: var(--pf-c-alert__action--MarginRight);
-  translate: 0 var(--pf-c-alert__action--TranslateY);
+  transform: var(--pf-c-alert__action--TranslateY);
 }
 
 .pf-c-alert__action-group {

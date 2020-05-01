@@ -64,9 +64,6 @@ section: demos
         <p>This is a demo that showcases Patternfly Cards. </p>
       {{/content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
-      {{> card-view-demo-toolbar}}
-    {{/page-main-section}}
     {{#> page-main-section}}
       {{> card-view-demo-template-gallery}}
     {{/page-main-section}}

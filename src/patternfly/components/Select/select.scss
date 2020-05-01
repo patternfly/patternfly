@@ -199,6 +199,7 @@
   }
 
   &:active,
+  &.pf-m-active,
   &:focus-within {
     &::before {
       --pf-c-select__toggle--BorderBottomColor: var(--pf-c-select__toggle--active--BorderBottomColor);
@@ -377,7 +378,7 @@
 
   .pf-c-select.pf-m-top & {
     top: 0;
-    translate: 0 var(--pf-c-select__menu--m-top--TranslateY);
+    transform: var(--pf-c-select__menu--m-top--TranslateY);
   }
 }
 
@@ -427,7 +428,7 @@
   right: var(--pf-c-select__menu-item-icon--Right);
   font-size: var(--pf-c-select__menu-item-icon--FontSize);
   color: var(--pf-c-select__menu-item-icon--Color);
-  translate: 0 var(--pf-c-select__menu-item-icon--TranslateY);
+  transform: var(--pf-c-select__menu-item-icon--TranslateY);
 }
 
 .pf-c-select__menu-item--match {
