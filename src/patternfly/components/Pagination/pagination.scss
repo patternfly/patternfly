@@ -12,16 +12,16 @@
   --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-pagination__nav-control--c-button--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-pagination--m-footer__nav-control--c-button--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer__nav-control--c-button--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer__nav-control--m-prev--c-button--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer__nav-control--m-prev--c-button--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-pagination--m-footer__nav-control--m-next--c-button--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-pagination--m-footer__nav-control--m-next--c-button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer__nav-control--c-button--md--PaddingTop: var(--pf-global--spacer--form-element);
-  --pf-c-pagination--m-footer__nav-control--c-button--md--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-pagination--m-footer__nav-control--c-button--md--PaddingBottom: var(--pf-global--spacer--form-element);
-  --pf-c-pagination--m-footer__nav-control--c-button--md--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom__nav-control--m-prev--c-button--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom__nav-control--m-prev--c-button--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-pagination--m-bottom__nav-control--m-next--c-button--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-pagination--m-bottom__nav-control--m-next--c-button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-pagination--m-compact__nav-control--nav-control--MarginLeft: var(--pf-global--spacer--md);
 
   // Nav page select
@@ -33,23 +33,23 @@
   --pf-c-pagination__nav-page-select--c-form-control--width-chars: 2;
   --pf-c-pagination__nav-page-select--c-form-control--Width: calc(var(--pf-c-pagination__nav-page-select--c-form-control--width-base) + (var(--pf-c-pagination__nav-page-select--c-form-control--width-chars) * 1ch));
 
-  // Footer
-  --pf-c-pagination--m-footer--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-pagination--m-footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
-  --pf-c-pagination--m-footer--md--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer--md--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer--md--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer--md--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-pagination--m-footer--xl--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-pagination--m-footer--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  // Bottom
+  --pf-c-pagination--m-bottom--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-pagination--m-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
+  --pf-c-pagination--m-bottom--md--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom--md--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom--md--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom--md--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom--xl--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-pagination--m-bottom--xl--PaddingLeft: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-pagination--m-footer--BoxShadow: none;
+    --pf-c-pagination--m-bottom--BoxShadow: none;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-pagination--m-footer--md--PaddingRight: var(--pf-c-pagination--m-footer--xl--PaddingRight);
-    --pf-c-pagination--m-footer--md--PaddingLeft: var(--pf-c-pagination--m-footer--xl--PaddingLeft);
+    --pf-c-pagination--m-bottom--md--PaddingRight: var(--pf-c-pagination--m-bottom--xl--PaddingRight);
+    --pf-c-pagination--m-bottom--md--PaddingLeft: var(--pf-c-pagination--m-bottom--xl--PaddingLeft);
   }
 
   display: flex;
@@ -62,7 +62,7 @@
   }
 
   // Top pagination
-  &:not(.pf-m-footer) {
+  &:not(.pf-m-bottom) {
     .pf-c-options-menu,
     .pf-c-pagination__nav {
       display: none;
@@ -75,23 +75,23 @@
     }
   }
 
-  &.pf-m-footer {
-    --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-footer__nav-control--c-button--PaddingTop);
-    --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-footer__nav-control--c-button--PaddingBottom);
+  &.pf-m-bottom {
+    --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
+    --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
 
     position: sticky;
     bottom: 0;
     justify-content: center;
-    padding-top: var(--pf-c-pagination--m-footer--PaddingTop);
-    padding-right: var(--pf-c-pagination--m-footer--PaddingRight);
-    padding-bottom: var(--pf-c-pagination--m-footer--PaddingBottom);
-    padding-left: var(--pf-c-pagination--m-footer--PaddingLeft);
-    background-color: var(--pf-c-pagination--m-footer--BackgroundColor);
-    box-shadow: var(--pf-c-pagination--m-footer--BoxShadow);
+    padding-top: var(--pf-c-pagination--m-bottom--PaddingTop);
+    padding-right: var(--pf-c-pagination--m-bottom--PaddingRight);
+    padding-bottom: var(--pf-c-pagination--m-bottom--PaddingBottom);
+    padding-left: var(--pf-c-pagination--m-bottom--PaddingLeft);
+    background-color: var(--pf-c-pagination--m-bottom--BackgroundColor);
+    box-shadow: var(--pf-c-pagination--m-bottom--BoxShadow);
 
     &.pf-m-static {
-      --pf-c-pagination--m-footer--MarginTop: 0;
-      --pf-c-pagination--m-footer--BorderTopWidth: 0;
+      --pf-c-pagination--m-bottom--MarginTop: 0;
+      --pf-c-pagination--m-bottom--BorderTopWidth: 0;
 
       position: relative;
       box-shadow: none;
@@ -105,13 +105,13 @@
     }
 
     .pf-c-pagination__nav-control.pf-m-prev {
-      --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-footer__nav-control--m-prev--c-button--PaddingLeft);
-      --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-footer__nav-control--m-prev--c-button--PaddingRight);
+      --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-bottom__nav-control--m-prev--c-button--PaddingLeft);
+      --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-bottom__nav-control--m-prev--c-button--PaddingRight);
     }
 
     .pf-c-pagination__nav-control.pf-m-next {
-      --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-footer__nav-control--m-next--c-button--PaddingLeft);
-      --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-footer__nav-control--m-next--c-button--PaddingRight);
+      --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-bottom__nav-control--m-next--c-button--PaddingLeft);
+      --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-bottom__nav-control--m-next--c-button--PaddingRight);
     }
 
     .pf-c-options-menu {
@@ -125,18 +125,18 @@
     }
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
-      --pf-c-pagination--m-footer--BorderTopWidth: 0;
-      --pf-c-pagination--m-footer--MarginTop: 0;
+      --pf-c-pagination--m-bottom--BorderTopWidth: 0;
+      --pf-c-pagination--m-bottom--MarginTop: 0;
 
       position: relative;
       justify-content: flex-end;
-      padding: var(--pf-c-pagination--m-footer--md--PaddingTop) var(--pf-c-pagination--m-footer--md--PaddingRight) var(--pf-c-pagination--m-footer--md--PaddingBottom) var(--pf-c-pagination--m-footer--md--PaddingLeft);
+      padding: var(--pf-c-pagination--m-bottom--md--PaddingTop) var(--pf-c-pagination--m-bottom--md--PaddingRight) var(--pf-c-pagination--m-bottom--md--PaddingBottom) var(--pf-c-pagination--m-bottom--md--PaddingLeft);
 
       .pf-c-pagination__nav-control .pf-c-button {
-        --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-footer__nav-control--c-button--md--PaddingTop);
-        --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-footer__nav-control--c-button--md--PaddingRight);
-        --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-footer__nav-control--c-button--md--PaddingBottom);
-        --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-footer__nav-control--c-button--md--PaddingLeft);
+        --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop);
+        --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingRight);
+        --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingBottom);
+        --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingLeft);
       }
 
       .pf-c-pagination__nav-control.pf-m-first,

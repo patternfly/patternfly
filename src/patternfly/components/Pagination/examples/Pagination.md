@@ -22,7 +22,7 @@ cssPrefix: pf-c-pagination
 ```
 
 ```hbs title=Bottom isFullscreen
-{{#> pagination pagination--modifier="pf-m-footer"}}
+{{#> pagination pagination--modifier="pf-m-bottom"}}
   {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
@@ -65,14 +65,14 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-pagination` | `<div>` |  Initiates pagination. |
-| `.pf-c-pagination__current` | `<div>` |  Initiates element to display currently displayed items for use in responsive view. Only needed for default pagination, not `.pf-m-footer`. |
+| `.pf-c-pagination__current` | `<div>` |  Initiates element to display currently displayed items for use in responsive view. Only needed for default pagination, not `.pf-m-bottom`. |
 | `.pf-c-pagination__total-items` | `<div>` | Initiates element to replace the options menu on mobile. |
 | `.pf-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-c-pagination__nav-control` | `<div>` |  Initiates pagination nav control. |
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
-| `.pf-m-footer` | `.pf-c-pagination` | Modifies for bottom/footer pagination component styles. |
+| `.pf-m-bottom` | `.pf-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
-| `.pf-m-no-sticky` | `.pf-c-pagination.pf-m-footer` | Modifies bottom/footer pagination to not be positioned sticky on mobile. |
+| `.pf-m-no-sticky` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on mobile. |
 | `.pf-m-first` | `.pf-c-pagination__nav-control` | Indicates the control is for the first page button. |
 | `.pf-m-prev` | `.pf-c-pagination__nav-control` | Indicates the control is for the previous page button. |
 | `.pf-m-next` | `.pf-c-pagination__nav-control` | Indicates the control is for the next page button. |
