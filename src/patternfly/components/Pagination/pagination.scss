@@ -7,9 +7,7 @@
   --pf-c-pagination--c-options-menu__toggle--FontSize: var(--pf-global--FontSize--sm);
 
   // Nav
-  --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-pagination__nav-control--c-button--FontSize: var(--pf-global--FontSize--md);
   --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-global--spacer--md);
@@ -76,8 +74,10 @@
   }
 
   &.pf-m-bottom {
-    --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
-    --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
+    .pf-c-pagination__nav-control .pf-c-button {
+      padding-top: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
+      padding-bottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
+    }
 
     position: sticky;
     bottom: 0;
@@ -133,9 +133,9 @@
       padding: var(--pf-c-pagination--m-bottom--md--PaddingTop) var(--pf-c-pagination--m-bottom--md--PaddingRight) var(--pf-c-pagination--m-bottom--md--PaddingBottom) var(--pf-c-pagination--m-bottom--md--PaddingLeft);
 
       .pf-c-pagination__nav-control .pf-c-button {
-        --pf-c-pagination__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop);
+        --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop);
         --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingRight);
-        --pf-c-pagination__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingBottom);
+        --pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingBottom);
         --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingLeft);
       }
 
@@ -174,9 +174,7 @@
 
 .pf-c-pagination__nav-control {
   .pf-c-button {
-    padding-top: var(--pf-c-pagination__nav-control--c-button--PaddingTop);
     padding-right: var(--pf-c-pagination__nav-control--c-button--PaddingRight);
-    padding-bottom: var(--pf-c-pagination__nav-control--c-button--PaddingBottom);
     padding-left: var(--pf-c-pagination__nav-control--c-button--PaddingLeft);
     font-size: var(--pf-c-pagination__nav-control--c-button--FontSize);
   }
