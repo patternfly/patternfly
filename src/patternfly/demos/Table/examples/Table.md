@@ -198,7 +198,7 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Non-sticky-bottom-pagination isFullscreen
+```hbs title=Static-bottom-pagination isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -219,7 +219,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
       {{#> card}}
         {{> table-simple-table}}
-        {{> table-pagination-footer-no-sticky}}
+        {{> table-pagination-footer-static}}
       {{/card}}
     {{/page-main-section}}
   {{/page-main}}
