@@ -315,7 +315,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal
-{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-horizontal"}}
+{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -337,7 +337,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal-overflow
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-horizontal"}}
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -369,7 +369,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Tertiary
-{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
+{{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -391,7 +391,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
+{{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -520,7 +520,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal-in-light-mode
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-light pf-m-horizontal"}}
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}

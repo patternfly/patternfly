@@ -24,7 +24,7 @@ section: demos
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"') nav--modifier="pf-m-horizontal"}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
@@ -174,7 +174,7 @@ section: demos
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
+      {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
