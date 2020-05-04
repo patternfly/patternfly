@@ -7,7 +7,7 @@ cssPrefix: pf-c-chip-group
 ## Examples
 ```hbs title=Simple-inline-chip-group-overflow
 {{#> chip-group chip-group--id="simple-inline-chip-group-overflow"}}
-  {{#> chip-group-list}}
+  {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
@@ -51,7 +51,7 @@ cssPrefix: pf-c-chip-group
 
 ```hbs title=Simple-inline-chip-group-expanded
 {{#> chip-group chip-group--id="simple-inline-chip-group-expanded"}}
-  {{#> chip-group-list}}
+  {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select"')}}
@@ -118,7 +118,7 @@ cssPrefix: pf-c-chip-group
   {{#> chip-group-label}}
     Category one
   {{/chip-group-label}}
-  {{#> chip-group-list}}
+  {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{chip-group--id}}-label"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
@@ -155,10 +155,10 @@ cssPrefix: pf-c-chip-group
 
 ```hbs title=Chip-group-with-categories-overflow
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow"}}
-  {{#> chip-group-label}}
+  {{#> chip-group-label chip-group-label--attribute='id="{{chip-group--id}}-label"'}}
     Category one
   {{/chip-group-label}}
-  {{#> chip-group-list}}
+  {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{chip-group--id}}-label"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
@@ -202,10 +202,10 @@ cssPrefix: pf-c-chip-group
 
 ```hbs title=Chip-group-with-categories-overflow-expanded
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded"}}
-  {{#> chip-group-label}}
+  {{#> chip-group-label chip-group-label--attribute='id="{{chip-group--id}}-label"'}}
     Category one
   {{/chip-group-label}}
-  {{#> chip-group-list}}
+  {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{chip-group--id}}-label"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
@@ -269,10 +269,10 @@ cssPrefix: pf-c-chip-group
 
 ```hbs title=Chip-group-with-categories-removable
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
-  {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
+  {{#> chip-group-label chip-group-label--attribute='id="{{chip-group--id}}-label"'}}
     Category one
   {{/chip-group-label}}
-  {{#> chip-group-list}}
+  {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{chip-group--id}}-label"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
         {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
