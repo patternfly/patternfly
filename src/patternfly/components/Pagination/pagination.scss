@@ -5,9 +5,6 @@
 
   // Dropdown
   --pf-c-pagination--c-options-menu__toggle--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-pagination__menu-text--PaddingLeft: var(--pf-global--spacer--xs);
-  --pf-c-pagination__menu-text--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-pagination__menu-text--Color: var(--pf-global--Color--200);
 
   // Nav
   --pf-c-pagination__nav--c-button--PaddingLeft: var(--pf-global--spacer--sm);
@@ -114,11 +111,4 @@
     display: none;
     visibility: hidden;
   }
-}
-
-// Dropdown elements
-.pf-c-pagination__menu-text {
-  padding-left: var(--pf-c-pagination__menu-text--PaddingLeft);
-  font-size: var(--pf-c-pagination__menu-text--FontSize);
-  color: var(--pf-c-pagination__menu-text--Color);
 }
