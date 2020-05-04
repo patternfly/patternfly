@@ -1,9 +1,9 @@
 {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
   {{#> chip-group chip-group--modifier="pf-m-category"}}
-    {{#> chip-group-label chip-group-label--attribute='id="{{chip-group--id}}-chip-group-label"'}}
+    {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-chip-group-label"')}}
       {{chip-group--label}}
     {{/chip-group-label}}
-    {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{chip-group--id}}-chip-group-label"'}}
+    {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-chip-group-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}

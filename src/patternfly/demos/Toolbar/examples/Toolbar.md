@@ -223,10 +223,10 @@ import './Toolbar.css'
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
     {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
       {{#> chip-group chip-group--modifier="pf-m-category"}}
-        {{#> chip-group-label chip-group-label--attribute='id="{{toolbar--id}}-chip-group-label"'}}
+        {{#> chip-group-label chip-group-label--attribute=(concat 'id="' toolbar--id '-chip-group-label"')}}
           Status
         {{/chip-group-label}}
-        {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{toolbar--id}}-chip-group-label"'}}
+        {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' toolbar--id '-chip-group-label"')}}
           {{#> chip-group-list-item}}
             {{#> chip}}
               {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
@@ -304,10 +304,10 @@ import './Toolbar.css'
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
         {{#> chip-group chip-group--modifier="pf-m-category"}}
-          {{#> chip-group-label chip-group-label--attribute='id="{{toolbar--id}}-chip-group-label"'}}
+          {{#> chip-group-label chip-group-label--attribute=(concat 'id="' toolbar--id '-chip-group-label"')}}
             Status
           {{/chip-group-label}}
-          {{#> chip-group-list chip-group-list--attribute='aria-labelledby="{{toolbar--id}}-chip-group-label"'}}
+          {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby=" 'toolbar--id '-chip-group-label"')}}
             {{#> chip-group-list-item}}
               {{#> chip}}
                 {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
