@@ -12,6 +12,7 @@
   --pf-c-pagination__nav-control--c-button--FontSize: var(--pf-global--FontSize--md);
   --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-pagination--m-bottom__nav-control--m-prev--c-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination--m-bottom__nav-control--m-prev--c-button--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-bottom__nav-control--m-next--c-button--PaddingLeft: var(--pf-global--spacer--lg);
@@ -42,6 +43,7 @@
   --pf-c-pagination--m-bottom--xl--PaddingLeft: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --pf-c-pagination--m-bottom--BoxShadow: none;
   }
 
@@ -77,6 +79,7 @@
     .pf-c-pagination__nav-control .pf-c-button {
       padding-top: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
       padding-bottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
+      outline-offset: var(--pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset);
     }
 
     position: sticky;
