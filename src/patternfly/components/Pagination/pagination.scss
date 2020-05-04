@@ -1,6 +1,8 @@
 .pf-c-pagination {
   // Base
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-pagination--m-bottom--child--MarginRight: 0;
+  --pf-c-pagination--m-bottom--child--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-compact--child--MarginRight: var(--pf-global--spacer--sm);
 
   // Dropdown
@@ -43,6 +45,7 @@
   --pf-c-pagination--m-bottom--xl--PaddingLeft: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-pagination--m-bottom--child--MarginRight: var(--pf-c-pagination--m-bottom--child--md--MarginRight);
     --pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --pf-c-pagination--m-bottom--BoxShadow: none;
   }
@@ -76,10 +79,14 @@
   }
 
   &.pf-m-bottom {
-    .pf-c-pagination__nav-control .pf-c-button {
-      padding-top: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
-      padding-bottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
-      outline-offset: var(--pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset);
+    --pf-c-pagination--child--MarginRight: var(--pf-c-pagination--m-bottom--child--MarginRight);
+
+    .pf-c-pagination__nav-control {
+      .pf-c-button {
+        padding-top: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
+        padding-bottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
+        outline-offset: var(--pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset);
+      }
     }
 
     position: sticky;
