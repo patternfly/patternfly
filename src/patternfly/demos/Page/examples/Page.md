@@ -25,7 +25,7 @@ section: demos
     {{/page-header-brand}}
     {{#> page-header-nav}}
       {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-        {{#> nav-list nav-list--type="horizontal"}}
+        {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Horizontal nav item 1
@@ -97,7 +97,7 @@ section: demos
             System panel
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link1"'}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Overview
@@ -136,7 +136,7 @@ section: demos
             Policy
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link2"'}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
@@ -155,7 +155,7 @@ section: demos
             Authentication
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link3"'}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
@@ -175,7 +175,7 @@ section: demos
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
       {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
-        {{#> nav-list nav-list--type="horizontal"}}
+        {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Tertiary nav item 1

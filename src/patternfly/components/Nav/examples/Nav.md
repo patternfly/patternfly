@@ -1,5 +1,5 @@
 ---
-title: Navigation
+title: Nav
 section: components
 cssPrefix: pf-c-nav
 ---
@@ -35,13 +35,13 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Grouped
+```hbs title=Grouped-default-lists
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
       Section title 1
     {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple"}}
+    {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -63,7 +63,56 @@ import './Nav.css'
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
       Section title 2
     {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple"}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
+```
+
+```hbs title=Grouped-simple-lists
+{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+      Section title 1
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--modifier="pf-m-simple"}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 2
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+      Section title 2
+    {{/nav-section-title}}
+    {{#> nav-list nav-list--modifier="pf-m-simple"}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -92,7 +141,7 @@ import './Nav.css'
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Current link
@@ -117,7 +166,7 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -136,7 +185,7 @@ import './Nav.css'
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -165,7 +214,7 @@ import './Nav.css'
         {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title1"'}}
           Current and expanded example sub-navigation
         {{/nav-subnav-title}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Current link
@@ -192,7 +241,7 @@ import './Nav.css'
         {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title2"'}}
           Expanded, but not current example sub-navigation
         {{/nav-subnav-title}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -223,7 +272,7 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link2"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -242,7 +291,7 @@ import './Nav.css'
         Link 3 (current, but not expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -267,7 +316,7 @@ import './Nav.css'
 
 ```hbs title=Horizontal
 {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Item 1
@@ -289,7 +338,7 @@ import './Nav.css'
 
 ```hbs title=Horizontal-overflow
 {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
         Horizontal nav item 1
@@ -321,7 +370,7 @@ import './Nav.css'
 
 ```hbs title=Tertiary
 {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Item 1
@@ -343,7 +392,7 @@ import './Nav.css'
 
 ```hbs title=Tertiary-overflow
 {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"' nav--modifier="pf-m-tertiary"}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
         Tertiary nav item 1
@@ -408,7 +457,7 @@ import './Nav.css'
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Current link
@@ -433,7 +482,7 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -452,7 +501,7 @@ import './Nav.css'
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -472,7 +521,7 @@ import './Nav.css'
 
 ```hbs title=Horizontal-in-light-mode
 {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
-  {{#> nav-list nav-list--type="horizontal"}}
+  {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
         Horizontal nav item 1
