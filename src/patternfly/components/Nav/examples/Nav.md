@@ -1,5 +1,5 @@
 ---
-title: Nav
+title: Navigation
 section: components
 cssPrefix: pf-c-nav
 ---
@@ -315,7 +315,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal
-{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
+{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-horizontal"}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -337,7 +337,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal-overflow
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-horizontal"}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -520,7 +520,7 @@ import './Nav.css'
 ```
 
 ```hbs title=Horizontal-in-light-mode
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-light pf-m-horizontal"}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -557,8 +557,6 @@ import './Nav.css'
 The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
-* `.pf-c-nav__simple-list` - nav list simple is used within `.pf-c-nav__subnav` in expandable navigation.
-* `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -577,7 +575,6 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element. |
 | `.pf-c-nav__subnav` | `<section>` | Initiates a subnav section. |
 | `.pf-c-nav__list` | `<ul>` | Initiates default nav list. |
-| `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list. |
 | `.pf-c-nav__item` | `<li>` | Initiates default nav list item. |
 | `.pf-c-nav__scroll-button` | `<button>` | Intitiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-c-nav__link` | `<a>` | Initiates default nav list link. |
@@ -585,11 +582,10 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
+| `.pf-m-simple` | `.pf-c-nav__list` | Initiates simple nav list. |
 | `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal variation. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: for use with vertical nav, `.pf-m-light` is required on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state. |
-| `.pf-m-start` | `.pf-c-nav` | Modifiers the nav to show the overflow at the start. |
-| `.pf-m-end` | `.pf-c-nav` | Modifiers the nav to show the overflow at the end. |

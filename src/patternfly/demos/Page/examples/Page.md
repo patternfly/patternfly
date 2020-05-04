@@ -24,7 +24,7 @@ section: demos
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"') nav--modifier="pf-m-horizontal"}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}

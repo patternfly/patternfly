@@ -382,32 +382,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-right: var(--pf-c-page__main-nav--PaddingRight);
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
-
-  // Scroll buttons
-  .pf-c-nav__scroll-button {
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--Color);
-
-    &::before {
-      --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav__main-nav--c-nav__scroll-button--before--BorderColor);
-    }
-
-    &:hover {
-      --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--hover--Color);
-    }
-
-    &:focus {
-      --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--focus--Color);
-    }
-
-    &:active {
-      --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--active--Color);
-    }
-
-    &:disabled {
-      --pf-c-nav__scroll-button--Color: var(--pf-global--disabled-color--200);
-      --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--disabled-color--300);
-    }
-  }
 }
 
 .pf-c-page__main-breadcrumb {
