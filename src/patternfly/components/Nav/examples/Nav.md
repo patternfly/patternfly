@@ -504,7 +504,6 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
-| `.pf-m-simple` | `.pf-c-nav__list` | Initiates simple nav list. |
 | `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal variation. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: for use with vertical nav, `.pf-m-light` is required on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
