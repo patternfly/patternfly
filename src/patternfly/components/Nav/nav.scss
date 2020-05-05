@@ -555,13 +555,14 @@
   --pf-c-nav--c-divider--PaddingRight: var(--pf-c-nav__subnav--c-divider--PaddingRight);
   --pf-c-nav--c-divider--PaddingLeft: var(--pf-c-nav__subnav--c-divider--PaddingLeft);
 
-  max-height: 0;
+  max-height: var(--pf-c-nav__subnav--MaxHeight);
   padding-bottom: var(--pf-c-nav__subnav--PaddingBottom);
   padding-left: var(--pf-c-nav__subnav--PaddingLeft);
   transition: var(--pf-c-nav--Transition);
 
   .pf-c-nav__item.pf-m-expanded & {
-    max-height: 100%;
+    --pf-c-nav__subnav--MaxHeight: var(--pf-c-nav__item--m-expanded__subnav--MaxHeight);
+
     overflow-y: auto;
     opacity: 1;
   }
