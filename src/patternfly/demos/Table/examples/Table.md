@@ -199,7 +199,7 @@ section: demos
 ```
 
 ```hbs title=Static-bottom-pagination isFullscreen
-{{#> page page--id="page-layout-table-simple"}}
+{{#> page page--id="static-bottom-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
