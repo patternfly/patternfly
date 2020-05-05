@@ -126,7 +126,7 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
         --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--hover--BorderBottomColor);
       }
 
-      &:focus:not(.pf-m-success):not([aria-invalid="true"]) {
+      &:focus {
         --pf-c-form-control--focus--PaddingBottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
         --pf-c-form-control--focus--BorderBottomWidth: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
         --pf-c-form-control--focus--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
