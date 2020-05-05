@@ -87,8 +87,9 @@
 
     .pf-c-pagination__nav-control {
       .pf-c-button {
-        padding-top: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
-        padding-bottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
+        --pf-c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop);
+        --pf-c-button--PaddingBottom: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingBottom);
+
         outline-offset: var(--pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset);
       }
     }
