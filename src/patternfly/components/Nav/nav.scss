@@ -136,12 +136,10 @@
   --pf-c-nav__subnav__link--focus--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__subnav__link--active--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__subnav__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
-  --pf-c-nav__subnav--MaxHeight: 0;
   --pf-c-nav--subnav__simple-list__link--MarginTop: 0;
   --pf-c-nav--subnav__simple-list__link--MarginBottom: 0;
   --pf-c-nav__subnav__simple-list__link--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__subnav__simple-list__link--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__item--m-expanded__subnav--MaxHeight: 100%;
 
   // Nav section
   --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
@@ -513,14 +511,13 @@
   --pf-c-nav__simple-list__link--PaddingRight: var(--pf-c-nav__subnav__simple-list__link--PaddingRight);
   --pf-c-nav__simple-list__link--PaddingLeft: var(--pf-c-nav__subnav__simple-list__link--PaddingLeft);
 
-  max-height: var(--pf-c-nav__subnav--MaxHeight);
+  max-height: 0;
   padding-bottom: var(--pf-c-nav__subnav--PaddingBottom);
   padding-left: var(--pf-c-nav__subnav--PaddingLeft);
   transition: var(--pf-c-nav--Transition);
 
   .pf-c-nav__item.pf-m-expanded & {
-    --pf-c-nav__subnav--MaxHeight: var(--pf-c-nav__item--m-expanded__subnav--MaxHeight);
-
+    max-height: 100%;
     overflow-y: auto;
     opacity: 1;
   }
