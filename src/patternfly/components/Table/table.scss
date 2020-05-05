@@ -694,10 +694,10 @@
   }
 }
 
-// stylelint-disable selector-no-qualifying-type
-.pf-c-table tbody.pf-m-expanded,
-.pf-c-table__expandable-row.pf-m-expanded,
-.pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child {
+// stylelint-disable
+.pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child,
+.pf-c-table__expandable-row.pf-m-expanded > :first-child,
+.pf-c-table tbody.pf-m-expanded > tr > :not(.pf-c-table__compound-expansion-toggle) {
   --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
 }
 // stylelint-enable
