@@ -322,6 +322,7 @@ import './AppLauncher.css'
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-app-launcher` | `<nav>` | Defines the parent wrapper of the app launcher. |
+| `.pf-c-app-launcher__toggle` | `<button>` | Defines the app launcher toggle. |
 | `.pf-c-app-launcher__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. Use a `<div>` if your app launcher has groups. |
 | `.pf-c-app-launcher__menu-search` | `<div>` | Defines the wrapper for the search input. |
 | `.pf-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
@@ -338,3 +339,4 @@ import './AppLauncher.css'
 | `.pf-m-wrapper` | `.pf-c-app-launcher__menu-item` | Modifies item to be a wrapper with clickable elements inside. |
 | `.pf-m-link` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item to for action styles. |
+| `.pf-m-active` | `.pf-c-app-launcher__toggle` | Forces display of the active state of the toggle. |
