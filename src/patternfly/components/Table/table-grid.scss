@@ -246,7 +246,7 @@
     --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     grid-column: 1;
-    grid-gap: var(--pf-c-table-td--responsive--GridColumnGap);
+    grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
 
     // use minmax func to contain possible text modifier width
     grid-template-columns: 1fr minmax(0, 1.5fr);
