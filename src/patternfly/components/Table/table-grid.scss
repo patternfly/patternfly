@@ -151,11 +151,6 @@
     white-space: var(--pf-c-table--cell--WhiteSpace);
   }
 
-  [class*="pf-l"],
-  [class*="pf-l"] > * {
-    max-width: 100%;
-  }
-
   // Thead
   thead {
     display: none;
@@ -251,21 +246,15 @@
     --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     grid-column: 1;
-    grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
-    align-items: start;
+    grid-gap: var(--pf-c-table-td--responsive--GridColumnGap);
 
-    // responsive layout, set td to two column grid
-    // @mobile, breakpoint small
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
-      grid-template-columns: 1fr minmax(0, 1.5fr);
-      grid-column: 1;
-    }
+    // use minmax func to contain possible text modifier width
+    grid-template-columns: 1fr minmax(0, 1.5fr);
+    align-items: start;
 
     // set contents of td to start at column two of td grid
     > * {
-      @media screen and (min-width: $pf-global--breakpoint--sm) {
-        grid-column: 2;
-      }
+      grid-column: 2;
     }
 
     &::before {
