@@ -56,74 +56,6 @@
   --pf-c-nav--m-horizontal--m-light__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav--m-horizontal--m-light__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
 
-  // Divider
-  --pf-c-nav--c-divider--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-nav--c-divider--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav--c-divider--PaddingRight: 0;
-  --pf-c-nav--c-divider--PaddingLeft: 0;
-  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-
-  // Horizontal list
-  --pf-c-nav--m-horizontal__link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav--m-horizontal__link--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-nav--m-horizontal__link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav--m-horizontal__link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav--m-horizontal__link--lg--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-nav--m-horizontal__link--lg--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-nav--m-horizontal__link--Right: var(--pf-global--spacer--md);
-  --pf-c-nav--m-horizontal__link--Left: var(--pf-global--spacer--md);
-  --pf-c-nav--m-horizontal__link--Color: var(--pf-global--Color--light-300);
-  --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-global--active-color--400);
-  --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-global--active-color--400);
-  --pf-c-nav--m-horizontal__link--active--Color: var(--pf-global--active-color--400);
-  --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-global--active-color--400);
-  --pf-c-nav--m-horizontal__link--BackgroundColor: transparent;
-  --pf-c-nav--m-horizontal__link--hover--BackgroundColor: transparent;
-  --pf-c-nav--m-horizontal__link--focus--BackgroundColor: transparent;
-  --pf-c-nav--m-horizontal__link--active--BackgroundColor: transparent;
-  --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: transparent;
-  --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--400);
-  --pf-c-nav--m-horizontal__link--before--BorderWidth: 0;
-  --pf-c-nav--m-horizontal__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-horizontal__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-horizontal__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-horizontal__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-
-  // Tertiary list
-  --pf-c-nav--m-tertiary__link--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-nav--m-tertiary__link--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-nav--m-tertiary__link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav--m-tertiary__link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-nav--m-tertiary__link--Right: var(--pf-global--spacer--md);
-  --pf-c-nav--m-tertiary__link--Left: var(--pf-global--spacer--md);
-  --pf-c-nav--m-tertiary__link--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav--m-tertiary__link--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__link--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__link--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__link--m-current--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__link--BackgroundColor: transparent;
-  --pf-c-nav--m-tertiary__link--hover--BackgroundColor: transparent;
-  --pf-c-nav--m-tertiary__link--focus--BackgroundColor: transparent;
-  --pf-c-nav--m-tertiary__link--active--BackgroundColor: transparent;
-  --pf-c-nav--m-tertiary__link--m-current--BackgroundColor: transparent;
-  --pf-c-nav--m-tertiary__link--before--BorderColor: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__link--before--BorderWidth: 0;
-  --pf-c-nav--m-tertiary__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-tertiary__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-tertiary__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-tertiary__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-
-  // Tertiary scroll buttons
-  --pf-c-nav--m-tertiary__scroll-button--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav--m-tertiary__scroll-button--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__scroll-button--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__scroll-button--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav--m-tertiary__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
-
-  // Scroll buttons before
-  --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-nav--m-tertiary__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
-
   // Item
   --pf-c-nav__item--MarginTop: 0;
   --pf-c-nav__item--m-expanded__toggle--Transform: rotate(90deg);
@@ -192,6 +124,67 @@
   --pf-c-nav__list--m-simple__link--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__list--m-simple__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
 
+  // Horizontal list
+  --pf-c-nav--m-horizontal__link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-horizontal__link--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-horizontal__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--lg--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-nav--m-horizontal__link--lg--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-nav--m-horizontal__link--Right: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--Left: var(--pf-global--spacer--md);
+  --pf-c-nav--m-horizontal__link--Color: var(--pf-global--Color--light-300);
+  --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--active--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--m-current--Color: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--hover--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--focus--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--active--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--m-current--BackgroundColor: transparent;
+  --pf-c-nav--m-horizontal__link--before--BorderColor: var(--pf-global--active-color--400);
+  --pf-c-nav--m-horizontal__link--before--BorderWidth: 0;
+  --pf-c-nav--m-horizontal__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-horizontal__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-horizontal__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-horizontal__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+
+  // Tertiary list
+  --pf-c-nav--m-tertiary__link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-tertiary__link--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-nav--m-tertiary__link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--m-tertiary__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav--m-tertiary__link--Right: var(--pf-global--spacer--md);
+  --pf-c-nav--m-tertiary__link--Left: var(--pf-global--spacer--md);
+  --pf-c-nav--m-tertiary__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-tertiary__link--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--m-current--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--BackgroundColor: transparent;
+  --pf-c-nav--m-tertiary__link--hover--BackgroundColor: transparent;
+  --pf-c-nav--m-tertiary__link--focus--BackgroundColor: transparent;
+  --pf-c-nav--m-tertiary__link--active--BackgroundColor: transparent;
+  --pf-c-nav--m-tertiary__link--m-current--BackgroundColor: transparent;
+  --pf-c-nav--m-tertiary__link--before--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__link--before--BorderWidth: 0;
+  --pf-c-nav--m-tertiary__link--hover--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-tertiary__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-tertiary__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--m-tertiary__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
+
+  // Tertiary scroll buttons
+  --pf-c-nav--m-tertiary__scroll-button--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav--m-tertiary__scroll-button--hover--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__scroll-button--focus--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__scroll-button--active--Color: var(--pf-global--active-color--100);
+  --pf-c-nav--m-tertiary__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
+
+  // Scroll buttons before
+  --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-tertiary__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
+
   // Subnav
   --pf-c-nav__subnav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__subnav--xl--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
@@ -255,6 +248,13 @@
 
   // Toggle icon
   --pf-c-nav__toggle-icon--Transition: var(--pf-global--TransitionDuration);
+
+  // Divider
+  --pf-c-nav--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-nav--c-divider--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-nav--c-divider--PaddingRight: 0;
+  --pf-c-nav--c-divider--PaddingLeft: 0;
+  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
