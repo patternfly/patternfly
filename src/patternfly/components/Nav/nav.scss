@@ -40,7 +40,6 @@
   // Link
   --pf-c-nav__link--FontSize: var(--pf-global--FontSize--md);
   --pf-c-nav__link--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-nav__link--MarginTop: 0;
   --pf-c-nav__link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-nav__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav__link--PaddingBottom: var(--pf-global--spacer--md);
@@ -79,7 +78,7 @@
   --pf-c-nav__link--active--after--BorderLeftWidth: 0;
   --pf-c-nav__link--m-current--after--BorderLeftWidth: var(--pf-global--BorderWidth--xl);
 
-  // Simple list
+  // Section list
   --pf-c-nav__section__item--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__section__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-nav__section__link--PaddingRight: var(--pf-global--spacer--md);
@@ -87,7 +86,7 @@
   --pf-c-nav__section__link--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-nav__section__link--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__section__link--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__section__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__section__link--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__section__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
 
   // Horizontal list
@@ -154,8 +153,6 @@
   // Subnav
   --pf-c-nav__subnav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__subnav--xl--PaddingLeft: var(--pf-c-nav__link--PaddingLeft);
-  --pf-c-nav__subnav--MaxHeight: 0;
-  --pf-c-nav__item--m-expanded__subnav--MaxHeight: 100%;
   --pf-c-nav__subnav__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__subnav__link--hover--after--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-nav__subnav__link--focus--after--BorderColor: var(--pf-global--BorderColor--200);
@@ -165,11 +162,13 @@
   --pf-c-nav__subnav__link--focus--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__subnav__link--active--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__subnav__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-nav__subnav--MaxHeight: 0;
   --pf-c-nav__subnav__link--MarginTop: 0;
   --pf-c-nav__subnav__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-nav__subnav__link--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__subnav__link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__subnav__link--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-nav__item--m-expanded__subnav--MaxHeight: 100%;
   --pf-c-nav__subnav--c-divider--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__subnav--c-divider--PaddingLeft: var(--pf-global--spacer--lg);
 
@@ -263,15 +262,23 @@
 
       &::before {
         top: auto;
-        right: var(--pf-c-nav__link--Right);
         bottom: 0;
-        left: var(--pf-c-nav__link--Left);
       }
 
       &::after {
         content: none;
       }
     }
+  }
+
+  &.pf-m-horizontal .pf-c-nav__link::before {
+    right: var(--pf-c-nav--m-horizontal__link--Right);
+    left: var(--pf-c-nav--m-horizontal__link--Left);
+  }
+
+  &.pf-m-tertiary .pf-c-nav__link::before {
+    right: var(--pf-c-nav--m-tertiary__link--Right);
+    left: var(--pf-c-nav--m-tertiary__link--Left);
   }
 
   &.pf-m-light {
@@ -295,17 +302,6 @@
     --pf-c-nav__subnav__link--m-current--after--BorderColor: var(--pf-c-nav--m-light__subnav__link--m-current--after--BorderColor);
     --pf-c-nav__section-title--Color: var(--pf-c-nav--m-light__section-title--Color);
     --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav--m-light__section-title--BorderBottomColor);
-
-    // Light scroll buttons
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav--m-light__scroll-button--Color);
-    --pf-c-nav__scroll-button--hover--Color: var(--pf-c-nav--m-light__scroll-button--hover--Color);
-    --pf-c-nav__scroll-button--focus--Color: var(--pf-c-nav--m-light__scroll-button--focus--Color);
-    --pf-c-nav__scroll-button--active--Color: var(--pf-c-nav--m-light__scroll-button--active--Color);
-    --pf-c-nav__scroll-button--disabled--Color: var(--pf-c-nav--m-light__scroll-button--disabled--Color);
-
-    // Scroll buttons before
-    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav--m-light__scroll-button--before--BorderColor);
-    --pf-c-nav__scroll-button--disabled--before--BorderColor: var(--pf-c-nav--m-light__scroll-button--disabled--before--BorderColor);
 
     .pf-c-divider {
       --pf-c-divider--after--BackgroundColor: var(--pf-c-nav--m-light--c-divider--BackgroundColor);
@@ -447,7 +443,7 @@
   &::before {
     position: absolute;
     content: "";
-    border: solid 0;
+    border: 0 solid;
   }
 
   &::before {
@@ -455,14 +451,14 @@
     bottom: calc(var(--pf-c-nav__link--before--BorderBottomWidth) * -1);
     left: 0;
     border-color: var(--pf-c-nav__link--before--BorderColor);
-    border-width: 0 0 var(--pf-c-nav__link--before--BorderBottomWidth) 0;
+    border-bottom-width: var(--pf-c-nav__link--before--BorderBottomWidth);
   }
 
   &::after {
     top: 0;
     bottom: 0;
     left: 0;
-    border: solid 0;
+    border: 0 solid;
     border-color: var(--pf-c-nav__link--after--BorderColor);
     border-left-width: var(--pf-c-nav__link--after--BorderLeftWidth);
   }
@@ -474,7 +470,7 @@
     background-color: var(--pf-c-nav__link--hover--BackgroundColor);
 
     &::before {
-      border-width: 0 0 var(--pf-c-nav__link--hover--before--BorderBottomWidth) 0;
+      border-bottom-width: var(--pf-c-nav__link--hover--before--BorderBottomWidth);
     }
 
     &::after {
@@ -488,7 +484,7 @@
     background-color: var(--pf-c-nav__link--focus--BackgroundColor);
 
     &::before {
-      border-width: 0 0 var(--pf-c-nav__link--focus--before--BorderBottomWidth) 0;
+      border-bottom-width: var(--pf-c-nav__link--focus--before--BorderBottomWidth);
     }
 
     &::after {
@@ -502,7 +498,7 @@
     background-color: var(--pf-c-nav__link--active--BackgroundColor);
 
     &::before {
-      border-width: 0 0 var(--pf-c-nav__link--active--before--BorderBottomWidth) 0;
+      border-bottom-width: var(--pf-c-nav__link--active--before--BorderBottomWidth);
     }
 
     &::after {
@@ -518,7 +514,7 @@
     background-color: var(--pf-c-nav__link--m-current--BackgroundColor);
 
     &::before {
-      border-width: 0 0 var(--pf-c-nav__link--m-current--before--BorderBottomWidth) 0;
+      border-bottom-width: var(--pf-c-nav__link--m-current--before--BorderBottomWidth);
     }
 
     &::after {
@@ -600,6 +596,7 @@
   --pf-c-nav__link--PaddingRight: var(--pf-c-nav__section__link--PaddingRight);
   --pf-c-nav__link--PaddingBottom: var(--pf-c-nav__section__link--PaddingBottom);
   --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__section__link--PaddingLeft);
+  --pf-c-nav__link--Color: var(--pf-c-nav__section__link--Color);
   --pf-c-nav__link--FontSize: var(--pf-c-nav__section__link--FontSize);
   --pf-c-nav__link--before--BorderColor: transparent;
   --pf-c-nav__link--before--BorderWidth: 0;
@@ -644,22 +641,20 @@
   }
 
   &:hover {
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav__scroll-button--hover--Color);
+    color: var(--pf-c-nav__scroll-button--hover--Color);
   }
 
   &:focus {
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav__scroll-button--focus--Color);
+    color: var(--pf-c-nav__scroll-button--focus--Color);
   }
 
   &:active {
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav__scroll-button--active--Color);
+    color: var(--pf-c-nav__scroll-button--active--Color);
   }
 
   &:disabled {
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav__scroll-button--disabled--Color);
-    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav__scroll-button--disabled--before--BorderColor);
-
-    pointer-events: none;
+    color: var(--pf-c-nav__scroll-button--disabled--Color);
+    border-color: var(--pf-c-nav__scroll-button--disabled--before--BorderColor);
   }
 
   &:nth-of-type(1) {
