@@ -35,7 +35,7 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Grouped-default-lists
+```hbs title=Grouped-nav
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
@@ -64,55 +64,6 @@ import './Nav.css'
       Section title 2
     {{/nav-section-title}}
     {{#> nav-list}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 1
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-          Current link
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 3
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav-section}}
-{{/nav}}
-```
-
-```hbs title=Grouped-simple-lists
-{{#> nav nav--attribute='aria-label="Global"'}}
-  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
-    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
-      Section title 1
-    {{/nav-section-title}}
-    {{#> nav-list nav-list--modifier="pf-m-simple"}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 1
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 2
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 3
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav-section}}
-  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
-    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
-      Section title 2
-    {{/nav-section-title}}
-    {{#> nav-list nav-list--modifier="pf-m-simple"}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -519,46 +470,16 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Horizontal-in-light-mode
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
-  {{#> nav-list}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 1
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 2
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 3
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Horizontal nav item 4
-      {{/nav-link}}
-    {{/nav-item}}
-    {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-        Horizontal nav item 5
-      {{/nav-link}}
-    {{/nav-item}}
-  {{/nav-list}}
-{{/nav}}
-```
-
-
 ## Documentation
+
 ### Overview
+
 The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
 
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
@@ -570,6 +491,7 @@ The navigation system relies on several different sub-components:
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
 
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element. |
