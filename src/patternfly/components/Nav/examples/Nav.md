@@ -498,7 +498,7 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__subnav` | `<section>` | Initiates a subnav section. |
 | `.pf-c-nav__list` | `<ul>` | Initiates nav list. |
 | `.pf-c-nav__item` | `<li>` | Initiates nav list item. |
-| `.pf-c-nav__link` | `<a>` | Initiates default nav list link. |
+| `.pf-c-nav__link` | `<a>` | Initiates nav list link. |
 | `.pf-c-nav__section` | `<section>` | Initiates a nav section element. |
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
 | `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
