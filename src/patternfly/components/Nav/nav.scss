@@ -160,7 +160,8 @@
   --pf-c-nav__subnav--c-divider--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__subnav--c-divider--PaddingLeft: var(--pf-global--spacer--lg);
 
-  // Section list
+  // Nav section
+  --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__section__item--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__section__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-nav__section__link--PaddingRight: var(--pf-global--spacer--md);
@@ -175,9 +176,6 @@
   --pf-c-nav__section__link--focus--after--BorderWidth: 0;
   --pf-c-nav__section__link--active--after--BorderWidth: 0;
   --pf-c-nav__section__link--m-current--after--BorderWidth: var(--pf-global--BorderWidth--xl);
-
-  // Nav section
-  --pf-c-nav__section--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-nav__section--section--MarginTop: var(--pf-global--spacer--xl);
 
   // Nav section title
