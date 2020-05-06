@@ -20,13 +20,6 @@
   --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table-caption--xl--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table-caption--xl--PaddingLeft: var(--pf-global--spacer--md);
-
-  @media screen and (max-width: $pf-global--breakpoint--xl) {
-    --pf-c-table-caption--PaddingRight: var(--pf-c-table-caption--xl--PaddingRight);
-    --pf-c-table-caption--PaddingLeft: var(--pf-c-table-caption--xl--PaddingLeft);
-  }
 
   // Thead
   --pf-c-table--thead--cell--FontSize: var(--pf-global--FontSize--sm);
@@ -44,10 +37,6 @@
   --pf-c-table--cell--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table--cell--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-table--cell--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table--cell--first-last-child--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table--cell--first-last-child--xl--PaddingRight: var(--pf-global--spacer--lg);
 
   // Default cell variables
   --pf-c-table--cell--MinWidth: 0;
@@ -75,6 +64,7 @@
   --pf-c-table__toggle--c-button__toggle-icon--Rotate: 270deg;
   --pf-c-table__toggle--c-button__toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
+  --pf-c-table__toggle--first-child--PaddingLeft: var(--pf-global--spacer--md);
 
   // Button
   --pf-c-table__button--BackgroundColor: transparent;
@@ -93,16 +83,10 @@
   --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
   // Action
-  --pf-c-table__action--PaddingTop: 0;
-  --pf-c-table__action--PaddingRight: 0;
-  --pf-c-table__action--PaddingBottom: 0;
-  --pf-c-table__action--PaddingLeft: 0;
+  --pf-c-table__action--last-child--PaddingRight: var(--pf-global--spacer--md);
 
-  // Inline edit
-  --pf-c-table__inline-edit-action--PaddingTop: 0;
-  --pf-c-table__inline-edit-action--PaddingRight: 0;
-  --pf-c-table__inline-edit-action--PaddingBottom: 0;
-  --pf-c-table__inline-edit-action--PaddingLeft: 0;
+  // Inline edit action
+  --pf-c-table__inline-edit-action--last-child--PaddingRight: var(--pf-global--spacer--md);
 
   // Expandable row
   // hardcoding to match design spec
@@ -166,10 +150,6 @@
   --pf-c-table--m-compact--cell--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact--cell--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-table--m-compact--cell--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-table--m-compact--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-table--m-compact--cell--first-last-child--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table--m-compact--cell--first-last-child--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table--m-compact--cell--first-last-child--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table--m-compact__expandable-row-content--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-table--m-compact__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
@@ -182,13 +162,6 @@
 
   // Modifier - expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BorderColor--100);
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-c-table--cell--first-last-child--xl--PaddingRight);
-    --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-c-table--cell--first-last-child--xl--PaddingLeft);
-    --pf-c-table--m-compact--cell--first-last-child--PaddingLeft: var(--pf-c-table--m-compact--cell--first-last-child--xl--PaddingLeft);
-    --pf-c-table--m-compact--cell--first-last-child--PaddingRight: var(--pf-c-table--m-compact--cell--first-last-child--xl--PaddingRight);
-  }
 
   @include pf-t-light; // This component always needs to be light
 
@@ -225,16 +198,6 @@
     text-overflow: var(--pf-c-table--cell--TextOverflow);
     word-break: var(--pf-c-table--cell--WordBreak);
     white-space: var(--pf-c-table--cell--WhiteSpace);
-
-    // First child padding left
-    &:first-child {
-      --pf-c-table--cell--PaddingLeft: var(--pf-c-table--cell--first-last-child--PaddingLeft);
-    }
-
-    // Last child padding right
-    &:last-child {
-      --pf-c-table--cell--PaddingRight: var(--pf-c-table--cell--first-last-child--PaddingRight);
-    }
 
     &.pf-m-center {
       text-align: center;
@@ -495,6 +458,10 @@
 
   vertical-align: top;
 
+  &:first-child {
+    --pf-c-table--cell--PaddingLeft: var(--pf-c-table__toggle--first-child--PaddingLeft);
+  }
+
   .pf-c-button {
     margin-top: var(--pf-c-table__toggle--c-button--MarginTop);
 
@@ -520,17 +487,13 @@
   --pf-c-table--cell--FontSize: var(--pf-c-table__check--input--FontSize);
 }
 
-// Table action cell
+// Action cells
 .pf-c-table__action,
 .pf-c-table__inline-edit-action {
   --pf-c-table--cell--PaddingTop: 0;
-  --pf-c-table--cell--PaddingRight: var(--pf-c-table__action--PaddingRight);
+  --pf-c-table--cell--PaddingRight: 0;
   --pf-c-table--cell--PaddingBottom: 0;
-  --pf-c-table--cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
-
-  padding-top: 0;
-  padding-bottom: 0;
-  vertical-align: middle;
+  --pf-c-table--cell--PaddingLeft: 0;
 }
 
 // Inline edit
@@ -539,6 +502,16 @@
   --pf-c-table--cell--PaddingRight: 0;
 
   text-align: right;
+}
+
+// Action
+.pf-c-table__action:last-child {
+  --pf-c-table--cell--PaddingRight: var(--pf-c-table__action--last-child--PaddingRight);
+}
+
+// Inline edit
+.pf-c-table__inline-edit-action:last-child {
+  --pf-c-table--cell--PaddingRight: var(--pf-c-table__inline-edit-action--last-child--PaddingRight);
 }
 
 // Compound expansion toggle
@@ -706,6 +679,8 @@
 // ==================================================================
 .pf-c-table .pf-c-table {
   tr > * {
+    --pf-c-table--cell--Width: auto;
+
     // First child padding left
     &:first-child {
       --pf-c-table--cell--PaddingLeft: var(--pf-c-table--nested--first-last-child--PaddingLeft);
@@ -742,18 +717,6 @@
       --pf-c-table--cell--FontSize: var(--pf-c-table--m-compact--FontSize);
       --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-compact--cell--PaddingTop);
       --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-compact--cell--PaddingBottom);
-
-      // stylelint-disable
-      > * {
-        &:first-child {
-          --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-compact--cell--first-last-child--PaddingLeft);
-        }
-
-        &:last-child {
-          --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-compact--cell--first-last-child--PaddingRight);
-        }
-      }
-      // stylelint-enable
     }
   }
 
@@ -766,7 +729,6 @@
   .pf-c-table__action {
     --pf-c-table--cell--PaddingTop: var(--pf-c-table__action--PaddingTop);
     --pf-c-table--cell--PaddingBottom: var(--pf-c-table__action--PaddingBottom);
-    --pf-c-table--cell--PaddingLeft: var(--pf-c-table__action--PaddingLeft);
   }
 
   .pf-c-table__toggle {
