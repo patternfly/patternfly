@@ -117,7 +117,7 @@
 
   // Table toggle icons
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
-  --pf-c-table__toggle--m-expanded__icon--Rotate: rotate(180deg);
+  --pf-c-table__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
 // Check table cell
@@ -454,7 +454,7 @@
     transition: var(--pf-c-table__toggle__icon--Transition);
 
     .pf-c-button.pf-m-expanded > & {
-      transform: var(--pf-c-table__toggle--m-expanded__icon--Rotate);
+      transform: rotate(var(--pf-c-table__toggle--m-expanded__icon--Rotate));
     }
   }
 

@@ -48,13 +48,13 @@
   --pf-c-dropdown__toggle--m-split-button--m-action--child--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--m-split-button--m-action--child--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--m-split-button--m-action__toggle-button--MarginRight: calc(-1 * var(--pf-global--BorderWidth--sm));
-  --pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY: translateY(#{pf-size-prem(-1px)});
+  --pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY: #{pf-size-prem(-1px)};
   --pf-c-dropdown__toggle--m-split-button__toggle-text--MarginLeft: var(--pf-global--spacer--sm);
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate: rotate(180deg);
+  --pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Menu
   --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -64,7 +64,7 @@
   --pf-c-dropdown__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --pf-c-dropdown__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-dropdown--m-top__menu--Top: 0;
-  --pf-c-dropdown--m-top__menu--TranslateY: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+  --pf-c-dropdown--m-top__menu--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
   --pf-c-dropdown__menu-item--BackgroundColor: transparent;
@@ -196,7 +196,7 @@
       cursor: pointer;
 
       input {
-        transform: var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY);
+        transform: translateY(var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY));
       }
     }
 
@@ -325,7 +325,7 @@
 
   // stylelint-disable-next-line
   .pf-c-dropdown.pf-m-top.pf-m-expanded & {
-    transform: var(--pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate);
+    transform: rotate(var(--pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate));
   }
 }
 
@@ -359,7 +359,7 @@
   .pf-c-dropdown.pf-m-top & {
     --pf-c-dropdown__menu--Top: var(--pf-c-dropdown--m-top__menu--Top);
 
-    transform: var(--pf-c-dropdown--m-top__menu--TranslateY);
+    transform: translateY(var(--pf-c-dropdown--m-top__menu--TranslateY));
   }
 }
 

@@ -28,7 +28,7 @@
   // accordion toggle icon
   --pf-c-accordion__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-accordion__toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-accordion__toggle--m-expanded__toggle-icon--Rotate: rotate(90deg);
+  --pf-c-accordion__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expanded content
   --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-global--spacer--sm);
@@ -76,7 +76,7 @@
     }
 
     .pf-c-accordion__toggle-icon {
-      transform: var(--pf-c-accordion__toggle--m-expanded__toggle-icon--Rotate);
+      transform: rotate(var(--pf-c-accordion__toggle--m-expanded__toggle-icon--Rotate));
     }
   }
 

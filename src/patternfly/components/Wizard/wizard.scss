@@ -59,7 +59,7 @@
   --pf-c-wizard__nav-link--before--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-wizard__nav-link--before--Color: var(--pf-global--Color--100);
   --pf-c-wizard__nav-link--before--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-wizard__nav-link--before--TranslateX: translateX(calc(-100% - var(--pf-global--spacer--sm)));
+  --pf-c-wizard__nav-link--before--TranslateX: calc(-100% - var(--pf-global--spacer--sm));
   --pf-c-wizard__nav-link--m-current--before--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-wizard__nav-link--m-current--before--Color: var(--pf-global--Color--light-100);
   --pf-c-wizard__nav-link--m-disabled--before--BackgroundColor: transparent;
@@ -94,7 +94,7 @@
 
   // Toggle icon
   --pf-c-wizard__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-wizard__toggle--m-expanded__toggle-icon--Rotate: rotate(180deg);
+  --pf-c-wizard__toggle--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Nav
   --pf-c-wizard__nav--ZIndex: var(--pf-global--ZIndex--sm);
@@ -266,7 +266,7 @@
     border-bottom: var(--pf-c-wizard__toggle--m-expanded--BorderBottomWidth) solid var(--pf-c-wizard__toggle--m-expanded--BorderBottomColor);
 
     .pf-c-wizard__toggle-icon {
-      transform: var(--pf-c-wizard__toggle--m-expanded__toggle-icon--Rotate);
+      transform: rotate(var(--pf-c-wizard__toggle--m-expanded__toggle-icon--Rotate));
     }
   }
 }
@@ -412,7 +412,7 @@
     color: var(--pf-c-wizard__nav-link--before--Color);
     background-color: var(--pf-c-wizard__nav-link--before--BackgroundColor);
     border-radius: var(--pf-c-wizard__nav-link--before--BorderRadius);
-    transform: var(--pf-c-wizard__nav-link--before--TranslateX);
+    transform: translateX(var(--pf-c-wizard__nav-link--before--TranslateX));
   }
 
   // Nav step number

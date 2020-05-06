@@ -28,7 +28,7 @@
   // Toggle arrow
   --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-options-menu--m-top--m-expanded__toggle-icon--Rotate: rotate(180deg);
+  --pf-c-options-menu--m-top--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Text toggle button
   --pf-c-options-menu__toggle-button--BackgroundColor: transparent;
@@ -45,7 +45,7 @@
   --pf-c-options-menu__menu--Top: calc(100% + var(--pf-global--spacer--xs));
   --pf-c-options-menu__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-options-menu--m-top__menu--Top: 0;
-  --pf-c-options-menu--m-top__menu--TranslateY: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+  --pf-c-options-menu--m-top__menu--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu item
   --pf-c-options-menu__menu-item--BackgroundColor: transparent;
@@ -215,7 +215,7 @@
   margin-left: var(--pf-c-options-menu__toggle-icon--MarginLeft);
 
   .pf-c-options-menu.pf-m-top.pf-m-expanded & {
-    transform: var(--pf-c-options-menu--m-top--m-expanded__toggle-icon--Rotate);
+    transform: rotate(var(--pf-c-options-menu--m-top--m-expanded__toggle-icon--Rotate));
   }
 }
 
@@ -237,7 +237,7 @@
   .pf-c-options-menu.pf-m-top & {
     --pf-c-options-menu__menu--Top: var(--pf-c-options-menu--m-top__menu--Top);
 
-    transform: var(--pf-c-options-menu--m-top__menu--TranslateY);
+    transform: translateY(var(--pf-c-options-menu--m-top__menu--TranslateY));
   }
 }
 

@@ -72,9 +72,9 @@
 
   // Table cell - toggle
   --pf-c-table__toggle--c-button--MarginTop: calc(#{pf-size-prem(6px)} * -1);
-  --pf-c-table__toggle--c-button__toggle-icon--Rotate: rotate(270deg);
+  --pf-c-table__toggle--c-button__toggle-icon--Rotate: 270deg;
   --pf-c-table__toggle--c-button__toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate: rotate(360deg);
+  --pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // Button
   --pf-c-table__button--BackgroundColor: transparent;
@@ -497,14 +497,14 @@
 
     &.pf-m-expanded {
       .pf-c-table__toggle-icon {
-        transform: var(--pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate);
+        transform: rotate(var(--pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate));
       }
     }
   }
 
   .pf-c-table__toggle-icon {
     transition: var(--pf-c-table__toggle--c-button__toggle-icon--Transition);
-    transform: var(--pf-c-table__toggle--c-button__toggle-icon--Rotate);
+    transform: rotate(var(--pf-c-table__toggle--c-button__toggle-icon--Rotate));
   }
 
   svg {

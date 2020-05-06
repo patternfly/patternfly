@@ -69,7 +69,7 @@
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate: rotate(180deg);
+  --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate: 180deg;
 
   // Toggle button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--sm);
@@ -84,7 +84,7 @@
   --pf-c-select__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-select__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --pf-c-select__menu--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-select__menu--m-top--TranslateY: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+  --pf-c-select__menu--m-top--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu item
   --pf-c-select__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -105,7 +105,7 @@
   --pf-c-select__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-select__menu-item-icon--Right: var(--pf-global--spacer--md);
   --pf-c-select__menu-item-icon--Top: 50%;
-  --pf-c-select__menu-item-icon--TranslateY: translateY(-50%);
+  --pf-c-select__menu-item-icon--TranslateY: -50%;
 
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
@@ -271,7 +271,7 @@
   }
   // stylelint-disable-next-line
   .pf-c-select.pf-m-top.pf-m-expanded & {
-    transform: var(--pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate);
+    transform: rotate(var(--pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate));
   }
 }
 
@@ -378,7 +378,7 @@
 
   .pf-c-select.pf-m-top & {
     top: 0;
-    transform: var(--pf-c-select__menu--m-top--TranslateY);
+    transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
   }
 }
 
@@ -428,7 +428,7 @@
   right: var(--pf-c-select__menu-item-icon--Right);
   font-size: var(--pf-c-select__menu-item-icon--FontSize);
   color: var(--pf-c-select__menu-item-icon--Color);
-  transform: var(--pf-c-select__menu-item-icon--TranslateY);
+  transform: translateY(var(--pf-c-select__menu-item-icon--TranslateY));
 }
 
 .pf-c-select__menu-item--match {

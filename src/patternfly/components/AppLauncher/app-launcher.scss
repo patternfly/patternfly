@@ -10,7 +10,7 @@
   --pf-c-app-launcher__menu--Top: calc(100% + var(--pf-global--spacer--xs));
   --pf-c-app-launcher__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-app-launcher--m-top__menu--Top: 0;
-  --pf-c-app-launcher--m-top__menu--TranslateY: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+  --pf-c-app-launcher--m-top__menu--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Expanded
   --pf-c-app-launcher__toggle--PaddingTop: var(--pf-global--spacer--form-element);
@@ -61,7 +61,7 @@
   // Menu item external icon
   --pf-c-app-launcher__menu-item-external-icon--Color: var(--pf-global--link--Color);
   --pf-c-app-launcher__menu-item-external-icon--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-app-launcher__menu-item-external-icon--TranslateY: translateY(#{pf-size-prem(-1px)});
+  --pf-c-app-launcher__menu-item-external-icon--TranslateY: #{pf-size-prem(-1px)};
   --pf-c-app-launcher__menu-item-external-icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
   // Groups
@@ -142,7 +142,7 @@
   .pf-c-app-launcher.pf-m-top & {
     --pf-c-app-launcher__menu--Top: var(--pf-c-app-launcher--m-top__menu--Top);
 
-    transform: var(--pf-c-app-launcher--m-top__menu--TranslateY);
+    transform: translateY(var(--pf-c-app-launcher--m-top__menu--TranslateY));
   }
 }
 
@@ -252,7 +252,7 @@
   font-size: var(--pf-c-app-launcher__menu-item-external-icon--FontSize);
   color: var(--pf-c-app-launcher__menu-item-external-icon--Color);
   opacity: 0;
-  transform: var(--pf-c-app-launcher__menu-item-external-icon--TranslateY); // move icon a bit to appear more visually centered
+  transform: translateY(var(--pf-c-app-launcher__menu-item-external-icon--TranslateY)); // move icon a bit to appear more visually centered
 }
 
 .pf-c-app-launcher__group {

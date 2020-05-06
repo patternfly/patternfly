@@ -79,7 +79,7 @@
   --pf-c-data-list__toggle--MarginLeft: calc(var(--pf-global--spacer--sm) * -1); // offset toggle to align left
   --pf-c-data-list__toggle--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-data-list__toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-data-list__item--m-expanded__toggle--c-button-icon--Rotate: rotate(90deg);
+  --pf-c-data-list__item--m-expanded__toggle--c-button-icon--Rotate: 90deg;
 
   // Controls
   --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--lg);
@@ -307,7 +307,7 @@
   transition: var(--pf-c-data-list__toggle-icon--Transition);
 
   .pf-c-data-list__item.pf-m-expanded & {
-    transform: var(--pf-c-data-list__item--m-expanded__toggle--c-button-icon--Rotate);
+    transform: rotate(var(--pf-c-data-list__item--m-expanded__toggle--c-button-icon--Rotate));
   }
 }
 

@@ -22,7 +22,7 @@
 
   // Action
   --pf-c-alert__action--MarginTop: calc(var(--pf-global--spacer--form-element) * 2 * -1);
-  --pf-c-alert__action--TranslateY: translateY(var(--pf-global--spacer--form-element));
+  --pf-c-alert__action--TranslateY: var(--pf-global--spacer--form-element);
   --pf-c-alert__action--MarginRight: #{pf-size-prem(-8px)};
 
   // Action Description
@@ -145,7 +145,7 @@
   grid-area: action;
   margin-top: var(--pf-c-alert__action--MarginTop);
   margin-right: var(--pf-c-alert__action--MarginRight);
-  transform: var(--pf-c-alert__action--TranslateY);
+  transform: translateY(var(--pf-c-alert__action--TranslateY));
 }
 
 .pf-c-alert__action-group {

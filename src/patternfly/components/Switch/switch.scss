@@ -8,7 +8,7 @@
   --pf-c-switch__toggle-icon--PaddingLeft: calc(var(--pf-c-switch--FontSize) * .4); // during breaking change period, remove this and make it the value for `left`
   --pf-c-switch__toggle-icon--Top: 50%;
   --pf-c-switch__toggle-icon--Left: 0; // This var is sized relative to the switch's font size, so that it scales responsively.
-  --pf-c-switch__toggle-icon--TranslateY: translateY(-50%);
+  --pf-c-switch__toggle-icon--TranslateY: -50%;
   --pf-c-switch__toggle-icon--Offset: #{pf-size-prem(2px)}; // this value is created to handle sizing of the toggle and therefore the width of the toggle and its transform value.
 
   // Switch
@@ -17,7 +17,7 @@
 
   // Switch input
   --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-switch__input--checked__toggle--before--TranslateX: translateX(calc(100% + var(--pf-c-switch__toggle-icon--Offset)));
+  --pf-c-switch__input--checked__toggle--before--TranslateX: calc(100% + var(--pf-c-switch__toggle-icon--Offset));
   --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--dark-100);
   --pf-c-switch__input--not-checked__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
@@ -77,7 +77,7 @@
       background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
 
       &::before {
-        transform: var(--pf-c-switch__input--checked__toggle--before--TranslateX);
+        transform: translateX(var(--pf-c-switch__input--checked__toggle--before--TranslateX));
       }
     }
 
@@ -152,7 +152,7 @@
   padding-left: var(--pf-c-switch__toggle-icon--PaddingLeft);
   font-size: var(--pf-c-switch__toggle-icon--FontSize);
   color: var(--pf-c-switch__toggle-icon--Color);
-  transform: var(--pf-c-switch__toggle-icon--TranslateY);
+  transform: translateY(var(--pf-c-switch__toggle-icon--TranslateY));
 }
 
 .pf-c-switch__label {

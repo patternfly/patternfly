@@ -88,7 +88,7 @@
   --pf-c-notification-drawer__group-toggle-icon--MarginRight: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__group-toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-notification-drawer__group-toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate: rotate(90deg);
+  --pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate: 90deg;
 
   display: flex;
   flex-direction: column;
@@ -283,6 +283,6 @@
   transition: var(--pf-c-notification-drawer__group-toggle-icon--Transition);
 
   .pf-c-notification-drawer__group.pf-m-expanded & {
-    transform: var(--pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate);
+    transform: rotate(var(--pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate));
   }
 }

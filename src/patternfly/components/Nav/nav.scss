@@ -1,6 +1,6 @@
 .pf-c-nav {
   --pf-c-nav--Transition: var(--pf-global--Transition);
-  --pf-c-nav__item--m-expanded__toggle-icon--Rotate: rotate(90deg);
+  --pf-c-nav__item--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Light theme
   --pf-c-nav--m-light__item--before--BorderColor: var(--pf-global--BorderColor--300);
@@ -568,7 +568,7 @@
   transition: var(--pf-c-nav__toggle-icon--Transition);
 
   .pf-c-nav__item.pf-m-expanded & {
-    transform: var(--pf-c-nav__item--m-expanded__toggle-icon--Rotate);
+    transform: rotate(var(--pf-c-nav__item--m-expanded__toggle-icon--Rotate));
   }
 }
 
