@@ -562,10 +562,7 @@
     opacity: 1;
   }
 
-  &::-webkit-scrollbar {
-    display: none;
-    visibility: hidden;
-  }
+  @include pf-overflow-hide-scroll;
 }
 
 // Toggle caret
