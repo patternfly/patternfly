@@ -14,7 +14,7 @@
 
   // Switch input
   --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-switch__input--checked__toggle--before--Transform: translateX(calc(100% + var(--pf-c-switch__toggle-icon--Offset)));
+  --pf-c-switch__input--checked__toggle--before--TranslateX: calc(100% + var(--pf-c-switch__toggle-icon--Offset));
   --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--dark-100);
   --pf-c-switch__input--not-checked__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
@@ -70,7 +70,7 @@
       background-color: var(--pf-c-switch__input--checked__toggle--BackgroundColor);
 
       &::before {
-        transform: var(--pf-c-switch__input--checked__toggle--before--Transform);
+        transform: translateX(var(--pf-c-switch__input--checked__toggle--before--TranslateX));
       }
     }
 
