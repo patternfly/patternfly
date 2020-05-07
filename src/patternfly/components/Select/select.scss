@@ -39,8 +39,8 @@
   --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
 
   // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(6px)};
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: #{pf-size-prem(5px)};
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(5px)};
 
   // Select input for typeahead
   --pf-c-select__toggle-typeahead--FlexBasis: 10em;
