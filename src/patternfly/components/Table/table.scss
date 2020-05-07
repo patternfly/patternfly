@@ -17,9 +17,9 @@
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table-caption--Color: var(--pf-global--Color--200);
   --pf-c-table-caption--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table-caption--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table-caption--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table-caption--PaddingLeft: var(--pf-global--spacer--md);
 
   // Thead
   --pf-c-table--thead--cell--FontSize: var(--pf-global--FontSize--sm);
@@ -89,6 +89,8 @@
   --pf-c-table__inline-edit-action--last-child--PaddingRight: var(--pf-global--spacer--md);
 
   // Expandable row
+  --pf-c-table__expandable-row--td--first-child__expandable-row-content--PaddingLeft: var(--pf-global--spacer--md);
+
   // hardcoding to match design spec
   --pf-c-table__expandable-row--Transition: var(--pf-global--Transition);
   --pf-c-table__expandable-row--MaxHeight: #{pf-size-prem(450px)};
@@ -644,6 +646,11 @@
       .pf-c-table__expandable-row-content {
         padding: 0;
       }
+    }
+
+    // align content with toggle
+    &:first-child .pf-c-table__expandable-row-content {
+      padding-left: var(--pf-c-table__expandable-row--td--first-child__expandable-row-content--PaddingLeft);
     }
   }
   // stylelint-enable
