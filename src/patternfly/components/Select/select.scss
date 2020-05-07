@@ -39,12 +39,8 @@
   --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
 
   // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: #{pf-size-prem(3px)};
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(3px)};
-
-  // The button inside a chip must be adjusted to reduce the padding, which is driving the height of the chip, so it fits within the toggle
-  --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(6px)};
 
   // Select input for typeahead
   --pf-c-select__toggle-typeahead--FlexBasis: 10em;
@@ -295,12 +291,6 @@
   // Add space between children
   > :not(:last-child) {
     margin-right: var(--pf-c-select__toggle-wrapper--not-last-child--MarginRight);
-  }
-
-  // need to reduce the padding, which is driving the height of the chip, so it fits within the toggle
-  .pf-c-chip .pf-c-button {
-    padding-top: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop);
-    padding-bottom: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom);
   }
 
   // Remove during breaking change

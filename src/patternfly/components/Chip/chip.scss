@@ -1,7 +1,7 @@
 .pf-c-chip {
-  --pf-c-chip--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-chip--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-chip--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
   --pf-c-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -18,8 +18,10 @@
   --pf-c-chip__text--MaxWidth: #{pf-size-prem(120px)};
 
   // chip button
-  --pf-c-chip__c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip__c-button--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip__c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip__c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-chip__c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip__c-button--MarginTop: calc(var(--pf-c-chip--PaddingTop) * -1);
   --pf-c-chip__c-button--MarginRight: calc(var(--pf-c-chip--PaddingRight) / 2 * -1);
   --pf-c-chip__c-button--MarginBottom: calc(var(--pf-c-chip--PaddingBottom) * -1);
@@ -60,7 +62,9 @@
 
   // Button
   .pf-c-button {
+    --pf-c-button--PaddingTop: var(--pf-c-chip__c-button--PaddingTop);
     --pf-c-button--PaddingRight: var(--pf-c-chip__c-button--PaddingRight);
+    --pf-c-button--PaddingBottom: var(--pf-c-chip__c-button--PaddingBottom);
     --pf-c-button--PaddingLeft: var(--pf-c-chip__c-button--PaddingLeft);
     --pf-c-button--FontSize: var(--pf-c-chip__c-button--FontSize);
 
