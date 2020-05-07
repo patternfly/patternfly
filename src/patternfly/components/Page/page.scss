@@ -25,12 +25,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-sidebar-toggle__c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-page__header-sidebar-toggle__c-button--MarginRight: var(--pf-global--spacer--md);
   --pf-c-page__header-sidebar-toggle__c-button--MarginLeft: calc(var(--pf-c-page__header-sidebar-toggle__c-button--PaddingLeft) * -1);
-  --pf-c-page__header-sidebar-toggle__c-button--xl--MarginLeft: calc(var(--pf-c-page__header-sidebar-toggle__c-button--PaddingLeft) * -1); // remove in breaking change release
   --pf-c-page__header-sidebar-toggle__c-button--FontSize: var(--pf-global--FontSize--2xl);
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__header-sidebar-toggle__c-button--MarginLeft: var(--pf-c-page__header-sidebar-toggle__c-button--xl--MarginLeft); // remove in breaking change release
-  }
 
   // Header brand link
   --pf-c-page__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
@@ -72,14 +67,15 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
-  --pf-c-page__sidebar--Transform: translate3d(-100%, 0, 0);
-  --pf-c-page__sidebar--m-expanded--Transform: translate3d(0, 0, 0);
-  --pf-c-page__sidebar--xl--Transform: translate3d(0, 0, 0);
+  --pf-c-page__sidebar--TranslateX: -100%;
+  --pf-c-page__sidebar--TranslateZ: 0;
+  --pf-c-page__sidebar--m-expanded--TranslateX: 0;
+  --pf-c-page__sidebar--xl--TranslateX: 0;
   --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__sidebar--Transform: var(--pf-c-page__sidebar--xl--Transform);
+    --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--xl--TranslateX);
   }
 
   // Main section
@@ -114,17 +110,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__main-nav--PaddingRight: var(--pf-c-page__main-nav--xl--PaddingRight);
     --pf-c-page__main-nav--PaddingLeft: var(--pf-c-page__main-nav--xl--PaddingLeft);
   }
-
-  // Light scroll buttons
-  --pf-c-nav__main-nav--c-nav__scroll-button--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav__main-nav--c-nav__scroll-button--hover--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__main-nav--c-nav__scroll-button--focus--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__main-nav--c-nav__scroll-button--active--Color: var(--pf-global--active-color--100);
-  --pf-c-nav__main-nav--c-nav__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
-
-  // Scroll buttons before
-  --pf-c-nav__main-nav--c-nav__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-nav__main-nav--c-nav__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
 
   // Main section breadcrumb
   --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -338,7 +323,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   -webkit-overflow-scrolling: touch;
   background-color: var(--pf-c-page__sidebar--BackgroundColor);
   transition: var(--pf-c-page__sidebar--Transition);
-  transform: var(--pf-c-page__sidebar--Transform);
+  transform: translateX(var(--pf-c-page__sidebar--TranslateX)) translateZ(var(--pf-c-page__sidebar--TranslateZ));
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
@@ -347,7 +332,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   // Mobile
   // Expanded nav
   &.pf-m-expanded {
-    --pf-c-page__sidebar--Transform: var(--pf-c-page__sidebar--m-expanded--Transform);
+    --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--m-expanded--TranslateX);
 
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
   }
@@ -392,32 +377,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-right: var(--pf-c-page__main-nav--PaddingRight);
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
-
-  // Scroll buttons
-  .pf-c-nav__scroll-button {
-    --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--Color);
-
-    &::before {
-      --pf-c-nav__scroll-button--before--BorderColor: var(--pf-c-nav__main-nav--c-nav__scroll-button--before--BorderColor);
-    }
-
-    &:hover {
-      --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--hover--Color);
-    }
-
-    &:focus {
-      --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--focus--Color);
-    }
-
-    &:active {
-      --pf-c-nav__scroll-button--Color: var(--pf-c-nav__main-nav--c-nav__scroll-button--active--Color);
-    }
-
-    &:disabled {
-      --pf-c-nav__scroll-button--Color: var(--pf-global--disabled-color--200);
-      --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--disabled-color--300);
-    }
-  }
 }
 
 .pf-c-page__main-breadcrumb {

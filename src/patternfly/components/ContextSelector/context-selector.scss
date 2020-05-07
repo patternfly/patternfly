@@ -90,6 +90,7 @@
   }
 
   &:active,
+  &.pf-m-active,
   &:focus-within {
     &::before {
       --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--active--BorderBottomColor);
