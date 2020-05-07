@@ -4,6 +4,13 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.06 release notes (2020-05-12)
+Packages released:
+- @patternfly/patternfly@v2.71.6
+
+### Other
+  - **Dev lite:** Removed examples and components on delete ([#2984](https://github.com/patternfly/patternfly/pull/2984))
+
 ## 2020.05 release notes (2020-04-21)
 Packages released:
 - @patternfly/patternfly@v2.71.5
