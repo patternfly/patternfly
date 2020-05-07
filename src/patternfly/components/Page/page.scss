@@ -25,12 +25,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-sidebar-toggle__c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-page__header-sidebar-toggle__c-button--MarginRight: var(--pf-global--spacer--md);
   --pf-c-page__header-sidebar-toggle__c-button--MarginLeft: calc(var(--pf-c-page__header-sidebar-toggle__c-button--PaddingLeft) * -1);
-  --pf-c-page__header-sidebar-toggle__c-button--xl--MarginLeft: calc(var(--pf-c-page__header-sidebar-toggle__c-button--PaddingLeft) * -1); // remove in breaking change release
   --pf-c-page__header-sidebar-toggle__c-button--FontSize: var(--pf-global--FontSize--2xl);
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__header-sidebar-toggle__c-button--MarginLeft: var(--pf-c-page__header-sidebar-toggle__c-button--xl--MarginLeft); // remove in breaking change release
-  }
 
   // Header brand link
   --pf-c-page__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
