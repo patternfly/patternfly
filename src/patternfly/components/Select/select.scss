@@ -39,8 +39,8 @@
   --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
 
   // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: #{pf-size-prem(3px)};
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(3px)};
 
   // The button inside a chip must be adjusted to reduce the padding, which is driving the height of the chip, so it fits within the toggle
   --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop: var(--pf-global--spacer--xs);
