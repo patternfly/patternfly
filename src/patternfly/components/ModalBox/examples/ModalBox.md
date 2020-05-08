@@ -104,17 +104,40 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
+```hbs title=Custom-title
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-custom-title" aria-describedby="modal-custom-description"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+   <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+  {{#> modal-box-header}}
+    {{#> title title--modifier="pf-m-4xl" title--attribute='id="modal-custom-title"'}}Custom title{{/title}}
+  {{/modal-box-header}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-custom-description"'}}
+    To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+  {{/modal-box-body}}
+  {{#> modal-box-footer}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
+```hbs title=Modal-box-as-generic-container
+{{#> modal-box modal-box--attribute='aria-label="Generic modal box container"'}}
+  The modal box children elements can be removed, and the modal serves as a generic modal container. One use case of this is when creating a wizard in a modal.
+{{/modal-box}}
+```
+
 ## Documentation
 ### Overview
-A modal box is a generic rectangular container that can be used to build modals. A modal box can have four sections: title, description, body, and footer. Title or body is required. Alternatively, no sections can be used, and the modal will just serve as a box with no padding for custom modal content. If no `.pf-c-modal-box__title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
+A modal box is a generic rectangular container that can be used to build modals. A modal box can have the following sections: header, title, description, body, and footer. With normal use of the modal, a title or body is required. Alternatively, no child elements can be used, and the `.pf-c-modal-box` container will  serve as a generic container with no padding for custom modal content. If no `.pf-c-modal-box__title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
 
 
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required**|
-| `aria-labelledby="[id value of .pf-c-title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
-| `aria-label="[title of modal]"` | `.pf-c-modal-box` | Gives the modal an accessible name. **Required when `.pf-c-title` is _not_ present** |
+| `aria-labelledby="[id value of .pf-c-modal-box__title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
+| `aria-label="[title of modal]"` | `.pf-c-modal-box` | Gives the modal an accessible name. **Required when `.pf-c-modal-box__title` is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
 | `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
@@ -125,7 +148,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 | -- | -- | -- |
 | `.pf-c-modal-box` | `<div>` | Initiates a modal box. **Required** |
 | `.pf-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. |
-| `.pf-c-modal-box__header` | `<header>` | Initiates a modal box header. |
+| `.pf-c-modal-box__header` | `<header>` | Initiates a modal box header. **Required** if using a `.pf-c-modal-box__title`. |
 | `.pf-c-modal-box__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` | Initiates a modal box title. |
 | `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. A modal title is **required** if using a modal description. |
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. A modal box body is **required** if there is no modal box title. |
