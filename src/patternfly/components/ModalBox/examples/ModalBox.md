@@ -122,8 +122,8 @@ cssPrefix: pf-c-modal-box
 ```
 
 ```hbs title=Modal-box-as-generic-container
-{{#> modal-box modal-box--attribute='aria-label="Generic modal box container"'}}
-  The modal box children elements can be removed, and the modal serves as a generic modal container. One use case of this is when creating a wizard in a modal.
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-generic-container-description"'}}
+  <p id="modal-generic-container-description">The modal box children elements can be removed, and the modal serves as a generic modal container. One use case of this is when creating a wizard in a modal.</p>
 {{/modal-box}}
 ```
 
