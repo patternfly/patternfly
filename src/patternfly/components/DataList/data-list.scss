@@ -159,6 +159,7 @@
 
   @include pf-t-light;
 
+  overflow-wrap: break-word;
   list-style-type: disc;
   border-top: var(--pf-c-data-list--BorderTopWidth) solid var(--pf-c-data-list--BorderTopColor);
 
