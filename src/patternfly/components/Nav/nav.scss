@@ -167,7 +167,10 @@
   --pf-c-nav__section__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav__section__link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-nav__section__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-nav__section__link--xl--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-nav__section__link--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__section__link--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-nav__section__link--before--BorderBottomWidth: 0;
   --pf-c-nav__section__link--hover--after--BorderColor: transparent;
   --pf-c-nav__section__link--focus--after--BorderColor: transparent;
   --pf-c-nav__section__link--active--after--BorderColor: transparent;
@@ -598,6 +601,7 @@
   --pf-c-nav__link--FontSize: var(--pf-c-nav__section__link--FontSize);
 
   // Borders
+  --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__section__link--before--BorderBottomWidth);
   --pf-c-nav__link--hover--after--BorderColor: var(--pf-c-nav__section__link--hover--after--BorderColor);
   --pf-c-nav__link--focus--after--BorderColor: var(--pf-c-nav__section__link--focus--after--BorderColor);
   --pf-c-nav__link--active--after--BorderColor: var(--pf-c-nav__section__link--active--after--BorderColor);
