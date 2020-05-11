@@ -8,7 +8,11 @@
   {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
   {{#if table-th--selected}} pf-m-selected{{/if}}"
   {{#if table--grid}}
-    role="columnheader"
+    {{#if table-th--isRowHeader}}
+      role="rowheader"
+    {{else}}
+      role="columnheader"
+    {{/if}}
   {{/if}}
   {{#if table-th--sortable}}
     {{#if table-th--asc}}

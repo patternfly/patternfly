@@ -50,10 +50,11 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   --pf-c-form-control--disabled--BorderColor: transparent;
 
   // input readonly style
-  --pf-c-form-control--readonly--focus--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-form-control--readonly--focus--PaddingBottom: var(--pf-c-form-control--PaddingBottom);
+  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-form-control--readonly--hover--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-form-control--readonly--focus--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
   --pf-c-form-control--readonly--focus--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--disabled-color--100);
+  --pf-c-form-control--readonly--focus--BorderBottomColor: var(--pf-global--BorderColor--200);
 
   // Input m-invalid
   --pf-c-form-control--invalid--BorderBottomWidth: var(--pf-global--BorderWidth--md);
@@ -118,14 +119,18 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   }
 
   &[readonly] {
-    &,
-    &:hover:not(.pf-m-success):not([aria-invalid="true"]),
-    &:focus:not(.pf-m-success):not([aria-invalid="true"]) {
-      --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
+    background-color: var(--pf-c-form-control--readonly--BackgroundColor);
 
-      padding-bottom: var(--pf-c-form-control--readonly--focus--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-      background-color: var(--pf-c-form-control--readonly--focus--BackgroundColor);
-      border-bottom-width: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
+    &:not(.pf-m-success):not([aria-invalid="true"]) {
+      &:hover {
+        --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--hover--BorderBottomColor);
+      }
+
+      &:focus {
+        --pf-c-form-control--focus--PaddingBottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
+        --pf-c-form-control--focus--BorderBottomWidth: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
+        --pf-c-form-control--focus--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
+      }
     }
   }
 

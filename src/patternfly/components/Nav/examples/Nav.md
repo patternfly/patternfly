@@ -35,13 +35,13 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Grouped
+```hbs title=Grouped-nav
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
       Section title 1
     {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple"}}
+    {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -63,7 +63,7 @@ import './Nav.css'
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
       Section title 2
     {{/nav-section-title}}
-    {{#> nav-list nav-list--type="simple"}}
+    {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
           Link 1
@@ -92,7 +92,7 @@ import './Nav.css'
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Current link
@@ -117,7 +117,7 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -136,7 +136,7 @@ import './Nav.css'
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -165,7 +165,7 @@ import './Nav.css'
         {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title1"'}}
           Current and expanded example sub-navigation
         {{/nav-subnav-title}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Current link
@@ -192,7 +192,7 @@ import './Nav.css'
         {{#> nav-subnav-title nav-subnav-title--attribute='id="subnav-title2"'}}
           Expanded, but not current example sub-navigation
         {{/nav-subnav-title}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -223,7 +223,7 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link2"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -242,7 +242,7 @@ import './Nav.css'
         Link 3 (current, but not expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -265,139 +265,115 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Horizontal-in-masthead
-{{#> page}}
-  {{#> page-header}}
-    {{#> page-header-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
-        {{#> nav-list nav-list--type="horizontal"}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Item 3
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-header-nav}}
-  {{/page-header}}
-{{/page}}
+```hbs title=Horizontal
+{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 3
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
 ```
 
-```hbs title=Horizontal-in-masthead-overflow
-{{#> page}}
-  {{#> page-header}}
-    {{#> page-header-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
-        {{#> nav-list nav-list--type="horizontal"}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Horizontal nav item 5
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-header-nav}}
-  {{/page-header}}
-{{/page}}
+```hbs title=Horizontal-overflow
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 4
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Horizontal nav item 5
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
 ```
 
 ```hbs title=Tertiary
-{{#> page}}
-  {{#> page-main}}
-    {{#> page-main-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Local"'}}
-        {{#> nav-list nav-list--type="tertiary"}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Item 3
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-main-nav}}
-  {{/page-main}}
-{{/page}}
+{{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 3
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
 ```
 
 ```hbs title=Tertiary-overflow
-{{#> page}}
-  {{#> page-main}}
-    {{#> page-main-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-        {{#> nav-list nav-list--type="tertiary"}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Tertiary nav item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 5
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-main-nav}}
-  {{/page-main}}
-{{/page}}
+{{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Tertiary nav item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 4
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Tertiary nav item 5
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
 ```
 
-```hbs title=Default-light-mode
+```hbs title=Default-in-light-mode
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -432,7 +408,7 @@ import './Nav.css'
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Current link
@@ -457,7 +433,7 @@ import './Nav.css'
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -476,7 +452,7 @@ import './Nav.css'
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
-        {{#> nav-list nav-list--type="simple"}}
+        {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Subnav link 1
@@ -495,15 +471,15 @@ import './Nav.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 The navigation system relies on several different sub-components:
 
 * `.pf-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
-* `.pf-c-nav__simple-list` - nav list simple is used within `.pf-c-nav__subnav` in expandable navigation.
-* `.pf-c-nav__horizontal-list` - nav list horizontal is a shareable component that can be used within the page header, as primary navigation, or as tertiary navigation, when expandable, vertical navigation is implemented.
-* `.pf-c-nav__tertiary-list` - nav list tertiary is a component that can be used within `<main>`, as third level navigation (tertiary navigation), when expandable, vertical navigation is implemented.
 
 ### Accessibility
+
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
@@ -515,23 +491,23 @@ The navigation system relies on several different sub-components:
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
 
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-nav` | `<nav>` | Initiates a primary nav element. |
 | `.pf-c-nav__subnav` | `<section>` | Initiates a subnav section. |
-| `.pf-c-nav__list` | `<ul>` | Initiates default nav list. |
-| `.pf-c-nav__simple-list` | `<ul>` | Initiates simple nav list. |
-| `.pf-c-nav__item` | `<li>` | Initiates default nav list item. |
-| `.pf-c-nav__scroll-button` | `<button>` | Intitiates a nav scroll button. **Required for horizontal navs** |
-| `.pf-c-nav__link` | `<a>` | Initiates default nav list link. |
+| `.pf-c-nav__list` | `<ul>` | Initiates nav list. |
+| `.pf-c-nav__item` | `<li>` | Initiates nav list item. |
+| `.pf-c-nav__link` | `<a>` | Initiates nav list link. |
 | `.pf-c-nav__section` | `<section>` | Initiates a nav section element. |
 | `.pf-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
-| `.pf-c-nav__toggle` | `<span>` | Initiates a chevron indicating expandability of a `pf-c-nav__list-link`. |
+| `.pf-c-nav__toggle` | `<span>` | Initiates the nav toggle wrapper. |
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
-| `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
+| `.pf-c-nav__scroll-button` | `<button>` | Initiates a nav scroll button. **Required for horizontal navs** |
+| `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal variation. |
+| `.pf-m-tertiary` | `.pf-c-nav` | Modifies nav for the tertiary variation. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
+| `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state. |
-| `.pf-m-start` | `.pf-c-nav` | Modifiers the nav to show the overflow at the start. |
-| `.pf-m-end` | `.pf-c-nav` | Modifiers the nav to show the overflow at the end. |

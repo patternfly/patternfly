@@ -117,7 +117,7 @@
 
   // Table toggle icons
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
-  --pf-c-table__toggle--m-expanded__icon--Transform: rotate(180deg);
+  --pf-c-table__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
 // Check table cell
@@ -131,7 +131,7 @@
   border: none;
 
   // reset cell modifications
-  &.pf-c-table tr > * {
+  tr > * {
     width: auto;
     min-width: 0;
     max-width: none;
@@ -143,7 +143,6 @@
   // apply modifications to text
   .pf-c-table__text {
     position: relative;
-    display: block;
     width: auto;
     min-width: 0;
     max-width: none;
@@ -220,14 +219,6 @@
     }
   }
 
-  // Remove min-height on buttons
-  td.pf-c-table__compound-expansion-toggle,
-  th.pf-c-table__compound-expansion-toggle {
-    .pf-c-button {
-      min-height: 0;
-    }
-  }
-
   &.pf-m-compact {
     --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table--m-compact-tr--responsive--PaddingTop);
     --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table--m-compact-tr--responsive--PaddingBottom);
@@ -254,22 +245,16 @@
     // default pf-hidden-visible() mixin is called in table.scss. redefining variable here
     --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
-    // responsive layout, set td to two column grid
     grid-column: 1;
     grid-column-gap: var(--pf-c-table-td--responsive--GridColumnGap);
-    align-items: start;
 
-    // @mobile, breakpoint small
-    @media screen and (min-width: $pf-global--breakpoint--xs) {
-      grid-template-columns: 1fr 1.5fr;
-      grid-column: 1;
-    }
+    // use minmax func to contain possible text modifier width
+    grid-template-columns: 1fr minmax(0, 1.5fr);
+    align-items: start;
 
     // set contents of td to start at column two of td grid
     > * {
-      @media screen and (min-width: $pf-global--breakpoint--xs) {
-        grid-column: 2;
-      }
+      grid-column: 2;
     }
 
     &::before {
@@ -328,10 +313,10 @@
 
     &.pf-m-expanded {
       --pf-c-table--tbody--after--BorderLeftWidth: var(--pf-c-table--tbody--after--BorderWidth);
-    }
 
-    > tr > * {
-      overflow: hidden;
+      & tbody {
+        --pf-c-table--tbody--after--BorderLeftWidth: 0;
+      }
     }
 
     > tr > :first-child:not(.pf-c-table__check)::before {
@@ -454,7 +439,7 @@
     transition: var(--pf-c-table__toggle__icon--Transition);
 
     .pf-c-button.pf-m-expanded > & {
-      transform: var(--pf-c-table__toggle--m-expanded__icon--Transform);
+      transform: rotate(var(--pf-c-table__toggle--m-expanded__icon--Rotate));
     }
   }
 

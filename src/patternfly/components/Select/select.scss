@@ -18,12 +18,12 @@
   --pf-c-select__toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--active--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--m-expanded--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-select__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-select__toggle--m-plain--before--BorderColor: transparent;
 
@@ -35,12 +35,8 @@
   --pf-c-select__toggle-wrapper--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
 
   // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: var(--pf-global--spacer--xs);
-
-  // The button inside a chip must be adjusted to reduce the padding, which is driving the height of the chip, so it fits within the toggle
-  --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginTop: #{pf-size-prem(5px)};
+  --pf-c-select__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(5px)};
 
   // Select input for typeahead
   --pf-c-select__toggle-typeahead--FlexBasis: 10em;
@@ -65,7 +61,7 @@
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Transform: rotate(180deg);
+  --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate: 180deg;
 
   // Toggle button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--sm);
@@ -80,7 +76,7 @@
   --pf-c-select__menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-select__menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --pf-c-select__menu--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-select__menu--m-top--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
+  --pf-c-select__menu--m-top--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu item
   --pf-c-select__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -102,7 +98,7 @@
   --pf-c-select__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-select__menu-item-icon--Right: var(--pf-global--spacer--md);
   --pf-c-select__menu-item-icon--Top: 50%;
-  --pf-c-select__menu-item-icon--Transform: translateY(-50%);
+  --pf-c-select__menu-item-icon--TranslateY: -50%;
 
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
@@ -262,7 +258,7 @@
   }
   // stylelint-disable-next-line
   .pf-c-select.pf-m-top.pf-m-expanded & {
-    transform: var(--pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Transform);
+    transform: rotate(var(--pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate));
   }
 }
 
@@ -288,10 +284,10 @@
     margin-right: var(--pf-c-select__toggle-wrapper--not-last-child--MarginRight);
   }
 
-  // need to reduce the padding, which is driving the height of the chip, so it fits within the toggle
-  .pf-c-chip .pf-c-button {
-    padding-top: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingTop);
-    padding-bottom: var(--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom);
+  // Remove during breaking change
+  // if there is an input in the toggle-wrapper, then give it a negative top margin to match the typeahead top padding
+  > .pf-c-form-control {
+    margin-top: calc(-1 * var(--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop));
   }
 
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
@@ -352,7 +348,7 @@
 
   .pf-c-select.pf-m-top & {
     top: 0;
-    transform: var(--pf-c-select__menu--m-top--Transform);
+    transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
   }
 }
 
@@ -402,7 +398,7 @@
   right: var(--pf-c-select__menu-item-icon--Right);
   font-size: var(--pf-c-select__menu-item-icon--FontSize);
   color: var(--pf-c-select__menu-item-icon--Color);
-  transform: var(--pf-c-select__menu-item-icon--Transform);
+  transform: translateY(var(--pf-c-select__menu-item-icon--TranslateY));
 }
 
 .pf-c-select__menu-item--match {

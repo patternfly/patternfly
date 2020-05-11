@@ -222,12 +222,12 @@ import './Toolbar.css'
   {{/toolbar-content}}
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
     {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
-      {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id=(concat toolbar--id '-group1-')}}
-        {{#> chip-group-list-item}}
-          {{#> chip-group-label}}
-            Status
-          {{/chip-group-label}}
-          {{#> chip-group chip-group--modifier=""}}
+      {{#> chip-group chip-group--modifier="pf-m-category"}}
+        {{#> chip-group-label chip-group-label--attribute=(concat 'id="' toolbar--id '-chip-group-label"')}}
+          Status
+        {{/chip-group-label}}
+        {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' toolbar--id '-chip-group-label"')}}
+          {{#> chip-group-list-item}}
             {{#> chip}}
               {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
                 Cancelled
@@ -236,6 +236,8 @@ import './Toolbar.css'
                 <i class="fas fa-times" aria-hidden="true"></i>
               {{/button}}
             {{/chip}}
+          {{/chip-group-list-item}}
+          {{#> chip-group-list-item}}
             {{#> chip}}
               {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
                 Paused
@@ -244,6 +246,8 @@ import './Toolbar.css'
                 <i class="fas fa-times" aria-hidden="true"></i>
               {{/button}}
             {{/chip}}
+          {{/chip-group-list-item}}
+          {{#> chip-group-list-item}}
             {{#> chip}}
               {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
                 Restarted
@@ -252,8 +256,8 @@ import './Toolbar.css'
                 <i class="fas fa-times" aria-hidden="true"></i>
               {{/button}}
             {{/chip}}
-          {{/chip-group}}
-        {{/chip-group-list-item}}
+          {{/chip-group-list-item}}
+        {{/chip-group-list}}
       {{/chip-group}}
     {{/toolbar-item}}
     {{> toolbar-item-clear}}
@@ -299,12 +303,12 @@ import './Toolbar.css'
         {{/select}}
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
-        {{#> chip-group chip-group--id="toolbar-chip-group-one" chip-group--modifier="pf-m-category"}}
-          {{#> chip-group-list-item}}
-            {{#> chip-group-label}}
-              Status
-            {{/chip-group-label}}
-            {{#> chip-group newcontext}}
+        {{#> chip-group chip-group--modifier="pf-m-category"}}
+          {{#> chip-group-label chip-group-label--attribute=(concat 'id="' toolbar--id '-chip-group-label"')}}
+            Status
+          {{/chip-group-label}}
+          {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby=" 'toolbar--id '-chip-group-label"')}}
+            {{#> chip-group-list-item}}
               {{#> chip}}
                 {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
                   Cancelled
@@ -313,6 +317,8 @@ import './Toolbar.css'
                   <i class="fas fa-times" aria-hidden="true"></i>
                 {{/button}}
               {{/chip}}
+            {{/chip-group-list-item}}
+            {{#> chip-group-list-item}}
               {{#> chip}}
                 {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-two"')}}
                   Paused
@@ -321,6 +327,8 @@ import './Toolbar.css'
                   <i class="fas fa-times" aria-hidden="true"></i>
                 {{/button}}
               {{/chip}}
+            {{/chip-group-list-item}}
+            {{#> chip-group-list-item}}
               {{#> chip}}
                 {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-three"')}}
                   Restarted
@@ -329,8 +337,8 @@ import './Toolbar.css'
                   <i class="fas fa-times" aria-hidden="true"></i>
                 {{/button}}
               {{/chip}}
-            {{/chip-group}}
-          {{/chip-group-list-item}}
+            {{/chip-group-list-item}}
+          {{/chip-group-list}}
         {{/chip-group}}
       {{/toolbar-item}}
       {{/toolbar-group}}
