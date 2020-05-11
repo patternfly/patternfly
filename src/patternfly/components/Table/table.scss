@@ -60,7 +60,7 @@
 
   // Truncate
   --pf-c-table--m-truncate--cell--MaxWidth: 1px;
-  --pf-c-table--m-truncate--cell--MinWidth: 9ch;
+  --pf-c-table--m-truncate--cell--MinWidth: calc(5ch + var(--pf-c-table--cell--PaddingRight) + var(--pf-c-table--cell--PaddingLeft));
 
   // Hidden visible
   --pf-c-table--cell--hidden-visible--Display: table-cell;
@@ -124,7 +124,7 @@
   --pf-c-table__icon-inline--MarginRight: var(--pf-global--spacer--sm);
 
   // Sort cell
-  --pf-c-table__sort--MinWidth: 12ch;
+  --pf-c-table__sort--MinWidth: calc(6ch + var(--pf-c-table--cell--PaddingRight) + var(--pf-c-table--cell--PaddingLeft) + var(--pf-c-table__sort-indicator--MarginLeft));
 
   // Sort button
   --pf-c-table__sort__button--Color: var(--pf-global--Color--100);
@@ -262,7 +262,6 @@
   thead {
     --pf-c-table--cell--FontSize: var(--pf-c-table--thead--cell--FontSize);
     --pf-c-table--cell--FontWeight: var(--pf-c-table--thead--cell--FontWeight);
-    --pf-c-table--cell--Width: var(--pf-c-table--thead--cell--Width);
 
     vertical-align: bottom;
   }
@@ -460,6 +459,10 @@
     text-overflow: var(--pf-c-table--cell--TextOverflow);
     white-space: var(--pf-c-table--cell--WhiteSpace);
   }
+}
+
+.pf-c-table__sort .pf-c-table__text {
+  --pf-c-table--cell--MinWidth: 0;
 }
 
 // Sort content
