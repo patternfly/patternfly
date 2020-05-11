@@ -47,6 +47,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-tools--xl--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-page__header-tools-group--Display: flex;
+  --pf-c-page__header-tools-item--Display: block;
 
   // Header tools group button
   --pf-c-page__header-tools--c-button--m-selected--before--Width: #{pf-size-prem(36px)};
@@ -231,19 +233,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 // Header tools
 .pf-c-page__header-tools {
   grid-column: 2 / 3;
-  align-items: center;
   margin-right: var(--pf-c-page__header-tools--MarginRight);
   margin-left: auto; // to push it to the right
-
-  .pf-m-icons {
-    display: none;
-    visibility: hidden;
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: block;
-      visibility: visible;
-    }
-  }
 
   .pf-c-button {
     &.pf-m-selected {
@@ -275,25 +266,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     }
   }
 
-  .pf-m-mobile {
-    margin-right: 0;
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  .pf-m-user {
-    display: none;
-    visibility: hidden;
-
-    @media screen and (min-width: $pf-global--breakpoint--md) {
-      display: block;
-      visibility: visible;
-    }
-  }
-
   .pf-c-avatar {
     margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
   }
@@ -304,11 +276,17 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 .pf-c-page__header-tools-group {
-  display: flex;
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
+
+  align-items: center;
 
   & + & {
     margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
   }
+}
+
+.pf-c-page__header-tools-item {
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
 }
 
 // Sidebar

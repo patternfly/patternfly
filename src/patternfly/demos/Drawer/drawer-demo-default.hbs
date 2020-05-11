@@ -15,9 +15,9 @@
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#if drawer-panel--IsOpen}}
-      {{> page-template-header-tools-elements page-template-header-tools-elements--button--modifier='pf-m-selected' page-template-header-tools-elements--button--attribute='aria-expanded="true"'}}
+      {{> page-template-header-tools-elements page-header-tools--IsNotification="true" page-header-tools--IsNotificationSelected="true"}}
     {{else}}
-      {{> page-template-header-tools-elements page-template-header-tools-elements--button--attribute='aria-expanded="false"'}}
+      {{> page-template-header-tools-elements page-header-tools--IsNotification="true"}}
     {{/if}}
   {{/page-header}}
   {{!-- Nav --}}
