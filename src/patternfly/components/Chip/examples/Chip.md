@@ -56,7 +56,7 @@ cssPrefix: pf-c-chip
 
 ## Documentation
 ### Overview
-A Chip is used to display items that have been filtered or selected from a larger group. They comprise of a text element and a button component that is used to remove the chip from selection. When the text overflows it is truncated using ellipses. A chip can be grouped by using the "chip-group" layout. 
+A Chip is used to display items that have been filtered or selected from a larger group. They comprise of a text element and a button component that is used to remove the chip from selection. When the text overflows it is truncated using ellipses. A chip can be grouped by using the "chip-group" layout.
 
 
 ## Accessibility
@@ -69,9 +69,8 @@ A Chip is used to display items that have been filtered or selected from a large
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip` | `<div>`, `<button>`, `<li>` | Initiates the body of a chip. If used inside a `.pf-c-chip-group` use `<li>`. |
-| `.pf-c-chip__text` | `*` | Initiates the text inside of the chip. **Required.** |
-| `.pf-c-button` | `.pf-c-chip <button>` | Initiates the button used to remove the chip. **Required.** |
+| `.pf-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
+| `.pf-c-chip__text` | `<span>` | Initiates the text inside of the chip. **Required** |
+| `.pf-c-button` | `.pf-c-chip <button>` | Initiates the button used to remove the chip. |
 | `.pf-c-badge` | `<span>` | Initiates the badge inside the chip. |
 | `.pf-m-overflow` | `button.pf-c-chip` | Applies styling of the overflow chip. |
-| `.pf-c-button` | `.pf-c-chip.pf-m-overflow <button>` | Initiates the button used to show the overflow toggle. |
