@@ -9,20 +9,16 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--before--BorderRightWidth: 0;
   --pf-c-tabs--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
   --pf-c-tabs--before--BorderLeftWidth: 0;
-  --pf-c-tabs--Transition: padding .125s;
+  --pf-c-tabs--m-vertical--inset: var(--pf-global--spacer--lg);
 
   // Vertical
-  --pf-c-tabs--m-vertical--inset: var(--pf-global--spacer--lg);
   --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
+  --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
 
   // Box
-  --pf-c-tabs--m-box--inset: 0;
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
   --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--xl--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
-
-  // Vertical box
-  --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
 
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
@@ -92,7 +88,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   padding-right: var(--pf-c-tabs--inset);
   padding-left: var(--pf-c-tabs--inset);
   overflow: hidden;
-  transition: var(--pf-c-tabs--Transition);
 
   &::before {
     position: absolute;
@@ -157,7 +152,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
     --pf-c-tabs__link--after--Top: 0;
     --pf-c-tabs__link--after--Bottom: auto;
-    --pf-c-tabs--inset: var(--pf-c-tabs--m-box--inset);
 
     // Set hover on top border
     .pf-c-tabs__link {
@@ -457,6 +451,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       @each $spacer, $spacer-value in $pf-c-tabs--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --pf-c-tabs--inset: #{$spacer-value};
+          --pf-c-tabs--m-vertical--inset: #{$spacer-value};
+          --pf-c-tabs--m-vertical--m-box--inset: #{$spacer-value};
 
           @if $spacer == none {
             --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
