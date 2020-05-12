@@ -18,7 +18,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Box
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
   --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
-  --pf-c-tabs--m-box__item--m-current--first-child__link--before--xl--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
 
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
