@@ -183,7 +183,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
     }
 
-    // Collapse left border into scroll button when expanded
+    // Collapse left border into list when expanded
     &.pf-m-scrollable .pf-c-tabs__scroll-button:nth-of-type(2)::before {
       left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
     }
