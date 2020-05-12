@@ -1916,6 +1916,104 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
+```hbs title=Sticky-header
+{{#> table table--id="table-sticky-header" table--grid="true" table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 ### Usage
 
 | Class | Applied to | Outcome |
@@ -1955,3 +2053,4 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 | -- | -- | -- |
 | `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
 | `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
+| `.pf-m-sticky-header` | `.pf-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |

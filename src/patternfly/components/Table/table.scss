@@ -200,6 +200,31 @@
     table-layout: fixed;
   }
 
+  &.pf-m-sticky-header {
+    position: relative;
+
+    > thead > tr {
+      border-bottom: 0;
+
+      > * {
+        position: sticky;
+        top: 0;
+        z-index: var(--pf-global--ZIndex--xs);
+        background: var(--pf-c-table--BackgroundColor);
+
+        // stylelint-disable-next-line
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+          border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+        }
+      }
+    }
+  }
+
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
