@@ -130,17 +130,17 @@ cssPrefix: pf-c-tabs
 | `.pf-m-fill`  | `.pf-c-tabs` | Modifies the tabs to fill the available space. **Required** |
 
 ```hbs title=Using-the-nav-element
-{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-link--type="a"}}
+{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-link--isLink="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 ```
 
 ```hbs title=Sub-nav-using-the-nav-element
-{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-link--type="a"}}
+{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-link--isLink="true"}}
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-link--type="a" tabs--modifier="pf-m-secondary"}}
+{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
   {{> __tabs-list-secondary}}
 {{/tabs}}
 ```
