@@ -473,6 +473,14 @@
   justify-content: start;
   grid-template-columns: auto;
   grid-auto-columns: max-content;
+
+  .pf-m-nowrap & {
+    grid-template-columns: min-content auto;
+  }
+
+  .pf-m-truncate & {
+    grid-template-columns: auto;
+  }
 }
 
 // Toggle, check, action - minimize padding.
