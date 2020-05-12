@@ -1,6 +1,6 @@
-<li {{#if chip-group-list-item--modifier}}class="{{chip-group-list-item--modifier}}"{{/if}}
-  {{#if chip-group-label--attribute}}
-    {{{chip-group-label--attribute}}}
+<li class="pf-c-chip-group__list-item{{#if chip-group-list-item--modifier}} {{chip-group-list-item--modifier}}{{/if}}"
+  {{#if chip-group-list-item--attribute}}
+    {{{chip-group-list-item--attribute}}}
   {{/if}}>
   {{> @partial-block}}
 </li>

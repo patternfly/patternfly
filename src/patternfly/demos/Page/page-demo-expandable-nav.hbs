@@ -26,7 +26,7 @@
             System panel
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-expandable-nav-link1"')}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Overview
@@ -42,11 +42,7 @@
                   Hypervisors
                 {{/nav-link}}
               {{/nav-item}}
-              {{#if page--IsLegacySeparators}}
-                {{#> nav-separator}}{{/nav-separator}}
-              {{else}}
-                {{#> divider divider--type="li"}}{{/divider}}
-              {{/if}}
+              {{#> divider divider--type="li"}}{{/divider}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Instances
@@ -70,7 +66,7 @@
             Policy
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-expandable-nav-link2"')}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
@@ -84,17 +80,12 @@
             {{/nav-list}}
           {{/nav-subnav}}
         {{/nav-item}}
-        {{#if page--IsLegacySeparators}}
-          {{#> nav-separator}}{{/nav-separator}}
-        {{else}}
-          {{#> divider divider--type="li"}}{{/divider}}
-        {{/if}}
         {{#> nav-item nav-item--expandable="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' page--id '-expandable-nav-link3"')}}
             Authentication
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' page--id '-expandable-nav-link3"')}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Subnav link 1

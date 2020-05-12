@@ -1,4 +1,4 @@
-<a href="{{nav-link--href}}" class="pf-c-nav__link{{#if nav-link--current}} pf-m-current{{/if}}{{#if nav-link--disabled}} pf-m-disabled{{/if}}{{#if nav-link--modifier}} {{nav-link--modifier}}{{/if}}"
+<a href="{{nav-link--href}}" class="pf-c-nav__link{{#if nav-link--current}} pf-m-current{{/if}}{{#if nav-link--modifier}} {{nav-link--modifier}}{{/if}}"
   {{#if nav-link--attribute}}
     {{{nav-link--attribute}}}
   {{/if}}
@@ -14,8 +14,6 @@
   {{/if}}>
   {{> @partial-block}}
   {{#if nav-item--expandable}}
-    {{#> nav-toggle}}
-      {{#> nav-toggle-icon}}{{/nav-toggle-icon}}
-    {{/nav-toggle}}
+    {{> nav-toggle}}
   {{/if}}
 </a>

@@ -20,9 +20,13 @@
 }
 
 #ws-core-c-dropdown-with-groups,
-#ws-core-c-dropdown-with-groups-and-separators-between-groups,
-#ws-core-c-dropdown-with-groups-and-separators-between-items {
+#ws-core-c-dropdown-with-groups-and-dividers-between-groups,
+#ws-core-c-dropdown-with-groups-and-dividers-between-items {
   min-height: 440px;
+}
+
+#ws-core-c-dropdown-dropdown-with-image-and-text .ws-preview-html {
+  min-height: 19rem;
 }
 
 #ws-core-c-dropdown-split-button-checkbox,

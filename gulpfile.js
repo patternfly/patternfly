@@ -5,15 +5,14 @@ const { copyFA, copySource, copyAssets, copyDocs } = require('./build/gulp/copy'
 const { compileSASS, minifyCSS, watchSASS } = require('./build/gulp/sass');
 const { pfIconFont, pfIcons } = require('./build/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./build/gulp/html');
-const { buildIE11 } = require('./build/gulp/ie11');
 const { lintCSSComments, lintCSSFunctions } = require('./build/gulp/lint');
 const { generateSnippets } = require('./build/gulp/snippets');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
+  './src/patternfly/base/patternfly*.scss',
   './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
-  '!./src/patternfly/**/_all.scss',
-  '!./src/patternfly/patternfly-imports.scss'
+  '!./src/patternfly/**/_all.scss'
 ];
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
@@ -92,7 +91,6 @@ module.exports = {
   develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
   compileSASS: compileSrcSASS,
   minifyCSS,
-  buildIE11,
   watchSASS: watchSrcSASS,
   watchHBS: watchSrcHBS,
   watchMD: watchSrcMD,

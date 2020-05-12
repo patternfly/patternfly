@@ -26,25 +26,17 @@ import './Button.css'
 <br>
 <br>
 {{#> button button--modifier="pf-m-link"}}
-  {{#> button-icon}}
+  {{#> button-icon button-icon--modifier="pf-m-start"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-  {{#> button-text}}
-    Link
-  {{/button-text}}
+  Link
 {{/button}}
 
 {{#> button button--modifier="pf-m-link"}}
-  {{#> button-text}}
-    Link
-  {{/button-text}}
-  {{#> button-icon}}
+  Link
+  {{#> button-icon button-icon--modifier="pf-m-end"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 
 {{#> button button--modifier="pf-m-inline pf-m-link"}}
@@ -52,6 +44,10 @@ import './Button.css'
 {{/button}}
 <br>
 <br>
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+<br><br>
 {{#> button button--modifier="pf-m-control"}}
   Control
 {{/button}}
@@ -61,150 +57,40 @@ import './Button.css'
 {{/button}}
 ```
 
-```hbs title=States
-{{#> button button--modifier="pf-m-primary"}}
-  Primary
-{{/button}}
-
-{{#> button button--modifier="pf-m-primary pf-m-focus"}}
-  Primary focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-primary pf-m-active"}}
-  Primary active
-{{/button}}
-
+```hbs title=Disabled
 {{#> button button--modifier="pf-m-primary" button--attribute="disabled"}}
   Primary disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-secondary"}}
-  Secondary
-{{/button}}
-
-{{#> button button--modifier="pf-m-secondary pf-m-focus"}}
-  Secondary focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-secondary pf-m-active"}}
-  Secondary active
-{{/button}}
-
 {{#> button button--modifier="pf-m-secondary" button--attribute="disabled"}}
   Secondary disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-tertiary"}}
-  Tertiary
-{{/button}}
-
-{{#> button button--modifier="pf-m-tertiary pf-m-focus"}}
-  Tertiary focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-tertiary pf-m-active"}}
-  Tertiary active
-{{/button}}
-
 {{#> button button--modifier="pf-m-tertiary" button--attribute="disabled"}}
   Tertiary disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-danger"}}
-  Danger
-{{/button}}
-
-{{#> button button--modifier="pf-m-danger pf-m-focus"}}
-  Danger focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-danger pf-m-active"}}
-  Danger active
-{{/button}}
-
 {{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
   Danger disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-link"}}
-  {{#> button-icon}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-  Link
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-focus"}}
-  {{#> button-icon}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-  Link focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-active"}}
-  {{#> button-icon}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-  Link active
-{{/button}}
-
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
-  {{#> button-icon}}
+  {{#> button-icon button-icon--modifier="pf-m-start"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link disabled
 {{/button}}
 <br>
 <br>
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain pf-m-focus" button--attribute='aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
-<br>
-<br>
-{{#> button button--modifier="pf-m-link pf-m-inline pf-m-inline"}}
-  Inline link
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-focus pf-m-inline"}}
-  Inline link focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-active pf-m-inline"}}
-  Inline link active
-{{/button}}
-
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
   Inline link disabled
 {{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove" disabled'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
 <br>
 <br>
-{{#> button button--modifier="pf-m-control"}}
-  Control
-{{/button}}
-
-{{#> button button--modifier="pf-m-control pf-m-focus"}}
-  Control focus
-{{/button}}
-
-{{#> button button--modifier="pf-m-control pf-m-active"}}
-  Control active
-{{/button}}
-
-{{#> button button--modifier="pf-m-control pf-m-expanded"}}
-  Control expanded
-{{/button}}
-
 {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
   Control disabled
 {{/button}}
@@ -259,14 +145,14 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `aria-label="[link description]"` | `a.pf-c-button` | The link text should adequately describe the link's purpose. If it does not, aria-label can provide more detailed interaction information. |
 | `disabled` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
 | `aria-disabled="true"` | `a.pf-c-button` | When a link element is used, indicates that it is unavailable. **Required when link is disabled** |
+| `aria-expanded="true"` | `.pf-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required**|
 | `tabindex="-1"` | `a.pf-c-button` | When a link element is used, removes it from keyboard focus. **Required when link is disabled** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
-| `.pf-c-button__icon` | `<span>` | Applies right spacing to an icon inside of the button when the icon is followed by text. |
-| `.pf-c-button__text` | `<span>` | Applies left spacing to an icon inside of a button when the icon comes after text. |
+| `.pf-c-button__icon` | `<span>` | Initiates a button icon. |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
@@ -277,6 +163,6 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
 | `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies a control button for the expanded state. |
-| `.pf-m-hover` | `.pf-c-button` | Forces display of the hover state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class.  |
-| `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class.  |
-| `.pf-m-focus` | `.pf-c-button` | Forces display of the focus state of the button. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class.  |
+| `.pf-m-start` | `.pf-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
+| `.pf-m-end` | `.pf-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
+| `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |

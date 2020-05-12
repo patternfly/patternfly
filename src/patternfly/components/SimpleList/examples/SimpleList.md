@@ -126,6 +126,3 @@ cssPrefix: pf-c-simple-list
 | `.pf-c-simple-list__item` | `<li>` | Initiates a simple list item. |
 | `.pf-c-simple-list__item-link` | `<button>`, `<a>` | Initiates a simple list item link. It can be a button or a link depending on the context. |
 | `.pf-m-current` | `.pf-c-simple-list__item-link` | Modifies the simple list item link for the current state. |
-| `.pf-m-hover` | `.pf-c-simple-list__item-link` | Modifies the simple list item link for the hover state. |
-| `.pf-m-active` | `.pf-c-simple-list__item-link` | Modifies the simple list item link for the active state. |
-| `.pf-m-focus` | `.pf-c-simple-list__item-link` | Modifies the simple list item link for the focus state. |

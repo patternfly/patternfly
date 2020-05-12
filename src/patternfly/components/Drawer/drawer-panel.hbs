@@ -2,11 +2,7 @@
   {{#unless drawer-IsStatic}}
     {{#unless drawer-panel--IsOpen}}
       hidden
-      aria-expanded="false"
     {{/unless}}
-    {{#if drawer-panel--IsOpen}}
-      aria-expanded="true"
-    {{/if}}
   {{/unless}}
   {{#if drawer-panel--attribute}}
     {{{drawer-panel--attribute}}}

@@ -7,13 +7,13 @@
       {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
         Option 2
       {{/options-menu-menu-item}}
-      {{#if options-menu--HasSeparatorsItems}}
-        {{#> options-menu-separator}}{{/options-menu-separator}}
+      {{#if options-menu--HasDividersItems}}
+        {{> divider divider--type="li"}}
       {{/if}}
     </ul>
   {{/options-menu-group}}
-  {{#if options-menu--HasSeparatorsGroups}}
-    {{#> options-menu-separator options-menu-separator--IsHr="true"}}{{/options-menu-separator}}
+  {{#if options-menu--HasDividersGroups}}
+    {{> divider}}
   {{/if}}
   {{#> options-menu-group}}
     {{#> options-menu-group-title}}Group 1{{/options-menu-group-title}}
@@ -24,13 +24,13 @@
       {{#> options-menu-menu-item}}
         Option 2
       {{/options-menu-menu-item}}
-      {{#if options-menu--HasSeparatorsItems}}
-        {{#> options-menu-separator}}{{/options-menu-separator}}
+      {{#if options-menu--HasDividersItems}}
+        {{> divider divider--type="li"}}
       {{/if}}
     </ul>
   {{/options-menu-group}}
-  {{#if options-menu--HasSeparatorsGroups}}
-    {{#> options-menu-separator options-menu-separator--IsHr="true"}}{{/options-menu-separator}}
+  {{#if options-menu--HasDividersGroups}}
+    {{> divider}}
   {{/if}}
   {{#> options-menu-group}}
     {{#> options-menu-group-title}}Group 2{{/options-menu-group-title}}

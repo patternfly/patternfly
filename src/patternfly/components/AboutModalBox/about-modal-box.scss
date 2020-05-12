@@ -173,6 +173,7 @@
   padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
 }
 
+// Strapline
 .pf-c-about-modal-box__strapline {
   padding-top: var(--pf-c-about-modal-box__strapline--PaddingTop);
   margin-top: auto;
@@ -220,7 +221,7 @@
 
   // Close button
   // Since this btn is unique to the about modal, use contextual selectors in this specific instance
-  .pf-c-button {
+  .pf-c-button.pf-m-plain {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,8 +232,7 @@
     background-color: var(--pf-c-about-modal-box__close--c-button--BackgroundColor);
     border-radius: var(--pf-c-about-modal-box__close--c-button--BorderRadius);
 
-    &:hover,
-    &.pf-m-hover {
+    &:hover {
       --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-c-about-modal-box__close--c-button--hover--BackgroundColor);
     }
   }

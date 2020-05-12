@@ -12,21 +12,21 @@ cssPrefix: pf-c-breadcrumb
       {{#> breadcrumb-link}}
         Section home
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link breadcrumb-link--current="true"}}
         Section landing
       {{/breadcrumb-link}}
@@ -40,33 +40,33 @@ cssPrefix: pf-c-breadcrumb
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
         Section home
-        {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link breadcrumb-link--current="true"}}
         Section landing
       {{/breadcrumb-link}}
@@ -82,27 +82,27 @@ cssPrefix: pf-c-breadcrumb
       {{#> breadcrumb-link}}
         Section home
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
-      {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-heading}}
         {{#> breadcrumb-link breadcrumb-link--current="true"}}
           Section title

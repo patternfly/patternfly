@@ -5,11 +5,11 @@ section: demos
 
 ## Demos
 ```hbs title=Default-nav isFullscreen
-{{> page-demo-default page-demo-default--id="page-default-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}
+{{> page-demo-default page-demo-default--id="page-default-nav-example"}}
 ```
 
 ```hbs title=Expandable-nav isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}{{/page-demo-expandable-nav}}
 ```
 
 ```hbs title=Horizontal-nav isFullscreen
@@ -24,39 +24,35 @@ section: demos
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-    {{#> nav nav--modifier="pf-m-end" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
-      {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-      {{/nav-scroll-button}}
-      {{#> nav-list nav-list--type="horizontal"}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 1
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 2
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 3
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Horizontal nav item 4
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Horizontal nav item 5
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-      {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-      {{/nav-scroll-button}}
-    {{/nav}}
+      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+        {{#> nav-list}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Horizontal nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
     {{/page-header-nav}}
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
@@ -93,15 +89,15 @@ section: demos
     {{/page-template-header-tools-elements}}
   {{/page-header}}
 
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')  nav--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
             System panel
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link1"'}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Overview
@@ -118,7 +114,7 @@ section: demos
                 {{/nav-link}}
               {{/nav-item}}
               {{#> nav-item newcontent}}
-                {{#> nav-link nav-link--modifier="pf-m-separator" nav-link--href="#"}}
+                {{#> nav-link nav-link--href="#"}}
                   Instances
                 {{/nav-link}}
               {{/nav-item}}
@@ -140,7 +136,7 @@ section: demos
             Policy
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link2"'}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
@@ -159,7 +155,7 @@ section: demos
             Authentication
           {{/nav-link}}
           {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link3"'}}
-            {{#> nav-list nav-list--type="simple"}}
+            {{#> nav-list}}
               {{#> nav-item newcontent}}
                 {{#> nav-link nav-link--href="#"}}
                   Subnav link 1
@@ -178,10 +174,8 @@ section: demos
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-nav}}
-      {{#> nav nav--modifier="pf-m-start pf-m-end" nav--attribute='aria-label="Local"'}}
-        {{#> nav-scroll-button nav-scroll-button--IsLeft="true"}}
-        {{/nav-scroll-button}}
-        {{#> nav-list nav-list--type="tertiary"}}
+      {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+        {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
               Tertiary nav item 1
@@ -208,8 +202,6 @@ section: demos
             {{/nav-link}}
           {{/nav-item}}
         {{/nav-list}}
-        {{#> nav-scroll-button nav-scroll-button--IsRight="true"}}
-        {{/nav-scroll-button}}
       {{/nav}}
     {{/page-main-nav}}
     {{#> page-template-breadcrumb}}
@@ -241,13 +233,13 @@ section: demos
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
           System panel
         {{/nav-section-title}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Overview
@@ -284,7 +276,7 @@ section: demos
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
           Policy
         {{/nav-section-title}}
-        {{#> nav-list}}
+        {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
               Hosts
@@ -317,16 +309,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Legacy-nav-separators isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-legacy-nav-separators-example" page--IsLegacySeparators="true" page-sidebar--modifier="pf-m-dark" nav--modifier="pf-m-dark"}}{{/page-demo-expandable-nav}}
-```
-
 ```hbs title=Light-theme-sidebar-and-nav isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"}}{{/page-demo-expandable-nav}}
-```
-
-```hbs title=Light-theme-sidebar-and-nav-and-legacy-nav-separators isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-legacy-nav-example" page--IsLegacySeparators="true"}}{{/page-demo-expandable-nav}}
+{{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"  page-sidebar--modifier="pf-m-light" nav--modifier="pf-m-light"}}{{/page-demo-expandable-nav}}
 ```
 
 ## Documentation

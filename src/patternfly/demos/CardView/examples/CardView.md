@@ -26,8 +26,8 @@ section: demos
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{!-- Nav --}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"') nav--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
       {{#> nav-list}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -63,9 +63,6 @@ section: demos
         <h1>Projects</h1>
         <p>This is a demo that showcases Patternfly Cards. </p>
       {{/content}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
-      {{> card-view-demo-toolbar}}
     {{/page-main-section}}
     {{#> page-main-section}}
       {{> card-view-demo-template-gallery}}

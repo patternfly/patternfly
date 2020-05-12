@@ -57,9 +57,6 @@ jobs:
         name: Build Dist
         command: npm run build-patternfly
     - run:
-        name: Build IE11
-        command: npm run build:ie11
-    - run:
         name: Build Site
         command: npm run build:site
     - run:
@@ -102,12 +99,20 @@ jobs:
           name: Lint SASS
           command: npm run lint:sass
       - run:
+          name: Lint HBS
+          command: npm run lint:hbs
+          when: always
+      - run:
           name: Lint JS
           command: npm run lint:js
           when: always
       - run:
           name: Lint CSS
           command: npm run lint:css
+          when: always
+      - run:
+          name: Confirm consumers can compile SASS
+          command: yarn run node-sass dist/patternfly.scss
           when: always
       - run:
           name: Lint CSS Size
@@ -131,9 +136,9 @@ jobs:
     - image: circleci/node:10
     steps:
     - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
+    - run:
+        name: Avoid Unknown Host for github.com
+        command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Release to NPM
-        command: npm run semantic-release
+        command: if [[ -z $CIRCLE_PULL_REQUEST ]]; then npx semantic-release@17.0.4; fi;

@@ -1,6 +1,6 @@
 .ws-lite-index-example {
   padding: 3rem 3rem 5rem 3rem;
-  background-color: var(--pf-global--BackgroundColor--300);
+  background-color: var(--pf-global--BackgroundColor--200);
 }
 
 .ws-lite-index-example > * {
@@ -64,7 +64,7 @@
 }
 
 :not(.ws-lite-example) table code {
-  background: var(--pf-global--BackgroundColor--300);
+  background: var(--pf-global--BackgroundColor--200);
 }
 
 :not(.ws-lite-example) code {
