@@ -60,14 +60,39 @@ cssPrefix: pf-c-alert
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
   {{/alert-title}}
-  {{#> alert-description}}
-    Success alert description. <a href="#">This is a link.</a>
-  {{/alert-description}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/alert-action}}
+   {{#> alert-description}}
+    Success alert description. This should tell the user more information about the alert.
+  {{/alert-description}}
+  {{#> alert-action-group}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      View details
+    {{/button}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Ignore
+    {{/button}}
+  {{/alert-action-group}}
+{{/alert}}
+<br />
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+  {{#> alert-description}}
+    Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
+  {{/alert-description}}
 {{/alert}}
 <br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
@@ -82,6 +107,14 @@ cssPrefix: pf-c-alert
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/alert-action}}
+  {{#> alert-action-group}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      View details
+    {{/button}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Ignore
+    {{/button}}
+  {{/alert-action-group}}
 {{/alert}}
 <br />
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
@@ -89,11 +122,11 @@ cssPrefix: pf-c-alert
   {{/alert-icon}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
-      Success alert title
+    Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action button
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/alert-action}}
 {{/alert}}
@@ -163,14 +196,39 @@ cssPrefix: pf-c-alert
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
   {{/alert-title}}
-  {{#> alert-description}}
-    Success alert description. <a href="#">This is a link.</a>
-  {{/alert-description}}
   {{#> alert-action}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/alert-action}}
+  {{#> alert-description}}
+    Success alert description. This should tell the user more information about the alert.
+  {{/alert-description}}
+  {{#> alert-action-group}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      View details
+    {{/button}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Ignore
+    {{/button}}
+  {{/alert-action-group}}
+{{/alert}}
+<br />
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+  {{#> alert-action}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/alert-action}}
+  {{#> alert-description}}
+    Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
+  {{/alert-description}}
 {{/alert}}
 <br />
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
@@ -185,20 +243,14 @@ cssPrefix: pf-c-alert
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/alert-action}}
-{{/alert}}
-<br />
-{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{#> alert-icon alert-icon--type="check-circle"}}
-  {{/alert-icon}}
-  {{#> alert-title}}
-    {{#> screen-reader}}Success alert:{{/screen-reader}}
-      Success alert title
-  {{/alert-title}}
-  {{#> alert-action}}
-    {{#> button button--modifier="pf-m-link"}}
-      Action button
+  {{#> alert-action-group}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      View details
     {{/button}}
-  {{/alert-action}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Ignore
+    {{/button}}
+  {{/alert-action-group}}
 {{/alert}}
 <br />
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
@@ -237,6 +289,7 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | `.pf-c-alert__title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Defines the alert title. ** Required **|
 | `.pf-c-alert__description` | `<div>` |  Defines the alert description area. |
 | `.pf-c-alert__action` | `<div>` |  Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
+| `.pf-c-alert__action-group` | `<div>` |  Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note: ** only inline link buttons are supported in the alert action group. |
 | `.pf-m-success` | `.pf-c-alert` |  Applies success styling. |
 | `.pf-m-danger` | `.pf-c-alert` |  Applies danger styling. |
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |

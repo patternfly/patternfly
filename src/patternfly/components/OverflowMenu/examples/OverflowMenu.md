@@ -9,7 +9,7 @@ import './OverflowMenu.css'
 ## Introduction
 The overflow menu component condenses actions inside `.pf-c-overflow-menu__content` container into a single dropdown button wrapped in `.pf-c-overflow-menu__control`.
 
-The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.pf-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-data-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
+The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.pf-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
 
 ```hbs title=Simple-collapsed
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple"}}
@@ -276,6 +276,5 @@ The action group consists of a primary and secondary action. Any additional acti
 | `.pf-c-overflow-menu__control` | `<div>` | Initiates the overflow menu control. **Required** |
 | `.pf-c-overflow-menu__group` | `<div>` | Initiates an overflow menu group. |
 | `.pf-c-overflow-menu__item` | `<div>` | Initiates an overflow menu item. **Required** |
-| `.pf-c-overflow-menu__separator` | `<li>` | Defines a separator within the menu. |
 | `.pf-m-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--space-items)`. |
 | `.pf-m-icon-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--spacer)`. Child spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--space-items)`. |

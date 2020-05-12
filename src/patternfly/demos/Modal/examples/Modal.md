@@ -12,14 +12,14 @@ section: demos
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-title"'}}
+        {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
           Overwrite existing file?
-        {{/title}}
+        {{/modal-box-title}}
         {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
         {{/modal-box-body}}
-        {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+        {{#> modal-box-footer}}
           {{#> button button--modifier="pf-m-primary"}}
             Overwrite
           {{/button}}
@@ -41,9 +41,9 @@ section: demos
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-scroll-title"'}}
+        {{#> modal-box-title  modal-box-title--attribute='id="modal-scroll-title"'}}
           This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
-        {{/title}}
+        {{/modal-box-title}}
         {{#> modal-box-description modal-box-description--attribute='id="modal-scroll-description"'}}
           This is a modal description. The description will not scroll with the body contents.
         {{/modal-box-description}}
@@ -58,7 +58,7 @@ section: demos
           <p>Etiam sit amet orci eget eros faucibus tincidunt. Aliquam eu nunc. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nunc nec neque.
           </p>
         {{/modal-box-body}}
-        {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
+        {{#> modal-box-footer}}
           {{#> button button--modifier="pf-m-primary"}}
             Overwrite
           {{/button}}
@@ -80,48 +80,19 @@ section: demos
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
-        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-lg-title"'}}
+        {{#> modal-box-title modal-box-title--attribute='id="modal-lg-title"'}}
           This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
-        {{/title}}
+        {{/modal-box-title}}
         {{#> modal-box-body}}
           <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
           <p>Form here</p>
         {{/modal-box-body}}
-        {{#> modal-box-footer modal-box-footer--modifier="pf-m-align-left"}}
-          {{#> button button--modifier="pf-m-primary"}}
-            Save
-          {{/button}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
-        {{/modal-box-footer}}
-      {{/modal-box}}
-    {{/bullseye}}
-  {{/backdrop}}
-{{/modal}}
-```
-
-```hbs title=Right-aligned-footer-button-(legacy) isFullscreen
-{{#> modal}}
-  {{#> backdrop}}
-    {{#> bullseye}}
-      {{#> modal-box modal-box--attribute='aria-labelledby="modal-right-aligned-footer-title" aria-describedby="modal-right-aligned-footer-description"'}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
-        {{#> title titleType="h1" title--modifier="pf-m-2xl" title--attribute='id="modal-right-aligned-footer-title"'}}
-          This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
-        {{/title}}
-        {{#> modal-box-body}}
-          <p id="modal-right-aligned-footer-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
-          <p>Form here</p>
-        {{/modal-box-body}}
         {{#> modal-box-footer}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
           {{#> button button--modifier="pf-m-primary"}}
             Save
+          {{/button}}
+          {{#> button button--modifier="pf-m-link"}}
+            Cancel
           {{/button}}
         {{/modal-box-footer}}
       {{/modal-box}}

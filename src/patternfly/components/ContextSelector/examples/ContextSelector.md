@@ -16,7 +16,7 @@ import './ContextSelector.css'
     {{/context-selector-toggle-icon}}
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
-    {{#> context-selector-menu-input}}
+    {{#> context-selector-menu-search}}
       {{#> input-group}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search"' 'placeholder="Search"' 'id="textInput1"' 'name="textInput1"' 'aria-labelledby="' context-selector--id '-search-button"')}}
         {{/form-control}}
@@ -24,7 +24,7 @@ import './ContextSelector.css'
           <i class="fas fa-search" aria-hidden="true"></i>
         {{/button}}
       {{/input-group}}
-    {{/context-selector-menu-input}}
+    {{/context-selector-menu-search}}
     {{#> context-selector-menu-menu}}
       <li>
         {{#> context-selector-menu-menu-item}}
@@ -89,7 +89,7 @@ import './ContextSelector.css'
     {{/context-selector-toggle-icon}}
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
-    {{#> context-selector-menu-input}}
+    {{#> context-selector-menu-search}}
       {{#> input-group}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="textInput2" name="textInput2" aria-labelledby="' context-selector--id '-search-button"')}}
         {{/form-control}}
@@ -97,7 +97,7 @@ import './ContextSelector.css'
           <i class="fas fa-search" aria-hidden="true"></i>
         {{/button}}
       {{/input-group}}
-    {{/context-selector-menu-input}}
+    {{/context-selector-menu-search}}
     {{#> context-selector-menu-menu}}
       <li>
         {{#> context-selector-menu-menu-item}}
@@ -163,9 +163,10 @@ Added after React implementation.
 | `.pf-c-context-selector` | `<div>` | Initiates a context selector.|
 | `.pf-c-context-selector__toggle` | `<button>` | Initiates a toggle. |
 | `.pf-c-context-selector__toggle-text` | `<span>` | Initiates text inside the toggle. |
-| `.pf-c-context-selector__toggle-icon` | `<i>` | Inititiates icon inside the toggle. |
-| `.pf-c-context-selector__menu` | `<div>` | Initiaties a menu |
-| `.pf-c-context-selector__menu-input` | `<div>` | Initiates a container for the input group. |
+| `.pf-c-context-selector__toggle-icon` | `<span>` | Inititiates the toggle icon wrapper. |
+| `.pf-c-context-selector__menu` | `<div>` | Initiaties a menu. |
+| `.pf-c-context-selector__menu-search` | `<div>` | Initiates a container for the search input group. |
 | `.pf-c-context-selector__menu-list` | `<ul>` | Initiaties an unordered list of menu items that sits under the input container. |
 | `.pf-c-context-selector__menu-list-item` | `<li>` | Initiaties a menu item. |
 | `.pf-m-expanded` | `.pf-c-context-selector` | Modifies for the expanded state. |
+| `.pf-m-active` | `.pf-c-context-selector__toggle` | Forces display of the active state of the toggle. |

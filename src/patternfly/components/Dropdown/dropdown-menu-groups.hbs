@@ -4,36 +4,36 @@
   {{#if dropdown-menu--attribute}}
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
-  <section class="pf-c-dropdown__group">
+  {{#> dropdown-group}}
     <ul>
       <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Link{{/dropdown-menu-item}}</li>
       <li>{{#> dropdown-menu-item}}Action{{/dropdown-menu-item}}</li>
-      {{#if dropdown--HasSeparatorsItems}}
-        {{#> dropdown-separator}}{{/dropdown-separator}}
+      {{#if dropdown--HasDividersItems}}
+        {{> divider divider--type="li"}}
       {{/if}}
     </ul>
-  </section>
-  {{#if dropdown--HasSeparatorsGroups}}
-    {{#> dropdown-separator dropdown-separator--IsHr="true"}}{{/dropdown-separator}}
+  {{/dropdown-group}}
+  {{#if dropdown--HasDividersGroups}}
+    {{> divider}}
   {{/if}}
-  <section class="pf-c-dropdown__group">
+  {{#> dropdown-group}}
     <h1 class="pf-c-dropdown__group-title">Group 2</h1>
     <ul>
       <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Group 2 link{{/dropdown-menu-item}}</li>
       <li>{{#> dropdown-menu-item}}Group 2 action{{/dropdown-menu-item}}</li>
-      {{#if dropdown--HasSeparatorsItems}}
-        {{#> dropdown-separator}}{{/dropdown-separator}}
+      {{#if dropdown--HasDividersItems}}
+        {{> divider divider--type="li"}}
       {{/if}}
     </ul>
-  </section>
-  {{#if dropdown--HasSeparatorsGroups}}
-    {{#> dropdown-separator dropdown-separator--IsHr="true"}}{{/dropdown-separator}}
+  {{/dropdown-group}}
+  {{#if dropdown--HasDividersGroups}}
+    {{> divider}}
   {{/if}}
-  <section class="pf-c-dropdown__group">
+  {{#> dropdown-group}}
     <h1 class="pf-c-dropdown__group-title">Group 3</h1>
     <ul>
       <li>{{#> dropdown-menu-item dropdown-menu-item--attribute='href="#"'}}Group 3 link{{/dropdown-menu-item}}</li>
       <li>{{#> dropdown-menu-item}}Group 3 action{{/dropdown-menu-item}}</li>
     </ul>
-  </section>
+  {{/dropdown-group}}
 </div>

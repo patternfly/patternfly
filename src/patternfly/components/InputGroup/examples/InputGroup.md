@@ -40,14 +40,12 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> dropdown id="dropdown-example-collapsed1" dropdown--HasToggleIcon="true"}}
-    {{#> dropdown-toggle-text}}
-      Dropdown
-    {{/dropdown-toggle-text}}
-  {{/dropdown}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput3" name="textInput3" aria-label="Input with dropdown and button" aria-describedby="inputDropdownButton1"'}}
+  {{#> select id="select-example-collapsed1" select--attribute='style="width: 100px;"'}}
+    Select
+  {{/select}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput4" name="textInput4" aria-label="Input with select and button" aria-describedby="inputSelectButton1"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-control" button--attribute='id="inputDropdownButton1"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='id="inputSelectButton1"'}}
     Button
   {{/button}}
 {{/input-group}}
@@ -111,7 +109,7 @@ cssPrefix: pf-c-input-group
 
 ## Documentation
 ### Overview
-Use the input group to extend form controls by adding text, buttons, dropdowns, etc.
+Use the input group to extend form controls by adding text, buttons, selects, etc.
 
 ### Accessibility
 When using the `.pf-c-input-group` always ensure labels are used outside the input group with the `.pf-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributues. For more information on accessibility and forms see the [form component](/documentation/core/components/form).

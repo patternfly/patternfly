@@ -55,7 +55,7 @@ cssPrefix: pf-c-data-list
 | `.pf-c-data-list__item-row` | `<div>` | Initiates a data list item row. **Required** |
 | `.pf-c-data-list__item-content` | `<div>` | Initiates a container for data list content. **Required**|
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
-| `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. For example use `.pf-c-data-list__icon`. |
+| `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 | `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
 
@@ -215,7 +215,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="{{data-list--id}}-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -246,7 +246,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="{{data-list--id}}-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -276,7 +276,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          {{#> data-list-icon data-list-icon--type="code-branch"}}{{/data-list-icon}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="{{data-list--id}}-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -409,14 +409,13 @@ When a list item includes more than one block of content, it can be difficult fo
 | -- | -- | -- |
 | `.pf-c-data-list__item-control` | `<div>` | Initiates a container for data list controls. For example, add `.pf-c-data-list__toggle` here. **Required** |
 | `.pf-c-data-list__toggle` | `<div>` | Initiates a toggle button. |
-| `.pf-c-data-list__toggle-icon` | `<i>` | Initiates a toggle icon. |
-| `.pf-c-data-list__icon`  | `<i>` | Initiates a data list icon. |
+| `.pf-c-data-list__toggle-icon` | `<span>` | Initiates a toggle icon. |
 | `.pf-c-data-list__expandable-content` | `<div>` | Initiates an expandable content container. |
 | `.pf-c-data-list__expandable-content-body` | `<div>` | Initiates an expandable content container body. **Required** when `.pf-c-data-list__expandable-content` is used. |
 | `.pf-m-expanded` | `.pf-c-data-list__item` | Modifies for expanded state. |
 | `.pf-m-compact` | `.pf-c-data-list` | Modifies for compact variation. |
 | `.pf-m-no-padding` | `.pf-c-data-list__expandable-content-body` | Removes padding for the expandable content body. |
-| `.pf-m-icon` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. Use `.pf-c-data-list__icon`. |
+| `.pf-m-icon` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 
 ```hbs title=Modifiers
 {{!-- Example 1 --}}

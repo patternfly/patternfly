@@ -4,10 +4,10 @@
     {{{select-multi-attribute}}}
   {{/if}}>
   {{#if select--IsFilterable}}
-    {{#> select-menu-input}}
+    {{#> select-menu-search}}
       {{> select-menu-search-input}}
-    {{/select-menu-input}}
-    {{#> divider}}{{/divider}}
+    {{/select-menu-search}}
+    {{> divider}}
   {{/if}}
   {{#> select-menu-group}}
     {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-status"')}}

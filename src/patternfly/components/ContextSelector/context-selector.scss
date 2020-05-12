@@ -33,16 +33,15 @@
   --pf-c-context-selector__menu--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-context-selector__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-context-selector__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-context-selector__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-context-selector__menu--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Menu input
-  --pf-c-context-selector__menu-input--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__menu-input--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-context-selector__menu-input--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-context-selector__menu-input--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-context-selector__menu-input--BottomBorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-context-selector__menu-input--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-context-selector__menu-search--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__menu-search--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-search--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-search--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__menu-search--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --pf-c-context-selector__menu-search--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
   // Menu menu item
   --pf-c-context-selector__menu-list--MaxHeight: #{pf-size-prem(200px)};
@@ -73,10 +72,6 @@
   cursor: pointer;
   border: none;
 
-  & > * {
-    color: var(--pf-c-context-selector__toggle--Color);
-  }
-
   &::before {
     position: absolute;
     top: 0;
@@ -88,8 +83,7 @@
     border-color: var(--pf-c-context-selector__toggle--BorderTopColor) var(--pf-c-context-selector__toggle--BorderRightColor) var(--pf-c-context-selector__toggle--BorderBottomColor) var(--pf-c-context-selector__toggle--BorderLeftColor);
   }
 
-  &:hover,
-  &.pf-m-hover {
+  &:hover {
     &::before {
       --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor);
     }
@@ -137,14 +131,13 @@
   padding-top: var(--pf-c-context-selector__menu--PaddingTop);
   background-color: var(--pf-c-context-selector__menu--BackgroundColor);
   background-clip: padding-box;
-  border: var(--pf-c-context-selector__menu--BorderWidth) solid transparent;
   box-shadow: var(--pf-c-context-selector__menu--BoxShadow);
 }
 
-.pf-c-context-selector__menu-input {
+.pf-c-context-selector__menu-search {
   position: relative;
-  padding: var(--pf-c-context-selector__menu-input--PaddingTop) var(--pf-c-context-selector__menu-input--PaddingRight) var(--pf-c-context-selector__menu-input--PaddingBottom) var(--pf-c-context-selector__menu-input--PaddingLeft);
-  border-bottom: var(--pf-c-context-selector__menu-input--BottomBorderWidth) solid var(--pf-c-context-selector__menu-input--BottomBorderColor);
+  padding: var(--pf-c-context-selector__menu-search--PaddingTop) var(--pf-c-context-selector__menu-search--PaddingRight) var(--pf-c-context-selector__menu-search--PaddingBottom) var(--pf-c-context-selector__menu-search--PaddingLeft);
+  border-bottom: var(--pf-c-context-selector__menu-search--BorderBottomWidth) solid var(--pf-c-context-selector__menu-search--BorderBottomColor);
 }
 
 .pf-c-context-selector__menu-list {
@@ -161,15 +154,12 @@
   border: none;
 
   &:hover,
-  &.pf-m-hover,
-  &:focus,
-  &.pf-m-focus {
+  &:focus {
     text-decoration: none;
     background-color: var(--pf-c-context-selector__menu-list-item--hover--BackgroundColor);
   }
 
-  &:disabled,
-  &.pf-m-disabled {
+  &:disabled {
     color: var(--pf-c-context-selector__menu-list-item--disabled--Color);
     pointer-events: none;
   }

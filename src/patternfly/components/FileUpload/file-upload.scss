@@ -16,12 +16,6 @@
   --pf-c-file-upload__file-details__c-form-control--MinHeight: calc(var(--pf-global--spacer--3xl) * 2);
 
   // Button overrides
-  --pf-c-file-upload__file-select__c-button--m-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-file-upload__file-select__c-button--m-control--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   position: relative;
@@ -72,19 +66,6 @@
 .pf-c-file-upload__file-select {
   .pf-c-button.pf-m-control {
     outline-offset: var(--pf-c-file-upload__file-select__c-button--m-control--OutlineOffset);
-
-    &:disabled,
-    &.pf-m-disabled {
-      color: initial;
-      background-color: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--BackgroundColor);
-
-      &::after {
-        content: "";
-        border: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderWidth) solid;
-        border-color: var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderTopColor) var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderRightColor) var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderBottomColor) var(--pf-c-file-upload__file-select__c-button--m-control--disabled--after--BorderLeftColor);
-        border-radius: initial;
-      }
-    }
   }
 }
 
