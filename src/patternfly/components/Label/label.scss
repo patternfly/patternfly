@@ -239,7 +239,6 @@
   // the content element can be used as a link
   @at-root a#{&} {
     cursor: pointer;
-    background: transparent;
     border: none;
 
     &,
