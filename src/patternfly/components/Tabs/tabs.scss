@@ -2,17 +2,27 @@ $pf-c-tabs--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl", "2xl"
 $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-tabs {
-  --pf-c-tabs--Inset: 0;
-  --pf-c-tabs--before--BorderStyle: solid;
+  --pf-c-tabs--inset: 0;
   --pf-c-tabs--before--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-tabs--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs--before--border-width--base: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs--before--BorderTopWidth: 0;
   --pf-c-tabs--before--BorderRightWidth: 0;
-  --pf-c-tabs--before--BorderBottomWidth: var(--pf-c-tabs--before--BorderWidth);
+  --pf-c-tabs--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
   --pf-c-tabs--before--BorderLeftWidth: 0;
-  --pf-c-tabs--m-vertical--Inset: var(--pf-global--spacer--lg);
+  --pf-c-tabs--Transition: padding .125s;
+
+  // Vertical
+  --pf-c-tabs--m-vertical--inset: var(--pf-global--spacer--lg);
   --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
-  --pf-c-tabs--m-vertical--m-box--Inset: var(--pf-global--spacer--xl);
+
+  // Box
+  --pf-c-tabs--m-box--inset: 0;
+  --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
+  --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+  --pf-c-tabs--m-box__item--m-current--first-child__link--before--xl--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
+
+  // Vertical box
+  --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
 
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
@@ -22,40 +32,41 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs__link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tabs__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tabs__link--Transition: left .125s, border-width .125s;
   --pf-c-tabs__item--m-current__link--Color: var(--pf-global--Color--100);
-  --pf-c-tabs__item--m-current__link--Background: var(--pf-global--BackgroundColor--100);
+  --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs--m-vertical__link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
   // Link before
-  --pf-c-tabs__link--before--BorderStyle: solid;
-  --pf-c-tabs__link--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
-  --pf-c-tabs__link--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__link--before--border-color--base: var(--pf-global--BorderColor--100);
+  --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__link--before--border-color--base);
+  --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--border-color--base);
+  --pf-c-tabs__link--before--border-width--base: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__link--before--BorderTopWidth: 0;
   --pf-c-tabs__link--before--BorderRightWidth: 0;
   --pf-c-tabs__link--before--BorderBottomWidth: 0;
   --pf-c-tabs__link--before--BorderLeftWidth: 0;
-  --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__link--before--BorderColor);
-  --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--BorderColor);
-  --pf-c-tabs__link--before--Left: calc(var(--pf-c-tabs__link--before--BorderWidth) * -1);
-  --pf-c-tabs__item--m-current__link--after--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-tabs__link--before--Left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
 
   // Link after
-  --pf-c-tabs__link--after--BorderStyle: solid;
+  --pf-c-tabs__link--after--Top: auto;
+  --pf-c-tabs__link--after--Right: 0;
+  --pf-c-tabs__link--after--Bottom: 0;
   --pf-c-tabs__link--after--BorderColor: var(--pf-global--BorderColor--light-100);
   --pf-c-tabs__link--after--BorderWidth: 0;
   --pf-c-tabs__link--after--BorderTopWidth: 0;
   --pf-c-tabs__link--after--BorderRightWidth: 0;
   --pf-c-tabs__link--after--BorderLeftWidth: 0;
   --pf-c-tabs__link--hover--after--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-tabs__link--child--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-tabs__link--focus--after--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-tabs__link--active--after--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-tabs__item--m-current__link--after--BorderColor: var(--pf-global--active-color--100);
   --pf-c-tabs__item--m-current__link--after--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-tabs--m-vertical--m-box__link--after--Top: 0;
+  --pf-c-tabs__link--child--MarginRight: var(--pf-global--spacer--md);
 
   // Scroll buttons
-  --pf-c-tabs__scroll-button--BorderStyle: solid;
   --pf-c-tabs__scroll-button--Color: var(--pf-global--Color--100);
   --pf-c-tabs__scroll-button--hover--Color: var(--pf-global--active-color--100);
   --pf-c-tabs__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
@@ -67,9 +78,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Scroll buttons before
   --pf-c-tabs__scroll-button--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
-  --pf-c-tabs__scroll-button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__scroll-button--before--border-width--base: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs__scroll-button--before--BorderRightWidth: 0;
-  --pf-c-tabs__scroll-button--before--BorderBottomWidth: var(--pf-c-tabs__scroll-button--before--BorderWidth);
+  --pf-c-tabs__scroll-button--before--BorderBottomWidth: var(--pf-c-tabs__scroll-button--before--border-width--base);
   --pf-c-tabs__scroll-button--before--BorderLeftWidth: 0;
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
@@ -78,13 +89,17 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   position: relative;
   display: flex;
-  padding-right: var(--pf-c-tabs--Inset);
-  padding-left: var(--pf-c-tabs--Inset);
+  padding-right: var(--pf-c-tabs--inset);
+  padding-left: var(--pf-c-tabs--inset);
   overflow: hidden;
+  transition: var(--pf-c-tabs--Transition);
 
   &::before {
-    border-color: var(--pf-c-tabs--before--BorderColor);
-    border-style: var(--pf-c-tabs--before--BorderStyle);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid var(--pf-c-tabs--before--BorderColor);
     border-width: var(--pf-c-tabs--before--BorderTopWidth) var(--pf-c-tabs--before--BorderRightWidth) var(--pf-c-tabs--before--BorderBottomWidth) var(--pf-c-tabs--before--BorderLeftWidth);
   }
 
@@ -123,7 +138,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     &.pf-m-secondary,
     &.pf-m-no-border {
-      --pf-c-tabs--before--BorderWidth: 0;
+      --pf-c-tabs--before--border-width--base: 0;
     }
   }
 
@@ -138,8 +153,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Box
   &.pf-m-box {
     --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs--m-box__link--BackgroundColor);
-    --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--BorderWidth);
-    --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--BorderWidth);
+    --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--border-width--base);
+    --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+    --pf-c-tabs__link--after--Top: 0;
+    --pf-c-tabs__link--after--Bottom: auto;
+    --pf-c-tabs--inset: var(--pf-c-tabs--m-box--inset);
 
     // Set hover on top border
     .pf-c-tabs__link {
@@ -152,15 +170,31 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     }
 
     .pf-c-tabs__item.pf-m-current {
-      --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs__item--m-current__link--Background);
-      --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--BorderWidth);
+      --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs__item--m-current__link--BackgroundColor);
       --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--BackgroundColor);
     }
 
+    // stylelint-disable
     // Add border to first-child
-    .pf-c-tabs__item.pf-m-current:first-child {
-      --pf-c-tabs__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--BorderWidth);
+    .pf-c-tabs__item.pf-m-current:first-child .pf-c-tabs__link::before {
+      border-left-width: var(--pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth);
     }
+
+    // Add border to last-child
+    .pf-c-tabs__item.pf-m-current:last-child .pf-c-tabs__link::before {
+      border-right-width: var(--pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth);
+    }
+
+    // Collapse left border into scroll button when expanded
+    &.pf-m-scrollable .pf-c-tabs__item.pf-m-current:first-child .pf-c-tabs__link::before {
+      left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+    }
+
+    // Collapse left border into scroll button when expanded
+    &.pf-m-scrollable .pf-c-tabs__scroll-button:nth-of-type(2)::before {
+      left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+    }
+    // stylelint-enable
 
     // stylelint-disable selector-max-class
     // Remove offset from current adjacent item
@@ -172,21 +206,25 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Vertical
   &.pf-m-vertical {
-    --pf-c-tabs--Inset: var(--pf-c-tabs--m-vertical--Inset);
+    --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--inset);
     --pf-c-tabs--before--BorderBottomWidth: 0;
-    --pf-c-tabs--before--BorderLeftWidth: var(--pf-c-tabs--before--BorderWidth);
-    --pf-c-tabs__link--before--Left: 0;
+    --pf-c-tabs--before--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
     --pf-c-tabs__link--PaddingBottom: var(--pf-c-tabs--m-vertical__link--PaddingBottom);
+    --pf-c-tabs__link--before--Left: 0;
+    --pf-c-tabs__link--after--Top: 0;
+    --pf-c-tabs__link--after--Bottom: 0;
+    --pf-c-tabs__link--after--Right: auto;
 
     display: inline-flex;
     flex-direction: column;
+    height: 100%; // If not a flex child, set height
+    padding: 0; // Because vertical variant has no scroll buttons, reset padding
 
-    // If not a flex child, set height
-    height: 100%;
-
-    // Because vertical variant has no scroll buttons, reset padding
-    padding: 0;
+    &::before {
+      top: 0;
+      right: auto;
+    }
 
     .pf-c-tabs__list {
       flex-direction: column;
@@ -195,11 +233,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
     .pf-c-tabs__item:first-child {
-      margin-top: var(--pf-c-tabs--Inset);
+      margin-top: var(--pf-c-tabs--inset);
     }
 
     .pf-c-tabs__item:last-child {
-      margin-bottom: var(--pf-c-tabs--Inset);
+      margin-bottom: var(--pf-c-tabs--inset);
     }
 
     // Set hover on left border
@@ -219,32 +257,41 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Box, vertical
   &.pf-m-box.pf-m-vertical {
-    --pf-c-tabs--Inset: var(--pf-c-tabs--m-vertical--m-box--Inset);
+    --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--m-box--inset);
     --pf-c-tabs--before--BorderLeftWidth: 0;
-    --pf-c-tabs--before--BorderRightWidth: var(--pf-c-tabs--before--BorderWidth);
+    --pf-c-tabs--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+
+    &::before {
+      right: 0;
+      left: auto;
+    }
 
     // stylelint-disable selector-max-class
     // Remove border from last-child
     .pf-c-tabs__item:last-child {
       --pf-c-tabs__link--before--BorderBottomWidth: 0;
-      --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--BorderWidth);
+      --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
     }
 
     // Add border right color and weight
     .pf-c-tabs__item.pf-m-current {
-      --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__item--m-current__link--Background);
-      --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--BorderColor);
-      --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--BorderWidth);
+      --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__item--m-current__link--BackgroundColor);
+      --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--border-color--base);
+      --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--border-width--base);
+
+      &:first-child {
+        --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
+      }
     }
 
     // Add border right color and weight
     .pf-c-tabs__item:first-child.pf-m-current {
-      --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--BorderWidth);
+      --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
     }
 
     // Offset vertical border to overlap horizontal border
     .pf-c-tabs__link::after {
-      top: calc(var(--pf-c-tabs__link--before--BorderWidth) * -1);
+      top: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
     }
 
     // Undo offset to .pf-m-current adjacent item
@@ -264,6 +311,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   display: flex;
   max-width: 100%;
   overflow-x: auto;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -290,47 +338,61 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 .pf-c-tabs__link::after,
 .pf-c-tabs__scroll-button::before {
   position: absolute;
-  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   content: "";
+  border-style: solid;
+}
+
+.pf-c-tabs__link::before,
+.pf-c-tabs__link::after,
+.pf-c-tabs__scroll-button::before {
+  top: 0;
 }
 
 // Tab link
 .pf-c-tabs__link {
-  // Set default border target
-  --pf-c-tabs__link--after--BorderBottomWidth: var(--pf-c-tabs__link--after--BorderWidth);
+  --pf-c-tabs__link--after--BorderBottomWidth: var(--pf-c-tabs__link--after--BorderWidth); // Set default border target
 
   position: relative;
   display: flex;
   flex: 1;
   padding: var(--pf-c-tabs__link--PaddingTop) var(--pf-c-tabs__link--PaddingRight) var(--pf-c-tabs__link--PaddingBottom) var(--pf-c-tabs__link--PaddingLeft);
   color: var(--pf-c-tabs__link--Color);
-  user-select: none;
+  text-decoration: none;
   background-color: var(--pf-c-tabs__link--BackgroundColor);
   outline-offset: var(--pf-c-tabs__link--OutlineOffset);
 
   &::before {
-    border-color: var(--pf-c-tabs__link--before--BorderColor);
-    border-style: var(--pf-c-tabs__link--before--BorderStyle);
+    pointer-events: none;
+    border-color: var(--pf-c-tabs__link--before--border-color--base);
     border-width: var(--pf-c-tabs__link--before--BorderTopWidth) var(--pf-c-tabs__link--before--BorderRightWidth) var(--pf-c-tabs__link--before--BorderBottomWidth) var(--pf-c-tabs__link--before--BorderLeftWidth);
     border-right-color: var(--pf-c-tabs__link--before--BorderRightColor);
     border-bottom-color: var(--pf-c-tabs__link--before--BorderBottomColor);
+    transition: var(--pf-c-tabs__link--Transition);
   }
 
   &::after {
-    left: var(--pf-c-tabs__link--before--Left);
+    top: var(--pf-c-tabs__link--after--Top);
+    right: var(--pf-c-tabs__link--after--Right);
+    bottom: var(--pf-c-tabs__link--after--Bottom);
+    left: var(--pf-c-tabs__link--before--Left); // use the ::before Left value to offset the top border / overlap left border
     border-color: var(--pf-c-tabs__link--after--BorderColor);
-    border-style: var(--pf-c-tabs__link--after--BorderStyle);
     border-width: var(--pf-c-tabs__link--after--BorderTopWidth) var(--pf-c-tabs__link--after--BorderRightWidth) var(--pf-c-tabs__link--after--BorderBottomWidth) var(--pf-c-tabs__link--after--BorderLeftWidth);
   }
 
   // Tab item hover state
   &:hover {
     --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--hover--after--BorderWidth);
+  }
 
-    text-decoration: none;
+  &:focus {
+    --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--focus--after--BorderWidth);
+  }
+
+  &:active {
+    --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--active--after--BorderWidth);
   }
 
   .pf-c-tabs__item-icon,
@@ -362,19 +424,18 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   &::before {
     border-color: var(--pf-c-tabs__scroll-button--before--BorderColor);
-    border-style: var(--pf-c-tabs__scroll-button--BorderStyle);
     border-width: 0 var(--pf-c-tabs__scroll-button--before--BorderRightWidth) var(--pf-c-tabs__scroll-button--before--BorderBottomWidth) var(--pf-c-tabs__scroll-button--before--BorderLeftWidth);
   }
 
   &:nth-of-type(1) {
-    --pf-c-tabs__scroll-button--before--BorderRightWidth: var(--pf-c-tabs__scroll-button--before--BorderWidth);
+    --pf-c-tabs__scroll-button--before--BorderRightWidth: var(--pf-c-tabs__scroll-button--before--border-width--base);
 
     margin-right: calc(var(--pf-c-tabs__scroll-button--Width) * -1);
     transform: translateX(-100%);
   }
 
   &:nth-of-type(2) {
-    --pf-c-tabs__scroll-button--before--BorderLeftWidth: var(--pf-c-tabs__scroll-button--before--BorderWidth);
+    --pf-c-tabs__scroll-button--before--BorderLeftWidth: var(--pf-c-tabs__scroll-button--before--border-width--base);
 
     margin-left: calc(var(--pf-c-tabs__scroll-button--Width) * -1);
     transform: translateX(100%);
@@ -395,7 +456,15 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     @include pf-apply-breakpoint($breakpoint, $pf-c-tabs--breakpoint-map) {
       @each $spacer, $spacer-value in $pf-c-tabs--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
-          --pf-c-tabs--Inset: #{$spacer-value};
+          --pf-c-tabs--inset: #{$spacer-value};
+
+          @if $spacer == none {
+            --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
+          }
+
+          @else {
+            --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
+          }
         }
       }
     }
