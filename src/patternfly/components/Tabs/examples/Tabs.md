@@ -164,14 +164,14 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-tabs` | `<nav>`, `<div>` | Initiates the tabs component. **Required** |
-| `.pf-c-tabs__list` | `<div>` | Initiates a tabs component list. **Required** |
-| `.pf-c-tabs__item` | `<div>` | Initiates a tabs component item. **Required** |
+| `.pf-c-tabs__list` | `<ul>` | Initiates a tabs component list. **Required** |
+| `.pf-c-tabs__item` | `<li>` | Initiates a tabs component item. **Required** |
 | `.pf-c-tabs__item-text` | `<span>` | Initiates a tabs component item icon. **Required** |
 | `.pf-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
 | `.pf-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 | `.pf-m-secondary` | `.pf-c-tabs` | Applies secondary styling to the tab component. |
-| `.pf-m-no-border` | `.pf-c-tabs` | Removes bottom border from a tab component. |
+| `.pf-m-no-bottom-border` | `.pf-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |
