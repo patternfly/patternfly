@@ -319,7 +319,7 @@
       }
     }
 
-    > tr > :first-child:not(.pf-c-table__check)::before {
+    > tr > :first-child:not(.pf-c-table__check)::after {
       --pf-c-table__expandable-row--before--BorderLeftWidth: 0;
 
       position: static;
@@ -354,10 +354,9 @@
       border-top-color: var(--pf-c-table--BorderColor);
     }
 
-    td:first-child:not(.pf-c-table__check)::before {
-      // Border treatment
-      display: none;
-      visibility: hidden;
+    > :first-child::after {
+      // Remove border treatment
+      content: none;
     }
 
     td {
