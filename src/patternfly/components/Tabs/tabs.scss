@@ -141,7 +141,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   &.pf-m-secondary,
-  &.pf-m-no-bottom-border {
+  &.pf-m-no-border-bottom {
     --pf-c-tabs--before--BorderBottomWidth: 0;
   }
 
