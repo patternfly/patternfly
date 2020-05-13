@@ -236,8 +236,36 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   margin-right: var(--pf-c-page__header-tools--MarginRight);
   margin-left: auto; // to push it to the right
 
+  .pf-c-avatar {
+    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--lg) {
+    grid-column: 3 / 4;
+  }
+}
+
+.pf-c-page__header-tools-group {
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
+
+  align-items: center;
+
+  & + & {
+    margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
+  }
+}
+
+.pf-c-page__header-tools-item {
+  @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
+
   .pf-c-button {
-    &.pf-m-selected {
+    > * {
+      position: relative;
+    }
+  }
+
+  &.pf-m-selected {
+    .pf-c-button {
       &::before {
         position: absolute;
         top: 0;
@@ -260,33 +288,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
       }
       // stylelint-enable
     }
-
-    > * {
-      position: relative;
-    }
   }
-
-  .pf-c-avatar {
-    margin-left: var(--pf-c-page__header-tools--c-avatar--MarginLeft);
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    grid-column: 3 / 4;
-  }
-}
-
-.pf-c-page__header-tools-group {
-  @include pf-hidden-visible(var(--pf-c-page__header-tools-group--Display));
-
-  align-items: center;
-
-  & + & {
-    margin-left: var(--pf-c-page__header-tools-group--MarginLeft);
-  }
-}
-
-.pf-c-page__header-tools-item {
-  @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
 }
 
 // Sidebar
