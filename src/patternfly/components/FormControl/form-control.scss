@@ -81,7 +81,6 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
   --pf-c-form-control--m-search--BackgroundPosition: var(--pf-c-form-control--PaddingLeft);
   --pf-c-form-control--m-search--BackgroundSize: var(--pf-c-form-control--FontSize) var(--pf-c-form-control--FontSize);
   --pf-c-form-control--m-search--BackgroundUrl: #{pf-bg-svg($pf-c-form-control--m-search--Coordinates, $svg-color: $pf-c-form-control--m-search--Color)};
-  --pf-c-form-control--m-search--Background: var(--pf-c-form-control--m-search--BackgroundUrl) var(--pf-c-form-control--m-search--BackgroundPosition) / var(--pf-c-form-control--m-search--BackgroundSize) no-repeat;
 
   // Select
   --pf-c-form-control__select--PaddingRight: var(--pf-global--spacer--lg);
@@ -179,7 +178,10 @@ $pf-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7
 
   &.pf-m-search {
     padding-left: var(--pf-c-form-control--m-search--PaddingLeft);
-    background: var(--pf-c-form-control--m-search--Background);
+    background-image: var(--pf-c-form-control--m-search--BackgroundUrl);
+    background-repeat: no-repeat;
+    background-position: var(--pf-c-form-control--m-search--BackgroundPosition);
+    background-size: var(--pf-c-form-control--m-search--BackgroundSize);
   }
 
   @at-root select#{&} {
