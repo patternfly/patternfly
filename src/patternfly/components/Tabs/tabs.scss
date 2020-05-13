@@ -16,7 +16,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
 
   // Box
-  --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
+  --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
   --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
 
   // Tab link
@@ -105,6 +105,14 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     .pf-c-tabs__item {
       flex-grow: 1;
+
+      &:first-child {
+        --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
+      }
+
+      &:last-child {
+        --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: 0;
+      }
     }
 
     .pf-c-tabs__link {
@@ -452,14 +460,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
           --pf-c-tabs--inset: #{$spacer-value};
           --pf-c-tabs--m-vertical--inset: #{$spacer-value};
           --pf-c-tabs--m-vertical--m-box--inset: #{$spacer-value};
-
-          @if $spacer == none {
-            --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
-          }
-
-          @else {
-            --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
-          }
         }
       }
     }
