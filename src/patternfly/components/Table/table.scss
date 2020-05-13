@@ -471,16 +471,27 @@
   display: inline-grid;
   align-items: end;
   justify-content: start;
-  grid-template-columns: auto;
-  grid-auto-columns: max-content;
+  grid-template-columns: auto min-content;
 
-  .pf-m-nowrap & {
-    grid-template-columns: min-content auto;
+  // stylelint-disable
+  .pf-c-table tr.pf-m-nowrap &,
+  .pf-c-table thead.pf-m-nowrap &,
+  .pf-c-table th.pf-m-nowrap &,
+  .pf-c-table tr.pf-m-wrap &,
+  .pf-c-table thead.pf-m-wrap &,
+  .pf-c-table th.pf-m-wrap &,
+  .pf-c-table tr.pf-m-fit-content &,
+  .pf-c-table thead.pf-m-fit-content &,
+  .pf-c-table th.pf-m-fit-content & {
+    grid-template-columns: min-content min-content;
   }
 
-  .pf-m-truncate & {
-    grid-template-columns: auto;
+  .pf-c-table tr.pf-m-truncate &,
+  .pf-c-table thead.pf-m-truncate &,
+  .pf-c-table th.pf-m-truncate & {
+    grid-template-columns: auto min-content;
   }
+  // stylelint-enable
 }
 
 // Toggle, check, action - minimize padding.
