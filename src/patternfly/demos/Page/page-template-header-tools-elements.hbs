@@ -13,21 +13,23 @@
   {{/page-header-tools-group}}
   {{#> page-header-tools-group}}
     {{#if page-header-tools--IsNotification}}
-      {{#> page-header-tools-item}}
-        {{#if page-header-tools--IsNotificationSelected}}
-          {{#> button button--modifier="pf-m-plain pf-m-selected" button--attribute='aria-label="Unread notifications" aria-expanded="true"'}}
+      {{#if page-header-tools--IsNotificationSelected}}
+        {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-selected"}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications" aria-expanded="true"'}}
             {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
               <i class="fas fa-bell" aria-hidden="true"></i>
             {{/notification-badge}}
           {{/button}}
-        {{else}}
+        {{/page-header-tools-item}}
+      {{else}}
+        {{#> page-header-tools-item}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications" aria-expanded="false"'}}
             {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
               <i class="fas fa-bell" aria-hidden="true"></i>
             {{/notification-badge}}
           {{/button}}
-        {{/if}}
-      {{/page-header-tools-item}}
+        {{/page-header-tools-item}}
+      {{/if}}
     {{/if}}
     {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden-on-lg"}}
       {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}

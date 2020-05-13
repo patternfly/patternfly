@@ -165,7 +165,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
 | `.pf-c-page__drawer` | `<div>` |  Creates a container for the drawer component when placing the main page element in the drawer body. |
-| `.pf-m-selected` | `.pf-c-page__header-tools .pf-c-button` | Modifies the button in the masthead for the selected state. |
+| `.pf-m-selected` | `.pf-c-page__header-tools-item` | Modifies a header tools item to indicate that the button inside is in the selected state. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
 | `.pf-m-light` | `.pf-c-page__sidebar` |  Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
