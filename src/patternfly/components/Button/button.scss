@@ -362,14 +362,6 @@
         border-bottom-width: var(--pf-c-button--m-control--m-expanded--after--BorderBottomWidth);
       }
     }
-
-    &:disabled,
-    &.pf-m-disabled {
-      --pf-c-button--m-control--after--BorderTopColor: var(--pf-c-button--m-control--disabled--after--BorderTopColor);
-      --pf-c-button--m-control--after--BorderRightColor: var(--pf-c-button--m-control--disabled--after--BorderRightColor);
-      --pf-c-button--m-control--after--BorderBottomColor: var(--pf-c-button--m-control--disabled--after--BorderBottomColor);
-      --pf-c-button--m-control--after--BorderLeftColor: var(--pf-c-button--m-control--disabled--after--BorderLeftColor);
-    }
   }
 
   // Icon buttons
