@@ -210,6 +210,7 @@
     & > * {
       padding: var(--pf-c-table--cell--responsive--PaddingTop) var(--pf-c-table--cell--responsive--PaddingRight) var(--pf-c-table--cell--responsive--PaddingBottom) var(--pf-c-table--cell--responsive--PaddingLeft);
 
+      // remove padding from first child to align with kebab
       &:first-child {
         --pf-c-table--cell--responsive--PaddingTop: var(--pf-c-table--cell--first-child--responsive--PaddingTop);
       }
