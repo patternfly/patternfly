@@ -50,7 +50,7 @@
 
   // Row
   --pf-c-table-tr--responsive--border-width--base: var(--pf-global--spacer--sm);
-  --pf-c-table-tr--responsive--last-child--BorderBottomWidth: var(--pf-c-table-tr--responsive--border-width--base);
+  --pf-c-table-tr--responsive--last-child--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
@@ -354,8 +354,8 @@
       border-top-color: var(--pf-c-table--BorderColor);
     }
 
-    > :first-child::after {
-      // Remove border treatment
+    > :first-child:not(.pf-c-table__check)::after {
+      // Border treatment
       content: none;
     }
 
@@ -393,6 +393,10 @@
     grid-column: -1;
     justify-self: end;
     padding-right: 0;
+
+    &::after {
+      content: none;
+    }
   }
 
   .pf-c-table__button {

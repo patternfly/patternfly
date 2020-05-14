@@ -505,10 +505,6 @@
         transform: rotate(var(--pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate));
       }
     }
-
-    &::after {
-      content: none;
-    }
   }
 
   .pf-c-table__toggle-icon {
@@ -672,7 +668,7 @@
   // stylelint-disable
   td {
     &.pf-m-no-padding {
-      padding: 0 0 0 var(--pf-c-table__expandable-row--after--BorderWidth); // set padding-left to adjust for left border.
+      padding: 0 0 0 var(--pf-c-table__expandable-row--after--border-width--base); // set padding-left to adjust for left border.
 
       .pf-c-table__expandable-row-content {
         padding: 0;
@@ -704,7 +700,7 @@
 .pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child,
 .pf-c-table__expandable-row.pf-m-expanded > :first-child,
 .pf-c-table tbody.pf-m-expanded > tr > :not(.pf-c-table__compound-expansion-toggle) {
-  --pf-c-table__expandable-row--after--BorderLeftWidth: var(--pf-c-table__expandable-row--after--BorderWidth);
+  --pf-c-table__expandable-row--after--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
 }
 // stylelint-enable
 
