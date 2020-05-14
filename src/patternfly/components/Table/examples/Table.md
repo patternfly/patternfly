@@ -414,7 +414,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
       {{/table-td}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--desc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}

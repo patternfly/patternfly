@@ -41,9 +41,7 @@
   --pf-c-table--responsive--BorderColor: var(--pf-global--BorderColor--300);
 
   // Body
-  --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-table-tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
-  --pf-c-table-tbody--responsive--border-width--base: var(--pf-global--spacer--sm);
+  --pf-c-table--tbody--responsive--border-width--base: var(--pf-global--spacer--sm);
   --pf-c-table--tbody--after--border-width--base: var(--pf-global--BorderWidth--lg);
   --pf-c-table--tbody--after--BorderLeftWidth: 0;
   --pf-c-table--tbody--after--BorderColor: var(--pf-global--active-color--100);
@@ -83,7 +81,7 @@
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table--cell--responsive--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table--cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table-cell-th--responsive--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--cell--first-child--responsive--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--cell--responsive--PaddingRight: 0;
   --pf-c-table--cell--responsive--PaddingLeft: 0;
 
@@ -162,7 +160,7 @@
     display: block;
 
     &:first-of-type {
-      border-top: var(--pf-c-table-tbody--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
+      border-top: var(--pf-c-table--tbody--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
     }
   }
 
@@ -190,7 +188,7 @@
     }
 
     &:not(:last-of-type) {
-      border-bottom: var(--pf-c-table-tbody--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
+      border-bottom: var(--pf-c-table--tbody--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
     }
   }
 
@@ -211,11 +209,10 @@
     // Reset td padding
     & > * {
       padding: var(--pf-c-table--cell--responsive--PaddingTop) var(--pf-c-table--cell--responsive--PaddingRight) var(--pf-c-table--cell--responsive--PaddingBottom) var(--pf-c-table--cell--responsive--PaddingLeft);
-    }
 
-    // remove padding from first th to align with kebab
-    th {
-      padding-top: var(--pf-c-table-cell-th--responsive--PaddingTop);
+      &:first-child {
+        --pf-c-table--cell--responsive--PaddingTop: var(--pf-c-table--cell--first-child--responsive--PaddingTop);
+      }
     }
   }
 
@@ -320,7 +317,7 @@
     }
 
     > tr > :first-child:not(.pf-c-table__check)::after {
-      --pf-c-table__expandable-row--before--BorderLeftWidth: 0;
+      --pf-c-table__expandable-row--after--BorderLeftWidth: 0;
 
       position: static;
       width: auto;
