@@ -480,11 +480,14 @@
   // stylelint-disable
   .pf-c-table tr.pf-m-nowrap &,
   .pf-c-table thead.pf-m-nowrap &,
-  .pf-c-table th.pf-m-nowrap &,
+  .pf-c-table th.pf-m-nowrap & {
+    grid-template-columns: min-content max-content;
+  }
+
   .pf-c-table tr.pf-m-fit-content &,
   .pf-c-table thead.pf-m-fit-content &,
   .pf-c-table th.pf-m-fit-content & {
-    grid-template-columns: min-content max-content;
+    grid-template-columns: fit-content max-content;
   }
 
   .pf-c-table tr.pf-m-wrap &,
