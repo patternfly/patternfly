@@ -41,16 +41,14 @@
   --pf-c-table--responsive--BorderColor: var(--pf-global--BorderColor--300);
 
   // Body
-  --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-table-tbody--m-expanded--before--Top: var(--pf-global--spacer--sm);
-  --pf-c-table-tbody--responsive--BorderWidth: var(--pf-global--spacer--sm);
-  --pf-c-table--tbody--after--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-table--tbody--responsive--border-width--base: var(--pf-global--spacer--sm);
+  --pf-c-table--tbody--after--border-width--base: var(--pf-global--BorderWidth--lg);
   --pf-c-table--tbody--after--BorderLeftWidth: 0;
   --pf-c-table--tbody--after--BorderColor: var(--pf-global--active-color--100);
 
   // Row
-  --pf-c-table-tr--responsive--BorderWidth: var(--pf-global--spacer--sm);
-  --pf-c-table-tr--responsive--last-child--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table-tr--responsive--border-width--base: var(--pf-global--spacer--sm);
+  --pf-c-table-tr--responsive--last-child--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table-tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table-tr--responsive--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-table-tr--responsive--PaddingTop: var(--pf-global--spacer--md);
@@ -83,7 +81,7 @@
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table--cell--responsive--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-table--cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table-cell-th--responsive--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--cell--first-child--responsive--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-table--cell--responsive--PaddingRight: 0;
   --pf-c-table--cell--responsive--PaddingLeft: 0;
 
@@ -162,7 +160,7 @@
     display: block;
 
     &:first-of-type {
-      border-top: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--responsive--BorderColor);
+      border-top: var(--pf-c-table--tbody--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
     }
   }
 
@@ -173,24 +171,24 @@
 
   // Table row
   tr:not(.pf-c-table__expandable-row) {
-    border-bottom: var(--pf-c-table-tr--responsive--BorderWidth) solid var(--pf-c-table--responsive--BorderColor);
+    border-bottom: var(--pf-c-table-tr--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
   }
 
   // The last tr should always have a border width of 1px
   tr:last-child,
   tbody:last-of-type:not(:only-of-type) > tr {
-    border-bottom-width: var(--pf-c-table-tr--responsive--last-child--BorderWidth);
+    border-bottom-width: var(--pf-c-table-tr--responsive--last-child--BorderBottomWidth);
   }
 
   tbody.pf-m-expanded {
-    border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+    border-bottom: var(--pf-c-table--border-width--base) solid var(--pf-c-table--BorderColor);
 
     tr:not(.pf-c-table__expandable-row) {
       border-bottom: 0;
     }
 
     &:not(:last-of-type) {
-      border-bottom: var(--pf-c-table-tbody--responsive--BorderWidth) solid var(--pf-c-table--responsive--BorderColor);
+      border-bottom: var(--pf-c-table--tbody--responsive--border-width--base) solid var(--pf-c-table--responsive--BorderColor);
     }
   }
 
@@ -211,11 +209,11 @@
     // Reset td padding
     & > * {
       padding: var(--pf-c-table--cell--responsive--PaddingTop) var(--pf-c-table--cell--responsive--PaddingRight) var(--pf-c-table--cell--responsive--PaddingBottom) var(--pf-c-table--cell--responsive--PaddingLeft);
-    }
 
-    // remove padding from first th to align with kebab
-    th {
-      padding-top: var(--pf-c-table-cell-th--responsive--PaddingTop);
+      // remove padding from first child to align with kebab
+      &:first-child {
+        --pf-c-table--cell--responsive--PaddingTop: var(--pf-c-table--cell--first-child--responsive--PaddingTop);
+      }
     }
   }
 
@@ -312,15 +310,15 @@
     }
 
     &.pf-m-expanded {
-      --pf-c-table--tbody--after--BorderLeftWidth: var(--pf-c-table--tbody--after--BorderWidth);
+      --pf-c-table--tbody--after--BorderLeftWidth: var(--pf-c-table--tbody--after--border-width--base);
 
       & tbody {
         --pf-c-table--tbody--after--BorderLeftWidth: 0;
       }
     }
 
-    > tr > :first-child:not(.pf-c-table__check)::before {
-      --pf-c-table__expandable-row--before--BorderLeftWidth: 0;
+    > tr > :first-child:not(.pf-c-table__check)::after {
+      --pf-c-table__expandable-row--after--BorderLeftWidth: 0;
 
       position: static;
       width: auto;
@@ -354,10 +352,9 @@
       border-top-color: var(--pf-c-table--BorderColor);
     }
 
-    td:first-child:not(.pf-c-table__check)::before {
+    > :first-child:not(.pf-c-table__check)::after {
       // Border treatment
-      display: none;
-      visibility: hidden;
+      content: none;
     }
 
     td {
@@ -394,6 +391,10 @@
     grid-column: -1;
     justify-self: end;
     padding-right: 0;
+
+    &::after {
+      content: none;
+    }
   }
 
   .pf-c-table__button {

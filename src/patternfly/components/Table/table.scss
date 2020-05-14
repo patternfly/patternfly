@@ -11,7 +11,7 @@
   // Base
   --pf-c-table--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-table--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table--border-width--base: var(--pf-global--BorderWidth--sm);
 
   // Caption
   --pf-c-table-caption--FontSize: var(--pf-global--FontSize--sm);
@@ -113,12 +113,11 @@
   --pf-c-table__expandable-row-content--PaddingBottom: var(--pf-global--spacer--lg);
 
   // ::before border
-  --pf-c-table__expandable-row--before--Top: calc(var(--pf-c-table--BorderWidth) * -1);
-  --pf-c-table__expandable-row--before--Bottom: calc(var(--pf-c-table--BorderWidth) * -1);
-  --pf-c-table__expandable-row--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-table__expandable-row--before--BorderRightWidth: 0;
-  --pf-c-table__expandable-row--before--BorderLeftWidth: 0;
-  --pf-c-table__expandable-row--before--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-table__expandable-row--after--Top: calc(var(--pf-c-table--border-width--base) * -1);
+  --pf-c-table__expandable-row--after--Bottom: calc(var(--pf-c-table--border-width--base) * -1);
+  --pf-c-table__expandable-row--after--border-width--base: var(--pf-global--BorderWidth--lg);
+  --pf-c-table__expandable-row--after--BorderLeftWidth: 0;
+  --pf-c-table__expandable-row--after--BorderColor: var(--pf-global--active-color--100);
 
   // Icon inline
   --pf-c-table__icon-inline--MarginRight: var(--pf-global--spacer--sm);
@@ -145,19 +144,19 @@
   --pf-c-table__compound-expansion-toggle__button--active--Color: var(--pf-global--link--Color--hover);
 
   // ::before border treatment
-  --pf-c-table__compound-expansion-toggle__button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__compound-expansion-toggle__button--before--border-width--base: var(--pf-global--BorderWidth--sm);
   --pf-c-table__compound-expansion-toggle__button--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: 0;
   --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-  --pf-c-table__compound-expansion-toggle__button--before--Bottom: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
-  --pf-c-table__compound-expansion-toggle__button--before--Left: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
+  --pf-c-table__compound-expansion-toggle__button--before--Bottom: calc(var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base) * -1);
+  --pf-c-table__compound-expansion-toggle__button--before--Left: calc(var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base) * -1);
 
   // ::before border treatment
-  --pf-c-table__compound-expansion-toggle__button--after--BorderWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-table__compound-expansion-toggle__button--after--border-width--base: var(--pf-global--BorderWidth--lg);
   --pf-c-table__compound-expansion-toggle__button--after--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: 0;
-  --pf-c-table__compound-expansion-toggle__button--after--Top: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
-  --pf-c-table__compound-expansion-toggle__button--after--Left: calc(var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth) * -1);
+  --pf-c-table__compound-expansion-toggle__button--after--Top: calc(var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base) * -1);
+  --pf-c-table__compound-expansion-toggle__button--after--Left: calc(var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base) * -1);
 
   // Compact table
   --pf-c-table--m-compact-th--PaddingTop: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--xs));
@@ -203,7 +202,7 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
-    border-bottom: var(--pf-c-table--BorderWidth) solid var(--pf-c-table--BorderColor);
+    border-bottom: var(--pf-c-table--border-width--base) solid var(--pf-c-table--BorderColor);
   }
 
   // Table cell
@@ -279,18 +278,18 @@
 
     // Border treatment
     // using first child as row does not calculate height appropriately
-    > tr > :first-child::before {
+    > tr > :first-child::after {
       position: absolute;
 
       // offset top to extend above tr border
-      top: var(--pf-c-table__expandable-row--before--Top);
-      bottom: var(--pf-c-table__expandable-row--before--Bottom);
+      top: var(--pf-c-table__expandable-row--after--Top);
+      bottom: var(--pf-c-table__expandable-row--after--Bottom);
       left: 0;
       content: "";
 
       // add border left
       background-color: transparent;
-      border-left: var(--pf-c-table__expandable-row--before--BorderLeftWidth) solid var(--pf-c-table__expandable-row--before--BorderColor);
+      border-left: var(--pf-c-table__expandable-row--after--BorderLeftWidth) solid var(--pf-c-table__expandable-row--after--BorderColor);
     }
 
     // Check table cell
@@ -620,9 +619,9 @@
   &:hover,
   &:focus-within,
   &.pf-m-expanded {
-    --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
-    --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
-    --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: var(--pf-c-table__compound-expansion-toggle__button--after--BorderWidth);
+    --pf-c-table__compound-expansion-toggle__button--before--BorderRightWidth: var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base);
+    --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base);
+    --pf-c-table__compound-expansion-toggle__button--after--BorderTopWidth: var(--pf-c-table__compound-expansion-toggle__button--after--border-width--base);
   }
 
   &:first-child {
@@ -632,7 +631,7 @@
 
   &.pf-m-expanded {
     .pf-c-table__button::before {
-      border-bottom: var(--pf-c-table--BackgroundColor) solid var(--pf-c-table__compound-expansion-toggle__button--before--BorderWidth);
+      border-bottom: var(--pf-c-table--BackgroundColor) solid var(--pf-c-table__compound-expansion-toggle__button--before--border-width--base);
     }
 
     &:first-child {
@@ -688,14 +687,14 @@
   box-shadow: 0 0 0 0 transparent;
 
   &,
-  td:first-child::before {
+  td:first-child::after {
     transition: var(--pf-c-table__expandable-row--Transition);
   }
 
   // stylelint-disable
   td {
     &.pf-m-no-padding {
-      padding: 0 0 0 var(--pf-c-table__expandable-row--before--BorderWidth); // set padding-left to adjust for left border.
+      padding: 0 0 0 var(--pf-c-table__expandable-row--after--border-width--base); // set padding-left to adjust for left border.
 
       .pf-c-table__expandable-row-content {
         padding: 0;
@@ -712,7 +711,7 @@
   // Modifier - Expanded tr
   &.pf-m-expanded {
     border-bottom-color: var(--pf-c-table__expandable-row--m-expanded--BorderBottomColor);
-    border-bottom-width: var(--pf-c-table--BorderWidth);
+    border-bottom-width: var(--pf-c-table--border-width--base);
     box-shadow: var(--pf-c-table__expandable-row--m-expanded--BoxShadow);
   }
 
@@ -727,7 +726,7 @@
 .pf-c-table__compound-expansion-toggle.pf-m-expanded:first-child,
 .pf-c-table__expandable-row.pf-m-expanded > :first-child,
 .pf-c-table tbody.pf-m-expanded > tr > :not(.pf-c-table__compound-expansion-toggle) {
-  --pf-c-table__expandable-row--before--BorderLeftWidth: var(--pf-c-table__expandable-row--before--BorderWidth);
+  --pf-c-table__expandable-row--after--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
 }
 // stylelint-enable
 
@@ -758,7 +757,7 @@
 
   &.pf-m-no-border-rows:not(.pf-m-expandable) {
     tbody {
-      --pf-c-table--BorderWidth: 0;
+      --pf-c-table--border-width--base: 0;
       --pf-c-table--BorderColor: transparent;
     }
   }
