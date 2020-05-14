@@ -627,18 +627,18 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         234
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-th table-th--data-label="Workspaces"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Last commit"}}
@@ -677,19 +677,19 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         2
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         82
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-th table-th--data-label="Workspaces"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Last commit"}}
@@ -728,19 +728,19 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Workspaces" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
+      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-th table-th--data-label="Workspaces"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
       {{#> table-td table-td--data-label="Last commit"}}
