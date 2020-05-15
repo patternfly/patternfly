@@ -20,6 +20,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
 
   // Tab link
+  --pf-c-tabs__link--FontSize: var(--pf-global--FontSize--md);
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
   --pf-c-tabs__link--BackgroundColor: transparent;
   --pf-c-tabs__link--OutlineOffset: calc(-1 * #{pf-size-prem(6px)});
@@ -29,6 +30,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tabs__item--m-current__link--Color: var(--pf-global--Color--100);
   --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-tabs--m-secondary__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-tabs--m-vertical__link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -361,6 +363,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   display: flex;
   flex: 1;
   padding: var(--pf-c-tabs__link--PaddingTop) var(--pf-c-tabs__link--PaddingRight) var(--pf-c-tabs__link--PaddingBottom) var(--pf-c-tabs__link--PaddingLeft);
+  font-size: var(--pf-c-tabs__link--FontSize);
   color: var(--pf-c-tabs__link--Color);
   text-decoration: none;
   background-color: var(--pf-c-tabs__link--BackgroundColor);
@@ -403,6 +406,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     &:last-child {
       --pf-c-tabs__link--child--MarginRight: 0;
     }
+  }
+
+  .pf-c-tabs.pf-m-secondary & {
+    --pf-c-tabs__link--FontSize: var(--pf-c-tabs--m-secondary__link--FontSize);
   }
 }
 
