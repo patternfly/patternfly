@@ -370,12 +370,17 @@
   border: none;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.pf-m-focus {
     text-decoration: none;
+  }
+
+  &:hover {
     background-color: var(--pf-c-select__menu-item--hover--BackgroundColor);
   }
 
-  &:focus {
+  &:focus,
+  &.pf-m-focus {
     position: relative;
     background-color: var(--pf-c-select__menu-item--focus--BackgroundColor);
   }
