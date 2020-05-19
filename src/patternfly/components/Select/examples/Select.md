@@ -126,6 +126,7 @@ The single select typeahead should be used when the user is selecting one option
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
+| `.pf-m-focus` | `.pf-c-select__menu-item` |  Modifies the menu item to apply `:focus` styling. For use when navigating the menu items by keyboard when the typeahead input field has browser focus. |
 
 ```hbs title=Select-multi-with-typeahead
 {{#> select select-toggle--type="div" id="select-multi-typeahead" select--IsMultiSelect="true" select--IsTypeahead="true" select-typeahead--Placeholder="Choose states"}}
