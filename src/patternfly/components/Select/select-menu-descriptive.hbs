@@ -1,0 +1,28 @@
+<{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}} class="pf-c-select__menu{{#if select-menu--modifier}} {{select-menu--modifier}}{{/if}}"
+  aria-labelledby="{{id}}-label"
+  {{#unless select--IsExpanded}}hidden{{/unless}}
+  {{#if select--attribute}}
+    {{{select--attribute}}}
+  {{/if}}>
+  {{#if select--IsEmptyMenu}}
+    [Panel contents here]
+  {{else}}
+    <li>
+      <button type="button" class="pf-c-select__menu-item" aria-pressed="false">
+        Running
+        {{#> select-menu-item-description}}
+          This is a description
+        {{/select-menu-item-description}}
+      </button>
+    </li>
+    <li>
+      <button type="button" class="pf-c-select__menu-item pf-m-selected" aria-pressed="true">
+        Stopped
+        {{#> select-menu-item-icon}}{{/select-menu-item-icon}}
+        {{#> select-menu-item-description}}
+          This is a description
+        {{/select-menu-item-description}}
+      </button>
+    </li>
+  {{/if}}
+</{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}}>

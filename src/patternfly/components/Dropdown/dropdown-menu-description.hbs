@@ -1,0 +1,53 @@
+<ul class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
+  aria-labelledby="{{id}}-button"
+  {{#unless dropdown--IsExpanded}}hidden{{/unless}}
+  {{#if dropdown-menu--attribute}}
+	  {{{dropdown-menu--attribute}}}
+  {{/if}}>
+  <li>
+    {{#> dropdown-menu-item}}
+      Menu item default
+      {{#> dropdown-menu-item-description}}
+        This is a description
+      {{/dropdown-menu-item-description}}
+    {{/dropdown-menu-item}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item}}
+      Menu item with long description
+      {{#> dropdown-menu-item-description}}
+        This is a really long description that describes the menu item.
+      {{/dropdown-menu-item-description}}
+    {{/dropdown-menu-item}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled'}}
+      Menu item disabled
+      {{#> dropdown-menu-item-description}}
+        This is a description
+      {{/dropdown-menu-item-description}}
+    {{/dropdown-menu-item}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-icon-description" dropdown-menu-item--attribute='href="#"'}}
+      {{#> dropdown-menu-item-icon}}
+        <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
+        Menu item with img
+      {{/dropdown-menu-item-icon}}
+      {{#> dropdown-menu-item-description}}
+        This is a description
+      {{/dropdown-menu-item-description}}
+    {{/dropdown-menu-item}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--modifier="pf-m-icon-description"}}
+      {{#> dropdown-menu-item-icon}}
+        <i class="fas fa-cubes" aria-hidden="true"></i>
+        Menu item with icon
+      {{/dropdown-menu-item-icon}}
+      {{#> dropdown-menu-item-description}}
+        This is a description
+      {{/dropdown-menu-item-description}}
+    {{/dropdown-menu-item}}
+  </li>
+</ul>

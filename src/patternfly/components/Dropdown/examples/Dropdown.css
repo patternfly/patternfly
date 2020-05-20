@@ -41,3 +41,7 @@
 #ws-core-c-dropdown-panel {
   min-height: 130px;
 }
+
+#ws-core-c-dropdown-dropdown-with-description {
+  min-height: 400px;
+}

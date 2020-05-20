@@ -274,6 +274,12 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 
+```hbs title=With-description
+{{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true"}}
+  Select with description
+{{/select}}
+```
+
 ## Documentation
 ### Overview
 There are 4 variants of the select component: single select, single select with typeahead, multiple select with typeahead, and a multiple checkbox select. See the examples for more details about each variation.

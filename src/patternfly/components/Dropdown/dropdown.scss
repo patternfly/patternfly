@@ -392,6 +392,26 @@
     align-items: center;
   }
 
+  &.pf-m-icon-description {
+    display: block;
+
+    .pf-c-dropdown__menu-item-icon {
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      grid-gap: 8px;
+      justify-content: unset;
+
+      --pf-c-dropdown__menu-item-icon--Width: initial;
+      --pf-c-dropdown__menu-item-icon--Height: initial;
+      --pf-c-dropdown__menu-item-icon--MarginRight: 0;
+
+      > i,
+      svg {
+        text-align: center;
+      }
+    }
+  }
+
   &.pf-m-text {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--m-text--Color);
 
@@ -414,6 +434,11 @@
     max-width: 100%;
     max-height: 100%;
   }
+}
+
+.pf-c-dropdown__menu-item-description {
+  font-size: var(--pf-global--FontSize--xs);
+  color: var(--pf-global--Color--200);
 }
 
 .pf-c-dropdown__group + .pf-c-dropdown__group {

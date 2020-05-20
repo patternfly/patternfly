@@ -186,6 +186,14 @@ The dropdown panel is provided for flexibility in allowing various content withi
 {{/dropdown}}
 ```
 
+```hbs title=Dropdown-with-description
+{{#> dropdown id="dropdown-with-description" dropdown--IsDescriptionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Expanded dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
 ## Documentation
 
 ### Overview
