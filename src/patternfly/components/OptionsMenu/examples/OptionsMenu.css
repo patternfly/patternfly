@@ -23,3 +23,7 @@
 #ws-core-c-optionsmenu-with-groups-and-dividers-between-items {
   min-height: 450px;
 }
+
+#ws-core-c-optionsmenu-with-description {
+  min-height: 250px;
+}

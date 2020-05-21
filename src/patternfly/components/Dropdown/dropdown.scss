@@ -88,6 +88,10 @@
   --pf-c-dropdown__menu-item-icon--Width: var(--pf-global--icon--FontSize--lg);
   --pf-c-dropdown__menu-item-icon--Height: var(--pf-global--icon--FontSize--lg);
 
+  // Menu item description
+  --pf-c-dropdown__menu-item-description--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-dropdown__menu-item-description--Color: var(--pf-global--Color--200);
+
   // Groups
   --pf-c-dropdown__group--group--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__group-title--PaddingTop: var(--pf-global--spacer--sm);
@@ -437,8 +441,8 @@
 }
 
 .pf-c-dropdown__menu-item-description {
-  font-size: var(--pf-global--FontSize--xs);
-  color: var(--pf-global--Color--200);
+  font-size: var(--pf-c-dropdown__menu-item-description--FontSize);
+  color: var(--pf-c-dropdown__menu-item-description--Color);
 }
 
 .pf-c-dropdown__group + .pf-c-dropdown__group {

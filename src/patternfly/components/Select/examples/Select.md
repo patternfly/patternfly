@@ -275,10 +275,15 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 
 ```hbs title=With-description
-{{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true"}}
+{{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true" select-menu--modifier="pf-m-wrap"}}
   Select with description
 {{/select}}
 ```
+
+## Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select__menu-item-description` | `<p>` |  Initiates the select menu item description element. |
 
 ## Documentation
 ### Overview

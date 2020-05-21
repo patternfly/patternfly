@@ -1,0 +1,17 @@
+{{#> options-menu-menu}}
+  {{#> options-menu-menu-item}}
+    Menu item default
+    {{#> options-menu-menu-item-description}}
+      This is a description
+    {{/options-menu-menu-item-description}}
+  {{/options-menu-menu-item}}
+  <li>
+  <button class="pf-c-options-menu__menu-item" type="button">
+    Menu item selected
+    {{> options-menu-menu-item-icon}}
+    {{#> options-menu-menu-item-description}}
+      This is a description
+    {{/options-menu-menu-item-description}}
+  </button>
+</li>
+{{/options-menu-menu}}
