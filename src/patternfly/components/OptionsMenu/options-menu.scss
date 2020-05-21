@@ -268,6 +268,22 @@
     pointer-events: none;
     background-color: var(--pf-c-options-menu__menu-item--disabled--BackgroundColor);
   }
+
+  &.pf-m-description {
+    position: relative;
+    display: block;
+    padding-right: 48px;
+    text-align: left;
+
+    .pf-c-options-menu__menu-item-icon {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
+      color: var(--pf-c-options-menu__menu-item-icon--Color);
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .pf-c-options-menu__menu-item-icon {
