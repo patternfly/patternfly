@@ -92,6 +92,7 @@
   --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
+  --pf-c-select__menu-item--m-description__menu-item-icon--Top: 33%;
 
   // Menu item icon
   --pf-c-select__menu-item-icon--Color: var(--pf-global--active-color--100);
@@ -342,7 +343,6 @@
   min-width: 100%;
   padding-top: var(--pf-c-select__menu--PaddingTop);
   padding-bottom: var(--pf-c-select__menu--PaddingBottom);
-  white-space: nowrap;
   background-color: var(--pf-c-select__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--pf-c-select__menu--BoxShadow);
@@ -411,7 +411,7 @@
 
   &.pf-m-description {
     .pf-c-select__menu-item-icon {
-      top: 33%;
+      top: var(--pf-c-select__menu-item--m-description__menu-item-icon--Top);
     }
   }
 }

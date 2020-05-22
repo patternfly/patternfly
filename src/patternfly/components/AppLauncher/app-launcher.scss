@@ -162,11 +162,6 @@
   &.pf-m-favorite {
     --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color);
   }
-
-  &.pf-m-description {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
 }
 
 .pf-c-app-launcher__menu-item {

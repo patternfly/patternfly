@@ -246,3 +246,4 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
 | `.pf-m-icon` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding an icon. |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-icon-description` | `.pf-c-dropdown__menu-item` | Modifies the dropdown menu item to handle the description element. |
