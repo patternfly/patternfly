@@ -24,15 +24,16 @@
       </button>
     </li>
     <li>
-      <button type="button" class="pf-c-select__menu-item" aria-pressed="false">
+      <button type="button" class="pf-c-select__menu-item pf-m-selected pf-m-description" aria-pressed="false">
         Menu item with long description
+        {{#> select-menu-item-icon}}{{/select-menu-item-icon}}
         {{#> select-menu-item-description}}
           This is a really long description that describes the menu item. This is a really long description that describes the menu item.
         {{/select-menu-item-description}}
       </button>
     </li>
     <li>
-      <button type="button" class="pf-c-select__menu-item pf-m-selected" aria-pressed="true">
+      <button type="button" class="pf-c-select__menu-item pf-m-selected pf-m-description" aria-pressed="true">
         Menu item selected
         {{#> select-menu-item-icon}}{{/select-menu-item-icon}}
         {{#> select-menu-item-description}}

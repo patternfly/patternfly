@@ -353,6 +353,10 @@
 
   &.pf-m-wrap {
     white-space: normal;
+
+    .pf-c-select__menu-item {
+      white-space: normal;
+    }
   }
 
   .pf-c-select.pf-m-top & {
@@ -374,8 +378,7 @@
   line-height: var(--pf-c-select__menu-item--LineHeight);
   color: var(--pf-c-select__menu-item--Color);
   text-align: left;
-
-  // white-space: nowrap;
+  white-space: nowrap;
   background-color: transparent;
   border: none;
 
@@ -404,6 +407,12 @@
 
   &.pf-m-selected {
     --pf-c-select__menu-item--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
+  }
+
+  &.pf-m-description {
+    .pf-c-select__menu-item-icon {
+      top: 33%;
+    }
   }
 }
 

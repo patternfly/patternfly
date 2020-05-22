@@ -23,3 +23,7 @@
 #ws-core-c-applauncher-favorites {
   min-height: 540px;
 }
+
+#ws-core-c-applauncher-with-description {
+  min-height: 300px;
+}

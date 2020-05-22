@@ -269,11 +269,9 @@
     background-color: var(--pf-c-options-menu__menu-item--disabled--BackgroundColor);
   }
 
-  &.pf-m-description {
+  &.pf-m-selected {
     position: relative;
-    display: block;
     padding-right: 48px;
-    text-align: left;
 
     .pf-c-options-menu__menu-item-icon {
       position: absolute;
@@ -282,6 +280,14 @@
       font-size: var(--pf-c-options-menu__menu-item-icon--FontSize);
       color: var(--pf-c-options-menu__menu-item-icon--Color);
       transform: translateY(-50%);
+    }
+  }
+
+  &.pf-m-description {
+    flex-direction: column;
+
+    .pf-c-options-menu__menu-item-icon {
+      top: 33%;
     }
   }
 }

@@ -303,6 +303,31 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
+```hbs title=With-description
+{{#> app-launcher id="app-launcher-with-description" app-launcher--IsExpanded="true"}}
+  {{#> app-launcher-menu}}
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--attribute='href="#"'}}
+      Menu item default
+      {{#> app-launcher-menu-item-description}}
+        This is a description.
+      {{/ app-launcher-menu-item-description}}
+    {{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled pf-m-description" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
+      Menu item disabled
+      {{#> app-launcher-menu-item-description}}
+        This is a description.
+      {{/ app-launcher-menu-item-description}}
+    {{/app-launcher-menu-item}}</li>
+    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--attribute='href="#"'}}
+      Menu item with long description.
+      {{#> app-launcher-menu-item-description}}
+        This is a really long description that describes the menu item. This is a really long description that describes the menu item.
+      {{/ app-launcher-menu-item-description}}
+    {{/app-launcher-menu-item}}</li>
+  {{/app-launcher-menu}}
+{{/app-launcher}}
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied | Outcome |
