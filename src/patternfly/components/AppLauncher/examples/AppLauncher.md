@@ -366,3 +366,4 @@ import './AppLauncher.css'
 | `.pf-m-link` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item to for action styles. |
 | `.pf-m-active` | `.pf-c-app-launcher__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-description` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies the menu item to handle the description element. |
