@@ -83,6 +83,13 @@ module.exports = {
         path: `${path.resolve(__dirname)}/RELEASE-NOTES.md`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core', // This goes in URLs and determines sideNav items
+        path: `${path.resolve(__dirname)}/UPGRADE-GUIDE.md`
+      }
+    },
     // Source training page
     {
       resolve: 'gatsby-source-filesystem',
