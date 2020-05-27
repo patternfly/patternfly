@@ -13,7 +13,7 @@
 
   // Icon
   --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
-  --pf-c-alert__icon--MarginTop: 0; // remove at breaking change period
+  --pf-c-alert__icon--MarginTop: #{pf-size-prem(1px)};
   --pf-c-alert__icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
@@ -22,9 +22,10 @@
   --pf-c-alert__title--Color: var(--pf-global--default-color--300);
 
   // Action
-  --pf-c-alert__action--MarginTop: calc(var(--pf-global--spacer--form-element) * 2 * -1);
-  --pf-c-alert__action--TranslateY: var(--pf-global--spacer--form-element);
-  --pf-c-alert__action--MarginRight: #{pf-size-prem(-8px)};
+  --pf-c-alert__action--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-alert__action--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-alert__action--TranslateY: #{pf-size-prem(2px)};
+  --pf-c-alert__action--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
 
   // Action Description
   --pf-c-alert__description--PaddingTop: var(--pf-global--spacer--sm);
@@ -82,8 +83,8 @@
   grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   grid-template-areas:
     "icon title action"
-    ". description description"
-    ". actiongroup actiongroup";
+    "icon description description"
+    "icon actiongroup actiongroup";
 
   &.pf-m-success {
     --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
@@ -122,15 +123,10 @@
 .pf-c-alert__icon {
   grid-area: icon;
   display: flex;
-  align-items: center;
   margin-top: var(--pf-c-alert__icon--MarginTop);
   margin-right: var(--pf-c-alert__icon--MarginRight);
   font-size: var(--pf-c-alert__icon--FontSize);
   color: var(--pf-c-alert__icon--Color);
-
-  > * {
-    line-height: initial;
-  }
 }
 
 .pf-c-alert__title {
@@ -138,7 +134,6 @@
   align-items: center;
   grid-area: title;
   font-weight: var(--pf-c-alert__title--FontWeight);
-  line-height: initial;
   color: var(--pf-c-alert__title--Color);
 }
 
@@ -155,7 +150,12 @@
   grid-area: action;
   margin-top: var(--pf-c-alert__action--MarginTop);
   margin-right: var(--pf-c-alert__action--MarginRight);
+  margin-bottom: var(--pf-c-alert__action--MarginBottom);
   transform: translateY(var(--pf-c-alert__action--TranslateY));
+
+  > .pf-c-button {
+    --pf-c-button--LineHeight: 1;
+  }
 }
 
 .pf-c-alert__action-group {
