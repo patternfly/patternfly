@@ -7,7 +7,7 @@ Hey Fliers, we've been busy for the past 12 weeks working on significant changes
 
 ## Global
 ### Colors
-We've updated colors to be ??? @mceledonia
+Various colors have been updated to increase contrast in more usage scenarios to meet accessibility requirements. Some color variables have been remapped to better suit new component designs such as alerts, and we’ve also added new `-50` color tints to serve as colored backgrounds where appropriate. As a followup to last year's color changes, we've updated Blue and Cyan palettes' `-600` and `-700` values as well.
 
 ### Mobile first CSS
 We've updated some components' CSS to be mobile first by using `@min-width` media queries. The components that are now mobile-first are: background image, data list, toolbar, form, login, page, toolbar, and wizard [(#2816)](https://github.com/patternfly/patternfly/pull/2816).
