@@ -130,6 +130,7 @@
   grid-area: title;
   font-weight: var(--pf-c-alert__title--FontWeight);
   color: var(--pf-c-alert__title--Color);
+  word-break: break-word;
 }
 
 .pf-c-alert__description {

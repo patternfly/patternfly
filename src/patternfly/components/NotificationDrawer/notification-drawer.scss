@@ -81,6 +81,9 @@
   --pf-c-notification-drawer__group-toggle--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-notification-drawer__group-toggle--OutlineOffset: #{pf-size-prem(-4px)};
 
+  // Group toggle title
+  --pf-c-notification-drawer__group-toggle-title--MarginRight: var(--pf-global--spacer--md);
+
   // Group toggle count
   --pf-c-notification-drawer__group-toggle-count--MarginRight: var(--pf-global--spacer--md);
 
@@ -213,6 +216,7 @@
 
 .pf-c-notification-drawer__list-item-header-title {
   font-weight: var(--pf-c-notification-drawer__list-item-header-title--FontWeight);
+  word-break: break-word;
 }
 
 .pf-c-notification-drawer__list-item-action {
@@ -270,6 +274,12 @@
   border: solid var(--pf-c-notification-drawer__group-toggle--BorderColor);
   border-width: 0 0 var(--pf-c-notification-drawer__group-toggle--BorderBottomWidth) 0;
   outline-offset: var(--pf-c-notification-drawer__group-toggle--OutlineOffset);
+}
+
+.pf-c-notification-drawer__group-toggle-title {
+  @include pf-text-overflow();
+
+  margin-right: var(--pf-c-notification-drawer__group-toggle-title--MarginRight);
 }
 
 .pf-c-notification-drawer__group-toggle-count {
