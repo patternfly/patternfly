@@ -1,5 +1,5 @@
-$pf-c-drawer--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl", "2xl");
-$pf-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "md", "lg", "xl", "2xl");
+$pf-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
+$pf-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 .pf-c-drawer {
@@ -297,6 +297,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 @each $breakpoint, $breakpoint-value in $pf-c-drawer--breakpoint-map--width {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
+  @if $breakpoint == "base" {
+    $breakpoint: "md";
+  }
+
   @include pf-apply-breakpoint($breakpoint, $pf-c-drawer--breakpoint-map--width) {
     @each $width-value in $pf-c-drawer__panel--list--width {
       .pf-c-drawer__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
@@ -309,6 +313,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 // Responsive modifiers
 @each $breakpoint, $breakpoint-value in $pf-c-drawer--breakpoint-map {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+  @if $breakpoint == "base" {
+    $breakpoint: "md";
+  }
 
   @include pf-apply-breakpoint($breakpoint, $pf-c-drawer--breakpoint-map) {
     // Drawer and inline
