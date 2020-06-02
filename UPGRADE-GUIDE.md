@@ -240,7 +240,7 @@ Removed variables:
 - `--pf-c-backdrop--BackdropFilter`
 
 ### Breadcrumb
-- Added word-break to items and made the display link and icon inline for smaller viewports [(#2916)](https://github.com/patternfly/patternfly/pull/2916)
+- Enabled long strings to break to multiple lines, made item link and divider icon display inline, moved divider icon to come before the item link text [(#2916)](https://github.com/patternfly/patternfly/pull/2916)
 - Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 
