@@ -203,7 +203,7 @@ Removed variables:
 ### Application launcher
 - Applied external link icon class to icon wrapper [(#2904)](https://github.com/patternfly/patternfly/pull/2904)
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up variables [(#3012)](https://github.com/patternfly/patternfly/pull/3012)
 
 Updated markup:
@@ -241,7 +241,7 @@ Removed variables:
 
 ### Breadcrumb
 - Added word-break to items and made the display link and icon inline for smaller viewports [(#2916)](https://github.com/patternfly/patternfly/pull/2916)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 
 Updated markup:
@@ -263,7 +263,7 @@ Removed variables:
 - `--pf-c-breadcrumb__link--FontWeight`
 
 ### Button
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3028)](https://github.com/patternfly/patternfly/pull/3028)
 - Updated control variation disabled state [(#3049)](https://github.com/patternfly/patternfly/pull/3049)
 - Added modifiers to position icon in button [(#2828)](https://github.com/patternfly/patternfly/pull/2828)
@@ -329,7 +329,7 @@ Renamed variables:
 
 ### Chip
 - Refactor styles [(#2941)](https://github.com/patternfly/patternfly/pull/2941).
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
 - Adjusted chip top/bottom padding and the chip group margin in select [(#3079)](https://github.com/patternfly/patternfly/pull/3079).
 
 Updated markup:
@@ -503,7 +503,7 @@ Removed variables:
 - `--pf-c-content--ul--MarginTop`
 
 ### Context selector
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Updated markup:
 - Added `span.pf-c-context-selector__toggle-icon` wrapper to toggle icon [(#2927)](https://github.com/patternfly/patternfly/pull/2927)
@@ -593,7 +593,7 @@ Removed classes:
 
 ### Dropdown
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3020)](https://github.com/patternfly/patternfly/pull/3020)
 
 Removed classes:
@@ -657,7 +657,7 @@ Renamed variables
 - `--pf-c-empty-state--c-button__secondary--MarginTop` to `--pf-c-empty-state__primary--secondary--MarginTop`
 
 ### Expandable section (previously Expandable)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
 - Added wrapper with classname to all icons [(#2927)](https://github.com/patternfly/patternfly/pull/2927).
 
 Updated markup:
@@ -678,10 +678,10 @@ Removed variables:
 - `--pf-c-expandable-section__toggle-icon--MarginRight`
 
 ### File upload
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Updated control variation disabled state [(#3049)](https://github.com/patternfly/patternfly/pull/3049)
 
-Removed clases:
+Removed classes:
 - `.pf-m-disabled` from `.pf-c-file-upload__file-select .pf-c-button.pf-m-control`
   - The `:disabled` selector still has styles applied to it.
 
@@ -695,7 +695,7 @@ Removed variables:
 
 ### Form
 - Refactored label/control sections, added label help [(#2766)](https://github.com/patternfly/patternfly/pull/2766)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Updated markup:
 - There are 2 new elements used for the overall form layout. These elements are the main sections that make up a `.pf-c-form__group`.
@@ -793,7 +793,7 @@ Updated CSS:
 - The space above the footer changed from `--pf-global--spacer--xl` to `--pf-global--spacer--lg`.
 - The `.pf-c-form__helper-text-icon` styles have moved from the login component stylesheet to the form component stylesheet.
 - Actions in the footer are now left aligned by default.
-- `--pf-c-modal-box--PaddingTop` is now achieved with `--pf-c-modal-box__[modal element]--PaddingTop`. However it's important to note that this variable changes depending on the markup present in the modal, so this variable serves multiple purpopses. And it will need to be modified for each child of the modal component that touches the top edge of the modal.
+- `--pf-c-modal-box--PaddingTop` is now achieved with `--pf-c-modal-box__[modal element]--PaddingTop`. However it's important to note that this variable changes depending on the markup present in the modal, so this variable serves multiple purposes. And it will need to be modified for each child of the modal component that touches the top edge of the modal.
 - `--pf-c-modal-box--PaddingRight` is now achieved with `--pf-c-modal-box__[modal element]--PaddingRight`. However it will need to be modified for each child of the modal component that touches the right edge of the modal.
 - `--pf-c-modal-box--PaddingBottom` is now achieved with `--pf-c-modal-box__[modal element]--last-child--PaddingBottom`. However it will need to be modified for each child of the modal component that touches the bottom edge of the modal.
 - `--pf-c-modal-box--PaddingLeft` is now achieved with `--pf-c-modal-box__[modal element]--PaddingLeft`. However it will need to be modified for each child of the modal component that touches the left edge of the modal.
@@ -825,7 +825,7 @@ Renamed variables
 ### Nav
 - Refactored vertical nav CSS structure [(#2884)](https://github.com/patternfly/patternfly/pull/2884)
 - Updated nav scroll buttons to be inline [(#2942)](https://github.com/patternfly/patternfly/pull/2942)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Updated nav to dark theme [(#2978)](https://github.com/patternfly/patternfly/pull/2978)
 - Made `pf-c-nav__list` a flex parent [(#3006)](https://github.com/patternfly/patternfly/pull/3006)
 - Removed `__simple-list`, added support for `-m-horizontal/-m-tertiary` at root [(#3062)](https://github.com/patternfly/patternfly/pull/3062)
@@ -897,7 +897,7 @@ Renamed variables:
 ### Options menu
 - Added color declaration to menu items [(#2938)](https://github.com/patternfly/patternfly/pull/2938)
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3018)](https://github.com/patternfly/patternfly/pull/3018)
 - Added wrapper with classname to all icons[(#2927)](https://github.com/patternfly/patternfly/pull/2927)
 
@@ -1031,7 +1031,7 @@ Updated CSS:
 
 ### Select
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3019)](https://github.com/patternfly/patternfly/pull/3019)
 
 Updated markup:
@@ -1078,7 +1078,7 @@ Removed variables:
 - `--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop`
 
 ### Simple list
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Removed classes:
 - `.pf-m-hover` from `.pf-c-simple-list__item-link`
@@ -1087,7 +1087,7 @@ Removed classes:
   - The `:hover`, `:active` and `:focus` selectors still have styles applied to them.
 
 ### Skip to content
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Removed classes:
 - `.pf-m-focus` from `.pf-c-skip-to-content`
@@ -1220,7 +1220,7 @@ Updated CSS:
 - Move padding modifier to body [(#2924)](https://github.com/patternfly/patternfly/pull/2924)
 - Made desktop nav 250px, remove compact modifier [(#2936)](https://github.com/patternfly/patternfly/pull/2936)
 - Reworked wizard so it can be used in modal [(#2964)](https://github.com/patternfly/patternfly/pull/2964)
-- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifiers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3013)](https://github.com/patternfly/patternfly/pull/3013)
 - Added wrapper with classname to all icons[(#2927)](https://github.com/patternfly/patternfly/pull/2927)
 
@@ -1295,4 +1295,4 @@ Removed variables:
 - `--pf-c-wizard__toggle-icon--MarginTop`
 
 ## Layouts
-- Update gutters in patternfly layouts (gallery, grid, level, split, stack) to have a single gutter instead of responsive, so the gutter is always 16px, instead of being 16px on mobile and 24px on desktop. No futher changes are needed to consume this update, though applications may find that custom elements that may have aligned with the spacing at the old breakpoint no longer align. [(#2962)](https://github.com/patternfly/patternfly/pull/2962)
+- Update gutters in patternfly layouts (gallery, grid, level, split, stack) to have a single instead of responsive gutter, so the gutter is always 16px instead of being 16px on mobile and 24px on desktop. [(#2962)](https://github.com/patternfly/patternfly/pull/2962)
