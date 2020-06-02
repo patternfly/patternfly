@@ -3,28 +3,28 @@ title: Upgrade guide
 section: overview
 ---
 
-Hey Fliers, we've been busy for the past 12 weeks working on significant changes to PatternFly's HTML and CSS. We've changed colors, the default font, and made our components mobile-first. This upgrade guide details **what** was broken and **how** to fix it. We've included links to the pull requests in case you want to follow a trail of **why** a change was made.
+Hey, Flyers! We've been busy for the past 12 weeks working on significant changes to PatternFly's HTML and CSS. We made our components mobile-first and changed colors and the default font. This upgrade guide details **what** was broken and **how** to fix it. To learn **why** a change was made, check out the linked pull requests.
 
 ## Global
 ### Colors
-Various colors have been updated to increase contrast in more usage scenarios to meet accessibility requirements. Some color variables have been remapped to better suit new component designs such as alerts, and we’ve also added new `-50` color tints to serve as colored backgrounds where appropriate. As a followup to last year's color changes, we've updated Blue and Cyan palettes' `-600` and `-700` values as well.
+To meet accessibility requirements, various colors have been updated to increase contrast in more usage scenarios. Some color variables have been remapped to better suit new component designs such as alerts, and we’ve also added new `-50` color tints to serve as colored backgrounds where appropriate. As a follow-up to last year's color changes, we've updated Blue and Cyan palettes' `-600` and `-700` values as well.
 
 ### Mobile first CSS
-We've updated some components' CSS to be mobile first by using `@min-width` media queries. The components that are now mobile-first are: background image, data list, toolbar, form, login, page, toolbar, and wizard [(#2816)](https://github.com/patternfly/patternfly/pull/2816).
-  * All components are now mobile-first, but one component that cannot satisfy this is the table, specifically with use of the `.pf-m-grid[-on-{breakpoint}]` modifers. At the specified grid breakpoint, native/default properties are modified to achieve a grid based layout. To overwrite these changes would require adding back native properties to the table. For that reason, the table will remain the exception to a “mobile-first” approach.
+We've updated some components' CSS to be mobile first by using `@min-width` media queries. The components that are now mobile-first are background image, data list, toolbar, form, login, page, toolbar, and wizard [(#2816)](https://github.com/patternfly/patternfly/pull/2816).
+  - The only component that cannot be mobile-first is the table, specifically with the `.pf-m-grid[-on-{breakpoint}]` modifiers. At the specified grid breakpoint, native/default properties are modified to achieve a grid-based layout. Overwriting these changes would require adding back native properties to the table. For that reason, the table will remain the exception to a mobile-first approach.
 
 ### Vertical navigation hidden breakpoint
-We've changed the breakpoint at which we hide the vertical nav to be `$pf-global--breakpoint--xl` (1200px) rather than `$pf-global--breakpoint--md` (768px) [(#2962)](https://github.com/patternfly/patternfly/pull/2962). The overall page chrome and some individual components' horizontal spacing becomes more compact at this breakpoint (true of the old breakpoint and the new), so applications may find that custom elements that aligned with the old breakpoint may not align now since the chrome spacing changes at 1200px instead of 768px. An application may need to make updates to match the chrome's spacing at the new breakpoint.
+We've changed the hidden breakpoint for the vertical nav to be `$pf-global--breakpoint--xl` (1200px) rather than `$pf-global--breakpoint--md` (768px) [(#2962)](https://github.com/patternfly/patternfly/pull/2962). The overall page chrome and some individual components' horizontal spacing becomes more compact at this breakpoint (true of the old breakpoint and the new). Applications' custom elements that aligned with the old breakpoint may not align now since the chrome spacing changes at 1200px instead of 768px. You may need to make updates to match the chrome's spacing at the new breakpoint.
 
 ### Removed "shield" CSS
 We've made shield styles optional by default [(#2872)](https://github.com/patternfly/patternfly/pull/2872). The "shield" styles were intended to help resolve styling issues when using PF3 and PF4 together, and when having opted out of the global reset CSS, but they have proven to be problematic and not necessary for most users. With this change, we encourage applications to adopt PatternFly's reset CSS, if they have specifically opted out of it previously. The shield styles can be re-enabled if needed, either by setting `$pf-global--enable-shield: true;` and compiling PatternFly's SCSS, or by manually importing `base/patternfly-shield-inheritable.css` and `base/patternfly-shield-non-inheritable`. See [(#2872)](https://github.com/patternfly/patternfly/pull/2872) for more details.
 
 ### Default font
-We've updated the default font to be `RedHatText` instead of `Overpass` [(#2955)](https://github.com/patternfly/patternfly/pull/2955). To use the old font, add the class `pf-m-overpass-font` on an element that wraps your application (ie, `<body>`).
+We've updated the default font to be `RedHatText` instead of `Overpass` [(#2955)](https://github.com/patternfly/patternfly/pull/2955). To use the old font, add the class `pf-m-overpass-font` on an element that wraps your application (for example, `<body>`).
 
 PatternFly has chosen to adopt a single font (`RedHatText`) across the library [(#3023)](https://github.com/patternfly/patternfly/pull/3023). Previously, when having opted in to the Red Hat font via `.pf-m-redhat-font`, PatternFly used 2 fonts - `RedHatText` (RHT) defined as `--pf-global--FontFamily--sans-serif`, and `RedHatDisplay` (RHD) defined as `--pf-global--FontFamily--heading--sans-serif`. `--pf-global--FontFamily--heading--sans-serif` has been removed and components have been updated to use `--pf-global--FontFamily--sans-serif` instead.
 
-Users do not have to do anything further to consume this change. However, with the change from `Overpass` to `RedHatText`, and with the removal of `RedHatDisplay`, we encourage teams to review their application's typography styles to ensure they are correct.
+You don't have to do anything further to use this font. However, with the change from `Overpass` to `RedHatText` and with the removal of `RedHatDisplay`, we encourage you to review your application's typography styles to ensure they are correct.
 
 ### Directory structure
 We've cleaned up our root directory a little in [(#2960)](https://github.com/patternfly/patternfly/pull/2960). If you're compiling or importing more internal parts of PatternFly, you'll likely need to update your imports:
@@ -67,7 +67,7 @@ Removed classes:
 
 Removed variables:
 - `--pf-global--BackgroundColor--150` and `--pf-global--BackgroundColor--300`
-  - These can be updated to use `--pf-global--BackgroundColor--200` instead. However you might want to consult your visual designer first.
+  - These can be updated to use `--pf-global--BackgroundColor--200` instead, but you should consult your visual designer first.
 - All bootstrap variables [(#2871)](https://github.com/patternfly/patternfly/pull/2871)
   - These are no longer included with PatternFly by default. If you still need these, you can import `sass-utilities/bs-variables.scss` manually.
 - `--pf-global--link--FontWeight`
@@ -83,7 +83,7 @@ Removed variables:
 Our components have seen many CSS variables changed, removed, and renamed. Removed and renamed variables may require changes to your CSS and HTML.
 
 **Visual changes:**
-Many of our components have had design updates that introduce visual breaking changes. Some are simple updates to existing styles (e.g., spacing or color), while others are an overhaul of the design (e.g., Tabs and Label).
+We applied some design updates to many of our components, which introduce visual breaking changes. Some are simple updates to existing styles (such as spacing or color), while others are an overhaul of the design (such as Tabs and Label).
 
 **Renamed and removed components:**
 - Data toolbar (`.pf-c-data-toolbar`) has been renamed to toolbar (`.pf-c-toolbar`).
@@ -104,7 +104,7 @@ Removed classes:
 - Added toggle icon wrapper [(#2927)](https://github.com/patternfly/patternfly/pull/2927)
 
 Updated markup:
-- The toggle icon should be wrapped in a `<span>` element, and the class `.pf-c-accordion__toggle-icon` moved from the icon to the `<span>`.
+- The toggle icon should be wrapped in a `<span>` element, and the class `.pf-c-accordion__toggle-icon` should be moved from the icon to the `<span>`.
 
 Updated CSS:
 - `--pf-c-accordion__toggle--PaddingRight` from `--pf-global--spacer--xl` to `--pf-global--spacer--md`
@@ -147,7 +147,7 @@ Removed variables:
 - Update styling for better accessibility [(#2921)](https://github.com/patternfly/patternfly/pull/2921)
 
 Updated markup:
-- The only action that should go in `.pf-c-alert__action` is the close button. All other actions should be in a new element with the class `.pf-c-alert__action-group` that should be appended to `.pf-c-alert`.
+- The only action that should go in `.pf-c-alert__action` is the close button. All other actions should be in a new element with the class `.pf-c-alert__action-group` appended to `.pf-c-alert`.
 
 Renamed variables:
 - `--pf-c-alert--grid-template-columns` to `--pf-c-alert--GridTemplateColumns`
@@ -203,11 +203,11 @@ Removed variables:
 ### Application launcher
 - Applied external link icon class to icon wrapper [(#2904)](https://github.com/patternfly/patternfly/pull/2904)
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up variables [(#3012)](https://github.com/patternfly/patternfly/pull/3012)
 
 Updated markup:
-- Moves the class `.pf-c-app-launcher__menu-item-external-icon` from the external link icon itself to a `<span>` that wraps the external link icon. Any instances of the external link icon should be wrapped in a `<span>` and the `.pf-c-app-launcher__menu-item-external-icon` class should be moved from the icon to the `<span>`.
+- Moves the class `.pf-c-app-launcher__menu-item-external-icon` from the external link icon itself to a `<span>` that wraps the external link icon. Any instances of the external link icon should be wrapped in a `<span>`, and the `.pf-c-app-launcher__menu-item-external-icon` class should be moved from the icon to the `<span>`.
 
 Removed classes:
 - `.pf-c-app-launcher__separator` - element was removed. Use the divider component instead.
@@ -240,12 +240,12 @@ Removed variables:
 - `--pf-c-backdrop--BackdropFilter`
 
 ### Breadcrumb
-- Added word-break, display link and icon inline, move divider [(#2916)](https://github.com/patternfly/patternfly/pull/2916)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
-- Made redhat font default, add opt-in for overpass [(#2955)](https://github.com/patternfly/patternfly/pull/2955)
+- Added word-break to items and made the display link and icon inline for smaller viewports [(#2916)](https://github.com/patternfly/patternfly/pull/2916)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+
 
 Updated markup:
-- Any reference to the divider element `.pf-c-breadcrumb__item-divider` will need to be moved in the markup to come before the breadcrumb link element `.pf-c-breadcrumb__link` instead of after it.
+- In the markup, move any reference to the divider element `.pf-c-breadcrumb__item-divider` so that is comes before the breadcrumb link element `.pf-c-breadcrumb__link` instead of after it.
 
 Updated CSS:
 - The text will now break if there is a long string in an item link that is wider than the viewport.
@@ -263,24 +263,24 @@ Removed variables:
 - `--pf-c-breadcrumb__link--FontWeight`
 
 ### Button
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3028)](https://github.com/patternfly/patternfly/pull/3028)
 - Updated control variation disabled state [(#3049)](https://github.com/patternfly/patternfly/pull/3049)
 - Added modifiers to position icon in button [(#2828)](https://github.com/patternfly/patternfly/pull/2828)
 - Made shield styles optional by default [(#2872)](https://github.com/patternfly/patternfly/pull/2872)
 
 Updated markup:
-- Adds the modifiers `.pf-m-start` and `.pf-m-end` to position `pf-c-button__icon` in the button component depending on whether it comes before or after text. If you are using a button with an icon, you will need to use one of these modifiers to style the icon.
+- Added the modifiers `.pf-m-start` and `.pf-m-end` to position `pf-c-button__icon` in the button component depending on whether it comes before or after text. If you are using a button with an icon, use one of these modifiers to style the icon.
 
 Updated CSS:
 - Link and plain buttons now define `background-color: transparent` for their normal, hover, focus, and active states.
 - The control button now sets a white background and default text color for its normal, hover, focus, and active states.
-- The `:active` CSS selectors in the button component's stylesheet were moved after `:focus`, so that if the `:focus` and `:active` pseudo selectors declare styles on the same CSS properties for an element, the `:active` styles will now be visible when the element is `:active`. No changes are needed to consume this change, however any `:active` styles that may have been overridden by the `:focus` styles coming later in the stylesheet may now be visible.
+
 
 Removed classes:
-- `.pf-c-button__text` - element was removed
-- `.pf-m-hover` from `.pf-c-button`
-- `.pf-m-focus` from `.pf-c-button`
+- Removed `.pf-c-button__text` (entire element was removed)
+- Removed `.pf-m-hover` from `.pf-c-button`
+- Removed `.pf-m-focus` from `.pf-c-button`
   - The `:hover` and `:focus` selectors still have styles applied to them.
 
 Renamed variables:
@@ -329,8 +329,8 @@ Renamed variables:
 
 ### Chip
 - Refactor styles [(#2941)](https://github.com/patternfly/patternfly/pull/2941).
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
-- Adjusted chip top/bottom padding, chip group margin in select [(#3079)](https://github.com/patternfly/patternfly/pull/3079).
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
+- Adjusted chip top/bottom padding and the chip group margin in select [(#3079)](https://github.com/patternfly/patternfly/pull/3079).
 
 Updated markup:
 - The "x" icon in the close button changed from `fa-times-circle` to `fa-times`.
@@ -376,14 +376,14 @@ Removed variables:
 - `--pf-c-select__toggle-wrapper--c-chip--c-button--PaddingBottom`
 
 ### Chip group
-- Clarify chip group behavior [(#2961)](https://github.com/patternfly/patternfly/pull/2961)
+- Clarified chip group types, overflow, and categories [(#2961)](https://github.com/patternfly/patternfly/pull/2961)
 - No longer nests [(#3058)](https://github.com/patternfly/patternfly/pull/3058)
 
 Updated markup:
 - The outer `.pf-c-chip-group` element should now always be a `<div>`. All instances of `.pf-c-chip-group` should be updated to be a `<div>`.
 - `.pf-c-chip-group__label` is now a `<span>` instead of a heading element.
 - `.pf-c-chip-group__label` should have an `id` value that will be used as the value for `aria-labelledby` on the `ul.pf-c-chip-group__list` element.
-- Since the text in `.pf-c-chip-group__label` is read to screen readers via `aria-labelledby` on the `pf-c-chip-group__list` element, `.pf-c-chip-group__label` should now also have `aria-hidden="true"`.
+- Because screen readers read the text in `.pf-c-chip-group__label` via `aria-labelledby` on the `pf-c-chip-group__list` element, `.pf-c-chip-group__label` should now also have `aria-hidden="true"`.
 - The list of chips inside of a chip group should be wrapped in a `<ul>` with the class `pf-c-chip-group__list`.
 - `.pf-c-chip-group__list` should have a (redundant) `role="list"` assigned. This is needed for screen readers to announce the list properly.
 - Chips inside of `.pf-c-chip-group__list` should each be wrapped with a `li.pf-c-chip-group__list-item` element.
@@ -503,7 +503,7 @@ Removed variables:
 - `--pf-c-content--ul--MarginTop`
 
 ### Context selector
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Updated markup:
 - Added `span.pf-c-context-selector__toggle-icon` wrapper to toggle icon [(#2927)](https://github.com/patternfly/patternfly/pull/2927)
@@ -593,7 +593,7 @@ Removed classes:
 
 ### Dropdown
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3020)](https://github.com/patternfly/patternfly/pull/3020)
 
 Removed classes:
@@ -657,7 +657,7 @@ Renamed variables
 - `--pf-c-empty-state--c-button__secondary--MarginTop` to `--pf-c-empty-state__primary--secondary--MarginTop`
 
 ### Expandable section (previously Expandable)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975).
 - Added wrapper with classname to all icons [(#2927)](https://github.com/patternfly/patternfly/pull/2927).
 
 Updated markup:
@@ -678,7 +678,7 @@ Removed variables:
 - `--pf-c-expandable-section__toggle-icon--MarginRight`
 
 ### File upload
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Updated control variation disabled state [(#3049)](https://github.com/patternfly/patternfly/pull/3049)
 
 Removed clases:
@@ -695,7 +695,7 @@ Removed variables:
 
 ### Form
 - Refactored label/control sections, added label help [(#2766)](https://github.com/patternfly/patternfly/pull/2766)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Updated markup:
 - There are 2 new elements used for the overall form layout. These elements are the main sections that make up a `.pf-c-form__group`.
@@ -825,7 +825,7 @@ Renamed variables
 ### Nav
 - Refactored vertical nav CSS structure [(#2884)](https://github.com/patternfly/patternfly/pull/2884)
 - Updated nav scroll buttons to be inline [(#2942)](https://github.com/patternfly/patternfly/pull/2942)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Updated nav to dark theme [(#2978)](https://github.com/patternfly/patternfly/pull/2978)
 - Made `pf-c-nav__list` a flex parent [(#3006)](https://github.com/patternfly/patternfly/pull/3006)
 - Removed `__simple-list`, added support for `-m-horizontal/-m-tertiary` at root [(#3062)](https://github.com/patternfly/patternfly/pull/3062)
@@ -897,7 +897,7 @@ Renamed variables:
 ### Options menu
 - Added color declaration to menu items [(#2938)](https://github.com/patternfly/patternfly/pull/2938)
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3018)](https://github.com/patternfly/patternfly/pull/3018)
 - Added wrapper with classname to all icons[(#2927)](https://github.com/patternfly/patternfly/pull/2927)
 
@@ -1031,7 +1031,7 @@ Updated CSS:
 
 ### Select
 - Removed separator in favor of divider component [(#2944)](https://github.com/patternfly/patternfly/pull/2944)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3019)](https://github.com/patternfly/patternfly/pull/3019)
 
 Updated markup:
@@ -1078,7 +1078,7 @@ Removed variables:
 - `--pf-c-select__toggle-wrapper--m-typeahead--PaddingTop`
 
 ### Simple list
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Removed classes:
 - `.pf-m-hover` from `.pf-c-simple-list__item-link`
@@ -1087,7 +1087,7 @@ Removed classes:
   - The `:hover`, `:active` and `:focus` selectors still have styles applied to them.
 
 ### Skip to content
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 
 Removed classes:
 - `.pf-m-focus` from `.pf-c-skip-to-content`
@@ -1220,7 +1220,7 @@ Updated CSS:
 - Move padding modifier to body [(#2924)](https://github.com/patternfly/patternfly/pull/2924)
 - Made desktop nav 250px, remove compact modifier [(#2936)](https://github.com/patternfly/patternfly/pull/2936)
 - Reworked wizard so it can be used in modal [(#2964)](https://github.com/patternfly/patternfly/pull/2964)
-- Removed hover, active, focus, and disabled from workspace [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
+- Removed hover, active, focus, and disabled modifers [(#2975)](https://github.com/patternfly/patternfly/pull/2975)
 - Cleaned up vars [(#3013)](https://github.com/patternfly/patternfly/pull/3013)
 - Added wrapper with classname to all icons[(#2927)](https://github.com/patternfly/patternfly/pull/2927)
 
