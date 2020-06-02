@@ -57,6 +57,7 @@
 
   // List item header title
   --pf-c-notification-drawer__list-item-header-title--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-notification-drawer__list-item-header-title--max-lines: 1;
   --pf-c-notification-drawer__list-item--m-read__list-item-header-title--FontWeight: var(--pf-global--FontWeight--normal);
 
   // List item description
@@ -83,6 +84,7 @@
 
   // Group toggle title
   --pf-c-notification-drawer__group-toggle-title--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-notification-drawer__group-toggle-title--max-lines: 1;
 
   // Group toggle count
   --pf-c-notification-drawer__group-toggle-count--MarginRight: var(--pf-global--spacer--md);
@@ -217,6 +219,10 @@
 .pf-c-notification-drawer__list-item-header-title {
   font-weight: var(--pf-c-notification-drawer__list-item-header-title--FontWeight);
   word-break: break-word;
+
+  &.pf-m-truncate {
+    @include pf-line-clamp("var(--pf-c-notification-drawer__list-item-header-title--max-lines)");
+  }
 }
 
 .pf-c-notification-drawer__list-item-action {
@@ -277,9 +283,10 @@
 }
 
 .pf-c-notification-drawer__group-toggle-title {
-  @include pf-text-overflow();
+  @include pf-line-clamp("var(--pf-c-notification-drawer__group-toggle-title--max-lines)");
 
   margin-right: var(--pf-c-notification-drawer__group-toggle-title--MarginRight);
+  text-align: left;
 }
 
 .pf-c-notification-drawer__group-toggle-count {

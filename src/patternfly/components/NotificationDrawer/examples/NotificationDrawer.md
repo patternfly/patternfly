@@ -140,3 +140,4 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-m-read` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the read state. |
 | `.pf-m-hoverable` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item hover states to inidicate it is clickable. |
 | `.pf-m-expanded` | `.pf-c-notification-drawer__group` | Modifies a notification group for the expanded state. |
+| `.pf-m-truncate` | `.pf-c-notification-drawer__list-item-header-title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-notification-drawer__list-item-header-title--max-lines` (the default value is `1`). |
