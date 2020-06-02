@@ -19,6 +19,7 @@
   // Title
   --pf-c-alert__title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-alert__title--Color: var(--pf-global--default-color--300);
+  --pf-c-alert__title--max-lines: 1;
 
   // Action
   --pf-c-alert__action--MarginTop: calc(var(--pf-global--spacer--form-element) * 2 * -1);
@@ -80,8 +81,8 @@
   grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   grid-template-areas:
     "icon title action"
-    "icon description description"
-    "icon actiongroup actiongroup";
+    ". description description"
+    ". actiongroup actiongroup";
 
   &.pf-m-success {
     --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
@@ -131,6 +132,10 @@
   font-weight: var(--pf-c-alert__title--FontWeight);
   color: var(--pf-c-alert__title--Color);
   word-break: break-word;
+
+  &.pf-m-truncate {
+    @include pf-line-clamp("var(--pf-c-alert__title--max-lines)");
+  }
 }
 
 .pf-c-alert__description {

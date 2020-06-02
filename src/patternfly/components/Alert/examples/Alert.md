@@ -14,7 +14,7 @@ cssPrefix: pf-c-alert
     Default alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}
@@ -23,7 +23,7 @@ cssPrefix: pf-c-alert
     Info alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -32,7 +32,7 @@ cssPrefix: pf-c-alert
     Success alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-triangle"}}
   {{/alert-icon}}
@@ -41,7 +41,7 @@ cssPrefix: pf-c-alert
     Warning alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-circle"}}
   {{/alert-icon}}
@@ -77,7 +77,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action-group}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -94,7 +94,7 @@ cssPrefix: pf-c-alert
     Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
   {{/alert-description}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -116,7 +116,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action-group}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -130,7 +130,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -138,6 +138,30 @@ cssPrefix: pf-c-alert
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
   {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert with title truncation"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title alert-title--modifier="pf-m-truncate"}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque cursus enim fringilla tincidunt. Proin lobortis aliquam dictum. Nam vel ullamcorper nulla, nec blandit dolor. Vivamus pellentesque neque justo, nec accumsan nulla rhoncus id. Suspendisse mollis, tortor quis faucibus volutpat, sem leo fringilla turpis, ac lacinia augue metus in nulla. Cras vestibulum lacinia orci. Pellentesque sodales consequat interdum. Sed porttitor tincidunt metus nec iaculis. Pellentesque non commodo justo. Morbi feugiat rhoncus neque, vitae facilisis diam aliquam nec. Sed dapibus vitae quam at tristique. Nunc vel commodo mi. Mauris et rhoncus leo.
+  {{/alert-title}}
+  {{#> alert-description}}
+    This example uses ".pf-m-truncate" to limit the title to a single line and truncate any overflow text with ellipses.
+  {{/alert-description}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert with title truncation at 2 lines"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title alert-title--modifier="pf-m-truncate" alert-title--attribute='style="--pf-c-alert__title--max-lines: 2"'}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque cursus enim fringilla tincidunt. Proin lobortis aliquam dictum. Nam vel ullamcorper nulla, nec blandit dolor. Vivamus pellentesque neque justo, nec accumsan nulla rhoncus id. Suspendisse mollis, tortor quis faucibus volutpat, sem leo fringilla turpis, ac lacinia augue metus in nulla. Cras vestibulum lacinia orci. Pellentesque sodales consequat interdum. Sed porttitor tincidunt metus nec iaculis. Pellentesque non commodo justo. Morbi feugiat rhoncus neque, vitae facilisis diam aliquam nec. Sed dapibus vitae quam at tristique. Nunc vel commodo mi. Mauris et rhoncus leo.
+  {{/alert-title}}
+  {{#> alert-description}}
+    This example uses ".pf-m-truncate" and sets "--pf-c-alert__title--max-lines: 2" to limit title to two lines and truncate any overflow text with ellipses.
+  {{/alert-description}}
 {{/alert}}
 ```
 
@@ -150,7 +174,7 @@ cssPrefix: pf-c-alert
     Default inline alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-info pf-m-inline" alert--attribute='aria-label="Inline information alert"'}}
   {{#> alert-icon alert-icon--type="info-circle"}}
   {{/alert-icon}}
@@ -159,7 +183,7 @@ cssPrefix: pf-c-alert
     Info inline alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Inline success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -168,7 +192,7 @@ cssPrefix: pf-c-alert
     Success inline alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-warning pf-m-inline" alert--attribute='aria-label="Inline warning alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-triangle"}}
   {{/alert-icon}}
@@ -177,7 +201,7 @@ cssPrefix: pf-c-alert
     Warning inline alert title
   {{/alert-title}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
   {{#> alert-icon alert-icon--type="exclamation-circle"}}
   {{/alert-icon}}
@@ -213,7 +237,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action-group}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -230,7 +254,7 @@ cssPrefix: pf-c-alert
     Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
   {{/alert-description}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -252,7 +276,7 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action-group}}
 {{/alert}}
-<br />
+<br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -262,6 +286,7 @@ cssPrefix: pf-c-alert
   {{/alert-title}}
 {{/alert}}
 ```
+
 ## Documentation
 ### Overview
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
@@ -295,3 +320,4 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |
 | `.pf-m-info` | `.pf-c-alert` |  Applies info styling. |
 | `.pf-m-inline` | `.pf-c-alert` |  Applies inline styling. |
+| `.pf-m-truncate` | `.pf-c-alert__title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
