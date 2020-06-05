@@ -29,7 +29,7 @@ function copySource(sassFiles) {
     src('src/icons/definitions/*').pipe(dest('dist/icons/')),
     src('src/icons/PfIcons/*').pipe(dest('dist/icons/PfIcons/')),
     // For NPM
-    src('README.md').pipe(dest('dist')),
+    src('*.md').pipe(dest('dist')),
     src('package.json').pipe(dest('dist'))
   ]);
 }
