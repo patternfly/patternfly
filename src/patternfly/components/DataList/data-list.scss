@@ -67,6 +67,7 @@
   --pf-c-data-list__cell--cell--PaddingTop: 0;
   --pf-c-data-list__cell--cell--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--m-icon--cell--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__cell--m-truncate--MaxWidth: 100%;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-data-list__cell--cell--PaddingTop: var(--pf-c-data-list__cell--cell--md--PaddingTop);
@@ -337,6 +338,21 @@
       flex: 1;
       order: initial;
     }
+  }
+
+  &.pf-m-truncate {
+    max-width: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.pf-m-break-word {
+    word-break: break-word;
+  }
+
+  &.pf-m-nowrap {
+    white-space: nowrap;
   }
 
   &.pf-m-icon {

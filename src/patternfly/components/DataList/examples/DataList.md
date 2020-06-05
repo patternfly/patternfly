@@ -658,6 +658,39 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
+
+```hbs title=Text-modifiers
+{{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with text modifiers"'}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item1">
+            This text will wrap to the next line because it has the default behavior of the data list cell.
+          </span>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-truncate"}}
+          This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-break-word"}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-nowrap"}}
+          This text will not break or wrap, but will continue to extend.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-truncate` | `.pf-c-data-list__cell` | Modifies the data list cell so that text is truncated. |
+| `.pf-m-break-word` | `.pf-c-data-list__cell` | Modifies the data list cell so that text breaks to the next line. |
+| `.pf-m-nowrap` | `.pf-c-data-list__cell` | Modifies the data list cell so that text does not wrap to the next line. |
+
 ## Documentation
 ### Overview
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/documentation/core/components/table).
