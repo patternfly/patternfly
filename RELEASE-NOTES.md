@@ -4,6 +4,12 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.07 release notes (2020-06-05)
+Packages released:
+- @patternfly/patternfly@v4.10.31
+
+This is our major release. Check out our [upgrade guide](/documentation/core/overview/upgrade-guide) for a list of breaking changes!
+
 ## 2020.06 release notes (2020-05-12)
 Packages released:
 - @patternfly/patternfly@v2.71.6
