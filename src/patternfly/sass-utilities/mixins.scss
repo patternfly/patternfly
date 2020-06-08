@@ -150,6 +150,15 @@
   white-space: nowrap;
 }
 
+@mixin pf-line-clamp($line-clamp-val: 1) {
+  // stylelint-disable
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: #{$line-clamp-val};
+  // stylelint-enable
+  overflow: hidden;
+}
+
 @mixin pf-overflow-hide-scroll {
   &::-webkit-scrollbar {
     display: none;
