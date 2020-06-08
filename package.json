@@ -125,7 +125,7 @@
     "url": "https://github.com/patternfly/patternfly.git"
   },
   "release": {
-    "branch": "master",
+    "branch": "v3",
     "analyzeCommits": {
       "preset": "angular"
     },
