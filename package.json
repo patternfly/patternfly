@@ -145,7 +145,7 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "latest"
+    "tag": "v3"
   },
   "husky": {
     "hooks": {
