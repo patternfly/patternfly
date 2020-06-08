@@ -1,5 +1,5 @@
 module.exports = {
-  branches: ['master', { name: 'master', channel: 'prerelease-v4' }],
+  branches: ['master', { name: 'master', channel: 'prerelease' }],
   analyzeCommits: {
     preset: 'angular'
   },
