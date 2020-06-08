@@ -306,40 +306,48 @@ import './AppLauncher.css'
 ```hbs title=With-description
 {{#> app-launcher id="app-launcher-with-description" app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-description"}}
-      {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--attribute='href="#"'}}
-        Menu item default
-      {{/app-launcher-menu-item}}
+    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
       {{#> app-launcher-menu-item-description}}
-        This is a description.
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="span"}}
+          Menu item default
+        {{/app-launcher-menu-item}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
+          This is a description.
+        {{/app-launcher-menu-item}}
       {{/app-launcher-menu-item-description}}
     {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-description"}}
-      {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled pf-m-description" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
+    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
+      {{#> app-launcher-menu-item-description}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="span" app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
         Menu item disabled
-    {{/app-launcher-menu-item}}
-    {{#> app-launcher-menu-item-description}}
-        This is a description.
-      {{/ app-launcher-menu-item-description}}
-    {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-description"}}
-      {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--attribute='href="#"'}}
-        Menu item with long description.
-      {{/app-launcher-menu-item}}
-      {{#> app-launcher-menu-item-description}}
-        This is a really long description that describes the menu item. This is a really long description that describes the menu item.
+     {{/app-launcher-menu-item}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
+          This is a description.
+        {{/app-launcher-menu-item}}
       {{/app-launcher-menu-item-description}}
     {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-description"}}
-      {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
-        {{#> app-launcher-menu-item-icon}}
-          <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
-        {{/app-launcher-menu-item-icon}}
-        Group 2 link
-        {{> app-launcher-menu-item-external-icon}}
-      {{/app-launcher-menu-item}}
+    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
       {{#> app-launcher-menu-item-description}}
-        This is a really long description that describes the menu item. This is a really long description that describes the menu item.
+        {{#> app-launcher-menu-item app-launcher-menu-item--type="span"}}
+          Menu item with long description.
+        {{/app-launcher-menu-item}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
+          This is a really long description that describes the menu item. This is a really long description that describes the menu item.
+        {{/app-launcher-menu-item}}
+      {{/app-launcher-menu-item-description}}
+    {{/app-launcher-menu-wrapper}}
+    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
+      {{#> app-launcher-menu-item-description}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--type="span" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
+          {{#> app-launcher-menu-item-icon}}
+            <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
+          {{/app-launcher-menu-item-icon}}
+          Group 2 link
+          {{> app-launcher-menu-item-external-icon}}
+        {{/app-launcher-menu-item}}
+        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
+          This is a really long description that describes the menu item. This is a really long description that describes the menu item.
+        {{/app-launcher-menu-item}}
       {{/app-launcher-menu-item-description}}
     {{/app-launcher-menu-wrapper}}
   {{/app-launcher-menu}}
