@@ -121,7 +121,7 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "prerelease-v4"
+    "tag": "prerelease"
   },
   "husky": {
     "hooks": {
