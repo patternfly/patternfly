@@ -96,6 +96,45 @@ import './Button.css'
 {{/button}}
 ```
 
+```hbs title=aria-disabled
+{{#> button button--modifier="pf-m-primary pf-m-aria-disabled"}}
+  Primary disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-secondary pf-m-aria-disabled"}}
+  Secondary disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-tertiary pf-m-aria-disabled"}}
+  Tertiary disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-danger pf-m-aria-disabled"}}
+  Danger disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-link pf-m-aria-disabled"}}
+  {{#> button-icon button-icon--modifier="pf-m-start"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link disabled
+{{/button}}
+<br>
+<br>
+{{#> button button--modifier="pf-m-link pf-m-inline pf-m-aria-disabled"}}
+  Inline link disabled
+{{/button}}
+<br><br>
+{{#> button button--modifier="pf-m-plain pf-m-aria-disabled" button--attribute='aria-label="Remove"'}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+<br>
+<br>
+{{#> button button--modifier="pf-m-control pf-m-aria-disabled"}}
+  Control disabled
+{{/button}}
+```
+
 ```hbs title=Links-as-buttons
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-primary"}}
   Primary link to W3.org
@@ -166,3 +205,4 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-start` | `.pf-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
 | `.pf-m-end` | `.pf-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
+| `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
