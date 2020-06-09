@@ -97,23 +97,23 @@ import './Button.css'
 ```
 
 ```hbs title=aria-disabled
-{{#> button button--modifier="pf-m-primary pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-primary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Primary disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-secondary pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-secondary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Secondary disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-tertiary pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-tertiary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Tertiary disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-danger pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-danger pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Danger disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-link pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-link pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   {{#> button-icon button-icon--modifier="pf-m-start"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
@@ -121,16 +121,16 @@ import './Button.css'
 {{/button}}
 <br>
 <br>
-{{#> button button--modifier="pf-m-link pf-m-inline pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-link pf-m-inline pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Inline link disabled
 {{/button}}
 <br><br>
-{{#> button button--modifier="pf-m-plain pf-m-aria-disabled" button--attribute='aria-label="Remove"'}}
+{{#> button button--modifier="pf-m-plain pf-m-aria-disabled" button--attribute='aria-label="Remove" aria-disabled="true"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br>
 <br>
-{{#> button button--modifier="pf-m-control pf-m-aria-disabled"}}
+{{#> button button--modifier="pf-m-control pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Control disabled
 {{/button}}
 ```
@@ -183,8 +183,9 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `aria-label="[button label text]"` | `.pf-m-plain` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 | `aria-label="[link description]"` | `a.pf-c-button` | The link text should adequately describe the link's purpose. If it does not, aria-label can provide more detailed interaction information. |
 | `disabled` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
+| `aria-disabled="true"` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
 | `aria-disabled="true"` | `a.pf-c-button` | When a link element is used, indicates that it is unavailable. **Required when link is disabled** |
-| `aria-expanded="true"` | `.pf-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required**|
+| `aria-expanded="true"` | `.pf-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required** |
 | `tabindex="-1"` | `a.pf-c-button` | When a link element is used, removes it from keyboard focus. **Required when link is disabled** |
 
 ### Usage
