@@ -61,36 +61,36 @@ import './Button.css'
 {{#> button button--modifier="pf-m-primary" button--attribute="disabled"}}
   Primary disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-secondary" button--attribute="disabled"}}
   Secondary disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-tertiary" button--attribute="disabled"}}
   Tertiary disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
   Danger disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
   {{#> button-icon button-icon--modifier="pf-m-start"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link disabled
 {{/button}}
-<br>
-<br>
+
+
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
   Inline link disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove" disabled'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
-<br>
-<br>
+
+
 {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
   Control disabled
 {{/button}}
@@ -100,36 +100,35 @@ import './Button.css'
 {{#> button button--modifier="pf-m-primary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Primary disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-secondary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Secondary disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-tertiary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Tertiary disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-danger pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Danger disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-link pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   {{#> button-icon button-icon--modifier="pf-m-start"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link disabled
 {{/button}}
-<br>
-<br>
+
 {{#> button button--modifier="pf-m-link pf-m-inline pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Inline link disabled
 {{/button}}
-<br><br>
+
 {{#> button button--modifier="pf-m-plain pf-m-aria-disabled" button--attribute='aria-label="Remove" aria-disabled="true"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
-<br>
-<br>
+
+
 {{#> button button--modifier="pf-m-control pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Control disabled
 {{/button}}
