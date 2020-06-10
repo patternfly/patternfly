@@ -167,17 +167,6 @@ import './OptionsMenu.css'
 {{/options-menu}}
 ```
 
-```hbs title=With-description
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-descriptive-example" options-menu--HasToggleIcon="true"}}
-  {{#> options-menu-toggle}}
-    {{#> options-menu-toggle-text}}
-      Options menu
-    {{/options-menu-toggle-text}}
-  {{/options-menu-toggle}}
-  {{> options-menu-descriptive}}
-{{/options-menu}}
-```
-
 ## Documentation
 ### Accessibility
 *This section to be updated once the React implementation is complete.*
@@ -209,4 +198,3 @@ import './OptionsMenu.css'
 | `.pf-m-text` | `.pf-c-options-menu__toggle` |  For use when the `.pf-c-options-menu__toggle` is a `<div>` or some non-interactive elment, and you're using a custom `.pf-c-options-menu__toggle-button` to toggle the options menu. |
 | `.pf-m-active` | `.pf-c-options-menu__toggle` | Forces display of the active state of the toggle. |
 | `.pf-m-selected` | `.pf-c-options-menu__menu-item` | Modifies the menu item for the selected state. |
-| `.pf-m-description` | `.pf-c-options-menu__menu-item` | Modifies the menu item to include the description element. |

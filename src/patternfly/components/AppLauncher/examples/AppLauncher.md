@@ -303,74 +303,6 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=With-description
-{{#> app-launcher id="app-launcher-with-description" app-launcher--IsExpanded="true"}}
-  {{#> app-launcher-menu}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
-      {{#> app-launcher-menu-item-description}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="span"}}
-          Menu item default
-        {{/app-launcher-menu-item}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
-          This is a description.
-        {{/app-launcher-menu-item}}
-      {{/app-launcher-menu-item-description}}
-    {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
-      {{#> app-launcher-menu-item-description}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="span" app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
-        Menu item disabled
-     {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
-          This is a description.
-        {{/app-launcher-menu-item}}
-      {{/app-launcher-menu-item-description}}
-    {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
-      {{#> app-launcher-menu-item-description}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--type="span"}}
-          Menu item with long description.
-        {{/app-launcher-menu-item}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
-          This is a really long description that describes the menu item. This is a really long description that describes the menu item.
-        {{/app-launcher-menu-item}}
-      {{/app-launcher-menu-item-description}}
-    {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li"}}
-      {{#> app-launcher-menu-item-description}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--type="span" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
-          {{#> app-launcher-menu-item-icon}}
-            <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
-          {{/app-launcher-menu-item-icon}}
-          Group 2 link
-          {{> app-launcher-menu-item-external-icon}}
-        {{/app-launcher-menu-item}}
-        {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
-          This is a really long description that describes the menu item. This is a really long description that describes the menu item.
-        {{/app-launcher-menu-item}}
-      {{/app-launcher-menu-item-description}}
-    {{/app-launcher-menu-wrapper}}
-    {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external"}}
-      {{#> app-launcher-menu-item-description}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="span" app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
-            {{#> app-launcher-menu-item-icon}}
-              <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
-            {{/app-launcher-menu-item-icon}}
-            Link 4
-            {{> app-launcher-menu-item-external-icon}}
-          {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
-            {{> app-launcher-favorite-icon}}
-          {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-description" app-launcher-menu-item--type="span"}}
-          This is a really long description that describes the menu item. This is a really long description that describes the menu item.
-        {{/app-launcher-menu-item}}
-          {{/app-launcher-menu-item-description}}
-        {{/app-launcher-menu-wrapper}}
-  {{/app-launcher-menu}}
-{{/app-launcher}}
-```
-
 ## Documentation
 ### Accessibility
 | Attribute | Applied | Outcome |
@@ -398,8 +330,6 @@ import './AppLauncher.css'
 | `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
 | `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
 | `.pf-c-app-launcher__menu-item-external-icon` | `<span>` | Defines the wrapper for the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
-| `.pf-c-app-launcher__menu-wrapper` | `<li>` | Defines the wrapper around the list item in the dropdown menu. |
-| `.pf-c-app-launcher__menu-item-description` | `<span>` | Defines the wrapper for the menu item description. |
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
 | `.pf-m-top` | `.pf-c-app-launcher` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
@@ -410,4 +340,3 @@ import './AppLauncher.css'
 | `.pf-m-link` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item to for action styles. |
 | `.pf-m-active` | `.pf-c-app-launcher__toggle` | Forces display of the active state of the toggle. |
-| `.pf-m-description` | `.pf-c-app-launcher__menu-wrapper` | Modifies the menu wrapper to handle the description element. |

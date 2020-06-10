@@ -92,7 +92,7 @@
   --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
-  --pf-c-select__menu-item--m-description__menu-item-icon--Top: 33%;
+  --pf-c-select__menu-item--m-description__menu-item-icon--Top: calc(var(--pf-c-select__menu-item--PaddingTop) + calc((var(--pf-c-select__menu-item--LineHeight) / 2 )));
 
   // Menu item icon
   --pf-c-select__menu-item-icon--Color: var(--pf-global--active-color--100);
@@ -417,6 +417,7 @@
 }
 
 .pf-c-select__menu-item-description {
+  display: block;
   font-size: var(--pf-c-select__menu-item-description--FontSize);
   color: var(--pf-c-select__menu-item-description--Color);
 }
