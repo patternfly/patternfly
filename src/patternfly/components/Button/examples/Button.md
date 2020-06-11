@@ -96,7 +96,7 @@ import './Button.css'
 {{/button}}
 ```
 
-```hbs title=aria-disabled
+```hbs title=Aria--disabled
 {{#> button button--modifier="pf-m-primary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Primary disabled
 {{/button}}
