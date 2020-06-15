@@ -21,9 +21,6 @@ cssPrefix: pf-c-banner
     {{#> banner banner--modifier="pf-m-sticky"}}
       {{> __banner-demo}}
     {{/banner}}
-    {{#> page-main-nav}}
-      {{> __banner-page-main-section-nav}}
-    {{/page-main-nav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> __banner-page-main-section-demo}}
     {{/page-main-section}}
@@ -55,9 +52,6 @@ cssPrefix: pf-c-banner
         {{> __banner-page-nav}}
       {{/page-sidebar}}
       {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-        {{#> page-main-nav}}
-          {{> __banner-page-main-section-nav}}
-        {{/page-main-nav}}
         {{#> page-main-section page-main-section--modifier="pf-m-light"}}
           {{> __banner-page-main-section-demo}}
         {{/page-main-section}}
