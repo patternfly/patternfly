@@ -14,7 +14,7 @@ cssPrefix: pf-c-banner
   {{#> page-header}}
     {{> __banner-page-header}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+  {{#> page-sidebar}}
     {{> __banner-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
@@ -24,7 +24,7 @@ cssPrefix: pf-c-banner
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> __banner-page-main-section-demo}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> __banner-table}}
       {{/card}}
@@ -48,14 +48,14 @@ cssPrefix: pf-c-banner
       {{#> page-header}}
         {{> __banner-page-header}}
       {{/page-header}}
-      {{#> page-sidebar page-sidebar--modifier="pf-m-dark"}}
+      {{#> page-sidebar}}
         {{> __banner-page-nav}}
       {{/page-sidebar}}
       {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
         {{#> page-main-section page-main-section--modifier="pf-m-light"}}
           {{> __banner-page-main-section-demo}}
         {{/page-main-section}}
-        {{#> page-main-section page-main-section--modifier="pf-m-no-padding-mobile"}}
+        {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
           {{#> card}}
             {{> __banner-table}}
           {{/card}}
