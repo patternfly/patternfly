@@ -750,11 +750,17 @@ When a list item includes more than one block of content, it can be difficult fo
             This is data list text, you can apply `pf-m-truncate` directly to the text.
           {{/data-list-text}}
         {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-break-word"}}
-          This is data list text, you can apply `pf-m-break-word` directly to the text.
+        {{#> data-list-cell}}
+          This text will wrap to the next line because it has the default behavior of the data list cell.
+          {{#> data-list-text data-list-text--modifier="pf-m-break-word"}}
+            http://thisisaverylongdatalisttextthatneedstobreakusethebreakwordmodifier.org
+          {{/data-list-text}}
         {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-nowrap"}}
-          This is data list text, you can apply `pf-m-nowrap` directly to the text.
+        {{#> data-list-cell}}
+          This text will wrap to the next line because it has the default behavior of the data list cell.
+          {{#> data-list-text data-list-text--modifier="pf-m-nowrap"}}
+            This is data list text, you can apply `pf-m-nowrap` directly to the text.
+          {{/data-list-text}}
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
