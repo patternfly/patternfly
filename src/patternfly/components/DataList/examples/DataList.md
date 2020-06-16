@@ -658,7 +658,6 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-
 ```hbs title=Text-modifiers
 {{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with text modifiers"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
@@ -676,7 +675,86 @@ When a list item includes more than one block of content, it can be difficult fo
           http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
         {{/data-list-cell}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-nowrap"}}
-          This text will not break or wrap, but will continue to extend.
+          This text will not break or wrap.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-item-row data-list-item-row--modifier="pf-m-truncate"}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item2">
+           This text will truncate because it is very very long. This text will truncate because it is very very long.
+          </span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-item-row data-list-item-row--modifier="pf-m-break-word"}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item3">
+           http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+          </span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-item-row data-list-item-row--modifier="pf-m-nowrap"}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item3">
+           This text will not break or wrap.
+          </span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+```hbs title=Text-modifiers-data-list-text
+{{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with modifiers and text"'}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item1">
+            This text will wrap to the next line because it has the default behavior of the data list cell.
+          </span>
+          {{#> data-list-text data-list-text--modifier="pf-m-truncate"}}
+            This is data list text, you can apply `pf-m-truncate` directly to the text.
+          {{/data-list-text}}
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-break-word"}}
+          This is data list text, you can apply `pf-m-break-word` directly to the text.
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-nowrap"}}
+          This is data list text, you can apply `pf-m-nowrap` directly to the text.
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -687,9 +765,10 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-truncate` | `.pf-c-data-list__cell` | Modifies the data list cell so that text is truncated. |
-| `.pf-m-break-word` | `.pf-c-data-list__cell` | Modifies the data list cell so that text breaks to the next line. |
-| `.pf-m-nowrap` | `.pf-c-data-list__cell` | Modifies the data list cell so that text does not wrap to the next line. |
+| `.pf-c-data-list__text` | `<p>` | Inserts the data list text element. Use this class to modify specific text directly. |
+| `.pf-m-truncate` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text is truncated. |
+| `.pf-m-break-word` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text breaks to the next line. |
+| `.pf-m-nowrap` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text does not wrap to the next line. |
 
 ## Documentation
 ### Overview
