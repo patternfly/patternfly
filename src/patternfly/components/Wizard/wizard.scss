@@ -192,6 +192,7 @@
   // When the wizard is used in a modal
   .pf-c-modal-box & {
     flex: 1 1 var(--pf-c-modal-box--c-wizard--FlexBasis);
+    min-height: 0;
   }
 
   > *:not(.pf-c-wizard__outer-wrap) {
