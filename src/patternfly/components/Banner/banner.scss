@@ -14,7 +14,7 @@
     --pf-c-banner--PaddingLeft: var(--pf-c-banner--md--PaddingLeft);
   }
 
-  --pf-c-banner--m-info--BackgroundColor: var(--pf-global--info-color--100);
+  --pf-c-banner--m-info--BackgroundColor: var(--pf-global--palette--blue-200);
   --pf-c-banner--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-banner--m-success--BackgroundColor: var(--pf-global--success-color--100);
   --pf-c-banner--m-warning--BackgroundColor: var(--pf-global--warning-color--100);
@@ -22,6 +22,7 @@
   --pf-c-banner--m-sticky--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
 
   @include pf-t-dark;
+  @include pf-text-overflow;
 
   padding: var(--pf-c-banner--PaddingTop) var(--pf-c-banner--PaddingRight) var(--pf-c-banner--PaddingBottom) var(--pf-c-banner--PaddingLeft);
   font-size: var(--pf-c-banner--FontSize);
