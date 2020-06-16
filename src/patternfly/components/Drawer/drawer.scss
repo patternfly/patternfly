@@ -9,8 +9,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Content
   --pf-c-drawer__content--FlexBasis: 100%;
   --pf-c-drawer__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-drawer__content--ZIndex: var(--pf-global--ZIndex--xs);
-
 
   // Panel
   --pf-c-drawer__panel--FlexBasis: 100%;
@@ -86,6 +84,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Divider
   --pf-c-drawer__panel--after--Width: var(--pf-global--BorderWidth--sm);
+  --pf-c-drawer__panel--after--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-drawer__panel--after--BackgroundColor: transparent;
   --pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor: var(--pf-global--BorderColor--100);
 
@@ -132,7 +131,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer--child--PaddingBottom: var(--pf-c-drawer__content--child--PaddingBottom);
   --pf-c-drawer--child--PaddingLeft: var(--pf-c-drawer__content--child--PaddingLeft);
 
-  z-index: var(--pf-c-drawer__content--ZIndex);
   flex-basis: var(--pf-c-drawer__content--FlexBasis);
   order: 0;
   background-color: var(--pf-c-drawer__content--BackgroundColor);
@@ -159,6 +157,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     position: absolute;
     top: 0;
     left: 0;
+    z-index: var(--pf-c-drawer__panel--after--ZIndex);
     width: var(--pf-c-drawer__panel--after--Width);
     height: 100%;
     content: "";
