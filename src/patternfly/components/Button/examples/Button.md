@@ -130,23 +130,6 @@ import './Button.css'
 {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
   Control disabled
 {{/button}}
-<br>
-<br>
-{{#> button button--modifier="pf-m-primary pf-m-small"}}
-  Primary
-{{/button}}
-
-{{#> button button--modifier="pf-m-secondary"}}
-  Secondary
-{{/button}}
-
-{{#> button button--modifier="pf-m-tertiary"}}
-  Tertiary
-{{/button}}
-
-{{#> button button--modifier="pf-m-danger"}}
-  Danger
-{{/button}}
 ```
 
 ```hbs title=Aria--disabled

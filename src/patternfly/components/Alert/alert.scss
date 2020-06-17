@@ -131,8 +131,6 @@
 }
 
 .pf-c-alert__title {
-  display: flex;
-  align-items: center;
   grid-area: title;
   font-weight: var(--pf-c-alert__title--FontWeight);
   color: var(--pf-c-alert__title--Color);
