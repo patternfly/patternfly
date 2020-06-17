@@ -41,7 +41,7 @@ cssPrefix: pf-c-banner
     {{/banner}}
   {{/l-flex-item}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-grow" l-flex-item--attribute='style="min-height: 0;"'}}
-    {{#> page page--id="page-layout-table-simple"}}
+    {{#> page page--id="page-layout-table-top-bottom"}}
       {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
         Skip to content
       {{/skip-to-content}}
