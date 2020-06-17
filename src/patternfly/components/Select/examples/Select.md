@@ -284,6 +284,7 @@ The plain select variation should be used when you do not want a border applied 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select__menu-item-description` | `<div>` |  Initiates the select menu item description element. |
+| `.pf-c-select__menu-item-title` | `<div>` | Initiates the select menu item title. Used when the description element is present. |
 | `.pf-m-description` | `.pf-c-select__menu-item.pf-m-selected` | Modifies the select menu item when selected to accommodate the description element. |
 | `.pf-m-wrap` | `.pf-c-select` | Modifies the select component so that the items in the menu wrap. |
 
