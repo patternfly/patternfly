@@ -344,3 +344,31 @@ section: demos
   {{/bullseye}}
 {{/backdrop}}
 ```
+
+```hbs title=Sticky-header isFullscreen
+{{#> page page--id="page-layout-table-simple"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-nav}}
+      {{> table-main-section-nav}}
+    {{/page-main-nav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      {{> table-main-section-content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
+      {{#> card}}
+        {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
+        {{> table-pagination-footer}}
+      {{/card}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
