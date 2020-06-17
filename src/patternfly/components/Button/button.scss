@@ -398,11 +398,23 @@
   // These styles need to go after the button types because they need to override some of the type styling
   &:disabled,
   &.pf-m-disabled {
-    color: var(--pf-c-button--disabled--Color);
     pointer-events: none;
-    background-color: var(--pf-c-button--disabled--BackgroundColor);
+  }
 
+  &:disabled,
+  &.pf-m-disabled,
+  &.pf-m-aria-disabled {
     --pf-c-button--after--BorderColor: var(--pf-c-button--disabled--after--BorderColor);
+
+    color: var(--pf-c-button--disabled--Color);
+    background-color: var(--pf-c-button--disabled--BackgroundColor);
+  }
+
+  &.pf-m-aria-disabled {
+    --pf-c-button--after--BorderWidth: 0;
+    --pf-c-button--m-link--m-inline--hover--TextDecoration: none;
+
+    cursor: default;
   }
 }
 
