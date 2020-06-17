@@ -16,8 +16,8 @@
 
   // Title
   --pf-c-modal-box__title--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-modal-box__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
   --pf-c-modal-box__title--FontSize: var(--pf-global--FontSize--2xl);
-  --pf-c-modal-box__title--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Description
   --pf-c-modal-box__description--PaddingTop: var(--pf-global--spacer--xs);
@@ -99,8 +99,8 @@
   @include pf-text-overflow;
 
   flex: 0 0 auto;
+  font-family: var(--pf-c-modal-box__title--FontFamily);
   font-size: var(--pf-c-modal-box__title--FontSize);
-  font-weight: var(--pf-c-modal-box__title--FontWeight);
   line-height: var(--pf-c-modal-box__title--LineHeight);
 }
 

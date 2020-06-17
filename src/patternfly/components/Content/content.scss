@@ -8,47 +8,50 @@
   // this ensures color is not overridden
   --pf-c-content--Color: var(--pf-global--Color--100);
 
+  // Headings
+  --pf-c-content--heading--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+
   // h1
   --pf-c-content--h1--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h1--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-content--h1--FontSize: var(--pf-global--FontSize--2xl);
-  --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--normal);
 
   // h2
   --pf-c-content--h2--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h2--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--h2--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--normal);
 
   // h3
   --pf-c-content--h3--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h3--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h3--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--h3--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-content--h3--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-content--h3--FontWeight: var(--pf-global--FontWeight--normal);
 
   // h4
   --pf-c-content--h4--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h4--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h4--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--h4--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--normal);
 
   // h5
   --pf-c-content--h5--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h5--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h5--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--h5--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--normal);
 
   // h6
   --pf-c-content--h6--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-content--h6--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-content--h6--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--h6--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--normal);
 
   // Small text
   --pf-c-content--small--MarginBottom: var(--pf-global--spacer--md);
@@ -132,6 +135,7 @@
   h5,
   h6 {
     margin: 0;
+    font-family: var(--pf-c-content--heading--FontFamily);
 
     &:first-child {
       margin-top: 0;
@@ -290,10 +294,7 @@
 // RedHat Font overrides
 @include pf-m-overpass-font {
   .pf-c-content {
-    --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--normal);
-    --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--normal);
     --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--sm);
-    --pf-c-content--h3--FontWeight: var(--pf-global--FontWeight--normal);
     --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--semi-bold);
     --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--semi-bold);
     --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--semi-bold);
