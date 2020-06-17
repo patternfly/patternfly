@@ -201,3 +201,18 @@
     #{$value}: #{$prop};
   }
 }
+
+// Animate tab focus removal
+@mixin pf-animate-remove-tab-focus($element, $delay: $pf-global--TransitionDuration) {
+  @keyframes visibility-hidden {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  #{$element}[hidden] {
+    animation-name: visibility-hidden;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+}
