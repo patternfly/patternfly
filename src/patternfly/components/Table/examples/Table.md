@@ -132,7 +132,7 @@ import './Table.css'
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--IsColumnHelp="true"}}
         Branches
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
@@ -141,7 +141,7 @@ import './Table.css'
       {{#> table-th table-th--attribute='scope="col"'}}
         Workspaces
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsColumnHelp="true"}}
         Last commit
       {{/table-th}}
     {{/table-tr}}
