@@ -129,7 +129,7 @@
   --pf-c-select__menu-item-description--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
 
   // Menu item title
-  --pf-c-select__menu-item-title--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-select__menu-item-main--PaddingRight: var(--pf-global--spacer--2xl);
 
   // Divider
   --pf-c-select-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -354,14 +354,6 @@
     right: 0;
   }
 
-  &.pf-m-wrap {
-    white-space: normal;
-
-    .pf-c-select__menu-item {
-      white-space: normal;
-    }
-  }
-
   .pf-c-select.pf-m-top & {
     top: 0;
     transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
@@ -410,16 +402,19 @@
 
   &.pf-m-selected {
     --pf-c-select__menu-item--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
+  }
 
-    &.pf-m-description {
-      --pf-c-select__menu-item--m-selected--PaddingRight: 0;
-    }
+  &.pf-m-description {
+    --pf-c-select__menu-item--m-selected--PaddingRight: 0;
+
+    white-space: normal;
   }
 }
 
-.pf-c-select__menu-item-title {
+.pf-c-select__menu-item-main {
   position: relative;
-  padding-right: var(--pf-c-select__menu-item-title--PaddingRight);
+  padding-right: var(--pf-c-select__menu-item-main--PaddingRight);
+  white-space: nowrap;
 }
 
 .pf-c-select__menu-item-description {
