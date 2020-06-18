@@ -190,6 +190,7 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Font family
 // stylelint-disable value-keyword-case
 $pf-global--FontFamily--sans-serif: "RedHatText", "Overpass", overpass, helvetica, arial, sans-serif;
+$pf-global--FontFamily--heading--sans-serif: "RedHatDisplay", "Overpass", overpass, helvetica, arial, sans-serif;
 $pf-global--FontFamily--monospace: "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace;
 $pf-global--FontFamily--overpass--sans-serif: "overpass", overpass, "open sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $pf-global--FontFamily--overpass--monospace: "overpass-mono", overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;

@@ -7,6 +7,33 @@
 // stylelint-disable font-family-name-quotes
 
 @font-face {
+  font-family: "RedHatDisplay";
+  src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Regular.eot");
+  src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Medium.eot");
+  src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Bold.eot");
+  src: url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("#{$pf-global--font-path}/RedHatDisplay/RedHatDisplay-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
   font-family: "RedHatText";
   src: url("#{$pf-global--font-path}/RedHatText/RedHatText-Regular.eot");
   src: url("#{$pf-global--font-path}/RedHatText/RedHatText-Regular.eot?#iefix") format("embedded-opentype"), url("#{$pf-global--font-path}/RedHatText/RedHatText-Regular.woff") format("woff");
