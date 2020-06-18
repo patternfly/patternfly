@@ -69,10 +69,10 @@ cssPrefix: pf-c-alert
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -108,10 +108,10 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -229,10 +229,10 @@ cssPrefix: pf-c-alert
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -268,10 +268,10 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
