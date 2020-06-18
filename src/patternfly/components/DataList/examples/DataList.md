@@ -738,7 +738,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ```
 
 ```hbs title=Text-modifiers-data-list-text
-{{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with modifiers and text"'}}
+{{#> data-list data-list--id="data-list-with-text-modifiers-and-text" data-list--attribute='aria-label="Data list with modifiers and text"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
