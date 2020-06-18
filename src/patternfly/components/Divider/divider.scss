@@ -1,5 +1,5 @@
 $pf-c-divider--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-c-divider--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl", "3xl");
+$pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl");
 
 .pf-c-divider {
   // update during breaking change
