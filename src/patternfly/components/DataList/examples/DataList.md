@@ -718,7 +718,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-item-row data-list-item-row--modifier="pf-m-nowrap"}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">
+          <span id="{{data-list--id}}-item4">
            This text will not break or wrap.
           </span>
         {{/data-list-cell}}
@@ -771,7 +771,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-data-list__text` | `<span>` | Inserts the data list text element. Use this class to modify specific text directly. |
+| `.pf-c-data-list__text` | `*` | Inserts the data list text element. Use this class to modify specific text directly. |
 | `.pf-m-truncate` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text is truncated. |
 | `.pf-m-break-word` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text breaks to the next line. |
 | `.pf-m-nowrap` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text does not wrap to the next line. |
