@@ -29,6 +29,9 @@
   {{#if table-th--attribute}}
     {{{table-th--attribute}}}
   {{/if}}>
+  {{#if table-th--IsColumnHelp}}
+    <div class="pf-c-table__column-help">
+  {{/if}}
   {{#if table-th--sortable}}
     {{#> table-button}}
       {{#> table-button-content}}
@@ -56,5 +59,9 @@
     {{/table-button}}
   {{else}}
     {{> @partial-block}}
+  {{/if}}
+  {{#if table-th--IsColumnHelp}}
+    {{> table-column-help-action}}
+    </div>
   {{/if}}
 </th>

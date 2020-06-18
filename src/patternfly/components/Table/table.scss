@@ -126,6 +126,13 @@
   --pf-c-table__sort--MinWidth: calc(6ch + var(--pf-c-table--cell--PaddingRight) + var(--pf-c-table--cell--PaddingLeft) + var(--pf-c-table__sort-indicator--MarginLeft));
 
   // Sort button
+  --pf-c-table__sort__button--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-table__sort__button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-table__sort__button--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-table__sort__button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-table__sort__button--MarginTop: calc(var(--pf-c-table__sort__button--PaddingTop) * -1);
+  --pf-c-table__sort__button--MarginBottom: calc(var(--pf-c-table__sort__button--PaddingBottom) * -1);
+  --pf-c-table__sort__button--MarginLeft: calc(var(--pf-c-table__sort__button--PaddingLeft) * -1);
   --pf-c-table__sort__button--Color: var(--pf-global--Color--100);
   --pf-c-table__sort--m-selected__button--Color: var(--pf-global--active-color--100);
 
@@ -136,6 +143,14 @@
   --pf-c-table__sort__button--hover__sort-indicator--Color: var(--pf-global--Color--100);
   --pf-c-table__sort__button--active__sort-indicator--Color: var(--pf-global--Color--100);
   --pf-c-table__sort__button--focus__sort-indicator--Color: var(--pf-global--Color--100);
+
+  // Table header popover
+  --pf-c-table__column-help--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-table__column-help--TranslateY: #{pf-size-prem(2px)};
+  --pf-c-table__column-help--c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-table__column-help--c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-table__column-help--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-table__column-help--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Compound expansion toggle button
   --pf-c-table__compound-expansion-toggle__button--Color: var(--pf-global--active-color--100);
@@ -331,7 +346,6 @@
   // ==================================================================
   // unset padding, button adds appropriate padding
   // unset padding for these cells as the button within provides padding
-  .pf-c-table__sort,
   .pf-c-table__compound-expansion-toggle {
     &,
     &:first-child,
@@ -440,13 +454,6 @@
     content: "";
   }
 
-  // Remove outline and apply to parent td
-  &:hover,
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
   &:hover {
     color: var(--pf-c-table__button--hover--Color);
   }
@@ -463,18 +470,6 @@
 // Focus styles
 .pf-c-table__sort,
 .pf-c-table__compound-expansion-toggle {
-  &:active,
-  &:focus-within {
-    outline-offset: var(--pf-c-table__button--OutlineOffset);
-
-    // stylelint-disable media-feature-name-no-vendor-prefix
-    @media (-webkit-min-device-pixel-ratio: 0) {
-      outline-style: auto;
-      outline-color: -webkit-focus-ring-color;
-    }
-    // stylelint-enable
-  }
-
   // Pass properties to text
   .pf-c-table__text {
     display: block;
@@ -609,8 +604,15 @@
   }
 
   .pf-c-table__button {
-    max-width: 100%;
+    min-width: 100%;
     overflow: hidden;
+
+    // Remove outline and apply to parent td
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+    }
   }
 
   // Apply borders to button to avoid conflicts with expanded states
@@ -663,26 +665,66 @@
       --pf-c-table__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
     }
   }
+
+  &:active,
+  &:focus-within {
+    outline-offset: var(--pf-c-table__button--OutlineOffset);
+
+    // stylelint-disable media-feature-name-no-vendor-prefix
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-style: auto;
+      outline-color: -webkit-focus-ring-color;
+    }
+    // stylelint-enable
+  }
+}
+
+.pf-c-table__column-help {
+  display: flex;
+  align-items: flex-end;
+}
+
+.pf-c-table__column-help-action {
+  margin-left: var(--pf-c-table__column-help--MarginLeft);
+  transform: translateY(var(--pf-c-table__column-help--TranslateY));
+
+  .pf-c-button {
+    --pf-c-button--PaddingRight: var(--pf-c-table__column-help--c-button--PaddingRight);
+    --pf-c-button--PaddingLeft: var(--pf-c-table__column-help--c-button--PaddingLeft);
+
+    margin-top: var(--pf-c-table__column-help--c-button--MarginTop);
+    margin-bottom: var(--pf-c-table__column-help--c-button--MarginBottom);
+    font-size: inherit;
+    line-height: 1;
+  }
 }
 
 // Table sort
 // ==================================================================
 .pf-c-table__sort {
-  .pf-c-table__button:hover {
-    --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--hover__sort-indicator--Color);
-  }
-
-  .pf-c-table__button:focus {
-    --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--focus__sort-indicator--Color);
-  }
-
-  .pf-c-table__button:active {
-    --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--active__sort-indicator--Color);
-  }
-
-  // Prevent FF misalignment bug
   .pf-c-table__button {
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table__sort__button--PaddingTop);
+    --pf-c-table--cell--PaddingRight: var(--pf-c-table__sort__button--PaddingRight);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table__sort__button--PaddingBottom);
+    --pf-c-table--cell--PaddingLeft: var(--pf-c-table__sort__button--PaddingLeft);
+
     display: flex;
+    width: auto;
+    margin-top: var(--pf-c-table__sort__button--MarginTop);
+    margin-bottom: var(--pf-c-table__sort__button--MarginBottom);
+    margin-left: var(--pf-c-table__sort__button--MarginLeft);
+
+    &:hover {
+      --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--hover__sort-indicator--Color);
+    }
+
+    &:focus {
+      --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--focus__sort-indicator--Color);
+    }
+
+    &:active {
+      --pf-c-table__sort-indicator--Color: var(--pf-c-table__sort__button--active__sort-indicator--Color);
+    }
   }
 
   &.pf-m-selected .pf-c-table__button {
