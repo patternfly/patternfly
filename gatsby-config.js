@@ -12,6 +12,7 @@ module.exports = {
       options: {
         context: 'core', // For global items that need sideNav
         hiddenPages: ['Training'], // By title
+        showFooter: false,
         sideNav: {
           core: [
             { section: 'overview' },
