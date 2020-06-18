@@ -21,7 +21,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
   --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow;
-  --pf-c-drawer__panel--AnimationDelay: var(--pf-global--TransitionDuration);
 
   // Child padding
   --pf-c-drawer--child--PaddingTop: var(--pf-global--spacer--md);
@@ -170,7 +169,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Remove tab focus
-@include pf-animate-remove-tab-focus(".pf-c-drawer__panel", var(--pf-c-drawer__panel--AnimationDelay));
+@include pf-animate-remove-tab-focus(".pf-c-drawer__panel", var(--pf-c-drawer__panel--TransitionDuration));
 
 // Panel head
 .pf-c-drawer__head {

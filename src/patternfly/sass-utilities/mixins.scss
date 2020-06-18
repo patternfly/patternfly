@@ -212,7 +212,7 @@
 
   #{$element}[hidden] {
     animation-name: visibility-hidden;
-    animation-delay: 2s;
+    animation-delay: #{$delay};
     animation-fill-mode: forwards;
   }
 }
