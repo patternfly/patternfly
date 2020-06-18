@@ -77,10 +77,6 @@
   --pf-c-table__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // Button
-  --pf-c-table__button--PaddingTop: var(--pf-c-table--cell--PaddingTop);
-  --pf-c-table__button--PaddingRight: var(--pf-c-table--cell--PaddingRight);
-  --pf-c-table__button--PaddingBottom: var(--pf-c-table--cell--PaddingBottom);
-  --pf-c-table__button--PaddingLeft: var(--pf-c-table--cell--PaddingLeft);
   --pf-c-table__button--BackgroundColor: transparent;
   --pf-c-table__button--Color: var(--pf-global--Color--100);
   --pf-c-table__button--hover--Color: var(--pf-global--Color--100);
@@ -411,7 +407,8 @@
 // Button
 .pf-c-table__button {
   position: static;
-  padding: var(--pf-c-table__button--PaddingTop) var(--pf-c-table__button--PaddingRight) var(--pf-c-table__button--PaddingBottom) var(--pf-c-table__button--PaddingLeft);
+  width: 100%;
+  padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table--cell--PaddingRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table--cell--PaddingLeft);
   font-size: inherit;
   font-weight: inherit;
   color: var(--pf-c-table__button--Color);
@@ -582,7 +579,7 @@
   }
 
   .pf-c-table__button {
-    max-width: 100%;
+    min-width: 100%;
     overflow: hidden;
 
     // Remove outline and apply to parent td
@@ -680,13 +677,14 @@
 // Table sort
 // ==================================================================
 .pf-c-table__sort {
-  --pf-c-table__button--PaddingTop: var(--pf-c-table__sort__button--PaddingTop);
-  --pf-c-table__button--PaddingRight: var(--pf-c-table__sort__button--PaddingRight);
-  --pf-c-table__button--PaddingBottom: var(--pf-c-table__sort__button--PaddingBottom);
-  --pf-c-table__button--PaddingLeft: var(--pf-c-table__sort__button--PaddingLeft);
-
   .pf-c-table__button {
-    display: inline-flex;
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table__sort__button--PaddingTop);
+    --pf-c-table--cell--PaddingRight: var(--pf-c-table__sort__button--PaddingRight);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table__sort__button--PaddingBottom);
+    --pf-c-table--cell--PaddingLeft: var(--pf-c-table__sort__button--PaddingLeft);
+
+    display: flex;
+    width: auto;
     margin-top: var(--pf-c-table__sort__button--MarginTop);
     margin-bottom: var(--pf-c-table__sort__button--MarginBottom);
     margin-left: var(--pf-c-table__sort__button--MarginLeft);
