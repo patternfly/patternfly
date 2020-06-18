@@ -55,6 +55,42 @@ import './Button.css'
 {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy input"'}}
   <i class="fas fa-copy" aria-hidden="true"></i>
 {{/button}}
+
+<br>
+<br>
+<br>
+
+{{#> button button--modifier="pf-m-primary pf-m-small"}}
+  Primary
+{{/button}}
+
+{{#> button button--modifier="pf-m-secondary pf-m-small"}}
+  Secondary
+{{/button}}
+
+{{#> button button--modifier="pf-m-tertiary pf-m-small"}}
+  Tertiary
+{{/button}}
+
+{{#> button button--modifier="pf-m-danger pf-m-small"}}
+  Danger
+{{/button}}
+
+{{#> button button--modifier="pf-m-link pf-m-small"}}
+  Link
+  {{#> button-icon button-icon--modifier="pf-m-end"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-inline pf-m-link pf-m-small"}}
+  Inline link
+{{/button}}
+
+{{#> button button--modifier="pf-m-control pf-m-small"}}
+  Control
+{{/button}}
+
 ```
 
 ```hbs title=Disabled
@@ -205,4 +241,5 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-start` | `.pf-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
 | `.pf-m-end` | `.pf-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
+| `.pf-m-small` | `.pf-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
