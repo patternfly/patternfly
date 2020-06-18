@@ -302,7 +302,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Border
   .pf-c-drawer .pf-c-drawer__panel.pf-m-no-border,
   .pf-c-drawer.pf-m-panel-left .pf-c-drawer__panel.pf-m-no-border {
-    --pf-c-drawer__panel--BoxShadow: 0;
+    --pf-c-drawer__panel--BoxShadow: none;
   }
 }
 
@@ -340,7 +340,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       .pf-c-drawer__panel {
-        --pf-c-drawer__panel--BoxShadow: 0;
+        --pf-c-drawer__panel--BoxShadow: none;
 
         &:not(.pf-m-no-border)::after {
           --pf-c-drawer__panel--after--BackgroundColor: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
@@ -400,7 +400,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     // Drawer inline - Panel left
     .pf-c-drawer.pf-m-panel-left.pf-m-inline#{$breakpoint-name} {
       .pf-c-drawer__panel {
-        --pf-c-drawer__panel--BoxShadow: 0;
+        --pf-c-drawer__panel--BoxShadow: none;
 
         margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
         margin-left: 0;
