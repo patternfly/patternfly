@@ -230,7 +230,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
 | `.pf-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
 | `.pf-c-dropdown__menu-item-description` | `<div>` | Defines the wrapper for the menu item description. |
-| `.pf-c-dropdown__menu-item-title` | `<div>` | Defines the wrapper for the menu item title. Use when the description element is present. |
+| `.pf-c-dropdown__menu-item-main` | `<div>` | Defines the wrapper for the menu item main element. Use when the description element is present. |
 | `.pf-c-dropdown__toggle-image` | `<span>` | Defines the wrapper for the dropdown toggle button image. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
 | `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
@@ -247,3 +247,4 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
 | `.pf-m-icon` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding an icon. |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-description` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding a description. |
