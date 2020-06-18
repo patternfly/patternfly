@@ -67,6 +67,11 @@
   --pf-c-data-list__cell--cell--PaddingTop: 0;
   --pf-c-data-list__cell--cell--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--m-icon--cell--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__cell--MaxWidth: none;
+  --pf-c-data-list__cell--Overflow: visible;
+  --pf-c-data-list__cell--TextOverflow: clip;
+  --pf-c-data-list__cell--WhiteSpace: normal;
+  --pf-c-data-list__cell--WordBreak: normal;
   --pf-c-data-list__cell--m-truncate--MaxWidth: 100%;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -181,24 +186,24 @@
   &.pf-m-truncate {
     .pf-c-data-list__cell,
     .pf-c-data-list__text {
-      max-width: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      --pf-c-data-list__cell--MaxWidth: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
+      --pf-c-data-list__cell--Overflow: hidden;
+      --pf-c-data-list__cell--TextOverflow: ellipsis;
+      --pf-c-data-list__cell--WhiteSpace: nowrap;
     }
   }
 
   &.pf-m-break-word {
     .pf-c-data-list__cell,
     .pf-c-data-list__text {
-      word-break: break-word;
+      --pf-c-data-list__cell--WordBreak: break-word;
     }
   }
 
   &.pf-m-nowrap {
     .pf-c-data-list__cell,
     .pf-c-data-list__text {
-      white-space: nowrap;
+      --pf-c-data-list__cell--WhiteSpace: nowrap;
     }
   }
 }
@@ -281,24 +286,24 @@
   &.pf-m-truncate {
     .pf-c-data-list__cell,
     .pf-c-data-list__text {
-      max-width: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      --pf-c-data-list__cell--MaxWidth: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
+      --pf-c-data-list__cell--Overflow: hidden;
+      --pf-c-data-list__cell--TextOverflow: ellipsis;
+      --pf-c-data-list__cell--WhiteSpace: nowrap;
     }
   }
 
   &.pf-m-break-word {
     .pf-c-data-list__cell,
     .pf-c-data-list__text {
-      word-break: break-word;
+      --pf-c-data-list__cell--WordBreak: break-word;
     }
   }
 
   &.pf-m-nowrap {
     .pf-c-data-list__cell,
     .pf-c-data-list__text {
-      white-space: nowrap;
+      --pf-c-data-list__cell--WhiteSpace: nowrap;
     }
   }
 }
@@ -367,8 +372,13 @@
 .pf-c-data-list__cell {
   flex: 1;
   grid-column: 1 / -1;
+  max-width: var(--pf-c-data-list__cell--MaxWidth);
   padding-top: var(--pf-c-data-list__cell--PaddingTop);
   padding-bottom: var(--pf-c-data-list__cell--PaddingBottom);
+  overflow: var(--pf-c-data-list__cell--Overflow);
+  text-overflow: var(--pf-c-data-list__cell--TextOverflow);
+  word-break: var(--pf-c-data-list__cell--WordBreak);
+  white-space: var(--pf-c-data-list__cell--WhiteSpace);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     &:not(:last-child) {
@@ -389,18 +399,18 @@
   }
 
   &.pf-m-truncate {
-    max-width: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    --pf-c-data-list__cell--MaxWidth: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
+    --pf-c-data-list__cell--Overflow: hidden;
+    --pf-c-data-list__cell--TextOverflow: ellipsis;
+    --pf-c-data-list__cell--WhiteSpace: nowrap;
   }
 
   &.pf-m-break-word {
-    word-break: break-word;
+    --pf-c-data-list__cell--WordBreak: break-word;
   }
 
   &.pf-m-nowrap {
-    white-space: nowrap;
+    --pf-c-data-list__cell--WhiteSpace: nowrap;
   }
 
   &.pf-m-icon {
@@ -435,18 +445,18 @@
 // Data list text
 .pf-c-data-list__text {
   &.pf-m-truncate {
-    max-width: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    --pf-c-data-list__cell--MaxWidth: var(--pf-c-data-list__cell--m-truncate--MaxWidth);
+    --pf-c-data-list__cell--Overflow: hidden;
+    --pf-c-data-list__cell--TextOverflow: ellipsis;
+    --pf-c-data-list__cell--WhiteSpace: nowrap;
   }
 
   &.pf-m-break-word {
-    word-break: break-word;
+    --pf-c-data-list__cell--WordBreak: break-word;
   }
 
   &.pf-m-nowrap {
-    white-space: nowrap;
+    --pf-c-data-list__cell--WhiteSpace: nowrap;
   }
 }
 
