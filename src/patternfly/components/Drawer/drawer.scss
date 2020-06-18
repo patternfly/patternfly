@@ -277,9 +277,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     &.pf-m-inline .pf-c-drawer__panel:not(.pf-m-no-border) {
-      padding-right: var(--pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight);
-
       --pf-c-drawer--m-inline__panel--PaddingLeft: 0;
+
+      padding-right: var(--pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight);
     }
 
     // Expanded, panel left
