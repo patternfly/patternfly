@@ -5,7 +5,7 @@
 	  {{{dropdown-menu--attribute}}}
   {{/if}}>
   <li>
-    {{#> dropdown-menu-item}}
+    {{#> dropdown-menu-item dropdown-menu-item--modifier="pf-m-description"}}
       {{#> dropdown-menu-item-main}}
         Menu item default
       {{/dropdown-menu-item-main}}
@@ -15,7 +15,7 @@
     {{/dropdown-menu-item}}
   </li>
   <li>
-    {{#> dropdown-menu-item}}
+    {{#> dropdown-menu-item dropdown-menu-item--modifier="pf-m-description"}}
       {{#> dropdown-menu-item-main}}
         Menu item with long description
       {{/dropdown-menu-item-main}}
@@ -25,7 +25,7 @@
     {{/dropdown-menu-item}}
   </li>
   <li>
-    {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled'}}
+    {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled' dropdown-menu-item--modifier="pf-m-description"}}
       {{#> dropdown-menu-item-main}}
         Menu item disabled
       {{/dropdown-menu-item-main}}

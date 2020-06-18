@@ -129,7 +129,7 @@
   --pf-c-select__menu-item-description--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
 
   // Menu item title
-  --pf-c-select__menu-item-main--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-select__menu-item-main--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
 
   // Divider
   --pf-c-select-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -405,7 +405,7 @@
   }
 
   &.pf-m-description {
-    --pf-c-select__menu-item--m-selected--PaddingRight: 0;
+    --pf-c-select__menu-item--PaddingRight: 0;
 
     white-space: normal;
   }

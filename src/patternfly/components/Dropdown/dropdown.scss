@@ -395,17 +395,14 @@
     display: flex;
     align-items: center;
 
+    &.pf-m-description {
+      flex-direction: column;
+      align-items: start;
+    }
+
     .pf-c-dropdown__menu-item-main {
       display: flex;
       align-items: center;
-    }
-  }
-
-  &.pf-m-description {
-    flex-direction: column;
-
-    &.pf-m-icon {
-      align-items: start;
     }
   }
 
