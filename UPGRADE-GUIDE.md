@@ -24,12 +24,6 @@ We've updated the default font to be `RedHatText` instead of `Overpass` [(#2955)
 
 You don’t have to do anything further to use this font. However, with the change from  `Overpass`  to  `RedHatText` , we encourage you to review your application’s typography styles to ensure they are correct.
 
-  **NOTE:** RedHatDisplay font, originally removed as part of this release, has been added back to PatternFly as of release 2020.08 [(#3188)](https://github.com/patternfly/patternfly/pull/3188). The notes above are updated to reflect this change, and the original release notes are included below for transparency.
-
->PatternFly has chosen to adopt a single font (`RedHatText`) across the library [(#3023)](https://github.com/patternfly/patternfly/pull/3023). Previously, when having opted in to the Red Hat font via `.pf-m-redhat-font`, PatternFly used 2 fonts - `RedHatText` (RHT) defined as `--pf-global--FontFamily--sans-serif`, and `RedHatDisplay` (RHD) defined as `--pf-global--FontFamily--heading--sans-serif`. `--pf-global--FontFamily--heading--sans-serif` has been removed and components have been updated to use `--pf-global--FontFamily--sans-serif` instead.
-
->You don't have to do anything further to use this font. However, with the change from `Overpass` to `RedHatText` and with the removal of `RedHatDisplay`, we encourage you to review your application's typography styles to ensure they are correct.
-
 ### Directory structure
 We've cleaned up our root directory a little in [(#2960)](https://github.com/patternfly/patternfly/pull/2960). If you're compiling or importing more internal parts of PatternFly, you'll likely need to update your imports:
 - `patternfly-common.css` to `base/patternfly-common.css`
