@@ -11,7 +11,6 @@ module.exports = {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
         context: 'core', // For global items that need sideNav
-        hiddenPages: ['Training'], // By title
         sideNav: {
           core: [
             { section: 'overview' },
@@ -88,14 +87,6 @@ module.exports = {
       options: {
         name: 'core', // This goes in URLs and determines sideNav items
         path: `${path.resolve(__dirname)}/UPGRADE-GUIDE.md`
-      }
-    },
-    // Source training page
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'core', // This goes in URLs and determines sideNav items
-        path: `${path.resolve(__dirname)}/src/site/training.md`
       }
     },
     // Pipe MDX files through this plugin that spits out React components
