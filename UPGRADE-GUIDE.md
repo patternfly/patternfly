@@ -22,7 +22,7 @@ We've made shield styles optional by default [(#2872)](https://github.com/patter
 ### Default font
 We've updated the default font from `Overpass` to `RedHatText` and `RedHatDisplay` [(#2955)](https://github.com/patternfly/patternfly/pull/2955). To continue to use `Overpass`, add the class `pf-m-overpass-font` on an element that wraps your application (for example, `<body>`).
 
-You don’t have to do anything further to use this font. However, with the change from  `Overpass`  to  `RedHatText` , we encourage you to review your application’s typography styles to ensure they are correct.
+You don’t have to do anything further to use this font. However, with the change from  `Overpass`  to  `RedHatText` and `RedHatDisplay`, we encourage you to review your application’s typography styles to ensure they are correct.
 
 ### Directory structure
 We've cleaned up our root directory a little in [(#2960)](https://github.com/patternfly/patternfly/pull/2960). If you're compiling or importing more internal parts of PatternFly, you'll likely need to update your imports:
