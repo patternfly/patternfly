@@ -20,7 +20,7 @@ We've changed the hidden breakpoint for the vertical nav to be `$pf-global--brea
 We've made shield styles optional by default [(#2872)](https://github.com/patternfly/patternfly/pull/2872). The "shield" styles were intended to help resolve styling issues when using PF3 and PF4 together, and when having opted out of the global reset CSS, but they have proven to be problematic and not necessary for most users. With this change, we encourage applications to adopt PatternFly's reset CSS, if they have specifically opted out of it previously. The shield styles can be re-enabled if needed, either by setting `$pf-global--enable-shield: true;` and compiling PatternFly's SCSS, or by manually importing `base/patternfly-shield-inheritable.css` and `base/patternfly-shield-non-inheritable`. See [(#2872)](https://github.com/patternfly/patternfly/pull/2872) for more details.
 
 ### Default font
-We've updated the default font to be `RedHatText` instead of `Overpass` [(#2955)](https://github.com/patternfly/patternfly/pull/2955). To use the old font, add the class `pf-m-overpass-font` on an element that wraps your application (for example, `<body>`).
+We've updated the default font from `Overpass` to `RedHatText` and `RedHatDisplay` [(#2955)](https://github.com/patternfly/patternfly/pull/2955). To continue to use `Overpass`, add the class `pf-m-overpass-font` on an element that wraps your application (for example, `<body>`).
 
 You don’t have to do anything further to use this font. However, with the change from  `Overpass`  to  `RedHatText` , we encourage you to review your application’s typography styles to ensure they are correct.
 
