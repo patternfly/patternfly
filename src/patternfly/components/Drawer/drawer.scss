@@ -86,6 +86,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--after--Width: var(--pf-global--BorderWidth--sm);
   --pf-c-drawer__panel--after--BackgroundColor: transparent;
   --pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor: var(--pf-global--BorderColor--100);
+  --pf-c-drawer--m-inline__panel--PaddingLeft: var(--pf-c-drawer__panel--after--Width);
+  --pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight: var(--pf-c-drawer__panel--after--Width);
 
   display: flex;
   flex-direction: column;
@@ -94,6 +96,13 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     min-width: var(--pf-c-drawer__panel--MinWidth);
+  }
+
+  &.pf-m-inline,
+  &.pf-m-static {
+    .pf-c-drawer__panel:not(.pf-m-no-border) {
+      padding-left: var(--pf-c-drawer--m-inline__panel--PaddingLeft);
+    }
   }
 }
 
@@ -272,6 +281,15 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       transform: translateX(-100%);
     }
 
+    &.pf-m-inline,
+    &.pf-m-static {
+      .pf-c-drawer__panel:not(.pf-m-no-border) {
+        --pf-c-drawer--m-inline__panel--PaddingLeft: 0;
+
+        padding-right: var(--pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight);
+      }
+    }
+
     // Expanded, panel left
     &.pf-m-expanded .pf-c-drawer__panel {
       --pf-c-drawer__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
@@ -290,7 +308,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Border
   .pf-c-drawer .pf-c-drawer__panel.pf-m-no-border,
   .pf-c-drawer.pf-m-panel-left .pf-c-drawer__panel.pf-m-no-border {
-    --pf-c-drawer__panel--BoxShadow: transparent;
+    --pf-c-drawer__panel--BoxShadow: none;
   }
 }
 
@@ -328,7 +346,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       .pf-c-drawer__panel {
-        --pf-c-drawer__panel--BoxShadow: transparent;
+        --pf-c-drawer__panel--BoxShadow: none;
 
         &:not(.pf-m-no-border)::after {
           --pf-c-drawer__panel--after--BackgroundColor: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
@@ -388,7 +406,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     // Drawer inline - Panel left
     .pf-c-drawer.pf-m-panel-left.pf-m-inline#{$breakpoint-name} {
       .pf-c-drawer__panel {
-        --pf-c-drawer__panel--BoxShadow: transparent;
+        --pf-c-drawer__panel--BoxShadow: none;
 
         margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
         margin-left: 0;
