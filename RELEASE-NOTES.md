@@ -4,6 +4,42 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.08 release notes (2020-06-24)
+Packages released:
+- @patternfly/patternfly@v4.16.5
+
+### Components
+- **Alert group:** Updated basic example to inline, removed actions ([#3142](https://github.com/patternfly/patternfly/pull/3142))
+- **Banner:** Added banner component ([#2814](https://github.com/patternfly/patternfly/pull/2814))
+- **Button:**
+  - Added small variation ([#3132](https://github.com/patternfly/patternfly/pull/3132))
+  - Added pf-m-aria-disabled state ([#3166](https://github.com/patternfly/patternfly/pull/3166))
+  - Made inline link inherit font-size, updated alert actions ([#3192](https://github.com/patternfly/patternfly/pull/3192))
+- **Divider:** Added xs spacer to inset map ([#3191](https://github.com/patternfly/patternfly/pull/3191))
+- **Drawer:**
+  - Kept panel content from displaying on top of divider/border ([#3180](https://github.com/patternfly/patternfly/pull/3180))
+  - Added tab focus fix ([#3184](https://github.com/patternfly/patternfly/pull/3184))
+- **Dropdown/select:** Added description element ([#3130](https://github.com/patternfly/patternfly/pull/3130))
+- **Label:** Added purple-50 global color, updated green/purple fill colors ([#3138](https://github.com/patternfly/patternfly/pull/3138))
+- **Modal:** Allowed wizard height to shrink when used in modal ([#3176](https://github.com/patternfly/patternfly/pull/3176))
+- **Notification drawer:** Fixed last item's color line position ([#3149](https://github.com/patternfly/patternfly/pull/3149))
+- **Notification drawer/alert:** Improved title wrapping ([#3145](https://github.com/patternfly/patternfly/pull/3145))
+- **Table:**
+  - Added sticky-header variation ([#3093](https://github.com/patternfly/patternfly/pull/3093))
+  - Added support for column header help ([#3189](https://github.com/patternfly/patternfly/pull/3189))
+  - Updated sticky header border var so border is visible ([#3197](https://github.com/patternfly/patternfly/pull/3197))
+- **Tabs:** Reduced secondary tab font-size ([#3135](https://github.com/patternfly/patternfly/pull/3135))
+
+### Other
+- **Global:** Added RedHatDisplay back as --FontFamily--heading--sans-serif ([#3188](https://github.com/patternfly/patternfly/pull/3188))
+- **Build:**
+  - Enabled publish to prerelease tag ([#3162](https://github.com/patternfly/patternfly/pull/3162))
+  - Upgraded patternfly-a11y ([#3178](https://github.com/patternfly/patternfly/pull/3178))
+- **Docs:**
+  - Copied UPGRADE-GUIDE.md ([#3158](https://github.com/patternfly/patternfly/pull/3158))
+  - Updated upgrade guide RedHatDisplay text ([#3195](https://github.com/patternfly/patternfly/pull/3195))
+- **Workspace:** Updated gatsby version, removed footer ([#3155](https://github.com/patternfly/patternfly/pull/3155))
+
 ## 2020.07 release notes (2020-06-05)
 Packages released:
 - @patternfly/patternfly@v4.10.31
