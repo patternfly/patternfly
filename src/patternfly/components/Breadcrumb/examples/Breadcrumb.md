@@ -9,6 +9,7 @@ cssPrefix: pf-c-breadcrumb
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section home
       {{/breadcrumb-link}}
@@ -39,6 +40,7 @@ cssPrefix: pf-c-breadcrumb
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
         Section home
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
@@ -79,6 +81,7 @@ cssPrefix: pf-c-breadcrumb
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section home
       {{/breadcrumb-link}}
