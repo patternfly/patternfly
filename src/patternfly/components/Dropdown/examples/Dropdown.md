@@ -186,6 +186,14 @@ The dropdown panel is provided for flexibility in allowing various content withi
 {{/dropdown}}
 ```
 
+```hbs title=Dropdown-with-description
+{{#> dropdown id="dropdown-with-description" dropdown--IsDescriptionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
+  {{#> dropdown-toggle-text}}
+    Expanded dropdown
+  {{/dropdown-toggle-text}}
+{{/dropdown}}
+```
+
 ## Documentation
 
 ### Overview
@@ -221,6 +229,8 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
 | `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
 | `.pf-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
+| `.pf-c-dropdown__menu-item-description` | `<div>` | Defines the wrapper for the menu item description. |
+| `.pf-c-dropdown__menu-item-main` | `<div>` | Defines the wrapper for the menu item main element. Use when the description element is present. |
 | `.pf-c-dropdown__toggle-image` | `<span>` | Defines the wrapper for the dropdown toggle button image. |
 | `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
 | `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
@@ -236,4 +246,5 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`. |
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
 | `.pf-m-icon` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding an icon. |
-| `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-active` | `.pf-c-dropdown__toggle` | Modifies the dropdown menu toggle for the active state. |
+| `.pf-m-description` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding a description. |

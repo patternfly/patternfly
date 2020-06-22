@@ -11,6 +11,7 @@ module.exports = {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
         context: 'core', // For global items that need sideNav
+        showFooter: false,
         sideNav: {
           core: [
             { section: 'overview' },

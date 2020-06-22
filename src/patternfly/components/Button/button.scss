@@ -84,6 +84,7 @@
   --pf-c-button--m-link--active--BackgroundColor: transparent;
   --pf-c-button--m-link--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--disabled--BackgroundColor: transparent;
+  --pf-c-button--m-link--m-inline--FontSize: inherit;
   --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
 
@@ -303,6 +304,8 @@
     }
 
     &.pf-m-inline {
+      --pf-c-button--FontSize: var(--pf-c-button--m-link--m-inline--FontSize);
+
       display: inline;
       padding: 0;
 

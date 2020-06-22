@@ -31,6 +31,8 @@
         {{> select-checkbox}}
       {{/if}}
     {{/if}}
+  {{else if select--IsDescriptive}}
+    {{> select-menu-descriptive}}
   {{else}}
     {{> select-single}}
   {{/if}}

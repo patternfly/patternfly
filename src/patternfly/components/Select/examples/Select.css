@@ -37,3 +37,7 @@
 #ws-core-c-select-panel {
   min-height: 120px;
 }
+
+#ws-core-c-select-with-description {
+  min-height: 400px;
+}
