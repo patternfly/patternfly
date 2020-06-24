@@ -127,6 +127,14 @@
   --pf-c-button--m-control--m-expanded--after--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-button--m-small--FontSize: var(--pf-global--FontSize--sm);
 
+  // CTA Button
+  --pf-c-button--m-cta--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-button--m-cta--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-button--m-cta--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-button--m-cta--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-button--m-cta--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-button--m-link--m-cta--FontSize: var(--pf-global--FontSize--lg);
+
   // Styles for an icon in button
   --pf-c-button__icon--m-start--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-button__icon--m-end--MarginLeft: var(--pf-global--spacer--xs);
@@ -177,6 +185,18 @@
 
   &.pf-m-small {
     --pf-c-button--FontSize: var(--pf-c-button--m-small--FontSize);
+  }
+
+  &.pf-m-primary,
+  &.pf-m-secondary,
+  &.pf-m-tertiary {
+    &.pf-m-cta {
+      --pf-c-button--PaddingTop: var(--pf-c-button--m-cta--PaddingTop);
+      --pf-c-button--PaddingRight: var(--pf-c-button--m-cta--PaddingRight);
+      --pf-c-button--PaddingBottom: var(--pf-c-button--m-cta--PaddingBottom);
+      --pf-c-button--PaddingLeft: var(--pf-c-button--m-cta--PaddingLeft);
+      --pf-c-button--FontWeight: var(--pf-c-button--m-cta--FontWeight);
+    }
   }
 
   // Primary buttons
@@ -311,6 +331,10 @@
 
         text-decoration: var(--pf-c-button--m-link--m-inline--hover--TextDecoration);
       }
+    }
+
+    &.pf-m-cta {
+      --pf-c-button--FontSize: var(--pf-c-button--m-link--m-cta--FontSize);
     }
   }
 
