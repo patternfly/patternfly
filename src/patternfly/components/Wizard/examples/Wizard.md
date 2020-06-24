@@ -68,7 +68,7 @@ import './Wizard.css'
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
             {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
                 Review
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
@@ -154,7 +154,7 @@ import './Wizard.css'
             {{/wizard-nav-link}}
           {{/wizard-nav-item}}
           {{#> wizard-nav-item}}
-            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-disabled" wizard-nav-link--attribute='aria-disabled="true" tabindex="-1"'}}
+            {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
               Review
             {{/wizard-nav-link}}
           {{/wizard-nav-item}}
@@ -292,9 +292,10 @@ import './Wizard.css'
 | `aria-label="close"` | `.pf-c-wizard__toggle-icon` | Gives the close button an accessible name. **Required** |
 | `aria-hidden="true"` | `.pf-c-wizard__toggle-icon`, `.pf-c-wizard__toggle-divider` | Hides the icon from assistive technologies. **Required** |
 | `aria-label="Steps"` | `.pf-c-wizard__nav` | Gives the steps nav element an accessible name. **Required** |
-| `aria-disabled="true"` | `.pf-c-wizard__nav-link` | Indicatese that the element is disabled. **Required for disabled links with `.pf-m-disabled`** |
+| `disabled` | `button.pf-c-wizard__nav-link` | Indicates that the element is disabled. **Required when a nav item is disabled** |
+| `aria-disabled="true"` | `a.pf-c-wizard__nav-link` | Indicates that the element is disabled. **Required for disabled links with `.pf-m-disabled`** |
 | `aria-current="page"` | `.pf-c-wizard__nav-link` | Indicates the current page link. Can only occur once on page. **Required for the current link** |
-| `tabindex="-1"` | `.pf-c-wizard__nav-link` | Removes a link from keyboard focus. **Required for disabled links with `.pf-m-disabled`** |
+| `tabindex="-1"` | `a.pf-c-wizard__nav-link` | Removes a link from keyboard focus. **Required for disabled links with `.pf-m-disabled`** |
 
 ### Usage
 | Class | Applied to | Outcome |
