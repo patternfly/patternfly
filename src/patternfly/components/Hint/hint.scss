@@ -1,0 +1,10 @@
+.pf-c-hint {
+  --pf-c-hint--BackgroundColor: var(--pf-global--palette--blue-50);
+  --pf-c-hint--m-dominant--BackgroundColor: var(--pf-global--primary-color--100);
+
+  background-color: var(--pf-c-hint--BackgroundColor);
+
+  &.pf-m-dominant {
+    --pf-c-hint--BackgroundColor: var(--pf-c-hint--m-dominant--BackgroundColor);
+  }
+}
