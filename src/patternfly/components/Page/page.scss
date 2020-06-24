@@ -50,6 +50,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-tools-group--Display: flex;
   --pf-c-page__header-tools-item--Display: block;
 
+  // remove during breaking change
+  --pf-c-page__header-tools--c-button--m-selected--before--Width: auto;
+  --pf-c-page__header-tools--c-button--m-selected--before--Height: auto;
+
   // Header tools group button
   --pf-c-page__header-tools--c-button--m-selected--before--Width: auto; // remove at breaking change
   --pf-c-page__header-tools--c-button--m-selected--before--Height: auto; // remove at breaking change
@@ -265,6 +269,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
         right: 0;
         bottom: 0;
         left: 0;
+
+        // remove at breaking change
         width: var(--pf-c-page__header-tools--c-button--m-selected--before--Width);
         height: var(--pf-c-page__header-tools--c-button--m-selected--before--Height);
         content: "";
