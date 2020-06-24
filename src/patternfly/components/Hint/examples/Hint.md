@@ -12,12 +12,10 @@ cssPrefix: pf-c-hint
     Do more with Find it Fix it capabilities
   {{/hint-header}}
   {{#> hint-body}}
-    Upgrade to Red Hat Smart Management to remediate all your systems accross regions and geographies.
+    Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
   {{/hint-body}}
   {{#> hint-actions}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-      Dismiss
-    {{/button}}
+    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
   {{/hint-actions}}
 {{/hint}}
 
@@ -28,7 +26,7 @@ cssPrefix: pf-c-hint
     Do more with Find it Fix it capabilities
   {{/hint-header}}
   {{#> hint-body}}
-    Upgrade to Red Hat Smart Management to remediate all your systems accross regions and geographies.
+    Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
   {{/hint-body}}
   {{#> hint-footer}}
     {{#> button button--modifier="pf-m-link pf-m-inline"}}
@@ -49,18 +47,13 @@ cssPrefix: pf-c-hint
       Learn more about the improved features.
     {{/button}}
   {{/hint-body}}
-  {{#> hint-actions}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-      Leave feedback
-    {{/button}}
-  {{/hint-actions}}
 {{/hint}}
 
 <br>
 
 {{#> hint}}
   {{#> hint-body}}
-    Upgrade to Red Hat Smart Management to remediate all your systems accross regions and geographies.
+    Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
   {{/hint-body}}
   {{#> hint-footer}}
     {{#> button button--modifier="pf-m-link pf-m-inline"}}
@@ -75,16 +68,14 @@ cssPrefix: pf-c-hint
 
 ```hbs title=Dominant-with-header
 {{#> hint hint--modifier="pf-m-dominant"}}
+  {{#> hint-header}}
+    Create service binding
+  {{/hint-header}}
   {{#> hint-body}}
-    Welcome to the new documentation experience.
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-      Learn more about the improved features.
-    {{/button}}
+    Service bindings create a secret containing the necessary information for another application to use mongodb-persistent. Once the binding is ready, add the secret to your application’s environment variables.
   {{/hint-body}}
   {{#> hint-actions}}
-    {{#> button button--modifier="pf-m-secondary"}}
-    Leave feedback
-    {{/button}}
+    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
   {{/hint-actions}}
 {{/hint}}
 
@@ -117,11 +108,11 @@ cssPrefix: pf-c-hint
 ```hbs title=Dominant-with-no-header
 {{#> hint hint--modifier="pf-m-dominant"}}
   {{#> hint-body}}
-    Service bindings create a secret containing the necessary information for another application to use mongodb-persistent. Once the binding is ready, add the secret to your application’s environment variables.
+    Welcome to the new documentation experience.
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Learn more about the improved features.
+    {{/button}}
   {{/hint-body}}
-  {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-  {{/hint-actions}}
 {{/hint}}
 
 <br>
@@ -142,9 +133,7 @@ cssPrefix: pf-c-hint
     {{/button}}
   {{/hint-footer}}
   {{#> hint-actions}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-      Dismiss
-    {{/button}}
+    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
   {{/hint-actions}}
 {{/hint}}
 ```
