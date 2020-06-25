@@ -222,6 +222,13 @@ import './Button.css'
     <i class="fas fa-arrow-right" aria-hidden="true"></i>
   {{/button-icon}}
 {{/button}}
+
+{{#> button button--modifier="pf-m-link pf-m-inline pf-m-cta"}}
+  Call to action
+  {{#> button-icon button-icon--modifier="pf-m-end"}}
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  {{/button-icon}}
+{{/button}}
 ```
 
 ## Documentation
