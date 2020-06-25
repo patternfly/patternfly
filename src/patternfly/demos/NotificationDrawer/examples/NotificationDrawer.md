@@ -1,5 +1,5 @@
 ---
-title: Drawer
+title: Notification drawer
 section: demos
 ---
 
