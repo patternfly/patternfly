@@ -40,7 +40,7 @@ cssPrefix: pf-c-hint
 ```
 
 ```hbs title=Default-with-no-header
-{{#> hint}}
+{{#> hint hint--modifier="pf-m-no-actions"}}
   {{#> hint-body}}
     Welcome to the new documentation experience.
     {{#> button button--modifier="pf-m-link pf-m-inline"}}
@@ -92,7 +92,7 @@ cssPrefix: pf-c-hint
     {{#> button button--modifier="pf-m-secondary"}}
       Create service binding
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--modifier="pf-m-link"}}
       Learn more
       {{#> button-icon button-icon--modifier="pf-m-end"}}
         <i class="fas fa-external-link-alt" aria-hidden="true"></i>
@@ -106,7 +106,7 @@ cssPrefix: pf-c-hint
 ```
 
 ```hbs title=Dominant-with-no-header
-{{#> hint hint--modifier="pf-m-dominant"}}
+{{#> hint hint--modifier="pf-m-dominant pf-m-no-actions"}}
   {{#> hint-body}}
     Welcome to the new documentation experience.
     {{#> button button--modifier="pf-m-link pf-m-inline"}}
@@ -125,7 +125,7 @@ cssPrefix: pf-c-hint
     {{#> button button--modifier="pf-m-secondary"}}
       Create service binding
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--modifier="pf-m-link"}}
       Learn more
       {{#> button-icon button-icon--modifier="pf-m-end"}}
         <i class="fas fa-external-link-alt" aria-hidden="true"></i>
@@ -150,3 +150,4 @@ cssPrefix: pf-c-hint
 | `.pf-c-hint__footer` | `<div>` | Initiates the hint footer element. |
 | `.pf-c-hint__actions` | `<div>` | Initiates the hint actions element. |
 | `.pf-m-dominant` | `.pf-c-hint` | Modifies the hint component for dominant styles. |
+| `.pf-m-no-actions` | `.pf-c-hint` | Modifies the hint component for no actions. |

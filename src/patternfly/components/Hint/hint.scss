@@ -1,4 +1,6 @@
 .pf-c-hint {
+  --pf-c-hint__header--GridColumnWidth: auto;
+  --pf-c-hint__actions--GridColumnWidth: calc(var(--pf-global--spacer--2xl) + #{pf-size-prem(44px)});
   --pf-c-hint--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-hint--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-hint--PaddingBottom: var(--pf-global--spacer--lg);
@@ -17,7 +19,7 @@
   --pf-c-hint__header--body--MarginTop: var(--pf-global--spacer--md);
 
   // Hint Footer
-  --pf-c-hint__footer--child--MarginRight: var(--pf-global--spacer--xl);
+  --pf-c-hint__footer--child--MarginRight: var(--pf-global--spacer--md);
   --pf-c-hint__header--footer--MarginTop: var(--pf-global--spacer--md);
   --pf-c-hint__body--footer--MarginTop: var(--pf-global--spacer--md);
 
@@ -31,6 +33,7 @@
   --pf-c-hint--m-dominant--Color: var(--pf-global--Color--light-100);
 
   display: grid;
+  grid-template-columns: var(--pf-c-hint__header--GridColumnWidth) var(--pf-c-hint__actions--GridColumnWidth);
   padding: var(--pf-c-hint--PaddingTop) var(--pf-c-hint--PaddingRight) var(--pf-c-hint--PaddingBottom) var(--pf-c-hint--PaddingLeft);
   color: var(--pf-c-hint--Color);
   background-color: var(--pf-c-hint--BackgroundColor);
@@ -54,11 +57,15 @@
         border-color: inherit;
       }
     }
+  }
 
-    // .pf-c-button.pf-m-link.pf-m-inline {
-    //   text-align: left;
-    //   white-space: pre-wrap;
-    // }
+  &.pf-m-no-actions {
+    grid-template-columns: auto;
+  }
+
+  .pf-c-button.pf-m-link.pf-m-inline {
+    text-align: left;
+    white-space: pre-wrap;
   }
 }
 
@@ -66,7 +73,12 @@
   font-size: var(--pf-c-hint__header--FontSize);
 
   + .pf-c-hint__body {
+    grid-column: 1 / span 2;
     margin-top: var(--pf-c-hint__header--body--MarginTop);
+
+    @media only screen and (min-width: $pf-global--breakpoint--md) {
+      grid-column: 1;
+    }
   }
 
   + .pf-c-hint__footer {
@@ -82,8 +94,12 @@
   }
 }
 
-.pf-c-hint__footer > :not(:last-child) {
-  margin-right: var(--pf-c-hint__footer--child--MarginRight);
+.pf-c-hint__footer {
+  grid-column: 1 / span 2;
+
+  > :not(:last-child) {
+    margin-right: var(--pf-c-hint__footer--child--MarginRight);
+  }
 }
 
 .pf-c-hint__actions {
