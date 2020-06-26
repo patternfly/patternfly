@@ -168,6 +168,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-no-background {
     --pf-c-drawer__content--BackgroundColor: transparent;
   }
+
+  &.pf-m-overflow-hidden {
+    overflow: hidden;
+  }
 }
 
 // Panel head
@@ -193,6 +197,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Modified content children
 .pf-c-drawer__body {
+  height: 100%;
   padding: var(--pf-c-drawer--child--PaddingTop) var(--pf-c-drawer--child--PaddingRight) var(--pf-c-drawer--child--PaddingBottom) var(--pf-c-drawer--child--PaddingLeft);
 
   // No padding
