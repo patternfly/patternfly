@@ -66,78 +66,6 @@ cssPrefix: pf-c-hint
 {{/hint}}
 ```
 
-```hbs title=Dominant-with-header
-{{#> hint hint--modifier="pf-m-dominant"}}
-  {{#> hint-header}}
-    Create service binding
-  {{/hint-header}}
-  {{#> hint-body}}
-    Service bindings create a secret containing the necessary information for another application to use mongodb-persistent. Once the binding is ready, add the secret to your application’s environment variables.
-  {{/hint-body}}
-  {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-  {{/hint-actions}}
-{{/hint}}
-
-<br>
-
-{{#> hint hint--modifier="pf-m-dominant"}}
-  {{#> hint-header}}
-    Create service binding
-  {{/hint-header}}
-  {{#> hint-body}}
-    Service bindings create a secret containing the necessary information for another application to use mongodb-persistent. Once the binding is ready, add the secret to your application’s environment variables.
-  {{/hint-body}}
-  {{#> hint-footer}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Create service binding
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Learn more
-      {{#> button-icon button-icon--modifier="pf-m-end"}}
-        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-      {{/button-icon}}
-    {{/button}}
-  {{/hint-footer}}
-  {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-  {{/hint-actions}}
-{{/hint}}
-```
-
-```hbs title=Dominant-with-no-header
-{{#> hint hint--modifier="pf-m-dominant pf-m-no-actions"}}
-  {{#> hint-body}}
-    Welcome to the new documentation experience.
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-      Learn more about the improved features.
-    {{/button}}
-  {{/hint-body}}
-{{/hint}}
-
-<br>
-
-{{#> hint hint--modifier="pf-m-dominant"}}
-  {{#> hint-body}}
-    Service bindings create a secret containing the necessary information for another application to use mongodb-persistent. Once the binding is ready, add the secret to your application’s environment variables.
-  {{/hint-body}}
-  {{#> hint-footer}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Create service binding
-    {{/button}}
-    {{#> button button--modifier="pf-m-link"}}
-      Learn more
-      {{#> button-icon button-icon--modifier="pf-m-end"}}
-        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-      {{/button-icon}}
-    {{/button}}
-  {{/hint-footer}}
-  {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-  {{/hint-actions}}
-{{/hint}}
-```
-
 ## Documentation
 
 
@@ -149,5 +77,4 @@ cssPrefix: pf-c-hint
 | `.pf-c-hint__body` | `<div>` | Initiates the hint body element. |
 | `.pf-c-hint__footer` | `<div>` | Initiates the hint footer element. |
 | `.pf-c-hint__actions` | `<div>` | Initiates the hint actions element. |
-| `.pf-m-dominant` | `.pf-c-hint` | Modifies the hint component for dominant styles. |
 | `.pf-m-no-actions` | `.pf-c-hint` | Modifies the hint component for no actions. |

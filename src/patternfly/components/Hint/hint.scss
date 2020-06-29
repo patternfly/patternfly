@@ -27,11 +27,6 @@
   --pf-c-hint__actions--MarginLeft: var(--pf-global--spacer--2xl);
   --pf-c-hint__actions--c-dropdown--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
 
-  // Dominant modifier
-  --pf-c-hint--m-dominant--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-hint--m-dominant--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-hint--m-dominant--Color: var(--pf-global--Color--light-100);
-
   display: grid;
   grid-template-columns: var(--pf-c-hint__header--GridColumnWidth) var(--pf-c-hint__actions--GridColumnWidth);
   padding: var(--pf-c-hint--PaddingTop) var(--pf-c-hint--PaddingRight) var(--pf-c-hint--PaddingBottom) var(--pf-c-hint--PaddingLeft);
@@ -39,25 +34,6 @@
   background-color: var(--pf-c-hint--BackgroundColor);
   border: var(--pf-c-hint--BorderWidth) solid var(--pf-c-hint--BorderColor);
   box-shadow: var(--pf-c-hint--BoxShadow);
-
-  &.pf-m-dominant {
-    border: unset;
-
-    --pf-c-hint--Color: var(--pf-c-hint--m-dominant--Color);
-    --pf-c-hint--BackgroundColor: var(--pf-c-hint--m-dominant--BackgroundColor);
-    --pf-c-hint--BoxShadow: var(--pf-c-hint--m-dominant--BoxShadow);
-
-    .pf-c-button,
-    .pf-c-dropdown__toggle {
-      color: inherit;
-    }
-
-    .pf-c-button.pf-m-secondary {
-      &::after {
-        border-color: inherit;
-      }
-    }
-  }
 
   &.pf-m-no-actions {
     grid-template-columns: auto;
