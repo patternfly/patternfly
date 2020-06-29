@@ -405,7 +405,9 @@
   }
 
   &.pf-m-description {
-    --pf-c-select__menu-item--PaddingRight: 0;
+    &:not(.pf-c-check) {
+      --pf-c-select__menu-item--PaddingRight: 0;
+    }
 
     white-space: normal;
   }

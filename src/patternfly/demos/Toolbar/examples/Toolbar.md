@@ -194,7 +194,7 @@ import './Toolbar.css'
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
+            {{#> select id=(concat toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
               Filter by status
             {{/select}}
           {{/toolbar-item}}
@@ -298,7 +298,7 @@ import './Toolbar.css'
         {{/select}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> select id=(concat toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+        {{#> select id=(concat toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true"}}
           Filter by status
         {{/select}}
       {{/toolbar-item}}

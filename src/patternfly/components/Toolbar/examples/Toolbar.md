@@ -301,12 +301,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{> toolbar-item-search-filter button--id="content"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
               Status
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
               Risk
             {{/select}}
           {{/toolbar-item}}
@@ -346,12 +346,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{> toolbar-item-search-filter button--id="expanded-content"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
-          {{#> select id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+          {{#> select id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
             Status
           {{/select}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+          {{#> select id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
             Risk
           {{/select}}
         {{/toolbar-item}}
@@ -377,12 +377,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
               Status
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--ItemIsSelected="true"}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
               Risk
             {{/select}}
           {{/toolbar-item}}
@@ -526,12 +526,12 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{> toolbar-item-search-filter button--id="content"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true"}}
               Status
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--ItemIsSelected="true" select--IsExpanded="true"}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true"}}
               Risk
             {{/select}}
           {{/toolbar-item}}

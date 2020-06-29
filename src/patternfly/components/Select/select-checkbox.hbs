@@ -4,25 +4,20 @@
     {{{select-multi-attribute}}}
   {{/if}}>
   {{#> select-menu-fieldset select-menu-fieldset--attribute='aria-label="Select input"'}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' id '-active"') check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-active" name="' id '-active"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Active{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' id '-cancelled"') check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-cancelled" name="' id '-cancelled"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Cancelled{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' id '-paused"') check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-paused" name="' id '-paused"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Paused{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' id '-warning"') check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-warning" name="' id '-warning"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Warning{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' id '-restarted"') check--modifier="pf-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-restarted" name="' id '-restarted"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Restarted{{/check-label}}
-    {{/check}}
+    {{#> select-menu-item-check select-menu-item-check--name="active" select-menu-item-check--description="This is a description" select-menu-item-check--modifier=" pf-m-description"}}
+      Active
+    {{/select-menu-item-check}}
+    {{#> select-menu-item-check select-menu-item-check--name="cancelled" select-menu-item-check--description="This is a really long description that describes the menu item. This is a really long description that describes the menu item." select-menu-item-check--modifier=" pf-m-description"}}
+      Cancelled
+    {{/select-menu-item-check}}
+    {{#> select-menu-item-check select-menu-item-check--name="paused"}}
+      Paused
+    {{/select-menu-item-check}}
+    {{#> select-menu-item-check select-menu-item-check--name="warning"}}
+      Warning
+    {{/select-menu-item-check}}
+    {{#> select-menu-item-check select-menu-item-check--name="restarted"}}
+      Restarted
+    {{/select-menu-item-check}}
   {{/select-menu-fieldset}}
 </div>

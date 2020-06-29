@@ -171,25 +171,25 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 ```
 
 ```hbs title=Checkbox-expanded
-{{#> select id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true"}}
+{{#> select id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
   Filter
 {{/select}}
 ```
 
 ```hbs title=Checkbox-expanded-and-selected-with-groups
-{{#> select id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true"}}
+{{#> select id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true"}}
   Filter by status
 {{/select}}
 ```
 
 ```hbs title=Checkbox-expanded-and-selected-with-groups-and-filter
-{{#> select id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--ItemIsSelected="true" select--HasGroups="true" select--IsFilterable="true"}}
+{{#> select id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsFilterable="true"}}
   Filter by status
 {{/select}}
 ```
 
 ```hbs title=Checkbox-expanded-without-badge
-{{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--ItemIsSelected="true" select--IsNoBadge="true"}}
+{{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true"}}
   Filter
 {{/select}}
 ```
@@ -277,6 +277,12 @@ The plain select variation should be used when you do not want a border applied 
 ```hbs title=With-description
 {{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true" select-menu--modifier="pf-m-wrap"}}
   Select with description
+{{/select}}
+```
+
+```hbs title=Checkbox-with-description
+{{#> select id="select-checkbox-description" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
+  Filter
 {{/select}}
 ```
 
