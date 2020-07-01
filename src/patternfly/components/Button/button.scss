@@ -191,7 +191,7 @@
   &.pf-m-primary,
   &.pf-m-secondary,
   &.pf-m-tertiary,
-  &.pf-m-link:not(.pf-m-inline) {
+  &.pf-m-link {
     &.pf-m-cta {
       --pf-c-button--PaddingTop: var(--pf-c-button--m-cta--PaddingTop);
       --pf-c-button--PaddingRight: var(--pf-c-button--m-cta--PaddingRight);
@@ -337,7 +337,6 @@
 
     &.pf-m-cta {
       --pf-c-button--FontSize: var(--pf-c-button--m-link--m-cta--FontSize);
-      --pf-c-button--FontWeight: var(--pf-c-button--m-link--m-cta--FontWeight);
     }
   }
 
