@@ -1,12 +1,12 @@
 const { removeSync } = require('fs-extra');
 const { series, parallel, src, dest } = require('gulp');
 const browserSync = require('browser-sync').create();
-const { copyFA, copySource, copyAssets, copyDocs } = require('./build/gulp/copy');
-const { compileSASS, minifyCSS, watchSASS } = require('./build/gulp/sass');
-const { pfIconFont, pfIcons } = require('./build/gulp/icons');
-const { compileHBS, compileMD, watchHBS, watchMD } = require('./build/gulp/html');
-const { lintCSSComments, lintCSSFunctions } = require('./build/gulp/lint');
-const { generateSnippets } = require('./build/gulp/snippets');
+const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
+const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
+const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
+const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
+const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
+const { generateSnippets } = require('./scripts/gulp/snippets');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -24,7 +24,6 @@ function clean(cb) {
     '.circleci/css-size-report/node_modules',
     '.circleci/css-size-report/package-lock.json',
     '.circleci/css-size-report/report.html',
-    'build/patternfly-cli/node_modules/',
     'src/icons/PfIcons/',
     'static/assets/fontawesome/',
     'static/assets/fonts/',
@@ -78,7 +77,7 @@ function startWorkspaceServer() {
       baseDir: './',
       directory: true
     },
-    files: ['workspace/**/*.html', 'dist/**/*.css', 'build/gulp/ws-lite.css'],
+    files: ['workspace/**/*.html', 'dist/**/*.css', 'scripts/gulp/ws-lite.css'],
     startPath: 'workspace'
   });
 }

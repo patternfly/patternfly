@@ -7,14 +7,12 @@
   "scripts": {
     "backstop:approve": "node test/approve-conflicts.js",
     "backstop:init": "node test/create-references.js",
-    "bootstrap:build": "node npm-scripts/build-bootstrap-workspace.js",
     "build-patternfly": "gulp build",
     "build": "npm run build-patternfly && npm run build:site",
     "build:pficons": "gulp pfIcons",
     "build:pficonfont": "gulp pfIconFont",
     "build:site": "npm run copy-assets && gatsby build",
     "clean": "gatsby clean && gulp clean",
-    "cli:setup": "cd build/patternfly-cli && npm install && cd ../../ && npm link ./build/patternfly-cli",
     "copy-assets": "gulp copyAssets",
     "dev": "concurrently \"npm run copy-assets\" \"gulp watchSASS\" \"gatsby develop\"",
     "dev:lite": "gulp develop",
@@ -34,7 +32,7 @@
     "start": "npm run dev",
     "test": "node test/test.js",
     "test:a11y": "patternfly-a11y .cache/fullscreenPages.json",
-    "update-modifiers": "./build/extractModifiers.sh",
+    "update-modifiers": "./scripts/extractModifiers.sh",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
