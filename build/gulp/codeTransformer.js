@@ -29,7 +29,7 @@ function codeTransformer(config) {
           config.section,
           config.title,
           id.toLowerCase(),
-          config.examples[id],
+          config.examples[id].code,
           'ws-lite-example'
         );
         delete node.meta;

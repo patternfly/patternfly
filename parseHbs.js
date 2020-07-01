@@ -102,17 +102,17 @@ function parseAllMd() {
     } else if (type === 'demos') {
       typePrefix = 'ex-d-';
     }
-    Object.entries(example).forEach(([oneExample, html]) => {
+    Object.entries(example).forEach(([exampleName, code]) => {
       let prettierHtml;
       try {
-        prettierHtml = prettier.format(html, { parser: 'html' });
+        prettierHtml = prettier.format(code.code, { parser: 'html' });
         individualExamples.push({
           mdName: name,
           mdFile: file,
-          exampleName: oneExample,
+          exampleName,
           exampleHtml: prettierHtml,
           type,
-          fullName: `${typePrefix}${name}--${oneExample}`
+          fullName: `${typePrefix}${name}--${exampleName}`
         });
       } catch (error) {
         if (!erroredFiles[file]) {

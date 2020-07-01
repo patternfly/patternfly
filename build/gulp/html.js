@@ -102,24 +102,27 @@ function compileMD0(srcFiles) {
       const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
       const section = data.section[0].toLowerCase();
       const title = path.basename(chunk.history[0], '.md').toLowerCase();
-      examples.index = unified()
-        .use(toMDAST)
-        .use(codeTransformer, { examples, section, title })
-        .use(remark2rehype, { allowDangerousHTML: true })
-        .use(raw)
-        .use(stringify)
-        .processSync(content).contents;
+      examples.index = {
+        code: unified()
+          .use(toMDAST)
+          .use(codeTransformer, { examples, section, title })
+          .use(remark2rehype, { allowDangerousHTML: true })
+          .use(raw)
+          .use(stringify)
+          .processSync(content).contents
+      };
 
       const exampleDir = getExampleDir(chunk.history[0]);
       // Write new examples
-      Object.entries(examples).forEach(([exampleName, html]) => {
+      Object.entries(examples).forEach(([exampleName, example]) => {
+        let html;
         const htmlPath = path.join(exampleDir, `${exampleName}.html`);
         if (exampleName !== 'index') {
           // .ws-core-l-flex .pf-l-flex .pf-l-flex
-          const exampleDiv = getWrapperDiv(section, title, exampleName, html, 'ws-lite-full-example');
+          const exampleDiv = getWrapperDiv(section, title, exampleName, example.code, 'ws-lite-full-example');
           html = getHTMLWithStyles(cssPaths, exampleDiv, 'ws-lite-full-page-example');
         } else {
-          html = getHTMLWithStyles(cssPaths, html, 'ws-lite-index-example');
+          html = getHTMLWithStyles(cssPaths, example.code, 'ws-lite-index-example');
         }
         fs.outputFileSync(htmlPath, html);
       });
