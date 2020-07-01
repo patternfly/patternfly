@@ -79,7 +79,7 @@ function getHTMLWithStyles(cssPaths, html, bodyClassNames) {
 
 // Helper
 function getExampleDir(fullPath) {
-  const split = fullPath.split('/');
+  const split = fullPath.split(path.sep);
   const lastPath = split
     .slice(split.length - 4, split.length - 1)
     .join('/')
@@ -101,7 +101,7 @@ function compileMD0(srcFiles) {
         .parse(content);
       const examples = extractExamples(mdAST, hbsInstance, chunk.history[0]);
       const section = data.section[0].toLowerCase();
-      const title = data.title.toLowerCase();
+      const title = path.basename(chunk.history[0], '.md').toLowerCase();
       examples.index = unified()
         .use(toMDAST)
         .use(codeTransformer, { examples, section, title })

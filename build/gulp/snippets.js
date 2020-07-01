@@ -28,9 +28,9 @@ function generateSnippets(htmlIndexFiles) {
   Object.entries(hbsInstance.partials).forEach(([partialName, partial]) => {
     // components, demos, layouts, utilities
     const relativePath = path.relative(process.cwd(), hbsFileMap[partialName]);
-    const component = relativePath.split('/')[3];
+    const component = relativePath.split(path.sep)[3];
     componentCamelNameMapping[component.toLowerCase()] = component;
-    const section = relativePath.split('/')[2].toLowerCase();
+    const section = relativePath.split(path.sep)[2].toLowerCase();
     try {
       const template = hbsInstance.compile(partial);
       const templateContext = {
@@ -66,8 +66,8 @@ function generateSnippets(htmlIndexFiles) {
     .pipe(
       through2.obj((chunk, _, cb2) => {
         const relativePath = path.relative(process.cwd(), chunk.history[0]);
-        const component = componentCamelNameMapping[relativePath.split('/')[2].toLowerCase()];
-        const section = relativePath.split('/')[1].toLowerCase();
+        const component = componentCamelNameMapping[relativePath.split(path.sep)[2].toLowerCase()];
+        const section = relativePath.split(path.sep)[1].toLowerCase();
 
         const queryableHTML = cheerio.load(chunk.contents.toString());
 
