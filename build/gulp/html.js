@@ -79,7 +79,7 @@ function getHTMLWithStyles(cssPaths, html, bodyClassNames) {
 
 // Helper
 function getExampleDir(fullPath) {
-  const split = fullPath.split('/');
+  const split = fullPath.split(path.sep);
   const lastPath = split
     .slice(split.length - 4, split.length - 1)
     .join('/')

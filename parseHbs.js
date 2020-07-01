@@ -81,7 +81,7 @@ function parseAllMd() {
     const mdxAST = compiler.parse(sourceText);
     const name = path.basename(file, '.md');
     const example = extractExamples(mdxAST, hbsInstance, name);
-    const type = file.split('/')[0];
+    const type = file.split(path.sep)[0];
     mdExamples.push({
       name,
       file,
@@ -139,7 +139,7 @@ function parseAllMd() {
   hbsNodes.forEach(node => {
     let template;
     let compiledPartial;
-    const type = node.fields.file.split('/')[0];
+    const type = node.fields.file.split(path.sep)[0];
     let typePrefix = '';
     if (type === 'components') {
       typePrefix = 'c-';
@@ -229,7 +229,7 @@ const makeCodeFragments = () => {
   const utilitiesCategory = getCategoryJson('Utilities');
   const getCategory = filePath => {
     // console.log(`filePath: ${filePath}`);
-    const filePathArr = filePath.split('/');
+    const filePathArr = filePath.split(path.sep);
     const type = filePathArr[0];
     const group = filePathArr[1];
     let fragment;
