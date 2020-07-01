@@ -98,6 +98,33 @@ Resizes horizontally
 {{/form-control}}
 ```
 
+```hbs title=Input
+{{#> form-control controlType="div" form-control--modifier="pf-m-custom pf-m-search"}}
+  <div class="pf-c-form-control__text" contenteditable>
+  </div>
+  <div class="pf-c-form-control__utils">
+    <div class="pf-c-form-control__count">
+      {{#> badge badge--modifier="pf-m-read"}}2/3{{/badge}}
+    </div>
+    <div class="pf-c-form-control__action pf-m-dir pf-m-down">
+      {{#> button button--modifier="pf-m-plain"}}
+        <i class="fas fa-angle-down"></i>
+      {{/button}}
+    </div>
+    <div class="pf-c-form-control__action pf-m-dir pf-m-up">
+      {{#> button button--modifier="pf-m-plain"}}
+        <i class="fas fa-angle-up"></i>
+      {{/button}}
+    </div>
+    <div class="pf-c-form-control__action pf-m-close">
+      {{#> button button--modifier="pf-m-plain"}}
+        <i class="fas fa-times"></i>
+      {{/button}}
+    </div>
+  </div>
+{{/form-control}}
+```
+
 ## Documentation
 ### Overview
 Input, textarea, and select are provided in the form controls component for use cases outside of forms. If they are used without label text ensure some sort of label for assistive technologies. (for example: `aria-label`)

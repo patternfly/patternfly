@@ -1,5 +1,6 @@
 /dist/
 /node_modules/
+/build/patternfly-cli/node_modules/
 .sass-cache/
 /.vscode/
 /.cache/
