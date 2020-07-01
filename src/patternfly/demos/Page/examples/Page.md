@@ -1,6 +1,7 @@
 ---
 title: Page
 section: demos
+wrapperTag: div
 ---
 
 ## Demos

@@ -2,6 +2,7 @@
 title: Login
 section: components
 cssPrefix: pf-c-login
+wrapperTag: div
 ---
 
 ## Examples
