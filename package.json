@@ -19,6 +19,7 @@
     "dev:expose": "npm run dev -- -H 0.0.0.0",
     "develop": "npm run dev",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
+    "generate": "node scripts/generate",
     "lint": "npm run lint:css && npm run lint:styles && npm run lint:js",
     "lint:size": "node .circleci/css-size-report/sizeReport run",
     "lint:css": "gulp lintCSS",

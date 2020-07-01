@@ -1,0 +1,49 @@
+const { Command } = require('commander');
+
+const program = new Command();
+const path = require('path');
+const glob = require('glob');
+const fs = require('fs-extra');
+
+program
+  .version('1.0.0')
+  .arguments('<name> [otherNames...]')
+  .description('Create source file scaffolding.')
+  .option('-f, --folder <folder>', 'Source folder (components, demos, layouts, or utilities)', 'components')
+  .action(generateFolders);
+
+const dasherize = s => s.replace(/[A-Z]/g, res => `-${res.toLowerCase()}`).replace(/^-/, ''); // Remove leading -
+
+function generateFolders(componentName, otherNames, options) {
+  const rootPath = path.join(__dirname, '..');
+  const templatePath = path.join(__dirname, 'template');
+
+  [componentName].concat(otherNames).forEach(name => {
+    const dasherized = dasherize(name);
+    const toReplace = [
+      [/{folder}/g, options.folder],
+      [/{name}/g, name],
+      [/{nameDasherized}/g, dasherized],
+      [/{nameBEM}/g, `pf-${options.folder[0]}-${dasherized}`]
+    ];
+    const templateReplace = str => {
+      let res = str;
+      toReplace.forEach(([regex, string]) => {
+        res = res.replace(regex, string);
+      });
+
+      return res;
+    };
+
+    // Write out templated files
+    glob.sync(`${templatePath}/**/*.*`).forEach(file => {
+      const toPath = templateReplace(path.join(rootPath, file.replace(templatePath, '')));
+      console.log('Writing', toPath);
+      const contents = templateReplace(fs.readFileSync(file, 'utf8'));
+      fs.ensureFileSync(toPath);
+      fs.writeFileSync(toPath, contents);
+    });
+  });
+}
+
+program.parse(process.argv);

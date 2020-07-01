@@ -1,0 +1,26 @@
+// Component variables follow this formula:
+// --{{nameBEM}}__element--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+.{nameBEM} {
+  // Example block variable
+  --{nameBEM}--Color: var(--pf-global--Color--dark);
+
+  // Example element variable
+  --{nameBEM}__element--FontSize: var(--pf-global--FontSize--2xl);
+
+  // Example modifier variable
+  --{nameBEM}--m-danger--BackgroundColor: var(--pf-global--danger-color);
+
+  color: var(--{nameBEM}--Color);
+
+  // Modifier
+  &.pf-m-danger {
+    background-color: var(--{nameBEM}--m-danger--BackgroundColor);
+  }
+}
+
+// Element
+.{nameBEM}__element {
+  font-size: var(--{nameBEM}__element--FontSize);
+}

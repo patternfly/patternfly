@@ -1,6 +1,5 @@
-dist/*
-public/*
-node_modules/*
-static/*
-scripts/blueprints/*
-src/patternfly/components/Dropdown/examples/index.js*
+dist/
+public/
+node_modules/
+static/
+scripts/template/

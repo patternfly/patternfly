@@ -1,8 +1,7 @@
 ---
-title: '{{nameCapitalized}}'
-section: beta
+title: '{name}'
 beta: true
-cssPrefix: pf-c-{{nameCapitalized}}
+cssPrefix: {nameBEM}
 ---
 
 ## Examples
