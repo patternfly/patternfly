@@ -12,7 +12,7 @@ section: demos
 {{> drawer-demo-default id="drawer-expanded-basics-demo" drawer-panel--IsOpen="true"}}
 ```
 
-```hbs title=Expanded isFullscreen
+```hbs title=Expanded-groups isFullscreen
 {{> drawer-demo-default id="drawer-expanded-demo" drawer-demo--IsGroup="true" drawer-panel--IsOpen="true"}}
 ```
 
