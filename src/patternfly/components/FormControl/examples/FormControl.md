@@ -100,8 +100,7 @@ Resizes horizontally
 
 ```hbs title=Custom
 {{#> form-control controlType="div" form-control--modifier="pf-m-custom pf-m-search"}}
-  <div class="pf-c-form-control__text" contenteditable>
-  </div>
+  <input class="pf-c-form-control__text" placeholder="Custom search input">
   <div class="pf-c-form-control__utils">
     <div class="pf-c-form-control__count">
       {{#> badge badge--modifier="pf-m-read"}}2/3{{/badge}}
