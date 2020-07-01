@@ -98,7 +98,7 @@ Resizes horizontally
 {{/form-control}}
 ```
 
-```hbs title=Input
+```hbs title=Custom
 {{#> form-control controlType="div" form-control--modifier="pf-m-custom pf-m-search"}}
   <div class="pf-c-form-control__text" contenteditable>
   </div>
