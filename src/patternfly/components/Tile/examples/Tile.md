@@ -97,44 +97,6 @@ import './Tile.css'
 {{/tile}}
 ```
 
-```hbs title=Extra-content
-{{#> tile}}
-  {{#> tile-title tile-title--modifier="pf-m-stacked"}}
-    {{#> tile-icon}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
-    {{/tile-icon}}
-    Default
-  {{/tile-title}}
-  {{#> tile-subtext}}
-    This is really really long subtext that goes on for so long that it has to wrap to the next line. This is really really long subtext that goes on for so long that it has to wrap to the next line.
-  {{/tile-subtext}}
-{{/tile}}
-
-{{#> tile}}
-  {{#> tile-title tile-title--modifier="pf-m-stacked"}}
-    {{#> tile-icon}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
-    {{/tile-icon}}
-    Default
-  {{/tile-title}}
-  {{#> tile-subtext}}
-    This is really really long subtext that goes on for so long that it has to wrap to the next line.
-  {{/tile-subtext}}
-{{/tile}}
-
-{{#> tile}}
-  {{#> tile-title tile-title--modifier="pf-m-stacked"}}
-    {{#> tile-icon}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
-    {{/tile-icon}}
-    Default
-  {{/tile-title}}
-  {{#> tile-subtext}}
-    Subtext goes here
-  {{/tile-subtext}}
-{{/tile}}
-```
-
 ```hbs title=Stacked-tiles
 {{#> tile}}
   {{#> tile-title tile-title--modifier="pf-m-stacked"}}
@@ -282,6 +244,44 @@ import './Tile.css'
       <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
     {{/tile-icon}}
     Disabled
+  {{/tile-title}}
+  {{#> tile-subtext}}
+    Subtext goes here
+  {{/tile-subtext}}
+{{/tile}}
+```
+
+```hbs title=Extra-content
+{{#> tile}}
+  {{#> tile-title tile-title--modifier="pf-m-stacked"}}
+    {{#> tile-icon}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/tile-icon}}
+    Default
+  {{/tile-title}}
+  {{#> tile-subtext}}
+    This is really really long subtext that goes on for so long that it has to wrap to the next line. This is really really long subtext that goes on for so long that it has to wrap to the next line.
+  {{/tile-subtext}}
+{{/tile}}
+
+{{#> tile}}
+  {{#> tile-title tile-title--modifier="pf-m-stacked"}}
+    {{#> tile-icon}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/tile-icon}}
+    Default
+  {{/tile-title}}
+  {{#> tile-subtext}}
+    This is really really long subtext that goes on for so long that it has to wrap to the next line.
+  {{/tile-subtext}}
+{{/tile}}
+
+{{#> tile}}
+  {{#> tile-title tile-title--modifier="pf-m-stacked"}}
+    {{#> tile-icon}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/tile-icon}}
+    Default
   {{/tile-title}}
   {{#> tile-subtext}}
     Subtext goes here
