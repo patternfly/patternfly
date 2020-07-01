@@ -8,8 +8,12 @@ section: demos
 {{> drawer-demo-default id="drawer-collapsed-demo"}}
 ```
 
+```hbs title=Expanded-basics isFullscreen
+{{> drawer-demo-default id="drawer-expanded-basics-demo" drawer-panel--IsOpen="true"}}
+```
+
 ```hbs title=Expanded isFullscreen
-{{> drawer-demo-default id="drawer-expanded-demo" drawer-panel--IsOpen="true"}}
+{{> drawer-demo-default id="drawer-expanded-demo" drawer-demo--IsGroup="true" drawer-panel--IsOpen="true"}}
 ```
 
 ## Documentation

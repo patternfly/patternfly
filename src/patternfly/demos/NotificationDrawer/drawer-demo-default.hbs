@@ -53,6 +53,48 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-drawer}}
-    {{> drawer-demo-content}}
+  {{#if drawer-demo--IsGroup}}
+    {{#> drawer}}
+      {{#> drawer-main}}
+        {{#> drawer-content}}
+          {{#> page-main}}
+            {{#> page-template-breadcrumb}}
+            {{/page-template-breadcrumb}}
+            {{#> page-template-title}}
+            {{/page-template-title}}
+            {{#> page-template-gallery}}
+            {{/page-template-gallery}}
+          {{/page-main}}
+        {{/drawer-content}}
+        {{#> drawer-panel drawer-panel--NoBody="true" drawer-panel--modifier="pf-m-width-33"}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{#> drawer-demo-notification-drawer}}
+            {{/drawer-demo-notification-drawer}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/drawer}}
+  {{else}}
+    {{#> drawer}}
+      {{#> drawer-main}}
+        {{#> drawer-content}}
+          {{#> page-main}}
+            {{#> page-template-breadcrumb}}
+            {{/page-template-breadcrumb}}
+            {{#> page-template-title}}
+            {{/page-template-title}}
+            {{#> page-template-gallery}}
+            {{/page-template-gallery}}
+          {{/page-main}}
+        {{/drawer-content}}
+        {{#> drawer-panel drawer-panel--NoBody="true" drawer-panel--modifier="pf-m-width-33"}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{#> drawer-demo-notification-drawer-basic}}
+            {{/drawer-demo-notification-drawer-basic}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+        {{/drawer-main}}
+      {{/drawer}}
+    {{/if}}
   {{/page-drawer}}
 {{/page}}
