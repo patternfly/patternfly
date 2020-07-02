@@ -1,7 +1,6 @@
 ---
 title: Toolbar
 section: components
-beta: true
 cssPrefix: pf-c-toolbar
 ---
 
