@@ -1,14 +1,15 @@
 ---
 title: '{name}'
 beta: true
+section: {folder}
 cssPrefix: {nameBEM}
 ---
 
 ## Examples
 ```hbs title=Basic
-{{moduleHbOpen}}
+{{#> {nameDasherized}}}
   Basic example content
-{{moduleHbClose}}
+{{/{nameDasherized}}}
 ```
 
 ## Documentation

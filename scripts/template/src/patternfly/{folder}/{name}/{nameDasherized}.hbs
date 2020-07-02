@@ -1,4 +1,6 @@
-<div class="{nameBEM}{{bemModifierBlock}}"
-  {{attributeBlock}}>
-  {{partialBlock}}
+<div class="{nameBEM}{{#if {nameDasherized}--modifier}} {{{nameDasherized}--modifier}}{{/if}}"
+  {{#if {nameDasherized}--attribute}}
+    {{{nameDasherized}--attribute}}
+  {{/if}}>
+  {{>@partial-block}}
 </div>
