@@ -120,7 +120,7 @@ jobs:
           when: always
       - run:
           name: Lint CSS Size
-          command: node scripts/sizeReport/sizeReport origin/master --comment
+          command: git fetch --tags && node scripts/sizeReport/sizeReport origin/master --comment
           when: always
       - store_artifacts:
           path: scripts/sizeReport/sizeReport/report.html
