@@ -120,10 +120,10 @@ jobs:
           when: always
       - run:
           name: Lint CSS Size
-          command: .circleci/css-size-report/sizeReport.js run
+          command: script/sizeReport/sizeReport.js origin/master
           when: always
       - store_artifacts:
-          path: .circleci/css-size-report/report.html
+          path: script/sizeReport/sizeReport/report.html
           destination: lint
       - run:
           name: Breaking Change Lint
