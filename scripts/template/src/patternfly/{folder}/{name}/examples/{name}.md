@@ -1,5 +1,5 @@
 ---
-title: '{name}'
+title: '{nameSpacerized}'
 beta: true
 section: {folder}
 cssPrefix: {nameBEM}

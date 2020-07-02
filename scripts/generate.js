@@ -13,6 +13,7 @@ program
   .action(generateFolders);
 
 const dasherize = s => s.replace(/[A-Z]/g, res => `-${res.toLowerCase()}`).replace(/^-/, ''); // Remove leading -
+const spacerize = s => s.replace(/[A-Z]/g, res => ` ${res}`).trim(); // Remove leading space
 
 function generateFolders(componentName, otherNames, options) {
   const rootPath = path.join(__dirname, '..');
@@ -24,6 +25,7 @@ function generateFolders(componentName, otherNames, options) {
       [/{folder}/g, options.folder],
       [/{name}/g, name],
       [/{nameDasherized}/g, dasherized],
+      [/{nameSpacerized}/g, spacerize(name)],
       [/{nameBEM}/g, `pf-${options.folder[0]}-${dasherized}`]
     ];
     const templateReplace = str => {

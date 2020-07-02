@@ -37,7 +37,7 @@ If you want to set host to a specific IP address for example `172.17.12.1` run `
 
 To create source file scaffolding for a new component, layout, utility, or demo, run the NPM script:
 
-`npm run generate <CamelName>`
+`node generate <CamelName>`
 
 Below are the full options for this script:
 
