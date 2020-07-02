@@ -123,7 +123,12 @@ jobs:
           command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run:
           name: Lint CSS Size
-          command: git fetch --tags && node scripts/sizeReport/sizeReport origin/master --comment
+          command: |
+            if [[ -n $CIRCLE_PULL_REQUEST ]];
+            then
+                git fetch --tags
+                node scripts/sizeReport/sizeReport origin/master --comment
+            fi;
           when: always
       - store_artifacts:
           path: scripts/sizeReport/sizeReport/report.html
@@ -132,11 +137,11 @@ jobs:
           name: Breaking Change Lint
           # https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
           command: |
-              if git log origin/master..HEAD --format="%b" | grep -i "breaking change";
-              then
-                  echo "Breaking change above detected"
-                  exit 1
-              fi
+            if git log origin/master..HEAD --format="%b" | grep -i "breaking change";
+            then
+                echo "Breaking change above detected"
+                exit 1
+            fi
           when: always
   deploy:
     docker:
