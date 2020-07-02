@@ -119,11 +119,14 @@ jobs:
           command: yarn run node-sass dist/patternfly.scss
           when: always
       - run:
+          name: Avoid Unknown Host for github.com
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
           name: Lint CSS Size
-          command: .circleci/css-size-report/sizeReport.js run
+          command: git fetch --tags && node scripts/sizeReport/sizeReport origin/master --comment
           when: always
       - store_artifacts:
-          path: .circleci/css-size-report/report.html
+          path: scripts/sizeReport/sizeReport/report.html
           destination: lint
       - run:
           name: Breaking Change Lint
