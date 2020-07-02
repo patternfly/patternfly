@@ -1,3 +1,4 @@
+const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
 const { Octokit } = require('@octokit/rest');
@@ -77,7 +78,7 @@ function getHTMLDiffTable(curMap, prevMap) {
         console.log(diff.file, 'diff', diff.diff);
         if (
           diff.diff > 50 || // component file
-          (diff.diff > 10 && !diff.file.includes('/')) // Root patternfly.css file
+          (diff.diff > 10 && !diff.file.includes(path.sep)) // Root patternfly.css file
         ) {
           exitCode = -1;
         }
