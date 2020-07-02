@@ -300,6 +300,21 @@ The plain select variation should be used when you do not want a border applied 
 {{/select}}
 ```
 
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-label="Not starred"` | `.pf-c-select__menu-wrapper > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="Starred"` | `.pf-c-select__menu-wrapper.pf-m-favorite > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is selected. |
+
+## Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
+| `.pf-m-favorite` | `.pf-c-select__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
+| `.pf-m-favorite-action` | `.pf-c-select__menu-item` | Modifies an item for favorite styles. |
+| `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
+| `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
+
 ## Documentation
 ### Overview
 There are 4 variants of the select component: single select, single select with typeahead, multiple select with typeahead, and a multiple checkbox select. See the examples for more details about each variation.
