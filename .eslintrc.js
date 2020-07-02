@@ -1,4 +1,4 @@
-const resolveAliases = require('./build/resolveAliases');
+const resolveAliases = require('./scripts/resolveAliases');
 
 module.exports = {
   rules: {
