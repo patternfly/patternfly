@@ -1,0 +1,102 @@
+$pf-c-description-list--breakpoint-map: build-breakpoint-map();
+
+.pf-c-description-list {
+  --pf-c-description-list--AlignItems: baseline;
+  --pf-c-description-list--RowGap: var(--pf-global--gutter--md);
+  --pf-c-description-list--ColumnGap: var(--pf-global--spacer--md);
+  --pf-c-description-list--GridTemplateColumns--count: 1;
+  --pf-c-description-list--GridTemplateColumns--width: auto;
+  --pf-c-description-list--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count), var(--pf-c-description-list--GridTemplateColumns--width));
+
+  // Group
+  --pf-c-description-list__group--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-description-list__group--ColumnGap: var(--pf-global--spacer--md);
+  --pf-c-description-list__group--GridTemplateColumns: auto;
+
+  // Term
+  --pf-c-description-list__term--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-description-list__term--FontSize: var(--pf-global--FontSize--sm);
+
+  // Description
+  --pf-c-description-list__description--FontWeight: var(--pf-global--FontWeight--regular);
+  --pf-c-description-list__description--FontSize: var(--pf-global--FontSize--md);
+
+  // Horizontal
+  --pf-c-description-list--m-horizontal__term--width: #{pf-size-prem(150px)};
+  --pf-c-description-list--m-horizontal__description--width: minmax(#{pf-size-prem(150px)}, auto);
+  --pf-c-description-list--m-horizontal__group--GridTemplateColumns: var(--pf-c-description-list--m-horizontal__term--width) var(--pf-c-description-list--m-horizontal__description--width);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-description-list--m-2-col--GridTemplateColumns--count: 2;
+    --pf-c-description-list--m-3-col--GridTemplateColumns--count: 3;
+    --pf-c-description-list--m-4-col--GridTemplateColumns--count: 4;
+  }
+
+  display: grid;
+  align-items: var(--pf-c-description-list--AlignItems);
+  row-gap: var(--pf-c-description-list--RowGap);
+  column-gap: var(--pf-c-description-list--ColumnGap);
+  grid-template-columns: var(--pf-c-description-list--GridTemplateColumns);
+
+  &.pf-m-horizontal {
+    --pf-c-description-list__group--GridTemplateColumns: var(--pf-c-description-list--m-horizontal__group--GridTemplateColumns);
+  }
+
+  &.pf-m-inline-grid {
+    display: inline-grid;
+  }
+
+  &.pf-m-auto-column-widths {
+    --pf-c-description-list--GridTemplateColumns--width: minmax(8ch, max-content);
+  }
+}
+
+.pf-c-description-list__group {
+  display: grid;
+  row-gap: var(--pf-c-description-list__group--RowGap);
+  column-gap: var(--pf-c-description-list__group--ColumnGap);
+  grid-template-columns: var(--pf-c-description-list__group--GridTemplateColumns);
+  align-content: start;
+}
+
+.pf-c-description-list__term,
+.pf-c-description-list__description {
+  text-align: left;
+}
+
+.pf-c-description-list__term {
+  font-size: var(--pf-c-description-list__term--FontSize);
+  font-weight: var(--pf-c-description-list__term--FontWeight);
+}
+
+.pf-c-description-list__description {
+  font-size: var(--pf-c-description-list__description--FontSize);
+  font-weight: var(--pf-c-description-list__description--FontWeight);
+}
+
+// Responsive modifiers
+// stylelint-disable no-duplicate-selectors, max-nesting-depth
+.pf-c-description-list {
+  @each $breakpoint, $breakpoint-value in $pf-c-description-list--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-c-description-list--breakpoint-map) {
+      &.pf-m-1-col#{$breakpoint-name} {
+        --pf-c-description-list--GridTemplateColumns--count: var(--pf-c-description-list--m-1-col--GridTemplateColumns--count);
+      }
+
+      &.pf-m-2-col#{$breakpoint-name} {
+        --pf-c-description-list--GridTemplateColumns--count: var(--pf-c-description-list--m-2-col--GridTemplateColumns--count);
+      }
+
+      &.pf-m-3-col#{$breakpoint-name} {
+        --pf-c-description-list--GridTemplateColumns--count: var(--pf-c-description-list--m-3-col--GridTemplateColumns--count);
+      }
+
+      &.pf-m-4-col#{$breakpoint-name} {
+        --pf-c-description-list--GridTemplateColumns--count: var(--pf-c-description-list--m-4-col--GridTemplateColumns--count);
+      }
+    }
+  }
+}
+// stylelint-enable
