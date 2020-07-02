@@ -50,15 +50,15 @@ Options:
 
 To create a "Test component" component (`.pf-c-test-component`), run:
 
-`npm run generate TestComponent`
+`node generate TestComponent`
 
 To create a "Test layout" layout (`.pf-l-test-layout`), run:
 
-`npm run generate TestLayout -f layouts`
+`node generate TestLayout -f layouts`
 
 To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
 
-`npm run generate TestDemo TestDemo2 TestDemo3 -f demos`
+`node generate TestDemo TestDemo2 TestDemo3 -f demos`
 
 ## Guidelines for CSS development
 
