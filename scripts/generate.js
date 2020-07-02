@@ -37,7 +37,7 @@ function generateFolders(componentName, otherNames, options) {
 
     // Write out templated files
     glob.sync(`${templatePath}/**/*.*`).forEach(file => {
-      const toPath = templateReplace(path.join(rootPath, file.replace(templatePath, '')));
+      const toPath = templateReplace(file.replace(templatePath, rootPath));
       console.log('Writing', toPath);
       const contents = templateReplace(fs.readFileSync(file, 'utf8'));
       fs.ensureFileSync(toPath);

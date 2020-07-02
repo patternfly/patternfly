@@ -33,18 +33,32 @@ After working on your contribution, check for [accessibility violations](#testin
 If Gatsby needs to run on local IP for testing on other machines or devices use `npm run dev:expose` which sets host to `0.0.0.0`.
 If you want to set host to a specific IP address for example `172.17.12.1` run `npm run dev -H 172.17.12.1`.
 
-### Create components, layouts, utilities, or demos
+### Create components, layouts...
+
+To create source file scaffolding for a new component, layout, utility, or demo, run the NPM script:
 
 `npm run generate <CamelName>`
 
+Below are the full options for this script:
+
 ```sh
-Usage: generate [options] <name> [otherNames...]
-
-Create source file scaffolding.
-
 Options:
   -f, --folder <folder>  Source folder (components, demos, layouts, or utilities) (default: "components")
 ```
+
+#### Examples
+
+To create a "Test component" component (`.pf-c-test-component`), run:
+
+`npm run generate TestComponent`
+
+To create a "Test layout" layout (`.pf-l-test-layout`), run:
+
+`npm run generate TestLayout -f layouts`
+
+To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
+
+`npm run generate TestDemo TestDemo2 TestDemo3 -f demos`
 
 ## Guidelines for CSS development
 
