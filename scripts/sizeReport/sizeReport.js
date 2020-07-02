@@ -29,7 +29,7 @@ async function compare(pattern, options) {
     const packageName = require(path.join(process.cwd(), 'package.json')).name;
     const command = `npm i -D ${packageName}@${shaTag}`;
     console.log('>', command);
-    // execSync(command, { cwd: __dirname });
+    execSync(command, { cwd: __dirname });
     compareDir = path.join(__dirname, 'node_modules', packageName);
   } catch (error) {
     // TODO -- move dist, git checkout, npm i, npm run build-patternfly, move dist back
