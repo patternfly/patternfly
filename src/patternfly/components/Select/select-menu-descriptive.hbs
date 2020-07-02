@@ -8,46 +8,44 @@
     [Panel contents here]
   {{else}}
     <li>
-      <button type="button" class="pf-c-select__menu-item pf-m-description" aria-pressed="false">
+      {{#> select-menu-item select-menu-item--modifier="pf-m-description"}}
         {{#> select-menu-item-main}}
           Menu item default
         {{/select-menu-item-main}}
         {{#> select-menu-item-description}}
           This is a description
         {{/select-menu-item-description}}
-      </button>
+      {{/select-menu-item}}
     </li>
     <li>
-      <button type="button" class="pf-c-select__menu-item pf-m-disabled pf-m-description" aria-pressed="false" disabled>
+      {{#> select-menu-item select-menu-item--modifier="pf-m-description" select-menu-item--IsDisabled="true"}}
         {{#> select-menu-item-main}}
           Menu item disabled
         {{/select-menu-item-main}}
         {{#> select-menu-item-description}}
           This is a description
         {{/select-menu-item-description}}
-      </button>
+      {{/select-menu-item}}
     </li>
     <li>
-      <button type="button" class="pf-c-select__menu-item pf-m-selected pf-m-description" aria-pressed="false">
+      {{#> select-menu-item select-menu-item--modifier="pf-m-description" select-menu-item--IsSelected="true"}}
         {{#> select-menu-item-main}}
           Menu item with long description
-          {{#> select-menu-item-icon}}{{/select-menu-item-icon}}
         {{/select-menu-item-main}}
         {{#> select-menu-item-description}}
           This is a really long description that describes the menu item. This is a really long description that describes the menu item.
         {{/select-menu-item-description}}
-      </button>
+      {{/select-menu-item}}
     </li>
     <li>
-      <button type="button" class="pf-c-select__menu-item pf-m-selected pf-m-description" aria-pressed="true">
+      {{#> select-menu-item select-menu-item--modifier="pf-m-description" select-menu-item--IsSelected="true"}}
         {{#> select-menu-item-main}}
           Menu item selected
-          {{#> select-menu-item-icon}}{{/select-menu-item-icon}}
         {{/select-menu-item-main}}
         {{#> select-menu-item-description}}
           This is a description
         {{/select-menu-item-description}}
-      </button>
+      {{/select-menu-item}}
     </li>
   {{/if}}
 </{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}}>

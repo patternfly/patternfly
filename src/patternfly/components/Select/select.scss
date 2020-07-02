@@ -88,10 +88,23 @@
   --pf-c-select__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__menu-item--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-select__menu-item--Color: var(--pf-global--Color--dark-100);
+  --pf-c-select__menu-item--Width: 100%;
   --pf-c-select__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
+  --pf-c-select__menu-item--m-link--Width: auto;
+  --pf-c-select__menu-item--m-link--PaddingRight: 0;
+  --pf-c-select__menu-item--m-link--hover--BackgroundColor: transparent;
+  --pf-c-select__menu-item--m-link--focus--BackgroundColor: transparent;
+  --pf-c-select__menu-item--m-action--hover--BackgroundColor: transparent;
+  --pf-c-select__menu-item--m-action--Color: var(--pf-global--disabled-color--200);
+  --pf-c-select__menu-item--m-action--Width: auto;
+  --pf-c-select__menu-item--m-action--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-select__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200);
+  --pf-c-select__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
+  --pf-c-select__menu-item--m-action--focus--Color: var(--pf-global--Color--100);
+  --pf-c-select__menu-wrapper--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-400);
 
   // Menu item icon
   --pf-c-select__menu-item-icon--Color: var(--pf-global--active-color--100);
@@ -99,6 +112,9 @@
   --pf-c-select__menu-item-icon--Right: var(--pf-global--spacer--md);
   --pf-c-select__menu-item-icon--Top: 50%;
   --pf-c-select__menu-item-icon--TranslateY: -50%;
+
+  // Menu item action icon
+  --pf-c-select__menu-item-action-icon--MinHeight: calc(var(--pf-c-select__menu-item--FontSize) * var(--pf-c-select__menu-item--LineHeight));
 
   // Match within a menu item when using typeahead
   --pf-c-select__menu-item--match--FontWeight: var(--pf-global--FontWeight--bold);
@@ -129,7 +145,8 @@
   --pf-c-select__menu-item-description--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
 
   // Menu item title
-  --pf-c-select__menu-item-main--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
+  --pf-c-select__menu-item-main--PaddingRight: var(--pf-c-select__menu-item--PaddingRight);
+  --pf-c-select__menu-item--m-selected__menu-item-main--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
 
   // Divider
   --pf-c-select-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -364,9 +381,17 @@
   border: 0;
 }
 
+.pf-c-select__menu-wrapper {
+  display: flex;
+
+  &.pf-m-favorite {
+    --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-wrapper--m-favorite__menu-item--m-action--Color);
+  }
+}
+
 .pf-c-select__menu-item {
   position: relative;
-  width: 100%;
+  width: var(--pf-c-select__menu-item--Width);
   padding: var(--pf-c-select__menu-item--PaddingTop) var(--pf-c-select__menu-item--PaddingRight) var(--pf-c-select__menu-item--PaddingBottom) var(--pf-c-select__menu-item--PaddingLeft);
   font-size: var(--pf-c-select__menu-item--FontSize);
   font-weight: var(--pf-c-select__menu-item--FontWeight);
@@ -380,28 +405,28 @@
   &:hover,
   &:focus,
   &.pf-m-focus {
+    --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--hover__menu-item--m-action--Color);
+
     text-decoration: none;
   }
 
-  &:hover {
-    background-color: var(--pf-c-select__menu-item--hover--BackgroundColor);
+  @at-root .pf-c-select__menu-wrapper,
+  & {
+    &:hover {
+      background-color: var(--pf-c-select__menu-item--hover--BackgroundColor);
+    }
   }
 
+  @at-root .pf-c-select__menu-wrapper:focus-within,
   &:focus,
   &.pf-m-focus {
     position: relative;
     background-color: var(--pf-c-select__menu-item--focus--BackgroundColor);
   }
 
-  &:disabled,
-  &.pf-m-disabled {
-    color: var(--pf-c-select__menu-item--disabled--Color);
-    pointer-events: none;
-    background-color: var(--pf-c-select__menu-item--disabled--BackgroundColor);
-  }
-
   &.pf-m-selected {
     --pf-c-select__menu-item--PaddingRight: var(--pf-c-select__menu-item--m-selected--PaddingRight);
+    --pf-c-select__menu-item-main--PaddingRight: var(--pf-c-select__menu-item--m-selected__menu-item-main--PaddingRight);
   }
 
   &.pf-m-description {
@@ -415,15 +440,56 @@
 
     white-space: normal;
   }
+
+  &.pf-m-link {
+    --pf-c-select__menu-item--PaddingRight: 0;
+    --pf-c-select__menu-item--Width: var(--pf-c-select__menu-item--m-link--Width);
+    --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-c-select__menu-item--m-link--hover--BackgroundColor);
+    --pf-c-select__menu-item--focus--BackgroundColor: var(--pf-c-select__menu-item--m-link--focus--BackgroundColor);
+
+    &:not(.pf-m-selected) {
+      --pf-c-select__menu-item-main--PaddingRight: 0;
+    }
+
+    flex-grow: 1;
+  }
+
+  &.pf-m-action {
+    --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-c-select__menu-item--m-action--hover--BackgroundColor);
+    --pf-c-select__menu-item--Color: var(--pf-c-select__menu-item--m-action--Color);
+    --pf-c-select__menu-item--Width: var(--pf-c-select__menu-item--m-action--Width);
+
+    display: flex;
+    align-items: flex-start;
+    font-size: var(--pf-c-select__menu-item--m-action--FontSize);
+
+    &:hover {
+      --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--m-action--hover--Color);
+    }
+
+    &:focus {
+      --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--m-action--focus--Color);
+    }
+  }
+
+  @at-root .pf-c-select__menu-wrapper.pf-m-disabled,
+  &:disabled,
+  &.pf-m-disabled {
+    color: var(--pf-c-select__menu-item--disabled--Color);
+    pointer-events: none;
+    background-color: var(--pf-c-select__menu-item--disabled--BackgroundColor);
+  }
 }
 
 .pf-c-select__menu-item-main {
   position: relative;
+  display: block;
   padding-right: var(--pf-c-select__menu-item-main--PaddingRight);
   white-space: nowrap;
 }
 
 .pf-c-select__menu-item-description {
+  display: block;
   padding-right: var(--pf-c-select__menu-item-description--PaddingRight);
   font-size: var(--pf-c-select__menu-item-description--FontSize);
   color: var(--pf-c-select__menu-item-description--Color);
@@ -436,6 +502,12 @@
   font-size: var(--pf-c-select__menu-item-icon--FontSize);
   color: var(--pf-c-select__menu-item-icon--Color);
   transform: translateY(var(--pf-c-select__menu-item-icon--TranslateY));
+}
+
+.pf-c-select__menu-item-action-icon {
+  display: flex;
+  align-items: center;
+  min-height: var(--pf-c-select__menu-item-action-icon--MinHeight);
 }
 
 .pf-c-select__menu-item--match {

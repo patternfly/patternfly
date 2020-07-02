@@ -289,9 +289,16 @@ The plain select variation should be used when you do not want a border applied 
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select__menu-item-description` | `<div>` |  Initiates the select menu item description element. |
-| `.pf-c-select__menu-item-main` | `<div>` | Initiates the select menu item main element. Used when the description element is present. |
+| `.pf-c-select__menu-item-description` | `<span>` |  Initiates the select menu item description element. |
+| `.pf-c-select__menu-item-main` | `<span>` | Initiates the select menu item main element. Used when the description element is present. |
 | `.pf-m-description` | `.pf-c-select__menu-item` | Modifies the select menu item when selected to accommodate the description element. |
+
+
+```hbs title=Favorites
+{{#> select id="select-favorites" select--IsExpanded="true" select--IsFavorites="true"}}
+  Favorites
+{{/select}}
+```
 
 ## Documentation
 ### Overview

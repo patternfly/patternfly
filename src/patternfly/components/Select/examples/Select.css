@@ -42,3 +42,7 @@
 #ws-core-c-select-checkbox-with-description {
   min-height: 350px;
 }
+
+#ws-core-c-select-favorites {
+  min-height: 600px;
+}

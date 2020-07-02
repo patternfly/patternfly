@@ -1,0 +1,18 @@
+<button class="pf-c-select__menu-item{{#if select-menu-item--IsSelected}} pf-m-selected{{/if}}{{#if select-menu-item--IsAction}} pf-m-action{{/if}}{{#if select-menu-item--modifier}} {{select-menu-item--modifier}}{{/if}}"
+  {{#if select-menu-item--IsSelected}}
+    aria-selected="true"
+  {{/if}}
+  {{#if select-menu-item--IsDisabled}}
+    disabled
+  {{/if}}
+  {{#if select-menu-item--attribute}}
+    {{{select-menu-item--attribute}}}
+  {{/if}}>
+  {{#if select-menu-item--IsAction}}
+    {{#> select-menu-item-action-icon}}
+      {{> @partial-block}}
+    {{/select-menu-item-action-icon}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
+</button>
