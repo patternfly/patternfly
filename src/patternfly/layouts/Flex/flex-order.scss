@@ -1,0 +1,25 @@
+$pf-l-flex--order--limit: $pf-global--order--limit;
+
+// stylelint-disable max-nesting-depth
+.pf-l-flex {
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
+      @for $i from 0 through $pf-l-flex--order--limit {
+        .pf-m-order-#{$i}#{$breakpoint-name} {
+          order: #{$i};
+        }
+      }
+
+      .pf-m-order-first#{$breakpoint-name} {
+        order: -1;
+      }
+
+      .pf-m-order-last#{$breakpoint-name} {
+        order: #{$pf-l-flex--order--limit + 1};
+      }
+    }
+  }
+}
+// stylelint-enable

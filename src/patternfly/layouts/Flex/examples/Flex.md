@@ -659,7 +659,107 @@ The CSS approach, by keeping specificity low on base class properties and resett
   {{/l-flex-item}}
 {{/l-flex}}
 ```
+
+### Ordering
+
+Ordering - `.pf-m-order-[1,12]{-on-[breakpoint]}`. Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.pf-l-flex__item</code>s. Spacing may need to be managed based on how items are ordered.
+
+```hbs title=First-last-ordering
+{{#> l-flex}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-order-last pf-m-spacer-none"}}
+    Last item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-order-first pf-m-spacer-md"}}
+    First item
+  {{/l-flex-item}}
+{{/l-flex}}
+```
+
+```hbs title=Responsive-first-last-ordering
+{{#> l-flex}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-order-last-on-lg pf-m-spacer-none-on-lg"}}
+    Last item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-order-first-on-lg pf-m-spacer-md-on-lg"}}
+    First item
+  {{/l-flex-item}}
+{{/l-flex}}
+```
+
+```hbs title=Ordering
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-order-2 pf-m-spacer-none"}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-4 pf-m-spacer-none"}}
+      Set 1, Order 4
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-2"}}
+      Set 1, Order 2
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-1"}}
+      Set 1, Order 1
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-3 pf-m-spacer-md"}}
+      Set 1, Order 3
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-spacer-md"}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-4 pf-m-spacer-none"}}
+      Set 2, Order 4
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-2"}}
+      Set 2, Order 2
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-1"}}
+      Set 2, Order 1
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-3 pf-m-spacer-md"}}
+      Set 2, Order 3
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
+```hbs title=Responsive-ordering
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-order-2-on-lg pf-m-spacer-none"}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-4-on-md pf-m-spacer-none-on-md"}}
+      Set 1, Order 4
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-2-on-md"}}
+      Set 1, Order 2
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-1-on-xl"}}
+      Set 1, Order 1
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-3-on-xl pf-m-spacer-md-on-md"}}
+      Set 1, Order 3
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-spacer-md-on-lg"}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-4 pf-m-spacer-none"}}
+      Set 2, Order 4
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-2"}}
+      Set 2, Order 2
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-1"}}
+      Set 2, Order 1
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-3 pf-m-spacer-md"}}
+      Set 2, Order 3
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-justify-content-flex-end{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing. |
@@ -667,7 +767,9 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-justify-content-flex-start{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing, used primarily to reset spacing to default. |
 
 ## Documentation
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
@@ -707,8 +809,12 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout align-content property to space-around. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets the flex layout element margin-left property to 0. |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element margin-left property to auto. |
+| `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the order of the flex layout element. |
+| `.pf-m-order-first{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the order of the flex layout element to -1. |
+| `.pf-m-order-last{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the order of the flex layout element to $limit + 1. |
 
 ### Spacer system
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > .pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
