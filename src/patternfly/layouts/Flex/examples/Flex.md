@@ -349,6 +349,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
   {{/l-flex}}
 {{/l-flex}}
 ```
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -621,7 +622,6 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-align-self-flex-baseline{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to baseline. |
 | `.pf-m-align-self-flex-stretch{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to stretch. |
 
-
 ### Justification
 ```hbs
 <h3>Justify content with <code>.pf-m-justify-content-flex-end</code>.</h3>
@@ -666,7 +666,111 @@ The CSS approach, by keeping specificity low on base class properties and resett
   {{/l-flex-item}}
 {{/l-flex}}
 ```
+
+### Ordering
+
+Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.pf-l-flex__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-l-flex--item--Order{-on-[breakpoint]}: {int}`.
+
+### First-last-ordering
+```hbs
+{{#> l-flex}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none" l-flex-item--attribute='style="--pf-l-flex--item--Order: 2;"'}}
+    Item A
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Item B
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md" l-flex-item--attribute='style="--pf-l-flex--item--Order: -1;"'}}
+    Item C
+  {{/l-flex-item}}
+{{/l-flex}}
+```
+
+### Responsive-first-last-ordering
+```hbs
+{{#> l-flex}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none-on-lg" l-flex-item--attribute='style="--pf-l-flex--item--Order-on-lg: 2;"'}}
+    Item A
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none-on-md pf-m-spacer-md-on-lg" l-flex-item--attribute='style="--pf-l-flex--item--Order: -1; --pf-l-flex--item--Order-on-md: 1;"'}}
+    Item B
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md" l-flex-item--attribute='style="--pf-l-flex--item--Order-on-md: -1;"'}}
+    Item C
+  {{/l-flex-item}}
+{{/l-flex}}
+```
+
+### Ordering
+```hbs
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-spacer-none" l-flex--attribute='style="--pf-l-flex--item--Order: 1;"'}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none" l-flex-item--attribute='style="--pf-l-flex--item--Order: 3;"'}}
+      Set 1, Item A
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--attribute='style="--pf-l-flex--item--Order: 1;"'}}
+      Set 1, Item B
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Set 1, Item C
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-order-2 pf-m-spacer-md"}}
+      Set 1, Item D
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-spacer-md"}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none" l-flex-item--attribute='style="--pf-l-flex--item--Order: 3;"'}}
+      Set 2, Item A
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--attribute='style="--pf-l-flex--item--Order-on-lg: 1;"'}}
+      Set 2, Item B
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Set 2, Item C
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md" l-flex-item--attribute='style="--pf-l-flex--item--Order: 2;"'}}
+      Set 2, Item D
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
+### Responsive-ordering
+```hbs
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-spacer-none" l-flex--attribute='style="--pf-l-flex--item--Order-on-lg: 1;"'}}
+    {{#> l-flex-item l-flex-item--attribute='style="--pf-l-flex--item--Order-on-md: 2;"'}}
+      Set 1, Item A
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--attribute='style="--pf-l-flex--item--Order-on-md: -1;"'}}
+      Set 1, Item B
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--attribute='style="--pf-l-flex--item--Order-on-xl: 1;"'}}
+      Set 1, Item C
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none-on-xl" l-flex-item--attribute='style="--pf-l-flex--item--Order-on-xl: 2;"'}}
+      Set 1, Item D
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-spacer-md-on-lg"}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none" l-flex-item--attribute='style="--pf-l-flex--item--Order: 3;"'}}
+      Set 2, Item A
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--attribute='style="--pf-l-flex--item--Order: 1;"'}}
+      Set 2, Item B
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Set 2, Item C
+    {{/l-flex-item}}
+    {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md" l-flex-item--attribute='style="--pf-l-flex--item--Order: 2;"'}}
+      Set 2, Item D
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-justify-content-flex-end{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing. |
@@ -674,7 +778,9 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-justify-content-flex-start{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies justification property and descendant spacing, used primarily to reset spacing to default. |
 
 ## Documentation
+
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
@@ -714,8 +820,10 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout align-content property to space-around. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets the flex layout element margin-left property to 0. |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element margin-left property to auto. |
+| `--pf-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element order property. |
 
 ### Spacer system
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > .pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |

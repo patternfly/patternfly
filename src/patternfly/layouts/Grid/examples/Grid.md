@@ -39,7 +39,7 @@ import './Grid.css'
   {{/grid-item}}
   {{#> grid-item}}
     item 10
-  {{/grid-item}}  
+  {{/grid-item}}
   {{#> grid-item}}
     item 11
   {{/grid-item}}
@@ -81,7 +81,7 @@ import './Grid.css'
   {{/grid-item}}
   {{#> grid-item}}
     item 10
-  {{/grid-item}}  
+  {{/grid-item}}
   {{#> grid-item}}
     item 11
   {{/grid-item}}
@@ -90,49 +90,49 @@ import './Grid.css'
   {{/grid-item}}
   {{#> grid-item}}
     item 13
-  {{/grid-item}}  
+  {{/grid-item}}
   {{#> grid-item}}
     item 14
-  {{/grid-item}}  
+  {{/grid-item}}
 {{/grid}}
 ```
 
 ### Base
-```hbs 
+```hbs
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-11-col"}}
-      11 col 
+      11 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-      1 col 
+      1 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-10-col"}}
-      10 col 
-  {{/grid-item}}    
+      10 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-      2 col 
-  {{/grid-item}}    
+      2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-9-col"}}
-      9 col 
-  {{/grid-item}}    
+      9 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-      3 col 
-  {{/grid-item}}    
+      3 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-8-col"}}
       8 col
-  {{/grid-item}}    
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
       4 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-7-col"}}
       7 col
-  {{/grid-item}}  
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-5-col"}}
       5 col
-  {{/grid-item}}  
+  {{/grid-item}}
 {{/grid}}
 ```
 
@@ -143,23 +143,23 @@ import './Grid.css'
       12 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-11-col"}}
-      11 col 
+      11 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-1-col"}}
-      1 col 
+      1 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-10-col"}}
-      10 col 
-  {{/grid-item}}    
+      10 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-      2 col 
-  {{/grid-item}}    
+      2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-9-col"}}
-      9 col 
-  {{/grid-item}}    
+      9 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-      3 col 
-  {{/grid-item}}    
+      3 col
+  {{/grid-item}}
 {{/grid}}
 ```
 
@@ -173,29 +173,29 @@ import './Grid.css'
       11 / 6 / 1 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col pf-m-6-col-on-md pf-m-10-col-on-xl"}}
-      2 / 6 / 10 col 
+      2 / 6 / 10 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-10-col pf-m-6-col-on-md pf-m-2-col-on-xl"}}
-      10 / 6 / 2 col 
-  {{/grid-item}}    
+      10 / 6 / 2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-3-col pf-m-6-col-on-md pf-m-9-col-on-xl"}}
-      3 / 6 / 9 col 
+      3 / 6 / 9 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-9-col pf-m-6-col-on-md pf-m-3-col-on-xl"}}
-      9 / 6 / 3 col 
-  {{/grid-item}}   
+      9 / 6 / 3 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col pf-m-6-col-on-md pf-m-8-col-on-xl"}}
-      4 / 6 / 8 col 
+      4 / 6 / 8 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-8-col pf-m-6-col-on-md pf-m-4-col-on-xl"}}
-      8 / 6 / 4 col 
-  {{/grid-item}}   
+      8 / 6 / 4 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-5-col pf-m-6-col-on-md pf-m-7-col-on-xl"}}
-      5 / 6 / 7 col 
+      5 / 6 / 7 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-7-col pf-m-6-col-on-md pf-m-5-col-on-xl"}}
-      7 / 6 / 5 col 
-  {{/grid-item}} 
+      7 / 6 / 5 col
+  {{/grid-item}}
 {{/grid}}
 ```
 
@@ -206,25 +206,25 @@ import './Grid.css'
     12 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-10-col"}}
-    10 col 
+    10 col
       {{#> grid grid--modifier="pf-m-gutter"}}
         {{#> grid-item grid-item--modifier="pf-m-6-col"}}
-            6 col 
-        {{/grid-item}}    
+            6 col
+        {{/grid-item}}
         {{#> grid-item grid-item--modifier="pf-m-6-col"}}
-            6 col 
-        {{/grid-item}}    
+            6 col
+        {{/grid-item}}
         {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-            4 col 
-        {{/grid-item}}    
+            4 col
+        {{/grid-item}}
         {{#> grid-item grid-item--modifier="pf-m-8-col"}}
-            8 col 
-        {{/grid-item}}    
-      {{/grid}}      
-  {{/grid-item}}    
+            8 col
+        {{/grid-item}}
+      {{/grid}}
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-      2 col 
-  {{/grid-item}}   
+      2 col
+  {{/grid-item}}
 {{/grid}}
 ```
 
@@ -239,10 +239,10 @@ import './Grid.css'
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-9-col pf-m-offset-3-col"}}
       9 col, offset 3
-  {{/grid-item}}    
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-8-col pf-m-offset-4-col"}}
       8 col, offset 4
-  {{/grid-item}}  
+  {{/grid-item}}
 {{/grid}}
 ```
 
@@ -250,7 +250,7 @@ import './Grid.css'
 ```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-8-col"}}
-    8 col 
+    8 col
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col pf-m-2-row"}}
     4 col, 2 row
@@ -259,40 +259,145 @@ import './Grid.css'
     2 col, 3 row
   {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-    2 col 
-  {{/grid-item}}  
+    2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    4 col 
-  {{/grid-item}}  
+    4 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-    2 col 
-  {{/grid-item}}  
+    2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-    2 col 
-  {{/grid-item}}  
+    2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-    2 col 
-  {{/grid-item}}  
+    2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    4 col 
-  {{/grid-item}}  
+    4 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-2-col"}}
-    2 col 
-  {{/grid-item}}  
+    2 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    4 col 
-  {{/grid-item}}  
+    4 col
+  {{/grid-item}}
   {{#> grid-item grid-item--modifier="pf-m-4-col"}}
-    4 col 
-  {{/grid-item}}  
+    4 col
+  {{/grid-item}}
+{{/grid}}
+```
+
+### Ordering
+
+Ordering - Ordering can be applied to nested <code>.pf-l-grid</code> and <code>.pf-l-grid__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-l-grid--item--Order{-on-[breakpoint]}: {int}`.
+
+### Ordering
+```hbs
+{{#> grid grid--modifier="pf-m-all-4-col pf-m-gutter"}}
+  {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 2;"'}}
+    Item A
+  {{/grid-item}}
+  {{#> grid-item}}
+    Item B
+  {{/grid-item}}
+  {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: -1;"'}}
+    Item C
+  {{/grid-item}}
+{{/grid}}
+```
+
+### Responsive ordering
+```hbs
+{{#> grid grid--modifier="pf-m-all-4-col pf-m-gutter"}}
+  {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order-on-lg: 2;"'}}
+    Item A
+  {{/grid-item}}
+  {{#> grid-item}}
+    Item B
+  {{/grid-item}}
+  {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: -1; --pf-l-grid--item--Order-on-md: 1;"'}}
+    Item C
+  {{/grid-item}}
+{{/grid}}
+```
+
+### Grouped ordering
+```hbs
+{{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
+  {{#> grid grid--modifier="pf-m-gutter" grid--attribute='style="--pf-l-grid--item--Order: 2;"'}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 3;"'}}
+      Set 1, Item A
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 1;"'}}
+      Set 1, Item B
+    {{/grid-item}}
+    {{#> grid-item}}
+      Set 1, Item C
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 2;"'}}
+      Set 1, Item D
+    {{/grid-item}}
+  {{/grid}}
+  {{#> grid grid--modifier="pf-m-gutter"}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 3;"'}}
+      Set 2, Item A
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 1;"'}}
+      Set 2, Item B
+    {{/grid-item}}
+    {{#> grid-item}}
+      Set 2, Item C
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 2;"'}}
+      Set 2, Item D
+    {{/grid-item}}
+  {{/grid}}
+{{/grid}}
+```
+
+### Grouped, esponsive ordering
+```hbs
+{{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
+  {{#> grid grid--modifier="pf-m-gutter" grid--attribute='style="--pf-l-grid--item--Order-on-lg: 2;"'}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order-on-md: 3;"'}}
+      Set 1, Item A
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order-on-md: 1;"'}}
+      Set 1, Item B
+    {{/grid-item}}
+    {{#> grid-item}}
+      Set 1, Item C
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order-on-xl: 2;"'}}
+      Set 1, Item D
+    {{/grid-item}}
+  {{/grid}}
+  {{#> grid grid--modifier="pf-m-gutter"}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 3;"'}}
+      Set 2, Item A
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 1;"'}}
+      Set 2, Item B
+    {{/grid-item}}
+    {{#> grid-item}}
+      Set 2, Item C
+    {{/grid-item}}
+    {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 2;"'}}
+      Set 2, Item D
+    {{/grid-item}}
+  {{/grid}}
 {{/grid}}
 ```
 
 ## Documentation
+
 ### Overview
+
 The grid layout is based on CSS Grid’s two-dimensional system of columns and rows. This layout styles the parent element and its children to achieve responsive column and row spans as well as gutters.
 
 ### Usage
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-l-grid` | `<div>` | Initializes the grid layout. |
@@ -301,3 +406,4 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 | `.pf-m-all-{1-12}-col{-on-[breakpoint]}` | `.pf-l-grid` | Defines grid item size on grid container. |
 | `.pf-m-{1-12}-col{-on-[breakpoint]}` | `.pf-l-grid__item` | Defines grid item size.  Although not required, they are strongly suggested. If not used, grid item will default to 12 col. |
 | `.pf-m-{2-x}-row{-on-[breakpoint]}` | `.pf-l-grid__item` | Defines grid item row span.  For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
+| `--pf-l-grid--item--Order{-on-[breakpoint]}: {order}` | `.pf-l-grid > .pf-l-grid`, `.pf-l-grid__item` | Modifies the order of the grid layout element. |
