@@ -253,7 +253,6 @@
   flex-direction: column;
 
   &.pf-m-expanded {
-    flex: 1;
     min-height: var(--pf-c-notification-drawer__group--m-expanded--MinHeight);
 
     + .pf-c-notification-drawer__group {

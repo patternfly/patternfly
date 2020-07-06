@@ -168,6 +168,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-no-background {
     --pf-c-drawer__content--BackgroundColor: transparent;
   }
+
+  &.pf-m-overflow-hidden {
+    overflow: hidden;
+  }
 }
 
 // Panel head
