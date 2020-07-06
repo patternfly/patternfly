@@ -125,6 +125,7 @@
 }
 
 .pf-c-notification-drawer__body {
+  overflow-y: scroll;
   box-shadow: var(--pf-c-notification-drawer__body--ZIndex);
 }
 
@@ -258,10 +259,6 @@
     + .pf-c-notification-drawer__group {
       border-top: var(--pf-c-notification-drawer__group--m-expanded--group--BorderTopWidth) solid var(--pf-c-notification-drawer__group--m-expanded--group--BorderTopColor);
     }
-  }
-
-  .pf-c-notification-drawer__list {
-    overflow: auto;
   }
 
   .pf-c-notification-drawer__list-item:last-child {
