@@ -5,6 +5,7 @@ const { src, watch } = require('gulp');
 const through2 = require('through2');
 const unified = require('unified');
 const toMDAST = require('remark-parse');
+const stringifyMDAST = require('remark-stringify');
 const remark2rehype = require('remark-rehype');
 const stringify = require('rehype-stringify');
 const raw = require('rehype-raw');
@@ -12,6 +13,8 @@ const graymatter = require('gray-matter');
 const Handlebars = require('handlebars');
 const { extractExamples } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
 const { codeTransformer, getWrapperDiv } = require('./codeTransformer');
+const visit = require('unist-util-visit');
+const { render } = require('html-formatter');
 
 const hbsFileMap = {};
 const hbsInstance = Handlebars.create();
@@ -141,6 +144,45 @@ function compileMD(mdFiles) {
   return compileMD0(src(mdFiles));
 }
 
+function compileDocs0(srcFiles) {
+  return srcFiles.pipe(
+    through2.obj((chunk, _, cb2) => {
+      const { data, content } = graymatter(chunk.contents.toString());
+      const htmlMD = unified()
+        .use(toMDAST)
+        .use(() => ast =>
+          visit(ast, 'code', node => {
+            if (node.lang === 'hbs') {
+              try {
+                let html = hbsInstance.compile(node.value)({});
+                html = render(` ${html} `).replace(/\t/g, '  ');
+                node.lang = 'html';
+                node.value = html;
+              } catch (error) {
+                console.error(`\x1b[31m${chunk.history[0]}: ${error} for PatternFly example ${node.value}\x1b[0m`);
+              }
+            }
+          })
+        )
+        .use(stringifyMDAST)
+        .processSync(content);
+
+      const frontmatterYaml = `---\n${Object.entries(data)
+        .map(([key, val]) => `${key}: ${val}`)
+        .join('\n')}\n---\n`;
+
+      const relativePath = path.relative(path.join(process.cwd(), 'src/patternfly'), chunk.history[0]);
+      fs.outputFileSync(path.join(process.cwd(), `dist/docs/${relativePath}`), frontmatterYaml + htmlMD);
+
+      cb2(null, chunk);
+    })
+  );
+}
+
+function compileDocs(mdFiles) {
+  return compileDocs0(src(mdFiles));
+}
+
 // Helper
 function onMDChange(file) {
   compileMD0(src(file));
@@ -179,5 +221,6 @@ module.exports = {
   compileHBS,
   compileMD,
   watchHBS,
-  watchMD
+  watchMD,
+  compileDocs
 };

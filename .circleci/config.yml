@@ -57,6 +57,9 @@ jobs:
         name: Build Dist
         command: npm run build-patternfly
     - run:
+        name: Build HTML MD
+        command: npm run build:docs
+    - run:
         name: Build Site
         command: npm run build:site
     - run:
