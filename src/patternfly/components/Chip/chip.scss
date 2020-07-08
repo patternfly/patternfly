@@ -15,7 +15,7 @@
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-chip__text--Color: var(--pf-global--Color--100);
-  --pf-c-chip__text--MaxWidth: #{pf-size-prem(120px)};
+  --pf-c-chip__text--MaxWidth: 16ch;
 
   // chip button
   --pf-c-chip__c-button--PaddingTop: var(--pf-global--spacer--xs);
