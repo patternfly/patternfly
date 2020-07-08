@@ -316,6 +316,7 @@ If you want to create sub-groupings of chips to represent multiple values applie
 The chip group requires the [chip component](/documentation/core/components/chip).
 
 ### Accessibility
+
 **All single chip accessibility and usage requirements apply.**
 
 | Attributes for closable chip group button | Applied to | Outcome |
