@@ -1,5 +1,4 @@
 .pf-c-notification-badge {
-
   // update all --after variables to --before at breaking change
   // ::after border treatment
   --pf-c-notification-badge--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
@@ -58,8 +57,6 @@
 
   .pf-c-button & {
     position: static;
-    margin-right: var(--pf-c-button--c-notification-badge--MarginRight);
-    margin-left: var(--pf-c-button--c-notification-badge--MarginLeft);
   }
 
   & > i {
