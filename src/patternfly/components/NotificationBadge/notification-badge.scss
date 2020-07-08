@@ -1,8 +1,4 @@
 .pf-c-notification-badge {
-  // Notification badge
-  --pf-c-button--c-notification-badge--MarginRight: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-button--c-notification-badge--MarginLeft: calc(var(--pf-global--spacer--xs) * -1);
-
   // update all --after variables to --before at breaking change
   // ::after border treatment
   --pf-c-notification-badge--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
@@ -42,6 +38,7 @@
 
   position: relative;
   display: inline-flex;
+  align-items: baseline;
   line-height: 1;
 
   &::before { // update all --after vars to --before at breaking change
@@ -61,8 +58,6 @@
 
   .pf-c-button & {
     position: static;
-    margin-right: var(--pf-c-button--c-notification-badge--MarginRight);
-    margin-left: var(--pf-c-button--c-notification-badge--MarginLeft);
   }
 
   & > i {
