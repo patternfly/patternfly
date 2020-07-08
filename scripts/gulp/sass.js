@@ -17,7 +17,7 @@ function compileSASS0(srcFiles) {
       let scss = chunk.contents.toString();
       const relativePath = path.relative(path.join(chunk._cwd, '/src/patternfly'), chunk.history[0]);
       const loggedPath = path.relative(process.cwd(), chunk.history[0]);
-      const numDirectories = relativePath.includes('/') ? relativePath.match(/\//g).length : 0;
+      const numDirectories = relativePath.split(path.sep).length - 1;
       // This hack is to not include sass-utilities/placeholders.scss CSS more than once
       // in our production patternfly.css BUT still be able to compile individual SCSS files.
       // As soon as node-sass is updated to a libsass version that supports @use rule, we should

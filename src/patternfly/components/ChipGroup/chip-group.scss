@@ -16,7 +16,7 @@
   // Label in group
   --pf-c-chip-group__label--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-chip-group__label--MaxWidth: #{pf-size-prem(160px)};
+  --pf-c-chip-group__label--MaxWidth: 18ch;
 
   // Chip group close
   --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
