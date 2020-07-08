@@ -128,12 +128,12 @@
   --pf-c-button--m-small--FontSize: var(--pf-global--FontSize--sm);
 
   // CTA Button
-  --pf-c-button--m-cta--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-button--m-cta--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-button--m-cta--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-button--m-cta--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-button--m-cta--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-button--m-link--m-cta--FontSize: var(--pf-global--FontSize--lg);
+  --pf-c-button--m-display-lg--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-button--m-display-lg--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-button--m-display-lg--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-button--m-display-lg--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-button--m-display-lg--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-button--m-link--m-display-lg--FontSize: var(--pf-global--FontSize--lg);
 
   // Styles for an icon in button
   --pf-c-button__icon--m-start--MarginRight: var(--pf-global--spacer--xs);
@@ -191,12 +191,12 @@
   &.pf-m-secondary,
   &.pf-m-tertiary,
   &.pf-m-link {
-    &.pf-m-cta {
-      --pf-c-button--PaddingTop: var(--pf-c-button--m-cta--PaddingTop);
-      --pf-c-button--PaddingRight: var(--pf-c-button--m-cta--PaddingRight);
-      --pf-c-button--PaddingBottom: var(--pf-c-button--m-cta--PaddingBottom);
-      --pf-c-button--PaddingLeft: var(--pf-c-button--m-cta--PaddingLeft);
-      --pf-c-button--FontWeight: var(--pf-c-button--m-cta--FontWeight);
+    &.pf-m-display-lg {
+      --pf-c-button--PaddingTop: var(--pf-c-button--m-display-lg--PaddingTop);
+      --pf-c-button--PaddingRight: var(--pf-c-button--m-display-lg--PaddingRight);
+      --pf-c-button--PaddingBottom: var(--pf-c-button--m-display-lg--PaddingBottom);
+      --pf-c-button--PaddingLeft: var(--pf-c-button--m-display-lg--PaddingLeft);
+      --pf-c-button--FontWeight: var(--pf-c-button--m-display-lg--FontWeight);
     }
   }
 
@@ -334,8 +334,8 @@
       }
     }
 
-    &.pf-m-cta {
-      --pf-c-button--FontSize: var(--pf-c-button--m-link--m-cta--FontSize);
+    &.pf-m-display-lg {
+      --pf-c-button--FontSize: var(--pf-c-button--m-link--m-display-lg--FontSize);
     }
   }
 
