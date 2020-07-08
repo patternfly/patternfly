@@ -20,8 +20,8 @@
   --pf-c-notification-badge--after--TranslateY: 0; // remove at breaking change
 
   // The icon is normalized to be square in order to facilitate consistency in positioning
-  --pf-c-notification-badge__i--Width: auto;
-  --pf-c-notification-badge__i--Height: auto;
+  --pf-c-notification-badge__i--Width: auto; // remove at breaking change
+  --pf-c-notification-badge__i--Height: auto; // remove at breaking change
 
   // Modifiers
   --pf-c-notification-badge--m-read--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
