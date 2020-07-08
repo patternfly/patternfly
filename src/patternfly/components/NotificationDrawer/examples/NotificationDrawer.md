@@ -13,7 +13,7 @@ cssPrefix: pf-c-notification-drawer
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      3 unread
+      2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
@@ -32,7 +32,7 @@ cssPrefix: pf-c-notification-drawer
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      3 unread
+      2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
