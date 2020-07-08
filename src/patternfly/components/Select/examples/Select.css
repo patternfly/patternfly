@@ -38,6 +38,7 @@
   min-height: 120px;
 }
 
-#ws-core-c-select-with-description {
-  min-height: 400px;
+#ws-core-c-select-with-description,
+#ws-core-c-select-checkbox-with-description {
+  min-height: 350px;
 }
