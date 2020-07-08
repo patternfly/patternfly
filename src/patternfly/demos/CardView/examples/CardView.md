@@ -1,6 +1,7 @@
 ---
 title: Card view
 section: demos
+wrapperTag: div
 ---
 
 ## Demos

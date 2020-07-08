@@ -1,6 +1,7 @@
 ---
 title: Wizard
 section: demos
+wrapperTag: div
 ---
 
 ## Demos

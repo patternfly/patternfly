@@ -1,6 +1,7 @@
 ---
 title: Drawer
 section: demos
+wrapperTag: div
 ---
 
 ## Demos

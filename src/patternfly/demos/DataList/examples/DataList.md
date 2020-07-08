@@ -1,6 +1,7 @@
 ---
 title: Data list
 section: demos
+wrapperTag: div
 ---
 
 ## Demos

@@ -2,6 +2,7 @@
 title: Wizard
 section: components
 cssPrefix: pf-c-wizard
+wrapperTag: div
 ---
 
 import './Wizard.css'

@@ -1,6 +1,7 @@
 ---
 title: Master Detail
 section: demos
+wrapperTag: div
 ---
 
 ## Demos

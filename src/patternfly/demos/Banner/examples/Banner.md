@@ -3,6 +3,7 @@ title: 'Banner'
 section: demos
 beta: true
 cssPrefix: pf-c-banner
+wrapperTag: div
 ---
 
 ## Examples

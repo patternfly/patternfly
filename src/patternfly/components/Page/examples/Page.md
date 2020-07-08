@@ -2,6 +2,7 @@
 title: Page
 section: components
 cssPrefix: pf-c-page
+wrapperTag: div
 ---
 
 ## Examples
