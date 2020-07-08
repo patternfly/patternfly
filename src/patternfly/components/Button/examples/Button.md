@@ -270,4 +270,4 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
 | `.pf-m-small` | `.pf-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
-| `.pf-m-cta` | `.pf-c-button` `pf-c-button.pf-m-link` | Modifies the button and link button for "call to action" styles. |
+| `.pf-m-cta` | `.pf-c-button`, `pf-c-button.pf-m-link` | Modifies the button and link button for "call to action" styles. |
