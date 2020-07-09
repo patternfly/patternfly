@@ -405,7 +405,13 @@
   }
 
   &.pf-m-description {
-    --pf-c-select__menu-item--PaddingRight: 0;
+    &:not(.pf-c-check) {
+      --pf-c-select__menu-item--PaddingRight: 0;
+    }
+
+    .pf-c-check__label {
+      white-space: nowrap;
+    }
 
     white-space: normal;
   }
