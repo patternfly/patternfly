@@ -26,6 +26,7 @@
 
   // Utilities
   --pf-c-search-input__utilities--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-search-input__utilities--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-search-input__utilities--child--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-search-input__utilities--c-button--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-search-input__utilities--c-button--PaddingLeft: var(--pf-global--spacer--xs);
@@ -99,6 +100,7 @@
 .pf-c-search-input__utilities {
   display: flex;
   margin-right: var(--pf-c-search-input__utilities--MarginRight);
+  margin-left: var(--pf-c-search-input__utilities--MarginLeft);
 
   > * + * {
     margin-left: var(--pf-c-search-input__utilities--child--MarginLeft);
