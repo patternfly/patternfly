@@ -532,7 +532,9 @@
   &:hover,
   &:focus,
   &:active {
+    width: 100%;
     text-decoration: none;
+    border: none;
   }
 }
 
